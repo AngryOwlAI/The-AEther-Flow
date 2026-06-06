@@ -1,0 +1,146 @@
+
+---
+
+# The Æther-Flow Interpretation of Relativity Research Project
+
+---
+
+<p align="center">
+  <img src="assets/images/readme-banner.png" alt="Editorial cosmic banner for The Æther Research Program with the subtitle 'Ontology, exact-GR benchmark package, open derivation program, and AI research-agent system.'" width="100%" />
+</p>
+
+---
+
+## The Research Program
+
+The The Æther-Flow Interpretation of Relativity Research Program is a dual physics-and-AI research project.
+
+The physics track studies whether ordinary general relativity can be interpreted, and eventually derived, from a deeper four-dimensional `Æther` / `Æther-flow` ontology. The current public benchmark keeps GR exactly at observable scale. A first-principles derivation of GR from the ontology remains open.
+
+The AI research-agent track currently develops and tests a human-scaffolded research-agent system for theoretical physics: agent roles, routing rules, claim gates, manuscript tools, result handling, review discipline, and scientific memory. Its long-term technical goal is staged autonomy toward an autonomous theoretical-physics research system, while public release, authorship responsibility, and external outreach remain human-accountable under current governance.
+
+### The Two Tracks
+
+#### Physics track
+
+- Public benchmark: an exact-GR interpretive package for `The Æther-Flow Interpretation of Relativity`.
+- Current observable scale: ordinary GR, one operative metric, universal matter coupling, standard causal structure.
+- Open burden: deriving the benchmark from explicit substrate structure, with effective Lorentzian metric generation as the first proof milestone.
+- Negative result: the frozen derivation line is preserved under `Not Derived On Current Line`.
+
+#### AI research-agent track
+
+- Currently human-scaffolded AI workflow for theoretical physics research, with staged autonomy as the long-term AI-system ambition.
+- Role-based routing through candidate intake, refutation, defense, gate decisions, and integration notes.
+- Manuscript-centered memory through active `.tex`, PDFs, CSV routing, and the Manuscript Wiki.
+- Support for exploring, testing, refuting, proving, accepting, and organizing candidate derivation steps without treating workflow status as physics proof.
+- Explicit separation between physics claims, AI-methodology claims, tooling claims, open problems, and stopped results.
+
+#### How they co-develop
+
+The physics problem gives the AI system a hard, real research environment. The AI research-agent system gives the physics program disciplined ways to explore ideas, reject failed mechanisms, preserve negative results, and avoid overclaiming. The shared target is stronger than organization alone: derive GR from the `Æther` / `Æther-flow` ontology if the required gates can actually be passed.
+
+```text
+                          THE ÆTHER-FLOW RESEARCH PROGRAM
+                                      |
+              +-----------------------+-----------------------+
+              |                                               |
+      PHYSICS RESEARCH TRACK                         AI RESEARCH-AGENT TRACK
+              |                                               
+  Æther / Æther-flow ontology                    
+              |                                               
+  Exact-GR benchmark package                     
+              |                                               
+  Open GR-derivation problem                     
+              |                                               
+  No-go and obstruction record                   
+```
+
+---
+
+## This repo
+
+This repo is a reset of the research program: [The Æther GR Derivation](/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/) as the research system was failing to derive GR from the ontology or hard-fail the derivation, so we need to start over with a new approach.
+The goal of this research program is to improve itself using the lessons learned from the previous attempt and ultimately derive GR from the Æther Flow ontology.
+
+---
+
+## The Æther Flow Ontology
+
+[...]
+
+---
+
+## The research-agent system
+
+[...] 
+
+---
+
+## Requirements
+
+### Python environment
+
+This repository uses a local Python virtual environment for scripts.
+
+- Runtime: Python 3.12.13 in `.venv/`
+- Dependency file: `requirements.txt`
+- Environment directory: `.venv/`, ignored by `.gitignore`
+- Current dependency status: no third-party packages declared yet
+
+Create or refresh the environment from the repository root:
+
+```zsh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Run scripts with the active environment:
+
+```zsh
+python path/to/script.py
+```
+
+Or run scripts without activating the shell:
+
+```zsh
+.venv/bin/python path/to/script.py
+```
+
+When a Python script requires an external package, add one package per line to
+`requirements.txt`, then rerun:
+
+```zsh
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+---
+
+## Project map
+
+```
+.
+├── AGENTS.md
+│   └── Root instructions for research agents working in this repository.
+├── LICENSE
+│   └── Project license.
+├── README.md
+│   └── Project overview, environment setup, and file map.
+├── requirements.txt
+│   └── Python dependency ledger for repository scripts.
+├── assets/
+│   └── images/
+│       ├── readme-banner.png
+│       └── readme-banner-old*.png
+├── manuscripts/
+│   └── Reserved for manuscript drafts and research outputs.
+├── ontology/
+│   └── aether-and-aether-flow.md
+└── Step-by-step-Comments/
+    ├── README.md
+    └── Comments - Phase-1.md through Comments - Phase-5.md
+```
+
+Local or generated files intentionally excluded from the project map include
+`.venv/`, `.DS_Store`, and other ignored operating-system or build artifacts.
