@@ -82,6 +82,30 @@ JOB_COLUMNS = [
     "notes",
 ]
 
+ROLE_EXECUTION_COLUMNS = [
+    "execution_role_ref",
+    "role_execution_kind",
+    "task_id",
+    "agent_job_id",
+    "record_path",
+    "base_role_id",
+    "base_role_version",
+    "provisional_role_name",
+    "authority_delta_summary",
+    "added_constraints",
+    "removed_permissions",
+    "expanded_permissions",
+    "allowed_write_paths",
+    "requires_human_gate",
+    "expires_after",
+    "justification",
+    "non_reusable_until_registered",
+    "validation_status",
+    "created_at",
+    "updated_at",
+    "notes",
+]
+
 TASK_COLUMNS = [
     "task_id",
     "task_path",
@@ -114,6 +138,7 @@ CLAIM_COLUMNS = [
 
 REGISTRY_COLUMNS = {
     "AGENT_ROLE_REGISTRY.csv": ROLE_COLUMNS,
+    "ROLE_EXECUTION_REGISTRY.csv": ROLE_EXECUTION_COLUMNS,
     "DIRECTOR_DECISION_REGISTRY.csv": DECISION_COLUMNS,
     "AGENT_JOB_REGISTRY.csv": JOB_COLUMNS,
     "RESEARCH_TASK_REGISTRY.csv": TASK_COLUMNS,
@@ -126,6 +151,7 @@ BOOLEAN_FIELDS = {
     "may_modify_sources",
     "may_promote_claims",
     "requires_human_gate",
+    "non_reusable_until_registered",
 }
 
 SEMICOLON_FIELDS = {
@@ -135,6 +161,27 @@ SEMICOLON_FIELDS = {
     "allowed_claims",
     "forbidden_claims",
     "requires_gate_for",
+    "added_constraints",
+    "removed_permissions",
+    "expanded_permissions",
+}
+
+ROLE_EXECUTION_KINDS = {
+    "registered_role",
+    "task_overlay",
+    "one_job_provisional_role",
+}
+
+GLOBALLY_BROAD_PATTERNS = {
+    "*",
+    "**",
+    "**/*",
+    ".agents/**",
+    "html/**",
+    "ontology/**",
+    "research_control/**",
+    "research_control/tasks/**",
+    "wiki/**",
 }
 
 FORBIDDEN_PHRASES = [
@@ -216,6 +263,7 @@ def validate_registry_values(report: ValidationReport, rows_by_registry: dict[st
     seen: set[tuple[str, str]] = set()
     id_fields = {
         "AGENT_ROLE_REGISTRY.csv": "role_id",
+        "ROLE_EXECUTION_REGISTRY.csv": "execution_role_ref",
         "DIRECTOR_DECISION_REGISTRY.csv": "decision_id",
         "AGENT_JOB_REGISTRY.csv": "job_id",
         "RESEARCH_TASK_REGISTRY.csv": "task_id",
@@ -428,6 +476,140 @@ def validate_agent_jobs(
     return jobs
 
 
+def _listish_values(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return [str(item) for item in value if str(item)]
+    if isinstance(value, str):
+        return split_semicolon(value)
+    return []
+
+
+def _has_substantive_value(value: Any) -> bool:
+    return any(item.strip().lower() not in {"", "none"} for item in _listish_values(value))
+
+
+def validate_execution_roles(
+    report: ValidationReport,
+    execution_rows: list[dict[str, str]],
+    roles: dict[str, dict[str, str]],
+    jobs: dict[str, dict[str, str]],
+    tasks: dict[str, dict[str, str]],
+) -> dict[str, dict[str, str]]:
+    executions = existing_by_id(execution_rows, "execution_role_ref")
+    jobs_to_execution_refs: dict[str, list[str]] = {}
+    for row in execution_rows:
+        execution_ref = row["execution_role_ref"]
+        kind = row["role_execution_kind"]
+        if kind not in ROLE_EXECUTION_KINDS:
+            report.error(f"{execution_ref}: invalid role_execution_kind {kind}")
+        reason = validate_relative_path(row["record_path"])
+        if reason:
+            report.error(f"{execution_ref}: invalid record_path: {reason}")
+            continue
+        path = repo_path(row["record_path"])
+        if not path.exists():
+            report.error(f"{execution_ref}: missing execution-role record {row['record_path']}")
+            continue
+        try:
+            record = load_yaml(path)
+        except StrictYamlError as exc:
+            report.error(f"{row['record_path']}: {exc}")
+            continue
+        for field_name in [
+            "execution_role_ref",
+            "role_execution_kind",
+            "task_id",
+            "agent_job_id",
+            "base_role_id",
+            "base_role_version",
+            "provisional_role_name",
+            "authority_delta_summary",
+            "requires_human_gate",
+            "expires_after",
+            "justification",
+            "non_reusable_until_registered",
+        ]:
+            if _frontmatter_value(record.get(field_name, "")) != row[field_name]:
+                report.error(
+                    f"{row['record_path']}: {field_name} does not match ROLE_EXECUTION_REGISTRY.csv"
+                )
+        for field_name in [
+            "allowed_write_paths",
+            "added_constraints",
+            "removed_permissions",
+            "expanded_permissions",
+        ]:
+            if _frontmatter_value(record.get(field_name, [])) != row[field_name]:
+                report.error(
+                    f"{row['record_path']}: {field_name} does not match ROLE_EXECUTION_REGISTRY.csv"
+                )
+        if row["task_id"] not in tasks:
+            report.error(f"{execution_ref}: task_id is not registered")
+        job = jobs.get(row["agent_job_id"])
+        if not job:
+            report.error(f"{execution_ref}: agent_job_id is not registered")
+        elif job["task_id"] != row["task_id"]:
+            report.error(f"{execution_ref}: task_id does not match AgentJob task_id")
+        jobs_to_execution_refs.setdefault(row["agent_job_id"], []).append(execution_ref)
+
+        for item in _listish_values(record.get("allowed_write_paths", [])):
+            reason = validate_relative_path(item.replace("**", "x").replace("*", "x"))
+            if reason:
+                report.error(f"{row['record_path']}: invalid allowed_write_paths entry {item}: {reason}")
+
+        if kind in {"registered_role", "task_overlay"}:
+            base_role = row["base_role_id"]
+            if not base_role:
+                report.error(f"{execution_ref}: {kind} requires base_role_id")
+            elif base_role not in roles:
+                report.error(f"{execution_ref}: base_role_id is not registered")
+            elif roles[base_role]["version"] != row["base_role_version"]:
+                report.error(f"{execution_ref}: base_role_version does not match registry")
+        if kind == "registered_role":
+            if _has_substantive_value(record.get("expanded_permissions", [])):
+                report.error(f"{execution_ref}: registered_role may not expand permissions")
+            if row["non_reusable_until_registered"] != "false":
+                report.error(f"{execution_ref}: registered_role must be reusable")
+        if kind == "task_overlay":
+            if not _has_substantive_value(record.get("added_constraints", [])) and not _has_substantive_value(
+                record.get("removed_permissions", [])
+            ) and not _has_substantive_value(record.get("expanded_permissions", [])):
+                report.error(f"{execution_ref}: task_overlay must declare an authority delta")
+            if _has_substantive_value(record.get("expanded_permissions", [])) and row["requires_human_gate"] != "true":
+                report.error(f"{execution_ref}: expanded_permissions require a human gate")
+        if kind == "one_job_provisional_role":
+            if not row["provisional_role_name"]:
+                report.error(f"{execution_ref}: provisional role requires provisional_role_name")
+            if not row["justification"]:
+                report.error(f"{execution_ref}: provisional role requires justification")
+            if row["non_reusable_until_registered"] != "true":
+                report.error(f"{execution_ref}: provisional role must be non-reusable until registered")
+            if row["expires_after"] != row["agent_job_id"]:
+                report.error(f"{execution_ref}: provisional role must expire after its AgentJob")
+
+    for job_id, job in jobs.items():
+        execution_refs = jobs_to_execution_refs.get(job_id, [])
+        if len(execution_refs) != 1:
+            report.error(f"{job_id}: expected exactly one execution-role record, found {len(execution_refs)}")
+            continue
+        job_path_text = job.get("job_path", "")
+        if not job_path_text:
+            continue
+        job_path = repo_path(job_path_text)
+        if not job_path.exists():
+            continue
+        try:
+            job_contract = load_yaml(job_path)
+        except StrictYamlError:
+            continue
+        execution_role_ref = str(job_contract.get("execution_role_ref", ""))
+        if execution_role_ref and execution_role_ref != execution_refs[0]:
+            report.error(f"{job_path_text}: execution_role_ref does not match ROLE_EXECUTION_REGISTRY.csv")
+        if not execution_role_ref and job["status"] in {"pending", "active"}:
+            report.error(f"{job_path_text}: pending or active AgentJob must declare execution_role_ref")
+    return executions
+
+
 def validate_completion(report: ValidationReport, job_row: dict[str, str], path: Path) -> None:
     try:
         completion = load_yaml(path)
@@ -581,7 +763,11 @@ def changed_paths(base_ref: str, staged_only: bool) -> list[str]:
 
 
 def _pattern_is_too_broad(pattern: str) -> bool:
-    return pattern in {"*", "**", "**/*"} or pattern.startswith("*/") or pattern.startswith("**/")
+    return (
+        pattern in GLOBALLY_BROAD_PATTERNS
+        or pattern.startswith("*/")
+        or pattern.startswith("**/")
+    )
 
 
 def _path_matches(path: str, pattern: str) -> bool:
@@ -658,6 +844,13 @@ def validate_all(
         rows_by_registry["RESEARCH_TASK_REGISTRY.csv"],
         decisions,
         jobs,
+    )
+    validate_execution_roles(
+        report,
+        rows_by_registry["ROLE_EXECUTION_REGISTRY.csv"],
+        roles,
+        jobs,
+        tasks,
     )
     validate_program_state(report, tasks)
     validate_handoffs(report, tasks, jobs)

@@ -1,0 +1,32 @@
+execution_role_ref: "provisional-RT-20260608-001-AJ-RT-20260608-001-001-control-spine-bootstrapper"
+role_execution_kind: "one_job_provisional_role"
+task_id: "RT-20260608-001"
+agent_job_id: "AJ-RT-20260608-001-001"
+base_role_id: ""
+base_role_version: ""
+provisional_role_name: "Control Spine Bootstrapper"
+authority_delta_summary: "One-job bootstrap authority for creating the initial Director-led control spine."
+added_constraints:
+  - "Bootstrap control infrastructure only."
+  - "Do not start a Gate 0 science task."
+removed_permissions:
+  - "Claim promotion."
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - ".agents/**"
+  - ".codex/skills/continue-research/**"
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/**"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "scripts/research_control/**"
+  - "tests/test_research_control.py"
+requires_human_gate: false
+expires_after: "AJ-RT-20260608-001-001"
+justification: "The reusable control spine did not exist yet; the Director selected a one-job bootstrap role."
+non_reusable_until_registered: true
