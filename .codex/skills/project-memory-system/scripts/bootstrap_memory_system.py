@@ -18,6 +18,14 @@ from typing import Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from obsidian_wiki_lib import (  # noqa: E402
+    GENERATED_REGISTRY_COLUMNS as OBSIDIAN_GENERATED_REGISTRY_COLUMNS,
+    write_generated_registries,
+)
 
 COMMON_COLUMNS = [
     "object_id",
@@ -100,6 +108,7 @@ REGISTRIES = {
     "WIKI_ARTIFACT_REGISTRY.csv": WIKI_COLUMNS,
     "FILE_OBJECT_REGISTRY.csv": FILE_OBJECT_COLUMNS,
 }
+REGISTRIES.update(OBSIDIAN_GENERATED_REGISTRY_COLUMNS)
 
 SOURCE_REGISTRY_NAMES = [
     "MARKDOWN_SOURCE_REGISTRY.csv",
@@ -109,6 +118,9 @@ SOURCE_REGISTRY_NAMES = [
 ]
 GENERATED_REGISTRY_NAMES = [
     "WIKI_ARTIFACT_REGISTRY.csv",
+    "OBSIDIAN_VAULT_REGISTRY.csv",
+    "CONTENT_SEMANTIC_REGISTRY.csv",
+    "OBJECT_RELATIONSHIP_REGISTRY.csv",
     "FILE_OBJECT_REGISTRY.csv",
 ]
 
@@ -827,25 +839,24 @@ def generate_indexes(rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
 
 
 def generate_file_object_registry(
-    rows_by_registry: dict[str, list[dict[str, str]]], wiki_rows: list[dict[str, str]], now: str
+    rows_by_registry: dict[str, list[dict[str, str]]], now: str
 ) -> list[dict[str, str]]:
     output_rows: list[dict[str, str]] = []
-    for registry_name in SOURCE_REGISTRY_NAMES:
+    mirrored_registry_names = SOURCE_REGISTRY_NAMES + [
+        name for name in GENERATED_REGISTRY_NAMES if name != "FILE_OBJECT_REGISTRY.csv"
+    ]
+    for registry_name in mirrored_registry_names:
         for row in rows_by_registry.get(registry_name, []):
             output = {field: row.get(field, "") for field in COMMON_COLUMNS}
             output["source_registry"] = registry_name
             output_rows.append(output)
-    for row in wiki_rows:
-        output = {field: row.get(field, "") for field in COMMON_COLUMNS}
-        output["source_registry"] = "WIKI_ARTIFACT_REGISTRY.csv"
-        output_rows.append(output)
     output_rows.sort(key=lambda row: row["object_id"])
     write_csv_if_changed(
         registry_path("FILE_OBJECT_REGISTRY.csv"), FILE_OBJECT_COLUMNS, output_rows
     )
     write_meta_if_needed(
         "FILE_OBJECT_REGISTRY",
-        [registry_path(name) for name in SOURCE_REGISTRY_NAMES + ["WIKI_ARTIFACT_REGISTRY.csv"]],
+        [registry_path(name) for name in mirrored_registry_names],
         now,
     )
     return output_rows
@@ -1082,7 +1093,10 @@ def validate_file_object_registry(
 ) -> None:
     file_rows = existing_by_id(rows_by_registry.get("FILE_OBJECT_REGISTRY.csv", []))
     expected_ids = set()
-    for registry_name in SOURCE_REGISTRY_NAMES + ["WIKI_ARTIFACT_REGISTRY.csv"]:
+    mirrored_registry_names = SOURCE_REGISTRY_NAMES + [
+        name for name in GENERATED_REGISTRY_NAMES if name != "FILE_OBJECT_REGISTRY.csv"
+    ]
+    for registry_name in mirrored_registry_names:
         for row in rows_by_registry.get(registry_name, []):
             expected_ids.add(row.get("object_id", ""))
             mirror = file_rows.get(row.get("object_id", ""))
@@ -1166,7 +1180,15 @@ def bootstrap(
     }
     wiki_rows = generate_wiki(rows_by_registry, now)
     generate_indexes(rows_by_registry)
-    generate_file_object_registry(rows_by_registry, wiki_rows, now)
+    rows_by_registry["WIKI_ARTIFACT_REGISTRY.csv"] = wiki_rows
+    generated_rows = write_generated_registries(
+        REPO_ROOT,
+        rows_by_registry,
+        now,
+        write_semantic_text=True,
+    )
+    rows_by_registry.update(generated_rows)
+    generate_file_object_registry(rows_by_registry, now)
     return validate_all()
 
 

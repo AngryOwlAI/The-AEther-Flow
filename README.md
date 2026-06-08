@@ -86,7 +86,8 @@ This repository uses a local Python virtual environment for scripts.
 - Runtime: Python 3.12.13 in `.venv/`
 - Dependency file: `requirements.txt`
 - Environment directory: `.venv/`, ignored by `.gitignore`
-- Current dependency status: no third-party packages declared yet
+- Current dependency status: PyMuPDF is used for direct PDF text extraction in
+  the local semantic memory system.
 
 Create or refresh the environment from the repository root:
 
@@ -148,6 +149,18 @@ Run smoke tests:
 .venv/bin/python -m unittest discover -s tests
 ```
 
+Initialize and sync the local Obsidian memory vault:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+```
+
+Query the combined CSV, relationship, vault, and content-semantic memory system:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json
+```
+
 Clean ignored local noise from canonical lanes:
 
 ```zsh
@@ -170,6 +183,7 @@ Clean ignored local noise from canonical lanes:
 │       ├── markdown-wiki/
 │       ├── tex-wiki/
 │       ├── pdf-derivative-build/
+│       ├── obsidian-wiki/
 │       ├── html-visual-explainer/
 │       ├── ontology-promotion/
 │       └── visual-explainer/
@@ -204,6 +218,9 @@ Clean ignored local noise from canonical lanes:
 │   ├── PDF_DERIVATIVE_REGISTRY.csv
 │   ├── HTML_EXPLAINER_REGISTRY.csv
 │   ├── WIKI_ARTIFACT_REGISTRY.csv
+│   ├── OBSIDIAN_VAULT_REGISTRY.csv
+│   ├── CONTENT_SEMANTIC_REGISTRY.csv
+│   ├── OBJECT_RELATIONSHIP_REGISTRY.csv
 │   └── FILE_OBJECT_REGISTRY.csv
 ├── tests/
 │   └── Memory-system smoke checks.
