@@ -12,3 +12,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `ontology/tex/aether_flow_foundations.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `ontology/tex/aether_flow_geometry.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `ontology/tex/aether_flow_relativistic_recovery.tex`
+
+## not_applicable
+
+- `TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`

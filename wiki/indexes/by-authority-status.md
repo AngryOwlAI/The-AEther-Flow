@@ -13,6 +13,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `ontology/tex/aether_flow_geometry.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `ontology/tex/aether_flow_relativistic_recovery.tex`
 
+## draft_control_artifact
+
+- `TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
+
 ## explanatory_noncanonical
 
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
@@ -47,6 +51,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `wiki/tex/tex-ontology-aether-flow-foundations.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `wiki/tex/tex-ontology-aether-flow-geometry.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `wiki/tex/tex-ontology-aether-flow-relativistic-recovery.md`
+- `WIKI-TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `wiki/tex/tex-research-control-gate0-ontology-formalization.md`
 
 ## project_control
 
