@@ -1,4 +1,4 @@
-> GitHub-readable Markdown mirror of `docs/ontology/Æther_and_Æther-Flow.html`. Canonical source remains `docs/ontology/Æther_and_Æther-Flow.html`; source authority, claim boundaries, equations, verdicts, and routing status remain controlled by the canonical source layer and `docs/HTML_SOURCE_RUNTIME_MANIFEST.csv`. Generated `docs/wiki/**` HTML remains non-canonical. Semantic audit status: `PASS`.
+> Reset-repository ontology note registered as ontology-adjacent explanatory Markdown. Canonical scientific authority remains with registered TeX sources under `ontology/tex/` and `registries/TEX_SOURCE_REGISTRY.csv`; generated wiki notes and other derivatives remain non-canonical. Semantic audit status: `PASS`.
 
 ## Æther and Æther-Flow
 

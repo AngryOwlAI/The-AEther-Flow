@@ -117,10 +117,62 @@ When a Python script requires an external package, add one package per line to
 
 ---
 
+## Memory, wiki, and registry system
+
+This repository uses a source-first memory system for project knowledge.
+
+Authority order:
+
+1. Registered `.tex` files are canonical for physics research and derivational claims.
+2. Format-specific CSV registries are canonical for routing, provenance, generated-output tracking, and agent-queryable memory.
+3. Registered Markdown files are canonical for GitHub documentation, agent guidance, and project-control notes.
+4. PDFs, wiki notes, wiki indexes, master registries, and HTML explainers are generated derivatives.
+
+Generated artifacts are tracked when they are part of the project memory surface, but they are not independent authority. Update the source file and registry row, then regenerate.
+
+Bootstrap or refresh the memory system:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
+```
+
+Validate without writing:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+```
+
+Run smoke tests:
+
+```zsh
+.venv/bin/python -m unittest discover -s tests
+```
+
+Clean ignored local noise from canonical lanes:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/clean_local_noise.py --dry-run
+```
+
+---
+
 ## Project map
 
 ```
 .
+├── .codex/
+│   ├── prompts/
+│   │   └── Repo-local prompt templates for visual explanations and reviews.
+│   └── skills/
+│       ├── project-memory-system/
+│       │   └── scripts/
+│       ├── grill-me/
+│       ├── markdown-wiki/
+│       ├── tex-wiki/
+│       ├── pdf-derivative-build/
+│       ├── html-visual-explainer/
+│       ├── ontology-promotion/
+│       └── visual-explainer/
 ├── AGENTS.md
 │   └── Root instructions for research agents working in this repository.
 ├── LICENSE
@@ -133,14 +185,40 @@ When a Python script requires an external package, add one package per line to
 │   └── images/
 │       ├── readme-banner.png
 │       └── readme-banner-old*.png
+├── html/
+│   └── Generated human-only visual explainers.
+├── markdown/
+│   ├── grill-memory-wiki-registry-design-handoff.md
+│   ├── html-explainer-specs/
+│   └── ontology-promotions/
 ├── manuscripts/
-│   └── Reserved for manuscript drafts and research outputs.
+│   ├── tex/
+│   └── pdfs/
 ├── ontology/
-│   └── aether-and-aether-flow.md
+│   ├── aether-and-aether-flow.md
+│   ├── tex/
+│   └── pdfs/
+├── registries/
+│   ├── MARKDOWN_SOURCE_REGISTRY.csv
+│   ├── TEX_SOURCE_REGISTRY.csv
+│   ├── PDF_DERIVATIVE_REGISTRY.csv
+│   ├── HTML_EXPLAINER_REGISTRY.csv
+│   ├── WIKI_ARTIFACT_REGISTRY.csv
+│   └── FILE_OBJECT_REGISTRY.csv
+├── tests/
+│   └── Memory-system smoke checks.
+├── tex_shared/
+│   └── Shared LaTeX inputs used by ontology and manuscript TeX builds.
+├── wiki/
+│   ├── markdown/
+│   ├── tex/
+│   ├── pdf/
+│   ├── html/
+│   └── indexes/
 └── Step-by-step-Comments/
     ├── README.md
     └── Comments - Phase-1.md through Comments - Phase-5.md
 ```
 
 Local or generated files intentionally excluded from the project map include
-`.venv/`, `.DS_Store`, and other ignored operating-system or build artifacts.
+`.venv/`, `.DS_Store`, `.local/`, and other ignored operating-system or build artifacts.
