@@ -24,6 +24,13 @@ Use the repository memory system before making project-knowledge changes.
 
 Generated artifacts may be read by humans and agents, but they are not independent authority. Edit the canonical source and registry row, then regenerate.
 
+## Research-Control Continuation
+
+For research-control continuation, use `.codex/skills/continue-research/SKILL.md`
+and tracked state under `research_control/`. The Director of Research may create
+one bounded AgentJob per invocation after validation. Generated outputs and
+`.local/` caches never override tracked control state.
+
 ## Required Checks
 
 Before changing repository knowledge, inspect the relevant source file and registry row. After changing source or registry material, regenerate and validate:

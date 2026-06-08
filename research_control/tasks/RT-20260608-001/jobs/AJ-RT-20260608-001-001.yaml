@@ -1,0 +1,82 @@
+job_id: "AJ-RT-20260608-001-001"
+task_id: "RT-20260608-001"
+decision_id: "DDR-20260608-001"
+role_id: "control-spine-bootstrapper"
+role_version: "provisional_one_job"
+status: "completed"
+requires_human_gate: false
+allowed_read_paths:
+  - "AGENTS.md"
+  - "README.md"
+  - "requirements.txt"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - "/Users/alex.omegapy/.codex/attachments/9174c2bb-0e05-40cd-a6fd-c531da72d195/pasted-text.txt"
+  - "/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/AGENTS.md"
+  - "/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/scripts/research_control/run_next_role.py"
+  - "/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/scripts/research_control/program_router.py"
+allowed_write_paths:
+  - ".agents/**"
+  - ".codex/skills/continue-research/**"
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/**"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "scripts/research_control/**"
+  - "tests/test_research_control.py"
+allowed_generated_paths:
+  - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY.meta.json"
+  - "registries/FILE_OBJECT_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY.meta.json"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json"
+  - "registries/OBSIDIAN_VAULT_REGISTRY.csv"
+  - "registries/OBSIDIAN_VAULT_REGISTRY.meta.json"
+  - "registries/WIKI_ARTIFACT_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY.meta.json"
+  - "wiki/markdown/md-agents.md"
+  - "wiki/markdown/md-readme.md"
+forbidden_paths:
+  - "ontology/**"
+  - "wiki/**"
+  - ".local/**"
+allowed_source_classes:
+  - "control_state"
+  - "registry"
+  - "role_contract"
+forbidden_source_classes:
+  - "canonical_ontology"
+  - "benchmark_source"
+  - "generated_derivative"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+required_validators:
+  - "validate_research_control"
+  - "unit_tests"
+  - "memory_validate_only"
+expected_outputs:
+  - ".agents/**"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "research_control/**"
+  - "scripts/research_control/**"
+  - "tests/test_research_control.py"
+claim_boundary: "CB-BOOTSTRAP-001"
+provisional_role_contract:
+  role_id: "control-spine-bootstrapper"
+  version: "provisional_one_job"
+  role_kind: "process_control"
+  authority_level: "control_bootstrap"
+  may_execute_autonomously: true
+  may_create_outputs: true
+  may_modify_sources: true
+  may_promote_claims: false
+  requires_human_gate: false
+  expires_after_job_id: "AJ-RT-20260608-001-001"
+  forbidden_actions: "physics_task_creation;ontology_edit;benchmark_promotion;Gate Chair verdict;claim_promotion"

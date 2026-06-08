@@ -1,0 +1,21 @@
+completion_id: "AJC-AJ-RT-20260608-001-001"
+job_id: "AJ-RT-20260608-001-001"
+task_id: "RT-20260608-001"
+completed_at: "2026-06-08T00:00:00Z"
+status: "completed"
+output_paths:
+  - ".agents/**"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "research_control/**"
+  - "scripts/research_control/**"
+  - "tests/test_research_control.py"
+extra_read_paths:
+  - "Makefile"
+command_results:
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=1 | status=diagnostic_blocked_by_preexisting_Makefile_and_requirements_changes"
+validation_status: "PASS"
+verdict: "bootstrap_spine_created"
+next_recommendation: "Run /continue-research to let the Director create a Gate 0 Ontology Formalizer AgentJob if validation agrees."

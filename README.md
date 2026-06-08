@@ -149,6 +149,13 @@ Run smoke tests:
 .venv/bin/python -m unittest discover -s tests
 ```
 
+Run the full memory-system acceptance chain, including generated memory refresh,
+local vault sync, linting, tests, and query smoke checks:
+
+```zsh
+make validate-memory
+```
+
 Initialize and sync the local Obsidian memory vault:
 
 ```zsh
@@ -169,10 +176,20 @@ Clean ignored local noise from canonical lanes:
 
 ---
 
+## Research-control workflow
+
+Research-control continuation is tracked under `research_control/`. Use
+`.codex/skills/continue-research/SKILL.md` as the entry point.
+
+---
+
 ## Project map
 
 ```
 .
+├── .agents/
+│   ├── roles/
+│   └── schemas/
 ├── .codex/
 │   ├── prompts/
 │   │   └── Repo-local prompt templates for visual explanations and reviews.
@@ -191,6 +208,8 @@ Clean ignored local noise from canonical lanes:
 │   └── Root instructions for research agents working in this repository.
 ├── LICENSE
 │   └── Project license.
+├── Makefile
+│   └── Single-command validation wrappers for repository operators.
 ├── README.md
 │   └── Project overview, environment setup, and file map.
 ├── requirements.txt
@@ -213,6 +232,11 @@ Clean ignored local noise from canonical lanes:
 │   ├── tex/
 │   └── pdfs/
 ├── registries/
+│   ├── AGENT_ROLE_REGISTRY.csv
+│   ├── AGENT_JOB_REGISTRY.csv
+│   ├── DIRECTOR_DECISION_REGISTRY.csv
+│   ├── RESEARCH_TASK_REGISTRY.csv
+│   ├── CLAIM_BOUNDARY_REGISTRY.csv
 │   ├── MARKDOWN_SOURCE_REGISTRY.csv
 │   ├── TEX_SOURCE_REGISTRY.csv
 │   ├── PDF_DERIVATIVE_REGISTRY.csv
@@ -222,6 +246,11 @@ Clean ignored local noise from canonical lanes:
 │   ├── CONTENT_SEMANTIC_REGISTRY.csv
 │   ├── OBJECT_RELATIONSHIP_REGISTRY.csv
 │   └── FILE_OBJECT_REGISTRY.csv
+├── research_control/
+│   └── Tracked Director decisions, AgentJobs, completions, handoffs, and templates.
+├── scripts/
+│   └── research_control/
+│       └── Research-control validators and continuation helpers.
 ├── tests/
 │   └── Memory-system smoke checks.
 ├── tex_shared/
