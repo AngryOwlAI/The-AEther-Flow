@@ -16,3 +16,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 ## not_applicable
 
 - `TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
+- `TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
