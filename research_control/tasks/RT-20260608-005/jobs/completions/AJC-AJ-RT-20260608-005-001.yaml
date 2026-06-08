@@ -1,0 +1,19 @@
+completion_id: "AJC-AJ-RT-20260608-005-001"
+job_id: "AJ-RT-20260608-005-001"
+task_id: "RT-20260608-005"
+completed_at: "2026-06-08T23:53:45Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex"
+extra_read_paths:
+  - "research_control/tasks/RT-20260608-004/artifacts/03_LOCALIZATION_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex"
+  - "research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "localization_source_repair_packet_completed"
+next_recommendation: "Run /continue-research separately for Director review of a Refuter AgentJob before any Gate Chair review."

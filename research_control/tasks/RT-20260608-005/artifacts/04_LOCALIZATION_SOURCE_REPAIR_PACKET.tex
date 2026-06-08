@@ -1,0 +1,292 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\PhiFlow}{\Phi_{\lambda}}
+\newcommand{\Order}{\mathcal{S}}
+\newcommand{\Front}{\mathcal{F}}
+\newcommand{\Reach}{\mathcal{R}}
+\newcommand{\Resp}{\mathcal{R}_{\Gamma}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Map}{\mathcal{L}_{\mathrm{loc}}}
+\newcommand{\Data}{\mathcal{D}_{\mathrm{loc}}}
+
+\newtheorem{repairdefinition}{Repair definition}
+\newtheorem{repairproposal}{Repair proposal}
+\newtheorem{constraint}{Constraint}
+\newtheorem{test}{Required test}
+\newtheorem{status}{Repair status}
+
+\title{\textbf{Localization Source-Repair Packet}\\[0.35em]
+\large Source-Only Front, Coincidence, and Clock-Scale Definitions}
+\author{Candidate Constructor AgentJob AJ-RT-20260608-005-001}
+\date{June 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft repairs the localization candidate packet at the three points
+identified by the smuggling audit: front generation, coincidence response, and
+clock-scale calibration. The result is still not a promoted derivation of an
+effective relativistic sector. It is a source-side repair candidate whose
+purpose is to make the next Refuter pass sharp. The packet gives operational
+definitions for \(\Front\), \(\kappa_{\Gamma}\), and \(\alpha_{\Gamma}\), states
+their relabeling invariances, and separates source axioms from later benchmark
+recovery tests.
+\end{abstract}
+
+\section{Scope and Repair Standard}
+
+This artifact is a draft/control output for task \texttt{RT-20260608-005}. It
+does not edit canonical ontology TeX, does not promote a localization
+candidate, and does not issue a Gate Chair verdict. Its only objective is to
+convert the audit blockers into testable source-side definitions.
+
+The repair standard is conservative. A definition is admissible here only if it
+can be stated using source states, source order, source transitions, and
+source-observable responses before comparison with any target metric, target
+null cone, target proper time, radar-coordinate convention, or field equation.
+
+\section{Repaired Data}
+
+The repaired localization data are
+\[
+\Data^{+}
+=
+(\Sub,\PhiFlow,\Gamma,\Order_{\Gamma},\Front^{+},
+\kappa^{+}_{\Gamma},\alpha^{+}_{\Gamma},\Map^{+},\mathcal{I}^{+},
+\mathcal{T}^{+}),
+\]
+where \(\mathcal{I}^{+}\) is the invariance ledger and \(\mathcal{T}^{+}\) is
+the test ledger. The superscript \(+\) means repaired candidate data, not
+verified or promoted data.
+
+\section{Front Generation}
+
+\begin{repairdefinition}[Source perturbation response]
+For a source state \(a\in\Sub\), let \(P_a\) denote a local source
+perturbation class defined by the intrinsic transition structure of
+\(\PhiFlow\). For any \(b\in\Sub\), define the response record
+\[
+R(b\mid a;\lambda_0,\Delta)
+\]
+as the equivalence class of changes in the source-local transition history of
+\(b\) over the order interval \([\lambda_0,\lambda_0+\Delta]\) after applying
+\(P_a\). Two response records are equivalent when they agree under relabeling
+of \(\Sub\) and monotone reparameterization of the source order.
+\end{repairdefinition}
+
+\begin{repairdefinition}[First-response front]
+Given a source-detectable response predicate
+\(\mathsf{Resp}(R,\epsilon)\) with source threshold \(\epsilon\), define
+\[
+\delta_{a\to b}
+=
+\inf\{\Delta>0:\mathsf{Resp}(R(b\mid a;\lambda_0,\Delta),\epsilon)\}.
+\]
+The repaired front relation is
+\[
+\Front^{+}
+=
+\{(a,b)\in\Sub\times\Sub:\delta_{a\to b}<\infty
+\ \mathrm{and}\ b\ \mathrm{is\ boundary-minimal\ in\ the\ reached\ set}\}.
+\]
+Boundary-minimal means that \(b\) is not preceded, in the source adjacency
+order, by another state with the same first-response order. This is a
+transition-boundary condition, not a metric null condition.
+\end{repairdefinition}
+
+\begin{constraint}[No front tuning]
+\(\Front^{+}\) is generated before any comparison with a Lorentzian cone. The
+later smooth double-front condition is a test on the localized image of
+\(\Front^{+}\), not an axiom used to select it.
+\end{constraint}
+
+\section{Coincidence Response}
+
+\begin{repairdefinition}[Observer-chain detector modes]
+An admissible observer chain \(\Gamma\) carries a finite set of internal source
+response modes
+\[
+Q_{\Gamma}=(q^0_{\Gamma},q^1_{\Gamma},q^2_{\Gamma},q^3_{\Gamma})
+\]
+whose recurrence and ordering are defined by the transition history of
+\(\Gamma\). The mode \(q^0_{\Gamma}\) orders chain stages. The modes
+\(q^1_{\Gamma},q^2_{\Gamma},q^3_{\Gamma}\) are response counters chosen for
+functional independence on the local source-accessible domain, not for metric
+orthogonality.
+\end{repairdefinition}
+
+\begin{repairdefinition}[Coincidence response protocol]
+For a source event \(x\in U_{\Gamma}\), let
+\(\Resp(x;\Gamma)\) be the source response trace produced when fronts from
+\(x\) alter the detector modes of \(\Gamma\). The repaired coincidence map is
+\[
+\kappa^{+}_{\Gamma}(x)
+=
+\bigl(
+N^0_{\Gamma}(x),
+N^1_{\Gamma}(x),
+N^2_{\Gamma}(x),
+N^3_{\Gamma}(x)
+\bigr),
+\]
+where each \(N^i_{\Gamma}\) is a count or phase-response functional of
+\(\Resp(x;\Gamma)\). The labels are coincidence data: they record how the
+source event couples to the chain's detector modes. They are not distances,
+simultaneity coordinates, or radar light-signal times.
+\end{repairdefinition}
+
+\begin{constraint}[No imported nearness]
+The domain \(U_{\Gamma}\) is the set of source events with detectable response
+traces on \(\Gamma\). It is not defined by target spatial distance, target
+simultaneity, or target light travel time.
+\end{constraint}
+
+\section{Clock-Scale Calibration}
+
+\begin{repairdefinition}[Stable source cycle]
+A stable source cycle \(\Cycle\) on \(\Gamma\) is a recurrent internal
+transition pattern with:
+\begin{enumerate}
+    \item a source-order interval \(\Delta\Order_{\Gamma}(\Cycle)\);
+    \item repeatability under allowed relabelings of \(\Sub\) and \(\lambda\);
+    \item bounded drift in its own response-mode counts over the candidate
+    regime; and
+    \item no calibration to target proper time.
+\end{enumerate}
+\end{repairdefinition}
+
+\begin{repairdefinition}[Source clock scale]
+Let \(u_{\Gamma}\) be the local unit assigned to one stable source cycle. The
+repaired clock-scale factor is
+\[
+\alpha^{+}_{\Gamma}
+=
+\frac{u_{\Gamma}}{\Delta\Order_{\Gamma}(\Cycle)}.
+\]
+The dimension of \(u_{\Gamma}\) is a source-cycle unit. A later comparison may
+ask whether this unit agrees with target proper time in a benchmark regime,
+but the unit is not defined by that agreement.
+\end{repairdefinition}
+
+\begin{constraint}[Scale before comparison]
+The choice of \(\Cycle\), the assignment of \(u_{\Gamma}\), and the stability
+bound must be recorded before any fit to an effective metric clock is attempted.
+\end{constraint}
+
+\section{Invariance Ledger}
+
+The repaired packet treats the following as source-side redundancy:
+\begin{enumerate}
+    \item bijective relabeling of \(\Sub\) that preserves transition
+    accessibility and response predicates;
+    \item monotone reparameterization of \(\lambda\) and
+    \(\Order_{\Gamma}\) that preserves source-order incidence;
+    \item invertible recombination of detector response modes that preserves
+    coincidence distinguishability; and
+    \item replacement of a stable source cycle by an equivalent recurrent
+    transition pattern with the same response-count ratios.
+\end{enumerate}
+
+The invariant content is the incidence structure of first responses, the
+coincidence equivalence classes generated by detector traces, and the ratios of
+stable source-cycle counts. Target diffeomorphism symmetry remains a recovery
+target, not a primitive assumption.
+
+\section{Benchmark Separation}
+
+\begin{repairproposal}[Source-first localization map]
+The repaired map \(\Map^{+}\) proceeds in this order:
+\begin{enumerate}
+    \item generate \(\Front^{+}\) from source perturbation response;
+    \item assign \(\kappa^{+}_{\Gamma}\) from detector-mode coincidence traces;
+    \item assign \(\alpha^{+}_{\Gamma}\) from stable source cycles;
+    \item test whether the localized image of \(\Front^{+}\) has a smooth
+    double-front limit;
+    \item only after those source definitions are fixed, compare the resulting
+    candidate conformal and scale data with the exact-closure benchmark.
+\end{enumerate}
+\end{repairproposal}
+
+The repair therefore forbids defining \(\Front^{+}\) by target null structure,
+\(\kappa^{+}_{\Gamma}\) by radar coordinates, or \(\alpha^{+}_{\Gamma}\) by
+target proper time. Those structures may appear only as later test comparators.
+
+\section{Failure Tests for the Next Role}
+
+\begin{test}[Front-generation test]
+The Refuter should check whether \(\delta_{a\to b}\) and boundary minimality
+can be defined without hidden metric topology. If source adjacency already
+requires a target spatial or null relation, the repair fails.
+\end{test}
+
+\begin{test}[Coincidence independence test]
+The Refuter should check whether three independent response modes can be
+selected without choosing a preferred target frame or importing Euclidean
+spatial axes.
+\end{test}
+
+\begin{test}[Clock-scale test]
+The Refuter should check whether stable source cycles can supply a scale with
+well-defined dimensions and bounded drift before target proper-time
+comparison.
+\end{test}
+
+\begin{test}[Recovery-order test]
+The Refuter should verify that benchmark recovery is downstream of source
+definitions. If any repaired definition is chosen because it already matches
+the benchmark cone or clock, the repair fails by target import.
+\end{test}
+
+\section{Status and Next Role}
+
+\begin{status}[Repair candidate stated, not validated]
+The smuggling audit blockers have been converted into explicit source-side
+repair definitions. This is constructive progress, but it does not validate
+the localization program. The packet remains underdetermined until a Refuter
+tests whether the response predicates, detector modes, and stable cycles can be
+specified without hidden target structure.
+\end{status}
+
+The logical next role is a Refuter AgentJob. Gate Chair review remains
+premature because the repair has not been adversarially tested and no promotion
+claim is authorized.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization smuggling audit:
+Target-import review of the Gate 0 localization candidate packet}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-004/artifacts/03\_LOCALIZATION\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization candidate packet: A
+source-side observer-localization map for Gate 0 review} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-003/artifacts/02\_LOCALIZATION\_CANDIDATE\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Gate 0 ontology formalization: Source
+primitives, forbidden imports, and localization burden} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex}.
+
+\end{document}

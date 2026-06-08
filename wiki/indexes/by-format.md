@@ -33,6 +33,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-004/artifacts/03_LOCALIZATION_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
 
 ## wiki_markdown
 
@@ -59,3 +60,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `wiki/tex/tex-research-control-gate0-ontology-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `wiki/tex/tex-research-control-localization-candidate-packet.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `wiki/tex/tex-research-control-localization-source-repair-packet.md`
