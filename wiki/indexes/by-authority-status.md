@@ -19,6 +19,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-REPAIR-REFUTATION` `research_control/tasks/RT-20260608-006/artifacts/05_LOCALIZATION_REPAIR_REFUTATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-004/artifacts/03_LOCALIZATION_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-BENCHMARK-INDEPENDENCE-REFUTATION` `research_control/tasks/RT-20260608-012/artifacts/11_LOCALIZATION_SOURCE_BASIS_AXIOM_BENCHMARK_INDEPENDENCE_REFUTATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-JUSTIFICATION` `research_control/tasks/RT-20260608-010/artifacts/09_LOCALIZATION_SOURCE_BASIS_AXIOM_JUSTIFICATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-011/artifacts/10_LOCALIZATION_SOURCE_BASIS_AXIOM_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-CONSERVATIVITY-REFUTATION` `research_control/tasks/RT-20260608-009/artifacts/08_LOCALIZATION_SOURCE_BASIS_CONSERVATIVITY_REFUTATION.tex`
@@ -64,6 +65,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `wiki/tex/tex-research-control-localization-candidate-packet.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-REPAIR-REFUTATION` `wiki/tex/tex-research-control-localization-repair-refutation.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-BENCHMARK-INDEPENDENCE-REFUTATION` `wiki/tex/tex-research-control-localization-source-basis-axiom-benchmark-independence-refutation.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-JUSTIFICATION` `wiki/tex/tex-research-control-localization-source-basis-axiom-justification.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-source-basis-axiom-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-CONSERVATIVITY-REFUTATION` `wiki/tex/tex-research-control-localization-source-basis-conservativity-refutation.md`
