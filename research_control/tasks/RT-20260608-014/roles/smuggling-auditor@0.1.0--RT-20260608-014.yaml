@@ -1,0 +1,30 @@
+execution_role_ref: "smuggling-auditor@0.1.0--RT-20260608-014"
+role_execution_kind: "registered_role"
+task_id: "RT-20260608-014"
+agent_job_id: "AJ-RT-20260608-014-001"
+base_role_id: "smuggling-auditor"
+base_role_version: "0.1.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Smuggling Auditor role without permission expansion for source-internal selection-law target-import audit."
+added_constraints:
+  - "Audit S0--S4 and S_F only for hidden target import and benchmark-tuned branch selection."
+  - "Do not authorize candidate reconstruction and do not issue Gate Chair verdict and do not promote or globally reject the research program."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260608-014/**"
+  - "research_control/handoffs/handoff-0014.yaml"
+  - "research_control/handoffs/handoff-0014.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+requires_human_gate: false
+expires_after: "AJ-RT-20260608-014-001"
+justification: ""
+non_reusable_until_registered: false
