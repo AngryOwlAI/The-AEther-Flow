@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\Step}{\mathsf{Step}}
+\newcommand{\RespAlg}{\mathcal{R}_{\Gamma}}
+\newcommand{\Rank}{\mathsf{rank}_{\mathcal{S}}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\Sel}{\mathfrak{S}}
+\newcommand{\Fail}{\mathsf{Fail}}
+
+\newtheorem{test}{Benchmark-independence test}
+\newtheorem{finding}{Refutation finding}
+\newtheorem{variation}{Admissible variation}
+\newtheorem{blocker}{Promotion blocker}
+\newtheorem{verdict}{Local verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selection-Law Benchmark-Independence Refutation}\\[0.35em]
+\large Invariance Test for Source-Internal Selector Rules}
+\author{Refuter AgentJob AJ-RT-20260608-015-001}
+\date{June 9, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft tests whether the selection-law packet
+\(\Sel=(S_0,S_1,S_2,S_3,S_4,S_F)\) is benchmark-independent over its
+admissible source-defined selector classes. The result is local and negative.
+The packet improves the control state by making selectors explicit, requiring
+benchmark blindness, and preserving failure states. However, as stated, it
+does not yet define survey domains tightly enough to prove invariant
+localization-relevant outputs. Admissible seeds, refinements, support
+equivalences, discriminator families, response quotients, and clock
+transports can agree on the prior source language while disagreeing on fronts,
+first-response ranks, rank spectra, transported cycle ratios, or failure
+statuses. Candidate reconstruction and Gate Chair review remain blocked.
+\end{abstract}
+
+\section{Scope and Refutation Standard}
+
+This artifact is a draft/control output for task \texttt{RT-20260608-015}. It
+does not edit canonical ontology TeX, adopt A0--A4 or \(S_0\)--\(S_F\) as
+canonical ontology, authorize candidate reconstruction, issue a Gate Chair
+verdict, or reject the broader \TheoryProgram{}.
+
+Let \(\Lang\) denote the registered source language before the A0--A4
+extension sequence. Let \(\Sel\) denote the source-internal selection-law
+packet proposed after the earlier benchmark-independence refutation of A1--A4.
+
+\begin{test}[Selector benchmark independence]
+\(\Sel\) passes this local test only if every localization-relevant output
+available to a later candidate is invariant across the admissible
+source-defined class for the corresponding selector. The required outputs
+include adjacency fronts, first-response ranks, response-rank spectra,
+transported cycle ratios, holonomy reports, and failure-ledger status.
+\end{test}
+
+Benchmark independence is stronger than pre-benchmark declaration. A selector
+can be fixed before benchmark comparison and still fail this test if the
+admissible source-defined class permits multiple non-equivalent outputs.
+
+\section{\texorpdfstring{\(S_0\)}{S0}: Seed and Refinement Variation}
+
+\begin{finding}[The presentation survey domain is not fixed]
+\(S_0\) requires a source-accessible seed and a declared refinement policy.
+This is an improvement over implicit presentation choice. It does not by
+itself define the complete class of admissible seeds, closure radii, or
+refinement policies that must be surveyed before a candidate can use the
+result.
+\end{finding}
+
+\begin{variation}[Refinement-disagreement model]
+Take the same source order and flow labels. One admissible policy closes a
+bounded seed under immediate source-flow support. Another closes under two
+source-flow steps and then refines records that share support labels. Both
+are source-named and can be chosen before benchmark comparison. They can
+produce different boundary records, adjacency front widths, and response-rank
+inputs.
+\end{variation}
+
+\begin{blocker}[Presentation-invariance failure]
+\(S_0\) is not benchmark-independent until the source dynamics fix the seed
+and refinement policy or the packet proves that all admissible policies yield
+the same localization-relevant outputs. The current packet requires ambiguity
+to be reported, but it does not yet perform or define the complete survey.
+\end{blocker}
+
+\section{\texorpdfstring{\(S_1\)}{S1}: Support-Equivalence Variation}
+
+\begin{finding}[Minimal support depends on support classification]
+\(S_1\) selects \(\Step\) by order comparability, shared support, and absence
+of an intermediate record with the same support class. The benchmark
+independence burden therefore moves to the support-class rule. The packet
+does not yet prove that all source-admissible support classifications induce
+the same transition family.
+\end{finding}
+
+\begin{variation}[Transition-front divergence]
+For the same records, classify support by exact recurrence word in one case
+and by recurrence-word prefix in another. Both classifications can be
+source-defined. The exact rule can split a transition into smaller steps,
+while the prefix rule can merge the same records into a direct transition.
+The induced neighborhoods \(N_n(x)\), boundaries, and fronts need not agree.
+\end{variation}
+
+\begin{blocker}[Transition-family invariance failure]
+\(S_1\) cannot support candidate reconstruction until support equivalence is
+source-fixed or until non-invariant transition families are preserved as a
+negative result. Selecting the front family that resembles a benchmark
+geometry would be benchmark selection, even if the vocabulary remains
+source-side.
+\end{blocker}
+
+\section{\texorpdfstring{\(S_2\)}{S2}: Perturbation and Discriminator Variation}
+
+\begin{finding}[Family-valued output is not positive evidence]
+\(S_2\) correctly carries all source-defined perturbation and discriminator
+families rather than selecting a single convenient member. But a family-valued
+output is not a benchmark-independent localization datum unless all members
+agree on the first-response ranks relevant to the later candidate.
+\end{finding}
+
+\begin{variation}[First-response-rank divergence]
+One discriminator may fire on the first changed recurrence word. Another may
+fire only after a stable two-step response distinction. Both can be fixed
+before benchmark comparison and both can use only source records. They can
+assign different first-response ranks \(r_D(a,b)\), producing different
+fronts or rank ledgers.
+\end{variation}
+
+\begin{blocker}[Discriminator survey blocker]
+The present packet makes the survey obligation visible, but it does not yet
+establish stability of \(r_D(a,b)\) across the admissible family. Therefore
+the discriminator output remains a blocker unless reported as
+\(\mathsf{family\_valued}\), \(\mathsf{underdetermined}\), or
+\(\mathsf{benchmark\_sensitive}\).
+\end{blocker}
+
+\section{\texorpdfstring{\(S_3\)}{S3}: Response-Quotient and Rank Variation}
+
+\begin{finding}[Refusing rank four is necessary but not sufficient]
+\(S_3\) avoids imposing \(\Rank=4\). That is a necessary control success. The
+remaining benchmark-independence question is whether the response-word ground
+set, recurrence equivalence, and recombination quotient are source-unique or
+at least rank-invariant.
+\end{finding}
+
+\begin{variation}[Rank-spectrum divergence]
+Two admissible quotients can agree on source records and disagree on
+independence. One quotient identifies response functionals by recurrence
+equivalence; another keeps them independent when their local supports differ.
+The resulting rank spectrum can vary. A favorable rank value is not evidence
+unless the packet surveys the admissible quotient class and records the whole
+spectrum.
+\end{variation}
+
+\begin{blocker}[Rank-invariance failure]
+\(S_3\) currently supports at most a rank-survey obligation. It does not
+support candidate reconstruction unless the rank is invariant or the
+candidate is explicitly formulated to survive the full reported spectrum.
+\end{blocker}
+
+\section{\texorpdfstring{\(S_4\)}{S4}: Transport and Holonomy Variation}
+
+\begin{finding}[Holonomy transparency does not fix transport]
+\(S_4\) requires nontrivial holonomy to be reported rather than normalized
+away. This prevents one direct form of clock smuggling. It does not determine
+the shared-support relation, the transport map, or the stable-cycle
+equivalence class.
+\end{finding}
+
+\begin{variation}[Transport-ratio divergence]
+Using the same source chains, one admissible rule may compare cycles only
+when their transition supports coincide exactly. Another may compare cycles
+when their support classes overlap through a declared refinement. Both rules
+can report holonomy honestly. They can still produce different transported
+cycle ratios around the same source loop.
+\end{variation}
+
+\begin{blocker}[Clock-transport invariance failure]
+\(S_4\) is not benchmark-independent until the transport rule is source-fixed
+or until transported ratios and holonomy reports are stable over the declared
+survey domain. A single target-compatible clock comparison may not be selected
+from a non-invariant transport family.
+\end{blocker}
+
+\section{\texorpdfstring{\(S_F\)}{SF}: Failure-Ledger Status Variation}
+
+\begin{finding}[Failure reporting blocks silent repair but does not prove invariance]
+\(S_F\) is a useful safeguard: it distinguishes \(\mathsf{invariant}\),
+\(\mathsf{family\_valued}\), \(\mathsf{underdetermined}\),
+\(\mathsf{benchmark\_sensitive}\), and \(\mathsf{not\_computed}\). The local
+problem is that status assignment itself depends on a declared survey domain.
+Without that domain, \(\mathsf{invariant}\) is not an auditable claim.
+\end{finding}
+
+\begin{blocker}[Status-domain blocker]
+The failure ledger must identify the class surveyed, the source inputs used,
+the benchmark inputs excluded, and the rule for changing status from
+\(\mathsf{not\_computed}\) to \(\mathsf{invariant}\). Otherwise the ledger is
+control bookkeeping, not benchmark-independence evidence.
+\end{blocker}
+
+\section{Independence Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.18\linewidth}p{0.34\linewidth}p{0.36\linewidth}}
+\textbf{Selector} & \textbf{Observed underselection} & \textbf{Local status} \\
+\hline
+\(S_0\) & seed, closure radius, refinement policy & not benchmark-independent \\
+\(S_1\) & support equivalence and transition family & not benchmark-independent \\
+\(S_2\) & perturbation and discriminator family closure & not benchmark-independent \\
+\(S_3\) & response quotient and rank spectrum & not benchmark-independent \\
+\(S_4\) & shared support, transport, and cycle equivalence & not benchmark-independent \\
+\(S_F\) & status assignment without explicit survey domain & blocker metadata incomplete \\
+\end{tabular}
+\end{center}
+
+\section{Local Verdict}
+
+\begin{verdict}[Selection-law packet fails the current benchmark-independence test]
+The selection-law packet is a genuine control improvement because it makes
+selector choices explicit and forbids silent target-compatible repair. It
+does not yet pass benchmark independence. The packet currently exposes the
+right selector surfaces but does not prove invariant localization-relevant
+outputs across admissible source-defined selector classes. Candidate
+reconstruction, canonical ontology adoption, benchmark promotion, and Gate
+Chair review therefore remain blocked.
+\end{verdict}
+
+This is a local result. It does not reject the \TheoryProgram{} and does not
+preclude a future source-dynamics theorem or selector-domain repair packet
+from establishing the required invariance.
+
+\section{Next Burden}
+
+\begin{nextburden}[Selector-domain repair or controlled pause]
+The logical next step is not Candidate Constructor and not Gate Chair review.
+The next bounded task should either:
+\begin{enumerate}
+    \item route to an Ontology Formalizer to propose a selector-domain repair
+    packet that fixes the admissible survey classes for \(S_0\)--\(S_F\),
+    states invariance criteria, and defines when non-invariance is a negative
+    result; or
+    \item enter a Director-controlled pause if further selector-domain
+    commitments exceed current ontology-extension authority.
+\end{enumerate}
+\end{nextburden}
+
+Any future candidate must first show that its localization-relevant outputs
+survive admissible variation in seed, refinement, support equivalence,
+discriminator family, response quotient, transport, and failure-ledger status.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+selection-law smuggling audit: Target-import review of source-internal
+selector rules} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-014/artifacts/13\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTION\_LAW\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+selection-law packet: Source-internal selector rules, invariance obligations,
+and failure reporting for A0--A4} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-013/artifacts/12\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTION\_LAW\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+benchmark-independence refutation: Source-internal necessity test for A1--A4}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-012/artifacts/11\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_BENCHMARK\_INDEPENDENCE\_REFUTATION.tex}.
+
+\end{document}
