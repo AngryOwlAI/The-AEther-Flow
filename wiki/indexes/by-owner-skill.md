@@ -29,6 +29,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `wiki/tex/tex-research-control-localization-candidate-packet.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-REPAIR-REFUTATION` `wiki/tex/tex-research-control-localization-repair-refutation.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-JUSTIFICATION` `wiki/tex/tex-research-control-localization-source-basis-axiom-justification.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-CONSERVATIVITY-REFUTATION` `wiki/tex/tex-research-control-localization-source-basis-conservativity-refutation.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION` `wiki/tex/tex-research-control-localization-source-basis-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-source-basis-smuggling-audit.md`
@@ -65,6 +66,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-REPAIR-REFUTATION` `research_control/tasks/RT-20260608-006/artifacts/05_LOCALIZATION_REPAIR_REFUTATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-004/artifacts/03_LOCALIZATION_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-JUSTIFICATION` `research_control/tasks/RT-20260608-010/artifacts/09_LOCALIZATION_SOURCE_BASIS_AXIOM_JUSTIFICATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-CONSERVATIVITY-REFUTATION` `research_control/tasks/RT-20260608-009/artifacts/08_LOCALIZATION_SOURCE_BASIS_CONSERVATIVITY_REFUTATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION` `research_control/tasks/RT-20260608-007/artifacts/06_LOCALIZATION_SOURCE_BASIS_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-008/artifacts/07_LOCALIZATION_SOURCE_BASIS_SMUGGLING_AUDIT.tex`
