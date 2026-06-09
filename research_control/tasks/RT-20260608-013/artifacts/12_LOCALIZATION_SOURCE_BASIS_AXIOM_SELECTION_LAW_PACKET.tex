@@ -1,0 +1,275 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\Step}{\mathsf{Step}}
+\newcommand{\Adj}{\mathsf{Adj}_{\mathcal{S}}}
+\newcommand{\RespAlg}{\mathcal{R}_{\Gamma}}
+\newcommand{\Rank}{\mathsf{rank}_{\mathcal{S}}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\Sel}{\mathfrak{S}}
+\newcommand{\Fail}{\mathsf{Fail}}
+
+\newtheorem{selectionlaw}{Selection law}
+\newtheorem{obligation}{Invariance obligation}
+\newtheorem{failure}{Failure-reporting rule}
+\newtheorem{status}{Control status}
+\newtheorem{verdict}{Local verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selection-Law Packet}\\[0.35em]
+\large Source-Internal Selector Rules, Invariance Obligations, and Failure Reporting for A0--A4}
+\author{Ontology Formalizer AgentJob AJ-RT-20260608-013-001}
+\date{June 9, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft responds to the benchmark-independence refutation of A1--A4. It
+does not promote A0--A4, edit canonical ontology, authorize candidate
+reconstruction, or issue a Gate Chair verdict. It proposes a source-side
+selection-law packet whose purpose is narrower: make the finite presentation,
+transition germ, perturbation and discriminator families, response algebra,
+and clock transport auditable without benchmark fitting. The result remains
+a draft/control extension hypothesis. If any selector is underdetermined,
+non-invariant, or benchmark-sensitive, the required output is a negative
+control report, not a candidate.
+\end{abstract}
+
+\section{Scope and Selection Standard}
+
+This artifact is a draft/control output for task
+\texttt{RT-20260608-013}. It is not a derivation and not a candidate packet.
+The previous Refuter result established a local negative result: the A1--A4
+axiom packet does not yet force unique localization-relevant outputs from the
+registered source language \(\Lang\). The present response therefore cannot
+claim source-internal necessity. It can only propose explicit selection laws
+whose future audits can decide whether those laws remain source-side and
+benchmark-independent.
+
+Let
+\[
+\Sel=(S_0,S_1,S_2,S_3,S_4,S_F)
+\]
+denote the selection-law packet. Each \(S_i\) is a rule from registered
+source records and declared extension data to a finite object or family of
+objects. A selector is admissible only if it is:
+\begin{enumerate}
+    \item source-defined before benchmark comparison;
+    \item natural under source relabeling and monotone order
+    reparameterization;
+    \item stable under declared refinements or else reports its instability;
+    \item blind to target metric, target null-cone, target coordinate, target
+    clock, and target rank data; and
+    \item failure-tolerant, meaning ambiguity is preserved as a negative or
+    underselection result.
+\end{enumerate}
+
+\section{S0: Presentation Selector}
+
+\begin{selectionlaw}[Source-accessible finite presentation]
+\(S_0\) assigns a finite or locally finite presentation
+\[
+(\Sub_U,\preceq_U,\Phi_U,\rho_U)
+\]
+only from a bounded source-accessibility seed, the intrinsic source order, the
+registered flow labels, and a declared refinement policy \(\rho_U\). The
+selector may close the seed under source-order and source-flow support. It may
+not choose \(U\), local finiteness scale, or refinement level because the
+choice resembles a target neighborhood.
+\end{selectionlaw}
+
+\begin{obligation}[Presentation naturality]
+For every admissible source relabeling \(h:\Sub_U\to\Sub_{U'}\), \(S_0\)
+must satisfy
+\[
+h(S_0(U))=S_0(h(U))
+\]
+up to the declared presentation redundancy. If two allowed refinement
+policies produce different adjacency fronts or response ranks, both outcomes
+must be carried forward as a selection ambiguity.
+\end{obligation}
+
+\section{S1: Transition-Germ Selector}
+
+\begin{selectionlaw}[Minimal source-support transition germ]
+\(S_1\) assigns \(\Step\) by a minimal source-support rule: \(x\Step y\) is
+admissible only when \(x\) and \(y\) are order-comparable within the
+presentation, share declared source-flow support, and no intermediate source
+record with the same support class resolves the transition into smaller
+source steps. The rule selects a transition family when minimality is
+non-unique.
+\end{selectionlaw}
+
+\begin{obligation}[Adjacency front invariance]
+Neighborhoods \(N_n(x)\), boundaries \(\partial_{\mathcal{S}}R\), and
+adjacency fronts derived from \(\Step\) are usable only when they are
+invariant over the transition family selected by \(S_1\). If invariance
+fails, the packet must report \(\Fail_{\Step}\) with the disagreeing fronts.
+\end{obligation}
+
+\section{S2: Perturbation and Discriminator Selector}
+
+\begin{selectionlaw}[Pre-benchmark perturbation and discriminator families]
+\(S_2\) assigns perturbation classes \(\mathcal{P}\) and discriminator
+families \(\mathcal{D}\) from finite source-local edits, recurrence words,
+transition-count windows, and chain-internal response distinctions. Every
+threshold, window, and response distinction must be fixed before benchmark
+comparison. If multiple source-defined families satisfy the rule, the output
+is the family of all such choices, not a hand-selected member.
+\end{selectionlaw}
+
+\begin{obligation}[First-response stability]
+First-response ranks \(r_D(a,b)\) may support later localization only if they
+are stable over every \(D\in\mathcal{D}\) allowed by \(S_2\). If allowed
+discriminators disagree, the result is a discriminator underselection report.
+\end{obligation}
+
+\section{S3: Response-Algebra Selector}
+
+\begin{selectionlaw}[Quotient by declared source symmetries only]
+\(S_3\) assigns \(\RespAlg\) by quotienting response words only by source
+relabeling symmetries, recurrence equivalences, and source-local
+recombination rules declared before benchmark comparison. The selector does
+not impose \(\Rank=4\). It reports the rank spectrum across all admissible
+quotients when the quotient rule is not unique.
+\end{selectionlaw}
+
+\begin{obligation}[Rank as survey output]
+A later candidate may use a rank value only if \(S_3\) makes that value
+invariant across admissible quotient choices. A rank-four output is not
+privileged. Lower rank, higher rank, or variable rank is a valid negative
+control result.
+\end{obligation}
+
+\section{S4: Clock-Transport Selector}
+
+\begin{selectionlaw}[Shared-support clock transport]
+\(S_4\) assigns stable cycle classes \([\Cycle]\) and transport maps
+\[
+T_{\Gamma\to\Gamma'}:[\Cycle]_{\Gamma}\to[\Cycle]_{\Gamma'}
+\]
+only from shared source transition support and recurrence-ratio records. The
+transport rule must report holonomy around closed source loops. It may not
+normalize holonomy away to match target proper-time behavior.
+\end{selectionlaw}
+
+\begin{obligation}[Holonomy transparency]
+Clock-cycle comparisons are usable only when transported cycle ratios are
+stable over the admissible shared-support relation. Nontrivial holonomy is
+reported as source data. Ambiguous transport is reported as a family of
+transport outcomes, not collapsed into a single target-compatible clock.
+\end{obligation}
+
+\section{S_F: Failure-Reporting Selector}
+
+\begin{failure}[Underselection ledger]
+For each selector \(S_i\), the AgentJob using this packet must produce an
+underselection ledger with one of the following statuses:
+\[
+\mathsf{invariant},\quad
+\mathsf{family\_valued},\quad
+\mathsf{underdetermined},\quad
+\mathsf{benchmark\_sensitive},\quad
+\mathsf{not\_computed}.
+\]
+Only \(\mathsf{invariant}\) status may support a later candidate object. The
+other statuses are carried forward as blockers or negative results.
+\end{failure}
+
+\begin{failure}[Benchmark-blind audit record]
+Every selector must record the source inputs used, the target inputs not
+used, and the time at which benchmark comparison becomes allowed. A selector
+whose definition is revised after benchmark comparison is automatically
+\(\mathsf{benchmark\_sensitive}\).
+\end{failure}
+
+\begin{failure}[No silent repair]
+If a selector fails, the packet may recommend repair or refutation. It may
+not silently choose a target-compatible branch. It may not authorize
+Candidate Constructor or Gate Chair review while selector failure remains
+unresolved.
+\end{failure}
+
+\section{Selection Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.17\linewidth}p{0.35\linewidth}p{0.36\linewidth}}
+\textbf{Selector} & \textbf{Object selected} & \textbf{Required invariant output} \\
+\hline
+\(S_0\) & finite source presentation & presentation-independent front and rank inputs \\
+\(S_1\) & transition germ \(\Step\) & adjacency fronts invariant over transition family \\
+\(S_2\) & \(\mathcal{P}\), \(\mathcal{D}\) & stable first-response ranks \\
+\(S_3\) & \(\RespAlg\), \(\Rank\) & rank spectrum or invariant rank \\
+\(S_4\) & \([\Cycle]\), \(T_{\Gamma\to\Gamma'}\) & transparent holonomy and stable transported ratios \\
+\(S_F\) & failure ledger & non-invariant outcomes preserved as blockers \\
+\end{tabular}
+\end{center}
+
+\section{Control Status}
+
+\begin{status}[Selection laws remain extension hypotheses]
+The selection laws above are source-side proposals, not established
+consequences of \(\Lang\). They improve the control state by converting
+presentation, transition, discriminator, quotient, and transport freedom into
+explicit testable rules. They do not prove source-internal necessity and do
+not remove the current block on candidate reconstruction.
+\end{status}
+
+\begin{verdict}[Draft packet only]
+This packet is suitable for audit and refutation. It is not suitable for
+candidate construction until a later Smuggling Auditor confirms that the
+selectors do not hide target imports and a later Refuter or equivalent
+invariance test confirms that the selected outputs are benchmark-independent.
+\end{verdict}
+
+\section{Next Burden}
+
+\begin{nextburden}[Smuggling audit of selection laws]
+The logical next role is a Smuggling Auditor review of \(\Sel\). The audit
+should test whether \(S_0\)--\(S_4\) encode target topology, target observer
+protocol, target rank, target clock normalization, or benchmark-tuned branch
+selection. Candidate Constructor, canonical ontology edit, and Gate Chair
+review remain premature.
+\end{nextburden}
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+benchmark-independence refutation: Source-internal necessity test for A1--A4}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-012/artifacts/11\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_BENCHMARK\_INDEPENDENCE\_REFUTATION.tex}.
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+smuggling audit: Target-import review of A1--A4 extension hypotheses}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-011/artifacts/10\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis axiom
+justification: Minimal source-side extension hypotheses after the
+conservativity refutation} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-010/artifacts/09\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_JUSTIFICATION.tex}.
+
+\end{document}
