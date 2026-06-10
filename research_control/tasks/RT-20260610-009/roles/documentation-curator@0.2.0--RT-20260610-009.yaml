@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@0.2.0--RT-20260610-009"
+role_execution_kind: "registered_role"
+task_id: "RT-20260610-009"
+agent_job_id: "AJ-RT-20260610-009-001"
+base_role_id: "documentation-curator"
+base_role_version: "0.2.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role without permission expansion for human visual explainer QA and source-backed HTML polish."
+added_constraints:
+  - "Edit Markdown source specs before generated HTML derivatives."
+  - "Polish only rendered usability source drilldowns simple/deep navigation and visible code formatting."
+  - "Do not change validator contracts role authority control contracts or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/research-agent-workflow-explainer.md"
+  - "markdown/html-explainer-specs/research-control-system-explainer.md"
+  - "html/project-overview-explainer.html"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/research-agent-workflow-explainer.html"
+  - "html/research-control-system-explainer.html"
+  - "research_control/tasks/RT-20260610-009/**"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+requires_human_gate: false
+expires_after: "AJ-RT-20260610-009-001"
+justification: ""
+non_reusable_until_registered: false

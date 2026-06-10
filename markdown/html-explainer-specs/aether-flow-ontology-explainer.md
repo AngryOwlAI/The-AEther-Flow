@@ -61,6 +61,8 @@ obvious.
   the central open problem.
 - A source-authority panel pointing readers back to registered TeX and registry
   rows for scientific authority.
+- Expandable source drilldowns that state why each cited source matters and
+  what ontology, benchmark, or authority boundary it checks.
 - A claim-boundary notice stating that this page is human-only and
   non-authoritative.
 - Progressive-disclosure controls for first-read and deep analysis modes,

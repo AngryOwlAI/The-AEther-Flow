@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="4c94c5e2ef2be6e1ba4659e0bb29f0da60e3021708fe36b4f6b6ff95002347ca">
+  <meta name="aether-flow-source-basis-hash" content="f348f518a07de9d0b34f34c99642ed8d71c7b5db842eb5e665cb02dc2a3d74b2">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Æther Flow Ontology Explainer</title>
@@ -148,6 +148,8 @@
 
     .deep-only { display: none; }
     body.deep-mode .deep-only { display: block; }
+    .deep-nav { display: none; }
+    body.deep-mode .deep-nav { display: inline-flex; }
 
     details {
       border: 1px solid var(--line);
@@ -188,6 +190,9 @@
       gap: 12px;
     }
     .source-item { box-shadow: none; padding: 14px; background: #fbfdf9; }
+    details.source-item { margin-top: 0; }
+    .source-item p { margin-top: 8px; }
+    .source-item strong { color: var(--ink); }
     .claim-box { background: var(--red-soft); border-color: rgba(158, 52, 75, 0.35); }
 
     @media (max-width: 920px) {
@@ -212,7 +217,7 @@
       <nav data-explainer-control="section_toc" aria-label="Section navigation">
         <a class="nav-link" href="#stack">Ontology stack</a>
         <a class="nav-link" href="#burden">Derivation burden</a>
-        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link deep-nav" href="#analysis">Analysis</a>
         <a class="nav-link" href="#sources">Sources</a>
         <a class="nav-link" href="#claim-boundary">Claim boundary</a>
       </nav>
@@ -223,7 +228,7 @@
       <div class="stack">
         <article class="layer">
           <h3>1. Substrate idea</h3>
-          <p>`Æther` names the proposed deeper substrate.</p>
+          <p><code>Æther</code> names the proposed deeper substrate.</p>
           <details class="deep-only" data-explainer-control="expandable_analysis_panels">
             <summary>What this can do</summary>
             <p>It can organize hypotheses and constraints. It cannot by itself prove GR or replace registered scientific sources.</p>
@@ -231,7 +236,7 @@
         </article>
         <article class="layer">
           <h3>2. Flow organization</h3>
-          <p>`Æther-flow` names structured relational organization in that substrate.</p>
+          <p><code>Æther-flow</code> names structured relational organization in that substrate.</p>
           <details class="deep-only" data-explainer-control="expandable_analysis_panels">
             <summary>What must be specified</summary>
             <p>Admissible variables, evolution rules, invariants, dimensions, boundary conditions, and matter coupling.</p>
@@ -315,11 +320,11 @@
     <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
       <h2>Source Drilldowns</h2>
       <div class="sources">
-        <article class="source-item" data-source-path="README.md"><h3>README.md</h3><p>Project framing and ontology summary.</p></article>
-        <article class="source-item" data-source-path="AGENTS.md"><h3>AGENTS.md</h3><p>Authority hierarchy and open derivation boundary.</p></article>
-        <article class="source-item" data-source-path="ontology/aether-and-aether-flow.md"><h3>ontology/aether-and-aether-flow.md</h3><p>Ontology-adjacent explanatory source.</p></article>
-        <article class="source-item" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><h3>CLAIM_BOUNDARY_REGISTRY.csv</h3><p>Claim-boundary status and prohibited promotions.</p></article>
-        <article class="source-item" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><h3>TEX_SOURCE_REGISTRY.csv</h3><p>Registered scientific source rows.</p></article>
+        <details class="source-item" data-source-path="README.md"><summary>README.md</summary><p><strong>Why it matters:</strong> Project framing and ontology summary.</p><p><strong>Use it to check:</strong> Whether the ontology is framed as an open derivation program rather than a completed theory.</p></details>
+        <details class="source-item" data-source-path="AGENTS.md"><summary>AGENTS.md</summary><p><strong>Why it matters:</strong> Authority hierarchy and open derivation boundary.</p><p><strong>Use it to check:</strong> Whether the page respects canonical source and generated-derivative boundaries.</p></details>
+        <details class="source-item" data-source-path="ontology/aether-and-aether-flow.md"><summary>ontology/aether-and-aether-flow.md</summary><p><strong>Why it matters:</strong> Ontology-adjacent explanatory source for the substrate and flow vocabulary.</p><p><strong>Use it to check:</strong> Whether the explainer distinguishes ontology from mathematical derivation.</p></details>
+        <details class="source-item" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><summary>CLAIM_BOUNDARY_REGISTRY.csv</summary><p><strong>Why it matters:</strong> Claim-boundary status and prohibited promotions.</p><p><strong>Use it to check:</strong> Whether derivation, benchmark, and authority statements stay inside registered limits.</p></details>
+        <details class="source-item" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><summary>TEX_SOURCE_REGISTRY.csv</summary><p><strong>Why it matters:</strong> Registered scientific source rows.</p><p><strong>Use it to check:</strong> Which files carry scientific authority beyond this human-only visualization.</p></details>
       </div>
     </section>
 

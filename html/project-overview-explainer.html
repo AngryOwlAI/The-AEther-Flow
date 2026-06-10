@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="1a613db8db85b563e32abb56f2e11d4e820efb8bdf8916dca29e634d673c1df3">
+  <meta name="aether-flow-source-basis-hash" content="6c8fee33fc88bcef0e2adc4460e28aaec6a57592c2c74880641ed341eebba602">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Project Overview Explainer</title>
@@ -164,6 +164,8 @@
 
     .deep-only { display: none; }
     body.deep-mode .deep-only { display: block; }
+    .deep-nav { display: none; }
+    body.deep-mode .deep-nav { display: inline-flex; }
 
     details {
       border: 1px solid var(--line);
@@ -206,6 +208,9 @@
       padding: 14px;
       background: #fbf8f1;
     }
+    details.source-item { margin-top: 0; }
+    .source-item p { margin-top: 8px; }
+    .source-item strong { color: var(--ink); }
 
     .claim-box {
       background: var(--red-soft);
@@ -251,7 +256,7 @@
       <button type="button" data-explainer-control="simple_deep_toggle" aria-pressed="false" id="depth-toggle">Deep view</button>
       <nav data-explainer-control="section_toc" aria-label="Section navigation">
         <a class="nav-link" href="#paths">Paths</a>
-        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link deep-nav" href="#analysis">Analysis</a>
         <a class="nav-link" href="#sources">Sources</a>
         <a class="nav-link" href="#claim-boundary">Claim boundary</a>
       </nav>
@@ -283,7 +288,7 @@
           <p>The control system separates canonical sources, registries, Markdown specs, generated HTML, wiki notes, and local retrieval artifacts.</p>
           <details class="deep-only" data-explainer-control="expandable_analysis_panels">
             <summary>Inspect the source-first rule</summary>
-            <p>Generated outputs can help humans read the project, but they do not override registered `.tex` files, registries, or registered Markdown source specs.</p>
+            <p>Generated outputs can help humans read the project, but they do not override registered <code>.tex</code> files, registries, or registered Markdown source specs.</p>
           </details>
           <p><a href="research-control-system-explainer.html">Open control-system explainer</a></p>
         </article>
@@ -337,22 +342,26 @@
     <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
       <h2>Source Drilldowns</h2>
       <div class="sources">
-        <article class="source-item" data-source-path="README.md">
-          <h3>README.md</h3>
-          <p>Front-door project identity, two-track framing, ontology summary, AI harness framing, and explainer list.</p>
-        </article>
-        <article class="source-item" data-source-path="AGENTS.md">
-          <h3>AGENTS.md</h3>
-          <p>Control authority, source hierarchy, project-system improvement boundary, and generated-output rules.</p>
-        </article>
-        <article class="source-item" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">
-          <h3>CLAIM_BOUNDARY_REGISTRY.csv</h3>
-          <p>Registered claim boundaries that prevent generated pages from promoting physics claims.</p>
-        </article>
-        <article class="source-item" data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv">
-          <h3>HTML_EXPLAINER_REGISTRY.csv</h3>
-          <p>Generated HTML registration, source-basis binding, hashes, and validation status.</p>
-        </article>
+        <details class="source-item" data-source-path="README.md">
+          <summary>README.md</summary>
+          <p><strong>Why it matters:</strong> Front-door project identity, two-track framing, ontology summary, AI harness framing, and explainer list.</p>
+          <p><strong>Use it to check:</strong> Whether the overview still matches the repository's public-facing project statement.</p>
+        </details>
+        <details class="source-item" data-source-path="AGENTS.md">
+          <summary>AGENTS.md</summary>
+          <p><strong>Why it matters:</strong> Control authority, source hierarchy, project-system improvement boundary, and generated-output rules.</p>
+          <p><strong>Use it to check:</strong> Whether generated HTML is being presented as non-authoritative support material.</p>
+        </details>
+        <details class="source-item" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">
+          <summary>CLAIM_BOUNDARY_REGISTRY.csv</summary>
+          <p><strong>Why it matters:</strong> Registered claim boundaries prevent generated pages from promoting physics claims.</p>
+          <p><strong>Use it to check:</strong> Whether the page keeps GR derivation, ontology status, and autonomy status behind the right gates.</p>
+        </details>
+        <details class="source-item" data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv">
+          <summary>HTML_EXPLAINER_REGISTRY.csv</summary>
+          <p><strong>Why it matters:</strong> Generated HTML registration, source-basis binding, hashes, and validation status.</p>
+          <p><strong>Use it to check:</strong> Whether this page remains tied to a Markdown source spec rather than acting as its own source.</p>
+        </details>
       </div>
     </section>
 

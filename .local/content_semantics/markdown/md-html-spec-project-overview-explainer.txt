@@ -59,6 +59,8 @@ authority chain.
   Markdown, and generated derivatives.
 - A short visual path from README overview to Markdown specs to generated HTML
   explainers.
+- Expandable source drilldowns that state why each cited source matters and
+  what boundary or claim-status check it supports.
 - A claim-boundary notice stating that this page is human-only and
   non-authoritative.
 - Progressive-disclosure controls for first-read and deep analysis modes,

@@ -64,6 +64,8 @@ separation clear to human readers.
 - A validation gate showing bootstrap, documentation-impact validation,
   project-improvement signal validation, research-control validation, tests,
   and diff checks.
+- Expandable source drilldowns that state why each cited source matters and
+  what workflow, role, or validation boundary it checks.
 - A claim-boundary notice stating that this page is human-only and
   non-authoritative.
 - Progressive-disclosure controls for first-read and deep analysis modes,

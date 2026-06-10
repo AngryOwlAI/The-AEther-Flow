@@ -63,6 +63,8 @@ by this Markdown source spec.
 - A validator gate panel listing bootstrap, documentation-impact validation,
   research-control validation, project-improvement signal validation, tests,
   and diff checks.
+- Expandable source drilldowns that state why each cited source matters and
+  what authority, governance, or validation boundary it checks.
 - A claim-boundary notice stating that the page is human-only and
   non-authoritative.
 - Progressive-disclosure controls for first-read and deep analysis modes,

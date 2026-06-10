@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="cc1464c97826e4f30bffe3987f82b56ed66ea472d463f43c4be4bf1853601e75">
+  <meta name="aether-flow-source-basis-hash" content="664925d109fee5aa36b7fd8f55e8cec434794ef99959dc030829df6ebb3d94b6">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Research-Control System Explainer</title>
@@ -158,6 +158,8 @@
 
     .deep-only { display: none; }
     body.deep-mode .deep-only { display: block; }
+    .deep-nav { display: none; }
+    body.deep-mode .deep-nav { display: inline-flex; }
 
     details {
       border: 1px solid var(--line);
@@ -180,6 +182,9 @@
       gap: 12px;
     }
     .source-item { box-shadow: none; padding: 14px; background: #fffdf8; }
+    details.source-item { margin-top: 0; }
+    .source-item p { margin-top: 8px; }
+    .source-item strong { color: var(--ink); }
     .claim-box { background: var(--red-soft); border-color: rgba(158, 52, 75, 0.35); }
 
     @media (max-width: 1000px) {
@@ -204,7 +209,7 @@
       <nav data-explainer-control="section_toc" aria-label="Section navigation">
         <a class="nav-link" href="#authority">Authority</a>
         <a class="nav-link" href="#workflow">Workflow</a>
-        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link deep-nav" href="#analysis">Analysis</a>
         <a class="nav-link" href="#sources">Sources</a>
         <a class="nav-link" href="#claim-boundary">Claim boundary</a>
       </nav>
@@ -214,7 +219,7 @@
       <h2>Source Authority Ladder</h2>
       <div class="ladder">
         <article class="rung">
-          <h3>1. Registered `.tex`</h3>
+          <h3>1. Registered <code>.tex</code></h3>
           <p>Canonical for physics research and derivational claims.</p>
         </article>
         <article class="rung">
@@ -310,12 +315,12 @@
     <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
       <h2>Source Drilldowns</h2>
       <div class="sources">
-        <article class="source-item" data-source-path="AGENTS.md"><h3>AGENTS.md</h3><p>Root authority hierarchy and generated-output boundaries.</p></article>
-        <article class="source-item" data-source-path="README.md"><h3>README.md</h3><p>Human visual explainer overview and source-first memory model.</p></article>
-        <article class="source-item" data-source-path="research_control/README.md"><h3>research_control/README.md</h3><p>Task and validation model.</p></article>
-        <article class="source-item" data-source-path=".codex/skills/improve-project-system/SKILL.md"><h3>improve-project-system skill</h3><p>Bounded project-system improvement workflow.</p></article>
-        <article class="source-item" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><h3>html-visual-explainer skill</h3><p>Tracked HTML governance contract.</p></article>
-        <article class="source-item" data-source-path=".codex/skills/visual-explainer/SKILL.md"><h3>visual-explainer skill</h3><p>Rendering guidance and project mode.</p></article>
+        <details class="source-item" data-source-path="AGENTS.md"><summary>AGENTS.md</summary><p><strong>Why it matters:</strong> Root authority hierarchy and generated-output boundaries.</p><p><strong>Use it to check:</strong> Whether generated pages are kept below registered sources and registries.</p></details>
+        <details class="source-item" data-source-path="README.md"><summary>README.md</summary><p><strong>Why it matters:</strong> Human visual explainer overview and source-first memory model.</p><p><strong>Use it to check:</strong> How the public front door describes tracked HTML explainers.</p></details>
+        <details class="source-item" data-source-path="research_control/README.md"><summary>research_control/README.md</summary><p><strong>Why it matters:</strong> Task and validation model.</p><p><strong>Use it to check:</strong> How project-system work stays separate from physics continuation.</p></details>
+        <details class="source-item" data-source-path=".codex/skills/improve-project-system/SKILL.md"><summary>improve-project-system skill</summary><p><strong>Why it matters:</strong> Bounded project-system improvement workflow.</p><p><strong>Use it to check:</strong> Which validations and stop conditions govern this kind of polish pass.</p></details>
+        <details class="source-item" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><summary>html-visual-explainer skill</summary><p><strong>Why it matters:</strong> Tracked HTML governance contract.</p><p><strong>Use it to check:</strong> The spec-first rule, required controls, marker evidence, and non-authority boundary.</p></details>
+        <details class="source-item" data-source-path=".codex/skills/visual-explainer/SKILL.md"><summary>visual-explainer skill</summary><p><strong>Why it matters:</strong> Rendering guidance and project mode.</p><p><strong>Use it to check:</strong> How visual layout supports the source-backed human-only explainer contract.</p></details>
       </div>
     </section>
 
