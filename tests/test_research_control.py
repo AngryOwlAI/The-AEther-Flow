@@ -54,9 +54,14 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(report.errors, [])
 
     def test_resolve_latest_handoff(self) -> None:
+        program_state = self.strict_yaml.loads(
+            (REPO_ROOT / "research_control" / "program_state.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
         latest = self.resolver.resolve_latest()
-        self.assertEqual(latest["handoff_id"], "handoff-0003")
-        self.assertEqual(latest["task_id"], "RT-20260608-003")
+        self.assertEqual(latest["handoff_id"], program_state["latest_handoff_id"])
+        self.assertEqual(latest["task_id"], program_state["active_task_id"])
 
     def test_write_path_diff_rejects_undeclared_path(self) -> None:
         report = self.validator.ValidationReport()
@@ -112,11 +117,16 @@ class ResearchControlTests(unittest.TestCase):
         self.assertTrue(any("overly broad allowlist" in error for error in report.errors))
 
     def test_continue_research_reports_director_context_packet(self) -> None:
+        program_state = self.strict_yaml.loads(
+            (REPO_ROOT / "research_control" / "program_state.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
         status = self.continue_research.continuation_status()
         self.assertEqual(status["status"], "ready")
         self.assertIn(status["boundary"], {"director_decision_required", "existing_agent_job_ready", "human_gate_required", "blocked", "no_action"})
-        self.assertEqual(status["active_task_id"], "RT-20260608-003")
-        self.assertEqual(status["latest_handoff_id"], "handoff-0003")
+        self.assertEqual(status["active_task_id"], program_state["active_task_id"])
+        self.assertEqual(status["latest_handoff_id"], program_state["latest_handoff_id"])
         self.assertTrue(status["checkpoint_required_after_execution"])
         self.assertEqual(status["execution_boundary"], "one bounded AgentJob per invocation")
 

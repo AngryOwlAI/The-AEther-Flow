@@ -35,10 +35,15 @@ def file_hash(path: Path) -> str:
 
 def generated_snapshot() -> dict[str, str]:
     paths = []
+    paths.append(REPO_ROOT / "FOLDER_MAP.md")
     paths.extend((REPO_ROOT / "registries").glob("*.csv"))
     paths.extend((REPO_ROOT / "registries").glob("*.json"))
     paths.extend((REPO_ROOT / "wiki").rglob("*.md"))
-    return {path.relative_to(REPO_ROOT).as_posix(): file_hash(path) for path in sorted(paths)}
+    return {
+        path.relative_to(REPO_ROOT).as_posix(): file_hash(path)
+        for path in sorted(paths)
+        if path.exists()
+    }
 
 
 class MemorySystemSmokeTests(unittest.TestCase):
@@ -171,6 +176,35 @@ class MemorySystemSmokeTests(unittest.TestCase):
         )
         for row in wiki_rows:
             self.assertIn(row["object_id"], file_rows)
+
+    def test_folder_map_classifies_core_lanes(self) -> None:
+        rows_by_registry = {
+            name: self.memory_system.read_csv_rows(self.memory_system.registry_path(name))
+            for name in self.memory_system.SOURCE_REGISTRY_NAMES
+            + self.memory_system.GENERATED_REGISTRY_NAMES
+        }
+        cases = {
+            "ontology/tex": "canonical source",
+            "registries": "control authority",
+            "wiki/tex": "generated derivative",
+            ".local/obsidian": "local retrieval",
+            ".codex/skills/project-memory-system/scripts": "tooling",
+            "markdown/ontology-promotions": "reserved lane",
+        }
+        for folder, expected_category in cases.items():
+            category, _reason = self.memory_system.classify_folder(folder, rows_by_registry)
+            self.assertEqual(category, expected_category, folder)
+
+    def test_folder_map_mentions_task_artifact_relationships(self) -> None:
+        rows_by_registry = {
+            name: self.memory_system.read_csv_rows(self.memory_system.registry_path(name))
+            for name in self.memory_system.SOURCE_REGISTRY_NAMES
+            + self.memory_system.GENERATED_REGISTRY_NAMES
+        }
+        text = self.memory_system.folder_map_text(rows_by_registry)
+        self.assertIn("| `research_control/tasks` | `control authority`", text)
+        self.assertIn("bounded proposal, audit, refutation, repair, and handoff", text)
+        self.assertIn("| `wiki/tex` | `generated derivative`", text)
 
 
 if __name__ == "__main__":

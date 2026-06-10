@@ -8,6 +8,7 @@ import csv
 import hashlib
 import io
 import json
+import os
 import re
 import subprocess
 import sys
@@ -123,6 +124,18 @@ GENERATED_REGISTRY_NAMES = [
     "OBJECT_RELATIONSHIP_REGISTRY.csv",
     "FILE_OBJECT_REGISTRY.csv",
 ]
+
+FOLDER_MAP_PATH = REPO_ROOT / "FOLDER_MAP.md"
+FOLDER_MAP_CATEGORIES = {
+    "canonical source",
+    "control authority",
+    "generated derivative",
+    "local retrieval",
+    "tooling",
+    "reserved lane",
+}
+FOLDER_WALK_SKIP_NAMES = {".git", ".venv", "__pycache__"}
+FOLDER_MAP_EXCLUDED_FILES = {"FOLDER_MAP.md"}
 
 REQUIRED_DIRS = [
     "ontology/tex",
@@ -862,6 +875,241 @@ def generate_file_object_registry(
     return output_rows
 
 
+def path_is_under(path_text: str, folder: str) -> bool:
+    if folder == ".":
+        return bool(path_text)
+    return path_text == folder or path_text.startswith(f"{folder}/")
+
+
+def project_directories() -> list[str]:
+    directories = {"."}
+    for root, dirnames, _filenames in os.walk(REPO_ROOT):
+        dirnames[:] = sorted(
+            name for name in dirnames if name not in FOLDER_WALK_SKIP_NAMES
+        )
+        root_path = Path(root)
+        if root_path == REPO_ROOT:
+            continue
+        directories.add(rel_path(root_path))
+    return sorted(directories, key=lambda value: (value.count("/"), value))
+
+
+def registry_counts_for_folder(
+    folder: str, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for registry_name, rows in rows_by_registry.items():
+        count = 0
+        for row in rows:
+            path_text = row.get("path", "")
+            if path_text and path_is_under(path_text, folder):
+                count += 1
+        if count:
+            counts[registry_name] = count
+    return counts
+
+
+def csv_relation_for_folder(
+    folder: str, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> str:
+    if folder == "registries":
+        return "CSV authority directory."
+    counts = registry_counts_for_folder(folder, rows_by_registry)
+    if not counts:
+        return "No registered object rows."
+    parts = [
+        f"{name.replace('.csv', '')}: {counts[name]}"
+        for name in sorted(counts)
+    ]
+    return "; ".join(parts)
+
+
+def source_object_ids_for_folder(
+    folder: str, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> set[str]:
+    object_ids: set[str] = set()
+    for registry_name in SOURCE_REGISTRY_NAMES:
+        for row in rows_by_registry.get(registry_name, []):
+            path_text = row.get("path", "")
+            if path_text and path_is_under(path_text, folder):
+                object_ids.add(row.get("object_id", ""))
+    return {object_id for object_id in object_ids if object_id}
+
+
+def wiki_relation_for_folder(
+    folder: str, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> str:
+    if folder == "wiki" or folder.startswith("wiki/"):
+        return "Generated wiki metadata lives here; edit sources and registries instead."
+    if folder == "registries":
+        return "Registry rows drive generated wiki notes and indexes."
+    source_ids = source_object_ids_for_folder(folder, rows_by_registry)
+    if not source_ids:
+        return "No direct generated wiki notes."
+    wiki_rows = rows_by_registry.get("WIKI_ARTIFACT_REGISTRY.csv", [])
+    note_count = sum(
+        1 for row in wiki_rows if row.get("source_object_id", "") in source_ids
+    )
+    if note_count:
+        return f"{note_count} generated wiki note(s) point back to sources here."
+    return "Registered source lane; wiki note missing until bootstrap regenerates."
+
+
+def folder_contains_files(folder: str) -> bool:
+    path = REPO_ROOT if folder == "." else REPO_ROOT / folder
+    if not path.exists():
+        return False
+    return any(
+        child.is_file() and child.name not in FOLDER_MAP_EXCLUDED_FILES
+        for child in path.iterdir()
+    )
+
+
+def classify_folder(
+    folder: str, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> tuple[str, str]:
+    if folder == ".":
+        return "control authority", "Repository front door and validation entrypoint."
+    if folder == ".local" or folder.startswith(".local/"):
+        return "local retrieval", "Ignored local cache, vault, extracted text, or search index."
+    if folder == ".codex" or folder.startswith(".codex/"):
+        return "tooling", "Repo-local skill, prompt, template, or script tooling."
+    if folder == "scripts" or folder.startswith("scripts/"):
+        return "tooling", "Validation and research-control support scripts."
+    if folder == "tests" or folder.startswith("tests/"):
+        return "tooling", "Smoke and regression tests for the memory/control system."
+    if folder == ".agents" or folder.startswith(".agents/"):
+        return "control authority", "Versioned role contracts and schemas."
+    if folder == "registries":
+        return "control authority", "CSV authority layer for provenance, routing, and generated-output tracking."
+    if folder == "research_control" or folder.startswith("research_control/"):
+        return "control authority", "Tracked Director decisions, AgentJobs, handoffs, tasks, and claim boundaries."
+    if folder == "wiki" or folder.startswith("wiki/"):
+        return "generated derivative", "Generated metadata notes and indexes; not source authority."
+    if folder.endswith("/pdfs") or folder == "ontology/pdfs" or folder == "manuscripts/pdfs":
+        return "generated derivative", "Human-reading PDF derivatives from registered TeX."
+    if folder == "html" or folder.startswith("html/"):
+        category = "generated derivative" if folder_contains_files(folder) else "reserved lane"
+        return category, "Generated human-only visual explainer lane."
+    if folder == "ontology" or folder == "ontology/tex":
+        return "canonical source", "Ontology and exact-GR benchmark source lane."
+    if folder == "manuscripts" or folder == "manuscripts/tex":
+        category = "canonical source" if folder_contains_files(folder) else "reserved lane"
+        return category, "Future manuscript source lane."
+    if folder == "markdown" or folder.startswith("markdown/"):
+        category = "canonical source" if folder_contains_files(folder) else "reserved lane"
+        return category, "Authored Markdown source or reserved source-spec lane."
+    if folder == "tex_shared" or folder.startswith("tex_shared/"):
+        return "canonical source", "Shared TeX inputs included by registered TeX sources."
+    if folder == "assets" or folder.startswith("assets/"):
+        return "reserved lane", "Project media assets; outside current registry authority."
+    if folder == "Step-by-step-Comments" or folder.startswith("Step-by-step-Comments/"):
+        return "local retrieval", "Ignored local reference notes; not canonical authority."
+
+    counts = registry_counts_for_folder(folder, rows_by_registry)
+    if any(name.startswith("WIKI_") for name in counts):
+        return "generated derivative", "Generated registry-backed derivative lane."
+    if counts:
+        return "control authority", "Contains registered objects; inspect CSV rows for authority."
+    return "reserved lane", "No registered objects currently live here."
+
+
+def folder_research_role(folder: str, category: str) -> str:
+    if folder == ".":
+        return "Repository front door for project identity, instructions, validation, and generated folder classification."
+    if folder == "ontology" or folder.startswith("ontology/"):
+        return "Holds the ontology and benchmark package used as the derivation target and constraint set."
+    if folder == "research_control" or folder.startswith("research_control/tasks"):
+        return "Runs bounded proposal, audit, refutation, repair, and handoff transactions."
+    if folder == "registries":
+        return "Makes research state machine-checkable through object IDs, hashes, status, and relationships."
+    if folder == "wiki" or folder.startswith("wiki/"):
+        return "Makes registered objects easier to browse without changing authority."
+    if folder == ".local" or folder.startswith(".local/"):
+        return "Supports retrieval and semantic search for agents; ignored by Git."
+    if folder == ".agents" or folder.startswith(".agents/"):
+        return "Defines permitted agent behavior and claim boundaries."
+    if category == "local retrieval":
+        return "Supports local retrieval, semantic search, or ignored reference use; not tracked authority."
+    if category == "tooling":
+        return "Operates or tests the research memory/control workflow."
+    if category == "generated derivative":
+        return "Provides generated reading surfaces derived from registered sources."
+    if category == "control authority":
+        return "Maintains project governance, validation, routing, or registry authority."
+    if category == "reserved lane":
+        return "Reserved for future project material; currently not active authority."
+    return "Provides authored source material used by the research workflow."
+
+
+def escape_table_cell(value: str) -> str:
+    return value.replace("|", "\\|").replace("\n", " ")
+
+
+def folder_map_text(rows_by_registry: dict[str, list[dict[str, str]]]) -> str:
+    lines = [
+        "# Folder Map",
+        "",
+        "Generated folder map. Not canonical authority. Update source files, registry rows, or folder contents, then regenerate with bootstrap.",
+        "",
+        "## Source Basis",
+        "",
+        "- Live repository directory tree, excluding `.git/`, `.venv/`, and `__pycache__/`.",
+        "- Source and generated CSV registries under `registries/`.",
+        "- Project authority rules in `AGENTS.md` and the memory-system bootstrap script.",
+        "",
+        "## Category Key",
+        "",
+        "- `canonical source`: authored source material that can carry project meaning.",
+        "- `control authority`: tracked governance, routing, validation, registry, or task-control material.",
+        "- `generated derivative`: generated human or agent reading surfaces.",
+        "- `local retrieval`: ignored local cache, vault, semantic extraction, or search layer.",
+        "- `tooling`: scripts, skills, prompts, templates, or tests.",
+        "- `reserved lane`: intentional placeholder or support lane without active registered authority.",
+        "",
+        "## Folder Table",
+        "",
+        "| Folder | Category | CSV Relation | Wiki Relation | Research Role |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for folder in project_directories():
+        category, default_role = classify_folder(folder, rows_by_registry)
+        if category not in FOLDER_MAP_CATEGORIES:
+            raise ValueError(f"Invalid folder category for {folder}: {category}")
+        research_role = folder_research_role(folder, category) or default_role
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    f"`{escape_table_cell(folder)}`",
+                    f"`{category}`",
+                    escape_table_cell(csv_relation_for_folder(folder, rows_by_registry)),
+                    escape_table_cell(wiki_relation_for_folder(folder, rows_by_registry)),
+                    escape_table_cell(research_role),
+                ]
+            )
+            + " |"
+        )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def generate_folder_map(rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
+    write_text_if_changed(FOLDER_MAP_PATH, folder_map_text(rows_by_registry))
+
+
+def validate_folder_map(
+    report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> None:
+    if not FOLDER_MAP_PATH.exists():
+        report.error("missing generated folder map: FOLDER_MAP.md")
+        return
+    expected = folder_map_text(rows_by_registry)
+    actual = FOLDER_MAP_PATH.read_text(encoding="utf-8")
+    if actual != expected:
+        report.error("stale generated folder map: FOLDER_MAP.md")
+
+
 def write_meta_if_needed(name: str, inputs: list[Path], now: str) -> None:
     meta_path = REPO_ROOT / "registries" / f"{name}.meta.json"
     existing: dict[str, object] = {}
@@ -1151,6 +1399,7 @@ def validate_all() -> ValidationReport:
     validate_html_registry(report, rows_by_registry)
     validate_wiki_registry(report, rows_by_registry)
     validate_file_object_registry(report, rows_by_registry)
+    validate_folder_map(report, rows_by_registry)
     validate_tracked_local_noise(report)
     return report
 
@@ -1188,7 +1437,9 @@ def bootstrap(
         write_semantic_text=True,
     )
     rows_by_registry.update(generated_rows)
-    generate_file_object_registry(rows_by_registry, now)
+    file_object_rows = generate_file_object_registry(rows_by_registry, now)
+    rows_by_registry["FILE_OBJECT_REGISTRY.csv"] = file_object_rows
+    generate_folder_map(rows_by_registry)
     return validate_all()
 
 
