@@ -54,6 +54,35 @@ class ResearchControlTests(unittest.TestCase):
         report = self.validator.validate_all()
         self.assertEqual(report.errors, [])
 
+    def test_role_registry_accepts_distinct_role_versions(self) -> None:
+        report = self.validator.ValidationReport()
+        rows_by_registry = {
+            "AGENT_ROLE_REGISTRY.csv": [
+                {
+                    "role_id": "documentation-curator",
+                    "version": "0.1.0",
+                    "status": "superseded",
+                    "may_execute_autonomously": "true",
+                    "may_create_outputs": "true",
+                    "may_modify_sources": "true",
+                    "may_promote_claims": "false",
+                    "requires_human_gate": "false",
+                },
+                {
+                    "role_id": "documentation-curator",
+                    "version": "0.2.0",
+                    "status": "active",
+                    "may_execute_autonomously": "true",
+                    "may_create_outputs": "true",
+                    "may_modify_sources": "true",
+                    "may_promote_claims": "false",
+                    "requires_human_gate": "false",
+                },
+            ]
+        }
+        self.validator.validate_registry_values(report, rows_by_registry)
+        self.assertEqual(report.errors, [])
+
     def test_resolve_latest_handoff(self) -> None:
         program_state = self.strict_yaml.loads(
             (REPO_ROOT / "research_control" / "program_state.yaml").read_text(
@@ -315,7 +344,7 @@ class ResearchControlTests(unittest.TestCase):
                 self.validator.validate_execution_roles(
                     report,
                     [row],
-                    {"refuter": {"version": "0.1.0"}},
+                    {self.validator.role_key("refuter", "0.1.0"): {"version": "0.1.0"}},
                     {"AJ-TEST": {"task_id": "RT-TEST", "job_path": ""}},
                     {"RT-TEST": {"task_id": "RT-TEST"}},
                 )

@@ -1,0 +1,392 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{mathrsfs}
+\usepackage{physics}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.4em,itemsep=0.35em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\setstretch{1.06}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryName}{\Aflow{} Interpretation of Relativity}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Lor}{\gamma_{\mathrm{L}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{corollary}{Corollary}
+
+\title{\textbf{The \TheoryName{}}\\[0.4em]
+\large Relativistic Recovery}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper states how \TheoryName{}, the exact-closure theory of \TheoryProgram{}, recovers established relativistic physics. The scope is explicit. The manuscript does not claim a first-principles substrate derivation of relativity from \Aether{} variables. It analyzes the adopted effective theory already fixed in the \TheoryName{} dynamics manuscript: Einsteinian gravity with universal matter coupling and a single operational metric.
+
+With that scope fixed, the recovery statement is also explicit. The exact relation of \TheoryName{} to general relativity is identity at the effective predictive level. The weak-field, causal, redshift, clock, local inertial, and cosmological structures are therefore exactly those of GR. Local special-relativistic kinematics are recovered in the ordinary way through local inertial frames and Lorentz symmetry of the tangent-space metric. The \Aether{} / \Aflow{} ontology is retained only as deeper interpretation and is not promoted, in \TheoryName{}, to an extra low-energy preferred-frame field. In that precise sense, \TheoryName{} functions as a disciplined interpretive completion consistent with exact GR, not as a non-GR relativistic deformation.
+
+Within the flagship exact-closure package, the overview is the front door, the \emph{Exact-Closure Note} is the short anchor, and the present paper is the relativistic-recovery module of the five-paper modular full statement. Its job is to make the observer-facing GR/SR content explicit after the exact law and its consistency have already been fixed. That order keeps exact closure first and derivational continuation secondary.
+\end{abstract}
+
+\section{Introduction}
+
+The current manuscript sequence fixes the scientific role of \TheoryName{} clearly. \TheoryName{} is the exact-closure, GR-consistent theory developed in the active repository. It is the exact reference for any later extension of the framework. The dynamics manuscript already fixed the adopted effective law. The consistency manuscript already made explicit that the effective exact-closure theory is mathematically healthy. The remaining question is therefore observer-facing: how does \TheoryName{} recover the relativistic structure that actual observers measure?
+
+That question has two parts. First, the exact relation to GR has to be stated in disciplined language. Second, the relation to SR has to be addressed explicitly rather than left implicit. The latter point matters because the ontology of \Aether{} and \Aflow{} can easily be misunderstood as if it implied a measurable preferred frame. In \TheoryName{}, that is not the operative theory statement.
+
+\paragraph{Framework and claim boundary.}
+\TheoryProgram{} denotes the broader \Aether{} / \Aflow{} framework built on the claims that the \Aether{} is the underlying four-dimensional substrate of reality, the \Aflow{} is its intrinsic ordered motion, observed three-dimensional space is the local experiential slice of that deeper substrate, S-time is the experienced order of change arising from matter, light, and the \Aflow{}, and observed expansion is the three-dimensional appearance of deeper four-dimensional ordered motion. Within that framework, \TheoryName{} denotes the exact-closure theory in which the effective gravitational dynamics are adopted to be exactly Einsteinian with universal matter coupling. In the active sequence, \emph{adoption} means use of that established relativistic dynamics without claiming substrate derivation, while \emph{derivation} is reserved for a first-principles recovery from explicit substrate variables.
+
+\begin{definition}[Exact relativistic recovery]
+Exact relativistic recovery in \TheoryName{} means that the effective operational content of the theory reproduces the accepted GR/SR structure exactly in the domains where that structure is tested, while the \Aether{} / \Aflow{} ontology is retained as deeper interpretation rather than as an extra low-energy propagating sector.
+\end{definition}
+
+The sequence role of the present manuscript should therefore be read explicitly. After the overview, the short exact-closure anchor, and the foundations, dynamics, and consistency modules, this paper states how that already-adopted and already-checked exact law is recovered in weak-field, causal, clock, and local inertial terms. The remaining flow-geometry paper then sharpens the interpretive dictionary inside the same closure.
+
+\section{Exact Relation to General Relativity}
+
+The adopted \TheoryName{} action is
+\begin{equation}
+S_{\mathrm{eff}}
+=
+\frac{c^3}{16\pi G}\int d^4x\,\sqrt{-g}\,R
++
+S_{\mathrm{matter}}[g,\psi],
+\label{eq:SA}
+\end{equation}
+with field equations
+\begin{equation}
+G_{\mu\nu}
+=
+\frac{8\pi G}{c^4}T_{\mu\nu}.
+\label{eq:einstein}
+\end{equation}
+Matter is minimally and universally coupled to the same metric \(g_{\mu\nu}\).
+
+\begin{proposition}[Operational identity with GR]
+For fixed matter sector, initial data, and boundary conditions, every effective observable of \TheoryName{} coincides with the corresponding observable of GR.
+\end{proposition}
+
+This statement is precise and should not be weakened into mere analogy. In \TheoryName{}, GR is not only approximately matched in some restricted regime. It is adopted exactly as the effective gravitational law. Therefore:
+\begin{equation}
+\mathcal{O}_{\mathrm{theory}}
+=
+\mathcal{O}_{\mathrm{GR}}
+\label{eq:obsidentity}
+\end{equation}
+for every observable \(\mathcal{O}\) defined entirely within the effective metric/matter sector.
+
+\begin{remark}
+Equation \eqref{eq:obsidentity} is an adoption statement, not a derivation statement. The paper does not claim that the Einstein sector has already been recovered from explicit substrate microphysics.
+\end{remark}
+
+The proper scientific reading is therefore the following. \TheoryName{} is not a rival low-energy alternative to GR. It is a disciplined interpretive completion of the relativistic sector within \TheoryProgram{}, and a proposed deeper ontology consistent with GR, with no independent non-GR prediction at the effective level.
+
+\section{Weak-Field Recovery}
+
+In an asymptotically inertial region one writes
+\begin{equation}
+g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu},
+\qquad
+|h_{\mu\nu}|\ll 1.
+\label{eq:linearizedmetric}
+\end{equation}
+In the static, slowly moving regime with \(T_{00}\simeq \rho c^2\) dominant, the leading field equation reduces to
+\begin{equation}
+\nabla^2\Phi = 4\pi G\rho.
+\label{eq:poisson}
+\end{equation}
+The weak-field line element then takes the standard form
+\begin{equation}
+ds^2
+=
+-\left(1+2\frac{\Phi}{c^2}+O(c^{-4})\right)c^2dt^2
++
+\left(1-2\frac{\Phi}{c^2}+O(c^{-4})\right)\delta_{ij}\,dx^i dx^j.
+\label{eq:weakfield}
+\end{equation}
+
+Equivalently, in standard post-Newtonian language the \TheoryName{} theory carries the GR values of the metric-sector parameters. In particular,
+\begin{equation}
+\gamma_{\mathrm{PPN}} = 1,
+\label{eq:ppngamma}
+\end{equation}
+and, more generally, the full PPN content of the theory is that of GR because the effective theory is exactly GR.
+
+For slowly moving test bodies, the geodesic equation reduces to
+\begin{equation}
+\frac{d^2x^i}{dt^2}
+=
+-\partial_i\Phi
++ \mathcal{O}\!\left(\frac{v^2}{c^2},\frac{\Phi^2}{c^4}\right),
+\label{eq:newtonianlimit}
+\end{equation}
+which is the ordinary Newtonian limit.
+
+\begin{corollary}[Weak-field observables]
+The weak-field observables of \TheoryName{}, including Newtonian acceleration, post-Newtonian light deflection, and Shapiro time delay, are exactly the corresponding GR observables.
+\end{corollary}
+
+This corollary is immediate from the exact-closure rule. The theory does not require a second matching prescription once the effective law has already been fixed.
+
+\section{Light Propagation and Causal Structure}
+
+The operational role of light is governed by the single effective metric. Null propagation satisfies
+\begin{equation}
+0=g_{\mu\nu}\,dx^\mu dx^\nu,
+\label{eq:null}
+\end{equation}
+and null rays follow the geodesic equation
+\begin{equation}
+k^\nu \nabla_\nu k^\mu = 0,
+\label{eq:nullgeodesic}
+\end{equation}
+for wave-vector \(k^\mu\).
+
+\begin{proposition}[Single-metric causal structure]
+In \TheoryName{}, the causal structure relevant to low-energy observation is exactly the causal structure of the metric \(g_{\mu\nu}\). There is no second universal low-energy cone and no extra preferred-frame light-propagation sector.
+\end{proposition}
+
+This proposition matters directly for how the ontology should be read. The \Aether{} / \Aflow{} language is not being used here to introduce an additional low-energy propagation law for light. In the exact-closure theory, light propagation, causal ordering, and gravitational time delay are all controlled by the same metric null cone already present in GR.
+
+At every event \(p\), one may choose local inertial coordinates such that
+\begin{equation}
+g_{\mu\nu}(p)=\eta_{\mu\nu},
+\qquad
+\partial_\alpha g_{\mu\nu}(p)=0.
+\label{eq:localinertial}
+\end{equation}
+In those coordinates,
+\begin{equation}
+ds^2
+=
+-c^2dt'^2+\delta_{ij}\,dx'^i dx'^j + O((x'-p)^2).
+\label{eq:localminkowski}
+\end{equation}
+Hence null propagation satisfies
+\begin{equation}
+\abs{\frac{d\vec x'}{dt'}}=c
+\label{eq:localc}
+\end{equation}
+locally, exactly as in SR.
+
+\section{Redshift and Time-Dilation Structure}
+
+To state gravitational redshift cleanly, write a static metric in the form
+\begin{equation}
+ds^2=-N^2(\mathbf{x})\,c^2dt^2+\gamma_{ij}(\mathbf{x})\,dx^i dx^j.
+\label{eq:staticmetric}
+\end{equation}
+For a stationary observer with \(dx^i=0\),
+\begin{equation}
+d\tau = N(\mathbf{x})\,dt.
+\label{eq:stationaryclock}
+\end{equation}
+Thus clocks at different positions accumulate different proper times relative to the same static coordinate time.
+
+For light emitted at \(A\) and received at \(B\) by stationary observers in the static geometry \eqref{eq:staticmetric}, the frequency ratio is
+\begin{equation}
+\frac{\nu_B}{\nu_A}
+=
+\frac{N(\mathbf{x}_A)}{N(\mathbf{x}_B)}.
+\label{eq:redshift}
+\end{equation}
+In the weak-field regime where
+\begin{equation}
+N(\mathbf{x}) = 1+\frac{\Phi(\mathbf{x})}{c^2}+O(c^{-4}),
+\label{eq:lapseweakfield}
+\end{equation}
+this becomes
+\begin{equation}
+\frac{\nu_B-\nu_A}{\nu_A}
+=
+\frac{\Phi_A-\Phi_B}{c^2}
++ O(c^{-4}).
+\label{eq:weakredshift}
+\end{equation}
+
+These are the ordinary GR redshift relations, inherited exactly by \TheoryName{}. The same is true for proper-time accumulation along arbitrary timelike histories:
+\begin{equation}
+d\tau^2
+=
+-\frac{1}{c^2}g_{\mu\nu}\,dx^\mu dx^\nu.
+\label{eq:propertime}
+\end{equation}
+
+Two time-dilation mechanisms are therefore present in the familiar relativistic way.
+\begin{enumerate}
+    \item Gravitational time dilation arises through position dependence of the metric, as in \eqref{eq:stationaryclock}--\eqref{eq:weakredshift}.
+    \item Kinematic time dilation arises locally from motion relative to an inertial frame, as discussed in the next section.
+\end{enumerate}
+
+\section{Cosmological Recovery and Dark Energy}
+
+The exact-closure benchmark also recovers the standard cosmological sector. For a Friedmann--Lema\^\i tre--Robertson--Walker line element
+\begin{equation}
+ds^2
+=
+-c^2dt^2
++a(t)^2\left[\frac{dr^2}{1-kr^2}+r^2 d\Omega^2\right],
+\label{eq:flrwmetric}
+\end{equation}
+with comoving observer congruence \(u^\mu=\partial_t\), the Hubble parameter is
+\begin{equation}
+H \equiv \frac{\dot a}{a},
+\label{eq:hubble}
+\end{equation}
+and the congruence expansion is
+\begin{equation}
+\theta = \nabla_\mu u^\mu = 3H.
+\label{eq:theta3h}
+\end{equation}
+
+When the conservative cosmological completion is written explicitly, the Einstein equations take the form
+\begin{equation}
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+\frac{8\pi G}{c^4}T_{\mu\nu},
+\label{eq:einstein_cosmo}
+\end{equation}
+which yields the standard Friedmann equations
+\begin{equation}
+H^2
+=
+\frac{8\pi G}{3}\rho
+-\frac{k c^2}{a^2}
++\frac{\Lambda c^2}{3},
+\label{eq:friedmann1}
+\end{equation}
+\begin{equation}
+\frac{\ddot a}{a}
+=
+-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)
++\frac{\Lambda c^2}{3}.
+\label{eq:friedmann2}
+\end{equation}
+These are the ordinary GR equations underlying the observed late-time accelerated expansion and the conservative \(\Lambda\)CDM benchmark \cite{Riess1998,Perlmutter1999,Planck2018Parameters}.
+
+Equivalently, one may move the cosmological term to the matter side and read it as vacuum stress-energy with equation of state \(p_{\Lambda}=-\rho_{\Lambda}c^2\). More generally, a GR-compatible dark-energy sector may be parameterized by
+\begin{equation}
+w(a)\equiv \frac{p_{\mathrm{DE}}}{\rho_{\mathrm{DE}}c^2},
+\label{eq:wa}
+\end{equation}
+provided it remains a covariantly conserved matter-side sector coupled to the same operative metric. In that reading, dark energy completes the cosmological content of the exact-GR package; it does not derive that package from the \Aether{} / \Aflow{} ontology.
+
+\begin{proposition}[Cosmological recovery]
+Late-time accelerated expansion is recovered inside \TheoryName{} within the same one-metric GR sector, either through the ordinary cosmological constant or through a GR-compatible dark-energy stress tensor. This is a cosmological completion of exact closure, not a first-principles derivation of exact closure.
+\end{proposition}
+
+\section{\TheoryName{} and Special Relativity}
+
+\subsection{Local Recovery of SR}
+
+Equation \eqref{eq:localminkowski} already states the local SR limit. In any sufficiently small neighborhood of an event, nongravitational physics is governed by the Minkowski metric \(\eta_{\mu\nu}\). Local Lorentz transformations preserve that tangent-space metric and therefore preserve the usual SR interval.
+
+For a timelike observer moving with speed \(v\) in a local inertial frame,
+\begin{equation}
+d\tau
+=
+dt'\sqrt{1-\frac{v^2}{c^2}}
+=
+\frac{dt'}{\Lor},
+\qquad
+\Lor\equiv \frac{1}{\sqrt{1-v^2/c^2}}.
+\label{eq:kinematictimedilation}
+\end{equation}
+Accordingly, the standard SR kinematic consequences follow locally: time dilation, relativity of simultaneity, and the usual Lorentz contraction rule \(L=L_0/\Lor\) when lengths are compared within the same local inertial construction.
+
+\begin{proposition}[Explicit SR relation]
+The exact-closure theory \TheoryName{} reproduces the operational content of special relativity locally, because the observer-accessible metric structure is locally Minkowskian and matter/light couple only to that structure.
+\end{proposition}
+
+\subsection{Why the Ontology Does Not Contradict SR}
+
+The most important conceptual clarification is negative. In \TheoryName{}, the \Aether{} and \Aflow{} are not introduced as extra measured low-energy structures that override local Lorentz symmetry. The theory does not add a second matter metric, a preferred-frame vector field, or an observable anisotropic light cone. Had it done so, it would not be exact closure; it would be a deviation theory.
+
+This is why the ontology and SR do not conflict in the exact-closure reading. SR is the operational local kinematics seen by observers. The \Aether{} / \Aflow{} vocabulary is the deeper interpretive proposal about what the effective relativistic order may describe. In \TheoryName{}, the two levels are distinct:
+\begin{enumerate}
+    \item operational level: local measurements obey SR;
+    \item effective gravitational level: spacetime structure obeys GR;
+    \item ontological level: the relativistic order is interpreted as the observer-accessible manifestation of deeper \Aether{} organization.
+\end{enumerate}
+
+\subsection{S-Time, Measured Duration, and Observed Spatial Relations}
+
+The relation to S-time should also be stated carefully. In \TheoryName{}, S-time is not a replacement variable for proper time \(\tau\), coordinate time \(t\), or the metric causal order. It is the interpretive name for experienced order of change as registered by material systems and light within the exact relativistic structure.
+
+Quantitatively, measured duration along a timelike worldline is still given by proper time \eqref{eq:propertime}. Observed three-dimensional spatial relations for an observer with four-velocity \(u^\mu\) are encoded by the local rest-space metric
+\begin{equation}
+h_{\mu\nu}
+=
+g_{\mu\nu}
++
+\frac{1}{c^2}u_\mu u_\nu.
+\label{eq:spatialprojector}
+\end{equation}
+This is the precise sense in which the theory can speak of observed three-dimensional space as a local experiential slice. The observer-accessible slice is not a second physical geometry competing with relativity; it is the ordinary observer rest-space determined by the same effective metric.
+
+\begin{remark}
+In the exact-closure theory, S-time and observed space therefore do not modify relativity. They reinterpret the experienced temporal and spatial order already quantified by proper time, causal structure, and observer rest-space geometry.
+\end{remark}
+
+\section{Scope of the Present Recovery Statement}
+
+The present paper makes one positive claim and keeps one deeper task open. The positive claim is that, in \TheoryName{}, the observer-accessible relativistic sector is exactly the GR/SR sector: the same metric governs clocks, light, free fall, weak-field phenomena, and local inertial physics. The open task is the deeper recovery problem, namely, how that exact relativistic structure should ultimately be obtained from explicit substrate dynamics rather than adopted as the effective law.
+
+This scope should not be read as retreat. It is precisely what allows \TheoryName{} to function as a positive interpretive completion of relativity rather than as an unfinished competing deformation of it.
+
+\section{Benchmark Role and Explicit Nonclaims}
+
+Within the flagship package, the present manuscript is the observer-facing recovery module of the benchmark theory. Its positive role is to make the following points explicit.
+\begin{enumerate}
+    \item One operative metric \(g_{\mu\nu}\) governs clocks, light propagation, free fall, weak-field observables, and local inertial structure.
+    \item Matter remains universally coupled to that same metric, so the observer-accessible relativistic sector is exactly the GR/SR sector.
+    \item The \Aether{} / \Aflow{} ontology is preserved only as deeper interpretation of that exact relativistic structure, not as a second low-energy dynamics.
+\end{enumerate}
+
+The manuscript also has explicit nonclaims that are part of the benchmark package discipline.
+\begin{enumerate}
+    \item It does not derive the operative metric or the Einsteinian observer law from explicit substrate variables.
+    \item It does not introduce a second operative metric, a second universal causal cone, a preferred-frame matter coupling, or an independent low-energy non-GR observable sector.
+    \item It does not replace the foundations, dynamics, or consistency modules; it presupposes them and states the exact observer-facing recovery that follows once those benchmark ingredients are fixed.
+\end{enumerate}
+
+Read in that role, the manuscript closes the observer-level part of the claim boundary before the sequence turns to the flow-geometry dictionary. It therefore strengthens the benchmark package without reopening the adoption/derivation distinction.
+
+\section{Conclusion}
+
+This paper completes the relativistic-recovery step for the exact-closure reading of \TheoryName{}. The relation to GR is explicit: the effective observable content of the theory is identical to that of GR. The weak-field limit, Newtonian reduction, light propagation, causal structure, redshift, and gravitational time dilation are therefore inherited exactly. The relation to SR is also explicit: local inertial frames recover the Minkowski interval, local Lorentz symmetry, the standard kinematic time-dilation law, and the standard observer-level spatial relations.
+
+The cosmological point is equally important. Within that same benchmark sector, the observer-facing recovery now includes the standard FLRW and late-time-acceleration equations of GR, with dark energy placed conservatively as the ordinary cosmological constant or as a GR-compatible matter-side sector. The conceptual point remains unchanged: the \Aether{} / \Aflow{} ontology is not being used here to deny or deform relativity. In \TheoryName{}, it is used only as a deeper interpretive layer beneath an exact GR/SR operational structure. That is why the manuscript matters inside the benchmark package: it makes explicit that the exact-closure theory already recovers the full observer-facing relativistic content it adopts, while leaving substrate derivation as a separate foundational burden.
+
+\input{tex_shared/aether_flow_product_a_references.tex}
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools bm enumitem microtype hyperref titlesec booktabs array setspace mathrsfs physics margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.4em,itemsep=0.35em topsep=0.3em,itemsep=0.25em \section{}{.}{0.5em}{} \subsection{}{.}{0.5em}{} 1.06 \Aether{ther} \Aflow{ther-flow} \TheoryName{ Interpretation of Relativity} \TheoryProgram{ / framework} \Lor{_{L}} definition{Definition} proposition{Proposition} remark{Remark} corollary{Corollary} {{The }\\[0.4em] Relativistic Recovery} document abstract This paper states how , the exact-closure theory of , recovers established relativistic physics. The scope is explicit. The manuscript does not claim a first-principles substrate derivation of relativity from variables. It analyzes the adopted effective theory already fixed in the dynamics manuscript: Einsteinian gravity with universal matter coupling and a single operational metric. With that scope fixed, the recovery statement is also explicit. The exact relation of to general relativity is identity at the effective predictive level. The weak-field, causal, redshift, clock, local inertial, and cosmological structures are therefore exactly those of GR. Local special-relativistic kinematics are recovered in the ordinary way through local inertial frames and Lorentz symmetry of the tangent-space metric. The / ontology is retained only as deeper interpretation and is not promoted, in , to an extra low-energy preferred-frame field. In that precise sense, functions as a disciplined interpretive completion consistent with exact GR, not as a non-GR relativistic deformation. Within the flagship exact-closure package, the overview is the front door, the Exact-Closure Note is the short anchor, and the present paper is the relativistic-recovery module of the five-paper modular full statement. Its job is to make the observer-facing GR/SR content explicit after the exact law and its consistency have already been fixed. That order keeps exact closure first and derivational continuation secondary. abstract Introduction The current manuscript sequence fixes the scientific role of clearly. is the exact-closure, GR-consistent theory developed in the active repository. It is the exact reference for any later extension of the framework. The dynamics manuscript already fixed the adopted effective law. The consistency manuscript already made explicit that the effective exact-closure theory is mathematically healthy. The remaining question is therefore observer-facing: how does recover the relativistic structure that actual observers measure? That question has two parts. First, the exact relation to GR has to be stated in disciplined language. Second, the relation to SR has to be addressed explicitly rather than left implicit. The latter point matters because the ontology of and can easily be misunderstood as if it implied a measurable preferred frame. In , that is not the operative theory statement. Framework and claim boundary. denotes the broader / framework built on the claims that the is the underlying four-dimensional substrate of reality, the is its intrinsic ordered motion, observed three-dimensional space is the local experiential slice of that deeper substrate, S-time is the experienced order of change arising from matter, light, and the , and observed expansion is the three-dimensional appearance of deeper four-dimensional ordered motion. Within that framework, denotes the exact-closure theory in which the effective gravitational dynamics are adopted to be exactly Einsteinian with universal matter coupling. In the active sequence, adoption means use of that established relativistic dynamics without claiming substrate derivation, while derivation is reserved for a first-principles recovery from explicit substrate variables. definition[Exact relativistic recovery] Exact relativistic recovery in means that the effective operational content of the theory reproduces the accepted GR/SR structure exactly in the domains where that structure is tested, while the / ontology is retained as deeper interpretation rather than as an extra low-energy propagating sector. definition The sequence role of the present manuscript should therefore be read explicitly. After the overview, the short exact-closure anchor, and the foundations, dynamics, and consistency modules, this paper states how that already-adopted and already-checked exact law is recovered in weak-field, causal, clock, and local inertial terms. The remaining flow-geometry paper then sharpens the interpretive dictionary inside the same closure. Exact Relation to General Relativity The adopted action is equation S_{eff} = c^3{16 G} d^4x\,-g\,R + S_{matter}[g,], eq:SA equation with field equations equation G_{} = 8\pi G{c^4}T_{}. eq:einstein equation Matter is minimally and universally coupled to the same metric \(g_{}\). proposition[Operational identity with GR] For fixed matter sector, initial data, and boundary conditions, every effective observable of coincides with the corresponding observable of GR. proposition This statement is precise and should not be weakened into mere analogy. In , GR is not only approximately matched in some restricted regime. It is adopted exactly as the effective gravitational law. Therefore: equation O_{theory} = O_{GR} eq:obsidentity equation for every observable \(O\) defined entirely within the effective metric/matter sector. remark Equation eq:obsidentity is an adoption statement, not a derivation statement. The paper does not claim that the Einstein sector has already been recovered from explicit substrate microphysics. remark The proper scientific reading is therefore the following. is not a rival low-energy alternative to GR. It is a disciplined interpretive completion of the relativistic sector within , and a proposed deeper ontology consistent with GR, with no independent non-GR prediction at the effective level. Weak-Field Recovery In an asymptotically inertial region one writes equation g_{}=_{}+h_{}, |h_{}| 1. eq:linearizedmetric equation In the static, slowly moving regime with \(T_{00} c^2\) dominant, the leading field equation reduces to equation ^2 = 4 G. eq:poisson equation The weak-field line element then takes the standard form equation ds^2 = -(1+2\Phi{c^2}+O(c^{-4}))c^2dt^2 + (1-2\Phi{c^2}+O(c^{-4}))_{ij}\,dx^i dx^j. eq:weakfield equation Equivalently, in standard post-Newtonian language the theory carries the GR values of the metric-sector parameters. In particular, equation _{PPN} = 1, eq:ppngamma equation and, more generally, the full PPN content of the theory is that of GR because the effective theory is exactly GR. For slowly moving test bodies, the geodesic equation reduces to equation d^2x^i{dt^2} = -_i + O\!(v^2{c^2},\Phi^2{c^4}), eq:newtonianlimit equation which is the ordinary Newtonian limit. corollary[Weak-field observables] The weak-field observables of , including Newtonian acceleration, post-Newtonian light deflection, and Shapiro time delay, are exactly the corresponding GR observables. corollary This corollary is immediate from the exact-closure rule. The theory does not require a second matching prescription once the effective law has already been fixed. Light Propagation and Causal Structure The operational role of light is governed by the single effective metric. Null propagation satisfies equation 0=g_{}\,dx^ dx^, eq:null equation and null rays follow the geodesic equation equation k^ _ k^ = 0, eq:nullgeodesic equation for wave-vector \(k^\). proposition[Single-metric causal structure] In , the causal structure relevant to low-energy observation is exactly the causal structure of the metric \(g_{}\). There is no second universal low-energy cone and no extra preferred-frame light-propagation sector. proposition This proposition matters directly for how the ontology should be read. The / language is not being used here to introduce an additional low-energy propagation law for light. In the exact-closure theory, light propagation, causal ordering, and gravitational time delay are all controlled by the same metric null cone already present in GR. At every event \(p\), one may choose local inertial coordinates such that equation g_{}(p)=_{}, _ g_{}(p)=0. eq:localinertial equation In those coordinates, equation ds^2 = -c^2dt'^2+_{ij}\,dx'^i dx'^j + O((x'-p)^2). eq:localminkowski equation Hence null propagation satisfies equation {d\vec x'{dt'}}=c eq:localc equation locally, exactly as in SR. Redshift and Time-Dilation Structure To state gravitational redshift cleanly, write a static metric in the form equation ds^2=-N^2(x)\,c^2dt^2+_{ij}(x)\,dx^i dx^j. eq:staticmetric equation For a stationary observer with \(dx^i=0\), equation d = N(x)\,dt. eq:stationaryclock equation Thus clocks at different positions accumulate different proper times relative to the same static coordinate time. For light emitted at \(A\) and received at \(B\) by stationary observers in the static geometry eq:staticmetric, the frequency ratio is equation \nu_B{_A} = {N(x_A)}{N(x_B)}. eq:redshift equation In the weak-field regime where equation N(x) = 1+{(x)}{c^2}+O(c^{-4}), eq:lapseweakfield equation this becomes equation \nu_B-\nu_A{_A} = \Phi_A-\Phi_B{c^2} + O(c^{-4}). eq:weakredshift equation These are the ordinary GR redshift relations, inherited exactly by . The same is true for proper-time accumulation along arbitrary timelike histories: equation d^2 = -1{c^2}g_{}\,dx^ dx^. eq:propertime equation Two time-dilation mechanisms are therefore present in the familiar relativistic way. enumerate Gravitational time dilation arises through position dependence of the metric, as in eq:stationaryclock--eq:weakredshift. Kinematic time dilation arises locally from motion relative to an inertial frame, as discussed in the next section. enumerate Cosmological Recovery and Dark Energy The exact-closure benchmark also recovers the standard cosmological sector. For a Friedmann--Lema\^ tre--Robertson--Walker line element equation ds^2 = -c^2dt^2 +a(t)^2, eq:flrwmetric equation with comoving observer congruence \(u^=_t\), the Hubble parameter is equation H \dot a{a}, eq:hubble equation and the congruence expansion is equation = _ u^ = 3H. eq:theta3h equation When the conservative cosmological completion is written explicitly, the Einstein equations take the form equation G_{}+ g_{} = 8\pi G{c^4}T_{}, eq:einstein_cosmo equation which yields the standard Friedmann equations equation H^2 = 8\pi G{3} -k c^2{a^2} +\Lambda c^2{3}, eq:friedmann1 equation equation \ddot a{a} = -4\pi G{3}(+3p{c^2}) +\Lambda c^2{3}. eq:friedmann2 equation These are the ordinary GR equations underlying the observed late-time accelerated expansion and the conservative \(\)CDM benchmark Riess1998,Perlmutter1999,Planck2018Parameters. Equivalently, one may move the cosmological term to the matter side and read it as vacuum stress-energy with equation of state \(p_{}=-_{}c^2\). More generally, a GR-compatible dark-energy sector may be parameterized by equation w(a) {p_{DE}}{_{DE}c^2}, eq:wa equation provided it remains a covariantly conserved matter-side sector coupled to the same operative metric. In that reading, dark energy completes the cosmological content of the exact-GR package; it does not derive that package from the / ontology. proposition[Cosmological recovery] Late-time accelerated expansion is recovered inside within the same one-metric GR sector, either through the ordinary cosmological constant or through a GR-compatible dark-energy stress tensor. This is a cosmological completion of exact closure, not a first-principles derivation of exact closure. proposition { and Special Relativity} Local Recovery of SR Equation eq:localminkowski already states the local SR limit. In any sufficiently small neighborhood of an event, nongravitational physics is governed by the Minkowski metric \(_{}\). Local Lorentz transformations preserve that tangent-space metric and therefore preserve the usual SR interval. For a timelike observer moving with speed \(v\) in a local inertial frame, equation d = dt'{1-v^2{c^2}} = dt'{}, 1{1-v^2/c^2}. eq:kinematictimedilation equation Accordingly, the standard SR kinematic consequences follow locally: time dilation, relativity of simultaneity, and the usual Lorentz contraction rule \(L=L_0/\) when lengths are compared within the same local inertial construction. proposition[Explicit SR relation] The exact-closure theory reproduces the operational content of special relativity locally, because the observer-accessible metric structure is locally Minkowskian and matter/light couple only to that structure. proposition Why the Ontology Does Not Contradict SR The most important conceptual clarification is negative. In , the and are not introduced as extra measured low-energy structures that override local Lorentz symmetry. The theory does not add a second matter metric, a preferred-frame vector field, or an observable anisotropic light cone. Had it done so, it would not be exact closure; it would be a deviation theory. This is why the ontology and SR do not conflict in the exact-closure reading. SR is the operational local kinematics seen by observers. The / vocabulary is the deeper interpretive proposal about what the effective relativistic order may describe. In , the two levels are distinct: enumerate operational level: local measurements obey SR; effective gravitational level: spacetime structure obeys GR; ontological level: the relativistic order is interpreted as the observer-accessible manifestation of deeper organization. enumerate S-Time, Measured Duration, and Observed Spatial Relations The relation to S-time should also be stated carefully. In , S-time is not a replacement variable for proper time \(\), coordinate time \(t\), or the metric causal order. It is the interpretive name for experienced order of change as registered by material systems and light within the exact relativistic structure. Quantitatively, measured duration along a timelike worldline is still given by proper time eq:propertime. Observed three-dimensional spatial relations for an observer with four-velocity \(u^\) are encoded by the local rest-space metric equation h_{} = g_{} + 1{c^2}u_ u_. eq:spatialprojector equation This is the precise sense in which the theory can speak of observed three-dimensional space as a local experiential slice. The observer-accessible slice is not a second physical geometry competing with relativity; it is the ordinary observer rest-space determined by the same effective metric. remark In the exact-closure theory, S-time and observed space therefore do not modify relativity. They reinterpret the experienced temporal and spatial order already quantified by proper time, causal structure, and observer rest-space geometry. remark Scope of the Present Recovery Statement The present paper makes one positive claim and keeps one deeper task open. The positive claim is that, in , the observer-accessible relativistic sector is exactly the GR/SR sector: the same metric governs clocks, light, free fall, weak-field phenomena, and local inertial physics. The open task is the deeper recovery problem, namely, how that exact relativistic structure should ultimately be obtained from explicit substrate dynamics rather than adopted as the effective law. This scope should not be read as retreat. It is precisely what allows to function as a positive interpretive completion of relativity rather than as an unfinished competing deformation of it. Benchmark Role and Explicit Nonclaims Within the flagship package, the present manuscript is the observer-facing recovery module of the benchmark theory. Its positive role is to make the following points explicit. enumerate One operative metric \(g_{}\) governs clocks, light propagation, free fall, weak-field observables, and local inertial structure. Matter remains universally coupled to that same metric, so the observer-accessible relativistic sector is exactly the GR/SR sector. The / ontology is preserved only as deeper interpretation of that exact relativistic structure, not as a second low-energy dynamics. enumerate The manuscript also has explicit nonclaims that are part of the benchmark package discipline. enumerate It does not derive the operative metric or the Einsteinian observer law from explicit substrate variables. It does not introduce a second operative metric, a second universal causal cone, a preferred-frame matter coupling, or an independent low-energy non-GR observable sector. It does not replace the foundations, dynamics, or consistency modules; it presupposes them and states the exact observer-facing recovery that follows once those benchmark ingredients are fixed. enumerate Read in that role, the manuscript closes the observer-level part of the claim boundary before the sequence turns to the flow-geometry dictionary. It therefore strengthens the benchmark package without reopening the adoption/derivation distinction. Conclusion This paper completes the relativistic-recovery step for the exact-closure reading of . The relation to GR is explicit: the effective observable content of the theory is identical to that of GR. The weak-field limit, Newtonian reduction, light propagation, causal structure, redshift, and gravitational time dilation are therefore inherited exactly. The relation to SR is also explicit: local inertial frames recover the Minkowski interval, local Lorentz symmetry, the standard kinematic time-dilation law, and the standard observer-level spatial relations. The cosmological point is equally important. Within that same benchmark sector, the observer-facing recovery now includes the standard FLRW and late-time-acceleration equations of GR, with dark energy placed conservatively as the ordinary cosmological constant or as a GR-compatible matter-side sector. The conceptual point remains unchanged: the / ontology is not being used here to deny or deform relativity. In , it is used only as a deeper interpretive layer beneath an exact GR/SR operational structure. That is why the manuscript matters inside the benchmark package: it makes explicit that the exact-closure theory already recovers the full observer-facing relativistic content it adopts, while leaving substrate derivation as a separate foundational burden. tex_shared/aether_flow_product_a_references.tex document

@@ -1,0 +1,365 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\PhiFlow}{\Phi_{\lambda}}
+\newcommand{\Step}{\mathsf{Step}}
+\newcommand{\Adj}{\mathsf{Adj}_{\mathcal{S}}}
+\newcommand{\Rank}{\mathsf{rank}_{\mathcal{S}}}
+\newcommand{\RespAlg}{\mathcal{R}_{\Gamma}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Basis}{\mathcal{B}_{\mathrm{src}}}
+
+\newtheorem{basisdefinition}{Basis definition}
+\newtheorem{admissibility}{Admissibility law}
+\newtheorem{repair}{Repair to refutation blocker}
+\newtheorem{limitation}{Limitation}
+\newtheorem{nexttest}{Next test}
+
+\title{\textbf{Localization Source-Basis Formalization}\\[0.35em]
+\large Minimal Order, Adjacency, Response, Mode, and Clock-Transport Structures}
+\author{Ontology Formalizer AgentJob AJ-RT-20260608-007-001}
+\date{June 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft formalizes a source-basis packet for the localization repair path.
+It answers the prior refutation by specifying the minimum additional
+source-side structures needed before another localization candidate can be
+constructed without preserving the same underdetermination channel. The packet
+defines an order-rank alternative to numerical first-response intervals, a
+source adjacency topology, perturbation and response admissibility rules, a
+response-mode rank criterion, and a clock-cycle transport law. These are
+draft/control structures only. They do not edit canonical ontology sources,
+promote a localization candidate, issue a Gate Chair verdict, or establish an
+effective relativistic sector.
+\end{abstract}
+
+\section{Scope and Conservative Standard}
+
+This artifact is a draft/control output for task
+\texttt{RT-20260608-007}. It responds to the local negative result in
+\texttt{05\_LOCALIZATION\_REPAIR\_REFUTATION.tex}. The refutation did not show
+direct metric import, but it showed that the repaired localization packet was
+not determined by the registered Gate 0 source reservoir.
+
+The present standard is therefore modest and strict:
+\begin{enumerate}
+    \item state only source-side structures;
+    \item distinguish primitives from derived relations;
+    \item preserve relabeling and source-order invariance;
+    \item define failure conditions before benchmark comparison; and
+    \item leave canonical ontology promotion to a later authorized gate.
+\end{enumerate}
+
+\section{Source-Basis Packet}
+
+\begin{basisdefinition}[Source transition presentation]
+A localization source basis is a tuple
+\[
+\Basis =
+(\Sub,\preceq_{\mathcal{S}},\Step,\Adj,\mathcal{P},
+\mathcal{D},\{\RespAlg\}_{\Gamma},\mathcal{K}),
+\]
+where:
+\begin{enumerate}
+    \item \(\Sub\) is the substrate arena;
+    \item \(\preceq_{\mathcal{S}}\) is the source order induced by admissible
+    stages of \(\PhiFlow\);
+    \item \(\Step\subseteq\Sub\times\Sub\) is an immediate transition relation
+    compatible with \(\preceq_{\mathcal{S}}\);
+    \item \(\Adj\) is a source adjacency relation generated from \(\Step\), not
+    from target distance or target null separation;
+    \item \(\mathcal{P}\) is the family of admissible source-local
+    perturbation classes;
+    \item \(\mathcal{D}\) is the family of admissible response discriminators;
+    \item \(\RespAlg\) is the response algebra available to an observer chain
+    \(\Gamma\); and
+    \item \(\mathcal{K}\) is the clock-cycle equivalence and transport data.
+\end{enumerate}
+\end{basisdefinition}
+
+This tuple is not asserted as canonical ontology. It is the smallest current
+repair hypothesis that makes the next localization attempt more testable than
+the repaired packet alone.
+
+\section{Order Without Tuned First-Response Intervals}
+
+\begin{basisdefinition}[Order rank]
+For a perturbation class \(P_a\in\mathcal{P}\) localized at \(a\in\Sub\), and
+for a response discriminator \(D\in\mathcal{D}\), define the source order rank
+\[
+r_D(a,b)
+=
+\min\{n\in\mathbb{N}: D \text{ detects a response at } b
+\text{ along a } \Step\text{-path of length } n\}.
+\]
+If no such path exists, set \(r_D(a,b)=\infty\).
+\end{basisdefinition}
+
+The rank \(r_D(a,b)\) is incidence data. It is invariant under monotone
+reparameterization of the label \(\lambda\), because it does not use a
+numerical interval \(\Delta\) as source data.
+
+\begin{admissibility}[Optional order measure]
+A quantitative source-order measure \(\mu_{\mathcal{S}}\) may be introduced
+only if it is specified as source data with a transformation law under
+relabeling of \(\lambda\). It may not be fitted after comparison with a
+benchmark cone or clock. If \(\mu_{\mathcal{S}}\) is unavailable, candidate
+front construction must use rank and incidence rather than an infimum over
+numerical intervals.
+\end{admissibility}
+
+\begin{repair}[Order-measure blocker]
+The prior \(\delta_{a\to b}\) expression is replaced at this level by the
+rank object \(r_D(a,b)\), with \(\mu_{\mathcal{S}}\) reserved as an explicit
+extra hypothesis. This removes the hidden dependence on a tunable interval
+scale from the source basis.
+\end{repair}
+
+\section{Source Adjacency and Boundary Topology}
+
+\begin{basisdefinition}[Adjacency from immediate transition]
+Two source states are adjacent, written \(x\Adj y\), when either
+\((x,y)\in\Step\), \((y,x)\in\Step\), or they share an immediate source-local
+transition support under the same perturbation class. The \(n\)-neighborhood
+of \(x\) is
+\[
+N_n(x)=\{y\in\Sub: \text{there is an }\Adj\text{-path from }x
+\text{ to }y\text{ of length }\le n\}.
+\]
+\end{basisdefinition}
+
+\begin{basisdefinition}[Source boundary]
+For a reached set \(R\subseteq\Sub\), the source boundary is
+\[
+\partial_{\mathcal{S}} R
+=
+\{x\in R: N_1(x)\cap(\Sub\setminus R)\neq\varnothing\}.
+\]
+This boundary is defined by transition adjacency. It does not assume a smooth
+manifold boundary, metric sphere, null cone, or spatial distance.
+\end{basisdefinition}
+
+\begin{repair}[Adjacency blocker]
+The source-basis packet treats adjacency as a draft primitive generated by
+\(\Step\). It is not derived from the target benchmark. The next audit must
+therefore test whether \(\Step\) and transition support can be justified from
+canonical source language without importing target topology.
+\end{repair}
+
+\section{Perturbation and Response Admissibility}
+
+\begin{basisdefinition}[Source-local perturbation class]
+A perturbation class \(P_a\in\mathcal{P}\) is an equivalence class of
+source-local modifications to transition data near \(a\). Two perturbations
+are equivalent when they produce the same response language on all admissible
+observer chains after relabeling of \(\Sub\) and monotone reparameterization
+of source order.
+\end{basisdefinition}
+
+\begin{basisdefinition}[Response discriminator]
+A response discriminator \(D\in\mathcal{D}\) is a source-internal decision
+rule acting on finite transition words and chain response records. It is fixed
+by the recurrence structure of the relevant observer chain before any
+benchmark comparison. A discriminator may use source counts, recurrence
+phases, and transition-word changes. It may not use target proper time,
+spatial distance, radar-coordinate convention, or target null propagation.
+\end{basisdefinition}
+
+\begin{admissibility}[No post hoc threshold]
+Any threshold inside \(D\) must be determined by source recurrence, detector
+noise internal to the chain, or a discrete response-word distinction. A
+threshold selected because it improves agreement with a target cone or target
+clock invalidates the candidate path.
+\end{admissibility}
+
+\begin{repair}[Response-threshold blocker]
+The earlier free \(\epsilon\) is replaced by a registered discriminator
+family \(\mathcal{D}\). This does not prove that an admissible discriminator
+exists, but it makes the tuning channel explicit and auditable.
+\end{repair}
+
+\section{Response-Mode Algebra and Rank}
+
+\begin{basisdefinition}[Response algebra]
+For each observer chain \(\Gamma\), \(\RespAlg\) is the algebra generated by
+source response words recorded along \(\Gamma\), with operations induced by
+concatenation, recurrence counting, and source-local recombination of
+detector records. Its elements are response functionals, not target
+coordinates.
+\end{basisdefinition}
+
+\begin{basisdefinition}[Source response rank]
+The rank \(\Rank(U_{\Gamma})\) of a source-accessible domain \(U_{\Gamma}\) is
+the size of the largest set of response functionals in \(\RespAlg\) with no
+nontrivial source-invariant relation on \(U_{\Gamma}\). This is a matroid-like
+independence criterion over response records. It is not Euclidean
+orthogonality and not a target frame choice.
+\end{basisdefinition}
+
+\begin{admissibility}[Detector-mode split]
+An observer chain may carry one order mode plus three non-order response modes
+only in a domain where:
+\[
+\Rank(U_{\Gamma})=4,
+\]
+one generator is monotone with source order, and the remaining three are
+independent under the source response rank. If the rank is not four, the
+candidate must report the actual rank rather than force a \(1+3\) split.
+\end{admissibility}
+
+\begin{repair}[Response-mode blocker]
+The prior asserted detector modes are replaced by a rank condition in
+\(\RespAlg\). This makes the dimension of local response data a source-side
+result or failure, not an assumed target structure.
+\end{repair}
+
+\section{Clock-Cycle Equivalence and Transport}
+
+\begin{basisdefinition}[Stable cycle class]
+A stable clock cycle on \(\Gamma\) is a recurrent transition word
+\(\Cycle\) whose response ratios remain bounded under repeated traversal.
+Two cycles are equivalent, \(\Cycle\sim_{\mathcal{K}}\Cycle'\), when their
+transition-word ratios and response-mode ratios agree up to the source
+relabelings allowed by \(\Basis\).
+\end{basisdefinition}
+
+\begin{basisdefinition}[Clock transport]
+For adjacent observer chains \(\Gamma\Adj\Gamma'\), a clock-transport map
+\[
+T_{\Gamma\to\Gamma'}:
+[\Cycle]_{\mathcal{K}}
+\longrightarrow
+[\Cycle']_{\mathcal{K}}
+\]
+is admissible only when it is induced by shared source transition support and
+preserves response-count ratios. Along longer adjacency paths, transports
+compose as a source cocycle up to the relabeling redundancy of \(\Basis\).
+\end{basisdefinition}
+
+\begin{admissibility}[Scale comparison before benchmark]
+Clock scale may be compared across chains only through \(\mathcal{K}\). A
+local unit \(u_{\Gamma}\) without a transport rule defines a counter, not a
+shared scale. Target proper time may appear later only as a comparison test.
+\end{admissibility}
+
+\begin{repair}[Clock-transport blocker]
+The prior clock-scale factor is repaired at the source-basis level by adding
+cycle equivalence and transport. The repair remains provisional until an
+auditor tests whether \(\mathcal{K}\) can be specified without hidden target
+clock normalization.
+\end{repair}
+
+\section{Dimensional and Invariance Ledger}
+
+The source-basis structures carry the following provisional dimensions:
+\begin{itemize}
+    \item \(r_D(a,b)\): dimensionless transition rank;
+    \item \(\mu_{\mathcal{S}}\), if introduced: source-order unit, not target
+    time;
+    \item response words and response ranks: dimensionless source counts or
+    algebraic classes;
+    \item stable cycle class \([\Cycle]_{\mathcal{K}}\): source-cycle unit;
+    \item clock transport \(T_{\Gamma\to\Gamma'}\): dimensionless ratio map
+    between source-cycle classes.
+\end{itemize}
+
+The invariant content is the transition incidence, adjacency topology,
+response-language equivalence classes, response-rank structure, and
+clock-transport cocycle. The numerical labeling of \(\lambda\), names of
+substrate states, detector basis choices inside a fixed response algebra, and
+representatives of equivalent cycles are gauge-like presentation choices.
+
+\section{Limitations}
+
+\begin{limitation}[Additional source content]
+This packet adds explicit draft source-basis structures beyond the original
+minimal Gate 0 reservoir. That may be acceptable as a repair hypothesis, but
+it is not automatically authorized as canonical ontology.
+\end{limitation}
+
+\begin{limitation}[No localization candidate yet]
+The packet defines a better basis for a candidate. It does not construct a
+new localized front, coincidence map, clock scale, or effective metric.
+\end{limitation}
+
+\begin{limitation}[No recovery theorem]
+The packet supplies source-side admissibility criteria. It does not prove
+that the benchmark sector follows from them.
+\end{limitation}
+
+\section{Next Tests}
+
+\begin{nexttest}[Source-smuggling audit]
+The next adversarial role should audit whether \(\Step\), \(\Adj\),
+\(\mathcal{D}\), \(\RespAlg\), and \(\mathcal{K}\) secretly encode target
+metric topology, target observer protocols, target proper-time normalization,
+or a predetermined \(1+3\) target split.
+\end{nexttest}
+
+\begin{nexttest}[Conservativity test]
+If these structures cannot be motivated from registered source language or
+from a separately authorized ontology-change proposal, the Director should
+pause localization rather than authorize candidate reconstruction.
+\end{nexttest}
+
+\section{Result}
+
+The five blockers from the localization repair refutation have been converted
+into an explicit source-basis packet:
+\[
+\Basis =
+(\Sub,\preceq_{\mathcal{S}},\Step,\Adj,\mathcal{P},
+\mathcal{D},\{\RespAlg\}_{\Gamma},\mathcal{K}).
+\]
+The packet replaces numerical first-response tuning with rank data or an
+explicit source-order measure, defines adjacency through transition support,
+requires pre-benchmark response discriminators, makes detector dimensionality
+a source-rank question, and adds clock-cycle transport. This is constructive
+formalization, not validation. The logical next role is Smuggling Auditor
+before any candidate reconstruction or Gate Chair review.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization repair refutation:
+Source-determination test for the repaired localization packet} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-006/artifacts/05\_LOCALIZATION\_REPAIR\_REFUTATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-repair packet:
+Source-only front, coincidence, and clock-scale definitions} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-005/artifacts/04\_LOCALIZATION\_SOURCE\_REPAIR\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization smuggling audit:
+Target-import review of the Gate 0 localization candidate packet}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-004/artifacts/03\_LOCALIZATION\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Gate 0 ontology formalization: Source
+primitives, forbidden imports, and localization burden} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex}.
+
+\end{document}

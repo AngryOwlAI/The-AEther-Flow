@@ -1,0 +1,69 @@
+Research-Control System Explainer
+human-only derivative
+Research-Control System Explainer
+This page visualizes the repository's control system. It is generated from a registered Markdown spec and is not independent authority. Source files and registries remain the basis for project behavior.
+Source basis
+MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER
+Renderer
+visual-explainer@0.7.1-project-aether-flow
+Authority
+generated_noncanonical
+Authority Ladder
+1
+Canonical science sources
+Registered TeX files own physics claims and derivational status.
+2
+Registries
+CSV registries own routing, provenance, generated-output tracking, and memory lookup.
+3
+Registered Markdown
+README, AGENTS, role contracts, skill contracts, and HTML explainer specs guide humans and agents.
+4
+Generated derivatives
+PDFs, wiki notes, indexes, Obsidian exports, and HTML explainers are useful views, not authority.
+Two Workflows
+continue-research
+Resolve tracked handoff and active task state.
+Use Director control only when a bounded research job is needed.
+Execute at most one science AgentJob per invocation.
+Preserve claim boundaries and negative results.
+improve-project-system
+Classify current changes and open project-system signals.
+Select one bounded non-scientific AgentJob.
+Update control, validator, memory, or documentation surfaces.
+Record documentation impact and run the gates.
+Documentation Curator v0.2.0
+The Documentation Curator owns explanatory Markdown and source-backed human HTML explainers. A generated HTML file under
+html/
+is valid only when a registered Markdown spec names the output path and the HTML metadata matches that spec's current hash.
+source spec
+markdown/html-explainer-specs
+Defines title, purpose, audience, output path, renderer, source materials, claim boundary, and human-only status.
+render
+visual-explainer
+Creates the self-contained visualization from the registered spec and inspected source materials.
+tracked derivative
+html/*.html
+Remains non-authoritative. Direct HTML-only edits are blocked by project-control classification and validation.
+Validator Gates
+classify_project_changes.py --json
+resolve_project_improvement.py --json
+collect_project_improvement_signals.py --validate-emitted
+validate_documentation_impact.py
+bootstrap_memory_system.py
+bootstrap_memory_system.py --validate-only
+validate_research_control.py
+validate_research_control.py --check-diff
+python -m unittest discover -s tests
+Claim Boundary
+This explainer changes no physics claim, no routing rule, no role authority, and no registry semantics. It is a human-readable view generated from the Markdown spec named in its metadata.
+Source Materials
+AGENTS.md
+README.md
+research_control/README.md
+.codex/skills/improve-project-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/visual-explainer/SKILL.md
+.agents/roles/research_ops/documentation-curator.v0.2.0.md
+scripts/research_control/validate_research_control.py
+.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py

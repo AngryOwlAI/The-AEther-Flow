@@ -1,0 +1,89 @@
+# Index By Authority Status
+
+Generated Obsidian index. Not canonical authority.
+
+## canonical
+
+- [[02_sources/tex/tex-ontology-aether-flow-consistency|TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY]] `ontology/tex/aether_flow_consistency.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-dynamics|TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS]] `ontology/tex/aether_flow_dynamics.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-exact-closure-flagship-article|TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE]] `ontology/tex/aether_flow_exact_closure_flagship_article.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-exact-closure-note|TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE]] `ontology/tex/aether_flow_exact_closure_note.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-exact-closure-sequence-overview|TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW]] `ontology/tex/aether_flow_exact_closure_sequence_overview.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-foundations|TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS]] `ontology/tex/aether_flow_foundations.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-geometry|TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY]] `ontology/tex/aether_flow_geometry.tex`
+- [[02_sources/tex/tex-ontology-aether-flow-relativistic-recovery|TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY]] `ontology/tex/aether_flow_relativistic_recovery.tex`
+
+## draft_control_artifact
+
+- [[02_sources/tex/tex-research-control-gate0-ontology-formalization|TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION]] `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
+- [[02_sources/tex/tex-research-control-localization-candidate-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET]] `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
+- [[02_sources/tex/tex-research-control-localization-repair-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-REPAIR-REFUTATION]] `research_control/tasks/RT-20260608-006/artifacts/05_LOCALIZATION_REPAIR_REFUTATION.tex`
+- [[02_sources/tex/tex-research-control-localization-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-004/artifacts/03_LOCALIZATION_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-benchmark-independence-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-BENCHMARK-INDEPENDENCE-REFUTATION]] `research_control/tasks/RT-20260608-012/artifacts/11_LOCALIZATION_SOURCE_BASIS_AXIOM_BENCHMARK_INDEPENDENCE_REFUTATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-justification|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-JUSTIFICATION]] `research_control/tasks/RT-20260608-010/artifacts/09_LOCALIZATION_SOURCE_BASIS_AXIOM_JUSTIFICATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selection-law-benchmark-independence-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTION-LAW-BENCHMARK-INDEPENDENCE-REFUTATION]] `research_control/tasks/RT-20260608-015/artifacts/14_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTION_LAW_BENCHMARK_INDEPENDENCE_REFUTATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selection-law-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTION-LAW-PACKET]] `research_control/tasks/RT-20260608-013/artifacts/12_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTION_LAW_PACKET.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selection-law-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTION-LAW-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-014/artifacts/13_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTION_LAW_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-benchmark-independence-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-BENCHMARK-INDEPENDENCE-REFUTATION]] `research_control/tasks/RT-20260608-018/artifacts/17_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_BENCHMARK_INDEPENDENCE_REFUTATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-survey-protocol-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-SURVEY-PROTOCOL-PACKET]] `research_control/tasks/RT-20260608-019/artifacts/18_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_SURVEY_PROTOCOL_PACKET.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-survey-protocol-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-SURVEY-PROTOCOL-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-020/artifacts/19_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_SURVEY_PROTOCOL_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-repair-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-REPAIR-PACKET]] `research_control/tasks/RT-20260608-016/artifacts/15_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_REPAIR_PACKET.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-017/artifacts/16_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-011/artifacts/10_LOCALIZATION_SOURCE_BASIS_AXIOM_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-conservativity-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-CONSERVATIVITY-REFUTATION]] `research_control/tasks/RT-20260608-009/artifacts/08_LOCALIZATION_SOURCE_BASIS_CONSERVATIVITY_REFUTATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-formalization|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION]] `research_control/tasks/RT-20260608-007/artifacts/06_LOCALIZATION_SOURCE_BASIS_FORMALIZATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-008/artifacts/07_LOCALIZATION_SOURCE_BASIS_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-repair-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET]] `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
+
+## explanatory_noncanonical
+
+- [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
+
+## generated_noncanonical
+
+- [[02_sources/pdf/pdf-ontology-aether-flow-consistency|PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY]] `ontology/pdfs/aether_flow_consistency.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-dynamics|PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS]] `ontology/pdfs/aether_flow_dynamics.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-exact-closure-flagship-article|PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE]] `ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-exact-closure-note|PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE]] `ontology/pdfs/aether_flow_exact_closure_note.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-exact-closure-sequence-overview|PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW]] `ontology/pdfs/aether_flow_exact_closure_sequence_overview.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-foundations|PDF-ONTOLOGY-AETHER-FLOW-FOUNDATIONS]] `ontology/pdfs/aether_flow_foundations.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-geometry|PDF-ONTOLOGY-AETHER-FLOW-GEOMETRY]] `ontology/pdfs/aether_flow_geometry.pdf`
+- [[02_sources/pdf/pdf-ontology-aether-flow-relativistic-recovery|PDF-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY]] `ontology/pdfs/aether_flow_relativistic_recovery.pdf`
+
+## project_control
+
+- [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
+- [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
+- [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
+- [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`
+- [[02_sources/markdown/md-readme|MD-README]] `README.md`
+- [[02_sources/markdown/md-readme-research-control|MD-README-RESEARCH-CONTROL]] `research_control/README.md`
+- [[02_sources/markdown/md-readme-research-control-approvals|MD-README-RESEARCH-CONTROL-APPROVALS]] `research_control/approvals/README.md`
+- [[02_sources/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions|MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS]] `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD]] `.agents/roles/physics/gate-chair.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD]] `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-refuter-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-1-0-MD]] `.agents/roles/physics/refuter.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD]] `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD]] `.agents/roles/research_ops/director-of-research.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD]] `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD]] `.agents/roles/research_ops/project-system-director.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD]] `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
+- [[02_sources/markdown/md-schema-agent-job-schema|MD-SCHEMA-AGENT-JOB-SCHEMA]] `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- [[02_sources/markdown/md-schema-director-decision-schema|MD-SCHEMA-DIRECTOR-DECISION-SCHEMA]] `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
+- [[02_sources/markdown/md-schema-documentation-impact-schema|MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA]] `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
+- [[02_sources/markdown/md-schema-execution-role-schema|MD-SCHEMA-EXECUTION-ROLE-SCHEMA]] `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- [[02_sources/markdown/md-schema-role-schema|MD-SCHEMA-ROLE-SCHEMA]] `.agents/schemas/ROLE_SCHEMA.md`
+- [[02_sources/markdown/md-skill-continue-research|MD-SKILL-CONTINUE-RESEARCH]] `.codex/skills/continue-research/SKILL.md`
+- [[02_sources/markdown/md-skill-grill-me|MD-SKILL-GRILL-ME]] `.codex/skills/grill-me/SKILL.md`
+- [[02_sources/markdown/md-skill-html-visual-explainer|MD-SKILL-HTML-VISUAL-EXPLAINER]] `.codex/skills/html-visual-explainer/SKILL.md`
+- [[02_sources/markdown/md-skill-improve-project-system|MD-SKILL-IMPROVE-PROJECT-SYSTEM]] `.codex/skills/improve-project-system/SKILL.md`
+- [[02_sources/markdown/md-skill-markdown-wiki|MD-SKILL-MARKDOWN-WIKI]] `.codex/skills/markdown-wiki/SKILL.md`
+- [[02_sources/markdown/md-skill-obsidian-wiki|MD-SKILL-OBSIDIAN-WIKI]] `.codex/skills/obsidian-wiki/SKILL.md`
+- [[02_sources/markdown/md-skill-ontology-promotion|MD-SKILL-ONTOLOGY-PROMOTION]] `.codex/skills/ontology-promotion/SKILL.md`
+- [[02_sources/markdown/md-skill-pdf-derivative-build|MD-SKILL-PDF-DERIVATIVE-BUILD]] `.codex/skills/pdf-derivative-build/SKILL.md`
+- [[02_sources/markdown/md-skill-project-memory-system|MD-SKILL-PROJECT-MEMORY-SYSTEM]] `.codex/skills/project-memory-system/SKILL.md`
+- [[02_sources/markdown/md-skill-tex-wiki|MD-SKILL-TEX-WIKI]] `.codex/skills/tex-wiki/SKILL.md`
+- [[02_sources/markdown/md-skill-visual-explainer|MD-SKILL-VISUAL-EXPLAINER]] `.codex/skills/visual-explainer/SKILL.md`

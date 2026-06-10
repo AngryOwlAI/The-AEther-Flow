@@ -1,0 +1,40 @@
+# Index By Format: markdown
+
+Generated Obsidian index. Not canonical authority.
+
+- [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
+- [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
+- [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
+- [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
+- [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`
+- [[02_sources/markdown/md-readme|MD-README]] `README.md`
+- [[02_sources/markdown/md-readme-research-control|MD-README-RESEARCH-CONTROL]] `research_control/README.md`
+- [[02_sources/markdown/md-readme-research-control-approvals|MD-README-RESEARCH-CONTROL-APPROVALS]] `research_control/approvals/README.md`
+- [[02_sources/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions|MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS]] `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD]] `.agents/roles/physics/gate-chair.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD]] `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-refuter-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-1-0-MD]] `.agents/roles/physics/refuter.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD]] `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD]] `.agents/roles/research_ops/director-of-research.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD]] `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD]] `.agents/roles/research_ops/project-system-director.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD]] `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
+- [[02_sources/markdown/md-schema-agent-job-schema|MD-SCHEMA-AGENT-JOB-SCHEMA]] `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- [[02_sources/markdown/md-schema-director-decision-schema|MD-SCHEMA-DIRECTOR-DECISION-SCHEMA]] `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
+- [[02_sources/markdown/md-schema-documentation-impact-schema|MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA]] `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
+- [[02_sources/markdown/md-schema-execution-role-schema|MD-SCHEMA-EXECUTION-ROLE-SCHEMA]] `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- [[02_sources/markdown/md-schema-role-schema|MD-SCHEMA-ROLE-SCHEMA]] `.agents/schemas/ROLE_SCHEMA.md`
+- [[02_sources/markdown/md-skill-continue-research|MD-SKILL-CONTINUE-RESEARCH]] `.codex/skills/continue-research/SKILL.md`
+- [[02_sources/markdown/md-skill-grill-me|MD-SKILL-GRILL-ME]] `.codex/skills/grill-me/SKILL.md`
+- [[02_sources/markdown/md-skill-html-visual-explainer|MD-SKILL-HTML-VISUAL-EXPLAINER]] `.codex/skills/html-visual-explainer/SKILL.md`
+- [[02_sources/markdown/md-skill-improve-project-system|MD-SKILL-IMPROVE-PROJECT-SYSTEM]] `.codex/skills/improve-project-system/SKILL.md`
+- [[02_sources/markdown/md-skill-markdown-wiki|MD-SKILL-MARKDOWN-WIKI]] `.codex/skills/markdown-wiki/SKILL.md`
+- [[02_sources/markdown/md-skill-obsidian-wiki|MD-SKILL-OBSIDIAN-WIKI]] `.codex/skills/obsidian-wiki/SKILL.md`
+- [[02_sources/markdown/md-skill-ontology-promotion|MD-SKILL-ONTOLOGY-PROMOTION]] `.codex/skills/ontology-promotion/SKILL.md`
+- [[02_sources/markdown/md-skill-pdf-derivative-build|MD-SKILL-PDF-DERIVATIVE-BUILD]] `.codex/skills/pdf-derivative-build/SKILL.md`
+- [[02_sources/markdown/md-skill-project-memory-system|MD-SKILL-PROJECT-MEMORY-SYSTEM]] `.codex/skills/project-memory-system/SKILL.md`
+- [[02_sources/markdown/md-skill-tex-wiki|MD-SKILL-TEX-WIKI]] `.codex/skills/tex-wiki/SKILL.md`
+- [[02_sources/markdown/md-skill-visual-explainer|MD-SKILL-VISUAL-EXPLAINER]] `.codex/skills/visual-explainer/SKILL.md`

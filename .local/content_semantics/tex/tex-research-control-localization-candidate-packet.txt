@@ -1,0 +1,259 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\PhiFlow}{\Phi_{\lambda}}
+\newcommand{\Data}{\mathcal{D}_{\mathrm{loc}}}
+\newcommand{\Map}{\mathcal{L}_{\mathrm{loc}}}
+\newcommand{\Constraints}{\mathcal{C}_{\mathrm{loc}}}
+\newcommand{\Front}{\mathcal{F}}
+\newcommand{\Order}{\mathcal{S}}
+\newcommand{\Obs}{\mathcal{O}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposal}{Candidate proposal}
+\newtheorem{constraint}{Constraint}
+\newtheorem{test}{Required test}
+\newtheorem{verdict}{Candidate status}
+
+\title{\textbf{Localization Candidate Packet}\\[0.35em]
+\large A Source-Side Observer-Localization Map for Gate 0 Review}
+\author{Candidate Constructor AgentJob AJ-RT-20260608-003-001}
+\date{June 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft constructs one bounded candidate localization packet for the
+\TheoryProgram{}. It responds to the Gate 0 burden ledger by specifying
+additional source-side data, a conditional localization map, anti-smuggling
+constraints, and failure tests. The packet is intentionally modest: it is a
+candidate for the missing observer-localization object, not a derivation of the
+effective Einsteinian sector. Its main result is that the next scientific
+obstruction can be made precise. A source front relation and a clock-order
+functional must jointly induce an observer-accessible conformal structure
+without importing a target metric, and then an independent scale calibration
+must be supplied before metric recovery can even be tested.
+\end{abstract}
+
+\section{Scope and Authority}
+
+This artifact is a draft/control output for task \texttt{RT-20260608-003}. It
+reads the Gate 0 ontology formalization and the registered ontology package, but
+it does not edit canonical ontology TeX. Its purpose is to create one concrete
+candidate packet for later Smuggling Auditor and Refuter review.
+
+The current exact-closure benchmark remains external to the source packet. The
+candidate below may use that benchmark only as a recovery target and failure
+test. It may not assume the Lorentzian metric \(g_{\mu\nu}\), the
+Einstein-Hilbert action, the Einstein equations, or universal matter coupling as
+source primitives.
+
+\section{Gate 0 Input}
+
+The Gate 0 ledger fixed the allowed primitive reservoir as
+\[
+(\Sub,\PhiFlow,\iota_s,\Order),
+\]
+with optional future variables \(\chi\). It also fixed the missing object: a
+localization map from source structure to observer-accessible metric, clocks,
+spatial slices, and lightlike propagation. The present packet therefore defines
+\[
+\Data=(\Sub,\PhiFlow,\chi_{\mathrm{loc}},\Map,\Constraints)
+\]
+as a candidate, not as a theorem.
+
+\section{Additional Source Data}
+
+\begin{definition}[Observer chain]
+An observer chain \(\Gamma\subset\Sub\) is a localized ordered sequence of
+source states that remains coherently identifiable under \(\PhiFlow\) over the
+candidate regime. Coherence means that neighboring stages of the chain preserve
+a stable internal transition pattern; it does not mean that \(\Gamma\) is
+already a GR worldline.
+\end{definition}
+
+\begin{definition}[Clock-order functional]
+For each admissible observer chain \(\Gamma\), the source clock-order functional
+is
+\[
+\Order_{\Gamma}:\Gamma\rightarrow\mathbb{R},
+\]
+with \(\Order_{\Gamma}\) monotone along the chain. A later model may calibrate
+this order by repeatable internal cycles, but this packet does not identify
+\(\Order_{\Gamma}\) with target proper time.
+\end{definition}
+
+\begin{definition}[Source front relation]
+The source front relation
+\[
+\Front\subset\Sub\times\Sub
+\]
+records which source transitions can first influence which other source
+transitions under \(\PhiFlow\). It is not a metric null cone. It is primitive
+only as an influence-front relation induced by ordered substrate behavior.
+\end{definition}
+
+\begin{definition}[Coincidence response map]
+The coincidence response map
+\[
+\kappa_{\Gamma}:\Sub\supset U_{\Gamma}\rightarrow
+(\Order_{\Gamma},r^1_{\Gamma},r^2_{\Gamma},r^3_{\Gamma})
+\]
+assigns local observer labels to source events inside an observer-accessible
+domain \(U_{\Gamma}\). The three response labels \(r^i_{\Gamma}\) are defined
+operationally by repeated interactions between \(\Gamma\) and nearby source
+fronts, not by an imported spatial metric.
+\end{definition}
+
+The candidate additional variables are therefore
+\[
+\chi_{\mathrm{loc}}
+=
+(\Gamma,\Order_{\Gamma},\Front,\kappa_{\Gamma},\alpha_{\Gamma}),
+\]
+where \(\alpha_{\Gamma}\) is a clock-scale calibration factor fixed only by
+stable source cycles.
+
+\section{Localization Map}
+
+\begin{proposal}[Candidate localization map]
+The localization map \(\Map\) acts in four stages:
+\begin{enumerate}
+    \item Select coherent observer chains \(\Gamma\) from stable patterns of
+    \(\PhiFlow\).
+    \item Use \(\Order_{\Gamma}\) to assign local clock order along each chain.
+    \item Use \(\Front\) and \(\kappa_{\Gamma}\) to assign observer-accessible
+    coincidence labels in \(U_{\Gamma}\).
+    \item If the image of \(\Front\) under \(\kappa_{\Gamma}\) is a smooth
+    double-front structure with one invariant local signal speed, reconstruct a
+    candidate conformal class \([g_{\mathrm{eff}}]\). If stable clock-scale
+    data \(\alpha_{\Gamma}\) exist, attempt to lift \([g_{\mathrm{eff}}]\) to a
+    metric candidate \(g_{\mathrm{eff}}\).
+\end{enumerate}
+\end{proposal}
+
+The logical order matters. The front relation supplies the candidate causal
+structure; clock-scale calibration supplies the conformal scale. Neither is
+allowed to be copied from the exact-closure metric. If the front relation does
+not define a smooth Lorentz-signature cone after localization, the candidate
+fails before any metric comparison begins.
+
+\section{Anti-Smuggling Constraints}
+
+\begin{constraint}[No metric primitive]
+\(\Front\) must be specified without using \(g_{\mu\nu}\), \(ds^2\), target
+null cones, or GR observer congruences as primitives.
+\end{constraint}
+
+\begin{constraint}[No action import]
+The packet does not include the Einstein-Hilbert action, Einstein tensor, or
+universal target matter coupling in \(\chi_{\mathrm{loc}}\).
+\end{constraint}
+
+\begin{constraint}[Dimensional discipline]
+The packet must state dimensions before a later derivational claim is tested.
+At this stage \(\lambda\) and \(\Order_{\Gamma}\) may be order parameters;
+\(\alpha_{\Gamma}\) carries the burden of turning repeatable source cycles into
+clock units. The source front relation must specify whether its limiting speed
+is dimensional, emergent from calibration, or dimensionless before comparison
+with \(c\).
+\end{constraint}
+
+\begin{constraint}[Gauge and redundancy]
+Relabelings of \(\Sub\), \(\lambda\), and observer response coordinates must be
+treated as source-side redundancy unless they change observable coincidence
+data. Target diffeomorphism symmetry is a recovery target, not a primitive
+assumption.
+\end{constraint}
+
+\section{Required Tests}
+
+\begin{test}[Local cone test]
+In each observer domain \(U_{\Gamma}\), the localized image of \(\Front\) must
+be tested for a smooth double-front structure. If this fails, the packet cannot
+support relativistic observer localization.
+\end{test}
+
+\begin{test}[Clock-scale test]
+The candidate must show that \(\Order_{\Gamma}\) and \(\alpha_{\Gamma}\) define
+stable clock readings independent of arbitrary relabeling of the source order.
+Without this, only a conformal structure can be attempted.
+\end{test}
+
+\begin{test}[Preferred-frame leakage test]
+The packet must check whether \(\Gamma\) or \(\Front\) introduces observable
+preferred-frame effects outside the exact-closure benchmark. Any such leakage is
+a failure unless it is confined to a clearly non-operational redundancy.
+\end{test}
+
+\begin{test}[Benchmark recovery test]
+Only after the prior tests pass may the candidate be compared with the
+exact-closure target. The comparison must ask whether the localized
+\((g_{\mathrm{eff}},\psi_{\mathrm{eff}})\) can support the same one-metric
+matter law and dynamical limit. This packet does not supply that proof.
+\end{test}
+
+\section{Status and Next Role}
+
+\begin{verdict}[Conditionally admissible, underdetermined]
+The packet is admissible as a candidate because it identifies a concrete
+source-side localization object:
+\[
+\Data
+=
+(\Sub,\PhiFlow,\Gamma,\Order_{\Gamma},\Front,\kappa_{\Gamma},
+\alpha_{\Gamma},\Map,\Constraints).
+\]
+It is underdetermined because \(\Front\), the observer-chain selection rule, and
+the clock-scale calibration are not yet derived from a source action or unique
+substrate law.
+\end{verdict}
+
+The substantive gain is not a promoted physics claim. It is a sharper
+obstruction. The project no longer lacks only a vague bridge from ontology to
+observers; it now has a candidate bridge with named failure points. The first
+logical review is a Smuggling Auditor pass focused on whether \(\Front\),
+\(\kappa_{\Gamma}\), or \(\alpha_{\Gamma}\) secretly imports the target metric
+or its operational clock/null structure.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Gate 0 ontology formalization: Source
+primitives, forbidden imports, and localization burden} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{The Aether-flow Interpretation of
+Relativity: Foundations} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{ontology/tex/aether\_flow\_foundations.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{The Aether-flow Interpretation of
+Relativity: Exact-closure note} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{ontology/tex/aether\_flow\_exact\_closure\_note.tex}.
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools enumitem microtype hyperref margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.35em,itemsep=0.3em topsep=0.3em,itemsep=0.25em \Aether{ther} \Aflow{ther-flow} \TheoryProgram{ / framework} \Sub{A} \PhiFlow{_{}} \Data{D_{loc}} \Map{L_{loc}} \Constraints{C_{loc}} \Front{F} \Order{S} \Obs{O} definition{Definition} proposal{Candidate proposal} constraint{Constraint} test{Required test} verdict{Candidate status} {Localization Candidate Packet\\[0.35em] A Source-Side Observer-Localization Map for Gate 0 Review} Candidate Constructor AgentJob AJ-RT-20260608-003-001 June 8, 2026 document abstract This draft constructs one bounded candidate localization packet for the . It responds to the Gate 0 burden ledger by specifying additional source-side data, a conditional localization map, anti-smuggling constraints, and failure tests. The packet is intentionally modest: it is a candidate for the missing observer-localization object, not a derivation of the effective Einsteinian sector. Its main result is that the next scientific obstruction can be made precise. A source front relation and a clock-order functional must jointly induce an observer-accessible conformal structure without importing a target metric, and then an independent scale calibration must be supplied before metric recovery can even be tested. abstract Scope and Authority This artifact is a draft/control output for task RT-20260608-003. It reads the Gate 0 ontology formalization and the registered ontology package, but it does not edit canonical ontology TeX. Its purpose is to create one concrete candidate packet for later Smuggling Auditor and Refuter review. The current exact-closure benchmark remains external to the source packet. The candidate below may use that benchmark only as a recovery target and failure test. It may not assume the Lorentzian metric \(g_{}\), the Einstein-Hilbert action, the Einstein equations, or universal matter coupling as source primitives. Gate 0 Input The Gate 0 ledger fixed the allowed primitive reservoir as \[ (,,_s,), \] with optional future variables \(\). It also fixed the missing object: a localization map from source structure to observer-accessible metric, clocks, spatial slices, and lightlike propagation. The present packet therefore defines \[ =(,,_{loc},,) \] as a candidate, not as a theorem. Additional Source Data definition[Observer chain] An observer chain \(\) is a localized ordered sequence of source states that remains coherently identifiable under \(\) over the candidate regime. Coherence means that neighboring stages of the chain preserve a stable internal transition pattern; it does not mean that \(\) is already a GR worldline. definition definition[Clock-order functional] For each admissible observer chain \(\), the source clock-order functional is \[ _{}:R, \] with \(_{}\) monotone along the chain. A later model may calibrate this order by repeatable internal cycles, but this packet does not identify \(_{}\) with target proper time. definition definition[Source front relation] The source front relation \[ \] records which source transitions can first influence which other source transitions under \(\). It is not a metric null cone. It is primitive only as an influence-front relation induced by ordered substrate behavior. definition definition[Coincidence response map] The coincidence response map \[ _{}: U_{} (_{},r^1_{},r^2_{},r^3_{}) \] assigns local observer labels to source events inside an observer-accessible domain \(U_{}\). The three response labels \(r^i_{}\) are defined operationally by repeated interactions between \(\) and nearby source fronts, not by an imported spatial metric. definition The candidate additional variables are therefore \[ _{loc} = (,_{},,_{},_{}), \] where \(_{}\) is a clock-scale calibration factor fixed only by stable source cycles. Localization Map proposal[Candidate localization map] The localization map \(\) acts in four stages: enumerate Select coherent observer chains \(\) from stable patterns of \(\). Use \(_{}\) to assign local clock order along each chain. Use \(\) and \(_{}\) to assign observer-accessible coincidence labels in \(U_{}\). If the image of \(\) under \(_{}\) is a smooth double-front structure with one invariant local signal speed, reconstruct a candidate conformal class \([g_{eff}]\). If stable clock-scale data \(_{}\) exist, attempt to lift \([g_{eff}]\) to a metric candidate \(g_{eff}\). enumerate proposal The logical order matters. The front relation supplies the candidate causal structure; clock-scale calibration supplies the conformal scale. Neither is allowed to be copied from the exact-closure metric. If the front relation does not define a smooth Lorentz-signature cone after localization, the candidate fails before any metric comparison begins. Anti-Smuggling Constraints constraint[No metric primitive] \(\) must be specified without using \(g_{}\), \(ds^2\), target null cones, or GR observer congruences as primitives. constraint constraint[No action import] The packet does not include the Einstein-Hilbert action, Einstein tensor, or universal target matter coupling in \(_{loc}\). constraint constraint[Dimensional discipline] The packet must state dimensions before a later derivational claim is tested. At this stage \(\) and \(_{}\) may be order parameters; \(_{}\) carries the burden of turning repeatable source cycles into clock units. The source front relation must specify whether its limiting speed is dimensional, emergent from calibration, or dimensionless before comparison with \(c\). constraint constraint[Gauge and redundancy] Relabelings of \(\), \(\), and observer response coordinates must be treated as source-side redundancy unless they change observable coincidence data. Target diffeomorphism symmetry is a recovery target, not a primitive assumption. constraint Required Tests test[Local cone test] In each observer domain \(U_{}\), the localized image of \(\) must be tested for a smooth double-front structure. If this fails, the packet cannot support relativistic observer localization. test test[Clock-scale test] The candidate must show that \(_{}\) and \(_{}\) define stable clock readings independent of arbitrary relabeling of the source order. Without this, only a conformal structure can be attempted. test test[Preferred-frame leakage test] The packet must check whether \(\) or \(\) introduces observable preferred-frame effects outside the exact-closure benchmark. Any such leakage is a failure unless it is confined to a clearly non-operational redundancy. test test[Benchmark recovery test] Only after the prior tests pass may the candidate be compared with the exact-closure target. The comparison must ask whether the localized \((g_{eff},_{eff})\) can support the same one-metric matter law and dynamical limit. This packet does not supply that proof. test Status and Next Role verdict[Conditionally admissible, underdetermined] The packet is admissible as a candidate because it identifies a concrete source-side localization object: \[ = (,,,_{},,_{}, _{},,). \] It is underdetermined because \(\), the observer-chain selection rule, and the clock-scale calibration are not yet derived from a source action or unique substrate law. verdict The substantive gain is not a promoted physics claim. It is a sharper obstruction. The project no longer lacks only a vague bridge from ontology to observers; it now has a candidate bridge with named failure points. The first logical review is a Smuggling Auditor pass focused on whether \(\), \(_{}\), or \(_{}\) secretly imports the target metric or its operational clock/null structure. References Ricciardi, A. S. (2026, June 8). Gate 0 ontology formalization: Source primitives, forbidden imports, and localization burden [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex. Ricciardi, A. S. (2026, June 8). The Aether-flow Interpretation of Relativity: Foundations [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, ontology/tex/aether\_flow\_foundations.tex. Ricciardi, A. S. (2026, June 8). The Aether-flow Interpretation of Relativity: Exact-closure note [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, ontology/tex/aether\_flow\_exact\_closure\_note.tex. document

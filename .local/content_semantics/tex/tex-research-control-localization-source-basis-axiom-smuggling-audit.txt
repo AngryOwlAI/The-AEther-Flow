@@ -1,0 +1,260 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\Step}{\mathsf{Step}}
+\newcommand{\Adj}{\mathsf{Adj}_{\mathcal{S}}}
+\newcommand{\RespAlg}{\mathcal{R}_{\Gamma}}
+\newcommand{\Rank}{\mathsf{rank}_{\mathcal{S}}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Basis}{\mathcal{B}_{\mathrm{src}}}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\Ext}{\mathcal{E}_{\Basis}}
+
+\newtheorem{auditfinding}{Audit finding}
+\newtheorem{smugglingrisk}{Smuggling risk}
+\newtheorem{promotionblocker}{Promotion blocker}
+\newtheorem{auditverdict}{Audit verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Smuggling Audit}\\[0.35em]
+\large Target-Import Review of A1--A4 Extension Hypotheses}
+\author{Smuggling Auditor AgentJob AJ-RT-20260608-011-001}
+\date{June 9, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft audits the minimal source-basis axiom justification packet A1--A4
+for hidden target imports. The packet improves the control state by declaring
+the transition, perturbation, response-algebra, and clock-transport structures
+as explicit ontology-extension hypotheses rather than conservative
+consequences of the original source reservoir. That transparency is necessary
+but not sufficient for candidate reconstruction. The audit finds no direct
+metric primitive, but identifies unresolved target-import channels in finite
+presentation choice, transition incidence, discriminator admissibility,
+response-rank quotienting, and clock-transport holonomy. Candidate
+reconstruction and Gate Chair review remain blocked.
+\end{abstract}
+
+\section{Scope and Audit Standard}
+
+This artifact is a draft/control output for task
+\texttt{RT-20260608-011}. It does not edit canonical ontology TeX, adopt
+A1--A4 as canonical ontology, authorize candidate reconstruction, issue a
+Gate Chair verdict, or reject the broader \TheoryProgram{}.
+
+The object under audit is the axiom packet
+\[
+(\mathrm{A0},\mathrm{A1},\mathrm{A2},\mathrm{A3},\mathrm{A4})
+\]
+introduced after the local conservativity refutation of the source-basis
+packet. The audit standard is twofold:
+\begin{enumerate}
+    \item whether the packet explicitly imports target geometry, target
+    observer protocol, target clock normalization, or target rank; and
+    \item whether the packet leaves selection freedom that can silently encode
+    those target structures before benchmark comparison.
+\end{enumerate}
+
+The second standard is stricter. A source-named axiom can still smuggle target
+content if its admissible presentations are chosen because they reproduce the
+target.
+
+\section{Positive Transparency Screen}
+
+\begin{auditfinding}[Extension status is stated correctly]
+The axiom justification packet does not claim that \(\Step\),
+\(\mathcal{P}\), \(\mathcal{D}\), \(\RespAlg\), or \(\mathcal{K}\) are
+conservative over the original source language \(\Lang\). It labels them as
+explicit ontology-extension hypotheses. This is a material improvement over a
+packet that would disguise new structure as a definition.
+\end{auditfinding}
+
+\begin{auditfinding}[No direct target metric primitive]
+The packet does not declare a Lorentzian metric, target null cone,
+radar-coordinate construction, Einstein equation, or target proper-time
+normalization as a source primitive.
+\end{auditfinding}
+
+These positive findings are control findings only. They do not make A1--A4
+promotion-ready. Transparent extension status tells the project where the
+burden lies; it does not discharge that burden.
+
+\section{A0 and A1: Presentation and Transition Risks}
+
+\begin{auditfinding}[Finite presentation is a localization selector]
+A0 introduces a finite or locally finite source presentation
+\((\Sub_U,\preceq_U,\Phi_U)\). This may be a useful control device, but the
+choice of \(U\), local finiteness scale, and presentation equivalence class can
+select the localization arena. If those choices are made to resemble a target
+manifold neighborhood, target topology can enter before A1 is even applied.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Transition incidence can encode target neighborhoods]
+A1 makes \(\Step\) the primitive edge relation of the presentation and derives
+adjacency from it. Order compatibility and relabeling invariance do not
+determine the edge set. A benchmark-compatible edge set can reproduce target
+causal fronts, spatial balls, or continuum-neighborhood incidence while still
+being described in source language.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Topology blocker]
+A1 may be used only as an explicit hypothesis to audit. It cannot support
+candidate reconstruction until a source-independent rule fixes the finite
+presentation and \(\Step\), or until a Refuter shows that localization outputs
+are invariant across all admissible presentation and transition choices.
+\end{promotionblocker}
+
+\section{A2: Perturbation and Discriminator Risks}
+
+\begin{auditfinding}[A2 names the tuning channel but does not close it]
+A2 requires perturbations and discriminators to be fixed by source recurrence
+words, transition counts, and response distinctions before benchmark
+comparison. This is the right anti-smuggling form. It remains incomplete
+because the admissible recurrence words, count windows, and response
+distinctions are not uniquely generated by the registered source reservoir.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Discrete benchmark tuning]
+Different source-named discriminator families can produce different first
+detection ranks over the same presentation. If the family is selected after
+checking benchmark agreement, A2 becomes a discrete target-fitting channel
+rather than a source law.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Admissibility blocker]
+Candidate reconstruction remains blocked until \(\mathcal{P}\) and
+\(\mathcal{D}\) are fixed by a pre-benchmark source rule, or until the
+candidate commits to reporting non-uniqueness whenever admissible choices
+disagree.
+\end{promotionblocker}
+
+\section{A3: Response-Algebra and Rank Risks}
+
+\begin{auditfinding}[Rank survey is better than rank imposition]
+A3 explicitly says that no axiom sets \(\Rank=4\). This avoids the most direct
+target \(1+3\) import. The packet instead requires the response algebra to
+report whatever rank its source records supply.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Quotient freedom can hide rank selection]
+The risk moves from the number four to the quotient construction. If the
+ground response words, equivalence relation, or independence criterion are
+chosen so that a four-rank response domain appears, target rank has been
+imported through algebra design rather than asserted directly.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Rank-production blocker]
+A3 cannot support candidate reconstruction until the source dynamics fix the
+response-word ground set and quotient rule, or until all admissible quotient
+choices are surveyed and the result is treated as a possible negative result
+when the source rank is not four.
+\end{promotionblocker}
+
+\section{A4: Clock-Transport Risks}
+
+\begin{auditfinding}[Holonomy reporting is the correct burden]
+A4 states that clock-transport holonomy must be reported as source data rather
+than normalized away to match a target clock. This directly addresses the
+prior clock-scale smuggling channel.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Transport can encode observer synchronization]
+The transport map \(T_{\Gamma\to\Gamma'}\) can still encode a synchronization
+rule, connection, conformal scale, or target proper-time comparison if the
+shared-support relation and holonomy class are chosen for benchmark behavior.
+Nontrivial holonomy is not a problem by itself. Selecting or hiding holonomy
+to recover target clock comparison is the smuggling risk.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Clock-normalization blocker]
+Candidate reconstruction remains blocked until A4 supplies a source-fixed
+transport law or a failure-tolerant holonomy survey. A transported source
+cycle is not yet an effective metric clock.
+\end{promotionblocker}
+
+\section{Audit Verdict}
+
+\begin{auditverdict}[Transparent extension, unresolved target import]
+The A1--A4 packet passes a narrow declaration audit: it explicitly labels its
+new structures as ontology-extension hypotheses and does not directly install
+target metric, target null-cone, radar protocol, target proper time, or fixed
+rank four. It fails the stronger promotion-readiness audit. The unresolved
+smuggling channels are:
+\begin{enumerate}
+    \item finite source presentation choices can select a target-like
+    localization arena;
+    \item \(\Step\) can encode target topology through edge incidence;
+    \item \(\mathcal{P}\) and \(\mathcal{D}\) can tune first-response ranks;
+    \item \(\RespAlg\) quotient freedom can manufacture target rank; and
+    \item \(\mathcal{K}\) and \(T_{\Gamma\to\Gamma'}\) can import clock
+    normalization or observer synchronization.
+\end{enumerate}
+\end{auditverdict}
+
+This is not a rejection of the research program. It is a local negative audit
+for candidate reconstruction from the present axiom packet.
+
+\section{Next Burden}
+
+\begin{nextburden}[Refuter benchmark-independence test]
+The logical next role is a Refuter AgentJob that tests whether A1--A4 are
+source-internally necessary and benchmark-independent. The test should ask
+whether localization-relevant outputs are invariant across admissible finite
+presentations, transition germs, discriminator families, response-algebra
+quotients, and clock-transport holonomy classes. If they are not invariant,
+the result should be preserved as a negative control result or routed to a
+separate ontology-extension proposal, not to candidate reconstruction.
+\end{nextburden}
+
+Candidate Constructor and Gate Chair review remain premature.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis axiom
+justification: Minimal source-side extension hypotheses after the
+conservativity refutation} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-010/artifacts/09\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_JUSTIFICATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis
+conservativity refutation: Source-language test for the source-basis packet}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-009/artifacts/08\_LOCALIZATION\_SOURCE\_BASIS\_CONSERVATIVITY\_REFUTATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis smuggling
+audit: Target-import review of the source-basis formalization} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-008/artifacts/07\_LOCALIZATION\_SOURCE\_BASIS\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis
+formalization: Minimal order, adjacency, response, mode, and clock-transport
+structures} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-007/artifacts/06\_LOCALIZATION\_SOURCE\_BASIS\_FORMALIZATION.tex}.
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools enumitem microtype hyperref margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.35em,itemsep=0.3em topsep=0.3em,itemsep=0.25em \Aether{ther} \Aflow{ther-flow} \TheoryProgram{ / framework} \Sub{A} \Step{Step} \Adj{Adj_{S}} \RespAlg{R_{}} \Rank{rank_{S}} \Cycle{C_{}} \Basis{B_{src}} \Lang{L_{0}} \Ext{E_{}} auditfinding{Audit finding} smugglingrisk{Smuggling risk} promotionblocker{Promotion blocker} auditverdict{Audit verdict} nextburden{Next burden} {Localization Source-Basis Axiom Smuggling Audit\\[0.35em] Target-Import Review of A1--A4 Extension Hypotheses} Smuggling Auditor AgentJob AJ-RT-20260608-011-001 June 9, 2026 document abstract This draft audits the minimal source-basis axiom justification packet A1--A4 for hidden target imports. The packet improves the control state by declaring the transition, perturbation, response-algebra, and clock-transport structures as explicit ontology-extension hypotheses rather than conservative consequences of the original source reservoir. That transparency is necessary but not sufficient for candidate reconstruction. The audit finds no direct metric primitive, but identifies unresolved target-import channels in finite presentation choice, transition incidence, discriminator admissibility, response-rank quotienting, and clock-transport holonomy. Candidate reconstruction and Gate Chair review remain blocked. abstract Scope and Audit Standard This artifact is a draft/control output for task RT-20260608-011. It does not edit canonical ontology TeX, adopt A1--A4 as canonical ontology, authorize candidate reconstruction, issue a Gate Chair verdict, or reject the broader . The object under audit is the axiom packet \[ (A0,A1,A2,A3,A4) \] introduced after the local conservativity refutation of the source-basis packet. The audit standard is twofold: enumerate whether the packet explicitly imports target geometry, target observer protocol, target clock normalization, or target rank; and whether the packet leaves selection freedom that can silently encode those target structures before benchmark comparison. enumerate The second standard is stricter. A source-named axiom can still smuggle target content if its admissible presentations are chosen because they reproduce the target. Positive Transparency Screen auditfinding[Extension status is stated correctly] The axiom justification packet does not claim that \(\), \(P\), \(D\), \(\), or \(K\) are conservative over the original source language \(\). It labels them as explicit ontology-extension hypotheses. This is a material improvement over a packet that would disguise new structure as a definition. auditfinding auditfinding[No direct target metric primitive] The packet does not declare a Lorentzian metric, target null cone, radar-coordinate construction, Einstein equation, or target proper-time normalization as a source primitive. auditfinding These positive findings are control findings only. They do not make A1--A4 promotion-ready. Transparent extension status tells the project where the burden lies; it does not discharge that burden. A0 and A1: Presentation and Transition Risks auditfinding[Finite presentation is a localization selector] A0 introduces a finite or locally finite source presentation \((_U,_U,_U)\). This may be a useful control device, but the choice of \(U\), local finiteness scale, and presentation equivalence class can select the localization arena. If those choices are made to resemble a target manifold neighborhood, target topology can enter before A1 is even applied. auditfinding smugglingrisk[Transition incidence can encode target neighborhoods] A1 makes \(\) the primitive edge relation of the presentation and derives adjacency from it. Order compatibility and relabeling invariance do not determine the edge set. A benchmark-compatible edge set can reproduce target causal fronts, spatial balls, or continuum-neighborhood incidence while still being described in source language. smugglingrisk promotionblocker[Topology blocker] A1 may be used only as an explicit hypothesis to audit. It cannot support candidate reconstruction until a source-independent rule fixes the finite presentation and \(\), or until a Refuter shows that localization outputs are invariant across all admissible presentation and transition choices. promotionblocker A2: Perturbation and Discriminator Risks auditfinding[A2 names the tuning channel but does not close it] A2 requires perturbations and discriminators to be fixed by source recurrence words, transition counts, and response distinctions before benchmark comparison. This is the right anti-smuggling form. It remains incomplete because the admissible recurrence words, count windows, and response distinctions are not uniquely generated by the registered source reservoir. auditfinding smugglingrisk[Discrete benchmark tuning] Different source-named discriminator families can produce different first detection ranks over the same presentation. If the family is selected after checking benchmark agreement, A2 becomes a discrete target-fitting channel rather than a source law. smugglingrisk promotionblocker[Admissibility blocker] Candidate reconstruction remains blocked until \(P\) and \(D\) are fixed by a pre-benchmark source rule, or until the candidate commits to reporting non-uniqueness whenever admissible choices disagree. promotionblocker A3: Response-Algebra and Rank Risks auditfinding[Rank survey is better than rank imposition] A3 explicitly says that no axiom sets \(=4\). This avoids the most direct target \(1+3\) import. The packet instead requires the response algebra to report whatever rank its source records supply. auditfinding smugglingrisk[Quotient freedom can hide rank selection] The risk moves from the number four to the quotient construction. If the ground response words, equivalence relation, or independence criterion are chosen so that a four-rank response domain appears, target rank has been imported through algebra design rather than asserted directly. smugglingrisk promotionblocker[Rank-production blocker] A3 cannot support candidate reconstruction until the source dynamics fix the response-word ground set and quotient rule, or until all admissible quotient choices are surveyed and the result is treated as a possible negative result when the source rank is not four. promotionblocker A4: Clock-Transport Risks auditfinding[Holonomy reporting is the correct burden] A4 states that clock-transport holonomy must be reported as source data rather than normalized away to match a target clock. This directly addresses the prior clock-scale smuggling channel. auditfinding smugglingrisk[Transport can encode observer synchronization] The transport map \(T_{'}\) can still encode a synchronization rule, connection, conformal scale, or target proper-time comparison if the shared-support relation and holonomy class are chosen for benchmark behavior. Nontrivial holonomy is not a problem by itself. Selecting or hiding holonomy to recover target clock comparison is the smuggling risk. smugglingrisk promotionblocker[Clock-normalization blocker] Candidate reconstruction remains blocked until A4 supplies a source-fixed transport law or a failure-tolerant holonomy survey. A transported source cycle is not yet an effective metric clock. promotionblocker Audit Verdict auditverdict[Transparent extension, unresolved target import] The A1--A4 packet passes a narrow declaration audit: it explicitly labels its new structures as ontology-extension hypotheses and does not directly install target metric, target null-cone, radar protocol, target proper time, or fixed rank four. It fails the stronger promotion-readiness audit. The unresolved smuggling channels are: enumerate finite source presentation choices can select a target-like localization arena; \(\) can encode target topology through edge incidence; \(P\) and \(D\) can tune first-response ranks; \(\) quotient freedom can manufacture target rank; and \(K\) and \(T_{'}\) can import clock normalization or observer synchronization. enumerate auditverdict This is not a rejection of the research program. It is a local negative audit for candidate reconstruction from the present axiom packet. Next Burden nextburden[Refuter benchmark-independence test] The logical next role is a Refuter AgentJob that tests whether A1--A4 are source-internally necessary and benchmark-independent. The test should ask whether localization-relevant outputs are invariant across admissible finite presentations, transition germs, discriminator families, response-algebra quotients, and clock-transport holonomy classes. If they are not invariant, the result should be preserved as a negative control result or routed to a separate ontology-extension proposal, not to candidate reconstruction. nextburden Candidate Constructor and Gate Chair review remain premature. References Ricciardi, A. S. (2026, June 8). Localization source-basis axiom justification: Minimal source-side extension hypotheses after the conservativity refutation [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-010/artifacts/09\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_JUSTIFICATION.tex. Ricciardi, A. S. (2026, June 8). Localization source-basis conservativity refutation: Source-language test for the source-basis packet [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-009/artifacts/08\_LOCALIZATION\_SOURCE\_BASIS\_CONSERVATIVITY\_REFUTATION.tex. Ricciardi, A. S. (2026, June 8). Localization source-basis smuggling audit: Target-import review of the source-basis formalization [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-008/artifacts/07\_LOCALIZATION\_SOURCE\_BASIS\_SMUGGLING\_AUDIT.tex. Ricciardi, A. S. (2026, June 8). Localization source-basis formalization: Minimal order, adjacency, response, mode, and clock-transport structures [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-007/artifacts/06\_LOCALIZATION\_SOURCE\_BASIS\_FORMALIZATION.tex. document

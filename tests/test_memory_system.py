@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import subprocess
 import sys
+import tempfile
 import unittest
 from unittest import mock
 from pathlib import Path
@@ -148,6 +149,187 @@ class MemorySystemSmokeTests(unittest.TestCase):
             )
         rebuilt_row = next(row for row in rows if row["path"] == target_pdf_path)
         self.assertEqual(rebuilt_row["built_at"], "2099-01-01T00:00:00Z")
+
+    def test_html_spec_contract_requires_source_backed_fields(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/missing-fields.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(
+                "---\n"
+                'title: "Missing fields"\n'
+                "---\n"
+                "# Missing fields\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-MISSING-FIELDS",
+                            "path": "markdown/html-explainer-specs/missing-fields.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(any("missing output_path" in error for error in report.errors))
+        self.assertTrue(any("missing source_materials" in error for error in report.errors))
+
+    def test_generate_html_rows_binds_new_html_to_source_spec(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            (root / "registries").mkdir()
+            (root / "html").mkdir()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(
+                "---\n"
+                'title: "Synthetic"\n'
+                'purpose: "Test binding."\n'
+                'audience: "test"\n'
+                'output_path: "html/synthetic.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "---\n",
+                encoding="utf-8",
+            )
+            html = root / "html/synthetic.html"
+            html.write_text("<!doctype html><title>Synthetic</title>\n", encoding="utf-8")
+            (root / "registries/HTML_EXPLAINER_REGISTRY.csv").write_text(
+                ",".join(self.memory_system.HTML_COLUMNS) + "\n",
+                encoding="utf-8",
+            )
+            markdown_rows = [
+                {
+                    "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                    "path": "markdown/html-explainer-specs/synthetic.md",
+                    "role": "html_explainer_source_spec",
+                    "source_hash": "spec-hash",
+                }
+            ]
+            with (
+                mock.patch.object(self.memory_system, "REPO_ROOT", root),
+                mock.patch.object(self.memory_system, "write_csv_if_changed"),
+            ):
+                rows = self.memory_system.generate_html_rows(
+                    "2099-01-01T00:00:00Z", markdown_rows
+                )
+        self.assertEqual(rows[0]["source_basis"], "MD-HTML-SPEC-SYNTHETIC")
+        self.assertEqual(rows[0]["source_basis_hash"], "spec-hash")
+        self.assertEqual(
+            rows[0]["visual_explainer_skill_version"],
+            "visual-explainer@0.7.1-project-aether-flow",
+        )
+
+    def test_stale_html_source_basis_hash_is_an_error(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                '<!doctype html><meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SYNTHETIC">'
+                '<meta name="aether-flow-source-basis-hash" content="old-hash">'
+                '<meta name="aether-flow-human-visual-only" content="true">',
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "new-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "old-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(any("stale source_basis_hash" in error for error in report.errors))
+
+    def test_unchanged_html_does_not_mask_changed_spec_hash(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            (root / "registries").mkdir()
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text("<!doctype html><title>Synthetic</title>\n", encoding="utf-8")
+            html_hash = self.memory_system.sha256_file(html)
+            existing_row = {
+                "object_id": "HTML-SYNTHETIC",
+                "path": "html/synthetic.html",
+                "format": "html",
+                "role": "html_visual_explainer",
+                "authority_status": "generated_noncanonical",
+                "audience": "humans",
+                "source_hash": html_hash,
+                "related_source": "MD-HTML-SPEC-SYNTHETIC",
+                "generated_from": "MD-HTML-SPEC-SYNTHETIC",
+                "generated_outputs": "wiki/html/html-synthetic.md",
+                "owner_skill": "html-visual-explainer",
+                "validation_status": "PASS",
+                "last_validated_at": "2000-01-01T00:00:00Z",
+                "notes": "Human-only generated visual explainer.",
+                "human_visual_only": "true",
+                "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                "source_basis_hash": "old-spec-hash",
+                "html_hash": html_hash,
+                "visual_explainer_skill_version": "visual-explainer@0.7.1-project-aether-flow",
+            }
+            (root / "registries/HTML_EXPLAINER_REGISTRY.csv").write_text(
+                ",".join(self.memory_system.HTML_COLUMNS)
+                + "\n"
+                + ",".join(existing_row[column] for column in self.memory_system.HTML_COLUMNS)
+                + "\n",
+                encoding="utf-8",
+            )
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(
+                "---\n"
+                'title: "Synthetic"\n'
+                'purpose: "Test stale binding."\n'
+                'audience: "test"\n'
+                'output_path: "html/synthetic.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "---\n",
+                encoding="utf-8",
+            )
+            markdown_rows = [
+                {
+                    "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                    "path": "markdown/html-explainer-specs/synthetic.md",
+                    "role": "html_explainer_source_spec",
+                    "source_hash": "new-spec-hash",
+                }
+            ]
+            with (
+                mock.patch.object(self.memory_system, "REPO_ROOT", root),
+                mock.patch.object(self.memory_system, "write_csv_if_changed"),
+            ):
+                rows = self.memory_system.generate_html_rows(
+                    "2099-01-01T00:00:00Z", markdown_rows
+                )
+        self.assertEqual(rows[0]["source_basis_hash"], "old-spec-hash")
 
     def test_wiki_artifact_rows_cover_registered_sources(self) -> None:
         rows_by_registry = {

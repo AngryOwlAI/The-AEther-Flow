@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\PhiFlow}{\Phi_{\lambda}}
+\newcommand{\Data}{\mathcal{D}_{\mathrm{loc}}}
+\newcommand{\Map}{\mathcal{L}_{\mathrm{loc}}}
+\newcommand{\Constraints}{\mathcal{C}_{\mathrm{loc}}}
+\newcommand{\Front}{\mathcal{F}}
+\newcommand{\Order}{\mathcal{S}}
+\newcommand{\Obs}{\mathcal{O}}
+
+\newtheorem{auditfinding}{Audit finding}
+\newtheorem{blocker}{Promotion blocker}
+\newtheorem{repairburden}{Repair burden}
+\newtheorem{auditverdict}{Audit verdict}
+
+\title{\textbf{Localization Smuggling Audit}\\[0.35em]
+\large Target-Import Review of the Gate 0 Localization Candidate Packet}
+\author{Smuggling Auditor AgentJob AJ-RT-20260608-004-001}
+\date{June 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft audits the localization candidate packet for hidden target imports.
+The audit focuses on the source front relation \(\Front\), the observer
+coincidence response map \(\kappa_{\Gamma}\), the clock-scale calibration
+\(\alpha_{\Gamma}\), and observer-chain selection. The conclusion is
+conservative. The packet is not shown to be target-smuggled as written, because
+it explicitly labels its structures as source-side and conditional. However,
+it is not promotion-ready. Its current definitions leave open three
+promotion-blocking routes by which the target null cone, target clock
+normalization, or target observer protocol could be imported under source-side
+names.
+\end{abstract}
+
+\section{Scope and Audit Standard}
+
+This artifact is a draft/control output for task \texttt{RT-20260608-004}. It
+audits
+\[
+\Data
+=
+(\Sub,\PhiFlow,\Gamma,\Order_{\Gamma},\Front,\kappa_{\Gamma},
+\alpha_{\Gamma},\Map,\Constraints)
+\]
+from the localization candidate packet. It does not edit canonical ontology
+TeX, does not promote a derivation, and does not issue a Gate Chair verdict.
+
+The audit standard is source discipline. A structure passes only if it can be
+specified from source objects, source order, source dynamics, or source
+operational protocols without assuming the target Lorentzian metric, target
+null cones, target proper time, target observer congruences, or the
+Einsteinian field equations as primitives.
+
+\section{Primary Findings}
+
+\begin{auditfinding}[The front relation is named but not generated]
+The packet states that \(\Front\subset\Sub\times\Sub\) records first influence
+under \(\PhiFlow\), and it correctly says that \(\Front\) is not a metric null
+cone. This is a necessary anti-smuggling statement, but not a sufficient
+source definition. The current packet does not yet give a source law that
+computes or constrains \(\Front\) from \((\Sub,\PhiFlow,\Order)\).
+\end{auditfinding}
+
+The risk is not the symbol \(\Front\). The risk is a later choice of \(\Front\)
+that is tuned to produce the benchmark light cone. If the front relation is
+selected because its localized image is already a Lorentzian null cone, then
+the target causal structure has been imported rather than derived.
+
+\begin{blocker}[Front-generation blocker]
+Before promotion, the project must state a source-only generation rule for
+\(\Front\). The rule must be expressible before comparison with any target
+metric. It may then be tested for smooth double-front behavior, but the double
+front cannot be imposed as the defining axiom.
+\end{blocker}
+
+\begin{auditfinding}[The coincidence map risks importing radar coordinates]
+The packet defines
+\[
+\kappa_{\Gamma}:U_{\Gamma}\rightarrow
+(\Order_{\Gamma},r^1_{\Gamma},r^2_{\Gamma},r^3_{\Gamma})
+\]
+by repeated interactions between an observer chain and nearby source fronts.
+This is directionally correct: it tries to build labels operationally rather
+than by a spatial metric. The gap is that the interaction protocol is not yet
+specified. Without a source-only protocol, \(\kappa_{\Gamma}\) can silently
+become a radar-coordinate construction that presupposes relativistic signal
+conventions.
+\end{auditfinding}
+
+The danger point is the word ``nearby.'' Nearness is harmless if it is an
+interaction domain defined by source adjacency, response amplitude, or
+substrate transition accessibility. It is smuggling if it depends on a target
+spatial distance, simultaneity slice, or preexisting light-signal convention.
+
+\begin{blocker}[Coincidence-protocol blocker]
+Before promotion, the candidate needs a source-only coincidence protocol for
+\(\kappa_{\Gamma}\). The protocol must define response labels from observable
+source interactions and must state its invariances under relabeling of
+\(\Sub\), \(\lambda\), and the response coordinates.
+\end{blocker}
+
+\begin{auditfinding}[Clock scale is underdetermined]
+The packet correctly separates order \(\Order_{\Gamma}\) from target proper
+time and assigns scale responsibility to \(\alpha_{\Gamma}\). This avoids an
+immediate clock-smuggling error. The unresolved risk is that
+\(\alpha_{\Gamma}\) is only described as fixed by stable source cycles. The
+packet does not yet define which cycles qualify, how their units compose, or
+why the calibration is independent of target proper-time normalization.
+\end{auditfinding}
+
+A source cycle can calibrate a clock only after the model supplies a rule for
+cycle identity, repeatability, stability, and comparison across observer
+chains. If those rules are chosen to reproduce the benchmark clock after the
+fact, the target clock has been imported.
+
+\begin{blocker}[Clock-scale blocker]
+Before promotion, the candidate must define \(\alpha_{\Gamma}\) by a
+source-only cycle law. The law must state dimensions and must survive arbitrary
+relabeling of the source order. It may be compared with target proper time only
+after it is independently specified.
+\end{blocker}
+
+\begin{auditfinding}[The smooth double-front test is admissible only as a test]
+The candidate asks whether the localized image of \(\Front\) becomes a smooth
+double-front structure with one invariant signal speed. This is an admissible
+failure test. It is not admissible as a source axiom. If smooth Lorentzian cone
+structure is required at definition time, the test collapses into target
+import.
+\end{auditfinding}
+
+\begin{auditfinding}[Observer-chain selection may leak preferred structure]
+The observer chain \(\Gamma\) is defined as a coherently identifiable ordered
+sequence under \(\PhiFlow\). This is plausible as a source object. The audit
+risk is that the chain-selection rule may privilege the parameter \(\lambda\)
+as an observable rest frame rather than a source ordering or gauge-like
+bookkeeping variable. Any such leakage must either be operationally absent or
+bounded as a testable deviation.
+\end{auditfinding}
+
+\section{Audit Classification}
+
+\begin{repairburden}[Minimal repair burden]
+A promotion-eligible successor packet must provide the following source-only
+definitions:
+\begin{enumerate}
+    \item A front-generation rule for \(\Front\) from source transition
+    structure.
+    \item A coincidence-response protocol for \(\kappa_{\Gamma}\) that does
+    not presuppose target spatial distance, simultaneity, radar coordinates,
+    or target light-signal conventions.
+    \item A clock-scale law for \(\alpha_{\Gamma}\) based on stable source
+    cycles with explicit dimensional assignments.
+    \item An invariance statement showing which relabelings of \(\Sub\),
+    \(\lambda\), and response coordinates are redundant.
+    \item A separation between source axioms and benchmark recovery tests.
+\end{enumerate}
+\end{repairburden}
+
+\begin{auditverdict}[Promotion blocked, candidate not rejected]
+The localization packet remains admissible as a draft candidate because it
+explicitly marks the front, coincidence, and scale structures as source-side
+and conditional. It is not admissible for promotion. The unresolved variables
+\(\Front\), \(\kappa_{\Gamma}\), and \(\alpha_{\Gamma}\) are exactly the points
+where target null structure and target clock structure could be smuggled into
+the construction.
+\end{auditverdict}
+
+\section{Next Research Move}
+
+The logical next step is not Gate Chair review. Two bounded paths are coherent:
+
+\begin{enumerate}
+    \item A Candidate Constructor repair job that supplies source-only
+    definitions for \(\Front\), \(\kappa_{\Gamma}\), and \(\alpha_{\Gamma}\)
+    under the blockers above.
+    \item A Refuter job that assumes no repair and tests whether the current
+    packet fails by unavoidable target import or underdetermination.
+\end{enumerate}
+
+The Director should choose between these paths in a separate continuation
+invocation. The default conservative choice is repair before refutation if the
+goal is constructive progress; the default adversarial choice is refutation if
+the goal is early failure discovery.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization candidate packet: A
+source-side observer-localization map for Gate 0 review} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-003/artifacts/02\_LOCALIZATION\_CANDIDATE\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Gate 0 ontology formalization: Source
+primitives, forbidden imports, and localization burden} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex}.
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools enumitem microtype hyperref margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.35em,itemsep=0.3em topsep=0.3em,itemsep=0.25em \Aether{ther} \Aflow{ther-flow} \TheoryProgram{ / framework} \Sub{A} \PhiFlow{_{}} \Data{D_{loc}} \Map{L_{loc}} \Constraints{C_{loc}} \Front{F} \Order{S} \Obs{O} auditfinding{Audit finding} blocker{Promotion blocker} repairburden{Repair burden} auditverdict{Audit verdict} {Localization Smuggling Audit\\[0.35em] Target-Import Review of the Gate 0 Localization Candidate Packet} Smuggling Auditor AgentJob AJ-RT-20260608-004-001 June 8, 2026 document abstract This draft audits the localization candidate packet for hidden target imports. The audit focuses on the source front relation \(\), the observer coincidence response map \(_{}\), the clock-scale calibration \(_{}\), and observer-chain selection. The conclusion is conservative. The packet is not shown to be target-smuggled as written, because it explicitly labels its structures as source-side and conditional. However, it is not promotion-ready. Its current definitions leave open three promotion-blocking routes by which the target null cone, target clock normalization, or target observer protocol could be imported under source-side names. abstract Scope and Audit Standard This artifact is a draft/control output for task RT-20260608-004. It audits \[ = (,,,_{},,_{}, _{},,) \] from the localization candidate packet. It does not edit canonical ontology TeX, does not promote a derivation, and does not issue a Gate Chair verdict. The audit standard is source discipline. A structure passes only if it can be specified from source objects, source order, source dynamics, or source operational protocols without assuming the target Lorentzian metric, target null cones, target proper time, target observer congruences, or the Einsteinian field equations as primitives. Primary Findings auditfinding[The front relation is named but not generated] The packet states that \(\) records first influence under \(\), and it correctly says that \(\) is not a metric null cone. This is a necessary anti-smuggling statement, but not a sufficient source definition. The current packet does not yet give a source law that computes or constrains \(\) from \((,,)\). auditfinding The risk is not the symbol \(\). The risk is a later choice of \(\) that is tuned to produce the benchmark light cone. If the front relation is selected because its localized image is already a Lorentzian null cone, then the target causal structure has been imported rather than derived. blocker[Front-generation blocker] Before promotion, the project must state a source-only generation rule for \(\). The rule must be expressible before comparison with any target metric. It may then be tested for smooth double-front behavior, but the double front cannot be imposed as the defining axiom. blocker auditfinding[The coincidence map risks importing radar coordinates] The packet defines \[ _{}:U_{} (_{},r^1_{},r^2_{},r^3_{}) \] by repeated interactions between an observer chain and nearby source fronts. This is directionally correct: it tries to build labels operationally rather than by a spatial metric. The gap is that the interaction protocol is not yet specified. Without a source-only protocol, \(_{}\) can silently become a radar-coordinate construction that presupposes relativistic signal conventions. auditfinding The danger point is the word ``nearby.'' Nearness is harmless if it is an interaction domain defined by source adjacency, response amplitude, or substrate transition accessibility. It is smuggling if it depends on a target spatial distance, simultaneity slice, or preexisting light-signal convention. blocker[Coincidence-protocol blocker] Before promotion, the candidate needs a source-only coincidence protocol for \(_{}\). The protocol must define response labels from observable source interactions and must state its invariances under relabeling of \(\), \(\), and the response coordinates. blocker auditfinding[Clock scale is underdetermined] The packet correctly separates order \(_{}\) from target proper time and assigns scale responsibility to \(_{}\). This avoids an immediate clock-smuggling error. The unresolved risk is that \(_{}\) is only described as fixed by stable source cycles. The packet does not yet define which cycles qualify, how their units compose, or why the calibration is independent of target proper-time normalization. auditfinding A source cycle can calibrate a clock only after the model supplies a rule for cycle identity, repeatability, stability, and comparison across observer chains. If those rules are chosen to reproduce the benchmark clock after the fact, the target clock has been imported. blocker[Clock-scale blocker] Before promotion, the candidate must define \(_{}\) by a source-only cycle law. The law must state dimensions and must survive arbitrary relabeling of the source order. It may be compared with target proper time only after it is independently specified. blocker auditfinding[The smooth double-front test is admissible only as a test] The candidate asks whether the localized image of \(\) becomes a smooth double-front structure with one invariant signal speed. This is an admissible failure test. It is not admissible as a source axiom. If smooth Lorentzian cone structure is required at definition time, the test collapses into target import. auditfinding auditfinding[Observer-chain selection may leak preferred structure] The observer chain \(\) is defined as a coherently identifiable ordered sequence under \(\). This is plausible as a source object. The audit risk is that the chain-selection rule may privilege the parameter \(\) as an observable rest frame rather than a source ordering or gauge-like bookkeeping variable. Any such leakage must either be operationally absent or bounded as a testable deviation. auditfinding Audit Classification repairburden[Minimal repair burden] A promotion-eligible successor packet must provide the following source-only definitions: enumerate A front-generation rule for \(\) from source transition structure. A coincidence-response protocol for \(_{}\) that does not presuppose target spatial distance, simultaneity, radar coordinates, or target light-signal conventions. A clock-scale law for \(_{}\) based on stable source cycles with explicit dimensional assignments. An invariance statement showing which relabelings of \(\), \(\), and response coordinates are redundant. A separation between source axioms and benchmark recovery tests. enumerate repairburden auditverdict[Promotion blocked, candidate not rejected] The localization packet remains admissible as a draft candidate because it explicitly marks the front, coincidence, and scale structures as source-side and conditional. It is not admissible for promotion. The unresolved variables \(\), \(_{}\), and \(_{}\) are exactly the points where target null structure and target clock structure could be smuggled into the construction. auditverdict Next Research Move The logical next step is not Gate Chair review. Two bounded paths are coherent: enumerate A Candidate Constructor repair job that supplies source-only definitions for \(\), \(_{}\), and \(_{}\) under the blockers above. A Refuter job that assumes no repair and tests whether the current packet fails by unavoidable target import or underdetermination. enumerate The Director should choose between these paths in a separate continuation invocation. The default conservative choice is repair before refutation if the goal is constructive progress; the default adversarial choice is refutation if the goal is early failure discovery. References Ricciardi, A. S. (2026, June 8). Localization candidate packet: A source-side observer-localization map for Gate 0 review [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-003/artifacts/02\_LOCALIZATION\_CANDIDATE\_PACKET.tex. Ricciardi, A. S. (2026, June 8). Gate 0 ontology formalization: Source primitives, forbidden imports, and localization burden [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex. document

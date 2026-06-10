@@ -13,6 +13,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `ontology/tex/aether_flow_geometry.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `ontology/tex/aether_flow_relativistic_recovery.tex`
 
+## canonical_markdown_source
+
+- `MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/research-control-system-explainer.md`
+
 ## draft_control_artifact
 
 - `TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
@@ -44,6 +48,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## generated_noncanonical
 
+- `HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `html/research-control-system-explainer.html`
 - `PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `ontology/pdfs/aether_flow_consistency.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/pdfs/aether_flow_dynamics.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
@@ -52,9 +57,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `PDF-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `ontology/pdfs/aether_flow_foundations.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-GEOMETRY` `ontology/pdfs/aether_flow_geometry.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `ontology/pdfs/aether_flow_relativistic_recovery.pdf`
+- `WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/html/html-research-control-system-explainer.md`
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
+- `WIKI-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-research-control-system-explainer.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
@@ -68,6 +75,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md.md`
@@ -145,6 +153,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD` `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD` `.agents/roles/research_ops/documentation-curator.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`

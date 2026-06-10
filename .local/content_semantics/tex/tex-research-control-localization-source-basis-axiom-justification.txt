@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\PhiFlow}{\Phi_{\lambda}}
+\newcommand{\Step}{\mathsf{Step}}
+\newcommand{\Adj}{\mathsf{Adj}_{\mathcal{S}}}
+\newcommand{\RespAlg}{\mathcal{R}_{\Gamma}}
+\newcommand{\Rank}{\mathsf{rank}_{\mathcal{S}}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Basis}{\mathcal{B}_{\mathrm{src}}}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\Ext}{\mathcal{E}_{\Basis}}
+
+\newtheorem{axiompacket}{Axiom packet}
+\newtheorem{justification}{Justification}
+\newtheorem{classification}{Conservativity classification}
+\newtheorem{auditburden}{Audit burden}
+\newtheorem{localverdict}{Local verdict}
+\newtheorem{nextstep}{Next step}
+
+\title{\textbf{Localization Source-Basis Axiom Justification}\\[0.35em]
+\large Minimal Source-Side Extension Hypotheses After the Conservativity Refutation}
+\author{Ontology Formalizer AgentJob AJ-RT-20260608-010-001}
+\date{June 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft responds to the local source-basis conservativity refutation. The
+result is not a derivation and not a candidate reconstruction. It proposes the
+minimum current source-side axiom packet that would make the transition,
+adjacency, perturbation, response-rank, and clock-transport structures
+determinately testable. The conclusion is restrained: these axioms are not
+conservative over the original registered source reservoir. They are explicit
+ontology-extension hypotheses that may be audited, refuted, or later promoted
+only through a separate authorized gate.
+\end{abstract}
+
+\section{Scope and Standard}
+
+This artifact is a draft/control output for task
+\texttt{RT-20260608-010}. It does not edit canonical ontology TeX, promote a
+localization candidate, issue a Gate Chair verdict, or claim completion of an
+effective relativistic sector.
+
+Let \(\Lang\) denote the registered source language available before the
+source-basis packet: the substrate arena, intrinsic ordered motion, observer
+slice placeholder, S-time placeholder, and the downstream draft localization
+control artifacts. The previous Refuter result showed that the additional
+source-basis data
+\[
+\Ext =
+(\Step,\Adj,\mathcal{P},\mathcal{D},\{\RespAlg\}_{\Gamma},\mathcal{K})
+\]
+are not forced by \(\Lang\). The present task therefore cannot honestly
+declare them conservative over \(\Lang\). It can only do one of two things:
+\begin{enumerate}
+    \item identify a conservative definition relative to already stated
+    extension data; or
+    \item mark a structure as a new source-side axiom whose adoption would be
+    an ontology-extension hypothesis.
+\end{enumerate}
+
+\section{Minimal Axiom Packet}
+
+\begin{axiompacket}[A0: finite source presentation]
+For a localization test, the substrate arena is represented by a finite or
+locally finite source presentation
+\[
+(\Sub_U,\preceq_U,\Phi_U)
+\]
+on a bounded source-accessible domain \(U\). This presentation is an
+experimental/control representation of the substrate order, not a target
+manifold chart. Relabelings of \(\Sub_U\) and monotone reparameterizations of
+the order remain presentation redundancy.
+\end{axiompacket}
+
+\begin{justification}
+The original source language is too spare to determine localization-relevant
+incidence. A locally finite presentation is the weakest current control
+device that lets the project ask whether transition, response, and transport
+claims are invariant under relabeling. It is not claimed as canonical
+ontology.
+\end{justification}
+
+\begin{axiompacket}[A1: source transition germ]
+The immediate transition relation \(\Step\) is the primitive edge relation of
+the locally finite source presentation. It must satisfy:
+\begin{enumerate}
+    \item order compatibility: \(x\Step y\) implies \(x\preceq_U y\) or
+    \(y\preceq_U x\) according to the directed presentation convention;
+    \item locality: every edge has source support inside the bounded domain
+    used by the perturbation test;
+    \item relabeling invariance: if a source relabeling preserves
+    \((\Sub_U,\preceq_U,\Phi_U)\), it preserves the edge-incidence class of
+    \(\Step\); and
+    \item no benchmark fitting: \(\Step\) is fixed before any comparison with
+    target causal, spatial, or clock data.
+\end{enumerate}
+\end{axiompacket}
+
+\begin{classification}[Transition status]
+\(\Adj\), neighborhoods, and source boundaries may be conservative
+definitions after A1, because they can be generated from \(\Step\). A1 itself
+is not conservative over \(\Lang\). It is an explicit source-transition
+extension hypothesis.
+\end{classification}
+
+\begin{axiompacket}[A2: admissible perturbations and discriminators]
+An admissible perturbation class \(P_a\in\mathcal{P}\) is a finite
+source-local change to \(\Step\) and source response records near \(a\) that
+preserves all declared source constraints outside its support. A discriminator
+\(D\in\mathcal{D}\) is admissible only when it is fixed by source recurrence
+words, transition counts, and chain-internal response distinctions before
+benchmark comparison.
+\end{axiompacket}
+
+\begin{justification}
+The Refuter identified \((P_a,D)\) as a discrete tuning channel. A2 blocks
+post hoc threshold selection by requiring every detector distinction to be
+specified from source recurrence structure. If no such distinction is
+available, the candidate must report non-detection or non-uniqueness.
+\end{justification}
+
+\begin{classification}[Perturbation status]
+The rank \(r_D(a,b)\) is a conservative definition once A1 and A2 are adopted.
+A2 is not conservative over \(\Lang\), because the original source reservoir
+does not determine perturbation classes or discriminator families.
+\end{classification}
+
+\begin{axiompacket}[A3: response algebra without fixed target rank]
+For each observer chain \(\Gamma\), \(\RespAlg\) is the quotient algebra of
+source response words generated by concatenation, recurrence counting, and
+source-local recombination, modulo relabeling symmetries of the source
+presentation. The rank \(\Rank(U_{\Gamma})\) is the independence rank of
+response functionals in this quotient. No axiom sets \(\Rank=4\).
+\end{axiompacket}
+
+\begin{justification}
+The previous packet risked selecting the target \(1+3\) split by requiring a
+rank-four domain. A3 reverses the burden. The source algebra reports its rank;
+a later candidate may use a four-rank domain only if the source records supply
+one without post hoc selection.
+\end{justification}
+
+\begin{classification}[Response-rank status]
+Rank computation is conservative relative to a fixed quotient response
+algebra. The quotient rule and admissible response-word ground set are
+ontology-extension hypotheses unless they are later derived from canonical
+source dynamics.
+\end{classification}
+
+\begin{axiompacket}[A4: clock-cycle transport as source holonomy data]
+A stable cycle class \([\Cycle]_{\mathcal{K}}\) is a source recurrence class
+whose transition-word and response-ratio records remain bounded under
+iteration. A transport map
+\[
+T_{\Gamma\to\Gamma'}:
+[\Cycle]_{\mathcal{K}}\to[\Cycle']_{\mathcal{K}}
+\]
+is admissible only when induced by shared source transition support between
+adjacent chains. Transport around closed paths may have nontrivial holonomy;
+the holonomy must be reported as source data, not normalized away to match a
+target clock.
+\end{axiompacket}
+
+\begin{justification}
+The previous clock-scale repair added transport but did not determine it.
+A4 fixes the anti-smuggling rule: clock comparison is source-holonomy data
+first and benchmark clock comparison later. Trivial holonomy is not assumed.
+\end{justification}
+
+\begin{classification}[Clock-transport status]
+Cycle equivalence and transport are conservative definitions only after the
+shared transition-support relation and holonomy convention are fixed. Those
+fixing rules are ontology-extension hypotheses over \(\Lang\).
+\end{classification}
+
+\section{Conservativity Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.32\linewidth}p{0.32\linewidth}}
+\textbf{Object} & \textbf{Status over original \(\Lang\)} & \textbf{Status after axioms} \\
+\hline
+\(\Step\) & Nonconservative extension & A1 primitive to audit \\
+\(\Adj\), \(N_n(x)\), \(\partial_{\mathcal{S}}R\) & Nonconservative without \(\Step\) & Conservative definitions from A1 \\
+\(\mathcal{P}\), \(\mathcal{D}\) & Nonconservative extension & A2 primitives to audit \\
+\(r_D(a,b)\) & Underdefined & Conservative definition after A1 and A2 \\
+\(\RespAlg\), \(\Rank\) & Nonconservative extension & A3 quotient and rank survey \\
+\(\mathcal{K}\), \(T_{\Gamma\to\Gamma'}\) & Nonconservative extension & A4 holonomy data to audit \\
+\end{tabular}
+\end{center}
+
+The ledger makes the central conclusion explicit. The packet does not rescue
+conservativity over the original source reservoir. It records the minimal
+current extension hypotheses that would make the next candidate path
+determinately falsifiable.
+
+\section{Failure Tests}
+
+\begin{auditburden}[Transition audit]
+Reject A1 for localization use if the chosen \(\Step\) is selected to
+reproduce target neighborhoods, target causal fronts, or target spatial balls
+rather than fixed by source presentation rules.
+\end{auditburden}
+
+\begin{auditburden}[Discriminator audit]
+Reject A2 if any response threshold, recurrence distinction, or perturbation
+class is chosen after benchmark comparison or is adjusted to improve target
+agreement.
+\end{auditburden}
+
+\begin{auditburden}[Rank audit]
+Reject A3 for candidate construction if rank four is imposed as an assumption
+instead of reported as a source-rank result. Lower or higher source rank is a
+valid negative result.
+\end{auditburden}
+
+\begin{auditburden}[Transport audit]
+Reject A4 if transport holonomy is normalized to target proper-time behavior
+without a source reason. Nontrivial holonomy is not a failure by itself; hiding
+it is the failure.
+\end{auditburden}
+
+\section{Local Verdict}
+
+\begin{localverdict}[Axioms justified only as extension hypotheses]
+The minimal source-basis axiom packet is justified as a controlled
+ontology-extension hypothesis, not as a conservative definition over the
+existing source language. It improves the research state by converting the
+Refuter's nonconservative channels into explicit, auditable assumptions. It
+does not authorize candidate reconstruction.
+\end{localverdict}
+
+\section{Next Role}
+
+\begin{nextstep}[Smuggling audit before reconstruction]
+The logical next role is a Smuggling Auditor review of A1--A4. The audit
+should test whether the new source-side axioms secretly encode target
+topology, target observer protocols, target rank, or target clock
+normalization. Candidate Constructor and Gate Chair review remain premature.
+\end{nextstep}
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis
+conservativity refutation: Source-language test for the source-basis packet}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-009/artifacts/08\_LOCALIZATION\_SOURCE\_BASIS\_CONSERVATIVITY\_REFUTATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis smuggling
+audit: Target-import review of the source-basis formalization} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-008/artifacts/07\_LOCALIZATION\_SOURCE\_BASIS\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis
+formalization: Minimal order, adjacency, response, mode, and clock-transport
+structures} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-007/artifacts/06\_LOCALIZATION\_SOURCE\_BASIS\_FORMALIZATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization repair refutation:
+Source-determination test for the repaired localization packet} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-006/artifacts/05\_LOCALIZATION\_REPAIR\_REFUTATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Gate 0 ontology formalization: Source
+primitives, forbidden imports, and localization burden} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex}.
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools enumitem microtype hyperref margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.35em,itemsep=0.3em topsep=0.3em,itemsep=0.25em \Aether{ther} \Aflow{ther-flow} \TheoryProgram{ / framework} \Sub{A} \PhiFlow{_{}} \Step{Step} \Adj{Adj_{S}} \RespAlg{R_{}} \Rank{rank_{S}} \Cycle{C_{}} \Basis{B_{src}} \Lang{L_{0}} \Ext{E_{}} axiompacket{Axiom packet} justification{Justification} classification{Conservativity classification} auditburden{Audit burden} localverdict{Local verdict} nextstep{Next step} {Localization Source-Basis Axiom Justification\\[0.35em] Minimal Source-Side Extension Hypotheses After the Conservativity Refutation} Ontology Formalizer AgentJob AJ-RT-20260608-010-001 June 8, 2026 document abstract This draft responds to the local source-basis conservativity refutation. The result is not a derivation and not a candidate reconstruction. It proposes the minimum current source-side axiom packet that would make the transition, adjacency, perturbation, response-rank, and clock-transport structures determinately testable. The conclusion is restrained: these axioms are not conservative over the original registered source reservoir. They are explicit ontology-extension hypotheses that may be audited, refuted, or later promoted only through a separate authorized gate. abstract Scope and Standard This artifact is a draft/control output for task RT-20260608-010. It does not edit canonical ontology TeX, promote a localization candidate, issue a Gate Chair verdict, or claim completion of an effective relativistic sector. Let \(\) denote the registered source language available before the source-basis packet: the substrate arena, intrinsic ordered motion, observer slice placeholder, S-time placeholder, and the downstream draft localization control artifacts. The previous Refuter result showed that the additional source-basis data \[ = (,,P,D,\{\}_{},K) \] are not forced by \(\). The present task therefore cannot honestly declare them conservative over \(\). It can only do one of two things: enumerate identify a conservative definition relative to already stated extension data; or mark a structure as a new source-side axiom whose adoption would be an ontology-extension hypothesis. enumerate Minimal Axiom Packet axiompacket[A0: finite source presentation] For a localization test, the substrate arena is represented by a finite or locally finite source presentation \[ (_U,_U,_U) \] on a bounded source-accessible domain \(U\). This presentation is an experimental/control representation of the substrate order, not a target manifold chart. Relabelings of \(_U\) and monotone reparameterizations of the order remain presentation redundancy. axiompacket justification The original source language is too spare to determine localization-relevant incidence. A locally finite presentation is the weakest current control device that lets the project ask whether transition, response, and transport claims are invariant under relabeling. It is not claimed as canonical ontology. justification axiompacket[A1: source transition germ] The immediate transition relation \(\) is the primitive edge relation of the locally finite source presentation. It must satisfy: enumerate order compatibility: \(x y\) implies \(x_U y\) or \(y_U x\) according to the directed presentation convention; locality: every edge has source support inside the bounded domain used by the perturbation test; relabeling invariance: if a source relabeling preserves \((_U,_U,_U)\), it preserves the edge-incidence class of \(\); and no benchmark fitting: \(\) is fixed before any comparison with target causal, spatial, or clock data. enumerate axiompacket classification[Transition status] \(\), neighborhoods, and source boundaries may be conservative definitions after A1, because they can be generated from \(\). A1 itself is not conservative over \(\). It is an explicit source-transition extension hypothesis. classification axiompacket[A2: admissible perturbations and discriminators] An admissible perturbation class \(P_aP\) is a finite source-local change to \(\) and source response records near \(a\) that preserves all declared source constraints outside its support. A discriminator \(DD\) is admissible only when it is fixed by source recurrence words, transition counts, and chain-internal response distinctions before benchmark comparison. axiompacket justification The Refuter identified \((P_a,D)\) as a discrete tuning channel. A2 blocks post hoc threshold selection by requiring every detector distinction to be specified from source recurrence structure. If no such distinction is available, the candidate must report non-detection or non-uniqueness. justification classification[Perturbation status] The rank \(r_D(a,b)\) is a conservative definition once A1 and A2 are adopted. A2 is not conservative over \(\), because the original source reservoir does not determine perturbation classes or discriminator families. classification axiompacket[A3: response algebra without fixed target rank] For each observer chain \(\), \(\) is the quotient algebra of source response words generated by concatenation, recurrence counting, and source-local recombination, modulo relabeling symmetries of the source presentation. The rank \((U_{})\) is the independence rank of response functionals in this quotient. No axiom sets \(=4\). axiompacket justification The previous packet risked selecting the target \(1+3\) split by requiring a rank-four domain. A3 reverses the burden. The source algebra reports its rank; a later candidate may use a four-rank domain only if the source records supply one without post hoc selection. justification classification[Response-rank status] Rank computation is conservative relative to a fixed quotient response algebra. The quotient rule and admissible response-word ground set are ontology-extension hypotheses unless they are later derived from canonical source dynamics. classification axiompacket[A4: clock-cycle transport as source holonomy data] A stable cycle class \([]_{K}\) is a source recurrence class whose transition-word and response-ratio records remain bounded under iteration. A transport map \[ T_{'}: []_{K}_{K} \] is admissible only when induced by shared source transition support between adjacent chains. Transport around closed paths may have nontrivial holonomy; the holonomy must be reported as source data, not normalized away to match a target clock. axiompacket justification The previous clock-scale repair added transport but did not determine it. A4 fixes the anti-smuggling rule: clock comparison is source-holonomy data first and benchmark clock comparison later. Trivial holonomy is not assumed. justification classification[Clock-transport status] Cycle equivalence and transport are conservative definitions only after the shared transition-support relation and holonomy convention are fixed. Those fixing rules are ontology-extension hypotheses over \(\). classification Conservativity Ledger center tabular{p{0.25}p{0.32}p{0.32}} Object & Status over original \(\Lang\) & Status after axioms \\ \(\) & Nonconservative extension & A1 primitive to audit \\ \(\), \(N_n(x)\), \(_{S}R\) & Nonconservative without \(\) & Conservative definitions from A1 \\ \(P\), \(D\) & Nonconservative extension & A2 primitives to audit \\ \(r_D(a,b)\) & Underdefined & Conservative definition after A1 and A2 \\ \(\), \(\) & Nonconservative extension & A3 quotient and rank survey \\ \(K\), \(T_{'}\) & Nonconservative extension & A4 holonomy data to audit \\ tabular center The ledger makes the central conclusion explicit. The packet does not rescue conservativity over the original source reservoir. It records the minimal current extension hypotheses that would make the next candidate path determinately falsifiable. Failure Tests auditburden[Transition audit] Reject A1 for localization use if the chosen \(\) is selected to reproduce target neighborhoods, target causal fronts, or target spatial balls rather than fixed by source presentation rules. auditburden auditburden[Discriminator audit] Reject A2 if any response threshold, recurrence distinction, or perturbation class is chosen after benchmark comparison or is adjusted to improve target agreement. auditburden auditburden[Rank audit] Reject A3 for candidate construction if rank four is imposed as an assumption instead of reported as a source-rank result. Lower or higher source rank is a valid negative result. auditburden auditburden[Transport audit] Reject A4 if transport holonomy is normalized to target proper-time behavior without a source reason. Nontrivial holonomy is not a failure by itself; hiding it is the failure. auditburden Local Verdict localverdict[Axioms justified only as extension hypotheses] The minimal source-basis axiom packet is justified as a controlled ontology-extension hypothesis, not as a conservative definition over the existing source language. It improves the research state by converting the Refuter's nonconservative channels into explicit, auditable assumptions. It does not authorize candidate reconstruction. localverdict Next Role nextstep[Smuggling audit before reconstruction] The logical next role is a Smuggling Auditor review of A1--A4. The audit should test whether the new source-side axioms secretly encode target topology, target observer protocols, target rank, or target clock normalization. Candidate Constructor and Gate Chair review remain premature. nextstep References Ricciardi, A. S. (2026, June 8). Localization source-basis conservativity refutation: Source-language test for the source-basis packet [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-009/artifacts/08\_LOCALIZATION\_SOURCE\_BASIS\_CONSERVATIVITY\_REFUTATION.tex. Ricciardi, A. S. (2026, June 8). Localization source-basis smuggling audit: Target-import review of the source-basis formalization [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-008/artifacts/07\_LOCALIZATION\_SOURCE\_BASIS\_SMUGGLING\_AUDIT.tex. Ricciardi, A. S. (2026, June 8). Localization source-basis formalization: Minimal order, adjacency, response, mode, and clock-transport structures [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-007/artifacts/06\_LOCALIZATION\_SOURCE\_BASIS\_FORMALIZATION.tex. Ricciardi, A. S. (2026, June 8). Localization repair refutation: Source-determination test for the repaired localization packet [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-006/artifacts/05\_LOCALIZATION\_REPAIR\_REFUTATION.tex. Ricciardi, A. S. (2026, June 8). Gate 0 ontology formalization: Source primitives, forbidden imports, and localization burden [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex. document

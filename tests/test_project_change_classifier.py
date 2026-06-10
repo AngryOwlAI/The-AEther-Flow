@@ -336,6 +336,26 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         )
         self.assertTrue(any("generated_derivatives missing live generated change" in error for error in report.errors))
 
+    def test_source_backed_html_routes_to_documentation_curator(self) -> None:
+        result = self.classifier.classify_paths(
+            [
+                "markdown/html-explainer-specs/synthetic.md",
+                "html/synthetic.html",
+            ]
+        )
+        self.assertTrue(result["docs_impact_required"])
+        self.assertFalse(result["project_system_improvement_required"])
+        self.assertEqual(result["recommended_role"], "documentation-curator")
+        self.assertEqual(result["blocked_paths"], [])
+        self.assertIn("html_source_spec_changed", result["reason_codes"])
+        self.assertIn("generated_derivative_changed", result["reason_codes"])
+
+    def test_direct_html_edit_remains_blocked(self) -> None:
+        result = self.classifier.classify_paths(["html/synthetic.html"])
+        self.assertTrue(result["docs_impact_required"])
+        self.assertIn("html/synthetic.html", result["blocked_paths"])
+        self.assertIn("direct_generated_derivative_edit", result["reason_codes"])
+
     def test_project_system_impact_record_must_list_required_validators(self) -> None:
         report = self.doc_impact.validate_paths(
             [

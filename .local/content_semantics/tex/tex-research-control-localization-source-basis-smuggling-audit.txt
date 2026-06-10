@@ -1,0 +1,276 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\Step}{\mathsf{Step}}
+\newcommand{\Adj}{\mathsf{Adj}_{\mathcal{S}}}
+\newcommand{\RespAlg}{\mathcal{R}_{\Gamma}}
+\newcommand{\Rank}{\mathsf{rank}_{\mathcal{S}}}
+\newcommand{\Cycle}{\mathcal{C}_{\Gamma}}
+\newcommand{\Basis}{\mathcal{B}_{\mathrm{src}}}
+
+\newtheorem{auditfinding}{Audit finding}
+\newtheorem{smugglingrisk}{Smuggling risk}
+\newtheorem{promotionblocker}{Promotion blocker}
+\newtheorem{auditverdict}{Audit verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Smuggling Audit}\\[0.35em]
+\large Target-Import Review of the Source-Basis Formalization}
+\author{Smuggling Auditor AgentJob AJ-RT-20260608-008-001}
+\date{June 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft audits the localization source-basis packet for hidden target
+imports. The packet improves the prior repair path by avoiding explicit
+Lorentzian metric, target null-cone, radar-coordinate, and target-proper-time
+definitions. However, it adds new source structures whose freedom can still
+encode the target unless independently constrained. The audit therefore passes
+the packet on explicit-import screening but blocks candidate reconstruction
+until a Refuter tests source conservativity of the transition relation,
+adjacency topology, discriminator family, response-rank rule, and clock
+transport law.
+\end{abstract}
+
+\section{Scope and Audit Standard}
+
+This artifact is a draft/control output for task \texttt{RT-20260608-008}. It
+does not edit canonical ontology TeX, does not issue a Gate Chair verdict, and
+does not reject the broader \TheoryProgram{}. It audits
+\[
+\Basis =
+(\Sub,\preceq_{\mathcal{S}},\Step,\Adj,\mathcal{P},
+\mathcal{D},\{\RespAlg\}_{\Gamma},\mathcal{K})
+\]
+as a proposed source-basis repair path.
+
+The audit standard is not whether the packet uses target words. The standard
+is whether the new structures are fixed by source-side rules strongly enough
+to prevent later benchmark tuning. A structure fails this audit locally when
+it can be selected, ranked, transported, or restricted so that the target
+benchmark is silently built into the source presentation.
+
+\section{Positive Explicit-Import Screen}
+
+\begin{auditfinding}[No direct metric primitive]
+The source-basis packet does not declare a Lorentzian metric, target null
+cone, radar-coordinate construction, Einstein equation, or target proper-time
+normalization as a source primitive.
+\end{auditfinding}
+
+\begin{auditfinding}[Benchmark separation stated]
+The packet repeatedly states that benchmark comparison is downstream of
+source definitions. This is a necessary anti-smuggling condition and is an
+improvement over any candidate that begins from target operational geometry.
+\end{auditfinding}
+
+These positive findings are limited. Absence of explicit target vocabulary is
+not enough to authorize candidate reconstruction, because structural degrees
+of freedom can carry the same target information indirectly.
+
+\section{Transition and Adjacency Risks}
+
+\begin{auditfinding}[Immediate transition can encode topology]
+The packet defines \(\Step\subseteq\Sub\times\Sub\) as an immediate
+transition relation and then generates adjacency from \(\Step\). This avoids
+target distance language, but it does not yet define what makes a transition
+immediate from canonical source data. If \(\Step\) is chosen so that its
+adjacency graph has the desired continuum neighborhoods, then target topology
+has been imported through graph incidence.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Graph-distance replacement]
+The \(n\)-neighborhood \(N_n(x)\) is a graph-distance object. It is not a
+metric distance by name, but it can play the same role if the graph is tuned
+to reproduce target local neighborhoods, target causal fronts, or target
+spatial balls.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Source topology blocker]
+Candidate reconstruction remains blocked until \(\Step\) has a source-only
+generation law or a Refuter proves that all allowed \(\Step\)-presentations
+lead to the same localization-relevant adjacency class.
+\end{promotionblocker}
+
+\section{Order-Rank and Perturbation Risks}
+
+\begin{auditfinding}[Order rank removes one scale but leaves one selector]
+Replacing \(\delta_{a\to b}\) by \(r_D(a,b)\) removes the numerical
+first-response interval. This is progress. The remaining selector is the
+pair \((P_a,D)\). If perturbation classes or response discriminators are
+chosen after looking at the benchmark, rank becomes a discrete fitting
+channel.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Hidden benchmark threshold]
+The packet says thresholds inside \(D\) must come from source recurrence,
+detector noise, or response-word distinctions. It does not yet provide a
+source law that uniquely determines those thresholds. Benchmark tuning can
+therefore enter through the choice of admissible discriminator family
+\(\mathcal{D}\).
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Discriminator blocker]
+The packet needs a source-conservativity test for \(\mathcal{P}\) and
+\(\mathcal{D}\): localization-relevant front incidence should be stable under
+all admissible perturbation and discriminator choices, or the candidate must
+report non-uniqueness instead of selecting the benchmark-fitting option.
+\end{promotionblocker}
+
+\section{Response-Mode Rank Risks}
+
+\begin{auditfinding}[Rank four is a potential target split]
+The packet allows an observer chain to carry one order mode plus three
+non-order response modes when \(\Rank(U_{\Gamma})=4\). This is phrased as a
+source-rank condition, not Euclidean orthogonality. Still, the distinguished
+number four is exactly the target local coordinate count. Without a source
+theorem or failure-tolerant rank survey, the rank condition can smuggle the
+target \(1+3\) split.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Matroid freedom]
+The proposed response-rank criterion is matroid-like. A matroid or independence
+relation is highly flexible unless its ground set and dependence relations are
+fixed by source dynamics. That flexibility can be used to select four
+independent labels even when the source does not force them.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Rank-selection blocker]
+Candidate reconstruction is blocked until the response algebra either derives
+\(\Rank=4\) from source constraints or commits to reporting whatever rank the
+source actually supplies. A candidate may not impose rank four because the
+target benchmark has one temporal and three spatial operational dimensions.
+\end{promotionblocker}
+
+\section{Clock-Transport Risks}
+
+\begin{auditfinding}[Transport law can hide clock normalization]
+The clock-transport map \(T_{\Gamma\to\Gamma'}\) is an improvement over
+untransported local cycle units. However, a transport law between observer
+chains can encode a connection, a conformal scale, or a clock-synchronization
+rule. If those data are chosen to make benchmark proper time emerge, target
+clock structure has entered through \(\mathcal{K}\).
+\end{auditfinding}
+
+\begin{smugglingrisk}[Holonomy and path-dependence tuning]
+The packet requires transports to compose as a source cocycle up to relabeling.
+This is mathematically useful, but the permitted holonomy class is not yet
+fixed. Selecting a trivial or benchmark-compatible holonomy class can amount
+to imposing the target clock comparison structure.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Clock-transport blocker]
+Before candidate reconstruction, \(\mathcal{K}\) must be tested for
+path-dependence, source-cycle non-uniqueness, and benchmark-independent
+normalization. A transported cycle scale is not yet an effective metric scale.
+\end{promotionblocker}
+
+\section{Ontology-Expansion Risk}
+
+\begin{auditfinding}[The packet is an ontology-extension hypothesis]
+The source-basis tuple adds \(\Step\), \(\Adj\), \(\mathcal{P}\),
+\(\mathcal{D}\), \(\RespAlg\), and \(\mathcal{K}\) beyond the minimal Gate 0
+reservoir. The packet correctly labels this content as draft/control. That
+label matters: these objects are not currently canonical ontology primitives.
+\end{auditfinding}
+
+\begin{smugglingrisk}[Repair by adding too much structure]
+Adding enough source structure can make localization easier while also
+reducing explanatory value. If the added structures are as rich as the target
+operational geometry, the program has not derived the target; it has renamed
+the target's functional content.
+\end{smugglingrisk}
+
+\begin{promotionblocker}[Conservativity blocker]
+The next test should ask whether the source-basis packet is conservative over
+registered source language. If it is not conservative, the Director should
+pause localization or route to a formal ontology-change proposal rather than
+authorize candidate reconstruction.
+\end{promotionblocker}
+
+\section{Audit Verdict}
+
+\begin{auditverdict}[Explicit import avoided, structural smuggling unresolved]
+The source-basis formalization passes the narrow explicit-import screen: it
+does not directly install a target metric, target null cone, radar protocol,
+or target proper-time clock. It does not pass the stronger promotion-readiness
+screen. The unresolved smuggling channels are:
+\begin{enumerate}
+    \item \(\Step\) can encode target topology through immediate-transition
+    incidence;
+    \item \(\Adj\) and \(N_n(x)\) can function as graph-distance replacements
+    for target neighborhoods;
+    \item \(\mathcal{P}\) and \(\mathcal{D}\) can tune first-response rank;
+    \item \(\RespAlg\) and \(\Rank=4\) can impose a target \(1+3\) detector
+    split; and
+    \item \(\mathcal{K}\) can import clock normalization through transport
+    and holonomy choices.
+\end{enumerate}
+\end{auditverdict}
+
+This is a local negative audit for candidate reconstruction, not a rejection
+of the research program. The packet is useful because it makes the remaining
+risks explicit and testable.
+
+\section{Next Burden}
+
+\begin{nextburden}[Refuter source-conservativity test]
+The logical next role is a Refuter AgentJob that tests whether the
+source-basis packet is conservative over registered source language. The test
+should ask whether localization-relevant outputs are invariant across
+admissible \(\Step\), \(\Adj\), \(\mathcal{D}\), \(\RespAlg\), and
+\(\mathcal{K}\) choices, or whether the packet merely relocates target
+structure into source names.
+\end{nextburden}
+
+Candidate reconstruction and Gate Chair review remain premature until that
+source-conservativity test is completed.
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-basis
+formalization: Minimal order, adjacency, response, mode, and clock-transport
+structures} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-007/artifacts/06\_LOCALIZATION\_SOURCE\_BASIS\_FORMALIZATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization repair refutation:
+Source-determination test for the repaired localization packet} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-006/artifacts/05\_LOCALIZATION\_REPAIR\_REFUTATION.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Localization source-repair packet:
+Source-only front, coincidence, and clock-scale definitions} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-005/artifacts/04\_LOCALIZATION\_SOURCE\_REPAIR\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 8). \emph{Gate 0 ontology formalization: Source
+primitives, forbidden imports, and localization burden} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex}.
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools enumitem microtype hyperref margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.35em,itemsep=0.3em topsep=0.3em,itemsep=0.25em \Aether{ther} \Aflow{ther-flow} \TheoryProgram{ / framework} \Sub{A} \Step{Step} \Adj{Adj_{S}} \RespAlg{R_{}} \Rank{rank_{S}} \Cycle{C_{}} \Basis{B_{src}} auditfinding{Audit finding} smugglingrisk{Smuggling risk} promotionblocker{Promotion blocker} auditverdict{Audit verdict} nextburden{Next burden} {Localization Source-Basis Smuggling Audit\\[0.35em] Target-Import Review of the Source-Basis Formalization} Smuggling Auditor AgentJob AJ-RT-20260608-008-001 June 8, 2026 document abstract This draft audits the localization source-basis packet for hidden target imports. The packet improves the prior repair path by avoiding explicit Lorentzian metric, target null-cone, radar-coordinate, and target-proper-time definitions. However, it adds new source structures whose freedom can still encode the target unless independently constrained. The audit therefore passes the packet on explicit-import screening but blocks candidate reconstruction until a Refuter tests source conservativity of the transition relation, adjacency topology, discriminator family, response-rank rule, and clock transport law. abstract Scope and Audit Standard This artifact is a draft/control output for task RT-20260608-008. It does not edit canonical ontology TeX, does not issue a Gate Chair verdict, and does not reject the broader . It audits \[ = (,_{S},,,P, D,\{\}_{},K) \] as a proposed source-basis repair path. The audit standard is not whether the packet uses target words. The standard is whether the new structures are fixed by source-side rules strongly enough to prevent later benchmark tuning. A structure fails this audit locally when it can be selected, ranked, transported, or restricted so that the target benchmark is silently built into the source presentation. Positive Explicit-Import Screen auditfinding[No direct metric primitive] The source-basis packet does not declare a Lorentzian metric, target null cone, radar-coordinate construction, Einstein equation, or target proper-time normalization as a source primitive. auditfinding auditfinding[Benchmark separation stated] The packet repeatedly states that benchmark comparison is downstream of source definitions. This is a necessary anti-smuggling condition and is an improvement over any candidate that begins from target operational geometry. auditfinding These positive findings are limited. Absence of explicit target vocabulary is not enough to authorize candidate reconstruction, because structural degrees of freedom can carry the same target information indirectly. Transition and Adjacency Risks auditfinding[Immediate transition can encode topology] The packet defines \(\) as an immediate transition relation and then generates adjacency from \(\). This avoids target distance language, but it does not yet define what makes a transition immediate from canonical source data. If \(\) is chosen so that its adjacency graph has the desired continuum neighborhoods, then target topology has been imported through graph incidence. auditfinding smugglingrisk[Graph-distance replacement] The \(n\)-neighborhood \(N_n(x)\) is a graph-distance object. It is not a metric distance by name, but it can play the same role if the graph is tuned to reproduce target local neighborhoods, target causal fronts, or target spatial balls. smugglingrisk promotionblocker[Source topology blocker] Candidate reconstruction remains blocked until \(\) has a source-only generation law or a Refuter proves that all allowed \(\)-presentations lead to the same localization-relevant adjacency class. promotionblocker Order-Rank and Perturbation Risks auditfinding[Order rank removes one scale but leaves one selector] Replacing \(_{a b}\) by \(r_D(a,b)\) removes the numerical first-response interval. This is progress. The remaining selector is the pair \((P_a,D)\). If perturbation classes or response discriminators are chosen after looking at the benchmark, rank becomes a discrete fitting channel. auditfinding smugglingrisk[Hidden benchmark threshold] The packet says thresholds inside \(D\) must come from source recurrence, detector noise, or response-word distinctions. It does not yet provide a source law that uniquely determines those thresholds. Benchmark tuning can therefore enter through the choice of admissible discriminator family \(D\). smugglingrisk promotionblocker[Discriminator blocker] The packet needs a source-conservativity test for \(P\) and \(D\): localization-relevant front incidence should be stable under all admissible perturbation and discriminator choices, or the candidate must report non-uniqueness instead of selecting the benchmark-fitting option. promotionblocker Response-Mode Rank Risks auditfinding[Rank four is a potential target split] The packet allows an observer chain to carry one order mode plus three non-order response modes when \((U_{})=4\). This is phrased as a source-rank condition, not Euclidean orthogonality. Still, the distinguished number four is exactly the target local coordinate count. Without a source theorem or failure-tolerant rank survey, the rank condition can smuggle the target \(1+3\) split. auditfinding smugglingrisk[Matroid freedom] The proposed response-rank criterion is matroid-like. A matroid or independence relation is highly flexible unless its ground set and dependence relations are fixed by source dynamics. That flexibility can be used to select four independent labels even when the source does not force them. smugglingrisk promotionblocker[Rank-selection blocker] Candidate reconstruction is blocked until the response algebra either derives \(=4\) from source constraints or commits to reporting whatever rank the source actually supplies. A candidate may not impose rank four because the target benchmark has one temporal and three spatial operational dimensions. promotionblocker Clock-Transport Risks auditfinding[Transport law can hide clock normalization] The clock-transport map \(T_{'}\) is an improvement over untransported local cycle units. However, a transport law between observer chains can encode a connection, a conformal scale, or a clock-synchronization rule. If those data are chosen to make benchmark proper time emerge, target clock structure has entered through \(K\). auditfinding smugglingrisk[Holonomy and path-dependence tuning] The packet requires transports to compose as a source cocycle up to relabeling. This is mathematically useful, but the permitted holonomy class is not yet fixed. Selecting a trivial or benchmark-compatible holonomy class can amount to imposing the target clock comparison structure. smugglingrisk promotionblocker[Clock-transport blocker] Before candidate reconstruction, \(K\) must be tested for path-dependence, source-cycle non-uniqueness, and benchmark-independent normalization. A transported cycle scale is not yet an effective metric scale. promotionblocker Ontology-Expansion Risk auditfinding[The packet is an ontology-extension hypothesis] The source-basis tuple adds \(\), \(\), \(P\), \(D\), \(\), and \(K\) beyond the minimal Gate 0 reservoir. The packet correctly labels this content as draft/control. That label matters: these objects are not currently canonical ontology primitives. auditfinding smugglingrisk[Repair by adding too much structure] Adding enough source structure can make localization easier while also reducing explanatory value. If the added structures are as rich as the target operational geometry, the program has not derived the target; it has renamed the target's functional content. smugglingrisk promotionblocker[Conservativity blocker] The next test should ask whether the source-basis packet is conservative over registered source language. If it is not conservative, the Director should pause localization or route to a formal ontology-change proposal rather than authorize candidate reconstruction. promotionblocker Audit Verdict auditverdict[Explicit import avoided, structural smuggling unresolved] The source-basis formalization passes the narrow explicit-import screen: it does not directly install a target metric, target null cone, radar protocol, or target proper-time clock. It does not pass the stronger promotion-readiness screen. The unresolved smuggling channels are: enumerate \(\) can encode target topology through immediate-transition incidence; \(\) and \(N_n(x)\) can function as graph-distance replacements for target neighborhoods; \(P\) and \(D\) can tune first-response rank; \(\) and \(=4\) can impose a target \(1+3\) detector split; and \(K\) can import clock normalization through transport and holonomy choices. enumerate auditverdict This is a local negative audit for candidate reconstruction, not a rejection of the research program. The packet is useful because it makes the remaining risks explicit and testable. Next Burden nextburden[Refuter source-conservativity test] The logical next role is a Refuter AgentJob that tests whether the source-basis packet is conservative over registered source language. The test should ask whether localization-relevant outputs are invariant across admissible \(\), \(\), \(D\), \(\), and \(K\) choices, or whether the packet merely relocates target structure into source names. nextburden Candidate reconstruction and Gate Chair review remain premature until that source-conservativity test is completed. References Ricciardi, A. S. (2026, June 8). Localization source-basis formalization: Minimal order, adjacency, response, mode, and clock-transport structures [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-007/artifacts/06\_LOCALIZATION\_SOURCE\_BASIS\_FORMALIZATION.tex. Ricciardi, A. S. (2026, June 8). Localization repair refutation: Source-determination test for the repaired localization packet [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-006/artifacts/05\_LOCALIZATION\_REPAIR\_REFUTATION.tex. Ricciardi, A. S. (2026, June 8). Localization source-repair packet: Source-only front, coincidence, and clock-scale definitions [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-005/artifacts/04\_LOCALIZATION\_SOURCE\_REPAIR\_PACKET.tex. Ricciardi, A. S. (2026, June 8). Gate 0 ontology formalization: Source primitives, forbidden imports, and localization burden [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260608-002/artifacts/01\_GATE0\_ONTOLOGY\_FORMALIZATION.tex. document

@@ -292,6 +292,14 @@ def existing_by_id(rows: list[dict[str, str]], key: str) -> dict[str, dict[str, 
     return {row[key]: row for row in rows if row.get(key)}
 
 
+def role_key(role_id: str, version: str) -> str:
+    return f"{role_id}@{version}"
+
+
+def role_row_key(row: dict[str, str]) -> str:
+    return role_key(row.get("role_id", ""), row.get("version", ""))
+
+
 def split_semicolon(value: str) -> list[str]:
     return [part.strip() for part in value.split(";") if part.strip()]
 
@@ -323,7 +331,17 @@ def validate_registry_values(report: ValidationReport, rows_by_registry: dict[st
         id_field = id_fields[registry_name]
         local_ids: set[str] = set()
         for row_number, row in enumerate(rows, start=2):
-            row_id = row.get(id_field, "")
+            if registry_name == "AGENT_ROLE_REGISTRY.csv":
+                missing = [
+                    field_name
+                    for field_name in ("role_id", "version")
+                    if not row.get(field_name, "")
+                ]
+                for field_name in missing:
+                    report.error(f"{registry_name}:{row_number}: missing {field_name}")
+                row_id = role_row_key(row)
+            else:
+                row_id = row.get(id_field, "")
             if not row_id:
                 report.error(f"{registry_name}:{row_number}: missing {id_field}")
             if row_id in local_ids:
@@ -351,16 +369,24 @@ def _frontmatter_value(value: Any) -> str:
 
 
 def validate_roles(report: ValidationReport, role_rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
-    roles = existing_by_id(role_rows, "role_id")
+    roles = {role_row_key(row): row for row in role_rows if row.get("role_id") and row.get("version")}
+    active_by_role_id: dict[str, str] = {}
     for row in role_rows:
+        if row.get("status") == "active":
+            previous = active_by_role_id.get(row["role_id"])
+            if previous:
+                report.error(
+                    f"{row['role_id']}: multiple active role versions {previous} and {row['version']}"
+                )
+            active_by_role_id[row["role_id"]] = row["version"]
         path_text = row["role_contract_path"]
         reason = validate_relative_path(path_text)
         if reason:
-            report.error(f"{row['role_id']}: invalid role_contract_path: {reason}")
+            report.error(f"{role_row_key(row)}: invalid role_contract_path: {reason}")
             continue
         path = repo_path(path_text)
         if not path.exists():
-            report.error(f"{row['role_id']}: missing role contract {path_text}")
+            report.error(f"{role_row_key(row)}: missing role contract {path_text}")
             continue
         try:
             frontmatter, _ = load_frontmatter(path)
@@ -454,7 +480,9 @@ def validate_director_decisions(
                 report.error(
                     f"{row['decision_path']}: frontmatter {field_name} does not match DIRECTOR_DECISION_REGISTRY.csv"
                 )
-        if row["decision_type"] != "provisional_role" and row["selected_role_id"] not in roles:
+        if row["decision_type"] != "provisional_role" and role_key(
+            row["selected_role_id"], row["selected_role_version"]
+        ) not in roles:
             report.error(f"{row['decision_id']}: selected role is not registered")
         if "## Role-Fit Matrix" not in body:
             report.error(f"{row['decision_path']}: missing ## Role-Fit Matrix")
@@ -497,7 +525,7 @@ def validate_agent_jobs(
                 )
         if row["decision_id"] not in decisions:
             report.error(f"{row['job_id']}: decision_id is not registered")
-        if row["role_id"] not in roles:
+        if role_key(row["role_id"], row["role_version"]) not in roles:
             provisional = job.get("provisional_role_contract")
             if not isinstance(provisional, dict):
                 report.error(f"{row['job_id']}: unregistered role lacks provisional_role_contract")
@@ -620,12 +648,11 @@ def validate_execution_roles(
 
         if kind in {"registered_role", "task_overlay"}:
             base_role = row["base_role_id"]
+            base_role_ref = role_key(base_role, row["base_role_version"])
             if not base_role:
                 report.error(f"{execution_ref}: {kind} requires base_role_id")
-            elif base_role not in roles:
+            elif base_role_ref not in roles:
                 report.error(f"{execution_ref}: base_role_id is not registered")
-            elif roles[base_role]["version"] != row["base_role_version"]:
-                report.error(f"{execution_ref}: base_role_version does not match registry")
         if kind == "registered_role":
             if _has_substantive_value(record.get("expanded_permissions", [])):
                 report.error(f"{execution_ref}: registered_role may not expand permissions")
@@ -649,10 +676,9 @@ def validate_execution_roles(
                     f"{execution_ref}: provisional role base_role_id and base_role_version must be provided together"
                 )
             elif base_role:
-                if base_role not in roles:
+                base_role_ref = role_key(base_role, base_version)
+                if base_role_ref not in roles:
                     report.error(f"{execution_ref}: provisional base_role_id is not registered")
-                elif roles[base_role]["version"] != base_version:
-                    report.error(f"{execution_ref}: provisional base_role_version does not match registry")
             if not row["provisional_role_name"]:
                 report.error(f"{execution_ref}: provisional role requires provisional_role_name")
             if not row["justification"]:

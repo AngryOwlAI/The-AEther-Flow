@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Æther-Flow Project Explainer Smoke Test</title>
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --surface: #fffaf3;
+      --surface-strong: #efe4d2;
+      --border: rgba(47, 39, 30, 0.16);
+      --text: #27211b;
+      --muted: #695f52;
+      --blue: #1e3a5f;
+      --gold: #b7812a;
+      --sage: #637f53;
+      --rose: #9f403a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(rgba(30, 58, 95, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 95, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(183, 129, 42, 0.16), transparent 34rem),
+        var(--bg);
+      background-size: 28px 28px, 28px 28px, auto, auto;
+    }
+
+    main {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 900px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 5vw, 4.6rem);
+      line-height: 0.95;
+      color: var(--blue);
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .lede {
+      max-width: 820px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255, 250, 243, 0.88);
+      box-shadow: 0 18px 40px rgba(47, 39, 30, 0.08);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 1.15rem;
+    }
+
+    .card p,
+    li {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .flow {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface-strong);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .step {
+      min-width: 0;
+      padding: 16px;
+      border-left: 4px solid var(--sage);
+      border-radius: 6px;
+      background: var(--surface);
+    }
+
+    .step:nth-child(2) {
+      border-left-color: var(--gold);
+    }
+
+    .step:nth-child(3) {
+      border-left-color: var(--blue);
+    }
+
+    .step:nth-child(4) {
+      border-left-color: var(--rose);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--blue);
+      background: rgba(255, 250, 243, 0.76);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 780px) {
+      .grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>Local Visual Explainer Smoke Test</h2>
+    <h1>The Æther-Flow Research Project</h1>
+    <p class="lede">
+      This page verifies the project-local visual-explainer path. It summarizes the repository
+      as a two-track research program: an exact-GR benchmark interpretation with an open
+      derivation burden, and a human-scaffolded AI research-agent workflow for disciplined
+      theoretical-physics exploration.
+    </p>
+
+    <section class="grid" aria-label="Project tracks">
+      <article class="card">
+        <strong>Physics Track</strong>
+        <p>
+          The current public benchmark adopts ordinary general relativity at the operational
+          level. A first-principles derivation from Æther / Æther-flow substrate structure is
+          not claimed here; it remains the central open burden.
+        </p>
+      </article>
+      <article class="card">
+        <strong>AI Research-Agent Track</strong>
+        <p>
+          The agent system is described as human-scaffolded: role routing, refutation,
+          novelty search, claim gates, manuscript memory, and negative-result preservation.
+          Workflow status is not physics proof.
+        </p>
+      </article>
+    </section>
+
+    <section class="flow" aria-label="Claim-boundary flow">
+      <h2>Claim Boundary</h2>
+      <div class="steps">
+        <div class="step">
+          <strong>Ontology</strong>
+          <p>Æther, Æther-flow, observed space, S-time, and observed expansion define the conceptual frame.</p>
+        </div>
+        <div class="step">
+          <strong>Benchmark</strong>
+          <p>GR is adopted exactly at observable scale as the current controlled mathematical package.</p>
+        </div>
+        <div class="step">
+          <strong>Derivation Burden</strong>
+          <p>The source-law path must still recover observer readout, same-metric matter, and closure.</p>
+        </div>
+        <div class="step">
+          <strong>Negative Results</strong>
+          <p>Stopped or failed derivation lines must remain visible instead of being treated as success.</p>
+        </div>
+      </div>
+      <div class="badge-row" aria-label="Repository source order">
+        <span class="badge">AGENTS.md</span>
+        <span class="badge">README.md</span>
+        <span class="badge">ontology/aether-and-aether-flow.md</span>
+        <span class="badge">ontology/tex and PDFs</span>
+        <span class="badge">manuscripts</span>
+        <span class="badge">git state</span>
+      </div>
+    </section>
+
+    <footer>
+      Generated as local smoke-test output under `.local/html_wikis/visual-explainer/`.
+      This page is explanatory only and is not a canonical source artifact. It contains no public
+      sharing or deployment instruction.
+    </footer>
+  </main>
+</body>
+</html>

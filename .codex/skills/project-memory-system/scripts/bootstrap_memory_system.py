@@ -22,11 +22,15 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
+RESEARCH_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "research_control"
+if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(RESEARCH_CONTROL_SCRIPT_DIR))
 
 from obsidian_wiki_lib import (  # noqa: E402
     GENERATED_REGISTRY_COLUMNS as OBSIDIAN_GENERATED_REGISTRY_COLUMNS,
     write_generated_registries,
 )
+from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
 
 COMMON_COLUMNS = [
     "object_id",
@@ -213,6 +217,28 @@ PROMOTION_STATUS_VALUES = {
 
 PDF_BUILD_COMMAND = (
     "pdflatex -interaction=nonstopmode -halt-on-error <source.tex> (x3)"
+)
+HTML_SPEC_REQUIRED_FIELDS = {
+    "title",
+    "purpose",
+    "audience",
+    "output_path",
+    "renderer_skill",
+    "source_materials",
+    "claim_boundary",
+    "human_visual_only",
+}
+HTML_SOURCE_BASIS_META_RE = re.compile(
+    r'<meta\s+name=["\']aether-flow-source-basis["\']\s+content=["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+HTML_SOURCE_BASIS_HASH_META_RE = re.compile(
+    r'<meta\s+name=["\']aether-flow-source-basis-hash["\']\s+content=["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+HTML_HUMAN_VISUAL_META_RE = re.compile(
+    r'<meta\s+name=["\']aether-flow-human-visual-only["\']\s+content=["\']([^"\']+)["\']',
+    re.IGNORECASE,
 )
 
 
@@ -729,8 +755,41 @@ def generate_pdf_rows(
     return rows
 
 
-def generate_html_rows(now: str) -> list[dict[str, str]]:
+def html_spec_frontmatter(path: Path) -> tuple[dict[str, object], str]:
+    try:
+        frontmatter, _body = load_frontmatter(path)
+    except StrictYamlError as exc:
+        return {}, str(exc)
+    return frontmatter, ""
+
+
+def html_spec_rows_by_output(markdown_rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    specs: dict[str, dict[str, str]] = {}
+    for row in markdown_rows:
+        if row.get("role") != "html_explainer_source_spec":
+            continue
+        path = REPO_ROOT / row.get("path", "")
+        frontmatter, error = html_spec_frontmatter(path)
+        if error:
+            continue
+        output_path = str(frontmatter.get("output_path", "")).strip()
+        if output_path:
+            specs[output_path] = {
+                "object_id": row["object_id"],
+                "source_hash": row["source_hash"],
+                "renderer_skill": str(frontmatter.get("renderer_skill", "")).strip(),
+            }
+    return specs
+
+
+def html_meta_value(pattern: re.Pattern[str], html_text: str) -> str:
+    match = pattern.search(html_text)
+    return match.group(1).strip() if match else ""
+
+
+def generate_html_rows(now: str, markdown_rows: list[dict[str, str]]) -> list[dict[str, str]]:
     existing = existing_by_id(read_csv_rows(registry_path("HTML_EXPLAINER_REGISTRY.csv")))
+    specs_by_output = html_spec_rows_by_output(markdown_rows)
     rows = []
     for path in sorted((REPO_ROOT / "html").glob("*.html")):
         relative = rel_path(path)
@@ -738,19 +797,25 @@ def generate_html_rows(now: str) -> list[dict[str, str]]:
             (row for row in existing.values() if row.get("path") == relative),
             {},
         )
+        spec_row = specs_by_output.get(relative, {})
         if existing_row:
             object_id = existing_row["object_id"]
-            source_basis = existing_row.get("source_basis", "")
-            source_basis_hash = existing_row.get("source_basis_hash", "")
-            skill_version = existing_row.get("visual_explainer_skill_version", "")
         else:
             object_id = f"HTML-{object_suffix_from_stem(path.stem)}"
-            source_basis = ""
-            source_basis_hash = ""
-            skill_version = ""
         html_hash = sha256_file(path)
+        html_changed = existing_row.get("html_hash") != html_hash
+        if not existing_row or html_changed:
+            source_basis = spec_row.get("object_id", "")
+            source_basis_hash = spec_row.get("source_hash", "")
+            skill_version = spec_row.get("renderer_skill", "")
+        else:
+            source_basis = spec_row.get("object_id", existing_row.get("source_basis", ""))
+            source_basis_hash = existing_row.get("source_basis_hash", "")
+            skill_version = spec_row.get(
+                "renderer_skill", existing_row.get("visual_explainer_skill_version", "")
+            )
         last_validated_at = existing_row.get("last_validated_at", "")
-        if existing_row.get("html_hash") != html_hash:
+        if html_changed:
             last_validated_at = now
         if not last_validated_at:
             last_validated_at = now
@@ -1366,6 +1431,47 @@ def validate_pdf_registry(
             report.error(f"{object_id}: PDF authority_status must be generated_noncanonical")
 
 
+def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, str]]) -> None:
+    output_paths: dict[str, str] = {}
+    for row in markdown_rows:
+        if row.get("role") != "html_explainer_source_spec":
+            continue
+        object_id = row.get("object_id", "")
+        path_text = row.get("path", "")
+        path = REPO_ROOT / path_text
+        if not path.exists():
+            report.error(f"{object_id}: missing HTML explainer spec {path_text}")
+            continue
+        frontmatter, error = html_spec_frontmatter(path)
+        if error:
+            report.error(f"{object_id}: invalid HTML explainer spec frontmatter: {error}")
+            continue
+        for field_name in sorted(HTML_SPEC_REQUIRED_FIELDS):
+            value = frontmatter.get(field_name)
+            if field_name not in frontmatter or value is None or value == "":
+                report.error(f"{object_id}: HTML explainer spec missing {field_name}")
+        output_path = str(frontmatter.get("output_path", "")).strip()
+        if output_path:
+            reason = validate_relative_path(output_path)
+            if reason:
+                report.error(f"{object_id}: invalid output_path: {reason}")
+            elif not output_path.startswith("html/") or not output_path.endswith(".html"):
+                report.error(f"{object_id}: output_path must be a tracked html/*.html file")
+            elif not (REPO_ROOT / output_path).exists():
+                report.error(f"{object_id}: output_path does not exist: {output_path}")
+            previous = output_paths.get(output_path)
+            if previous:
+                report.error(
+                    f"{object_id}: output_path duplicates {previous}: {output_path}"
+                )
+            output_paths[output_path] = object_id
+        if bool(frontmatter.get("human_visual_only", False)) is not True:
+            report.error(f"{object_id}: human_visual_only must be true")
+        source_materials = frontmatter.get("source_materials", [])
+        if not isinstance(source_materials, list) or not source_materials:
+            report.error(f"{object_id}: source_materials must be a non-empty list")
+
+
 def validate_tex_vocab(report: ValidationReport, rows: list[dict[str, str]]) -> None:
     for row in rows:
         object_id = row.get("object_id", "")
@@ -1409,6 +1515,19 @@ def validate_html_registry(
         html_path = REPO_ROOT / row.get("path", "")
         if html_path.exists() and row.get("html_hash", "") != sha256_file(html_path):
             report.error(f"{object_id}: stale html_hash")
+        if not html_path.exists():
+            report.error(f"{object_id}: missing HTML explainer {row.get('path', '')}")
+            continue
+        html_text = html_path.read_text(encoding="utf-8")
+        html_source_basis = html_meta_value(HTML_SOURCE_BASIS_META_RE, html_text)
+        html_source_basis_hash = html_meta_value(HTML_SOURCE_BASIS_HASH_META_RE, html_text)
+        html_human_visual_only = html_meta_value(HTML_HUMAN_VISUAL_META_RE, html_text)
+        if html_source_basis != source_basis:
+            report.error(f"{object_id}: HTML source-basis metadata is stale or missing")
+        if html_source_basis_hash != row.get("source_basis_hash", ""):
+            report.error(f"{object_id}: HTML source-basis hash metadata is stale or missing")
+        if html_human_visual_only != "true":
+            report.error(f"{object_id}: HTML human-visual-only metadata must be true")
 
 
 def validate_wiki_registry(
@@ -1502,6 +1621,7 @@ def validate_all() -> ValidationReport:
     validate_source_hashes(report, rows_by_registry)
     validate_tex_vocab(report, rows_by_registry.get("TEX_SOURCE_REGISTRY.csv", []))
     validate_pdf_registry(report, rows_by_registry)
+    validate_html_specs(report, rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", []))
     validate_html_registry(report, rows_by_registry)
     validate_wiki_registry(report, rows_by_registry)
     validate_file_object_registry(report, rows_by_registry)
@@ -1526,7 +1646,7 @@ def bootstrap(
         "TEX_SOURCE_REGISTRY.csv", TEX_COLUMNS, discover_tex_rows(now), refresh_existing
     )
     pdf_rows = generate_pdf_rows(tex_rows, now, rebuilt_pdf_paths=rebuilt_pdf_paths)
-    html_rows = generate_html_rows(now)
+    html_rows = generate_html_rows(now, markdown_rows)
     rows_by_registry = {
         "MARKDOWN_SOURCE_REGISTRY.csv": markdown_rows,
         "TEX_SOURCE_REGISTRY.csv": tex_rows,
