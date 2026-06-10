@@ -16,5 +16,8 @@ Rules:
 Implementation metadata is validated by:
 
 ```zsh
-.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --check
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
 ```
+
+`--check` is a compatibility alias, but new instructions should use
+`--validate-only`.

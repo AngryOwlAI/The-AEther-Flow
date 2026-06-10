@@ -155,6 +155,19 @@ REQUIRED_DIRS = [
     "wiki/indexes",
 ]
 
+PROJECT_MARKDOWN_FILES = [
+    ".agents/AGENTS.md",
+    "research_control/README.md",
+    "research_control/AGENTS.md",
+    "research_control/approvals/README.md",
+]
+PROJECT_MARKDOWN_GLOBS = [
+    ".agents/roles/**/*.md",
+    ".agents/schemas/*.md",
+    ".codex/skills/*/SKILL.md",
+    "research_control/design/*.md",
+]
+
 CANONICAL_LANES = [
     "ontology",
     "manuscripts",
@@ -267,6 +280,10 @@ def object_suffix_from_stem(stem: str) -> str:
     return slugify(stem).upper()
 
 
+def object_suffix_from_path(path_text: str) -> str:
+    return slugify(path_text).upper()
+
+
 def wiki_lane_for_format(format_value: str) -> str:
     if format_value == "tex":
         return "tex"
@@ -375,6 +392,18 @@ def markdown_object_id(path: Path) -> str:
         return "MD-README"
     if relative == "AGENTS.md":
         return "MD-AGENTS"
+    if relative.endswith("/AGENTS.md"):
+        return f"MD-AGENTS-{object_suffix_from_path(str(Path(relative).parent))}"
+    if relative.endswith("/README.md"):
+        return f"MD-README-{object_suffix_from_path(str(Path(relative).parent))}"
+    if relative.startswith(".agents/roles/"):
+        return f"MD-ROLE-{object_suffix_from_path(relative)}"
+    if relative.startswith(".agents/schemas/"):
+        return f"MD-SCHEMA-{object_suffix_from_stem(path.stem)}"
+    if relative.startswith(".codex/skills/") and path.name == "SKILL.md":
+        return f"MD-SKILL-{object_suffix_from_path(Path(relative).parts[2])}"
+    if relative.startswith("research_control/design/"):
+        return f"MD-RESEARCH-CONTROL-DESIGN-{object_suffix_from_stem(path.stem)}"
     if relative == "ontology/aether-and-aether-flow.md":
         return "MD-ONTOLOGY-AETHER-AND-AETHER-FLOW"
     if relative == "markdown/grill-memory-wiki-registry-design-handoff.md":
@@ -403,6 +432,70 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "agents",
             "project-memory-system",
             "Root agent instructions and repository authority hierarchy.",
+        )
+    if relative == ".agents/AGENTS.md":
+        return (
+            "scoped_agent_guidance",
+            "project_control",
+            "agents",
+            "project-memory-system",
+            "Scoped guidance for role and schema contracts.",
+        )
+    if relative == "research_control/README.md":
+        return (
+            "research_control_documentation",
+            "project_control",
+            "humans_and_agents",
+            "project-memory-system",
+            "Research-control authority model and validation commands.",
+        )
+    if relative == "research_control/AGENTS.md":
+        return (
+            "scoped_agent_guidance",
+            "project_control",
+            "agents",
+            "project-memory-system",
+            "Scoped guidance for tracked research-control state.",
+        )
+    if relative == "research_control/approvals/README.md":
+        return (
+            "approval_documentation",
+            "project_control",
+            "humans_and_agents",
+            "project-memory-system",
+            "Human-gate approval lane documentation.",
+        )
+    if relative.startswith("research_control/design/"):
+        return (
+            "research_control_design",
+            "project_control",
+            "agents",
+            "project-memory-system",
+            "Authored design note for research-control architecture.",
+        )
+    if relative.startswith(".agents/roles/"):
+        return (
+            "role_contract",
+            "project_control",
+            "agents",
+            "project-memory-system",
+            "Registered execution role contract.",
+        )
+    if relative.startswith(".agents/schemas/"):
+        return (
+            "schema_contract",
+            "project_control",
+            "agents",
+            "project-memory-system",
+            "Registered project-control schema contract.",
+        )
+    if relative.startswith(".codex/skills/") and path.name == "SKILL.md":
+        return (
+            "skill_contract",
+            "project_control",
+            "agents",
+            Path(relative).parts[2],
+            "Repo-local skill contract.",
         )
     if relative == "ontology/aether-and-aether-flow.md":
         return (
@@ -458,11 +551,18 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
     for root_path in [REPO_ROOT / "README.md", REPO_ROOT / "AGENTS.md"]:
         if root_path.exists():
             paths.append(root_path)
+    for path_text in PROJECT_MARKDOWN_FILES:
+        path = REPO_ROOT / path_text
+        if path.exists():
+            paths.append(path)
+    for pattern in PROJECT_MARKDOWN_GLOBS:
+        paths.extend(sorted(REPO_ROOT.glob(pattern)))
     paths.extend(sorted((REPO_ROOT / "ontology").glob("*.md")))
     paths.extend(sorted((REPO_ROOT / "markdown").rglob("*.md")))
 
     rows = []
     for path in sorted(set(paths)):
+        relative = rel_path(path)
         object_id = markdown_object_id(path)
         role, authority, audience, owner_skill, notes = markdown_role(path)
         wiki_path = wiki_path_for_source({"object_id": object_id, "format": "markdown"})
@@ -484,7 +584,13 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
                 "notes": notes,
                 "github_facing": "true" if path.name == "README.md" else "false",
                 "agent_documentation": "true"
-                if path.name == "AGENTS.md" or "handoff" in path.name
+                if (
+                    path.name == "AGENTS.md"
+                    or "handoff" in path.name
+                    or relative.startswith(".agents/")
+                    or relative.startswith(".codex/skills/")
+                    or relative.startswith("research_control/")
+                )
                 else "false",
                 "contains_mermaid": contains_text(path, "```mermaid"),
                 "contains_math": "true"

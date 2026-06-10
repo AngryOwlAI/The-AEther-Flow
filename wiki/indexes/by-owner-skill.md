@@ -2,13 +2,62 @@
 
 Generated metadata index. Not canonical authority. Update source registries, then regenerate.
 
+## continue-research
+
+- `MD-SKILL-CONTINUE-RESEARCH` `.codex/skills/continue-research/SKILL.md`
+
+## grill-me
+
+- `MD-SKILL-GRILL-ME` `.codex/skills/grill-me/SKILL.md`
+
+## html-visual-explainer
+
+- `MD-SKILL-HTML-VISUAL-EXPLAINER` `.codex/skills/html-visual-explainer/SKILL.md`
+
+## improve-project-system
+
+- `MD-SKILL-IMPROVE-PROJECT-SYSTEM` `.codex/skills/improve-project-system/SKILL.md`
+
 ## markdown-wiki
 
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
+- `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
+- `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
+- `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
+- `WIKI-MD-README-RESEARCH-CONTROL` `wiki/markdown/md-readme-research-control.md`
+- `WIKI-MD-README-RESEARCH-CONTROL-APPROVALS` `wiki/markdown/md-readme-research-control-approvals.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-refuter-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md`
+- `WIKI-MD-SCHEMA-AGENT-JOB-SCHEMA` `wiki/markdown/md-schema-agent-job-schema.md`
+- `WIKI-MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `wiki/markdown/md-schema-director-decision-schema.md`
+- `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`
+- `WIKI-MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `wiki/markdown/md-schema-execution-role-schema.md`
+- `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
+- `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
+- `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
+- `WIKI-MD-SKILL-HTML-VISUAL-EXPLAINER` `wiki/markdown/md-skill-html-visual-explainer.md`
+- `WIKI-MD-SKILL-IMPROVE-PROJECT-SYSTEM` `wiki/markdown/md-skill-improve-project-system.md`
+- `WIKI-MD-SKILL-MARKDOWN-WIKI` `wiki/markdown/md-skill-markdown-wiki.md`
+- `WIKI-MD-SKILL-OBSIDIAN-WIKI` `wiki/markdown/md-skill-obsidian-wiki.md`
+- `WIKI-MD-SKILL-ONTOLOGY-PROMOTION` `wiki/markdown/md-skill-ontology-promotion.md`
+- `WIKI-MD-SKILL-PDF-DERIVATIVE-BUILD` `wiki/markdown/md-skill-pdf-derivative-build.md`
+- `WIKI-MD-SKILL-PROJECT-MEMORY-SYSTEM` `wiki/markdown/md-skill-project-memory-system.md`
+- `WIKI-MD-SKILL-TEX-WIKI` `wiki/markdown/md-skill-tex-wiki.md`
+- `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-ontology-aether-flow-dynamics.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/pdf/pdf-ontology-aether-flow-exact-closure-flagship-article.md`
@@ -45,8 +94,17 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-source-basis-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `wiki/tex/tex-research-control-localization-source-repair-packet.md`
 
+## obsidian-wiki
+
+- `MD-SKILL-OBSIDIAN-WIKI` `.codex/skills/obsidian-wiki/SKILL.md`
+
+## ontology-promotion
+
+- `MD-SKILL-ONTOLOGY-PROMOTION` `.codex/skills/ontology-promotion/SKILL.md`
+
 ## pdf-derivative-build
 
+- `MD-SKILL-PDF-DERIVATIVE-BUILD` `.codex/skills/pdf-derivative-build/SKILL.md`
 - `PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `ontology/pdfs/aether_flow_consistency.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/pdfs/aether_flow_dynamics.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
@@ -59,11 +117,34 @@ Generated metadata index. Not canonical authority. Update source registries, the
 ## project-memory-system
 
 - `MD-AGENTS` `AGENTS.md`
+- `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
+- `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-README` `README.md`
+- `MD-README-RESEARCH-CONTROL` `research_control/README.md`
+- `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
+- `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `.agents/roles/physics/gate-chair.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD` `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-1-0-MD` `.agents/roles/physics/refuter.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD` `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `.agents/roles/research_ops/director-of-research.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `.agents/roles/research_ops/project-system-director.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
+- `MD-SCHEMA-AGENT-JOB-SCHEMA` `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- `MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
+- `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
+- `MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`
+- `MD-SKILL-PROJECT-MEMORY-SYSTEM` `.codex/skills/project-memory-system/SKILL.md`
 
 ## tex-wiki
 
+- `MD-SKILL-TEX-WIKI` `.codex/skills/tex-wiki/SKILL.md`
 - `TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `ontology/tex/aether_flow_consistency.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/tex/aether_flow_dynamics.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `ontology/tex/aether_flow_exact_closure_flagship_article.tex`
@@ -91,3 +172,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION` `research_control/tasks/RT-20260608-007/artifacts/06_LOCALIZATION_SOURCE_BASIS_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-008/artifacts/07_LOCALIZATION_SOURCE_BASIS_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
+
+## visual-explainer
+
+- `MD-SKILL-VISUAL-EXPLAINER` `.codex/skills/visual-explainer/SKILL.md`

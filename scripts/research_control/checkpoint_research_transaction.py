@@ -207,6 +207,7 @@ def block_report(
     changed_paths: Iterable[str],
     command_results: list[CommandResult],
     validation_errors: list[str] | None = None,
+    suggested_repair_role: str = "process-integrity-auditor",
 ) -> dict[str, object]:
     return {
         "status": "blocked",
@@ -216,7 +217,7 @@ def block_report(
         "changed_paths": sorted(changed_paths),
         "failed_commands": [result.as_dict() for result in command_results if result.returncode != 0],
         "validation_errors": validation_errors or [],
-        "suggested_repair_role": "process-integrity-auditor",
+        "suggested_repair_role": suggested_repair_role,
         "staged": False,
         "committed": False,
     }
@@ -270,6 +271,8 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
             return block_report("post-PDF memory bootstrap failed", job_row, git_status_paths(), commands)
 
     validation_commands = [
+        [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
+        [".venv/bin/python", "scripts/project_control/validate_documentation_impact.py"],
         [
             ".venv/bin/python",
             ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
@@ -286,7 +289,18 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
         result = run_command(command)
         commands.append(result)
         if result.returncode != 0:
-            return block_report("post-execution validation failed", job_row, git_status_paths(), commands)
+            suggested_role = (
+                "documentation-curator"
+                if "validate_documentation_impact.py" in command
+                else "process-integrity-auditor"
+            )
+            return block_report(
+                "post-execution validation failed",
+                job_row,
+                git_status_paths(),
+                commands,
+                suggested_repair_role=suggested_role,
+            )
 
     final_changes = git_status_paths()
     disallowed_final = [
@@ -316,6 +330,33 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     commands.append(add_result)
     if add_result.returncode != 0:
         return block_report("git add failed", job_row, final_changes, commands)
+
+    staged_project_classifier = run_command([
+        ".venv/bin/python",
+        "scripts/project_control/classify_project_changes.py",
+        "--staged",
+        "--json",
+    ])
+    commands.append(staged_project_classifier)
+    if staged_project_classifier.returncode != 0:
+        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
+        return block_report("staged project-change classification failed", job_row, final_changes, commands)
+
+    staged_documentation_impact = run_command([
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py",
+        "--staged",
+    ])
+    commands.append(staged_documentation_impact)
+    if staged_documentation_impact.returncode != 0:
+        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
+        return block_report(
+            "staged documentation-impact validation failed",
+            job_row,
+            final_changes,
+            commands,
+            suggested_repair_role="documentation-curator",
+        )
 
     staged_check = run_command([
         ".venv/bin/python",

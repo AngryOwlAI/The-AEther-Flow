@@ -31,6 +31,26 @@ and tracked state under `research_control/`. The Director of Research may create
 one bounded AgentJob per invocation after validation. Generated outputs and
 `.local/` caches never override tracked control state.
 
+## Project-System Improvement
+
+For project-system repair, documentation synchronization, validator work,
+memory-tooling updates, or workflow clarification, use
+`.codex/skills/improve-project-system/SKILL.md`. This workflow is separate
+from physics continuation. It may process one project-improvement signal or
+one deterministic classifier result per invocation, and it must not promote
+physics claims or edit canonical science sources.
+
+Use the deterministic classifier before deciding that documentation work is
+needed:
+
+```zsh
+.venv/bin/python scripts/project_control/classify_project_changes.py --json
+```
+
+If documentation impact is required, either update the relevant canonical
+source documentation or write a valid
+`research_control/tasks/<task_id>/documentation_impact.yaml` no-op rationale.
+
 ## Required Checks
 
 Before changing repository knowledge, inspect the relevant source file and registry row. After changing source or registry material, regenerate and validate:
@@ -49,6 +69,12 @@ Run smoke tests when changing memory-system scripts:
 
 ```zsh
 .venv/bin/python -m unittest discover -s tests
+```
+
+Run the documentation-impact gate when changing project-system machinery:
+
+```zsh
+.venv/bin/python scripts/project_control/validate_documentation_impact.py
 ```
 
 ## Generated-Output Boundaries

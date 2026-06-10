@@ -35,6 +35,8 @@ The AI research-agent track currently develops and tests a human-scaffolded rese
 - Manuscript-centered memory through active `.tex`, PDFs, CSV routing, and the Manuscript Wiki.
 - Support for exploring, testing, refuting, proving, accepting, and organizing candidate derivation steps without treating workflow status as physics proof.
 - Explicit separation between physics claims, AI-methodology claims, tooling claims, open problems, and stopped results.
+- A project-system improvement loop for documentation drift, validators, roles,
+  schemas, memory tooling, and operational reliability.
 
 #### How they co-develop
 
@@ -131,6 +133,11 @@ Authority order:
 
 Generated artifacts are tracked when they are part of the project memory surface, but they are not independent authority. Update the source file and registry row, then regenerate.
 
+Registered Markdown sources include front-door docs, scoped agent guidance,
+role contracts, schema contracts, skill contracts, key research-control design
+notes, ontology-adjacent explanatory notes, and Markdown source specs for
+generated HTML explainers.
+
 Bootstrap or refresh the memory system:
 
 ```zsh
@@ -181,6 +188,37 @@ Clean ignored local noise from canonical lanes:
 Research-control continuation is tracked under `research_control/`. Use
 `.codex/skills/continue-research/SKILL.md` as the entry point.
 
+## Project-system improvement workflow
+
+Project-system improvement is tracked separately from physics continuation.
+Use `.codex/skills/improve-project-system/SKILL.md` when a change affects
+roles, schemas, validators, checkpoint gates, memory tooling, skill guidance,
+project-control documentation, or generated-doc pipelines.
+
+Classify current Git changes:
+
+```zsh
+.venv/bin/python scripts/project_control/classify_project_changes.py --json
+```
+
+Resolve the next bounded project-system action:
+
+```zsh
+.venv/bin/python scripts/project_control/resolve_project_improvement.py --json
+```
+
+Validate documentation impact:
+
+```zsh
+.venv/bin/python scripts/project_control/validate_documentation_impact.py
+```
+
+Project-improvement signals are recorded in
+`registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`. A project-system
+AgentJob should execute at most one bounded improvement and write
+`research_control/tasks/<task_id>/documentation_impact.yaml` when the
+transaction changes project-system sources.
+
 ---
 
 ## Project map
@@ -196,6 +234,7 @@ Research-control continuation is tracked under `research_control/`. Use
 │   └── skills/
 │       ├── project-memory-system/
 │       │   └── scripts/
+│       ├── improve-project-system/
 │       ├── grill-me/
 │       ├── markdown-wiki/
 │       ├── tex-wiki/
@@ -241,6 +280,7 @@ Research-control continuation is tracked under `research_control/`. Use
 │   ├── TEX_SOURCE_REGISTRY.csv
 │   ├── PDF_DERIVATIVE_REGISTRY.csv
 │   ├── HTML_EXPLAINER_REGISTRY.csv
+│   ├── PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv
 │   ├── WIKI_ARTIFACT_REGISTRY.csv
 │   ├── OBSIDIAN_VAULT_REGISTRY.csv
 │   ├── CONTENT_SEMANTIC_REGISTRY.csv
@@ -249,6 +289,8 @@ Research-control continuation is tracked under `research_control/`. Use
 ├── research_control/
 │   └── Tracked Director decisions, AgentJobs, completions, handoffs, and templates.
 ├── scripts/
+│   ├── project_control/
+│   │   └── Project-system classifiers, resolvers, and documentation-impact validators.
 │   └── research_control/
 │       └── Research-control validators and continuation helpers.
 ├── tests/

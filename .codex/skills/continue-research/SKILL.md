@@ -52,6 +52,9 @@ skills provide procedures, and gates control claim promotion.
 7. After a state-changing AgentJob completion, create the durable response
    transaction: role output artifact if any, completion record, registry updates,
    new handoff pair, and `program_state.yaml` update when state changes.
+   The completion or handoff may record `project_improvement_signals`, but
+   `/continue-research` must not opportunistically repair project-system
+   machinery unless the active AgentJob explicitly authorizes that boundary.
 
 8. Synchronize generated systems before commit. Always run:
 
@@ -68,6 +71,7 @@ skills provide procedures, and gates control claim promotion.
 
    ```zsh
    .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+   .venv/bin/python scripts/project_control/validate_documentation_impact.py
    .venv/bin/python scripts/research_control/validate_research_control.py
    .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
    ```
@@ -79,9 +83,13 @@ skills provide procedures, and gates control claim promotion.
     ```
 
     The checkpoint script captures preflight dirty state, blocks unrelated
-    changes, synchronizes generated systems, validates, stages only allowed
-    transaction paths, and commits with a deterministic template. Push is never
-    performed unless explicitly requested.
+    changes, classifies project-system impact, validates documentation impact,
+    synchronizes generated systems, validates, stages only allowed transaction
+    paths, and commits with a deterministic template. Push is never performed
+    unless explicitly requested.
+
+    If the classifier or documentation-impact validator blocks the checkpoint,
+    run `/improve-project-system` for one bounded project-system AgentJob.
 
 11. If the invocation is read-only, blocked, human-gated, or produces no file
     changes, report the state and do not create an empty commit.
