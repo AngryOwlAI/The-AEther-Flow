@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -160,6 +161,162 @@ class ResearchControlTests(unittest.TestCase):
             "Research control: RT-TEST overlay-RT-TEST-refuter@0.1.0-clock-audit completion",
         )
         self.assertIn("Push: not performed", lines)
+
+    def validate_execution_role_fixture(
+        self,
+        *,
+        kind: str,
+        added_constraints: list[str] | None = None,
+        removed_permissions: list[str] | None = None,
+        expanded_permissions: list[str] | None = None,
+        requires_human_gate: str = "false",
+        base_role_id: str = "refuter",
+        base_role_version: str = "0.1.0",
+        provisional_role_name: str = "",
+        justification: str = "",
+        non_reusable_until_registered: str = "false",
+        expires_after: str = "AJ-TEST",
+    ):
+        added = added_constraints if added_constraints is not None else [""]
+        removed = removed_permissions if removed_permissions is not None else [""]
+        expanded = expanded_permissions if expanded_permissions is not None else [""]
+        execution_ref = f"{kind}-fixture"
+        record_path = f"research_control/tasks/RT-TEST/roles/{execution_ref}.yaml"
+        row = {
+            "execution_role_ref": execution_ref,
+            "role_execution_kind": kind,
+            "task_id": "RT-TEST",
+            "agent_job_id": "AJ-TEST",
+            "record_path": record_path,
+            "base_role_id": base_role_id,
+            "base_role_version": base_role_version,
+            "provisional_role_name": provisional_role_name,
+            "authority_delta_summary": "Synthetic role fixture.",
+            "added_constraints": ";".join(added),
+            "removed_permissions": ";".join(removed),
+            "expanded_permissions": ";".join(expanded),
+            "allowed_write_paths": "research_control/tasks/RT-TEST/**",
+            "requires_human_gate": requires_human_gate,
+            "expires_after": expires_after,
+            "justification": justification,
+            "non_reusable_until_registered": non_reusable_until_registered,
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            path = root / record_path
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(
+                "\n".join(
+                    [
+                        f'execution_role_ref: "{execution_ref}"',
+                        f'role_execution_kind: "{kind}"',
+                        'task_id: "RT-TEST"',
+                        'agent_job_id: "AJ-TEST"',
+                        f'base_role_id: "{base_role_id}"',
+                        f'base_role_version: "{base_role_version}"',
+                        f'provisional_role_name: "{provisional_role_name}"',
+                        'authority_delta_summary: "Synthetic role fixture."',
+                        "added_constraints:",
+                        *[f'  - "{item}"' for item in added],
+                        "removed_permissions:",
+                        *[f'  - "{item}"' for item in removed],
+                        "expanded_permissions:",
+                        *[f'  - "{item}"' for item in expanded],
+                        "allowed_write_paths:",
+                        '  - "research_control/tasks/RT-TEST/**"',
+                        f"requires_human_gate: {requires_human_gate}",
+                        f'expires_after: "{expires_after}"',
+                        f'justification: "{justification}"',
+                        f"non_reusable_until_registered: {non_reusable_until_registered}",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            report = self.validator.ValidationReport()
+            with mock.patch.object(self.validator, "REPO_ROOT", root):
+                self.validator.validate_execution_roles(
+                    report,
+                    [row],
+                    {"refuter": {"version": "0.1.0"}},
+                    {"AJ-TEST": {"task_id": "RT-TEST", "job_path": ""}},
+                    {"RT-TEST": {"task_id": "RT-TEST"}},
+                )
+        return report
+
+    def test_execution_role_accepts_exact_registered_role(self) -> None:
+        report = self.validate_execution_role_fixture(kind="registered_role")
+        self.assertEqual(report.errors, [])
+
+    def test_execution_role_accepts_task_overlay_with_added_constraints(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="task_overlay",
+            added_constraints=["Audit only the bounded task artifact."],
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_execution_role_accepts_task_overlay_with_bounded_nonprotected_expansion(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="task_overlay",
+            expanded_permissions=["May add a task-local diagnostic table."],
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_execution_role_rejects_task_overlay_without_delta(self) -> None:
+        report = self.validate_execution_role_fixture(kind="task_overlay")
+        self.assertTrue(any("task_overlay must declare an authority delta" in error for error in report.errors))
+
+    def test_execution_role_rejects_protected_expansion_without_human_gate(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="task_overlay",
+            expanded_permissions=["May issue a Gate Chair verdict."],
+        )
+        self.assertTrue(any("protected expanded_permissions require a human gate" in error for error in report.errors))
+
+    def test_execution_role_accepts_brand_new_provisional_role(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="one_job_provisional_role",
+            base_role_id="",
+            base_role_version="",
+            provisional_role_name="Novel Audit Pilot",
+            justification="No registered role fits this synthetic one-job audit.",
+            non_reusable_until_registered="true",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_execution_role_accepts_template_derived_provisional_role(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="one_job_provisional_role",
+            base_role_id="refuter",
+            base_role_version="0.1.0",
+            provisional_role_name="Refuter Ledger Pilot",
+            justification="The task derives from Refuter but needs a distinct one-job identity.",
+            non_reusable_until_registered="true",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_execution_role_rejects_reusable_provisional_role(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="one_job_provisional_role",
+            base_role_id="",
+            base_role_version="",
+            provisional_role_name="Reusable Pilot",
+            justification="Synthetic reusable provisional role.",
+            non_reusable_until_registered="false",
+        )
+        self.assertTrue(any("provisional role must be non-reusable" in error for error in report.errors))
+
+    def test_execution_role_rejects_provisional_expiry_mismatch(self) -> None:
+        report = self.validate_execution_role_fixture(
+            kind="one_job_provisional_role",
+            base_role_id="",
+            base_role_version="",
+            provisional_role_name="Expiry Pilot",
+            justification="Synthetic expiry mismatch.",
+            non_reusable_until_registered="true",
+            expires_after="AJ-OTHER",
+        )
+        self.assertTrue(any("provisional role must expire after its AgentJob" in error for error in report.errors))
 
 
 if __name__ == "__main__":

@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -35,6 +37,8 @@ RESOLUTION_STATUSES = ALLOWED_STATUSES - OPEN_STATUSES
 SUCCESS_RESOLUTION_STATUSES = {"resolved", "completed", "closed"}
 ALLOWED_SEVERITIES = {"critical", "high", "medium", "low"}
 ALLOWED_SIGNAL_TYPE_STATUSES = {"active", "deprecated"}
+PROVISIONAL_ROLE_RECURRENCE_THRESHOLD = 3
+PROVISIONAL_ROLE_RECURRENCE_SIGNAL_TYPE = "role_authority_mismatch"
 SIGNAL_REGISTRY_NAME = "PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
 SIGNAL_REGISTRY_COLUMNS = (
     "signal_id",
@@ -77,6 +81,10 @@ def read_signals() -> list[dict[str, str]]:
     return read_csv_registry(SIGNAL_REGISTRY_NAME)
 
 
+def read_role_executions() -> list[dict[str, str]]:
+    return read_csv_registry("ROLE_EXECUTION_REGISTRY.csv")
+
+
 def read_signal_types() -> list[dict[str, str]]:
     return read_signal_type_rows(REPO_ROOT)
 
@@ -89,8 +97,91 @@ def read_jobs() -> dict[str, dict[str, str]]:
     }
 
 
+def _provisional_recurrence_key(row: dict[str, str]) -> str:
+    name = row.get("provisional_role_name", "").strip().lower()
+    base_role = row.get("base_role_id", "").strip().lower() or "none"
+    base_version = row.get("base_role_version", "").strip().lower() or "none"
+    return f"name={name}|base={base_role}|version={base_version}"
+
+
+def _signal_id_for_recurrence(key: str) -> str:
+    digest = hashlib.sha1(key.encode("utf-8")).hexdigest()[:12].upper()
+    return f"PIS-PROVISIONAL-ROLE-{digest}"
+
+
+def _recurrence_token(key: str) -> str:
+    safe_key = re.sub(r"[^a-z0-9_.=@|:-]+", "-", key.lower()).strip("-")
+    return f"provisional_role_recurrence_key={safe_key}"
+
+
+def _recurrence_already_recorded(
+    registered_rows: list[dict[str, str]],
+    key: str,
+) -> bool:
+    token = _recurrence_token(key)
+    for row in registered_rows:
+        if row.get("signal_type") != PROVISIONAL_ROLE_RECURRENCE_SIGNAL_TYPE:
+            continue
+        if token in row.get("notes", ""):
+            return True
+    return False
+
+
+def detected_provisional_role_recurrence_signals(
+    registered_rows: list[dict[str, str]] | None = None,
+) -> list[dict[str, str]]:
+    registered = registered_rows if registered_rows is not None else read_signals()
+    groups: dict[str, list[dict[str, str]]] = {}
+    for row in read_role_executions():
+        if row.get("role_execution_kind") != "one_job_provisional_role":
+            continue
+        if not row.get("provisional_role_name", "").strip():
+            continue
+        groups.setdefault(_provisional_recurrence_key(row), []).append(row)
+
+    detected: list[dict[str, str]] = []
+    for key, rows in sorted(groups.items()):
+        if len(rows) < PROVISIONAL_ROLE_RECURRENCE_THRESHOLD:
+            continue
+        if _recurrence_already_recorded(registered, key):
+            continue
+        latest = sorted(
+            rows,
+            key=lambda row: (
+                row.get("updated_at") or row.get("created_at") or "",
+                row.get("execution_role_ref", ""),
+            ),
+        )[-1]
+        token = _recurrence_token(key)
+        detected.append(
+            {
+                "signal_id": _signal_id_for_recurrence(key),
+                "created_at": latest.get("updated_at") or latest.get("created_at", ""),
+                "source_task_id": latest.get("task_id", ""),
+                "source_job_id": latest.get("agent_job_id", ""),
+                "source_role_id": latest.get("provisional_role_name", ""),
+                "signal_type": PROVISIONAL_ROLE_RECURRENCE_SIGNAL_TYPE,
+                "severity": "medium",
+                "status": "open",
+                "evidence_path": latest.get("record_path", ""),
+                "recommended_skill": "improve-project-system",
+                "recommended_role": "project-system-director",
+                "notes": (
+                    f"{token}; observed_count={len(rows)}; "
+                    f"recurrence_threshold={PROVISIONAL_ROLE_RECURRENCE_THRESHOLD}; "
+                    "review for human-authorized registered-role promotion."
+                ),
+                "resolved_by_job_id": "",
+                "resolution_evidence_path": "",
+                "resolved_at": "",
+            }
+        )
+    return detected
+
+
 def collect_signals(*, status: str | None = None, signal_type: str | None = None) -> dict[str, object]:
     rows = read_signals()
+    rows.extend(detected_provisional_role_recurrence_signals(rows))
     if status:
         rows = [row for row in rows if row.get("status") == status]
     if signal_type:

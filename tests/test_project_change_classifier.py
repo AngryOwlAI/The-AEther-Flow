@@ -61,6 +61,26 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             )
         registry.write_text("\n".join(rows) + "\n", encoding="utf-8")
 
+    def write_empty_signal_registry(self, root: Path) -> None:
+        registry = root / "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+        registry.parent.mkdir(parents=True, exist_ok=True)
+        registry.write_text(
+            "signal_id,created_at,source_task_id,source_job_id,source_role_id,signal_type,severity,status,evidence_path,recommended_skill,recommended_role,notes,resolved_by_job_id,resolution_evidence_path,resolved_at\n",
+            encoding="utf-8",
+        )
+
+    def write_role_execution_registry(self, root: Path, count: int) -> None:
+        registry = root / "registries/ROLE_EXECUTION_REGISTRY.csv"
+        registry.parent.mkdir(parents=True, exist_ok=True)
+        rows = [
+            "execution_role_ref,role_execution_kind,task_id,agent_job_id,record_path,base_role_id,base_role_version,provisional_role_name,authority_delta_summary,added_constraints,removed_permissions,expanded_permissions,allowed_write_paths,requires_human_gate,expires_after,justification,non_reusable_until_registered,validation_status,created_at,updated_at,notes"
+        ]
+        for index in range(1, count + 1):
+            rows.append(
+                f"pilot-audit-{index},one_job_provisional_role,RT-ROLE-{index},AJ-ROLE-{index},research_control/tasks/RT-ROLE-{index}/roles/pilot-audit.yaml,refuter,0.1.0,Recurring Pilot Audit,One-job pilot role.,Synthetic constraint.,,,research_control/tasks/RT-ROLE-{index}/**,false,AJ-ROLE-{index},Synthetic recurrence fixture.,true,PASS,2026-06-10T00:0{index}:00Z,2026-06-10T00:0{index}:00Z,Synthetic role execution."
+            )
+        registry.write_text("\n".join(rows) + "\n", encoding="utf-8")
+
     def write_job_contract(
         self,
         root: Path,
@@ -458,6 +478,62 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             self.resolver.signal_type_role_map = original_role_map
         self.assertEqual(result["boundary"], "project_improvement_signal_ready")
         self.assertEqual(result["recommended_role"], "validator-engineer")
+
+    def test_two_matching_provisional_roles_do_not_emit_promotion_signal(self) -> None:
+        original_root = self.signals.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_signal_type_registry(root, "role_authority_mismatch")
+            self.write_empty_signal_registry(root)
+            self.write_role_execution_registry(root, 2)
+            self.signals.REPO_ROOT = root
+            try:
+                result = self.signals.collect_signals(signal_type="role_authority_mismatch")
+            finally:
+                self.signals.REPO_ROOT = original_root
+        self.assertEqual(result["open_signal_count"], 0)
+
+    def test_three_matching_provisional_roles_emit_promotion_signal(self) -> None:
+        original_root = self.signals.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_signal_type_registry(root, "role_authority_mismatch")
+            self.write_empty_signal_registry(root)
+            self.write_role_execution_registry(root, 3)
+            self.signals.REPO_ROOT = root
+            try:
+                result = self.signals.collect_signals(signal_type="role_authority_mismatch")
+            finally:
+                self.signals.REPO_ROOT = original_root
+        self.assertEqual(result["open_signal_count"], 1)
+        self.assertEqual(result["open_signals"][0]["recommended_role"], "project-system-director")
+        self.assertIn("provisional_role_recurrence_key=", result["open_signals"][0]["notes"])
+
+    def test_human_authorized_registration_can_close_recurrence_signal(self) -> None:
+        original_root = self.signals.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_signal_type_registry(root, "role_authority_mismatch")
+            self.write_role_execution_registry(root, 3)
+            key = "name=recurring pilot audit|base=refuter|version=0.1.0"
+            signal_id = self.signals._signal_id_for_recurrence(key)
+            token = self.signals._recurrence_token(key)
+            self.write_job_registry(root, "AJ-REGISTER")
+            completion_path = self.write_completion(root, job_id="AJ-REGISTER")
+            signal_registry = root / "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+            signal_registry.write_text(
+                "signal_id,created_at,source_task_id,source_job_id,source_role_id,signal_type,severity,status,evidence_path,recommended_skill,recommended_role,notes,resolved_by_job_id,resolution_evidence_path,resolved_at\n"
+                f"{signal_id},2026-06-10T00:03:00Z,RT-ROLE-3,,Recurring Pilot Audit,role_authority_mismatch,medium,resolved,,improve-project-system,project-system-director,{token}; human-authorized registration completed.,AJ-REGISTER,{completion_path},2026-06-10T00:04:00Z\n",
+                encoding="utf-8",
+            )
+            self.signals.REPO_ROOT = root
+            try:
+                result = self.signals.collect_signals(status="open", signal_type="role_authority_mismatch")
+                report = self.signals.validate_signal_registration()
+            finally:
+                self.signals.REPO_ROOT = original_root
+        self.assertEqual(result["open_signal_count"], 0)
+        self.assertEqual(report["errors"], [])
 
     def test_emitted_project_improvement_signals_are_registered(self) -> None:
         report = self.signals.validate_signal_registration()

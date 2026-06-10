@@ -29,6 +29,18 @@ The registry row and frontmatter must agree.
 
 ## Rules
 
-Registered role versions are immutable in meaning. A role may narrow its scope
-through a one-job AgentJob overlay, but the overlay cannot expand authority,
-bypass validators, or promote claims.
+Registered role versions are immutable in meaning. They provide stable
+templates for the Director of Research rather than a rigid routing menu. The
+actual one-job execution semantics are fixed by an execution-role record.
+
+Task-specific modification belongs in `EXECUTION_ROLE_SCHEMA`:
+
+- `registered_role` is direct template use.
+- `task_overlay` modifies a registered role while preserving its identity.
+- `one_job_provisional_role` creates a temporary one-job role, either brand-new
+  or derived from a registered role template.
+
+No execution-role path may bypass validators. Protected authority expansion
+requires a human gate: claim promotion, canonical ontology authority,
+benchmark-status authority, Gate Chair authority, or permanent role
+registration.

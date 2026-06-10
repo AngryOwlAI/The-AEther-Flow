@@ -184,6 +184,22 @@ ROLE_EXECUTION_KINDS = {
     "one_job_provisional_role",
 }
 
+PROTECTED_AUTHORITY_MARKERS = (
+    "claim promotion",
+    "promote claims",
+    "physics claim promotion",
+    "canonical ontology",
+    "ontology edit",
+    "benchmark promotion",
+    "benchmark status",
+    "gate chair",
+    "gate verdict",
+    "permanent role registration",
+    "role registration",
+    "register as a permanent role",
+    "register as permanent role",
+)
+
 GLOBALLY_BROAD_PATTERNS = {
     "*",
     "**",
@@ -508,6 +524,17 @@ def _has_substantive_value(value: Any) -> bool:
     return any(item.strip().lower() not in {"", "none"} for item in _listish_values(value))
 
 
+def _protected_authority_expansions(value: Any) -> list[str]:
+    protected: list[str] = []
+    for item in _listish_values(value):
+        lowered = item.strip().lower()
+        if lowered in {"", "none"}:
+            continue
+        if any(marker in lowered for marker in PROTECTED_AUTHORITY_MARKERS):
+            protected.append(item)
+    return protected
+
+
 def validate_execution_roles(
     report: ValidationReport,
     execution_rows: list[dict[str, str]],
@@ -595,9 +622,23 @@ def validate_execution_roles(
                 record.get("removed_permissions", [])
             ) and not _has_substantive_value(record.get("expanded_permissions", [])):
                 report.error(f"{execution_ref}: task_overlay must declare an authority delta")
-            if _has_substantive_value(record.get("expanded_permissions", [])) and row["requires_human_gate"] != "true":
-                report.error(f"{execution_ref}: expanded_permissions require a human gate")
+            protected = _protected_authority_expansions(record.get("expanded_permissions", []))
+            if protected and row["requires_human_gate"] != "true":
+                report.error(
+                    f"{execution_ref}: protected expanded_permissions require a human gate"
+                )
         if kind == "one_job_provisional_role":
+            base_role = row["base_role_id"]
+            base_version = row["base_role_version"]
+            if bool(base_role) != bool(base_version):
+                report.error(
+                    f"{execution_ref}: provisional role base_role_id and base_role_version must be provided together"
+                )
+            elif base_role:
+                if base_role not in roles:
+                    report.error(f"{execution_ref}: provisional base_role_id is not registered")
+                elif roles[base_role]["version"] != base_version:
+                    report.error(f"{execution_ref}: provisional base_role_version does not match registry")
             if not row["provisional_role_name"]:
                 report.error(f"{execution_ref}: provisional role requires provisional_role_name")
             if not row["justification"]:
@@ -606,6 +647,11 @@ def validate_execution_roles(
                 report.error(f"{execution_ref}: provisional role must be non-reusable until registered")
             if row["expires_after"] != row["agent_job_id"]:
                 report.error(f"{execution_ref}: provisional role must expire after its AgentJob")
+            protected = _protected_authority_expansions(record.get("expanded_permissions", []))
+            if protected and row["requires_human_gate"] != "true":
+                report.error(
+                    f"{execution_ref}: protected expanded_permissions require a human gate"
+                )
 
     for job_id, job in jobs.items():
         execution_refs = jobs_to_execution_refs.get(job_id, [])

@@ -64,6 +64,13 @@ an open-ended repository rewrite.
 7. If system-design or validation drift is detected, create or reuse one
    Project-System Director, Validator Engineer, or Memory-System Maintainer
    AgentJob.
+   Recurring provisional-role patterns are project-system signals, not silent
+   drift. When the same `one_job_provisional_role` pattern appears three times
+   by provisional role name plus base-role lineage, route one bounded
+   Project-System Director review for possible human-authorized registration as
+   a permanent role. Permanent registration must update the registered role
+   contract and `AGENT_ROLE_REGISTRY.csv`; do not promote a provisional role by
+   convention alone.
    Registered high/critical signals take priority over current Git-change
    routing; registered low/medium signals remain backlog unless no current
    project-system action is pending.

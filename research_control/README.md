@@ -10,6 +10,15 @@ selected execution context. An AgentJob defines allowed reads, writes, outputs,
 validators, and claim boundaries. Validators enforce the boundaries. Human-gated
 roles control promotion or closure.
 
+Registered roles are stable templates for Director reasoning, not a rigid menu.
+The execution-role record is the one-job authority contract. Use direct
+`registered_role` only when the template fits without change; use
+`task_overlay` when a registered role remains the correct identity but needs a
+bounded task-specific delta; use `one_job_provisional_role` when the Director
+needs a brand-new temporary role or a template-derived role with a distinct
+one-job identity. Recurring provisional-role patterns are routed through
+project-system improvement for possible human-authorized registration.
+
 ## One-Job Rule
 
 `/continue-research` may set up or execute at most one bounded AgentJob per

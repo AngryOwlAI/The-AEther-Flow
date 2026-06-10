@@ -7,9 +7,9 @@ status: "active"
 # Execution Role Schema
 
 Execution-role records bind one AgentJob to the exact role semantics used for
-that job. They allow the Director of Research to use a registered role,
-task-scoped overlay, or one-job provisional role without mutating base role
-contracts.
+that job. Registered role contracts are stable templates and guidance for the
+Director of Research; the execution-role record is the task-local authority
+contract that decides how that template, overlay, or provisional role is used.
 
 ## Required Fields
 
@@ -27,6 +27,13 @@ contracts.
 - `registered_role`
 - `task_overlay`
 - `one_job_provisional_role`
+
+Use `registered_role` only when the registered role fits directly and no
+authority delta is needed. Use `task_overlay` when the selected role remains a
+registered role but needs task-specific constraints, removed permissions, or a
+bounded non-promotional authority adjustment. Use
+`one_job_provisional_role` when no registered role fits, or when a
+template-derived modification needs a distinct one-job identity.
 
 ## Shared Fields
 
@@ -50,7 +57,11 @@ Task overlays must include:
 - `removed_permissions`
 - `expanded_permissions`
 
-Expanded permissions require `requires_human_gate: true`.
+Non-protected bounded expansions may remain one-job scoped when the AgentJob
+claim boundary and write-path allowlist keep them non-promotional. Protected
+expansion requires a human gate. Protected expansion includes claim promotion,
+canonical ontology authority, benchmark-status authority, Gate Chair authority,
+or permanent role registration.
 
 ## Provisional Role Fields
 
@@ -63,6 +74,12 @@ One-job provisional roles must include:
 Provisional roles expire after their owning AgentJob and are not reusable until
 registered as a versioned base role.
 
+Provisional roles may either leave `base_role_id` and `base_role_version` blank
+for a brand-new one-job role, or cite a registered role as a template lineage.
+When cited, the base role id and version must match `AGENT_ROLE_REGISTRY.csv`.
+If the same provisional role pattern recurs three times, the project-system
+improvement loop must surface a role-registration review signal.
+
 ## Registered Role Fields
 
 Registered-role records must include:
@@ -70,5 +87,5 @@ Registered-role records must include:
 - `base_role_id`
 - `base_role_version`
 
-They may not silently add permissions. Any task-specific adaptation must use a
-`task_overlay` record instead.
+They may not silently add permissions. Prospective task-specific adaptation
+should use a `task_overlay` or `one_job_provisional_role` record instead.
