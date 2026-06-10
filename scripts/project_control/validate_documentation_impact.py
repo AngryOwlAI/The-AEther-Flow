@@ -30,15 +30,9 @@ DOC_UPDATE_PATTERNS = {
     "AGENTS.md",
     "research_control/README.md",
     "research_control/AGENTS.md",
-    ".agents/roles/**/*.md",
-    ".agents/schemas/*.md",
-    ".agents/schemas/**/*.md",
-    ".codex/skills/*/SKILL.md",
     "markdown/**/*.md",
-    "registries/AGENT_ROLE_REGISTRY.csv",
     "registries/HTML_EXPLAINER_REGISTRY.csv",
     "registries/MARKDOWN_SOURCE_REGISTRY.csv",
-    "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv",
 }
 VALIDATOR_COMMAND_TERMS = {
     "classify_project_changes": ("scripts/project_control/classify_project_changes.py",),

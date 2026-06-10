@@ -1,3 +1,5 @@
+<!-- authority: control -->
+
 # AGENTS.md
 
 Scoped guidance for `research_control/`.

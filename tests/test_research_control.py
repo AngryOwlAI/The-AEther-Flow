@@ -117,6 +117,83 @@ class ResearchControlTests(unittest.TestCase):
             self.validator.validate_diff(report, jobs, "HEAD", False)
         self.assertTrue(any("overly broad allowlist" in error for error in report.errors))
 
+    def test_markdown_authority_parser_is_deterministic(self) -> None:
+        authorities = self.validator.markdown_authority_by_line(
+            "Intro\n"
+            "<!-- authority: explanatory -->\n"
+            "Explanation\n"
+            "<!-- authority: control -->\n"
+            "Rule\n"
+        )
+        self.assertEqual(authorities[1], "unmarked")
+        self.assertEqual(authorities[2], "explanatory")
+        self.assertEqual(authorities[3], "explanatory")
+        self.assertEqual(authorities[4], "control")
+        self.assertEqual(authorities[5], "control")
+
+    def validate_authority_fixture(
+        self,
+        *,
+        role_id: str,
+        path_text: str,
+        text: str,
+    ):
+        report = self.validator.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            path = root / path_text
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding="utf-8")
+            with mock.patch.object(self.validator, "REPO_ROOT", root):
+                self.validator.validate_markdown_authority_boundaries(
+                    report,
+                    {"job_id": "AJ-TEST", "role_id": role_id},
+                    [path_text],
+                    "HEAD",
+                    False,
+                )
+        return report
+
+    def test_documentation_curator_rejects_control_marked_section(self) -> None:
+        report = self.validate_authority_fixture(
+            role_id="documentation-curator",
+            path_text="README.md",
+            text="<!-- authority: control -->\n# Rule\n",
+        )
+        self.assertTrue(any("documentation-curator cannot edit control-marked" in error for error in report.errors))
+
+    def test_documentation_curator_rejects_skill_contract(self) -> None:
+        report = self.validate_authority_fixture(
+            role_id="documentation-curator",
+            path_text=".codex/skills/continue-research/SKILL.md",
+            text="# Skill\n",
+        )
+        self.assertTrue(any("documentation-curator cannot edit control markdown" in error for error in report.errors))
+
+    def test_project_control_maintainer_accepts_skill_contract(self) -> None:
+        report = self.validate_authority_fixture(
+            role_id="project-control-maintainer",
+            path_text=".codex/skills/continue-research/SKILL.md",
+            text="# Skill\n",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_project_control_maintainer_rejects_explanatory_section_without_overlay(self) -> None:
+        report = self.validate_authority_fixture(
+            role_id="project-control-maintainer",
+            path_text="README.md",
+            text="<!-- authority: explanatory -->\n# Overview\n",
+        )
+        self.assertTrue(any("project-control-maintainer cannot edit explanatory section" in error for error in report.errors))
+
+    def test_mixed_markdown_rejects_unmarked_change(self) -> None:
+        report = self.validate_authority_fixture(
+            role_id="validator-engineer",
+            path_text="README.md",
+            text="# Unmarked\n",
+        )
+        self.assertTrue(any("outside an authority marker" in error for error in report.errors))
+
     def test_continue_research_reports_director_context_packet(self) -> None:
         program_state = self.strict_yaml.loads(
             (REPO_ROOT / "research_control" / "program_state.yaml").read_text(

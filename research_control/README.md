@@ -1,3 +1,5 @@
+<!-- authority: control -->
+
 # Research Control
 
 This directory contains the tracked control spine for Director-led research
@@ -51,8 +53,13 @@ understand, operate, validate, route, or extend the system:
 .venv/bin/python scripts/project_control/classify_project_changes.py --json
 ```
 
-When documentation impact is required, the transaction must include either a
-source documentation update or a valid
+Documentation impact is a receipt requirement and does not by itself select the
+Documentation Curator. Explanatory documentation edits belong to Documentation
+Curator; skill contracts, role contracts, schema contracts, control registries,
+and control-marked mixed Markdown belong to Project-Control Maintainer unless a
+more specific validator or memory role owns the change. When documentation
+impact is required, the transaction must include either a source documentation
+update or a valid
 `research_control/tasks/<task_id>/documentation_impact.yaml` no-op rationale:
 
 ```zsh

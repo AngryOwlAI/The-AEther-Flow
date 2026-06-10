@@ -1,4 +1,4 @@
-
+<!-- authority: explanatory -->
 ---
 
 # The Æther-Flow Interpretation of Relativity Research Project
@@ -80,6 +80,8 @@ The goal of this research program is to improve itself using the lessons learned
 ---
 
 ## Requirements
+
+<!-- authority: control -->
 
 ### Python environment
 
@@ -192,8 +194,13 @@ Research-control continuation is tracked under `research_control/`. Use
 
 Project-system improvement is tracked separately from physics continuation.
 Use `.codex/skills/improve-project-system/SKILL.md` when a change affects
-roles, schemas, validators, checkpoint gates, memory tooling, skill guidance,
-project-control documentation, or generated-doc pipelines.
+roles, schemas, validators, checkpoint gates, memory tooling, control-marked
+skill guidance, project-control documentation, or generated-doc pipelines.
+
+Mixed Markdown files use authority markers. Explanatory sections describe
+current behavior without changing obligations. Control sections change or define
+agent behavior, routing, authority, validator expectations, allowed paths,
+commands, schemas, stop conditions, or workflow gates.
 
 Decision vocabulary:
 
@@ -202,7 +209,8 @@ Decision vocabulary:
 | `continue-research` | Continue physics research-control from tracked state, handoffs, and the active task boundary. | Uses `.codex/skills/continue-research/SKILL.md`; may route one bounded research AgentJob through the Director-controlled control spine. | Does not repair project-system machinery unless the routed task explicitly allows it. |
 | `improve-project-system` | Repair or clarify the research system itself: roles, schemas, validators, checkpoint gates, memory tooling, skill guidance, docs, or generated-doc pipelines. | Uses `.codex/skills/improve-project-system/SKILL.md`; may resolve one signal, one classifier result, or one bounded project-system AgentJob. | Does not perform physics derivation, promote claims, or edit canonical science sources. |
 | Project-System Director | A project-system boundary or routing question must be resolved before work proceeds. | Creates a project-system Director Decision Record and selects one bounded non-scientific AgentJob. | Does not execute the selected job or expand role authority by convention. |
-| Documentation Curator | Project-control documentation, role contracts, skill guidance, or registered Markdown source docs drift from the machinery. | Updates allowed canonical documentation or documentation-source specs and records documentation impact when required. | Does not hand-edit generated derivatives or change scientific claim status. |
+| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown or documentation-source specs and records documentation impact when required. | Does not change control contracts, workflow commands, routing, validators, permissions, or scientific claim status. |
+| Project-Control Maintainer | Skill contracts, role contracts, schema contracts, control registries, or control-marked mixed Markdown need functional maintenance. | Edits allowed control markdown and project-control contracts under one AgentJob allowlist. | Does not edit explanatory-only sections unless a task overlay explicitly grants `explanatory_markdown` permission. |
 | Validator Engineer | Deterministic validator, checkpoint gate, or test behavior is missing, unclear, or incorrect. | Edits allowed validator scripts, tests, documented validator contracts, and registry rows. | Does not use model judgment as a validator substitute or decide human policy questions. |
 | Memory-System Maintainer | Source-first memory, wiki, registry, Obsidian, query, or derivative metadata tooling needs maintenance. | Edits allowed memory-system scripts, registry generation rules, query tooling, and related skill documentation. | Does not make generated artifacts authoritative or alter claim-promotion semantics. |
 

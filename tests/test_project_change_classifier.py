@@ -223,10 +223,55 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         )
         self.assertTrue(result["docs_impact_required"])
         self.assertTrue(result["project_system_improvement_required"])
-        self.assertEqual(result["recommended_role"], "documentation-curator")
+        self.assertEqual(result["recommended_role"], "validator-engineer")
         self.assertIn("role_contract_changed", result["reason_codes"])
         self.assertIn("skill_contract_changed", result["reason_codes"])
         self.assertIn("validator_changed", result["reason_codes"])
+
+    def test_skill_contract_change_routes_to_project_control_maintainer(self) -> None:
+        result = self.classifier.classify_paths(
+            [".codex/skills/continue-research/SKILL.md"]
+        )
+        self.assertTrue(result["docs_impact_required"])
+        self.assertTrue(result["project_system_improvement_required"])
+        self.assertEqual(result["recommended_role"], "project-control-maintainer")
+        self.assertIn("skill_contract_changed", result["reason_codes"])
+
+    def test_explanatory_mixed_markdown_routes_to_documentation_curator(self) -> None:
+        original_root = self.classifier.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "<!-- authority: explanatory -->\n# Example\n",
+                encoding="utf-8",
+            )
+            self.classifier.REPO_ROOT = root
+            try:
+                result = self.classifier.classify_paths(["README.md"])
+            finally:
+                self.classifier.REPO_ROOT = original_root
+        self.assertTrue(result["docs_impact_required"])
+        self.assertFalse(result["project_system_improvement_required"])
+        self.assertEqual(result["recommended_role"], "documentation-curator")
+        self.assertIn("documentation_surface_changed", result["reason_codes"])
+
+    def test_control_mixed_markdown_routes_to_project_control_maintainer(self) -> None:
+        original_root = self.classifier.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "AGENTS.md").write_text(
+                "<!-- authority: control -->\n# Example\n",
+                encoding="utf-8",
+            )
+            self.classifier.REPO_ROOT = root
+            try:
+                result = self.classifier.classify_paths(["AGENTS.md"])
+            finally:
+                self.classifier.REPO_ROOT = original_root
+        self.assertTrue(result["docs_impact_required"])
+        self.assertTrue(result["project_system_improvement_required"])
+        self.assertEqual(result["recommended_role"], "project-control-maintainer")
+        self.assertIn("control_markdown_changed", result["reason_codes"])
 
     def test_physics_tex_change_does_not_trigger_curator_by_default(self) -> None:
         result = self.classifier.classify_paths(
@@ -401,12 +446,12 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertIn("research_control_state_changed", result["reason_codes"])
         self.assertNotIn("project_improvement_signal_recorded", result["reason_codes"])
 
-    def test_resolver_recommends_curator_for_docs_impact(self) -> None:
+    def test_resolver_recommends_project_control_maintainer_for_skill_contract(self) -> None:
         result = self.resolver.resolve_project_improvement(
             [".codex/skills/continue-research/SKILL.md"]
         )
-        self.assertEqual(result["boundary"], "documentation_curator_required")
-        self.assertEqual(result["recommended_role"], "documentation-curator")
+        self.assertEqual(result["boundary"], "project_system_agent_job_required")
+        self.assertEqual(result["recommended_role"], "project-control-maintainer")
         self.assertTrue(result["resolver_is_advisory"])
         self.assertFalse(result["hard_checkpoint_gate"])
         self.assertEqual(result["checkpoint_gate_source"], "validators")
@@ -430,7 +475,8 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             )
         finally:
             self.resolver.collect_signals = original
-        self.assertEqual(result["boundary"], "documentation_curator_required")
+        self.assertEqual(result["boundary"], "project_system_agent_job_required")
+        self.assertEqual(result["recommended_role"], "project-control-maintainer")
         self.assertEqual(result["selected_signal"], {})
 
     def test_high_signal_preempts_current_documentation_impact(self) -> None:

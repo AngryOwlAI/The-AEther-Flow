@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import fnmatch
 import json
+import re
 import subprocess
 import sys
 from dataclasses import dataclass, field
@@ -49,6 +50,38 @@ SIGNAL_FIELDS = (
     "recommended_role",
     "notes",
 )
+DOCUMENTATION_ROLE = "documentation-curator"
+CONTROL_ROLE = "project-control-maintainer"
+VALIDATOR_ROLE = "validator-engineer"
+MEMORY_ROLE = "memory-system-maintainer"
+ROLE_PRIORITY = {
+    DOCUMENTATION_ROLE: 10,
+    CONTROL_ROLE: 60,
+    VALIDATOR_ROLE: 70,
+    MEMORY_ROLE: 80,
+}
+MIXED_MARKDOWN_PATHS = {
+    "README.md",
+    "AGENTS.md",
+    "research_control/README.md",
+    "research_control/AGENTS.md",
+}
+CONTROL_REGISTRY_PATHS = {
+    "registries/AGENT_ROLE_REGISTRY.csv",
+    "registries/AGENT_JOB_REGISTRY.csv",
+    "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+    "registries/DIRECTOR_DECISION_REGISTRY.csv",
+    "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv",
+    "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv",
+    "registries/RESEARCH_TASK_REGISTRY.csv",
+    "registries/ROLE_EXECUTION_REGISTRY.csv",
+}
+DOCUMENTATION_REGISTRY_PATHS = {
+    "registries/HTML_EXPLAINER_REGISTRY.csv",
+    "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+}
+AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
+HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
 @dataclass
@@ -61,20 +94,30 @@ class Classification:
     required_documentation_surfaces: set[str] = field(default_factory=set)
     docs_impact_required: bool = False
     project_system_improvement_required: bool = False
+    recommended_role: str = ""
+    recommended_role_priority: int = 0
 
-    def docs(self, *surfaces: str) -> None:
+    def recommend(self, role: str) -> None:
+        priority = ROLE_PRIORITY.get(role, 0)
+        if priority > self.recommended_role_priority:
+            self.recommended_role = role
+            self.recommended_role_priority = priority
+
+    def docs(self, *surfaces: str, role: str = DOCUMENTATION_ROLE) -> None:
         self.docs_impact_required = True
         self.required_documentation_surfaces.update(surface for surface in surfaces if surface)
+        self.recommend(role)
 
-    def improve(self) -> None:
+    def improve(self, role: str = VALIDATOR_ROLE) -> None:
         self.project_system_improvement_required = True
+        self.recommend(role)
 
     def as_dict(self) -> dict[str, object]:
-        recommended_role = ""
-        if self.docs_impact_required:
-            recommended_role = "documentation-curator"
-        elif self.project_system_improvement_required:
-            recommended_role = "validator-engineer"
+        recommended_role = self.recommended_role
+        if not recommended_role and self.docs_impact_required:
+            recommended_role = DOCUMENTATION_ROLE
+        elif not recommended_role and self.project_system_improvement_required:
+            recommended_role = VALIDATOR_ROLE
         return {
             "docs_impact_required": self.docs_impact_required,
             "project_system_improvement_required": self.project_system_improvement_required,
@@ -111,6 +154,17 @@ def run_git(command: list[str]) -> list[str]:
     if result.returncode != 0:
         raise RuntimeError(result.stderr.strip() or "git command failed")
     return [line.strip() for line in result.stdout.splitlines() if line.strip()]
+
+
+def run_git_text(command: list[str]) -> str:
+    result = subprocess.run(
+        command,
+        cwd=REPO_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    return result.stdout if result.returncode == 0 else ""
 
 
 def changed_paths_from_git(
@@ -167,6 +221,52 @@ def text_value(value: object) -> str:
     return str(value or "").strip()
 
 
+def changed_new_lines_from_diff(diff_text: str) -> set[int]:
+    lines: set[int] = set()
+    for raw_line in diff_text.splitlines():
+        match = HUNK_RE.search(raw_line)
+        if not match:
+            continue
+        start = int(match.group(1))
+        count = int(match.group(2) or "1")
+        if count > 0:
+            lines.update(range(start, start + count))
+    return lines
+
+
+def changed_new_lines(path: str) -> set[int]:
+    unstaged = run_git_text(["git", "diff", "--unified=0", "--", path])
+    staged = run_git_text(["git", "diff", "--cached", "--unified=0", "--", path])
+    return changed_new_lines_from_diff(unstaged) | changed_new_lines_from_diff(staged)
+
+
+def authority_by_line(text: str) -> dict[int, str]:
+    active = ""
+    authorities: dict[int, str] = {}
+    for line_number, line in enumerate(text.splitlines(), start=1):
+        match = AUTHORITY_MARKER_RE.search(line)
+        if match:
+            active = match.group(1)
+        authorities[line_number] = active or "unmarked"
+    return authorities
+
+
+def markdown_authorities(path: str) -> set[str]:
+    absolute = REPO_ROOT / path
+    if not absolute.exists() or not absolute.is_file():
+        return {"unmarked"}
+    text = absolute.read_text(encoding="utf-8")
+    line_authorities = authority_by_line(text)
+    changed_lines = changed_new_lines(path)
+    if changed_lines:
+        return {
+            line_authorities.get(line_number, "unmarked")
+            for line_number in changed_lines
+        }
+    markers = set(AUTHORITY_MARKER_RE.findall(text))
+    return markers or {"unmarked"}
+
+
 def is_nonblank_signal(value: object) -> bool:
     if not isinstance(value, dict):
         return False
@@ -199,20 +299,20 @@ def contains_project_signal(path: str) -> bool:
 def classify_canonical_path(path: str, result: Classification) -> None:
     if path.startswith(".agents/roles/"):
         result.reason_codes.add("role_contract_changed")
-        result.docs("AGENTS.md", "README.md", "registries/AGENT_ROLE_REGISTRY.csv")
-        result.improve()
+        result.docs("AGENTS.md", "README.md", "registries/AGENT_ROLE_REGISTRY.csv", role=CONTROL_ROLE)
+        result.improve(CONTROL_ROLE)
     elif path.startswith(".agents/schemas/"):
         result.reason_codes.add("schema_contract_changed")
-        result.docs("AGENTS.md", "README.md")
-        result.improve()
+        result.docs("AGENTS.md", "README.md", role=CONTROL_ROLE)
+        result.improve(CONTROL_ROLE)
     elif path_matches(path, [".codex/skills/*/SKILL.md"]):
         result.reason_codes.add("skill_contract_changed")
-        result.docs("AGENTS.md", "README.md")
-        result.improve()
+        result.docs("AGENTS.md", "README.md", role=CONTROL_ROLE)
+        result.improve(CONTROL_ROLE)
     elif path.startswith(".codex/skills/project-memory-system/scripts/"):
         result.reason_codes.add("memory_tooling_changed")
-        result.docs("README.md", ".codex/skills/project-memory-system/SKILL.md")
-        result.improve()
+        result.docs("README.md", ".codex/skills/project-memory-system/SKILL.md", role=MEMORY_ROLE)
+        result.improve(MEMORY_ROLE)
     elif path.startswith("scripts/research_control/"):
         if "validate" in Path(path).name:
             result.reason_codes.add("validator_changed")
@@ -226,34 +326,52 @@ def classify_canonical_path(path: str, result: Classification) -> None:
             "README.md",
             "research_control/README.md",
             ".codex/skills/continue-research/SKILL.md",
+            role=VALIDATOR_ROLE,
         )
-        result.improve()
+        result.improve(VALIDATOR_ROLE)
     elif path.startswith("scripts/project_control/"):
         if "validate" in Path(path).name:
             result.reason_codes.add("validator_changed")
         else:
             result.reason_codes.add("project_control_tooling_changed")
-        result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md")
-        result.improve()
+        result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md", role=VALIDATOR_ROLE)
+        result.improve(VALIDATOR_ROLE)
     elif path.startswith("tests/"):
         result.reason_codes.add("test_changed")
-        result.improve()
+        result.improve(VALIDATOR_ROLE)
     elif path.startswith("registries/") and path.endswith("REGISTRY.csv"):
         if path == "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv":
             result.reason_codes.add("project_improvement_signal_registry_changed")
-            result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md")
-            result.improve()
+            result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md", role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
         elif path == "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv":
             result.reason_codes.add("project_improvement_signal_type_registry_changed")
-            result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md")
-            result.improve()
+            result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md", role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
+        elif path in DOCUMENTATION_REGISTRY_PATHS:
+            result.reason_codes.add("documentation_registry_changed")
+            result.docs("README.md", path)
+        elif path in CONTROL_REGISTRY_PATHS:
+            result.reason_codes.add("control_registry_changed")
+            result.docs("README.md", "AGENTS.md", role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
         else:
             result.reason_codes.add("registry_changed")
-            result.docs("README.md", "AGENTS.md")
-            result.improve()
-    elif path in {"README.md", "AGENTS.md", "research_control/README.md", "research_control/AGENTS.md"}:
-        result.reason_codes.add("documentation_surface_changed")
-        result.docs(path)
+            result.docs("README.md", "AGENTS.md", role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
+    elif path in MIXED_MARKDOWN_PATHS:
+        authorities = markdown_authorities(path)
+        if "unmarked" in authorities:
+            result.reason_codes.add("unmarked_mixed_markdown_changed")
+            result.docs(path, role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
+        elif "control" in authorities:
+            result.reason_codes.add("control_markdown_changed")
+            result.docs(path, role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
+        else:
+            result.reason_codes.add("documentation_surface_changed")
+            result.docs(path)
     elif path.startswith("markdown/html-explainer-specs/"):
         result.reason_codes.add("html_source_spec_changed")
         result.docs("registries/HTML_EXPLAINER_REGISTRY.csv", "README.md")
@@ -264,14 +382,14 @@ def classify_canonical_path(path: str, result: Classification) -> None:
         result.reason_codes.add("research_control_state_changed")
         if contains_project_signal(path):
             result.reason_codes.add("project_improvement_signal_recorded")
-            result.docs("research_control/README.md", ".codex/skills/improve-project-system/SKILL.md")
-            result.improve()
+            result.docs("research_control/README.md", ".codex/skills/improve-project-system/SKILL.md", role=CONTROL_ROLE)
+            result.improve(CONTROL_ROLE)
     elif path.startswith("ontology/tex/") or path.startswith("manuscripts/tex/"):
         result.reason_codes.add("physics_source_changed")
     elif path == "Makefile":
         result.reason_codes.add("validation_entrypoint_changed")
-        result.docs("README.md")
-        result.improve()
+        result.docs("README.md", role=VALIDATOR_ROLE)
+        result.improve(VALIDATOR_ROLE)
 
 
 def classify_paths(paths: Iterable[str]) -> dict[str, object]:

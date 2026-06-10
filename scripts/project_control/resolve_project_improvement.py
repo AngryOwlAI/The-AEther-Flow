@@ -80,9 +80,13 @@ def resolve_project_improvement(paths: list[str] | None = None) -> dict[str, obj
             "requires one bounded AgentJob"
         )
     elif classification.get("docs_impact_required"):
-        boundary = "documentation_curator_required"
-        recommended_role = "documentation-curator"
-        reason = "current Git change has documentation impact"
+        recommended_role = str(classification.get("recommended_role", "documentation-curator"))
+        if recommended_role == "documentation-curator":
+            boundary = "documentation_curator_required"
+            reason = "current Git change has explanatory documentation impact"
+        else:
+            boundary = "project_system_agent_job_required"
+            reason = "current Git change has documentation impact for a non-documentation control surface"
     elif classification.get("project_system_improvement_required"):
         boundary = "project_system_agent_job_required"
         recommended_role = classification.get("recommended_role", "validator-engineer")
@@ -113,6 +117,7 @@ def resolve_project_improvement(paths: list[str] | None = None) -> dict[str, obj
             "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv",
             "registries/AGENT_ROLE_REGISTRY.csv",
             ".agents/roles/research_ops/documentation-curator.v0.1.0.md",
+            ".agents/roles/research_ops/project-control-maintainer.v0.1.0.md",
             ".codex/skills/improve-project-system/SKILL.md",
         ],
         "stop_conditions": STOP_CONDITIONS,

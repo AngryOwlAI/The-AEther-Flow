@@ -70,6 +70,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md`
 - `WIKI-MD-SCHEMA-AGENT-JOB-SCHEMA` `wiki/markdown/md-schema-agent-job-schema.md`
@@ -146,6 +147,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
 - `MD-SCHEMA-AGENT-JOB-SCHEMA` `.agents/schemas/AGENT_JOB_SCHEMA.md`

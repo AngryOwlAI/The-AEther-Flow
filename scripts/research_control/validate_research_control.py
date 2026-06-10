@@ -211,6 +211,20 @@ GLOBALLY_BROAD_PATTERNS = {
     "research_control/tasks/**",
     "wiki/**",
 }
+MIXED_MARKDOWN_PATHS = {
+    "README.md",
+    "AGENTS.md",
+    "research_control/README.md",
+    "research_control/AGENTS.md",
+}
+CONTROL_MARKDOWN_PATTERNS = (
+    ".agents/roles/**/*.md",
+    ".agents/schemas/*.md",
+    ".agents/schemas/**/*.md",
+    ".codex/skills/*/SKILL.md",
+)
+AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
+HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 FORBIDDEN_PHRASES = [
     "GR derived from ontology",
@@ -916,6 +930,64 @@ def changed_paths(base_ref: str, staged_only: bool) -> list[str]:
     return sorted(set(paths))
 
 
+def changed_line_numbers_from_diff(diff_text: str) -> set[int]:
+    lines: set[int] = set()
+    for raw_line in diff_text.splitlines():
+        match = HUNK_RE.search(raw_line)
+        if not match:
+            continue
+        start = int(match.group(1))
+        count = int(match.group(2) or "1")
+        if count > 0:
+            lines.update(range(start, start + count))
+    return lines
+
+
+def changed_line_numbers(path: str, base_ref: str, staged_only: bool) -> set[int]:
+    if staged_only:
+        command = ["git", "diff", "--cached", "--unified=0", base_ref, "--", path]
+    else:
+        command = ["git", "diff", "--unified=0", base_ref, "--", path]
+    diff = subprocess.run(
+        command,
+        cwd=REPO_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if diff.returncode != 0:
+        return set()
+    return changed_line_numbers_from_diff(diff.stdout)
+
+
+def markdown_authority_by_line(text: str) -> dict[int, str]:
+    active = ""
+    authorities: dict[int, str] = {}
+    for line_number, line in enumerate(text.splitlines(), start=1):
+        marker = AUTHORITY_MARKER_RE.search(line)
+        if marker:
+            active = marker.group(1)
+        authorities[line_number] = active or "unmarked"
+    return authorities
+
+
+def markdown_authorities_for_changed_lines(
+    path_text: str,
+    base_ref: str,
+    staged_only: bool,
+) -> set[str]:
+    path = repo_path(path_text)
+    if not path.exists() or not path.is_file():
+        return {"unmarked"}
+    text = path.read_text(encoding="utf-8")
+    authorities_by_line = markdown_authority_by_line(text)
+    lines = changed_line_numbers(path_text, base_ref, staged_only)
+    if lines:
+        return {authorities_by_line.get(line_number, "unmarked") for line_number in lines}
+    markers = set(AUTHORITY_MARKER_RE.findall(text))
+    return markers or {"unmarked"}
+
+
 def _pattern_is_too_broad(pattern: str) -> bool:
     return (
         pattern in GLOBALLY_BROAD_PATTERNS
@@ -928,6 +1000,61 @@ def _path_matches(path: str, pattern: str) -> bool:
     if _pattern_is_too_broad(pattern):
         return False
     return path == pattern or fnmatch.fnmatch(path, pattern)
+
+
+def is_control_markdown_path(path: str) -> bool:
+    return any(_path_matches(path, pattern) for pattern in CONTROL_MARKDOWN_PATTERNS)
+
+
+def role_execution_row_for_job(job_id: str) -> dict[str, str]:
+    try:
+        rows = read_csv_rows("ROLE_EXECUTION_REGISTRY.csv")
+    except FileNotFoundError:
+        return {}
+    for row in rows:
+        if row.get("agent_job_id") == job_id:
+            return row
+    return {}
+
+
+def allows_explanatory_markdown_overlay(job: dict[str, str]) -> bool:
+    row = role_execution_row_for_job(job.get("job_id", ""))
+    if row.get("role_execution_kind") != "task_overlay":
+        return False
+    tokens = split_semicolon(row.get("expanded_permissions", ""))
+    tokens.extend(split_semicolon(row.get("added_constraints", "")))
+    return any("explanatory_markdown" in token for token in tokens)
+
+
+def validate_markdown_authority_boundaries(
+    report: ValidationReport,
+    job: dict[str, str],
+    paths: Iterable[str],
+    base_ref: str,
+    staged_only: bool,
+) -> None:
+    role_id = job.get("role_id", "")
+    explanatory_overlay = allows_explanatory_markdown_overlay(job)
+    for changed in paths:
+        if is_control_markdown_path(changed):
+            if role_id == "documentation-curator":
+                report.error(f"{changed}: documentation-curator cannot edit control markdown")
+            continue
+        if changed not in MIXED_MARKDOWN_PATHS:
+            continue
+        authorities = markdown_authorities_for_changed_lines(changed, base_ref, staged_only)
+        if "unmarked" in authorities:
+            report.error(f"{changed}: mixed markdown change is outside an authority marker")
+        if role_id == "documentation-curator" and "control" in authorities:
+            report.error(f"{changed}: documentation-curator cannot edit control-marked section")
+        if (
+            role_id == "project-control-maintainer"
+            and "explanatory" in authorities
+            and not explanatory_overlay
+        ):
+            report.error(
+                f"{changed}: project-control-maintainer cannot edit explanatory section without task_overlay explanatory_markdown permission"
+            )
 
 
 def validate_diff(
@@ -968,6 +1095,7 @@ def validate_diff(
             continue
         if not any(_path_matches(changed, pattern) for pattern in allowed):
             report.error(f"{changed}: changed path is not allowed by {job['job_id']}")
+    validate_markdown_authority_boundaries(report, job, paths, base_ref, staged_only)
 
 
 def validate_all(

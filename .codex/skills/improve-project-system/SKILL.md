@@ -6,7 +6,7 @@ description: Resolve tracked project-system improvement state and set up or exec
 # Improve Project System
 
 Use this skill when improving the research system itself: roles, schemas,
-validators, project-control docs, memory tooling, trigger logic,
+validators, control-marked project markdown, memory tooling, trigger logic,
 generated-document pipelines, and operational reliability.
 
 Do not use this skill for physics derivation, scientific claim promotion, or
@@ -59,9 +59,12 @@ an open-ended repository rewrite.
    distinguish low-risk drift from a hard invariant conflict.
 
 5. If no action is needed, write or report a no-op rationale.
-6. If documentation drift is detected, create or reuse one
+6. If explanatory documentation drift is detected, create or reuse one
    Documentation Curator AgentJob.
-7. If system-design or validation drift is detected, create or reuse one
+7. If skill contracts, role contracts, schema contracts, control registries, or
+   control-marked mixed Markdown drift, create or reuse one Project-Control
+   Maintainer AgentJob.
+8. If system-design or validation drift is detected, create or reuse one
    Project-System Director, Validator Engineer, or Memory-System Maintainer
    AgentJob.
    Recurring provisional-role patterns are project-system signals, not silent
@@ -89,14 +92,14 @@ an open-ended repository rewrite.
    nonblank `coherent_resolution_summary`. For shared closures, every signal
    row must use the resolving job's canonical `completion_path` from
    `registries/AGENT_JOB_REGISTRY.csv` as `resolution_evidence_path`.
-8. Execute at most one bounded AgentJob. Update only paths in the AgentJob
+9. Execute at most one bounded AgentJob. Update only paths in the AgentJob
    allowlist.
-9. Write `research_control/tasks/<task_id>/documentation_impact.yaml` for any
+10. Write `research_control/tasks/<task_id>/documentation_impact.yaml` for any
    state-changing project-system AgentJob. Source-doc-only handling is valid
    only for plain documentation edits outside a project-system AgentJob. The
    record must mechanically cover live source changes, generated derivatives,
    classifier reason codes, and required validators.
-10. Regenerate and validate:
+11. Regenerate and validate:
 
    ```zsh
    .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
@@ -107,7 +110,7 @@ an open-ended repository rewrite.
    .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
    ```
 
-11. Checkpoint only if the transaction is valid and non-empty. Pass `--job-id`
+12. Checkpoint only if the transaction is valid and non-empty. Pass `--job-id`
     when checkpointing a project-system AgentJob that is not the active physics
     research task. Checkpoint blocking is defined by validators, not by
     `resolve_project_improvement.py` reporting future work. Completion records
@@ -128,6 +131,13 @@ an open-ended repository rewrite.
   drafts, generated HTML, generated wiki notes, PDFs, or generated registry
   sidecars by hand.
 - Required write path is outside the AgentJob allowlist.
+- A Documentation Curator job would alter a control-marked mixed-document
+  section, skill contract, role contract, schema contract, validator requirement,
+  workflow command, routing behavior, permission, stop condition, or checkpoint
+  gate.
+- A Project-Control Maintainer job would alter an explanatory-only section
+  without a task overlay that explicitly grants `explanatory_markdown`
+  permission.
 - A completion or handoff emits a project-improvement signal whose type is not
   registered in `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv` or
   whose concrete signal row is absent from

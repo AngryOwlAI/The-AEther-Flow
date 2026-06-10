@@ -21,10 +21,10 @@ Generated folder map. Not canonical authority. Update source files, registry row
 
 | Folder | Category | CSV Relation | Wiki Relation | Research Role |
 | --- | --- | --- | --- | --- |
-| `.` | `control authority` | CONTENT_SEMANTIC_REGISTRY: 74; FILE_OBJECT_REGISTRY: 296; MARKDOWN_SOURCE_REGISTRY: 36; OBSIDIAN_VAULT_REGISTRY: 74; PDF_DERIVATIVE_REGISTRY: 8; TEX_SOURCE_REGISTRY: 30; WIKI_ARTIFACT_REGISTRY: 74 | 74 generated wiki note(s) point back to sources here. | Repository front door for project identity, instructions, validation, and generated folder classification. |
-| `.agents` | `control authority` | FILE_OBJECT_REGISTRY: 17; MARKDOWN_SOURCE_REGISTRY: 17 | 17 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
+| `.` | `control authority` | CONTENT_SEMANTIC_REGISTRY: 75; FILE_OBJECT_REGISTRY: 300; MARKDOWN_SOURCE_REGISTRY: 37; OBSIDIAN_VAULT_REGISTRY: 75; PDF_DERIVATIVE_REGISTRY: 8; TEX_SOURCE_REGISTRY: 30; WIKI_ARTIFACT_REGISTRY: 75 | 75 generated wiki note(s) point back to sources here. | Repository front door for project identity, instructions, validation, and generated folder classification. |
+| `.agents` | `control authority` | FILE_OBJECT_REGISTRY: 18; MARKDOWN_SOURCE_REGISTRY: 18 | 18 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.codex` | `tooling` | FILE_OBJECT_REGISTRY: 11; MARKDOWN_SOURCE_REGISTRY: 11 | 11 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
-| `.local` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 74; FILE_OBJECT_REGISTRY: 148; OBSIDIAN_VAULT_REGISTRY: 74 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 75; FILE_OBJECT_REGISTRY: 150; OBSIDIAN_VAULT_REGISTRY: 75 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `Step-by-step-Comments` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports local retrieval, semantic search, or ignored reference use; not tracked authority. |
 | `assets` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
 | `html` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
@@ -36,15 +36,15 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `scripts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tex_shared` | `canonical source` | No registered object rows. | No direct generated wiki notes. | Provides authored source material used by the research workflow. |
-| `wiki` | `generated derivative` | FILE_OBJECT_REGISTRY: 74; WIKI_ARTIFACT_REGISTRY: 74 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
-| `.agents/roles` | `control authority` | FILE_OBJECT_REGISTRY: 11; MARKDOWN_SOURCE_REGISTRY: 11 | 11 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
+| `wiki` | `generated derivative` | FILE_OBJECT_REGISTRY: 75; WIKI_ARTIFACT_REGISTRY: 75 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
+| `.agents/roles` | `control authority` | FILE_OBJECT_REGISTRY: 12; MARKDOWN_SOURCE_REGISTRY: 12 | 12 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.agents/schemas` | `control authority` | FILE_OBJECT_REGISTRY: 5; MARKDOWN_SOURCE_REGISTRY: 5 | 5 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.codex/prompts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills` | `tooling` | FILE_OBJECT_REGISTRY: 11; MARKDOWN_SOURCE_REGISTRY: 11 | 11 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
-| `.local/content_semantics` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 74; FILE_OBJECT_REGISTRY: 74 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local/content_semantics` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 75; FILE_OBJECT_REGISTRY: 75 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/html_wikis` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/memory_index` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
-| `.local/obsidian` | `local retrieval` | FILE_OBJECT_REGISTRY: 74; OBSIDIAN_VAULT_REGISTRY: 74 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local/obsidian` | `local retrieval` | FILE_OBJECT_REGISTRY: 75; OBSIDIAN_VAULT_REGISTRY: 75 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `assets/images` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
 | `manuscripts/pdfs` | `generated derivative` | No registered object rows. | No direct generated wiki notes. | Provides generated reading surfaces derived from registered sources. |
 | `manuscripts/tex` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
@@ -61,11 +61,11 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `scripts/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `wiki/html` | `generated derivative` | No registered object rows. | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `wiki/indexes` | `generated derivative` | No registered object rows. | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
-| `wiki/markdown` | `generated derivative` | FILE_OBJECT_REGISTRY: 36; WIKI_ARTIFACT_REGISTRY: 36 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
+| `wiki/markdown` | `generated derivative` | FILE_OBJECT_REGISTRY: 37; WIKI_ARTIFACT_REGISTRY: 37 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `wiki/pdf` | `generated derivative` | FILE_OBJECT_REGISTRY: 8; WIKI_ARTIFACT_REGISTRY: 8 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `wiki/tex` | `generated derivative` | FILE_OBJECT_REGISTRY: 30; WIKI_ARTIFACT_REGISTRY: 30 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `.agents/roles/physics` | `control authority` | FILE_OBJECT_REGISTRY: 5; MARKDOWN_SOURCE_REGISTRY: 5 | 5 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
-| `.agents/roles/research_ops` | `control authority` | FILE_OBJECT_REGISTRY: 6; MARKDOWN_SOURCE_REGISTRY: 6 | 6 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
+| `.agents/roles/research_ops` | `control authority` | FILE_OBJECT_REGISTRY: 7; MARKDOWN_SOURCE_REGISTRY: 7 | 7 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.codex/skills/continue-research` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/grill-me` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/html-visual-explainer` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
@@ -77,11 +77,11 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `.codex/skills/project-memory-system` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/tex-wiki` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
-| `.local/content_semantics/markdown` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 36; FILE_OBJECT_REGISTRY: 36 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local/content_semantics/markdown` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 37; FILE_OBJECT_REGISTRY: 37 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/content_semantics/pdf` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 8; FILE_OBJECT_REGISTRY: 8 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/content_semantics/tex` | `local retrieval` | CONTENT_SEMANTIC_REGISTRY: 30; FILE_OBJECT_REGISTRY: 30 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/html_wikis/visual-explainer` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
-| `.local/obsidian/aether-flow-wiki` | `local retrieval` | FILE_OBJECT_REGISTRY: 74; OBSIDIAN_VAULT_REGISTRY: 74 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local/obsidian/aether-flow-wiki` | `local retrieval` | FILE_OBJECT_REGISTRY: 75; OBSIDIAN_VAULT_REGISTRY: 75 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `research_control/tasks/RT-20260608-001` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260608-002` | `control authority` | FILE_OBJECT_REGISTRY: 1; TEX_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260608-003` | `control authority` | FILE_OBJECT_REGISTRY: 1; TEX_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
@@ -109,6 +109,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260610-002` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-003` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-004` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260610-005` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `.codex/skills/project-memory-system/obsidian-vault-template` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/scripts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer/commands` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -117,7 +118,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `.local/obsidian/aether-flow-wiki/.obsidian` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/00_control` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/01_raw` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
-| `.local/obsidian/aether-flow-wiki/02_sources` | `local retrieval` | FILE_OBJECT_REGISTRY: 74; OBSIDIAN_VAULT_REGISTRY: 74 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local/obsidian/aether-flow-wiki/02_sources` | `local retrieval` | FILE_OBJECT_REGISTRY: 75; OBSIDIAN_VAULT_REGISTRY: 75 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/03_indexes` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/04_relationships` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/05_queries` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
@@ -201,6 +202,8 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260610-003/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-004/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-004/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260610-005/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260610-005/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/00_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/08_templates` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/09_schema` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -209,7 +212,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `.local/obsidian/aether-flow-wiki/01_raw/pdf` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/01_raw/tex` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/02_sources/html` | `local retrieval` | No registered object rows. | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
-| `.local/obsidian/aether-flow-wiki/02_sources/markdown` | `local retrieval` | FILE_OBJECT_REGISTRY: 36; OBSIDIAN_VAULT_REGISTRY: 36 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
+| `.local/obsidian/aether-flow-wiki/02_sources/markdown` | `local retrieval` | FILE_OBJECT_REGISTRY: 37; OBSIDIAN_VAULT_REGISTRY: 37 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/02_sources/pdf` | `local retrieval` | FILE_OBJECT_REGISTRY: 8; OBSIDIAN_VAULT_REGISTRY: 8 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `.local/obsidian/aether-flow-wiki/02_sources/tex` | `local retrieval` | FILE_OBJECT_REGISTRY: 30; OBSIDIAN_VAULT_REGISTRY: 30 | No direct generated wiki notes. | Supports retrieval and semantic search for agents; ignored by Git. |
 | `research_control/tasks/RT-20260608-001/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
@@ -239,3 +242,4 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260610-002/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-003/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-004/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260610-005/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
