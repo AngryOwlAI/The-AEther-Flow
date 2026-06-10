@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@0.2.0--RT-20260610-007"
+role_execution_kind: "registered_role"
+task_id: "RT-20260610-007"
+agent_job_id: "AJ-RT-20260610-007-001"
+base_role_id: "documentation-curator"
+base_role_version: "0.2.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role without permission expansion for the first comprehensive README and source-backed HTML explainer content pass."
+added_constraints:
+  - "Update only README explanatory front-door content before the control-marked requirements section."
+  - "Create Markdown source specs before generating tracked human-only HTML derivatives."
+  - "Preserve existing research-control-system explainer as the technical control-system page."
+  - "Do not change physics claims control contracts validators role authority or canonical science sources."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "README.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/research-agent-workflow-explainer.md"
+  - "html/project-overview-explainer.html"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/research-agent-workflow-explainer.html"
+  - "research_control/tasks/RT-20260610-007/**"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+requires_human_gate: false
+expires_after: "AJ-RT-20260610-007-001"
+justification: ""
+non_reusable_until_registered: false

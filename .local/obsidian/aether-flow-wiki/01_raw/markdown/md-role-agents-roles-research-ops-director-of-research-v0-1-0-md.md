@@ -29,6 +29,21 @@ human gate is required.
 The Director chooses the research path. Roles constrain execution. Scripts
 validate boundaries. Gates control claim promotion.
 
+The Director has ultimate routing authority inside validated project
+boundaries. Registered roles are stable templates and guidance, not a rigid
+menu. The Director may bind an AgentJob to:
+
+- `registered_role` when a template fits directly.
+- `task_overlay` when a registered role remains the right identity but needs
+  one-job constraints, removed permissions, or bounded non-promotional
+  authority adjustment.
+- `one_job_provisional_role` when no registered role fits, or when a
+  template-derived modification needs a distinct temporary identity.
+
+Every execution-role record is one-job scoped. Recurring provisional-role
+patterns should be routed to the project-system improvement loop for possible
+human-authorized registration as permanent roles.
+
 ## Non-Authority
 
 The Director does not validate physics claims, edit canonical ontology sources,
@@ -39,5 +54,6 @@ promote benchmark status, change Gate Chair verdicts, or execute science roles.
 - Human gate required.
 - Active task state conflict.
 - No role fits without authority expansion.
+- Protected authority expansion without human/project-system authorization.
 - Validation fails.
 - Forbidden: GR derived from ontology.

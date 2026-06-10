@@ -2,11 +2,22 @@
 
 Generated Obsidian index. Not canonical authority.
 
+## html
+
+- [[02_sources/html/html-aether-flow-ontology-explainer|HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `html/aether-flow-ontology-explainer.html`
+- [[02_sources/html/html-project-overview-explainer|HTML-PROJECT-OVERVIEW-EXPLAINER]] `html/project-overview-explainer.html`
+- [[02_sources/html/html-research-agent-workflow-explainer|HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `html/research-agent-workflow-explainer.html`
+- [[02_sources/html/html-research-control-system-explainer|HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `html/research-control-system-explainer.html`
+
 ## markdown
 
 - [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
 - [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
 - [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
+- [[02_sources/markdown/md-html-spec-aether-flow-ontology-explainer|MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- [[02_sources/markdown/md-html-spec-project-overview-explainer|MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER]] `markdown/html-explainer-specs/project-overview-explainer.md`
+- [[02_sources/markdown/md-html-spec-research-agent-workflow-explainer|MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
+- [[02_sources/markdown/md-html-spec-research-control-system-explainer|MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/research-control-system-explainer.md`
 - [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
 - [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`
 - [[02_sources/markdown/md-readme|MD-README]] `README.md`
@@ -20,8 +31,10 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD]] `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD]] `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.2.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD]] `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD]] `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD]] `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
 - [[02_sources/markdown/md-schema-agent-job-schema|MD-SCHEMA-AGENT-JOB-SCHEMA]] `.agents/schemas/AGENT_JOB_SCHEMA.md`
@@ -72,8 +85,11 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selection-law-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTION-LAW-PACKET]] `research_control/tasks/RT-20260608-013/artifacts/12_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTION_LAW_PACKET.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selection-law-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTION-LAW-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-014/artifacts/13_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTION_LAW_SMUGGLING_AUDIT.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-benchmark-independence-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-BENCHMARK-INDEPENDENCE-REFUTATION]] `research_control/tasks/RT-20260608-018/artifacts/17_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_BENCHMARK_INDEPENDENCE_REFUTATION.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-survey-protocol-benchmark-independence-refutation|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-SURVEY-PROTOCOL-BENCHMARK-INDEPENDENCE-REFUTATION]] `research_control/tasks/RT-20260608-021/artifacts/20_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_SURVEY_PROTOCOL_BENCHMARK_INDEPENDENCE_REFUTATION.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-survey-protocol-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-SURVEY-PROTOCOL-PACKET]] `research_control/tasks/RT-20260608-019/artifacts/18_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_SURVEY_PROTOCOL_PACKET.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-survey-protocol-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-SURVEY-PROTOCOL-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-020/artifacts/19_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_SURVEY_PROTOCOL_SMUGGLING_AUDIT.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-variation-repair-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-VARIATION-REPAIR-PACKET]] `research_control/tasks/RT-20260608-022/artifacts/21_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_VARIATION_REPAIR_PACKET.tex`
+- [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-finite-variation-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-FINITE-VARIATION-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-023/artifacts/22_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_FINITE_VARIATION_SMUGGLING_AUDIT.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-repair-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-REPAIR-PACKET]] `research_control/tasks/RT-20260608-016/artifacts/15_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_REPAIR_PACKET.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-selector-domain-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-017/artifacts/16_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_SMUGGLING_AUDIT.tex`
 - [[02_sources/tex/tex-research-control-localization-source-basis-axiom-smuggling-audit|TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260608-011/artifacts/10_LOCALIZATION_SOURCE_BASIS_AXIOM_SMUGGLING_AUDIT.tex`

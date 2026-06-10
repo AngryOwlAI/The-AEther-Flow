@@ -64,6 +64,12 @@ research-agent workflow.
 local file in the browser when possible and report the path. Keep project
 explainers local unless the user separately asks for public sharing.
 
+Tracked project explainers under `html/` are allowed only through the
+`html-visual-explainer` governance path. First create or update a registered
+Markdown source spec under `markdown/html-explainer-specs/`, then render the
+HTML file named by that spec. The tracked HTML remains human-only generated
+output; the Markdown spec and registries carry authority.
+
 ## Workflow
 
 ### 1. Think (5 seconds, not 5 minutes)

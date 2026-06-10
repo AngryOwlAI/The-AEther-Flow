@@ -1,0 +1,65 @@
+Research-Agent Workflow Explainer
+Human-only workflow map
+Research-Agent Workflow
+The project uses a bounded research-control spine. Director decisions select a role, AgentJobs define the allowed work, validators check the transaction, and completion or handoff records preserve the result.
+One Bounded Execution Loop
+Director decision
+Selects one role and one task boundary.
+Role execution record
+Binds the task to a registered role or explicit overlay.
+AgentJob
+Defines allowed reads, writes, generated paths, and commands.
+Output
+Produces bounded artifacts without widening authority.
+Validation
+Runs deterministic checks before checkpointing.
+Completion or handoff
+Records the result and the logical next boundary.
+Two Operating Lanes
+continue-research
+Continues physics research from tracked state, handoffs, and the active task boundary.
+May route one bounded science AgentJob.
+May create candidate, refutation, audit, or formalization artifacts.
+Must not treat workflow status as proof.
+improve-project-system
+Repairs or clarifies the research system itself.
+May address roles, validators, memory tooling, docs, or generated-doc pipelines.
+Uses documentation-impact receipts for state-changing project-system work.
+Must not promote physics claims.
+Validation Gate
+Memory bootstrap
+Regenerates registries, wiki notes, HTML rows, and semantic surfaces.
+Documentation impact
+Checks state-changing project-system work for required receipts.
+Research-control validation
+Checks task records, registries, role execution, and diff allowlists.
+Signal validation
+Ensures emitted project-improvement signals are registered and typed.
+Tests
+Runs unit coverage for changed machinery and regression surfaces.
+Diff hygiene
+Checks whitespace, allowed paths, and authority markers.
+Boundary Notice
+The workflow makes research artifacts auditable. It does not make a physics claim true. Scientific claims still require registered source evidence, successful gates, and explicit claim-boundary authority.
+Sources
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+README.md
+[Repository document].
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+AGENTS.md
+[Repository agent guidance].
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+research_control/AGENTS.md
+[Repository scoped agent guidance].
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+research_control/README.md
+[Repository control documentation].
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+AGENT_JOB_REGISTRY.csv
+[Repository registry].
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+DIRECTOR_DECISION_REGISTRY.csv
+[Repository registry].
+The Æther-Flow Interpretation of Relativity Research Project. (2026).
+ROLE_EXECUTION_REGISTRY.csv
+[Repository registry].

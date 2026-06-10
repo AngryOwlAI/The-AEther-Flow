@@ -1,3 +1,5 @@
+<!-- authority: control -->
+
 # AGENTS.md
 
 Root project guidance for agents working in `The Æther-Flow Interpretation of Relativity Research Project`.
@@ -33,8 +35,9 @@ one bounded AgentJob per invocation after validation. Generated outputs and
 
 ## Project-System Improvement
 
-For project-system repair, documentation synchronization, validator work,
-memory-tooling updates, or workflow clarification, use
+For project-system repair, explanatory documentation synchronization,
+control-markdown maintenance, validator work, memory-tooling updates, or
+workflow clarification, use
 `.codex/skills/improve-project-system/SKILL.md`. This workflow is separate
 from physics continuation. It may process one project-improvement signal or
 one deterministic classifier result per invocation, and it must not promote
@@ -47,8 +50,9 @@ needed:
 .venv/bin/python scripts/project_control/classify_project_changes.py --json
 ```
 
-If documentation impact is required, either update the relevant canonical
-source documentation or write a valid
+Documentation impact is a receipt requirement, not by itself a Documentation
+Curator routing decision. If documentation impact is required, either update
+the relevant canonical source documentation or write a valid
 `research_control/tasks/<task_id>/documentation_impact.yaml` no-op rationale.
 
 ## Required Checks
@@ -82,5 +86,9 @@ Run the documentation-impact gate when changing project-system machinery:
 - Do not hand-edit generated wiki notes under `wiki/`.
 - Do not hand-edit generated master registries or generated registry metadata sidecars.
 - Do not treat PDFs as independent scientific authority; they are human-reading derivatives from registered TeX.
-- Do not add tracked HTML under `html/` unless it is generated from a registered Markdown source spec.
+- Do not add tracked HTML under `html/` unless it is generated from a registered
+  Markdown source spec under `markdown/html-explainer-specs/`.
+- Documentation Curator owns explanatory Markdown and source-backed human-only
+  HTML visual explainers. Modify the source spec and regenerate the HTML;
+  direct HTML-only edits remain blocked.
 - Keep `.local/` for scratch builds, caches, previews, and experiments.

@@ -1,4 +1,4 @@
-
+<!-- authority: explanatory -->
 ---
 
 # The Æther-Flow Interpretation of Relativity Research Project
@@ -13,11 +13,11 @@
 
 ## The Research Program
 
-The The Æther-Flow Interpretation of Relativity Research Program is a dual physics-and-AI research project.
+The Æther-Flow Interpretation of Relativity Research Program is a dual physics-and-AI research project.
 
-The physics track studies whether ordinary general relativity can be interpreted, and eventually derived, from a deeper four-dimensional `Æther` / `Æther-flow` ontology. The current public benchmark keeps GR exactly at observable scale. A first-principles derivation of GR from the ontology remains open.
+The physics track studies whether ordinary general relativity can be interpreted, and eventually derived, from a deeper four-dimensional `Æther` / `Æther-flow` ontology. The current public benchmark keeps GR exactly at observable scale: one operative Lorentzian metric, universal matter coupling, standard causal structure, and the same empirical content expected from ordinary GR. A first-principles derivation of that benchmark from substrate structure remains open.
 
-The AI research-agent track currently develops and tests a human-scaffolded research-agent system for theoretical physics: agent roles, routing rules, claim gates, manuscript tools, result handling, review discipline, and scientific memory. Its long-term technical goal is staged autonomy toward an autonomous theoretical-physics research system, while public release, authorship responsibility, and external outreach remain human-accountable under current governance.
+The AI research-agent track develops and tests a human-scaffolded research-agent system for theoretical physics: agent roles, routing rules, claim gates, manuscript tools, result handling, review discipline, and source-first scientific memory. Its long-term technical goal is staged autonomy toward an autonomous theoretical-physics research system, while public release, authorship responsibility, and external outreach remain human-accountable under current governance.
 
 ### The Two Tracks
 
@@ -62,24 +62,49 @@ The physics problem gives the AI system a hard, real research environment. The A
 
 ## This repo
 
-This repo is a reset of the research program: [The Æther GR Derivation](/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/) as the research system was failing to derive GR from the ontology or hard-fail the derivation, so we need to start over with a new approach.
-The goal of this research program is to improve itself using the lessons learned from the previous attempt and ultimately derive GR from the Æther Flow ontology.
+This repository is a reset of the earlier research program in [The Æther GR Derivation](/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/). The previous control system accumulated useful artifacts and lessons, but it did not derive GR from the ontology or produce a decisive hard-fail result. This reset keeps the exact-GR benchmark as a disciplined reference point while rebuilding the derivation program around clearer claim boundaries, tighter negative-result preservation, and more explicit AI-agent governance.
+
+The working goal is not to assert that GR has already been derived. The working goal is to improve the research system until it can either construct a valid derivation path from the Æther Flow ontology or identify reproducible obstructions strong enough to stop a line of attack.
 
 ---
 
 ## The Æther Flow Ontology
 
-[...]
+The project’s ontology lane treats `Æther` as a proposed four-dimensional substrate and `Æther-flow` as the structured flow or relational organization from which relativistic behavior might be recovered. In the current repository state, this is a research ontology and an explanatory frame, not an established derivation of GR.
+
+The accepted benchmark boundary is conservative: observable-scale physics remains ordinary GR. The open burden is to show, without importing the target metric by hand, how effective Lorentzian geometry, causal structure, clock behavior, matter coupling, and invariance properties could arise from source-defined substrate data. Registered `.tex` sources and claim-boundary registries carry scientific authority; this README only summarizes that state for humans.
 
 ---
 
 ## The research-agent system
 
-[...] 
+The research-agent system is the project’s operating discipline for theoretical work. It routes bounded tasks through Director decisions, AgentJobs, role contracts, completion records, registries, validation scripts, and handoffs. Its purpose is to make research progress auditable: proposals can be constructed, refuted, repaired, preserved as negative results, or held behind gates without being mistaken for accepted physics.
+
+The system deliberately separates several kinds of claims:
+
+- Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.
+- AI-methodology claims about agent workflows, routing, memory, validation, and staged autonomy.
+- Tooling claims about scripts, generated artifacts, documentation, and registry consistency.
+- Human-facing explanations that help readers understand the project without changing authority.
+
+Project-system improvement is tracked separately from physics continuation. Documentation Curator work may improve explanatory Markdown and source-backed visual explainers, but it must not change control contracts, validators, role authority, or scientific claim status.
+
+---
+
+## Human Visual Explainers
+
+Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
+
+- [Project Overview Explainer](html/project-overview-explainer.html): a first-read map of the physics track, AI research-agent track, authority chain, and open derivation boundary.
+- [Æther Flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a visual explanation of the ontology, exact-GR benchmark status, and current derivation burden.
+- [Research-Agent Workflow Explainer](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, role routing, claim gates, and validation.
+- [Research-Control System Explainer](html/research-control-system-explainer.html): the technical control-system overview for authority boundaries, project-system improvement, and source-backed HTML governance.
 
 ---
 
 ## Requirements
+
+<!-- authority: control -->
 
 ### Python environment
 
@@ -138,6 +163,13 @@ role contracts, schema contracts, skill contracts, key research-control design
 notes, ontology-adjacent explanatory notes, and Markdown source specs for
 generated HTML explainers.
 
+Tracked HTML explainers are human-only generated derivatives. A tracked
+`html/*.html` file is valid only when it is backed by a registered Markdown
+source spec under `markdown/html-explainer-specs/` with `title`, `purpose`,
+`audience`, `output_path`, `renderer_skill`, `source_materials`,
+`claim_boundary`, and `human_visual_only: true`. Modify the spec first, then
+regenerate the HTML output.
+
 Bootstrap or refresh the memory system:
 
 ```zsh
@@ -192,8 +224,25 @@ Research-control continuation is tracked under `research_control/`. Use
 
 Project-system improvement is tracked separately from physics continuation.
 Use `.codex/skills/improve-project-system/SKILL.md` when a change affects
-roles, schemas, validators, checkpoint gates, memory tooling, skill guidance,
-project-control documentation, or generated-doc pipelines.
+roles, schemas, validators, checkpoint gates, memory tooling, control-marked
+skill guidance, project-control documentation, or generated-doc pipelines.
+
+Mixed Markdown files use authority markers. Explanatory sections describe
+current behavior without changing obligations. Control sections change or define
+agent behavior, routing, authority, validator expectations, allowed paths,
+commands, schemas, stop conditions, or workflow gates.
+
+Decision vocabulary:
+
+| Term | Use when | Authority and outputs | Boundary |
+| --- | --- | --- | --- |
+| `continue-research` | Continue physics research-control from tracked state, handoffs, and the active task boundary. | Uses `.codex/skills/continue-research/SKILL.md`; may route one bounded research AgentJob through the Director-controlled control spine. | Does not repair project-system machinery unless the routed task explicitly allows it. |
+| `improve-project-system` | Repair or clarify the research system itself: roles, schemas, validators, checkpoint gates, memory tooling, skill guidance, docs, or generated-doc pipelines. | Uses `.codex/skills/improve-project-system/SKILL.md`; may resolve one signal, one classifier result, or one bounded project-system AgentJob. | Does not perform physics derivation, promote claims, or edit canonical science sources. |
+| Project-System Director | A project-system boundary or routing question must be resolved before work proceeds. | Creates a project-system Director Decision Record and selects one bounded non-scientific AgentJob. | Does not execute the selected job or expand role authority by convention. |
+| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML as independent authority. |
+| Project-Control Maintainer | Skill contracts, role contracts, schema contracts, control registries, or control-marked mixed Markdown need functional maintenance. | Edits allowed control markdown and project-control contracts under one AgentJob allowlist. | Does not edit explanatory-only sections unless a task overlay explicitly grants `explanatory_markdown` permission. |
+| Validator Engineer | Deterministic validator, checkpoint gate, or test behavior is missing, unclear, or incorrect. | Edits allowed validator scripts, tests, documented validator contracts, and registry rows. | Does not use model judgment as a validator substitute or decide human policy questions. |
+| Memory-System Maintainer | Source-first memory, wiki, registry, Obsidian, query, or derivative metadata tooling needs maintenance. | Edits allowed memory-system scripts, registry generation rules, query tooling, and related skill documentation. | Does not make generated artifacts authoritative or alter claim-promotion semantics. |
 
 Classify current Git changes:
 
@@ -308,10 +357,11 @@ from the canonical type registry rather than duplicated local constant sets.
 │       ├── readme-banner.png
 │       └── readme-banner-old*.png
 ├── html/
-│   └── Generated human-only visual explainers.
+│   └── Generated human-only visual explainers backed by Markdown specs.
 ├── markdown/
 │   ├── grill-memory-wiki-registry-design-handoff.md
 │   ├── html-explainer-specs/
+│   │   └── Source specs for tracked human-only HTML explainers.
 │   └── ontology-promotions/
 ├── manuscripts/
 │   ├── tex/

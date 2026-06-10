@@ -2,14 +2,14 @@
 object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
 format: "markdown"
 source_path: ".codex/skills/improve-project-system/SKILL.md"
-source_hash: "e3e0078855e60d8d7017323ce40ecf408d8edccd19d7ad284991a0286f9862fc"
+source_hash: "1cacdb5a5c99937321874741e525a65472b5e4549a08c97e8cff6051c130225c"
 authority_status: "project_control"
 role: "skill_contract"
 owner_skill: "improve-project-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-skill-improve-project-system.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-skill-improve-project-system.md"
-content_hash: "e3e0078855e60d8d7017323ce40ecf408d8edccd19d7ad284991a0286f9862fc"
+content_hash: "1cacdb5a5c99937321874741e525a65472b5e4549a08c97e8cff6051c130225c"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SKILL-IMPROVE-PROJECT-SYSTEM"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `e3e0078855e60d8d7017323ce40ecf408d8edccd19d7ad284991a0286f9862fc`
+- Content hash: `1cacdb5a5c99937321874741e525a65472b5e4549a08c97e8cff6051c130225c`
 - Extracted text path: `.local/content_semantics/markdown/md-skill-improve-project-system.txt`
-- Character count: `6939`
+- Character count: `8031`
 
 ## Relationships
 

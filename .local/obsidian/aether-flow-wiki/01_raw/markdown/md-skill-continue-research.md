@@ -43,7 +43,14 @@ skills provide procedures, and gates control claim promotion.
    `execution_role_ref` records under
    `research_control/tasks/<task_id>/roles/` and registered in
    `registries/ROLE_EXECUTION_REGISTRY.csv`. Base role contracts remain stable;
-   task-specific adaptation must be explicit.
+   task-specific adaptation must be explicit. Registered roles are stable
+   templates and guidance, not a rigid routing menu. Use `registered_role` for
+   direct template use, `task_overlay` for a modified registered role that
+   keeps the same identity, and `one_job_provisional_role` for a brand-new
+   one-job role or a template-derived role whose modification needs a distinct
+   temporary identity. Protected expansion requires a human gate: claim
+   promotion, canonical ontology authority, benchmark-status authority, Gate
+   Chair authority, or permanent role registration.
 
 6. Execute exactly one authorized AgentJob unless a stop condition applies:
    human gate required, validation failure, no role fit, authority expansion,

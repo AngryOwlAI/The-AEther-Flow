@@ -12,7 +12,13 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## html-visual-explainer
 
+- `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
+- `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
+- `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
 - `HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `html/research-control-system-explainer.html`
+- `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
+- `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/research-control-system-explainer.md`
 - `MD-SKILL-HTML-VISUAL-EXPLAINER` `.codex/skills/html-visual-explainer/SKILL.md`
 
@@ -24,10 +30,16 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
 - `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
+- `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
+- `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
+- `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
 - `WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/html/html-research-control-system-explainer.md`
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
+- `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
+- `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
+- `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-research-control-system-explainer.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`

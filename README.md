@@ -13,11 +13,11 @@
 
 ## The Research Program
 
-The The Æther-Flow Interpretation of Relativity Research Program is a dual physics-and-AI research project.
+The Æther-Flow Interpretation of Relativity Research Program is a dual physics-and-AI research project.
 
-The physics track studies whether ordinary general relativity can be interpreted, and eventually derived, from a deeper four-dimensional `Æther` / `Æther-flow` ontology. The current public benchmark keeps GR exactly at observable scale. A first-principles derivation of GR from the ontology remains open.
+The physics track studies whether ordinary general relativity can be interpreted, and eventually derived, from a deeper four-dimensional `Æther` / `Æther-flow` ontology. The current public benchmark keeps GR exactly at observable scale: one operative Lorentzian metric, universal matter coupling, standard causal structure, and the same empirical content expected from ordinary GR. A first-principles derivation of that benchmark from substrate structure remains open.
 
-The AI research-agent track currently develops and tests a human-scaffolded research-agent system for theoretical physics: agent roles, routing rules, claim gates, manuscript tools, result handling, review discipline, and scientific memory. Its long-term technical goal is staged autonomy toward an autonomous theoretical-physics research system, while public release, authorship responsibility, and external outreach remain human-accountable under current governance.
+The AI research-agent track develops and tests a human-scaffolded research-agent system for theoretical physics: agent roles, routing rules, claim gates, manuscript tools, result handling, review discipline, and source-first scientific memory. Its long-term technical goal is staged autonomy toward an autonomous theoretical-physics research system, while public release, authorship responsibility, and external outreach remain human-accountable under current governance.
 
 ### The Two Tracks
 
@@ -62,20 +62,43 @@ The physics problem gives the AI system a hard, real research environment. The A
 
 ## This repo
 
-This repo is a reset of the research program: [The Æther GR Derivation](/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/) as the research system was failing to derive GR from the ontology or hard-fail the derivation, so we need to start over with a new approach.
-The goal of this research program is to improve itself using the lessons learned from the previous attempt and ultimately derive GR from the Æther Flow ontology.
+This repository is a reset of the earlier research program in [The Æther GR Derivation](/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/). The previous control system accumulated useful artifacts and lessons, but it did not derive GR from the ontology or produce a decisive hard-fail result. This reset keeps the exact-GR benchmark as a disciplined reference point while rebuilding the derivation program around clearer claim boundaries, tighter negative-result preservation, and more explicit AI-agent governance.
+
+The working goal is not to assert that GR has already been derived. The working goal is to improve the research system until it can either construct a valid derivation path from the Æther Flow ontology or identify reproducible obstructions strong enough to stop a line of attack.
 
 ---
 
 ## The Æther Flow Ontology
 
-[...]
+The project’s ontology lane treats `Æther` as a proposed four-dimensional substrate and `Æther-flow` as the structured flow or relational organization from which relativistic behavior might be recovered. In the current repository state, this is a research ontology and an explanatory frame, not an established derivation of GR.
+
+The accepted benchmark boundary is conservative: observable-scale physics remains ordinary GR. The open burden is to show, without importing the target metric by hand, how effective Lorentzian geometry, causal structure, clock behavior, matter coupling, and invariance properties could arise from source-defined substrate data. Registered `.tex` sources and claim-boundary registries carry scientific authority; this README only summarizes that state for humans.
 
 ---
 
 ## The research-agent system
 
-[...] 
+The research-agent system is the project’s operating discipline for theoretical work. It routes bounded tasks through Director decisions, AgentJobs, role contracts, completion records, registries, validation scripts, and handoffs. Its purpose is to make research progress auditable: proposals can be constructed, refuted, repaired, preserved as negative results, or held behind gates without being mistaken for accepted physics.
+
+The system deliberately separates several kinds of claims:
+
+- Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.
+- AI-methodology claims about agent workflows, routing, memory, validation, and staged autonomy.
+- Tooling claims about scripts, generated artifacts, documentation, and registry consistency.
+- Human-facing explanations that help readers understand the project without changing authority.
+
+Project-system improvement is tracked separately from physics continuation. Documentation Curator work may improve explanatory Markdown and source-backed visual explainers, but it must not change control contracts, validators, role authority, or scientific claim status.
+
+---
+
+## Human Visual Explainers
+
+Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
+
+- [Project Overview Explainer](html/project-overview-explainer.html): a first-read map of the physics track, AI research-agent track, authority chain, and open derivation boundary.
+- [Æther Flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a visual explanation of the ontology, exact-GR benchmark status, and current derivation burden.
+- [Research-Agent Workflow Explainer](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, role routing, claim gates, and validation.
+- [Research-Control System Explainer](html/research-control-system-explainer.html): the technical control-system overview for authority boundaries, project-system improvement, and source-backed HTML governance.
 
 ---
 

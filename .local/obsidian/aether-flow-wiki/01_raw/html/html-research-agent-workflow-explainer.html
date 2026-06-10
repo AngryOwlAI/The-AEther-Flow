@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="86cf9e8dfb34e9a153eee5a2dee6f67026030403b2c1ed4ff1bc6310071f21a3">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Research-Agent Workflow Explainer</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #596675;
+      --line: #cfd6dd;
+      --paper: #f8fafc;
+      --white: #ffffff;
+      --blue: #235789;
+      --blue-soft: #dbeafe;
+      --green: #2f7d51;
+      --green-soft: #dff3e6;
+      --purple: #6d4c9f;
+      --purple-soft: #ece5f8;
+      --red: #a23b50;
+      --red-soft: #f7dce3;
+      --shadow: 0 12px 28px rgba(23, 32, 42, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Avenir, "Avenir Next", "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 56px;
+    }
+
+    header, section {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    header {
+      padding: 28px;
+      border-top: 7px solid var(--green);
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 3.8rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      max-width: 830px;
+      color: var(--muted);
+      margin-top: 16px;
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #f7f9fb;
+      border: 1px solid var(--line);
+      margin-bottom: 12px;
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+
+    .node {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 150px;
+      background: #f7f9fb;
+      position: relative;
+    }
+
+    .node:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      right: -10px;
+      top: 42%;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .node:nth-child(1), .node:nth-child(2) {
+      background: var(--blue-soft);
+    }
+
+    .node:nth-child(3), .node:nth-child(4) {
+      background: var(--green-soft);
+    }
+
+    .node:nth-child(5), .node:nth-child(6) {
+      background: var(--purple-soft);
+    }
+
+    .lanes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .lane {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 220px;
+    }
+
+    .lane.research {
+      background: var(--blue-soft);
+    }
+
+    .lane.system {
+      background: var(--green-soft);
+    }
+
+    .gate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .gate {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 120px;
+      background: #f7f9fb;
+    }
+
+    .notice {
+      background: var(--red-soft);
+      border-color: rgba(162, 59, 80, 0.35);
+    }
+
+    ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+
+    code {
+      background: #eef2f6;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.9em;
+    }
+
+    .sources li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 960px) {
+      .pipeline, .lanes, .gate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .node:not(:last-child)::after {
+        content: "";
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="tag">Human-only workflow map</span>
+      <h1>Research-Agent Workflow</h1>
+      <p>The project uses a bounded research-control spine. Director decisions select a role, AgentJobs define the allowed work, validators check the transaction, and completion or handoff records preserve the result.</p>
+    </header>
+
+    <section>
+      <h2>One Bounded Execution Loop</h2>
+      <div class="pipeline">
+        <article class="node">
+          <h3>Director decision</h3>
+          <p>Selects one role and one task boundary.</p>
+        </article>
+        <article class="node">
+          <h3>Role execution record</h3>
+          <p>Binds the task to a registered role or explicit overlay.</p>
+        </article>
+        <article class="node">
+          <h3>AgentJob</h3>
+          <p>Defines allowed reads, writes, generated paths, and commands.</p>
+        </article>
+        <article class="node">
+          <h3>Output</h3>
+          <p>Produces bounded artifacts without widening authority.</p>
+        </article>
+        <article class="node">
+          <h3>Validation</h3>
+          <p>Runs deterministic checks before checkpointing.</p>
+        </article>
+        <article class="node">
+          <h3>Completion or handoff</h3>
+          <p>Records the result and the logical next boundary.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Two Operating Lanes</h2>
+      <div class="lanes">
+        <article class="lane research">
+          <h3><code>continue-research</code></h3>
+          <p>Continues physics research from tracked state, handoffs, and the active task boundary.</p>
+          <ul>
+            <li>May route one bounded science AgentJob.</li>
+            <li>May create candidate, refutation, audit, or formalization artifacts.</li>
+            <li>Must not treat workflow status as proof.</li>
+          </ul>
+        </article>
+        <article class="lane system">
+          <h3><code>improve-project-system</code></h3>
+          <p>Repairs or clarifies the research system itself.</p>
+          <ul>
+            <li>May address roles, validators, memory tooling, docs, or generated-doc pipelines.</li>
+            <li>Uses documentation-impact receipts for state-changing project-system work.</li>
+            <li>Must not promote physics claims.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Validation Gate</h2>
+      <div class="gate-grid">
+        <div class="gate">
+          <h3>Memory bootstrap</h3>
+          <p>Regenerates registries, wiki notes, HTML rows, and semantic surfaces.</p>
+        </div>
+        <div class="gate">
+          <h3>Documentation impact</h3>
+          <p>Checks state-changing project-system work for required receipts.</p>
+        </div>
+        <div class="gate">
+          <h3>Research-control validation</h3>
+          <p>Checks task records, registries, role execution, and diff allowlists.</p>
+        </div>
+        <div class="gate">
+          <h3>Signal validation</h3>
+          <p>Ensures emitted project-improvement signals are registered and typed.</p>
+        </div>
+        <div class="gate">
+          <h3>Tests</h3>
+          <p>Runs unit coverage for changed machinery and regression surfaces.</p>
+        </div>
+        <div class="gate">
+          <h3>Diff hygiene</h3>
+          <p>Checks whitespace, allowed paths, and authority markers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <h2>Boundary Notice</h2>
+      <p>The workflow makes research artifacts auditable. It does not make a physics claim true. Scientific claims still require registered source evidence, successful gates, and explicit claim-boundary authority.</p>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <ul class="sources">
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>README.md</em> [Repository document].</li>
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENTS.md</em> [Repository agent guidance].</li>
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>research_control/AGENTS.md</em> [Repository scoped agent guidance].</li>
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>research_control/README.md</em> [Repository control documentation].</li>
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENT_JOB_REGISTRY.csv</em> [Repository registry].</li>
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>DIRECTOR_DECISION_REGISTRY.csv</em> [Repository registry].</li>
+        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>ROLE_EXECUTION_REGISTRY.csv</em> [Repository registry].</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

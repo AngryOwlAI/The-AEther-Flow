@@ -5,6 +5,10 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
 - [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
 - [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
+- [[02_sources/markdown/md-html-spec-aether-flow-ontology-explainer|MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- [[02_sources/markdown/md-html-spec-project-overview-explainer|MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER]] `markdown/html-explainer-specs/project-overview-explainer.md`
+- [[02_sources/markdown/md-html-spec-research-agent-workflow-explainer|MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
+- [[02_sources/markdown/md-html-spec-research-control-system-explainer|MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/research-control-system-explainer.md`
 - [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
 - [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`
 - [[02_sources/markdown/md-readme|MD-README]] `README.md`
@@ -18,8 +22,10 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD]] `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD]] `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.2.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD]] `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD]] `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD]] `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
 - [[02_sources/markdown/md-schema-agent-job-schema|MD-SCHEMA-AGENT-JOB-SCHEMA]] `.agents/schemas/AGENT_JOB_SCHEMA.md`
