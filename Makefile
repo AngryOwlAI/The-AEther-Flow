@@ -15,6 +15,7 @@ validate-memory:
 validate-project-control:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
 	$(PYTHON) scripts/project_control/classify_project_changes.py --json
+	$(PYTHON) scripts/project_control/collect_project_improvement_signals.py --validate-emitted
 	$(PYTHON) scripts/project_control/validate_documentation_impact.py
 	$(PYTHON) .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
 	$(PYTHON) scripts/research_control/validate_research_control.py

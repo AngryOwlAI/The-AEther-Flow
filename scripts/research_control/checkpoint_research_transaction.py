@@ -272,6 +272,11 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
 
     validation_commands = [
         [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
+        [
+            ".venv/bin/python",
+            "scripts/project_control/collect_project_improvement_signals.py",
+            "--validate-emitted",
+        ],
         [".venv/bin/python", "scripts/project_control/validate_documentation_impact.py"],
         [
             ".venv/bin/python",
@@ -341,6 +346,22 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     if staged_project_classifier.returncode != 0:
         run_command(["git", "restore", "--staged", "--", *paths_to_stage])
         return block_report("staged project-change classification failed", job_row, final_changes, commands)
+
+    staged_project_signals = run_command([
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted",
+    ])
+    commands.append(staged_project_signals)
+    if staged_project_signals.returncode != 0:
+        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
+        return block_report(
+            "staged project-improvement signal validation failed",
+            job_row,
+            final_changes,
+            commands,
+            suggested_repair_role="validator-engineer",
+        )
 
     staged_documentation_impact = run_command([
         ".venv/bin/python",

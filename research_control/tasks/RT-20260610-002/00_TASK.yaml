@@ -1,0 +1,11 @@
+task_id: "RT-20260610-002"
+task_type: "project_system_signal_and_documentation_impact_gate"
+status: "completed"
+created_at: "2026-06-10T03:10:45Z"
+objective: "Make emitted project-improvement signals structurally detected, define canonical signal types in a registry read by classifier resolver and signal validator, fail validation unless emitted signals have registered types and concrete registry rows, require explicit resolution evidence before signal rows leave the open backlog, require mechanically checked documentation_impact.yaml for every state-changing project-system AgentJob, route high/critical signals ahead of low/medium backlog, and keep resolver output advisory rather than checkpoint-blocking."
+current_decision_id: "DDR-20260610-002"
+current_job_id: "AJ-RT-20260610-002-001"
+parent_task_id: "RT-20260610-001"
+requires_human_gate: false
+claim_boundary_id: "CB-PROJECT-SYSTEM-SIGNAL-REGISTRATION-GATE-001"
+next_recommended_action: "Continue grilling the project-system improvement design after canonical signal-type vocabulary, structural signal-detection, signal-registration, resolution-evidence, documentation-impact receipt, severity-priority, and advisory-resolver invariants are validated."

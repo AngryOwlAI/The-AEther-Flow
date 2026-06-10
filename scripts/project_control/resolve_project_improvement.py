@@ -15,22 +15,11 @@ if str(SCRIPT_DIR) not in sys.path:
 
 from classify_project_changes import changed_paths_from_git, classify_paths  # noqa: E402
 from collect_project_improvement_signals import collect_signals  # noqa: E402
+from project_signal_types import signal_type_role_map  # noqa: E402
 
 
 SEVERITY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
-SIGNAL_ROLE_MAP = {
-    "documentation_drift": "documentation-curator",
-    "generated_artifact_drift": "documentation-curator",
-    "workflow_friction": "documentation-curator",
-    "validator_gap": "validator-engineer",
-    "test_gap": "validator-engineer",
-    "memory_retrieval_failure": "memory-system-maintainer",
-    "repeated_manual_step": "memory-system-maintainer",
-    "routing_ambiguity": "project-system-director",
-    "role_authority_mismatch": "project-system-director",
-    "claim_boundary_confusion": "project-system-director",
-    "human_gate_policy_gap": "project-system-director",
-}
+HIGH_PRIORITY_SEVERITIES = {"critical", "high"}
 
 
 STOP_CONDITIONS = [
@@ -55,23 +44,41 @@ def selected_signal(open_signals: list[dict[str, str]]) -> dict[str, str] | None
     )[0]
 
 
+def high_priority_signal(open_signals: list[dict[str, str]]) -> dict[str, str] | None:
+    return selected_signal(
+        [
+            signal
+            for signal in open_signals
+            if signal.get("severity") in HIGH_PRIORITY_SEVERITIES
+        ]
+    )
+
+
 def resolve_project_improvement(paths: list[str] | None = None) -> dict[str, object]:
     if paths is None:
         paths = changed_paths_from_git()
     classification = classify_paths(paths)
     signals = collect_signals()
-    chosen_signal = selected_signal(signals["open_signals"])
+    open_signals = signals["open_signals"]
+    urgent_signal = high_priority_signal(open_signals)
+    backlog_signal = selected_signal(open_signals)
+    role_map = signal_type_role_map()
+    chosen_signal: dict[str, str] | None = None
 
     boundary = "no_action"
     recommended_role = ""
     reason = "no open project-improvement signal and no current Git change requires action"
 
-    if chosen_signal:
+    if urgent_signal:
+        chosen_signal = urgent_signal
         boundary = "project_improvement_signal_ready"
-        recommended_role = chosen_signal.get("recommended_role") or SIGNAL_ROLE_MAP.get(
+        recommended_role = chosen_signal.get("recommended_role") or role_map.get(
             chosen_signal.get("signal_type", ""), "project-system-director"
         )
-        reason = f"open signal {chosen_signal.get('signal_id', '')} requires one bounded AgentJob"
+        reason = (
+            f"high-priority open signal {chosen_signal.get('signal_id', '')} "
+            "requires one bounded AgentJob"
+        )
     elif classification.get("docs_impact_required"):
         boundary = "documentation_curator_required"
         recommended_role = "documentation-curator"
@@ -80,26 +87,37 @@ def resolve_project_improvement(paths: list[str] | None = None) -> dict[str, obj
         boundary = "project_system_agent_job_required"
         recommended_role = classification.get("recommended_role", "validator-engineer")
         reason = "current Git change affects project-system machinery"
+    elif backlog_signal:
+        chosen_signal = backlog_signal
+        boundary = "project_improvement_signal_ready"
+        recommended_role = chosen_signal.get("recommended_role") or role_map.get(
+            chosen_signal.get("signal_type", ""), "project-system-director"
+        )
+        reason = f"open backlog signal {chosen_signal.get('signal_id', '')} requires one bounded AgentJob"
 
     return {
         "status": "ready",
         "boundary": boundary,
         "reason": reason,
+        "resolver_is_advisory": True,
+        "hard_checkpoint_gate": False,
         "recommended_skill": "improve-project-system" if boundary != "no_action" else "",
         "recommended_role": recommended_role,
         "selected_signal": chosen_signal or {},
-        "open_signals": signals["open_signals"],
+        "open_signals": open_signals,
         "change_classification": classification,
         "required_authority_surfaces": [
             "AGENTS.md",
             "research_control/AGENTS.md",
             "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv",
+            "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv",
             "registries/AGENT_ROLE_REGISTRY.csv",
             ".agents/roles/research_ops/documentation-curator.v0.1.0.md",
             ".codex/skills/improve-project-system/SKILL.md",
         ],
         "stop_conditions": STOP_CONDITIONS,
         "checkpoint_required_after_execution": boundary != "no_action",
+        "checkpoint_gate_source": "validators",
         "execution_boundary": "one bounded AgentJob per invocation",
     }
 

@@ -14,6 +14,15 @@ from typing import Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+RESEARCH_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "research_control"
+if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(RESEARCH_CONTROL_SCRIPT_DIR))
+
+from project_signal_types import signal_type_names  # noqa: E402
+from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
 
 IGNORED_PREFIXES = (".local/", ".venv/", "__pycache__/")
 GENERATED_REGISTRY_NAMES = {
@@ -30,7 +39,16 @@ GENERATED_REGISTRY_PREFIXES = (
     "registries/CONTENT_SEMANTIC_REGISTRY.meta.json",
     "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json",
 )
-PROJECT_SIGNAL_TERMS = ("documentation_drift", "workflow_friction")
+SIGNAL_FIELDS = (
+    "signal_id",
+    "signal_type",
+    "severity",
+    "evidence",
+    "evidence_path",
+    "recommended_skill",
+    "recommended_role",
+    "notes",
+)
 
 
 @dataclass
@@ -130,24 +148,52 @@ def is_generated_registry(path: str) -> bool:
 
 def is_generated_derivative(path: str) -> bool:
     return (
-        path.startswith("wiki/")
+        path == "FOLDER_MAP.md"
+        or path.startswith("wiki/")
         or path.startswith("html/")
         or path.startswith("ontology/pdfs/")
         or path.startswith("manuscripts/pdfs/")
     )
 
 
+def is_signal_emission_path(path: str) -> bool:
+    return (
+        fnmatch.fnmatch(path, "research_control/tasks/*/jobs/completions/*.yaml")
+        or fnmatch.fnmatch(path, "research_control/handoffs/handoff-*.yaml")
+    )
+
+
+def text_value(value: object) -> str:
+    return str(value or "").strip()
+
+
+def is_nonblank_signal(value: object) -> bool:
+    if not isinstance(value, dict):
+        return False
+    return any(text_value(value.get(field)) for field in SIGNAL_FIELDS)
+
+
 def contains_project_signal(path: str) -> bool:
+    if not is_signal_emission_path(path):
+        return False
     absolute = REPO_ROOT / path
     if not absolute.exists() or not absolute.is_file():
         return False
-    if absolute.suffix not in {".md", ".yaml", ".yml"}:
-        return False
     try:
-        text = absolute.read_text(encoding="utf-8")
-    except UnicodeDecodeError:
+        data = load_yaml(absolute)
+    except StrictYamlError:
         return False
-    return any(term in text for term in PROJECT_SIGNAL_TERMS)
+    signals = data.get("project_improvement_signals", [])
+    if not isinstance(signals, list):
+        return False
+    known_types = signal_type_names(REPO_ROOT)
+    for signal in signals:
+        if not is_nonblank_signal(signal):
+            continue
+        signal_type = text_value(signal.get("signal_type")) if isinstance(signal, dict) else ""
+        if not signal_type or signal_type in known_types:
+            return True
+    return False
 
 
 def classify_canonical_path(path: str, result: Classification) -> None:
@@ -195,6 +241,10 @@ def classify_canonical_path(path: str, result: Classification) -> None:
     elif path.startswith("registries/") and path.endswith("REGISTRY.csv"):
         if path == "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv":
             result.reason_codes.add("project_improvement_signal_registry_changed")
+            result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md")
+            result.improve()
+        elif path == "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv":
+            result.reason_codes.add("project_improvement_signal_type_registry_changed")
             result.docs("README.md", ".codex/skills/improve-project-system/SKILL.md")
             result.improve()
         else:

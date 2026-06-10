@@ -24,6 +24,18 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_DIR = REPO_ROOT / "registries"
 CONTROL_DIR = REPO_ROOT / "research_control"
 
+RESOLVER_SNAPSHOT_REQUIRED_FIELDS = (
+    "status",
+    "boundary",
+    "reason",
+    "resolver_is_advisory",
+    "hard_checkpoint_gate",
+    "checkpoint_gate_source",
+    "selected_signal",
+    "open_signals",
+    "change_classification",
+)
+
 ROLE_COLUMNS = [
     "role_id",
     "version",
@@ -230,6 +242,14 @@ def validate_relative_path(path_text: str) -> str | None:
     if any(part == ".." for part in path.parts):
         return "path traversal is not allowed"
     return None
+
+
+def bool_value(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() == "true"
+    return False
 
 
 def read_csv_rows(name: str) -> list[dict[str, str]]:
@@ -624,6 +644,94 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     command_results = completion.get("command_results", [])
     if not isinstance(command_results, list) or not command_results:
         report.error(f"{path.relative_to(REPO_ROOT).as_posix()}: missing command_results")
+
+    job_path_text = job_row.get("job_path", "")
+    if not job_path_text:
+        return
+    try:
+        job_contract = load_yaml(repo_path(job_path_text))
+    except StrictYamlError as exc:
+        report.error(f"{job_path_text}: {exc}")
+        return
+    validate_completion_resolver_snapshots(report, completion, job_contract, path)
+
+
+def validate_completion_resolver_snapshots(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    job_contract: dict[str, Any],
+    path: Path,
+) -> None:
+    if not bool_value(job_contract.get("resolves_signal_routing", False)):
+        return
+    path_text = path.relative_to(REPO_ROOT).as_posix()
+    routing_delta_summary = completion.get("routing_delta_summary", "")
+    if not isinstance(routing_delta_summary, str) or not routing_delta_summary.strip():
+        report.error(f"{path_text}: routing-resolution completion missing routing_delta_summary")
+    snapshots = completion.get("resolver_snapshots")
+    if not isinstance(snapshots, dict):
+        report.error(
+            f"{path_text}: routing-resolution completion must declare resolver_snapshots.before and resolver_snapshots.after"
+        )
+        return
+    for key in ["before", "after"]:
+        value = snapshots.get(key, "")
+        if not isinstance(value, str) or not value.strip():
+            report.error(f"{path_text}: routing-resolution completion missing resolver_snapshots.{key}")
+            continue
+        reason = validate_relative_path(value)
+        if reason:
+            report.error(f"{path_text}: invalid resolver_snapshots.{key}: {reason}")
+            continue
+        snapshot_path = repo_path(value)
+        if snapshot_path.suffix != ".json":
+            report.error(f"{path_text}: resolver_snapshots.{key} must point to a .json file: {value}")
+            continue
+        if not snapshot_path.exists():
+            report.error(f"{path_text}: resolver_snapshots.{key} path does not exist: {value}")
+            continue
+        validate_resolver_snapshot_json(report, path_text, key, snapshot_path)
+
+
+def validate_resolver_snapshot_json(
+    report: ValidationReport,
+    completion_path_text: str,
+    key: str,
+    snapshot_path: Path,
+) -> None:
+    try:
+        data = json.loads(snapshot_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} is not valid JSON: {exc.msg}")
+        return
+    if not isinstance(data, dict):
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} must contain a JSON object")
+        return
+
+    for field_name in RESOLVER_SNAPSHOT_REQUIRED_FIELDS:
+        if field_name not in data:
+            report.error(
+                f"{completion_path_text}: resolver_snapshots.{key} missing resolver field {field_name}"
+            )
+    for field_name in ["status", "boundary", "reason"]:
+        if field_name in data and not isinstance(data[field_name], str):
+            report.error(
+                f"{completion_path_text}: resolver_snapshots.{key} field {field_name} must be a string"
+            )
+    if data.get("resolver_is_advisory") is not True:
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} must preserve resolver_is_advisory=true")
+    if data.get("hard_checkpoint_gate") is not False:
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} must preserve hard_checkpoint_gate=false")
+    if data.get("checkpoint_gate_source") != "validators":
+        report.error(
+            f"{completion_path_text}: resolver_snapshots.{key} must preserve checkpoint_gate_source=validators"
+        )
+    if "selected_signal" in data and not isinstance(data["selected_signal"], dict):
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} selected_signal must be an object")
+    if "open_signals" in data and not isinstance(data["open_signals"], list):
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} open_signals must be a list")
+    if "change_classification" in data and not isinstance(data["change_classification"], dict):
+        report.error(f"{completion_path_text}: resolver_snapshots.{key} change_classification must be an object")
 
 
 def validate_program_state(report: ValidationReport, tasks: dict[str, dict[str, str]]) -> None:

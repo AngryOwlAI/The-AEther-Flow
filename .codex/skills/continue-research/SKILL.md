@@ -55,6 +55,13 @@ skills provide procedures, and gates control claim promotion.
    The completion or handoff may record `project_improvement_signals`, but
    `/continue-research` must not opportunistically repair project-system
    machinery unless the active AgentJob explicitly authorizes that boundary.
+   If the AgentJob sets `resolves_signal_routing: true`, its completion must
+   preserve repo-relative `resolver_snapshots.before` and
+   `resolver_snapshots.after` paths to JSON output from
+   `resolve_project_improvement.py --json` and include nonblank
+   `routing_delta_summary`. Ordinary validator and documentation jobs do not
+   need fresh resolver snapshots merely because future project-system work is
+   visible.
 
 8. Synchronize generated systems before commit. Always run:
 
