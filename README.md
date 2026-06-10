@@ -95,6 +95,14 @@ Project-system improvement is tracked separately from physics continuation. Docu
 
 Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
 
+The overview explainer is the front-facing hub. It links the ontology and GR
+derivation goal, the staged-autonomy physics/math research-agent harness, and
+the authority / claim-boundary discipline. The tracked pages use a
+progressive-disclosure model with simple/deep views, expandable analysis
+capsules, source drilldowns, and claim-boundary inspection. Those interactions
+help readers explore the project; they do not make generated HTML
+authoritative.
+
 - [Project Overview Explainer](html/project-overview-explainer.html): a first-read map of the physics track, AI research-agent track, authority chain, and open derivation boundary.
 - [Æther Flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a visual explanation of the ontology, exact-GR benchmark status, and current derivation burden.
 - [Research-Agent Workflow Explainer](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, role routing, claim gates, and validation.
@@ -167,8 +175,10 @@ Tracked HTML explainers are human-only generated derivatives. A tracked
 `html/*.html` file is valid only when it is backed by a registered Markdown
 source spec under `markdown/html-explainer-specs/` with `title`, `purpose`,
 `audience`, `output_path`, `renderer_skill`, `source_materials`,
-`claim_boundary`, and `human_visual_only: true`. Modify the spec first, then
-regenerate the HTML output.
+`claim_boundary`, `human_visual_only: true`, `explainer_kind`,
+`interaction_model`, `analysis_depth`, `required_controls`,
+`source_drilldowns`, and `analysis_capsule_schema`. Modify the spec first,
+then regenerate the HTML output.
 
 Bootstrap or refresh the memory system:
 

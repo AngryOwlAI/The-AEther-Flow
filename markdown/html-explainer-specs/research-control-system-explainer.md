@@ -16,6 +16,31 @@ source_materials:
   - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
 claim_boundary: "Human-only project-system visualization. It explains existing authority boundaries and validator behavior without changing physics claims, control contracts, routing decisions, or registry authority."
 human_visual_only: true
+explainer_kind: "control_system"
+interaction_model: "progressive_disclosure"
+analysis_depth: "simple_and_deep"
+required_controls:
+  - "simple_deep_toggle"
+  - "section_toc"
+  - "expandable_analysis_panels"
+  - "source_drilldowns"
+  - "claim_boundary_toggle"
+  - "workflow_step_inspector"
+source_drilldowns:
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/README.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".codex/skills/html-visual-explainer/SKILL.md"
+  - ".codex/skills/visual-explainer/SKILL.md"
+analysis_capsule_schema:
+  - "premise"
+  - "mechanism"
+  - "source_basis"
+  - "authority_status"
+  - "uncertainty"
+  - "validation_or_test"
+  - "next_step"
 ---
 
 # Research-Control System Explainer Spec
@@ -40,6 +65,47 @@ by this Markdown source spec.
   and diff checks.
 - A claim-boundary notice stating that the page is human-only and
   non-authoritative.
+- Progressive-disclosure controls for first-read and deep analysis modes,
+  expandable analysis capsules, source drilldowns, claim-boundary inspection,
+  and a workflow step inspector.
+
+## Required Analysis Capsules
+
+### Source-Backed HTML Governance
+
+- premise: Tracked HTML explainers are valid only when backed by registered
+  Markdown source specs.
+- mechanism: The Markdown spec declares title, purpose, source material, claim
+  boundary, interaction model, required controls, source drilldowns, and the
+  analysis capsule schema; generated HTML carries marker evidence.
+- source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
+  `.codex/skills/visual-explainer/SKILL.md`, and
+  `registries/HTML_EXPLAINER_REGISTRY.csv`.
+- authority_status: Project-control explanation of generated derivative
+  governance.
+- uncertainty: Visual design quality still requires human or browser review;
+  the validator checks structural evidence only.
+- validation_or_test: Run memory bootstrap validation and confirm each declared
+  control has a matching `data-explainer-control` marker.
+- next_step: Modify the Markdown source spec first, regenerate HTML, then
+  validate.
+
+### Project-System Improvement Loop
+
+- premise: Project-system improvement is separate from physics continuation.
+- mechanism: A bounded AgentJob updates roles, validators, skill contracts,
+  docs, or memory tooling while documentation-impact and research-control
+  validators preserve the authority boundary.
+- source_basis: `AGENTS.md`, `research_control/README.md`, and
+  `.codex/skills/improve-project-system/SKILL.md`.
+- authority_status: Control-system explanation; it does not promote scientific
+  claims.
+- uncertainty: Resolver output is advisory; validator failures and authority
+  violations are the hard stop conditions.
+- validation_or_test: Use classification, resolver output, signal validation,
+  documentation-impact validation, research-control validation, and tests.
+- next_step: Keep future interactive-explainer improvements inside one bounded
+  project-system job.
 
 ## Non-Goals
 

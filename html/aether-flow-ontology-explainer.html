@@ -4,302 +4,344 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="2e43513514bfd7526551a76be74cf3747b0e436fe18276c814aa756858309f4d">
+  <meta name="aether-flow-source-basis-hash" content="4c94c5e2ef2be6e1ba4659e0bb29f0da60e3021708fe36b4f6b6ff95002347ca">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Æther Flow Ontology Explainer</title>
   <style>
     :root {
-      --ink: #17202a;
-      --muted: #5a6572;
-      --line: #cfd6dd;
-      --paper: #f8fafc;
-      --white: #ffffff;
-      --violet: #5b4aa0;
-      --violet-soft: #ebe8ff;
-      --teal: #0f766e;
-      --teal-soft: #d8efeb;
-      --gold: #946513;
-      --gold-soft: #f2e2b7;
-      --red: #a23b50;
-      --red-soft: #f7dce3;
-      --shadow: 0 12px 28px rgba(23, 32, 42, 0.09);
+      --bg: #f5f7f4;
+      --surface: #ffffff;
+      --surface-2: #edf3ee;
+      --ink: #17251f;
+      --muted: #5f6d66;
+      --line: #cbd8d0;
+      --green: #2f6f54;
+      --green-soft: #dfeee6;
+      --blue: #1f4d72;
+      --blue-soft: #dbe8f2;
+      --amber: #b16f16;
+      --amber-soft: #f0dfbd;
+      --red: #9e344b;
+      --red-soft: #f3dce3;
+      --shadow: 0 18px 40px rgba(23, 37, 31, 0.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--paper);
+      background:
+        linear-gradient(rgba(47, 111, 84, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 111, 84, 0.06) 1px, transparent 1px),
+        var(--bg);
+      background-size: 30px 30px;
       color: var(--ink);
-      font-family: Avenir, "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
       line-height: 1.55;
     }
 
     main {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1160px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 36px 0 56px;
+      padding: 30px 0 56px;
     }
 
-    h1, h2, h3, p {
-      margin: 0;
-    }
-
+    h1, h2, h3, p { margin: 0; }
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 3.8rem;
-      line-height: 1;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.98;
       letter-spacing: 0;
     }
-
-    h2 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
+    h2 { font-size: 1.35rem; margin-bottom: 12px; }
+    h3 { font-size: 1rem; margin-bottom: 8px; }
+    p { color: var(--muted); }
+    code {
+      background: rgba(47, 111, 84, 0.09);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.9em;
     }
 
-    h3 {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-
-    header, section {
-      background: var(--white);
+    .hero, .toolbar, .panel, .layer, .capsule, .source-item {
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: var(--shadow);
     }
 
-    header {
-      padding: 28px;
-      border-top: 7px solid var(--violet);
-      margin-bottom: 18px;
+    .hero {
+      padding: clamp(22px, 5vw, 42px);
+      min-height: 360px;
+      display: grid;
+      align-content: space-between;
+      border-top: 7px solid var(--green);
     }
 
-    header p {
-      max-width: 820px;
-      color: var(--muted);
-      margin-top: 16px;
-      font-size: 1.05rem;
-    }
-
-    section {
-      margin-top: 18px;
-      padding: 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      background: #f7f9fb;
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
       border: 1px solid var(--line);
-      margin-bottom: 12px;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--surface-2);
+      color: var(--green);
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
     }
+
+    .hero p { max-width: 840px; margin-top: 18px; font-size: 1.08rem; }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      margin: 18px 0;
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .toolbar nav { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    button, .nav-link {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      color: var(--ink);
+      padding: 9px 12px;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] { background: var(--green); color: white; }
+
+    .section { margin-top: 18px; }
+    .panel, .capsule { padding: 20px; }
 
     .stack {
       display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
     }
 
     .layer {
+      box-shadow: none;
+      min-height: 210px;
+      padding: 18px;
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 14px;
-      align-items: stretch;
+      align-content: start;
+      gap: 10px;
+    }
+    .layer:nth-child(1) { background: var(--green-soft); }
+    .layer:nth-child(2) { background: var(--blue-soft); }
+    .layer:nth-child(3) { background: var(--amber-soft); }
+    .layer:nth-child(4) { background: #f7f7f4; }
+
+    .deep-only { display: none; }
+    body.deep-mode .deep-only { display: block; }
+
+    details {
       border: 1px solid var(--line);
       border-radius: 8px;
-      overflow: hidden;
-      background: #f7f9fb;
+      padding: 14px;
+      background: #fbfdf9;
+      margin-top: 10px;
     }
+    summary { cursor: pointer; font-weight: 800; color: var(--green); }
 
-    .layer-label {
-      padding: 16px;
-      color: var(--white);
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-
-    .layer:nth-child(1) .layer-label {
-      background: var(--violet);
-    }
-
-    .layer:nth-child(2) .layer-label {
-      background: var(--teal);
-    }
-
-    .layer:nth-child(3) .layer-label {
-      background: var(--gold);
-    }
-
-    .layer:nth-child(4) .layer-label {
-      background: var(--red);
-    }
-
-    .layer-body {
-      padding: 16px;
-    }
-
-    .grid {
+    .checklist {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
-    .check {
+    .checklist div {
       border: 1px solid var(--line);
       border-radius: 8px;
       padding: 14px;
-      min-height: 130px;
-      background: #f7f9fb;
+      background: #fbfdf9;
     }
 
-    .check strong {
-      display: block;
-      margin-bottom: 6px;
+    .capsules {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
-    .boundary {
-      background: var(--gold-soft);
-      border-color: rgba(148, 101, 19, 0.35);
+    .capsule { box-shadow: none; background: #fbfdf9; }
+    .capsule dl { display: grid; gap: 8px; margin: 0; }
+    .capsule dt { font-weight: 800; color: var(--green); }
+    .capsule dd { margin: 0; color: var(--muted); }
+
+    .sources {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
+    .source-item { box-shadow: none; padding: 14px; background: #fbfdf9; }
+    .claim-box { background: var(--red-soft); border-color: rgba(158, 52, 75, 0.35); }
 
-    .notice {
-      background: var(--red-soft);
-      border-color: rgba(162, 59, 80, 0.35);
-    }
-
-    ul {
-      margin: 10px 0 0 18px;
-      padding: 0;
-    }
-
-    code {
-      background: #eef2f6;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 1px 5px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.9em;
-    }
-
-    .sources li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 820px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .layer, .grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 920px) {
+      .stack, .checklist, .capsules, .sources { grid-template-columns: 1fr; }
+      .toolbar { position: static; }
     }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <span class="tag">Human-only ontology map</span>
-      <h1>Æther Flow Ontology</h1>
-      <p>The ontology lane asks whether relativistic behavior can be recovered from source-defined substrate structure. The current benchmark remains exact GR. The derivation from ontology to benchmark is an open research burden, not an accepted result.</p>
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Conceptual model</span>
+        <h1>Æther / Æther-Flow Ontology</h1>
+        <p>This page explains what the project means by ontology: a proposed substrate-and-flow framing that may guide a derivation, but is not itself a completed derivation of general relativity.</p>
+      </div>
+      <p>The accepted benchmark remains ordinary GR at observable scale. The open problem is to recover that benchmark from source-defined substrate structure without importing the target metric by hand.</p>
     </header>
 
-    <section>
+    <div class="toolbar">
+      <button type="button" data-explainer-control="simple_deep_toggle" aria-pressed="false" id="depth-toggle">Deep view</button>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a class="nav-link" href="#stack">Ontology stack</a>
+        <a class="nav-link" href="#burden">Derivation burden</a>
+        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link" href="#sources">Sources</a>
+        <a class="nav-link" href="#claim-boundary">Claim boundary</a>
+      </nav>
+    </div>
+
+    <section id="stack" class="section">
       <h2>Ontology-to-Benchmark Stack</h2>
       <div class="stack">
         <article class="layer">
-          <div class="layer-label">1. Substrate idea</div>
-          <div class="layer-body">
-            <h3>Æther / Æther-flow</h3>
-            <p>A proposed four-dimensional substrate and flow-like organization used as a research ontology. It is a candidate explanatory base, not an empirical conclusion by itself.</p>
-          </div>
+          <h3>1. Substrate idea</h3>
+          <p>`Æther` names the proposed deeper substrate.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>What this can do</summary>
+            <p>It can organize hypotheses and constraints. It cannot by itself prove GR or replace registered scientific sources.</p>
+          </details>
         </article>
         <article class="layer">
-          <div class="layer-label">2. Source structures</div>
-          <div class="layer-body">
-            <h3>Definitions before targets</h3>
-            <p>Candidate derivation work must define source-side structures without importing the target metric, target clock behavior, or benchmark-tuned branch choices.</p>
-          </div>
+          <h3>2. Flow organization</h3>
+          <p>`Æther-flow` names structured relational organization in that substrate.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>What must be specified</summary>
+            <p>Admissible variables, evolution rules, invariants, dimensions, boundary conditions, and matter coupling.</p>
+          </details>
         </article>
         <article class="layer">
-          <div class="layer-label">3. Effective behavior</div>
-          <div class="layer-body">
-            <h3>Relativistic sector burden</h3>
-            <p>The missing step is a coherent route from substrate data to Lorentzian metric behavior, causal structure, matter coupling, clock behavior, and invariance properties.</p>
-          </div>
+          <h3>3. Effective behavior</h3>
+          <p>The target is emergent relativistic behavior with clocks, causal structure, and universal coupling.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>What must not happen</summary>
+            <p>The derivation must not smuggle in the Lorentzian metric, target proper time, or observer protocol as hidden inputs.</p>
+          </details>
         </article>
         <article class="layer">
-          <div class="layer-label">4. Exact-GR benchmark</div>
-          <div class="layer-body">
-            <h3>Observable-scale constraint</h3>
-            <p>The public benchmark preserves ordinary GR at observable scale. Any derivation proposal must recover that behavior without overclaiming.</p>
-          </div>
+          <h3>4. Exact-GR benchmark</h3>
+          <p>The conservative public benchmark remains ordinary GR at observable scale.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>What remains open</summary>
+            <p>Recovering the benchmark from first principles remains unresolved until authorized gates establish it.</p>
+          </details>
         </article>
       </div>
     </section>
 
-    <section class="boundary">
-      <h2>Current Boundary</h2>
-      <p>The established repository state is an exact-GR benchmark package and an open derivation program. The repository does not currently claim that the ontology has derived GR from first principles.</p>
-    </section>
-
-    <section>
+    <section id="burden" class="section panel">
       <h2>Derivation Burden Checklist</h2>
-      <div class="grid">
-        <div class="check">
-          <strong>Lorentzian metric generation</strong>
-          <p>Recover an effective metric from source data rather than assuming it.</p>
-        </div>
-        <div class="check">
-          <strong>Causal structure</strong>
-          <p>Explain light cones and causal order without target imports.</p>
-        </div>
-        <div class="check">
-          <strong>Clock behavior</strong>
-          <p>Account for proper-time-like behavior from source-side definitions.</p>
-        </div>
-        <div class="check">
-          <strong>Matter coupling</strong>
-          <p>Recover universal coupling constraints compatible with the benchmark.</p>
-        </div>
-        <div class="check">
-          <strong>Invariance</strong>
-          <p>Track coordinate and observer independence as obligations, not slogans.</p>
-        </div>
-        <div class="check">
-          <strong>Anti-smuggling</strong>
-          <p>Block hidden metric, clock, or benchmark-tuned assumptions.</p>
-        </div>
+      <div class="checklist">
+        <div><h3>Lorentzian metric</h3><p>Generate effective geometry rather than assume it.</p></div>
+        <div><h3>Causal structure</h3><p>Recover light-cone behavior and limiting cases.</p></div>
+        <div><h3>Clock behavior</h3><p>Account for proper time without importing it.</p></div>
+        <div><h3>Matter coupling</h3><p>Preserve universal coupling at benchmark scale.</p></div>
+        <div><h3>Invariance</h3><p>Track symmetries and conserved structure.</p></div>
+        <div><h3>Anti-smuggling</h3><p>Prevent hidden target metric or observer protocol import.</p></div>
       </div>
     </section>
 
-    <section>
-      <h2>Where Authority Lives</h2>
-      <p>Scientific authority lives in registered TeX sources and claim-boundary registries. This page is a visual guide. It is downstream of <code>markdown/html-explainer-specs/aether-flow-ontology-explainer.md</code> and is validated as human-only generated HTML.</p>
+    <section id="analysis" class="section deep-only">
+      <h2>Deep Analysis Capsules</h2>
+      <div class="capsules">
+        <article class="capsule" data-analysis-capsule="ontology-versus-derivation">
+          <h3>Ontology Versus Derivation</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>An ontology states what kind of underlying structure is being proposed; it is not by itself a completed derivation.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>The page separates substrate vocabulary, mathematical model, benchmark behavior, and empirical prediction.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>README, ontology Markdown, and claim-boundary registry.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>Human-only conceptual explanation.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>The ontology has not yet yielded a first-principles exact-GR derivation.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Recover metric behavior, causality, clocks, matter coupling, and invariance without target import.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Use the derivation checklist before interpreting a candidate mechanism as progress.</dd>
+          </dl>
+        </article>
+        <article class="capsule" data-analysis-capsule="exact-gr-benchmark">
+          <h3>Exact-GR Benchmark Boundary</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>The project preserves ordinary GR as the observable benchmark.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>The benchmark constrains the research program; it does not prove the ontology.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>AGENTS, README, and TeX source registry rows.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>Summary of registered claim boundaries.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>The source-defined laws capable of recovering the benchmark remain unresolved.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Check dimensional consistency, invariance, anti-smuggling, and limiting behavior.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Route candidate structures through bounded research-control work.</dd>
+          </dl>
+        </article>
+      </div>
     </section>
 
-    <section class="notice">
-      <h2>Boundary Notice</h2>
-      <p>This explainer does not introduce equations, proof claims, or empirical predictions. It summarizes the repository’s ontology framing and open burden for human readers.</p>
+    <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
+      <h2>Source Drilldowns</h2>
+      <div class="sources">
+        <article class="source-item" data-source-path="README.md"><h3>README.md</h3><p>Project framing and ontology summary.</p></article>
+        <article class="source-item" data-source-path="AGENTS.md"><h3>AGENTS.md</h3><p>Authority hierarchy and open derivation boundary.</p></article>
+        <article class="source-item" data-source-path="ontology/aether-and-aether-flow.md"><h3>ontology/aether-and-aether-flow.md</h3><p>Ontology-adjacent explanatory source.</p></article>
+        <article class="source-item" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><h3>CLAIM_BOUNDARY_REGISTRY.csv</h3><p>Claim-boundary status and prohibited promotions.</p></article>
+        <article class="source-item" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><h3>TEX_SOURCE_REGISTRY.csv</h3><p>Registered scientific source rows.</p></article>
+      </div>
     </section>
 
-    <section>
-      <h2>Sources</h2>
-      <ul class="sources">
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>README.md</em> [Repository document].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENTS.md</em> [Repository agent guidance].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>ontology/aether-and-aether-flow.md</em> [Repository ontology-adjacent explanatory note].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>CLAIM_BOUNDARY_REGISTRY.csv</em> [Repository registry].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>TEX_SOURCE_REGISTRY.csv</em> [Repository registry].</li>
-      </ul>
+    <section id="claim-boundary" class="section panel claim-box" data-explainer-control="claim_boundary_toggle">
+      <h2>Claim Boundary</h2>
+      <details open>
+        <summary>What this page may claim</summary>
+        <p>It may explain the ontology framing, benchmark boundary, and open derivation burden.</p>
+      </details>
+      <details>
+        <summary>What this page may not claim</summary>
+        <p>It may not assert that the ontology derives GR, add equations, promote empirical predictions, or alter registered source authority.</p>
+      </details>
     </section>
   </main>
+  <script>
+    const toggle = document.getElementById("depth-toggle");
+    toggle.addEventListener("click", () => {
+      const deep = document.body.classList.toggle("deep-mode");
+      toggle.setAttribute("aria-pressed", String(deep));
+      toggle.textContent = deep ? "Simple view" : "Deep view";
+    });
+  </script>
 </body>
 </html>

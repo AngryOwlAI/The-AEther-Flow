@@ -1,65 +1,90 @@
 Research-Agent Workflow Explainer
-Human-only workflow map
+Workflow process
 Research-Agent Workflow
-The project uses a bounded research-control spine. Director decisions select a role, AgentJobs define the allowed work, validators check the transaction, and completion or handoff records preserve the result.
+The project develops a staged-autonomy physics/math research-agent harness by running bounded research tasks against the hard GR-derivation problem. Current operation remains human-accountable, role-bounded, and validator-gated.
+Workflow status is operational evidence about the research system, not a proof of the physics theory.
+Deep view
+Loop
+Lanes
+Analysis
+Sources
+Claim boundary
 One Bounded Execution Loop
-Director decision
+1. Director decision
 Selects one role and one task boundary.
-Role execution record
-Binds the task to a registered role or explicit overlay.
-AgentJob
-Defines allowed reads, writes, generated paths, and commands.
-Output
-Produces bounded artifacts without widening authority.
-Validation
+Inspect step
+Inputs: tracked state and registries. Outputs: DDR and selected AgentJob boundary. Authority: project or research director.
+2. Role binding
+Binds work to a registered role or explicit task overlay.
+Inspect step
+Inputs: role contracts. Outputs: role execution record. Authority: role registry and task allowlist.
+3. AgentJob
+Defines allowed reads, writes, outputs, and validators.
+Inspect step
+Inputs: DDR and role boundary. Outputs: strict YAML job contract. Validator concern: allowed paths and required checks.
+4. Bounded output
+Produces artifacts without widening authority.
+Inspect step
+Inputs: job scope. Outputs: source edits, generated derivatives, or task artifacts. Boundary: no physics promotion by workflow status.
+5. Validation
 Runs deterministic checks before checkpointing.
-Completion or handoff
-Records the result and the logical next boundary.
+Inspect step
+Inputs: live diff and registries. Outputs: pass/fail receipts. Authority: validator scripts, not model judgment.
+6. Completion or handoff
+Records result and next boundary.
+Inspect step
+Inputs: validation results. Outputs: completion YAML or handoff. Boundary: next work remains bounded.
 Two Operating Lanes
 continue-research
-Continues physics research from tracked state, handoffs, and the active task boundary.
-May route one bounded science AgentJob.
-May create candidate, refutation, audit, or formalization artifacts.
-Must not treat workflow status as proof.
+Continues physics research from tracked handoffs and task state. It may route science roles, but does not repair project-system machinery unless explicitly authorized.
 improve-project-system
-Repairs or clarifies the research system itself.
-May address roles, validators, memory tooling, docs, or generated-doc pipelines.
-Uses documentation-impact receipts for state-changing project-system work.
-Must not promote physics claims.
-Validation Gate
-Memory bootstrap
-Regenerates registries, wiki notes, HTML rows, and semantic surfaces.
-Documentation impact
-Checks state-changing project-system work for required receipts.
-Research-control validation
-Checks task records, registries, role execution, and diff allowlists.
-Signal validation
-Ensures emitted project-improvement signals are registered and typed.
-Tests
-Runs unit coverage for changed machinery and regression surfaces.
-Diff hygiene
-Checks whitespace, allowed paths, and authority markers.
-Boundary Notice
-The workflow makes research artifacts auditable. It does not make a physics claim true. Scientific claims still require registered source evidence, successful gates, and explicit claim-boundary authority.
-Sources
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
+Maintains roles, validators, memory tooling, source-backed explainers, and documentation-impact receipts. It must not promote physics claims.
+Deep Analysis Capsules
+Bounded AgentJob Loop
+Premise
+The workflow advances through one bounded job at a time.
+Mechanism
+Director decisions, role bindings, AgentJobs, validators, and handoffs constrain each transaction.
+Source basis
+Research-control README, AGENTS, and control registries.
+Authority status
+Project-control explanation, not physics proof.
+Uncertainty
+A completed step may preserve progress, obstruction, or negative result.
+Validation or test
+Check completion records, registry rows, validators, and diff checks.
+Next step
+Inspect each step's inputs, outputs, authority, and validators.
+Staged-Autonomy Harness
+Premise
+The AI system is being developed toward staged autonomy through live theoretical work.
+Mechanism
+Roles, routing, refutation, novelty search, claim gates, memory, and validation are tested on real research tasks.
+Source basis
+README, AGENTS, continue-research, and improve-project-system skills.
+Authority status
+AI-methodology explanation only.
+Uncertainty
+Current operation is human-scaffolded and validator-gated.
+Validation or test
+Autonomy claims need measurable task success, reproducible handoffs, and failure-mode tracking.
+Next step
+Keep autonomy language separate from physics claim status.
+Source Drilldowns
 README.md
-[Repository document].
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
+Two-track project and staged-autonomy framing.
 AGENTS.md
-[Repository agent guidance].
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
+Project identity and authority hierarchy.
 research_control/AGENTS.md
-[Repository scoped agent guidance].
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
+Tracked control-state editing rules.
 research_control/README.md
-[Repository control documentation].
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
-AGENT_JOB_REGISTRY.csv
-[Repository registry].
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
-DIRECTOR_DECISION_REGISTRY.csv
-[Repository registry].
-The Æther-Flow Interpretation of Relativity Research Project. (2026).
-ROLE_EXECUTION_REGISTRY.csv
-[Repository registry].
+Research-control task and handoff structure.
+continue-research skill
+Physics continuation boundary.
+improve-project-system skill
+Project-system improvement boundary.
+Claim Boundary
+What this page may claim
+It may explain the existing workflow structure, staged-autonomy target, and validation discipline.
+What this page may not claim
+It may not change routing behavior, role authority, validators, physics claim status, or imply autonomous proof authority.

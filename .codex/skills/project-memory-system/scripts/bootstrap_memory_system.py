@@ -227,6 +227,43 @@ HTML_SPEC_REQUIRED_FIELDS = {
     "source_materials",
     "claim_boundary",
     "human_visual_only",
+    "explainer_kind",
+    "interaction_model",
+    "analysis_depth",
+    "required_controls",
+    "source_drilldowns",
+    "analysis_capsule_schema",
+}
+HTML_EXPLAINER_KINDS = {
+    "project_overview",
+    "conceptual_model",
+    "workflow_process",
+    "control_system",
+}
+HTML_CONTROL_VALUES = {
+    "simple_deep_toggle",
+    "section_toc",
+    "expandable_analysis_panels",
+    "source_drilldowns",
+    "claim_boundary_toggle",
+    "workflow_step_inspector",
+}
+HTML_UNIVERSAL_REQUIRED_CONTROLS = {
+    "simple_deep_toggle",
+    "section_toc",
+    "expandable_analysis_panels",
+    "source_drilldowns",
+    "claim_boundary_toggle",
+}
+HTML_WORKFLOW_CONTROL_KINDS = {"workflow_process", "control_system"}
+HTML_CAPSULE_FIELDS = {
+    "premise",
+    "mechanism",
+    "source_basis",
+    "authority_status",
+    "uncertainty",
+    "validation_or_test",
+    "next_step",
 }
 HTML_SOURCE_BASIS_META_RE = re.compile(
     r'<meta\s+name=["\']aether-flow-source-basis["\']\s+content=["\']([^"\']+)["\']',
@@ -240,6 +277,7 @@ HTML_HUMAN_VISUAL_META_RE = re.compile(
     r'<meta\s+name=["\']aether-flow-human-visual-only["\']\s+content=["\']([^"\']+)["\']',
     re.IGNORECASE,
 )
+HTML_DATA_ATTR_RE = r'\b{attr}\s*=\s*["\']([^"\']+)["\']'
 
 
 @dataclass
@@ -785,6 +823,18 @@ def html_spec_rows_by_output(markdown_rows: list[dict[str, str]]) -> dict[str, d
 def html_meta_value(pattern: re.Pattern[str], html_text: str) -> str:
     match = pattern.search(html_text)
     return match.group(1).strip() if match else ""
+
+
+def html_data_values(attr: str, html_text: str) -> set[str]:
+    pattern = re.compile(HTML_DATA_ATTR_RE.format(attr=re.escape(attr)), re.IGNORECASE)
+    return {match.group(1).strip() for match in pattern.finditer(html_text)}
+
+
+def html_required_controls(frontmatter: dict[str, object]) -> set[str]:
+    controls = frontmatter.get("required_controls", [])
+    if not isinstance(controls, list):
+        return set()
+    return {str(control).strip() for control in controls if str(control).strip()}
 
 
 def generate_html_rows(now: str, markdown_rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -1442,9 +1492,10 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
         if not path.exists():
             report.error(f"{object_id}: missing HTML explainer spec {path_text}")
             continue
-        frontmatter, error = html_spec_frontmatter(path)
-        if error:
-            report.error(f"{object_id}: invalid HTML explainer spec frontmatter: {error}")
+        try:
+            frontmatter, body = load_frontmatter(path)
+        except StrictYamlError as exc:
+            report.error(f"{object_id}: invalid HTML explainer spec frontmatter: {exc}")
             continue
         for field_name in sorted(HTML_SPEC_REQUIRED_FIELDS):
             value = frontmatter.get(field_name)
@@ -1470,6 +1521,73 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
         source_materials = frontmatter.get("source_materials", [])
         if not isinstance(source_materials, list) or not source_materials:
             report.error(f"{object_id}: source_materials must be a non-empty list")
+        explainer_kind = str(frontmatter.get("explainer_kind", "")).strip()
+        if explainer_kind and explainer_kind not in HTML_EXPLAINER_KINDS:
+            report.error(f"{object_id}: invalid explainer_kind")
+        interaction_model = str(frontmatter.get("interaction_model", "")).strip()
+        if interaction_model and interaction_model != "progressive_disclosure":
+            report.error(
+                f"{object_id}: interaction_model must be progressive_disclosure"
+            )
+        analysis_depth = str(frontmatter.get("analysis_depth", "")).strip()
+        if analysis_depth and analysis_depth != "simple_and_deep":
+            report.error(f"{object_id}: analysis_depth must be simple_and_deep")
+        required_controls = frontmatter.get("required_controls", [])
+        if not isinstance(required_controls, list) or not required_controls:
+            report.error(f"{object_id}: required_controls must be a non-empty list")
+            required_control_values: set[str] = set()
+        else:
+            required_control_values = {
+                str(control).strip()
+                for control in required_controls
+                if str(control).strip()
+            }
+            unknown_controls = required_control_values - HTML_CONTROL_VALUES
+            if unknown_controls:
+                report.error(f"{object_id}: unknown required_controls value")
+            missing_universal = (
+                HTML_UNIVERSAL_REQUIRED_CONTROLS - required_control_values
+            )
+            if missing_universal:
+                report.error(f"{object_id}: missing universal required_controls")
+            if (
+                explainer_kind in HTML_WORKFLOW_CONTROL_KINDS
+                and "workflow_step_inspector" not in required_control_values
+            ):
+                report.error(
+                    f"{object_id}: workflow explainer missing workflow_step_inspector"
+                )
+        source_drilldowns = frontmatter.get("source_drilldowns", [])
+        if not isinstance(source_drilldowns, list) or not source_drilldowns:
+            report.error(f"{object_id}: source_drilldowns must be a non-empty list")
+        elif isinstance(source_materials, list):
+            source_material_values = {str(item).strip() for item in source_materials}
+            missing_sources = {
+                str(item).strip()
+                for item in source_drilldowns
+                if str(item).strip() not in source_material_values
+            }
+            if missing_sources:
+                report.error(f"{object_id}: source_drilldowns must cite source_materials")
+        capsule_schema = frontmatter.get("analysis_capsule_schema", [])
+        if not isinstance(capsule_schema, list) or not capsule_schema:
+            report.error(
+                f"{object_id}: analysis_capsule_schema must be a non-empty list"
+            )
+            capsule_fields: set[str] = set()
+        else:
+            capsule_fields = {
+                str(field).strip() for field in capsule_schema if str(field).strip()
+            }
+            if capsule_fields != HTML_CAPSULE_FIELDS:
+                report.error(f"{object_id}: analysis_capsule_schema is incomplete")
+        if "## Required Analysis Capsules" not in body:
+            report.error(f"{object_id}: missing Required Analysis Capsules section")
+        for field_name in sorted(capsule_fields):
+            if f"{field_name}:" not in body:
+                report.error(
+                    f"{object_id}: Required Analysis Capsules missing {field_name}"
+                )
 
 
 def validate_tex_vocab(report: ValidationReport, rows: list[dict[str, str]]) -> None:
@@ -1528,6 +1646,38 @@ def validate_html_registry(
             report.error(f"{object_id}: HTML source-basis hash metadata is stale or missing")
         if html_human_visual_only != "true":
             report.error(f"{object_id}: HTML human-visual-only metadata must be true")
+        spec_path = REPO_ROOT / source_row.get("path", "")
+        if not spec_path.exists():
+            report.error(f"{object_id}: missing source spec {source_row.get('path', '')}")
+            continue
+        try:
+            frontmatter, _body = load_frontmatter(spec_path)
+        except StrictYamlError as exc:
+            report.error(f"{object_id}: invalid source spec frontmatter: {exc}")
+            continue
+        declared_controls = html_required_controls(frontmatter)
+        html_controls = html_data_values("data-explainer-control", html_text)
+        for control in sorted(declared_controls):
+            if control not in html_controls:
+                report.error(f"{object_id}: missing HTML control marker {control}")
+        capsule_markers = html_data_values("data-analysis-capsule", html_text)
+        if not capsule_markers:
+            report.error(f"{object_id}: missing data-analysis-capsule marker")
+        capsule_fields = {
+            str(field).strip()
+            for field in frontmatter.get("analysis_capsule_schema", [])
+            if str(field).strip()
+        }
+        html_capsule_fields = html_data_values("data-capsule-field", html_text)
+        for field_name in sorted(capsule_fields):
+            if field_name not in html_capsule_fields:
+                report.error(
+                    f"{object_id}: missing HTML capsule field marker {field_name}"
+                )
+        if "source_drilldowns" in declared_controls:
+            source_paths = html_data_values("data-source-path", html_text)
+            if not source_paths:
+                report.error(f"{object_id}: source drilldowns missing data-source-path")
 
 
 def validate_wiki_registry(

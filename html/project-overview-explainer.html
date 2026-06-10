@@ -4,362 +4,377 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="06cd499c990ec5750c6e520f8a3dba156119429eacff327b7b5d7895996014d4">
+  <meta name="aether-flow-source-basis-hash" content="1a613db8db85b563e32abb56f2e11d4e820efb8bdf8916dca29e634d673c1df3">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Project Overview Explainer</title>
   <style>
     :root {
-      --ink: #17202a;
-      --muted: #596675;
-      --line: #cfd6dd;
-      --paper: #fafafa;
-      --white: #ffffff;
-      --blue: #235789;
-      --blue-soft: #dbeafe;
-      --green: #2f7d51;
-      --green-soft: #dff3e6;
-      --gold: #9b6b18;
-      --gold-soft: #f4e6bd;
-      --red: #9f2f45;
-      --red-soft: #f7dce3;
-      --shadow: 0 12px 28px rgba(23, 32, 42, 0.09);
+      --bg: #f7f4ef;
+      --surface: #fffdf8;
+      --surface-2: #f1eadf;
+      --ink: #18202a;
+      --muted: #65707c;
+      --line: #d8cec0;
+      --blue: #1e3a5f;
+      --blue-soft: #dfe9f3;
+      --green: #2f6f54;
+      --green-soft: #dfeee6;
+      --gold: #b98324;
+      --gold-soft: #f3e4be;
+      --red: #9f314d;
+      --red-soft: #f5dce4;
+      --shadow: 0 18px 40px rgba(24, 32, 42, 0.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--paper);
+      background:
+        linear-gradient(rgba(30, 58, 95, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 95, 0.05) 1px, transparent 1px),
+        var(--bg);
+      background-size: 32px 32px;
       color: var(--ink);
-      font-family: Avenir, "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
       line-height: 1.55;
     }
 
     main {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 36px 0 56px;
+      padding: 30px 0 56px;
     }
 
-    header {
-      display: grid;
-      grid-template-columns: 1.35fr 0.9fr;
-      gap: 18px;
-      align-items: stretch;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3, p {
-      margin: 0;
-    }
+    h1, h2, h3, p { margin: 0; }
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 4rem;
-      line-height: 1;
+      font-size: clamp(2.6rem, 8vw, 5.8rem);
+      line-height: 0.95;
       letter-spacing: 0;
+      max-width: 920px;
     }
 
-    h2 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
+    h2 { font-size: 1.35rem; margin-bottom: 12px; }
+    h3 { font-size: 1rem; margin-bottom: 8px; }
+    p { color: var(--muted); }
+    a { color: var(--blue); font-weight: 700; }
+    code {
+      background: rgba(30, 58, 95, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.9em;
     }
 
-    h3 {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-
-    .hero, .status, section {
-      background: var(--white);
+    .hero, .toolbar, .panel, .capsule, .path-card, .source-item {
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: var(--shadow);
     }
 
     .hero {
-      padding: 28px;
-      min-height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: clamp(22px, 5vw, 42px);
+      min-height: 430px;
+      display: grid;
+      align-content: space-between;
       border-top: 7px solid var(--blue);
     }
 
-    .hero p {
-      color: var(--muted);
-      max-width: 760px;
-      margin-top: 18px;
-      font-size: 1.05rem;
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--surface-2);
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
     }
 
-    .status {
-      padding: 18px;
+    .hero-copy {
+      max-width: 850px;
+      margin-top: 20px;
+      font-size: 1.08rem;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      margin: 18px 0;
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .toolbar nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button, .nav-link {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      color: var(--ink);
+      padding: 9px 12px;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .grid {
       display: grid;
-      gap: 12px;
-      border-top: 7px solid var(--gold);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
-    .metric {
+    .path-card, .panel, .capsule { padding: 20px; }
+    .path-card { min-height: 270px; display: grid; gap: 12px; align-content: start; }
+    .path-card:nth-child(1) { border-top: 6px solid var(--blue); }
+    .path-card:nth-child(2) { border-top: 6px solid var(--green); }
+    .path-card:nth-child(3) { border-top: 6px solid var(--gold); }
+
+    .section { margin-top: 18px; }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .status-strip .panel { box-shadow: none; min-height: 150px; }
+
+    .deep-only { display: none; }
+    body.deep-mode .deep-only { display: block; }
+
+    details {
       border: 1px solid var(--line);
       border-radius: 8px;
       padding: 14px;
-      background: #f7f9fb;
+      background: #fbf8f1;
+      margin-top: 10px;
     }
 
-    .metric strong {
-      display: block;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+    summary { cursor: pointer; font-weight: 800; color: var(--blue); }
 
-    .metric span {
-      display: block;
-      margin-top: 4px;
-      font-weight: 700;
-    }
-
-    section {
-      margin-top: 18px;
-      padding: 22px;
-    }
-
-    .tracks {
+    .capsules {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
-    .track {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 18px;
-      min-height: 230px;
+    .capsule {
+      box-shadow: none;
+      background: #fffaf0;
+    }
+
+    .capsule dl {
       display: grid;
-      gap: 12px;
-      align-content: start;
+      gap: 8px;
+      margin: 0;
     }
 
-    .track.physics {
-      background: var(--blue-soft);
-    }
+    .capsule dt { font-weight: 800; color: var(--blue); }
+    .capsule dd { margin: 0; color: var(--muted); }
 
-    .track.ai {
-      background: var(--green-soft);
-    }
-
-    .tag {
-      display: inline-block;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      background: var(--white);
-      border: 1px solid var(--line);
-    }
-
-    .ladder {
+    .sources {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
 
-    .rung {
-      border: 1px solid var(--line);
-      border-radius: 8px;
+    .source-item {
+      box-shadow: none;
       padding: 14px;
-      background: #f7f9fb;
-      min-height: 140px;
+      background: #fbf8f1;
     }
 
-    .rung strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .rung small {
-      color: var(--muted);
-    }
-
-    .flow {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      align-items: stretch;
-    }
-
-    .flow .step {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-      background: #f7f9fb;
-      position: relative;
-      min-height: 118px;
-    }
-
-    .step:not(:last-child)::after {
-      content: ">";
-      position: absolute;
-      right: -10px;
-      top: 42%;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .notice {
+    .claim-box {
       background: var(--red-soft);
-      border-color: rgba(159, 47, 69, 0.35);
+      border-color: rgba(159, 49, 77, 0.35);
     }
 
-    ul {
-      margin: 10px 0 0 18px;
-      padding: 0;
-    }
-
-    code {
-      background: #eef2f6;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 1px 5px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.9em;
-    }
-
-    .sources li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 820px) {
-      header, .tracks, .ladder, .flow {
+    @media (max-width: 880px) {
+      .grid, .status-strip, .capsules, .sources {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        font-size: 2.7rem;
-      }
-
-      .step:not(:last-child)::after {
-        content: "";
+      .toolbar {
+        position: static;
       }
     }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <div class="hero">
-        <div>
-          <span class="tag">Human-only overview</span>
-          <h1>Æther-Flow Research Program</h1>
-          <p>This page maps the repository’s two missions: preserve an exact-GR benchmark while testing whether a deeper Æther / Æther-flow ontology can derive it, and develop the AI research-agent system that keeps the work bounded, auditable, and source-first.</p>
-        </div>
-        <p><strong>Claim boundary:</strong> this visual page explains current repository structure. It does not promote a physics result, alter a control rule, or replace registered sources.</p>
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Human-only explainer hub</span>
+        <h1>The Æther-Flow Research Program</h1>
+        <p class="hero-copy">A first-read map of the project: an open attempt to derive the exact-GR benchmark from an Æther / Æther-flow ontology, and a staged-autonomy physics/math research-agent harness developed by doing that research under human accountability.</p>
       </div>
-      <aside class="status" aria-label="Project status">
-        <div class="metric">
-          <strong>Benchmark</strong>
-          <span>Exact GR is preserved at observable scale.</span>
-        </div>
-        <div class="metric">
-          <strong>Open burden</strong>
-          <span>First-principles derivation from substrate structure remains open.</span>
-        </div>
-        <div class="metric">
-          <strong>Authority model</strong>
-          <span>Sources and registries first; generated views second.</span>
-        </div>
-      </aside>
+      <div class="status-strip" aria-label="Project status">
+        <article class="panel">
+          <h3>Established repository state</h3>
+          <p>Observable-scale benchmark behavior remains ordinary GR; source authority is held by registered source files and registries.</p>
+        </article>
+        <article class="panel">
+          <h3>Open derivation burden</h3>
+          <p>The first-principles derivation from substrate structure is not complete and must pass claim gates.</p>
+        </article>
+        <article class="panel">
+          <h3>Generated reading aid</h3>
+          <p>This HTML is a non-authoritative visual derivative backed by a Markdown source spec.</p>
+        </article>
+      </div>
     </header>
 
-    <section>
-      <h2>Two Linked Tracks</h2>
-      <div class="tracks">
-        <article class="track physics">
-          <span class="tag">Physics research</span>
-          <h3>Exact-GR benchmark plus open derivation</h3>
-          <p>The physics lane keeps ordinary GR as the observable benchmark while asking whether effective Lorentzian geometry, causal structure, clock behavior, and matter coupling can be recovered from source-defined ontology data.</p>
-          <ul>
-            <li>Accepted state: benchmark behavior remains ordinary GR.</li>
-            <li>Open state: no accepted first-principles derivation yet.</li>
-            <li>Guardrail: no target metric import or benchmark tuning by hand.</li>
-          </ul>
+    <div class="toolbar">
+      <button type="button" data-explainer-control="simple_deep_toggle" aria-pressed="false" id="depth-toggle">Deep view</button>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a class="nav-link" href="#paths">Paths</a>
+        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link" href="#sources">Sources</a>
+        <a class="nav-link" href="#claim-boundary">Claim boundary</a>
+      </nav>
+    </div>
+
+    <section id="paths" class="section">
+      <h2>Three Exploration Paths</h2>
+      <div class="grid">
+        <article class="path-card">
+          <h3>Ontology and GR derivation goal</h3>
+          <p>The ontology lane asks whether a proposed substrate and flow structure can recover the exact-GR benchmark without importing the target metric by hand.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>Explore the derivation burden</summary>
+            <p>The first milestone is effective Lorentzian metric generation. The related checks include causal structure, clock behavior, matter coupling, invariance, dimensional consistency, and anti-smuggling constraints.</p>
+          </details>
+          <p><a href="aether-flow-ontology-explainer.html">Open ontology explainer</a></p>
         </article>
-        <article class="track ai">
-          <span class="tag">AI research-agent system</span>
-          <h3>Bounded theoretical-physics workflow</h3>
-          <p>The AI lane develops Director decisions, roles, AgentJobs, validation, registries, memory, and handoffs so proposals can be constructed, refuted, repaired, or stopped without losing scientific provenance.</p>
-          <ul>
-            <li>Agent status is not physics proof.</li>
-            <li>Negative results are preserved as first-class research output.</li>
-            <li>Public release and authorship remain human-accountable.</li>
-          </ul>
+        <article class="path-card">
+          <h3>Staged-autonomy research harness</h3>
+          <p>The AI track develops an agentic physics/math research harness by using the GR-derivation problem as a hard test environment.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>Inspect the autonomy boundary</summary>
+            <p>The system is human-accountable and validator-gated today. Staged autonomy is the long-term technical target, not a current proof claim or authorship transfer.</p>
+          </details>
+          <p><a href="research-agent-workflow-explainer.html">Open workflow explainer</a></p>
+        </article>
+        <article class="path-card">
+          <h3>Authority, claims, and validation</h3>
+          <p>The control system separates canonical sources, registries, Markdown specs, generated HTML, wiki notes, and local retrieval artifacts.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels">
+            <summary>Inspect the source-first rule</summary>
+            <p>Generated outputs can help humans read the project, but they do not override registered `.tex` files, registries, or registered Markdown source specs.</p>
+          </details>
+          <p><a href="research-control-system-explainer.html">Open control-system explainer</a></p>
         </article>
       </div>
     </section>
 
-    <section>
-      <h2>Authority Ladder</h2>
-      <div class="ladder">
-        <div class="rung">
-          <strong>1. Registered TeX</strong>
-          <small>Canonical for physics and derivational claims.</small>
-        </div>
-        <div class="rung">
-          <strong>2. Registries</strong>
-          <small>Canonical for routing, provenance, generated outputs, and queryable memory.</small>
-        </div>
-        <div class="rung">
-          <strong>3. Registered Markdown</strong>
-          <small>Canonical for front-door docs, agent guidance, source specs, and project notes.</small>
-        </div>
-        <div class="rung">
-          <strong>4. Generated derivatives</strong>
-          <small>PDFs, wiki notes, indexes, Obsidian notes, and HTML explainers are useful views.</small>
-        </div>
+    <section id="analysis" class="section deep-only" aria-label="Detailed analysis layer">
+      <h2>Deep Analysis Capsules</h2>
+      <div class="capsules">
+        <article class="capsule" data-analysis-capsule="ontology-derivation-goal">
+          <h3>Ontology and GR Derivation Goal</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>The project studies whether ordinary GR can be interpreted and eventually derived from a deeper Æther / Æther-flow ontology.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>The hub connects substrate vocabulary to the open target of recovering Lorentzian geometry, causal structure, clocks, matter coupling, and invariance.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>README, AGENTS, and claim-boundary registry rows.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>Explanatory overview only; registered sources carry scientific authority.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>The first-principles derivation remains open.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Candidate mechanisms must recover the exact-GR benchmark without hidden target import.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Use the ontology explainer before treating any candidate as progress.</dd>
+          </dl>
+        </article>
+        <article class="capsule" data-analysis-capsule="staged-autonomy-harness">
+          <h3>Staged-Autonomy Research Harness</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>The AI track is a staged-autonomy harness, not a present autonomous proof system.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>Roles, routing, validators, claim gates, memory, and handoffs are tested through real physics/math research work.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>README, AGENTS, and workflow explainer sources.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>AI-methodology explanation; not scientific evidence.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>Autonomy is a long-term target and current operation remains human-accountable.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Evaluate reproducible job completion, handoff quality, validator results, and failure preservation.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Use the workflow explainer to inspect the operating loop.</dd>
+          </dl>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2>How This Page Exists</h2>
-      <div class="flow">
-        <div class="step">
-          <h3>README</h3>
-          <p>Human-facing overview and links.</p>
-        </div>
-        <div class="step">
-          <h3>Markdown spec</h3>
-          <p><code>project-overview-explainer.md</code> defines the source basis.</p>
-        </div>
-        <div class="step">
-          <h3>Generated HTML</h3>
-          <p>This file is the non-authoritative visual derivative.</p>
-        </div>
-        <div class="step">
-          <h3>Validation</h3>
-          <p>Bootstrap verifies source hashes, metadata, registry rows, and wiki outputs.</p>
-        </div>
+    <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
+      <h2>Source Drilldowns</h2>
+      <div class="sources">
+        <article class="source-item" data-source-path="README.md">
+          <h3>README.md</h3>
+          <p>Front-door project identity, two-track framing, ontology summary, AI harness framing, and explainer list.</p>
+        </article>
+        <article class="source-item" data-source-path="AGENTS.md">
+          <h3>AGENTS.md</h3>
+          <p>Control authority, source hierarchy, project-system improvement boundary, and generated-output rules.</p>
+        </article>
+        <article class="source-item" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">
+          <h3>CLAIM_BOUNDARY_REGISTRY.csv</h3>
+          <p>Registered claim boundaries that prevent generated pages from promoting physics claims.</p>
+        </article>
+        <article class="source-item" data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv">
+          <h3>HTML_EXPLAINER_REGISTRY.csv</h3>
+          <p>Generated HTML registration, source-basis binding, hashes, and validation status.</p>
+        </article>
       </div>
     </section>
 
-    <section class="notice">
-      <h2>Boundary Notice</h2>
-      <p>This explainer is for human orientation only. Scientific authority remains in registered sources and claim-boundary registries. Workflow authority remains in control-marked guidance, role contracts, validators, and task records.</p>
-    </section>
-
-    <section>
-      <h2>Sources</h2>
-      <ul class="sources">
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>README.md</em> [Repository document].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENTS.md</em> [Repository agent guidance].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>CLAIM_BOUNDARY_REGISTRY.csv</em> [Repository registry].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>MARKDOWN_SOURCE_REGISTRY.csv</em> [Repository registry].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>HTML_EXPLAINER_REGISTRY.csv</em> [Repository registry].</li>
-      </ul>
+    <section id="claim-boundary" class="section panel claim-box" data-explainer-control="claim_boundary_toggle">
+      <h2>Claim Boundary</h2>
+      <details open>
+        <summary>What this page may claim</summary>
+        <p>It may summarize the dual physics and AI research-agent missions, the exact-GR benchmark boundary, the open derivation burden, and the source-first authority chain.</p>
+      </details>
+      <details>
+        <summary>What this page may not claim</summary>
+        <p>It may not assert that GR has been derived, that the ontology is established physics, or that the AI harness is currently autonomous or proof-authoritative.</p>
+      </details>
     </section>
   </main>
+  <script>
+    const toggle = document.getElementById("depth-toggle");
+    toggle.addEventListener("click", () => {
+      const deep = document.body.classList.toggle("deep-mode");
+      toggle.setAttribute("aria-pressed", String(deep));
+      toggle.textContent = deep ? "Simple view" : "Deep view";
+    });
+  </script>
 </body>
 </html>

@@ -70,6 +70,34 @@ Markdown source spec under `markdown/html-explainer-specs/`, then render the
 HTML file named by that spec. The tracked HTML remains human-only generated
 output; the Markdown spec and registries carry authority.
 
+Tracked project explainers must implement the project interactive analysis
+contract declared by the Markdown source spec. Use a low-risk
+progressive-disclosure model rather than a heavy app framework:
+
+- Provide a simple/deep reading toggle.
+- Provide section navigation.
+- Use expandable analysis panels for reasoning, constraints, risks, and
+  examples.
+- Provide source drilldowns that expose the registered source basis.
+- Provide claim-boundary controls that distinguish what the page may and may
+  not claim.
+- Provide workflow step inspectors for workflow and control-system pages.
+
+Deep-view panels should use analysis capsules with these fields: `premise`,
+`mechanism`, `source_basis`, `authority_status`, `uncertainty`,
+`validation_or_test`, and `next_step`. The generated HTML must include
+`data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
+`data-source-path` markers as required by the spec. These markers are
+validator evidence only; they do not make generated HTML authoritative.
+
+For the front-facing project overview, treat
+`html/project-overview-explainer.html` as the explainer hub. It should orient
+readers to the ontology and GR-derivation goal, the staged-autonomy
+physics/math research-agent harness, and the source authority / claim-boundary
+discipline. The AI system is a human-accountable, validator-gated
+staged-autonomy harness today; autonomy is a long-term technical target, not a
+current proof claim.
+
 ## Workflow
 
 ### 1. Think (5 seconds, not 5 minutes)

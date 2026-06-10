@@ -4,102 +4,128 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="86cf9e8dfb34e9a153eee5a2dee6f67026030403b2c1ed4ff1bc6310071f21a3">
+  <meta name="aether-flow-source-basis-hash" content="a1bb6a61fb84760082b99ee66123112e014999d696596bd969903dbc5c1a0894">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Research-Agent Workflow Explainer</title>
   <style>
     :root {
-      --ink: #17202a;
-      --muted: #596675;
-      --line: #cfd6dd;
-      --paper: #f8fafc;
-      --white: #ffffff;
-      --blue: #235789;
-      --blue-soft: #dbeafe;
-      --green: #2f7d51;
-      --green-soft: #dff3e6;
-      --purple: #6d4c9f;
-      --purple-soft: #ece5f8;
+      --bg: #f4f6f8;
+      --surface: #ffffff;
+      --surface-2: #eef3f7;
+      --ink: #16212b;
+      --muted: #607080;
+      --line: #ccd6df;
+      --blue: #1f4d72;
+      --blue-soft: #dce9f4;
+      --green: #2f6f54;
+      --green-soft: #dfeee6;
+      --amber: #b57517;
+      --amber-soft: #f2e2bf;
       --red: #a23b50;
-      --red-soft: #f7dce3;
-      --shadow: 0 12px 28px rgba(23, 32, 42, 0.09);
+      --red-soft: #f6dfe5;
+      --shadow: 0 18px 40px rgba(22, 33, 43, 0.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--paper);
+      background:
+        linear-gradient(rgba(31, 77, 114, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31, 77, 114, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 30px 30px;
       color: var(--ink);
-      font-family: Avenir, "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
       line-height: 1.55;
     }
 
     main {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 36px 0 56px;
+      padding: 30px 0 56px;
     }
 
-    header, section {
-      background: var(--white);
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    h2 { font-size: 1.35rem; margin-bottom: 12px; }
+    h3 { font-size: 1rem; margin-bottom: 8px; }
+    p { color: var(--muted); }
+    code {
+      background: rgba(31, 77, 114, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.9em;
+    }
+
+    .hero, .toolbar, .panel, .step, .capsule, .source-item {
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: var(--shadow);
     }
 
-    header {
-      padding: 28px;
-      border-top: 7px solid var(--green);
-      margin-bottom: 18px;
+    .hero {
+      padding: clamp(22px, 5vw, 42px);
+      min-height: 360px;
+      display: grid;
+      align-content: space-between;
+      border-top: 7px solid var(--blue);
     }
 
-    h1, h2, h3, p {
-      margin: 0;
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 3.8rem;
-      line-height: 1;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      max-width: 830px;
-      color: var(--muted);
-      margin-top: 16px;
-      font-size: 1.05rem;
-    }
-
-    section {
-      margin-top: 18px;
-      padding: 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      background: #f7f9fb;
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
       border: 1px solid var(--line);
-      margin-bottom: 12px;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--surface-2);
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
     }
+
+    .hero p { max-width: 880px; margin-top: 18px; font-size: 1.08rem; }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      margin: 18px 0;
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .toolbar nav { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    button, .nav-link {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      color: var(--ink);
+      padding: 9px 12px;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] { background: var(--blue); color: white; }
+
+    .section { margin-top: 18px; }
+    .panel, .capsule { padding: 20px; }
 
     .pipeline {
       display: grid;
@@ -107,218 +133,206 @@
       gap: 10px;
     }
 
-    .node {
+    .step {
+      box-shadow: none;
+      padding: 14px;
+      min-height: 190px;
+      display: grid;
+      align-content: start;
+      gap: 10px;
+      background: #f9fbfd;
+    }
+    .step:nth-child(1), .step:nth-child(2) { background: var(--blue-soft); }
+    .step:nth-child(3), .step:nth-child(4) { background: var(--green-soft); }
+    .step:nth-child(5), .step:nth-child(6) { background: var(--amber-soft); }
+
+    .deep-only { display: none; }
+    body.deep-mode .deep-only { display: block; }
+
+    details {
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 14px;
-      min-height: 150px;
-      background: #f7f9fb;
-      position: relative;
+      padding: 12px;
+      background: #fbfdff;
+      margin-top: 8px;
     }
+    summary { cursor: pointer; font-weight: 800; color: var(--blue); }
 
-    .node:not(:last-child)::after {
-      content: ">";
-      position: absolute;
-      right: -10px;
-      top: 42%;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .node:nth-child(1), .node:nth-child(2) {
-      background: var(--blue-soft);
-    }
-
-    .node:nth-child(3), .node:nth-child(4) {
-      background: var(--green-soft);
-    }
-
-    .node:nth-child(5), .node:nth-child(6) {
-      background: var(--purple-soft);
-    }
-
-    .lanes {
+    .lanes, .capsules {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
-    .lane {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 18px;
-      min-height: 220px;
-    }
+    .lane { border-top: 6px solid var(--blue); }
+    .lane + .lane { border-top-color: var(--green); }
 
-    .lane.research {
-      background: var(--blue-soft);
-    }
+    .capsule { box-shadow: none; background: #fbfdff; }
+    .capsule dl { display: grid; gap: 8px; margin: 0; }
+    .capsule dt { font-weight: 800; color: var(--blue); }
+    .capsule dd { margin: 0; color: var(--muted); }
 
-    .lane.system {
-      background: var(--green-soft);
-    }
-
-    .gate-grid {
+    .sources {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
+    .source-item { box-shadow: none; padding: 14px; background: #fbfdff; }
+    .claim-box { background: var(--red-soft); border-color: rgba(162, 59, 80, 0.35); }
 
-    .gate {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-      min-height: 120px;
-      background: #f7f9fb;
-    }
-
-    .notice {
-      background: var(--red-soft);
-      border-color: rgba(162, 59, 80, 0.35);
-    }
-
-    ul {
-      margin: 10px 0 0 18px;
-      padding: 0;
-    }
-
-    code {
-      background: #eef2f6;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 1px 5px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.9em;
-    }
-
-    .sources li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 960px) {
-      .pipeline, .lanes, .gate-grid {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .node:not(:last-child)::after {
-        content: "";
-      }
+    @media (max-width: 1000px) {
+      .pipeline, .lanes, .capsules, .sources { grid-template-columns: 1fr; }
+      .toolbar { position: static; }
     }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <span class="tag">Human-only workflow map</span>
-      <h1>Research-Agent Workflow</h1>
-      <p>The project uses a bounded research-control spine. Director decisions select a role, AgentJobs define the allowed work, validators check the transaction, and completion or handoff records preserve the result.</p>
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Workflow process</span>
+        <h1>Research-Agent Workflow</h1>
+        <p>The project develops a staged-autonomy physics/math research-agent harness by running bounded research tasks against the hard GR-derivation problem. Current operation remains human-accountable, role-bounded, and validator-gated.</p>
+      </div>
+      <p>Workflow status is operational evidence about the research system, not a proof of the physics theory.</p>
     </header>
 
-    <section>
+    <div class="toolbar">
+      <button type="button" data-explainer-control="simple_deep_toggle" aria-pressed="false" id="depth-toggle">Deep view</button>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a class="nav-link" href="#loop">Loop</a>
+        <a class="nav-link" href="#lanes">Lanes</a>
+        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link" href="#sources">Sources</a>
+        <a class="nav-link" href="#claim-boundary">Claim boundary</a>
+      </nav>
+    </div>
+
+    <section id="loop" class="section" data-explainer-control="workflow_step_inspector">
       <h2>One Bounded Execution Loop</h2>
       <div class="pipeline">
-        <article class="node">
-          <h3>Director decision</h3>
+        <article class="step" data-workflow-step="director-decision">
+          <h3>1. Director decision</h3>
           <p>Selects one role and one task boundary.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels"><summary>Inspect step</summary><p>Inputs: tracked state and registries. Outputs: DDR and selected AgentJob boundary. Authority: project or research director.</p></details>
         </article>
-        <article class="node">
-          <h3>Role execution record</h3>
-          <p>Binds the task to a registered role or explicit overlay.</p>
+        <article class="step" data-workflow-step="role-binding">
+          <h3>2. Role binding</h3>
+          <p>Binds work to a registered role or explicit task overlay.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: role contracts. Outputs: role execution record. Authority: role registry and task allowlist.</p></details>
         </article>
-        <article class="node">
-          <h3>AgentJob</h3>
-          <p>Defines allowed reads, writes, generated paths, and commands.</p>
+        <article class="step" data-workflow-step="agentjob">
+          <h3>3. AgentJob</h3>
+          <p>Defines allowed reads, writes, outputs, and validators.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: DDR and role boundary. Outputs: strict YAML job contract. Validator concern: allowed paths and required checks.</p></details>
         </article>
-        <article class="node">
-          <h3>Output</h3>
-          <p>Produces bounded artifacts without widening authority.</p>
+        <article class="step" data-workflow-step="bounded-output">
+          <h3>4. Bounded output</h3>
+          <p>Produces artifacts without widening authority.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: job scope. Outputs: source edits, generated derivatives, or task artifacts. Boundary: no physics promotion by workflow status.</p></details>
         </article>
-        <article class="node">
-          <h3>Validation</h3>
+        <article class="step" data-workflow-step="validation">
+          <h3>5. Validation</h3>
           <p>Runs deterministic checks before checkpointing.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: live diff and registries. Outputs: pass/fail receipts. Authority: validator scripts, not model judgment.</p></details>
         </article>
-        <article class="node">
-          <h3>Completion or handoff</h3>
-          <p>Records the result and the logical next boundary.</p>
+        <article class="step" data-workflow-step="completion-handoff">
+          <h3>6. Completion or handoff</h3>
+          <p>Records result and next boundary.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: validation results. Outputs: completion YAML or handoff. Boundary: next work remains bounded.</p></details>
         </article>
       </div>
     </section>
 
-    <section>
+    <section id="lanes" class="section">
       <h2>Two Operating Lanes</h2>
       <div class="lanes">
-        <article class="lane research">
+        <article class="panel lane">
           <h3><code>continue-research</code></h3>
-          <p>Continues physics research from tracked state, handoffs, and the active task boundary.</p>
-          <ul>
-            <li>May route one bounded science AgentJob.</li>
-            <li>May create candidate, refutation, audit, or formalization artifacts.</li>
-            <li>Must not treat workflow status as proof.</li>
-          </ul>
+          <p>Continues physics research from tracked handoffs and task state. It may route science roles, but does not repair project-system machinery unless explicitly authorized.</p>
         </article>
-        <article class="lane system">
+        <article class="panel lane">
           <h3><code>improve-project-system</code></h3>
-          <p>Repairs or clarifies the research system itself.</p>
-          <ul>
-            <li>May address roles, validators, memory tooling, docs, or generated-doc pipelines.</li>
-            <li>Uses documentation-impact receipts for state-changing project-system work.</li>
-            <li>Must not promote physics claims.</li>
-          </ul>
+          <p>Maintains roles, validators, memory tooling, source-backed explainers, and documentation-impact receipts. It must not promote physics claims.</p>
         </article>
       </div>
     </section>
 
-    <section>
-      <h2>Validation Gate</h2>
-      <div class="gate-grid">
-        <div class="gate">
-          <h3>Memory bootstrap</h3>
-          <p>Regenerates registries, wiki notes, HTML rows, and semantic surfaces.</p>
-        </div>
-        <div class="gate">
-          <h3>Documentation impact</h3>
-          <p>Checks state-changing project-system work for required receipts.</p>
-        </div>
-        <div class="gate">
-          <h3>Research-control validation</h3>
-          <p>Checks task records, registries, role execution, and diff allowlists.</p>
-        </div>
-        <div class="gate">
-          <h3>Signal validation</h3>
-          <p>Ensures emitted project-improvement signals are registered and typed.</p>
-        </div>
-        <div class="gate">
-          <h3>Tests</h3>
-          <p>Runs unit coverage for changed machinery and regression surfaces.</p>
-        </div>
-        <div class="gate">
-          <h3>Diff hygiene</h3>
-          <p>Checks whitespace, allowed paths, and authority markers.</p>
-        </div>
+    <section id="analysis" class="section deep-only">
+      <h2>Deep Analysis Capsules</h2>
+      <div class="capsules">
+        <article class="capsule" data-analysis-capsule="bounded-agentjob-loop">
+          <h3>Bounded AgentJob Loop</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>The workflow advances through one bounded job at a time.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>Director decisions, role bindings, AgentJobs, validators, and handoffs constrain each transaction.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>Research-control README, AGENTS, and control registries.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>Project-control explanation, not physics proof.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>A completed step may preserve progress, obstruction, or negative result.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Check completion records, registry rows, validators, and diff checks.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Inspect each step's inputs, outputs, authority, and validators.</dd>
+          </dl>
+        </article>
+        <article class="capsule" data-analysis-capsule="staged-autonomy-harness">
+          <h3>Staged-Autonomy Harness</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>The AI system is being developed toward staged autonomy through live theoretical work.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>Roles, routing, refutation, novelty search, claim gates, memory, and validation are tested on real research tasks.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>README, AGENTS, continue-research, and improve-project-system skills.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>AI-methodology explanation only.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>Current operation is human-scaffolded and validator-gated.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Autonomy claims need measurable task success, reproducible handoffs, and failure-mode tracking.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Keep autonomy language separate from physics claim status.</dd>
+          </dl>
+        </article>
       </div>
     </section>
 
-    <section class="notice">
-      <h2>Boundary Notice</h2>
-      <p>The workflow makes research artifacts auditable. It does not make a physics claim true. Scientific claims still require registered source evidence, successful gates, and explicit claim-boundary authority.</p>
+    <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
+      <h2>Source Drilldowns</h2>
+      <div class="sources">
+        <article class="source-item" data-source-path="README.md"><h3>README.md</h3><p>Two-track project and staged-autonomy framing.</p></article>
+        <article class="source-item" data-source-path="AGENTS.md"><h3>AGENTS.md</h3><p>Project identity and authority hierarchy.</p></article>
+        <article class="source-item" data-source-path="research_control/AGENTS.md"><h3>research_control/AGENTS.md</h3><p>Tracked control-state editing rules.</p></article>
+        <article class="source-item" data-source-path="research_control/README.md"><h3>research_control/README.md</h3><p>Research-control task and handoff structure.</p></article>
+        <article class="source-item" data-source-path=".codex/skills/continue-research/SKILL.md"><h3>continue-research skill</h3><p>Physics continuation boundary.</p></article>
+        <article class="source-item" data-source-path=".codex/skills/improve-project-system/SKILL.md"><h3>improve-project-system skill</h3><p>Project-system improvement boundary.</p></article>
+      </div>
     </section>
 
-    <section>
-      <h2>Sources</h2>
-      <ul class="sources">
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>README.md</em> [Repository document].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENTS.md</em> [Repository agent guidance].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>research_control/AGENTS.md</em> [Repository scoped agent guidance].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>research_control/README.md</em> [Repository control documentation].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENT_JOB_REGISTRY.csv</em> [Repository registry].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>DIRECTOR_DECISION_REGISTRY.csv</em> [Repository registry].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>ROLE_EXECUTION_REGISTRY.csv</em> [Repository registry].</li>
-      </ul>
+    <section id="claim-boundary" class="section panel claim-box" data-explainer-control="claim_boundary_toggle">
+      <h2>Claim Boundary</h2>
+      <details open>
+        <summary>What this page may claim</summary>
+        <p>It may explain the existing workflow structure, staged-autonomy target, and validation discipline.</p>
+      </details>
+      <details>
+        <summary>What this page may not claim</summary>
+        <p>It may not change routing behavior, role authority, validators, physics claim status, or imply autonomous proof authority.</p>
+      </details>
     </section>
   </main>
+  <script>
+    const toggle = document.getElementById("depth-toggle");
+    toggle.addEventListener("click", () => {
+      const deep = document.body.classList.toggle("deep-mode");
+      toggle.setAttribute("aria-pressed", String(deep));
+      toggle.textContent = deep ? "Simple view" : "Deep view";
+    });
+  </script>
 </body>
 </html>

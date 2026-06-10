@@ -4,479 +4,340 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="e3dd17749c379d79dc3b31f87d14c1149182b21c595cc4a455229b99c3a35576">
+  <meta name="aether-flow-source-basis-hash" content="cc1464c97826e4f30bffe3987f82b56ed66ea472d463f43c4be4bf1853601e75">
   <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
   <title>Research-Control System Explainer</title>
   <style>
     :root {
-      --bg: #f7f4ef;
+      --bg: #f6f5f2;
       --surface: #fffdf8;
-      --surface-strong: #f0eadf;
-      --ink: #18222b;
-      --muted: #66727d;
-      --border: rgba(24, 34, 43, 0.14);
-      --teal: #0f766e;
-      --teal-soft: #d8efeb;
-      --amber: #b7791f;
-      --amber-soft: #f7e3bb;
-      --rose: #be123c;
-      --rose-soft: #f8d9df;
-      --green: #3f7d20;
-      --green-soft: #deedcf;
-      --shadow: 0 18px 50px rgba(24, 34, 43, 0.10);
+      --surface-2: #f0ebe0;
+      --ink: #1a211d;
+      --muted: #68716b;
+      --line: #d8d0c1;
+      --blue: #1e3a5f;
+      --blue-soft: #dfe8f2;
+      --green: #2f6f54;
+      --green-soft: #dfeee6;
+      --amber: #b47718;
+      --amber-soft: #f1e0bd;
+      --red: #9e344b;
+      --red-soft: #f3dce3;
+      --shadow: 0 18px 40px rgba(26, 33, 29, 0.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      min-height: 100vh;
       background:
-        linear-gradient(rgba(24, 34, 43, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(24, 34, 43, 0.035) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 34rem),
-        radial-gradient(circle at bottom right, rgba(183, 121, 31, 0.14), transparent 30rem),
+        linear-gradient(rgba(180, 119, 24, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180, 119, 24, 0.06) 1px, transparent 1px),
         var(--bg);
-      background-size: 28px 28px, 28px 28px, auto, auto, auto;
+      background-size: 30px 30px;
       color: var(--ink);
       font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     main {
-      width: min(1180px, calc(100vw - 32px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 42px 0 56px;
+      padding: 30px 0 56px;
     }
 
-    header {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 24px;
-      align-items: stretch;
-      margin-bottom: 28px;
-    }
-
-    h1, h2, h3, p {
-      margin: 0;
-    }
-
+    h1, h2, h3, p { margin: 0; }
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.45rem, 7vw, 5.5rem);
-      line-height: 0.95;
-      max-width: 820px;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.98;
       letter-spacing: 0;
     }
-
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 14px;
+    h2 { font-size: 1.35rem; margin-bottom: 12px; }
+    h3 { font-size: 1rem; margin-bottom: 8px; }
+    p { color: var(--muted); }
+    code {
+      background: rgba(30, 58, 95, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.9em;
     }
 
-    h3 {
-      font-size: 0.95rem;
-      margin-bottom: 8px;
+    .hero, .toolbar, .panel, .step, .rung, .capsule, .source-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(22px, 5vw, 42px);
+      min-height: 360px;
+      display: grid;
+      align-content: space-between;
+      border-top: 7px solid var(--amber);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--surface-2);
+      color: var(--amber);
+      font-weight: 800;
+      font-size: 0.78rem;
       text-transform: uppercase;
     }
 
-    .intro {
+    .hero p { max-width: 900px; margin-top: 18px; font-size: 1.08rem; }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      margin: 18px 0;
+      padding: 12px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 330px;
-      padding: 28px;
-      background: rgba(255, 253, 248, 0.74);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
     }
 
-    .intro p {
-      max-width: 760px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 1.04rem;
+    .toolbar nav { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    button, .nav-link {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      color: var(--ink);
+      padding: 9px 12px;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    .status-panel {
+    button[aria-pressed="true"] { background: var(--amber); color: white; }
+
+    .section { margin-top: 18px; }
+    .panel, .capsule { padding: 20px; }
+
+    .ladder, .workflow, .capsules {
       display: grid;
-      gap: 12px;
-      padding: 18px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .status-item {
-      padding: 14px;
-      border: 1px solid var(--border);
-      background: var(--surface-strong);
-    }
-
-    .status-item strong {
-      display: block;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .status-item span {
-      display: block;
-      margin-top: 4px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.94rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .panel {
-      padding: 20px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-    }
-
-    .panel.large {
-      grid-column: span 2;
-    }
-
-    .panel.full {
-      grid-column: 1 / -1;
+      gap: 14px;
     }
 
     .ladder {
-      display: grid;
-      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
     }
 
-    .rung {
-      display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 12px;
-      align-items: start;
-      padding: 14px;
-      border: 1px solid var(--border);
-      background: linear-gradient(90deg, rgba(15, 118, 110, 0.10), rgba(255, 253, 248, 0));
+    .workflow {
+      grid-template-columns: repeat(5, 1fr);
     }
 
-    .num {
-      display: grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      color: white;
-      background: var(--teal);
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-weight: 700;
-    }
-
-    .flow {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .lane {
-      border: 1px solid var(--border);
-      background: var(--surface-strong);
+    .rung, .step {
+      box-shadow: none;
       padding: 16px;
+      min-height: 170px;
+      background: #fbf8f0;
     }
 
-    .lane ol {
-      margin: 12px 0 0;
-      padding-left: 22px;
-    }
+    .rung:nth-child(1) { background: var(--blue-soft); }
+    .rung:nth-child(2) { background: var(--green-soft); }
+    .rung:nth-child(3) { background: var(--amber-soft); }
 
-    .lane li + li {
+    .step { min-height: 190px; }
+    .step:nth-child(1), .step:nth-child(2) { background: var(--blue-soft); }
+    .step:nth-child(3) { background: var(--green-soft); }
+    .step:nth-child(4), .step:nth-child(5) { background: var(--amber-soft); }
+
+    .deep-only { display: none; }
+    body.deep-mode .deep-only { display: block; }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fffdf8;
       margin-top: 8px;
     }
+    summary { cursor: pointer; font-weight: 800; color: var(--amber); }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.76rem;
-      border: 1px solid var(--border);
-      background: var(--teal-soft);
-      color: var(--teal);
-    }
+    .capsules { grid-template-columns: 1fr 1fr; }
+    .capsule { box-shadow: none; background: #fffdf8; }
+    .capsule dl { display: grid; gap: 8px; margin: 0; }
+    .capsule dt { font-weight: 800; color: var(--amber); }
+    .capsule dd { margin: 0; color: var(--muted); }
 
-    .badge.amber {
-      background: var(--amber-soft);
-      color: #6b430c;
-    }
-
-    .badge.rose {
-      background: var(--rose-soft);
-      color: var(--rose);
-    }
-
-    .badge.green {
-      background: var(--green-soft);
-      color: var(--green);
-    }
-
-    .curator-map {
+    .sources {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      margin-top: 16px;
     }
+    .source-item { box-shadow: none; padding: 14px; background: #fffdf8; }
+    .claim-box { background: var(--red-soft); border-color: rgba(158, 52, 75, 0.35); }
 
-    .step {
-      min-height: 160px;
-      padding: 16px;
-      border: 1px solid var(--border);
-      background: var(--surface-strong);
-      position: relative;
-    }
-
-    .step::after {
-      content: "->";
-      position: absolute;
-      top: 18px;
-      right: -13px;
-      color: var(--amber);
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-weight: 700;
-      background: var(--surface);
-      padding: 0 4px;
-    }
-
-    .step:last-child::after {
-      content: "";
-    }
-
-    .checks {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .check {
-      padding: 12px;
-      border-left: 4px solid var(--green);
-      background: var(--green-soft);
-      min-height: 74px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.82rem;
-    }
-
-    .notice {
-      padding: 18px;
-      border: 1px solid rgba(190, 18, 60, 0.28);
-      background: var(--rose-soft);
-      color: #5f0f21;
-    }
-
-    .source-list {
-      columns: 2;
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 880px) {
-      header,
-      .flow,
-      .curator-map {
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .panel.large,
-      .panel.full {
-        grid-column: auto;
-      }
-
-      .intro {
-        min-height: auto;
-      }
-
-      .step::after {
-        display: none;
-      }
-
-      .checks {
-        grid-template-columns: 1fr;
-      }
-
-      .source-list {
-        columns: 1;
-      }
+    @media (max-width: 1000px) {
+      .ladder, .workflow, .capsules, .sources { grid-template-columns: 1fr; }
+      .toolbar { position: static; }
     }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <section class="intro" aria-labelledby="page-title">
-        <div>
-          <span class="badge">human-only derivative</span>
-          <h1 id="page-title">Research-Control System Explainer</h1>
-        </div>
-        <p>
-          This page visualizes the repository's control system. It is generated
-          from a registered Markdown spec and is not independent authority.
-          Source files and registries remain the basis for project behavior.
-        </p>
-      </section>
-      <aside class="status-panel" aria-label="Explainer status">
-        <div class="status-item">
-          <strong>Source basis</strong>
-          <span>MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER</span>
-        </div>
-        <div class="status-item">
-          <strong>Renderer</strong>
-          <span>visual-explainer@0.7.1-project-aether-flow</span>
-        </div>
-        <div class="status-item">
-          <strong>Authority</strong>
-          <span>generated_noncanonical</span>
-        </div>
-      </aside>
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Control system</span>
+        <h1>Research-Control System</h1>
+        <p>A technical map of the authority hierarchy, the project-system improvement loop, and the source-backed HTML governance rule: edit the Markdown spec first, regenerate the human-only HTML derivative, then validate.</p>
+      </div>
+      <p>Generated pages support human understanding. They never become independent scientific, registry, or workflow authority.</p>
     </header>
 
-    <section class="grid" aria-label="System model">
-      <article class="panel large">
-        <h2>Authority Ladder</h2>
-        <div class="ladder">
-          <div class="rung">
-            <div class="num">1</div>
-            <div>
-              <h3>Canonical science sources</h3>
-              <p>Registered TeX files own physics claims and derivational status.</p>
-            </div>
-          </div>
-          <div class="rung">
-            <div class="num">2</div>
-            <div>
-              <h3>Registries</h3>
-              <p>CSV registries own routing, provenance, generated-output tracking, and memory lookup.</p>
-            </div>
-          </div>
-          <div class="rung">
-            <div class="num">3</div>
-            <div>
-              <h3>Registered Markdown</h3>
-              <p>README, AGENTS, role contracts, skill contracts, and HTML explainer specs guide humans and agents.</p>
-            </div>
-          </div>
-          <div class="rung">
-            <div class="num">4</div>
-            <div>
-              <h3>Generated derivatives</h3>
-              <p>PDFs, wiki notes, indexes, Obsidian exports, and HTML explainers are useful views, not authority.</p>
-            </div>
-          </div>
-        </div>
-      </article>
+    <div class="toolbar">
+      <button type="button" data-explainer-control="simple_deep_toggle" aria-pressed="false" id="depth-toggle">Deep view</button>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a class="nav-link" href="#authority">Authority</a>
+        <a class="nav-link" href="#workflow">Workflow</a>
+        <a class="nav-link" href="#analysis">Analysis</a>
+        <a class="nav-link" href="#sources">Sources</a>
+        <a class="nav-link" href="#claim-boundary">Claim boundary</a>
+      </nav>
+    </div>
 
-      <article class="panel large">
-        <h2>Two Workflows</h2>
-        <div class="flow">
-          <div class="lane">
-            <span class="badge green">continue-research</span>
-            <ol>
-              <li>Resolve tracked handoff and active task state.</li>
-              <li>Use Director control only when a bounded research job is needed.</li>
-              <li>Execute at most one science AgentJob per invocation.</li>
-              <li>Preserve claim boundaries and negative results.</li>
-            </ol>
-          </div>
-          <div class="lane">
-            <span class="badge amber">improve-project-system</span>
-            <ol>
-              <li>Classify current changes and open project-system signals.</li>
-              <li>Select one bounded non-scientific AgentJob.</li>
-              <li>Update control, validator, memory, or documentation surfaces.</li>
-              <li>Record documentation impact and run the gates.</li>
-            </ol>
-          </div>
-        </div>
-      </article>
+    <section id="authority" class="section">
+      <h2>Source Authority Ladder</h2>
+      <div class="ladder">
+        <article class="rung">
+          <h3>1. Registered `.tex`</h3>
+          <p>Canonical for physics research and derivational claims.</p>
+        </article>
+        <article class="rung">
+          <h3>2. Registries</h3>
+          <p>Canonical for provenance, routing, generated-output tracking, and memory.</p>
+        </article>
+        <article class="rung">
+          <h3>3. Registered Markdown</h3>
+          <p>Canonical for front-door docs, guidance, and HTML source specs.</p>
+        </article>
+        <article class="rung">
+          <h3>4. Generated derivatives</h3>
+          <p>HTML, PDFs, wiki notes, indexes, and local retrieval layers.</p>
+        </article>
+      </div>
+    </section>
 
-      <article class="panel full">
-        <h2>Documentation Curator v0.2.0</h2>
-        <p>
-          The Documentation Curator owns explanatory Markdown and source-backed
-          human HTML explainers. A generated HTML file under <code>html/</code>
-          is valid only when a registered Markdown spec names the output path
-          and the HTML metadata matches that spec's current hash.
-        </p>
-        <div class="curator-map">
-          <div class="step">
-            <span class="badge">source spec</span>
-            <h3>markdown/html-explainer-specs</h3>
-            <p>Defines title, purpose, audience, output path, renderer, source materials, claim boundary, and human-only status.</p>
-          </div>
-          <div class="step">
-            <span class="badge amber">render</span>
-            <h3>visual-explainer</h3>
-            <p>Creates the self-contained visualization from the registered spec and inspected source materials.</p>
-          </div>
-          <div class="step">
-            <span class="badge rose">tracked derivative</span>
-            <h3>html/*.html</h3>
-            <p>Remains non-authoritative. Direct HTML-only edits are blocked by project-control classification and validation.</p>
-          </div>
-        </div>
-      </article>
+    <section id="workflow" class="section" data-explainer-control="workflow_step_inspector">
+      <h2>Source-Backed HTML Workflow</h2>
+      <div class="workflow">
+        <article class="step" data-workflow-step="spec">
+          <h3>1. Source spec</h3>
+          <p>Markdown declares purpose, sources, claim boundary, controls, drilldowns, and capsule schema.</p>
+          <details class="deep-only" data-explainer-control="expandable_analysis_panels"><summary>Inspect step</summary><p>Input: source materials. Output: registered source spec. Validator: required frontmatter and capsule body section.</p></details>
+        </article>
+        <article class="step" data-workflow-step="render">
+          <h3>2. Render HTML</h3>
+          <p>The generated page implements progressive disclosure and marker evidence.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Input: Markdown spec. Output: tracked HTML. Boundary: generated human-only derivative.</p></details>
+        </article>
+        <article class="step" data-workflow-step="register">
+          <h3>3. Register hashes</h3>
+          <p>Bootstrap refreshes source hashes, HTML hashes, and generated registries.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Input: live files. Output: registry rows. Validator: source-basis hash alignment.</p></details>
+        </article>
+        <article class="step" data-workflow-step="validate">
+          <h3>4. Validate markers</h3>
+          <p>Lightweight checks confirm declared controls and capsule fields appear in HTML.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Input: spec and HTML. Output: pass/fail. Scope: structural evidence only, not design quality.</p></details>
+        </article>
+        <article class="step" data-workflow-step="review">
+          <h3>5. Human review</h3>
+          <p>Browser QA can inspect design, interaction, readability, and claim discipline.</p>
+          <details class="deep-only"><summary>Inspect step</summary><p>Input: rendered page. Output: human judgment. Boundary: review does not change source authority.</p></details>
+        </article>
+      </div>
+    </section>
 
-      <article class="panel full">
-        <h2>Validator Gates</h2>
-        <div class="checks">
-          <div class="check">classify_project_changes.py --json</div>
-          <div class="check">resolve_project_improvement.py --json</div>
-          <div class="check">collect_project_improvement_signals.py --validate-emitted</div>
-          <div class="check">validate_documentation_impact.py</div>
-          <div class="check">bootstrap_memory_system.py</div>
-          <div class="check">bootstrap_memory_system.py --validate-only</div>
-          <div class="check">validate_research_control.py</div>
-          <div class="check">validate_research_control.py --check-diff</div>
-          <div class="check">python -m unittest discover -s tests</div>
-        </div>
-      </article>
+    <section id="analysis" class="section deep-only">
+      <h2>Deep Analysis Capsules</h2>
+      <div class="capsules">
+        <article class="capsule" data-analysis-capsule="source-backed-html-governance">
+          <h3>Source-Backed HTML Governance</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>Tracked HTML explainers are valid only when backed by registered Markdown source specs.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>The spec declares source basis, interaction model, controls, drilldowns, and capsule schema; HTML carries marker evidence.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>html-visual-explainer skill, visual-explainer skill, and HTML registry.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>Project-control explanation of generated derivative governance.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>Visual quality still requires human or browser review.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Memory validation confirms source-basis metadata, control markers, capsule fields, and source drilldowns.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Modify source specs first, regenerate HTML, then validate.</dd>
+          </dl>
+        </article>
+        <article class="capsule" data-analysis-capsule="project-system-improvement-loop">
+          <h3>Project-System Improvement Loop</h3>
+          <dl>
+            <dt data-capsule-field="premise">Premise</dt>
+            <dd>Project-system improvement is separate from physics continuation.</dd>
+            <dt data-capsule-field="mechanism">Mechanism</dt>
+            <dd>Bounded AgentJobs update roles, validators, skill contracts, docs, or memory tooling under validation.</dd>
+            <dt data-capsule-field="source_basis">Source basis</dt>
+            <dd>AGENTS, research-control README, and improve-project-system skill.</dd>
+            <dt data-capsule-field="authority_status">Authority status</dt>
+            <dd>Control-system explanation; not scientific authority.</dd>
+            <dt data-capsule-field="uncertainty">Uncertainty</dt>
+            <dd>Resolver output is advisory; validators define hard stop conditions.</dd>
+            <dt data-capsule-field="validation_or_test">Validation or test</dt>
+            <dd>Use classification, resolver, signal validation, documentation-impact, research-control validation, and tests.</dd>
+            <dt data-capsule-field="next_step">Next step</dt>
+            <dd>Keep future explainer improvements inside one bounded project-system job.</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
 
-      <article class="panel large">
-        <h2>Claim Boundary</h2>
-        <div class="notice">
-          This explainer changes no physics claim, no routing rule, no role
-          authority, and no registry semantics. It is a human-readable view
-          generated from the Markdown spec named in its metadata.
-        </div>
-      </article>
+    <section id="sources" class="section panel" data-explainer-control="source_drilldowns">
+      <h2>Source Drilldowns</h2>
+      <div class="sources">
+        <article class="source-item" data-source-path="AGENTS.md"><h3>AGENTS.md</h3><p>Root authority hierarchy and generated-output boundaries.</p></article>
+        <article class="source-item" data-source-path="README.md"><h3>README.md</h3><p>Human visual explainer overview and source-first memory model.</p></article>
+        <article class="source-item" data-source-path="research_control/README.md"><h3>research_control/README.md</h3><p>Task and validation model.</p></article>
+        <article class="source-item" data-source-path=".codex/skills/improve-project-system/SKILL.md"><h3>improve-project-system skill</h3><p>Bounded project-system improvement workflow.</p></article>
+        <article class="source-item" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><h3>html-visual-explainer skill</h3><p>Tracked HTML governance contract.</p></article>
+        <article class="source-item" data-source-path=".codex/skills/visual-explainer/SKILL.md"><h3>visual-explainer skill</h3><p>Rendering guidance and project mode.</p></article>
+      </div>
+    </section>
 
-      <article class="panel large">
-        <h2>Source Materials</h2>
-        <ul class="source-list">
-          <li>AGENTS.md</li>
-          <li>README.md</li>
-          <li>research_control/README.md</li>
-          <li>.codex/skills/improve-project-system/SKILL.md</li>
-          <li>.codex/skills/html-visual-explainer/SKILL.md</li>
-          <li>.codex/skills/visual-explainer/SKILL.md</li>
-          <li>.agents/roles/research_ops/documentation-curator.v0.2.0.md</li>
-          <li>scripts/research_control/validate_research_control.py</li>
-          <li>.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py</li>
-        </ul>
-      </article>
+    <section id="claim-boundary" class="section panel claim-box" data-explainer-control="claim_boundary_toggle">
+      <h2>Claim Boundary</h2>
+      <details open>
+        <summary>What this page may claim</summary>
+        <p>It may explain existing authority boundaries, validator behavior, and source-backed HTML governance.</p>
+      </details>
+      <details>
+        <summary>What this page may not claim</summary>
+        <p>It may not change physics claims, control contracts, routing decisions, registry authority, or generated-output authority.</p>
+      </details>
     </section>
   </main>
+  <script>
+    const toggle = document.getElementById("depth-toggle");
+    toggle.addEventListener("click", () => {
+      const deep = document.body.classList.toggle("deep-mode");
+      toggle.setAttribute("aria-pressed", String(deep));
+      toggle.textContent = deep ? "Simple view" : "Deep view";
+    });
+  </script>
 </body>
 </html>

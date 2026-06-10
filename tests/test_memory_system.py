@@ -177,6 +177,138 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertTrue(any("missing output_path" in error for error in report.errors))
         self.assertTrue(any("missing source_materials" in error for error in report.errors))
 
+    def test_html_spec_contract_requires_interactive_analysis_fields(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/missing-interaction.md"
+            spec.parent.mkdir(parents=True)
+            (root / "html").mkdir()
+            (root / "html/missing-interaction.html").write_text(
+                "<!doctype html>\n", encoding="utf-8"
+            )
+            spec.write_text(
+                "---\n"
+                'title: "Missing interaction"\n'
+                'purpose: "Test interaction contract."\n'
+                'audience: "test"\n'
+                'output_path: "html/missing-interaction.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "---\n"
+                "# Missing interaction\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-MISSING-INTERACTION",
+                            "path": "markdown/html-explainer-specs/missing-interaction.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(any("missing required_controls" in error for error in report.errors))
+        self.assertTrue(
+            any("missing Required Analysis Capsules section" in error for error in report.errors)
+        )
+
+    def test_html_registry_requires_declared_interactive_markers(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(
+                "---\n"
+                'title: "Synthetic"\n'
+                'purpose: "Test interaction markers."\n'
+                'audience: "test"\n'
+                'output_path: "html/synthetic.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "explainer_kind: \"workflow_process\"\n"
+                "interaction_model: \"progressive_disclosure\"\n"
+                "analysis_depth: \"simple_and_deep\"\n"
+                "required_controls:\n"
+                "  - \"simple_deep_toggle\"\n"
+                "  - \"section_toc\"\n"
+                "  - \"expandable_analysis_panels\"\n"
+                "  - \"source_drilldowns\"\n"
+                "  - \"claim_boundary_toggle\"\n"
+                "  - \"workflow_step_inspector\"\n"
+                "source_drilldowns:\n"
+                '  - "README.md"\n'
+                "analysis_capsule_schema:\n"
+                "  - \"premise\"\n"
+                "  - \"mechanism\"\n"
+                "  - \"source_basis\"\n"
+                "  - \"authority_status\"\n"
+                "  - \"uncertainty\"\n"
+                "  - \"validation_or_test\"\n"
+                "  - \"next_step\"\n"
+                "---\n"
+                "# Synthetic\n\n"
+                "## Required Analysis Capsules\n\n"
+                "- premise: Test premise.\n"
+                "- mechanism: Test mechanism.\n"
+                "- source_basis: README.md.\n"
+                "- authority_status: explanatory.\n"
+                "- uncertainty: none.\n"
+                "- validation_or_test: marker validation.\n"
+                "- next_step: pass.\n",
+                encoding="utf-8",
+            )
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                '<!doctype html><meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SYNTHETIC">'
+                '<meta name="aether-flow-source-basis-hash" content="spec-hash">'
+                '<meta name="aether-flow-human-visual-only" content="true">'
+                '<div data-explainer-control="simple_deep_toggle"></div>'
+                '<div data-explainer-control="section_toc"></div>',
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "missing HTML control marker expandable_analysis_panels" in error
+                for error in report.errors
+            )
+        )
+        self.assertTrue(
+            any("missing data-analysis-capsule marker" in error for error in report.errors)
+        )
+
     def test_generate_html_rows_binds_new_html_to_source_spec(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()

@@ -49,6 +49,19 @@ Each Markdown explainer spec must declare:
 - `source_materials`
 - `claim_boundary`
 - `human_visual_only: true`
+- `explainer_kind`
+- `interaction_model`
+- `analysis_depth`
+- `required_controls`
+- `source_drilldowns`
+- `analysis_capsule_schema`
+
+The Markdown body must include `## Required Analysis Capsules` using the
+schema fields `premise`, `mechanism`, `source_basis`, `authority_status`,
+`uncertainty`, `validation_or_test`, and `next_step`. Generated HTML must carry
+the lightweight marker evidence checked by the memory bootstrap validator:
+`data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
+`data-source-path`.
 
 `html-visual-explainer` governs tracked `html/` output registration and source
 binding. `visual-explainer` may be used for visual design and rendering, but it
