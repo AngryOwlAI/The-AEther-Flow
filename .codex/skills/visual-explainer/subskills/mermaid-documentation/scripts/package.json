@@ -1,0 +1,14 @@
+{
+  "name": "aether-flow-mermaid-documentation-renderer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render_mermaid_inline_svg.mjs",
+    "check": "node render_mermaid_inline_svg.mjs --all --check"
+  },
+  "dependencies": {
+    "mermaid": "11.15.0",
+    "playwright": "1.60.0"
+  }
+}

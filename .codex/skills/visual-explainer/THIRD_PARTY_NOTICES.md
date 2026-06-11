@@ -12,16 +12,17 @@ This project-local Codex skill vendors selected files from `visual-explainer`.
 
 ## Mermaid
 
-This project vendors a pinned Mermaid runtime for offline tracked HTML
-explainers that render governed Mermaid diagrams.
+This project uses a pinned Mermaid package for build-time rendering of governed
+Mermaid diagrams into sanitized inline SVG for standalone tracked HTML
+explainers.
 
 - npm package: `mermaid@11.15.0`
 - Package tarball: https://registry.npmjs.org/mermaid/-/mermaid-11.15.0.tgz
 - Upstream repository: https://github.com/mermaid-js/mermaid
-- Retrieval method: `npm pack mermaid@11.15.0`
+- Retrieval method: subskill-local npm dependency install
 - Retrieval date: 2026-06-11
-- Local runtime path: `html/assets/mermaid.esm.min.mjs`
-- Local runtime chunks: `html/assets/chunks/mermaid.esm.min/`
+- Local tooling path: `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/`
+- Runtime role: build-time only; tracked HTML must not import Mermaid in the browser
 - License: MIT
 
 MIT License

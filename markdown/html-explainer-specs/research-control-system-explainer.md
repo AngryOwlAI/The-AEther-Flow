@@ -79,7 +79,10 @@ by this Markdown source spec.
 The generated HTML derivative must render this diagram through the governed
 Mermaid visual-explainer shell. The diagram is explanatory only: it shows the
 validation order for a source-backed documentation change and does not create a
-new control rule.
+new control rule. The tracked HTML must be standalone single-file HTML: Mermaid
+is rendered at build time into sanitized inline SVG, the Mermaid source is
+preserved in `script.diagram-source`, and the browser page must not import or
+execute Mermaid.
 
 <!-- mermaid-diagram-id: research-control-validation-flow -->
 ```mermaid

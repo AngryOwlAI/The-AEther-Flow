@@ -69,12 +69,20 @@ def generated_snapshot() -> dict[str, str]:
 
 
 MERMAID_SOURCE = "flowchart TD\n  A[Source] --> B[Derivative]\n"
+MERMAID_RENDERER = "mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.0"
 
 
-def write_local_mermaid_asset(root: Path) -> None:
-    asset = root / "html/assets/mermaid.esm.min.mjs"
-    asset.parent.mkdir(parents=True, exist_ok=True)
-    asset.write_text("export default {};\n", encoding="utf-8")
+def normalized_mermaid_source(source: str) -> str:
+    lines = source.splitlines()
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    while lines and not lines[-1].strip():
+        lines.pop()
+    return "\n".join(line.rstrip() for line in lines)
+
+
+def mermaid_source_hash(source: str) -> str:
+    return hashlib.sha256(normalized_mermaid_source(source).encode("utf-8")).hexdigest()
 
 
 def write_mermaid_spec(
@@ -122,18 +130,32 @@ def write_governed_html(
     root: Path,
     *,
     source: str = MERMAID_SOURCE,
-    import_line: str = 'import mermaid from "./assets/mermaid.esm.min.mjs";',
+    canvas_body: str | None = None,
+    canvas_hash: str | None = None,
+    zoom_label: str = "Fit",
+    runtime_script: str = "",
     extra_body: str = "",
 ) -> Path:
     html = root / "html/synthetic.html"
     html.parent.mkdir(parents=True, exist_ok=True)
+    if canvas_body is None:
+        canvas_body = (
+            '<svg viewBox="0 0 100 40" data-mermaid-rendered="true" '
+            'data-mermaid-diagram-id="authority-ladder"><text>A</text></svg>'
+        )
+    canvas_hash = canvas_hash if canvas_hash is not None else mermaid_source_hash(source)
     html.write_text(
         "<!doctype html>\n"
         '<section class="diagram-shell" data-mermaid-diagram-id="authority-ladder">\n'
         '  <div class="mermaid-wrap">\n'
-        '    <div class="zoom-controls"></div>\n'
+        '    <div class="zoom-controls"><span class="zoom-label">'
+        f"{zoom_label}"
+        "</span></div>\n"
         '    <div class="mermaid-viewport">\n'
-        '      <div class="mermaid mermaid-canvas"></div>\n'
+        '      <div class="mermaid mermaid-canvas" '
+        f'data-renderer="{MERMAID_RENDERER}" '
+        f'data-render-source-sha256="{canvas_hash}">'
+        f"{canvas_body}</div>\n"
         "    </div>\n"
         "  </div>\n"
         '  <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="authority-ladder">\n'
@@ -141,10 +163,7 @@ def write_governed_html(
         "  </script>\n"
         "</section>\n"
         f"{extra_body}\n"
-        '<script type="module">\n'
-        f"  {import_line}\n"
-        "  mermaid.initialize({ startOnLoad: false, theme: \"base\", securityLevel: \"strict\" });\n"
-        "</script>\n",
+        f"{runtime_script}\n",
         encoding="utf-8",
     )
     return html
@@ -578,7 +597,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
         validator = load_mermaid_validator()
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            write_local_mermaid_asset(root)
             write_mermaid_spec(root)
             write_governed_html(root)
             result = validator.validate_mermaid_sources(
@@ -606,7 +624,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
         validator = load_mermaid_validator()
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            write_local_mermaid_asset(root)
             write_mermaid_spec(root)
             write_governed_html(root, source="flowchart TD\n  A[Source] --> C[Different]\n")
             result = validator.validate_mermaid_sources(
@@ -620,11 +637,14 @@ class MemorySystemSmokeTests(unittest.TestCase):
         validator = load_mermaid_validator()
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            write_local_mermaid_asset(root)
             write_mermaid_spec(root)
             write_governed_html(
                 root,
-                import_line='import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";',
+                runtime_script=(
+                    '<script type="module">\n'
+                    '  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";\n'
+                    "</script>\n"
+                ),
             )
             result = validator.validate_mermaid_sources(
                 root,
@@ -637,7 +657,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
         validator = load_mermaid_validator()
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            write_local_mermaid_asset(root)
             write_mermaid_spec(root)
             write_governed_html(root, extra_body='<pre class="mermaid">flowchart TD</pre>')
             result = validator.validate_mermaid_sources(
@@ -646,6 +665,68 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 [mermaid_html_row()],
             )
         self.assertTrue(any("bare <pre" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_missing_inline_svg(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root)
+            write_governed_html(root, canvas_body="")
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("must embed exactly one inline SVG" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_stale_render_hash(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root)
+            write_governed_html(root, canvas_hash="stale")
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("data-render-source-sha256" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_stale_zoom_label(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root)
+            write_governed_html(root, zoom_label="Loading")
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("stale zoom label" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_browser_runtime_markers(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root)
+            write_governed_html(
+                root,
+                runtime_script=(
+                    "<script>\n"
+                    "  mermaid.initialize({ startOnLoad: false });\n"
+                    "  mermaid.render('id', 'flowchart TD');\n"
+                    "</script>\n"
+                ),
+            )
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(
+            any("must not execute or import Mermaid in the browser" in error for error in result.errors)
+        )
 
     def test_mermaid_validator_accepts_ordinary_markdown_with_governed_id(self) -> None:
         validator = load_mermaid_validator()
@@ -716,7 +797,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
     def test_validate_all_includes_mermaid_validation_errors(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            write_local_mermaid_asset(root)
             write_mermaid_spec(root)
             write_governed_html(root, source="flowchart TD\n  A[Source] --> C[Different]\n")
             markdown_rows = [

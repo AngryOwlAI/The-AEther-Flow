@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import html
 import json
 import re
@@ -45,15 +46,26 @@ REMOTE_MERMAID_RE = re.compile(
     r"(?:import\s+mermaid\s+from\s*[\"']https?://|src\s*=\s*[\"']https?://[^\"']*mermaid)",
     re.I,
 )
-LOCAL_IMPORT_RE = re.compile(
-    r"import\s+mermaid\s+from\s*[\"']\./assets/mermaid\.esm\.min\.mjs[\"']"
+MERMAID_RUNTIME_RE = re.compile(
+    r"(?:import\s+mermaid|mermaid\.render\s*\(|mermaid\.initialize\s*\(|mermaid\.esm|(?:\./|html/)?assets/(?:mermaid|chunks/mermaid))",
+    re.I,
 )
-STRICT_SECURITY_RE = re.compile(r"securityLevel\s*:\s*[\"']strict[\"']")
 ELK_LAYOUT_RE = re.compile(r"layout\s*:\s*[\"']elk[\"']")
 MERMAID_INDICATOR_RE = re.compile(
     r"(diagram-source|mermaid\.esm|class\s*=\s*[\"'][^\"']*\bmermaid\b|<pre\b[^>]*\bmermaid\b)",
     re.I,
 )
+SVG_RE = re.compile(r"<svg\b(?P<attrs>[^>]*)>.*?</svg>", re.I | re.S)
+CANVAS_RE = re.compile(
+    r"<div\b(?P<attrs>[^>]*class\s*=\s*(?:\"[^\"]*\bmermaid-canvas\b[^\"]*\"|'[^']*\bmermaid-canvas\b[^']*')[^>]*)>(?P<body>.*?)</div>",
+    re.I | re.S,
+)
+ZOOM_LABEL_RE = re.compile(
+    r"<(?:span|div)\b(?P<attrs>[^>]*class\s*=\s*(?:\"[^\"]*\bzoom-label\b[^\"]*\"|'[^']*\bzoom-label\b[^']*')[^>]*)>(?P<body>.*?)</(?:span|div)>",
+    re.I | re.S,
+)
+STALE_ZOOM_LABELS = {"Loading", "Render failed", "Local server required"}
+RENDERER_PREFIX = "mermaid@11.15.0;mermaid-inline-svg-renderer@"
 FIRST_LINE_RE = re.compile(
     r"^(flowchart|graph|sequenceDiagram|stateDiagram-v2|stateDiagram|"
     r"classDiagram-v2|classDiagram|erDiagram|gantt|timeline|gitGraph|"
@@ -139,6 +151,15 @@ def normalize_mermaid_source(source: str) -> str:
     while lines and not lines[-1].strip():
         lines.pop()
     return "\n".join(line.rstrip() for line in lines)
+
+
+def mermaid_source_hash(source: str) -> str:
+    return hashlib.sha256(normalize_mermaid_source(source).encode("utf-8")).hexdigest()
+
+
+def normalized_text(fragment: str) -> str:
+    text = re.sub(r"<[^>]+>", "", fragment)
+    return html.unescape(text).strip()
 
 
 def first_semantic_line(source: str) -> str:
@@ -366,23 +387,74 @@ def extract_html_diagram_sources(
     return sources
 
 
-def shell_fragment_for_id(html_text: str, diagram_id: str) -> str:
+def shell_fragments_for_id(html_text: str, diagram_id: str) -> list[str]:
+    shells: list[str] = []
     for match in SECTION_RE.finditer(html_text):
         attrs = match.group("attrs")
         if class_has(attrs, "diagram-shell") and attr_value(attrs, "data-mermaid-diagram-id") == diagram_id:
-            return match.group(0)
-    return ""
+            shells.append(match.group(0))
+    return shells
+
+
+def shell_fragment_for_id(html_text: str, diagram_id: str) -> str:
+    shells = shell_fragments_for_id(html_text, diagram_id)
+    return shells[0] if shells else ""
+
+
+def validate_inline_svg_artifact(
+    result: MermaidValidationResult,
+    relative: str,
+    diagram_id: str,
+    shell: str,
+    source: str,
+) -> None:
+    canvas_matches = list(CANVAS_RE.finditer(shell))
+    if len(canvas_matches) != 1:
+        result.errors.append(f"{relative}: Mermaid ID {diagram_id} must have exactly one .mermaid-canvas")
+        return
+    canvas_attrs = canvas_matches[0].group("attrs")
+    canvas_body = canvas_matches[0].group("body")
+    expected_hash = mermaid_source_hash(source)
+    actual_hash = attr_value(canvas_attrs, "data-render-source-sha256")
+    if actual_hash != expected_hash:
+        result.errors.append(
+            f"{relative}: Mermaid ID {diagram_id} data-render-source-sha256 does not match preserved source"
+        )
+    renderer = attr_value(canvas_attrs, "data-renderer")
+    if not renderer.startswith(RENDERER_PREFIX):
+        result.errors.append(f"{relative}: Mermaid ID {diagram_id} missing deterministic data-renderer")
+    svg_matches = list(SVG_RE.finditer(canvas_body))
+    if len(svg_matches) != 1:
+        result.errors.append(f"{relative}: Mermaid ID {diagram_id} must embed exactly one inline SVG")
+        return
+    svg_attrs = svg_matches[0].group("attrs")
+    if attr_value(svg_attrs, "data-mermaid-rendered") != "true":
+        result.errors.append(f"{relative}: Mermaid ID {diagram_id} inline SVG missing data-mermaid-rendered")
+    if attr_value(svg_attrs, "data-mermaid-diagram-id") != diagram_id:
+        result.errors.append(f"{relative}: Mermaid ID {diagram_id} inline SVG diagram ID mismatch")
+    for label_match in ZOOM_LABEL_RE.finditer(shell):
+        label = normalized_text(label_match.group("body"))
+        if label in STALE_ZOOM_LABELS:
+            result.errors.append(f"{relative}: Mermaid ID {diagram_id} has stale zoom label {label!r}")
 
 
 def validate_html_shell(
-    result: MermaidValidationResult, html_path: Path, repo_root: Path, diagram_id: str
+    result: MermaidValidationResult,
+    html_path: Path,
+    repo_root: Path,
+    diagram_id: str,
+    source: str,
 ) -> None:
     relative = rel_path(html_path, repo_root)
     html_text = html_path.read_text(encoding="utf-8")
-    shell = shell_fragment_for_id(html_text, diagram_id)
-    if not shell:
+    shells = shell_fragments_for_id(html_text, diagram_id)
+    if not shells:
         result.errors.append(f"{relative}: missing diagram-shell for Mermaid ID {diagram_id}")
         return
+    if len(shells) > 1:
+        result.errors.append(f"{relative}: duplicate diagram-shell for Mermaid ID {diagram_id}")
+        return
+    shell = shells[0]
     for class_name in [
         "mermaid-wrap",
         "zoom-controls",
@@ -392,6 +464,7 @@ def validate_html_shell(
     ]:
         if not html_has_class(shell, class_name):
             result.errors.append(f"{relative}: Mermaid ID {diagram_id} missing .{class_name}")
+    validate_inline_svg_artifact(result, relative, diagram_id, shell, source)
 
 
 def validate_html_runtime_policy(
@@ -403,19 +476,10 @@ def validate_html_runtime_policy(
         result.errors.append(f"{relative}: tracked HTML must not use bare <pre class=\"mermaid\">")
     if REMOTE_MERMAID_RE.search(text):
         result.errors.append(f"{relative}: tracked HTML must not import Mermaid from a remote URL")
-    if not LOCAL_IMPORT_RE.search(text):
-        result.errors.append(f"{relative}: governed Mermaid HTML must import ./assets/mermaid.esm.min.mjs")
-    if not STRICT_SECURITY_RE.search(text):
-        result.errors.append(f"{relative}: governed Mermaid HTML must set securityLevel strict")
+    if MERMAID_RUNTIME_RE.search(text):
+        result.errors.append(f"{relative}: governed Mermaid HTML must not execute or import Mermaid in the browser")
     if ELK_LAYOUT_RE.search(text):
         result.errors.append(f"{relative}: tracked HTML must not use layout \"elk\" without a local ELK runtime")
-    asset = repo_root / "html" / "assets" / "mermaid.esm.min.mjs"
-    if not asset.exists():
-        result.errors.append(f"{relative}: missing local Mermaid runtime html/assets/mermaid.esm.min.mjs")
-    elif "./chunks/mermaid.esm.min/" in asset.read_text(encoding="utf-8", errors="ignore"):
-        chunks = repo_root / "html" / "assets" / "chunks" / "mermaid.esm.min"
-        if not chunks.exists():
-            result.errors.append(f"{relative}: missing Mermaid runtime chunk directory {rel_path(chunks, repo_root)}")
 
 
 def validate_html_parity(
@@ -453,7 +517,7 @@ def validate_html_parity(
         result.errors.append(f"{html_row.get('path', '')}: missing registered Mermaid source basis")
         return
     for diagram_id in sorted(declared_set & html_set):
-        validate_html_shell(result, html_path, repo_root, diagram_id)
+        validate_html_shell(result, html_path, repo_root, diagram_id, sources[diagram_id].source)
         if diagram_id not in spec_blocks_by_id:
             result.errors.append(
                 f"{html_row.get('path', '')}: declared Mermaid ID missing from Markdown source for ID {diagram_id}"

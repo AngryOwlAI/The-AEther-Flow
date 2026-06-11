@@ -74,6 +74,9 @@ Each governed tracked HTML diagram must include:
 - `.zoom-controls`
 - `.mermaid-viewport`
 - `.mermaid-canvas`
+- inline `<svg>` inside `.mermaid-canvas`
+- `data-renderer` on `.mermaid-canvas`
+- `data-render-source-sha256` on `.mermaid-canvas`
 - `<script type="text/plain" class="diagram-source">`
 - matching `data-mermaid-diagram-id` on `.diagram-source`
 
@@ -82,14 +85,12 @@ Markdown Mermaid source for the same ID.
 
 ## Runtime Rule
 
-Tracked HTML with governed Mermaid diagrams must import the local pinned
-runtime:
+Tracked HTML with governed Mermaid diagrams must be standalone single-file HTML.
+Render Mermaid to sanitized inline SVG at build/regeneration time and embed the
+SVG inside `.mermaid-canvas`. The browser page may provide zoom, pan, fit, and
+source-inspection controls, but it must not run Mermaid at page load.
 
-```js
-import mermaid from "./assets/mermaid.esm.min.mjs";
-```
-
-Initialize with strict security:
+Render with strict Mermaid security:
 
 ```js
 mermaid.initialize({
@@ -99,16 +100,67 @@ mermaid.initialize({
 });
 ```
 
-Do not use CDN Mermaid imports in tracked `html/*.html`.
+Do not use CDN Mermaid imports or local browser Mermaid runtime imports in
+tracked `html/*.html`. Governed tracked HTML must not contain:
 
-The local runtime is pinned to Mermaid `11.15.0`, sourced from the npm package
-`mermaid@11.15.0`, retrieved on 2026-06-11, and stored under `html/assets/`.
-The ESM runtime imports package chunks from `html/assets/chunks/mermaid.esm.min/`.
-Full license provenance is recorded in
-`.codex/skills/visual-explainer/THIRD_PARTY_NOTICES.md`.
+- `import mermaid`
+- `mermaid.render(`
+- `mermaid.initialize(`
+- `mermaid.esm`
+- remote Mermaid URLs
+- local Mermaid runtime paths under `html/assets/`
 
-Do not use `layout: "elk"` in tracked HTML unless a later bounded task vendors
-`@mermaid-js/layout-elk` locally.
+The build-time renderer is scoped to this subskill under `scripts/` and uses a
+colocated npm dependency boundary. Setup:
+
+```zsh
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts
+npm ci
+npx playwright install chromium
+```
+
+Render one file:
+
+```zsh
+node render_mermaid_inline_svg.mjs html/research-control-system-explainer.html
+```
+
+Render all registered tracked Mermaid-backed HTML explainers:
+
+```zsh
+node render_mermaid_inline_svg.mjs --all
+```
+
+Run a no-write renderer freshness check:
+
+```zsh
+node render_mermaid_inline_svg.mjs --all --check
+```
+
+The renderer stamps deterministic provenance on `.mermaid-canvas`, including
+`data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.0"` and
+`data-render-source-sha256="<sha256>"`, computed from the same normalized
+Mermaid source used by the Python validator. Do not stamp generated timestamps
+in tracked HTML.
+
+Do not use `layout: "elk"` in tracked HTML unless a later bounded task adds a
+build-time ELK render path and validator support.
+
+## SVG Sanitization Rule
+
+The renderer must use a fail-closed allowlist for inline SVG:
+
+- Keep structural SVG elements required by Mermaid, including `svg`, `g`,
+  `path`, `rect`, `polygon`, `circle`, `ellipse`, `line`, `polyline`, `text`,
+  `tspan`, `marker`, `defs`, `filter`, `feDropShadow`, `linearGradient`,
+  `stop`, `style`, `title`, and `desc`.
+- Reject `foreignObject` unless a later bounded task authorizes a stricter
+  policy for a diagram type that demonstrably requires it.
+- Remove comments.
+- Remove scripts, event handler attributes, external references, remote URLs,
+  external font/stylesheet references, and `javascript:` URLs.
+- Rewrite SVG IDs and all local references deterministically by diagram ID.
+- Fail if sanitization would produce an empty or invalid SVG.
 
 ## Diagram Type Selection
 
@@ -132,7 +184,19 @@ Run the structural and parity validator:
 .venv/bin/python .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/validate_mermaid_sources.py
 ```
 
-Optional rendering validation uses Mermaid CLI when available:
+The validator enforces:
+
+- Markdown-to-HTML Mermaid source parity
+- preserved `script.diagram-source`
+- inline SVG presence inside `.mermaid-canvas`
+- matching `data-render-source-sha256`
+- deterministic `data-renderer`
+- no browser Mermaid runtime markers
+- no stale runtime labels such as `Loading`, `Render failed`, or
+  `Local server required`
+
+Optional rendering validation uses Mermaid CLI when available as an additional
+smoke check only:
 
 ```zsh
 .venv/bin/python .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/validate_mermaid_sources.py --render-check
@@ -151,7 +215,8 @@ structural/parity mode. It does not run render checks.
 3. Keep node labels short and quote labels with punctuation.
 4. Use `<br/>` for Mermaid flowchart line breaks.
 5. Avoid raw HTML in Mermaid labels.
-6. Use Mermaid text instead of static images unless an explicit export is required.
+6. Use Mermaid text as canonical source; inline SVG in tracked HTML is a
+   generated render artifact.
 7. Keep static SVG or PNG exports secondary to the Mermaid source.
 
 ## Output Report
