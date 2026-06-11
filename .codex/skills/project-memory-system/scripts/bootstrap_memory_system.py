@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import importlib.util
 import io
 import json
 import os
@@ -169,6 +170,7 @@ PROJECT_MARKDOWN_GLOBS = [
     ".agents/roles/**/*.md",
     ".agents/schemas/*.md",
     ".codex/skills/*/SKILL.md",
+    ".codex/skills/*/subskills/*/SKILL.md",
     "research_control/design/*.md",
 ]
 
@@ -462,6 +464,17 @@ def markdown_object_id(path: Path) -> str:
         return f"MD-ROLE-{object_suffix_from_path(relative)}"
     if relative.startswith(".agents/schemas/"):
         return f"MD-SCHEMA-{object_suffix_from_stem(path.stem)}"
+    if (
+        relative.startswith(".codex/skills/")
+        and path.name == "SKILL.md"
+        and len(Path(relative).parts) >= 6
+        and Path(relative).parts[3] == "subskills"
+    ):
+        parts = Path(relative).parts
+        return (
+            f"MD-SKILL-{object_suffix_from_path(parts[2])}"
+            f"-SUBSKILL-{object_suffix_from_path(parts[4])}"
+        )
     if relative.startswith(".codex/skills/") and path.name == "SKILL.md":
         return f"MD-SKILL-{object_suffix_from_path(Path(relative).parts[2])}"
     if relative.startswith("research_control/design/"):
@@ -550,6 +563,21 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "agents",
             "project-memory-system",
             "Registered project-control schema contract.",
+        )
+    if (
+        relative.startswith(".codex/skills/")
+        and path.name == "SKILL.md"
+        and len(Path(relative).parts) >= 6
+        and Path(relative).parts[3] == "subskills"
+    ):
+        parent_skill = Path(relative).parts[2]
+        subskill = Path(relative).parts[4]
+        return (
+            "skill_contract",
+            "project_control",
+            "agents",
+            parent_skill,
+            f"Repo-local {parent_skill} subskill contract: {subskill}.",
         )
     if relative.startswith(".codex/skills/") and path.name == "SKILL.md":
         return (
@@ -1678,6 +1706,48 @@ def validate_html_registry(
                 report.error(f"{object_id}: source drilldowns missing data-source-path")
 
 
+def load_mermaid_validator_module():
+    validator_path = (
+        SCRIPT_DIR.parent.parent
+        / "visual-explainer"
+        / "subskills"
+        / "mermaid-documentation"
+        / "scripts"
+        / "validate_mermaid_sources.py"
+    )
+    if not validator_path.exists():
+        raise FileNotFoundError(validator_path)
+    spec = importlib.util.spec_from_file_location(
+        "aether_flow_mermaid_validator", validator_path
+    )
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Could not load Mermaid validator from {validator_path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def validate_mermaid_documentation(
+    report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> None:
+    try:
+        validator = load_mermaid_validator_module()
+    except (FileNotFoundError, ImportError) as exc:
+        report.error(f"Mermaid validator could not be loaded: {exc}")
+        return
+    result = validator.validate_mermaid_sources(
+        REPO_ROOT,
+        rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", []),
+        rows_by_registry.get("HTML_EXPLAINER_REGISTRY.csv", []),
+        render_check=False,
+    )
+    for error in result.errors:
+        report.error(f"Mermaid: {error}")
+    for warning in result.warnings:
+        report.warning(f"Mermaid: {warning}")
+
+
 def validate_wiki_registry(
     report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]
 ) -> None:
@@ -1771,6 +1841,7 @@ def validate_all() -> ValidationReport:
     validate_pdf_registry(report, rows_by_registry)
     validate_html_specs(report, rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", []))
     validate_html_registry(report, rows_by_registry)
+    validate_mermaid_documentation(report, rows_by_registry)
     validate_wiki_registry(report, rows_by_registry)
     validate_file_object_registry(report, rows_by_registry)
     validate_folder_map(report, rows_by_registry)

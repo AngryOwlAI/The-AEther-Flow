@@ -70,6 +70,12 @@ Markdown source spec under `markdown/html-explainer-specs/`, then render the
 HTML file named by that spec. The tracked HTML remains human-only generated
 output; the Markdown spec and registries carry authority.
 
+When creating or updating diagrams in registered explanatory Markdown or
+tracked HTML explainers, load and follow
+`subskills/mermaid-documentation/SKILL.md`. For `.local/` scratch visual
+explainers, the Mermaid guidance in this parent skill remains sufficient
+unless the user asks for governed project documentation.
+
 Tracked project explainers must implement the project interactive analysis
 contract declared by the Markdown source spec. Use a low-risk
 progressive-disclosure model rather than a heavy app framework:
@@ -163,7 +169,7 @@ Vary the choice each time. If the last diagram was dark and technical, make the 
 | Timeline | CSS (central line + cards) | Simple linear layout doesn't need a layout engine |
 | Dashboard | CSS Grid + Chart.js | Card grid with embedded charts |
 
-**Mermaid theming:** Always use `theme: 'base'` with custom `themeVariables` so colors match your page palette. Use `layout: 'elk'` for complex graphs (requires the `@mermaid-js/layout-elk` package — see `./references/libraries.md` for the CDN import). Override Mermaid's SVG classes with CSS for pixel-perfect control. See `./references/libraries.md` for full theming guide.
+**Mermaid theming:** Always use `theme: 'base'` with custom `themeVariables` so colors match your page palette. For `.local/` scratch pages, use `layout: 'elk'` for complex graphs when the runtime is available (requires the `@mermaid-js/layout-elk` package — see `./references/libraries.md` for the CDN import). For tracked `html/*.html`, do not use `layout: 'elk'` unless a later governed task vendors the ELK runtime locally. Override Mermaid's SVG classes with CSS for pixel-perfect control. See `./references/libraries.md` for full theming guide.
 
 **Mermaid containers:** Always center Mermaid diagrams with `display: flex; justify-content: center;`. Add zoom controls (+/−/reset/expand) to every `.mermaid-wrap` container. Include the click-to-expand JavaScript so clicking the diagram (or the ⛶ button) opens it full-size in a new tab.
 

@@ -19,10 +19,31 @@ SCRIPT_PATH = (
     / "scripts"
     / "bootstrap_memory_system.py"
 )
+MERMAID_VALIDATOR_PATH = (
+    REPO_ROOT
+    / ".codex"
+    / "skills"
+    / "visual-explainer"
+    / "subskills"
+    / "mermaid-documentation"
+    / "scripts"
+    / "validate_mermaid_sources.py"
+)
 
 
 def load_memory_system():
     spec = importlib.util.spec_from_file_location("bootstrap_memory_system", SCRIPT_PATH)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_mermaid_validator():
+    spec = importlib.util.spec_from_file_location(
+        "test_mermaid_validator", MERMAID_VALIDATOR_PATH
+    )
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     sys.modules[spec.name] = module
@@ -44,6 +65,105 @@ def generated_snapshot() -> dict[str, str]:
         path.relative_to(REPO_ROOT).as_posix(): file_hash(path)
         for path in sorted(paths)
         if path.exists()
+    }
+
+
+MERMAID_SOURCE = "flowchart TD\n  A[Source] --> B[Derivative]\n"
+
+
+def write_local_mermaid_asset(root: Path) -> None:
+    asset = root / "html/assets/mermaid.esm.min.mjs"
+    asset.parent.mkdir(parents=True, exist_ok=True)
+    asset.write_text("export default {};\n", encoding="utf-8")
+
+
+def write_mermaid_spec(
+    root: Path,
+    *,
+    include_block: bool = True,
+    duplicate_block: bool = False,
+    path_text: str = "markdown/html-explainer-specs/synthetic.md",
+    frontmatter: bool = True,
+) -> Path:
+    spec = root / path_text
+    spec.parent.mkdir(parents=True, exist_ok=True)
+    body = "# Synthetic\n\n"
+    if include_block:
+        body += (
+            "<!-- mermaid-diagram-id: authority-ladder -->\n"
+            "```mermaid\n"
+            f"{MERMAID_SOURCE}"
+            "```\n"
+        )
+    if duplicate_block:
+        body += (
+            "\n<!-- mermaid-diagram-id: authority-ladder -->\n"
+            "```mermaid\n"
+            f"{MERMAID_SOURCE}"
+            "```\n"
+        )
+    if frontmatter:
+        spec.write_text(
+            "---\n"
+            "mermaid_diagrams:\n"
+            "  required: true\n"
+            "  ids:\n"
+            "    - authority-ladder\n"
+            "---\n"
+            f"{body}",
+            encoding="utf-8",
+        )
+    else:
+        spec.write_text(body, encoding="utf-8")
+    return spec
+
+
+def write_governed_html(
+    root: Path,
+    *,
+    source: str = MERMAID_SOURCE,
+    import_line: str = 'import mermaid from "./assets/mermaid.esm.min.mjs";',
+    extra_body: str = "",
+) -> Path:
+    html = root / "html/synthetic.html"
+    html.parent.mkdir(parents=True, exist_ok=True)
+    html.write_text(
+        "<!doctype html>\n"
+        '<section class="diagram-shell" data-mermaid-diagram-id="authority-ladder">\n'
+        '  <div class="mermaid-wrap">\n'
+        '    <div class="zoom-controls"></div>\n'
+        '    <div class="mermaid-viewport">\n'
+        '      <div class="mermaid mermaid-canvas"></div>\n'
+        "    </div>\n"
+        "  </div>\n"
+        '  <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="authority-ladder">\n'
+        f"{source}"
+        "  </script>\n"
+        "</section>\n"
+        f"{extra_body}\n"
+        '<script type="module">\n'
+        f"  {import_line}\n"
+        "  mermaid.initialize({ startOnLoad: false, theme: \"base\", securityLevel: \"strict\" });\n"
+        "</script>\n",
+        encoding="utf-8",
+    )
+    return html
+
+
+def mermaid_markdown_row(path: str, role: str = "html_explainer_source_spec") -> dict[str, str]:
+    return {
+        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+        "path": path,
+        "role": role,
+        "authority_status": "canonical_markdown_source",
+    }
+
+
+def mermaid_html_row() -> dict[str, str]:
+    return {
+        "object_id": "HTML-SYNTHETIC",
+        "path": "html/synthetic.html",
+        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
     }
 
 
@@ -453,6 +573,183 @@ class MemorySystemSmokeTests(unittest.TestCase):
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
                 self.memory_system.validate_html_registry(report, rows_by_registry)
         self.assertTrue(any("stale source_basis_hash" in error for error in report.errors))
+
+    def test_mermaid_validator_accepts_declared_spec_and_matching_html(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_local_mermaid_asset(root)
+            write_mermaid_spec(root)
+            write_governed_html(root)
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertEqual(result.errors, [])
+
+    def test_mermaid_validator_rejects_declared_id_missing_from_markdown(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root, include_block=False)
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [],
+            )
+        self.assertTrue(
+            any("declared Mermaid ID missing from Markdown" in error for error in result.errors)
+        )
+
+    def test_mermaid_validator_rejects_html_source_parity_drift(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_local_mermaid_asset(root)
+            write_mermaid_spec(root)
+            write_governed_html(root, source="flowchart TD\n  A[Source] --> C[Different]\n")
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("Mermaid source differs from Markdown" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_tracked_html_cdn_import(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_local_mermaid_asset(root)
+            write_mermaid_spec(root)
+            write_governed_html(
+                root,
+                import_line='import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";',
+            )
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("remote URL" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_tracked_html_bare_pre(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_local_mermaid_asset(root)
+            write_mermaid_spec(root)
+            write_governed_html(root, extra_body='<pre class="mermaid">flowchart TD</pre>')
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("bare <pre" in error for error in result.errors))
+
+    def test_mermaid_validator_accepts_ordinary_markdown_with_governed_id(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(
+                root,
+                path_text="markdown/ordinary.md",
+                frontmatter=False,
+            )
+            result = validator.validate_mermaid_sources(
+                root,
+                [
+                    {
+                        "object_id": "MD-ORDINARY",
+                        "path": "markdown/ordinary.md",
+                        "role": "authored_markdown",
+                        "authority_status": "canonical_markdown_source",
+                    }
+                ],
+                [],
+            )
+        self.assertEqual(result.errors, [])
+
+    def test_mermaid_validator_rejects_duplicate_id_in_markdown_source(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(
+                root,
+                duplicate_block=True,
+                path_text="markdown/ordinary.md",
+                frontmatter=False,
+            )
+            result = validator.validate_mermaid_sources(
+                root,
+                [
+                    {
+                        "object_id": "MD-ORDINARY",
+                        "path": "markdown/ordinary.md",
+                        "role": "authored_markdown",
+                        "authority_status": "canonical_markdown_source",
+                    }
+                ],
+                [],
+            )
+        self.assertTrue(any("duplicate Mermaid diagram ID authority-ladder" in error for error in result.errors))
+
+    def test_mermaid_validator_rejects_governed_id_in_agents_markdown(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root, path_text="AGENTS.md", frontmatter=False)
+            result = validator.validate_mermaid_sources(
+                root,
+                [
+                    {
+                        "object_id": "MD-AGENTS",
+                        "path": "AGENTS.md",
+                        "role": "agent_guidance",
+                        "authority_status": "project_control",
+                    }
+                ],
+                [],
+            )
+        self.assertTrue(any("not allowed in AGENTS guidance" in error for error in result.errors))
+
+    def test_validate_all_includes_mermaid_validation_errors(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_local_mermaid_asset(root)
+            write_mermaid_spec(root)
+            write_governed_html(root, source="flowchart TD\n  A[Source] --> C[Different]\n")
+            markdown_rows = [
+                mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")
+            ]
+            html_rows = [mermaid_html_row()]
+
+            def fake_read_csv_rows(path: Path) -> list[dict[str, str]]:
+                if path.name == "MARKDOWN_SOURCE_REGISTRY.csv":
+                    return markdown_rows
+                if path.name == "HTML_EXPLAINER_REGISTRY.csv":
+                    return html_rows
+                return []
+
+            with (
+                mock.patch.object(self.memory_system, "REPO_ROOT", root),
+                mock.patch.object(self.memory_system, "read_csv_rows", side_effect=fake_read_csv_rows),
+                mock.patch.object(self.memory_system, "validate_columns"),
+                mock.patch.object(self.memory_system, "validate_paths"),
+                mock.patch.object(self.memory_system, "validate_source_hashes"),
+                mock.patch.object(self.memory_system, "validate_tex_vocab"),
+                mock.patch.object(self.memory_system, "validate_pdf_registry"),
+                mock.patch.object(self.memory_system, "validate_html_specs"),
+                mock.patch.object(self.memory_system, "validate_html_registry"),
+                mock.patch.object(self.memory_system, "validate_wiki_registry"),
+                mock.patch.object(self.memory_system, "validate_file_object_registry"),
+                mock.patch.object(self.memory_system, "validate_folder_map"),
+                mock.patch.object(self.memory_system, "validate_tracked_local_noise"),
+            ):
+                report = self.memory_system.validate_all()
+        self.assertTrue(
+            any("Mermaid:" in error and "source differs from Markdown" in error for error in report.errors)
+        )
 
     def test_unchanged_html_does_not_mask_changed_spec_hash(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

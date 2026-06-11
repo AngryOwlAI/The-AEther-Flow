@@ -109,6 +109,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-PROJECT-MEMORY-SYSTEM` `wiki/markdown/md-skill-project-memory-system.md`
 - `WIKI-MD-SKILL-TEX-WIKI` `wiki/markdown/md-skill-tex-wiki.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
+- `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-ontology-aether-flow-dynamics.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/pdf/pdf-ontology-aether-flow-exact-closure-flagship-article.md`
@@ -187,3 +188,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-PROJECT-MEMORY-SYSTEM` `.codex/skills/project-memory-system/SKILL.md`
 - `MD-SKILL-TEX-WIKI` `.codex/skills/tex-wiki/SKILL.md`
 - `MD-SKILL-VISUAL-EXPLAINER` `.codex/skills/visual-explainer/SKILL.md`
+- `MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`

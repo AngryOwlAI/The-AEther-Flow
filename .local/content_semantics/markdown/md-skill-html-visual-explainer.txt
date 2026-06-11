@@ -33,6 +33,9 @@ Rules:
   `data-capsule-field="<field>"`, and `data-source-path` for source
   drilldowns. Validation checks marker presence, not visual design or
   JavaScript behavior.
+- If the source spec declares `mermaid_diagrams` or the Markdown source
+  contains governed Mermaid blocks, tracked HTML generation must follow
+  `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`.
 - `html-visual-explainer` governs tracked `html/` output registration and
   source-binding rules.
 - `visual-explainer` may be used for visual layout and rendering.
