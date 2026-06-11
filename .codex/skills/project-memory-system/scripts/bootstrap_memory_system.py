@@ -278,6 +278,8 @@ HTML_HUMAN_VISUAL_META_RE = re.compile(
     re.IGNORECASE,
 )
 HTML_DATA_ATTR_RE = r'\b{attr}\s*=\s*["\']([^"\']+)["\']'
+CSS_RULE_RE = re.compile(r"([^{}]+)\{([^{}]*)\}", re.MULTILINE | re.DOTALL)
+HTML_PROSE_ANYWHERE_SELECTORS = (".atlas-card", "p", "th", "td")
 
 
 @dataclass
@@ -854,6 +856,70 @@ def html_meta_value(pattern: re.Pattern[str], html_text: str) -> str:
 def html_data_values(attr: str, html_text: str) -> set[str]:
     pattern = re.compile(HTML_DATA_ATTR_RE.format(attr=re.escape(attr)), re.IGNORECASE)
     return {match.group(1).strip() for match in pattern.finditer(html_text)}
+
+
+def css_rule_bodies_for_selector(html_text: str, selector_fragment: str) -> list[str]:
+    bodies: list[str] = []
+    for match in CSS_RULE_RE.finditer(html_text):
+        selectors = match.group(1)
+        if selector_fragment in selectors:
+            bodies.append(match.group(2))
+    return bodies
+
+
+def css_rule_with_selector_contains(
+    html_text: str, selector_fragment: str, declaration_fragment: str
+) -> bool:
+    declaration_normalized = re.sub(r"\s+", "", declaration_fragment).lower()
+    for body in css_rule_bodies_for_selector(html_text, selector_fragment):
+        body_normalized = re.sub(r"\s+", "", body).lower()
+        if declaration_normalized in body_normalized:
+            return True
+    return False
+
+
+def validate_html_layout_contract(
+    report: ValidationReport, object_id: str, html_text: str
+) -> None:
+    layer_fixed_three = css_rule_with_selector_contains(
+        html_text, ".layer-strip", "grid-template-columns:repeat(3"
+    )
+    card_fixed_three = css_rule_with_selector_contains(
+        html_text, ".card-grid", "grid-template-columns:repeat(3"
+    )
+    if layer_fixed_three and card_fixed_three:
+        report.error(
+            f"{object_id}: three-layer model uses nested fixed three-column grids"
+        )
+    for match in CSS_RULE_RE.finditer(html_text):
+        body_normalized = re.sub(r"\s+", "", match.group(2)).lower()
+        if "overflow-wrap:anywhere" not in body_normalized:
+            continue
+        selector_text = match.group(1)
+        selectors = [selector.strip() for selector in selector_text.split(",")]
+        for selector in selectors:
+            selector_parts = set(re.findall(r"[.#]?[A-Za-z][A-Za-z0-9_-]*", selector))
+            if any(target in selector_parts for target in HTML_PROSE_ANYWHERE_SELECTORS):
+                report.error(
+                    f"{object_id}: prose selector uses overflow-wrap:anywhere"
+                )
+                break
+    if "mermaid-canvas" in html_text:
+        if css_rule_with_selector_contains(
+            html_text, ".mermaid-canvas svg", "max-width:min(100%,980px)"
+        ):
+            report.error(
+                f"{object_id}: Mermaid SVG uses fixed max-width instead of adaptive viewBox fit"
+            )
+        for required_fragment in [
+            "readSvgNaturalSize",
+            "setAdaptiveHeight",
+            "computeFit",
+        ]:
+            if required_fragment not in html_text:
+                report.error(
+                    f"{object_id}: Mermaid diagram shell missing adaptive fit helper {required_fragment}"
+                )
 
 
 def html_required_controls(frontmatter: dict[str, object]) -> set[str]:
@@ -1672,6 +1738,7 @@ def validate_html_registry(
             report.error(f"{object_id}: HTML source-basis hash metadata is stale or missing")
         if html_human_visual_only != "true":
             report.error(f"{object_id}: HTML human-visual-only metadata must be true")
+        validate_html_layout_contract(report, object_id, html_text)
         spec_path = REPO_ROOT / source_row.get("path", "")
         if not spec_path.exists():
             report.error(f"{object_id}: missing source spec {source_row.get('path', '')}")

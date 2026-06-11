@@ -508,6 +508,157 @@ class MemorySystemSmokeTests(unittest.TestCase):
             any("missing data-analysis-capsule marker" in error for error in report.errors)
         )
 
+    def test_html_registry_rejects_unreadable_three_layer_layout(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(
+                "---\n"
+                'title: "Synthetic"\n'
+                'purpose: "Test readable layout guard."\n'
+                'audience: "test"\n'
+                'output_path: "html/synthetic.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "explainer_kind: \"project_overview\"\n"
+                "interaction_model: \"progressive_disclosure\"\n"
+                "analysis_depth: \"deep\"\n"
+                "required_controls:\n"
+                "  - \"section_toc\"\n"
+                "  - \"expandable_analysis_panels\"\n"
+                "  - \"source_drilldowns\"\n"
+                "  - \"claim_boundary_toggle\"\n"
+                "source_drilldowns:\n"
+                '  - "README.md"\n'
+                "analysis_capsule_schema:\n"
+                "  - \"premise\"\n"
+                "  - \"mechanism\"\n"
+                "  - \"source_basis\"\n"
+                "  - \"authority_status\"\n"
+                "  - \"uncertainty\"\n"
+                "  - \"validation_or_test\"\n"
+                "  - \"next_step\"\n"
+                "---\n"
+                "# Synthetic\n\n"
+                "## Required Analysis Capsules\n\n"
+                "- premise: Test premise.\n"
+                "- mechanism: Test mechanism.\n"
+                "- source_basis: README.md.\n"
+                "- authority_status: explanatory.\n"
+                "- uncertainty: none.\n"
+                "- validation_or_test: marker validation.\n"
+                "- next_step: pass.\n",
+                encoding="utf-8",
+            )
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                '<!doctype html><meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SYNTHETIC">'
+                '<meta name="aether-flow-source-basis-hash" content="spec-hash">'
+                '<meta name="aether-flow-human-visual-only" content="true">'
+                "<style>"
+                "p, td, th, .atlas-card { overflow-wrap: anywhere; }"
+                ".card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }"
+                ".layer-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }"
+                "</style>"
+                '<nav data-explainer-control="section_toc"></nav>'
+                '<details data-explainer-control="expandable_analysis_panels"></details>'
+                '<section data-explainer-control="claim_boundary_toggle"></section>'
+                '<details data-source-path="README.md"></details>'
+                '<article data-analysis-capsule="test">'
+                '<div data-capsule-field="premise"></div>'
+                '<div data-capsule-field="mechanism"></div>'
+                '<div data-capsule-field="source_basis"></div>'
+                '<div data-capsule-field="authority_status"></div>'
+                '<div data-capsule-field="uncertainty"></div>'
+                '<div data-capsule-field="validation_or_test"></div>'
+                '<div data-capsule-field="next_step"></div>'
+                "</article>",
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any("nested fixed three-column grids" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("prose selector uses overflow-wrap:anywhere" in error for error in report.errors)
+        )
+
+    def test_html_registry_accepts_readable_three_layer_layout(self) -> None:
+        report = self.memory_system.ValidationReport()
+        html_text = (
+            "<style>"
+            "p, td, th, .atlas-card { overflow-wrap: break-word; }"
+            "code, pre { overflow-wrap: anywhere; }"
+            ".card-grid { display: grid; }"
+            ".layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }"
+            ".layer-strip { display: grid; grid-template-columns: 1fr; }"
+            "</style>"
+        )
+        self.memory_system.validate_html_layout_contract(report, "HTML-SYNTHETIC", html_text)
+        self.assertEqual(report.errors, [])
+
+    def test_html_registry_rejects_nonadaptive_mermaid_fit(self) -> None:
+        report = self.memory_system.ValidationReport()
+        html_text = (
+            "<style>"
+            ".mermaid-canvas svg { max-width: min(100%, 980px); height: auto; }"
+            "</style>"
+            '<div class="mermaid-canvas"><svg viewBox="0 0 1200 400"></svg></div>'
+            "<script>"
+            "const fit = () => { scale = 1; x = 0; y = 0; apply(); };"
+            "</script>"
+        )
+        self.memory_system.validate_html_layout_contract(report, "HTML-SYNTHETIC", html_text)
+        self.assertTrue(
+            any("fixed max-width instead of adaptive viewBox fit" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("missing adaptive fit helper readSvgNaturalSize" in error for error in report.errors)
+        )
+
+    def test_html_registry_accepts_adaptive_mermaid_fit(self) -> None:
+        report = self.memory_system.ValidationReport()
+        html_text = (
+            "<style>"
+            ".mermaid-canvas svg { max-width: none; width: auto; height: auto; }"
+            "</style>"
+            '<div class="mermaid-canvas"><svg viewBox="0 0 1200 400"></svg></div>'
+            "<script>"
+            "function readSvgNaturalSize(svg) { return svg.viewBox.baseVal; }"
+            "function setAdaptiveHeight() { return true; }"
+            "function computeFit() { return { zoom: 1 }; }"
+            "</script>"
+        )
+        self.memory_system.validate_html_layout_contract(report, "HTML-SYNTHETIC", html_text)
+        self.assertEqual(report.errors, [])
+
     def test_generate_html_rows_binds_new_html_to_source_spec(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()

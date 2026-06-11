@@ -88,6 +88,14 @@ progressive-disclosure model rather than a heavy app framework:
   not claim.
 - Provide workflow step inspectors for workflow and control-system pages.
 
+For the shared three-layer model (`High Level, Operational, Evidence`), stack
+the three layer sections vertically and let cards inside each layer auto-fit:
+`.layer-strip { grid-template-columns: 1fr; }` and
+`.layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }`.
+Do not place a fixed three-column card grid inside a fixed three-column layer
+grid; it makes prose unreadable. Use `overflow-wrap: break-word` for normal
+text and reserve `overflow-wrap: anywhere` for `code` and `pre`.
+
 Deep-view panels should use analysis capsules with these fields: `premise`,
 `mechanism`, `source_basis`, `authority_status`, `uncertainty`,
 `validation_or_test`, and `next_step`. The generated HTML must include
@@ -174,6 +182,14 @@ Vary the choice each time. If the last diagram was dark and technical, make the 
 **Mermaid containers:** Always center Mermaid diagrams with `display: flex; justify-content: center;`. Add zoom controls (+/−/reset/expand) to every `.mermaid-wrap` container. Include the click-to-expand JavaScript so clicking the diagram (or the expand button) opens it full-size in a new tab. For tracked `html/*.html`, this JavaScript enhances an already embedded SVG; basic diagram visibility must not depend on JavaScript.
 
 **Never use bare `<pre class="mermaid">`.** It renders but has no zoom/pan controls and is not valid for tracked governed pages. Always use the full `diagram-shell` pattern from `templates/mermaid-flowchart.html`: the HTML structure (`.diagram-shell` > `.mermaid-wrap` > `.zoom-controls` + `.mermaid-viewport` > `.mermaid-canvas`), the CSS, and the JS module for zoom/pan/fit. For tracked `html/*.html`, `.mermaid-canvas` contains build-time inline SVG plus preserved source parity metadata.
+
+**Tracked Mermaid adaptive fit:** Governed tracked Mermaid pages must size the
+diagram box from the rendered SVG `viewBox`. The initial Fit state should set
+the box height from the diagram aspect ratio and available column width, clamp
+that height to safe min/max limits, and set SVG pixel width/height explicitly
+for the chosen zoom. Do not rely on the browser's default 300px SVG width or a
+fixed `max-width` rule; wide diagrams must use available width instead of
+shrinking into unreadable horizontal strips.
 
 **Mermaid scaling:** Diagrams with 10+ nodes render too small by default. For 10-12 nodes, increase `fontSize` in themeVariables to 18-20px and set `INITIAL_ZOOM` to 1.5-1.6. For 15+ elements, don't try to scale — use the hybrid pattern instead (simple Mermaid overview + CSS Grid cards). See "Architecture / System Diagrams" below.
 

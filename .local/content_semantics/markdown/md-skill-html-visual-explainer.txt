@@ -33,6 +33,15 @@ Rules:
   `data-capsule-field="<field>"`, and `data-source-path` for source
   drilldowns. Validation checks marker presence, not visual design or
   JavaScript behavior.
+- Three-layer model sections must remain readable at desktop and mobile
+  widths. Use a stacked `.layer-strip` (`grid-template-columns: 1fr`) and make
+  cards inside each layer auto-fit with a minimum readable width, for example
+  `.layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }`.
+  Do not nest a fixed three-column `.card-grid` inside a fixed three-column
+  `.layer-strip`.
+- Normal prose must use `overflow-wrap: break-word`; reserve
+  `overflow-wrap: anywhere` for `code` and `pre` where long paths or hashes may
+  otherwise overflow.
 - If the source spec declares `mermaid_diagrams` or the Markdown source
   contains governed Mermaid blocks, tracked HTML generation must follow
   `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`.
@@ -40,6 +49,12 @@ Rules:
   build-time sanitized inline SVG in the diagram shell, preserve the Mermaid
   source in `script.diagram-source`, and do not import or execute Mermaid in the
   browser.
+- Governed Mermaid diagram boxes must adapt to the rendered inline SVG aspect
+  ratio. Read the SVG natural size from `viewBox`, set the diagram box height
+  from `height / width * available_width` within bounded min/max limits, and
+  make the Fit control recompute that viewBox-based fit. Do not leave Mermaid
+  SVGs constrained by browser intrinsic sizing or a fixed `max-width` cap that
+  makes wide diagrams render as small strips.
 - `html-visual-explainer` governs tracked `html/` output registration and
   source-binding rules.
 - `visual-explainer` may be used for visual layout and rendering.

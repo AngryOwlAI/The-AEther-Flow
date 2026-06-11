@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="1aa5bd3a85e14f68fadd24445cc0907bfb78913aa75c0cd40f8cb7ffb330b50a">
+  <meta name="aether-flow-source-basis-hash" content="8a47be870abb47116eddd6a58357cc91998b804b8ccf11f7bc5b0083a83537a0">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Source Authority Explainer</title>
   <style>
@@ -34,7 +34,8 @@
     body { margin: 0; color: var(--text); background: radial-gradient(circle at top left, rgba(47,111,84,.12), transparent 32rem), linear-gradient(180deg, #fbfaf6, var(--bg)); overflow-x: clip; }
     a { color: inherit; }
     code { font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace; font-size: .92em; }
-    p, dd, td, th, code, pre, summary, details, .atlas-link, .atlas-card, .meta-chip { overflow-wrap: anywhere; }
+    p, dd, td, th, summary, details, .atlas-link, .atlas-card, .meta-chip { overflow-wrap: break-word; }
+    code, pre { overflow-wrap: anywhere; }
     .page-shell { max-width: 1180px; margin: 0 auto; padding: 32px 20px 56px; }
     .hero { display: grid; gap: 20px; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .8fr); align-items: end; padding: 34px; border: 1px solid var(--border); background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(223,232,242,.72)); box-shadow: var(--shadow); }
     .eyebrow { margin: 0 0 8px; color: var(--authority); text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; font-weight: 800; }
@@ -52,11 +53,13 @@
     .section-heading { display: flex; justify-content: space-between; gap: 18px; align-items: start; margin-bottom: 16px; }
     .section-heading p { margin: 0; }
     .panel, .hero, details, summary, .layer, .atlas-link, .atlas-card, .capsule, .step, .source-grid > *, .hub-grid > *, .card-grid > *, .layer-strip > *, .capsule-grid > * { min-width: 0; }
-    .hub-grid, .card-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .hub-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card-grid { display: grid; gap: 14px; }
+    .layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .atlas-link, .atlas-card { display: block; text-decoration: none; border: 1px solid var(--border); background: var(--surface); padding: 18px; min-height: 132px; }
     .atlas-link strong { display: block; color: var(--authority); margin-bottom: 8px; }
     .atlas-link span, .atlas-card p, .muted { color: var(--muted); }
-    .layer-strip { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .layer { border-top: 5px solid var(--authority); background: var(--surface); padding: 18px; border-left: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .layer:nth-child(2) { border-top-color: var(--workflow); }
     .layer:nth-child(3) { border-top-color: var(--validation); }
@@ -79,12 +82,13 @@
     .claim-box { background: linear-gradient(135deg, var(--warning-soft), #fffaf0); border-color: rgba(180,83,9,.25); }
     .diagram-shell { overflow: hidden; }
     .diagram-shell__hint { color: var(--muted); font-size: .86rem; }
-    .mermaid-wrap { position: relative; display: flex; justify-content: center; border: 1px solid var(--border); background: #fbfaf6; min-height: 420px; overflow: hidden; }
+    .mermaid-wrap { position: relative; display: block; border: 1px solid var(--border); background: #fbfaf6; min-height: 360px; height: 420px; max-height: 760px; overflow: hidden; }
     .zoom-controls { position: absolute; z-index: 2; top: 12px; right: 12px; display: flex; gap: 8px; }
     .zoom-controls button { border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: 7px 10px; cursor: pointer; font-weight: 800; }
-    .mermaid-viewport { width: 100%; overflow: hidden; display: grid; place-items: center; min-height: 420px; cursor: grab; }
-    .mermaid-canvas { transform-origin: center center; min-width: 240px; padding: 28px; }
-    .mermaid-canvas svg { max-width: min(100%, 980px); height: auto; display: block; }
+    .mermaid-viewport { position: relative; width: 100%; height: 100%; overflow: hidden; cursor: grab; touch-action: none; }
+    .mermaid-viewport.is-dragging { cursor: grabbing; }
+    .mermaid-canvas { position: absolute; top: 0; left: 0; transform-origin: 0 0; min-width: 0; padding: 0; }
+    .mermaid-canvas svg { max-width: none; width: auto; height: auto; display: block; }
     .source-fold { margin-top: 12px; }
     pre { overflow: auto; white-space: pre-wrap; background: #161b18; color: #edf2ec; padding: 14px; }
     @media (max-width: 860px) { .hero, .hub-grid, .card-grid, .layer-strip, .capsule-grid, .source-grid { grid-template-columns: 1fr; } .hero { padding: 24px; } .section-heading { display: block; } .nav { position: static; flex-wrap: wrap; overflow: visible; } .nav a { white-space: normal; } }
@@ -250,26 +254,173 @@ flowchart TD
     </section>
   </main>
   <script>
-    document.querySelectorAll('.diagram-shell').forEach((shell) => {
-      const canvas = shell.querySelector('.mermaid-canvas');
-      const viewport = shell.querySelector('.mermaid-viewport');
-      if (!canvas || !viewport) return;
-      let scale = 1;
-      let x = 0;
-      let y = 0;
-      let dragging = false;
-      let startX = 0;
-      let startY = 0;
-      const apply = () => { canvas.style.transform = `translate(${x}px, ${y}px) scale(${scale})`; };
-      const fit = () => { scale = 1; x = 0; y = 0; apply(); };
-      shell.querySelector('[data-zoom="in"]')?.addEventListener('click', () => { scale = Math.min(2.4, scale + 0.15); apply(); });
-      shell.querySelector('[data-zoom="out"]')?.addEventListener('click', () => { scale = Math.max(0.55, scale - 0.15); apply(); });
-      shell.querySelector('[data-zoom="reset"]')?.addEventListener('click', fit);
-      viewport.addEventListener('pointerdown', (event) => { dragging = true; startX = event.clientX - x; startY = event.clientY - y; viewport.setPointerCapture(event.pointerId); });
-      viewport.addEventListener('pointermove', (event) => { if (!dragging) return; x = event.clientX - startX; y = event.clientY - startY; apply(); });
-      viewport.addEventListener('pointerup', () => { dragging = false; });
-      viewport.addEventListener('dblclick', fit);
-    });
+    (() => {
+      const fitConfig = {
+        fitPadding: 28,
+        minHeight: 360,
+        maxHeightPx: 760,
+        maxHeightVh: 0.78,
+        maxInitialZoom: 1.8,
+        minZoom: 0.12,
+        maxZoom: 5,
+        zoomStep: 0.15,
+        readabilityFloor: 0.58
+      };
+      const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+      document.querySelectorAll('.diagram-shell').forEach((shell) => {
+        const wrap = shell.querySelector('.mermaid-wrap');
+        const canvas = shell.querySelector('.mermaid-canvas');
+        const viewport = shell.querySelector('.mermaid-viewport');
+        const svg = canvas?.querySelector('svg');
+        if (!wrap || !canvas || !viewport || !svg) return;
+
+        let zoom = 1;
+        let panX = 0;
+        let panY = 0;
+        let dragging = false;
+        let startX = 0;
+        let startY = 0;
+        let svgW = 0;
+        let svgH = 0;
+
+        const readSvgNaturalSize = () => {
+          let width = svg.viewBox?.baseVal?.width || 0;
+          let height = svg.viewBox?.baseVal?.height || 0;
+          if (!width || !height) {
+            width = parseFloat(svg.getAttribute('width')) || 0;
+            height = parseFloat(svg.getAttribute('height')) || 0;
+          }
+          if (!width || !height) {
+            const box = svg.getBBox();
+            width = box.width;
+            height = box.height;
+          }
+          if (!width || !height) {
+            const rect = svg.getBoundingClientRect();
+            width = rect.width || 1000;
+            height = rect.height || 700;
+          }
+          if (!svg.getAttribute('viewBox')) {
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+          }
+          return { width, height };
+        };
+
+        const setAdaptiveHeight = () => {
+          if (!svgW || !svgH) return;
+          const usableWidth = Math.max(280, wrap.getBoundingClientRect().width - 2);
+          const idealHeight = (svgH / svgW) * usableWidth + fitConfig.fitPadding * 2;
+          const viewportMax = Math.floor(window.innerHeight * fitConfig.maxHeightVh);
+          const hardMax = Math.min(
+            fitConfig.maxHeightPx,
+            Math.max(fitConfig.minHeight + 40, viewportMax)
+          );
+          wrap.style.height = `${Math.round(clamp(idealHeight, fitConfig.minHeight, hardMax))}px`;
+        };
+
+        const constrainPan = () => {
+          const viewportWidth = viewport.clientWidth;
+          const viewportHeight = viewport.clientHeight;
+          const renderedWidth = svgW * zoom;
+          const renderedHeight = svgH * zoom;
+          const pad = fitConfig.fitPadding;
+          panX = renderedWidth + pad * 2 <= viewportWidth
+            ? (viewportWidth - renderedWidth) / 2
+            : clamp(panX, viewportWidth - renderedWidth - pad, pad);
+          panY = renderedHeight + pad * 2 <= viewportHeight
+            ? (viewportHeight - renderedHeight) / 2
+            : clamp(panY, viewportHeight - renderedHeight - pad, pad);
+        };
+
+        const apply = () => {
+          if (!svgW || !svgH) return;
+          constrainPan();
+          svg.style.width = `${svgW * zoom}px`;
+          svg.style.height = `${svgH * zoom}px`;
+          canvas.style.transform = `translate(${panX}px, ${panY}px)`;
+        };
+
+        const computeFit = () => {
+          const viewportWidth = viewport.clientWidth;
+          const viewportHeight = viewport.clientHeight;
+          const availableWidth = Math.max(80, viewportWidth - fitConfig.fitPadding * 2);
+          const availableHeight = Math.max(80, viewportHeight - fitConfig.fitPadding * 2);
+          const contain = Math.min(availableWidth / svgW, availableHeight / svgH);
+          let nextZoom = contain;
+          if (contain < fitConfig.readabilityFloor) {
+            const chartRatio = svgH / svgW;
+            const viewportRatio = viewportHeight / Math.max(viewportWidth, 1);
+            nextZoom = chartRatio >= viewportRatio
+              ? availableWidth / svgW
+              : availableHeight / svgH;
+          }
+          return clamp(nextZoom, fitConfig.minZoom, fitConfig.maxInitialZoom);
+        };
+
+        const fit = () => {
+          setAdaptiveHeight();
+          zoom = computeFit();
+          panX = (viewport.clientWidth - svgW * zoom) / 2;
+          panY = (viewport.clientHeight - svgH * zoom) / 2;
+          apply();
+        };
+
+        const zoomAround = (factor, centerX, centerY) => {
+          const nextZoom = clamp(zoom * factor, fitConfig.minZoom, fitConfig.maxZoom);
+          const ratio = nextZoom / zoom;
+          panX = centerX - ratio * (centerX - panX);
+          panY = centerY - ratio * (centerY - panY);
+          zoom = nextZoom;
+          apply();
+        };
+
+        const canPan = () => {
+          return svgW * zoom + fitConfig.fitPadding * 2 > viewport.clientWidth
+            || svgH * zoom + fitConfig.fitPadding * 2 > viewport.clientHeight;
+        };
+
+        const endDrag = () => {
+          dragging = false;
+          viewport.classList.remove('is-dragging');
+        };
+
+        const natural = readSvgNaturalSize();
+        svgW = natural.width;
+        svgH = natural.height;
+        svg.removeAttribute('width');
+        svg.removeAttribute('height');
+        svg.style.maxWidth = 'none';
+        svg.style.display = 'block';
+        fit();
+
+        shell.querySelector('[data-zoom="in"]')?.addEventListener('click', () => {
+          zoomAround(1 + fitConfig.zoomStep, viewport.clientWidth / 2, viewport.clientHeight / 2);
+        });
+        shell.querySelector('[data-zoom="out"]')?.addEventListener('click', () => {
+          zoomAround(1 / (1 + fitConfig.zoomStep), viewport.clientWidth / 2, viewport.clientHeight / 2);
+        });
+        shell.querySelector('[data-zoom="reset"]')?.addEventListener('click', fit);
+        viewport.addEventListener('pointerdown', (event) => {
+          if (!canPan()) return;
+          dragging = true;
+          startX = event.clientX - panX;
+          startY = event.clientY - panY;
+          viewport.classList.add('is-dragging');
+          viewport.setPointerCapture(event.pointerId);
+        });
+        viewport.addEventListener('pointermove', (event) => {
+          if (!dragging) return;
+          panX = event.clientX - startX;
+          panY = event.clientY - startY;
+          apply();
+        });
+        viewport.addEventListener('pointerup', endDrag);
+        viewport.addEventListener('pointercancel', endDrag);
+        viewport.addEventListener('dblclick', fit);
+        window.addEventListener('resize', fit);
+      });
+    })();
 
   </script>
 </body>

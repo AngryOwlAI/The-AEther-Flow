@@ -83,6 +83,14 @@ Each governed tracked HTML diagram must include:
 The HTML `diagram-source` text is derivative. It must match the normalized
 Markdown Mermaid source for the same ID.
 
+Governed Mermaid diagram shells must use adaptive viewBox-based fit behavior:
+read the rendered SVG natural size from `viewBox`, size the `.mermaid-wrap` /
+`.mermaid-viewport` height from the diagram aspect ratio within bounded min/max
+limits, set SVG pixel width and height for the active zoom, and make Fit
+recompute that best fit. Do not constrain inline Mermaid SVGs with a fixed
+`max-width` rule or browser intrinsic sizing that leaves wide diagrams at the
+default narrow SVG width.
+
 ## Runtime Rule
 
 Tracked HTML with governed Mermaid diagrams must be standalone single-file HTML.

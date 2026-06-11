@@ -67,6 +67,13 @@ acceptance.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
+- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+  SVG viewBox, set the box height from diagram aspect ratio and available
+  width within bounded min/max limits, and make Fit recompute that best-fit
+  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
+- Three-layer readability: stack the high-level, operational, and evidence
+  layer sections vertically; cards inside each layer must auto-fit at a
+  readable minimum width rather than nesting fixed three-column grids.
 - High-level model: why claim gates exist.
 - Operational model: how a candidate can remain proposed, repaired, refuted,
   blocked, preserved as a negative result, or held for human-gated review.

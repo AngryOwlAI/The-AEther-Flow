@@ -94,6 +94,13 @@ visually match the HTML palette and typography.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
+- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+  SVG viewBox, set the box height from diagram aspect ratio and available
+  width within bounded min/max limits, and make Fit recompute that best-fit
+  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
+- Three-layer readability: stack the high-level, operational, and evidence
+  layer sections vertically; cards inside each layer must auto-fit at a
+  readable minimum width rather than nesting fixed three-column grids.
 - Hero: state the project as a dual physics-and-AI research program.
 - Hub links: six drilldown cards for ontology, research system, role routing,
   claim gates, source authority, and validation governance.
