@@ -1,7 +1,7 @@
 ---
-title: "Æther Flow Ontology Explainer"
-purpose: "Explain the project's current ontology framing, exact-GR benchmark status, and open derivation burden in a human-only visual form."
-audience: "Readers who need a disciplined conceptual overview of the Æther / Æther-flow ontology without mistaking it for an accepted derivation."
+title: "Æther-flow Ontology Explainer"
+purpose: "Explain the project's specific Æther-flow ontology in high-level, operational, and low-level evidence layers while preserving the open exact-GR derivation burden."
+audience: "Technical but human-readable: readers who need to understand the project-specific ontology before inspecting canonical TeX or derivation tasks."
 output_path: "html/aether-flow-ontology-explainer.html"
 renderer_skill: "visual-explainer@0.7.1-project-aether-flow"
 source_materials:
@@ -11,36 +11,173 @@ source_materials:
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/TEX_SOURCE_REGISTRY.csv"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
-claim_boundary: "Human-only ontology visualization. It explains the current ontology framing and open derivation burden without promoting, rejecting, or modifying any scientific claim."
+claim_boundary: "Human-only Æther-flow ontology visualization. It explains the project-specific ontology, exact-GR benchmark adoption, and open derivation burden without promoting, rejecting, or modifying any scientific claim."
 human_visual_only: true
+explainer_kind: "conceptual_model"
+interaction_model: "progressive_disclosure"
+analysis_depth: "deep"
+presentation_profile: "conceptual_model"
+layout_intent: "Use a conceptual model with term cards, derivation-burden panels, governed diagrams, and source-backed claim-boundary callouts."
+required_controls:
+  - "section_toc"
+  - "expandable_analysis_panels"
+  - "source_drilldowns"
+  - "claim_boundary_toggle"
+required_content_blocks:
+  - "ontology_terms"
+  - "exact_gr_benchmark"
+  - "derivation_burden"
+  - "claim_boundaries"
+source_drilldowns:
+  - "README.md"
+  - "AGENTS.md"
+  - "ontology/aether-and-aether-flow.md"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+analysis_capsule_schema:
+  - "premise"
+  - "mechanism"
+  - "source_basis"
+  - "authority_status"
+  - "uncertainty"
+  - "validation_or_test"
+  - "next_step"
+mermaid_diagrams:
+  required: true
+  ids:
+    - "aether-flow-ontology-stack"
+    - "derivation-burden-map"
 ---
 
-# Æther Flow Ontology Explainer Spec
+# Æther-flow Ontology Explainer Spec
 
 ## Rendering Intent
 
-Create a self-contained HTML explainer that presents the ontology lane with
-research-level caution. The page should make the distinction between ontology,
-mathematical model, benchmark behavior, and empirical derivation burden visually
-obvious.
+Create a self-contained tracked HTML explainer that describes the
+project-specific `Æther-flow ontology`. The page should not explain generic
+ontology. It should explain what this project currently says:
+
+- `Æther` is the proposed deeper four-dimensional substrate.
+- `Æther-flow` is the intrinsic ordered motion or relational organization of
+  that substrate.
+- observed three-dimensional space is an observer-accessible experiential slice
+  rather than the full substrate.
+- `S-time` is the experienced order of change arising from matter, light, and
+  the `Æther-flow`.
+- observed expansion is treated as the three-dimensional appearance of deeper
+  ordered motion.
+- gravity is interpreted heuristically as matter-shaped reorganization of the
+  surrounding `Æther-flow`.
+- exact GR is adopted as the current observable benchmark; a first-principles
+  derivation remains open.
 
 ## Required Visual Structure
 
-- A four-layer ontology-to-benchmark stack: substrate idea, source-defined
-  structures, effective relativistic behavior, and exact-GR benchmark.
-- A boundary panel stating that the benchmark preserves ordinary GR while the
-  first-principles substrate derivation remains open.
-- A derivation-burden checklist covering Lorentzian metric generation, causal
-  structure, clock behavior, matter coupling, invariance, and anti-smuggling
-  constraints.
-- A source-authority panel pointing readers back to registered TeX and registry
-  rows for scientific authority.
-- A claim-boundary notice stating that this page is human-only and
-  non-authoritative.
+- Responsive containment: navigation chips, grids, tables, code paths, source
+  drilldowns, and diagram shells must not create body-level horizontal overflow
+  on mobile or desktop viewports.
+- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+  SVG viewBox, set the box height from diagram aspect ratio and available
+  width within bounded min/max limits, and make Fit recompute that best-fit
+  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
+- Three-layer readability: stack the high-level, operational, and evidence
+  layer sections vertically; cards inside each layer must auto-fit at a
+  readable minimum width rather than nesting fixed three-column grids.
+- High-level model: what the `Æther-flow ontology` says about substrate, flow,
+  observed space, `S-time`, expansion, and gravity.
+- Operational model: how ontology framing connects to exact-GR benchmark
+  adoption and the open derivation program.
+- Low-level evidence model: source note, TeX registry, claim-boundary registry,
+  and the current local response/readout burden.
+- A derivation-burden panel for observer normal/readout source construction,
+  same-metric matter, nonmetric mode control, `S-time` closure, invariance, and
+  anti-smuggling constraints.
+- Source drilldowns and claim-boundary inspection.
+
+## Required Governed Mermaid Diagrams
+
+<!-- mermaid-diagram-id: aether-flow-ontology-stack -->
+```mermaid
+flowchart TD
+  Aether["Æther<br/>four-dimensional substrate"] --> Flow["Æther-flow<br/>intrinsic ordered motion"]
+  Flow --> Slice["Observed three-dimensional space<br/>local experiential slice"]
+  Flow --> STime["S-time<br/>experienced order of change"]
+  Flow --> Expansion["Observed expansion<br/>appearance of deeper motion"]
+  Matter["Matter and light"] --> STime
+  Matter --> Gravity["Gravity as mass-shaped<br/>Æther-flow reorganization"]
+  Slice --> Benchmark["Observable benchmark<br/>ordinary exact GR"]
+  STime --> Benchmark
+  Gravity --> Benchmark
+```
+
+<!-- mermaid-diagram-id: derivation-burden-map -->
+```mermaid
+flowchart TD
+  SourceData["Source-defined substrate data"] --> Readout["Observer normal/readout orbit"]
+  Readout --> Metric["Effective Lorentzian metric"]
+  Metric --> Causal["Causal structure and clocks"]
+  Causal --> Matter["Universal same-metric matter coupling"]
+  Matter --> Closure["S-time and Einsteinian closure"]
+  Closure --> ExactGR["Exact-GR benchmark recovered"]
+  SourceData --> AntiSmuggling["Anti-smuggling constraints"]
+  AntiSmuggling --> Metric
+  AntiSmuggling --> Matter
+  AntiSmuggling --> Closure
+  ExactGR --> Gate["Promotion requires claim gate"]
+```
+
+## Required Content Blocks
+
+- ontology_terms: Explain project-local meanings of `Æther`,
+  `Æther-flow`, observed space, `S-time`, expansion, and gravity.
+- exact_gr_benchmark: State that exact GR is the observable benchmark and not a
+  completed first-principles derivation.
+- derivation_burden: Show the source-defined readout, same-metric matter,
+  invariance, closure, and anti-smuggling requirements.
+- claim_boundaries: Preserve the human-only, no-physics-promotion boundary for
+  the ontology explainer.
+
+## Required Analysis Capsules
+
+### Project-Specific Ontology
+
+- premise: The `Æther-flow ontology` is the project-specific claim that reality
+  is grounded in a deeper four-dimensional substrate and its intrinsic ordered
+  motion.
+- mechanism: The explainer should connect substrate, flow, observed space,
+  `S-time`, observed expansion, and gravity as parts of one conceptual model,
+  while making clear that this model is not yet a completed derivation.
+- source_basis: `ontology/aether-and-aether-flow.md`, `README.md`, and
+  `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- authority_status: Human-only conceptual explanation; scientific authority
+  remains with registered TeX and claim-boundary rows.
+- uncertainty: The ontology has not yet supplied the source theorem that
+  uniquely recovers the exact-GR benchmark from substrate data.
+- validation_or_test: A candidate derivation must source-construct the observer
+  normal/readout orbit and recover Lorentzian geometry, clocks, matter
+  coupling, invariance, and closure without importing target GR structures.
+- next_step: Inspect the derivation-burden map before treating any candidate
+  mechanism as progress.
+
+### Exact-GR Benchmark Adoption
+
+- premise: The public benchmark preserves ordinary GR at observable scale while
+  the substrate derivation remains open.
+- mechanism: The page should show exact-GR adoption as a constraint and
+  comparison target, not as evidence that the ontology has already succeeded.
+- source_basis: `README.md`, `AGENTS.md`, and `registries/TEX_SOURCE_REGISTRY.csv`.
+- authority_status: Explanatory summary of registered claim boundaries.
+- uncertainty: Which source-defined substrate laws, if any, can recover the
+  benchmark remains unresolved.
+- validation_or_test: Candidate structures must pass dimensional consistency,
+  invariance, anti-smuggling, same-metric matter, clock behavior, and recovery
+  of known limiting behavior.
+- next_step: Route derivation candidates through bounded research-control jobs
+  and claim gates.
 
 ## Non-Goals
 
-- Do not assert that the ontology derives GR.
+- Do not assert that the `Æther-flow ontology` derives GR.
 - Do not add new equations, proof claims, or empirical predictions.
 - Do not alter canonical ontology TeX or registry status.
 - Do not use external images or network-dependent assets.

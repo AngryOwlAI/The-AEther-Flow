@@ -4,302 +4,211 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="2e43513514bfd7526551a76be74cf3747b0e436fe18276c814aa756858309f4d">
+  <meta name="aether-flow-source-basis-hash" content="834abc8fd695785cea4a490c01c3b38cb01607b987f79503a1db48211891a66b">
   <meta name="aether-flow-human-visual-only" content="true">
-  <link rel="icon" href="data:,">
-  <title>Æther Flow Ontology Explainer</title>
+  <title>Æther-flow Ontology Explainer</title>
   <style>
     :root {
-      --ink: #17202a;
-      --muted: #5a6572;
-      --line: #cfd6dd;
-      --paper: #f8fafc;
-      --white: #ffffff;
-      --violet: #5b4aa0;
-      --violet-soft: #ebe8ff;
-      --teal: #0f766e;
-      --teal-soft: #d8efeb;
-      --gold: #946513;
-      --gold-soft: #f2e2b7;
-      --red: #a23b50;
-      --red-soft: #f7dce3;
-      --shadow: 0 12px 28px rgba(23, 32, 42, 0.09);
+      --bg: #f6f4ee; --surface: #ffffff; --surface-2: #ecefe9; --text: #1b211c; --muted: #667066;
+      --border: rgba(34, 49, 40, 0.18); --authority: #1e3a5f; --authority-soft: #dfe8f2;
+      --physics: #2f6f54; --physics-soft: #dfeee6; --workflow: #8b5a20; --workflow-soft: #f1e0bd;
+      --derivative: #6d5b86; --derivative-soft: #eee7f5; --warning: #a34f12; --warning-soft: #f8e8c7;
+      --validation: #0f766e; --validation-soft: #d7f0eb; font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Avenir, "Avenir Next", "Segoe UI", Arial, sans-serif;
-      line-height: 1.55;
-    }
-
-    main {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 36px 0 56px;
-    }
-
-    h1, h2, h3, p {
-      margin: 0;
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 3.8rem;
-      line-height: 1;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-
-    header, section {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    header {
-      padding: 28px;
-      border-top: 7px solid var(--violet);
-      margin-bottom: 18px;
-    }
-
-    header p {
-      max-width: 820px;
-      color: var(--muted);
-      margin-top: 16px;
-      font-size: 1.05rem;
-    }
-
-    section {
-      margin-top: 18px;
-      padding: 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      background: #f7f9fb;
-      border: 1px solid var(--line);
-      margin-bottom: 12px;
-    }
-
-    .stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .layer {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 14px;
-      align-items: stretch;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-      background: #f7f9fb;
-    }
-
-    .layer-label {
-      padding: 16px;
-      color: var(--white);
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-
-    .layer:nth-child(1) .layer-label {
-      background: var(--violet);
-    }
-
-    .layer:nth-child(2) .layer-label {
-      background: var(--teal);
-    }
-
-    .layer:nth-child(3) .layer-label {
-      background: var(--gold);
-    }
-
-    .layer:nth-child(4) .layer-label {
-      background: var(--red);
-    }
-
-    .layer-body {
-      padding: 16px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .check {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-      min-height: 130px;
-      background: #f7f9fb;
-    }
-
-    .check strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .boundary {
-      background: var(--gold-soft);
-      border-color: rgba(148, 101, 19, 0.35);
-    }
-
-    .notice {
-      background: var(--red-soft);
-      border-color: rgba(162, 59, 80, 0.35);
-    }
-
-    ul {
-      margin: 10px 0 0 18px;
-      padding: 0;
-    }
-
-    code {
-      background: #eef2f6;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 1px 5px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.9em;
-    }
-
-    .sources li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 820px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .layer, .grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(180deg, #fbfaf6, var(--bg)); color: var(--text); overflow-x: clip; }
+    a { color: inherit; }
+    p, li, dd, td, th, summary, .atlas-link, .content-block, .source-chip { overflow-wrap: break-word; }
+    code, pre { overflow-wrap: anywhere; }
+    code { font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace; font-size: .92em; }
+    .page-shell { max-width: 1180px; margin: 0 auto; padding: 30px 20px 56px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); gap: 24px; align-items: end; padding: 32px; border: 1px solid var(--border); background: linear-gradient(135deg, #fff, var(--authority-soft)); }
+    .eyebrow { margin: 0 0 8px; text-transform: uppercase; font-size: .76rem; font-weight: 800; color: var(--authority); }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 4.5rem); line-height: 1; letter-spacing: 0; }
+    h2 { margin: 0; font-size: clamp(1.35rem, 2.5vw, 2.1rem); letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 1rem; letter-spacing: 0; }
+    p { line-height: 1.62; }
+    .hero-copy, .muted { color: var(--muted); }
+    .meta-stack { display: grid; gap: 10px; }
+    .meta-chip, .source-chip, .control-marker { display: inline-block; border: 1px solid var(--border); background: var(--surface); padding: 8px 10px; margin: 3px; }
+    .nav { position: sticky; top: 0; z-index: 3; display: flex; gap: 10px; overflow-x: auto; padding: 12px 0; backdrop-filter: blur(14px); }
+    .nav a { text-decoration: none; border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 9px 12px; white-space: nowrap; }
+    .section { margin-top: 24px; }
+    .panel { border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 24px; }
+    .section-heading, .block-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 16px; }
+    .hub-grid, .content-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    .atlas-link, .content-block, .capsule, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .atlas-link { text-decoration: none; display: block; }
+    .atlas-link strong { display: block; color: var(--authority); margin-bottom: 6px; }
+    .atlas-link span, .trace-list span { color: var(--muted); display: block; }
+    table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
+    th { color: var(--authority); }
+    .evidence-row { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
+    details { border: 1px solid var(--border); background: var(--surface); padding: 12px 14px; }
+    summary { cursor: pointer; font-weight: 800; }
+    .trace-list { display: grid; gap: 10px; padding-left: 24px; }
+    .trace-list li { border: 1px solid var(--border); background: var(--surface); padding: 12px; }
+    .capsule dl { display: grid; gap: 10px; margin: 0; }
+    .capsule-row, .capsule dt, .capsule dd { min-width: 0; overflow-wrap: break-word; }
+    .capsule dl { grid-template-columns: minmax(0, 1fr); }
+    .capsule dt { color: var(--authority); text-transform: uppercase; font-size: .78rem; font-weight: 800; }
+    .capsule dd { margin: 0; color: var(--muted); line-height: 1.52; }
+    .claim-box { background: linear-gradient(135deg, var(--warning-soft), #fffaf0); }
+    .diagram-shell { overflow: hidden; }
+    .mermaid-wrap { position: relative; border: 1px solid var(--border); background: #fbfaf6; min-height: 360px; height: 440px; max-height: 780px; overflow: hidden; }
+    .zoom-controls { position: absolute; z-index: 2; top: 12px; right: 12px; display: flex; gap: 8px; }
+    .zoom-controls button { border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: 7px 10px; cursor: pointer; font-weight: 800; }
+    .mermaid-viewport { position: relative; width: 100%; height: 100%; overflow: hidden; cursor: grab; touch-action: none; }
+    .mermaid-viewport.is-dragging { cursor: grabbing; }
+    .mermaid-canvas { position: absolute; top: 0; left: 0; transform-origin: 0 0; min-width: 0; padding: 0; }
+    .mermaid-canvas svg { max-width: none; width: auto; height: auto; display: block; }
+    pre { overflow: auto; white-space: pre-wrap; background: #161b18; color: #edf2ec; padding: 14px; }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding: 22px; } .section-heading, .block-head { display: block; } .nav { position: static; flex-wrap: wrap; overflow: visible; } .nav a { white-space: normal; } }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <span class="tag">Human-only ontology map</span>
-      <h1>Æther Flow Ontology</h1>
-      <p>The ontology lane asks whether relativistic behavior can be recovered from source-defined substrate structure. The current benchmark remains exact GR. The derivation from ontology to benchmark is an open research burden, not an accepted result.</p>
+  <main class="page-shell">
+    <header class="hero">
+      <div><p class="eyebrow">conceptual_model</p><h1>Æther-flow Ontology Explainer</h1><p class="hero-copy">Explain the project&#x27;s specific Æther-flow ontology in high-level, operational, and low-level evidence layers while preserving the open exact-GR derivation burden.</p></div>
+      <aside class="meta-stack" aria-label="Page metadata">
+        <div class="meta-chip"><strong>Layout intent</strong><br>Use a conceptual model with term cards, derivation-burden panels, governed diagrams, and source-backed claim-boundary callouts.</div>
+        <div class="meta-chip"><strong>Authority</strong><br>Human-only generated derivative</div>
+        <div class="meta-chip"><strong>Source basis</strong><br><code>MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER</code></div>
+      </aside>
     </header>
+    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Content Blocks</a><a href="#diagrams">Diagrams</a><a href="#analysis">Analysis</a><a href="#sources">Sources</a><a href="#claim-boundary">Boundary</a></nav>
+    <section id="content-blocks" class="section panel">
+      <div class="section-heading"><div><p class="eyebrow">Required content blocks</p><h2>Source-Backed Coverage</h2></div><p class="muted">Every declared block carries local source-path evidence while the visual form adapts to the page profile.</p></div>
+      <div class="content-grid"><article class="content-block" data-content-block="ontology_terms"><div class="block-head"><h3>Ontology Terms</h3><div class="evidence-row"><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span></div></div><p>Explain project-local meanings of `Æther`, `Æther-flow`, observed space, `S-time`, expansion, and gravity.</p><p class="muted">This block is source-backed by the evidence chips below and is governed by the Markdown source spec.</p></article><article class="content-block" data-content-block="exact_gr_benchmark"><div class="block-head"><h3>Exact Gr Benchmark</h3><div class="evidence-row"><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span></div></div><p>State that exact GR is the observable benchmark and not a completed first-principles derivation.</p><p class="muted">This block is source-backed by the evidence chips below and is governed by the Markdown source spec.</p></article><article class="content-block" data-content-block="derivation_burden"><div class="block-head"><h3>Derivation Burden</h3><div class="evidence-row"><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span></div></div><p>Show the source-defined readout, same-metric matter, invariance, closure, and anti-smuggling requirements.</p><p class="muted">This block is source-backed by the evidence chips below and is governed by the Markdown source spec.</p></article><article class="content-block" data-content-block="claim_boundaries"><div class="block-head"><h3>Claim Boundaries</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span></div></div><p>Preserve the human-only, no-physics-promotion boundary for the ontology explainer.</p><p class="muted">This block is source-backed by the evidence chips below and is governed by the Markdown source spec.</p></article></div>
+      <details data-explainer-control="expandable_analysis_panels"><summary>Presentation contract</summary><p>Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.</p></details>
 
-    <section>
-      <h2>Ontology-to-Benchmark Stack</h2>
-      <div class="stack">
-        <article class="layer">
-          <div class="layer-label">1. Substrate idea</div>
-          <div class="layer-body">
-            <h3>Æther / Æther-flow</h3>
-            <p>A proposed four-dimensional substrate and flow-like organization used as a research ontology. It is a candidate explanatory base, not an empirical conclusion by itself.</p>
-          </div>
-        </article>
-        <article class="layer">
-          <div class="layer-label">2. Source structures</div>
-          <div class="layer-body">
-            <h3>Definitions before targets</h3>
-            <p>Candidate derivation work must define source-side structures without importing the target metric, target clock behavior, or benchmark-tuned branch choices.</p>
-          </div>
-        </article>
-        <article class="layer">
-          <div class="layer-label">3. Effective behavior</div>
-          <div class="layer-body">
-            <h3>Relativistic sector burden</h3>
-            <p>The missing step is a coherent route from substrate data to Lorentzian metric behavior, causal structure, matter coupling, clock behavior, and invariance properties.</p>
-          </div>
-        </article>
-        <article class="layer">
-          <div class="layer-label">4. Exact-GR benchmark</div>
-          <div class="layer-body">
-            <h3>Observable-scale constraint</h3>
-            <p>The public benchmark preserves ordinary GR at observable scale. Any derivation proposal must recover that behavior without overclaiming.</p>
-          </div>
-        </article>
-      </div>
     </section>
+    <div id="diagrams">
+<section class="section panel diagram-shell" data-mermaid-diagram-id="aether-flow-ontology-stack">
+  <div class="section-heading"><div><p class="eyebrow">Governed Mermaid</p><h2>Aether Flow Ontology Stack</h2></div><p class="muted">Build-time inline SVG will be rendered from the preserved source.</p></div>
+  <div class="mermaid-wrap">
+    <div class="zoom-controls" aria-label="Diagram controls">
+      <button type="button" data-zoom="in">+</button>
+      <button type="button" data-zoom="out">-</button>
+      <button type="button" data-zoom="reset">Fit</button>
+    </div>
+    <div class="mermaid-viewport" tabindex="0"><div class="mermaid mermaid-canvas" data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.0" data-render-source-sha256="971d16c18ddbf3112cbc7822c83390e8e6aff71d7d3229740b132f14ffa225bb"><svg xmlns="http://www.w3.org/2000/svg" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root" width="100%" class="flowchart" style="max-width: 1094.0540771484375px;" viewBox="0 0 1094.0540771484375 462" role="graphics-document document" aria-roledescription="flowchart-v2" data-mermaid-rendered="true" data-mermaid-diagram-id="aether-flow-ontology-stack"><style>#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root{font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;font-size:16px;fill:#1a211d;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .error-icon{fill:#f1e0bd;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .error-text{fill:#1a211d;stroke:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-thickness-normal{stroke-width:1px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-thickness-thick{stroke-width:3.5px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-pattern-solid{stroke-dasharray:0;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-thickness-invisible{stroke-width:0;fill:none;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-pattern-dashed{stroke-dasharray:3;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edge-pattern-dotted{stroke-dasharray:2;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .marker{fill:#68716b;stroke:#68716b;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .marker.cross{stroke:#68716b;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root svg{font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;font-size:16px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root p{margin:0;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .label{font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;color:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .cluster-label text{fill:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .cluster-label span{color:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .cluster-label span p{background-color:transparent;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .label text,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root span{fill:#1a211d;color:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node rect,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node circle,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node ellipse,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node polygon,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node path{fill:#dfe8f2;stroke:#1e3a5f;stroke-width:1px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .rough-node .label text,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node .label text,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .image-shape .label,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .icon-shape .label{text-anchor:middle;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .rough-node .label,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node .label,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .image-shape .label,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .icon-shape .label{text-align:center;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node.clickable{cursor:pointer;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .root .anchor path{fill:#68716b!important;stroke-width:0;stroke:#68716b;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .arrowheadPath{fill:#0b0b0b;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edgePath .path{stroke:#68716b;stroke-width:1px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .flowchart-link{stroke:#68716b;fill:none;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edgeLabel{background-color:#dfeee6;text-align:center;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edgeLabel p{background-color:#dfeee6;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .edgeLabel rect{opacity:0.5;background-color:#dfeee6;fill:#dfeee6;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .labelBkg{background-color:rgba(223, 238, 230, 0.5);}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .cluster rect{fill:#f1e0bd;stroke:#b47718;stroke-width:1px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .cluster text{fill:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .cluster span{color:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;font-size:12px;background:#f1e0bd;border:1px solid #b47718;border-radius:2px;pointer-events:none;z-index:100;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#1a211d;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root rect.text{fill:none;stroke-width:0;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .icon-shape,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .image-shape{background-color:#dfeee6;text-align:center;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .icon-shape p,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .image-shape p{background-color:#dfeee6;padding:2px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .icon-shape .label rect,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .image-shape .label rect{opacity:0.5;background-color:#dfeee6;fill:#dfeee6;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root .node .neo-node{stroke:#1e3a5f;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node rect,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].cluster rect,#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node polygon{stroke:url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node path{stroke:url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-gradient);stroke-width:1px;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node .neo-line path{stroke:#1e3a5f;filter:none;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node circle{stroke:url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].node circle .state-start{fill:#000000;}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].icon-shape .icon{fill:url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root [data-look="neo"].icon-shape .icon-neo path{stroke:url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path d="M684.507,77.6L684.507,81.767C684.507,85.933,684.507,94.267,684.507,101.933C684.507,109.6,684.507,116.6,684.507,120.1L684.507,123.6" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Aether_Flow_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Aether_Flow_0" data-points="W3sieCI6Njg0LjUwNzIzMjY2NjAxNTYsInkiOjc3LjU5OTk5ODQ3NDEyMTF9LHsieCI6Njg0LjUwNzIzMjY2NjAxNTYsInkiOjEwMi41OTk5OTg0NzQxMjExfSx7IngiOjY4NC41MDcyMzI2NjYwMTU2LCJ5IjoxMjcuNTk5OTk4NDc0MTIxMX1d" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M802.515,187.456L829.788,193.246C857.062,199.037,911.609,210.619,938.882,219.909C966.156,229.2,966.156,236.2,966.156,239.7L966.156,243.2" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Flow_Slice_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Flow_Slice_0" data-points="W3sieCI6ODAyLjUxNTA0NTE2NjAxNTYsInkiOjE4Ny40NTU1ODUzMDg2MzUyNX0seyJ4Ijo5NjYuMTU1NjcwMTY2MDE1NiwieSI6MjIyLjE5OTk5Njk0ODI0MjJ9LHsieCI6OTY2LjE1NTY3MDE2NjAxNTYsInkiOjI0Ny4xOTk5OTY5NDgyNDIyfV0=" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M600.343,197.2L590.266,201.367C580.189,205.533,560.035,213.867,542.972,221.879C525.909,229.89,511.938,237.581,504.952,241.426L497.967,245.271" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Flow_STime_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Flow_STime_0" data-points="W3sieCI6NjAwLjM0MzEzNzcxNTA5NjgsInkiOjE5Ny4xOTk5OTY5NDgyNDIyfSx7IngiOjUzOS44ODA0MjQ0OTk1MTE3LCJ5IjoyMjIuMTk5OTk2OTQ4MjQyMn0seyJ4Ijo0OTQuNDYyNDkwNDgzOTg4OSwieSI6MjQ3LjE5OTk5Njk0ODI0MjJ9XQ==" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M684.507,197.2L684.507,201.367C684.507,205.533,684.507,213.867,684.507,221.533C684.507,229.2,684.507,236.2,684.507,239.7L684.507,243.2" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Flow_Expansion_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Flow_Expansion_0" data-points="W3sieCI6Njg0LjUwNzIzMjY2NjAxNTYsInkiOjE5Ny4xOTk5OTY5NDgyNDIyfSx7IngiOjY4NC41MDcyMzI2NjYwMTU2LCJ5IjoyMjIuMTk5OTk2OTQ4MjQyMn0seyJ4Ijo2ODQuNTA3MjMyNjY2MDE1NiwieSI6MjQ3LjE5OTk5Njk0ODI0MjJ9XQ==" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M204.262,188.4L217.562,194.033C230.863,199.667,257.463,210.933,278.141,220.424C298.819,229.915,313.574,237.631,320.952,241.489L328.329,245.346" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Matter_STime_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Matter_STime_0" data-points="W3sieCI6MjA0LjI2MTY1NjUwNzc0OTIyLCJ5IjoxODguMzk5OTk3NzExMTgxNjR9LHsieCI6Mjg0LjA2NDMwODE2NjUwMzksInkiOjIyMi4xOTk5OTY5NDgyNDIyfSx7IngiOjMzMS44NzM4MjM4Njc4NzYwNywieSI6MjQ3LjE5OTk5Njk0ODI0MjJ9XQ==" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M138.527,188.4L137.585,194.033C136.643,199.667,134.759,210.933,133.817,221.533C132.875,232.133,132.875,242.067,132.875,247.033L132.875,252" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Matter_Gravity_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Matter_Gravity_0" data-points="W3sieCI6MTM4LjUyNzE3Mzg1NzU3MzEsInkiOjE4OC4zOTk5OTc3MTExODE2NH0seyJ4IjoxMzIuODc1LCJ5IjoyMjIuMTk5OTk2OTQ4MjQyMn0seyJ4IjoxMzIuODc1LCJ5IjoyNTUuOTk5OTk2MTg1MzAyNzN9XQ==" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M966.156,334.4L966.156,338.567C966.156,342.733,966.156,351.067,894.344,363.028C822.532,374.99,678.909,390.58,607.097,398.376L535.285,406.171" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Slice_Benchmark_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Slice_Benchmark_0" data-points="W3sieCI6OTY2LjE1NTY3MDE2NjAxNTYsInkiOjMzNC4zOTk5OTM4OTY0ODQ0fSx7IngiOjk2Ni4xNTU2NzAxNjYwMTU2LCJ5IjozNTkuMzk5OTkzODk2NDg0NH0seyJ4Ijo1MzEuMzA4MzAzODMzMDA3OCwieSI6NDA2LjYwMjM0NTAxMTM5NjE1fV0=" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M415.254,334.4L415.254,338.567C415.254,342.733,415.254,351.067,415.254,358.733C415.254,366.4,415.254,373.4,415.254,376.9L415.254,380.4" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_STime_Benchmark_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_STime_Benchmark_0" data-points="W3sieCI6NDE1LjI1MzYxNjMzMzAwNzgsInkiOjMzNC4zOTk5OTM4OTY0ODQ0fSx7IngiOjQxNS4yNTM2MTYzMzMwMDc4LCJ5IjozNTkuMzk5OTkzODk2NDg0NH0seyJ4Ijo0MTUuMjUzNjE2MzMzMDA3OCwieSI6Mzg0LjM5OTk5Mzg5NjQ4NDR9XQ==" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/><path d="M132.875,325.6L132.875,331.233C132.875,336.867,132.875,348.133,159.943,359.499C187.012,370.865,241.149,382.329,268.217,388.062L295.286,393.794" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-L_Gravity_Benchmark_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Gravity_Benchmark_0" data-points="W3sieCI6MTMyLjg3NSwieSI6MzI1LjU5OTk5NDY1OTQyMzh9LHsieCI6MTMyLjg3NSwieSI6MzU5LjM5OTk5Mzg5NjQ4NDR9LHsieCI6Mjk5LjE5ODkyODgzMzAwNzgsInkiOjM5NC42MjI4MTI2MzAwMDF9XQ==" data-look="classic" marker-end="url(#mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_Aether_Flow_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Flow_Slice_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Flow_STime_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Flow_Expansion_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Matter_STime_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Matter_Gravity_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Slice_Benchmark_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_STime_Benchmark_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Gravity_Benchmark_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g></g><g class="nodes"><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Aether-0" data-look="classic" transform="translate(684.5072326660156, 42.79999923706055)"><rect class="basic label-container" style="" x="-127.3828125" y="-34.79999923706055" width="254.765625" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Æther</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">four-dimensional</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> substrate</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Flow-1" data-look="classic" transform="translate(684.5072326660156, 162.39999771118164)"><rect class="basic label-container" style="" x="-118.0078125" y="-34.79999923706055" width="236.015625" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Æther-flow</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">intrinsic</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> ordered</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> motion</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Slice-3" data-look="classic" transform="translate(966.1556701660156, 290.7999954223633)"><rect class="basic label-container" style="" x="-119.8984375" y="-43.599998474121094" width="239.796875" height="87.19999694824219"/><g class="label" style="" transform="translate(0, -28.599998474121094)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Observed</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">three-dimensional</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> space</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="2.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">local</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> experiential</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> slice</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-STime-5" data-look="classic" transform="translate(415.2536163330078, 290.7999954223633)"><rect class="basic label-container" style="" x="-107.50361633300781" y="-43.599998474121094" width="215.00723266601562" height="87.19999694824219"/><g class="label" style="" transform="translate(0, -28.599998474121094)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">S-time</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">experienced</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> order</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> of</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="2.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">change</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Expansion-7" data-look="classic" transform="translate(684.5072326660156, 290.7999954223633)"><rect class="basic label-container" style="" x="-111.75" y="-43.599998474121094" width="223.5" height="87.19999694824219"/><g class="label" style="" transform="translate(0, -28.599998474121094)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Observed</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> expansion</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">appearance</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> of</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> deeper</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="2.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">motion</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Matter-8" data-look="classic" transform="translate(142.875, 162.39999771118164)"><rect class="basic label-container" style="" x="-88.015625" y="-26" width="176.03125" height="52"/><g class="label" style="" transform="translate(0, -11)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Matter</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> and</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> light</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Gravity-11" data-look="classic" transform="translate(132.875, 290.7999954223633)"><rect class="basic label-container" style="" x="-124.875" y="-34.79999923706055" width="249.75" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Gravity</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> as</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> mass-shaped</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Æther-flow</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> reorganization</tspan></tspan></text></g></g></g><g class="node default" id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-flowchart-Benchmark-13" data-look="classic" transform="translate(415.2536163330078, 419.1999931335449)"><rect class="basic label-container" style="" x="-116.0546875" y="-34.79999923706055" width="232.109375" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Observable</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> benchmark</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">ordinary</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> exact</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> GR</tspan></tspan></text></g></g></g></g></g></g><defs><filter id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><linearGradient id="mmd-aether-flow-ontology-stack-mmd-aether-flow-ontology-stack-root-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1e3a5f" stop-opacity="1"/><stop offset="100%" stop-color="#2f6f54" stop-opacity="1"/></linearGradient></svg></div></div>
+  </div>
+  <details class="source-fold"><summary>Diagram source</summary><pre><code>flowchart TD
+  Aether[&quot;Æther&lt;br/&gt;four-dimensional substrate&quot;] --&gt; Flow[&quot;Æther-flow&lt;br/&gt;intrinsic ordered motion&quot;]
+  Flow --&gt; Slice[&quot;Observed three-dimensional space&lt;br/&gt;local experiential slice&quot;]
+  Flow --&gt; STime[&quot;S-time&lt;br/&gt;experienced order of change&quot;]
+  Flow --&gt; Expansion[&quot;Observed expansion&lt;br/&gt;appearance of deeper motion&quot;]
+  Matter[&quot;Matter and light&quot;] --&gt; STime
+  Matter --&gt; Gravity[&quot;Gravity as mass-shaped&lt;br/&gt;Æther-flow reorganization&quot;]
+  Slice --&gt; Benchmark[&quot;Observable benchmark&lt;br/&gt;ordinary exact GR&quot;]
+  STime --&gt; Benchmark
+  Gravity --&gt; Benchmark
+</code></pre></details>
+  <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="aether-flow-ontology-stack">
+flowchart TD
+  Aether["Æther<br/>four-dimensional substrate"] --> Flow["Æther-flow<br/>intrinsic ordered motion"]
+  Flow --> Slice["Observed three-dimensional space<br/>local experiential slice"]
+  Flow --> STime["S-time<br/>experienced order of change"]
+  Flow --> Expansion["Observed expansion<br/>appearance of deeper motion"]
+  Matter["Matter and light"] --> STime
+  Matter --> Gravity["Gravity as mass-shaped<br/>Æther-flow reorganization"]
+  Slice --> Benchmark["Observable benchmark<br/>ordinary exact GR"]
+  STime --> Benchmark
+  Gravity --> Benchmark
+  </script>
+</section>
+<section class="section panel diagram-shell" data-mermaid-diagram-id="derivation-burden-map">
+  <div class="section-heading"><div><p class="eyebrow">Governed Mermaid</p><h2>Derivation Burden Map</h2></div><p class="muted">Build-time inline SVG will be rendered from the preserved source.</p></div>
+  <div class="mermaid-wrap">
+    <div class="zoom-controls" aria-label="Diagram controls">
+      <button type="button" data-zoom="in">+</button>
+      <button type="button" data-zoom="out">-</button>
+      <button type="button" data-zoom="reset">Fit</button>
+    </div>
+    <div class="mermaid-viewport" tabindex="0"><div class="mermaid mermaid-canvas" data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.0" data-render-source-sha256="9eadd6de1ff9991378261a781a22b7d42b792eb8daa32c08400fb314f4332fb1"><svg xmlns="http://www.w3.org/2000/svg" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root" width="100%" class="flowchart" style="max-width: 574.453125px;" viewBox="0 0 574.453125 887.5999755859375" role="graphics-document document" aria-roledescription="flowchart-v2" data-mermaid-rendered="true" data-mermaid-diagram-id="derivation-burden-map"><style>#mmd-derivation-burden-map-mmd-derivation-burden-map-root{font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;font-size:16px;fill:#1a211d;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .error-icon{fill:#f1e0bd;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .error-text{fill:#1a211d;stroke:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-thickness-normal{stroke-width:1px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-thickness-thick{stroke-width:3.5px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-pattern-solid{stroke-dasharray:0;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-thickness-invisible{stroke-width:0;fill:none;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-pattern-dashed{stroke-dasharray:3;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edge-pattern-dotted{stroke-dasharray:2;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .marker{fill:#68716b;stroke:#68716b;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .marker.cross{stroke:#68716b;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root svg{font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;font-size:16px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root p{margin:0;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .label{font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;color:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .cluster-label text{fill:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .cluster-label span{color:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .cluster-label span p{background-color:transparent;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .label text,#mmd-derivation-burden-map-mmd-derivation-burden-map-root span{fill:#1a211d;color:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node rect,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node circle,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node ellipse,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node polygon,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node path{fill:#dfe8f2;stroke:#1e3a5f;stroke-width:1px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .rough-node .label text,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node .label text,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .image-shape .label,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .icon-shape .label{text-anchor:middle;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .rough-node .label,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node .label,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .image-shape .label,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .icon-shape .label{text-align:center;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node.clickable{cursor:pointer;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .root .anchor path{fill:#68716b!important;stroke-width:0;stroke:#68716b;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .arrowheadPath{fill:#0b0b0b;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edgePath .path{stroke:#68716b;stroke-width:1px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .flowchart-link{stroke:#68716b;fill:none;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edgeLabel{background-color:#dfeee6;text-align:center;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edgeLabel p{background-color:#dfeee6;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .edgeLabel rect{opacity:0.5;background-color:#dfeee6;fill:#dfeee6;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .labelBkg{background-color:rgba(223, 238, 230, 0.5);}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .cluster rect{fill:#f1e0bd;stroke:#b47718;stroke-width:1px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .cluster text{fill:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .cluster span{color:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:IBM Plex Sans,Avenir Next,Segoe UI,sans-serif;font-size:12px;background:#f1e0bd;border:1px solid #b47718;border-radius:2px;pointer-events:none;z-index:100;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#1a211d;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root rect.text{fill:none;stroke-width:0;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .icon-shape,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .image-shape{background-color:#dfeee6;text-align:center;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .icon-shape p,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .image-shape p{background-color:#dfeee6;padding:2px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .icon-shape .label rect,#mmd-derivation-burden-map-mmd-derivation-burden-map-root .image-shape .label rect{opacity:0.5;background-color:#dfeee6;fill:#dfeee6;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root .node .neo-node{stroke:#1e3a5f;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node rect,#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].cluster rect,#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node polygon{stroke:url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node path{stroke:url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root-gradient);stroke-width:1px;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node .neo-line path{stroke:#1e3a5f;filter:none;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node circle{stroke:url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].node circle .state-start{fill:#000000;}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].icon-shape .icon{fill:url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-derivation-burden-map-mmd-derivation-burden-map-root [data-look="neo"].icon-shape .icon-neo path{stroke:url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mmd-derivation-burden-map-mmd-derivation-burden-map-root :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path d="M177.976,77.6L171.149,81.767C164.322,85.933,150.669,94.267,143.842,101.933C137.016,109.6,137.016,116.6,137.016,120.1L137.016,123.6" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_SourceData_Readout_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_SourceData_Readout_0" data-points="W3sieCI6MTc3Ljk3NTcyNjkwMjE3NTIsInkiOjc3LjU5OTk5ODQ3NDEyMTF9LHsieCI6MTM3LjAxNTYyNSwieSI6MTAyLjU5OTk5ODQ3NDEyMTF9LHsieCI6MTM3LjAxNTYyNSwieSI6MTI3LjU5OTk5ODQ3NDEyMTF9XQ==" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M137.016,197.2L137.016,201.367C137.016,205.533,137.016,213.867,137.016,221.533C137.016,229.2,137.016,236.2,137.016,239.7L137.016,243.2" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_Readout_Metric_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Readout_Metric_0" data-points="W3sieCI6MTM3LjAxNTYyNSwieSI6MTk3LjE5OTk5Njk0ODI0MjJ9LHsieCI6MTM3LjAxNTYyNSwieSI6MjIyLjE5OTk5Njk0ODI0MjJ9LHsieCI6MTM3LjAxNTYyNSwieSI6MjQ3LjE5OTk5Njk0ODI0MjJ9XQ==" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M137.016,299.2L137.016,303.367C137.016,307.533,137.016,315.867,137.016,323.533C137.016,331.2,137.016,338.2,137.016,341.7L137.016,345.2" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_Metric_Causal_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Metric_Causal_0" data-points="W3sieCI6MTM3LjAxNTYyNSwieSI6Mjk5LjE5OTk5Njk0ODI0MjJ9LHsieCI6MTM3LjAxNTYyNSwieSI6MzI0LjE5OTk5Njk0ODI0MjJ9LHsieCI6MTM3LjAxNTYyNSwieSI6MzQ5LjE5OTk5Njk0ODI0MjJ9XQ==" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M137.016,401.2L137.016,405.367C137.016,409.533,137.016,417.867,143.273,425.853C149.531,433.839,162.046,441.477,168.304,445.297L174.561,449.116" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_Causal_Matter_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Causal_Matter_0" data-points="W3sieCI6MTM3LjAxNTYyNSwieSI6NDAxLjE5OTk5Njk0ODI0MjJ9LHsieCI6MTM3LjAxNTYyNSwieSI6NDI2LjE5OTk5Njk0ODI0MjJ9LHsieCI6MTc3Ljk3NTcyNjkwMjE3NTIsInkiOjQ1MS4xOTk5OTY5NDgyNDIyfV0=" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M234.992,520.8L234.992,524.967C234.992,529.133,234.992,537.467,239.55,545.377C244.108,553.287,253.224,560.774,257.782,564.518L262.34,568.261" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_Matter_Closure_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Matter_Closure_0" data-points="W3sieCI6MjM0Ljk5MjE4NzUsInkiOjUyMC43OTk5OTU0MjIzNjMzfSx7IngiOjIzNC45OTIxODc1LCJ5Ijo1NDUuNzk5OTk1NDIyMzYzM30seyJ4IjoyNjUuNDMwNTYzMjAxODgzNTYsInkiOjU3MC43OTk5OTU0MjIzNjMzfV0=" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M307.801,640.4L307.801,644.567C307.801,648.733,307.801,657.067,307.801,664.733C307.801,672.4,307.801,679.4,307.801,682.9L307.801,686.4" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_Closure_ExactGR_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Closure_ExactGR_0" data-points="W3sieCI6MzA3LjgwMDc4MTI1LCJ5Ijo2NDAuMzk5OTkzODk2NDg0NH0seyJ4IjozMDcuODAwNzgxMjUsInkiOjY2NS4zOTk5OTM4OTY0ODQ0fSx7IngiOjMwNy44MDA3ODEyNSwieSI6NjkwLjM5OTk5Mzg5NjQ4NDR9XQ==" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M353.471,77.6L367.657,81.767C381.843,85.933,410.214,94.267,424.4,103.4C438.586,112.533,438.586,122.467,438.586,127.433L438.586,132.4" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_SourceData_AntiSmuggling_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_SourceData_AntiSmuggling_0" data-points="W3sieCI6MzUzLjQ3MTQ5MjQzNDE2MTA2LCJ5Ijo3Ny41OTk5OTg0NzQxMjExfSx7IngiOjQzOC41ODU5Mzc1LCJ5IjoxMDIuNTk5OTk4NDc0MTIxMX0seyJ4Ijo0MzguNTg1OTM3NSwieSI6MTM2LjM5OTk5NzcxMTE4MTY0fV0=" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M375.622,188.4L361.98,194.033C348.338,199.667,321.054,210.933,295.239,220.527C269.424,230.121,245.079,238.042,232.906,242.002L220.733,245.962" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_AntiSmuggling_Metric_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_AntiSmuggling_Metric_0" data-points="W3sieCI6Mzc1LjYyMjI4MTgwNTM5MzcsInkiOjE4OC4zOTk5OTc3MTExODE2NH0seyJ4IjoyOTMuNzY5NTMxMjUsInkiOjIyMi4xOTk5OTY5NDgyNDIyfSx7IngiOjIxNi45MjkzODExMjc0NTEsInkiOjI0Ny4xOTk5OTY5NDgyNDIyfV0=" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M415.626,188.4L410.651,194.033C405.676,199.667,395.727,210.933,390.752,225.067C385.777,239.2,385.777,256.2,385.777,273.2C385.777,290.2,385.777,307.2,385.777,324.2C385.777,341.2,385.777,358.2,385.777,375.2C385.777,392.2,385.777,409.2,375.891,421.621C366.004,434.042,346.231,441.884,336.345,445.804L326.458,449.725" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_AntiSmuggling_Matter_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_AntiSmuggling_Matter_0" data-points="W3sieCI6NDE1LjYyNTY3OTA1NDg5NDksInkiOjE4OC4zOTk5OTc3MTExODE2NH0seyJ4IjozODUuNzc3MzQzNzUsInkiOjIyMi4xOTk5OTY5NDgyNDIyfSx7IngiOjM4NS43NzczNDM3NSwieSI6MjczLjE5OTk5Njk0ODI0MjJ9LHsieCI6Mzg1Ljc3NzM0Mzc1LCJ5IjozMjQuMTk5OTk2OTQ4MjQyMn0seyJ4IjozODUuNzc3MzQzNzUsInkiOjM3NS4xOTk5OTY5NDgyNDIyfSx7IngiOjM4NS43NzczNDM3NSwieSI6NDI2LjE5OTk5Njk0ODI0MjJ9LHsieCI6MzIyLjc0MDA3MDI2NTk5MjksInkiOjQ1MS4xOTk5OTY5NDgyNDIyfV0=" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M455.977,188.4L459.745,194.033C463.513,199.667,471.05,210.933,474.818,225.067C478.586,239.2,478.586,256.2,478.586,273.2C478.586,290.2,478.586,307.2,478.586,324.2C478.586,341.2,478.586,358.2,478.586,375.2C478.586,392.2,478.586,409.2,478.586,427.667C478.586,446.133,478.586,466.067,478.586,486C478.586,505.933,478.586,525.867,467.315,539.78C456.045,553.693,433.504,561.585,422.233,565.532L410.963,569.478" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_AntiSmuggling_Closure_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_AntiSmuggling_Closure_0" data-points="W3sieCI6NDU1Ljk3NzI0MjA2OTcwNzYsInkiOjE4OC4zOTk5OTc3MTExODE2NH0seyJ4Ijo0NzguNTg1OTM3NSwieSI6MjIyLjE5OTk5Njk0ODI0MjJ9LHsieCI6NDc4LjU4NTkzNzUsInkiOjI3My4xOTk5OTY5NDgyNDIyfSx7IngiOjQ3OC41ODU5Mzc1LCJ5IjozMjQuMTk5OTk2OTQ4MjQyMn0seyJ4Ijo0NzguNTg1OTM3NSwieSI6Mzc1LjE5OTk5Njk0ODI0MjJ9LHsieCI6NDc4LjU4NTkzNzUsInkiOjQyNi4xOTk5OTY5NDgyNDIyfSx7IngiOjQ3OC41ODU5Mzc1LCJ5Ijo0ODUuOTk5OTk2MTg1MzAyNzN9LHsieCI6NDc4LjU4NTkzNzUsInkiOjU0NS43OTk5OTU0MjIzNjMzfSx7IngiOjQwNy4xODc0NTk4OTU5NDEyMywieSI6NTcwLjc5OTk5NTQyMjM2MzN9XQ==" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/><path d="M307.801,760L307.801,764.167C307.801,768.333,307.801,776.667,307.801,784.333C307.801,792,307.801,799,307.801,802.5L307.801,806" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-L_ExactGR_Gate_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_ExactGR_Gate_0" data-points="W3sieCI6MzA3LjgwMDc4MTI1LCJ5Ijo3NTkuOTk5OTkyMzcwNjA1NX0seyJ4IjozMDcuODAwNzgxMjUsInkiOjc4NC45OTk5OTIzNzA2MDU1fSx7IngiOjMwNy44MDA3ODEyNSwieSI6ODA5Ljk5OTk5MjM3MDYwNTV9XQ==" data-look="classic" marker-end="url(#mmd-derivation-burden-map-mmd-derivation-burden-map-root_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_SourceData_Readout_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Readout_Metric_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Metric_Causal_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Causal_Matter_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Matter_Closure_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_Closure_ExactGR_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_SourceData_AntiSmuggling_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_AntiSmuggling_Metric_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_AntiSmuggling_Matter_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_AntiSmuggling_Closure_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g><g class="edgeLabel"><g class="label" data-id="L_ExactGR_Gate_0" transform="translate(0, 0)"><text y="-10.1" text-anchor="middle"><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"/></text></g></g><g><rect class="background" style="stroke: none"/></g></g><g class="nodes"><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-SourceData-0" data-look="classic" transform="translate(234.9921875, 42.79999923706055)"><rect class="basic label-container" style="" x="-121.7421875" y="-34.79999923706055" width="243.484375" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Source-defined</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> substrate</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">data</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-Readout-1" data-look="classic" transform="translate(137.015625, 162.39999771118164)"><rect class="basic label-container" style="" x="-123.703125" y="-34.79999923706055" width="247.40625" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Observer</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> normal/readout</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">orbit</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-Metric-3" data-look="classic" transform="translate(137.015625, 273.1999969482422)"><rect class="basic label-container" style="" x="-125.75" y="-26" width="251.5" height="52"/><g class="label" style="" transform="translate(0, -11)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Effective</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> Lorentzian</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> metric</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-Causal-5" data-look="classic" transform="translate(137.015625, 375.1999969482422)"><rect class="basic label-container" style="" x="-129.015625" y="-26" width="258.03125" height="52"/><g class="label" style="" transform="translate(0, -11)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Causal</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> structure</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> and</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> clocks</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-Matter-7" data-look="classic" transform="translate(234.9921875, 485.99999618530273)"><rect class="basic label-container" style="" x="-110.6171875" y="-34.79999923706055" width="221.234375" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Universal</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> same-metric</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">matter</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> coupling</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-Closure-9" data-look="classic" transform="translate(307.80078125, 605.5999946594238)"><rect class="basic label-container" style="" x="-110.890625" y="-34.79999923706055" width="221.78125" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">S-time</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> and</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> Einsteinian</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">closure</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-ExactGR-11" data-look="classic" transform="translate(307.80078125, 725.1999931335449)"><rect class="basic label-container" style="" x="-106.28125" y="-34.79999923706055" width="212.5625" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Exact-GR</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> benchmark</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">recovered</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-AntiSmuggling-13" data-look="classic" transform="translate(438.5859375, 162.39999771118164)"><rect class="basic label-container" style="" x="-127.8671875" y="-26" width="255.734375" height="52"/><g class="label" style="" transform="translate(0, -11)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Anti-smuggling</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> constraints</tspan></tspan></text></g></g></g><g class="node default" id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-flowchart-Gate-21" data-look="classic" transform="translate(307.80078125, 844.799991607666)"><rect class="basic label-container" style="" x="-121.171875" y="-34.79999923706055" width="242.34375" height="69.5999984741211"/><g class="label" style="" transform="translate(0, -19.799999237060547)"><rect/><g><rect class="background" style="stroke: none"/><text y="-10.1" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Promotion</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> requires</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> claim</tspan></tspan><tspan class="text-outer-tspan row" x="0" y="1em" dy="1.1em"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">gate</tspan></tspan></text></g></g></g></g></g></g><defs><filter id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><linearGradient id="mmd-derivation-burden-map-mmd-derivation-burden-map-root-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1e3a5f" stop-opacity="1"/><stop offset="100%" stop-color="#2f6f54" stop-opacity="1"/></linearGradient></svg></div></div>
+  </div>
+  <details class="source-fold"><summary>Diagram source</summary><pre><code>flowchart TD
+  SourceData[&quot;Source-defined substrate data&quot;] --&gt; Readout[&quot;Observer normal/readout orbit&quot;]
+  Readout --&gt; Metric[&quot;Effective Lorentzian metric&quot;]
+  Metric --&gt; Causal[&quot;Causal structure and clocks&quot;]
+  Causal --&gt; Matter[&quot;Universal same-metric matter coupling&quot;]
+  Matter --&gt; Closure[&quot;S-time and Einsteinian closure&quot;]
+  Closure --&gt; ExactGR[&quot;Exact-GR benchmark recovered&quot;]
+  SourceData --&gt; AntiSmuggling[&quot;Anti-smuggling constraints&quot;]
+  AntiSmuggling --&gt; Metric
+  AntiSmuggling --&gt; Matter
+  AntiSmuggling --&gt; Closure
+  ExactGR --&gt; Gate[&quot;Promotion requires claim gate&quot;]
+</code></pre></details>
+  <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="derivation-burden-map">
+flowchart TD
+  SourceData["Source-defined substrate data"] --> Readout["Observer normal/readout orbit"]
+  Readout --> Metric["Effective Lorentzian metric"]
+  Metric --> Causal["Causal structure and clocks"]
+  Causal --> Matter["Universal same-metric matter coupling"]
+  Matter --> Closure["S-time and Einsteinian closure"]
+  Closure --> ExactGR["Exact-GR benchmark recovered"]
+  SourceData --> AntiSmuggling["Anti-smuggling constraints"]
+  AntiSmuggling --> Metric
+  AntiSmuggling --> Matter
+  AntiSmuggling --> Closure
+  ExactGR --> Gate["Promotion requires claim gate"]
+  </script>
+</section></div>
 
-    <section class="boundary">
-      <h2>Current Boundary</h2>
-      <p>The established repository state is an exact-GR benchmark package and an open derivation program. The repository does not currently claim that the ontology has derived GR from first principles.</p>
-    </section>
-
-    <section>
-      <h2>Derivation Burden Checklist</h2>
-      <div class="grid">
-        <div class="check">
-          <strong>Lorentzian metric generation</strong>
-          <p>Recover an effective metric from source data rather than assuming it.</p>
-        </div>
-        <div class="check">
-          <strong>Causal structure</strong>
-          <p>Explain light cones and causal order without target imports.</p>
-        </div>
-        <div class="check">
-          <strong>Clock behavior</strong>
-          <p>Account for proper-time-like behavior from source-side definitions.</p>
-        </div>
-        <div class="check">
-          <strong>Matter coupling</strong>
-          <p>Recover universal coupling constraints compatible with the benchmark.</p>
-        </div>
-        <div class="check">
-          <strong>Invariance</strong>
-          <p>Track coordinate and observer independence as obligations, not slogans.</p>
-        </div>
-        <div class="check">
-          <strong>Anti-smuggling</strong>
-          <p>Block hidden metric, clock, or benchmark-tuned assumptions.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Where Authority Lives</h2>
-      <p>Scientific authority lives in registered TeX sources and claim-boundary registries. This page is a visual guide. It is downstream of <code>markdown/html-explainer-specs/aether-flow-ontology-explainer.md</code> and is validated as human-only generated HTML.</p>
-    </section>
-
-    <section class="notice">
-      <h2>Boundary Notice</h2>
-      <p>This explainer does not introduce equations, proof claims, or empirical predictions. It summarizes the repository’s ontology framing and open burden for human readers.</p>
-    </section>
-
-    <section>
-      <h2>Sources</h2>
-      <ul class="sources">
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>README.md</em> [Repository document].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>AGENTS.md</em> [Repository agent guidance].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>ontology/aether-and-aether-flow.md</em> [Repository ontology-adjacent explanatory note].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>CLAIM_BOUNDARY_REGISTRY.csv</em> [Repository registry].</li>
-        <li>The Æther-Flow Interpretation of Relativity Research Project. (2026). <em>TEX_SOURCE_REGISTRY.csv</em> [Repository registry].</li>
-      </ul>
-    </section>
+    <section id="analysis" class="section panel"><p class="eyebrow">Analysis capsules</p><h2>Claim-Aware Analysis</h2><div class="capsule-grid"><article class="capsule" data-analysis-capsule="capsule-1"><h3>Project-Specific Ontology</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>The `Æther-flow ontology` is the project-specific claim that reality is grounded in a deeper four-dimensional substrate and its intrinsic ordered motion.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>The explainer should connect substrate, flow, observed space, `S-time`, observed expansion, and gravity as parts of one conceptual model, while making clear that this model is not yet a completed derivation.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`ontology/aether-and-aether-flow.md`, `README.md`, and `registries/CLAIM_BOUNDARY_REGISTRY.csv`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Human-only conceptual explanation; scientific authority remains with registered TeX and claim-boundary rows.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>The ontology has not yet supplied the source theorem that uniquely recovers the exact-GR benchmark from substrate data.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>A candidate derivation must source-construct the observer normal/readout orbit and recover Lorentzian geometry, clocks, matter coupling, invariance, and closure without importing target GR structures.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Inspect the derivation-burden map before treating any candidate mechanism as progress.</dd></div></dl></article><article class="capsule" data-analysis-capsule="capsule-2"><h3>Exact-GR Benchmark Adoption</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>The public benchmark preserves ordinary GR at observable scale while the substrate derivation remains open.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>The page should show exact-GR adoption as a constraint and comparison target, not as evidence that the ontology has already succeeded.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`README.md`, `AGENTS.md`, and `registries/TEX_SOURCE_REGISTRY.csv`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Explanatory summary of registered claim boundaries.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>Which source-defined substrate laws, if any, can recover the benchmark remains unresolved.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Candidate structures must pass dimensional consistency, invariance, anti-smuggling, same-metric matter, clock behavior, and recovery of known limiting behavior.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Route derivation candidates through bounded research-control jobs and claim gates.</dd></div></dl></article></div></section>
+    <section id="sources" class="section panel" data-explainer-control="source_drilldowns"><p class="eyebrow">Source drilldowns</p><h2>Inspectable Source Basis</h2><div class="source-grid"><details data-source-path="README.md"><summary><code>README.md</code></summary><p>README.md is part of the source basis for this generated human-only page.</p></details><details data-source-path="AGENTS.md"><summary><code>AGENTS.md</code></summary><p>AGENTS.md is part of the source basis for this generated human-only page.</p></details><details data-source-path="ontology/aether-and-aether-flow.md"><summary><code>ontology/aether-and-aether-flow.md</code></summary><p>ontology/aether-and-aether-flow.md is part of the source basis for this generated human-only page.</p></details><details data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><summary><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></summary><p>registries/CLAIM_BOUNDARY_REGISTRY.csv is part of the source basis for this generated human-only page.</p></details><details data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><summary><code>registries/TEX_SOURCE_REGISTRY.csv</code></summary><p>registries/TEX_SOURCE_REGISTRY.csv is part of the source basis for this generated human-only page.</p></details></div><details><summary>All source materials</summary><ul><li><code>README.md</code></li><li><code>AGENTS.md</code></li><li><code>ontology/aether-and-aether-flow.md</code></li><li><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></li><li><code>registries/TEX_SOURCE_REGISTRY.csv</code></li><li><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></li></ul></details></section>
+    <section id="claim-boundary" class="section panel claim-box" data-explainer-control="claim_boundary_toggle"><p class="eyebrow">Claim boundary</p><h2>Human-Only Non-Authority Boundary</h2><p>Human-only Æther-flow ontology visualization. It explains the project-specific ontology, exact-GR benchmark adoption, and open derivation burden without promoting, rejecting, or modifying any scientific claim.</p></section>
   </main>
+  <script>
+    (() => {
+      const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+      document.querySelectorAll('.diagram-shell').forEach((shell) => {
+        const wrap = shell.querySelector('.mermaid-wrap');
+        const viewport = shell.querySelector('.mermaid-viewport');
+        const canvas = shell.querySelector('.mermaid-canvas');
+        const svg = shell.querySelector('.mermaid-canvas svg');
+        if (!wrap || !viewport || !canvas || !svg) return;
+        let zoom = 1;
+        let offsetX = 0;
+        let offsetY = 0;
+        let dragging = false;
+        let startX = 0;
+        let startY = 0;
+        const readSvgNaturalSize = () => {
+          const box = svg.viewBox && svg.viewBox.baseVal;
+          if (box && box.width && box.height) return { width: box.width, height: box.height };
+          return { width: svg.getBoundingClientRect().width || 1000, height: svg.getBoundingClientRect().height || 600 };
+        };
+        const setAdaptiveHeight = () => {
+          const natural = readSvgNaturalSize();
+          const available = Math.max(320, wrap.clientWidth || 960);
+          const nextHeight = clamp((natural.height / Math.max(1, natural.width)) * available, 360, 780);
+          wrap.style.height = `${nextHeight}px`;
+          viewport.style.height = `${nextHeight}px`;
+        };
+        const computeFit = () => {
+          const natural = readSvgNaturalSize();
+          const availableWidth = Math.max(320, viewport.clientWidth || wrap.clientWidth || 960);
+          const availableHeight = Math.max(280, viewport.clientHeight || wrap.clientHeight || 440);
+          const fitZoom = Math.min(availableWidth / natural.width, availableHeight / natural.height) * 0.94;
+          return { zoom: clamp(fitZoom, 0.2, 2.5), x: (availableWidth - natural.width * fitZoom) / 2, y: (availableHeight - natural.height * fitZoom) / 2 };
+        };
+        const apply = () => { canvas.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${zoom})`; };
+        const fit = () => { setAdaptiveHeight(); const next = computeFit(); zoom = next.zoom; offsetX = next.x; offsetY = next.y; apply(); };
+        shell.querySelector('[data-zoom="in"]')?.addEventListener('click', () => { zoom = clamp(zoom * 1.2, 0.2, 4); apply(); });
+        shell.querySelector('[data-zoom="out"]')?.addEventListener('click', () => { zoom = clamp(zoom / 1.2, 0.2, 4); apply(); });
+        shell.querySelector('[data-zoom="reset"]')?.addEventListener('click', fit);
+        viewport.addEventListener('pointerdown', (event) => { dragging = true; startX = event.clientX - offsetX; startY = event.clientY - offsetY; viewport.setPointerCapture(event.pointerId); viewport.classList.add('is-dragging'); });
+        viewport.addEventListener('pointermove', (event) => { if (!dragging) return; offsetX = event.clientX - startX; offsetY = event.clientY - startY; apply(); });
+        viewport.addEventListener('pointerup', () => { dragging = false; viewport.classList.remove('is-dragging'); });
+        window.addEventListener('resize', fit);
+        fit();
+      });
+    })();
+  </script>
 </body>
 </html>

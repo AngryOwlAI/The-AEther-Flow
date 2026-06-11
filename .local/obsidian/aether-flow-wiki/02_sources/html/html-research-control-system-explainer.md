@@ -2,14 +2,14 @@
 object_id: "HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
 format: "html"
 source_path: "html/research-control-system-explainer.html"
-source_hash: "08700575b9a817915e19eb6329c8424ff369e351061388d4939ef822a4c0b360"
+source_hash: "b36cfc6cf2f4591f38b83eae36e69115dbfb077ce7af596f6c5b5d9a4e785e59"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-research-control-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-research-control-system-explainer.html"
-content_hash: "fcc2139da2ce4ed25821808ebf893b9802cd5b63ce6837cf76cfd19f08e71737"
+content_hash: "6a15fff9fe534d745ee75f717cbe295462333e969b70697e0bdb2072d34aa892"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
@@ -34,18 +34,24 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `fcc2139da2ce4ed25821808ebf893b9802cd5b63ce6837cf76cfd19f08e71737`
+- Content hash: `6a15fff9fe534d745ee75f717cbe295462333e969b70697e0bdb2072d34aa892`
 - Extracted text path: `.local/content_semantics/html/html-research-control-system-explainer.txt`
-- Character count: `3010`
+- Character count: `8335`
 
 ## Relationships
 
+- `content_link` -> #content-blocks (#content-blocks)
 - `has_wiki_note` -> WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER (WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER)
 - `related_source` -> [[02_sources/markdown/md-html-spec-research-control-system-explainer|MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] (MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER)
 - `generated_from` -> [[02_sources/markdown/md-html-spec-research-control-system-explainer|MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] (MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER)
 - `has_content_semantics` -> SEMANTIC-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER (SEMANTIC-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER)
 - `generated_output` -> WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER (wiki/html/html-research-control-system-explainer.md)
+- `content_link` -> #diagrams (#diagrams)
+- `content_link` -> #sources (#sources)
+- `content_link` -> #workflow (#workflow)
 - `has_vault_note` -> VAULT-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER (VAULT-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER)
+- `content_link` -> #analysis (#analysis)
+- `content_link` -> #claim-boundary (#claim-boundary)
 
 <!-- MANUAL LOCAL NOTES START -->
 <!-- Add local, non-authoritative Obsidian-only notes here if needed. -->

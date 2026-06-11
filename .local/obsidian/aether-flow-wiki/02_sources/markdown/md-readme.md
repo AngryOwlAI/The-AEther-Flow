@@ -2,14 +2,14 @@
 object_id: "MD-README"
 format: "markdown"
 source_path: "README.md"
-source_hash: "2c3754a79c515c74ecc662bbffb6a5d824887f907c51d10200a65eaf95c41171"
+source_hash: "4c2fc4d05ceba430b01b6899b7dcb04b438b4cd8f8873898774a7aa6f07322f5"
 authority_status: "project_control"
 role: "project_front_door"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-readme.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-readme.md"
-content_hash: "2c3754a79c515c74ecc662bbffb6a5d824887f907c51d10200a65eaf95c41171"
+content_hash: "4c2fc4d05ceba430b01b6899b7dcb04b438b4cd8f8873898774a7aa6f07322f5"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-README"
@@ -33,20 +33,26 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `2c3754a79c515c74ecc662bbffb6a5d824887f907c51d10200a65eaf95c41171`
+- Content hash: `4c2fc4d05ceba430b01b6899b7dcb04b438b4cd8f8873898774a7aa6f07322f5`
 - Extracted text path: `.local/content_semantics/markdown/md-readme.txt`
-- Character count: `21276`
+- Character count: `24113`
 
 ## Relationships
 
 - `content_link` -> html/aether-flow-ontology-explainer.html (html/aether-flow-ontology-explainer.html)
+- `content_link` -> html/technical-requirements-explainer.html (html/technical-requirements-explainer.html)
 - `has_wiki_note` -> WIKI-MD-README (WIKI-MD-README)
 - `content_link` -> html/research-agent-workflow-explainer.html (html/research-agent-workflow-explainer.html)
+- `content_link` -> html/source-authority-explainer.html (html/source-authority-explainer.html)
+- `content_link` -> html/roles-and-skills-explainer.html (html/roles-and-skills-explainer.html)
 - `content_link` -> html/project-overview-explainer.html (html/project-overview-explainer.html)
 - `content_link` -> html/research-control-system-explainer.html (html/research-control-system-explainer.html)
+- `content_link` -> html/memory-system-explainer.html (html/memory-system-explainer.html)
+- `content_link` -> html/role-routing-explainer.html (html/role-routing-explainer.html)
 - `has_vault_note` -> VAULT-MD-README (VAULT-MD-README)
 - `content_link` -> /Volumes/P-SSD/AngryOwl/The Æther GR Derivation/ (/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/)
 - `generated_output` -> WIKI-MD-README (wiki/markdown/md-readme.md)
+- `content_link` -> html/claim-gates-explainer.html (html/claim-gates-explainer.html)
 - `has_content_semantics` -> SEMANTIC-MD-README (SEMANTIC-MD-README)
 
 <!-- MANUAL LOCAL NOTES START -->

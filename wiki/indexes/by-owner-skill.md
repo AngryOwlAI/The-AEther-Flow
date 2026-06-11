@@ -10,6 +10,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-SKILL-GRILL-ME` `.codex/skills/grill-me/SKILL.md`
 
+## grill-with-docs
+
+- `MD-SKILL-GRILL-WITH-DOCS` `.codex/skills/grill-with-docs/SKILL.md`
+
 ## html-visual-explainer
 
 - `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
@@ -92,6 +96,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
 - `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
 - `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
+- `WIKI-MD-SKILL-GRILL-WITH-DOCS` `wiki/markdown/md-skill-grill-with-docs.md`
 - `WIKI-MD-SKILL-HTML-VISUAL-EXPLAINER` `wiki/markdown/md-skill-html-visual-explainer.md`
 - `WIKI-MD-SKILL-IMPROVE-PROJECT-SYSTEM` `wiki/markdown/md-skill-improve-project-system.md`
 - `WIKI-MD-SKILL-MARKDOWN-WIKI` `wiki/markdown/md-skill-markdown-wiki.md`

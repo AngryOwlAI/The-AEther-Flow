@@ -2,14 +2,14 @@
 object_id: "MD-SKILL-HTML-VISUAL-EXPLAINER"
 format: "markdown"
 source_path: ".codex/skills/html-visual-explainer/SKILL.md"
-source_hash: "33267d7eb5a4e5c003745393533b8765135559e53676088760c9e22425a9f063"
+source_hash: "4bbaa86fc762b3d6a5cbadd6797665183c50205d23b3abaa41579fa6f50b81a1"
 authority_status: "project_control"
 role: "skill_contract"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-skill-html-visual-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-skill-html-visual-explainer.md"
-content_hash: "33267d7eb5a4e5c003745393533b8765135559e53676088760c9e22425a9f063"
+content_hash: "4bbaa86fc762b3d6a5cbadd6797665183c50205d23b3abaa41579fa6f50b81a1"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SKILL-HTML-VISUAL-EXPLAINER"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `33267d7eb5a4e5c003745393533b8765135559e53676088760c9e22425a9f063`
+- Content hash: `4bbaa86fc762b3d6a5cbadd6797665183c50205d23b3abaa41579fa6f50b81a1`
 - Extracted text path: `.local/content_semantics/markdown/md-skill-html-visual-explainer.txt`
-- Character count: `1154`
+- Character count: `5861`
 
 ## Relationships
 

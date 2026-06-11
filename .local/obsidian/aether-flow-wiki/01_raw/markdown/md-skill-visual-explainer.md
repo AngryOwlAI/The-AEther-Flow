@@ -70,6 +70,74 @@ Markdown source spec under `markdown/html-explainer-specs/`, then render the
 HTML file named by that spec. The tracked HTML remains human-only generated
 output; the Markdown spec and registries carry authority.
 
+When creating or updating diagrams in registered explanatory Markdown or
+tracked HTML explainers, load and follow
+`subskills/mermaid-documentation/SKILL.md`. For `.local/` scratch visual
+explainers, the Mermaid guidance in this parent skill remains sufficient
+unless the user asks for governed project documentation.
+
+Tracked project explainers must implement the project interactive analysis
+contract declared by the Markdown source spec. Use a low-risk
+progressive-disclosure model rather than a heavy app framework:
+
+- Provide section navigation.
+- Use a deep-first reading surface with expandable analysis panels for
+  reasoning, constraints, risks, and examples.
+- Provide source drilldowns that expose the registered source basis.
+- Provide claim-boundary controls that distinguish what the page may and may
+  not claim.
+- Provide workflow step inspectors for workflow and control-system pages.
+
+Tracked project explainers must also implement the flexible presentation
+contract declared by the Markdown source spec:
+
+- `presentation_profile` names the layout archetype, not hidden content rules.
+- `layout_intent` explains how this page should adapt the profile.
+- `required_content_blocks` names the page-local factual obligations.
+- Each generated content block must appear as `data-content-block="<id>"`.
+- Each generated content block must contain at least one `data-source-path`.
+
+Allowed presentation profiles are `atlas_hub`, `role_catalog`,
+`format_ladder`, `memory_system_map`, `workflow_lifecycle`,
+`technical_requirements`, `conceptual_model`, and `claim_boundary_map`.
+Choose the visual form that best fits the subject while preserving source
+evidence: atlas cards, role catalogs, format matrices, tier tables, memory
+maps, workflow timelines, claim-boundary panels, or source inspectors are all
+valid when the spec supports them.
+
+Mermaid is profile-guided, not mandatory. `memory_system_map`,
+`workflow_lifecycle`, `claim_boundary_map`, and `atlas_hub` usually merit a
+governed Mermaid overview. `role_catalog`, `format_ladder`, and
+`technical_requirements` may be clearer as tables, matrices, tier cards, or
+catalog panels. Do not add a full deterministic HTML generator; render
+creatively from the spec while keeping structural evidence markers intact.
+
+For the shared three-layer model (`High Level, Operational, Evidence`), stack
+the three layer sections vertically and let cards inside each layer auto-fit:
+`.layer-strip { grid-template-columns: 1fr; }` and
+`.layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }`.
+Do not place a fixed three-column card grid inside a fixed three-column layer
+grid; it makes prose unreadable. Use `overflow-wrap: break-word` for normal
+text and reserve `overflow-wrap: anywhere` for `code` and `pre`.
+For analysis capsule rows, explicitly allow the `dl` grid contents to shrink:
+set capsule rows, `dt`, and `dd` to `min-width: 0` and use
+`grid-template-columns: minmax(0, 1fr)` on the capsule `dl`.
+
+Deep-view panels should use analysis capsules with these fields: `premise`,
+`mechanism`, `source_basis`, `authority_status`, `uncertainty`,
+`validation_or_test`, and `next_step`. The generated HTML must include
+`data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
+`data-source-path` markers as required by the spec. These markers are
+validator evidence only; they do not make generated HTML authoritative.
+
+For the front-facing project overview, treat
+`html/project-overview-explainer.html` as the explainer hub. It should orient
+readers to the ontology and GR-derivation goal, the staged-autonomy
+physics/math research-agent harness, and the source authority / claim-boundary
+discipline. The AI system is a human-accountable, validator-gated
+staged-autonomy harness today; autonomy is a long-term technical target, not a
+current proof claim.
+
 ## Workflow
 
 ### 1. Think (5 seconds, not 5 minutes)
@@ -136,11 +204,19 @@ Vary the choice each time. If the last diagram was dark and technical, make the 
 | Timeline | CSS (central line + cards) | Simple linear layout doesn't need a layout engine |
 | Dashboard | CSS Grid + Chart.js | Card grid with embedded charts |
 
-**Mermaid theming:** Always use `theme: 'base'` with custom `themeVariables` so colors match your page palette. Use `layout: 'elk'` for complex graphs (requires the `@mermaid-js/layout-elk` package — see `./references/libraries.md` for the CDN import). Override Mermaid's SVG classes with CSS for pixel-perfect control. See `./references/libraries.md` for full theming guide.
+**Mermaid theming:** Always use `theme: 'base'` with custom `themeVariables` so colors match your page palette. For `.local/` scratch pages, use `layout: 'elk'` for complex graphs when the runtime is available (requires the `@mermaid-js/layout-elk` package — see `./references/libraries.md` for the CDN import). For tracked `html/*.html`, Mermaid must be rendered at build time into sanitized inline SVG through the governed Mermaid subskill; do not import or execute Mermaid in the browser, and do not use `layout: 'elk'` unless a later governed task adds build-time ELK support. Override Mermaid's SVG classes with CSS for pixel-perfect control. See `./references/libraries.md` for full theming guide.
 
-**Mermaid containers:** Always center Mermaid diagrams with `display: flex; justify-content: center;`. Add zoom controls (+/−/reset/expand) to every `.mermaid-wrap` container. Include the click-to-expand JavaScript so clicking the diagram (or the ⛶ button) opens it full-size in a new tab.
+**Mermaid containers:** Always center Mermaid diagrams with `display: flex; justify-content: center;`. Add zoom controls (+/−/reset/expand) to every `.mermaid-wrap` container. Include the click-to-expand JavaScript so clicking the diagram (or the expand button) opens it full-size in a new tab. For tracked `html/*.html`, this JavaScript enhances an already embedded SVG; basic diagram visibility must not depend on JavaScript.
 
-**⚠️ Never use bare `<pre class="mermaid">`.** It renders but has no zoom/pan controls — diagrams become tiny and unusable. Always use the full `diagram-shell` pattern from `templates/mermaid-flowchart.html`: the HTML structure (`.diagram-shell` > `.mermaid-wrap` > `.zoom-controls` + `.mermaid-viewport` > `.mermaid-canvas`), the CSS, and the ~200-line JS module for zoom/pan/fit. Copy it wholesale.
+**Never use bare `<pre class="mermaid">`.** It renders but has no zoom/pan controls and is not valid for tracked governed pages. Always use the full `diagram-shell` pattern from `templates/mermaid-flowchart.html`: the HTML structure (`.diagram-shell` > `.mermaid-wrap` > `.zoom-controls` + `.mermaid-viewport` > `.mermaid-canvas`), the CSS, and the JS module for zoom/pan/fit. For tracked `html/*.html`, `.mermaid-canvas` contains build-time inline SVG plus preserved source parity metadata.
+
+**Tracked Mermaid adaptive fit:** Governed tracked Mermaid pages must size the
+diagram box from the rendered SVG `viewBox`. The initial Fit state should set
+the box height from the diagram aspect ratio and available column width, clamp
+that height to safe min/max limits, and set SVG pixel width/height explicitly
+for the chosen zoom. Do not rely on the browser's default 300px SVG width or a
+fixed `max-width` rule; wide diagrams must use available width instead of
+shrinking into unreadable horizontal strips.
 
 **Mermaid scaling:** Diagrams with 10+ nodes render too small by default. For 10-12 nodes, increase `fontSize` in themeVariables to 18-20px and set `INITIAL_ZOOM` to 1.5-1.6. For 15+ elements, don't try to scale — use the hybrid pattern instead (simple Mermaid overview + CSS Grid cards). See "Architecture / System Diagrams" below.
 

@@ -6,15 +6,22 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
 - [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
 - [[02_sources/markdown/md-html-spec-aether-flow-ontology-explainer|MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- [[02_sources/markdown/md-html-spec-claim-gates-explainer|MD-HTML-SPEC-CLAIM-GATES-EXPLAINER]] `markdown/html-explainer-specs/claim-gates-explainer.md`
+- [[02_sources/markdown/md-html-spec-memory-system-explainer|MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/memory-system-explainer.md`
 - [[02_sources/markdown/md-html-spec-project-overview-explainer|MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER]] `markdown/html-explainer-specs/project-overview-explainer.md`
 - [[02_sources/markdown/md-html-spec-research-agent-workflow-explainer|MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - [[02_sources/markdown/md-html-spec-research-control-system-explainer|MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/research-control-system-explainer.md`
+- [[02_sources/markdown/md-html-spec-role-routing-explainer|MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER]] `markdown/html-explainer-specs/role-routing-explainer.md`
+- [[02_sources/markdown/md-html-spec-roles-and-skills-explainer|MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER]] `markdown/html-explainer-specs/roles-and-skills-explainer.md`
+- [[02_sources/markdown/md-html-spec-source-authority-explainer|MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER]] `markdown/html-explainer-specs/source-authority-explainer.md`
+- [[02_sources/markdown/md-html-spec-technical-requirements-explainer|MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER]] `markdown/html-explainer-specs/technical-requirements-explainer.md`
 - [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
 - [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`
 - [[02_sources/markdown/md-readme|MD-README]] `README.md`
 - [[02_sources/markdown/md-readme-research-control|MD-README-RESEARCH-CONTROL]] `research_control/README.md`
 - [[02_sources/markdown/md-readme-research-control-approvals|MD-README-RESEARCH-CONTROL-APPROVALS]] `research_control/approvals/README.md`
 - [[02_sources/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions|MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS]] `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- [[02_sources/markdown/md-research-control-design-html-explainer-flexible-presentation-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT]] `research_control/design/html_explainer_flexible_presentation_contract.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD]] `.agents/roles/physics/gate-chair.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD]] `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
@@ -35,6 +42,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-schema-role-schema|MD-SCHEMA-ROLE-SCHEMA]] `.agents/schemas/ROLE_SCHEMA.md`
 - [[02_sources/markdown/md-skill-continue-research|MD-SKILL-CONTINUE-RESEARCH]] `.codex/skills/continue-research/SKILL.md`
 - [[02_sources/markdown/md-skill-grill-me|MD-SKILL-GRILL-ME]] `.codex/skills/grill-me/SKILL.md`
+- [[02_sources/markdown/md-skill-grill-with-docs|MD-SKILL-GRILL-WITH-DOCS]] `.codex/skills/grill-with-docs/SKILL.md`
 - [[02_sources/markdown/md-skill-html-visual-explainer|MD-SKILL-HTML-VISUAL-EXPLAINER]] `.codex/skills/html-visual-explainer/SKILL.md`
 - [[02_sources/markdown/md-skill-improve-project-system|MD-SKILL-IMPROVE-PROJECT-SYSTEM]] `.codex/skills/improve-project-system/SKILL.md`
 - [[02_sources/markdown/md-skill-markdown-wiki|MD-SKILL-MARKDOWN-WIKI]] `.codex/skills/markdown-wiki/SKILL.md`
@@ -44,3 +52,4 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-skill-project-memory-system|MD-SKILL-PROJECT-MEMORY-SYSTEM]] `.codex/skills/project-memory-system/SKILL.md`
 - [[02_sources/markdown/md-skill-tex-wiki|MD-SKILL-TEX-WIKI]] `.codex/skills/tex-wiki/SKILL.md`
 - [[02_sources/markdown/md-skill-visual-explainer|MD-SKILL-VISUAL-EXPLAINER]] `.codex/skills/visual-explainer/SKILL.md`
+- [[02_sources/markdown/md-skill-visual-explainer-subskill-mermaid-documentation|MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION]] `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`

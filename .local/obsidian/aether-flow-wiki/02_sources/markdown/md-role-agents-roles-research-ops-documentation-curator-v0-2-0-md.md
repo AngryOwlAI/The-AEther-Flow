@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD"
 format: "markdown"
 source_path: ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
-source_hash: "628acec7a07c16d9c17d6f4a95c42a0593d6a48da4ab9dcb1f8f8d77343231dc"
+source_hash: "5bc8328e91702ab8aeb3d872620305b4b92f01fba4f00d52ff1a6b7f10280529"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md.md"
-content_hash: "628acec7a07c16d9c17d6f4a95c42a0593d6a48da4ab9dcb1f8f8d77343231dc"
+content_hash: "5bc8328e91702ab8aeb3d872620305b4b92f01fba4f00d52ff1a6b7f10280529"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `628acec7a07c16d9c17d6f4a95c42a0593d6a48da4ab9dcb1f8f8d77343231dc`
+- Content hash: `5bc8328e91702ab8aeb3d872620305b4b92f01fba4f00d52ff1a6b7f10280529`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md.txt`
-- Character count: `2986`
+- Character count: `4736`
 
 ## Relationships
 
