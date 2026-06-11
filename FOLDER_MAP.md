@@ -32,6 +32,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `manuscripts` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
 | `markdown` | `canonical source` | FILE_OBJECT_REGISTRY: 5; MARKDOWN_SOURCE_REGISTRY: 5 | 5 generated wiki note(s) point back to sources here. | Provides authored source material used by the research workflow. |
 | `ontology` | `canonical source` | FILE_OBJECT_REGISTRY: 17; MARKDOWN_SOURCE_REGISTRY: 1; PDF_DERIVATIVE_REGISTRY: 8; TEX_SOURCE_REGISTRY: 8 | 17 generated wiki note(s) point back to sources here. | Holds the ontology and benchmark package used as the derivation target and constraint set. |
+| `output` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
 | `registries` | `control authority` | CSV authority directory. | Registry rows drive generated wiki notes and indexes. | Makes research state machine-checkable through object IDs, hashes, status, and relationships. |
 | `research_control` | `control authority` | FILE_OBJECT_REGISTRY: 26; MARKDOWN_SOURCE_REGISTRY: 4; TEX_SOURCE_REGISTRY: 22 | 26 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `scripts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -54,6 +55,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `markdown/ontology-promotions` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
 | `ontology/pdfs` | `generated derivative` | FILE_OBJECT_REGISTRY: 8; PDF_DERIVATIVE_REGISTRY: 8 | 8 generated wiki note(s) point back to sources here. | Holds the ontology and benchmark package used as the derivation target and constraint set. |
 | `ontology/tex` | `canonical source` | FILE_OBJECT_REGISTRY: 8; TEX_SOURCE_REGISTRY: 8 | 8 generated wiki note(s) point back to sources here. | Holds the ontology and benchmark package used as the derivation target and constraint set. |
+| `output/playwright` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
 | `research_control/approvals` | `control authority` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Maintains project governance, validation, routing, or registry authority. |
 | `research_control/design` | `control authority` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Maintains project governance, validation, routing, or registry authority. |
 | `research_control/handoffs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Maintains project governance, validation, routing, or registry authority. |
@@ -120,6 +122,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260610-009` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-010` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260611-001` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260611-002` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `.codex/skills/project-memory-system/obsidian-vault-template` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/scripts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer/commands` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -228,6 +231,8 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260610-010/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260611-001/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260611-001/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260611-002/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260611-002/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/00_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/08_templates` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/09_schema` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -274,6 +279,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260610-009/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260610-010/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260611-001/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260611-002/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `.codex/skills/visual-explainer/subskills/mermaid-documentation/examples` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer/subskills/mermaid-documentation/templates` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |

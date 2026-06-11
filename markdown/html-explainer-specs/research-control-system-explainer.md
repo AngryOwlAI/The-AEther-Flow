@@ -11,6 +11,7 @@ source_materials:
   - ".codex/skills/improve-project-system/SKILL.md"
   - ".codex/skills/html-visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
+  - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
   - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
   - "scripts/research_control/validate_research_control.py"
   - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
@@ -40,6 +41,10 @@ analysis_capsule_schema:
   - "uncertainty"
   - "validation_or_test"
   - "next_step"
+mermaid_diagrams:
+  required: true
+  ids:
+    - "research-control-validation-flow"
 ---
 
 # Research-Control System Explainer Spec
@@ -68,6 +73,25 @@ by this Markdown source spec.
   non-authoritative.
 - Deep-first progressive-disclosure controls for expandable analysis capsules,
   source drilldowns, claim-boundary inspection, and a workflow step inspector.
+
+## Required Governed Mermaid Diagram
+
+The generated HTML derivative must render this diagram through the governed
+Mermaid visual-explainer shell. The diagram is explanatory only: it shows the
+validation order for a source-backed documentation change and does not create a
+new control rule.
+
+<!-- mermaid-diagram-id: research-control-validation-flow -->
+```mermaid
+flowchart TD
+  Spec["Markdown source spec update"] --> Html["Generated HTML derivative"]
+  Html --> Mermaid["Mermaid source parity validation"]
+  Mermaid --> Bootstrap["Memory bootstrap and registry refresh"]
+  Bootstrap --> DocsImpact["Documentation-impact gate"]
+  DocsImpact --> ResearchControl["Research-control validation"]
+  ResearchControl --> DiffGate["Diff and authority boundary gate"]
+  DiffGate --> Checkpoint["Local checkpoint commit"]
+```
 
 ## Required Analysis Capsules
 

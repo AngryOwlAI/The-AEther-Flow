@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="42be4da94abecd2d268724a60689264b360ccbd01832a19108685c5f300b06e6">
+  <meta name="aether-flow-source-basis-hash" content="c0e3baed71bb0e24986337b1195aed1697e412351fc142c4b5125a1f5867198a">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Research-Control System Explainer</title>
@@ -25,6 +25,7 @@
       --red: #9e344b;
       --red-soft: #f3dce3;
       --shadow: 0 18px 40px rgba(26, 33, 29, 0.10);
+      --diagram-bg: #f8fbff;
     }
 
     * { box-sizing: border-box; }
@@ -182,9 +183,93 @@
     .source-item strong { color: var(--ink); }
     .claim-box { background: var(--red-soft); border-color: rgba(158, 52, 75, 0.35); }
 
+    .diagram-shell {
+      overflow: hidden;
+    }
+
+    .diagram-shell > p {
+      max-width: 820px;
+      margin-bottom: 14px;
+    }
+
+    .diagram-shell__hint {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.78rem;
+    }
+
+    .mermaid-wrap {
+      position: relative;
+      min-height: 420px;
+      height: 520px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--diagram-bg);
+      overflow: hidden;
+      cursor: grab;
+    }
+
+    .mermaid-wrap.is-panning {
+      cursor: grabbing;
+      user-select: none;
+    }
+
+    .zoom-controls {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      max-width: calc(100% - 24px);
+    }
+
+    .zoom-controls button {
+      min-width: 38px;
+      min-height: 34px;
+      padding: 6px 9px;
+      background: rgba(255, 253, 248, 0.94);
+    }
+
+    .zoom-label {
+      padding: 6px 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 248, 0.94);
+      color: var(--muted);
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.74rem;
+      white-space: nowrap;
+    }
+
+    .mermaid-viewport {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .mermaid-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .mermaid-canvas svg {
+      display: block;
+      max-width: none;
+    }
+
     @media (max-width: 1000px) {
       .ladder, .workflow, .capsules, .sources { grid-template-columns: 1fr; }
       .toolbar { position: static; }
+      .mermaid-wrap { height: 470px; }
+      .zoom-controls { left: 12px; right: auto; }
     }
   </style>
 </head>
@@ -203,6 +288,7 @@
       <nav data-explainer-control="section_toc" aria-label="Section navigation">
         <a class="nav-link" href="#authority">Authority</a>
         <a class="nav-link" href="#workflow">Workflow</a>
+        <a class="nav-link" href="#validation-flow">Validation flow</a>
         <a class="nav-link" href="#analysis">Analysis</a>
         <a class="nav-link" href="#sources">Sources</a>
         <a class="nav-link" href="#claim-boundary">Claim boundary</a>
@@ -260,6 +346,35 @@
           <details><summary>Inspect step</summary><p>Input: rendered page. Output: human judgment. Boundary: review does not change source authority.</p></details>
         </article>
       </div>
+    </section>
+
+    <section id="validation-flow" class="section panel diagram-shell" data-mermaid-diagram-id="research-control-validation-flow">
+      <h2>Governed Validation Flow</h2>
+      <p>This pilot diagram renders the canonical Mermaid source from the Markdown spec. It explains the validation order for a source-backed documentation change without changing any control rule.</p>
+      <span class="diagram-shell__hint">Ctrl/Cmd + wheel to zoom. Drag to pan. Double-click to fit.</span>
+      <div class="mermaid-wrap">
+        <div class="zoom-controls">
+          <button type="button" data-action="zoom-in" title="Zoom in">+</button>
+          <button type="button" data-action="zoom-out" title="Zoom out">&minus;</button>
+          <button type="button" data-action="zoom-fit" title="Fit">&#8634;</button>
+          <button type="button" data-action="zoom-one" title="1:1 zoom">1:1</button>
+          <button type="button" data-action="zoom-expand" title="Open full size">&#x26F6;</button>
+          <span class="zoom-label">Loading</span>
+        </div>
+        <div class="mermaid-viewport">
+          <div class="mermaid mermaid-canvas"></div>
+        </div>
+      </div>
+      <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="research-control-validation-flow">
+flowchart TD
+  Spec["Markdown source spec update"] --> Html["Generated HTML derivative"]
+  Html --> Mermaid["Mermaid source parity validation"]
+  Mermaid --> Bootstrap["Memory bootstrap and registry refresh"]
+  Bootstrap --> DocsImpact["Documentation-impact gate"]
+  DocsImpact --> ResearchControl["Research-control validation"]
+  ResearchControl --> DiffGate["Diff and authority boundary gate"]
+  DiffGate --> Checkpoint["Local checkpoint commit"]
+      </script>
     </section>
 
     <section id="analysis" class="section">
@@ -330,5 +445,193 @@
       </details>
     </section>
   </main>
+  <script type="module">
+    import mermaid from "./assets/mermaid.esm.min.mjs";
+
+    const diagramConfig = {
+      fitPadding: 28,
+      minZoom: 0.18,
+      maxZoom: 5,
+      zoomStep: 0.16
+    };
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "base",
+      securityLevel: "strict",
+      themeVariables: {
+        fontFamily: "IBM Plex Sans, Avenir Next, Segoe UI, sans-serif",
+        primaryColor: "#dfe8f2",
+        primaryBorderColor: "#1e3a5f",
+        primaryTextColor: "#1a211d",
+        secondaryColor: "#dfeee6",
+        secondaryBorderColor: "#2f6f54",
+        secondaryTextColor: "#1a211d",
+        tertiaryColor: "#f1e0bd",
+        tertiaryBorderColor: "#b47718",
+        tertiaryTextColor: "#1a211d",
+        lineColor: "#68716b"
+      }
+    });
+
+    let activeDrag = null;
+
+    window.addEventListener("mousemove", (event) => activeDrag?.move(event));
+    window.addEventListener("mouseup", () => {
+      activeDrag?.end();
+      activeDrag = null;
+    });
+
+    function initDiagram(shell) {
+      const wrap = shell.querySelector(".mermaid-wrap");
+      const viewport = shell.querySelector(".mermaid-viewport");
+      const canvas = shell.querySelector(".mermaid-canvas");
+      const source = shell.querySelector(".diagram-source");
+      const label = shell.querySelector(".zoom-label");
+
+      if (!wrap || !viewport || !canvas || !source || !label) return;
+
+      let zoom = 1;
+      let panX = 0;
+      let panY = 0;
+      let svgWidth = 0;
+      let svgHeight = 0;
+
+      function constrainPan() {
+        const renderedWidth = svgWidth * zoom;
+        const renderedHeight = svgHeight * zoom;
+        const pad = diagramConfig.fitPadding;
+        panX = renderedWidth + pad * 2 <= viewport.clientWidth
+          ? (viewport.clientWidth - renderedWidth) / 2
+          : clamp(panX, viewport.clientWidth - renderedWidth - pad, pad);
+        panY = renderedHeight + pad * 2 <= viewport.clientHeight
+          ? (viewport.clientHeight - renderedHeight) / 2
+          : clamp(panY, viewport.clientHeight - renderedHeight - pad, pad);
+      }
+
+      function applyTransform(mode = "custom") {
+        const svg = canvas.querySelector("svg");
+        if (!svg || !svgWidth) return;
+        constrainPan();
+        svg.style.width = `${svgWidth * zoom}px`;
+        svg.style.height = `${svgHeight * zoom}px`;
+        canvas.style.transform = `translate(${panX}px, ${panY}px)`;
+        label.textContent = `${Math.round(zoom * 100)}% ${mode}`;
+      }
+
+      function fitDiagram() {
+        if (!svgWidth) return;
+        const availableWidth = Math.max(120, viewport.clientWidth - diagramConfig.fitPadding * 2);
+        const availableHeight = Math.max(120, viewport.clientHeight - diagramConfig.fitPadding * 2);
+        zoom = clamp(
+          Math.min(availableWidth / svgWidth, availableHeight / svgHeight),
+          diagramConfig.minZoom,
+          1.8
+        );
+        panX = (viewport.clientWidth - svgWidth * zoom) / 2;
+        panY = (viewport.clientHeight - svgHeight * zoom) / 2;
+        applyTransform("fit");
+      }
+
+      function zoomAround(factor, centerX, centerY) {
+        const nextZoom = clamp(zoom * factor, diagramConfig.minZoom, diagramConfig.maxZoom);
+        const ratio = nextZoom / zoom;
+        panX = centerX - ratio * (centerX - panX);
+        panY = centerY - ratio * (centerY - panY);
+        zoom = nextZoom;
+        applyTransform();
+      }
+
+      function setOneToOne() {
+        zoom = 1;
+        panX = (viewport.clientWidth - svgWidth) / 2;
+        panY = (viewport.clientHeight - svgHeight) / 2;
+        applyTransform("1:1");
+      }
+
+      function openInNewTab() {
+        const svg = canvas.querySelector("svg");
+        if (!svg) return;
+        const clone = svg.cloneNode(true);
+        clone.style.width = "";
+        clone.style.height = "";
+        const page = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Research-Control Validation Flow</title><style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f8fbff;padding:32px;box-sizing:border-box}svg{max-width:100%;height:auto}</style></head><body>${clone.outerHTML}</body></html>`;
+        window.open(URL.createObjectURL(new Blob([page], { type: "text/html" })), "_blank");
+      }
+
+      function naturalSize(svg) {
+        if (svg.viewBox?.baseVal?.width) {
+          return { width: svg.viewBox.baseVal.width, height: svg.viewBox.baseVal.height };
+        }
+        return {
+          width: parseFloat(svg.getAttribute("width")) || 1000,
+          height: parseFloat(svg.getAttribute("height")) || 520
+        };
+      }
+
+      async function render() {
+        try {
+          const code = source.textContent.trim();
+          const id = `diagram-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+          const { svg } = await mermaid.render(id, code);
+          canvas.innerHTML = svg;
+          const svgNode = canvas.querySelector("svg");
+          const size = naturalSize(svgNode);
+          svgWidth = size.width;
+          svgHeight = size.height;
+          svgNode.removeAttribute("width");
+          svgNode.removeAttribute("height");
+          fitDiagram();
+        } catch (error) {
+          console.error("Mermaid render failed:", error);
+          label.textContent = "Render failed";
+        }
+      }
+
+      wrap.querySelector('[data-action="zoom-in"]')?.addEventListener("click", () => {
+        zoomAround(1 + diagramConfig.zoomStep, viewport.clientWidth / 2, viewport.clientHeight / 2);
+      });
+      wrap.querySelector('[data-action="zoom-out"]')?.addEventListener("click", () => {
+        zoomAround(1 / (1 + diagramConfig.zoomStep), viewport.clientWidth / 2, viewport.clientHeight / 2);
+      });
+      wrap.querySelector('[data-action="zoom-fit"]')?.addEventListener("click", fitDiagram);
+      wrap.querySelector('[data-action="zoom-one"]')?.addEventListener("click", setOneToOne);
+      wrap.querySelector('[data-action="zoom-expand"]')?.addEventListener("click", openInNewTab);
+
+      viewport.addEventListener("dblclick", fitDiagram);
+      viewport.addEventListener("wheel", (event) => {
+        if (!event.ctrlKey && !event.metaKey) return;
+        event.preventDefault();
+        const rect = viewport.getBoundingClientRect();
+        const factor = event.deltaY < 0 ? 1 + diagramConfig.zoomStep : 1 / (1 + diagramConfig.zoomStep);
+        zoomAround(factor, event.clientX - rect.left, event.clientY - rect.top);
+      }, { passive: false });
+
+      viewport.addEventListener("mousedown", (event) => {
+        if (event.target.closest(".zoom-controls")) return;
+        wrap.classList.add("is-panning");
+        const startX = event.clientX;
+        const startY = event.clientY;
+        const originX = panX;
+        const originY = panY;
+        event.preventDefault();
+        activeDrag = {
+          move: (moveEvent) => {
+            panX = originX + moveEvent.clientX - startX;
+            panY = originY + moveEvent.clientY - startY;
+            applyTransform();
+          },
+          end: () => wrap.classList.remove("is-panning")
+        };
+      });
+
+      new ResizeObserver(fitDiagram).observe(wrap);
+      render();
+    }
+
+    document.querySelectorAll(".diagram-shell").forEach(initDiagram);
+  </script>
 </body>
 </html>
