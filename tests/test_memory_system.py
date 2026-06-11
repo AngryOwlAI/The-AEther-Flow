@@ -692,6 +692,27 @@ class MemorySystemSmokeTests(unittest.TestCase):
             )
         self.assertTrue(any("data-render-source-sha256" in error for error in result.errors))
 
+    def test_mermaid_validator_rejects_stale_svg_css_id_selector(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root)
+            write_governed_html(
+                root,
+                canvas_body=(
+                    '<svg id="mmd-authority-ladder-root-rewritten" viewBox="0 0 100 40" '
+                    'data-mermaid-rendered="true" data-mermaid-diagram-id="authority-ladder">'
+                    '<style>#mmd-authority-ladder-root .node rect{fill:#dfe8f2;}</style>'
+                    '<g class="node"><rect id="mmd-authority-ladder-node"/></g></svg>'
+                ),
+            )
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("inline SVG style references missing id" in error for error in result.errors))
+
     def test_mermaid_validator_rejects_stale_zoom_label(self) -> None:
         validator = load_mermaid_validator()
         with tempfile.TemporaryDirectory() as tmpdir:

@@ -56,6 +56,9 @@ MERMAID_INDICATOR_RE = re.compile(
     re.I,
 )
 SVG_RE = re.compile(r"<svg\b(?P<attrs>[^>]*)>.*?</svg>", re.I | re.S)
+SVG_ID_ATTR_RE = re.compile(r"\bid\s*=\s*(?:\"([^\"]+)\"|'([^']+)')", re.I)
+SVG_STYLE_RE = re.compile(r"<style\b[^>]*>(?P<body>.*?)</style>", re.I | re.S)
+CSS_ID_SELECTOR_RE = re.compile(r"(^|[\s,{>+~}])#([A-Za-z_][A-Za-z0-9_.:-]*)(?=[\s.#:[,{>+~])", re.M)
 CANVAS_RE = re.compile(
     r"<div\b(?P<attrs>[^>]*class\s*=\s*(?:\"[^\"]*\bmermaid-canvas\b[^\"]*\"|'[^']*\bmermaid-canvas\b[^']*')[^>]*)>(?P<body>.*?)</div>",
     re.I | re.S,
@@ -432,6 +435,22 @@ def validate_inline_svg_artifact(
         result.errors.append(f"{relative}: Mermaid ID {diagram_id} inline SVG missing data-mermaid-rendered")
     if attr_value(svg_attrs, "data-mermaid-diagram-id") != diagram_id:
         result.errors.append(f"{relative}: Mermaid ID {diagram_id} inline SVG diagram ID mismatch")
+    svg_text = svg_matches[0].group(0)
+    svg_ids = {
+        html.unescape(match.group(1) or match.group(2) or "")
+        for match in SVG_ID_ATTR_RE.finditer(svg_text)
+    }
+    missing_style_ids: set[str] = set()
+    for style_match in SVG_STYLE_RE.finditer(svg_text):
+        style_text = html.unescape(style_match.group("body"))
+        for selector_match in CSS_ID_SELECTOR_RE.finditer(style_text):
+            selector_id = selector_match.group(2)
+            if selector_id not in svg_ids:
+                missing_style_ids.add(selector_id)
+    for selector_id in sorted(missing_style_ids):
+        result.errors.append(
+            f"{relative}: Mermaid ID {diagram_id} inline SVG style references missing id {selector_id}"
+        )
     for label_match in ZOOM_LABEL_RE.finditer(shell):
         label = normalized_text(label_match.group("body"))
         if label in STALE_ZOOM_LABELS:

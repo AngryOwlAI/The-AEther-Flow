@@ -325,6 +325,7 @@ async function createRenderer() {
           const dangerousStyle = /@import|javascript:|url\(\s*(?:["']?https?:|["']?\/\/)/i;
           const localUrlRe = /^url\(\s*["']?#[^)'" ]+["']?\s*\)$/i;
           const localUrlFindRe = /url\(\s*["']?#([^)'" ]+)["']?\s*\)/g;
+          const cssIdSelectorRe = /(^|[\s,{>+~}])#([A-Za-z_][A-Za-z0-9_.:-]*)(?=[\s.#:[,{>+~])/g;
           const idMap = new Map();
           const seenIds = new Set();
           const clean = (value) => value.replace(/[^a-zA-Z0-9_-]+/g, "-").replace(/^-+|-+$/g, "");
@@ -379,6 +380,11 @@ async function createRenderer() {
             }
             return next;
           };
+          const rewriteCssIdSelectors = (value) =>
+            value.replace(cssIdSelectorRe, (full, prefix, id) => {
+              if (!idMap.has(id)) throw new Error(`unmapped CSS SVG id selector: ${id}`);
+              return `${prefix}#${idMap.get(id)}`;
+            });
 
           for (const element of allNodes) {
             for (const attr of Array.from(element.attributes)) {
@@ -409,7 +415,7 @@ async function createRenderer() {
               if (dangerousStyle.test(text) || /font-face|https?:\/\//i.test(text)) {
                 throw new Error("unsafe CSS in SVG style block");
               }
-              element.textContent = rewriteIdRefs(text);
+              element.textContent = rewriteCssIdSelectors(rewriteIdRefs(text));
             }
           }
 

@@ -159,7 +159,8 @@ The renderer must use a fail-closed allowlist for inline SVG:
 - Remove comments.
 - Remove scripts, event handler attributes, external references, remote URLs,
   external font/stylesheet references, and `javascript:` URLs.
-- Rewrite SVG IDs and all local references deterministically by diagram ID.
+- Rewrite SVG IDs, local URL/href/ARIA references, and inline `style` ID
+  selectors deterministically by diagram ID.
 - Fail if sanitization would produce an empty or invalid SVG.
 
 ## Diagram Type Selection
