@@ -95,18 +95,23 @@ Project-system improvement is tracked separately from physics continuation. Docu
 
 Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
 
-The overview explainer is the front-facing hub. It links the ontology and GR
-derivation goal, the staged-autonomy physics/math research-agent harness, and
-the authority / claim-boundary discipline. The tracked pages use a
-deep-first progressive-disclosure model with expandable analysis capsules,
-source drilldowns, and claim-boundary inspection. Those interactions
+The overview explainer is the front-facing hub for a source-backed research
+atlas. It links the `Æther-flow ontology`, the research system, role routing,
+claim gates, source authority, and validation governance. Each page uses a
+three-layer reading model: high-level description, operational model, and
+low-level evidence model. The tracked pages use deep-first
+progressive-disclosure with governed Mermaid diagrams, expandable analysis
+capsules, source drilldowns, and claim-boundary inspection. Those interactions
 help readers explore the project; they do not make generated HTML
 authoritative.
 
-- [Project Overview Explainer](html/project-overview-explainer.html): a first-read map of the physics track, AI research-agent track, authority chain, and open derivation boundary.
-- [Æther Flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a visual explanation of the ontology, exact-GR benchmark status, and current derivation burden.
-- [Research-Agent Workflow Explainer](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, role routing, claim gates, and validation.
-- [Research-Control System Explainer](html/research-control-system-explainer.html): the technical control-system overview for authority boundaries, project-system improvement, and source-backed HTML governance.
+- [Project Overview Explainer](html/project-overview-explainer.html): the research-atlas hub for the physics track, AI research-agent track, drilldowns, authority chain, and open derivation boundary.
+- [Æther-flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
+- [Research System Explainer](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
+- [Role Routing Explainer](html/role-routing-explainer.html): how roles are selected, constrained, overlaid, or kept one-job provisional.
+- [Claim Gates Explainer](html/claim-gates-explainer.html): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
+- [Source Authority Explainer](html/source-authority-explainer.html): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
+- [Research-Control System Explainer](html/research-control-system-explainer.html): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
 
 ---
 

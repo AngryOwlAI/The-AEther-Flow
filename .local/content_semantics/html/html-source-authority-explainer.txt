@@ -1,0 +1,241 @@
+Source Authority Explainer
+Authority-ladder drilldown
+Source Authority Explainer
+A detailed map of source authority: canonical TeX, registries, registered Markdown, generated wiki/PDF/HTML derivatives, and local scratch boundaries.
+Visual system
+Research atlas
+Authority
+Human-only generated derivative
+Source basis
+MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER
+Drilldowns
+Three Layers
+Diagrams
+Workflow
+Analysis
+Sources
+Boundary
+Atlas navigation
+Hub And Drilldowns
+Each page uses the same high-level, operational, and evidence layers.
+Hub
+Return to the research-atlas hub.
+Validation governance
+See the validator chain.
+Claim gates
+See where claim status is guarded.
+Three-layer model
+High Level, Operational, Evidence
+High-Level Model
+Canonical science
+Registered TeX files carry scientific and derivational authority.
+Canonical routing
+Format-specific registries carry routing, provenance, generated-output, and memory authority.
+Canonical documentation
+Registered Markdown carries front-door, guidance, and source-spec authority.
+Derivatives
+HTML, wiki notes, PDFs, indexes, Obsidian, and .local caches are generated or scratch surfaces.
+Operational Model
+Edit source
+Change the canonical source or registered source spec first.
+Regenerate
+Run bootstrap and specialized renderers to refresh derivatives.
+Validate
+Check source hashes, source-basis metadata, non-authority banners, and Mermaid parity.
+Read carefully
+Use derivatives for navigation and human understanding, not as independent authority.
+Low-Level Evidence Model
+TeX
+registries/TEX_SOURCE_REGISTRY.csv
+Markdown
+registries/MARKDOWN_SOURCE_REGISTRY.csv
+HTML
+registries/HTML_EXPLAINER_REGISTRY.csv
+Wiki
+registries/WIKI_ARTIFACT_REGISTRY.csv
+PDF
+registries/PDF_DERIVATIVE_REGISTRY.csv
+Why this structure matters
+The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+Governed Mermaid
+Source Authority Ladder
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+Registered
+TeX
+scientific
+authority
+Format
+registries
+routing
+and
+provenance
+authority
+Registered
+Markdown
+front
+door
+and
+specs
+Tracked
+HTML
+explainers
+human-only
+generated
+derivatives
+PDF
+derivatives
+human
+reading
+Generated
+wiki
+and
+indexes
+metadata
+retrieval
+Local
+Obsidian
+and
+.local
+caches
+scratch
+or
+retrieval
+Diagram source
+flowchart TD Tex["Registered TeX<br/>scientific authority"] --> Registries["Format registries<br/>routing and provenance authority"] Registries --> Markdown["Registered Markdown<br/>front door and specs"] Markdown --> Html["Tracked HTML explainers<br/>human-only generated derivatives"] Tex --> Pdf["PDF derivatives<br/>human reading"] Registries --> Wiki["Generated wiki and indexes<br/>metadata retrieval"] Wiki --> Local["Local Obsidian and .local caches<br/>scratch or retrieval"] Html --> Local
+Governed Mermaid
+Derivative Generation Flow
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+Authoritative
+source
+edit
+Registry
+row
+and
+source
+hash
+Memory
+bootstrap
+Generated
+wiki
+notes
+Generated
+HTML
+derivative
+Generated
+PDF
+derivative
+Source-basis
+metadata
+Non-authority
+banner
+PDF
+registry
+row
+Validate
+source
+parity
+Diagram source
+flowchart TD Source["Authoritative source edit"] --> Registry["Registry row and source hash"] Registry --> Bootstrap["Memory bootstrap"] Bootstrap --> Wiki["Generated wiki notes"] Bootstrap --> Html["Generated HTML derivative"] Bootstrap --> Pdf["Generated PDF derivative"] Html --> Metadata["Source-basis metadata"] Wiki --> Banner["Non-authority banner"] Pdf --> Link["PDF registry row"] Metadata --> Validate["Validate source parity"] Banner --> Validate Link --> Validate
+Operational inspection
+Control system Steps
+01
+Source edit
+A canonical source or spec changes.
+02
+Registry hash
+Source hash and object row refresh.
+03
+Derivative build
+Wiki, PDF, HTML, or local retrieval artifacts regenerate.
+04
+Metadata check
+Derivative points back to source basis.
+05
+Validation
+Bootstrap and specialized validators check freshness.
+Deep analysis
+Analysis Capsules
+Each capsule uses the required source-backed schema.
+Source First
+Premise
+The repository distinguishes source authority from generated retrieval layers.
+Mechanism
+Canonical files and registries own claims and provenance; derivatives expose or visualize content without becoming independent authority.
+Source Basis
+AGENTS.md, README.md, and source registries.
+Authority Status
+Human-only authority hierarchy explanation.
+Uncertainty
+Derivatives can become stale if hashes or metadata drift.
+Validation Or Test
+Run bootstrap validation and check source-basis hashes, generated-output rows, and non-authority banners.
+Next Step
+Edit sources or registered specs first, then regenerate.
+Html Derivative
+Premise
+Tracked HTML helps humans understand the project but does not carry independent authority.
+Mechanism
+Each HTML page points to a Markdown source spec and registry source basis; Mermaid source remains in the spec and is rendered into inline SVG.
+Source Basis
+html-visual-explainer skill, HTML_EXPLAINER_REGISTRY.csv, and MARKDOWN_SOURCE_REGISTRY.csv.
+Authority Status
+Generated HTML boundary explanation.
+Uncertainty
+Visual polish can improve comprehension without changing authority.
+Validation Or Test
+Confirm source spec, metadata, controls, drilldowns, capsules, and Mermaid parity.
+Next Step
+Use generated pages for navigation, then inspect source specs and registries for authority.
+Source drilldowns
+What To Inspect
+README.md
+Why it matters:
+Human-facing source-first memory explanation.
+Use it to check:
+How the project introduces authority to readers.
+AGENTS.md
+Why it matters:
+Root authority hierarchy.
+Use it to check:
+Which layers are canonical and which are derivative.
+.codex/skills/project-memory-system/SKILL.md
+Why it matters:
+Memory-system regeneration rules.
+Use it to check:
+How generated wiki and registry artifacts refresh.
+.codex/skills/html-visual-explainer/SKILL.md
+Why it matters:
+Tracked HTML source-backed contract.
+Use it to check:
+How generated HTML remains human-only.
+registries/TEX_SOURCE_REGISTRY.csv
+Why it matters:
+Canonical scientific source rows.
+Use it to check:
+Where scientific authority lives.
+registries/MARKDOWN_SOURCE_REGISTRY.csv
+Why it matters:
+Registered Markdown source rows.
+Use it to check:
+Where source specs are registered.
+registries/HTML_EXPLAINER_REGISTRY.csv
+Why it matters:
+Tracked HTML derivative rows.
+Use it to check:
+Which generated HTML page points to which source spec.
+registries/WIKI_ARTIFACT_REGISTRY.csv
+Why it matters:
+Generated wiki metadata rows.
+Use it to check:
+How generated notes remain noncanonical.
+Claim boundary
+Human-Only Explanation
+This page explains source authority. It does not change registry semantics or make derivatives authoritative.
+Not allowed:
+physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.

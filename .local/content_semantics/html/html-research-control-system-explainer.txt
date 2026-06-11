@@ -1,53 +1,65 @@
 Research-Control System Explainer
-Control system
-Research-Control System
-A technical map of the authority hierarchy, the project-system improvement loop, and the source-backed HTML governance rule: edit the Markdown spec first, regenerate the human-only HTML derivative, then validate.
-Generated pages support human understanding. They never become independent scientific, registry, or workflow authority.
+Validation governance drilldown
+Research-Control System Explainer
+How project-system changes stay bounded through classification, documentation-impact receipts, source-backed HTML rules, Mermaid parity, bootstrap, validators, and diff gates.
+Visual system
+Research atlas
 Authority
+Human-only generated derivative
+Source basis
+MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER
+Drilldowns
+Three Layers
+Diagrams
 Workflow
-Validation flow
 Analysis
 Sources
-Claim boundary
-Source Authority Ladder
-1. Registered
-.tex
-Canonical for physics research and derivational claims.
-2. Registries
-Canonical for provenance, routing, generated-output tracking, and memory.
-3. Registered Markdown
-Canonical for front-door docs, guidance, and HTML source specs.
-4. Generated derivatives
-HTML, PDFs, wiki notes, indexes, and local retrieval layers.
-Source-Backed HTML Workflow
-1. Source spec
-Markdown declares purpose, sources, claim boundary, controls, drilldowns, and capsule schema.
-Inspect step
-Input: source materials. Output: registered source spec. Validator: required frontmatter and capsule body section.
-2. Render HTML
-The generated page implements progressive disclosure and marker evidence.
-Inspect step
-Input: Markdown spec. Output: tracked HTML. Boundary: generated human-only derivative.
-3. Register hashes
-Bootstrap refreshes source hashes, HTML hashes, and generated registries.
-Inspect step
-Input: live files. Output: registry rows. Validator: source-basis hash alignment.
-4. Validate markers
-Lightweight checks confirm declared controls and capsule fields appear in HTML.
-Inspect step
-Input: spec and HTML. Output: pass/fail. Scope: structural evidence only, not design quality.
-5. Human review
-Browser QA can inspect design, interaction, readability, and claim discipline.
-Inspect step
-Input: rendered page. Output: human judgment. Boundary: review does not change source authority.
-Governed Validation Flow
-This pilot diagram renders the canonical Mermaid source from the Markdown spec. It explains the validation order for a source-backed documentation change without changing any control rule.
-Ctrl/Cmd + wheel to zoom. Drag to pan. Double-click to fit.
+Boundary
+Atlas navigation
+Hub And Drilldowns
+Each page uses the same high-level, operational, and evidence layers.
+Hub
+Return to the research-atlas hub.
+Source authority
+Inspect the deeper authority ladder.
+Role routing
+Inspect role boundary selection.
+Three-layer model
+High Level, Operational, Evidence
+High-Level Model
+Boundary preservation
+Control-system validation prevents documentation, tooling, and generated derivatives from drifting into authority they do not have.
+Documentation impact
+Documentation impact is a receipt requirement, not automatic source ownership.
+Source-backed HTML
+Tracked HTML is generated from registered Markdown specs and remains human-only.
+Mermaid governance
+Diagram source lives in Markdown and is rendered into inline SVG for tracked HTML.
+Operational Model
+Classify
+Determine changed paths, documentation impact, role recommendation, and validators.
+Bound
+Open one AgentJob with explicit allowed writes and forbidden surfaces.
+Regenerate
+Refresh source-backed HTML, Mermaid SVG, registries, and wiki derivatives.
+Validate
+Run bootstrap, docs-impact, research-control, signal, diff, and test checks.
+Low-Level Evidence Model
+Classifier
+scripts/project_control/classify_project_changes.py
+Docs-impact validator
+scripts/project_control/validate_documentation_impact.py
+Research-control validator
+scripts/research_control/validate_research_control.py
+Mermaid validator
+.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/validate_mermaid_sources.py
+Why this structure matters
+The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+Governed Mermaid
+Research Control Validation Flow
+Drag to pan. Use controls to zoom or fit.
 +
-−
-↺
-1:1
-⛶
+-
 Fit
 Markdown
 source
@@ -77,43 +89,103 @@ gate
 Local
 checkpoint
 commit
-Deep Analysis Capsules
-Source-Backed HTML Governance
+Diagram source
+flowchart TD Spec["Markdown source spec update"] --> Html["Generated HTML derivative"] Html --> Mermaid["Mermaid source parity validation"] Mermaid --> Bootstrap["Memory bootstrap and registry refresh"] Bootstrap --> DocsImpact["Documentation-impact gate"] DocsImpact --> ResearchControl["Research-control validation"] ResearchControl --> DiffGate["Diff and authority boundary gate"] DiffGate --> Checkpoint["Local checkpoint commit"]
+Governed Mermaid
+Control Boundary Map
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+Proposed
+project-system
+change
+Change
+classifier
+Recommended
+role
+boundary
+One
+bounded
+AgentJob
+Allowed
+writes
+Forbidden
+authority
+surfaces
+Required
+validators
+Stop
+condition
+Completion
+and
+documentation-impact
+receipts
+Control
+registries
+updated
+Diagram source
+flowchart TD Change["Proposed project-system change"] --> Classifier["Change classifier"] Classifier --> Role["Recommended role boundary"] Role --> Job["One bounded AgentJob"] Job --> Allowed["Allowed writes"] Job --> Forbidden["Forbidden authority surfaces"] Allowed --> Validators["Required validators"] Forbidden --> Stop["Stop condition"] Validators --> Receipt["Completion and documentation-impact receipts"] Receipt --> Registry["Control registries updated"]
+Operational inspection
+Control system Steps
+01
+Spec
+Markdown source spec is updated first.
+02
+HTML
+Tracked HTML is regenerated as derivative output.
+03
+Mermaid
+Inline SVG is rendered from preserved source.
+04
+Bootstrap
+Registries and generated wiki metadata refresh.
+05
+Documentation impact
+Receipt covers source and generated changes.
+06
+Research control
+Task, role, registry, and diff gates validate.
+Deep analysis
+Analysis Capsules
+Each capsule uses the required source-backed schema.
+Source Backed Html
 Premise
 Tracked HTML explainers are valid only when backed by registered Markdown source specs.
 Mechanism
-The spec declares source basis, interaction model, controls, drilldowns, and capsule schema; HTML carries marker evidence.
-Source basis
-html-visual-explainer skill, visual-explainer skill, and HTML registry.
-Authority status
-Project-control explanation of generated derivative governance.
+Specs declare source material, claim boundary, controls, source drilldowns, analysis capsules, and Mermaid diagrams; HTML carries metadata and marker evidence.
+Source Basis
+html-visual-explainer skill, visual-explainer skill, Mermaid subskill, and HTML_EXPLAINER_REGISTRY.csv.
+Authority Status
+Generated derivative governance explanation.
 Uncertainty
-Visual quality still requires human or browser review.
-Validation or test
-Memory validation confirms source-basis metadata, control markers, capsule fields, and source drilldowns.
-Next step
-Modify source specs first, regenerate HTML, then validate.
-Project-System Improvement Loop
+Visual quality still needs human or browser review.
+Validation Or Test
+Run Mermaid validation, bootstrap validation, and HTML marker checks.
+Next Step
+Modify specs first, regenerate HTML, render inline SVG, then validate.
+Documentation Impact
 Premise
-Project-system improvement is separate from physics continuation.
+Documentation impact is a receipt requirement, not a role-selection shortcut.
 Mechanism
-Bounded AgentJobs update roles, validators, skill contracts, docs, or memory tooling under validation.
-Source basis
-AGENTS, research-control README, and improve-project-system skill.
-Authority status
-Control-system explanation; not scientific authority.
+The source authority class selects the role; docs-impact records cover how live changes affect future readers and agents.
+Source Basis
+research_control/README.md, improve-project-system skill, and validate_documentation_impact.py.
+Authority Status
+Control-system explanation.
 Uncertainty
-Resolver output is advisory; validators define hard stop conditions.
-Validation or test
-Use classification, resolver, signal validation, documentation-impact, research-control validation, and tests.
-Next step
-Keep future explainer improvements inside one bounded project-system job.
-Source Drilldowns
+Resolver output is advisory; validator failures are hard stops.
+Validation Or Test
+Use classification, documentation-impact validation, signal validation, research-control validation, and diff checks.
+Next Step
+Route explanatory HTML work to Documentation Curator and validator changes to Validator Engineer.
+Source drilldowns
+What To Inspect
 AGENTS.md
 Why it matters:
 Root authority hierarchy and generated-output boundaries.
 Use it to check:
-Whether generated pages are kept below registered sources and registries.
+Whether generated pages stay below registered sources and registries.
 README.md
 Why it matters:
 Human visual explainer overview and source-first memory model.
@@ -124,23 +196,23 @@ Why it matters:
 Task and validation model.
 Use it to check:
 How project-system work stays separate from physics continuation.
-improve-project-system skill
+.codex/skills/improve-project-system/SKILL.md
 Why it matters:
 Bounded project-system improvement workflow.
 Use it to check:
-Which validations and stop conditions govern this kind of polish pass.
-html-visual-explainer skill
+Which validations and stop conditions govern this pass.
+.codex/skills/html-visual-explainer/SKILL.md
 Why it matters:
 Tracked HTML governance contract.
 Use it to check:
-The spec-first rule, required controls, marker evidence, and non-authority boundary.
-visual-explainer skill
+The spec-first rule and required marker evidence.
+.codex/skills/visual-explainer/SKILL.md
 Why it matters:
 Rendering guidance and project mode.
 Use it to check:
-How visual layout supports the source-backed human-only explainer contract.
-Claim Boundary
-What this page may claim
-It may explain existing authority boundaries, validator behavior, and source-backed HTML governance.
-What this page may not claim
-It may not change physics claims, control contracts, routing decisions, registry authority, or generated-output authority.
+How visual layout supports the human-only explainer contract.
+Claim boundary
+Human-Only Explanation
+This page explains validation governance. It does not change validators, routing behavior, role authority, or scientific claim status.
+Not allowed:
+physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.

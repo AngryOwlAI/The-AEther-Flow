@@ -1,75 +1,182 @@
-Research-Agent Workflow Explainer
-Workflow process
-Research-Agent Workflow
-The project develops a staged-autonomy physics/math research-agent harness by running bounded research tasks against the hard GR-derivation problem. Current operation remains human-accountable, role-bounded, and validator-gated.
-Workflow status is operational evidence about the research system, not a proof of the physics theory.
-Loop
-Lanes
+Research System Explainer
+Workflow drilldown
+Research System Explainer
+A detailed view of how the project turns questions into bounded, role-constrained, validator-checked research transactions.
+Visual system
+Research atlas
+Authority
+Human-only generated derivative
+Source basis
+MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER
+Drilldowns
+Three Layers
+Diagrams
+Workflow
 Analysis
 Sources
-Claim boundary
-One Bounded Execution Loop
-1. Director decision
-Selects one role and one task boundary.
-Inspect step
-Inputs: tracked state and registries. Outputs: DDR and selected AgentJob boundary. Authority: project or research director.
-2. Role binding
-Binds work to a registered role or explicit task overlay.
-Inspect step
-Inputs: role contracts. Outputs: role execution record. Authority: role registry and task allowlist.
-3. AgentJob
-Defines allowed reads, writes, outputs, and validators.
-Inspect step
-Inputs: DDR and role boundary. Outputs: strict YAML job contract. Validator concern: allowed paths and required checks.
-4. Bounded output
-Produces artifacts without widening authority.
-Inspect step
-Inputs: job scope. Outputs: source edits, generated derivatives, or task artifacts. Boundary: no physics promotion by workflow status.
-5. Validation
-Runs deterministic checks before checkpointing.
-Inspect step
-Inputs: live diff and registries. Outputs: pass/fail receipts. Authority: validator scripts, not model judgment.
-6. Completion or handoff
-Records result and next boundary.
-Inspect step
-Inputs: validation results. Outputs: completion YAML or handoff. Boundary: next work remains bounded.
-Two Operating Lanes
-continue-research
-Continues physics research from tracked handoffs and task state. It may route science roles, but does not repair project-system machinery unless explicitly authorized.
-improve-project-system
-Maintains roles, validators, memory tooling, source-backed explainers, and documentation-impact receipts. It must not promote physics claims.
-Deep Analysis Capsules
-Bounded AgentJob Loop
+Boundary
+Atlas navigation
+Hub And Drilldowns
+Each page uses the same high-level, operational, and evidence layers.
+Hub
+Return to the research-atlas hub.
+Role routing
+Inspect how roles are selected.
+Claim gates
+Inspect how claim status is controlled.
+Three-layer model
+High Level, Operational, Evidence
+High-Level Model
+Purpose
+Make theoretical work auditable instead of conversationally drifting.
+Director
+Selects one bounded role/job boundary from tracked state.
+AgentJob
+Binds objective, reads, writes, outputs, validators, and claim boundary.
+Receipts
+Completions, registries, and handoffs preserve the result and next state.
+Operational Model
+Resolve state
+Start from tracked task state, latest handoff, and registries.
+Open one job
+The Director creates at most one bounded AgentJob per invocation.
+Execute role
+The selected execution role works only inside its allowlist and constraints.
+Validate and hand off
+Validators, completion records, and handoffs decide what can safely continue.
+Low-Level Evidence Model
+Task state
+research_control/tasks/<task_id>/00_TASK.yaml
+Director decision
+research_control/tasks/<task_id>/DDR-*.md
+AgentJob
+research_control/tasks/<task_id>/jobs/*.yaml
+Completion
+research_control/tasks/<task_id>/jobs/completions/*.yaml
+Registries
+AGENT_JOB_REGISTRY.csv and DIRECTOR_DECISION_REGISTRY.csv
+Why this structure matters
+The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+Governed Mermaid
+Research System Loop
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+Tracked
+state
+and
+latest
+handoff
+Director
+decision
+Bounded
+AgentJob
+Execution
+role
+Allowed
+outputs
+Validators
+and
+diff
+gates
+Completion
+record
+Next
+handoff
+Registry
+updates
+Diagram source
+flowchart TD State["Tracked state and latest handoff"] --> Director["Director decision"] Director --> Job["Bounded AgentJob"] Job --> Role["Execution role"] Role --> Outputs["Allowed outputs"] Outputs --> Validators["Validators and diff gates"] Validators --> Completion["Completion record"] Completion --> Handoff["Next handoff"] Handoff --> State Validators --> Registry["Registry updates"] Registry --> State
+Governed Mermaid
+Agentjob Lifecycle
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+Director
+selects
+role
+allowed
+reads
+and
+writes
+outputs
+produced
+validators
+pass
+validator
+or
+boundary
+failure
+completion
+recorded
+obstruction
+recorded
+Proposed
+Active
+Executing
+Validating
+Completed
+Blocked
+HandoffReady
+Diagram source
+stateDiagram-v2 [*] --> Proposed Proposed --> Active: Director selects role Active --> Executing: allowed reads and writes Executing --> Validating: outputs produced Validating --> Completed: validators pass Validating --> Blocked: validator or boundary failure Completed --> HandoffReady: completion recorded Blocked --> HandoffReady: obstruction recorded HandoffReady --> [*]
+Operational inspection
+Workflow process Steps
+01
+State
+Tracked handoff and registries define the starting boundary.
+02
+Decision
+Director selects the role and objective.
+03
+Job
+AgentJob constrains allowed source classes and writes.
+04
+Execution
+Role produces only expected outputs.
+05
+Validation
+Diff, registry, claim, memory, and test checks run.
+06
+Handoff
+Next action or obstruction is preserved.
+Deep analysis
+Analysis Capsules
+Each capsule uses the required source-backed schema.
+Bounded Transaction
 Premise
-The workflow advances through one bounded job at a time.
+The research system advances through bounded transactions, not open-ended edits.
 Mechanism
-Director decisions, role bindings, AgentJobs, validators, and handoffs constrain each transaction.
-Source basis
-Research-control README, AGENTS, and control registries.
-Authority status
-Project-control explanation, not physics proof.
+Director decisions create AgentJobs, role contracts constrain execution, and validators check outputs before handoff.
+Source Basis
+research_control/README.md, research_control/AGENTS.md, and control registries.
+Authority Status
+Project-control explanation, not scientific proof.
 Uncertainty
-A completed step may preserve progress, obstruction, or negative result.
-Validation or test
-Check completion records, registry rows, validators, and diff checks.
-Next step
-Inspect each step's inputs, outputs, authority, and validators.
-Staged-Autonomy Harness
+A completed transaction may record progress, obstruction, repair, or negative result.
+Validation Or Test
+Inspect task files, completion records, registry rows, command receipts, and diff boundaries.
+Next Step
+Use role routing to understand why a specific execution role was selected.
+Two Modes
 Premise
-The AI system is being developed toward staged autonomy through live theoretical work.
+Physics continuation and project-system improvement are separate modes.
 Mechanism
-Roles, routing, refutation, novelty search, claim gates, memory, and validation are tested on real research tasks.
-Source basis
-README, AGENTS, continue-research, and improve-project-system skills.
-Authority status
-AI-methodology explanation only.
+continue-research handles physics state; improve-project-system handles roles, validators, docs, and memory machinery.
+Source Basis
+continue-research and improve-project-system skills plus AGENTS.md.
+Authority Status
+Workflow explanation only.
 Uncertainty
-Current operation is human-scaffolded and validator-gated.
-Validation or test
-Autonomy claims need measurable task success, reproducible handoffs, and failure-mode tracking.
-Next step
-Keep autonomy language separate from physics claim status.
-Source Drilldowns
+Improving the system can improve reliability without changing scientific status.
+Validation Or Test
+Check skill, role, AgentJob, and claim-boundary rows for the selected mode.
+Next Step
+Keep workflow completion separate from claim acceptance.
+Source drilldowns
+What To Inspect
 README.md
 Why it matters:
 Two-track project and staged-autonomy framing.
@@ -77,31 +184,31 @@ Use it to check:
 Whether workflow language stays separate from physics proof claims.
 AGENTS.md
 Why it matters:
-Project identity and authority hierarchy.
+Root project identity and authority hierarchy.
 Use it to check:
-Whether generated workflow explanations remain human-only and non-authoritative.
+Whether generated workflow explanations remain human-only.
 research_control/AGENTS.md
 Why it matters:
-Tracked control-state editing rules.
+Scoped rules for tracked control state.
 Use it to check:
-Whether task state, jobs, completions, and handoffs are treated as tracked control records.
+Whether task state, jobs, completions, and handoffs are treated as tracked records.
 research_control/README.md
 Why it matters:
-Research-control task and handoff structure.
+Authority model, one-job rule, and validation commands.
 Use it to check:
 How Director decisions, AgentJobs, validation, and handoffs fit together.
-continue-research skill
+.codex/skills/continue-research/SKILL.md
 Why it matters:
 Physics continuation boundary.
 Use it to check:
-When the project is continuing scientific work from tracked state.
-improve-project-system skill
+When the project is continuing scientific work.
+.codex/skills/improve-project-system/SKILL.md
 Why it matters:
 Project-system improvement boundary.
 Use it to check:
 When work belongs to roles, validators, memory tooling, docs, or generated-doc pipelines.
-Claim Boundary
-What this page may claim
-It may explain the existing workflow structure, staged-autonomy target, and validation discipline.
-What this page may not claim
-It may not change routing behavior, role authority, validators, physics claim status, or imply autonomous proof authority.
+Claim boundary
+Human-Only Explanation
+This page explains the research system. It does not certify that any physics claim is true.
+Not allowed:
+physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.

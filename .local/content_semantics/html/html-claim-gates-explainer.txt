@@ -1,0 +1,210 @@
+Claim Gates Explainer
+Claim-status drilldown
+Claim Gates Explainer
+How the project keeps hypotheses, candidates, refutations, blocked claims, accepted claims, and negative results distinct.
+Visual system
+Research atlas
+Authority
+Human-only generated derivative
+Source basis
+MD-HTML-SPEC-CLAIM-GATES-EXPLAINER
+Drilldowns
+Three Layers
+Diagrams
+Workflow
+Analysis
+Sources
+Boundary
+Atlas navigation
+Hub And Drilldowns
+Each page uses the same high-level, operational, and evidence layers.
+Hub
+Return to the research-atlas hub.
+Æther-flow ontology
+See the open derivation burden.
+Source authority
+See where claim status is recorded.
+Three-layer model
+High Level, Operational, Evidence
+High-Level Model
+Purpose
+Claim gates prevent workflow progress from being mistaken for accepted physics.
+Candidate status
+A candidate may be useful, blocked, repaired, or refuted without being promoted.
+Negative results
+Obstructions are preserved because they constrain future work.
+Human gates
+Certain promotions require Gate Chair or human-gated review.
+Operational Model
+Allowed claims
+Each task can say only what its boundary allows.
+Forbidden claims
+Derivation, benchmark promotion, canonical adoption, and target import claims are blocked unless gated.
+Artifacts
+Task outputs and TeX registry rows preserve scoped results.
+Handoffs
+Next work inherits explicit exclusions and obstructions.
+Low-Level Evidence Model
+Claim registry
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+Task artifacts
+research_control/tasks/*/artifacts/*.tex
+TeX registry
+registries/TEX_SOURCE_REGISTRY.csv
+Completion records
+research_control/tasks/*/jobs/completions/*.yaml
+Why this structure matters
+The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+Governed Mermaid
+Claim Gate State Machine
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+bounded
+proposal
+smuggling
+or
+consistency
+check
+fixable
+defect
+defect
+or
+underdetermination
+revised
+packet
+preserved
+obstruction
+promotion
+requested
+authorized
+gate
+passes
+gate
+not
+passed
+Framing
+Candidate
+Audit
+Repair
+Refutation
+NegativeResult
+GateReview
+Accepted
+Blocked
+Diagram source
+stateDiagram-v2 [*] --> Framing Framing --> Candidate: bounded proposal Candidate --> Audit: smuggling or consistency check Audit --> Repair: fixable defect Audit --> Refutation: defect or underdetermination Repair --> Candidate: revised packet Refutation --> NegativeResult: preserved obstruction Candidate --> GateReview: promotion requested GateReview --> Accepted: authorized gate passes GateReview --> Blocked: gate not passed Blocked --> NegativeResult Accepted --> [*] NegativeResult --> [*]
+Governed Mermaid
+Negative Result Preservation Loop
+Drag to pan. Use controls to zoom or fit.
++
+-
+Fit
+Candidate
+derivation
+attempt
+Refutation
+or
+smuggling
+test
+Obstruction
+identified
+Claim-boundary
+row
+Registered
+task
+artifact
+Handoff
+preserves
+next
+state
+Future
+work
+avoids
+replaying
+failure
+Diagram source
+flowchart TD Attempt["Candidate derivation attempt"] --> Test["Refutation or smuggling test"] Test --> Finding["Obstruction identified"] Finding --> Boundary["Claim-boundary row"] Boundary --> Artifact["Registered task artifact"] Artifact --> Handoff["Handoff preserves next state"] Handoff --> Future["Future work avoids replaying failure"] Future --> Attempt
+Operational inspection
+Control system Steps
+01
+Frame
+A question or candidate is framed.
+02
+Construct
+A bounded role proposes a candidate or repair.
+03
+Audit
+Smuggling, consistency, or benchmark-independence checks run.
+04
+Refute or repair
+Defects either route repair or become scoped negative results.
+05
+Gate
+Promotion requires explicit gate authority.
+Deep analysis
+Analysis Capsules
+Each capsule uses the required source-backed schema.
+Claim Boundary
+Premise
+Claim boundaries prevent candidate or workflow status from becoming accepted physics by implication.
+Mechanism
+Rows record allowed claims, forbidden claims, required gates, and authority source paths.
+Source Basis
+CLAIM_BOUNDARY_REGISTRY.csv, AGENTS.md, and research_control/README.md.
+Authority Status
+Human-only explanation of existing behavior.
+Uncertainty
+A candidate may be locally useful even when promotion is blocked.
+Validation Or Test
+Inspect the claim-boundary row before accepting any derivation or benchmark statement.
+Next Step
+Check whether the claim requires Gate Chair or human-gated review.
+Negative Result
+Premise
+Negative results are preserved because they prevent repeated failed routes.
+Mechanism
+A failed route can become a registered artifact, boundary row, completion receipt, and handoff constraint.
+Source Basis
+TEX_SOURCE_REGISTRY.csv, RESEARCH_TASK_REGISTRY.csv, and CLAIM_BOUNDARY_REGISTRY.csv.
+Authority Status
+Scoped obstruction explanation, not a global theory verdict.
+Uncertainty
+A local refutation can block one route without rejecting the entire program.
+Validation Or Test
+Verify scope, task path, authority source, forbidden promotions, and handoff constraints.
+Next Step
+Use source authority to inspect registration and derivative boundaries.
+Source drilldowns
+What To Inspect
+README.md
+Why it matters:
+Front-door separation between physics claims, AI-methodology claims, tooling claims, and human explanations.
+Use it to check:
+Whether claim kinds stay separate.
+AGENTS.md
+Why it matters:
+Claim authority and generated-output hierarchy.
+Use it to check:
+Whether generated pages avoid promotion.
+research_control/README.md
+Why it matters:
+Gate and task-state model.
+Use it to check:
+How tasks preserve bounded results.
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+Why it matters:
+Allowed and forbidden claims.
+Use it to check:
+Which claims require gates.
+registries/TEX_SOURCE_REGISTRY.csv
+Why it matters:
+Registered science artifacts and status.
+Use it to check:
+Where scientific outputs are recorded.
+Claim boundary
+Human-Only Explanation
+This page explains claim gates. It does not promote, reject, or alter any scientific claim.
+Not allowed:
+physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.
