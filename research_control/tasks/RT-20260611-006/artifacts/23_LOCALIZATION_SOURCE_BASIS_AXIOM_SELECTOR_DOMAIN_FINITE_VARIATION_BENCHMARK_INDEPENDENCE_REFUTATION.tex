@@ -1,0 +1,335 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\Pack}{\mathcal{P}}
+\newcommand{\PackFam}{\mathfrak{P}}
+\newcommand{\EnumFam}{\mathfrak{E}}
+\newcommand{\Cert}{\mathsf{Cert}}
+\newcommand{\OutFam}{\mathfrak{O}}
+\newcommand{\Ledger}{\mathsf{Ledger}}
+\newcommand{\Status}{\mathsf{Status}}
+\newcommand{\Ad}{\mathsf{Ad}}
+\newcommand{\Blind}{\mathsf{Blind}}
+\newcommand{\Stable}{\mathsf{Stable}}
+\newcommand{\Force}{\mathsf{Force}}
+\newcommand{\Gate}{\mathsf{Gate}}
+\newcommand{\Inv}{\mathsf{Inv}}
+\newcommand{\Fam}{\mathsf{Fam}}
+
+\newtheorem{test}{Benchmark-independence test}
+\newtheorem{finding}{Refutation finding}
+\newtheorem{variation}{Admissible variation}
+\newtheorem{blocker}{Promotion blocker}
+\newtheorem{verdict}{Local verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain Finite-Variation Benchmark-Independence Refutation}\\[0.35em]
+\large Stability Test for Ledger, Packet, Horizon, Enumerator, Certificate, Output-Basis, and \(D_F\) Gate Variation}
+\author{Refuter AgentJob AJ-RT-20260611-006-001}
+\date{June 11, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft tests whether the selector-domain finite-variation repair packet
+is benchmark-independent under admissible source-defined variation. The
+result is local and negative. The packet is a genuine control improvement:
+it exposes the source-only input ledger \(H\), packet-family generator,
+finite horizons, enumerator families, certificate exclusions, output-basis
+families, and \(D_F\) evidence gates. It also passed a narrow no-direct-
+target-primitive audit. However, benchmark independence is not established.
+Admissible source-side changes to ledger provenance, horizon bounds,
+packet-family generation, enumerator meta-grammar, certificate labels,
+output-basis scope, and status-transition evidence can still change
+localization-relevant outputs or status classifications. Candidate
+reconstruction, canonical ontology edit, benchmark promotion, and Gate Chair
+review remain blocked.
+\end{abstract}
+
+\section{Scope and Refutation Standard}
+
+This artifact is a draft/control output for task \texttt{RT-20260611-006}.
+It does not edit canonical ontology TeX, adopt A0--A4 or selection laws as
+canonical ontology, authorize candidate reconstruction, issue a Gate Chair
+verdict, or reject the broader \TheoryProgram{}.
+
+Let \(\Lang\) denote the registered source language before the A0--A4
+extension sequence. The finite-variation repair packet defines a source-only
+ledger
+\[
+H=(R_{\mathrm{seed}},B_{\min},B_{\max},\Omega_{\mathrm{seed}},
+\Rel_{\mathrm{seed}},\Gamma_{\mathrm{blind}})
+\]
+and a finite family of repair surfaces
+\[
+\mathcal{V}=(\PackFam,\{\EnumFam_i\}_{i=0}^{4},
+\{\Cert_i\}_{i=0}^{4},\{\OutFam_i\}_{i=0}^{4},D_F).
+\]
+The packet passes this Refuter test only if localization-relevant outputs
+and \(D_F\) status classifications are invariant under every admissible
+benchmark-blind variation of \(H\), \(\PackFam\), finite horizons,
+\(\EnumFam_i\), \(\Cert_i\), \(\OutFam_i\), and the \(D_F\) evidence gates,
+or if all non-invariant results are preserved as negative control outputs.
+
+\begin{test}[Finite-variation benchmark independence]
+For any two \(\Ad\)-admissible and \(\Blind\)-blind repair families
+\(\mathcal{V}\) and \(\mathcal{V}'\) generated from the same registered
+source vocabulary, a candidate-supporting result is allowed only if every
+localization-relevant output family and every \(D_F\) status row agrees up
+to declared source relabeling. If they do not agree, the correct local
+status is \(\mathsf{family\_valued}\), \(\mathsf{underdetermined}\),
+\(\mathsf{benchmark\_sensitive}\), or \(\mathsf{not\_computed}\), not
+candidate support.
+\end{test}
+
+The term ``source-defined'' is insufficient by itself. Benchmark
+independence requires source-forcing or stable preservation of the full
+admissible family.
+
+\section{Input-Ledger Variation}
+
+\begin{finding}[Ledger provenance is not yet source-forced]
+The repair packet correctly forbids direct target metrics, clocks, null
+cones, observer protocols, and benchmark-success predicates in \(H\). The
+remaining burden is stronger: the seed records, horizon endpoints, operation
+seeds, quotient seeds, and blinding rules must be forced by source criteria
+or varied across a complete source-side family.
+\end{finding}
+
+\begin{variation}[Seed-ledger alternatives]
+Let \(H\) and \(H'\) differ only by source-record seeds or source closure
+rules while remaining pre-benchmark and target-blind. \(H\) may select
+records generated by a narrow support shell; \(H'\) may include a broader
+source-accessible shell or an incomparable refinement family. Both ledgers
+can be replayable from source records. They can still produce different
+presentation boundaries, transition fronts, discriminator ranks, quotient
+spectra, transport cycles, or status rows.
+\end{variation}
+
+\begin{blocker}[Ledger-forcing blocker]
+The current packet does not supply a theorem or exhaustive finite ledger
+showing that \(H\) is unique up to source relabeling, nor does it preserve
+all admissible \(H'\) families as explicit negative controls. Therefore
+ledger replayability is not benchmark independence.
+\end{blocker}
+
+\section{Packet-Family and Horizon Variation}
+
+\begin{finding}[A finite family generator can remain undercomplete]
+\(\PackFam\) improves the prior single-packet protocol by exposing record,
+bound, operation, quotient, and blinding-ledger choices. It does not yet
+prove that the finite family contains every source-admissible alternative
+within the stated authority boundary.
+\end{finding}
+
+\begin{variation}[Horizon and generator variation]
+Two packet-family generators may share the same source vocabulary but differ
+in finite horizon endpoints, source-order depth rules, closure operators,
+or refinement quotients. One generator can include a horizon that yields a
+target-like invariant-looking family; another can include adverse source
+alternatives that make the output family non-singleton. Both can be finite
+and benchmark-blind.
+\end{variation}
+
+\begin{blocker}[Packet-family completeness not established]
+No current proof shows that \(B_{\min}\), \(B_{\max}\), closure rules, and
+quotient rules are source-forced rather than admissible choices. A finite
+family generated by an undercomplete meta-rule is not enough to support
+candidate reconstruction.
+\end{blocker}
+
+\section{Enumerator-Family Variation}
+
+\begin{finding}[The enumerator families need a meta-grammar]
+The repair packet requires narrower, broader, and incomparable grammars for
+each \(D_i\). That obligation is correct. The remaining gap is a
+source-forced meta-grammar for generating those grammars and proving that no
+admissible adverse grammar was omitted.
+\end{finding}
+
+\begin{variation}[Domain-specific grammar alternatives]
+For \(D_0\), presentation enumeration can vary by support closure and
+refinement depth. For \(D_1\), transition-front enumeration can vary by exact,
+prefix, or declared-overlap support. For \(D_2\), recurrence and edit-depth
+windows can vary. For \(D_3\), quotient-spectrum enumeration can vary by
+coarser, finer, and incomparable quotients. For \(D_4\), transport catalogs
+and loop bounds can vary while remaining source-side. These variations can
+change the output family without importing an explicit target primitive.
+\end{variation}
+
+\begin{blocker}[Enumerator-family stability not established]
+The packet has not shown that every admissible enumerator family either
+produces the same localization-relevant output or is retained as a non-
+invariant family-valued result. Therefore \(\EnumFam_i\) is not yet
+benchmark-independent.
+\end{blocker}
+
+\section{Certificate-Exclusion Variation}
+
+\begin{finding}[Typed exclusions are claim-bearing]
+The certificate labels
+\(\mathsf{duplicate}\), \(\mathsf{out\_of\_horizon}\),
+\(\mathsf{source\_invalid}\), \(\mathsf{authority\_expansion}\), and
+\(\mathsf{not\_computed}\) make exclusions auditable. They do not prove that
+the exclusions are invariant across admissible certificate rules.
+\end{finding}
+
+\begin{variation}[Duplicate and invalidity disagreement]
+One certificate rule can label a case duplicate under a source quotient.
+Another source-admissible certificate rule can retain it because it changes
+a boundary, rank spectrum, transport ratio, or status row. If the retained
+case changes any output basis, the protocol is certificate-sensitive even
+when both rules are replayable.
+\end{variation}
+
+\begin{blocker}[Certificate-invariance blocker]
+The current packet does not contain a certificate-invariance theorem proving
+that every kept/omitted decision is stable across admissible certificate
+families. Hash replay proves consistency with a rule, not uniqueness of the
+rule.
+\end{blocker}
+
+\section{Output-Basis Variation}
+
+\begin{finding}[Output relevance remains a selection surface]
+The repair packet requires \(\OutFam_i\) to preserve favorable, adverse, and
+neutral source quantities. This is stronger than the prior protocol. The
+unresolved question is which source quantities are admitted into the output
+basis and which are declared outside localization relevance.
+\end{finding}
+
+\begin{variation}[Broader output bases can expose non-invariance]
+One output-basis generator may record only boundary and first-response-rank
+data. Another may also record adverse quotient spectra, transport-cycle
+ratios, or non-singleton status rows. If the narrow basis appears invariant
+while the broader source-admissible basis is family-valued, the narrow
+result is a projection artifact.
+\end{variation}
+
+\begin{blocker}[Output-basis generation not source-forced]
+No current source theorem forces the output-basis generator or proves that
+broader admissible bases are irrelevant. Candidate support cannot rest on a
+favorable projection of a broader non-invariant family.
+\end{blocker}
+
+\section{\texorpdfstring{\(D_F\)}{DF}: Evidence-Gate Variation}
+
+\begin{finding}[Status gates are scientific claims]
+The \(D_F\) gates F1--F5 improve provenance. They do not make
+\(\mathsf{invariant}\) a neutral bookkeeping status. Every transition to
+\(\mathsf{invariant}\) depends on packet-family, enumerator-family,
+certificate, output-basis, and audit predicates that themselves require
+benchmark-independence support.
+\end{finding}
+
+\begin{variation}[Gate-strength variation]
+One gate rule may allow \(\mathsf{family\_valued}\) to become
+\(\mathsf{invariant}\) after a finite-family ledger over a selected output
+basis. Another source-admissible gate rule may require stability across a
+broader output-basis generator and independent certificate replay. The same
+computed family can receive different statuses under these rules.
+\end{variation}
+
+\begin{blocker}[Status-transition theorem missing]
+The repair packet does not yet provide a source-forced theorem for when
+\(\mathsf{not\_computed}\), \(\mathsf{underdetermined}\), or
+\(\mathsf{family\_valued}\) may become \(\mathsf{invariant}\). Therefore
+\(D_F\) evidence gates remain a claim-bearing surface, not a promotion
+license.
+\end{blocker}
+
+\section{Refutation Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.22\linewidth}p{0.44\linewidth}p{0.22\linewidth}}
+\textbf{Surface} & \textbf{Admissible variation} & \textbf{Local status} \\
+\hline
+\(H\) & seed records, closure rules, source operation seeds, quotient seeds, blinding ledger & not benchmark-independent \\
+\(\PackFam\) & finite horizon endpoints, packet generator breadth, closure and quotient rules & not benchmark-independent \\
+\(\EnumFam_i\) & domain-specific grammar breadth, support variants, recurrence windows, quotient and transport catalogs & not benchmark-independent \\
+\(\Cert_i\) & duplicate, invalid, horizon, authority, and not-computed labels & not benchmark-independent \\
+\(\OutFam_i\) & output-basis scope, adverse-output retention, relevance predicates & not benchmark-independent \\
+\(D_F\) gates & evidence-threshold and status-transition rules & theorem missing \\
+\end{tabular}
+\end{center}
+
+\section{Local Verdict}
+
+\begin{verdict}[Finite-variation repair fails the current benchmark-independence test]
+The finite-variation repair packet is auditable and more transparent than
+the prior finite survey protocol, but it does not yet establish benchmark
+independence. Admissible source-defined variation can still alter the
+ledger, packet family, horizons, enumerator families, certificate
+exclusions, output bases, and \(D_F\) status gates in ways that change
+localization-relevant outputs or status classifications.
+\end{verdict}
+
+This is a local negative result. It does not reject the \TheoryProgram{} and
+does not reject finite-variation repair as a research path. It blocks
+candidate reconstruction from the present packet.
+
+\section{Next Burden}
+
+\begin{nextburden}[Source-forcing repair or controlled pause]
+The logical next step is not Candidate Constructor and not Gate Chair review.
+The next bounded task should route to an Ontology Formalizer only if the
+Director determines that a narrower source-forcing packet is feasible. That
+packet should state:
+\begin{enumerate}
+    \item a ledger-provenance criterion proving \(H\) source-forced or
+    preserving all admissible \(H'\) as negative controls;
+    \item horizon-universality obligations for \(B_{\min}\), \(B_{\max}\),
+    and source closure depth;
+    \item a source-side meta-grammar for admissible enumerator families;
+    \item a certificate-invariance theorem for kept and omitted cases;
+    \item an output-basis generator that retains adverse source outputs; and
+    \item \(D_F\) theorem obligations for every transition to
+    \(\mathsf{invariant}\).
+\end{enumerate}
+If those burdens cannot be stated without authority expansion or target
+selection, the Director should enter a controlled pause rather than
+authorize candidate reconstruction.
+\end{nextburden}
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 10). \emph{Localization source-basis axiom
+selector-domain finite-variation smuggling audit: Target-import review of
+family generators, horizons, certificates, output bases, and status gates}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260608-023/artifacts/22\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_FINITE\_VARIATION\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+selector-domain finite-variation repair packet: Benchmark-blind family
+generators and evidence gates for D0--DF} [Unpublished manuscript]. The
+Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-022/artifacts/21\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_FINITE\_VARIATION\_REPAIR\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 9). \emph{Localization source-basis axiom
+selector-domain finite survey protocol benchmark-independence refutation:
+Invariance test for sealed packets, enumerators, certificates, output maps,
+and status transitions} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260608-021/artifacts/20\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_FINITE\_SURVEY\_PROTOCOL\_BENCHMARK\_INDEPENDENCE\_REFUTATION.tex}.
+
+\end{document}
