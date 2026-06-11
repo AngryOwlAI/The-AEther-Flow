@@ -74,10 +74,9 @@ Tracked project explainers must implement the project interactive analysis
 contract declared by the Markdown source spec. Use a low-risk
 progressive-disclosure model rather than a heavy app framework:
 
-- Provide a simple/deep reading toggle.
 - Provide section navigation.
-- Use expandable analysis panels for reasoning, constraints, risks, and
-  examples.
+- Use a deep-first reading surface with expandable analysis panels for
+  reasoning, constraints, risks, and examples.
 - Provide source drilldowns that expose the registered source basis.
 - Provide claim-boundary controls that distinguish what the page may and may
   not claim.

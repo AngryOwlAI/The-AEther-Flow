@@ -18,9 +18,8 @@ claim_boundary: "Human-only workflow visualization. It explains existing researc
 human_visual_only: true
 explainer_kind: "workflow_process"
 interaction_model: "progressive_disclosure"
-analysis_depth: "simple_and_deep"
+analysis_depth: "deep"
 required_controls:
-  - "simple_deep_toggle"
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
@@ -68,9 +67,8 @@ separation clear to human readers.
   what workflow, role, or validation boundary it checks.
 - A claim-boundary notice stating that this page is human-only and
   non-authoritative.
-- Progressive-disclosure controls for first-read and deep analysis modes,
-  expandable analysis capsules, source drilldowns, claim-boundary inspection,
-  and a workflow step inspector.
+- Deep-first progressive-disclosure controls for expandable analysis capsules,
+  source drilldowns, claim-boundary inspection, and a workflow step inspector.
 
 ## Required Analysis Capsules
 

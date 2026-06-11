@@ -241,7 +241,6 @@ HTML_EXPLAINER_KINDS = {
     "control_system",
 }
 HTML_CONTROL_VALUES = {
-    "simple_deep_toggle",
     "section_toc",
     "expandable_analysis_panels",
     "source_drilldowns",
@@ -249,7 +248,6 @@ HTML_CONTROL_VALUES = {
     "workflow_step_inspector",
 }
 HTML_UNIVERSAL_REQUIRED_CONTROLS = {
-    "simple_deep_toggle",
     "section_toc",
     "expandable_analysis_panels",
     "source_drilldowns",
@@ -1530,8 +1528,8 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
                 f"{object_id}: interaction_model must be progressive_disclosure"
             )
         analysis_depth = str(frontmatter.get("analysis_depth", "")).strip()
-        if analysis_depth and analysis_depth != "simple_and_deep":
-            report.error(f"{object_id}: analysis_depth must be simple_and_deep")
+        if analysis_depth and analysis_depth != "deep":
+            report.error(f"{object_id}: analysis_depth must be deep")
         required_controls = frontmatter.get("required_controls", [])
         if not isinstance(required_controls, list) or not required_controls:
             report.error(f"{object_id}: required_controls must be a non-empty list")

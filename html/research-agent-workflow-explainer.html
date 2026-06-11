@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="14a8cc30340ccc764f2996c6d15eca5d1b7b62bd419a6ecbc6525e03ff0c761a">
+  <meta name="aether-flow-source-basis-hash" content="00ee9cb88075039383a9dd2555f17f1294ab8a1a667c46f04c8f93a9baf5cfef">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Research-Agent Workflow Explainer</title>
@@ -146,11 +146,6 @@
     .step:nth-child(3), .step:nth-child(4) { background: var(--green-soft); }
     .step:nth-child(5), .step:nth-child(6) { background: var(--amber-soft); }
 
-    .deep-only { display: none; }
-    body.deep-mode .deep-only { display: block; }
-    .deep-nav { display: none; }
-    body.deep-mode .deep-nav { display: inline-flex; }
-
     details {
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -203,11 +198,10 @@
     </header>
 
     <div class="toolbar">
-      <button type="button" data-explainer-control="simple_deep_toggle" aria-pressed="false" id="depth-toggle">Deep view</button>
       <nav data-explainer-control="section_toc" aria-label="Section navigation">
         <a class="nav-link" href="#loop">Loop</a>
         <a class="nav-link" href="#lanes">Lanes</a>
-        <a class="nav-link deep-nav" href="#analysis">Analysis</a>
+        <a class="nav-link" href="#analysis">Analysis</a>
         <a class="nav-link" href="#sources">Sources</a>
         <a class="nav-link" href="#claim-boundary">Claim boundary</a>
       </nav>
@@ -219,32 +213,32 @@
         <article class="step" data-workflow-step="director-decision">
           <h3>1. Director decision</h3>
           <p>Selects one role and one task boundary.</p>
-          <details class="deep-only" data-explainer-control="expandable_analysis_panels"><summary>Inspect step</summary><p>Inputs: tracked state and registries. Outputs: DDR and selected AgentJob boundary. Authority: project or research director.</p></details>
+          <details data-explainer-control="expandable_analysis_panels"><summary>Inspect step</summary><p>Inputs: tracked state and registries. Outputs: DDR and selected AgentJob boundary. Authority: project or research director.</p></details>
         </article>
         <article class="step" data-workflow-step="role-binding">
           <h3>2. Role binding</h3>
           <p>Binds work to a registered role or explicit task overlay.</p>
-          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: role contracts. Outputs: role execution record. Authority: role registry and task allowlist.</p></details>
+          <details><summary>Inspect step</summary><p>Inputs: role contracts. Outputs: role execution record. Authority: role registry and task allowlist.</p></details>
         </article>
         <article class="step" data-workflow-step="agentjob">
           <h3>3. AgentJob</h3>
           <p>Defines allowed reads, writes, outputs, and validators.</p>
-          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: DDR and role boundary. Outputs: strict YAML job contract. Validator concern: allowed paths and required checks.</p></details>
+          <details><summary>Inspect step</summary><p>Inputs: DDR and role boundary. Outputs: strict YAML job contract. Validator concern: allowed paths and required checks.</p></details>
         </article>
         <article class="step" data-workflow-step="bounded-output">
           <h3>4. Bounded output</h3>
           <p>Produces artifacts without widening authority.</p>
-          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: job scope. Outputs: source edits, generated derivatives, or task artifacts. Boundary: no physics promotion by workflow status.</p></details>
+          <details><summary>Inspect step</summary><p>Inputs: job scope. Outputs: source edits, generated derivatives, or task artifacts. Boundary: no physics promotion by workflow status.</p></details>
         </article>
         <article class="step" data-workflow-step="validation">
           <h3>5. Validation</h3>
           <p>Runs deterministic checks before checkpointing.</p>
-          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: live diff and registries. Outputs: pass/fail receipts. Authority: validator scripts, not model judgment.</p></details>
+          <details><summary>Inspect step</summary><p>Inputs: live diff and registries. Outputs: pass/fail receipts. Authority: validator scripts, not model judgment.</p></details>
         </article>
         <article class="step" data-workflow-step="completion-handoff">
           <h3>6. Completion or handoff</h3>
           <p>Records result and next boundary.</p>
-          <details class="deep-only"><summary>Inspect step</summary><p>Inputs: validation results. Outputs: completion YAML or handoff. Boundary: next work remains bounded.</p></details>
+          <details><summary>Inspect step</summary><p>Inputs: validation results. Outputs: completion YAML or handoff. Boundary: next work remains bounded.</p></details>
         </article>
       </div>
     </section>
@@ -263,7 +257,7 @@
       </div>
     </section>
 
-    <section id="analysis" class="section deep-only">
+    <section id="analysis" class="section">
       <h2>Deep Analysis Capsules</h2>
       <div class="capsules">
         <article class="capsule" data-analysis-capsule="bounded-agentjob-loop">
@@ -331,13 +325,5 @@
       </details>
     </section>
   </main>
-  <script>
-    const toggle = document.getElementById("depth-toggle");
-    toggle.addEventListener("click", () => {
-      const deep = document.body.classList.toggle("deep-mode");
-      toggle.setAttribute("aria-pressed", String(deep));
-      toggle.textContent = deep ? "Simple view" : "Deep view";
-    });
-  </script>
 </body>
 </html>

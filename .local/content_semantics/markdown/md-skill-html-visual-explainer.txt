@@ -17,13 +17,13 @@ Rules:
   `human_visual_only: true`.
 - The source spec must also declare the interactive analysis contract:
   `explainer_kind`, `interaction_model: "progressive_disclosure"`,
-  `analysis_depth: "simple_and_deep"`, `required_controls`,
+  `analysis_depth: "deep"`, `required_controls`,
   `source_drilldowns`, and `analysis_capsule_schema`.
 - `explainer_kind` must be one of `project_overview`, `conceptual_model`,
   `workflow_process`, or `control_system`.
-- Every explainer requires `simple_deep_toggle`, `section_toc`,
-  `expandable_analysis_panels`, `source_drilldowns`, and
-  `claim_boundary_toggle`. `workflow_step_inspector` is required for
+- Every explainer requires `section_toc`, `expandable_analysis_panels`,
+  `source_drilldowns`, and `claim_boundary_toggle`.
+  `workflow_step_inspector` is required for
   `workflow_process` and `control_system` explainers.
 - The Markdown body must include `## Required Analysis Capsules` and name each
   capsule field: `premise`, `mechanism`, `source_basis`, `authority_status`,

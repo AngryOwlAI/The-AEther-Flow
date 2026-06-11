@@ -18,9 +18,8 @@ claim_boundary: "Human-only project-system visualization. It explains existing a
 human_visual_only: true
 explainer_kind: "control_system"
 interaction_model: "progressive_disclosure"
-analysis_depth: "simple_and_deep"
+analysis_depth: "deep"
 required_controls:
-  - "simple_deep_toggle"
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
@@ -67,9 +66,8 @@ by this Markdown source spec.
   what authority, governance, or validation boundary it checks.
 - A claim-boundary notice stating that the page is human-only and
   non-authoritative.
-- Progressive-disclosure controls for first-read and deep analysis modes,
-  expandable analysis capsules, source drilldowns, claim-boundary inspection,
-  and a workflow step inspector.
+- Deep-first progressive-disclosure controls for expandable analysis capsules,
+  source drilldowns, claim-boundary inspection, and a workflow step inspector.
 
 ## Required Analysis Capsules
 

@@ -15,9 +15,8 @@ claim_boundary: "Human-only project overview. It summarizes the existing dual-tr
 human_visual_only: true
 explainer_kind: "project_overview"
 interaction_model: "progressive_disclosure"
-analysis_depth: "simple_and_deep"
+analysis_depth: "deep"
 required_controls:
-  - "simple_deep_toggle"
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
@@ -63,8 +62,8 @@ authority chain.
   what boundary or claim-status check it supports.
 - A claim-boundary notice stating that this page is human-only and
   non-authoritative.
-- Progressive-disclosure controls for first-read and deep analysis modes,
-  expandable analysis capsules, source drilldowns, and claim-boundary
+- Deep-first progressive-disclosure controls for expandable analysis capsules,
+  source drilldowns, and claim-boundary
   inspection.
 
 ## Required Analysis Capsules

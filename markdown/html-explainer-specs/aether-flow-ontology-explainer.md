@@ -15,9 +15,8 @@ claim_boundary: "Human-only ontology visualization. It explains the current onto
 human_visual_only: true
 explainer_kind: "conceptual_model"
 interaction_model: "progressive_disclosure"
-analysis_depth: "simple_and_deep"
+analysis_depth: "deep"
 required_controls:
-  - "simple_deep_toggle"
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
@@ -65,8 +64,8 @@ obvious.
   what ontology, benchmark, or authority boundary it checks.
 - A claim-boundary notice stating that this page is human-only and
   non-authoritative.
-- Progressive-disclosure controls for first-read and deep analysis modes,
-  expandable analysis capsules, source drilldowns, and claim-boundary
+- Deep-first progressive-disclosure controls for expandable analysis capsules,
+  source drilldowns, and claim-boundary
   inspection.
 
 ## Required Analysis Capsules

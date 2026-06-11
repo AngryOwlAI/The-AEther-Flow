@@ -218,6 +218,68 @@ class MemorySystemSmokeTests(unittest.TestCase):
             any("missing Required Analysis Capsules section" in error for error in report.errors)
         )
 
+    def test_html_specs_reject_removed_simple_deep_toggle(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/old-toggle.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(
+                "---\n"
+                'title: "Old Toggle"\n'
+                'purpose: "Test removed simple/deep toggle."\n'
+                'audience: "test"\n'
+                'output_path: "html/old-toggle.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "explainer_kind: \"project_overview\"\n"
+                "interaction_model: \"progressive_disclosure\"\n"
+                "analysis_depth: \"simple_and_deep\"\n"
+                "required_controls:\n"
+                "  - \"simple_deep_toggle\"\n"
+                "  - \"section_toc\"\n"
+                "  - \"expandable_analysis_panels\"\n"
+                "  - \"source_drilldowns\"\n"
+                "  - \"claim_boundary_toggle\"\n"
+                "source_drilldowns:\n"
+                '  - "README.md"\n'
+                "analysis_capsule_schema:\n"
+                "  - \"premise\"\n"
+                "  - \"mechanism\"\n"
+                "  - \"source_basis\"\n"
+                "  - \"authority_status\"\n"
+                "  - \"uncertainty\"\n"
+                "  - \"validation_or_test\"\n"
+                "  - \"next_step\"\n"
+                "---\n"
+                "# Old Toggle\n\n"
+                "## Required Analysis Capsules\n\n"
+                "- premise: Test premise.\n"
+                "- mechanism: Test mechanism.\n"
+                "- source_basis: README.md.\n"
+                "- authority_status: explanatory.\n"
+                "- uncertainty: none.\n"
+                "- validation_or_test: marker validation.\n"
+                "- next_step: pass.\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-OLD-TOGGLE",
+                            "path": "markdown/html-explainer-specs/old-toggle.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(any("analysis_depth must be deep" in error for error in report.errors))
+        self.assertTrue(any("unknown required_controls value" in error for error in report.errors))
+
     def test_html_registry_requires_declared_interactive_markers(self) -> None:
         report = self.memory_system.ValidationReport()
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -237,9 +299,8 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "human_visual_only: true\n"
                 "explainer_kind: \"workflow_process\"\n"
                 "interaction_model: \"progressive_disclosure\"\n"
-                "analysis_depth: \"simple_and_deep\"\n"
+                "analysis_depth: \"deep\"\n"
                 "required_controls:\n"
-                "  - \"simple_deep_toggle\"\n"
                 "  - \"section_toc\"\n"
                 "  - \"expandable_analysis_panels\"\n"
                 "  - \"source_drilldowns\"\n"
@@ -273,7 +334,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 '<!doctype html><meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SYNTHETIC">'
                 '<meta name="aether-flow-source-basis-hash" content="spec-hash">'
                 '<meta name="aether-flow-human-visual-only" content="true">'
-                '<div data-explainer-control="simple_deep_toggle"></div>'
                 '<div data-explainer-control="section_toc"></div>',
                 encoding="utf-8",
             )

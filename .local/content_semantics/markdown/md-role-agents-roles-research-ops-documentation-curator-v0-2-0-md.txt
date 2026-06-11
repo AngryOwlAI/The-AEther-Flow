@@ -51,7 +51,7 @@ Each Markdown explainer spec must declare:
 - `human_visual_only: true`
 - `explainer_kind`
 - `interaction_model`
-- `analysis_depth`
+- `analysis_depth: "deep"`
 - `required_controls`
 - `source_drilldowns`
 - `analysis_capsule_schema`

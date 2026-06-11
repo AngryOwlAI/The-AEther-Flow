@@ -98,8 +98,8 @@ Tracked HTML explainers under `html/` are human-only generated derivatives. Each
 The overview explainer is the front-facing hub. It links the ontology and GR
 derivation goal, the staged-autonomy physics/math research-agent harness, and
 the authority / claim-boundary discipline. The tracked pages use a
-progressive-disclosure model with simple/deep views, expandable analysis
-capsules, source drilldowns, and claim-boundary inspection. Those interactions
+deep-first progressive-disclosure model with expandable analysis capsules,
+source drilldowns, and claim-boundary inspection. Those interactions
 help readers explore the project; they do not make generated HTML
 authoritative.
 
