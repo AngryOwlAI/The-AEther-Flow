@@ -1,0 +1,12 @@
+task_id: "RT-20260611-005"
+task_type: "project_system_mermaid_live_server_script_injection_repair"
+status: "completed"
+created_at: "2026-06-11T03:32:00Z"
+objective: "Repair governed Mermaid-backed tracked HTML so local development servers cannot inject live-reload scripts into executable JavaScript string literals, preserving zoom and pan controls under localhost as well as file://."
+current_decision_id: "DDR-20260611-005"
+current_job_id: "AJ-RT-20260611-005-001"
+parent_task_id: "RT-20260611-004"
+requires_human_gate: true
+claim_boundary_id: "CB-PROJECT-SYSTEM-MERMAID-LIVE-SERVER-SCRIPT-INJECTION-001"
+next_recommended_action: "Keep Chrome or localhost smoke checks in the proof set whenever page interaction JavaScript constructs blob HTML documents."
+documentation_impact_id: "DI-RT-20260611-005-001"

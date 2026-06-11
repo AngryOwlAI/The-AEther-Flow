@@ -89,6 +89,10 @@ Tracked HTML with governed Mermaid diagrams must be standalone single-file HTML.
 Render Mermaid to sanitized inline SVG at build/regeneration time and embed the
 SVG inside `.mermaid-canvas`. The browser page may provide zoom, pan, fit, and
 source-inspection controls, but it must not run Mermaid at page load.
+Executable interaction scripts must not contain literal `</body>` or `</html>`
+strings; build exported blob documents through DOM APIs or split closing tags so
+local development servers cannot inject live-reload code into JavaScript string
+literals.
 
 Render with strict Mermaid security:
 

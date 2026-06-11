@@ -536,7 +536,15 @@ flowchart TD
         const clone = svgNode.cloneNode(true);
         clone.style.width = "";
         clone.style.height = "";
-        const page = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Research-Control Validation Flow</title><style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f8fbff;padding:32px;box-sizing:border-box}svg{max-width:100%;height:auto}</style></head><body>${clone.outerHTML}</body></html>`;
+        const doc = document.implementation.createHTMLDocument("Research-Control Validation Flow");
+        const meta = doc.createElement("meta");
+        meta.setAttribute("charset", "utf-8");
+        doc.head.appendChild(meta);
+        const style = doc.createElement("style");
+        style.textContent = "body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f8fbff;padding:32px;box-sizing:border-box}svg{max-width:100%;height:auto}";
+        doc.head.appendChild(style);
+        doc.body.appendChild(clone);
+        const page = "<!doctype html>\n" + doc.documentElement.outerHTML;
         window.open(URL.createObjectURL(new Blob([page], { type: "text/html" })), "_blank");
       }
 

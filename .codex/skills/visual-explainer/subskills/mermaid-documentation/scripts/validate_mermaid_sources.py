@@ -69,6 +69,8 @@ ZOOM_LABEL_RE = re.compile(
 )
 STALE_ZOOM_LABELS = {"Loading", "Render failed", "Local server required"}
 RENDERER_PREFIX = "mermaid@11.15.0;mermaid-inline-svg-renderer@"
+EXECUTABLE_SCRIPT_TYPES = {"", "module", "text/javascript", "application/javascript"}
+SCRIPT_LITERAL_CLOSE_RE = re.compile(r"</(?:body|html)\s*>", re.I)
 FIRST_LINE_RE = re.compile(
     r"^(flowchart|graph|sequenceDiagram|stateDiagram-v2|stateDiagram|"
     r"classDiagram-v2|classDiagram|erDiagram|gantt|timeline|gitGraph|"
@@ -499,6 +501,14 @@ def validate_html_runtime_policy(
         result.errors.append(f"{relative}: governed Mermaid HTML must not execute or import Mermaid in the browser")
     if ELK_LAYOUT_RE.search(text):
         result.errors.append(f"{relative}: tracked HTML must not use layout \"elk\" without a local ELK runtime")
+    for match in SCRIPT_RE.finditer(text):
+        script_type = attr_value(match.group("attrs"), "type").strip().lower()
+        if script_type not in EXECUTABLE_SCRIPT_TYPES:
+            continue
+        if SCRIPT_LITERAL_CLOSE_RE.search(match.group("body")):
+            result.errors.append(
+                f"{relative}: executable script must not contain literal closing body/html tags"
+            )
 
 
 def validate_html_parity(

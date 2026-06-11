@@ -749,6 +749,26 @@ class MemorySystemSmokeTests(unittest.TestCase):
             any("must not execute or import Mermaid in the browser" in error for error in result.errors)
         )
 
+    def test_mermaid_validator_rejects_executable_script_literal_close_tags(self) -> None:
+        validator = load_mermaid_validator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            write_mermaid_spec(root)
+            write_governed_html(
+                root,
+                runtime_script=(
+                    "<script>\n"
+                    "  const page = '<!doctype html><body></body></html>';\n"
+                    "</script>\n"
+                ),
+            )
+            result = validator.validate_mermaid_sources(
+                root,
+                [mermaid_markdown_row("markdown/html-explainer-specs/synthetic.md")],
+                [mermaid_html_row()],
+            )
+        self.assertTrue(any("literal closing body/html tags" in error for error in result.errors))
+
     def test_mermaid_validator_accepts_ordinary_markdown_with_governed_id(self) -> None:
         validator = load_mermaid_validator()
         with tempfile.TemporaryDirectory() as tmpdir:
