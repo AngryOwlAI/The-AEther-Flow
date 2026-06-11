@@ -88,6 +88,30 @@ progressive-disclosure model rather than a heavy app framework:
   not claim.
 - Provide workflow step inspectors for workflow and control-system pages.
 
+Tracked project explainers must also implement the flexible presentation
+contract declared by the Markdown source spec:
+
+- `presentation_profile` names the layout archetype, not hidden content rules.
+- `layout_intent` explains how this page should adapt the profile.
+- `required_content_blocks` names the page-local factual obligations.
+- Each generated content block must appear as `data-content-block="<id>"`.
+- Each generated content block must contain at least one `data-source-path`.
+
+Allowed presentation profiles are `atlas_hub`, `role_catalog`,
+`format_ladder`, `memory_system_map`, `workflow_lifecycle`,
+`technical_requirements`, `conceptual_model`, and `claim_boundary_map`.
+Choose the visual form that best fits the subject while preserving source
+evidence: atlas cards, role catalogs, format matrices, tier tables, memory
+maps, workflow timelines, claim-boundary panels, or source inspectors are all
+valid when the spec supports them.
+
+Mermaid is profile-guided, not mandatory. `memory_system_map`,
+`workflow_lifecycle`, `claim_boundary_map`, and `atlas_hub` usually merit a
+governed Mermaid overview. `role_catalog`, `format_ladder`, and
+`technical_requirements` may be clearer as tables, matrices, tier cards, or
+catalog panels. Do not add a full deterministic HTML generator; render
+creatively from the spec while keeping structural evidence markers intact.
+
 For the shared three-layer model (`High Level, Operational, Evidence`), stack
 the three layer sections vertically and let cards inside each layer auto-fit:
 `.layer-strip { grid-template-columns: 1fr; }` and
@@ -95,6 +119,9 @@ the three layer sections vertically and let cards inside each layer auto-fit:
 Do not place a fixed three-column card grid inside a fixed three-column layer
 grid; it makes prose unreadable. Use `overflow-wrap: break-word` for normal
 text and reserve `overflow-wrap: anywhere` for `code` and `pre`.
+For analysis capsule rows, explicitly allow the `dl` grid contents to shrink:
+set capsule rows, `dt`, and `dd` to `min-width: 0` and use
+`grid-template-columns: minmax(0, 1fr)` on the capsule `dl`.
 
 Deep-view panels should use analysis capsules with these fields: `premise`,
 `mechanism`, `source_basis`, `authority_status`, `uncertainty`,

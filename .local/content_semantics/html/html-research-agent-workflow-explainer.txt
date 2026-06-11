@@ -1,65 +1,167 @@
 Research System Explainer
-Workflow drilldown
+workflow_lifecycle
 Research System Explainer
-A detailed view of how the project turns questions into bounded, role-constrained, validator-checked research transactions.
-Visual system
-Research atlas
+Show how the project research system uses Director decisions, AgentJobs, role contracts, validation, completions, registries, and handoffs to make theoretical work auditable.
+Layout intent
+Use a workflow lifecycle with a concrete object-path trace, state diagrams, and evidence panels for task, AgentJob, role, artifact, completion, handoff, and registry records.
 Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER
-Drilldowns
-Three Layers
+Content Blocks
 Diagrams
 Workflow
 Analysis
 Sources
 Boundary
-Atlas navigation
-Hub And Drilldowns
-Each page uses the same high-level, operational, and evidence layers.
-Hub
-Return to the research-atlas hub.
-Role routing
-Inspect how roles are selected.
-Claim gates
-Inspect how claim status is controlled.
-Three-layer model
-High Level, Operational, Evidence
-High-Level Model
-Purpose
-Make theoretical work auditable instead of conversationally drifting.
-Director
-Selects one bounded role/job boundary from tracked state.
-AgentJob
-Binds objective, reads, writes, outputs, validators, and claim boundary.
-Receipts
-Completions, registries, and handoffs preserve the result and next state.
-Operational Model
-Resolve state
-Start from tracked task state, latest handoff, and registries.
-Open one job
-The Director creates at most one bounded AgentJob per invocation.
-Execute role
-The selected execution role works only inside its allowlist and constraints.
-Validate and hand off
-Validators, completion records, and handoffs decide what can safely continue.
-Low-Level Evidence Model
-Task state
-research_control/tasks/<task_id>/00_TASK.yaml
-Director decision
-research_control/tasks/<task_id>/DDR-*.md
-AgentJob
-research_control/tasks/<task_id>/jobs/*.yaml
-Completion
-research_control/tasks/<task_id>/jobs/completions/*.yaml
-Registries
-AGENT_JOB_REGISTRY.csv and DIRECTOR_DECISION_REGISTRY.csv
-Why this structure matters
-The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+Required content blocks
+Source-Backed Coverage
+Every declared block carries local source-path evidence while the visual form adapts to the page profile.
+State Entry
+README.md
+AGENTS.md
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+9. next handoff
+The next state is preserved for continuation.
+10. registries
+Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+Director Decision
+research_control/README.md
+registries/AGENT_JOB_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+9. next handoff
+The next state is preserved for continuation.
+10. registries
+Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+Agentjob Lifecycle
+research_control/README.md
+registries/AGENT_JOB_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+9. next handoff
+The next state is preserved for continuation.
+10. registries
+Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+Role Execution
+registries/ROLE_EXECUTION_REGISTRY.csv
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+9. next handoff
+The next state is preserved for continuation.
+10. registries
+Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+Validation Completion Handoff
+research_control/README.md
+registries/AGENT_JOB_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+9. next handoff
+The next state is preserved for continuation.
+10. registries
+Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+Registry Update
+README.md
+AGENTS.md
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+9. next handoff
+The next state is preserved for continuation.
+10. registries
+Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+Presentation contract
+Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
 Governed Mermaid
 Research System Loop
-Drag to pan. Use controls to zoom or fit.
+Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -90,7 +192,7 @@ Diagram source
 flowchart TD State["Tracked state and latest handoff"] --> Director["Director decision"] Director --> Job["Bounded AgentJob"] Job --> Role["Execution role"] Role --> Outputs["Allowed outputs"] Outputs --> Validators["Validators and diff gates"] Validators --> Completion["Completion record"] Completion --> Handoff["Next handoff"] Handoff --> State Validators --> Registry["Registry updates"] Registry --> State
 Governed Mermaid
 Agentjob Lifecycle
-Drag to pan. Use controls to zoom or fit.
+Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -122,93 +224,81 @@ Blocked
 HandoffReady
 Diagram source
 stateDiagram-v2 [*] --> Proposed Proposed --> Active: Director selects role Active --> Executing: allowed reads and writes Executing --> Validating: outputs produced Validating --> Completed: validators pass Validating --> Blocked: validator or boundary failure Completed --> HandoffReady: completion recorded Blocked --> HandoffReady: obstruction recorded HandoffReady --> [*]
-Operational inspection
-Workflow process Steps
-01
-State
-Tracked handoff and registries define the starting boundary.
-02
-Decision
-Director selects the role and objective.
-03
-Job
-AgentJob constrains allowed source classes and writes.
-04
-Execution
-Role produces only expected outputs.
-05
-Validation
-Diff, registry, claim, memory, and test checks run.
-06
-Handoff
-Next action or obstruction is preserved.
-Deep analysis
-Analysis Capsules
-Each capsule uses the required source-backed schema.
-Bounded Transaction
+Workflow inspector
+Inspectable Object Path
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+Analysis capsules
+Claim-Aware Analysis
+Bounded Research Transaction
 Premise
-The research system advances through bounded transactions, not open-ended edits.
+The research system advances through bounded transactions rather than open-ended editing.
 Mechanism
-Director decisions create AgentJobs, role contracts constrain execution, and validators check outputs before handoff.
+A Director decision selects a role and objective; an AgentJob binds reads, writes, outputs, validators, and claim boundaries; completion and handoff records preserve the result.
 Source Basis
-research_control/README.md, research_control/AGENTS.md, and control registries.
+`research_control/README.md`, `research_control/AGENTS.md`, `registries/AGENT_JOB_REGISTRY.csv`, and `registries/DIRECTOR_DECISION_REGISTRY.csv`.
 Authority Status
-Project-control explanation, not scientific proof.
+Project-control explanation; it does not prove a physics result.
 Uncertainty
-A completed transaction may record progress, obstruction, repair, or negative result.
+A completed transaction may preserve progress, obstruction, or a negative result without establishing the broader theory.
 Validation Or Test
-Inspect task files, completion records, registry rows, command receipts, and diff boundaries.
+Check task files, completion records, registry rows, validator receipts, and diff boundaries before accepting a transaction.
 Next Step
-Use role routing to understand why a specific execution role was selected.
-Two Modes
+Use the role-routing explainer to inspect how roles are selected and constrained.
+Two Continuation Modes
 Premise
-Physics continuation and project-system improvement are separate modes.
+Physics continuation and project-system improvement are separate modes with different authority boundaries.
 Mechanism
-continue-research handles physics state; improve-project-system handles roles, validators, docs, and memory machinery.
+`continue-research` resolves tracked research state and may open one bounded physics AgentJob; `improve-project-system` handles roles, validators, docs, memory tooling, and generated-document pipelines.
 Source Basis
-continue-research and improve-project-system skills plus AGENTS.md.
+`.codex/skills/continue-research/SKILL.md`, `.codex/skills/improve-project-system/SKILL.md`, and `AGENTS.md`.
 Authority Status
 Workflow explanation only.
 Uncertainty
-Improving the system can improve reliability without changing scientific status.
+Project-system improvements can strengthen the research system without changing scientific claim status.
 Validation Or Test
-Check skill, role, AgentJob, and claim-boundary rows for the selected mode.
+Verify skill, role, and claim-boundary rows for the selected mode.
 Next Step
-Keep workflow completion separate from claim acceptance.
+Keep workflow status separate from claim promotion.
 Source drilldowns
-What To Inspect
+Inspectable Source Basis
 README.md
-Why it matters:
-Two-track project and staged-autonomy framing.
-Use it to check:
-Whether workflow language stays separate from physics proof claims.
+README.md is part of the source basis for this generated human-only page.
 AGENTS.md
-Why it matters:
-Root project identity and authority hierarchy.
-Use it to check:
-Whether generated workflow explanations remain human-only.
+AGENTS.md is part of the source basis for this generated human-only page.
 research_control/AGENTS.md
-Why it matters:
-Scoped rules for tracked control state.
-Use it to check:
-Whether task state, jobs, completions, and handoffs are treated as tracked records.
+research_control/AGENTS.md is part of the source basis for this generated human-only page.
 research_control/README.md
-Why it matters:
-Authority model, one-job rule, and validation commands.
-Use it to check:
-How Director decisions, AgentJobs, validation, and handoffs fit together.
+research_control/README.md is part of the source basis for this generated human-only page.
 .codex/skills/continue-research/SKILL.md
-Why it matters:
-Physics continuation boundary.
-Use it to check:
-When the project is continuing scientific work.
+.codex/skills/continue-research/SKILL.md is part of the source basis for this generated human-only page.
 .codex/skills/improve-project-system/SKILL.md
-Why it matters:
-Project-system improvement boundary.
-Use it to check:
-When work belongs to roles, validators, memory tooling, docs, or generated-doc pipelines.
+.codex/skills/improve-project-system/SKILL.md is part of the source basis for this generated human-only page.
+All source materials
+README.md
+AGENTS.md
+research_control/AGENTS.md
+research_control/README.md
+.codex/skills/continue-research/SKILL.md
+.codex/skills/improve-project-system/SKILL.md
+registries/AGENT_JOB_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
+registries/RESEARCH_TASK_REGISTRY.csv
 Claim boundary
-Human-Only Explanation
-This page explains the research system. It does not certify that any physics claim is true.
-Not allowed:
-physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.
+Human-Only Non-Authority Boundary
+Human-only research-system visualization. It explains existing research-control and project-system workflow structure without changing routing behavior, role authority, validators, or physics claim status.

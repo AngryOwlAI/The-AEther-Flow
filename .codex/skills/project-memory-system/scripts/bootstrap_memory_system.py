@@ -235,6 +235,9 @@ HTML_SPEC_REQUIRED_FIELDS = {
     "required_controls",
     "source_drilldowns",
     "analysis_capsule_schema",
+    "presentation_profile",
+    "layout_intent",
+    "required_content_blocks",
 }
 HTML_EXPLAINER_KINDS = {
     "project_overview",
@@ -242,6 +245,17 @@ HTML_EXPLAINER_KINDS = {
     "workflow_process",
     "control_system",
 }
+HTML_PRESENTATION_PROFILES = {
+    "atlas_hub",
+    "role_catalog",
+    "format_ladder",
+    "memory_system_map",
+    "workflow_lifecycle",
+    "technical_requirements",
+    "conceptual_model",
+    "claim_boundary_map",
+}
+HTML_CONTENT_BLOCK_ID_RE = re.compile(r"^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$")
 HTML_CONTROL_VALUES = {
     "section_toc",
     "expandable_analysis_panels",
@@ -927,6 +941,31 @@ def html_required_controls(frontmatter: dict[str, object]) -> set[str]:
     if not isinstance(controls, list):
         return set()
     return {str(control).strip() for control in controls if str(control).strip()}
+
+
+def html_required_content_blocks(frontmatter: dict[str, object]) -> list[str]:
+    blocks = frontmatter.get("required_content_blocks", [])
+    if not isinstance(blocks, list):
+        return []
+    return [str(block).strip() for block in blocks if str(block).strip()]
+
+
+def html_content_block_evidence_presence(html_text: str) -> dict[str, bool]:
+    pattern = re.compile(
+        HTML_DATA_ATTR_RE.format(attr=re.escape("data-content-block")),
+        re.IGNORECASE,
+    )
+    matches = list(pattern.finditer(html_text))
+    block_evidence: dict[str, bool] = {}
+    for index, match in enumerate(matches):
+        block_id = match.group(1).strip()
+        next_start = matches[index + 1].start() if index + 1 < len(matches) else len(html_text)
+        segment = html_text[match.end() : next_start]
+        block_evidence[block_id] = block_evidence.get(block_id, False) or (
+            re.search(HTML_DATA_ATTR_RE.format(attr=re.escape("data-source-path")), segment, re.IGNORECASE)
+            is not None
+        )
+    return block_evidence
 
 
 def generate_html_rows(now: str, markdown_rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -1616,6 +1655,12 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
         explainer_kind = str(frontmatter.get("explainer_kind", "")).strip()
         if explainer_kind and explainer_kind not in HTML_EXPLAINER_KINDS:
             report.error(f"{object_id}: invalid explainer_kind")
+        presentation_profile = str(frontmatter.get("presentation_profile", "")).strip()
+        if presentation_profile and presentation_profile not in HTML_PRESENTATION_PROFILES:
+            report.error(f"{object_id}: invalid presentation_profile")
+        layout_intent = str(frontmatter.get("layout_intent", "")).strip()
+        if "layout_intent" in frontmatter and not layout_intent:
+            report.error(f"{object_id}: layout_intent must be nonblank")
         interaction_model = str(frontmatter.get("interaction_model", "")).strip()
         if interaction_model and interaction_model != "progressive_disclosure":
             report.error(
@@ -1673,12 +1718,36 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
             }
             if capsule_fields != HTML_CAPSULE_FIELDS:
                 report.error(f"{object_id}: analysis_capsule_schema is incomplete")
+        required_content_blocks = frontmatter.get("required_content_blocks", [])
+        if not isinstance(required_content_blocks, list) or not required_content_blocks:
+            report.error(
+                f"{object_id}: required_content_blocks must be a non-empty list"
+            )
+            content_block_values: list[str] = []
+        else:
+            content_block_values = [
+                str(block).strip()
+                for block in required_content_blocks
+                if str(block).strip()
+            ]
+            if len(content_block_values) != len(set(content_block_values)):
+                report.error(f"{object_id}: duplicate required_content_blocks value")
+            for block_id in content_block_values:
+                if not HTML_CONTENT_BLOCK_ID_RE.match(block_id):
+                    report.error(f"{object_id}: invalid required_content_blocks ID")
         if "## Required Analysis Capsules" not in body:
             report.error(f"{object_id}: missing Required Analysis Capsules section")
         for field_name in sorted(capsule_fields):
             if f"{field_name}:" not in body:
                 report.error(
                     f"{object_id}: Required Analysis Capsules missing {field_name}"
+                )
+        if "## Required Content Blocks" not in body:
+            report.error(f"{object_id}: missing Required Content Blocks section")
+        for block_id in sorted(content_block_values):
+            if f"{block_id}:" not in body:
+                report.error(
+                    f"{object_id}: Required Content Blocks missing {block_id}"
                 )
 
 
@@ -1771,6 +1840,17 @@ def validate_html_registry(
             source_paths = html_data_values("data-source-path", html_text)
             if not source_paths:
                 report.error(f"{object_id}: source drilldowns missing data-source-path")
+        declared_content_blocks = html_required_content_blocks(frontmatter)
+        content_block_evidence = html_content_block_evidence_presence(html_text)
+        for block_id in declared_content_blocks:
+            if block_id not in content_block_evidence:
+                report.error(
+                    f"{object_id}: missing HTML content block marker {block_id}"
+                )
+            elif not content_block_evidence[block_id]:
+                report.error(
+                    f"{object_id}: content block {block_id} missing source-path evidence"
+                )
 
 
 def load_mermaid_validator_module():

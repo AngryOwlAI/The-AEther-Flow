@@ -1,0 +1,277 @@
+Memory System Explainer
+memory_system_map
+Memory System Explainer
+Explain the source-first memory system: canonical CSV registries, tracked generated wiki notes, local Obsidian vault, semantic extracts, SQLite index, and query surface.
+Layout intent
+Use a layered memory map: canonical CSV memory spine, tracked generated wiki surface, local Obsidian reader vault, semantic/query layer, and authority-boundary panels.
+Authority
+Human-only generated derivative
+Source basis
+MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER
+Content Blocks
+Diagrams
+Workflow
+Analysis
+Sources
+Boundary
+Required content blocks
+Source-Backed Coverage
+Every declared block carries local source-path evidence while the visual form adapts to the page profile.
+Csv Memory Spine
+registries/FILE_OBJECT_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv
+.codex/skills/project-memory-system/SKILL.md
+Layer
+Path
+Authority/use
+CSV memory spine
+registries/*.csv
+Canonical spine for identity, provenance, routing, source hashes, ownership, validation, and generated-output binding.
+Tracked generated wiki
+wiki/
+Repo-visible generated notes and indexes. Useful for navigation; not independent authority.
+Local Obsidian vault
+.local/obsidian/aether-flow-wiki/
+Generated local reader vault and optional operator aid; noncanonical.
+Semantic/query layer
+.local/content_semantics/ + .local/memory_index/memory.sqlite
+Agent-queryable local search surfaces and SQLite index.
+Tracked Generated Wiki
+registries/FILE_OBJECT_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv
+.codex/skills/project-memory-system/SKILL.md
+Layer
+Path
+Authority/use
+CSV memory spine
+registries/*.csv
+Canonical spine for identity, provenance, routing, source hashes, ownership, validation, and generated-output binding.
+Tracked generated wiki
+wiki/
+Repo-visible generated notes and indexes. Useful for navigation; not independent authority.
+Local Obsidian vault
+.local/obsidian/aether-flow-wiki/
+Generated local reader vault and optional operator aid; noncanonical.
+Semantic/query layer
+.local/content_semantics/ + .local/memory_index/memory.sqlite
+Agent-queryable local search surfaces and SQLite index.
+Local Obsidian Vault
+registries/FILE_OBJECT_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv
+.codex/skills/project-memory-system/SKILL.md
+Layer
+Path
+Authority/use
+CSV memory spine
+registries/*.csv
+Canonical spine for identity, provenance, routing, source hashes, ownership, validation, and generated-output binding.
+Tracked generated wiki
+wiki/
+Repo-visible generated notes and indexes. Useful for navigation; not independent authority.
+Local Obsidian vault
+.local/obsidian/aether-flow-wiki/
+Generated local reader vault and optional operator aid; noncanonical.
+Semantic/query layer
+.local/content_semantics/ + .local/memory_index/memory.sqlite
+Agent-queryable local search surfaces and SQLite index.
+Semantic Query Layer
+registries/FILE_OBJECT_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv
+.codex/skills/project-memory-system/SKILL.md
+Layer
+Path
+Authority/use
+CSV memory spine
+registries/*.csv
+Canonical spine for identity, provenance, routing, source hashes, ownership, validation, and generated-output binding.
+Tracked generated wiki
+wiki/
+Repo-visible generated notes and indexes. Useful for navigation; not independent authority.
+Local Obsidian vault
+.local/obsidian/aether-flow-wiki/
+Generated local reader vault and optional operator aid; noncanonical.
+Semantic/query layer
+.local/content_semantics/ + .local/memory_index/memory.sqlite
+Agent-queryable local search surfaces and SQLite index.
+Authority Boundaries
+AGENTS.md
+README.md
+registries/FILE_OBJECT_REGISTRY.csv
+Layer
+Path
+Authority/use
+CSV memory spine
+registries/*.csv
+Canonical spine for identity, provenance, routing, source hashes, ownership, validation, and generated-output binding.
+Tracked generated wiki
+wiki/
+Repo-visible generated notes and indexes. Useful for navigation; not independent authority.
+Local Obsidian vault
+.local/obsidian/aether-flow-wiki/
+Generated local reader vault and optional operator aid; noncanonical.
+Semantic/query layer
+.local/content_semantics/ + .local/memory_index/memory.sqlite
+Agent-queryable local search surfaces and SQLite index.
+Presentation contract
+Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
+Governed Mermaid
+Memory Surface Map
+Build-time inline SVG will be rendered from the preserved source.
++
+-
+Fit
+Registered
+sources
+TeX
+and
+Markdown
+registries/*.csv
+canonical
+memory
+spine
+wiki/
+tracked
+generated
+notes
+and
+indexes
+FILE_OBJECT_REGISTRY.cs
+v
+generated
+query
+surface
+.local/obsidian/aether-flow
+-wiki/
+local
+reader
+vault
+.local/content_semantics/
+semantic
+extracts
+.local/memory_index/mem
+ory.sqlite
+local
+query
+index
+query_memory.py
+lookup
+and
+search
+Diagram source
+flowchart TD Sources["Registered sources<br/>TeX and Markdown"] --> Registries["registries/*.csv<br/>canonical memory spine"] Registries --> Wiki["wiki/<br/>tracked generated notes and indexes"] Registries --> FileRegistry["FILE_OBJECT_REGISTRY.csv<br/>generated query surface"] Wiki --> Obsidian[".local/obsidian/aether-flow-wiki/<br/>local reader vault"] Sources --> Semantics[".local/content_semantics/<br/>semantic extracts"] Registries --> Semantics Semantics --> SQLite[".local/memory_index/memory.sqlite<br/>local query index"] Obsidian --> Query["query_memory.py<br/>lookup and search"] SQLite --> Query
+Governed Mermaid
+Memory Regeneration Flow
+Build-time inline SVG will be rendered from the preserved source.
++
+-
+Fit
+Edit
+canonical
+source
+or
+registry
+bootstrap_memory_system
+.py
+Format
+registries
+and
+hashes
+Generated
+wiki
+notes
+FILE_OBJECT_REGISTRY.cs
+v
+extract_content_semantics.
+py
+sync_obsidian_vault.py
+memory.sqlite
+query_memory.py
+make
+validate-memory
+Diagram source
+flowchart TD Edit["Edit canonical source or registry"] --> Bootstrap["bootstrap_memory_system.py"] Bootstrap --> FormatRegistries["Format registries and hashes"] FormatRegistries --> WikiNotes["Generated wiki notes"] FormatRegistries --> Master["FILE_OBJECT_REGISTRY.csv"] WikiNotes --> Semantics["extract_content_semantics.py"] Master --> Semantics Semantics --> Vault["sync_obsidian_vault.py"] Vault --> Index["memory.sqlite"] Index --> Query["query_memory.py"] Query --> Validate["make validate-memory"]
+Workflow inspector
+Inspectable Object Path
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+Analysis capsules
+Claim-Aware Analysis
+CSV Is The Memory Spine
+Premise
+The repository memory system is source-first and registry-backed.
+Mechanism
+Format-specific CSV registries bind object identity, source path, source hash, generated outputs, owner skill, authority status, and validation status; generated surfaces are derived from those rows.
+Source Basis
+`AGENTS.md`, `README.md`, `.codex/skills/project-memory-system/SKILL.md`, and `registries/*.csv`.
+Authority Status
+Human-only explanation; CSV registries and registered sources carry authority.
+Uncertainty
+Generated surfaces can become stale if bootstrap or local sync has not been run after source changes.
+Validation Or Test
+Run memory bootstrap, validate-only, and `make validate-memory` when full local retrieval validation is in scope.
+Next Step
+Inspect the relevant format-specific registry row before relying on a wiki, vault, or semantic search result.
+Retrieval Surfaces Are Derived
+Premise
+Wiki, Obsidian, semantic extracts, and SQLite exist to make source memory easier to inspect and query.
+Mechanism
+Scripts regenerate tracked wiki notes, local vault files, content semantics, relationship graphs, and query indexes from registered sources and registries.
+Source Basis
+`.codex/skills/obsidian-wiki/SKILL.md`, `registries/WIKI_ARTIFACT_REGISTRY.csv`, and `registries/CONTENT_SEMANTIC_REGISTRY.csv`.
+Authority Status
+Explanation of generated noncanonical access layers.
+Uncertainty
+Local `.local/` surfaces may differ by machine and are not Git-authoritative.
+Validation Or Test
+Validate with `lint_obsidian_vault.py --require-index` and query smoke checks when local retrieval is needed.
+Next Step
+Treat retrieval hits as pointers back to registered source rows.
+Source drilldowns
+Inspectable Source Basis
+README.md
+README.md is part of the source basis for this generated human-only page.
+AGENTS.md
+AGENTS.md is part of the source basis for this generated human-only page.
+registries/FILE_OBJECT_REGISTRY.csv
+registries/FILE_OBJECT_REGISTRY.csv is part of the source basis for this generated human-only page.
+registries/WIKI_ARTIFACT_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv is part of the source basis for this generated human-only page.
+registries/CONTENT_SEMANTIC_REGISTRY.csv
+registries/CONTENT_SEMANTIC_REGISTRY.csv is part of the source basis for this generated human-only page.
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/project-memory-system/SKILL.md is part of the source basis for this generated human-only page.
+.codex/skills/obsidian-wiki/SKILL.md
+.codex/skills/obsidian-wiki/SKILL.md is part of the source basis for this generated human-only page.
+All source materials
+README.md
+AGENTS.md
+registries/MARKDOWN_SOURCE_REGISTRY.csv
+registries/TEX_SOURCE_REGISTRY.csv
+registries/PDF_DERIVATIVE_REGISTRY.csv
+registries/HTML_EXPLAINER_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv
+registries/CONTENT_SEMANTIC_REGISTRY.csv
+registries/FILE_OBJECT_REGISTRY.csv
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/markdown-wiki/SKILL.md
+.codex/skills/tex-wiki/SKILL.md
+.codex/skills/pdf-derivative-build/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/obsidian-wiki/SKILL.md
+Claim boundary
+Human-Only Non-Authority Boundary
+Human-only memory-system visualization. It explains existing source-first memory, registry, wiki, Obsidian, semantic, and query surfaces without changing registry authority, generated-output boundaries, routing behavior, validators, or scientific claim status.

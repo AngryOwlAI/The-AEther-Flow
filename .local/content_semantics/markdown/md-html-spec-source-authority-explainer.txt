@@ -15,17 +15,26 @@ source_materials:
   - "registries/WIKI_ARTIFACT_REGISTRY.csv"
   - "registries/PDF_DERIVATIVE_REGISTRY.csv"
   - "registries/FILE_OBJECT_REGISTRY.csv"
+  - "research_control/design/html_explainer_flexible_presentation_contract.md"
 claim_boundary: "Human-only source-authority visualization. It explains existing authority hierarchy and generated-derivative boundaries without changing registry authority, source status, scientific claims, or control contracts."
 human_visual_only: true
 explainer_kind: "control_system"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "format_ladder"
+layout_intent: "Use an authority/use-case matrix first, with file extensions inside each row, then provide drilldowns for source authority, generated derivatives, local retrieval surfaces, and validation evidence."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
   - "workflow_step_inspector"
+required_content_blocks:
+  - "authority_ladder"
+  - "format_use_case_matrix"
+  - "generated_derivatives"
+  - "local_retrieval_surfaces"
+  - "validation_evidence"
 source_drilldowns:
   - "README.md"
   - "AGENTS.md"
@@ -70,6 +79,12 @@ The page should make the hierarchy explicit:
    Obsidian vault files, and `.local/` caches are derivative or scratch
    surfaces.
 
+The page should use an authority/use-case matrix rather than an extension-only
+list. Rows should include format or lane, primary use, authority status, who or
+what edits it, generated/authored status, validation, and examples. Cover
+`.tex`, `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic
+extracts, `.meta.json`, and `.local/` surfaces.
+
 ## Required Visual Structure
 
 - Responsive containment: navigation chips, grids, tables, code paths, source
@@ -87,6 +102,8 @@ The page should make the hierarchy explicit:
   registries and parity.
 - Low-level evidence model: registry rows, source hashes, generated-output
   links, source-basis metadata, and validation commands.
+- Format matrix: explain what a file means in this project before naming the
+  extension.
 - Workflow step inspector for derivative generation.
 - Source drilldowns and claim-boundary inspection.
 
@@ -119,6 +136,22 @@ flowchart TD
   Banner --> Validate
   Link --> Validate
 ```
+
+## Required Content Blocks
+
+- authority_ladder: Explain canonical science sources, registry authority,
+  registered Markdown authority, generated derivatives, and `.local/` scratch
+  boundaries.
+- format_use_case_matrix: Provide an authority/use-case matrix covering `.tex`,
+  `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic extracts,
+  `.meta.json`, and `.local/`.
+- generated_derivatives: Explain generated wiki notes, indexes, PDFs, tracked
+  HTML, metadata sidecars, and why they are not independent authority.
+- local_retrieval_surfaces: Explain local Obsidian vault, content semantics,
+  semantic index, scratch builds, caches, and retrieval outputs as
+  noncanonical access layers.
+- validation_evidence: Explain source hashes, source-basis metadata, registry
+  rows, Mermaid parity, bootstrap validation, and documentation-impact checks.
 
 ## Required Analysis Capsules
 

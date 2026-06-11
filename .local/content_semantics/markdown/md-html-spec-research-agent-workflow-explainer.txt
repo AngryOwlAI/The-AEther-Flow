@@ -20,12 +20,21 @@ human_visual_only: true
 explainer_kind: "workflow_process"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "workflow_lifecycle"
+layout_intent: "Use a workflow lifecycle with a concrete object-path trace, state diagrams, and evidence panels for task, AgentJob, role, artifact, completion, handoff, and registry records."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
   - "workflow_step_inspector"
+required_content_blocks:
+  - "state_entry"
+  - "director_decision"
+  - "agentjob_lifecycle"
+  - "role_execution"
+  - "validation_completion_handoff"
+  - "registry_update"
 source_drilldowns:
   - "README.md"
   - "AGENTS.md"
@@ -64,6 +73,11 @@ The page should keep two boundaries visible:
 - `improve-project-system` is for roles, validators, memory tooling, docs, and
   generated-doc pipelines.
 
+The page should include a concrete object path for task execution:
+`research_control/program_state.yaml` -> latest `handoff-*` -> Director
+decision -> `00_TASK.yaml` -> `jobs/AJ-*.yaml` -> `roles/*.yaml` ->
+`artifacts/*` -> completion YAML -> next handoff -> registries.
+
 ## Required Visual Structure
 
 - Responsive containment: navigation chips, grids, tables, code paths, source
@@ -82,6 +96,9 @@ The page should keep two boundaries visible:
   completion -> handoff.
 - Low-level evidence model: task directories, DDRs, AgentJob YAML, execution
   role records, completions, handoffs, and registries.
+- Concrete trace: show the file/path lifecycle from `program_state.yaml` and a
+  latest handoff through task YAML, job YAML, role YAML, artifacts,
+  completion, next handoff, and registry updates.
 - Workflow step inspector for each operational step.
 - Source drilldowns and claim-boundary inspection.
 
@@ -115,6 +132,21 @@ stateDiagram-v2
   Blocked --> HandoffReady: obstruction recorded
   HandoffReady --> [*]
 ```
+
+## Required Content Blocks
+
+- state_entry: Explain tracked state entry through `program_state.yaml` and
+  latest handoff resolution.
+- director_decision: Explain how the Director decision selects the bounded
+  role, claim boundary, and task objective.
+- agentjob_lifecycle: Explain `00_TASK.yaml`, `jobs/AJ-*.yaml`, allowed paths,
+  validators, artifacts, and status changes.
+- role_execution: Explain task-local `roles/*.yaml` execution contracts and
+  `ROLE_EXECUTION_REGISTRY.csv` binding.
+- validation_completion_handoff: Explain validator commands, completion YAML,
+  next handoff, blocked states, and pass/fail receipts.
+- registry_update: Explain how task, job, role execution, Director decision,
+  claim boundary, generated outputs, and memory registries preserve state.
 
 ## Required Analysis Capsules
 

@@ -1,0 +1,302 @@
+Technical Requirements Explainer
+technical_requirements
+Technical Requirements Explainer
+Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering governed Mermaid HTML, using local retrieval, and refreshing PDFs.
+Layout intent
+Use a tiered requirements matrix with project-requirement versus operator-environment-aid labels, command callouts, and source-backed setup evidence.
+Authority
+Human-only generated derivative
+Source basis
+MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER
+Content Blocks
+Analysis
+Sources
+Boundary
+Required content blocks
+Source-Backed Coverage
+Every declared block carries local source-path evidence while the visual form adapts to the page profile.
+Read Inspect Tier
+README.md
+requirements.txt
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Validators Memory Scripts Tier
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/obsidian-wiki/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Memory Regeneration Tier
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/obsidian-wiki/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Governed Mermaid Tier
+README.md
+requirements.txt
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Local Retrieval Tier
+README.md
+requirements.txt
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Pdf Refresh Tier
+README.md
+requirements.txt
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Project Vs Operator Aid
+.codex/skills/html-visual-explainer/SKILL.md
+Tier
+Label
+Tools
+Canonical command or path
+Read and inspect
+Project requirement
+Browser, text editor, and Git.
+Open tracked Markdown, TeX, registries, wiki, and HTML files.
+Run validators and memory scripts
+Project requirement
+Python .venv, requirements.txt, PyMuPDF.
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Regenerate memory/wiki/registry surfaces
+Project requirement
+Project-memory-system scripts and make validate-memory.
+make validate-memory
+Regenerate governed Mermaid HTML
+Project requirement when Mermaid-backed tracked HTML is regenerated
+Node.js, npm, pinned Mermaid package, and Playwright Chromium.
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
+Use local retrieval vault
+Operator environment aid
+Optional Obsidian plus generated .local/obsidian/aether-flow-wiki/.
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Build or refresh PDFs
+Project requirement only when TeX derivatives are in scope
+LaTeX/PDF build path.
+.codex/skills/pdf-derivative-build/SKILL.md
+Presentation contract
+Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
+Diagram policy
+No required Mermaid diagram
+This presentation profile is clearer as a catalog, matrix, tier table, or source inspector.
+Analysis capsules
+Claim-Aware Analysis
+Requirements Are Tiered
+Premise
+Not every reader or operator needs every tool.
+Mechanism
+The page should separate read-only inspection, Python validation, memory regeneration, governed Mermaid rendering, optional local retrieval, and PDF refresh work into distinct tiers.
+Source Basis
+`README.md`, `requirements.txt`, `Makefile`, `.codex/skills/project-memory-system/SKILL.md`, and Mermaid subskill setup documentation.
+Authority Status
+Human-only setup explanation; tracked scripts and contracts define project requirements.
+Uncertainty
+System-level tool availability can differ across machines.
+Validation Or Test
+Run the tier-specific command after installing the tier, such as bootstrap validation, renderer `--check`, local vault lint, or PDF build validation.
+Next Step
+Install the lowest tier needed for the intended workflow before running broader validation.
+Operator Aids Are Not Project Authority
+Premise
+The current Codex workspace may expose useful tools that are not durable project requirements.
+Mechanism
+Label Obsidian, global Codex skills, plugins, and bundled tools as operator environment aids unless the requirement is tracked in this repo.
+Source Basis
+`.codex/skills/obsidian-wiki/SKILL.md`, `.codex/skills/*`, and `README.md`.
+Authority Status
+Explanation of requirement boundaries.
+Uncertainty
+A future task may promote an aid into a project requirement by adding tracked contracts, scripts, or registry documentation.
+Validation Or Test
+Check whether the requirement appears in tracked docs, scripts, `requirements.txt`, or package manifests.
+Next Step
+Keep README commands concise and use this explainer for the richer tiered model.
+Source drilldowns
+Inspectable Source Basis
+README.md
+README.md is part of the source basis for this generated human-only page.
+requirements.txt
+requirements.txt is part of the source basis for this generated human-only page.
+Makefile
+Makefile is part of the source basis for this generated human-only page.
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/project-memory-system/SKILL.md is part of the source basis for this generated human-only page.
+.codex/skills/obsidian-wiki/SKILL.md
+.codex/skills/obsidian-wiki/SKILL.md is part of the source basis for this generated human-only page.
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md is part of the source basis for this generated human-only page.
+All source materials
+README.md
+requirements.txt
+Makefile
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/obsidian-wiki/SKILL.md
+.codex/skills/pdf-derivative-build/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
+.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package-lock.json
+Claim boundary
+Human-Only Non-Authority Boundary
+Human-only technical-requirements visualization. It explains existing setup tiers and regeneration requirements without changing dependency policy, validator behavior, scripts, role authority, or scientific claim status.

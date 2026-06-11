@@ -1,63 +1,47 @@
 Role Routing Explainer
-Role-selection drilldown
+workflow_lifecycle
 Role Routing Explainer
-How the Director chooses an execution role, binds it to one task, and prevents silent authority expansion.
-Visual system
-Research atlas
+Explain how the project decides which AI agent role executes a bounded task, how the execution-role contract constrains that role, and how routing avoids authority drift.
+Layout intent
+Use a routing lifecycle with decision-tree diagrams, role-contract panels, and evidence drilldowns that distinguish direct registered roles, task overlays, and one-job provisional roles.
 Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER
-Drilldowns
-Three Layers
+Content Blocks
 Diagrams
 Workflow
 Analysis
 Sources
 Boundary
-Atlas navigation
-Hub And Drilldowns
-Each page uses the same high-level, operational, and evidence layers.
-Hub
-Return to the research-atlas hub.
-Research system
-See how selected roles execute.
-Claim gates
-See how role output stays claim-bounded.
-Three-layer model
-High Level, Operational, Evidence
-High-Level Model
-Role as boundary
-A role is not a personality label; it is an authority and output boundary.
-Director selection
-The Director maps task type and source authority to a role candidate.
-Execution-role record
-The job-local role record is the actual contract for that task.
-Expiry
-Task overlays and provisional roles expire with the AgentJob unless human-authorized registration occurs.
-Operational Model
-Identify source class
-Science, project control, validation, memory, or explanatory documentation.
-Compare role fit
-Accept or reject candidate roles with reasons.
-Bind constraints
-Allowed writes, removed permissions, expanded permissions, and validators are recorded.
-Execute one job
-The role acts only inside the AgentJob boundary.
-Low-Level Evidence Model
-Role registry
-registries/AGENT_ROLE_REGISTRY.csv
-Execution-role registry
-registries/ROLE_EXECUTION_REGISTRY.csv
-Director decisions
+Required content blocks
+Source-Backed Coverage
+Every declared block carries local source-path evidence while the visual form adapts to the page profile.
+Authority Classification
+AGENTS.md
+README.md
+Explain how the task authority class separates science-bearing, project-system, documentation, validator, and memory work.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Director Routing
+research_control/README.md
 registries/DIRECTOR_DECISION_REGISTRY.csv
-Execution-role schema
-.agents/schemas/EXECUTION_ROLE_SCHEMA.md
-Why this structure matters
-The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+Explain how Director decisions bind a selected role to one bounded AgentJob.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Execution Role Contract
+registries/AGENT_ROLE_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
+Explain task-local execution-role records, constraints, removed permissions, expanded permissions, and validator bindings.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Overlay Provisional Boundary
+README.md
+AGENTS.md
+Explain when a task overlay or one-job provisional role is allowed and why repeated provisional patterns require review rather than silent promotion.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Presentation contract
+Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
 Governed Mermaid
 Role Routing Decision Tree
-Drag to pan. Use controls to zoom or fit.
+Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -101,7 +85,7 @@ Diagram source
 flowchart TD Request["Task request or handoff"] --> Authority["Identify authority class"] Authority --> Science["Science-bearing work"] Authority --> ProjectSystem["Project-system work"] Authority --> Docs["Explanatory documentation"] Science --> ScienceRoles["Ontology Formalizer<br/>Candidate Constructor<br/>Refuter<br/>Smuggling Auditor<br/>Gate Chair"] ProjectSystem --> OpsRoles["Project-System Director<br/>Project-Control Maintainer<br/>Validator Engineer<br/>Memory-System Maintainer"] Docs --> Curator["Documentation Curator"] ScienceRoles --> Director["Director decision"] OpsRoles --> Director Curator --> Director Director --> AgentJob["Bounded AgentJob"]
 Governed Mermaid
 Execution Role Contract Map
-Drag to pan. Use controls to zoom or fit.
+Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -138,90 +122,79 @@ AgentJob
 boundary
 Diagram source
 flowchart TD Registered["Registered role template"] --> Fit{"Fits without change?"} Fit -->|"yes"| Direct["registered_role"] Fit -->|"needs bounded delta"| Overlay["task_overlay"] Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"] Direct --> Execution["Execution-role record"] Overlay --> Execution Provisional --> Execution Execution --> Allowed["Allowed writes and validators"] Execution --> Removed["Removed permissions"] Execution --> Expanded["Explicit expansions"] Execution --> Expiry["Expires after AgentJob"] Allowed --> Job["AgentJob boundary"]
-Operational inspection
-Workflow process Steps
-01
-Classify
-Determine the source authority and work type.
-02
-Candidate roles
-List accepted and rejected role fits.
-03
-Select
-Choose direct registered role, task overlay, or one-job provisional role.
-04
-Constrain
-Bind the role to allowed writes and validators.
-05
-Expire
-End the authority when the AgentJob ends.
-Deep analysis
-Analysis Capsules
-Each capsule uses the required source-backed schema.
-Role Selection
+Workflow inspector
+Inspectable Object Path
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+Analysis capsules
+Claim-Aware Analysis
+Role Selection Is Authority Selection
 Premise
-Choosing a role is choosing an authority boundary for one task.
+Choosing a role is choosing the authority boundary for one bounded task.
 Mechanism
-The Director compares source class, objective, role contracts, allowed writes, validators, and claim boundaries.
+The Director compares the task against registered role contracts, source classes, allowed writes, forbidden surfaces, validators, and claim boundaries before opening an AgentJob.
 Source Basis
-research_control/README.md, AGENT_ROLE_REGISTRY.csv, and DIRECTOR_DECISION_REGISTRY.csv.
+`research_control/README.md`, `registries/AGENT_ROLE_REGISTRY.csv`, and `registries/DIRECTOR_DECISION_REGISTRY.csv`.
 Authority Status
-Workflow explanation only.
+Workflow explanation; it does not alter role authority.
 Uncertainty
-A template may need a bounded task overlay or provisional one-job identity.
+A role template may be close but not exact; the execution-role record is the job-specific contract.
 Validation Or Test
 Check the Director decision, execution-role record, and AgentJob allowlist.
 Next Step
 Inspect the task-local execution-role file before executing or reviewing work.
-Execution Role
+Execution Role Prevents Drift
 Premise
-The execution-role record prevents silent authority drift.
+The execution-role record prevents a role from silently gaining or losing authority during a task.
 Mechanism
-It binds role kind, added constraints, removed permissions, expanded permissions, allowed writes, gates, and expiry.
+It records whether the job uses a registered role, task overlay, or one-job provisional role, then binds added constraints, removed permissions, expanded permissions, allowed writes, human gates, and expiry.
 Source Basis
-ROLE_EXECUTION_REGISTRY.csv and EXECUTION_ROLE_SCHEMA.md.
+`registries/ROLE_EXECUTION_REGISTRY.csv` and `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`.
 Authority Status
 Project-control explanation.
 Uncertainty
-Repeated provisional patterns may indicate a future role-design task.
+Repeated provisional patterns may indicate a role-design gap, but they do not become permanent by convention.
 Validation Or Test
-Validate registry rows against task-local role records and AgentJob fields.
+Validate role execution rows against task-local role records and AgentJob fields.
 Next Step
-Use the research-system explainer to trace the role through completion and handoff.
+Use the research-system explainer to see how the selected role executes inside the full task loop.
 Source drilldowns
-What To Inspect
+Inspectable Source Basis
 README.md
-Why it matters:
-Project role table and human-facing workflow summary.
-Use it to check:
-How role routing is introduced to readers.
+README.md is part of the source basis for this generated human-only page.
 AGENTS.md
-Why it matters:
-Root project identity and authority hierarchy.
-Use it to check:
-Whether routing stays inside project authority.
+AGENTS.md is part of the source basis for this generated human-only page.
 research_control/README.md
-Why it matters:
-Registered role, task overlay, and provisional role rules.
-Use it to check:
-How execution-role records constrain one job.
+research_control/README.md is part of the source basis for this generated human-only page.
 research_control/AGENTS.md
-Why it matters:
-Scoped editing rules for control state.
-Use it to check:
-Which control files define task authority.
+research_control/AGENTS.md is part of the source basis for this generated human-only page.
 registries/AGENT_ROLE_REGISTRY.csv
-Why it matters:
-Registered roles and default authority.
-Use it to check:
-Which role versions are active.
+registries/AGENT_ROLE_REGISTRY.csv is part of the source basis for this generated human-only page.
 registries/ROLE_EXECUTION_REGISTRY.csv
-Why it matters:
-Task-local execution-role contracts.
-Use it to check:
-How one job constrains a role.
+registries/ROLE_EXECUTION_REGISTRY.csv is part of the source basis for this generated human-only page.
+All source materials
+README.md
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+registries/AGENT_ROLE_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
 Claim boundary
-Human-Only Explanation
-This page explains role routing. It does not register roles, change role contracts, or authorize authority expansion.
-Not allowed:
-physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.
+Human-Only Non-Authority Boundary
+Human-only role-routing visualization. It explains existing role selection and execution-role constraints without changing role authority, routing behavior, schemas, validators, or scientific claim status.

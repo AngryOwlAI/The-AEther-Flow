@@ -16,11 +16,18 @@ human_visual_only: true
 explainer_kind: "conceptual_model"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "conceptual_model"
+layout_intent: "Use a conceptual model with term cards, derivation-burden panels, governed diagrams, and source-backed claim-boundary callouts."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
+required_content_blocks:
+  - "ontology_terms"
+  - "exact_gr_benchmark"
+  - "derivation_burden"
+  - "claim_boundaries"
 source_drilldowns:
   - "README.md"
   - "AGENTS.md"
@@ -118,6 +125,17 @@ flowchart TD
   AntiSmuggling --> Closure
   ExactGR --> Gate["Promotion requires claim gate"]
 ```
+
+## Required Content Blocks
+
+- ontology_terms: Explain project-local meanings of `Æther`,
+  `Æther-flow`, observed space, `S-time`, expansion, and gravity.
+- exact_gr_benchmark: State that exact GR is the observable benchmark and not a
+  completed first-principles derivation.
+- derivation_burden: Show the source-defined readout, same-metric matter,
+  invariance, closure, and anti-smuggling requirements.
+- claim_boundaries: Preserve the human-only, no-physics-promotion boundary for
+  the ontology explainer.
 
 ## Required Analysis Capsules
 

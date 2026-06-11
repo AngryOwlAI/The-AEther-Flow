@@ -1,63 +1,50 @@
 Claim Gates Explainer
-Claim-status drilldown
+claim_boundary_map
 Claim Gates Explainer
-How the project keeps hypotheses, candidates, refutations, blocked claims, accepted claims, and negative results distinct.
-Visual system
-Research atlas
+Explain how the project prevents hypotheses, candidates, workflow progress, blocked claims, and negative results from being confused with accepted physics.
+Layout intent
+Use a claim-boundary map with state diagrams, status panels, negative-result loops, and source-backed guardrail callouts.
 Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-CLAIM-GATES-EXPLAINER
-Drilldowns
-Three Layers
+Content Blocks
 Diagrams
 Workflow
 Analysis
 Sources
 Boundary
-Atlas navigation
-Hub And Drilldowns
-Each page uses the same high-level, operational, and evidence layers.
-Hub
-Return to the research-atlas hub.
-Æther-flow ontology
-See the open derivation burden.
-Source authority
-See where claim status is recorded.
-Three-layer model
-High Level, Operational, Evidence
-High-Level Model
-Purpose
-Claim gates prevent workflow progress from being mistaken for accepted physics.
-Candidate status
-A candidate may be useful, blocked, repaired, or refuted without being promoted.
-Negative results
-Obstructions are preserved because they constrain future work.
-Human gates
-Certain promotions require Gate Chair or human-gated review.
-Operational Model
-Allowed claims
-Each task can say only what its boundary allows.
-Forbidden claims
-Derivation, benchmark promotion, canonical adoption, and target import claims are blocked unless gated.
-Artifacts
-Task outputs and TeX registry rows preserve scoped results.
-Handoffs
-Next work inherits explicit exclusions and obstructions.
-Low-Level Evidence Model
-Claim registry
+Required content blocks
+Source-Backed Coverage
+Every declared block carries local source-path evidence while the visual form adapts to the page profile.
+Claim Status Ladder
 registries/CLAIM_BOUNDARY_REGISTRY.csv
-Task artifacts
-research_control/tasks/*/artifacts/*.tex
-TeX registry
-registries/TEX_SOURCE_REGISTRY.csv
-Completion records
-research_control/tasks/*/jobs/completions/*.yaml
-Why this structure matters
-The top layer gives a plain-language map, the middle layer explains behavior inside the project, and the evidence layer points to files, registries, validators, and boundaries that can be inspected.
+AGENTS.md
+research_control/README.md
+Explain ontology framing, benchmark adoption, candidate work, audit, repair, refutation, blocked promotion, and accepted status as distinct states.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Gate Review Path
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+AGENTS.md
+research_control/README.md
+Explain Gate Chair or human-gated review without implying that workflow completion is scientific acceptance.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Negative Result Preservation
+README.md
+AGENTS.md
+Explain how obstructions, refutations, task artifacts, completions, and handoffs preserve failed routes.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Forbidden Promotion Boundary
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+AGENTS.md
+research_control/README.md
+State what the page cannot promote, reject, or modify and which sources must be inspected for claim authority.
+This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
+Presentation contract
+Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
 Governed Mermaid
 Claim Gate State Machine
-Drag to pan. Use controls to zoom or fit.
+Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -97,7 +84,7 @@ Diagram source
 stateDiagram-v2 [*] --> Framing Framing --> Candidate: bounded proposal Candidate --> Audit: smuggling or consistency check Audit --> Repair: fixable defect Audit --> Refutation: defect or underdetermination Repair --> Candidate: revised packet Refutation --> NegativeResult: preserved obstruction Candidate --> GateReview: promotion requested GateReview --> Accepted: authorized gate passes GateReview --> Blocked: gate not passed Blocked --> NegativeResult Accepted --> [*] NegativeResult --> [*]
 Governed Mermaid
 Negative Result Preservation Loop
-Drag to pan. Use controls to zoom or fit.
+Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -126,85 +113,76 @@ replaying
 failure
 Diagram source
 flowchart TD Attempt["Candidate derivation attempt"] --> Test["Refutation or smuggling test"] Test --> Finding["Obstruction identified"] Finding --> Boundary["Claim-boundary row"] Boundary --> Artifact["Registered task artifact"] Artifact --> Handoff["Handoff preserves next state"] Handoff --> Future["Future work avoids replaying failure"] Future --> Attempt
-Operational inspection
-Control system Steps
-01
-Frame
-A question or candidate is framed.
-02
-Construct
-A bounded role proposes a candidate or repair.
-03
-Audit
-Smuggling, consistency, or benchmark-independence checks run.
-04
-Refute or repair
-Defects either route repair or become scoped negative results.
-05
-Gate
-Promotion requires explicit gate authority.
-Deep analysis
-Analysis Capsules
-Each capsule uses the required source-backed schema.
-Claim Boundary
+Workflow inspector
+Inspectable Object Path
+1. program_state.yaml
+Tracked program state names the latest operating boundary.
+2. latest handoff-*
+The handoff preserves the next role, task, and source-state constraints.
+3. Director decision
+The Director selects role, task objective, and claim boundary.
+4. 00_TASK.yaml
+The task file records objective, status, scope, and next action.
+5. jobs/AJ-*.yaml
+The AgentJob binds reads, writes, outputs, validators, and limits.
+6. roles/*.yaml
+The execution-role record narrows or overlays role authority for this job.
+7. artifacts/*
+Allowed outputs are produced inside the task boundary.
+8. completion YAML
+The completion records verdict, command results, and validation status.
+Analysis capsules
+Claim-Aware Analysis
+Claim Boundary As Guardrail
 Premise
-Claim boundaries prevent candidate or workflow status from becoming accepted physics by implication.
+Claim boundaries prevent explanatory, workflow, or candidate status from being mistaken for accepted physics.
 Mechanism
-Rows record allowed claims, forbidden claims, required gates, and authority source paths.
+Each task records allowed claims, forbidden claims, required gates, and an authority source path; validators and completion records preserve that boundary.
 Source Basis
-CLAIM_BOUNDARY_REGISTRY.csv, AGENTS.md, and research_control/README.md.
+`registries/CLAIM_BOUNDARY_REGISTRY.csv`, `AGENTS.md`, and `research_control/README.md`.
 Authority Status
-Human-only explanation of existing behavior.
+Human-only explanation of existing claim-boundary behavior.
 Uncertainty
-A candidate may be locally useful even when promotion is blocked.
+A candidate may be useful even when it cannot be promoted.
 Validation Or Test
-Inspect the claim-boundary row before accepting any derivation or benchmark statement.
+Inspect the claim-boundary row before accepting any statement about derivation, obstruction, or benchmark status.
 Next Step
 Check whether the claim requires Gate Chair or human-gated review.
-Negative Result
+Negative Results Are Knowledge
 Premise
-Negative results are preserved because they prevent repeated failed routes.
+Refutations and obstruction records are preserved because they protect the project from repeating failed routes.
 Mechanism
-A failed route can become a registered artifact, boundary row, completion receipt, and handoff constraint.
+A failed or blocked candidate can become a registered artifact, claim-boundary row, completion receipt, and handoff constraint.
 Source Basis
-TEX_SOURCE_REGISTRY.csv, RESEARCH_TASK_REGISTRY.csv, and CLAIM_BOUNDARY_REGISTRY.csv.
+`registries/TEX_SOURCE_REGISTRY.csv`, `registries/RESEARCH_TASK_REGISTRY.csv`, and `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
 Authority Status
-Scoped obstruction explanation, not a global theory verdict.
+Explanation of negative-result preservation, not a global theory verdict.
 Uncertainty
-A local refutation can block one route without rejecting the entire program.
+A local refutation may block one route without rejecting the whole research program.
 Validation Or Test
 Verify scope, task path, authority source, forbidden promotions, and handoff constraints.
 Next Step
-Use source authority to inspect registration and derivative boundaries.
+Use the source-authority explainer to inspect where the negative result is registered and how generated notes remain derivative.
 Source drilldowns
-What To Inspect
+Inspectable Source Basis
 README.md
-Why it matters:
-Front-door separation between physics claims, AI-methodology claims, tooling claims, and human explanations.
-Use it to check:
-Whether claim kinds stay separate.
+README.md is part of the source basis for this generated human-only page.
 AGENTS.md
-Why it matters:
-Claim authority and generated-output hierarchy.
-Use it to check:
-Whether generated pages avoid promotion.
+AGENTS.md is part of the source basis for this generated human-only page.
 research_control/README.md
-Why it matters:
-Gate and task-state model.
-Use it to check:
-How tasks preserve bounded results.
+research_control/README.md is part of the source basis for this generated human-only page.
 registries/CLAIM_BOUNDARY_REGISTRY.csv
-Why it matters:
-Allowed and forbidden claims.
-Use it to check:
-Which claims require gates.
+registries/CLAIM_BOUNDARY_REGISTRY.csv is part of the source basis for this generated human-only page.
 registries/TEX_SOURCE_REGISTRY.csv
-Why it matters:
-Registered science artifacts and status.
-Use it to check:
-Where scientific outputs are recorded.
+registries/TEX_SOURCE_REGISTRY.csv is part of the source basis for this generated human-only page.
+All source materials
+README.md
+AGENTS.md
+research_control/README.md
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+registries/TEX_SOURCE_REGISTRY.csv
+registries/RESEARCH_TASK_REGISTRY.csv
+.agents/roles/physics/gate-chair.v0.1.0.md
 Claim boundary
-Human-Only Explanation
-This page explains claim gates. It does not promote, reject, or alter any scientific claim.
-Not allowed:
-physics claim promotion, canonical source edits, control-contract changes, generated HTML as independent authority, or public deployment by implication.
+Human-Only Non-Authority Boundary
+Human-only claim-gates visualization. It explains existing claim-boundary and negative-result preservation behavior without promoting, rejecting, or changing any scientific claim.

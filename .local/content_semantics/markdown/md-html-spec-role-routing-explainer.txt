@@ -18,12 +18,19 @@ human_visual_only: true
 explainer_kind: "workflow_process"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "workflow_lifecycle"
+layout_intent: "Use a routing lifecycle with decision-tree diagrams, role-contract panels, and evidence drilldowns that distinguish direct registered roles, task overlays, and one-job provisional roles."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
   - "workflow_step_inspector"
+required_content_blocks:
+  - "authority_classification"
+  - "director_routing"
+  - "execution_role_contract"
+  - "overlay_provisional_boundary"
 source_drilldowns:
   - "README.md"
   - "AGENTS.md"
@@ -114,6 +121,19 @@ flowchart TD
   Execution --> Expiry["Expires after AgentJob"]
   Allowed --> Job["AgentJob boundary"]
 ```
+
+## Required Content Blocks
+
+- authority_classification: Explain how the task authority class separates
+  science-bearing, project-system, documentation, validator, and memory work.
+- director_routing: Explain how Director decisions bind a selected role to one
+  bounded AgentJob.
+- execution_role_contract: Explain task-local execution-role records,
+  constraints, removed permissions, expanded permissions, and validator
+  bindings.
+- overlay_provisional_boundary: Explain when a task overlay or one-job
+  provisional role is allowed and why repeated provisional patterns require
+  review rather than silent promotion.
 
 ## Required Analysis Capsules
 

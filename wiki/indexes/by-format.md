@@ -6,11 +6,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
 - `HTML-CLAIM-GATES-EXPLAINER` `html/claim-gates-explainer.html`
+- `HTML-MEMORY-SYSTEM-EXPLAINER` `html/memory-system-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
 - `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
 - `HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `html/research-control-system-explainer.html`
 - `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
+- `HTML-ROLES-AND-SKILLS-EXPLAINER` `html/roles-and-skills-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
+- `HTML-TECHNICAL-REQUIREMENTS-EXPLAINER` `html/technical-requirements-explainer.html`
 
 ## markdown
 
@@ -19,17 +22,21 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - `MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `markdown/html-explainer-specs/claim-gates-explainer.md`
+- `MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/memory-system-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/research-control-system-explainer.md`
 - `MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `markdown/html-explainer-specs/role-routing-explainer.md`
+- `MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `markdown/html-explainer-specs/roles-and-skills-explainer.md`
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
+- `MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER` `markdown/html-explainer-specs/technical-requirements-explainer.md`
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-README` `README.md`
 - `MD-README-RESEARCH-CONTROL` `research_control/README.md`
 - `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `.agents/roles/physics/gate-chair.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD` `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
@@ -110,27 +117,34 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-CLAIM-GATES-EXPLAINER` `wiki/html/html-claim-gates-explainer.md`
+- `WIKI-HTML-MEMORY-SYSTEM-EXPLAINER` `wiki/html/html-memory-system-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
 - `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
 - `WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/html/html-research-control-system-explainer.md`
 - `WIKI-HTML-ROLE-ROUTING-EXPLAINER` `wiki/html/html-role-routing-explainer.md`
+- `WIKI-HTML-ROLES-AND-SKILLS-EXPLAINER` `wiki/html/html-roles-and-skills-explainer.md`
 - `WIKI-HTML-SOURCE-AUTHORITY-EXPLAINER` `wiki/html/html-source-authority-explainer.md`
+- `WIKI-HTML-TECHNICAL-REQUIREMENTS-EXPLAINER` `wiki/html/html-technical-requirements-explainer.md`
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
 - `WIKI-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-html-spec-claim-gates-explainer.md`
+- `WIKI-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-memory-system-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-research-control-system-explainer.md`
 - `WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-html-spec-role-routing-explainer.md`
+- `WIKI-MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `wiki/markdown/md-html-spec-roles-and-skills-explainer.md`
 - `WIKI-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-html-spec-source-authority-explainer.md`
+- `WIKI-MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER` `wiki/markdown/md-html-spec-technical-requirements-explainer.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
 - `WIKI-MD-README-RESEARCH-CONTROL` `wiki/markdown/md-readme-research-control.md`
 - `WIKI-MD-README-RESEARCH-CONTROL-APPROVALS` `wiki/markdown/md-readme-research-control-approvals.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md.md`

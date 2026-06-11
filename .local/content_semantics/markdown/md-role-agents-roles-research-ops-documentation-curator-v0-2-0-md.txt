@@ -55,6 +55,9 @@ Each Markdown explainer spec must declare:
 - `required_controls`
 - `source_drilldowns`
 - `analysis_capsule_schema`
+- `presentation_profile`
+- `layout_intent`
+- `required_content_blocks`
 
 The Markdown body must include `## Required Analysis Capsules` using the
 schema fields `premise`, `mechanism`, `source_basis`, `authority_status`,
@@ -62,6 +65,26 @@ schema fields `premise`, `mechanism`, `source_basis`, `authority_status`,
 the lightweight marker evidence checked by the memory bootstrap validator:
 `data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
 `data-source-path`.
+
+The Markdown body must also include `## Required Content Blocks`, with one
+page-local lowercase snake_case ID for each declared content block.
+`presentation_profile` is a controlled layout archetype and must be one of
+`atlas_hub`, `role_catalog`, `format_ladder`, `memory_system_map`,
+`workflow_lifecycle`, `technical_requirements`, `conceptual_model`, or
+`claim_boundary_map`. `layout_intent` is required prose that explains how the
+page adapts the selected profile.
+
+Generated HTML must include every declared block as
+`data-content-block="<id>"`, and each block must contain at least one
+`data-source-path` marker. The visual form is adaptive: a content block may be
+a table, matrix, card group, sidebar, popover, callout, accordion, inspector
+panel, or another source-backed structure suited to the page. Validators check
+the structural evidence only; prose quality, creative fit, and visual clarity
+remain review and QA responsibilities.
+
+No full deterministic HTML generator is introduced by this contract. The
+Documentation Curator renders from the source spec with controlled freedom:
+rigid source authority, flexible exposition.
 
 `html-visual-explainer` governs tracked `html/` output registration and source
 binding. `visual-explainer` may be used for visual design and rendering, but it

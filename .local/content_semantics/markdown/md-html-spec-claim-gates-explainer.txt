@@ -17,12 +17,19 @@ human_visual_only: true
 explainer_kind: "control_system"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "claim_boundary_map"
+layout_intent: "Use a claim-boundary map with state diagrams, status panels, negative-result loops, and source-backed guardrail callouts."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
   - "workflow_step_inspector"
+required_content_blocks:
+  - "claim_status_ladder"
+  - "gate_review_path"
+  - "negative_result_preservation"
+  - "forbidden_promotion_boundary"
 source_drilldowns:
   - "README.md"
   - "AGENTS.md"
@@ -113,6 +120,18 @@ flowchart TD
   Handoff --> Future["Future work avoids replaying failure"]
   Future --> Attempt
 ```
+
+## Required Content Blocks
+
+- claim_status_ladder: Explain ontology framing, benchmark adoption, candidate
+  work, audit, repair, refutation, blocked promotion, and accepted status as
+  distinct states.
+- gate_review_path: Explain Gate Chair or human-gated review without implying
+  that workflow completion is scientific acceptance.
+- negative_result_preservation: Explain how obstructions, refutations,
+  task artifacts, completions, and handoffs preserve failed routes.
+- forbidden_promotion_boundary: State what the page cannot promote, reject, or
+  modify and which sources must be inspected for claim authority.
 
 ## Required Analysis Capsules
 

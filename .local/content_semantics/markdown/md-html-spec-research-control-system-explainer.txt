@@ -13,6 +13,7 @@ source_materials:
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
   - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
+  - "research_control/design/html_explainer_flexible_presentation_contract.md"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
   - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
@@ -21,12 +22,20 @@ human_visual_only: true
 explainer_kind: "control_system"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "workflow_lifecycle"
+layout_intent: "Use a validation lifecycle with governance panels for classification, bounded AgentJobs, flexible source-backed HTML, documentation impact, validator chains, and checkpoint boundaries."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
   - "workflow_step_inspector"
+required_content_blocks:
+  - "classification_resolver"
+  - "bounded_transaction"
+  - "flexible_html_contract"
+  - "documentation_impact"
+  - "validator_chain"
 source_drilldowns:
   - "AGENTS.md"
   - "README.md"
@@ -81,6 +90,9 @@ content to `source-authority-explainer.html`.
 - Low-level evidence model: validator scripts, completion receipts, registry
   rows, source specs, and generated HTML metadata.
 - Documentation Curator panel: source-spec-first tracked HTML generation.
+- Flexible HTML contract panel: explain `presentation_profile`,
+  `layout_intent`, `required_content_blocks`, `data-content-block`, and
+  source-path evidence as deterministic structural requirements.
 - Workflow step inspector for the validation chain.
 - Source drilldowns and claim-boundary inspection.
 
@@ -112,6 +124,22 @@ flowchart TD
   Receipt --> Registry["Control registries updated"]
 ```
 
+## Required Content Blocks
+
+- classification_resolver: Explain deterministic change classification,
+  resolver output, advisory routing, and hard stop conditions.
+- bounded_transaction: Explain one bounded AgentJob, allowed writes, forbidden
+  authority surfaces, claim boundary, and completion scope.
+- flexible_html_contract: Explain the flexible source-backed HTML contract,
+  including controlled `presentation_profile`, nonblank `layout_intent`,
+  page-local `required_content_blocks`, `data-content-block` markers, and
+  source-path evidence.
+- documentation_impact: Explain documentation-impact receipts, source-doc
+  updates, no-op rationale, and validation.
+- validator_chain: Explain bootstrap validation, Mermaid parity, emitted
+  signal validation, documentation-impact validation, research-control
+  validation, diff checks, and checkpoint boundaries.
+
 ## Required Analysis Capsules
 
 ### Source-Backed HTML Governance
@@ -119,9 +147,10 @@ flowchart TD
 - premise: Tracked HTML explainers are valid only when backed by registered
   Markdown source specs.
 - mechanism: The Markdown spec declares title, purpose, source material, claim
-  boundary, interaction model, required controls, source drilldowns, Mermaid
-  diagrams, and analysis capsules; generated HTML carries marker and source
-  metadata evidence.
+  boundary, interaction model, presentation profile, layout intent, required
+  content blocks, required controls, source drilldowns, Mermaid diagrams, and
+  analysis capsules; generated HTML carries marker and source metadata
+  evidence.
 - source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
   `.codex/skills/visual-explainer/SKILL.md`, the Mermaid Documentation
   subskill, and `registries/HTML_EXPLAINER_REGISTRY.csv`.

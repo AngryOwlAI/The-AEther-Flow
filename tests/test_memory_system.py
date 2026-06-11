@@ -186,6 +186,117 @@ def mermaid_html_row() -> dict[str, str]:
     }
 
 
+def flexible_spec_fields(
+    *,
+    profile: str = "workflow_lifecycle",
+    layout_intent: str = "Use a synthetic source-backed test layout.",
+    blocks: tuple[str, ...] = ("synthetic_block",),
+) -> str:
+    block_lines = "".join(f'  - "{block}"\n' for block in blocks)
+    return (
+        f'presentation_profile: "{profile}"\n'
+        f'layout_intent: "{layout_intent}"\n'
+        "required_content_blocks:\n"
+        f"{block_lines}"
+    )
+
+
+def flexible_required_blocks_section(
+    blocks: tuple[str, ...] = ("synthetic_block",),
+) -> str:
+    lines = "\n".join(
+        f"- {block}: Synthetic block for structural evidence validation."
+        for block in blocks
+    )
+    return f"## Required Content Blocks\n\n{lines}\n\n"
+
+
+def synthetic_content_block(block_id: str = "synthetic_block", source_path: str = "README.md") -> str:
+    return (
+        f'<section data-content-block="{block_id}">'
+        f'<span data-source-path="{source_path}"></span>'
+        "</section>"
+    )
+
+
+def valid_synthetic_spec_text() -> str:
+    return (
+        "---\n"
+        'title: "Synthetic"\n'
+        'purpose: "Test interaction markers."\n'
+        'audience: "test"\n'
+        'output_path: "html/synthetic.html"\n'
+        'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+        "source_materials:\n"
+        '  - "README.md"\n'
+        'claim_boundary: "Human-only visualization."\n'
+        "human_visual_only: true\n"
+        "explainer_kind: \"workflow_process\"\n"
+        "interaction_model: \"progressive_disclosure\"\n"
+        "analysis_depth: \"deep\"\n"
+        "required_controls:\n"
+        "  - \"section_toc\"\n"
+        "  - \"expandable_analysis_panels\"\n"
+        "  - \"source_drilldowns\"\n"
+        "  - \"claim_boundary_toggle\"\n"
+        "  - \"workflow_step_inspector\"\n"
+        "source_drilldowns:\n"
+        '  - "README.md"\n'
+        "analysis_capsule_schema:\n"
+        "  - \"premise\"\n"
+        "  - \"mechanism\"\n"
+        "  - \"source_basis\"\n"
+        "  - \"authority_status\"\n"
+        "  - \"uncertainty\"\n"
+        "  - \"validation_or_test\"\n"
+        "  - \"next_step\"\n"
+        + flexible_spec_fields()
+        + "---\n"
+        "# Synthetic\n\n"
+        + flexible_required_blocks_section()
+        + "## Required Analysis Capsules\n\n"
+        "- premise: Test premise.\n"
+        "- mechanism: Test mechanism.\n"
+        "- source_basis: README.md.\n"
+        "- authority_status: explanatory.\n"
+        "- uncertainty: none.\n"
+        "- validation_or_test: marker validation.\n"
+        "- next_step: pass.\n"
+    )
+
+
+def valid_synthetic_html_text(content_block_html: str | None = None) -> str:
+    if content_block_html is None:
+        content_block_html = synthetic_content_block()
+    return (
+        '<!doctype html><meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SYNTHETIC">'
+        '<meta name="aether-flow-source-basis-hash" content="spec-hash">'
+        '<meta name="aether-flow-human-visual-only" content="true">'
+        "<style>"
+        "p, td, th, .atlas-card { overflow-wrap: break-word; }"
+        "code, pre { overflow-wrap: anywhere; }"
+        ".card-grid { display: grid; }"
+        ".layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }"
+        ".layer-strip { display: grid; grid-template-columns: 1fr; }"
+        "</style>"
+        '<nav data-explainer-control="section_toc"></nav>'
+        '<details data-explainer-control="expandable_analysis_panels"></details>'
+        '<section data-explainer-control="claim_boundary_toggle"></section>'
+        '<ol data-explainer-control="workflow_step_inspector"></ol>'
+        '<details data-source-path="README.md"></details>'
+        '<article data-analysis-capsule="test">'
+        '<div data-capsule-field="premise"></div>'
+        '<div data-capsule-field="mechanism"></div>'
+        '<div data-capsule-field="source_basis"></div>'
+        '<div data-capsule-field="authority_status"></div>'
+        '<div data-capsule-field="uncertainty"></div>'
+        '<div data-capsule-field="validation_or_test"></div>'
+        '<div data-capsule-field="next_step"></div>'
+        "</article>"
+        f"{content_block_html}"
+    )
+
+
 class MemorySystemSmokeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -393,9 +504,11 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "  - \"uncertainty\"\n"
                 "  - \"validation_or_test\"\n"
                 "  - \"next_step\"\n"
-                "---\n"
+                + flexible_spec_fields()
+                + "---\n"
                 "# Old Toggle\n\n"
-                "## Required Analysis Capsules\n\n"
+                + flexible_required_blocks_section()
+                + "## Required Analysis Capsules\n\n"
                 "- premise: Test premise.\n"
                 "- mechanism: Test mechanism.\n"
                 "- source_basis: README.md.\n"
@@ -418,6 +531,149 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 )
         self.assertTrue(any("analysis_depth must be deep" in error for error in report.errors))
         self.assertTrue(any("unknown required_controls value" in error for error in report.errors))
+
+    def test_html_spec_contract_requires_flexible_presentation_fields(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/bad-flex.md"
+            spec.parent.mkdir(parents=True)
+            (root / "html").mkdir()
+            (root / "html/bad-flex.html").write_text("<!doctype html>\n", encoding="utf-8")
+            spec.write_text(
+                "---\n"
+                'title: "Bad Flex"\n'
+                'purpose: "Test flexible contract."\n'
+                'audience: "test"\n'
+                'output_path: "html/bad-flex.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "explainer_kind: \"conceptual_model\"\n"
+                "interaction_model: \"progressive_disclosure\"\n"
+                "analysis_depth: \"deep\"\n"
+                "required_controls:\n"
+                "  - \"section_toc\"\n"
+                "  - \"expandable_analysis_panels\"\n"
+                "  - \"source_drilldowns\"\n"
+                "  - \"claim_boundary_toggle\"\n"
+                "source_drilldowns:\n"
+                '  - "README.md"\n'
+                "analysis_capsule_schema:\n"
+                "  - \"premise\"\n"
+                "  - \"mechanism\"\n"
+                "  - \"source_basis\"\n"
+                "  - \"authority_status\"\n"
+                "  - \"uncertainty\"\n"
+                "  - \"validation_or_test\"\n"
+                "  - \"next_step\"\n"
+                "presentation_profile: \"unknown_profile\"\n"
+                "layout_intent: \"\"\n"
+                "required_content_blocks:\n"
+                "  - \"Bad-Block\"\n"
+                "---\n"
+                "# Bad Flex\n\n"
+                "## Required Analysis Capsules\n\n"
+                "- premise: Test premise.\n"
+                "- mechanism: Test mechanism.\n"
+                "- source_basis: README.md.\n"
+                "- authority_status: explanatory.\n"
+                "- uncertainty: none.\n"
+                "- validation_or_test: marker validation.\n"
+                "- next_step: pass.\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-BAD-FLEX",
+                            "path": "markdown/html-explainer-specs/bad-flex.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(any("invalid presentation_profile" in error for error in report.errors))
+        self.assertTrue(any("layout_intent must be nonblank" in error for error in report.errors))
+        self.assertTrue(
+            any("invalid required_content_blocks ID" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("missing Required Content Blocks section" in error for error in report.errors)
+        )
+
+    def test_html_spec_contract_rejects_empty_content_blocks(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/empty-blocks.md"
+            spec.parent.mkdir(parents=True)
+            (root / "html").mkdir()
+            (root / "html/empty-blocks.html").write_text(
+                "<!doctype html>\n", encoding="utf-8"
+            )
+            spec.write_text(
+                "---\n"
+                'title: "Empty Blocks"\n'
+                'purpose: "Test required blocks."\n'
+                'audience: "test"\n'
+                'output_path: "html/empty-blocks.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "explainer_kind: \"conceptual_model\"\n"
+                "interaction_model: \"progressive_disclosure\"\n"
+                "analysis_depth: \"deep\"\n"
+                "required_controls:\n"
+                "  - \"section_toc\"\n"
+                "  - \"expandable_analysis_panels\"\n"
+                "  - \"source_drilldowns\"\n"
+                "  - \"claim_boundary_toggle\"\n"
+                "source_drilldowns:\n"
+                '  - "README.md"\n'
+                "analysis_capsule_schema:\n"
+                "  - \"premise\"\n"
+                "  - \"mechanism\"\n"
+                "  - \"source_basis\"\n"
+                "  - \"authority_status\"\n"
+                "  - \"uncertainty\"\n"
+                "  - \"validation_or_test\"\n"
+                "  - \"next_step\"\n"
+                "presentation_profile: \"conceptual_model\"\n"
+                "layout_intent: \"Use a source-backed conceptual explanation.\"\n"
+                "required_content_blocks:\n"
+                "---\n"
+                "# Empty Blocks\n\n"
+                "## Required Content Blocks\n\n"
+                "## Required Analysis Capsules\n\n"
+                "- premise: Test premise.\n"
+                "- mechanism: Test mechanism.\n"
+                "- source_basis: README.md.\n"
+                "- authority_status: explanatory.\n"
+                "- uncertainty: none.\n"
+                "- validation_or_test: marker validation.\n"
+                "- next_step: pass.\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-EMPTY-BLOCKS",
+                            "path": "markdown/html-explainer-specs/empty-blocks.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(
+            any("required_content_blocks must be a non-empty list" in error for error in report.errors)
+        )
 
     def test_html_registry_requires_declared_interactive_markers(self) -> None:
         report = self.memory_system.ValidationReport()
@@ -455,9 +711,11 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "  - \"uncertainty\"\n"
                 "  - \"validation_or_test\"\n"
                 "  - \"next_step\"\n"
-                "---\n"
+                + flexible_spec_fields()
+                + "---\n"
                 "# Synthetic\n\n"
-                "## Required Analysis Capsules\n\n"
+                + flexible_required_blocks_section()
+                + "## Required Analysis Capsules\n\n"
                 "- premise: Test premise.\n"
                 "- mechanism: Test mechanism.\n"
                 "- source_basis: README.md.\n"
@@ -508,6 +766,89 @@ class MemorySystemSmokeTests(unittest.TestCase):
             any("missing data-analysis-capsule marker" in error for error in report.errors)
         )
 
+    def test_html_registry_requires_declared_content_block_marker(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(valid_synthetic_html_text(content_block_html=""), encoding="utf-8")
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "missing HTML content block marker synthetic_block" in error
+                for error in report.errors
+            )
+        )
+
+    def test_html_registry_requires_content_block_source_path_evidence(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text(
+                    content_block_html='<section data-content-block="synthetic_block"></section>'
+                ),
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "content block synthetic_block missing source-path evidence" in error
+                for error in report.errors
+            )
+        )
+
     def test_html_registry_rejects_unreadable_three_layer_layout(self) -> None:
         report = self.memory_system.ValidationReport()
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -543,9 +884,11 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "  - \"uncertainty\"\n"
                 "  - \"validation_or_test\"\n"
                 "  - \"next_step\"\n"
-                "---\n"
+                + flexible_spec_fields(profile="atlas_hub")
+                + "---\n"
                 "# Synthetic\n\n"
-                "## Required Analysis Capsules\n\n"
+                + flexible_required_blocks_section()
+                + "## Required Analysis Capsules\n\n"
                 "- premise: Test premise.\n"
                 "- mechanism: Test mechanism.\n"
                 "- source_basis: README.md.\n"
@@ -578,7 +921,8 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 '<div data-capsule-field="uncertainty"></div>'
                 '<div data-capsule-field="validation_or_test"></div>'
                 '<div data-capsule-field="next_step"></div>'
-                "</article>",
+                "</article>"
+                + synthetic_content_block(),
                 encoding="utf-8",
             )
             rows_by_registry = {

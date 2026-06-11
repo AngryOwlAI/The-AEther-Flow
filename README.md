@@ -96,14 +96,14 @@ Project-system improvement is tracked separately from physics continuation. Docu
 Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
 
 The overview explainer is the front-facing hub for a source-backed research
-atlas. It links the `Æther-flow ontology`, the research system, role routing,
-claim gates, source authority, and validation governance. Each page uses a
-three-layer reading model: high-level description, operational model, and
-low-level evidence model. The tracked pages use deep-first
-progressive-disclosure with governed Mermaid diagrams, expandable analysis
-capsules, source drilldowns, and claim-boundary inspection. Those interactions
-help readers explore the project; they do not make generated HTML
-authoritative.
+atlas. It groups drilldowns by reader need: understand the research idea,
+understand the agent workflow, understand authority and memory, and run or
+regenerate the system. The tracked pages use deep-first
+progressive-disclosure, flexible presentation profiles, required
+source-backed content blocks, expandable analysis capsules, source drilldowns,
+and claim-boundary inspection. Governed Mermaid diagrams are used where they
+fit the subject. Those interactions help readers explore the project; they do
+not make generated HTML authoritative.
 
 - [Project Overview Explainer](html/project-overview-explainer.html): the research-atlas hub for the physics track, AI research-agent track, drilldowns, authority chain, and open derivation boundary.
 - [Æther-flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
@@ -112,6 +112,9 @@ authoritative.
 - [Claim Gates Explainer](html/claim-gates-explainer.html): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
 - [Source Authority Explainer](html/source-authority-explainer.html): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
 - [Research-Control System Explainer](html/research-control-system-explainer.html): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
+- [Roles And Skills Explainer](html/roles-and-skills-explainer.html): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
+- [Memory System Explainer](html/memory-system-explainer.html): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
+- [Technical Requirements Explainer](html/technical-requirements-explainer.html): tiered requirements for reading, validating, regenerating memory/wiki surfaces, governed Mermaid HTML, local retrieval, and PDFs.
 
 ---
 
@@ -156,6 +159,30 @@ When a Python script requires an external package, add one package per line to
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
+### Requirement tiers
+
+- Read and inspect: browser, text editor, and Git.
+- Run validators and memory scripts: Python `.venv`, `requirements.txt`, and
+  PyMuPDF.
+- Regenerate memory/wiki/registry surfaces:
+  `.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py` and
+  `make validate-memory`.
+- Regenerate governed Mermaid HTML: Node.js, npm, pinned Mermaid dependencies,
+  and Playwright Chromium under
+  `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/`.
+- Use local retrieval vault: optional Obsidian reader plus
+  `.local/obsidian/aether-flow-wiki/`.
+- Build or refresh PDFs: LaTeX/PDF build path only when TeX derivatives are in
+  scope.
+
+Governed Mermaid setup:
+
+```zsh
+cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts
+npm ci
+npx playwright install chromium
+```
+
 ---
 
 ## Memory, wiki, and registry system
@@ -182,6 +209,7 @@ source spec under `markdown/html-explainer-specs/` with `title`, `purpose`,
 `audience`, `output_path`, `renderer_skill`, `source_materials`,
 `claim_boundary`, `human_visual_only: true`, `explainer_kind`,
 `interaction_model`, `analysis_depth`, `required_controls`,
+`presentation_profile`, `layout_intent`, `required_content_blocks`,
 `source_drilldowns`, and `analysis_capsule_schema`. Modify the spec first,
 then regenerate the HTML output.
 

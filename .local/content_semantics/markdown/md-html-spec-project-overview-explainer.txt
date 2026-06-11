@@ -18,16 +18,27 @@ source_materials:
   - "markdown/html-explainer-specs/role-routing-explainer.md"
   - "markdown/html-explainer-specs/claim-gates-explainer.md"
   - "markdown/html-explainer-specs/source-authority-explainer.md"
+  - "markdown/html-explainer-specs/roles-and-skills-explainer.md"
+  - "markdown/html-explainer-specs/memory-system-explainer.md"
+  - "markdown/html-explainer-specs/technical-requirements-explainer.md"
 claim_boundary: "Human-only project atlas hub. It summarizes the existing dual-track project identity, exact-GR benchmark/open-derivation boundary, research-control system, and source authority without changing physics claims, control contracts, routing decisions, validator behavior, or registry authority."
 human_visual_only: true
 explainer_kind: "project_overview"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
+presentation_profile: "atlas_hub"
+layout_intent: "Use a grouped atlas hub with descriptive navigation cards, a compact system map, and source-backed panels that route readers by use case rather than by file order."
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
   - "source_drilldowns"
   - "claim_boundary_toggle"
+required_content_blocks:
+  - "atlas_navigation"
+  - "research_idea"
+  - "agent_workflow"
+  - "authority_memory"
+  - "run_regenerate_system"
 source_drilldowns:
   - "README.md"
   - "AGENTS.md"
@@ -68,6 +79,12 @@ research program, then route readers to focused drilldowns:
   negative results are handled.
 - `Source authority`: how TeX, registries, Markdown, generated wiki/PDF/HTML,
   and `.local/` scratch layers relate.
+- `Roles and skills`: registered roles, governed repo-local skills, and
+  evidence-labeled support-skill associations.
+- `Memory system`: CSV memory spine and derived wiki, Obsidian, semantic, and
+  query surfaces.
+- `Technical requirements`: tiered requirements for reading, validating,
+  regenerating Mermaid HTML, using local retrieval, and refreshing PDFs.
 
 The page should stop explaining what an ontology is in general. It should
 explain what this project means by the `Æther-flow ontology`.
@@ -102,8 +119,11 @@ visually match the HTML palette and typography.
   layer sections vertically; cards inside each layer must auto-fit at a
   readable minimum width rather than nesting fixed three-column grids.
 - Hero: state the project as a dual physics-and-AI research program.
-- Hub links: six drilldown cards for ontology, research system, role routing,
-  claim gates, source authority, and validation governance.
+- Hub links: grouped drilldown cards for ontology, research system, role
+  routing, claim gates, source authority, validation governance, roles and
+  skills, memory system, and technical requirements.
+- Group links by use case: understand the research idea, understand the agent
+  workflow, understand authority and memory, and run or regenerate the system.
 - High-level model: project purpose and the two co-developing tracks.
 - Operational model: how the research system turns questions into bounded jobs
   and checked outputs.
@@ -123,12 +143,18 @@ flowchart TD
   Hub --> ClaimGates["Claim gates drilldown"]
   Hub --> SourceAuthority["Source authority drilldown"]
   Hub --> Validation["Validation governance drilldown"]
+  Hub --> RolesSkills["Roles and skills drilldown"]
+  Hub --> MemorySystem["Memory system drilldown"]
+  Hub --> Requirements["Technical requirements drilldown"]
   Ontology --> Burden["Open derivation burden"]
   ResearchSystem --> Jobs["Bounded AgentJobs"]
   RoleRouting --> Roles["Execution-role contract"]
   ClaimGates --> Boundaries["Claim-boundary registry"]
   SourceAuthority --> Registries["Source-first registries"]
   Validation --> Receipts["Validator receipts"]
+  RolesSkills --> SkillContracts["Repo-local skill contracts"]
+  MemorySystem --> Retrieval["Derived retrieval surfaces"]
+  Requirements --> ToolTiers["Tiered tool requirements"]
 ```
 
 <!-- mermaid-diagram-id: dual-track-map -->
@@ -147,6 +173,19 @@ flowchart TD
   Validation --> SharedTarget
   Memory --> SharedTarget
 ```
+
+## Required Content Blocks
+
+- atlas_navigation: Group all explainer links by reader use case rather than
+  presenting a flat list.
+- research_idea: Explain the ontology, exact-GR benchmark, open derivation
+  burden, and claim-gate context.
+- agent_workflow: Explain how Director decisions, AgentJobs, roles,
+  validators, completions, and handoffs structure work.
+- authority_memory: Explain the source authority chain and the source-first
+  memory system with derived access layers.
+- run_regenerate_system: Point readers to technical requirements, validation
+  commands, governed Mermaid rendering, local retrieval, and PDF-refresh scope.
 
 ## Required Analysis Capsules
 
