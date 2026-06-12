@@ -117,6 +117,20 @@ contract declared by the Markdown source spec:
   or `What This Explainer Describes`.
 - Each generated content block must appear as `data-content-block="<id>"`.
 - Each generated content block must contain at least one `data-source-path`.
+- Each non-summary content block must be completed human documentation, not a
+  source-spec instruction copied into the page. Treat
+  `required_content_blocks` as coverage obligations: explain what the block is,
+  why the project needs it, how it works in the project, which sources ground
+  it, what it can and cannot claim, and where the reader should go next.
+- Follow `research_control/design/html_explainer_depth_contract.md` for tracked
+  explainers and run `scripts/spec_depth_lint.py --root .` after generation.
+  Current tracked explainers should be kept warning-free even though the lint is
+  advisory.
+- Use the shared no-network reader layer for tracked explainers: reading
+  progress, local search, active-section navigation, simple/technical reading
+  modes, expand/collapse controls, and copyable source chips. The helper
+  script is `scripts/enhance_html_explainers.py`; it is a renderer aid, not an
+  authority source.
 
 Allowed presentation profiles are `atlas_hub`, `role_catalog`,
 `format_ladder`, `memory_system_map`, `workflow_lifecycle`,

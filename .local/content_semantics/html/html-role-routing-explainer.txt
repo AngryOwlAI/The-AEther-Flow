@@ -22,20 +22,67 @@ Sources
 Source-Backed Coverage
 Authority Classification
 AGENTS.md
-README.md
-Explain how the task authority class separates science-bearing, project-system, documentation, validator, and memory work.
-Director Routing
-research_control/README.md
+registries/AGENT_ROLE_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
-Explain how Director decisions bind a selected role to one bounded AgentJob.
+A completed explanation of how task authority class separates physics work, project-control maintenance, documentation curation, validation, memory maintenance, and process auditing before a role is selected. In reader-facing terms, this section identifies the subject of
+Role Routing
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+AGENTS.md
+,
+registries/AGENT_ROLE_REGISTRY.csv
+,
+registries/ROLE_EXECUTION_REGISTRY.csv
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
+Director Routing
+README.md
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions. In reader-facing terms, this section identifies the subject of
+Role Routing
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/README.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Execution Role Contract
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
-Explain task-local execution-role records, constraints, removed permissions, expanded permissions, and validator bindings.
-Overlay Provisional Boundary
 README.md
 AGENTS.md
-Explain when a task overlay or one-job provisional role is allowed and why repeated provisional patterns require review rather than silent promotion.
+A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence. In reader-facing terms, this section identifies the subject of
+Role Routing
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+registries/AGENT_ROLE_REGISTRY.csv
+,
+registries/ROLE_EXECUTION_REGISTRY.csv
+,
+README.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
+Overlay Provisional Boundary
+AGENTS.md
+README.md
+research_control/README.md
+research_control/AGENTS.md
+There are three routing forms. A registered role is reusable policy with a versioned contract. A task overlay temporarily changes authority for one known job while preserving the base role. A one-job provisional role handles an unusual bounded need and expires after the job. The matrix matters because flexibility without expiry becomes hidden policy. If the same provisional role pattern recurs, the project treats it as a project-system signal for possible registration rather than letting habit create authority. The legitimate claim is operational: routing records can explain why a role was allowed to do specific work. They cannot create scientific acceptance or edit outside the allowlist.
+Form
+Use
+Risk control
+Registered role
+Reusable workflow authority.
+Versioned contract.
+Task overlay
+One mixed job.
+Expires with AgentJob.
+Provisional role
+Novel one-job need.
+Non-reusable until registered.
 Role Routing Decision Tree
 +
 -

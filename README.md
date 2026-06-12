@@ -218,6 +218,10 @@ Each tracked explainer must open with a source-backed `subject_summary` block
 titled `Summary of [Subject]`, using prose plus visible source-path chips to
 explain the subject's function, role, project value, and declared grounding
 materials before the table of contents.
+Non-summary explainer blocks are expected to render as completed
+source-backed documentation, not source-spec instructions. Use
+`scripts/spec_depth_lint.py --root .` or `make validate-html-explainers` as an
+advisory depth check after regenerating tracked HTML explainers.
 
 Bootstrap or refresh the memory system:
 

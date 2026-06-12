@@ -110,21 +110,13 @@ Summary source basis:
 ## Required Content Blocks
 
 - subject_summary: Summarize the technical requirements explainer, its tiered setup and validation function, why readers need that distinction, and which declared sources ground the summary.
-- read_inspect_tier: Explain browser, text editor, and Git as the minimum
-  read/inspect layer.
-- validators_memory_scripts_tier: Explain Python `.venv`, `requirements.txt`,
-  PyMuPDF, and Python validator commands.
-- memory_regeneration_tier: Explain project-memory-system scripts and `make
-  validate-memory` for regenerating registries, wiki, vault sync, and query
-  checks.
-- diagram_rendering_tier: Explain Node.js, npm, pinned Mermaid package,
-  Playwright Chromium, and the inline-SVG renderer path.
-- local_retrieval_tier: Explain optional Obsidian and
-  `.local/obsidian/aether-flow-wiki/` plus local semantic/query surfaces.
-- pdf_refresh_tier: Explain LaTeX/PDF build requirements only when TeX
-  derivatives are in scope.
-- project_vs_operator_aid: Label each requirement as project requirement or
-  operator environment aid.
+- read_inspect_tier: A practical read-only tier covering browser, text editor, Git, and shell inspection as the minimum operator environment for understanding sources without regenerating artifacts.
+- validators_memory_scripts_tier: A project requirement tier for Python `.venv`, `requirements.txt`, bootstrap validation, project-control scripts, research-control validators, tests, and deterministic checks.
+- memory_regeneration_tier: A completed memory-refresh tier for project-memory-system scripts, `make validate-memory`, generated registries, wiki notes, content semantics, and local query smoke checks.
+- diagram_rendering_tier: A source-backed diagram tier covering Node.js, npm, pinned Mermaid package, Playwright Chromium, build-time inline SVG rendering, diagram source parity, and the no-runtime-Mermaid boundary.
+- local_retrieval_tier: An operator-aid tier for optional Obsidian, SQLite, local semantic extracts, browser previews, and `.local/` scratch surfaces, with clear non-authority status.
+- pdf_refresh_tier: A conditional PDF tier explaining LaTeX/PDF build requirements only when TeX derivative refresh is in scope, and why PDFs remain human-reading derivatives.
+- project_vs_operator_aid: A matrix separating project requirements from operator conveniences so missing optional local tools do not get mistaken for repository validity failures.
 
 ## Required Analysis Capsules
 

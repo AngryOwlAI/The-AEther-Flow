@@ -159,20 +159,12 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize source authority, its source-first governance function, why it matters for generated and canonical surfaces, and which declared sources ground the summary.
-- authority_ladder: Explain canonical science sources, registry authority,
-  registered Markdown authority, generated derivatives, and `.local/` scratch
-  boundaries.
-- format_use_case_matrix: Provide an authority/use-case matrix covering `.tex`,
-  `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic extracts,
-  `.meta.json`, and `.local/`.
-- generated_derivatives: Explain generated wiki notes, indexes, PDFs, tracked
-  HTML, metadata sidecars, and why they are not independent authority.
-- local_retrieval_surfaces: Explain local Obsidian vault, content semantics,
-  semantic index, scratch builds, caches, and retrieval outputs as
-  noncanonical access layers.
-- validation_evidence: Explain source hashes, source-basis metadata, registry
-  rows, Mermaid parity, bootstrap validation, and documentation-impact checks.
+- subject_summary: Summarize source authority, its file-format ladder, why generated surfaces stay non-authoritative, and which declared sources ground the summary.
+- authority_ladder: A documentation-grade ladder covering canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries.
+- format_use_case_matrix: A complete authority/use-case matrix for `.tex`, `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic extracts, `.meta.json`, `wiki/`, and `.local/`, including editor, validator, and failure mode.
+- generated_derivatives: A source-backed section explaining generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, content semantics, and why regeneration does not promote them to authority.
+- local_retrieval_surfaces: A completed section on local Obsidian, content semantics, SQLite, query scripts, caches, and scratch builds as operator aids that must point back to canonical rows.
+- validation_evidence: A documentation section on source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, documentation-impact receipts, and checkpoint boundaries.
 
 ## Required Analysis Capsules
 

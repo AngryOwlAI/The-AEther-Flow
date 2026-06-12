@@ -150,20 +150,12 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the research-control system, its classification and bounded-transaction function, why it matters for project governance, and which declared sources ground the summary.
-- classification_resolver: Explain deterministic change classification,
-  resolver output, advisory routing, and hard stop conditions.
-- bounded_transaction: Explain one bounded AgentJob, allowed writes, forbidden
-  authority surfaces, claim boundary, and completion scope.
-- flexible_html_contract: Explain the flexible source-backed HTML contract,
-  including controlled `presentation_profile`, nonblank `layout_intent`,
-  page-local `required_content_blocks`, `data-content-block` markers, and
-  source-path evidence.
-- documentation_impact: Explain documentation-impact receipts, source-doc
-  updates, no-op rationale, and validation.
-- validator_chain: Explain bootstrap validation, Mermaid parity, emitted
-  signal validation, documentation-impact validation, research-control
-  validation, diff checks, and checkpoint boundaries.
+- subject_summary: Summarize the research-control system, its safety-harness role, why validators and receipts matter, and which declared sources ground the summary.
+- classification_resolver: A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces.
+- bounded_transaction: A source-backed explanation of one bounded AgentJob, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
+- flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries.
+- documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
+- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, research-control validation, diff checks, tests, and advisory depth lint.
 
 ## Required Analysis Capsules
 

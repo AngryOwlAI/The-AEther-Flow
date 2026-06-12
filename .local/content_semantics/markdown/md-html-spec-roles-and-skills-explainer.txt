@@ -139,22 +139,14 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the roles-and-skills catalog, its role/skill boundary function, why readers need that boundary, and which declared sources ground the summary.
-- active_role_catalog: List current active roles, what each does, authority
-  level, default validators, and role contract path.
-- status_defined_roles: Explain defined but human-gated roles, especially Gate
-  Chair, without routing new work to them automatically.
-- superseded_audit_roles: Preserve superseded role contracts for audit history
-  and old execution records.
-- repo_local_skill_catalog: Explain governed repo-local skills and front doors
-  only, with paths under `.codex/skills/`.
-- declared_role_skill_evidence: Show declared role/skill relationships from
-  role contracts, registry rows, and skill contracts.
-- inferred_support_skills: Label inferred support skills as `likely support
-  skill`, for example Documentation Curator with `html-visual-explainer`,
-  `visual-explainer`, and `project-memory-system`.
-- operator_context_boundary: Distinguish project-governed roles and skills
-  from global Codex plugins, bundled tools, or machine-local operator aids.
+- subject_summary: Summarize the roles-and-skills catalog, its active-first role inventory, why skill/role boundaries matter, and which declared sources ground the summary.
+- active_role_catalog: A primary catalog of current active roles, what each does, which authority lane it occupies, and which outputs or validators normally constrain it.
+- status_defined_roles: A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously.
+- superseded_audit_roles: An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions.
+- repo_local_skill_catalog: A grouped catalog of repo-local skills by continuation, project-system improvement, memory/wiki, HTML visual explanation, Mermaid rendering, PDF/TeX, ontology promotion, and design support.
+- declared_role_skill_evidence: A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience.
+- inferred_support_skills: A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills.
+- operator_context_boundary: A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records.
 
 ## Required Analysis Capsules
 

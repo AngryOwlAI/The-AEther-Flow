@@ -76,6 +76,24 @@ Rules:
   `data-source-path` marker. The visual form can be a table, matrix, card
   group, sidebar, callout, inspector panel, accordion, or other appropriate
   source-backed presentation for the chosen profile.
+- Every non-summary content block must be finished reader-facing documentation,
+  not a copied source-spec directive. Each block should answer what the subject
+  is, why the project needs it, how it works inside the project, which sources
+  ground it, what it may legitimately claim, what it may not claim, and where
+  the reader should go next. A block may satisfy this through prose, term cards,
+  a matrix, a timeline, quote panels, or another source-backed form.
+- For current tracked explainers, use the project depth contract at
+  `research_control/design/html_explainer_depth_contract.md` and run
+  `scripts/spec_depth_lint.py --root .` after generation. The lint is advisory
+  by design, but migrated current explainers should remain warning-free.
+- Visible content blocks must not begin with renderer-instruction stubs such as
+  `Explain`, `State`, `Show`, `List`, `Provide`, `Preserve`, or
+  `Point readers to` unless the text is explicitly a checklist item.
+- Use the shared no-network reader layer when rendering tracked explainers:
+  reading progress, active-section navigation, local search, simple/technical
+  reading modes, expand/collapse controls, and copyable source chips. The
+  helper script is `scripts/enhance_html_explainers.py`; preserve source-spec
+  authority and do not treat that helper as an independent HTML source.
 - The summary prose should be manually authored per source spec. Do not derive
   `subject_summary` automatically from source files. Target 150-240 words,
   excluding visible source chips, as a review guideline rather than a validator

@@ -21,205 +21,108 @@ Source-Backed Coverage
 Active Role Catalog
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Role
-Kind
-Authority
-Validators
-Contract
-Memory-System Maintainer v0.1.0
-memory_system_maintenance
-project_control
-bootstrap_memory_system;validate_documentation_impact;validate_research_control;unittest
-.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md
-Process Integrity Auditor v0.1.0
-process_control
-process_control
-validate_research_control;check_diff
-.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md
-Project-Control Maintainer v0.1.0
-project_control_maintenance
-project_control
-validate_documentation_impact;validate_research_control;unittest
-.agents/roles/research_ops/project-control-maintainer.v0.1.0.md
-Documentation Curator v0.4.0
-project_documentation
-project_control
-bootstrap_memory_system;validate_research_control;validate_documentation_impact
-.agents/roles/research_ops/documentation-curator.v0.4.0.md
-Project-System Director v0.1.0
-project_system_routing
-project_control
-validate_documentation_impact;validate_research_control
-.agents/roles/research_ops/project-system-director.v0.1.0.md
-Validator Engineer v0.1.0
-project_system_validation
-project_control
-validate_documentation_impact;validate_research_control;unittest
-.agents/roles/research_ops/validator-engineer.v0.1.0.md
-Director of Research v0.1.0
-routing_control
-routing_control
-validate_research_control;claim_boundary_phrase_scan
 .agents/roles/research_ops/director-of-research.v0.1.0.md
-Refuter v0.1.0
-scientific_adversarial
-science_draft
-validate_research_control;claim_boundary_phrase_scan
-.agents/roles/physics/refuter.v0.1.0.md
-Smuggling Auditor v0.1.0
-scientific_adversarial
-science_draft
-validate_research_control;claim_boundary_phrase_scan
-.agents/roles/physics/smuggling-auditor.v0.1.0.md
-Candidate Constructor v0.1.0
-scientific_construction
-science_draft
-validate_research_control;claim_boundary_phrase_scan
-.agents/roles/physics/candidate-constructor.v0.1.0.md
-Ontology Formalizer v0.1.0
-scientific_formalization
-science_draft
-validate_research_control;claim_boundary_phrase_scan
-.agents/roles/physics/ontology-formalizer.v0.1.0.md
+.agents/roles/research_ops/project-system-director.v0.1.0.md
+A primary catalog of current active roles, what each does, which authority lane it occupies, and which outputs or validators normally constrain it. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+registries/AGENT_ROLE_REGISTRY.csv
+,
+registries/ROLE_EXECUTION_REGISTRY.csv
+,
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Status Defined Roles
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Role
-Kind
-Authority
-Validators
-Contract
-Gate Chair v0.1.0
-scientific_gate
-human_gated
-validate_research_control;claim_boundary_phrase_scan
-.agents/roles/physics/gate-chair.v0.1.0.md
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+.agents/roles/research_ops/project-system-director.v0.1.0.md
+A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+registries/AGENT_ROLE_REGISTRY.csv
+,
+registries/ROLE_EXECUTION_REGISTRY.csv
+,
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Superseded Audit Roles
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Role
-Kind
-Authority
-Validators
-Contract
-Documentation Curator v0.1.0
-project_documentation
-project_control
-bootstrap_memory_system;validate_research_control;validate_documentation_impact
-.agents/roles/research_ops/documentation-curator.v0.1.0.md
-Documentation Curator v0.2.0
-project_documentation
-project_control
-bootstrap_memory_system;validate_research_control;validate_documentation_impact
-.agents/roles/research_ops/documentation-curator.v0.2.0.md
-Documentation Curator v0.3.0
-project_documentation
-project_control
-bootstrap_memory_system;validate_research_control;validate_documentation_impact
-.agents/roles/research_ops/documentation-curator.v0.3.0.md
-Repo Local Skill Catalog
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+.agents/roles/research_ops/project-system-director.v0.1.0.md
+An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
 registries/AGENT_ROLE_REGISTRY.csv
+,
 registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Skill
-Purpose
-Path
-continue-research
-Resolve tracked research-control state and set up or execute one bounded AgentJob per invocation.
-.codex/skills/continue-research/SKILL.md
-grill-me
-Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions "grill me".
-.codex/skills/grill-me/SKILL.md
-html-visual-explainer
-Front door for generated human-only HTML explainers.
-.codex/skills/html-visual-explainer/SKILL.md
-improve-project-system
-Resolve tracked project-system improvement state and set up or execute one bounded AgentJob per invocation.
-.codex/skills/improve-project-system/SKILL.md
-markdown-wiki
-Front door for generated Markdown metadata notes and wiki indexes.
-.codex/skills/markdown-wiki/SKILL.md
-obsidian-wiki
-Front door for the local generated Obsidian memory vault, content-semantic extraction, relationship graph, and JSON query surface.
-.codex/skills/obsidian-wiki/SKILL.md
-ontology-promotion
-Front door for ontology promotion packet boundaries.
-.codex/skills/ontology-promotion/SKILL.md
-pdf-derivative-build
-Front door for managed TeX-to-PDF derivative builds.
-.codex/skills/pdf-derivative-build/SKILL.md
-project-memory-system
-Owns the shared memory, registry, wiki, PDF-derivative, cleanup, and validation scripts for this repository.
-.codex/skills/project-memory-system/SKILL.md
-tex-wiki
-Front door for TeX-source metadata notes and TeX registry validation.
-.codex/skills/tex-wiki/SKILL.md
-visual-explainer
-Generate beautiful, self-contained HTML pages that visually explain systems, code changes, plans, and data. Use when the user asks for a diagram, architecture overview, diff review, plan review, project recap, comparison table, or any visual explanation of technical concepts. Also use proactively when you are about to render a complex ASCII table (4+ rows or 3+ columns) — present it as a styled HTML page instead.
-.codex/skills/visual-explainer/SKILL.md
-mermaid-documentation
-Subskill for registered Mermaid diagrams in registered explanatory Markdown and tracked source-backed HTML explainers.
-.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
-playwright-cli
-Automate browser interactions, test web pages and work with Playwright tests.
-.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/node_modules/playwright-core/lib/tools/cli-client/skill/SKILL.md
-playwright-trace
-Inspect Playwright trace files from the command line — list actions, view requests, console, errors, snapshots and screenshots.
-.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/node_modules/playwright-core/lib/tools/trace/SKILL.md
+,
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
+Repo Local Skill Catalog
+README.md
+AGENTS.md
+research_control/README.md
+registries/AGENT_ROLE_REGISTRY.csv
+A grouped catalog of repo-local skills by continuation, project-system improvement, memory/wiki, HTML visual explanation, Mermaid rendering, PDF/TeX, ontology promotion, and design support. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/README.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Declared Role Skill Evidence
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Evidence kind
-Source path
-What it supports
-Role contracts
-.agents/roles/...
-Declared role purpose, authority, validators, and forbidden surfaces.
-Role registries
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+.agents/roles/research_ops/project-system-director.v0.1.0.md
+A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
 registries/AGENT_ROLE_REGISTRY.csv
-Registered status, contract path, version, authority level, and default validators.
-Skill contracts
-.codex/skills/.../SKILL.md
-Repo-local front doors and workflow commands.
+,
+registries/ROLE_EXECUTION_REGISTRY.csv
+,
+.agents/roles/research_ops/director-of-research.v0.1.0.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Inferred Support Skills
+README.md
+AGENTS.md
+research_control/README.md
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Role
-Association
-Evidence-labeled rationale
-Documentation Curator
-likely support skill: html-visual-explainer
-The role owns source-backed human-only HTML specs; the skill governs tracked HTML registration.
-Documentation Curator
-likely support skill: visual-explainer
-The visual skill supports rendering and layout while remaining non-authoritative.
-Documentation Curator
-likely support skill: project-memory-system
-The role must run memory bootstrap and docs-impact validation after source/spec changes.
-Memory-System Maintainer
-likely support skill: obsidian-wiki
-The role maintains source-first memory and the skill owns the local generated vault/query surface.
+A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/README.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Operator Context Boundary
+AGENTS.md
+README.md
+research_control/README.md
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-.codex/skills/html-visual-explainer/SKILL.md
-Label
-Surface
-Meaning
-Project-governed
-.codex/skills/*
-Durable repo-local skill contract.
-Operator aid
-Global Codex skills/plugins
-Useful in this session, not project authority unless mirrored into the repo.
-Operator aid
-Obsidian app
-Optional local reader for generated vault files.
+A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records. In reader-facing terms, this section identifies the subject of
+Roles And Skills
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+AGENTS.md
+,
+README.md
+,
+research_control/README.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Analysis capsules
 Claim-Aware Analysis
 Active Roles Are The Operating System

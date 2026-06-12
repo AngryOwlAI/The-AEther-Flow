@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="876b964a7cf7021c3b8958aa4474a099f2cabaa35ce4877ae899b398d48977b0">
+  <meta name="aether-flow-source-basis-hash" content="872e44dcac88a90240feb8d7d48e815a97f49468a8e10a06a1e4bcee190e6a13">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Æther-flow Ontology</title>
   <style>
@@ -72,13 +72,359 @@
     pre { overflow: auto; white-space: pre-wrap; background: #161b18; color: #edf2ec; padding: 14px; }
     @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding: 22px; } .section-heading, .block-head { display: block; } .nav { position: static; flex-wrap: wrap; overflow: visible; } .nav a { white-space: normal; } }
   </style>
+
+<style id="aether-docs-enhancement">
+  :root {
+    --doc-bg: #f8f5ee;
+    --doc-ink: #18201b;
+    --doc-muted: #5f6b60;
+    --doc-line: rgba(33, 49, 40, .18);
+    --doc-panel: rgba(255, 255, 255, .92);
+    --doc-wash: #f1eadc;
+    --doc-authority: #1e3a5f;
+    --doc-physics: #2f6f54;
+    --doc-workflow: #8b5a20;
+    --doc-warning: #a34f12;
+    --doc-validation: #0f766e;
+    --doc-shadow: 0 18px 50px rgba(27, 33, 28, .10);
+    --doc-radius: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background:
+      linear-gradient(180deg, #fffcf7 0%, var(--doc-bg) 42%, #efe8dc 100%);
+    color: var(--doc-ink);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .28;
+    background-image:
+      linear-gradient(rgba(30,58,95,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30,58,95,.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(180deg, black, transparent 75%);
+  }
+
+  .page-shell {
+    max-width: 1220px;
+    padding-top: 26px;
+    position: relative;
+  }
+
+  .hero,
+  .panel,
+  .atlas-link,
+  .content-block,
+  .capsule,
+  .block-subgroup,
+  .source-list li,
+  details {
+    border-radius: var(--doc-radius);
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--doc-shadow);
+    border-color: rgba(30,58,95,.22);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.96), rgba(223,232,242,.78)),
+      linear-gradient(90deg, rgba(47,111,84,.12), rgba(139,90,32,.10));
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  h1 {
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  h2, h3 { text-wrap: balance; }
+
+  p, li, dd {
+    font-size: 1.01rem;
+    line-height: 1.72;
+  }
+
+  .hero-copy {
+    font-size: clamp(1.02rem, 2vw, 1.22rem);
+    max-width: 70ch;
+  }
+
+  .meta-chip,
+  .source-chip,
+  .control-marker {
+    border-radius: 999px;
+  }
+
+  .meta-chip {
+    box-shadow: 0 10px 28px rgba(30,58,95,.08);
+  }
+
+  .nav {
+    top: 8px;
+    border-radius: 999px;
+    padding: 10px;
+    background: rgba(248,245,238,.72);
+    border: 1px solid rgba(33,49,40,.10);
+    box-shadow: 0 12px 36px rgba(27,33,28,.08);
+  }
+
+  .nav a {
+    border-radius: 999px;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .nav a:hover,
+  .nav a.is-active {
+    transform: translateY(-1px);
+    background: var(--doc-ink);
+    color: #fffaf1;
+    border-color: var(--doc-ink);
+  }
+
+  .panel {
+    box-shadow: 0 14px 44px rgba(27,33,28,.075);
+    border-color: rgba(33,49,40,.16);
+  }
+
+  .section-heading {
+    border-bottom: 1px solid rgba(33,49,40,.10);
+    padding-bottom: 12px;
+  }
+
+  .subject-summary .content-block {
+    border-left: 7px solid var(--doc-authority);
+    background:
+      linear-gradient(90deg, rgba(30,58,95,.07), transparent 30%),
+      var(--doc-panel);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-block {
+    position: relative;
+    padding: clamp(18px, 2vw, 26px);
+    border-left: 7px solid rgba(30,58,95,.28);
+    background: var(--doc-panel);
+    box-shadow: 0 8px 28px rgba(27,33,28,.055);
+  }
+
+  .content-block[data-content-block*="ontology"],
+  .content-block[data-content-block*="physics"],
+  .content-block[data-content-block*="claim"],
+  .content-block[data-content-block*="benchmark"],
+  .content-block[data-content-block*="derivation"] {
+    border-left-color: var(--doc-physics);
+  }
+
+  .content-block[data-content-block*="workflow"],
+  .content-block[data-content-block*="agent"],
+  .content-block[data-content-block*="role"],
+  .content-block[data-content-block*="director"] {
+    border-left-color: var(--doc-workflow);
+  }
+
+  .content-block[data-content-block*="validation"],
+  .content-block[data-content-block*="memory"],
+  .content-block[data-content-block*="authority"],
+  .content-block[data-content-block*="source"] {
+    border-left-color: var(--doc-validation);
+  }
+
+  .content-block::before {
+    content: attr(data-content-block);
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(30,58,95,.08);
+    color: var(--doc-authority);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .block-head {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(33,49,40,.14);
+  }
+
+  .atlas-link {
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+
+  .atlas-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(27,33,28,.10);
+    border-color: rgba(30,58,95,.38);
+  }
+
+  .reader-toolbar {
+    position: sticky;
+    top: 68px;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 10px 0 18px;
+    padding: 10px;
+    border: 1px solid rgba(33,49,40,.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(27,33,28,.08);
+  }
+
+  .reader-toolbar input[type="search"] {
+    flex: 1 1 230px;
+    min-width: 160px;
+    border: 1px solid rgba(33,49,40,.16);
+    border-radius: 999px;
+    padding: 10px 13px;
+    color: var(--doc-ink);
+    background: #fff;
+    font: inherit;
+  }
+
+  .reader-toolbar button {
+    border: 1px solid rgba(33,49,40,.16);
+    border-radius: 999px;
+    padding: 9px 12px;
+    color: var(--doc-ink);
+    background: #fff;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .reader-toolbar button[aria-pressed="true"] {
+    background: var(--doc-ink);
+    color: #fffaf1;
+  }
+
+  .reading-progress {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: var(--reading-progress, 0%);
+    height: 4px;
+    background: linear-gradient(90deg, var(--doc-authority), var(--doc-physics), var(--doc-warning));
+    box-shadow: 0 0 18px rgba(47,111,84,.35);
+  }
+
+  .source-chip,
+  .source-list li {
+    cursor: copy;
+  }
+
+  .source-chip.was-copied,
+  .source-list li.was-copied {
+    outline: 2px solid rgba(15,118,110,.35);
+    background: rgba(15,118,110,.10);
+  }
+
+  mark.search-hit {
+    background: rgba(248,232,199,.9);
+    color: inherit;
+    padding: 0 .15em;
+    border-radius: .25em;
+  }
+
+  [hidden] { display: none !important; }
+
+  body[data-reader-mode="simple"] details.source-fold,
+  body[data-reader-mode="simple"] pre {
+    display: none;
+  }
+
+  body[data-reader-mode="simple"] .capsule dd {
+    color: var(--doc-ink);
+  }
+
+  body[data-reader-mode="simple"] p,
+  body[data-reader-mode="simple"] li,
+  body[data-reader-mode="simple"] dd {
+    font-size: 1.06rem;
+    line-height: 1.78;
+  }
+
+  body[data-reader-mode="technical"] .source-chip,
+  body[data-reader-mode="technical"] code {
+    font-size: .95em;
+  }
+
+  .diagram-shell {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
+  }
+
+  .diagram-shell .section-heading::after {
+    content: "Diagram preserved from source spec";
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--doc-muted);
+    font-size: .84rem;
+  }
+
+  .zoom-controls button {
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(27,33,28,.10);
+  }
+
+  .source-list li {
+    transition: transform .15s ease, background .15s ease;
+  }
+
+  .source-list li:hover {
+    transform: translateY(-1px);
+    background: rgba(223,232,242,.58);
+  }
+
+  .capsule {
+    box-shadow: 0 8px 28px rgba(27,33,28,.055);
+  }
+
+  .capsule-row {
+    padding: 10px 0;
+    border-top: 1px dashed rgba(33,49,40,.12);
+  }
+
+  .capsule-row:first-child {
+    border-top: 0;
+  }
+
+  @media (max-width: 860px) {
+    .reader-toolbar {
+      position: static;
+      border-radius: var(--doc-radius);
+    }
+
+    .nav {
+      border-radius: var(--doc-radius);
+    }
+
+    .hero, .panel { border-radius: var(--doc-radius); }
+  }
+</style>
+
 </head>
 <body>
   <main class="page-shell">
     <header class="hero">
       <div><p class="eyebrow">conceptual_model</p><h1>Æther-flow Ontology</h1><p class="hero-copy">Explain the project&#x27;s specific Æther-flow ontology in high-level, operational, and low-level evidence layers while preserving the open exact-GR derivation burden.</p></div>
       <aside class="meta-stack" aria-label="Page metadata">
-        <div class="meta-chip"><strong>Layout intent</strong><br>Use a conceptual model with term cards, derivation-burden panels, governed diagrams, and source-backed claim-boundary callouts.</div>
+        <div class="meta-chip"><strong>Layout intent</strong><br>Use a mixed-audience conceptual model: plain-language orientation, term cards, source quote panels, adoption-vs-derivation bridge, derivation-burden checklist, governed diagrams, and claim-boundary callouts.</div>
         <div class="meta-chip"><strong>Authority</strong><br>Human-only generated derivative</div>
         <div class="meta-chip"><strong>Source basis</strong><br><code>MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER</code></div>
       </aside>
@@ -91,7 +437,7 @@
     <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#diagrams">Diagrams</a><a href="#analysis">Analysis</a><a href="#sources">Sources</a></nav>
     <section id="content-blocks" class="section panel">
       <div class="section-heading"><div><h2>Source-Backed Coverage</h2></div></div>
-      <div class="content-grid"><article class="content-block" data-content-block="ontology_terms"><div class="block-head"><h3>Ontology Terms</h3><div class="evidence-row"><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span></div></div><p>Explain project-local meanings of `Æther`, `Æther-flow`, observed space, `S-time`, expansion, and gravity.</p></article><article class="content-block" data-content-block="exact_gr_benchmark"><div class="block-head"><h3>Exact Gr Benchmark</h3><div class="evidence-row"><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span></div></div><p>State that exact GR is the observable benchmark and not a completed first-principles derivation.</p></article><article class="content-block" data-content-block="derivation_burden"><div class="block-head"><h3>Derivation Burden</h3><div class="evidence-row"><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span></div></div><p>Show the source-defined readout, same-metric matter, invariance, closure, and anti-smuggling requirements.</p></article><article class="content-block" data-content-block="claim_boundaries"><div class="block-head"><h3>Claim Boundaries</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span></div></div><p>Preserve the human-only, no-physics-promotion boundary for the ontology explainer.</p></article></div>
+      <div class="content-grid"><article class="content-block" data-content-block="layperson_orientation"><div class="block-head"><h3>Layperson Orientation</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="ontology/aether_flow_interpretation-lemen.md"><code>ontology/aether_flow_interpretation-lemen.md</code></span></div></div><p>Ontology means the answer to a basic question: what does this project say exists beneath the appearances we measure? In this repository, the answer is not an old static ether or a wind blowing through ordinary space. It is a proposed deeper four-dimensional substrate, named <code>Æther</code>, whose intrinsic ordered motion, named <code>Æther-flow</code>, is used as a conceptual picture for observed space, experienced time-order, expansion, and gravity. The safe current claim is narrower than the picture: ordinary exact GR remains the benchmark at the observable level, while a first-principles derivation from substrate structure remains open. This orientation helps lay readers use the page as a map without mistaking the map for a proof.</p></article><article class="content-block" data-content-block="ontology_terms"><div class="block-head"><h3>Ontology Terms</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="ontology/aether_flow_interpretation-lemen.md"><code>ontology/aether_flow_interpretation-lemen.md</code></span></div></div><p>The core terms are project-local. <code>Æther</code> names the proposed four-dimensional substrate; <code>Æther-flow</code> names its intrinsic ordered motion or relational organization. Observed three-dimensional space is the local experiential slice in which observers measure distance, while <code>S-time</code> is the order of change registered by matter, light, and the flow. Observed expansion is treated as the appearance of deeper ordered motion, and gravity is a heuristic description of matter-shaped reorganization of the surrounding flow. Adoption means using exact GR as the operational benchmark; derivation would mean recovering that benchmark from source-defined substrate laws. Anti-smuggling prevents the project from importing the GR structures it is supposed to derive.</p><table><thead><tr><th>Term</th><th>Plain answer</th><th>Boundary</th></tr></thead><tbody><tr><td>Æther-flow</td><td>Ordered substrate motion behind observer-level readings.</td><td>Not a wind through ordinary space.</td></tr><tr><td>S-time</td><td>Experienced order of change.</td><td>Not a hidden place-like corridor.</td></tr><tr><td>Exact closure</td><td>GR predictions stay the benchmark.</td><td>Not proof that substrate laws are derived.</td></tr><tr><td>Anti-smuggling</td><td>Recover target structures from sources.</td><td>Do not assume the answer inside the premise.</td></tr></tbody></table></article><article class="content-block" data-content-block="exact_gr_benchmark"><div class="block-head"><h3>Exact GR Benchmark</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="ontology/aether_flow_interpretation-lemen.md"><code>ontology/aether_flow_interpretation-lemen.md</code></span></div></div><p>Adoption and derivation do different jobs. Adoption means the current operational mathematics remains ordinary exact general relativity: field equations, predictive phenomena, clocks, and observed gravitational behavior are preserved as the benchmark. Derivation would be stronger. It would require explicit substrate laws that recover Lorentzian geometry, causal structure, clocks, universal same-metric matter coupling, invariance, and Einsteinian closure without inserting those target structures by hand. The ontology can be compatible with the benchmark as an interpretation, but compatibility is not uniqueness and not proof. This distinction is the page's central scientific safety rail: the generated explainer may clarify the research target, but only a valid derivation plus claim-gate review could change scientific status.</p></article><article class="content-block" data-content-block="derivation_burden"><div class="block-head"><h3>Derivation Burden</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="ontology/aether_flow_interpretation-lemen.md"><code>ontology/aether_flow_interpretation-lemen.md</code></span></div></div><p>The open burden is equation-level, not rhetorical. The source note sharpens the missing layer as a local response-soldering source theorem that would map substrate response data to an observer normal/readout orbit, written in current control vocabulary as <code>(\mathcal B_U, \rho_U, T_U, d_{VU}, \chi_U) -&gt; ([n]_U, \Phi_U)</code>. From there, a successful candidate would still need to recover an effective Lorentzian metric, causal structure, clocks, same-metric matter coupling, nonmetric mode control, <code>S-time</code> closure, invariance, and anti-smuggling constraints. The checklist turns an appealing ontology into testable work. It also marks what is not yet done: no current generated explainer may claim this derivation has been completed.</p><ul><li>Source-defined substrate data.</li><li>Observer normal/readout orbit.</li><li>Effective metric, clocks, matter coupling, closure, and invariance.</li><li>Claim-gate review before promotion.</li></ul></article><article class="content-block" data-content-block="source_quote_gallery"><div class="block-head"><h3>Source Quote Gallery</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv"><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></span></div></div><p>Short source excerpts are included because the boundary language is clearer in the project's own wording. The ontology note calls itself an "ontology statement" rather than a completed substrate derivation; that permits conceptual explanation and forbids proof language. It also warns that <code>Æther</code> should not be pictured as an ordinary three-dimensional medium expanding into a void; that permits modern substrate vocabulary and forbids a static ether caricature. The layperson note says preserving Einstein's work is the central constraint and that matter couples to the metric rather than directly to the flow; that permits an exact-closure interpretation and forbids preferred-frame shortcut claims. These quotes are source-basis aids only. They do not outrank registered TeX, registries, or claim gates.</p><table><thead><tr><th>Source</th><th>Why it matters</th></tr></thead><tbody><tr><td>ontology/aether-and-aether-flow.md</td><td>Sets the ontology/proof boundary.</td></tr><tr><td>ontology/aether_flow_interpretation-lemen.md</td><td>Bridges lay explanation to exact closure.</td></tr></tbody></table></article><article class="content-block" data-content-block="claim_boundaries"><div class="block-head"><h3>Claim Boundaries</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span></div></div><p>This explainer may define project vocabulary, summarize exact-GR benchmark adoption, quote ontology Markdown, and describe the open derivation burden. It may not claim that GR has been derived, add new equations beyond quoted source targets, introduce empirical predictions, alter canonical TeX, or promote ontology-adjacent Markdown above registered source authority. The boundary matters because the page is intentionally attractive to mixed lay and technical readers; readability must not blur claim status. Generated HTML is a human-only derivative. The canonical route for scientific change remains bounded research-control work, registered artifacts, audits, and claim gates. When in doubt, treat this page as orientation and inspect the cited sources before making claims.</p></article><article class="content-block" data-content-block="reader_paths"><div class="block-head"><h3>Reader Paths</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="ontology/aether-and-aether-flow.md"><code>ontology/aether-and-aether-flow.md</code></span><span class="source-chip" data-source-path="ontology/aether_flow_interpretation-lemen.md"><code>ontology/aether_flow_interpretation-lemen.md</code></span></div></div><p>Different readers should leave by different doors. New readers should read the plain-language orientation, term cards, and diagrams first, then use the claim-gates page to understand why an appealing model is not automatically accepted science. Technical reviewers should inspect <code>ontology/tex/</code>, the TeX registry, and the derivation-burden checklist before evaluating a candidate construction. Project maintainers should read source authority and research-control pages before regenerating tracked HTML or changing registered specs. The next step is therefore not a single document but a route chosen by purpose: concept learning, scientific audit, or project operation. In all cases, the generated page points back to sources rather than replacing them.</p></article></div>
 
     </section>
     <div id="diagrams">
@@ -227,5 +573,141 @@ flowchart TD
       });
     })();
   </script>
+
+<script id="aether-docs-enhancement-js">
+  (() => {
+    if (window.__aetherDocsEnhancementLoaded) return;
+    window.__aetherDocsEnhancementLoaded = true;
+
+    const body = document.body;
+    const storageKey = `aether-doc-mode:${location.pathname}`;
+    const savedMode = localStorage.getItem(storageKey) || 'technical';
+    body.dataset.readerMode = savedMode;
+
+    const progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progress);
+
+    const nav = document.querySelector('[data-explainer-control="section_toc"]');
+    const toolbar = document.createElement('div');
+    toolbar.className = 'reader-toolbar';
+    toolbar.setAttribute('aria-label', 'Reader controls');
+    toolbar.innerHTML = `
+      <input type="search" placeholder="Search this explainer" aria-label="Search this explainer">
+      <button type="button" data-action="expand">Expand notes</button>
+      <button type="button" data-action="collapse">Collapse notes</button>
+      <button type="button" data-mode="simple">Simple view</button>
+      <button type="button" data-mode="technical">Technical view</button>
+    `;
+    if (nav) nav.insertAdjacentElement('afterend', toolbar);
+
+    const updateModeButtons = () => {
+      toolbar.querySelectorAll('[data-mode]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.mode === body.dataset.readerMode));
+      });
+    };
+    updateModeButtons();
+
+    toolbar.addEventListener('click', (event) => {
+      const button = event.target.closest('button');
+      if (!button) return;
+      if (button.dataset.action === 'expand') {
+        document.querySelectorAll('details').forEach((details) => { details.open = true; });
+      }
+      if (button.dataset.action === 'collapse') {
+        document.querySelectorAll('details').forEach((details) => { details.open = false; });
+      }
+      if (button.dataset.mode) {
+        body.dataset.readerMode = button.dataset.mode;
+        localStorage.setItem(storageKey, button.dataset.mode);
+        updateModeButtons();
+      }
+    });
+
+    const searchable = Array.from(document.querySelectorAll(
+      '[data-content-block], [data-analysis-capsule], .source-list li, .atlas-link'
+    ));
+
+    const clearMarks = (node) => {
+      node.querySelectorAll('mark.search-hit').forEach((mark) => {
+        mark.replaceWith(document.createTextNode(mark.textContent || ''));
+      });
+      node.normalize();
+    };
+
+    const markText = (node, query) => {
+      if (!query || node.matches('script, style, svg, pre, code')) return;
+      for (const child of Array.from(node.childNodes)) {
+        if (child.nodeType === Node.TEXT_NODE) {
+          const text = child.nodeValue || '';
+          const index = text.toLowerCase().indexOf(query);
+          if (index >= 0) {
+            const range = document.createRange();
+            range.setStart(child, index);
+            range.setEnd(child, index + query.length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-hit';
+            range.surroundContents(mark);
+          }
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+          markText(child, query);
+        }
+      }
+    };
+
+    const searchInput = toolbar.querySelector('input[type="search"]');
+    searchInput?.addEventListener('input', () => {
+      const raw = searchInput.value.trim();
+      const query = raw.toLowerCase();
+      searchable.forEach((node) => {
+        clearMarks(node);
+        const matches = !query || node.textContent.toLowerCase().includes(query);
+        node.hidden = !matches;
+        if (matches && query) markText(node, query);
+      });
+    });
+
+    const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
+    sourceNodes.forEach((node) => {
+      node.addEventListener('click', async () => {
+        const text = node.getAttribute('data-source-path') || node.textContent.trim();
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          node.classList.add('was-copied');
+          setTimeout(() => node.classList.remove('was-copied'), 850);
+        } catch (_) {
+          // Clipboard may be unavailable for local file URLs. No-op.
+        }
+      });
+    });
+
+    const updateProgress = () => {
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+      document.documentElement.style.setProperty('--reading-progress', `${pct}%`);
+    };
+    updateProgress();
+    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('resize', updateProgress);
+
+    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    if ('IntersectionObserver' in window && sections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = `#${entry.target.id}`;
+          navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === id));
+        });
+      }, { rootMargin: '-28% 0px -62% 0px', threshold: 0.01 });
+      sections.forEach((section) => observer.observe(section));
+    }
+  })();
+</script>
+
 </body>
 </html>

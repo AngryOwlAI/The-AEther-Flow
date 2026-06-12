@@ -144,18 +144,12 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the repository memory system, its source-first retrieval and regeneration function, why it matters for evidence lookup, and which declared sources ground the summary.
-- csv_memory_spine: Explain format-specific CSV registries as canonical memory
-  spine for IDs, provenance, source hashes, routing, ownership, and validation.
-- tracked_generated_wiki: Explain `wiki/` as tracked generated repo-visible
-  navigation, not independent authority.
-- local_obsidian_vault: Explain `.local/obsidian/aether-flow-wiki/` as a
-  generated local reader vault and optional operator environment aid.
-- semantic_query_layer: Explain `.local/content_semantics/`,
-  `.local/memory_index/memory.sqlite`, and `query_memory.py` as local
-  agent-queryable retrieval surfaces.
-- authority_boundaries: Explain source-first authority, generated-output
-  boundaries, regeneration commands, validation, and stale-surface risks.
+- subject_summary: Summarize the memory system, its source-first registry spine, why many retrieval surfaces still form one system, and which declared sources ground the summary.
+- csv_memory_spine: A completed explanation of format-specific CSV registries as canonical memory rows for identity, routing, provenance, generated outputs, and agent-queryable relationships.
+- tracked_generated_wiki: A source-backed section explaining tracked generated wiki notes and indexes as repo-visible derivatives that summarize registered sources without becoming independent authority.
+- local_obsidian_vault: A documentation section for `.local/obsidian/aether-flow-wiki/` as a local reader vault and operator aid that can be regenerated and must not override tracked source state.
+- semantic_query_layer: A completed explanation of `.local/content_semantics/`, `.local/memory_index/memory.sqlite`, and query scripts as retrieval surfaces that point back to canonical registry objects.
+- authority_boundaries: A visible boundary section explaining source-first authority, generated-output refresh, stale derivative risks, validation checks, and why competing retrieval views remain subordinate to the same canonical spine.
 
 ## Required Analysis Capsules
 

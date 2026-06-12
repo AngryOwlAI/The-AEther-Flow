@@ -147,16 +147,11 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize claim gates, their claim-status protection function, why they matter before accepting explanatory or derivational claims, and which declared sources ground the summary.
-- claim_status_ladder: Explain ontology framing, benchmark adoption, candidate
-  work, audit, repair, refutation, blocked promotion, and accepted status as
-  distinct states.
-- gate_review_path: Explain Gate Chair or human-gated review without implying
-  that workflow completion is scientific acceptance.
-- negative_result_preservation: Explain how obstructions, refutations,
-  task artifacts, completions, and handoffs preserve failed routes.
-- forbidden_promotion_boundary: State what the page cannot promote, reject, or
-  modify and which sources must be inspected for claim authority.
+- subject_summary: Summarize claim gates, their scientific acceptance function, why workflow completion is not claim promotion, and which declared sources ground the summary.
+- claim_status_ladder: A human-readable claim-status ladder defining ontology framing, benchmark adoption, candidate, audit, repair, refutation, blocked promotion, negative result, and accepted status with source-backed examples.
+- gate_review_path: A completed review-path section showing how Gate Chair or human-gated review differs from ordinary workflow validation and what evidence a promotion request would need.
+- negative_result_preservation: A source-backed explanation of how obstructions, refutations, blocked promotions, failed derivations, and repair notes are preserved as research memory rather than erased.
+- forbidden_promotion_boundary: A visible boundary section contrasting what generated explainers, task completions, validators, and Gate Chair decisions may say about scientific status.
 
 ## Required Analysis Capsules
 

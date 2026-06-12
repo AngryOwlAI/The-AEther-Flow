@@ -159,19 +159,13 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the research-agent workflow, its bounded transaction function, why it matters for auditable research progress, and which declared sources ground the summary.
-- state_entry: Explain tracked state entry through `program_state.yaml` and
-  latest handoff resolution.
-- director_decision: Explain how the Director decision selects the bounded
-  role, claim boundary, and task objective.
-- agentjob_lifecycle: Explain `00_TASK.yaml`, `jobs/AJ-*.yaml`, allowed paths,
-  validators, artifacts, and status changes.
-- role_execution: Explain task-local `roles/*.yaml` execution contracts and
-  `ROLE_EXECUTION_REGISTRY.csv` binding.
-- validation_completion_handoff: Explain validator commands, completion YAML,
-  next handoff, blocked states, and pass/fail receipts.
-- registry_update: Explain how task, job, role execution, Director decision,
-  claim boundary, generated outputs, and memory registries preserve state.
+- subject_summary: Summarize the research-agent workflow, its lifecycle function, why bounded execution matters, and which declared control sources ground the summary.
+- state_entry: A completed lifecycle entry section covering tracked program state, latest handoffs, task files, and why local scratch context cannot override tracked control state.
+- director_decision: A source-backed account of how a Director decision selects one role, one bounded objective, claim boundaries, allowed paths, validators, and stop conditions before execution begins.
+- agentjob_lifecycle: A detailed explanation of `00_TASK.yaml`, `jobs/AJ-*.yaml`, task-local role overlays, allowed writes, expected outputs, and why one bounded AgentJob is the unit of accountable work.
+- role_execution: A documentation section explaining registered roles, task overlays, provisional roles, role authority, removed or expanded permissions, expiry, and validator evidence.
+- validation_completion_handoff: A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance.
+- registry_update: A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory.
 
 ## Required Analysis Capsules
 

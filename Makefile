@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: validate-memory validate-project-control
+.PHONY: validate-memory validate-project-control validate-html-explainers
 
 validate-memory:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
@@ -18,6 +18,12 @@ validate-project-control:
 	$(PYTHON) scripts/project_control/collect_project_improvement_signals.py --validate-emitted
 	$(PYTHON) scripts/project_control/validate_documentation_impact.py
 	$(PYTHON) .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+	$(PYTHON) scripts/spec_depth_lint.py --root .
 	$(PYTHON) scripts/research_control/validate_research_control.py
 	$(PYTHON) scripts/research_control/validate_research_control.py --check-diff
 	$(PYTHON) -m unittest discover -s tests
+
+validate-html-explainers:
+	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
+	$(PYTHON) .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+	$(PYTHON) scripts/spec_depth_lint.py --root .

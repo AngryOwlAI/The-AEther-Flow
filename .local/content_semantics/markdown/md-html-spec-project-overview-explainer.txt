@@ -201,16 +201,11 @@ Summary source basis:
 ## Required Content Blocks
 
 - subject_summary: Summarize the project overview atlas, its routing function across the explainer set, why it matters for source-first project understanding, and which declared sources ground the summary.
-- atlas_navigation: Group all explainer links by reader use case rather than
-  presenting a flat list.
-- research_idea: Explain the ontology, exact-GR benchmark, open derivation
-  burden, and claim-gate context.
-- agent_workflow: Explain how Director decisions, AgentJobs, roles,
-  validators, completions, and handoffs structure work.
-- authority_memory: Explain the source authority chain and the source-first
-  memory system with derived access layers.
-- run_regenerate_system: Point readers to technical requirements, validation
-  commands, diagram rendering, local retrieval, and PDF-refresh scope.
+- atlas_navigation: A completed atlas section that routes readers by use case across the research idea, agent workflow, authority and memory system, and regeneration/validation path while preserving existing explainer URLs.
+- research_idea: A documentation-grade explanation of the two-track program: exact-GR benchmark adoption, open first-principles Æther-flow derivation, claim-gate caution, and the ontology drilldowns that readers should use next.
+- agent_workflow: A concrete overview of the staged-autonomy research harness: state, handoff, Director decision, bounded AgentJob, role execution, artifacts, validators, completion, and registries, with the boundary that it is not an autonomous proof engine.
+- authority_memory: A source-first explanation of canonical TeX, registries, registered Markdown, generated HTML/wiki/PDF derivatives, and local retrieval surfaces, including why memory access does not create new authority.
+- run_regenerate_system: A practical operator path for validating and regenerating the project: inspect sources, update specs, render HTML, preserve Mermaid parity, run bootstrap, run advisory depth lint, and use the technical-requirements drilldown.
 
 ## Required Analysis Capsules
 

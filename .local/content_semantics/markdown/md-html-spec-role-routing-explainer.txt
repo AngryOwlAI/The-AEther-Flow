@@ -146,17 +146,11 @@ Summary source basis:
 
 ## Required Content Blocks
 
-- subject_summary: Summarize role routing, its authority-selection function, why it matters for bounded work, and which declared sources ground the summary.
-- authority_classification: Explain how the task authority class separates
-  science-bearing, project-system, documentation, validator, and memory work.
-- director_routing: Explain how Director decisions bind a selected role to one
-  bounded AgentJob.
-- execution_role_contract: Explain task-local execution-role records,
-  constraints, removed permissions, expanded permissions, and validator
-  bindings.
-- overlay_provisional_boundary: Explain when a task overlay or one-job
-  provisional role is allowed and why repeated provisional patterns require
-  review rather than silent promotion.
+- subject_summary: Summarize role routing as authority selection, why the project needs it, how it fits bounded AgentJobs, and which declared sources ground the summary.
+- authority_classification: A completed explanation of how task authority class separates physics work, project-control maintenance, documentation curation, validation, memory maintenance, and process auditing before a role is selected.
+- director_routing: A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions.
+- execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence.
+- overlay_provisional_boundary: A matrix explaining registered roles, task overlays, and one-job provisional roles, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.
 
 ## Required Analysis Capsules
 

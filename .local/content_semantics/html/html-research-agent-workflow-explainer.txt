@@ -21,146 +21,96 @@ Workflow
 Analysis
 Sources
 Source-Backed Coverage
-State Entry
+Tracked Entry
 README.md
 AGENTS.md
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
-9. next handoff
-The next state is preserved for continuation.
-10. registries
-Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+research_control/AGENTS.md
+research_control/README.md
+A completed lifecycle entry section covering tracked program state, latest handoffs, task files, and why local scratch context cannot override tracked control state. In reader-facing terms, this section identifies the subject of
+Research System
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/AGENTS.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Director Decision
+README.md
+AGENTS.md
+research_control/AGENTS.md
 research_control/README.md
-registries/AGENT_JOB_REGISTRY.csv
-registries/DIRECTOR_DECISION_REGISTRY.csv
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
-9. next handoff
-The next state is preserved for continuation.
-10. registries
-Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
-Agentjob Lifecycle
+A source-backed account of how a Director decision selects one role, one bounded objective, claim boundaries, allowed paths, validators, and stop conditions before execution begins. In reader-facing terms, this section identifies the subject of
+Research System
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/AGENTS.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
+AgentJob Lifecycle
+README.md
+AGENTS.md
+research_control/AGENTS.md
 research_control/README.md
-registries/AGENT_JOB_REGISTRY.csv
-registries/DIRECTOR_DECISION_REGISTRY.csv
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
-9. next handoff
-The next state is preserved for continuation.
-10. registries
-Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+A detailed explanation of `00_TASK.yaml`, `jobs/AJ-*.yaml`, task-local role overlays, allowed writes, expected outputs, and why one bounded AgentJob is the unit of accountable work. In reader-facing terms, this section identifies the subject of
+Research System
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/AGENTS.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Role Execution
 registries/ROLE_EXECUTION_REGISTRY.csv
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
-9. next handoff
-The next state is preserved for continuation.
-10. registries
-Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+README.md
+AGENTS.md
+research_control/AGENTS.md
+A documentation section explaining registered roles, task overlays, provisional roles, role authority, removed or expanded permissions, expiry, and validator evidence. In reader-facing terms, this section identifies the subject of
+Research System
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+registries/ROLE_EXECUTION_REGISTRY.csv
+,
+README.md
+,
+AGENTS.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Validation Completion Handoff
+README.md
+AGENTS.md
+research_control/AGENTS.md
 research_control/README.md
-registries/AGENT_JOB_REGISTRY.csv
-registries/DIRECTOR_DECISION_REGISTRY.csv
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
-9. next handoff
-The next state is preserved for continuation.
-10. registries
-Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance. In reader-facing terms, this section identifies the subject of
+Research System
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/AGENTS.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Registry Update
 README.md
 AGENTS.md
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
-9. next handoff
-The next state is preserved for continuation.
-10. registries
-Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
+research_control/AGENTS.md
+research_control/README.md
+A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory. In reader-facing terms, this section identifies the subject of
+Research System
+, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+README.md
+,
+AGENTS.md
+,
+research_control/AGENTS.md
+and related declared sources, so the reader can move from this generated page back to inspectable files.
+The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Research System Loop
 +
 -
