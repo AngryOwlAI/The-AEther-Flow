@@ -73,6 +73,10 @@ source-first memory system with multiple retrieval surfaces:
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Layered map from canonical CSV spine to generated tracked wiki to local
   Obsidian vault to semantic/query surfaces.
 - Regeneration workflow showing source edit -> bootstrap -> wiki/registry rows

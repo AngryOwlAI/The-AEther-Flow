@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="1bfe720ba056ddbfeb7ceebcefdbafe35b4a6cff363fc7630920a843e12854ad">
+  <meta name="aether-flow-source-basis-hash" content="0c72225983266aae9b37e087dc30c2d494d6ace69e1cabab810ffa41c4911f96">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Role Routing</title>
   <style>
@@ -37,13 +37,15 @@
     .panel { border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 24px; }
     .section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 16px; }
     .block-head { display: grid; gap: 10px; align-items: start; margin-bottom: 16px; }
-    .hub-grid, .content-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .hub-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .content-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .atlas-link, .content-block, .capsule, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .content-block { overflow-x: auto; }
     .atlas-link { text-decoration: none; display: block; }
     .atlas-link strong { display: block; color: var(--authority); margin-bottom: 6px; }
     .atlas-link span, .trace-list span { color: var(--muted); display: block; }
-    table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    table { width: 100%; min-width: 860px; table-layout: auto; border-collapse: collapse; }
     th, td { border-bottom: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
     th { color: var(--authority); }
     .evidence-row { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-start; }

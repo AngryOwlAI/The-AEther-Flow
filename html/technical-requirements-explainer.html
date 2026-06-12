@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="e15e62da45153fbed9039ddcb245a47ba24c9433a4b29bb0ee633128aff867a2">
+  <meta name="aether-flow-source-basis-hash" content="405380df340a16ca3b627ef7d6945f33ad016705a17fc50fa450ff8c51ee6b55">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Technical Requirements</title>
   <style>
@@ -37,13 +37,15 @@
     .panel { border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 24px; }
     .section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 16px; }
     .block-head { display: grid; gap: 10px; align-items: start; margin-bottom: 16px; }
-    .hub-grid, .content-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .hub-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .content-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .atlas-link, .content-block, .capsule, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .content-block { overflow-x: auto; }
     .atlas-link { text-decoration: none; display: block; }
     .atlas-link strong { display: block; color: var(--authority); margin-bottom: 6px; }
     .atlas-link span, .trace-list span { color: var(--muted); display: block; }
-    table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    table { width: 100%; min-width: 860px; table-layout: auto; border-collapse: collapse; }
     th, td { border-bottom: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
     th { color: var(--authority); }
     .evidence-row { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-start; }

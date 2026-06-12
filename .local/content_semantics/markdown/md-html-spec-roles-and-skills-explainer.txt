@@ -96,6 +96,10 @@ are not project contract authority unless mirrored into `.codex/skills/`.
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Active-first role catalog with status badges.
 - Separate audit appendix for `status_defined` and `superseded` roles.
 - Repo-local skill catalog grouped by workflow, memory/wiki, visual

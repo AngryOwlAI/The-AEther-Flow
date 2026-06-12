@@ -71,6 +71,10 @@ Examples:
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Tiered requirements matrix with commands and labels.
 - Setup command callouts for Python and diagram rendering.
 - Optional-local-reader panel for Obsidian and `.local/` retrieval surfaces.
