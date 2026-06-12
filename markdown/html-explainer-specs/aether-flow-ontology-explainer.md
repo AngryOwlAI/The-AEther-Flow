@@ -142,10 +142,7 @@ a local experiential slice, S-time as the experienced order of change, and
 gravity as a heuristic matter-shaped reorganization of the deeper flow. At the
 project level, the explainer helps readers separate ontology, mathematical
 model, benchmark adoption, and open derivation burden before reading diagrams
-or candidate arguments. The summary is grounded in the ontology notes, README
-and AGENTS authority guidance, and the claim-boundary registry that prevents a
-human-only explainer from promoting speculative ontology into accepted
-physics.
+or candidate arguments.
 
 Summary source basis:
 

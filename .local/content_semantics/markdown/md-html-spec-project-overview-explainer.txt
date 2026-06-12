@@ -189,9 +189,7 @@ persuasive generated pages, registries, role contracts, and research-control
 records that can look equally authoritative to a newcomer. The atlas clarifies
 where explanation ends and source authority begins, so readers can inspect the
 right Markdown specs, registries, README guidance, or control documents before
-relying on a statement. Its summary is grounded in the root README and AGENTS
-guidance, the HTML explainer registry, and the registered source specs that
-define the atlas members.
+relying on a statement.
 
 Summary source basis:
 

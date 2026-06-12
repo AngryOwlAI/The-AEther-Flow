@@ -136,9 +136,7 @@ ideas look more settled than they are; a visual explanation, completed task,
 or preserved repair packet cannot by itself authorize science claims or weaken
 unresolved derivation burdens. Within the project, claim gates protect both
 positive progress and negative results by preserving why a route is accepted,
-blocked, refuted, or still conjectural. This summary is grounded in the claim-
-boundary registry, research-control guidance, TeX registry context, research-
-task registry, and Gate Chair role contract.
+blocked, refuted, or still conjectural.
 
 Summary source basis:
 

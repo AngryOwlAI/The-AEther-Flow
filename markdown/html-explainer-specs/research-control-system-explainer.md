@@ -138,10 +138,7 @@ exploration with agent workflow development; without control records,
 generated HTML, Markdown guidance, validators, and role contracts could drift
 or be mistaken for scientific authority. The system fits the larger project by
 making improvements reversible, auditable, and separate from physics claim
-promotion. This summary is grounded in root and research-control guidance, the
-improve-project-system skill, the active Documentation Curator role contract,
-the HTML explainer design note, and the validator scripts that define the
-control surface.
+promotion.
 
 Summary source basis:
 

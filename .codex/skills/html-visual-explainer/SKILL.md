@@ -46,6 +46,9 @@ Rules:
   The `summary_text` field is one coherent prose block that explains what the
   subject is, what functionality or role it has, why it matters to the project,
   and how it fits the surrounding research or project-control system.
+  The `summary_text` field must not include prose source-grounding sentences or
+  source-list restatements. Grounding belongs in the separate `source_basis`
+  field.
   The `source_basis` field must contain visible source-path chips or an
   equivalent visible source list. Every `data-source-path` inside
   `subject_summary` must already be declared in the spec's `source_materials`;

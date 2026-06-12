@@ -135,9 +135,7 @@ documentation roles, validator roles, memory roles, and project-control roles
 with different authority levels; collapsing them into one generic helper would
 risk claim promotion, direct derivative edits, or untracked control changes.
 Role routing fits the overall project by making authority selection itself
-auditable before implementation begins. The summary is grounded in the agent-
-role, role-execution, and Director-decision registries plus the execution-role
-schema that defines how one-job overlays constrain work.
+auditable before implementation begins.
 
 Summary source basis:
 

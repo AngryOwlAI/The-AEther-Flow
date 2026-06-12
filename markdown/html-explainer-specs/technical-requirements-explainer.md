@@ -97,10 +97,7 @@ because not every reader needs every tool, and optional operator aids such as
 Obsidian or global Codex plugins should not be mistaken for project authority.
 The explainer fits the project by turning setup files and skill contracts into
 a practical dependency map for maintainers who need repeatable validation
-without changing dependency policy or scientific claims. This summary is
-grounded in the README, requirements file, Makefile, project-memory-system
-skill, Obsidian and PDF derivative skills, HTML explainer contract, Mermaid
-documentation subskill, and the renderer package manifests.
+without changing dependency policy or scientific claims.
 
 Summary source basis:
 

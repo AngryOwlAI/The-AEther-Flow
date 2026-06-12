@@ -128,9 +128,7 @@ explanatory specs and source-backed HTML, Project-Control Maintainer owns
 control contracts, Validator Engineer owns deterministic checks, and physics
 roles remain separate from documentation work. The catalog fits the overall
 system by giving maintainers a readable map from registry rows to role
-contracts and skill procedures before they execute a task. The summary is
-grounded in the role registry, execution-role schema, active Documentation
-Curator contract, and HTML explainer skill guidance.
+contracts and skill procedures before they execute a task.
 
 Summary source basis:
 

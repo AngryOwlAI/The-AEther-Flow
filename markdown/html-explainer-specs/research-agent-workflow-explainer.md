@@ -147,10 +147,7 @@ autonomous proof engine; it is a controlled research program where claims,
 refutations, repairs, generated derivatives, and negative results must remain
 auditable. The workflow fits the larger project by making research progress
 reproducible without allowing workflow completion to stand in for scientific
-acceptance. The summary is grounded in the research-control AGENTS and README
-files, the continuation and project-improvement skills, and the AgentJob,
-Director-decision, role-execution, and research-task registries that record
-routed work.
+acceptance.
 
 Summary source basis:
 

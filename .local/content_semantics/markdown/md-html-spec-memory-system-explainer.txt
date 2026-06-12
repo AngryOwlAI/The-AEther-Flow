@@ -134,9 +134,6 @@ humans and agents need fast ways to find evidence, but retrieval convenience
 must not bypass the authority hierarchy. The system fits the project by
 connecting source edits to bootstrap regeneration, validation receipts,
 content semantics, and local reading aids while preserving clear provenance.
-This summary is grounded in the Markdown, TeX, PDF, HTML, wiki, content-
-semantic, and file-object registries plus the project-memory, markdown-wiki,
-tex-wiki, PDF-derivative, HTML-explainer, and Obsidian-wiki skill contracts.
 
 Summary source basis:
 

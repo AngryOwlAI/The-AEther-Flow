@@ -148,11 +148,7 @@ This matters because many surfaces are polished, searchable, or easier to read
 than the source files, but convenience does not make them independent
 authority. The authority model fits the project by preserving scientific claim
 discipline, project-control provenance, and reproducible memory refreshes
-across a repo that intentionally generates many human-facing derivatives. The
-summary is grounded in root AGENTS and README authority guidance, the project-
-memory-system and HTML explainer skill contracts, and the registries that
-track canonical files, source hashes, generated outputs, and derivative
-boundaries.
+across a repo that intentionally generates many human-facing derivatives.
 
 Summary source basis:
 
