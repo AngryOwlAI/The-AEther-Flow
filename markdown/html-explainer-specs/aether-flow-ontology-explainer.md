@@ -121,10 +121,38 @@ flowchart TD
   ExactGR --> Gate["Promotion requires claim gate"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Æther-flow Ontology`
+
+Summary text:
+
+The AEther-flow ontology is the project's conceptual vocabulary for a proposed
+deeper four-dimensional substrate, its intrinsic ordered motion, and the
+observer-accessible appearance of space, time-order, expansion, and gravity.
+Its role is not to replace general relativity or claim a completed derivation;
+it frames exact GR as the observable benchmark that any future substrate law
+must recover. The ontology matters because it keeps the research program's
+intuitive picture disciplined: observed three-dimensional space is treated as
+a local experiential slice, S-time as the experienced order of change, and
+gravity as a heuristic matter-shaped reorganization of the deeper flow. At the
+project level, the explainer helps readers separate ontology, mathematical
+model, benchmark adoption, and open derivation burden before reading diagrams
+or candidate arguments. The summary is grounded in the ontology notes, README
+and AGENTS authority guidance, and the claim-boundary registry that prevents a
+human-only explainer from promoting speculative ontology into accepted
+physics.
+
+Summary source basis:
+
+- `ontology/aether-and-aether-flow.md`
+- `ontology/aether_flow_interpretation-lemen.md`
+- `README.md`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize the project-specific Æther-flow ontology, its role
-  in the exact-GR benchmark program, and the source files grounding the summary.
+- subject_summary: Summarize the project-specific Æther-flow ontology, its role in the exact-GR benchmark program, why the distinction matters, and which declared sources ground the summary.
 - ontology_terms: Explain project-local meanings of `Æther`,
   `Æther-flow`, observed space, `S-time`, expansion, and gravity.
 - exact_gr_benchmark: State that exact GR is the observable benchmark and not a

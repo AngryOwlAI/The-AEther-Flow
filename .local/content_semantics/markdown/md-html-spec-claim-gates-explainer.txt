@@ -115,11 +115,37 @@ flowchart TD
   Future --> Attempt
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Claim Gates`
+
+Summary text:
+
+Claim gates are the project's control mechanism for deciding when a physics
+statement may move from framing, proposal, repair, audit, or explanation into
+a stronger accepted status. Their role is to keep exact-GR benchmark adoption
+separate from unproven substrate derivation claims by requiring source
+evidence, explicit claim-boundary records, routed review, Gate Chair or human-
+gated authority when needed, and registry updates before promotion. They
+matter because the explainer pages and workflow artifacts can make candidate
+ideas look more settled than they are; a visual explanation, completed task,
+or preserved repair packet cannot by itself authorize science claims or weaken
+unresolved derivation burdens. Within the project, claim gates protect both
+positive progress and negative results by preserving why a route is accepted,
+blocked, refuted, or still conjectural. This summary is grounded in the claim-
+boundary registry, research-control guidance, TeX registry context, research-
+task registry, and Gate Chair role contract.
+
+Summary source basis:
+
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
+- `research_control/README.md`
+- `registries/TEX_SOURCE_REGISTRY.csv`
+- `.agents/roles/physics/gate-chair.v0.1.0.md`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what claim gates are, how they protect claim
-  status transitions, why readers should inspect them before accepting
-  explanatory or derivational claims, and which sources ground the summary.
+- subject_summary: Summarize claim gates, their claim-status protection function, why they matter before accepting explanatory or derivational claims, and which declared sources ground the summary.
 - claim_status_ladder: Explain ontology framing, benchmark adoption, candidate
   work, audit, repair, refutation, blocked promotion, and accepted status as
   distinct states.

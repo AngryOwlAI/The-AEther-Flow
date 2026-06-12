@@ -214,6 +214,10 @@ and `analysis_capsule_schema`. Modify the spec first, then regenerate the HTML
 output. The required source control is `source_materials_section`; legacy
 `source_drilldowns` and `claim_boundary_toggle` controls are optional only when
 a spec explicitly declares them.
+Each tracked explainer must open with a source-backed `subject_summary` block
+titled `Summary of [Subject]`, using prose plus visible source-path chips to
+explain the subject's function, role, project value, and declared grounding
+materials before the table of contents.
 
 Bootstrap or refresh the memory system:
 

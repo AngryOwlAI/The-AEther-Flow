@@ -257,10 +257,12 @@ HTML_PRESENTATION_PROFILES = {
 HTML_CONTENT_BLOCK_ID_RE = re.compile(r"^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$")
 HTML_SUBJECT_SUMMARY_BLOCK_ID = "subject_summary"
 HTML_SUBJECT_SUMMARY_FIELDS = {
-    "what_it_is",
-    "role_or_function",
-    "reader_value",
+    "summary_text",
     "source_basis",
+}
+HTML_SUBJECT_SUMMARY_FORBIDDEN_TEXT = {
+    "Reader orientation",
+    "What This Explainer Describes",
 }
 HTML_CONTROL_VALUES = {
     "section_toc",
@@ -1981,6 +1983,11 @@ def validate_html_registry(
             HTML_SUBJECT_SUMMARY_BLOCK_ID,
             [],
         )
+        for forbidden_text in HTML_SUBJECT_SUMMARY_FORBIDDEN_TEXT:
+            if forbidden_text in html_text:
+                report.error(
+                    f"{object_id}: subject_summary uses obsolete visible label"
+                )
         if subject_segments:
             subject_segment = subject_segments[0]
             summary_field_segments = html_summary_field_segments(subject_segment)

@@ -15,6 +15,7 @@ source_materials:
   - ".agents/roles/research_ops/director-of-research.v0.1.0.md"
   - ".agents/roles/research_ops/project-system-director.v0.1.0.md"
   - ".agents/roles/research_ops/project-control-maintainer.v0.1.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.4.0.md"
   - ".agents/roles/research_ops/documentation-curator.v0.3.0.md"
   - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
   - ".agents/roles/research_ops/validator-engineer.v0.1.0.md"
@@ -106,12 +107,37 @@ are not project contract authority unless mirrored into `.codex/skills/`.
   environment aids.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Roles and Skills`
+
+Summary text:
+
+The roles-and-skills catalog is the active inventory of registered agent
+roles, historical role versions, task-local execution overlays, and repo-local
+skill front doors used by the project. Its function is to show which role
+contracts currently govern work, which roles are status-defined or superseded
+for audit history, which skills provide project-governed procedures, and which
+tools are merely operator-context aids. This matters because skills are useful
+only inside the right authority boundary: Documentation Curator can maintain
+explanatory specs and source-backed HTML, Project-Control Maintainer owns
+control contracts, Validator Engineer owns deterministic checks, and physics
+roles remain separate from documentation work. The catalog fits the overall
+system by giving maintainers a readable map from registry rows to role
+contracts and skill procedures before they execute a task. The summary is
+grounded in the role registry, execution-role schema, active Documentation
+Curator contract, and HTML explainer skill guidance.
+
+Summary source basis:
+
+- `registries/AGENT_ROLE_REGISTRY.csv`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `.codex/skills/html-visual-explainer/SKILL.md`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what the roles-and-skills catalog is, how it
-  distinguishes registered roles, task overlays, repo-local skills, and
-  operator aids, why readers need that boundary, and which sources ground the
-  summary.
+- subject_summary: Summarize the roles-and-skills catalog, its role/skill boundary function, why readers need that boundary, and which declared sources ground the summary.
 - active_role_catalog: List current active roles, what each does, authority
   level, default validators, and role contract path.
 - status_defined_roles: Explain defined but human-gated roles, especially Gate

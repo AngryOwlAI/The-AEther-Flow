@@ -115,11 +115,36 @@ flowchart TD
   Allowed --> Job["AgentJob boundary"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Role Routing`
+
+Summary text:
+
+Role routing is the project's decision system for assigning bounded work to
+the correct registered role or task-local execution overlay. Its functionality
+is to connect task state, Director decisions, base role contracts, provisional
+or overlay authority, and registry evidence so an agent knows who owns the
+change, what paths may be written, which validators are required, and when the
+job must stop. This matters because the repository contains physics roles,
+documentation roles, validator roles, memory roles, and project-control roles
+with different authority levels; collapsing them into one generic helper would
+risk claim promotion, direct derivative edits, or untracked control changes.
+Role routing fits the overall project by making authority selection itself
+auditable before implementation begins. The summary is grounded in the agent-
+role, role-execution, and Director-decision registries plus the execution-role
+schema that defines how one-job overlays constrain work.
+
+Summary source basis:
+
+- `registries/AGENT_ROLE_REGISTRY.csv`
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what role routing is, how it binds one bounded
-  task to an authority class and execution role, why readers should inspect
-  routing before accepting work scope, and which sources ground the summary.
+- subject_summary: Summarize role routing, its authority-selection function, why it matters for bounded work, and which declared sources ground the summary.
 - authority_classification: Explain how the task authority class separates
   science-bearing, project-system, documentation, validator, and memory work.
 - director_routing: Explain how Director decisions bind a selected role to one

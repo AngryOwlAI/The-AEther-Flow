@@ -167,11 +167,38 @@ flowchart TD
   Memory --> SharedTarget
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Project Overview`
+
+Summary text:
+
+The project overview is the atlas for the AEther-Flow repository's human-
+readable explainer set. Its function is to give readers a controlled entry
+point into the two linked missions: preserving an exact-GR benchmark for the
+physics program and maintaining a governed research-agent system for
+theoretical work. Rather than acting as a source of new claims, the overview
+routes readers to the ontology, research workflow, control system, role-
+routing, claim-gate, source-authority, role-and-skill, memory-system, and
+technical-requirements drilldowns. It matters because the project contains
+persuasive generated pages, registries, role contracts, and research-control
+records that can look equally authoritative to a newcomer. The atlas clarifies
+where explanation ends and source authority begins, so readers can inspect the
+right Markdown specs, registries, README guidance, or control documents before
+relying on a statement. Its summary is grounded in the root README and AGENTS
+guidance, the HTML explainer registry, and the registered source specs that
+define the atlas members.
+
+Summary source basis:
+
+- `README.md`
+- `AGENTS.md`
+- `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `markdown/html-explainer-specs/research-control-system-explainer.md`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what the research atlas is, how it routes readers
-  through the project explainers, why the hub matters before entering a
-  drilldown, and which source specs or project files ground the atlas.
+- subject_summary: Summarize the project overview atlas, its routing function across the explainer set, why it matters for source-first project understanding, and which declared sources ground the summary.
 - atlas_navigation: Group all explainer links by reader use case rather than
   presenting a flat list.
 - research_idea: Explain the ontology, exact-GR benchmark, open derivation

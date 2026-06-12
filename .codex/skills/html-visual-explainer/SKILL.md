@@ -35,19 +35,24 @@ Rules:
   `## Required Content Blocks` section.
 - Every tracked explainer must declare `subject_summary` as the first
   `required_content_blocks` value and define `subject_summary` first under
-  `## Required Content Blocks`. The block is a reader-orientation summary, not
-  an analysis capsule.
+  `## Required Content Blocks`. The block is a source-backed functional
+  summary of the page subject, not an analysis capsule.
 - Generated HTML must render `subject_summary` as the first
   `data-content-block`, immediately after the hero/title area and before
-  `data-explainer-control="section_toc"`, under a reader-facing heading such as
-  `What This Explainer Describes`.
+  `data-explainer-control="section_toc"`, under a reader-facing heading in the
+  form `Summary of [Subject]`.
 - `subject_summary` must include `data-summary-field` markers for
-  `what_it_is`, `role_or_function`, `reader_value`, and `source_basis`.
+  `summary_text` and `source_basis`.
+  The `summary_text` field is one coherent prose block that explains what the
+  subject is, what functionality or role it has, why it matters to the project,
+  and how it fits the surrounding research or project-control system.
   The `source_basis` field must contain visible source-path chips or an
   equivalent visible source list. Every `data-source-path` inside
   `subject_summary` must already be declared in the spec's `source_materials`;
   add missing grounding files to `source_materials` before citing them.
   Source chips display paths only and must not add local file links.
+  Active tracked HTML must not render the obsolete labels `Reader orientation`
+  or `What This Explainer Describes`.
 - Every explainer requires `section_toc`, `expandable_analysis_panels`, and
   `source_materials_section`.
   `source_drilldowns` and `claim_boundary_toggle` are valid legacy controls
@@ -69,15 +74,16 @@ Rules:
   group, sidebar, callout, inspector panel, accordion, or other appropriate
   source-backed presentation for the chosen profile.
 - The summary prose should be manually authored per source spec. Do not derive
-  `subject_summary` automatically from source files. Target 120-180 words,
+  `subject_summary` automatically from source files. Target 150-240 words,
   excluding visible source chips, as a review guideline rather than a validator
   rule.
 - Validator scope remains deterministic and structural: required fields,
   allowed profile values, nonblank intent, content-block markers, source-path
   evidence, subject-summary order, subject-summary field markers, declared
-  subject-summary sources, required controls, analysis capsule markers, hashes,
-  and Mermaid parity. Quality, completeness, rendered geometry, and visual
-  judgment remain source-spec review and browser QA responsibilities.
+  subject-summary sources, obsolete summary-label rejection, required controls,
+  analysis capsule markers, hashes, and Mermaid parity. Quality, completeness,
+  rendered geometry, and visual judgment remain source-spec review and browser
+  QA responsibilities.
 - Do not add a full deterministic HTML generator for flexible presentation.
   The Documentation Curator or LLM renderer chooses the best exposition from
   the source spec; validators enforce structural evidence.

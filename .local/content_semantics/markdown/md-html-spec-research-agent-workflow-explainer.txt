@@ -126,12 +126,39 @@ stateDiagram-v2
   HandoffReady --> [*]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Research System`
+
+Summary text:
+
+The research system is the governed workflow that turns a question,
+continuation state, or project-improvement signal into bounded agent work with
+explicit roles, decisions, registries, and validation. Its functionality is to
+separate physics continuation from project-system maintenance, resolve tracked
+state before acting, assign one bounded AgentJob, constrain that job with role
+authority and allowlists, and preserve completion evidence for the next
+handoff. This matters because the repository is not an informal chat log or
+autonomous proof engine; it is a controlled research program where claims,
+refutations, repairs, generated derivatives, and negative results must remain
+auditable. The workflow fits the larger project by making research progress
+reproducible without allowing workflow completion to stand in for scientific
+acceptance. The summary is grounded in the research-control AGENTS and README
+files, the continuation and project-improvement skills, and the AgentJob,
+Director-decision, role-execution, and research-task registries that record
+routed work.
+
+Summary source basis:
+
+- `research_control/AGENTS.md`
+- `research_control/README.md`
+- `.codex/skills/continue-research/SKILL.md`
+- `registries/AGENT_JOB_REGISTRY.csv`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what the research-agent workflow is, how bounded
-  Director decisions, AgentJobs, roles, validators, completions, and registries
-  move work forward, why readers need that context, and which sources ground
-  the summary.
+- subject_summary: Summarize the research-agent workflow, its bounded transaction function, why it matters for auditable research progress, and which declared sources ground the summary.
 - state_entry: Explain tracked state entry through `program_state.yaml` and
   latest handoff resolution.
 - director_decision: Explain how the Director decision selects the bounded

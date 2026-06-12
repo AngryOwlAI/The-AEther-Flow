@@ -64,9 +64,9 @@ bounded project-system task.
   marker.
 
 Every tracked explainer must include a `subject_summary` content block. This
-block gives the reader a source-backed description of what the explainer is
-about before the detailed explanation begins. It is a universal reader
-orientation requirement, not a new authority layer. The block may cite only
+block gives the reader a source-backed functional summary of the page subject
+before the detailed explanation begins. It is a universal summary requirement,
+not a new authority layer. The block may cite only
 paths declared in the source spec's `source_materials`; if the best summary
 evidence is absent, add that source path to `source_materials` before citing it
 in the generated HTML. The source spec must list `subject_summary` as the first
@@ -76,11 +76,12 @@ frontmatter order, body-definition order, and rendered content-block order stay
 aligned.
 
 `subject_summary` has a fixed semantic shape with adaptive visual presentation.
-It must tell the reader:
+It must tell the reader in one coherent prose block:
 
 - what the subject is
-- what it does or what role it plays
-- why the reader should care before reading the explanation
+- what functionality or role it has
+- why it matters for the project itself
+- how it fits the surrounding research or project-control system
 - which source files ground the summary
 
 The block ID is universal, but its Markdown body description is page-specific.
@@ -93,27 +94,27 @@ For the ontology explainer, the source spec should define it as:
 
 The project overview hub is not exempt. Its `subject_summary` describes the
 explainer atlas itself: what the atlas is, what role it plays in routing
-readers, why that matters, and which specs or source files ground the hub.
+readers, why that matters, how it fits the project, and which specs or source
+files ground the hub.
 
 `subject_summary` is not part of `analysis_capsule_schema`. Analysis capsules
 remain the reasoning structure for premise, mechanism, authority, uncertainty,
-validation, and next step. `subject_summary` is a reader-orientation content
+validation, and next step. `subject_summary` is a source-backed summary content
 block.
 
 Generated HTML must mark these summary elements with `data-summary-field`
 values:
 
-- `what_it_is`
-- `role_or_function`
-- `reader_value`
+- `summary_text`
 - `source_basis`
 
 `subject_summary` does not add a separate claim-boundary field. Page-relevant
-authority or claim-boundary caution belongs inside the four summary fields when
-it is necessary to explain what the subject is or why the reader should care.
-Ontology and claim-gate summaries should make boundaries explicit; technical
-or setup summaries may use lighter authority language. Existing claim-boundary
-metadata and analysis capsules remain mandatory through their own contract.
+authority or claim-boundary caution belongs inside `summary_text` when it is
+necessary to explain what the subject is, why the subject matters, or how the
+subject fits the project. Ontology and claim-gate summaries should make
+boundaries explicit; technical or setup summaries may use lighter authority
+language. Existing claim-boundary metadata and analysis capsules remain
+mandatory through their own contract.
 
 The `source_basis` summary field must contain visible file-path chips or an
 equivalent visible source-path list. Hidden structural markers are insufficient
@@ -125,9 +126,10 @@ portability or security concerns.
 
 The generated page should render this block immediately after the hero/title
 area and before the section table of contents under the reader-facing heading
-`What This Explainer Describes`. The section table of contents and detailed
-explanation, diagrams, catalogs, workflow steps, or evidence matrices follow
-the summary.
+`Summary of [Subject]`, for example `Summary of Claim Gates`. The section
+table of contents and detailed explanation, diagrams, catalogs, workflow steps,
+or evidence matrices follow the summary. Active tracked HTML must not render
+the obsolete labels `Reader orientation` or `What This Explainer Describes`.
 
 The visual form is intentionally adaptive. A content block may be a table,
 matrix, chip row, card group, sidebar, callout, accordion, popover, inspector
@@ -155,12 +157,14 @@ Validators enforce deterministic structural evidence only:
 - every `data-source-path` inside `subject_summary` is declared in the source
   spec's `source_materials`
 - `subject_summary` contains the required `data-summary-field` markers:
-  `what_it_is`, `role_or_function`, `reader_value`, and `source_basis`
+  `summary_text` and `source_basis`
 - the `source_basis` summary field contains visible `data-source-path` evidence
 - the first `data-content-block` marker on the page is
   `data-content-block="subject_summary"`
 - the first `data-content-block="subject_summary"` marker appears before the
   first `data-explainer-control="section_toc"` marker
+- active tracked HTML does not contain the obsolete visible labels
+  `Reader orientation` or `What This Explainer Describes`
 - required control, source-material, analysis-capsule, source-basis, hash, and
   Mermaid parity markers remain valid
 - Mermaid inline SVG output uses explicit numeric dimensions derived from
@@ -176,7 +180,8 @@ creative fit. Those are handled by source-spec review and visual QA.
 Universal `subject_summary` migration requires rendered QA across every
 currently tracked HTML explainer, not a representative sample. The QA pass must
 check summary visibility, absence of mobile body overflow, readable visible
-source chips, and intact table-of-contents and diagram behavior for each page.
+source chips, absence of obsolete summary labels, and intact
+table-of-contents and diagram behavior for each page.
 
 ## Mermaid Policy
 
@@ -217,8 +222,8 @@ The implementation must also update the Documentation Curator role contract so
 ownership of source-backed subject summaries is explicit in the role that owns
 human-facing explanatory documentation. Because registered role versions are
 immutable in meaning, the role-contract update must follow the repository's
-role-versioning rules by registering `documentation-curator@0.3.0` and
-superseding `documentation-curator@0.2.0`, rather than silently changing
+role-versioning rules by registering `documentation-curator@0.4.0` and
+superseding `documentation-curator@0.3.0`, rather than silently changing
 historical execution semantics.
 
 The implementation transaction is Project-Control Maintainer work, not
@@ -239,15 +244,16 @@ contracts, the role contract, source specs, validators, and generated pages.
 Subject-summary prose is manually authored per source spec during migration.
 Scripts may validate structure and regenerate derivative artifacts, but they do
 not derive the reader-facing summary text automatically from source files.
-Each summary should target 120-180 words total, excluding visible source chips.
+Each summary should target 150-240 words total, excluding visible source chips.
 This is a source-review and rendered-QA guideline, not a validator-enforced word
 count.
 
 Implementation should update focused tests and validator behavior together
 before bulk spec and HTML migration. Required test cases include missing
-`subject_summary`, wrong first declared block, missing summary fields,
-undeclared summary source paths, and wrong rendered placement. The migrated
-source specs and generated HTML are then driven to the executable contract.
+`subject_summary`, wrong first declared block, missing `summary_text`, missing
+source-path evidence, undeclared summary source paths, wrong rendered
+placement, and obsolete visible summary labels. The migrated source specs and
+generated HTML are then driven to the executable contract.
 
 The actual validator, registry, role-version, source-spec, generated-HTML, and
 generated-derivative changes must run inside a fresh bounded Project-Control

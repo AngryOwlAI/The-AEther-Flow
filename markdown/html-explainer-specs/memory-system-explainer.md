@@ -113,12 +113,37 @@ flowchart TD
   Query --> Validate["make validate-memory"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Memory System`
+
+Summary text:
+
+The memory system is the repository's source-first retrieval and derivative-
+generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki
+notes, semantic extracts, file objects, and local query surfaces. Its
+functionality is to turn canonical registries and source files into generated
+wiki pages, source hashes, object relationships, local Obsidian vault entries,
+semantic text extracts, and SQLite-backed lookup surfaces without letting any
+generated artifact become an independent source of claims. It matters because
+humans and agents need fast ways to find evidence, but retrieval convenience
+must not bypass the authority hierarchy. The system fits the project by
+connecting source edits to bootstrap regeneration, validation receipts,
+content semantics, and local reading aids while preserving clear provenance.
+This summary is grounded in the Markdown, TeX, PDF, HTML, wiki, content-
+semantic, and file-object registries plus the project-memory, markdown-wiki,
+tex-wiki, PDF-derivative, HTML-explainer, and Obsidian-wiki skill contracts.
+
+Summary source basis:
+
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`
+- `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `.codex/skills/obsidian-wiki/SKILL.md`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what the repository memory system is, how it
-  connects registries, generated wiki surfaces, local retrieval, and source
-  authority, why readers should use it before relying on generated artifacts,
-  and which sources ground the summary.
+- subject_summary: Summarize the repository memory system, its source-first retrieval and regeneration function, why it matters for evidence lookup, and which declared sources ground the summary.
 - csv_memory_spine: Explain format-specific CSV registries as canonical memory
   spine for IDs, provenance, source hashes, routing, ownership, and validation.
 - tracked_generated_wiki: Explain `wiki/` as tracked generated repo-visible

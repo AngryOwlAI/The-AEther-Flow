@@ -6,7 +6,9 @@ designing human-facing explanatory surfaces.
 ## Language
 
 **Subject Summary**:
-A reader-facing orientation section that states what an explainer is about,
-what role the subject plays, why the reader should care, and which source
-material grounds the summary before detailed explanation begins.
-_Avoid_: Functionality summary, description-only preface
+A source-backed summary section titled `Summary of [Subject]` that states what
+the subject is, what functionality or role it has, why it matters to the
+project, how it fits the surrounding research or project-control system, and
+which declared source materials ground the summary before detailed explanation
+begins.
+_Avoid_: Reader orientation, description-only preface

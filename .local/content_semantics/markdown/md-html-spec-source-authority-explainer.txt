@@ -128,12 +128,38 @@ flowchart TD
   Link --> Validate
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Source Authority`
+
+Summary text:
+
+Source authority is the repository rule for deciding which files can define
+project truth and which files are generated aids for reading, retrieval,
+validation, or publication. Its functionality is to rank registered TeX,
+format-specific registries, registered Markdown, generated HTML, generated
+wiki notes, PDFs, local Obsidian surfaces, and .local caches so contributors
+update canonical sources first and regenerate dependent artifacts afterward.
+This matters because many surfaces are polished, searchable, or easier to read
+than the source files, but convenience does not make them independent
+authority. The authority model fits the project by preserving scientific claim
+discipline, project-control provenance, and reproducible memory refreshes
+across a repo that intentionally generates many human-facing derivatives. The
+summary is grounded in root AGENTS and README authority guidance, the project-
+memory-system and HTML explainer skill contracts, and the registries that
+track canonical files, source hashes, generated outputs, and derivative
+boundaries.
+
+Summary source basis:
+
+- `AGENTS.md`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `registries/FILE_OBJECT_REGISTRY.csv`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what source authority means in this repository,
-  how canonical sources, registries, generated derivatives, and local retrieval
-  surfaces relate, why readers should follow the authority ladder, and which
-  sources ground the summary.
+- subject_summary: Summarize source authority, its source-first governance function, why it matters for generated and canonical surfaces, and which declared sources ground the summary.
 - authority_ladder: Explain canonical science sources, registry authority,
   registered Markdown authority, generated derivatives, and `.local/` scratch
   boundaries.

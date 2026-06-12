@@ -8,16 +8,8 @@ Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER
-Reader orientation
-What This Explainer Describes
-What it is
-The technical requirements explainer describes the local runtime, package, validation, and rendering requirements that support the repository's memory, PDF, HTML, Mermaid, and test workflows.
-Role or function
-It translates project setup files and skill contracts into a practical dependency map for Python validation, Markdown/registry bootstrapping, Obsidian/wiki generation, PDF builds, inline Mermaid rendering, and repeatable QA.
-Why it matters first
-Read this first so the later requirement cards are seen as infrastructure constraints rather than research claims. The page tells maintainers which tools must work before generated derivatives and validation receipts can be trusted.
-Source basis
-The summary is grounded in the README, requirements file, Makefile, project-memory skill, and Mermaid renderer package files that define runnable tooling expectations and a lighter authority boundary. The chips point to setup files rather than scientific claim sources.
+Summary of Technical Requirements
+The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The explainer fits the project by turning setup files and skill contracts into a practical dependency map for maintainers who need repeatable validation without changing dependency policy or scientific claims. This summary is grounded in the README, requirements file, Makefile, project-memory-system skill, Obsidian and PDF derivative skills, HTML explainer contract, Mermaid documentation subskill, and the renderer package manifests.
 README.md
 requirements.txt
 Makefile

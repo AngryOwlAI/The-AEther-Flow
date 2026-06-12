@@ -12,7 +12,7 @@ source_materials:
   - ".codex/skills/html-visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.3.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.4.0.md"
   - "research_control/design/html_explainer_flexible_presentation_contract.md"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
@@ -117,11 +117,39 @@ flowchart TD
   Receipt --> Registry["Control registries updated"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Research-Control System`
+
+Summary text:
+
+The research-control system is the repository's governance layer for deciding
+how project-system and research-continuation work may proceed. Its function is
+to classify changes, resolve advisory routing, create or reuse one bounded
+AgentJob, enforce role and write-path boundaries, require documentation-impact
+receipts when project machinery changes, and validate that source specs,
+skills, roles, registries, claim boundaries, and generated derivatives remain
+aligned. It matters because the project deliberately combines scientific
+exploration with agent workflow development; without control records,
+generated HTML, Markdown guidance, validators, and role contracts could drift
+or be mistaken for scientific authority. The system fits the larger project by
+making improvements reversible, auditable, and separate from physics claim
+promotion. This summary is grounded in root and research-control guidance, the
+improve-project-system skill, the active Documentation Curator role contract,
+the HTML explainer design note, and the validator scripts that define the
+control surface.
+
+Summary source basis:
+
+- `AGENTS.md`
+- `research_control/README.md`
+- `.codex/skills/improve-project-system/SKILL.md`
+- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `research_control/design/html_explainer_flexible_presentation_contract.md`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what the research-control system is, how it
-  separates project-system improvement from physics continuation, why its
-  bounded transaction discipline matters, and which sources ground the summary.
+- subject_summary: Summarize the research-control system, its classification and bounded-transaction function, why it matters for project governance, and which declared sources ground the summary.
 - classification_resolver: Explain deterministic change classification,
   resolver output, advisory routing, and hard stop conditions.
 - bounded_transaction: Explain one bounded AgentJob, allowed writes, forbidden

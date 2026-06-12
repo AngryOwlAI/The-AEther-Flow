@@ -99,14 +99,19 @@ contract declared by the Markdown source spec:
   the first body definition under `## Required Content Blocks`, and the first
   generated `data-content-block`.
 - Render `subject_summary` immediately after the hero/title area and before the
-  section table of contents under a reader-facing heading such as
-  `What This Explainer Describes`.
+  section table of contents under a reader-facing heading in the form
+  `Summary of [Subject]`.
 - `subject_summary` must include `data-summary-field` markers for
-  `what_it_is`, `role_or_function`, `reader_value`, and `source_basis`.
+  `summary_text` and `source_basis`.
+  The `summary_text` field is one coherent prose block that explains what the
+  subject is, what functionality or role it has, why it matters to the project,
+  and how it fits the surrounding research or project-control system.
   The `source_basis` field must contain visible source-path chips or an
   equivalent visible source list, and every cited `data-source-path` must be
   listed in the spec's `source_materials`.
 - Source chips in tracked HTML display paths only; do not add local file links.
+- Active tracked HTML must not render the obsolete labels `Reader orientation`
+  or `What This Explainer Describes`.
 - Each generated content block must appear as `data-content-block="<id>"`.
 - Each generated content block must contain at least one `data-source-path`.
 
@@ -143,8 +148,8 @@ Deep-view panels should use analysis capsules with these fields: `premise`,
 `data-source-path` markers as required by the spec. These markers are
 validator evidence only; they do not make generated HTML authoritative.
 Do not add `subject_summary` to `analysis_capsule_schema`; it is a separate
-reader-orientation content block. Manually author summary prose per source
-spec, with a 120-180 word target excluding source chips.
+source-backed summary content block. Manually author summary prose per source
+spec, with a 150-240 word target excluding source chips.
 
 For the front-facing project overview, treat
 `html/project-overview-explainer.html` as the explainer hub. It should orient

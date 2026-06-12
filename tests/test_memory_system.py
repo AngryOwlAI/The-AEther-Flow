@@ -222,9 +222,7 @@ def synthetic_content_block(block_id: str = "synthetic_block", source_path: str 
 def synthetic_subject_summary_block(source_path: str = "README.md") -> str:
     return (
         '<section data-content-block="subject_summary">'
-        '<div data-summary-field="what_it_is">Synthetic summary.</div>'
-        '<div data-summary-field="role_or_function">Synthetic role.</div>'
-        '<div data-summary-field="reader_value">Synthetic reader value.</div>'
+        '<div data-summary-field="summary_text">Synthetic summary.</div>'
         '<div data-summary-field="source_basis">'
         f'<span data-source-path="{source_path}">{source_path}</span>'
         "</div>"
@@ -933,17 +931,15 @@ class MemorySystemSmokeTests(unittest.TestCase):
             )
         )
 
-    def test_html_registry_requires_subject_summary_fields(self) -> None:
+    def test_html_registry_requires_subject_summary_text_field(self) -> None:
         report = self.memory_system.ValidationReport()
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
             spec = root / "markdown/html-explainer-specs/synthetic.md"
             spec.parent.mkdir(parents=True)
             spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
-            summary_without_reader_value = (
+            summary_without_text = (
                 '<section data-content-block="subject_summary">'
-                '<div data-summary-field="what_it_is">Synthetic summary.</div>'
-                '<div data-summary-field="role_or_function">Synthetic role.</div>'
                 '<div data-summary-field="source_basis">'
                 '<span data-source-path="README.md">README.md</span>'
                 "</div>"
@@ -953,7 +949,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
             html.parent.mkdir(parents=True)
             html.write_text(
                 valid_synthetic_html_text(
-                    content_block_html=summary_without_reader_value
+                    content_block_html=summary_without_text
                     + synthetic_content_block()
                 ),
                 encoding="utf-8",
@@ -982,6 +978,59 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 self.memory_system.validate_html_registry(report, rows_by_registry)
         self.assertTrue(
             any("subject_summary missing summary field" in error for error in report.errors)
+        )
+
+    def test_html_registry_rejects_obsolete_subject_summary_heading(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text(
+                    content_block_html=(
+                        '<section data-content-block="subject_summary">'
+                        "<h2>What This Explainer Describes</h2>"
+                        + synthetic_subject_summary_block().replace(
+                            '<section data-content-block="subject_summary">',
+                            "",
+                            1,
+                        )
+                    )
+                    + synthetic_content_block()
+                ),
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "subject_summary uses obsolete visible label" in error
+                for error in report.errors
+            )
         )
 
     def test_html_registry_rejects_undeclared_subject_summary_source_path(self) -> None:

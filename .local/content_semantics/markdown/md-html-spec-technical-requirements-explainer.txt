@@ -77,12 +77,38 @@ Examples:
 - PDF-refresh panel that scopes LaTeX only to TeX derivative work.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Technical Requirements`
+
+Summary text:
+
+The technical requirements explainer describes the local runtime, package,
+validation, rendering, retrieval, and derivative-build requirements needed to
+inspect or regenerate project surfaces safely. Its function is to separate
+read-only inspection, Python validator execution, memory and wiki
+regeneration, governed Mermaid inline-SVG rendering, local Obsidian or
+semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters
+because not every reader needs every tool, and optional operator aids such as
+Obsidian or global Codex plugins should not be mistaken for project authority.
+The explainer fits the project by turning setup files and skill contracts into
+a practical dependency map for maintainers who need repeatable validation
+without changing dependency policy or scientific claims. This summary is
+grounded in the README, requirements file, Makefile, project-memory-system
+skill, Obsidian and PDF derivative skills, HTML explainer contract, Mermaid
+documentation subskill, and the renderer package manifests.
+
+Summary source basis:
+
+- `README.md`
+- `requirements.txt`
+- `Makefile`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json`
+
 ## Required Content Blocks
 
-- subject_summary: Summarize what the technical requirements explainer covers,
-  how it separates read-only inspection, validation, regeneration, diagram
-  rendering, local retrieval, and PDF refresh tiers, why readers need that
-  distinction, and which sources ground the summary.
+- subject_summary: Summarize the technical requirements explainer, its tiered setup and validation function, why readers need that distinction, and which declared sources ground the summary.
 - read_inspect_tier: Explain browser, text editor, and Git as the minimum
   read/inspect layer.
 - validators_memory_scripts_tier: Explain Python `.venv`, `requirements.txt`,
