@@ -2,14 +2,14 @@
 object_id: "HTML-CLAIM-GATES-EXPLAINER"
 format: "html"
 source_path: "html/claim-gates-explainer.html"
-source_hash: "4de1e5c8c6b0ee15bdb9cad40aedfa30e6d31ec96fbdd54e5670f5a8b0dcda4d"
+source_hash: "7c1be4c9952803bf389240a3e39244ee622fd96cb61abfcc583dcc55dfeea6b1"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-claim-gates-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-claim-gates-explainer.html"
-content_hash: "44aac168f13e6ecf39100f9c1c5e1ef4d2e0eb7512dfee641ee28585f6ba7170"
+content_hash: "b120a4c0b1d1a40c95fef4addff205e29edbbfd87c02e15e939b48c003ee7ffa"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `44aac168f13e6ecf39100f9c1c5e1ef4d2e0eb7512dfee641ee28585f6ba7170`
+- Content hash: `b120a4c0b1d1a40c95fef4addff205e29edbbfd87c02e15e939b48c003ee7ffa`
 - Extracted text path: `.local/content_semantics/html/html-claim-gates-explainer.txt`
-- Character count: `7061`
+- Character count: `5481`
 
 ## Relationships
 
@@ -50,7 +50,6 @@ related_object_ids:
 - `generated_from` -> [[02_sources/markdown/md-html-spec-claim-gates-explainer|MD-HTML-SPEC-CLAIM-GATES-EXPLAINER]] (MD-HTML-SPEC-CLAIM-GATES-EXPLAINER)
 - `content_link` -> #sources (#sources)
 - `content_link` -> #diagrams (#diagrams)
-- `content_link` -> #claim-boundary (#claim-boundary)
 - `content_link` -> #content-blocks (#content-blocks)
 
 <!-- MANUAL LOCAL NOTES START -->

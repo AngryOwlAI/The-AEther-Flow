@@ -53,7 +53,6 @@ Each Markdown explainer spec must declare:
 - `interaction_model`
 - `analysis_depth: "deep"`
 - `required_controls`
-- `source_drilldowns`
 - `analysis_capsule_schema`
 - `presentation_profile`
 - `layout_intent`
@@ -65,6 +64,13 @@ schema fields `premise`, `mechanism`, `source_basis`, `authority_status`,
 the lightweight marker evidence checked by the memory bootstrap validator:
 `data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
 `data-source-path`.
+
+Every explainer must include `source_materials_section` in `required_controls`
+and render a visible `All Source Materials` section with `data-source-path`
+evidence. `source_drilldowns` and `claim_boundary_toggle` remain valid legacy
+controls only when a spec explicitly declares them; claim-boundary prose remains
+required source-spec metadata even when no visible claim-boundary panel is
+rendered.
 
 The Markdown body must also include `## Required Content Blocks`, with one
 page-local lowercase snake_case ID for each declared content block.
@@ -79,8 +85,8 @@ Generated HTML must include every declared block as
 `data-source-path` marker. The visual form is adaptive: a content block may be
 a table, matrix, card group, sidebar, popover, callout, accordion, inspector
 panel, or another source-backed structure suited to the page. Validators check
-the structural evidence only; prose quality, creative fit, and visual clarity
-remain review and QA responsibilities.
+the structural evidence only; prose quality, creative fit, rendered diagram
+geometry, and visual clarity remain review and browser QA responsibilities.
 
 No full deterministic HTML generator is introduced by this contract. The
 Documentation Curator renders from the source spec with controlled freedom:

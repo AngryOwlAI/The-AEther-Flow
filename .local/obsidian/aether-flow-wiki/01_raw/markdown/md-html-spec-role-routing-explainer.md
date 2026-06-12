@@ -1,5 +1,5 @@
 ---
-title: "Role Routing Explainer"
+title: "Role Routing"
 purpose: "Explain how the project decides which AI agent role executes a bounded task, how the execution-role contract constrains that role, and how routing avoids authority drift."
 audience: "Technical but human-readable: maintainers and research agents who need to understand role selection before executing or reviewing tasks."
 output_path: "html/role-routing-explainer.html"
@@ -23,21 +23,13 @@ layout_intent: "Use a routing lifecycle with decision-tree diagrams, role-contra
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "authority_classification"
   - "director_routing"
   - "execution_role_contract"
   - "overlay_provisional_boundary"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - "research_control/README.md"
-  - "research_control/AGENTS.md"
-  - "registries/AGENT_ROLE_REGISTRY.csv"
-  - "registries/ROLE_EXECUTION_REGISTRY.csv"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -53,7 +45,7 @@ mermaid_diagrams:
     - "execution-role-contract-map"
 ---
 
-# Role Routing Explainer Spec
+# Role Routing Spec
 
 ## Rendering Intent
 
@@ -72,7 +64,7 @@ The page must not change role contracts or routing rules.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -85,9 +77,9 @@ The page must not change role contracts or routing rules.
 - Low-level evidence model: role registry, execution-role registry, Director
   decision registry, schema, and task-local role record.
 - Workflow step inspector for role selection.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: role-routing-decision-tree -->
 ```mermaid

@@ -1,5 +1,5 @@
 ---
-title: "Source Authority Explainer"
+title: "Source Authority"
 purpose: "Explain the repository authority ladder from canonical TeX and registries through registered Markdown, generated wiki/PDF/HTML derivatives, and local scratch surfaces."
 audience: "Technical but human-readable: maintainers, research agents, and reviewers who need to know which files can support claims."
 output_path: "html/source-authority-explainer.html"
@@ -26,8 +26,7 @@ layout_intent: "Use an authority/use-case matrix first, with file extensions ins
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "authority_ladder"
@@ -35,15 +34,6 @@ required_content_blocks:
   - "generated_derivatives"
   - "local_retrieval_surfaces"
   - "validation_evidence"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - ".codex/skills/project-memory-system/SKILL.md"
-  - ".codex/skills/html-visual-explainer/SKILL.md"
-  - "registries/TEX_SOURCE_REGISTRY.csv"
-  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
-  - "registries/HTML_EXPLAINER_REGISTRY.csv"
-  - "registries/WIKI_ARTIFACT_REGISTRY.csv"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -59,7 +49,7 @@ mermaid_diagrams:
     - "derivative-generation-flow"
 ---
 
-# Source Authority Explainer Spec
+# Source Authority Spec
 
 ## Rendering Intent
 
@@ -90,7 +80,7 @@ extracts, `.meta.json`, and `.local/` surfaces.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -105,9 +95,9 @@ extracts, `.meta.json`, and `.local/` surfaces.
 - Format matrix: explain what a file means in this project before naming the
   extension.
 - Workflow step inspector for derivative generation.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: source-authority-ladder -->
 ```mermaid
@@ -175,7 +165,7 @@ flowchart TD
 - premise: Tracked HTML pages help humans understand the project but do not
   carry independent scientific or control authority.
 - mechanism: Each HTML file points back to a Markdown source spec and registry
-  source basis; governed Mermaid source is preserved in the spec and rendered
+  source basis; diagram source is preserved in the spec and rendered
   into inline SVG for portability.
 - source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
   `registries/HTML_EXPLAINER_REGISTRY.csv`, and
@@ -184,7 +174,7 @@ flowchart TD
 - uncertainty: Visual polish can improve comprehension without changing the
   underlying authority chain.
 - validation_or_test: Confirm every tracked HTML explainer has a registered
-  Markdown spec, source-basis metadata, required controls, source drilldowns,
+  Markdown spec, source-basis metadata, required controls, source materials,
   and Mermaid parity when diagrams are declared.
 - next_step: Use the project hub to navigate the generated pages, then inspect
   the source specs for authoritative explainer content.

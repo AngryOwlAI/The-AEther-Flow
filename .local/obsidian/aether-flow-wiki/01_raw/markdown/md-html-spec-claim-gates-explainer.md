@@ -1,5 +1,5 @@
 ---
-title: "Claim Gates Explainer"
+title: "Claim Gates"
 purpose: "Explain how the project prevents hypotheses, candidates, workflow progress, blocked claims, and negative results from being confused with accepted physics."
 audience: "Technical but human-readable: reviewers and agents who need to understand claim status before reading or producing research artifacts."
 output_path: "html/claim-gates-explainer.html"
@@ -22,20 +22,13 @@ layout_intent: "Use a claim-boundary map with state diagrams, status panels, neg
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "claim_status_ladder"
   - "gate_review_path"
   - "negative_result_preservation"
   - "forbidden_promotion_boundary"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - "research_control/README.md"
-  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
-  - "registries/TEX_SOURCE_REGISTRY.csv"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -51,7 +44,7 @@ mermaid_diagrams:
     - "negative-result-preservation-loop"
 ---
 
-# Claim Gates Explainer Spec
+# Claim Gates Spec
 
 ## Rendering Intent
 
@@ -74,7 +67,7 @@ acceptance.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -87,9 +80,9 @@ acceptance.
 - Low-level evidence model: claim-boundary rows, task artifacts, TeX registry
   rows, completion records, and role authority.
 - Workflow step inspector for claim states.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: claim-gate-state-machine -->
 ```mermaid

@@ -2,14 +2,14 @@
 object_id: "MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
-source_hash: "834abc8fd695785cea4a490c01c3b38cb01607b987f79503a1db48211891a66b"
+source_hash: "355cbee41e7e21a02fd351a9545726d5de95782859a048034e5998821ebc4559"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-aether-flow-ontology-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-aether-flow-ontology-explainer.md"
-content_hash: "834abc8fd695785cea4a490c01c3b38cb01607b987f79503a1db48211891a66b"
+content_hash: "355cbee41e7e21a02fd351a9545726d5de95782859a048034e5998821ebc4559"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `834abc8fd695785cea4a490c01c3b38cb01607b987f79503a1db48211891a66b`
+- Content hash: `355cbee41e7e21a02fd351a9545726d5de95782859a048034e5998821ebc4559`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-aether-flow-ontology-explainer.txt`
-- Character count: `8339`
+- Character count: `8152`
 
 ## Relationships
 

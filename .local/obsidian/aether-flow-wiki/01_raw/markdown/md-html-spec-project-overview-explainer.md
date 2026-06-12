@@ -1,5 +1,5 @@
 ---
-title: "Project Overview Explainer"
+title: "Project Overview"
 purpose: "Provide the research-atlas hub for the Æther-flow ontology, exact-GR benchmark boundary, research-agent system, role routing, claim gates, and source authority."
 audience: "Technical but human-readable: maintainers, research agents, and reviewers who need a clear project map before inspecting source files and registries."
 output_path: "html/project-overview-explainer.html"
@@ -31,21 +31,13 @@ layout_intent: "Use a grouped atlas hub with descriptive navigation cards, a com
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
 required_content_blocks:
   - "atlas_navigation"
   - "research_idea"
   - "agent_workflow"
   - "authority_memory"
   - "run_regenerate_system"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - "ontology/aether-and-aether-flow.md"
-  - "research_control/README.md"
-  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
-  - "registries/HTML_EXPLAINER_REGISTRY.csv"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -61,7 +53,7 @@ mermaid_diagrams:
     - "dual-track-map"
 ---
 
-# Project Overview Explainer Spec
+# Project Overview Spec
 
 ## Rendering Intent
 
@@ -111,7 +103,7 @@ visually match the HTML palette and typography.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -129,10 +121,10 @@ visually match the HTML palette and typography.
   and checked outputs.
 - Low-level evidence model: source files, registry rows, generated artifacts,
   and validator receipts.
-- Source drilldowns: why each source matters and what boundary it checks.
+- All Source Materials section: complete source list with source-path evidence; claim-boundary metadata remains in the source spec.
 - Claim-boundary panel: human-only, non-authoritative, no physics promotion.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: research-atlas-hub -->
 ```mermaid
@@ -185,7 +177,7 @@ flowchart TD
 - authority_memory: Explain the source authority chain and the source-first
   memory system with derived access layers.
 - run_regenerate_system: Point readers to technical requirements, validation
-  commands, governed Mermaid rendering, local retrieval, and PDF-refresh scope.
+  commands, diagram rendering, local retrieval, and PDF-refresh scope.
 
 ## Required Analysis Capsules
 
@@ -204,7 +196,7 @@ flowchart TD
 - uncertainty: The first-principles derivation of the exact-GR benchmark from
   substrate structure remains open.
 - validation_or_test: Verify that every drilldown has a source spec,
-  source-basis metadata, governed Mermaid parity, and a registered HTML row.
+  source-basis metadata, diagram-source parity, and a registered HTML row.
 - next_step: Use the ontology drilldown to inspect the project-specific
   substrate/readout burden before evaluating any candidate derivation.
 

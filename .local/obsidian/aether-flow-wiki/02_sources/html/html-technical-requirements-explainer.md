@@ -2,14 +2,14 @@
 object_id: "HTML-TECHNICAL-REQUIREMENTS-EXPLAINER"
 format: "html"
 source_path: "html/technical-requirements-explainer.html"
-source_hash: "e01a50a2d0a1cfe2b489c9ce5a90c5364fa5d99b430e0873a652fd950c097c6a"
+source_hash: "5659086ad712cd18d6b01f4cacd6044c6a3f1fc3b8c906c738bf666bbdf40c8f"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-technical-requirements-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-technical-requirements-explainer.html"
-content_hash: "38b78cd235cfdad1936338de5ea35e0dab3be20d1196c1a133c787f66b113c0d"
+content_hash: "b6bd8f5555bd60b4bf41a7e58a45cd8977a0bcc3feb33046bd587f969459147c"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER"
@@ -34,16 +34,15 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `38b78cd235cfdad1936338de5ea35e0dab3be20d1196c1a133c787f66b113c0d`
+- Content hash: `b6bd8f5555bd60b4bf41a7e58a45cd8977a0bcc3feb33046bd587f969459147c`
 - Extracted text path: `.local/content_semantics/html/html-technical-requirements-explainer.txt`
-- Character count: `12981`
+- Character count: `11569`
 
 ## Relationships
 
 - `has_content_semantics` -> SEMANTIC-HTML-TECHNICAL-REQUIREMENTS-EXPLAINER (SEMANTIC-HTML-TECHNICAL-REQUIREMENTS-EXPLAINER)
 - `generated_from` -> [[02_sources/markdown/md-html-spec-technical-requirements-explainer|MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER]] (MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER)
 - `has_wiki_note` -> WIKI-HTML-TECHNICAL-REQUIREMENTS-EXPLAINER (WIKI-HTML-TECHNICAL-REQUIREMENTS-EXPLAINER)
-- `content_link` -> #claim-boundary (#claim-boundary)
 - `content_link` -> #sources (#sources)
 - `content_link` -> #analysis (#analysis)
 - `related_source` -> [[02_sources/markdown/md-html-spec-technical-requirements-explainer|MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER]] (MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER)

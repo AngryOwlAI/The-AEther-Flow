@@ -2,14 +2,14 @@
 object_id: "MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/memory-system-explainer.md"
-source_hash: "c2aade00bcd23a8c987d7d5b1e3e150c8ae738d64fe4c667cf83d1bdb56ad2f2"
+source_hash: "546d016ec24adb41cc0e79ca815996b1c7bcedfbd3441bc94caa4cd197049eba"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-memory-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-memory-system-explainer.md"
-content_hash: "c2aade00bcd23a8c987d7d5b1e3e150c8ae738d64fe4c667cf83d1bdb56ad2f2"
+content_hash: "546d016ec24adb41cc0e79ca815996b1c7bcedfbd3441bc94caa4cd197049eba"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-MEMORY-SYSTEM-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `c2aade00bcd23a8c987d7d5b1e3e150c8ae738d64fe4c667cf83d1bdb56ad2f2`
+- Content hash: `546d016ec24adb41cc0e79ca815996b1c7bcedfbd3441bc94caa4cd197049eba`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-memory-system-explainer.txt`
-- Character count: `8058`
+- Character count: `7781`
 
 ## Relationships
 

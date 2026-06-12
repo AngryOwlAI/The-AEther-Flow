@@ -15,6 +15,7 @@ Generated Obsidian index. Not canonical authority.
 
 ## canonical_markdown_source
 
+- [[02_sources/markdown/md-aether-flow-interpretation-lemen|MD-AETHER-FLOW-INTERPRETATION-LEMEN]] `ontology/aether_flow_interpretation-lemen.md`
 - [[02_sources/markdown/md-html-spec-aether-flow-ontology-explainer|MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - [[02_sources/markdown/md-html-spec-claim-gates-explainer|MD-HTML-SPEC-CLAIM-GATES-EXPLAINER]] `markdown/html-explainer-specs/claim-gates-explainer.md`
 - [[02_sources/markdown/md-html-spec-memory-system-explainer|MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/memory-system-explainer.md`

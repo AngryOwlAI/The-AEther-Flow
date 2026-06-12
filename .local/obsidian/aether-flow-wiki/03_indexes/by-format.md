@@ -17,6 +17,7 @@ Generated Obsidian index. Not canonical authority.
 
 ## markdown
 
+- [[02_sources/markdown/md-aether-flow-interpretation-lemen|MD-AETHER-FLOW-INTERPRETATION-LEMEN]] `ontology/aether_flow_interpretation-lemen.md`
 - [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
 - [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
 - [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`

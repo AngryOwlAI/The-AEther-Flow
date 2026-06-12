@@ -1,6 +1,6 @@
 ---
 name: mermaid-documentation
-description: Subskill for governed Mermaid diagrams in registered explanatory Markdown and tracked source-backed HTML explainers.
+description: Subskill for registered Mermaid diagrams in registered explanatory Markdown and tracked source-backed HTML explainers.
 ---
 
 # Mermaid Documentation
@@ -62,7 +62,7 @@ Diagram IDs must use lowercase kebab-case:
 
 ## HTML Rendering Rule
 
-Tracked `html/*.html` must render governed Mermaid diagrams through the
+Tracked `html/*.html` must render registered Mermaid diagrams through the
 `visual-explainer` diagram shell. Do not use bare `<pre class="mermaid">` in
 tracked HTML.
 
@@ -75,6 +75,8 @@ Each governed tracked HTML diagram must include:
 - `.mermaid-viewport`
 - `.mermaid-canvas`
 - inline `<svg>` inside `.mermaid-canvas`
+- explicit numeric `width` and `height` on the inline `<svg>` derived from
+  its `viewBox`
 - `data-renderer` on `.mermaid-canvas`
 - `data-render-source-sha256` on `.mermaid-canvas`
 - `<script type="text/plain" class="diagram-source">`
@@ -83,17 +85,17 @@ Each governed tracked HTML diagram must include:
 The HTML `diagram-source` text is derivative. It must match the normalized
 Markdown Mermaid source for the same ID.
 
-Governed Mermaid diagram shells must use adaptive viewBox-based fit behavior:
+Registered Mermaid diagram shells must use adaptive viewBox-based fit behavior:
 read the rendered SVG natural size from `viewBox`, size the `.mermaid-wrap` /
 `.mermaid-viewport` height from the diagram aspect ratio within bounded min/max
-limits, set SVG pixel width and height for the active zoom, and make Fit
-recompute that best fit. Do not constrain inline Mermaid SVGs with a fixed
-`max-width` rule or browser intrinsic sizing that leaves wide diagrams at the
-default narrow SVG width.
+limits, set SVG and canvas pixel width and height from the natural `viewBox`
+before applying CSS transforms, and make Fit recompute that best fit. Do not
+constrain inline Mermaid SVGs with a fixed `max-width` rule or browser
+intrinsic sizing that leaves diagrams at zero or default narrow SVG width.
 
 ## Runtime Rule
 
-Tracked HTML with governed Mermaid diagrams must be standalone single-file HTML.
+Tracked HTML with registered Mermaid diagrams must be standalone single-file HTML.
 Render Mermaid to sanitized inline SVG at build/regeneration time and embed the
 SVG inside `.mermaid-canvas`. The browser page may provide zoom, pan, fit, and
 source-inspection controls, but it must not run Mermaid at page load.
@@ -150,7 +152,7 @@ node render_mermaid_inline_svg.mjs --all --check
 ```
 
 The renderer stamps deterministic provenance on `.mermaid-canvas`, including
-`data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.0"` and
+`data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.1"` and
 `data-render-source-sha256="<sha256>"`, computed from the same normalized
 Mermaid source used by the Python validator. Do not stamp generated timestamps
 in tracked HTML.
@@ -234,7 +236,7 @@ structural/parity mode. It does not run render checks.
 
 ## Output Report
 
-When creating or updating governed Mermaid diagrams, report:
+When creating or updating registered Mermaid diagrams, report:
 
 - target Markdown path
 - diagram ID

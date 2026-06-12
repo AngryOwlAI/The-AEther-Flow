@@ -2,14 +2,14 @@
 object_id: "HTML-PROJECT-OVERVIEW-EXPLAINER"
 format: "html"
 source_path: "html/project-overview-explainer.html"
-source_hash: "ccaa8fd9347155b1a998a4ed363cf1aff94f860abb42d59ba21a870872efc9bd"
+source_hash: "eb30a9a4fc38941c2c74c5072fdcd8282c411576e6f31aeebb74d266a07a633f"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-project-overview-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-project-overview-explainer.html"
-content_hash: "987268504fccefe5707def4d756e4c7871fe99e96f22e382d3214e4a7355e372"
+content_hash: "91ada3c662dede5d498a2c7d82566c80f431cd71ba4ae79d038c3f8295938c76"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `987268504fccefe5707def4d756e4c7871fe99e96f22e382d3214e4a7355e372`
+- Content hash: `91ada3c662dede5d498a2c7d82566c80f431cd71ba4ae79d038c3f8295938c76`
 - Extracted text path: `.local/content_semantics/html/html-project-overview-explainer.txt`
-- Character count: `9088`
+- Character count: `7244`
 
 ## Relationships
 
@@ -48,7 +48,6 @@ related_object_ids:
 - `content_link` -> #analysis (#analysis)
 - `content_link` -> #sources (#sources)
 - `content_link` -> #content-blocks (#content-blocks)
-- `content_link` -> #claim-boundary (#claim-boundary)
 - `content_link` -> research-control-system-explainer.html (research-control-system-explainer.html)
 - `generated_output` -> WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER (wiki/html/html-project-overview-explainer.md)
 - `content_link` -> technical-requirements-explainer.html (technical-requirements-explainer.html)

@@ -2,14 +2,14 @@
 object_id: "HTML-MEMORY-SYSTEM-EXPLAINER"
 format: "html"
 source_path: "html/memory-system-explainer.html"
-source_hash: "2c5fc1219f0a930a6191d992e7b8a65e14da1db276e9ff5e649e70d6f9c97b56"
+source_hash: "1309d2f43119fea5e61586fb56cd5b1817813598021578fff7c11ef68fb77f95"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-memory-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-memory-system-explainer.html"
-content_hash: "d551cc37e39d8df02fffb1a21f0660ee864891b78f822d2d59dafc2a1174ec53"
+content_hash: "be56c922977b0887450ae73553aa74ebef842afe84ee828b8e97b4f07467904c"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
@@ -34,13 +34,12 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `d551cc37e39d8df02fffb1a21f0660ee864891b78f822d2d59dafc2a1174ec53`
+- Content hash: `be56c922977b0887450ae73553aa74ebef842afe84ee828b8e97b4f07467904c`
 - Extracted text path: `.local/content_semantics/html/html-memory-system-explainer.txt`
-- Character count: `10518`
+- Character count: `8941`
 
 ## Relationships
 
-- `content_link` -> #claim-boundary (#claim-boundary)
 - `content_link` -> #analysis (#analysis)
 - `content_link` -> #workflow (#workflow)
 - `has_content_semantics` -> SEMANTIC-HTML-MEMORY-SYSTEM-EXPLAINER (SEMANTIC-HTML-MEMORY-SYSTEM-EXPLAINER)

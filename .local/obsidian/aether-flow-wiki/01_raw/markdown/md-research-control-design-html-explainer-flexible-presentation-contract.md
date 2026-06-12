@@ -21,8 +21,7 @@ explainer. The HTML file remains a generated, human-reading derivative.
 
 Every registered source spec under `markdown/html-explainer-specs/` must
 declare these presentation fields in addition to the existing source,
-drilldown, claim-boundary, interaction, analysis-capsule, and validation
-fields:
+claim-boundary metadata, interaction, analysis-capsule, and validation fields:
 
 - `presentation_profile`: controlled layout archetype.
 - `layout_intent`: required nonblank prose explaining how the page adapts that
@@ -68,6 +67,12 @@ The visual form is intentionally adaptive. A content block may be a table,
 matrix, chip row, card group, sidebar, callout, accordion, popover, inspector
 panel, or another source-backed structure suited to the page.
 
+Every tracked explainer must also expose the complete source list as a visible
+`All Source Materials` section marked with
+`data-explainer-control="source_materials_section"`. Legacy source drilldowns
+and claim-boundary toggles remain valid only when a source spec explicitly
+declares them; they are not universal visible panels.
+
 ## Validator Scope
 
 Validators enforce deterministic structural evidence only:
@@ -78,8 +83,10 @@ Validators enforce deterministic structural evidence only:
 - `required_content_blocks` is non-empty and syntactically valid
 - each required block appears as `data-content-block`
 - each required block contains source-path evidence
-- existing control, source-drilldown, claim-boundary, analysis-capsule,
-  source-basis, hash, and Mermaid parity markers remain valid
+- required control, source-material, analysis-capsule, source-basis, hash, and
+  Mermaid parity markers remain valid
+- Mermaid inline SVG output uses explicit numeric dimensions derived from
+  `viewBox`
 - tracked HTML remains generated, human-only, source-backed, and
   non-authoritative
 
@@ -104,7 +111,7 @@ Often optional:
 - `technical_requirements`
 - `conceptual_model`
 
-When a spec declares governed Mermaid diagrams, Markdown Mermaid source remains
+When a spec declares registered Mermaid diagrams, Markdown Mermaid source remains
 canonical and tracked HTML must use build-time inline SVG with preserved source
 parity.
 

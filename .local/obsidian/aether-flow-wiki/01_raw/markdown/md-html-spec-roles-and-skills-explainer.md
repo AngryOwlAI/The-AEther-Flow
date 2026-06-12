@@ -1,5 +1,5 @@
 ---
-title: "Roles And Skills Explainer"
+title: "Roles And Skills"
 purpose: "Catalog active registered roles, defined or superseded role states, repo-local governed skills, and evidence-labeled role/skill associations."
 audience: "Technical but human-readable: maintainers, research agents, and reviewers who need to know which roles and repo-local skills govern current work."
 output_path: "html/roles-and-skills-explainer.html"
@@ -47,8 +47,7 @@ layout_intent: "Use an active-first catalog with compact role cards, status band
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
 required_content_blocks:
   - "active_role_catalog"
   - "status_defined_roles"
@@ -57,14 +56,6 @@ required_content_blocks:
   - "declared_role_skill_evidence"
   - "inferred_support_skills"
   - "operator_context_boundary"
-source_drilldowns:
-  - "registries/AGENT_ROLE_REGISTRY.csv"
-  - "registries/ROLE_EXECUTION_REGISTRY.csv"
-  - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
-  - ".codex/skills/html-visual-explainer/SKILL.md"
-  - ".codex/skills/project-memory-system/SKILL.md"
-  - ".codex/skills/visual-explainer/SKILL.md"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -75,7 +66,7 @@ analysis_capsule_schema:
   - "next_step"
 ---
 
-# Roles And Skills Explainer Spec
+# Roles And Skills Spec
 
 ## Rendering Intent
 
@@ -111,7 +102,7 @@ are not project contract authority unless mirrored into `.codex/skills/`.
   must be labeled `likely support skill` and backed by source paths.
 - Operator-context note separating project requirements from useful
   environment aids.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
 ## Required Content Blocks
 

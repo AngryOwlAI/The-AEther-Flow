@@ -1,5 +1,5 @@
 ---
-title: "Æther-flow Ontology Explainer"
+title: "Æther-flow Ontology"
 purpose: "Explain the project's specific Æther-flow ontology in high-level, operational, and low-level evidence layers while preserving the open exact-GR derivation burden."
 audience: "Technical but human-readable: readers who need to understand the project-specific ontology before inspecting canonical TeX or derivation tasks."
 output_path: "html/aether-flow-ontology-explainer.html"
@@ -21,19 +21,12 @@ layout_intent: "Use a conceptual model with term cards, derivation-burden panels
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
 required_content_blocks:
   - "ontology_terms"
   - "exact_gr_benchmark"
   - "derivation_burden"
   - "claim_boundaries"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - "ontology/aether-and-aether-flow.md"
-  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
-  - "registries/TEX_SOURCE_REGISTRY.csv"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -49,7 +42,7 @@ mermaid_diagrams:
     - "derivation-burden-map"
 ---
 
-# Æther-flow Ontology Explainer Spec
+# Æther-flow Ontology Spec
 
 ## Rendering Intent
 
@@ -76,7 +69,7 @@ ontology. It should explain what this project currently says:
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -92,9 +85,9 @@ ontology. It should explain what this project currently says:
 - A derivation-burden panel for observer normal/readout source construction,
   same-metric matter, nonmetric mode control, `S-time` closure, invariance, and
   anti-smuggling constraints.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: aether-flow-ontology-stack -->
 ```mermaid

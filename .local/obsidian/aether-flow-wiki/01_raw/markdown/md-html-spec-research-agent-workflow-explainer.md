@@ -1,5 +1,5 @@
 ---
-title: "Research System Explainer"
+title: "Research System"
 purpose: "Show how the project research system uses Director decisions, AgentJobs, role contracts, validation, completions, registries, and handoffs to make theoretical work auditable."
 audience: "Technical but human-readable: maintainers, research agents, and reviewers who need the operational model of the research system."
 output_path: "html/research-agent-workflow-explainer.html"
@@ -25,8 +25,7 @@ layout_intent: "Use a workflow lifecycle with a concrete object-path trace, stat
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "state_entry"
@@ -35,13 +34,6 @@ required_content_blocks:
   - "role_execution"
   - "validation_completion_handoff"
   - "registry_update"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - "research_control/AGENTS.md"
-  - "research_control/README.md"
-  - ".codex/skills/continue-research/SKILL.md"
-  - ".codex/skills/improve-project-system/SKILL.md"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -57,7 +49,7 @@ mermaid_diagrams:
     - "agentjob-lifecycle"
 ---
 
-# Research System Explainer Spec
+# Research System Spec
 
 ## Rendering Intent
 
@@ -83,7 +75,7 @@ decision -> `00_TASK.yaml` -> `jobs/AJ-*.yaml` -> `roles/*.yaml` ->
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -100,9 +92,9 @@ decision -> `00_TASK.yaml` -> `jobs/AJ-*.yaml` -> `roles/*.yaml` ->
   latest handoff through task YAML, job YAML, role YAML, artifacts,
   completion, next handoff, and registry updates.
 - Workflow step inspector for each operational step.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: research-system-loop -->
 ```mermaid

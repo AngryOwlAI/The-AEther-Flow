@@ -44,6 +44,7 @@ Generated Obsidian index. Not canonical authority.
 
 ## markdown-wiki
 
+- [[02_sources/markdown/md-aether-flow-interpretation-lemen|MD-AETHER-FLOW-INTERPRETATION-LEMEN]] `ontology/aether_flow_interpretation-lemen.md`
 - [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
 - [[02_sources/markdown/md-skill-markdown-wiki|MD-SKILL-MARKDOWN-WIKI]] `.codex/skills/markdown-wiki/SKILL.md`
 

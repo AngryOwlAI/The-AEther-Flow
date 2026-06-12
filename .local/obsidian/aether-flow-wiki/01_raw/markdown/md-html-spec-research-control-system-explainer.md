@@ -1,5 +1,5 @@
 ---
-title: "Research-Control System Explainer"
+title: "Research-Control System"
 purpose: "Provide the validation-governance drilldown for authority boundaries, project-system improvement, documentation-impact receipts, and source-backed HTML governance."
 audience: "Technical but human-readable: maintainers, research agents, and reviewers who need the control-system validation model."
 output_path: "html/research-control-system-explainer.html"
@@ -27,8 +27,7 @@ layout_intent: "Use a validation lifecycle with governance panels for classifica
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "classification_resolver"
@@ -36,13 +35,6 @@ required_content_blocks:
   - "flexible_html_contract"
   - "documentation_impact"
   - "validator_chain"
-source_drilldowns:
-  - "AGENTS.md"
-  - "README.md"
-  - "research_control/README.md"
-  - ".codex/skills/improve-project-system/SKILL.md"
-  - ".codex/skills/html-visual-explainer/SKILL.md"
-  - ".codex/skills/visual-explainer/SKILL.md"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -58,7 +50,7 @@ mermaid_diagrams:
     - "control-boundary-map"
 ---
 
-# Research-Control System Explainer Spec
+# Research-Control System Spec
 
 ## Rendering Intent
 
@@ -76,7 +68,7 @@ content to `source-authority-explainer.html`.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
-- Adaptive diagram fit: governed Mermaid diagram boxes must read the rendered
+- Adaptive diagram fit: diagram-backed boxes must read the rendered
   SVG viewBox, set the box height from diagram aspect ratio and available
   width within bounded min/max limits, and make Fit recompute that best-fit
   geometry so horizontal diagrams do not collapse to intrinsic SVG width.
@@ -94,9 +86,9 @@ content to `source-authority-explainer.html`.
   `layout_intent`, `required_content_blocks`, `data-content-block`, and
   source-path evidence as deterministic structural requirements.
 - Workflow step inspector for the validation chain.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: research-control-validation-flow -->
 ```mermaid
@@ -148,7 +140,7 @@ flowchart TD
   Markdown source specs.
 - mechanism: The Markdown spec declares title, purpose, source material, claim
   boundary, interaction model, presentation profile, layout intent, required
-  content blocks, required controls, source drilldowns, Mermaid diagrams, and
+  content blocks, required controls, source materials, Mermaid diagrams, and
   analysis capsules; generated HTML carries marker and source metadata
   evidence.
 - source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
