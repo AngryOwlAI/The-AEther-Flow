@@ -1,6 +1,6 @@
-Source Authority Explainer
+Source Authority
 format_ladder
-Source Authority Explainer
+Source Authority
 Explain the repository authority ladder from canonical TeX and registries through registered Markdown, generated wiki/PDF/HTML derivatives, and local scratch surfaces.
 Layout intent
 Use an authority/use-case matrix first, with file extensions inside each row, then provide drilldowns for source authority, generated derivatives, local retrieval surfaces, and validation evidence.
@@ -8,21 +8,17 @@ Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER
-Content Blocks
+Coverage
 Diagrams
 Workflow
 Analysis
 Sources
-Boundary
-Required content blocks
 Source-Backed Coverage
-Every declared block carries local source-path evidence while the visual form adapts to the page profile.
 Authority Ladder
 AGENTS.md
 README.md
 registries/FILE_OBJECT_REGISTRY.csv
 Explain canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
 Format Use Case Matrix
 AGENTS.md
 README.md
@@ -82,7 +78,6 @@ AGENTS.md
 README.md
 registries/FILE_OBJECT_REGISTRY.csv
 Explain generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, and why they are not independent authority.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
 Local Retrieval Surfaces
 README.md
 AGENTS.md
@@ -98,12 +93,7 @@ Agent-queryable local search surfaces and SQLite index.
 Validation Evidence
 README.md
 Explain source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, and documentation-impact checks.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
-Presentation contract
-Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
-Governed Mermaid
 Source Authority Ladder
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -149,9 +139,7 @@ or
 retrieval
 Diagram source
 flowchart TD Tex["Registered TeX<br/>scientific authority"] --> Registries["Format registries<br/>routing and provenance authority"] Registries --> Markdown["Registered Markdown<br/>front door and specs"] Markdown --> Html["Tracked HTML explainers<br/>human-only generated derivatives"] Tex --> Pdf["PDF derivatives<br/>human reading"] Registries --> Wiki["Generated wiki and indexes<br/>metadata retrieval"] Wiki --> Local["Local Obsidian and .local caches<br/>scratch or retrieval"] Html --> Local
-Governed Mermaid
 Derivative Generation Flow
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -225,7 +213,7 @@ HTML Is A Human Visual Derivative
 Premise
 Tracked HTML pages help humans understand the project but do not carry independent scientific or control authority.
 Mechanism
-Each HTML file points back to a Markdown source spec and registry source basis; governed Mermaid source is preserved in the spec and rendered into inline SVG for portability.
+Each HTML file points back to a Markdown source spec and registry source basis; diagram source is preserved in the spec and rendered into inline SVG for portability.
 Source Basis
 `.codex/skills/html-visual-explainer/SKILL.md`, `registries/HTML_EXPLAINER_REGISTRY.csv`, and `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
 Authority Status
@@ -236,25 +224,8 @@ Validation Or Test
 Confirm every tracked HTML explainer has a registered Markdown spec, source-basis metadata, required controls, source drilldowns, and Mermaid parity when diagrams are declared.
 Next Step
 Use the project hub to navigate the generated pages, then inspect the source specs for authoritative explainer content.
-Source drilldowns
-Inspectable Source Basis
-README.md
-README.md is part of the source basis for this generated human-only page.
-AGENTS.md
-AGENTS.md is part of the source basis for this generated human-only page.
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/project-memory-system/SKILL.md is part of the source basis for this generated human-only page.
-.codex/skills/html-visual-explainer/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md is part of the source basis for this generated human-only page.
-registries/TEX_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv is part of the source basis for this generated human-only page.
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/MARKDOWN_SOURCE_REGISTRY.csv is part of the source basis for this generated human-only page.
-registries/HTML_EXPLAINER_REGISTRY.csv
-registries/HTML_EXPLAINER_REGISTRY.csv is part of the source basis for this generated human-only page.
-registries/WIKI_ARTIFACT_REGISTRY.csv
-registries/WIKI_ARTIFACT_REGISTRY.csv is part of the source basis for this generated human-only page.
-All source materials
+All Source Materials
+Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md
 AGENTS.md
 .codex/skills/project-memory-system/SKILL.md
@@ -266,6 +237,3 @@ registries/WIKI_ARTIFACT_REGISTRY.csv
 registries/PDF_DERIVATIVE_REGISTRY.csv
 registries/FILE_OBJECT_REGISTRY.csv
 research_control/design/html_explainer_flexible_presentation_contract.md
-Claim boundary
-Human-Only Non-Authority Boundary
-Human-only source-authority visualization. It explains existing authority hierarchy and generated-derivative boundaries without changing registry authority, source status, scientific claims, or control contracts.

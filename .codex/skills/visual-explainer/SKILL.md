@@ -83,9 +83,10 @@ progressive-disclosure model rather than a heavy app framework:
 - Provide section navigation.
 - Use a deep-first reading surface with expandable analysis panels for
   reasoning, constraints, risks, and examples.
-- Provide source drilldowns that expose the registered source basis.
-- Provide claim-boundary controls that distinguish what the page may and may
-  not claim.
+- Provide a visible All Source Materials section that exposes registered
+  source-path evidence.
+- Preserve claim-boundary text as source-spec metadata unless a page-specific
+  source spec explicitly requires a visible claim-boundary control.
 - Provide workflow step inspectors for workflow and control-system pages.
 
 Tracked project explainers must also implement the flexible presentation
@@ -102,12 +103,12 @@ Allowed presentation profiles are `atlas_hub`, `role_catalog`,
 `technical_requirements`, `conceptual_model`, and `claim_boundary_map`.
 Choose the visual form that best fits the subject while preserving source
 evidence: atlas cards, role catalogs, format matrices, tier tables, memory
-maps, workflow timelines, claim-boundary panels, or source inspectors are all
+maps, workflow timelines, claim-boundary panels when explicitly required, or source inspectors are all
 valid when the spec supports them.
 
 Mermaid is profile-guided, not mandatory. `memory_system_map`,
 `workflow_lifecycle`, `claim_boundary_map`, and `atlas_hub` usually merit a
-governed Mermaid overview. `role_catalog`, `format_ladder`, and
+registered Mermaid overview. `role_catalog`, `format_ladder`, and
 `technical_requirements` may be clearer as tables, matrices, tier cards, or
 catalog panels. Do not add a full deterministic HTML generator; render
 creatively from the spec while keeping structural evidence markers intact.
@@ -204,11 +205,11 @@ Vary the choice each time. If the last diagram was dark and technical, make the 
 | Timeline | CSS (central line + cards) | Simple linear layout doesn't need a layout engine |
 | Dashboard | CSS Grid + Chart.js | Card grid with embedded charts |
 
-**Mermaid theming:** Always use `theme: 'base'` with custom `themeVariables` so colors match your page palette. For `.local/` scratch pages, use `layout: 'elk'` for complex graphs when the runtime is available (requires the `@mermaid-js/layout-elk` package — see `./references/libraries.md` for the CDN import). For tracked `html/*.html`, Mermaid must be rendered at build time into sanitized inline SVG through the governed Mermaid subskill; do not import or execute Mermaid in the browser, and do not use `layout: 'elk'` unless a later governed task adds build-time ELK support. Override Mermaid's SVG classes with CSS for pixel-perfect control. See `./references/libraries.md` for full theming guide.
+**Mermaid theming:** Always use `theme: 'base'` with custom `themeVariables` so colors match your page palette. For `.local/` scratch pages, use `layout: 'elk'` for complex graphs when the runtime is available (requires the `@mermaid-js/layout-elk` package — see `./references/libraries.md` for the CDN import). For tracked `html/*.html`, Mermaid must be rendered at build time into sanitized inline SVG through the registered Mermaid subskill; do not import or execute Mermaid in the browser, and do not use `layout: 'elk'` unless a later governed task adds build-time ELK support. Override Mermaid's SVG classes with CSS for pixel-perfect control. See `./references/libraries.md` for full theming guide.
 
 **Mermaid containers:** Always center Mermaid diagrams with `display: flex; justify-content: center;`. Add zoom controls (+/−/reset/expand) to every `.mermaid-wrap` container. Include the click-to-expand JavaScript so clicking the diagram (or the expand button) opens it full-size in a new tab. For tracked `html/*.html`, this JavaScript enhances an already embedded SVG; basic diagram visibility must not depend on JavaScript.
 
-**Never use bare `<pre class="mermaid">`.** It renders but has no zoom/pan controls and is not valid for tracked governed pages. Always use the full `diagram-shell` pattern from `templates/mermaid-flowchart.html`: the HTML structure (`.diagram-shell` > `.mermaid-wrap` > `.zoom-controls` + `.mermaid-viewport` > `.mermaid-canvas`), the CSS, and the JS module for zoom/pan/fit. For tracked `html/*.html`, `.mermaid-canvas` contains build-time inline SVG plus preserved source parity metadata.
+**Never use bare `<pre class="mermaid">`.** It renders but has no zoom/pan controls and is not valid for tracked registered pages. Always use the full `diagram-shell` pattern from `templates/mermaid-flowchart.html`: the HTML structure (`.diagram-shell` > `.mermaid-wrap` > `.zoom-controls` + `.mermaid-viewport` > `.mermaid-canvas`), the CSS, and the JS module for zoom/pan/fit. For tracked `html/*.html`, `.mermaid-canvas` contains build-time inline SVG plus preserved source parity metadata.
 
 **Tracked Mermaid adaptive fit:** Governed tracked Mermaid pages must size the
 diagram box from the rendered SVG `viewBox`. The initial Fit state should set

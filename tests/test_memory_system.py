@@ -69,7 +69,7 @@ def generated_snapshot() -> dict[str, str]:
 
 
 MERMAID_SOURCE = "flowchart TD\n  A[Source] --> B[Derivative]\n"
-MERMAID_RENDERER = "mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.0"
+MERMAID_RENDERER = "mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.1"
 
 
 def normalized_mermaid_source(source: str) -> str:
@@ -140,7 +140,7 @@ def write_governed_html(
     html.parent.mkdir(parents=True, exist_ok=True)
     if canvas_body is None:
         canvas_body = (
-            '<svg viewBox="0 0 100 40" data-mermaid-rendered="true" '
+            '<svg width="100" height="40" viewBox="0 0 100 40" data-mermaid-rendered="true" '
             'data-mermaid-diagram-id="authority-ladder"><text>A</text></svg>'
         )
     canvas_hash = canvas_hash if canvas_hash is not None else mermaid_source_hash(source)
@@ -237,11 +237,8 @@ def valid_synthetic_spec_text() -> str:
         "required_controls:\n"
         "  - \"section_toc\"\n"
         "  - \"expandable_analysis_panels\"\n"
-        "  - \"source_drilldowns\"\n"
-        "  - \"claim_boundary_toggle\"\n"
+        "  - \"source_materials_section\"\n"
         "  - \"workflow_step_inspector\"\n"
-        "source_drilldowns:\n"
-        '  - "README.md"\n'
         "analysis_capsule_schema:\n"
         "  - \"premise\"\n"
         "  - \"mechanism\"\n"
@@ -281,9 +278,9 @@ def valid_synthetic_html_text(content_block_html: str | None = None) -> str:
         "</style>"
         '<nav data-explainer-control="section_toc"></nav>'
         '<details data-explainer-control="expandable_analysis_panels"></details>'
-        '<section data-explainer-control="claim_boundary_toggle"></section>'
+        '<section data-explainer-control="source_materials_section"></section>'
         '<ol data-explainer-control="workflow_step_inspector"></ol>'
-        '<details data-source-path="README.md"></details>'
+        '<ul><li data-source-path="README.md"></li></ul>'
         '<article data-analysis-capsule="test">'
         '<div data-capsule-field="premise"></div>'
         '<div data-capsule-field="mechanism"></div>'
@@ -492,10 +489,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "  - \"simple_deep_toggle\"\n"
                 "  - \"section_toc\"\n"
                 "  - \"expandable_analysis_panels\"\n"
-                "  - \"source_drilldowns\"\n"
-                "  - \"claim_boundary_toggle\"\n"
-                "source_drilldowns:\n"
-                '  - "README.md"\n'
+                "  - \"source_materials_section\"\n"
                 "analysis_capsule_schema:\n"
                 "  - \"premise\"\n"
                 "  - \"mechanism\"\n"
@@ -557,10 +551,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
                 "  - \"expandable_analysis_panels\"\n"
-                "  - \"source_drilldowns\"\n"
-                "  - \"claim_boundary_toggle\"\n"
-                "source_drilldowns:\n"
-                '  - "README.md"\n'
+                "  - \"source_materials_section\"\n"
                 "analysis_capsule_schema:\n"
                 "  - \"premise\"\n"
                 "  - \"mechanism\"\n"
@@ -632,10 +623,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
                 "  - \"expandable_analysis_panels\"\n"
-                "  - \"source_drilldowns\"\n"
-                "  - \"claim_boundary_toggle\"\n"
-                "source_drilldowns:\n"
-                '  - "README.md"\n'
+                "  - \"source_materials_section\"\n"
                 "analysis_capsule_schema:\n"
                 "  - \"premise\"\n"
                 "  - \"mechanism\"\n"
@@ -698,11 +686,8 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
                 "  - \"expandable_analysis_panels\"\n"
-                "  - \"source_drilldowns\"\n"
-                "  - \"claim_boundary_toggle\"\n"
+                "  - \"source_materials_section\"\n"
                 "  - \"workflow_step_inspector\"\n"
-                "source_drilldowns:\n"
-                '  - "README.md"\n'
                 "analysis_capsule_schema:\n"
                 "  - \"premise\"\n"
                 "  - \"mechanism\"\n"
@@ -872,10 +857,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
                 "  - \"expandable_analysis_panels\"\n"
-                "  - \"source_drilldowns\"\n"
-                "  - \"claim_boundary_toggle\"\n"
-                "source_drilldowns:\n"
-                '  - "README.md"\n'
+                "  - \"source_materials_section\"\n"
                 "analysis_capsule_schema:\n"
                 "  - \"premise\"\n"
                 "  - \"mechanism\"\n"
@@ -911,8 +893,8 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "</style>"
                 '<nav data-explainer-control="section_toc"></nav>'
                 '<details data-explainer-control="expandable_analysis_panels"></details>'
-                '<section data-explainer-control="claim_boundary_toggle"></section>'
-                '<details data-source-path="README.md"></details>'
+                '<section data-explainer-control="source_materials_section"></section>'
+                '<ul><li data-source-path="README.md"></li></ul>'
                 '<article data-analysis-capsule="test">'
                 '<div data-capsule-field="premise"></div>'
                 '<div data-capsule-field="mechanism"></div>'
@@ -974,7 +956,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
             "<style>"
             ".mermaid-canvas svg { max-width: min(100%, 980px); height: auto; }"
             "</style>"
-            '<div class="mermaid-canvas"><svg viewBox="0 0 1200 400"></svg></div>'
+            '<div class="mermaid-canvas"><svg width="100%" style="max-width: 1200px;" viewBox="0 0 1200 400" data-mermaid-rendered="true"></svg></div>'
             "<script>"
             "const fit = () => { scale = 1; x = 0; y = 0; apply(); };"
             "</script>"
@@ -986,6 +968,12 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertTrue(
             any("missing adaptive fit helper readSvgNaturalSize" in error for error in report.errors)
         )
+        self.assertTrue(
+            any("missing explicit width and height" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("retains root max-width style" in error for error in report.errors)
+        )
 
     def test_html_registry_accepts_adaptive_mermaid_fit(self) -> None:
         report = self.memory_system.ValidationReport()
@@ -993,11 +981,12 @@ class MemorySystemSmokeTests(unittest.TestCase):
             "<style>"
             ".mermaid-canvas svg { max-width: none; width: auto; height: auto; }"
             "</style>"
-            '<div class="mermaid-canvas"><svg viewBox="0 0 1200 400"></svg></div>'
+            '<div class="mermaid-canvas"><svg width="1200" height="400" viewBox="0 0 1200 400" data-mermaid-rendered="true"></svg></div>'
             "<script>"
             "function readSvgNaturalSize(svg) { return svg.viewBox.baseVal; }"
             "function setAdaptiveHeight() { return true; }"
             "function computeFit() { return { zoom: 1 }; }"
+            "function setCanvasNaturalSize() { return true; }"
             "</script>"
         )
         self.memory_system.validate_html_layout_contract(report, "HTML-SYNTHETIC", html_text)
@@ -1195,7 +1184,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
             write_governed_html(
                 root,
                 canvas_body=(
-                    '<svg id="mmd-authority-ladder-root-rewritten" viewBox="0 0 100 40" '
+                    '<svg id="mmd-authority-ladder-root-rewritten" width="100" height="40" viewBox="0 0 100 40" '
                     'data-mermaid-rendered="true" data-mermaid-diagram-id="authority-ladder">'
                     '<style>#mmd-authority-ladder-root .node rect{fill:#dfe8f2;}</style>'
                     '<g class="node"><rect id="mmd-authority-ladder-node"/></g></svg>'

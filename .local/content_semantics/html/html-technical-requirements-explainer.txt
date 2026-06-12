@@ -1,20 +1,17 @@
-Technical Requirements Explainer
+Technical Requirements
 technical_requirements
-Technical Requirements Explainer
-Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering governed Mermaid HTML, using local retrieval, and refreshing PDFs.
+Technical Requirements
+Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering diagram-backed HTML, using local retrieval, and refreshing PDFs.
 Layout intent
 Use a tiered requirements matrix with project-requirement versus operator-environment-aid labels, command callouts, and source-backed setup evidence.
 Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER
-Content Blocks
+Coverage
 Analysis
 Sources
-Boundary
-Required content blocks
 Source-Backed Coverage
-Every declared block carries local source-path evidence while the visual form adapts to the page profile.
 Read Inspect Tier
 README.md
 requirements.txt
@@ -35,7 +32,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -66,7 +63,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -97,7 +94,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -109,7 +106,7 @@ Build or refresh PDFs
 Project requirement only when TeX derivatives are in scope
 LaTeX/PDF build path.
 .codex/skills/pdf-derivative-build/SKILL.md
-Governed Mermaid Tier
+Diagram Rendering Tier
 README.md
 requirements.txt
 .codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
@@ -129,7 +126,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -161,7 +158,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -193,7 +190,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -223,7 +220,7 @@ Regenerate memory/wiki/registry surfaces
 Project requirement
 Project-memory-system scripts and make validate-memory.
 make validate-memory
-Regenerate governed Mermaid HTML
+Regenerate diagram-backed HTML
 Project requirement when Mermaid-backed tracked HTML is regenerated
 Node.js, npm, pinned Mermaid package, and Playwright Chromium.
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts; npm ci; npx playwright install chromium
@@ -235,18 +232,13 @@ Build or refresh PDFs
 Project requirement only when TeX derivatives are in scope
 LaTeX/PDF build path.
 .codex/skills/pdf-derivative-build/SKILL.md
-Presentation contract
-Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
-Diagram policy
-No required Mermaid diagram
-This presentation profile is clearer as a catalog, matrix, tier table, or source inspector.
 Analysis capsules
 Claim-Aware Analysis
 Requirements Are Tiered
 Premise
 Not every reader or operator needs every tool.
 Mechanism
-The page should separate read-only inspection, Python validation, memory regeneration, governed Mermaid rendering, optional local retrieval, and PDF refresh work into distinct tiers.
+The page should separate read-only inspection, Python validation, memory regeneration, diagram rendering, optional local retrieval, and PDF refresh work into distinct tiers.
 Source Basis
 `README.md`, `requirements.txt`, `Makefile`, `.codex/skills/project-memory-system/SKILL.md`, and Mermaid subskill setup documentation.
 Authority Status
@@ -272,21 +264,8 @@ Validation Or Test
 Check whether the requirement appears in tracked docs, scripts, `requirements.txt`, or package manifests.
 Next Step
 Keep README commands concise and use this explainer for the richer tiered model.
-Source drilldowns
-Inspectable Source Basis
-README.md
-README.md is part of the source basis for this generated human-only page.
-requirements.txt
-requirements.txt is part of the source basis for this generated human-only page.
-Makefile
-Makefile is part of the source basis for this generated human-only page.
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/project-memory-system/SKILL.md is part of the source basis for this generated human-only page.
-.codex/skills/obsidian-wiki/SKILL.md
-.codex/skills/obsidian-wiki/SKILL.md is part of the source basis for this generated human-only page.
-.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
-.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md is part of the source basis for this generated human-only page.
-All source materials
+All Source Materials
+Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md
 requirements.txt
 Makefile
@@ -297,6 +276,3 @@ Makefile
 .codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
 .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
 .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package-lock.json
-Claim boundary
-Human-Only Non-Authority Boundary
-Human-only technical-requirements visualization. It explains existing setup tiers and regeneration requirements without changing dependency policy, validator behavior, scripts, role authority, or scientific claim status.

@@ -1,6 +1,6 @@
-Memory System Explainer
+Memory System
 memory_system_map
-Memory System Explainer
+Memory System
 Explain the source-first memory system: canonical CSV registries, tracked generated wiki notes, local Obsidian vault, semantic extracts, SQLite index, and query surface.
 Layout intent
 Use a layered memory map: canonical CSV memory spine, tracked generated wiki surface, local Obsidian reader vault, semantic/query layer, and authority-boundary panels.
@@ -8,15 +8,12 @@ Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER
-Content Blocks
+Coverage
 Diagrams
 Workflow
 Analysis
 Sources
-Boundary
-Required content blocks
 Source-Backed Coverage
-Every declared block carries local source-path evidence while the visual form adapts to the page profile.
 Csv Memory Spine
 registries/FILE_OBJECT_REGISTRY.csv
 registries/WIKI_ARTIFACT_REGISTRY.csv
@@ -112,11 +109,7 @@ Generated local reader vault and optional operator aid; noncanonical.
 Semantic/query layer
 .local/content_semantics/ + .local/memory_index/memory.sqlite
 Agent-queryable local search surfaces and SQLite index.
-Presentation contract
-Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
-Governed Mermaid
 Memory Surface Map
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -159,9 +152,7 @@ and
 search
 Diagram source
 flowchart TD Sources["Registered sources<br/>TeX and Markdown"] --> Registries["registries/*.csv<br/>canonical memory spine"] Registries --> Wiki["wiki/<br/>tracked generated notes and indexes"] Registries --> FileRegistry["FILE_OBJECT_REGISTRY.csv<br/>generated query surface"] Wiki --> Obsidian[".local/obsidian/aether-flow-wiki/<br/>local reader vault"] Sources --> Semantics[".local/content_semantics/<br/>semantic extracts"] Registries --> Semantics Semantics --> SQLite[".local/memory_index/memory.sqlite<br/>local query index"] Obsidian --> Query["query_memory.py<br/>lookup and search"] SQLite --> Query
-Governed Mermaid
 Memory Regeneration Flow
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -240,23 +231,8 @@ Validation Or Test
 Validate with `lint_obsidian_vault.py --require-index` and query smoke checks when local retrieval is needed.
 Next Step
 Treat retrieval hits as pointers back to registered source rows.
-Source drilldowns
-Inspectable Source Basis
-README.md
-README.md is part of the source basis for this generated human-only page.
-AGENTS.md
-AGENTS.md is part of the source basis for this generated human-only page.
-registries/FILE_OBJECT_REGISTRY.csv
-registries/FILE_OBJECT_REGISTRY.csv is part of the source basis for this generated human-only page.
-registries/WIKI_ARTIFACT_REGISTRY.csv
-registries/WIKI_ARTIFACT_REGISTRY.csv is part of the source basis for this generated human-only page.
-registries/CONTENT_SEMANTIC_REGISTRY.csv
-registries/CONTENT_SEMANTIC_REGISTRY.csv is part of the source basis for this generated human-only page.
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/project-memory-system/SKILL.md is part of the source basis for this generated human-only page.
-.codex/skills/obsidian-wiki/SKILL.md
-.codex/skills/obsidian-wiki/SKILL.md is part of the source basis for this generated human-only page.
-All source materials
+All Source Materials
+Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md
 AGENTS.md
 registries/MARKDOWN_SOURCE_REGISTRY.csv
@@ -272,6 +248,3 @@ registries/FILE_OBJECT_REGISTRY.csv
 .codex/skills/pdf-derivative-build/SKILL.md
 .codex/skills/html-visual-explainer/SKILL.md
 .codex/skills/obsidian-wiki/SKILL.md
-Claim boundary
-Human-Only Non-Authority Boundary
-Human-only memory-system visualization. It explains existing source-first memory, registry, wiki, Obsidian, semantic, and query surfaces without changing registry authority, generated-output boundaries, routing behavior, validators, or scientific claim status.

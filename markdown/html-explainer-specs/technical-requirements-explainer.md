@@ -1,6 +1,6 @@
 ---
-title: "Technical Requirements Explainer"
-purpose: "Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering governed Mermaid HTML, using local retrieval, and refreshing PDFs."
+title: "Technical Requirements"
+purpose: "Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering diagram-backed HTML, using local retrieval, and refreshing PDFs."
 audience: "Technical but human-readable: maintainers and operators who need to run or regenerate project surfaces without confusing project requirements with local operator aids."
 output_path: "html/technical-requirements-explainer.html"
 renderer_skill: "visual-explainer@0.7.1-project-aether-flow"
@@ -25,23 +25,15 @@ layout_intent: "Use a tiered requirements matrix with project-requirement versus
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
 required_content_blocks:
   - "read_inspect_tier"
   - "validators_memory_scripts_tier"
   - "memory_regeneration_tier"
-  - "governed_mermaid_tier"
+  - "diagram_rendering_tier"
   - "local_retrieval_tier"
   - "pdf_refresh_tier"
   - "project_vs_operator_aid"
-source_drilldowns:
-  - "README.md"
-  - "requirements.txt"
-  - "Makefile"
-  - ".codex/skills/project-memory-system/SKILL.md"
-  - ".codex/skills/obsidian-wiki/SKILL.md"
-  - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -52,7 +44,7 @@ analysis_capsule_schema:
   - "next_step"
 ---
 
-# Technical Requirements Explainer Spec
+# Technical Requirements Spec
 
 ## Rendering Intent
 
@@ -79,10 +71,10 @@ Examples:
 ## Required Visual Structure
 
 - Tiered requirements matrix with commands and labels.
-- Setup command callouts for Python and governed Mermaid rendering.
+- Setup command callouts for Python and diagram rendering.
 - Optional-local-reader panel for Obsidian and `.local/` retrieval surfaces.
 - PDF-refresh panel that scopes LaTeX only to TeX derivative work.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
 ## Required Content Blocks
 
@@ -93,8 +85,8 @@ Examples:
 - memory_regeneration_tier: Explain project-memory-system scripts and `make
   validate-memory` for regenerating registries, wiki, vault sync, and query
   checks.
-- governed_mermaid_tier: Explain Node.js, npm, pinned Mermaid package,
-  Playwright Chromium, and the governed inline-SVG renderer path.
+- diagram_rendering_tier: Explain Node.js, npm, pinned Mermaid package,
+  Playwright Chromium, and the inline-SVG renderer path.
 - local_retrieval_tier: Explain optional Obsidian and
   `.local/obsidian/aether-flow-wiki/` plus local semantic/query surfaces.
 - pdf_refresh_tier: Explain LaTeX/PDF build requirements only when TeX
@@ -108,7 +100,7 @@ Examples:
 
 - premise: Not every reader or operator needs every tool.
 - mechanism: The page should separate read-only inspection, Python validation,
-  memory regeneration, governed Mermaid rendering, optional local retrieval,
+  memory regeneration, diagram rendering, optional local retrieval,
   and PDF refresh work into distinct tiers.
 - source_basis: `README.md`, `requirements.txt`, `Makefile`,
   `.codex/skills/project-memory-system/SKILL.md`, and Mermaid subskill setup

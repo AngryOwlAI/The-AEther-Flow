@@ -1,5 +1,5 @@
 ---
-title: "Memory System Explainer"
+title: "Memory System"
 purpose: "Explain the source-first memory system: canonical CSV registries, tracked generated wiki notes, local Obsidian vault, semantic extracts, SQLite index, and query surface."
 audience: "Technical but human-readable: maintainers and research agents who need to know where project memory authority lives and how retrieval surfaces are regenerated."
 output_path: "html/memory-system-explainer.html"
@@ -30,8 +30,7 @@ layout_intent: "Use a layered memory map: canonical CSV memory spine, tracked ge
 required_controls:
   - "section_toc"
   - "expandable_analysis_panels"
-  - "source_drilldowns"
-  - "claim_boundary_toggle"
+  - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "csv_memory_spine"
@@ -39,14 +38,6 @@ required_content_blocks:
   - "local_obsidian_vault"
   - "semantic_query_layer"
   - "authority_boundaries"
-source_drilldowns:
-  - "README.md"
-  - "AGENTS.md"
-  - "registries/FILE_OBJECT_REGISTRY.csv"
-  - "registries/WIKI_ARTIFACT_REGISTRY.csv"
-  - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
-  - ".codex/skills/project-memory-system/SKILL.md"
-  - ".codex/skills/obsidian-wiki/SKILL.md"
 analysis_capsule_schema:
   - "premise"
   - "mechanism"
@@ -62,7 +53,7 @@ mermaid_diagrams:
     - "memory-regeneration-flow"
 ---
 
-# Memory System Explainer Spec
+# Memory System Spec
 
 ## Rendering Intent
 
@@ -88,9 +79,9 @@ source-first memory system with multiple retrieval surfaces:
 - Authority boundary panels distinguishing canonical source/registry rows from
   generated retrieval layers.
 - Workflow step inspector for regeneration and validation commands.
-- Source drilldowns and claim-boundary inspection.
+- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
-## Required Governed Mermaid Diagrams
+## Required Diagrams
 
 <!-- mermaid-diagram-id: memory-surface-map -->
 ```mermaid

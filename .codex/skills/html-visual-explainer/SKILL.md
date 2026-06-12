@@ -17,8 +17,8 @@ Rules:
   `human_visual_only: true`.
 - The source spec must also declare the interactive analysis contract:
   `explainer_kind`, `interaction_model: "progressive_disclosure"`,
-  `analysis_depth: "deep"`, `required_controls`,
-  `source_drilldowns`, and `analysis_capsule_schema`.
+  `analysis_depth: "deep"`, `required_controls`, and
+  `analysis_capsule_schema`.
 - The source spec must also declare the flexible presentation contract:
   `presentation_profile`, `layout_intent`, and
   `required_content_blocks`.
@@ -33,8 +33,11 @@ Rules:
 - `required_content_blocks` must be a non-empty list of page-local IDs using
   lowercase snake_case. Each ID must be explained in a Markdown
   `## Required Content Blocks` section.
-- Every explainer requires `section_toc`, `expandable_analysis_panels`,
-  `source_drilldowns`, and `claim_boundary_toggle`.
+- Every explainer requires `section_toc`, `expandable_analysis_panels`, and
+  `source_materials_section`.
+  `source_drilldowns` and `claim_boundary_toggle` are valid legacy controls
+  when a source spec declares them, but they are no longer universal visible
+  panels.
   `workflow_step_inspector` is required for
   `workflow_process` and `control_system` explainers.
 - The Markdown body must include `## Required Analysis Capsules` and name each
@@ -42,9 +45,9 @@ Rules:
   `uncertainty`, `validation_or_test`, and `next_step`.
 - The generated HTML must include lightweight structural markers:
   `data-explainer-control="<control>"`, at least one `data-analysis-capsule`,
-  `data-capsule-field="<field>"`, and `data-source-path` for source
-  drilldowns. Validation checks marker presence, not visual design or
-  JavaScript behavior.
+  `data-capsule-field="<field>"`, and `data-source-path` in the visible source
+  materials section and source-backed content blocks. Validation checks marker
+  presence, not visual design or JavaScript behavior.
 - The generated HTML must include each declared content block as
   `data-content-block="<id>"`. Each content block must contain at least one
   `data-source-path` marker. The visual form can be a table, matrix, card
@@ -53,14 +56,14 @@ Rules:
 - Validator scope remains deterministic and structural: required fields,
   allowed profile values, nonblank intent, content-block markers, source-path
   evidence, required controls, analysis capsule markers, hashes, and Mermaid
-  parity. Quality, completeness, and visual judgment remain source-spec review
-  and visual QA responsibilities.
+  parity. Quality, completeness, rendered geometry, and visual judgment remain
+  source-spec review and browser QA responsibilities.
 - Do not add a full deterministic HTML generator for flexible presentation.
   The Documentation Curator or LLM renderer chooses the best exposition from
   the source spec; validators enforce structural evidence.
 - Mermaid use is profile-guided, not universal. `memory_system_map`,
   `workflow_lifecycle`, `claim_boundary_map`, and `atlas_hub` normally benefit
-  from governed Mermaid. `role_catalog`, `format_ladder`, and
+  from registered Mermaid diagrams. `role_catalog`, `format_ladder`, and
   `technical_requirements` may be clearer as catalogs, tables, tier cards, or
   evidence matrices.
 - Three-layer model sections must remain readable at desktop and mobile
@@ -77,13 +80,13 @@ Rules:
   at `minmax(0, 1fr)` so labeled evidence rows do not create horizontal page
   overflow.
 - If the source spec declares `mermaid_diagrams` or the Markdown source
-  contains governed Mermaid blocks, tracked HTML generation must follow
+  contains registered Mermaid blocks, tracked HTML generation must follow
   `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`.
-  Governed Mermaid-backed tracked HTML must be single-file portable: embed
+  Registered Mermaid-backed tracked HTML must be single-file portable: embed
   build-time sanitized inline SVG in the diagram shell, preserve the Mermaid
   source in `script.diagram-source`, and do not import or execute Mermaid in the
   browser.
-- Governed Mermaid diagram boxes must adapt to the rendered inline SVG aspect
+- Diagram-backed boxes must adapt to the rendered inline SVG aspect
   ratio. Read the SVG natural size from `viewBox`, set the diagram box height
   from `height / width * available_width` within bounded min/max limits, and
   make the Fit control recompute that viewBox-based fit. Do not leave Mermaid

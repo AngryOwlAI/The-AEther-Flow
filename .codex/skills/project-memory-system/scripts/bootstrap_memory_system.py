@@ -233,7 +233,6 @@ HTML_SPEC_REQUIRED_FIELDS = {
     "interaction_model",
     "analysis_depth",
     "required_controls",
-    "source_drilldowns",
     "analysis_capsule_schema",
     "presentation_profile",
     "layout_intent",
@@ -259,6 +258,7 @@ HTML_CONTENT_BLOCK_ID_RE = re.compile(r"^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$")
 HTML_CONTROL_VALUES = {
     "section_toc",
     "expandable_analysis_panels",
+    "source_materials_section",
     "source_drilldowns",
     "claim_boundary_toggle",
     "workflow_step_inspector",
@@ -266,8 +266,7 @@ HTML_CONTROL_VALUES = {
 HTML_UNIVERSAL_REQUIRED_CONTROLS = {
     "section_toc",
     "expandable_analysis_panels",
-    "source_drilldowns",
-    "claim_boundary_toggle",
+    "source_materials_section",
 }
 HTML_WORKFLOW_CONTROL_KINDS = {"workflow_process", "control_system"}
 HTML_CAPSULE_FIELDS = {
@@ -925,10 +924,40 @@ def validate_html_layout_contract(
             report.error(
                 f"{object_id}: Mermaid SVG uses fixed max-width instead of adaptive viewBox fit"
             )
+        svg_openings = re.findall(
+            r'<svg\b[^>]*data-mermaid-rendered=["\']true["\'][^>]*>',
+            html_text,
+            flags=re.IGNORECASE,
+        )
+        for svg_opening in svg_openings:
+            width_match = re.search(r'\bwidth=["\']([^"\']+)["\']', svg_opening)
+            height_match = re.search(r'\bheight=["\']([^"\']+)["\']', svg_opening)
+            style_match = re.search(r'\bstyle=["\']([^"\']*)["\']', svg_opening)
+            if style_match and "max-width" in style_match.group(1).lower():
+                report.error(
+                    f"{object_id}: Mermaid inline SVG retains root max-width style"
+                )
+            if not width_match or not height_match:
+                report.error(
+                    f"{object_id}: Mermaid inline SVG missing explicit width and height"
+                )
+                continue
+            for dimension_name, dimension_match in [
+                ("width", width_match),
+                ("height", height_match),
+            ]:
+                try:
+                    if float(dimension_match.group(1)) <= 0:
+                        raise ValueError
+                except ValueError:
+                    report.error(
+                        f"{object_id}: Mermaid inline SVG has nonnumeric {dimension_name}"
+                    )
         for required_fragment in [
             "readSvgNaturalSize",
             "setAdaptiveHeight",
             "computeFit",
+            "setCanvasNaturalSize",
         ]:
             if required_fragment not in html_text:
                 report.error(
@@ -1695,9 +1724,9 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
                     f"{object_id}: workflow explainer missing workflow_step_inspector"
                 )
         source_drilldowns = frontmatter.get("source_drilldowns", [])
-        if not isinstance(source_drilldowns, list) or not source_drilldowns:
-            report.error(f"{object_id}: source_drilldowns must be a non-empty list")
-        elif isinstance(source_materials, list):
+        if "source_drilldowns" in frontmatter and not isinstance(source_drilldowns, list):
+            report.error(f"{object_id}: source_drilldowns must be a list when present")
+        elif isinstance(source_drilldowns, list) and source_drilldowns and isinstance(source_materials, list):
             source_material_values = {str(item).strip() for item in source_materials}
             missing_sources = {
                 str(item).strip()
@@ -1836,10 +1865,10 @@ def validate_html_registry(
                 report.error(
                     f"{object_id}: missing HTML capsule field marker {field_name}"
                 )
-        if "source_drilldowns" in declared_controls:
+        if "source_materials_section" in declared_controls or "source_drilldowns" in declared_controls:
             source_paths = html_data_values("data-source-path", html_text)
             if not source_paths:
-                report.error(f"{object_id}: source drilldowns missing data-source-path")
+                report.error(f"{object_id}: source materials section missing data-source-path")
         declared_content_blocks = html_required_content_blocks(frontmatter)
         content_block_evidence = html_content_block_evidence_presence(html_text)
         for block_id in declared_content_blocks:

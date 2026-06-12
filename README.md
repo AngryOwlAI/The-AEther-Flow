@@ -96,25 +96,25 @@ Project-system improvement is tracked separately from physics continuation. Docu
 Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
 
 The overview explainer is the front-facing hub for a source-backed research
-atlas. It groups drilldowns by reader need: understand the research idea,
+atlas. It groups navigation by reader need: understand the research idea,
 understand the agent workflow, understand authority and memory, and run or
 regenerate the system. The tracked pages use deep-first
 progressive-disclosure, flexible presentation profiles, required
-source-backed content blocks, expandable analysis capsules, source drilldowns,
-and claim-boundary inspection. Governed Mermaid diagrams are used where they
-fit the subject. Those interactions help readers explore the project; they do
-not make generated HTML authoritative.
+source-backed content blocks, expandable analysis capsules, visible source
+materials sections, and source-spec claim-boundary metadata. Build-time
+rendered diagrams are used where they fit the subject. Those interactions help
+readers explore the project; they do not make generated HTML authoritative.
 
-- [Project Overview Explainer](html/project-overview-explainer.html): the research-atlas hub for the physics track, AI research-agent track, drilldowns, authority chain, and open derivation boundary.
-- [Æther-flow Ontology Explainer](html/aether-flow-ontology-explainer.html): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
-- [Research System Explainer](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
-- [Role Routing Explainer](html/role-routing-explainer.html): how roles are selected, constrained, overlaid, or kept one-job provisional.
-- [Claim Gates Explainer](html/claim-gates-explainer.html): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
-- [Source Authority Explainer](html/source-authority-explainer.html): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
-- [Research-Control System Explainer](html/research-control-system-explainer.html): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
-- [Roles And Skills Explainer](html/roles-and-skills-explainer.html): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
-- [Memory System Explainer](html/memory-system-explainer.html): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
-- [Technical Requirements Explainer](html/technical-requirements-explainer.html): tiered requirements for reading, validating, regenerating memory/wiki surfaces, governed Mermaid HTML, local retrieval, and PDFs.
+- [Project Overview](html/project-overview-explainer.html): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
+- [Æther-flow Ontology](html/aether-flow-ontology-explainer.html): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
+- [Research System](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
+- [Role Routing](html/role-routing-explainer.html): how roles are selected, constrained, overlaid, or kept one-job provisional.
+- [Claim Gates](html/claim-gates-explainer.html): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
+- [Source Authority](html/source-authority-explainer.html): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
+- [Research-Control System](html/research-control-system-explainer.html): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
+- [Roles And Skills](html/roles-and-skills-explainer.html): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
+- [Memory System](html/memory-system-explainer.html): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
+- [Technical Requirements](html/technical-requirements-explainer.html): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.
 
 ---
 
@@ -167,7 +167,7 @@ When a Python script requires an external package, add one package per line to
 - Regenerate memory/wiki/registry surfaces:
   `.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py` and
   `make validate-memory`.
-- Regenerate governed Mermaid HTML: Node.js, npm, pinned Mermaid dependencies,
+- Regenerate diagram-backed HTML: Node.js, npm, pinned Mermaid dependencies,
   and Playwright Chromium under
   `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/`.
 - Use local retrieval vault: optional Obsidian reader plus
@@ -175,7 +175,7 @@ When a Python script requires an external package, add one package per line to
 - Build or refresh PDFs: LaTeX/PDF build path only when TeX derivatives are in
   scope.
 
-Governed Mermaid setup:
+Diagram-rendering setup:
 
 ```zsh
 cd .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts
@@ -210,8 +210,10 @@ source spec under `markdown/html-explainer-specs/` with `title`, `purpose`,
 `claim_boundary`, `human_visual_only: true`, `explainer_kind`,
 `interaction_model`, `analysis_depth`, `required_controls`,
 `presentation_profile`, `layout_intent`, `required_content_blocks`,
-`source_drilldowns`, and `analysis_capsule_schema`. Modify the spec first,
-then regenerate the HTML output.
+and `analysis_capsule_schema`. Modify the spec first, then regenerate the HTML
+output. The required source control is `source_materials_section`; legacy
+`source_drilldowns` and `claim_boundary_toggle` controls are optional only when
+a spec explicitly declares them.
 
 Bootstrap or refresh the memory system:
 
@@ -451,6 +453,3 @@ from the canonical type registry rather than duplicated local constant sets.
     ├── README.md
     └── Comments - Phase-1.md through Comments - Phase-5.md
 ```
-
-Local or generated files intentionally excluded from the project map include
-`.venv/`, `.DS_Store`, `.local/`, and other ignored operating-system or build artifacts.

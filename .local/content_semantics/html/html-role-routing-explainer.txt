@@ -1,6 +1,6 @@
-Role Routing Explainer
+Role Routing
 workflow_lifecycle
-Role Routing Explainer
+Role Routing
 Explain how the project decides which AI agent role executes a bounded task, how the execution-role contract constrains that role, and how routing avoids authority drift.
 Layout intent
 Use a routing lifecycle with decision-tree diagrams, role-contract panels, and evidence drilldowns that distinguish direct registered roles, task overlays, and one-job provisional roles.
@@ -8,40 +8,29 @@ Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER
-Content Blocks
+Coverage
 Diagrams
 Workflow
 Analysis
 Sources
-Boundary
-Required content blocks
 Source-Backed Coverage
-Every declared block carries local source-path evidence while the visual form adapts to the page profile.
 Authority Classification
 AGENTS.md
 README.md
 Explain how the task authority class separates science-bearing, project-system, documentation, validator, and memory work.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
 Director Routing
 research_control/README.md
 registries/DIRECTOR_DECISION_REGISTRY.csv
 Explain how Director decisions bind a selected role to one bounded AgentJob.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
 Execution Role Contract
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 Explain task-local execution-role records, constraints, removed permissions, expanded permissions, and validator bindings.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
 Overlay Provisional Boundary
 README.md
 AGENTS.md
 Explain when a task overlay or one-job provisional role is allowed and why repeated provisional patterns require review rather than silent promotion.
-This block is source-backed by the evidence chips below and is governed by the Markdown source spec.
-Presentation contract
-Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
-Governed Mermaid
 Role Routing Decision Tree
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -83,9 +72,7 @@ Bounded
 AgentJob
 Diagram source
 flowchart TD Request["Task request or handoff"] --> Authority["Identify authority class"] Authority --> Science["Science-bearing work"] Authority --> ProjectSystem["Project-system work"] Authority --> Docs["Explanatory documentation"] Science --> ScienceRoles["Ontology Formalizer<br/>Candidate Constructor<br/>Refuter<br/>Smuggling Auditor<br/>Gate Chair"] ProjectSystem --> OpsRoles["Project-System Director<br/>Project-Control Maintainer<br/>Validator Engineer<br/>Memory-System Maintainer"] Docs --> Curator["Documentation Curator"] ScienceRoles --> Director["Director decision"] OpsRoles --> Director Curator --> Director Director --> AgentJob["Bounded AgentJob"]
-Governed Mermaid
 Execution Role Contract Map
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -172,21 +159,8 @@ Validation Or Test
 Validate role execution rows against task-local role records and AgentJob fields.
 Next Step
 Use the research-system explainer to see how the selected role executes inside the full task loop.
-Source drilldowns
-Inspectable Source Basis
-README.md
-README.md is part of the source basis for this generated human-only page.
-AGENTS.md
-AGENTS.md is part of the source basis for this generated human-only page.
-research_control/README.md
-research_control/README.md is part of the source basis for this generated human-only page.
-research_control/AGENTS.md
-research_control/AGENTS.md is part of the source basis for this generated human-only page.
-registries/AGENT_ROLE_REGISTRY.csv
-registries/AGENT_ROLE_REGISTRY.csv is part of the source basis for this generated human-only page.
-registries/ROLE_EXECUTION_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv is part of the source basis for this generated human-only page.
-All source materials
+All Source Materials
+Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md
 AGENTS.md
 research_control/README.md
@@ -195,6 +169,3 @@ registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
-Claim boundary
-Human-Only Non-Authority Boundary
-Human-only role-routing visualization. It explains existing role selection and execution-role constraints without changing role authority, routing behavior, schemas, validators, or scientific claim status.

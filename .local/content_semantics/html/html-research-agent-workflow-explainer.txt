@@ -1,6 +1,6 @@
-Research System Explainer
+Research System
 workflow_lifecycle
-Research System Explainer
+Research System
 Show how the project research system uses Director decisions, AgentJobs, role contracts, validation, completions, registries, and handoffs to make theoretical work auditable.
 Layout intent
 Use a workflow lifecycle with a concrete object-path trace, state diagrams, and evidence panels for task, AgentJob, role, artifact, completion, handoff, and registry records.
@@ -8,15 +8,12 @@ Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER
-Content Blocks
+Coverage
 Diagrams
 Workflow
 Analysis
 Sources
-Boundary
-Required content blocks
 Source-Backed Coverage
-Every declared block carries local source-path evidence while the visual form adapts to the page profile.
 State Entry
 README.md
 AGENTS.md
@@ -157,11 +154,7 @@ The completion records verdict, command results, and validation status.
 The next state is preserved for continuation.
 10. registries
 Task, job, role, claim, HTML, Markdown, and memory rows are refreshed.
-Presentation contract
-Profile controls layout shape. Required content blocks control coverage. Validators check structural evidence only.
-Governed Mermaid
 Research System Loop
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -190,9 +183,7 @@ Registry
 updates
 Diagram source
 flowchart TD State["Tracked state and latest handoff"] --> Director["Director decision"] Director --> Job["Bounded AgentJob"] Job --> Role["Execution role"] Role --> Outputs["Allowed outputs"] Outputs --> Validators["Validators and diff gates"] Validators --> Completion["Completion record"] Completion --> Handoff["Next handoff"] Handoff --> State Validators --> Registry["Registry updates"] Registry --> State
-Governed Mermaid
 Agentjob Lifecycle
-Build-time inline SVG will be rendered from the preserved source.
 +
 -
 Fit
@@ -274,21 +265,8 @@ Validation Or Test
 Verify skill, role, and claim-boundary rows for the selected mode.
 Next Step
 Keep workflow status separate from claim promotion.
-Source drilldowns
-Inspectable Source Basis
-README.md
-README.md is part of the source basis for this generated human-only page.
-AGENTS.md
-AGENTS.md is part of the source basis for this generated human-only page.
-research_control/AGENTS.md
-research_control/AGENTS.md is part of the source basis for this generated human-only page.
-research_control/README.md
-research_control/README.md is part of the source basis for this generated human-only page.
-.codex/skills/continue-research/SKILL.md
-.codex/skills/continue-research/SKILL.md is part of the source basis for this generated human-only page.
-.codex/skills/improve-project-system/SKILL.md
-.codex/skills/improve-project-system/SKILL.md is part of the source basis for this generated human-only page.
-All source materials
+All Source Materials
+Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md
 AGENTS.md
 research_control/AGENTS.md
@@ -299,6 +277,3 @@ registries/AGENT_JOB_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 registries/RESEARCH_TASK_REGISTRY.csv
-Claim boundary
-Human-Only Non-Authority Boundary
-Human-only research-system visualization. It explains existing research-control and project-system workflow structure without changing routing behavior, role authority, validators, or physics claim status.

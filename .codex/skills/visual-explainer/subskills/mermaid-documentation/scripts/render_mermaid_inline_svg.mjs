@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "../../../../../..");
 const MERMAID_VERSION = "11.15.0";
-const RENDERER_VERSION = "mermaid-inline-svg-renderer@0.1.0";
+const RENDERER_VERSION = "mermaid-inline-svg-renderer@0.1.1";
 const RENDERER_STAMP = `mermaid@${MERMAID_VERSION};${RENDERER_VERSION}`;
 const MERMAID_BUNDLE = path.join(SCRIPT_DIR, "node_modules", "mermaid", "dist", "mermaid.min.js");
 
@@ -430,6 +430,32 @@ async function createRenderer() {
           svg.setAttribute("data-mermaid-diagram-id", pageDiagramId);
           if (!svg.getAttribute("viewBox") && !svg.getAttribute("width")) {
             throw new Error("sanitized SVG has no viewBox or width");
+          }
+          const viewBox = svg.getAttribute("viewBox");
+          if (viewBox) {
+            const parts = viewBox.trim().split(/\s+/).map(Number);
+            if (parts.length === 4 && parts.every((part) => Number.isFinite(part))) {
+              const naturalWidth = Math.max(1, parts[2]);
+              const naturalHeight = Math.max(1, parts[3]);
+              svg.setAttribute("width", String(naturalWidth));
+              svg.setAttribute("height", String(naturalHeight));
+            }
+          }
+          const style = svg.getAttribute("style");
+          if (style) {
+            const nextStyle = style
+              .split(";")
+              .map((part) => part.trim())
+              .filter((part) => part && !part.toLowerCase().startsWith("max-width"))
+              .join("; ");
+            if (nextStyle) {
+              svg.setAttribute("style", `${nextStyle};`);
+            } else {
+              svg.removeAttribute("style");
+            }
+          }
+          if (!svg.getAttribute("width") || !svg.getAttribute("height")) {
+            throw new Error("sanitized SVG has no explicit width or height");
           }
           const serialized = new XMLSerializer().serializeToString(svg);
           if (!serialized.includes("<svg") || serialized.length < 100) {
