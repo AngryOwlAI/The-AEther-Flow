@@ -8,6 +8,7 @@ source_materials:
   - "README.md"
   - "AGENTS.md"
   - "ontology/aether-and-aether-flow.md"
+  - "ontology/aether_flow_interpretation-lemen.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/TEX_SOURCE_REGISTRY.csv"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
@@ -23,6 +24,7 @@ required_controls:
   - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
+  - "subject_summary"
   - "ontology_terms"
   - "exact_gr_benchmark"
   - "derivation_burden"
@@ -121,6 +123,8 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize the project-specific Æther-flow ontology, its role
+  in the exact-GR benchmark program, and the source files grounding the summary.
 - ontology_terms: Explain project-local meanings of `Æther`,
   `Æther-flow`, observed space, `S-time`, expansion, and gravity.
 - exact_gr_benchmark: State that exact GR is the observable benchmark and not a

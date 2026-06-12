@@ -63,6 +63,72 @@ bounded project-system task.
 - Each generated content block must contain at least one `data-source-path`
   marker.
 
+Every tracked explainer must include a `subject_summary` content block. This
+block gives the reader a source-backed description of what the explainer is
+about before the detailed explanation begins. It is a universal reader
+orientation requirement, not a new authority layer. The block may cite only
+paths declared in the source spec's `source_materials`; if the best summary
+evidence is absent, add that source path to `source_materials` before citing it
+in the generated HTML. The source spec must list `subject_summary` as the first
+entry in `required_content_blocks`, and the Markdown body's
+`## Required Content Blocks` section must define `subject_summary` first, so
+frontmatter order, body-definition order, and rendered content-block order stay
+aligned.
+
+`subject_summary` has a fixed semantic shape with adaptive visual presentation.
+It must tell the reader:
+
+- what the subject is
+- what it does or what role it plays
+- why the reader should care before reading the explanation
+- which source files ground the summary
+
+The block ID is universal, but its Markdown body description is page-specific.
+For the ontology explainer, the source spec should define it as:
+
+```text
+- subject_summary: Summarize the project-specific Æther-flow ontology, its role
+  in the exact-GR benchmark program, and the source files grounding the summary.
+```
+
+The project overview hub is not exempt. Its `subject_summary` describes the
+explainer atlas itself: what the atlas is, what role it plays in routing
+readers, why that matters, and which specs or source files ground the hub.
+
+`subject_summary` is not part of `analysis_capsule_schema`. Analysis capsules
+remain the reasoning structure for premise, mechanism, authority, uncertainty,
+validation, and next step. `subject_summary` is a reader-orientation content
+block.
+
+Generated HTML must mark these summary elements with `data-summary-field`
+values:
+
+- `what_it_is`
+- `role_or_function`
+- `reader_value`
+- `source_basis`
+
+`subject_summary` does not add a separate claim-boundary field. Page-relevant
+authority or claim-boundary caution belongs inside the four summary fields when
+it is necessary to explain what the subject is or why the reader should care.
+Ontology and claim-gate summaries should make boundaries explicit; technical
+or setup summaries may use lighter authority language. Existing claim-boundary
+metadata and analysis capsules remain mandatory through their own contract.
+
+The `source_basis` summary field must contain visible file-path chips or an
+equivalent visible source-path list. Hidden structural markers are insufficient
+for this field because the summary must orient human readers to the grounding
+files before the detailed explanation begins. In tracked HTML, these chips
+display paths and `data-source-path` markers only; they do not add local file
+links because local browser link behavior is inconsistent and can create
+portability or security concerns.
+
+The generated page should render this block immediately after the hero/title
+area and before the section table of contents under the reader-facing heading
+`What This Explainer Describes`. The section table of contents and detailed
+explanation, diagrams, catalogs, workflow steps, or evidence matrices follow
+the summary.
+
 The visual form is intentionally adaptive. A content block may be a table,
 matrix, chip row, card group, sidebar, callout, accordion, popover, inspector
 panel, or another source-backed structure suited to the page.
@@ -81,8 +147,20 @@ Validators enforce deterministic structural evidence only:
 - `presentation_profile` is allowed
 - `layout_intent` is nonblank
 - `required_content_blocks` is non-empty and syntactically valid
+- the first declared `required_content_blocks` value is `subject_summary`
+- the first block definition under `## Required Content Blocks` is
+  `- subject_summary:`
 - each required block appears as `data-content-block`
 - each required block contains source-path evidence
+- every `data-source-path` inside `subject_summary` is declared in the source
+  spec's `source_materials`
+- `subject_summary` contains the required `data-summary-field` markers:
+  `what_it_is`, `role_or_function`, `reader_value`, and `source_basis`
+- the `source_basis` summary field contains visible `data-source-path` evidence
+- the first `data-content-block` marker on the page is
+  `data-content-block="subject_summary"`
+- the first `data-content-block="subject_summary"` marker appears before the
+  first `data-explainer-control="section_toc"` marker
 - required control, source-material, analysis-capsule, source-basis, hash, and
   Mermaid parity markers remain valid
 - Mermaid inline SVG output uses explicit numeric dimensions derived from
@@ -92,6 +170,13 @@ Validators enforce deterministic structural evidence only:
 
 Validators do not judge prose quality, visual quality, completeness, or
 creative fit. Those are handled by source-spec review and visual QA.
+
+## Rendered QA
+
+Universal `subject_summary` migration requires rendered QA across every
+currently tracked HTML explainer, not a representative sample. The QA pass must
+check summary visibility, absence of mobile body overflow, readable visible
+source chips, and intact table-of-contents and diagram behavior for each page.
 
 ## Mermaid Policy
 
@@ -117,7 +202,64 @@ parity.
 
 ## Migration Scope
 
-This migration applies to all tracked HTML explainers in one transaction:
+Universal validator-backed explainer contract changes apply to all currently
+tracked HTML explainers in one bounded transaction. A partial migration is not
+valid once a universal validator rule lands because unmigrated source specs or
+HTML outputs would fail the shared contract.
+
+The same transaction must update the project-local skill contracts that future
+agents use to create or regenerate tracked explainers. At minimum, this includes
+`.codex/skills/html-visual-explainer/SKILL.md` and
+`.codex/skills/visual-explainer/SKILL.md`, so operational instructions match the
+validator-backed `subject_summary` rule.
+
+The implementation must also update the Documentation Curator role contract so
+ownership of source-backed subject summaries is explicit in the role that owns
+human-facing explanatory documentation. Because registered role versions are
+immutable in meaning, the role-contract update must follow the repository's
+role-versioning rules by registering `documentation-curator@0.3.0` and
+superseding `documentation-curator@0.2.0`, rather than silently changing
+historical execution semantics.
+
+The implementation transaction is Project-Control Maintainer work, not
+Documentation Curator work, because it changes validator behavior, skill
+contracts, and a permanent registered role version. Documentation Curator owns
+future source-backed subject-summary use after the capability is registered.
+
+For this contract, "related Markdown files" means the canonical explainer source
+specs under `markdown/html-explainer-specs/*.md` and any upstream declared
+`source_materials` needed to ground the summary. Generated wiki Markdown under
+`wiki/` remains derivative and must be regenerated by the memory system rather
+than edited directly.
+README changes are normally out of scope for this subject-summary migration
+unless an existing concise explainer-system section needs a one-sentence
+alignment update. The durable contract belongs in this design note, skill
+contracts, the role contract, source specs, validators, and generated pages.
+
+Subject-summary prose is manually authored per source spec during migration.
+Scripts may validate structure and regenerate derivative artifacts, but they do
+not derive the reader-facing summary text automatically from source files.
+Each summary should target 120-180 words total, excluding visible source chips.
+This is a source-review and rendered-QA guideline, not a validator-enforced word
+count.
+
+Implementation should update focused tests and validator behavior together
+before bulk spec and HTML migration. Required test cases include missing
+`subject_summary`, wrong first declared block, missing summary fields,
+undeclared summary source paths, and wrong rendered placement. The migrated
+source specs and generated HTML are then driven to the executable contract.
+
+The actual validator, registry, role-version, source-spec, generated-HTML, and
+generated-derivative changes must run inside a fresh bounded Project-Control
+Maintainer research-control transaction with an explicit AgentJob write-path
+allowlist. The design-session documentation itself does not authorize loose
+control-contract or generated-output edits.
+Design-session edits to `CONTEXT.md` and this design note are included in that
+transaction scope and must be covered by the same allowlist and validation path
+before checkpointing.
+
+The flexible-presentation migration applies to all tracked HTML explainers in
+one transaction:
 
 - update `html-visual-explainer` guidance
 - update Documentation Curator guidance
@@ -136,6 +278,8 @@ This design does not:
 - change canonical science sources
 - change control-routing semantics
 - promote generated HTML to authority
+- broadly rewrite analysis capsules; only narrow duplicate-opening cleanup is
+  allowed when a new subject summary makes existing prose redundant
 - add a full deterministic HTML generator
 - add a new CSV registry for presentation profiles
 

@@ -27,6 +27,7 @@ required_controls:
   - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
+  - "subject_summary"
   - "read_inspect_tier"
   - "validators_memory_scripts_tier"
   - "memory_regeneration_tier"
@@ -78,6 +79,10 @@ Examples:
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what the technical requirements explainer covers,
+  how it separates read-only inspection, validation, regeneration, diagram
+  rendering, local retrieval, and PDF refresh tiers, why readers need that
+  distinction, and which sources ground the summary.
 - read_inspect_tier: Explain browser, text editor, and Git as the minimum
   read/inspect layer.
 - validators_memory_scripts_tier: Explain Python `.venv`, `requirements.txt`,

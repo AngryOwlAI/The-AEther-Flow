@@ -28,6 +28,7 @@ required_controls:
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "state_entry"
   - "director_decision"
   - "agentjob_lifecycle"
@@ -127,6 +128,10 @@ stateDiagram-v2
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what the research-agent workflow is, how bounded
+  Director decisions, AgentJobs, roles, validators, completions, and registries
+  move work forward, why readers need that context, and which sources ground
+  the summary.
 - state_entry: Explain tracked state entry through `program_state.yaml` and
   latest handoff resolution.
 - director_decision: Explain how the Director decision selects the bounded

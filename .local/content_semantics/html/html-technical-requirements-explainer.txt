@@ -8,6 +8,21 @@ Authority
 Human-only generated derivative
 Source basis
 MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER
+Reader orientation
+What This Explainer Describes
+What it is
+The technical requirements explainer describes the local runtime, package, validation, and rendering requirements that support the repository's memory, PDF, HTML, Mermaid, and test workflows.
+Role or function
+It translates project setup files and skill contracts into a practical dependency map for Python validation, Markdown/registry bootstrapping, Obsidian/wiki generation, PDF builds, inline Mermaid rendering, and repeatable QA.
+Why it matters first
+Read this first so the later requirement cards are seen as infrastructure constraints rather than research claims. The page tells maintainers which tools must work before generated derivatives and validation receipts can be trusted.
+Source basis
+The summary is grounded in the README, requirements file, Makefile, project-memory skill, and Mermaid renderer package files that define runnable tooling expectations and a lighter authority boundary. The chips point to setup files rather than scientific claim sources.
+README.md
+requirements.txt
+Makefile
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
 Coverage
 Analysis
 Sources

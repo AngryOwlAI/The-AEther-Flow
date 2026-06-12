@@ -33,6 +33,7 @@ required_controls:
   - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
+  - "subject_summary"
   - "atlas_navigation"
   - "research_idea"
   - "agent_workflow"
@@ -168,6 +169,9 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what the research atlas is, how it routes readers
+  through the project explainers, why the hub matters before entering a
+  drilldown, and which source specs or project files ground the atlas.
 - atlas_navigation: Group all explainer links by reader use case rather than
   presenting a flat list.
 - research_idea: Explain the ontology, exact-GR benchmark, open derivation

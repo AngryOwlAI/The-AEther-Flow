@@ -12,7 +12,7 @@ source_materials:
   - ".codex/skills/html-visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.3.0.md"
   - "research_control/design/html_explainer_flexible_presentation_contract.md"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
@@ -30,6 +30,7 @@ required_controls:
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "classification_resolver"
   - "bounded_transaction"
   - "flexible_html_contract"
@@ -118,6 +119,9 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what the research-control system is, how it
+  separates project-system improvement from physics continuation, why its
+  bounded transaction discipline matters, and which sources ground the summary.
 - classification_resolver: Explain deterministic change classification,
   resolver output, advisory routing, and hard stop conditions.
 - bounded_transaction: Explain one bounded AgentJob, allowed writes, forbidden

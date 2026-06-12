@@ -25,6 +25,7 @@ required_controls:
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "claim_status_ladder"
   - "gate_review_path"
   - "negative_result_preservation"
@@ -116,6 +117,9 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what claim gates are, how they protect claim
+  status transitions, why readers should inspect them before accepting
+  explanatory or derivational claims, and which sources ground the summary.
 - claim_status_ladder: Explain ontology framing, benchmark adoption, candidate
   work, audit, repair, refutation, blocked promotion, and accepted status as
   distinct states.

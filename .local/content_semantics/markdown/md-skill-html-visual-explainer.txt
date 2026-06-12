@@ -33,6 +33,21 @@ Rules:
 - `required_content_blocks` must be a non-empty list of page-local IDs using
   lowercase snake_case. Each ID must be explained in a Markdown
   `## Required Content Blocks` section.
+- Every tracked explainer must declare `subject_summary` as the first
+  `required_content_blocks` value and define `subject_summary` first under
+  `## Required Content Blocks`. The block is a reader-orientation summary, not
+  an analysis capsule.
+- Generated HTML must render `subject_summary` as the first
+  `data-content-block`, immediately after the hero/title area and before
+  `data-explainer-control="section_toc"`, under a reader-facing heading such as
+  `What This Explainer Describes`.
+- `subject_summary` must include `data-summary-field` markers for
+  `what_it_is`, `role_or_function`, `reader_value`, and `source_basis`.
+  The `source_basis` field must contain visible source-path chips or an
+  equivalent visible source list. Every `data-source-path` inside
+  `subject_summary` must already be declared in the spec's `source_materials`;
+  add missing grounding files to `source_materials` before citing them.
+  Source chips display paths only and must not add local file links.
 - Every explainer requires `section_toc`, `expandable_analysis_panels`, and
   `source_materials_section`.
   `source_drilldowns` and `claim_boundary_toggle` are valid legacy controls
@@ -53,11 +68,16 @@ Rules:
   `data-source-path` marker. The visual form can be a table, matrix, card
   group, sidebar, callout, inspector panel, accordion, or other appropriate
   source-backed presentation for the chosen profile.
+- The summary prose should be manually authored per source spec. Do not derive
+  `subject_summary` automatically from source files. Target 120-180 words,
+  excluding visible source chips, as a review guideline rather than a validator
+  rule.
 - Validator scope remains deterministic and structural: required fields,
   allowed profile values, nonblank intent, content-block markers, source-path
-  evidence, required controls, analysis capsule markers, hashes, and Mermaid
-  parity. Quality, completeness, rendered geometry, and visual judgment remain
-  source-spec review and browser QA responsibilities.
+  evidence, subject-summary order, subject-summary field markers, declared
+  subject-summary sources, required controls, analysis capsule markers, hashes,
+  and Mermaid parity. Quality, completeness, rendered geometry, and visual
+  judgment remain source-spec review and browser QA responsibilities.
 - Do not add a full deterministic HTML generator for flexible presentation.
   The Documentation Curator or LLM renderer chooses the best exposition from
   the source spec; validators enforce structural evidence.

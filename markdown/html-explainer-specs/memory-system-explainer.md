@@ -33,6 +33,7 @@ required_controls:
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "csv_memory_spine"
   - "tracked_generated_wiki"
   - "local_obsidian_vault"
@@ -114,6 +115,10 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what the repository memory system is, how it
+  connects registries, generated wiki surfaces, local retrieval, and source
+  authority, why readers should use it before relying on generated artifacts,
+  and which sources ground the summary.
 - csv_memory_spine: Explain format-specific CSV registries as canonical memory
   spine for IDs, provenance, source hashes, routing, ownership, and validation.
 - tracked_generated_wiki: Explain `wiki/` as tracked generated repo-visible

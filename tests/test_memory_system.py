@@ -190,7 +190,7 @@ def flexible_spec_fields(
     *,
     profile: str = "workflow_lifecycle",
     layout_intent: str = "Use a synthetic source-backed test layout.",
-    blocks: tuple[str, ...] = ("synthetic_block",),
+    blocks: tuple[str, ...] = ("subject_summary", "synthetic_block"),
 ) -> str:
     block_lines = "".join(f'  - "{block}"\n' for block in blocks)
     return (
@@ -202,7 +202,7 @@ def flexible_spec_fields(
 
 
 def flexible_required_blocks_section(
-    blocks: tuple[str, ...] = ("synthetic_block",),
+    blocks: tuple[str, ...] = ("subject_summary", "synthetic_block"),
 ) -> str:
     lines = "\n".join(
         f"- {block}: Synthetic block for structural evidence validation."
@@ -215,6 +215,19 @@ def synthetic_content_block(block_id: str = "synthetic_block", source_path: str 
     return (
         f'<section data-content-block="{block_id}">'
         f'<span data-source-path="{source_path}"></span>'
+        "</section>"
+    )
+
+
+def synthetic_subject_summary_block(source_path: str = "README.md") -> str:
+    return (
+        '<section data-content-block="subject_summary">'
+        '<div data-summary-field="what_it_is">Synthetic summary.</div>'
+        '<div data-summary-field="role_or_function">Synthetic role.</div>'
+        '<div data-summary-field="reader_value">Synthetic reader value.</div>'
+        '<div data-summary-field="source_basis">'
+        f'<span data-source-path="{source_path}">{source_path}</span>'
+        "</div>"
         "</section>"
     )
 
@@ -264,7 +277,7 @@ def valid_synthetic_spec_text() -> str:
 
 def valid_synthetic_html_text(content_block_html: str | None = None) -> str:
     if content_block_html is None:
-        content_block_html = synthetic_content_block()
+        content_block_html = synthetic_subject_summary_block() + synthetic_content_block()
     return (
         '<!doctype html><meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SYNTHETIC">'
         '<meta name="aether-flow-source-basis-hash" content="spec-hash">'
@@ -276,6 +289,7 @@ def valid_synthetic_html_text(content_block_html: str | None = None) -> str:
         ".layer .card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }"
         ".layer-strip { display: grid; grid-template-columns: 1fr; }"
         "</style>"
+        f"{content_block_html}"
         '<nav data-explainer-control="section_toc"></nav>'
         '<details data-explainer-control="expandable_analysis_panels"></details>'
         '<section data-explainer-control="source_materials_section"></section>'
@@ -290,7 +304,6 @@ def valid_synthetic_html_text(content_block_html: str | None = None) -> str:
         '<div data-capsule-field="validation_or_test"></div>'
         '<div data-capsule-field="next_step"></div>'
         "</article>"
-        f"{content_block_html}"
     )
 
 
@@ -663,6 +676,92 @@ class MemorySystemSmokeTests(unittest.TestCase):
             any("required_content_blocks must be a non-empty list" in error for error in report.errors)
         )
 
+    def test_html_spec_contract_requires_subject_summary_first_block(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/missing-summary.md"
+            spec.parent.mkdir(parents=True)
+            (root / "html").mkdir()
+            (root / "html/missing-summary.html").write_text(
+                "<!doctype html>\n", encoding="utf-8"
+            )
+            spec.write_text(
+                valid_synthetic_spec_text()
+                .replace("html/synthetic.html", "html/missing-summary.html")
+                .replace(
+                    flexible_spec_fields(),
+                    flexible_spec_fields(blocks=("synthetic_block",)),
+                )
+                .replace(
+                    flexible_required_blocks_section(),
+                    flexible_required_blocks_section(blocks=("synthetic_block",)),
+                ),
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-MISSING-SUMMARY",
+                            "path": "markdown/html-explainer-specs/missing-summary.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(
+            any(
+                "first required_content_blocks value must be subject_summary" in error
+                for error in report.errors
+            )
+        )
+        self.assertTrue(
+            any(
+                "first Required Content Blocks definition must be subject_summary" in error
+                for error in report.errors
+            )
+        )
+
+    def test_html_spec_contract_requires_subject_summary_first_definition(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/wrong-body-order.md"
+            spec.parent.mkdir(parents=True)
+            (root / "html").mkdir()
+            (root / "html/wrong-body-order.html").write_text(
+                "<!doctype html>\n", encoding="utf-8"
+            )
+            spec.write_text(
+                valid_synthetic_spec_text()
+                .replace("html/synthetic.html", "html/wrong-body-order.html")
+                .replace(
+                    flexible_required_blocks_section(),
+                    flexible_required_blocks_section(
+                        blocks=("synthetic_block", "subject_summary")
+                    ),
+                ),
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-WRONG-BODY-ORDER",
+                            "path": "markdown/html-explainer-specs/wrong-body-order.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(
+            any(
+                "first Required Content Blocks definition must be subject_summary" in error
+                for error in report.errors
+            )
+        )
+
     def test_html_registry_requires_declared_interactive_markers(self) -> None:
         report = self.memory_system.ValidationReport()
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -830,6 +929,192 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertTrue(
             any(
                 "content block synthetic_block missing source-path evidence" in error
+                for error in report.errors
+            )
+        )
+
+    def test_html_registry_requires_subject_summary_fields(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            summary_without_reader_value = (
+                '<section data-content-block="subject_summary">'
+                '<div data-summary-field="what_it_is">Synthetic summary.</div>'
+                '<div data-summary-field="role_or_function">Synthetic role.</div>'
+                '<div data-summary-field="source_basis">'
+                '<span data-source-path="README.md">README.md</span>'
+                "</div>"
+                "</section>"
+            )
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text(
+                    content_block_html=summary_without_reader_value
+                    + synthetic_content_block()
+                ),
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any("subject_summary missing summary field" in error for error in report.errors)
+        )
+
+    def test_html_registry_rejects_undeclared_subject_summary_source_path(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text(
+                    content_block_html=synthetic_subject_summary_block(
+                        "not-declared.md"
+                    )
+                    + synthetic_content_block()
+                ),
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "subject_summary cites undeclared source_materials" in error
+                for error in report.errors
+            )
+        )
+
+    def test_html_registry_requires_subject_summary_before_toc(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            summary = synthetic_subject_summary_block()
+            block = synthetic_content_block()
+            html_text = valid_synthetic_html_text(content_block_html=summary + block)
+            html_text = html_text.replace(
+                summary + block + '<nav data-explainer-control="section_toc"></nav>',
+                '<nav data-explainer-control="section_toc"></nav>' + summary + block,
+            )
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(html_text, encoding="utf-8")
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any("subject_summary must appear before section_toc" in error for error in report.errors)
+        )
+
+    def test_html_registry_requires_subject_summary_first_content_block(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text(
+                    content_block_html=synthetic_content_block()
+                    + synthetic_subject_summary_block()
+                ),
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "first HTML content block marker must be subject_summary" in error
                 for error in report.errors
             )
         )

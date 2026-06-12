@@ -255,6 +255,13 @@ HTML_PRESENTATION_PROFILES = {
     "claim_boundary_map",
 }
 HTML_CONTENT_BLOCK_ID_RE = re.compile(r"^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$")
+HTML_SUBJECT_SUMMARY_BLOCK_ID = "subject_summary"
+HTML_SUBJECT_SUMMARY_FIELDS = {
+    "what_it_is",
+    "role_or_function",
+    "reader_value",
+    "source_basis",
+}
 HTML_CONTROL_VALUES = {
     "section_toc",
     "expandable_analysis_panels",
@@ -871,6 +878,29 @@ def html_data_values(attr: str, html_text: str) -> set[str]:
     return {match.group(1).strip() for match in pattern.finditer(html_text)}
 
 
+def html_data_matches(attr: str, html_text: str) -> list[re.Match[str]]:
+    pattern = re.compile(HTML_DATA_ATTR_RE.format(attr=re.escape(attr)), re.IGNORECASE)
+    return list(pattern.finditer(html_text))
+
+
+def html_data_values_in_segment(attr: str, html_text: str) -> set[str]:
+    return {match.group(1).strip() for match in html_data_matches(attr, html_text)}
+
+
+def first_required_content_block_definition(body: str) -> str:
+    section_match = re.search(
+        r"(?ms)^## Required Content Blocks\s*(.*?)(?:^## |\Z)",
+        body,
+    )
+    if not section_match:
+        return ""
+    for line in section_match.group(1).splitlines():
+        match = re.match(r"\s*-\s*([a-z][a-z0-9]*(?:_[a-z0-9]+)*)\s*:", line)
+        if match:
+            return match.group(1).strip()
+    return ""
+
+
 def css_rule_bodies_for_selector(html_text: str, selector_fragment: str) -> list[str]:
     bodies: list[str] = []
     for match in CSS_RULE_RE.finditer(html_text):
@@ -980,21 +1010,43 @@ def html_required_content_blocks(frontmatter: dict[str, object]) -> list[str]:
 
 
 def html_content_block_evidence_presence(html_text: str) -> dict[str, bool]:
-    pattern = re.compile(
-        HTML_DATA_ATTR_RE.format(attr=re.escape("data-content-block")),
-        re.IGNORECASE,
-    )
-    matches = list(pattern.finditer(html_text))
     block_evidence: dict[str, bool] = {}
-    for index, match in enumerate(matches):
-        block_id = match.group(1).strip()
-        next_start = matches[index + 1].start() if index + 1 < len(matches) else len(html_text)
-        segment = html_text[match.end() : next_start]
+    for block_id, segments in html_content_block_segments(html_text).items():
+        segment = "".join(segments)
         block_evidence[block_id] = block_evidence.get(block_id, False) or (
             re.search(HTML_DATA_ATTR_RE.format(attr=re.escape("data-source-path")), segment, re.IGNORECASE)
             is not None
         )
     return block_evidence
+
+
+def html_content_block_segments(html_text: str) -> dict[str, list[str]]:
+    matches = html_data_matches("data-content-block", html_text)
+    control_matches = html_data_matches("data-explainer-control", html_text)
+    segments: dict[str, list[str]] = {}
+    for index, match in enumerate(matches):
+        block_id = match.group(1).strip()
+        boundaries = [len(html_text)]
+        if index + 1 < len(matches):
+            boundaries.append(matches[index + 1].start())
+        boundaries.extend(
+            control_match.start()
+            for control_match in control_matches
+            if control_match.start() > match.start()
+        )
+        next_start = min(boundaries)
+        segments.setdefault(block_id, []).append(html_text[match.start() : next_start])
+    return segments
+
+
+def html_summary_field_segments(summary_html: str) -> dict[str, list[str]]:
+    matches = html_data_matches("data-summary-field", summary_html)
+    segments: dict[str, list[str]] = {}
+    for index, match in enumerate(matches):
+        field_id = match.group(1).strip()
+        next_start = matches[index + 1].start() if index + 1 < len(matches) else len(summary_html)
+        segments.setdefault(field_id, []).append(summary_html[match.start() : next_start])
+    return segments
 
 
 def generate_html_rows(now: str, markdown_rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -1764,6 +1816,13 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
             for block_id in content_block_values:
                 if not HTML_CONTENT_BLOCK_ID_RE.match(block_id):
                     report.error(f"{object_id}: invalid required_content_blocks ID")
+            if (
+                content_block_values
+                and content_block_values[0] != HTML_SUBJECT_SUMMARY_BLOCK_ID
+            ):
+                report.error(
+                    f"{object_id}: first required_content_blocks value must be subject_summary"
+                )
         if "## Required Analysis Capsules" not in body:
             report.error(f"{object_id}: missing Required Analysis Capsules section")
         for field_name in sorted(capsule_fields):
@@ -1773,6 +1832,13 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
                 )
         if "## Required Content Blocks" not in body:
             report.error(f"{object_id}: missing Required Content Blocks section")
+        elif (
+            first_required_content_block_definition(body)
+            != HTML_SUBJECT_SUMMARY_BLOCK_ID
+        ):
+            report.error(
+                f"{object_id}: first Required Content Blocks definition must be subject_summary"
+            )
         for block_id in sorted(content_block_values):
             if f"{block_id}:" not in body:
                 report.error(
@@ -1879,6 +1945,68 @@ def validate_html_registry(
             elif not content_block_evidence[block_id]:
                 report.error(
                     f"{object_id}: content block {block_id} missing source-path evidence"
+                )
+        content_block_matches = html_data_matches("data-content-block", html_text)
+        first_content_block = (
+            content_block_matches[0].group(1).strip() if content_block_matches else ""
+        )
+        if first_content_block != HTML_SUBJECT_SUMMARY_BLOCK_ID:
+            report.error(
+                f"{object_id}: first HTML content block marker must be subject_summary"
+            )
+        toc_matches = html_data_matches("data-explainer-control", html_text)
+        first_toc_start = next(
+            (
+                match.start()
+                for match in toc_matches
+                if match.group(1).strip() == "section_toc"
+            ),
+            -1,
+        )
+        subject_summary_start = next(
+            (
+                match.start()
+                for match in content_block_matches
+                if match.group(1).strip() == HTML_SUBJECT_SUMMARY_BLOCK_ID
+            ),
+            -1,
+        )
+        if first_toc_start >= 0 and (
+            subject_summary_start < 0 or subject_summary_start > first_toc_start
+        ):
+            report.error(
+                f"{object_id}: subject_summary must appear before section_toc"
+            )
+        subject_segments = html_content_block_segments(html_text).get(
+            HTML_SUBJECT_SUMMARY_BLOCK_ID,
+            [],
+        )
+        if subject_segments:
+            subject_segment = subject_segments[0]
+            summary_field_segments = html_summary_field_segments(subject_segment)
+            summary_fields = set(summary_field_segments)
+            missing_summary_fields = HTML_SUBJECT_SUMMARY_FIELDS - summary_fields
+            if missing_summary_fields:
+                report.error(f"{object_id}: subject_summary missing summary field")
+            source_basis_segments = summary_field_segments.get("source_basis", [])
+            source_basis_html = "".join(source_basis_segments)
+            if not html_data_values_in_segment("data-source-path", source_basis_html):
+                report.error(
+                    f"{object_id}: subject_summary source_basis missing source-path evidence"
+                )
+            source_materials = {
+                str(item).strip()
+                for item in frontmatter.get("source_materials", [])
+                if str(item).strip()
+            }
+            summary_source_paths = html_data_values_in_segment(
+                "data-source-path",
+                subject_segment,
+            )
+            undeclared_summary_paths = summary_source_paths - source_materials
+            if undeclared_summary_paths:
+                report.error(
+                    f"{object_id}: subject_summary cites undeclared source_materials"
                 )
 
 

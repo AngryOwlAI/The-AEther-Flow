@@ -29,6 +29,7 @@ required_controls:
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "authority_ladder"
   - "format_use_case_matrix"
   - "generated_derivatives"
@@ -129,6 +130,10 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what source authority means in this repository,
+  how canonical sources, registries, generated derivatives, and local retrieval
+  surfaces relate, why readers should follow the authority ladder, and which
+  sources ground the summary.
 - authority_ladder: Explain canonical science sources, registry authority,
   registered Markdown authority, generated derivatives, and `.local/` scratch
   boundaries.

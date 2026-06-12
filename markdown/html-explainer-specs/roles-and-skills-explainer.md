@@ -15,6 +15,7 @@ source_materials:
   - ".agents/roles/research_ops/director-of-research.v0.1.0.md"
   - ".agents/roles/research_ops/project-system-director.v0.1.0.md"
   - ".agents/roles/research_ops/project-control-maintainer.v0.1.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.3.0.md"
   - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
   - ".agents/roles/research_ops/validator-engineer.v0.1.0.md"
   - ".agents/roles/research_ops/memory-system-maintainer.v0.1.0.md"
@@ -49,6 +50,7 @@ required_controls:
   - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
+  - "subject_summary"
   - "active_role_catalog"
   - "status_defined_roles"
   - "superseded_audit_roles"
@@ -106,6 +108,10 @@ are not project contract authority unless mirrored into `.codex/skills/`.
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what the roles-and-skills catalog is, how it
+  distinguishes registered roles, task overlays, repo-local skills, and
+  operator aids, why readers need that boundary, and which sources ground the
+  summary.
 - active_role_catalog: List current active roles, what each does, authority
   level, default validators, and role contract path.
 - status_defined_roles: Explain defined but human-gated roles, especially Gate

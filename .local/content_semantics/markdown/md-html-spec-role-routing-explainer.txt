@@ -26,6 +26,7 @@ required_controls:
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "authority_classification"
   - "director_routing"
   - "execution_role_contract"
@@ -116,6 +117,9 @@ flowchart TD
 
 ## Required Content Blocks
 
+- subject_summary: Summarize what role routing is, how it binds one bounded
+  task to an authority class and execution role, why readers should inspect
+  routing before accepting work scope, and which sources ground the summary.
 - authority_classification: Explain how the task authority class separates
   science-bearing, project-system, documentation, validator, and memory work.
 - director_routing: Explain how Director decisions bind a selected role to one

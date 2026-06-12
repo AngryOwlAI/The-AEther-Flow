@@ -95,6 +95,18 @@ contract declared by the Markdown source spec:
 - `presentation_profile` names the layout archetype, not hidden content rules.
 - `layout_intent` explains how this page should adapt the profile.
 - `required_content_blocks` names the page-local factual obligations.
+- `subject_summary` is universal and must be the first declared content block,
+  the first body definition under `## Required Content Blocks`, and the first
+  generated `data-content-block`.
+- Render `subject_summary` immediately after the hero/title area and before the
+  section table of contents under a reader-facing heading such as
+  `What This Explainer Describes`.
+- `subject_summary` must include `data-summary-field` markers for
+  `what_it_is`, `role_or_function`, `reader_value`, and `source_basis`.
+  The `source_basis` field must contain visible source-path chips or an
+  equivalent visible source list, and every cited `data-source-path` must be
+  listed in the spec's `source_materials`.
+- Source chips in tracked HTML display paths only; do not add local file links.
 - Each generated content block must appear as `data-content-block="<id>"`.
 - Each generated content block must contain at least one `data-source-path`.
 
@@ -130,6 +142,9 @@ Deep-view panels should use analysis capsules with these fields: `premise`,
 `data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
 `data-source-path` markers as required by the spec. These markers are
 validator evidence only; they do not make generated HTML authoritative.
+Do not add `subject_summary` to `analysis_capsule_schema`; it is a separate
+reader-orientation content block. Manually author summary prose per source
+spec, with a 120-180 word target excluding source chips.
 
 For the front-facing project overview, treat
 `html/project-overview-explainer.html` as the explainer hub. It should orient
