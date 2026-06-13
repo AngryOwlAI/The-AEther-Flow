@@ -247,29 +247,12 @@ def valid_synthetic_spec_text() -> str:
         "analysis_depth: \"deep\"\n"
         "required_controls:\n"
         "  - \"section_toc\"\n"
-        "  - \"expandable_analysis_panels\"\n"
         "  - \"source_materials_section\"\n"
         "  - \"workflow_step_inspector\"\n"
-        "analysis_capsule_schema:\n"
-        "  - \"premise\"\n"
-        "  - \"mechanism\"\n"
-        "  - \"source_basis\"\n"
-        "  - \"authority_status\"\n"
-        "  - \"uncertainty\"\n"
-        "  - \"validation_or_test\"\n"
-        "  - \"next_step\"\n"
         + flexible_spec_fields()
         + "---\n"
         "# Synthetic\n\n"
         + flexible_required_blocks_section()
-        + "## Required Analysis Capsules\n\n"
-        "- premise: Test premise.\n"
-        "- mechanism: Test mechanism.\n"
-        "- source_basis: README.md.\n"
-        "- authority_status: explanatory.\n"
-        "- uncertainty: none.\n"
-        "- validation_or_test: marker validation.\n"
-        "- next_step: pass.\n"
     )
 
 
@@ -289,19 +272,9 @@ def valid_synthetic_html_text(content_block_html: str | None = None) -> str:
         "</style>"
         f"{content_block_html}"
         '<nav data-explainer-control="section_toc"></nav>'
-        '<details data-explainer-control="expandable_analysis_panels"></details>'
         '<section data-explainer-control="source_materials_section"></section>'
         '<ol data-explainer-control="workflow_step_inspector"></ol>'
         '<ul><li data-source-path="README.md"></li></ul>'
-        '<article data-analysis-capsule="test">'
-        '<div data-capsule-field="premise"></div>'
-        '<div data-capsule-field="mechanism"></div>'
-        '<div data-capsule-field="source_basis"></div>'
-        '<div data-capsule-field="authority_status"></div>'
-        '<div data-capsule-field="uncertainty"></div>'
-        '<div data-capsule-field="validation_or_test"></div>'
-        '<div data-capsule-field="next_step"></div>'
-        "</article>"
     )
 
 
@@ -472,9 +445,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
                     ],
                 )
         self.assertTrue(any("missing required_controls" in error for error in report.errors))
-        self.assertTrue(
-            any("missing Required Analysis Capsules section" in error for error in report.errors)
-        )
 
     def test_html_specs_reject_removed_simple_deep_toggle(self) -> None:
         report = self.memory_system.ValidationReport()
@@ -499,28 +469,11 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "required_controls:\n"
                 "  - \"simple_deep_toggle\"\n"
                 "  - \"section_toc\"\n"
-                "  - \"expandable_analysis_panels\"\n"
                 "  - \"source_materials_section\"\n"
-                "analysis_capsule_schema:\n"
-                "  - \"premise\"\n"
-                "  - \"mechanism\"\n"
-                "  - \"source_basis\"\n"
-                "  - \"authority_status\"\n"
-                "  - \"uncertainty\"\n"
-                "  - \"validation_or_test\"\n"
-                "  - \"next_step\"\n"
                 + flexible_spec_fields()
                 + "---\n"
                 "# Old Toggle\n\n"
-                + flexible_required_blocks_section()
-                + "## Required Analysis Capsules\n\n"
-                "- premise: Test premise.\n"
-                "- mechanism: Test mechanism.\n"
-                "- source_basis: README.md.\n"
-                "- authority_status: explanatory.\n"
-                "- uncertainty: none.\n"
-                "- validation_or_test: marker validation.\n"
-                "- next_step: pass.\n",
+                + flexible_required_blocks_section(),
                 encoding="utf-8",
             )
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
@@ -536,6 +489,59 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 )
         self.assertTrue(any("analysis_depth must be deep" in error for error in report.errors))
         self.assertTrue(any("unknown required_controls value" in error for error in report.errors))
+
+    def test_html_specs_reject_obsolete_analysis_capsule_contract(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/obsolete-capsule.md"
+            spec.parent.mkdir(parents=True)
+            (root / "html").mkdir()
+            (root / "html/obsolete-capsule.html").write_text(
+                "<!doctype html>\n", encoding="utf-8"
+            )
+            spec.write_text(
+                "---\n"
+                'title: "Obsolete Capsule"\n'
+                'purpose: "Test obsolete capsule contract."\n'
+                'audience: "test"\n'
+                'output_path: "html/obsolete-capsule.html"\n'
+                'renderer_skill: "visual-explainer@0.7.1-project-aether-flow"\n'
+                "source_materials:\n"
+                '  - "README.md"\n'
+                'claim_boundary: "Human-only visualization."\n'
+                "human_visual_only: true\n"
+                "explainer_kind: \"conceptual_model\"\n"
+                "interaction_model: \"progressive_disclosure\"\n"
+                "analysis_depth: \"deep\"\n"
+                "required_controls:\n"
+                "  - \"section_toc\"\n"
+                "  - \"source_materials_section\"\n"
+                "analysis_capsule_schema:\n"
+                "  - \"premise\"\n"
+                + flexible_spec_fields()
+                + "---\n"
+                "# Obsolete Capsule\n\n"
+                + flexible_required_blocks_section()
+                + "## Required Analysis Capsules\n\n"
+                "- premise: Test premise.\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_specs(
+                    report,
+                    [
+                        {
+                            "object_id": "MD-HTML-SPEC-OBSOLETE-CAPSULE",
+                            "path": "markdown/html-explainer-specs/obsolete-capsule.md",
+                            "role": "html_explainer_source_spec",
+                        }
+                    ],
+                )
+        self.assertTrue(any("analysis_capsule_schema is obsolete" in error for error in report.errors))
+        self.assertTrue(
+            any("Required Analysis Capsules section is obsolete" in error for error in report.errors)
+        )
 
     def test_html_spec_contract_requires_flexible_presentation_fields(self) -> None:
         report = self.memory_system.ValidationReport()
@@ -561,30 +567,13 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "analysis_depth: \"deep\"\n"
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
-                "  - \"expandable_analysis_panels\"\n"
                 "  - \"source_materials_section\"\n"
-                "analysis_capsule_schema:\n"
-                "  - \"premise\"\n"
-                "  - \"mechanism\"\n"
-                "  - \"source_basis\"\n"
-                "  - \"authority_status\"\n"
-                "  - \"uncertainty\"\n"
-                "  - \"validation_or_test\"\n"
-                "  - \"next_step\"\n"
                 "presentation_profile: \"unknown_profile\"\n"
                 "layout_intent: \"\"\n"
                 "required_content_blocks:\n"
                 "  - \"Bad-Block\"\n"
                 "---\n"
-                "# Bad Flex\n\n"
-                "## Required Analysis Capsules\n\n"
-                "- premise: Test premise.\n"
-                "- mechanism: Test mechanism.\n"
-                "- source_basis: README.md.\n"
-                "- authority_status: explanatory.\n"
-                "- uncertainty: none.\n"
-                "- validation_or_test: marker validation.\n"
-                "- next_step: pass.\n",
+                "# Bad Flex\n\n",
                 encoding="utf-8",
             )
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
@@ -633,30 +622,13 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "analysis_depth: \"deep\"\n"
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
-                "  - \"expandable_analysis_panels\"\n"
                 "  - \"source_materials_section\"\n"
-                "analysis_capsule_schema:\n"
-                "  - \"premise\"\n"
-                "  - \"mechanism\"\n"
-                "  - \"source_basis\"\n"
-                "  - \"authority_status\"\n"
-                "  - \"uncertainty\"\n"
-                "  - \"validation_or_test\"\n"
-                "  - \"next_step\"\n"
                 "presentation_profile: \"conceptual_model\"\n"
                 "layout_intent: \"Use a source-backed conceptual explanation.\"\n"
                 "required_content_blocks:\n"
                 "---\n"
                 "# Empty Blocks\n\n"
-                "## Required Content Blocks\n\n"
-                "## Required Analysis Capsules\n\n"
-                "- premise: Test premise.\n"
-                "- mechanism: Test mechanism.\n"
-                "- source_basis: README.md.\n"
-                "- authority_status: explanatory.\n"
-                "- uncertainty: none.\n"
-                "- validation_or_test: marker validation.\n"
-                "- next_step: pass.\n",
+                "## Required Content Blocks\n\n",
                 encoding="utf-8",
             )
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
@@ -782,29 +754,12 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "analysis_depth: \"deep\"\n"
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
-                "  - \"expandable_analysis_panels\"\n"
                 "  - \"source_materials_section\"\n"
                 "  - \"workflow_step_inspector\"\n"
-                "analysis_capsule_schema:\n"
-                "  - \"premise\"\n"
-                "  - \"mechanism\"\n"
-                "  - \"source_basis\"\n"
-                "  - \"authority_status\"\n"
-                "  - \"uncertainty\"\n"
-                "  - \"validation_or_test\"\n"
-                "  - \"next_step\"\n"
                 + flexible_spec_fields()
                 + "---\n"
                 "# Synthetic\n\n"
-                + flexible_required_blocks_section()
-                + "## Required Analysis Capsules\n\n"
-                "- premise: Test premise.\n"
-                "- mechanism: Test mechanism.\n"
-                "- source_basis: README.md.\n"
-                "- authority_status: explanatory.\n"
-                "- uncertainty: none.\n"
-                "- validation_or_test: marker validation.\n"
-                "- next_step: pass.\n",
+                + flexible_required_blocks_section(),
                 encoding="utf-8",
             )
             html = root / "html/synthetic.html"
@@ -840,12 +795,15 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 self.memory_system.validate_html_registry(report, rows_by_registry)
         self.assertTrue(
             any(
-                "missing HTML control marker expandable_analysis_panels" in error
+                "missing HTML control marker source_materials_section" in error
                 for error in report.errors
             )
         )
         self.assertTrue(
-            any("missing data-analysis-capsule marker" in error for error in report.errors)
+            any(
+                "missing HTML control marker workflow_step_inspector" in error
+                for error in report.errors
+            )
         )
 
     def test_html_registry_requires_declared_content_block_marker(self) -> None:
@@ -1033,6 +991,138 @@ class MemorySystemSmokeTests(unittest.TestCase):
             )
         )
 
+    def test_html_registry_rejects_visible_file_metadata_chips(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html_text = valid_synthetic_html_text() + (
+                '<aside class="meta-stack" aria-label="Page metadata">'
+                "<strong>Layout intent</strong>"
+                "</aside>"
+            )
+            html.write_text(html_text, encoding="utf-8")
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any("visible file metadata must not render" in error for error in report.errors)
+        )
+
+    def test_html_registry_rejects_removed_reader_toolbar_controls(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text()
+                + '<button type="button" data-action="expand">Expand notes</button>'
+                + '<button type="button" data-mode="simple">Simple view</button>',
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any(
+                "removed reader toolbar control is still present" in error
+                for error in report.errors
+            )
+        )
+
+    def test_html_registry_rejects_obsolete_analysis_capsule_layer(self) -> None:
+        report = self.memory_system.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/synthetic.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text(valid_synthetic_spec_text(), encoding="utf-8")
+            html = root / "html/synthetic.html"
+            html.parent.mkdir(parents=True)
+            html.write_text(
+                valid_synthetic_html_text()
+                + '<section id="analysis" data-explainer-control="expandable_analysis_panels">'
+                + '<p>Analysis capsules</p><h2>Claim-Aware Analysis</h2>'
+                + '<article data-analysis-capsule="test"><div data-capsule-field="premise"></div></article>'
+                + "</section>"
+                + "<p>The legitimate claim is explanatory: this block may summarize existing source boundaries.</p>",
+                encoding="utf-8",
+            )
+            rows_by_registry = {
+                "MARKDOWN_SOURCE_REGISTRY.csv": [
+                    {
+                        "object_id": "MD-HTML-SPEC-SYNTHETIC",
+                        "path": "markdown/html-explainer-specs/synthetic.md",
+                        "role": "html_explainer_source_spec",
+                        "source_hash": "spec-hash",
+                    }
+                ],
+                "HTML_EXPLAINER_REGISTRY.csv": [
+                    {
+                        "object_id": "HTML-SYNTHETIC",
+                        "path": "html/synthetic.html",
+                        "human_visual_only": "true",
+                        "source_basis": "MD-HTML-SPEC-SYNTHETIC",
+                        "source_basis_hash": "spec-hash",
+                        "html_hash": self.memory_system.sha256_file(html),
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.validate_html_registry(report, rows_by_registry)
+        self.assertTrue(
+            any("analysis capsule section must not render" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("content-block claim boilerplate must not render" in error for error in report.errors)
+        )
+
     def test_html_registry_rejects_undeclared_subject_summary_source_path(self) -> None:
         report = self.memory_system.ValidationReport()
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1190,28 +1280,11 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "analysis_depth: \"deep\"\n"
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
-                "  - \"expandable_analysis_panels\"\n"
                 "  - \"source_materials_section\"\n"
-                "analysis_capsule_schema:\n"
-                "  - \"premise\"\n"
-                "  - \"mechanism\"\n"
-                "  - \"source_basis\"\n"
-                "  - \"authority_status\"\n"
-                "  - \"uncertainty\"\n"
-                "  - \"validation_or_test\"\n"
-                "  - \"next_step\"\n"
                 + flexible_spec_fields(profile="atlas_hub")
                 + "---\n"
                 "# Synthetic\n\n"
-                + flexible_required_blocks_section()
-                + "## Required Analysis Capsules\n\n"
-                "- premise: Test premise.\n"
-                "- mechanism: Test mechanism.\n"
-                "- source_basis: README.md.\n"
-                "- authority_status: explanatory.\n"
-                "- uncertainty: none.\n"
-                "- validation_or_test: marker validation.\n"
-                "- next_step: pass.\n",
+                + flexible_required_blocks_section(),
                 encoding="utf-8",
             )
             html = root / "html/synthetic.html"
@@ -1226,18 +1299,8 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 ".layer-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }"
                 "</style>"
                 '<nav data-explainer-control="section_toc"></nav>'
-                '<details data-explainer-control="expandable_analysis_panels"></details>'
                 '<section data-explainer-control="source_materials_section"></section>'
                 '<ul><li data-source-path="README.md"></li></ul>'
-                '<article data-analysis-capsule="test">'
-                '<div data-capsule-field="premise"></div>'
-                '<div data-capsule-field="mechanism"></div>'
-                '<div data-capsule-field="source_basis"></div>'
-                '<div data-capsule-field="authority_status"></div>'
-                '<div data-capsule-field="uncertainty"></div>'
-                '<div data-capsule-field="validation_or_test"></div>'
-                '<div data-capsule-field="next_step"></div>'
-                "</article>"
                 + synthetic_content_block(),
                 encoding="utf-8",
             )
@@ -1690,7 +1753,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
             any("Mermaid:" in error and "source differs from Markdown" in error for error in report.errors)
         )
 
-    def test_unchanged_html_does_not_mask_changed_spec_hash(self) -> None:
+    def test_changed_spec_hash_updates_unchanged_html_registry_binding(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
             (root / "registries").mkdir()
@@ -1757,7 +1820,7 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 rows = self.memory_system.generate_html_rows(
                     "2099-01-01T00:00:00Z", markdown_rows
                 )
-        self.assertEqual(rows[0]["source_basis_hash"], "old-spec-hash")
+        self.assertEqual(rows[0]["source_basis_hash"], "new-spec-hash")
 
     def test_wiki_artifact_rows_cover_registered_sources(self) -> None:
         rows_by_registry = {

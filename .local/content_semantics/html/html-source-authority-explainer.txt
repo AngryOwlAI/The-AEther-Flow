@@ -2,12 +2,6 @@ Source Authority
 format_ladder
 Source Authority
 Explain the repository authority ladder from canonical TeX and registries through registered Markdown, generated wiki/PDF/HTML derivatives, and local scratch surfaces.
-Layout intent
-Use an authority/use-case matrix first, with file extensions inside each row, then provide drilldowns for source authority, generated derivatives, local retrieval surfaces, and validation evidence.
-Authority
-Human-only generated derivative
-Source basis
-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER
 Summary of Source Authority
 Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and .local caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not make them independent authority. The authority model fits the project by preserving scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repo that intentionally generates many human-facing derivatives.
 AGENTS.md
@@ -17,7 +11,6 @@ registries/FILE_OBJECT_REGISTRY.csv
 Coverage
 Diagrams
 Workflow
-Analysis
 Sources
 Source-Backed Coverage
 Authority Ladder
@@ -34,7 +27,6 @@ AGENTS.md
 ,
 registries/TEX_SOURCE_REGISTRY.csv
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Format Use Case Matrix
 README.md
 AGENTS.md
@@ -90,7 +82,6 @@ AGENTS.md
 ,
 .codex/skills/project-memory-system/SKILL.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Local Retrieval Surfaces
 README.md
 AGENTS.md
@@ -105,7 +96,6 @@ AGENTS.md
 ,
 .codex/skills/project-memory-system/SKILL.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Validation Evidence
 README.md
 AGENTS.md
@@ -120,7 +110,6 @@ AGENTS.md
 ,
 .codex/skills/project-memory-system/SKILL.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Source Authority Ladder
 +
 -
@@ -220,38 +209,6 @@ The execution-role record narrows or overlays role authority for this job.
 Allowed outputs are produced inside the task boundary.
 8. completion YAML
 The completion records verdict, command results, and validation status.
-Analysis capsules
-Claim-Aware Analysis
-Authority Is Source-First
-Premise
-The repository distinguishes source authority from generated retrieval and human-reading surfaces.
-Mechanism
-Canonical files and registries own claims and provenance; generated derivatives expose or visualize that content but do not become independent authority.
-Source Basis
-`AGENTS.md`, `README.md`, and source registries.
-Authority Status
-Human-only explanation of the existing authority hierarchy.
-Uncertainty
-Generated derivatives can be useful but stale if source hashes, source-basis metadata, or registry rows drift.
-Validation Or Test
-Run bootstrap validation and check source-basis hashes, generated-output rows, and non-authority banners.
-Next Step
-Edit canonical sources or registered specs first, then regenerate.
-HTML Is A Human Visual Derivative
-Premise
-Tracked HTML pages help humans understand the project but do not carry independent scientific or control authority.
-Mechanism
-Each HTML file points back to a Markdown source spec and registry source basis; diagram source is preserved in the spec and rendered into inline SVG for portability.
-Source Basis
-`.codex/skills/html-visual-explainer/SKILL.md`, `registries/HTML_EXPLAINER_REGISTRY.csv`, and `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
-Authority Status
-Explanation of generated HTML boundaries.
-Uncertainty
-Visual polish can improve comprehension without changing the underlying authority chain.
-Validation Or Test
-Confirm every tracked HTML explainer has a registered Markdown spec, source-basis metadata, required controls, source drilldowns, and Mermaid parity when diagrams are declared.
-Next Step
-Use the project hub to navigate the generated pages, then inspect the source specs for authoritative explainer content.
 All Source Materials
 Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md

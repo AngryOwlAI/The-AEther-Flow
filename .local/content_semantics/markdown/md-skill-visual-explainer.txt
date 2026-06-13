@@ -94,6 +94,10 @@ contract declared by the Markdown source spec:
 
 - `presentation_profile` names the layout archetype, not hidden content rules.
 - `layout_intent` explains how this page should adapt the profile.
+  It is renderer guidance and validation metadata, not reader-facing content.
+  Do not render `layout_intent`, registry `source_basis`, or derivative
+  authority status as hero/title metadata chips. Keep registry binding in
+  `<meta>` tags and visible source grounding in the summary/source sections.
 - `required_content_blocks` names the page-local factual obligations.
 - `subject_summary` is universal and must be the first declared content block,
   the first body definition under `## Required Content Blocks`, and the first
@@ -127,10 +131,12 @@ contract declared by the Markdown source spec:
   Current tracked explainers should be kept warning-free even though the lint is
   advisory.
 - Use the shared no-network reader layer for tracked explainers: reading
-  progress, local search, active-section navigation, simple/technical reading
-  modes, expand/collapse controls, and copyable source chips. The helper
-  script is `scripts/enhance_html_explainers.py`; it is a renderer aid, not an
-  authority source.
+  progress, local search, active-section navigation, and copyable source chips.
+  Do not add global simple/technical mode toggles or global expand/collapse
+  buttons unless a later source-spec-backed task defines a page-specific need
+  and browser-verifies it. The helper script is
+  `scripts/enhance_html_explainers.py`; it is a renderer aid, not an authority
+  source.
 
 Allowed presentation profiles are `atlas_hub`, `role_catalog`,
 `format_ladder`, `memory_system_map`, `workflow_lifecycle`,
@@ -154,19 +160,13 @@ the three layer sections vertically and let cards inside each layer auto-fit:
 Do not place a fixed three-column card grid inside a fixed three-column layer
 grid; it makes prose unreadable. Use `overflow-wrap: break-word` for normal
 text and reserve `overflow-wrap: anywhere` for `code` and `pre`.
-For analysis capsule rows, explicitly allow the `dl` grid contents to shrink:
-set capsule rows, `dt`, and `dd` to `min-width: 0` and use
-`grid-template-columns: minmax(0, 1fr)` on the capsule `dl`.
-
-Deep-view panels should use analysis capsules with these fields: `premise`,
-`mechanism`, `source_basis`, `authority_status`, `uncertainty`,
-`validation_or_test`, and `next_step`. The generated HTML must include
-`data-explainer-control`, `data-analysis-capsule`, `data-capsule-field`, and
-`data-source-path` markers as required by the spec. These markers are
-validator evidence only; they do not make generated HTML authoritative.
-Do not add `subject_summary` to `analysis_capsule_schema`; it is a separate
-source-backed summary content block. Manually author summary prose per source
-spec, with a 150-240 word target excluding source chips.
+Active tracked explainers should not render the obsolete analysis-capsule
+section. Do not add `Analysis capsules`, `Claim-Aware Analysis`,
+`data-analysis-capsule`, `data-capsule-field`, or `analysis_capsule_schema` to
+current source specs or generated HTML. Use `data-content-block`,
+`data-summary-field`, `data-explainer-control`, and `data-source-path` markers
+for validator evidence. Manually author summary prose per source spec, with a
+150-240 word target excluding source chips.
 
 For the front-facing project overview, treat
 `html/project-overview-explainer.html` as the explainer hub. It should orient

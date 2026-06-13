@@ -21,7 +21,7 @@ explainer. The HTML file remains a generated, human-reading derivative.
 
 Every registered source spec under `markdown/html-explainer-specs/` must
 declare these presentation fields in addition to the existing source,
-claim-boundary metadata, interaction, analysis-capsule, and validation fields:
+claim-boundary metadata, interaction, and validation fields:
 
 - `presentation_profile`: controlled layout archetype.
 - `layout_intent`: required nonblank prose explaining how the page adapts that
@@ -97,10 +97,8 @@ explainer atlas itself: what the atlas is, what role it plays in routing
 readers, why that matters, how it fits the project, and which specs or source
 files ground the hub.
 
-`subject_summary` is not part of `analysis_capsule_schema`. Analysis capsules
-remain the reasoning structure for premise, mechanism, authority, uncertainty,
-validation, and next step. `subject_summary` is a source-backed summary content
-block.
+`subject_summary` is a source-backed summary content block. It is not a
+separate authority layer and does not require an analysis-capsule section.
 
 Generated HTML must mark these summary elements with `data-summary-field`
 values:
@@ -113,8 +111,9 @@ authority or claim-boundary caution belongs inside `summary_text` when it is
 necessary to explain what the subject is, why the subject matters, or how the
 subject fits the project. Ontology and claim-gate summaries should make
 boundaries explicit; technical or setup summaries may use lighter authority
-language. Existing claim-boundary metadata and analysis capsules remain
-mandatory through their own contract.
+language. Existing claim-boundary metadata remains mandatory through
+source-spec metadata, validator evidence, and section-specific prose when
+useful.
 
 The `source_basis` summary field must contain visible file-path chips or an
 equivalent visible source-path list. Hidden structural markers are insufficient

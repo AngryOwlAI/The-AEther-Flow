@@ -26,7 +26,6 @@ presentation_profile: "workflow_lifecycle"
 layout_intent: "Use a validation lifecycle with governance panels for classification, bounded AgentJobs, flexible source-backed HTML, documentation impact, validator chains, and checkpoint boundaries."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
@@ -36,14 +35,6 @@ required_content_blocks:
   - "flexible_html_contract"
   - "documentation_impact"
   - "validator_chain"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -156,51 +147,3 @@ Summary source basis:
 - flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries.
 - documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
 - validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, research-control validation, diff checks, tests, and advisory depth lint.
-
-## Required Analysis Capsules
-
-### Source-Backed HTML Governance
-
-- premise: Tracked HTML explainers are valid only when backed by registered
-  Markdown source specs.
-- mechanism: The Markdown spec declares title, purpose, source material, claim
-  boundary, interaction model, presentation profile, layout intent, required
-  content blocks, required controls, source materials, Mermaid diagrams, and
-  analysis capsules; generated HTML carries marker and source metadata
-  evidence.
-- source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
-  `.codex/skills/visual-explainer/SKILL.md`, the Mermaid Documentation
-  subskill, and `registries/HTML_EXPLAINER_REGISTRY.csv`.
-- authority_status: Project-control explanation of generated derivative
-  governance.
-- uncertainty: Visual design quality still requires human or browser review;
-  the validator checks structural evidence and source parity.
-- validation_or_test: Run Mermaid validation, memory bootstrap validation, and
-  confirm declared controls have matching HTML markers.
-- next_step: Modify the Markdown source spec first, regenerate HTML, render
-  Mermaid inline SVG, then validate.
-
-### Documentation-Impact Boundary
-
-- premise: Documentation impact is a receipt requirement, not automatic source
-  ownership by Documentation Curator.
-- mechanism: Classifier output identifies documentation impact; the selected
-  role depends on source authority class; project-system AgentJobs must record
-  documentation-impact coverage.
-- source_basis: `research_control/README.md`,
-  `.codex/skills/improve-project-system/SKILL.md`, and
-  `scripts/project_control/validate_documentation_impact.py`.
-- authority_status: Control-system explanation.
-- uncertainty: Resolver output is advisory; hard stops come from validators and
-  authority-boundary violations.
-- validation_or_test: Use classification, documentation-impact validation,
-  signal validation, research-control validation, and diff checks.
-- next_step: Keep explanatory HTML work inside Documentation Curator authority
-  and route validator or contract changes to the proper roles.
-
-## Non-Goals
-
-- Do not introduce physics claims.
-- Do not change project-control rules.
-- Do not present generated HTML as an authority source.
-- Do not use external images or network-dependent assets.

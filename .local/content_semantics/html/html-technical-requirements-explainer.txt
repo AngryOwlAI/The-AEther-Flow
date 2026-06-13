@@ -2,12 +2,6 @@ Technical Requirements
 technical_requirements
 Technical Requirements
 Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering diagram-backed HTML, using local retrieval, and refreshing PDFs.
-Layout intent
-Use a tiered requirements matrix with project-requirement versus operator-environment-aid labels, command callouts, and source-backed setup evidence.
-Authority
-Human-only generated derivative
-Source basis
-MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER
 Summary of Technical Requirements
 The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The explainer fits the project by turning setup files and skill contracts into a practical dependency map for maintainers who need repeatable validation without changing dependency policy or scientific claims.
 README.md
@@ -16,7 +10,6 @@ Makefile
 .codex/skills/project-memory-system/SKILL.md
 .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
 Coverage
-Analysis
 Sources
 Source-Backed Coverage
 Read Inspect Tier
@@ -33,7 +26,6 @@ requirements.txt
 ,
 Makefile
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Validators Memory Scripts Tier
 .codex/skills/project-memory-system/SKILL.md
 README.md
@@ -48,7 +40,6 @@ README.md
 ,
 requirements.txt
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Memory Regeneration Tier
 .codex/skills/project-memory-system/SKILL.md
 README.md
@@ -63,7 +54,6 @@ README.md
 ,
 requirements.txt
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Diagram Rendering Tier
 README.md
 requirements.txt
@@ -78,7 +68,6 @@ requirements.txt
 ,
 Makefile
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Local Retrieval Tier
 README.md
 requirements.txt
@@ -93,7 +82,6 @@ requirements.txt
 ,
 Makefile
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 PDF Refresh Tier
 README.md
 requirements.txt
@@ -108,7 +96,6 @@ requirements.txt
 ,
 Makefile
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Project Vs Operator Aid
 README.md
 requirements.txt
@@ -130,38 +117,6 @@ SQLite/Obsidian
 Review PDFs
 TeX source
 PDF viewer
-Analysis capsules
-Claim-Aware Analysis
-Requirements Are Tiered
-Premise
-Not every reader or operator needs every tool.
-Mechanism
-The page should separate read-only inspection, Python validation, memory regeneration, diagram rendering, optional local retrieval, and PDF refresh work into distinct tiers.
-Source Basis
-`README.md`, `requirements.txt`, `Makefile`, `.codex/skills/project-memory-system/SKILL.md`, and Mermaid subskill setup documentation.
-Authority Status
-Human-only setup explanation; tracked scripts and contracts define project requirements.
-Uncertainty
-System-level tool availability can differ across machines.
-Validation Or Test
-Run the tier-specific command after installing the tier, such as bootstrap validation, renderer `--check`, local vault lint, or PDF build validation.
-Next Step
-Install the lowest tier needed for the intended workflow before running broader validation.
-Operator Aids Are Not Project Authority
-Premise
-The current Codex workspace may expose useful tools that are not durable project requirements.
-Mechanism
-Label Obsidian, global Codex skills, plugins, and bundled tools as operator environment aids unless the requirement is tracked in this repo.
-Source Basis
-`.codex/skills/obsidian-wiki/SKILL.md`, `.codex/skills/*`, and `README.md`.
-Authority Status
-Explanation of requirement boundaries.
-Uncertainty
-A future task may promote an aid into a project requirement by adding tracked contracts, scripts, or registry documentation.
-Validation Or Test
-Check whether the requirement appears in tracked docs, scripts, `requirements.txt`, or package manifests.
-Next Step
-Keep README commands concise and use this explainer for the richer tiered model.
 All Source Materials
 Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md

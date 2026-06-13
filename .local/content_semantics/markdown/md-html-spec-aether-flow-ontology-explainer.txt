@@ -21,7 +21,6 @@ presentation_profile: "conceptual_model"
 layout_intent: "Use a mixed-audience conceptual model: a plain-language orientation, term cards, source quote panels, adoption-vs-derivation bridge, derivation-burden checklist, governed diagrams, and claim-boundary callouts."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
   - "subject_summary"
@@ -32,14 +31,6 @@ required_content_blocks:
   - "source_quote_gallery"
   - "claim_boundaries"
   - "reader_paths"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -156,50 +147,3 @@ Summary source basis:
 - source_quote_gallery: Short quote cards from both ontology Markdown sources, each paired with why the quote matters, what it permits, and what it forbids for the generated human-only explainer.
 - claim_boundaries: A visible non-claim panel stating what the page may explain and what it may not assert, including no completed GR derivation, no new empirical prediction, no canonical TeX edits, and no generated-HTML authority promotion.
 - reader_paths: A where-to-go-next panel routing new readers to term cards and diagrams, technical reviewers to TeX and registries, and project maintainers to source-authority and research-control explainers.
-
-## Required Analysis Capsules
-
-### Project-Specific Ontology
-
-- premise: The `Æther-flow ontology` is the project-specific claim that reality
-  may be grounded in a deeper four-dimensional substrate and its intrinsic
-  ordered motion.
-- mechanism: The explainer connects substrate, flow, observed space, `S-time`,
-  expansion, and gravity as one conceptual picture while separating that picture
-  from completed derivation.
-- source_basis: `ontology/aether-and-aether-flow.md`,
-  `ontology/aether_flow_interpretation-lemen.md`, `README.md`, and
-  `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
-- authority_status: Human-only explanation; scientific authority remains with
-  registered TeX and claim-boundary rows.
-- uncertainty: The source theorem that recovers exact GR from substrate data is
-  not yet supplied.
-- validation_or_test: A candidate derivation must source-construct the observer
-  normal/readout orbit and recover Lorentzian geometry, clocks, same-metric
-  matter, invariance, and closure without importing target GR structures.
-- next_step: Use the derivation-burden checklist before treating a mechanism as
-  progress.
-
-### Exact-GR Benchmark Adoption
-
-- premise: The public benchmark preserves ordinary GR at observable scale while
-  the substrate derivation remains open.
-- mechanism: Exact-GR adoption is a constraint and comparison target, not
-  evidence that the ontology has already succeeded.
-- source_basis: `README.md`, `AGENTS.md`, `ontology/aether-and-aether-flow.md`,
-  and `registries/TEX_SOURCE_REGISTRY.csv`.
-- authority_status: Explanation of registered claim boundaries.
-- uncertainty: Which source-defined substrate laws, if any, can recover the
-  benchmark remains unresolved.
-- validation_or_test: Candidate structures must pass dimensional consistency,
-  invariance, anti-smuggling, same-metric matter, clock behavior, and recovery
-  of known limiting behavior.
-- next_step: Route derivation candidates through bounded research-control jobs
-  and claim gates.
-
-## Non-Goals
-
-- Do not assert that the `Æther-flow ontology` derives GR.
-- Do not add new equations, proof claims, or empirical predictions.
-- Do not alter canonical ontology TeX, registry status, or Mermaid diagrams.
-- Do not use external images or network-dependent assets.

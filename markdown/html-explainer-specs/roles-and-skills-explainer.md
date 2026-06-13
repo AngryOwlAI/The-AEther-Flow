@@ -48,7 +48,6 @@ presentation_profile: "role_catalog"
 layout_intent: "Use an active-first catalog with compact role cards, status bands, repo-local skill groups, and evidence-labeled declared versus likely support-skill associations."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
   - "subject_summary"
@@ -59,14 +58,6 @@ required_content_blocks:
   - "declared_role_skill_evidence"
   - "inferred_support_skills"
   - "operator_context_boundary"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 ---
 
 # Roles And Skills Spec
@@ -147,46 +138,3 @@ Summary source basis:
 - declared_role_skill_evidence: A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience.
 - inferred_support_skills: A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills.
 - operator_context_boundary: A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records.
-
-## Required Analysis Capsules
-
-### Active Roles Are The Operating System
-
-- premise: Readers need the current role system before historical audit
-  context.
-- mechanism: The page should visually prioritize `active` rows in
-  `AGENT_ROLE_REGISTRY.csv`, then place `status_defined` and `superseded`
-  roles in separate bands.
-- source_basis: `registries/AGENT_ROLE_REGISTRY.csv`, role contracts under
-  `.agents/roles/`, and `registries/ROLE_EXECUTION_REGISTRY.csv`.
-- authority_status: Human-only catalog; registries and role contracts carry
-  project-control authority.
-- uncertainty: A task-local execution-role overlay can narrow or expand a role
-  only for one AgentJob.
-- validation_or_test: Check the registry row, role contract path, task-local
-  execution-role file, and AgentJob allowlist before executing work.
-- next_step: Use the role-routing explainer to inspect how a role is selected
-  for one task.
-
-### Skills Are Repo-Local Contracts
-
-- premise: The project can only govern skills tracked in `.codex/skills/`.
-- mechanism: The catalog should list repo-local skill contracts as governed
-  front doors, while labeling external/global tools as operator context only.
-- source_basis: `.codex/skills/*/SKILL.md`,
-  `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`,
-  and `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
-- authority_status: Human-only explanation of skill contracts.
-- uncertainty: A current Codex session may expose additional global skills or
-  plugins that are useful but not durable repo requirements.
-- validation_or_test: Confirm a skill path is tracked in the repository before
-  treating it as project authority.
-- next_step: Keep inferred support-skill associations explicitly labeled and
-  source-backed.
-
-## Non-Goals
-
-- Do not register, remove, or supersede roles.
-- Do not add or modify skill contracts.
-- Do not treat external plugins or global skills as project authority.
-- Do not change routing, validators, or scientific claim status.

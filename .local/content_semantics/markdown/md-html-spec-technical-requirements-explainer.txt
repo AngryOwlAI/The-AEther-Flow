@@ -24,7 +24,6 @@ presentation_profile: "technical_requirements"
 layout_intent: "Use a tiered requirements matrix with project-requirement versus operator-environment-aid labels, command callouts, and source-backed setup evidence."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
   - "subject_summary"
@@ -35,14 +34,6 @@ required_content_blocks:
   - "local_retrieval_tier"
   - "pdf_refresh_tier"
   - "project_vs_operator_aid"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 ---
 
 # Technical Requirements Spec
@@ -117,46 +108,3 @@ Summary source basis:
 - local_retrieval_tier: An operator-aid tier for optional Obsidian, SQLite, local semantic extracts, browser previews, and `.local/` scratch surfaces, with clear non-authority status.
 - pdf_refresh_tier: A conditional PDF tier explaining LaTeX/PDF build requirements only when TeX derivative refresh is in scope, and why PDFs remain human-reading derivatives.
 - project_vs_operator_aid: A matrix separating project requirements from operator conveniences so missing optional local tools do not get mistaken for repository validity failures.
-
-## Required Analysis Capsules
-
-### Requirements Are Tiered
-
-- premise: Not every reader or operator needs every tool.
-- mechanism: The page should separate read-only inspection, Python validation,
-  memory regeneration, diagram rendering, optional local retrieval,
-  and PDF refresh work into distinct tiers.
-- source_basis: `README.md`, `requirements.txt`, `Makefile`,
-  `.codex/skills/project-memory-system/SKILL.md`, and Mermaid subskill setup
-  documentation.
-- authority_status: Human-only setup explanation; tracked scripts and contracts
-  define project requirements.
-- uncertainty: System-level tool availability can differ across machines.
-- validation_or_test: Run the tier-specific command after installing the tier,
-  such as bootstrap validation, renderer `--check`, local vault lint, or PDF
-  build validation.
-- next_step: Install the lowest tier needed for the intended workflow before
-  running broader validation.
-
-### Operator Aids Are Not Project Authority
-
-- premise: The current Codex workspace may expose useful tools that are not
-  durable project requirements.
-- mechanism: Label Obsidian, global Codex skills, plugins, and bundled tools
-  as operator environment aids unless the requirement is tracked in this repo.
-- source_basis: `.codex/skills/obsidian-wiki/SKILL.md`, `.codex/skills/*`,
-  and `README.md`.
-- authority_status: Explanation of requirement boundaries.
-- uncertainty: A future task may promote an aid into a project requirement by
-  adding tracked contracts, scripts, or registry documentation.
-- validation_or_test: Check whether the requirement appears in tracked docs,
-  scripts, `requirements.txt`, or package manifests.
-- next_step: Keep README commands concise and use this explainer for the
-  richer tiered model.
-
-## Non-Goals
-
-- Do not change dependency versions or install new tools.
-- Do not make Obsidian or global Codex plugins required project authority.
-- Do not change validator behavior or scripts.
-- Do not introduce physics claims.

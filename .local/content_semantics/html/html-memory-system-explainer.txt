@@ -2,12 +2,6 @@ Memory System
 memory_system_map
 Memory System
 Explain the source-first memory system: canonical CSV registries, tracked generated wiki notes, local Obsidian vault, semantic extracts, SQLite index, and query surface.
-Layout intent
-Use a layered memory map: canonical CSV memory spine, tracked generated wiki surface, local Obsidian reader vault, semantic/query layer, and authority-boundary panels.
-Authority
-Human-only generated derivative
-Source basis
-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER
 Summary of Memory System
 The memory system is the repository's source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system fits the project by connecting source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving clear provenance.
 registries/MARKDOWN_SOURCE_REGISTRY.csv
@@ -17,7 +11,6 @@ registries/HTML_EXPLAINER_REGISTRY.csv
 Coverage
 Diagrams
 Workflow
-Analysis
 Sources
 Source-Backed Coverage
 CSV Memory Spine
@@ -34,7 +27,6 @@ registries/MARKDOWN_SOURCE_REGISTRY.csv
 ,
 registries/TEX_SOURCE_REGISTRY.csv
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Tracked Generated Wiki
 README.md
 AGENTS.md
@@ -49,7 +41,6 @@ AGENTS.md
 ,
 registries/MARKDOWN_SOURCE_REGISTRY.csv
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Local Obsidian Vault
 README.md
 AGENTS.md
@@ -64,7 +55,6 @@ AGENTS.md
 ,
 registries/MARKDOWN_SOURCE_REGISTRY.csv
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Semantic Query Layer
 README.md
 AGENTS.md
@@ -79,7 +69,6 @@ AGENTS.md
 ,
 registries/MARKDOWN_SOURCE_REGISTRY.csv
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Authority Boundaries
 AGENTS.md
 registries/MARKDOWN_SOURCE_REGISTRY.csv
@@ -94,7 +83,6 @@ registries/MARKDOWN_SOURCE_REGISTRY.csv
 ,
 registries/TEX_SOURCE_REGISTRY.csv
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Memory Surface Map
 +
 -
@@ -185,38 +173,6 @@ The execution-role record narrows or overlays role authority for this job.
 Allowed outputs are produced inside the task boundary.
 8. completion YAML
 The completion records verdict, command results, and validation status.
-Analysis capsules
-Claim-Aware Analysis
-CSV Is The Memory Spine
-Premise
-The repository memory system is source-first and registry-backed.
-Mechanism
-Format-specific CSV registries bind object identity, source path, source hash, generated outputs, owner skill, authority status, and validation status; generated surfaces are derived from those rows.
-Source Basis
-`AGENTS.md`, `README.md`, `.codex/skills/project-memory-system/SKILL.md`, and `registries/*.csv`.
-Authority Status
-Human-only explanation; CSV registries and registered sources carry authority.
-Uncertainty
-Generated surfaces can become stale if bootstrap or local sync has not been run after source changes.
-Validation Or Test
-Run memory bootstrap, validate-only, and `make validate-memory` when full local retrieval validation is in scope.
-Next Step
-Inspect the relevant format-specific registry row before relying on a wiki, vault, or semantic search result.
-Retrieval Surfaces Are Derived
-Premise
-Wiki, Obsidian, semantic extracts, and SQLite exist to make source memory easier to inspect and query.
-Mechanism
-Scripts regenerate tracked wiki notes, local vault files, content semantics, relationship graphs, and query indexes from registered sources and registries.
-Source Basis
-`.codex/skills/obsidian-wiki/SKILL.md`, `registries/WIKI_ARTIFACT_REGISTRY.csv`, and `registries/CONTENT_SEMANTIC_REGISTRY.csv`.
-Authority Status
-Explanation of generated noncanonical access layers.
-Uncertainty
-Local `.local/` surfaces may differ by machine and are not Git-authoritative.
-Validation Or Test
-Validate with `lint_obsidian_vault.py --require-index` and query smoke checks when local retrieval is needed.
-Next Step
-Treat retrieval hits as pointers back to registered source rows.
 All Source Materials
 Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md

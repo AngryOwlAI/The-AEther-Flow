@@ -2,12 +2,6 @@ Roles And Skills
 role_catalog
 Roles And Skills
 Catalog active registered roles, defined or superseded role states, repo-local governed skills, and evidence-labeled role/skill associations.
-Layout intent
-Use an active-first catalog with compact role cards, status bands, repo-local skill groups, and evidence-labeled declared versus likely support-skill associations.
-Authority
-Human-only generated derivative
-Source basis
-MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER
 Summary of Roles and Skills
 The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator can maintain explanatory specs and source-backed HTML, Project-Control Maintainer owns control contracts, Validator Engineer owns deterministic checks, and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
 registries/AGENT_ROLE_REGISTRY.csv
@@ -15,7 +9,6 @@ registries/AGENT_ROLE_REGISTRY.csv
 .agents/roles/research_ops/documentation-curator.v0.4.0.md
 .codex/skills/html-visual-explainer/SKILL.md
 Coverage
-Analysis
 Sources
 Source-Backed Coverage
 Active Role Catalog
@@ -32,7 +25,6 @@ registries/ROLE_EXECUTION_REGISTRY.csv
 ,
 .agents/roles/research_ops/director-of-research.v0.1.0.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Status Defined Roles
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
@@ -47,7 +39,6 @@ registries/ROLE_EXECUTION_REGISTRY.csv
 ,
 .agents/roles/research_ops/director-of-research.v0.1.0.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Superseded Audit Roles
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
@@ -62,7 +53,6 @@ registries/ROLE_EXECUTION_REGISTRY.csv
 ,
 .agents/roles/research_ops/director-of-research.v0.1.0.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Repo Local Skill Catalog
 README.md
 AGENTS.md
@@ -77,7 +67,6 @@ AGENTS.md
 ,
 research_control/README.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Declared Role Skill Evidence
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
@@ -92,7 +81,6 @@ registries/ROLE_EXECUTION_REGISTRY.csv
 ,
 .agents/roles/research_ops/director-of-research.v0.1.0.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Inferred Support Skills
 README.md
 AGENTS.md
@@ -107,7 +95,6 @@ AGENTS.md
 ,
 research_control/README.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
 Operator Context Boundary
 AGENTS.md
 README.md
@@ -122,39 +109,6 @@ README.md
 ,
 research_control/README.md
 and related declared sources, so the reader can move from this generated page back to inspectable files.
-The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.
-Analysis capsules
-Claim-Aware Analysis
-Active Roles Are The Operating System
-Premise
-Readers need the current role system before historical audit context.
-Mechanism
-The page should visually prioritize `active` rows in `AGENT_ROLE_REGISTRY.csv`, then place `status_defined` and `superseded` roles in separate bands.
-Source Basis
-`registries/AGENT_ROLE_REGISTRY.csv`, role contracts under `.agents/roles/`, and `registries/ROLE_EXECUTION_REGISTRY.csv`.
-Authority Status
-Human-only catalog; registries and role contracts carry project-control authority.
-Uncertainty
-A task-local execution-role overlay can narrow or expand a role only for one AgentJob.
-Validation Or Test
-Check the registry row, role contract path, task-local execution-role file, and AgentJob allowlist before executing work.
-Next Step
-Use the role-routing explainer to inspect how a role is selected for one task.
-Skills Are Repo-Local Contracts
-Premise
-The project can only govern skills tracked in `.codex/skills/`.
-Mechanism
-The catalog should list repo-local skill contracts as governed front doors, while labeling external/global tools as operator context only.
-Source Basis
-`.codex/skills/*/SKILL.md`, `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`, and `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
-Authority Status
-Human-only explanation of skill contracts.
-Uncertainty
-A current Codex session may expose additional global skills or plugins that are useful but not durable repo requirements.
-Validation Or Test
-Confirm a skill path is tracked in the repository before treating it as project authority.
-Next Step
-Keep inferred support-skill associations explicitly labeled and source-backed.
 All Source Materials
 Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md

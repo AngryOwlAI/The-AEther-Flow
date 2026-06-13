@@ -22,7 +22,6 @@ presentation_profile: "workflow_lifecycle"
 layout_intent: "Use a routing lifecycle with decision-tree diagrams, role-contract panels, and evidence drilldowns that distinguish direct registered roles, task overlays, and one-job provisional roles."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
@@ -31,14 +30,6 @@ required_content_blocks:
   - "director_routing"
   - "execution_role_contract"
   - "overlay_provisional_boundary"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -151,47 +142,3 @@ Summary source basis:
 - director_routing: A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions.
 - execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence.
 - overlay_provisional_boundary: A matrix explaining registered roles, task overlays, and one-job provisional roles, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.
-
-## Required Analysis Capsules
-
-### Role Selection Is Authority Selection
-
-- premise: Choosing a role is choosing the authority boundary for one bounded
-  task.
-- mechanism: The Director compares the task against registered role contracts,
-  source classes, allowed writes, forbidden surfaces, validators, and claim
-  boundaries before opening an AgentJob.
-- source_basis: `research_control/README.md`,
-  `registries/AGENT_ROLE_REGISTRY.csv`, and
-  `registries/DIRECTOR_DECISION_REGISTRY.csv`.
-- authority_status: Workflow explanation; it does not alter role authority.
-- uncertainty: A role template may be close but not exact; the execution-role
-  record is the job-specific contract.
-- validation_or_test: Check the Director decision, execution-role record, and
-  AgentJob allowlist.
-- next_step: Inspect the task-local execution-role file before executing or
-  reviewing work.
-
-### Execution Role Prevents Drift
-
-- premise: The execution-role record prevents a role from silently gaining or
-  losing authority during a task.
-- mechanism: It records whether the job uses a registered role, task overlay,
-  or one-job provisional role, then binds added constraints, removed
-  permissions, expanded permissions, allowed writes, human gates, and expiry.
-- source_basis: `registries/ROLE_EXECUTION_REGISTRY.csv` and
-  `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`.
-- authority_status: Project-control explanation.
-- uncertainty: Repeated provisional patterns may indicate a role-design gap,
-  but they do not become permanent by convention.
-- validation_or_test: Validate role execution rows against task-local role
-  records and AgentJob fields.
-- next_step: Use the research-system explainer to see how the selected role
-  executes inside the full task loop.
-
-## Non-Goals
-
-- Do not register new roles.
-- Do not change role contracts, schemas, routing rules, or validators.
-- Do not modify scientific claim status.
-- Do not use external images or network-dependent assets.

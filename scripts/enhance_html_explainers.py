@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Enhance standalone Æther-Flow HTML explainers without touching diagrams.
 
-This script injects a small CSS/JavaScript reading layer into generated HTML
-files under `html/`.
+This script injects or refreshes a small CSS/JavaScript reading layer into
+generated HTML files under `html/`.
 
 It is intended as a renderer-layer prototype or local preview tool. In the
 tracked repository workflow, generated HTML should be produced from Markdown
@@ -16,12 +16,15 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
+import hashlib
 from pathlib import Path
 import re
 from typing import Iterable
 
 STYLE_ID = "aether-docs-enhancement"
 SCRIPT_ID = "aether-docs-enhancement-js"
+OUTPUT_PATH_RE = re.compile(r"^output_path:\s*[\"']?([^\"'\n]+)[\"']?\s*$", re.MULTILINE)
 
 ENHANCEMENT_CSS = f"""
 <style id="{STYLE_ID}">
@@ -71,7 +74,6 @@ ENHANCEMENT_CSS = f"""
   .panel,
   .atlas-link,
   .content-block,
-  .capsule,
   .block-subgroup,
   .source-list li,
   details {{
@@ -97,6 +99,15 @@ ENHANCEMENT_CSS = f"""
 
   h2, h3 {{ text-wrap: balance; }}
 
+  .hero {{
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }}
+
+  .hero > div {{
+    max-width: 78ch;
+  }}
+
   p, li, dd {{
     font-size: 1.01rem;
     line-height: 1.72;
@@ -107,14 +118,9 @@ ENHANCEMENT_CSS = f"""
     max-width: 70ch;
   }}
 
-  .meta-chip,
   .source-chip,
   .control-marker {{
     border-radius: 999px;
-  }}
-
-  .meta-chip {{
-    box-shadow: 0 10px 28px rgba(30,58,95,.08);
   }}
 
   .nav {{
@@ -247,22 +253,6 @@ ENHANCEMENT_CSS = f"""
     font: inherit;
   }}
 
-  .reader-toolbar button {{
-    border: 1px solid rgba(33,49,40,.16);
-    border-radius: 999px;
-    padding: 9px 12px;
-    color: var(--doc-ink);
-    background: #fff;
-    font: inherit;
-    font-weight: 800;
-    cursor: pointer;
-  }}
-
-  .reader-toolbar button[aria-pressed="true"] {{
-    background: var(--doc-ink);
-    color: #fffaf1;
-  }}
-
   .reading-progress {{
     position: fixed;
     z-index: 10;
@@ -294,27 +284,6 @@ ENHANCEMENT_CSS = f"""
 
   [hidden] {{ display: none !important; }}
 
-  body[data-reader-mode="simple"] details.source-fold,
-  body[data-reader-mode="simple"] pre {{
-    display: none;
-  }}
-
-  body[data-reader-mode="simple"] .capsule dd {{
-    color: var(--doc-ink);
-  }}
-
-  body[data-reader-mode="simple"] p,
-  body[data-reader-mode="simple"] li,
-  body[data-reader-mode="simple"] dd {{
-    font-size: 1.06rem;
-    line-height: 1.78;
-  }}
-
-  body[data-reader-mode="technical"] .source-chip,
-  body[data-reader-mode="technical"] code {{
-    font-size: .95em;
-  }}
-
   .diagram-shell {{
     background:
       linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
@@ -342,19 +311,6 @@ ENHANCEMENT_CSS = f"""
     background: rgba(223,232,242,.58);
   }}
 
-  .capsule {{
-    box-shadow: 0 8px 28px rgba(27,33,28,.055);
-  }}
-
-  .capsule-row {{
-    padding: 10px 0;
-    border-top: 1px dashed rgba(33,49,40,.12);
-  }}
-
-  .capsule-row:first-child {{
-    border-top: 0;
-  }}
-
   @media (max-width: 860px) {{
     .reader-toolbar {{
       position: static;
@@ -376,11 +332,6 @@ ENHANCEMENT_JS = f"""
     if (window.__aetherDocsEnhancementLoaded) return;
     window.__aetherDocsEnhancementLoaded = true;
 
-    const body = document.body;
-    const storageKey = `aether-doc-mode:${{location.pathname}}`;
-    const savedMode = localStorage.getItem(storageKey) || 'technical';
-    body.dataset.readerMode = savedMode;
-
     const progress = document.createElement('div');
     progress.className = 'reading-progress';
     progress.setAttribute('aria-hidden', 'true');
@@ -389,41 +340,14 @@ ENHANCEMENT_JS = f"""
     const nav = document.querySelector('[data-explainer-control="section_toc"]');
     const toolbar = document.createElement('div');
     toolbar.className = 'reader-toolbar';
-    toolbar.setAttribute('aria-label', 'Reader controls');
+    toolbar.setAttribute('aria-label', 'Explainer search');
     toolbar.innerHTML = `
       <input type="search" placeholder="Search this explainer" aria-label="Search this explainer">
-      <button type="button" data-action="expand">Expand notes</button>
-      <button type="button" data-action="collapse">Collapse notes</button>
-      <button type="button" data-mode="simple">Simple view</button>
-      <button type="button" data-mode="technical">Technical view</button>
     `;
     if (nav) nav.insertAdjacentElement('afterend', toolbar);
 
-    const updateModeButtons = () => {{
-      toolbar.querySelectorAll('[data-mode]').forEach((button) => {{
-        button.setAttribute('aria-pressed', String(button.dataset.mode === body.dataset.readerMode));
-      }});
-    }};
-    updateModeButtons();
-
-    toolbar.addEventListener('click', (event) => {{
-      const button = event.target.closest('button');
-      if (!button) return;
-      if (button.dataset.action === 'expand') {{
-        document.querySelectorAll('details').forEach((details) => {{ details.open = true; }});
-      }}
-      if (button.dataset.action === 'collapse') {{
-        document.querySelectorAll('details').forEach((details) => {{ details.open = false; }});
-      }}
-      if (button.dataset.mode) {{
-        body.dataset.readerMode = button.dataset.mode;
-        localStorage.setItem(storageKey, button.dataset.mode);
-        updateModeButtons();
-      }}
-    }});
-
     const searchable = Array.from(document.querySelectorAll(
-      '[data-content-block], [data-analysis-capsule], .source-list li, .atlas-link'
+      '[data-content-block], .source-list li, .atlas-link'
     ));
 
     const clearMarks = (node) => {{
@@ -454,7 +378,7 @@ ENHANCEMENT_JS = f"""
     }};
 
     const searchInput = toolbar.querySelector('input[type="search"]');
-    searchInput?.addEventListener('input', () => {{
+    const applySearch = () => {{
       const raw = searchInput.value.trim();
       const query = raw.toLowerCase();
       searchable.forEach((node) => {{
@@ -463,7 +387,9 @@ ENHANCEMENT_JS = f"""
         node.hidden = !matches;
         if (matches && query) markText(node, query);
       }});
-    }});
+    }};
+    searchInput?.addEventListener('input', applySearch);
+    searchInput?.addEventListener('search', applySearch);
 
     const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
     sourceNodes.forEach((node) => {{
@@ -510,15 +436,115 @@ ENHANCEMENT_JS = f"""
 def already_enhanced(text: str) -> bool:
     return STYLE_ID in text or SCRIPT_ID in text
 
-def inject(text: str) -> str:
-    if already_enhanced(text):
-        return text
+def replace_tag_by_id(text: str, tag: str, element_id: str, replacement: str) -> str:
+    pattern = re.compile(
+        rf"<{tag}\b[^>]*\bid=[\"']{re.escape(element_id)}[\"'][^>]*>.*?</{tag}>",
+        re.IGNORECASE | re.DOTALL,
+    )
+    updated, count = pattern.subn(replacement, text, count=1)
+    return updated if count else text
 
+def remove_visible_file_metadata(text: str) -> str:
+    return re.sub(
+        r"\n\s*<aside\s+class=[\"']meta-stack[\"']\s+aria-label=[\"']Page metadata[\"']>.*?</aside>",
+        "",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
+def remove_analysis_capsule_layer(text: str) -> str:
+    text = re.sub(
+        r"<a\s+href=[\"']#analysis[\"']>Analysis</a>",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(
+        r"\n\s*<section\s+id=[\"']analysis[\"'][^>]*>.*?</section>",
+        "",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    text = re.sub(
+        r"<p>The legitimate claim is explanatory:.*?</p>",
+        "",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    text = text.replace(".hub-grid, .capsule-grid, .source-grid", ".hub-grid, .source-grid")
+    text = text.replace(".atlas-link, .content-block, .capsule, .block-subgroup", ".atlas-link, .content-block, .block-subgroup")
+    text = re.sub(
+        r"\n\s*\.capsule(?:-row)?\b[^{}]*\{[^{}]*\}",
+        "",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    return text
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def source_basis_by_output(root: Path) -> dict[Path, tuple[str, str]]:
+    registry = root / "registries" / "MARKDOWN_SOURCE_REGISTRY.csv"
+    if not registry.exists():
+        return {}
+    by_output: dict[Path, tuple[str, str]] = {}
+    with registry.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            if row.get("role") != "html_explainer_source_spec":
+                continue
+            spec_path = root / row.get("path", "")
+            if not spec_path.exists():
+                continue
+            match = OUTPUT_PATH_RE.search(spec_path.read_text(encoding="utf-8"))
+            if not match:
+                continue
+            by_output[(root / match.group(1).strip()).resolve()] = (
+                row.get("object_id", ""),
+                sha256_file(spec_path),
+            )
+    return by_output
+
+
+def upsert_meta(text: str, name: str, content: str) -> str:
+    pattern = re.compile(
+        rf"(<meta\s+name=[\"']{re.escape(name)}[\"']\s+content=[\"'])([^\"']*)([\"'][^>]*>)",
+        re.IGNORECASE,
+    )
+    updated, count = pattern.subn(rf"\g<1>{content}\g<3>", text, count=1)
+    if count:
+        return updated
+    return updated.replace(
+        "</head>", f'  <meta name="{name}" content="{content}">\n</head>', 1
+    )
+
+
+def refresh_source_basis_metadata(text: str, source_basis: tuple[str, str] | None) -> str:
+    if not source_basis:
+        return text
+    object_id, source_hash = source_basis
+    if not object_id or not source_hash:
+        return text
+    text = upsert_meta(text, "aether-flow-source-basis", object_id)
+    return upsert_meta(text, "aether-flow-source-basis-hash", source_hash)
+
+
+def inject(text: str, source_basis: tuple[str, str] | None = None) -> str:
     if "</head>" not in text or "</body>" not in text:
         raise ValueError("not a complete HTML document")
 
-    text = text.replace("</head>", ENHANCEMENT_CSS + "\n</head>", 1)
-    text = text.replace("</body>", ENHANCEMENT_JS + "\n</body>", 1)
+    text = refresh_source_basis_metadata(text, source_basis)
+    text = remove_visible_file_metadata(text)
+    text = remove_analysis_capsule_layer(text)
+    if STYLE_ID in text:
+        text = replace_tag_by_id(text, "style", STYLE_ID, ENHANCEMENT_CSS)
+    else:
+        text = text.replace("</head>", ENHANCEMENT_CSS + "\n</head>", 1)
+    if SCRIPT_ID in text:
+        text = replace_tag_by_id(text, "script", SCRIPT_ID, ENHANCEMENT_JS)
+    else:
+        text = text.replace("</body>", ENHANCEMENT_JS + "\n</body>", 1)
     return text
 
 def iter_html(root: Path) -> Iterable[Path]:
@@ -534,16 +560,18 @@ def main() -> int:
     parser.add_argument("--suffix", default=".enhanced", help="suffix before .html when not using --in-place")
     args = parser.parse_args()
 
-    files = list(iter_html(args.root))
+    root = args.root.resolve()
+    files = list(iter_html(root))
     if not files:
         print("No explainer HTML files found under html/")
         return 1
 
+    basis_by_output = source_basis_by_output(root)
     changed = 0
     for path in files:
         original = path.read_text(encoding="utf-8")
         try:
-            updated = inject(original)
+            updated = inject(original, basis_by_output.get(path.resolve()))
         except ValueError as exc:
             print(f"SKIP {path}: {exc}")
             continue

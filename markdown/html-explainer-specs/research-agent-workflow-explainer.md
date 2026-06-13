@@ -24,7 +24,6 @@ presentation_profile: "workflow_lifecycle"
 layout_intent: "Use a workflow lifecycle with a concrete object-path trace, state diagrams, and evidence panels for task, AgentJob, role, artifact, completion, handoff, and registry records."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
@@ -35,14 +34,6 @@ required_content_blocks:
   - "role_execution"
   - "validation_completion_handoff"
   - "registry_update"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -166,47 +157,3 @@ Summary source basis:
 - role_execution: A documentation section explaining registered roles, task overlays, provisional roles, role authority, removed or expanded permissions, expiry, and validator evidence.
 - validation_completion_handoff: A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance.
 - registry_update: A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory.
-
-## Required Analysis Capsules
-
-### Bounded Research Transaction
-
-- premise: The research system advances through bounded transactions rather
-  than open-ended editing.
-- mechanism: A Director decision selects a role and objective; an AgentJob binds
-  reads, writes, outputs, validators, and claim boundaries; completion and
-  handoff records preserve the result.
-- source_basis: `research_control/README.md`, `research_control/AGENTS.md`,
-  `registries/AGENT_JOB_REGISTRY.csv`, and
-  `registries/DIRECTOR_DECISION_REGISTRY.csv`.
-- authority_status: Project-control explanation; it does not prove a physics
-  result.
-- uncertainty: A completed transaction may preserve progress, obstruction, or a
-  negative result without establishing the broader theory.
-- validation_or_test: Check task files, completion records, registry rows,
-  validator receipts, and diff boundaries before accepting a transaction.
-- next_step: Use the role-routing explainer to inspect how roles are selected
-  and constrained.
-
-### Two Continuation Modes
-
-- premise: Physics continuation and project-system improvement are separate
-  modes with different authority boundaries.
-- mechanism: `continue-research` resolves tracked research state and may open
-  one bounded physics AgentJob; `improve-project-system` handles roles,
-  validators, docs, memory tooling, and generated-document pipelines.
-- source_basis: `.codex/skills/continue-research/SKILL.md`,
-  `.codex/skills/improve-project-system/SKILL.md`, and `AGENTS.md`.
-- authority_status: Workflow explanation only.
-- uncertainty: Project-system improvements can strengthen the research system
-  without changing scientific claim status.
-- validation_or_test: Verify skill, role, and claim-boundary rows for the
-  selected mode.
-- next_step: Keep workflow status separate from claim promotion.
-
-## Non-Goals
-
-- Do not add or modify workflow rules.
-- Do not change role contracts, validators, schemas, or routing behavior.
-- Do not promote project-system status to scientific evidence.
-- Do not use external images or network-dependent assets.

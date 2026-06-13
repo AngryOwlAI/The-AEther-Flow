@@ -4,7 +4,7 @@ version: "0.5.0"
 role_name: "Documentation Curator"
 role_kind: "project_documentation"
 authority_level: "project_control"
-status: "active"
+status: "superseded"
 may_execute_autonomously: true
 may_create_outputs: true
 may_modify_sources: true
@@ -17,6 +17,10 @@ forbidden_source_classes: "canonical_ontology;benchmark_source;science_draft;con
 ---
 
 # Documentation Curator v0.5.0
+
+Superseded by `documentation-curator@0.6.0` for future reader-layer cleanup
+and visible metadata boundaries. This version is retained for historical
+execution records from the HTML explainer depth upgrade kit.
 
 ## Mission
 

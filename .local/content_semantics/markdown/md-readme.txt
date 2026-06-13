@@ -209,8 +209,8 @@ source spec under `markdown/html-explainer-specs/` with `title`, `purpose`,
 `audience`, `output_path`, `renderer_skill`, `source_materials`,
 `claim_boundary`, `human_visual_only: true`, `explainer_kind`,
 `interaction_model`, `analysis_depth`, `required_controls`,
-`presentation_profile`, `layout_intent`, `required_content_blocks`,
-and `analysis_capsule_schema`. Modify the spec first, then regenerate the HTML
+`presentation_profile`, `layout_intent`, and `required_content_blocks`.
+Modify the spec first, then regenerate the HTML
 output. The required source control is `source_materials_section`; legacy
 `source_drilldowns` and `claim_boundary_toggle` controls are optional only when
 a spec explicitly declares them.

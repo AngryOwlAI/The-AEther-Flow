@@ -43,9 +43,11 @@ Every non-summary content block should answer seven reader questions:
 7. Where should a reader go next?
 
 The renderer may present those answers as prose, cards, a matrix, quote
-callouts, a timeline, tabs, or another source-backed structure. The HTML must
-look like completed documentation rather than instructions for future
-documentation.
+callouts, a timeline, tabs, or another source-backed structure. It should
+integrate authority boundaries where they clarify a specific section, but it
+must not append the same generic claim-boundary paragraph to every content
+block. The HTML must look like completed documentation rather than instructions
+for future documentation.
 
 ## Audience Ladder
 
@@ -95,8 +97,6 @@ The generated HTML set should use a shared standalone reader layer with:
 - reading progress,
 - active-section navigation,
 - local page search,
-- simple and technical reading modes,
-- expand/collapse controls for details,
 - click-to-copy source chips,
 - stronger visual distinction between authority, physics, workflow, generated
   derivative, warning, and validation content,
@@ -104,6 +104,18 @@ The generated HTML set should use a shared standalone reader layer with:
 - no network assets,
 - no runtime Mermaid import,
 - no changes to Mermaid diagram definitions.
+
+The reader layer should not render file-management metadata as title-section
+cards. `layout_intent`, registry `source_basis`, and human-only derivative
+status remain source-spec or registry metadata. They may appear in machine
+metadata and validation evidence, while visible grounding belongs in
+`subject_summary` source chips and the All Source Materials section.
+
+Global simple/technical mode toggles and global expand/collapse buttons are
+not part of the required reader layer. They add state without clear
+source-backed reading value. A future page-specific disclosure control may be
+introduced only when the source spec defines the need and browser QA verifies
+the behavior.
 
 ## Advisory Depth Lint
 

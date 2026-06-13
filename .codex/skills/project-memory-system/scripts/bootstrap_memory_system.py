@@ -233,7 +233,6 @@ HTML_SPEC_REQUIRED_FIELDS = {
     "interaction_model",
     "analysis_depth",
     "required_controls",
-    "analysis_capsule_schema",
     "presentation_profile",
     "layout_intent",
     "required_content_blocks",
@@ -264,9 +263,32 @@ HTML_SUBJECT_SUMMARY_FORBIDDEN_TEXT = {
     "Reader orientation",
     "What This Explainer Describes",
 }
+HTML_FORBIDDEN_VISIBLE_METADATA_TEXT = {
+    "Page metadata",
+    "Layout intent",
+}
+HTML_FORBIDDEN_READER_LAYER_TEXT = {
+    "Expand notes",
+    "Collapse notes",
+    "Simple view",
+    "Technical view",
+    "data-action=\"expand\"",
+    "data-action=\"collapse\"",
+    "data-mode=\"simple\"",
+    "data-mode=\"technical\"",
+    "data-reader-mode",
+}
+HTML_FORBIDDEN_ANALYSIS_CAPSULE_TEXT = {
+    "Analysis capsules",
+    "Claim-Aware Analysis",
+    "data-analysis-capsule",
+    "data-capsule-field",
+}
+HTML_FORBIDDEN_CONTENT_BLOCK_BOILERPLATE_TEXT = {
+    "The legitimate claim is explanatory:",
+}
 HTML_CONTROL_VALUES = {
     "section_toc",
-    "expandable_analysis_panels",
     "source_materials_section",
     "source_drilldowns",
     "claim_boundary_toggle",
@@ -274,19 +296,9 @@ HTML_CONTROL_VALUES = {
 }
 HTML_UNIVERSAL_REQUIRED_CONTROLS = {
     "section_toc",
-    "expandable_analysis_panels",
     "source_materials_section",
 }
 HTML_WORKFLOW_CONTROL_KINDS = {"workflow_process", "control_system"}
-HTML_CAPSULE_FIELDS = {
-    "premise",
-    "mechanism",
-    "source_basis",
-    "authority_status",
-    "uncertainty",
-    "validation_or_test",
-    "next_step",
-}
 HTML_SOURCE_BASIS_META_RE = re.compile(
     r'<meta\s+name=["\']aether-flow-source-basis["\']\s+content=["\']([^"\']+)["\']',
     re.IGNORECASE,
@@ -300,7 +312,7 @@ HTML_HUMAN_VISUAL_META_RE = re.compile(
     re.IGNORECASE,
 )
 HTML_DATA_ATTR_RE = r'\b{attr}\s*=\s*["\']([^"\']+)["\']'
-CSS_RULE_RE = re.compile(r"([^{}]+)\{([^{}]*)\}", re.MULTILINE | re.DOTALL)
+HTML_STYLE_BLOCK_RE = re.compile(r"<style\b[^>]*>(.*?)</style>", re.IGNORECASE | re.DOTALL)
 HTML_PROSE_ANYWHERE_SELECTORS = (".atlas-card", "p", "th", "td")
 
 
@@ -903,12 +915,47 @@ def first_required_content_block_definition(body: str) -> str:
     return ""
 
 
+def css_rules_from_text(css_text: str) -> list[tuple[str, str]]:
+    rules: list[tuple[str, str]] = []
+    index = 0
+    length = len(css_text)
+    while index < length:
+        open_index = css_text.find("{", index)
+        if open_index == -1:
+            break
+        selectors = css_text[index:open_index].strip()
+        depth = 1
+        cursor = open_index + 1
+        while cursor < length and depth:
+            char = css_text[cursor]
+            if char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+            cursor += 1
+        if depth:
+            break
+        body = css_text[open_index + 1 : cursor - 1]
+        if selectors.lstrip().startswith("@"):
+            rules.extend(css_rules_from_text(body))
+        elif selectors:
+            rules.append((selectors, body))
+        index = cursor
+    return rules
+
+
+def css_rules_in_html(html_text: str) -> list[tuple[str, str]]:
+    rules: list[tuple[str, str]] = []
+    for match in HTML_STYLE_BLOCK_RE.finditer(html_text):
+        rules.extend(css_rules_from_text(match.group(1)))
+    return rules
+
+
 def css_rule_bodies_for_selector(html_text: str, selector_fragment: str) -> list[str]:
     bodies: list[str] = []
-    for match in CSS_RULE_RE.finditer(html_text):
-        selectors = match.group(1)
+    for selectors, body in css_rules_in_html(html_text):
         if selector_fragment in selectors:
-            bodies.append(match.group(2))
+            bodies.append(body)
     return bodies
 
 
@@ -926,6 +973,22 @@ def css_rule_with_selector_contains(
 def validate_html_layout_contract(
     report: ValidationReport, object_id: str, html_text: str
 ) -> None:
+    for forbidden_text in HTML_FORBIDDEN_VISIBLE_METADATA_TEXT:
+        if forbidden_text in html_text:
+            report.error(f"{object_id}: visible file metadata must not render")
+            break
+    for forbidden_text in HTML_FORBIDDEN_READER_LAYER_TEXT:
+        if forbidden_text in html_text:
+            report.error(f"{object_id}: removed reader toolbar control is still present")
+            break
+    for forbidden_text in HTML_FORBIDDEN_ANALYSIS_CAPSULE_TEXT:
+        if forbidden_text in html_text:
+            report.error(f"{object_id}: analysis capsule section must not render")
+            break
+    for forbidden_text in HTML_FORBIDDEN_CONTENT_BLOCK_BOILERPLATE_TEXT:
+        if forbidden_text in html_text:
+            report.error(f"{object_id}: content-block claim boilerplate must not render")
+            break
     layer_fixed_three = css_rule_with_selector_contains(
         html_text, ".layer-strip", "grid-template-columns:repeat(3"
     )
@@ -936,11 +999,10 @@ def validate_html_layout_contract(
         report.error(
             f"{object_id}: three-layer model uses nested fixed three-column grids"
         )
-    for match in CSS_RULE_RE.finditer(html_text):
-        body_normalized = re.sub(r"\s+", "", match.group(2)).lower()
+    for selector_text, body in css_rules_in_html(html_text):
+        body_normalized = re.sub(r"\s+", "", body).lower()
         if "overflow-wrap:anywhere" not in body_normalized:
             continue
-        selector_text = match.group(1)
         selectors = [selector.strip() for selector in selector_text.split(",")]
         for selector in selectors:
             selector_parts = set(re.findall(r"[.#]?[A-Za-z][A-Za-z0-9_-]*", selector))
@@ -1068,16 +1130,13 @@ def generate_html_rows(now: str, markdown_rows: list[dict[str, str]]) -> list[di
             object_id = f"HTML-{object_suffix_from_stem(path.stem)}"
         html_hash = sha256_file(path)
         html_changed = existing_row.get("html_hash") != html_hash
-        if not existing_row or html_changed:
-            source_basis = spec_row.get("object_id", "")
-            source_basis_hash = spec_row.get("source_hash", "")
-            skill_version = spec_row.get("renderer_skill", "")
-        else:
-            source_basis = spec_row.get("object_id", existing_row.get("source_basis", ""))
-            source_basis_hash = existing_row.get("source_basis_hash", "")
-            skill_version = spec_row.get(
-                "renderer_skill", existing_row.get("visual_explainer_skill_version", "")
-            )
+        source_basis = spec_row.get("object_id", existing_row.get("source_basis", ""))
+        source_basis_hash = spec_row.get(
+            "source_hash", existing_row.get("source_basis_hash", "")
+        )
+        skill_version = spec_row.get(
+            "renderer_skill", existing_row.get("visual_explainer_skill_version", "")
+        )
         last_validated_at = existing_row.get("last_validated_at", "")
         if html_changed:
             last_validated_at = now
@@ -1789,18 +1848,8 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
             }
             if missing_sources:
                 report.error(f"{object_id}: source_drilldowns must cite source_materials")
-        capsule_schema = frontmatter.get("analysis_capsule_schema", [])
-        if not isinstance(capsule_schema, list) or not capsule_schema:
-            report.error(
-                f"{object_id}: analysis_capsule_schema must be a non-empty list"
-            )
-            capsule_fields: set[str] = set()
-        else:
-            capsule_fields = {
-                str(field).strip() for field in capsule_schema if str(field).strip()
-            }
-            if capsule_fields != HTML_CAPSULE_FIELDS:
-                report.error(f"{object_id}: analysis_capsule_schema is incomplete")
+        if "analysis_capsule_schema" in frontmatter:
+            report.error(f"{object_id}: analysis_capsule_schema is obsolete")
         required_content_blocks = frontmatter.get("required_content_blocks", [])
         if not isinstance(required_content_blocks, list) or not required_content_blocks:
             report.error(
@@ -1825,13 +1874,8 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
                 report.error(
                     f"{object_id}: first required_content_blocks value must be subject_summary"
                 )
-        if "## Required Analysis Capsules" not in body:
-            report.error(f"{object_id}: missing Required Analysis Capsules section")
-        for field_name in sorted(capsule_fields):
-            if f"{field_name}:" not in body:
-                report.error(
-                    f"{object_id}: Required Analysis Capsules missing {field_name}"
-                )
+        if "## Required Analysis Capsules" in body:
+            report.error(f"{object_id}: Required Analysis Capsules section is obsolete")
         if "## Required Content Blocks" not in body:
             report.error(f"{object_id}: missing Required Content Blocks section")
         elif (
@@ -1919,20 +1963,6 @@ def validate_html_registry(
         for control in sorted(declared_controls):
             if control not in html_controls:
                 report.error(f"{object_id}: missing HTML control marker {control}")
-        capsule_markers = html_data_values("data-analysis-capsule", html_text)
-        if not capsule_markers:
-            report.error(f"{object_id}: missing data-analysis-capsule marker")
-        capsule_fields = {
-            str(field).strip()
-            for field in frontmatter.get("analysis_capsule_schema", [])
-            if str(field).strip()
-        }
-        html_capsule_fields = html_data_values("data-capsule-field", html_text)
-        for field_name in sorted(capsule_fields):
-            if field_name not in html_capsule_fields:
-                report.error(
-                    f"{object_id}: missing HTML capsule field marker {field_name}"
-                )
         if "source_materials_section" in declared_controls or "source_drilldowns" in declared_controls:
             source_paths = html_data_values("data-source-path", html_text)
             if not source_paths:

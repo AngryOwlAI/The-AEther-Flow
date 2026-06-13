@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="146ba57f1724019fa8441d4960888ef766d0ab9a0bd6ad69c4e9e0cfa93ed513">
+  <meta name="aether-flow-source-basis-hash" content="961291e9ca3879b1cceac530a184c75724158e45654a9bd6feaad59a527add97">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Research System</title>
   <style>
@@ -37,10 +37,10 @@
     .panel { border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 24px; }
     .section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 16px; }
     .block-head { display: grid; gap: 10px; align-items: start; margin-bottom: 16px; }
-    .hub-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .hub-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     .content-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
-    .atlas-link, .content-block, .capsule, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .atlas-link, .content-block, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
     .content-block { overflow-x: auto; }
     .atlas-link { text-decoration: none; display: block; }
     .atlas-link strong { display: block; color: var(--authority); margin-bottom: 6px; }
@@ -55,11 +55,6 @@
     summary { cursor: pointer; font-weight: 800; }
     .trace-list { display: grid; gap: 10px; padding-left: 24px; }
     .trace-list li { border: 1px solid var(--border); background: var(--surface); padding: 12px; }
-    .capsule dl { display: grid; gap: 10px; margin: 0; }
-    .capsule-row, .capsule dt, .capsule dd { min-width: 0; overflow-wrap: break-word; }
-    .capsule dl { grid-template-columns: minmax(0, 1fr); }
-    .capsule dt { color: var(--authority); text-transform: uppercase; font-size: .78rem; font-weight: 800; }
-    .capsule dd { margin: 0; color: var(--muted); line-height: 1.52; }
     .claim-box { background: linear-gradient(135deg, var(--warning-soft), #fffaf0); }
     .diagram-shell { overflow: hidden; }
     .mermaid-wrap { position: relative; border: 1px solid var(--border); background: #fbfaf6; min-height: 360px; height: 440px; max-height: 780px; overflow: hidden; }
@@ -72,6 +67,11 @@
     pre { overflow: auto; white-space: pre-wrap; background: #161b18; color: #edf2ec; padding: 14px; }
     @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding: 22px; } .section-heading, .block-head { display: block; } .nav { position: static; flex-wrap: wrap; overflow: visible; } .nav a { white-space: normal; } }
   </style>
+
+
+
+
+
 
 <style id="aether-docs-enhancement">
   :root {
@@ -120,7 +120,6 @@
   .panel,
   .atlas-link,
   .content-block,
-  .capsule,
   .block-subgroup,
   .source-list li,
   details {
@@ -146,6 +145,15 @@
 
   h2, h3 { text-wrap: balance; }
 
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .hero > div {
+    max-width: 78ch;
+  }
+
   p, li, dd {
     font-size: 1.01rem;
     line-height: 1.72;
@@ -156,14 +164,9 @@
     max-width: 70ch;
   }
 
-  .meta-chip,
   .source-chip,
   .control-marker {
     border-radius: 999px;
-  }
-
-  .meta-chip {
-    box-shadow: 0 10px 28px rgba(30,58,95,.08);
   }
 
   .nav {
@@ -296,22 +299,6 @@
     font: inherit;
   }
 
-  .reader-toolbar button {
-    border: 1px solid rgba(33,49,40,.16);
-    border-radius: 999px;
-    padding: 9px 12px;
-    color: var(--doc-ink);
-    background: #fff;
-    font: inherit;
-    font-weight: 800;
-    cursor: pointer;
-  }
-
-  .reader-toolbar button[aria-pressed="true"] {
-    background: var(--doc-ink);
-    color: #fffaf1;
-  }
-
   .reading-progress {
     position: fixed;
     z-index: 10;
@@ -343,27 +330,6 @@
 
   [hidden] { display: none !important; }
 
-  body[data-reader-mode="simple"] details.source-fold,
-  body[data-reader-mode="simple"] pre {
-    display: none;
-  }
-
-  body[data-reader-mode="simple"] .capsule dd {
-    color: var(--doc-ink);
-  }
-
-  body[data-reader-mode="simple"] p,
-  body[data-reader-mode="simple"] li,
-  body[data-reader-mode="simple"] dd {
-    font-size: 1.06rem;
-    line-height: 1.78;
-  }
-
-  body[data-reader-mode="technical"] .source-chip,
-  body[data-reader-mode="technical"] code {
-    font-size: .95em;
-  }
-
   .diagram-shell {
     background:
       linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
@@ -391,19 +357,6 @@
     background: rgba(223,232,242,.58);
   }
 
-  .capsule {
-    box-shadow: 0 8px 28px rgba(27,33,28,.055);
-  }
-
-  .capsule-row {
-    padding: 10px 0;
-    border-top: 1px dashed rgba(33,49,40,.12);
-  }
-
-  .capsule-row:first-child {
-    border-top: 0;
-  }
-
   @media (max-width: 860px) {
     .reader-toolbar {
       position: static;
@@ -418,26 +371,26 @@
   }
 </style>
 
+
+
+
+
+
 </head>
 <body>
   <main class="page-shell">
     <header class="hero">
       <div><p class="eyebrow">workflow_lifecycle</p><h1>Research System</h1><p class="hero-copy">Show how the project research system uses Director decisions, AgentJobs, role contracts, validation, completions, registries, and handoffs to make theoretical work auditable.</p></div>
-      <aside class="meta-stack" aria-label="Page metadata">
-        <div class="meta-chip"><strong>Layout intent</strong><br>Use a workflow lifecycle with a concrete object-path trace, state diagrams, and evidence panels for task, AgentJob, role, artifact, completion, handoff, and registry records.</div>
-        <div class="meta-chip"><strong>Authority</strong><br>Human-only generated derivative</div>
-        <div class="meta-chip"><strong>Source basis</strong><br><code>MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER</code></div>
-      </aside>
     </header>
     <section id="subject-summary" class="section panel subject-summary" data-content-block="subject_summary">
       <div class="section-heading"><div><h2>Summary of Research System</h2></div></div>
       <article class="content-block" data-summary-field="summary_text"><p>The research system is the governed workflow that turns a question, continuation state, or project-improvement signal into bounded agent work with explicit roles, decisions, registries, and validation. Its functionality is to separate physics continuation from project-system maintenance, resolve tracked state before acting, assign one bounded AgentJob, constrain that job with role authority and allowlists, and preserve completion evidence for the next handoff. This matters because the repository is not an informal chat log or autonomous proof engine; it is a controlled research program where claims, refutations, repairs, generated derivatives, and negative results must remain auditable. The workflow fits the larger project by making research progress reproducible without allowing workflow completion to stand in for scientific acceptance.</p></article>
       <div class="evidence-row" data-summary-field="source_basis"><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span><span class="source-chip" data-source-path=".codex/skills/continue-research/SKILL.md"><code>.codex/skills/continue-research/SKILL.md</code></span><span class="source-chip" data-source-path="registries/AGENT_JOB_REGISTRY.csv"><code>registries/AGENT_JOB_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/DIRECTOR_DECISION_REGISTRY.csv"><code>registries/DIRECTOR_DECISION_REGISTRY.csv</code></span></div>
     </section>
-    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#diagrams">Diagrams</a><a href="#workflow">Workflow</a><a href="#analysis">Analysis</a><a href="#sources">Sources</a></nav>
+    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#diagrams">Diagrams</a><a href="#workflow">Workflow</a><a href="#sources">Sources</a></nav>
     <section id="content-blocks" class="section panel">
       <div class="section-heading"><div><h2>Source-Backed Coverage</h2></div></div>
-      <div class="content-grid"><article class="content-block" data-content-block="state_entry"><div class="block-head"><h3>Tracked Entry</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A completed lifecycle entry section covering tracked program state, latest handoffs, task files, and why local scratch context cannot override tracked control state. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p><p>The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.</p></article><article class="content-block" data-content-block="director_decision"><div class="block-head"><h3>Director Decision</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A source-backed account of how a Director decision selects one role, one bounded objective, claim boundaries, allowed paths, validators, and stop conditions before execution begins. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p><p>The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.</p></article><article class="content-block" data-content-block="agentjob_lifecycle"><div class="block-head"><h3>AgentJob Lifecycle</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A detailed explanation of `00_TASK.yaml`, `jobs/AJ-*.yaml`, task-local role overlays, allowed writes, expected outputs, and why one bounded AgentJob is the unit of accountable work. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p><p>The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.</p></article><article class="content-block" data-content-block="role_execution"><div class="block-head"><h3>Role Execution</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span></div></div><p>A documentation section explaining registered roles, task overlays, provisional roles, role authority, removed or expanded permissions, expiry, and validator evidence. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>registries/ROLE_EXECUTION_REGISTRY.csv</code>, <code>README.md</code>, <code>AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p><p>The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.</p></article><article class="content-block" data-content-block="validation_completion_handoff"><div class="block-head"><h3>Validation Completion Handoff</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p><p>The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.</p></article><article class="content-block" data-content-block="registry_update"><div class="block-head"><h3>Registry Update</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p><p>The legitimate claim is explanatory: this block may summarize roles, controls, formats, workflow objects, or source boundaries that already exist in the cited materials. It may not change project authority, edit canonical science sources, or turn generated HTML into independent authority. The next step is to follow the source chips, inspect the relevant registry row or source file, and use the linked drilldown page or validator command when deeper review is needed.</p></article></div>
+      <div class="content-grid"><article class="content-block" data-content-block="state_entry"><div class="block-head"><h3>Tracked Entry</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A completed lifecycle entry section covering tracked program state, latest handoffs, task files, and why local scratch context cannot override tracked control state. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="director_decision"><div class="block-head"><h3>Director Decision</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A source-backed account of how a Director decision selects one role, one bounded objective, claim boundaries, allowed paths, validators, and stop conditions before execution begins. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="agentjob_lifecycle"><div class="block-head"><h3>AgentJob Lifecycle</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A detailed explanation of `00_TASK.yaml`, `jobs/AJ-*.yaml`, task-local role overlays, allowed writes, expected outputs, and why one bounded AgentJob is the unit of accountable work. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="role_execution"><div class="block-head"><h3>Role Execution</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span></div></div><p>A documentation section explaining registered roles, task overlays, provisional roles, role authority, removed or expanded permissions, expiry, and validator evidence. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>registries/ROLE_EXECUTION_REGISTRY.csv</code>, <code>README.md</code>, <code>AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="validation_completion_handoff"><div class="block-head"><h3>Validation Completion Handoff</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="registry_update"><div class="block-head"><h3>Registry Update</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span></div></div><p>A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory. In reader-facing terms, this section identifies the subject of <strong>Research System</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/AGENTS.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article></div>
 
     </section>
     <div id="diagrams">
@@ -512,7 +465,6 @@ stateDiagram-v2
   </script>
 </section></div>
     <section id="workflow" class="section panel" data-explainer-control="workflow_step_inspector"><p class="eyebrow">Workflow inspector</p><h2>Inspectable Object Path</h2><ol class="trace-list"><li><strong>1. program_state.yaml</strong><span>Tracked program state names the latest operating boundary.</span></li><li><strong>2. latest handoff-*</strong><span>The handoff preserves the next role, task, and source-state constraints.</span></li><li><strong>3. Director decision</strong><span>The Director selects role, task objective, and claim boundary.</span></li><li><strong>4. 00_TASK.yaml</strong><span>The task file records objective, status, scope, and next action.</span></li><li><strong>5. jobs/AJ-*.yaml</strong><span>The AgentJob binds reads, writes, outputs, validators, and limits.</span></li><li><strong>6. roles/*.yaml</strong><span>The execution-role record narrows or overlays role authority for this job.</span></li><li><strong>7. artifacts/*</strong><span>Allowed outputs are produced inside the task boundary.</span></li><li><strong>8. completion YAML</strong><span>The completion records verdict, command results, and validation status.</span></li></ol></section>
-    <section id="analysis" class="section panel" data-explainer-control="expandable_analysis_panels"><p class="eyebrow">Analysis capsules</p><h2>Claim-Aware Analysis</h2><div class="capsule-grid"><article class="capsule" data-analysis-capsule="capsule-1"><h3>Bounded Research Transaction</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>The research system advances through bounded transactions rather than open-ended editing.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>A Director decision selects a role and objective; an AgentJob binds reads, writes, outputs, validators, and claim boundaries; completion and handoff records preserve the result.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`research_control/README.md`, `research_control/AGENTS.md`, `registries/AGENT_JOB_REGISTRY.csv`, and `registries/DIRECTOR_DECISION_REGISTRY.csv`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Project-control explanation; it does not prove a physics result.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>A completed transaction may preserve progress, obstruction, or a negative result without establishing the broader theory.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Check task files, completion records, registry rows, validator receipts, and diff boundaries before accepting a transaction.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Use the role-routing explainer to inspect how roles are selected and constrained.</dd></div></dl></article><article class="capsule" data-analysis-capsule="capsule-2"><h3>Two Continuation Modes</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>Physics continuation and project-system improvement are separate modes with different authority boundaries.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>`continue-research` resolves tracked research state and may open one bounded physics AgentJob; `improve-project-system` handles roles, validators, docs, memory tooling, and generated-document pipelines.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`.codex/skills/continue-research/SKILL.md`, `.codex/skills/improve-project-system/SKILL.md`, and `AGENTS.md`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Workflow explanation only.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>Project-system improvements can strengthen the research system without changing scientific claim status.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Verify skill, role, and claim-boundary rows for the selected mode.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Keep workflow status separate from claim promotion.</dd></div></dl></article></div></section>
     <section id="sources" class="section panel" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><p class="muted">Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.</p><ul class="source-list"><li data-source-path="README.md"><code>README.md</code></li><li data-source-path="AGENTS.md"><code>AGENTS.md</code></li><li data-source-path="research_control/AGENTS.md"><code>research_control/AGENTS.md</code></li><li data-source-path="research_control/README.md"><code>research_control/README.md</code></li><li data-source-path=".codex/skills/continue-research/SKILL.md"><code>.codex/skills/continue-research/SKILL.md</code></li><li data-source-path=".codex/skills/improve-project-system/SKILL.md"><code>.codex/skills/improve-project-system/SKILL.md</code></li><li data-source-path="registries/AGENT_JOB_REGISTRY.csv"><code>registries/AGENT_JOB_REGISTRY.csv</code></li><li data-source-path="registries/DIRECTOR_DECISION_REGISTRY.csv"><code>registries/DIRECTOR_DECISION_REGISTRY.csv</code></li><li data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></li><li data-source-path="registries/RESEARCH_TASK_REGISTRY.csv"><code>registries/RESEARCH_TASK_REGISTRY.csv</code></li></ul></section>
   </main>
   <script>
@@ -572,15 +524,15 @@ stateDiagram-v2
     })();
   </script>
 
+
+
+
+
+
 <script id="aether-docs-enhancement-js">
   (() => {
     if (window.__aetherDocsEnhancementLoaded) return;
     window.__aetherDocsEnhancementLoaded = true;
-
-    const body = document.body;
-    const storageKey = `aether-doc-mode:${location.pathname}`;
-    const savedMode = localStorage.getItem(storageKey) || 'technical';
-    body.dataset.readerMode = savedMode;
 
     const progress = document.createElement('div');
     progress.className = 'reading-progress';
@@ -590,41 +542,14 @@ stateDiagram-v2
     const nav = document.querySelector('[data-explainer-control="section_toc"]');
     const toolbar = document.createElement('div');
     toolbar.className = 'reader-toolbar';
-    toolbar.setAttribute('aria-label', 'Reader controls');
+    toolbar.setAttribute('aria-label', 'Explainer search');
     toolbar.innerHTML = `
       <input type="search" placeholder="Search this explainer" aria-label="Search this explainer">
-      <button type="button" data-action="expand">Expand notes</button>
-      <button type="button" data-action="collapse">Collapse notes</button>
-      <button type="button" data-mode="simple">Simple view</button>
-      <button type="button" data-mode="technical">Technical view</button>
     `;
     if (nav) nav.insertAdjacentElement('afterend', toolbar);
 
-    const updateModeButtons = () => {
-      toolbar.querySelectorAll('[data-mode]').forEach((button) => {
-        button.setAttribute('aria-pressed', String(button.dataset.mode === body.dataset.readerMode));
-      });
-    };
-    updateModeButtons();
-
-    toolbar.addEventListener('click', (event) => {
-      const button = event.target.closest('button');
-      if (!button) return;
-      if (button.dataset.action === 'expand') {
-        document.querySelectorAll('details').forEach((details) => { details.open = true; });
-      }
-      if (button.dataset.action === 'collapse') {
-        document.querySelectorAll('details').forEach((details) => { details.open = false; });
-      }
-      if (button.dataset.mode) {
-        body.dataset.readerMode = button.dataset.mode;
-        localStorage.setItem(storageKey, button.dataset.mode);
-        updateModeButtons();
-      }
-    });
-
     const searchable = Array.from(document.querySelectorAll(
-      '[data-content-block], [data-analysis-capsule], .source-list li, .atlas-link'
+      '[data-content-block], .source-list li, .atlas-link'
     ));
 
     const clearMarks = (node) => {
@@ -655,7 +580,7 @@ stateDiagram-v2
     };
 
     const searchInput = toolbar.querySelector('input[type="search"]');
-    searchInput?.addEventListener('input', () => {
+    const applySearch = () => {
       const raw = searchInput.value.trim();
       const query = raw.toLowerCase();
       searchable.forEach((node) => {
@@ -664,7 +589,9 @@ stateDiagram-v2
         node.hidden = !matches;
         if (matches && query) markText(node, query);
       });
-    });
+    };
+    searchInput?.addEventListener('input', applySearch);
+    searchInput?.addEventListener('search', applySearch);
 
     const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
     sourceNodes.forEach((node) => {
@@ -706,6 +633,11 @@ stateDiagram-v2
     }
   })();
 </script>
+
+
+
+
+
 
 </body>
 </html>
