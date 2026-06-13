@@ -1,0 +1,266 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\LangPlus}{\mathcal{L}_{0}^{+H}}
+\newcommand{\LedgerFam}{\mathfrak{H}}
+\newcommand{\PiH}{\Pi_H}
+\newcommand{\Ad}{\mathsf{Ad}}
+\newcommand{\Blind}{\mathsf{Blind}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\EnvH}{\mathsf{Env}_{H}}
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\Retain}{\mathsf{Retain}}
+\newcommand{\NoTarget}{\mathsf{NoTarget}}
+\newcommand{\Audit}{\mathsf{Audit}}
+\newcommand{\Thm}{\mathsf{Thm}}
+\newcommand{\Block}{\mathsf{Block}}
+
+\newtheorem{proposal}{Proposal}
+\newtheorem{definitionblock}{Definition}
+\newtheorem{axiomcandidate}{Candidate rule}
+\newtheorem{burden}{Theorem burden}
+\newtheorem{guard}{Guard}
+\newtheorem{verdict}{Local verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain Ledger-Generation Ontology-Expansion Proposal}\\[0.35em]
+\large Noncanonical Source-Language Authority Candidate for Family-First Ledger Provenance}
+\author{Ontology Formalizer AgentJob AJ-RT-20260613-010-001}
+\date{June 13, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact proposes, but does not adopt, a source-language
+ontology expansion for the missing ledger-generation authority identified by
+the controlled-pause result for
+\(\mathsf{LedgerProv}_{\Lang}(\Pi_H,H,\LedgerFam)\). The proposal is a
+family-first ledger-generation envelope \(\EnvH\) in a candidate extension
+\(\LangPlus\). Its first output is an admissible ledger family
+\(\LedgerFam_{\PiH}\), not a distinguished candidate-supporting ledger.
+Uniqueness, complete retention, and any later candidate support remain
+separate theorem burdens. This artifact does not edit canonical ontology
+TeX, does not adopt new axioms, does not authorize candidate reconstruction,
+does not promote benchmark status, and does not request Gate Chair review.
+\end{abstract}
+
+\section{Scope}
+
+This artifact is a draft/control output for task \texttt{RT-20260613-010}.
+It responds to explicit human authorization to propose an ontology expansion
+for missing source-language ledger-generation authority.
+
+The proposal is intentionally weaker than adoption. It defines a candidate
+source-language extension that can be audited and refuted before any
+canonical ontology change is considered. The existing controlled pause
+therefore remains active for candidate-support purposes.
+
+\section{Problem Statement}
+
+The prior ledger-provenance theorem attempt established a precise blocker:
+the current registered source language \(\Lang\) does not prove a
+source-forced ledger generator \(\mathsf{Force}_H\), uniqueness of \(H\) up
+to declared source relabeling, or complete retention of all non-equivalent
+admissible ledgers. A direct rule selecting \(H\) would be unsafe because it
+could smuggle benchmark-favorable structure into source language.
+
+\begin{proposal}[Minimal expansion target]
+The proposed expansion target is not a rule selecting \(H\). It is a
+source-language envelope
+\[
+    \EnvH:\Pi_H\longmapsto \LedgerFam_{\PiH}
+\]
+that generates a complete family of admissible ledgers from source
+provenance records. A later theorem may identify uniqueness, equivalence
+classes, or retained negative controls. Until that theorem exists,
+\(\LedgerFam_{\PiH}\) remains family-valued draft/control evidence only.
+\end{proposal}
+
+\section{Candidate Extension}
+
+Let \(\LangPlus\) be a proposed noncanonical extension of \(\Lang\). It adds
+only source-side vocabulary for ledger generation and retention:
+\[
+\LangPlus =
+\Lang \cup
+\{\Ad_H,\Blind_H,\GenH,\EqSrc,\Retain_H,\NoTarget_H,\Audit_H\}.
+\]
+The intended meanings are:
+\begin{itemize}
+    \item \(\Ad_H(\Pi,H')\): \(H'\) is source-admissible from provenance
+    packet \(\Pi\).
+    \item \(\Blind_H(\Pi,H')\): \(H'\) is constructed without benchmark
+    outcome inspection.
+    \item \(\GenH(\Pi)\): the generated family of all ledgers satisfying
+    source admissibility and blinding constraints.
+    \item \(\EqSrc(H',H'')\): declared source relabeling equivalence.
+    \item \(\Retain_H(H')\): non-equivalent ledgers remain retained as
+    negative-control alternatives.
+    \item \(\NoTarget_H\): a syntactic exclusion predicate for target metric,
+    target locality, target observer protocol, target proper-time
+    normalization, target-favorable rank, and benchmark-success predicates.
+    \item \(\Audit_H\): a required audit marker before any canonical use.
+\end{itemize}
+
+\section{Candidate Rules}
+
+\begin{axiomcandidate}[Source provenance packet]
+The only admissible input to \(\GenH\) is
+\[
+\Pi_H=(\mathcal{R}_{0},\mathcal{C}_{0},\mathcal{O}_{0},
+\mathcal{Q}_{0},\mathcal{B}_{0}),
+\]
+where the components are source records, source closure rules, source
+operation seeds, source quotient seeds, and pre-benchmark blinding records.
+No target-effective predicate may appear in \(\Pi_H\).
+\end{axiomcandidate}
+
+\begin{axiomcandidate}[Family-first generation]
+\[
+\GenH(\Pi_H)=
+\{H' : \Ad_H(\Pi_H,H')\wedge \Blind_H(\Pi_H,H')\wedge \NoTarget_H(\Pi_H,H')\}.
+\]
+This rule generates a family. It does not select a preferred ledger and does
+not convert a generated ledger into candidate support.
+\end{axiomcandidate}
+
+\begin{axiomcandidate}[Equivalence after generation]
+Source equivalence is evaluated only after the family has been generated:
+\[
+H'\sim_{\mathrm{src}}H'' \quad \text{iff} \quad \EqSrc(H',H'').
+\]
+An equivalence theorem may later collapse the family, but equivalence cannot
+be assumed by definition.
+\end{axiomcandidate}
+
+\begin{axiomcandidate}[Complete retention]
+For every generated ledger \(H'\), either \(H'\) is source-equivalent to a
+declared representative or it is retained:
+\[
+H'\in\GenH(\Pi_H)
+\Rightarrow
+\bigl(\exists H''\,\EqSrc(H',H'')\bigr)
+\vee
+\Retain_H(H').
+\]
+Retained ledgers may be used as negative controls, not candidate-supporting
+evidence.
+\end{axiomcandidate}
+
+\begin{axiomcandidate}[Audit before adoption]
+No rule in \(\LangPlus\) may be promoted to canonical ontology authority
+without a separate smuggling audit and later human-gated ontology action.
+\[
+\LangPlus \Rightarrow \Audit_H \wedge \Block(\text{canonical adoption}).
+\]
+\end{axiomcandidate}
+
+\section{Theorem Burdens Created by the Proposal}
+
+\begin{burden}[Conservative extension burden]
+Prove that \(\LangPlus\) is conservative over \(\Lang\) for all
+pre-existing source claims. In particular, adding \(\GenH\) must not imply
+candidate reconstruction, benchmark success, target metric recovery, or any
+new canonical ontology claim.
+\end{burden}
+
+\begin{burden}[Completeness burden]
+Prove that \(\GenH(\Pi_H)\) contains every ledger that is admissible,
+blind, and target-clean under the declared source provenance packet. Without
+this theorem, the generated family remains incomplete.
+\end{burden}
+
+\begin{burden}[Equivalence burden]
+Prove that \(\EqSrc\) is an equivalence relation and that each quotient
+class corresponds only to declared source relabeling. If a quotient erases
+adverse source behavior, the proposal fails audit.
+\end{burden}
+
+\begin{burden}[Retention burden]
+Prove that every non-equivalent generated ledger is retained with its
+outputs and statuses, and that no retained alternative is projected away
+for candidate convenience.
+\end{burden}
+
+\begin{burden}[Target-exclusion burden]
+Prove that \(\NoTarget_H\) mechanically excludes target metric behavior,
+target locality, target observer protocol, target proper-time
+normalization, target-favorable rank, benchmark success, and downstream
+candidate performance.
+\end{burden}
+
+\section{Guard Conditions}
+
+\begin{guard}[No uniqueness by syntax]
+The proposal forbids defining \(H\) as the unique output of \(\GenH\). Any
+uniqueness claim must be a theorem over the generated family, not a
+definition of the generator.
+\end{guard}
+
+\begin{guard}[No candidate-support shortcut]
+The generated family \(\LedgerFam_{\PiH}\) is not a candidate packet.
+Candidate Constructor remains blocked until a later audited theorem package
+discharges generation, uniqueness or complete retention, and all dependent
+surfaces required by the control state.
+\end{guard}
+
+\begin{guard}[No canonical ontology edit]
+This artifact is not a patch to canonical ontology TeX. It supplies a
+candidate expansion target for audit. Adoption requires a separate
+human-gated ontology action.
+\end{guard}
+
+\section{Local Verdict}
+
+\begin{verdict}
+The proposal supplies a coherent next object for scrutiny: a source-only,
+family-first ledger-generation envelope. It does not solve ledger
+provenance. It converts the previous missing-authority blocker into an
+auditable expansion proposal with explicit theorem burdens and guard
+conditions.
+\end{verdict}
+
+\begin{nextburden}
+Run a Smuggling Auditor audit of \(\LangPlus\), \(\EnvH\), \(\GenH\),
+\(\EqSrc\), \(\Retain_H\), and \(\NoTarget_H\). The audit should test for
+hidden target import, authority laundering, quotient laundering, retention
+failure, and status laundering. Candidate reconstruction, canonical
+ontology edit, benchmark promotion, and Gate Chair review remain blocked.
+\end{nextburden}
+
+\section{References}
+
+Ricciardi, A. S. (2026, June 13). \emph{Localization source-basis axiom
+selector-domain ledger-provenance theorem attempt or controlled pause:
+Single-surface current-language test for Pi\_H, H, and admissible ledger
+retention} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260613-009/artifacts/29\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_LEDGER\_PROVENANCE\_THEOREM\_ATTEMPT\_OR\_CONTROLLED\_PAUSE.tex}.
+
+Ricciardi, A. S. (2026, June 13). \emph{Localization source-basis axiom
+selector-domain source-forcing discharge protocol: Current-language
+obligations, negative controls, protected expansions, and unresolved
+statuses} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260613-006/artifacts/26\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_SOURCE\_FORCING\_DISCHARGE\_PROTOCOL.tex}.
+
+\end{document}

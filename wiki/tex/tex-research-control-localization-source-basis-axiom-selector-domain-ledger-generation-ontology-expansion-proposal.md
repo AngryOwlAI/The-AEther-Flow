@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-LEDGER-GENERATION-ONTOLOGY-EXPANSION-PROPOSAL
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-LEDGER-GENERATION-ONTOLOGY-EXPANSION-PROPOSAL`
+- Source path: `research_control/tasks/RT-20260613-010/artifacts/30_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_LEDGER_GENERATION_ONTOLOGY_EXPANSION_PROPOSAL.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `15193aa051e27bcb2f41b8cc97c9f9c117746789b1c9248615d37ea1aab2899d`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-LEDGER-PROVENANCE-THEOREM-ATTEMPT-OR-CONTROLLED-PAUSE;TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-SOURCE-FORCING-DISCHARGE-PROTOCOL-BENCHMARK-INDEPENDENCE-REFUTATION;TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-SOURCE-FORCING-DISCHARGE-PROTOCOL` ``
+- Generated output path: `wiki/tex/tex-research-control-localization-source-basis-axiom-selector-domain-ledger-generation-ontology-expansion-proposal.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-13T16:15:23Z`
