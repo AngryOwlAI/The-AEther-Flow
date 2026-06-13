@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Lang}{\mathcal{L}_{0}}
+\newcommand{\LedgerFam}{\mathfrak{H}}
+\newcommand{\HorizonFam}{\mathfrak{B}}
+\newcommand{\EnumFam}{\mathfrak{E}}
+\newcommand{\CertFam}{\mathfrak{C}}
+\newcommand{\OutFam}{\mathfrak{O}}
+\newcommand{\MetaG}{\mathfrak{G}}
+\newcommand{\Ad}{\mathsf{Ad}}
+\newcommand{\Blind}{\mathsf{Blind}}
+\newcommand{\Force}{\mathsf{Force}}
+\newcommand{\Status}{\mathsf{Status}}
+\newcommand{\Neg}{\mathsf{Neg}}
+\newcommand{\Pause}{\mathsf{Pause}}
+\newcommand{\Current}{\mathsf{Current}}
+\newcommand{\Expand}{\mathsf{Expand}}
+\newcommand{\Unres}{\mathsf{Unresolved}}
+
+\newtheorem{definitionblock}{Definition}
+\newtheorem{protocolrule}{Protocol rule}
+\newtheorem{ledgerentry}{Ledger entry}
+\newtheorem{pauserule}{Controlled-pause rule}
+\newtheorem{localverdict}{Local verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain Source-Forcing Discharge Protocol}\\[0.35em]
+\large Current-Language Obligations, Negative Controls, Protected Expansions, and Unresolved Statuses}
+\author{Ontology Formalizer AgentJob AJ-RT-20260613-006-001}
+\date{June 13, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact specifies a source-forcing discharge protocol and
+controlled-pause ledger for the selector-domain source-basis path. It does
+not discharge the six theorem burdens. It classifies what a future discharge
+must do in the current registered source language, what negative-control
+families must be retained, what proof attempts require protected authority
+expansion, and which statuses must remain \(\mathsf{not\_computed}\) or
+\(\mathsf{underdetermined}\). The six surfaces are ledger provenance,
+horizon universality, admissibility meta-grammar, certificate invariance,
+output-basis generation, and \(D_F\) status transitions. Candidate
+reconstruction, canonical ontology edit, benchmark promotion, Gate Chair
+review, and effective-sector recovery claims remain blocked.
+\end{abstract}
+
+\section{Scope and Protocol Standard}
+
+This artifact is a draft/control output for task \texttt{RT-20260613-006}.
+It responds to the source-forcing obligation packet and its smuggling audit.
+The audit found no direct target primitive in the obligation packet, but it
+also found that the obligations are theorem burdens rather than theorem
+discharges. This protocol therefore defines a ledger for future work rather
+than a promotion step.
+
+Let \(\Lang\) denote the registered source language before the A0--A4
+extension sequence. For each choice surface
+\[
+X\in\{H,\HorizonFam,\EnumFam_i,\CertFam_i,\OutFam_i,D_F\},
+\]
+the discharge record has four cells:
+\[
+\mathcal{D}_X=(\Current_X,\Neg_X,\Expand_X,\Unres_X).
+\]
+Here \(\Current_X\) is the current-language theorem burden, \(\Neg_X\) is the
+negative-control family that must be retained, \(\Expand_X\) is the protected
+authority-expansion trigger, and \(\Unres_X\) is the status that must remain
+when the burden is not discharged.
+
+\begin{definitionblock}[Discharge eligibility]
+A surface \(X\) is eligible for later candidate-support consideration only
+when a source-side rule \(\Force_X:\Lang\to X\) is accompanied by a theorem
+showing that every \(\Ad\)-admissible and \(\Blind\)-blind alternative is
+source-equivalent, source-impossible, or retained as a negative control whose
+outputs and statuses are not projected into candidate support.
+\end{definitionblock}
+
+\begin{protocolrule}[No inferential upgrade]
+This protocol may not upgrade any surface to \(\mathsf{invariant}\). In the
+absence of a registered current-language theorem, a surface may move only to
+\(\mathsf{family\_valued}\), \(\mathsf{underdetermined}\), or
+\(\mathsf{not\_computed}\). If a proof needs canonical ontology authority,
+benchmark-status authority, Gate Chair authority, or permanent role
+registration, the correct record is \(\Expand_X\), not a local discharge.
+\end{protocolrule}
+
+\section{Ledger Provenance}
+
+\begin{ledgerentry}[Current-language theorem burden]
+\(\Current_H\) must prove that the provenance tuple
+\[
+\Pi_H=(\mathcal{R}_{0},\mathcal{C}_{0},\mathcal{O}_{0},
+\mathcal{Q}_{0},\mathcal{B}_{0})
+\]
+is generated from registered source records, source closure rules, source
+operation seeds, source quotient seeds, and pre-benchmark blinding records
+already expressible in \(\Lang\). The proof must establish uniqueness up to
+source relabeling or complete enumeration of all admissible ledgers in
+\(\LedgerFam\).
+\end{ledgerentry}
+
+\begin{ledgerentry}[Negative-control family]
+\(\Neg_H\) consists of all admissible ledgers generated from the same source
+records under broader, narrower, or incomparable source closure and quotient
+rules. If these ledgers change presentation boundaries, fronts, ranks,
+spectra, transport reports, or status rows, the full family remains recorded.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Protected expansion trigger]
+\(\Expand_H\) is triggered if any component of \(\Pi_H\) requires a new
+canonical source rule, a new ontology primitive, a benchmark-selected seed,
+or target evidence such as target metric behavior, target locality, target
+observer protocol, target proper-time normalization, target-favorable rank,
+or benchmark success.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Residual status]
+If \(\Current_H\) is absent and \(\Neg_H\) is incomplete, dependent rows must
+remain \(\mathsf{underdetermined}\) or \(\mathsf{not\_computed}\).
+\end{ledgerentry}
+
+\section{Horizon Universality}
+
+\begin{ledgerentry}[Current-language theorem burden]
+\(\Current_{\HorizonFam}\) must construct a source-generated horizon family
+\[
+\HorizonFam=\{B_\eta:\eta\in E\}
+\]
+from source counts, source-order depth, or source saturation rules, then
+prove that every admissible horizon is included, source-impossible, or
+tracked as unresolved. Any saturation predicate must be monotone under
+admissible source extension.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Negative-control family]
+\(\Neg_{\HorizonFam}\) includes smaller, larger, and incomparable horizons
+that remain source-admissible under the same source seeds. If extension of
+the horizon creates adverse boundaries, fronts, spectra, cycles, or status
+rows, those outputs must remain family-valued.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Protected expansion trigger]
+\(\Expand_{\HorizonFam}\) is triggered by any horizon cutoff justified by
+target scale, target locality, target clock normalization, or benchmark
+success. It is also triggered when a required saturation rule is not
+expressible in the registered source language.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Residual status]
+Without universality and monotone saturation evidence, the horizon surface is
+\(\mathsf{not\_computed}\) for candidate support and may be
+\(\mathsf{family\_valued}\) for negative-control reporting.
+\end{ledgerentry}
+
+\section{Admissibility Meta-Grammar}
+
+\begin{ledgerentry}[Current-language theorem burden]
+For each \(D_i\), \(\Current_{\EnumFam_i}\) must define a source-side
+meta-grammar
+\[
+\MetaG_i=(\Sigma_i,\mathcal{R}_i,\mathcal{E}_i,\mathcal{Q}_i,\mathcal{A}_i)
+\]
+that generates the relevant enumerator family from source symbols, rewrite or
+closure rules, expansion rules, duplicate quotients, and adverse-output
+retention rules. The proof must show completeness over narrower, broader,
+and incomparable source-admissible grammars.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Negative-control family]
+\(\Neg_{\EnumFam_i}\) is the ledger of generated grammars whose outputs
+disagree or whose output-basis status is non-singleton. These grammars may be
+classified as duplicate, out of horizon, source invalid, authority expansion,
+or not computed, but they may not be removed for candidate convenience.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Protected expansion trigger]
+\(\Expand_{\EnumFam_i}\) is triggered when grammar validity depends on a new
+canonical source syntax, a new admissibility authority, a benchmark-selected
+grammar family, or a relevance claim that is not itself a source theorem.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Residual status]
+If meta-grammar completeness is not proved, enumerator-dependent results
+remain \(\mathsf{family\_valued}\), \(\mathsf{underdetermined}\), or
+\(\mathsf{not\_computed}\).
+\end{ledgerentry}
+
+\section{Certificate Invariance}
+
+\begin{ledgerentry}[Current-language theorem burden]
+\(\Current_{\CertFam_i}\) must prove, for every admissible certificate pair
+\(C,C'\in\CertFam_i\), that kept and omitted cases agree up to declared
+source relabeling or that every disagreement is retained as a certificate-
+sensitive negative control:
+\[
+C(x)\neq C'(x)\Rightarrow \Neg_i(x,C,C').
+\]
+\end{ledgerentry}
+
+\begin{ledgerentry}[Negative-control family]
+\(\Neg_{\CertFam_i}\) includes all cases where duplicate, out-of-horizon,
+source-invalid, authority-expansion, or not-computed labels differ across
+admissible certificate rules and affect any allowed output basis.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Protected expansion trigger]
+\(\Expand_{\CertFam_i}\) is triggered when an exclusion label requires a new
+canonical certificate rule, target relevance, candidate convenience, or
+unregistered authority to decide that an omitted case has no source effect.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Residual status]
+Replayable certificates without invariance theorem evidence do not support
+\(\mathsf{invariant}\). The status remains \(\mathsf{underdetermined}\) or
+\(\mathsf{family\_valued}\).
+\end{ledgerentry}
+
+\section{Output-Basis Generation}
+
+\begin{ledgerentry}[Current-language theorem burden]
+\(\Current_{\OutFam_i}\) must define a source-side generator
+\[
+\mathsf{Gen}_{O,i}:\Lang\times\EnumFam_i\times\CertFam_i\to\OutFam_i
+\]
+that records favorable, adverse, and neutral source quantities at the same
+grain. The proof must show that presentation boundaries, support fronts,
+discriminator ranks, quotient spectra, transport cycles, holonomy reports,
+and status rows are source-definable or explicitly unresolved.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Negative-control family]
+\(\Neg_{\OutFam_i}\) contains broader output bases that expose non-singleton
+or adverse source behavior. A favorable projection remains recorded as a
+projection and cannot replace the broader source-admissible output family.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Protected expansion trigger]
+\(\Expand_{\OutFam_i}\) is triggered when rank, front, spectrum, transport,
+holonomy, or status vocabulary is imported from target effective geometry or
+requires a canonical ontology extension not already authorized.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Residual status]
+Without generator completeness and adverse-output retention, output-basis
+results remain \(\mathsf{family\_valued}\) or \(\mathsf{underdetermined}\).
+\end{ledgerentry}
+
+\section{\texorpdfstring{\(D_F\)}{DF} Status Transitions}
+
+\begin{ledgerentry}[Current-language theorem burden]
+\(\Current_{D_F}\) must state a transition theorem for every move into
+\(\mathsf{invariant}\). The theorem must cite ledger provenance, horizon
+universality, meta-grammar completeness, certificate invariance,
+output-basis generator completeness, and an independent target-import audit.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Negative-control family]
+\(\Neg_{D_F}\) includes status rows that change under admissible ledger,
+horizon, grammar, certificate, output-basis, or evidence-threshold variation.
+These rows remain explicit and may not be suppressed by selecting a favorable
+status rule.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Protected expansion trigger]
+\(\Expand_{D_F}\) is triggered if invariant status depends on benchmark
+success, target agreement, Gate Chair authority, canonical ontology edit, or
+a permanent status-rule registration not authorized by this task.
+\end{ledgerentry}
+
+\begin{ledgerentry}[Residual status]
+When any prerequisite theorem is absent, \(D_F\) may preserve
+\(\mathsf{not\_computed}\), \(\mathsf{underdetermined}\), or
+\(\mathsf{family\_valued}\). It may not move to \(\mathsf{invariant}\).
+\end{ledgerentry}
+
+\section{Controlled-Pause Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.18\linewidth}p{0.28\linewidth}p{0.28\linewidth}p{0.15\linewidth}}
+\textbf{Surface} & \textbf{Current-language burden} & \textbf{Pause trigger} & \textbf{Status} \\
+\hline
+\(H\) & provenance uniqueness or complete ledger-family retention & new source provenance authority or target-selected seeds & not discharged \\
+\(\HorizonFam\) & universal source horizon family and monotone saturation & target scale, target locality, or unregistered saturation rule & not discharged \\
+\(\EnumFam_i\) & complete source meta-grammar & opaque omission label or new grammar authority & not discharged \\
+\(\CertFam_i\) & kept/omitted invariance theorem & target relevance or unregistered certificate rule & not discharged \\
+\(\OutFam_i\) & adverse-retaining output generator & target-derived output vocabulary or favorable projection & not discharged \\
+\(D_F\) & invariant-transition theorem & benchmark success, Gate Chair authority, or status-rule authority expansion & not discharged \\
+\end{tabular}
+\end{center}
+
+\begin{pauserule}[Controlled pause rather than reconstruction]
+If any row remains not discharged, the Director should preserve a controlled
+pause for candidate reconstruction. This pause is local: it does not reject
+the \TheoryProgram{} and does not forbid future source-side theorem work.
+It prevents the current packet from being used as candidate support before
+the required source-side evidence exists.
+\end{pauserule}
+
+\section{Execution Order for Future Discharge Attempts}
+
+\begin{enumerate}
+    \item Inventory source records and verify that every proposed rule is
+    expressible in the current registered source language.
+    \item Enumerate the relevant negative-control family before checking
+    favorable projections.
+    \item Attempt the current-language theorem for exactly one surface.
+    \item If the theorem fails, preserve the negative-control family and
+    record \(\mathsf{underdetermined}\), \(\mathsf{family\_valued}\), or
+    \(\mathsf{not\_computed}\).
+    \item If the theorem requires protected authority, stop and route the
+    expansion request through the appropriate human-gated process.
+    \item Only after a theorem is written may a Smuggling Auditor test the
+    discharge chain for hidden target import and authority expansion.
+\end{enumerate}
+
+\section{Local Verdict}
+
+\begin{localverdict}[Discharge protocol specified; theorem discharge absent]
+This artifact specifies the discharge ledger requested by the prior audit.
+It separates current-language theorem obligations, negative-control families,
+protected authority-expansion triggers, and unresolved statuses for all six
+surfaces. It does not discharge those obligations and therefore does not make
+the selector-domain source-basis path candidate-ready.
+\end{localverdict}
+
+The result is local and non-promotional. Candidate reconstruction, canonical
+ontology edit, benchmark promotion, and Gate Chair review remain blocked.
+
+\section{Next Burden}
+
+\begin{nextburden}[Audit the protocol before any test or construction]
+The logical next role is a Smuggling Auditor AgentJob that audits this
+discharge protocol for hidden target import and protected authority
+expansion. The audit should ask whether the current-language theorem cells,
+negative-control cells, authority-expansion cells, and unresolved-status
+cells are cleanly separated. A Candidate Constructor, Refuter, or Gate Chair
+step remains premature until the protocol survives that audit.
+\end{nextburden}
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 13). \emph{Localization source-basis axiom
+selector-domain source-forcing smuggling audit: Target-import and
+authority-expansion review of the obligation packet} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260613-005/artifacts/25\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_SOURCE\_FORCING\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 13). \emph{Localization source-basis axiom
+selector-domain source-forcing obligation packet: Ledger, horizon, grammar,
+certificate, output-basis, and \(D_F\) transition burdens} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260613-004/artifacts/24\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_SOURCE\_FORCING\_OBLIGATION\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 11). \emph{Localization source-basis axiom
+selector-domain finite-variation benchmark-independence refutation:
+Stability test for ledger, packet, horizon, enumerator, certificate,
+output-basis, and \(D_F\) gate variation} [Unpublished manuscript]. The
+Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260611-006/artifacts/23\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_FINITE\_VARIATION\_BENCHMARK\_INDEPENDENCE\_REFUTATION.tex}.
+
+\end{document}
+
+
+--- normalized prose proxy ---
+article inputenc fontenc lmodern geometry amsmath,amssymb,amsfonts,amsthm,mathtools enumitem microtype hyperref margin=1in colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black topsep=0.35em,itemsep=0.3em topsep=0.3em,itemsep=0.25em \Aether{ther} \Aflow{ther-flow} \TheoryProgram{ / framework} \Lang{L_{0}} \LedgerFam{H} \HorizonFam{B} \EnumFam{E} \CertFam{C} \OutFam{O} \MetaG{G} \Ad{Ad} \Blind{Blind} \Force{Force} \Status{Status} \Neg{Neg} \Pause{Pause} \Current{Current} \Expand{Expand} \Unres{Unresolved} definitionblock{Definition} protocolrule{Protocol rule} ledgerentry{Ledger entry} pauserule{Controlled-pause rule} localverdict{Local verdict} nextburden{Next burden} {Localization Source-Basis Axiom Selector-Domain Source-Forcing Discharge Protocol\\[0.35em] Current-Language Obligations, Negative Controls, Protected Expansions, and Unresolved Statuses} Ontology Formalizer AgentJob AJ-RT-20260613-006-001 June 13, 2026 document abstract This draft/control artifact specifies a source-forcing discharge protocol and controlled-pause ledger for the selector-domain source-basis path. It does not discharge the six theorem burdens. It classifies what a future discharge must do in the current registered source language, what negative-control families must be retained, what proof attempts require protected authority expansion, and which statuses must remain \(not\_computed\) or \(underdetermined\). The six surfaces are ledger provenance, horizon universality, admissibility meta-grammar, certificate invariance, output-basis generation, and \(D_F\) status transitions. Candidate reconstruction, canonical ontology edit, benchmark promotion, Gate Chair review, and effective-sector recovery claims remain blocked. abstract Scope and Protocol Standard This artifact is a draft/control output for task RT-20260613-006. It responds to the source-forcing obligation packet and its smuggling audit. The audit found no direct target primitive in the obligation packet, but it also found that the obligations are theorem burdens rather than theorem discharges. This protocol therefore defines a ledger for future work rather than a promotion step. Let \(\) denote the registered source language before the A0--A4 extension sequence. For each choice surface \[ X\{H,,_i,_i,_i,D_F\}, \] the discharge record has four cells: \[ D_X=(_X,_X,_X,_X). \] Here \(_X\) is the current-language theorem burden, \(_X\) is the negative-control family that must be retained, \(_X\) is the protected authority-expansion trigger, and \(_X\) is the status that must remain when the burden is not discharged. definitionblock[Discharge eligibility] A surface \(X\) is eligible for later candidate-support consideration only when a source-side rule \(_X: X\) is accompanied by a theorem showing that every \(\)-admissible and \(\)-blind alternative is source-equivalent, source-impossible, or retained as a negative control whose outputs and statuses are not projected into candidate support. definitionblock protocolrule[No inferential upgrade] This protocol may not upgrade any surface to \(invariant\). In the absence of a registered current-language theorem, a surface may move only to \(family\_valued\), \(underdetermined\), or \(not\_computed\). If a proof needs canonical ontology authority, benchmark-status authority, Gate Chair authority, or permanent role registration, the correct record is \(_X\), not a local discharge. protocolrule Ledger Provenance ledgerentry[Current-language theorem burden] \(_H\) must prove that the provenance tuple \[ _H=(R_{0},C_{0},O_{0}, Q_{0},B_{0}) \] is generated from registered source records, source closure rules, source operation seeds, source quotient seeds, and pre-benchmark blinding records already expressible in \(\). The proof must establish uniqueness up to source relabeling or complete enumeration of all admissible ledgers in \(\). ledgerentry ledgerentry[Negative-control family] \(_H\) consists of all admissible ledgers generated from the same source records under broader, narrower, or incomparable source closure and quotient rules. If these ledgers change presentation boundaries, fronts, ranks, spectra, transport reports, or status rows, the full family remains recorded. ledgerentry ledgerentry[Protected expansion trigger] \(_H\) is triggered if any component of \(_H\) requires a new canonical source rule, a new ontology primitive, a benchmark-selected seed, or target evidence such as target metric behavior, target locality, target observer protocol, target proper-time normalization, target-favorable rank, or benchmark success. ledgerentry ledgerentry[Residual status] If \(_H\) is absent and \(_H\) is incomplete, dependent rows must remain \(underdetermined\) or \(not\_computed\). ledgerentry Horizon Universality ledgerentry[Current-language theorem burden] \(_{}\) must construct a source-generated horizon family \[ =\{B_: E\} \] from source counts, source-order depth, or source saturation rules, then prove that every admissible horizon is included, source-impossible, or tracked as unresolved. Any saturation predicate must be monotone under admissible source extension. ledgerentry ledgerentry[Negative-control family] \(_{}\) includes smaller, larger, and incomparable horizons that remain source-admissible under the same source seeds. If extension of the horizon creates adverse boundaries, fronts, spectra, cycles, or status rows, those outputs must remain family-valued. ledgerentry ledgerentry[Protected expansion trigger] \(_{}\) is triggered by any horizon cutoff justified by target scale, target locality, target clock normalization, or benchmark success. It is also triggered when a required saturation rule is not expressible in the registered source language. ledgerentry ledgerentry[Residual status] Without universality and monotone saturation evidence, the horizon surface is \(not\_computed\) for candidate support and may be \(family\_valued\) for negative-control reporting. ledgerentry Admissibility Meta-Grammar ledgerentry[Current-language theorem burden] For each \(D_i\), \(_{_i}\) must define a source-side meta-grammar \[ _i=(_i,R_i,E_i,Q_i,A_i) \] that generates the relevant enumerator family from source symbols, rewrite or closure rules, expansion rules, duplicate quotients, and adverse-output retention rules. The proof must show completeness over narrower, broader, and incomparable source-admissible grammars. ledgerentry ledgerentry[Negative-control family] \(_{_i}\) is the ledger of generated grammars whose outputs disagree or whose output-basis status is non-singleton. These grammars may be classified as duplicate, out of horizon, source invalid, authority expansion, or not computed, but they may not be removed for candidate convenience. ledgerentry ledgerentry[Protected expansion trigger] \(_{_i}\) is triggered when grammar validity depends on a new canonical source syntax, a new admissibility authority, a benchmark-selected grammar family, or a relevance claim that is not itself a source theorem. ledgerentry ledgerentry[Residual status] If meta-grammar completeness is not proved, enumerator-dependent results remain \(family\_valued\), \(underdetermined\), or \(not\_computed\). ledgerentry Certificate Invariance ledgerentry[Current-language theorem burden] \(_{_i}\) must prove, for every admissible certificate pair \(C,C'_i\), that kept and omitted cases agree up to declared source relabeling or that every disagreement is retained as a certificate- sensitive negative control: \[ C(x) C'(x) _i(x,C,C'). \] ledgerentry ledgerentry[Negative-control family] \(_{_i}\) includes all cases where duplicate, out-of-horizon, source-invalid, authority-expansion, or not-computed labels differ across admissible certificate rules and affect any allowed output basis. ledgerentry ledgerentry[Protected expansion trigger] \(_{_i}\) is triggered when an exclusion label requires a new canonical certificate rule, target relevance, candidate convenience, or unregistered authority to decide that an omitted case has no source effect. ledgerentry ledgerentry[Residual status] Replayable certificates without invariance theorem evidence do not support \(invariant\). The status remains \(underdetermined\) or \(family\_valued\). ledgerentry Output-Basis Generation ledgerentry[Current-language theorem burden] \(_{_i}\) must define a source-side generator \[ Gen_{O,i}:_i_i_i \] that records favorable, adverse, and neutral source quantities at the same grain. The proof must show that presentation boundaries, support fronts, discriminator ranks, quotient spectra, transport cycles, holonomy reports, and status rows are source-definable or explicitly unresolved. ledgerentry ledgerentry[Negative-control family] \(_{_i}\) contains broader output bases that expose non-singleton or adverse source behavior. A favorable projection remains recorded as a projection and cannot replace the broader source-admissible output family. ledgerentry ledgerentry[Protected expansion trigger] \(_{_i}\) is triggered when rank, front, spectrum, transport, holonomy, or status vocabulary is imported from target effective geometry or requires a canonical ontology extension not already authorized. ledgerentry ledgerentry[Residual status] Without generator completeness and adverse-output retention, output-basis results remain \(family\_valued\) or \(underdetermined\). ledgerentry {\(D_F\){DF} Status Transitions} ledgerentry[Current-language theorem burden] \(_{D_F}\) must state a transition theorem for every move into \(invariant\). The theorem must cite ledger provenance, horizon universality, meta-grammar completeness, certificate invariance, output-basis generator completeness, and an independent target-import audit. ledgerentry ledgerentry[Negative-control family] \(_{D_F}\) includes status rows that change under admissible ledger, horizon, grammar, certificate, output-basis, or evidence-threshold variation. These rows remain explicit and may not be suppressed by selecting a favorable status rule. ledgerentry ledgerentry[Protected expansion trigger] \(_{D_F}\) is triggered if invariant status depends on benchmark success, target agreement, Gate Chair authority, canonical ontology edit, or a permanent status-rule registration not authorized by this task. ledgerentry ledgerentry[Residual status] When any prerequisite theorem is absent, \(D_F\) may preserve \(not\_computed\), \(underdetermined\), or \(family\_valued\). It may not move to \(invariant\). ledgerentry Controlled-Pause Ledger center tabular{p{0.18}p{0.28}p{0.28}p{0.15}} Surface & Current-language burden & Pause trigger & Status \\ \(H\) & provenance uniqueness or complete ledger-family retention & new source provenance authority or target-selected seeds & not discharged \\ \(\) & universal source horizon family and monotone saturation & target scale, target locality, or unregistered saturation rule & not discharged \\ \(_i\) & complete source meta-grammar & opaque omission label or new grammar authority & not discharged \\ \(_i\) & kept/omitted invariance theorem & target relevance or unregistered certificate rule & not discharged \\ \(_i\) & adverse-retaining output generator & target-derived output vocabulary or favorable projection & not discharged \\ \(D_F\) & invariant-transition theorem & benchmark success, Gate Chair authority, or status-rule authority expansion & not discharged \\ tabular center pauserule[Controlled pause rather than reconstruction] If any row remains not discharged, the Director should preserve a controlled pause for candidate reconstruction. This pause is local: it does not reject the and does not forbid future source-side theorem work. It prevents the current packet from being used as candidate support before the required source-side evidence exists. pauserule Execution Order for Future Discharge Attempts enumerate Inventory source records and verify that every proposed rule is expressible in the current registered source language. Enumerate the relevant negative-control family before checking favorable projections. Attempt the current-language theorem for exactly one surface. If the theorem fails, preserve the negative-control family and record \(underdetermined\), \(family\_valued\), or \(not\_computed\). If the theorem requires protected authority, stop and route the expansion request through the appropriate human-gated process. Only after a theorem is written may a Smuggling Auditor test the discharge chain for hidden target import and authority expansion. enumerate Local Verdict localverdict[Discharge protocol specified; theorem discharge absent] This artifact specifies the discharge ledger requested by the prior audit. It separates current-language theorem obligations, negative-control families, protected authority-expansion triggers, and unresolved statuses for all six surfaces. It does not discharge those obligations and therefore does not make the selector-domain source-basis path candidate-ready. localverdict The result is local and non-promotional. Candidate reconstruction, canonical ontology edit, benchmark promotion, and Gate Chair review remain blocked. Next Burden nextburden[Audit the protocol before any test or construction] The logical next role is a Smuggling Auditor AgentJob that audits this discharge protocol for hidden target import and protected authority expansion. The audit should ask whether the current-language theorem cells, negative-control cells, authority-expansion cells, and unresolved-status cells are cleanly separated. A Candidate Constructor, Refuter, or Gate Chair step remains premature until the protocol survives that audit. nextburden References Ricciardi, A. S. (2026, June 13). Localization source-basis axiom selector-domain source-forcing smuggling audit: Target-import and authority-expansion review of the obligation packet [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260613-005/artifacts/25\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_SOURCE\_FORCING\_SMUGGLING\_AUDIT.tex. Ricciardi, A. S. (2026, June 13). Localization source-basis axiom selector-domain source-forcing obligation packet: Ledger, horizon, grammar, certificate, output-basis, and \(D_F\) transition burdens [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260613-004/artifacts/24\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_SOURCE\_FORCING\_OBLIGATION\_PACKET.tex. Ricciardi, A. S. (2026, June 11). Localization source-basis axiom selector-domain finite-variation benchmark-independence refutation: Stability test for ledger, packet, horizon, enumerator, certificate, output-basis, and \(D_F\) gate variation [Unpublished manuscript]. The Aether-Flow Interpretation of Relativity Research Project, research\_control/tasks/RT-20260611-006/artifacts/23\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_FINITE\_VARIATION\_BENCHMARK\_INDEPENDENCE\_REFUTATION.tex. document
