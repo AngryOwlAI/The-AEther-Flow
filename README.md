@@ -42,20 +42,28 @@ The AI research-agent track develops and tests a human-scaffolded research-agent
 
 The physics problem gives the AI system a hard, real research environment. The AI research-agent system gives the physics program disciplined ways to explore ideas, reject failed mechanisms, preserve negative results, and avoid overclaiming. The shared target is stronger than organization alone: derive GR from the `Æther` / `Æther-flow` ontology if the required gates can actually be passed.
 
-```text
-                          THE ÆTHER-FLOW RESEARCH PROGRAM
-                                      |
-              +-----------------------+-----------------------+
-              |                                               |
-      PHYSICS RESEARCH TRACK                         AI RESEARCH-AGENT TRACK
-              |                                               
-  Æther / Æther-flow ontology                    
-              |                                               
-  Exact-GR benchmark package                     
-              |                                               
-  Open GR-derivation problem                     
-              |                                               
-  No-go and obstruction record                   
+```mermaid
+flowchart TB
+    program["The Æther-Flow Research Program"]
+    physics["Physics Research Track"]
+    ai["AI Research-Agent Track"]
+
+    program --> physics
+    program --> ai
+
+    physics --> ontology["Æther / Æther-flow ontology"]
+    physics --> benchmark["Exact-GR benchmark package"]
+    physics --> derivation["Open GR-derivation problem"]
+    physics --> obstructions["No-go and obstruction record"]
+
+    ai --> routing["Director routing and bounded AgentJobs"]
+    ai --> roles["Role contracts and governed skills"]
+    ai --> gates["Claim gates, refutation, and review discipline"]
+    ai --> memory["Source-first memory, wiki, and registries"]
+
+    derivation --> gates
+    memory --> ontology
+    memory --> benchmark
 ```
 
 ---
@@ -112,18 +120,22 @@ materials sections, and source-spec claim-boundary metadata. Build-time
 rendered diagrams are used where they fit the subject. Those interactions help
 readers explore the project; they do not make generated HTML authoritative.
 
-For GitHub browsing, start with the [GitHub-facing Markdown documentation](docs/github-facing/README.md). That layer is canonical for GitHub-facing explanation and agent-readable orientation, but it is non-authoritative for physics claims and control decisions.
+For GitHub browsing, start with the root-level
+[GitHub-facing Markdown files](github-facing/). They mirror the registered
+explainer specs without the YAML metadata header. This layer is canonical for
+GitHub-facing explanation and agent-readable orientation, but it is
+non-authoritative for physics claims and control decisions.
 
-- [Project Overview](html/project-overview-explainer.html): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
-- [Æther-flow Ontology](html/aether-flow-ontology-explainer.html): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
-- [Research System](html/research-agent-workflow-explainer.html): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
-- [Role Routing](html/role-routing-explainer.html): how roles are selected, constrained, overlaid, or kept one-job provisional.
-- [Claim Gates](html/claim-gates-explainer.html): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
-- [Source Authority](html/source-authority-explainer.html): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
-- [Research-Control System](html/research-control-system-explainer.html): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
-- [Roles And Skills](html/roles-and-skills-explainer.html): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
-- [Memory System](html/memory-system-explainer.html): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
-- [Technical Requirements](html/technical-requirements-explainer.html): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.
+- [Project Overview](github-facing/project-overview-explainer.md): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
+- [Æther-flow Ontology](github-facing/aether-flow-ontology-explainer.md): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
+- [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
+- [Role Routing](github-facing/role-routing-explainer.md): how roles are selected, constrained, overlaid, or kept one-job provisional.
+- [Claim Gates](github-facing/claim-gates-explainer.md): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
+- [Source Authority](github-facing/source-authority-explainer.md): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
+- [Research-Control System](github-facing/research-control-system-explainer.md): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
+- [Roles And Skills](github-facing/roles-and-skills-explainer.md): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
+- [Memory System](github-facing/memory-system-explainer.md): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
+- [Technical Requirements](github-facing/technical-requirements-explainer.md): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.
 
 ---
 

@@ -322,14 +322,14 @@ class MemorySystemSmokeTests(unittest.TestCase):
     def test_github_facing_markdown_is_discovered_with_public_metadata(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            page = root / "docs/github-facing/start-here.md"
+            page = root / "github-facing/project-overview-explainer.md"
             page.parent.mkdir(parents=True)
-            page.write_text("# Start Here\n", encoding="utf-8")
+            page.write_text("# Project Overview Spec\n", encoding="utf-8")
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
                 rows = self.memory_system.discover_markdown_rows("2026-06-13T00:00:00Z")
 
         row_by_id = {row["object_id"]: row for row in rows}
-        row = row_by_id["MD-GITHUB-FACING-START-HERE"]
+        row = row_by_id["MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"]
         self.assertEqual(row["role"], "github_facing_documentation")
         self.assertEqual(row["authority_status"], "canonical_markdown_source")
         self.assertEqual(row["audience"], "humans_and_agents")
@@ -337,6 +337,80 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertEqual(row["github_facing"], "true")
         self.assertEqual(row["agent_documentation"], "true")
         self.assertIn("non-authoritative for physics claims", row["notes"])
+
+    def test_github_facing_markdown_stale_rows_are_pruned(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            registry_dir = root / "registries"
+            registry_dir.mkdir(parents=True)
+            registry_dir.joinpath("MARKDOWN_SOURCE_REGISTRY.csv").write_text(
+                "object_id,path,format,role,authority_status,audience,source_hash,related_source,generated_from,generated_outputs,owner_skill,validation_status,last_validated_at,notes,github_facing,agent_documentation,contains_mermaid,contains_math\n"
+                "MD-GITHUB-FACING-README,docs/github-facing/README.md,markdown,github_facing_documentation,canonical_markdown_source,humans_and_agents,old,,,,documentation-curator,PASS,2026-06-13T00:00:00Z,old,true,true,false,false\n",
+                encoding="utf-8",
+            )
+            page = root / "github-facing/project-overview-explainer.md"
+            page.parent.mkdir(parents=True)
+            page.write_text("# Project Overview Spec\n", encoding="utf-8")
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.merge_authored_registry(
+                    "MARKDOWN_SOURCE_REGISTRY.csv",
+                    self.memory_system.MARKDOWN_COLUMNS,
+                    self.memory_system.discover_markdown_rows("2026-06-13T00:00:00Z"),
+                    False,
+                )
+
+        object_ids = {row["object_id"] for row in rows}
+        self.assertNotIn("MD-GITHUB-FACING-README", object_ids)
+        self.assertIn("MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER", object_ids)
+
+    def test_stale_github_facing_generated_files_are_pruned(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            current_wiki = root / "wiki/markdown/md-github-facing-current.md"
+            stale_wiki = root / "wiki/markdown/md-github-facing-stale.md"
+            current_semantic = root / ".local/content_semantics/markdown/md-github-facing-current.txt"
+            stale_semantic = root / ".local/content_semantics/markdown/md-github-facing-stale.txt"
+            current_vault = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-current.md"
+            stale_vault = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-stale.md"
+            current_raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-current.md"
+            stale_raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-stale.md"
+            for path in [
+                current_wiki,
+                stale_wiki,
+                current_semantic,
+                stale_semantic,
+                current_vault,
+                stale_vault,
+                current_raw,
+                stale_raw,
+            ]:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("generated\n", encoding="utf-8")
+
+            rows_by_registry = {
+                "WIKI_ARTIFACT_REGISTRY.csv": [{"path": "wiki/markdown/md-github-facing-current.md"}],
+                "CONTENT_SEMANTIC_REGISTRY.csv": [
+                    {"path": ".local/content_semantics/markdown/md-github-facing-current.txt"}
+                ],
+                "OBSIDIAN_VAULT_REGISTRY.csv": [
+                    {
+                        "path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-current.md",
+                        "vault_note_path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-current.md",
+                        "vault_raw_path": ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-current.md",
+                    }
+                ],
+            }
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                self.memory_system.prune_stale_github_facing_generated_files(rows_by_registry)
+
+            self.assertTrue(current_wiki.exists())
+            self.assertFalse(stale_wiki.exists())
+            self.assertTrue(current_semantic.exists())
+            self.assertFalse(stale_semantic.exists())
+            self.assertTrue(current_vault.exists())
+            self.assertFalse(stale_vault.exists())
+            self.assertTrue(current_raw.exists())
+            self.assertFalse(stale_raw.exists())
 
     def test_stale_pdf_source_hash_is_an_error(self) -> None:
         rows_by_registry = {

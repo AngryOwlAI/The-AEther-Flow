@@ -351,7 +351,7 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertIn("generated_derivative_changed", result["reason_codes"])
 
     def test_github_facing_markdown_routes_to_documentation_curator(self) -> None:
-        result = self.classifier.classify_paths(["docs/github-facing/start-here.md"])
+        result = self.classifier.classify_paths(["github-facing/project-overview-explainer.md"])
         self.assertTrue(result["docs_impact_required"])
         self.assertFalse(result["project_system_improvement_required"])
         self.assertEqual(result["recommended_role"], "documentation-curator")
@@ -362,7 +362,7 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         )
 
     def test_github_facing_markdown_counts_as_source_documentation_update(self) -> None:
-        report = self.doc_impact.validate_paths(["docs/github-facing/start-here.md"])
+        report = self.doc_impact.validate_paths(["github-facing/project-overview-explainer.md"])
         self.assertEqual(report.errors, [])
 
     def test_direct_html_edit_remains_blocked(self) -> None:

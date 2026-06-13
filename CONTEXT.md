@@ -6,12 +6,12 @@ designing human-facing explanatory surfaces.
 ## Language
 
 **GitHub-facing Markdown System**:
-A registered, hand-authored Markdown documentation layer under `docs/github-facing/` for readers and external AI agents browsing the repository on GitHub; it is canonical for GitHub-facing explanation, non-authoritative for physics claims and control decisions, source-backed by existing explainer specs, and tracked by a manifest.
+A registered Markdown documentation layer under root `github-facing/` for readers and external AI agents browsing the repository on GitHub; it mirrors the body of the existing explainer specs without their YAML metadata headers, is canonical for GitHub-facing explanation, and is non-authoritative for physics claims and control decisions.
 _Avoid_: Front-facing GitHub files, GitHub system, generated HTML explainer, generated mirror
 
-**GitHub-facing Source Manifest**:
-The `docs/github-facing/SOURCE_MANIFEST.md` traceability file that maps each GitHub-facing Markdown page to its source materials, source-backed scope, and authority boundary.
-_Avoid_: Mirror manifest, generated-output registry, HTML explainer registry
+**GitHub-facing Spec Mirror**:
+The root `github-facing/*.md` files that preserve the readable body content of `markdown/html-explainer-specs/*.md` for GitHub browsing while leaving source-spec metadata, HTML generation, and authority tracking in the registered spec and registry layers.
+_Avoid_: Source manifest, generated-output registry, HTML explainer registry
 
 **Subject Summary**:
 A source-backed summary section titled `Summary of [Subject]` that states what

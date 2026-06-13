@@ -150,6 +150,7 @@ REQUIRED_DIRS = [
     "markdown",
     "markdown/html-explainer-specs",
     "markdown/ontology-promotions",
+    "github-facing",
     "tex_shared",
     "html",
     "registries",
@@ -171,7 +172,7 @@ PROJECT_MARKDOWN_GLOBS = [
     ".agents/schemas/*.md",
     ".codex/skills/*/SKILL.md",
     ".codex/skills/*/subskills/*/SKILL.md",
-    "docs/github-facing/**/*.md",
+    "github-facing/**/*.md",
     "research_control/design/*.md",
 ]
 
@@ -465,6 +466,12 @@ def merge_authored_registry(
     merged: list[dict[str, str]] = []
     all_ids = sorted(set(existing) | set(discovered))
     for object_id in all_ids:
+        if (
+            name == "MARKDOWN_SOURCE_REGISTRY.csv"
+            and object_id.startswith("MD-GITHUB-FACING-")
+            and object_id not in discovered
+        ):
+            continue
         if object_id in existing and object_id in discovered and not refresh_existing:
             row = normalize_row(existing[object_id], fieldnames)
             discovered_row = normalize_row(discovered[object_id], fieldnames)
@@ -493,7 +500,7 @@ def markdown_object_id(path: Path) -> str:
         return "MD-README"
     if relative == "AGENTS.md":
         return "MD-AGENTS"
-    if relative.startswith("docs/github-facing/"):
+    if relative.startswith("github-facing/"):
         return f"MD-GITHUB-FACING-{object_suffix_from_stem(path.stem)}"
     if relative.endswith("/AGENTS.md"):
         return f"MD-AGENTS-{object_suffix_from_path(str(Path(relative).parent))}"
@@ -579,7 +586,7 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "project-memory-system",
             "Human-gate approval lane documentation.",
         )
-    if relative.startswith("docs/github-facing/"):
+    if relative.startswith("github-facing/"):
         return (
             "github_facing_documentation",
             "canonical_markdown_source",
@@ -703,9 +710,9 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
         object_id = markdown_object_id(path)
         role, authority, audience, owner_skill, notes = markdown_role(path)
         wiki_path = wiki_path_for_source({"object_id": object_id, "format": "markdown"})
-        is_github_facing = relative.startswith("docs/github-facing/") or path.name == "README.md"
+        is_github_facing = relative.startswith("github-facing/") or path.name == "README.md"
         is_agent_documentation = (
-            relative.startswith("docs/github-facing/")
+            relative.startswith("github-facing/")
             or path.name == "AGENTS.md"
             or "handoff" in path.name
             or relative.startswith(".agents/")
@@ -1355,6 +1362,43 @@ def generate_indexes(rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
         REPO_ROOT / "wiki" / "indexes" / "by-ontology-promotion-status.md",
         group_index_text("Index By Ontology Promotion Status", groups),
     )
+
+
+def prune_stale_github_facing_generated_files(
+    rows_by_registry: dict[str, list[dict[str, str]]],
+) -> None:
+    current_paths = {
+        row.get("path", "")
+        for row in rows_by_registry.get("WIKI_ARTIFACT_REGISTRY.csv", [])
+    }
+    current_paths.update(
+        row.get("path", "")
+        for row in rows_by_registry.get("CONTENT_SEMANTIC_REGISTRY.csv", [])
+    )
+    for row in rows_by_registry.get("OBSIDIAN_VAULT_REGISTRY.csv", []):
+        current_paths.update(
+            path
+            for path in [
+                row.get("path", ""),
+                row.get("vault_note_path", ""),
+                row.get("vault_raw_path", ""),
+            ]
+            if path
+        )
+
+    for folder, pattern in [
+        ("wiki/markdown", "md-github-facing-*.md"),
+        (".local/content_semantics/markdown", "md-github-facing-*.txt"),
+        (".local/obsidian/aether-flow-wiki/01_raw/markdown", "md-github-facing-*.md"),
+        (".local/obsidian/aether-flow-wiki/02_sources/markdown", "md-github-facing-*.md"),
+    ]:
+        directory = REPO_ROOT / folder
+        if not directory.exists():
+            continue
+        for path in sorted(directory.glob(pattern)):
+            relative = rel_path(path)
+            if relative not in current_paths:
+                path.unlink()
 
 
 def generate_file_object_registry(
@@ -2235,6 +2279,7 @@ def bootstrap(
         write_semantic_text=True,
     )
     rows_by_registry.update(generated_rows)
+    prune_stale_github_facing_generated_files(rows_by_registry)
     file_object_rows = generate_file_object_registry(rows_by_registry, now)
     rows_by_registry["FILE_OBJECT_REGISTRY.csv"] = file_object_rows
     generate_folder_map(rows_by_registry)
