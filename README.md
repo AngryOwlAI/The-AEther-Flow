@@ -74,6 +74,13 @@ The project’s ontology lane treats `Æther` as a proposed four-dimensional sub
 
 The accepted benchmark boundary is conservative: observable-scale physics remains ordinary GR. The open burden is to show, without importing the target metric by hand, how effective Lorentzian geometry, causal structure, clock behavior, matter coupling, and invariance properties could arise from source-defined substrate data. Registered `.tex` sources and claim-boundary registries carry scientific authority; this README only summarizes that state for humans.
 
+<p align="left">
+   Watch the Æther-Flow Ontology Video:</br>
+  <a href="https://www.youtube.com/watch?v=psbk97rd9T8">
+    <img src="https://github.com/user-attachments/assets/7134da9c-977c-4312-8e2a-10a51bb2db28" alt="The Æther-Flow">
+  </a>
+</p>
+
 ---
 
 ## The research-agent system
