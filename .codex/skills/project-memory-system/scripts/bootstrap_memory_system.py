@@ -171,6 +171,7 @@ PROJECT_MARKDOWN_GLOBS = [
     ".agents/schemas/*.md",
     ".codex/skills/*/SKILL.md",
     ".codex/skills/*/subskills/*/SKILL.md",
+    "docs/github-facing/**/*.md",
     "research_control/design/*.md",
 ]
 
@@ -492,6 +493,8 @@ def markdown_object_id(path: Path) -> str:
         return "MD-README"
     if relative == "AGENTS.md":
         return "MD-AGENTS"
+    if relative.startswith("docs/github-facing/"):
+        return f"MD-GITHUB-FACING-{object_suffix_from_stem(path.stem)}"
     if relative.endswith("/AGENTS.md"):
         return f"MD-AGENTS-{object_suffix_from_path(str(Path(relative).parent))}"
     if relative.endswith("/README.md"):
@@ -575,6 +578,14 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "humans_and_agents",
             "project-memory-system",
             "Human-gate approval lane documentation.",
+        )
+    if relative.startswith("docs/github-facing/"):
+        return (
+            "github_facing_documentation",
+            "canonical_markdown_source",
+            "humans_and_agents",
+            "documentation-curator",
+            "GitHub-facing explanatory documentation; non-authoritative for physics claims and control decisions.",
         )
     if relative.startswith("research_control/design/"):
         return (
@@ -692,6 +703,15 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
         object_id = markdown_object_id(path)
         role, authority, audience, owner_skill, notes = markdown_role(path)
         wiki_path = wiki_path_for_source({"object_id": object_id, "format": "markdown"})
+        is_github_facing = relative.startswith("docs/github-facing/") or path.name == "README.md"
+        is_agent_documentation = (
+            relative.startswith("docs/github-facing/")
+            or path.name == "AGENTS.md"
+            or "handoff" in path.name
+            or relative.startswith(".agents/")
+            or relative.startswith(".codex/skills/")
+            or relative.startswith("research_control/")
+        )
         rows.append(
             {
                 "object_id": object_id,
@@ -708,16 +728,8 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
                 "validation_status": "PASS",
                 "last_validated_at": now,
                 "notes": notes,
-                "github_facing": "true" if path.name == "README.md" else "false",
-                "agent_documentation": "true"
-                if (
-                    path.name == "AGENTS.md"
-                    or "handoff" in path.name
-                    or relative.startswith(".agents/")
-                    or relative.startswith(".codex/skills/")
-                    or relative.startswith("research_control/")
-                )
-                else "false",
+                "github_facing": "true" if is_github_facing else "false",
+                "agent_documentation": "true" if is_agent_documentation else "false",
                 "contains_mermaid": contains_text(path, "```mermaid"),
                 "contains_math": "true"
                 if contains_text(path, "$$") == "true" or contains_text(path, "$") == "true"

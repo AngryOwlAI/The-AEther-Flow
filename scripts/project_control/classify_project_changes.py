@@ -375,6 +375,12 @@ def classify_canonical_path(path: str, result: Classification) -> None:
     elif path.startswith("markdown/html-explainer-specs/"):
         result.reason_codes.add("html_source_spec_changed")
         result.docs("registries/HTML_EXPLAINER_REGISTRY.csv", "README.md")
+    elif path.startswith("docs/github-facing/") and path.endswith(".md"):
+        result.reason_codes.add("github_facing_markdown_changed")
+        result.docs(
+            "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+            "docs/github-facing/SOURCE_MANIFEST.md",
+        )
     elif path.startswith("markdown/"):
         result.reason_codes.add("markdown_source_changed")
         result.docs("registries/MARKDOWN_SOURCE_REGISTRY.csv")

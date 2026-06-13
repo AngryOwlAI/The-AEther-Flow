@@ -6,6 +6,18 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-SKILL-CONTINUE-RESEARCH` `.codex/skills/continue-research/SKILL.md`
 
+## documentation-curator
+
+- `MD-GITHUB-FACING-CLAIM-GATES` `docs/github-facing/claim-gates.md`
+- `MD-GITHUB-FACING-PROJECT-OVERVIEW` `docs/github-facing/project-overview.md`
+- `MD-GITHUB-FACING-README` `docs/github-facing/README.md`
+- `MD-GITHUB-FACING-RESEARCH-SYSTEM` `docs/github-facing/research-system.md`
+- `MD-GITHUB-FACING-ROLES-AND-SKILLS` `docs/github-facing/roles-and-skills.md`
+- `MD-GITHUB-FACING-SOURCE-AUTHORITY` `docs/github-facing/source-authority.md`
+- `MD-GITHUB-FACING-SOURCE-MANIFEST` `docs/github-facing/SOURCE_MANIFEST.md`
+- `MD-GITHUB-FACING-START-HERE` `docs/github-facing/start-here.md`
+- `MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS` `docs/github-facing/technical-requirements.md`
+
 ## grill-me
 
 - `MD-SKILL-GRILL-ME` `.codex/skills/grill-me/SKILL.md`
@@ -61,6 +73,15 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
+- `WIKI-MD-GITHUB-FACING-CLAIM-GATES` `wiki/markdown/md-github-facing-claim-gates.md`
+- `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW` `wiki/markdown/md-github-facing-project-overview.md`
+- `WIKI-MD-GITHUB-FACING-README` `wiki/markdown/md-github-facing-readme.md`
+- `WIKI-MD-GITHUB-FACING-RESEARCH-SYSTEM` `wiki/markdown/md-github-facing-research-system.md`
+- `WIKI-MD-GITHUB-FACING-ROLES-AND-SKILLS` `wiki/markdown/md-github-facing-roles-and-skills.md`
+- `WIKI-MD-GITHUB-FACING-SOURCE-AUTHORITY` `wiki/markdown/md-github-facing-source-authority.md`
+- `WIKI-MD-GITHUB-FACING-SOURCE-MANIFEST` `wiki/markdown/md-github-facing-source-manifest.md`
+- `WIKI-MD-GITHUB-FACING-START-HERE` `wiki/markdown/md-github-facing-start-here.md`
+- `WIKI-MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS` `wiki/markdown/md-github-facing-technical-requirements.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
 - `WIKI-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-html-spec-claim-gates-explainer.md`
 - `WIKI-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-memory-system-explainer.md`

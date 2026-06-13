@@ -100,10 +100,12 @@ atlas. It groups navigation by reader need: understand the research idea,
 understand the agent workflow, understand authority and memory, and run or
 regenerate the system. The tracked pages use deep-first
 progressive-disclosure, flexible presentation profiles, required
-source-backed content blocks, expandable analysis capsules, visible source
+source-backed content blocks, visible source
 materials sections, and source-spec claim-boundary metadata. Build-time
 rendered diagrams are used where they fit the subject. Those interactions help
 readers explore the project; they do not make generated HTML authoritative.
+
+For GitHub browsing, start with the [GitHub-facing Markdown documentation](docs/github-facing/README.md). That layer is canonical for GitHub-facing explanation and agent-readable orientation, but it is non-authoritative for physics claims and control decisions.
 
 - [Project Overview](html/project-overview-explainer.html): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
 - [Æther-flow Ontology](html/aether-flow-ontology-explainer.html): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.

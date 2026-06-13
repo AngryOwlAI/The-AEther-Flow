@@ -319,6 +319,25 @@ class MemorySystemSmokeTests(unittest.TestCase):
         reason = self.memory_system.validate_relative_path("../outside.md")
         self.assertEqual(reason, "path traversal is not allowed")
 
+    def test_github_facing_markdown_is_discovered_with_public_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            page = root / "docs/github-facing/start-here.md"
+            page.parent.mkdir(parents=True)
+            page.write_text("# Start Here\n", encoding="utf-8")
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.discover_markdown_rows("2026-06-13T00:00:00Z")
+
+        row_by_id = {row["object_id"]: row for row in rows}
+        row = row_by_id["MD-GITHUB-FACING-START-HERE"]
+        self.assertEqual(row["role"], "github_facing_documentation")
+        self.assertEqual(row["authority_status"], "canonical_markdown_source")
+        self.assertEqual(row["audience"], "humans_and_agents")
+        self.assertEqual(row["owner_skill"], "documentation-curator")
+        self.assertEqual(row["github_facing"], "true")
+        self.assertEqual(row["agent_documentation"], "true")
+        self.assertIn("non-authoritative for physics claims", row["notes"])
+
     def test_stale_pdf_source_hash_is_an_error(self) -> None:
         rows_by_registry = {
             name: self.memory_system.read_csv_rows(self.memory_system.registry_path(name))
