@@ -52,7 +52,7 @@ flowchart TB
     program --> ai
 
     physics --> ontology["Æther / Æther-flow<br/>ontology"]
-    physics --> benchmark["Exact-GR<br/>benchmark package"]
+    physics ---> benchmark["Exact-GR<br/>benchmark package"]
     physics --> derivation["Open GR-derivation<br/>problem"]
     physics --> obstructions["No-go and<br/>obstruction record"]
 
@@ -63,7 +63,7 @@ flowchart TB
 
     derivation ----> gates
     memory --> ontology
-    memory --> benchmark
+    memory ---> benchmark
 ```
 
 ---
