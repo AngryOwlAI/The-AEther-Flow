@@ -2,14 +2,14 @@
 object_id: "MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/role-routing-explainer.md"
-source_hash: "1d4c75f8ba20a5fcd6ade5c1f1a770bc5211b8bcbd824e3ab44541cc40f12367"
+source_hash: "4fafef2e415194e26840227ade74e17121885cf4aeff2f5e268f423886847503"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-role-routing-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-role-routing-explainer.md"
-content_hash: "1d4c75f8ba20a5fcd6ade5c1f1a770bc5211b8bcbd824e3ab44541cc40f12367"
+content_hash: "4fafef2e415194e26840227ade74e17121885cf4aeff2f5e268f423886847503"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-ROLE-ROUTING-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `1d4c75f8ba20a5fcd6ade5c1f1a770bc5211b8bcbd824e3ab44541cc40f12367`
+- Content hash: `4fafef2e415194e26840227ade74e17121885cf4aeff2f5e268f423886847503`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-role-routing-explainer.txt`
-- Character count: `7630`
+- Character count: `7305`
 
 ## Relationships
 

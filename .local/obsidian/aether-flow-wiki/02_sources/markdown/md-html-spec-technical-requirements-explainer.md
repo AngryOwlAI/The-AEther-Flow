@@ -2,14 +2,14 @@
 object_id: "MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/technical-requirements-explainer.md"
-source_hash: "00c5153a36789f6aaef989b949e41f347beb0ea086496e0aacda05d226501b6d"
+source_hash: "10d23bc12f88aba4d0133e816fd09304f2ee2c5ec452738272fff52cb27a81a2"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-technical-requirements-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-technical-requirements-explainer.md"
-content_hash: "00c5153a36789f6aaef989b949e41f347beb0ea086496e0aacda05d226501b6d"
+content_hash: "10d23bc12f88aba4d0133e816fd09304f2ee2c5ec452738272fff52cb27a81a2"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-TECHNICAL-REQUIREMENTS-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `00c5153a36789f6aaef989b949e41f347beb0ea086496e0aacda05d226501b6d`
+- Content hash: `10d23bc12f88aba4d0133e816fd09304f2ee2c5ec452738272fff52cb27a81a2`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-technical-requirements-explainer.txt`
-- Character count: `6173`
+- Character count: `6118`
 
 ## Relationships
 

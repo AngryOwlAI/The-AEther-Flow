@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="8d6ede0000273723ba50d3d9874ac35c2889fcf55683cba5165d5cdd612f3593">
+  <meta name="aether-flow-source-basis-hash" content="ad4d52be05df21c8aef62de0638e787c39356d87cf13d1e0fe193808c2d7a326">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Roles And Skills</title>
   <style>
@@ -37,13 +37,15 @@
     .panel { border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 24px; }
     .section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 16px; }
     .block-head { display: grid; gap: 10px; align-items: start; margin-bottom: 16px; }
-    .hub-grid, .content-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .hub-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .content-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
-    .atlas-link, .content-block, .capsule, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .atlas-link, .content-block, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .content-block { overflow-x: auto; }
     .atlas-link { text-decoration: none; display: block; }
     .atlas-link strong { display: block; color: var(--authority); margin-bottom: 6px; }
     .atlas-link span, .trace-list span { color: var(--muted); display: block; }
-    table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    table { width: 100%; min-width: 860px; table-layout: auto; border-collapse: collapse; }
     th, td { border-bottom: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
     th { color: var(--authority); }
     .evidence-row { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-start; }
@@ -53,11 +55,6 @@
     summary { cursor: pointer; font-weight: 800; }
     .trace-list { display: grid; gap: 10px; padding-left: 24px; }
     .trace-list li { border: 1px solid var(--border); background: var(--surface); padding: 12px; }
-    .capsule dl { display: grid; gap: 10px; margin: 0; }
-    .capsule-row, .capsule dt, .capsule dd { min-width: 0; overflow-wrap: break-word; }
-    .capsule dl { grid-template-columns: minmax(0, 1fr); }
-    .capsule dt { color: var(--authority); text-transform: uppercase; font-size: .78rem; font-weight: 800; }
-    .capsule dd { margin: 0; color: var(--muted); line-height: 1.52; }
     .claim-box { background: linear-gradient(135deg, var(--warning-soft), #fffaf0); }
     .diagram-shell { overflow: hidden; }
     .mermaid-wrap { position: relative; border: 1px solid var(--border); background: #fbfaf6; min-height: 360px; height: 440px; max-height: 780px; overflow: hidden; }
@@ -70,26 +67,333 @@
     pre { overflow: auto; white-space: pre-wrap; background: #161b18; color: #edf2ec; padding: 14px; }
     @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding: 22px; } .section-heading, .block-head { display: block; } .nav { position: static; flex-wrap: wrap; overflow: visible; } .nav a { white-space: normal; } }
   </style>
+
+
+
+
+
+
+<style id="aether-docs-enhancement">
+  :root {
+    --doc-bg: #f8f5ee;
+    --doc-ink: #18201b;
+    --doc-muted: #5f6b60;
+    --doc-line: rgba(33, 49, 40, .18);
+    --doc-panel: rgba(255, 255, 255, .92);
+    --doc-wash: #f1eadc;
+    --doc-authority: #1e3a5f;
+    --doc-physics: #2f6f54;
+    --doc-workflow: #8b5a20;
+    --doc-warning: #a34f12;
+    --doc-validation: #0f766e;
+    --doc-shadow: 0 18px 50px rgba(27, 33, 28, .10);
+    --doc-radius: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background:
+      linear-gradient(180deg, #fffcf7 0%, var(--doc-bg) 42%, #efe8dc 100%);
+    color: var(--doc-ink);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .28;
+    background-image:
+      linear-gradient(rgba(30,58,95,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30,58,95,.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(180deg, black, transparent 75%);
+  }
+
+  .page-shell {
+    max-width: 1220px;
+    padding-top: 26px;
+    position: relative;
+  }
+
+  .hero,
+  .panel,
+  .atlas-link,
+  .content-block,
+  .block-subgroup,
+  .source-list li,
+  details {
+    border-radius: var(--doc-radius);
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--doc-shadow);
+    border-color: rgba(30,58,95,.22);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.96), rgba(223,232,242,.78)),
+      linear-gradient(90deg, rgba(47,111,84,.12), rgba(139,90,32,.10));
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  h1 {
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  h2, h3 { text-wrap: balance; }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .hero > div {
+    max-width: 78ch;
+  }
+
+  p, li, dd {
+    font-size: 1.01rem;
+    line-height: 1.72;
+  }
+
+  .hero-copy {
+    font-size: clamp(1.02rem, 2vw, 1.22rem);
+    max-width: 70ch;
+  }
+
+  .source-chip,
+  .control-marker {
+    border-radius: 999px;
+  }
+
+  .nav {
+    top: 8px;
+    border-radius: 999px;
+    padding: 10px;
+    background: rgba(248,245,238,.72);
+    border: 1px solid rgba(33,49,40,.10);
+    box-shadow: 0 12px 36px rgba(27,33,28,.08);
+  }
+
+  .nav a {
+    border-radius: 999px;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .nav a:hover,
+  .nav a.is-active {
+    transform: translateY(-1px);
+    background: var(--doc-ink);
+    color: #fffaf1;
+    border-color: var(--doc-ink);
+  }
+
+  .panel {
+    box-shadow: 0 14px 44px rgba(27,33,28,.075);
+    border-color: rgba(33,49,40,.16);
+  }
+
+  .section-heading {
+    border-bottom: 1px solid rgba(33,49,40,.10);
+    padding-bottom: 12px;
+  }
+
+  .subject-summary .content-block {
+    border-left: 7px solid var(--doc-authority);
+    background:
+      linear-gradient(90deg, rgba(30,58,95,.07), transparent 30%),
+      var(--doc-panel);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-block {
+    position: relative;
+    padding: clamp(18px, 2vw, 26px);
+    border-left: 7px solid rgba(30,58,95,.28);
+    background: var(--doc-panel);
+    box-shadow: 0 8px 28px rgba(27,33,28,.055);
+  }
+
+  .content-block[data-content-block*="ontology"],
+  .content-block[data-content-block*="physics"],
+  .content-block[data-content-block*="claim"],
+  .content-block[data-content-block*="benchmark"],
+  .content-block[data-content-block*="derivation"] {
+    border-left-color: var(--doc-physics);
+  }
+
+  .content-block[data-content-block*="workflow"],
+  .content-block[data-content-block*="agent"],
+  .content-block[data-content-block*="role"],
+  .content-block[data-content-block*="director"] {
+    border-left-color: var(--doc-workflow);
+  }
+
+  .content-block[data-content-block*="validation"],
+  .content-block[data-content-block*="memory"],
+  .content-block[data-content-block*="authority"],
+  .content-block[data-content-block*="source"] {
+    border-left-color: var(--doc-validation);
+  }
+
+  .content-block::before {
+    content: attr(data-content-block);
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(30,58,95,.08);
+    color: var(--doc-authority);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .block-head {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(33,49,40,.14);
+  }
+
+  .atlas-link {
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+
+  .atlas-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(27,33,28,.10);
+    border-color: rgba(30,58,95,.38);
+  }
+
+  .reader-toolbar {
+    position: sticky;
+    top: 68px;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 10px 0 18px;
+    padding: 10px;
+    border: 1px solid rgba(33,49,40,.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(27,33,28,.08);
+  }
+
+  .reader-toolbar input[type="search"] {
+    flex: 1 1 230px;
+    min-width: 160px;
+    border: 1px solid rgba(33,49,40,.16);
+    border-radius: 999px;
+    padding: 10px 13px;
+    color: var(--doc-ink);
+    background: #fff;
+    font: inherit;
+  }
+
+  .reading-progress {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: var(--reading-progress, 0%);
+    height: 4px;
+    background: linear-gradient(90deg, var(--doc-authority), var(--doc-physics), var(--doc-warning));
+    box-shadow: 0 0 18px rgba(47,111,84,.35);
+  }
+
+  .source-chip,
+  .source-list li {
+    cursor: copy;
+  }
+
+  .source-chip.was-copied,
+  .source-list li.was-copied {
+    outline: 2px solid rgba(15,118,110,.35);
+    background: rgba(15,118,110,.10);
+  }
+
+  mark.search-hit {
+    background: rgba(248,232,199,.9);
+    color: inherit;
+    padding: 0 .15em;
+    border-radius: .25em;
+  }
+
+  [hidden] { display: none !important; }
+
+  .diagram-shell {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
+  }
+
+  .diagram-shell .section-heading::after {
+    content: "Diagram preserved from source spec";
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--doc-muted);
+    font-size: .84rem;
+  }
+
+  .zoom-controls button {
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(27,33,28,.10);
+  }
+
+  .source-list li {
+    transition: transform .15s ease, background .15s ease;
+  }
+
+  .source-list li:hover {
+    transform: translateY(-1px);
+    background: rgba(223,232,242,.58);
+  }
+
+  @media (max-width: 860px) {
+    .reader-toolbar {
+      position: static;
+      border-radius: var(--doc-radius);
+    }
+
+    .nav {
+      border-radius: var(--doc-radius);
+    }
+
+    .hero, .panel { border-radius: var(--doc-radius); }
+  }
+</style>
+
+
+
+
+
+
 </head>
 <body>
   <main class="page-shell">
     <header class="hero">
       <div><p class="eyebrow">role_catalog</p><h1>Roles And Skills</h1><p class="hero-copy">Catalog active registered roles, defined or superseded role states, repo-local governed skills, and evidence-labeled role/skill associations.</p></div>
-      <aside class="meta-stack" aria-label="Page metadata">
-        <div class="meta-chip"><strong>Layout intent</strong><br>Use an active-first catalog with compact role cards, status bands, repo-local skill groups, and evidence-labeled declared versus likely support-skill associations.</div>
-        <div class="meta-chip"><strong>Authority</strong><br>Human-only generated derivative</div>
-        <div class="meta-chip"><strong>Source basis</strong><br><code>MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER</code></div>
-      </aside>
     </header>
-    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#analysis">Analysis</a><a href="#sources">Sources</a></nav>
+    <section id="subject-summary" class="section panel subject-summary" data-content-block="subject_summary">
+      <div class="section-heading"><div><h2>Summary of Roles and Skills</h2></div></div>
+      <article class="content-block" data-summary-field="summary_text"><p>The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator can maintain explanatory specs and source-backed HTML, Project-Control Maintainer owns control contracts, Validator Engineer owns deterministic checks, and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.</p></article>
+      <div class="evidence-row" data-summary-field="source_basis"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md"><code>.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.4.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.4.0.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div>
+    </section>
+    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#sources">Sources</a></nav>
     <section id="content-blocks" class="section panel">
       <div class="section-heading"><div><h2>Source-Backed Coverage</h2></div></div>
-      <div class="content-grid"><article class="content-block" data-content-block="active_role_catalog"><div class="block-head"><h3>Active Role Catalog</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Role</th><th>Kind</th><th>Authority</th><th>Validators</th><th>Contract</th></tr></thead><tbody><tr><td>Memory-System Maintainer v0.1.0</td><td>memory_system_maintenance</td><td>project_control</td><td>bootstrap_memory_system;validate_documentation_impact;validate_research_control;unittest</td><td>.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md</td></tr><tr><td>Process Integrity Auditor v0.1.0</td><td>process_control</td><td>process_control</td><td>validate_research_control;check_diff</td><td>.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md</td></tr><tr><td>Project-Control Maintainer v0.1.0</td><td>project_control_maintenance</td><td>project_control</td><td>validate_documentation_impact;validate_research_control;unittest</td><td>.agents/roles/research_ops/project-control-maintainer.v0.1.0.md</td></tr><tr><td>Documentation Curator v0.2.0</td><td>project_documentation</td><td>project_control</td><td>bootstrap_memory_system;validate_research_control;validate_documentation_impact</td><td>.agents/roles/research_ops/documentation-curator.v0.2.0.md</td></tr><tr><td>Project-System Director v0.1.0</td><td>project_system_routing</td><td>project_control</td><td>validate_documentation_impact;validate_research_control</td><td>.agents/roles/research_ops/project-system-director.v0.1.0.md</td></tr><tr><td>Validator Engineer v0.1.0</td><td>project_system_validation</td><td>project_control</td><td>validate_documentation_impact;validate_research_control;unittest</td><td>.agents/roles/research_ops/validator-engineer.v0.1.0.md</td></tr><tr><td>Director of Research v0.1.0</td><td>routing_control</td><td>routing_control</td><td>validate_research_control;claim_boundary_phrase_scan</td><td>.agents/roles/research_ops/director-of-research.v0.1.0.md</td></tr><tr><td>Refuter v0.1.0</td><td>scientific_adversarial</td><td>science_draft</td><td>validate_research_control;claim_boundary_phrase_scan</td><td>.agents/roles/physics/refuter.v0.1.0.md</td></tr><tr><td>Smuggling Auditor v0.1.0</td><td>scientific_adversarial</td><td>science_draft</td><td>validate_research_control;claim_boundary_phrase_scan</td><td>.agents/roles/physics/smuggling-auditor.v0.1.0.md</td></tr><tr><td>Candidate Constructor v0.1.0</td><td>scientific_construction</td><td>science_draft</td><td>validate_research_control;claim_boundary_phrase_scan</td><td>.agents/roles/physics/candidate-constructor.v0.1.0.md</td></tr><tr><td>Ontology Formalizer v0.1.0</td><td>scientific_formalization</td><td>science_draft</td><td>validate_research_control;claim_boundary_phrase_scan</td><td>.agents/roles/physics/ontology-formalizer.v0.1.0.md</td></tr></tbody></table></article><article class="content-block" data-content-block="status_defined_roles"><div class="block-head"><h3>Status Defined Roles</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Role</th><th>Kind</th><th>Authority</th><th>Validators</th><th>Contract</th></tr></thead><tbody><tr><td>Gate Chair v0.1.0</td><td>scientific_gate</td><td>human_gated</td><td>validate_research_control;claim_boundary_phrase_scan</td><td>.agents/roles/physics/gate-chair.v0.1.0.md</td></tr></tbody></table></article><article class="content-block" data-content-block="superseded_audit_roles"><div class="block-head"><h3>Superseded Audit Roles</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Role</th><th>Kind</th><th>Authority</th><th>Validators</th><th>Contract</th></tr></thead><tbody><tr><td>Documentation Curator v0.1.0</td><td>project_documentation</td><td>project_control</td><td>bootstrap_memory_system;validate_research_control;validate_documentation_impact</td><td>.agents/roles/research_ops/documentation-curator.v0.1.0.md</td></tr></tbody></table></article><article class="content-block" data-content-block="repo_local_skill_catalog"><div class="block-head"><h3>Repo Local Skill Catalog</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Skill</th><th>Purpose</th><th>Path</th></tr></thead><tbody><tr><td>continue-research</td><td>Resolve tracked research-control state and set up or execute one bounded AgentJob per invocation.</td><td>.codex/skills/continue-research/SKILL.md</td></tr><tr><td>grill-me</td><td>Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions &quot;grill me&quot;.</td><td>.codex/skills/grill-me/SKILL.md</td></tr><tr><td>html-visual-explainer</td><td>Front door for generated human-only HTML explainers.</td><td>.codex/skills/html-visual-explainer/SKILL.md</td></tr><tr><td>improve-project-system</td><td>Resolve tracked project-system improvement state and set up or execute one bounded AgentJob per invocation.</td><td>.codex/skills/improve-project-system/SKILL.md</td></tr><tr><td>markdown-wiki</td><td>Front door for generated Markdown metadata notes and wiki indexes.</td><td>.codex/skills/markdown-wiki/SKILL.md</td></tr><tr><td>obsidian-wiki</td><td>Front door for the local generated Obsidian memory vault, content-semantic extraction, relationship graph, and JSON query surface.</td><td>.codex/skills/obsidian-wiki/SKILL.md</td></tr><tr><td>ontology-promotion</td><td>Front door for ontology promotion packet boundaries.</td><td>.codex/skills/ontology-promotion/SKILL.md</td></tr><tr><td>pdf-derivative-build</td><td>Front door for managed TeX-to-PDF derivative builds.</td><td>.codex/skills/pdf-derivative-build/SKILL.md</td></tr><tr><td>project-memory-system</td><td>Owns the shared memory, registry, wiki, PDF-derivative, cleanup, and validation scripts for this repository.</td><td>.codex/skills/project-memory-system/SKILL.md</td></tr><tr><td>tex-wiki</td><td>Front door for TeX-source metadata notes and TeX registry validation.</td><td>.codex/skills/tex-wiki/SKILL.md</td></tr><tr><td>visual-explainer</td><td>Generate beautiful, self-contained HTML pages that visually explain systems, code changes, plans, and data. Use when the user asks for a diagram, architecture overview, diff review, plan review, project recap, comparison table, or any visual explanation of technical concepts. Also use proactively when you are about to render a complex ASCII table (4+ rows or 3+ columns) — present it as a styled HTML page instead.</td><td>.codex/skills/visual-explainer/SKILL.md</td></tr><tr><td>mermaid-documentation</td><td>Subskill for registered Mermaid diagrams in registered explanatory Markdown and tracked source-backed HTML explainers.</td><td>.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md</td></tr><tr><td>playwright-cli</td><td>Automate browser interactions, test web pages and work with Playwright tests.</td><td>.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/node_modules/playwright-core/lib/tools/cli-client/skill/SKILL.md</td></tr><tr><td>playwright-trace</td><td>Inspect Playwright trace files from the command line — list actions, view requests, console, errors, snapshots and screenshots.</td><td>.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/node_modules/playwright-core/lib/tools/trace/SKILL.md</td></tr></tbody></table></article><article class="content-block" data-content-block="declared_role_skill_evidence"><div class="block-head"><h3>Declared Role Skill Evidence</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Evidence kind</th><th>Source path</th><th>What it supports</th></tr></thead><tbody><tr><td>Role contracts</td><td>.agents/roles/...</td><td>Declared role purpose, authority, validators, and forbidden surfaces.</td></tr><tr><td>Role registries</td><td>registries/AGENT_ROLE_REGISTRY.csv</td><td>Registered status, contract path, version, authority level, and default validators.</td></tr><tr><td>Skill contracts</td><td>.codex/skills/.../SKILL.md</td><td>Repo-local front doors and workflow commands.</td></tr></tbody></table></article><article class="content-block" data-content-block="inferred_support_skills"><div class="block-head"><h3>Inferred Support Skills</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Role</th><th>Association</th><th>Evidence-labeled rationale</th></tr></thead><tbody><tr><td>Documentation Curator</td><td>likely support skill: html-visual-explainer</td><td>The role owns source-backed human-only HTML specs; the skill governs tracked HTML registration.</td></tr><tr><td>Documentation Curator</td><td>likely support skill: visual-explainer</td><td>The visual skill supports rendering and layout while remaining non-authoritative.</td></tr><tr><td>Documentation Curator</td><td>likely support skill: project-memory-system</td><td>The role must run memory bootstrap and docs-impact validation after source/spec changes.</td></tr><tr><td>Memory-System Maintainer</td><td>likely support skill: obsidian-wiki</td><td>The role maintains source-first memory and the skill owns the local generated vault/query surface.</td></tr></tbody></table></article><article class="content-block" data-content-block="operator_context_boundary"><div class="block-head"><h3>Operator Context Boundary</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><table><thead><tr><th>Label</th><th>Surface</th><th>Meaning</th></tr></thead><tbody><tr><td>Project-governed</td><td>.codex/skills/*</td><td>Durable repo-local skill contract.</td></tr><tr><td>Operator aid</td><td>Global Codex skills/plugins</td><td>Useful in this session, not project authority unless mirrored into the repo.</td></tr><tr><td>Operator aid</td><td>Obsidian app</td><td>Optional local reader for generated vault files.</td></tr></tbody></table></article></div>
+      <div class="content-grid"><article class="content-block" data-content-block="active_role_catalog"><div class="block-head"><h3>Active Role Catalog</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/director-of-research.v0.1.0.md"><code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/project-system-director.v0.1.0.md"><code>.agents/roles/research_ops/project-system-director.v0.1.0.md</code></span></div></div><p>A primary catalog of current active roles, what each does, which authority lane it occupies, and which outputs or validators normally constrain it. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>registries/AGENT_ROLE_REGISTRY.csv</code>, <code>registries/ROLE_EXECUTION_REGISTRY.csv</code>, <code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="status_defined_roles"><div class="block-head"><h3>Status Defined Roles</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/director-of-research.v0.1.0.md"><code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/project-system-director.v0.1.0.md"><code>.agents/roles/research_ops/project-system-director.v0.1.0.md</code></span></div></div><p>A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>registries/AGENT_ROLE_REGISTRY.csv</code>, <code>registries/ROLE_EXECUTION_REGISTRY.csv</code>, <code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="superseded_audit_roles"><div class="block-head"><h3>Superseded Audit Roles</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/director-of-research.v0.1.0.md"><code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/project-system-director.v0.1.0.md"><code>.agents/roles/research_ops/project-system-director.v0.1.0.md</code></span></div></div><p>An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>registries/AGENT_ROLE_REGISTRY.csv</code>, <code>registries/ROLE_EXECUTION_REGISTRY.csv</code>, <code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="repo_local_skill_catalog"><div class="block-head"><h3>Repo Local Skill Catalog</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span></div></div><p>A grouped catalog of repo-local skills by continuation, project-system improvement, memory/wiki, HTML visual explanation, Mermaid rendering, PDF/TeX, ontology promotion, and design support. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/README.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="declared_role_skill_evidence"><div class="block-head"><h3>Declared Role Skill Evidence</h3><div class="evidence-row"><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/director-of-research.v0.1.0.md"><code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/project-system-director.v0.1.0.md"><code>.agents/roles/research_ops/project-system-director.v0.1.0.md</code></span></div></div><p>A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>registries/AGENT_ROLE_REGISTRY.csv</code>, <code>registries/ROLE_EXECUTION_REGISTRY.csv</code>, <code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="inferred_support_skills"><div class="block-head"><h3>Inferred Support Skills</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span></div></div><p>A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>research_control/README.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="operator_context_boundary"><div class="block-head"><h3>Operator Context Boundary</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="research_control/README.md"><code>research_control/README.md</code></span><span class="source-chip" data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></span></div></div><p>A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records. In reader-facing terms, this section identifies the subject of <strong>Roles And Skills</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>AGENTS.md</code>, <code>README.md</code>, <code>research_control/README.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article></div>
 
     </section>
-
-    <section id="analysis" class="section panel" data-explainer-control="expandable_analysis_panels"><p class="eyebrow">Analysis capsules</p><h2>Claim-Aware Analysis</h2><div class="capsule-grid"><article class="capsule" data-analysis-capsule="capsule-1"><h3>Active Roles Are The Operating System</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>Readers need the current role system before historical audit context.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>The page should visually prioritize `active` rows in `AGENT_ROLE_REGISTRY.csv`, then place `status_defined` and `superseded` roles in separate bands.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`registries/AGENT_ROLE_REGISTRY.csv`, role contracts under `.agents/roles/`, and `registries/ROLE_EXECUTION_REGISTRY.csv`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Human-only catalog; registries and role contracts carry project-control authority.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>A task-local execution-role overlay can narrow or expand a role only for one AgentJob.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Check the registry row, role contract path, task-local execution-role file, and AgentJob allowlist before executing work.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Use the role-routing explainer to inspect how a role is selected for one task.</dd></div></dl></article><article class="capsule" data-analysis-capsule="capsule-2"><h3>Skills Are Repo-Local Contracts</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>The project can only govern skills tracked in `.codex/skills/`.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>The catalog should list repo-local skill contracts as governed front doors, while labeling external/global tools as operator context only.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`.codex/skills/*/SKILL.md`, `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`, and `registries/MARKDOWN_SOURCE_REGISTRY.csv`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Human-only explanation of skill contracts.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>A current Codex session may expose additional global skills or plugins that are useful but not durable repo requirements.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Confirm a skill path is tracked in the repository before treating it as project authority.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Keep inferred support-skill associations explicitly labeled and source-backed.</dd></div></dl></article></div></section>
-    <section id="sources" class="section panel" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><p class="muted">Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.</p><ul class="source-list"><li data-source-path="README.md"><code>README.md</code></li><li data-source-path="AGENTS.md"><code>AGENTS.md</code></li><li data-source-path="research_control/README.md"><code>research_control/README.md</code></li><li data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></li><li data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></li><li data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv"><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></li><li data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md"><code>.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code></li><li data-source-path=".agents/roles/research_ops/director-of-research.v0.1.0.md"><code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/project-system-director.v0.1.0.md"><code>.agents/roles/research_ops/project-system-director.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/project-control-maintainer.v0.1.0.md"><code>.agents/roles/research_ops/project-control-maintainer.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/documentation-curator.v0.2.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.2.0.md</code></li><li data-source-path=".agents/roles/research_ops/validator-engineer.v0.1.0.md"><code>.agents/roles/research_ops/validator-engineer.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/memory-system-maintainer.v0.1.0.md"><code>.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"><code>.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/ontology-formalizer.v0.1.0.md"><code>.agents/roles/physics/ontology-formalizer.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/candidate-constructor.v0.1.0.md"><code>.agents/roles/physics/candidate-constructor.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/refuter.v0.1.0.md"><code>.agents/roles/physics/refuter.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/smuggling-auditor.v0.1.0.md"><code>.agents/roles/physics/smuggling-auditor.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/gate-chair.v0.1.0.md"><code>.agents/roles/physics/gate-chair.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/documentation-curator.v0.1.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.1.0.md</code></li><li data-source-path=".codex/skills/continue-research/SKILL.md"><code>.codex/skills/continue-research/SKILL.md</code></li><li data-source-path=".codex/skills/improve-project-system/SKILL.md"><code>.codex/skills/improve-project-system/SKILL.md</code></li><li data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></li><li data-source-path=".codex/skills/markdown-wiki/SKILL.md"><code>.codex/skills/markdown-wiki/SKILL.md</code></li><li data-source-path=".codex/skills/tex-wiki/SKILL.md"><code>.codex/skills/tex-wiki/SKILL.md</code></li><li data-source-path=".codex/skills/pdf-derivative-build/SKILL.md"><code>.codex/skills/pdf-derivative-build/SKILL.md</code></li><li data-source-path=".codex/skills/obsidian-wiki/SKILL.md"><code>.codex/skills/obsidian-wiki/SKILL.md</code></li><li data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></li><li data-source-path=".codex/skills/visual-explainer/SKILL.md"><code>.codex/skills/visual-explainer/SKILL.md</code></li><li data-source-path=".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"><code>.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md</code></li><li data-source-path=".codex/skills/ontology-promotion/SKILL.md"><code>.codex/skills/ontology-promotion/SKILL.md</code></li><li data-source-path=".codex/skills/grill-me/SKILL.md"><code>.codex/skills/grill-me/SKILL.md</code></li></ul></section>
+    <section id="sources" class="section panel" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><p class="muted">Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.</p><ul class="source-list"><li data-source-path="README.md"><code>README.md</code></li><li data-source-path="AGENTS.md"><code>AGENTS.md</code></li><li data-source-path="research_control/README.md"><code>research_control/README.md</code></li><li data-source-path="registries/AGENT_ROLE_REGISTRY.csv"><code>registries/AGENT_ROLE_REGISTRY.csv</code></li><li data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv"><code>registries/ROLE_EXECUTION_REGISTRY.csv</code></li><li data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv"><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></li><li data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md"><code>.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code></li><li data-source-path=".agents/roles/research_ops/director-of-research.v0.1.0.md"><code>.agents/roles/research_ops/director-of-research.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/project-system-director.v0.1.0.md"><code>.agents/roles/research_ops/project-system-director.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/project-control-maintainer.v0.1.0.md"><code>.agents/roles/research_ops/project-control-maintainer.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/documentation-curator.v0.4.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.4.0.md</code></li><li data-source-path=".agents/roles/research_ops/documentation-curator.v0.3.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.3.0.md</code></li><li data-source-path=".agents/roles/research_ops/documentation-curator.v0.2.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.2.0.md</code></li><li data-source-path=".agents/roles/research_ops/validator-engineer.v0.1.0.md"><code>.agents/roles/research_ops/validator-engineer.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/memory-system-maintainer.v0.1.0.md"><code>.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"><code>.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/ontology-formalizer.v0.1.0.md"><code>.agents/roles/physics/ontology-formalizer.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/candidate-constructor.v0.1.0.md"><code>.agents/roles/physics/candidate-constructor.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/refuter.v0.1.0.md"><code>.agents/roles/physics/refuter.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/smuggling-auditor.v0.1.0.md"><code>.agents/roles/physics/smuggling-auditor.v0.1.0.md</code></li><li data-source-path=".agents/roles/physics/gate-chair.v0.1.0.md"><code>.agents/roles/physics/gate-chair.v0.1.0.md</code></li><li data-source-path=".agents/roles/research_ops/documentation-curator.v0.1.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.1.0.md</code></li><li data-source-path=".codex/skills/continue-research/SKILL.md"><code>.codex/skills/continue-research/SKILL.md</code></li><li data-source-path=".codex/skills/improve-project-system/SKILL.md"><code>.codex/skills/improve-project-system/SKILL.md</code></li><li data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></li><li data-source-path=".codex/skills/markdown-wiki/SKILL.md"><code>.codex/skills/markdown-wiki/SKILL.md</code></li><li data-source-path=".codex/skills/tex-wiki/SKILL.md"><code>.codex/skills/tex-wiki/SKILL.md</code></li><li data-source-path=".codex/skills/pdf-derivative-build/SKILL.md"><code>.codex/skills/pdf-derivative-build/SKILL.md</code></li><li data-source-path=".codex/skills/obsidian-wiki/SKILL.md"><code>.codex/skills/obsidian-wiki/SKILL.md</code></li><li data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></li><li data-source-path=".codex/skills/visual-explainer/SKILL.md"><code>.codex/skills/visual-explainer/SKILL.md</code></li><li data-source-path=".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"><code>.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md</code></li><li data-source-path=".codex/skills/ontology-promotion/SKILL.md"><code>.codex/skills/ontology-promotion/SKILL.md</code></li><li data-source-path=".codex/skills/grill-me/SKILL.md"><code>.codex/skills/grill-me/SKILL.md</code></li></ul></section>
   </main>
   <script>
     (() => {
@@ -147,5 +451,121 @@
       });
     })();
   </script>
+
+
+
+
+
+
+<script id="aether-docs-enhancement-js">
+  (() => {
+    if (window.__aetherDocsEnhancementLoaded) return;
+    window.__aetherDocsEnhancementLoaded = true;
+
+    const progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progress);
+
+    const nav = document.querySelector('[data-explainer-control="section_toc"]');
+    const toolbar = document.createElement('div');
+    toolbar.className = 'reader-toolbar';
+    toolbar.setAttribute('aria-label', 'Explainer search');
+    toolbar.innerHTML = `
+      <input type="search" placeholder="Search this explainer" aria-label="Search this explainer">
+    `;
+    if (nav) nav.insertAdjacentElement('afterend', toolbar);
+
+    const searchable = Array.from(document.querySelectorAll(
+      '[data-content-block], .source-list li, .atlas-link'
+    ));
+
+    const clearMarks = (node) => {
+      node.querySelectorAll('mark.search-hit').forEach((mark) => {
+        mark.replaceWith(document.createTextNode(mark.textContent || ''));
+      });
+      node.normalize();
+    };
+
+    const markText = (node, query) => {
+      if (!query || node.matches('script, style, svg, pre, code')) return;
+      for (const child of Array.from(node.childNodes)) {
+        if (child.nodeType === Node.TEXT_NODE) {
+          const text = child.nodeValue || '';
+          const index = text.toLowerCase().indexOf(query);
+          if (index >= 0) {
+            const range = document.createRange();
+            range.setStart(child, index);
+            range.setEnd(child, index + query.length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-hit';
+            range.surroundContents(mark);
+          }
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+          markText(child, query);
+        }
+      }
+    };
+
+    const searchInput = toolbar.querySelector('input[type="search"]');
+    const applySearch = () => {
+      const raw = searchInput.value.trim();
+      const query = raw.toLowerCase();
+      searchable.forEach((node) => {
+        clearMarks(node);
+        const matches = !query || node.textContent.toLowerCase().includes(query);
+        node.hidden = !matches;
+        if (matches && query) markText(node, query);
+      });
+    };
+    searchInput?.addEventListener('input', applySearch);
+    searchInput?.addEventListener('search', applySearch);
+
+    const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
+    sourceNodes.forEach((node) => {
+      node.addEventListener('click', async () => {
+        const text = node.getAttribute('data-source-path') || node.textContent.trim();
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          node.classList.add('was-copied');
+          setTimeout(() => node.classList.remove('was-copied'), 850);
+        } catch (_) {
+          // Clipboard may be unavailable for local file URLs. No-op.
+        }
+      });
+    });
+
+    const updateProgress = () => {
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+      document.documentElement.style.setProperty('--reading-progress', `${pct}%`);
+    };
+    updateProgress();
+    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('resize', updateProgress);
+
+    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    if ('IntersectionObserver' in window && sections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = `#${entry.target.id}`;
+          navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === id));
+        });
+      }, { rootMargin: '-28% 0px -62% 0px', threshold: 0.01 });
+      sections.forEach((section) => observer.observe(section));
+    }
+  })();
+</script>
+
+
+
+
+
+
 </body>
 </html>

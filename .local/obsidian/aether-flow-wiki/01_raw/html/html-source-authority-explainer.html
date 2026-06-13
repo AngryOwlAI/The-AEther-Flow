@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="31f2f03944277c7278556ba8debd7ae3387dfd0a305d7942e2951627e83aef27">
+  <meta name="aether-flow-source-basis-hash" content="3a04872956546af2ab4fabdfddb4106e40869536e8ad9b11399664894ad9112d">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Source Authority</title>
   <style>
@@ -37,13 +37,15 @@
     .panel { border: 1px solid var(--border); background: rgba(255,255,255,.9); padding: 24px; }
     .section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 16px; }
     .block-head { display: grid; gap: 10px; align-items: start; margin-bottom: 16px; }
-    .hub-grid, .content-grid, .capsule-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .hub-grid, .source-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .content-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
     .layer-strip { display: grid; gap: 14px; grid-template-columns: 1fr; }
-    .atlas-link, .content-block, .capsule, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .atlas-link, .content-block, .block-subgroup { border: 1px solid var(--border); background: var(--surface); padding: 16px; min-width: 0; }
+    .content-block { overflow-x: auto; }
     .atlas-link { text-decoration: none; display: block; }
     .atlas-link strong { display: block; color: var(--authority); margin-bottom: 6px; }
     .atlas-link span, .trace-list span { color: var(--muted); display: block; }
-    table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    table { width: 100%; min-width: 860px; table-layout: auto; border-collapse: collapse; }
     th, td { border-bottom: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
     th { color: var(--authority); }
     .evidence-row { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-start; }
@@ -53,11 +55,6 @@
     summary { cursor: pointer; font-weight: 800; }
     .trace-list { display: grid; gap: 10px; padding-left: 24px; }
     .trace-list li { border: 1px solid var(--border); background: var(--surface); padding: 12px; }
-    .capsule dl { display: grid; gap: 10px; margin: 0; }
-    .capsule-row, .capsule dt, .capsule dd { min-width: 0; overflow-wrap: break-word; }
-    .capsule dl { grid-template-columns: minmax(0, 1fr); }
-    .capsule dt { color: var(--authority); text-transform: uppercase; font-size: .78rem; font-weight: 800; }
-    .capsule dd { margin: 0; color: var(--muted); line-height: 1.52; }
     .claim-box { background: linear-gradient(135deg, var(--warning-soft), #fffaf0); }
     .diagram-shell { overflow: hidden; }
     .mermaid-wrap { position: relative; border: 1px solid var(--border); background: #fbfaf6; min-height: 360px; height: 440px; max-height: 780px; overflow: hidden; }
@@ -70,21 +67,330 @@
     pre { overflow: auto; white-space: pre-wrap; background: #161b18; color: #edf2ec; padding: 14px; }
     @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding: 22px; } .section-heading, .block-head { display: block; } .nav { position: static; flex-wrap: wrap; overflow: visible; } .nav a { white-space: normal; } }
   </style>
+
+
+
+
+
+
+<style id="aether-docs-enhancement">
+  :root {
+    --doc-bg: #f8f5ee;
+    --doc-ink: #18201b;
+    --doc-muted: #5f6b60;
+    --doc-line: rgba(33, 49, 40, .18);
+    --doc-panel: rgba(255, 255, 255, .92);
+    --doc-wash: #f1eadc;
+    --doc-authority: #1e3a5f;
+    --doc-physics: #2f6f54;
+    --doc-workflow: #8b5a20;
+    --doc-warning: #a34f12;
+    --doc-validation: #0f766e;
+    --doc-shadow: 0 18px 50px rgba(27, 33, 28, .10);
+    --doc-radius: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background:
+      linear-gradient(180deg, #fffcf7 0%, var(--doc-bg) 42%, #efe8dc 100%);
+    color: var(--doc-ink);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .28;
+    background-image:
+      linear-gradient(rgba(30,58,95,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30,58,95,.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(180deg, black, transparent 75%);
+  }
+
+  .page-shell {
+    max-width: 1220px;
+    padding-top: 26px;
+    position: relative;
+  }
+
+  .hero,
+  .panel,
+  .atlas-link,
+  .content-block,
+  .block-subgroup,
+  .source-list li,
+  details {
+    border-radius: var(--doc-radius);
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--doc-shadow);
+    border-color: rgba(30,58,95,.22);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.96), rgba(223,232,242,.78)),
+      linear-gradient(90deg, rgba(47,111,84,.12), rgba(139,90,32,.10));
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  h1 {
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  h2, h3 { text-wrap: balance; }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .hero > div {
+    max-width: 78ch;
+  }
+
+  p, li, dd {
+    font-size: 1.01rem;
+    line-height: 1.72;
+  }
+
+  .hero-copy {
+    font-size: clamp(1.02rem, 2vw, 1.22rem);
+    max-width: 70ch;
+  }
+
+  .source-chip,
+  .control-marker {
+    border-radius: 999px;
+  }
+
+  .nav {
+    top: 8px;
+    border-radius: 999px;
+    padding: 10px;
+    background: rgba(248,245,238,.72);
+    border: 1px solid rgba(33,49,40,.10);
+    box-shadow: 0 12px 36px rgba(27,33,28,.08);
+  }
+
+  .nav a {
+    border-radius: 999px;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .nav a:hover,
+  .nav a.is-active {
+    transform: translateY(-1px);
+    background: var(--doc-ink);
+    color: #fffaf1;
+    border-color: var(--doc-ink);
+  }
+
+  .panel {
+    box-shadow: 0 14px 44px rgba(27,33,28,.075);
+    border-color: rgba(33,49,40,.16);
+  }
+
+  .section-heading {
+    border-bottom: 1px solid rgba(33,49,40,.10);
+    padding-bottom: 12px;
+  }
+
+  .subject-summary .content-block {
+    border-left: 7px solid var(--doc-authority);
+    background:
+      linear-gradient(90deg, rgba(30,58,95,.07), transparent 30%),
+      var(--doc-panel);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-block {
+    position: relative;
+    padding: clamp(18px, 2vw, 26px);
+    border-left: 7px solid rgba(30,58,95,.28);
+    background: var(--doc-panel);
+    box-shadow: 0 8px 28px rgba(27,33,28,.055);
+  }
+
+  .content-block[data-content-block*="ontology"],
+  .content-block[data-content-block*="physics"],
+  .content-block[data-content-block*="claim"],
+  .content-block[data-content-block*="benchmark"],
+  .content-block[data-content-block*="derivation"] {
+    border-left-color: var(--doc-physics);
+  }
+
+  .content-block[data-content-block*="workflow"],
+  .content-block[data-content-block*="agent"],
+  .content-block[data-content-block*="role"],
+  .content-block[data-content-block*="director"] {
+    border-left-color: var(--doc-workflow);
+  }
+
+  .content-block[data-content-block*="validation"],
+  .content-block[data-content-block*="memory"],
+  .content-block[data-content-block*="authority"],
+  .content-block[data-content-block*="source"] {
+    border-left-color: var(--doc-validation);
+  }
+
+  .content-block::before {
+    content: attr(data-content-block);
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(30,58,95,.08);
+    color: var(--doc-authority);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .block-head {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(33,49,40,.14);
+  }
+
+  .atlas-link {
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+
+  .atlas-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(27,33,28,.10);
+    border-color: rgba(30,58,95,.38);
+  }
+
+  .reader-toolbar {
+    position: sticky;
+    top: 68px;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 10px 0 18px;
+    padding: 10px;
+    border: 1px solid rgba(33,49,40,.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(27,33,28,.08);
+  }
+
+  .reader-toolbar input[type="search"] {
+    flex: 1 1 230px;
+    min-width: 160px;
+    border: 1px solid rgba(33,49,40,.16);
+    border-radius: 999px;
+    padding: 10px 13px;
+    color: var(--doc-ink);
+    background: #fff;
+    font: inherit;
+  }
+
+  .reading-progress {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: var(--reading-progress, 0%);
+    height: 4px;
+    background: linear-gradient(90deg, var(--doc-authority), var(--doc-physics), var(--doc-warning));
+    box-shadow: 0 0 18px rgba(47,111,84,.35);
+  }
+
+  .source-chip,
+  .source-list li {
+    cursor: copy;
+  }
+
+  .source-chip.was-copied,
+  .source-list li.was-copied {
+    outline: 2px solid rgba(15,118,110,.35);
+    background: rgba(15,118,110,.10);
+  }
+
+  mark.search-hit {
+    background: rgba(248,232,199,.9);
+    color: inherit;
+    padding: 0 .15em;
+    border-radius: .25em;
+  }
+
+  [hidden] { display: none !important; }
+
+  .diagram-shell {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
+  }
+
+  .diagram-shell .section-heading::after {
+    content: "Diagram preserved from source spec";
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--doc-muted);
+    font-size: .84rem;
+  }
+
+  .zoom-controls button {
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(27,33,28,.10);
+  }
+
+  .source-list li {
+    transition: transform .15s ease, background .15s ease;
+  }
+
+  .source-list li:hover {
+    transform: translateY(-1px);
+    background: rgba(223,232,242,.58);
+  }
+
+  @media (max-width: 860px) {
+    .reader-toolbar {
+      position: static;
+      border-radius: var(--doc-radius);
+    }
+
+    .nav {
+      border-radius: var(--doc-radius);
+    }
+
+    .hero, .panel { border-radius: var(--doc-radius); }
+  }
+</style>
+
+
+
+
+
+
 </head>
 <body>
   <main class="page-shell">
     <header class="hero">
       <div><p class="eyebrow">format_ladder</p><h1>Source Authority</h1><p class="hero-copy">Explain the repository authority ladder from canonical TeX and registries through registered Markdown, generated wiki/PDF/HTML derivatives, and local scratch surfaces.</p></div>
-      <aside class="meta-stack" aria-label="Page metadata">
-        <div class="meta-chip"><strong>Layout intent</strong><br>Use an authority/use-case matrix first, with file extensions inside each row, then provide drilldowns for source authority, generated derivatives, local retrieval surfaces, and validation evidence.</div>
-        <div class="meta-chip"><strong>Authority</strong><br>Human-only generated derivative</div>
-        <div class="meta-chip"><strong>Source basis</strong><br><code>MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER</code></div>
-      </aside>
     </header>
-    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#diagrams">Diagrams</a><a href="#workflow">Workflow</a><a href="#analysis">Analysis</a><a href="#sources">Sources</a></nav>
+    <section id="subject-summary" class="section panel subject-summary" data-content-block="subject_summary">
+      <div class="section-heading"><div><h2>Summary of Source Authority</h2></div></div>
+      <article class="content-block" data-summary-field="summary_text"><p>Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and .local caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not make them independent authority. The authority model fits the project by preserving scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repo that intentionally generates many human-facing derivatives.</p></article>
+      <div class="evidence-row" data-summary-field="source_basis"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></span><span class="source-chip" data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv"><code>registries/HTML_EXPLAINER_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/FILE_OBJECT_REGISTRY.csv"><code>registries/FILE_OBJECT_REGISTRY.csv</code></span></div>
+    </section>
+    <nav class="nav" data-explainer-control="section_toc" aria-label="Section navigation"><a href="#content-blocks">Coverage</a><a href="#diagrams">Diagrams</a><a href="#workflow">Workflow</a><a href="#sources">Sources</a></nav>
     <section id="content-blocks" class="section panel">
       <div class="section-heading"><div><h2>Source-Backed Coverage</h2></div></div>
-      <div class="content-grid"><article class="content-block" data-content-block="authority_ladder"><div class="block-head"><h3>Authority Ladder</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="registries/FILE_OBJECT_REGISTRY.csv"><code>registries/FILE_OBJECT_REGISTRY.csv</code></span></div></div><p>Explain canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries.</p></article><article class="content-block" data-content-block="format_use_case_matrix"><div class="block-head"><h3>Format Use Case Matrix</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="registries/FILE_OBJECT_REGISTRY.csv"><code>registries/FILE_OBJECT_REGISTRY.csv</code></span></div></div><table><thead><tr><th>Format/lane</th><th>Extensions</th><th>Authority status</th><th>Edited/generated</th><th>Examples</th></tr></thead><tbody><tr><td>Canonical science and research-task artifacts</td><td>.tex</td><td>canonical for physics research and derivational claims</td><td>Authored by science roles; validated through TeX/PDF registries and claim gates.</td><td>ontology/tex/*.tex; manuscripts/tex/*.tex</td></tr><tr><td>Front-door docs and contracts</td><td>.md</td><td>canonical for README, agent guidance, role contracts, skill contracts, schemas, design notes, and explainer specs</td><td>Authored Markdown; registered and hashed in MARKDOWN_SOURCE_REGISTRY.csv.</td><td>README.md; .agents/roles/...; markdown/html-explainer-specs/...</td></tr><tr><td>Registry and provenance spine</td><td>.csv</td><td>canonical for object identity, provenance, routing, hashes, ownership, and validation</td><td>Updated by bounded tasks or generated by bootstrap depending on registry lane.</td><td>registries/*.csv</td></tr><tr><td>Task, AgentJob, role, handoff, approval, and receipt records</td><td>.yaml</td><td>control-state evidence for workflow execution</td><td>Authored inside bounded tasks; validated by research-control scripts.</td><td>research_control/tasks/*; research_control/handoffs/*</td></tr><tr><td>Human-only visual explainers</td><td>.html</td><td>generated noncanonical derivatives from registered Markdown specs</td><td>Generated by Documentation Curator/visual-explainer path; validated for source basis, controls, capsules, blocks, and Mermaid parity.</td><td>html/*.html</td></tr><tr><td>Human-reading derivatives</td><td>.pdf</td><td>generated noncanonical derivatives from registered TeX</td><td>Built when TeX derivatives are in scope; validated through PDF_DERIVATIVE_REGISTRY.csv.</td><td>ontology/pdfs/*.pdf; manuscripts/pdfs/*.pdf</td></tr><tr><td>Local semantic/search surfaces</td><td>.sqlite / semantic extracts</td><td>noncanonical local agent-query surfaces</td><td>Generated under .local for retrieval; validated when local memory checks are in scope.</td><td>.local/memory_index/memory.sqlite; .local/content_semantics/</td></tr><tr><td>Generated sidecar metadata</td><td>.meta.json</td><td>generated validation metadata for registry surfaces</td><td>Generated by scripts; not edited as authority.</td><td>registries/*.meta.json</td></tr><tr><td>Scratch, caches, vault, and retrieval outputs</td><td>.local/</td><td>noncanonical local operator and retrieval surface</td><td>Generated or temporary; never overrides tracked source or registries.</td><td>.local/obsidian/aether-flow-wiki/</td></tr></tbody></table></article><article class="content-block" data-content-block="generated_derivatives"><div class="block-head"><h3>Generated Derivatives</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="registries/FILE_OBJECT_REGISTRY.csv"><code>registries/FILE_OBJECT_REGISTRY.csv</code></span></div></div><p>Explain generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, and why they are not independent authority.</p></article><article class="content-block" data-content-block="local_retrieval_surfaces"><div class="block-head"><h3>Local Retrieval Surfaces</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span></div></div><table><thead><tr><th>Surface</th><th>Path</th><th>Use</th></tr></thead><tbody><tr><td>Local Obsidian vault</td><td>.local/obsidian/aether-flow-wiki/</td><td>Generated local reader vault and optional operator aid; noncanonical.</td></tr><tr><td>Semantic/query layer</td><td>.local/content_semantics/ + .local/memory_index/memory.sqlite</td><td>Agent-queryable local search surfaces and SQLite index.</td></tr></tbody></table></article><article class="content-block" data-content-block="validation_evidence"><div class="block-head"><h3>Validation Evidence</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span></div></div><p>Explain source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, and documentation-impact checks.</p></article></div>
+      <div class="content-grid"><article class="content-block" data-content-block="authority_ladder"><div class="block-head"><h3>Authority Ladder</h3><div class="evidence-row"><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></span><span class="source-chip" data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></span><span class="source-chip" data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv"><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></span></div></div><p>A documentation-grade ladder covering canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries. In reader-facing terms, this section identifies the subject of <strong>Source Authority</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>AGENTS.md</code>, <code>.codex/skills/project-memory-system/SKILL.md</code>, <code>registries/TEX_SOURCE_REGISTRY.csv</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="format_use_case_matrix"><div class="block-head"><h3>Format Use Case Matrix</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><p>The matrix gives operators a file-format decision table. <code>.tex</code> is for science-bearing derivation and benchmark material; <code>.md</code> is for registered front-door and control documentation; <code>.csv</code> is the registry spine; <code>.yaml</code> records tasks, jobs, roles, completions, approvals, and handoffs; <code>.html</code> is generated human-only explanation; <code>.pdf</code> is a human-reading TeX derivative; <code>.sqlite</code> and semantic extracts are local retrieval surfaces; <code>.meta.json</code> files are generated validation metadata; <code>wiki/</code> is tracked generated retrieval; <code>.local/</code> is scratch or local operator state. Each row should be read with editor, validator, and failure mode in mind: the safest edit is almost always the registered source plus regeneration.</p><table><thead><tr><th>Format</th><th>Authority status</th><th>Failure mode</th></tr></thead><tbody><tr><td>.tex</td><td>Canonical science lane.</td><td>Claim drift if edited casually.</td></tr><tr><td>.md</td><td>Registered documentation/control source.</td><td>Spec drift if HTML is edited alone.</td></tr><tr><td>.csv</td><td>Registry/provenance authority.</td><td>Broken routing or stale hashes.</td></tr><tr><td>.html/.pdf/wiki</td><td>Generated derivative.</td><td>Stale or mistaken for authority.</td></tr></tbody></table></article><article class="content-block" data-content-block="generated_derivatives"><div class="block-head"><h3>Generated Derivatives</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><p>A source-backed section explaining generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, content semantics, and why regeneration does not promote them to authority. In reader-facing terms, this section identifies the subject of <strong>Source Authority</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>.codex/skills/project-memory-system/SKILL.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="local_retrieval_surfaces"><div class="block-head"><h3>Local Retrieval Surfaces</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><p>A completed section on local Obsidian, content semantics, SQLite, query scripts, caches, and scratch builds as operator aids that must point back to canonical rows. In reader-facing terms, this section identifies the subject of <strong>Source Authority</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>.codex/skills/project-memory-system/SKILL.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article><article class="content-block" data-content-block="validation_evidence"><div class="block-head"><h3>Validation Evidence</h3><div class="evidence-row"><span class="source-chip" data-source-path="README.md"><code>README.md</code></span><span class="source-chip" data-source-path="AGENTS.md"><code>AGENTS.md</code></span><span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span></div></div><p>A documentation section on source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, documentation-impact receipts, and checkpoint boundaries. In reader-facing terms, this section identifies the subject of <strong>Source Authority</strong>, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in <code>README.md</code>, <code>AGENTS.md</code>, <code>.codex/skills/project-memory-system/SKILL.md</code> and related declared sources, so the reader can move from this generated page back to inspectable files.</p></article></div>
 
     </section>
     <div id="diagrams">
@@ -157,7 +463,6 @@ flowchart TD
   </script>
 </section></div>
     <section id="workflow" class="section panel" data-explainer-control="workflow_step_inspector"><p class="eyebrow">Workflow inspector</p><h2>Inspectable Object Path</h2><ol class="trace-list"><li><strong>1. program_state.yaml</strong><span>Tracked program state names the latest operating boundary.</span></li><li><strong>2. latest handoff-*</strong><span>The handoff preserves the next role, task, and source-state constraints.</span></li><li><strong>3. Director decision</strong><span>The Director selects role, task objective, and claim boundary.</span></li><li><strong>4. 00_TASK.yaml</strong><span>The task file records objective, status, scope, and next action.</span></li><li><strong>5. jobs/AJ-*.yaml</strong><span>The AgentJob binds reads, writes, outputs, validators, and limits.</span></li><li><strong>6. roles/*.yaml</strong><span>The execution-role record narrows or overlays role authority for this job.</span></li><li><strong>7. artifacts/*</strong><span>Allowed outputs are produced inside the task boundary.</span></li><li><strong>8. completion YAML</strong><span>The completion records verdict, command results, and validation status.</span></li></ol></section>
-    <section id="analysis" class="section panel" data-explainer-control="expandable_analysis_panels"><p class="eyebrow">Analysis capsules</p><h2>Claim-Aware Analysis</h2><div class="capsule-grid"><article class="capsule" data-analysis-capsule="capsule-1"><h3>Authority Is Source-First</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>The repository distinguishes source authority from generated retrieval and human-reading surfaces.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>Canonical files and registries own claims and provenance; generated derivatives expose or visualize that content but do not become independent authority.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`AGENTS.md`, `README.md`, and source registries.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Human-only explanation of the existing authority hierarchy.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>Generated derivatives can be useful but stale if source hashes, source-basis metadata, or registry rows drift.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Run bootstrap validation and check source-basis hashes, generated-output rows, and non-authority banners.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Edit canonical sources or registered specs first, then regenerate.</dd></div></dl></article><article class="capsule" data-analysis-capsule="capsule-2"><h3>HTML Is A Human Visual Derivative</h3><dl><div class="capsule-row"><dt data-capsule-field="premise">Premise</dt><dd>Tracked HTML pages help humans understand the project but do not carry independent scientific or control authority.</dd></div><div class="capsule-row"><dt data-capsule-field="mechanism">Mechanism</dt><dd>Each HTML file points back to a Markdown source spec and registry source basis; diagram source is preserved in the spec and rendered into inline SVG for portability.</dd></div><div class="capsule-row"><dt data-capsule-field="source_basis">Source Basis</dt><dd>`.codex/skills/html-visual-explainer/SKILL.md`, `registries/HTML_EXPLAINER_REGISTRY.csv`, and `registries/MARKDOWN_SOURCE_REGISTRY.csv`.</dd></div><div class="capsule-row"><dt data-capsule-field="authority_status">Authority Status</dt><dd>Explanation of generated HTML boundaries.</dd></div><div class="capsule-row"><dt data-capsule-field="uncertainty">Uncertainty</dt><dd>Visual polish can improve comprehension without changing the underlying authority chain.</dd></div><div class="capsule-row"><dt data-capsule-field="validation_or_test">Validation Or Test</dt><dd>Confirm every tracked HTML explainer has a registered Markdown spec, source-basis metadata, required controls, source drilldowns, and Mermaid parity when diagrams are declared.</dd></div><div class="capsule-row"><dt data-capsule-field="next_step">Next Step</dt><dd>Use the project hub to navigate the generated pages, then inspect the source specs for authoritative explainer content.</dd></div></dl></article></div></section>
     <section id="sources" class="section panel" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><p class="muted">Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.</p><ul class="source-list"><li data-source-path="README.md"><code>README.md</code></li><li data-source-path="AGENTS.md"><code>AGENTS.md</code></li><li data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></li><li data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></li><li data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></li><li data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv"><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></li><li data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv"><code>registries/HTML_EXPLAINER_REGISTRY.csv</code></li><li data-source-path="registries/WIKI_ARTIFACT_REGISTRY.csv"><code>registries/WIKI_ARTIFACT_REGISTRY.csv</code></li><li data-source-path="registries/PDF_DERIVATIVE_REGISTRY.csv"><code>registries/PDF_DERIVATIVE_REGISTRY.csv</code></li><li data-source-path="registries/FILE_OBJECT_REGISTRY.csv"><code>registries/FILE_OBJECT_REGISTRY.csv</code></li><li data-source-path="research_control/design/html_explainer_flexible_presentation_contract.md"><code>research_control/design/html_explainer_flexible_presentation_contract.md</code></li></ul></section>
   </main>
   <script>
@@ -216,5 +521,121 @@ flowchart TD
       });
     })();
   </script>
+
+
+
+
+
+
+<script id="aether-docs-enhancement-js">
+  (() => {
+    if (window.__aetherDocsEnhancementLoaded) return;
+    window.__aetherDocsEnhancementLoaded = true;
+
+    const progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progress);
+
+    const nav = document.querySelector('[data-explainer-control="section_toc"]');
+    const toolbar = document.createElement('div');
+    toolbar.className = 'reader-toolbar';
+    toolbar.setAttribute('aria-label', 'Explainer search');
+    toolbar.innerHTML = `
+      <input type="search" placeholder="Search this explainer" aria-label="Search this explainer">
+    `;
+    if (nav) nav.insertAdjacentElement('afterend', toolbar);
+
+    const searchable = Array.from(document.querySelectorAll(
+      '[data-content-block], .source-list li, .atlas-link'
+    ));
+
+    const clearMarks = (node) => {
+      node.querySelectorAll('mark.search-hit').forEach((mark) => {
+        mark.replaceWith(document.createTextNode(mark.textContent || ''));
+      });
+      node.normalize();
+    };
+
+    const markText = (node, query) => {
+      if (!query || node.matches('script, style, svg, pre, code')) return;
+      for (const child of Array.from(node.childNodes)) {
+        if (child.nodeType === Node.TEXT_NODE) {
+          const text = child.nodeValue || '';
+          const index = text.toLowerCase().indexOf(query);
+          if (index >= 0) {
+            const range = document.createRange();
+            range.setStart(child, index);
+            range.setEnd(child, index + query.length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-hit';
+            range.surroundContents(mark);
+          }
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+          markText(child, query);
+        }
+      }
+    };
+
+    const searchInput = toolbar.querySelector('input[type="search"]');
+    const applySearch = () => {
+      const raw = searchInput.value.trim();
+      const query = raw.toLowerCase();
+      searchable.forEach((node) => {
+        clearMarks(node);
+        const matches = !query || node.textContent.toLowerCase().includes(query);
+        node.hidden = !matches;
+        if (matches && query) markText(node, query);
+      });
+    };
+    searchInput?.addEventListener('input', applySearch);
+    searchInput?.addEventListener('search', applySearch);
+
+    const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
+    sourceNodes.forEach((node) => {
+      node.addEventListener('click', async () => {
+        const text = node.getAttribute('data-source-path') || node.textContent.trim();
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          node.classList.add('was-copied');
+          setTimeout(() => node.classList.remove('was-copied'), 850);
+        } catch (_) {
+          // Clipboard may be unavailable for local file URLs. No-op.
+        }
+      });
+    });
+
+    const updateProgress = () => {
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+      document.documentElement.style.setProperty('--reading-progress', `${pct}%`);
+    };
+    updateProgress();
+    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('resize', updateProgress);
+
+    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    if ('IntersectionObserver' in window && sections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = `#${entry.target.id}`;
+          navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === id));
+        });
+      }, { rootMargin: '-28% 0px -62% 0px', threshold: 0.01 });
+      sections.forEach((section) => observer.observe(section));
+    }
+  })();
+</script>
+
+
+
+
+
+
 </body>
 </html>

@@ -21,6 +21,16 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
 - [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
 - [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
+- [[02_sources/markdown/md-github-facing-aether-flow-ontology-explainer|MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `github-facing/aether-flow-ontology-explainer.md`
+- [[02_sources/markdown/md-github-facing-claim-gates-explainer|MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER]] `github-facing/claim-gates-explainer.md`
+- [[02_sources/markdown/md-github-facing-memory-system-explainer|MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER]] `github-facing/memory-system-explainer.md`
+- [[02_sources/markdown/md-github-facing-project-overview-explainer|MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER]] `github-facing/project-overview-explainer.md`
+- [[02_sources/markdown/md-github-facing-research-agent-workflow-explainer|MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `github-facing/research-agent-workflow-explainer.md`
+- [[02_sources/markdown/md-github-facing-research-control-system-explainer|MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `github-facing/research-control-system-explainer.md`
+- [[02_sources/markdown/md-github-facing-role-routing-explainer|MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER]] `github-facing/role-routing-explainer.md`
+- [[02_sources/markdown/md-github-facing-roles-and-skills-explainer|MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER]] `github-facing/roles-and-skills-explainer.md`
+- [[02_sources/markdown/md-github-facing-source-authority-explainer|MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER]] `github-facing/source-authority-explainer.md`
+- [[02_sources/markdown/md-github-facing-technical-requirements-explainer|MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER]] `github-facing/technical-requirements-explainer.md`
 - [[02_sources/markdown/md-html-spec-aether-flow-ontology-explainer|MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - [[02_sources/markdown/md-html-spec-claim-gates-explainer|MD-HTML-SPEC-CLAIM-GATES-EXPLAINER]] `markdown/html-explainer-specs/claim-gates-explainer.md`
 - [[02_sources/markdown/md-html-spec-memory-system-explainer|MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/memory-system-explainer.md`
@@ -37,6 +47,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-readme-research-control|MD-README-RESEARCH-CONTROL]] `research_control/README.md`
 - [[02_sources/markdown/md-readme-research-control-approvals|MD-README-RESEARCH-CONTROL-APPROVALS]] `research_control/approvals/README.md`
 - [[02_sources/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions|MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS]] `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- [[02_sources/markdown/md-research-control-design-html-explainer-depth-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT]] `research_control/design/html_explainer_depth_contract.md`
 - [[02_sources/markdown/md-research-control-design-html-explainer-flexible-presentation-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT]] `research_control/design/html_explainer_flexible_presentation_contract.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD]] `.agents/roles/physics/gate-chair.v0.1.0.md`
@@ -46,6 +57,11 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD]] `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.2.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-3-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-3-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.3.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-4-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-4-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-5-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-5-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.5.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-6-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-6-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.6.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-7-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-7-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD]] `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`

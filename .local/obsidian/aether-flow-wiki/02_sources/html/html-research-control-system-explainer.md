@@ -2,14 +2,14 @@
 object_id: "HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
 format: "html"
 source_path: "html/research-control-system-explainer.html"
-source_hash: "6f7f39b5dfff219596f6a0522e512724591fc6597bd84ad599a7a97833c2ac97"
+source_hash: "6a80dec16e252f099d5bd6168dd83715aefcb63935bcbd3f4a219c647e1bcdf7"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-research-control-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-research-control-system-explainer.html"
-content_hash: "6b5ce72284282909aaae1ea1934a5ca4ca71f4d0816919f950ea820870fa103f"
+content_hash: "6e8973780cbd4d5b23287e313793b196d2fa8b78f4f82068980cf8560bafa792"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `6b5ce72284282909aaae1ea1934a5ca4ca71f4d0816919f950ea820870fa103f`
+- Content hash: `6e8973780cbd4d5b23287e313793b196d2fa8b78f4f82068980cf8560bafa792`
 - Extracted text path: `.local/content_semantics/html/html-research-control-system-explainer.txt`
-- Character count: `6436`
+- Character count: `7867`
 
 ## Relationships
 
@@ -50,7 +50,6 @@ related_object_ids:
 - `content_link` -> #sources (#sources)
 - `content_link` -> #workflow (#workflow)
 - `has_vault_note` -> VAULT-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER (VAULT-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER)
-- `content_link` -> #analysis (#analysis)
 
 <!-- MANUAL LOCAL NOTES START -->
 <!-- Add local, non-authoritative Obsidian-only notes here if needed. -->

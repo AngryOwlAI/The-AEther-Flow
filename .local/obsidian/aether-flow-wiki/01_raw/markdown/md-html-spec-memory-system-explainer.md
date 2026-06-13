@@ -29,23 +29,15 @@ presentation_profile: "memory_system_map"
 layout_intent: "Use a layered memory map: canonical CSV memory spine, tracked generated wiki surface, local Obsidian reader vault, semantic/query layer, and authority-boundary panels."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "csv_memory_spine"
   - "tracked_generated_wiki"
   - "local_obsidian_vault"
   - "semantic_query_layer"
   - "authority_boundaries"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -72,6 +64,10 @@ source-first memory system with multiple retrieval surfaces:
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Layered map from canonical CSV spine to generated tracked wiki to local
   Obsidian vault to semantic/query surfaces.
 - Regeneration workflow showing source edit -> bootstrap -> wiki/registry rows
@@ -112,60 +108,36 @@ flowchart TD
   Query --> Validate["make validate-memory"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Memory System`
+
+Summary text:
+
+The memory system is the repository's source-first retrieval and derivative-
+generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki
+notes, semantic extracts, file objects, and local query surfaces. Its
+functionality is to turn canonical registries and source files into generated
+wiki pages, source hashes, object relationships, local Obsidian vault entries,
+semantic text extracts, and SQLite-backed lookup surfaces without letting any
+generated artifact become an independent source of claims. It matters because
+humans and agents need fast ways to find evidence, but retrieval convenience
+must not bypass the authority hierarchy. The system fits the project by
+connecting source edits to bootstrap regeneration, validation receipts,
+content semantics, and local reading aids while preserving clear provenance.
+
+Summary source basis:
+
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`
+- `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `.codex/skills/obsidian-wiki/SKILL.md`
+
 ## Required Content Blocks
 
-- csv_memory_spine: Explain format-specific CSV registries as canonical memory
-  spine for IDs, provenance, source hashes, routing, ownership, and validation.
-- tracked_generated_wiki: Explain `wiki/` as tracked generated repo-visible
-  navigation, not independent authority.
-- local_obsidian_vault: Explain `.local/obsidian/aether-flow-wiki/` as a
-  generated local reader vault and optional operator environment aid.
-- semantic_query_layer: Explain `.local/content_semantics/`,
-  `.local/memory_index/memory.sqlite`, and `query_memory.py` as local
-  agent-queryable retrieval surfaces.
-- authority_boundaries: Explain source-first authority, generated-output
-  boundaries, regeneration commands, validation, and stale-surface risks.
-
-## Required Analysis Capsules
-
-### CSV Is The Memory Spine
-
-- premise: The repository memory system is source-first and registry-backed.
-- mechanism: Format-specific CSV registries bind object identity, source path,
-  source hash, generated outputs, owner skill, authority status, and validation
-  status; generated surfaces are derived from those rows.
-- source_basis: `AGENTS.md`, `README.md`,
-  `.codex/skills/project-memory-system/SKILL.md`, and `registries/*.csv`.
-- authority_status: Human-only explanation; CSV registries and registered
-  sources carry authority.
-- uncertainty: Generated surfaces can become stale if bootstrap or local sync
-  has not been run after source changes.
-- validation_or_test: Run memory bootstrap, validate-only, and `make
-  validate-memory` when full local retrieval validation is in scope.
-- next_step: Inspect the relevant format-specific registry row before relying
-  on a wiki, vault, or semantic search result.
-
-### Retrieval Surfaces Are Derived
-
-- premise: Wiki, Obsidian, semantic extracts, and SQLite exist to make source
-  memory easier to inspect and query.
-- mechanism: Scripts regenerate tracked wiki notes, local vault files, content
-  semantics, relationship graphs, and query indexes from registered sources and
-  registries.
-- source_basis: `.codex/skills/obsidian-wiki/SKILL.md`,
-  `registries/WIKI_ARTIFACT_REGISTRY.csv`, and
-  `registries/CONTENT_SEMANTIC_REGISTRY.csv`.
-- authority_status: Explanation of generated noncanonical access layers.
-- uncertainty: Local `.local/` surfaces may differ by machine and are not
-  Git-authoritative.
-- validation_or_test: Validate with `lint_obsidian_vault.py --require-index`
-  and query smoke checks when local retrieval is needed.
-- next_step: Treat retrieval hits as pointers back to registered source rows.
-
-## Non-Goals
-
-- Do not make generated wiki, Obsidian, semantic extracts, SQLite, or `.local/`
-  outputs authoritative.
-- Do not change memory scripts, registries, or source authority.
-- Do not edit generated wiki notes by hand.
-- Do not introduce physics claims.
+- subject_summary: Summarize the memory system, its source-first registry spine, why many retrieval surfaces still form one system, and which declared sources ground the summary.
+- csv_memory_spine: A completed explanation of format-specific CSV registries as canonical memory rows for identity, routing, provenance, generated outputs, and agent-queryable relationships.
+- tracked_generated_wiki: A source-backed section explaining tracked generated wiki notes and indexes as repo-visible derivatives that summarize registered sources without becoming independent authority.
+- local_obsidian_vault: A documentation section for `.local/obsidian/aether-flow-wiki/` as a local reader vault and operator aid that can be regenerated and must not override tracked source state.
+- semantic_query_layer: A completed explanation of `.local/content_semantics/`, `.local/memory_index/memory.sqlite`, and query scripts as retrieval surfaces that point back to canonical registry objects.
+- authority_boundaries: A visible boundary section explaining source-first authority, generated-output refresh, stale derivative risks, validation checks, and why competing retrieval views remain subordinate to the same canonical spine.

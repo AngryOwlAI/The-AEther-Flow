@@ -121,7 +121,7 @@ rendered diagrams are used where they fit the subject. Those interactions help
 readers explore the project; they do not make generated HTML authoritative.
 
 For GitHub browsing, start with the root-level
-[GitHub-facing Markdown files](github-facing/). They mirror the registered
+`github-facing` directory. They mirror the registered
 explainer specs without the YAML metadata header. This layer is canonical for
 GitHub-facing explanation and agent-readable orientation, but it is
 non-authoritative for physics claims and control decisions.

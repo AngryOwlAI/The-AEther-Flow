@@ -12,7 +12,7 @@ source_materials:
   - ".codex/skills/html-visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.4.0.md"
   - "research_control/design/html_explainer_flexible_presentation_contract.md"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
@@ -26,23 +26,15 @@ presentation_profile: "workflow_lifecycle"
 layout_intent: "Use a validation lifecycle with governance panels for classification, bounded AgentJobs, flexible source-backed HTML, documentation impact, validator chains, and checkpoint boundaries."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "classification_resolver"
   - "bounded_transaction"
   - "flexible_html_contract"
   - "documentation_impact"
   - "validator_chain"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -65,6 +57,10 @@ content to `source-authority-explainer.html`.
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
@@ -116,66 +112,38 @@ flowchart TD
   Receipt --> Registry["Control registries updated"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Research-Control System`
+
+Summary text:
+
+The research-control system is the repository's governance layer for deciding
+how project-system and research-continuation work may proceed. Its function is
+to classify changes, resolve advisory routing, create or reuse one bounded
+AgentJob, enforce role and write-path boundaries, require documentation-impact
+receipts when project machinery changes, and validate that source specs,
+skills, roles, registries, claim boundaries, and generated derivatives remain
+aligned. It matters because the project deliberately combines scientific
+exploration with agent workflow development; without control records,
+generated HTML, Markdown guidance, validators, and role contracts could drift
+or be mistaken for scientific authority. The system fits the larger project by
+making improvements reversible, auditable, and separate from physics claim
+promotion.
+
+Summary source basis:
+
+- `AGENTS.md`
+- `research_control/README.md`
+- `.codex/skills/improve-project-system/SKILL.md`
+- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `research_control/design/html_explainer_flexible_presentation_contract.md`
+
 ## Required Content Blocks
 
-- classification_resolver: Explain deterministic change classification,
-  resolver output, advisory routing, and hard stop conditions.
-- bounded_transaction: Explain one bounded AgentJob, allowed writes, forbidden
-  authority surfaces, claim boundary, and completion scope.
-- flexible_html_contract: Explain the flexible source-backed HTML contract,
-  including controlled `presentation_profile`, nonblank `layout_intent`,
-  page-local `required_content_blocks`, `data-content-block` markers, and
-  source-path evidence.
-- documentation_impact: Explain documentation-impact receipts, source-doc
-  updates, no-op rationale, and validation.
-- validator_chain: Explain bootstrap validation, Mermaid parity, emitted
-  signal validation, documentation-impact validation, research-control
-  validation, diff checks, and checkpoint boundaries.
-
-## Required Analysis Capsules
-
-### Source-Backed HTML Governance
-
-- premise: Tracked HTML explainers are valid only when backed by registered
-  Markdown source specs.
-- mechanism: The Markdown spec declares title, purpose, source material, claim
-  boundary, interaction model, presentation profile, layout intent, required
-  content blocks, required controls, source materials, Mermaid diagrams, and
-  analysis capsules; generated HTML carries marker and source metadata
-  evidence.
-- source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
-  `.codex/skills/visual-explainer/SKILL.md`, the Mermaid Documentation
-  subskill, and `registries/HTML_EXPLAINER_REGISTRY.csv`.
-- authority_status: Project-control explanation of generated derivative
-  governance.
-- uncertainty: Visual design quality still requires human or browser review;
-  the validator checks structural evidence and source parity.
-- validation_or_test: Run Mermaid validation, memory bootstrap validation, and
-  confirm declared controls have matching HTML markers.
-- next_step: Modify the Markdown source spec first, regenerate HTML, render
-  Mermaid inline SVG, then validate.
-
-### Documentation-Impact Boundary
-
-- premise: Documentation impact is a receipt requirement, not automatic source
-  ownership by Documentation Curator.
-- mechanism: Classifier output identifies documentation impact; the selected
-  role depends on source authority class; project-system AgentJobs must record
-  documentation-impact coverage.
-- source_basis: `research_control/README.md`,
-  `.codex/skills/improve-project-system/SKILL.md`, and
-  `scripts/project_control/validate_documentation_impact.py`.
-- authority_status: Control-system explanation.
-- uncertainty: Resolver output is advisory; hard stops come from validators and
-  authority-boundary violations.
-- validation_or_test: Use classification, documentation-impact validation,
-  signal validation, research-control validation, and diff checks.
-- next_step: Keep explanatory HTML work inside Documentation Curator authority
-  and route validator or contract changes to the proper roles.
-
-## Non-Goals
-
-- Do not introduce physics claims.
-- Do not change project-control rules.
-- Do not present generated HTML as an authority source.
-- Do not use external images or network-dependent assets.
+- subject_summary: Summarize the research-control system, its safety-harness role, why validators and receipts matter, and which declared sources ground the summary.
+- classification_resolver: A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces.
+- bounded_transaction: A source-backed explanation of one bounded AgentJob, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
+- flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries.
+- documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
+- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, research-control validation, diff checks, tests, and advisory depth lint.

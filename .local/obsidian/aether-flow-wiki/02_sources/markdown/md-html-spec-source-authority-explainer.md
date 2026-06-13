@@ -2,14 +2,14 @@
 object_id: "MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/source-authority-explainer.md"
-source_hash: "31f2f03944277c7278556ba8debd7ae3387dfd0a305d7942e2951627e83aef27"
+source_hash: "3a04872956546af2ab4fabdfddb4106e40869536e8ad9b11399664894ad9112d"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-source-authority-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-source-authority-explainer.md"
-content_hash: "31f2f03944277c7278556ba8debd7ae3387dfd0a305d7942e2951627e83aef27"
+content_hash: "3a04872956546af2ab4fabdfddb4106e40869536e8ad9b11399664894ad9112d"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-SOURCE-AUTHORITY-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `31f2f03944277c7278556ba8debd7ae3387dfd0a305d7942e2951627e83aef27`
+- Content hash: `3a04872956546af2ab4fabdfddb4106e40869536e8ad9b11399664894ad9112d`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-source-authority-explainer.txt`
-- Character count: `8628`
+- Character count: `8118`
 
 ## Relationships
 

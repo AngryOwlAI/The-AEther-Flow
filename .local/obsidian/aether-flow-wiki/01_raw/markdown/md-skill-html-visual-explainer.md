@@ -15,10 +15,9 @@ Rules:
 - The source spec must declare `title`, `purpose`, `audience`,
   `output_path`, `renderer_skill`, `source_materials`, `claim_boundary`, and
   `human_visual_only: true`.
-- The source spec must also declare the interactive analysis contract:
+- The source spec must also declare the interaction contract:
   `explainer_kind`, `interaction_model: "progressive_disclosure"`,
-  `analysis_depth: "deep"`, `required_controls`, and
-  `analysis_capsule_schema`.
+  `analysis_depth: "deep"`, and `required_controls`.
 - The source spec must also declare the flexible presentation contract:
   `presentation_profile`, `layout_intent`, and
   `required_content_blocks`.
@@ -30,22 +29,45 @@ Rules:
   `conceptual_model`, or `claim_boundary_map`.
 - `layout_intent` must be nonblank prose explaining how this page should adapt
   the chosen profile.
+  It is renderer guidance and validation metadata, not reader-facing content.
+  Do not render `layout_intent`, registry `source_basis`, or derivative
+  authority status as hero/title metadata chips. Keep registry binding in
+  `<meta>` tags and visible source grounding in the summary/source sections.
 - `required_content_blocks` must be a non-empty list of page-local IDs using
   lowercase snake_case. Each ID must be explained in a Markdown
   `## Required Content Blocks` section.
-- Every explainer requires `section_toc`, `expandable_analysis_panels`, and
-  `source_materials_section`.
+- Every tracked explainer must declare `subject_summary` as the first
+  `required_content_blocks` value and define `subject_summary` first under
+  `## Required Content Blocks`. The block is a source-backed functional
+  summary of the page subject.
+- Generated HTML must render `subject_summary` as the first
+  `data-content-block`, immediately after the hero/title area and before
+  `data-explainer-control="section_toc"`, under a reader-facing heading in the
+  form `Summary of [Subject]`.
+- `subject_summary` must include `data-summary-field` markers for
+  `summary_text` and `source_basis`.
+  The `summary_text` field is one coherent prose block that explains what the
+  subject is, what functionality or role it has, why it matters to the project,
+  and how it fits the surrounding research or project-control system.
+  The `summary_text` field must not include prose source-grounding sentences or
+  source-list restatements. Grounding belongs in the separate `source_basis`
+  field.
+  The `source_basis` field must contain visible source-path chips or an
+  equivalent visible source list. Every `data-source-path` inside
+  `subject_summary` must already be declared in the spec's `source_materials`;
+  add missing grounding files to `source_materials` before citing them.
+  Source chips display paths only and must not add local file links.
+  Active tracked HTML must not render the obsolete labels `Reader orientation`
+  or `What This Explainer Describes`.
+- Every explainer requires `section_toc` and `source_materials_section`.
   `source_drilldowns` and `claim_boundary_toggle` are valid legacy controls
   when a source spec declares them, but they are no longer universal visible
   panels.
   `workflow_step_inspector` is required for
   `workflow_process` and `control_system` explainers.
-- The Markdown body must include `## Required Analysis Capsules` and name each
-  capsule field: `premise`, `mechanism`, `source_basis`, `authority_status`,
-  `uncertainty`, `validation_or_test`, and `next_step`.
 - The generated HTML must include lightweight structural markers:
-  `data-explainer-control="<control>"`, at least one `data-analysis-capsule`,
-  `data-capsule-field="<field>"`, and `data-source-path` in the visible source
+  `data-explainer-control="<control>"`, `data-content-block="<id>"`,
+  `data-summary-field="<field>"`, and `data-source-path` in the visible source
   materials section and source-backed content blocks. Validation checks marker
   presence, not visual design or JavaScript behavior.
 - The generated HTML must include each declared content block as
@@ -53,9 +75,36 @@ Rules:
   `data-source-path` marker. The visual form can be a table, matrix, card
   group, sidebar, callout, inspector panel, accordion, or other appropriate
   source-backed presentation for the chosen profile.
+- Every non-summary content block must be finished reader-facing documentation,
+  not a copied source-spec directive. Each block should answer what the subject
+  is, why the project needs it, how it works inside the project, which sources
+  ground it, and where the reader should go next. Add authority or claim-boundary
+  context only when it helps the specific block; do not append generic claim
+  boilerplate to every section. A block may satisfy this through prose, term
+  cards, a matrix, a timeline, quote panels, or another source-backed form.
+- For current tracked explainers, use the project depth contract at
+  `research_control/design/html_explainer_depth_contract.md` and run
+  `scripts/spec_depth_lint.py --root .` after generation. The lint is advisory
+  by design, but migrated current explainers should remain warning-free.
+- Visible content blocks must not begin with renderer-instruction stubs such as
+  `Explain`, `State`, `Show`, `List`, `Provide`, `Preserve`, or
+  `Point readers to` unless the text is explicitly a checklist item.
+- Use the shared no-network reader layer when rendering tracked explainers:
+  reading progress, active-section navigation, local search, and copyable
+  source chips. Do not add global simple/technical mode toggles or global
+  expand/collapse buttons unless a later source-spec-backed task defines a
+  page-specific need and browser-verifies it. The helper script is
+  `scripts/enhance_html_explainers.py`; preserve source-spec authority and do
+  not treat that helper as an independent HTML source.
+- The summary prose should be manually authored per source spec. Do not derive
+  `subject_summary` automatically from source files. Target 150-240 words,
+  excluding visible source chips, as a review guideline rather than a validator
+  rule.
 - Validator scope remains deterministic and structural: required fields,
   allowed profile values, nonblank intent, content-block markers, source-path
-  evidence, required controls, analysis capsule markers, hashes, and Mermaid
+  evidence, subject-summary order, subject-summary field markers, declared
+  subject-summary sources, obsolete summary-label rejection, required controls,
+  obsolete analysis-capsule rejection, boilerplate rejection, hashes, and Mermaid
   parity. Quality, completeness, rendered geometry, and visual judgment remain
   source-spec review and browser QA responsibilities.
 - Do not add a full deterministic HTML generator for flexible presentation.
@@ -75,10 +124,9 @@ Rules:
 - Normal prose must use `overflow-wrap: break-word`; reserve
   `overflow-wrap: anywhere` for `code` and `pre` where long paths or hashes may
   otherwise overflow.
-- Analysis capsule rows must be allowed to shrink on mobile. Use
-  `min-width: 0` on capsule rows, `dt`, and `dd`, and keep capsule `dl` tracks
-  at `minmax(0, 1fr)` so labeled evidence rows do not create horizontal page
-  overflow.
+- Active tracked explainers must not render the obsolete
+  `Analysis capsules` / `Claim-Aware Analysis` section, `data-analysis-capsule`
+  markers, or `data-capsule-field` markers.
 - If the source spec declares `mermaid_diagrams` or the Markdown source
   contains registered Mermaid blocks, tracked HTML generation must follow
   `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`.

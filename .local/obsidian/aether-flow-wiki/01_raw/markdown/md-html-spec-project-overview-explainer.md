@@ -30,22 +30,14 @@ presentation_profile: "atlas_hub"
 layout_intent: "Use a grouped atlas hub with descriptive navigation cards, a compact system map, and source-backed panels that route readers by use case rather than by file order."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
+  - "subject_summary"
   - "atlas_navigation"
   - "research_idea"
   - "agent_workflow"
   - "authority_memory"
   - "run_regenerate_system"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -100,6 +92,10 @@ visually match the HTML palette and typography.
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
@@ -166,60 +162,38 @@ flowchart TD
   Memory --> SharedTarget
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Project Overview`
+
+Summary text:
+
+The project overview is the atlas for the AEther-Flow repository's human-
+readable explainer set. Its function is to give readers a controlled entry
+point into the two linked missions: preserving an exact-GR benchmark for the
+physics program and maintaining a governed research-agent system for
+theoretical work. Rather than acting as a source of new claims, the overview
+routes readers to the ontology, research workflow, control system, role-
+routing, claim-gate, source-authority, role-and-skill, memory-system, and
+technical-requirements drilldowns. It matters because the project contains
+persuasive generated pages, registries, role contracts, and research-control
+records that can look equally authoritative to a newcomer. The atlas clarifies
+where explanation ends and source authority begins, so readers can inspect the
+right Markdown specs, registries, README guidance, or control documents before
+relying on a statement.
+
+Summary source basis:
+
+- `README.md`
+- `AGENTS.md`
+- `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `markdown/html-explainer-specs/research-control-system-explainer.md`
+
 ## Required Content Blocks
 
-- atlas_navigation: Group all explainer links by reader use case rather than
-  presenting a flat list.
-- research_idea: Explain the ontology, exact-GR benchmark, open derivation
-  burden, and claim-gate context.
-- agent_workflow: Explain how Director decisions, AgentJobs, roles,
-  validators, completions, and handoffs structure work.
-- authority_memory: Explain the source authority chain and the source-first
-  memory system with derived access layers.
-- run_regenerate_system: Point readers to technical requirements, validation
-  commands, diagram rendering, local retrieval, and PDF-refresh scope.
-
-## Required Analysis Capsules
-
-### The Project As Research Atlas
-
-- premise: The project is a dual physics-and-AI research program centered on
-  the `Æther-flow ontology` and a human-accountable research-agent system.
-- mechanism: The hub should show the two tracks, then route readers to
-  drilldowns that explain the ontology, workflow, role routing, claim gates, and
-  source authority at increasing depth.
-- source_basis: `README.md`, `AGENTS.md`, `ontology/aether-and-aether-flow.md`,
-  and the registered explainer source specs.
-- authority_status: Human-only overview; source specs and registries carry
-  project documentation authority, while registered TeX carries scientific
-  authority.
-- uncertainty: The first-principles derivation of the exact-GR benchmark from
-  substrate structure remains open.
-- validation_or_test: Verify that every drilldown has a source spec,
-  source-basis metadata, diagram-source parity, and a registered HTML row.
-- next_step: Use the ontology drilldown to inspect the project-specific
-  substrate/readout burden before evaluating any candidate derivation.
-
-### Workflow Is Not Physics Proof
-
-- premise: The research-agent system organizes work; it does not by itself
-  establish a scientific result.
-- mechanism: Director decisions, AgentJobs, role contracts, registries,
-  validators, completions, and handoffs make progress auditable and bounded.
-- source_basis: `research_control/README.md`, `AGENTS.md`, and control
-  registries.
-- authority_status: Project-control explanation only.
-- uncertainty: A completed task may produce progress, obstruction, a repair
-  packet, or a negative result without proving the broader theory.
-- validation_or_test: Check completion records, claim-boundary rows, and
-  generated-output boundaries before treating any workflow step as accepted
-  knowledge.
-- next_step: Use the research-system and claim-gates drilldowns to inspect the
-  actual transaction model.
-
-## Non-Goals
-
-- Do not introduce new physics claims.
-- Do not imply that GR has been derived from the `Æther-flow ontology`.
-- Do not change project-control rules, role authority, validators, or routing.
-- Do not use external images or network-dependent assets.
+- subject_summary: Summarize the project overview atlas, its routing function across the explainer set, why it matters for source-first project understanding, and which declared sources ground the summary.
+- atlas_navigation: A completed atlas section that routes readers by use case across the research idea, agent workflow, authority and memory system, and regeneration/validation path while preserving existing explainer URLs.
+- research_idea: A documentation-grade explanation of the two-track program: exact-GR benchmark adoption, open first-principles Æther-flow derivation, claim-gate caution, and the ontology drilldowns that readers should use next.
+- agent_workflow: A concrete overview of the staged-autonomy research harness: state, handoff, Director decision, bounded AgentJob, role execution, artifacts, validators, completion, and registries, with the boundary that it is not an autonomous proof engine.
+- authority_memory: A source-first explanation of canonical TeX, registries, registered Markdown, generated HTML/wiki/PDF derivatives, and local retrieval surfaces, including why memory access does not create new authority.
+- run_regenerate_system: A practical operator path for validating and regenerating the project: inspect sources, update specs, render HTML, preserve Mermaid parity, run bootstrap, run advisory depth lint, and use the technical-requirements drilldown.

@@ -25,23 +25,15 @@ presentation_profile: "format_ladder"
 layout_intent: "Use an authority/use-case matrix first, with file extensions inside each row, then provide drilldowns for source authority, generated derivatives, local retrieval surfaces, and validation evidence."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "authority_ladder"
   - "format_use_case_matrix"
   - "generated_derivatives"
   - "local_retrieval_surfaces"
   - "validation_evidence"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -77,6 +69,10 @@ extracts, `.meta.json`, and `.local/` surfaces.
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
@@ -127,61 +123,36 @@ flowchart TD
   Link --> Validate
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Source Authority`
+
+Summary text:
+
+Source authority is the repository rule for deciding which files can define
+project truth and which files are generated aids for reading, retrieval,
+validation, or publication. Its functionality is to rank registered TeX,
+format-specific registries, registered Markdown, generated HTML, generated
+wiki notes, PDFs, local Obsidian surfaces, and .local caches so contributors
+update canonical sources first and regenerate dependent artifacts afterward.
+This matters because many surfaces are polished, searchable, or easier to read
+than the source files, but convenience does not make them independent
+authority. The authority model fits the project by preserving scientific claim
+discipline, project-control provenance, and reproducible memory refreshes
+across a repo that intentionally generates many human-facing derivatives.
+
+Summary source basis:
+
+- `AGENTS.md`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `registries/FILE_OBJECT_REGISTRY.csv`
+
 ## Required Content Blocks
 
-- authority_ladder: Explain canonical science sources, registry authority,
-  registered Markdown authority, generated derivatives, and `.local/` scratch
-  boundaries.
-- format_use_case_matrix: Provide an authority/use-case matrix covering `.tex`,
-  `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic extracts,
-  `.meta.json`, and `.local/`.
-- generated_derivatives: Explain generated wiki notes, indexes, PDFs, tracked
-  HTML, metadata sidecars, and why they are not independent authority.
-- local_retrieval_surfaces: Explain local Obsidian vault, content semantics,
-  semantic index, scratch builds, caches, and retrieval outputs as
-  noncanonical access layers.
-- validation_evidence: Explain source hashes, source-basis metadata, registry
-  rows, Mermaid parity, bootstrap validation, and documentation-impact checks.
-
-## Required Analysis Capsules
-
-### Authority Is Source-First
-
-- premise: The repository distinguishes source authority from generated
-  retrieval and human-reading surfaces.
-- mechanism: Canonical files and registries own claims and provenance; generated
-  derivatives expose or visualize that content but do not become independent
-  authority.
-- source_basis: `AGENTS.md`, `README.md`, and source registries.
-- authority_status: Human-only explanation of the existing authority hierarchy.
-- uncertainty: Generated derivatives can be useful but stale if source hashes,
-  source-basis metadata, or registry rows drift.
-- validation_or_test: Run bootstrap validation and check source-basis hashes,
-  generated-output rows, and non-authority banners.
-- next_step: Edit canonical sources or registered specs first, then regenerate.
-
-### HTML Is A Human Visual Derivative
-
-- premise: Tracked HTML pages help humans understand the project but do not
-  carry independent scientific or control authority.
-- mechanism: Each HTML file points back to a Markdown source spec and registry
-  source basis; diagram source is preserved in the spec and rendered
-  into inline SVG for portability.
-- source_basis: `.codex/skills/html-visual-explainer/SKILL.md`,
-  `registries/HTML_EXPLAINER_REGISTRY.csv`, and
-  `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
-- authority_status: Explanation of generated HTML boundaries.
-- uncertainty: Visual polish can improve comprehension without changing the
-  underlying authority chain.
-- validation_or_test: Confirm every tracked HTML explainer has a registered
-  Markdown spec, source-basis metadata, required controls, source materials,
-  and Mermaid parity when diagrams are declared.
-- next_step: Use the project hub to navigate the generated pages, then inspect
-  the source specs for authoritative explainer content.
-
-## Non-Goals
-
-- Do not change registry semantics.
-- Do not edit generated wiki notes or PDFs by hand.
-- Do not treat `.local/` caches as tracked authority.
-- Do not use external images or network-dependent assets.
+- subject_summary: Summarize source authority, its file-format ladder, why generated surfaces stay non-authoritative, and which declared sources ground the summary.
+- authority_ladder: A documentation-grade ladder covering canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries.
+- format_use_case_matrix: A complete authority/use-case matrix for `.tex`, `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic extracts, `.meta.json`, `wiki/`, and `.local/`, including editor, validator, and failure mode.
+- generated_derivatives: A source-backed section explaining generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, content semantics, and why regeneration does not promote them to authority.
+- local_retrieval_surfaces: A completed section on local Obsidian, content semantics, SQLite, query scripts, caches, and scratch builds as operator aids that must point back to canonical rows.
+- validation_evidence: A documentation section on source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, documentation-impact receipts, and checkpoint boundaries.

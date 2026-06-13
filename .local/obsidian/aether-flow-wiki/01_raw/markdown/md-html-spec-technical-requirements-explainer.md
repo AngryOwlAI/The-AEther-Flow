@@ -24,9 +24,9 @@ presentation_profile: "technical_requirements"
 layout_intent: "Use a tiered requirements matrix with project-requirement versus operator-environment-aid labels, command callouts, and source-backed setup evidence."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
 required_content_blocks:
+  - "subject_summary"
   - "read_inspect_tier"
   - "validators_memory_scripts_tier"
   - "memory_regeneration_tier"
@@ -34,14 +34,6 @@ required_content_blocks:
   - "local_retrieval_tier"
   - "pdf_refresh_tier"
   - "project_vs_operator_aid"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 ---
 
 # Technical Requirements Spec
@@ -70,69 +62,49 @@ Examples:
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Tiered requirements matrix with commands and labels.
 - Setup command callouts for Python and diagram rendering.
 - Optional-local-reader panel for Obsidian and `.local/` retrieval surfaces.
 - PDF-refresh panel that scopes LaTeX only to TeX derivative work.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Technical Requirements`
+
+Summary text:
+
+The technical requirements explainer describes the local runtime, package,
+validation, rendering, retrieval, and derivative-build requirements needed to
+inspect or regenerate project surfaces safely. Its function is to separate
+read-only inspection, Python validator execution, memory and wiki
+regeneration, governed Mermaid inline-SVG rendering, local Obsidian or
+semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters
+because not every reader needs every tool, and optional operator aids such as
+Obsidian or global Codex plugins should not be mistaken for project authority.
+The explainer fits the project by turning setup files and skill contracts into
+a practical dependency map for maintainers who need repeatable validation
+without changing dependency policy or scientific claims.
+
+Summary source basis:
+
+- `README.md`
+- `requirements.txt`
+- `Makefile`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json`
+
 ## Required Content Blocks
 
-- read_inspect_tier: Explain browser, text editor, and Git as the minimum
-  read/inspect layer.
-- validators_memory_scripts_tier: Explain Python `.venv`, `requirements.txt`,
-  PyMuPDF, and Python validator commands.
-- memory_regeneration_tier: Explain project-memory-system scripts and `make
-  validate-memory` for regenerating registries, wiki, vault sync, and query
-  checks.
-- diagram_rendering_tier: Explain Node.js, npm, pinned Mermaid package,
-  Playwright Chromium, and the inline-SVG renderer path.
-- local_retrieval_tier: Explain optional Obsidian and
-  `.local/obsidian/aether-flow-wiki/` plus local semantic/query surfaces.
-- pdf_refresh_tier: Explain LaTeX/PDF build requirements only when TeX
-  derivatives are in scope.
-- project_vs_operator_aid: Label each requirement as project requirement or
-  operator environment aid.
-
-## Required Analysis Capsules
-
-### Requirements Are Tiered
-
-- premise: Not every reader or operator needs every tool.
-- mechanism: The page should separate read-only inspection, Python validation,
-  memory regeneration, diagram rendering, optional local retrieval,
-  and PDF refresh work into distinct tiers.
-- source_basis: `README.md`, `requirements.txt`, `Makefile`,
-  `.codex/skills/project-memory-system/SKILL.md`, and Mermaid subskill setup
-  documentation.
-- authority_status: Human-only setup explanation; tracked scripts and contracts
-  define project requirements.
-- uncertainty: System-level tool availability can differ across machines.
-- validation_or_test: Run the tier-specific command after installing the tier,
-  such as bootstrap validation, renderer `--check`, local vault lint, or PDF
-  build validation.
-- next_step: Install the lowest tier needed for the intended workflow before
-  running broader validation.
-
-### Operator Aids Are Not Project Authority
-
-- premise: The current Codex workspace may expose useful tools that are not
-  durable project requirements.
-- mechanism: Label Obsidian, global Codex skills, plugins, and bundled tools
-  as operator environment aids unless the requirement is tracked in this repo.
-- source_basis: `.codex/skills/obsidian-wiki/SKILL.md`, `.codex/skills/*`,
-  and `README.md`.
-- authority_status: Explanation of requirement boundaries.
-- uncertainty: A future task may promote an aid into a project requirement by
-  adding tracked contracts, scripts, or registry documentation.
-- validation_or_test: Check whether the requirement appears in tracked docs,
-  scripts, `requirements.txt`, or package manifests.
-- next_step: Keep README commands concise and use this explainer for the
-  richer tiered model.
-
-## Non-Goals
-
-- Do not change dependency versions or install new tools.
-- Do not make Obsidian or global Codex plugins required project authority.
-- Do not change validator behavior or scripts.
-- Do not introduce physics claims.
+- subject_summary: Summarize the technical requirements explainer, its tiered setup and validation function, why readers need that distinction, and which declared sources ground the summary.
+- read_inspect_tier: A practical read-only tier covering browser, text editor, Git, and shell inspection as the minimum operator environment for understanding sources without regenerating artifacts.
+- validators_memory_scripts_tier: A project requirement tier for Python `.venv`, `requirements.txt`, bootstrap validation, project-control scripts, research-control validators, tests, and deterministic checks.
+- memory_regeneration_tier: A completed memory-refresh tier for project-memory-system scripts, `make validate-memory`, generated registries, wiki notes, content semantics, and local query smoke checks.
+- diagram_rendering_tier: A source-backed diagram tier covering Node.js, npm, pinned Mermaid package, Playwright Chromium, build-time inline SVG rendering, diagram source parity, and the no-runtime-Mermaid boundary.
+- local_retrieval_tier: An operator-aid tier for optional Obsidian, SQLite, local semantic extracts, browser previews, and `.local/` scratch surfaces, with clear non-authority status.
+- pdf_refresh_tier: A conditional PDF tier explaining LaTeX/PDF build requirements only when TeX derivative refresh is in scope, and why PDFs remain human-reading derivatives.
+- project_vs_operator_aid: A matrix separating project requirements from operator conveniences so missing optional local tools do not get mistaken for repository validity failures.

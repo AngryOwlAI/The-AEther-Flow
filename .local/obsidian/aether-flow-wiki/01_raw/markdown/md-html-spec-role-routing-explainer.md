@@ -22,22 +22,14 @@ presentation_profile: "workflow_lifecycle"
 layout_intent: "Use a routing lifecycle with decision-tree diagrams, role-contract panels, and evidence drilldowns that distinguish direct registered roles, task overlays, and one-job provisional roles."
 required_controls:
   - "section_toc"
-  - "expandable_analysis_panels"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
+  - "subject_summary"
   - "authority_classification"
   - "director_routing"
   - "execution_role_contract"
   - "overlay_provisional_boundary"
-analysis_capsule_schema:
-  - "premise"
-  - "mechanism"
-  - "source_basis"
-  - "authority_status"
-  - "uncertainty"
-  - "validation_or_test"
-  - "next_step"
 mermaid_diagrams:
   required: true
   ids:
@@ -61,6 +53,10 @@ The page must not change role contracts or routing rules.
 
 ## Required Visual Structure
 
+- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
+  as full-width horizontal rows rather than narrow multi-column cards. Tables
+  must use readable auto layout, with any wide overflow scoped inside the
+  content block instead of the page body.
 - Responsive containment: navigation chips, grids, tables, code paths, source
   drilldowns, and diagram shells must not create body-level horizontal overflow
   on mobile or desktop viewports.
@@ -114,59 +110,35 @@ flowchart TD
   Allowed --> Job["AgentJob boundary"]
 ```
 
+## Source-Backed Summary
+
+Summary heading: `Summary of Role Routing`
+
+Summary text:
+
+Role routing is the project's decision system for assigning bounded work to
+the correct registered role or task-local execution overlay. Its functionality
+is to connect task state, Director decisions, base role contracts, provisional
+or overlay authority, and registry evidence so an agent knows who owns the
+change, what paths may be written, which validators are required, and when the
+job must stop. This matters because the repository contains physics roles,
+documentation roles, validator roles, memory roles, and project-control roles
+with different authority levels; collapsing them into one generic helper would
+risk claim promotion, direct derivative edits, or untracked control changes.
+Role routing fits the overall project by making authority selection itself
+auditable before implementation begins.
+
+Summary source basis:
+
+- `registries/AGENT_ROLE_REGISTRY.csv`
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+
 ## Required Content Blocks
 
-- authority_classification: Explain how the task authority class separates
-  science-bearing, project-system, documentation, validator, and memory work.
-- director_routing: Explain how Director decisions bind a selected role to one
-  bounded AgentJob.
-- execution_role_contract: Explain task-local execution-role records,
-  constraints, removed permissions, expanded permissions, and validator
-  bindings.
-- overlay_provisional_boundary: Explain when a task overlay or one-job
-  provisional role is allowed and why repeated provisional patterns require
-  review rather than silent promotion.
-
-## Required Analysis Capsules
-
-### Role Selection Is Authority Selection
-
-- premise: Choosing a role is choosing the authority boundary for one bounded
-  task.
-- mechanism: The Director compares the task against registered role contracts,
-  source classes, allowed writes, forbidden surfaces, validators, and claim
-  boundaries before opening an AgentJob.
-- source_basis: `research_control/README.md`,
-  `registries/AGENT_ROLE_REGISTRY.csv`, and
-  `registries/DIRECTOR_DECISION_REGISTRY.csv`.
-- authority_status: Workflow explanation; it does not alter role authority.
-- uncertainty: A role template may be close but not exact; the execution-role
-  record is the job-specific contract.
-- validation_or_test: Check the Director decision, execution-role record, and
-  AgentJob allowlist.
-- next_step: Inspect the task-local execution-role file before executing or
-  reviewing work.
-
-### Execution Role Prevents Drift
-
-- premise: The execution-role record prevents a role from silently gaining or
-  losing authority during a task.
-- mechanism: It records whether the job uses a registered role, task overlay,
-  or one-job provisional role, then binds added constraints, removed
-  permissions, expanded permissions, allowed writes, human gates, and expiry.
-- source_basis: `registries/ROLE_EXECUTION_REGISTRY.csv` and
-  `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`.
-- authority_status: Project-control explanation.
-- uncertainty: Repeated provisional patterns may indicate a role-design gap,
-  but they do not become permanent by convention.
-- validation_or_test: Validate role execution rows against task-local role
-  records and AgentJob fields.
-- next_step: Use the research-system explainer to see how the selected role
-  executes inside the full task loop.
-
-## Non-Goals
-
-- Do not register new roles.
-- Do not change role contracts, schemas, routing rules, or validators.
-- Do not modify scientific claim status.
-- Do not use external images or network-dependent assets.
+- subject_summary: Summarize role routing as authority selection, why the project needs it, how it fits bounded AgentJobs, and which declared sources ground the summary.
+- authority_classification: A completed explanation of how task authority class separates physics work, project-control maintenance, documentation curation, validation, memory maintenance, and process auditing before a role is selected.
+- director_routing: A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions.
+- execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence.
+- overlay_provisional_boundary: A matrix explaining registered roles, task overlays, and one-job provisional roles, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.
