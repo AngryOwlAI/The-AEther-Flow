@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: validate-memory validate-project-control validate-html-explainers
+.PHONY: validate-memory validate-project-control validate-html-explainers audit-documentation-surfaces
 
 validate-memory:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
@@ -17,6 +17,7 @@ validate-project-control:
 	$(PYTHON) scripts/project_control/classify_project_changes.py --json
 	$(PYTHON) scripts/project_control/collect_project_improvement_signals.py --validate-emitted
 	$(PYTHON) scripts/project_control/validate_documentation_impact.py
+	$(PYTHON) scripts/project_control/audit_documentation_surfaces.py --skip-local
 	$(PYTHON) .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
 	$(PYTHON) scripts/spec_depth_lint.py --root .
 	$(PYTHON) scripts/research_control/validate_research_control.py
@@ -27,3 +28,7 @@ validate-html-explainers:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
 	$(PYTHON) .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
 	$(PYTHON) scripts/spec_depth_lint.py --root .
+
+audit-documentation-surfaces:
+	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
+	$(PYTHON) scripts/project_control/audit_documentation_surfaces.py

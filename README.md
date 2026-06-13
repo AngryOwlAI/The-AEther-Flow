@@ -349,6 +349,20 @@ Validate documentation impact:
 .venv/bin/python scripts/project_control/validate_documentation_impact.py
 ```
 
+Audit registered documentation surfaces, derivative paths, source hashes, HTML
+source-basis links, GitHub-facing mirrors, and local retrieval surfaces:
+
+```zsh
+.venv/bin/python scripts/project_control/audit_documentation_surfaces.py
+```
+
+For project-control validation or CI contexts where ignored `.local/`
+retrieval files have not been generated, use the tracked-surface mode:
+
+```zsh
+.venv/bin/python scripts/project_control/audit_documentation_surfaces.py --skip-local
+```
+
 Project-improvement signal types are defined in
 `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv`; concrete emitted
 signals are recorded in `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`.
