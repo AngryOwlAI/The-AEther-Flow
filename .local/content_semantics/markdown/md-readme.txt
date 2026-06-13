@@ -312,6 +312,7 @@ Decision vocabulary:
 | --- | --- | --- | --- |
 | `continue-research` | Continue physics research-control from tracked state, handoffs, and the active task boundary. | Uses `.codex/skills/continue-research/SKILL.md`; may route one bounded research AgentJob through the Director-controlled control spine. | Does not repair project-system machinery unless the routed task explicitly allows it. |
 | `improve-project-system` | Repair or clarify the research system itself: roles, schemas, validators, checkpoint gates, memory tooling, skill guidance, docs, or generated-doc pipelines. | Uses `.codex/skills/improve-project-system/SKILL.md`; may resolve one signal, one classifier result, or one bounded project-system AgentJob. | Does not perform physics derivation, promote claims, or edit canonical science sources. |
+| `user-modified-project` | Integrate human-made local repository edits after a brief intent note. | Uses `.codex/skills/user-modified-project/SKILL.md`; classifies the diff, routes to the correct controlled workflow, refreshes registry/wiki derivatives through bootstrap, and checkpoints only after validation. | Does not bypass `continue-research`, `improve-project-system`, claim gates, generated-surface rules, or AgentJob allowlists. |
 | Project-System Director | A project-system boundary or routing question must be resolved before work proceeds. | Creates a project-system Director Decision Record and selects one bounded non-scientific AgentJob. | Does not execute the selected job or expand role authority by convention. |
 | Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML as independent authority. |
 | Project-Control Maintainer | Skill contracts, role contracts, schema contracts, control registries, or control-marked mixed Markdown need functional maintenance. | Edits allowed control markdown and project-control contracts under one AgentJob allowlist. | Does not edit explanatory-only sections unless a task overlay explicitly grants `explanatory_markdown` permission. |
@@ -428,6 +429,7 @@ from the canonical type registry rather than duplicated local constant sets.
 │       ├── pdf-derivative-build/
 │       ├── obsidian-wiki/
 │       ├── html-visual-explainer/
+│       ├── user-modified-project/
 │       ├── ontology-promotion/
 │       └── visual-explainer/
 ├── AGENTS.md

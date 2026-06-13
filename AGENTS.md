@@ -43,6 +43,12 @@ from physics continuation. It may process one project-improvement signal or
 one deterministic classifier result per invocation, and it must not promote
 physics claims or edit canonical science sources.
 
+For human-made local repository edits that need controlled integration, use
+`.codex/skills/user-modified-project/SKILL.md` as the intake router. It must
+classify the diff, preserve the physics/project-system authority split, route
+to `continue-research` or `improve-project-system` as appropriate, and refresh
+memory/wiki/registry derivatives only through the approved bootstrap path.
+
 Use the deterministic classifier before deciding that documentation work is
 needed:
 

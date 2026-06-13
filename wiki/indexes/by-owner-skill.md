@@ -136,6 +136,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-PDF-DERIVATIVE-BUILD` `wiki/markdown/md-skill-pdf-derivative-build.md`
 - `WIKI-MD-SKILL-PROJECT-MEMORY-SYSTEM` `wiki/markdown/md-skill-project-memory-system.md`
 - `WIKI-MD-SKILL-TEX-WIKI` `wiki/markdown/md-skill-tex-wiki.md`
+- `WIKI-MD-SKILL-USER-MODIFIED-PROJECT` `wiki/markdown/md-skill-user-modified-project.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-ontology-aether-flow-consistency.md`
@@ -283,6 +284,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION` `research_control/tasks/RT-20260608-007/artifacts/06_LOCALIZATION_SOURCE_BASIS_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-008/artifacts/07_LOCALIZATION_SOURCE_BASIS_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
+
+## user-modified-project
+
+- `MD-SKILL-USER-MODIFIED-PROJECT` `.codex/skills/user-modified-project/SKILL.md`
 
 ## visual-explainer
 
