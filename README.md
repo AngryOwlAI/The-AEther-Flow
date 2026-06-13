@@ -44,22 +44,22 @@ The physics problem gives the AI system a hard, real research environment. The A
 
 ```mermaid
 flowchart TB
-    program["The Æther-Flow Research Program"]
-    physics["Physics Research Track"]
-    ai["AI Research-Agent Track"]
+    program["The Æther-Flow<br/>Research Program"]
+    physics["Physics<br/>Research Track"]
+    ai["AI Research-Agent<br/>Track"]
 
     program --> physics
     program --> ai
 
-    physics --> ontology["Æther / Æther-flow ontology"]
-    physics --> benchmark["Exact-GR benchmark package"]
-    physics --> derivation["Open GR-derivation problem"]
-    physics --> obstructions["No-go and obstruction record"]
+    physics --> ontology["Æther / Æther-flow<br/>ontology"]
+    physics --> benchmark["Exact-GR<br/>benchmark package"]
+    physics --> derivation["Open GR-derivation<br/>problem"]
+    physics --> obstructions["No-go and<br/>obstruction record"]
 
-    ai --> routing["Director routing and bounded AgentJobs"]
-    ai --> roles["Role contracts and governed skills"]
-    ai --> gates["Claim gates, refutation, and review discipline"]
-    ai --> memory["Source-first memory, wiki, and registries"]
+    ai --> routing["Director routing<br/>and bounded AgentJobs"]
+    ai --> roles["Role contracts<br/>and governed skills"]
+    ai --> gates["Claim gates, refutation,<br/>and review discipline"]
+    ai --> memory["Source-first memory,<br/>wiki, and registries"]
 
     derivation --> gates
     memory --> ontology

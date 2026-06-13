@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@0.7.0--RT-20260613-012"
+role_execution_kind: "registered_role"
+task_id: "RT-20260613-012"
+agent_job_id: "AJ-RT-20260613-012-001"
+base_role_id: "documentation-curator"
+base_role_version: "0.7.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role without permission expansion for Mermaid label wrapping and source-backed derivative refresh."
+added_constraints:
+  - "Edit Mermaid labels in explanatory Markdown and registered source specs before generated HTML derivatives."
+  - "Keep generated HTML human-only and non-authoritative."
+  - "Do not alter contracts validators routing or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "README.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "github-facing/project-overview-explainer.md"
+  - "html/project-overview-explainer.html"
+  - "research_control/tasks/RT-20260613-012/**"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+requires_human_gate: false
+expires_after: "AJ-RT-20260613-012-001"
+justification: ""
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-13T18:02:26Z"
+updated_at: "2026-06-13T18:02:26Z"
+notes: "Execution-role record completed for Mermaid label wrapping repair."

@@ -148,15 +148,15 @@ flowchart TD
 <!-- mermaid-diagram-id: dual-track-map -->
 ```mermaid
 flowchart TD
-  Program["Æther-flow research program"] --> Physics["Physics track"]
-  Program --> AI["AI research-agent track"]
-  Physics --> Ontology["Æther-flow ontology"]
-  Physics --> Benchmark["Exact-GR benchmark adoption"]
-  Physics --> OpenProof["Open first-principles derivation"]
-  AI --> Routing["Director and role routing"]
-  AI --> Validation["Validators and claim gates"]
-  AI --> Memory["Source-first memory"]
-  Ontology --> SharedTarget["Derive or hard-fail a valid path"]
+  Program["Æther-flow<br/>research program"] --> Physics["Physics<br/>track"]
+  Program --> AI["AI research-agent<br/>track"]
+  Physics --> Ontology["Æther-flow<br/>ontology"]
+  Physics --> Benchmark["Exact-GR benchmark<br/>adoption"]
+  Physics --> OpenProof["Open first-principles<br/>derivation"]
+  AI --> Routing["Director and<br/>role routing"]
+  AI --> Validation["Validators and<br/>claim gates"]
+  AI --> Memory["Source-first<br/>memory"]
+  Ontology --> SharedTarget["Derive or hard-fail<br/>a valid path"]
   Routing --> SharedTarget
   Validation --> SharedTarget
   Memory --> SharedTarget
