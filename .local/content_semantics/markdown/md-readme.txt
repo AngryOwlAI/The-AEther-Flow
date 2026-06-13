@@ -58,10 +58,10 @@ flowchart TB
 
     ai --> routing["Director routing<br/>and bounded AgentJobs"]
     ai --> roles["Role contracts<br/>and governed skills"]
-    ai --> gates["Claim gates, refutation,<br/>and review discipline"]
+    ai ----> gates["Claim gates, refutation,<br/>and review discipline"]
     ai --> memory["Source-first memory,<br/>wiki, and registries"]
 
-    derivation --> gates
+    derivation ----> gates
     memory --> ontology
     memory --> benchmark
 ```
