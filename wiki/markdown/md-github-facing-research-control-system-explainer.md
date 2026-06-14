@@ -8,15 +8,16 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source path: `github-facing/research-control-system-explainer.md`
 - Format: `markdown`
 - Role: `github_facing_documentation`
-- Authority status: `canonical_markdown_source`
+- Authority status: `generated_noncanonical`
 - Owner skill: `documentation-curator`
-- Source hash: `ae80f03d12ab1c33f473876ad27268991e9c1d95ca9638108618e099b0abddaa`
+- Source hash: `0b29d1e9dc7be06d4ea71a474a4a1ff85545740892d9ee9dfc8768fb687c822f`
 
 ## Related Objects
 
+- Related source: `MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/research-control-system-explainer.md`
 - Generated output path: `wiki/markdown/md-github-facing-research-control-system-explainer.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-13T02:45:33Z`
+- Last validated at: `2026-06-14T04:00:40Z`

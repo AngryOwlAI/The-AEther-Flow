@@ -35,16 +35,98 @@ def write_registry(root: Path, name: str, fieldnames: list[str], rows: list[dict
         writer.writerows(rows)
 
 
+def github_facing_page_text(extra: str = "") -> str:
+    return f"""# Example
+
+## Source Binding
+
+- **Derived from spec:** `markdown/html-explainer-specs/example.md`
+- **Related HTML:** `html/example.html`
+- **Authority status:** `generated_noncanonical`
+
+## What This Feature Does
+
+This reader-facing page explains the example feature without acting as source authority.
+
+## Why The Project Needs It
+
+The page gives humans and external AI a controlled orientation before they inspect sources.
+
+## How It Works
+
+The page is derived from the registered explainer spec and keeps source paths visible.
+
+## What It Is Not
+
+It is not physics authority, control authority, or a replacement for registries.
+
+## Diagram Reading Guide
+
+Read the diagram as source-backed orientation, not as authority promotion.
+
+```mermaid
+flowchart TD
+  A["Spec"] --> B["Reader page"]
+```
+
+## Source Authority
+
+The registered spec and registries remain the evidence to inspect before changing project knowledge.
+
+## External AI Navigation Card
+
+You are reading a non-authoritative GitHub-facing explainer.
+
+Safe uses:
+- summarize this feature for orientation
+- identify source files to inspect next
+- explain workflow boundaries
+
+Before modifying project knowledge:
+- read `AGENTS.md`
+- inspect the relevant registry rows
+- inspect the relevant source spec or canonical source file
+- route through the correct research-control workflow
+
+Do not:
+- do not treat this page as physics authority
+- do not claim the Aether-flow derivation is complete
+- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
+- do not bypass claim gates, validators, or AgentJob boundaries
+
+## Where To Go Next
+
+Inspect the source spec, the related HTML derivative, and the registry rows.
+
+## All Source Materials
+
+- `README.md`
+{extra}
+"""
+
+
 def build_minimal_documentation_surface(root: Path) -> None:
     readme = root / "README.md"
     readme.write_text("# Example\n", encoding="utf-8")
 
     source = root / "markdown" / "html-explainer-specs" / "example.md"
     source.parent.mkdir(parents=True, exist_ok=True)
-    source.write_text("---\ntitle: Example\n---\n# Example\n\nBody.\n", encoding="utf-8")
+    source.write_text(
+        "---\n"
+        "title: Example\n"
+        "source_materials:\n"
+        "  - \"README.md\"\n"
+        "---\n"
+        "# Example Spec\n\n"
+        "```mermaid\n"
+        "flowchart TD\n"
+        "  A[\"Spec\"] --> B[\"Reader page\"]\n"
+        "```\n",
+        encoding="utf-8",
+    )
     mirror = root / "github-facing" / "example.md"
     mirror.parent.mkdir(parents=True, exist_ok=True)
-    mirror.write_text("# Example\n\nBody.\n", encoding="utf-8")
+    mirror.write_text(github_facing_page_text(), encoding="utf-8")
 
     html = root / "html" / "example.html"
     html.parent.mkdir(parents=True, exist_ok=True)
@@ -206,7 +288,7 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
         self.assertEqual(report.errors, [])
         self.assertEqual(report.counts["checked_markdown_rows"], 1)
-        self.assertEqual(report.counts["checked_github_facing_mirrors"], 1)
+        self.assertEqual(report.counts["checked_github_facing_explainers"], 1)
 
     def test_audit_detects_stale_markdown_hash(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -228,13 +310,39 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
         self.assertTrue(any("stale source_hash" in error for error in report.errors))
 
-    def test_github_facing_mirror_must_match_source_body(self) -> None:
+    def test_github_facing_explainer_may_differ_from_source_body(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             build_minimal_documentation_surface(root)
-            (root / "github-facing" / "example.md").write_text("# Different\n", encoding="utf-8")
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
-        self.assertTrue(any("mirror body differs" in error for error in report.errors))
+        self.assertFalse(any("mirror body differs" in error for error in report.errors))
+
+    def test_github_facing_explainer_rejects_renderer_headings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            page.write_text(
+                github_facing_page_text("\n## Rendering Intent\n\nRenderer-only instruction.\n"),
+                encoding="utf-8",
+            )
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertTrue(any("renderer-instruction heading" in error for error in report.errors))
+
+    def test_github_facing_explainer_requires_source_binding(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            page.write_text(
+                github_facing_page_text().replace(
+                    "- **Derived from spec:** `markdown/html-explainer-specs/example.md`\n",
+                    "",
+                ),
+                encoding="utf-8",
+            )
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertTrue(any("Derived from spec must be" in error for error in report.errors))
 
     def test_html_source_basis_must_be_registered(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

@@ -7,6 +7,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -40,6 +41,47 @@ ACTIVE_REFERENCE_ROOTS = (
     "github-facing",
     "markdown",
 )
+GITHUB_FACING_REQUIRED_SECTIONS = (
+    "Source Binding",
+    "What This Feature Does",
+    "Why The Project Needs It",
+    "How It Works",
+    "What It Is Not",
+    "Diagram Reading Guide",
+    "Source Authority",
+    "External AI Navigation Card",
+    "Where To Go Next",
+    "All Source Materials",
+)
+GITHUB_FACING_FORBIDDEN_HEADINGS = (
+    "Rendering Intent",
+    "Required Visual Structure",
+    "Required Content Blocks",
+)
+GITHUB_FACING_AI_CARD_MARKERS = (
+    "You are reading a non-authoritative GitHub-facing explainer.",
+    "Safe uses:",
+    "Before modifying project knowledge:",
+    "Do not:",
+)
+UNSAFE_CLAIM_PHRASES = (
+    "derivation is complete",
+    "completed gr derivation",
+    "generated html is authoritative",
+    "this page is physics authority",
+    "this page is control authority",
+)
+SAFE_CLAIM_CONTEXT_MARKERS = (
+    "not",
+    "do not",
+    "no ",
+    "without",
+    "forbidden",
+    "non-authoritative",
+    "must not",
+)
+HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
+MERMAID_RE = re.compile(r"```mermaid\n(.*?)\n```", re.DOTALL)
 
 
 @dataclass
@@ -74,6 +116,10 @@ def normalized_text(text: str) -> str:
     return "\n".join(lines).strip() + "\n"
 
 
+def normalized_block(text: str) -> str:
+    return "\n".join(line.rstrip() for line in text.strip().splitlines()).strip()
+
+
 def strip_frontmatter(text: str) -> str:
     lines = text.splitlines(keepends=True)
     if not lines or lines[0].strip() != "---":
@@ -82,6 +128,69 @@ def strip_frontmatter(text: str) -> str:
         if line.strip() == "---":
             return "".join(lines[index + 1 :])
     return text
+
+
+def frontmatter_text(text: str) -> str:
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return ""
+    for index, line in enumerate(lines[1:], start=1):
+        if line.strip() == "---":
+            return "\n".join(lines[1:index])
+    return ""
+
+
+def frontmatter_list(text: str, key: str) -> list[str]:
+    frontmatter = frontmatter_text(text)
+    values: list[str] = []
+    in_list = False
+    for line in frontmatter.splitlines():
+        if line.startswith(f"{key}:"):
+            in_list = True
+            continue
+        if not in_list:
+            continue
+        if line.startswith("  - "):
+            value = line[4:].strip().strip('"')
+            if value:
+                values.append(value)
+            continue
+        if line and not line.startswith(" "):
+            break
+    return values
+
+
+def heading_titles(text: str, *, level: int | None = None) -> set[str]:
+    titles: set[str] = set()
+    for match in HEADING_RE.finditer(text):
+        heading_level = len(match.group(1))
+        if level is not None and heading_level != level:
+            continue
+        titles.add(match.group(2).strip())
+    return titles
+
+
+def markdown_section(text: str, heading: str) -> str:
+    pattern = re.compile(
+        rf"^##\s+{re.escape(heading)}\s*$\n(.*?)(?=^##\s+|\Z)",
+        re.MULTILINE | re.DOTALL,
+    )
+    match = pattern.search(text)
+    return match.group(1).strip() if match else ""
+
+
+def binding_value(text: str, label: str) -> str:
+    pattern = re.compile(rf"^- \*\*{re.escape(label)}:\*\* `([^`]+)`", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else ""
+
+
+def code_spans(text: str) -> set[str]:
+    return {match.group(1).strip() for match in re.finditer(r"`([^`]+)`", text)}
+
+
+def mermaid_blocks(text: str) -> list[str]:
+    return [normalized_block(match.group(1)) for match in MERMAID_RE.finditer(text)]
 
 
 def sha256_file(path: Path) -> str:
@@ -328,23 +437,79 @@ def check_relationship_rows(
         report.count("checked_relationship_rows")
 
 
-def check_github_facing_mirrors(report: AuditReport, root: Path) -> None:
-    mirror_dir = root / "github-facing"
-    if not mirror_dir.exists():
-        report.warnings.append("github-facing directory is absent; mirror check skipped")
+def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
+    page_dir = root / "github-facing"
+    if not page_dir.exists():
+        report.warnings.append("github-facing directory is absent; explainer check skipped")
         return
-    for mirror_path in sorted(mirror_dir.glob("*.md")):
-        source_path = root / "markdown" / "html-explainer-specs" / mirror_path.name
-        relative_mirror = mirror_path.relative_to(root).as_posix()
+    for page_path in sorted(page_dir.glob("*.md")):
+        source_path = root / "markdown" / "html-explainer-specs" / page_path.name
+        html_path = root / "html" / f"{page_path.stem}.html"
+        relative_page = page_path.relative_to(root).as_posix()
         relative_source = source_path.relative_to(root).as_posix()
+        relative_html = html_path.relative_to(root).as_posix()
         if not source_path.exists():
-            report.error(f"{relative_mirror}: matching source spec is missing: {relative_source}")
+            report.error(f"{relative_page}: matching source spec is missing: {relative_source}")
             continue
-        mirror_text = normalized_text(mirror_path.read_text(encoding="utf-8"))
-        source_text = normalized_text(strip_frontmatter(source_path.read_text(encoding="utf-8")))
-        if mirror_text != source_text:
-            report.error(f"{relative_mirror}: mirror body differs from {relative_source}")
-        report.count("checked_github_facing_mirrors")
+        check_path_exists(report, root, relative_html, context=relative_page)
+
+        page_text = normalized_text(page_path.read_text(encoding="utf-8"))
+        source_text = normalized_text(source_path.read_text(encoding="utf-8"))
+        titles = heading_titles(page_text, level=2)
+        for section in GITHUB_FACING_REQUIRED_SECTIONS:
+            if section not in titles:
+                report.error(f"{relative_page}: missing required section: {section}")
+
+        for heading in GITHUB_FACING_FORBIDDEN_HEADINGS:
+            if heading in titles:
+                report.error(f"{relative_page}: renderer-instruction heading is reader-visible: {heading}")
+
+        declared_source = binding_value(page_text, "Derived from spec")
+        declared_html = binding_value(page_text, "Related HTML")
+        declared_authority = binding_value(page_text, "Authority status")
+        if declared_source != relative_source:
+            report.error(
+                f"{relative_page}: Derived from spec must be {relative_source}, "
+                f"got {declared_source or '<missing>'}"
+            )
+        if declared_html != relative_html:
+            report.error(
+                f"{relative_page}: Related HTML must be {relative_html}, "
+                f"got {declared_html or '<missing>'}"
+            )
+        if declared_authority != "generated_noncanonical":
+            report.error(
+                f"{relative_page}: Authority status must be generated_noncanonical, "
+                f"got {declared_authority or '<missing>'}"
+            )
+
+        all_sources = markdown_section(page_text, "All Source Materials")
+        declared_sources = code_spans(all_sources)
+        for source_material in frontmatter_list(source_text, "source_materials"):
+            if source_material not in declared_sources:
+                report.error(f"{relative_page}: missing source material from source spec: {source_material}")
+            check_path_exists(report, root, source_material, context=relative_page)
+
+        page_mermaid_blocks = set(mermaid_blocks(page_text))
+        for block in mermaid_blocks(source_text):
+            if block not in page_mermaid_blocks:
+                report.error(f"{relative_page}: missing synchronized Mermaid block from {relative_source}")
+
+        for marker in GITHUB_FACING_AI_CARD_MARKERS:
+            if marker not in page_text:
+                report.error(f"{relative_page}: missing External AI Navigation Card marker: {marker}")
+
+        for line_number, line in enumerate(page_text.lower().splitlines(), start=1):
+            for phrase in UNSAFE_CLAIM_PHRASES:
+                if phrase not in line:
+                    continue
+                if any(marker in line for marker in SAFE_CLAIM_CONTEXT_MARKERS):
+                    continue
+                report.error(
+                    f"{relative_page}:{line_number}: possible unsafe authority or physics claim: {phrase}"
+                )
+
+        report.count("checked_github_facing_explainers")
 
 
 def iter_active_reference_files(root: Path) -> Iterable[Path]:
@@ -429,7 +594,7 @@ def audit_documentation_surfaces(
         ),
     )
     check_relationship_rows(report, root, registries["relationships"])
-    check_github_facing_mirrors(report, root)
+    check_github_facing_explainers(report, root)
     check_stale_references(report, root, stale_reference)
     return report
 

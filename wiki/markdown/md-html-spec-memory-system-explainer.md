@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-memory-system-explainer.md`
 - Backlink from `HTML-MEMORY-SYSTEM-EXPLAINER` `html/memory-system-explainer.html`
+- Backlink from `MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `github-facing/memory-system-explainer.md`
 
 ## Validation
 

@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-roles-and-skills-explainer.md`
 - Backlink from `HTML-ROLES-AND-SKILLS-EXPLAINER` `html/roles-and-skills-explainer.html`
+- Backlink from `MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `github-facing/roles-and-skills-explainer.md`
 
 ## Validation
 

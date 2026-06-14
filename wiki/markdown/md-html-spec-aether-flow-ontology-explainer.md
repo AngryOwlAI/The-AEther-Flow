@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
 - Backlink from `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
+- Backlink from `MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `github-facing/aether-flow-ontology-explainer.md`
 
 ## Validation
 

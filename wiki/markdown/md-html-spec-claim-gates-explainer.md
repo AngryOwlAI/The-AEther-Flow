@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-claim-gates-explainer.md`
 - Backlink from `HTML-CLAIM-GATES-EXPLAINER` `html/claim-gates-explainer.html`
+- Backlink from `MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `github-facing/claim-gates-explainer.md`
 
 ## Validation
 

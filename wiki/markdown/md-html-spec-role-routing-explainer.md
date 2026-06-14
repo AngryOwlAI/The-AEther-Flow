@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-role-routing-explainer.md`
 - Backlink from `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
+- Backlink from `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
 
 ## Validation
 

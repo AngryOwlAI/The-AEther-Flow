@@ -322,17 +322,22 @@ class MemorySystemSmokeTests(unittest.TestCase):
     def test_github_facing_markdown_is_discovered_with_public_metadata(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
+            spec = root / "markdown/html-explainer-specs/project-overview-explainer.md"
+            spec.parent.mkdir(parents=True)
+            spec.write_text("# Project Overview Spec\n", encoding="utf-8")
             page = root / "github-facing/project-overview-explainer.md"
             page.parent.mkdir(parents=True)
-            page.write_text("# Project Overview Spec\n", encoding="utf-8")
+            page.write_text("# Project Overview\n", encoding="utf-8")
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
                 rows = self.memory_system.discover_markdown_rows("2026-06-13T00:00:00Z")
 
         row_by_id = {row["object_id"]: row for row in rows}
         row = row_by_id["MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"]
         self.assertEqual(row["role"], "github_facing_documentation")
-        self.assertEqual(row["authority_status"], "canonical_markdown_source")
+        self.assertEqual(row["authority_status"], "generated_noncanonical")
         self.assertEqual(row["audience"], "humans_and_agents")
+        self.assertEqual(row["related_source"], "MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER")
+        self.assertEqual(row["generated_from"], "MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER")
         self.assertEqual(row["owner_skill"], "documentation-curator")
         self.assertEqual(row["github_facing"], "true")
         self.assertEqual(row["agent_documentation"], "true")

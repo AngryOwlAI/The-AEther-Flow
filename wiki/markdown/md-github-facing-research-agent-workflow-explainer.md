@@ -8,15 +8,16 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source path: `github-facing/research-agent-workflow-explainer.md`
 - Format: `markdown`
 - Role: `github_facing_documentation`
-- Authority status: `canonical_markdown_source`
+- Authority status: `generated_noncanonical`
 - Owner skill: `documentation-curator`
-- Source hash: `5bf14bcf9510b5239719544fc904063e1053f54fe6b8bba2c1532c41aaac199c`
+- Source hash: `12b6856a1ffcdf827bb55f4f1a1db02cbe0c64d9198cd74716039b0fb0774dce`
 
 ## Related Objects
 
+- Related source: `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - Generated output path: `wiki/markdown/md-github-facing-research-agent-workflow-explainer.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-13T02:45:33Z`
+- Last validated at: `2026-06-14T04:00:40Z`

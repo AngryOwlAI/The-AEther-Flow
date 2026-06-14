@@ -16,16 +16,6 @@ Generated metadata index. Not canonical authority. Update source registries, the
 ## canonical_markdown_source
 
 - `MD-AETHER-FLOW-INTERPRETATION-LEMEN` `ontology/aether_flow_interpretation-lemen.md`
-- `MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `github-facing/aether-flow-ontology-explainer.md`
-- `MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `github-facing/claim-gates-explainer.md`
-- `MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `github-facing/memory-system-explainer.md`
-- `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
-- `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
-- `MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `github-facing/research-control-system-explainer.md`
-- `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
-- `MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `github-facing/roles-and-skills-explainer.md`
-- `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
-- `MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER` `github-facing/technical-requirements-explainer.md`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - `MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `markdown/html-explainer-specs/claim-gates-explainer.md`
 - `MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/memory-system-explainer.md`
@@ -98,6 +88,16 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-ROLES-AND-SKILLS-EXPLAINER` `html/roles-and-skills-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
 - `HTML-TECHNICAL-REQUIREMENTS-EXPLAINER` `html/technical-requirements-explainer.html`
+- `MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `github-facing/aether-flow-ontology-explainer.md`
+- `MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `github-facing/claim-gates-explainer.md`
+- `MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `github-facing/memory-system-explainer.md`
+- `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
+- `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
+- `MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `github-facing/research-control-system-explainer.md`
+- `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
+- `MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `github-facing/roles-and-skills-explainer.md`
+- `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
+- `MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER` `github-facing/technical-requirements-explainer.md`
 - `PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `ontology/pdfs/aether_flow_consistency.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/pdfs/aether_flow_dynamics.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
@@ -146,6 +146,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-RESEARCH-CONTROL` `wiki/markdown/md-readme-research-control.md`
 - `WIKI-MD-README-RESEARCH-CONTROL-APPROVALS` `wiki/markdown/md-readme-research-control-approvals.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `wiki/markdown/md-research-control-design-github-facing-explainer-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
@@ -254,6 +255,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-RESEARCH-CONTROL` `research_control/README.md`
 - `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- `MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `research_control/design/github_facing_explainer_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`

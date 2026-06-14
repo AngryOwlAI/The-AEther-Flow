@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-technical-requirements-explainer.md`
 - Backlink from `HTML-TECHNICAL-REQUIREMENTS-EXPLAINER` `html/technical-requirements-explainer.html`
+- Backlink from `MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER` `github-facing/technical-requirements-explainer.md`
 
 ## Validation
 

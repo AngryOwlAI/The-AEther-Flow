@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-source-authority-explainer.md`
 - Backlink from `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
+- Backlink from `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
 
 ## Validation
 

@@ -121,10 +121,12 @@ rendered diagrams are used where they fit the subject. Those interactions help
 readers explore the project; they do not make generated HTML authoritative.
 
 For GitHub browsing, start with the root-level
-`github-facing` directory. They mirror the registered
-explainer specs without the YAML metadata header. This layer is canonical for
-GitHub-facing explanation and agent-readable orientation, but it is
-non-authoritative for physics claims and control decisions.
+`github-facing` directory. Those pages are derived, source-backed Markdown
+explainers generated from the registered explainer specs, not body-only spec
+mirrors. This layer is the GitHub-readable orientation surface for humans and
+external AI, but it is generated noncanonical: it is non-authoritative for
+physics claims, control decisions, routing, validator behavior, and registry
+authority.
 
 - [Project Overview](github-facing/project-overview-explainer.md): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
 - [Æther-flow Ontology](github-facing/aether-flow-ontology-explainer.md): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
@@ -351,7 +353,8 @@ Validate documentation impact:
 ```
 
 Audit registered documentation surfaces, derivative paths, source hashes, HTML
-source-basis links, GitHub-facing mirrors, and local retrieval surfaces:
+source-basis links, GitHub-facing derived explainers, and local retrieval
+surfaces:
 
 ```zsh
 .venv/bin/python scripts/project_control/audit_documentation_surfaces.py

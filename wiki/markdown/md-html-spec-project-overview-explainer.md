@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-project-overview-explainer.md`
 - Backlink from `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
+- Backlink from `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
 
 ## Validation
 

@@ -476,7 +476,18 @@ def merge_authored_registry(
             row = normalize_row(existing[object_id], fieldnames)
             discovered_row = normalize_row(discovered[object_id], fieldnames)
             previous_hash = row.get("source_hash", "")
-            for field in MECHANICAL_REFRESH_COLUMNS & set(fieldnames):
+            refresh_columns = MECHANICAL_REFRESH_COLUMNS & set(fieldnames)
+            if name == "MARKDOWN_SOURCE_REGISTRY.csv" and object_id.startswith("MD-GITHUB-FACING-"):
+                refresh_columns |= {
+                    "role",
+                    "authority_status",
+                    "audience",
+                    "related_source",
+                    "generated_from",
+                    "owner_skill",
+                    "notes",
+                } & set(fieldnames)
+            for field in refresh_columns:
                 row[field] = discovered_row.get(field, "")
             if previous_hash == row.get("source_hash", ""):
                 row["last_validated_at"] = existing[object_id].get("last_validated_at", "")
@@ -589,10 +600,10 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
     if relative.startswith("github-facing/"):
         return (
             "github_facing_documentation",
-            "canonical_markdown_source",
+            "generated_noncanonical",
             "humans_and_agents",
             "documentation-curator",
-            "GitHub-facing explanatory documentation; non-authoritative for physics claims and control decisions.",
+            "GitHub-facing Markdown explainer derived from a registered HTML explainer spec; non-authoritative for physics claims and control decisions.",
         )
     if relative.startswith("research_control/design/"):
         return (
@@ -710,6 +721,13 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
         object_id = markdown_object_id(path)
         role, authority, audience, owner_skill, notes = markdown_role(path)
         wiki_path = wiki_path_for_source({"object_id": object_id, "format": "markdown"})
+        related_source = ""
+        generated_from = ""
+        if relative.startswith("github-facing/"):
+            matching_spec = REPO_ROOT / "markdown" / "html-explainer-specs" / path.name
+            if matching_spec.exists():
+                related_source = markdown_object_id(matching_spec)
+                generated_from = related_source
         is_github_facing = relative.startswith("github-facing/") or path.name == "README.md"
         is_agent_documentation = (
             relative.startswith("github-facing/")
@@ -728,8 +746,8 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
                 "authority_status": authority,
                 "audience": audience,
                 "source_hash": sha256_file(path),
-                "related_source": "",
-                "generated_from": "",
+                "related_source": related_source,
+                "generated_from": generated_from,
                 "generated_outputs": wiki_path,
                 "owner_skill": owner_skill,
                 "validation_status": "PASS",

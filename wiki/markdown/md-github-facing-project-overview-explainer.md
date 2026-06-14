@@ -8,15 +8,16 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source path: `github-facing/project-overview-explainer.md`
 - Format: `markdown`
 - Role: `github_facing_documentation`
-- Authority status: `canonical_markdown_source`
+- Authority status: `generated_noncanonical`
 - Owner skill: `documentation-curator`
-- Source hash: `9b8115ad509099d0cdc4d62513e541419070cd48d8309ea9eec82af7f283ac3a`
+- Source hash: `295ac4e85e52c056d4fecf21b30bee7edf78bb8a6baf80dff0501085e6d19df9`
 
 ## Related Objects
 
+- Related source: `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
 - Generated output path: `wiki/markdown/md-github-facing-project-overview-explainer.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-13T17:58:52Z`
+- Last validated at: `2026-06-14T04:00:40Z`

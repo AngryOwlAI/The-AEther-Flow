@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-html-spec-research-control-system-explainer.md`
 - Backlink from `HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `html/research-control-system-explainer.html`
+- Backlink from `MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `github-facing/research-control-system-explainer.md`
 
 ## Validation
 

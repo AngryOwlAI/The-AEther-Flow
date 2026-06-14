@@ -1,53 +1,36 @@
-# Research System Spec
+# Research System
 
-## Rendering Intent
+This page explains the operational spine that turns a question, handoff, or project-improvement signal into one bounded and auditable AgentJob.
 
-Create a tracked HTML drilldown for the project research system. The page
-should describe the system as an operational discipline for theoretical work:
-questions become bounded tasks, the Director selects role and boundary, an
-AgentJob constrains allowed work, validators check outputs, completions record
-results, and handoffs preserve the next state.
+## Source Binding
 
-The page should keep two boundaries visible:
+- **Derived from spec:** `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
+- **Related HTML:** `html/research-agent-workflow-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-- `continue-research` is for physics continuation from tracked state.
-- `improve-project-system` is for roles, validators, memory tooling, docs, and
-  generated-doc pipelines.
+## What This Feature Does
 
-The page should include a concrete object path for task execution:
-`research_control/program_state.yaml` -> latest `handoff-*` -> Director
-decision -> `00_TASK.yaml` -> `jobs/AJ-*.yaml` -> `roles/*.yaml` ->
-`artifacts/*` -> completion YAML -> next handoff -> registries.
+The research system coordinates tracked state, Director decisions, role contracts, AgentJobs, validators, completions, handoffs, and registries. It is a reproducibility harness for theoretical work, not an autonomous proof engine.
 
-## Required Visual Structure
+## Why The Project Needs It
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Responsive containment: navigation chips, grids, tables, code paths, source
-  drilldowns, and diagram shells must not create body-level horizontal overflow
-  on mobile or desktop viewports.
-- Adaptive diagram fit: diagram-backed boxes must read the rendered
-  SVG viewBox, set the box height from diagram aspect ratio and available
-  width within bounded min/max limits, and make Fit recompute that best-fit
-  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
-- Three-layer readability: stack the high-level, operational, and evidence
-  layer sections vertically; cards inside each layer must auto-fit at a
-  readable minimum width rather than nesting fixed three-column grids.
-- High-level model: why the research system exists and how it supports both
-  physics and AI research-agent development.
-- Operational model: Director -> AgentJob -> role execution -> validation ->
-  completion -> handoff.
-- Low-level evidence model: task directories, DDRs, AgentJob YAML, execution
-  role records, completions, handoffs, and registries.
-- Concrete trace: show the file/path lifecycle from `program_state.yaml` and a
-  latest handoff through task YAML, job YAML, role YAML, artifacts,
-  completion, next handoff, and registry updates.
-- Workflow step inspector for each operational step.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+The repository mixes speculative physics, exact benchmark discipline, generated documents, AI-agent workflow, and local memory. Without a lifecycle, a completed task could be mistaken for accepted science, or local scratch could override tracked state.
 
-## Required Diagrams
+## How It Works
+
+The concrete lifecycle is:
+
+`research_control/program_state.yaml` -> latest `handoff-*` -> Director decision -> `00_TASK.yaml` -> `jobs/AJ-*.yaml` -> `roles/*.yaml` -> allowed artifacts -> validators -> completion YAML -> next handoff -> registries.
+
+`continue-research` handles physics continuation from tracked state. `improve-project-system` handles roles, validators, memory tooling, documentation, generated-doc pipelines, and operational reliability. In both lanes, one bounded AgentJob is the unit of accountable work.
+
+## What It Is Not
+
+It is not proof acceptance, not permission to edit outside an allowlist, not a bypass around human gates, and not a reason to treat generated outputs as authority.
+
+## Diagram Reading Guide
+
+The loop diagram shows how state, decisions, jobs, validation, completion, handoff, and registries reinforce each other. The lifecycle state diagram shows that a blocked job is still a valid research-control outcome when it preserves the obstruction.
 
 <!-- mermaid-diagram-id: research-system-loop -->
 ```mermaid
@@ -78,39 +61,47 @@ stateDiagram-v2
   HandoffReady --> [*]
 ```
 
-## Source-Backed Summary
+## Source Authority
 
-Summary heading: `Summary of Research System`
+The workflow is grounded in `research_control/AGENTS.md`, `research_control/README.md`, the continue/improve skills, and the AgentJob, Director decision, role execution, and research task registries.
 
-Summary text:
+## External AI Navigation Card
 
-The research system is the governed workflow that turns a question,
-continuation state, or project-improvement signal into bounded agent work with
-explicit roles, decisions, registries, and validation. Its functionality is to
-separate physics continuation from project-system maintenance, resolve tracked
-state before acting, assign one bounded AgentJob, constrain that job with role
-authority and allowlists, and preserve completion evidence for the next
-handoff. This matters because the repository is not an informal chat log or
-autonomous proof engine; it is a controlled research program where claims,
-refutations, repairs, generated derivatives, and negative results must remain
-auditable. The workflow fits the larger project by making research progress
-reproducible without allowing workflow completion to stand in for scientific
-acceptance.
+You are reading a non-authoritative GitHub-facing explainer.
 
-Summary source basis:
+Safe uses:
+- summarize this feature for orientation
+- identify source files to inspect next
+- explain workflow boundaries
 
+Before modifying project knowledge:
+- read `AGENTS.md`
+- inspect the relevant registry rows
+- inspect the relevant source spec or canonical source file
+- route through the correct research-control workflow
+
+Do not:
+- do not treat this page as physics authority
+- do not claim the Æther-flow derivation is complete
+- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
+- do not bypass claim gates, validators, or AgentJob boundaries
+
+## Where To Go Next
+
+- Inspect `research_control/program_state.yaml` and the latest handoff before continuing research.
+- Inspect the owning AgentJob before writing files.
+- Read role routing when authority class is unclear.
+- Read claim gates before strengthening scientific language.
+
+## All Source Materials
+
+- `README.md`
+- `AGENTS.md`
 - `research_control/AGENTS.md`
 - `research_control/README.md`
 - `.codex/skills/continue-research/SKILL.md`
+- `.codex/skills/improve-project-system/SKILL.md`
 - `registries/AGENT_JOB_REGISTRY.csv`
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
-
-## Required Content Blocks
-
-- subject_summary: Summarize the research-agent workflow, its lifecycle function, why bounded execution matters, and which declared control sources ground the summary.
-- state_entry: A completed lifecycle entry section covering tracked program state, latest handoffs, task files, and why local scratch context cannot override tracked control state.
-- director_decision: A source-backed account of how a Director decision selects one role, one bounded objective, claim boundaries, allowed paths, validators, and stop conditions before execution begins.
-- agentjob_lifecycle: A detailed explanation of `00_TASK.yaml`, `jobs/AJ-*.yaml`, task-local role overlays, allowed writes, expected outputs, and why one bounded AgentJob is the unit of accountable work.
-- role_execution: A documentation section explaining registered roles, task overlays, provisional roles, role authority, removed or expanded permissions, expiry, and validator evidence.
-- validation_completion_handoff: A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance.
-- registry_update: A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory.
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
+- `registries/RESEARCH_TASK_REGISTRY.csv`

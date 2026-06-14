@@ -1,72 +1,85 @@
-# Technical Requirements Spec
+# Technical Requirements
 
-## Rendering Intent
+This page turns setup into workflow tiers so readers know which tools are required for inspection, validation, regeneration, local retrieval, diagram rendering, and PDF refresh.
 
-Create a tracked HTML drilldown that explains requirements by workflow tier,
-not as one undifferentiated dependency list.
+## Source Binding
 
-Use two labels:
+- **Derived from spec:** `markdown/html-explainer-specs/technical-requirements-explainer.md`
+- **Related HTML:** `html/technical-requirements-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-- Project requirement: required by tracked scripts/contracts in this repo.
-- Operator environment aid: useful in this machine or session, but not
-  required project authority.
+## What This Feature Does
 
-Examples:
+The requirements page separates project requirements from operator environment aids. It tells readers what is needed for read-only inspection, Python validators, memory/wiki regeneration, Mermaid-backed HTML, optional local retrieval, and conditional PDF builds.
 
-- Python `.venv` plus `requirements.txt`: project requirement for validators
-  and memory scripts.
-- Node.js, npm, Mermaid package, and Playwright Chromium: project requirement
-  when regenerating Mermaid-backed tracked HTML.
-- Obsidian app: optional operator environment aid for reading the generated
-  local vault.
-- Codex global skills or plugins: operator environment aid unless mirrored into
-  `.codex/skills/`.
+## Why The Project Needs It
 
-## Required Visual Structure
+Not every reader needs every tool. Missing Obsidian should not invalidate the project, while missing Python dependencies can block validators. Tiering prevents optional conveniences from being mistaken for repository requirements.
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Tiered requirements matrix with commands and labels.
-- Setup command callouts for Python and diagram rendering.
-- Optional-local-reader panel for Obsidian and `.local/` retrieval surfaces.
-- PDF-refresh panel that scopes LaTeX only to TeX derivative work.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+## How It Works
 
-## Source-Backed Summary
+Requirement tiers:
 
-Summary heading: `Summary of Technical Requirements`
+| Tier | Needed for | Tools | Failure meaning |
+| --- | --- | --- | --- |
+| 1. Read-only inspection | reading sources | Git, editor, browser or Markdown viewer | does not affect project validity |
+| 2. Validators and memory scripts | deterministic checks | Python `.venv`, `requirements.txt` | blocks validation if unavailable |
+| 3. Memory/wiki regeneration | source-to-registry refresh | project-memory-system scripts | generated surfaces may be stale |
+| 4. Mermaid-backed HTML | inline-SVG tracked explainers | Node.js, npm, pinned Mermaid, Playwright Chromium | HTML diagram refresh may be blocked |
+| 5. Local retrieval | optional reader/search aids | Obsidian, SQLite, `.local/` extracts | operator aid unavailable, not source invalid |
+| 6. PDF refresh | TeX derivatives | LaTeX/PDF build tooling | only blocks in-scope PDF derivative work |
 
-Summary text:
+## What It Is Not
 
-The technical requirements explainer describes the local runtime, package,
-validation, rendering, retrieval, and derivative-build requirements needed to
-inspect or regenerate project surfaces safely. Its function is to separate
-read-only inspection, Python validator execution, memory and wiki
-regeneration, governed Mermaid inline-SVG rendering, local Obsidian or
-semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters
-because not every reader needs every tool, and optional operator aids such as
-Obsidian or global Codex plugins should not be mistaken for project authority.
-The explainer fits the project by turning setup files and skill contracts into
-a practical dependency map for maintainers who need repeatable validation
-without changing dependency policy or scientific claims.
+It is not a new dependency policy, not a guarantee every optional local aid exists, not permission to treat global plugins as project authority, and not a physics or control claim.
 
-Summary source basis:
+## Diagram Reading Guide
+
+The current source spec does not declare a Mermaid diagram. Read the tier matrix as the controlling visual model: each tier states tools, commands, need, failure meaning, and authority status.
+
+No Mermaid diagram is declared in the current registered source spec for this page.
+
+## Source Authority
+
+The requirements are grounded in `README.md`, `requirements.txt`, `Makefile`, project-memory-system, Obsidian, PDF derivative, HTML visual explainer, and Mermaid documentation scripts.
+
+## External AI Navigation Card
+
+You are reading a non-authoritative GitHub-facing explainer.
+
+Safe uses:
+- summarize this feature for orientation
+- identify source files to inspect next
+- explain workflow boundaries
+
+Before modifying project knowledge:
+- read `AGENTS.md`
+- inspect the relevant registry rows
+- inspect the relevant source spec or canonical source file
+- route through the correct research-control workflow
+
+Do not:
+- do not treat this page as physics authority
+- do not claim the Æther-flow derivation is complete
+- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
+- do not bypass claim gates, validators, or AgentJob boundaries
+
+## Where To Go Next
+
+- For reading, start with Markdown and registries.
+- For validation, use the Python `.venv` and README commands.
+- For HTML diagram refresh, inspect Mermaid package files and rendering scripts.
+- For PDFs, refresh only when TeX derivative work is in scope.
+
+## All Source Materials
 
 - `README.md`
 - `requirements.txt`
 - `Makefile`
 - `.codex/skills/project-memory-system/SKILL.md`
+- `.codex/skills/obsidian-wiki/SKILL.md`
+- `.codex/skills/pdf-derivative-build/SKILL.md`
+- `.codex/skills/html-visual-explainer/SKILL.md`
+- `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
 - `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json`
-
-## Required Content Blocks
-
-- subject_summary: Summarize the technical requirements explainer, its tiered setup and validation function, why readers need that distinction, and which declared sources ground the summary.
-- read_inspect_tier: A practical read-only tier covering browser, text editor, Git, and shell inspection as the minimum operator environment for understanding sources without regenerating artifacts.
-- validators_memory_scripts_tier: A project requirement tier for Python `.venv`, `requirements.txt`, bootstrap validation, project-control scripts, research-control validators, tests, and deterministic checks.
-- memory_regeneration_tier: A completed memory-refresh tier for project-memory-system scripts, `make validate-memory`, generated registries, wiki notes, content semantics, and local query smoke checks.
-- diagram_rendering_tier: A source-backed diagram tier covering Node.js, npm, pinned Mermaid package, Playwright Chromium, build-time inline SVG rendering, diagram source parity, and the no-runtime-Mermaid boundary.
-- local_retrieval_tier: An operator-aid tier for optional Obsidian, SQLite, local semantic extracts, browser previews, and `.local/` scratch surfaces, with clear non-authority status.
-- pdf_refresh_tier: A conditional PDF tier explaining LaTeX/PDF build requirements only when TeX derivative refresh is in scope, and why PDFs remain human-reading derivatives.
-- project_vs_operator_aid: A matrix separating project requirements from operator conveniences so missing optional local tools do not get mistaken for repository validity failures.
+- `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package-lock.json`
