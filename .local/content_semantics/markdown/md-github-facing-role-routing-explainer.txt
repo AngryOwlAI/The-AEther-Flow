@@ -8,6 +8,10 @@ This page explains how the project decides which role may execute a bounded task
 - **Related HTML:** `html/role-routing-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+Role routing is the project's decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its functionality is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. This matters because the repository contains physics roles, documentation roles, validator roles, memory roles, and project-control roles with different authority levels; collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes. Role routing fits the overall project by making authority selection itself auditable before implementation begins.
+
 ## What This Feature Does
 
 Role routing maps a request to an authority class, compares candidate roles, records a Director decision, and binds execution to a registered role, task overlay, or one-job provisional role.

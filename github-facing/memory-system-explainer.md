@@ -8,6 +8,10 @@ This page explains the repository memory model: one source-first system with sev
 - **Related HTML:** `html/memory-system-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The memory system is the repository's source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system fits the project by connecting source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving clear provenance.
+
 ## What This Feature Does
 
 The memory system turns registered sources and registries into generated wiki notes, indexes, content semantics, file-object rows, Obsidian vault entries, SQLite query data, and local search surfaces.

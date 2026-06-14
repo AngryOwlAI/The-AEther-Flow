@@ -8,6 +8,10 @@ This page turns setup into workflow tiers so readers know which tools are requir
 - **Related HTML:** `html/technical-requirements-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The explainer fits the project by turning setup files and skill contracts into a practical dependency map for maintainers who need repeatable validation without changing dependency policy or scientific claims.
+
 ## What This Feature Does
 
 The requirements page separates project requirements from operator environment aids. It tells readers what is needed for read-only inspection, Python validators, memory/wiki regeneration, Mermaid-backed HTML, optional local retrieval, and conditional PDF builds.

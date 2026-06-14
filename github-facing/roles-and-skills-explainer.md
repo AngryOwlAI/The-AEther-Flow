@@ -8,6 +8,10 @@ This page catalogs current roles, historical role states, repo-local skills, and
 - **Related HTML:** `html/roles-and-skills-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator can maintain explanatory specs and source-backed HTML, Project-Control Maintainer owns control contracts, Validator Engineer owns deterministic checks, and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
+
 ## What This Feature Does
 
 The catalog is active-first: active registered roles are the current operating surface, status-defined roles remain paused or human-gated, and superseded roles remain audit history. Repo-local skills are governed procedures under `.codex/skills/`.

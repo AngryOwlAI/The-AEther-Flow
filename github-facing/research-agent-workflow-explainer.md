@@ -8,6 +8,10 @@ This page explains the operational spine that turns a question, handoff, or proj
 - **Related HTML:** `html/research-agent-workflow-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The research system is the governed workflow that turns a question, continuation state, or project-improvement signal into bounded agent work with explicit roles, decisions, registries, and validation. Its functionality is to separate physics continuation from project-system maintenance, resolve tracked state before acting, assign one bounded AgentJob, constrain that job with role authority and allowlists, and preserve completion evidence for the next handoff. This matters because the repository is not an informal chat log or autonomous proof engine; it is a controlled research program where claims, refutations, repairs, generated derivatives, and negative results must remain auditable. The workflow fits the larger project by making research progress reproducible without allowing workflow completion to stand in for scientific acceptance.
+
 ## What This Feature Does
 
 The research system coordinates tracked state, Director decisions, role contracts, AgentJobs, validators, completions, handoffs, and registries. It is a reproducibility harness for theoretical work, not an autonomous proof engine.

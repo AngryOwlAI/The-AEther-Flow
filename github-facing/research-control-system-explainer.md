@@ -8,6 +8,10 @@ This page explains how the project changes itself safely: classification, bounde
 - **Related HTML:** `html/research-control-system-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, and generated derivatives remain aligned. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
+
 ## What This Feature Does
 
 The research-control system is the governance layer for project-system and research-continuation changes. It keeps documentation changes, validator changes, role contract changes, generated derivative refreshes, project-improvement signals, and checkpoint boundaries auditable.

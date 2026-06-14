@@ -8,6 +8,10 @@ This page is the GitHub-readable atlas for the Æther-Flow project. It maps the 
 - **Related HTML:** `html/project-overview-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The project overview is the atlas for the Æther-Flow repository's human-readable explainer set. Its function is to give readers a controlled entry point into the two linked missions: preserving an exact-GR benchmark for the physics program and maintaining a governed research-agent system for theoretical work. Rather than acting as a source of new claims, the overview routes readers to the ontology, research workflow, control system, role-routing, claim-gate, source-authority, role-and-skill, memory-system, and technical-requirements drilldowns. It matters because the project contains persuasive generated pages, registries, role contracts, and research-control records that can look equally authoritative to a newcomer. The atlas clarifies where explanation ends and source authority begins, so readers can inspect the right Markdown specs, registries, README guidance, or control documents before relying on a statement.
+
 ## What This Feature Does
 
 The overview explains the repository as two linked programs: a physics program that preserves ordinary exact general relativity as the observable benchmark while the first-principles Æther-flow derivation remains open, and an AI research-agent program that makes theoretical work bounded, inspectable, and validator-backed.

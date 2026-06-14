@@ -8,6 +8,10 @@ This page is the law-of-the-land guide for deciding which files define project t
 - **Related HTML:** `html/source-authority-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and `.local` caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not make them independent authority. The authority model fits the project by preserving scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repo that intentionally generates many human-facing derivatives.
+
 ## What This Feature Does
 
 Source authority ranks registered TeX, registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local retrieval surfaces, and scratch caches by what each file type may support.

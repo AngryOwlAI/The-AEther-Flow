@@ -8,6 +8,10 @@ This page explains how the project prevents ontology framing, exact-GR benchmark
 - **Related HTML:** `html/claim-gates-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+Claim gates are the project's control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into a stronger accepted status. Their role is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because the explainer pages and workflow artifacts can make candidate ideas look more settled than they are; a visual explanation, completed task, or preserved repair packet cannot by itself authorize science claims or weaken unresolved derivation burdens. Within the project, claim gates protect both positive progress and negative results by preserving why a route is accepted, blocked, refuted, or still conjectural.
+
 ## What This Feature Does
 
 Claim gates define the status ladder from ontology framing through benchmark adoption, candidate derivation, audit, repair, refutation, blocked promotion, negative result, and accepted claim.

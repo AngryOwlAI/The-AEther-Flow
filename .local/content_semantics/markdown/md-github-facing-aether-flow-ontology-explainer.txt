@@ -8,6 +8,10 @@ This page explains the project-specific ontology: `Æther`, `Æther-flow`, obser
 - **Related HTML:** `html/aether-flow-ontology-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
+## Source-Backed Summary
+
+The Æther-flow ontology is the project's conceptual vocabulary for a proposed deeper four-dimensional substrate, its intrinsic ordered motion, and the observer-accessible appearance of space, time-order, expansion, and gravity. Its role is not to replace general relativity or claim a completed derivation; it frames exact GR as the observable benchmark that any future substrate law must recover. The ontology matters because it keeps the research program's intuitive picture disciplined: observed three-dimensional space is treated as a local experiential slice, S-time as the experienced order of change, and gravity as a heuristic matter-shaped reorganization of the deeper flow. At the project level, the explainer helps readers separate ontology, mathematical model, benchmark adoption, and open derivation burden before reading diagrams or candidate arguments.
+
 ## What This Feature Does
 
 The ontology page is the conceptual flagship. It gives a glossary, an adoption-versus-derivation bridge, an anti-smuggling checklist, and a derivation-burden map for readers who need the vocabulary before reading science drafts or registries.
