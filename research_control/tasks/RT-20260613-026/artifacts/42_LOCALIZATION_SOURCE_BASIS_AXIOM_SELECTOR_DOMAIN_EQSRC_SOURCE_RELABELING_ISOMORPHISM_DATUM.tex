@@ -1,0 +1,326 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\Obj}{\mathsf{Obj}_{0}^{\mathrm{iso}}}
+\newcommand{\Inv}{\mathsf{Inv}_{0}^{\mathrm{iso}}}
+\newcommand{\Cmp}{\mathsf{Cmp}_{0}^{\mathrm{iso}}}
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqIso}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{iso}}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\NoTargetH}{\mathsf{NoTarget}_{H}}
+\newcommand{\NoTargetSyn}{\mathsf{NoTarget}_{H}^{\mathrm{syn}}}
+\newcommand{\SrcTok}{\mathsf{Tok}_{0}}
+\newcommand{\ForbidT}{\mathsf{Forbid}_{T}}
+\newcommand{\ProxyT}{\mathsf{Proxy}_{T}}
+\newcommand{\TraceH}{\mathsf{Trace}_{H}}
+\newcommand{\Annot}{\mathsf{Ann}}
+\newcommand{\Influence}{\mathsf{Infl}}
+\newcommand{\FreezeH}{\mathsf{Freeze}_{H}}
+\newcommand{\JudgeSyn}{\mathsf{J}_{\mathrm{syn}}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Iso}{\mathsf{Iso}_{0}}
+
+\newtheorem{definitionblock}{Definition}
+\newtheorem{datum}{Datum}
+\newtheorem{ruleblock}{Rule}
+\newtheorem{finding}{Finding}
+\newtheorem{verdict}{Local verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain EqSrc Source-Relabeling Isomorphism Datum}\\[0.35em]
+\large Bounded Ontology Formalizer Evidence-Supply Packet for the Manifest-Bound \(\NoTargetSyn\) Trace}
+\author{Ontology Formalizer AgentJob AJ-RT-20260613-026-001}
+\date{June 14, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact supplies one bounded source-only
+\(\EqSrc\)-datum at the weakest available level: source-relabeling
+isomorphism for the manifest-bound \(\NoTargetSyn\) trace and its
+structure-preserving relabeling. The datum provides a local object domain,
+witness pair, invariant ledger, comparison rule, annotation obligations,
+influence-edge coverage, and negative controls. It supports only a local
+\(\EqIso\) judgment for the original frozen trace/manifest and a
+source-neutral relabeled copy. It does not discharge general \(\EqSrc\),
+\(\RetainH\), or \(\GenH\); it does not prove semantic \(\NoTargetH\);
+and it does not authorize candidate reconstruction, canonical ontology
+edit, benchmark promotion, Gate Chair review, or completed-derivation
+language.
+\end{abstract}
+
+\section{Scope}
+
+This artifact is the role output for task \texttt{RT-20260613-026}. It
+answers the narrow evidence-supply question left by
+\texttt{handoff-0042}: can any source-only \(\EqSrc\) datum be registered
+without target-channel or proxy selection?
+
+The answer is positive only in a local and syntactic sense. The available
+tracked evidence supports a source-relabeling isomorphism datum over the
+registered \(\NoTargetSyn\) trace and manifest. It does not support a
+general equivalence relation over generated ledgers, candidate families, or
+empirical behaviors.
+
+\section{Source Objects}
+
+\begin{definitionblock}[Registered base object]
+Let
+\[
+    X_{0}=(\TraceH,\FreezeH^{\mathrm{reg}}_{\mathrm{RT21}})
+\]
+where
+\[
+    \FreezeH^{\mathrm{reg}}_{\mathrm{RT21}} =
+    (\SrcTok^{\mathrm{RT21}},\ForbidT^{\mathrm{RT21}},
+    \ProxyT^{\mathrm{RT21}},\Annot^{\mathrm{RT21}},
+    \Influence^{\mathrm{RT21}}).
+\]
+The object \(X_{0}\) is the manifest-bound source-syntax object used in
+the \(\NoTargetSyn\) theorem retry and stress test.
+\end{definitionblock}
+
+\begin{definitionblock}[Source-neutral relabeling object]
+Let \(v_{\mathrm{iso}}\) be a bijective relabeling of ST, PT, AN, and IE
+identifiers that preserves token class, annotation content, forbidden
+channel status, proxy class, and influence-edge incidence. Define
+\[
+    X_{1}=v_{\mathrm{iso}}(X_{0}).
+\]
+The object \(X_{1}\) is not a new physical candidate and not a canonical
+ontology object. It is a source-syntax relabeling witness.
+\end{definitionblock}
+
+\begin{datum}[Local object domain]
+The object domain for this datum is
+\[
+    \Obj=\{X_{0},X_{1},X_{\mathrm{ann}},X_{\mathrm{proxy}}\},
+\]
+where \(X_{\mathrm{ann}}\) is an annotation-weakening variant and
+\(X_{\mathrm{proxy}}\) is an unmapped-proxy variant. The last two objects
+are negative controls. They are included only to test that the comparison
+rule can return \(\Block\) for source-side reasons.
+\end{datum}
+
+\section{Witness Pair}
+
+\begin{datum}[Positive witness pair]
+The positive witness pair is
+\[
+    (X_{0},X_{1})\in \Obj\times\Obj.
+\]
+Its intended local judgment is
+\[
+    \EqIso(X_{0},X_{1}).
+\]
+The pair is selected because `RT-20260613-024` records that the
+\(\NoTargetSyn\) source-syntax pass survives structure-preserving
+source-token relabeling. The selection criterion is manifest structure,
+not target metric behavior, target proper time, target locality, target
+observer protocol, target-favorable rank, benchmark-success evidence, or
+candidate performance.
+\end{datum}
+
+\begin{datum}[Negative controls]
+The negative-control pairs are
+\[
+    (X_{0},X_{\mathrm{ann}}),\qquad
+    (X_{0},X_{\mathrm{proxy}}).
+\]
+The first removes required path, hash, rule-scope, dependency, exclusion,
+proxy, influence, or manifest-use annotation content. The second introduces
+or uses an unmapped proxy class. The intended result for both pairs is
+\(\Block\), not \(\EqIso\).
+\end{datum}
+
+\section{Invariant Ledger}
+
+\begin{datum}[Source-only invariants]
+The comparison rule may use only the following source-side invariants:
+\begin{enumerate}
+    \item \textbf{Token-class incidence}: ST, PT, AN, and IE identifiers
+    must map bijectively to identifiers of the same class.
+    \item \textbf{Forbidden-channel orientation}: FT-001--FT-010 must
+    remain blocker channels rather than admitted source primitives.
+    \item \textbf{Proxy-class coverage}: PT-001--PT-010 must remain mapped
+    as suspect proxy classes, including PT-002 for source-equivalence
+    proxy risk and PT-007 for notation-similarity risk.
+    \item \textbf{Annotation content}: AN-001--AN-010 must preserve source
+    path, object identifier, hash, timing, rule scope, dependency,
+    exclusion, proxy classification, influence-edge content, and manifest
+    use limits.
+    \item \textbf{Influence-edge incidence}: IE-001--IE-014 must preserve
+    source and destination token classes and blocker state.
+    \item \textbf{No closed-world inference}: omitted tokens, proxies, or
+    influence edges may not be treated as absent by default.
+    \item \textbf{Local judgment shape}: the source-syntax adjudicator
+    shape must remain a manifest-bound syntactic \(\Pass\) or \(\Block\)
+    rule, not semantic target comparison.
+\end{enumerate}
+\end{datum}
+
+These invariants are source-side because they inspect only registered
+token class, manifest membership, annotation content, source hashes, edge
+incidence, blocker state, and rule scope. They do not inspect target
+outcomes or candidate performance.
+
+\section{Comparison Rule}
+
+\begin{ruleblock}[Local relabeling comparison]
+For \(X,Y\in\Obj\), define \(\Cmp(X,Y;\Inv)\) as follows:
+\begin{enumerate}
+    \item Return \(\EqIso(X,Y)\) if there exists a bijection \(\rho\) on
+    the ST, PT, AN, and IE identifiers such that every invariant in
+    \(\Inv\) is preserved under \(\rho\).
+    \item Return \(\Block\) if either object uses an unlisted token,
+    admits a forbidden target channel as a source primitive, uses an
+    unmapped proxy, weakens a required annotation, changes influence-edge
+    incidence, infers edge absence from silence, or requires semantic
+    target comparison.
+    \item Return \(\neg\EqIso(X,Y)\) only when both objects are well-formed
+    source objects under the manifest universe but no invariant-preserving
+    bijection exists.
+\end{enumerate}
+\end{ruleblock}
+
+\begin{finding}[Mechanically checkable status]
+The positive case is mechanically checkable from the registered
+\(\NoTargetSyn\) freeze manifest and stress-test statement because it asks
+only whether source token classes, annotations, forbidden-channel
+orientation, proxy coverage, and influence incidence are preserved by a
+renaming. The negative controls are also mechanically checkable: missing
+annotation content and unmapped proxy use force \(\Block\).
+\end{finding}
+
+\section{Annotation and Influence Receipts}
+
+\begin{datum}[Annotation receipts]
+The local datum inherits the following required annotation surfaces:
+\[
+\begin{array}{ll}
+AN\text{-}001 & \text{source path object id hash and admission rule},\\
+AN\text{-}002 & \text{comparison rule and proof that no target proxy selects the comparison},\\
+AN\text{-}008 & \text{proxy classification affected decision class and blocker state},\\
+AN\text{-}009 & \text{source and destination token declared rule and blocker state},\\
+AN\text{-}010 & \text{manifest-use limit preserving theorem-discharge blocks}.
+\end{array}
+\]
+For this datum, AN-002 is discharged only locally: the comparison rule is
+selected by source-relabeling structure and returns \(\Block\) for proxy or
+annotation weakening.
+\end{datum}
+
+\begin{datum}[Influence receipts]
+The local comparison explicitly uses IE-006 for PT-002 to ST-002,
+IE-011 for PT-007 to ST-002 and ST-005, IE-012 for validation-passage
+proxy surfaces, IE-013 for human-authorization proxy surfaces, and IE-014
+for generated-derivative visibility proxy surfaces. These are guard edges,
+not positive equivalence evidence.
+\end{datum}
+
+\section{Local Result}
+
+\begin{verdict}[Local EqSrc datum supplied]
+The packet supplies the local source-only datum
+\[
+    \mathcal{E}_{0}^{\mathrm{iso}} =
+    (\Obj,\Inv,\Cmp,\Annot,\Influence)
+\]
+for the witness pair \((X_{0},X_{1})\). Within this bounded datum,
+\[
+    \Cmp(X_{0},X_{1};\Inv)=\EqIso(X_{0},X_{1}).
+\]
+\end{verdict}
+
+\begin{verdict}[Negative controls block]
+For the annotation-weakening and unmapped-proxy variants,
+\[
+    \Cmp(X_{0},X_{\mathrm{ann}};\Inv)=\Block,\qquad
+    \Cmp(X_{0},X_{\mathrm{proxy}};\Inv)=\Block.
+\]
+The block reason is source-side: required annotation content or mapped
+proxy coverage is absent.
+\end{verdict}
+
+\begin{verdict}[No general EqSrc discharge follows]
+This result does not prove that \(\EqSrc\) is a global equivalence relation
+over generated ledgers or candidate families. It does not establish
+reflexivity, symmetry, transitivity, quotient preservation, adverse-output
+retention, complete negative-control retention, or generator adequacy
+outside the local source-relabeling pair.
+\end{verdict}
+
+\section{Boundary Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.43\linewidth}p{0.18\linewidth}}
+\textbf{Surface} & \textbf{Result} & \textbf{Status} \\
+\hline
+\(\Obj\) & local domain with one positive relabeling pair and two negative controls & supplied \\
+\(\Inv\) & source-only token class annotation proxy and influence invariants & supplied \\
+\(\Cmp\) & mechanical relabeling-isomorphism rule with Block conditions & supplied \\
+AN-002 & comparison rule and proxy-exclusion proof only for local pair & local only \\
+IE-006 & PT-002 to ST-002 guard edge & guard only \\
+\(\EqIso(X_{0},X_{1})\) & local source-relabeling judgment & draft/control evidence \\
+General \(\EqSrc\) & equivalence relation over full source object families & not discharged \\
+\(\RetainH,\GenH\) & not attempted & blocked \\
+Candidate reconstruction & not authorized & blocked \\
+Gate Chair review & not authorized and human-gated & blocked \\
+\end{tabular}
+\end{center}
+
+\section{Next Burden}
+
+\begin{nextburden}[Audit before broader equivalence use]
+The logical next role is Smuggling Auditor. The audit should test whether
+this local \(\EqIso\) datum launders target success through notation,
+manifest choice, proxy selection, annotation preservation, influence-edge
+selection, or authority labels. Until that audit passes, and until a later
+bounded task proves broader equivalence-relation properties and retention
+coverage, \(\EqSrc\), \(\RetainH\), \(\GenH\), candidate reconstruction,
+canonical ontology edit, benchmark promotion, Gate Chair review, and
+completed-derivation language remain blocked.
+\end{nextburden}
+
+\section*{References}
+
+Ricciardi, A. S. (2026, June 14). \emph{Localization source-basis axiom
+selector-domain EqSrc source-equivalence obligation packet or controlled
+pause: Ontology Formalizer review after the stress-tested
+\(\NoTargetSyn\) source-syntax guard} [Unpublished manuscript]. The
+Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260613-025/artifacts/41\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_SOURCE\_EQUIVALENCE\_OBLIGATION\_PACKET\_OR\_CONTROLLED\_PAUSE.tex}.
+
+Ricciardi, A. S. (2026, June 14). \emph{Localization source-basis axiom
+selector-domain NoTarget source-syntax benchmark-independence and
+proxy-variation stress test: Refuter review of the manifest-bound
+\(\NoTargetSyn\) source-syntax pass} [Unpublished manuscript]. The
+Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260613-024/artifacts/40\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_NO\_TARGET\_SOURCE\_SYNTAX\_BENCHMARK\_INDEPENDENCE\_PROXY\_VARIATION\_STRESS\_TEST.tex}.
+
+Ricciardi, A. S. (2026, June 13). \emph{Localization source-basis axiom
+selector-domain NoTarget source-syntax theorem retry: Manifest-bound
+\(\NoTargetSyn\) adjudication after source-registered freeze audit}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260613-023/artifacts/39\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_NO\_TARGET\_SOURCE\_SYNTAX\_THEOREM\_RETRY.tex}.
+
+\end{document}
