@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-EQSRC-NON-ORBIT-REFINEMENT-FAMILY-DATUM-REFUTER-STRESS-TEST
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-EQSRC-NON-ORBIT-REFINEMENT-FAMILY-DATUM-REFUTER-STRESS-TEST`
+- Source path: `research_control/tasks/RT-20260614-010/artifacts/51_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_NON_ORBIT_REFINEMENT_FAMILY_DATUM_REFUTER_STRESS_TEST.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `12c1244ee0f9bfdb66bf54bb169fbd882fed3368001cafb9369fe8146998188e`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-EQSRC-NON-ORBIT-REFINEMENT-FAMILY-DATUM-SMUGGLING-AUDIT;TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-EQSRC-NON-ORBIT-REFINEMENT-FAMILY-DATUM;TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-EQSRC-NON-ORBIT-SOURCE-OBJECT-FAMILY-OBLIGATION-PACKET-OR-CONTROLLED-PAUSE` ``
+- Generated output path: `wiki/tex/tex-research-control-localization-source-basis-axiom-selector-domain-eqsrc-non-orbit-refinement-family-datum-refuter-stress-test.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-15T00:45:15Z`
