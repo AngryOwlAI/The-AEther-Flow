@@ -1,0 +1,298 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqTri}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{tri}}}
+\newcommand{\EqLC}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{lc}}}
+\newcommand{\ObjTri}{\mathsf{Obj}_{\mathrm{tri}}}
+\newcommand{\ObjLC}{\mathsf{Obj}_{\mathrm{lc}}}
+\newcommand{\GenLC}{\mathsf{Gen}_{\mathrm{lc}}}
+\newcommand{\CertLC}{\mathsf{Cert}_{\mathrm{lc}}}
+\newcommand{\Ann}{\mathsf{Ann}}
+\newcommand{\Proxy}{\mathsf{Proxy}_{T}}
+\newcommand{\Forbid}{\mathsf{Forbid}_{T}}
+\newcommand{\Blocker}{\mathsf{Blocker}}
+\newcommand{\Infl}{\mathsf{Infl}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Audit}{\mathsf{Audit}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{construction}{Construction}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{controlrule}{Control rule}
+\newtheorem{obligation}{Obligation}
+\newtheorem{verdict}{Verdict}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain EqSrc Ledger-Complete Source-Family Generator Packet}\\[0.35em]
+\large Draft Generator Domain and Certificate Relation for Future Audit}
+\author{Ontology Formalizer AgentJob AJ-RT-20260614-020-001}
+\date{June 15, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact supplies a bounded source-only generator
+candidate responsive to \texttt{handoff-0061}. It defines a
+ledger-complete finite source-object domain \(\ObjLC\), a generator
+\(\GenLC\), and a certificate relation \(\EqLC\) whose reflexivity,
+symmetry, and transitivity are immediate from source-ledger certificates.
+The construction embeds the retained local tri-family result only as a
+subcase. It does not discharge general \(\EqSrc\), does not supply a
+downstream bridge to \(\RetainH\) or \(\GenH\), does not authorize
+candidate reconstruction, and does not supply promotion evidence. The
+new packet is audit-eligible draft/control evidence only.
+\end{abstract}
+
+\section{Scope and Inspected Authority}
+
+This artifact is the role output for task \texttt{RT-20260614-020}. It
+responds only to the first missing surface recorded by the controlled
+pause in \texttt{RT-20260614-019}: the absence of a source-family
+generator and relation-domain proof surface. It reads the audited and
+stress-tested tri-family lineage:
+\begin{itemize}
+    \item \texttt{RT-20260614-016}, the alternative branch-family source
+    packet;
+    \item \texttt{RT-20260614-017}, the Smuggling Auditor review;
+    \item \texttt{RT-20260614-018}, the Refuter stress test; and
+    \item \texttt{RT-20260614-019}, the formal controlled-pause
+    obstruction packet.
+\end{itemize}
+
+The output is a mathematical control packet, not a canonical ontology
+edit. Its function is to create a concrete audit object. The construction
+uses only source-ledger data and explicitly rejects target metric,
+proper-time, locality, observer protocol, benchmark rank, and
+candidate-performance selection.
+
+\section{Ledger-Complete Source Objects}
+
+\begin{definition}[Ledger atom]
+A ledger atom is a tuple
+\[
+    a=(b,\lambda,\alpha,p,f,k,\iota,q)
+\]
+where \(b\) is a finite source branch token, \(\lambda\) is a source
+label, \(\alpha\in\Ann\) is an annotation token, \(p\in\Proxy\) is a
+proxy guard, \(f\in\Forbid\) is a forbidden-channel guard,
+\(k\in\Blocker\) is a blocker record, \(\iota\in\Infl\) is an influence
+record, and \(q\) is quotient-fiber data. None of these coordinates may
+be chosen by target metric success, target proper time, target locality,
+observer protocol, benchmark rank, or candidate performance.
+\end{definition}
+
+\begin{definition}[Ledger-complete finite source object]
+A ledger-complete source object \(X\) is a finite object
+\[
+    X=(B_X,i_X,o_X,A_X,E_X,C_X)
+\]
+where \(B_X\) is a finite set of ledger atoms, \(i_X,o_X\) are fixed
+source boundary anchors, \(A_X\) is the branch-local annotation
+aggregation rule, \(E_X\) is the source influence coverage relation, and
+\(C_X\) is the set of admissible contraction certificates. The object is
+ledger-complete only when every branch token has annotation, proxy guard,
+forbidden-channel guard, blocker, influence, quotient-fiber, and
+boundary-anchor provenance.
+\end{definition}
+
+\begin{controlrule}[No incomplete objects]
+An object with deleted guards, erased blockers, partial influence
+coverage, moved boundary anchors, quotient data selected by downstream
+behavior, or branch labels interpreted as target semantics is not in
+\(\ObjLC\).
+\end{controlrule}
+
+\section{Source-Family Generator}
+
+\begin{construction}[Ledger-complete generator]
+The generator \(\GenLC\) produces the smallest class \(\ObjLC\) closed
+under the following source-side operations:
+\begin{enumerate}
+    \item seed inclusion of every previously registered finite source
+    object whose full ledger is available;
+    \item full source-ledger transport, where a branch-label
+    permutation is allowed only if annotation, guards, blockers,
+    influence, quotient, contraction, and boundary data are transported
+    with it;
+    \item branch refinement, where a branch may split into finitely many
+    source branches only if annotation aggregation is conserved and
+    proxy, forbidden-channel, blocker, influence, quotient, and boundary
+    data pull back along an explicit source certificate;
+    \item quotient refinement, where quotient fibers may be subdivided
+    only by a source certificate that preserves boundary anchors and
+    does not select representatives by downstream behavior; and
+    \item certified contraction transport, where admissible contraction
+    certificates compose and preserve the full source ledger.
+\end{enumerate}
+\end{construction}
+
+\begin{lemma}[Tri-family embedding]
+The retained objects \(T_{1},T_{2},T_{3}\) from the tri-family packet
+embed into \(\ObjLC\) by mapping their branch labels, annotation totals,
+proxy guards, forbidden-channel guards, blocker records, influence
+coverage, quotient descent, contraction certificates, and boundary
+anchors into ledger atoms and generated object data. This embedding
+does not enlarge the prior tri-family verdict; it only makes the local
+receipt an auditable subcase of the new generated domain.
+\end{lemma}
+
+\section{Certificate Relation}
+
+\begin{definition}[Ledger certificate]
+A certificate \(c:X\to Y\) in \(\CertLC\) is a finite sequence of
+source-side generator steps from \(X\) to \(Y\) such that every step
+preserves:
+\[
+    i,o,\quad \Ann,\quad \Proxy,\quad \Forbid,\quad
+    \Blocker,\quad \Infl,\quad q,\quad C.
+\]
+The inverse step must also be a valid source-side generator step. A
+certificate is invalid when it deletes ledger data, changes boundary
+anchors, weakens guards, selects a quotient representative by downstream
+behavior, or imports a target primitive.
+\end{definition}
+
+\begin{definition}[Ledger-complete certificate relation]
+For \(X,Y\in\ObjLC\), define
+\[
+    X \EqLC Y
+    \quad\Longleftrightarrow\quad
+    \text{there exists } c:X\to Y \text{ in } \CertLC .
+\]
+\end{definition}
+
+\begin{proposition}[Relation properties on the declared domain]
+The relation \(\EqLC\) is reflexive, symmetric, and transitive on the
+declared generated domain \(\ObjLC\).
+\end{proposition}
+
+\begin{proof}
+Reflexivity follows from the empty certificate \(1_X:X\to X\). Symmetry
+follows because \(\CertLC\) admits only reversible source-side generator
+steps; reversing a valid certificate gives a valid certificate
+\(c^{-1}:Y\to X\). Transitivity follows by concatenating two valid
+certificates \(c:X\to Y\) and \(d:Y\to Z\), since each step preserves
+the required ledger coordinates and admissible contraction data.
+\end{proof}
+
+\section{Negative Controls}
+
+\begin{controlrule}[Rejected generator moves]
+The following moves are rejected and return \(\Block\):
+\begin{itemize}
+    \item adding a branch without annotation, guard, blocker, influence,
+    quotient, and boundary provenance;
+    \item deleting a guard or blocker to obtain a positive comparison;
+    \item choosing an object, quotient, or representative by benchmark
+    rank or candidate performance;
+    \item treating branch labels as target semantics;
+    \item importing target metric, proper time, locality, or observer
+    protocol as a source coordinate; and
+    \item using validation status, wiki visibility, or authority labels
+    as evidence for a mathematical relation.
+\end{itemize}
+\end{controlrule}
+
+\section{What This Packet Does Not Prove}
+
+\begin{obligation}[Audit and stress sequence]
+The packet has not been audited for target import, authority laundering,
+or benchmark-success leakage. It has not been pressure-tested under
+branch deletion, guard weakening, quotient variation, boundary-anchor
+perturbation, non-chain refinement, or downstream-use pressure. A
+Smuggling Auditor review is required before any Refuter stress test.
+\end{obligation}
+
+\begin{obligation}[No downstream bridge]
+This packet does not prove that \(\EqLC\) preserves the structures
+needed for \(\RetainH\), \(\GenH\), or candidate reconstruction. A
+separate source-side bridge would be required after audit and refutation.
+\end{obligation}
+
+\begin{obligation}[No promotion evidence]
+The relation-property proof above is local to the declared certificate
+relation. It is not canonical \(\EqSrc\), not canonical ontology, not
+benchmark promotion, not a Gate Chair verdict, and not completed
+derivation evidence.
+\end{obligation}
+
+\section{Verdicts}
+
+\begin{verdict}[Draft generator packet supplied]
+The task supplies a bounded draft/control source-family generator
+candidate:
+\[
+    \GenLC \leadsto \ObjLC
+\]
+and a certificate relation \(\EqLC\) with reflexivity, symmetry, and
+transitivity on the declared generated domain.
+\end{verdict}
+
+\begin{verdict}[General claims remain blocked]
+The packet does not discharge general \(\EqSrc\), \(\RetainH\), or
+\(\GenH\). It does not authorize candidate reconstruction, canonical
+ontology edit, benchmark promotion, Gate Chair review, or
+completed-derivation language.
+\end{verdict}
+
+\begin{verdict}[Next role]
+The logical next step is a Smuggling Auditor review of this packet,
+focused on generator design, certificate reversibility, ledger
+completeness, quotient selection, authority labels, and downstream-use
+language.
+\end{verdict}
+
+\section*{APA 7 References}
+
+Ricciardi, A. S. (2026, June 15). \textit{Localization source-basis
+axiom selector-domain EqSrc tri-family obstruction packet or controlled
+pause: Local three-branch retention and missing generator relation
+bridge and promotion evidence} [Unpublished manuscript]. The
+Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-019/artifacts/60\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_TRI\_FAMILY\_OBSTRUCTION\_PACKET\_OR\_CONTROLLED\_PAUSE.tex}.
+
+Ricciardi, A. S. (2026, June 15). \textit{Localization source-basis
+axiom selector-domain EqSrc alternative branch-family guard-stability
+source packet Refuter stress test: Branch-family label guard quotient
+boundary and downstream-use pressure on the audited local EqSrc tri
+packet} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-018/artifacts/59\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_ALTERNATIVE\_BRANCH\_FAMILY\_GUARD\_STABILITY\_SOURCE\_PACKET\_REFUTER\_STRESS\_TEST.tex}.
+
+Ricciardi, A. S. (2026, June 15). \textit{Localization source-basis
+axiom selector-domain EqSrc alternative branch-family guard-stability
+source packet smuggling audit: Branch-family label guard quotient
+boundary authority and downstream-use screens} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research
+Project,
+\texttt{research\_control/tasks/RT-20260614-017/artifacts/58\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_ALTERNATIVE\_BRANCH\_FAMILY\_GUARD\_STABILITY\_SOURCE\_PACKET\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 15). \textit{Localization source-basis
+axiom selector-domain EqSrc alternative branch-family guard-stability
+source packet: Three-branch source domain with label transport guard
+quotient boundary relation and downstream-use receipts} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research
+Project,
+\texttt{research\_control/tasks/RT-20260614-016/artifacts/57\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_ALTERNATIVE\_BRANCH\_FAMILY\_GUARD\_STABILITY\_SOURCE\_PACKET.tex}.
+
+\end{document}
