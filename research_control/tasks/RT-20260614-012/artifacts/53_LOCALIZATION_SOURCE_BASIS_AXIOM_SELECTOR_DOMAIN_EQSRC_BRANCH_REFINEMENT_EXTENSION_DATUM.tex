@@ -1,0 +1,372 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqRef}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{ref}}}
+\newcommand{\EqBr}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{br}}}
+\newcommand{\ObjBr}{\mathsf{Obj}_{\mathrm{br}}}
+\newcommand{\InvBr}{\mathsf{Inv}_{\mathrm{br}}}
+\newcommand{\CmpBr}{\mathsf{Cmp}_{\mathrm{br}}}
+\newcommand{\Ann}{\mathsf{Ann}}
+\newcommand{\Proxy}{\mathsf{Proxy}_{T}}
+\newcommand{\Forbid}{\mathsf{Forbid}_{T}}
+\newcommand{\Infl}{\mathsf{Infl}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\NoTargetH}{\mathsf{NoTarget}_{H}}
+\newcommand{\NoTargetSyn}{\mathsf{NoTarget}_{H}^{\mathrm{syn}}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Pause}{\mathsf{Pause}}
+\newcommand{\Risk}{\mathsf{Risk}}
+
+\newtheorem{definitionblock}{Definition}
+\newtheorem{datum}{Datum}
+\newtheorem{receipt}{Receipt}
+\newtheorem{controlrule}{Control rule}
+\newtheorem{calculation}{Calculation}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain EqSrc Branch-Refinement Extension Datum}\\[0.35em]
+\large Bounded Source-Only Construction After Handoff 0053}
+\author{Ontology Formalizer AgentJob AJ-RT-20260614-012-001}
+\date{June 15, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact supplies one bounded source-only branch-refinement
+extension datum responsive to \texttt{handoff-0053}. The datum declares a
+finite branch-domain family \(B_{1},B_{2},B_{3}\), an invariant ledger
+\(\InvBr\), a branch-preserving contraction rule, local relation-property
+receipts, and a quotient-descent receipt only inside the declared family.
+The result is local \(\EqBr\) draft/control evidence. It does not discharge
+general \(\EqSrc\), \(\RetainH\), or \(\GenH\), does not authorize
+candidate reconstruction, does not edit canonical ontology, does not
+promote benchmark status, does not request Gate Chair review, and does not
+permit completed-derivation language.
+\end{abstract}
+
+\section{Scope}
+
+This artifact is the role output for task \texttt{RT-20260614-012}. It
+does not proceed from the controlled pause to candidate construction. It
+attempts only the local datum that the pause allowed as a future condition:
+a source-only branch or non-chain extension packet with explicit receipts.
+
+The formal question is:
+\[
+    \text{Can a declared finite branch-refinement family support local }
+    \EqBr\text{ without target import?}
+\]
+The answer is yes, locally and conditionally. The packet supplies a
+branch-family datum narrow enough to be audited. It remains unaudited by a
+Smuggling Auditor and untested by a Refuter.
+
+\section{Branch Source Objects}
+
+\begin{definitionblock}[Decorated finite branch source object]
+A decorated finite branch source object is a tuple
+\[
+    B=(C,\preceq,b,\lambda,\Ann,\Proxy,\Forbid,\Infl)
+\]
+where \(C\) is a finite set of source carriers, \(\preceq\) is a finite
+partial order, \(b=(i,o)\) marks source input and output boundary
+carriers with \(i\preceq o\), and \(\lambda:C\setminus\{i,o\}\to
+\{L,R\}\) is a source branch-label map. The decorations
+\(\Ann,\Proxy,\Forbid,\Infl\) are source bookkeeping surfaces. They do
+not encode target metric behavior, target proper time, target locality,
+target observer protocol, benchmark rank, or candidate performance.
+\end{definitionblock}
+
+The annotation monoid is the same source-bookkeeping monoid used in the
+prior refinement datum:
+\[
+    M=\langle
+    m_{\mathrm{path}},m_{\mathrm{hash}},m_{\mathrm{scope}},
+    m_{\mathrm{proxy}},m_{\mathrm{infl}},m_{\mathrm{limit}}
+    \rangle_{\mathbb{N}}.
+\]
+
+\begin{datum}[Base branch object]
+Define \(B_{1}\) by
+\[
+    C_{1}=\{i,\ell,r,o\},\qquad
+    i\prec \ell\prec o,\qquad i\prec r\prec o,
+    \qquad \ell\npreceq r,\quad r\npreceq \ell.
+\]
+Let \(\lambda(\ell)=L\) and \(\lambda(r)=R\). The two internal carriers
+split the total annotation mass \(A\) into \(A_{L}+A_{R}=A\), where both
+summands are nonempty source-bookkeeping sums. Proxy guards,
+forbidden-channel guards, and influence edges are assigned by source
+branch label, with
+\[
+    \Infl_{1}=\{(i,\ell),(\ell,o),(i,r),(r,o)\}.
+\]
+\end{datum}
+
+\begin{datum}[Left-branch refinement]
+Define \(B_{2}\) by subdividing only the left branch:
+\[
+    C_{2}=\{i,\ell_{1},\ell_{2},r,o\},\qquad
+    i\prec \ell_{1}\prec \ell_{2}\prec o,\qquad
+    i\prec r\prec o,
+\]
+with \(r\) incomparable to \(\ell_{1}\) and \(\ell_{2}\) except through
+the common boundary carriers. The branch-label map sends
+\(\ell_{1},\ell_{2}\) to \(L\) and \(r\) to \(R\). The left annotation
+mass splits as \(A_{L}=A_{L,1}+A_{L,2}\), while the right annotation mass
+is unchanged.
+\end{datum}
+
+\begin{datum}[Two-branch refinement]
+Define \(B_{3}\) by subdividing both branches:
+\[
+    C_{3}=\{i,\ell_{1},\ell_{2},r_{1},r_{2},o\},
+\]
+\[
+    i\prec \ell_{1}\prec \ell_{2}\prec o,\qquad
+    i\prec r_{1}\prec r_{2}\prec o,
+\]
+with all left internal carriers incomparable to all right internal
+carriers except through \(i\) and \(o\). The branch-label map sends
+\(\ell_{1},\ell_{2}\) to \(L\) and \(r_{1},r_{2}\) to \(R\). Annotation
+mass splits inside each branch and sums back to \(A_{L}\) and \(A_{R}\).
+\end{datum}
+
+\begin{calculation}[Non-chain and non-orbit checks]
+Each \(B_{k}\) is non-chain because it contains incomparable left and
+right internal carriers. The carrier cardinalities are
+\[
+    |C_{1}|=4,\qquad |C_{2}|=5,\qquad |C_{3}|=6.
+\]
+Therefore the three positive objects are not related by bijective
+relabeling. The family is both branch-shaped and non-orbit under the
+previous orbit criterion.
+\end{calculation}
+
+\section{Invariant and Comparison Ledger}
+
+\begin{definitionblock}[Branch-preserving contraction]
+For \(k\in\{1,2,3\}\), a contraction \(q_{k}:C_{k}\to C_{1}\) is
+admissible only when it:
+\begin{enumerate}
+    \item fixes the boundary carriers \(i,o\);
+    \item sends every left internal carrier to \(\ell\) and every right
+    internal carrier to \(r\);
+    \item is order-preserving;
+    \item preserves incomparability between left and right internal
+    branch carriers before quotienting;
+    \item preserves total annotation mass separately on each branch;
+    \item preserves mapped proxy guards and forbidden-channel guards; and
+    \item maps influence chains to the corresponding base branch
+    influence edges.
+\end{enumerate}
+\end{definitionblock}
+
+\begin{datum}[Invariant ledger]
+The branch invariant ledger \(\InvBr\) consists of:
+\begin{enumerate}
+    \item finite partial-order structure;
+    \item fixed input and output boundary anchors;
+    \item two source branch labels \(L,R\);
+    \item branch-local annotation conservation;
+    \item branch-preserving order contraction;
+    \item preservation of left-right incomparability before quotient;
+    \item mapped proxy guard preservation;
+    \item forbidden-channel guard preservation;
+    \item influence-edge contraction by branch; and
+    \item explicit exclusion of target metric, target proper time, target
+    locality, target observer protocol, benchmark rank, and candidate
+    performance from the comparison.
+\end{enumerate}
+\end{datum}
+
+\begin{definitionblock}[Branch-refinement comparison]
+For \(B,B'\in\ObjBr=\{B_{1},B_{2},B_{3}\}\), define
+\(\CmpBr(B,B';\InvBr)\) as follows:
+\begin{enumerate}
+    \item Return \(\EqBr(B,B')\) when both objects admit admissible
+    branch-preserving contractions to \(B_{1}\) preserving every invariant
+    in \(\InvBr\).
+    \item Return \(\Block\) when either object deletes branch-local
+    annotation mass, merges left and right branch mass before an
+    invariant-preserving quotient is shown, introduces an unmapped proxy,
+    admits a forbidden target channel, changes boundary anchors, deletes
+    branch influence coverage, selects a branch because target behavior
+    improves, or infers source absence from silence.
+    \item Return \(\neg\EqBr(B,B')\) only when both objects are
+    well-formed branch source objects but no admissible branch-preserving
+    common contraction exists.
+\end{enumerate}
+\end{definitionblock}
+
+\section{Local Receipts}
+
+\begin{receipt}[Positive witness inventory]
+The positive witness-pair inventory is
+\[
+    (B_{1},B_{2}),\qquad (B_{2},B_{3}),\qquad (B_{1},B_{3}).
+\]
+Each positive object admits admissible branch-preserving contraction to
+\(B_{1}\). Therefore
+\[
+    \CmpBr(B_i,B_j;\InvBr)=\EqBr(B_i,B_j)
+    \quad\text{for}\quad i,j\in\{1,2,3\}.
+\]
+\end{receipt}
+
+\begin{receipt}[Local relation properties]
+Inside \(\ObjBr\), reflexivity follows from the identity comparison on
+each branch object. Symmetry follows because comparison is defined by
+existence of admissible contractions to the same base branch object.
+Transitivity follows because every positive object contracts to \(B_{1}\)
+while preserving the same boundary anchors, branch labels, branch-local
+annotation mass, proxy guards, forbidden-channel guards, influence
+coverage, and left-right incomparability ledger.
+\end{receipt}
+
+\begin{receipt}[Invariant descent]
+For every admissible \(q_{k}:B_{k}\to B_{1}\), the image object retains
+the source boundary anchors, two-branch shape, branch-local annotation
+totals \(A_{L}\) and \(A_{R}\), guard assignments, and influence-edge
+coverage. Thus the invariant ledger descends from \(B_{k}\) to \(B_{1}\)
+inside the declared branch-refinement family.
+\end{receipt}
+
+\begin{receipt}[Quotient descent within the declared family]
+The quotient induced by \(q_{k}\) is permitted only after branch-local
+annotation mass, branch labels, guards, and blocker state are preserved.
+It does not identify a left branch with a right branch. It does not
+identify a blocked object with a positive witness. Under those local
+restrictions, quotient descent is supplied for \(\ObjBr\). No quotient
+descent is supplied for arbitrary non-chain objects.
+\end{receipt}
+
+\section{Negative Controls}
+
+\begin{controlrule}[Branch erasure blocks the comparison]
+Any map that collapses \(\ell\) and \(r\) to one internal carrier before
+preserving branch-local annotation and blocker state returns \(\Block\).
+Such a map erases the branch structure that this datum was built to test.
+\end{controlrule}
+
+\begin{controlrule}[Annotation weakening blocks the comparison]
+Deleting annotation atoms, merging \(A_{L}\) and \(A_{R}\), weighting
+atoms by downstream success, or selecting atoms because a candidate result
+improves returns \(\Block\).
+\end{controlrule}
+
+\begin{controlrule}[Boundary or target import blocks the comparison]
+Moving \(i\) or \(o\), identifying a boundary carrier with a target
+observer protocol, using target metric behavior, using target proper time,
+using target locality, using benchmark rank, or using candidate
+performance as a selector returns \(\Block\).
+\end{controlrule}
+
+\section{Downstream-Use Boundary}
+
+\begin{receipt}[Downstream use remains unavailable]
+This packet supplies a local branch-refinement comparison datum only. It
+does not supply the separate bridge from \(\EqBr\) to \(\RetainH\),
+\(\GenH\), or candidate reconstruction. The only downstream receipt
+supplied here is a control receipt: the datum is eligible for a later
+Smuggling Auditor audit as a draft/control object. It is not eligible for
+candidate construction or promotion.
+\end{receipt}
+
+\section{Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.43\linewidth}p{0.16\linewidth}}
+\textbf{Surface} & \textbf{Tracked result} & \textbf{Status} \\
+\hline
+Branch domain & \(B_{1},B_{2},B_{3}\) declared as finite branch refinements & local supplied \\
+Non-chain evidence & each object has incomparable branch carriers & local supplied \\
+Non-orbit evidence & cardinalities 4, 5, 6 block bijective relabeling & local supplied \\
+Relation properties & reflexive symmetric transitive inside \(\ObjBr\) & local supplied \\
+Invariant descent & branch-preserving contraction keeps ledger surfaces & local supplied \\
+Quotient descent & supplied only after branch and blocker preservation & local supplied \\
+Target-import audit & not yet performed & required next \\
+Refuter stress test & not yet performed & blocked until audit \\
+General \(\EqSrc\) & not discharged & blocked \\
+\(\RetainH,\GenH\) & no bridge supplied & blocked \\
+Candidate reconstruction & no downstream authority & blocked \\
+Gate Chair review & human-gated and premature & blocked \\
+\end{tabular}
+\end{center}
+
+\section{Verdicts}
+
+\begin{verdict}[Local branch-extension datum]
+The packet supplies local draft/control evidence:
+\[
+    \EqBr\big|_{\ObjBr}
+    \quad\text{for}\quad
+    \ObjBr=\{B_{1},B_{2},B_{3}\}.
+\]
+The evidence is source-only at construction time and remains subject to
+later Smuggling Auditor and Refuter review.
+\end{verdict}
+
+\begin{verdict}[No general promotion]
+This packet does not discharge general \(\EqSrc\), \(\RetainH\), or
+\(\GenH\). It does not prove semantic \(\NoTargetH\), does not
+canonically adopt \(\NoTargetSyn\), does not authorize candidate
+reconstruction, does not edit canonical ontology, does not promote
+benchmark status, does not request Gate Chair review, and does not permit
+completed-derivation language.
+\end{verdict}
+
+\begin{nextburden}[Audit before stress or use]
+The logical next role is Smuggling Auditor. The audit must test whether
+branch labels, branch-local annotation preservation, quotient descent, or
+the choice of \(B_{1},B_{2},B_{3}\) launders target success. Until that
+audit passes, and until later Refuter stress testing is complete, broader
+\(\EqSrc\), \(\RetainH\), \(\GenH\), candidate reconstruction, canonical
+ontology edit, benchmark promotion, Gate Chair review, and
+completed-derivation language remain blocked.
+\end{nextburden}
+
+\section*{APA 7 References}
+
+Ricciardi, A. S. (2026, June 15). \emph{Localization source-basis axiom
+selector-domain EqSrc non-orbit refinement family extension obstruction
+packet or controlled pause: Chain-domain retention and missing branch,
+non-chain, quotient, relation-property, and downstream-use evidence}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260614-011/artifacts/52\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_NON\_ORBIT\_REFINEMENT\_FAMILY\_EXTENSION\_OBSTRUCTION\_PACKET\_OR\_CONTROLLED\_PAUSE.tex}.
+
+Ricciardi, A. S. (2026, June 15). \emph{Localization source-basis axiom
+selector-domain EqSrc non-orbit refinement family datum Refuter stress
+test: Branch, non-chain, quotient, and downstream-use pressure on the
+audited local EqSrc refinement packet} [Unpublished manuscript]. The
+Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-010/artifacts/51\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_NON\_ORBIT\_REFINEMENT\_FAMILY\_DATUM\_REFUTER\_STRESS\_TEST.tex}.
+
+Ricciardi, A. S. (2026, June 14). \emph{Localization source-basis axiom
+selector-domain EqSrc non-orbit refinement family datum: Bounded
+source-only theoretical construction after handoff 0049} [Unpublished
+manuscript]. The Aether-Flow Interpretation of Relativity Research
+Project,
+\texttt{research\_control/tasks/RT-20260614-007/artifacts/49\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_NON\_ORBIT\_REFINEMENT\_FAMILY\_DATUM.tex}.
+
+\end{document}
