@@ -1,0 +1,380 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqTri}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{tri}}}
+\newcommand{\ObjTri}{\mathsf{Obj}_{\mathrm{tri}}}
+\newcommand{\InvTri}{\mathsf{Inv}_{\mathrm{tri}}}
+\newcommand{\CmpTri}{\mathsf{Cmp}_{\mathrm{tri}}}
+\newcommand{\Ann}{\mathsf{Ann}}
+\newcommand{\Proxy}{\mathsf{Proxy}_{T}}
+\newcommand{\Forbid}{\mathsf{Forbid}_{T}}
+\newcommand{\Infl}{\mathsf{Infl}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\NoTargetH}{\mathsf{NoTarget}_{H}}
+\newcommand{\NoTargetSyn}{\mathsf{NoTarget}_{H}^{\mathrm{syn}}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Risk}{\mathsf{Risk}}
+
+\newtheorem{definitionblock}{Definition}
+\newtheorem{datum}{Datum}
+\newtheorem{receipt}{Receipt}
+\newtheorem{controlrule}{Control rule}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain EqSrc Alternative Branch-Family Guard-Stability Source Packet}\\[0.35em]
+\large Three-Branch Source Domain with Label Transport Guard Quotient Boundary Relation and Downstream-Use Receipts}
+\author{Ontology Formalizer AgentJob AJ-RT-20260614-016-001}
+\date{June 15, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact supplies the bounded source-only packet
+permitted by \texttt{handoff-0057}. It constructs a declared finite
+three-branch source family
+\(\ObjTri=\{T_{1},T_{2},T_{3}\}\) with explicit source branch labels,
+branch-local annotation conservation, proxy and forbidden-channel guards,
+blocker preservation, influence coverage, fixed source boundary anchors,
+and branch-preserving quotient descent. The local receipt is only
+\(\EqTri\) inside this declared family. It does not discharge general
+\(\EqSrc\), \(\RetainH\), or \(\GenH\), does not authorize candidate
+reconstruction, does not edit canonical ontology, does not promote
+benchmark status, does not request Gate Chair review, and does not permit
+completed-derivation language.
+\end{abstract}
+
+\section{Scope and Inspected Authority}
+
+This artifact is the role output for task \texttt{RT-20260614-016}. It
+responds only to the future-packet condition recorded in
+\texttt{handoff-0057}: supply a source-only packet with alternative
+branch-family, label-perturbation, guard-stability, quotient, boundary,
+relation-property, and downstream-use receipts under bounded authority.
+
+The inspected authority surfaces are:
+\begin{itemize}
+    \item the controlled-pause packet in \texttt{RT-20260614-015};
+    \item the branch-refinement Refuter stress test in
+    \texttt{RT-20260614-014};
+    \item the branch-refinement smuggling audit in
+    \texttt{RT-20260614-013}; and
+    \item the local branch-refinement datum in \texttt{RT-20260614-012}.
+\end{itemize}
+
+The formal question is:
+\[
+    \text{Can a declared three-branch source family supply a local }
+    \EqTri\text{ receipt without target import?}
+\]
+The answer is yes, locally and conditionally. The packet supplies a
+finite source-domain datum narrow enough for audit. It remains unaudited
+by a Smuggling Auditor and untested by a Refuter.
+
+\section{Alternative Branch Source Domain}
+
+\begin{definitionblock}[Decorated three-branch source object]
+A decorated three-branch source object is a tuple
+\[
+    T=(C,\preceq,b,\lambda,\Ann,\Proxy,\Forbid,\Infl,\mathsf{Blk})
+\]
+where \(C\) is a finite set of source carriers, \(\preceq\) is a finite
+partial order, \(b=(i,o)\) marks source input and output boundary
+carriers with \(i\preceq o\), and
+\[
+    \lambda:C\setminus\{i,o\}\to K,\qquad K=\{L,R,Q\},
+\]
+is a source branch-label map. The third label \(Q\) is only a source
+bookkeeping tag. It is not a target dimension, target charge, target
+observer sector, target locality region, benchmark rank, or candidate
+performance selector. The surfaces \(\Ann,\Proxy,\Forbid,\Infl\), and
+\(\mathsf{Blk}\) are source ledger fields.
+\end{definitionblock}
+
+\begin{datum}[Base three-branch object]
+Define \(T_{1}\) by
+\[
+    C_{1}=\{i,\ell,r,q,o\},
+\]
+\[
+    i\prec \ell\prec o,\qquad i\prec r\prec o,\qquad
+    i\prec q\prec o,
+\]
+with \(\ell,r,q\) pairwise incomparable except through \(i\) and \(o\).
+Let \(\lambda(\ell)=L\), \(\lambda(r)=R\), and \(\lambda(q)=Q\). The
+annotation mass decomposes as
+\[
+    A=A_{L}+A_{R}+A_{Q},
+\]
+where each summand is a nonempty source-bookkeeping sum. Proxy guards,
+forbidden-channel guards, blocker records, and influence edges are
+declared separately for the three source branches.
+\end{datum}
+
+\begin{datum}[Single third-branch refinement]
+Define \(T_{2}\) by subdividing only the \(Q\)-branch:
+\[
+    C_{2}=\{i,\ell,r,q_{1},q_{2},o\},
+\]
+\[
+    i\prec \ell\prec o,\qquad i\prec r\prec o,\qquad
+    i\prec q_{1}\prec q_{2}\prec o,
+\]
+with left, right, and \(Q\)-branch carriers incomparable across branch
+labels except through \(i\) and \(o\). The \(Q\)-annotation mass splits
+as \(A_{Q}=A_{Q,1}+A_{Q,2}\), while \(A_{L}\) and \(A_{R}\) remain
+unchanged.
+\end{datum}
+
+\begin{datum}[All-branch refinement]
+Define \(T_{3}\) by subdividing every branch once:
+\[
+    C_{3}=\{i,\ell_{1},\ell_{2},r_{1},r_{2},q_{1},q_{2},o\},
+\]
+\[
+    i\prec \ell_{1}\prec \ell_{2}\prec o,\qquad
+    i\prec r_{1}\prec r_{2}\prec o,\qquad
+    i\prec q_{1}\prec q_{2}\prec o,
+\]
+with all internal carriers on distinct branch labels incomparable except
+through \(i\) and \(o\). Annotation mass splits only inside each branch
+and sums back to \(A_{L}\), \(A_{R}\), and \(A_{Q}\).
+\end{datum}
+
+\begin{receipt}[Alternative-family status]
+The family \(\ObjTri=\{T_{1},T_{2},T_{3}\}\) is not the earlier
+two-branch family \(\{B_{1},B_{2},B_{3}\}\). Each object has three
+source branch labels and pairwise incomparable internal branch carriers.
+The carrier cardinalities \(5,6,8\) make the witnesses non-identical and
+non-orbit under a pure carrier relabeling of one fixed object. This
+supplies an alternative branch-family domain for local audit.
+\end{receipt}
+
+\section{Invariant and Comparison Ledger}
+
+\begin{definitionblock}[Three-branch invariant ledger]
+The invariant ledger \(\InvTri\) consists of:
+\begin{enumerate}
+    \item finite partial-order structure;
+    \item fixed input and output boundary anchors \(i,o\);
+    \item three source branch labels \(L,R,Q\);
+    \item branch-local annotation conservation for \(A_{L},A_{R},A_{Q}\);
+    \item branch-preserving order contraction to \(T_{1}\);
+    \item preservation of pairwise branch incomparability before quotient;
+    \item mapped proxy guard preservation;
+    \item forbidden-channel guard preservation;
+    \item blocker-record preservation;
+    \item influence-edge contraction by source branch; and
+    \item explicit exclusion of target metric, target proper time, target
+    locality, target observer protocol, benchmark rank, and candidate
+    performance from the comparison.
+\end{enumerate}
+\end{definitionblock}
+
+\begin{definitionblock}[Admissible three-branch contraction]
+For \(k\in\{1,2,3\}\), a contraction \(p_{k}:C_{k}\to C_{1}\) is
+admissible only when it fixes \(i,o\), maps every internal carrier on
+branch \(X\in\{L,R,Q\}\) to the corresponding base carrier of \(T_{1}\),
+is order-preserving, preserves all branch-local annotation totals,
+preserves mapped proxy guards and forbidden-channel guards, preserves
+blocker records, and maps influence chains to the corresponding base
+influence edges.
+\end{definitionblock}
+
+\begin{definitionblock}[Three-branch comparison]
+For \(T,T'\in\ObjTri\), define \(\CmpTri(T,T';\InvTri)\) as follows:
+\begin{enumerate}
+    \item Return \(\EqTri(T,T')\) when both objects admit admissible
+    contractions to \(T_{1}\) preserving every invariant in \(\InvTri\).
+    \item Return \(\Block\) when either object deletes annotation mass,
+    merges branch masses before invariant preservation is shown,
+    introduces an unmapped proxy, admits a forbidden target channel,
+    erases a blocker record, changes boundary anchors, deletes influence
+    coverage, selects a branch because target behavior improves, or
+    infers source absence from silence.
+    \item Return \(\neg\EqTri(T,T')\) only when both objects are
+    well-formed three-branch source objects but no admissible common
+    branch-preserving contraction exists.
+\end{enumerate}
+\end{definitionblock}
+
+\section{Label and Guard Stability}
+
+\begin{receipt}[Full-ledger source-tag transport]
+Let \(\sigma:K\to K\) be a permutation of the source labels
+\(\{L,R,Q\}\). The relabeled family \(\sigma(\ObjTri)\) remains locally
+admissible only when \(\sigma\) transports every object in the declared
+family together with its annotation masses, proxy guards,
+forbidden-channel guards, blocker records, influence coverage,
+admissible contractions, and boundary anchors. Under that full-ledger
+transport, the relabeling changes only source bookkeeping names.
+\end{receipt}
+
+\begin{controlrule}[No partial relabeling or label collapse]
+Partial relabeling, label collapse, creation of a label because
+downstream behavior improves, or interpretation of \(L,R,Q\) as target
+geometric or observer categories returns \(\Block\). Those operations
+change the comparison rule rather than transporting the source ledger.
+\end{controlrule}
+
+\begin{receipt}[Annotation and guard stability]
+Inside \(\ObjTri\), annotation stability means exact conservation of
+\(A_{L},A_{R},A_{Q}\) under admissible contraction and label transport.
+Guard stability means mapped proxy guards and forbidden-channel guards
+remain present and branch-indexed after contraction. Blocker stability
+means negative source records cannot be quotiented into positive witness
+records. These are local source receipts, not target-success receipts.
+\end{receipt}
+
+\begin{controlrule}[Weakening blocks the packet]
+Deleting annotation atoms, weighting them by target or candidate success,
+merging branch annotation masses, relaxing proxy guards, deleting
+forbidden-channel guards, or erasing blocker records returns \(\Block\).
+\end{controlrule}
+
+\section{Quotient Boundary and Relation Receipts}
+
+\begin{receipt}[Quotient descent]
+The permitted quotient is only the branch-preserving contraction
+\(p_{k}:T_{k}\to T_{1}\) after every ledger component in \(\InvTri\) is
+preserved. It does not identify distinct branch labels with each other.
+It does not choose representatives because downstream behavior improves.
+It does not identify a blocked source object with a positive witness.
+\end{receipt}
+
+\begin{receipt}[Boundary anchors]
+The boundary anchors \(i,o\) are fixed source carriers in every
+comparison. Moving an anchor, splitting an endpoint, identifying an
+endpoint with a target observer protocol, or selecting boundary anchors
+because a target comparison improves returns \(\Block\).
+\end{receipt}
+
+\begin{receipt}[Local relation properties]
+Inside \(\ObjTri\), reflexivity follows from identity comparison on each
+three-branch object. Symmetry follows because the comparison is defined
+by existence of admissible contractions to the same base object
+\(T_{1}\). Transitivity follows because every positive object contracts
+to \(T_{1}\) while preserving the same boundary anchors, branch labels,
+annotation masses, guards, blockers, influence coverage, and quotient
+ledger. These properties are local to \(\ObjTri\).
+\end{receipt}
+
+\section{Downstream-Use Boundary}
+
+\begin{receipt}[Audit eligibility only]
+This packet supplies a local source-family datum eligible for a later
+Smuggling Auditor audit. It does not supply the separate bridge from
+\(\EqTri\) to \(\RetainH\), \(\GenH\), or candidate reconstruction. It
+does not authorize benchmark promotion or Gate Chair review.
+\end{receipt}
+
+\begin{controlrule}[No downstream laundering]
+Any later use that treats \(\EqTri\) as general \(\EqSrc\), as support
+for \(\RetainH\) or \(\GenH\), as candidate-ready evidence, as canonical
+ontology authority, as benchmark promotion, or as completed derivation
+must return \(\Block\) at the research-control boundary unless a later
+audited and stress-tested source-side packet explicitly supplies that
+burden.
+\end{controlrule}
+
+\section{Receipt Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.43\linewidth}p{0.16\linewidth}}
+\textbf{Surface} & \textbf{Tracked result} & \textbf{Status} \\
+\hline
+Alternative branch family & \(T_{1},T_{2},T_{3}\) declared with three source branches & local \(\Pass\) \\
+Label perturbation & full source-ledger permutation only & local \(\Pass,\Block\) \\
+Annotation stability & branch-local masses conserved & local \(\Pass,\Block\) \\
+Guard stability & proxy and forbidden-channel guards preserved & local \(\Pass,\Block\) \\
+Blocker preservation & negative records cannot be erased by quotient & local \(\Pass,\Block\) \\
+Quotient descent & branch-preserving contraction to \(T_{1}\) only & local \(\Pass\) \\
+Boundary anchors & \(i,o\) fixed as source carriers & local \(\Pass,\Block\) \\
+Relation properties & reflexivity symmetry transitivity inside \(\ObjTri\) & local \(\Pass\) \\
+Downstream use & audit eligibility only & blocked broader \\
+General \(\EqSrc\) & not discharged by \(\EqTri\) & blocked \\
+\(\RetainH,\GenH\) & not supplied & blocked \\
+Gate Chair review & human-gated and premature & blocked \\
+\end{tabular}
+\end{center}
+
+\section{Verdicts}
+
+\begin{verdict}[Local alternative branch-family receipt]
+The declared finite source family \(\ObjTri=\{T_{1},T_{2},T_{3}\}\)
+supports the local draft/control statement
+\[
+    \CmpTri(T_i,T_j;\InvTri)=\EqTri(T_i,T_j)
+    \quad\text{for }i,j\in\{1,2,3\},
+\]
+provided the full invariant ledger is preserved.
+\end{verdict}
+
+\begin{verdict}[Guarded label perturbation receipt]
+Full source-ledger transport by a global permutation of \(L,R,Q\) is
+locally admissible. Partial relabeling, label collapse,
+target-semantic relabeling, annotation weakening, guard deletion,
+blocker erasure, quotient representative selection by downstream
+success, and boundary movement remain \(\Block\).
+\end{verdict}
+
+\begin{verdict}[No promotion]
+This packet does not discharge general \(\EqSrc\), \(\RetainH\), or
+\(\GenH\). It does not prove semantic \(\NoTargetH\), does not
+canonically adopt \(\NoTargetSyn\), does not authorize candidate
+reconstruction, does not edit canonical ontology, does not promote
+benchmark status, does not request Gate Chair review, and does not permit
+completed-derivation language.
+\end{verdict}
+
+\begin{nextburden}[Smuggling Auditor audit]
+The logical next role is a Smuggling Auditor audit of this packet. The
+audit should test branch-family choice, branch-label semantics,
+annotation and guard surfaces, blocker preservation, quotient selection,
+boundary anchors, authority labels, and downstream-use language before
+any Refuter stress test or broader use.
+\end{nextburden}
+
+\section*{APA 7 References}
+
+Ricciardi, A. S. (2026, June 15). \emph{Localization source-basis axiom
+selector-domain EqSrc branch-refinement extension obstruction packet or
+controlled pause: Branch-domain retention and missing alternative family
+label stability quotient boundary relation and downstream-use evidence}
+[Unpublished manuscript]. The Aether-Flow Interpretation of Relativity
+Research Project,
+\texttt{research\_control/tasks/RT-20260614-015/artifacts/56\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_BRANCH\_REFINEMENT\_EXTENSION\_OBSTRUCTION\_PACKET\_OR\_CONTROLLED\_PAUSE.tex}.
+
+Ricciardi, A. S. (2026, June 15). \emph{Localization source-basis axiom
+selector-domain EqSrc branch-refinement extension datum Refuter stress
+test: Branch-label quotient and downstream-use pressure on the audited
+local EqSrc branch packet} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-014/artifacts/55\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_BRANCH\_REFINEMENT\_EXTENSION\_DATUM\_REFUTER\_STRESS\_TEST.tex}.
+
+Ricciardi, A. S. (2026, June 15). \emph{Localization source-basis axiom
+selector-domain EqSrc branch-refinement extension datum: Bounded
+source-only construction after handoff 0053} [Unpublished manuscript].
+The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-012/artifacts/53\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_BRANCH\_REFINEMENT\_EXTENSION\_DATUM.tex}.
+
+\end{document}
