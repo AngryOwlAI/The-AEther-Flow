@@ -33,6 +33,17 @@ and tracked state under `research_control/`. The Director of Research may create
 one bounded AgentJob per invocation after validation. Generated outputs and
 `.local/` caches never override tracked control state.
 
+When a required scientific datum, metric, witness family, computation, or
+experimental input is absent from the repository, that absence is not by
+itself a terminal result if tracked state or explicit user instruction
+authorizes research or construction. The Director may route one bounded
+non-promotional AgentJob to search external primary literature, design a
+source-acquisition packet, perform a bounded theoretical calculation, or build
+a draft/control datum from source-side assumptions. Such work must cite
+external materials, distinguish established literature from new project
+construction, preserve claim gates, and avoid treating a constructed draft as
+canonical ontology, benchmark promotion, or completed derivation.
+
 ## Project-System Improvement
 
 For project-system repair, explanatory documentation synchronization,

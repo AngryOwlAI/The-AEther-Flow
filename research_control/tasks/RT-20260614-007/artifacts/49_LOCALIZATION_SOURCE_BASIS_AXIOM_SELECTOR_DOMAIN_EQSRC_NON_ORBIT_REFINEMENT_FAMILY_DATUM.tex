@@ -1,0 +1,373 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqRef}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{ref}}}
+\newcommand{\ObjRef}{\mathsf{Obj}_{\mathrm{ref}}}
+\newcommand{\InvRef}{\mathsf{Inv}_{\mathrm{ref}}}
+\newcommand{\CmpRef}{\mathsf{Cmp}_{\mathrm{ref}}}
+\newcommand{\Ann}{\mathsf{Ann}}
+\newcommand{\Proxy}{\mathsf{Proxy}_{T}}
+\newcommand{\Forbid}{\mathsf{Forbid}_{T}}
+\newcommand{\Infl}{\mathsf{Infl}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\NoTargetH}{\mathsf{NoTarget}_{H}}
+\newcommand{\NoTargetSyn}{\mathsf{NoTarget}_{H}^{\mathrm{syn}}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Risk}{\mathsf{Risk}}
+\newcommand{\Nat}{\mathbb{N}}
+
+\newtheorem{searchfinding}{Search finding}
+\newtheorem{definitionblock}{Definition}
+\newtheorem{datum}{Datum}
+\newtheorem{calculation}{Calculation}
+\newtheorem{receipt}{Receipt}
+\newtheorem{controlrule}{Control rule}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nextburden}{Next burden}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain EqSrc Non-Orbit Refinement Family Datum}\\[0.35em]
+\large Bounded Source-Only Theoretical Construction After Handoff 0049}
+\author{Ontology Formalizer AgentJob AJ-RT-20260614-007-001}
+\date{June 14, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control artifact responds to the user clarification that a
+missing datum in a novel project should be researched or constructed rather
+than treated as unavailable merely because it is absent from the repository.
+A bounded external search found mathematical scaffolding for causal partial
+orders, growth families, and decorated compositional comparison, but no
+Aether-Flow-specific non-orbit \(\EqSrc\) datum. The artifact therefore
+constructs a new source-only non-orbit refinement-family datum. The positive
+objects are finite chain refinements with different cardinalities, so they
+are not related by bijective relabeling. They are compared only by a
+source-side contraction invariant preserving boundary anchors, finite
+partial order, annotation mass, proxy guards, forbidden-channel guards,
+influence order, and no-target-channel exclusion. The result is local
+\(\EqRef\) draft/control evidence only. It does not discharge general
+\(\EqSrc\), \(\RetainH\), or \(\GenH\), authorize candidate reconstruction,
+edit canonical ontology, promote benchmark status, request Gate Chair
+review, or permit completed-derivation language.
+\end{abstract}
+
+\section{Scope}
+
+This artifact is the role output for task \texttt{RT-20260614-007}. It
+does the missing work left by \texttt{handoff-0049}: search externally for
+an existing datum and, if none exists, construct the narrowest source-only
+non-orbit family datum that can be stated without target import.
+
+The external search did not find a ready-made Aether-Flow datum. It did
+find relevant scaffolding:
+\begin{itemize}
+    \item causal-set work supports finite partial orders as source-like
+    causal structures rather than metric-first structures;
+    \item sequential-growth work supports families of discrete causal
+    structures as legitimate theoretical objects; and
+    \item decorated-cospan work supports comparing structured networks by
+    maps plus preserved decorations.
+\end{itemize}
+Those materials are not imported as authority for Aether-Flow claims. They
+only justify the mathematical reasonableness of finite ordered source
+objects and decoration-preserving comparison.
+
+\section{Source Object Type}
+
+\begin{definitionblock}[Decorated finite source chain]
+A decorated finite source chain is a tuple
+\[
+    Y=(C,\preceq,b,\Ann,\Proxy,\Forbid,\Infl)
+\]
+where:
+\begin{enumerate}
+    \item \(C\) is a finite set of source carriers;
+    \item \(\preceq\) is a partial order on \(C\);
+    \item \(b=(i,o)\) marks input and output boundary carriers with
+    \(i\preceq o\);
+    \item \(\Ann:C\to M\) maps carriers into a free commutative monoid
+    \(M\) of annotation atoms;
+    \item \(\Proxy:C\to P\) records mapped proxy guard classes;
+    \item \(\Forbid:C\to F\) records forbidden-channel guard classes; and
+    \item \(\Infl\subseteq C\times C\) records directed influence edges
+    compatible with \(\preceq\).
+\end{enumerate}
+\end{definitionblock}
+
+The monoid \(M\) is used only for source bookkeeping. Its atoms are
+\[
+    m_{\mathrm{path}},m_{\mathrm{hash}},m_{\mathrm{scope}},
+    m_{\mathrm{proxy}},m_{\mathrm{infl}},m_{\mathrm{limit}}.
+\]
+They stand for source path, source hash, rule scope, proxy classification,
+influence-edge content, and manifest-use limit. They are not target metric
+or benchmark predicates.
+
+\section{Positive Non-Orbit Family}
+
+\begin{datum}[Base chain]
+Define \(Y_{1}\) by
+\[
+    C_{1}=\{i,a,o\},\qquad i\prec a\prec o.
+\]
+The internal carrier \(a\) carries the total annotation mass
+\[
+    A=m_{\mathrm{path}}+m_{\mathrm{hash}}+m_{\mathrm{scope}}
+    +m_{\mathrm{proxy}}+m_{\mathrm{infl}}+m_{\mathrm{limit}}.
+\]
+The boundary carriers carry empty annotation mass. All carriers preserve
+the same mapped proxy guard and forbidden-channel guard classes, and
+\(\Infl_{1}=\{(i,a),(a,o)\}\).
+\end{datum}
+
+\begin{datum}[Two-carrier refinement]
+Define \(Y_{2}\) by
+\[
+    C_{2}=\{i,a_{1},a_{2},o\},\qquad i\prec a_{1}\prec a_{2}\prec o.
+\]
+Let
+\[
+    \Ann(a_{1})=
+    m_{\mathrm{path}}+m_{\mathrm{hash}}+m_{\mathrm{scope}},\qquad
+    \Ann(a_{2})=
+    m_{\mathrm{proxy}}+m_{\mathrm{infl}}+m_{\mathrm{limit}}.
+\]
+The proxy guard, forbidden-channel guard, and influence order are the
+source-side refinements of \(Y_{1}\):
+\[
+    \Infl_{2}=\{(i,a_{1}),(a_{1},a_{2}),(a_{2},o)\}.
+\]
+\end{datum}
+
+\begin{datum}[Three-carrier refinement]
+Define \(Y_{3}\) by
+\[
+    C_{3}=\{i,a_{1},a_{2},a_{3},o\},\qquad
+    i\prec a_{1}\prec a_{2}\prec a_{3}\prec o.
+\]
+The annotation mass is split into three nonempty blocks whose sum is \(A\).
+The proxy guard, forbidden-channel guard, and influence order are again
+preserved after contraction to \(Y_{1}\).
+\end{datum}
+
+\begin{calculation}[Non-orbit check]
+The positive objects have cardinalities
+\[
+    |C_{1}|=3,\qquad |C_{2}|=4,\qquad |C_{3}|=5.
+\]
+No bijective relabeling can carry \(Y_{1}\) to \(Y_{2}\), \(Y_{2}\) to
+\(Y_{3}\), or \(Y_{1}\) to \(Y_{3}\). Therefore the positive family is not
+a relabeling orbit. It is a genuine non-orbit source-object family under
+the previous orbit criterion.
+\end{calculation}
+
+\section{Refinement Maps and Invariants}
+
+\begin{definitionblock}[Contraction map]
+For \(n\in\{1,2,3\}\), let
+\[
+    c_{n}:C_{n}\to C_{1}
+\]
+send boundary carriers to the same boundary carriers and send every
+internal carrier \(a_{k}\) to \(a\). A contraction map is admissible only if
+it preserves boundary anchors, is order-preserving, preserves proxy and
+forbidden-channel guards, pushes influence chains to the base influence
+order, and satisfies annotation conservation:
+\[
+    \sum_{x\in c_{n}^{-1}(a)} \Ann(x)=A.
+\]
+\end{definitionblock}
+
+\begin{datum}[Invariant ledger]
+The refinement-family invariant ledger \(\InvRef\) consists of:
+\begin{enumerate}
+    \item finite partial-order structure;
+    \item fixed input and output boundary anchors;
+    \item order-preserving contraction to \(Y_{1}\);
+    \item annotation conservation in the free commutative monoid \(M\);
+    \item mapped proxy guard preservation;
+    \item forbidden-channel guard preservation;
+    \item influence-edge contraction preserving source order; and
+    \item explicit exclusion of target metric, target proper time, target
+    locality, target observer protocol, benchmark rank, and candidate
+    performance from the comparison.
+\end{enumerate}
+\end{datum}
+
+\section{Comparison Rule}
+
+\begin{definitionblock}[Refinement comparison]
+For \(Y,Y'\in\ObjRef\), define \(\CmpRef(Y,Y';\InvRef)\) as follows:
+\begin{enumerate}
+    \item Return \(\EqRef(Y,Y')\) when both objects admit admissible
+    contraction maps to \(Y_{1}\) preserving every invariant in
+    \(\InvRef\).
+    \item Return \(\Block\) when either object deletes required annotation
+    mass, introduces an unmapped proxy, admits a forbidden target channel
+    as a source primitive, changes the boundary anchors, deletes influence
+    coverage needed for the contraction, uses target behavior, or infers
+    source absence from silence.
+    \item Return \(\neg\EqRef(Y,Y')\) only when both objects are
+    well-formed source objects but no admissible common contraction exists.
+\end{enumerate}
+\end{definitionblock}
+
+\begin{receipt}[Positive witnesses]
+The positive witness-pair inventory is
+\[
+    (Y_{1},Y_{2}),\qquad (Y_{2},Y_{3}),\qquad (Y_{1},Y_{3}).
+\]
+For each pair, both objects admit admissible contraction to \(Y_{1}\).
+Therefore
+\[
+    \CmpRef(Y_i,Y_j;\InvRef)=\EqRef(Y_i,Y_j)
+    \quad\text{for}\quad i,j\in\{1,2,3\}.
+\]
+\end{receipt}
+
+\begin{receipt}[Local relation-property receipts]
+Inside the declared positive family:
+\begin{enumerate}
+    \item reflexivity follows from the identity contraction on each
+    \(Y_i\);
+    \item symmetry follows because the comparison is defined by existence
+    of admissible contractions to the same base object; and
+    \item transitivity follows because every positive object contracts to
+    the same \(Y_{1}\), so any two positive comparisons share the same
+    conserved annotation mass and guard ledger.
+\end{enumerate}
+These receipts are local to \(\ObjRef\). They do not prove general
+\(\EqSrc\).
+\end{receipt}
+
+\section{Negative Controls}
+
+\begin{datum}[Annotation deletion control]
+Let \(Y_{\mathrm{ann}}\) be \(Y_{2}\) with
+\(m_{\mathrm{proxy}}\) removed from its annotation mass. Then annotation
+conservation fails:
+\[
+    \sum_{x\in c_{2}^{-1}(a)} \Ann(x)\neq A.
+\]
+The comparison returns \(\Block\).
+\end{datum}
+
+\begin{datum}[Unmapped proxy control]
+Let \(Y_{\mathrm{proxy}}\) be \(Y_{2}\) with an unmapped proxy guard on
+\(a_{2}\). Proxy preservation fails. The comparison returns \(\Block\).
+\end{datum}
+
+\begin{datum}[Branch-shape control]
+Let \(Y_{\mathrm{branch}}\) be the diamond-shaped object
+\[
+    i\prec b_{1}\prec o,\qquad i\prec b_{2}\prec o,
+\]
+with \(b_{1}\) and \(b_{2}\) incomparable. This object may be a well-formed
+finite partial order, but it is not an admissible chain refinement of
+\(Y_{1}\) under the current contraction rule because it changes the
+internal source-order shape. The comparison returns \(\Block\) unless a
+future task supplies a separate branch-family invariant ledger.
+\end{datum}
+
+\section{Boundary Ledger}
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.43\linewidth}p{0.18\linewidth}}
+\textbf{Surface} & \textbf{Tracked result} & \textbf{Status} \\
+\hline
+\(\ObjRef\) & \(Y_{1},Y_{2},Y_{3}\) plus negative controls & supplied \\
+Non-orbit property & cardinalities 3 4 5 exclude bijective relabeling & supplied \\
+\(\InvRef\) & boundary order annotation proxy forbidden influence no-target invariants & supplied \\
+\(\CmpRef\) & contraction-based source comparison & supplied \\
+Positive witnesses & \((Y_{1},Y_{2})\), \((Y_{2},Y_{3})\), \((Y_{1},Y_{3})\) & supplied \\
+Negative controls & annotation deletion unmapped proxy branch-shape change & retained as \(\Block\) \\
+Target channels & metric proper time locality observer rank candidate performance & excluded \\
+General \(\EqSrc\) & not proved outside this family & blocked \\
+\(\RetainH,\GenH\) & not attempted & blocked \\
+Candidate reconstruction & not authorized & blocked \\
+Gate Chair review & human-gated and premature & blocked \\
+\end{tabular}
+\end{center}
+
+\section{Verdicts}
+
+\begin{verdict}[Non-orbit datum supplied]
+The packet supplies a new source-only non-orbit family datum:
+\[
+    \mathcal{E}_{\mathrm{ref}}=
+    (\ObjRef,\InvRef,\CmpRef,\Ann,\Proxy,\Forbid,\Infl).
+\]
+The positive family is not a relabeling orbit because its members have
+different cardinalities. Its local positive comparison is a
+refinement/contraction relation, not identifier presentation invariance.
+\end{verdict}
+
+\begin{verdict}[No general promotion follows]
+This result does not discharge general \(\EqSrc\), \(\RetainH\), or
+\(\GenH\). It does not prove semantic \(\NoTargetH\), does not canonically
+adopt \(\NoTargetSyn\), does not authorize candidate reconstruction, does
+not edit canonical ontology, does not promote benchmark status, does not
+request Gate Chair review, and does not permit completed-derivation
+language.
+\end{verdict}
+
+\begin{verdict}[System-learning signal]
+The construction records a project-system improvement signal: missing data
+in a novel research project may require external search or bounded
+theoretical construction. Absence from the repository is not sufficient by
+itself to preserve a pause when the user has explicitly authorized research
+or construction.
+\end{verdict}
+
+\section{Next Burden}
+
+\begin{nextburden}[Audit before stress testing]
+The logical next science role is Smuggling Auditor. The audit should test
+whether the refinement family launders target success through refinement
+choice, annotation monoid design, proxy preservation, boundary selection,
+external literature labels, validation status, or authority labels. Only
+after that audit should a Refuter stress test attempt branch refinements,
+non-chain refinements, annotation-monoid weakening, quotient descent, or
+downstream-use pressure.
+\end{nextburden}
+
+\section*{APA 7 References}
+
+Bombelli, L., Lee, J., Meyer, D., \& Sorkin, R. D. (1987). \emph{Space-time
+as a causal set}. Physical Review Letters, 59(5), 521--524.
+\url{https://doi.org/10.1103/PhysRevLett.59.521}
+
+Fong, B. (2015). \emph{Decorated cospans}. Theory and Applications of
+Categories, 30(33), 1096--1120. \url{https://arxiv.org/abs/1502.00872}
+
+Rideout, D. P., \& Sorkin, R. D. (2000). \emph{A classical sequential
+growth dynamics for causal sets}. Physical Review D, 61(2), Article
+024002. \url{https://doi.org/10.1103/PhysRevD.61.024002}
+
+Ricciardi, A. S. (2026, June 14). \emph{Localization source-basis axiom
+selector-domain EqSrc non-orbit source-object family obligation packet or
+controlled pause: Bounded Ontology Formalizer boundary record after handoff
+0048} [Unpublished manuscript]. The Aether-Flow Interpretation of
+Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-006/artifacts/48\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_NON\_ORBIT\_SOURCE\_OBJECT\_FAMILY\_OBLIGATION\_PACKET\_OR\_CONTROLLED\_PAUSE.tex}.
+
+\end{document}

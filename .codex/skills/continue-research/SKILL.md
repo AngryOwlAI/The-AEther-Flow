@@ -56,6 +56,17 @@ skills provide procedures, and gates control claim promotion.
    human gate required, validation failure, no role fit, authority expansion,
    write-path conflict, or a planning-only/control-only Director decision.
 
+   If the active blocker is a missing datum, metric, witness family,
+   computation, or experiment and the repository does not contain it, do not
+   treat local absence alone as a terminal result when tracked state or
+   explicit user instruction authorizes research or construction. The Director
+   may create one bounded non-promotional AgentJob for external primary-source
+   search, source-acquisition design, bounded theoretical calculation,
+   mathematical construction, or experiment design. The output must distinguish
+   established external literature from new project construction, cite
+   external materials in APA 7 format when used, remain draft/control, and
+   preserve all claim-promotion gates.
+
 7. After a state-changing AgentJob completion, create the durable response
    transaction: role output artifact if any, completion record, registry updates,
    new handoff pair, and `program_state.yaml` update when state changes.

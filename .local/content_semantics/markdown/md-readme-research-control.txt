@@ -31,6 +31,23 @@ invocation. Normal flow writes a completion record and handoff after execution.
 Tracked files under `research_control/` are authority. `.local/` prompts,
 logs, previews, and run caches are optional convenience artifacts only.
 
+## Novel Datum Acquisition
+
+Many blockers in this project are expected to involve data, metrics, witness
+families, calculations, or theoretical objects that are not already present in
+the repository and are not supplied by the user. Local absence is therefore not
+automatically final. If tracked state or explicit user instruction authorizes
+research or construction, the Director may route one bounded AgentJob to:
+
+- search external primary literature or official technical sources;
+- design a source-acquisition packet or experiment;
+- perform a bounded theoretical calculation or mathematical construction; or
+- produce a draft/control datum from explicitly stated source-side assumptions.
+
+The output remains noncanonical until it passes the relevant audit, refutation,
+and human-gated claim-promotion sequence. Any external source must be cited,
+and any new project construction must be labeled as new draft/control work.
+
 ## Validation
 
 ```zsh

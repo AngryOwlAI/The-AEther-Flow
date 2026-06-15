@@ -15,6 +15,15 @@ caches and never override tracked control state.
 Use `.codex/skills/continue-research/SKILL.md` for continuation. Execute at
 most one bounded AgentJob per invocation.
 
+If the active blocker is a missing datum or metric and the datum is not present
+in tracked repository sources, do not infer that the research line must stop
+solely from local absence. When tracked state or explicit user instruction
+authorizes it, the Director may create one bounded non-promotional task for
+external primary-source search, source-acquisition design, theoretical
+calculation, mathematical construction, or experiment design. The output must
+remain draft/control until the normal audit, refutation, and gate sequence is
+complete.
+
 ## Editing Rules
 
 - Keep DDRs, AgentJobs, completions, approvals, and handoffs immutable after
