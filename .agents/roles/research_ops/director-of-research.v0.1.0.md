@@ -4,7 +4,7 @@ version: "0.1.0"
 role_name: "Director of Research"
 role_kind: "routing_control"
 authority_level: "routing_control"
-status: "active"
+status: "superseded"
 may_execute_autonomously: true
 may_create_outputs: true
 may_modify_sources: false

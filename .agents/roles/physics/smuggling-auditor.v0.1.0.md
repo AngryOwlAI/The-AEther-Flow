@@ -4,7 +4,7 @@ version: "0.1.0"
 role_name: "Smuggling Auditor"
 role_kind: "scientific_adversarial"
 authority_level: "science_draft"
-status: "active"
+status: "superseded"
 may_execute_autonomously: true
 may_create_outputs: true
 may_modify_sources: false

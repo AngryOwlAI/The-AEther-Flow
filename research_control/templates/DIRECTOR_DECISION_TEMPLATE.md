@@ -1,7 +1,7 @@
 ---
 decision_id: "DDR-YYYYMMDD-NNN"
 task_id: "RT-YYYYMMDD-NNN"
-director_version: "director-of-research@0.1.0"
+director_version: "director-of-research@0.2.0"
 decision_type: "existing_role"
 selected_role_id: ""
 selected_role_version: ""

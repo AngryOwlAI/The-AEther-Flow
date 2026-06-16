@@ -243,6 +243,104 @@ SAFE_BOUNDARY_MARKERS = (
     "open derivation",
 )
 
+LOOP_CONTROL_POLICY_ACTIVATED_AT = "2026-06-16T19:17:22Z"
+
+PHYSICS_ROLE_IDS = {
+    "ontology-formalizer",
+    "candidate-constructor",
+    "refuter",
+    "smuggling-auditor",
+}
+
+PHYSICS_JOB_REQUIRED_FORBIDDEN_SOURCE_CLASSES = {
+    "canonical_ontology_write",
+    "benchmark_promotion",
+    "candidate_reconstruction",
+    "gate_chair_verdict",
+    "completed_derivation_claim",
+    "global_theory_rejection",
+    "generated_derivative_authority",
+}
+
+PHYSICS_JOB_FORBIDDEN_WRITE_PREFIXES = (
+    "ontology/",
+    "manuscripts/",
+    "html/",
+)
+
+DISTANCE_TO_GR_REQUIRED_BURDENS = (
+    "Source ontology primitives",
+    "Source equivalence EqSrc",
+    "Finite variation robustness",
+    "Concrete negative witnesses",
+    "Observer normal/readout orbit",
+    "Effective Lorentzian metric",
+    "Universal matter coupling",
+    "Einstein equations",
+    "Benchmark promotion",
+    "Gate Chair review",
+    "Current line hard-fail",
+)
+
+LOOP_RISK_DECISION_CATEGORIES = {
+    "concrete_witness_path",
+    "source_side_irrelevance_theorem_path",
+    "bridge_facing_candidate_path",
+    "repeated_unmet_burdens_no_new_payload",
+    "scoped_obstruction",
+}
+
+BRIDGE_OR_FAIL_ROUTES = {
+    "candidate_constructor_bridge_attempt",
+    "ontology_formalizer_concrete_witness_construction",
+    "refuter_scoped_no_go_or_obstruction",
+    "gate_chair_closure_or_suspension_proposal",
+    "controlled_pause",
+}
+
+LOOP_RISK_SUCCESS_ROUTES = {
+    "continue_concrete_witness_path",
+    "continue_source_side_irrelevance_theorem_path",
+    "continue_bridge_facing_candidate_path",
+}
+
+ONTOLOGY_FORMALIZER_PAYLOAD_TYPES = {
+    "finite_concrete_source_object_witnesses",
+    "concrete_certificate_step_families",
+    "explicit_inverse_provenance_tokens",
+    "source_side_irrelevance_proof",
+    "bridge_map_candidate",
+    "theorem_with_hypotheses_and_proof",
+    "countermodel_or_obstruction",
+}
+
+ONTOLOGY_PAYLOAD_TEXT_MARKERS = (
+    "finite concrete",
+    "concrete witness",
+    "certificate-step",
+    "certificate step",
+    "inverse-provenance",
+    "inverse provenance",
+    "source-side irrelevance",
+    "bridge map",
+    "bridge candidate",
+    "theorem",
+    "countermodel",
+    "obstruction",
+    "controlled pause",
+)
+
+
+def loop_control_policy() -> dict[str, object]:
+    return {
+        "policy_id": "bridge_or_fail_loop_control_v1",
+        "activated_at": LOOP_CONTROL_POLICY_ACTIVATED_AT,
+        "distance_to_gr_required_burdens": list(DISTANCE_TO_GR_REQUIRED_BURDENS),
+        "refuter_decision_categories": sorted(LOOP_RISK_DECISION_CATEGORIES),
+        "bridge_or_fail_routes": sorted(BRIDGE_OR_FAIL_ROUTES),
+        "ontology_formalizer_payload_types": sorted(ONTOLOGY_FORMALIZER_PAYLOAD_TYPES),
+    }
+
 
 @dataclass
 class ValidationReport:
@@ -280,6 +378,52 @@ def bool_value(value: Any) -> bool:
     if isinstance(value, str):
         return value.strip().lower() == "true"
     return False
+
+
+def _clean_timestamp(value: Any) -> str:
+    text = str(value or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", text):
+        return text
+    return ""
+
+
+def timestamp_at_or_after(value: Any, threshold: str = LOOP_CONTROL_POLICY_ACTIVATED_AT) -> bool:
+    text = _clean_timestamp(value)
+    return bool(text and text >= threshold)
+
+
+def job_policy_active(job_row: dict[str, str], completion: dict[str, Any] | None = None) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+    return any(timestamp_at_or_after(value) for value in timestamps)
+
+
+def _collect_text(value: Any) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, dict):
+        text: list[str] = []
+        for child in value.values():
+            text.extend(_collect_text(child))
+        return text
+    if isinstance(value, list):
+        text = []
+        for child in value:
+            text.extend(_collect_text(child))
+        return text
+    return []
+
+
+def text_blob(*values: Any) -> str:
+    parts: list[str] = []
+    for value in values:
+        parts.extend(_collect_text(value))
+    return "\n".join(parts).lower()
 
 
 def read_csv_rows(name: str) -> list[dict[str, str]]:
@@ -545,6 +689,7 @@ def validate_agent_jobs(
                 reason = validate_relative_path(item.replace("**", "x").replace("*", "x"))
                 if reason:
                     report.error(f"{row['job_path']}: invalid {field_name} entry {item}: {reason}")
+        validate_future_physics_job_authority(report, row, job)
         if row["completion_path"]:
             completion_path = repo_path(row["completion_path"])
             if not completion_path.exists():
@@ -552,6 +697,32 @@ def validate_agent_jobs(
             else:
                 validate_completion(report, row, completion_path)
     return jobs
+
+
+def validate_future_physics_job_authority(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+) -> None:
+    if job_row.get("role_id", "") not in PHYSICS_ROLE_IDS:
+        return
+    if not job_policy_active(job_row):
+        return
+
+    path_text = job_row.get("job_path", job_row.get("job_id", ""))
+    forbidden_classes = set(_listish_values(job_contract.get("forbidden_source_classes", [])))
+    missing = sorted(PHYSICS_JOB_REQUIRED_FORBIDDEN_SOURCE_CLASSES - forbidden_classes)
+    if missing:
+        report.error(
+            f"{path_text}: future physics AgentJob missing forbidden_source_classes {missing}"
+        )
+
+    for item in _listish_values(job_contract.get("allowed_write_paths", [])):
+        normalized = item.strip().lstrip("./")
+        if any(normalized.startswith(prefix) for prefix in PHYSICS_JOB_FORBIDDEN_WRITE_PREFIXES):
+            report.error(
+                f"{path_text}: future physics AgentJob may not allow direct write path {item}"
+            )
 
 
 def _listish_values(value: Any) -> list[str]:
@@ -739,7 +910,149 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     except StrictYamlError as exc:
         report.error(f"{job_path_text}: {exc}")
         return
+    validate_loop_control_completion(report, job_row, job_contract, completion, path)
     validate_completion_resolver_snapshots(report, completion, job_contract, path)
+
+
+def validate_loop_control_completion(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+    path: Path,
+) -> None:
+    role_id = job_row.get("role_id", "")
+    if role_id not in PHYSICS_ROLE_IDS:
+        return
+    if not job_policy_active(job_row, completion):
+        return
+
+    path_text = path.relative_to(REPO_ROOT).as_posix()
+    validate_distance_to_gr_status(report, completion, path_text)
+
+    if role_id == "refuter" and "stress" in text_blob(job_contract, completion):
+        validate_refuter_loop_decision(report, completion, path_text)
+    if role_id == "ontology-formalizer":
+        validate_ontology_formalizer_payload(report, completion, path_text)
+    if role_id == "candidate-constructor" and any(
+        marker in text_blob(job_contract, completion)
+        for marker in ("bridge", "observer-readout", "observer readout", "([n]_u", "g_eff")
+    ):
+        validate_candidate_bridge_attempt(report, completion, path_text)
+
+
+def validate_distance_to_gr_status(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    matrix = completion.get("distance_to_gr_status")
+    if not isinstance(matrix, list) or not matrix:
+        report.error(f"{path_text}: future physics completion missing distance_to_gr_status matrix")
+        return
+
+    seen: dict[str, str] = {}
+    for item in matrix:
+        if not isinstance(item, dict):
+            report.error(f"{path_text}: distance_to_gr_status entries must be maps")
+            continue
+        burden = str(item.get("burden", "")).strip()
+        status = str(item.get("status", "")).strip()
+        if not burden or not status:
+            report.error(f"{path_text}: distance_to_gr_status entries require burden and status")
+            continue
+        seen[burden] = status
+    missing = [burden for burden in DISTANCE_TO_GR_REQUIRED_BURDENS if burden not in seen]
+    if missing:
+        report.error(f"{path_text}: distance_to_gr_status missing burdens {missing}")
+
+
+def validate_refuter_loop_decision(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    decision = completion.get("loop_risk_decision")
+    if not isinstance(decision, dict):
+        report.error(f"{path_text}: Refuter stress completion missing loop_risk_decision")
+        return
+    category = str(decision.get("category", "")).strip()
+    next_route = str(decision.get("next_route", "")).strip()
+    rationale = str(decision.get("rationale", "")).strip()
+    if category not in LOOP_RISK_DECISION_CATEGORIES:
+        report.error(f"{path_text}: loop_risk_decision.category is not registered: {category}")
+    allowed_routes = BRIDGE_OR_FAIL_ROUTES | LOOP_RISK_SUCCESS_ROUTES
+    if next_route not in allowed_routes:
+        report.error(f"{path_text}: loop_risk_decision.next_route is not allowed: {next_route}")
+    if not rationale:
+        report.error(f"{path_text}: loop_risk_decision.rationale is required")
+
+    if category == "repeated_unmet_burdens_no_new_payload":
+        burdens = _listish_values(decision.get("repeated_burdens", []))
+        if not burdens:
+            report.error(f"{path_text}: repeated burden decisions must list repeated_burdens")
+    if category == "scoped_obstruction" and not str(decision.get("obstruction_summary", "")).strip():
+        report.error(f"{path_text}: scoped_obstruction decisions require obstruction_summary")
+    if category in {"repeated_unmet_burdens_no_new_payload", "scoped_obstruction"}:
+        if next_route not in BRIDGE_OR_FAIL_ROUTES:
+            report.error(
+                f"{path_text}: {category} must route through bridge_or_fail escalation"
+            )
+        next_text = text_blob(completion.get("next_recommendation", ""), decision)
+        if (
+            "ontology formalizer" in next_text
+            and any(marker in next_text for marker in ("obligation packet", "generic repair", "repair packet"))
+            and not any(marker in next_text for marker in ONTOLOGY_PAYLOAD_TEXT_MARKERS)
+        ):
+            report.error(
+                f"{path_text}: bridge_or_fail escalation may not route to a generic Ontology Formalizer packet"
+            )
+
+
+def validate_ontology_formalizer_payload(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    payloads = completion.get("new_mathematical_payload")
+    if not isinstance(payloads, list) or not payloads:
+        report.error(f"{path_text}: Ontology Formalizer completion missing new_mathematical_payload")
+        return
+    accepted = False
+    for item in payloads:
+        if not isinstance(item, dict):
+            report.error(f"{path_text}: new_mathematical_payload entries must be maps")
+            continue
+        payload_type = str(item.get("payload_type", item.get("type", ""))).strip()
+        summary = str(item.get("summary", "")).strip()
+        if payload_type not in ONTOLOGY_FORMALIZER_PAYLOAD_TYPES:
+            report.error(f"{path_text}: unsupported new_mathematical_payload type {payload_type}")
+        elif summary:
+            accepted = True
+        else:
+            report.error(f"{path_text}: new_mathematical_payload entries require summary")
+    if not accepted:
+        report.error(f"{path_text}: Ontology Formalizer completion has no accepted new mathematical payload")
+
+
+def validate_candidate_bridge_attempt(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    bridge = completion.get("bridge_attempt_status")
+    if not isinstance(bridge, dict):
+        report.error(f"{path_text}: Candidate Constructor bridge completion missing bridge_attempt_status")
+        return
+    candidate_map = str(bridge.get("candidate_map", "")).strip()
+    missing_primitive = str(bridge.get("missing_primitive", "")).strip()
+    preserves_blocks = str(bridge.get("preserves_blocks", "")).strip()
+    if not candidate_map and not missing_primitive:
+        report.error(
+            f"{path_text}: bridge_attempt_status requires candidate_map or missing_primitive"
+        )
+    if not preserves_blocks:
+        report.error(f"{path_text}: bridge_attempt_status.preserves_blocks is required")
 
 
 def validate_completion_resolver_snapshots(
@@ -875,8 +1188,56 @@ def validate_handoffs(
             report.error(f"{yaml_path.name}: job_id is not registered")
         if ".local/" in yaml_path.read_text(encoding="utf-8"):
             report.error(f"{yaml_path.name}: tracked handoff YAML must not use .local/ as authority")
+        validate_loop_control_handoff(report, data, jobs, yaml_path)
     if numbers and numbers != list(range(min(numbers), max(numbers) + 1)):
         report.error("handoff IDs must be monotonic without gaps")
+
+
+def validate_loop_control_handoff(
+    report: ValidationReport,
+    data: dict[str, Any],
+    jobs: dict[str, dict[str, str]],
+    yaml_path: Path,
+) -> None:
+    if not timestamp_at_or_after(data.get("created_at", "")):
+        return
+    job_id = str(data.get("job_id", ""))
+    job = jobs.get(job_id, {})
+    if job.get("role_id", "") not in PHYSICS_ROLE_IDS:
+        return
+
+    path_text = yaml_path.relative_to(REPO_ROOT).as_posix()
+    handoff_text = text_blob(data.get("summary", ""), data.get("next_action", ""))
+    if (
+        "ontology formalizer" in handoff_text
+        and any(marker in handoff_text for marker in ("obligation packet", "generic repair", "repair packet"))
+        and not any(marker in handoff_text for marker in ONTOLOGY_PAYLOAD_TEXT_MARKERS)
+    ):
+        report.error(
+            f"{path_text}: future handoff may not route to a generic Ontology Formalizer packet"
+        )
+
+    if any(
+        marker in handoff_text
+        for marker in (
+            "same burdens persist",
+            "repeated unmet burdens",
+            "no new mathematical payload",
+            "scoped obstruction",
+        )
+    ):
+        route_markers = (
+            "candidate constructor",
+            "concrete witness",
+            "controlled pause",
+            "gate chair",
+            "scoped no-go",
+            "obstruction",
+        )
+        if not any(marker in handoff_text for marker in route_markers):
+            report.error(
+                f"{path_text}: repeated-burden or obstruction handoff must route through bridge_or_fail escalation"
+            )
 
 
 def validate_approvals(report: ValidationReport, decisions: dict[str, dict[str, str]]) -> None:

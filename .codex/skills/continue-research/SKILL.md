@@ -67,6 +67,26 @@ skills provide procedures, and gates control claim promotion.
    external materials in APA 7 format when used, remain draft/control, and
    preserve all claim-promotion gates.
 
+   For Refuter stress tests created after the bridge-or-fail loop-control
+   policy activation, the completion must classify the result as one of:
+   `concrete_witness_path`, `source_side_irrelevance_theorem_path`,
+   `bridge_facing_candidate_path`,
+   `repeated_unmet_burdens_no_new_payload`, or `scoped_obstruction`.
+   If repeated burdens or a scoped obstruction remain, the next route must be
+   one of: Candidate Constructor bridge attempt, Ontology Formalizer concrete
+   witness construction, Refuter scoped no-go or obstruction, controlled
+   pause, or a human-gated Gate Chair closure or suspension proposal. Do not
+   route back to another generic Ontology Formalizer obligation packet.
+
+   Future physics completions must include `distance_to_gr_status`. Future
+   Ontology Formalizer completions must include `new_mathematical_payload`
+   with concrete witnesses, certificate-step families, inverse-provenance
+   tokens, source-side irrelevance proof, bridge map candidate, theorem with
+   hypotheses and proof, or countermodel/obstruction. Future bridge-facing
+   Candidate Constructor completions must include `bridge_attempt_status`
+   naming either a candidate map or the missing primitive and preserving all
+   downstream promotion blocks.
+
 7. After a state-changing AgentJob completion, create the durable response
    transaction: role output artifact if any, completion record, registry updates,
    new handoff pair, and `program_state.yaml` update when state changes.

@@ -236,6 +236,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(status["latest_handoff_id"], program_state["latest_handoff_id"])
         self.assertTrue(status["checkpoint_required_after_execution"])
         self.assertEqual(status["execution_boundary"], "one bounded AgentJob per invocation")
+        self.assertEqual(status["bridge_or_fail_policy"]["policy_id"], "bridge_or_fail_loop_control_v1")
 
     def test_checkpoint_global_sync_allowlist_is_narrow(self) -> None:
         self.assertTrue(
@@ -423,6 +424,171 @@ class ResearchControlTests(unittest.TestCase):
             expires_after="AJ-OTHER",
         )
         self.assertTrue(any("provisional role must expire after its AgentJob" in error for error in report.errors))
+
+    def validate_completion_fixture(
+        self,
+        *,
+        role_id: str,
+        job_objective: str = "",
+        completion_extra: str = "",
+    ):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            job_path_text = "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml"
+            completion_path_text = "research_control/tasks/RT-TEST/jobs/completions/AJC-AJ-TEST.yaml"
+            job_path = root / job_path_text
+            completion_path = root / completion_path_text
+            job_path.parent.mkdir(parents=True, exist_ok=True)
+            completion_path.parent.mkdir(parents=True, exist_ok=True)
+            job_path.write_text(
+                "\n".join(
+                    [
+                        'job_id: "AJ-TEST"',
+                        'task_id: "RT-TEST"',
+                        'decision_id: "DDR-TEST"',
+                        f'role_id: "{role_id}"',
+                        'role_version: "0.2.0"',
+                        'status: "completed"',
+                        "requires_human_gate: false",
+                        f'objective: "{job_objective}"',
+                        "forbidden_source_classes:",
+                        '  - "canonical_ontology_write"',
+                        '  - "benchmark_promotion"',
+                        '  - "candidate_reconstruction"',
+                        '  - "gate_chair_verdict"',
+                        '  - "completed_derivation_claim"',
+                        '  - "global_theory_rejection"',
+                        '  - "generated_derivative_authority"',
+                        'resolves_signal_routing: false',
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            completion_path.write_text(
+                "\n".join(
+                    [
+                        'completion_id: "AJC-AJ-TEST"',
+                        'job_id: "AJ-TEST"',
+                        'task_id: "RT-TEST"',
+                        'completed_at: "2026-06-16T20:00:00Z"',
+                        'status: "completed"',
+                        "command_results:",
+                        '  - "validator | exit_code=0 | status=pass"',
+                        *completion_extra.splitlines(),
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            report = self.validator.ValidationReport()
+            row = {
+                "job_id": "AJ-TEST",
+                "task_id": "RT-TEST",
+                "decision_id": "DDR-TEST",
+                "role_id": role_id,
+                "role_version": "0.2.0",
+                "job_path": job_path_text,
+                "completion_path": completion_path_text,
+                "status": "completed",
+                "created_at": "2026-06-16T20:00:00Z",
+                "started_at": "2026-06-16T20:00:00Z",
+                "completed_at": "2026-06-16T20:00:00Z",
+            }
+            with mock.patch.object(self.validator, "REPO_ROOT", root):
+                self.validator.validate_completion(report, row, completion_path)
+        return report
+
+    def distance_matrix_yaml(self) -> str:
+        burdens = [
+            "Source ontology primitives",
+            "Source equivalence EqSrc",
+            "Finite variation robustness",
+            "Concrete negative witnesses",
+            "Observer normal/readout orbit",
+            "Effective Lorentzian metric",
+            "Universal matter coupling",
+            "Einstein equations",
+            "Benchmark promotion",
+            "Gate Chair review",
+            "Current line hard-fail",
+        ]
+        lines = ["distance_to_gr_status:"]
+        for burden in burdens:
+            lines.extend(
+                [
+                    f'  - burden: "{burden}"',
+                    '    status: "not discharged"',
+                ]
+            )
+        return "\n".join(lines)
+
+    def test_future_physics_completion_requires_distance_matrix(self) -> None:
+        report = self.validate_completion_fixture(role_id="smuggling-auditor")
+        self.assertTrue(any("distance_to_gr_status" in error for error in report.errors))
+
+    def test_future_refuter_stress_rejects_generic_ontology_loop_route(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.distance_matrix_yaml(),
+                "loop_risk_decision:",
+                '  category: "repeated_unmet_burdens_no_new_payload"',
+                '  next_route: "candidate_constructor_bridge_attempt"',
+                '  rationale: "The same source-equivalence burdens recurred without new payload."',
+                "  repeated_burdens:",
+                '    - "nontrivial quotient failure"',
+                'next_recommendation: "Route to Ontology Formalizer for another generic repair obligation packet."',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="refuter",
+            job_objective="Run a Refuter stress test.",
+            completion_extra=completion_extra,
+        )
+        self.assertTrue(any("generic Ontology Formalizer" in error for error in report.errors))
+
+    def test_future_ontology_formalizer_requires_new_payload(self) -> None:
+        report = self.validate_completion_fixture(
+            role_id="ontology-formalizer",
+            completion_extra=self.distance_matrix_yaml(),
+        )
+        self.assertTrue(any("new_mathematical_payload" in error for error in report.errors))
+
+    def test_future_candidate_bridge_attempt_requires_status(self) -> None:
+        report = self.validate_completion_fixture(
+            role_id="candidate-constructor",
+            job_objective="Construct an observer-readout bridge candidate.",
+            completion_extra=self.distance_matrix_yaml(),
+        )
+        self.assertTrue(any("bridge_attempt_status" in error for error in report.errors))
+
+    def test_future_physics_job_rejects_direct_ontology_write(self) -> None:
+        report = self.validator.ValidationReport()
+        row = {
+            "job_id": "AJ-TEST",
+            "role_id": "refuter",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "created_at": "2026-06-16T20:00:00Z",
+            "started_at": "",
+            "completed_at": "",
+        }
+        self.validator.validate_future_physics_job_authority(
+            report,
+            row,
+            {
+                "allowed_write_paths": ["ontology/tex/example.tex"],
+                "forbidden_source_classes": [
+                    "canonical_ontology_write",
+                    "benchmark_promotion",
+                    "candidate_reconstruction",
+                    "gate_chair_verdict",
+                    "completed_derivation_claim",
+                    "global_theory_rejection",
+                    "generated_derivative_authority",
+                ],
+            },
+        )
+        self.assertTrue(any("may not allow direct write path" in error for error in report.errors))
 
 
 if __name__ == "__main__":
