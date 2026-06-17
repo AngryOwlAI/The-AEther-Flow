@@ -1,0 +1,49 @@
+artifact_id: "85-RESP-LC-THEORETICAL-CONTINUATION-SELECTOR-DECISION"
+task_id: "RT-20260614-044"
+job_id: "AJ-RT-20260614-044-001"
+role_id: "theoretical-continuation-selector"
+status: "completed"
+artifact_type: "theoretical_decision_output"
+selected_next_packet_type: "source_side_irrelevance_theorem"
+decision_basis:
+  summary: "The retained exact observer/readout tuple leaves sign scale and response-token choices underdetermined. A source-side irrelevance theorem is the most conservative next packet because it tests whether those freedoms can be quotiented away while preserving a nondegenerate response burden before introducing a selector primitive."
+  premises:
+    - "RT-20260614-042 supplies a scoped underdetermination theorem for Resp_lc from the retained tuple."
+    - "RT-20260614-043 stress-tested the theorem and found no already-tracked selector or irrelevance theorem."
+    - "The current policy forbids generic future controlled pause when a theoretical packet can be selected."
+    - "At least one non-promotional theoretical packet is available."
+  ranked_options:
+    - packet_type: "source_side_irrelevance_theorem"
+      rank: 1
+      rationale: "Lowest-authority test; it can succeed only with explicit quotient hypotheses and preservation proof."
+    - packet_type: "source_side_selector_primitive"
+      rank: 2
+      rationale: "Useful fallback if irrelevance fails but adds a new primitive candidate before quotient-convention pressure is tested."
+    - packet_type: "distinct_scoped_no_go_question"
+      rank: 3
+      rationale: "Useful after an attempted irrelevance theorem sharpens the failure target."
+    - packet_type: "bounded_theoretical_calculation"
+      rank: 4
+      rationale: "Should be nested inside a selected theorem target rather than routed as a standalone packet."
+    - packet_type: "concrete_resp_lc_witness"
+      rank: 5
+      rationale: "Premature under the current obstruction without a selector or irrelevance theorem."
+    - packet_type: "human_gated_ontology_change_required"
+      rank: 6
+      rationale: "Not required because a draft/control theorem packet is available."
+theoretical_method: "Create a bounded Ontology Formalizer theorem packet that defines source-side sign scale and response-token equivalence relations; states quotient hypotheses; proves or refutes preservation of a nondegenerate metric-response burden without target import; and reports a concrete theorem or obstruction."
+preserves_claim_blocks: "No canonical Resp_lc adoption M_src adoption g_eff matter coupling Einstein equations Retain_H Gen_H candidate reconstruction canonical ontology edit benchmark promotion Gate Chair review completed-derivation language or global theory rejection is authorized."
+requires_human_gate: false
+human_gate_reason: ""
+next_recommended_agent_role: "ontology-formalizer@0.2.0"
+next_recommended_packet_objective: "Formulate and test a source-side irrelevance theorem for Resp_lc sign scale and response-token choices from tracked exact source data."
+parent_child_synthesis:
+  child_outputs:
+    - "research_control/tasks/RT-20260614-044/artifacts/child_phys_math_resp_lc_theoretical_continuation_selector.yaml"
+    - "research_control/tasks/RT-20260614-044/artifacts/child_phys_phil_resp_lc_theoretical_continuation_selector.yaml"
+  conflict_review: "research_control/tasks/RT-20260614-044/artifacts/parent_conflict_review_resp_lc_theoretical_continuation_selector.yaml"
+  fusion_notes: "research_control/tasks/RT-20260614-044/artifacts/parent_fusion_notes_resp_lc_theoretical_continuation_selector.md"
+limitations:
+  - "The irrelevance theorem is not proved in this selector packet."
+  - "A future failure of the irrelevance theorem may justify a selector primitive or a sharper scoped no-go packet."
+  - "The selection remains draft/control and non-promotional."
