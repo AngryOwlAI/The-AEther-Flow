@@ -1,6 +1,6 @@
 # Roles And Skills
 
-Roles define who may do project work; skills define governed procedures for doing that work inside the repository.
+Roles define who may do project work. Repo-local skills define governed procedures for doing that work. Tool availability alone is not project authority.
 
 ## Source Binding
 
@@ -8,60 +8,71 @@ Roles define who may do project work; skills define governed procedures for doin
 - **Related HTML:** `html/roles-and-skills-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Catalog Model
 
-The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by AEther-Flow. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skill availability is not project authority. Documentation Curator v0.9.0 owns subject-first explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Student and Teacher support the teaching loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; physics roles remain separate from documentation and project-system work.
+The catalog has three layers. Active roles are the current operating contracts. Status-defined and superseded roles remain visible for audit history or human-gated definition, but they are not automatically available for new work. Repo-local skills are front doors for governed procedures such as research continuation, project-system improvement, memory regeneration, visual explainers, teaching explainers, ontology promotion, and grill sessions.
 
-## What This Feature Does
+```mermaid
+flowchart TD
+  Work["Requested work"] --> Role["Registered or task-local role"]
+  Role --> Job["One AgentJob"]
+  Job --> Skill["Repo-local skill procedure"]
+  Skill --> Outputs["Allowed outputs"]
+  Outputs --> Validators["Validators and receipts"]
+  GlobalTools["Global tools and plugins"] --> Context["Operator context only"]
+  Context -. "not project authority" .-> Work
+```
 
-Roles define authority and skills define governed workflows.
+## Student Questions And Teacher Answers
 
-## Why The Project Needs It
+**Student:** What is the difference between a role and a skill?
 
-The project needs the catalog because available tools and actual permission are different things.
+**Teacher:** A role carries authority for a bounded job. A skill describes a governed procedure or workflow. A role may use a skill, but the skill does not replace the AgentJob allowlist or claim boundary.
 
-## How It Works
+**Student:** Why keep superseded roles?
 
-The role registry lists active, status-defined, and superseded roles; execution-role records bind roles to tasks; repo-local skills define procedures for continuation, project-system improvement, memory, documentation, and teaching.
+**Teacher:** Old task records must remain auditable. Superseded role contracts explain historical execution without authorizing new work under old semantics.
 
-## What It Is Not
+**Student:** Are global Codex plugins project requirements?
 
-It is not a permission grant, not a role registration shortcut, not proof that global tools are project authority, and not a reason to reuse superseded permissions.
+**Teacher:** Not unless mirrored into `.codex/skills/` or registered in project sources. Otherwise they are operator-context aids.
 
-## Diagram Reading Guide
+## Active Role Families
 
-The useful structure is the active-role map, audit states, repo-local skill groups, and operator-context boundary.
+- **Routing and control:** Director of Research and Project-System Director select bounded work.
+- **Project-system maintenance:** Project-Control Maintainer, Validator Engineer, Memory-System Maintainer, and Process Integrity Auditor repair machinery under explicit boundaries.
+- **Documentation:** Documentation Curator writes source-backed explainers, teaching packets, GitHub-facing Markdown, and HTML derivatives; Documentation Student and Documentation Teacher support the teaching loop without writing tracked docs directly.
+- **Physics work:** Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector, and Gate Chair each carry science-lane constraints.
 
-## Source Authority
+## Skill Families
 
-Authority comes from the agent role registry, execution-role registry, role contracts, schemas, and repo-local skill contracts.
+- **Continuation and integration:** `continue-research`, `improve-project-system`, `user-modified-project`.
+- **Memory and derivatives:** `project-memory-system`, `markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`.
+- **Explanatory surfaces:** `html-visual-explainer`, `visual-explainer`, `aether-teaching-explainer`, `mermaid-documentation`.
+- **Promotion and review:** `ontology-promotion`, `grill-me`, `grill-with-docs`.
 
-## External AI Navigation Card
+## Boundary Rule
+
+Before invoking a skill, identify the role and AgentJob that authorize the work. Before relying on a role, inspect the registry row and role contract. Before treating a helper tool as project authority, check whether it is registered in repo-local sources.
+
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- identify likely role and skill surfaces to inspect;
+- distinguish role authority from skill procedure;
+- avoid confusing external tools with project contracts.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- inspect `registries/AGENT_ROLE_REGISTRY.csv`;
+- inspect any task-local execution-role record;
+- follow the selected skill only inside its authorized workflow.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Check the active role version before routing a job.
-- Use repo-local skills for governed workflows.
-- Treat external tools as operator aids unless registered.
+- use a superseded role for new work;
+- infer permission from a plugin name;
+- bypass AgentJob boundaries with a convenient skill.
 
 ## All Source Materials
 

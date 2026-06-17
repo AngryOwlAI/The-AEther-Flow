@@ -1,6 +1,6 @@
 # Project Overview
 
-AEther-Flow is a dual research program: one lane tests a speculative Æther-flow interpretation against ordinary exact general relativity, and the other lane builds the agent-control machinery that keeps that research auditable.
+AEther-Flow is both a speculative physics research program and a controlled AI research-agent system. The physics lane asks whether an Æther-flow substrate can recover ordinary relativistic geometry. The agent lane keeps that inquiry bounded, source-backed, auditable, and honest about what has not been derived.
 
 ## Source Binding
 
@@ -8,41 +8,39 @@ AEther-Flow is a dual research program: one lane tests a speculative Æther-flow
 - **Related HTML:** `html/project-overview-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## The Project In One Paragraph
 
-AEther-Flow is organized around two coupled systems. The physics system keeps ordinary exact general relativity as the observable benchmark while treating any first-principles derivation from Æther or Æther-flow substrate structure as open until a gated source-side derivation succeeds. The AI research-agent system supplies the operating discipline: tracked state, Director decisions, bounded AgentJobs, role contracts, validators, registries, handoffs, project-system improvement, Documentation Curator teaching support, and generated explanatory surfaces. The project needs both systems because speculative physics can drift into unsupported certainty unless every proposal, refutation, repair, and negative result remains source-bound and auditable. The overview functions as the entry map for that structure: physics terms route to ontology, claim gates, and the derivation roadmap; workflow questions route to research system, role routing, research control, and project-system improvement; authority and documentation questions route to source authority, roles and skills, memory, technical requirements, and the Documentation Curator teaching loop.
+The project studies a proposed deeper substrate vocabulary, called Æther and Æther-flow, while keeping ordinary exact general relativity as the observable benchmark. That does not mean the substrate derivation has succeeded. It means the repository has a disciplined target: recover metric behavior, causal structure, clock behavior, same-metric matter coupling, invariance, and Einsteinian closure from source-side assumptions or preserve the failure clearly. The AI research-agent system exists because this work produces many drafts, refutations, validators, role records, generated explainers, and memory surfaces. Those artifacts are useful only if their authority is explicit.
 
-## What This Feature Does
+## Two Systems That Must Not Be Confused
 
-AEther-Flow combines a speculative physics program with a governed AI research-agent workflow. The physics lane asks whether an Æther-flow substrate can recover exact-GR observables without smuggling in the target. The agent lane makes every proposal, audit, repair, refutation, documentation update, and generated derivative traceable through roles, registries, validators, and task records.
+The physics system supplies the question: can the project move from source-side Æther-flow structure to the exact-GR benchmark without importing the target geometry by hand?
 
-## Why The Project Needs It
+The research-control system supplies the method: resolve tracked state, select one bounded AgentJob, bind it to a role and claim boundary, validate outputs, preserve negative results, and hand off the next state.
 
-The project needs a front-door model because the repository deliberately contains polished explanations, generated artifacts, source specs, registries, and unfinished research artifacts. Without a two-lane map, a reader can mistake explanation for proof, generated output for authority, or workflow completion for scientific acceptance.
+```mermaid
+flowchart TD
+  Physics["Physics lane<br/>ontology, benchmark, derivation burden"] --> Target["Recover or hard-fail<br/>a route to ordinary GR"]
+  Agents["Agent lane<br/>roles, jobs, validators, memory"] --> Target
+  Target --> Gates["Claim gates<br/>promotion only by authority"]
+  Gates --> Memory["Preserved sources<br/>registries and handoffs"]
+```
 
-## How It Works
+## Student Questions And Teacher Answers
 
-Start with the physics lane for ontology, benchmark status, derivation burden, claim gates, and the Distance-to-GR roadmap. Move to the agent lane for Director decisions, AgentJobs, role routing, validators, project-system improvement, documentation impact, teaching support, memory, and technical operation. Use source authority to decide which files can support a claim before relying on any derived surface.
+**Student:** What is the project trying to do in plain language?
 
-## Common questions
+**Teacher:** It is testing whether a substrate picture can explain relativistic geometry while using a controlled agent workflow to keep claims, sources, and failures separated. The source basis is `README.md` and `AGENTS.md`. The boundary is that no overview can promote the derivation.
 
-- What are the two main lanes? The physics lane and the AI research-agent lane.
-- What is accepted today? Ordinary exact GR is the observable benchmark; the substrate derivation remains open.
-- Why so much control machinery? It prevents documentation, workflow, or generated output from becoming scientific authority.
+**Student:** Why are there two lanes instead of one research folder?
 
-## Common misunderstandings
+**Teacher:** The physics lane asks the scientific question. The agent lane governs how work is selected, constrained, validated, and recorded. The source basis is `AGENTS.md` and `research_control/README.md`. The boundary is that workflow completion is not a physics result.
 
-- A generated explanation is not a proof.
-- A completed AgentJob is not a Gate Chair verdict.
-- A memory search result is not stronger than the source row it points to.
+**Student:** What should a new reader trust first?
 
-## What It Is Not
+**Teacher:** Trust registered TeX for science-bearing derivational claims, registries for provenance and routing, and registered Markdown for front-door and control guidance. Generated HTML, GitHub-facing Markdown, wiki notes, PDFs, and `.local/` caches are reading and retrieval aids.
 
-It is not a completed GR derivation, not a claim-promotion mechanism, not a replacement for registries or source files, and not a license to treat generated explainers as authority.
-
-## Diagram Reading Guide
-
-The hub diagram shows navigation among drilldowns. The dual-track diagram shows the physics and AI research-agent lanes converging on a controlled derive-or-hard-fail objective; it does not assert that the substrate derivation has succeeded.
+## Research Atlas
 
 <!-- mermaid-diagram-id: research-atlas-hub -->
 ```mermaid
@@ -84,39 +82,39 @@ flowchart TD
   Memory --> SharedTarget
 ```
 
-## Source Authority
+## Common questions
 
-Authority comes from the root guidance, ontology sources, research-control guidance, and registries. Generated HTML and GitHub-facing Markdown remain orientation surfaces.
+- **Is this a completed physics theory?** No. Exact GR is the benchmark; the substrate derivation remains open until claim gates authorize stronger status.
+- **Why so many registries and task records?** They prevent generated explanations, drafts, and workflow completions from replacing source authority.
+- **Can an AI agent change project truth by writing a polished explanation?** No. Explanations orient readers; registered sources and control records decide authority.
+- **Where should a reader begin?** Start with ontology for the physics picture, claim gates for status, research system for workflow, and source authority before citing any generated surface.
 
-## External AI Navigation Card
+## Common misunderstandings
+
+- A successful validator run is evidence of repository consistency, not proof of a physical derivation.
+- A generated explainer can be clearer than the source, but it is not more authoritative than the source.
+- A completed AgentJob records bounded work; it does not become a Gate Chair decision.
+- A negative result is not wasted work. It preserves an obstruction so the project does not replay the same route blindly.
+
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- orient yourself before reading the source files;
+- identify which registry, source spec, role, or task record to inspect next;
+- summarize the project structure without changing claim status.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- read `AGENTS.md`;
+- inspect the relevant source file and registry row;
+- use the appropriate research-control or project-system workflow;
+- keep generated derivatives subordinate to registered sources.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Read the ontology drilldown for the physics vocabulary.
-- Read the GR derivation roadmap before describing milestone or Distance-to-GR status.
-- Read claim gates before accepting derivation-status language.
-- Read research system, role routing, and project-system improvement before modifying controlled work.
-- Read the Documentation Curator teaching loop before adding teaching-enriched explanations.
-- Read source authority before citing generated artifacts.
+- do not claim the Æther-flow derivation is complete;
+- treat generated HTML, wiki notes, PDFs, GitHub-facing Markdown, or `.local/` files as independent authority;
+- bypass claim gates, validators, or AgentJob boundaries.
 
 ## All Source Materials
 

@@ -1,6 +1,6 @@
 # Memory System
 
-The memory system turns registered sources and registries into searchable, generated, noncanonical reading surfaces.
+The memory system turns registered sources and registries into searchable, generated reading surfaces while keeping the registries and sources in charge.
 
 ## Source Binding
 
@@ -8,40 +8,36 @@ The memory system turns registered sources and registries into searchable, gener
 - **Related HTML:** `html/memory-system-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Source-First Memory
 
-The memory system is the repository’s source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system connects source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving provenance.
-
-## What This Feature Does
-
-The memory system records and regenerates source-backed retrieval surfaces.
-
-## Why The Project Needs It
-
-The project needs it because long-running research requires fast lookup without losing source authority.
-
-## How It Works
-
-Source and registry edits feed bootstrap, generated wiki notes, file object rows, semantic extracts, local vault sync, SQLite indexing, and query tools.
+The memory system is not a second truth store. It is a retrieval and derivative-generation layer. Registered Markdown, TeX, PDF, and HTML rows feed canonical CSV registries. Bootstrap uses those rows to refresh generated wiki notes, file-object rows, relationship metadata, semantic extracts, Obsidian vault files, SQLite lookup surfaces, and source hashes. A reader can search quickly, but any claim still has to return to the registered source or registry row.
 
 ## Workflow Step Inspector
 
 1. Edit a registered source or registry row.
-2. Run memory bootstrap to refresh object rows, hashes, relationships, and generated-output bindings.
+2. Run memory bootstrap to refresh object rows, hashes, relationships, and generated outputs.
 3. Regenerate tracked wiki notes and indexes from the registry spine.
 4. Refresh file-object and semantic registries for queryable memory.
-5. Sync local Obsidian and SQLite retrieval surfaces when the workflow needs local lookup.
+5. Sync local Obsidian and SQLite retrieval surfaces when the workflow needs them.
 6. Query memory only as an evidence-finding aid, not as independent authority.
 7. Validate bootstrap, registries, wiki outputs, and documentation surfaces.
-8. Inspect canonical sources before using retrieved material in a new project change.
+8. Inspect canonical sources before using retrieved material in a new project claim or control change.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-It is not competing canonical wikis, not independent claim authority, and not a way for `.local` caches to override tracked state.
+**Student:** Why not just search the repo?
 
-## Diagram Reading Guide
+**Teacher:** Search finds text. The memory system also preserves object identity, authority status, source hashes, generated-output links, and relationship metadata. That makes retrieval auditable.
 
-The surface map shows the CSV spine feeding tracked and local retrieval. The regeneration flow shows source edit, bootstrap, registries, wiki, semantic extraction, vault, index, query, and validation.
+**Student:** Are wiki notes canonical?
+
+**Teacher:** No. They are tracked generated derivatives. They are useful for navigation and summarization, but source files and registries remain authority.
+
+**Student:** What does `.local/` mean here?
+
+**Teacher:** `.local/` contains scratch or machine-local retrieval aids such as semantic extracts, Obsidian vaults, and SQLite indexes. It must not override tracked control state.
+
+## Memory Surface Map
 
 <!-- mermaid-diagram-id: memory-surface-map -->
 ```mermaid
@@ -72,36 +68,24 @@ flowchart TD
   Query --> Validate["make validate-memory"]
 ```
 
-## Source Authority
-
-Authority comes from format registries, project-memory-system, and source files; generated retrieval views remain subordinate.
-
-## External AI Navigation Card
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- understand how generated memory surfaces are built;
+- locate registry rows and source hashes;
+- use retrieval results as a path back to sources.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- inspect the registered source or registry row;
+- run bootstrap after source or registry changes;
+- validate generated surfaces rather than hand-editing them.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Run bootstrap after source changes.
-- Use source authority to decide which retrieved object can support a claim.
-- Use technical requirements for setup tiers.
+- treat wiki notes as independent authority;
+- let `.local/` search output override tracked files;
+- use memory retrieval to promote physics claims.
 
 ## All Source Materials
 

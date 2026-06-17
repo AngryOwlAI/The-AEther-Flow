@@ -1,6 +1,6 @@
 # Claim Gates
 
-Claim gates keep ontology, candidate work, workflow completion, refutation, and accepted science in separate states.
+Claim gates keep hypotheses, source-side candidates, workflow progress, failed routes, and accepted physics from collapsing into one status.
 
 ## Source Binding
 
@@ -8,21 +8,9 @@ Claim gates keep ontology, candidate work, workflow completion, refutation, and 
 - **Related HTML:** `html/claim-gates-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Why Claim Gates Exist
 
-Claim gates are the project’s control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into stronger accepted status. Their function is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because polished explainers, completed tasks, and preserved repair packets can make candidate ideas look more settled than they are. A visual explanation, validator pass, or completed AgentJob cannot authorize science claims by itself. Claim gates also protect negative results by preserving why a route is blocked, refuted, underdetermined, or still conjectural.
-
-## What This Feature Does
-
-Claim gates define the allowed status transitions for physics statements and research outcomes.
-
-## Why The Project Needs It
-
-The project needs them because speculative ontology, exact-GR benchmark use, candidate derivations, repairs, and refutations can otherwise blur into unsupported acceptance.
-
-## How It Works
-
-They bind claims to source evidence, role authority, registry rows, gate review, validation receipts, and preserved negative-result records.
+AEther-Flow intentionally works near speculative physics. That makes status discipline essential. A candidate construction may be useful without being accepted. A refutation may block one route without rejecting the whole ontology. A generated explanation may help readers without authorizing a scientific claim. Claim gates preserve those distinctions by tying status changes to source evidence, role authority, human gates when needed, registries, and completion records.
 
 ## Workflow Step Inspector
 
@@ -35,13 +23,21 @@ They bind claims to source evidence, role authority, registry rows, gate review,
 7. Record accepted, blocked, or negative-result status in the relevant control evidence.
 8. Prevent generated docs, validator passes, or completed jobs from promoting claims by presentation alone.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-They are not ordinary formatting checks, not proof by completion, and not a way for generated pages or agents to promote science claims.
+**Student:** Is a completed research task an accepted claim?
 
-## Diagram Reading Guide
+**Teacher:** No. Completion records show what a bounded job did and which validators ran. Accepted physics status requires the appropriate gate and source evidence. The source basis is `CLAIM_BOUNDARY_REGISTRY.csv`, `research_control/README.md`, and the Gate Chair role contract.
 
-The state machine shows how framing, candidate, audit, repair, refutation, blocked, accepted, and negative-result states differ. The preservation loop shows why failed routes remain useful memory.
+**Student:** Why preserve negative results?
+
+**Teacher:** A negative result prevents repetition and clarifies where a route failed. It can narrow the search without pretending that every related route is impossible.
+
+**Student:** What does exact-GR benchmark adoption mean?
+
+**Teacher:** Ordinary GR is the observable target behavior. It is not proof that the Æther-flow source ontology has derived that behavior.
+
+## Claim-State Diagrams
 
 <!-- mermaid-diagram-id: claim-gate-state-machine -->
 ```mermaid
@@ -73,36 +69,28 @@ flowchart TD
   Future --> Attempt
 ```
 
-## Source Authority
+## What Claim Gates Do Not Do
 
-Authority comes from claim-boundary rows, research-control guidance, TeX registry evidence, and the Gate Chair role contract when human-gated review is authorized.
+They do not prove a candidate by making its documentation clearer. They do not let a validator pass become a theorem. They do not let generated HTML or GitHub Markdown promote a claim. They do not erase negative results because a later page is more polished.
 
-## External AI Navigation Card
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- identify the relevant claim-status vocabulary;
+- find the claim-boundary and task evidence to inspect;
+- explain why benchmark adoption and derivation success are different.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- inspect claim-boundary rows;
+- inspect task artifacts and completion evidence;
+- preserve blocked, refuted, and negative-result statuses accurately.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Read the ontology drilldown to understand what is being gated.
-- Read research system to see how task artifacts are preserved.
-- Inspect claim-boundary registry rows before repeating a derivation-status phrase.
+- do not claim the Æther-flow derivation is complete;
+- promote a candidate from prose quality alone;
+- treat generated derivatives as gate evidence.
 
 ## All Source Materials
 

@@ -1,6 +1,6 @@
 # Research-Control System
 
-The research-control system governs changes to the project itself: roles, skills, validators, documentation, generated derivatives, and checkpoint boundaries.
+The research-control system is the governance layer that decides how project-system work and research-continuation work may proceed without blurring authority.
 
 ## Source Binding
 
@@ -8,21 +8,9 @@ The research-control system governs changes to the project itself: roles, skills
 - **Related HTML:** `html/research-control-system-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## What It Controls
 
-The research-control system is the repository’s governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, teaching Q&A packets, and generated derivatives remain aligned. It matters because AEther-Flow deliberately combines scientific exploration with agent workflow development. Without control records, generated HTML, GitHub-facing Markdown, teaching packets, validators, and role contracts could drift or be mistaken for scientific authority. The system makes improvements reversible, auditable, and separate from physics claim promotion.
-
-## What This Feature Does
-
-The research-control system governs project-system changes and research-continuation boundaries.
-
-## Why The Project Needs It
-
-The project needs it because improving roles, skills, validators, documentation, and generated surfaces can accidentally change authority if not routed and receipted.
-
-## How It Works
-
-It classifies changes, resolves advisory routing, binds one AgentJob, records documentation impact, regenerates derivatives from sources, runs validators, and blocks checkpointing when boundaries fail.
+The system controls state-changing work: project-system repairs, documentation synchronization, validator changes, role/schema changes, memory-tooling updates, and physics continuation. It separates those lanes so a documentation task does not promote science, a validator repair does not rewrite ontology, and a research continuation does not bypass tracked state.
 
 ## Workflow Step Inspector
 
@@ -31,17 +19,25 @@ It classifies changes, resolves advisory routing, binds one AgentJob, records do
 3. Bind the work to one bounded AgentJob and execution role.
 4. Update canonical source specs or project-control sources before derivatives.
 5. Record documentation impact when project machinery changes.
-6. Regenerate memory, registry, HTML, wiki, or GitHub-facing derivatives through the approved path.
-7. Run the validator chain: teaching QA, depth lint, unit tests, bootstrap, documentation-surface audit, documentation impact, research-control, and diff checks as applicable.
-8. Treat checkpoint readiness as validator-backed authority-boundary coherence, not as advisory resolver output alone.
+6. Regenerate memory, registry, HTML, wiki, or GitHub-facing derivatives through approved tooling.
+7. Run the validator chain: teaching QA, depth lint, unit tests, bootstrap, documentation-surface audit, documentation-impact validation, research-control validation, and diff checks where required.
+8. Treat checkpoint readiness as validator-backed authority-boundary evidence, not as a scientific result.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-It is not physics continuation, not a broad rewrite license, not direct HTML authority, and not a substitute for human-gated policy decisions.
+**Student:** Why is documentation work controlled?
 
-## Diagram Reading Guide
+**Teacher:** Documentation can affect how humans and agents interpret authority. If a generated explainer suggests a stronger claim than the sources allow, it becomes project-system risk. The source basis is `AGENTS.md`, `research_control/README.md`, and the Documentation Curator role.
 
-The validation-flow diagram shows source update, derivative generation, Mermaid parity, bootstrap, documentation impact, research-control validation, diff gate, and checkpoint. The boundary map shows classifier, role, job, allowed writes, forbidden surfaces, validators, receipts, and registries.
+**Student:** Is the resolver a hard command?
+
+**Teacher:** No. The project-improvement resolver is advisory routing state. Hard checkpoint gates are validator failures and authority-boundary violations.
+
+**Student:** What protects generated explainers?
+
+**Teacher:** Source specs, renderer contracts, source-basis hashes, Mermaid parity checks, documentation-impact receipts, and research-control validation keep derivatives aligned with registered sources.
+
+## Validation Flow
 
 <!-- mermaid-diagram-id: research-control-validation-flow -->
 ```mermaid
@@ -70,36 +66,32 @@ flowchart TD
   Receipt --> Registry["Control registries updated"]
 ```
 
-## Source Authority
+## Failure Modes It Prevents
 
-Authority comes from AGENTS guidance, research-control guidance, improve-project-system, role contracts, validator scripts, and design contracts.
+- A generated page becoming source authority.
+- A role writing outside its AgentJob allowlist.
+- A project-system repair changing physics claim status.
+- A physics continuation stopping too early because local data is absent when tracked state authorizes a bounded next packet.
+- A repeated workflow problem staying informal instead of becoming a registered project-improvement signal.
 
-## External AI Navigation Card
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- understand which validation path protects a change;
+- identify the source files and scripts that govern control state;
+- distinguish advisory routing from hard gates.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- run the classifier or resolver only in the correct workflow context;
+- inspect the AgentJob and documentation-impact requirements;
+- validate with the current command chain before checkpointing.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Use continue-research for physics continuation.
-- Use improve-project-system for project machinery.
-- Use the teaching explainer only inside an authorized bounded job.
+- treat resolver output as a physics verdict;
+- bypass documentation-impact receipts after project-system changes;
+- hand-edit generated wiki notes or tracked HTML derivatives as authority.
 
 ## All Source Materials
 
