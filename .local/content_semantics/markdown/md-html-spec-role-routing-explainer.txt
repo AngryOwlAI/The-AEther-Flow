@@ -12,6 +12,7 @@ source_materials:
   - "registries/AGENT_ROLE_REGISTRY.csv"
   - "registries/ROLE_EXECUTION_REGISTRY.csv"
   - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
   - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
 claim_boundary: "Human-only role-routing visualization. It explains existing role selection and execution-role constraints without changing role authority, routing behavior, schemas, validators, or scientific claim status."
 human_visual_only: true
@@ -48,6 +49,8 @@ execution-role record, and how the system distinguishes:
 - registered role used directly,
 - `task_overlay` for a bounded task-specific delta,
 - `one_job_provisional_role` for a temporary role or distinct one-job identity.
+- optional `role_decomposition` inside an AgentJob as analytical perspective
+  synthesis, not role authority expansion.
 
 The page must not change role contracts or routing rules.
 
@@ -70,6 +73,9 @@ The page must not change role contracts or routing rules.
 - High-level model: why role routing exists.
 - Operational model: problem type -> authority class -> role candidates ->
   selected role -> execution-role record -> AgentJob.
+- Decomposition boundary: if `parent_child_parallel_synthesis` is present, it
+  inherits the existing execution-role record and preserves the same AgentJob
+  boundary.
 - Low-level evidence model: role registry, execution-role registry, Director
   decision registry, schema, and task-local role record.
 - Workflow step inspector for role selection.
@@ -107,7 +113,10 @@ flowchart TD
   Execution --> Removed["Removed permissions"]
   Execution --> Expanded["Explicit expansions"]
   Execution --> Expiry["Expires after AgentJob"]
+  Execution --> Decomp["Optional internal<br/>role_decomposition"]
+  Decomp --> Perspectives["Parent and child<br/>perspectives"]
   Allowed --> Job["AgentJob boundary"]
+  Perspectives --> Job
 ```
 
 ## Source-Backed Summary
@@ -121,18 +130,21 @@ the correct registered role or task-local execution overlay. Its functionality
 is to connect task state, Director decisions, base role contracts, provisional
 or overlay authority, and registry evidence so an agent knows who owns the
 change, what paths may be written, which validators are required, and when the
-job must stop. This matters because the repository contains physics roles,
-documentation roles, validator roles, memory roles, and project-control roles
-with different authority levels; collapsing them into one generic helper would
-risk claim promotion, direct derivative edits, or untracked control changes.
-Role routing fits the overall project by making authority selection itself
-auditable before implementation begins.
+job must stop. It also explains why optional parent-child synthesis is a
+decomposition of analytical perspective inside the selected AgentJob, not a new
+role class or permission expansion. This matters because the repository
+contains physics roles, documentation roles, validator roles, memory roles, and
+project-control roles with different authority levels; collapsing them into one
+generic helper would risk claim promotion, direct derivative edits, or
+untracked control changes. Role routing fits the overall project by making
+authority selection itself auditable before implementation begins.
 
 Summary source basis:
 
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `registries/ROLE_EXECUTION_REGISTRY.csv`
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
 
 ## Required Content Blocks
@@ -140,5 +152,5 @@ Summary source basis:
 - subject_summary: Summarize role routing as authority selection, why the project needs it, how it fits bounded AgentJobs, and which declared sources ground the summary.
 - authority_classification: A completed explanation of how task authority class separates physics work, project-control maintenance, documentation curation, validation, memory maintenance, and process auditing before a role is selected.
 - director_routing: A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions.
-- execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence.
-- overlay_provisional_boundary: A matrix explaining registered roles, task overlays, and one-job provisional roles, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.
+- execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, optional role decomposition inheritance, expiry, and validation evidence.
+- overlay_provisional_boundary: A matrix explaining registered roles, task overlays, one-job provisional roles, and parent-child analytical decomposition, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.

@@ -39,17 +39,16 @@ The loop diagram shows how state, decisions, jobs, optional internal synthesis, 
 <!-- mermaid-diagram-id: research-system-loop -->
 ```mermaid
 flowchart TD
-  State["Tracked state and latest handoff"] --> Director["Director decision"]
-  Director --> Job["Bounded AgentJob"]
+  State["Tracked state or signal"] --> Director["Director decision"]
+  Director --> Job["One bounded AgentJob"]
   Job --> Role["Execution role"]
   Role --> Decomposition["Optional internal<br/>parent-child synthesis"]
   Decomposition --> Outputs["Allowed outputs"]
-  Outputs --> Validators["Validators and diff gates"]
+  Outputs --> Validators["Validators and gates"]
   Validators --> Completion["Completion record"]
   Completion --> Handoff["Next handoff"]
   Handoff --> State
-  Validators --> Registry["Registry updates"]
-  Registry --> State
+  Validators --> Registry["Control registries"]
 ```
 
 <!-- mermaid-diagram-id: agentjob-lifecycle -->

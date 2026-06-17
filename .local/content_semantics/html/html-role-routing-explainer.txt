@@ -3,10 +3,11 @@ workflow_lifecycle
 Role Routing
 Explain how the project decides which AI agent role executes a bounded task, how the execution-role contract constrains that role, and how routing avoids authority drift.
 Summary of Role Routing
-Role routing is the project's decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its functionality is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. This matters because the repository contains physics roles, documentation roles, validator roles, memory roles, and project-control roles with different authority levels; collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes. Role routing fits the overall project by making authority selection itself auditable before implementation begins.
+Role routing is the project's decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its functionality is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. It also explains why optional parent-child synthesis is a decomposition of analytical perspective inside the selected AgentJob, not a new role class or permission expansion. This matters because the repository contains physics roles, documentation roles, validator roles, memory roles, and project-control roles with different authority levels; collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes. Role routing fits the overall project by making authority selection itself auditable before implementation begins.
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
+.agents/schemas/AGENT_JOB_SCHEMA.md
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
 Coverage
 Diagrams
@@ -46,7 +47,7 @@ registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 README.md
 AGENTS.md
-A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence. In reader-facing terms, this section identifies the subject of
+A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, optional role decomposition inheritance, and validation evidence. In reader-facing terms, this section identifies the subject of
 Role Routing
 , explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
 registries/AGENT_ROLE_REGISTRY.csv
@@ -60,7 +61,7 @@ AGENTS.md
 README.md
 research_control/README.md
 research_control/AGENTS.md
-There are three routing forms. A registered role is reusable policy with a versioned contract. A task overlay temporarily changes authority for one known job while preserving the base role. A one-job provisional role handles an unusual bounded need and expires after the job. The matrix matters because flexibility without expiry becomes hidden policy. If the same provisional role pattern recurs, the project treats it as a project-system signal for possible registration rather than letting habit create authority. The legitimate claim is operational: routing records can explain why a role was allowed to do specific work. They cannot create scientific acceptance or edit outside the allowlist.
+There are four boundary forms. A registered role is reusable policy with a versioned contract. A task overlay temporarily changes authority for one known job while preserving the base role. A one-job provisional role handles an unusual bounded need and expires after the job. Parent-child decomposition is different: it creates internal analytical perspectives only after the selected AgentJob and execution-role record already exist. The matrix matters because flexibility without expiry becomes hidden policy. If the same provisional role pattern recurs, the project treats it as a project-system signal for possible registration rather than letting habit create authority. The legitimate claim is operational: routing records can explain why a role was allowed to do specific work. They cannot create scientific acceptance or edit outside the allowlist.
 Form
 Use
 Risk control
@@ -73,6 +74,9 @@ Expires with AgentJob.
 Provisional role
 Novel one-job need.
 Non-reusable until registered.
+Parent-child decomposition
+Internal perspectives inside one AgentJob.
+Inherits the selected execution-role contract.
 Role Routing Decision Tree
 +
 -
@@ -148,10 +152,17 @@ expansions
 Expires
 after
 AgentJob
+Optional
+internal
+role_decomposition
+Parent
+and
+child
+perspectives
 AgentJob
 boundary
 Diagram source
-flowchart TD Registered["Registered role template"] --> Fit{"Fits without change?"} Fit -->|"yes"| Direct["registered_role"] Fit -->|"needs bounded delta"| Overlay["task_overlay"] Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"] Direct --> Execution["Execution-role record"] Overlay --> Execution Provisional --> Execution Execution --> Allowed["Allowed writes and validators"] Execution --> Removed["Removed permissions"] Execution --> Expanded["Explicit expansions"] Execution --> Expiry["Expires after AgentJob"] Allowed --> Job["AgentJob boundary"]
+flowchart TD Registered["Registered role template"] --> Fit{"Fits without change?"} Fit -->|"yes"| Direct["registered_role"] Fit -->|"needs bounded delta"| Overlay["task_overlay"] Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"] Direct --> Execution["Execution-role record"] Overlay --> Execution Provisional --> Execution Execution --> Allowed["Allowed writes and validators"] Execution --> Removed["Removed permissions"] Execution --> Expanded["Explicit expansions"] Execution --> Expiry["Expires after AgentJob"] Execution --> Decomp["Optional internal<br/>role_decomposition"] Decomp --> Perspectives["Parent and child<br/>perspectives"] Allowed --> Job["AgentJob boundary"] Perspectives --> Job
 Workflow inspector
 Inspectable Object Path
 1. program_state.yaml
@@ -179,4 +190,5 @@ research_control/AGENTS.md
 registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
+.agents/schemas/AGENT_JOB_SCHEMA.md
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md

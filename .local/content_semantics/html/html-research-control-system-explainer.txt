@@ -3,11 +3,12 @@ workflow_lifecycle
 Research-Control System
 Provide the validation-governance drilldown for authority boundaries, project-system improvement, documentation-impact receipts, and source-backed HTML governance.
 Summary of Research-Control System
-The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, and generated derivatives remain aligned. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
+The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, and generated derivatives remain aligned. It blocks PASS completions when a parent-child synthesis lacks a fused output or leaves a blocking conflict unresolved. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
 AGENTS.md
 research_control/README.md
 .codex/skills/improve-project-system/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.4.0.md
+.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/schemas/AGENT_JOB_SCHEMA.md
 research_control/design/html_explainer_flexible_presentation_contract.md
 Coverage
 Diagrams
@@ -33,7 +34,7 @@ AGENTS.md
 README.md
 research_control/README.md
 .codex/skills/improve-project-system/SKILL.md
-A source-backed explanation of one bounded AgentJob, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions. In reader-facing terms, this section identifies the subject of
+A source-backed explanation of one bounded AgentJob, optional parent-child internal decomposition, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions. In reader-facing terms, this section identifies the subject of
 Research-Control System
 , explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
 AGENTS.md
@@ -75,7 +76,7 @@ AGENTS.md
 README.md
 research_control/README.md
 .codex/skills/improve-project-system/SKILL.md
-A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, research-control validation, diff checks, tests, and advisory depth lint. In reader-facing terms, this section identifies the subject of
+A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, parent-child shape and completion-conflict checks, research-control validation, diff checks, tests, and advisory depth lint. In reader-facing terms, this section identifies the subject of
 Research-Control System
 , explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
 AGENTS.md
@@ -133,6 +134,12 @@ boundary
 One
 bounded
 AgentJob
+Optional
+parent-child
+shape
+and
+conflict
+checks
 Allowed
 writes
 Forbidden
@@ -150,7 +157,7 @@ Control
 registries
 updated
 Diagram source
-flowchart TD Change["Proposed project-system change"] --> Classifier["Change classifier"] Classifier --> Role["Recommended role boundary"] Role --> Job["One bounded AgentJob"] Job --> Allowed["Allowed writes"] Job --> Forbidden["Forbidden authority surfaces"] Allowed --> Validators["Required validators"] Forbidden --> Stop["Stop condition"] Validators --> Receipt["Completion and documentation-impact receipts"] Receipt --> Registry["Control registries updated"]
+flowchart TD Change["Proposed project-system change"] --> Classifier["Change classifier"] Classifier --> Role["Recommended role boundary"] Role --> Job["One bounded AgentJob"] Job --> DecompCheck["Optional parent-child<br/>shape and conflict checks"] DecompCheck --> Allowed["Allowed writes"] DecompCheck --> Forbidden["Forbidden authority surfaces"] Allowed --> Validators["Required validators"] Forbidden --> Stop["Stop condition"] Validators --> Receipt["Completion and documentation-impact receipts"] Receipt --> Registry["Control registries updated"]
 Workflow inspector
 Inspectable Object Path
 1. program_state.yaml
@@ -178,7 +185,11 @@ research_control/README.md
 .codex/skills/html-visual-explainer/SKILL.md
 .codex/skills/visual-explainer/SKILL.md
 .codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.4.0.md
+.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/schemas/AGENT_JOB_SCHEMA.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+research_control/templates/COMPLETION_TEMPLATE.yaml
+research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml
 research_control/design/html_explainer_flexible_presentation_contract.md
 scripts/project_control/validate_documentation_impact.py
 scripts/research_control/validate_research_control.py

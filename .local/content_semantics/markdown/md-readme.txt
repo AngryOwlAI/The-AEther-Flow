@@ -95,6 +95,8 @@ The accepted benchmark boundary is conservative: observable-scale physics remain
 
 The research-agent system is the project’s operating discipline for theoretical work. It routes bounded tasks through Director decisions, AgentJobs, role contracts, completion records, registries, validation scripts, and handoffs. Its purpose is to make research progress auditable: proposals can be constructed, refuted, repaired, preserved as negative results, or held behind gates without being mistaken for accepted physics.
 
+An AgentJob may also declare optional `parent_child_parallel_synthesis` when a Director decision needs parallel internal perspectives. That mode preserves the external invariant: one Director decision, one outer AgentJob, one execution-role record, one completion record, and one fused final output. The parent and child execution units inherit the same authority, claim boundary, allowlists, validators, and stop conditions; they are not separate AgentJobs, new roles, or a route around conflict review.
+
 The system deliberately separates several kinds of claims:
 
 - Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.
@@ -130,11 +132,11 @@ authority.
 
 - [Project Overview](github-facing/project-overview-explainer.md): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
 - [Æther-flow Ontology](github-facing/aether-flow-ontology-explainer.md): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
-- [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
-- [Role Routing](github-facing/role-routing-explainer.md): how roles are selected, constrained, overlaid, or kept one-job provisional.
+- [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, optional internal parent-child synthesis, validation, completions, registries, and handoffs.
+- [Role Routing](github-facing/role-routing-explainer.md): how roles are selected, constrained, overlaid, kept one-job provisional, or internally decomposed without authority expansion.
 - [Claim Gates](github-facing/claim-gates-explainer.md): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
 - [Source Authority](github-facing/source-authority-explainer.md): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
-- [Research-Control System](github-facing/research-control-system-explainer.md): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
+- [Research-Control System](github-facing/research-control-system-explainer.md): the validation-governance overview for documentation impact, project-system improvement, parent-child completion checks, source-backed HTML, Mermaid parity, and diff gates.
 - [Roles And Skills](github-facing/roles-and-skills-explainer.md): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
 - [Memory System](github-facing/memory-system-explainer.md): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
 - [Technical Requirements](github-facing/technical-requirements-explainer.md): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.

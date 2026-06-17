@@ -12,7 +12,11 @@ source_materials:
   - ".codex/skills/html-visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.4.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.7.0.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - "research_control/templates/COMPLETION_TEMPLATE.yaml"
+  - "research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml"
   - "research_control/design/html_explainer_flexible_presentation_contract.md"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
@@ -75,6 +79,9 @@ content to `source-authority-explainer.html`.
   while improving the project machinery.
 - Operational model: change classification, bounded AgentJob, documentation
   impact, generated-derivative refresh, validators, and checkpoint boundary.
+- Parent-child validator model: optional `parent_child_parallel_synthesis`
+  remains inside one AgentJob and is checked for inherited authority, allowlist
+  containment, fused output evidence, and unresolved blocking conflicts.
 - Low-level evidence model: validator scripts, completion receipts, registry
   rows, source specs, and generated HTML metadata.
 - Documentation Curator panel: source-spec-first tracked HTML generation.
@@ -104,8 +111,9 @@ flowchart TD
   Change["Proposed project-system change"] --> Classifier["Change classifier"]
   Classifier --> Role["Recommended role boundary"]
   Role --> Job["One bounded AgentJob"]
-  Job --> Allowed["Allowed writes"]
-  Job --> Forbidden["Forbidden authority surfaces"]
+  Job --> DecompCheck["Optional parent-child<br/>shape and conflict checks"]
+  DecompCheck --> Allowed["Allowed writes"]
+  DecompCheck --> Forbidden["Forbidden authority surfaces"]
   Allowed --> Validators["Required validators"]
   Forbidden --> Stop["Stop condition"]
   Validators --> Receipt["Completion and documentation-impact receipts"]
@@ -123,27 +131,30 @@ how project-system and research-continuation work may proceed. Its function is
 to classify changes, resolve advisory routing, create or reuse one bounded
 AgentJob, enforce role and write-path boundaries, require documentation-impact
 receipts when project machinery changes, and validate that source specs,
-skills, roles, registries, claim boundaries, and generated derivatives remain
-aligned. It matters because the project deliberately combines scientific
-exploration with agent workflow development; without control records,
-generated HTML, Markdown guidance, validators, and role contracts could drift
-or be mistaken for scientific authority. The system fits the larger project by
-making improvements reversible, auditable, and separate from physics claim
-promotion.
+skills, roles, registries, claim boundaries, optional parent-child
+decomposition evidence, and generated derivatives remain aligned. It blocks
+PASS completions when a parent-child synthesis lacks a fused output or leaves a
+blocking conflict unresolved. It matters because the project deliberately
+combines scientific exploration with agent workflow development; without
+control records, generated HTML, Markdown guidance, validators, and role
+contracts could drift or be mistaken for scientific authority. The system fits
+the larger project by making improvements reversible, auditable, and separate
+from physics claim promotion.
 
 Summary source basis:
 
 - `AGENTS.md`
 - `research_control/README.md`
 - `.codex/skills/improve-project-system/SKILL.md`
-- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `research_control/design/html_explainer_flexible_presentation_contract.md`
 
 ## Required Content Blocks
 
 - subject_summary: Summarize the research-control system, its safety-harness role, why validators and receipts matter, and which declared sources ground the summary.
 - classification_resolver: A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces.
-- bounded_transaction: A source-backed explanation of one bounded AgentJob, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
+- bounded_transaction: A source-backed explanation of one bounded AgentJob, optional parent-child internal decomposition, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
 - flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries.
 - documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
-- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, research-control validation, diff checks, tests, and advisory depth lint.
+- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, parent-child decomposition and completion checks, research-control validation, diff checks, tests, and advisory depth lint.

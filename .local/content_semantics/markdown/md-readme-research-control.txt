@@ -26,6 +26,16 @@ project-system improvement for possible human-authorized registration.
 `/continue-research` may set up or execute at most one bounded AgentJob per
 invocation. Normal flow writes a completion record and handoff after execution.
 
+An AgentJob may optionally declare `role_decomposition.mode:
+"parent_child_parallel_synthesis"` when the Director needs two internal
+analytical perspectives before a fused output. This does not relax the one-job
+rule. The parent and child execution units inherit the same execution-role
+record, claim boundary, write allowlist, source restrictions, validators, and
+stop conditions as the outer AgentJob. Child outputs are supporting
+draft/control artifacts; the fused output remains the old-style final artifact
+for downstream completion, handoff, and registry references. A PASS completion
+is blocked when a declared blocking parent-child conflict remains unresolved.
+
 ## Local Cache Boundary
 
 Tracked files under `research_control/` are authority. `.local/` prompts,
