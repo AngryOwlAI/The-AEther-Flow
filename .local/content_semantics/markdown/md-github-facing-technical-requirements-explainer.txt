@@ -22,19 +22,19 @@ flowchart TD
   Pdf --> Boundary
 ```
 
-## Student Questions And Teacher Answers
+## Installation Strategy
 
-**Student:** Does every reader need every tool?
+Not every reader needs every tool. Read-only inspection needs the repository and
+normal Markdown rendering. Validation and memory regeneration need the Python
+environment. Diagram-backed HTML regeneration needs Node, npm, Mermaid
+dependencies, and browser/rendering support. PDF refresh needs LaTeX only when
+refreshing PDF derivatives.
 
-**Teacher:** No. Read-only inspection needs the repository and normal Markdown rendering. Validators and memory regeneration need the Python environment. Diagram-backed HTML regeneration needs Node, npm, Mermaid dependencies, and browser/rendering support. PDF refresh needs LaTeX only when refreshing PDF derivatives.
-
-**Student:** Are Obsidian and global Codex plugins required?
-
-**Teacher:** No. They are operator environment aids unless project-local guidance or skill contracts make them part of a tracked workflow.
-
-**Student:** What should a maintainer install first?
-
-**Teacher:** Start with the Python environment and `requirements.txt`, because validators and bootstrap are central to repository consistency. Add diagram or PDF tooling only for the derivative lane being regenerated.
+Start with the Python environment and `requirements.txt`, because validators
+and bootstrap are central to repository consistency. Add diagram, retrieval, or
+PDF tooling only for the derivative lane being regenerated. Obsidian and
+global Codex plugins are operator aids unless project-local guidance or skill
+contracts make them part of a tracked workflow.
 
 ## Practical Matrix
 

@@ -23,19 +23,17 @@ The memory system is not a second truth store. It is a retrieval and derivative-
 7. Validate bootstrap, registries, wiki outputs, and documentation surfaces.
 8. Inspect canonical sources before using retrieved material in a new project claim or control change.
 
-## Student Questions And Teacher Answers
+## What Memory Adds Beyond Search
 
-**Student:** Why not just search the repo?
+Plain search finds text. The memory system adds object identity, authority
+status, source hashes, generated-output links, relationship metadata, and
+repeatable registry-backed rebuilds. That makes retrieval auditable.
 
-**Teacher:** Search finds text. The memory system also preserves object identity, authority status, source hashes, generated-output links, and relationship metadata. That makes retrieval auditable.
-
-**Student:** Are wiki notes canonical?
-
-**Teacher:** No. They are tracked generated derivatives. They are useful for navigation and summarization, but source files and registries remain authority.
-
-**Student:** What does `.local/` mean here?
-
-**Teacher:** `.local/` contains scratch or machine-local retrieval aids such as semantic extracts, Obsidian vaults, and SQLite indexes. It must not override tracked control state.
+The generated wiki is useful because it is tracked and rebuilt from the
+registry spine, but it is still a derivative. `.local/` is weaker: it holds
+scratch or machine-local aids such as semantic extracts, Obsidian vault files,
+SQLite indexes, and query caches. These surfaces can accelerate reading, but
+they cannot override tracked control state or source files.
 
 ## Memory Surface Map
 

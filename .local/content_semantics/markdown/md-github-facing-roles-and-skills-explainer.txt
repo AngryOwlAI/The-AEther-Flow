@@ -23,19 +23,19 @@ flowchart TD
   Context -. "not project authority" .-> Work
 ```
 
-## Student Questions And Teacher Answers
+## Authority Model
 
-**Student:** What is the difference between a role and a skill?
+A role carries authority for bounded work. A skill describes a governed
+procedure or workflow. A role may use a skill, but the skill does not replace
+the AgentJob allowlist, claim boundary, or execution-role record.
 
-**Teacher:** A role carries authority for a bounded job. A skill describes a governed procedure or workflow. A role may use a skill, but the skill does not replace the AgentJob allowlist or claim boundary.
+Superseded roles remain in the repository because old task records must stay
+auditable. They explain historical execution; they do not automatically
+authorize new work under old semantics.
 
-**Student:** Why keep superseded roles?
-
-**Teacher:** Old task records must remain auditable. Superseded role contracts explain historical execution without authorizing new work under old semantics.
-
-**Student:** Are global Codex plugins project requirements?
-
-**Teacher:** Not unless mirrored into `.codex/skills/` or registered in project sources. Otherwise they are operator-context aids.
+Global Codex tools and plugins are operator context unless the project mirrors
+them into repo-local skill guidance or registered sources. Convenience is not
+the same as project authority.
 
 ## Active Role Families
 

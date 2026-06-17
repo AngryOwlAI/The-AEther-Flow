@@ -26,19 +26,20 @@ flowchart TD
   Gates --> Memory["Preserved sources<br/>registries and handoffs"]
 ```
 
-## Student Questions And Teacher Answers
+## Reader Model
 
-**Student:** What is the project trying to do in plain language?
+A new reader should keep three claims separate. First, the project has a
+source-side ontology for talking about Æther and Æther-flow. Second, ordinary
+GR remains the benchmark behavior to recover or hard-fail against. Third, the
+research-control system records how bounded work is selected, validated, and
+preserved. Those three facts explain the repository shape: physics sources
+carry the scientific burden, control records carry workflow authority, and
+generated explainers only help readers navigate back to those sources.
 
-**Teacher:** It is testing whether a substrate picture can explain relativistic geometry while using a controlled agent workflow to keep claims, sources, and failures separated. The source basis is `README.md` and `AGENTS.md`. The boundary is that no overview can promote the derivation.
-
-**Student:** Why are there two lanes instead of one research folder?
-
-**Teacher:** The physics lane asks the scientific question. The agent lane governs how work is selected, constrained, validated, and recorded. The source basis is `AGENTS.md` and `research_control/README.md`. The boundary is that workflow completion is not a physics result.
-
-**Student:** What should a new reader trust first?
-
-**Teacher:** Trust registered TeX for science-bearing derivational claims, registries for provenance and routing, and registered Markdown for front-door and control guidance. Generated HTML, GitHub-facing Markdown, wiki notes, PDFs, and `.local/` caches are reading and retrieval aids.
+The safest first trust rule is simple: registered TeX for science-bearing
+derivational claims, registries for provenance and routing, registered
+Markdown for front-door and control guidance, and generated surfaces for
+orientation only.
 
 ## Research Atlas
 
@@ -82,12 +83,12 @@ flowchart TD
   Memory --> SharedTarget
 ```
 
-## Common questions
+## Orientation Checks
 
-- **Is this a completed physics theory?** No. Exact GR is the benchmark; the substrate derivation remains open until claim gates authorize stronger status.
-- **Why so many registries and task records?** They prevent generated explanations, drafts, and workflow completions from replacing source authority.
-- **Can an AI agent change project truth by writing a polished explanation?** No. Explanations orient readers; registered sources and control records decide authority.
-- **Where should a reader begin?** Start with ontology for the physics picture, claim gates for status, research system for workflow, and source authority before citing any generated surface.
+- The project is not a completed physics theory; exact GR is the benchmark and the substrate derivation remains open until claim gates authorize stronger status.
+- Registries and task records exist to stop generated explanations, drafts, and workflow completions from replacing source authority.
+- A polished AI-written explanation can orient readers, but registered sources and control records decide project knowledge.
+- A good first path is ontology for the physics picture, claim gates for status, research system for workflow, and source authority before citing any generated surface.
 
 ## Common misunderstandings
 
