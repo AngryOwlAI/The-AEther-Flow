@@ -24,6 +24,16 @@ INSTRUCTION_START = re.compile(
     r"|^\s*State\s+(that|the|whether|why|how)\b",
     re.IGNORECASE,
 )
+FRONTMATTER_RE = re.compile(r"\A---\n(?P<frontmatter>.*?)\n---\n", re.DOTALL)
+TEACHING_REQUIRED_BLOCKS = {
+    "plain_language_model",
+    "glossary",
+    "guided_walkthrough",
+    "common_questions",
+    "examples_and_non_examples",
+    "misconception_repairs",
+    "check_your_understanding",
+}
 
 @dataclass
 class Block:
@@ -89,6 +99,7 @@ def lint_html(path: Path) -> list[str]:
 def lint_spec(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8", errors="replace")
     warnings: list[str] = []
+    teaching_enabled = spec_teaching_enabled(text)
     match = re.search(r"(?ms)^## Required Content Blocks\s*(.*?)(?:^## |\Z)", text)
     if not match:
         return warnings
@@ -101,6 +112,40 @@ def lint_spec(path: Path) -> list[str]:
             warnings.append(
                 f"{path}:{line_no}: required content block is too directive; include renderable documentation detail: {stripped}"
             )
+        if teaching_enabled and _prefix.strip() != "- subject_summary":
+            description_text = description.strip().lower()
+            if "plain-language" not in description_text:
+                warnings.append(
+                    f"{path}:{line_no}: teaching-enabled content block should name its plain-language opening: {stripped}"
+                )
+            if "`" not in description:
+                warnings.append(
+                    f"{path}:{line_no}: teaching-enabled content block should name source paths: {stripped}"
+                )
+    if teaching_enabled:
+        missing_blocks = sorted(
+            block for block in TEACHING_REQUIRED_BLOCKS if f'"{block}"' not in text and f"- {block}" not in text
+        )
+        if missing_blocks:
+            warnings.append(
+                f"{path}: teaching-enabled spec missing teaching block(s): {', '.join(missing_blocks)}"
+            )
+    return warnings
+
+def spec_teaching_enabled(text: str) -> bool:
+    match = FRONTMATTER_RE.search(text)
+    if not match:
+        return False
+    frontmatter = match.group("frontmatter")
+    return bool(re.search(r"(?ms)^teaching_loop:\s*\n(?:  .+\n)*?  enabled:\s*true\s*$", frontmatter))
+
+def lint_github_markdown(path: Path) -> list[str]:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    warnings: list[str] = []
+    if "## Common questions" not in text:
+        warnings.append(f"{path}: teaching-enabled GitHub-facing Markdown lacks a Common questions section")
+    if "## Common misunderstandings" not in text:
+        warnings.append(f"{path}: teaching-enabled GitHub-facing Markdown lacks misconception repair")
     return warnings
 
 def main() -> int:
@@ -113,6 +158,11 @@ def main() -> int:
         warnings.extend(lint_html(html))
     for spec in sorted((args.root / "markdown" / "html-explainer-specs").glob("*-explainer.md")):
         warnings.extend(lint_spec(spec))
+        spec_text = spec.read_text(encoding="utf-8", errors="replace")
+        if spec_teaching_enabled(spec_text):
+            github_page = args.root / "github-facing" / spec.name
+            if github_page.exists():
+                warnings.extend(lint_github_markdown(github_page))
 
     if warnings:
         print("\n".join(warnings))

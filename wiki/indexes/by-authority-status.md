@@ -123,6 +123,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
 
+## explanatory_support_noncanonical
+
+- `MD-TEACHING-QA-PACKET-ROLE-ROUTING-TEACHING-QA` `markdown/teaching-packets/role-routing.teaching-qa.md`
+
 ## generated_noncanonical
 
 - `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
@@ -216,6 +220,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-5-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-5-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-6-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-6-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-7-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-7-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-8-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-8-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-STUDENT-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-student-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-TEACHER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-teacher-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md.md`
@@ -226,6 +233,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`
 - `WIKI-MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `wiki/markdown/md-schema-execution-role-schema.md`
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
+- `WIKI-MD-SCHEMA-TEACHING-QA-PACKET-SCHEMA` `wiki/markdown/md-schema-teaching-qa-packet-schema.md`
+- `WIKI-MD-SKILL-AETHER-TEACHING-EXPLAINER` `wiki/markdown/md-skill-aether-teaching-explainer.md`
 - `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
 - `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
 - `WIKI-MD-SKILL-GRILL-WITH-DOCS` `wiki/markdown/md-skill-grill-with-docs.md`
@@ -240,6 +249,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-USER-MODIFIED-PROJECT` `wiki/markdown/md-skill-user-modified-project.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
+- `WIKI-MD-TEACHING-QA-PACKET-ROLE-ROUTING-TEACHING-QA` `wiki/markdown/md-teaching-qa-packet-role-routing-teaching-qa.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-ontology-aether-flow-dynamics.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/pdf/pdf-ontology-aether-flow-exact-closure-flagship-article.md`
@@ -379,6 +389,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-5-0-MD` `.agents/roles/research_ops/documentation-curator.v0.5.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-6-0-MD` `.agents/roles/research_ops/documentation-curator.v0.6.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-7-0-MD` `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-8-0-MD` `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-STUDENT-V0-1-0-MD` `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-TEACHER-V0-1-0-MD` `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
@@ -389,6 +402,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - `MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
 - `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`
+- `MD-SCHEMA-TEACHING-QA-PACKET-SCHEMA` `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
+- `MD-SKILL-AETHER-TEACHING-EXPLAINER` `.codex/skills/aether-teaching-explainer/SKILL.md`
 - `MD-SKILL-CONTINUE-RESEARCH` `.codex/skills/continue-research/SKILL.md`
 - `MD-SKILL-GRILL-ME` `.codex/skills/grill-me/SKILL.md`
 - `MD-SKILL-GRILL-WITH-DOCS` `.codex/skills/grill-with-docs/SKILL.md`

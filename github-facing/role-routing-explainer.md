@@ -1,113 +1,189 @@
 # Role Routing
 
-This page explains how the project decides which role may execute a bounded task and how that role is constrained for one job.
+> Non-authoritative teaching explainer.
+> Derived from `markdown/html-explainer-specs/role-routing-explainer.md`.
 
 ## Source Binding
 
 - **Derived from spec:** `markdown/html-explainer-specs/role-routing-explainer.md`
+- **Teaching packet:** `markdown/teaching-packets/role-routing.teaching-qa.md`
 - **Related HTML:** `html/role-routing-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Start here in 90 seconds
 
-Role routing is the project's decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its functionality is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. It also explains why optional parent-child synthesis is a decomposition of analytical perspective inside the selected AgentJob, not a new role class or permission expansion. This matters because the repository contains physics roles, documentation roles, validator roles, memory roles, and project-control roles with different authority levels; collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes. Role routing fits the overall project by making authority selection itself auditable before implementation begins.
+Role routing is the project’s way of deciding which kind of agent may do one
+bounded task. It happens before implementation. The routing decision connects a
+request to an authority class, a selected role, a task-local execution-role
+record, an AgentJob allowlist, required validators, and stop conditions.
 
-## What This Feature Does
+The key idea is simple: a role is not a universal permission slip. A
+Documentation Curator, Validator Engineer, Project-Control Maintainer, Refuter,
+and Gate Chair exist for different authority problems. The execution-role
+record says exactly how the selected role is being used for one job.
 
-Role routing maps a request to an authority class, compares candidate roles, records a Director decision, and binds execution to a registered role, task overlay, or one-job provisional role. Optional parent-child synthesis happens only after that binding, inside one selected AgentJob.
+## The problem this feature solves
 
-## Why The Project Needs It
+Without role routing, one helper could drift across boundaries: a documentation
+task might become a validator change, a generated page might be treated as
+authority, or a provisional role might become policy by repetition. Role
+routing keeps work auditable by making the role choice itself inspectable.
 
-A generic helper role is dangerous here because documentation, validators, memory tooling, control contracts, physics drafts, smuggling audits, and Gate Chair decisions have different authority. Routing keeps those lanes separate.
+## Plain-language model
 
-## How It Works
+Think of role routing as a dispatch desk with a logbook:
 
-Routing asks four questions:
+- The request arrives.
+- The project classifies the kind of authority involved.
+- The Director selects a role for one bounded job.
+- The execution-role record records the exact one-job permissions and limits.
+- The AgentJob carries the read paths, write paths, outputs, validators, and
+  claim boundary.
+- Completion records what happened and whether validation passed.
 
-1. Is the work science-bearing, project-control, documentation, validation, memory, or process repair?
-2. Does a registered role fit without permission changes?
-3. If not, is a task overlay sufficient for one bounded delta?
-4. If a one-job provisional role is used repeatedly, should Project-System Director review it for human-authorized registration?
+## Key terms
 
-The execution-role record then names allowed writes, removed permissions, expanded permissions, validators, expiry, and the AgentJob boundary. If `role_decomposition` is present, parent and child perspectives inherit that record; they do not add role IDs, allowlists, claim boundaries, or human-gate exemptions.
+| Term | Plain meaning | Project meaning | Source paths |
+|---|---|---|---|
+| Role | A reusable job description. | A versioned contract registered in `AGENT_ROLE_REGISTRY.csv`. | `registries/AGENT_ROLE_REGISTRY.csv` |
+| Role version | A stable edition of a role. | Historical versions remain registered while one active version is the default template. | `.agents/schemas/ROLE_SCHEMA.md` |
+| Execution-role record | The one-job use of a role. | A task-local record binding exact role semantics to one AgentJob. | `registries/ROLE_EXECUTION_REGISTRY.csv`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` |
+| Task overlay | A narrow one-job adjustment. | A registered role with task-specific constraints, removed permissions, or bounded non-promotional expansion. | `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` |
+| One-job provisional role | A temporary role identity. | A non-reusable role that expires after the owning AgentJob unless later registered through human-authorized project-system work. | `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` |
+| Parent-child synthesis | Internal perspectives inside one job. | A decomposition mode that inherits the existing execution-role record and does not create extra authority. | `.agents/schemas/AGENT_JOB_SCHEMA.md` |
+| Human gate | A protected approval boundary. | Required for protected authority expansion such as claim promotion, canonical ontology authority, benchmark authority, Gate Chair authority, or permanent role registration. | `.agents/schemas/ROLE_SCHEMA.md`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` |
 
-## What It Is Not
+## Walkthrough: from task request to selected role
 
-It is not a way to silently expand role authority, not a permanent-role registration shortcut, not a Gate Chair substitute, and not permission to ignore the AgentJob allowlist.
+1. A task request or handoff identifies work to be done.
+2. The project classifies the work as science-bearing, project-control,
+   documentation, validation, memory, or process repair.
+3. The Director evaluates role-fit candidates.
+4. The Director decision records the selected role, role version, AgentJob, and
+   claim boundary.
+5. The AgentJob lists allowed reads, allowed writes, generated paths, forbidden
+   paths, required validators, expected outputs, and stop conditions.
+6. The task-local execution-role record says whether the role is used directly,
+   with a task overlay, or as a one-job provisional role.
+7. If parent-child synthesis is present, it happens inside that same AgentJob
+   and inherits the same boundaries.
+8. The completion record reports outputs and validator results.
 
-## Diagram Reading Guide
+## Common questions
 
-The decision tree starts with authority classification and routes to science, project-system, or documentation roles. The contract map shows that direct roles, overlays, and provisional roles all terminate in a task-local execution-role record before any optional internal decomposition.
+### Why can’t one general helper do every task?
 
-<!-- mermaid-diagram-id: role-routing-decision-tree -->
-```mermaid
-flowchart TD
-  Request["Task request or handoff"] --> Authority["Identify authority class"]
-  Authority --> Science["Science-bearing work"]
-  Authority --> ProjectSystem["Project-system work"]
-  Authority --> Docs["Explanatory documentation"]
-  Science --> ScienceRoles["Ontology Formalizer<br/>Candidate Constructor<br/>Refuter<br/>Smuggling Auditor<br/>Gate Chair"]
-  ProjectSystem --> OpsRoles["Project-System Director<br/>Project-Control Maintainer<br/>Validator Engineer<br/>Memory-System Maintainer"]
-  Docs --> Curator["Documentation Curator"]
-  ScienceRoles --> Director["Director decision"]
-  OpsRoles --> Director
-  Curator --> Director
-  Director --> AgentJob["Bounded AgentJob"]
-```
+Because the project separates different kinds of authority. Physics drafting,
+refutation, documentation, validation, memory maintenance, and project-control
+repair can have different write paths, validators, gates, and claim risks.
+Collapsing them into one helper would make it easier to promote claims, edit
+generated derivatives as if they were source, or change control behavior
+without the right contract.
 
-<!-- mermaid-diagram-id: execution-role-contract-map -->
-```mermaid
-flowchart TD
-  Registered["Registered role template"] --> Fit{"Fits without change?"}
-  Fit -->|"yes"| Direct["registered_role"]
-  Fit -->|"needs bounded delta"| Overlay["task_overlay"]
-  Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"]
-  Direct --> Execution["Execution-role record"]
-  Overlay --> Execution
-  Provisional --> Execution
-  Execution --> Allowed["Allowed writes and validators"]
-  Execution --> Removed["Removed permissions"]
-  Execution --> Expanded["Explicit expansions"]
-  Execution --> Expiry["Expires after AgentJob"]
-  Execution --> Decomp["Optional internal<br/>role_decomposition"]
-  Decomp --> Perspectives["Parent and child<br/>perspectives"]
-  Allowed --> Job["AgentJob boundary"]
-  Perspectives --> Job
-```
+### What is an execution-role record?
 
-## Source Authority
+It is the exact task-local role contract for one AgentJob. A registered role is
+the reusable template; the execution-role record says how that template is
+being used now, including allowed writes, removed permissions, expanded
+permissions, expiry, and validation status.
 
-The role registry, role execution registry, Director decision registry, scoped research-control guidance, AgentJob schema, and execution-role schema define the authority evidence. This page explains those rows but does not amend them.
+### What is the difference between a task overlay and a provisional role?
 
-## External AI Navigation Card
+A task overlay keeps the registered role identity but adds a bounded one-job
+delta. A one-job provisional role creates a temporary one-job identity and must
+not become reusable until registered. Repeated provisional-role patterns should
+route to project-system review rather than silently becoming policy.
 
-You are reading a non-authoritative GitHub-facing explainer.
+### Does parent-child synthesis create new authority?
 
-Safe uses:
-- summarize this feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries
+No. Parent-child synthesis creates internal analytical perspectives inside one
+selected AgentJob. Parent and child units inherit the same execution-role
+record, write-path allowlist, claim boundary, validators, and stop conditions.
 
-Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+### Who decides which role is selected?
 
-Do not:
-- do not treat this page as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
+The Director decision selects the role for the bounded job. The decision row,
+AgentJob YAML, and execution-role record are the inspection path for that
+choice.
 
-## Where To Go Next
+### What should I inspect before trusting a routing explanation?
 
+Read the role registry, Director decision row, execution-role registry row,
+task-local role YAML, AgentJob YAML, and completion record. Generated HTML,
+GitHub-facing Markdown, wiki notes, PDFs, and `.local/` caches can orient you,
+but they are not authority.
+
+## Examples and non-examples
+
+| Case | Classification | Why |
+|---|---|---|
+| A Documentation Curator updates a source spec, regenerates tracked HTML, and writes documentation-impact evidence. | Example | The work stays in explanatory documentation and source-backed derivative generation. |
+| Project-Control Maintainer receives a one-job overlay to update a validator and matching README guidance. | Example | The overlay is explicit, bounded, and validator-backed. |
+| A generated HTML page says a role can write a new registry path. | Non-example | Generated HTML explains; it does not authorize. |
+| A one-job provisional role is reused repeatedly without registration. | Non-example | Repetition should trigger project-system review, not silent policy. |
+| A child perspective writes outside the parent AgentJob allowlist. | Non-example | Decomposition inherits the existing execution-role boundary. |
+
+## Common misunderstandings
+
+### “Generated docs are enough to authorize work.”
+
+Generated docs are orientation surfaces. Authority remains with source files,
+registries, role contracts, schemas, AgentJobs, and validators.
+
+### “A provisional role becomes real if it works.”
+
+A provisional role expires after its job. Permanent registration requires the
+registered role contract and registry update path.
+
+### “A task overlay is a role rewrite.”
+
+A task overlay is task-local. It can add bounded constraints or permissions for
+one job, but it does not permanently change the base role.
+
+### “Parent-child synthesis means multiple AgentJobs.”
+
+It does not. Parent and child execution units are internal perspectives inside
+one outer AgentJob.
+
+## What this page does not claim
+
+- It does not change role authority.
+- It does not change routing behavior.
+- It does not change schemas or validators.
+- It does not authorize protected authority expansion.
+- It does not promote physics claims.
+- It does not make generated HTML, GitHub-facing Markdown, wiki notes, PDFs, or
+  `.local/` caches authoritative.
+
+## Check your understanding
+
+1. Which file tells you the reusable active role versions?
+2. Which task-local record tells you whether a role was used directly, as an
+   overlay, or as a provisional role?
+3. Why does parent-child synthesis not create extra authority?
+4. What would you inspect before saying a role was allowed to write a path?
+5. What kind of change requires a human gate?
+
+## Source authority
+
+The role registry, execution-role registry, Director decision registry,
+research-control guidance, AgentJob schema, execution-role schema, and role
+schema define the authority evidence. This page teaches those surfaces; it
+does not amend them.
+
+## Where to go next
+
+- Read `AGENTS.md` for the authority hierarchy.
+- Read `research_control/README.md` for project-system improvement and
+  documentation-impact rules.
 - Read `registries/AGENT_ROLE_REGISTRY.csv` for active role status.
-- Read the task-local `roles/*.yaml` before executing a job.
-- Read roles-and-skills for the active catalog.
-- Use improve-project-system for routing ambiguity.
+- Read `registries/ROLE_EXECUTION_REGISTRY.csv` for task-local role semantics.
+- Read `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` for overlays and provisional
+  roles.
+- Read `.agents/schemas/AGENT_JOB_SCHEMA.md` for AgentJob and decomposition
+  constraints.
 
-## All Source Materials
+## All source materials
 
 - `README.md`
 - `AGENTS.md`
@@ -118,3 +194,4 @@ Do not:
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
 - `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `.agents/schemas/ROLE_SCHEMA.md`

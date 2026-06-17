@@ -343,6 +343,22 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertEqual(row["agent_documentation"], "true")
         self.assertIn("non-authoritative for physics claims", row["notes"])
 
+    def test_teaching_packet_is_discovered_as_explanatory_support(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            packet = root / "markdown/teaching-packets/role-routing.teaching-qa.md"
+            packet.parent.mkdir(parents=True)
+            packet.write_text("# Teaching Q&A Packet\n", encoding="utf-8")
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.discover_markdown_rows("2026-06-17T17:35:00Z")
+
+        row_by_id = {row["object_id"]: row for row in rows}
+        row = row_by_id["MD-TEACHING-QA-PACKET-ROLE-ROUTING-TEACHING-QA"]
+        self.assertEqual(row["role"], "teaching_qa_packet")
+        self.assertEqual(row["authority_status"], "explanatory_support_noncanonical")
+        self.assertEqual(row["owner_skill"], "aether-teaching-explainer")
+        self.assertIn("explanatory support only", row["notes"])
+
     def test_github_facing_markdown_stale_rows_are_pruned(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()

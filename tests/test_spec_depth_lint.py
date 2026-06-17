@@ -94,6 +94,44 @@ class SpecDepthLintTests(unittest.TestCase):
 
         self.assertEqual([], warnings)
 
+    def test_teaching_enabled_spec_requires_plain_language_and_sources(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "markdown/html-explainer-specs/example-explainer.md"
+            path.parent.mkdir(parents=True)
+            path.write_text(
+                "---\n"
+                "teaching_loop:\n"
+                "  enabled: true\n"
+                "  required_teaching_blocks:\n"
+                "    - \"plain_language_model\"\n"
+                "    - \"glossary\"\n"
+                "    - \"guided_walkthrough\"\n"
+                "    - \"common_questions\"\n"
+                "    - \"examples_and_non_examples\"\n"
+                "    - \"misconception_repairs\"\n"
+                "    - \"check_your_understanding\"\n"
+                "---\n\n"
+                "## Required Content Blocks\n\n"
+                "- subject_summary: Render the summary first.\n"
+                "- common_questions: Reader questions without source grounding.\n\n",
+                encoding="utf-8",
+            )
+
+            warnings = self.depth_lint.lint_spec(path)
+
+        self.assertTrue(any("plain-language" in warning for warning in warnings))
+        self.assertTrue(any("source paths" in warning for warning in warnings))
+
+    def test_teaching_enabled_github_markdown_requires_common_questions(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "github-facing/example-explainer.md"
+            path.parent.mkdir(parents=True)
+            path.write_text("# Example\n\n## Start here\n", encoding="utf-8")
+
+            warnings = self.depth_lint.lint_github_markdown(path)
+
+        self.assertTrue(any("Common questions" in warning for warning in warnings))
+
 
 if __name__ == "__main__":
     unittest.main()

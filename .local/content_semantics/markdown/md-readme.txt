@@ -134,6 +134,14 @@ external AI, but it is generated noncanonical: it is non-authoritative for
 physics claims, control decisions, routing, validator behavior, and registry
 authority.
 
+Teaching-enriched explainers may also use curated Q&A packets under
+`markdown/teaching-packets/`. Those packets are built from Documentation
+Student questions and Documentation Teacher answers inside a Documentation
+Curator task, then distilled into source specs, tracked HTML, and
+GitHub-facing Markdown. They are registered explanatory support only: they do
+not override source materials, registries, schemas, role contracts, validators,
+routing, claim gates, or generated-output boundaries.
+
 - [Project Overview](github-facing/project-overview-explainer.md): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
 - [Æther-flow Ontology](github-facing/aether-flow-ontology-explainer.md): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
 - [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, optional internal parent-child synthesis, validation, completions, registries, and handoffs.
@@ -230,7 +238,8 @@ Generated artifacts are tracked when they are part of the project memory surface
 Registered Markdown sources include front-door docs, scoped agent guidance,
 role contracts, schema contracts, skill contracts, key research-control design
 notes, ontology-adjacent explanatory notes, and Markdown source specs for
-generated HTML explainers.
+generated HTML explainers. Curated teaching Q&A packets are registered as
+noncanonical explanatory support.
 
 Tracked HTML explainers are human-only generated derivatives. A tracked
 `html/*.html` file is valid only when it is backed by a registered Markdown
@@ -251,6 +260,10 @@ Non-summary explainer blocks are expected to render as completed
 source-backed documentation, not source-spec instructions. Use
 `scripts/spec_depth_lint.py --root .` or `make validate-html-explainers` as an
 advisory depth check after regenerating tracked HTML explainers.
+For teaching-enabled explainers, also run
+`scripts/validate_teaching_qa.py --root .`; the validator checks packet
+source binding, two-round Student/Teacher structure, boundary notes, source
+paths, and synthesis sections.
 
 Bootstrap or refresh the memory system:
 
@@ -322,7 +335,7 @@ Decision vocabulary:
 | `improve-project-system` | Repair or clarify the research system itself: roles, schemas, validators, checkpoint gates, memory tooling, skill guidance, docs, or generated-doc pipelines. | Uses `.codex/skills/improve-project-system/SKILL.md`; may resolve one signal, one classifier result, or one bounded project-system AgentJob. | Does not perform physics derivation, promote claims, or edit canonical science sources. |
 | `user-modified-project` | Integrate human-made local repository edits after a brief intent note. | Uses `.codex/skills/user-modified-project/SKILL.md`; classifies the diff, routes to the correct controlled workflow, refreshes registry/wiki derivatives through bootstrap, and checkpoints only after validation. | Does not bypass `continue-research`, `improve-project-system`, claim gates, generated-surface rules, or AgentJob allowlists. |
 | Project-System Director | A project-system boundary or routing question must be resolved before work proceeds. | Creates a project-system Director Decision Record and selects one bounded non-scientific AgentJob. | Does not execute the selected job or expand role authority by convention. |
-| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML as independent authority. |
+| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, teaching Q&A packets, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, `markdown/teaching-packets/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML or teaching packets as independent authority. |
 | Project-Control Maintainer | Skill contracts, role contracts, schema contracts, control registries, or control-marked mixed Markdown need functional maintenance. | Edits allowed control markdown and project-control contracts under one AgentJob allowlist. | Does not edit explanatory-only sections unless a task overlay explicitly grants `explanatory_markdown` permission. |
 | Validator Engineer | Deterministic validator, checkpoint gate, or test behavior is missing, unclear, or incorrect. | Edits allowed validator scripts, tests, documented validator contracts, and registry rows. | Does not use model judgment as a validator substitute or decide human policy questions. |
 | Memory-System Maintainer | Source-first memory, wiki, registry, Obsidian, query, or derivative metadata tooling needs maintenance. | Edits allowed memory-system scripts, registry generation rules, query tooling, and related skill documentation. | Does not make generated artifacts authoritative or alter claim-promotion semantics. |

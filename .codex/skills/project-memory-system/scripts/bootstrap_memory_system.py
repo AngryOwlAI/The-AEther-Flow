@@ -150,6 +150,7 @@ REQUIRED_DIRS = [
     "markdown",
     "markdown/html-explainer-specs",
     "markdown/ontology-promotions",
+    "markdown/teaching-packets",
     "github-facing",
     "tex_shared",
     "html",
@@ -544,6 +545,8 @@ def markdown_object_id(path: Path) -> str:
         return f"MD-HTML-SPEC-{object_suffix_from_stem(path.stem)}"
     if relative.startswith("markdown/ontology-promotions/"):
         return f"MD-ONTOLOGY-PROMOTION-{object_suffix_from_stem(path.stem)}"
+    if relative.startswith("markdown/teaching-packets/"):
+        return f"MD-TEACHING-QA-PACKET-{object_suffix_from_stem(path.stem)}"
     return f"MD-{object_suffix_from_stem(path.stem)}"
 
 
@@ -683,6 +686,14 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "humans_and_agents",
             "ontology-promotion",
             "Authored ontology promotion packet note.",
+        )
+    if relative.startswith("markdown/teaching-packets/"):
+        return (
+            "teaching_qa_packet",
+            "explanatory_support_noncanonical",
+            "humans_and_agents",
+            "aether-teaching-explainer",
+            "Curated teaching Q&A packet derived from declared source materials; explanatory support only.",
         )
     return (
         "authored_markdown",

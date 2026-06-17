@@ -9,11 +9,125 @@ registries/ROLE_EXECUTION_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
 .agents/schemas/AGENT_JOB_SCHEMA.md
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/ROLE_SCHEMA.md
 Coverage
 Diagrams
 Workflow
 Sources
 Source-Backed Coverage
+Start Here
+README.md
+AGENTS.md
+research_control/README.md
+registries/DIRECTOR_DECISION_REGISTRY.csv
+Role routing is the project desk that chooses the right kind of agent before implementation starts. A request is first classified by the kind of authority it touches: physics drafting, documentation, validation, memory maintenance, project-control repair, or another bounded lane. The Director decision then selects one role for one AgentJob. The execution-role record narrows that role to exact one-job semantics, including allowed writes, validators, expiry, and stop conditions. This keeps a helpful explanation from quietly becoming permission and keeps a useful helper from wandering into a lane it does not own.
+Why This Exists
+README.md
+AGENTS.md
+registries/AGENT_ROLE_REGISTRY.csv
+The repository separates physics claims, AI-methodology claims, tooling claims, and human-facing explanations. One general helper would blur those boundaries. Documentation Curator can improve source-backed explainers, but it cannot change validators or role authority. Validator Engineer can edit deterministic checks, but it does not make human policy decisions. Gate Chair authority remains human-gated. Role routing is the mechanism that keeps those distinctions visible before work begins. Its value is not bureaucracy for its own sake; it is auditability, so a reviewer can see why one role was selected and why other roles were rejected.
+Key Terms
+registries/AGENT_ROLE_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/AGENT_JOB_SCHEMA.md
+.agents/schemas/ROLE_SCHEMA.md
+Term
+Plain meaning
+Project meaning
+Role
+Reusable job description.
+Versioned contract registered in the role registry.
+Execution-role record
+The exact one-job use of a role.
+Task-local authority binding for an AgentJob.
+Task overlay
+A narrow one-job adjustment.
+A registered role with explicit bounded deltas.
+Provisional role
+A temporary role identity.
+Non-reusable until registered and expired after the job.
+Parent-child synthesis
+Internal perspectives.
+Decomposition inside one AgentJob, not new authority.
+The important distinction is between reusable templates and task-local execution. A role explains the usual responsibility. The execution-role record says what this job actually permits. That second layer is what prevents a useful exception from becoming hidden policy.
+Guided Walkthrough
+research_control/README.md
+registries/DIRECTOR_DECISION_REGISTRY.csv
+.agents/schemas/AGENT_JOB_SCHEMA.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+Request
+A task or handoff names work to be done.
+Authority class
+The project decides whether the work is physics, documentation, validation, memory, project-control, or process repair.
+Director decision
+The Director records role-fit reasoning and selected role.
+AgentJob
+The job names read paths, write paths, outputs, validators, and claim boundary.
+Execution-role record
+The task-local role record says whether the role is direct, overlaid, or provisional.
+The walkthrough is deliberately sequential. Parent-child synthesis, when present, comes after the selected AgentJob and inherits the existing execution-role record. It is an internal analysis pattern, not a separate route around the job boundary.
+Common Questions
+README.md
+AGENTS.md
+registries/AGENT_ROLE_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+Why cannot one helper do every task?
+Different work carries different authority. A documentation update, validator repair, physics derivation attempt, and Gate Chair decision need different owners, outputs, validators, and gates.
+Who chooses the selected role?
+The Director decision records the selected role and the AgentJob that will use it. The decision row is part of the audit trail.
+What should I inspect next?
+Inspect the role registry, Director decision row, AgentJob YAML, task-local role record, execution-role registry row, and completion record. Generated explainers can orient you, but they do not authorize work.
+Examples And Non-Examples
+research_control/README.md
+registries/ROLE_EXECUTION_REGISTRY.csv
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/AGENT_JOB_SCHEMA.md
+Case
+Classification
+Reason
+Curator updates a source spec and regenerates backed HTML.
+Example
+The write owner and derivative boundary match.
+Project-Control Maintainer gets a one-job overlay for validator plus docs synchronization.
+Example
+The overlay is explicit, bounded, and validator-backed.
+Generated HTML says a role can write a new registry path.
+Non-example
+Generated HTML explains; it does not authorize.
+A provisional role is reused until it feels permanent.
+Non-example
+Repeated provisional use must route to project-system review.
+The examples show that role routing is not anti-flexibility. It allows bounded adaptation while preserving the evidence trail that proves the adaptation was temporary, source-bound, and validated.
+Common Confusions
+AGENTS.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/AGENT_JOB_SCHEMA.md
+Generated docs are not authority; they help readers find the source surfaces. A provisional role is not permanent; it expires after its owning AgentJob and cannot become reusable by habit. A task overlay is not a role rewrite; it is a task-local delta. Parent-child synthesis is not multiple AgentJobs; it is internal perspective synthesis under the same execution-role record. These repairs matter because authority drift often starts as a vocabulary mistake. The safest reader habit is to ask which source file, registry row, schema, job, or completion record actually carries the permission being described.
+What This Does Not Authorize
+AGENTS.md
+research_control/README.md
+.agents/schemas/ROLE_SCHEMA.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+Role routing does not promote physics claims, alter canonical ontology, grant Gate Chair authority, change validator behavior, register permanent roles, or make generated outputs authoritative. Protected authority expansion requires a human gate. Generated HTML, GitHub-facing Markdown, wiki notes, PDFs, and local caches may be useful for orientation, but they cannot override source files, registries, schemas, role contracts, AgentJobs, or validator results. If an explanation sounds like permission, the logical next step is to inspect the task-local execution-role record and the AgentJob allowlist.
+Check Your Understanding
+registries/AGENT_ROLE_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
+.agents/schemas/AGENT_JOB_SCHEMA.md
+Which file tells you the reusable active role versions?
+Which task-local record tells you whether a role was used directly, as an overlay, or as a provisional role?
+Why does parent-child synthesis not create extra authority?
+What would you inspect before saying a role was allowed to write a path?
+What kind of authority expansion requires a human gate?
+Good answers should point back to source surfaces rather than to memory or a generated explainer. The retrieval practice is intentionally operational: the reader should be able to identify the selected role, execution-role record, allowed writes, validators, and non-authority boundaries before modifying project knowledge.
+Where To Go Next
+AGENTS.md
+research_control/README.md
+registries/AGENT_ROLE_REGISTRY.csv
+registries/ROLE_EXECUTION_REGISTRY.csv
+.agents/schemas/AGENT_JOB_SCHEMA.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+Start with `AGENTS.md` for the authority hierarchy. Then read `research_control/README.md` for the project-system improvement and documentation-impact rules. Use `registries/AGENT_ROLE_REGISTRY.csv` to find active role versions and `registries/ROLE_EXECUTION_REGISTRY.csv` to inspect task-local role semantics. For the contract shape, read `.agents/schemas/AGENT_JOB_SCHEMA.md` and `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`. That path moves from orientation to authority without treating this page as the source of permission.
 Authority Classification
 AGENTS.md
 registries/AGENT_ROLE_REGISTRY.csv
@@ -192,3 +306,4 @@ registries/ROLE_EXECUTION_REGISTRY.csv
 registries/DIRECTOR_DECISION_REGISTRY.csv
 .agents/schemas/AGENT_JOB_SCHEMA.md
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/ROLE_SCHEMA.md
