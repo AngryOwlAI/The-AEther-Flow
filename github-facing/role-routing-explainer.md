@@ -10,11 +10,11 @@ This page explains how the project decides which role may execute a bounded task
 
 ## Source-Backed Summary
 
-Role routing is the project's decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its functionality is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. This matters because the repository contains physics roles, documentation roles, validator roles, memory roles, and project-control roles with different authority levels; collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes. Role routing fits the overall project by making authority selection itself auditable before implementation begins.
+Role routing is the project's decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its functionality is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. It also explains why optional parent-child synthesis is a decomposition of analytical perspective inside the selected AgentJob, not a new role class or permission expansion. This matters because the repository contains physics roles, documentation roles, validator roles, memory roles, and project-control roles with different authority levels; collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes. Role routing fits the overall project by making authority selection itself auditable before implementation begins.
 
 ## What This Feature Does
 
-Role routing maps a request to an authority class, compares candidate roles, records a Director decision, and binds execution to a registered role, task overlay, or one-job provisional role.
+Role routing maps a request to an authority class, compares candidate roles, records a Director decision, and binds execution to a registered role, task overlay, or one-job provisional role. Optional parent-child synthesis happens only after that binding, inside one selected AgentJob.
 
 ## Why The Project Needs It
 
@@ -29,7 +29,7 @@ Routing asks four questions:
 3. If not, is a task overlay sufficient for one bounded delta?
 4. If a one-job provisional role is used repeatedly, should Project-System Director review it for human-authorized registration?
 
-The execution-role record then names allowed writes, removed permissions, expanded permissions, validators, expiry, and the AgentJob boundary.
+The execution-role record then names allowed writes, removed permissions, expanded permissions, validators, expiry, and the AgentJob boundary. If `role_decomposition` is present, parent and child perspectives inherit that record; they do not add role IDs, allowlists, claim boundaries, or human-gate exemptions.
 
 ## What It Is Not
 
@@ -37,7 +37,7 @@ It is not a way to silently expand role authority, not a permanent-role registra
 
 ## Diagram Reading Guide
 
-The decision tree starts with authority classification and routes to science, project-system, or documentation roles. The contract map shows that direct roles, overlays, and provisional roles all terminate in a task-local execution-role record.
+The decision tree starts with authority classification and routes to science, project-system, or documentation roles. The contract map shows that direct roles, overlays, and provisional roles all terminate in a task-local execution-role record before any optional internal decomposition.
 
 <!-- mermaid-diagram-id: role-routing-decision-tree -->
 ```mermaid
@@ -69,12 +69,15 @@ flowchart TD
   Execution --> Removed["Removed permissions"]
   Execution --> Expanded["Explicit expansions"]
   Execution --> Expiry["Expires after AgentJob"]
+  Execution --> Decomp["Optional internal<br/>role_decomposition"]
+  Decomp --> Perspectives["Parent and child<br/>perspectives"]
   Allowed --> Job["AgentJob boundary"]
+  Perspectives --> Job
 ```
 
 ## Source Authority
 
-The role registry, role execution registry, Director decision registry, scoped research-control guidance, and execution-role schema define the authority evidence. This page explains those rows but does not amend them.
+The role registry, role execution registry, Director decision registry, scoped research-control guidance, AgentJob schema, and execution-role schema define the authority evidence. This page explains those rows but does not amend them.
 
 ## External AI Navigation Card
 
@@ -113,4 +116,5 @@ Do not:
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `registries/ROLE_EXECUTION_REGISTRY.csv`
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`

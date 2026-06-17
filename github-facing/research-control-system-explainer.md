@@ -10,11 +10,11 @@ This page explains how the project changes itself safely: classification, bounde
 
 ## Source-Backed Summary
 
-The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, and generated derivatives remain aligned. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
+The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, and generated derivatives remain aligned. It blocks PASS completions when a parent-child synthesis lacks a fused output or leaves a blocking conflict unresolved. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
 
 ## What This Feature Does
 
-The research-control system is the governance layer for project-system and research-continuation changes. It keeps documentation changes, validator changes, role contract changes, generated derivative refreshes, project-improvement signals, and checkpoint boundaries auditable.
+The research-control system is the governance layer for project-system and research-continuation changes. It keeps documentation changes, validator changes, role contract changes, optional parent-child decomposition evidence, generated derivative refreshes, project-improvement signals, and checkpoint boundaries auditable.
 
 ## Why The Project Needs It
 
@@ -27,10 +27,11 @@ Operator flow:
 1. Classify current changes with `scripts/project_control/classify_project_changes.py --json`.
 2. Resolve advisory project-system routing with `resolve_project_improvement.py --json` when applicable.
 3. Create or reuse one bounded AgentJob with explicit role, paths, validators, outputs, and stop conditions.
-4. Update source docs or write a documentation-impact no-op rationale when required.
-5. Regenerate memory/wiki registries through bootstrap.
-6. Run project-control, research-control, diff, and test validators.
-7. Checkpoint only when validators pass and changed paths match the job boundary.
+4. If `parent_child_parallel_synthesis` is declared, check inherited authority, child output allowlists, fused output evidence, and unresolved blocking conflicts.
+5. Update source docs or write a documentation-impact no-op rationale when required.
+6. Regenerate memory/wiki registries through bootstrap.
+7. Run project-control, research-control, diff, and test validators.
+8. Checkpoint only when validators pass and changed paths match the job boundary.
 
 ## What It Is Not
 
@@ -38,7 +39,7 @@ It is not physics continuation, not a broad rewrite license, not a permission to
 
 ## Diagram Reading Guide
 
-The validation-flow diagram reads from source-spec update through derivative generation, Mermaid parity, bootstrap, documentation impact, research-control validation, diff gate, and checkpoint. The boundary map shows classifier, role, AgentJob, allowed writes, forbidden surfaces, validators, receipts, and registry updates.
+The validation-flow diagram reads from source-spec update through derivative generation, Mermaid parity, bootstrap, documentation impact, research-control validation, diff gate, and checkpoint. The boundary map shows classifier, role, AgentJob, optional parent-child checks, allowed writes, forbidden surfaces, validators, receipts, and registry updates.
 
 <!-- mermaid-diagram-id: research-control-validation-flow -->
 ```mermaid
@@ -58,8 +59,9 @@ flowchart TD
   Change["Proposed project-system change"] --> Classifier["Change classifier"]
   Classifier --> Role["Recommended role boundary"]
   Role --> Job["One bounded AgentJob"]
-  Job --> Allowed["Allowed writes"]
-  Job --> Forbidden["Forbidden authority surfaces"]
+  Job --> DecompCheck["Optional parent-child<br/>shape and conflict checks"]
+  DecompCheck --> Allowed["Allowed writes"]
+  DecompCheck --> Forbidden["Forbidden authority surfaces"]
   Allowed --> Validators["Required validators"]
   Forbidden --> Stop["Stop condition"]
   Validators --> Receipt["Completion and documentation-impact receipts"]
@@ -68,7 +70,7 @@ flowchart TD
 
 ## Source Authority
 
-The control model is grounded in `AGENTS.md`, `research_control/README.md`, improve-project-system, explainer skills, documentation-curator contracts, validation scripts, and the project-memory bootstrap.
+The control model is grounded in `AGENTS.md`, `research_control/README.md`, improve-project-system, explainer skills, the active documentation-curator contract, AgentJob and execution-role schemas, validation scripts, and the project-memory bootstrap.
 
 ## External AI Navigation Card
 
@@ -107,7 +109,11 @@ Do not:
 - `.codex/skills/html-visual-explainer/SKILL.md`
 - `.codex/skills/visual-explainer/SKILL.md`
 - `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
-- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `research_control/templates/COMPLETION_TEMPLATE.yaml`
+- `research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml`
 - `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `scripts/project_control/validate_documentation_impact.py`
 - `scripts/research_control/validate_research_control.py`
