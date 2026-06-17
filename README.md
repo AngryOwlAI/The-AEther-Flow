@@ -99,6 +99,8 @@ Every new physics research AgentJob created after `2026-06-17T04:08:16Z` must de
 
 Future routing after `2026-06-17T04:29:31Z` treats generic controlled pause as a human-gate condition, not a normal result of missing local data. If the next step is theoretical selection among a source-side selector primitive, irrelevance theorem, concrete witness, scoped no-go question, or bounded calculation, the Director routes a bounded `theoretical-continuation-selector@0.1.0` AgentJob. A pause-like route is reserved for protected authority such as canonical ontology edit or ontology adoption.
 
+Every new physics research AgentJob created after `2026-06-17T15:46:25Z` must name a `target_derivation_milestone` and `milestone_burden` from `research_control/design/gr_derivation_burden_map.md`. Future completions must update the expanded Distance-to-GR matrix and include a new mathematical payload. Repeated-burden or scoped-obstruction results must evaluate freeze criteria rather than orbiting the same missing bridge step indefinitely.
+
 The system deliberately separates several kinds of claims:
 
 - Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.

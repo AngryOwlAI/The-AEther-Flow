@@ -246,6 +246,62 @@ SAFE_BOUNDARY_MARKERS = (
 LOOP_CONTROL_POLICY_ACTIVATED_AT = "2026-06-16T19:17:22Z"
 PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT = "2026-06-17T04:08:16Z"
 THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT = "2026-06-17T04:29:31Z"
+GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT = "2026-06-17T15:46:25Z"
+
+DISTANCE_TO_GR_LEDGER_COLUMNS = [
+    "burden_id",
+    "milestone",
+    "required_object",
+    "current_status",
+    "blocking_burden",
+    "accept_criteria",
+    "failure_or_freeze_criteria",
+    "last_evidence_path",
+    "updated_at",
+    "notes",
+]
+
+DISTANCE_TO_GR_LEDGER_STATUS_VALUES = {
+    "not started",
+    "draft object exists",
+    "constructive witness exists",
+    "smuggling audit passed",
+    "Refuter stress passed",
+    "human-gated",
+    "accepted",
+    "frozen negative",
+    "blocked by missing primitive",
+}
+
+GR_DERIVATION_MILESTONES = (
+    "source_ontology",
+    "source_equivalence_eqsrc",
+    "source_localization_obsloc_lc",
+    "response_localization_resp_lc",
+    "source_manifold_m_src",
+    "effective_metric_g_eff",
+    "matter_coupling",
+    "einstein_equations",
+    "benchmark_promotion",
+    "finite_toy_metric_response",
+)
+
+DISTANCE_TO_GR_LEDGER_REQUIRED_BURDENS = (
+    "source_ontology_primitives",
+    "source_equivalence_eqsrc",
+    "retain_h",
+    "gen_h",
+    "obsloc_lc",
+    "resp_lc",
+    "m_src",
+    "g_eff",
+    "matter_coupling",
+    "einstein_equations",
+    "finite_variation_robustness",
+    "benchmark_promotion",
+    "gate_chair_status",
+    "finite_toy_metric_response",
+)
 
 PHYSICS_ROLE_IDS = {
     "ontology-formalizer",
@@ -285,6 +341,23 @@ DISTANCE_TO_GR_REQUIRED_BURDENS = (
     "Current line hard-fail",
 )
 
+ROADMAP_DISTANCE_TO_GR_REQUIRED_BURDENS = (
+    "Source ontology primitives",
+    "Source equivalence EqSrc",
+    "RetainH",
+    "GenH",
+    "ObsLoc_lc",
+    "Resp_lc",
+    "M_src",
+    "g_eff",
+    "matter coupling",
+    "Einstein equations",
+    "finite-variation robustness",
+    "benchmark promotion",
+    "Gate Chair status",
+    "current route freeze or hard-fail status",
+)
+
 LOOP_RISK_DECISION_CATEGORIES = {
     "concrete_witness_path",
     "source_side_irrelevance_theorem_path",
@@ -322,6 +395,20 @@ ONTOLOGY_FORMALIZER_PAYLOAD_TYPES = {
     "countermodel_or_obstruction",
 }
 
+GENERAL_PHYSICS_PAYLOAD_TYPES = ONTOLOGY_FORMALIZER_PAYLOAD_TYPES | {
+    "definition",
+    "lemma",
+    "theorem",
+    "finite_model",
+    "countermodel",
+    "explicit_witness",
+    "obstruction",
+    "dependency_map_update",
+    "finite_toy_model_target",
+    "source_extension_classification",
+    "packet_selection",
+}
+
 ONTOLOGY_PAYLOAD_TEXT_MARKERS = (
     "finite concrete",
     "concrete witness",
@@ -343,7 +430,26 @@ THEORETICAL_DECISION_PACKET_TYPES = {
     "concrete_resp_lc_witness",
     "distinct_scoped_no_go_question",
     "bounded_theoretical_calculation",
+    "finite_toy_metric_response_model",
+    "source_extension_candidate",
+    "source_extension_smuggling_audit",
+    "source_extension_refuter_stress",
+    "source_extension_human_gate",
     "human_gated_ontology_change_required",
+}
+
+SOURCE_EXTENSION_WORKFLOW_CATEGORIES = {
+    "source_extension_candidate",
+    "source_extension_smuggling_audit",
+    "source_extension_refuter_stress",
+    "source_extension_human_gate",
+    "source_extension_adopted_or_rejected",
+}
+
+FREEZE_DECISION_VALUES = {
+    "not_frozen",
+    "freeze_route",
+    "human_gate_required",
 }
 
 THEORETICAL_DECISION_TEXT_MARKERS = (
@@ -428,6 +534,24 @@ def theoretical_continuation_policy() -> dict[str, object]:
         "decision_role_id": "theoretical-continuation-selector",
         "generic_controlled_pause_allowed_for_future_physics": False,
         "allowed_theoretical_packet_types": sorted(THEORETICAL_DECISION_PACKET_TYPES),
+    }
+
+
+def gr_derivation_roadmap_policy() -> dict[str, object]:
+    return {
+        "policy_id": "gr_derivation_roadmap_v1",
+        "activated_at": GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT,
+        "roadmap_path": "research_control/design/gr_derivation_burden_map.md",
+        "distance_to_gr_ledger_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+        "required_job_fields": [
+            "target_derivation_milestone",
+            "milestone_burden",
+        ],
+        "allowed_milestones": list(GR_DERIVATION_MILESTONES),
+        "distance_to_gr_required_burdens": list(ROADMAP_DISTANCE_TO_GR_REQUIRED_BURDENS),
+        "mathematical_payload_types": sorted(GENERAL_PHYSICS_PAYLOAD_TYPES),
+        "source_extension_categories": sorted(SOURCE_EXTENSION_WORKFLOW_CATEGORIES),
+        "freeze_decisions": sorted(FREEZE_DECISION_VALUES),
     }
 
 
@@ -531,6 +655,23 @@ def theoretical_continuation_policy_active(
     )
 
 
+def gr_derivation_roadmap_policy_active(
+    job_row: dict[str, str],
+    completion: dict[str, Any] | None = None,
+) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+    return any(
+        timestamp_at_or_after(value, GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT)
+        for value in timestamps
+    )
+
+
 def parent_child_required_for_job(job_row: dict[str, str]) -> bool:
     if job_row.get("role_id", "") not in PHYSICS_ROLE_IDS:
         return False
@@ -601,6 +742,55 @@ def validate_registry_columns(report: ValidationReport) -> None:
             header = next(reader, [])
         if header != expected:
             report.error(f"{name}: expected columns {expected}, found {header}")
+
+
+def validate_distance_to_gr_ledger(report: ValidationReport) -> None:
+    path = REGISTRY_DIR / "DISTANCE_TO_GR_LEDGER.csv"
+    if not path.exists():
+        report.error("missing registry: registries/DISTANCE_TO_GR_LEDGER.csv")
+        return
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        header = reader.fieldnames or []
+        if header != DISTANCE_TO_GR_LEDGER_COLUMNS:
+            report.error(
+                "DISTANCE_TO_GR_LEDGER.csv: expected columns "
+                f"{DISTANCE_TO_GR_LEDGER_COLUMNS}, found {header}"
+            )
+            return
+        rows = list(reader)
+    by_burden: dict[str, dict[str, str]] = {}
+    for row_number, row in enumerate(rows, start=2):
+        burden_id = row.get("burden_id", "").strip()
+        if not burden_id:
+            report.error(f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: missing burden_id")
+            continue
+        if burden_id in by_burden:
+            report.error(f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: duplicate burden_id {burden_id}")
+        by_burden[burden_id] = row
+        milestone = row.get("milestone", "").strip()
+        if milestone not in GR_DERIVATION_MILESTONES:
+            report.error(
+                f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: unsupported milestone {milestone}"
+            )
+        status = row.get("current_status", "").strip()
+        if status not in DISTANCE_TO_GR_LEDGER_STATUS_VALUES:
+            report.error(
+                f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: unsupported current_status {status}"
+            )
+        for field_name in [
+            "required_object",
+            "blocking_burden",
+            "accept_criteria",
+            "failure_or_freeze_criteria",
+            "last_evidence_path",
+            "updated_at",
+        ]:
+            if not row.get(field_name, "").strip():
+                report.error(f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: missing {field_name}")
+    missing = sorted(set(DISTANCE_TO_GR_LEDGER_REQUIRED_BURDENS) - set(by_burden))
+    if missing:
+        report.error(f"DISTANCE_TO_GR_LEDGER.csv: missing required burdens {missing}")
 
 
 def validate_registry_values(report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
@@ -860,6 +1050,17 @@ def validate_future_physics_job_authority(
             f"{path_text}: future physics AgentJob must declare "
             f"role_decomposition.mode={PARENT_CHILD_SYNTHESIS_MODE}"
         )
+
+    if gr_derivation_roadmap_policy_active(job_row):
+        milestone = str(job_contract.get("target_derivation_milestone", "")).strip()
+        burden = str(job_contract.get("milestone_burden", "")).strip()
+        if milestone not in GR_DERIVATION_MILESTONES:
+            report.error(
+                f"{path_text}: future physics AgentJob must name target_derivation_milestone "
+                f"from {list(GR_DERIVATION_MILESTONES)}"
+            )
+        if not burden:
+            report.error(f"{path_text}: future physics AgentJob must declare milestone_burden")
 
     forbidden_classes = set(_listish_values(job_contract.get("forbidden_source_classes", [])))
     missing = sorted(PHYSICS_JOB_REQUIRED_FORBIDDEN_SOURCE_CLASSES - forbidden_classes)
@@ -1404,7 +1605,18 @@ def validate_loop_control_completion(
         return
 
     path_text = path.relative_to(REPO_ROOT).as_posix()
-    validate_distance_to_gr_status(report, completion, path_text)
+    validate_distance_to_gr_status(
+        report,
+        completion,
+        path_text,
+        (
+            ROADMAP_DISTANCE_TO_GR_REQUIRED_BURDENS
+            if gr_derivation_roadmap_policy_active(job_row, completion)
+            else DISTANCE_TO_GR_REQUIRED_BURDENS
+        ),
+    )
+    if gr_derivation_roadmap_policy_active(job_row, completion):
+        validate_general_physics_payload(report, completion, path_text)
 
     if role_id == "refuter" and "stress" in text_blob(job_contract, completion):
         validate_refuter_loop_decision(report, job_row, completion, path_text)
@@ -1416,13 +1628,14 @@ def validate_loop_control_completion(
     ):
         validate_candidate_bridge_attempt(report, completion, path_text)
     if role_id == "theoretical-continuation-selector":
-        validate_theoretical_continuation_decision(report, completion, path_text)
+        validate_theoretical_continuation_decision(report, job_row, completion, path_text)
 
 
 def validate_distance_to_gr_status(
     report: ValidationReport,
     completion: dict[str, Any],
     path_text: str,
+    required_burdens: tuple[str, ...],
 ) -> None:
     matrix = completion.get("distance_to_gr_status")
     if not isinstance(matrix, list) or not matrix:
@@ -1440,9 +1653,35 @@ def validate_distance_to_gr_status(
             report.error(f"{path_text}: distance_to_gr_status entries require burden and status")
             continue
         seen[burden] = status
-    missing = [burden for burden in DISTANCE_TO_GR_REQUIRED_BURDENS if burden not in seen]
+    missing = [burden for burden in required_burdens if burden not in seen]
     if missing:
         report.error(f"{path_text}: distance_to_gr_status missing burdens {missing}")
+
+
+def validate_general_physics_payload(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    payloads = completion.get("new_mathematical_payload")
+    if not isinstance(payloads, list) or not payloads:
+        report.error(f"{path_text}: future physics completion missing new_mathematical_payload")
+        return
+    accepted = False
+    for item in payloads:
+        if not isinstance(item, dict):
+            report.error(f"{path_text}: new_mathematical_payload entries must be maps")
+            continue
+        payload_type = str(item.get("payload_type", item.get("type", ""))).strip()
+        summary = str(item.get("summary", "")).strip()
+        if payload_type not in GENERAL_PHYSICS_PAYLOAD_TYPES:
+            report.error(f"{path_text}: unsupported new_mathematical_payload type {payload_type}")
+        elif summary:
+            accepted = True
+        else:
+            report.error(f"{path_text}: new_mathematical_payload entries require summary")
+    if not accepted:
+        report.error(f"{path_text}: future physics completion has no accepted new mathematical payload")
 
 
 def validate_refuter_loop_decision(
@@ -1494,6 +1733,8 @@ def validate_refuter_loop_decision(
     if category == "scoped_obstruction" and not str(decision.get("obstruction_summary", "")).strip():
         report.error(f"{path_text}: scoped_obstruction decisions require obstruction_summary")
     if category in {"repeated_unmet_burdens_no_new_payload", "scoped_obstruction"}:
+        if gr_derivation_roadmap_policy_active(job_row, completion):
+            validate_freeze_criteria_status(report, completion, path_text)
         if next_route not in allowed_bridge_routes:
             report.error(
                 f"{path_text}: {category} must route through bridge_or_fail escalation"
@@ -1506,6 +1747,29 @@ def validate_refuter_loop_decision(
             report.error(
                 f"{path_text}: bridge_or_fail escalation may not route to a generic Ontology Formalizer packet"
             )
+
+
+def validate_freeze_criteria_status(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    freeze = completion.get("freeze_criteria_status")
+    if not isinstance(freeze, dict):
+        report.error(f"{path_text}: repeated-burden or scoped-obstruction completion missing freeze_criteria_status")
+        return
+    decision = str(freeze.get("freeze_decision", "")).strip()
+    rationale = str(freeze.get("rationale", "")).strip()
+    criteria = freeze.get("criteria_evaluated", [])
+    label = str(freeze.get("candidate_freeze_label", "")).strip()
+    if decision not in FREEZE_DECISION_VALUES:
+        report.error(f"{path_text}: freeze_criteria_status.freeze_decision is not allowed: {decision}")
+    if not isinstance(criteria, list) or not any(str(item).strip() for item in criteria):
+        report.error(f"{path_text}: freeze_criteria_status.criteria_evaluated must list evaluated criteria")
+    if not rationale:
+        report.error(f"{path_text}: freeze_criteria_status.rationale is required")
+    if decision == "freeze_route" and not label:
+        report.error(f"{path_text}: freeze route decisions require candidate_freeze_label")
 
 
 def validate_ontology_formalizer_payload(
@@ -1556,6 +1820,7 @@ def validate_candidate_bridge_attempt(
 
 def validate_theoretical_continuation_decision(
     report: ValidationReport,
+    job_row: dict[str, str],
     completion: dict[str, Any],
     path_text: str,
 ) -> None:
@@ -1598,6 +1863,44 @@ def validate_theoretical_continuation_decision(
         report.error(
             f"{path_text}: theoretical continuation decisions may require a human gate only for ontology-change authority"
         )
+    if not gr_derivation_roadmap_policy_active(job_row, completion):
+        return
+    if packet_type == "distinct_scoped_no_go_question":
+        if not str(decision.get("decision_consequence", "")).strip():
+            report.error(
+                f"{path_text}: distinct_scoped_no_go_question requires decision_consequence after roadmap activation"
+            )
+        if not str(decision.get("new_payload_novelty", "")).strip():
+            report.error(
+                f"{path_text}: distinct_scoped_no_go_question requires new_payload_novelty after roadmap activation"
+            )
+    if packet_type.startswith("source_extension_"):
+        category = str(decision.get("source_extension_category", "")).strip()
+        classification = str(decision.get("source_extension_import_classification", "")).strip()
+        if category not in SOURCE_EXTENSION_WORKFLOW_CATEGORIES:
+            report.error(
+                f"{path_text}: source extension decisions require source_extension_category from "
+                f"{sorted(SOURCE_EXTENSION_WORKFLOW_CATEGORIES)}"
+            )
+        if not classification:
+            report.error(
+                f"{path_text}: source extension decisions require source_extension_import_classification"
+            )
+    if packet_type == "finite_toy_metric_response_model":
+        target = decision.get("finite_toy_model_target")
+        if not isinstance(target, dict):
+            report.error(f"{path_text}: finite toy model decisions require finite_toy_model_target")
+        else:
+            for field_name in [
+                "source_set",
+                "response_relation",
+                "metric_response_analogue",
+                "invariance_checks",
+            ]:
+                if not str(target.get(field_name, "")).strip():
+                    report.error(
+                        f"{path_text}: finite_toy_model_target.{field_name} is required"
+                    )
 
 
 def validate_completion_resolver_snapshots(
@@ -2055,6 +2358,7 @@ def validate_all(
 ) -> ValidationReport:
     report = ValidationReport()
     validate_registry_columns(report)
+    validate_distance_to_gr_ledger(report)
     rows_by_registry = {
         name: read_csv_rows(name)
         for name in REGISTRY_COLUMNS

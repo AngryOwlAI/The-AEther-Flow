@@ -32,6 +32,19 @@ creation.
 If the role is provisional, the job must include `provisional_role_contract`
 with `expires_after_job_id` equal to the job ID.
 
+For every future physics research AgentJob created after
+`2026-06-17T15:46:25Z`, the job must also include:
+
+- `target_derivation_milestone`
+- `milestone_burden`
+
+`target_derivation_milestone` must be one of the milestones in
+`research_control/design/gr_derivation_burden_map.md`. `milestone_burden`
+must state the specific burden the job attempts to discharge. A task that
+cannot name a derivation milestone should be routed as documentation,
+methodology, validation, or project-system work rather than physics
+derivation work.
+
 ## Optional Fields
 
 - `objective`
@@ -147,8 +160,37 @@ The selector may choose only one future packet type:
 - `concrete_resp_lc_witness`
 - `distinct_scoped_no_go_question`
 - `bounded_theoretical_calculation`
+- `finite_toy_metric_response_model`
+- `source_extension_candidate`
+- `source_extension_smuggling_audit`
+- `source_extension_refuter_stress`
+- `source_extension_human_gate`
 - `human_gated_ontology_change_required`
 
 The last option is reserved for cases where the next honest continuation needs
 canonical ontology authority, ontology adoption, or another protected human
 gate. Missing empirical data or absent experiment access is not sufficient.
+
+After `2026-06-17T15:46:25Z`, `distinct_scoped_no_go_question` must include a
+new-payload novelty statement and a decision consequence. Source-extension
+packet decisions must classify the source-extension category and state whether
+the proposal is a derivation from current ontology, a conservative definitional
+extension, a new ontology primitive, or a forbidden target-GR import. Finite
+toy model decisions must name the finite source set, response relation, toy
+metric-response analogue, and invariance checks.
+
+## Distance-To-GR And Payload Contract
+
+Future physics completions after `2026-06-17T15:46:25Z` must include the
+expanded `distance_to_gr_status` burdens from
+`research_control/design/gr_derivation_burden_map.md` and at least one
+`new_mathematical_payload` item. Accepted payload families are new
+definitions, lemmas, theorems, finite models, countermodels, explicit
+witnesses, obstructions, dependency-map updates, finite toy targets,
+source-extension classifications, packet selections, or established
+role-specific payload types.
+
+Repeated-burden or scoped-obstruction Refuter completions after that timestamp
+must also include `freeze_criteria_status`, including evaluated criteria,
+freeze decision, rationale, and a candidate freeze label when freezing a
+route.

@@ -106,6 +106,10 @@ def allowed_by_any(path: str, patterns: Iterable[str]) -> bool:
     return any(path_matches(path, pattern) for pattern in patterns)
 
 
+def stageable_paths(paths: Iterable[str]) -> list[str]:
+    return sorted(path for path in paths if not path.startswith(".local/"))
+
+
 def load_job_contract(job_row: dict[str, str]) -> dict[str, object]:
     job_path = REPO_ROOT / job_row["job_path"]
     if not job_path.exists():
@@ -330,7 +334,19 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
             "committed": False,
         }
 
-    paths_to_stage = sorted(final_changes)
+    paths_to_stage = stageable_paths(final_changes)
+    if not paths_to_stage:
+        return {
+            "status": "no_action",
+            "reason": "only ignored cache changes remain after validation",
+            "active_task": job_row.get("task_id", ""),
+            "active_agent_job": job_row.get("job_id", ""),
+            "changed_paths": [],
+            "ignored_changed_paths": sorted(final_changes),
+            "staged": False,
+            "committed": False,
+        }
+
     add_result = run_command(["git", "add", "--", *paths_to_stage])
     commands.append(add_result)
     if add_result.returncode != 0:

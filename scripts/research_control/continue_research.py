@@ -18,6 +18,7 @@ try:
     from resolve_latest_handoff import resolve_latest
     from strict_yaml import StrictYamlError, load as load_yaml
     from validate_research_control import (
+        gr_derivation_roadmap_policy,
         loop_control_policy,
         parent_child_decomposition_policy,
         theoretical_continuation_policy,
@@ -27,6 +28,7 @@ except ImportError:  # pragma: no cover
     from scripts.research_control.resolve_latest_handoff import resolve_latest
     from scripts.research_control.strict_yaml import StrictYamlError, load as load_yaml
     from scripts.research_control.validate_research_control import (
+        gr_derivation_roadmap_policy,
         loop_control_policy,
         parent_child_decomposition_policy,
         theoretical_continuation_policy,
@@ -202,6 +204,7 @@ def continuation_status() -> dict[str, object]:
         "bridge_or_fail_policy": loop_control_policy(),
         "theoretical_continuation_policy": theoretical_continuation_policy(),
         "parent_child_decomposition_policy": parent_child_decomposition_policy(),
+        "gr_derivation_roadmap_policy": gr_derivation_roadmap_policy(),
         "required_authority_surfaces": authority_surfaces(
             active_task_id,
             latest,

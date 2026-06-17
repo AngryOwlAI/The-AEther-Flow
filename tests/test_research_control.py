@@ -245,6 +245,10 @@ class ResearchControlTests(unittest.TestCase):
             status["parent_child_decomposition_policy"]["mode"],
             "parent_child_parallel_synthesis",
         )
+        self.assertEqual(
+            status["gr_derivation_roadmap_policy"]["policy_id"],
+            "gr_derivation_roadmap_v1",
+        )
 
     def test_checkpoint_global_sync_allowlist_is_narrow(self) -> None:
         self.assertTrue(
@@ -258,6 +262,17 @@ class ResearchControlTests(unittest.TestCase):
                 "wiki/tex/generated-note.md",
                 self.checkpoint.GLOBAL_SYNC_ALLOWLIST,
             )
+        )
+
+    def test_checkpoint_stageable_paths_exclude_local_cache(self) -> None:
+        self.assertEqual(
+            self.checkpoint.stageable_paths(
+                [
+                    ".local/content_semantics/markdown/md-readme.txt",
+                    "research_control/README.md",
+                ]
+            ),
+            ["research_control/README.md"],
         )
 
     def test_commit_message_uses_execution_role_ref(self) -> None:
@@ -735,9 +750,65 @@ class ResearchControlTests(unittest.TestCase):
             )
         return "\n".join(lines)
 
+    def roadmap_distance_matrix_yaml(self) -> str:
+        burdens = [
+            "Source ontology primitives",
+            "Source equivalence EqSrc",
+            "RetainH",
+            "GenH",
+            "ObsLoc_lc",
+            "Resp_lc",
+            "M_src",
+            "g_eff",
+            "matter coupling",
+            "Einstein equations",
+            "finite-variation robustness",
+            "benchmark promotion",
+            "Gate Chair status",
+            "current route freeze or hard-fail status",
+        ]
+        lines = ["distance_to_gr_status:"]
+        for burden in burdens:
+            lines.extend(
+                [
+                    f'  - burden: "{burden}"',
+                    '    status: "not discharged"',
+                ]
+            )
+        return "\n".join(lines)
+
+    def minimal_payload_yaml(self, payload_type: str = "dependency_map_update") -> str:
+        return "\n".join(
+            [
+                "new_mathematical_payload:",
+                f'  - payload_type: "{payload_type}"',
+                '    summary: "Synthetic payload evidence for future-roadmap validation."',
+            ]
+        )
+
+    def freeze_status_yaml(self) -> str:
+        return "\n".join(
+            [
+                "freeze_criteria_status:",
+                '  candidate_freeze_label: "NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION"',
+                '  freeze_decision: "not_frozen"',
+                "  criteria_evaluated:",
+                '    - "constructive primitive packet"',
+                '    - "concrete witness attempt"',
+                '    - "smuggling audit"',
+                '    - "Refuter stress test"',
+                '  rationale: "Synthetic fixture records that criteria were considered without freezing."',
+            ]
+        )
+
     def test_future_physics_completion_requires_distance_matrix(self) -> None:
         report = self.validate_completion_fixture(role_id="smuggling-auditor")
         self.assertTrue(any("distance_to_gr_status" in error for error in report.errors))
+
+    def test_distance_to_gr_ledger_is_static_validated(self) -> None:
+        report = self.validator.ValidationReport()
+        self.validator.validate_distance_to_gr_ledger(report)
+        self.assertEqual(report.errors, [])
 
     def test_future_refuter_stress_rejects_generic_ontology_loop_route(self) -> None:
         completion_extra = "\n".join(
@@ -799,6 +870,71 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertEqual(report.errors, [])
 
+    def test_roadmap_future_physics_completion_requires_updated_distance_matrix(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("distance_to_gr_status missing burdens" in error for error in report.errors))
+
+    def test_roadmap_future_physics_completion_requires_new_payload(self) -> None:
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            completion_extra=self.roadmap_distance_matrix_yaml(),
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("missing new_mathematical_payload" in error for error in report.errors))
+
+    def test_roadmap_refuter_scoped_obstruction_requires_freeze_status(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                "loop_risk_decision:",
+                '  category: "scoped_obstruction"',
+                '  next_route: "theoretical_decision_role_selection"',
+                '  rationale: "Route to theoretical-continuation-selector for a source-side selector primitive packet."',
+                '  obstruction_summary: "Resp_lc sign and scale are underdetermined."',
+                'next_recommendation: "Create a theoretical-continuation-selector task for a source-side selector primitive with new mathematical payload."',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="refuter",
+            job_objective="Run a Refuter stress test.",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("freeze_criteria_status" in error for error in report.errors))
+
+    def test_roadmap_refuter_accepts_freeze_status(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.freeze_status_yaml(),
+                "loop_risk_decision:",
+                '  category: "scoped_obstruction"',
+                '  next_route: "theoretical_decision_role_selection"',
+                '  rationale: "Route to theoretical-continuation-selector for a source-side selector primitive packet."',
+                '  obstruction_summary: "Resp_lc sign and scale are underdetermined."',
+                'next_recommendation: "Create a theoretical-continuation-selector task for a source-side selector primitive with new mathematical payload."',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="refuter",
+            job_objective="Run a Refuter stress test.",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertEqual(report.errors, [])
+
     def test_future_ontology_formalizer_requires_new_payload(self) -> None:
         report = self.validate_completion_fixture(
             role_id="ontology-formalizer",
@@ -839,6 +975,77 @@ class ResearchControlTests(unittest.TestCase):
             role_id="theoretical-continuation-selector",
             completion_extra=completion_extra,
             timestamp="2026-06-17T04:29:31Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_roadmap_selector_rejects_no_go_without_novelty_and_consequence(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("packet_selection"),
+                "theoretical_decision_output:",
+                '  selected_next_packet_type: "distinct_scoped_no_go_question"',
+                '  decision_basis: "Synthetic scoped no-go selection."',
+                '  theoretical_method: "Bounded formal construction from tracked assumptions."',
+                '  preserves_claim_blocks: "No canonical ontology edit benchmark promotion Gate Chair review or completed derivation is authorized."',
+                "  requires_human_gate: false",
+                '  human_gate_reason: ""',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("decision_consequence" in error for error in report.errors))
+        self.assertTrue(any("new_payload_novelty" in error for error in report.errors))
+
+    def test_roadmap_selector_accepts_source_extension_category(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("source_extension_classification"),
+                "theoretical_decision_output:",
+                '  selected_next_packet_type: "source_extension_candidate"',
+                '  decision_basis: "Synthetic source extension category selection."',
+                '  theoretical_method: "Classify whether the extension is conservative or a new primitive."',
+                '  preserves_claim_blocks: "No canonical ontology edit benchmark promotion Gate Chair review or completed derivation is authorized."',
+                "  requires_human_gate: false",
+                '  human_gate_reason: ""',
+                '  source_extension_category: "source_extension_candidate"',
+                '  source_extension_import_classification: "conservative definitional extension candidate, not adopted ontology"',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_roadmap_selector_accepts_finite_toy_model_target(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("finite_toy_model_target"),
+                "theoretical_decision_output:",
+                '  selected_next_packet_type: "finite_toy_metric_response_model"',
+                '  decision_basis: "Synthetic finite toy target selection."',
+                '  theoretical_method: "Define a bounded source set and response analogue before full GR."',
+                '  preserves_claim_blocks: "No canonical ontology edit benchmark promotion Gate Chair review or completed derivation is authorized."',
+                "  requires_human_gate: false",
+                '  human_gate_reason: ""',
+                "  finite_toy_model_target:",
+                '    source_set: "finite U with source-local readout syntax"',
+                '    response_relation: "source-side response relation candidate"',
+                '    metric_response_analogue: "toy g_eff-like distance form"',
+                '    invariance_checks: "finite relabeling and perturbation checks"',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
         )
         self.assertEqual(report.errors, [])
 
@@ -897,6 +1104,67 @@ class ResearchControlTests(unittest.TestCase):
             },
         )
         self.assertTrue(any("must declare role_decomposition.mode" in error for error in report.errors))
+
+    def test_roadmap_future_physics_job_requires_target_milestone(self) -> None:
+        report = self.validator.ValidationReport()
+        row = {
+            "job_id": "AJ-TEST",
+            "role_id": "refuter",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "created_at": "2026-06-17T15:46:25Z",
+            "started_at": "",
+            "completed_at": "",
+        }
+        self.validator.validate_future_physics_job_authority(
+            report,
+            row,
+            {
+                "allowed_write_paths": ["research_control/tasks/RT-TEST/**"],
+                "forbidden_source_classes": [
+                    "canonical_ontology_write",
+                    "benchmark_promotion",
+                    "candidate_reconstruction",
+                    "gate_chair_verdict",
+                    "completed_derivation_claim",
+                    "global_theory_rejection",
+                    "generated_derivative_authority",
+                ],
+                "role_decomposition": {},
+            },
+        )
+        self.assertTrue(any("target_derivation_milestone" in error for error in report.errors))
+        self.assertTrue(any("milestone_burden" in error for error in report.errors))
+
+    def test_roadmap_future_physics_job_accepts_target_milestone(self) -> None:
+        report = self.validator.ValidationReport()
+        row = {
+            "job_id": "AJ-TEST",
+            "role_id": "refuter",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "created_at": "2026-06-17T15:46:25Z",
+            "started_at": "",
+            "completed_at": "",
+        }
+        self.validator.validate_future_physics_job_authority(
+            report,
+            row,
+            {
+                "allowed_write_paths": ["research_control/tasks/RT-TEST/**"],
+                "forbidden_source_classes": [
+                    "canonical_ontology_write",
+                    "benchmark_promotion",
+                    "candidate_reconstruction",
+                    "gate_chair_verdict",
+                    "completed_derivation_claim",
+                    "global_theory_rejection",
+                    "generated_derivative_authority",
+                ],
+                "role_decomposition": {},
+                "target_derivation_milestone": "response_localization_resp_lc",
+                "milestone_burden": "Discharge response selector sign scale and token semantics.",
+            },
+        )
+        self.assertEqual(report.errors, [])
 
     def test_historical_physics_job_without_parent_child_decomposition_remains_valid(self) -> None:
         report = self.validator.ValidationReport()

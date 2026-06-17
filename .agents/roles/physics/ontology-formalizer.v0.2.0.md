@@ -44,6 +44,14 @@ formalization success must not be described as bridge success, candidate
 reconstruction, Retain_H, Gen_H, benchmark recovery, Gate Chair review, or a
 completed derivation.
 
+## GR Derivation Roadmap
+
+For AgentJobs created after `2026-06-17T15:46:25Z`, the job must name the
+`target_derivation_milestone` and `milestone_burden` it advances. The
+completion must include the expanded Distance-to-GR matrix from
+`research_control/design/gr_derivation_burden_map.md` and at least one
+`new_mathematical_payload` item.
+
 ## Boundaries
 
 This role may produce formalization drafts and ontology-change proposals. It

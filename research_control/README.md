@@ -51,6 +51,27 @@ canonical ontology edit or ontology adoption. Future completions and handoffs
 must record that route as `human_gated_ontology_change_required` or another
 specific human-gated route, not as generic `controlled_pause`.
 
+## GR Derivation Burden Map
+
+Future physics AgentJobs after `2026-06-17T15:46:25Z` must name a
+`target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. This separates
+derivation planning from agent-routing planning: the role and validators say
+who acts next, while the milestone says which physics object must exist next
+for ordinary GR or the conservative exact-GR benchmark to become derivable.
+
+`registries/DISTANCE_TO_GR_LEDGER.csv` is the persistent Distance-to-GR ledger.
+Future physics completions must include the expanded burden matrix and a
+`new_mathematical_payload` item. Repeated-burden or scoped-obstruction
+completions must evaluate `freeze_criteria_status`; `NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION`
+is the candidate freeze label for the current `Resp_lc` selector route.
+
+Source extension is a controlled workflow category. It must distinguish a
+derivation from current ontology, a conservative definitional extension, a new
+ontology primitive, and a forbidden target-GR import. A finite toy
+metric-response target is an allowed constructive packet before attempting a
+full `M_src` or `g_eff` construction.
+
 ## Local Cache Boundary
 
 Tracked files under `research_control/` are authority. `.local/` prompts,

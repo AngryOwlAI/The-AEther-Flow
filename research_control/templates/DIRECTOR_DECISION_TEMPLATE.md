@@ -36,6 +36,15 @@ For new physics research AgentJobs created after `2026-06-17T04:08:16Z`, use
 outer AgentJob and one execution-role record; do not create child AgentJobs.
 For non-physics project-system jobs, state `not_applicable`.
 
+## Target Derivation Milestone
+
+For new physics research AgentJobs created after `2026-06-17T15:46:25Z`, name
+the `target_derivation_milestone` from
+`research_control/design/gr_derivation_burden_map.md` and the exact
+`milestone_burden` the job attempts to discharge. If no milestone can be
+named, route the work as documentation, methodology, validation, or
+project-system work rather than physics derivation work.
+
 ## Claim Boundary
 
 ## Validation

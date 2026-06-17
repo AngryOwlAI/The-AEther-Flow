@@ -31,6 +31,14 @@ irrelevance theorems, concrete witnesses, scoped no-go questions, or bounded
 calculations, route one bounded `theoretical-continuation-selector@0.1.0`
 AgentJob instead of stopping at generic controlled pause.
 
+Future physics AgentJobs after `2026-06-17T15:46:25Z` must name a
+`target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. Completions must update
+the expanded Distance-to-GR burden matrix, name a new mathematical payload, and
+evaluate freeze criteria for repeated-burden or scoped-obstruction outcomes.
+Source-extension and finite toy metric-response packets are controlled
+categories, not claim-promotion shortcuts.
+
 ## Editing Rules
 
 - Keep DDRs, AgentJobs, completions, approvals, and handoffs immutable after

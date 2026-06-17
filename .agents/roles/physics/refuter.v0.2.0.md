@@ -46,6 +46,18 @@ local packet success from progress on observer readout, effective metric,
 matter coupling, Einstein equations, benchmark promotion, Gate Chair review,
 and current-line hard-fail status.
 
+After `2026-06-17T15:46:25Z`, the next route must also name the roadmap
+milestone and burden it pressures. Repeated-burden or scoped-obstruction
+completions must include `freeze_criteria_status`. For the present `Resp_lc`
+selector line, the candidate route-freeze label is
+`NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION`. A route freeze is local and must
+not be stated as global theory rejection or future source-extension
+impossibility.
+
+Every future Refuter completion must include at least one
+`new_mathematical_payload` item, such as a countermodel, explicit witness,
+obstruction, theorem pressure, finite model pressure, or dependency-map update.
+
 ## Boundaries
 
 Verdicts are local unless later promoted by a human-gated Gate Chair. This role

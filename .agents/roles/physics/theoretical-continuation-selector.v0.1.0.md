@@ -47,18 +47,44 @@ Allowed packet types are:
 - `concrete_resp_lc_witness`
 - `distinct_scoped_no_go_question`
 - `bounded_theoretical_calculation`
+- `finite_toy_metric_response_model`
+- `source_extension_candidate`
+- `source_extension_smuggling_audit`
+- `source_extension_refuter_stress`
+- `source_extension_human_gate`
 - `human_gated_ontology_change_required`
+
+After `2026-06-17T15:46:25Z`, `distinct_scoped_no_go_question` must include a
+clear `decision_consequence` and `new_payload_novelty`. Source-extension
+packet choices must include `source_extension_category` and
+`source_extension_import_classification`. Finite toy model choices must include
+`finite_toy_model_target` with a source set, response relation,
+metric-response analogue, and invariance checks.
 
 ## Routing Discipline
 
-If at least one non-promotional theoretical packet is available, select that
-packet and keep `requires_human_gate: false`. The selected packet must remain
-draft/control and must preserve all claim-promotion, benchmark, Gate Chair,
-candidate-reconstruction, completed-derivation, and global-rejection blocks.
+If at least one non-promotional constructive packet is available, select that
+packet and keep `requires_human_gate: false`. Constructive packets include a
+minimal source-side selector primitive, a concrete `Resp_lc` witness, a finite
+toy metric-response model, or a controlled source-extension candidate. The
+selected packet must remain draft/control and must preserve all claim-promotion,
+benchmark, Gate Chair, candidate-reconstruction, completed-derivation, and
+global-rejection blocks.
+
+Select another scoped no-go question only when it is genuinely new, supplies a
+new mathematical payload, and has a clear decision consequence for the roadmap.
 
 Select `human_gated_ontology_change_required` only when every honest
 continuation would require canonical ontology authority, ontology adoption, or
 another protected human-gated expansion.
+
+For AgentJobs created after `2026-06-17T15:46:25Z`, the job must name the
+`target_derivation_milestone` and `milestone_burden` its decision advances.
+The completion must include the expanded Distance-to-GR matrix from
+`research_control/design/gr_derivation_burden_map.md` and at least one
+`new_mathematical_payload` item, usually a `packet_selection`,
+`dependency_map_update`, `finite_toy_model_target`, or
+`source_extension_classification`.
 
 ## Boundaries
 

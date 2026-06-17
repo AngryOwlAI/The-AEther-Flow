@@ -70,6 +70,13 @@ skills provide procedures, and gates control claim promotion.
    conflict review, and fusion summary under `parent_child_synthesis`. A PASS
    completion may not contain unresolved blocking conflicts.
 
+   For every new physics research AgentJob created after
+   `2026-06-17T15:46:25Z`, declare `target_derivation_milestone` and
+   `milestone_burden` from `research_control/design/gr_derivation_burden_map.md`.
+   If no derivation milestone can be named, route the work as documentation,
+   methodology, validation, or project-system maintenance rather than physics
+   derivation work.
+
 6. Execute exactly one authorized AgentJob unless a stop condition applies:
    human gate required, validation failure, no role fit, authority expansion,
    write-path conflict, or protected ontology/authority expansion requiring a
@@ -112,15 +119,19 @@ skills provide procedures, and gates control claim promotion.
    requirement, or a human-gated Gate Chair closure or suspension proposal. Do
    not route back to another generic Ontology Formalizer obligation packet.
 
-   Future physics completions must include `distance_to_gr_status`. Future
-   Ontology Formalizer completions must include `new_mathematical_payload`
-   with concrete witnesses, certificate-step families, inverse-provenance
-   tokens, source-side irrelevance proof, bridge map candidate, theorem with
-   hypotheses and proof, or countermodel/obstruction. Future bridge-facing
-   Candidate Constructor completions must include `bridge_attempt_status`
-   naming either a candidate map or the missing primitive and preserving all
-   downstream promotion blocks. Future Theoretical Continuation Selector
-   completions must include `theoretical_decision_output`.
+   Future physics completions must include `distance_to_gr_status`. After
+   `2026-06-17T15:46:25Z`, that matrix must use the expanded burden list from
+   `research_control/design/gr_derivation_burden_map.md`, every physics
+   completion must include at least one `new_mathematical_payload`, and
+   repeated-burden or scoped-obstruction Refuter completions must include
+   `freeze_criteria_status`. Future bridge-facing Candidate Constructor
+   completions must include `bridge_attempt_status` naming either a candidate
+   map or the missing primitive and preserving all downstream promotion blocks.
+   Future Theoretical Continuation Selector completions must include
+   `theoretical_decision_output`; source-extension packets must classify the
+   extension category, and finite toy metric-response packets must state the
+   finite source set, response relation, metric-response analogue, and
+   invariance checks.
 
 7. After a state-changing AgentJob completion, create the durable response
    transaction: role output artifact if any, completion record, registry updates,

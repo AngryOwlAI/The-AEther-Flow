@@ -33,6 +33,14 @@ Gate Chair review, completed derivation, or global theory rejection.
 Every completion must include a `distance_to_gr_status` matrix so local audit
 success remains visibly distinct from distance to GR.
 
+For AgentJobs created after `2026-06-17T15:46:25Z`, the job must name the
+`target_derivation_milestone` and `milestone_burden` it audits. The completion
+must include the expanded Distance-to-GR matrix from
+`research_control/design/gr_derivation_burden_map.md` and at least one
+`new_mathematical_payload` item. For source-extension packets, classify whether
+the packet is a derivation from current ontology, a conservative definitional
+extension, a new ontology primitive, or a forbidden target-GR import.
+
 ## Boundaries
 
 This role can block or flag promotion. It cannot promote claims. It should be

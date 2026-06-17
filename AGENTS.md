@@ -52,6 +52,15 @@ needs a decision among theoretical packets, route one bounded
 `theoretical-continuation-selector@0.1.0` AgentJob to select the next packet
 and preserve claim gates.
 
+For physics AgentJobs created after `2026-06-17T15:46:25Z`, the Director must
+name `target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. Future completions must
+use the expanded Distance-to-GR matrix, include new mathematical payload, and
+evaluate freeze criteria for repeated-burden or scoped-obstruction outcomes.
+Source-extension and finite toy metric-response packets are controlled
+categories; they do not promote ontology, metric, coupling, Einstein-equation,
+benchmark, or Gate Chair claims.
+
 ## Project-System Improvement
 
 For project-system repair, explanatory documentation synchronization,

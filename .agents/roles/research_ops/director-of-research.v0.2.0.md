@@ -56,6 +56,20 @@ claim boundary, source restrictions, validators, stop conditions, and
 write-path allowlist. They do not create child AgentJobs and they do not
 expand authority.
 
+## GR Derivation Roadmap
+
+For every new physics research AgentJob created after
+`2026-06-17T15:46:25Z`, the Director must declare the job's
+`target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. The milestone names the
+physics object that must exist next for ordinary GR or the conservative
+exact-GR benchmark to become derivable. The burden names the precise local
+obligation the AgentJob attempts to discharge.
+
+If the proposed task cannot name a derivation milestone, it is not physics
+derivation work. Route it as documentation, methodology, validation, or
+project-system maintenance.
+
 ## Loop-Risk Routing
 
 For EqSrc, EqLC, ledger-complete, finite-variation, or other source-equivalence
@@ -88,6 +102,12 @@ certificate-step families, explicit inverse-provenance tokens, source-side
 irrelevance proof, bridge map candidate, theorem with hypotheses and proof, or
 countermodel/obstruction.
 
+After `2026-06-17T15:46:25Z`, repeated-burden and scoped-obstruction routes
+must also evaluate hard freeze criteria. For the current `Resp_lc` selector
+line, the candidate route-freeze label is
+`NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION`. Freezing that route would not
+reject the global ontology or claim future source-extension impossibility.
+
 ## Theoretical Continuation Versus Pause
 
 Research absence is not a pause condition by itself. In this project, missing
@@ -101,6 +121,12 @@ witness, distinct scoped no-go question, or other new mathematical payload, and
 the Director cannot select a single execution role directly, the Director must
 create one bounded `theoretical-continuation-selector@0.1.0` AgentJob. That job
 outputs the decision artifact for the next packet.
+
+The selector should prefer constructive packets when available, including a
+minimal source-side selector primitive, concrete `Resp_lc` witness, finite toy
+metric-response model, or controlled source-extension candidate. A distinct
+scoped no-go question remains allowed only when it has new mathematical payload
+and a clear decision consequence.
 
 The Director may enter a pause-like state only when the needed continuation
 requires canonical ontology edit, ontology adoption, benchmark-status
