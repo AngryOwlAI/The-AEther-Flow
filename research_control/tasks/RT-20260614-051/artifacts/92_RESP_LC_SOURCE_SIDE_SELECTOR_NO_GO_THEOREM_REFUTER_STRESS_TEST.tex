@@ -1,0 +1,323 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqLC}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{lc}}}
+\newcommand{\ReadLC}{\mathsf{Read}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\SelResp}{\mathsf{Sel}_{\RespLC}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{stressscreen}{Stress screen}
+\newtheorem{stressfinding}{Stress finding}
+\newtheorem{obstruction}{Scoped obstruction}
+\newtheorem{verdict}{Stress verdict}
+\newtheorem{controlrule}{Control rule}
+\newtheorem{distancestatus}{Distance-to-GR status}
+
+\title{\textbf{RespLC Source-Side Selector No-Go Theorem Refuter Stress Test}\\[0.35em]
+\large Hypothesis Strength, Convention Loopholes, Source Extension, and Overread Screens}
+\author{Refuter AgentJob AJ-RT-20260614-051-001}
+\date{June 17, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control Refuter artifact stress-tests the scoped
+\(\RespLC\) source-side selector no-go theorem from
+\texttt{RT-20260614-050}. The theorem says that the retained tuple
+\[
+    S_X=(U_X,[n]_{U_X},\Phi_{U_X},T^n,T^\Phi)
+\]
+does not determine response sign orientation \(o^R_X\), positive
+response normalization \(\nu^R_X\), or response-token semantics
+\(\kappa^R_X\) under source-invariance and the audited
+no-target-import selector contract. The stress test finds that the
+theorem survives as a scoped obstruction. Arbitrary conventions do not
+defeat it because convention is not source determination. A future
+source extension may evade the theorem by changing the input domain,
+but that is not a counterexample to a theorem about \(S_X\) alone and
+is not authorized here as canonical ontology. The registered
+loop-risk category is \texttt{scoped\_obstruction}; the next route is
+\texttt{theoretical\_decision\_role\_selection}. No canonical
+\(\RespLC\), \(\Msrc\), \(\geff\), matter coupling, Einstein
+equations, \(\EqSrc\), \(\RetainH\), \(\GenH\), finite-variation
+robustness, benchmark promotion, Gate Chair review, candidate
+reconstruction, completed derivation, future source-extension
+impossibility, or global theory rejection is supplied.
+\end{abstract}
+
+\section{Controlled Input}
+
+The stress target is the theorem packet
+\texttt{RT-20260614-050}. Its retained tuple is
+\[
+    S_X=(U_X,[n]_{U_X},\Phi_{U_X},T^n,T^\Phi).
+\]
+The selector target is
+\[
+    \SelResp(S_X)=(o^R_X,\nu^R_X,\kappa^R_X),
+\]
+where \(o^R_X\) selects response sign orientation,
+\(\nu^R_X\) selects positive response normalization, and
+\(\kappa^R_X\) selects response-token semantics.
+
+The Refuter may inspect only tracked source-control and draft/control
+selector artifacts. It may not use target metric geometry, target
+proper time, target observer protocol, target calibration, matter
+species, stress-energy response, benchmark rank, validation status,
+role identity, generated visibility, or canonical ontology adoption as
+source evidence.
+
+\section{Stress Method}
+
+\begin{stressscreen}[Hypothesis-strength pressure]
+Test whether the theorem wins only by building the desired answer into
+its hypotheses. The target hypotheses are source-invariance and
+no-target-import selector determination from \(S_X\).
+\end{stressscreen}
+
+\begin{stressscreen}[Arbitrary-convention loophole pressure]
+Test whether a free choice of sign, unit, or token name can count as a
+selector and therefore refute the non-determinacy result.
+\end{stressscreen}
+
+\begin{stressscreen}[Source-extension counterexample pressure]
+Test whether a legitimate future source extension can supply selector
+data and whether that would be a counterexample to the scoped theorem.
+\end{stressscreen}
+
+\begin{stressscreen}[Promotion and rejection overread pressure]
+Test whether the theorem has been overstated into benchmark promotion,
+Gate Chair verdict, completed derivation, future source-extension
+impossibility, or global theory rejection.
+\end{stressscreen}
+
+\section{Stress Findings}
+
+\begin{stressfinding}[Hypotheses are strong but not circular]
+The source-invariance and no-target-import hypotheses are strong. They
+exclude target geometry, observer protocol, calibration, matter
+coupling, benchmark evidence, and authority labels. That strength is
+not a defect for the inspected question, because the selector contract
+itself asks whether \(S_X\) determines the response selector without
+those imports. The theorem does not prove more than that.
+\end{stressfinding}
+
+\begin{stressfinding}[Arbitrary convention is not a source selector]
+A rule may name an arbitrary positive unit, sign orientation, or token
+dictionary. Such a rule can coordinate notation, but it is not
+determined by \(S_X\). If two conventions leave \(U_X\), \([n]_{U_X}\),
+\(\Phi_{U_X}\), \(T^n\), and \(T^\Phi\) fixed while changing response
+sign, scale, or token semantics, then \(S_X\) does not distinguish
+them. Therefore arbitrary convention is not a counterexample to the
+theorem.
+\end{stressfinding}
+
+\begin{stressfinding}[Source extension changes the theorem domain]
+Consider a schematic extension
+\[
+    S_X^+=(S_X,O_X,N_X,K_X),
+\]
+where \(O_X\) is a source orientation datum, \(N_X\) is a source
+positive-normalization datum, and \(K_X\) is a source response-token
+semantics datum. If such objects were introduced through an authorized
+source-language route, then \(S_X^+\) could determine a selector in a
+way that \(S_X\) cannot. This would not refute the theorem about
+\(S_X\) alone. It would create a new packet with new authority
+questions.
+\end{stressfinding}
+
+\begin{stressfinding}[No positive witness is supplied]
+The schematic \(S_X^+\) observation is only a domain-distinction
+screen. It is not a concrete \(\RespLC\) witness, not a source-to-metric
+law, and not a human-gated ontology edit. This Refuter job cannot
+adopt \(O_X,N_X,K_X\) as canonical source primitives.
+\end{stressfinding}
+
+\begin{stressfinding}[Overread is blocked]
+The theorem supplies a local obstruction to selector determination
+from the current tuple. It does not supply \(\Msrc\), \(\geff\),
+matter coupling, Einstein equations, finite-variation robustness,
+benchmark success, or Gate Chair review. It also does not prove that
+every future source language must fail.
+\end{stressfinding}
+
+\section{Scoped Obstruction}
+
+\begin{obstruction}[The theorem survives as scoped obstruction]
+The theorem survives the stress test in this exact scope:
+\[
+    S_X \nRightarrow (o^R_X,\nu^R_X,\kappa^R_X)
+\]
+under source-invariance and no-target-import selector determination.
+The obstruction is the same source-invisible freedom in sign, positive
+scale, and token semantics identified by the theorem.
+\end{obstruction}
+
+\begin{obstruction}[The escape route is external to the theorem]
+The only live escape identified here is to add source-side selector
+data or source-side primitives not present in \(S_X\). That route is
+outside the theorem's input domain. If the project wants to pursue it,
+the next step must select a bounded theoretical packet and preserve
+the human gate for canonical ontology adoption.
+\end{obstruction}
+
+\section{Loop-Risk Decision}
+
+\begin{verdict}[Registered decision category]
+The Refuter classification is
+\[
+    \texttt{scoped\_obstruction}.
+\]
+The obstruction scope is the current retained tuple \(S_X\), the
+audited no-target-import selector contract, and the stated
+source-invariance hypotheses.
+\end{verdict}
+
+\begin{verdict}[Allowed next route]
+The next route is
+\[
+    \texttt{theoretical\_decision\_role\_selection}.
+\]
+The next bounded role should be
+\texttt{theoretical-continuation-selector@0.1.0}. It should select
+one packet type from the allowed theoretical set: source-side selector
+primitive, source-side irrelevance theorem, concrete \(\RespLC\)
+witness, distinct scoped no-go question, bounded theoretical
+calculation, or human-gated ontology-change requirement.
+\end{verdict}
+
+\section{Repeated Burdens}
+
+The following burdens remain unmet and must not be laundered into
+promotion:
+\begin{itemize}
+    \item source-only response sign-orientation selector \(o^R_X\);
+    \item source-only positive response-normalization selector
+    \(\nu^R_X\);
+    \item source-only response-token semantics selector \(\kappa^R_X\);
+    \item concrete \(\RespLC\) witness;
+    \item finite-variation robustness beyond the exact retained tuple;
+    \item \(\Msrc\), \(\geff\), universal matter coupling, and
+    Einstein-equation recovery.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{distancestatus}[Matrix]
+\begin{center}
+\small
+\begin{tabular}{p{0.32\linewidth}p{0.58\linewidth}}
+\hline
+\textbf{Burden} & \textbf{Status} \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made and no selector primitive is adopted. \\
+Source equivalence \(\EqSrc\) & General \(\EqSrc\) remains undischarged; this job only stress-tests a scoped selector no-go theorem. \\
+Finite variation robustness & Not discharged; the theorem stress remains exact-tuple scoped and does not cover relaxed boundary transport nonmatching composition omitted inverse histories quotient readout coordinates or negative-witness coverage. \\
+Concrete negative witnesses & A scoped obstruction is preserved for \(o^R_X,\nu^R_X,\kappa^R_X\) relative to \(S_X\); no positive response witness is supplied. \\
+Observer normal/readout orbit & Retained as source syntax; arbitrary convention does not turn it into response sign scale or token semantics. \\
+Effective Lorentzian metric & Not supplied; \(\Msrc\) and \(\geff\) remain blocked. \\
+Universal matter coupling & Not supplied; response-token semantics remain unavailable from current source data. \\
+Einstein equations & Not supplied. \\
+Benchmark promotion & Blocked. \\
+Gate Chair review & Blocked and human-gated. \\
+Current line hard-fail & Scoped obstruction survives; route to theoretical decision selection rather than global hard-fail or global theory rejection. \\
+\hline
+\end{tabular}
+\end{center}
+\end{distancestatus}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}.
+The child outputs are:
+\begin{itemize}
+    \item \texttt{child\_phys\_math\_resp\_lc\_selector\_no\_go\_refuter\_stress.yaml};
+    \item \texttt{child\_phys\_phil\_resp\_lc\_selector\_no\_go\_refuter\_stress.yaml}.
+\end{itemize}
+The conflict review is
+\texttt{parent\_conflict\_review\_resp\_lc\_selector\_no\_go\_refuter\_stress.yaml}
+and found no blocking conflict. The fusion notes are
+\texttt{parent\_fusion\_notes\_resp\_lc\_selector\_no\_go\_refuter\_stress.md}.
+
+\section{Control Rules}
+
+\begin{controlrule}[Scoped result only]
+This stress result applies only to the current retained tuple,
+audited selector contract, and directly relevant upstream artifacts.
+It does not prove that every future source-side extension or
+human-authorized ontology change fails.
+\end{controlrule}
+
+\begin{controlrule}[No promotion]
+The stress test supplies no \(\RespLC\) adoption, no \(\Msrc\), no
+\(\geff\), no matter coupling, no Einstein equations, no benchmark or
+Gate Chair authority, no candidate reconstruction, no completed
+derivation, no future source-extension impossibility, and no global
+theory rejection.
+\end{controlrule}
+
+\begin{controlrule}[Next-route discipline]
+The next continuation should use a Theoretical Continuation Selector
+to choose one bounded theoretical packet. It must not repeat a generic
+selector obligation without new mathematical payload or protected
+human-gated ontology authority.
+\end{controlrule}
+
+\section*{APA 7 References}
+
+Ricciardi, A. S. (2026, June 17). \emph{Localization source-basis
+axiom selector-domain EqSrc ledger-complete source-family generator
+packet audited ObsLoc observer-readout RespLC source-side selector
+no-go theorem packet: Scoped non-determinacy of sign, scale, and
+response-token selectors} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-050/artifacts/91\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_LEDGER\_COMPLETE\_SOURCE\_FAMILY\_GENERATOR\_PACKET\_AUDITED\_OBSLOC\_OBSERVER\_READOUT\_RESP\_LC\_SOURCE\_SIDE\_SELECTOR\_NO\_GO\_THEOREM\_PACKET.tex}.
+
+Ricciardi, A. S. (2026, June 17). \emph{Localization source-basis
+axiom selector-domain EqSrc ledger-complete source-family generator
+packet audited ObsLoc observer-readout RespLC source-side selector
+instantiation Refuter stress test: Scoped obstruction for
+no-target-import selector instantiation} [Unpublished manuscript].
+The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-048/artifacts/89\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_LEDGER\_COMPLETE\_SOURCE\_FAMILY\_GENERATOR\_PACKET\_AUDITED\_OBSLOC\_OBSERVER\_READOUT\_RESP\_LC\_SOURCE\_SIDE\_SELECTOR\_INSTANTIATION\_REFUTER\_STRESS\_TEST.tex}.
+
+Ricciardi, A. S. (2026, June 17). \emph{Localization source-basis
+axiom selector-domain EqSrc ledger-complete source-family generator
+packet audited ObsLoc observer-readout RespLC source-side selector
+primitive smuggling audit: Hidden-import screens for the draft
+selector contract} [Unpublished manuscript]. The Aether-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-047/artifacts/88\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_LEDGER\_COMPLETE\_SOURCE\_FAMILY\_GENERATOR\_PACKET\_AUDITED\_OBSLOC\_OBSERVER\_READOUT\_RESP\_LC\_SOURCE\_SIDE\_SELECTOR\_PRIMITIVE\_SMUGGLING\_AUDIT.tex}.
+
+Ricciardi, A. S. (2026, June 17). \emph{Localization source-basis
+axiom selector-domain EqSrc ledger-complete source-family generator
+packet audited ObsLoc observer-readout RespLC source-side selector
+primitive packet: Draft/control contract for sign orientation, scale
+normalization, and response-token semantics} [Unpublished manuscript].
+The Aether-Flow Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-046/artifacts/87\_LOCALIZATION\_SOURCE\_BASIS\_AXIOM\_SELECTOR\_DOMAIN\_EQSRC\_LEDGER\_COMPLETE\_SOURCE\_FAMILY\_GENERATOR\_PACKET\_AUDITED\_OBSLOC\_OBSERVER\_READOUT\_RESP\_LC\_SOURCE\_SIDE\_SELECTOR\_PRIMITIVE\_PACKET.tex}.
+
+\end{document}
