@@ -10,7 +10,7 @@ AEther-Flow is a dual research program: one lane tests a speculative Æther-flow
 
 ## Source-Backed Summary
 
-AEther-Flow is organized around two coupled systems. The physics system keeps ordinary exact general relativity as the observable benchmark while treating any first-principles derivation from Æther or Æther-flow substrate structure as open until a gated source-side derivation succeeds. The AI research-agent system supplies the operating discipline: tracked state, Director decisions, bounded AgentJobs, role contracts, validators, registries, handoffs, and generated explanatory surfaces. The project needs both systems because speculative physics can drift into unsupported certainty unless every proposal, refutation, repair, and negative result remains source-bound and auditable. The overview functions as the entry map for that structure: physics terms route to ontology and claim gates; workflow questions route to research system, role routing, and research control; authority questions route to source authority, roles and skills, memory, and technical requirements.
+AEther-Flow is organized around two coupled systems. The physics system keeps ordinary exact general relativity as the observable benchmark while treating any first-principles derivation from Æther or Æther-flow substrate structure as open until a gated source-side derivation succeeds. The AI research-agent system supplies the operating discipline: tracked state, Director decisions, bounded AgentJobs, role contracts, validators, registries, handoffs, project-system improvement, Documentation Curator teaching support, and generated explanatory surfaces. The project needs both systems because speculative physics can drift into unsupported certainty unless every proposal, refutation, repair, and negative result remains source-bound and auditable. The overview functions as the entry map for that structure: physics terms route to ontology, claim gates, and the derivation roadmap; workflow questions route to research system, role routing, research control, and project-system improvement; authority and documentation questions route to source authority, roles and skills, memory, technical requirements, and the Documentation Curator teaching loop.
 
 ## What This Feature Does
 
@@ -22,7 +22,7 @@ The project needs a front-door model because the repository deliberately contain
 
 ## How It Works
 
-Start with the physics lane for ontology, benchmark status, derivation burden, and claim gates. Move to the agent lane for Director decisions, AgentJobs, role routing, validators, documentation impact, memory, and technical operation. Use source authority to decide which files can support a claim before relying on any derived surface.
+Start with the physics lane for ontology, benchmark status, derivation burden, claim gates, and the Distance-to-GR roadmap. Move to the agent lane for Director decisions, AgentJobs, role routing, validators, project-system improvement, documentation impact, teaching support, memory, and technical operation. Use source authority to decide which files can support a claim before relying on any derived surface.
 
 ## Common questions
 
@@ -112,8 +112,10 @@ Do not:
 ## Where To Go Next
 
 - Read the ontology drilldown for the physics vocabulary.
+- Read the GR derivation roadmap before describing milestone or Distance-to-GR status.
 - Read claim gates before accepting derivation-status language.
-- Read research system and role routing before modifying controlled work.
+- Read research system, role routing, and project-system improvement before modifying controlled work.
+- Read the Documentation Curator teaching loop before adding teaching-enriched explanations.
 - Read source authority before citing generated artifacts.
 
 ## All Source Materials
@@ -134,3 +136,6 @@ Do not:
 - `markdown/html-explainer-specs/roles-and-skills-explainer.md`
 - `markdown/html-explainer-specs/memory-system-explainer.md`
 - `markdown/html-explainer-specs/technical-requirements-explainer.md`
+- `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
+- `markdown/html-explainer-specs/project-system-improvement-explainer.md`
+- `markdown/html-explainer-specs/documentation-curator-teaching-loop-explainer.md`

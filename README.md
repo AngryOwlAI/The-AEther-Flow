@@ -152,6 +152,9 @@ routing, claim gates, or generated-output boundaries.
 - [Roles And Skills](github-facing/roles-and-skills-explainer.md): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
 - [Memory System](github-facing/memory-system-explainer.md): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
 - [Technical Requirements](github-facing/technical-requirements-explainer.md): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.
+- [GR Derivation Roadmap](github-facing/gr-derivation-roadmap-explainer.md): milestone burdens, Distance-to-GR ledger state, selector routing, freeze criteria, source extension, and finite toy metric-response scaffolding.
+- [Project-System Improvement](github-facing/project-system-improvement-explainer.md): classifier, advisory resolver, signal registries, one bounded maintenance AgentJob, documentation impact, regeneration, and validation gates.
+- [Documentation Curator Teaching Loop](github-facing/documentation-curator-teaching-loop-explainer.md): subject-first Curator authority, Student questions, Teacher answers, curated Q&A packets, derivative synchronization, and advisory format boundaries.
 
 ---
 

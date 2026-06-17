@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="c7cc83eedfa8c184a8717cc9668de7d52d07c0fbc5cf29294d9909421f6e0743">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <title>Documentation Curator Teaching Loop</title>
+  <style>
+    :root { --bg:#f7f4ed; --panel:#fffdfa; --ink:#19221d; --muted:#5f6b61; --line:rgba(34,49,40,.18); --authority:#1e3a5f; --workflow:#8b5a20; --validation:#0f766e; --warning:#a34f12; font-family:"IBM Plex Sans","Avenir Next","Segoe UI",sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg,#fffcf7,var(--bg)); color:var(--ink); overflow-x:clip; }
+    .page-shell { max-width:1160px; margin:0 auto; padding:28px 20px 56px; }
+    .hero,.panel,.content-block,.source-list li,.toc a,.step { border:1px solid var(--line); border-radius:8px; background:rgba(255,253,250,.94); }
+    .hero { padding:30px; background:linear-gradient(135deg,#fffdfa,#dfeee6); }
+    .eyebrow { margin:0 0 8px; color:var(--validation); text-transform:uppercase; font-weight:800; font-size:.78rem; }
+    h1 { margin:0; font-size:clamp(2rem,5vw,4.1rem); line-height:1; letter-spacing:0; }
+    h2 { margin:0; font-size:clamp(1.35rem,2.6vw,2rem); letter-spacing:0; }
+    h3 { margin:0 0 8px; letter-spacing:0; }
+    p,li { line-height:1.68; }
+    code { font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace; overflow-wrap:anywhere; }
+    .hero-copy,.muted { color:var(--muted); max-width:78ch; }
+    .section { margin-top:22px; }
+    .panel { padding:24px; }
+    .toc { display:flex; flex-wrap:wrap; gap:10px; }
+    .toc a { padding:9px 12px; text-decoration:none; color:inherit; }
+    .step-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; }
+    .step { padding:12px; border-left:5px solid var(--validation); }
+    .content-grid { display:grid; gap:14px; }
+    .content-block { padding:18px 20px; border-left:7px solid var(--validation); overflow-x:auto; }
+    .content-block[data-content-block*="teacher"], .content-block[data-content-block*="sync"] { border-left-color:var(--workflow); }
+    .content-block[data-content-block*="boundary"] { border-left-color:var(--warning); }
+    .block-head { border-bottom:1px dashed var(--line); padding-bottom:10px; margin-bottom:12px; }
+    .source-chip { display:inline-block; margin:3px; padding:6px 9px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--muted); }
+    .source-list { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); list-style:none; margin:16px 0 0; padding:0; }
+    .source-list li { padding:12px; }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">workflow_lifecycle</p>
+      <h1>Documentation Curator Teaching Loop</h1>
+      <p class="hero-copy">A source-bound method for improving explanations with reader questions, Teacher answers, Curator synthesis, and non-authoritative derivatives.</p>
+    </header>
+
+    <section id="subject-summary" class="section panel" data-content-block="subject_summary">
+      <h2>Summary of Documentation Curator Teaching Loop</h2>
+      <article class="content-block" data-summary-field="summary_text">
+        <p>The Documentation Curator teaching loop is the project's method for making source-backed explainers easier to understand without weakening authority boundaries. The Curator chooses a subject and source bundle, then uses a Documentation Student to ask plain reader-centered questions and a Documentation Teacher to answer those questions inside the declared source bundle. The Curator reviews the exchange, writes or updates a curated Teaching Q&A packet, and distills that packet into the Markdown source spec, GitHub-facing Markdown, and tracked human-only HTML derivative. The loop is subject-first: it must explain what the project component does, why the project needs it, how it works, what it can and cannot claim, and where a reader should go next. It does not let generated pages, teaching packets, Student questions, or Teacher answers become independent authority.</p>
+      </article>
+      <div data-summary-field="source_basis">
+        <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span>
+        <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md"><code>.agents/roles/research_ops/documentation-student.v0.1.0.md</code></span>
+        <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md"><code>.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></span>
+        <span class="source-chip" data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"><code>.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></span>
+      </div>
+    </section>
+
+    <nav class="section toc" data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#workflow">Workflow</a>
+      <a href="#curator-authority">Curator</a>
+      <a href="#student-teacher">Student And Teacher</a>
+      <a href="#packet-schema">Packet</a>
+      <a href="#derivative-sync">Derivative Sync</a>
+      <a href="#advisory-boundary">Format Boundary</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+    <section id="workflow" class="section panel" data-explainer-control="workflow_step_inspector">
+      <h2>Workflow Step Inspector</h2>
+      <div class="step-grid">
+        <div class="step"><strong>Select</strong><br>Curator chooses one subject and source bundle.</div>
+        <div class="step"><strong>Question</strong><br>Student asks reader-centered questions.</div>
+        <div class="step"><strong>Answer</strong><br>Teacher answers inside the source boundary.</div>
+        <div class="step"><strong>Synthesize</strong><br>Curator writes the teaching packet.</div>
+        <div class="step"><strong>Distill</strong><br>Source spec and derivatives are updated.</div>
+        <div class="step"><strong>Validate</strong><br>Teaching, lint, bootstrap, and control checks run.</div>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <h2>Source-Backed Coverage</h2>
+      <div class="content-grid">
+        <article id="curator-authority" class="content-block" data-content-block="curator_authority">
+          <div class="block-head"><h3>Curator Authority</h3><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span><span class="source-chip" data-source-path="research_control/design/github_facing_explainer_contract.md"><code>research_control/design/github_facing_explainer_contract.md</code></span></div>
+          <p>The Curator owns the tracked documentation outputs in the loop. It may update explanatory Markdown, Markdown source specs, curated teaching packets, GitHub-facing Markdown, source-backed HTML derivatives, documentation registries, and documentation-impact records when the AgentJob allows those paths. That ownership is narrower than it may first appear. The Curator cannot change physics claims, role contracts, schemas, validators, routing behavior, or generated-output authority. Its subject-first rule keeps explanations focused on the project component's function, value, sources, boundary, and next reading path instead of turning documentation into metadata about itself.</p>
+        </article>
+
+        <article id="student-teacher" class="content-block" data-content-block="student_teacher_loop">
+          <div class="block-head"><h3>Student Questions And Teacher Answers</h3><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md"><code>.agents/roles/research_ops/documentation-student.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md"><code>.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span></div>
+          <p>The Student and Teacher are support subroles. The Student asks reader-centered questions about purpose, operation, examples, non-examples, boundaries, confusing terms, and next steps. The Teacher answers those questions plainly, adds a technical anchor, names source paths, marks source gaps, and adds boundary notes when authority or claim status is involved. Neither support role writes tracked documentation. This division is important: reader confusion is allowed to shape the final explanation, but the source bundle and Curator review decide what can be carried into registered project artifacts.</p>
+        </article>
+
+        <article id="packet-schema" class="content-block" data-content-block="packet_schema">
+          <div class="block-head"><h3>Teaching Q&amp;A Packet</h3><span class="source-chip" data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"><code>.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></span><span class="source-chip" data-source-path="scripts/validate_teaching_qa.py"><code>scripts/validate_teaching_qa.py</code></span><span class="source-chip" data-source-path="markdown/teaching-packets/project-overview.teaching-qa.md"><code>markdown/teaching-packets/project-overview.teaching-qa.md</code></span><span class="source-chip" data-source-path="markdown/teaching-packets/role-routing.teaching-qa.md"><code>markdown/teaching-packets/role-routing.teaching-qa.md</code></span></div>
+          <p>The curated packet records the teaching exchange in a structured way. It declares packet identity, topic, source spec, derived outputs, audience model, roles, rounds, source materials, claim boundary, and authority status. Its body contains Curator feature selection, two rounds of Student questions, two rounds of Teacher answers, and synthesis notes. Those notes must name concepts for HTML and GitHub-facing Markdown, glossary candidates, common confusions, examples, next readings, source gaps, and claims intentionally not made. The validator exists so packets remain source-bound support rather than free-form authority.</p>
+        </article>
+
+        <article id="derivative-sync" class="content-block" data-content-block="derivative_sync">
+          <div class="block-head"><h3>Derivative Synchronization</h3><span class="source-chip" data-source-path=".codex/skills/aether-teaching-explainer/SKILL.md"><code>.codex/skills/aether-teaching-explainer/SKILL.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span><span class="source-chip" data-source-path="research_control/design/github_facing_explainer_contract.md"><code>research_control/design/github_facing_explainer_contract.md</code></span></div>
+          <p>After synthesis, the Curator distills teaching content into the Markdown source spec, GitHub-facing Markdown, and tracked HTML. The source spec remains the backing surface for the HTML derivative, while the GitHub-facing page gives humans and external AI a readable orientation layer. Both are noncanonical for physics and control decisions. This synchronization pattern is useful because it gives the project multiple reading surfaces without multiplying authority. A reader can start from a friendly page, but any claim about source status, role behavior, validator requirements, or routing must trace back to the declared source materials.</p>
+        </article>
+
+        <article id="advisory-boundary" class="content-block" data-content-block="advisory_format_boundary">
+          <div class="block-head"><h3>Advisory Format Boundary</h3><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span><span class="source-chip" data-source-path="scripts/validate_teaching_qa.py"><code>scripts/validate_teaching_qa.py</code></span></div>
+          <p>Renderer and lint scripts provide useful quality gates: they check required fields, source evidence, summary placement, teaching packet shape, depth, and derivative consistency. They do not decide which project functionality deserves coverage or what the final explanation should emphasize. That decision belongs to the Curator inside the AgentJob boundary and source bundle. The practical rule is balanced: pass the validators, but do not let a template replace subject-first judgment. A well-formed page that omits a major project function is still incomplete documentation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sources" class="section panel" data-explainer-control="source_materials_section">
+      <h2>All Source Materials</h2>
+      <p class="muted">Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.</p>
+      <ul class="source-list">
+        <li data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></li>
+        <li data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md"><code>.agents/roles/research_ops/documentation-student.v0.1.0.md</code></li>
+        <li data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md"><code>.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></li>
+        <li data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"><code>.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></li>
+        <li data-source-path=".codex/skills/aether-teaching-explainer/SKILL.md"><code>.codex/skills/aether-teaching-explainer/SKILL.md</code></li>
+        <li data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></li>
+        <li data-source-path="research_control/design/github_facing_explainer_contract.md"><code>research_control/design/github_facing_explainer_contract.md</code></li>
+        <li data-source-path="markdown/teaching-packets/project-overview.teaching-qa.md"><code>markdown/teaching-packets/project-overview.teaching-qa.md</code></li>
+        <li data-source-path="markdown/teaching-packets/role-routing.teaching-qa.md"><code>markdown/teaching-packets/role-routing.teaching-qa.md</code></li>
+        <li data-source-path="scripts/validate_teaching_qa.py"><code>scripts/validate_teaching_qa.py</code></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

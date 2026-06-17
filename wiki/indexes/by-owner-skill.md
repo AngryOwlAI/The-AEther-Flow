@@ -16,8 +16,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `github-facing/aether-flow-ontology-explainer.md`
 - `MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `github-facing/claim-gates-explainer.md`
+- `MD-GITHUB-FACING-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER` `github-facing/documentation-curator-teaching-loop-explainer.md`
+- `MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `github-facing/gr-derivation-roadmap-explainer.md`
 - `MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `github-facing/memory-system-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
+- `MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `github-facing/project-system-improvement-explainer.md`
 - `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
 - `MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `github-facing/research-control-system-explainer.md`
 - `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
@@ -37,8 +40,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
 - `HTML-CLAIM-GATES-EXPLAINER` `html/claim-gates-explainer.html`
+- `HTML-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER` `html/documentation-curator-teaching-loop-explainer.html`
+- `HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `html/gr-derivation-roadmap-explainer.html`
 - `HTML-MEMORY-SYSTEM-EXPLAINER` `html/memory-system-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
+- `HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `html/project-system-improvement-explainer.html`
 - `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
 - `HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `html/research-control-system-explainer.html`
 - `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
@@ -47,8 +53,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-TECHNICAL-REQUIREMENTS-EXPLAINER` `html/technical-requirements-explainer.html`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - `MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `markdown/html-explainer-specs/claim-gates-explainer.md`
+- `MD-HTML-SPEC-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER` `markdown/html-explainer-specs/documentation-curator-teaching-loop-explainer.md`
+- `MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
 - `MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/memory-system-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
+- `MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `markdown/html-explainer-specs/project-system-improvement-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/research-control-system-explainer.md`
 - `MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `markdown/html-explainer-specs/role-routing-explainer.md`
@@ -68,8 +77,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-CLAIM-GATES-EXPLAINER` `wiki/html/html-claim-gates-explainer.md`
+- `WIKI-HTML-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER` `wiki/html/html-documentation-curator-teaching-loop-explainer.md`
+- `WIKI-HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/html/html-gr-derivation-roadmap-explainer.md`
 - `WIKI-HTML-MEMORY-SYSTEM-EXPLAINER` `wiki/html/html-memory-system-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
+- `WIKI-HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/html/html-project-system-improvement-explainer.md`
 - `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
 - `WIKI-HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/html/html-research-control-system-explainer.md`
 - `WIKI-HTML-ROLE-ROUTING-EXPLAINER` `wiki/html/html-role-routing-explainer.md`
@@ -82,8 +94,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-ontology-explainer.md`
 - `WIKI-MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-github-facing-claim-gates-explainer.md`
+- `WIKI-MD-GITHUB-FACING-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER` `wiki/markdown/md-github-facing-documentation-curator-teaching-loop-explainer.md`
+- `WIKI-MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-github-facing-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `wiki/markdown/md-github-facing-memory-system-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-github-facing-project-overview-explainer.md`
+- `WIKI-MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-github-facing-project-system-improvement-explainer.md`
 - `WIKI-MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-research-agent-workflow-explainer.md`
 - `WIKI-MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/markdown/md-github-facing-research-control-system-explainer.md`
 - `WIKI-MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-github-facing-role-routing-explainer.md`
@@ -92,8 +107,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER` `wiki/markdown/md-github-facing-technical-requirements-explainer.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
 - `WIKI-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-html-spec-claim-gates-explainer.md`
+- `WIKI-MD-HTML-SPEC-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER` `wiki/markdown/md-html-spec-documentation-curator-teaching-loop-explainer.md`
+- `WIKI-MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-html-spec-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-memory-system-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
+- `WIKI-MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-html-spec-project-system-improvement-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-research-control-system-explainer.md`
 - `WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-html-spec-role-routing-explainer.md`

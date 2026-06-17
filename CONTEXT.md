@@ -6,12 +6,29 @@ designing human-facing explanatory surfaces.
 ## Language
 
 **GitHub-facing Markdown System**:
-A registered Markdown documentation layer under root `github-facing/` for readers and external AI agents browsing the repository on GitHub; it mirrors the body of the existing explainer specs without their YAML metadata headers, is canonical for GitHub-facing explanation, and is non-authoritative for physics claims and control decisions.
+A generated, source-backed Markdown documentation layer under root
+`github-facing/` for readers and external AI agents browsing the repository on
+GitHub. Each page is derived from a registered source spec under
+`markdown/html-explainer-specs/` and is noncanonical: it orients readers, but
+it is not authority for physics claims, control decisions, routing,
+validators, role contracts, schemas, or registries.
 _Avoid_: Front-facing GitHub files, GitHub system, generated HTML explainer, generated mirror
 
-**GitHub-facing Spec Mirror**:
-The root `github-facing/*.md` files that preserve the readable body content of `markdown/html-explainer-specs/*.md` for GitHub browsing while leaving source-spec metadata, HTML generation, and authority tracking in the registered spec and registry layers.
+**GitHub-facing Explainer**:
+The root `github-facing/*.md` files that provide reader-facing explanations
+derived from `markdown/html-explainer-specs/*.md` for GitHub browsing. They
+are allowed to be clearer than a body-only spec mirror when Curator judgment
+requires it, but source-spec metadata, HTML generation, and authority tracking
+remain in the registered spec and registry layers.
 _Avoid_: Source manifest, generated-output registry, HTML explainer registry
+
+**Advisory Formatting Guidance**:
+Renderer templates, spec-depth lint, HTML audit, and GitHub-facing structure
+checks guide consistency, depth, source evidence, and derivative validation.
+They are quality controls, not canonical content law. The Documentation
+Curator decides which project functionality needs coverage inside the bounded
+AgentJob and source-authority constraints.
+_Avoid_: Canonical format law, template authority, script-owned content
 
 **Subject Summary**:
 A source-backed summary section titled `Summary of [Subject]` that states what
