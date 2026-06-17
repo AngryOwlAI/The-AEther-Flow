@@ -52,10 +52,11 @@ skills provide procedures, and gates control claim promotion.
    promotion, canonical ontology authority, benchmark-status authority, Gate
    Chair authority, or permanent role registration.
 
-   If the Director enables `role_decomposition.mode:
-   "parent_child_parallel_synthesis"`, keep exactly one outer AgentJob and the
-   same single execution-role record. The parent and two children are internal
-   execution units:
+   For every new physics research AgentJob created after
+   `2026-06-17T04:08:16Z`, the Director must enable
+   `role_decomposition.mode: "parent_child_parallel_synthesis"`. Keep exactly
+   one outer AgentJob and the same single execution-role record. The parent and
+   two children are internal execution units:
 
    - parent: `physicist_mathematician_philosopher`
    - child A: `physicist_mathematician`
@@ -65,8 +66,9 @@ skills provide procedures, and gates control claim promotion.
    source classes, and write-path allowlist. They do not become independent
    AgentJobs and may not expand authority. The parent must write the conflict
    review artifact, preserve unresolved limitations, and produce one fused
-   old-style final artifact. A PASS completion may not contain unresolved
-   blocking conflicts.
+   old-style final artifact. The completion must list the child outputs,
+   conflict review, and fusion summary under `parent_child_synthesis`. A PASS
+   completion may not contain unresolved blocking conflicts.
 
 6. Execute exactly one authorized AgentJob unless a stop condition applies:
    human gate required, validation failure, no role fit, authority expansion,

@@ -96,11 +96,11 @@ Execution-role records remain one-to-one with AgentJobs. A parent-child
 perspective synthesis does not create child execution-role records and does not
 change the registered role, task overlay, or one-job provisional role contract.
 
-When an AgentJob declares `role_decomposition.mode:
-"parent_child_parallel_synthesis"`, the parent and children inherit this same
-execution-role record. The difference between parent, Physicist-Mathematician
-child, and Physicist-Philosopher child is analytical perspective only. It is
-not an authority delta.
+Every new physics research AgentJob created after `2026-06-17T04:08:16Z` must
+declare `role_decomposition.mode: "parent_child_parallel_synthesis"`. The
+parent and children inherit this same execution-role record. The difference
+between parent, Physicist-Mathematician child, and Physicist-Philosopher child
+is analytical perspective only. It is not an authority delta.
 
 The decomposition must not add write paths, source classes, role IDs, claim
 boundaries, protected permissions, or human-gate exemptions. If a task needs

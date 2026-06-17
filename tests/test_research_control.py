@@ -797,6 +797,62 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertTrue(any("may not allow direct write path" in error for error in report.errors))
 
+    def test_future_physics_job_requires_parent_child_decomposition_after_activation(self) -> None:
+        report = self.validator.ValidationReport()
+        row = {
+            "job_id": "AJ-TEST",
+            "role_id": "refuter",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "created_at": "2026-06-17T04:08:16Z",
+            "started_at": "",
+            "completed_at": "",
+        }
+        self.validator.validate_future_physics_job_authority(
+            report,
+            row,
+            {
+                "allowed_write_paths": ["research_control/tasks/RT-TEST/**"],
+                "forbidden_source_classes": [
+                    "canonical_ontology_write",
+                    "benchmark_promotion",
+                    "candidate_reconstruction",
+                    "gate_chair_verdict",
+                    "completed_derivation_claim",
+                    "global_theory_rejection",
+                    "generated_derivative_authority",
+                ],
+            },
+        )
+        self.assertTrue(any("must declare role_decomposition.mode" in error for error in report.errors))
+
+    def test_historical_physics_job_without_parent_child_decomposition_remains_valid(self) -> None:
+        report = self.validator.ValidationReport()
+        row = {
+            "job_id": "AJ-TEST",
+            "role_id": "refuter",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "created_at": "2026-06-17T04:00:00Z",
+            "started_at": "",
+            "completed_at": "",
+        }
+        self.validator.validate_future_physics_job_authority(
+            report,
+            row,
+            {
+                "allowed_write_paths": ["research_control/tasks/RT-TEST/**"],
+                "forbidden_source_classes": [
+                    "canonical_ontology_write",
+                    "benchmark_promotion",
+                    "candidate_reconstruction",
+                    "gate_chair_verdict",
+                    "completed_derivation_claim",
+                    "global_theory_rejection",
+                    "generated_derivative_authority",
+                ],
+            },
+        )
+        self.assertFalse(any("must declare role_decomposition.mode" in error for error in report.errors))
+
 
 if __name__ == "__main__":
     unittest.main()

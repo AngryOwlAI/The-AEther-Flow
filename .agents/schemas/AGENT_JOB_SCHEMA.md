@@ -58,10 +58,12 @@ object, advisory resolver fields, checkpoint gate source, and the
 selected-signal, open-signals, and change-classification sections. Ordinary
 validator and documentation jobs must not inherit this evidence burden.
 
-## Optional Role Decomposition
+## Role Decomposition For Physics Jobs
 
-`role_decomposition` is optional. Historical AgentJobs without this block
-remain valid.
+`role_decomposition` is mandatory for every new physics research AgentJob
+created after `2026-06-17T04:08:16Z`. Historical AgentJobs before that
+activation timestamp and non-physics project-system AgentJobs without this
+block remain valid.
 
 When present, the only supported mode is
 `parent_child_parallel_synthesis` with `decomposition_version: "0.1.0"`. This

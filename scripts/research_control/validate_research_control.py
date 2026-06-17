@@ -244,6 +244,7 @@ SAFE_BOUNDARY_MARKERS = (
 )
 
 LOOP_CONTROL_POLICY_ACTIVATED_AT = "2026-06-16T19:17:22Z"
+PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT = "2026-06-17T04:08:16Z"
 
 PHYSICS_ROLE_IDS = {
     "ontology-formalizer",
@@ -391,6 +392,8 @@ def parent_child_decomposition_policy() -> dict[str, object]:
         "policy_id": "parent_child_parallel_synthesis_v1",
         "mode": PARENT_CHILD_SYNTHESIS_MODE,
         "decomposition_version": PARENT_CHILD_SYNTHESIS_VERSION,
+        "activated_at": PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT,
+        "required_for_future_physics_agent_jobs": True,
         "execution_boundary": "one outer AgentJob with internal execution units",
         "parent": {
             "execution_unit_id": PARENT_CHILD_PARENT_UNIT_ID,
@@ -465,6 +468,20 @@ def job_policy_active(job_row: dict[str, str], completion: dict[str, Any] | None
     if completion:
         timestamps.append(completion.get("completed_at", ""))
     return any(timestamp_at_or_after(value) for value in timestamps)
+
+
+def parent_child_required_for_job(job_row: dict[str, str]) -> bool:
+    if job_row.get("role_id", "") not in PHYSICS_ROLE_IDS:
+        return False
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    return any(
+        timestamp_at_or_after(value, PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT)
+        for value in timestamps
+    )
 
 
 def _collect_text(value: Any) -> list[str]:
@@ -775,6 +792,14 @@ def validate_future_physics_job_authority(
         return
 
     path_text = job_row.get("job_path", job_row.get("job_id", ""))
+    if parent_child_required_for_job(job_row) and not isinstance(
+        job_contract.get("role_decomposition"), dict
+    ):
+        report.error(
+            f"{path_text}: future physics AgentJob must declare "
+            f"role_decomposition.mode={PARENT_CHILD_SYNTHESIS_MODE}"
+        )
+
     forbidden_classes = set(_listish_values(job_contract.get("forbidden_source_classes", [])))
     missing = sorted(PHYSICS_JOB_REQUIRED_FORBIDDEN_SOURCE_CLASSES - forbidden_classes)
     if missing:

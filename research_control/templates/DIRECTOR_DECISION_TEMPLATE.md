@@ -23,11 +23,12 @@ role_fit_candidates:
 
 ## Selected Role
 
-## Optional Role Decomposition
+## Required Role Decomposition
 
-Use `none` unless the selected AgentJob explicitly needs internal
-parent-child perspective synthesis. If enabled, preserve one outer AgentJob and
-one execution-role record; do not create child AgentJobs.
+For new physics research AgentJobs created after `2026-06-17T04:08:16Z`, use
+`role_decomposition.mode: "parent_child_parallel_synthesis"`. Preserve one
+outer AgentJob and one execution-role record; do not create child AgentJobs.
+For non-physics project-system jobs, state `not_applicable`.
 
 ## Claim Boundary
 

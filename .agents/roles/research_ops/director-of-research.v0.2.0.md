@@ -44,6 +44,18 @@ Every execution-role record is one-job scoped. Recurring provisional-role
 patterns should be routed to the project-system improvement loop for possible
 human-authorized registration as permanent roles.
 
+## Required Parent-Child Synthesis
+
+For every new physics research AgentJob created after
+`2026-06-17T04:08:16Z`, the Director must declare
+`role_decomposition.mode: "parent_child_parallel_synthesis"` in the outer
+AgentJob. The Director still creates only one Director decision, one outer
+AgentJob, one execution-role record, and one completion record. The parent and
+children are internal execution units that inherit the selected role authority,
+claim boundary, source restrictions, validators, stop conditions, and
+write-path allowlist. They do not create child AgentJobs and they do not
+expand authority.
+
 ## Loop-Risk Routing
 
 For EqSrc, EqLC, ledger-complete, finite-variation, or other source-equivalence
