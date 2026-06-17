@@ -59,6 +59,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-2-0-MD` `.agents/roles/physics/refuter.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD` `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-2-0-MD` `.agents/roles/physics/smuggling-auditor.v0.2.0.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-THEORETICAL-CONTINUATION-SELECTOR-V0-1-0-MD` `.agents/roles/physics/theoretical-continuation-selector.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-2-0-MD` `.agents/roles/research_ops/director-of-research.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
@@ -252,6 +253,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-refuter-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-2-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-THEORETICAL-CONTINUATION-SELECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-theoretical-continuation-selector-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md.md`

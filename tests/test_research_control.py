@@ -238,6 +238,10 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(status["execution_boundary"], "one bounded AgentJob per invocation")
         self.assertEqual(status["bridge_or_fail_policy"]["policy_id"], "bridge_or_fail_loop_control_v1")
         self.assertEqual(
+            status["theoretical_continuation_policy"]["decision_role_id"],
+            "theoretical-continuation-selector",
+        )
+        self.assertEqual(
             status["parent_child_decomposition_policy"]["mode"],
             "parent_child_parallel_synthesis",
         )
@@ -638,6 +642,7 @@ class ResearchControlTests(unittest.TestCase):
         role_id: str,
         job_objective: str = "",
         completion_extra: str = "",
+        timestamp: str = "2026-06-16T20:00:00Z",
     ):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -678,7 +683,7 @@ class ResearchControlTests(unittest.TestCase):
                         'completion_id: "AJC-AJ-TEST"',
                         'job_id: "AJ-TEST"',
                         'task_id: "RT-TEST"',
-                        'completed_at: "2026-06-16T20:00:00Z"',
+                        f'completed_at: "{timestamp}"',
                         'status: "completed"',
                         "command_results:",
                         '  - "validator | exit_code=0 | status=pass"',
@@ -698,9 +703,9 @@ class ResearchControlTests(unittest.TestCase):
                 "job_path": job_path_text,
                 "completion_path": completion_path_text,
                 "status": "completed",
-                "created_at": "2026-06-16T20:00:00Z",
-                "started_at": "2026-06-16T20:00:00Z",
-                "completed_at": "2026-06-16T20:00:00Z",
+                "created_at": timestamp,
+                "started_at": timestamp,
+                "completed_at": timestamp,
             }
             with mock.patch.object(self.validator, "REPO_ROOT", root):
                 self.validator.validate_completion(report, row, completion_path)
@@ -754,6 +759,46 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertTrue(any("generic Ontology Formalizer" in error for error in report.errors))
 
+    def test_future_refuter_rejects_generic_controlled_pause_after_policy_activation(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.distance_matrix_yaml(),
+                "loop_risk_decision:",
+                '  category: "scoped_obstruction"',
+                '  next_route: "controlled_pause"',
+                '  rationale: "The scoped obstruction recurred without new mathematical payload."',
+                '  obstruction_summary: "No source-side selector primitive is present."',
+                'next_recommendation: "Enter controlled pause."',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="refuter",
+            job_objective="Run a Refuter stress test.",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T04:29:31Z",
+        )
+        self.assertTrue(any("generic controlled_pause" in error for error in report.errors))
+
+    def test_future_refuter_accepts_theoretical_decision_route_with_payload_marker(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.distance_matrix_yaml(),
+                "loop_risk_decision:",
+                '  category: "scoped_obstruction"',
+                '  next_route: "theoretical_decision_role_selection"',
+                '  rationale: "Route to theoretical-continuation-selector for a source-side selector primitive packet."',
+                '  obstruction_summary: "Resp_lc sign and scale are underdetermined."',
+                'next_recommendation: "Create a theoretical-continuation-selector task for a source-side selector primitive with new mathematical payload."',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="refuter",
+            job_objective="Run a Refuter stress test.",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T04:29:31Z",
+        )
+        self.assertEqual(report.errors, [])
+
     def test_future_ontology_formalizer_requires_new_payload(self) -> None:
         report = self.validate_completion_fixture(
             role_id="ontology-formalizer",
@@ -768,6 +813,34 @@ class ResearchControlTests(unittest.TestCase):
             completion_extra=self.distance_matrix_yaml(),
         )
         self.assertTrue(any("bridge_attempt_status" in error for error in report.errors))
+
+    def test_theoretical_continuation_selector_requires_decision_output(self) -> None:
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=self.distance_matrix_yaml(),
+            timestamp="2026-06-17T04:29:31Z",
+        )
+        self.assertTrue(any("theoretical_decision_output" in error for error in report.errors))
+
+    def test_theoretical_continuation_selector_accepts_theoretical_packet_decision(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.distance_matrix_yaml(),
+                "theoretical_decision_output:",
+                '  selected_next_packet_type: "source_side_selector_primitive"',
+                '  decision_basis: "The obstruction can be tested by constructing a source-only selector primitive."',
+                '  theoretical_method: "Bounded formal construction from tracked source-side assumptions."',
+                '  preserves_claim_blocks: "No canonical ontology edit benchmark promotion Gate Chair review or completed derivation is authorized."',
+                "  requires_human_gate: false",
+                '  human_gate_reason: ""',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T04:29:31Z",
+        )
+        self.assertEqual(report.errors, [])
 
     def test_future_physics_job_rejects_direct_ontology_write(self) -> None:
         report = self.validator.ValidationReport()

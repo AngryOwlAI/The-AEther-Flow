@@ -36,6 +36,21 @@ output remains the old-style final artifact for downstream completion,
 handoff, and registry references. A PASS completion is blocked when a declared
 blocking parent-child conflict remains unresolved.
 
+## Theoretical Continuation Gate
+
+Future physics routing after `2026-06-17T04:29:31Z` must not use generic
+controlled pause merely because a datum, experiment, witness, or theoretical
+primitive is missing. This is a theoretical physics project; when the next step
+is a choice among source-side selector primitives, source-side irrelevance
+theorems, concrete `Resp_lc` witnesses, scoped no-go questions, or bounded
+theoretical calculations, the Director routes one bounded
+`theoretical-continuation-selector@0.1.0` AgentJob.
+
+Pause-like routing is reserved for protected human-gated authority, especially
+canonical ontology edit or ontology adoption. Future completions and handoffs
+must record that route as `human_gated_ontology_change_required` or another
+specific human-gated route, not as generic `controlled_pause`.
+
 ## Local Cache Boundary
 
 Tracked files under `research_control/` are authority. `.local/` prompts,

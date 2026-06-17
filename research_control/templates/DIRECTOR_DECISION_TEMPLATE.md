@@ -23,6 +23,12 @@ role_fit_candidates:
 
 ## Selected Role
 
+If the next step is a theoretical decision among admissible packets and no
+single execution role is already determined, select
+`theoretical-continuation-selector@0.1.0`. Do not use generic controlled pause
+for missing local data, missing experiment access, or unresolved theoretical
+payload selection.
+
 ## Required Role Decomposition
 
 For new physics research AgentJobs created after `2026-06-17T04:08:16Z`, use

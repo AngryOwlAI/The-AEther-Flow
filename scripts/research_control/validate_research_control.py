@@ -245,12 +245,14 @@ SAFE_BOUNDARY_MARKERS = (
 
 LOOP_CONTROL_POLICY_ACTIVATED_AT = "2026-06-16T19:17:22Z"
 PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT = "2026-06-17T04:08:16Z"
+THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT = "2026-06-17T04:29:31Z"
 
 PHYSICS_ROLE_IDS = {
     "ontology-formalizer",
     "candidate-constructor",
     "refuter",
     "smuggling-auditor",
+    "theoretical-continuation-selector",
 }
 
 PHYSICS_JOB_REQUIRED_FORBIDDEN_SOURCE_CLASSES = {
@@ -296,6 +298,11 @@ BRIDGE_OR_FAIL_ROUTES = {
     "ontology_formalizer_concrete_witness_construction",
     "refuter_scoped_no_go_or_obstruction",
     "gate_chair_closure_or_suspension_proposal",
+    "human_gated_ontology_change_required",
+    "theoretical_decision_role_selection",
+}
+
+LEGACY_BRIDGE_OR_FAIL_ROUTES = {
     "controlled_pause",
 }
 
@@ -328,7 +335,30 @@ ONTOLOGY_PAYLOAD_TEXT_MARKERS = (
     "theorem",
     "countermodel",
     "obstruction",
-    "controlled pause",
+)
+
+THEORETICAL_DECISION_PACKET_TYPES = {
+    "source_side_selector_primitive",
+    "source_side_irrelevance_theorem",
+    "concrete_resp_lc_witness",
+    "distinct_scoped_no_go_question",
+    "bounded_theoretical_calculation",
+    "human_gated_ontology_change_required",
+}
+
+THEORETICAL_DECISION_TEXT_MARKERS = (
+    "theoretical-continuation-selector",
+    "theoretical continuation selector",
+    "source-side selector",
+    "selector primitive",
+    "source-side irrelevance",
+    "irrelevance theorem",
+    "concrete resp_lc",
+    "concrete resp lc",
+    "resp_lc witness",
+    "scoped no-go",
+    "new mathematical payload",
+    "bounded theoretical calculation",
 )
 
 PARENT_CHILD_SYNTHESIS_MODE = "parent_child_parallel_synthesis"
@@ -380,10 +410,24 @@ def loop_control_policy() -> dict[str, object]:
     return {
         "policy_id": "bridge_or_fail_loop_control_v1",
         "activated_at": LOOP_CONTROL_POLICY_ACTIVATED_AT,
+        "theoretical_continuation_policy_activated_at": THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT,
         "distance_to_gr_required_burdens": list(DISTANCE_TO_GR_REQUIRED_BURDENS),
         "refuter_decision_categories": sorted(LOOP_RISK_DECISION_CATEGORIES),
         "bridge_or_fail_routes": sorted(BRIDGE_OR_FAIL_ROUTES),
+        "legacy_bridge_or_fail_routes": sorted(LEGACY_BRIDGE_OR_FAIL_ROUTES),
         "ontology_formalizer_payload_types": sorted(ONTOLOGY_FORMALIZER_PAYLOAD_TYPES),
+        "theoretical_decision_packet_types": sorted(THEORETICAL_DECISION_PACKET_TYPES),
+    }
+
+
+def theoretical_continuation_policy() -> dict[str, object]:
+    return {
+        "policy_id": "theoretical_continuation_pause_gate_v1",
+        "activated_at": THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT,
+        "pause_route": "human_gated_ontology_change_required",
+        "decision_role_id": "theoretical-continuation-selector",
+        "generic_controlled_pause_allowed_for_future_physics": False,
+        "allowed_theoretical_packet_types": sorted(THEORETICAL_DECISION_PACKET_TYPES),
     }
 
 
@@ -468,6 +512,23 @@ def job_policy_active(job_row: dict[str, str], completion: dict[str, Any] | None
     if completion:
         timestamps.append(completion.get("completed_at", ""))
     return any(timestamp_at_or_after(value) for value in timestamps)
+
+
+def theoretical_continuation_policy_active(
+    job_row: dict[str, str],
+    completion: dict[str, Any] | None = None,
+) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+    return any(
+        timestamp_at_or_after(value, THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT)
+        for value in timestamps
+    )
 
 
 def parent_child_required_for_job(job_row: dict[str, str]) -> bool:
@@ -1346,7 +1407,7 @@ def validate_loop_control_completion(
     validate_distance_to_gr_status(report, completion, path_text)
 
     if role_id == "refuter" and "stress" in text_blob(job_contract, completion):
-        validate_refuter_loop_decision(report, completion, path_text)
+        validate_refuter_loop_decision(report, job_row, completion, path_text)
     if role_id == "ontology-formalizer":
         validate_ontology_formalizer_payload(report, completion, path_text)
     if role_id == "candidate-constructor" and any(
@@ -1354,6 +1415,8 @@ def validate_loop_control_completion(
         for marker in ("bridge", "observer-readout", "observer readout", "([n]_u", "g_eff")
     ):
         validate_candidate_bridge_attempt(report, completion, path_text)
+    if role_id == "theoretical-continuation-selector":
+        validate_theoretical_continuation_decision(report, completion, path_text)
 
 
 def validate_distance_to_gr_status(
@@ -1384,6 +1447,7 @@ def validate_distance_to_gr_status(
 
 def validate_refuter_loop_decision(
     report: ValidationReport,
+    job_row: dict[str, str],
     completion: dict[str, Any],
     path_text: str,
 ) -> None:
@@ -1396,11 +1460,32 @@ def validate_refuter_loop_decision(
     rationale = str(decision.get("rationale", "")).strip()
     if category not in LOOP_RISK_DECISION_CATEGORIES:
         report.error(f"{path_text}: loop_risk_decision.category is not registered: {category}")
-    allowed_routes = BRIDGE_OR_FAIL_ROUTES | LOOP_RISK_SUCCESS_ROUTES
+    future_pause_policy = theoretical_continuation_policy_active(job_row, completion)
+    allowed_bridge_routes = set(BRIDGE_OR_FAIL_ROUTES)
+    if not future_pause_policy:
+        allowed_bridge_routes |= LEGACY_BRIDGE_OR_FAIL_ROUTES
+    allowed_routes = allowed_bridge_routes | LOOP_RISK_SUCCESS_ROUTES
     if next_route not in allowed_routes:
         report.error(f"{path_text}: loop_risk_decision.next_route is not allowed: {next_route}")
     if not rationale:
         report.error(f"{path_text}: loop_risk_decision.rationale is required")
+    if future_pause_policy and next_route in LEGACY_BRIDGE_OR_FAIL_ROUTES:
+        report.error(
+            f"{path_text}: future physics routing may not use generic controlled_pause; "
+            "use theoretical_decision_role_selection or human_gated_ontology_change_required"
+        )
+    next_text = text_blob(completion.get("next_recommendation", ""), decision)
+    if next_route == "human_gated_ontology_change_required":
+        if "ontology" not in next_text or not any(marker in next_text for marker in ("human", "gate")):
+            report.error(
+                f"{path_text}: human_gated_ontology_change_required requires ontology and human-gate rationale"
+            )
+    if next_route == "theoretical_decision_role_selection" and not any(
+        marker in next_text for marker in THEORETICAL_DECISION_TEXT_MARKERS
+    ):
+        report.error(
+            f"{path_text}: theoretical_decision_role_selection requires a concrete theoretical payload marker"
+        )
 
     if category == "repeated_unmet_burdens_no_new_payload":
         burdens = _listish_values(decision.get("repeated_burdens", []))
@@ -1409,11 +1494,10 @@ def validate_refuter_loop_decision(
     if category == "scoped_obstruction" and not str(decision.get("obstruction_summary", "")).strip():
         report.error(f"{path_text}: scoped_obstruction decisions require obstruction_summary")
     if category in {"repeated_unmet_burdens_no_new_payload", "scoped_obstruction"}:
-        if next_route not in BRIDGE_OR_FAIL_ROUTES:
+        if next_route not in allowed_bridge_routes:
             report.error(
                 f"{path_text}: {category} must route through bridge_or_fail escalation"
             )
-        next_text = text_blob(completion.get("next_recommendation", ""), decision)
         if (
             "ontology formalizer" in next_text
             and any(marker in next_text for marker in ("obligation packet", "generic repair", "repair packet"))
@@ -1468,6 +1552,52 @@ def validate_candidate_bridge_attempt(
         )
     if not preserves_blocks:
         report.error(f"{path_text}: bridge_attempt_status.preserves_blocks is required")
+
+
+def validate_theoretical_continuation_decision(
+    report: ValidationReport,
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    decision = completion.get("theoretical_decision_output")
+    if not isinstance(decision, dict):
+        report.error(f"{path_text}: theoretical-continuation-selector completion missing theoretical_decision_output")
+        return
+    packet_type = str(decision.get("selected_next_packet_type", "")).strip()
+    basis = str(decision.get("decision_basis", "")).strip()
+    method = str(decision.get("theoretical_method", "")).strip()
+    preserves_blocks = str(decision.get("preserves_claim_blocks", "")).strip()
+    requires_human_gate = bool_value(decision.get("requires_human_gate", False))
+    human_gate_reason = str(decision.get("human_gate_reason", "")).strip()
+
+    if packet_type not in THEORETICAL_DECISION_PACKET_TYPES:
+        report.error(
+            f"{path_text}: theoretical_decision_output.selected_next_packet_type is not allowed: {packet_type}"
+        )
+    if not basis:
+        report.error(f"{path_text}: theoretical_decision_output.decision_basis is required")
+    if not method:
+        report.error(f"{path_text}: theoretical_decision_output.theoretical_method is required")
+    if not preserves_blocks:
+        report.error(f"{path_text}: theoretical_decision_output.preserves_claim_blocks is required")
+    if packet_type == "human_gated_ontology_change_required":
+        gate_text = text_blob(decision)
+        if not requires_human_gate:
+            report.error(
+                f"{path_text}: human-gated ontology decision must set requires_human_gate true"
+            )
+        if "ontology" not in gate_text or not any(marker in gate_text for marker in ("human", "gate")):
+            report.error(
+                f"{path_text}: human-gated ontology decision requires ontology and human-gate rationale"
+            )
+        if not human_gate_reason:
+            report.error(
+                f"{path_text}: human-gated ontology decision requires human_gate_reason"
+            )
+    elif requires_human_gate:
+        report.error(
+            f"{path_text}: theoretical continuation decisions may require a human gate only for ontology-change authority"
+        )
 
 
 def validate_completion_resolver_snapshots(
@@ -1623,6 +1753,13 @@ def validate_loop_control_handoff(
 
     path_text = yaml_path.relative_to(REPO_ROOT).as_posix()
     handoff_text = text_blob(data.get("summary", ""), data.get("next_action", ""))
+    future_pause_policy = theoretical_continuation_policy_active(job, data)
+    route = str(data.get("loop_risk_route", "")).strip()
+    if future_pause_policy and route in LEGACY_BRIDGE_OR_FAIL_ROUTES:
+        report.error(
+            f"{path_text}: future physics handoff may not set loop_risk_route=controlled_pause; "
+            "use theoretical_decision_role_selection or human_gated_ontology_change_required"
+        )
     if (
         "ontology formalizer" in handoff_text
         and any(marker in handoff_text for marker in ("obligation packet", "generic repair", "repair packet"))
@@ -1646,9 +1783,19 @@ def validate_loop_control_handoff(
             "concrete witness",
             "controlled pause",
             "gate chair",
+            "human-gated ontology",
+            "human gated ontology",
             "scoped no-go",
             "obstruction",
+            "source-side selector",
+            "source-side irrelevance",
+            "theoretical decision",
+            "theoretical-continuation-selector",
         )
+        if future_pause_policy:
+            route_markers = tuple(
+                marker for marker in route_markers if marker != "controlled pause"
+            )
         if not any(marker in handoff_text for marker in route_markers):
             report.error(
                 f"{path_text}: repeated-burden or obstruction handoff must route through bridge_or_fail escalation"

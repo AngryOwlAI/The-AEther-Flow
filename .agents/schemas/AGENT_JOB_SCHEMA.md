@@ -129,3 +129,26 @@ For science-draft roles, the final fused `.tex` remains the authoritative
 old-style role artifact for downstream registry, completion, handoff, and
 claim-boundary references. Child `.tex` outputs are supporting draft/control
 artifacts and should be registered when retained as source artifacts.
+
+## Theoretical Continuation Selector Jobs
+
+When the Director cannot select a single ordinary execution role because the
+next step is a theoretical decision among admissible packets, use
+`theoretical-continuation-selector@0.1.0`.
+
+The job remains a physics research AgentJob and therefore must use
+`role_decomposition` when created after `2026-06-17T04:08:16Z`. Its completion
+must include `distance_to_gr_status` and `theoretical_decision_output`.
+
+The selector may choose only one future packet type:
+
+- `source_side_selector_primitive`
+- `source_side_irrelevance_theorem`
+- `concrete_resp_lc_witness`
+- `distinct_scoped_no_go_question`
+- `bounded_theoretical_calculation`
+- `human_gated_ontology_change_required`
+
+The last option is reserved for cases where the next honest continuation needs
+canonical ontology authority, ontology adoption, or another protected human
+gate. Missing empirical data or absent experiment access is not sufficient.

@@ -97,6 +97,8 @@ The research-agent system is the project’s operating discipline for theoretica
 
 Every new physics research AgentJob created after `2026-06-17T04:08:16Z` must declare `parent_child_parallel_synthesis`. That mode preserves the external invariant: one Director decision, one outer AgentJob, one execution-role record, one completion record, and one fused final output. The parent and child execution units inherit the same authority, claim boundary, allowlists, validators, and stop conditions; they are not separate AgentJobs, new roles, or a route around conflict review.
 
+Future routing after `2026-06-17T04:29:31Z` treats generic controlled pause as a human-gate condition, not a normal result of missing local data. If the next step is theoretical selection among a source-side selector primitive, irrelevance theorem, concrete witness, scoped no-go question, or bounded calculation, the Director routes a bounded `theoretical-continuation-selector@0.1.0` AgentJob. A pause-like route is reserved for protected authority such as canonical ontology edit or ontology adoption.
+
 The system deliberately separates several kinds of claims:
 
 - Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.

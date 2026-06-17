@@ -20,6 +20,7 @@ try:
     from validate_research_control import (
         loop_control_policy,
         parent_child_decomposition_policy,
+        theoretical_continuation_policy,
         validate_all,
     )
 except ImportError:  # pragma: no cover
@@ -28,6 +29,7 @@ except ImportError:  # pragma: no cover
     from scripts.research_control.validate_research_control import (
         loop_control_policy,
         parent_child_decomposition_policy,
+        theoretical_continuation_policy,
         validate_all,
     )
 
@@ -43,7 +45,7 @@ STOP_CONDITIONS = [
     "no role fits",
     "selected role needs authority expansion",
     "job would touch paths outside its allowlist",
-    "Director creates a planning-only or control-only decision with no execution",
+    "canonical ontology change or other protected authority requires human gate",
 ]
 
 
@@ -198,6 +200,7 @@ def continuation_status() -> dict[str, object]:
         "available_roles": active_roles(),
         "pending_or_active_jobs": jobs_waiting,
         "bridge_or_fail_policy": loop_control_policy(),
+        "theoretical_continuation_policy": theoretical_continuation_policy(),
         "parent_child_decomposition_policy": parent_child_decomposition_policy(),
         "required_authority_surfaces": authority_surfaces(
             active_task_id,

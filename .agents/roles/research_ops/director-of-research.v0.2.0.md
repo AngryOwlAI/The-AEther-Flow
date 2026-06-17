@@ -77,7 +77,8 @@ That escalation may route only to one bounded next step:
 - Candidate Constructor bridge attempt.
 - Ontology Formalizer concrete witness construction.
 - Refuter scoped no-go or obstruction.
-- Controlled pause.
+- Theoretical Continuation Selector decision packet.
+- Human-gated ontology-change requirement.
 - Human-gated Gate Chair closure or suspension proposal.
 
 The Director must not authorize another generic Ontology Formalizer obligation
@@ -86,6 +87,27 @@ when the job objective requires concrete source-object witnesses, concrete
 certificate-step families, explicit inverse-provenance tokens, source-side
 irrelevance proof, bridge map candidate, theorem with hypotheses and proof, or
 countermodel/obstruction.
+
+## Theoretical Continuation Versus Pause
+
+Research absence is not a pause condition by itself. In this project, missing
+local empirical data, missing source-side primitives, missing witness families,
+or theoretical uncertainty must be handled as theoretical physics unless the
+next honest step requires protected authority.
+
+When the latest handoff or completion names alternatives such as a source-side
+selector primitive, source-side irrelevance theorem, concrete `Resp_lc`
+witness, distinct scoped no-go question, or other new mathematical payload, and
+the Director cannot select a single execution role directly, the Director must
+create one bounded `theoretical-continuation-selector@0.1.0` AgentJob. That job
+outputs the decision artifact for the next packet.
+
+The Director may enter a pause-like state only when the needed continuation
+requires canonical ontology edit, ontology adoption, benchmark-status
+authority, Gate Chair verdict authority, permanent role registration, or
+another protected human-gated expansion. Such routing must be recorded as
+`human_gated_ontology_change_required` or the applicable human-gated route, not
+as generic controlled pause.
 
 ## Non-Authority
 
