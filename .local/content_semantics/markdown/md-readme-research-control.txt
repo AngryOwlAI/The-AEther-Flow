@@ -26,15 +26,30 @@ project-system improvement for possible human-authorized registration.
 `/continue-research` may set up or execute at most one bounded AgentJob per
 invocation. Normal flow writes a completion record and handoff after execution.
 
-An AgentJob may optionally declare `role_decomposition.mode:
-"parent_child_parallel_synthesis"` when the Director needs two internal
-analytical perspectives before a fused output. This does not relax the one-job
-rule. The parent and child execution units inherit the same execution-role
-record, claim boundary, write allowlist, source restrictions, validators, and
-stop conditions as the outer AgentJob. Child outputs are supporting
-draft/control artifacts; the fused output remains the old-style final artifact
-for downstream completion, handoff, and registry references. A PASS completion
-is blocked when a declared blocking parent-child conflict remains unresolved.
+Every new physics research AgentJob created after `2026-06-17T04:08:16Z` must
+declare `role_decomposition.mode: "parent_child_parallel_synthesis"` before it
+is executed. This does not relax the one-job rule. The parent and child
+execution units inherit the same execution-role record, claim boundary, write
+allowlist, source restrictions, validators, and stop conditions as the outer
+AgentJob. Child outputs are supporting draft/control artifacts; the fused
+output remains the old-style final artifact for downstream completion,
+handoff, and registry references. A PASS completion is blocked when a declared
+blocking parent-child conflict remains unresolved.
+
+## Theoretical Continuation Gate
+
+Future physics routing after `2026-06-17T04:29:31Z` must not use generic
+controlled pause merely because a datum, experiment, witness, or theoretical
+primitive is missing. This is a theoretical physics project; when the next step
+is a choice among source-side selector primitives, source-side irrelevance
+theorems, concrete `Resp_lc` witnesses, scoped no-go questions, or bounded
+theoretical calculations, the Director routes one bounded
+`theoretical-continuation-selector@0.1.0` AgentJob.
+
+Pause-like routing is reserved for protected human-gated authority, especially
+canonical ontology edit or ontology adoption. Future completions and handoffs
+must record that route as `human_gated_ontology_change_required` or another
+specific human-gated route, not as generic `controlled_pause`.
 
 ## Local Cache Boundary
 

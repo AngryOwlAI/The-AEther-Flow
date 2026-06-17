@@ -44,6 +44,14 @@ external materials, distinguish established literature from new project
 construction, preserve claim gates, and avoid treating a constructed draft as
 canonical ontology, benchmark promotion, or completed derivation.
 
+For theoretical physics continuation, research should pause only when the next
+honest step needs protected human-gated authority such as canonical ontology
+edit or ontology adoption. Missing local data, missing experiment access, or
+uncertain theoretical packet selection is not sufficient. When the Director
+needs a decision among theoretical packets, route one bounded
+`theoretical-continuation-selector@0.1.0` AgentJob to select the next packet
+and preserve claim gates.
+
 ## Project-System Improvement
 
 For project-system repair, explanatory documentation synchronization,
