@@ -1,6 +1,6 @@
 # Research System
 
-The research system turns questions, handoffs, and improvement signals into bounded agent work with explicit authority and receipts.
+The research system turns a question, handoff, or project-improvement signal into one bounded job with a role, allowed paths, validation evidence, and a recorded next state.
 
 ## Source Binding
 
@@ -8,40 +8,36 @@ The research system turns questions, handoffs, and improvement signals into boun
 - **Related HTML:** `html/research-agent-workflow-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Operational Model
 
-The research system is the governed workflow that turns a question, continuation state, or project-improvement signal into bounded agent work with explicit roles, decisions, registries, artifacts, validation, completion records, and handoffs. Its function is to separate physics continuation from project-system maintenance, resolve tracked state before acting, assign one bounded AgentJob, constrain that job with role authority and allowlists, and preserve completion evidence for the next handoff. Optional parent-child synthesis can add analytical perspectives inside one AgentJob, but it cannot create new authority, extra jobs, or independent outputs. The system matters because AEther-Flow is not an informal chat log or autonomous proof engine. It is a controlled research program where progress, obstructions, generated derivatives, and negative results must remain reproducible and auditable.
-
-## What This Feature Does
-
-The research system is the operating workflow for bounded physics continuation and project-system improvement.
-
-## Why The Project Needs It
-
-The project needs it because speculative research, agent work, documentation, and validation must remain traceable instead of depending on unrecorded conversation state.
-
-## How It Works
-
-Tracked state leads to a Director decision, one AgentJob, a task-local role record, allowed outputs, validators, completion evidence, registries, and the next handoff.
+AEther-Flow is not an informal chat log. The research system exists so theoretical work, documentation work, validator repair, and memory maintenance each move through explicit control objects. A task record states the objective. A Director decision selects a role and one AgentJob. The AgentJob records allowed reads, allowed writes, forbidden paths, expected outputs, validators, and claim boundary. Completion records preserve what happened, and handoffs preserve the next state.
 
 ## Workflow Step Inspector
 
-1. State entry: tracked program state, handoff, or improvement signal defines the operating boundary.
-2. Director decision: the Director selects the task, role, claim boundary, and one-job route.
-3. AgentJob contract: the job records allowed reads, writes, outputs, validators, and stop conditions.
-4. Execution role: the task-local role record constrains role authority and any overlay or provisional scope.
-5. Bounded execution: the agent produces only allowlisted artifacts inside the task boundary.
-6. Validation: required validators test source, registry, derivative, and authority consistency.
-7. Completion: the completion YAML records verdict, command evidence, validation status, and unresolved obstructions.
-8. Handoff and registries: handoff state and control registries preserve the next operating boundary.
+1. State entry: tracked program state, handoff, or improvement signal defines the next bounded problem.
+2. Director decision: the Director selects the task, role, claim boundary, and AgentJob.
+3. AgentJob contract: the job records allowed reads, writes, outputs, validators, and forbidden authority surfaces.
+4. Execution role: the task-local role record constrains role authority and expiry.
+5. Bounded execution: the agent produces only allowlisted artifacts inside the declared claim boundary.
+6. Validation: required validators test source, registry, derivative, and control consistency.
+7. Completion: the completion YAML records verdict, command evidence, output paths, and next recommendation.
+8. Handoff and registries: handoff state and control registries preserve the next state for future continuation.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-It is not autonomous proof, not claim promotion, not permission to write outside an allowlist, and not a substitute for human-gated decisions.
+**Student:** Why not let a capable agent just work directly?
 
-## Diagram Reading Guide
+**Teacher:** Capability is not authority. The workflow prevents a model from borrowing permission from another role or treating a generated explanation as a source. The source basis is `research_control/README.md`, `.agents/schemas/AGENT_JOB_SCHEMA.md`, and registry rows.
 
-The loop diagram shows state, Director, AgentJob, role, outputs, validators, completion, handoff, and registries. The lifecycle diagram shows how one job moves from proposal through execution to completion or blocked handoff.
+**Student:** What does parent-child synthesis change?
+
+**Teacher:** It can add internal analytical perspectives inside one AgentJob. It does not create extra jobs, extra write paths, new claim boundaries, or independent child authority.
+
+**Student:** What should a reviewer inspect after a job completes?
+
+**Teacher:** Inspect the task, Director decision, AgentJob, execution-role record, artifacts, completion YAML, validator results, registry rows, and any handoff. That chain is the evidence path.
+
+## Lifecycle Diagrams
 
 <!-- mermaid-diagram-id: research-system-loop -->
 ```mermaid
@@ -74,36 +70,28 @@ stateDiagram-v2
   HandoffReady --> [*]
 ```
 
-## Source Authority
+## What Progress Means Here
 
-Authority comes from research-control guidance, AgentJob and execution-role schemas, task records, and registries.
+Progress is not the same thing as promotion. A job can produce a useful theorem draft, refutation, source-extension classification, documentation reset, validator repair, or negative result. It becomes durable only through source registration, completion evidence, and validators. Strong physics status still needs claim gates.
 
-## External AI Navigation Card
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- understand how task state becomes bounded work;
+- locate the control records that prove what happened;
+- distinguish execution evidence from scientific acceptance.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- inspect `AGENTS.md`, `research_control/AGENTS.md`, and the relevant task files;
+- verify the AgentJob allowlist and role boundary;
+- run the validators named by the job.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Read role routing before selecting an agent role.
-- Read research-control system before changing project machinery.
-- Read claim gates before interpreting scientific status.
+- write outside the AgentJob boundary;
+- treat completion as claim promotion;
+- cite generated derivatives as authority.
 
 ## All Source Materials
 

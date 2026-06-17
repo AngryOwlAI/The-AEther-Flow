@@ -344,7 +344,7 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
         self.assertTrue(any("Derived from spec must be" in error for error in report.errors))
 
-    def test_github_facing_explainer_requires_workflow_step_section_when_declared(self) -> None:
+    def test_github_facing_explainer_warns_for_missing_workflow_step_section_when_declared(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             build_minimal_documentation_surface(root)
@@ -367,8 +367,11 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
                 encoding="utf-8",
             )
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
-        self.assertTrue(
+        self.assertFalse(
             any("missing required section: Workflow Step Inspector" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("missing recommended section: Workflow Step Inspector" in warning for warning in report.warnings)
         )
 
     def test_github_facing_explainer_accepts_workflow_step_section_when_declared(self) -> None:
@@ -406,6 +409,34 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
         self.assertFalse(
             any("missing required section: Workflow Step Inspector" in error for error in report.errors)
         )
+
+    def test_github_facing_explainer_accepts_curator_specific_section_shape(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            page.write_text(
+                "# Example\n\n"
+                "## Source Binding\n\n"
+                "- **Derived from spec:** `markdown/html-explainer-specs/example.md`\n"
+                "- **Related HTML:** `html/example.html`\n"
+                "- **Authority status:** `generated_noncanonical`\n\n"
+                "## Reader Model\n\n"
+                "This source-backed orientation explains the example feature in a curator-specific shape.\n\n"
+                "## Student Questions And Teacher Answers\n\n"
+                "Q: What should a reader inspect first?\n\n"
+                "A: Inspect the registered source spec and the source material list before relying on the derivative.\n\n"
+                "```mermaid\n"
+                "flowchart TD\n"
+                "  A[\"Spec\"] --> B[\"Reader page\"]\n"
+                "```\n\n"
+                "## Source Materials\n\n"
+                "- `README.md`\n",
+                encoding="utf-8",
+            )
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertFalse(any("missing required section" in error for error in report.errors))
+        self.assertEqual(report.errors, [])
 
     def test_html_source_basis_must_be_registered(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

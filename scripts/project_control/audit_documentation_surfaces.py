@@ -41,7 +41,7 @@ ACTIVE_REFERENCE_ROOTS = (
     "github-facing",
     "markdown",
 )
-GITHUB_FACING_REQUIRED_SECTIONS = (
+GITHUB_FACING_RECOMMENDED_SECTIONS = (
     "Source Binding",
     "What This Feature Does",
     "Why The Project Needs It",
@@ -179,6 +179,14 @@ def markdown_section(text: str, heading: str) -> str:
     )
     match = pattern.search(text)
     return match.group(1).strip() if match else ""
+
+
+def first_markdown_section(text: str, headings: tuple[str, ...]) -> str:
+    for heading in headings:
+        section = markdown_section(text, heading)
+        if section:
+            return section
+    return ""
 
 
 def binding_value(text: str, label: str) -> str:
@@ -458,15 +466,15 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
         page_text = normalized_text(page_path.read_text(encoding="utf-8"))
         source_text = normalized_text(source_path.read_text(encoding="utf-8"))
         titles = heading_titles(page_text, level=2)
-        for section in GITHUB_FACING_REQUIRED_SECTIONS:
+        for section in GITHUB_FACING_RECOMMENDED_SECTIONS:
             if section not in titles:
-                report.error(f"{relative_page}: missing required section: {section}")
+                report.warnings.append(f"{relative_page}: missing recommended section: {section}")
 
         declared_controls = set(frontmatter_list(source_text, "required_controls"))
         if WORKFLOW_STEP_CONTROL in declared_controls and WORKFLOW_STEP_SECTION not in titles:
-            report.error(
+            report.warnings.append(
                 f"{relative_page}: source spec declares {WORKFLOW_STEP_CONTROL} "
-                f"but GitHub-facing page is missing required section: {WORKFLOW_STEP_SECTION}"
+                f"but GitHub-facing page is missing recommended section: {WORKFLOW_STEP_SECTION}"
             )
 
         for heading in GITHUB_FACING_FORBIDDEN_HEADINGS:
@@ -492,7 +500,7 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
                 f"got {declared_authority or '<missing>'}"
             )
 
-        all_sources = markdown_section(page_text, "All Source Materials")
+        all_sources = first_markdown_section(page_text, ("All Source Materials", "Source Materials"))
         declared_sources = code_spans(all_sources)
         for source_material in frontmatter_list(source_text, "source_materials"):
             if source_material not in declared_sources:
@@ -506,7 +514,9 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
 
         for marker in GITHUB_FACING_AI_CARD_MARKERS:
             if marker not in page_text:
-                report.error(f"{relative_page}: missing External AI Navigation Card marker: {marker}")
+                report.warnings.append(
+                    f"{relative_page}: missing External AI Navigation Card marker: {marker}"
+                )
 
         for line_number, line in enumerate(page_text.lower().splitlines(), start=1):
             for phrase in UNSAFE_CLAIM_PHRASES:

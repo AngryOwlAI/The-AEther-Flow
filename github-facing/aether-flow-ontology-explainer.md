@@ -1,6 +1,6 @@
 # Æther-flow Ontology
 
-The ontology names the project’s proposed substrate picture and keeps that picture separate from the still-open task of deriving exact relativistic geometry from it.
+The Æther-flow ontology is the project vocabulary for a proposed deeper substrate, its ordered motion, and the observer-level world that would have to appear as relativistic geometry if the research program succeeds.
 
 ## Source Binding
 
@@ -8,29 +8,31 @@ The ontology names the project’s proposed substrate picture and keeps that pic
 - **Related HTML:** `html/aether-flow-ontology-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## What The Ontology Is For
 
-The Æther-flow ontology is the project’s vocabulary for a proposed deeper substrate, its ordered motion, and the observer-level world that appears as space, time-order, expansion, gravity, matter behavior, and relativistic geometry. Its function is conceptual and methodological: it gives candidate construction something precise to talk about while keeping exact general relativity as the observable benchmark. The ontology does not by itself prove a replacement for GR. The current research burden is to recover Lorentzian metric structure, causal behavior, clock behavior, same-metric matter coupling, invariance, and closure from source-side substrate data without importing the target geometry by hand. That makes anti-smuggling discipline part of the ontology’s function. The vocabulary matters because the project is trying to distinguish an interpretive picture, a mathematical model, and an accepted empirical theory rather than letting those categories collapse.
+The ontology gives candidate construction something to talk about before a derivation exists. It names `Æther`, `Æther-flow`, observed three-dimensional space, `S-time`, observed expansion, gravity as mass-shaped flow reorganization, and the observer-level exact-GR benchmark. That vocabulary is useful only if it stays separated from three stronger things: a mathematical model, an empirical theory, and an accepted derivation.
 
-## What This Feature Does
+## The Central Distinction
 
-The ontology supplies the project vocabulary for a proposed Æther and Æther-flow substrate beneath observer-level relativistic geometry.
+Exact GR is the benchmark. The first-principles derivation from source-side substrate structure is still open.
 
-## Why The Project Needs It
+That distinction controls the whole physics lane. The project may use ordinary GR as the target behavior to recover, but it may not smuggle GR into the source assumptions and then announce recovery. A credible route must show how Lorentzian metric structure, causal behavior, clock behavior, matter coupling, invariance, and closure arise from source-side data.
 
-The project needs the ontology because candidate derivations need source-side language, but that language must remain separate from accepted GR and from the still-open derivation burden.
+## Student Questions And Teacher Answers
 
-## How It Works
+**Student:** Does the ontology prove that Æther-flow is real?
 
-It defines terms, ties them to the exact-GR benchmark, states what must be recovered, and uses claim gates to prevent target-smuggling or premature promotion.
+**Teacher:** No. It defines the project vocabulary and the conceptual target. The source basis is `ontology/aether-and-aether-flow.md`, `ontology/aether_flow_interpretation-lemen.md`, and `README.md`. The boundary is that ontology language is not empirical confirmation.
 
-## What It Is Not
+**Student:** Why use ontology at all if the derivation is open?
 
-It is not a completed physical theory, not an empirical confirmation, not a replacement for canonical TeX, and not proof that GR has been derived.
+**Teacher:** Candidate derivations need source-side terms. Without them, every attempt can drift back into target-GR language. The ontology supplies terms while claim gates and smuggling audits keep those terms from being mistaken for derived physics.
 
-## Diagram Reading Guide
+**Student:** What would count as progress?
 
-The ontology stack diagram moves from substrate vocabulary to observer-level benchmark behavior. The burden map lists what a valid derivation must recover before any promotion is possible.
+**Teacher:** Progress would be a source-side construction or obstruction that changes the Distance-to-GR burden honestly: for example, a new witness, theorem, finite model, no-go result, or source-extension classification. A clearer explanation alone does not move the physics status.
+
+## Ontology Stack
 
 <!-- mermaid-diagram-id: aether-flow-ontology-stack -->
 ```mermaid
@@ -45,6 +47,8 @@ flowchart TD
   STime --> Benchmark
   Gravity --> Benchmark
 ```
+
+## Derivation Burden
 
 <!-- mermaid-diagram-id: derivation-burden-map -->
 ```mermaid
@@ -62,36 +66,28 @@ flowchart TD
   ExactGR --> Gate["Promotion requires claim gate"]
 ```
 
-## Source Authority
+## Useful Reading Rule
 
-Authority comes from ontology Markdown sources, TeX and Markdown registries, and claim-boundary records. Generated surfaces only explain that source basis.
+Read ontology terms as candidate source vocabulary. Read registry rows and TeX sources for claim status. Read generated explainers only as orientation. When a statement sounds like a completed derivation, check whether a Gate Chair or claim-boundary record actually authorizes that stronger status.
 
-## External AI Navigation Card
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- summarize the ontology vocabulary for orientation;
+- identify the source files behind each term;
+- explain why exact-GR benchmark adoption and substrate derivation are different.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- inspect ontology sources and claim-boundary rows;
+- check TeX registry status for science-bearing claims;
+- keep anti-smuggling and open-burden language intact.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Read the claim-gates drilldown for promotion rules.
-- Read source authority before citing generated explanations.
-- Inspect registered TeX before relying on science-bearing claims.
+- treat ontology vocabulary as empirical confirmation;
+- do not claim the Æther-flow derivation is complete;
+- treat generated derivatives as independent physics authority.
 
 ## All Source Materials
 

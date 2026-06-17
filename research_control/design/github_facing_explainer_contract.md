@@ -35,24 +35,34 @@ The authority ladder remains:
    retrieval surfaces are derivative or orientation surfaces unless another
    registered source explicitly gives them narrower authority.
 
-## Required Page Contract
+## Required Safety Contract
 
 Each `github-facing/*.md` page must include:
 
 - `## Source Binding` with `Derived from spec`, `Related HTML`, and
   `Authority status` fields.
-- Reader sections for what the feature does, why the project needs it, how it
-  works, what it is not, diagram reading guidance, source authority, external
-  AI navigation, next steps, and all source materials.
 - Every source material declared by the matching source spec.
 - Every Mermaid block declared by the matching source spec, unless a later
   contract explicitly records a different synchronization rule.
-- `## Workflow Step Inspector` when the matching source spec declares
-  `workflow_step_inspector` in `required_controls`. The section should translate
-  the HTML inspector into page-specific reader steps rather than copying generic
-  renderer language.
-- A compact external-AI navigation card that states safe uses, pre-modification
-  inspection requirements, and forbidden uses.
+- A visible non-authority boundary sufficient for humans and external AI to
+  understand that the file is an explanatory derivative.
+- A complete source-materials reading path.
+
+The following are recommended reader devices, not canonical section law:
+
+- what the subject does;
+- why the project needs it;
+- how it works;
+- what it does not authorize;
+- Student/Teacher-style questions and source-bound answers;
+- workflow-step inspectors where the subject is a workflow or control process;
+- diagram reading guidance;
+- external-AI navigation guidance; and
+- next-reading guidance.
+
+The Documentation Curator decides which of these devices best teaches the
+subject. A script may warn when a recommended device is absent, but absence of
+one old section heading is not by itself a contract failure.
 
 The following source-spec headings must not appear as reader-facing top-level
 GitHub page sections:
@@ -64,11 +74,16 @@ GitHub page sections:
 ## Validator Binding
 
 `scripts/project_control/audit_documentation_surfaces.py` owns the deterministic
-checks for this contract. The audit must verify source-spec existence, related
-HTML existence, source binding declarations, required reader sections, source
-material coverage, conditional workflow-step inspector synchronization,
-Mermaid synchronization, external-AI navigation markers, stale nested-path
-references, and unsafe authority or physics-promotion phrasing.
+checks for the safety contract. The audit must fail on source-spec absence,
+related HTML absence, incorrect source binding declarations, missing source
+materials, missing synchronized source-spec Mermaid blocks, renderer-only
+source-spec headings made reader-visible, stale nested-path references, and
+unsafe authority or physics-promotion phrasing.
+
+The audit may emit guidance warnings for missing recommended section devices,
+including workflow-step inspector sections or external-AI navigation markers.
+Those warnings are not project authority over the Curator's prose or page
+structure.
 
 ## Operational Rule
 
@@ -77,7 +92,9 @@ as a reader-facing derivative. Preserve the source-spec metadata and renderer
 instructions in `markdown/html-explainer-specs/`; translate them into finished
 explanatory prose in `github-facing/`.
 
-When a GitHub-facing page has drifted into self-description, the correct
-operation is a source-backed reset: inspect the registered spec and source
-bundle, ignore the old derivative prose except as failure evidence, and write
-the page as a functional explanation of the subject.
+When a GitHub-facing page has drifted into self-description or mechanical
+template compliance, the correct operation is a source-backed reset: inspect
+the registered spec and source bundle, use Student/Teacher-style questions to
+identify what the reader needs to understand, ignore the old derivative prose
+except as failure evidence, and write the page as a functional explanation of
+the subject.

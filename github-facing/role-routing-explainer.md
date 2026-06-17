@@ -1,6 +1,6 @@
 # Role Routing
 
-Role routing chooses the correct authority lane before an agent changes files or claims progress.
+Role routing decides which kind of agent may perform one bounded task, what authority that role carries, and where the task must stop.
 
 ## Source Binding
 
@@ -8,21 +8,9 @@ Role routing chooses the correct authority lane before an agent changes files or
 - **Related HTML:** `html/role-routing-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Plain-Language Model
 
-Role routing is the project’s decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its function is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. It also explains why optional parent-child synthesis is a decomposition of analytical perspective inside the selected AgentJob, not a new role class or permission expansion. The project needs role routing because physics roles, documentation roles, validator roles, memory roles, and project-control roles carry different authority. Collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes.
-
-## What This Feature Does
-
-Role routing selects the authority lane and role contract for one bounded task.
-
-## Why The Project Needs It
-
-The project needs it because different tasks require different permissions, validators, claim boundaries, and stop conditions.
-
-## How It Works
-
-A Director decision chooses the role, the execution-role record binds that role to one AgentJob, and the AgentJob constrains paths, outputs, validators, and expiry.
+A role is a controlled job identity. It is not a personality label and not a measure of general ability. The project uses roles because physics construction, refutation, documentation, validator repair, memory maintenance, and project-control maintenance have different authority boundaries. A Director decision selects the role for one AgentJob. A task-local execution-role record then says exactly how that role is used for the task.
 
 ## Workflow Step Inspector
 
@@ -37,23 +25,31 @@ A Director decision chooses the role, the execution-role record binds that role 
 
 ## Common questions
 
-- Who selects the role? The Director decision.
-- Can a task overlay become reusable policy? No, it expires with the job.
-- Does parent-child synthesis create extra authority? No, it stays inside one AgentJob.
+- **Who selects the role?** The Director decision selects the role for the bounded job.
+- **What is an execution-role record?** It is the task-local binding between the reusable role and the exact AgentJob authority.
+- **Can a task overlay become reusable policy?** No. A task overlay expires with the job unless a later human-authorized registration changes the role system.
+- **Does parent-child synthesis create extra authority?** No. Parent and child perspectives inherit the outer AgentJob authority, claim boundary, and write allowlist.
+- **What should a reviewer inspect?** Read the role registry, Director decision, execution-role row, AgentJob YAML, and completion record.
 
 ## Common misunderstandings
 
-- A generated explainer is not a permission source.
-- A provisional role is not a permanent role.
-- A child perspective is not a separate job.
+- A capable tool is not automatically the correct role.
+- A Documentation Curator cannot silently become a Validator Engineer or Gate Chair.
+- A one-job provisional role is not a permanent role.
+- A generated explainer is not permission to write project-control or physics sources.
+- Internal child perspectives are not child AgentJobs.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-It is not permission for every capable tool to act, not permanent role registration, not generated-output authority, and not child-job creation.
+**Student:** Why cannot one smart helper do everything?
 
-## Diagram Reading Guide
+**Teacher:** One helper would blur work types that the project deliberately separates. Physics drafting, refutation, validation, documentation, memory, and project-control repair have different failure modes. The source basis is `AGENT_ROLE_REGISTRY.csv`, `ROLE_EXECUTION_REGISTRY.csv`, and `research_control/README.md`.
 
-The decision tree routes task requests by authority class. The contract map distinguishes registered roles, overlays, provisional roles, execution records, decomposition, and the AgentJob boundary.
+**Student:** What is the safest mental model?
+
+**Teacher:** Read routing as a chain: request, authority class, Director decision, role, execution-role record, AgentJob, validator evidence, completion. If any link is missing, authority is incomplete.
+
+## Routing Diagrams
 
 <!-- mermaid-diagram-id: role-routing-decision-tree -->
 ```mermaid
@@ -91,36 +87,24 @@ flowchart TD
   Perspectives --> Job
 ```
 
-## Source Authority
-
-Authority comes from role, execution-role, Director decision, AgentJob, and schema records.
-
-## External AI Navigation Card
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the feature for orientation
-- identify source files to inspect next
-- explain workflow boundaries in plain language
+- orient yourself to the role-selection chain;
+- find the records that constrain a task;
+- distinguish role authority from tool capability.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- inspect the relevant registry rows
-- inspect the relevant source spec or canonical source file
-- route through the correct research-control workflow
+- inspect the selected role row and execution-role row;
+- inspect the AgentJob allowlist;
+- follow the current task's validators and stop conditions.
 
 Do not:
-- do not treat this derivative as physics authority
-- do not claim the Æther-flow derivation is complete
-- do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
-- do not bypass claim gates, validators, or AgentJob boundaries
-
-## Where To Go Next
-
-- Inspect the role registry before selecting a role.
-- Inspect the task-local execution role before writing.
-- Read research-control system before changing contracts.
+- infer write permission from skill availability;
+- convert a provisional role into permanent policy;
+- use generated docs as authority for routing.
 
 ## All Source Materials
 

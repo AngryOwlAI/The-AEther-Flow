@@ -1,6 +1,6 @@
 # Documentation Curator Teaching Loop
 
-The Documentation Curator teaching loop uses reader questions and source-bound answers to make explainers clearer without making teaching packets or generated pages authoritative.
+The Documentation Curator teaching loop makes project explanations more useful by having a Student ask reader-centered questions, a Teacher answer from sources, and the Curator synthesize the result into source-backed documentation.
 
 ## Source Binding
 
@@ -8,21 +8,9 @@ The Documentation Curator teaching loop uses reader questions and source-bound a
 - **Related HTML:** `html/documentation-curator-teaching-loop-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## The Role Split
 
-The Documentation Curator teaching loop is the project's method for making source-backed explainers easier to understand without weakening authority boundaries. The Curator chooses a subject and source bundle, then uses a Documentation Student to ask plain reader-centered questions and a Documentation Teacher to answer those questions inside the declared source bundle. The Curator reviews the exchange, writes or updates a curated Teaching Q&A packet, and distills that packet into the Markdown source spec, GitHub-facing Markdown, and tracked human-only HTML derivative. The loop is subject-first: it must explain what the project component does, why the project needs it, how it works, what it can and cannot claim, and where a reader should go next. It does not let generated pages, teaching packets, Student questions, or Teacher answers become independent authority.
-
-## What This Feature Does
-
-The loop makes documentation more teachable. Student questions expose confusion, Teacher answers stay inside the source bundle, and the Curator turns the exchange into curated explanatory support. The final tracked outputs remain source specs, GitHub-facing Markdown, HTML derivatives, and documentation-impact records, all governed by the Curator's authority boundary.
-
-## Why The Project Needs It
-
-The project contains speculative physics, agent-control machinery, generated memory surfaces, and many authority distinctions. Readers can misunderstand those distinctions even when every file is technically correct. The teaching loop gives the Curator a structured way to find and repair confusion while preserving source authority.
-
-## How It Works
-
-The Curator selects one feature and source bundle. The Student asks reader-centered questions. The Teacher answers each question plainly, names source paths, marks gaps, and adds boundary notes. The Curator synthesizes a Teaching Q&A packet with required fields and sections, then distills the packet into source specs, GitHub-facing Markdown, and HTML. Validators check packet structure and source-bound behavior.
+The Curator is the writer. The Student asks questions only. The Teacher answers only from the selected source bundle. The teaching packet is explanatory support. The source spec, role contracts, schemas, validators, registries, and claim gates keep their own authority.
 
 ## Workflow Step Inspector
 
@@ -35,45 +23,54 @@ The Curator selects one feature and source bundle. The Student asks reader-cente
 7. Regenerate the tracked human-only HTML derivative.
 8. Validate teaching QA, source specs, derivatives, documentation impact, and research-control state.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-It is not a new source of project authority, not a role-authority expansion, not a schema or validator change by itself, and not a way for Student or Teacher outputs to write tracked documentation directly. Teaching packets support explanation; they do not change physics claims, routing, validators, role contracts, schemas, or generated-output boundaries.
+**Student:** Why ask questions before writing?
 
-## Diagram Reading Guide
+**Teacher:** Questions expose where a reader lacks the model: what the subject does, why it exists, how it works, what examples clarify it, and what boundary prevents misuse. The source basis is the Student role contract and the Curator role contract.
 
-No Mermaid diagram is required for this explainer. Read the process as a teaching lifecycle: source bundle, Student questions, Teacher answers, Curator synthesis, source-spec distillation, derivative refresh, and validation.
+**Student:** Why must Teacher answers name sources?
 
-## Source Authority
+**Teacher:** Source paths keep the answer from becoming improvised project truth. If the selected source bundle does not answer, the Teacher records a source gap.
 
-Authority comes from the Documentation Curator role, Student and Teacher role contracts, the Teaching Q&A packet schema, the teaching explainer skills, the GitHub-facing explainer contract, curated packets, and validators. This derived Markdown is orientation only.
+**Student:** Can a packet override a validator or role contract?
 
-## External AI Navigation Card
+**Teacher:** No. A Teaching Q&A packet improves explanations. It does not change routing, schemas, validators, role authority, claim status, ontology authority, benchmark status, or generated-output authority.
+
+```mermaid
+flowchart TD
+  Subject["Selected subject and source bundle"] --> Student["Documentation Student<br/>questions only"]
+  Student --> Teacher["Documentation Teacher<br/>source-bound answers"]
+  Teacher --> Packet["Curated Teaching Q&A packet"]
+  Packet --> Spec["Markdown source spec"]
+  Spec --> Markdown["GitHub-facing Markdown"]
+  Spec --> Html["Tracked human-only HTML"]
+  Markdown --> Validate["Teaching QA and surface validation"]
+  Html --> Validate
+```
+
+## Curator Judgment
+
+Scripts can enforce safety and source binding. They should not freeze all explanations into one template. The Curator's job is to decide which prose structure teaches the subject: Q&A, glossary, workflow, diagram, examples, non-examples, misconception repair, or a reading path. The required boundary is evidence-based explanation, not mechanical section sameness.
+
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the teaching loop for orientation
-- identify the role contracts, schema, skills, packets, and validators to inspect
-- distinguish explanatory support from authority
+- understand the teaching-loop workflow;
+- find role contracts, packet schema, example packets, and validators;
+- distinguish explanation support from project authority.
 
 Before modifying project knowledge:
-- inspect the selected source spec and source bundle
-- inspect the Curator, Student, and Teacher contracts
-- validate any teaching packet with `scripts/validate_teaching_qa.py --root .`
-- update the source spec before refreshing generated derivatives
+- inspect the selected source spec and source bundle;
+- keep Student and Teacher outputs inside their roles;
+- let the Curator synthesize tracked documentation.
 
 Do not:
-- do not treat a Teaching Q&A packet as canonical authority
-- do not let Student or Teacher outputs write tracked docs directly
-- do not cite generated HTML, wiki notes, PDFs, or `.local/` output as authority
-- do not use renderer format as a substitute for curator judgment about functionality coverage
-
-## Where To Go Next
-
-- Read roles and skills for the broader role catalog.
-- Read source authority before citing generated surfaces.
-- Read project overview for the subject-first documentation tone.
-- Inspect existing teaching packets before adding another teaching-enabled explainer.
+- let Student or Teacher outputs write tracked docs directly;
+- treat teaching packets as canonical authority;
+- replace source-bound answers with outside facts.
 
 ## All Source Materials
 

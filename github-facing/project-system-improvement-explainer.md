@@ -1,6 +1,6 @@
 # Project-System Improvement
 
-Project-system improvement is the repair lane for documentation drift, validators, roles, schemas, memory tooling, generated-document pipelines, signal routing, and operational reliability.
+Project-system improvement is the bounded repair loop for documentation drift, validator gaps, role or schema drift, memory tooling, signal routing, and operational reliability.
 
 ## Source Binding
 
@@ -8,25 +8,13 @@ Project-system improvement is the repair lane for documentation drift, validator
 - **Related HTML:** `html/project-system-improvement-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Source-Backed Summary
+## Why This Loop Exists
 
-Project-system improvement is the repair lane for the research machinery itself. It covers documentation drift, role and schema contracts, validator behavior, memory tooling, generated-document pipelines, trigger logic, signal routing, and operational reliability. The workflow begins with source inspection and a structural classifier, then uses an advisory resolver and signal registries to decide whether one bounded AgentJob is needed. A Documentation Curator job handles explanatory documentation drift; a Project-Control Maintainer or other project-system role handles contracts, validators, schemas, or control behavior. Every state-changing project-system AgentJob must record documentation impact, regenerate the source-first memory surfaces when needed, and pass research-control validation. The loop exists so the system can improve itself without turning maintenance work into physics continuation or claim promotion.
-
-## What This Feature Does
-
-The improvement loop routes maintenance work through the same bounded discipline used elsewhere in the project. It classifies current changes, reads advisory resolver state, checks emitted project-improvement signals against registries, selects one bounded role and AgentJob when needed, writes documentation-impact evidence, regenerates derived surfaces, and validates the result.
-
-## Why The Project Needs It
-
-AEther-Flow is both a physics project and an AI research-agent project. Its documentation, validators, registries, roles, schemas, generated surfaces, and memory tools can drift as the system evolves. The improvement lane lets maintainers repair the operating system without confusing that repair with a physics result or an unrestricted repository rewrite.
-
-## How It Works
-
-The workflow starts with authority inspection and `classify_project_changes.py`. The resolver then gives advisory routing state. Signal validation checks that emitted signals use canonical type and instance rows. If a change is needed, one bounded AgentJob handles the selected scope. Documentation impact records what changed, what generated surfaces moved, which classifier reason codes apply, and which validators were run.
+The repository contains both research content and the machinery that governs research work. That machinery can drift: validators can miss a case, documentation can mislead readers, generated surfaces can fall out of sync, and routing rules can become ambiguous. Project-system improvement fixes the machinery without promoting physics claims or treating a script as the source of scientific truth.
 
 ## Workflow Step Inspector
 
-1. Inspect root guidance, research-control guidance, relevant registries, and active source surfaces.
+1. Inspect root guidance, research-control guidance, relevant registries, and current Git changes.
 2. Classify changed paths and reason codes.
 3. Resolve advisory routing state and open project-improvement signals.
 4. Route at most one bounded AgentJob to the fitting project-system role.
@@ -35,45 +23,54 @@ The workflow starts with authority inspection and `classify_project_changes.py`.
 7. Regenerate derived memory, registry, HTML, wiki, or GitHub-facing surfaces through the approved path.
 8. Validate the transaction before treating it as checkpoint-ready.
 
-## What It Is Not
+## Student Questions And Teacher Answers
 
-It is not physics continuation, not a Gate Chair process, not a permission to change roles or validators without the correct project-control role, and not a rule that advisory resolver output blocks checkpointing by itself. Hard checkpoint blockers are concrete validation failures and authority-boundary violations.
+**Student:** Is the resolver the boss?
 
-## Diagram Reading Guide
+**Teacher:** No. Resolver output is advisory routing state. Validators and authority boundaries are hard gates. The source basis is `.codex/skills/improve-project-system/SKILL.md` and `scripts/project_control/resolve_project_improvement.py`.
 
-No Mermaid diagram is required for this explainer. Read the workflow as a lifecycle: classify, resolve, validate signals, route one bounded job, document impact, regenerate, validate, then checkpoint only if the transaction is coherent.
+**Student:** When should Documentation Curator own the fix?
 
-## Source Authority
+**Teacher:** When the problem is explanatory coverage, reader confusion, source-backed documentation, teaching packets, GitHub-facing Markdown, or generated HTML synchronization. If validator law or role contracts must change, the route may need Project-Control Maintainer or Validator Engineer.
 
-Authority comes from root and research-control guidance, the `improve-project-system` skill, project-improvement signal registries, and project-control scripts. This derived Markdown does not change any signal row, validator, or routing rule.
+**Student:** Why only one AgentJob?
 
-## External AI Navigation Card
+**Teacher:** A bounded job keeps cause, authority, writes, validators, and receipts inspectable. Broad rewrites can be split into successive jobs when the boundary changes.
+
+```mermaid
+flowchart TD
+  Signal["Change or improvement signal"] --> Classify["Classify impact"]
+  Classify --> Resolve["Resolve advisory route"]
+  Resolve --> Job["One bounded AgentJob"]
+  Job --> Sources["Update source or contract"]
+  Sources --> Derivatives["Regenerate derivatives"]
+  Derivatives --> Validate["Validate and record impact"]
+  Validate --> Checkpoint["Checkpoint-ready state"]
+```
+
+## Practical Rule
+
+If a script is checking safety, keep the hard check. If a script is dictating the exact prose format of a human explanation, treat it as guidance unless a registered source explicitly makes that format a gate.
+
+## For GitHub Readers And AI Agents
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the project-system improvement workflow
-- identify the classifier, resolver, signal, and documentation-impact files
-- distinguish documentation drift from control-contract drift
+- understand the project-system repair path;
+- find classifier, resolver, signal, and documentation-impact sources;
+- distinguish advisory routing from hard validation gates.
 
 Before modifying project knowledge:
-- read `AGENTS.md`
-- read `research_control/README.md`
-- inspect the project-improvement signal registries
-- route through the bounded AgentJob workflow
+- classify changes;
+- inspect the relevant project-improvement registries;
+- create or reuse one bounded AgentJob;
+- write documentation-impact evidence when required.
 
 Do not:
-- do not treat project-system repair as physics continuation
-- do not change validators, schemas, roles, or routing rules through a Documentation Curator job
-- do not leave documentation-impact requirements unrecorded
-- do not treat advisory resolver output as stronger than validator results
-
-## Where To Go Next
-
-- Read research-control system for validation governance.
-- Read roles and skills before changing role or skill contracts.
-- Read source authority before updating generated surfaces.
-- Run the classifier and documentation-impact validator before checkpointing project-system work.
+- use project-system repair to promote physics claims;
+- bypass validator failures;
+- hand-edit generated wiki or HTML as authority.
 
 ## All Source Materials
 
