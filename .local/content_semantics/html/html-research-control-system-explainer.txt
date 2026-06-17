@@ -3,12 +3,14 @@ workflow_lifecycle
 Research-Control System
 Provide the validation-governance drilldown for authority boundaries, project-system improvement, documentation-impact receipts, and source-backed HTML governance.
 Summary of Research-Control System
-The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, and generated derivatives remain aligned. It blocks PASS completions when a parent-child synthesis lacks a fused output or leaves a blocking conflict unresolved. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
+The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, teaching Q&A packets, and generated derivatives remain aligned. It blocks PASS completions when a parent-child synthesis lacks a fused output or leaves a blocking conflict unresolved, and it requires teaching-enabled documentation to keep Student and Teacher material source-bound and noncanonical. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, GitHub-facing Markdown, teaching packets, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
 AGENTS.md
 research_control/README.md
 .codex/skills/improve-project-system/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/roles/research_ops/documentation-curator.v0.8.0.md
+.codex/skills/aether-teaching-explainer/SKILL.md
 .agents/schemas/AGENT_JOB_SCHEMA.md
+.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
 research_control/design/html_explainer_flexible_presentation_contract.md
 Coverage
 Diagrams
@@ -20,71 +22,30 @@ AGENTS.md
 README.md
 research_control/README.md
 .codex/skills/improve-project-system/SKILL.md
-A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces. In reader-facing terms, this section identifies the subject of
-Research-Control System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-README.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+The classifier and resolver separate observed Git changes from advisory routing state. Documentation drift can route to Documentation Curator, while role, schema, validator, workflow-command, or routing-contract drift routes elsewhere. That distinction matters because documentation-impact evidence is a receipt requirement, not by itself proof that a Documentation Curator job is sufficient. The resolver helps select a role boundary and identify open project-improvement signals, but it is advisory. Hard checkpoint gates remain validator failures, explicit authority-boundary violations, missing required receipts, or write paths outside the AgentJob allowlist. A reader should therefore treat classifier and resolver output as routing evidence to inspect, not as a replacement for the task contract.
 Bounded Transaction
-AGENTS.md
-README.md
-research_control/README.md
-.codex/skills/improve-project-system/SKILL.md
-A source-backed explanation of one bounded AgentJob, optional parent-child internal decomposition, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions. In reader-facing terms, this section identifies the subject of
-Research-Control System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-README.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.agents/schemas/AGENT_JOB_SCHEMA.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+research_control/templates/COMPLETION_TEMPLATE.yaml
+research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml
+One bounded AgentJob is the accountable unit of work. It names reads, writes, generated paths, forbidden paths, validators, expected outputs, and claim boundary before implementation proceeds. The execution-role record then states whether the selected registered role is used directly, narrowed by task overlay, or represented by a one-job provisional identity. Optional parent-child synthesis stays inside that same job; it does not create child AgentJobs or extra authority. Completion evidence must preserve validator results, generated outputs, fused-output paths when decomposition is used, and conflict status before it can pass. This keeps project-system repair reversible and auditable instead of becoming an informal repository rewrite.
 Flexible Html Contract
-AGENTS.md
-README.md
-research_control/README.md
-.codex/skills/improve-project-system/SKILL.md
-A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries. In reader-facing terms, this section identifies the subject of
-Research-Control System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-README.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/aether-teaching-explainer/SKILL.md
+.agents/roles/research_ops/documentation-curator.v0.8.0.md
+.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
+The HTML contract starts at a Markdown source spec. Documentation Curator v0.8.0 may add teaching-loop enrichment, but Student and Teacher outputs remain source-bound support. The Curator distills that support into the source spec, tracked HTML, and GitHub-facing Markdown while keeping `data-content-block`, `data-source-path`, subject-summary, and source-material markers inspectable.
 Documentation Impact
+scripts/project_control/validate_documentation_impact.py
 AGENTS.md
-README.md
 research_control/README.md
-.codex/skills/improve-project-system/SKILL.md
-A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself. In reader-facing terms, this section identifies the subject of
-Research-Control System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-README.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+Documentation impact is a receipt requirement, not a routing shortcut. A project-system job must either update the relevant source documentation or record why no update was needed, and the receipt must cover source docs, generated derivatives, classifier reason codes, and validators. Teaching-loop changes add the same burden for teaching packets, source specs, HTML, and GitHub-facing Markdown. The important boundary is mechanical: if live source changes or generated derivatives exist, the impact record must name them or explain the no-op. That makes documentation debt visible to future agents without letting a derivative page become a control contract or scientific authority.
 Validator Chain
-AGENTS.md
-README.md
-research_control/README.md
-.codex/skills/improve-project-system/SKILL.md
-A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, parent-child shape and completion-conflict checks, research-control validation, diff checks, tests, and advisory depth lint. In reader-facing terms, this section identifies the subject of
-Research-Control System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-README.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
+scripts/research_control/validate_research_control.py
+scripts/spec_depth_lint.py
+scripts/validate_teaching_qa.py
+The validator chain checks bootstrap registration, source/hash metadata, Mermaid parity, emitted project-improvement signals, documentation-impact receipts, research-control records, diff boundaries, depth lint, and teaching-QA packet structure. Teaching-QA validation makes sure curated packets cite selected source materials, avoid generated-output authority, and preserve source gaps instead of inventing answers. Depth lint keeps source specs and rendered pages from collapsing into shallow renderer instructions. Research-control validation then checks the task, decision, job, execution-role record, completion, and checkpoint boundary. These checks do not make generated pages authoritative; they verify that derivative surfaces continue to follow their registered sources.
 Research Control Validation Flow
 +
 -
@@ -183,14 +144,20 @@ README.md
 research_control/README.md
 .codex/skills/improve-project-system/SKILL.md
 .codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/aether-teaching-explainer/SKILL.md
 .codex/skills/visual-explainer/SKILL.md
 .codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/roles/research_ops/documentation-curator.v0.8.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+.agents/roles/research_ops/documentation-teacher.v0.1.0.md
 .agents/schemas/AGENT_JOB_SCHEMA.md
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
 research_control/templates/COMPLETION_TEMPLATE.yaml
 research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml
 research_control/design/html_explainer_flexible_presentation_contract.md
 scripts/project_control/validate_documentation_impact.py
 scripts/research_control/validate_research_control.py
+scripts/spec_depth_lint.py
+scripts/validate_teaching_qa.py
 .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py

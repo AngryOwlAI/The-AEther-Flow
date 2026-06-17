@@ -10,7 +10,7 @@
 - **Related HTML:** `html/role-routing-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Start here in 90 seconds
+## What This Feature Does
 
 Role routing is the project’s way of deciding which kind of agent may do one
 bounded task. It happens before implementation. The routing decision connects a
@@ -22,14 +22,14 @@ Documentation Curator, Validator Engineer, Project-Control Maintainer, Refuter,
 and Gate Chair exist for different authority problems. The execution-role
 record says exactly how the selected role is being used for one job.
 
-## The problem this feature solves
+## Why The Project Needs It
 
 Without role routing, one helper could drift across boundaries: a documentation
 task might become a validator change, a generated page might be treated as
 authority, or a provisional role might become policy by repetition. Role
 routing keeps work auditable by making the role choice itself inspectable.
 
-## Plain-language model
+## How It Works
 
 Think of role routing as a dispatch desk with a logbook:
 
@@ -40,6 +40,51 @@ Think of role routing as a dispatch desk with a logbook:
 - The AgentJob carries the read paths, write paths, outputs, validators, and
   claim boundary.
 - Completion records what happened and whether validation passed.
+
+## Diagram Reading Guide
+
+The first diagram is the role-selection decision tree: a task request is
+classified by authority class before the Director selects one bounded AgentJob.
+The second diagram is the execution-role contract map: it shows why direct
+registered-role use, task overlays, one-job provisional roles, and optional
+parent-child synthesis all flow through one execution-role record before work
+can proceed.
+
+<!-- mermaid-diagram-id: role-routing-decision-tree -->
+```mermaid
+flowchart TD
+  Request["Task request or handoff"] --> Authority["Identify authority class"]
+  Authority --> Science["Science-bearing work"]
+  Authority --> ProjectSystem["Project-system work"]
+  Authority --> Docs["Explanatory documentation"]
+  Science --> ScienceRoles["Ontology Formalizer<br/>Candidate Constructor<br/>Refuter<br/>Smuggling Auditor<br/>Gate Chair"]
+  ProjectSystem --> OpsRoles["Project-System Director<br/>Project-Control Maintainer<br/>Validator Engineer<br/>Memory-System Maintainer"]
+  Docs --> Curator["Documentation Curator"]
+  ScienceRoles --> Director["Director decision"]
+  OpsRoles --> Director
+  Curator --> Director
+  Director --> AgentJob["Bounded AgentJob"]
+```
+
+<!-- mermaid-diagram-id: execution-role-contract-map -->
+```mermaid
+flowchart TD
+  Registered["Registered role template"] --> Fit{"Fits without change?"}
+  Fit -->|"yes"| Direct["registered_role"]
+  Fit -->|"needs bounded delta"| Overlay["task_overlay"]
+  Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"]
+  Direct --> Execution["Execution-role record"]
+  Overlay --> Execution
+  Provisional --> Execution
+  Execution --> Allowed["Allowed writes and validators"]
+  Execution --> Removed["Removed permissions"]
+  Execution --> Expanded["Explicit expansions"]
+  Execution --> Expiry["Expires after AgentJob"]
+  Execution --> Decomp["Optional internal<br/>role_decomposition"]
+  Decomp --> Perspectives["Parent and child<br/>perspectives"]
+  Allowed --> Job["AgentJob boundary"]
+  Perspectives --> Job
+```
 
 ## Key terms
 
@@ -145,7 +190,7 @@ one job, but it does not permanently change the base role.
 It does not. Parent and child execution units are internal perspectives inside
 one outer AgentJob.
 
-## What this page does not claim
+## What It Is Not
 
 - It does not change role authority.
 - It does not change routing behavior.
@@ -164,14 +209,35 @@ one outer AgentJob.
 4. What would you inspect before saying a role was allowed to write a path?
 5. What kind of change requires a human gate?
 
-## Source authority
+## Source Authority
 
 The role registry, execution-role registry, Director decision registry,
 research-control guidance, AgentJob schema, execution-role schema, and role
 schema define the authority evidence. This page teaches those surfaces; it
 does not amend them.
 
-## Where to go next
+## External AI Navigation Card
+
+You are reading a non-authoritative GitHub-facing explainer.
+
+Safe uses:
+- summarize this feature for orientation
+- identify source files to inspect next
+- explain workflow boundaries
+
+Before modifying project knowledge:
+- read `AGENTS.md`
+- inspect the relevant registry rows
+- inspect the relevant source spec or canonical source file
+- route through the correct research-control workflow
+
+Do not:
+- do not treat this page as physics authority
+- do not claim the Æther-flow derivation is complete
+- do not treat generated HTML, wiki, PDF, teaching packets, or `.local/` files as independent authority
+- do not bypass claim gates, validators, or AgentJob boundaries
+
+## Where To Go Next
 
 - Read `AGENTS.md` for the authority hierarchy.
 - Read `research_control/README.md` for project-system improvement and
@@ -183,7 +249,7 @@ does not amend them.
 - Read `.agents/schemas/AGENT_JOB_SCHEMA.md` for AgentJob and decomposition
   constraints.
 
-## All source materials
+## All Source Materials
 
 - `README.md`
 - `AGENTS.md`

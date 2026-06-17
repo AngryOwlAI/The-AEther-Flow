@@ -3,112 +3,57 @@ role_catalog
 Roles And Skills
 Catalog active registered roles, defined or superseded role states, repo-local governed skills, and evidence-labeled role/skill associations.
 Summary of Roles and Skills
-The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator can maintain explanatory specs and source-backed HTML, Project-Control Maintainer owns control contracts, Validator Engineer owns deterministic checks, and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
+The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator v0.8.0 can maintain explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Documentation Student and Documentation Teacher support that loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
 registries/AGENT_ROLE_REGISTRY.csv
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
-.agents/roles/research_ops/documentation-curator.v0.4.0.md
+.agents/roles/research_ops/documentation-curator.v0.8.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+.agents/roles/research_ops/documentation-teacher.v0.1.0.md
+.codex/skills/aether-teaching-explainer/SKILL.md
 .codex/skills/html-visual-explainer/SKILL.md
 Coverage
 Sources
 Source-Backed Coverage
 Active Role Catalog
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-.agents/roles/research_ops/project-system-director.v0.1.0.md
-A primary catalog of current active roles, what each does, which authority lane it occupies, and which outputs or validators normally constrain it. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-registries/AGENT_ROLE_REGISTRY.csv
-,
-registries/ROLE_EXECUTION_REGISTRY.csv
-,
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.agents/roles/research_ops/documentation-curator.v0.8.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+.agents/roles/research_ops/documentation-teacher.v0.1.0.md
+The active catalog now includes the Documentation Curator v0.8.0 teaching-loop owner plus two bounded documentation support subroles. Curator writes tracked explanatory surfaces when the AgentJob permits it. Student asks lay-reader questions only. Teacher answers only from the selected source bundle. The registry keeps those roles beside routing, project-maintenance, validation, memory, and physics roles so a maintainer can separate documentation support from role authority before work begins.
 Status Defined Roles
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-.agents/roles/research_ops/project-system-director.v0.1.0.md
-A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-registries/AGENT_ROLE_REGISTRY.csv
-,
-registries/ROLE_EXECUTION_REGISTRY.csv
-,
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.agents/roles/physics/gate-chair.v0.1.0.md
+.agents/schemas/EXECUTION_ROLE_SCHEMA.md
+Status-defined roles are registered enough to describe a protected boundary, but they are not general autonomous execution permission. Gate Chair authority is the clearest example: the role exists so the project can name promotion responsibility, yet a normal agent may not treat that status as permission to approve claims. A task overlay or one-job provisional role can narrow a role for a bounded job, but protected expansion still requires explicit gate evidence rather than convenience or repetition. This distinction matters for teaching work too. Student and Teacher are active support subroles, but they do not gain Curator write authority; their status and allowed behavior remain limited by the role registry and execution-role schema.
 Superseded Audit Roles
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-.agents/roles/research_ops/project-system-director.v0.1.0.md
-An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-registries/AGENT_ROLE_REGISTRY.csv
-,
-registries/ROLE_EXECUTION_REGISTRY.csv
-,
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/roles/research_ops/documentation-curator.v0.1.0.md
+Superseded contracts remain useful provenance for historical execution records. They show how the Documentation Curator evolved from source-backed HTML ownership through depth review, reader-layer cleanup, and analysis-capsule removal to the current v0.8.0 teaching loop, but they do not reactivate old permissions for new work. A reviewer can use old versions to understand why a past task was valid under its then-current contract. A new task should inspect the active registry row first, then inspect the task-local execution-role record to see whether the active role was used directly, narrowed by overlay, or replaced by a one-job provisional role.
 Repo Local Skill Catalog
-README.md
-AGENTS.md
-research_control/README.md
-registries/AGENT_ROLE_REGISTRY.csv
-A grouped catalog of repo-local skills by continuation, project-system improvement, memory/wiki, HTML visual explanation, Mermaid rendering, PDF/TeX, ontology promotion, and design support. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+.codex/skills/aether-teaching-explainer/SKILL.md
+.codex/skills/continue-research/SKILL.md
+.codex/skills/improve-project-system/SKILL.md
+.codex/skills/user-modified-project/SKILL.md
+Repo-local skills are governed procedures, not free-floating tools. The current catalog covers physics continuation, project-system improvement, human-edit intake, memory/wiki refresh, TeX/PDF derivatives, source-backed HTML, Mermaid documentation, teaching-loop enrichment, ontology promotion, and grilling/design support. The teaching skill is deliberately scoped: it operates only inside an authorized Documentation Curator job.
 Declared Role Skill Evidence
-registries/AGENT_ROLE_REGISTRY.csv
+.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
+.codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/aether-teaching-explainer/SKILL.md
 registries/ROLE_EXECUTION_REGISTRY.csv
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-.agents/roles/research_ops/project-system-director.v0.1.0.md
-A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-registries/AGENT_ROLE_REGISTRY.csv
-,
-registries/ROLE_EXECUTION_REGISTRY.csv
-,
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+Declared evidence comes from contracts and registries. Documentation Curator v0.8.0 names the Student and Teacher as support subroles, the teaching packet schema constrains curated Q&A, and the teaching skill lists the sequential loop. The execution-role registry remains the place to inspect how a role was actually used for one bounded AgentJob.
 Inferred Support Skills
 README.md
 AGENTS.md
 research_control/README.md
-registries/AGENT_ROLE_REGISTRY.csv
-A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+registries/MARKDOWN_SOURCE_REGISTRY.csv
+Global skills, browser tools, local shells, and editor automation can help the operator gather evidence, inspect rendered pages, run validators, or prepare a readable explanation. They do not become project authority unless the repository mirrors their contract into `.codex/skills/` and a bounded job allows the path. This prevents an operator convenience from silently becoming a workflow rule. For example, a browser can verify that an HTML derivative renders correctly, but the authority for what that page may claim remains in the registered source spec, role contract, registries, and validation receipts. Convenience can support a task; it cannot replace the role, source, registry, or validator boundary.
 Operator Context Boundary
 AGENTS.md
 README.md
 research_control/README.md
 registries/AGENT_ROLE_REGISTRY.csv
-A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records. In reader-facing terms, this section identifies the subject of
-Roles And Skills
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-README.md
-,
-research_control/README.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+The boundary is practical: use tools to inspect, render, validate, and explain, then return authority to tracked sources and registries. Generated HTML, GitHub-facing Markdown, teaching packets, wiki notes, PDFs, and local caches orient readers, but they do not authorize physics claims, new permissions, or control behavior. This page is therefore a map, not a permission grant. Before selecting a role or writing a file, a maintainer should inspect the active role registry row, the current task or handoff, the task-local execution-role record, and the relevant source spec or canonical source file. The roles-and-skills catalog helps find those objects; it does not replace them.
 All Source Materials
 Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
 README.md
@@ -118,12 +63,14 @@ registries/AGENT_ROLE_REGISTRY.csv
 registries/ROLE_EXECUTION_REGISTRY.csv
 registries/MARKDOWN_SOURCE_REGISTRY.csv
 .agents/schemas/EXECUTION_ROLE_SCHEMA.md
+.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
 .agents/roles/research_ops/director-of-research.v0.1.0.md
 .agents/roles/research_ops/project-system-director.v0.1.0.md
 .agents/roles/research_ops/project-control-maintainer.v0.1.0.md
-.agents/roles/research_ops/documentation-curator.v0.4.0.md
-.agents/roles/research_ops/documentation-curator.v0.3.0.md
-.agents/roles/research_ops/documentation-curator.v0.2.0.md
+.agents/roles/research_ops/documentation-curator.v0.8.0.md
+.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+.agents/roles/research_ops/documentation-teacher.v0.1.0.md
 .agents/roles/research_ops/validator-engineer.v0.1.0.md
 .agents/roles/research_ops/memory-system-maintainer.v0.1.0.md
 .agents/roles/research_ops/process-integrity-auditor.v0.1.0.md
@@ -133,7 +80,9 @@ registries/MARKDOWN_SOURCE_REGISTRY.csv
 .agents/roles/physics/smuggling-auditor.v0.1.0.md
 .agents/roles/physics/gate-chair.v0.1.0.md
 .agents/roles/research_ops/documentation-curator.v0.1.0.md
+.codex/skills/aether-teaching-explainer/SKILL.md
 .codex/skills/continue-research/SKILL.md
+.codex/skills/user-modified-project/SKILL.md
 .codex/skills/improve-project-system/SKILL.md
 .codex/skills/project-memory-system/SKILL.md
 .codex/skills/markdown-wiki/SKILL.md
@@ -145,3 +94,4 @@ registries/MARKDOWN_SOURCE_REGISTRY.csv
 .codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
 .codex/skills/ontology-promotion/SKILL.md
 .codex/skills/grill-me/SKILL.md
+.codex/skills/grill-with-docs/SKILL.md

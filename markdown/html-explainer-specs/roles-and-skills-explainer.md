@@ -12,12 +12,14 @@ source_materials:
   - "registries/ROLE_EXECUTION_REGISTRY.csv"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
   - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - ".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"
   - ".agents/roles/research_ops/director-of-research.v0.1.0.md"
   - ".agents/roles/research_ops/project-system-director.v0.1.0.md"
   - ".agents/roles/research_ops/project-control-maintainer.v0.1.0.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.4.0.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.3.0.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.8.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.7.0.md"
+  - ".agents/roles/research_ops/documentation-student.v0.1.0.md"
+  - ".agents/roles/research_ops/documentation-teacher.v0.1.0.md"
   - ".agents/roles/research_ops/validator-engineer.v0.1.0.md"
   - ".agents/roles/research_ops/memory-system-maintainer.v0.1.0.md"
   - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
@@ -27,7 +29,9 @@ source_materials:
   - ".agents/roles/physics/smuggling-auditor.v0.1.0.md"
   - ".agents/roles/physics/gate-chair.v0.1.0.md"
   - ".agents/roles/research_ops/documentation-curator.v0.1.0.md"
+  - ".codex/skills/aether-teaching-explainer/SKILL.md"
   - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/user-modified-project/SKILL.md"
   - ".codex/skills/improve-project-system/SKILL.md"
   - ".codex/skills/project-memory-system/SKILL.md"
   - ".codex/skills/markdown-wiki/SKILL.md"
@@ -39,6 +43,7 @@ source_materials:
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
   - ".codex/skills/ontology-promotion/SKILL.md"
   - ".codex/skills/grill-me/SKILL.md"
+  - ".codex/skills/grill-with-docs/SKILL.md"
 claim_boundary: "Human-only role and skill catalog. It explains registered role status, repo-local skill contracts, and evidence-labeled support-skill associations without changing role authority, routing behavior, skill contracts, validator behavior, or scientific claim status."
 human_visual_only: true
 explainer_kind: "conceptual_model"
@@ -76,10 +81,11 @@ Use these role status meanings:
 - `superseded`: preserved for old execution records, not used for new routing.
 
 The main skill catalog covers repo-local governed skills only:
-`continue-research`, `improve-project-system`, `project-memory-system`,
-`markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`,
-`html-visual-explainer`, `visual-explainer`, `ontology-promotion`, `grill-me`,
-and `mermaid-documentation`.
+`continue-research`, `improve-project-system`, `user-modified-project`,
+`project-memory-system`, `markdown-wiki`, `tex-wiki`,
+`pdf-derivative-build`, `obsidian-wiki`, `html-visual-explainer`,
+`visual-explainer`, `aether-teaching-explainer`, `ontology-promotion`,
+`grill-me`, `grill-with-docs`, and `mermaid-documentation`.
 
 External Codex plugins, global user skills, bundled tools, and operator-local
 helpers may be mentioned only in a clearly labeled operator-context note. They
@@ -112,29 +118,35 @@ The roles-and-skills catalog is the active inventory of registered agent
 roles, historical role versions, task-local execution overlays, and repo-local
 skill front doors used by the project. Its function is to show which role
 contracts currently govern work, which roles are status-defined or superseded
-for audit history, which skills provide project-governed procedures, and which
-tools are merely operator-context aids. This matters because skills are useful
-only inside the right authority boundary: Documentation Curator can maintain
-explanatory specs and source-backed HTML, Project-Control Maintainer owns
-control contracts, Validator Engineer owns deterministic checks, and physics
-roles remain separate from documentation work. The catalog fits the overall
-system by giving maintainers a readable map from registry rows to role
-contracts and skill procedures before they execute a task.
+for audit history, which support subroles may ask or answer teaching-loop
+questions, which skills provide project-governed procedures, and which tools
+are merely operator-context aids. This matters because skills are useful only
+inside the right authority boundary: Documentation Curator v0.8.0 can maintain
+explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed
+HTML; Documentation Student and Documentation Teacher support that loop
+without writing tracked docs; Project-Control Maintainer owns control
+contracts; Validator Engineer owns deterministic checks; and physics roles
+remain separate from documentation work. The catalog fits the overall system
+by giving maintainers a readable map from registry rows to role contracts and
+skill procedures before they execute a task.
 
 Summary source basis:
 
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
+- `.codex/skills/aether-teaching-explainer/SKILL.md`
 - `.codex/skills/html-visual-explainer/SKILL.md`
 
 ## Required Content Blocks
 
 - subject_summary: Summarize the roles-and-skills catalog, its active-first role inventory, why skill/role boundaries matter, and which declared sources ground the summary.
-- active_role_catalog: A primary catalog of current active roles, what each does, which authority lane it occupies, and which outputs or validators normally constrain it.
+- active_role_catalog: A primary catalog of current active roles and support subroles, including Documentation Curator v0.8.0, Documentation Student, and Documentation Teacher, what each does, which authority lane it occupies, and which outputs or validators normally constrain it.
 - status_defined_roles: A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously.
 - superseded_audit_roles: An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions.
-- repo_local_skill_catalog: A grouped catalog of repo-local skills by continuation, project-system improvement, memory/wiki, HTML visual explanation, Mermaid rendering, PDF/TeX, ontology promotion, and design support.
-- declared_role_skill_evidence: A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience.
+- repo_local_skill_catalog: A grouped catalog of repo-local skills by continuation, project-system improvement, human-edit intake, memory/wiki, HTML visual explanation, teaching-loop enrichment, Mermaid rendering, PDF/TeX, ontology promotion, and design support.
+- declared_role_skill_evidence: A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, teaching-loop support roles, and task overlays rather than inferred convenience.
 - inferred_support_skills: A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills.
 - operator_context_boundary: A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records.

@@ -10,11 +10,11 @@ This page explains how the project changes itself safely: classification, bounde
 
 ## Source-Backed Summary
 
-The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, and generated derivatives remain aligned. It blocks PASS completions when a parent-child synthesis lacks a fused output or leaves a blocking conflict unresolved. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, Markdown guidance, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
+The research-control system is the repository's governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, teaching Q&A packets, and generated derivatives remain aligned. It blocks PASS completions when a parent-child synthesis lacks a fused output or leaves a blocking conflict unresolved, and it requires teaching-enabled documentation to keep Student and Teacher material source-bound and noncanonical. It matters because the project deliberately combines scientific exploration with agent workflow development; without control records, generated HTML, GitHub-facing Markdown, teaching packets, validators, and role contracts could drift or be mistaken for scientific authority. The system fits the larger project by making improvements reversible, auditable, and separate from physics claim promotion.
 
 ## What This Feature Does
 
-The research-control system is the governance layer for project-system and research-continuation changes. It keeps documentation changes, validator changes, role contract changes, optional parent-child decomposition evidence, generated derivative refreshes, project-improvement signals, and checkpoint boundaries auditable.
+The research-control system is the governance layer for project-system and research-continuation changes. It keeps documentation changes, validator changes, role contract changes, teaching-loop support packets, optional parent-child decomposition evidence, generated derivative refreshes, project-improvement signals, and checkpoint boundaries auditable.
 
 ## Why The Project Needs It
 
@@ -27,11 +27,12 @@ Operator flow:
 1. Classify current changes with `scripts/project_control/classify_project_changes.py --json`.
 2. Resolve advisory project-system routing with `resolve_project_improvement.py --json` when applicable.
 3. Create or reuse one bounded AgentJob with explicit role, paths, validators, outputs, and stop conditions.
-4. If `parent_child_parallel_synthesis` is declared, check inherited authority, child output allowlists, fused output evidence, and unresolved blocking conflicts.
-5. Update source docs or write a documentation-impact no-op rationale when required.
-6. Regenerate memory/wiki registries through bootstrap.
-7. Run project-control, research-control, diff, and test validators.
-8. Checkpoint only when validators pass and changed paths match the job boundary.
+4. For Documentation Curator v0.8.0 teaching work, keep Student questions and Teacher answers inside the Curator-selected source bundle and store curated packets as explanatory support only.
+5. If `parent_child_parallel_synthesis` is declared, check inherited authority, child output allowlists, fused output evidence, and unresolved blocking conflicts.
+6. Update source docs or write a documentation-impact no-op rationale when required.
+7. Regenerate memory/wiki registries through bootstrap.
+8. Run project-control, research-control, diff, teaching-QA, depth-lint, and test validators as applicable.
+9. Checkpoint only when validators pass and changed paths match the job boundary.
 
 ## What It Is Not
 
@@ -70,7 +71,7 @@ flowchart TD
 
 ## Source Authority
 
-The control model is grounded in `AGENTS.md`, `research_control/README.md`, improve-project-system, explainer skills, the active documentation-curator contract, AgentJob and execution-role schemas, validation scripts, and the project-memory bootstrap.
+The control model is grounded in `AGENTS.md`, `research_control/README.md`, improve-project-system, explainer skills, the active Documentation Curator v0.8.0 contract, the Student and Teacher support-role contracts, AgentJob and execution-role schemas, the Teaching Q&A packet schema, validation scripts, and the project-memory bootstrap.
 
 ## External AI Navigation Card
 
@@ -97,6 +98,7 @@ Do not:
 
 - Use continue-research for physics continuation.
 - Use improve-project-system for validators, roles, memory tooling, and documentation pipelines.
+- Use aether-teaching-explainer only inside an authorized Documentation Curator teaching-loop job.
 - Run documentation-impact validation after project-system machinery changes.
 - Stop when a required policy decision exceeds the AgentJob boundary.
 
@@ -107,14 +109,20 @@ Do not:
 - `research_control/README.md`
 - `.codex/skills/improve-project-system/SKILL.md`
 - `.codex/skills/html-visual-explainer/SKILL.md`
+- `.codex/skills/aether-teaching-explainer/SKILL.md`
 - `.codex/skills/visual-explainer/SKILL.md`
 - `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
-- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
 - `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
 - `research_control/templates/COMPLETION_TEMPLATE.yaml`
 - `research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml`
 - `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `scripts/project_control/validate_documentation_impact.py`
 - `scripts/research_control/validate_research_control.py`
+- `scripts/spec_depth_lint.py`
+- `scripts/validate_teaching_qa.py`
 - `.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py`

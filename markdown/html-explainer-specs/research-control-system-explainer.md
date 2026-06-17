@@ -10,16 +10,22 @@ source_materials:
   - "research_control/README.md"
   - ".codex/skills/improve-project-system/SKILL.md"
   - ".codex/skills/html-visual-explainer/SKILL.md"
+  - ".codex/skills/aether-teaching-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.7.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.8.0.md"
+  - ".agents/roles/research_ops/documentation-student.v0.1.0.md"
+  - ".agents/roles/research_ops/documentation-teacher.v0.1.0.md"
   - ".agents/schemas/AGENT_JOB_SCHEMA.md"
   - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - ".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"
   - "research_control/templates/COMPLETION_TEMPLATE.yaml"
   - "research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml"
   - "research_control/design/html_explainer_flexible_presentation_contract.md"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
+  - "scripts/spec_depth_lint.py"
+  - "scripts/validate_teaching_qa.py"
   - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
 claim_boundary: "Human-only project-system visualization. It explains existing authority boundaries and validator behavior without changing physics claims, control contracts, routing decisions, validator behavior, or registry authority."
 human_visual_only: true
@@ -85,6 +91,10 @@ content to `source-authority-explainer.html`.
 - Low-level evidence model: validator scripts, completion receipts, registry
   rows, source specs, and generated HTML metadata.
 - Documentation Curator panel: source-spec-first tracked HTML generation.
+- Teaching-loop panel: Documentation Curator v0.8.0 may use Student and
+  Teacher subroles to build noncanonical teaching packets, then distill them
+  into source specs, tracked HTML, and GitHub-facing Markdown without changing
+  authority.
 - Flexible HTML contract panel: explain `presentation_profile`,
   `layout_intent`, `required_content_blocks`, `data-content-block`, and
   source-path evidence as deterministic structural requirements.
@@ -132,22 +142,26 @@ to classify changes, resolve advisory routing, create or reuse one bounded
 AgentJob, enforce role and write-path boundaries, require documentation-impact
 receipts when project machinery changes, and validate that source specs,
 skills, roles, registries, claim boundaries, optional parent-child
-decomposition evidence, and generated derivatives remain aligned. It blocks
-PASS completions when a parent-child synthesis lacks a fused output or leaves a
-blocking conflict unresolved. It matters because the project deliberately
+decomposition evidence, teaching Q&A packets, and generated derivatives remain
+aligned. It blocks PASS completions when a parent-child synthesis lacks a
+fused output or leaves a blocking conflict unresolved, and it requires
+teaching-enabled documentation to keep Student and Teacher material
+source-bound and noncanonical. It matters because the project deliberately
 combines scientific exploration with agent workflow development; without
-control records, generated HTML, Markdown guidance, validators, and role
-contracts could drift or be mistaken for scientific authority. The system fits
-the larger project by making improvements reversible, auditable, and separate
-from physics claim promotion.
+control records, generated HTML, GitHub-facing Markdown, teaching packets,
+validators, and role contracts could drift or be mistaken for scientific
+authority. The system fits the larger project by making improvements
+reversible, auditable, and separate from physics claim promotion.
 
 Summary source basis:
 
 - `AGENTS.md`
 - `research_control/README.md`
 - `.codex/skills/improve-project-system/SKILL.md`
-- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.codex/skills/aether-teaching-explainer/SKILL.md`
 - `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
 - `research_control/design/html_explainer_flexible_presentation_contract.md`
 
 ## Required Content Blocks
@@ -155,6 +169,6 @@ Summary source basis:
 - subject_summary: Summarize the research-control system, its safety-harness role, why validators and receipts matter, and which declared sources ground the summary.
 - classification_resolver: A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces.
 - bounded_transaction: A source-backed explanation of one bounded AgentJob, optional parent-child internal decomposition, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
-- flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries.
+- flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, teaching-loop enrichment, depth lint, teaching-QA validation, and generated-HTML boundaries.
 - documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
-- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, parent-child decomposition and completion checks, research-control validation, diff checks, tests, and advisory depth lint.
+- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, teaching-QA validation, parent-child decomposition and completion checks, research-control validation, diff checks, tests, and advisory depth lint.

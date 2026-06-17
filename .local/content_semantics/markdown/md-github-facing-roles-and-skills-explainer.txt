@@ -10,7 +10,7 @@ This page catalogs current roles, historical role states, repo-local skills, and
 
 ## Source-Backed Summary
 
-The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator can maintain explanatory specs and source-backed HTML, Project-Control Maintainer owns control contracts, Validator Engineer owns deterministic checks, and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
+The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator v0.8.0 can maintain explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Documentation Student and Documentation Teacher support that loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
 
 ## What This Feature Does
 
@@ -28,15 +28,18 @@ Active role map:
 | --- | --- | --- |
 | Routing/control | Director of Research, Project-System Director | bounded decisions and project-system routing |
 | Project maintenance | Project-Control Maintainer, Validator Engineer, Memory-System Maintainer | control contracts, checks, memory tooling |
-| Documentation | Documentation Curator | explanatory Markdown, source specs, source-backed HTML derivatives |
+| Documentation | Documentation Curator v0.8.0 | explanatory Markdown, source specs, teaching packets, GitHub-facing Markdown, source-backed HTML derivatives |
+| Teaching support | Documentation Student, Documentation Teacher | lay-reader questions and source-bound answers inside a Curator job only |
 | Physics work | Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor | science drafts, candidate construction, obstruction preservation |
 | Human-gated | Gate Chair | promotion decisions only when explicitly authorized |
 
-Repo-local skills include `continue-research`, `improve-project-system`, `project-memory-system`, `markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`, `html-visual-explainer`, `visual-explainer`, `ontology-promotion`, `grill-me`, and Mermaid documentation support.
+Repo-local skills include `continue-research`, `improve-project-system`, `user-modified-project`, `project-memory-system`, `markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`, `html-visual-explainer`, `visual-explainer`, `aether-teaching-explainer`, `ontology-promotion`, `grill-me`, `grill-with-docs`, and Mermaid documentation support.
+
+Teaching-loop roles are not independent documentation writers. Student asks questions only, Teacher answers only from the Curator-selected source bundle, and the Curator distills the packet into tracked documentation while preserving source authority.
 
 ## What It Is Not
 
-It is not a role registration change, not a permission grant, not proof that a global tool is project authority, and not a reason to reuse superseded role permissions for new work.
+It is not a role registration change, not a permission grant, not proof that a global tool is project authority, not a reason to reuse superseded role permissions for new work, and not authority to treat teaching packets as canonical source.
 
 ## Diagram Reading Guide
 
@@ -46,7 +49,7 @@ No Mermaid diagram is declared in the current registered source spec for this pa
 
 ## Source Authority
 
-The catalog is grounded in the agent role registry, role execution registry, Markdown source registry, execution-role schema, role contracts, and repo-local skill contracts.
+The catalog is grounded in the agent role registry, role execution registry, Markdown source registry, execution-role schema, the active Documentation Curator v0.8.0 contract, Student and Teacher support-role contracts, the Teaching Q&A packet schema, and repo-local skill contracts.
 
 ## External AI Navigation Card
 
@@ -85,12 +88,14 @@ Do not:
 - `registries/ROLE_EXECUTION_REGISTRY.csv`
 - `registries/MARKDOWN_SOURCE_REGISTRY.csv`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
 - `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.3.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.2.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
 - `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
 - `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
@@ -100,7 +105,9 @@ Do not:
 - `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
 - `.agents/roles/physics/gate-chair.v0.1.0.md`
 - `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- `.codex/skills/aether-teaching-explainer/SKILL.md`
 - `.codex/skills/continue-research/SKILL.md`
+- `.codex/skills/user-modified-project/SKILL.md`
 - `.codex/skills/improve-project-system/SKILL.md`
 - `.codex/skills/project-memory-system/SKILL.md`
 - `.codex/skills/markdown-wiki/SKILL.md`
@@ -112,3 +119,4 @@ Do not:
 - `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
 - `.codex/skills/ontology-promotion/SKILL.md`
 - `.codex/skills/grill-me/SKILL.md`
+- `.codex/skills/grill-with-docs/SKILL.md`
