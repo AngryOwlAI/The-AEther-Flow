@@ -54,7 +54,9 @@ The following are recommended reader devices, not canonical section law:
 - why the project needs it;
 - how it works;
 - what it does not authorize;
-- Student/Teacher-style questions and source-bound answers;
+- distilled teaching-loop insights, expressed as finished prose, examples,
+  reading guidance, diagrams, or practical checks rather than raw
+  Student/Teacher transcript content;
 - workflow-step inspectors where the subject is a workflow or control process;
 - diagram reading guidance;
 - external-AI navigation guidance; and
@@ -70,6 +72,17 @@ GitHub page sections:
 - `Rendering Intent`
 - `Required Visual Structure`
 - `Required Content Blocks`
+
+The following raw teaching-loop transcript markers must not appear in
+GitHub-facing Markdown:
+
+- `## Student Questions And Teacher Answers`
+- `**Student:**`
+- `**Teacher:**`
+
+The teaching loop may shape the page, but the reader-facing page must be the
+Curator's synthesis. Student and Teacher exchanges belong in curated teaching
+packets or task-local evidence, not as public-page structure.
 
 ## Validator Binding
 
@@ -94,7 +107,7 @@ explanatory prose in `github-facing/`.
 
 When a GitHub-facing page has drifted into self-description or mechanical
 template compliance, the correct operation is a source-backed reset: inspect
-the registered spec and source bundle, use Student/Teacher-style questions to
-identify what the reader needs to understand, ignore the old derivative prose
-except as failure evidence, and write the page as a functional explanation of
-the subject.
+the registered spec and source bundle, use teaching-loop questions internally
+to identify what the reader needs to understand, ignore the old derivative
+prose except as failure evidence, and write the page as a functional
+explanation of the subject.

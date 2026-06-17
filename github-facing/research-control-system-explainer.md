@@ -23,19 +23,18 @@ The system controls state-changing work: project-system repairs, documentation s
 7. Run the validator chain: teaching QA, depth lint, unit tests, bootstrap, documentation-surface audit, documentation-impact validation, research-control validation, and diff checks where required.
 8. Treat checkpoint readiness as validator-backed authority-boundary evidence, not as a scientific result.
 
-## Student Questions And Teacher Answers
+## Control Semantics
 
-**Student:** Why is documentation work controlled?
+Documentation work is controlled because explanation changes how humans and
+agents interpret authority. If a generated page implies a stronger physics or
+workflow claim than the sources allow, that is project-system risk even when
+the prose is easy to read.
 
-**Teacher:** Documentation can affect how humans and agents interpret authority. If a generated explainer suggests a stronger claim than the sources allow, it becomes project-system risk. The source basis is `AGENTS.md`, `research_control/README.md`, and the Documentation Curator role.
-
-**Student:** Is the resolver a hard command?
-
-**Teacher:** No. The project-improvement resolver is advisory routing state. Hard checkpoint gates are validator failures and authority-boundary violations.
-
-**Student:** What protects generated explainers?
-
-**Teacher:** Source specs, renderer contracts, source-basis hashes, Mermaid parity checks, documentation-impact receipts, and research-control validation keep derivatives aligned with registered sources.
+The project-improvement resolver is advisory routing state. Hard gates are
+validator failures, authority-boundary violations, forbidden paths, missing
+receipts, and claim-status overreach. Generated explainers are protected by
+source specs, renderer contracts, source-basis hashes, Mermaid parity checks,
+documentation-impact records, and research-control validation.
 
 ## Validation Flow
 

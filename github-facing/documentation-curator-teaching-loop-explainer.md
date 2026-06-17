@@ -23,19 +23,20 @@ The Curator is the writer. The Student asks questions only. The Teacher answers 
 7. Regenerate the tracked human-only HTML derivative.
 8. Validate teaching QA, source specs, derivatives, documentation impact, and research-control state.
 
-## Student Questions And Teacher Answers
+## What The Loop Produces
 
-**Student:** Why ask questions before writing?
+The question-and-answer rounds are diagnostic. They expose what a reader needs:
+the subject's purpose, operating model, authority boundary, examples,
+non-examples, likely confusion points, and next reading path. Source-bound
+answers keep those needs from turning into improvised project truth. If the
+selected source bundle does not answer a question, the Teacher records a source
+gap instead of filling it from outside knowledge.
 
-**Teacher:** Questions expose where a reader lacks the model: what the subject does, why it exists, how it works, what examples clarify it, and what boundary prevents misuse. The source basis is the Student role contract and the Curator role contract.
-
-**Student:** Why must Teacher answers name sources?
-
-**Teacher:** Source paths keep the answer from becoming improvised project truth. If the selected source bundle does not answer, the Teacher records a source gap.
-
-**Student:** Can a packet override a validator or role contract?
-
-**Teacher:** No. A Teaching Q&A packet improves explanations. It does not change routing, schemas, validators, role authority, claim status, ontology authority, benchmark status, or generated-output authority.
+The public output is not the transcript. The Curator uses the exchange to
+write a teaching packet and then distills that packet into source specs,
+GitHub-facing Markdown, and generated HTML. A good final page should read like
+finished documentation: direct explanation, workflow, diagrams, examples,
+boundary notes, and source links.
 
 ```mermaid
 flowchart TD
@@ -52,6 +53,14 @@ flowchart TD
 ## Curator Judgment
 
 Scripts can enforce safety and source binding. They should not freeze all explanations into one template. The Curator's job is to decide which prose structure teaches the subject: Q&A, glossary, workflow, diagram, examples, non-examples, misconception repair, or a reading path. The required boundary is evidence-based explanation, not mechanical section sameness.
+
+## Public Page Rule
+
+Teaching packets and role exchanges are support material. They do not override
+routing, schemas, validators, role authority, claim status, ontology authority,
+benchmark status, or generated-output authority. A GitHub-facing page may
+explain that support process, but it should present the Curator's synthesis,
+not raw Student and Teacher turns.
 
 ## For GitHub Readers And AI Agents
 

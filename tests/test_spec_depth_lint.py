@@ -138,15 +138,20 @@ class SpecDepthLintTests(unittest.TestCase):
         self.assertTrue(any("plain-language" in warning for warning in warnings))
         self.assertTrue(any("source paths" in warning for warning in warnings))
 
-    def test_teaching_enabled_github_markdown_requires_common_questions(self) -> None:
+    def test_teaching_enabled_github_markdown_allows_curator_specific_sections(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "github-facing/example-explainer.md"
             path.parent.mkdir(parents=True)
-            path.write_text("# Example\n\n## Start here\n", encoding="utf-8")
+            path.write_text(
+                "# Example\n\n"
+                "## Start Here\n\n"
+                "This source-backed orientation explains the example workflow directly.\n",
+                encoding="utf-8",
+            )
 
             warnings = self.depth_lint.lint_github_markdown(path)
 
-        self.assertTrue(any("Common questions" in warning for warning in warnings))
+        self.assertEqual([], warnings)
 
     def test_github_markdown_self_reference_warns(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

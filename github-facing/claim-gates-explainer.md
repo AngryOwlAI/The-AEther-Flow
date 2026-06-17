@@ -23,19 +23,21 @@ AEther-Flow intentionally works near speculative physics. That makes status disc
 7. Record accepted, blocked, or negative-result status in the relevant control evidence.
 8. Prevent generated docs, validator passes, or completed jobs from promoting claims by presentation alone.
 
-## Student Questions And Teacher Answers
+## Status Rules For Readers
 
-**Student:** Is a completed research task an accepted claim?
+A completed research task is not automatically an accepted claim. Completion
+records show what a bounded job did, which outputs it produced, and which
+validators ran. Accepted physics status requires the appropriate gate and
+source evidence.
 
-**Teacher:** No. Completion records show what a bounded job did and which validators ran. Accepted physics status requires the appropriate gate and source evidence. The source basis is `CLAIM_BOUNDARY_REGISTRY.csv`, `research_control/README.md`, and the Gate Chair role contract.
+Negative results are preserved because they protect future work. A refutation
+or scoped obstruction prevents the same route from being replayed as if it had
+never failed. It can narrow the search without pretending that every related
+route is impossible.
 
-**Student:** Why preserve negative results?
-
-**Teacher:** A negative result prevents repetition and clarifies where a route failed. It can narrow the search without pretending that every related route is impossible.
-
-**Student:** What does exact-GR benchmark adoption mean?
-
-**Teacher:** Ordinary GR is the observable target behavior. It is not proof that the Æther-flow source ontology has derived that behavior.
+Exact-GR benchmark adoption means ordinary GR is the observable target behavior
+for comparison. It does not mean the Æther-flow source ontology has derived
+that target.
 
 ## Claim-State Diagrams
 

@@ -23,19 +23,22 @@ The repository contains both research content and the machinery that governs res
 7. Regenerate derived memory, registry, HTML, wiki, or GitHub-facing surfaces through the approved path.
 8. Validate the transaction before treating it as checkpoint-ready.
 
-## Student Questions And Teacher Answers
+## Routing Judgment
 
-**Student:** Is the resolver the boss?
+The resolver is not the boss. It reports advisory routing state. Validators,
+authority boundaries, stop conditions, and explicit human-gated policy decide
+whether a transaction is acceptable.
 
-**Teacher:** No. Resolver output is advisory routing state. Validators and authority boundaries are hard gates. The source basis is `.codex/skills/improve-project-system/SKILL.md` and `scripts/project_control/resolve_project_improvement.py`.
+Documentation Curator owns fixes when the problem is explanatory coverage,
+reader confusion, source-backed documentation, teaching packets,
+GitHub-facing Markdown, or generated HTML synchronization. Project-Control
+Maintainer, Validator Engineer, or another project-system role is required when
+the change alters validator law, role contracts, schemas, routing behavior, or
+checkpoint gates.
 
-**Student:** When should Documentation Curator own the fix?
-
-**Teacher:** When the problem is explanatory coverage, reader confusion, source-backed documentation, teaching packets, GitHub-facing Markdown, or generated HTML synchronization. If validator law or role contracts must change, the route may need Project-Control Maintainer or Validator Engineer.
-
-**Student:** Why only one AgentJob?
-
-**Teacher:** A bounded job keeps cause, authority, writes, validators, and receipts inspectable. Broad rewrites can be split into successive jobs when the boundary changes.
+The one-AgentJob rule keeps cause, authority, writes, validators, and receipts
+inspectable. Broad repairs can be split into successive jobs when the boundary
+changes.
 
 ```mermaid
 flowchart TD

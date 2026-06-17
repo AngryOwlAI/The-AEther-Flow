@@ -24,19 +24,18 @@ flowchart TD
   Negative --> Ledger["Distance-to-GR ledger"]
 ```
 
-## Student Questions And Teacher Answers
+## How To Use The Roadmap
 
-**Student:** Does the roadmap mean the project is close to deriving GR?
+The roadmap does not say the project is close to deriving GR. It names the
+burdens and status vocabulary needed to avoid vague progress claims. A physics
+job can then be judged against a specific burden rather than implying global
+movement toward the whole derivation.
 
-**Teacher:** Not by itself. It names the burdens and current status vocabulary. The source basis is `research_control/design/gr_derivation_burden_map.md` and `registries/DISTANCE_TO_GR_LEDGER.csv`.
-
-**Student:** Why require future physics jobs to name a milestone?
-
-**Teacher:** A job can then be judged against a specific burden instead of implying global progress. The completion must say what mathematical payload was added and what remains unresolved.
-
-**Student:** What happens when a route keeps failing?
-
-**Teacher:** Repeated-burden or scoped-obstruction outcomes can evaluate freeze criteria. A freeze is controlled memory for a route, not a universal rejection of every possible ontology or source-extension path.
+Future completions must say what mathematical payload was added and what
+remains unresolved. If a route keeps failing under the same burden, the control
+system can evaluate repeated-burden or scoped-obstruction freeze criteria. A
+freeze is controlled memory for a route; it is not a universal rejection of
+every possible ontology or source-extension path.
 
 ## Status Vocabulary
 

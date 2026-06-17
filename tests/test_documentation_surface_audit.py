@@ -327,7 +327,7 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
                 encoding="utf-8",
             )
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
-        self.assertTrue(any("renderer-instruction heading" in error for error in report.errors))
+        self.assertTrue(any("forbidden reader-visible heading: Rendering Intent" in error for error in report.errors))
 
     def test_github_facing_explainer_requires_source_binding(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -423,9 +423,8 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
                 "- **Authority status:** `generated_noncanonical`\n\n"
                 "## Reader Model\n\n"
                 "This source-backed orientation explains the example feature in a curator-specific shape.\n\n"
-                "## Student Questions And Teacher Answers\n\n"
-                "Q: What should a reader inspect first?\n\n"
-                "A: Inspect the registered source spec and the source material list before relying on the derivative.\n\n"
+                "## Practical Reader Check\n\n"
+                "Inspect the registered source spec and the source material list before relying on the derivative.\n\n"
                 "```mermaid\n"
                 "flowchart TD\n"
                 "  A[\"Spec\"] --> B[\"Reader page\"]\n"
@@ -437,6 +436,30 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
         self.assertFalse(any("missing required section" in error for error in report.errors))
         self.assertEqual(report.errors, [])
+
+    def test_github_facing_explainer_rejects_raw_teaching_transcript(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            page.write_text(
+                github_facing_page_text(
+                    "\n## Student Questions And Teacher Answers\n\n"
+                    "**Student:** What should a reader inspect first?\n\n"
+                    "**Teacher:** The registered source spec and the source material list.\n"
+                ),
+                encoding="utf-8",
+            )
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertTrue(
+            any("forbidden reader-visible heading: Student Questions And Teacher Answers" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("raw teaching-loop transcript marker is reader-visible: **Student:**" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("raw teaching-loop transcript marker is reader-visible: **Teacher:**" in error for error in report.errors)
+        )
 
     def test_html_source_basis_must_be_registered(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

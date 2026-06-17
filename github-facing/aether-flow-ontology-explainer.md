@@ -18,19 +18,20 @@ Exact GR is the benchmark. The first-principles derivation from source-side subs
 
 That distinction controls the whole physics lane. The project may use ordinary GR as the target behavior to recover, but it may not smuggle GR into the source assumptions and then announce recovery. A credible route must show how Lorentzian metric structure, causal behavior, clock behavior, matter coupling, invariance, and closure arise from source-side data.
 
-## Student Questions And Teacher Answers
+## How To Read The Ontology
 
-**Student:** Does the ontology prove that Æther-flow is real?
+The ontology is a source vocabulary, not proof that the proposed substrate is
+real. Its value is that it gives candidate derivations disciplined source-side
+terms before the derivation exists. Without that vocabulary, a candidate can
+slide back into target-GR language and quietly assume what it was meant to
+recover.
 
-**Teacher:** No. It defines the project vocabulary and the conceptual target. The source basis is `ontology/aether-and-aether-flow.md`, `ontology/aether_flow_interpretation-lemen.md`, and `README.md`. The boundary is that ontology language is not empirical confirmation.
-
-**Student:** Why use ontology at all if the derivation is open?
-
-**Teacher:** Candidate derivations need source-side terms. Without them, every attempt can drift back into target-GR language. The ontology supplies terms while claim gates and smuggling audits keep those terms from being mistaken for derived physics.
-
-**Student:** What would count as progress?
-
-**Teacher:** Progress would be a source-side construction or obstruction that changes the Distance-to-GR burden honestly: for example, a new witness, theorem, finite model, no-go result, or source-extension classification. A clearer explanation alone does not move the physics status.
+Useful progress is therefore mathematical or control evidence, not prettier
+wording. A new source-side construction, obstruction, finite model, no-go
+result, witness family, or source-extension classification can change a
+Distance-to-GR burden when it is recorded through the research-control system.
+A clearer explainer can help readers understand that burden, but it does not
+move the physics status by itself.
 
 ## Ontology Stack
 

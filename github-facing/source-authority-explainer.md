@@ -23,19 +23,20 @@ The highest science-bearing authority is registered TeX. Format registries carry
 7. Treat `.local/` caches as scratch or machine-local retrieval aids.
 8. Return to the canonical source or registry before making project-knowledge changes.
 
-## Student Questions And Teacher Answers
+## Practical Authority Rule
 
-**Student:** What if a generated page explains something better than the source?
+Better readability does not create authority. A generated page can be the
+clearest way to learn the system, but it should send the reader back to the
+registered source and registry row before any project-knowledge change.
 
-**Teacher:** Better readability does not create authority. Use the generated page to find the source, then cite or modify the registered source and registry row.
+Registries are central because they carry object identity, provenance, source
+hashes, related sources, generated outputs, and validation status. They are the
+spine that tells humans and agents whether a derivative still points to the
+source it claims to represent.
 
-**Student:** Why are registries so important?
-
-**Teacher:** Registries carry object identity, provenance, hashes, related sources, generated outputs, and validation status. They are how humans and agents know whether a derivative still matches its source.
-
-**Student:** Can `.local/` retrieval output settle a disagreement?
-
-**Teacher:** No. `.local/` output is scratch or machine-local retrieval. It can help find evidence, but the evidence must come from tracked source authority.
+Local retrieval output is weaker still. `.local/` caches, semantic extracts,
+SQLite indexes, and local vault notes can help find evidence, but disagreement
+is settled by tracked sources and registries.
 
 ## Authority And Generation Diagrams
 

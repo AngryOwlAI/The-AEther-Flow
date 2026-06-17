@@ -23,19 +23,19 @@ AEther-Flow is not an informal chat log. The research system exists so theoretic
 7. Completion: the completion YAML records verdict, command evidence, output paths, and next recommendation.
 8. Handoff and registries: handoff state and control registries preserve the next state for future continuation.
 
-## Student Questions And Teacher Answers
+## Evidence Path
 
-**Student:** Why not let a capable agent just work directly?
+Capability is not authority in this repository. An agent can be technically
+able to write a file and still be unauthorized to change that source class.
+The evidence path is what makes work inspectable: task, Director decision,
+AgentJob, execution-role record, artifacts, completion YAML, validator
+results, registry rows, and handoff state.
 
-**Teacher:** Capability is not authority. The workflow prevents a model from borrowing permission from another role or treating a generated explanation as a source. The source basis is `research_control/README.md`, `.agents/schemas/AGENT_JOB_SCHEMA.md`, and registry rows.
-
-**Student:** What does parent-child synthesis change?
-
-**Teacher:** It can add internal analytical perspectives inside one AgentJob. It does not create extra jobs, extra write paths, new claim boundaries, or independent child authority.
-
-**Student:** What should a reviewer inspect after a job completes?
-
-**Teacher:** Inspect the task, Director decision, AgentJob, execution-role record, artifacts, completion YAML, validator results, registry rows, and any handoff. That chain is the evidence path.
+Parent-child synthesis is internal to one AgentJob. It can add analytical
+perspectives, but it does not create child AgentJobs, extra write paths, new
+claim boundaries, or independent child authority. Reviewers should therefore
+inspect the outer job contract first and treat child outputs as supporting
+evidence under that contract.
 
 ## Lifecycle Diagrams
 

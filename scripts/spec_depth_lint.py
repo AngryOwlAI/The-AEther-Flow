@@ -151,10 +151,6 @@ def spec_teaching_enabled(text: str) -> bool:
 def lint_github_markdown(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8", errors="replace")
     warnings: list[str] = []
-    if "## Common questions" not in text:
-        warnings.append(f"{path}: teaching-enabled GitHub-facing Markdown lacks a Common questions section")
-    if "## Common misunderstandings" not in text:
-        warnings.append(f"{path}: teaching-enabled GitHub-facing Markdown lacks misconception repair")
     body_without_binding = re.sub(
         r"(?ms)^## Source Binding\s+.*?(?=^## |\Z)",
         "",

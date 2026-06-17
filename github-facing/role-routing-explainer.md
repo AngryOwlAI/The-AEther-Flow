@@ -23,13 +23,13 @@ A role is a controlled job identity. It is not a personality label and not a mea
 7. Execute within the role boundary and record completion evidence.
 8. Expire the overlay or provisional role after the job unless a later human-authorized registration changes the role system.
 
-## Common questions
+## Operational Answers
 
-- **Who selects the role?** The Director decision selects the role for the bounded job.
-- **What is an execution-role record?** It is the task-local binding between the reusable role and the exact AgentJob authority.
-- **Can a task overlay become reusable policy?** No. A task overlay expires with the job unless a later human-authorized registration changes the role system.
-- **Does parent-child synthesis create extra authority?** No. Parent and child perspectives inherit the outer AgentJob authority, claim boundary, and write allowlist.
-- **What should a reviewer inspect?** Read the role registry, Director decision, execution-role row, AgentJob YAML, and completion record.
+- The Director decision selects the role for the bounded job.
+- An execution-role record binds a reusable role to the exact AgentJob authority.
+- A task overlay expires with the job unless a later human-authorized registration changes the role system.
+- Parent-child synthesis does not create extra authority; parent and child perspectives inherit the outer AgentJob authority, claim boundary, and write allowlist.
+- Reviewers should inspect the role registry, Director decision, execution-role row, AgentJob YAML, and completion record.
 
 ## Common misunderstandings
 
@@ -39,15 +39,17 @@ A role is a controlled job identity. It is not a personality label and not a mea
 - A generated explainer is not permission to write project-control or physics sources.
 - Internal child perspectives are not child AgentJobs.
 
-## Student Questions And Teacher Answers
+## Safe Mental Model
 
-**Student:** Why cannot one smart helper do everything?
+The route is a chain, not a vibe: request, authority class, Director decision,
+role, execution-role record, AgentJob, validator evidence, and completion. If
+one link is missing, authority is incomplete.
 
-**Teacher:** One helper would blur work types that the project deliberately separates. Physics drafting, refutation, validation, documentation, memory, and project-control repair have different failure modes. The source basis is `AGENT_ROLE_REGISTRY.csv`, `ROLE_EXECUTION_REGISTRY.csv`, and `research_control/README.md`.
-
-**Student:** What is the safest mental model?
-
-**Teacher:** Read routing as a chain: request, authority class, Director decision, role, execution-role record, AgentJob, validator evidence, completion. If any link is missing, authority is incomplete.
+The project uses many roles because the failure modes differ. Physics drafting
+can overclaim. Refutation can erase too much if it is scoped poorly.
+Documentation can mislead readers about authority. Validator repair can change
+the checkpoint gate. Memory maintenance can make retrieval look canonical. Role
+routing keeps those risks separated before work begins.
 
 ## Routing Diagrams
 

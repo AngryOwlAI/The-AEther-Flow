@@ -57,6 +57,11 @@ GITHUB_FACING_FORBIDDEN_HEADINGS = (
     "Rendering Intent",
     "Required Visual Structure",
     "Required Content Blocks",
+    "Student Questions And Teacher Answers",
+)
+GITHUB_FACING_FORBIDDEN_TRANSCRIPT_MARKERS = (
+    "**Student:**",
+    "**Teacher:**",
 )
 GITHUB_FACING_AI_CARD_MARKERS = (
     "You are reading a non-authoritative GitHub-facing explainer.",
@@ -479,7 +484,13 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
 
         for heading in GITHUB_FACING_FORBIDDEN_HEADINGS:
             if heading in titles:
-                report.error(f"{relative_page}: renderer-instruction heading is reader-visible: {heading}")
+                report.error(f"{relative_page}: forbidden reader-visible heading: {heading}")
+
+        for marker in GITHUB_FACING_FORBIDDEN_TRANSCRIPT_MARKERS:
+            if marker in page_text:
+                report.error(
+                    f"{relative_page}: raw teaching-loop transcript marker is reader-visible: {marker}"
+                )
 
         declared_source = binding_value(page_text, "Derived from spec")
         declared_html = binding_value(page_text, "Related HTML")
