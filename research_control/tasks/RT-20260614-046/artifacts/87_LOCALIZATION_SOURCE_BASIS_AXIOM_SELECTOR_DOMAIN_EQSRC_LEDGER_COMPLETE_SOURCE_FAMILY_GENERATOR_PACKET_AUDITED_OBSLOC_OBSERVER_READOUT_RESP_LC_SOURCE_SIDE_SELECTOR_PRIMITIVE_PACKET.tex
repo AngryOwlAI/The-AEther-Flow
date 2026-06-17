@@ -1,0 +1,284 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.3em}
+\setlist[itemize]{topsep=0.3em,itemsep=0.25em}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqLC}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{lc}}}
+\newcommand{\ReadLC}{\mathsf{Read}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\Bobs}{\mathcal{B}^{=}_{\mathrm{obs}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\SelResp}{\mathsf{Sel}_{\RespLC}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Block}{\mathsf{Block}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{payload}{New mathematical payload}
+\newtheorem{distancestatus}{Distance-to-GR status}
+\newtheorem{controlrule}{Control rule}
+
+\title{\textbf{Localization Source-Basis Axiom Selector-Domain EqSrc Ledger-Complete Source-Family Generator Packet Audited ObsLoc Observer-Readout RespLC Source-Side Selector Primitive Packet}\\[0.35em]
+\large Draft/Control Contract for Sign Orientation, Scale Normalization, and Response-Token Semantics}
+\author{Ontology Formalizer AgentJob AJ-RT-20260614-046-001}
+\date{June 17, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft/control Ontology Formalizer artifact executes the successor
+named in \texttt{handoff-0087}. The prior packet showed that the
+source-invisible quotient by sign reversal, positive scale rescaling,
+and response-token relabeling does not preserve a nondegenerate
+\(\RespLC\) response burden from the retained exact tuple
+\[
+    S_X=(U_X,[n]_{U_X},\Phi_{U_X},T^n,T^\Phi).
+\]
+This packet therefore states a source-side selector primitive contract
+\(\SelResp\). The contract says what source-only structure would have
+to select response sign orientation, scale normalization, and
+response-token semantics. It also proves a conditional
+selector-contract theorem and records a non-instantiation obstruction:
+the current retained tuple does not itself supply the selector
+components. The result is a sharpened missing-primitive packet, not
+canonical adoption. No canonical \(\RespLC\), \(\Msrc\), \(\geff\),
+matter coupling, Einstein equations, \(\EqSrc\), \(\RetainH\),
+\(\GenH\), finite-variation robustness, benchmark promotion, Gate
+Chair review, candidate reconstruction, completed derivation, or
+global theory rejection is supplied.
+\end{abstract}
+
+\section{Controlled Input}
+
+The retained exact source tuple is
+\[
+    S_X=(U_X,[n]_{U_X},\Phi_{U_X},T^n,T^\Phi),
+\]
+where \(U_X=\{a_0,a_1,a_2\}\), \([n]_{U_X}\) is an exact
+normal-orbit token, \(\Phi_{U_X}=\ReadLC(X_{\mathrm{loc}})|_{U_X}\),
+and \(T^n,T^\Phi\) are exact-branch certificate transports.
+
+The previous obstruction packets isolated three missing response
+burdens:
+\[
+    \text{sign orientation},\qquad
+    \text{positive scale normalization},\qquad
+    \text{response-token semantics}.
+\]
+They also established that treating all three as irrelevant by quotient
+does not preserve a nondegenerate response burden.
+
+\section{Selector Primitive Contract}
+
+\begin{definition}[Draft selector primitive]
+A draft/control source-side selector primitive for the current packet
+is a partial operator
+\[
+    \SelResp(S_X)
+    =
+    \bigl(o^R_X,\nu^R_X,\kappa^R_X\bigr),
+\]
+where \(o^R_X\) is a source response-orientation selector,
+\(\nu^R_X\) is a positive source response-normalization selector, and
+\(\kappa^R_X\) is a source response-token semantics selector. The
+operator is not canonical ontology and is not adopted by this packet.
+\end{definition}
+
+\begin{definition}[Admissibility conditions]
+The selector primitive is admissible only if all of the following hold.
+\begin{enumerate}
+    \item \textbf{Source-domain condition.} Each component is typed
+    only over \(U_X,[n]_{U_X},\Phi_{U_X},T^n,T^\Phi\) and registered
+    source-control data. No target metric, target observer protocol,
+    matter model, benchmark status, or role authority may enter.
+    \item \textbf{Sign-orientation condition.} The component \(o^R_X\)
+    distinguishes the sign-reversal representatives isolated in the
+    source-response obstruction theorem.
+    \item \textbf{Scale-normalization condition.} The component
+    \(\nu^R_X\) selects a positive normalization convention from
+    source-side data and not from a target unit, detector calibration,
+    or fitted metric scale.
+    \item \textbf{Token-semantics condition.} The component
+    \(\kappa^R_X\) gives response-token identity criteria without
+    importing matter coupling, stress-energy response, detector
+    classes, or empirical labels.
+    \item \textbf{Exact-transport covariance condition.} The selected
+    triple commutes with \(T^n\) and \(T^\Phi\) on the exact branch.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Selector-instantiated response representative]
+Given an admissible \(\SelResp(S_X)\), a selector-instantiated
+response representative is a proposed family
+\[
+    R_{\SelResp}
+    =
+    \{(\sigma_{ij},w_{ij},\rho_{ij})\}_{(i,j)\in P}
+\]
+whose sign, scale, and token components are fixed by
+\((o^R_X,\nu^R_X,\kappa^R_X)\). This is syntax for a future source
+burden only; it is not a metric-response law.
+\end{definition}
+
+\section{Selector-Contract Theorem}
+
+\begin{lemma}[Selector components break the quotient action]
+If \(\SelResp(S_X)\) satisfies the admissibility conditions, then the
+sign reversal, positive rescaling, and response-token relabeling action
+from the prior quotient packet is no longer a free source-invisible
+action on selector-instantiated representatives.
+\end{lemma}
+
+\begin{proof}
+The prior action was source-invisible because the retained tuple
+contained no field that selected sign, scale, or response-token
+meaning. Under the present hypothesis, \(o^R_X\) selects sign
+orientation, \(\nu^R_X\) selects positive normalization, and
+\(\kappa^R_X\) selects response-token semantics from source-side
+structure. A sign reversal changes the selected \(o^R_X\) class, a
+positive rescaling changes the selected \(\nu^R_X\) normalization, and
+a token relabeling changes the selected \(\kappa^R_X\) identity
+criteria unless it is an allowed source-token automorphism preserving
+\(\kappa^R_X\). Therefore those transformations are no longer free
+symmetries of selector-instantiated response representatives.
+\end{proof}
+
+\begin{theorem}[Conditional selector-contract discharge]
+If an admissible \(\SelResp(S_X)\) is supplied as source-only
+structure, then the specific quotient-burden obstruction proved in
+\texttt{RT-20260614-045} is discharged at the representative-choice
+level. The discharge is conditional and does not by itself supply
+\(\RespLC\), \(\Msrc\), \(\geff\), matter coupling, or Einstein
+equations.
+\end{theorem}
+
+\begin{proof}
+The quotient-burden obstruction stated that the quotient \(R/G\)
+removed the sign, scale, and response-token distinctions needed for a
+nondegenerate response burden. The selector primitive, if admissible,
+does not quotient those distinctions away. It supplies source-side
+components that choose representatives before any later response law is
+attempted. By the lemma, the prior \(G\)-action is not free on
+selector-instantiated representatives. Hence the exact failure mode of
+the quotient packet is avoided.
+
+This proves only a conditional representative-choice result. The
+argument has not constructed a source-to-metric law, a matter-response
+hook, an effective Lorentzian metric, or field equations. Those burdens
+remain outside the theorem.
+\end{proof}
+
+\section{Non-Instantiation From Current Tuple}
+
+\begin{theorem}[Current retained tuple does not instantiate the selector]
+The tuple
+\[
+    S_X=(U_X,[n]_{U_X},\Phi_{U_X},T^n,T^\Phi)
+\]
+does not by itself supply \(o^R_X\), \(\nu^R_X\), or \(\kappa^R_X\).
+Therefore this packet defines a selector contract but does not
+instantiate \(\SelResp\).
+\end{theorem}
+
+\begin{proof}
+The tuple contains a finite source label set, an exact normal-orbit
+token, a restricted readout syntax, and exact-branch transports. It
+does not contain a signed interval form, orientation convention,
+positive response unit, response calibration, matter-response channel,
+detector class, stress-energy response, or source-token semantics map.
+Those are exactly the fields required by the three selector components.
+Therefore the selector components are not present in \(S_X\) alone.
+\end{proof}
+
+\begin{corollary}[Next audit burden]
+The next bounded packet should test whether the selector contract
+smuggles a target metric, target observer protocol, matter coupling,
+benchmark evidence, or authority label into source language. Until
+that audit is complete, the selector remains draft/control.
+\end{corollary}
+
+\section{New Mathematical Payload}
+
+\begin{payload}[Theorem with hypotheses and proof]
+The conditional selector-contract theorem proves that an admissible
+source-only selector triple would remove the specific representative
+choice failure produced by the prior quotient-burden obstruction.
+\end{payload}
+
+\begin{payload}[Countermodel or obstruction]
+The non-instantiation theorem proves that the currently retained tuple
+does not contain the required selector components. Thus the packet does
+not supply a concrete \(\RespLC\) witness.
+\end{payload}
+
+\section{Distance-to-GR Status}
+
+\begin{distancestatus}[Matrix]
+\begin{center}
+\small
+\begin{tabular}{p{0.32\linewidth}p{0.58\linewidth}}
+\hline
+\textbf{Burden} & \textbf{Status} \\
+\hline
+Source ontology primitives & Not adopted; a draft/control selector contract is named but no canonical ontology edit is made. \\
+Source equivalence \(\EqSrc\) & General \(\EqSrc\) remains undischarged; the result concerns only one response-selector burden. \\
+Finite variation robustness & Not discharged; the selector contract has not been tested under relaxed boundary transport nonmatching composition omitted inverse histories quotient readout coordinates or negative-witness coverage. \\
+Concrete negative witnesses & A non-instantiation obstruction is supplied for the retained tuple. \\
+Observer normal/readout orbit & Retained as exact source syntax; it still does not itself select sign scale or token semantics. \\
+Effective Lorentzian metric & Not supplied; \(\Msrc\) and \(\geff\) remain blocked. \\
+Universal matter coupling & Not supplied; token semantics are named only as a selector burden. \\
+Einstein equations & Not supplied. \\
+Benchmark promotion & Blocked. \\
+Gate Chair review & Blocked and human-gated. \\
+Current line hard-fail & Not globally hard-failed; the line is sharpened to selector audit, concrete selector witness, or scoped no-go. \\
+\hline
+\end{tabular}
+\end{center}
+\end{distancestatus}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}.
+The child outputs are:
+\begin{itemize}
+    \item \texttt{child\_phys\_math\_resp\_lc\_source\_side\_selector\_primitive\_packet.yaml};
+    \item \texttt{child\_phys\_phil\_resp\_lc\_source\_side\_selector\_primitive\_packet.yaml}.
+\end{itemize}
+The conflict review is
+\texttt{parent\_conflict\_review\_resp\_lc\_source\_side\_selector\_primitive\_packet.yaml}
+and found no blocking conflict. The fusion notes are
+\texttt{parent\_fusion\_notes\_resp\_lc\_source\_side\_selector\_primitive\_packet.md}.
+
+\section{Control Boundary}
+
+\begin{controlrule}[Blocked overread]
+This packet may be cited only as a draft/control selector contract and
+non-instantiation result. It may not be cited as canonical
+\(\RespLC\), \(\Msrc\), \(\geff\), universal matter coupling, Einstein
+equations, \(\EqSrc\), \(\RetainH\), \(\GenH\), finite-variation
+robustness, benchmark promotion, Gate Chair review, candidate
+reconstruction, completed derivation, or global theory rejection.
+\end{controlrule}
+
+\end{document}

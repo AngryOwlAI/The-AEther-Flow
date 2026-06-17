@@ -1,0 +1,28 @@
+artifact_id: "child-phys-math-resp-lc-source-side-selector-primitive-packet"
+task_id: "RT-20260614-046"
+job_id: "AJ-RT-20260614-046-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_boundary: "draft/control selector contract only; no Resp_lc adoption M_src g_eff matter coupling Einstein equations benchmark promotion Gate Chair review candidate reconstruction completed derivation or global rejection"
+mathematical_result:
+  selector_type_signature: "Sel_Resp(S_X) -> (o^R_X, nu^R_X, kappa^R_X)"
+  source_tuple: "S_X=(U_X,[n]_{U_X},Phi_{U_X},T^n,T^Phi)"
+  admissibility_conditions:
+    - "source-domain condition: selector components must be typed over U_X Phi_UX [n]_UX T^n and T^Phi only"
+    - "sign-orientation condition: o^R_X must distinguish the sign reversal representatives isolated in RT-20260614-042"
+    - "scale-normalization condition: nu^R_X must choose a positive normalization invariant under exact certificate transport"
+    - "token-semantics condition: kappa^R_X must define response-token identity without importing matter coupling or target detector semantics"
+    - "transport-covariance condition: selector output must commute with T^n and T^Phi on the exact branch"
+  theorem_candidate: "If such source-only selector components are supplied, then the quotient-burden obstruction of RT-20260614-045 is removed at the level of representative choice because sign scale and token representatives become source-selected rather than quotient-erased."
+  non_instantiation_result: "The currently retained tuple does not itself contain o^R_X nu^R_X or kappa^R_X, so the selector is a contract and not an instantiated Resp_lc witness."
+new_mathematical_payload:
+  - payload_type: "theorem_with_hypotheses_and_proof"
+    summary: "selector-contract theorem: a source-only triple satisfying orientation normalization token-semantics and transport-covariance hypotheses would choose response representatives without target import"
+  - payload_type: "countermodel_or_obstruction"
+    summary: "non-instantiation obstruction: S_X alone lacks the selector components and therefore still cannot adopt Resp_lc"
+limitations:
+  - "No concrete source object satisfying the selector contract is supplied."
+  - "No source-to-metric law is constructed."
+  - "The selector contract needs smuggling audit before any successor witness or no-go packet."
+recommended_fusion_use: "Fuse the selector-contract theorem and non-instantiation obstruction into the final TeX packet."
