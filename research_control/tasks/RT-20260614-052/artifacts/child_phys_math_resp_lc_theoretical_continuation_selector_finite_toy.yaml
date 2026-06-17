@@ -1,0 +1,21 @@
+artifact_id: "child-phys-math-resp-lc-theoretical-continuation-selector-finite-toy"
+task_id: "RT-20260614-052"
+job_id: "AJ-RT-20260614-052-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_next_packet_type: "finite_toy_metric_response_model"
+decision_basis:
+  summary: "The prior branch has exhausted the direct selector-contract path for the current tuple: source-side irrelevance hit a quotient-burden obstruction, the selector primitive remained uninstantiated, the no-go theorem was proved only under scoped hypotheses, and Refuter stress preserved that scope. A finite toy target is the next constructive packet because it asks for a bounded model with explicit finite source data, response relation, metric-response analogue, and invariance checks."
+  formal_rationale:
+    - "A repeated source_side_selector_primitive packet would restate an uninstantiated contract."
+    - "A repeated source_side_irrelevance_theorem would not address the retained selector triple burden."
+    - "A concrete_resp_lc_witness is premature until explicit response data or a toy target exists."
+    - "A source_extension_candidate may be needed later, but the finite toy target can first test whether minimal response structure can be expressed without ontology adoption."
+finite_toy_target_constraints:
+  source_set: "Finite family F_toy with two source-local cells U0 and U1 plus tagged variants X_flip X_scale and X_token built from source-local readout syntax, observer normal labels, and draft/control orientation normalization token candidates."
+  response_relation: "A partial relation R_toy from F_toy to orientation sign, positive normalization, and response-token labels that is defined only when explicit source-side toy tags are present and remains undefined for the untagged current tuple."
+  metric_response_analogue: "A finite distance-form or adjacency-weight analogue d_toy that depends on the toy response relation without claiming Lorentzian metric structure, M_src, g_eff, matter coupling, or Einstein equations."
+  invariance_checks: "Relabel U0 and U1, rename syntactic tokens, flip non-source conventions, rescale non-source labels, and verify that R_toy and d_toy depend only on explicit source-side toy tags."
+claim_boundary_preservation: "The selection is a packet target only. It does not build the finite toy model, adopt Resp_lc, supply M_src or g_eff, derive matter coupling or Einstein equations, promote a benchmark, request Gate Chair review, reconstruct a candidate, or reject the global theory."
+next_role_recommendation: "candidate-constructor@0.2.0"
