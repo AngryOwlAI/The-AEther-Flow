@@ -24,6 +24,11 @@ INSTRUCTION_START = re.compile(
     r"|^\s*State\s+(that|the|whether|why|how)\b",
     re.IGNORECASE,
 )
+SELF_REFERENCE = re.compile(
+    r"\b(this|the)\s+(page|explainer|html|github-facing markdown|source spec)\s+"
+    r"(explains|describes|catalogs|provides|shows|maps|routes|is|acts|serves)\b",
+    re.IGNORECASE,
+)
 FRONTMATTER_RE = re.compile(r"\A---\n(?P<frontmatter>.*?)\n---\n", re.DOTALL)
 TEACHING_REQUIRED_BLOCKS = {
     "plain_language_model",
@@ -90,6 +95,10 @@ def lint_html(path: Path) -> list[str]:
             warnings.append(
                 f"{path}:{block.block_id}: content appears to be an instruction, not documentation: {block.text[:120]!r}"
             )
+        elif SELF_REFERENCE.search(block.text):
+            warnings.append(
+                f"{path}:{block.block_id}: content explains the page instead of the project subject: {block.text[:120]!r}"
+            )
         elif len(words) < 80:
             warnings.append(
                 f"{path}:{block.block_id}: shallow content block ({len(words)} words); target at least 120-250 words or a structured matrix"
@@ -146,6 +155,15 @@ def lint_github_markdown(path: Path) -> list[str]:
         warnings.append(f"{path}: teaching-enabled GitHub-facing Markdown lacks a Common questions section")
     if "## Common misunderstandings" not in text:
         warnings.append(f"{path}: teaching-enabled GitHub-facing Markdown lacks misconception repair")
+    body_without_binding = re.sub(
+        r"(?ms)^## Source Binding\s+.*?(?=^## |\Z)",
+        "",
+        text,
+    )
+    if SELF_REFERENCE.search(body_without_binding):
+        warnings.append(
+            f"{path}: GitHub-facing Markdown explains the page instead of the project subject"
+        )
     return warnings
 
 def main() -> int:

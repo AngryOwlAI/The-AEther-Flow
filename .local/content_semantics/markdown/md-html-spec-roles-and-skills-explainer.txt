@@ -16,7 +16,7 @@ source_materials:
   - ".agents/roles/research_ops/director-of-research.v0.1.0.md"
   - ".agents/roles/research_ops/project-system-director.v0.1.0.md"
   - ".agents/roles/research_ops/project-control-maintainer.v0.1.0.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.8.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.9.0.md"
   - ".agents/roles/research_ops/documentation-curator.v0.7.0.md"
   - ".agents/roles/research_ops/documentation-student.v0.1.0.md"
   - ".agents/roles/research_ops/documentation-teacher.v0.1.0.md"
@@ -110,43 +110,28 @@ are not project contract authority unless mirrored into `.codex/skills/`.
 
 ## Source-Backed Summary
 
-Summary heading: `Summary of Roles and Skills`
+Summary heading: `Summary of Roles And Skills`
 
 Summary text:
 
-The roles-and-skills catalog is the active inventory of registered agent
-roles, historical role versions, task-local execution overlays, and repo-local
-skill front doors used by the project. Its function is to show which role
-contracts currently govern work, which roles are status-defined or superseded
-for audit history, which support subroles may ask or answer teaching-loop
-questions, which skills provide project-governed procedures, and which tools
-are merely operator-context aids. This matters because skills are useful only
-inside the right authority boundary: Documentation Curator v0.8.0 can maintain
-explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed
-HTML; Documentation Student and Documentation Teacher support that loop
-without writing tracked docs; Project-Control Maintainer owns control
-contracts; Validator Engineer owns deterministic checks; and physics roles
-remain separate from documentation work. The catalog fits the overall system
-by giving maintainers a readable map from registry rows to role contracts and
-skill procedures before they execute a task.
+The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by AEther-Flow. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skill availability is not project authority. Documentation Curator v0.9.0 owns subject-first explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Student and Teacher support the teaching loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; physics roles remain separate from documentation and project-system work.
 
 Summary source basis:
 
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
 - `.agents/roles/research_ops/documentation-student.v0.1.0.md`
 - `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
-- `.codex/skills/aether-teaching-explainer/SKILL.md`
-- `.codex/skills/html-visual-explainer/SKILL.md`
+
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the roles-and-skills catalog, its active-first role inventory, why skill/role boundaries matter, and which declared sources ground the summary.
-- active_role_catalog: A primary catalog of current active roles and support subroles, including Documentation Curator v0.8.0, Documentation Student, and Documentation Teacher, what each does, which authority lane it occupies, and which outputs or validators normally constrain it.
-- status_defined_roles: A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously.
-- superseded_audit_roles: An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions.
-- repo_local_skill_catalog: A grouped catalog of repo-local skills by continuation, project-system improvement, human-edit intake, memory/wiki, HTML visual explanation, teaching-loop enrichment, Mermaid rendering, PDF/TeX, ontology promotion, and design support.
-- declared_role_skill_evidence: A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, teaching-loop support roles, and task overlays rather than inferred convenience.
-- inferred_support_skills: A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills.
-- operator_context_boundary: A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records.
+- subject_summary: A source-backed summary of Roles And Skills that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`, `.agents/roles/research_ops/documentation-curator.v0.9.0.md`, `.agents/roles/research_ops/documentation-student.v0.1.0.md`.
+- active_role_catalog: A source-backed reader block on active roles that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `.agents/roles/research_ops/documentation-curator.v0.9.0.md`.
+- status_defined_roles: A source-backed reader block on status-defined roles that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `.agents/roles/physics/gate-chair.v0.1.0.md`.
+- superseded_audit_roles: A source-backed reader block on superseded roles that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `registries/ROLE_EXECUTION_REGISTRY.csv`.
+- repo_local_skill_catalog: A source-backed reader block on repo-local skills that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.codex/skills/continue-research/SKILL.md`, `.codex/skills/improve-project-system/SKILL.md`, `.codex/skills/aether-teaching-explainer/SKILL.md`.
+- declared_role_skill_evidence: A source-backed reader block on role-skill evidence that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`.
+- inferred_support_skills: A source-backed reader block on support tools that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
+- operator_context_boundary: A source-backed reader block on operator boundary that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `research_control/README.md`.

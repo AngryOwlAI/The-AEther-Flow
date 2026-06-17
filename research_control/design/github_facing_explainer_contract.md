@@ -17,6 +17,13 @@ summarize feature behavior, identify source files, and explain workflow
 boundaries. It must not define physics claims, alter control behavior, replace
 registry rows, or become independent source authority.
 
+GitHub-facing pages must be subject-first. Their main prose should describe the
+project component, workflow, role, authority boundary, or technical function
+that the page is responsible for teaching. The page should not primarily
+describe itself, its title, its renderer, its layout, its source spec, or its
+status as a GitHub-facing file. Source binding and authority warnings remain
+required, but they support the explanation rather than replacing it.
+
 The authority ladder remains:
 
 1. Registered TeX files define physics and derivational claims.
@@ -65,3 +72,8 @@ When a registered explainer spec changes, update the related GitHub-facing page
 as a reader-facing derivative. Preserve the source-spec metadata and renderer
 instructions in `markdown/html-explainer-specs/`; translate them into finished
 explanatory prose in `github-facing/`.
+
+When a GitHub-facing page has drifted into self-description, the correct
+operation is a source-backed reset: inspect the registered spec and source
+bundle, ignore the old derivative prose except as failure evidence, and write
+the page as a functional explanation of the subject.

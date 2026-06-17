@@ -1,9 +1,9 @@
 Memory System
 memory_system_map
 Memory System
-Explain the source-first memory system: canonical CSV registries, tracked generated wiki notes, local Obsidian vault, semantic extracts, SQLite index, and query surface.
+The memory system turns registered sources and registries into searchable, generated, noncanonical reading surfaces.
 Summary of Memory System
-The memory system is the repository's source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system fits the project by connecting source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving clear provenance.
+The memory system is the repository’s source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system connects source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving provenance.
 registries/MARKDOWN_SOURCE_REGISTRY.csv
 registries/HTML_EXPLAINER_REGISTRY.csv
 .codex/skills/project-memory-system/SKILL.md
@@ -13,76 +13,26 @@ Diagrams
 Workflow
 Sources
 Source-Backed Coverage
-CSV Memory Spine
-AGENTS.md
+CSV Spine
 registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-registries/PDF_DERIVATIVE_REGISTRY.csv
-A completed explanation of format-specific CSV registries as canonical memory rows for identity, routing, provenance, generated outputs, and agent-queryable relationships. In reader-facing terms, this section identifies the subject of
-Memory System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
+registries/FILE_OBJECT_REGISTRY.csv
+The CSV registries are the memory spine. They record object IDs, paths, formats, roles, authority status, owners, source hashes, generated outputs, related sources, validation status, and timestamps. This structure lets agents query the project without guessing from filenames alone. The spine is canonical for provenance and generated-output tracking, but it does not replace the underlying canonical source where a physics or documentation claim actually lives. When an object is hard to find, the registry row should answer what it is, where it lives, what generated outputs depend on it, and when it was last validated.
+Tracked Wiki
+registries/WIKI_ARTIFACT_REGISTRY.csv
+.codex/skills/markdown-wiki/SKILL.md
+The tracked wiki under `wiki/` is generated from registry rows. It gives repository-visible notes and indexes that help readers browse object relationships. Because the notes are generated, stale or incorrect wiki prose is repaired by updating sources or registry rows and rerunning bootstrap. The wiki is valuable for navigation and review, but it cannot independently define role authority, science status, or documentation contracts. That makes the wiki a useful table of contents for the memory system, especially when an agent needs to discover related objects before opening the canonical source.
+Local Vault
+.codex/skills/obsidian-wiki/SKILL.md
+registries/OBSIDIAN_VAULT_REGISTRY.csv
+The local Obsidian vault is a machine-local reading surface generated from tracked sources and registry objects. It is useful when a human wants backlinks, graph navigation, or a richer note interface, but it remains local retrieval. Its contents should be understood as a synchronized reader view. If the vault conflicts with tracked state, tracked state wins and the vault should be regenerated. The correct maintenance operation is therefore synchronization from tracked sources, not local editing of vault notes to make them appear more current than the repository.
+Semantic Query
+registries/CONTENT_SEMANTIC_REGISTRY.csv
+.codex/skills/project-memory-system/SKILL.md
+The semantic and query layer extracts text, records content semantics, builds a SQLite index, and supports lookup scripts. Its purpose is retrieval: find likely source objects, related generated outputs, or evidence paths quickly. It should return leads, not final authority. A query result becomes trustworthy only when the operator follows it back to the registered source, registry row, task artifact, or validation receipt. The layer improves recall, but the inspection burden remains with the operator: follow the result, open the source, and verify the relevant registry status.
+Memory Boundary
 AGENTS.md
-,
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-,
-registries/TEX_SOURCE_REGISTRY.csv
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Tracked Generated Wiki
-README.md
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-A source-backed section explaining tracked generated wiki notes and indexes as repo-visible derivatives that summarize registered sources without becoming independent authority. In reader-facing terms, this section identifies the subject of
-Memory System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Local Obsidian Vault
-README.md
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-A documentation section for `.local/obsidian/aether-flow-wiki/` as a local reader vault and operator aid that can be regenerated and must not override tracked source state. In reader-facing terms, this section identifies the subject of
-Memory System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Semantic Query Layer
-README.md
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-A completed explanation of `.local/content_semantics/`, `.local/memory_index/memory.sqlite`, and query scripts as retrieval surfaces that point back to canonical registry objects. In reader-facing terms, this section identifies the subject of
-Memory System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Authority Boundaries
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-registries/PDF_DERIVATIVE_REGISTRY.csv
-A visible boundary section explaining source-first authority, generated-output refresh, stale derivative risks, validation checks, and why competing retrieval views remain subordinate to the same canonical spine. In reader-facing terms, this section identifies the subject of
-Memory System
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-,
-registries/TEX_SOURCE_REGISTRY.csv
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+registries/FILE_OBJECT_REGISTRY.csv
+The memory boundary keeps many views inside one source-first system. Registries, wiki notes, vault files, semantic extracts, and query indexes can disagree temporarily when sources change. Bootstrap and validators restore alignment by refreshing hashes, generated outputs, relationships, and metadata. The correct response to stale memory is regeneration, not treating a convenient cached view as stronger than tracked authority. This prevents parallel memory systems from forming. There may be many reading views, but there is one source-first provenance model behind them.
 Memory Surface Map
 +
 -
@@ -174,19 +124,19 @@ Allowed outputs are produced inside the task boundary.
 8. completion YAML
 The completion records verdict, command results, and validation status.
 All Source Materials
-Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
-README.md
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-registries/PDF_DERIVATIVE_REGISTRY.csv
-registries/HTML_EXPLAINER_REGISTRY.csv
-registries/WIKI_ARTIFACT_REGISTRY.csv
-registries/CONTENT_SEMANTIC_REGISTRY.csv
-registries/FILE_OBJECT_REGISTRY.csv
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/markdown-wiki/SKILL.md
-.codex/skills/tex-wiki/SKILL.md
-.codex/skills/pdf-derivative-build/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-.codex/skills/obsidian-wiki/SKILL.md
+Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
+EADME.md
+GENTS.md
+egistries/MARKDOWN_SOURCE_REGISTRY.csv
+egistries/TEX_SOURCE_REGISTRY.csv
+egistries/PDF_DERIVATIVE_REGISTRY.csv
+egistries/HTML_EXPLAINER_REGISTRY.csv
+egistries/WIKI_ARTIFACT_REGISTRY.csv
+egistries/CONTENT_SEMANTIC_REGISTRY.csv
+egistries/FILE_OBJECT_REGISTRY.csv
+codex/skills/project-memory-system/SKILL.md
+codex/skills/markdown-wiki/SKILL.md
+codex/skills/tex-wiki/SKILL.md
+codex/skills/pdf-derivative-build/SKILL.md
+codex/skills/html-visual-explainer/SKILL.md
+codex/skills/obsidian-wiki/SKILL.md

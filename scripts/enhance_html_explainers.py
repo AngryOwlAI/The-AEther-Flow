@@ -342,7 +342,7 @@ ENHANCEMENT_JS = f"""
     toolbar.className = 'reader-toolbar';
     toolbar.setAttribute('aria-label', 'Explainer search');
     toolbar.innerHTML = `
-      <input type="search" placeholder="Search this explainer" aria-label="Search this explainer">
+      <input type="search" placeholder="Search content" aria-label="Search content">
     `;
     if (nav) nav.insertAdjacentElement('afterend', toolbar);
 

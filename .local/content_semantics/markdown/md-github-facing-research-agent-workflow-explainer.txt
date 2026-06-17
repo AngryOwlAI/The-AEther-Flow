@@ -1,6 +1,6 @@
 # Research System
 
-This page explains the operational spine that turns a question, handoff, or project-improvement signal into one bounded and auditable AgentJob.
+The research system turns questions, handoffs, and improvement signals into bounded agent work with explicit authority and receipts.
 
 ## Source Binding
 
@@ -10,31 +10,27 @@ This page explains the operational spine that turns a question, handoff, or proj
 
 ## Source-Backed Summary
 
-The research system is the governed workflow that turns a question, continuation state, or project-improvement signal into bounded agent work with explicit roles, decisions, registries, and validation. Its functionality is to separate physics continuation from project-system maintenance, resolve tracked state before acting, assign one bounded AgentJob, constrain that job with role authority and allowlists, and preserve completion evidence for the next handoff. When a Director decision selects optional parent-child parallel synthesis, the parent and child execution units remain inside that same AgentJob and must produce one fused output rather than separate authority. This matters because the repository is not an informal chat log or autonomous proof engine; it is a controlled research program where claims, refutations, repairs, generated derivatives, and negative results must remain auditable. The workflow fits the larger project by making research progress reproducible without allowing workflow completion to stand in for scientific acceptance.
+The research system is the governed workflow that turns a question, continuation state, or project-improvement signal into bounded agent work with explicit roles, decisions, registries, artifacts, validation, completion records, and handoffs. Its function is to separate physics continuation from project-system maintenance, resolve tracked state before acting, assign one bounded AgentJob, constrain that job with role authority and allowlists, and preserve completion evidence for the next handoff. Optional parent-child synthesis can add analytical perspectives inside one AgentJob, but it cannot create new authority, extra jobs, or independent outputs. The system matters because AEther-Flow is not an informal chat log or autonomous proof engine. It is a controlled research program where progress, obstructions, generated derivatives, and negative results must remain reproducible and auditable.
 
 ## What This Feature Does
 
-The research system coordinates tracked state, Director decisions, role contracts, AgentJobs, optional internal parent-child synthesis, validators, completions, handoffs, and registries. It is a reproducibility harness for theoretical work, not an autonomous proof engine.
+The research system is the operating workflow for bounded physics continuation and project-system improvement.
 
 ## Why The Project Needs It
 
-The repository mixes speculative physics, exact benchmark discipline, generated documents, AI-agent workflow, and local memory. Without a lifecycle, a completed task could be mistaken for accepted science, or local scratch could override tracked state.
+The project needs it because speculative research, agent work, documentation, and validation must remain traceable instead of depending on unrecorded conversation state.
 
 ## How It Works
 
-The concrete lifecycle is:
-
-`research_control/program_state.yaml` -> latest `handoff-*` -> Director decision -> `00_TASK.yaml` -> `jobs/AJ-*.yaml` -> `roles/*.yaml` -> allowed artifacts -> validators -> completion YAML -> next handoff -> registries.
-
-`continue-research` handles physics continuation from tracked state. `improve-project-system` handles roles, validators, memory tooling, documentation, generated-doc pipelines, and operational reliability. In both lanes, one bounded AgentJob is the unit of accountable work. Optional `parent_child_parallel_synthesis` may split analysis into parent and child execution units only inside that job; it does not create child AgentJobs, new role authority, or permission expansion.
+Tracked state leads to a Director decision, one AgentJob, a task-local role record, allowed outputs, validators, completion evidence, registries, and the next handoff.
 
 ## What It Is Not
 
-It is not proof acceptance, not permission to edit outside an allowlist, not a bypass around human gates, and not a reason to treat generated outputs as authority.
+It is not autonomous proof, not claim promotion, not permission to write outside an allowlist, and not a substitute for human-gated decisions.
 
 ## Diagram Reading Guide
 
-The loop diagram shows how state, decisions, jobs, optional internal synthesis, validation, completion, handoff, and registries reinforce each other. The lifecycle state diagram shows that a blocked job is still a valid research-control outcome when it preserves the obstruction.
+The loop diagram shows state, Director, AgentJob, role, outputs, validators, completion, handoff, and registries. The lifecycle diagram shows how one job moves from proposal through execution to completion or blocked handoff.
 
 <!-- mermaid-diagram-id: research-system-loop -->
 ```mermaid
@@ -69,16 +65,16 @@ stateDiagram-v2
 
 ## Source Authority
 
-The workflow is grounded in `research_control/AGENTS.md`, `research_control/README.md`, the continue/improve skills, the AgentJob and execution-role schemas, and the AgentJob, Director decision, role execution, and research task registries.
+Authority comes from research-control guidance, AgentJob and execution-role schemas, task records, and registries.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -87,17 +83,16 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Inspect `research_control/program_state.yaml` and the latest handoff before continuing research.
-- Inspect the owning AgentJob before writing files.
-- Read role routing when authority class is unclear.
-- Read claim gates before strengthening scientific language.
+- Read role routing before selecting an agent role.
+- Read research-control system before changing project machinery.
+- Read claim gates before interpreting scientific status.
 
 ## All Source Materials
 

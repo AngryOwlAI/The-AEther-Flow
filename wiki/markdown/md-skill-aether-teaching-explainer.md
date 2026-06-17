@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `skill_contract`
 - Authority status: `project_control`
 - Owner skill: `aether-teaching-explainer`
-- Source hash: `31f23e303b918e24db696f1ce1a62769fc346147ff850d123048d4c4f4134624`
+- Source hash: `3dba30ad57e2733054a69a0b79cf1fc3392779e0ea0a85679e2a6c7a981f979b`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-17T17:47:33Z`
+- Last validated at: `2026-06-17T21:11:59Z`

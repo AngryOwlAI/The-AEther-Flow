@@ -1,6 +1,6 @@
 # Claim Gates
 
-This page explains how the project prevents ontology framing, exact-GR benchmark adoption, candidate derivation work, workflow completion, and accepted science claims from being confused.
+Claim gates keep ontology, candidate work, workflow completion, refutation, and accepted science in separate states.
 
 ## Source Binding
 
@@ -10,37 +10,27 @@ This page explains how the project prevents ontology framing, exact-GR benchmark
 
 ## Source-Backed Summary
 
-Claim gates are the project's control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into a stronger accepted status. Their role is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because the explainer pages and workflow artifacts can make candidate ideas look more settled than they are; a visual explanation, completed task, or preserved repair packet cannot by itself authorize science claims or weaken unresolved derivation burdens. Within the project, claim gates protect both positive progress and negative results by preserving why a route is accepted, blocked, refuted, or still conjectural.
+Claim gates are the project’s control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into stronger accepted status. Their function is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because polished explainers, completed tasks, and preserved repair packets can make candidate ideas look more settled than they are. A visual explanation, validator pass, or completed AgentJob cannot authorize science claims by itself. Claim gates also protect negative results by preserving why a route is blocked, refuted, underdetermined, or still conjectural.
 
 ## What This Feature Does
 
-Claim gates define the status ladder from ontology framing through benchmark adoption, candidate derivation, audit, repair, refutation, blocked promotion, negative result, and accepted claim.
+Claim gates define the allowed status transitions for physics statements and research outcomes.
 
 ## Why The Project Needs It
 
-Speculative physics work can sound complete before it is mathematically established. Claim gates protect the project by requiring source evidence, boundary rows, authorized review, and negative-result preservation before a statement can be strengthened.
+The project needs them because speculative ontology, exact-GR benchmark use, candidate derivations, repairs, and refutations can otherwise blur into unsupported acceptance.
 
 ## How It Works
 
-Status ladder:
-
-| Status | May say | Must not say |
-| --- | --- | --- |
-| Ontology framing | conceptual vocabulary guides interpretation | the substrate is established physics |
-| Benchmark adoption | ordinary exact GR is the observable benchmark | GR has been derived from the substrate |
-| Candidate derivation | a bounded construction is proposed | promotion is automatic |
-| Audit or repair | defects are being checked or fixed | validation equals acceptance |
-| Refutation or blocked promotion | an obstruction or gate failure is preserved | the failure disappears because a task closed |
-| Negative result | the route should not be replayed blindly | global theory rejection unless authorized |
-| Accepted claim | a gate-authorized claim may be cited | authority beyond the recorded scope |
+They bind claims to source evidence, role authority, registry rows, gate review, validation receipts, and preserved negative-result records.
 
 ## What It Is Not
 
-It is not a validator-only process, not a visual badge, not a way for generated explainers to promote claims, and not a replacement for Gate Chair or human-gated authority when required.
+They are not ordinary formatting checks, not proof by completion, and not a way for generated pages or agents to promote science claims.
 
 ## Diagram Reading Guide
 
-The state diagram distinguishes candidate, audit, repair, refutation, gate review, accepted, blocked, and negative-result states. The preservation loop shows why a failed route becomes memory rather than being erased.
+The state machine shows how framing, candidate, audit, repair, refutation, blocked, accepted, and negative-result states differ. The preservation loop shows why failed routes remain useful memory.
 
 <!-- mermaid-diagram-id: claim-gate-state-machine -->
 ```mermaid
@@ -74,16 +64,16 @@ flowchart TD
 
 ## Source Authority
 
-The claim-boundary registry, research-control README, TeX registry, research task registry, and Gate Chair role contract provide the evidence. This page summarizes their function without changing claim status.
+Authority comes from claim-boundary rows, research-control guidance, TeX registry evidence, and the Gate Chair role contract when human-gated review is authorized.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -92,17 +82,16 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Read this page before using words such as derived, accepted, blocked, or refuted.
-- Inspect `registries/CLAIM_BOUNDARY_REGISTRY.csv` for task-specific boundaries.
-- Inspect registered TeX before citing scientific status.
-- Preserve negative results rather than deleting failed routes.
+- Read the ontology drilldown to understand what is being gated.
+- Read research system to see how task artifacts are preserved.
+- Inspect claim-boundary registry rows before repeating a derivation-status phrase.
 
 ## All Source Materials
 

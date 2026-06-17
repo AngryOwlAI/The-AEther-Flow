@@ -1,6 +1,6 @@
 # Source Authority
 
-This page is the law-of-the-land guide for deciding which files define project truth and which files are generated aids.
+Source authority decides which files can define project truth and which surfaces are generated aids.
 
 ## Source Binding
 
@@ -10,38 +10,27 @@ This page is the law-of-the-land guide for deciding which files define project t
 
 ## Source-Backed Summary
 
-Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and `.local` caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not make them independent authority. The authority model fits the project by preserving scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repo that intentionally generates many human-facing derivatives.
+Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and `.local` caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not create independent authority. The model preserves scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repository that intentionally generates many human-facing derivatives.
 
 ## What This Feature Does
 
-Source authority ranks registered TeX, registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local retrieval surfaces, and scratch caches by what each file type may support.
+Source authority ranks repository surfaces by the kind of truth they may define.
 
 ## Why The Project Needs It
 
-The easiest surface to read is often not the authoritative one. A polished HTML page, wiki note, PDF, or local Obsidian note can be useful while still being derivative. The project needs this distinction to keep scientific claims and control behavior reproducible.
+The project needs it because generated outputs are often easier to read than canonical sources but cannot override them.
 
 ## How It Works
 
-Authority matrix:
-
-| Lane | Primary use | Authority status | Update rule |
-| --- | --- | --- | --- |
-| `.tex` | physics and derivational claims | canonical when registered | edit source, register, validate |
-| `.csv` registries | routing, provenance, generated-output tracking | canonical for registry facts | update rows through bounded transactions |
-| registered `.md` | README, guidance, source specs, design notes | canonical for its lane | edit source before derivatives |
-| `github-facing/*.md` | public reader orientation | generated noncanonical | derive from matching source spec |
-| `html/*.html` | human visual explanation | generated noncanonical | regenerate from registered spec |
-| `wiki/` | navigation and metadata notes | generated noncanonical | regenerate through bootstrap |
-| PDFs | human reading from TeX | generated derivative | rebuild from TeX |
-| `.local/` | scratch, cache, retrieval | local nonauthority | never override tracked state |
+Edit registered sources and registries first, regenerate derivatives, refresh hashes and metadata, and run validation before relying on the result.
 
 ## What It Is Not
 
-It is not a convenience ranking, not an invitation to edit generated derivatives by hand, not a way to cite a wiki note as physics authority, and not a permission expansion for local tools.
+It is not a ban on generated outputs, not a claim that retrieval is useless, and not permission for a readable derivative to replace source authority.
 
 ## Diagram Reading Guide
 
-The authority ladder diagram moves from registered TeX and registries to Markdown and generated derivatives. The generation-flow diagram shows that arrows mean provenance and regeneration, not promotion of derivative authority.
+The ladder diagram shows authority descending from TeX and registries into Markdown and generated derivatives. The generation flow shows source edit, registry row, bootstrap, derivative outputs, metadata, and validation.
 
 <!-- mermaid-diagram-id: source-authority-ladder -->
 ```mermaid
@@ -73,16 +62,16 @@ flowchart TD
 
 ## Source Authority
 
-Root agent guidance, the project-memory-system skill, HTML explainer registry, Markdown registry, wiki registry, PDF registry, and file object registry ground this page.
+Authority comes from AGENTS, project-memory-system, and the format registries that record source and generated-output relationships.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -91,17 +80,16 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Inspect source and registry rows before changing project knowledge.
-- Regenerate derivatives after source edits.
-- Use documentation-impact receipts when project-system machinery changes.
-- Use GitHub-facing pages for orientation, not citation authority.
+- Inspect the relevant registry row before editing.
+- Regenerate derivatives after source changes.
+- Use memory-system docs for retrieval mechanics.
 
 ## All Source Materials
 

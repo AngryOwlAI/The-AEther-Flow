@@ -1,6 +1,6 @@
 # Project Overview
 
-This page is the GitHub-readable atlas for the Æther-Flow project. It maps the physics research lane, the AI research-agent lane, and the source-authority boundary before a reader opens detailed specs, registries, or task records.
+AEther-Flow is a dual research program: one lane tests a speculative Æther-flow interpretation against ordinary exact general relativity, and the other lane builds the agent-control machinery that keeps that research auditable.
 
 ## Source Binding
 
@@ -10,36 +10,39 @@ This page is the GitHub-readable atlas for the Æther-Flow project. It maps the 
 
 ## Source-Backed Summary
 
-The project overview is the atlas for the Æther-Flow repository's human-readable explainer set. Its function is to give readers a controlled entry point into the two linked missions: preserving an exact-GR benchmark for the physics program and maintaining a governed research-agent system for theoretical work. Rather than acting as a source of new claims, the overview routes readers to the ontology, research workflow, control system, role-routing, claim-gate, source-authority, role-and-skill, memory-system, and technical-requirements drilldowns. It matters because the project contains persuasive generated pages, registries, role contracts, and research-control records that can look equally authoritative to a newcomer. The atlas clarifies where explanation ends and source authority begins, so readers can inspect the right Markdown specs, registries, README guidance, or control documents before relying on a statement.
+AEther-Flow is organized around two coupled systems. The physics system keeps ordinary exact general relativity as the observable benchmark while treating any first-principles derivation from Æther or Æther-flow substrate structure as open until a gated source-side derivation succeeds. The AI research-agent system supplies the operating discipline: tracked state, Director decisions, bounded AgentJobs, role contracts, validators, registries, handoffs, and generated explanatory surfaces. The project needs both systems because speculative physics can drift into unsupported certainty unless every proposal, refutation, repair, and negative result remains source-bound and auditable. The overview functions as the entry map for that structure: physics terms route to ontology and claim gates; workflow questions route to research system, role routing, and research control; authority questions route to source authority, roles and skills, memory, and technical requirements.
 
 ## What This Feature Does
 
-The overview explains the repository as two linked programs: a physics program that preserves ordinary exact general relativity as the observable benchmark while the first-principles Æther-flow derivation remains open, and an AI research-agent program that makes theoretical work bounded, inspectable, and validator-backed.
+AEther-Flow combines a speculative physics program with a governed AI research-agent workflow. The physics lane asks whether an Æther-flow substrate can recover exact-GR observables without smuggling in the target. The agent lane makes every proposal, audit, repair, refutation, documentation update, and generated derivative traceable through roles, registries, validators, and task records.
 
 ## Why The Project Needs It
 
-A newcomer sees README prose, TeX, registries, source specs, generated HTML, wiki notes, and local retrieval surfaces. The overview prevents those surfaces from being read as equal authority. It gives a ten-minute path: start here, read ontology vocabulary, inspect claim gates before believing derivation language, read source authority before citing generated outputs, then read the research system before contributing.
+The project needs a front-door model because the repository deliberately contains polished explanations, generated artifacts, source specs, registries, and unfinished research artifacts. Without a two-lane map, a reader can mistake explanation for proof, generated output for authority, or workflow completion for scientific acceptance.
 
 ## How It Works
 
-The atlas routes by reader need rather than by directory order.
+Start with the physics lane for ontology, benchmark status, derivation burden, and claim gates. Move to the agent lane for Director decisions, AgentJobs, role routing, validators, documentation impact, memory, and technical operation. Use source authority to decide which files can support a claim before relying on any derived surface.
 
-| Reader need | Start here | Then inspect |
-| --- | --- | --- |
-| Understand the idea | Project overview and ontology | `ontology/aether-and-aether-flow.md`, claim boundaries |
-| Understand the workflow | Research system and role routing | `research_control/`, AgentJob and role registries |
-| Understand authority | Source authority and memory system | format registries, generated-output rows |
-| Run the system | Technical requirements | README commands, validators, bootstrap scripts |
+## Common questions
 
-The overview should not be used as proof text. It is a controlled map to source files and sibling explainers.
+- What are the two main lanes? The physics lane and the AI research-agent lane.
+- What is accepted today? Ordinary exact GR is the observable benchmark; the substrate derivation remains open.
+- Why so much control machinery? It prevents documentation, workflow, or generated output from becoming scientific authority.
+
+## Common misunderstandings
+
+- A generated explanation is not a proof.
+- A completed AgentJob is not a Gate Chair verdict.
+- A memory search result is not stronger than the source row it points to.
 
 ## What It Is Not
 
-It is not a physics proof, not a claim-promotion mechanism, not a replacement for TeX or registries, and not a control decision. It may summarize the open derivation burden; it may not close it.
+It is not a completed GR derivation, not a claim-promotion mechanism, not a replacement for registries or source files, and not a license to treat generated explainers as authority.
 
 ## Diagram Reading Guide
 
-The first diagram is a hub map: arrows mean navigation from the atlas to drilldowns, not authority promotion. The second diagram is a two-track map: the physics track and the AI research-agent track both support the same disciplined research objective, but neither diagram says the substrate derivation has been completed.
+The hub diagram shows navigation among drilldowns. The dual-track diagram shows the physics and AI research-agent lanes converging on a controlled derive-or-hard-fail objective; it does not assert that the substrate derivation has succeeded.
 
 <!-- mermaid-diagram-id: research-atlas-hub -->
 ```mermaid
@@ -83,16 +86,16 @@ flowchart TD
 
 ## Source Authority
 
-Canonical support comes from `README.md`, `AGENTS.md`, the ontology Markdown source, research-control guidance, claim-boundary rows, and the registered explainer specs. The GitHub page is reader-facing orientation generated from that basis.
+Authority comes from the root guidance, ontology sources, research-control guidance, and registries. Generated HTML and GitHub-facing Markdown remain orientation surfaces.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -101,17 +104,17 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Read `github-facing/aether-flow-ontology-explainer.md` for vocabulary.
-- Read `github-facing/claim-gates-explainer.md` before accepting any derivation-status phrase.
-- Read `github-facing/source-authority-explainer.md` before citing generated artifacts.
-- Read `github-facing/research-agent-workflow-explainer.md` before making a controlled change.
+- Read the ontology drilldown for the physics vocabulary.
+- Read claim gates before accepting derivation-status language.
+- Read research system and role routing before modifying controlled work.
+- Read source authority before citing generated artifacts.
 
 ## All Source Materials
 

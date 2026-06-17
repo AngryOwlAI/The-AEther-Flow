@@ -1,6 +1,6 @@
 # Memory System
 
-This page explains the repository memory model: one source-first system with several retrieval surfaces, not competing wikis.
+The memory system turns registered sources and registries into searchable, generated, noncanonical reading surfaces.
 
 ## Source Binding
 
@@ -10,31 +10,27 @@ This page explains the repository memory model: one source-first system with sev
 
 ## Source-Backed Summary
 
-The memory system is the repository's source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system fits the project by connecting source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving clear provenance.
+The memory system is the repository’s source-first retrieval and derivative-generation layer for registered Markdown, TeX, PDFs, HTML explainers, wiki notes, semantic extracts, file objects, and local query surfaces. Its functionality is to turn canonical registries and source files into generated wiki pages, source hashes, object relationships, local Obsidian vault entries, semantic text extracts, and SQLite-backed lookup surfaces without letting any generated artifact become an independent source of claims. It matters because humans and agents need fast ways to find evidence, but retrieval convenience must not bypass the authority hierarchy. The system connects source edits to bootstrap regeneration, validation receipts, content semantics, and local reading aids while preserving provenance.
 
 ## What This Feature Does
 
-The memory system turns registered sources and registries into generated wiki notes, indexes, content semantics, file-object rows, Obsidian vault entries, SQLite query data, and local search surfaces.
+The memory system records and regenerates source-backed retrieval surfaces.
 
 ## Why The Project Needs It
 
-Humans and agents need fast retrieval, but retrieval convenience cannot authorize claims. The system preserves provenance so every generated note, semantic extract, and local view points back to canonical sources or registry rows.
+The project needs it because long-running research requires fast lookup without losing source authority.
 
 ## How It Works
 
-Memory lifecycle:
-
-`source edit or registry row` -> `bootstrap_memory_system.py` -> format registries and hashes -> generated wiki notes -> content-semantic extracts -> local Obsidian vault -> SQLite/query surface -> validation.
-
-What memory can retrieve: paths, summaries, generated notes, source hashes, object relationships, content extracts, and local query results. What memory cannot authorize: physics promotion, control decisions, role permissions, or generated-output authority.
+Source and registry edits feed bootstrap, generated wiki notes, file object rows, semantic extracts, local vault sync, SQLite indexing, and query tools.
 
 ## What It Is Not
 
-It is not a second source of truth, not a competing wiki hierarchy, not a replacement for registries, and not a reason to trust stale `.local/` content over tracked files.
+It is not competing canonical wikis, not independent claim authority, and not a way for `.local` caches to override tracked state.
 
 ## Diagram Reading Guide
 
-The surface map shows registered sources and registries feeding tracked wiki, file registry, local Obsidian, semantic extracts, SQLite, and query tools. The regeneration flow shows the order of refresh; arrows mean derivation and retrieval, not authority transfer.
+The surface map shows the CSV spine feeding tracked and local retrieval. The regeneration flow shows source edit, bootstrap, registries, wiki, semantic extraction, vault, index, query, and validation.
 
 <!-- mermaid-diagram-id: memory-surface-map -->
 ```mermaid
@@ -67,16 +63,16 @@ flowchart TD
 
 ## Source Authority
 
-The memory spine is grounded in Markdown, TeX, PDF, HTML, wiki, content-semantic, and file registries plus the project-memory, wiki, PDF, HTML, and Obsidian skills.
+Authority comes from format registries, project-memory-system, and source files; generated retrieval views remain subordinate.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -85,17 +81,16 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Run bootstrap after source or registry edits.
-- Treat wiki and Obsidian notes as generated reading aids.
-- Use source hashes and registry rows to detect stale derivatives.
-- Cite source paths, not local retrieval convenience.
+- Run bootstrap after source changes.
+- Use source authority to decide which retrieved object can support a claim.
+- Use technical requirements for setup tiers.
 
 ## All Source Materials
 

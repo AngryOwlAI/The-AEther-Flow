@@ -139,20 +139,7 @@ Summary heading: `Summary of Research System`
 
 Summary text:
 
-The research system is the governed workflow that turns a question,
-continuation state, or project-improvement signal into bounded agent work with
-explicit roles, decisions, registries, and validation. Its functionality is to
-separate physics continuation from project-system maintenance, resolve tracked
-state before acting, assign one bounded AgentJob, constrain that job with role
-authority and allowlists, and preserve completion evidence for the next
-handoff. When a Director decision selects optional parent-child parallel
-synthesis, the parent and child execution units remain inside that same
-AgentJob and must produce one fused output rather than separate authority. This
-matters because the repository is not an informal chat log or autonomous proof
-engine; it is a controlled research program where claims, refutations, repairs,
-generated derivatives, and negative results must remain auditable. The workflow
-fits the larger project by making research progress reproducible without
-allowing workflow completion to stand in for scientific acceptance.
+The research system is the governed workflow that turns a question, continuation state, or project-improvement signal into bounded agent work with explicit roles, decisions, registries, artifacts, validation, completion records, and handoffs. Its function is to separate physics continuation from project-system maintenance, resolve tracked state before acting, assign one bounded AgentJob, constrain that job with role authority and allowlists, and preserve completion evidence for the next handoff. Optional parent-child synthesis can add analytical perspectives inside one AgentJob, but it cannot create new authority, extra jobs, or independent outputs. The system matters because AEther-Flow is not an informal chat log or autonomous proof engine. It is a controlled research program where progress, obstructions, generated derivatives, and negative results must remain reproducible and auditable.
 
 Summary source basis:
 
@@ -161,15 +148,14 @@ Summary source basis:
 - `.codex/skills/continue-research/SKILL.md`
 - `registries/AGENT_JOB_REGISTRY.csv`
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
-- `.agents/schemas/AGENT_JOB_SCHEMA.md`
-- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the research-agent workflow, its lifecycle function, why bounded execution matters, and which declared control sources ground the summary.
-- state_entry: A completed lifecycle entry section covering tracked program state, latest handoffs, task files, and why local scratch context cannot override tracked control state.
-- director_decision: A source-backed account of how a Director decision selects one role, one bounded objective, claim boundaries, allowed paths, validators, and stop conditions before execution begins.
-- agentjob_lifecycle: A detailed explanation of `00_TASK.yaml`, `jobs/AJ-*.yaml`, optional `role_decomposition`, task-local role overlays, allowed writes, expected outputs, fused outputs, and why one bounded AgentJob is the unit of accountable work.
-- role_execution: A documentation section explaining registered roles, task overlays, provisional roles, parent-child analytical perspectives, inherited authority, removed or expanded permissions, expiry, and validator evidence.
-- validation_completion_handoff: A completed validation story from command execution through completion YAML, validation status, documentation impact, and next handoff without implying scientific acceptance.
-- registry_update: A source-backed section explaining how task, Director decision, AgentJob, role execution, claim boundary, Markdown, HTML, and generated-output registries preserve provenance and queryable memory.
+- subject_summary: A source-backed summary of Research System that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `research_control/AGENTS.md`, `research_control/README.md`, `.codex/skills/continue-research/SKILL.md`, `registries/AGENT_JOB_REGISTRY.csv`.
+- state_entry: A source-backed reader block on state entry that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `research_control/AGENTS.md`, `research_control/README.md`.
+- director_decision: A source-backed reader block on director decision that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/DIRECTOR_DECISION_REGISTRY.csv`, `research_control/README.md`.
+- agentjob_lifecycle: A source-backed reader block on agentjob lifecycle that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.agents/schemas/AGENT_JOB_SCHEMA.md`, `registries/AGENT_JOB_REGISTRY.csv`.
+- role_execution: A source-backed reader block on role execution that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`, `registries/ROLE_EXECUTION_REGISTRY.csv`.
+- validation_completion_handoff: A source-backed reader block on validation and handoff that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `research_control/templates/COMPLETION_TEMPLATE.yaml`, `scripts/research_control/validate_research_control.py`.
+- registry_update: A source-backed reader block on registry update that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/RESEARCH_TASK_REGISTRY.csv`, `registries/AGENT_JOB_REGISTRY.csv`, `registries/ROLE_EXECUTION_REGISTRY.csv`.

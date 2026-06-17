@@ -31,10 +31,21 @@ project-system AgentJob.
 
 Use the Student and Teacher sequentially. Round 2 depends on Round 1 answers.
 
+For revamp work, treat existing generated HTML and GitHub-facing Markdown as
+derivative evidence of what may be stale or confusing. Do not let their titles,
+section names, or old prose decide what should be taught. The Curator should
+start from the project component, its source bundle, its functionality, and the
+reader problem the explanation must solve.
+
 ## Student Contract
 
 The Student asks questions only. It may not answer, summarize, modify files,
 introduce external facts, or treat generated docs as authority.
+
+Student questions should target the project subject, not the future page. Ask
+what the subject does, why the project needs it, how it works, where confusion
+or misuse is likely, what examples and non-examples clarify it, and what
+authority boundary protects the reader.
 
 ## Teacher Contract
 
@@ -50,11 +61,20 @@ include:
 If a source does not answer a question, write `Source gap: not answered by the
 selected source bundle.`
 
+Teacher answers should answer the functional project question directly. Do not
+answer by saying what an explainer page will contain, how a renderer will lay it
+out, or what the page is called.
+
 ## Curator Synthesis
 
 Teaching packets are explanatory support only. The Curator distills them into
 finished reader-facing documentation. Do not paste raw Q&A verbatim unless that
 is the clearest format for the page.
+
+The Curator synthesis must be subject-first. The first explanatory block should
+describe the actual project component and its role in the physics research
+system or AI research-agent system. Source-binding and nonauthority warnings
+should support the explanation, not replace it.
 
 For teaching-enabled specs, include a `teaching_loop` frontmatter block and a
 `## Teaching Q&A Basis` section naming the packet path and non-authority rule.

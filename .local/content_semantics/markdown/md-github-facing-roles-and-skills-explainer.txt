@@ -1,6 +1,6 @@
 # Roles And Skills
 
-This page catalogs current roles, historical role states, repo-local skills, and the boundary between project authority and operator tools.
+Roles define who may do project work; skills define governed procedures for doing that work inside the repository.
 
 ## Source Binding
 
@@ -10,55 +10,40 @@ This page catalogs current roles, historical role states, repo-local skills, and
 
 ## Source-Backed Summary
 
-The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by the project. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skills are useful only inside the right authority boundary: Documentation Curator v0.8.0 can maintain explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Documentation Student and Documentation Teacher support that loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; and physics roles remain separate from documentation work. The catalog fits the overall system by giving maintainers a readable map from registry rows to role contracts and skill procedures before they execute a task.
+The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by AEther-Flow. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skill availability is not project authority. Documentation Curator v0.9.0 owns subject-first explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Student and Teacher support the teaching loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; physics roles remain separate from documentation and project-system work.
 
 ## What This Feature Does
 
-The catalog is active-first: active registered roles are the current operating surface, status-defined roles remain paused or human-gated, and superseded roles remain audit history. Repo-local skills are governed procedures under `.codex/skills/`.
+Roles define authority and skills define governed workflows.
 
 ## Why The Project Needs It
 
-A tool can help without owning authority. External plugins, browser automation, shell commands, and global user skills are operator context unless their contract is mirrored into this repository. The catalog prevents accidental authority from convenience.
+The project needs the catalog because available tools and actual permission are different things.
 
 ## How It Works
 
-Active role map:
-
-| Role group | Examples | Owns |
-| --- | --- | --- |
-| Routing/control | Director of Research, Project-System Director | bounded decisions and project-system routing |
-| Project maintenance | Project-Control Maintainer, Validator Engineer, Memory-System Maintainer | control contracts, checks, memory tooling |
-| Documentation | Documentation Curator v0.8.0 | explanatory Markdown, source specs, teaching packets, GitHub-facing Markdown, source-backed HTML derivatives |
-| Teaching support | Documentation Student, Documentation Teacher | lay-reader questions and source-bound answers inside a Curator job only |
-| Physics work | Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor | science drafts, candidate construction, obstruction preservation |
-| Human-gated | Gate Chair | promotion decisions only when explicitly authorized |
-
-Repo-local skills include `continue-research`, `improve-project-system`, `user-modified-project`, `project-memory-system`, `markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`, `html-visual-explainer`, `visual-explainer`, `aether-teaching-explainer`, `ontology-promotion`, `grill-me`, `grill-with-docs`, and Mermaid documentation support.
-
-Teaching-loop roles are not independent documentation writers. Student asks questions only, Teacher answers only from the Curator-selected source bundle, and the Curator distills the packet into tracked documentation while preserving source authority.
+The role registry lists active, status-defined, and superseded roles; execution-role records bind roles to tasks; repo-local skills define procedures for continuation, project-system improvement, memory, documentation, and teaching.
 
 ## What It Is Not
 
-It is not a role registration change, not a permission grant, not proof that a global tool is project authority, not a reason to reuse superseded role permissions for new work, and not authority to treat teaching packets as canonical source.
+It is not a permission grant, not a role registration shortcut, not proof that global tools are project authority, and not a reason to reuse superseded permissions.
 
 ## Diagram Reading Guide
 
-The current source spec does not declare a Mermaid diagram. Read the tables as the visual guide: active roles dominate, status-defined roles are paused or gated, superseded roles are provenance, and operator tools remain outside project authority.
-
-No Mermaid diagram is declared in the current registered source spec for this page.
+The useful structure is the active-role map, audit states, repo-local skill groups, and operator-context boundary.
 
 ## Source Authority
 
-The catalog is grounded in the agent role registry, role execution registry, Markdown source registry, execution-role schema, the active Documentation Curator v0.8.0 contract, Student and Teacher support-role contracts, the Teaching Q&A packet schema, and repo-local skill contracts.
+Authority comes from the agent role registry, execution-role registry, role contracts, schemas, and repo-local skill contracts.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -67,15 +52,14 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Check `registries/AGENT_ROLE_REGISTRY.csv` before selecting a role.
-- Check the task-local execution role before writing.
+- Check the active role version before routing a job.
 - Use repo-local skills for governed workflows.
 - Treat external tools as operator aids unless registered.
 
@@ -92,7 +76,7 @@ Do not:
 - `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
 - `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
 - `.agents/roles/research_ops/documentation-student.v0.1.0.md`
 - `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`

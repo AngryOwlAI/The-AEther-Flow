@@ -1,9 +1,9 @@
 Technical Requirements
 technical_requirements
 Technical Requirements
-Explain tiered technical requirements for reading, validating, regenerating memory/wiki surfaces, rendering diagram-backed HTML, using local retrieval, and refreshing PDFs.
+Technical requirements separate the tools needed to read, validate, regenerate, render, retrieve, and refresh derivatives.
 Summary of Technical Requirements
-The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The explainer fits the project by turning setup files and skill contracts into a practical dependency map for maintainers who need repeatable validation without changing dependency policy or scientific claims.
+The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The requirements map turns setup files and skill contracts into a practical dependency model for maintainers who need repeatable validation without changing dependency policy or scientific claims.
 README.md
 requirements.txt
 Makefile
@@ -12,120 +12,44 @@ Makefile
 Coverage
 Sources
 Source-Backed Coverage
-Read Inspect Tier
+Read and Inspect
 README.md
+AGENTS.md
+The minimum tier is ordinary reading and inspection: a text editor, Git, shell access, and the ability to open Markdown, CSV, YAML, HTML, and TeX sources. This tier supports understanding but not full regeneration. A reader can inspect authority, source materials, and registries without installing every optional tool. That distinction matters because missing a diagram renderer or Obsidian app should not be mistaken for a failure of the repository’s source authority. This tier is enough for source review, issue triage, and conceptual orientation, but it is not enough to claim that generated outputs are fresh.
+Python Validators
 requirements.txt
 Makefile
 .codex/skills/project-memory-system/SKILL.md
-A practical read-only tier covering browser, text editor, Git, and shell inspection as the minimum operator environment for understanding sources without regenerating artifacts. In reader-facing terms, this section identifies the subject of
-Technical Requirements
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-requirements.txt
-,
-Makefile
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Validators Memory Scripts Tier
+The Python tier is a project requirement for validators and memory scripts. The `.venv`, `requirements.txt`, Makefile targets, bootstrap script, project-control validators, research-control validators, and unit tests form the repeatable check chain. When a task changes project machinery or documentation sources, this tier verifies hashes, registries, documentation impact, teaching packets, source-spec depth, and task boundaries. It is the core operational tier for safe repository work.
+Memory Regeneration
 .codex/skills/project-memory-system/SKILL.md
-README.md
-requirements.txt
-Makefile
-A project requirement tier for Python `.venv`, `requirements.txt`, bootstrap validation, project-control scripts, research-control validators, tests, and deterministic checks. In reader-facing terms, this section identifies the subject of
-Technical Requirements
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-.codex/skills/project-memory-system/SKILL.md
-,
-README.md
-,
-requirements.txt
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Memory Regeneration Tier
-.codex/skills/project-memory-system/SKILL.md
-README.md
-requirements.txt
-Makefile
-A completed memory-refresh tier for project-memory-system scripts, `make validate-memory`, generated registries, wiki notes, content semantics, and local query smoke checks. In reader-facing terms, this section identifies the subject of
-Technical Requirements
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-.codex/skills/project-memory-system/SKILL.md
-,
-README.md
-,
-requirements.txt
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Diagram Rendering Tier
-README.md
-requirements.txt
-Makefile
-.codex/skills/project-memory-system/SKILL.md
-A source-backed diagram tier covering Node.js, npm, pinned Mermaid package, Playwright Chromium, build-time inline SVG rendering, diagram source parity, and the no-runtime-Mermaid boundary. In reader-facing terms, this section identifies the subject of
-Technical Requirements
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-requirements.txt
-,
-Makefile
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Local Retrieval Tier
-README.md
-requirements.txt
-Makefile
-.codex/skills/project-memory-system/SKILL.md
-An operator-aid tier for optional Obsidian, SQLite, local semantic extracts, browser previews, and `.local/` scratch surfaces, with clear non-authority status. In reader-facing terms, this section identifies the subject of
-Technical Requirements
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-requirements.txt
-,
-Makefile
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-PDF Refresh Tier
-README.md
-requirements.txt
-Makefile
-.codex/skills/project-memory-system/SKILL.md
-A conditional PDF tier explaining LaTeX/PDF build requirements only when TeX derivative refresh is in scope, and why PDFs remain human-reading derivatives. In reader-facing terms, this section identifies the subject of
-Technical Requirements
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-requirements.txt
-,
-Makefile
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Project Vs Operator Aid
-README.md
-requirements.txt
-Makefile
-.codex/skills/project-memory-system/SKILL.md
-Requirements divide into project validity and operator convenience. Project validity depends on tracked sources, registries, validators, and governed regeneration. Operator aids include local previews, Obsidian, browser automation, and machine-specific caches. The distinction matters because a collaborator may still review sources without every optional aid installed, while a committed project-system change must pass its required validators. The matrix below is the practical rule: if a tool affects registered sources, generated tracked outputs, or validation evidence, treat it as part of the project workflow; if it only helps a local human inspect the work, keep it out of authority claims.
-Need
-Project requirement
-Operator aid
-Validate records
-Python validators
-Editor tasks
-Read pages
-Tracked HTML
-Local live server
-Search memory
-Registries
-SQLite/Obsidian
-Review PDFs
-TeX source
-PDF viewer
-All Source Materials
-Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
-README.md
-requirements.txt
-Makefile
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/obsidian-wiki/SKILL.md
-.codex/skills/pdf-derivative-build/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
+.codex/skills/markdown-wiki/SKILL.md
+Memory regeneration uses project-memory-system scripts to refresh format registries, generated wiki notes, file object rows, content semantics, local vault entries, folder maps, and query surfaces. It is required when source or registry changes affect generated memory. The tier exists because generated retrieval is useful only when it tracks source state. A stale derivative should trigger regeneration and validation, not manual edits to the generated note.
+Diagram Rendering
 .codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
 .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
-.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package-lock.json
+Diagram-backed HTML requires the governed Mermaid rendering tier: Node.js, npm, the pinned Mermaid package, Playwright Chromium when rendering is needed, inline SVG generation at build time, and source parity checks. The project avoids runtime Mermaid imports in tracked HTML so pages remain portable and no-network. Diagram tooling is therefore a project requirement only for regenerating diagram-backed HTML, not for merely reading source Markdown.
+Local Retrieval
+.codex/skills/obsidian-wiki/SKILL.md
+.codex/skills/project-memory-system/SKILL.md
+Local retrieval tools such as Obsidian, SQLite query helpers, semantic extracts, browser previews, and `.local` scratch surfaces are operator aids. They can make review faster, especially in a large research repository, but they do not become project authority. If a local tool is missing, the repository can still be valid; if a local view is stale, regenerate it from tracked sources. The operator can use these aids for speed, then return to source files, registries, and validator output when making a project claim.
+PDF Refresh
+.codex/skills/pdf-derivative-build/SKILL.md
+registries/PDF_DERIVATIVE_REGISTRY.csv
+The PDF tier is conditional. LaTeX or a managed TeX runtime is needed when refreshing human-reading PDF derivatives from registered TeX sources. PDFs are useful for review and distribution, but the canonical scientific source remains TeX. A PDF refresh should update derivative files and registry hashes while preserving the rule that PDF convenience does not outrank source text. If the TeX source changes but the PDF does not, the PDF should be treated as stale derivative evidence until the build and registry refresh succeed.
+Requirement Boundary
+README.md
+AGENTS.md
+The boundary separates project requirements from operator conveniences. Python validators, memory bootstrap, registered renderer tooling, and required tests are project requirements when their lane is in scope. Obsidian, global Codex plugins, editor extensions, personal browser state, and local previews are operator aids unless explicitly mirrored into repository contracts. This distinction keeps setup guidance practical without letting the local machine redefine project validity. The boundary also helps troubleshoot failures: missing project requirements block validation, while missing conveniences usually only reduce ergonomics.
+All Source Materials
+Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
+EADME.md
+equirements.txt
+akefile
+codex/skills/project-memory-system/SKILL.md
+codex/skills/obsidian-wiki/SKILL.md
+codex/skills/pdf-derivative-build/SKILL.md
+codex/skills/html-visual-explainer/SKILL.md
+codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
+codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
+codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package-lock.json

@@ -64,6 +64,22 @@ class SpecDepthLintTests(unittest.TestCase):
 
         self.assertEqual([], warnings)
 
+    def test_html_self_referential_block_warns(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "html/example-explainer.html"
+            path.parent.mkdir(parents=True)
+            path.write_text(
+                '<article data-content-block="example_block">'
+                '<span data-source-path="README.md"></span>'
+                "<p>This page explains the project workflow and maps source materials.</p>"
+                "</article>",
+                encoding="utf-8",
+            )
+
+            warnings = self.depth_lint.lint_html(path)
+
+        self.assertTrue(any("project subject" in warning for warning in warnings))
+
     def test_spec_directive_block_warns(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "markdown/html-explainer-specs/example-explainer.md"
@@ -131,6 +147,26 @@ class SpecDepthLintTests(unittest.TestCase):
             warnings = self.depth_lint.lint_github_markdown(path)
 
         self.assertTrue(any("Common questions" in warning for warning in warnings))
+
+    def test_github_markdown_self_reference_warns(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "github-facing/example-explainer.md"
+            path.parent.mkdir(parents=True)
+            path.write_text(
+                "# Example\n\n"
+                "## Source Binding\n\n"
+                "- **Derived from spec:** `markdown/html-explainer-specs/example.md`\n"
+                "- **Related HTML:** `html/example.html`\n\n"
+                "## Common questions\n\n"
+                "Answered.\n\n"
+                "## Common misunderstandings\n\n"
+                "This page explains itself instead of the workflow.\n",
+                encoding="utf-8",
+            )
+
+            warnings = self.depth_lint.lint_github_markdown(path)
+
+        self.assertTrue(any("project subject" in warning for warning in warnings))
 
 
 if __name__ == "__main__":

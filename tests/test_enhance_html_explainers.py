@@ -66,7 +66,7 @@ class EnhanceHtmlExplainersTests(unittest.TestCase):
         self.assertNotIn("Claim-Aware Analysis", updated)
         self.assertNotIn("data-analysis-capsule", updated)
         self.assertNotIn("The legitimate claim is explanatory", updated)
-        self.assertIn("Search this explainer", updated)
+        self.assertIn("Search content", updated)
 
     def test_inject_refreshes_existing_reader_layer(self) -> None:
         html = f"""

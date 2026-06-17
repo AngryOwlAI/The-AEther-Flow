@@ -13,7 +13,7 @@ source_materials:
   - ".codex/skills/aether-teaching-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md"
-  - ".agents/roles/research_ops/documentation-curator.v0.8.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v0.9.0.md"
   - ".agents/roles/research_ops/documentation-student.v0.1.0.md"
   - ".agents/roles/research_ops/documentation-teacher.v0.1.0.md"
   - ".agents/schemas/AGENT_JOB_SCHEMA.md"
@@ -136,39 +136,22 @@ Summary heading: `Summary of Research-Control System`
 
 Summary text:
 
-The research-control system is the repository's governance layer for deciding
-how project-system and research-continuation work may proceed. Its function is
-to classify changes, resolve advisory routing, create or reuse one bounded
-AgentJob, enforce role and write-path boundaries, require documentation-impact
-receipts when project machinery changes, and validate that source specs,
-skills, roles, registries, claim boundaries, optional parent-child
-decomposition evidence, teaching Q&A packets, and generated derivatives remain
-aligned. It blocks PASS completions when a parent-child synthesis lacks a
-fused output or leaves a blocking conflict unresolved, and it requires
-teaching-enabled documentation to keep Student and Teacher material
-source-bound and noncanonical. It matters because the project deliberately
-combines scientific exploration with agent workflow development; without
-control records, generated HTML, GitHub-facing Markdown, teaching packets,
-validators, and role contracts could drift or be mistaken for scientific
-authority. The system fits the larger project by making improvements
-reversible, auditable, and separate from physics claim promotion.
+The research-control system is the repository’s governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, teaching Q&A packets, and generated derivatives remain aligned. It matters because AEther-Flow deliberately combines scientific exploration with agent workflow development. Without control records, generated HTML, GitHub-facing Markdown, teaching packets, validators, and role contracts could drift or be mistaken for scientific authority. The system makes improvements reversible, auditable, and separate from physics claim promotion.
 
 Summary source basis:
 
 - `AGENTS.md`
 - `research_control/README.md`
 - `.codex/skills/improve-project-system/SKILL.md`
-- `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
 - `.codex/skills/aether-teaching-explainer/SKILL.md`
-- `.agents/schemas/AGENT_JOB_SCHEMA.md`
-- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
-- `research_control/design/html_explainer_flexible_presentation_contract.md`
+
 
 ## Required Content Blocks
 
-- subject_summary: Summarize the research-control system, its safety-harness role, why validators and receipts matter, and which declared sources ground the summary.
-- classification_resolver: A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces.
-- bounded_transaction: A source-backed explanation of one bounded AgentJob, optional parent-child internal decomposition, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
-- flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, teaching-loop enrichment, depth lint, teaching-QA validation, and generated-HTML boundaries.
-- documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
-- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, teaching-QA validation, parent-child decomposition and completion checks, research-control validation, diff checks, tests, and advisory depth lint.
+- subject_summary: A source-backed summary of Research-Control System that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `AGENTS.md`, `research_control/README.md`, `.codex/skills/improve-project-system/SKILL.md`, `.agents/roles/research_ops/documentation-curator.v0.9.0.md`.
+- classification_resolver: A source-backed reader block on classification and resolver that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `.codex/skills/improve-project-system/SKILL.md`, `scripts/project_control/classify_project_changes.py`.
+- bounded_transaction: A source-backed reader block on bounded transaction that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.agents/schemas/AGENT_JOB_SCHEMA.md`, `research_control/README.md`.
+- flexible_html_contract: A source-backed reader block on explainer contract that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.codex/skills/html-visual-explainer/SKILL.md`, `.agents/roles/research_ops/documentation-curator.v0.9.0.md`, `research_control/design/github_facing_explainer_contract.md`.
+- documentation_impact: A source-backed reader block on documentation impact that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `scripts/project_control/validate_documentation_impact.py`, `research_control/README.md`.
+- validator_chain: A source-backed reader block on validator chain that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `scripts/research_control/validate_research_control.py`, `scripts/spec_depth_lint.py`, `scripts/validate_teaching_qa.py`.

@@ -1,6 +1,6 @@
 # Æther-flow Ontology
 
-This page explains the project-specific ontology: `Æther`, `Æther-flow`, observed three-dimensional space, `S-time`, observed expansion, and the open burden of deriving the exact-GR benchmark from source-defined substrate structure.
+The ontology names the project’s proposed substrate picture and keeps that picture separate from the still-open task of deriving exact relativistic geometry from it.
 
 ## Source Binding
 
@@ -10,37 +10,27 @@ This page explains the project-specific ontology: `Æther`, `Æther-flow`, obser
 
 ## Source-Backed Summary
 
-The Æther-flow ontology is the project's conceptual vocabulary for a proposed deeper four-dimensional substrate, its intrinsic ordered motion, and the observer-accessible appearance of space, time-order, expansion, and gravity. Its role is not to replace general relativity or claim a completed derivation; it frames exact GR as the observable benchmark that any future substrate law must recover. The ontology matters because it keeps the research program's intuitive picture disciplined: observed three-dimensional space is treated as a local experiential slice, S-time as the experienced order of change, and gravity as a heuristic matter-shaped reorganization of the deeper flow. At the project level, the explainer helps readers separate ontology, mathematical model, benchmark adoption, and open derivation burden before reading diagrams or candidate arguments.
+The Æther-flow ontology is the project’s vocabulary for a proposed deeper substrate, its ordered motion, and the observer-level world that appears as space, time-order, expansion, gravity, matter behavior, and relativistic geometry. Its function is conceptual and methodological: it gives candidate construction something precise to talk about while keeping exact general relativity as the observable benchmark. The ontology does not by itself prove a replacement for GR. The current research burden is to recover Lorentzian metric structure, causal behavior, clock behavior, same-metric matter coupling, invariance, and closure from source-side substrate data without importing the target geometry by hand. That makes anti-smuggling discipline part of the ontology’s function. The vocabulary matters because the project is trying to distinguish an interpretive picture, a mathematical model, and an accepted empirical theory rather than letting those categories collapse.
 
 ## What This Feature Does
 
-The ontology page is the conceptual flagship. It gives a glossary, an adoption-versus-derivation bridge, an anti-smuggling checklist, and a derivation-burden map for readers who need the vocabulary before reading science drafts or registries.
+The ontology supplies the project vocabulary for a proposed Æther and Æther-flow substrate beneath observer-level relativistic geometry.
 
 ## Why The Project Needs It
 
-The ontology is useful only if it stays separate from the mathematical model and from empirical claim status. It can guide interpretation, but only a source-defined substrate derivation that recovers Lorentzian geometry, clocks, causal structure, same-metric matter coupling, invariance, and closure could promote it beyond interpretation.
+The project needs the ontology because candidate derivations need source-side language, but that language must remain separate from accepted GR and from the still-open derivation burden.
 
 ## How It Works
 
-Key distinctions:
-
-| Term | Reader-safe meaning | Boundary |
-| --- | --- | --- |
-| `Æther` | proposed deeper four-dimensional substrate vocabulary | not canonical proof of physical substrate |
-| `Æther-flow` | intrinsic ordered motion used to interpret observed phenomena | not a completed derivation of GR |
-| Observed space | local experiential slice/readout | not a primitive target structure smuggled into the source |
-| `S-time` | experienced order of change | must still be recovered coherently, not assumed |
-| Exact-GR benchmark | ordinary GR retained as observable target behavior | adoption is not first-principles derivation |
-
-The anti-smuggling rule is simple: a candidate cannot import target metric, clock, locality, matter-coupling, or favorable observer structure as a source primitive and then call recovery successful.
+It defines terms, ties them to the exact-GR benchmark, states what must be recovered, and uses claim gates to prevent target-smuggling or premature promotion.
 
 ## What It Is Not
 
-It is not a replacement for registered TeX, not an accepted new physics theory, not a new empirical prediction, and not evidence that the Æther-flow derivation is complete. It does not authorize candidate reconstruction or Gate Chair promotion.
+It is not a completed physical theory, not an empirical confirmation, not a replacement for canonical TeX, and not proof that GR has been derived.
 
 ## Diagram Reading Guide
 
-The ontology-stack diagram reads downward from substrate vocabulary to observed benchmark behavior. The burden-map diagram reads as obligations: each arrow names a recovery step that must be derived or blocked by evidence, and the anti-smuggling node constrains the route.
+The ontology stack diagram moves from substrate vocabulary to observer-level benchmark behavior. The burden map lists what a valid derivation must recover before any promotion is possible.
 
 <!-- mermaid-diagram-id: aether-flow-ontology-stack -->
 ```mermaid
@@ -74,16 +64,16 @@ flowchart TD
 
 ## Source Authority
 
-The glossary and boundaries are grounded in `ontology/aether-and-aether-flow.md`, `ontology/aether_flow_interpretation-lemen.md`, root guidance, and claim-boundary registry rows. Registered TeX remains the authority for scientific claims.
+Authority comes from ontology Markdown sources, TeX and Markdown registries, and claim-boundary records. Generated surfaces only explain that source basis.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -92,16 +82,16 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- Use this page for vocabulary, then inspect the ontology Markdown sources.
-- Use claim gates before interpreting any candidate derivation.
-- Use source authority to distinguish Markdown explanation from TeX authority.
+- Read the claim-gates drilldown for promotion rules.
+- Read source authority before citing generated explanations.
+- Inspect registered TeX before relying on science-bearing claims.
 
 ## All Source Materials
 

@@ -129,17 +129,7 @@ Summary heading: `Summary of Source Authority`
 
 Summary text:
 
-Source authority is the repository rule for deciding which files can define
-project truth and which files are generated aids for reading, retrieval,
-validation, or publication. Its functionality is to rank registered TeX,
-format-specific registries, registered Markdown, generated HTML, generated
-wiki notes, PDFs, local Obsidian surfaces, and .local caches so contributors
-update canonical sources first and regenerate dependent artifacts afterward.
-This matters because many surfaces are polished, searchable, or easier to read
-than the source files, but convenience does not make them independent
-authority. The authority model fits the project by preserving scientific claim
-discipline, project-control provenance, and reproducible memory refreshes
-across a repo that intentionally generates many human-facing derivatives.
+Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and `.local` caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not create independent authority. The model preserves scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repository that intentionally generates many human-facing derivatives.
 
 Summary source basis:
 
@@ -148,11 +138,12 @@ Summary source basis:
 - `registries/HTML_EXPLAINER_REGISTRY.csv`
 - `registries/FILE_OBJECT_REGISTRY.csv`
 
+
 ## Required Content Blocks
 
-- subject_summary: Summarize source authority, its file-format ladder, why generated surfaces stay non-authoritative, and which declared sources ground the summary.
-- authority_ladder: A documentation-grade ladder covering canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries.
-- format_use_case_matrix: A complete authority/use-case matrix for `.tex`, `.md`, `.csv`, `.yaml`, `.html`, `.pdf`, `.sqlite` or semantic extracts, `.meta.json`, `wiki/`, and `.local/`, including editor, validator, and failure mode.
-- generated_derivatives: A source-backed section explaining generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, content semantics, and why regeneration does not promote them to authority.
-- local_retrieval_surfaces: A completed section on local Obsidian, content semantics, SQLite, query scripts, caches, and scratch builds as operator aids that must point back to canonical rows.
-- validation_evidence: A documentation section on source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, documentation-impact receipts, and checkpoint boundaries.
+- subject_summary: A source-backed summary of Source Authority that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `AGENTS.md`, `.codex/skills/project-memory-system/SKILL.md`, `registries/HTML_EXPLAINER_REGISTRY.csv`, `registries/FILE_OBJECT_REGISTRY.csv`.
+- authority_ladder: A source-backed reader block on authority ladder that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `registries/TEX_SOURCE_REGISTRY.csv`, `registries/MARKDOWN_SOURCE_REGISTRY.csv`.
+- format_use_case_matrix: A source-backed reader block on format matrix that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `README.md`, `AGENTS.md`, `.codex/skills/project-memory-system/SKILL.md`.
+- generated_derivatives: A source-backed reader block on generated derivatives that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/HTML_EXPLAINER_REGISTRY.csv`, `registries/WIKI_ARTIFACT_REGISTRY.csv`, `registries/PDF_DERIVATIVE_REGISTRY.csv`.
+- local_retrieval_surfaces: A source-backed reader block on local retrieval that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.codex/skills/obsidian-wiki/SKILL.md`, `.codex/skills/project-memory-system/SKILL.md`.
+- validation_evidence: A source-backed reader block on validation evidence that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.codex/skills/project-memory-system/SKILL.md`, `scripts/project_control/validate_documentation_impact.py`.

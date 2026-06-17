@@ -1,6 +1,6 @@
 # Technical Requirements
 
-This page turns setup into workflow tiers so readers know which tools are required for inspection, validation, regeneration, local retrieval, diagram rendering, and PDF refresh.
+Technical requirements separate the tools needed to read, validate, regenerate, render, retrieve, and refresh derivatives.
 
 ## Source Binding
 
@@ -10,51 +10,40 @@ This page turns setup into workflow tiers so readers know which tools are requir
 
 ## Source-Backed Summary
 
-The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The explainer fits the project by turning setup files and skill contracts into a practical dependency map for maintainers who need repeatable validation without changing dependency policy or scientific claims.
+The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The requirements map turns setup files and skill contracts into a practical dependency model for maintainers who need repeatable validation without changing dependency policy or scientific claims.
 
 ## What This Feature Does
 
-The requirements page separates project requirements from operator environment aids. It tells readers what is needed for read-only inspection, Python validators, memory/wiki regeneration, Mermaid-backed HTML, optional local retrieval, and conditional PDF builds.
+Technical requirements define which tools are needed for each workflow tier.
 
 ## Why The Project Needs It
 
-Not every reader needs every tool. Missing Obsidian should not invalidate the project, while missing Python dependencies can block validators. Tiering prevents optional conveniences from being mistaken for repository requirements.
+The project needs tiers because reading, validating, regenerating HTML, querying memory, and refreshing PDFs require different environments.
 
 ## How It Works
 
-Requirement tiers:
-
-| Tier | Needed for | Tools | Failure meaning |
-| --- | --- | --- | --- |
-| 1. Read-only inspection | reading sources | Git, editor, browser or Markdown viewer | does not affect project validity |
-| 2. Validators and memory scripts | deterministic checks | Python `.venv`, `requirements.txt` | blocks validation if unavailable |
-| 3. Memory/wiki regeneration | source-to-registry refresh | project-memory-system scripts | generated surfaces may be stale |
-| 4. Mermaid-backed HTML | inline-SVG tracked explainers | Node.js, npm, pinned Mermaid, Playwright Chromium | HTML diagram refresh may be blocked |
-| 5. Local retrieval | optional reader/search aids | Obsidian, SQLite, `.local/` extracts | operator aid unavailable, not source invalid |
-| 6. PDF refresh | TeX derivatives | LaTeX/PDF build tooling | only blocks in-scope PDF derivative work |
+Use read-only tools for inspection, Python for validators and memory scripts, Node/Mermaid tooling for diagram-backed HTML, optional local tools for retrieval, and LaTeX only for PDF refresh.
 
 ## What It Is Not
 
-It is not a new dependency policy, not a guarantee every optional local aid exists, not permission to treat global plugins as project authority, and not a physics or control claim.
+It is not a dependency-policy change, not proof that optional tools are authority, and not a requirement that every reader install every aid.
 
 ## Diagram Reading Guide
 
-The current source spec does not declare a Mermaid diagram. Read the tier matrix as the controlling visual model: each tier states tools, commands, need, failure meaning, and authority status.
-
-No Mermaid diagram is declared in the current registered source spec for this page.
+The important visual model is the tier matrix: read, validate, regenerate memory, render diagrams, retrieve locally, refresh PDFs, and separate project requirements from operator aids.
 
 ## Source Authority
 
-The requirements are grounded in `README.md`, `requirements.txt`, `Makefile`, project-memory-system, Obsidian, PDF derivative, HTML visual explainer, and Mermaid documentation scripts.
+Authority comes from README setup guidance, requirements, Makefile targets, and repo-local skill contracts.
 
 ## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize this feature for orientation
+- summarize the feature for orientation
 - identify source files to inspect next
-- explain workflow boundaries
+- explain workflow boundaries in plain language
 
 Before modifying project knowledge:
 - read `AGENTS.md`
@@ -63,17 +52,16 @@ Before modifying project knowledge:
 - route through the correct research-control workflow
 
 Do not:
-- do not treat this page as physics authority
+- do not treat this derivative as physics authority
 - do not claim the Æther-flow derivation is complete
 - do not treat generated HTML, wiki, PDF, or `.local/` files as independent authority
 - do not bypass claim gates, validators, or AgentJob boundaries
 
 ## Where To Go Next
 
-- For reading, start with Markdown and registries.
-- For validation, use the Python `.venv` and README commands.
-- For HTML diagram refresh, inspect Mermaid package files and rendering scripts.
-- For PDFs, refresh only when TeX derivative work is in scope.
+- Install Python requirements before running validators.
+- Install diagram tooling only when regenerating diagram-backed HTML.
+- Use source authority when local tools disagree with tracked state.
 
 ## All Source Materials
 

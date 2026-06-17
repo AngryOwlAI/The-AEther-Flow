@@ -1,9 +1,9 @@
 Source Authority
 format_ladder
 Source Authority
-Explain the repository authority ladder from canonical TeX and registries through registered Markdown, generated wiki/PDF/HTML derivatives, and local scratch surfaces.
+Source authority decides which files can define project truth and which surfaces are generated aids.
 Summary of Source Authority
-Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and .local caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not make them independent authority. The authority model fits the project by preserving scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repo that intentionally generates many human-facing derivatives.
+Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and `.local` caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not create independent authority. The model preserves scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repository that intentionally generates many human-facing derivatives.
 AGENTS.md
 .codex/skills/project-memory-system/SKILL.md
 registries/HTML_EXPLAINER_REGISTRY.csv
@@ -15,101 +15,27 @@ Sources
 Source-Backed Coverage
 Authority Ladder
 AGENTS.md
-.codex/skills/project-memory-system/SKILL.md
 registries/TEX_SOURCE_REGISTRY.csv
 registries/MARKDOWN_SOURCE_REGISTRY.csv
-A documentation-grade ladder covering canonical science sources, registry authority, registered Markdown authority, generated derivatives, and `.local/` scratch boundaries. In reader-facing terms, this section identifies the subject of
-Source Authority
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-AGENTS.md
-,
-.codex/skills/project-memory-system/SKILL.md
-,
-registries/TEX_SOURCE_REGISTRY.csv
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Format Use Case Matrix
+The ladder starts with registered TeX for science-bearing derivation and benchmark claims. Format-specific registries carry routing, provenance, generated-output, hash, and memory authority. Registered Markdown carries front-door guidance, agent instructions, project-control notes, and source specs. Generated HTML, GitHub-facing Markdown, wiki notes, PDFs, semantic extracts, and local vault entries help readers and agents navigate. The ladder is not about file prestige; it is about which artifact may define a claim and which artifact must point back to something stronger.
+Format Matrix
 README.md
 AGENTS.md
 .codex/skills/project-memory-system/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-The matrix gives operators a file-format decision table.
-.tex
-is for science-bearing derivation and benchmark material;
-.md
-is for registered front-door and control documentation;
-.csv
-is the registry spine;
-.yaml
-records tasks, jobs, roles, completions, approvals, and handoffs;
-.html
-is generated human-only explanation;
-.pdf
-is a human-reading TeX derivative;
-.sqlite
-and semantic extracts are local retrieval surfaces;
-.meta.json
-files are generated validation metadata;
-wiki/
-is tracked generated retrieval;
-.local/
-is scratch or local operator state. Each row should be read with editor, validator, and failure mode in mind: the safest edit is almost always the registered source plus regeneration.
-Format
-Authority status
-Failure mode
-.tex
-Canonical science lane.
-Claim drift if edited casually.
-.md
-Registered documentation/control source.
-Spec drift if HTML is edited alone.
-.csv
-Registry/provenance authority.
-Broken routing or stale hashes.
-.html/.pdf/wiki
-Generated derivative.
-Stale or mistaken for authority.
+Format meaning depends on use case. `.tex` is science source. `.md` can be front-door guidance, control notes, or source specs. `.csv` is registry authority. `.yaml` records tasks, jobs, approvals, roles, completions, and handoffs. `.html`, `.pdf`, and `wiki/` are generated reading surfaces. `.meta.json` records generated registry metadata. `.sqlite`, semantic extracts, Obsidian vault files, and `.local` caches support retrieval. The safe edit pattern is source first, regenerate second, validate third.
 Generated Derivatives
-README.md
-AGENTS.md
+registries/HTML_EXPLAINER_REGISTRY.csv
+registries/WIKI_ARTIFACT_REGISTRY.csv
+registries/PDF_DERIVATIVE_REGISTRY.csv
+Generated derivatives exist because humans and agents need readable and searchable views. HTML explainers visualize source specs, GitHub-facing Markdown orients repository readers, wiki notes summarize registry objects, PDFs provide human-reading TeX derivatives, and semantic extracts power retrieval. Their usefulness does not change authority. If a derivative is stale or misleading, the repair is to update the source spec, source file, or registry row, then regenerate and validate.
+Local Retrieval
+.codex/skills/obsidian-wiki/SKILL.md
 .codex/skills/project-memory-system/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-A source-backed section explaining generated wiki notes, indexes, PDFs, tracked HTML, metadata sidecars, content semantics, and why regeneration does not promote them to authority. In reader-facing terms, this section identifies the subject of
-Source Authority
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-.codex/skills/project-memory-system/SKILL.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
-Local Retrieval Surfaces
-README.md
-AGENTS.md
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-A completed section on local Obsidian, content semantics, SQLite, query scripts, caches, and scratch builds as operator aids that must point back to canonical rows. In reader-facing terms, this section identifies the subject of
-Source Authority
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-.codex/skills/project-memory-system/SKILL.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+Local retrieval surfaces accelerate navigation on one machine. The Obsidian vault, semantic text extracts, SQLite memory index, browser previews, and scratch outputs can help an operator find context quickly. They are subordinate to tracked sources and registries, and many live under `.local`, which is intentionally not canonical. Retrieval should answer where to inspect next, not what the project has proven. The retrieval layer is best understood as an index into authority, not an alternative authority ladder with its own claim status.
 Validation Evidence
-README.md
-AGENTS.md
 .codex/skills/project-memory-system/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-A documentation section on source hashes, source-basis metadata, registry rows, Mermaid parity, bootstrap validation, documentation-impact receipts, and checkpoint boundaries. In reader-facing terms, this section identifies the subject of
-Source Authority
-, explains why the project needs that layer, and connects it to the source-first workflow rather than leaving it as a renderer instruction. It is grounded in
-README.md
-,
-AGENTS.md
-,
-.codex/skills/project-memory-system/SKILL.md
-and related declared sources, so the reader can move from this generated page back to inspectable files.
+scripts/project_control/validate_documentation_impact.py
+Validation evidence ties sources to derivatives. Hashes detect stale files, source-basis metadata ties HTML to specs, Mermaid parity checks diagrams, bootstrap refreshes generated registries and wiki notes, documentation-impact receipts account for source and derivative changes, and research-control validators check task boundaries. Evidence does not make every artifact authoritative; it proves the artifact follows its declared source relationship. A valid receipt should make the path from source edit to generated output visible enough that another operator can reproduce the check.
 Source Authority Ladder
 +
 -
@@ -210,15 +136,15 @@ Allowed outputs are produced inside the task boundary.
 8. completion YAML
 The completion records verdict, command results, and validation status.
 All Source Materials
-Registered source paths used by this human-only generated page. Source authority remains with the listed files and registries.
-README.md
-AGENTS.md
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-registries/TEX_SOURCE_REGISTRY.csv
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/HTML_EXPLAINER_REGISTRY.csv
-registries/WIKI_ARTIFACT_REGISTRY.csv
-registries/PDF_DERIVATIVE_REGISTRY.csv
-registries/FILE_OBJECT_REGISTRY.csv
-research_control/design/html_explainer_flexible_presentation_contract.md
+Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
+EADME.md
+GENTS.md
+codex/skills/project-memory-system/SKILL.md
+codex/skills/html-visual-explainer/SKILL.md
+egistries/TEX_SOURCE_REGISTRY.csv
+egistries/MARKDOWN_SOURCE_REGISTRY.csv
+egistries/HTML_EXPLAINER_REGISTRY.csv
+egistries/WIKI_ARTIFACT_REGISTRY.csv
+egistries/PDF_DERIVATIVE_REGISTRY.csv
+egistries/FILE_OBJECT_REGISTRY.csv
+esearch_control/design/html_explainer_flexible_presentation_contract.md
