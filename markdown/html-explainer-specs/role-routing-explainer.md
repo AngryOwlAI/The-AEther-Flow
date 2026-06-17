@@ -107,6 +107,23 @@ The page must not change role contracts or routing rules.
 - Workflow step inspector for role selection.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as the role-selection path:
+
+1. Classify the task request or handoff by authority class.
+2. Compare candidate registered roles against the required source classes.
+3. Record the Director decision with the selected role and one AgentJob.
+4. Choose direct registered-role use, a bounded task overlay, or a one-job
+   provisional role.
+5. Bind the execution-role record to allowed writes, removed permissions,
+   expansions, and validators.
+6. Keep optional role decomposition inside the same AgentJob and inherited
+   authority.
+7. Execute within the role boundary and record completion evidence.
+8. Expire the overlay or provisional role after the job unless a later
+   human-authorized registration changes the role system.
+
 ## Required Diagrams
 
 <!-- mermaid-diagram-id: role-routing-decision-tree -->

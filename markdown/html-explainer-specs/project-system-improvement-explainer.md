@@ -57,6 +57,21 @@ curator judgment. The page should preserve the real conceptual order:
 - regenerate memory/wiki/registry derivatives; and
 - validate the transaction before checkpointing.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as the bounded project-system improvement loop:
+
+1. Inspect root guidance, research-control guidance, relevant registries, and
+   active source surfaces.
+2. Classify changed paths and reason codes.
+3. Resolve advisory routing state and open project-improvement signals.
+4. Route at most one bounded AgentJob to the fitting project-system role.
+5. Execute only within the job allowlist and source authority boundary.
+6. Record documentation impact for state-changing project-system work.
+7. Regenerate derived memory, registry, HTML, wiki, or GitHub-facing surfaces
+   through the approved path.
+8. Validate the transaction before treating it as checkpoint-ready.
+
 ## Source-Backed Summary
 
 Summary heading: `Summary of Project-System Improvement`

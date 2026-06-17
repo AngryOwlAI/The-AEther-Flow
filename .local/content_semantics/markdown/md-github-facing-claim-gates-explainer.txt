@@ -24,6 +24,17 @@ The project needs them because speculative ontology, exact-GR benchmark use, can
 
 They bind claims to source evidence, role authority, registry rows, gate review, validation receipts, and preserved negative-result records.
 
+## Workflow Step Inspector
+
+1. Frame the candidate or ontology statement with a scoped claim boundary.
+2. Keep exact-GR benchmark adoption separate from substrate derivation proposals.
+3. Route candidate work through bounded construction, audit, or refutation.
+4. Repair only when the defect is local and the claim boundary remains honest.
+5. Preserve refutations, obstructions, and underdetermination as negative results.
+6. Send promotion requests through Gate Chair or human-gated review when stronger scientific status is sought.
+7. Record accepted, blocked, or negative-result status in the relevant control evidence.
+8. Prevent generated docs, validator passes, or completed jobs from promoting claims by presentation alone.
+
 ## What It Is Not
 
 They are not ordinary formatting checks, not proof by completion, and not a way for generated pages or agents to promote science claims.

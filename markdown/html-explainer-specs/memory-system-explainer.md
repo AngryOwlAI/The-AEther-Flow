@@ -77,6 +77,22 @@ source-first memory system with multiple retrieval surfaces:
 - Workflow step inspector for regeneration and validation commands.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as the memory-regeneration path:
+
+1. Edit a registered source or registry row.
+2. Run memory bootstrap to refresh object rows, hashes, relationships, and
+   generated-output bindings.
+3. Regenerate tracked wiki notes and indexes from the registry spine.
+4. Refresh file-object and semantic registries for queryable memory.
+5. Sync local Obsidian and SQLite retrieval surfaces when the workflow needs
+   local lookup.
+6. Query memory only as an evidence-finding aid, not as independent authority.
+7. Validate bootstrap, registries, wiki outputs, and documentation surfaces.
+8. Inspect canonical sources before using retrieved material in a new project
+   change.
+
 ## Required Diagrams
 
 <!-- mermaid-diagram-id: memory-surface-map -->

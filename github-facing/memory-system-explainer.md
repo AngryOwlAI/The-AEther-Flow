@@ -24,6 +24,17 @@ The project needs it because long-running research requires fast lookup without 
 
 Source and registry edits feed bootstrap, generated wiki notes, file object rows, semantic extracts, local vault sync, SQLite indexing, and query tools.
 
+## Workflow Step Inspector
+
+1. Edit a registered source or registry row.
+2. Run memory bootstrap to refresh object rows, hashes, relationships, and generated-output bindings.
+3. Regenerate tracked wiki notes and indexes from the registry spine.
+4. Refresh file-object and semantic registries for queryable memory.
+5. Sync local Obsidian and SQLite retrieval surfaces when the workflow needs local lookup.
+6. Query memory only as an evidence-finding aid, not as independent authority.
+7. Validate bootstrap, registries, wiki outputs, and documentation surfaces.
+8. Inspect canonical sources before using retrieved material in a new project change.
+
 ## What It Is Not
 
 It is not competing canonical wikis, not independent claim authority, and not a way for `.local` caches to override tracked state.

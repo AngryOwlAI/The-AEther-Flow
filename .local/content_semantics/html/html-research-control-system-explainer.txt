@@ -110,24 +110,23 @@ registries
 updated
 Diagram source
 flowchart TD Change["Proposed project-system change"] --> Classifier["Change classifier"] Classifier --> Role["Recommended role boundary"] Role --> Job["One bounded AgentJob"] Job --> DecompCheck["Optional parent-child<br/>shape and conflict checks"] DecompCheck --> Allowed["Allowed writes"] DecompCheck --> Forbidden["Forbidden authority surfaces"] Allowed --> Validators["Required validators"] Forbidden --> Stop["Stop condition"] Validators --> Receipt["Completion and documentation-impact receipts"] Receipt --> Registry["Control registries updated"]
-Workflow inspector
-Inspectable Object Path
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
+Workflow Step Inspector
+Classify
+Classify changed paths and reason codes.
+Resolve
+Resolve advisory project-system or continuation routing.
+Bind
+Bind the work to one bounded AgentJob and execution role.
+Source first
+Update canonical source specs or control sources before derivatives.
+Impact
+Record documentation impact when project machinery changes.
+Regenerate
+Refresh memory, registry, HTML, wiki, or GitHub-facing derivatives.
+Validate
+Run teaching, lint, unit, bootstrap, audit, documentation, control, and diff checks.
+Checkpoint
+Treat readiness as validator-backed authority-boundary coherence.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 AGENTS.md

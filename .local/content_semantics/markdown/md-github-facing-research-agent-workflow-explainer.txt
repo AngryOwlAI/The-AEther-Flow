@@ -24,6 +24,17 @@ The project needs it because speculative research, agent work, documentation, an
 
 Tracked state leads to a Director decision, one AgentJob, a task-local role record, allowed outputs, validators, completion evidence, registries, and the next handoff.
 
+## Workflow Step Inspector
+
+1. State entry: tracked program state, handoff, or improvement signal defines the operating boundary.
+2. Director decision: the Director selects the task, role, claim boundary, and one-job route.
+3. AgentJob contract: the job records allowed reads, writes, outputs, validators, and stop conditions.
+4. Execution role: the task-local role record constrains role authority and any overlay or provisional scope.
+5. Bounded execution: the agent produces only allowlisted artifacts inside the task boundary.
+6. Validation: required validators test source, registry, derivative, and authority consistency.
+7. Completion: the completion YAML records verdict, command evidence, validation status, and unresolved obstructions.
+8. Handoff and registries: handoff state and control registries preserve the next operating boundary.
+
 ## What It Is Not
 
 It is not autonomous proof, not claim promotion, not permission to write outside an allowlist, and not a substitute for human-gated decisions.

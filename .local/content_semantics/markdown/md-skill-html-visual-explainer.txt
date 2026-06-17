@@ -69,6 +69,11 @@ Rules:
   panels.
   `workflow_step_inspector` is required for
   `workflow_process` and `control_system` explainers.
+  Workflow step inspectors must be page-specific and source-backed. Do not
+  reuse a generic object-path trace unless that exact trace is the subject's
+  workflow. When a paired GitHub-facing Markdown derivative exists, include a
+  matching `## Workflow Step Inspector` reader section for every source spec
+  that declares `workflow_step_inspector`.
 - The generated HTML must include lightweight structural markers:
   `data-explainer-control="<control>"`, `data-content-block="<id>"`,
   `data-summary-field="<field>"`, and `data-source-path` in the visible source

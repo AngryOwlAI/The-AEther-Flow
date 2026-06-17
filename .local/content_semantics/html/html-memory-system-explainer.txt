@@ -105,24 +105,23 @@ make
 validate-memory
 Diagram source
 flowchart TD Edit["Edit canonical source or registry"] --> Bootstrap["bootstrap_memory_system.py"] Bootstrap --> FormatRegistries["Format registries and hashes"] FormatRegistries --> WikiNotes["Generated wiki notes"] FormatRegistries --> Master["FILE_OBJECT_REGISTRY.csv"] WikiNotes --> Semantics["extract_content_semantics.py"] Master --> Semantics Semantics --> Vault["sync_obsidian_vault.py"] Vault --> Index["memory.sqlite"] Index --> Query["query_memory.py"] Query --> Validate["make validate-memory"]
-Workflow inspector
-Inspectable Object Path
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
+Workflow Step Inspector
+Edit
+Edit a registered source or registry row.
+Bootstrap
+Refresh object rows, hashes, relationships, and generated-output bindings.
+Wiki
+Regenerate tracked wiki notes and indexes from the registry spine.
+Semantics
+Refresh file-object and semantic registries for queryable memory.
+Local sync
+Sync local Obsidian and SQLite retrieval surfaces when lookup is needed.
+Query
+Use memory query as an evidence-finding aid, not independent authority.
+Validate
+Validate bootstrap, registries, wiki outputs, and documentation surfaces.
+Inspect source
+Inspect canonical sources before using retrieved material in a new change.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 README.md

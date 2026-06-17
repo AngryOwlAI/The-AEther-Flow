@@ -117,24 +117,23 @@ source
 parity
 Diagram source
 flowchart TD Source["Authoritative source edit"] --> Registry["Registry row and source hash"] Registry --> Bootstrap["Memory bootstrap"] Bootstrap --> Wiki["Generated wiki notes"] Bootstrap --> Html["Generated HTML derivative"] Bootstrap --> Pdf["Generated PDF derivative"] Html --> Metadata["Source-basis metadata"] Wiki --> Banner["Non-authority banner"] Pdf --> Link["PDF registry row"] Metadata --> Validate["Validate source parity"] Banner --> Validate Link --> Validate
-Workflow inspector
-Inspectable Object Path
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
+Workflow Step Inspector
+Edit source
+Edit the authoritative TeX, registry, or registered Markdown source first.
+Register
+Update the corresponding registry row and source hash when required.
+Regenerate
+Regenerate wiki, HTML, PDF, semantic, or local retrieval surfaces through approved tooling.
+Bind metadata
+Preserve source-basis metadata and visible source evidence in derivatives.
+Validate
+Validate source parity, hashes, generated-output bindings, and authority status.
+Read safely
+Use generated surfaces for reading and retrieval, not independent claims.
+Local boundary
+Treat `.local/` caches as scratch or machine-local retrieval aids.
+Return
+Return to the canonical source or registry before changing project knowledge.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 README.md

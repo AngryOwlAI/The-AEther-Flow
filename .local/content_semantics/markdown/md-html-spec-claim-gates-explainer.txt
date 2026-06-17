@@ -78,6 +78,24 @@ acceptance.
 - Workflow step inspector for claim states.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as a claim-status path:
+
+1. Frame the candidate or ontology statement with a scoped claim boundary.
+2. Keep exact-GR benchmark adoption separate from substrate derivation
+   proposals.
+3. Route candidate work through bounded construction, audit, or refutation.
+4. Repair only when the defect is local and the claim boundary remains honest.
+5. Preserve refutations, obstructions, and underdetermination as negative
+   results.
+6. Send promotion requests through Gate Chair or human-gated review when
+   stronger scientific status is sought.
+7. Record accepted, blocked, or negative-result status in the relevant control
+   evidence.
+8. Prevent generated docs, validator passes, or completed jobs from promoting
+   claims by presentation alone.
+
 ## Required Diagrams
 
 <!-- mermaid-diagram-id: claim-gate-state-machine -->

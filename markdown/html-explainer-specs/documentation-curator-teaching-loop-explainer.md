@@ -52,6 +52,22 @@ Second, the teaching packet and generated derivatives are explanatory support,
 not authority for physics, routing, validators, schemas, roles, or generated
 outputs.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as the teaching loop:
+
+1. Select one subject and source bundle.
+2. Ask reader-centered Student questions about purpose, operation,
+   boundaries, examples, and confusion points.
+3. Answer those questions through the Teacher inside the declared source
+   boundary.
+4. Have the Curator synthesize a teaching packet as explanatory support.
+5. Distill the packet into the Markdown source spec.
+6. Synchronize the GitHub-facing Markdown derivative.
+7. Regenerate the tracked human-only HTML derivative.
+8. Validate teaching QA, source specs, derivatives, documentation impact, and
+   research-control state.
+
 ## Source-Backed Summary
 
 Summary heading: `Summary of Documentation Curator Teaching Loop`

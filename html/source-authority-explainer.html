@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="f610a21cc001838bb89236e6c87c3344d5f8e05458a6ba9789e70eb8fedf34dd">
+  <meta name="aether-flow-source-basis-hash" content="9cfe1d1b333045879c2b7b0111007093351a924fae13287e4e33bcc0ed20584e">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Source Authority</title>
   <style>
@@ -55,6 +55,9 @@
     summary { cursor: pointer; font-weight: 800; }
     .trace-list { display: grid; gap: 10px; padding-left: 24px; }
     .trace-list li { border: 1px solid var(--border); background: var(--surface); padding: 12px; }
+    .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+    .step { border: 1px solid var(--border); background: var(--surface); padding: 12px; border-left: 5px solid var(--workflow); }
+    .step strong { color: var(--workflow); }
     .claim-box { background: linear-gradient(135deg, var(--warning-soft), #fffaf0); }
     .diagram-shell { overflow: hidden; }
     .mermaid-wrap { position: relative; border: 1px solid var(--border); background: #fbfaf6; min-height: 360px; height: 440px; max-height: 780px; overflow: hidden; }
@@ -462,7 +465,7 @@ flowchart TD
   Link --> Validate
   </script>
 </section></div>
-    <section id="workflow" class="section panel" data-explainer-control="workflow_step_inspector"><p class="eyebrow">Workflow inspector</p><h2>Inspectable Object Path</h2><ol class="trace-list"><li><strong>1. program_state.yaml</strong><span>Tracked program state names the latest operating boundary.</span></li><li><strong>2. latest handoff-*</strong><span>The handoff preserves the next role, task, and source-state constraints.</span></li><li><strong>3. Director decision</strong><span>The Director selects role, task objective, and claim boundary.</span></li><li><strong>4. 00_TASK.yaml</strong><span>The task file records objective, status, scope, and next action.</span></li><li><strong>5. jobs/AJ-*.yaml</strong><span>The AgentJob binds reads, writes, outputs, validators, and limits.</span></li><li><strong>6. roles/*.yaml</strong><span>The execution-role record narrows or overlays role authority for this job.</span></li><li><strong>7. artifacts/*</strong><span>Allowed outputs are produced inside the task boundary.</span></li><li><strong>8. completion YAML</strong><span>The completion records verdict, command results, and validation status.</span></li></ol></section>
+    <section id="workflow" class="section panel" data-explainer-control="workflow_step_inspector"><h2>Workflow Step Inspector</h2><div class="step-grid"><div class="step"><strong>Edit source</strong><br>Edit the authoritative TeX, registry, or registered Markdown source first.</div><div class="step"><strong>Register</strong><br>Update the corresponding registry row and source hash when required.</div><div class="step"><strong>Regenerate</strong><br>Regenerate wiki, HTML, PDF, semantic, or local retrieval surfaces through approved tooling.</div><div class="step"><strong>Bind metadata</strong><br>Preserve source-basis metadata and visible source evidence in derivatives.</div><div class="step"><strong>Validate</strong><br>Validate source parity, hashes, generated-output bindings, and authority status.</div><div class="step"><strong>Read safely</strong><br>Use generated surfaces for reading and retrieval, not independent claims.</div><div class="step"><strong>Local boundary</strong><br>Treat `.local/` caches as scratch or machine-local retrieval aids.</div><div class="step"><strong>Return</strong><br>Return to the canonical source or registry before changing project knowledge.</div></div></section>
     <section id="sources" class="section panel" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><p class="muted">Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.</p><ul class="source-list"><li data-source-path="README.md"><code>README.md</code></li><li data-source-path="AGENTS.md"><code>AGENTS.md</code></li><li data-source-path=".codex/skills/project-memory-system/SKILL.md"><code>.codex/skills/project-memory-system/SKILL.md</code></li><li data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></li><li data-source-path="registries/TEX_SOURCE_REGISTRY.csv"><code>registries/TEX_SOURCE_REGISTRY.csv</code></li><li data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv"><code>registries/MARKDOWN_SOURCE_REGISTRY.csv</code></li><li data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv"><code>registries/HTML_EXPLAINER_REGISTRY.csv</code></li><li data-source-path="registries/WIKI_ARTIFACT_REGISTRY.csv"><code>registries/WIKI_ARTIFACT_REGISTRY.csv</code></li><li data-source-path="registries/PDF_DERIVATIVE_REGISTRY.csv"><code>registries/PDF_DERIVATIVE_REGISTRY.csv</code></li><li data-source-path="registries/FILE_OBJECT_REGISTRY.csv"><code>registries/FILE_OBJECT_REGISTRY.csv</code></li><li data-source-path="research_control/design/html_explainer_flexible_presentation_contract.md"><code>research_control/design/html_explainer_flexible_presentation_contract.md</code></li></ul></section>
   </main>
   <script>

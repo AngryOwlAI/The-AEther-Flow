@@ -98,24 +98,23 @@ replaying
 failure
 Diagram source
 flowchart TD Attempt["Candidate derivation attempt"] --> Test["Refutation or smuggling test"] Test --> Finding["Obstruction identified"] Finding --> Boundary["Claim-boundary row"] Boundary --> Artifact["Registered task artifact"] Artifact --> Handoff["Handoff preserves next state"] Handoff --> Future["Future work avoids replaying failure"] Future --> Attempt
-Workflow inspector
-Inspectable Object Path
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
+Workflow Step Inspector
+Frame
+Frame the candidate or ontology statement with a scoped claim boundary.
+Separate
+Keep exact-GR benchmark adoption separate from substrate derivation proposals.
+Route
+Route candidate work through bounded construction, audit, or refutation.
+Repair
+Repair only when the defect is local and the boundary remains honest.
+Preserve
+Preserve refutations, obstructions, and underdetermination as negative results.
+Review
+Send stronger-status requests through Gate Chair or human-gated review.
+Record
+Record accepted, blocked, or negative-result status in control evidence.
+Guard
+Prevent generated docs, validator passes, or completions from promoting claims by presentation.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 README.md

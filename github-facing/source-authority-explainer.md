@@ -24,6 +24,17 @@ The project needs it because generated outputs are often easier to read than can
 
 Edit registered sources and registries first, regenerate derivatives, refresh hashes and metadata, and run validation before relying on the result.
 
+## Workflow Step Inspector
+
+1. Edit the authoritative TeX, registry, or registered Markdown source first.
+2. Update the corresponding registry row and source hash when required.
+3. Regenerate dependent wiki, HTML, PDF, semantic, or local retrieval surfaces through approved tooling.
+4. Preserve source-basis metadata and visible source evidence in derivatives.
+5. Validate source parity, hashes, generated-output bindings, and authority status.
+6. Use generated surfaces for reading and retrieval, not independent claims.
+7. Treat `.local/` caches as scratch or machine-local retrieval aids.
+8. Return to the canonical source or registry before making project-knowledge changes.
+
 ## What It Is Not
 
 It is not a ban on generated outputs, not a claim that retrieval is useless, and not permission for a readable derivative to replace source authority.

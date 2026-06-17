@@ -24,6 +24,17 @@ The project needs it because improving roles, skills, validators, documentation,
 
 It classifies changes, resolves advisory routing, binds one AgentJob, records documentation impact, regenerates derivatives from sources, runs validators, and blocks checkpointing when boundaries fail.
 
+## Workflow Step Inspector
+
+1. Classify changed paths and reason codes.
+2. Resolve advisory project-system or continuation routing.
+3. Bind the work to one bounded AgentJob and execution role.
+4. Update canonical source specs or project-control sources before derivatives.
+5. Record documentation impact when project machinery changes.
+6. Regenerate memory, registry, HTML, wiki, or GitHub-facing derivatives through the approved path.
+7. Run the validator chain: teaching QA, depth lint, unit tests, bootstrap, documentation-surface audit, documentation impact, research-control, and diff checks as applicable.
+8. Treat checkpoint readiness as validator-backed authority-boundary coherence, not as advisory resolver output alone.
+
 ## What It Is Not
 
 It is not physics continuation, not a broad rewrite license, not direct HTML authority, and not a substitute for human-gated policy decisions.

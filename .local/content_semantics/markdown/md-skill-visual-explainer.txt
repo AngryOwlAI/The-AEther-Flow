@@ -88,6 +88,11 @@ progressive-disclosure model rather than a heavy app framework:
 - Preserve claim-boundary text as source-spec metadata unless a page-specific
   source spec explicitly requires a visible claim-boundary control.
 - Provide workflow step inspectors for workflow and control-system pages.
+  These inspectors must be page-specific. Avoid a generic task-object trace
+  unless the source spec is actually about that object path. When updating the
+  paired GitHub-facing Markdown derivative, add a matching
+  `## Workflow Step Inspector` section for specs that declare the
+  `workflow_step_inspector` control.
 
 Tracked project explainers must also implement the flexible presentation
 contract declared by the Markdown source spec:

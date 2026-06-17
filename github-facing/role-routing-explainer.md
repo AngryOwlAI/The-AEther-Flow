@@ -24,6 +24,17 @@ The project needs it because different tasks require different permissions, vali
 
 A Director decision chooses the role, the execution-role record binds that role to one AgentJob, and the AgentJob constrains paths, outputs, validators, and expiry.
 
+## Workflow Step Inspector
+
+1. Classify the task request or handoff by authority class.
+2. Compare candidate registered roles against the required source classes.
+3. Record the Director decision with the selected role and one AgentJob.
+4. Choose direct registered-role use, a bounded task overlay, or a one-job provisional role.
+5. Bind the execution-role record to allowed writes, removed permissions, expansions, and validators.
+6. Keep optional role decomposition inside the same AgentJob and inherited authority.
+7. Execute within the role boundary and record completion evidence.
+8. Expire the overlay or provisional role after the job unless a later human-authorized registration changes the role system.
+
 ## Common questions
 
 - Who selects the role? The Director decision.

@@ -93,6 +93,22 @@ extracts, `.meta.json`, and `.local/` surfaces.
 - Workflow step inspector for derivative generation.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as the source-first derivative path:
+
+1. Edit the authoritative TeX, registry, or registered Markdown source first.
+2. Update the corresponding registry row and source hash when required.
+3. Regenerate dependent wiki, HTML, PDF, semantic, or local retrieval surfaces
+   through approved tooling.
+4. Preserve source-basis metadata and visible source evidence in derivatives.
+5. Validate source parity, hashes, generated-output bindings, and authority
+   status.
+6. Use generated surfaces for reading and retrieval, not independent claims.
+7. Treat `.local/` caches as scratch or machine-local retrieval aids.
+8. Return to the canonical source or registry before making project-knowledge
+   changes.
+
 ## Required Diagrams
 
 <!-- mermaid-diagram-id: source-authority-ladder -->

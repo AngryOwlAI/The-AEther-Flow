@@ -111,24 +111,23 @@ Blocked
 HandoffReady
 Diagram source
 stateDiagram-v2 [*] --> Proposed Proposed --> Active: Director selects role Active --> Decomposing: optional role decomposition Active --> Executing: direct single role execution Decomposing --> Executing: fused output path selected Executing --> Validating: outputs produced Validating --> Completed: validators pass Validating --> Blocked: validator or boundary failure Completed --> HandoffReady: completion recorded Blocked --> HandoffReady: obstruction recorded HandoffReady --> [*]
-Workflow inspector
-Inspectable Object Path
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
+Workflow Step Inspector
+State entry
+Tracked program state, handoff, or improvement signal defines the operating boundary.
+Director decision
+The Director selects the task, role, claim boundary, and one-job route.
+AgentJob contract
+The job records reads, writes, outputs, validators, and stop conditions.
+Execution role
+The task-local role constrains authority and any overlay or provisional scope.
+Bounded execution
+The agent produces only allowlisted artifacts inside the task boundary.
+Validation
+Required checks test source, registry, derivative, and authority consistency.
+Completion
+The completion YAML records verdict, command evidence, validation status, and obstructions.
+Handoff
+Handoff state and control registries preserve the next operating boundary.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 README.md

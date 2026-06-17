@@ -47,6 +47,10 @@ Each `github-facing/*.md` page must include:
 - Every source material declared by the matching source spec.
 - Every Mermaid block declared by the matching source spec, unless a later
   contract explicitly records a different synchronization rule.
+- `## Workflow Step Inspector` when the matching source spec declares
+  `workflow_step_inspector` in `required_controls`. The section should translate
+  the HTML inspector into page-specific reader steps rather than copying generic
+  renderer language.
 - A compact external-AI navigation card that states safe uses, pre-modification
   inspection requirements, and forbidden uses.
 
@@ -62,9 +66,9 @@ GitHub page sections:
 `scripts/project_control/audit_documentation_surfaces.py` owns the deterministic
 checks for this contract. The audit must verify source-spec existence, related
 HTML existence, source binding declarations, required reader sections, source
-material coverage, Mermaid synchronization, external-AI navigation markers,
-stale nested-path references, and unsafe authority or physics-promotion
-phrasing.
+material coverage, conditional workflow-step inspector synchronization,
+Mermaid synchronization, external-AI navigation markers, stale nested-path
+references, and unsafe authority or physics-promotion phrasing.
 
 ## Operational Rule
 

@@ -148,24 +148,23 @@ AgentJob
 boundary
 Diagram source
 flowchart TD Registered["Registered role template"] --> Fit{"Fits without change?"} Fit -->|"yes"| Direct["registered_role"] Fit -->|"needs bounded delta"| Overlay["task_overlay"] Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"] Direct --> Execution["Execution-role record"] Overlay --> Execution Provisional --> Execution Execution --> Allowed["Allowed writes and validators"] Execution --> Removed["Removed permissions"] Execution --> Expanded["Explicit expansions"] Execution --> Expiry["Expires after AgentJob"] Execution --> Decomp["Optional internal<br/>role_decomposition"] Decomp --> Perspectives["Parent and child<br/>perspectives"] Allowed --> Job["AgentJob boundary"] Perspectives --> Job
-Workflow inspector
-Inspectable Object Path
-1. program_state.yaml
-Tracked program state names the latest operating boundary.
-2. latest handoff-*
-The handoff preserves the next role, task, and source-state constraints.
-3. Director decision
-The Director selects role, task objective, and claim boundary.
-4. 00_TASK.yaml
-The task file records objective, status, scope, and next action.
-5. jobs/AJ-*.yaml
-The AgentJob binds reads, writes, outputs, validators, and limits.
-6. roles/*.yaml
-The execution-role record narrows or overlays role authority for this job.
-7. artifacts/*
-Allowed outputs are produced inside the task boundary.
-8. completion YAML
-The completion records verdict, command results, and validation status.
+Workflow Step Inspector
+Classify
+Classify the task request or handoff by authority class.
+Compare roles
+Compare registered role candidates against the required source classes.
+Decide
+Record the Director decision with the selected role and one AgentJob.
+Bind mode
+Choose direct role use, a bounded overlay, or a one-job provisional role.
+Constrain
+Bind writes, removed permissions, expansions, and validators in the execution role.
+Decompose
+Keep optional role decomposition inside the same inherited authority.
+Complete
+Execute within the boundary and record completion evidence.
+Expire
+Expire the overlay or provisional role unless later human-authorized registration occurs.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 README.md

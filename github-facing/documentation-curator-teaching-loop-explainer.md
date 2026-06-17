@@ -24,6 +24,17 @@ The project contains speculative physics, agent-control machinery, generated mem
 
 The Curator selects one feature and source bundle. The Student asks reader-centered questions. The Teacher answers each question plainly, names source paths, marks gaps, and adds boundary notes. The Curator synthesizes a Teaching Q&A packet with required fields and sections, then distills the packet into source specs, GitHub-facing Markdown, and HTML. Validators check packet structure and source-bound behavior.
 
+## Workflow Step Inspector
+
+1. Select one subject and source bundle.
+2. Ask reader-centered Student questions about purpose, operation, boundaries, examples, and confusion points.
+3. Answer those questions through the Teacher inside the declared source boundary.
+4. Have the Curator synthesize a teaching packet as explanatory support.
+5. Distill the packet into the Markdown source spec.
+6. Synchronize the GitHub-facing Markdown derivative.
+7. Regenerate the tracked human-only HTML derivative.
+8. Validate teaching QA, source specs, derivatives, documentation impact, and research-control state.
+
 ## What It Is Not
 
 It is not a new source of project authority, not a role-authority expansion, not a schema or validator change by itself, and not a way for Student or Teacher outputs to write tracked documentation directly. Teaching packets support explanation; they do not change physics claims, routing, validators, role contracts, schemas, or generated-output boundaries.
