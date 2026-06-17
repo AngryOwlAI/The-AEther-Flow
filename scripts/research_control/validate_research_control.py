@@ -330,6 +330,50 @@ ONTOLOGY_PAYLOAD_TEXT_MARKERS = (
     "controlled pause",
 )
 
+PARENT_CHILD_SYNTHESIS_MODE = "parent_child_parallel_synthesis"
+PARENT_CHILD_SYNTHESIS_VERSION = "0.1.0"
+PARENT_CHILD_PARENT_UNIT_ID = "parent"
+PARENT_CHILD_PARENT_PERSPECTIVE = "physicist_mathematician_philosopher"
+PARENT_CHILD_REQUIRED_CHILDREN = {
+    "child_phys_math": "physicist_mathematician",
+    "child_phys_phil": "physicist_philosopher",
+}
+PARENT_CHILD_CONFLICT_TYPES = {
+    "mathematical",
+    "physical",
+    "ontological",
+    "claim_boundary",
+    "source_or_citation",
+    "terminology",
+    "next_route",
+    "validator_or_schema",
+}
+PARENT_CHILD_CONFLICT_SEVERITIES = {"blocking", "nonblocking"}
+PARENT_CHILD_CONFLICT_STATUSES = {
+    "no_conflict",
+    "resolved",
+    "unresolved_nonblocking",
+    "unresolved_blocking",
+    "blocked",
+}
+PARENT_CHILD_FORBIDDEN_AUTHORITY_KEYS = {
+    "allowed_generated_paths",
+    "allowed_read_paths",
+    "allowed_source_classes",
+    "allowed_write_paths",
+    "authority_delta_summary",
+    "base_role_id",
+    "base_role_version",
+    "claim_boundary",
+    "expanded_permissions",
+    "forbidden_paths",
+    "forbidden_source_classes",
+    "provisional_role_contract",
+    "requires_human_gate",
+    "role_id",
+    "role_version",
+}
+
 
 def loop_control_policy() -> dict[str, object]:
     return {
@@ -339,6 +383,26 @@ def loop_control_policy() -> dict[str, object]:
         "refuter_decision_categories": sorted(LOOP_RISK_DECISION_CATEGORIES),
         "bridge_or_fail_routes": sorted(BRIDGE_OR_FAIL_ROUTES),
         "ontology_formalizer_payload_types": sorted(ONTOLOGY_FORMALIZER_PAYLOAD_TYPES),
+    }
+
+
+def parent_child_decomposition_policy() -> dict[str, object]:
+    return {
+        "policy_id": "parent_child_parallel_synthesis_v1",
+        "mode": PARENT_CHILD_SYNTHESIS_MODE,
+        "decomposition_version": PARENT_CHILD_SYNTHESIS_VERSION,
+        "execution_boundary": "one outer AgentJob with internal execution units",
+        "parent": {
+            "execution_unit_id": PARENT_CHILD_PARENT_UNIT_ID,
+            "perspective": PARENT_CHILD_PARENT_PERSPECTIVE,
+        },
+        "children": [
+            {"execution_unit_id": unit_id, "perspective": perspective}
+            for unit_id, perspective in sorted(PARENT_CHILD_REQUIRED_CHILDREN.items())
+        ],
+        "conflict_types": sorted(PARENT_CHILD_CONFLICT_TYPES),
+        "conflict_severities": sorted(PARENT_CHILD_CONFLICT_SEVERITIES),
+        "forbidden_authority_expansion_keys": sorted(PARENT_CHILD_FORBIDDEN_AUTHORITY_KEYS),
     }
 
 
@@ -689,6 +753,7 @@ def validate_agent_jobs(
                 reason = validate_relative_path(item.replace("**", "x").replace("*", "x"))
                 if reason:
                     report.error(f"{row['job_path']}: invalid {field_name} entry {item}: {reason}")
+        validate_parent_child_decomposition(report, row, job)
         validate_future_physics_job_authority(report, row, job)
         if row["completion_path"]:
             completion_path = repo_path(row["completion_path"])
@@ -746,6 +811,330 @@ def _protected_authority_expansions(value: Any) -> list[str]:
         if any(marker in lowered for marker in PROTECTED_AUTHORITY_MARKERS):
             protected.append(item)
     return protected
+
+
+def _path_allowed_by_patterns(path_text: str, patterns: list[str]) -> bool:
+    normalized = path_text.strip().lstrip("./")
+    return any(_path_matches(normalized, pattern.strip().lstrip("./")) for pattern in patterns)
+
+
+def _parent_child_authority_keys(value: Any, prefix: str = "role_decomposition") -> list[str]:
+    found: list[str] = []
+    if isinstance(value, dict):
+        for key, child in value.items():
+            child_prefix = f"{prefix}.{key}"
+            if str(key) in PARENT_CHILD_FORBIDDEN_AUTHORITY_KEYS:
+                found.append(child_prefix)
+            found.extend(_parent_child_authority_keys(child, child_prefix))
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            found.extend(_parent_child_authority_keys(child, f"{prefix}[{index}]"))
+    return found
+
+
+def _validate_decomposition_path(
+    report: ValidationReport,
+    *,
+    path_text: str,
+    owner_path: str,
+    field_name: str,
+    allowed_patterns: list[str],
+) -> None:
+    if not path_text:
+        report.error(f"{owner_path}: role_decomposition.{field_name} is required")
+        return
+    reason = validate_relative_path(path_text)
+    if reason:
+        report.error(f"{owner_path}: invalid role_decomposition.{field_name}: {reason}")
+        return
+    if not _path_allowed_by_patterns(path_text, allowed_patterns):
+        report.error(
+            f"{owner_path}: role_decomposition.{field_name} is outside AgentJob allowlist: {path_text}"
+        )
+
+
+def _nonnegative_int(value: Any) -> int | None:
+    if isinstance(value, int):
+        return value if value >= 0 else None
+    if isinstance(value, str) and value.strip().isdigit():
+        parsed = int(value.strip())
+        return parsed if parsed >= 0 else None
+    return None
+
+
+def _parent_child_job_paths(decomposition: dict[str, Any]) -> dict[str, str]:
+    paths: dict[str, str] = {}
+    children = decomposition.get("children", [])
+    if isinstance(children, list):
+        for child in children:
+            if isinstance(child, dict):
+                unit_id = str(child.get("execution_unit_id", "")).strip()
+                output_path = str(child.get("output_path", "")).strip()
+                if unit_id and output_path:
+                    paths[f"children.{unit_id}.output_path"] = output_path
+    conflict_policy = decomposition.get("conflict_policy", {})
+    if isinstance(conflict_policy, dict):
+        review_path = str(conflict_policy.get("review_path", "")).strip()
+        if review_path:
+            paths["conflict_policy.review_path"] = review_path
+    fusion_policy = decomposition.get("fusion_policy", {})
+    if isinstance(fusion_policy, dict):
+        fusion_notes_path = str(fusion_policy.get("fusion_notes_path", "")).strip()
+        if fusion_notes_path:
+            paths["fusion_policy.fusion_notes_path"] = fusion_notes_path
+        fused_output_path = str(fusion_policy.get("fused_output_path", "")).strip()
+        if fused_output_path:
+            paths["fusion_policy.fused_output_path"] = fused_output_path
+    return paths
+
+
+def validate_parent_child_decomposition(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+) -> None:
+    decomposition = job_contract.get("role_decomposition")
+    if decomposition in (None, "", []):
+        return
+    owner_path = job_row.get("job_path", job_row.get("job_id", "AgentJob"))
+    if not isinstance(decomposition, dict):
+        report.error(f"{owner_path}: role_decomposition must be a map")
+        return
+
+    if str(decomposition.get("mode", "")).strip() != PARENT_CHILD_SYNTHESIS_MODE:
+        report.error(
+            f"{owner_path}: role_decomposition.mode must be {PARENT_CHILD_SYNTHESIS_MODE}"
+        )
+    if str(decomposition.get("decomposition_version", "")).strip() != PARENT_CHILD_SYNTHESIS_VERSION:
+        report.error(
+            f"{owner_path}: role_decomposition.decomposition_version must be {PARENT_CHILD_SYNTHESIS_VERSION}"
+        )
+
+    authority_keys = _parent_child_authority_keys(decomposition)
+    if authority_keys:
+        report.error(
+            f"{owner_path}: role_decomposition may not declare authority fields {sorted(authority_keys)}"
+        )
+
+    parent = decomposition.get("parent")
+    if not isinstance(parent, dict):
+        report.error(f"{owner_path}: role_decomposition.parent must be a map")
+    else:
+        if str(parent.get("execution_unit_id", "")).strip() != PARENT_CHILD_PARENT_UNIT_ID:
+            report.error(
+                f"{owner_path}: parent execution_unit_id must be {PARENT_CHILD_PARENT_UNIT_ID}"
+            )
+        if str(parent.get("perspective", "")).strip() != PARENT_CHILD_PARENT_PERSPECTIVE:
+            report.error(
+                f"{owner_path}: parent perspective must be {PARENT_CHILD_PARENT_PERSPECTIVE}"
+            )
+
+    children = decomposition.get("children")
+    seen_children: dict[str, str] = {}
+    if not isinstance(children, list) or len(children) != 2:
+        report.error(f"{owner_path}: role_decomposition.children must contain exactly two children")
+    else:
+        for child in children:
+            if not isinstance(child, dict):
+                report.error(f"{owner_path}: role_decomposition.children entries must be maps")
+                continue
+            unit_id = str(child.get("execution_unit_id", "")).strip()
+            perspective = str(child.get("perspective", "")).strip()
+            expected_perspective = PARENT_CHILD_REQUIRED_CHILDREN.get(unit_id)
+            if expected_perspective is None:
+                report.error(f"{owner_path}: unsupported child execution_unit_id {unit_id}")
+            elif perspective != expected_perspective:
+                report.error(
+                    f"{owner_path}: child {unit_id} perspective must be {expected_perspective}"
+                )
+            output_path = str(child.get("output_path", "")).strip()
+            if not output_path:
+                report.error(f"{owner_path}: child {unit_id} output_path is required")
+            seen_children[unit_id] = perspective
+        missing = sorted(set(PARENT_CHILD_REQUIRED_CHILDREN) - set(seen_children))
+        if missing:
+            report.error(f"{owner_path}: role_decomposition missing children {missing}")
+
+    conflict_policy = decomposition.get("conflict_policy")
+    if not isinstance(conflict_policy, dict):
+        report.error(f"{owner_path}: role_decomposition.conflict_policy must be a map")
+    else:
+        if "review_path" not in conflict_policy:
+            report.error(f"{owner_path}: conflict_policy.review_path is required")
+        max_rounds = _nonnegative_int(conflict_policy.get("max_resolution_rounds"))
+        if max_rounds is None:
+            report.error(f"{owner_path}: conflict_policy.max_resolution_rounds must be a nonnegative integer")
+        if conflict_policy.get("require_parallel_child_revision") is not True:
+            report.error(f"{owner_path}: conflict_policy.require_parallel_child_revision must be true")
+        if str(conflict_policy.get("unresolved_conflict_status", "")).strip() != "blocked":
+            report.error(f"{owner_path}: conflict_policy.unresolved_conflict_status must be blocked")
+
+    fusion_policy = decomposition.get("fusion_policy")
+    fused_output_path = ""
+    if not isinstance(fusion_policy, dict):
+        report.error(f"{owner_path}: role_decomposition.fusion_policy must be a map")
+    else:
+        if "fusion_notes_path" not in fusion_policy:
+            report.error(f"{owner_path}: fusion_policy.fusion_notes_path is required")
+        fused_output_path = str(fusion_policy.get("fused_output_path", "")).strip()
+        if not fused_output_path:
+            report.error(f"{owner_path}: fusion_policy.fused_output_path is required")
+        for field_name in [
+            "preserve_shared_consensus",
+            "preserve_unique_contributions",
+            "preserve_unresolved_limitations",
+            "final_output_replaces_old_single_role_artifact",
+        ]:
+            if fusion_policy.get(field_name) is not True:
+                report.error(f"{owner_path}: fusion_policy.{field_name} must be true")
+
+    allowed_patterns = _listish_values(job_contract.get("allowed_write_paths", []))
+    if not allowed_patterns:
+        report.error(f"{owner_path}: role_decomposition requires AgentJob allowed_write_paths")
+    for field_name, path_text in _parent_child_job_paths(decomposition).items():
+        _validate_decomposition_path(
+            report,
+            path_text=path_text,
+            owner_path=owner_path,
+            field_name=field_name,
+            allowed_patterns=allowed_patterns,
+        )
+
+    expected_outputs = set(_listish_values(job_contract.get("expected_outputs", [])))
+    registry_outputs = set(split_semicolon(job_row.get("output_paths", "")))
+    if fused_output_path:
+        if fused_output_path not in expected_outputs:
+            report.error(
+                f"{owner_path}: fusion_policy.fused_output_path must appear in expected_outputs"
+            )
+        if fused_output_path not in registry_outputs:
+            report.error(
+                f"{owner_path}: fusion_policy.fused_output_path must appear in AGENT_JOB_REGISTRY output_paths"
+            )
+
+
+def _completion_child_outputs_by_id(value: Any) -> dict[str, dict[str, Any]]:
+    if not isinstance(value, list):
+        return {}
+    by_unit: dict[str, dict[str, Any]] = {}
+    for item in value:
+        if isinstance(item, dict):
+            unit_id = str(item.get("execution_unit_id", "")).strip()
+            if unit_id:
+                by_unit[unit_id] = item
+    return by_unit
+
+
+def _has_unresolved_blocking_conflict(conflict_review: dict[str, Any]) -> bool:
+    status = str(conflict_review.get("status", "")).strip()
+    if status in {"blocked", "unresolved_blocking"}:
+        return True
+    conflicts = conflict_review.get("unresolved_conflicts", [])
+    if not isinstance(conflicts, list):
+        return False
+    for conflict in conflicts:
+        if isinstance(conflict, str) and conflict.strip():
+            return True
+        if isinstance(conflict, dict) and str(conflict.get("severity", "")).strip() == "blocking":
+            return True
+    return False
+
+
+def validate_parent_child_completion(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+    path: Path,
+) -> None:
+    decomposition = job_contract.get("role_decomposition")
+    if not isinstance(decomposition, dict):
+        return
+    path_text = path.relative_to(REPO_ROOT).as_posix()
+    synthesis = completion.get("parent_child_synthesis")
+    if not isinstance(synthesis, dict):
+        report.error(f"{path_text}: parent-child AgentJob completion missing parent_child_synthesis")
+        return
+    if str(synthesis.get("mode", "")).strip() != PARENT_CHILD_SYNTHESIS_MODE:
+        report.error(f"{path_text}: parent_child_synthesis.mode must be {PARENT_CHILD_SYNTHESIS_MODE}")
+    if str(synthesis.get("decomposition_version", "")).strip() != PARENT_CHILD_SYNTHESIS_VERSION:
+        report.error(
+            f"{path_text}: parent_child_synthesis.decomposition_version must be {PARENT_CHILD_SYNTHESIS_VERSION}"
+        )
+
+    job_children = {
+        str(child.get("execution_unit_id", "")).strip(): child
+        for child in decomposition.get("children", [])
+        if isinstance(child, dict)
+    }
+    completion_children = _completion_child_outputs_by_id(synthesis.get("child_outputs"))
+    if set(completion_children) != set(PARENT_CHILD_REQUIRED_CHILDREN):
+        report.error(
+            f"{path_text}: parent_child_synthesis.child_outputs must name exactly {sorted(PARENT_CHILD_REQUIRED_CHILDREN)}"
+        )
+    for unit_id, expected_perspective in PARENT_CHILD_REQUIRED_CHILDREN.items():
+        child = completion_children.get(unit_id)
+        job_child = job_children.get(unit_id, {})
+        if not child:
+            continue
+        if str(child.get("perspective", "")).strip() != expected_perspective:
+            report.error(f"{path_text}: child output {unit_id} perspective must be {expected_perspective}")
+        if str(child.get("output_path", "")).strip() != str(job_child.get("output_path", "")).strip():
+            report.error(f"{path_text}: child output {unit_id} path must match AgentJob role_decomposition")
+        if completion.get("validation_status") == "PASS" and str(child.get("status", "")).strip() != "completed":
+            report.error(f"{path_text}: PASS parent-child completion requires child {unit_id} status completed")
+
+    conflict_review = synthesis.get("conflict_review")
+    if not isinstance(conflict_review, dict):
+        report.error(f"{path_text}: parent_child_synthesis.conflict_review must be a map")
+    else:
+        status = str(conflict_review.get("status", "")).strip()
+        if status not in PARENT_CHILD_CONFLICT_STATUSES:
+            report.error(f"{path_text}: conflict_review.status is not allowed: {status}")
+        job_review_path = str(
+            decomposition.get("conflict_policy", {}).get("review_path", "")
+            if isinstance(decomposition.get("conflict_policy"), dict)
+            else ""
+        ).strip()
+        if str(conflict_review.get("review_path", "")).strip() != job_review_path:
+            report.error(f"{path_text}: conflict_review.review_path must match AgentJob role_decomposition")
+        rounds = _nonnegative_int(conflict_review.get("resolution_rounds"))
+        max_rounds = _nonnegative_int(
+            decomposition.get("conflict_policy", {}).get("max_resolution_rounds")
+            if isinstance(decomposition.get("conflict_policy"), dict)
+            else None
+        )
+        if rounds is None:
+            report.error(f"{path_text}: conflict_review.resolution_rounds must be a nonnegative integer")
+        elif max_rounds is not None and rounds > max_rounds:
+            report.error(f"{path_text}: conflict_review.resolution_rounds exceeds AgentJob max_resolution_rounds")
+        for conflict in conflict_review.get("unresolved_conflicts", []):
+            if not isinstance(conflict, dict):
+                continue
+            conflict_type = str(conflict.get("type", "")).strip()
+            severity = str(conflict.get("severity", "")).strip()
+            if conflict_type and conflict_type not in PARENT_CHILD_CONFLICT_TYPES:
+                report.error(f"{path_text}: unresolved conflict type is not allowed: {conflict_type}")
+            if severity and severity not in PARENT_CHILD_CONFLICT_SEVERITIES:
+                report.error(f"{path_text}: unresolved conflict severity is not allowed: {severity}")
+        if completion.get("validation_status") == "PASS" and _has_unresolved_blocking_conflict(conflict_review):
+            report.error(f"{path_text}: PASS parent-child completion may not contain unresolved blocking conflicts")
+
+    fusion = synthesis.get("fusion")
+    fusion_policy = decomposition.get("fusion_policy", {})
+    fused_output_path = (
+        str(fusion_policy.get("fused_output_path", "")).strip()
+        if isinstance(fusion_policy, dict)
+        else ""
+    )
+    if not isinstance(fusion, dict):
+        report.error(f"{path_text}: parent_child_synthesis.fusion must be a map")
+    else:
+        if str(fusion.get("fused_output_path", "")).strip() != fused_output_path:
+            report.error(f"{path_text}: fusion.fused_output_path must match AgentJob role_decomposition")
+        completion_outputs = set(_listish_values(completion.get("output_paths", [])))
+        if completion.get("validation_status") == "PASS" and fused_output_path not in completion_outputs:
+            report.error(f"{path_text}: fused output path must appear in completion.output_paths")
 
 
 def validate_execution_roles(
@@ -910,6 +1299,7 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     except StrictYamlError as exc:
         report.error(f"{job_path_text}: {exc}")
         return
+    validate_parent_child_completion(report, job_row, job_contract, completion, path)
     validate_loop_control_completion(report, job_row, job_contract, completion, path)
     validate_completion_resolver_snapshots(report, completion, job_contract, path)
 

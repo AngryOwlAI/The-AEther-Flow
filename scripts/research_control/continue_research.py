@@ -17,11 +17,19 @@ from pathlib import Path
 try:
     from resolve_latest_handoff import resolve_latest
     from strict_yaml import StrictYamlError, load as load_yaml
-    from validate_research_control import loop_control_policy, validate_all
+    from validate_research_control import (
+        loop_control_policy,
+        parent_child_decomposition_policy,
+        validate_all,
+    )
 except ImportError:  # pragma: no cover
     from scripts.research_control.resolve_latest_handoff import resolve_latest
     from scripts.research_control.strict_yaml import StrictYamlError, load as load_yaml
-    from scripts.research_control.validate_research_control import loop_control_policy, validate_all
+    from scripts.research_control.validate_research_control import (
+        loop_control_policy,
+        parent_child_decomposition_policy,
+        validate_all,
+    )
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -190,6 +198,7 @@ def continuation_status() -> dict[str, object]:
         "available_roles": active_roles(),
         "pending_or_active_jobs": jobs_waiting,
         "bridge_or_fail_policy": loop_control_policy(),
+        "parent_child_decomposition_policy": parent_child_decomposition_policy(),
         "required_authority_surfaces": authority_surfaces(
             active_task_id,
             latest,

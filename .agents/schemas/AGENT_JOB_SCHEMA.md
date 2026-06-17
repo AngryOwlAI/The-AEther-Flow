@@ -36,6 +36,7 @@ with `expires_after_job_id` equal to the job ID.
 
 - `objective`
 - `resolves_signal_routing`
+- `role_decomposition`
 
 `objective` is optional for ordinary one-signal or source-driven jobs. If one
 AgentJob resolves more than one project-improvement signal, `objective` must
@@ -56,3 +57,73 @@ that the snapshots preserve the stable advisory-routing shape: parseable JSON
 object, advisory resolver fields, checkpoint gate source, and the
 selected-signal, open-signals, and change-classification sections. Ordinary
 validator and documentation jobs must not inherit this evidence burden.
+
+## Optional Role Decomposition
+
+`role_decomposition` is optional. Historical AgentJobs without this block
+remain valid.
+
+When present, the only supported mode is
+`parent_child_parallel_synthesis` with `decomposition_version: "0.1.0"`. This
+mode keeps the old external invariant intact:
+
+- one Director decision
+- one outer AgentJob
+- one execution-role record
+- one completion record
+- one final old-style fused output artifact
+
+The decomposition creates internal execution units, not independent AgentJobs.
+The parent and children inherit the outer execution-role authority, claim
+boundary, source restrictions, forbidden paths, validators, and write-path
+allowlist. The decomposition may not declare separate role IDs, source classes,
+write allowlists, expanded permissions, human-gate settings, or claim
+boundaries.
+
+Required shape:
+
+```yaml
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "derive child role definitions from the selected execution role"
+      - "enforce shared claim boundary and source restrictions"
+      - "review child outputs for conflicts"
+      - "request bounded conflict resolution when needed"
+      - "fuse child outputs into the final role artifact"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/<task_id>/artifacts/child_phys_math_<slug>.tex"
+      status: "planned"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/<task_id>/artifacts/child_phys_phil_<slug>.tex"
+      status: "planned"
+  conflict_policy:
+    review_path: "research_control/tasks/<task_id>/artifacts/parent_conflict_review_<slug>.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/<task_id>/artifacts/parent_fusion_notes_<slug>.md"
+    fused_output_path: "research_control/tasks/<task_id>/artifacts/<old_style_final_slug>.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+```
+
+All child output paths, conflict review paths, fusion notes paths, and fused
+output paths must be repo-relative paths under the outer AgentJob
+`allowed_write_paths`. The fused output path must also appear in
+`expected_outputs` and in the `AGENT_JOB_REGISTRY.csv` `output_paths` column.
+
+For science-draft roles, the final fused `.tex` remains the authoritative
+old-style role artifact for downstream registry, completion, handoff, and
+claim-boundary references. Child `.tex` outputs are supporting draft/control
+artifacts and should be registered when retained as source artifacts.

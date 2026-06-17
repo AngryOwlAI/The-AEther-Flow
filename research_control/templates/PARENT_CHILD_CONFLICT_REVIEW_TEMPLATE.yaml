@@ -1,0 +1,25 @@
+conflict_review_id: "PCR-RT-YYYYMMDD-NNN-001"
+task_id: "RT-YYYYMMDD-NNN"
+job_id: "AJ-RT-YYYYMMDD-NNN-001"
+parent_execution_unit_id: "parent"
+mode: "parent_child_parallel_synthesis"
+decomposition_version: "0.1.0"
+reviewed_outputs:
+  - "research_control/tasks/<task_id>/artifacts/child_phys_math_<slug>.tex"
+  - "research_control/tasks/<task_id>/artifacts/child_phys_phil_<slug>.tex"
+conflicts:
+  - conflict_id: "C1"
+    type: "mathematical"
+    severity: "blocking"
+    child_phys_math_claim: ""
+    child_phys_phil_claim: ""
+    parent_analysis: ""
+    resolution_instruction: ""
+    required_child_revision: true
+verdict: "no_conflict"
+resolution_rounds: 0
+unresolved_conflicts:
+  - conflict_id: ""
+    type: ""
+    severity: ""
+    summary: ""

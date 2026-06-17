@@ -237,6 +237,10 @@ class ResearchControlTests(unittest.TestCase):
         self.assertTrue(status["checkpoint_required_after_execution"])
         self.assertEqual(status["execution_boundary"], "one bounded AgentJob per invocation")
         self.assertEqual(status["bridge_or_fail_policy"]["policy_id"], "bridge_or_fail_loop_control_v1")
+        self.assertEqual(
+            status["parent_child_decomposition_policy"]["mode"],
+            "parent_child_parallel_synthesis",
+        )
 
     def test_checkpoint_global_sync_allowlist_is_narrow(self) -> None:
         self.assertTrue(
@@ -424,6 +428,209 @@ class ResearchControlTests(unittest.TestCase):
             expires_after="AJ-OTHER",
         )
         self.assertTrue(any("provisional role must expire after its AgentJob" in error for error in report.errors))
+
+    def parent_child_decomposition_fixture(
+        self,
+        *,
+        allowed_write_paths: list[str] | None = None,
+        expected_outputs: list[str] | None = None,
+        registry_output_paths: str | None = None,
+        child_phys_math_perspective: str = "physicist_mathematician",
+        extra_child_fields: str = "",
+    ):
+        fused = "research_control/tasks/RT-TEST/artifacts/fused_result.tex"
+        job_contract = self.strict_yaml.loads(
+            "\n".join(
+                [
+                    "allowed_write_paths:",
+                    *[
+                        f'  - "{item}"'
+                        for item in (
+                            allowed_write_paths
+                            if allowed_write_paths is not None
+                            else ["research_control/tasks/RT-TEST/**"]
+                        )
+                    ],
+                    "expected_outputs:",
+                    *[
+                        f'  - "{item}"'
+                        for item in (expected_outputs if expected_outputs is not None else [fused])
+                    ],
+                    "role_decomposition:",
+                    '  mode: "parent_child_parallel_synthesis"',
+                    '  decomposition_version: "0.1.0"',
+                    "  parent:",
+                    '    execution_unit_id: "parent"',
+                    '    perspective: "physicist_mathematician_philosopher"',
+                    "    responsibilities:",
+                    '      - "derive child role definitions from the selected execution role"',
+                    "  children:",
+                    '    - execution_unit_id: "child_phys_math"',
+                    f'      perspective: "{child_phys_math_perspective}"',
+                    '      output_path: "research_control/tasks/RT-TEST/artifacts/child_phys_math_result.tex"',
+                    '      status: "planned"',
+                    *extra_child_fields.splitlines(),
+                    '    - execution_unit_id: "child_phys_phil"',
+                    '      perspective: "physicist_philosopher"',
+                    '      output_path: "research_control/tasks/RT-TEST/artifacts/child_phys_phil_result.tex"',
+                    '      status: "planned"',
+                    "  conflict_policy:",
+                    '    review_path: "research_control/tasks/RT-TEST/artifacts/parent_conflict_review.yaml"',
+                    "    max_resolution_rounds: 2",
+                    "    require_parallel_child_revision: true",
+                    '    unresolved_conflict_status: "blocked"',
+                    "  fusion_policy:",
+                    '    fusion_notes_path: "research_control/tasks/RT-TEST/artifacts/parent_fusion_notes.md"',
+                    f'    fused_output_path: "{fused}"',
+                    "    preserve_shared_consensus: true",
+                    "    preserve_unique_contributions: true",
+                    "    preserve_unresolved_limitations: true",
+                    "    final_output_replaces_old_single_role_artifact: true",
+                    "",
+                ]
+            )
+        )
+        row = {
+            "job_id": "AJ-TEST",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "output_paths": registry_output_paths if registry_output_paths is not None else fused,
+        }
+        report = self.validator.ValidationReport()
+        self.validator.validate_parent_child_decomposition(report, row, job_contract)
+        return report
+
+    def test_parent_child_decomposition_accepts_valid_contract(self) -> None:
+        report = self.parent_child_decomposition_fixture()
+        self.assertEqual(report.errors, [])
+
+    def test_parent_child_decomposition_rejects_wrong_child_perspective(self) -> None:
+        report = self.parent_child_decomposition_fixture(
+            child_phys_math_perspective="physicist_philosopher",
+        )
+        self.assertTrue(any("child child_phys_math perspective" in error for error in report.errors))
+
+    def test_parent_child_decomposition_rejects_output_outside_allowlist(self) -> None:
+        report = self.parent_child_decomposition_fixture(
+            allowed_write_paths=["research_control/tasks/RT-OTHER/**"],
+        )
+        self.assertTrue(any("outside AgentJob allowlist" in error for error in report.errors))
+
+    def test_parent_child_decomposition_requires_fused_expected_output(self) -> None:
+        report = self.parent_child_decomposition_fixture(expected_outputs=[])
+        self.assertTrue(any("must appear in expected_outputs" in error for error in report.errors))
+
+    def test_parent_child_decomposition_rejects_authority_expansion(self) -> None:
+        report = self.parent_child_decomposition_fixture(
+            extra_child_fields='      allowed_write_paths:\n        - "ontology/**"',
+        )
+        self.assertTrue(any("may not declare authority fields" in error for error in report.errors))
+
+    def parent_child_completion_fixture(
+        self,
+        *,
+        completion_outputs: list[str] | None = None,
+        conflict_status: str = "no_conflict",
+        unresolved_conflict: str = "",
+    ):
+        fused = "research_control/tasks/RT-TEST/artifacts/fused_result.tex"
+        job_contract = self.strict_yaml.loads(
+            "\n".join(
+                [
+                    "role_decomposition:",
+                    '  mode: "parent_child_parallel_synthesis"',
+                    '  decomposition_version: "0.1.0"',
+                    "  parent:",
+                    '    execution_unit_id: "parent"',
+                    '    perspective: "physicist_mathematician_philosopher"',
+                    "  children:",
+                    '    - execution_unit_id: "child_phys_math"',
+                    '      perspective: "physicist_mathematician"',
+                    '      output_path: "research_control/tasks/RT-TEST/artifacts/child_phys_math_result.tex"',
+                    '    - execution_unit_id: "child_phys_phil"',
+                    '      perspective: "physicist_philosopher"',
+                    '      output_path: "research_control/tasks/RT-TEST/artifacts/child_phys_phil_result.tex"',
+                    "  conflict_policy:",
+                    '    review_path: "research_control/tasks/RT-TEST/artifacts/parent_conflict_review.yaml"',
+                    "    max_resolution_rounds: 2",
+                    "  fusion_policy:",
+                    f'    fused_output_path: "{fused}"',
+                    "",
+                ]
+            )
+        )
+        unresolved_lines = unresolved_conflict.splitlines() if unresolved_conflict else []
+        completion = self.strict_yaml.loads(
+            "\n".join(
+                [
+                    'validation_status: "PASS"',
+                    "output_paths:",
+                    *[
+                        f'  - "{item}"'
+                        for item in (completion_outputs if completion_outputs is not None else [fused])
+                    ],
+                    "parent_child_synthesis:",
+                    '  mode: "parent_child_parallel_synthesis"',
+                    '  decomposition_version: "0.1.0"',
+                    "  child_outputs:",
+                    '    - execution_unit_id: "child_phys_math"',
+                    '      perspective: "physicist_mathematician"',
+                    '      output_path: "research_control/tasks/RT-TEST/artifacts/child_phys_math_result.tex"',
+                    '      status: "completed"',
+                    '    - execution_unit_id: "child_phys_phil"',
+                    '      perspective: "physicist_philosopher"',
+                    '      output_path: "research_control/tasks/RT-TEST/artifacts/child_phys_phil_result.tex"',
+                    '      status: "completed"',
+                    "  conflict_review:",
+                    f'    status: "{conflict_status}"',
+                    '    review_path: "research_control/tasks/RT-TEST/artifacts/parent_conflict_review.yaml"',
+                    "    resolution_rounds: 0",
+                    "    unresolved_conflicts:",
+                    *(unresolved_lines if unresolved_lines else ['      - ""']),
+                    "  fusion:",
+                    f'    fused_output_path: "{fused}"',
+                    '    shared_consensus_summary: "Shared result."',
+                    '    unique_phys_math_contributions: "Formal pressure."',
+                    '    unique_phys_phil_contributions: "Conceptual pressure."',
+                    '    novelty_preservation_summary: "Novelty retained."',
+                    '    claim_boundary_preservation_summary: "Boundary preserved."',
+                    "",
+                ]
+            )
+        )
+        report = self.validator.ValidationReport()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            path = root / "research_control/tasks/RT-TEST/jobs/completions/AJC-AJ-TEST.yaml"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("", encoding="utf-8")
+            with mock.patch.object(self.validator, "REPO_ROOT", root):
+                self.validator.validate_parent_child_completion(
+                    report,
+                    {"job_id": "AJ-TEST"},
+                    job_contract,
+                    completion,
+                    path,
+                )
+        return report
+
+    def test_parent_child_completion_accepts_valid_pass(self) -> None:
+        report = self.parent_child_completion_fixture()
+        self.assertEqual(report.errors, [])
+
+    def test_parent_child_completion_requires_fused_output_in_completion(self) -> None:
+        report = self.parent_child_completion_fixture(completion_outputs=[])
+        self.assertTrue(any("fused output path" in error for error in report.errors))
+
+    def test_parent_child_completion_rejects_pass_with_blocking_conflict(self) -> None:
+        report = self.parent_child_completion_fixture(
+            conflict_status="unresolved_blocking",
+            unresolved_conflict=(
+                '      - type: "mathematical"\n'
+                '        severity: "blocking"\n'
+                '        conflict_id: "C1"'
+            ),
+        )
+        self.assertTrue(any("unresolved blocking conflicts" in error for error in report.errors))
 
     def validate_completion_fixture(
         self,

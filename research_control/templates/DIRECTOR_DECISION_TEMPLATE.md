@@ -23,6 +23,12 @@ role_fit_candidates:
 
 ## Selected Role
 
+## Optional Role Decomposition
+
+Use `none` unless the selected AgentJob explicitly needs internal
+parent-child perspective synthesis. If enabled, preserve one outer AgentJob and
+one execution-role record; do not create child AgentJobs.
+
 ## Claim Boundary
 
 ## Validation
