@@ -1,0 +1,31 @@
+execution_role_ref: "documentation-curator@0.9.0--RT-20260618-004"
+role_execution_kind: "registered_role"
+task_id: "RT-20260618-004"
+agent_job_id: "AJ-RT-20260618-004-001"
+record_path: "research_control/tasks/RT-20260618-004/roles/documentation-curator@0.9.0--RT-20260618-004.yaml"
+base_role_id: "documentation-curator"
+base_role_version: "0.9.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role used without permission expansion for a README Markdown syntax repair and derivative memory refresh."
+added_constraints:
+  - "Infer the human intent narrowly from the live README diff."
+  - "Repair only the malformed legacy-project link fragment."
+  - "Keep the legacy-project reference as plain text unless a future task authorizes a portable public link target."
+  - "Refresh generated registry and wiki surfaces only through bootstrap."
+  - "Do not modify canonical science sources role contracts skill contracts validators routing behavior or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "README.md"
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260618-004/**"
+requires_human_gate: false
+expires_after: "AJ-RT-20260618-004-001"
+justification: "The user reported a manual README edit; the deterministic classifier routed the live diff to Documentation Curator handling."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-18T14:31:20Z"
+updated_at: "2026-06-18T14:31:20Z"
+notes: "Execution-role record completed for README legacy-project link syntax repair."
