@@ -1,0 +1,437 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\XiR}{\Xi_X^R}
+\newcommand{\SX}{S_X}
+\newcommand{\Splus}{S_X^+}
+\newcommand{\AtlasGlue}{\mathsf{AtlasGlue}_{\mathrm{src}}^{+}}
+\newcommand{\Cov}{\mathsf{Cov}^{+}}
+\newcommand{\Ov}{\mathsf{Ov}^{+}}
+\newcommand{\Tau}{\mathsf{Tau}^{+}}
+\newcommand{\Germ}{\mathcal{G}^{+}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{+}}
+\newcommand{\Disj}{\bigsqcup}
+
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{construction}{Construction}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+\newtheorem{counterexample}{Counterexample}
+\newtheorem{status}{Status}
+\newtheorem{failure}{Failure}
+
+\title{Resp\_lc Source-Extension M\_src AtlasGlue\_src\^{}+ Source Primitive}
+\author{The AEther-Flow Research Project}
+\date{2026-06-18}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Ontology Formalizer packet for
+\texttt{RT-20260614-065}. It drafts \(\AtlasGlue\) as a source-only primitive
+interface after \texttt{RT-20260614-064} selected a
+\texttt{source\_side\_selector\_primitive} packet for the
+\(\RespLC\)-to-\(\Msrc\) line.
+
+This artifact is not an adoption of \(\AtlasGlue\), not an adoption of
+\(\Msrc\), not \(\geff\), not matter coupling, not Einstein equations, not
+benchmark evidence, not Gate Chair closure, and not completed-derivation
+evidence. It does not claim future source-extension impossibility and does not
+reject the global theory.
+
+\section{Definitions}
+
+\begin{definition}[Local response-labelled source-chart germ]
+A local response-labelled source-chart germ is a tuple
+\[
+  \Germ_i=(i,U_i,\chi_i^+,\lambda_i,\mathcal C_i),
+\]
+where \(i\) is a source patch label, \(U_i\) is a finite or locally finite
+source carrier, \(\chi_i^+:U_i\to A_i^+\) is source readout syntax,
+\(\lambda_i\) records source-only response labels inherited from \(\Splus\),
+and \(\mathcal C_i\) is the retained exact-branch certificate data. No target
+topology, target smooth chart, target metric, proper-time functional,
+empirical calibration, or benchmark solution is part of the datum.
+\end{definition}
+
+\begin{definition}[Source patch coverage relation]
+Let \(\Omega^+\) be a set of source site tokens. A source-only patch coverage
+relation is a relation
+\[
+  \Cov\subseteq I\times \Omega^+ .
+\]
+The notation \(i\Cov \omega\) means only that patch label \(i\) claims the
+source site token \(\omega\). It is not an open-set relation in a target
+topology.
+\end{definition}
+
+\begin{definition}[Source-only overlap predicate]
+For two local germs \(\Germ_i,\Germ_j\), an overlap predicate is a source-only
+relation
+\[
+  \Ov_{ij}\subseteq U_i\times U_j
+\]
+whose membership is decided from source tokens, source readout syntax,
+coverage tokens, and response-label syntax. It may not be read from a target
+manifold intersection, target atlas, metric scale, empirical calibration, or
+benchmark chart.
+\end{definition}
+
+\begin{definition}[Transition token]
+A transition token \(\tau_{ij}^+\) on an overlap is a partial bijection
+\[
+  \tau_{ij}^+:\operatorname{dom}(\tau_{ij}^+)\subseteq U_i
+  \longrightarrow
+  \operatorname{im}(\tau_{ij}^+)\subseteq U_j
+\]
+such that \((u,\tau_{ij}^+(u))\in \Ov_{ij}\) for every element in its domain.
+The token records a source-side identification instruction. It is not a
+coordinate transition map on a target smooth atlas.
+\end{definition}
+
+\begin{definition}[\(\AtlasGlue\) datum]
+An \(\AtlasGlue\) datum for a family of local germs
+\(\{\Germ_i\}_{i\in I}\) is
+\[
+  \mathcal A^+ =
+  (I,\{\Germ_i\}_{i\in I},\Omega^+,\Cov,\{\Ov_{ij}\}_{i,j\in I},
+  \{\tau_{ij}^+\}_{i,j\in I}).
+\]
+It is admissible only when it satisfies the assumptions below.
+\end{definition}
+
+\section{Assumptions}
+
+\begin{assumption}[Coverage]
+Every germ has at least one source site token, and every site token claimed
+for the packet is covered by at least one patch:
+\[
+  \forall i\in I\ \exists\omega\in\Omega^+: i\Cov\omega,
+  \qquad
+  \forall\omega\in\Omega^+\ \exists i\in I: i\Cov\omega .
+\]
+\end{assumption}
+
+\begin{assumption}[Identity and inverse]
+For every \(i\), \(\tau_{ii}^+\) is the identity on the relevant overlap
+domain. For every \(i,j\), \(\tau_{ji}^+=(\tau_{ij}^+)^{-1}\) as partial
+bijections when both sides are defined.
+\end{assumption}
+
+\begin{assumption}[Label compatibility]
+If \(\tau_{ij}^+(u)=v\), then the source readout and response-label syntax
+assigned by \(\chi_i^+\) and \(\chi_j^+\) agree under a declared source-token
+comparison rule. This rule is part of \(\AtlasGlue\) and may not be imported
+from a target chart or metric calibration.
+\end{assumption}
+
+\begin{assumption}[Double-overlap closure]
+If \((u,v)\in\Ov_{ij}\) and \(u\) lies in the declared transition domain,
+then \(\tau_{ij}^+(u)=v\). Conversely, transition-token pairs must be overlap
+pairs. This prevents a transition law from identifying non-overlapping source
+tokens by authority label alone.
+\end{assumption}
+
+\begin{assumption}[Triple-overlap cocycle]
+For all \(i,j,k\) and all \(u\) for which both sides are defined,
+\[
+  \tau_{ik}^+(u)=\tau_{jk}^+(\tau_{ij}^+(u)).
+\]
+This is a cocycle-style source-token condition. It is not a target smooth
+atlas condition.
+\end{assumption}
+
+\begin{assumption}[No-target-import screen]
+The construction of \(\Cov\), \(\Ov_{ij}\), and \(\tau_{ij}^+\) may use only
+source-side carriers, source readout syntax, response-label syntax, retained
+exact-branch source certificates, and explicit source comparison rules. It may
+not use target topology, target differentiable structure, target transition
+functions, target metric scale, proper time, empirical observer protocol,
+matter coupling, benchmark solution structure, validation status, generated
+wiki visibility, or role authority as physics evidence.
+\end{assumption}
+
+\section{Construction}
+
+\begin{construction}[Source quotient support]
+Given an admissible \(\AtlasGlue\) datum \(\mathcal A^+\), form the disjoint
+union
+\[
+  D=\Disj_{i\in I}(\{i\}\times U_i).
+\]
+Generate a relation \(\sim\) on \(D\) by
+\[
+  (i,u)\sim(j,v)\quad\text{when}\quad \tau_{ij}^+(u)=v,
+\]
+and take its reflexive, symmetric, and transitive closure. Define
+\[
+  \Qsrc = D/{\sim}.
+\]
+The maps \(q_i:U_i\to\Qsrc\), \(q_i(u)=[(i,u)]\), are source patch injections
+modulo declared overlap identifications.
+\end{construction}
+
+\begin{definition}[Source-atlas support]
+The quotient \((\Qsrc,\{q_i\}_{i\in I},\Cov,\Ov,\Tau)\) is called a
+source-atlas support. This is a draft/control support object only. It is not
+a target manifold, not a smooth atlas, and not full \(\Msrc\) adoption.
+\end{definition}
+
+\section{Theorem}
+
+\begin{theorem}[Source-only gluing theorem]
+If \(\mathcal A^+\) satisfies coverage, identity, inverse, label
+compatibility, double-overlap closure, triple-overlap cocycle, and the
+no-target-import screen, then the source quotient support \(\Qsrc\) is
+well-defined. Local germs agree on declared overlaps in \(\Qsrc\), and any
+other source support receiving all \(U_i\) while respecting the same transition
+tokens factors uniquely through \(\Qsrc\) as a source-token map.
+\end{theorem}
+
+\begin{proof}
+The disjoint union \(D\) is a source-set construction. The relation generated
+by transition-token pairs has a reflexive, symmetric, and transitive closure,
+so the quotient set \(\Qsrc=D/{\sim}\) exists as a source quotient.
+
+Identity gives \(q_i(u)=q_i(u)\). Inverse behavior makes declared pairwise
+identifications direction-independent. Double-overlap closure ensures that
+the only nontrivial generating identifications are declared source overlaps.
+Label compatibility prevents the quotient from forcing two incompatible
+source readout or response-label tokens into one source class. The triple
+cocycle guarantees that the two ways of transporting a source token across a
+triple overlap produce the same quotient class.
+
+Now let \(R\) be any source support with source maps \(r_i:U_i\to R\) such
+that \(r_j(\tau_{ij}^+(u))=r_i(u)\) whenever \(\tau_{ij}^+(u)\) is defined.
+Define \(f:\Qsrc\to R\) by \(f([(i,u)])=r_i(u)\). The transition-respecting
+condition makes this independent of representative. The equation
+\(f\circ q_i=r_i\) is immediate. Uniqueness follows because the classes
+\([(i,u)]\) are generated by the images of all \(q_i\). No target topology,
+smoothness, metric, calibration, benchmark solution, or validation authority
+is used in the construction.
+\end{proof}
+
+\section{Finite Source-Only Witness}
+
+\begin{example}[Three-patch source witness]
+Let \(I=\{X,Y,Z\}\). Let the source site tokens be
+\[
+  \Omega^+=\{\omega_A,\omega_B,\omega_C,\omega_D\}.
+\]
+Use carriers
+\[
+  U_X=\{x_A,x_B\},\quad
+  U_Y=\{y_B,y_C\},\quad
+  U_Z=\{z_B,z_D\}.
+\]
+Let source readout syntax assign
+\[
+  \chi_X^+(x_A)=A,\quad \chi_X^+(x_B)=B,\quad
+  \chi_Y^+(y_B)=B,\quad \chi_Y^+(y_C)=C,\quad
+  \chi_Z^+(z_B)=B,\quad \chi_Z^+(z_D)=D.
+\]
+Let coverage be
+\[
+  X\Cov\omega_A,\ X\Cov\omega_B,\quad
+  Y\Cov\omega_B,\ Y\Cov\omega_C,\quad
+  Z\Cov\omega_B,\ Z\Cov\omega_D.
+\]
+Declare overlaps only at the shared \(B\)-token:
+\[
+  \tau_{XY}^+(x_B)=y_B,\quad
+  \tau_{YZ}^+(y_B)=z_B,\quad
+  \tau_{XZ}^+(x_B)=z_B,
+\]
+with identity and inverse transitions added.
+\end{example}
+
+The triple cocycle holds on \(x_B\):
+\[
+  \tau_{XZ}^+(x_B)=z_B=\tau_{YZ}^+(\tau_{XY}^+(x_B)).
+\]
+The quotient has four source classes:
+\[
+  [x_A],\quad [x_B]=[y_B]=[z_B],\quad [y_C],\quad [z_D].
+\]
+This is a nontrivial finite source-only gluing witness. It uses only finite
+source tokens and transition-token identifications.
+
+\section{Counterexample}
+
+\begin{counterexample}[Triple-overlap failure]
+Keep the finite witness above but replace the direct transition
+\(\tau_{XZ}^+(x_B)=z_B\) by
+\[
+  \tau_{XZ}^+(x_B)=z_D .
+\]
+The two-step path through \(Y\) still gives
+\[
+  \tau_{YZ}^+(\tau_{XY}^+(x_B))=z_B.
+\]
+Thus
+\[
+  \tau_{XZ}^+(x_B)\ne
+  \tau_{YZ}^+(\tau_{XY}^+(x_B)).
+\]
+The triple cocycle fails.
+\end{counterexample}
+
+If one nevertheless closes the generated relation transitively, the same
+source token \(x_B\) forces both \(z_B\) and \(z_D\) into its quotient class.
+But \(z_B\) carries source syntax \(B\) and \(z_D\) carries source syntax
+\(D\). Label compatibility then fails. Therefore no label-preserving
+source-atlas support is produced by this defective \(\AtlasGlue\) datum.
+
+\section{Finite-Variation Stability}
+
+\begin{definition}[Strict source-isomorphic finite variation]
+A strict source-isomorphic finite variation of an \(\AtlasGlue\) datum is a
+family of bijections \(\sigma_i:U_i\to U_i'\), a site-token bijection
+\(\sigma_\Omega:\Omega^+\to\Omega^{+\prime}\), and readout-token bijections
+that preserve coverage, overlap membership, label compatibility, and
+transition tokens:
+\[
+  \sigma_j(\tau_{ij}^+(u))=\tau_{ij}^{+\prime}(\sigma_i(u)).
+\]
+\end{definition}
+
+\begin{lemma}[Strict variation stability]
+An admissible \(\AtlasGlue\) datum remains admissible under strict
+source-isomorphic finite variation, and its quotient source support is
+isomorphic to the varied quotient support.
+\end{lemma}
+
+\begin{proof}
+Each assumption is written as equality, membership, bijectivity, or
+compatibility over source tokens. The variation maps preserve exactly those
+relations. Therefore coverage, overlap, identity, inverse, label
+compatibility, double-overlap closure, and triple cocycle transfer to the
+varied datum. The map
+\[
+  [(i,u)]\mapsto[(i,\sigma_i(u))]
+\]
+is well-defined by transition preservation and has inverse induced by the
+inverse bijections. Hence the source supports are isomorphic.
+\end{proof}
+
+\begin{failure}[Arbitrary finite-variation robustness is not proved]
+The broader finite-variation burden is not discharged. Arbitrary finite
+perturbations can delete an overlap, add an incompatible overlap, or replace
+\(\tau_{XZ}^+(x_B)=z_B\) by \(\tau_{XZ}^+(x_B)=z_D\) as in the
+counterexample. Such perturbations can break cocycle or label compatibility.
+Therefore this packet proves only strict source-isomorphic stability and
+explicitly fails to prove open-ended finite-variation robustness.
+\end{failure}
+
+\section{Source-Extension Classification}
+
+\begin{center}
+\begin{tabular}{p{0.34\linewidth}p{0.56\linewidth}}
+\hline
+Category & Classification for this packet \\
+\hline
+Derivable from current ontology & Not shown. The prior packets identify
+\(\AtlasGlue\) as missing. \\
+Conservative definitional extension & Candidate only relative to an expanded
+source signature containing local germs, coverage, overlap, and transition
+tokens. \\
+Genuinely new ontology primitive & Would require later protected adoption if
+promoted beyond draft/control. \\
+Forbidden target-GR import & Not detected as written in this formalization,
+because the packet uses only finite source carriers, source labels, source
+relations, and partial bijections. A separate Smuggling Auditor task remains
+required. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Rejection Screens}
+
+This draft primitive rejects the following as inputs to \(\Cov\), \(\Ov\), or
+\(\Tau\): target topology, target smooth atlas, target chart transition
+functions, metric scale, proper time, empirical calibration, benchmark
+solution structure, matter coupling, Einstein-equation structure, validation
+status, generated derivative visibility, and role-authority labels.
+
+These screens are formal requirements, not a completed smuggling audit.
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Retained only as exact-branch source-localization input; no robustness promotion is supplied. \\
+Resp\_lc & Uses adopted \(\XiR\) only as admissible source-extension data in \(\Splus\); the old \(\SX\)-only obstruction remains valid. \\
+M\_src & \(\AtlasGlue\) is drafted as a source-only primitive interface with finite witness and counterexample; full \(\Msrc\) remains unadopted and requires audit and stress. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; response-token semantics remain non-coupling data. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Strict source-isomorphic stability is proved; arbitrary finite-variation robustness explicitly fails here. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No closure or suspension verdict is supplied. \\
+Current route freeze or hard-fail status & Not frozen; the next route is audit of the draft \(\AtlasGlue\) primitive. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_atlas\_glue\_source\_primitive.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_atlas\_glue\_source\_primitive.yaml}.
+\end{itemize}
+The conflict review is
+\texttt{parent\_conflict\_review\_resp\_lc\_m\_src\_atlas\_glue\_source\_primitive.yaml}
+and found no blocking conflict. The fusion notes are
+\texttt{parent\_fusion\_notes\_resp\_lc\_m\_src\_atlas\_glue\_source\_primitive.md}.
+
+\section{Conclusion}
+
+\(\AtlasGlue\) can be drafted as a source-only finite-combinatorial primitive
+interface. The draft supplies a gluing theorem under explicit hypotheses, a
+nontrivial finite source witness, a counterexample, and a limited strict
+finite-variation stability theorem. It does not discharge full finite
+variation robustness and does not adopt \(\Msrc\). The logical next route is
+one bounded Smuggling Auditor task.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{handoff0106}
+The AEther-Flow Research Project. (2026, June 18). \emph{Handoff 0106}
+[Internal research-control handoff].
+
+\bibitem{selector}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension M\_src theoretical continuation selector AtlasGlue decision}
+[Internal research-control artifact].
+
+\bibitem{refuter}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension M\_src bridge Refuter stress test} [Internal
+research-control artifact].
+
+\end{thebibliography}
+
+\end{document}
