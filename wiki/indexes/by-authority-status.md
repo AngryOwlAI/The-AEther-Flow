@@ -230,6 +230,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-TESTS` `wiki/markdown/md-readme-tests.md`
 - `WIKI-MD-README-TEX-SHARED` `wiki/markdown/md-readme-tex-shared.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN` `wiki/markdown/md-research-control-design-documentation-curator-corpus-migration-plan.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `wiki/markdown/md-research-control-design-documentation-curator-publication-process.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `wiki/markdown/md-research-control-design-documentation-curator-visual-atlas-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `wiki/markdown/md-research-control-design-github-facing-explainer-contract.md`
@@ -427,6 +428,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-RESEARCH-CONTROL` `research_control/README.md`
 - `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN` `research_control/design/documentation_curator_corpus_migration_plan.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `research_control/design/documentation_curator_publication_process.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `research_control/design/documentation_curator_visual_atlas_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `research_control/design/github_facing_explainer_contract.md`

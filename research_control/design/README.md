@@ -8,6 +8,7 @@ research-control behavior.
 ## Current Subjects
 
 - Director-led agent architecture decisions.
+- Documentation Curator publication process and phased corpus migration.
 - GitHub-facing explainer contract.
 - GR derivation burden map.
 - HTML explainer depth and flexible presentation contracts.
@@ -31,4 +32,3 @@ Design notes in this folder are project-control authority when registered as
 such. They may affect future task routing, documentation contracts, or
 validation expectations. Do not edit them as ordinary copy unless the owning
 task permits design-note changes.
-
