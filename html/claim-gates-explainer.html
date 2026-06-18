@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-CLAIM-GATES-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="1c6237adbfb69801d5eaaec863e9d5ecd156e01bc6eafecd84f3894ac5230162">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Claim Gates, Negative Results, And Freeze Criteria</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5a6470;
+      --paper: #f5f7f2;
+      --panel: #ffffff;
+      --line: #d9ded3;
+      --soft: #eef2ea;
+      --blue: #2d6f8f;
+      --green: #35745c;
+      --amber: #a76521;
+      --red: #9a4a41;
+      --violet: #5f5a92;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.56;
+    }
+    a {
+      color: inherit;
+    }
+    header {
+      min-height: 70vh;
+      display: grid;
+      align-items: end;
+      padding: clamp(28px, 6vw, 76px);
+      color: #fffdf7;
+      background:
+        linear-gradient(122deg, rgba(23, 33, 43, .96), rgba(53, 116, 92, .9)),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .12) 0 1px, transparent 1px 44px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .1) 0 1px, transparent 1px 44px);
+    }
+    .hero {
+      max-width: 980px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.35rem, 5.2vw, 5rem);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 800px;
+      margin: 24px 0 0;
+      font-size: clamp(1.04rem, 2vw, 1.3rem);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px clamp(18px, 4vw, 42px) 76px;
+    }
+    section {
+      margin: 56px 0;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.52rem, 3vw, 2.25rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 830px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .94em;
+      background: rgba(23, 33, 43, .08);
+      padding: .08em .25em;
+      overflow-wrap: anywhere;
+    }
+    .notice {
+      max-width: 900px;
+      border-left: 5px solid var(--amber);
+      background: #fff8ec;
+      padding: 18px 20px;
+      margin-top: 22px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
+    }
+    .state-model {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 26px;
+    }
+    .state {
+      min-height: 210px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .state strong {
+      color: var(--blue);
+      font-size: 1.02rem;
+    }
+    .chip {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 8px;
+      border: 1px solid currentColor;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .proposal {
+      color: var(--violet);
+    }
+    .test {
+      color: var(--blue);
+    }
+    .freeze {
+      color: var(--red);
+    }
+    .gate {
+      color: var(--amber);
+    }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .matrix th,
+    .matrix td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 14px;
+    }
+    .matrix th {
+      background: var(--soft);
+    }
+    .comparison,
+    .summary,
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .panel,
+    .source {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      overflow-wrap: anywhere;
+    }
+    .panel.safe {
+      border-color: #a6cabd;
+      background: #eff8f4;
+    }
+    .panel.unsafe {
+      border-color: #dfb6b0;
+      background: #fff2f0;
+    }
+    ol {
+      max-width: 840px;
+    }
+    li + li {
+      margin-top: 8px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding-top: 24px;
+      margin-top: 64px;
+      font-size: .92rem;
+    }
+    @media (max-width: 980px) {
+      .state-model {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .comparison,
+      .summary,
+      .source-list {
+        grid-template-columns: 1fr;
+      }
+      .matrix {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+    @media (max-width: 620px) {
+      header {
+        min-height: 64vh;
+      }
+      .state-model {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Phase 2B Claim Boundaries</p>
+      <h1>Claim Gates, Negative Results, And Freeze Criteria</h1>
+      <p class="lede">A source-first map of how proposals, audits, refutations, completions, handoffs, freeze labels, and human gates prevent draft/control work from becoming public overclaim.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>Claim Control, Not Claim Promotion</h2>
+      <p>Claim gates keep the project precise. A bounded packet can propose, fail, freeze, or route future work without becoming a public physics verdict.</p>
+      <div class="notice">
+        This generated noncanonical reader surface explains claim-control machinery. It does not create a claim boundary, issue a Gate Chair verdict, promote a benchmark, reject the global ontology, change role authority, or treat validator pass state as scientific evidence.
+      </div>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a href="#lifecycle">Lifecycle</a>
+        <a href="#negative-results">Negative results</a>
+        <a href="#scope-table">Scope table</a>
+        <a href="#claims">Allowed claims</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#sources">Source materials</a>
+      </nav>
+    </section>
+
+    <section id="lifecycle">
+      <h2>Claim Lifecycle State Model</h2>
+      <p>Each state narrows the permissible summary. It does not broaden scientific authority.</p>
+      <div class="state-model" aria-label="Claim lifecycle state model">
+        <div class="state">
+          <strong>Proposal</strong>
+          <span>A bounded packet names a construction, witness, audit, selector, or review target.</span>
+          <span class="chip proposal">draft/control</span>
+        </div>
+        <div class="state">
+          <strong>Audit</strong>
+          <span>A source-side screen checks for hidden target imports, authority laundering, or missing assumptions.</span>
+          <span class="chip test">source screen</span>
+        </div>
+        <div class="state">
+          <strong>Refutation Or Stress</strong>
+          <span>A reviewer tries to expose nonuniqueness, fragility, underdetermination, or missing primitives.</span>
+          <span class="chip test">adversarial</span>
+        </div>
+        <div class="state">
+          <strong>Completion</strong>
+          <span>One AgentJob records outputs, validators, claim boundaries, and next-route evidence.</span>
+          <span class="chip proposal">receipt</span>
+        </div>
+        <div class="state">
+          <strong>Handoff</strong>
+          <span>The next bounded route is named for future work.</span>
+          <span class="chip proposal">not executed</span>
+        </div>
+        <div class="state">
+          <strong>Freeze</strong>
+          <span>A repeated-burden or scoped-obstruction route is preserved so it is not repeated casually.</span>
+          <span class="chip freeze">scoped</span>
+        </div>
+        <div class="state">
+          <strong>Human Gate</strong>
+          <span>Protected authority such as Gate Chair approval, benchmark promotion, or ontology adoption remains human-gated.</span>
+          <span class="chip gate">protected</span>
+        </div>
+        <div class="state">
+          <strong>Public Summary</strong>
+          <span>A reader-facing explanation must stay inside the evidence and claim-boundary record.</span>
+          <span class="chip proposal">noncanonical</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="negative-results">
+      <h2>Negative Results Preserve Knowledge</h2>
+      <p>A negative result is useful because it makes future routing sharper. It can show that a source tuple underdetermines a selector, that a bridge attempt needs a missing primitive, or that a packet needs audit, stress, redesign, or human-gated adoption.</p>
+      <div class="comparison">
+        <div class="panel safe">
+          <h3>What It Can Say</h3>
+          <p>A specific packet did not discharge its burden under the stated assumptions, source tuple, and no-target-import rules.</p>
+        </div>
+        <div class="panel unsafe">
+          <h3>What It Cannot Say</h3>
+          <p>The whole ontology is rejected, future source extensions are impossible, or Gate Chair approval has been issued.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="scope-table">
+      <h2>Scoped Obstruction Versus Global No-Go</h2>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Phrase type</th>
+            <th>Safe reading</th>
+            <th>Unsafe inflation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Scoped obstruction</td>
+            <td>A specific route failed under stated assumptions and source restrictions.</td>
+            <td>The entire ontology is false.</td>
+          </tr>
+          <tr>
+            <td>Freeze label</td>
+            <td>A route should not be repeated without new payload, redesign, or gate action.</td>
+            <td>No future route can work.</td>
+          </tr>
+          <tr>
+            <td>Refuter stress result</td>
+            <td>A construction showed fragility, nonuniqueness, or dependency on missing data.</td>
+            <td>The project has no valid physics program.</td>
+          </tr>
+          <tr>
+            <td>Validator pass</td>
+            <td>The repository control checks passed.</td>
+            <td>Physics was proved.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The burden map's candidate label <code>NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION</code> is scoped. It does not reject the entire ontology or prove future source-extension impossibility.</p>
+    </section>
+
+    <section id="claims">
+      <h2>Allowed And Forbidden Claim Forms</h2>
+      <p>The claim boundary registry repeatedly permits narrow transaction statements while forbidding promotion language.</p>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Allowed form</th>
+            <th>Forbidden form</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>This task migrated a public documentation page.</td>
+            <td>This documentation page certifies physics status.</td>
+          </tr>
+          <tr>
+            <td>This packet preserves a scoped obstruction.</td>
+            <td>The theory is globally rejected.</td>
+          </tr>
+          <tr>
+            <td>This bridge attempt names a missing primitive.</td>
+            <td><code>M_src</code>, <code>g_eff</code>, matter coupling, or Einstein equations are derived.</td>
+          </tr>
+          <tr>
+            <td>A validator passed for a bounded transaction.</td>
+            <td>Validator success is scientific evidence.</td>
+          </tr>
+          <tr>
+            <td>Gate Chair is a human-gated role.</td>
+            <td>Generated docs or AgentJobs can issue a Gate Chair verdict.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="gate-chair">
+      <h2>Gate Chair Remains Human-Gated</h2>
+      <p><code>registries/AGENT_ROLE_REGISTRY.csv</code> records <code>gate-chair@0.1.0</code> as human-gated. A Documentation Curator page, validator pass, screenshot, completion record, or generated derivative cannot execute that gate.</p>
+      <p>The correct summary for protected decisions is narrow: if the explicit human-gated record is absent, the gate has not fired.</p>
+    </section>
+
+    <section id="checklist">
+      <h2>Source-First Summary Checklist</h2>
+      <ol>
+        <li>Identify the exact burden the packet attempted to discharge.</li>
+        <li>Identify the source tuple, primitive, extension, construction, or route tested.</li>
+        <li>Classify the result as proposal, audit, stress test, completion, handoff, freeze, or gate.</li>
+        <li>Read the claim boundary before summarizing status.</li>
+        <li>Preserve qualifiers such as <code>draft/control</code>, <code>source-only</code>, <code>source-extension data</code>, <code>local</code>, <code>exact-branch</code>, and <code>human-gated</code>.</li>
+      </ol>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <p>Reader claims should be checked against the tracked source paths below.</p>
+      <div class="source-list">
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Repository authority hierarchy].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/design/gr_derivation_burden_map.md">research_control/design/gr_derivation_burden_map.md</code> [GR derivation burden map].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">registries/CLAIM_BOUNDARY_REGISTRY.csv</code> [Claim boundary registry].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/AGENT_ROLE_REGISTRY.csv">registries/AGENT_ROLE_REGISTRY.csv</code> [Agent role registry].</div>
+      </div>
+    </section>
+
+    <section id="summaries">
+      <h2>Safe And Unsafe Summaries</h2>
+      <div class="summary">
+        <div class="panel safe">
+          <h3>Safe</h3>
+          <p>AEther-Flow preserves proposals, audits, refutations, stress tests, completions, handoffs, freeze labels, and human gates so each claim stays scoped to its source evidence and authority boundary.</p>
+        </div>
+        <div class="panel unsafe">
+          <h3>Unsafe</h3>
+          <p>A frozen route proves the whole theory false, validators prove physics, generated documentation can promote claims, or Gate Chair approval has occurred without an explicit human-gated record.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Derived from <code>markdown/html-explainer-specs/claim-gates-explainer.md</code>. Related GitHub Markdown: <code>github-facing/claim-gates-explainer.md</code>. Publication brief: <code>markdown/publication-briefs/claim-gates.publication-brief.md</code>. Authority status: generated noncanonical reader surface.</p>
+    </footer>
+  </main>
+</body>
+</html>

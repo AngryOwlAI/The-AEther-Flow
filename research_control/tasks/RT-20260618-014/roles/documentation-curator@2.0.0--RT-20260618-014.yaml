@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@2.0.0--RT-20260618-014"
+role_execution_kind: "registered_role"
+task_id: "RT-20260618-014"
+agent_job_id: "AJ-RT-20260618-014-001"
+record_path: "research_control/tasks/RT-20260618-014/roles/documentation-curator@2.0.0--RT-20260618-014.yaml"
+base_role_id: "documentation-curator"
+base_role_version: "2.0.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role used without permission expansion for Phase 2B claim-gates migration."
+added_constraints:
+  - "Migrate only the Phase 2B claim-gates page."
+  - "Keep Phase 3A research-agent workflow and Director/AgentJob lifecycle pages out of this packet."
+  - "Preserve draft/control source-only source-extension local exact-branch human-gated and noncanonical qualifiers."
+  - "Keep generated HTML and GitHub-facing Markdown noncanonical."
+  - "Do not modify canonical science sources role authority Gate Chair status or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "html/claim-gates-explainer.html"
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260618-014/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/html/**"
+requires_human_gate: false
+expires_after: "AJ-RT-20260618-014-001"
+justification: "The user explicitly requested Phase 2B after Phase 2A completion recommended seeking explicit approval."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-18T23:41:27Z"
+updated_at: "2026-06-18T23:55:00Z"
+notes: "Execution-role record completed for Phase 2B claim-gates migration."

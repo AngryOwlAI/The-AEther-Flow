@@ -10,6 +10,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `github-facing/aether-flow-ontology-explainer.md`
 - `MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `github-facing/aether-flow-physics-program-explainer.md`
+- `MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `github-facing/claim-gates-explainer.md`
 - `MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `github-facing/exact-gr-benchmark-boundary-explainer.md`
 - `MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `github-facing/gr-derivation-roadmap-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
@@ -47,12 +48,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `html/aether-flow-ontology-explainer.html`
 - `HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `html/aether-flow-physics-program-explainer.html`
+- `HTML-CLAIM-GATES-EXPLAINER` `html/claim-gates-explainer.html`
 - `HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `html/exact-gr-benchmark-boundary-explainer.html`
 - `HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `html/gr-derivation-roadmap-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - `MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `markdown/html-explainer-specs/aether-flow-physics-program-explainer.md`
+- `MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `markdown/html-explainer-specs/claim-gates-explainer.md`
 - `MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - `MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
@@ -68,6 +71,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AETHER-FLOW-INTERPRETATION-LEMEN` `ontology/aether_flow_interpretation-lemen.md`
 - `MD-AETHER-FLOW-ONTOLOGY-PUBLICATION-BRIEF` `markdown/publication-briefs/aether-flow-ontology.publication-brief.md`
 - `MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF` `markdown/publication-briefs/aether-flow-physics-program.publication-brief.md`
+- `MD-CLAIM-GATES-PUBLICATION-BRIEF` `markdown/publication-briefs/claim-gates.publication-brief.md`
 - `MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md`
 - `MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
@@ -82,6 +86,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `markdown/publication-briefs/source-authority.publication-brief.md`
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
+- `WIKI-HTML-CLAIM-GATES-EXPLAINER` `wiki/html/html-claim-gates-explainer.md`
 - `WIKI-HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/html/html-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/html/html-gr-derivation-roadmap-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
@@ -92,9 +97,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
+- `WIKI-MD-CLAIM-GATES-PUBLICATION-BRIEF` `wiki/markdown/md-claim-gates-publication-brief.md`
 - `WIKI-MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-ontology-explainer.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-physics-program-explainer.md`
+- `WIKI-MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-github-facing-claim-gates-explainer.md`
 - `WIKI-MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-github-facing-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-github-facing-project-overview-explainer.md`
@@ -102,6 +109,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `wiki/markdown/md-gr-derivation-roadmap-publication-brief.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-physics-program-explainer.md`
+- `WIKI-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-html-spec-claim-gates-explainer.md`
 - `WIKI-MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-html-spec-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
