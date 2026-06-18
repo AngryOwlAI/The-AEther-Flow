@@ -114,47 +114,21 @@ Project-system improvement is tracked separately from physics continuation. Docu
 
 ## Human Visual Explainers
 
-Tracked HTML explainers under `html/` are human-only generated derivatives. Each page is backed by a Markdown source spec under `markdown/html-explainer-specs/`, and the Markdown spec plus registries define the source basis.
+Tracked HTML explainers under `html/` are human-only generated derivatives.
+Each retained public page must have a publication brief under
+`markdown/publication-briefs/`, a Markdown source spec under
+`markdown/html-explainer-specs/`, and a row in
+`registries/PUBLICATION_BRIEF_REGISTRY.csv`. The publication brief registry is
+the sole active control surface for public HTML and GitHub-facing Markdown
+publication pages.
 
-The overview explainer is the front-facing hub for a source-backed research
-atlas. It groups navigation by reader need: understand the research idea,
-understand the agent workflow, understand authority and memory, and run or
-regenerate the system. The tracked pages use deep-first
-progressive-disclosure, flexible presentation profiles, required
-source-backed content blocks, visible source
-materials sections, and source-spec claim-boundary metadata. Build-time
-rendered diagrams are used where they fit the subject. Those interactions help
-readers explore the project; they do not make generated HTML authoritative.
+For GitHub browsing, start with the reviewed publication pages below. They are
+source-backed reader surfaces, but they are generated noncanonical derivatives:
+they are non-authoritative for physics claims, control decisions, routing,
+validator behavior, and registry authority.
 
-For GitHub browsing, start with the root-level
-`github-facing` directory. Those pages are derived, source-backed Markdown
-explainers generated from the registered explainer specs, not body-only spec
-mirrors. This layer is the GitHub-readable orientation surface for humans and
-external AI, but it is generated noncanonical: it is non-authoritative for
-physics claims, control decisions, routing, validator behavior, and registry
-authority.
-
-Teaching-enriched explainers may also use curated Q&A packets under
-`markdown/teaching-packets/`. Those packets are built from Documentation
-Student questions and Documentation Teacher answers inside a Documentation
-Curator task, then distilled into source specs, tracked HTML, and
-GitHub-facing Markdown. They are registered explanatory support only: they do
-not override source materials, registries, schemas, role contracts, validators,
-routing, claim gates, or generated-output boundaries.
-
-- [Project Overview](github-facing/project-overview-explainer.md): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
-- [Æther-flow Ontology](github-facing/aether-flow-ontology-explainer.md): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
-- [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, optional internal parent-child synthesis, validation, completions, registries, and handoffs.
-- [Role Routing](github-facing/role-routing-explainer.md): how roles are selected, constrained, overlaid, kept one-job provisional, or internally decomposed without authority expansion.
-- [Claim Gates](github-facing/claim-gates-explainer.md): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
-- [Source Authority](github-facing/source-authority-explainer.md): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
-- [Research-Control System](github-facing/research-control-system-explainer.md): the validation-governance overview for documentation impact, project-system improvement, parent-child completion checks, source-backed HTML, Mermaid parity, and diff gates.
-- [Roles And Skills](github-facing/roles-and-skills-explainer.md): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
-- [Memory System](github-facing/memory-system-explainer.md): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
-- [Technical Requirements](github-facing/technical-requirements-explainer.md): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.
-- [GR Derivation Roadmap](github-facing/gr-derivation-roadmap-explainer.md): milestone burdens, Distance-to-GR ledger state, selector routing, freeze criteria, source extension, and finite toy metric-response scaffolding.
-- [Project-System Improvement](github-facing/project-system-improvement-explainer.md): classifier, advisory resolver, signal registries, one bounded maintenance AgentJob, documentation impact, regeneration, and validation gates.
-- [Documentation Curator Teaching Loop](github-facing/documentation-curator-teaching-loop-explainer.md): subject-first Curator authority, Student questions, Teacher answers, curated Q&A packets, derivative synchronization, and advisory format boundaries.
+- [Project Overview](github-facing/project-overview-explainer.md): a front-door orientation to the project missions, source spine, authority boundaries, and first reading path.
+- [Source Authority](github-facing/source-authority-explainer.md): a boundary map for TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local` retrieval surfaces.
 
 ---
 
@@ -262,33 +236,17 @@ ontology extension, or promote any derivation claim.
 
 Registered Markdown sources include front-door docs, scoped agent guidance,
 role contracts, schema contracts, skill contracts, key research-control design
-notes, ontology-adjacent explanatory notes, and Markdown source specs for
-generated HTML explainers. Curated teaching Q&A packets are registered as
-noncanonical explanatory support.
+notes, ontology-adjacent explanatory notes, publication briefs, and Markdown
+source specs for generated HTML explainers.
 
 Tracked HTML explainers are human-only generated derivatives. A tracked
-`html/*.html` file is valid only when it is backed by a registered Markdown
-source spec under `markdown/html-explainer-specs/` with `title`, `purpose`,
-`audience`, `output_path`, `renderer_skill`, `source_materials`,
-`claim_boundary`, `human_visual_only: true`, `explainer_kind`,
-`interaction_model`, `analysis_depth`, `required_controls`,
-`presentation_profile`, `layout_intent`, and `required_content_blocks`.
-Modify the spec first, then regenerate the HTML
-output. The required source control is `source_materials_section`; legacy
-`source_drilldowns` and `claim_boundary_toggle` controls are optional only when
-a spec explicitly declares them.
-Each tracked explainer must open with a source-backed `subject_summary` block
-titled `Summary of [Subject]`, using prose plus visible source-path chips to
-explain the subject's function, role, project value, and declared grounding
-materials before the table of contents.
-Non-summary explainer blocks are expected to render as completed
-source-backed documentation, not source-spec instructions. Use
-`scripts/spec_depth_lint.py --root .` or `make validate-html-explainers` as an
-advisory depth check after regenerating tracked HTML explainers.
-For teaching-enabled explainers, also run
-`scripts/validate_teaching_qa.py --root .`; the validator checks packet
-source binding, two-round Student/Teacher structure, boundary notes, source
-paths, and synthesis sections.
+`html/*.html` file is valid only when it is listed in
+`registries/PUBLICATION_BRIEF_REGISTRY.csv` and backed by the row's publication
+brief and Markdown source spec. Modify the publication brief and spec first,
+then regenerate or replace the HTML output in the same bounded transaction.
+Use `scripts/validate_publication_process.py --root . --strict` to verify
+source grounding, authority boundaries, no-network HTML, review evidence, and
+absence of orphan public explainer outputs.
 
 Bootstrap or refresh the memory system:
 
@@ -360,7 +318,7 @@ Decision vocabulary:
 | `improve-project-system` | Repair or clarify the research system itself: roles, schemas, validators, checkpoint gates, memory tooling, skill guidance, docs, or generated-doc pipelines. | Uses `.codex/skills/improve-project-system/SKILL.md`; may resolve one signal, one classifier result, or one bounded project-system AgentJob. | Does not perform physics derivation, promote claims, or edit canonical science sources. |
 | `user-modified-project` | Integrate human-made local repository edits after a brief intent note. | Uses `.codex/skills/user-modified-project/SKILL.md`; classifies the diff, routes to the correct controlled workflow, refreshes registry/wiki derivatives through bootstrap, and checkpoints only after validation. | Does not bypass `continue-research`, `improve-project-system`, claim gates, generated-surface rules, or AgentJob allowlists. |
 | Project-System Director | A project-system boundary or routing question must be resolved before work proceeds. | Creates a project-system Director Decision Record and selects one bounded non-scientific AgentJob. | Does not execute the selected job or expand role authority by convention. |
-| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, teaching Q&A packets, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, `markdown/teaching-packets/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML or teaching packets as independent authority. |
+| Documentation Curator | Publication briefs, explanatory documentation, documentation registries, documentation-source specs, source-backed human HTML explainers, GitHub-facing Markdown derivatives, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, publication briefs, `markdown/html-explainer-specs/*.md`, spec-backed `html/*.html` derivatives, GitHub-facing Markdown, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or generated public docs as independent authority. |
 | Project-Control Maintainer | Skill contracts, role contracts, schema contracts, control registries, or control-marked mixed Markdown need functional maintenance. | Edits allowed control markdown and project-control contracts under one AgentJob allowlist. | Does not edit explanatory-only sections unless a task overlay explicitly grants `explanatory_markdown` permission. |
 | Validator Engineer | Deterministic validator, checkpoint gate, or test behavior is missing, unclear, or incorrect. | Edits allowed validator scripts, tests, documented validator contracts, and registry rows. | Does not use model judgment as a validator substitute or decide human policy questions. |
 | Memory-System Maintainer | Source-first memory, wiki, registry, Obsidian, query, or derivative metadata tooling needs maintenance. | Edits allowed memory-system scripts, registry generation rules, query tooling, and related skill documentation. | Does not make generated artifacts authoritative or alter claim-promotion semantics. |

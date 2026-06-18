@@ -44,11 +44,11 @@ Documentation publication validation modes:
 .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only --strict-docs
 ```
 
-These modes run the active publication-process validator and teaching Q&A
-validator. They check source grounding, authority boundaries, no-network public
-HTML, migration status, publication brief conformance, and known
-anti-template failures. They do not promote generated artifacts to authority or
-replace human-facing editorial review.
+These modes run the active publication-process validator. They check source
+grounding, authority boundaries, no-network public HTML, publication brief
+conformance, orphan public explainer files, and known anti-template failures.
+They do not promote generated artifacts to authority or replace human-facing
+editorial review.
 
 Clean ignored local noise from canonical lanes:
 

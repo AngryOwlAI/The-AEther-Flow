@@ -21,7 +21,6 @@ from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
 
 
 BRIEF_REGISTRY = "registries/PUBLICATION_BRIEF_REGISTRY.csv"
-TOPIC_REGISTRY = "registries/EXPLAINER_TOPIC_REGISTRY.csv"
 REQUIRED_BRIEF_COLUMNS = {
     "brief_id",
     "page_title",
@@ -39,23 +38,6 @@ REQUIRED_BRIEF_COLUMNS = {
     "before_after_review_path",
     "owner_role",
     "approval_required_before_corpus_migration",
-    "notes",
-}
-REQUIRED_TOPIC_COLUMNS = {
-    "topic_id",
-    "topic_name",
-    "required",
-    "status",
-    "document_family",
-    "source_spec_path",
-    "github_markdown_path",
-    "html_output_path",
-    "publication_brief_id",
-    "migration_status",
-    "source_bundle",
-    "output_surfaces",
-    "owner_role",
-    "claim_boundary_id",
     "notes",
 }
 BRIEF_FRONTMATTER_FIELDS = {
@@ -208,33 +190,20 @@ def has_authority_boundary(text: str) -> bool:
     return any(term in lowered for term in AUTHORITY_TERMS)
 
 
-def validate_registry_shapes(root: Path, report: Report) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+def validate_registry_shapes(root: Path, report: Report) -> list[dict[str, str]]:
     brief_rows = read_csv(root, BRIEF_REGISTRY)
-    topic_rows = read_csv(root, TOPIC_REGISTRY)
     if not brief_rows:
         report.error(f"{BRIEF_REGISTRY} is missing or empty")
     elif REQUIRED_BRIEF_COLUMNS - set(brief_rows[0]):
         missing = ", ".join(sorted(REQUIRED_BRIEF_COLUMNS - set(brief_rows[0])))
         report.error(f"{BRIEF_REGISTRY} missing columns: {missing}")
-    if not topic_rows:
-        report.error(f"{TOPIC_REGISTRY} is missing or empty")
-    elif REQUIRED_TOPIC_COLUMNS - set(topic_rows[0]):
-        missing = ", ".join(sorted(REQUIRED_TOPIC_COLUMNS - set(topic_rows[0])))
-        report.error(f"{TOPIC_REGISTRY} missing columns: {missing}")
-    return brief_rows, topic_rows
+    return brief_rows
 
 
-def validate_topic_migration(topic_rows: list[dict[str, str]], report: Report) -> None:
-    for row in topic_rows:
-        topic_id = row.get("topic_id", "").strip()
-        status = row.get("migration_status", "").strip()
-        if status not in ALLOWED_MIGRATION_STATUSES:
-            report.error(f"{topic_id}: invalid migration_status {status!r}")
-        if status in MIGRATED_STATUSES and not row.get("publication_brief_id", "").strip():
-            report.error(f"{topic_id}: migrated topic missing publication_brief_id")
-        if row.get("owner_role", "").strip() != "documentation-curator":
-            report.error(f"{topic_id}: owner_role must be documentation-curator")
-        report.count("checked_topics")
+def validate_retired_topic_registry_absent(root: Path, report: Report) -> None:
+    retired_path = root / "registries" / "EXPLAINER_TOPIC_REGISTRY.csv"
+    if retired_path.exists():
+        report.error("registries/EXPLAINER_TOPIC_REGISTRY.csv is retired and must not exist")
 
 
 def validate_no_network_html(root: Path, report: Report) -> None:
@@ -247,6 +216,26 @@ def validate_no_network_html(root: Path, report: Report) -> None:
         if "mermaid.initialize(" in lowered or "mermaid.render(" in lowered:
             report.error(f"{relative}: browser-side Mermaid execution is forbidden")
         report.count("checked_html_runtime")
+
+
+def validate_no_orphan_public_surfaces(
+    root: Path,
+    brief_rows: list[dict[str, str]],
+    report: Report,
+) -> None:
+    expected_specs = {row.get("source_spec_path", "").strip() for row in brief_rows}
+    expected_github = {row.get("github_markdown_path", "").strip() for row in brief_rows}
+    expected_html = {row.get("html_output_path", "").strip() for row in brief_rows}
+    surface_sets = [
+        ("source spec", root / "markdown" / "html-explainer-specs", "*-explainer.md", expected_specs),
+        ("GitHub Markdown", root / "github-facing", "*-explainer.md", expected_github),
+        ("HTML", root / "html", "*-explainer.html", expected_html),
+    ]
+    for label, directory, pattern, expected in surface_sets:
+        for path in sorted(directory.glob(pattern)):
+            relative = path.relative_to(root).as_posix()
+            if relative not in expected:
+                report.error(f"{relative}: orphan public {label} not listed in {BRIEF_REGISTRY}")
 
 
 def validate_migrated_brief(root: Path, row: dict[str, str], report: Report) -> tuple[dict[str, object], str] | None:
@@ -361,8 +350,9 @@ def validate_duplicate_skeletons(surface_texts: dict[str, str], report: Report) 
 
 def validate_publication_process(root: Path) -> Report:
     report = Report()
-    brief_rows, topic_rows = validate_registry_shapes(root, report)
-    validate_topic_migration(topic_rows, report)
+    brief_rows = validate_registry_shapes(root, report)
+    validate_retired_topic_registry_absent(root, report)
+    validate_no_orphan_public_surfaces(root, brief_rows, report)
     validate_no_network_html(root, report)
     migrated_markdown: dict[str, str] = {}
     seen_briefs: set[str] = set()

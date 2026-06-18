@@ -39,11 +39,6 @@ class PublicationProcessValidatorTests(unittest.TestCase):
             "PB-TEST,Test Page,overview_article,reviewed,markdown/publication-briefs/test.publication-brief.md,markdown/html-explainer-specs/test.md,github-facing/test.md,html/test.html,README.md;AGENTS.md,source_matrix,pilot_review_pass,research_control/tasks/RT-TEST/artifacts/screenshots/desktop.png,research_control/tasks/RT-TEST/artifacts/screenshots/mobile.png,research_control/tasks/RT-TEST/artifacts/review.md,documentation-curator,true,fixture\n",
             encoding="utf-8",
         )
-        (root / "registries/EXPLAINER_TOPIC_REGISTRY.csv").write_text(
-            "topic_id,topic_name,required,status,document_family,source_spec_path,github_markdown_path,html_output_path,publication_brief_id,migration_status,source_bundle,output_surfaces,owner_role,claim_boundary_id,notes\n"
-            "TOPIC-TEST,Test Page,true,active,front_door,markdown/html-explainer-specs/test.md,github-facing/test.md,html/test.html,PB-TEST,reviewed,README.md;AGENTS.md,github_markdown;html,documentation-curator,CB-TEST,fixture\n",
-            encoding="utf-8",
-        )
         (root / "markdown/publication-briefs/test.publication-brief.md").write_text(
             "---\n"
             'brief_id: "PB-TEST"\n'
@@ -133,6 +128,29 @@ class PublicationProcessValidatorTests(unittest.TestCase):
             (root / "html/test.html").write_text('<script src="https://example.test/app.js"></script>', encoding="utf-8")
             report = self.validator.validate_publication_process(root)
         self.assertTrue(any("banned public-doc runtime" in error for error in report.errors))
+
+    def test_retired_topic_registry_fails_if_present(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "registries/EXPLAINER_TOPIC_REGISTRY.csv").write_text(
+                "topic_id,topic_name\nTOPIC-RETIRED,Retired\n",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(any("EXPLAINER_TOPIC_REGISTRY.csv is retired" in error for error in report.errors))
+
+    def test_orphan_public_explainer_outputs_fail(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "markdown/html-explainer-specs/orphan-explainer.md").write_text("# Orphan\n", encoding="utf-8")
+            (root / "github-facing/orphan-explainer.md").write_text("# Orphan\n", encoding="utf-8")
+            (root / "html/orphan-explainer.html").write_text("<!doctype html><p>Orphan</p>", encoding="utf-8")
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(any("orphan public source spec" in error for error in report.errors))
+        self.assertTrue(any("orphan public GitHub Markdown" in error for error in report.errors))
+        self.assertTrue(any("orphan public HTML" in error for error in report.errors))
 
 
 if __name__ == "__main__":

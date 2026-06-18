@@ -7,10 +7,10 @@ project-memory system.
 
 ## Folder Structure
 
-- `html-explainer-specs/` contains source specs for generated human-only HTML
-  explainers and their GitHub-facing Markdown derivatives.
-- `teaching-packets/` contains curated Q&A packets used as explanatory support
-  by the Documentation Curator.
+- `html-explainer-specs/` contains source specs for reviewed publication-brief
+  public pages and their GitHub-facing Markdown derivatives.
+- `publication-briefs/` contains the page-specific briefs that authorize public
+  HTML and GitHub-facing Markdown publication pages.
 - `ontology-promotions/` is reserved for bounded ontology-promotion packet
   notes.
 - `grill-memory-wiki-registry-design-handoff.md` records accepted memory,
@@ -33,8 +33,8 @@ project-memory system.
 ## Authority Boundary
 
 Markdown authority depends on its registry role and authority status. Some
-files are project-control design notes, some are canonical source specs for
-generated explainers, and some are explanatory support only. Check
-`registries/MARKDOWN_SOURCE_REGISTRY.csv` before treating a Markdown file as
-authority.
-
+files are project-control design notes, some are publication briefs, and some
+are source specs for generated public explainers. Check
+`registries/MARKDOWN_SOURCE_REGISTRY.csv` and
+`registries/PUBLICATION_BRIEF_REGISTRY.csv` before treating a Markdown file as
+publication authority.

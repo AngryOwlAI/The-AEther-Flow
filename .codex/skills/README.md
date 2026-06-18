@@ -15,9 +15,7 @@ should perform recurring workflows inside this repository.
   and `pdf-derivative-build/` operate source-first memory, registry, wiki, and
   derivative surfaces.
 - `html-visual-explainer/` and `visual-explainer/` support source-backed
-  human-only visual explainers.
-- `aether-teaching-explainer/` supports the Documentation Curator teaching
-  loop.
+  human-only visual explainers from publication briefs.
 - `user-modified-project/` classifies human-made local edits before routing
   them into the correct controlled workflow.
 
@@ -38,4 +36,3 @@ should perform recurring workflows inside this repository.
 Skill contracts are project-control authority for how a recurring workflow is
 performed. They do not promote scientific claims and do not override task
 allowlists, role contracts, validators, or human gates.
-

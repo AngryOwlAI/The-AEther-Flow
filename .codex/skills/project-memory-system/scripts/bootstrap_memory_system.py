@@ -154,7 +154,6 @@ REQUIRED_DIRS = [
     "markdown",
     "markdown/html-explainer-specs",
     "markdown/ontology-promotions",
-    "markdown/teaching-packets",
     "github-facing",
     "tex_shared",
     "html",
@@ -181,7 +180,6 @@ FOLDER_README_FILES = [
     "assets/README.md",
     "markdown/README.md",
     "markdown/html-explainer-specs/README.md",
-    "markdown/teaching-packets/README.md",
     "ontology/README.md",
     "ontology/tex/README.md",
     "registries/README.md",
@@ -300,13 +298,11 @@ HTML_CONTROL_VALUES = {
     "source_materials_section",
     "source_drilldowns",
     "claim_boundary_toggle",
-    "workflow_step_inspector",
 }
 HTML_UNIVERSAL_REQUIRED_CONTROLS = {
     "section_toc",
     "source_materials_section",
 }
-HTML_WORKFLOW_CONTROL_KINDS = {"workflow_process", "control_system"}
 HTML_SOURCE_BASIS_META_RE = re.compile(
     r'<meta\s+name=["\']aether-flow-source-basis["\']\s+content=["\']([^"\']+)["\']',
     re.IGNORECASE,
@@ -324,7 +320,6 @@ HTML_STYLE_BLOCK_RE = re.compile(r"<style\b[^>]*>(.*?)</style>", re.IGNORECASE |
 HTML_PROSE_ANYWHERE_SELECTORS = (".publication-card", "p", "th", "td")
 DOCS_VALIDATOR_SCRIPTS = [
     "scripts/validate_publication_process.py",
-    "scripts/validate_teaching_qa.py",
 ]
 
 
@@ -483,12 +478,10 @@ def merge_authored_registry(
     merged: list[dict[str, str]] = []
     all_ids = sorted(set(existing) | set(discovered))
     for object_id in all_ids:
-        if (
-            name == "MARKDOWN_SOURCE_REGISTRY.csv"
-            and object_id.startswith("MD-GITHUB-FACING-")
-            and object_id not in discovered
-        ):
-            continue
+        if name == "MARKDOWN_SOURCE_REGISTRY.csv" and object_id not in discovered:
+            existing_path = existing[object_id].get("path", "")
+            if existing_path and not (REPO_ROOT / existing_path).exists():
+                continue
         if object_id in existing and object_id in discovered and not refresh_existing:
             row = normalize_row(existing[object_id], fieldnames)
             discovered_row = normalize_row(discovered[object_id], fieldnames)
@@ -563,8 +556,6 @@ def markdown_object_id(path: Path) -> str:
         return f"MD-HTML-SPEC-{object_suffix_from_stem(path.stem)}"
     if relative.startswith("markdown/ontology-promotions/"):
         return f"MD-ONTOLOGY-PROMOTION-{object_suffix_from_stem(path.stem)}"
-    if relative.startswith("markdown/teaching-packets/"):
-        return f"MD-TEACHING-QA-PACKET-{object_suffix_from_stem(path.stem)}"
     return f"MD-{object_suffix_from_stem(path.stem)}"
 
 
@@ -720,14 +711,6 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "humans_and_agents",
             "ontology-promotion",
             "Authored ontology promotion packet note.",
-        )
-    if relative.startswith("markdown/teaching-packets/"):
-        return (
-            "teaching_qa_packet",
-            "explanatory_support_noncanonical",
-            "humans_and_agents",
-            "aether-teaching-explainer",
-            "Curated teaching Q&A packet derived from declared source materials; explanatory support only.",
         )
     return (
         "authored_markdown",
@@ -1408,7 +1391,7 @@ def generate_indexes(rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
     )
 
 
-def prune_stale_github_facing_generated_files(
+def prune_stale_generated_files(
     rows_by_registry: dict[str, list[dict[str, str]]],
 ) -> None:
     current_paths = {
@@ -1431,10 +1414,22 @@ def prune_stale_github_facing_generated_files(
         )
 
     for folder, pattern in [
-        ("wiki/markdown", "md-github-facing-*.md"),
-        (".local/content_semantics/markdown", "md-github-facing-*.txt"),
-        (".local/obsidian/aether-flow-wiki/01_raw/markdown", "md-github-facing-*.md"),
-        (".local/obsidian/aether-flow-wiki/02_sources/markdown", "md-github-facing-*.md"),
+        ("wiki/markdown", "*.md"),
+        ("wiki/html", "*.md"),
+        ("wiki/tex", "*.md"),
+        ("wiki/pdf", "*.md"),
+        (".local/content_semantics/markdown", "*.txt"),
+        (".local/content_semantics/html", "*.txt"),
+        (".local/content_semantics/tex", "*.txt"),
+        (".local/content_semantics/pdf", "*.txt"),
+        (".local/obsidian/aether-flow-wiki/01_raw/markdown", "*.md"),
+        (".local/obsidian/aether-flow-wiki/01_raw/html", "*.html"),
+        (".local/obsidian/aether-flow-wiki/01_raw/tex", "*.tex"),
+        (".local/obsidian/aether-flow-wiki/01_raw/pdf", "*.pdf"),
+        (".local/obsidian/aether-flow-wiki/02_sources/markdown", "*.md"),
+        (".local/obsidian/aether-flow-wiki/02_sources/html", "*.md"),
+        (".local/obsidian/aether-flow-wiki/02_sources/tex", "*.md"),
+        (".local/obsidian/aether-flow-wiki/02_sources/pdf", "*.md"),
     ]:
         directory = REPO_ROOT / folder
         if not directory.exists():
@@ -1935,13 +1930,6 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
             )
             if missing_universal:
                 report.error(f"{object_id}: missing universal required_controls")
-            if (
-                explainer_kind in HTML_WORKFLOW_CONTROL_KINDS
-                and "workflow_step_inspector" not in required_control_values
-            ):
-                report.error(
-                    f"{object_id}: workflow explainer missing workflow_step_inspector"
-                )
         else:
             required_control_values = set()
         source_drilldowns = frontmatter.get("source_drilldowns", [])
@@ -2255,7 +2243,7 @@ def bootstrap(
         write_semantic_text=True,
     )
     rows_by_registry.update(generated_rows)
-    prune_stale_github_facing_generated_files(rows_by_registry)
+    prune_stale_generated_files(rows_by_registry)
     file_object_rows = generate_file_object_registry(rows_by_registry, now)
     rows_by_registry["FILE_OBJECT_REGISTRY.csv"] = file_object_rows
     generate_folder_map(rows_by_registry)

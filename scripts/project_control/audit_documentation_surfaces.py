@@ -69,8 +69,6 @@ GITHUB_FACING_AI_CARD_MARKERS = (
     "Before modifying project knowledge:",
     "Do not:",
 )
-WORKFLOW_STEP_CONTROL = "workflow_step_inspector"
-WORKFLOW_STEP_SECTION = "Workflow Step Inspector"
 UNSAFE_CLAIM_PHRASES = (
     "derivation is complete",
     "completed gr derivation",
@@ -474,13 +472,6 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
         for section in GITHUB_FACING_RECOMMENDED_SECTIONS:
             if section not in titles:
                 report.warnings.append(f"{relative_page}: missing recommended section: {section}")
-
-        declared_controls = set(frontmatter_list(source_text, "required_controls"))
-        if WORKFLOW_STEP_CONTROL in declared_controls and WORKFLOW_STEP_SECTION not in titles:
-            report.warnings.append(
-                f"{relative_page}: source spec declares {WORKFLOW_STEP_CONTROL} "
-                f"but GitHub-facing page is missing recommended section: {WORKFLOW_STEP_SECTION}"
-            )
 
         for heading in GITHUB_FACING_FORBIDDEN_HEADINGS:
             if heading in titles:

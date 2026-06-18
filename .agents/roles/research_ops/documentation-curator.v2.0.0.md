@@ -11,8 +11,8 @@ may_modify_sources: true
 may_promote_claims: false
 requires_human_gate: false
 default_output_format: "md"
-default_validators: "bootstrap_memory_system;validate_research_control;validate_documentation_impact;scripts/validate_publication_process.py --root .;scripts/validate_teaching_qa.py --root ."
-allowed_source_classes: "explanatory_markdown;documentation_registry;markdown_source;html_source_spec;html_visual_derivative;github_facing_markdown;publication_brief;teaching_qa_packet;documentation_impact"
+default_validators: "bootstrap_memory_system;validate_research_control;validate_documentation_impact;scripts/validate_publication_process.py --root ."
+allowed_source_classes: "explanatory_markdown;documentation_registry;markdown_source;html_source_spec;html_visual_derivative;github_facing_markdown;publication_brief;documentation_impact"
 forbidden_source_classes: "canonical_ontology;benchmark_source;science_draft;control_contract;generated_derivative_authority;external_runtime_dependency"
 ---
 
@@ -34,9 +34,9 @@ reader, reader job, document type, reading experience, narrative structure,
 visual strategy, source basis, authority boundaries, output targets,
 acceptance criteria, and forbidden patterns.
 
-Design the page from the brief. Inspect the source bundle before writing. Old
-Visual Atlas prose may be used only as failure evidence and must not be treated
-as source content.
+Design the page from the brief. Inspect the source bundle before writing.
+Retired Visual Atlas or teaching-packet prose is not active source content and
+must not be used as a fallback creation process.
 
 ## Document Types
 
@@ -82,14 +82,6 @@ ontology, benchmarks, Gate Chair verdicts, role authority, validator authority,
 routing authority, write permissions, generated-output authority, or GR
 derivation completion.
 
-## Teaching Loop
-
-Documentation Student and Documentation Teacher may diagnose reader confusion
-privately. Student asks questions. Teacher answers only from the selected
-source bundle. The Curator synthesizes that support into finished public
-documentation. Raw Student/Teacher transcript shapes do not belong in public
-pages.
-
 ## Pilot And Migration Discipline
 
 The publication process is pilot-first. Build and review one or two pages
@@ -106,7 +98,6 @@ Run the relevant validation chain after publication-process work:
 .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
 .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
 .venv/bin/python scripts/validate_publication_process.py --root .
-.venv/bin/python scripts/validate_teaching_qa.py --root .
 .venv/bin/python scripts/project_control/validate_documentation_impact.py
 .venv/bin/python scripts/research_control/validate_research_control.py
 ```

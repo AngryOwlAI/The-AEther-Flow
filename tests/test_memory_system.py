@@ -204,7 +204,6 @@ def valid_synthetic_spec_text() -> str:
         "required_controls:\n"
         "  - \"section_toc\"\n"
         "  - \"source_materials_section\"\n"
-        "  - \"workflow_step_inspector\"\n"
         + "---\n"
         "# Synthetic\n\n"
         "This fixture is a page-specific publication source spec.\n"
@@ -227,7 +226,6 @@ def valid_synthetic_html_text(extra_body: str = "") -> str:
         f"{extra_body}"
         '<nav data-explainer-control="section_toc"></nav>'
         '<section data-explainer-control="source_materials_section"></section>'
-        '<ol data-explainer-control="workflow_step_inspector"></ol>'
         '<ul><li data-source-path="README.md"></li></ul>'
     )
 
@@ -297,21 +295,31 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertEqual(row["agent_documentation"], "true")
         self.assertIn("non-authoritative for physics claims", row["notes"])
 
-    def test_teaching_packet_is_discovered_as_explanatory_support(self) -> None:
-        with tempfile.TemporaryDirectory() as tmpdir:
-            root = Path(tmpdir).resolve()
-            packet = root / "markdown/teaching-packets/role-routing.teaching-qa.md"
-            packet.parent.mkdir(parents=True)
-            packet.write_text("# Teaching Q&A Packet\n", encoding="utf-8")
-            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
-                rows = self.memory_system.discover_markdown_rows("2026-06-17T17:35:00Z")
+    def test_active_docs_validation_uses_publication_process_only(self) -> None:
+        self.assertEqual(
+            self.memory_system.DOCS_VALIDATOR_SCRIPTS,
+            ["scripts/validate_publication_process.py"],
+        )
+        self.assertNotIn("scripts/validate_teaching_qa.py", self.memory_system.DOCS_VALIDATOR_SCRIPTS)
 
-        row_by_id = {row["object_id"]: row for row in rows}
-        row = row_by_id["MD-TEACHING-QA-PACKET-ROLE-ROUTING-TEACHING-QA"]
-        self.assertEqual(row["role"], "teaching_qa_packet")
-        self.assertEqual(row["authority_status"], "explanatory_support_noncanonical")
-        self.assertEqual(row["owner_skill"], "aether-teaching-explainer")
-        self.assertIn("explanatory support only", row["notes"])
+    def test_active_documentation_curator_role_uses_publication_validator_only(self) -> None:
+        rows = self.memory_system.read_csv_rows(
+            self.memory_system.registry_path("AGENT_ROLE_REGISTRY.csv")
+        )
+        active_curators = [
+            row
+            for row in rows
+            if row.get("role_id") == "documentation-curator" and row.get("status") == "active"
+        ]
+        self.assertEqual(len(active_curators), 1)
+        validators = active_curators[0].get("default_validators", "")
+        self.assertIn("scripts/validate_publication_process.py --root .", validators)
+        self.assertNotIn("scripts/validate_teaching_qa.py", validators)
+        self.assertNotIn("validate_explainer_topic_coverage.py", validators)
+        self.assertNotIn("validate_explainer_parity.py", validators)
+        self.assertNotIn("validate_standalone_html.py", validators)
+        self.assertNotIn("validate_reader_first_docs.py", validators)
+        self.assertNotIn("validate_explainer_diagrams.py", validators)
 
     def test_folder_readme_is_discovered_as_explanatory_documentation(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -372,17 +380,17 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertNotIn("MD-GITHUB-FACING-README", object_ids)
         self.assertIn("MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER", object_ids)
 
-    def test_stale_github_facing_generated_files_are_pruned(self) -> None:
+    def test_stale_generated_files_are_pruned(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
-            current_wiki = root / "wiki/markdown/md-github-facing-current.md"
-            stale_wiki = root / "wiki/markdown/md-github-facing-stale.md"
-            current_semantic = root / ".local/content_semantics/markdown/md-github-facing-current.txt"
-            stale_semantic = root / ".local/content_semantics/markdown/md-github-facing-stale.txt"
-            current_vault = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-current.md"
-            stale_vault = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-stale.md"
-            current_raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-current.md"
-            stale_raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-stale.md"
+            current_wiki = root / "wiki/markdown/md-current.md"
+            stale_wiki = root / "wiki/markdown/md-stale.md"
+            current_semantic = root / ".local/content_semantics/markdown/md-current.txt"
+            stale_semantic = root / ".local/content_semantics/markdown/md-stale.txt"
+            current_vault = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-current.md"
+            stale_vault = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-stale.md"
+            current_raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-current.md"
+            stale_raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-stale.md"
             for path in [
                 current_wiki,
                 stale_wiki,
@@ -397,20 +405,20 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 path.write_text("generated\n", encoding="utf-8")
 
             rows_by_registry = {
-                "WIKI_ARTIFACT_REGISTRY.csv": [{"path": "wiki/markdown/md-github-facing-current.md"}],
+                "WIKI_ARTIFACT_REGISTRY.csv": [{"path": "wiki/markdown/md-current.md"}],
                 "CONTENT_SEMANTIC_REGISTRY.csv": [
-                    {"path": ".local/content_semantics/markdown/md-github-facing-current.txt"}
+                    {"path": ".local/content_semantics/markdown/md-current.txt"}
                 ],
                 "OBSIDIAN_VAULT_REGISTRY.csv": [
                     {
-                        "path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-current.md",
-                        "vault_note_path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-current.md",
-                        "vault_raw_path": ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-current.md",
+                        "path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-current.md",
+                        "vault_note_path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-current.md",
+                        "vault_raw_path": ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-current.md",
                     }
                 ],
             }
             with mock.patch.object(self.memory_system, "REPO_ROOT", root):
-                self.memory_system.prune_stale_github_facing_generated_files(rows_by_registry)
+                self.memory_system.prune_stale_generated_files(rows_by_registry)
 
             self.assertTrue(current_wiki.exists())
             self.assertFalse(stale_wiki.exists())
@@ -687,7 +695,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
                 "required_controls:\n"
                 "  - \"section_toc\"\n"
                 "  - \"source_materials_section\"\n"
-                "  - \"workflow_step_inspector\"\n"
                 + "---\n"
                 "# Synthetic\n",
                 encoding="utf-8",
@@ -726,12 +733,6 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertTrue(
             any(
                 "missing HTML control marker source_materials_section" in error
-                for error in report.errors
-            )
-        )
-        self.assertTrue(
-            any(
-                "missing HTML control marker workflow_step_inspector" in error
                 for error in report.errors
             )
         )

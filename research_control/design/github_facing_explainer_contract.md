@@ -12,7 +12,7 @@ may have tracked HTML derivatives under `html/`.
 The active presentation model is the Documentation Curator Publication
 Process. GitHub-facing pages must be written as native Markdown articles,
 guides, references, or boundary maps designed from a page-specific publication
-brief when the page has migrated.
+brief.
 
 ## Authority
 
@@ -42,9 +42,9 @@ Each active GitHub-facing page must include:
 - a complete source-material reading path; and
 - page-specific navigation guidance for humans or external AI.
 
-For migrated pages, the source basis and authority boundary must match the
-publication brief and the paired source spec. The visible structure may differ
-from the HTML derivative.
+The source basis and authority boundary must match the publication brief and
+the paired source spec. The visible structure may differ from the HTML
+derivative.
 
 ## Publication Standard
 
@@ -53,19 +53,19 @@ overview article, concept explainer, workflow guide, lifecycle guide,
 reference catalog, troubleshooting guide, visual brief, comparison map, or
 operator guide.
 
-Do not force every page into the same visible headings. The old universal
+Do not force every page into the same visible headings. The retired universal
 sequence `What This Does`, `Why AEther Needs It`, and `System Map` is forbidden
-on migrated pages unless the publication brief explicitly authorizes an
-individual heading.
+unless the publication brief explicitly authorizes an individual heading.
 
 If the Markdown includes a diagram, the surrounding prose must explain what
 the reader should learn from it. Decorative or reusable stock diagrams fail
 publication review.
 
-## Teaching Loop Boundary
+## Retired Process Boundary
 
-Teaching-loop packets may shape the Curator's synthesis. Raw
-Student/Teacher transcript structures do not belong in public GitHub pages.
+The retired topic-registry, Visual Atlas, and teaching-packet paths are not
+active creation inputs. GitHub-facing pages must be created from publication
+briefs and inspected source bundles.
 
 ## Validator Binding
 
@@ -76,14 +76,13 @@ The active publication validator is:
 ```
 
 It checks source sync, authority boundaries, no external runtime dependencies,
-brief conformance, duplicate skeletons, generic visuals, forbidden migrated
-headings, screenshot evidence for pilots, and migration status. Advisory
-warnings remain advisory. Editorial quality requires a human-facing review
-artifact.
+brief conformance, orphan public explainer files, duplicate skeletons, generic
+visuals, forbidden old headings, and screenshot evidence. Advisory warnings
+remain advisory. Editorial quality requires a human-facing review artifact.
 
 ## Operational Rule
 
-When a migrated source spec or brief changes, update the related GitHub-facing
-page as a reader-facing derivative. Inspect the source bundle first. Use old
-generated prose only as failure evidence. Preserve source paths and claim
-boundaries, but choose the section structure that best serves the brief.
+When a source spec or brief changes, update the related GitHub-facing page as a
+reader-facing derivative. Inspect the source bundle first. Retired generated
+prose is failure evidence only. Preserve source paths and claim boundaries,
+but choose the section structure that best serves the brief.

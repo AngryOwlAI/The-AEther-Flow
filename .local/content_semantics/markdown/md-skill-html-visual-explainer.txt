@@ -11,7 +11,7 @@ under `html/`.
 ## Active Process
 
 Tracked public HTML uses the Documentation Curator Publication Process. Each
-migrated or new page must be designed from a page-specific publication brief
+reviewed or new page must be designed from a page-specific publication brief
 under `markdown/publication-briefs/` and a row in
 `registries/PUBLICATION_BRIEF_REGISTRY.csv`.
 
@@ -22,7 +22,7 @@ forbidden patterns.
 
 ## Required Source-Spec Fields
 
-For migrated publication pages, source specs should declare:
+For publication pages, source specs should declare:
 
 - `title`
 - `purpose`

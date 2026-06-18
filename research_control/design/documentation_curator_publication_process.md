@@ -32,6 +32,11 @@ Every migrated or new explainer needs a publication brief under
 `markdown/publication-briefs/` and a registry row in
 `registries/PUBLICATION_BRIEF_REGISTRY.csv`.
 
+`PUBLICATION_BRIEF_REGISTRY.csv` is the sole active control surface for public
+HTML and GitHub-facing Markdown publication pages. The retired
+`EXPLAINER_TOPIC_REGISTRY.csv` topic-registry path is not part of the active
+creation or validation process.
+
 Required brief fields:
 
 - subject;
@@ -97,13 +102,13 @@ assets.
 ## Pilot Rule
 
 The publication process is pilot-first. One or two pages must be rebuilt,
-reviewed, screenshot-verified, and accepted as the quality bar before any
-corpus-wide migration. The default pilots are Project Overview and Source
+reviewed, screenshot-verified, and accepted as the quality bar before any new
+public page is added. The reviewed pilots are Project Overview and Source
 Authority.
 
-Corpus-wide regeneration requires explicit user approval after pilot review.
-Until then, the registry must mark every page as migrated, reviewed, or
-deferred.
+Corpus-wide regeneration remains unavailable as an active fallback. Any future
+public page requires explicit user approval, a publication brief, matching
+source spec, GitHub-facing Markdown, tracked HTML, and review evidence.
 
 ## Validation
 
@@ -114,9 +119,9 @@ The active deterministic validator is:
 ```
 
 It checks source integrity, authority boundary integrity, no external runtime,
-publication brief conformance, duplicate section skeletons, generic visual
-detection, retired universal headings for migrated pages, screenshot evidence
-for pilots, migration status, and generated-output boundaries.
+publication brief conformance, orphan public explainer files, duplicate
+section skeletons, generic visual detection, retired universal headings for
+publication pages, screenshot evidence, and generated-output boundaries.
 
 Warnings are advisory. Hard failures are reserved for authority, source sync,
 runtime safety, brief mismatch, migration-state, and known anti-pattern
@@ -128,7 +133,7 @@ If a publication migration fails, keep canonical source authority intact:
 
 1. Restore the affected publication brief and source spec from version control.
 2. Restore only the affected GitHub Markdown and tracked HTML derivatives.
-3. Mark the page `deferred` in the registries.
+3. Remove or correct the affected publication brief registry row.
 4. Re-run bootstrap, publication validation, documentation-impact validation,
    and research-control validation.
 

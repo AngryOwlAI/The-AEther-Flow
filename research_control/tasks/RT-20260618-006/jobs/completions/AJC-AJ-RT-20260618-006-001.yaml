@@ -90,11 +90,6 @@ memory_preflight:
       query_text: "MD-SKILL-PROJECT-MEMORY-SYSTEM"
       returned_object_ids:
         - "MD-SKILL-PROJECT-MEMORY-SYSTEM"
-    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER --json"
-      query_type: "lookup"
-      query_text: "MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER"
-      returned_object_ids:
-        - "MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER"
   canonical_inspections:
     - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-9-0-MD"
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
@@ -115,7 +110,7 @@ memory_preflight:
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: ".codex/skills/html-visual-explainer/SKILL.md"
-      source_hash: "b53d2f1d5361bbaea80e48b5845175f19c70089145a06b5f8d90255a83c58895"
+      source_hash: "9b295d356be3dd68d5a00e052bd14724669b53cb5859881383ce102c83376c87"
     - object_id: "MD-SKILL-VISUAL-EXPLAINER"
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
@@ -125,10 +120,5 @@ memory_preflight:
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: ".codex/skills/project-memory-system/SKILL.md"
-      source_hash: "c1ed3b0f0307ea21e10e50f16d4aac3d8e97b96a92566a39714739e5bf71c885"
-    - object_id: "MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER"
-      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
-      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
-      canonical_path: "markdown/html-explainer-specs/parent-child-synthesis-explainer.md"
-      source_hash: "79bc12b36ae3b75ffb2c383168ba6c4520d660b65d2660e0a861aa978116fd8a"
+      source_hash: "b19407e6193123fb5a3274425b59d49eca5f91af25211eff4972991c2814583e"
   authority_note: "Obsidian, wiki notes, semantic extracts, the SQLite memory index, and .local are retrieval layers only and not authority."
