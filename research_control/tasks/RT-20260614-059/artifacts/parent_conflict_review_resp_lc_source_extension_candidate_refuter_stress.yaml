@@ -1,0 +1,26 @@
+conflict_review_id: "PCR-RT-20260614-059-001"
+task_id: "RT-20260614-059"
+job_id: "AJ-RT-20260614-059-001"
+parent_execution_unit_id: "parent"
+mode: "parent_child_parallel_synthesis"
+decomposition_version: "0.1.0"
+reviewed_outputs:
+  - "research_control/tasks/RT-20260614-059/artifacts/child_phys_math_resp_lc_source_extension_candidate_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260614-059/artifacts/child_phys_phil_resp_lc_source_extension_candidate_refuter_stress.yaml"
+conflicts:
+  - conflict_id: "C1"
+    type: "next_route"
+    severity: "nonblocking"
+    child_phys_math_claim: "The extension-collapse and tag-removal screens preserve a scoped obstruction for derivation from S_X."
+    child_phys_phil_claim: "The live consequence is a human-gated source-extension or ontology adoption boundary rather than global route freeze."
+    parent_analysis: "These claims are compatible. The obstruction is local to S_X and tag-removal while the surviving source-extension candidate can proceed only to protected adoption authority."
+    resolution_instruction: "Fuse as scoped_obstruction with next_route human_gated_ontology_change_required and freeze_decision human_gate_required."
+    required_child_revision: false
+verdict: "no_blocking_conflict"
+resolution_rounds: 0
+unresolved_conflicts:
+  - conflict_id: ""
+    type: ""
+    severity: ""
+    summary: ""
+fusion_instruction: "Fuse the mathematical collapse obstruction with the philosophical adoption boundary and preserve no-target-import conditional pass without claim promotion."

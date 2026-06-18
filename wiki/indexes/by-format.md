@@ -246,6 +246,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-054/artifacts/95_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE` `research_control/tasks/RT-20260614-057/artifacts/98_RESP_LC_SOURCE_EXTENSION_CANDIDATE.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-059/artifacts/100_RESP_LC_SOURCE_EXTENSION_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-058/artifacts/99_RESP_LC_SOURCE_EXTENSION_CANDIDATE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
 
@@ -484,5 +485,6 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-side-selector-no-go-theorem-refuter-stress-test.md`
