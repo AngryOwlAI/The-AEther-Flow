@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@2.0.0--RT-20260618-013"
+role_execution_kind: "registered_role"
+task_id: "RT-20260618-013"
+agent_job_id: "AJ-RT-20260618-013-001"
+record_path: "research_control/tasks/RT-20260618-013/roles/documentation-curator@2.0.0--RT-20260618-013.yaml"
+base_role_id: "documentation-curator"
+base_role_version: "2.0.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role used without permission expansion for Phase 2A GR derivation roadmap migration."
+added_constraints:
+  - "Migrate only the Phase 2A GR derivation roadmap page."
+  - "Keep Phase 2B claim-gates page out of this packet."
+  - "Preserve draft/control source-only source-extension local exact-branch human-gated and noncanonical qualifiers."
+  - "Keep generated HTML and GitHub-facing Markdown noncanonical."
+  - "Do not modify canonical science sources or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260618-013/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/html/**"
+requires_human_gate: false
+expires_after: "AJ-RT-20260618-013-001"
+justification: "The user explicitly requested Phase 2A after Phase 1B completion recommended seeking explicit approval."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-18T23:22:00Z"
+updated_at: "2026-06-18T23:40:00Z"
+notes: "Execution-role record completed for Phase 2A GR derivation roadmap migration."

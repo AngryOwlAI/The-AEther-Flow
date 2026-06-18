@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="56830f6b325a8eed02682594a60a29caa29f66b5018d21e63a421e110d609d8a">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <title>GR Derivation Roadmap</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #59636f;
+      --paper: #f7f8f5;
+      --panel: #ffffff;
+      --line: #d8ddd6;
+      --soft: #eef3ef;
+      --blue: #2d6f8f;
+      --green: #35745c;
+      --amber: #a76521;
+      --red: #9a4a41;
+      --violet: #5f5a92;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.56;
+    }
+    a {
+      color: inherit;
+    }
+    header {
+      min-height: 70vh;
+      display: grid;
+      align-items: end;
+      padding: clamp(28px, 6vw, 76px);
+      color: #fffdf7;
+      background:
+        linear-gradient(118deg, rgba(23, 33, 43, .95), rgba(45, 111, 143, .88)),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .12) 0 1px, transparent 1px 42px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .10) 0 1px, transparent 1px 42px);
+    }
+    .hero {
+      max-width: 980px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 5.6vw, 5.2rem);
+      line-height: .96;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 780px;
+      margin: 24px 0 0;
+      font-size: clamp(1.04rem, 2vw, 1.32rem);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px clamp(18px, 4vw, 42px) 76px;
+    }
+    section {
+      margin: 56px 0;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.52rem, 3vw, 2.25rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 810px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .94em;
+      background: rgba(23, 33, 43, .08);
+      padding: .08em .25em;
+      overflow-wrap: anywhere;
+    }
+    .notice {
+      max-width: 900px;
+      border-left: 5px solid var(--amber);
+      background: #fff8ec;
+      padding: 18px 20px;
+      margin-top: 22px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
+    }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 26px;
+    }
+    .step {
+      min-height: 210px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .step strong {
+      color: var(--blue);
+      font-size: 1.02rem;
+    }
+    .chip {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 8px;
+      border: 1px solid currentColor;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .draft {
+      color: var(--violet);
+    }
+    .accepted {
+      color: var(--green);
+    }
+    .blocked {
+      color: var(--amber);
+    }
+    .frozen {
+      color: var(--red);
+    }
+    .gate {
+      color: #374252;
+    }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .matrix th,
+    .matrix td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 14px;
+    }
+    .matrix th {
+      background: var(--soft);
+    }
+    .frontier {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .frontier div,
+    .source {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      overflow-wrap: anywhere;
+    }
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .summary div {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 18px;
+    }
+    .summary .safe {
+      border-color: #a6cabd;
+      background: #eff8f4;
+    }
+    .summary .unsafe {
+      border-color: #dfb6b0;
+      background: #fff2f0;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding-top: 24px;
+      margin-top: 64px;
+      font-size: .92rem;
+    }
+    @media (max-width: 980px) {
+      .timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .frontier,
+      .source-list,
+      .summary {
+        grid-template-columns: 1fr;
+      }
+      .matrix {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+    @media (max-width: 620px) {
+      header {
+        min-height: 64vh;
+      }
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Phase 2A Derivation Burdens</p>
+      <h1>GR Derivation Roadmap</h1>
+      <p class="lede">A controlled map of the burden chain from source ontology to benchmark promotion, with explicit status categories and no page-local physics promotion.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>Roadmap, Not Proof</h2>
+      <p>The roadmap names the objects and gates that would have to exist before AEther-Flow could claim a first-principles derivation of ordinary GR or promote an exact-GR benchmark from source structure.</p>
+      <div class="notice">
+        This generated noncanonical reader surface explains tracked control state. It does not update the Distance-to-GR ledger, adopt <code>M_src</code>, derive <code>g_eff</code>, derive matter coupling, derive Einstein equations, promote a benchmark, or issue a Gate Chair verdict.
+      </div>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a href="#ladder">Milestones</a>
+        <a href="#matrix">Burden matrix</a>
+        <a href="#frontier">Current frontier</a>
+        <a href="#freeze">Freeze criteria</a>
+        <a href="#sources">Source materials</a>
+      </nav>
+    </section>
+
+    <section id="ladder">
+      <h2>Milestone Ladder</h2>
+      <p>Each tile is a burden, not an achievement badge. Downstream claims remain blocked until the required object is supplied by the correct source authority and gate sequence.</p>
+      <div class="timeline" aria-label="GR derivation milestone ladder">
+        <div class="step">
+          <strong>Source ontology</strong>
+          <span>Primitive substrate data.</span>
+          <span class="chip draft">draft object exists</span>
+        </div>
+        <div class="step">
+          <strong>EqSrc</strong>
+          <span>Equivalence and related retention or generator burdens.</span>
+          <span class="chip draft">draft or blocked</span>
+        </div>
+        <div class="step">
+          <strong>ObsLoc_lc</strong>
+          <span>Local observer/readout localization witness.</span>
+          <span class="chip accepted">constructive witness</span>
+        </div>
+        <div class="step">
+          <strong>Resp_lc</strong>
+          <span>Response-localization burden through admissible source-extension data.</span>
+          <span class="chip accepted">accepted with qualifiers</span>
+        </div>
+        <div class="step">
+          <strong>M_src</strong>
+          <span>Source-manifold construction burden.</span>
+          <span class="chip draft">draft object exists</span>
+        </div>
+        <div class="step">
+          <strong>g_eff</strong>
+          <span>Effective metric law.</span>
+          <span class="chip blocked">not started</span>
+        </div>
+        <div class="step">
+          <strong>Matter coupling</strong>
+          <span>Universal same-metric coupling burden.</span>
+          <span class="chip blocked">not started</span>
+        </div>
+        <div class="step">
+          <strong>Einstein equations</strong>
+          <span>Dynamics, action, or variation theorem.</span>
+          <span class="chip blocked">not started</span>
+        </div>
+        <div class="step">
+          <strong>Finite toy route</strong>
+          <span>Minimal source-to-response analogue.</span>
+          <span class="chip frozen">frozen negative</span>
+        </div>
+        <div class="step">
+          <strong>Benchmark promotion</strong>
+          <span>Exact-GR benchmark promotion after upstream burdens.</span>
+          <span class="chip gate">human-gated</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="agentjob-fields">
+      <h2>Future Job Fields</h2>
+      <p>Future physics AgentJobs must name <code>target_derivation_milestone</code> and <code>milestone_burden</code>. Future physics completions must name <code>new_mathematical_payload</code>.</p>
+      <p>These fields make the work auditable. They do not make the work successful, and they do not turn validator pass state into physics evidence.</p>
+    </section>
+
+    <section id="matrix">
+      <h2>Burden And Evidence Matrix</h2>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Evidence type</th>
+            <th>What it can support</th>
+            <th>What it cannot support alone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Roadmap row</td>
+            <td>Names a required object, burden, status category, and accept or freeze criterion.</td>
+            <td>A completed derivation or benchmark promotion.</td>
+          </tr>
+          <tr>
+            <td>Distance-to-GR ledger row</td>
+            <td>Shows tracked status for a burden at a specific update time.</td>
+            <td>Independent physics authority outside the cited evidence path.</td>
+          </tr>
+          <tr>
+            <td>AgentJob completion</td>
+            <td>Records one bounded transaction and its claim boundary.</td>
+            <td>A broader theorem unless the scientific artifact actually proves it.</td>
+          </tr>
+          <tr>
+            <td>Validator pass</td>
+            <td>Confirms structural control checks passed.</td>
+            <td>A physics result, source-object adoption, or empirical claim.</td>
+          </tr>
+          <tr>
+            <td>Human-gated decision</td>
+            <td>Can authorize protected adoption or promotion when explicitly present.</td>
+            <td>Automatic closure from generated documentation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="frontier">
+      <h2>Current Frontier Caution</h2>
+      <p>Current terms are volatile enough that their qualifiers matter. The roadmap and ledger should be inspected before summarizing them.</p>
+      <div class="frontier">
+        <div>
+          <h3><code>Resp_lc</code></h3>
+          <p>Accepted only through admissible source-extension data for continuation. The older selector obstruction for the prior source tuple remains relevant.</p>
+        </div>
+        <div>
+          <h3><code>M_src</code></h3>
+          <p>Draft object exists through source-side interface work. Full <code>M_src</code> remains unadopted and cannot be used as a completed bridge.</p>
+        </div>
+        <div>
+          <h3><code>AtlasGlue_src^+</code></h3>
+          <p>A source-only primitive interface draft. It is not target topology, target smooth atlas, metric, proper-time, or benchmark import.</p>
+        </div>
+        <div>
+          <h3>Downstream GR burdens</h3>
+          <p><code>g_eff</code>, matter coupling, and Einstein equations remain not started in the ledger.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="freeze">
+      <h2>Freeze Criteria</h2>
+      <p>The candidate response-localization freeze label <code>NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION</code> is scoped route-control language. It means the current source tuple does not determine response sign, normalization, or token semantics under no-target-import rules.</p>
+      <p>It does not reject the entire ontology, prove future source-extension impossibility, authorize global no-go language, or promote a completed derivation.</p>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <p>Reader claims should be checked against the tracked source paths below.</p>
+      <div class="source-list">
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/design/gr_derivation_burden_map.md">research_control/design/gr_derivation_burden_map.md</code> [GR derivation burden map].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/DISTANCE_TO_GR_LEDGER.csv">registries/DISTANCE_TO_GR_LEDGER.csv</code> [Distance-to-GR ledger].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">registries/CLAIM_BOUNDARY_REGISTRY.csv</code> [Claim boundary registry].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/AGENT_JOB_REGISTRY.csv">registries/AGENT_JOB_REGISTRY.csv</code> [AgentJob registry].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Repository authority hierarchy].</div>
+      </div>
+    </section>
+
+    <section id="summaries">
+      <h2>Safe And Unsafe Summaries</h2>
+      <div class="summary">
+        <div class="safe">
+          <h3>Safe</h3>
+          <p>The roadmap tracks separate source ontology, localization, response, manifold, metric, matter-coupling, equation, finite toy, and benchmark-promotion burdens while preserving draft/control and human-gated boundaries.</p>
+        </div>
+        <div class="unsafe">
+          <h3>Unsafe</h3>
+          <p>AEther-Flow has derived GR, <code>M_src</code> or <code>g_eff</code> is adopted, validator passes are physics evidence, or a scoped freeze label proves the whole ontology false.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Derived from <code>markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md</code>. Related GitHub Markdown: <code>github-facing/gr-derivation-roadmap-explainer.md</code>. Publication brief: <code>markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md</code>. Authority status: generated noncanonical reader surface.</p>
+    </footer>
+  </main>
+</body>
+</html>
