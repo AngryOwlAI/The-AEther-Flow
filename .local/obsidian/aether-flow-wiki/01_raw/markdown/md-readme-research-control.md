@@ -26,10 +26,73 @@ project-system improvement for possible human-authorized registration.
 `/continue-research` may set up or execute at most one bounded AgentJob per
 invocation. Normal flow writes a completion record and handoff after execution.
 
+Every new physics research AgentJob created after `2026-06-17T04:08:16Z` must
+declare `role_decomposition.mode: "parent_child_parallel_synthesis"` before it
+is executed. This does not relax the one-job rule. The parent and child
+execution units inherit the same execution-role record, claim boundary, write
+allowlist, source restrictions, validators, and stop conditions as the outer
+AgentJob. Child outputs are supporting draft/control artifacts; the fused
+output remains the old-style final artifact for downstream completion,
+handoff, and registry references. A PASS completion is blocked when a declared
+blocking parent-child conflict remains unresolved.
+
+## Theoretical Continuation Gate
+
+Future physics routing after `2026-06-17T04:29:31Z` must not use generic
+controlled pause merely because a datum, experiment, witness, or theoretical
+primitive is missing. This is a theoretical physics project; when the next step
+is a choice among source-side selector primitives, source-side irrelevance
+theorems, concrete `Resp_lc` witnesses, scoped no-go questions, or bounded
+theoretical calculations, the Director routes one bounded
+`theoretical-continuation-selector@0.1.0` AgentJob.
+
+Pause-like routing is reserved for protected human-gated authority, especially
+canonical ontology edit or ontology adoption. Future completions and handoffs
+must record that route as `human_gated_ontology_change_required` or another
+specific human-gated route, not as generic `controlled_pause`.
+
+## GR Derivation Burden Map
+
+Future physics AgentJobs after `2026-06-17T15:46:25Z` must name a
+`target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. This separates
+derivation planning from agent-routing planning: the role and validators say
+who acts next, while the milestone says which physics object must exist next
+for ordinary GR or the conservative exact-GR benchmark to become derivable.
+
+`registries/DISTANCE_TO_GR_LEDGER.csv` is the persistent Distance-to-GR ledger.
+Future physics completions must include the expanded burden matrix and a
+`new_mathematical_payload` item. Repeated-burden or scoped-obstruction
+completions must evaluate `freeze_criteria_status`; `NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION`
+is the candidate freeze label for the current `Resp_lc` selector route.
+
+Source extension is a controlled workflow category. It must distinguish a
+derivation from current ontology, a conservative definitional extension, a new
+ontology primitive, and a forbidden target-GR import. A finite toy
+metric-response target is an allowed constructive packet before attempting a
+full `M_src` or `g_eff` construction.
+
 ## Local Cache Boundary
 
 Tracked files under `research_control/` are authority. `.local/` prompts,
 logs, previews, and run caches are optional convenience artifacts only.
+
+## Novel Datum Acquisition
+
+Many blockers in this project are expected to involve data, metrics, witness
+families, calculations, or theoretical objects that are not already present in
+the repository and are not supplied by the user. Local absence is therefore not
+automatically final. If tracked state or explicit user instruction authorizes
+research or construction, the Director may route one bounded AgentJob to:
+
+- search external primary literature or official technical sources;
+- design a source-acquisition packet or experiment;
+- perform a bounded theoretical calculation or mathematical construction; or
+- produce a draft/control datum from explicitly stated source-side assumptions.
+
+The output remains noncanonical until it passes the relevant audit, refutation,
+and human-gated claim-promotion sequence. Any external source must be cited,
+and any new project construction must be labeled as new draft/control work.
 
 ## Validation
 

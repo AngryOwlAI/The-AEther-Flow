@@ -1,42 +1,57 @@
-# Role Routing Spec
+# Role Routing
 
-## Rendering Intent
+Role routing decides which kind of agent may perform one bounded task, what authority that role carries, and where the task must stop.
 
-Create a tracked HTML drilldown for role routing. The page should explain how
-the Director chooses a role, how a role is bound to one task through an
-execution-role record, and how the system distinguishes:
+## Source Binding
 
-- registered role used directly,
-- `task_overlay` for a bounded task-specific delta,
-- `one_job_provisional_role` for a temporary role or distinct one-job identity.
+- **Derived from spec:** `markdown/html-explainer-specs/role-routing-explainer.md`
+- **Related HTML:** `html/role-routing-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-The page must not change role contracts or routing rules.
+## Plain-Language Model
 
-## Required Visual Structure
+A role is a controlled job identity. It is not a personality label and not a measure of general ability. The project uses roles because physics construction, refutation, documentation, validator repair, memory maintenance, and project-control maintenance have different authority boundaries. A Director decision selects the role for one AgentJob. A task-local execution-role record then says exactly how that role is used for the task.
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Responsive containment: navigation chips, grids, tables, code paths, source
-  drilldowns, and diagram shells must not create body-level horizontal overflow
-  on mobile or desktop viewports.
-- Adaptive diagram fit: diagram-backed boxes must read the rendered
-  SVG viewBox, set the box height from diagram aspect ratio and available
-  width within bounded min/max limits, and make Fit recompute that best-fit
-  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
-- Three-layer readability: stack the high-level, operational, and evidence
-  layer sections vertically; cards inside each layer must auto-fit at a
-  readable minimum width rather than nesting fixed three-column grids.
-- High-level model: why role routing exists.
-- Operational model: problem type -> authority class -> role candidates ->
-  selected role -> execution-role record -> AgentJob.
-- Low-level evidence model: role registry, execution-role registry, Director
-  decision registry, schema, and task-local role record.
-- Workflow step inspector for role selection.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+## Workflow Step Inspector
 
-## Required Diagrams
+1. Classify the task request or handoff by authority class.
+2. Compare candidate registered roles against the required source classes.
+3. Record the Director decision with the selected role and one AgentJob.
+4. Choose direct registered-role use, a bounded task overlay, or a one-job provisional role.
+5. Bind the execution-role record to allowed writes, removed permissions, expansions, and validators.
+6. Keep optional role decomposition inside the same AgentJob and inherited authority.
+7. Execute within the role boundary and record completion evidence.
+8. Expire the overlay or provisional role after the job unless a later human-authorized registration changes the role system.
+
+## Operational Answers
+
+- The Director decision selects the role for the bounded job.
+- An execution-role record binds a reusable role to the exact AgentJob authority.
+- A task overlay expires with the job unless a later human-authorized registration changes the role system.
+- Parent-child synthesis does not create extra authority; parent and child perspectives inherit the outer AgentJob authority, claim boundary, and write allowlist.
+- Reviewers should inspect the role registry, Director decision, execution-role row, AgentJob YAML, and completion record.
+
+## Common misunderstandings
+
+- A capable tool is not automatically the correct role.
+- A Documentation Curator cannot silently become a Validator Engineer or Gate Chair.
+- A one-job provisional role is not a permanent role.
+- A generated explainer is not permission to write project-control or physics sources.
+- Internal child perspectives are not child AgentJobs.
+
+## Safe Mental Model
+
+The route is a chain, not a vibe: request, authority class, Director decision,
+role, execution-role record, AgentJob, validator evidence, and completion. If
+one link is missing, authority is incomplete.
+
+The project uses many roles because the failure modes differ. Physics drafting
+can overclaim. Refutation can erase too much if it is scoped poorly.
+Documentation can mislead readers about authority. Validator repair can change
+the checkpoint gate. Memory maintenance can make retrieval look canonical. Role
+routing keeps those risks separated before work begins.
+
+## Routing Diagrams
 
 <!-- mermaid-diagram-id: role-routing-decision-tree -->
 ```mermaid
@@ -68,38 +83,40 @@ flowchart TD
   Execution --> Removed["Removed permissions"]
   Execution --> Expanded["Explicit expansions"]
   Execution --> Expiry["Expires after AgentJob"]
+  Execution --> Decomp["Optional internal<br/>role_decomposition"]
+  Decomp --> Perspectives["Parent and child<br/>perspectives"]
   Allowed --> Job["AgentJob boundary"]
+  Perspectives --> Job
 ```
 
-## Source-Backed Summary
+## For GitHub Readers And AI Agents
 
-Summary heading: `Summary of Role Routing`
+You are reading a non-authoritative GitHub-facing explainer.
 
-Summary text:
+Safe uses:
+- orient yourself to the role-selection chain;
+- find the records that constrain a task;
+- distinguish role authority from tool capability.
 
-Role routing is the project's decision system for assigning bounded work to
-the correct registered role or task-local execution overlay. Its functionality
-is to connect task state, Director decisions, base role contracts, provisional
-or overlay authority, and registry evidence so an agent knows who owns the
-change, what paths may be written, which validators are required, and when the
-job must stop. This matters because the repository contains physics roles,
-documentation roles, validator roles, memory roles, and project-control roles
-with different authority levels; collapsing them into one generic helper would
-risk claim promotion, direct derivative edits, or untracked control changes.
-Role routing fits the overall project by making authority selection itself
-auditable before implementation begins.
+Before modifying project knowledge:
+- inspect the selected role row and execution-role row;
+- inspect the AgentJob allowlist;
+- follow the current task's validators and stop conditions.
 
-Summary source basis:
+Do not:
+- infer write permission from skill availability;
+- convert a provisional role into permanent policy;
+- use generated docs as authority for routing.
 
+## All Source Materials
+
+- `README.md`
+- `AGENTS.md`
+- `research_control/README.md`
+- `research_control/AGENTS.md`
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `registries/ROLE_EXECUTION_REGISTRY.csv`
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-
-## Required Content Blocks
-
-- subject_summary: Summarize role routing as authority selection, why the project needs it, how it fits bounded AgentJobs, and which declared sources ground the summary.
-- authority_classification: A completed explanation of how task authority class separates physics work, project-control maintenance, documentation curation, validation, memory maintenance, and process auditing before a role is selected.
-- director_routing: A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions.
-- execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence.
-- overlay_provisional_boundary: A matrix explaining registered roles, task overlays, and one-job provisional roles, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.
+- `.agents/schemas/ROLE_SCHEMA.md`

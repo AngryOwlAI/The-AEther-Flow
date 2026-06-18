@@ -2,14 +2,14 @@
 object_id: "HTML-ROLES-AND-SKILLS-EXPLAINER"
 format: "html"
 source_path: "html/roles-and-skills-explainer.html"
-source_hash: "bcb34947bb89eacfc560a49edb71eadad150ab1c34f6db918460d2cce3d00ffd"
+source_hash: "6c7a1c45a379dce6f69d29a2ccba5fe94c2bcc1f90e205eb991d13a1b5c57c95"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-roles-and-skills-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-roles-and-skills-explainer.html"
-content_hash: "185fd29728e5af699c9c42f0b4187b3cd6324375a15d63d907d4980539aadfb7"
+content_hash: "96237b8ad9ccd71216df2d7c0d79393774fff995060a134ab3a1875348eac7c3"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `185fd29728e5af699c9c42f0b4187b3cd6324375a15d63d907d4980539aadfb7`
+- Content hash: `96237b8ad9ccd71216df2d7c0d79393774fff995060a134ab3a1875348eac7c3`
 - Extracted text path: `.local/content_semantics/html/html-roles-and-skills-explainer.txt`
-- Character count: `8532`
+- Character count: `8304`
 
 ## Relationships
 

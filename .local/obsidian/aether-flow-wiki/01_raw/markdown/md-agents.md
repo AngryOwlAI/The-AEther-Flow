@@ -33,6 +33,34 @@ and tracked state under `research_control/`. The Director of Research may create
 one bounded AgentJob per invocation after validation. Generated outputs and
 `.local/` caches never override tracked control state.
 
+When a required scientific datum, metric, witness family, computation, or
+experimental input is absent from the repository, that absence is not by
+itself a terminal result if tracked state or explicit user instruction
+authorizes research or construction. The Director may route one bounded
+non-promotional AgentJob to search external primary literature, design a
+source-acquisition packet, perform a bounded theoretical calculation, or build
+a draft/control datum from source-side assumptions. Such work must cite
+external materials, distinguish established literature from new project
+construction, preserve claim gates, and avoid treating a constructed draft as
+canonical ontology, benchmark promotion, or completed derivation.
+
+For theoretical physics continuation, research should pause only when the next
+honest step needs protected human-gated authority such as canonical ontology
+edit or ontology adoption. Missing local data, missing experiment access, or
+uncertain theoretical packet selection is not sufficient. When the Director
+needs a decision among theoretical packets, route one bounded
+`theoretical-continuation-selector@0.1.0` AgentJob to select the next packet
+and preserve claim gates.
+
+For physics AgentJobs created after `2026-06-17T15:46:25Z`, the Director must
+name `target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. Future completions must
+use the expanded Distance-to-GR matrix, include new mathematical payload, and
+evaluate freeze criteria for repeated-burden or scoped-obstruction outcomes.
+Source-extension and finite toy metric-response packets are controlled
+categories; they do not promote ontology, metric, coupling, Einstein-equation,
+benchmark, or Gate Chair claims.
+
 ## Project-System Improvement
 
 For project-system repair, explanatory documentation synchronization,
@@ -42,6 +70,12 @@ workflow clarification, use
 from physics continuation. It may process one project-improvement signal or
 one deterministic classifier result per invocation, and it must not promote
 physics claims or edit canonical science sources.
+
+For human-made local repository edits that need controlled integration, use
+`.codex/skills/user-modified-project/SKILL.md` as the intake router. It must
+classify the diff, preserve the physics/project-system authority split, route
+to `continue-research` or `improve-project-system` as appropriate, and refresh
+memory/wiki/registry derivatives only through the approved bootstrap path.
 
 Use the deterministic classifier before deciding that documentation work is
 needed:

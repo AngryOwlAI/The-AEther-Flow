@@ -2,17 +2,18 @@
 object_id: "MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/role-routing-explainer.md"
-source_hash: "4fafef2e415194e26840227ade74e17121885cf4aeff2f5e268f423886847503"
+source_hash: "8d68c9ff71f89a710f54d0250659b271bd42f592c62ac02fee70ba4fbb3d9ee2"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-role-routing-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-role-routing-explainer.md"
-content_hash: "4fafef2e415194e26840227ade74e17121885cf4aeff2f5e268f423886847503"
+content_hash: "8d68c9ff71f89a710f54d0250659b271bd42f592c62ac02fee70ba4fbb3d9ee2"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-ROLE-ROUTING-EXPLAINER"
+  - "MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER"
   - "SEMANTIC-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER"
   - "VAULT-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER"
   - "WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER"
@@ -34,9 +35,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `4fafef2e415194e26840227ade74e17121885cf4aeff2f5e268f423886847503`
+- Content hash: `8d68c9ff71f89a710f54d0250659b271bd42f592c62ac02fee70ba4fbb3d9ee2`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-role-routing-explainer.txt`
-- Character count: `7305`
+- Character count: `12094`
 
 ## Relationships
 

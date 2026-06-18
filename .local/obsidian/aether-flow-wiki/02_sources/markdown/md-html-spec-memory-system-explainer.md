@@ -2,17 +2,18 @@
 object_id: "MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/memory-system-explainer.md"
-source_hash: "f53919c076a39fceb3825ed3bb13ae71cc861bd28791c4d7cf174fe4a027bdcb"
+source_hash: "1a200db470bbf036b7129c13fb9541edd05f67964b8a5ab03c584da1df3f4c21"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-memory-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-memory-system-explainer.md"
-content_hash: "f53919c076a39fceb3825ed3bb13ae71cc861bd28791c4d7cf174fe4a027bdcb"
+content_hash: "1a200db470bbf036b7129c13fb9541edd05f67964b8a5ab03c584da1df3f4c21"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-MEMORY-SYSTEM-EXPLAINER"
+  - "MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER"
   - "SEMANTIC-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
   - "VAULT-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
   - "WIKI-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
@@ -34,9 +35,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `f53919c076a39fceb3825ed3bb13ae71cc861bd28791c4d7cf174fe4a027bdcb`
+- Content hash: `1a200db470bbf036b7129c13fb9541edd05f67964b8a5ab03c584da1df3f4c21`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-memory-system-explainer.txt`
-- Character count: `7412`
+- Character count: `8828`
 
 ## Relationships
 

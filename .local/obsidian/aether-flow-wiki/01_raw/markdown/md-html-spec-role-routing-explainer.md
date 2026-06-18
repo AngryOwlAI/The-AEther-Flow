@@ -12,7 +12,9 @@ source_materials:
   - "registries/AGENT_ROLE_REGISTRY.csv"
   - "registries/ROLE_EXECUTION_REGISTRY.csv"
   - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
   - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - ".agents/schemas/ROLE_SCHEMA.md"
 claim_boundary: "Human-only role-routing visualization. It explains existing role selection and execution-role constraints without changing role authority, routing behavior, schemas, validators, or scientific claim status."
 human_visual_only: true
 explainer_kind: "workflow_process"
@@ -26,15 +28,36 @@ required_controls:
   - "workflow_step_inspector"
 required_content_blocks:
   - "subject_summary"
-  - "authority_classification"
-  - "director_routing"
-  - "execution_role_contract"
-  - "overlay_provisional_boundary"
+  - "plain_language_model"
+  - "why_this_exists"
+  - "glossary"
+  - "guided_walkthrough"
+  - "common_questions"
+  - "examples_and_non_examples"
+  - "misconception_repairs"
+  - "authority_boundaries"
+  - "check_your_understanding"
+  - "where_to_go_next"
 mermaid_diagrams:
   required: true
   ids:
     - "role-routing-decision-tree"
     - "execution-role-contract-map"
+teaching_loop:
+  enabled: true
+  rounds: 2
+  student_role: "documentation-student@0.1.0"
+  teacher_role: "documentation-teacher@0.1.0"
+  audience_model: "layperson"
+  qa_packet: "markdown/teaching-packets/role-routing.teaching-qa.md"
+  required_teaching_blocks:
+    - "plain_language_model"
+    - "glossary"
+    - "guided_walkthrough"
+    - "common_questions"
+    - "examples_and_non_examples"
+    - "misconception_repairs"
+    - "check_your_understanding"
 ---
 
 # Role Routing Spec
@@ -48,6 +71,8 @@ execution-role record, and how the system distinguishes:
 - registered role used directly,
 - `task_overlay` for a bounded task-specific delta,
 - `one_job_provisional_role` for a temporary role or distinct one-job identity.
+- optional `role_decomposition` inside an AgentJob as analytical perspective
+  synthesis, not role authority expansion.
 
 The page must not change role contracts or routing rules.
 
@@ -70,10 +95,34 @@ The page must not change role contracts or routing rules.
 - High-level model: why role routing exists.
 - Operational model: problem type -> authority class -> role candidates ->
   selected role -> execution-role record -> AgentJob.
+- Decomposition boundary: if `parent_child_parallel_synthesis` is present, it
+  inherits the existing execution-role record and preserves the same AgentJob
+  boundary.
 - Low-level evidence model: role registry, execution-role registry, Director
   decision registry, schema, and task-local role record.
+- Teaching model: plain-language opening, glossary, guided walkthrough,
+  learner questions, examples and non-examples, misconception repairs,
+  authority boundaries, retrieval prompts, and next-reading path from the
+  curated teaching packet.
 - Workflow step inspector for role selection.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as the role-selection path:
+
+1. Classify the task request or handoff by authority class.
+2. Compare candidate registered roles against the required source classes.
+3. Record the Director decision with the selected role and one AgentJob.
+4. Choose direct registered-role use, a bounded task overlay, or a one-job
+   provisional role.
+5. Bind the execution-role record to allowed writes, removed permissions,
+   expansions, and validators.
+6. Keep optional role decomposition inside the same AgentJob and inherited
+   authority.
+7. Execute within the role boundary and record completion evidence.
+8. Expire the overlay or provisional role after the job unless a later
+   human-authorized registration changes the role system.
 
 ## Required Diagrams
 
@@ -107,7 +156,10 @@ flowchart TD
   Execution --> Removed["Removed permissions"]
   Execution --> Expanded["Explicit expansions"]
   Execution --> Expiry["Expires after AgentJob"]
+  Execution --> Decomp["Optional internal<br/>role_decomposition"]
+  Decomp --> Perspectives["Parent and child<br/>perspectives"]
   Allowed --> Job["AgentJob boundary"]
+  Perspectives --> Job
 ```
 
 ## Source-Backed Summary
@@ -116,29 +168,38 @@ Summary heading: `Summary of Role Routing`
 
 Summary text:
 
-Role routing is the project's decision system for assigning bounded work to
-the correct registered role or task-local execution overlay. Its functionality
-is to connect task state, Director decisions, base role contracts, provisional
-or overlay authority, and registry evidence so an agent knows who owns the
-change, what paths may be written, which validators are required, and when the
-job must stop. This matters because the repository contains physics roles,
-documentation roles, validator roles, memory roles, and project-control roles
-with different authority levels; collapsing them into one generic helper would
-risk claim promotion, direct derivative edits, or untracked control changes.
-Role routing fits the overall project by making authority selection itself
-auditable before implementation begins.
+Role routing is the project’s decision system for assigning bounded work to the correct registered role or task-local execution overlay. Its function is to connect task state, Director decisions, base role contracts, provisional or overlay authority, and registry evidence so an agent knows who owns the change, what paths may be written, which validators are required, and when the job must stop. It also explains why optional parent-child synthesis is a decomposition of analytical perspective inside the selected AgentJob, not a new role class or permission expansion. The project needs role routing because physics roles, documentation roles, validator roles, memory roles, and project-control roles carry different authority. Collapsing them into one generic helper would risk claim promotion, direct derivative edits, or untracked control changes.
 
 Summary source basis:
 
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `registries/ROLE_EXECUTION_REGISTRY.csv`
 - `registries/DIRECTOR_DECISION_REGISTRY.csv`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+
+
+## Teaching Q&A Basis
+
+This explainer uses the curated teaching packet at:
+
+- `markdown/teaching-packets/role-routing.teaching-qa.md`
+
+The packet is explanatory support only. It is derived from the declared source
+materials and does not promote claims, change role authority, change routing
+behavior, change schemas, change validators, or make generated docs
+authoritative.
 
 ## Required Content Blocks
 
-- subject_summary: Summarize role routing as authority selection, why the project needs it, how it fits bounded AgentJobs, and which declared sources ground the summary.
-- authority_classification: A completed explanation of how task authority class separates physics work, project-control maintenance, documentation curation, validation, memory maintenance, and process auditing before a role is selected.
-- director_routing: A source-backed account of how Director decisions bind a selected role to one job, one claim boundary, allowed read and write paths, expected outputs, validators, and stop conditions.
-- execution_role_contract: A detailed section on task-local execution-role records, role contracts, allowlists, removed permissions, expanded permissions, expiry, and validation evidence.
-- overlay_provisional_boundary: A matrix explaining registered roles, task overlays, and one-job provisional roles, including why repeated provisional-role patterns must route to project-system review rather than silently becoming policy.
+- subject_summary: A source-backed summary of Role Routing that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `registries/ROLE_EXECUTION_REGISTRY.csv`, `registries/DIRECTOR_DECISION_REGISTRY.csv`, `.agents/schemas/AGENT_JOB_SCHEMA.md`.
+- plain_language_model: A plain-language source-backed block on plain model that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `README.md`, `AGENTS.md`, `research_control/README.md`.
+- why_this_exists: A plain-language source-backed block on why routing exists that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `AGENTS.md`, `registries/AGENT_ROLE_REGISTRY.csv`.
+- glossary: A plain-language source-backed block on key terms that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `registries/ROLE_EXECUTION_REGISTRY.csv`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`.
+- guided_walkthrough: A plain-language source-backed block on routing walkthrough that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `registries/DIRECTOR_DECISION_REGISTRY.csv`, `.agents/schemas/AGENT_JOB_SCHEMA.md`.
+- common_questions: A plain-language source-backed block on common questions that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `README.md`, `AGENTS.md`, `registries/DIRECTOR_DECISION_REGISTRY.csv`.
+- examples_and_non_examples: A plain-language source-backed block on examples and non-examples that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `research_control/README.md`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`, `.agents/schemas/AGENT_JOB_SCHEMA.md`.
+- misconception_repairs: A plain-language source-backed block on common misunderstandings that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `AGENTS.md`, `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`, `.agents/schemas/AGENT_JOB_SCHEMA.md`.
+- authority_boundaries: A plain-language source-backed block on authority boundaries that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `AGENTS.md`, `research_control/README.md`, `.agents/schemas/ROLE_SCHEMA.md`.
+- check_your_understanding: A plain-language source-backed block on check understanding that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `registries/AGENT_ROLE_REGISTRY.csv`, `registries/ROLE_EXECUTION_REGISTRY.csv`, `.agents/schemas/AGENT_JOB_SCHEMA.md`.
+- where_to_go_next: A plain-language source-backed block on next reading that explains the project functionality, common confusion, authority boundary, and next reading path; source paths: `AGENTS.md`, `research_control/README.md`, `registries/AGENT_ROLE_REGISTRY.csv`.

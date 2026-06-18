@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/physics/smuggling-auditor.v0.1.0.md"
-source_hash: "ee7b02f6afbb419f6b22173b8f15c80b5f95ab2d728cbbc1f1f02b5e409b5cfd"
+source_hash: "f0150cc053178f9df0e7d74e774e46cff63c1f405c9ffae1645bc0636e0021e0"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md.md"
-content_hash: "ee7b02f6afbb419f6b22173b8f15c80b5f95ab2d728cbbc1f1f02b5e409b5cfd"
+content_hash: "f0150cc053178f9df0e7d74e774e46cff63c1f405c9ffae1645bc0636e0021e0"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-PHYSICS-SMUGGLING-AUDITOR-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `ee7b02f6afbb419f6b22173b8f15c80b5f95ab2d728cbbc1f1f02b5e409b5cfd`
+- Content hash: `f0150cc053178f9df0e7d74e774e46cff63c1f405c9ffae1645bc0636e0021e0`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-physics-smuggling-auditor-v0-1-0-md.txt`
-- Character count: `826`
+- Character count: `830`
 
 ## Relationships
 

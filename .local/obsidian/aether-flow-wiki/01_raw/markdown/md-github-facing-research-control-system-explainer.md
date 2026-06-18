@@ -1,46 +1,42 @@
-# Research-Control System Spec
+# Research-Control System
 
-## Rendering Intent
+The research-control system is the governance layer that decides how project-system work and research-continuation work may proceed without blurring authority.
 
-Create a tracked HTML drilldown for validation governance. The page should
-explain how control-system changes remain bounded: classification, resolver
-state, documentation-impact accounting, source-backed HTML rules, Mermaid
-parity, bootstrap refresh, research-control validation, diff boundary checks,
-and tests.
+## Source Binding
 
-Keep source authority details summarized here and send deep authority-ladder
-content to `source-authority-explainer.html`.
+- **Derived from spec:** `markdown/html-explainer-specs/research-control-system-explainer.md`
+- **Related HTML:** `html/research-control-system-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-## Required Visual Structure
+## What It Controls
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Responsive containment: navigation chips, grids, tables, code paths, source
-  drilldowns, and diagram shells must not create body-level horizontal overflow
-  on mobile or desktop viewports.
-- Adaptive diagram fit: diagram-backed boxes must read the rendered
-  SVG viewBox, set the box height from diagram aspect ratio and available
-  width within bounded min/max limits, and make Fit recompute that best-fit
-  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
-- Three-layer readability: stack the high-level, operational, and evidence
-  layer sections vertically; cards inside each layer must auto-fit at a
-  readable minimum width rather than nesting fixed three-column grids.
-- High-level model: the control system exists to preserve authority boundaries
-  while improving the project machinery.
-- Operational model: change classification, bounded AgentJob, documentation
-  impact, generated-derivative refresh, validators, and checkpoint boundary.
-- Low-level evidence model: validator scripts, completion receipts, registry
-  rows, source specs, and generated HTML metadata.
-- Documentation Curator panel: source-spec-first tracked HTML generation.
-- Flexible HTML contract panel: explain `presentation_profile`,
-  `layout_intent`, `required_content_blocks`, `data-content-block`, and
-  source-path evidence as deterministic structural requirements.
-- Workflow step inspector for the validation chain.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+The system controls state-changing work: project-system repairs, documentation synchronization, validator changes, role/schema changes, memory-tooling updates, and physics continuation. It separates those lanes so a documentation task does not promote science, a validator repair does not rewrite ontology, and a research continuation does not bypass tracked state.
 
-## Required Diagrams
+## Workflow Step Inspector
+
+1. Classify changed paths and reason codes.
+2. Resolve advisory project-system or continuation routing.
+3. Bind the work to one bounded AgentJob and execution role.
+4. Update canonical source specs or project-control sources before derivatives.
+5. Record documentation impact when project machinery changes.
+6. Regenerate memory, registry, HTML, wiki, or GitHub-facing derivatives through approved tooling.
+7. Run the validator chain: teaching QA, depth lint, unit tests, bootstrap, documentation-surface audit, documentation-impact validation, research-control validation, and diff checks where required.
+8. Treat checkpoint readiness as validator-backed authority-boundary evidence, not as a scientific result.
+
+## Control Semantics
+
+Documentation work is controlled because explanation changes how humans and
+agents interpret authority. If a generated page implies a stronger physics or
+workflow claim than the sources allow, that is project-system risk even when
+the prose is easy to read.
+
+The project-improvement resolver is advisory routing state. Hard gates are
+validator failures, authority-boundary violations, forbidden paths, missing
+receipts, and claim-status overreach. Generated explainers are protected by
+source specs, renderer contracts, source-basis hashes, Mermaid parity checks,
+documentation-impact records, and research-control validation.
+
+## Validation Flow
 
 <!-- mermaid-diagram-id: research-control-validation-flow -->
 ```mermaid
@@ -60,46 +56,63 @@ flowchart TD
   Change["Proposed project-system change"] --> Classifier["Change classifier"]
   Classifier --> Role["Recommended role boundary"]
   Role --> Job["One bounded AgentJob"]
-  Job --> Allowed["Allowed writes"]
-  Job --> Forbidden["Forbidden authority surfaces"]
+  Job --> DecompCheck["Optional parent-child<br/>shape and conflict checks"]
+  DecompCheck --> Allowed["Allowed writes"]
+  DecompCheck --> Forbidden["Forbidden authority surfaces"]
   Allowed --> Validators["Required validators"]
   Forbidden --> Stop["Stop condition"]
   Validators --> Receipt["Completion and documentation-impact receipts"]
   Receipt --> Registry["Control registries updated"]
 ```
 
-## Source-Backed Summary
+## Failure Modes It Prevents
 
-Summary heading: `Summary of Research-Control System`
+- A generated page becoming source authority.
+- A role writing outside its AgentJob allowlist.
+- A project-system repair changing physics claim status.
+- A physics continuation stopping too early because local data is absent when tracked state authorizes a bounded next packet.
+- A repeated workflow problem staying informal instead of becoming a registered project-improvement signal.
 
-Summary text:
+## For GitHub Readers And AI Agents
 
-The research-control system is the repository's governance layer for deciding
-how project-system and research-continuation work may proceed. Its function is
-to classify changes, resolve advisory routing, create or reuse one bounded
-AgentJob, enforce role and write-path boundaries, require documentation-impact
-receipts when project machinery changes, and validate that source specs,
-skills, roles, registries, claim boundaries, and generated derivatives remain
-aligned. It matters because the project deliberately combines scientific
-exploration with agent workflow development; without control records,
-generated HTML, Markdown guidance, validators, and role contracts could drift
-or be mistaken for scientific authority. The system fits the larger project by
-making improvements reversible, auditable, and separate from physics claim
-promotion.
+You are reading a non-authoritative GitHub-facing explainer.
 
-Summary source basis:
+Safe uses:
+- understand which validation path protects a change;
+- identify the source files and scripts that govern control state;
+- distinguish advisory routing from hard gates.
+
+Before modifying project knowledge:
+- run the classifier or resolver only in the correct workflow context;
+- inspect the AgentJob and documentation-impact requirements;
+- validate with the current command chain before checkpointing.
+
+Do not:
+- treat resolver output as a physics verdict;
+- bypass documentation-impact receipts after project-system changes;
+- hand-edit generated wiki notes or tracked HTML derivatives as authority.
+
+## All Source Materials
 
 - `AGENTS.md`
+- `README.md`
 - `research_control/README.md`
 - `.codex/skills/improve-project-system/SKILL.md`
-- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `.codex/skills/html-visual-explainer/SKILL.md`
+- `.codex/skills/aether-teaching-explainer/SKILL.md`
+- `.codex/skills/visual-explainer/SKILL.md`
+- `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
+- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
+- `research_control/templates/COMPLETION_TEMPLATE.yaml`
+- `research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml`
 - `research_control/design/html_explainer_flexible_presentation_contract.md`
-
-## Required Content Blocks
-
-- subject_summary: Summarize the research-control system, its safety-harness role, why validators and receipts matter, and which declared sources ground the summary.
-- classification_resolver: A completed classification-to-resolver walkthrough covering deterministic change classification, project-improvement signal routing, advisory resolver state, and selected authority surfaces.
-- bounded_transaction: A source-backed explanation of one bounded AgentJob, allowed writes, generated paths, forbidden paths, human-gate requirements, checkpoint gates, and stop conditions.
-- flexible_html_contract: A documentation section explaining the flexible HTML explainer contract, presentation profiles, layout intent, required content blocks, subject summaries, depth lint, and generated-HTML boundaries.
-- documentation_impact: A completed receipt section covering source-doc updates, no-op rationales, reason codes, generated derivatives, validators run, and why documentation impact is a receipt requirement rather than routing authority by itself.
-- validator_chain: A source-backed validator chain covering bootstrap validation, Mermaid parity, emitted signal validation, documentation-impact validation, research-control validation, diff checks, tests, and advisory depth lint.
+- `scripts/project_control/validate_documentation_impact.py`
+- `scripts/research_control/validate_research_control.py`
+- `scripts/spec_depth_lint.py`
+- `scripts/validate_teaching_qa.py`
+- `.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py`

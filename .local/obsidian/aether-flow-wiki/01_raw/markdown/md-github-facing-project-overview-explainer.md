@@ -1,79 +1,47 @@
-# Project Overview Spec
+# Project Overview
 
-## Rendering Intent
+AEther-Flow is both a speculative physics research program and a controlled AI research-agent system. The physics lane asks whether an Æther-flow substrate can recover ordinary relativistic geometry. The agent lane keeps that inquiry bounded, source-backed, auditable, and honest about what has not been derived.
 
-Create a self-contained tracked HTML hub for the research-atlas explainer set.
-The page must orient a technical reader to the project without requiring prior
-repository knowledge. It should show the project as a dual physics-and-AI
-research program, then route readers to focused drilldowns:
+## Source Binding
 
-- `Æther-flow ontology`: high-level substrate model plus low-level readout and
-  derivation burden.
-- `Research system`: Director, AgentJobs, validation, completions, and
-  handoffs.
-- `Role routing`: how roles are selected and constrained for one job.
-- `Claim gates`: how hypotheses, candidates, refutations, blocked claims, and
-  negative results are handled.
-- `Source authority`: how TeX, registries, Markdown, generated wiki/PDF/HTML,
-  and `.local/` scratch layers relate.
-- `Roles and skills`: registered roles, governed repo-local skills, and
-  evidence-labeled support-skill associations.
-- `Memory system`: CSV memory spine and derived wiki, Obsidian, semantic, and
-  query surfaces.
-- `Technical requirements`: tiered requirements for reading, validating,
-  regenerating Mermaid HTML, using local retrieval, and refreshing PDFs.
+- **Derived from spec:** `markdown/html-explainer-specs/project-overview-explainer.md`
+- **Related HTML:** `html/project-overview-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-The page should stop explaining what an ontology is in general. It should
-explain what this project means by the `Æther-flow ontology`.
+## The Project In One Paragraph
 
-## Shared Research-Atlas Visual System
+The project studies a proposed deeper substrate vocabulary, called Æther and Æther-flow, while keeping ordinary exact general relativity as the observable benchmark. That does not mean the substrate derivation has succeeded. It means the repository has a disciplined target: recover metric behavior, causal structure, clock behavior, same-metric matter coupling, invariance, and Einsteinian closure from source-side assumptions or preserve the failure clearly. The AI research-agent system exists because this work produces many drafts, refutations, validators, role records, generated explainers, and memory surfaces. Those artifacts are useful only if their authority is explicit.
 
-Use one visual language across this hub and every drilldown page:
+## Two Systems That Must Not Be Confused
 
-- Authority color: canonical sources and registries.
-- Physics color: ontology, benchmark, derivation burden, and claim gates.
-- Workflow color: Director decisions, AgentJobs, roles, validation, completion,
-  and handoff.
-- Generated-derivative color: HTML, wiki notes, PDFs, and local retrieval
-  surfaces.
-- Warning/open-burden color: unresolved derivation steps, blocked promotion,
-  and no-go or negative-result preservation.
-- Validation color: passing checks, source parity, and successful receipts.
+The physics system supplies the question: can the project move from source-side Æther-flow structure to the exact-GR benchmark without importing the target geometry by hand?
 
-Mermaid diagrams must use the governed build-time inline-SVG path and should
-visually match the HTML palette and typography.
+The research-control system supplies the method: resolve tracked state, select one bounded AgentJob, bind it to a role and claim boundary, validate outputs, preserve negative results, and hand off the next state.
 
-## Required Visual Structure
+```mermaid
+flowchart TD
+  Physics["Physics lane<br/>ontology, benchmark, derivation burden"] --> Target["Recover or hard-fail<br/>a route to ordinary GR"]
+  Agents["Agent lane<br/>roles, jobs, validators, memory"] --> Target
+  Target --> Gates["Claim gates<br/>promotion only by authority"]
+  Gates --> Memory["Preserved sources<br/>registries and handoffs"]
+```
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Responsive containment: navigation chips, grids, tables, code paths, source
-  drilldowns, and diagram shells must not create body-level horizontal overflow
-  on mobile or desktop viewports.
-- Adaptive diagram fit: diagram-backed boxes must read the rendered
-  SVG viewBox, set the box height from diagram aspect ratio and available
-  width within bounded min/max limits, and make Fit recompute that best-fit
-  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
-- Three-layer readability: stack the high-level, operational, and evidence
-  layer sections vertically; cards inside each layer must auto-fit at a
-  readable minimum width rather than nesting fixed three-column grids.
-- Hero: state the project as a dual physics-and-AI research program.
-- Hub links: grouped drilldown cards for ontology, research system, role
-  routing, claim gates, source authority, validation governance, roles and
-  skills, memory system, and technical requirements.
-- Group links by use case: understand the research idea, understand the agent
-  workflow, understand authority and memory, and run or regenerate the system.
-- High-level model: project purpose and the two co-developing tracks.
-- Operational model: how the research system turns questions into bounded jobs
-  and checked outputs.
-- Low-level evidence model: source files, registry rows, generated artifacts,
-  and validator receipts.
-- All Source Materials section: complete source list with source-path evidence; claim-boundary metadata remains in the source spec.
-- Claim-boundary panel: human-only, non-authoritative, no physics promotion.
+## Reader Model
 
-## Required Diagrams
+A new reader should keep three claims separate. First, the project has a
+source-side ontology for talking about Æther and Æther-flow. Second, ordinary
+GR remains the benchmark behavior to recover or hard-fail against. Third, the
+research-control system records how bounded work is selected, validated, and
+preserved. Those three facts explain the repository shape: physics sources
+carry the scientific burden, control records carry workflow authority, and
+generated explainers only help readers navigate back to those sources.
+
+The safest first trust rule is simple: registered TeX for science-bearing
+derivational claims, registries for provenance and routing, registered
+Markdown for front-door and control guidance, and generated surfaces for
+orientation only.
+
+## Research Atlas
 
 <!-- mermaid-diagram-id: research-atlas-hub -->
 ```mermaid
@@ -101,52 +69,72 @@ flowchart TD
 <!-- mermaid-diagram-id: dual-track-map -->
 ```mermaid
 flowchart TD
-  Program["Æther-flow research program"] --> Physics["Physics track"]
-  Program --> AI["AI research-agent track"]
-  Physics --> Ontology["Æther-flow ontology"]
-  Physics --> Benchmark["Exact-GR benchmark adoption"]
-  Physics --> OpenProof["Open first-principles derivation"]
-  AI --> Routing["Director and role routing"]
-  AI --> Validation["Validators and claim gates"]
-  AI --> Memory["Source-first memory"]
-  Ontology --> SharedTarget["Derive or hard-fail a valid path"]
+  Program["Æther-flow<br/>research program"] --> Physics["Physics<br/>track"]
+  Program --> AI["AI research-agent<br/>track"]
+  Physics --> Ontology["Æther-flow<br/>ontology"]
+  Physics --> Benchmark["Exact-GR benchmark<br/>adoption"]
+  Physics --> OpenProof["Open first-principles<br/>derivation"]
+  AI --> Routing["Director and<br/>role routing"]
+  AI --> Validation["Validators and<br/>claim gates"]
+  AI --> Memory["Source-first<br/>memory"]
+  Ontology --> SharedTarget["Derive or hard-fail<br/>a valid path"]
   Routing --> SharedTarget
   Validation --> SharedTarget
   Memory --> SharedTarget
 ```
 
-## Source-Backed Summary
+## Orientation Checks
 
-Summary heading: `Summary of Project Overview`
+- The project is not a completed physics theory; exact GR is the benchmark and the substrate derivation remains open until claim gates authorize stronger status.
+- Registries and task records exist to stop generated explanations, drafts, and workflow completions from replacing source authority.
+- A polished AI-written explanation can orient readers, but registered sources and control records decide project knowledge.
+- A good first path is ontology for the physics picture, claim gates for status, research system for workflow, and source authority before citing any generated surface.
 
-Summary text:
+## Common misunderstandings
 
-The project overview is the atlas for the AEther-Flow repository's human-
-readable explainer set. Its function is to give readers a controlled entry
-point into the two linked missions: preserving an exact-GR benchmark for the
-physics program and maintaining a governed research-agent system for
-theoretical work. Rather than acting as a source of new claims, the overview
-routes readers to the ontology, research workflow, control system, role-
-routing, claim-gate, source-authority, role-and-skill, memory-system, and
-technical-requirements drilldowns. It matters because the project contains
-persuasive generated pages, registries, role contracts, and research-control
-records that can look equally authoritative to a newcomer. The atlas clarifies
-where explanation ends and source authority begins, so readers can inspect the
-right Markdown specs, registries, README guidance, or control documents before
-relying on a statement.
+- A successful validator run is evidence of repository consistency, not proof of a physical derivation.
+- A generated explainer can be clearer than the source, but it is not more authoritative than the source.
+- A completed AgentJob records bounded work; it does not become a Gate Chair decision.
+- A negative result is not wasted work. It preserves an obstruction so the project does not replay the same route blindly.
 
-Summary source basis:
+## For GitHub Readers And AI Agents
+
+You are reading a non-authoritative GitHub-facing explainer.
+
+Safe uses:
+- orient yourself before reading the source files;
+- identify which registry, source spec, role, or task record to inspect next;
+- summarize the project structure without changing claim status.
+
+Before modifying project knowledge:
+- read `AGENTS.md`;
+- inspect the relevant source file and registry row;
+- use the appropriate research-control or project-system workflow;
+- keep generated derivatives subordinate to registered sources.
+
+Do not:
+- do not claim the Æther-flow derivation is complete;
+- treat generated HTML, wiki notes, PDFs, GitHub-facing Markdown, or `.local/` files as independent authority;
+- bypass claim gates, validators, or AgentJob boundaries.
+
+## All Source Materials
 
 - `README.md`
 - `AGENTS.md`
+- `ontology/aether-and-aether-flow.md`
+- `research_control/README.md`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`
 - `registries/HTML_EXPLAINER_REGISTRY.csv`
+- `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `markdown/html-explainer-specs/research-control-system-explainer.md`
-
-## Required Content Blocks
-
-- subject_summary: Summarize the project overview atlas, its routing function across the explainer set, why it matters for source-first project understanding, and which declared sources ground the summary.
-- atlas_navigation: A completed atlas section that routes readers by use case across the research idea, agent workflow, authority and memory system, and regeneration/validation path while preserving existing explainer URLs.
-- research_idea: A documentation-grade explanation of the two-track program: exact-GR benchmark adoption, open first-principles Æther-flow derivation, claim-gate caution, and the ontology drilldowns that readers should use next.
-- agent_workflow: A concrete overview of the staged-autonomy research harness: state, handoff, Director decision, bounded AgentJob, role execution, artifacts, validators, completion, and registries, with the boundary that it is not an autonomous proof engine.
-- authority_memory: A source-first explanation of canonical TeX, registries, registered Markdown, generated HTML/wiki/PDF derivatives, and local retrieval surfaces, including why memory access does not create new authority.
-- run_regenerate_system: A practical operator path for validating and regenerating the project: inspect sources, update specs, render HTML, preserve Mermaid parity, run bootstrap, run advisory depth lint, and use the technical-requirements drilldown.
+- `markdown/html-explainer-specs/role-routing-explainer.md`
+- `markdown/html-explainer-specs/claim-gates-explainer.md`
+- `markdown/html-explainer-specs/source-authority-explainer.md`
+- `markdown/html-explainer-specs/roles-and-skills-explainer.md`
+- `markdown/html-explainer-specs/memory-system-explainer.md`
+- `markdown/html-explainer-specs/technical-requirements-explainer.md`
+- `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
+- `markdown/html-explainer-specs/project-system-improvement-explainer.md`
+- `markdown/html-explainer-specs/documentation-curator-teaching-loop-explainer.md`

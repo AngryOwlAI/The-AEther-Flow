@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/physics/ontology-formalizer.v0.1.0.md"
-source_hash: "3403ff4dc196aa341b4b5e3fcfe289543bf37e8155c466063763e3549312dcef"
+source_hash: "bcace3cd9ec67108b150ec795d7de3d4cab1514a14096e23fdc8ee3c97a18c7d"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md.md"
-content_hash: "3403ff4dc196aa341b4b5e3fcfe289543bf37e8155c466063763e3549312dcef"
+content_hash: "bcace3cd9ec67108b150ec795d7de3d4cab1514a14096e23fdc8ee3c97a18c7d"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `3403ff4dc196aa341b4b5e3fcfe289543bf37e8155c466063763e3549312dcef`
+- Content hash: `bcace3cd9ec67108b150ec795d7de3d4cab1514a14096e23fdc8ee3c97a18c7d`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md.txt`
-- Character count: `856`
+- Character count: `860`
 
 ## Relationships
 

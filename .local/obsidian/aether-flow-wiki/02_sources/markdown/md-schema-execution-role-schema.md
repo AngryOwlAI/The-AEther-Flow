@@ -2,14 +2,14 @@
 object_id: "MD-SCHEMA-EXECUTION-ROLE-SCHEMA"
 format: "markdown"
 source_path: ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
-source_hash: "89f358d8263dead21d99999d183a0d18cdd96cc62e66ee0e4125a21f418244e1"
+source_hash: "d36c932c9c8eae038f450de68d09cac8afa871409f1c8e9c0d4a445ee75b98ed"
 authority_status: "project_control"
 role: "schema_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-schema-execution-role-schema.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-schema-execution-role-schema.md"
-content_hash: "89f358d8263dead21d99999d183a0d18cdd96cc62e66ee0e4125a21f418244e1"
+content_hash: "d36c932c9c8eae038f450de68d09cac8afa871409f1c8e9c0d4a445ee75b98ed"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SCHEMA-EXECUTION-ROLE-SCHEMA"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `89f358d8263dead21d99999d183a0d18cdd96cc62e66ee0e4125a21f418244e1`
+- Content hash: `d36c932c9c8eae038f450de68d09cac8afa871409f1c8e9c0d4a445ee75b98ed`
 - Extracted text path: `.local/content_semantics/markdown/md-schema-execution-role-schema.txt`
-- Character count: `3077`
+- Character count: `4019`
 
 ## Relationships
 

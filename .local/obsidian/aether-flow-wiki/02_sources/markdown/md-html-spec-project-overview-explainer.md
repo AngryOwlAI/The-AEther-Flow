@@ -2,17 +2,18 @@
 object_id: "MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/project-overview-explainer.md"
-source_hash: "9979579ede25739490998ad76252c2302b7c309532f1354216ddbc1bd86614e5"
+source_hash: "ec23522ff65018da869190e325ecda935f9932c165a72322a966d80e4a4d3348"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-project-overview-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-project-overview-explainer.md"
-content_hash: "9979579ede25739490998ad76252c2302b7c309532f1354216ddbc1bd86614e5"
+content_hash: "ec23522ff65018da869190e325ecda935f9932c165a72322a966d80e4a4d3348"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-PROJECT-OVERVIEW-EXPLAINER"
+  - "MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"
   - "SEMANTIC-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER"
   - "VAULT-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER"
   - "WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER"
@@ -34,9 +35,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `9979579ede25739490998ad76252c2302b7c309532f1354216ddbc1bd86614e5`
+- Content hash: `ec23522ff65018da869190e325ecda935f9932c165a72322a966d80e4a4d3348`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-project-overview-explainer.txt`
-- Character count: `10619`
+- Character count: `13066`
 
 ## Relationships
 

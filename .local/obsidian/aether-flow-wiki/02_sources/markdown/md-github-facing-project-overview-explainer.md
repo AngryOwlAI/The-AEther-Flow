@@ -2,16 +2,17 @@
 object_id: "MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"
 format: "markdown"
 source_path: "github-facing/project-overview-explainer.md"
-source_hash: "2137881dd045411afafcdc6efdfd1625e7f559074b41ce37be6cf8c62245414a"
-authority_status: "canonical_markdown_source"
+source_hash: "a1f8bdfc680c9dac49cc074a683874470cd9a74d35cdcc22505a30c849c3ea08"
+authority_status: "generated_noncanonical"
 role: "github_facing_documentation"
 owner_skill: "documentation-curator"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-project-overview-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-project-overview-explainer.md"
-content_hash: "2137881dd045411afafcdc6efdfd1625e7f559074b41ce37be6cf8c62245414a"
+content_hash: "a1f8bdfc680c9dac49cc074a683874470cd9a74d35cdcc22505a30c849c3ea08"
 extraction_status: "PASS"
 related_object_ids:
+  - "MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER"
   - "SEMANTIC-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"
   - "VAULT-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"
   - "WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER"
@@ -26,22 +27,24 @@ related_object_ids:
 - Source path: `github-facing/project-overview-explainer.md`
 - Source registry: `MARKDOWN_SOURCE_REGISTRY.csv`
 - Format: `markdown`
-- Authority status: `canonical_markdown_source`
+- Authority status: `generated_noncanonical`
 - Raw mirror: `01_raw/markdown/md-github-facing-project-overview-explainer.md`
 
 ## Content Semantics
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `2137881dd045411afafcdc6efdfd1625e7f559074b41ce37be6cf8c62245414a`
+- Content hash: `a1f8bdfc680c9dac49cc074a683874470cd9a74d35cdcc22505a30c849c3ea08`
 - Extracted text path: `.local/content_semantics/markdown/md-github-facing-project-overview-explainer.txt`
-- Character count: `8299`
+- Character count: `7503`
 
 ## Relationships
 
 - `generated_output` -> WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER (wiki/markdown/md-github-facing-project-overview-explainer.md)
+- `generated_from` -> [[02_sources/markdown/md-html-spec-project-overview-explainer|MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER]] (MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER)
 - `has_vault_note` -> VAULT-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER (VAULT-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER)
 - `has_content_semantics` -> SEMANTIC-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER (SEMANTIC-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER)
+- `related_source` -> [[02_sources/markdown/md-html-spec-project-overview-explainer|MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER]] (MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER)
 - `has_wiki_note` -> WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER (WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER)
 
 <!-- MANUAL LOCAL NOTES START -->

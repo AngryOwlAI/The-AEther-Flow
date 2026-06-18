@@ -27,7 +27,7 @@ skills provide procedures, and gates control claim promotion.
    rendering of the same packet.
 
 3. If the packet boundary is `director_decision_required`, enter Director of
-   Research mode under `.agents/roles/research_ops/director-of-research.v0.1.0.md`.
+   Research mode under `.agents/roles/research_ops/director-of-research.v0.2.0.md`.
    Write or reuse exactly one Director Decision Record and one AgentJob. The
    Director may create a new task only when tracked state proves that the active
    task is completed, blocked, human-gated, or the latest handoff explicitly
@@ -52,9 +52,86 @@ skills provide procedures, and gates control claim promotion.
    promotion, canonical ontology authority, benchmark-status authority, Gate
    Chair authority, or permanent role registration.
 
+   For every new physics research AgentJob created after
+   `2026-06-17T04:08:16Z`, the Director must enable
+   `role_decomposition.mode: "parent_child_parallel_synthesis"`. Keep exactly
+   one outer AgentJob and the same single execution-role record. The parent and
+   two children are internal execution units:
+
+   - parent: `physicist_mathematician_philosopher`
+   - child A: `physicist_mathematician`
+   - child B: `physicist_philosopher`
+
+   The children inherit the selected role authority, claim boundary, forbidden
+   source classes, and write-path allowlist. They do not become independent
+   AgentJobs and may not expand authority. The parent must write the conflict
+   review artifact, preserve unresolved limitations, and produce one fused
+   old-style final artifact. The completion must list the child outputs,
+   conflict review, and fusion summary under `parent_child_synthesis`. A PASS
+   completion may not contain unresolved blocking conflicts.
+
+   For every new physics research AgentJob created after
+   `2026-06-17T15:46:25Z`, declare `target_derivation_milestone` and
+   `milestone_burden` from `research_control/design/gr_derivation_burden_map.md`.
+   If no derivation milestone can be named, route the work as documentation,
+   methodology, validation, or project-system maintenance rather than physics
+   derivation work.
+
 6. Execute exactly one authorized AgentJob unless a stop condition applies:
    human gate required, validation failure, no role fit, authority expansion,
-   write-path conflict, or a planning-only/control-only Director decision.
+   write-path conflict, or protected ontology/authority expansion requiring a
+   human gate.
+
+   If the active blocker is a missing datum, metric, witness family,
+   computation, or experiment and the repository does not contain it, do not
+   treat local absence alone as a terminal result when tracked state or
+   explicit user instruction authorizes research or construction. The Director
+   may create one bounded non-promotional AgentJob for external primary-source
+   search, source-acquisition design, bounded theoretical calculation,
+   mathematical construction, or experiment design. The output must distinguish
+   established external literature from new project construction, cite
+   external materials in APA 7 format when used, remain draft/control, and
+   preserve all claim-promotion gates.
+
+   For theoretical physics continuation, missing local data or missing
+   experiment access is not a generic pause condition. If continuation requires
+   selecting among a source-side selector primitive, source-side irrelevance
+   theorem, concrete `Resp_lc` witness, distinct scoped no-go question, bounded
+   theoretical calculation, or another new mathematical payload, and no single
+   execution role is already determined, the Director must create one bounded
+   `theoretical-continuation-selector@0.1.0` AgentJob. That job outputs
+   `theoretical_decision_output` and preserves all promotion blocks.
+
+   Future pause-like routing is reserved for protected human-gated authority,
+   especially canonical ontology edits or ontology adoption. Record that route
+   as `human_gated_ontology_change_required` or the applicable human-gated
+   route, not as generic `controlled_pause`.
+
+   For Refuter stress tests created after the bridge-or-fail loop-control
+   policy activation, the completion must classify the result as one of:
+   `concrete_witness_path`, `source_side_irrelevance_theorem_path`,
+   `bridge_facing_candidate_path`,
+   `repeated_unmet_burdens_no_new_payload`, or `scoped_obstruction`.
+   If repeated burdens or a scoped obstruction remain, the next route must be
+   one of: Candidate Constructor bridge attempt, Ontology Formalizer concrete
+   witness construction, Refuter scoped no-go or obstruction, Theoretical
+   Continuation Selector decision packet, human-gated ontology-change
+   requirement, or a human-gated Gate Chair closure or suspension proposal. Do
+   not route back to another generic Ontology Formalizer obligation packet.
+
+   Future physics completions must include `distance_to_gr_status`. After
+   `2026-06-17T15:46:25Z`, that matrix must use the expanded burden list from
+   `research_control/design/gr_derivation_burden_map.md`, every physics
+   completion must include at least one `new_mathematical_payload`, and
+   repeated-burden or scoped-obstruction Refuter completions must include
+   `freeze_criteria_status`. Future bridge-facing Candidate Constructor
+   completions must include `bridge_attempt_status` naming either a candidate
+   map or the missing primitive and preserving all downstream promotion blocks.
+   Future Theoretical Continuation Selector completions must include
+   `theoretical_decision_output`; source-extension packets must classify the
+   extension category, and finite toy metric-response packets must state the
+   finite source set, response relation, metric-response analogue, and
+   invariance checks.
 
 7. After a state-changing AgentJob completion, create the durable response
    transaction: role output artifact if any, completion record, registry updates,

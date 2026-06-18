@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/physics/candidate-constructor.v0.1.0.md"
-source_hash: "93ae4020e24bab6c93d26cd65561d0e91772560b8dd1942c48c67a9548784572"
+source_hash: "175a3b04ce7d3a4fec81edbb892eb17148c42b896bdce09df41bfb0d5d2aa1f8"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md"
-content_hash: "93ae4020e24bab6c93d26cd65561d0e91772560b8dd1942c48c67a9548784572"
+content_hash: "175a3b04ce7d3a4fec81edbb892eb17148c42b896bdce09df41bfb0d5d2aa1f8"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `93ae4020e24bab6c93d26cd65561d0e91772560b8dd1942c48c67a9548784572`
+- Content hash: `175a3b04ce7d3a4fec81edbb892eb17148c42b896bdce09df41bfb0d5d2aa1f8`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.txt`
-- Character count: `914`
+- Character count: `918`
 
 ## Relationships
 

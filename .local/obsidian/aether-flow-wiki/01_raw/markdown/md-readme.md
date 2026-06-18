@@ -44,33 +44,33 @@ The physics problem gives the AI system a hard, real research environment. The A
 
 ```mermaid
 flowchart TB
-    program["The Æther-Flow Research Program"]
-    physics["Physics Research Track"]
-    ai["AI Research-Agent Track"]
+    program["The Æther-Flow<br/>Research Program"]
+    physics["Physics<br/>Research Track"]
+    ai["AI Research-Agent<br/>Track"]
 
     program --> physics
     program --> ai
 
-    physics --> ontology["Æther / Æther-flow ontology"]
-    physics --> benchmark["Exact-GR benchmark package"]
-    physics --> derivation["Open GR-derivation problem"]
-    physics --> obstructions["No-go and obstruction record"]
+    physics --> ontology["Æther / Æther-flow<br/>ontology"]
+    physics ---> benchmark["Exact-GR<br/>benchmark package"]
+    physics --> derivation["Open GR-derivation<br/>problem"]
+    physics --> obstructions["No-go and<br/>obstruction record"]
 
-    ai --> routing["Director routing and bounded AgentJobs"]
-    ai --> roles["Role contracts and governed skills"]
-    ai --> gates["Claim gates, refutation, and review discipline"]
-    ai --> memory["Source-first memory, wiki, and registries"]
+    ai --> routing["Director routing<br/>and bounded AgentJobs"]
+    ai --> roles["Role contracts<br/>and governed skills"]
+    ai ----> gates["Claim gates, refutation,<br/>and review discipline"]
+    ai --> memory["Source-first memory,<br/>wiki, and registries"]
 
-    derivation --> gates
+    derivation ----> gates
     memory --> ontology
-    memory --> benchmark
+    memory ---> benchmark
 ```
 
 ---
 
 ## This repo
 
-This repository is a reset of the earlier research program in [The Æther GR Derivation](/Volumes/P-SSD/AngryOwl/The Æther GR Derivation/). The previous control system accumulated useful artifacts and lessons, but it did not derive GR from the ontology or produce a decisive hard-fail result. This reset keeps the exact-GR benchmark as a disciplined reference point while rebuilding the derivation program around clearer claim boundaries, tighter negative-result preservation, and more explicit AI-agent governance.
+This repository is a reset of the earlier research program in The Æther GR Derivation. The previous control system accumulated useful artifacts and lessons, but it did not derive GR from the ontology or produce a decisive hard-fail result. This reset keeps the exact-GR benchmark as a disciplined reference point while rebuilding the derivation program around clearer claim boundaries, tighter negative-result preservation, and more explicit AI-agent governance.
 
 The working goal is not to assert that GR has already been derived. The working goal is to improve the research system until it can either construct a valid derivation path from the Æther Flow ontology or identify reproducible obstructions strong enough to stop a line of attack.
 
@@ -94,6 +94,12 @@ The accepted benchmark boundary is conservative: observable-scale physics remain
 ## The research-agent system
 
 The research-agent system is the project’s operating discipline for theoretical work. It routes bounded tasks through Director decisions, AgentJobs, role contracts, completion records, registries, validation scripts, and handoffs. Its purpose is to make research progress auditable: proposals can be constructed, refuted, repaired, preserved as negative results, or held behind gates without being mistaken for accepted physics.
+
+Every new physics research AgentJob created after `2026-06-17T04:08:16Z` must declare `parent_child_parallel_synthesis`. That mode preserves the external invariant: one Director decision, one outer AgentJob, one execution-role record, one completion record, and one fused final output. The parent and child execution units inherit the same authority, claim boundary, allowlists, validators, and stop conditions; they are not separate AgentJobs, new roles, or a route around conflict review.
+
+Future routing after `2026-06-17T04:29:31Z` treats generic controlled pause as a human-gate condition, not a normal result of missing local data. If the next step is theoretical selection among a source-side selector primitive, irrelevance theorem, concrete witness, scoped no-go question, or bounded calculation, the Director routes a bounded `theoretical-continuation-selector@0.1.0` AgentJob. A pause-like route is reserved for protected authority such as canonical ontology edit or ontology adoption.
+
+Every new physics research AgentJob created after `2026-06-17T15:46:25Z` must name a `target_derivation_milestone` and `milestone_burden` from `research_control/design/gr_derivation_burden_map.md`. Future completions must update the expanded Distance-to-GR matrix and include a new mathematical payload. Repeated-burden or scoped-obstruction results must evaluate freeze criteria rather than orbiting the same missing bridge step indefinitely.
 
 The system deliberately separates several kinds of claims:
 
@@ -121,27 +127,54 @@ rendered diagrams are used where they fit the subject. Those interactions help
 readers explore the project; they do not make generated HTML authoritative.
 
 For GitHub browsing, start with the root-level
-`github-facing` directory. They mirror the registered
-explainer specs without the YAML metadata header. This layer is canonical for
-GitHub-facing explanation and agent-readable orientation, but it is
-non-authoritative for physics claims and control decisions.
+`github-facing` directory. Those pages are derived, source-backed Markdown
+explainers generated from the registered explainer specs, not body-only spec
+mirrors. This layer is the GitHub-readable orientation surface for humans and
+external AI, but it is generated noncanonical: it is non-authoritative for
+physics claims, control decisions, routing, validator behavior, and registry
+authority.
+
+Teaching-enriched explainers may also use curated Q&A packets under
+`markdown/teaching-packets/`. Those packets are built from Documentation
+Student questions and Documentation Teacher answers inside a Documentation
+Curator task, then distilled into source specs, tracked HTML, and
+GitHub-facing Markdown. They are registered explanatory support only: they do
+not override source materials, registries, schemas, role contracts, validators,
+routing, claim gates, or generated-output boundaries.
 
 - [Project Overview](github-facing/project-overview-explainer.md): the research-atlas hub for the physics track, AI research-agent track, source materials, authority chain, and open derivation boundary.
 - [Æther-flow Ontology](github-facing/aether-flow-ontology-explainer.md): a detailed visual explanation of the project-specific ontology, exact-GR benchmark status, substrate/readout burden, and current derivation constraints.
-- [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, validation, completions, registries, and handoffs.
-- [Role Routing](github-facing/role-routing-explainer.md): how roles are selected, constrained, overlaid, or kept one-job provisional.
+- [Research System](github-facing/research-agent-workflow-explainer.md): a human-readable view of Director decisions, AgentJobs, optional internal parent-child synthesis, validation, completions, registries, and handoffs.
+- [Role Routing](github-facing/role-routing-explainer.md): how roles are selected, constrained, overlaid, kept one-job provisional, or internally decomposed without authority expansion.
 - [Claim Gates](github-facing/claim-gates-explainer.md): how hypotheses, candidates, blocked promotions, refutations, accepted states, and negative results remain distinct.
 - [Source Authority](github-facing/source-authority-explainer.md): how TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local/` scratch boundaries relate.
-- [Research-Control System](github-facing/research-control-system-explainer.md): the validation-governance overview for documentation impact, project-system improvement, source-backed HTML, Mermaid parity, and diff gates.
+- [Research-Control System](github-facing/research-control-system-explainer.md): the validation-governance overview for documentation impact, project-system improvement, parent-child completion checks, source-backed HTML, Mermaid parity, and diff gates.
 - [Roles And Skills](github-facing/roles-and-skills-explainer.md): active-first registered role catalog, role status states, repo-local governed skills, and evidence-labeled support-skill associations.
 - [Memory System](github-facing/memory-system-explainer.md): CSV memory spine, tracked generated wiki, local Obsidian vault, semantic extracts, SQLite index, and query surfaces.
 - [Technical Requirements](github-facing/technical-requirements-explainer.md): tiered requirements for reading, validating, regenerating memory/wiki surfaces, diagram-backed HTML, local retrieval, and PDFs.
+- [GR Derivation Roadmap](github-facing/gr-derivation-roadmap-explainer.md): milestone burdens, Distance-to-GR ledger state, selector routing, freeze criteria, source extension, and finite toy metric-response scaffolding.
+- [Project-System Improvement](github-facing/project-system-improvement-explainer.md): classifier, advisory resolver, signal registries, one bounded maintenance AgentJob, documentation impact, regeneration, and validation gates.
+- [Documentation Curator Teaching Loop](github-facing/documentation-curator-teaching-loop-explainer.md): subject-first Curator authority, Student questions, Teacher answers, curated Q&A packets, derivative synchronization, and advisory format boundaries.
 
 ---
 
 ## Requirements
 
 <!-- authority: control -->
+
+### Current AI-agent harness
+
+This project is currently developed and operated inside the Codex app. The
+repo-local `.codex/` skills, prompts, agent configuration files, continuation
+workflows, tool-use expectations, and Documentation Curator loops assume the
+Codex app as the present AI-agent execution harness.
+
+Read-only inspection, normal Git use, and Python validators can still be run
+outside the Codex app. Reproducing the governed research-agent workflow as it is
+used in this repository currently requires Codex app access. A future custom or
+third-party AI harness may replace that dependency only after it preserves the
+same tracked state, authority hierarchy, role boundaries, allowlists, validator
+gates, checkpoint discipline, and generated-derivative boundaries.
 
 ### Python environment
 
@@ -183,6 +216,8 @@ When a Python script requires an external package, add one package per line to
 ### Requirement tiers
 
 - Read and inspect: browser, text editor, and Git.
+- Operate the governed AI-agent workflow: Codex app plus the repo-local
+  `.codex/` skills, prompts, and agent configuration files.
 - Run validators and memory scripts: Python `.venv`, `requirements.txt`, and
   PyMuPDF.
 - Regenerate memory/wiki/registry surfaces:
@@ -219,10 +254,17 @@ Authority order:
 
 Generated artifacts are tracked when they are part of the project memory surface, but they are not independent authority. Update the source file and registry row, then regenerate.
 
+The live ontology lane is `ontology/`. The `legacy_ontology/` lane is a
+2026-06-18 archival snapshot of the ontology TeX, PDF, and Markdown package for
+future comparison. It is registered for wiki and CSV retrieval as archival
+noncanonical material; it does not replace the live ontology, authorize
+ontology extension, or promote any derivation claim.
+
 Registered Markdown sources include front-door docs, scoped agent guidance,
 role contracts, schema contracts, skill contracts, key research-control design
 notes, ontology-adjacent explanatory notes, and Markdown source specs for
-generated HTML explainers.
+generated HTML explainers. Curated teaching Q&A packets are registered as
+noncanonical explanatory support.
 
 Tracked HTML explainers are human-only generated derivatives. A tracked
 `html/*.html` file is valid only when it is backed by a registered Markdown
@@ -243,6 +285,10 @@ Non-summary explainer blocks are expected to render as completed
 source-backed documentation, not source-spec instructions. Use
 `scripts/spec_depth_lint.py --root .` or `make validate-html-explainers` as an
 advisory depth check after regenerating tracked HTML explainers.
+For teaching-enabled explainers, also run
+`scripts/validate_teaching_qa.py --root .`; the validator checks packet
+source binding, two-round Student/Teacher structure, boundary notes, source
+paths, and synthesis sections.
 
 Bootstrap or refresh the memory system:
 
@@ -312,8 +358,9 @@ Decision vocabulary:
 | --- | --- | --- | --- |
 | `continue-research` | Continue physics research-control from tracked state, handoffs, and the active task boundary. | Uses `.codex/skills/continue-research/SKILL.md`; may route one bounded research AgentJob through the Director-controlled control spine. | Does not repair project-system machinery unless the routed task explicitly allows it. |
 | `improve-project-system` | Repair or clarify the research system itself: roles, schemas, validators, checkpoint gates, memory tooling, skill guidance, docs, or generated-doc pipelines. | Uses `.codex/skills/improve-project-system/SKILL.md`; may resolve one signal, one classifier result, or one bounded project-system AgentJob. | Does not perform physics derivation, promote claims, or edit canonical science sources. |
+| `user-modified-project` | Integrate human-made local repository edits after a brief intent note. | Uses `.codex/skills/user-modified-project/SKILL.md`; classifies the diff, routes to the correct controlled workflow, refreshes registry/wiki derivatives through bootstrap, and checkpoints only after validation. | Does not bypass `continue-research`, `improve-project-system`, claim gates, generated-surface rules, or AgentJob allowlists. |
 | Project-System Director | A project-system boundary or routing question must be resolved before work proceeds. | Creates a project-system Director Decision Record and selects one bounded non-scientific AgentJob. | Does not execute the selected job or expand role authority by convention. |
-| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML as independent authority. |
+| Documentation Curator | Explanatory documentation, documentation registries, documentation-source specs, teaching Q&A packets, source-backed human HTML explainers, or documentation-impact receipts drift from current machinery. | Updates allowed explanatory Markdown, `markdown/html-explainer-specs/*.md`, `markdown/teaching-packets/*.md`, spec-backed `html/*.html` derivatives, and documentation-impact records when required. | Does not change control contracts, workflow commands, routing, validators, permissions, scientific claim status, or HTML or teaching packets as independent authority. |
 | Project-Control Maintainer | Skill contracts, role contracts, schema contracts, control registries, or control-marked mixed Markdown need functional maintenance. | Edits allowed control markdown and project-control contracts under one AgentJob allowlist. | Does not edit explanatory-only sections unless a task overlay explicitly grants `explanatory_markdown` permission. |
 | Validator Engineer | Deterministic validator, checkpoint gate, or test behavior is missing, unclear, or incorrect. | Edits allowed validator scripts, tests, documented validator contracts, and registry rows. | Does not use model judgment as a validator substitute or decide human policy questions. |
 | Memory-System Maintainer | Source-first memory, wiki, registry, Obsidian, query, or derivative metadata tooling needs maintenance. | Edits allowed memory-system scripts, registry generation rules, query tooling, and related skill documentation. | Does not make generated artifacts authoritative or alter claim-promotion semantics. |
@@ -347,6 +394,21 @@ Validate documentation impact:
 
 ```zsh
 .venv/bin/python scripts/project_control/validate_documentation_impact.py
+```
+
+Audit registered documentation surfaces, derivative paths, source hashes, HTML
+source-basis links, GitHub-facing derived explainers, and local retrieval
+surfaces:
+
+```zsh
+.venv/bin/python scripts/project_control/audit_documentation_surfaces.py
+```
+
+For project-control validation or CI contexts where ignored `.local/`
+retrieval files have not been generated, use the tracked-surface mode:
+
+```zsh
+.venv/bin/python scripts/project_control/audit_documentation_surfaces.py --skip-local
 ```
 
 Project-improvement signal types are defined in
@@ -414,6 +476,7 @@ from the canonical type registry rather than duplicated local constant sets.
 │       ├── pdf-derivative-build/
 │       ├── obsidian-wiki/
 │       ├── html-visual-explainer/
+│       ├── user-modified-project/
 │       ├── ontology-promotion/
 │       └── visual-explainer/
 ├── AGENTS.md
@@ -438,6 +501,9 @@ from the canonical type registry rather than duplicated local constant sets.
 │   │   └── Source specs for tracked human-only HTML explainers.
 │   └── ontology-promotions/
 ├── manuscripts/
+│   ├── tex/
+│   └── pdfs/
+├── legacy_ontology/
 │   ├── tex/
 │   └── pdfs/
 ├── ontology/

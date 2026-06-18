@@ -78,6 +78,24 @@ acceptance.
 - Workflow step inspector for claim states.
 - All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
 
+## Workflow Step Inspector Basis
+
+Render the workflow inspector as a claim-status path:
+
+1. Frame the candidate or ontology statement with a scoped claim boundary.
+2. Keep exact-GR benchmark adoption separate from substrate derivation
+   proposals.
+3. Route candidate work through bounded construction, audit, or refutation.
+4. Repair only when the defect is local and the claim boundary remains honest.
+5. Preserve refutations, obstructions, and underdetermination as negative
+   results.
+6. Send promotion requests through Gate Chair or human-gated review when
+   stronger scientific status is sought.
+7. Record accepted, blocked, or negative-result status in the relevant control
+   evidence.
+8. Prevent generated docs, validator passes, or completed jobs from promoting
+   claims by presentation alone.
+
 ## Required Diagrams
 
 <!-- mermaid-diagram-id: claim-gate-state-machine -->
@@ -116,18 +134,7 @@ Summary heading: `Summary of Claim Gates`
 
 Summary text:
 
-Claim gates are the project's control mechanism for deciding when a physics
-statement may move from framing, proposal, repair, audit, or explanation into
-a stronger accepted status. Their role is to keep exact-GR benchmark adoption
-separate from unproven substrate derivation claims by requiring source
-evidence, explicit claim-boundary records, routed review, Gate Chair or human-
-gated authority when needed, and registry updates before promotion. They
-matter because the explainer pages and workflow artifacts can make candidate
-ideas look more settled than they are; a visual explanation, completed task,
-or preserved repair packet cannot by itself authorize science claims or weaken
-unresolved derivation burdens. Within the project, claim gates protect both
-positive progress and negative results by preserving why a route is accepted,
-blocked, refuted, or still conjectural.
+Claim gates are the project’s control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into stronger accepted status. Their function is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because polished explainers, completed tasks, and preserved repair packets can make candidate ideas look more settled than they are. A visual explanation, validator pass, or completed AgentJob cannot authorize science claims by itself. Claim gates also protect negative results by preserving why a route is blocked, refuted, underdetermined, or still conjectural.
 
 Summary source basis:
 
@@ -136,10 +143,11 @@ Summary source basis:
 - `registries/TEX_SOURCE_REGISTRY.csv`
 - `.agents/roles/physics/gate-chair.v0.1.0.md`
 
+
 ## Required Content Blocks
 
-- subject_summary: Summarize claim gates, their scientific acceptance function, why workflow completion is not claim promotion, and which declared sources ground the summary.
-- claim_status_ladder: A human-readable claim-status ladder defining ontology framing, benchmark adoption, candidate, audit, repair, refutation, blocked promotion, negative result, and accepted status with source-backed examples.
-- gate_review_path: A completed review-path section showing how Gate Chair or human-gated review differs from ordinary workflow validation and what evidence a promotion request would need.
-- negative_result_preservation: A source-backed explanation of how obstructions, refutations, blocked promotions, failed derivations, and repair notes are preserved as research memory rather than erased.
-- forbidden_promotion_boundary: A visible boundary section contrasting what generated explainers, task completions, validators, and Gate Chair decisions may say about scientific status.
+- subject_summary: A source-backed summary of Claim Gates that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `registries/CLAIM_BOUNDARY_REGISTRY.csv`, `research_control/README.md`, `registries/TEX_SOURCE_REGISTRY.csv`, `.agents/roles/physics/gate-chair.v0.1.0.md`.
+- claim_status_ladder: A source-backed reader block on status ladder that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/CLAIM_BOUNDARY_REGISTRY.csv`, `README.md`.
+- gate_review_path: A source-backed reader block on review path that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `research_control/README.md`, `.agents/roles/physics/gate-chair.v0.1.0.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- negative_result_preservation: A source-backed reader block on negative results that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `research_control/README.md`, `registries/RESEARCH_TASK_REGISTRY.csv`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- forbidden_promotion_boundary: A source-backed reader block on forbidden promotion that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.

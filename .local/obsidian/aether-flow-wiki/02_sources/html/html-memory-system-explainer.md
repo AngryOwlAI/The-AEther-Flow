@@ -2,14 +2,14 @@
 object_id: "HTML-MEMORY-SYSTEM-EXPLAINER"
 format: "html"
 source_path: "html/memory-system-explainer.html"
-source_hash: "47a1ac26c6dce59c4480a89b6f6c1ff83895d698a20e9067ee4da24ebb1f0d6e"
+source_hash: "aa396b0b258e3fe712cb9ef38f137a19c7f3ca4b9488e27b430bb78c17e30bc9"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-memory-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-memory-system-explainer.html"
-content_hash: "e79d6d70b58dd1c4105de2178d927720e46327e25233ab48c300077b5eed6a4f"
+content_hash: "55f39d545c032553937c5c84275a561cbf89ae1072576995094572302dafcf64"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `e79d6d70b58dd1c4105de2178d927720e46327e25233ab48c300077b5eed6a4f`
+- Content hash: `55f39d545c032553937c5c84275a561cbf89ae1072576995094572302dafcf64`
 - Extracted text path: `.local/content_semantics/html/html-memory-system-explainer.txt`
-- Character count: `8113`
+- Character count: `7718`
 
 ## Relationships
 

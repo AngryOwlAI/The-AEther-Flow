@@ -1,46 +1,45 @@
-# Claim Gates Spec
+# Claim Gates
 
-## Rendering Intent
+Claim gates keep hypotheses, source-side candidates, workflow progress, failed routes, and accepted physics from collapsing into one status.
 
-Create a tracked HTML drilldown for claim gates. The page should explain how
-the project separates:
+## Source Binding
 
-- ontology framing,
-- exact-GR benchmark adoption,
-- candidate derivation work,
-- smuggling audits,
-- refutations and obstructions,
-- negative-result preservation,
-- Gate Chair or human-gated promotion.
+- **Derived from spec:** `markdown/html-explainer-specs/claim-gates-explainer.md`
+- **Related HTML:** `html/claim-gates-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-The page must make it clear that workflow completion is not scientific
-acceptance.
+## Why Claim Gates Exist
 
-## Required Visual Structure
+AEther-Flow intentionally works near speculative physics. That makes status discipline essential. A candidate construction may be useful without being accepted. A refutation may block one route without rejecting the whole ontology. A generated explanation may help readers without authorizing a scientific claim. Claim gates preserve those distinctions by tying status changes to source evidence, role authority, human gates when needed, registries, and completion records.
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Responsive containment: navigation chips, grids, tables, code paths, source
-  drilldowns, and diagram shells must not create body-level horizontal overflow
-  on mobile or desktop viewports.
-- Adaptive diagram fit: diagram-backed boxes must read the rendered
-  SVG viewBox, set the box height from diagram aspect ratio and available
-  width within bounded min/max limits, and make Fit recompute that best-fit
-  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
-- Three-layer readability: stack the high-level, operational, and evidence
-  layer sections vertically; cards inside each layer must auto-fit at a
-  readable minimum width rather than nesting fixed three-column grids.
-- High-level model: why claim gates exist.
-- Operational model: how a candidate can remain proposed, repaired, refuted,
-  blocked, preserved as a negative result, or held for human-gated review.
-- Low-level evidence model: claim-boundary rows, task artifacts, TeX registry
-  rows, completion records, and role authority.
-- Workflow step inspector for claim states.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+## Workflow Step Inspector
 
-## Required Diagrams
+1. Frame the candidate or ontology statement with a scoped claim boundary.
+2. Keep exact-GR benchmark adoption separate from substrate derivation proposals.
+3. Route candidate work through bounded construction, audit, or refutation.
+4. Repair only when the defect is local and the claim boundary remains honest.
+5. Preserve refutations, obstructions, and underdetermination as negative results.
+6. Send promotion requests through Gate Chair or human-gated review when stronger scientific status is sought.
+7. Record accepted, blocked, or negative-result status in the relevant control evidence.
+8. Prevent generated docs, validator passes, or completed jobs from promoting claims by presentation alone.
+
+## Status Rules For Readers
+
+A completed research task is not automatically an accepted claim. Completion
+records show what a bounded job did, which outputs it produced, and which
+validators ran. Accepted physics status requires the appropriate gate and
+source evidence.
+
+Negative results are preserved because they protect future work. A refutation
+or scoped obstruction prevents the same route from being replayed as if it had
+never failed. It can narrow the search without pretending that every related
+route is impossible.
+
+Exact-GR benchmark adoption means ordinary GR is the observable target behavior
+for comparison. It does not mean the Æther-flow source ontology has derived
+that target.
+
+## Claim-State Diagrams
 
 <!-- mermaid-diagram-id: claim-gate-state-machine -->
 ```mermaid
@@ -72,36 +71,35 @@ flowchart TD
   Future --> Attempt
 ```
 
-## Source-Backed Summary
+## What Claim Gates Do Not Do
 
-Summary heading: `Summary of Claim Gates`
+They do not prove a candidate by making its documentation clearer. They do not let a validator pass become a theorem. They do not let generated HTML or GitHub Markdown promote a claim. They do not erase negative results because a later page is more polished.
 
-Summary text:
+## For GitHub Readers And AI Agents
 
-Claim gates are the project's control mechanism for deciding when a physics
-statement may move from framing, proposal, repair, audit, or explanation into
-a stronger accepted status. Their role is to keep exact-GR benchmark adoption
-separate from unproven substrate derivation claims by requiring source
-evidence, explicit claim-boundary records, routed review, Gate Chair or human-
-gated authority when needed, and registry updates before promotion. They
-matter because the explainer pages and workflow artifacts can make candidate
-ideas look more settled than they are; a visual explanation, completed task,
-or preserved repair packet cannot by itself authorize science claims or weaken
-unresolved derivation burdens. Within the project, claim gates protect both
-positive progress and negative results by preserving why a route is accepted,
-blocked, refuted, or still conjectural.
+You are reading a non-authoritative GitHub-facing explainer.
 
-Summary source basis:
+Safe uses:
+- identify the relevant claim-status vocabulary;
+- find the claim-boundary and task evidence to inspect;
+- explain why benchmark adoption and derivation success are different.
 
-- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
+Before modifying project knowledge:
+- inspect claim-boundary rows;
+- inspect task artifacts and completion evidence;
+- preserve blocked, refuted, and negative-result statuses accurately.
+
+Do not:
+- do not claim the Æther-flow derivation is complete;
+- promote a candidate from prose quality alone;
+- treat generated derivatives as gate evidence.
+
+## All Source Materials
+
+- `README.md`
+- `AGENTS.md`
 - `research_control/README.md`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
 - `registries/TEX_SOURCE_REGISTRY.csv`
+- `registries/RESEARCH_TASK_REGISTRY.csv`
 - `.agents/roles/physics/gate-chair.v0.1.0.md`
-
-## Required Content Blocks
-
-- subject_summary: Summarize claim gates, their scientific acceptance function, why workflow completion is not claim promotion, and which declared sources ground the summary.
-- claim_status_ladder: A human-readable claim-status ladder defining ontology framing, benchmark adoption, candidate, audit, repair, refutation, blocked promotion, negative result, and accepted status with source-backed examples.
-- gate_review_path: A completed review-path section showing how Gate Chair or human-gated review differs from ordinary workflow validation and what evidence a promotion request would need.
-- negative_result_preservation: A source-backed explanation of how obstructions, refutations, blocked promotions, failed derivations, and repair notes are preserved as research memory rather than erased.
-- forbidden_promotion_boundary: A visible boundary section contrasting what generated explainers, task completions, validators, and Gate Chair decisions may say about scientific status.

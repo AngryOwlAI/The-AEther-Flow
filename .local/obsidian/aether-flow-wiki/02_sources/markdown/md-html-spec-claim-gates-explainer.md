@@ -2,17 +2,18 @@
 object_id: "MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/claim-gates-explainer.md"
-source_hash: "96377334dc9425c551195557d097d7f13000051437ba25ee7b32c8a109e40bcb"
+source_hash: "cecd2165af920d7e56a64d13be0c200df7f7e5d2f23bda1e4d28902f9e3dfe86"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-claim-gates-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-claim-gates-explainer.md"
-content_hash: "96377334dc9425c551195557d097d7f13000051437ba25ee7b32c8a109e40bcb"
+content_hash: "cecd2165af920d7e56a64d13be0c200df7f7e5d2f23bda1e4d28902f9e3dfe86"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-CLAIM-GATES-EXPLAINER"
+  - "MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER"
   - "SEMANTIC-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
   - "VAULT-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
   - "WIKI-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
@@ -34,9 +35,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `96377334dc9425c551195557d097d7f13000051437ba25ee7b32c8a109e40bcb`
+- Content hash: `cecd2165af920d7e56a64d13be0c200df7f7e5d2f23bda1e4d28902f9e3dfe86`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-claim-gates-explainer.txt`
-- Character count: `6743`
+- Character count: `8170`
 
 ## Relationships
 

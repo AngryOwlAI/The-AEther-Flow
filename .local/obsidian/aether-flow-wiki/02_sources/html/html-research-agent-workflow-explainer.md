@@ -2,14 +2,14 @@
 object_id: "HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
 format: "html"
 source_path: "html/research-agent-workflow-explainer.html"
-source_hash: "0586a9c33ad952f7e6eaa7af42ed24543b4a37bdcd2d8bfe71d9d97cca3f1172"
+source_hash: "60a9e753374faa56d27f2d47a22901c0cb2d8a1297c0c0b2be4da16bdd1cc1c5"
 authority_status: "generated_noncanonical"
 role: "html_visual_explainer"
 owner_skill: "html-visual-explainer"
 source_registry: "HTML_EXPLAINER_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/html/html-research-agent-workflow-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/html/html-research-agent-workflow-explainer.html"
-content_hash: "44eebd5fcc99e18c035dac158739c1ae77cb980f244b29a4e6adbe9a44ad0610"
+content_hash: "d1e3208f772f8d6107b186ff604f28f63bf613b17004acf0c2794c2567e4b505"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `html`
-- Content hash: `44eebd5fcc99e18c035dac158739c1ae77cb980f244b29a4e6adbe9a44ad0610`
+- Content hash: `d1e3208f772f8d6107b186ff604f28f63bf613b17004acf0c2794c2567e4b505`
 - Extracted text path: `.local/content_semantics/html/html-research-agent-workflow-explainer.txt`
-- Character count: `7788`
+- Character count: `7925`
 
 ## Relationships
 

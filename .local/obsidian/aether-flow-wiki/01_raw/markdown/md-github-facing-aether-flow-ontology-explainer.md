@@ -1,43 +1,39 @@
-# Æther-flow Ontology Spec
+# Æther-flow Ontology
 
-## Rendering Intent
+The Æther-flow ontology is the project vocabulary for a proposed deeper substrate, its ordered motion, and the observer-level world that would have to appear as relativistic geometry if the research program succeeds.
 
-Create a standalone, source-backed HTML explainer that helps both lay readers
-and technical reviewers understand what the project means by `Æther-flow
-ontology`. The page should not explain generic ontology first. It should explain
-this project’s vocabulary, why that vocabulary exists, how it connects to exact
-general relativity as a benchmark, and why the first-principles substrate
-derivation remains open.
+## Source Binding
 
-The page should have three reading layers:
+- **Derived from spec:** `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- **Related HTML:** `html/aether-flow-ontology-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-1. **Plain-language orientation**: what the ontology is trying to picture.
-2. **Technical bridge**: how the project maps that picture to exact-GR benchmark
-   adoption, observer readout, same-metric matter, and closure constraints.
-3. **Source-grounded deep dive**: short source quotations, source chips, and
-   claim-boundary notes showing what the current files do and do not authorize.
+## What The Ontology Is For
 
-Do not alter the registered diagrams. Add richer explanation around them.
+The ontology gives candidate construction something to talk about before a derivation exists. It names `Æther`, `Æther-flow`, observed three-dimensional space, `S-time`, observed expansion, gravity as mass-shaped flow reorganization, and the observer-level exact-GR benchmark. That vocabulary is useful only if it stays separated from three stronger things: a mathematical model, an empirical theory, and an accepted derivation.
 
-## Required Visual Structure
+## The Central Distinction
 
-- Source-backed content blocks should be full-width documentation panels, not
-  narrow placeholder cards.
-- Each content block should include a plain answer, project function, source
-  basis, and claim boundary.
-- Add term cards for `Æther`, `Æther-flow`, observed three-dimensional space,
-  `S-time`, observed expansion, gravity, exact closure, adoption, derivation,
-  observer readout, and anti-smuggling.
-- Add a source quote gallery with short excerpts from the two ontology Markdown
-  files.
-- Add an adoption-vs-derivation bridge for readers who know GR but not this
-  project.
-- Add a derivation-burden checklist explaining the missing mathematical work
-  without implying the work has been solved.
-- Preserve the All Source Materials section with source-path evidence.
-- Preserve the human-only generated derivative boundary.
+Exact GR is the benchmark. The first-principles derivation from source-side substrate structure is still open.
 
-## Required Diagrams
+That distinction controls the whole physics lane. The project may use ordinary GR as the target behavior to recover, but it may not smuggle GR into the source assumptions and then announce recovery. A credible route must show how Lorentzian metric structure, causal behavior, clock behavior, matter coupling, invariance, and closure arise from source-side data.
+
+## How To Read The Ontology
+
+The ontology is a source vocabulary, not proof that the proposed substrate is
+real. Its value is that it gives candidate derivations disciplined source-side
+terms before the derivation exists. Without that vocabulary, a candidate can
+slide back into target-GR language and quietly assume what it was meant to
+recover.
+
+Useful progress is therefore mathematical or control evidence, not prettier
+wording. A new source-side construction, obstruction, finite model, no-go
+result, witness family, or source-extension classification can change a
+Distance-to-GR burden when it is recorded through the research-control system.
+A clearer explainer can help readers understand that burden, but it does not
+move the physics status by itself.
+
+## Ontology Stack
 
 <!-- mermaid-diagram-id: aether-flow-ontology-stack -->
 ```mermaid
@@ -52,6 +48,8 @@ flowchart TD
   STime --> Benchmark
   Gravity --> Benchmark
 ```
+
+## Derivation Burden
 
 <!-- mermaid-diagram-id: derivation-burden-map -->
 ```mermaid
@@ -69,41 +67,35 @@ flowchart TD
   ExactGR --> Gate["Promotion requires claim gate"]
 ```
 
-## Source-Backed Summary
+## Useful Reading Rule
 
-Summary heading: `Summary of Æther-flow Ontology`
+Read ontology terms as candidate source vocabulary. Read registry rows and TeX sources for claim status. Read generated explainers only as orientation. When a statement sounds like a completed derivation, check whether a Gate Chair or claim-boundary record actually authorizes that stronger status.
 
-Summary text:
+## For GitHub Readers And AI Agents
 
-The Æther-flow ontology is the project’s conceptual vocabulary for talking about
-a proposed deeper four-dimensional substrate, its intrinsic ordered motion, and
-the observer-level world that appears to us as space, time-order, expansion, and
-gravity. In plain terms, it is the project’s answer to the question: “What kind
-of underlying reality might ordinary relativistic geometry be describing?” The
-answer is not a new proven replacement for general relativity. The current
-project keeps ordinary exact GR as the observable benchmark and treats the
-substrate derivation as open work. This distinction matters because the ontology
-is useful as a mental model only if it does not smuggle in the GR structures it
-is supposed to recover. The page therefore separates vocabulary, interpretation,
-mathematical adoption, and derivational burden. Readers should leave knowing
-what `Æther`, `Æther-flow`, observed space, `S-time`, observed expansion, and
-gravity mean inside this repository, why the picture is attractive, and what
-must still be proven before it could count as a first-principles derivation.
+You are reading a non-authoritative GitHub-facing explainer.
 
-Summary source basis:
+Safe uses:
+- summarize the ontology vocabulary for orientation;
+- identify the source files behind each term;
+- explain why exact-GR benchmark adoption and substrate derivation are different.
 
+Before modifying project knowledge:
+- inspect ontology sources and claim-boundary rows;
+- check TeX registry status for science-bearing claims;
+- keep anti-smuggling and open-burden language intact.
+
+Do not:
+- treat ontology vocabulary as empirical confirmation;
+- do not claim the Æther-flow derivation is complete;
+- treat generated derivatives as independent physics authority.
+
+## All Source Materials
+
+- `README.md`
+- `AGENTS.md`
 - `ontology/aether-and-aether-flow.md`
 - `ontology/aether_flow_interpretation-lemen.md`
-- `README.md`
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv`
-
-## Required Content Blocks
-
-- subject_summary: Render the source-backed summary above first, with visible source chips for the declared grounding files.
-- layperson_orientation: A finished plain-language opening that defines ontology as what the project says exists, distinguishes this conceptual map from a proof, and states the exact-GR benchmark plus open derivation burden before technical vocabulary appears.
-- ontology_terms: Source-backed term cards for `Æther`, `Æther-flow`, observed three-dimensional space, `S-time`, observed expansion, gravity, exact closure, adoption, derivation, observer readout, and anti-smuggling, with plain meaning, project function, common misunderstanding, and source basis.
-- exact_gr_benchmark: A completed adoption-versus-derivation bridge explaining that current calculations remain ordinary exact GR while a valid substrate derivation would still need to recover Lorentzian geometry, clocks, causal structure, same-metric matter coupling, invariance, and closure without importing them by hand.
-- derivation_burden: A source-backed derivation-burden checklist tied to the registered diagram, including source-defined substrate data, observer normal/readout orbit, effective metric, clocks, same-metric matter, nonmetric mode control, `S-time` closure, invariance, anti-smuggling constraints, and claim-gate review.
-- source_quote_gallery: Short quote cards from both ontology Markdown sources, each paired with why the quote matters, what it permits, and what it forbids for the generated human-only explainer.
-- claim_boundaries: A visible non-claim panel stating what the page may explain and what it may not assert, including no completed GR derivation, no new empirical prediction, no canonical TeX edits, and no generated-HTML authority promotion.
-- reader_paths: A where-to-go-next panel routing new readers to term cards and diagrams, technical reviewers to TeX and registries, and project maintainers to source-authority and research-control explainers.
+- `registries/TEX_SOURCE_REGISTRY.csv`
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`

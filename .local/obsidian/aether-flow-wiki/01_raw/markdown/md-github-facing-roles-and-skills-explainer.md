@@ -1,78 +1,117 @@
-# Roles And Skills Spec
+# Roles And Skills
 
-## Rendering Intent
+Roles define who may do project work. Repo-local skills define governed procedures for doing that work. Tool availability alone is not project authority.
 
-Create a tracked HTML drilldown for registered roles and repo-local skills. The
-page should be active-first: roles with `status: active` are the current
-operating system and should visually dominate. Historical or paused roles must
-remain visible for auditability but should not compete with active contracts.
+## Source Binding
 
-Use these role status meanings:
+- **Derived from spec:** `markdown/html-explainer-specs/roles-and-skills-explainer.md`
+- **Related HTML:** `html/roles-and-skills-explainer.html`
+- **Authority status:** `generated_noncanonical`
 
-- `active`: usable current role.
-- `status_defined`: defined but human-gated or paused.
-- `superseded`: preserved for old execution records, not used for new routing.
+## Catalog Model
 
-The main skill catalog covers repo-local governed skills only:
-`continue-research`, `improve-project-system`, `project-memory-system`,
-`markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`,
-`html-visual-explainer`, `visual-explainer`, `ontology-promotion`, `grill-me`,
-and `mermaid-documentation`.
+The catalog has three layers. Active roles are the current operating contracts. Status-defined and superseded roles remain visible for audit history or human-gated definition, but they are not automatically available for new work. Repo-local skills are front doors for governed procedures such as research continuation, project-system improvement, memory regeneration, visual explainers, teaching explainers, ontology promotion, and grill sessions.
 
-External Codex plugins, global user skills, bundled tools, and operator-local
-helpers may be mentioned only in a clearly labeled operator-context note. They
-are not project contract authority unless mirrored into `.codex/skills/`.
+```mermaid
+flowchart TD
+  Work["Requested work"] --> Role["Registered or task-local role"]
+  Role --> Job["One AgentJob"]
+  Job --> Skill["Repo-local skill procedure"]
+  Skill --> Outputs["Allowed outputs"]
+  Outputs --> Validators["Validators and receipts"]
+  GlobalTools["Global tools and plugins"] --> Context["Operator context only"]
+  Context -. "not project authority" .-> Work
+```
 
-## Required Visual Structure
+## Authority Model
 
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Active-first role catalog with status badges.
-- Separate audit appendix for `status_defined` and `superseded` roles.
-- Repo-local skill catalog grouped by workflow, memory/wiki, visual
-  explanation, research promotion, and grill/design support.
-- Evidence-first role/skill association table. Declared associations should
-  cite role contracts, registries, or skill contracts. Inferred associations
-  must be labeled `likely support skill` and backed by source paths.
-- Operator-context note separating project requirements from useful
-  environment aids.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
+A role carries authority for bounded work. A skill describes a governed
+procedure or workflow. A role may use a skill, but the skill does not replace
+the AgentJob allowlist, claim boundary, or execution-role record.
 
-## Source-Backed Summary
+Superseded roles remain in the repository because old task records must stay
+auditable. They explain historical execution; they do not automatically
+authorize new work under old semantics.
 
-Summary heading: `Summary of Roles and Skills`
+Global Codex tools and plugins are operator context unless the project mirrors
+them into repo-local skill guidance or registered sources. Convenience is not
+the same as project authority.
 
-Summary text:
+## Active Role Families
 
-The roles-and-skills catalog is the active inventory of registered agent
-roles, historical role versions, task-local execution overlays, and repo-local
-skill front doors used by the project. Its function is to show which role
-contracts currently govern work, which roles are status-defined or superseded
-for audit history, which skills provide project-governed procedures, and which
-tools are merely operator-context aids. This matters because skills are useful
-only inside the right authority boundary: Documentation Curator can maintain
-explanatory specs and source-backed HTML, Project-Control Maintainer owns
-control contracts, Validator Engineer owns deterministic checks, and physics
-roles remain separate from documentation work. The catalog fits the overall
-system by giving maintainers a readable map from registry rows to role
-contracts and skill procedures before they execute a task.
+- **Routing and control:** Director of Research and Project-System Director select bounded work.
+- **Project-system maintenance:** Project-Control Maintainer, Validator Engineer, Memory-System Maintainer, and Process Integrity Auditor repair machinery under explicit boundaries.
+- **Documentation:** Documentation Curator writes source-backed explainers, teaching packets, GitHub-facing Markdown, and HTML derivatives; Documentation Student and Documentation Teacher support the teaching loop without writing tracked docs directly.
+- **Physics work:** Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector, and Gate Chair each carry science-lane constraints.
 
-Summary source basis:
+## Skill Families
 
+- **Continuation and integration:** `continue-research`, `improve-project-system`, `user-modified-project`.
+- **Memory and derivatives:** `project-memory-system`, `markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`.
+- **Explanatory surfaces:** `html-visual-explainer`, `visual-explainer`, `aether-teaching-explainer`, `mermaid-documentation`.
+- **Promotion and review:** `ontology-promotion`, `grill-me`, `grill-with-docs`.
+
+## Boundary Rule
+
+Before invoking a skill, identify the role and AgentJob that authorize the work. Before relying on a role, inspect the registry row and role contract. Before treating a helper tool as project authority, check whether it is registered in repo-local sources.
+
+## For GitHub Readers And AI Agents
+
+You are reading a non-authoritative GitHub-facing explainer.
+
+Safe uses:
+- identify likely role and skill surfaces to inspect;
+- distinguish role authority from skill procedure;
+- avoid confusing external tools with project contracts.
+
+Before modifying project knowledge:
+- inspect `registries/AGENT_ROLE_REGISTRY.csv`;
+- inspect any task-local execution-role record;
+- follow the selected skill only inside its authorized workflow.
+
+Do not:
+- use a superseded role for new work;
+- infer permission from a plugin name;
+- bypass AgentJob boundaries with a convenient skill.
+
+## All Source Materials
+
+- `README.md`
+- `AGENTS.md`
+- `research_control/README.md`
 - `registries/AGENT_ROLE_REGISTRY.csv`
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-- `.agents/roles/research_ops/documentation-curator.v0.4.0.md`
+- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
+- `.agents/roles/research_ops/director-of-research.v0.1.0.md`
+- `.agents/roles/research_ops/project-system-director.v0.1.0.md`
+- `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
+- `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
+- `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
+- `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
+- `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
+- `.agents/roles/physics/candidate-constructor.v0.1.0.md`
+- `.agents/roles/physics/refuter.v0.1.0.md`
+- `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
+- `.agents/roles/physics/gate-chair.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
+- `.codex/skills/aether-teaching-explainer/SKILL.md`
+- `.codex/skills/continue-research/SKILL.md`
+- `.codex/skills/user-modified-project/SKILL.md`
+- `.codex/skills/improve-project-system/SKILL.md`
+- `.codex/skills/project-memory-system/SKILL.md`
+- `.codex/skills/markdown-wiki/SKILL.md`
+- `.codex/skills/tex-wiki/SKILL.md`
+- `.codex/skills/pdf-derivative-build/SKILL.md`
+- `.codex/skills/obsidian-wiki/SKILL.md`
 - `.codex/skills/html-visual-explainer/SKILL.md`
-
-## Required Content Blocks
-
-- subject_summary: Summarize the roles-and-skills catalog, its active-first role inventory, why skill/role boundaries matter, and which declared sources ground the summary.
-- active_role_catalog: A primary catalog of current active roles, what each does, which authority lane it occupies, and which outputs or validators normally constrain it.
-- status_defined_roles: A secondary section for defined but human-gated roles, especially Gate Chair authority, explaining why status-defined does not mean every agent may execute it autonomously.
-- superseded_audit_roles: An audit-history section preserving superseded role contracts for provenance, historical execution records, and comparison without reactivating obsolete permissions.
-- repo_local_skill_catalog: A grouped catalog of repo-local skills by continuation, project-system improvement, memory/wiki, HTML visual explanation, Mermaid rendering, PDF/TeX, ontology promotion, and design support.
-- declared_role_skill_evidence: A source-backed evidence section showing declared role/skill relationships from role contracts, skill contracts, registries, and task overlays rather than inferred convenience.
-- inferred_support_skills: A bounded support-skills section explaining when global or operator tools can help without becoming project authority or substituting for registered repo-local skills.
-- operator_context_boundary: A visible boundary explaining that browser, editor, shell, and global Codex tools are operator context aids, while project authority remains in tracked sources, registries, and task records.
+- `.codex/skills/visual-explainer/SKILL.md`
+- `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
+- `.codex/skills/ontology-promotion/SKILL.md`
+- `.codex/skills/grill-me/SKILL.md`
+- `.codex/skills/grill-with-docs/SKILL.md`

@@ -2,17 +2,18 @@
 object_id: "MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/research-agent-workflow-explainer.md"
-source_hash: "961291e9ca3879b1cceac530a184c75724158e45654a9bd6feaad59a527add97"
+source_hash: "486419568371df7d590ecd6af80d9f720e043f9b3d7233692edcb0190489582d"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-research-agent-workflow-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-research-agent-workflow-explainer.md"
-content_hash: "961291e9ca3879b1cceac530a184c75724158e45654a9bd6feaad59a527add97"
+content_hash: "486419568371df7d590ecd6af80d9f720e043f9b3d7233692edcb0190489582d"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
+  - "MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
   - "SEMANTIC-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
   - "VAULT-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
   - "WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER"
@@ -34,9 +35,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `961291e9ca3879b1cceac530a184c75724158e45654a9bd6feaad59a527add97`
+- Content hash: `486419568371df7d590ecd6af80d9f720e043f9b3d7233692edcb0190489582d`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-research-agent-workflow-explainer.txt`
-- Character count: `7988`
+- Character count: `10698`
 
 ## Relationships
 

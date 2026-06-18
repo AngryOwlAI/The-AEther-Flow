@@ -15,6 +15,30 @@ caches and never override tracked control state.
 Use `.codex/skills/continue-research/SKILL.md` for continuation. Execute at
 most one bounded AgentJob per invocation.
 
+If the active blocker is a missing datum or metric and the datum is not present
+in tracked repository sources, do not infer that the research line must stop
+solely from local absence. When tracked state or explicit user instruction
+authorizes it, the Director may create one bounded non-promotional task for
+external primary-source search, source-acquisition design, theoretical
+calculation, mathematical construction, or experiment design. The output must
+remain draft/control until the normal audit, refutation, and gate sequence is
+complete.
+
+Future research-control pause is reserved for protected human-gated authority,
+especially canonical ontology edits or ontology adoption. If the next step is
+only a theoretical choice among source-side selector primitives, source-side
+irrelevance theorems, concrete witnesses, scoped no-go questions, or bounded
+calculations, route one bounded `theoretical-continuation-selector@0.1.0`
+AgentJob instead of stopping at generic controlled pause.
+
+Future physics AgentJobs after `2026-06-17T15:46:25Z` must name a
+`target_derivation_milestone` and `milestone_burden` from
+`research_control/design/gr_derivation_burden_map.md`. Completions must update
+the expanded Distance-to-GR burden matrix, name a new mathematical payload, and
+evaluate freeze criteria for repeated-burden or scoped-obstruction outcomes.
+Source-extension and finite toy metric-response packets are controlled
+categories, not claim-promotion shortcuts.
+
 ## Editing Rules
 
 - Keep DDRs, AgentJobs, completions, approvals, and handoffs immutable after

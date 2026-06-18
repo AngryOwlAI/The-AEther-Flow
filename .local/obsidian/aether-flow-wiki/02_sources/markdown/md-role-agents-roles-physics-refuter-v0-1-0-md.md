@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/physics/refuter.v0.1.0.md"
-source_hash: "d67870daa90c66779a5c33b82f745a3d71099ba6a1ed45063b0e02cd6dfff854"
+source_hash: "e119ec43dbcbee8957d0e6c4fa42342d12788e0e72a7f1e7023e400e03474005"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-physics-refuter-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-physics-refuter-v0-1-0-md.md"
-content_hash: "d67870daa90c66779a5c33b82f745a3d71099ba6a1ed45063b0e02cd6dfff854"
+content_hash: "e119ec43dbcbee8957d0e6c4fa42342d12788e0e72a7f1e7023e400e03474005"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-PHYSICS-REFUTER-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `d67870daa90c66779a5c33b82f745a3d71099ba6a1ed45063b0e02cd6dfff854`
+- Content hash: `e119ec43dbcbee8957d0e6c4fa42342d12788e0e72a7f1e7023e400e03474005`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-physics-refuter-v0-1-0-md.txt`
-- Character count: `856`
+- Character count: `860`
 
 ## Relationships
 

@@ -115,20 +115,7 @@ Summary heading: `Summary of Æther-flow Ontology`
 
 Summary text:
 
-The Æther-flow ontology is the project’s conceptual vocabulary for talking about
-a proposed deeper four-dimensional substrate, its intrinsic ordered motion, and
-the observer-level world that appears to us as space, time-order, expansion, and
-gravity. In plain terms, it is the project’s answer to the question: “What kind
-of underlying reality might ordinary relativistic geometry be describing?” The
-answer is not a new proven replacement for general relativity. The current
-project keeps ordinary exact GR as the observable benchmark and treats the
-substrate derivation as open work. This distinction matters because the ontology
-is useful as a mental model only if it does not smuggle in the GR structures it
-is supposed to recover. The page therefore separates vocabulary, interpretation,
-mathematical adoption, and derivational burden. Readers should leave knowing
-what `Æther`, `Æther-flow`, observed space, `S-time`, observed expansion, and
-gravity mean inside this repository, why the picture is attractive, and what
-must still be proven before it could count as a first-principles derivation.
+The Æther-flow ontology is the project’s vocabulary for a proposed deeper substrate, its ordered motion, and the observer-level world that appears as space, time-order, expansion, gravity, matter behavior, and relativistic geometry. Its function is conceptual and methodological: it gives candidate construction something precise to talk about while keeping exact general relativity as the observable benchmark. The ontology does not by itself prove a replacement for GR. The current research burden is to recover Lorentzian metric structure, causal behavior, clock behavior, same-metric matter coupling, invariance, and closure from source-side substrate data without importing the target geometry by hand. That makes anti-smuggling discipline part of the ontology’s function. The vocabulary matters because the project is trying to distinguish an interpretive picture, a mathematical model, and an accepted empirical theory rather than letting those categories collapse.
 
 Summary source basis:
 
@@ -137,13 +124,14 @@ Summary source basis:
 - `README.md`
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv`
 
+
 ## Required Content Blocks
 
-- subject_summary: Render the source-backed summary above first, with visible source chips for the declared grounding files.
-- layperson_orientation: A finished plain-language opening that defines ontology as what the project says exists, distinguishes this conceptual map from a proof, and states the exact-GR benchmark plus open derivation burden before technical vocabulary appears.
-- ontology_terms: Source-backed term cards for `Æther`, `Æther-flow`, observed three-dimensional space, `S-time`, observed expansion, gravity, exact closure, adoption, derivation, observer readout, and anti-smuggling, with plain meaning, project function, common misunderstanding, and source basis.
-- exact_gr_benchmark: A completed adoption-versus-derivation bridge explaining that current calculations remain ordinary exact GR while a valid substrate derivation would still need to recover Lorentzian geometry, clocks, causal structure, same-metric matter coupling, invariance, and closure without importing them by hand.
-- derivation_burden: A source-backed derivation-burden checklist tied to the registered diagram, including source-defined substrate data, observer normal/readout orbit, effective metric, clocks, same-metric matter, nonmetric mode control, `S-time` closure, invariance, anti-smuggling constraints, and claim-gate review.
-- source_quote_gallery: Short quote cards from both ontology Markdown sources, each paired with why the quote matters, what it permits, and what it forbids for the generated human-only explainer.
-- claim_boundaries: A visible non-claim panel stating what the page may explain and what it may not assert, including no completed GR derivation, no new empirical prediction, no canonical TeX edits, and no generated-HTML authority promotion.
-- reader_paths: A where-to-go-next panel routing new readers to term cards and diagrams, technical reviewers to TeX and registries, and project maintainers to source-authority and research-control explainers.
+- subject_summary: A source-backed summary of Æther-flow Ontology that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `ontology/aether-and-aether-flow.md`, `ontology/aether_flow_interpretation-lemen.md`, `README.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- layperson_orientation: A source-backed reader block on plain model that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `ontology/aether-and-aether-flow.md`, `README.md`.
+- ontology_terms: A source-backed reader block on project terms that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `ontology/aether-and-aether-flow.md`, `ontology/aether_flow_interpretation-lemen.md`.
+- exact_gr_benchmark: A source-backed reader block on benchmark boundary that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `README.md`, `registries/TEX_SOURCE_REGISTRY.csv`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- derivation_burden: A source-backed reader block on derivation burden that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `ontology/aether-and-aether-flow.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- source_quote_gallery: A source-backed reader block on source reading that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `ontology/aether-and-aether-flow.md`, `ontology/aether_flow_interpretation-lemen.md`.
+- claim_boundaries: A source-backed reader block on claim boundary that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- reader_paths: A source-backed reader block on reader paths that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `README.md`, `AGENTS.md`, `research_control/README.md`.

@@ -2,17 +2,18 @@
 object_id: "MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
 format: "markdown"
 source_path: "markdown/html-explainer-specs/research-control-system-explainer.md"
-source_hash: "5a3937290f98f6eb997dc571a3324105827bf023ee7cd842a6b2c5673e31d731"
+source_hash: "47720120050212e8aee8225a93c6c58b265c6dc3e8e788abc8be8b3081ada697"
 authority_status: "canonical_markdown_source"
 role: "html_explainer_source_spec"
 owner_skill: "html-visual-explainer"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-html-spec-research-control-system-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-html-spec-research-control-system-explainer.md"
-content_hash: "5a3937290f98f6eb997dc571a3324105827bf023ee7cd842a6b2c5673e31d731"
+content_hash: "47720120050212e8aee8225a93c6c58b265c6dc3e8e788abc8be8b3081ada697"
 extraction_status: "PASS"
 related_object_ids:
   - "HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
+  - "MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
   - "SEMANTIC-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
   - "VAULT-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
   - "WIKI-MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER"
@@ -34,9 +35,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `5a3937290f98f6eb997dc571a3324105827bf023ee7cd842a6b2c5673e31d731`
+- Content hash: `47720120050212e8aee8225a93c6c58b265c6dc3e8e788abc8be8b3081ada697`
 - Extracted text path: `.local/content_semantics/markdown/md-html-spec-research-control-system-explainer.txt`
-- Character count: `8063`
+- Character count: `10880`
 
 ## Relationships
 
