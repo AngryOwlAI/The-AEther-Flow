@@ -162,6 +162,20 @@ routing, claim gates, or generated-output boundaries.
 
 <!-- authority: control -->
 
+### Current AI-agent harness
+
+This project is currently developed and operated inside the Codex app. The
+repo-local `.codex/` skills, prompts, agent configuration files, continuation
+workflows, tool-use expectations, and Documentation Curator loops assume the
+Codex app as the present AI-agent execution harness.
+
+Read-only inspection, normal Git use, and Python validators can still be run
+outside the Codex app. Reproducing the governed research-agent workflow as it is
+used in this repository currently requires Codex app access. A future custom or
+third-party AI harness may replace that dependency only after it preserves the
+same tracked state, authority hierarchy, role boundaries, allowlists, validator
+gates, checkpoint discipline, and generated-derivative boundaries.
+
 ### Python environment
 
 This repository uses a local Python virtual environment for scripts.
@@ -202,6 +216,8 @@ When a Python script requires an external package, add one package per line to
 ### Requirement tiers
 
 - Read and inspect: browser, text editor, and Git.
+- Operate the governed AI-agent workflow: Codex app plus the repo-local
+  `.codex/` skills, prompts, and agent configuration files.
 - Run validators and memory scripts: Python `.venv`, `requirements.txt`, and
   PyMuPDF.
 - Regenerate memory/wiki/registry surfaces:

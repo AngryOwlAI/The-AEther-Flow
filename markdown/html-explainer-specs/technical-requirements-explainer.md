@@ -6,8 +6,12 @@ output_path: "html/technical-requirements-explainer.html"
 renderer_skill: "visual-explainer@0.7.1-project-aether-flow"
 source_materials:
   - "README.md"
+  - "AGENTS.md"
   - "requirements.txt"
   - "Makefile"
+  - ".codex/skills/README.md"
+  - ".codex/agents/README.md"
+  - ".codex/prompts/README.md"
   - ".codex/skills/project-memory-system/SKILL.md"
   - ".codex/skills/obsidian-wiki/SKILL.md"
   - ".codex/skills/pdf-derivative-build/SKILL.md"
@@ -28,6 +32,7 @@ required_controls:
 required_content_blocks:
   - "subject_summary"
   - "read_inspect_tier"
+  - "codex_app_harness_tier"
   - "validators_memory_scripts_tier"
   - "memory_regeneration_tier"
   - "diagram_rendering_tier"
@@ -53,6 +58,9 @@ Examples:
 
 - Python `.venv` plus `requirements.txt`: project requirement for validators
   and memory scripts.
+- Codex app plus repo-local `.codex/` skills, prompts, and agent configuration:
+  current project requirement for reproducing the governed AI-agent workflow as
+  practiced in this repository.
 - Node.js, npm, Mermaid package, and Playwright Chromium: project requirement
   when regenerating Mermaid-backed tracked HTML.
 - Obsidian app: optional operator environment aid for reading the generated
@@ -67,6 +75,8 @@ Examples:
   must use readable auto layout, with any wide overflow scoped inside the
   content block instead of the page body.
 - Tiered requirements matrix with commands and labels.
+- Current-harness panel that separates Codex app operation from read-only source
+  inspection and ordinary validator execution.
 - Setup command callouts for Python and diagram rendering.
 - Optional-local-reader panel for Obsidian and `.local/` retrieval surfaces.
 - PDF-refresh panel that scopes LaTeX only to TeX derivative work.
@@ -78,13 +88,17 @@ Summary heading: `Summary of Technical Requirements`
 
 Summary text:
 
-The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The requirements map turns setup files and skill contracts into a practical dependency model for maintainers who need repeatable validation without changing dependency policy or scientific claims.
+The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, derivative-build, and current AI-agent harness requirements needed to inspect, operate, or regenerate project surfaces safely. Its function is to separate read-only inspection, Codex app operation of the governed AI-agent workflow, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The requirements map turns setup files and skill contracts into a practical dependency model for maintainers who need repeatable validation while recognizing that the present research-agent harness is the Codex app, not yet a portable custom harness.
 
 Summary source basis:
 
 - `README.md`
+- `AGENTS.md`
 - `requirements.txt`
 - `Makefile`
+- `.codex/skills/README.md`
+- `.codex/agents/README.md`
+- `.codex/prompts/README.md`
 - `.codex/skills/project-memory-system/SKILL.md`
 - `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json`
 
@@ -93,6 +107,7 @@ Summary source basis:
 
 - subject_summary: A source-backed summary of Technical Requirements that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `README.md`, `requirements.txt`, `Makefile`, `.codex/skills/project-memory-system/SKILL.md`.
 - read_inspect_tier: A source-backed reader block on read and inspect that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `README.md`, `AGENTS.md`.
+- codex_app_harness_tier: A source-backed reader block on the current Codex app harness that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `README.md`, `.codex/skills/README.md`, `.codex/agents/README.md`, `.codex/prompts/README.md`.
 - validators_memory_scripts_tier: A source-backed reader block on python validators that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `requirements.txt`, `Makefile`, `.codex/skills/project-memory-system/SKILL.md`.
 - memory_regeneration_tier: A source-backed reader block on memory regeneration that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.codex/skills/project-memory-system/SKILL.md`, `.codex/skills/markdown-wiki/SKILL.md`.
 - diagram_rendering_tier: A source-backed reader block on diagram rendering that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`, `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json`.
