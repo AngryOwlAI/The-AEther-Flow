@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
 - Generated output path: `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model.md`
+- Backlink from `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-054/artifacts/95_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_SMUGGLING_AUDIT.tex`
 
 ## Validation
 
