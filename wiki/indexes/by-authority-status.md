@@ -50,6 +50,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
 - `MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER` `markdown/html-explainer-specs/technical-requirements-explainer.md`
 - `MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/validator-operator-workflow-explainer.md`
+- `MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `markdown/publication-briefs/project-overview.publication-brief.md`
+- `MD-README-MARKDOWN-PUBLICATION-BRIEFS` `markdown/publication-briefs/README.md`
+- `MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `markdown/publication-briefs/source-authority.publication-brief.md`
 
 ## draft_control_artifact
 
@@ -303,6 +306,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-legacy-ontology-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
+- `WIKI-MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `wiki/markdown/md-project-overview-publication-brief.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
 - `WIKI-MD-README-AGENTS-ROLES` `wiki/markdown/md-readme-agents-roles.md`
 - `WIKI-MD-README-AGENTS-SCHEMAS` `wiki/markdown/md-readme-agents-schemas.md`
@@ -315,6 +319,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-LEGACY-ONTOLOGY-TEX` `wiki/markdown/md-readme-legacy-ontology-tex.md`
 - `WIKI-MD-README-MARKDOWN` `wiki/markdown/md-readme-markdown.md`
 - `WIKI-MD-README-MARKDOWN-HTML-EXPLAINER-SPECS` `wiki/markdown/md-readme-markdown-html-explainer-specs.md`
+- `WIKI-MD-README-MARKDOWN-PUBLICATION-BRIEFS` `wiki/markdown/md-readme-markdown-publication-briefs.md`
 - `WIKI-MD-README-MARKDOWN-TEACHING-PACKETS` `wiki/markdown/md-readme-markdown-teaching-packets.md`
 - `WIKI-MD-README-ONTOLOGY` `wiki/markdown/md-readme-ontology.md`
 - `WIKI-MD-README-ONTOLOGY-TEX` `wiki/markdown/md-readme-ontology-tex.md`
@@ -331,6 +336,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-TESTS` `wiki/markdown/md-readme-tests.md`
 - `WIKI-MD-README-TEX-SHARED` `wiki/markdown/md-readme-tex-shared.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `wiki/markdown/md-research-control-design-documentation-curator-publication-process.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `wiki/markdown/md-research-control-design-documentation-curator-visual-atlas-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `wiki/markdown/md-research-control-design-github-facing-explainer-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `wiki/markdown/md-research-control-design-gr-derivation-burden-map.md`
@@ -358,6 +364,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-8-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-8-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-9-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-9-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V1-0-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v1-0-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v2-0-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-STUDENT-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-student-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-TEACHER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-teacher-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md`
@@ -386,6 +393,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-USER-MODIFIED-PROJECT` `wiki/markdown/md-skill-user-modified-project.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
+- `WIKI-MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `wiki/markdown/md-source-authority-publication-brief.md`
 - `WIKI-MD-TEACHING-QA-PACKET-DOCUMENTATION-CURATOR-TEACHING-LOOP-TEACHING-QA` `wiki/markdown/md-teaching-qa-packet-documentation-curator-teaching-loop-teaching-qa.md`
 - `WIKI-MD-TEACHING-QA-PACKET-PARENT-CHILD-SYNTHESIS-TEACHING-QA` `wiki/markdown/md-teaching-qa-packet-parent-child-synthesis-teaching-qa.md`
 - `WIKI-MD-TEACHING-QA-PACKET-PROJECT-OVERVIEW-TEACHING-QA` `wiki/markdown/md-teaching-qa-packet-project-overview-teaching-qa.md`
@@ -534,6 +542,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-RESEARCH-CONTROL` `research_control/README.md`
 - `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `research_control/design/documentation_curator_publication_process.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `research_control/design/documentation_curator_visual_atlas_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `research_control/design/github_facing_explainer_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `research_control/design/gr_derivation_burden_map.md`
@@ -561,6 +570,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-8-0-MD` `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-9-0-MD` `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V1-0-0-MD` `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD` `.agents/roles/research_ops/documentation-curator.v2.0.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-STUDENT-V0-1-0-MD` `.agents/roles/research_ops/documentation-student.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-TEACHER-V0-1-0-MD` `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`

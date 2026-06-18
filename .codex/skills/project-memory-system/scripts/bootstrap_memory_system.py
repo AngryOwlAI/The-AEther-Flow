@@ -260,13 +260,6 @@ HTML_SPEC_REQUIRED_FIELDS = {
     "source_materials",
     "claim_boundary",
     "human_visual_only",
-    "explainer_kind",
-    "interaction_model",
-    "analysis_depth",
-    "required_controls",
-    "presentation_profile",
-    "layout_intent",
-    "required_content_blocks",
 }
 HTML_EXPLAINER_KINDS = {
     "project_overview",
@@ -274,23 +267,7 @@ HTML_EXPLAINER_KINDS = {
     "workflow_process",
     "control_system",
 }
-HTML_PRESENTATION_PROFILES = {
-    "atlas_hub",
-    "role_catalog",
-    "format_ladder",
-    "memory_system_map",
-    "workflow_lifecycle",
-    "technical_requirements",
-    "conceptual_model",
-    "claim_boundary_map",
-}
-HTML_CONTENT_BLOCK_ID_RE = re.compile(r"^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$")
-HTML_SUBJECT_SUMMARY_BLOCK_ID = "subject_summary"
-HTML_SUBJECT_SUMMARY_FIELDS = {
-    "summary_text",
-    "source_basis",
-}
-HTML_SUBJECT_SUMMARY_FORBIDDEN_TEXT = {
+HTML_OBSOLETE_SUMMARY_LABEL_TEXT = {
     "Reader orientation",
     "What This Explainer Describes",
 }
@@ -315,7 +292,7 @@ HTML_FORBIDDEN_ANALYSIS_CAPSULE_TEXT = {
     "data-analysis-capsule",
     "data-capsule-field",
 }
-HTML_FORBIDDEN_CONTENT_BLOCK_BOILERPLATE_TEXT = {
+HTML_FORBIDDEN_CLAIM_BOILERPLATE_TEXT = {
     "The legitimate claim is explanatory:",
 }
 HTML_CONTROL_VALUES = {
@@ -344,14 +321,9 @@ HTML_HUMAN_VISUAL_META_RE = re.compile(
 )
 HTML_DATA_ATTR_RE = r'\b{attr}\s*=\s*["\']([^"\']+)["\']'
 HTML_STYLE_BLOCK_RE = re.compile(r"<style\b[^>]*>(.*?)</style>", re.IGNORECASE | re.DOTALL)
-HTML_PROSE_ANYWHERE_SELECTORS = (".atlas-card", "p", "th", "td")
+HTML_PROSE_ANYWHERE_SELECTORS = (".publication-card", "p", "th", "td")
 DOCS_VALIDATOR_SCRIPTS = [
-    "scripts/validate_explainer_topic_coverage.py",
-    "scripts/validate_explainer_parity.py",
-    "scripts/validate_standalone_html.py",
-    "scripts/validate_reader_first_docs.py",
-    "scripts/validate_explainer_diagrams.py",
-    "scripts/spec_depth_lint.py",
+    "scripts/validate_publication_process.py",
     "scripts/validate_teaching_qa.py",
 ]
 
@@ -1053,20 +1025,6 @@ def html_data_values_in_segment(attr: str, html_text: str) -> set[str]:
     return {match.group(1).strip() for match in html_data_matches(attr, html_text)}
 
 
-def first_required_content_block_definition(body: str) -> str:
-    section_match = re.search(
-        r"(?ms)^## Required Content Blocks\s*(.*?)(?:^## |\Z)",
-        body,
-    )
-    if not section_match:
-        return ""
-    for line in section_match.group(1).splitlines():
-        match = re.match(r"\s*-\s*([a-z][a-z0-9]*(?:_[a-z0-9]+)*)\s*:", line)
-        if match:
-            return match.group(1).strip()
-    return ""
-
-
 def css_rules_from_text(css_text: str) -> list[tuple[str, str]]:
     rules: list[tuple[str, str]] = []
     index = 0
@@ -1137,9 +1095,9 @@ def validate_html_layout_contract(
         if forbidden_text in html_text:
             report.error(f"{object_id}: analysis capsule section must not render")
             break
-    for forbidden_text in HTML_FORBIDDEN_CONTENT_BLOCK_BOILERPLATE_TEXT:
+    for forbidden_text in HTML_FORBIDDEN_CLAIM_BOILERPLATE_TEXT:
         if forbidden_text in html_text:
-            report.error(f"{object_id}: content-block claim boilerplate must not render")
+            report.error(f"{object_id}: retired claim boilerplate must not render")
             break
     layer_fixed_three = css_rule_with_selector_contains(
         html_text, ".layer-strip", "grid-template-columns:repeat(3"
@@ -1216,53 +1174,6 @@ def html_required_controls(frontmatter: dict[str, object]) -> set[str]:
     if not isinstance(controls, list):
         return set()
     return {str(control).strip() for control in controls if str(control).strip()}
-
-
-def html_required_content_blocks(frontmatter: dict[str, object]) -> list[str]:
-    blocks = frontmatter.get("required_content_blocks", [])
-    if not isinstance(blocks, list):
-        return []
-    return [str(block).strip() for block in blocks if str(block).strip()]
-
-
-def html_content_block_evidence_presence(html_text: str) -> dict[str, bool]:
-    block_evidence: dict[str, bool] = {}
-    for block_id, segments in html_content_block_segments(html_text).items():
-        segment = "".join(segments)
-        block_evidence[block_id] = block_evidence.get(block_id, False) or (
-            re.search(HTML_DATA_ATTR_RE.format(attr=re.escape("data-source-path")), segment, re.IGNORECASE)
-            is not None
-        )
-    return block_evidence
-
-
-def html_content_block_segments(html_text: str) -> dict[str, list[str]]:
-    matches = html_data_matches("data-content-block", html_text)
-    control_matches = html_data_matches("data-explainer-control", html_text)
-    segments: dict[str, list[str]] = {}
-    for index, match in enumerate(matches):
-        block_id = match.group(1).strip()
-        boundaries = [len(html_text)]
-        if index + 1 < len(matches):
-            boundaries.append(matches[index + 1].start())
-        boundaries.extend(
-            control_match.start()
-            for control_match in control_matches
-            if control_match.start() > match.start()
-        )
-        next_start = min(boundaries)
-        segments.setdefault(block_id, []).append(html_text[match.start() : next_start])
-    return segments
-
-
-def html_summary_field_segments(summary_html: str) -> dict[str, list[str]]:
-    matches = html_data_matches("data-summary-field", summary_html)
-    segments: dict[str, list[str]] = {}
-    for index, match in enumerate(matches):
-        field_id = match.group(1).strip()
-        next_start = matches[index + 1].start() if index + 1 < len(matches) else len(summary_html)
-        segments.setdefault(field_id, []).append(summary_html[match.start() : next_start])
-    return segments
 
 
 def generate_html_rows(now: str, markdown_rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -1998,12 +1909,6 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
         explainer_kind = str(frontmatter.get("explainer_kind", "")).strip()
         if explainer_kind and explainer_kind not in HTML_EXPLAINER_KINDS:
             report.error(f"{object_id}: invalid explainer_kind")
-        presentation_profile = str(frontmatter.get("presentation_profile", "")).strip()
-        if presentation_profile and presentation_profile not in HTML_PRESENTATION_PROFILES:
-            report.error(f"{object_id}: invalid presentation_profile")
-        layout_intent = str(frontmatter.get("layout_intent", "")).strip()
-        if "layout_intent" in frontmatter and not layout_intent:
-            report.error(f"{object_id}: layout_intent must be nonblank")
         interaction_model = str(frontmatter.get("interaction_model", "")).strip()
         if interaction_model and interaction_model != "progressive_disclosure":
             report.error(
@@ -2013,10 +1918,10 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
         if analysis_depth and analysis_depth != "deep":
             report.error(f"{object_id}: analysis_depth must be deep")
         required_controls = frontmatter.get("required_controls", [])
-        if not isinstance(required_controls, list) or not required_controls:
-            report.error(f"{object_id}: required_controls must be a non-empty list")
+        if "required_controls" in frontmatter and not isinstance(required_controls, list):
+            report.error(f"{object_id}: required_controls must be a list when present")
             required_control_values: set[str] = set()
-        else:
+        elif isinstance(required_controls, list) and required_controls:
             required_control_values = {
                 str(control).strip()
                 for control in required_controls
@@ -2037,6 +1942,8 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
                 report.error(
                     f"{object_id}: workflow explainer missing workflow_step_inspector"
                 )
+        else:
+            required_control_values = set()
         source_drilldowns = frontmatter.get("source_drilldowns", [])
         if "source_drilldowns" in frontmatter and not isinstance(source_drilldowns, list):
             report.error(f"{object_id}: source_drilldowns must be a list when present")
@@ -2051,46 +1958,8 @@ def validate_html_specs(report: ValidationReport, markdown_rows: list[dict[str, 
                 report.error(f"{object_id}: source_drilldowns must cite source_materials")
         if "analysis_capsule_schema" in frontmatter:
             report.error(f"{object_id}: analysis_capsule_schema is obsolete")
-        required_content_blocks = frontmatter.get("required_content_blocks", [])
-        if not isinstance(required_content_blocks, list) or not required_content_blocks:
-            report.error(
-                f"{object_id}: required_content_blocks must be a non-empty list"
-            )
-            content_block_values: list[str] = []
-        else:
-            content_block_values = [
-                str(block).strip()
-                for block in required_content_blocks
-                if str(block).strip()
-            ]
-            if len(content_block_values) != len(set(content_block_values)):
-                report.error(f"{object_id}: duplicate required_content_blocks value")
-            for block_id in content_block_values:
-                if not HTML_CONTENT_BLOCK_ID_RE.match(block_id):
-                    report.error(f"{object_id}: invalid required_content_blocks ID")
-            if (
-                content_block_values
-                and content_block_values[0] != HTML_SUBJECT_SUMMARY_BLOCK_ID
-            ):
-                report.error(
-                    f"{object_id}: first required_content_blocks value must be subject_summary"
-                )
         if "## Required Analysis Capsules" in body:
             report.error(f"{object_id}: Required Analysis Capsules section is obsolete")
-        if "## Required Content Blocks" not in body:
-            report.error(f"{object_id}: missing Required Content Blocks section")
-        elif (
-            first_required_content_block_definition(body)
-            != HTML_SUBJECT_SUMMARY_BLOCK_ID
-        ):
-            report.error(
-                f"{object_id}: first Required Content Blocks definition must be subject_summary"
-            )
-        for block_id in sorted(content_block_values):
-            if f"{block_id}:" not in body:
-                report.error(
-                    f"{object_id}: Required Content Blocks missing {block_id}"
-                )
 
 
 def validate_tex_vocab(report: ValidationReport, rows: list[dict[str, str]]) -> None:
@@ -2168,84 +2037,9 @@ def validate_html_registry(
             source_paths = html_data_values("data-source-path", html_text)
             if not source_paths:
                 report.error(f"{object_id}: source materials section missing data-source-path")
-        declared_content_blocks = html_required_content_blocks(frontmatter)
-        content_block_evidence = html_content_block_evidence_presence(html_text)
-        for block_id in declared_content_blocks:
-            if block_id not in content_block_evidence:
-                report.error(
-                    f"{object_id}: missing HTML content block marker {block_id}"
-                )
-            elif not content_block_evidence[block_id]:
-                report.error(
-                    f"{object_id}: content block {block_id} missing source-path evidence"
-                )
-        content_block_matches = html_data_matches("data-content-block", html_text)
-        first_content_block = (
-            content_block_matches[0].group(1).strip() if content_block_matches else ""
-        )
-        if first_content_block != HTML_SUBJECT_SUMMARY_BLOCK_ID:
-            report.error(
-                f"{object_id}: first HTML content block marker must be subject_summary"
-            )
-        toc_matches = html_data_matches("data-explainer-control", html_text)
-        first_toc_start = next(
-            (
-                match.start()
-                for match in toc_matches
-                if match.group(1).strip() == "section_toc"
-            ),
-            -1,
-        )
-        subject_summary_start = next(
-            (
-                match.start()
-                for match in content_block_matches
-                if match.group(1).strip() == HTML_SUBJECT_SUMMARY_BLOCK_ID
-            ),
-            -1,
-        )
-        if first_toc_start >= 0 and (
-            subject_summary_start < 0 or subject_summary_start > first_toc_start
-        ):
-            report.error(
-                f"{object_id}: subject_summary must appear before section_toc"
-            )
-        subject_segments = html_content_block_segments(html_text).get(
-            HTML_SUBJECT_SUMMARY_BLOCK_ID,
-            [],
-        )
-        for forbidden_text in HTML_SUBJECT_SUMMARY_FORBIDDEN_TEXT:
+        for forbidden_text in HTML_OBSOLETE_SUMMARY_LABEL_TEXT:
             if forbidden_text in html_text:
-                report.error(
-                    f"{object_id}: subject_summary uses obsolete visible label"
-                )
-        if subject_segments:
-            subject_segment = subject_segments[0]
-            summary_field_segments = html_summary_field_segments(subject_segment)
-            summary_fields = set(summary_field_segments)
-            missing_summary_fields = HTML_SUBJECT_SUMMARY_FIELDS - summary_fields
-            if missing_summary_fields:
-                report.error(f"{object_id}: subject_summary missing summary field")
-            source_basis_segments = summary_field_segments.get("source_basis", [])
-            source_basis_html = "".join(source_basis_segments)
-            if not html_data_values_in_segment("data-source-path", source_basis_html):
-                report.error(
-                    f"{object_id}: subject_summary source_basis missing source-path evidence"
-                )
-            source_materials = {
-                str(item).strip()
-                for item in frontmatter.get("source_materials", [])
-                if str(item).strip()
-            }
-            summary_source_paths = html_data_values_in_segment(
-                "data-source-path",
-                subject_segment,
-            )
-            undeclared_summary_paths = summary_source_paths - source_materials
-            if undeclared_summary_paths:
-                report.error(
-                    f"{object_id}: subject_summary cites undeclared source_materials"
-                )
+                report.error(f"{object_id}: obsolete visible summary label is present")
 
 
 def load_mermaid_validator_module():
@@ -2373,7 +2167,7 @@ def validate_local_retrieval_freshness(report: ValidationReport) -> None:
         report.warning(f"Local retrieval freshness: {warning}")
 
 
-def validate_docs_atlas(report: ValidationReport, *, strict_docs: bool = False) -> None:
+def validate_publication_docs(report: ValidationReport, *, strict_docs: bool = False) -> None:
     for script_path in DOCS_VALIDATOR_SCRIPTS:
         command = [
             sys.executable,
@@ -2382,11 +2176,7 @@ def validate_docs_atlas(report: ValidationReport, *, strict_docs: bool = False) 
             str(REPO_ROOT),
         ]
         if strict_docs and script_path in {
-            "scripts/validate_reader_first_docs.py",
-            "scripts/validate_explainer_topic_coverage.py",
-            "scripts/validate_explainer_parity.py",
-            "scripts/validate_standalone_html.py",
-            "scripts/validate_explainer_diagrams.py",
+            "scripts/validate_publication_process.py",
         }:
             command.append("--strict")
         try:
@@ -2427,7 +2217,7 @@ def validate_all(*, strict_docs: bool = False) -> ValidationReport:
     validate_folder_map(report, rows_by_registry)
     validate_local_retrieval_freshness(report)
     validate_tracked_local_noise(report)
-    validate_docs_atlas(report, strict_docs=strict_docs)
+    validate_publication_docs(report, strict_docs=strict_docs)
     return report
 
 

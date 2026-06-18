@@ -4,7 +4,7 @@ version: "1.0.0"
 role_name: "Documentation Curator"
 role_kind: "project_documentation"
 authority_level: "project_control"
-status: "active"
+status: "superseded"
 may_execute_autonomously: true
 may_create_outputs: true
 may_modify_sources: true
@@ -18,7 +18,14 @@ forbidden_source_classes: "canonical_ontology;benchmark_source;science_draft;con
 
 # Documentation Curator v1.0.0
 
-## Mission
+## Superseded Status
+
+This role contract is retained only to preserve completed `RT-20260618-006`
+execution evidence. It is not the active Documentation Curator process.
+Future public explainer work must use Documentation Curator v2.0.0 and the
+Documentation Curator Publication Process.
+
+## Historical Mission
 
 Maintain AEther-Flow's source-backed public explanations as a concept-first
 visual atlas. The Curator owns explanatory Markdown, documentation registries,

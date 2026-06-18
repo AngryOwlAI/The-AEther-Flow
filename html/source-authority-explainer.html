@@ -4,461 +4,122 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="f6aac203f9fbafb4f729fc904e3c2eed4bff125c4fc53bda01a436f238d9c8ac">
+  <meta name="aether-flow-source-basis-hash" content="1946905ad726ca7689155c315b907ecc0380fa3ed2e3094a94982e021b62384e">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Source Authority And Generated Derivatives</title>
   <style>
-    :root { --bg:#f8f5ee; --surface:#fffdf8; --ink:#17211b; --muted:#5f6b60; --line:rgba(30,58,95,.22); --blue:#1e3a5f; --green:#2f6f54; --amber:#8b5a20; --soft:#e8efe8; font-family: IBM Plex Sans, Avenir Next, Segoe UI, sans-serif; }
-    * { box-sizing:border-box; } body { margin:0; background:linear-gradient(180deg,#fffdf8,var(--bg)); color:var(--ink); overflow-x:clip; }
-    .page-shell { max-width:1180px; margin:0 auto; padding:28px 20px 64px; } .hero,.panel,.atlas-card { border:1px solid var(--line); border-radius:8px; background:var(--surface); box-shadow:0 14px 34px rgba(23,33,27,.07); }
-    .hero { padding:32px; background:linear-gradient(135deg,#fffdf8,#e6eef2); } h1 { margin:0; font-size:clamp(2rem,4vw,4rem); letter-spacing:0; } h2 { margin:0 0 12px; letter-spacing:0; } p,li,td,th,.source-chip,.control-marker { overflow-wrap:break-word; line-height:1.65; } code,pre { overflow-wrap:anywhere; }
-    .hero-copy { color:var(--muted); max-width:75ch; font-size:1.08rem; } .nav { position:sticky; top:0; z-index:3; display:flex; gap:8px; overflow-x:auto; padding:12px 0; background:rgba(248,245,238,.88); } .nav a { text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:8px 12px; background:#fff; }
-    .section { margin-top:22px; padding:22px; } .source-chip,.control-marker { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 10px; margin:3px; background:#fff; font-size:.88rem; } .source-row { margin-top:12px; }
-    .diagram-shell { margin-top:16px; overflow:hidden; } .mermaid-wrap { position:relative; border:1px solid var(--line); border-radius:8px; min-height:320px; height:380px; background:#fbfaf6; overflow:hidden; } .zoom-controls { position:absolute; top:10px; right:10px; z-index:2; display:flex; gap:6px; } .zoom-controls button,.zoom-label { border:1px solid var(--line); background:#fff; padding:5px 8px; } .mermaid-viewport { position:relative; width:100%; height:100%; overflow:hidden; } .mermaid-canvas { position:absolute; top:42px; left:50%; transform:translateX(-50%); } .mermaid-canvas svg { max-width:none; width:auto; height:auto; display:block; }
-    .step-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; padding-left:18px; } .step-grid li { border-left:4px solid var(--amber); background:#fffaf0; padding:10px; } .source-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; padding:0; list-style:none; } .source-list li { border:1px solid var(--line); border-radius:8px; padding:10px; background:#fff; }
-    @media (max-width:760px) { .hero,.section { padding:18px; } .nav { position:static; flex-wrap:wrap; } }
+    :root {
+      color-scheme: light;
+      --bg: #f3f6f3;
+      --panel: #ffffff;
+      --ink: #111c18;
+      --muted: #5b6762;
+      --line: #ccd8d1;
+      --source: #23527a;
+      --registry: #28705a;
+      --derived: #8a6424;
+      --local: #7a3b3b;
+      font-family: Avenir Next, Segoe UI, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); }
+    p, li, td, th { line-height: 1.62; overflow-wrap: break-word; }
+    code { overflow-wrap: anywhere; }
+    .shell { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; }
+    header { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 30px; }
+    .eyebrow { margin: 0 0 10px; color: var(--registry); font-weight: 700; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 4rem); line-height: 1; letter-spacing: 0; }
+    .lead { color: var(--muted); max-width: 76ch; font-size: 1.1rem; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+    nav a { text-decoration: none; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; }
+    section { margin-top: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 24px; }
+    h2 { margin: 0 0 12px; font-size: clamp(1.35rem, 3vw, 2.05rem); letter-spacing: 0; }
+    .ladder { display: grid; grid-template-columns: repeat(5, minmax(140px, 1fr)); gap: 10px; }
+    .tier { border-top: 5px solid var(--source); background: #f7fbff; border-radius: 6px; padding: 12px; min-height: 160px; }
+    .tier:nth-child(2) { border-color: var(--registry); background: #f4fbf6; }
+    .tier:nth-child(3) { border-color: var(--source); background: #f7fbff; }
+    .tier:nth-child(4) { border-color: var(--derived); background: #fff9ec; }
+    .tier:nth-child(5) { border-color: var(--local); background: #fff5f5; }
+    .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; counter-reset: steps; padding: 0; list-style: none; }
+    .checklist li { counter-increment: steps; border: 1px solid var(--line); border-radius: 6px; padding: 12px; background: #fff; }
+    .checklist li::before { content: counter(steps); display: inline-grid; place-items: center; width: 26px; height: 26px; margin-right: 8px; border-radius: 50%; background: var(--registry); color: white; font-weight: 700; }
+    .source-chip { display: inline-block; max-width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; margin: 4px; background: #fff; font-size: .92rem; overflow-wrap: anywhere; white-space: normal; }
+    .boundary { border-left: 5px solid var(--local); background: #fffafa; }
+    @media (max-width: 820px) {
+      .shell { padding: 18px 12px 42px; }
+      header, section { padding: 18px; }
+      .ladder { grid-template-columns: 1fr; }
+      nav a { width: 100%; }
+    }
   </style>
-
-<style id="aether-docs-enhancement">
-  :root {
-    --doc-bg: #f8f5ee;
-    --doc-ink: #18201b;
-    --doc-muted: #5f6b60;
-    --doc-line: rgba(33, 49, 40, .18);
-    --doc-panel: rgba(255, 255, 255, .92);
-    --doc-wash: #f1eadc;
-    --doc-authority: #1e3a5f;
-    --doc-physics: #2f6f54;
-    --doc-workflow: #8b5a20;
-    --doc-warning: #a34f12;
-    --doc-validation: #0f766e;
-    --doc-shadow: 0 18px 50px rgba(27, 33, 28, .10);
-    --doc-radius: 8px;
-  }
-
-  html { scroll-behavior: smooth; }
-  body {
-    background:
-      linear-gradient(180deg, #fffcf7 0%, var(--doc-bg) 42%, #efe8dc 100%);
-    color: var(--doc-ink);
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: .28;
-    background-image:
-      linear-gradient(rgba(30,58,95,.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(30,58,95,.06) 1px, transparent 1px);
-    background-size: 44px 44px;
-    mask-image: linear-gradient(180deg, black, transparent 75%);
-  }
-
-  .page-shell {
-    max-width: 1220px;
-    padding-top: 26px;
-    position: relative;
-  }
-
-  .hero,
-  .panel,
-  .atlas-link,
-  .content-block,
-  .block-subgroup,
-  .source-list li,
-  details {
-    border-radius: var(--doc-radius);
-  }
-
-  .hero {
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--doc-shadow);
-    border-color: rgba(30,58,95,.22);
-    background:
-      linear-gradient(135deg, rgba(255,255,255,.96), rgba(223,232,242,.78)),
-      linear-gradient(90deg, rgba(47,111,84,.12), rgba(139,90,32,.10));
-  }
-
-  .hero > * { position: relative; z-index: 1; }
-
-  h1 {
-    letter-spacing: 0;
-    text-wrap: balance;
-  }
-
-  h2, h3 { text-wrap: balance; }
-
-  .hero {
-    grid-template-columns: minmax(0, 1fr);
-    align-items: start;
-  }
-
-  .hero > div {
-    max-width: 78ch;
-  }
-
-  p, li, dd {
-    font-size: 1.01rem;
-    line-height: 1.72;
-  }
-
-  .hero-copy {
-    font-size: clamp(1.02rem, 2vw, 1.22rem);
-    max-width: 70ch;
-  }
-
-  .source-chip,
-  .control-marker {
-    border-radius: 999px;
-  }
-
-  .nav {
-    top: 8px;
-    border-radius: 999px;
-    padding: 10px;
-    background: rgba(248,245,238,.72);
-    border: 1px solid rgba(33,49,40,.10);
-    box-shadow: 0 12px 36px rgba(27,33,28,.08);
-  }
-
-  .nav a {
-    border-radius: 999px;
-    transition: transform .18s ease, background .18s ease, border-color .18s ease;
-  }
-
-  .nav a:hover,
-  .nav a.is-active {
-    transform: translateY(-1px);
-    background: var(--doc-ink);
-    color: #fffaf1;
-    border-color: var(--doc-ink);
-  }
-
-  .panel {
-    box-shadow: 0 14px 44px rgba(27,33,28,.075);
-    border-color: rgba(33,49,40,.16);
-  }
-
-  .section-heading {
-    border-bottom: 1px solid rgba(33,49,40,.10);
-    padding-bottom: 12px;
-  }
-
-  .subject-summary .content-block {
-    border-left: 7px solid var(--doc-authority);
-    background:
-      linear-gradient(90deg, rgba(30,58,95,.07), transparent 30%),
-      var(--doc-panel);
-  }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .content-block {
-    position: relative;
-    padding: clamp(18px, 2vw, 26px);
-    border-left: 7px solid rgba(30,58,95,.28);
-    background: var(--doc-panel);
-    box-shadow: 0 8px 28px rgba(27,33,28,.055);
-  }
-
-  .content-block[data-content-block*="ontology"],
-  .content-block[data-content-block*="physics"],
-  .content-block[data-content-block*="claim"],
-  .content-block[data-content-block*="benchmark"],
-  .content-block[data-content-block*="derivation"] {
-    border-left-color: var(--doc-physics);
-  }
-
-  .content-block[data-content-block*="workflow"],
-  .content-block[data-content-block*="agent"],
-  .content-block[data-content-block*="role"],
-  .content-block[data-content-block*="director"] {
-    border-left-color: var(--doc-workflow);
-  }
-
-  .content-block[data-content-block*="validation"],
-  .content-block[data-content-block*="memory"],
-  .content-block[data-content-block*="authority"],
-  .content-block[data-content-block*="source"] {
-    border-left-color: var(--doc-validation);
-  }
-
-  .content-block::before {
-    content: attr(data-content-block);
-    display: inline-block;
-    margin: 0 0 10px;
-    padding: 4px 9px;
-    border-radius: 999px;
-    background: rgba(30,58,95,.08);
-    color: var(--doc-authority);
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-
-  .block-head {
-    padding-bottom: 10px;
-    border-bottom: 1px dashed rgba(33,49,40,.14);
-  }
-
-  .atlas-link {
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  }
-
-  .atlas-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 34px rgba(27,33,28,.10);
-    border-color: rgba(30,58,95,.38);
-  }
-
-  .reader-toolbar {
-    position: sticky;
-    top: 68px;
-    z-index: 4;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-    margin: 10px 0 18px;
-    padding: 10px;
-    border: 1px solid rgba(33,49,40,.14);
-    border-radius: 999px;
-    background: rgba(255,255,255,.82);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 10px 30px rgba(27,33,28,.08);
-  }
-
-  .reader-toolbar input[type="search"] {
-    flex: 1 1 230px;
-    min-width: 160px;
-    border: 1px solid rgba(33,49,40,.16);
-    border-radius: 999px;
-    padding: 10px 13px;
-    color: var(--doc-ink);
-    background: #fff;
-    font: inherit;
-  }
-
-  .reading-progress {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: var(--reading-progress, 0%);
-    height: 4px;
-    background: linear-gradient(90deg, var(--doc-authority), var(--doc-physics), var(--doc-warning));
-    box-shadow: 0 0 18px rgba(47,111,84,.35);
-  }
-
-  .source-chip,
-  .source-list li {
-    cursor: copy;
-  }
-
-  .source-chip.was-copied,
-  .source-list li.was-copied {
-    outline: 2px solid rgba(15,118,110,.35);
-    background: rgba(15,118,110,.10);
-  }
-
-  mark.search-hit {
-    background: rgba(248,232,199,.9);
-    color: inherit;
-    padding: 0 .15em;
-    border-radius: .25em;
-  }
-
-  [hidden] { display: none !important; }
-
-  .diagram-shell {
-    background:
-      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
-  }
-
-  .diagram-shell .section-heading::after {
-    content: "Diagram preserved from source spec";
-    display: inline-block;
-    margin-top: 8px;
-    color: var(--doc-muted);
-    font-size: .84rem;
-  }
-
-  .zoom-controls button {
-    border-radius: 999px;
-    box-shadow: 0 8px 20px rgba(27,33,28,.10);
-  }
-
-  .source-list li {
-    transition: transform .15s ease, background .15s ease;
-  }
-
-  .source-list li:hover {
-    transform: translateY(-1px);
-    background: rgba(223,232,242,.58);
-  }
-
-  @media (max-width: 860px) {
-    .reader-toolbar {
-      position: static;
-      border-radius: var(--doc-radius);
-    }
-
-    .nav {
-      border-radius: var(--doc-radius);
-    }
-
-    .hero, .panel { border-radius: var(--doc-radius); }
-  }
-</style>
-
 </head>
 <body>
-  <main class="page-shell">
-    <header class="hero"><p class="control-marker">Visual Atlas v2</p><h1>Source Authority And Generated Derivatives</h1><p class="hero-copy">Source authority and generated derivatives form the trust map of AEther-Flow. Registered TeX carries physics and derivational claims; registries carry provenance, routing, generated-output, and memory fields; registered Markdown carries guidance, role and skill contracts, source specs, and control notes. HTML, GitHub-facing Markdown, wiki notes, PDFs, semantic extracts, Obsidian notes, and local caches are useful only because they point back to authority.</p><div><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span> <span class="source-chip" data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv">registries/MARKDOWN_SOURCE_REGISTRY.csv</span></div></header>
-    <section class="panel section" id="summary" data-content-block="subject_summary"><h2>Summary of Source Authority And Generated Derivatives</h2><div data-summary-field="summary_text"><p>Source authority and generated derivatives form the trust map of AEther-Flow. Registered TeX carries physics and derivational claims; registries carry provenance, routing, generated-output, and memory fields; registered Markdown carries guidance, role and skill contracts, source specs, and control notes. HTML, GitHub-facing Markdown, wiki notes, PDFs, semantic extracts, Obsidian notes, and local caches are useful only because they point back to authority.</p></div><div data-summary-field="source_basis"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span> <span class="source-chip" data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv">registries/MARKDOWN_SOURCE_REGISTRY.csv</span></div></section>
-    <nav class="nav" data-explainer-control="section_toc"><a href="#what">What</a><a href="#map">Map</a><a href="#how">How</a><a href="#objects">Objects</a><a href="#examples">Examples</a><a href="#boundary">Boundary</a><a href="#sources">Sources</a><a href="#next">Next</a></nav>
-    <section class="panel section diagram-shell" id="map" data-content-block="system_map" data-mermaid-diagram-id="source-authority-trust-map"><h2>System Map</h2><p>The system map shows the source-backed route through source authority and generated derivatives. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `AGENTS.md` and `.codex/skills/project-memory-system/SKILL.md`.</p><div class="mermaid-wrap">
-        <div class="zoom-controls"><button type="button" data-zoom="in">+</button><button type="button" data-zoom="out">-</button><span class="zoom-label">Fit</span></div>
-        <div class="mermaid-viewport"><div class="mermaid mermaid-canvas" data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.1" data-render-source-sha256="b835d0c8345bbec0e6c8be79790356676b5a3d24d783ed4958cf941a16084180"><svg id="svg-source-authority-trust-map" width="600" height="260" viewBox="0 0 600 260" role="img" aria-label="Source Authority And Generated Derivatives diagram" data-mermaid-rendered="true" data-mermaid-diagram-id="source-authority-trust-map"><defs><marker id="svg-source-authority-trust-map-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e3a5f"/></marker></defs><rect x="18" y="14" width="564" height="226" rx="8" fill="#f8f5ee" stroke="#1e3a5f" stroke-width="2"/><line x1="300" y1="55" x2="300" y2="73" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-source-authority-trust-map-arrow)" /><line x1="300" y1="97" x2="300" y2="115" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-source-authority-trust-map-arrow)" /><line x1="300" y1="139" x2="300" y2="157" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-source-authority-trust-map-arrow)" /><line x1="300" y1="181" x2="300" y2="199" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-source-authority-trust-map-arrow)" /><text x="300" y="40" text-anchor="middle">Source Authority And Generated Derivatives</text><text x="300" y="82" text-anchor="middle">Sources</text><text x="300" y="124" text-anchor="middle">Reader model</text><text x="300" y="166" text-anchor="middle">Derivative</text><text x="300" y="208" text-anchor="middle">Validation</text></svg></div></div>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">Publication pilot</p>
+      <h1>Source Authority And Generated Derivatives</h1>
+      <p class="lead">The central trust question is which source is allowed to define project state. Clarity, polish, and searchability are useful, but they do not outrank registered sources.</p>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a href="#ladder">Authority ladder</a>
+        <a href="#use">Safe use</a>
+        <a href="#failures">Failure modes</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <section id="ladder">
+      <h2>Authority Ladder</h2>
+      <div class="ladder">
+        <article class="tier">
+          <h3>Registered TeX</h3>
+          <p>Physics and derivational claims live here when the TeX source is registered for that lane.</p>
+        </article>
+        <article class="tier">
+          <h3>Registries</h3>
+          <p>Routing, provenance, generated-output tracking, and memory fields live in controlled CSV rows.</p>
+        </article>
+        <article class="tier">
+          <h3>Registered Markdown</h3>
+          <p>Guidance, roles, skills, source specs, briefs, and control notes define their declared lanes.</p>
+        </article>
+        <article class="tier">
+          <h3>Generated pages</h3>
+          <p>GitHub Markdown, HTML, wiki notes, and PDFs orient readers by pointing back to sources.</p>
+        </article>
+        <article class="tier">
+          <h3>Local retrieval</h3>
+          <p>Semantic extracts, Obsidian notes, and `.local` caches are convenience layers only.</p>
+        </article>
       </div>
-      <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="source-authority-trust-map">
-flowchart TD
-  Tex[&quot;Registered TeX&lt;br/&gt;physics authority&quot;] --&gt; PDF[&quot;PDF derivatives&quot;]
-  Reg[&quot;Registries&lt;br/&gt;routing/provenance authority&quot;] --&gt; Wiki[&quot;Wiki/index derivatives&quot;]
-  MD[&quot;Registered Markdown&lt;br/&gt;front-door/control/source specs&quot;] --&gt; GH[&quot;GitHub-facing Markdown&quot;]
-  MD --&gt; HTML[&quot;Standalone HTML explainers&quot;]
-  Local[&quot;.local scratch/cache&lt;br/&gt;non-authority&quot;] -.-&gt; Human[&quot;Reader convenience only&quot;]
-  Tex --&gt; Claims[&quot;Scientific claim status&quot;]
-  Reg --&gt; Routing[&quot;Routing and provenance&quot;]
-  MD --&gt; Guidance[&quot;Project guidance and explainer contracts&quot;]
-  PDF -.-&gt; Read[&quot;Human reading&quot;]
-  Wiki -.-&gt; Navigate[&quot;Navigation/search&quot;]
-  GH -.-&gt; Orient[&quot;GitHub orientation&quot;]
-  HTML -.-&gt; Teach[&quot;Visual teaching&quot;]
-      </script>
-    <div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section>
-    <section class="panel section" id="what_this_does" data-content-block="what_this_does"><h2>What This Does</h2><p>Source Authority And Generated Derivatives gives readers a source-backed model of source authority and generated derivatives. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `.codex/skills/project-memory-system/SKILL.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="why_aether_needs_it" data-content-block="why_aether_needs_it"><h2>Why AEther Needs It</h2><p>AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of source authority and generated derivatives, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="how_it_works" data-content-block="how_it_works"><h2>How It Works</h2><p>The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For source authority and generated derivatives, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="objects_and_authority" data-content-block="objects_and_authority"><h2>Objects And Authority</h2><p>The objects involved in source authority and generated derivatives include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `.codex/skills/project-memory-system/SKILL.md`.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="example" data-content-block="example"><h2>Example</h2><p>Before changing project knowledge, an agent reads the source file and registry row, edits the canonical source, regenerates derivatives, and validates hashes. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="non_example" data-content-block="non_example"><h2>Non-Example</h2><p>Invalid: citing a polished HTML explainer or `.local` search result as independent authority. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="common_confusions" data-content-block="common_confusions"><h2>Common Confusions</h2><p>Common confusions around source authority and generated derivatives usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="what_this_does_not_authorize" data-content-block="what_this_does_not_authorize"><h2>What This Does Not Authorize</h2><p>Source Authority And Generated Derivatives does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="source_map" data-content-block="source_map"><h2>Source Map</h2><p>The source map for source authority and generated derivatives lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `.codex/skills/project-memory-system/SKILL.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section><section class="panel section" id="next_reading_path" data-content-block="next_reading_path"><h2>Next Reading Path</h2><p>The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span> <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span></div></section>
-    <section class="panel section" id="workflow" data-explainer-control="workflow_step_inspector"><h2>Workflow Step Inspector</h2><ol class="step-grid"><li>Inspect source bundle.</li><li>Check topic registry row.</li><li>Apply source-first change discipline.</li><li>Regenerate derivatives.</li><li>Run validators.</li></ol><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span></div></section>
-    <section class="panel section" id="sources" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><ul class="source-list"><li><code data-source-path="AGENTS.md">AGENTS.md</code></li><li><code data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</code></li><li><code data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</code></li><li><code data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv">registries/MARKDOWN_SOURCE_REGISTRY.csv</code></li><li><code data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv">registries/HTML_EXPLAINER_REGISTRY.csv</code></li><li><code data-source-path="registries/WIKI_ARTIFACT_REGISTRY.csv">registries/WIKI_ARTIFACT_REGISTRY.csv</code></li><li><code data-source-path="registries/FILE_OBJECT_REGISTRY.csv">registries/FILE_OBJECT_REGISTRY.csv</code></li></ul><span class="control-marker" data-explainer-control="source_materials_section">source_materials_section</span><span class="control-marker" data-explainer-control="workflow_step_inspector">workflow_step_inspector</span></section>
-    <script>
-      function readSvgNaturalSize(svg) { return { width: Number(svg.getAttribute('width')) || 600, height: Number(svg.getAttribute('height')) || 260 }; }
-      function setCanvasNaturalSize(canvas, size) { canvas.style.width = size.width + 'px'; canvas.style.height = size.height + 'px'; }
-      function setAdaptiveHeight(shell, size) { shell.style.height = Math.max(320, Math.min(620, size.height + 120)) + 'px'; }
-      function computeFit() { document.querySelectorAll('.mermaid-canvas svg').forEach((svg) => { const size = readSvgNaturalSize(svg); const shell = svg.closest('.mermaid-wrap'); const canvas = svg.closest('.mermaid-canvas'); if (canvas) setCanvasNaturalSize(canvas, size); if (shell) setAdaptiveHeight(shell, size); }); }
-      computeFit();
-    </script>
+    </section>
+
+    <section id="use">
+      <h2>How To Use A Generated Page</h2>
+      <ol class="checklist">
+        <li>Read it for orientation.</li>
+        <li>Follow the visible source paths.</li>
+        <li>Inspect the source file and registry row.</li>
+        <li>Make changes only through the authorized workflow.</li>
+        <li>Regenerate derivatives and validate.</li>
+      </ol>
+    </section>
+
+    <section id="failures" class="boundary">
+      <h2>Failure Modes</h2>
+      <p>Do not cite this or any generated page as proof of ontology adoption, benchmark promotion, Gate Chair verdicts, role expansion, routing changes, validator authority, or generated-output authority. If a derivative disagrees with a registered source, the derivative is stale or wrong.</p>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <p>This HTML file is a generated noncanonical reader surface derived from <code>markdown/html-explainer-specs/source-authority-explainer.md</code> and the publication brief <code>markdown/publication-briefs/source-authority.publication-brief.md</code>.</p>
+      <span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span>
+      <span class="source-chip" data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</span>
+      <span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</span>
+      <span class="source-chip" data-source-path="registries/MARKDOWN_SOURCE_REGISTRY.csv">registries/MARKDOWN_SOURCE_REGISTRY.csv</span>
+      <span class="source-chip" data-source-path="registries/HTML_EXPLAINER_REGISTRY.csv">registries/HTML_EXPLAINER_REGISTRY.csv</span>
+      <span class="source-chip" data-source-path="registries/WIKI_ARTIFACT_REGISTRY.csv">registries/WIKI_ARTIFACT_REGISTRY.csv</span>
+      <span class="source-chip" data-source-path="registries/FILE_OBJECT_REGISTRY.csv">registries/FILE_OBJECT_REGISTRY.csv</span>
+    </section>
   </main>
-
-<script id="aether-docs-enhancement-js">
-  (() => {
-    if (window.__aetherDocsEnhancementLoaded) return;
-    window.__aetherDocsEnhancementLoaded = true;
-
-    const progress = document.createElement('div');
-    progress.className = 'reading-progress';
-    progress.setAttribute('aria-hidden', 'true');
-    document.body.prepend(progress);
-
-    const nav = document.querySelector('[data-explainer-control="section_toc"]');
-    const toolbar = document.createElement('div');
-    toolbar.className = 'reader-toolbar';
-    toolbar.setAttribute('aria-label', 'Explainer search');
-    toolbar.innerHTML = `
-      <input type="search" placeholder="Search content" aria-label="Search content">
-    `;
-    if (nav) nav.insertAdjacentElement('afterend', toolbar);
-
-    const searchable = Array.from(document.querySelectorAll(
-      '[data-content-block], .source-list li, .atlas-link'
-    ));
-
-    const clearMarks = (node) => {
-      node.querySelectorAll('mark.search-hit').forEach((mark) => {
-        mark.replaceWith(document.createTextNode(mark.textContent || ''));
-      });
-      node.normalize();
-    };
-
-    const markText = (node, query) => {
-      if (!query || node.matches('script, style, svg, pre, code')) return;
-      for (const child of Array.from(node.childNodes)) {
-        if (child.nodeType === Node.TEXT_NODE) {
-          const text = child.nodeValue || '';
-          const index = text.toLowerCase().indexOf(query);
-          if (index >= 0) {
-            const range = document.createRange();
-            range.setStart(child, index);
-            range.setEnd(child, index + query.length);
-            const mark = document.createElement('mark');
-            mark.className = 'search-hit';
-            range.surroundContents(mark);
-          }
-        } else if (child.nodeType === Node.ELEMENT_NODE) {
-          markText(child, query);
-        }
-      }
-    };
-
-    const searchInput = toolbar.querySelector('input[type="search"]');
-    const applySearch = () => {
-      const raw = searchInput.value.trim();
-      const query = raw.toLowerCase();
-      searchable.forEach((node) => {
-        clearMarks(node);
-        const matches = !query || node.textContent.toLowerCase().includes(query);
-        node.hidden = !matches;
-        if (matches && query) markText(node, query);
-      });
-    };
-    searchInput?.addEventListener('input', applySearch);
-    searchInput?.addEventListener('search', applySearch);
-
-    const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
-    sourceNodes.forEach((node) => {
-      node.addEventListener('click', async () => {
-        const text = node.getAttribute('data-source-path') || node.textContent.trim();
-        if (!text) return;
-        try {
-          await navigator.clipboard.writeText(text);
-          node.classList.add('was-copied');
-          setTimeout(() => node.classList.remove('was-copied'), 850);
-        } catch (_) {
-          // Clipboard may be unavailable for local file URLs. No-op.
-        }
-      });
-    });
-
-    const updateProgress = () => {
-      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
-      document.documentElement.style.setProperty('--reading-progress', `${pct}%`);
-    };
-    updateProgress();
-    addEventListener('scroll', updateProgress, { passive: true });
-    addEventListener('resize', updateProgress);
-
-    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
-    const sections = navLinks
-      .map((link) => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean);
-    if ('IntersectionObserver' in window && sections.length) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const id = `#${entry.target.id}`;
-          navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === id));
-        });
-      }, { rootMargin: '-28% 0px -62% 0px', threshold: 0.01 });
-      sections.forEach((section) => observer.observe(section));
-    }
-  })();
-</script>
-
 </body>
 </html>

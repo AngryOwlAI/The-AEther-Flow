@@ -36,7 +36,7 @@ Validate without writing:
 `--check` is accepted as a compatibility alias for `--validate-only`; prefer
 `--validate-only` in new documentation.
 
-Documentation atlas validation modes:
+Documentation publication validation modes:
 
 ```zsh
 .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-only
@@ -44,10 +44,11 @@ Documentation atlas validation modes:
 .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only --strict-docs
 ```
 
-These modes run the Visual Atlas v2 validators for topic coverage,
-GitHub/HTML parity, standalone HTML, reader-first structure, diagram parity,
-depth lint, and teaching Q&A validation. They do not promote generated
-artifacts to authority.
+These modes run the active publication-process validator and teaching Q&A
+validator. They check source grounding, authority boundaries, no-network public
+HTML, migration status, publication brief conformance, and known
+anti-template failures. They do not promote generated artifacts to authority or
+replace human-facing editorial review.
 
 Clean ignored local noise from canonical lanes:
 
