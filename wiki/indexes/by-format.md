@@ -242,6 +242,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION` `research_control/tasks/RT-20260608-007/artifacts/06_LOCALIZATION_SOURCE_BASIS_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-008/artifacts/07_LOCALIZATION_SOURCE_BASIS_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `research_control/tasks/RT-20260614-053/artifacts/94_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
 
 ## wiki_markdown
@@ -475,4 +476,5 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-FORMALIZATION` `wiki/tex/tex-research-control-localization-source-basis-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-source-basis-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `wiki/tex/tex-research-control-localization-source-repair-packet.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-side-selector-no-go-theorem-refuter-stress-test.md`

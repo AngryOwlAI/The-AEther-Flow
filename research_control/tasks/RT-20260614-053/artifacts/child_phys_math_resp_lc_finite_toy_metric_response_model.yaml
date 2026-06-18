@@ -1,0 +1,26 @@
+artifact_id: "child-phys-math-resp-lc-finite-toy-metric-response-model"
+task_id: "RT-20260614-053"
+job_id: "AJ-RT-20260614-053-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_boundary: "finite toy metric-response model only; no Resp_lc adoption M_src g_eff matter coupling Einstein equations benchmark promotion Gate Chair review candidate reconstruction completed derivation future source-extension impossibility or global theory rejection"
+finite_model:
+  source_set: "F_toy contains X_plus X_flip X_scale X_token and X_empty over two cells U0 U1 with explicit source-side toy tags eps lambda and tau when present."
+  response_relation: "R_toy is partial. It returns orientation sign eps positive normalization lambda and token map tau exactly when all three tags are explicit source data. It is undefined on X_empty."
+  metric_response_analogue: "D_toy has zero diagonal and off-diagonal weight lambda. The signed adjacency form A_toy has off-diagonal eps lambda. Token labels travel only through tau."
+  invariance_checks:
+    - "Cell relabeling conjugates D_toy and A_toy by the cell permutation and preserves their source-determined values."
+    - "Token renaming composes tau with the token renaming and does not alter orientation or normalization."
+    - "External convention flips or scale changes do not affect R_toy unless eps or lambda is explicitly changed as source data."
+    - "Finite tag perturbations change only the corresponding response component and tag removal makes R_toy undefined."
+new_mathematical_payload:
+  - payload_type: "finite_model"
+    summary: "constructed a finite source-to-response toy model with four tagged source objects and one untagged undefined object"
+  - payload_type: "definition"
+    summary: "defined R_toy D_toy and A_toy from explicit source-side orientation normalization and token tags"
+limitations:
+  - "The model is finite and toy-level only."
+  - "The model does not supply a canonical Resp_lc witness for the retained untagged tuple."
+  - "The model does not define M_src g_eff matter coupling or Einstein equations."
+recommended_fusion_use: "Use the finite set relation and invariance calculations as the formal spine of the fused TeX artifact."

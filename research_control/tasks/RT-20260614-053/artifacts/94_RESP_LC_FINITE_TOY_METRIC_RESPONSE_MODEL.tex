@@ -1,0 +1,206 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\title{Resp\_lc Finite Toy Metric-Response Model}
+\author{The AEther-Flow Research Project}
+\date{2026-06-18}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Candidate Constructor packet for
+`RT-20260614-053`. It constructs a finite toy metric-response model
+selected by `RT-20260614-052`. It is not canonical ontology, not a
+canonical `Resp\_lc` witness, not `M\_src`, not `g\_eff`, not matter
+coupling, not Einstein equations, not benchmark evidence, not a Gate
+Chair verdict, and not completed-derivation evidence.
+
+\section{Finite Source Set}
+
+Let the toy cell set be
+\[
+  C_{\mathrm{toy}}=\{U_0,U_1\}.
+\]
+Let the response-token alphabet be
+\[
+  T_{\mathrm{toy}}=\{a,b\}.
+\]
+A tagged toy source object is a tuple
+\[
+  X=(C_{\mathrm{toy}},E,\varepsilon,\lambda,\tau),
+\]
+where \(E=\{\{U_0,U_1\}\}\), \(\varepsilon\in\{+1,-1\}\) is an
+explicit source-side orientation tag, \(\lambda\in\{1,2\}\) is an
+explicit positive source-side normalization tag, and
+\(\tau:C_{\mathrm{toy}}\rightarrow T_{\mathrm{toy}}\) is an explicit
+source-side token tag.
+
+The finite family is
+\[
+\begin{aligned}
+F_{\mathrm{toy}}=\{&
+X_+       =(C_{\mathrm{toy}},E,+1,1,\tau_{ab}),\\
+&X_{\mathrm{flip}}=(C_{\mathrm{toy}},E,-1,1,\tau_{ab}),\\
+&X_{\mathrm{scale}}=(C_{\mathrm{toy}},E,+1,2,\tau_{ab}),\\
+&X_{\mathrm{token}}=(C_{\mathrm{toy}},E,+1,1,\tau_{ba}),\\
+&X_{\emptyset}=(C_{\mathrm{toy}},E)\}.
+\end{aligned}
+\]
+Here \(\tau_{ab}(U_0)=a\), \(\tau_{ab}(U_1)=b\),
+\(\tau_{ba}(U_0)=b\), and \(\tau_{ba}(U_1)=a\). The object
+\(X_{\emptyset}\) deliberately has no orientation, normalization, or
+token tags. It models the current obstruction: the retained tuple by
+itself does not determine the response data.
+
+\section{Partial Response Relation}
+
+\begin{definition}[Toy response relation]
+Define a partial relation
+\[
+  R_{\mathrm{toy}}:F_{\mathrm{toy}}\rightharpoonup
+  \{+1,-1\}\times\{1,2\}\times T_{\mathrm{toy}}^{C_{\mathrm{toy}}}
+\]
+by
+\[
+  R_{\mathrm{toy}}(C_{\mathrm{toy}},E,\varepsilon,\lambda,\tau)
+  =(\varepsilon,\lambda,\tau)
+\]
+whenever all three tags are explicit source data. The relation is
+undefined on \(X_{\emptyset}\).
+\end{definition}
+
+This relation is intentionally conservative. It does not choose a sign
+by convention, it does not choose a scale by calibration, and it does
+not assign response tokens by notation. It records only tags already
+present in the finite toy source object.
+
+\section{Toy Metric-Response Analogue}
+
+\begin{definition}[Toy distance and signed adjacency]
+For each tagged object \(X\) with
+\(R_{\mathrm{toy}}(X)=(\varepsilon,\lambda,\tau)\), define
+\[
+  D_X(U_i,U_j)=
+  \begin{cases}
+    0,& i=j,\\
+    \lambda,& i\neq j,
+  \end{cases}
+\]
+and define the signed adjacency form
+\[
+  A_X(U_i,U_j)=
+  \begin{cases}
+    0,& i=j,\\
+    \varepsilon\lambda,& i\neq j.
+  \end{cases}
+\]
+The token component is the explicit map \(\tau\).
+\end{definition}
+
+\(D_X\) and \(A_X\) are finite response analogues only. They are not a
+Lorentzian metric, not `M\_src`, not `g\_eff`, and not a matter
+coupling law.
+
+\section{Invariance Checks}
+
+\begin{proposition}[Finite toy covariance]
+The finite construction has the following controlled invariance
+properties.
+\end{proposition}
+
+\begin{proof}
+First, let \(\pi\) be the nontrivial permutation of
+\(C_{\mathrm{toy}}\). Relabeling cells sends \(D_X\) and \(A_X\) to
+their conjugates under \(\pi\). The numerical orientation and
+normalization tags are unchanged, and the token map is transported by
+precomposition with \(\pi^{-1}\). Thus the construction is covariant
+under finite cell relabeling.
+
+Second, let \(\sigma\) be a permutation of the token alphabet
+\(T_{\mathrm{toy}}\). Replacing \(\tau\) by \(\sigma\circ\tau\)
+changes only the token names. The orientation tag \(\varepsilon\), the
+normalization tag \(\lambda\), \(D_X\), and \(A_X\) are unchanged.
+
+Third, external sign flips or external rescalings that are not source
+tags do not change \(R_{\mathrm{toy}}\). The relation reads only
+\(\varepsilon\), \(\lambda\), and \(\tau\) as explicit toy source data.
+
+Fourth, finite tag perturbations change only the matching response
+component. \(X_{\mathrm{flip}}\) changes the signed adjacency sign,
+\(X_{\mathrm{scale}}\) changes the off-diagonal distance weight, and
+\(X_{\mathrm{token}}\) changes only token assignment. Removing the tags
+gives \(X_{\emptyset}\), where \(R_{\mathrm{toy}}\) is undefined.
+\end{proof}
+
+\section{Bridge Attempt Status}
+
+The finite candidate map is
+\[
+  X\longmapsto (R_{\mathrm{toy}}(X),D_X,A_X,\tau)
+\]
+for explicitly tagged \(X\in F_{\mathrm{toy}}\). The map succeeds only
+as a finite toy construction. It does not solve the missing primitive
+for the current untagged retained tuple. That missing primitive remains
+an actual source-side response law or admissible source extension that
+determines orientation sign, positive normalization, and response-token
+semantics without target-GR import.
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; local exact-branch witness status is not promoted. \\
+Resp\_lc & Still blocked for the current untagged tuple; toy tags do not adopt Resp\_lc. \\
+M\_src & Not started; no source manifold construction is supplied. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Not discharged beyond finite toy tag checks. \\
+Benchmark promotion & Blocked. \\
+Gate Chair status & Blocked and human-gated. \\
+Current route freeze or hard-fail status & Not frozen; finite toy construction now requires audit. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Conclusion}
+
+The finite toy metric-response model exists as draft/control
+scaffolding. It demonstrates that a response relation can be made
+source-determined in a toy setting when orientation, normalization, and
+token semantics are explicit source tags. It also preserves the core
+obstruction: without those tags, the relation is undefined. The logical
+next step is a bounded Smuggling Auditor audit for target-GR import,
+arbitrary convention leakage, and ontology-overread.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{handoff0094}
+The AEther-Flow Research Project. (2026, June 17). \emph{Handoff 0094}
+[Internal research-control handoff].
+
+\bibitem{selector-finite-toy}
+The AEther-Flow Research Project. (2026, June 17). \emph{Resp\_lc
+theoretical continuation selector finite toy decision} [Internal
+research-control artifact].
+
+\end{thebibliography}
+
+\end{document}
