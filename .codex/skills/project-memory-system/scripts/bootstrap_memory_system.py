@@ -132,6 +132,7 @@ GENERATED_REGISTRY_NAMES = [
 
 FOLDER_MAP_PATH = REPO_ROOT / "FOLDER_MAP.md"
 FOLDER_MAP_CATEGORIES = {
+    "archival source",
     "canonical source",
     "control authority",
     "generated derivative",
@@ -145,6 +146,8 @@ FOLDER_MAP_EXCLUDED_FILES = {"FOLDER_MAP.md"}
 REQUIRED_DIRS = [
     "ontology/tex",
     "ontology/pdfs",
+    "legacy_ontology/tex",
+    "legacy_ontology/pdfs",
     "manuscripts/tex",
     "manuscripts/pdfs",
     "markdown",
@@ -202,6 +205,7 @@ PROJECT_MARKDOWN_GLOBS = [
 
 CANONICAL_LANES = [
     "ontology",
+    "legacy_ontology",
     "manuscripts",
     "markdown",
     "html",
@@ -440,6 +444,13 @@ def validate_relative_path(path_text: str) -> str | None:
     return None
 
 
+def relative_path_for_lane(path: str | Path) -> Path:
+    source = Path(path)
+    if source.is_absolute():
+        return source.resolve().relative_to(REPO_ROOT)
+    return source
+
+
 def read_csv_rows(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         return []
@@ -562,6 +573,8 @@ def markdown_object_id(path: Path) -> str:
         return f"MD-RESEARCH-CONTROL-DESIGN-{object_suffix_from_stem(path.stem)}"
     if relative == "ontology/aether-and-aether-flow.md":
         return "MD-ONTOLOGY-AETHER-AND-AETHER-FLOW"
+    if relative.startswith("legacy_ontology/"):
+        return f"MD-LEGACY-ONTOLOGY-{object_suffix_from_stem(path.stem)}"
     if relative == "markdown/grill-memory-wiki-registry-design-handoff.md":
         return "MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF"
     if relative.startswith("markdown/html-explainer-specs/"):
@@ -694,6 +707,14 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "markdown-wiki",
             "Ontology-adjacent explanatory documentation; TeX remains scientific authority.",
         )
+    if relative.startswith("legacy_ontology/"):
+        return (
+            "legacy_ontology_markdown_snapshot",
+            "archival_noncanonical",
+            "humans_and_agents",
+            "markdown-wiki",
+            "Legacy ontology Markdown snapshot; not live canonical source and not independent physics authority.",
+        )
     if relative == "markdown/grill-memory-wiki-registry-design-handoff.md":
         return (
             "project_control_design_handoff",
@@ -759,6 +780,7 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
     for pattern in PROJECT_MARKDOWN_GLOBS:
         paths.extend(sorted(REPO_ROOT.glob(pattern)))
     paths.extend(sorted((REPO_ROOT / "ontology").glob("*.md")))
+    paths.extend(sorted((REPO_ROOT / "legacy_ontology").rglob("*.md")))
     paths.extend(sorted((REPO_ROOT / "markdown").rglob("*.md")))
 
     rows = []
@@ -812,25 +834,65 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
 
 
 def tex_object_id(path: Path) -> str:
-    relative = rel_path(path)
-    lane = "ONTOLOGY" if relative.startswith("ontology/tex/") else "MANUSCRIPT"
-    return f"TEX-{lane}-{object_suffix_from_stem(path.stem)}"
+    metadata = tex_lane_metadata(path)
+    return f"TEX-{metadata['object_lane']}-{object_suffix_from_stem(path.stem)}"
 
 
 def pdf_object_id_for_tex(path: Path) -> str:
-    relative = rel_path(path)
-    lane = "ONTOLOGY" if relative.startswith("ontology/tex/") else "MANUSCRIPT"
-    return f"PDF-{lane}-{object_suffix_from_stem(path.stem)}"
+    metadata = tex_lane_metadata(path)
+    return f"PDF-{metadata['object_lane']}-{object_suffix_from_stem(path.stem)}"
+
+
+def tex_lane_metadata(path: str | Path) -> dict[str, str]:
+    relative = relative_path_for_lane(path)
+    if relative.parts[:2] == ("ontology", "tex"):
+        return {
+            "object_lane": "ONTOLOGY",
+            "role": "ontology_source",
+            "authority_status": "canonical",
+            "notes": (
+                "Current canonical ontology package; does not prove the broader "
+                "first-principles GR derivation is solved."
+            ),
+            "claim_status": "benchmark_claim",
+            "research_status": "canonical_ontology",
+            "ontology_promotion_status": "accepted",
+            "equation_scope": "gr_benchmark",
+        }
+    if relative.parts[:2] == ("legacy_ontology", "tex"):
+        return {
+            "object_lane": "LEGACY-ONTOLOGY",
+            "role": "legacy_ontology_source_snapshot",
+            "authority_status": "archival_noncanonical",
+            "notes": (
+                "Legacy ontology snapshot copied from ontology/tex on 2026-06-18; "
+                "not the live canonical ontology and not independent derivation authority."
+            ),
+            "claim_status": "superseded",
+            "research_status": "superseded",
+            "ontology_promotion_status": "superseded",
+            "equation_scope": "gr_benchmark",
+        }
+    if relative.parts[:2] == ("manuscripts", "tex"):
+        return {
+            "object_lane": "MANUSCRIPT",
+            "role": "manuscript_source",
+            "authority_status": "manuscript_source",
+            "notes": "Manuscript source; ontology promotion requires an accepted packet.",
+            "claim_status": "proposal",
+            "research_status": "active_manuscript",
+            "ontology_promotion_status": "not_applicable",
+            "equation_scope": "derivation_sequence",
+        }
+    raise ValueError(f"Unsupported TeX lane: {relative.as_posix()}")
 
 
 def pdf_path_for_tex_path(path: str | Path) -> str:
-    source = Path(path)
-    if source.is_absolute():
-        relative = source.resolve().relative_to(REPO_ROOT)
-    else:
-        relative = source
+    relative = relative_path_for_lane(path)
     if relative.parts[:2] == ("ontology", "tex"):
         return f"ontology/pdfs/{relative.stem}.pdf"
+    if relative.parts[:2] == ("legacy_ontology", "tex"):
+        return f"legacy_ontology/pdfs/{relative.stem}.pdf"
     if relative.parts[:2] == ("manuscripts", "tex"):
         return f"manuscripts/pdfs/{relative.stem}.pdf"
     raise ValueError(f"Unsupported TeX lane: {relative.as_posix()}")
@@ -838,11 +900,12 @@ def pdf_path_for_tex_path(path: str | Path) -> str:
 
 def discover_tex_rows(now: str) -> list[dict[str, str]]:
     paths = sorted((REPO_ROOT / "ontology" / "tex").glob("*.tex"))
+    paths.extend(sorted((REPO_ROOT / "legacy_ontology" / "tex").glob("*.tex")))
     paths.extend(sorted((REPO_ROOT / "manuscripts" / "tex").glob("*.tex")))
     rows = []
     for path in paths:
         relative = rel_path(path)
-        is_ontology = relative.startswith("ontology/tex/")
+        metadata = tex_lane_metadata(path)
         object_id = tex_object_id(path)
         pdf_object_id = pdf_object_id_for_tex(path)
         pdf_path = pdf_path_for_tex_path(relative)
@@ -852,8 +915,8 @@ def discover_tex_rows(now: str) -> list[dict[str, str]]:
                 "object_id": object_id,
                 "path": relative,
                 "format": "tex",
-                "role": "ontology_source" if is_ontology else "manuscript_source",
-                "authority_status": "canonical" if is_ontology else "manuscript_source",
+                "role": metadata["role"],
+                "authority_status": metadata["authority_status"],
                 "audience": "humans_and_agents",
                 "source_hash": sha256_file(path),
                 "related_source": "",
@@ -862,19 +925,14 @@ def discover_tex_rows(now: str) -> list[dict[str, str]]:
                 "owner_skill": "tex-wiki",
                 "validation_status": "PASS",
                 "last_validated_at": now,
-                "notes": (
-                    "Current canonical ontology package; does not prove the broader "
-                    "first-principles GR derivation is solved."
-                    if is_ontology
-                    else "Manuscript source; ontology promotion requires an accepted packet."
-                ),
+                "notes": metadata["notes"],
                 "pdf_required": "true",
                 "pdf_object_id": pdf_object_id,
                 "pdf_path": pdf_path,
-                "claim_status": "benchmark_claim" if is_ontology else "proposal",
-                "research_status": "canonical_ontology" if is_ontology else "active_manuscript",
-                "ontology_promotion_status": "accepted" if is_ontology else "not_applicable",
-                "equation_scope": "gr_benchmark" if is_ontology else "derivation_sequence",
+                "claim_status": metadata["claim_status"],
+                "research_status": metadata["research_status"],
+                "ontology_promotion_status": metadata["ontology_promotion_status"],
+                "equation_scope": metadata["equation_scope"],
             }
         )
     return rows
@@ -1601,13 +1659,20 @@ def classify_folder(
         return "control authority", "Tracked Director decisions, AgentJobs, handoffs, tasks, and claim boundaries."
     if folder == "wiki" or folder.startswith("wiki/"):
         return "generated derivative", "Generated metadata notes and indexes; not source authority."
-    if folder.endswith("/pdfs") or folder == "ontology/pdfs" or folder == "manuscripts/pdfs":
+    if (
+        folder.endswith("/pdfs")
+        or folder == "ontology/pdfs"
+        or folder == "legacy_ontology/pdfs"
+        or folder == "manuscripts/pdfs"
+    ):
         return "generated derivative", "Human-reading PDF derivatives from registered TeX."
     if folder == "html" or folder.startswith("html/"):
         category = "generated derivative" if folder_contains_files(folder) else "reserved lane"
         return category, "Generated human-only visual explainer lane."
     if folder == "ontology" or folder == "ontology/tex":
         return "canonical source", "Ontology and exact-GR benchmark source lane."
+    if folder == "legacy_ontology" or folder.startswith("legacy_ontology/"):
+        return "archival source", "Legacy ontology snapshot lane; not live canonical ontology authority."
     if folder == "manuscripts" or folder == "manuscripts/tex":
         category = "canonical source" if folder_contains_files(folder) else "reserved lane"
         return category, "Future manuscript source lane."
@@ -1634,6 +1699,8 @@ def folder_research_role(folder: str, category: str) -> str:
         return "Repository front door for project identity, instructions, validation, and generated folder classification."
     if folder == "ontology" or folder.startswith("ontology/"):
         return "Holds the ontology and benchmark package used as the derivation target and constraint set."
+    if folder == "legacy_ontology" or folder.startswith("legacy_ontology/"):
+        return "Preserves the 2026-06-18 ontology snapshot for comparison while the live ontology remains mutable."
     if folder == "research_control" or folder.startswith("research_control/tasks"):
         return "Runs bounded proposal, audit, refutation, repair, and handoff transactions."
     if folder == "registries":
@@ -1650,6 +1717,8 @@ def folder_research_role(folder: str, category: str) -> str:
         return "Operates or tests the research memory/control workflow."
     if category == "generated derivative":
         return "Provides generated reading surfaces derived from registered sources."
+    if category == "archival source":
+        return "Preserves historical source material for comparison without becoming active authority."
     if category == "control authority":
         return "Maintains project governance, validation, routing, or registry authority."
     if category == "reserved lane":
@@ -1676,6 +1745,7 @@ def folder_map_text(rows_by_registry: dict[str, list[dict[str, str]]]) -> str:
         "## Category Key",
         "",
         "- `canonical source`: authored source material that can carry project meaning.",
+        "- `archival source`: tracked source snapshot retained for comparison, not the active authority lane.",
         "- `control authority`: tracked governance, routing, validation, registry, or task-control material.",
         "- `generated derivative`: generated human or agent reading surfaces.",
         "- `local retrieval`: ignored local cache, vault, semantic extraction, or search layer.",
@@ -1843,7 +1913,7 @@ def validate_pdf_registry(
     pdf_rows = existing_by_id(rows_by_registry.get("PDF_DERIVATIVE_REGISTRY.csv", []))
     registered_pdf_paths = {row.get("path", "") for row in pdf_rows.values()}
 
-    for lane in ["ontology/pdfs", "manuscripts/pdfs"]:
+    for lane in ["ontology/pdfs", "legacy_ontology/pdfs", "manuscripts/pdfs"]:
         directory = REPO_ROOT / lane
         for pdf_path in sorted(directory.glob("*.pdf")):
             relative = rel_path(pdf_path)

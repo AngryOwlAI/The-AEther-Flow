@@ -50,6 +50,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `markdown/html-explainer-specs/roles-and-skills-explainer.md`
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
 - `MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER` `markdown/html-explainer-specs/technical-requirements-explainer.md`
+- `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
+- `MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `legacy_ontology/aether_flow_interpretation-lemen.md`
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-README` `README.md`
@@ -59,6 +61,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-CODEX-AGENTS` `.codex/agents/README.md`
 - `MD-README-CODEX-PROMPTS` `.codex/prompts/README.md`
 - `MD-README-CODEX-SKILLS` `.codex/skills/README.md`
+- `MD-README-LEGACY-ONTOLOGY` `legacy_ontology/README.md`
+- `MD-README-LEGACY-ONTOLOGY-PDFS` `legacy_ontology/pdfs/README.md`
+- `MD-README-LEGACY-ONTOLOGY-TEX` `legacy_ontology/tex/README.md`
 - `MD-README-MARKDOWN` `markdown/README.md`
 - `MD-README-MARKDOWN-HTML-EXPLAINER-SPECS` `markdown/html-explainer-specs/README.md`
 - `MD-README-MARKDOWN-TEACHING-PACKETS` `markdown/teaching-packets/README.md`
@@ -135,6 +140,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## pdf
 
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `legacy_ontology/pdfs/aether_flow_consistency.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `legacy_ontology/pdfs/aether_flow_dynamics.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `legacy_ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE` `legacy_ontology/pdfs/aether_flow_exact_closure_note.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW` `legacy_ontology/pdfs/aether_flow_exact_closure_sequence_overview.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `legacy_ontology/pdfs/aether_flow_foundations.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-GEOMETRY` `legacy_ontology/pdfs/aether_flow_geometry.pdf`
+- `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `legacy_ontology/pdfs/aether_flow_relativistic_recovery.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `ontology/pdfs/aether_flow_consistency.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/pdfs/aether_flow_dynamics.pdf`
 - `PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
@@ -146,6 +159,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## tex
 
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `legacy_ontology/tex/aether_flow_consistency.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `legacy_ontology/tex/aether_flow_dynamics.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `legacy_ontology/tex/aether_flow_exact_closure_flagship_article.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE` `legacy_ontology/tex/aether_flow_exact_closure_note.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW` `legacy_ontology/tex/aether_flow_exact_closure_sequence_overview.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `legacy_ontology/tex/aether_flow_foundations.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-GEOMETRY` `legacy_ontology/tex/aether_flow_geometry.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `legacy_ontology/tex/aether_flow_relativistic_recovery.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `ontology/tex/aether_flow_consistency.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/tex/aether_flow_dynamics.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `ontology/tex/aether_flow_exact_closure_flagship_article.tex`
@@ -296,6 +317,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `wiki/markdown/md-html-spec-roles-and-skills-explainer.md`
 - `WIKI-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-html-spec-source-authority-explainer.md`
 - `WIKI-MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER` `wiki/markdown/md-html-spec-technical-requirements-explainer.md`
+- `WIKI-MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-legacy-ontology-aether-and-aether-flow.md`
+- `WIKI-MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-legacy-ontology-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
@@ -305,6 +328,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-CODEX-AGENTS` `wiki/markdown/md-readme-codex-agents.md`
 - `WIKI-MD-README-CODEX-PROMPTS` `wiki/markdown/md-readme-codex-prompts.md`
 - `WIKI-MD-README-CODEX-SKILLS` `wiki/markdown/md-readme-codex-skills.md`
+- `WIKI-MD-README-LEGACY-ONTOLOGY` `wiki/markdown/md-readme-legacy-ontology.md`
+- `WIKI-MD-README-LEGACY-ONTOLOGY-PDFS` `wiki/markdown/md-readme-legacy-ontology-pdfs.md`
+- `WIKI-MD-README-LEGACY-ONTOLOGY-TEX` `wiki/markdown/md-readme-legacy-ontology-tex.md`
 - `WIKI-MD-README-MARKDOWN` `wiki/markdown/md-readme-markdown.md`
 - `WIKI-MD-README-MARKDOWN-HTML-EXPLAINER-SPECS` `wiki/markdown/md-readme-markdown-html-explainer-specs.md`
 - `WIKI-MD-README-MARKDOWN-TEACHING-PACKETS` `wiki/markdown/md-readme-markdown-teaching-packets.md`
@@ -378,6 +404,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
 - `WIKI-MD-TEACHING-QA-PACKET-PROJECT-OVERVIEW-TEACHING-QA` `wiki/markdown/md-teaching-qa-packet-project-overview-teaching-qa.md`
 - `WIKI-MD-TEACHING-QA-PACKET-ROLE-ROUTING-TEACHING-QA` `wiki/markdown/md-teaching-qa-packet-role-routing-teaching-qa.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/pdf/pdf-legacy-ontology-aether-flow-exact-closure-flagship-article.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE` `wiki/pdf/pdf-legacy-ontology-aether-flow-exact-closure-note.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW` `wiki/pdf/pdf-legacy-ontology-aether-flow-exact-closure-sequence-overview.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `wiki/pdf/pdf-legacy-ontology-aether-flow-foundations.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-GEOMETRY` `wiki/pdf/pdf-legacy-ontology-aether-flow-geometry.md`
+- `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `wiki/pdf/pdf-legacy-ontology-aether-flow-relativistic-recovery.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-ontology-aether-flow-dynamics.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/pdf/pdf-ontology-aether-flow-exact-closure-flagship-article.md`
@@ -386,6 +420,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `wiki/pdf/pdf-ontology-aether-flow-foundations.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-GEOMETRY` `wiki/pdf/pdf-ontology-aether-flow-geometry.md`
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `wiki/pdf/pdf-ontology-aether-flow-relativistic-recovery.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/tex/tex-legacy-ontology-aether-flow-consistency.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/tex/tex-legacy-ontology-aether-flow-dynamics.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/tex/tex-legacy-ontology-aether-flow-exact-closure-flagship-article.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE` `wiki/tex/tex-legacy-ontology-aether-flow-exact-closure-note.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW` `wiki/tex/tex-legacy-ontology-aether-flow-exact-closure-sequence-overview.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `wiki/tex/tex-legacy-ontology-aether-flow-foundations.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-GEOMETRY` `wiki/tex/tex-legacy-ontology-aether-flow-geometry.md`
+- `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `wiki/tex/tex-legacy-ontology-aether-flow-relativistic-recovery.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/tex/tex-ontology-aether-flow-consistency.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/tex/tex-ontology-aether-flow-dynamics.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/tex/tex-ontology-aether-flow-exact-closure-flagship-article.md`

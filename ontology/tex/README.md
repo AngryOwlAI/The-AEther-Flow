@@ -3,7 +3,8 @@
 # Ontology TeX Sources
 
 This folder contains registered TeX source files for ontology and exact-GR
-benchmark material.
+benchmark material. It is the live TeX lane; the copied 2026-06-18 reference
+state lives under `legacy_ontology/tex/`.
 
 ## What Belongs Here
 
@@ -30,3 +31,6 @@ PDF derivatives are generated from these files and recorded in
 `registries/PDF_DERIVATIVE_REGISTRY.csv`. Do not treat a PDF as independent
 authority when the TeX source is available.
 
+If the live ontology changes, update files here through the governed task and
+validation path. The legacy TeX snapshot is for comparison only and should not
+be used as the active edit target.

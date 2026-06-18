@@ -254,6 +254,12 @@ Authority order:
 
 Generated artifacts are tracked when they are part of the project memory surface, but they are not independent authority. Update the source file and registry row, then regenerate.
 
+The live ontology lane is `ontology/`. The `legacy_ontology/` lane is a
+2026-06-18 archival snapshot of the ontology TeX, PDF, and Markdown package for
+future comparison. It is registered for wiki and CSV retrieval as archival
+noncanonical material; it does not replace the live ontology, authorize
+ontology extension, or promote any derivation claim.
+
 Registered Markdown sources include front-door docs, scoped agent guidance,
 role contracts, schema contracts, skill contracts, key research-control design
 notes, ontology-adjacent explanatory notes, and Markdown source specs for
@@ -495,6 +501,9 @@ from the canonical type registry rather than duplicated local constant sets.
 │   │   └── Source specs for tracked human-only HTML explainers.
 │   └── ontology-promotions/
 ├── manuscripts/
+│   ├── tex/
+│   └── pdfs/
+├── legacy_ontology/
 │   ├── tex/
 │   └── pdfs/
 ├── ontology/

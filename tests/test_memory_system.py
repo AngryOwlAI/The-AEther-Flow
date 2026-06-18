@@ -377,6 +377,22 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertEqual(row["agent_documentation"], "true")
         self.assertIn("Folder-level explanatory README", row["notes"])
 
+    def test_legacy_ontology_markdown_is_discovered_as_archival_snapshot(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            note = root / "legacy_ontology/aether-and-aether-flow.md"
+            note.parent.mkdir(parents=True)
+            note.write_text("# Legacy Ontology Note\n", encoding="utf-8")
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.discover_markdown_rows("2026-06-18T00:00:00Z")
+
+        row_by_id = {row["object_id"]: row for row in rows}
+        row = row_by_id["MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW"]
+        self.assertEqual(row["role"], "legacy_ontology_markdown_snapshot")
+        self.assertEqual(row["authority_status"], "archival_noncanonical")
+        self.assertEqual(row["owner_skill"], "markdown-wiki")
+        self.assertIn("not live canonical source", row["notes"])
+
     def test_github_facing_markdown_stale_rows_are_pruned(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
@@ -463,6 +479,29 @@ class MemorySystemSmokeTests(unittest.TestCase):
         report = self.memory_system.ValidationReport()
         self.memory_system.validate_pdf_registry(report, rows_by_registry)
         self.assertTrue(any("stale source_tex_hash" in error for error in report.errors))
+
+    def test_legacy_ontology_tex_is_discovered_as_archival_snapshot(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            tex = root / "legacy_ontology/tex/aether_flow_foundations.tex"
+            pdf = root / "legacy_ontology/pdfs/aether_flow_foundations.pdf"
+            tex.parent.mkdir(parents=True)
+            pdf.parent.mkdir(parents=True)
+            tex.write_text("\\section{Legacy}\n", encoding="utf-8")
+            pdf.write_bytes(b"%PDF legacy\n")
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.discover_tex_rows("2026-06-18T00:00:00Z")
+
+        row_by_id = {row["object_id"]: row for row in rows}
+        row = row_by_id["TEX-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"]
+        self.assertEqual(row["path"], "legacy_ontology/tex/aether_flow_foundations.tex")
+        self.assertEqual(row["role"], "legacy_ontology_source_snapshot")
+        self.assertEqual(row["authority_status"], "archival_noncanonical")
+        self.assertEqual(row["pdf_object_id"], "PDF-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS")
+        self.assertEqual(row["pdf_path"], "legacy_ontology/pdfs/aether_flow_foundations.pdf")
+        self.assertEqual(row["claim_status"], "superseded")
+        self.assertEqual(row["research_status"], "superseded")
+        self.assertEqual(row["ontology_promotion_status"], "superseded")
 
     def test_merge_refreshes_mechanical_fields_without_overwriting_judgments(self) -> None:
         existing_rows = [
@@ -1990,6 +2029,8 @@ class MemorySystemSmokeTests(unittest.TestCase):
         }
         cases = {
             "ontology/tex": "canonical source",
+            "legacy_ontology/tex": "archival source",
+            "legacy_ontology/pdfs": "generated derivative",
             "registries": "control authority",
             "wiki/tex": "generated derivative",
             ".local/obsidian": "local retrieval",

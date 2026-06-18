@@ -111,3 +111,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-059/artifacts/100_RESP_LC_SOURCE_EXTENSION_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-058/artifacts/99_RESP_LC_SOURCE_EXTENSION_CANDIDATE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
+
+## superseded
+
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `legacy_ontology/tex/aether_flow_consistency.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `legacy_ontology/tex/aether_flow_dynamics.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `legacy_ontology/tex/aether_flow_exact_closure_flagship_article.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE` `legacy_ontology/tex/aether_flow_exact_closure_note.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW` `legacy_ontology/tex/aether_flow_exact_closure_sequence_overview.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `legacy_ontology/tex/aether_flow_foundations.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-GEOMETRY` `legacy_ontology/tex/aether_flow_geometry.tex`
+- `TEX-LEGACY-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `legacy_ontology/tex/aether_flow_relativistic_recovery.tex`
