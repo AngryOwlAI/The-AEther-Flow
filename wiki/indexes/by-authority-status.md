@@ -125,6 +125,27 @@ Generated metadata index. Not canonical authority. Update source registries, the
 ## explanatory_noncanonical
 
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
+- `MD-README-AGENTS-ROLES` `.agents/roles/README.md`
+- `MD-README-AGENTS-SCHEMAS` `.agents/schemas/README.md`
+- `MD-README-ASSETS` `assets/README.md`
+- `MD-README-CODEX-AGENTS` `.codex/agents/README.md`
+- `MD-README-CODEX-PROMPTS` `.codex/prompts/README.md`
+- `MD-README-CODEX-SKILLS` `.codex/skills/README.md`
+- `MD-README-MARKDOWN` `markdown/README.md`
+- `MD-README-MARKDOWN-HTML-EXPLAINER-SPECS` `markdown/html-explainer-specs/README.md`
+- `MD-README-MARKDOWN-TEACHING-PACKETS` `markdown/teaching-packets/README.md`
+- `MD-README-ONTOLOGY` `ontology/README.md`
+- `MD-README-ONTOLOGY-TEX` `ontology/tex/README.md`
+- `MD-README-REGISTRIES` `registries/README.md`
+- `MD-README-RESEARCH-CONTROL-DESIGN` `research_control/design/README.md`
+- `MD-README-RESEARCH-CONTROL-HANDOFFS` `research_control/handoffs/README.md`
+- `MD-README-RESEARCH-CONTROL-TASKS` `research_control/tasks/README.md`
+- `MD-README-RESEARCH-CONTROL-TEMPLATES` `research_control/templates/README.md`
+- `MD-README-SCRIPTS` `scripts/README.md`
+- `MD-README-SCRIPTS-PROJECT-CONTROL` `scripts/project_control/README.md`
+- `MD-README-SCRIPTS-RESEARCH-CONTROL` `scripts/research_control/README.md`
+- `MD-README-TESTS` `tests/README.md`
+- `MD-README-TEX-SHARED` `tex_shared/README.md`
 
 ## explanatory_support_noncanonical
 
@@ -213,8 +234,29 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
+- `WIKI-MD-README-AGENTS-ROLES` `wiki/markdown/md-readme-agents-roles.md`
+- `WIKI-MD-README-AGENTS-SCHEMAS` `wiki/markdown/md-readme-agents-schemas.md`
+- `WIKI-MD-README-ASSETS` `wiki/markdown/md-readme-assets.md`
+- `WIKI-MD-README-CODEX-AGENTS` `wiki/markdown/md-readme-codex-agents.md`
+- `WIKI-MD-README-CODEX-PROMPTS` `wiki/markdown/md-readme-codex-prompts.md`
+- `WIKI-MD-README-CODEX-SKILLS` `wiki/markdown/md-readme-codex-skills.md`
+- `WIKI-MD-README-MARKDOWN` `wiki/markdown/md-readme-markdown.md`
+- `WIKI-MD-README-MARKDOWN-HTML-EXPLAINER-SPECS` `wiki/markdown/md-readme-markdown-html-explainer-specs.md`
+- `WIKI-MD-README-MARKDOWN-TEACHING-PACKETS` `wiki/markdown/md-readme-markdown-teaching-packets.md`
+- `WIKI-MD-README-ONTOLOGY` `wiki/markdown/md-readme-ontology.md`
+- `WIKI-MD-README-ONTOLOGY-TEX` `wiki/markdown/md-readme-ontology-tex.md`
+- `WIKI-MD-README-REGISTRIES` `wiki/markdown/md-readme-registries.md`
 - `WIKI-MD-README-RESEARCH-CONTROL` `wiki/markdown/md-readme-research-control.md`
 - `WIKI-MD-README-RESEARCH-CONTROL-APPROVALS` `wiki/markdown/md-readme-research-control-approvals.md`
+- `WIKI-MD-README-RESEARCH-CONTROL-DESIGN` `wiki/markdown/md-readme-research-control-design.md`
+- `WIKI-MD-README-RESEARCH-CONTROL-HANDOFFS` `wiki/markdown/md-readme-research-control-handoffs.md`
+- `WIKI-MD-README-RESEARCH-CONTROL-TASKS` `wiki/markdown/md-readme-research-control-tasks.md`
+- `WIKI-MD-README-RESEARCH-CONTROL-TEMPLATES` `wiki/markdown/md-readme-research-control-templates.md`
+- `WIKI-MD-README-SCRIPTS` `wiki/markdown/md-readme-scripts.md`
+- `WIKI-MD-README-SCRIPTS-PROJECT-CONTROL` `wiki/markdown/md-readme-scripts-project-control.md`
+- `WIKI-MD-README-SCRIPTS-RESEARCH-CONTROL` `wiki/markdown/md-readme-scripts-research-control.md`
+- `WIKI-MD-README-TESTS` `wiki/markdown/md-readme-tests.md`
+- `WIKI-MD-README-TEX-SHARED` `wiki/markdown/md-readme-tex-shared.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `wiki/markdown/md-research-control-design-github-facing-explainer-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `wiki/markdown/md-research-control-design-gr-derivation-burden-map.md`

@@ -168,6 +168,29 @@ PROJECT_MARKDOWN_FILES = [
     "research_control/AGENTS.md",
     "research_control/approvals/README.md",
 ]
+FOLDER_README_FILES = [
+    ".agents/roles/README.md",
+    ".agents/schemas/README.md",
+    ".codex/agents/README.md",
+    ".codex/prompts/README.md",
+    ".codex/skills/README.md",
+    "assets/README.md",
+    "markdown/README.md",
+    "markdown/html-explainer-specs/README.md",
+    "markdown/teaching-packets/README.md",
+    "ontology/README.md",
+    "ontology/tex/README.md",
+    "registries/README.md",
+    "research_control/design/README.md",
+    "research_control/handoffs/README.md",
+    "research_control/tasks/README.md",
+    "research_control/templates/README.md",
+    "scripts/README.md",
+    "scripts/project_control/README.md",
+    "scripts/research_control/README.md",
+    "tests/README.md",
+    "tex_shared/README.md",
+]
 PROJECT_MARKDOWN_GLOBS = [
     ".agents/roles/**/*.md",
     ".agents/schemas/*.md",
@@ -600,6 +623,14 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "project-memory-system",
             "Human-gate approval lane documentation.",
         )
+    if relative in FOLDER_README_FILES:
+        return (
+            "folder_readme_documentation",
+            "explanatory_noncanonical",
+            "humans_and_agents",
+            "documentation-curator",
+            "Folder-level explanatory README; describes local purpose and authority boundaries without changing project behavior.",
+        )
     if relative.startswith("github-facing/"):
         return (
             "github_facing_documentation",
@@ -721,6 +752,10 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
         path = REPO_ROOT / path_text
         if path.exists():
             paths.append(path)
+    for path_text in FOLDER_README_FILES:
+        path = REPO_ROOT / path_text
+        if path.exists():
+            paths.append(path)
     for pattern in PROJECT_MARKDOWN_GLOBS:
         paths.extend(sorted(REPO_ROOT.glob(pattern)))
     paths.extend(sorted((REPO_ROOT / "ontology").glob("*.md")))
@@ -747,6 +782,7 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
             or relative.startswith(".agents/")
             or relative.startswith(".codex/skills/")
             or relative.startswith("research_control/")
+            or relative in FOLDER_README_FILES
         )
         rows.append(
             {

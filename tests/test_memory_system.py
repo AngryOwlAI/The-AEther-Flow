@@ -359,6 +359,24 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertEqual(row["owner_skill"], "aether-teaching-explainer")
         self.assertIn("explanatory support only", row["notes"])
 
+    def test_folder_readme_is_discovered_as_explanatory_documentation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            readme = root / "scripts/project_control/README.md"
+            readme.parent.mkdir(parents=True)
+            readme.write_text("# Project-Control Scripts\n", encoding="utf-8")
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.discover_markdown_rows("2026-06-18T00:00:00Z")
+
+        row_by_id = {row["object_id"]: row for row in rows}
+        row = row_by_id["MD-README-SCRIPTS-PROJECT-CONTROL"]
+        self.assertEqual(row["role"], "folder_readme_documentation")
+        self.assertEqual(row["authority_status"], "explanatory_noncanonical")
+        self.assertEqual(row["audience"], "humans_and_agents")
+        self.assertEqual(row["owner_skill"], "documentation-curator")
+        self.assertEqual(row["agent_documentation"], "true")
+        self.assertIn("Folder-level explanatory README", row["notes"])
+
     def test_github_facing_markdown_stale_rows_are_pruned(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()
