@@ -1,12 +1,16 @@
 Technical Requirements
 technical_requirements
 Technical Requirements
-Technical requirements separate the tools needed to read, validate, regenerate, render, retrieve, and refresh derivatives.
+Technical requirements separate the tools needed to read, operate the current Codex app harness, validate, regenerate, render, retrieve, and refresh derivatives.
 Summary of Technical Requirements
-The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, and derivative-build requirements needed to inspect or regenerate project surfaces safely. Its function is to separate read-only inspection, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The requirements map turns setup files and skill contracts into a practical dependency model for maintainers who need repeatable validation without changing dependency policy or scientific claims.
+The technical requirements explainer describes the local runtime, package, validation, rendering, retrieval, derivative-build, and current AI-agent harness requirements needed to inspect, operate, or regenerate project surfaces safely. Its function is to separate read-only inspection, Codex app operation of the governed AI-agent workflow, Python validator execution, memory and wiki regeneration, governed Mermaid inline-SVG rendering, local Obsidian or semantic retrieval, and LaTeX/PDF refresh into distinct tiers. This matters because not every reader needs every tool, and optional operator aids such as Obsidian or global Codex plugins should not be mistaken for project authority. The requirements map turns setup files and skill contracts into a practical dependency model for maintainers who need repeatable validation while recognizing that the present research-agent harness is the Codex app, not yet a portable custom harness.
 README.md
+AGENTS.md
 requirements.txt
 Makefile
+.codex/skills/README.md
+.codex/agents/README.md
+.codex/prompts/README.md
 .codex/skills/project-memory-system/SKILL.md
 .codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/package.json
 Coverage
@@ -15,7 +19,13 @@ Source-Backed Coverage
 Read and Inspect
 README.md
 AGENTS.md
-The minimum tier is ordinary reading and inspection: a text editor, Git, shell access, and the ability to open Markdown, CSV, YAML, HTML, and TeX sources. This tier supports understanding but not full regeneration. A reader can inspect authority, source materials, and registries without installing every optional tool. That distinction matters because missing a diagram renderer or Obsidian app should not be mistaken for a failure of the repository’s source authority. This tier is enough for source review, issue triage, and conceptual orientation, but it is not enough to claim that generated outputs are fresh.
+The minimum tier is ordinary reading and inspection: a text editor, Git, shell access, and the ability to open Markdown, CSV, YAML, HTML, and TeX sources. This tier supports understanding but not full regeneration. A reader can inspect authority, source materials, and registries without installing every optional tool. That distinction matters because missing a diagram renderer, Codex app access, or Obsidian app should not be mistaken for a failure of the repository’s source authority. This tier is enough for source review, issue triage, and conceptual orientation, but it is not enough to claim that generated outputs are fresh or that the governed AI-agent workflow has been reproduced.
+Codex App Harness
+README.md
+.codex/skills/README.md
+.codex/agents/README.md
+.codex/prompts/README.md
+The governed AI-agent workflow is currently developed and operated inside the Codex app. The repo-local `.codex/` skills, prompts, agent configuration files, continuation workflows, tool-use expectations, and Documentation Curator loops assume that app as the present execution harness. A future custom or third-party harness can replace it only if it preserves the same tracked state, authority hierarchy, role boundaries, allowlists, validator gates, checkpoint discipline, and generated-derivative boundaries. Codex app access is therefore a current operating requirement for reproducing the project’s agent workflow, not a source of scientific or control authority by itself.
 Python Validators
 requirements.txt
 Makefile
@@ -40,12 +50,16 @@ The PDF tier is conditional. LaTeX or a managed TeX runtime is needed when refre
 Requirement Boundary
 README.md
 AGENTS.md
-The boundary separates project requirements from operator conveniences. Python validators, memory bootstrap, registered renderer tooling, and required tests are project requirements when their lane is in scope. Obsidian, global Codex plugins, editor extensions, personal browser state, and local previews are operator aids unless explicitly mirrored into repository contracts. This distinction keeps setup guidance practical without letting the local machine redefine project validity. The boundary also helps troubleshoot failures: missing project requirements block validation, while missing conveniences usually only reduce ergonomics.
+The boundary separates project requirements from operator conveniences. The Codex app is the current operating harness for the governed AI-agent workflow. Python validators, memory bootstrap, registered renderer tooling, and required tests are project requirements when their lane is in scope. Obsidian, global Codex plugins, editor extensions, personal browser state, and local previews are operator aids unless explicitly mirrored into repository contracts. This distinction keeps setup guidance practical without letting the local machine redefine project validity. The boundary also helps troubleshoot failures: missing project requirements block validation, while missing conveniences usually only reduce ergonomics.
 All Source Materials
 Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
 README.md
+AGENTS.md
 requirements.txt
 Makefile
+.codex/skills/README.md
+.codex/agents/README.md
+.codex/prompts/README.md
 .codex/skills/project-memory-system/SKILL.md
 .codex/skills/obsidian-wiki/SKILL.md
 .codex/skills/pdf-derivative-build/SKILL.md
