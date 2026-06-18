@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="06e11eb8dd8835a7f6b2d6065f7d597220ebb305b5bce5219d4eb7ceb46cd706">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <title>AEther-Flow Physics Program</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #14202b;
+      --muted: #5d6978;
+      --line: #d7dee7;
+      --paper: #f6f8fa;
+      --panel: #ffffff;
+      --blue: #245d90;
+      --green: #2d715a;
+      --red: #963c3c;
+      --violet: #5f548d;
+      --gold: #876a23;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.56;
+      letter-spacing: 0;
+    }
+    header, main, footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    header { padding-top: 42px; }
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      max-width: 920px;
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 850px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .notice {
+      margin-top: 24px;
+      border-left: 5px solid var(--green);
+      background: #eef8f2;
+      padding: 14px 16px;
+      max-width: 930px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 8px 12px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      letter-spacing: 0;
+    }
+    section { margin: 28px 0; }
+    .layers {
+      display: grid;
+      gap: 12px;
+    }
+    .layer {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+    .label, .body, .boundary, .source-panel, .summary {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .label {
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .layer:nth-child(2) .label { color: var(--green); }
+    .layer:nth-child(3) .label { color: var(--red); }
+    .layer:nth-child(4) .label { color: var(--violet); }
+    .layer:nth-child(5) .label { color: var(--gold); }
+    .boundary {
+      color: var(--muted);
+    }
+    .path-grid, .summaries {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .source-panel h3, .summary h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    .summary.safe { border-top: 4px solid var(--green); }
+    .summary.unsafe { border-top: 4px solid var(--red); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+      background: #edf2f7;
+      padding: 0.08rem 0.28rem;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+    ul, ol {
+      margin: 8px 0 0 1.2rem;
+      padding: 0;
+    }
+    li { margin: 5px 0; }
+    footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding-bottom: 42px;
+    }
+    @media (max-width: 860px) {
+      .layer, .path-grid, .summaries { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Phase 1A Public Physics Status</p>
+    <h1>AEther-Flow Physics Program</h1>
+    <p class="lede">The physics track is a benchmark-disciplined research program: ontology gives the conceptual frame, exact GR defines the operational benchmark, and derivation remains an open source-side burden.</p>
+    <div class="notice">
+      This HTML file is a generated noncanonical reader surface derived from
+      <code>markdown/html-explainer-specs/aether-flow-physics-program-explainer.md</code>
+      and the publication brief
+      <code>markdown/publication-briefs/aether-flow-physics-program.publication-brief.md</code>.
+      It does not promote ontology, benchmark, derivation, Gate Chair status, or generated-output authority.
+    </div>
+    <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#status-title">Status Layers</a>
+      <a href="#path-title">Source Path</a>
+      <a href="#qualifiers-title">Qualifiers</a>
+      <a href="#summaries-title">Summaries</a>
+      <a href="#sources-title">Sources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="status-title">
+      <h2 id="status-title">Status Layers</h2>
+      <div class="layers">
+        <div class="layer">
+          <div class="label">Ontology</div>
+          <div class="body">AEther, AEther-flow, observed three-dimensional space, S-time, and observed expansion name the conceptual frame.</div>
+          <div class="boundary">Ontology vocabulary is not by itself a completed GR derivation.</div>
+        </div>
+        <div class="layer">
+          <div class="label">Exact-GR benchmark</div>
+          <div class="body">Observable-scale behavior remains ordinary GR: one metric, universal matter coupling, and standard causal structure.</div>
+          <div class="boundary">Adoption is not the same as benchmark promotion from source derivation.</div>
+        </div>
+        <div class="layer">
+          <div class="label">Derivation burden</div>
+          <div class="body">The burden chain runs through source ontology, equivalence, response localization, source manifold, metric, coupling, equations, and promotion.</div>
+          <div class="boundary">Open burdens stay open until source authority and gates close them.</div>
+        </div>
+        <div class="layer">
+          <div class="label">Negative results</div>
+          <div class="body">No-go, obstruction, stress, and freeze records preserve what failed and why.</div>
+          <div class="boundary">A scoped obstruction is not global theory rejection.</div>
+        </div>
+        <div class="layer">
+          <div class="label">Human gates</div>
+          <div class="body">Ontology adoption, benchmark promotion, and Gate Chair decisions remain protected.</div>
+          <div class="boundary">Generated documentation cannot bypass human-gated authority.</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="path-title">
+      <h2 id="path-title">Source Path For Careful Readers</h2>
+      <div class="path-grid">
+        <article class="source-panel">
+          <h3>Program framing</h3>
+          <p>Start with <code>README.md</code> and <code>AGENTS.md</code> to understand the two tracks, authority hierarchy, and generated-output limits.</p>
+        </article>
+        <article class="source-panel">
+          <h3>Ontology boundary</h3>
+          <p>Use <code>ontology/aether-and-aether-flow.md</code> for ontology vocabulary and the explicit statement that substrate derivation remains open.</p>
+        </article>
+        <article class="source-panel">
+          <h3>Research operation</h3>
+          <p>Use <code>research_control/README.md</code> for AgentJobs, claim gates, negative-result preservation, and human-gated routing.</p>
+        </article>
+        <article class="source-panel">
+          <h3>Burden and claims</h3>
+          <p>Use <code>research_control/design/gr_derivation_burden_map.md</code> and <code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code> before summarizing status.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="qualifiers-title">
+      <h2 id="qualifiers-title">Qualifiers To Preserve</h2>
+      <p>Public summaries should retain controlled qualifiers when they appear in source context: <code>draft/control</code>, <code>source-only</code>, <code>local</code>, <code>exact-branch</code>, <code>source-extension data</code>, and <code>human-gated</code>. Removing those qualifiers can turn a useful construction, obstruction, or routing result into an unsupported physics claim.</p>
+    </section>
+
+    <section aria-labelledby="summaries-title">
+      <h2 id="summaries-title">Safe And Unsafe Summaries</h2>
+      <div class="summaries">
+        <article class="summary safe">
+          <h3>Safe</h3>
+          <p>AEther-Flow preserves exact GR operationally while testing whether source-side AEther / AEther-flow structure can earn a first-principles derivation through controlled burdens and gates.</p>
+        </article>
+        <article class="summary unsafe">
+          <h3>Unsafe</h3>
+          <p>AEther-Flow has already derived GR, public pages certify benchmark recovery, or a scoped obstruction proves the whole ontology false.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="sources-title" data-explainer-control="source_materials_section">
+      <h2 id="sources-title">Source Materials</h2>
+      <ul>
+        <li>AEther-Flow Project. (2026). <code data-source-path="README.md">README.md</code> [Project front door].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Root authority guidance].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="ontology/aether-and-aether-flow.md">ontology/aether-and-aether-flow.md</code> [Ontology-adjacent explanatory note].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="research_control/design/gr_derivation_burden_map.md">research_control/design/gr_derivation_burden_map.md</code> [GR derivation burden map].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">registries/CLAIM_BOUNDARY_REGISTRY.csv</code> [Claim boundary registry].</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Safe operating rule: inspect the source path before turning any local construction, obstruction, or public explanation into a physics-status claim.
+  </footer>
+</body>
+</html>

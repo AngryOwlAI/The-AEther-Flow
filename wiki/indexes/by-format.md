@@ -4,17 +4,25 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## html
 
+- `HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `html/aether-flow-physics-program-explainer.html`
+- `HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `html/exact-gr-benchmark-boundary-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
 
 ## markdown
 
 - `MD-AETHER-FLOW-INTERPRETATION-LEMEN` `ontology/aether_flow_interpretation-lemen.md`
+- `MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF` `markdown/publication-briefs/aether-flow-physics-program.publication-brief.md`
 - `MD-AGENTS` `AGENTS.md`
 - `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
+- `MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md`
+- `MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `github-facing/aether-flow-physics-program-explainer.md`
+- `MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `github-facing/exact-gr-benchmark-boundary-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
 - `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
+- `MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `markdown/html-explainer-specs/aether-flow-physics-program-explainer.md`
+- `MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
@@ -246,14 +254,22 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## wiki_markdown
 
+- `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
+- `WIKI-HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/html/html-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
 - `WIKI-HTML-SOURCE-AUTHORITY-EXPLAINER` `wiki/html/html-source-authority-explainer.md`
 - `WIKI-MD-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-aether-flow-interpretation-lemen.md`
+- `WIKI-MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF` `wiki/markdown/md-aether-flow-physics-program-publication-brief.md`
 - `WIKI-MD-AGENTS` `wiki/markdown/md-agents.md`
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
+- `WIKI-MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md`
+- `WIKI-MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-physics-program-explainer.md`
+- `WIKI-MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-github-facing-project-overview-explainer.md`
 - `WIKI-MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-github-facing-source-authority-explainer.md`
+- `WIKI-MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-physics-program-explainer.md`
+- `WIKI-MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
 - `WIKI-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-html-spec-source-authority-explainer.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-legacy-ontology-aether-and-aether-flow.md`

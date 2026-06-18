@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="a40223920a2c59ef2051238a0e12f06a5da30555ee2434d23c3bacdeada50011">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <title>Exact-GR Benchmark Boundary</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #15212e;
+      --muted: #536273;
+      --line: #d8e0e8;
+      --paper: #f7f9fb;
+      --panel: #ffffff;
+      --blue: #285d8f;
+      --green: #2f7358;
+      --red: #9d3d3d;
+      --gold: #8a6b25;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    header, main, footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    header {
+      padding-top: 42px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(2rem, 4vw, 4.35rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 840px;
+      margin: 18px 0 0;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+    .notice {
+      margin-top: 24px;
+      border-left: 5px solid var(--gold);
+      background: #fff8e6;
+      padding: 14px 16px;
+      max-width: 920px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      padding: 8px 12px;
+    }
+    section {
+      margin: 28px 0;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      letter-spacing: 0;
+    }
+    .matrix, .ladder, .failures, .sources {
+      display: grid;
+      gap: 14px;
+    }
+    .matrix {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .cell, .step, .failure, .source-list {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .cell h3, .step h3, .failure h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    .cell strong {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--blue);
+    }
+    .cell.derivation strong, .failure.danger h3 { color: var(--red); }
+    .cell.promotion strong { color: var(--gold); }
+    .cell.public strong { color: var(--green); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+      background: #edf2f7;
+      padding: 0.08rem 0.28rem;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+    .ladder {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      align-items: stretch;
+    }
+    .step {
+      position: relative;
+      min-height: 150px;
+    }
+    .step::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      width: 14px;
+      height: 2px;
+      background: var(--line);
+    }
+    .step:last-child::after { display: none; }
+    .tag {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e9f2fb;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .failures {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    ul {
+      margin: 8px 0 0 1.2rem;
+      padding: 0;
+    }
+    li { margin: 5px 0; }
+    .source-list {
+      columns: 2;
+    }
+    .source-list li {
+      break-inside: avoid;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding-bottom: 42px;
+    }
+    @media (max-width: 860px) {
+      .matrix, .ladder, .failures { grid-template-columns: 1fr; }
+      .step::after { display: none; }
+      .source-list { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Phase 1A Public Physics Status</p>
+    <h1>Exact-GR Benchmark Boundary</h1>
+    <p class="lede">AEther-Flow keeps exact general relativity as a conservative observable-scale benchmark while the first-principles derivation from substrate structure remains open.</p>
+    <div class="notice">
+      This HTML file is a generated noncanonical reader surface derived from
+      <code>markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md</code>
+      and the publication brief
+      <code>markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md</code>.
+      It does not change physics authority, benchmark status, Gate Chair status, or generated-output authority.
+    </div>
+    <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#matrix-title">Adoption</a>
+      <a href="#ladder-title">Authority Ladder</a>
+      <a href="#failure-title">Overclaim Risks</a>
+      <a href="#sources-title">Sources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="matrix-title">
+      <h2 id="matrix-title">Adoption Versus Derivation</h2>
+      <div class="matrix">
+        <article class="cell">
+          <strong>Adoption</strong>
+          <h3>Operational boundary</h3>
+          <p>Observable-scale behavior is ordinary GR: one operative metric, universal matter coupling, ordinary causal structure, and no empirical deviation claim.</p>
+        </article>
+        <article class="cell public">
+          <strong>Compatibility</strong>
+          <h3>Ontology held beside the benchmark</h3>
+          <p>The ontology may interpret what the benchmark is about, but compatibility does not force unique recovery from substrate data.</p>
+        </article>
+        <article class="cell derivation">
+          <strong>Derivation</strong>
+          <h3>Open source-side burden</h3>
+          <p>A derivation would need source construction of metric, coupling, equations, and closure without importing target behavior by hand.</p>
+        </article>
+        <article class="cell promotion">
+          <strong>Promotion</strong>
+          <h3>Human-gated endpoint</h3>
+          <p>Benchmark promotion is not available from public prose. It depends on source authority, the burden chain, and protected gates.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="ladder-title">
+      <h2 id="ladder-title">Benchmark Authority Ladder</h2>
+      <div class="ladder">
+        <article class="step">
+          <span class="tag">1</span>
+          <h3>Registered TeX</h3>
+          <p>Scientific and derivational claims live in canonical TeX rows in <code>registries/TEX_SOURCE_REGISTRY.csv</code>.</p>
+        </article>
+        <article class="step">
+          <span class="tag">2</span>
+          <h3>Claim Boundaries</h3>
+          <p><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code> records allowed, forbidden, and gated claims for tasks.</p>
+        </article>
+        <article class="step">
+          <span class="tag">3</span>
+          <h3>Control Notes</h3>
+          <p><code>research_control/design/gr_derivation_burden_map.md</code> names the open burden chain and gate status.</p>
+        </article>
+        <article class="step">
+          <span class="tag">4</span>
+          <h3>Registered Markdown</h3>
+          <p><code>README.md</code>, <code>AGENTS.md</code>, and <code>ontology/aether-and-aether-flow.md</code> summarize and constrain the public framing.</p>
+        </article>
+        <article class="step">
+          <span class="tag">5</span>
+          <h3>Public Derivatives</h3>
+          <p>GitHub-facing Markdown and HTML explainers aid reading. They are not independent scientific authority.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="failure-title">
+      <h2 id="failure-title">Common Overclaim Failure Modes</h2>
+      <div class="failures">
+        <article class="failure danger">
+          <h3>Adoption becomes derivation</h3>
+          <p>Unsafe: exact-GR benchmark adoption proves GR from AEther-flow. Safe: adoption sets the conservative operational boundary.</p>
+        </article>
+        <article class="failure danger">
+          <h3>Reader page becomes authority</h3>
+          <p>Unsafe: this HTML page certifies benchmark status. Safe: it points to registered TeX, claim boundaries, and control notes.</p>
+        </article>
+        <article class="failure danger">
+          <h3>Scoped obstruction becomes global rejection</h3>
+          <p>Unsafe: one blocked route rejects the ontology. Safe: scoped obstruction remains scoped unless a source authority says otherwise.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="sources-title" data-explainer-control="source_materials_section">
+      <h2 id="sources-title">Source Materials</h2>
+      <ul class="source-list">
+        <li>AEther-Flow Project. (2026). <code data-source-path="README.md">README.md</code> [Project front door].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Root authority guidance].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="ontology/aether-and-aether-flow.md">ontology/aether-and-aether-flow.md</code> [Ontology-adjacent explanatory note].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="registries/TEX_SOURCE_REGISTRY.csv">registries/TEX_SOURCE_REGISTRY.csv</code> [TeX source registry].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">registries/CLAIM_BOUNDARY_REGISTRY.csv</code> [Claim boundary registry].</li>
+        <li>AEther-Flow Project. (2026). <code data-source-path="research_control/design/gr_derivation_burden_map.md">research_control/design/gr_derivation_burden_map.md</code> [GR derivation burden map].</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Safe summary: exact-GR is the conservative benchmark boundary; first-principles substrate derivation and benchmark promotion remain source-bound, open, and gated.
+  </footer>
+</body>
+</html>
