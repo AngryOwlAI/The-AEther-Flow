@@ -1,0 +1,229 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+
+\title{Resp\_lc Finite Toy Metric-Response Model Refuter Stress Test}
+\author{The AEther-Flow Research Project}
+\date{2026-06-18}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Refuter packet for
+\texttt{RT-20260614-055}. It stress-tests the finite toy
+metric-response model constructed in \texttt{RT-20260614-053} and
+audited in \texttt{RT-20260614-054}. It is not canonical ontology, not
+a canonical \texttt{Resp\_lc} witness, not \texttt{M\_src}, not
+\texttt{g\_eff}, not matter coupling, not Einstein equations, not
+benchmark evidence, not a Gate Chair verdict, and not
+completed-derivation evidence.
+
+\section{Stress Target}
+
+The audited toy model uses the finite source family
+\[
+F_{\mathrm{toy}}=\{X_+,X_{\mathrm{flip}},X_{\mathrm{scale}},
+X_{\mathrm{token}},X_{\emptyset}\}.
+\]
+The tagged members contain explicit source-side toy data
+\((\varepsilon,\lambda,\tau)\). The partial response relation is
+\[
+R_{\mathrm{toy}}(C_{\mathrm{toy}},E,\varepsilon,\lambda,\tau)
+=(\varepsilon,\lambda,\tau),
+\]
+and \(R_{\mathrm{toy}}\) is undefined on \(X_{\emptyset}\). The audit
+found no hidden target metric, proper-time, matter-coupling, benchmark,
+or validation-authority import when the tags are treated as explicit
+toy source data.
+
+This Refuter packet asks whether that audited construction survives
+finite-variation pressure and tag-removal pressure, or whether it only
+relocates the missing \texttt{Resp\_lc} primitive into explicit toy
+tags.
+
+\section{Tag-Removal Stress}
+
+\begin{definition}[Tag-erasure variation]
+Let
+\[
+  E_0(C_{\mathrm{toy}},E,\varepsilon,\lambda,\tau)
+  =(C_{\mathrm{toy}},E)=X_{\emptyset}
+\]
+erase the orientation, normalization, and token tags from any tagged
+toy source object.
+\end{definition}
+
+\begin{proposition}[Tag-removal collapse]
+For every tagged \(X\in F_{\mathrm{toy}}\) in the domain of
+\(R_{\mathrm{toy}}\),
+\[
+  R_{\mathrm{toy}}(E_0(X))
+\]
+is undefined.
+\end{proposition}
+
+\begin{proof}
+By definition \(E_0(X)=X_{\emptyset}\). The finite toy model defines
+\(R_{\mathrm{toy}}\) only when \(\varepsilon\), \(\lambda\), and
+\(\tau\) are explicit source data. The object \(X_{\emptyset}\) has no
+such tags. Therefore \(X_{\emptyset}\notin\mathrm{dom}(R_{\mathrm{toy}})\)
+and the response relation is undefined after tag erasure.
+\end{proof}
+
+The tag-erasure variation is finite and internal to the toy family. The
+model therefore does not discharge finite-variation robustness. It
+demonstrates exact dependency on explicit tags, not a response law that
+survives their removal.
+
+\section{Finite Tag Perturbation Stress}
+
+The finite variations already present in the model have direct response
+effects:
+\[
+X_+\mapsto X_{\mathrm{flip}}
+\quad\text{changes}\quad
+A_X(U_0,U_1)=\lambda
+\text{ to }
+-\lambda,
+\]
+\[
+X_+\mapsto X_{\mathrm{scale}}
+\quad\text{changes}\quad
+D_X(U_0,U_1)=1
+\text{ to }
+2,
+\]
+and
+\[
+X_+\mapsto X_{\mathrm{token}}
+\quad\text{changes}\quad
+\tau_{ab}
+\text{ to }
+\tau_{ba}.
+\]
+These changes are not defects in the toy construction. They are the
+point of the construction. The Refuter issue is that the response
+components are supplied by the tags themselves. The current untagged
+retained tuple still supplies no source-only rule that selects the sign,
+normalization, or token semantics.
+
+\section{No-New-Source-Data Totalization Obstruction}
+
+\begin{proposition}[Equivariant totalization obstruction]
+There is no no-new-source-data extension \(\overline{R}\) of
+\(R_{\mathrm{toy}}\) that assigns a response triple to \(X_{\emptyset}\)
+while remaining invariant under the sign and token relabeling
+symmetries that leave \(X_{\emptyset}\) fixed.
+\end{proposition}
+
+\begin{proof}
+Because \(X_{\emptyset}\) has no orientation tag, sign reversal is a
+symmetry of the untagged source object. If \(\overline{R}\) were a
+source-only equivariant totalization, the sign component of
+\(\overline{R}(X_{\emptyset})\) would have to be fixed by reversal on
+\(\{+1,-1\}\). No element of \(\{+1,-1\}\) is fixed by that reversal.
+Already this prevents a unique equivariant response triple.
+
+Similarly, because \(X_{\emptyset}\) has no token map, nontrivial
+renamings of \(T_{\mathrm{toy}}=\{a,b\}\) leave the untagged object
+fixed. A token assignment chosen without new source data would have to
+be invariant under those renamings. The two explicit maps
+\(\tau_{ab}\) and \(\tau_{ba}\) are exchanged by the nontrivial token
+renaming, so neither can be selected as a source-invariant response.
+
+Thus filling \(X_{\emptyset}\) requires either new source data, a
+symmetry-breaking rule, or an external convention. The first is a
+controlled source-extension question; the second and third cannot be
+treated as a derivation from the current untagged source object.
+\end{proof}
+
+\section{Loop-Risk Classification}
+
+The result is
+\[
+\texttt{scoped\_obstruction}.
+\]
+The obstruction is local and exact: the explicit-tag-only finite toy
+route cannot serve as a robust \texttt{Resp\_lc} surrogate because tag
+removal collapses \(R_{\mathrm{toy}}\), and no equivariant
+no-new-source-data totalization selects a response triple on
+\(X_{\emptyset}\). This does not refute future source extensions. It
+only states that the current explicit-tag toy route has reached its
+local derivational limit.
+
+\section{Freeze Criteria Status}
+
+The evaluated freeze label is
+\[
+\texttt{NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION}.
+\]
+The explicit-tag-only finite toy route is frozen as a derivation route
+because it fails tag-removal stress and does not supply the missing
+source selector for sign, normalization, or token semantics. The freeze
+is not a global theory rejection, not a proof of future source-extension
+impossibility, and not a Gate Chair verdict.
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made and toy tags remain draft/control data only. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; local exact-branch witness status is not promoted. \\
+Resp\_lc & Still blocked; explicit toy tags are necessary for the model and the untagged tuple has no source-only response triple. \\
+M\_src & Not started; no source manifold construction is supplied. \\
+g\_eff & Not started; toy \(D_X\) and \(A_X\) are finite response analogues only. \\
+Matter coupling & Not started; token labels do not supply universal matter coupling. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Failed for the explicit-tag-only finite toy route because tag removal makes \(R_{\mathrm{toy}}\) undefined. \\
+Benchmark promotion & Blocked. \\
+Gate Chair status & Blocked and human-gated. \\
+Current route freeze or hard-fail status & Explicit-tag-only finite toy route frozen locally under \texttt{NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION}; no global hard fail is claimed. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Next Route}
+
+The logical next step is one bounded Theoretical Continuation Selector
+packet. The selector should choose among a controlled
+\texttt{source\_extension\_candidate}, \texttt{source\_extension\_human\_gate},
+\texttt{human\_gated\_ontology\_change\_required}, or suspension of the
+current explicit-tag finite toy route. It must preserve all canonical
+ontology, benchmark, Gate Chair, candidate reconstruction,
+completed-derivation, future source-extension-impossibility, and global
+rejection blocks.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{finite-toy}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+finite toy metric-response model} [Internal research-control artifact].
+
+\bibitem{audit}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+finite toy metric-response model smuggling audit} [Internal
+research-control artifact].
+
+\bibitem{handoff0096}
+The AEther-Flow Research Project. (2026, June 18). \emph{Handoff 0096}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
