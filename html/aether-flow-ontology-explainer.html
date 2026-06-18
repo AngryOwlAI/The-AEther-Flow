@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="ba23b5657647d1c5ec9866e149083a14ccc954f16b7b1cfe9c0b4fa00a39e78a">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <title>AEther-Flow Ontology</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18201b;
+      --muted: #5e665f;
+      --paper: #fbfbf8;
+      --line: #d7d9d0;
+      --field: #edf1e6;
+      --amber: #b56b26;
+      --green: #2f6f5e;
+      --blue: #346f92;
+      --red: #9b4c42;
+      --panel: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    a {
+      color: inherit;
+    }
+    header {
+      min-height: 72vh;
+      display: grid;
+      align-items: end;
+      padding: clamp(28px, 6vw, 76px);
+      background:
+        linear-gradient(115deg, rgba(47, 111, 94, .9), rgba(24, 32, 27, .86)),
+        radial-gradient(circle at 18% 18%, rgba(251, 251, 248, .25), transparent 28%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.16) 0 1px, transparent 1px 24px);
+      color: #fffdf5;
+    }
+    .hero {
+      max-width: 980px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 5.4rem);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 760px;
+      margin: 24px 0 0;
+      font-size: clamp(1.05rem, 2vw, 1.34rem);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px clamp(18px, 4vw, 42px) 76px;
+    }
+    section {
+      margin: 54px 0;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.55rem, 3vw, 2.3rem);
+      letter-spacing: 0;
+      line-height: 1.12;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 780px;
+    }
+    .notice {
+      border-left: 5px solid var(--amber);
+      background: #fff8ef;
+      padding: 18px 20px;
+      margin: 22px 0 0;
+      max-width: 880px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
+    }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .concept {
+      min-height: 190px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .concept strong {
+      color: var(--green);
+      font-size: 1.06rem;
+    }
+    .concept span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .layers {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+      max-width: 930px;
+    }
+    .layer {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 18px;
+    }
+    .tag {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 8px;
+      border: 1px solid currentColor;
+      color: var(--blue);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .matrix th,
+    .matrix td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 14px;
+    }
+    .matrix th {
+      background: var(--field);
+    }
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .source {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 14px;
+      overflow-wrap: anywhere;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .summary div {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 18px;
+    }
+    .summary .unsafe {
+      border-color: #dbb3ad;
+      background: #fff3f1;
+    }
+    .summary .safe {
+      border-color: #a7c7bb;
+      background: #eff8f4;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .94em;
+      background: rgba(24, 32, 27, .08);
+      padding: .08em .25em;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding-top: 24px;
+      margin-top: 64px;
+      font-size: .92rem;
+    }
+    @media (max-width: 880px) {
+      header {
+        min-height: 66vh;
+      }
+      .concept-grid,
+      .source-list,
+      .summary {
+        grid-template-columns: 1fr;
+      }
+      .layer {
+        grid-template-columns: 1fr;
+      }
+      .matrix {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Phase 1B Public Physics Status</p>
+      <h1>AEther-Flow Ontology</h1>
+      <p class="lede">A concept map for the project's ontology vocabulary, its source authority, and the open mathematical bridge that still separates interpretation from first-principles GR derivation.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>What This Page Can Say</h2>
+      <p>AEther-Flow ontology names a deeper four-dimensional substrate, its intrinsic ordered motion, and the observer-level experience of space, time, and expansion. It gives the project a disciplined vocabulary for interpretation.</p>
+      <div class="notice">
+        This is a generated noncanonical reader surface. It does not promote ontology, certify exact-GR recovery, complete a derivation, change a claim boundary, or supersede registered TeX sources.
+      </div>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a href="#concepts">Concept map</a>
+        <a href="#layers">Model and mathematics</a>
+        <a href="#sources">Source materials</a>
+        <a href="#summaries">Safe summaries</a>
+      </nav>
+    </section>
+
+    <section id="concepts">
+      <h2>Concept Map</h2>
+      <p>The vocabulary is useful only when each term keeps its boundary. The model is not an ordinary fluid moving through observed three-dimensional space.</p>
+      <div class="concept-grid" aria-label="AEther-Flow ontology concept map">
+        <div class="concept">
+          <strong>AEther</strong>
+          <span>Deeper four-dimensional substrate of reality.</span>
+          <small>Not a static three-dimensional medium.</small>
+        </div>
+        <div class="concept">
+          <strong>AEther-flow</strong>
+          <span>Intrinsic ordered motion of the substrate.</span>
+          <small>Not a detectable wind in observed space.</small>
+        </div>
+        <div class="concept">
+          <strong>Observed space</strong>
+          <span>Observer-accessible local slice.</span>
+          <small>Not the whole underlying ontology.</small>
+        </div>
+        <div class="concept">
+          <strong>S-time</strong>
+          <span>Experienced order of change.</span>
+          <small>Not a second place-like corridor.</small>
+        </div>
+        <div class="concept">
+          <strong>Expansion</strong>
+          <span>Three-dimensional appearance of deeper ordered motion.</span>
+          <small>Not a denial of measured expansion.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="layers">
+      <h2>Model, Mathematics, Prediction</h2>
+      <div class="layers">
+        <div class="layer">
+          <span class="tag">Model</span>
+          <div>Ontology says what the project takes reality to be about: substrate, ordered motion, observer-level space, S-time, and expansion.</div>
+          <div>It cannot by itself force the exact-GR benchmark or close a derivation gate.</div>
+        </div>
+        <div class="layer">
+          <span class="tag">Mathematics</span>
+          <div>The missing bridge is source-side construction of observer normal/readout structure from local AEther response data, or an equivalent source-side law.</div>
+          <div>It must still pass audit, refutation, same-metric matter, mode-control, and closure burdens before promotion.</div>
+        </div>
+        <div class="layer">
+          <span class="tag">Prediction</span>
+          <div>The project currently preserves exact GR operationally as the benchmark.</div>
+          <div>Generated documentation cannot infer new empirical claims or certify benchmark recovery.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="live-legacy">
+      <h2>Live And Legacy Sources</h2>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Source lane</th>
+            <th>Use</th>
+            <th>Boundary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ontology/</code></td>
+            <td>Live mutable ontology lane. Registered TeX under <code>ontology/tex/</code> carries scientific source authority.</td>
+            <td>Markdown may explain ontology context, but it does not supersede TeX or promote derivation claims.</td>
+          </tr>
+          <tr>
+            <td><code>legacy_ontology/</code></td>
+            <td>Archival snapshot for comparison and historical reading.</td>
+            <td>Not the live ontology lane and not a substitute for a governed ontology change.</td>
+          </tr>
+          <tr>
+            <td>Generated surfaces</td>
+            <td>GitHub-facing Markdown, tracked HTML, wiki notes, PDFs, semantic extracts, and local caches can help readers navigate.</td>
+            <td>They remain derivatives or retrieval aids, not independent ontology authority.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="edge-cases">
+      <h2>Edge Cases</h2>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Tempting wording</th>
+            <th>Why it fails</th>
+            <th>Safer wording</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AEther-flow is a wind through space.</td>
+            <td>It imports an older three-dimensional medium picture.</td>
+            <td>AEther-flow is ordered motion in the deeper substrate; observed space is an observer-level slice.</td>
+          </tr>
+          <tr>
+            <td>The ontology derives GR.</td>
+            <td>The observer normal/readout source construction and later burdens remain open.</td>
+            <td>The ontology motivates a derivation program while exact GR is preserved operationally.</td>
+          </tr>
+          <tr>
+            <td>HTML or PDFs prove the source status.</td>
+            <td>Generated surfaces are non-authority derivatives.</td>
+            <td>Inspect registered TeX, registries, and claim boundaries before summarizing source status.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <p>Reader claims should be checked against source authority, not inferred from this page.</p>
+      <div class="source-list">
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="ontology/aether-and-aether-flow.md">ontology/aether-and-aether-flow.md</code> [Ontology-adjacent explanatory source].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="ontology/aether_flow_interpretation-lemen.md">ontology/aether_flow_interpretation-lemen.md</code> [Authored interpretive source].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="ontology/README.md">ontology/README.md</code> [Ontology folder authority boundary].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/TEX_SOURCE_REGISTRY.csv">registries/TEX_SOURCE_REGISTRY.csv</code> [Registered TeX source registry].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">registries/CLAIM_BOUNDARY_REGISTRY.csv</code> [Claim boundary registry].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Repository authority hierarchy].</div>
+      </div>
+    </section>
+
+    <section id="summaries">
+      <h2>Safe And Unsafe Summaries</h2>
+      <div class="summary">
+        <div class="safe">
+          <h3>Safe</h3>
+          <p>AEther-Flow ontology names a deeper four-dimensional substrate and ordered motion, while the project still requires source-side mathematics and gates before claiming a first-principles derivation of GR.</p>
+        </div>
+        <div class="unsafe">
+          <h3>Unsafe</h3>
+          <p>AEther-Flow ontology has already forced GR, generated pages certify ontology promotion, or AEther-flow is just an ordinary fluid moving through observed three-dimensional space.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Derived from <code>markdown/html-explainer-specs/aether-flow-ontology-explainer.md</code>. Related GitHub Markdown: <code>github-facing/aether-flow-ontology-explainer.md</code>. Publication brief: <code>markdown/publication-briefs/aether-flow-ontology.publication-brief.md</code>. Authority status: generated noncanonical reader surface.</p>
+    </footer>
+  </main>
+</body>
+</html>

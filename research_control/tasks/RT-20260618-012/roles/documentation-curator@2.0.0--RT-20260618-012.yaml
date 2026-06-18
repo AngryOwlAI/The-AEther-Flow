@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@2.0.0--RT-20260618-012"
+role_execution_kind: "registered_role"
+task_id: "RT-20260618-012"
+agent_job_id: "AJ-RT-20260618-012-001"
+record_path: "research_control/tasks/RT-20260618-012/roles/documentation-curator@2.0.0--RT-20260618-012.yaml"
+base_role_id: "documentation-curator"
+base_role_version: "2.0.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role used without permission expansion for Phase 1B ontology migration."
+added_constraints:
+  - "Migrate only the Phase 1B ontology page."
+  - "Keep Phase 2 derivation roadmap and claim-gate pages out of this packet."
+  - "Preserve ontology vocabulary versus open derivation boundaries."
+  - "Keep generated HTML and GitHub-facing Markdown noncanonical."
+  - "Do not modify canonical science sources or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "github-facing/aether-flow-ontology-explainer.md"
+  - "html/aether-flow-ontology-explainer.html"
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260618-012/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/html/**"
+requires_human_gate: false
+expires_after: "AJ-RT-20260618-012-001"
+justification: "The user explicitly requested Phase 1B after Phase 1A completion recommended seeking explicit approval."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-18T23:03:00Z"
+updated_at: "2026-06-18T23:18:00Z"
+notes: "Execution-role record completed for Phase 1B ontology migration."
