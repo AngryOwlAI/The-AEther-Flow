@@ -1,6 +1,25 @@
-# Role Routing
+# Role Routing And Execution Contracts
 
-Role routing decides which kind of agent may perform one bounded task, what authority that role carries, and where the task must stop.
+Role routing selects the kind of expertise a task needs and binds that expertise to an execution contract. The role contract describes stable authority, while task-local execution records constrain reads, writes, outputs, validators, stop conditions, and claim boundary for one job. This lets the project use different reasoning modes without blurring who may edit which source lane.
+
+## What This Does
+
+Role Routing And Execution Contracts gives readers a source-backed model of role routing and execution contracts. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `research_control/README.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of role routing and execution contracts, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: role-routing-contract-map -->
+```mermaid
+flowchart TD
+  A["Source bundle"] --> B["Role Routing And Execution Contracts"]
+  B["Role Routing And Execution Contracts"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
+```
 
 ## Source Binding
 
@@ -8,115 +27,88 @@ Role routing decides which kind of agent may perform one bounded task, what auth
 - **Related HTML:** `html/role-routing-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Plain-Language Model
+## How It Works
 
-A role is a controlled job identity. It is not a personality label and not a measure of general ability. The project uses roles because physics construction, refutation, documentation, validator repair, memory maintenance, and project-control maintenance have different authority boundaries. A Director decision selects the role for one AgentJob. A task-local execution-role record then says exactly how that role is used for the task.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For role routing and execution contracts, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+
+## Objects And Authority
+
+The objects involved in role routing and execution contracts include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `research_control/README.md`.
+
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
+
+## Example
+
+A Documentation Curator job may update source specs and derivatives, while a Project-Control Maintainer job may update validators or contract text inside an explicit allowlist. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+
+## Non-Example
+
+Invalid: choosing a role name informally and then editing paths outside the execution record. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+
+## Common Confusions
+
+Common confusions around role routing and execution contracts usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
+
+## What This Does Not Authorize
+
+Role Routing And Execution Contracts does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
 
 ## Workflow Step Inspector
 
-1. Classify the task request or handoff by authority class.
-2. Compare candidate registered roles against the required source classes.
-3. Record the Director decision with the selected role and one AgentJob.
-4. Choose direct registered-role use, a bounded task overlay, or a one-job provisional role.
-5. Bind the execution-role record to allowed writes, removed permissions, expansions, and validators.
-6. Keep optional role decomposition inside the same AgentJob and inherited authority.
-7. Execute within the role boundary and record completion evidence.
-8. Expire the overlay or provisional role after the job unless a later human-authorized registration changes the role system.
+1. Inspect the declared source bundle and topic registry row.
+2. Confirm the current task or reader question belongs to this topic.
+3. Follow the source-first workflow before changing project knowledge.
+4. Regenerate GitHub, HTML, wiki, and registry derivatives only from governed sources.
+5. Run the relevant validators and preserve failures as evidence.
 
-## Operational Answers
+## Source Map
 
-- The Director decision selects the role for the bounded job.
-- An execution-role record binds a reusable role to the exact AgentJob authority.
-- A task overlay expires with the job unless a later human-authorized registration changes the role system.
-- Parent-child synthesis does not create extra authority; parent and child perspectives inherit the outer AgentJob authority, claim boundary, and write allowlist.
-- Reviewers should inspect the role registry, Director decision, execution-role row, AgentJob YAML, and completion record.
+The source map for role routing and execution contracts lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `research_control/README.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
 
-## Common misunderstandings
+- `AGENTS.md`
+- `research_control/README.md`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `registries/AGENT_ROLE_REGISTRY.csv`
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
 
-- A capable tool is not automatically the correct role.
-- A Documentation Curator cannot silently become a Validator Engineer or Gate Chair.
-- A one-job provisional role is not a permanent role.
-- A generated explainer is not permission to write project-control or physics sources.
-- Internal child perspectives are not child AgentJobs.
+## Next Reading Path
 
-## Safe Mental Model
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
 
-The route is a chain, not a vibe: request, authority class, Director decision,
-role, execution-role record, AgentJob, validator evidence, and completion. If
-one link is missing, authority is incomplete.
-
-The project uses many roles because the failure modes differ. Physics drafting
-can overclaim. Refutation can erase too much if it is scoped poorly.
-Documentation can mislead readers about authority. Validator repair can change
-the checkpoint gate. Memory maintenance can make retrieval look canonical. Role
-routing keeps those risks separated before work begins.
-
-## Routing Diagrams
-
-<!-- mermaid-diagram-id: role-routing-decision-tree -->
-```mermaid
-flowchart TD
-  Request["Task request or handoff"] --> Authority["Identify authority class"]
-  Authority --> Science["Science-bearing work"]
-  Authority --> ProjectSystem["Project-system work"]
-  Authority --> Docs["Explanatory documentation"]
-  Science --> ScienceRoles["Ontology Formalizer<br/>Candidate Constructor<br/>Refuter<br/>Smuggling Auditor<br/>Gate Chair"]
-  ProjectSystem --> OpsRoles["Project-System Director<br/>Project-Control Maintainer<br/>Validator Engineer<br/>Memory-System Maintainer"]
-  Docs --> Curator["Documentation Curator"]
-  ScienceRoles --> Director["Director decision"]
-  OpsRoles --> Director
-  Curator --> Director
-  Director --> AgentJob["Bounded AgentJob"]
-```
-
-<!-- mermaid-diagram-id: execution-role-contract-map -->
-```mermaid
-flowchart TD
-  Registered["Registered role template"] --> Fit{"Fits without change?"}
-  Fit -->|"yes"| Direct["registered_role"]
-  Fit -->|"needs bounded delta"| Overlay["task_overlay"]
-  Fit -->|"new one-job identity"| Provisional["one_job_provisional_role"]
-  Direct --> Execution["Execution-role record"]
-  Overlay --> Execution
-  Provisional --> Execution
-  Execution --> Allowed["Allowed writes and validators"]
-  Execution --> Removed["Removed permissions"]
-  Execution --> Expanded["Explicit expansions"]
-  Execution --> Expiry["Expires after AgentJob"]
-  Execution --> Decomp["Optional internal<br/>role_decomposition"]
-  Decomp --> Perspectives["Parent and child<br/>perspectives"]
-  Allowed --> Job["AgentJob boundary"]
-  Perspectives --> Job
-```
-
-## For GitHub Readers And AI Agents
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- orient yourself to the role-selection chain;
-- find the records that constrain a task;
-- distinguish role authority from tool capability.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- inspect the selected role row and execution-role row;
-- inspect the AgentJob allowlist;
-- follow the current task's validators and stop conditions.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- infer write permission from skill availability;
-- convert a provisional role into permanent policy;
-- use generated docs as authority for routing.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
-- `README.md`
 - `AGENTS.md`
 - `research_control/README.md`
-- `research_control/AGENTS.md`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
 - `registries/AGENT_ROLE_REGISTRY.csv`
 - `registries/ROLE_EXECUTION_REGISTRY.csv`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`
-- `.agents/schemas/AGENT_JOB_SCHEMA.md`
-- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-- `.agents/schemas/ROLE_SCHEMA.md`

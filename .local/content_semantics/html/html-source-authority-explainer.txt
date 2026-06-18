@@ -1,149 +1,103 @@
-Source Authority
-format_ladder
-Source Authority
-Source authority decides which files can define project truth and which surfaces are generated aids.
-Summary of Source Authority
-Source authority is the repository rule for deciding which files can define project truth and which files are generated aids for reading, retrieval, validation, or publication. Its functionality is to rank registered TeX, format-specific registries, registered Markdown, generated HTML, generated wiki notes, PDFs, local Obsidian surfaces, and `.local` caches so contributors update canonical sources first and regenerate dependent artifacts afterward. This matters because many surfaces are polished, searchable, or easier to read than the source files, but convenience does not create independent authority. The model preserves scientific claim discipline, project-control provenance, and reproducible memory refreshes across a repository that intentionally generates many human-facing derivatives.
-AGENTS.md
-.codex/skills/project-memory-system/SKILL.md
-registries/HTML_EXPLAINER_REGISTRY.csv
-registries/FILE_OBJECT_REGISTRY.csv
-Coverage
-Diagrams
-Workflow
-Sources
-Source-Backed Coverage
-Authority Ladder
-AGENTS.md
-registries/TEX_SOURCE_REGISTRY.csv
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-The ladder starts with registered TeX for science-bearing derivation and benchmark claims. Format-specific registries carry routing, provenance, generated-output, hash, and memory authority. Registered Markdown carries front-door guidance, agent instructions, project-control notes, and source specs. Generated HTML, GitHub-facing Markdown, wiki notes, PDFs, semantic extracts, and local vault entries help readers and agents navigate. The ladder is not about file prestige; it is about which artifact may define a claim and which artifact must point back to something stronger.
-Format Matrix
-README.md
-AGENTS.md
-.codex/skills/project-memory-system/SKILL.md
-Format meaning depends on use case. `.tex` is science source. `.md` can be front-door guidance, control notes, or source specs. `.csv` is registry authority. `.yaml` records tasks, jobs, approvals, roles, completions, and handoffs. `.html`, `.pdf`, and `wiki/` are generated reading surfaces. `.meta.json` records generated registry metadata. `.sqlite`, semantic extracts, Obsidian vault files, and `.local` caches support retrieval. The safe edit pattern is source first, regenerate second, validate third.
-Generated Derivatives
-registries/HTML_EXPLAINER_REGISTRY.csv
-registries/WIKI_ARTIFACT_REGISTRY.csv
-registries/PDF_DERIVATIVE_REGISTRY.csv
-Generated derivatives exist because humans and agents need readable and searchable views. HTML explainers visualize source specs, GitHub-facing Markdown orients repository readers, wiki notes summarize registry objects, PDFs provide human-reading TeX derivatives, and semantic extracts power retrieval. Their usefulness does not change authority. If a derivative is stale or misleading, the repair is to update the source spec, source file, or registry row, then regenerate and validate.
-Local Retrieval
-.codex/skills/obsidian-wiki/SKILL.md
-.codex/skills/project-memory-system/SKILL.md
-Local retrieval surfaces accelerate navigation on one machine. The Obsidian vault, semantic text extracts, SQLite memory index, browser previews, and scratch outputs can help an operator find context quickly. They are subordinate to tracked sources and registries, and many live under `.local`, which is intentionally not canonical. Retrieval should answer where to inspect next, not what the project has proven. The retrieval layer is best understood as an index into authority, not an alternative authority ladder with its own claim status.
-Validation Evidence
-.codex/skills/project-memory-system/SKILL.md
-scripts/project_control/validate_documentation_impact.py
-Validation evidence ties sources to derivatives. Hashes detect stale files, source-basis metadata ties HTML to specs, Mermaid parity checks diagrams, bootstrap refreshes generated registries and wiki notes, documentation-impact receipts account for source and derivative changes, and research-control validators check task boundaries. Evidence does not make every artifact authoritative; it proves the artifact follows its declared source relationship. A valid receipt should make the path from source edit to generated output visible enough that another operator can reproduce the check.
-Source Authority Ladder
-+
--
-Fit
-Registered
-TeX
-scientific
-authority
-Format
-registries
-routing
-and
-provenance
-authority
-Registered
-Markdown
-front
-door
-and
-specs
-Tracked
-HTML
-explainers
-human-only
-generated
-derivatives
-PDF
-derivatives
-human
-reading
-Generated
-wiki
-and
-indexes
-metadata
-retrieval
-Local
-Obsidian
-and
-.local
-caches
-scratch
-or
-retrieval
-Diagram source
-flowchart TD Tex["Registered TeX<br/>scientific authority"] --> Registries["Format registries<br/>routing and provenance authority"] Registries --> Markdown["Registered Markdown<br/>front door and specs"] Markdown --> Html["Tracked HTML explainers<br/>human-only generated derivatives"] Tex --> Pdf["PDF derivatives<br/>human reading"] Registries --> Wiki["Generated wiki and indexes<br/>metadata retrieval"] Wiki --> Local["Local Obsidian and .local caches<br/>scratch or retrieval"] Html --> Local
-Derivative Generation Flow
-+
--
-Fit
-Authoritative
-source
-edit
-Registry
-row
-and
-source
-hash
-Memory
-bootstrap
-Generated
-wiki
-notes
-Generated
-HTML
-derivative
-Generated
-PDF
-derivative
-Source-basis
-metadata
-Non-authority
-banner
-PDF
-registry
-row
-Validate
-source
-parity
-Diagram source
-flowchart TD Source["Authoritative source edit"] --> Registry["Registry row and source hash"] Registry --> Bootstrap["Memory bootstrap"] Bootstrap --> Wiki["Generated wiki notes"] Bootstrap --> Html["Generated HTML derivative"] Bootstrap --> Pdf["Generated PDF derivative"] Html --> Metadata["Source-basis metadata"] Wiki --> Banner["Non-authority banner"] Pdf --> Link["PDF registry row"] Metadata --> Validate["Validate source parity"] Banner --> Validate Link --> Validate
-Workflow Step Inspector
-Edit source
-Edit the authoritative TeX, registry, or registered Markdown source first.
-Register
-Update the corresponding registry row and source hash when required.
-Regenerate
-Regenerate wiki, HTML, PDF, semantic, or local retrieval surfaces through approved tooling.
-Bind metadata
-Preserve source-basis metadata and visible source evidence in derivatives.
-Validate
-Validate source parity, hashes, generated-output bindings, and authority status.
-Read safely
-Use generated surfaces for reading and retrieval, not independent claims.
-Local boundary
-Treat `.local/` caches as scratch or machine-local retrieval aids.
-Return
-Return to the canonical source or registry before changing project knowledge.
-All Source Materials
-Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
-README.md
+Source Authority And Generated Derivatives
+Visual Atlas v2
+Source Authority And Generated Derivatives
+Source authority and generated derivatives form the trust map of AEther-Flow. Registered TeX carries physics and derivational claims; registries carry provenance, routing, generated-output, and memory fields; registered Markdown carries guidance, role and skill contracts, source specs, and control notes. HTML, GitHub-facing Markdown, wiki notes, PDFs, semantic extracts, Obsidian notes, and local caches are useful only because they point back to authority.
 AGENTS.md
 .codex/skills/project-memory-system/SKILL.md
 .codex/skills/html-visual-explainer/SKILL.md
-registries/TEX_SOURCE_REGISTRY.csv
+registries/MARKDOWN_SOURCE_REGISTRY.csv
+Summary of Source Authority And Generated Derivatives
+Source authority and generated derivatives form the trust map of AEther-Flow. Registered TeX carries physics and derivational claims; registries carry provenance, routing, generated-output, and memory fields; registered Markdown carries guidance, role and skill contracts, source specs, and control notes. HTML, GitHub-facing Markdown, wiki notes, PDFs, semantic extracts, Obsidian notes, and local caches are useful only because they point back to authority.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+registries/MARKDOWN_SOURCE_REGISTRY.csv
+What
+Map
+How
+Objects
+Examples
+Boundary
+Sources
+Next
+System Map
+The system map shows the source-backed route through source authority and generated derivatives. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `AGENTS.md` and `.codex/skills/project-memory-system/SKILL.md`.
++
+-
+Fit
+Source Authority And Generated Derivatives
+Sources
+Reader model
+Derivative
+Validation
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+What This Does
+Source Authority And Generated Derivatives gives readers a source-backed model of source authority and generated derivatives. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `.codex/skills/project-memory-system/SKILL.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Why AEther Needs It
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of source authority and generated derivatives, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+How It Works
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For source authority and generated derivatives, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Objects And Authority
+The objects involved in source authority and generated derivatives include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `.codex/skills/project-memory-system/SKILL.md`.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Example
+Before changing project knowledge, an agent reads the source file and registry row, edits the canonical source, regenerates derivatives, and validates hashes. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Non-Example
+Invalid: citing a polished HTML explainer or `.local` search result as independent authority. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Common Confusions
+Common confusions around source authority and generated derivatives usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+What This Does Not Authorize
+Source Authority And Generated Derivatives does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Source Map
+The source map for source authority and generated derivatives lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `.codex/skills/project-memory-system/SKILL.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Next Reading Path
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
+Workflow Step Inspector
+Inspect source bundle.
+Check topic registry row.
+Apply source-first change discipline.
+Regenerate derivatives.
+Run validators.
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+All Source Materials
+AGENTS.md
+.codex/skills/project-memory-system/SKILL.md
+.codex/skills/html-visual-explainer/SKILL.md
 registries/MARKDOWN_SOURCE_REGISTRY.csv
 registries/HTML_EXPLAINER_REGISTRY.csv
 registries/WIKI_ARTIFACT_REGISTRY.csv
-registries/PDF_DERIVATIVE_REGISTRY.csv
 registries/FILE_OBJECT_REGISTRY.csv
-research_control/design/html_explainer_flexible_presentation_contract.md
+source_materials_section
+workflow_step_inspector

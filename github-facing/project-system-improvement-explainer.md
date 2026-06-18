@@ -1,6 +1,25 @@
-# Project-System Improvement
+# Project-System Improvement Loop
 
-Project-system improvement is the bounded repair loop for documentation drift, validator gaps, role or schema drift, memory tooling, signal routing, and operational reliability.
+The project-system improvement loop handles changes to roles, schemas, validators, memory tooling, documentation, generated-output governance, and operational reliability. It starts from classification, memory preflight, resolver state, and registered signals, then creates or reuses one bounded AgentJob. It is separate from physics continuation and must not promote claims or edit science sources as part of system repair.
+
+## What This Does
+
+Project-System Improvement Loop gives readers a source-backed model of the project-system improvement loop. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `.codex/skills/improve-project-system/SKILL.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the project-system improvement loop, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: project-system-improvement-map -->
+```mermaid
+flowchart TD
+  A["Source bundle"] --> B["Project-System Improvement Loop"]
+  B["Project-System Improvement Loop"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
+```
 
 ## Source Binding
 
@@ -8,81 +27,90 @@ Project-system improvement is the bounded repair loop for documentation drift, v
 - **Related HTML:** `html/project-system-improvement-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Why This Loop Exists
+## How It Works
 
-The repository contains both research content and the machinery that governs research work. That machinery can drift: validators can miss a case, documentation can mislead readers, generated surfaces can fall out of sync, and routing rules can become ambiguous. Project-system improvement fixes the machinery without promoting physics claims or treating a script as the source of scientific truth.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the project-system improvement loop, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+
+## Objects And Authority
+
+The objects involved in the project-system improvement loop include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `.codex/skills/improve-project-system/SKILL.md`.
+
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
+
+## Example
+
+A validator gap is routed to a Project-Control Maintainer job with an allowlist, tests, documentation-impact receipt, bootstrap, and control validation. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+
+## Non-Example
+
+Invalid: using a documentation repair job to alter canonical ontology or to declare a physics milestone complete. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+
+## Common Confusions
+
+Common confusions around the project-system improvement loop usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
+
+## What This Does Not Authorize
+
+Project-System Improvement Loop does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
 
 ## Workflow Step Inspector
 
-1. Inspect root guidance, research-control guidance, relevant registries, and current Git changes.
-2. Classify changed paths and reason codes.
-3. Resolve advisory routing state and open project-improvement signals.
-4. Route at most one bounded AgentJob to the fitting project-system role.
-5. Execute only within the job allowlist and source authority boundary.
-6. Record documentation impact for state-changing project-system work.
-7. Regenerate derived memory, registry, HTML, wiki, or GitHub-facing surfaces through the approved path.
-8. Validate the transaction before treating it as checkpoint-ready.
+1. Inspect the declared source bundle and topic registry row.
+2. Confirm the current task or reader question belongs to this topic.
+3. Follow the source-first workflow before changing project knowledge.
+4. Regenerate GitHub, HTML, wiki, and registry derivatives only from governed sources.
+5. Run the relevant validators and preserve failures as evidence.
 
-## Routing Judgment
+## Source Map
 
-The resolver is not the boss. It reports advisory routing state. Validators,
-authority boundaries, stop conditions, and explicit human-gated policy decide
-whether a transaction is acceptable.
+The source map for the project-system improvement loop lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `.codex/skills/improve-project-system/SKILL.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
 
-Documentation Curator owns fixes when the problem is explanatory coverage,
-reader confusion, source-backed documentation, teaching packets,
-GitHub-facing Markdown, or generated HTML synchronization. Project-Control
-Maintainer, Validator Engineer, or another project-system role is required when
-the change alters validator law, role contracts, schemas, routing behavior, or
-checkpoint gates.
+- `AGENTS.md`
+- `.codex/skills/improve-project-system/SKILL.md`
+- `scripts/project_control/classify_project_changes.py`
+- `scripts/project_control/resolve_project_improvement.py`
+- `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`
+- `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv`
 
-The one-AgentJob rule keeps cause, authority, writes, validators, and receipts
-inspectable. Broad repairs can be split into successive jobs when the boundary
-changes.
+## Next Reading Path
 
-```mermaid
-flowchart TD
-  Signal["Change or improvement signal"] --> Classify["Classify impact"]
-  Classify --> Resolve["Resolve advisory route"]
-  Resolve --> Job["One bounded AgentJob"]
-  Job --> Sources["Update source or contract"]
-  Sources --> Derivatives["Regenerate derivatives"]
-  Derivatives --> Validate["Validate and record impact"]
-  Validate --> Checkpoint["Checkpoint-ready state"]
-```
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
 
-## Practical Rule
-
-If a script is checking safety, keep the hard check. If a script is dictating the exact prose format of a human explanation, treat it as guidance unless a registered source explicitly makes that format a gate.
-
-## For GitHub Readers And AI Agents
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- understand the project-system repair path;
-- find classifier, resolver, signal, and documentation-impact sources;
-- distinguish advisory routing from hard validation gates.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- classify changes;
-- inspect the relevant project-improvement registries;
-- create or reuse one bounded AgentJob;
-- write documentation-impact evidence when required.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- use project-system repair to promote physics claims;
-- bypass validator failures;
-- hand-edit generated wiki or HTML as authority.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
 - `AGENTS.md`
-- `research_control/README.md`
 - `.codex/skills/improve-project-system/SKILL.md`
-- `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv`
-- `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`
 - `scripts/project_control/classify_project_changes.py`
 - `scripts/project_control/resolve_project_improvement.py`
-- `scripts/project_control/collect_project_improvement_signals.py`
-- `scripts/project_control/validate_documentation_impact.py`
+- `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`
+- `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv`

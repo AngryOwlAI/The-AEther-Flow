@@ -1,6 +1,25 @@
-# Roles And Skills
+# Roles And Skills Catalog
 
-Roles define who may do project work. Repo-local skills define governed procedures for doing that work. Tool availability alone is not project authority.
+The roles and skills catalog lists the project-governed execution roles and local skill front doors that structure work. It separates stable role authority, historical versions, task-local overlays, support subroles, and general tool availability. This matters because having a skill or tool available does not authorize source edits; only the selected role, AgentJob allowlist, and project-control contract do.
+
+## What This Does
+
+Roles And Skills Catalog gives readers a source-backed model of the roles and skills catalog. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `registries/AGENT_ROLE_REGISTRY.csv` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the roles and skills catalog, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `registries/AGENT_ROLE_REGISTRY.csv` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: roles-skills-catalog-map -->
+```mermaid
+flowchart TD
+  A["Source bundle"] --> B["Roles And Skills Catalog"]
+  B["Roles And Skills Catalog"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
+```
 
 ## Source Binding
 
@@ -8,110 +27,90 @@ Roles define who may do project work. Repo-local skills define governed procedur
 - **Related HTML:** `html/roles-and-skills-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Catalog Model
+## How It Works
 
-The catalog has three layers. Active roles are the current operating contracts. Status-defined and superseded roles remain visible for audit history or human-gated definition, but they are not automatically available for new work. Repo-local skills are front doors for governed procedures such as research continuation, project-system improvement, memory regeneration, visual explainers, teaching explainers, ontology promotion, and grill sessions.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the roles and skills catalog, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `registries/AGENT_ROLE_REGISTRY.csv` and the related registry row before editing anything.
 
-```mermaid
-flowchart TD
-  Work["Requested work"] --> Role["Registered or task-local role"]
-  Role --> Job["One AgentJob"]
-  Job --> Skill["Repo-local skill procedure"]
-  Skill --> Outputs["Allowed outputs"]
-  Outputs --> Validators["Validators and receipts"]
-  GlobalTools["Global tools and plugins"] --> Context["Operator context only"]
-  Context -. "not project authority" .-> Work
-```
+## Objects And Authority
 
-## Authority Model
+The objects involved in the roles and skills catalog include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `registries/AGENT_ROLE_REGISTRY.csv` or `.agents/roles/research_ops/documentation-curator.v1.0.0.md`.
 
-A role carries authority for bounded work. A skill describes a governed
-procedure or workflow. A role may use a skill, but the skill does not replace
-the AgentJob allowlist, claim boundary, or execution-role record.
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
 
-Superseded roles remain in the repository because old task records must stay
-auditable. They explain historical execution; they do not automatically
-authorize new work under old semantics.
+## Example
 
-Global Codex tools and plugins are operator context unless the project mirrors
-them into repo-local skill guidance or registered sources. Convenience is not
-the same as project authority.
+Documentation Curator writes source-backed explainers; Documentation Student asks questions; Documentation Teacher answers from sources; Project-Control Maintainer changes validators only inside an authorized job. The valid pattern is source-first and bounded: the operator can trace the action to `registries/AGENT_ROLE_REGISTRY.csv`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
 
-## Active Role Families
+## Non-Example
 
-- **Routing and control:** Director of Research and Project-System Director select bounded work.
-- **Project-system maintenance:** Project-Control Maintainer, Validator Engineer, Memory-System Maintainer, and Process Integrity Auditor repair machinery under explicit boundaries.
-- **Documentation:** Documentation Curator writes source-backed explainers, teaching packets, GitHub-facing Markdown, and HTML derivatives; Documentation Student and Documentation Teacher support the teaching loop without writing tracked docs directly.
-- **Physics work:** Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector, and Gate Chair each carry science-lane constraints.
+Invalid: using an available tool as proof that the current AgentJob may edit unrelated files. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `registries/AGENT_ROLE_REGISTRY.csv`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
 
-## Skill Families
+## Common Confusions
 
-- **Continuation and integration:** `continue-research`, `improve-project-system`, `user-modified-project`.
-- **Memory and derivatives:** `project-memory-system`, `markdown-wiki`, `tex-wiki`, `pdf-derivative-build`, `obsidian-wiki`.
-- **Explanatory surfaces:** `html-visual-explainer`, `visual-explainer`, `aether-teaching-explainer`, `mermaid-documentation`.
-- **Promotion and review:** `ontology-promotion`, `grill-me`, `grill-with-docs`.
+Common confusions around the roles and skills catalog usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
 
-## Boundary Rule
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
 
-Before invoking a skill, identify the role and AgentJob that authorize the work. Before relying on a role, inspect the registry row and role contract. Before treating a helper tool as project authority, check whether it is registered in repo-local sources.
+## What This Does Not Authorize
 
-## For GitHub Readers And AI Agents
+Roles And Skills Catalog does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
+
+## Workflow Step Inspector
+
+1. Inspect the declared source bundle and topic registry row.
+2. Confirm the current task or reader question belongs to this topic.
+3. Follow the source-first workflow before changing project knowledge.
+4. Regenerate GitHub, HTML, wiki, and registry derivatives only from governed sources.
+5. Run the relevant validators and preserve failures as evidence.
+
+## Source Map
+
+The source map for the roles and skills catalog lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `registries/AGENT_ROLE_REGISTRY.csv` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+
+- `registries/AGENT_ROLE_REGISTRY.csv`
+- `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
+- `.codex/skills/improve-project-system/SKILL.md`
+- `.codex/skills/html-visual-explainer/SKILL.md`
+
+## Next Reading Path
+
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- identify likely role and skill surfaces to inspect;
-- distinguish role authority from skill procedure;
-- avoid confusing external tools with project contracts.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- inspect `registries/AGENT_ROLE_REGISTRY.csv`;
-- inspect any task-local execution-role record;
-- follow the selected skill only inside its authorized workflow.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- use a superseded role for new work;
-- infer permission from a plugin name;
-- bypass AgentJob boundaries with a convenient skill.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
-- `README.md`
-- `AGENTS.md`
-- `research_control/README.md`
 - `registries/AGENT_ROLE_REGISTRY.csv`
-- `registries/ROLE_EXECUTION_REGISTRY.csv`
-- `registries/MARKDOWN_SOURCE_REGISTRY.csv`
-- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
-- `.agents/roles/research_ops/director-of-research.v0.1.0.md`
-- `.agents/roles/research_ops/project-system-director.v0.1.0.md`
-- `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
+- `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
 - `.agents/roles/research_ops/documentation-student.v0.1.0.md`
 - `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
-- `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
-- `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
-- `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
-- `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
-- `.agents/roles/physics/candidate-constructor.v0.1.0.md`
-- `.agents/roles/physics/refuter.v0.1.0.md`
-- `.agents/roles/physics/smuggling-auditor.v0.1.0.md`
-- `.agents/roles/physics/gate-chair.v0.1.0.md`
-- `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
-- `.codex/skills/aether-teaching-explainer/SKILL.md`
-- `.codex/skills/continue-research/SKILL.md`
-- `.codex/skills/user-modified-project/SKILL.md`
 - `.codex/skills/improve-project-system/SKILL.md`
-- `.codex/skills/project-memory-system/SKILL.md`
-- `.codex/skills/markdown-wiki/SKILL.md`
-- `.codex/skills/tex-wiki/SKILL.md`
-- `.codex/skills/pdf-derivative-build/SKILL.md`
-- `.codex/skills/obsidian-wiki/SKILL.md`
 - `.codex/skills/html-visual-explainer/SKILL.md`
-- `.codex/skills/visual-explainer/SKILL.md`
-- `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
-- `.codex/skills/ontology-promotion/SKILL.md`
-- `.codex/skills/grill-me/SKILL.md`
-- `.codex/skills/grill-with-docs/SKILL.md`

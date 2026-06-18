@@ -1,153 +1,112 @@
 ---
-title: "Claim Gates"
-purpose: "Explain how the project prevents hypotheses, candidates, workflow progress, blocked claims, and negative results from being confused with accepted physics."
-audience: "Technical but human-readable: reviewers and agents who need to understand claim status before reading or producing research artifacts."
+topic_id: "TOPIC-CLAIM-GATES-NEGATIVE-RESULTS-FREEZE"
+explainer_subject: "Claim Gates, Negative Results, And Freeze Criteria"
+reader_question: "How does the project preserve failures and prevent premature claim promotion?"
+title: "Claim Gates, Negative Results, And Freeze Criteria"
+purpose: "Explain claim gates, negative results, and freeze criteria as a source-backed Visual Atlas topic without changing project authority."
+audience: "Technical but human-readable: maintainers, research agents, reviewers, and GitHub readers."
 output_path: "html/claim-gates-explainer.html"
+github_markdown_output_path: "github-facing/claim-gates-explainer.md"
+wiki_output_path: "wiki/html/html-claim-gates-explainer.md"
 renderer_skill: "visual-explainer@0.7.1-project-aether-flow"
 source_materials:
-  - "README.md"
   - "AGENTS.md"
   - "research_control/README.md"
+  - "research_control/design/gr_derivation_burden_map.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
-  - "registries/TEX_SOURCE_REGISTRY.csv"
-  - "registries/RESEARCH_TASK_REGISTRY.csv"
-  - ".agents/roles/physics/gate-chair.v0.1.0.md"
-claim_boundary: "Human-only claim-gates visualization. It explains existing claim-boundary and negative-result preservation behavior without promoting, rejecting, or changing any scientific claim."
+claim_boundary: "Human-only Visual Atlas explainer for Claim Gates, Negative Results, And Freeze Criteria. It teaches the project mechanism without creating physics claims, control authority, role authority, routing behavior, validator behavior, write permissions, or generated-output authority."
 human_visual_only: true
 explainer_kind: "control_system"
 interaction_model: "progressive_disclosure"
 analysis_depth: "deep"
 presentation_profile: "claim_boundary_map"
-layout_intent: "Use a claim-boundary map with state diagrams, status panels, negative-result loops, and source-backed guardrail callouts."
+layout_intent: "Use a concept-first atlas layout with a system map, authority matrix, examples, non-examples, source chips, and next-reading path for Claim Gates, Negative Results, And Freeze Criteria."
 required_controls:
   - "section_toc"
   - "source_materials_section"
   - "workflow_step_inspector"
 required_content_blocks:
   - "subject_summary"
-  - "claim_status_ladder"
-  - "gate_review_path"
-  - "negative_result_preservation"
-  - "forbidden_promotion_boundary"
+  - "what_this_does"
+  - "why_aether_needs_it"
+  - "system_map"
+  - "how_it_works"
+  - "objects_and_authority"
+  - "example"
+  - "non_example"
+  - "common_confusions"
+  - "what_this_does_not_authorize"
+  - "source_map"
+  - "next_reading_path"
+primary_visuals:
+  - id: "claim-gate-preservation-map"
+    type: "mermaid"
+    required_in_github_markdown: true
+    required_in_html: true
+reader_blocks:
+  - "what_this_does"
+  - "why_aether_needs_it"
+  - "system_map"
+  - "how_it_works"
+  - "objects_and_authority"
+  - "example"
+  - "non_example"
+  - "common_confusions"
+  - "what_this_does_not_authorize"
+  - "source_map"
+  - "next_reading_path"
+github_markdown_parity: true
+standalone_html: true
+no_external_runtime: true
 mermaid_diagrams:
   required: true
   ids:
-    - "claim-gate-state-machine"
-    - "negative-result-preservation-loop"
+    - "claim-gate-preservation-map"
 ---
 
-# Claim Gates Spec
+# Claim Gates, Negative Results, And Freeze Criteria Spec
 
 ## Rendering Intent
 
-Create a tracked HTML drilldown for claim gates. The page should explain how
-the project separates:
-
-- ontology framing,
-- exact-GR benchmark adoption,
-- candidate derivation work,
-- smuggling audits,
-- refutations and obstructions,
-- negative-result preservation,
-- Gate Chair or human-gated promotion.
-
-The page must make it clear that workflow completion is not scientific
-acceptance.
-
-## Required Visual Structure
-
-- Source-backed coverage rows: render `Source-Backed Coverage` content blocks
-  as full-width horizontal rows rather than narrow multi-column cards. Tables
-  must use readable auto layout, with any wide overflow scoped inside the
-  content block instead of the page body.
-- Responsive containment: navigation chips, grids, tables, code paths, source
-  drilldowns, and diagram shells must not create body-level horizontal overflow
-  on mobile or desktop viewports.
-- Adaptive diagram fit: diagram-backed boxes must read the rendered
-  SVG viewBox, set the box height from diagram aspect ratio and available
-  width within bounded min/max limits, and make Fit recompute that best-fit
-  geometry so horizontal diagrams do not collapse to intrinsic SVG width.
-- Three-layer readability: stack the high-level, operational, and evidence
-  layer sections vertically; cards inside each layer must auto-fit at a
-  readable minimum width rather than nesting fixed three-column grids.
-- High-level model: why claim gates exist.
-- Operational model: how a candidate can remain proposed, repaired, refuted,
-  blocked, preserved as a negative result, or held for human-gated review.
-- Low-level evidence model: claim-boundary rows, task artifacts, TeX registry
-  rows, completion records, and role authority.
-- Workflow step inspector for claim states.
-- All Source Materials section with source-path evidence; claim-boundary metadata remains in the source spec.
-
-## Workflow Step Inspector Basis
-
-Render the workflow inspector as a claim-status path:
-
-1. Frame the candidate or ontology statement with a scoped claim boundary.
-2. Keep exact-GR benchmark adoption separate from substrate derivation
-   proposals.
-3. Route candidate work through bounded construction, audit, or refutation.
-4. Repair only when the defect is local and the claim boundary remains honest.
-5. Preserve refutations, obstructions, and underdetermination as negative
-   results.
-6. Send promotion requests through Gate Chair or human-gated review when
-   stronger scientific status is sought.
-7. Record accepted, blocked, or negative-result status in the relevant control
-   evidence.
-8. Prevent generated docs, validator passes, or completed jobs from promoting
-   claims by presentation alone.
+Teach claim gates, negative results, and freeze criteria as a source-backed project mechanism. The explanation must start from the subject, not from page metadata, renderer behavior, or derivative status. Generated outputs remain human-readable derivatives.
 
 ## Required Diagrams
 
-<!-- mermaid-diagram-id: claim-gate-state-machine -->
-```mermaid
-stateDiagram-v2
-  [*] --> Framing
-  Framing --> Candidate: bounded proposal
-  Candidate --> Audit: smuggling or consistency check
-  Audit --> Repair: fixable defect
-  Audit --> Refutation: defect or underdetermination
-  Repair --> Candidate: revised packet
-  Refutation --> NegativeResult: preserved obstruction
-  Candidate --> GateReview: promotion requested
-  GateReview --> Accepted: authorized gate passes
-  GateReview --> Blocked: gate not passed
-  Blocked --> NegativeResult
-  Accepted --> [*]
-  NegativeResult --> [*]
-```
-
-<!-- mermaid-diagram-id: negative-result-preservation-loop -->
+<!-- mermaid-diagram-id: claim-gate-preservation-map -->
 ```mermaid
 flowchart TD
-  Attempt["Candidate derivation attempt"] --> Test["Refutation or smuggling test"]
-  Test --> Finding["Obstruction identified"]
-  Finding --> Boundary["Claim-boundary row"]
-  Boundary --> Artifact["Registered task artifact"]
-  Artifact --> Handoff["Handoff preserves next state"]
-  Handoff --> Future["Future work avoids replaying failure"]
-  Future --> Attempt
+  A["Source bundle"] --> B["Claim Gates, Negative Results, And Freeze Criteria"]
+  B["Claim Gates, Negative Results, And Freeze Criteria"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
 ```
 
 ## Source-Backed Summary
 
-Summary heading: `Summary of Claim Gates`
+Summary heading: `Summary of Claim Gates, Negative Results, And Freeze Criteria`
 
 Summary text:
 
-Claim gates are the project’s control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into stronger accepted status. Their function is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because polished explainers, completed tasks, and preserved repair packets can make candidate ideas look more settled than they are. A visual explanation, validator pass, or completed AgentJob cannot authorize science claims by itself. Claim gates also protect negative results by preserving why a route is blocked, refuted, underdetermined, or still conjectural.
+Claim gates, negative-result preservation, and freeze criteria keep speculative work from becoming unsupported certainty. A failed route, obstruction, scoped no-go result, or repeated burden is not erased; it becomes evidence that shapes later routing. Claim gates require authority before promotion, while freeze criteria prevent repeated work from consuming the project without new mathematical payload.
 
 Summary source basis:
 
-- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
+- `AGENTS.md`
 - `research_control/README.md`
-- `registries/TEX_SOURCE_REGISTRY.csv`
-- `.agents/roles/physics/gate-chair.v0.1.0.md`
-
+- `research_control/design/gr_derivation_burden_map.md`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
 
 ## Required Content Blocks
 
-- subject_summary: A source-backed summary of Claim Gates that directly explains the project subject, its functionality, why it matters, how it fits the physics or AI research-agent system, and its grounding source paths: `registries/CLAIM_BOUNDARY_REGISTRY.csv`, `research_control/README.md`, `registries/TEX_SOURCE_REGISTRY.csv`, `.agents/roles/physics/gate-chair.v0.1.0.md`.
-- claim_status_ladder: A source-backed reader block on status ladder that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `registries/CLAIM_BOUNDARY_REGISTRY.csv`, `README.md`.
-- gate_review_path: A source-backed reader block on review path that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `research_control/README.md`, `.agents/roles/physics/gate-chair.v0.1.0.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
-- negative_result_preservation: A source-backed reader block on negative results that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `research_control/README.md`, `registries/RESEARCH_TASK_REGISTRY.csv`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
-- forbidden_promotion_boundary: A source-backed reader block on forbidden promotion that explains the project functionality, why it matters, how it works inside AEther-Flow, what boundary constrains it, and where to inspect next; source paths: `AGENTS.md`, `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- subject_summary: A source-backed summary of Claim Gates, Negative Results, And Freeze Criteria with plain-language grounding in `AGENTS.md` and `research_control/README.md`.
+- what_this_does: Plain-language reader block for What This Does grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- why_aether_needs_it: Plain-language reader block for Why AEther Needs It grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- system_map: Plain-language reader block for System Map grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- how_it_works: Plain-language reader block for How It Works grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- objects_and_authority: Plain-language reader block for Objects And Authority grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- example: Plain-language reader block for Example grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- non_example: Plain-language reader block for Non-Example grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- common_confusions: Plain-language reader block for Common Confusions grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- what_this_does_not_authorize: Plain-language reader block for What This Does Not Authorize grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- source_map: Plain-language reader block for Source Map grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.
+- next_reading_path: Plain-language reader block for Next Reading Path grounded in `AGENTS.md` and `research_control/README.md`; it must teach the project mechanism, preserve authority boundaries, and expose source evidence.

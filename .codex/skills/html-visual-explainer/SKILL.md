@@ -21,6 +21,14 @@ Rules:
 - The source spec must also declare the flexible presentation contract:
   `presentation_profile`, `layout_intent`, and
   `required_content_blocks`.
+- Visual Atlas v2 source specs should also declare `topic_id`,
+  `explainer_subject`, `reader_question`, `github_markdown_output_path`,
+  `wiki_output_path`, `primary_visuals`, `reader_blocks`,
+  `github_markdown_parity: true`, `standalone_html: true`, and
+  `no_external_runtime: true`.
+- Required atlas topics are tracked in
+  `registries/EXPLAINER_TOPIC_REGISTRY.csv`. The topic registry validates
+  concept coverage; it does not create source authority for generated pages.
 - `explainer_kind` must be one of `project_overview`, `conceptual_model`,
   `workflow_process`, or `control_system`.
 - `presentation_profile` is a layout archetype, not a hidden content-rule
@@ -40,6 +48,11 @@ Rules:
   `required_content_blocks` value and define `subject_summary` first under
   `## Required Content Blocks`. The block is a source-backed functional
   summary of the page subject.
+- Required atlas topics should include `what_this_does`,
+  `why_aether_needs_it`, `system_map`, `how_it_works`,
+  `objects_and_authority`, `example`, `non_example`, `common_confusions`,
+  `what_this_does_not_authorize`, `source_map`, and `next_reading_path` in
+  both source specs and generated outputs.
 - Generated HTML must render `subject_summary` as the first
   `data-content-block`, immediately after the hero/title area and before
   `data-explainer-control="section_toc"`, under a reader-facing heading in the
@@ -126,6 +139,11 @@ Rules:
   page-specific need and browser-verifies it. The helper script is
   `scripts/enhance_html_explainers.py`; preserve source-spec authority and do
   not treat that helper as an independent HTML source.
+- Tracked public HTML must not use external runtime dependencies: no NPX,
+  `@agent-native/core`, hosted Plan MCP, localhost bridge artifacts, CDN
+  scripts, remote CSS, remote fonts, hosted comments, external analytics, or
+  browser-side Mermaid execution. Use build-time inline SVG or local semantic
+  diagram markup for visuals.
 - The summary prose should be manually authored per source spec. Do not derive
   `subject_summary` automatically from source files. Target 150-240 words,
   excluding visible source chips, as a review guideline rather than a validator
@@ -190,3 +208,13 @@ Implementation metadata is validated by:
 
 `--check` is a compatibility alias, but new instructions should use
 `--validate-only`.
+
+Visual Atlas v2 coverage and portability are additionally validated by:
+
+```zsh
+.venv/bin/python scripts/validate_explainer_topic_coverage.py --root .
+.venv/bin/python scripts/validate_explainer_parity.py --root .
+.venv/bin/python scripts/validate_standalone_html.py --root .
+.venv/bin/python scripts/validate_reader_first_docs.py --root .
+.venv/bin/python scripts/validate_explainer_diagrams.py --root .
+```

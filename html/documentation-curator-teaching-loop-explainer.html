@@ -4,128 +4,461 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="95a6c294997fe043910a83f0e7c9dd8c2f5f1c823735b998fe8d3bd347e5e4e0">
+  <meta name="aether-flow-source-basis-hash" content="1865996a6bf83c569bcaee0523d6537c23cb7fe0d5d3eaa9cb52365c98dac667">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>Documentation Curator Teaching Loop</title>
   <style>
-    :root { --bg:#f7f4ed; --panel:#fffdfa; --ink:#19221d; --muted:#5f6b61; --line:rgba(34,49,40,.18); --authority:#1e3a5f; --workflow:#8b5a20; --validation:#0f766e; --warning:#a34f12; font-family:"IBM Plex Sans","Avenir Next","Segoe UI",sans-serif; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:linear-gradient(180deg,#fffcf7,var(--bg)); color:var(--ink); overflow-x:clip; }
-    .page-shell { max-width:1160px; margin:0 auto; padding:28px 20px 56px; }
-    .hero,.panel,.content-block,.source-list li,.toc a,.step { border:1px solid var(--line); border-radius:8px; background:rgba(255,253,250,.94); }
-    .hero { padding:30px; background:linear-gradient(135deg,#fffdfa,#dfeee6); }
-    .eyebrow { margin:0 0 8px; color:var(--validation); text-transform:uppercase; font-weight:800; font-size:.78rem; }
-    h1 { margin:0; font-size:clamp(2rem,5vw,4.1rem); line-height:1; letter-spacing:0; }
-    h2 { margin:0; font-size:clamp(1.35rem,2.6vw,2rem); letter-spacing:0; }
-    h3 { margin:0 0 8px; letter-spacing:0; }
-    p,li { line-height:1.68; }
-    code { font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace; overflow-wrap:anywhere; }
-    .hero-copy,.muted { color:var(--muted); max-width:78ch; }
-    .section { margin-top:22px; }
-    .panel { padding:24px; }
-    .toc { display:flex; flex-wrap:wrap; gap:10px; }
-    .toc a { padding:9px 12px; text-decoration:none; color:inherit; }
-    .step-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; }
-    .step { padding:12px; border-left:5px solid var(--validation); }
-    .content-grid { display:grid; gap:14px; }
-    .content-block { padding:18px 20px; border-left:7px solid var(--validation); overflow-x:auto; }
-    .content-block[data-content-block*="teacher"], .content-block[data-content-block*="sync"] { border-left-color:var(--workflow); }
-    .content-block[data-content-block*="boundary"] { border-left-color:var(--warning); }
-    .block-head { border-bottom:1px dashed var(--line); padding-bottom:10px; margin-bottom:12px; }
-    .source-chip { display:inline-block; margin:3px; padding:6px 9px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--muted); }
-    .source-list { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); list-style:none; margin:16px 0 0; padding:0; }
-    .source-list li { padding:12px; }
+    :root { --bg:#f8f5ee; --surface:#fffdf8; --ink:#17211b; --muted:#5f6b60; --line:rgba(30,58,95,.22); --blue:#1e3a5f; --green:#2f6f54; --amber:#8b5a20; --soft:#e8efe8; font-family: IBM Plex Sans, Avenir Next, Segoe UI, sans-serif; }
+    * { box-sizing:border-box; } body { margin:0; background:linear-gradient(180deg,#fffdf8,var(--bg)); color:var(--ink); overflow-x:clip; }
+    .page-shell { max-width:1180px; margin:0 auto; padding:28px 20px 64px; } .hero,.panel,.atlas-card { border:1px solid var(--line); border-radius:8px; background:var(--surface); box-shadow:0 14px 34px rgba(23,33,27,.07); }
+    .hero { padding:32px; background:linear-gradient(135deg,#fffdf8,#e6eef2); } h1 { margin:0; font-size:clamp(2rem,4vw,4rem); letter-spacing:0; } h2 { margin:0 0 12px; letter-spacing:0; } p,li,td,th,.source-chip,.control-marker { overflow-wrap:break-word; line-height:1.65; } code,pre { overflow-wrap:anywhere; }
+    .hero-copy { color:var(--muted); max-width:75ch; font-size:1.08rem; } .nav { position:sticky; top:0; z-index:3; display:flex; gap:8px; overflow-x:auto; padding:12px 0; background:rgba(248,245,238,.88); } .nav a { text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:8px 12px; background:#fff; }
+    .section { margin-top:22px; padding:22px; } .source-chip,.control-marker { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 10px; margin:3px; background:#fff; font-size:.88rem; } .source-row { margin-top:12px; }
+    .diagram-shell { margin-top:16px; overflow:hidden; } .mermaid-wrap { position:relative; border:1px solid var(--line); border-radius:8px; min-height:320px; height:380px; background:#fbfaf6; overflow:hidden; } .zoom-controls { position:absolute; top:10px; right:10px; z-index:2; display:flex; gap:6px; } .zoom-controls button,.zoom-label { border:1px solid var(--line); background:#fff; padding:5px 8px; } .mermaid-viewport { position:relative; width:100%; height:100%; overflow:hidden; } .mermaid-canvas { position:absolute; top:42px; left:50%; transform:translateX(-50%); } .mermaid-canvas svg { max-width:none; width:auto; height:auto; display:block; }
+    .step-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; padding-left:18px; } .step-grid li { border-left:4px solid var(--amber); background:#fffaf0; padding:10px; } .source-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; padding:0; list-style:none; } .source-list li { border:1px solid var(--line); border-radius:8px; padding:10px; background:#fff; }
+    @media (max-width:760px) { .hero,.section { padding:18px; } .nav { position:static; flex-wrap:wrap; } }
   </style>
+
+<style id="aether-docs-enhancement">
+  :root {
+    --doc-bg: #f8f5ee;
+    --doc-ink: #18201b;
+    --doc-muted: #5f6b60;
+    --doc-line: rgba(33, 49, 40, .18);
+    --doc-panel: rgba(255, 255, 255, .92);
+    --doc-wash: #f1eadc;
+    --doc-authority: #1e3a5f;
+    --doc-physics: #2f6f54;
+    --doc-workflow: #8b5a20;
+    --doc-warning: #a34f12;
+    --doc-validation: #0f766e;
+    --doc-shadow: 0 18px 50px rgba(27, 33, 28, .10);
+    --doc-radius: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background:
+      linear-gradient(180deg, #fffcf7 0%, var(--doc-bg) 42%, #efe8dc 100%);
+    color: var(--doc-ink);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .28;
+    background-image:
+      linear-gradient(rgba(30,58,95,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30,58,95,.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(180deg, black, transparent 75%);
+  }
+
+  .page-shell {
+    max-width: 1220px;
+    padding-top: 26px;
+    position: relative;
+  }
+
+  .hero,
+  .panel,
+  .atlas-link,
+  .content-block,
+  .block-subgroup,
+  .source-list li,
+  details {
+    border-radius: var(--doc-radius);
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--doc-shadow);
+    border-color: rgba(30,58,95,.22);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.96), rgba(223,232,242,.78)),
+      linear-gradient(90deg, rgba(47,111,84,.12), rgba(139,90,32,.10));
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  h1 {
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  h2, h3 { text-wrap: balance; }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .hero > div {
+    max-width: 78ch;
+  }
+
+  p, li, dd {
+    font-size: 1.01rem;
+    line-height: 1.72;
+  }
+
+  .hero-copy {
+    font-size: clamp(1.02rem, 2vw, 1.22rem);
+    max-width: 70ch;
+  }
+
+  .source-chip,
+  .control-marker {
+    border-radius: 999px;
+  }
+
+  .nav {
+    top: 8px;
+    border-radius: 999px;
+    padding: 10px;
+    background: rgba(248,245,238,.72);
+    border: 1px solid rgba(33,49,40,.10);
+    box-shadow: 0 12px 36px rgba(27,33,28,.08);
+  }
+
+  .nav a {
+    border-radius: 999px;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .nav a:hover,
+  .nav a.is-active {
+    transform: translateY(-1px);
+    background: var(--doc-ink);
+    color: #fffaf1;
+    border-color: var(--doc-ink);
+  }
+
+  .panel {
+    box-shadow: 0 14px 44px rgba(27,33,28,.075);
+    border-color: rgba(33,49,40,.16);
+  }
+
+  .section-heading {
+    border-bottom: 1px solid rgba(33,49,40,.10);
+    padding-bottom: 12px;
+  }
+
+  .subject-summary .content-block {
+    border-left: 7px solid var(--doc-authority);
+    background:
+      linear-gradient(90deg, rgba(30,58,95,.07), transparent 30%),
+      var(--doc-panel);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-block {
+    position: relative;
+    padding: clamp(18px, 2vw, 26px);
+    border-left: 7px solid rgba(30,58,95,.28);
+    background: var(--doc-panel);
+    box-shadow: 0 8px 28px rgba(27,33,28,.055);
+  }
+
+  .content-block[data-content-block*="ontology"],
+  .content-block[data-content-block*="physics"],
+  .content-block[data-content-block*="claim"],
+  .content-block[data-content-block*="benchmark"],
+  .content-block[data-content-block*="derivation"] {
+    border-left-color: var(--doc-physics);
+  }
+
+  .content-block[data-content-block*="workflow"],
+  .content-block[data-content-block*="agent"],
+  .content-block[data-content-block*="role"],
+  .content-block[data-content-block*="director"] {
+    border-left-color: var(--doc-workflow);
+  }
+
+  .content-block[data-content-block*="validation"],
+  .content-block[data-content-block*="memory"],
+  .content-block[data-content-block*="authority"],
+  .content-block[data-content-block*="source"] {
+    border-left-color: var(--doc-validation);
+  }
+
+  .content-block::before {
+    content: attr(data-content-block);
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(30,58,95,.08);
+    color: var(--doc-authority);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .block-head {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(33,49,40,.14);
+  }
+
+  .atlas-link {
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+
+  .atlas-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(27,33,28,.10);
+    border-color: rgba(30,58,95,.38);
+  }
+
+  .reader-toolbar {
+    position: sticky;
+    top: 68px;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 10px 0 18px;
+    padding: 10px;
+    border: 1px solid rgba(33,49,40,.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(27,33,28,.08);
+  }
+
+  .reader-toolbar input[type="search"] {
+    flex: 1 1 230px;
+    min-width: 160px;
+    border: 1px solid rgba(33,49,40,.16);
+    border-radius: 999px;
+    padding: 10px 13px;
+    color: var(--doc-ink);
+    background: #fff;
+    font: inherit;
+  }
+
+  .reading-progress {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: var(--reading-progress, 0%);
+    height: 4px;
+    background: linear-gradient(90deg, var(--doc-authority), var(--doc-physics), var(--doc-warning));
+    box-shadow: 0 0 18px rgba(47,111,84,.35);
+  }
+
+  .source-chip,
+  .source-list li {
+    cursor: copy;
+  }
+
+  .source-chip.was-copied,
+  .source-list li.was-copied {
+    outline: 2px solid rgba(15,118,110,.35);
+    background: rgba(15,118,110,.10);
+  }
+
+  mark.search-hit {
+    background: rgba(248,232,199,.9);
+    color: inherit;
+    padding: 0 .15em;
+    border-radius: .25em;
+  }
+
+  [hidden] { display: none !important; }
+
+  .diagram-shell {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,238,.96));
+  }
+
+  .diagram-shell .section-heading::after {
+    content: "Diagram preserved from source spec";
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--doc-muted);
+    font-size: .84rem;
+  }
+
+  .zoom-controls button {
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(27,33,28,.10);
+  }
+
+  .source-list li {
+    transition: transform .15s ease, background .15s ease;
+  }
+
+  .source-list li:hover {
+    transform: translateY(-1px);
+    background: rgba(223,232,242,.58);
+  }
+
+  @media (max-width: 860px) {
+    .reader-toolbar {
+      position: static;
+      border-radius: var(--doc-radius);
+    }
+
+    .nav {
+      border-radius: var(--doc-radius);
+    }
+
+    .hero, .panel { border-radius: var(--doc-radius); }
+  }
+</style>
+
 </head>
 <body>
   <main class="page-shell">
-    <header class="hero">
-      <p class="eyebrow">workflow_lifecycle</p>
-      <h1>Documentation Curator Teaching Loop</h1>
-      <p class="hero-copy">A source-bound method for improving explanations with reader questions, Teacher answers, Curator synthesis, and non-authoritative derivatives.</p>
-    </header>
-
-    <section id="subject-summary" class="section panel" data-content-block="subject_summary">
-      <h2>Summary of Documentation Curator Teaching Loop</h2>
-      <article class="content-block" data-summary-field="summary_text">
-        <p>The Documentation Curator teaching loop is the project's method for making source-backed explainers easier to understand without weakening authority boundaries. The Curator chooses a subject and source bundle, then uses a Documentation Student to ask plain reader-centered questions and a Documentation Teacher to answer those questions inside the declared source bundle. The Curator reviews the exchange, writes or updates a curated Teaching Q&A packet, and distills that packet into the Markdown source spec, GitHub-facing Markdown, and tracked human-only HTML derivative. The loop is subject-first: it must explain what the project component does, why the project needs it, how it works, what it can and cannot claim, and where a reader should go next. It does not let generated pages, teaching packets, Student questions, or Teacher answers become independent authority.</p>
-      </article>
-      <div data-summary-field="source_basis">
-        <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span>
-        <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md"><code>.agents/roles/research_ops/documentation-student.v0.1.0.md</code></span>
-        <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md"><code>.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></span>
-        <span class="source-chip" data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"><code>.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></span>
+    <header class="hero"><p class="control-marker">Visual Atlas v2</p><h1>Documentation Curator Teaching Loop</h1><p class="hero-copy">The Documentation Curator teaching loop improves explanations without changing authority. The Curator selects a subject and source bundle. Documentation Student asks reader-diagnostic questions. Documentation Teacher answers only from the selected sources. The Curator turns that support into a curated teaching packet, a Markdown source spec, GitHub-facing Markdown, tracked standalone HTML, and generated wiki navigation surfaces. Student and Teacher do not write tracked docs directly.</p><div><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md">.agents/roles/research_ops/documentation-teacher.v0.1.0.md</span></div></header>
+    <section class="panel section" id="summary" data-content-block="subject_summary"><h2>Summary of Documentation Curator Teaching Loop</h2><div data-summary-field="summary_text"><p>The Documentation Curator teaching loop improves explanations without changing authority. The Curator selects a subject and source bundle. Documentation Student asks reader-diagnostic questions. Documentation Teacher answers only from the selected sources. The Curator turns that support into a curated teaching packet, a Markdown source spec, GitHub-facing Markdown, tracked standalone HTML, and generated wiki navigation surfaces. Student and Teacher do not write tracked docs directly.</p></div><div data-summary-field="source_basis"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md">.agents/roles/research_ops/documentation-teacher.v0.1.0.md</span></div></section>
+    <nav class="nav" data-explainer-control="section_toc"><a href="#what">What</a><a href="#map">Map</a><a href="#how">How</a><a href="#objects">Objects</a><a href="#examples">Examples</a><a href="#boundary">Boundary</a><a href="#sources">Sources</a><a href="#next">Next</a></nav>
+    <section class="panel section diagram-shell" id="map" data-content-block="system_map" data-mermaid-diagram-id="teaching-loop-map"><h2>System Map</h2><p>The system map shows the source-backed route through the Documentation Curator teaching loop. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `AGENTS.md` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`.</p><div class="mermaid-wrap">
+        <div class="zoom-controls"><button type="button" data-zoom="in">+</button><button type="button" data-zoom="out">-</button><span class="zoom-label">Fit</span></div>
+        <div class="mermaid-viewport"><div class="mermaid mermaid-canvas" data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.1" data-render-source-sha256="71f4805c84bb658e62999804731b1c49d1e84ea1f8c8d12070e8a535f0c103c1"><svg id="svg-teaching-loop-map" width="600" height="260" viewBox="0 0 600 260" role="img" aria-label="Documentation Curator Teaching Loop diagram" data-mermaid-rendered="true" data-mermaid-diagram-id="teaching-loop-map"><defs><marker id="svg-teaching-loop-map-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e3a5f"/></marker></defs><rect x="18" y="14" width="564" height="226" rx="8" fill="#f8f5ee" stroke="#1e3a5f" stroke-width="2"/><line x1="300" y1="55" x2="300" y2="73" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-teaching-loop-map-arrow)" /><line x1="300" y1="97" x2="300" y2="115" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-teaching-loop-map-arrow)" /><line x1="300" y1="139" x2="300" y2="157" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-teaching-loop-map-arrow)" /><line x1="300" y1="181" x2="300" y2="199" stroke="#1e3a5f" stroke-width="2" marker-end="url(#svg-teaching-loop-map-arrow)" /><text x="300" y="40" text-anchor="middle">Documentation Curator Teaching Loop</text><text x="300" y="82" text-anchor="middle">Sources</text><text x="300" y="124" text-anchor="middle">Reader model</text><text x="300" y="166" text-anchor="middle">Derivative</text><text x="300" y="208" text-anchor="middle">Validation</text></svg></div></div>
       </div>
-    </section>
-
-    <nav class="section toc" data-explainer-control="section_toc" aria-label="Section navigation">
-      <a href="#workflow">Workflow</a>
-      <a href="#curator-authority">Curator</a>
-      <a href="#student-teacher">Student And Teacher</a>
-      <a href="#packet-schema">Packet</a>
-      <a href="#derivative-sync">Derivative Sync</a>
-      <a href="#advisory-boundary">Format Boundary</a>
-      <a href="#sources">Sources</a>
-    </nav>
-
-    <section id="workflow" class="section panel" data-explainer-control="workflow_step_inspector">
-      <h2>Workflow Step Inspector</h2>
-      <div class="step-grid">
-        <div class="step"><strong>Select</strong><br>Curator chooses one subject and source bundle.</div>
-        <div class="step"><strong>Question</strong><br>Student asks reader-centered questions.</div>
-        <div class="step"><strong>Answer</strong><br>Teacher answers inside the source boundary.</div>
-        <div class="step"><strong>Synthesize</strong><br>Curator writes the teaching packet.</div>
-        <div class="step"><strong>Distill</strong><br>Source spec and derivatives are updated.</div>
-        <div class="step"><strong>Validate</strong><br>Teaching, lint, bootstrap, and control checks run.</div>
-      </div>
-    </section>
-
-    <section class="section panel">
-      <h2>Source-Backed Coverage</h2>
-      <div class="content-grid">
-        <article id="curator-authority" class="content-block" data-content-block="curator_authority">
-          <div class="block-head"><h3>Curator Authority</h3><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span><span class="source-chip" data-source-path="research_control/design/github_facing_explainer_contract.md"><code>research_control/design/github_facing_explainer_contract.md</code></span></div>
-          <p>The Curator owns the tracked documentation outputs in the loop. It may update explanatory Markdown, Markdown source specs, curated teaching packets, GitHub-facing Markdown, source-backed HTML derivatives, documentation registries, and documentation-impact records when the AgentJob allows those paths. That ownership is narrower than it may first appear. The Curator cannot change physics claims, role contracts, schemas, validators, routing behavior, or generated-output authority. Its subject-first rule keeps explanations focused on the project component's function, value, sources, boundary, and next reading path instead of turning documentation into metadata about itself.</p>
-        </article>
-
-        <article id="student-teacher" class="content-block" data-content-block="student_teacher_loop">
-          <div class="block-head"><h3>Student Questions And Teacher Answers</h3><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md"><code>.agents/roles/research_ops/documentation-student.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md"><code>.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></span><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span></div>
-          <p>The Student and Teacher are support subroles. The Student asks reader-centered questions about purpose, operation, examples, non-examples, boundaries, confusing terms, and next steps. The Teacher answers those questions plainly, adds a technical anchor, names source paths, marks source gaps, and adds boundary notes when authority or claim status is involved. Neither support role writes tracked documentation. This division is important: reader confusion is allowed to shape the final explanation, but the source bundle and Curator review decide what can be carried into registered project artifacts.</p>
-        </article>
-
-        <article id="packet-schema" class="content-block" data-content-block="packet_schema">
-          <div class="block-head"><h3>Teaching Q&amp;A Packet</h3><span class="source-chip" data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"><code>.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></span><span class="source-chip" data-source-path="scripts/validate_teaching_qa.py"><code>scripts/validate_teaching_qa.py</code></span><span class="source-chip" data-source-path="markdown/teaching-packets/project-overview.teaching-qa.md"><code>markdown/teaching-packets/project-overview.teaching-qa.md</code></span><span class="source-chip" data-source-path="markdown/teaching-packets/role-routing.teaching-qa.md"><code>markdown/teaching-packets/role-routing.teaching-qa.md</code></span></div>
-          <p>The curated packet records the teaching exchange in a structured way. It declares packet identity, topic, source spec, derived outputs, audience model, roles, rounds, source materials, claim boundary, and authority status. Its body contains Curator feature selection, two rounds of Student questions, two rounds of Teacher answers, and synthesis notes. Those notes must name concepts for HTML and GitHub-facing Markdown, glossary candidates, common confusions, examples, next readings, source gaps, and claims intentionally not made. The validator exists so packets remain source-bound support rather than free-form authority.</p>
-        </article>
-
-        <article id="derivative-sync" class="content-block" data-content-block="derivative_sync">
-          <div class="block-head"><h3>Derivative Synchronization</h3><span class="source-chip" data-source-path=".codex/skills/aether-teaching-explainer/SKILL.md"><code>.codex/skills/aether-teaching-explainer/SKILL.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span><span class="source-chip" data-source-path="research_control/design/github_facing_explainer_contract.md"><code>research_control/design/github_facing_explainer_contract.md</code></span></div>
-          <p>After synthesis, the Curator distills teaching content into the Markdown source spec, GitHub-facing Markdown, and tracked HTML. The source spec remains the backing surface for the HTML derivative, while the GitHub-facing page gives humans and external AI a readable orientation layer. Both are noncanonical for physics and control decisions. This synchronization pattern is useful because it gives the project multiple reading surfaces without multiplying authority. A reader can start from a friendly page, but any claim about source status, role behavior, validator requirements, or routing must trace back to the declared source materials.</p>
-        </article>
-
-        <article id="advisory-boundary" class="content-block" data-content-block="advisory_format_boundary">
-          <div class="block-head"><h3>Advisory Format Boundary</h3><span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></span><span class="source-chip" data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></span><span class="source-chip" data-source-path="scripts/validate_teaching_qa.py"><code>scripts/validate_teaching_qa.py</code></span></div>
-          <p>Renderer and lint scripts provide useful quality gates: they check required fields, source evidence, summary placement, teaching packet shape, depth, and derivative consistency. They do not decide which project functionality deserves coverage or what the final explanation should emphasize. That decision belongs to the Curator inside the AgentJob boundary and source bundle. The practical rule is balanced: pass the validators, but do not let a template replace subject-first judgment. A well-formed page that omits a major project function is still incomplete documentation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="sources" class="section panel" data-explainer-control="source_materials_section">
-      <h2>All Source Materials</h2>
-      <p class="muted">Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.</p>
-      <ul class="source-list">
-        <li data-source-path=".agents/roles/research_ops/documentation-curator.v0.9.0.md"><code>.agents/roles/research_ops/documentation-curator.v0.9.0.md</code></li>
-        <li data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md"><code>.agents/roles/research_ops/documentation-student.v0.1.0.md</code></li>
-        <li data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md"><code>.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></li>
-        <li data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md"><code>.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></li>
-        <li data-source-path=".codex/skills/aether-teaching-explainer/SKILL.md"><code>.codex/skills/aether-teaching-explainer/SKILL.md</code></li>
-        <li data-source-path=".codex/skills/html-visual-explainer/SKILL.md"><code>.codex/skills/html-visual-explainer/SKILL.md</code></li>
-        <li data-source-path="research_control/design/github_facing_explainer_contract.md"><code>research_control/design/github_facing_explainer_contract.md</code></li>
-        <li data-source-path="markdown/teaching-packets/project-overview.teaching-qa.md"><code>markdown/teaching-packets/project-overview.teaching-qa.md</code></li>
-        <li data-source-path="markdown/teaching-packets/role-routing.teaching-qa.md"><code>markdown/teaching-packets/role-routing.teaching-qa.md</code></li>
-        <li data-source-path="scripts/validate_teaching_qa.py"><code>scripts/validate_teaching_qa.py</code></li>
-      </ul>
-    </section>
+      <script type="text/plain" class="diagram-source" data-mermaid-diagram-id="teaching-loop-map">
+flowchart TD
+  Subject[&quot;Selected subject&quot;] --&gt; Sources[&quot;Declared source bundle&quot;]
+  Sources --&gt; Student[&quot;Documentation Student&lt;br/&gt;questions only&quot;]
+  Student --&gt; Teacher[&quot;Documentation Teacher&lt;br/&gt;source-bound answers&quot;]
+  Teacher --&gt; Packet[&quot;Curated Teaching Q&amp;A packet&quot;]
+  Packet --&gt; Curator[&quot;Documentation Curator&lt;br/&gt;writes the explanation&quot;]
+  Curator --&gt; Spec[&quot;Markdown source spec&quot;]
+  Spec --&gt; GitHub[&quot;GitHub-facing Markdown&quot;]
+  Spec --&gt; HTML[&quot;Standalone HTML explainer&quot;]
+  Spec --&gt; Wiki[&quot;Generated wiki/index surfaces&quot;]
+  GitHub --&gt; Validation[&quot;Validation&quot;]
+  HTML --&gt; Validation
+  Wiki --&gt; Validation
+      </script>
+    <div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section>
+    <section class="panel section" id="what_this_does" data-content-block="what_this_does"><h2>What This Does</h2><p>Documentation Curator Teaching Loop gives readers a source-backed model of the Documentation Curator teaching loop. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="why_aether_needs_it" data-content-block="why_aether_needs_it"><h2>Why AEther Needs It</h2><p>AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the Documentation Curator teaching loop, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="how_it_works" data-content-block="how_it_works"><h2>How It Works</h2><p>The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the Documentation Curator teaching loop, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="objects_and_authority" data-content-block="objects_and_authority"><h2>Objects And Authority</h2><p>The objects involved in the Documentation Curator teaching loop include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `.agents/roles/research_ops/documentation-curator.v1.0.0.md`.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="example" data-content-block="example"><h2>Example</h2><p>A hard workflow topic gets Student questions about reader confusion, Teacher answers from source paths, and Curator synthesis into source-backed public docs. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="non_example" data-content-block="non_example"><h2>Non-Example</h2><p>Invalid: publishing raw Student/Teacher transcript as the public page or treating a teaching packet as role authority. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="common_confusions" data-content-block="common_confusions"><h2>Common Confusions</h2><p>Common confusions around the Documentation Curator teaching loop usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="what_this_does_not_authorize" data-content-block="what_this_does_not_authorize"><h2>What This Does Not Authorize</h2><p>Documentation Curator Teaching Loop does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="source_map" data-content-block="source_map"><h2>Source Map</h2><p>The source map for the Documentation Curator teaching loop lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section><section class="panel section" id="next_reading_path" data-content-block="next_reading_path"><h2>Next Reading Path</h2><p>The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.</p><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</span></div></section>
+    <section class="panel section" id="workflow" data-explainer-control="workflow_step_inspector"><h2>Workflow Step Inspector</h2><ol class="step-grid"><li>Inspect source bundle.</li><li>Check topic registry row.</li><li>Apply source-first change discipline.</li><li>Regenerate derivatives.</li><li>Run validators.</li></ol><div class="source-row"><span class="source-chip" data-source-path="AGENTS.md">AGENTS.md</span> <span class="source-chip" data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</span></div></section>
+    <section class="panel section" id="sources" data-explainer-control="source_materials_section"><h2>All Source Materials</h2><ul class="source-list"><li><code data-source-path="AGENTS.md">AGENTS.md</code></li><li><code data-source-path=".agents/roles/research_ops/documentation-curator.v1.0.0.md">.agents/roles/research_ops/documentation-curator.v1.0.0.md</code></li><li><code data-source-path=".agents/roles/research_ops/documentation-student.v0.1.0.md">.agents/roles/research_ops/documentation-student.v0.1.0.md</code></li><li><code data-source-path=".agents/roles/research_ops/documentation-teacher.v0.1.0.md">.agents/roles/research_ops/documentation-teacher.v0.1.0.md</code></li><li><code data-source-path=".agents/schemas/TEACHING_QA_PACKET_SCHEMA.md">.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md</code></li><li><code data-source-path="research_control/design/documentation_curator_visual_atlas_contract.md">research_control/design/documentation_curator_visual_atlas_contract.md</code></li><li><code data-source-path="registries/EXPLAINER_TOPIC_REGISTRY.csv">registries/EXPLAINER_TOPIC_REGISTRY.csv</code></li><li><code data-source-path="markdown/teaching-packets/documentation-curator-teaching-loop.teaching-qa.md">markdown/teaching-packets/documentation-curator-teaching-loop.teaching-qa.md</code></li></ul><span class="control-marker" data-explainer-control="source_materials_section">source_materials_section</span><span class="control-marker" data-explainer-control="workflow_step_inspector">workflow_step_inspector</span></section>
+    <script>
+      function readSvgNaturalSize(svg) { return { width: Number(svg.getAttribute('width')) || 600, height: Number(svg.getAttribute('height')) || 260 }; }
+      function setCanvasNaturalSize(canvas, size) { canvas.style.width = size.width + 'px'; canvas.style.height = size.height + 'px'; }
+      function setAdaptiveHeight(shell, size) { shell.style.height = Math.max(320, Math.min(620, size.height + 120)) + 'px'; }
+      function computeFit() { document.querySelectorAll('.mermaid-canvas svg').forEach((svg) => { const size = readSvgNaturalSize(svg); const shell = svg.closest('.mermaid-wrap'); const canvas = svg.closest('.mermaid-canvas'); if (canvas) setCanvasNaturalSize(canvas, size); if (shell) setAdaptiveHeight(shell, size); }); }
+      computeFit();
+    </script>
   </main>
+
+<script id="aether-docs-enhancement-js">
+  (() => {
+    if (window.__aetherDocsEnhancementLoaded) return;
+    window.__aetherDocsEnhancementLoaded = true;
+
+    const progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progress);
+
+    const nav = document.querySelector('[data-explainer-control="section_toc"]');
+    const toolbar = document.createElement('div');
+    toolbar.className = 'reader-toolbar';
+    toolbar.setAttribute('aria-label', 'Explainer search');
+    toolbar.innerHTML = `
+      <input type="search" placeholder="Search content" aria-label="Search content">
+    `;
+    if (nav) nav.insertAdjacentElement('afterend', toolbar);
+
+    const searchable = Array.from(document.querySelectorAll(
+      '[data-content-block], .source-list li, .atlas-link'
+    ));
+
+    const clearMarks = (node) => {
+      node.querySelectorAll('mark.search-hit').forEach((mark) => {
+        mark.replaceWith(document.createTextNode(mark.textContent || ''));
+      });
+      node.normalize();
+    };
+
+    const markText = (node, query) => {
+      if (!query || node.matches('script, style, svg, pre, code')) return;
+      for (const child of Array.from(node.childNodes)) {
+        if (child.nodeType === Node.TEXT_NODE) {
+          const text = child.nodeValue || '';
+          const index = text.toLowerCase().indexOf(query);
+          if (index >= 0) {
+            const range = document.createRange();
+            range.setStart(child, index);
+            range.setEnd(child, index + query.length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-hit';
+            range.surroundContents(mark);
+          }
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+          markText(child, query);
+        }
+      }
+    };
+
+    const searchInput = toolbar.querySelector('input[type="search"]');
+    const applySearch = () => {
+      const raw = searchInput.value.trim();
+      const query = raw.toLowerCase();
+      searchable.forEach((node) => {
+        clearMarks(node);
+        const matches = !query || node.textContent.toLowerCase().includes(query);
+        node.hidden = !matches;
+        if (matches && query) markText(node, query);
+      });
+    };
+    searchInput?.addEventListener('input', applySearch);
+    searchInput?.addEventListener('search', applySearch);
+
+    const sourceNodes = document.querySelectorAll('[data-source-path], .source-list li');
+    sourceNodes.forEach((node) => {
+      node.addEventListener('click', async () => {
+        const text = node.getAttribute('data-source-path') || node.textContent.trim();
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          node.classList.add('was-copied');
+          setTimeout(() => node.classList.remove('was-copied'), 850);
+        } catch (_) {
+          // Clipboard may be unavailable for local file URLs. No-op.
+        }
+      });
+    });
+
+    const updateProgress = () => {
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+      document.documentElement.style.setProperty('--reading-progress', `${pct}%`);
+    };
+    updateProgress();
+    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('resize', updateProgress);
+
+    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    if ('IntersectionObserver' in window && sections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = `#${entry.target.id}`;
+          navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === id));
+        });
+      }, { rootMargin: '-28% 0px -62% 0px', threshold: 0.01 });
+      sections.forEach((section) => observer.observe(section));
+    }
+  })();
+</script>
+
 </body>
 </html>

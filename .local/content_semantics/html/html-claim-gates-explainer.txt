@@ -1,126 +1,100 @@
-Claim Gates
-claim_boundary_map
-Claim Gates
-Claim gates keep ontology, candidate work, workflow completion, refutation, and accepted science in separate states.
-Summary of Claim Gates
-Claim gates are the project’s control mechanism for deciding when a physics statement may move from framing, proposal, repair, audit, or explanation into stronger accepted status. Their function is to keep exact-GR benchmark adoption separate from unproven substrate derivation claims by requiring source evidence, explicit claim-boundary records, routed review, Gate Chair or human-gated authority when needed, and registry updates before promotion. They matter because polished explainers, completed tasks, and preserved repair packets can make candidate ideas look more settled than they are. A visual explanation, validator pass, or completed AgentJob cannot authorize science claims by itself. Claim gates also protect negative results by preserving why a route is blocked, refuted, underdetermined, or still conjectural.
-registries/CLAIM_BOUNDARY_REGISTRY.csv
+Claim Gates, Negative Results, And Freeze Criteria
+Visual Atlas v2
+Claim Gates, Negative Results, And Freeze Criteria
+Claim gates, negative-result preservation, and freeze criteria keep speculative work from becoming unsupported certainty. A failed route, obstruction, scoped no-go result, or repeated burden is not erased; it becomes evidence that shapes later routing. Claim gates require authority before promotion, while freeze criteria prevent repeated work from consuming the project without new mathematical payload.
+AGENTS.md
 research_control/README.md
-registries/TEX_SOURCE_REGISTRY.csv
-.agents/roles/physics/gate-chair.v0.1.0.md
-Coverage
-Diagrams
-Workflow
+research_control/design/gr_derivation_burden_map.md
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+Summary of Claim Gates, Negative Results, And Freeze Criteria
+Claim gates, negative-result preservation, and freeze criteria keep speculative work from becoming unsupported certainty. A failed route, obstruction, scoped no-go result, or repeated burden is not erased; it becomes evidence that shapes later routing. Claim gates require authority before promotion, while freeze criteria prevent repeated work from consuming the project without new mathematical payload.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+registries/CLAIM_BOUNDARY_REGISTRY.csv
+What
+Map
+How
+Objects
+Examples
+Boundary
 Sources
-Source-Backed Coverage
-Status Ladder
-registries/CLAIM_BOUNDARY_REGISTRY.csv
-README.md
-The status ladder separates ontology framing, exact-GR benchmark adoption, candidate derivation work, audit findings, repair attempts, refutations, blocked promotion, negative results, and accepted claims. The ladder matters because each status has different evidentiary weight. A candidate can be useful without being accepted. A repair can reduce one defect without closing the derivation. A refutation can become durable memory rather than failure to hide. Accepted status requires the right gate and source evidence, not only successful prose or a completed workflow.
-Review Path
-research_control/README.md
-.agents/roles/physics/gate-chair.v0.1.0.md
-registries/CLAIM_BOUNDARY_REGISTRY.csv
-Gate review is different from ordinary validation. Validators can check file structure, source hashes, registry consistency, task boundaries, and required receipts. They cannot decide that a speculative physics claim is now accepted. A promotion request needs a defined claim, source evidence, audit history, allowed role authority, and a gate capable of evaluating scientific status. The Gate Chair role is status-defined and human-gated; ordinary agents cannot silently exercise it because the consequences include scientific promotion or rejection.
-Negative Results
-research_control/README.md
-registries/RESEARCH_TASK_REGISTRY.csv
-registries/CLAIM_BOUNDARY_REGISTRY.csv
-Negative results are preserved because they prevent the project from repeating the same failed path under a new label. A smuggling audit, obstruction, blocked derivation, failed repair, or underdetermination result can be valuable if it records what was tested, which source assumptions were used, why the route failed, and what future work should avoid. The research-control chain turns that result into task artifacts, registry rows, handoff state, and claim boundaries, so non-success remains research memory rather than disappearing from the project narrative.
-Forbidden Promotion
+Next
+System Map
+The system map shows the source-backed route through claim gates, negative results, and freeze criteria. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `AGENTS.md` and `research_control/README.md`.
++
+-
+Fit
+Claim Gates, Negative Results, And Freeze Criteria
+Sources
+Reader model
+Derivative
+Validation
 AGENTS.md
-registries/CLAIM_BOUNDARY_REGISTRY.csv
-Forbidden promotion occurs when a statement gains stronger status without the right authority path. Examples include treating generated HTML as science authority, treating workflow completion as proof, treating exact-GR adoption as substrate derivation, or treating a local calculation as a general theorem. The boundary is practical: it keeps language honest while still allowing bold candidate construction. A page may say what was attempted, what passed locally, and what remains blocked; it may not turn those records into accepted physics.
-Claim Gate State Machine
-+
--
-Fit
-bounded
-proposal
-smuggling
-or
-consistency
-check
-fixable
-defect
-defect
-or
-underdetermination
-revised
-packet
-preserved
-obstruction
-promotion
-requested
-authorized
-gate
-passes
-gate
-not
-passed
-Framing
-Candidate
-Audit
-Repair
-Refutation
-NegativeResult
-GateReview
-Accepted
-Blocked
-Diagram source
-stateDiagram-v2 [*] --> Framing Framing --> Candidate: bounded proposal Candidate --> Audit: smuggling or consistency check Audit --> Repair: fixable defect Audit --> Refutation: defect or underdetermination Repair --> Candidate: revised packet Refutation --> NegativeResult: preserved obstruction Candidate --> GateReview: promotion requested GateReview --> Accepted: authorized gate passes GateReview --> Blocked: gate not passed Blocked --> NegativeResult Accepted --> [*] NegativeResult --> [*]
-Negative Result Preservation Loop
-+
--
-Fit
-Candidate
-derivation
-attempt
-Refutation
-or
-smuggling
-test
-Obstruction
-identified
-Claim-boundary
-row
-Registered
-task
-artifact
-Handoff
-preserves
-next
-state
-Future
-work
-avoids
-replaying
-failure
-Diagram source
-flowchart TD Attempt["Candidate derivation attempt"] --> Test["Refutation or smuggling test"] Test --> Finding["Obstruction identified"] Finding --> Boundary["Claim-boundary row"] Boundary --> Artifact["Registered task artifact"] Artifact --> Handoff["Handoff preserves next state"] Handoff --> Future["Future work avoids replaying failure"] Future --> Attempt
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+What This Does
+Claim Gates, Negative Results, And Freeze Criteria gives readers a source-backed model of claim gates, negative results, and freeze criteria. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `research_control/README.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Why AEther Needs It
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of claim gates, negative results, and freeze criteria, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+How It Works
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For claim gates, negative results, and freeze criteria, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Objects And Authority
+The objects involved in claim gates, negative results, and freeze criteria include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `research_control/README.md`.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Example
+A local obstruction can be recorded as source-only evidence and used to route a new bounded packet without claiming a global no-go theorem. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Non-Example
+Invalid: hiding a negative result because it is inconvenient or upgrading it into a universal theorem without proof. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Common Confusions
+Common confusions around claim gates, negative results, and freeze criteria usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+What This Does Not Authorize
+Claim Gates, Negative Results, And Freeze Criteria does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Source Map
+The source map for claim gates, negative results, and freeze criteria lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `research_control/README.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
+Next Reading Path
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
 Workflow Step Inspector
-Frame
-Frame the candidate or ontology statement with a scoped claim boundary.
-Separate
-Keep exact-GR benchmark adoption separate from substrate derivation proposals.
-Route
-Route candidate work through bounded construction, audit, or refutation.
-Repair
-Repair only when the defect is local and the boundary remains honest.
-Preserve
-Preserve refutations, obstructions, and underdetermination as negative results.
-Review
-Send stronger-status requests through Gate Chair or human-gated review.
-Record
-Record accepted, blocked, or negative-result status in control evidence.
-Guard
-Prevent generated docs, validator passes, or completions from promoting claims by presentation.
-All Source Materials
-Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
-README.md
+Inspect source bundle.
+Check topic registry row.
+Apply source-first change discipline.
+Regenerate derivatives.
+Run validators.
 AGENTS.md
 research_control/README.md
+All Source Materials
+AGENTS.md
+research_control/README.md
+research_control/design/gr_derivation_burden_map.md
 registries/CLAIM_BOUNDARY_REGISTRY.csv
-registries/TEX_SOURCE_REGISTRY.csv
-registries/RESEARCH_TASK_REGISTRY.csv
-.agents/roles/physics/gate-chair.v0.1.0.md
+source_materials_section
+workflow_step_inspector

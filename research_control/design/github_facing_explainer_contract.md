@@ -66,6 +66,26 @@ The Documentation Curator decides which of these devices best teaches the
 subject. A script may warn when a recommended device is absent, but absence of
 one old section heading is not by itself a contract failure.
 
+Visual Atlas v2 required topics are stricter. When a source spec declares
+`github_markdown_parity: true` and `reader_blocks`, the paired
+GitHub-facing Markdown must include the reader model required by
+`research_control/design/documentation_curator_visual_atlas_contract.md`:
+
+- `## What This Does`
+- `## Why AEther Needs It`
+- `## System Map`
+- `## How It Works`
+- `## Objects And Authority`
+- `## Example`
+- `## Non-Example`
+- `## Common Confusions`
+- `## What This Does Not Authorize`
+- `## Source Map`
+- `## Next Reading Path`
+
+This parity requirement is structural coverage for atlas topics. It does not
+make GitHub-facing Markdown canonical authority.
+
 The following source-spec headings must not appear as reader-facing top-level
 GitHub page sections:
 
@@ -97,6 +117,14 @@ The audit may emit guidance warnings for missing recommended section devices,
 including workflow-step inspector sections or external-AI navigation markers.
 Those warnings are not project authority over the Curator's prose or page
 structure.
+
+Visual Atlas v2 adds dedicated validators:
+
+```zsh
+.venv/bin/python scripts/validate_explainer_topic_coverage.py --root .
+.venv/bin/python scripts/validate_explainer_parity.py --root .
+.venv/bin/python scripts/validate_reader_first_docs.py --root .
+```
 
 ## Operational Rule
 

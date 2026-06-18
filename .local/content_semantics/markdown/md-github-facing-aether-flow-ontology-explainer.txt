@@ -1,6 +1,25 @@
-# Æther-flow Ontology
+# AEther-Flow Ontology
 
-The Æther-flow ontology is the project vocabulary for a proposed deeper substrate, its ordered motion, and the observer-level world that would have to appear as relativistic geometry if the research program succeeds.
+AEther-Flow ontology names the project vocabulary for substrate, flow, relational structure, and the intended bridge toward relativistic geometry. Its function is to organize hypotheses and derivational targets, not to declare empirical acceptance. The ontology is useful only when its assumptions, mathematical objects, and claim boundaries are kept separate from generated explanations and from benchmark equations that have not yet been derived from the substrate.
+
+## What This Does
+
+AEther-Flow Ontology gives readers a source-backed model of the AEther-flow ontology. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `README.md` and `AGENTS.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the AEther-flow ontology, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `README.md` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: ontology-model-map -->
+```mermaid
+flowchart TD
+  A["Source bundle"] --> B["AEther-Flow Ontology"]
+  B["AEther-Flow Ontology"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
+```
 
 ## Source Binding
 
@@ -8,94 +27,80 @@ The Æther-flow ontology is the project vocabulary for a proposed deeper substra
 - **Related HTML:** `html/aether-flow-ontology-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## What The Ontology Is For
+## How It Works
 
-The ontology gives candidate construction something to talk about before a derivation exists. It names `Æther`, `Æther-flow`, observed three-dimensional space, `S-time`, observed expansion, gravity as mass-shaped flow reorganization, and the observer-level exact-GR benchmark. That vocabulary is useful only if it stays separated from three stronger things: a mathematical model, an empirical theory, and an accepted derivation.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the AEther-flow ontology, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `README.md` and the related registry row before editing anything.
 
-## The Central Distinction
+## Objects And Authority
 
-Exact GR is the benchmark. The first-principles derivation from source-side substrate structure is still open.
+The objects involved in the AEther-flow ontology include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `README.md` or `AGENTS.md`.
 
-That distinction controls the whole physics lane. The project may use ordinary GR as the target behavior to recover, but it may not smuggle GR into the source assumptions and then announce recovery. A credible route must show how Lorentzian metric structure, causal behavior, clock behavior, matter coupling, invariance, and closure arise from source-side data.
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
 
-## How To Read The Ontology
+## Example
 
-The ontology is a source vocabulary, not proof that the proposed substrate is
-real. Its value is that it gives candidate derivations disciplined source-side
-terms before the derivation exists. Without that vocabulary, a candidate can
-slide back into target-GR language and quietly assume what it was meant to
-recover.
+A source note can define a substrate-side object as a modeling primitive and then route a later task to test whether it can recover a benchmark relation. The valid pattern is source-first and bounded: the operator can trace the action to `README.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
 
-Useful progress is therefore mathematical or control evidence, not prettier
-wording. A new source-side construction, obstruction, finite model, no-go
-result, witness family, or source-extension classification can change a
-Distance-to-GR burden when it is recorded through the research-control system.
-A clearer explainer can help readers understand that burden, but it does not
-move the physics status by itself.
+## Non-Example
 
-## Ontology Stack
+Invalid: treating an ontology label as a measured physical entity or as a license to bypass claim gates. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `README.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
 
-<!-- mermaid-diagram-id: aether-flow-ontology-stack -->
-```mermaid
-flowchart TD
-  Aether["Æther<br/>four-dimensional substrate"] --> Flow["Æther-flow<br/>intrinsic ordered motion"]
-  Flow --> Slice["Observed three-dimensional space<br/>local experiential slice"]
-  Flow --> STime["S-time<br/>experienced order of change"]
-  Flow --> Expansion["Observed expansion<br/>appearance of deeper motion"]
-  Matter["Matter and light"] --> STime
-  Matter --> Gravity["Gravity as mass-shaped<br/>Æther-flow reorganization"]
-  Slice --> Benchmark["Observable benchmark<br/>ordinary exact GR"]
-  STime --> Benchmark
-  Gravity --> Benchmark
-```
+## Common Confusions
 
-## Derivation Burden
+Common confusions around the AEther-flow ontology usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
 
-<!-- mermaid-diagram-id: derivation-burden-map -->
-```mermaid
-flowchart TD
-  SourceData["Source-defined substrate data"] --> Readout["Observer normal/readout orbit"]
-  Readout --> Metric["Effective Lorentzian metric"]
-  Metric --> Causal["Causal structure and clocks"]
-  Causal --> Matter["Universal same-metric matter coupling"]
-  Matter --> Closure["S-time and Einsteinian closure"]
-  Closure --> ExactGR["Exact-GR benchmark recovered"]
-  SourceData --> AntiSmuggling["Anti-smuggling constraints"]
-  AntiSmuggling --> Metric
-  AntiSmuggling --> Matter
-  AntiSmuggling --> Closure
-  ExactGR --> Gate["Promotion requires claim gate"]
-```
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
 
-## Useful Reading Rule
+## What This Does Not Authorize
 
-Read ontology terms as candidate source vocabulary. Read registry rows and TeX sources for claim status. Read generated explainers only as orientation. When a statement sounds like a completed derivation, check whether a Gate Chair or claim-boundary record actually authorizes that stronger status.
+AEther-Flow Ontology does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
 
-## For GitHub Readers And AI Agents
+## Source Map
+
+The source map for the AEther-flow ontology lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `README.md` and `AGENTS.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+
+- `README.md`
+- `AGENTS.md`
+- `ontology/aether-and-aether-flow.md`
+- `registries/TEX_SOURCE_REGISTRY.csv`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
+
+## Next Reading Path
+
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- summarize the ontology vocabulary for orientation;
-- identify the source files behind each term;
-- explain why exact-GR benchmark adoption and substrate derivation are different.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- inspect ontology sources and claim-boundary rows;
-- check TeX registry status for science-bearing claims;
-- keep anti-smuggling and open-burden language intact.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- treat ontology vocabulary as empirical confirmation;
-- do not claim the Æther-flow derivation is complete;
-- treat generated derivatives as independent physics authority.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
 - `README.md`
 - `AGENTS.md`
 - `ontology/aether-and-aether-flow.md`
-- `ontology/aether_flow_interpretation-lemen.md`
-- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
 - `registries/TEX_SOURCE_REGISTRY.csv`
-- `registries/MARKDOWN_SOURCE_REGISTRY.csv`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`

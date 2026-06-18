@@ -70,6 +70,15 @@ Markdown source spec under `markdown/html-explainer-specs/`, then render the
 HTML file named by that spec. The tracked HTML remains human-only generated
 output; the Markdown spec and registries carry authority.
 
+For Documentation Curator Visual Atlas v2 work, use
+`research_control/design/documentation_curator_visual_atlas_contract.md` and
+`registries/EXPLAINER_TOPIC_REGISTRY.csv` as the topic-coverage contract. The
+goal is concept-first, source-backed, GitHub-readable, standalone HTML-portable
+teaching. Do not use NPX, `@agent-native/core`, hosted Plan MCP, localhost
+bridge tooling, CDN diagram rendering, remote CSS, remote fonts, external
+analytics, hosted comments, or browser-side Mermaid execution in tracked
+public docs.
+
 When creating or updating diagrams in registered explanatory Markdown or
 tracked HTML explainers, load and follow
 `subskills/mermaid-documentation/SKILL.md`. For `.local/` scratch visual
@@ -104,6 +113,10 @@ contract declared by the Markdown source spec:
   authority status as hero/title metadata chips. Keep registry binding in
   `<meta>` tags and visible source grounding in the summary/source sections.
 - `required_content_blocks` names the page-local factual obligations.
+- Required atlas topics should carry reader block parity across source spec,
+  GitHub Markdown, and HTML for: what this does, why AEther needs it, system
+  map, how it works, objects and authority, example, non-example, common
+  confusions, what this does not authorize, source map, and next reading path.
 - `subject_summary` is universal and must be the first declared content block,
   the first body definition under `## Required Content Blocks`, and the first
   generated `data-content-block`.

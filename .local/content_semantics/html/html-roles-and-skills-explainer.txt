@@ -1,84 +1,102 @@
-Roles And Skills
-role_catalog
-Roles And Skills
-Roles define who may do project work; skills define governed procedures for doing that work inside the repository.
-Summary of Roles and Skills
-The roles-and-skills catalog is the active inventory of registered agent roles, historical role versions, task-local execution overlays, and repo-local skill front doors used by AEther-Flow. Its function is to show which role contracts currently govern work, which roles are status-defined or superseded for audit history, which support subroles may ask or answer teaching-loop questions, which skills provide project-governed procedures, and which tools are merely operator-context aids. This matters because skill availability is not project authority. Documentation Curator v0.9.0 owns subject-first explanatory specs, teaching packets, GitHub-facing Markdown, and source-backed HTML; Student and Teacher support the teaching loop without writing tracked docs; Project-Control Maintainer owns control contracts; Validator Engineer owns deterministic checks; physics roles remain separate from documentation and project-system work.
+Roles And Skills Catalog
+Visual Atlas v2
+Roles And Skills Catalog
+The roles and skills catalog lists the project-governed execution roles and local skill front doors that structure work. It separates stable role authority, historical versions, task-local overlays, support subroles, and general tool availability. This matters because having a skill or tool available does not authorize source edits; only the selected role, AgentJob allowlist, and project-control contract do.
 registries/AGENT_ROLE_REGISTRY.csv
-.agents/schemas/EXECUTION_ROLE_SCHEMA.md
-.agents/roles/research_ops/documentation-curator.v0.9.0.md
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
 .agents/roles/research_ops/documentation-student.v0.1.0.md
 .agents/roles/research_ops/documentation-teacher.v0.1.0.md
-Coverage
+Summary of Roles And Skills Catalog
+The roles and skills catalog lists the project-governed execution roles and local skill front doors that structure work. It separates stable role authority, historical versions, task-local overlays, support subroles, and general tool availability. This matters because having a skill or tool available does not authorize source edits; only the selected role, AgentJob allowlist, and project-control contract do.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+.agents/roles/research_ops/documentation-teacher.v0.1.0.md
+What
+Map
+How
+Objects
+Examples
+Boundary
 Sources
-Source-Backed Coverage
-Active Roles
+Next
+System Map
+The system map shows the source-backed route through the roles and skills catalog. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `registries/AGENT_ROLE_REGISTRY.csv` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`.
++
+-
+Fit
+Roles And Skills Catalog
+Sources
+Reader model
+Derivative
+Validation
 registries/AGENT_ROLE_REGISTRY.csv
-.agents/roles/research_ops/documentation-curator.v0.9.0.md
-Active roles are the current operating surface. Director of Research and Project-System Director select bounded work. Project-Control Maintainer changes control contracts when authorized. Documentation Curator v0.9.0 writes subject-first explanatory documentation and regenerated derivatives. Documentation Student asks learner questions, and Documentation Teacher answers from selected sources inside that loop. Validator Engineer, Memory-System Maintainer, and Process-Integrity Auditor support checks and project machinery. Physics roles such as Ontology Formalizer, Candidate Constructor, Refuter, and Smuggling Auditor operate in the science lane under their own boundaries.
-Status-Defined Roles
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+What This Does
+Roles And Skills Catalog gives readers a source-backed model of the roles and skills catalog. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `registries/AGENT_ROLE_REGISTRY.csv` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
 registries/AGENT_ROLE_REGISTRY.csv
-.agents/roles/physics/gate-chair.v0.1.0.md
-Status-defined roles are known but not freely executable. Gate Chair authority is the important example: it is associated with promotion or rejection decisions and therefore requires explicit human-gated authorization. A role can be defined in the registry without being available for routine autonomous use. This protects scientific status decisions from being triggered by convenience, strong wording, or tool availability. A maintainer should treat status-defined authority as visible vocabulary for review, not as a callable tool available during ordinary continuation.
-Superseded Roles
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Why AEther Needs It
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the roles and skills catalog, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `registries/AGENT_ROLE_REGISTRY.csv` and related registry or control files.
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-Superseded roles remain useful for audit history. Old Documentation Curator versions, for example, explain why older AgentJobs had the permissions and validator expectations they had. Superseded does not mean active. A future task should use the active role version unless an execution record is being audited historically. Keeping old contracts visible lets the project explain past work without reactivating obsolete authority. This is especially important when a validator or explainer changed after an older job, because the old receipt must be judged against the contract active at that time.
-Repo-Local Skills
-.codex/skills/continue-research/SKILL.md
-.codex/skills/improve-project-system/SKILL.md
-.codex/skills/aether-teaching-explainer/SKILL.md
-Repo-local skills are governed procedures under `.codex/skills/`. Continue-research resolves tracked research state and selects one bounded physics continuation job. Improve-project-system handles roles, validators, documentation pipelines, memory tooling, and control repairs. User-modified-project routes human edits. Project-memory-system regenerates registries and wiki layers. HTML and visual explainer skills govern tracked HTML. Aether-teaching-explainer governs Student, Teacher, packet, spec, HTML, and GitHub-facing teaching enrichment. These skills are project procedures, not generic tool suggestions.
-Role-Skill Evidence
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+How It Works
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the roles and skills catalog, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `registries/AGENT_ROLE_REGISTRY.csv` and the related registry row before editing anything.
 registries/AGENT_ROLE_REGISTRY.csv
-.agents/schemas/EXECUTION_ROLE_SCHEMA.md
-Role-skill relationships must be evidence-labeled. A role contract, skill contract, task overlay, or registry row can declare that a skill is required or appropriate. Inferred support tools can help an operator, but they should be labeled as support rather than project authority. The distinction matters when a powerful external tool could edit files but the selected role cannot. Evidence keeps the project from confusing capability with permission. When evidence is missing, the safest description is “operator aid” or “likely support,” followed by a new bounded project-system task if the relationship should become contract authority.
-Support Tools
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-External plugins, browser automation, shell commands, global Codex skills, and operator-local helpers can be useful for reading, testing, or rendering. They do not become project contract authority unless mirrored into the repository and routed through the appropriate role or task boundary. A support tool may gather context, run a validator, or inspect a browser screenshot; it may not expand a role, change a claim, or override registries. This boundary lets the project benefit from a rich local environment while keeping reproducible project behavior inside tracked contracts.
-Operator Boundary
-AGENTS.md
-research_control/README.md
-The operator context boundary separates what the local environment can do from what the project authorizes. A shared terminal, editor, browser, or plugin may make work faster, but the repository authority remains in source files, registries, task records, role contracts, and validator receipts. Before using a convenience tool to write project knowledge, the operator should confirm the selected role, AgentJob allowlist, source class, and validation chain. The same rule applies to AI assistants: model ability, plugin availability, and shell access do not expand the active AgentJob.
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Objects And Authority
+The objects involved in the roles and skills catalog include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `registries/AGENT_ROLE_REGISTRY.csv` or `.agents/roles/research_ops/documentation-curator.v1.0.0.md`.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Example
+Documentation Curator writes source-backed explainers; Documentation Student asks questions; Documentation Teacher answers from sources; Project-Control Maintainer changes validators only inside an authorized job. The valid pattern is source-first and bounded: the operator can trace the action to `registries/AGENT_ROLE_REGISTRY.csv`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Non-Example
+Invalid: using an available tool as proof that the current AgentJob may edit unrelated files. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `registries/AGENT_ROLE_REGISTRY.csv`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Common Confusions
+Common confusions around the roles and skills catalog usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+What This Does Not Authorize
+Roles And Skills Catalog does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Source Map
+The source map for the roles and skills catalog lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `registries/AGENT_ROLE_REGISTRY.csv` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Next Reading Path
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
+.agents/roles/research_ops/documentation-student.v0.1.0.md
+Workflow Step Inspector
+Inspect source bundle.
+Check topic registry row.
+Apply source-first change discipline.
+Regenerate derivatives.
+Run validators.
+registries/AGENT_ROLE_REGISTRY.csv
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
 All Source Materials
-Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
-README.md
-AGENTS.md
-research_control/README.md
 registries/AGENT_ROLE_REGISTRY.csv
-registries/ROLE_EXECUTION_REGISTRY.csv
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-.agents/schemas/EXECUTION_ROLE_SCHEMA.md
-.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
-.agents/roles/research_ops/director-of-research.v0.1.0.md
-.agents/roles/research_ops/project-system-director.v0.1.0.md
-.agents/roles/research_ops/project-control-maintainer.v0.1.0.md
-.agents/roles/research_ops/documentation-curator.v0.9.0.md
-.agents/roles/research_ops/documentation-curator.v0.7.0.md
+.agents/roles/research_ops/documentation-curator.v1.0.0.md
 .agents/roles/research_ops/documentation-student.v0.1.0.md
 .agents/roles/research_ops/documentation-teacher.v0.1.0.md
-.agents/roles/research_ops/validator-engineer.v0.1.0.md
-.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md
-.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md
-.agents/roles/physics/ontology-formalizer.v0.1.0.md
-.agents/roles/physics/candidate-constructor.v0.1.0.md
-.agents/roles/physics/refuter.v0.1.0.md
-.agents/roles/physics/smuggling-auditor.v0.1.0.md
-.agents/roles/physics/gate-chair.v0.1.0.md
-.agents/roles/research_ops/documentation-curator.v0.1.0.md
-.codex/skills/aether-teaching-explainer/SKILL.md
-.codex/skills/continue-research/SKILL.md
-.codex/skills/user-modified-project/SKILL.md
 .codex/skills/improve-project-system/SKILL.md
-.codex/skills/project-memory-system/SKILL.md
-.codex/skills/markdown-wiki/SKILL.md
-.codex/skills/tex-wiki/SKILL.md
-.codex/skills/pdf-derivative-build/SKILL.md
-.codex/skills/obsidian-wiki/SKILL.md
 .codex/skills/html-visual-explainer/SKILL.md
-.codex/skills/visual-explainer/SKILL.md
-.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
-.codex/skills/ontology-promotion/SKILL.md
-.codex/skills/grill-me/SKILL.md
-.codex/skills/grill-with-docs/SKILL.md
+source_materials_section
+workflow_step_inspector

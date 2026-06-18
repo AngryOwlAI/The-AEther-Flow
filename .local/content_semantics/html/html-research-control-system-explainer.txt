@@ -1,153 +1,102 @@
-Research-Control System
-workflow_lifecycle
-Research-Control System
-The research-control system governs changes to the project itself: roles, skills, validators, documentation, generated derivatives, and checkpoint boundaries.
-Summary of Research-Control System
-The research-control system is the repository’s governance layer for deciding how project-system and research-continuation work may proceed. Its function is to classify changes, resolve advisory routing, create or reuse one bounded AgentJob, enforce role and write-path boundaries, require documentation-impact receipts when project machinery changes, and validate that source specs, skills, roles, registries, claim boundaries, optional parent-child decomposition evidence, teaching Q&A packets, and generated derivatives remain aligned. It matters because AEther-Flow deliberately combines scientific exploration with agent workflow development. Without control records, generated HTML, GitHub-facing Markdown, teaching packets, validators, and role contracts could drift or be mistaken for scientific authority. The system makes improvements reversible, auditable, and separate from physics claim promotion.
+Research Control System
+Visual Atlas v2
+Research Control System
+The research-control system is the tracked state spine for tasks, Director decisions, AgentJobs, execution roles, artifacts, completions, approvals, handoffs, and documentation-impact receipts. It preserves project history and makes bounded work auditable. It supports both physics continuation and project-system improvement while keeping generated caches and local retrieval surfaces subordinate to tracked state.
 AGENTS.md
 research_control/README.md
-.codex/skills/improve-project-system/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.9.0.md
-.codex/skills/aether-teaching-explainer/SKILL.md
-Coverage
-Diagrams
-Workflow
+research_control/AGENTS.md
+registries/RESEARCH_TASK_REGISTRY.csv
+Summary of Research Control System
+The research-control system is the tracked state spine for tasks, Director decisions, AgentJobs, execution roles, artifacts, completions, approvals, handoffs, and documentation-impact receipts. It preserves project history and makes bounded work auditable. It supports both physics continuation and project-system improvement while keeping generated caches and local retrieval surfaces subordinate to tracked state.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+registries/RESEARCH_TASK_REGISTRY.csv
+What
+Map
+How
+Objects
+Examples
+Boundary
 Sources
-Source-Backed Coverage
-Classification and Resolver
+Next
+System Map
+The system map shows the source-backed route through the research-control system. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `AGENTS.md` and `research_control/README.md`.
++
+-
+Fit
+Research Control System
+Sources
+Reader model
+Derivative
+Validation
 AGENTS.md
-.codex/skills/improve-project-system/SKILL.md
-scripts/project_control/classify_project_changes.py
-Project-system work starts with classification. The classifier reports whether current changes affect documentation, registries, control contracts, generated derivatives, validators, tests, memory tooling, or blocked paths. The resolver then provides advisory routing based on current Git state and registered project-improvement signals. Advisory does not mean optional chaos: it identifies the relevant authority surfaces, but hard checkpoint gates remain validators and concrete boundary violations. This separation lets a user-authorized improvement proceed while still recording why the selected role and scope are legitimate.
-Bounded Transaction
-.agents/schemas/AGENT_JOB_SCHEMA.md
 research_control/README.md
-The transaction boundary is one AgentJob. It names the objective, selected role, allowed reads, allowed writes, generated paths, forbidden paths, validators, expected outputs, human-gate status, documentation-impact record, and completion record. For project-system work, this prevents “improve the docs” or “fix the system” from becoming an unlimited rewrite. A transaction can include generated derivatives only when the source spec or contract authorizes regeneration, and it must stop when a required write path or policy decision exceeds the boundary.
-Explainer Contract
-.codex/skills/html-visual-explainer/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.9.0.md
-research_control/design/github_facing_explainer_contract.md
-Source-backed explainers now follow a subject-first contract. The Markdown source spec declares source materials, claim boundary, content blocks, controls, layout intent, and teaching-loop metadata when applicable. Documentation Curator v0.9.0 must teach the project component directly: what it does, why it exists, how it works, what it cannot claim, and where source authority lives. HTML and GitHub-facing Markdown remain generated or derivative reading surfaces. They may be reset wholesale when old prose explains the page instead of the functionality.
-Documentation Impact
-scripts/project_control/validate_documentation_impact.py
+research_control/AGENTS.md
+What This Does
+Research Control System gives readers a source-backed model of the research-control system. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `research_control/README.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+AGENTS.md
 research_control/README.md
-Documentation impact is the receipt that connects a change to its documentation surface. It records changed paths, reason codes, source surfaces inspected, source docs updated, generated derivatives, registries, validators run, and status. The receipt does not decide routing by itself; it proves that a project-system transaction accounted for the documentation consequences of the actual change. A valid no-op rationale is allowed only when source documentation truly did not need updates.
-Validator Chain
-scripts/research_control/validate_research_control.py
-scripts/spec_depth_lint.py
-scripts/validate_teaching_qa.py
-The validator chain combines hard and advisory checks. Teaching Q&A validation confirms packets are source-bound and noncanonical. Depth lint checks finished documentation quality, including the new self-reference guard. Bootstrap refreshes registries, wiki notes, hashes, and source-basis metadata. Documentation-impact validation checks receipts. Research-control validation checks tasks, jobs, roles, completions, claim boundaries, and diff constraints. A checkpoint should happen only after these gates agree that the transaction stayed inside its declared boundary.
-Research Control Validation Flow
-+
--
-Fit
-Markdown
-source
-spec
-update
-Generated
-HTML
-derivative
-Mermaid
-source
-parity
-validation
-Memory
-bootstrap
-and
-registry
-refresh
-Documentation-impact
-gate
-Research-control
-validation
-Diff
-and
-authority
-boundary
-gate
-Local
-checkpoint
-commit
-Diagram source
-flowchart TD Spec["Markdown source spec update"] --> Html["Generated HTML derivative"] Html --> Mermaid["Mermaid source parity validation"] Mermaid --> Bootstrap["Memory bootstrap and registry refresh"] Bootstrap --> DocsImpact["Documentation-impact gate"] DocsImpact --> ResearchControl["Research-control validation"] ResearchControl --> DiffGate["Diff and authority boundary gate"] DiffGate --> Checkpoint["Local checkpoint commit"]
-Control Boundary Map
-+
--
-Fit
-Proposed
-project-system
-change
-Change
-classifier
-Recommended
-role
-boundary
-One
-bounded
-AgentJob
-Optional
-parent-child
-shape
-and
-conflict
-checks
-Allowed
-writes
-Forbidden
-authority
-surfaces
-Required
-validators
-Stop
-condition
-Completion
-and
-documentation-impact
-receipts
-Control
-registries
-updated
-Diagram source
-flowchart TD Change["Proposed project-system change"] --> Classifier["Change classifier"] Classifier --> Role["Recommended role boundary"] Role --> Job["One bounded AgentJob"] Job --> DecompCheck["Optional parent-child<br/>shape and conflict checks"] DecompCheck --> Allowed["Allowed writes"] DecompCheck --> Forbidden["Forbidden authority surfaces"] Allowed --> Validators["Required validators"] Forbidden --> Stop["Stop condition"] Validators --> Receipt["Completion and documentation-impact receipts"] Receipt --> Registry["Control registries updated"]
+research_control/AGENTS.md
+Why AEther Needs It
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the research-control system, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+How It Works
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the research-control system, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+Objects And Authority
+The objects involved in the research-control system include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `research_control/README.md`.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+Example
+A completed task records a decision, job, role overlay, completion, validators, and next recommendation in tracked files and registries. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+Non-Example
+Invalid: allowing `.local` caches or generated wiki notes to override tracked task state. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+Common Confusions
+Common confusions around the research-control system usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+What This Does Not Authorize
+Research Control System does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+Source Map
+The source map for the research-control system lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `research_control/README.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+Next Reading Path
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
 Workflow Step Inspector
-Classify
-Classify changed paths and reason codes.
-Resolve
-Resolve advisory project-system or continuation routing.
-Bind
-Bind the work to one bounded AgentJob and execution role.
-Source first
-Update canonical source specs or control sources before derivatives.
-Impact
-Record documentation impact when project machinery changes.
-Regenerate
-Refresh memory, registry, HTML, wiki, or GitHub-facing derivatives.
-Validate
-Run teaching, lint, unit, bootstrap, audit, documentation, control, and diff checks.
-Checkpoint
-Treat readiness as validator-backed authority-boundary coherence.
-All Source Materials
-Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
+Inspect source bundle.
+Check topic registry row.
+Apply source-first change discipline.
+Regenerate derivatives.
+Run validators.
 AGENTS.md
-README.md
 research_control/README.md
-.codex/skills/improve-project-system/SKILL.md
-.codex/skills/html-visual-explainer/SKILL.md
-.codex/skills/aether-teaching-explainer/SKILL.md
-.codex/skills/visual-explainer/SKILL.md
-.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md
-.agents/roles/research_ops/documentation-curator.v0.9.0.md
-.agents/roles/research_ops/documentation-student.v0.1.0.md
-.agents/roles/research_ops/documentation-teacher.v0.1.0.md
-.agents/schemas/AGENT_JOB_SCHEMA.md
-.agents/schemas/EXECUTION_ROLE_SCHEMA.md
-.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md
-research_control/templates/COMPLETION_TEMPLATE.yaml
-research_control/templates/PARENT_CHILD_CONFLICT_REVIEW_TEMPLATE.yaml
-research_control/design/html_explainer_flexible_presentation_contract.md
-scripts/project_control/validate_documentation_impact.py
-scripts/research_control/validate_research_control.py
-scripts/spec_depth_lint.py
-scripts/validate_teaching_qa.py
-.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
+All Source Materials
+AGENTS.md
+research_control/README.md
+research_control/AGENTS.md
+registries/RESEARCH_TASK_REGISTRY.csv
+registries/DIRECTOR_DECISION_REGISTRY.csv
+registries/AGENT_JOB_REGISTRY.csv
+source_materials_section
+workflow_step_inspector

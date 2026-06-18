@@ -1,6 +1,33 @@
 # Documentation Curator Teaching Loop
 
-The Documentation Curator teaching loop makes project explanations more useful by having a Student ask reader-centered questions, a Teacher answer from sources, and the Curator synthesize the result into source-backed documentation.
+The Documentation Curator teaching loop improves explanations without changing authority. The Curator selects a subject and source bundle. Documentation Student asks reader-diagnostic questions. Documentation Teacher answers only from the selected sources. The Curator turns that support into a curated teaching packet, a Markdown source spec, GitHub-facing Markdown, tracked standalone HTML, and generated wiki navigation surfaces. Student and Teacher do not write tracked docs directly.
+
+## What This Does
+
+Documentation Curator Teaching Loop gives readers a source-backed model of the Documentation Curator teaching loop. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the Documentation Curator teaching loop, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: teaching-loop-map -->
+```mermaid
+flowchart TD
+  Subject["Selected subject"] --> Sources["Declared source bundle"]
+  Sources --> Student["Documentation Student<br/>questions only"]
+  Student --> Teacher["Documentation Teacher<br/>source-bound answers"]
+  Teacher --> Packet["Curated Teaching Q&A packet"]
+  Packet --> Curator["Documentation Curator<br/>writes the explanation"]
+  Curator --> Spec["Markdown source spec"]
+  Spec --> GitHub["GitHub-facing Markdown"]
+  Spec --> HTML["Standalone HTML explainer"]
+  Spec --> Wiki["Generated wiki/index surfaces"]
+  GitHub --> Validation["Validation"]
+  HTML --> Validation
+  Wiki --> Validation
+```
 
 ## Source Binding
 
@@ -8,88 +35,94 @@ The Documentation Curator teaching loop makes project explanations more useful b
 - **Related HTML:** `html/documentation-curator-teaching-loop-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## The Role Split
+## How It Works
 
-The Curator is the writer. The Student asks questions only. The Teacher answers only from the selected source bundle. The teaching packet is explanatory support. The source spec, role contracts, schemas, validators, registries, and claim gates keep their own authority.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the Documentation Curator teaching loop, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+
+## Objects And Authority
+
+The objects involved in the Documentation Curator teaching loop include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `.agents/roles/research_ops/documentation-curator.v1.0.0.md`.
+
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
+
+## Example
+
+A hard workflow topic gets Student questions about reader confusion, Teacher answers from source paths, and Curator synthesis into source-backed public docs. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+
+## Non-Example
+
+Invalid: publishing raw Student/Teacher transcript as the public page or treating a teaching packet as role authority. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+
+## Common Confusions
+
+Common confusions around the Documentation Curator teaching loop usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
+
+## What This Does Not Authorize
+
+Documentation Curator Teaching Loop does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
 
 ## Workflow Step Inspector
 
-1. Select one subject and source bundle.
-2. Ask reader-centered Student questions about purpose, operation, boundaries, examples, and confusion points.
-3. Answer those questions through the Teacher inside the declared source boundary.
-4. Have the Curator synthesize a teaching packet as explanatory support.
-5. Distill the packet into the Markdown source spec.
-6. Synchronize the GitHub-facing Markdown derivative.
-7. Regenerate the tracked human-only HTML derivative.
-8. Validate teaching QA, source specs, derivatives, documentation impact, and research-control state.
+1. Inspect the declared source bundle and topic registry row.
+2. Confirm the current task or reader question belongs to this topic.
+3. Follow the source-first workflow before changing project knowledge.
+4. Regenerate GitHub, HTML, wiki, and registry derivatives only from governed sources.
+5. Run the relevant validators and preserve failures as evidence.
 
-## What The Loop Produces
+## Source Map
 
-The question-and-answer rounds are diagnostic. They expose what a reader needs:
-the subject's purpose, operating model, authority boundary, examples,
-non-examples, likely confusion points, and next reading path. Source-bound
-answers keep those needs from turning into improvised project truth. If the
-selected source bundle does not answer a question, the Teacher records a source
-gap instead of filling it from outside knowledge.
+The source map for the Documentation Curator teaching loop lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `.agents/roles/research_ops/documentation-curator.v1.0.0.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
 
-The public output is not the transcript. The Curator uses the exchange to
-write a teaching packet and then distills that packet into source specs,
-GitHub-facing Markdown, and generated HTML. A good final page should read like
-finished documentation: direct explanation, workflow, diagrams, examples,
-boundary notes, and source links.
+- `AGENTS.md`
+- `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
+- `.agents/roles/research_ops/documentation-student.v0.1.0.md`
+- `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
+- `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
+- `research_control/design/documentation_curator_visual_atlas_contract.md`
+- `registries/EXPLAINER_TOPIC_REGISTRY.csv`
+- `markdown/teaching-packets/documentation-curator-teaching-loop.teaching-qa.md`
 
-```mermaid
-flowchart TD
-  Subject["Selected subject and source bundle"] --> Student["Documentation Student<br/>questions only"]
-  Student --> Teacher["Documentation Teacher<br/>source-bound answers"]
-  Teacher --> Packet["Curated Teaching Q&A packet"]
-  Packet --> Spec["Markdown source spec"]
-  Spec --> Markdown["GitHub-facing Markdown"]
-  Spec --> Html["Tracked human-only HTML"]
-  Markdown --> Validate["Teaching QA and surface validation"]
-  Html --> Validate
-```
+## Next Reading Path
 
-## Curator Judgment
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
 
-Scripts can enforce safety and source binding. They should not freeze all explanations into one template. The Curator's job is to decide which prose structure teaches the subject: Q&A, glossary, workflow, diagram, examples, non-examples, misconception repair, or a reading path. The required boundary is evidence-based explanation, not mechanical section sameness.
-
-## Public Page Rule
-
-Teaching packets and role exchanges are support material. They do not override
-routing, schemas, validators, role authority, claim status, ontology authority,
-benchmark status, or generated-output authority. A GitHub-facing page may
-explain that support process, but it should present the Curator's synthesis,
-not raw Student and Teacher turns.
-
-## For GitHub Readers And AI Agents
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- understand the teaching-loop workflow;
-- find role contracts, packet schema, example packets, and validators;
-- distinguish explanation support from project authority.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- inspect the selected source spec and source bundle;
-- keep Student and Teacher outputs inside their roles;
-- let the Curator synthesize tracked documentation.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- let Student or Teacher outputs write tracked docs directly;
-- treat teaching packets as canonical authority;
-- replace source-bound answers with outside facts.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
-- `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
+- `AGENTS.md`
+- `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
 - `.agents/roles/research_ops/documentation-student.v0.1.0.md`
 - `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
 - `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
-- `.codex/skills/aether-teaching-explainer/SKILL.md`
-- `.codex/skills/html-visual-explainer/SKILL.md`
-- `research_control/design/github_facing_explainer_contract.md`
-- `markdown/teaching-packets/project-overview.teaching-qa.md`
-- `markdown/teaching-packets/role-routing.teaching-qa.md`
-- `scripts/validate_teaching_qa.py`
+- `research_control/design/documentation_curator_visual_atlas_contract.md`
+- `registries/EXPLAINER_TOPIC_REGISTRY.csv`
+- `markdown/teaching-packets/documentation-curator-teaching-loop.teaching-qa.md`

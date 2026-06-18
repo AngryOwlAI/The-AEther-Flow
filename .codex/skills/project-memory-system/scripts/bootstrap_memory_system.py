@@ -345,6 +345,15 @@ HTML_HUMAN_VISUAL_META_RE = re.compile(
 HTML_DATA_ATTR_RE = r'\b{attr}\s*=\s*["\']([^"\']+)["\']'
 HTML_STYLE_BLOCK_RE = re.compile(r"<style\b[^>]*>(.*?)</style>", re.IGNORECASE | re.DOTALL)
 HTML_PROSE_ANYWHERE_SELECTORS = (".atlas-card", "p", "th", "td")
+DOCS_VALIDATOR_SCRIPTS = [
+    "scripts/validate_explainer_topic_coverage.py",
+    "scripts/validate_explainer_parity.py",
+    "scripts/validate_standalone_html.py",
+    "scripts/validate_reader_first_docs.py",
+    "scripts/validate_explainer_diagrams.py",
+    "scripts/spec_depth_lint.py",
+    "scripts/validate_teaching_qa.py",
+]
 
 
 @dataclass
@@ -2364,7 +2373,40 @@ def validate_local_retrieval_freshness(report: ValidationReport) -> None:
         report.warning(f"Local retrieval freshness: {warning}")
 
 
-def validate_all() -> ValidationReport:
+def validate_docs_atlas(report: ValidationReport, *, strict_docs: bool = False) -> None:
+    for script_path in DOCS_VALIDATOR_SCRIPTS:
+        command = [
+            sys.executable,
+            str(REPO_ROOT / script_path),
+            "--root",
+            str(REPO_ROOT),
+        ]
+        if strict_docs and script_path in {
+            "scripts/validate_reader_first_docs.py",
+            "scripts/validate_explainer_topic_coverage.py",
+            "scripts/validate_explainer_parity.py",
+            "scripts/validate_standalone_html.py",
+            "scripts/validate_explainer_diagrams.py",
+        }:
+            command.append("--strict")
+        try:
+            result = subprocess.run(
+                command,
+                cwd=REPO_ROOT,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=False,
+            )
+        except OSError as exc:
+            report.error(f"{script_path}: could not run documentation validator: {exc}")
+            continue
+        output = (result.stdout + result.stderr).strip()
+        if result.returncode != 0:
+            report.error(f"{script_path}: documentation validator failed\n{output}")
+
+
+def validate_all(*, strict_docs: bool = False) -> ValidationReport:
     report = ValidationReport()
     validate_columns(report)
     rows_by_registry = {
@@ -2385,12 +2427,14 @@ def validate_all() -> ValidationReport:
     validate_folder_map(report, rows_by_registry)
     validate_local_retrieval_freshness(report)
     validate_tracked_local_noise(report)
+    validate_docs_atlas(report, strict_docs=strict_docs)
     return report
 
 
 def bootstrap(
     refresh_existing: bool = False,
     rebuilt_pdf_paths: Iterable[str] | None = None,
+    strict_docs: bool = False,
 ) -> ValidationReport:
     ensure_directories()
     now = utc_now()
@@ -2425,7 +2469,7 @@ def bootstrap(
     file_object_rows = generate_file_object_registry(rows_by_registry, now)
     rows_by_registry["FILE_OBJECT_REGISTRY.csv"] = file_object_rows
     generate_folder_map(rows_by_registry)
-    return validate_all()
+    return validate_all(strict_docs=strict_docs)
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
@@ -2444,15 +2488,33 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         dest="validate_only",
         help="Validate current registries and generated outputs without writing.",
     )
+    parser.add_argument(
+        "--docs-only",
+        action="store_true",
+        help="Refresh generated documentation registry/wiki surfaces and run documentation validators.",
+    )
+    parser.add_argument(
+        "--docs-validate-only",
+        action="store_true",
+        help="Run registry, wiki, and documentation validators without writing.",
+    )
+    parser.add_argument(
+        "--strict-docs",
+        action="store_true",
+        help="Fail documentation validators on advisory reader-facing warnings where supported.",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    if args.validate_only:
-        report = validate_all()
+    if args.validate_only or args.docs_validate_only:
+        report = validate_all(strict_docs=args.strict_docs)
     else:
-        report = bootstrap(refresh_existing=args.refresh_existing)
+        report = bootstrap(
+            refresh_existing=args.refresh_existing,
+            strict_docs=args.strict_docs,
+        )
     report.print()
     return 0 if report.ok else 1
 

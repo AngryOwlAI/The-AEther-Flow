@@ -1,6 +1,25 @@
-# Claim Gates
+# Claim Gates, Negative Results, And Freeze Criteria
 
-Claim gates keep hypotheses, source-side candidates, workflow progress, failed routes, and accepted physics from collapsing into one status.
+Claim gates, negative-result preservation, and freeze criteria keep speculative work from becoming unsupported certainty. A failed route, obstruction, scoped no-go result, or repeated burden is not erased; it becomes evidence that shapes later routing. Claim gates require authority before promotion, while freeze criteria prevent repeated work from consuming the project without new mathematical payload.
+
+## What This Does
+
+Claim Gates, Negative Results, And Freeze Criteria gives readers a source-backed model of claim gates, negative results, and freeze criteria. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `research_control/README.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of claim gates, negative results, and freeze criteria, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: claim-gate-preservation-map -->
+```mermaid
+flowchart TD
+  A["Source bundle"] --> B["Claim Gates, Negative Results, And Freeze Criteria"]
+  B["Claim Gates, Negative Results, And Freeze Criteria"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
+```
 
 ## Source Binding
 
@@ -8,98 +27,86 @@ Claim gates keep hypotheses, source-side candidates, workflow progress, failed r
 - **Related HTML:** `html/claim-gates-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Why Claim Gates Exist
+## How It Works
 
-AEther-Flow intentionally works near speculative physics. That makes status discipline essential. A candidate construction may be useful without being accepted. A refutation may block one route without rejecting the whole ontology. A generated explanation may help readers without authorizing a scientific claim. Claim gates preserve those distinctions by tying status changes to source evidence, role authority, human gates when needed, registries, and completion records.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For claim gates, negative results, and freeze criteria, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+
+## Objects And Authority
+
+The objects involved in claim gates, negative results, and freeze criteria include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `research_control/README.md`.
+
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
+
+## Example
+
+A local obstruction can be recorded as source-only evidence and used to route a new bounded packet without claiming a global no-go theorem. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+
+## Non-Example
+
+Invalid: hiding a negative result because it is inconvenient or upgrading it into a universal theorem without proof. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+
+## Common Confusions
+
+Common confusions around claim gates, negative results, and freeze criteria usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
+
+## What This Does Not Authorize
+
+Claim Gates, Negative Results, And Freeze Criteria does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
 
 ## Workflow Step Inspector
 
-1. Frame the candidate or ontology statement with a scoped claim boundary.
-2. Keep exact-GR benchmark adoption separate from substrate derivation proposals.
-3. Route candidate work through bounded construction, audit, or refutation.
-4. Repair only when the defect is local and the claim boundary remains honest.
-5. Preserve refutations, obstructions, and underdetermination as negative results.
-6. Send promotion requests through Gate Chair or human-gated review when stronger scientific status is sought.
-7. Record accepted, blocked, or negative-result status in the relevant control evidence.
-8. Prevent generated docs, validator passes, or completed jobs from promoting claims by presentation alone.
+1. Inspect the declared source bundle and topic registry row.
+2. Confirm the current task or reader question belongs to this topic.
+3. Follow the source-first workflow before changing project knowledge.
+4. Regenerate GitHub, HTML, wiki, and registry derivatives only from governed sources.
+5. Run the relevant validators and preserve failures as evidence.
 
-## Status Rules For Readers
+## Source Map
 
-A completed research task is not automatically an accepted claim. Completion
-records show what a bounded job did, which outputs it produced, and which
-validators ran. Accepted physics status requires the appropriate gate and
-source evidence.
+The source map for claim gates, negative results, and freeze criteria lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `research_control/README.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
 
-Negative results are preserved because they protect future work. A refutation
-or scoped obstruction prevents the same route from being replayed as if it had
-never failed. It can narrow the search without pretending that every related
-route is impossible.
+- `AGENTS.md`
+- `research_control/README.md`
+- `research_control/design/gr_derivation_burden_map.md`
+- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
 
-Exact-GR benchmark adoption means ordinary GR is the observable target behavior
-for comparison. It does not mean the Æther-flow source ontology has derived
-that target.
+## Next Reading Path
 
-## Claim-State Diagrams
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
 
-<!-- mermaid-diagram-id: claim-gate-state-machine -->
-```mermaid
-stateDiagram-v2
-  [*] --> Framing
-  Framing --> Candidate: bounded proposal
-  Candidate --> Audit: smuggling or consistency check
-  Audit --> Repair: fixable defect
-  Audit --> Refutation: defect or underdetermination
-  Repair --> Candidate: revised packet
-  Refutation --> NegativeResult: preserved obstruction
-  Candidate --> GateReview: promotion requested
-  GateReview --> Accepted: authorized gate passes
-  GateReview --> Blocked: gate not passed
-  Blocked --> NegativeResult
-  Accepted --> [*]
-  NegativeResult --> [*]
-```
-
-<!-- mermaid-diagram-id: negative-result-preservation-loop -->
-```mermaid
-flowchart TD
-  Attempt["Candidate derivation attempt"] --> Test["Refutation or smuggling test"]
-  Test --> Finding["Obstruction identified"]
-  Finding --> Boundary["Claim-boundary row"]
-  Boundary --> Artifact["Registered task artifact"]
-  Artifact --> Handoff["Handoff preserves next state"]
-  Handoff --> Future["Future work avoids replaying failure"]
-  Future --> Attempt
-```
-
-## What Claim Gates Do Not Do
-
-They do not prove a candidate by making its documentation clearer. They do not let a validator pass become a theorem. They do not let generated HTML or GitHub Markdown promote a claim. They do not erase negative results because a later page is more polished.
-
-## For GitHub Readers And AI Agents
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- identify the relevant claim-status vocabulary;
-- find the claim-boundary and task evidence to inspect;
-- explain why benchmark adoption and derivation success are different.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- inspect claim-boundary rows;
-- inspect task artifacts and completion evidence;
-- preserve blocked, refuted, and negative-result statuses accurately.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- do not claim the Æther-flow derivation is complete;
-- promote a candidate from prose quality alone;
-- treat generated derivatives as gate evidence.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
-- `README.md`
 - `AGENTS.md`
 - `research_control/README.md`
+- `research_control/design/gr_derivation_burden_map.md`
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv`
-- `registries/TEX_SOURCE_REGISTRY.csv`
-- `registries/RESEARCH_TASK_REGISTRY.csv`
-- `.agents/roles/physics/gate-chair.v0.1.0.md`

@@ -1,158 +1,92 @@
-Project Overview
-atlas_hub
-Project Overview
-AEther-Flow is a dual research program: one lane tests a speculative Æther-flow interpretation against ordinary exact general relativity, and the other lane builds the agent-control machinery that keeps that research auditable.
-Summary of Project Overview
-AEther-Flow is organized around two coupled systems. The physics system keeps ordinary exact general relativity as the observable benchmark while treating any first-principles derivation from Æther or Æther-flow substrate structure as open until a gated source-side derivation succeeds. The AI research-agent system supplies the operating discipline: tracked state, Director decisions, bounded AgentJobs, role contracts, validators, registries, handoffs, project-system improvement, Documentation Curator teaching support, and generated explanatory surfaces. The project needs both systems because speculative physics can drift into unsupported certainty unless every proposal, refutation, repair, and negative result remains source-bound and auditable. The overview functions as the entry map for that structure: physics terms route to ontology, claim gates, and the derivation roadmap; workflow questions route to research system, role routing, research control, and project-system improvement; authority and documentation questions route to source authority, roles and skills, memory, technical requirements, and the Documentation Curator teaching loop.
-README.md
-AGENTS.md
-ontology/aether-and-aether-flow.md
-research_control/README.md
-Coverage
-Diagrams
-Sources
-Source-Backed Coverage
-Two-Lane Navigation
+Project Atlas
+Visual Atlas v2
+Project Atlas
+Project Atlas is the entry map for AEther-Flow. It connects the physics program, the exact-GR benchmark boundary, the open derivation burden, research-control workflows, source authority, validators, roles, skills, memory, and generated documentation surfaces into one navigable model. Its function is orientation, not authority: it tells readers which governed source lane to inspect next and why generated explainers remain noncanonical.
 README.md
 AGENTS.md
 research_control/README.md
-The navigation model starts with two practical questions. If a reader is asking what the project is trying to explain physically, the path runs through the Æther-flow ontology, exact-GR benchmark boundary, GR derivation roadmap, claim gates, and source authority. If the reader is asking how the work is controlled, the path runs through the research system, role routing, research-control validation, project-system improvement, roles and skills, memory, technical requirements, and the Documentation Curator teaching loop. The atlas prevents directory order from becoming conceptual order. A newcomer can see that TeX, registries, Markdown specs, HTML, GitHub-facing pages, wiki notes, teaching packets, and local retrieval are not equal sources of truth; each has a role in the two-lane program.
-Physics Research Lane
-README.md
-ontology/aether-and-aether-flow.md
-registries/CLAIM_BOUNDARY_REGISTRY.csv
-The physics lane explores whether an Æther-flow substrate can recover the observable structure already modeled by ordinary exact general relativity. The repository currently treats exact GR as the benchmark and the substrate derivation as unresolved. That distinction is central: ontology vocabulary may guide candidate construction, but it cannot replace the missing derivation of Lorentzian geometry, clocks, causal structure, same-metric matter coupling, invariance, and closure. Claim gates and source registries preserve this boundary so a useful conceptual model does not become an accepted theory by presentation quality, task completion, or repeated phrasing.
-AI Research-Agent Lane
-research_control/README.md
-registries/AGENT_JOB_REGISTRY.csv
-registries/DIRECTOR_DECISION_REGISTRY.csv
-The AI research-agent lane is the project’s controlled workflow for doing difficult theoretical work with language-model agents. A request or handoff is resolved into a Director decision, one bounded AgentJob, a selected role or task overlay, explicit read and write paths, expected outputs, validators, completion records, and the next handoff. The system is not an autonomous proof engine. Its value is disciplined containment: it can draft, audit, refute, preserve obstructions, improve project machinery, and regenerate documentation while making authority boundaries visible before any result is trusted.
-Authority and Memory Spine
-AGENTS.md
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/HTML_EXPLAINER_REGISTRY.csv
-registries/FILE_OBJECT_REGISTRY.csv
-Authority flows from registered sources and registries, not from convenience. Scientific claims live in registered TeX; routing, provenance, generated-output tracking, and agent-queryable memory live in CSV registries; front-door guidance and source specs live in registered Markdown; HTML, GitHub-facing Markdown, PDFs, wiki notes, and local retrieval surfaces help humans and agents read the project. The memory system makes this practical by recording object identities, hashes, relationships, generated outputs, and validation status. Retrieval can accelerate review, but it must always point back to the source row or canonical file.
-Operator Path
-README.md
-Makefile
-.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
-An operator who changes project knowledge should inspect the relevant authority surface first, edit the registered source or registry row, regenerate derivatives, and run the validator chain required by the bounded task. Documentation changes normally start at a Markdown source spec or registered Markdown page, then render HTML and GitHub-facing derivatives, run teaching and depth checks when applicable, bootstrap memory/wiki/registry outputs, validate documentation impact, and check research-control boundaries. The technical-requirements drilldown separates mandatory project tooling from optional local aids so setup friction does not become a mistaken authority decision.
-Research Atlas Hub
-+
--
-Fit
-Project
-overview
-hub
-Æther-flow
-ontology
-drilldown
-Research
-system
-drilldown
-Role
-routing
-drilldown
-Claim
-gates
-drilldown
-Source
-authority
-drilldown
-Validation
-governance
-drilldown
-Roles
-and
-skills
-drilldown
-Memory
-system
-drilldown
-Technical
-requirements
-drilldown
-Open
-derivation
-burden
-Bounded
-AgentJobs
-Execution-role
-contract
-Claim-boundary
-registry
-Source-first
-registries
-Validator
-receipts
-Repo-local
-skill
-contracts
-Derived
-retrieval
-surfaces
-Tiered
-tool
-requirements
-Diagram source
-flowchart TD Hub["Project overview hub"] --> Ontology["Æther-flow ontology drilldown"] Hub --> ResearchSystem["Research system drilldown"] Hub --> RoleRouting["Role routing drilldown"] Hub --> ClaimGates["Claim gates drilldown"] Hub --> SourceAuthority["Source authority drilldown"] Hub --> Validation["Validation governance drilldown"] Hub --> RolesSkills["Roles and skills drilldown"] Hub --> MemorySystem["Memory system drilldown"] Hub --> Requirements["Technical requirements drilldown"] Ontology --> Burden["Open derivation burden"] ResearchSystem --> Jobs["Bounded AgentJobs"] RoleRouting --> Roles["Execution-role contract"] ClaimGates --> Boundaries["Claim-boundary registry"] SourceAuthority --> Registries["Source-first registries"] Validation --> Receipts["Validator receipts"] RolesSkills --> SkillContracts["Repo-local skill contracts"] MemorySystem --> Retrieval["Derived retrieval surfaces"] Requirements --> ToolTiers["Tiered tool requirements"]
-Dual Track Map
-+
--
-Fit
-Æther-flow
-research
-program
-Physics
-track
-AI
-research-agent
-track
-Æther-flow
-ontology
-Exact-GR
-benchmark
-adoption
-Open
-first-principles
-derivation
-Director
-and
-role
-routing
-Validators
-and
-claim
-gates
-Source-first
-memory
-Derive
-or
-hard-fail
-a
-valid
-path
-Diagram source
-flowchart TD Program["Æther-flow<br/>research program"] --> Physics["Physics<br/>track"] Program --> AI["AI research-agent<br/>track"] Physics --> Ontology["Æther-flow<br/>ontology"] Physics --> Benchmark["Exact-GR benchmark<br/>adoption"] Physics --> OpenProof["Open first-principles<br/>derivation"] AI --> Routing["Director and<br/>role routing"] AI --> Validation["Validators and<br/>claim gates"] AI --> Memory["Source-first<br/>memory"] Ontology --> SharedTarget["Derive or hard-fail<br/>a valid path"] Routing --> SharedTarget Validation --> SharedTarget Memory --> SharedTarget
-All Source Materials
-Registered source paths used by this human-only generated derivative. Source authority remains with the listed files and registries.
-README.md
-AGENTS.md
-ontology/aether-and-aether-flow.md
-research_control/README.md
-registries/CLAIM_BOUNDARY_REGISTRY.csv
-registries/MARKDOWN_SOURCE_REGISTRY.csv
-registries/HTML_EXPLAINER_REGISTRY.csv
-markdown/html-explainer-specs/aether-flow-ontology-explainer.md
-markdown/html-explainer-specs/research-agent-workflow-explainer.md
-markdown/html-explainer-specs/research-control-system-explainer.md
-markdown/html-explainer-specs/role-routing-explainer.md
-markdown/html-explainer-specs/claim-gates-explainer.md
 markdown/html-explainer-specs/source-authority-explainer.md
-markdown/html-explainer-specs/roles-and-skills-explainer.md
-markdown/html-explainer-specs/memory-system-explainer.md
-markdown/html-explainer-specs/technical-requirements-explainer.md
-markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md
-markdown/html-explainer-specs/project-system-improvement-explainer.md
-markdown/html-explainer-specs/documentation-curator-teaching-loop-explainer.md
+Summary of Project Atlas
+Project Atlas is the entry map for AEther-Flow. It connects the physics program, the exact-GR benchmark boundary, the open derivation burden, research-control workflows, source authority, validators, roles, skills, memory, and generated documentation surfaces into one navigable model. Its function is orientation, not authority: it tells readers which governed source lane to inspect next and why generated explainers remain noncanonical.
+README.md
+AGENTS.md
+research_control/README.md
+markdown/html-explainer-specs/source-authority-explainer.md
+What
+Map
+How
+Objects
+Examples
+Boundary
+Sources
+Next
+System Map
+The system map shows the source-backed route through the project atlas. It should be read as an explanatory diagram, not as a proof or permission grant. Nodes name the participating source bundle, role or workflow mechanism, reader model, generated output, and validation step. The same diagram ID appears in the source spec, GitHub Markdown, and HTML so parity can be checked. The controlling evidence remains the source paths declared by the spec, especially `README.md` and `AGENTS.md`.
++
+-
+Fit
+Project Atlas
+Sources
+Reader model
+Derivative
+Validation
+README.md
+AGENTS.md
+research_control/README.md
+What This Does
+Project Atlas gives readers a source-backed model of the project atlas. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `README.md` and `AGENTS.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+README.md
+AGENTS.md
+research_control/README.md
+Why AEther Needs It
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the project atlas, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `README.md` and related registry or control files.
+README.md
+AGENTS.md
+research_control/README.md
+How It Works
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the project atlas, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `README.md` and the related registry row before editing anything.
+README.md
+AGENTS.md
+research_control/README.md
+Objects And Authority
+The objects involved in the project atlas include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `README.md` or `AGENTS.md`.
+README.md
+AGENTS.md
+research_control/README.md
+Example
+A new contributor uses the atlas to decide whether a question belongs to ontology, claim gates, research-agent workflow, source authority, or validator operation before changing any file. The valid pattern is source-first and bounded: the operator can trace the action to `README.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+README.md
+AGENTS.md
+research_control/README.md
+Non-Example
+Invalid: citing the atlas itself as proof that an AEther-flow derivation is complete or as permission to edit generated wiki notes by hand. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `README.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+README.md
+AGENTS.md
+research_control/README.md
+Common Confusions
+Common confusions around the project atlas usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+README.md
+AGENTS.md
+research_control/README.md
+What This Does Not Authorize
+Project Atlas does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
+README.md
+AGENTS.md
+research_control/README.md
+Source Map
+The source map for the project atlas lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `README.md` and `AGENTS.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
+README.md
+AGENTS.md
+research_control/README.md
+Next Reading Path
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
+README.md
+AGENTS.md
+research_control/README.md
+All Source Materials
+README.md
+AGENTS.md
+research_control/README.md
+markdown/html-explainer-specs/source-authority-explainer.md
+research_control/design/documentation_curator_visual_atlas_contract.md
+source_materials_section

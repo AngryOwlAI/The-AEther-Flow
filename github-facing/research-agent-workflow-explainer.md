@@ -1,6 +1,25 @@
-# Research System
+# Research-Agent System
 
-The research system turns a question, handoff, or project-improvement signal into one bounded job with a role, allowed paths, validation evidence, and a recorded next state.
+The research-agent system is the governed workflow that turns tracked state, user direction, and Director decisions into one bounded AgentJob with a selected role, source restrictions, write allowlist, expected outputs, validators, completion evidence, and a handoff. It increases research discipline by making work auditable. It does not make agents autonomous proof authorities or sources of physics truth.
+
+## What This Does
+
+Research-Agent System gives readers a source-backed model of the research-agent system. It identifies the component, the work it performs inside AEther-Flow, the objects it touches, and the authority boundary that keeps explanation separate from proof or permission. The block is intentionally functional: it starts with what the mechanism does in the project and only then points to source evidence such as `AGENTS.md` and `research_control/README.md`. This lets humans and agents learn the subject without treating a generated derivative as an independent control surface.
+
+## Why AEther Needs It
+
+AEther-Flow needs this topic because the project combines speculative physics, exact-GR benchmarking, and validator-gated research operations. Without a clear account of the research-agent system, readers can collapse benchmark adoption, derivation attempts, generated documentation, and control authority into one vague claim. The atlas model keeps the reason for the component visible: it improves orientation, reproducibility, and source discipline while preserving the authority hierarchy recorded in `AGENTS.md` and related registry or control files.
+
+## System Map
+
+<!-- mermaid-diagram-id: research-agent-system-map -->
+```mermaid
+flowchart TD
+  A["Source bundle"] --> B["Research-Agent System"]
+  B["Research-Agent System"] --> C["Reader model"]
+  C["Reader model"] --> D["Source-backed output"]
+  D["Source-backed output"] --> E["Validation"]
+```
 
 ## Source Binding
 
@@ -8,103 +27,94 @@ The research system turns a question, handoff, or project-improvement signal int
 - **Related HTML:** `html/research-agent-workflow-explainer.html`
 - **Authority status:** `generated_noncanonical`
 
-## Operational Model
+## How It Works
 
-AEther-Flow is not an informal chat log. The research system exists so theoretical work, documentation work, validator repair, and memory maintenance each move through explicit control objects. A task record states the objective. A Director decision selects a role and one AgentJob. The AgentJob records allowed reads, allowed writes, forbidden paths, expected outputs, validators, and claim boundary. Completion records preserve what happened, and handoffs preserve the next state.
+The mechanism works by starting from tracked source material, applying the project rule or workflow named by the topic, producing a bounded explanatory or control artifact, and validating the result against deterministic checks. For the research-agent system, the important pattern is sequence and containment: source first, bounded operation second, derivative or task evidence third, validation last. If an operator needs to change project knowledge, the next step is to inspect `AGENTS.md` and the related registry row before editing anything.
+
+## Objects And Authority
+
+The objects involved in the research-agent system include source files, registries, role or schema contracts where relevant, generated reader surfaces, and validation commands. Authority is not uniform across those objects. Source files and registries define the project state for their lanes; generated HTML, GitHub Markdown, wiki notes, semantic extracts, and local caches orient readers but remain noncanonical. This block keeps those authority levels visible so a polished derivative cannot silently outrank `AGENTS.md` or `research_control/README.md`.
+
+| Object | Function | Authority status |
+| --- | --- | --- |
+| Source spec | Declares topic, sources, visuals, reader blocks, and output paths | Canonical Markdown source for this explainer |
+| GitHub Markdown | Native reader explanation with Mermaid source | Generated noncanonical derivative |
+| HTML explainer | Standalone visual reader surface | Generated noncanonical derivative |
+| Registries and validators | Track coverage, hashes, parity, and boundaries | Authority only for their declared control fields |
+
+## Example
+
+A Director routes one AgentJob, the execution role reads allowed sources, writes one artifact, runs validators, records a completion, and leaves the next handoff. The valid pattern is source-first and bounded: the operator can trace the action to `AGENTS.md`, inspect the relevant registry or task file, perform only the authorized change, regenerate derivatives when needed, and record validation evidence. The example is deliberately local to the project so it can be tested against actual files rather than treated as generic process advice.
+
+## Non-Example
+
+Invalid: letting a generated answer bypass AgentJob boundaries, edit forbidden paths, or promote a physics result without registered evidence. The failure mode is authority inflation: a reader takes an orientation surface, support artifact, convenience tool, or partial calculation and treats it as if it changed the project state. The correction is to return to `AGENTS.md`, inspect the controlling registry or task record, and route a bounded job when a change is actually required. This matters because local cache state, generated derivatives, and unregistered convenience notes can look operationally persuasive while still lacking the tracked control authority needed to change the repository state.
+
+## Common Confusions
+
+Common confusions around the research-agent system usually have the same form. Readers may mistake generated explainers for source authority, confuse benchmark compatibility with completed derivation, treat available tools as permissions, or assume a PASS validator means more than the validator checks. The repair is to name the exact authority lane, preserve qualifiers such as local or source-only, cite concrete source paths, and use validators as contract checks rather than as broad scientific verdicts.
+
+- Generated pages can be clearer than sources, but clarity is not authority.
+- A validator PASS means the checked contract passed; it is not a physics verdict.
+- Role or tool availability does not expand the current AgentJob allowlist.
+- Local or source-only results must keep those qualifiers.
+
+## What This Does Not Authorize
+
+Research-Agent System does not authorize ontology edits, benchmark promotion, Gate Chair verdicts, role or schema authority expansion, new write permissions, child AgentJobs, generated-output authority, or completed-GR-derivation claims. It is an explanatory and operational map only. It also does not collapse orientation into permission: even an accurate map remains evidence for navigation, not a substitute for the source file, task record, role contract, or validator named by that action. Any change to project truth must still pass through the relevant canonical source, registry row, bounded AgentJob, documentation-impact receipt, and validation sequence named by the governing sources.
 
 ## Workflow Step Inspector
 
-1. State entry: tracked program state, handoff, or improvement signal defines the next bounded problem.
-2. Director decision: the Director selects the task, role, claim boundary, and AgentJob.
-3. AgentJob contract: the job records allowed reads, writes, outputs, validators, and forbidden authority surfaces.
-4. Execution role: the task-local role record constrains role authority and expiry.
-5. Bounded execution: the agent produces only allowlisted artifacts inside the declared claim boundary.
-6. Validation: required validators test source, registry, derivative, and control consistency.
-7. Completion: the completion YAML records verdict, command evidence, output paths, and next recommendation.
-8. Handoff and registries: handoff state and control registries preserve the next state for future continuation.
+1. Inspect the declared source bundle and topic registry row.
+2. Confirm the current task or reader question belongs to this topic.
+3. Follow the source-first workflow before changing project knowledge.
+4. Regenerate GitHub, HTML, wiki, and registry derivatives only from governed sources.
+5. Run the relevant validators and preserve failures as evidence.
 
-## Evidence Path
+## Source Map
 
-Capability is not authority in this repository. An agent can be technically
-able to write a file and still be unauthorized to change that source class.
-The evidence path is what makes work inspectable: task, Director decision,
-AgentJob, execution-role record, artifacts, completion YAML, validator
-results, registry rows, and handoff state.
+The source map for the research-agent system lists the files that ground the explanation and tells the reader what each contributes. Source paths are visible in both the GitHub and HTML derivatives because generated surfaces must lead back to authority. The core source bundle for this topic includes `AGENTS.md` and `research_control/README.md`; additional files appear as source chips and in the All Source Materials section so validators can check parity.
 
-Parent-child synthesis is internal to one AgentJob. It can add analytical
-perspectives, but it does not create child AgentJobs, extra write paths, new
-claim boundaries, or independent child authority. Reviewers should therefore
-inspect the outer job contract first and treat child outputs as supporting
-evidence under that contract.
+- `AGENTS.md`
+- `research_control/README.md`
+- `research_control/AGENTS.md`
+- `.agents/schemas/AGENT_JOB_SCHEMA.md`
+- `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `registries/AGENT_JOB_REGISTRY.csv`
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`
 
-## Lifecycle Diagrams
+## Next Reading Path
 
-<!-- mermaid-diagram-id: research-system-loop -->
-```mermaid
-flowchart TD
-  State["Tracked state or signal"] --> Director["Director decision"]
-  Director --> Job["One bounded AgentJob"]
-  Job --> Role["Execution role"]
-  Role --> Decomposition["Optional internal<br/>parent-child synthesis"]
-  Decomposition --> Outputs["Allowed outputs"]
-  Outputs --> Validators["Validators and gates"]
-  Validators --> Completion["Completion record"]
-  Completion --> Handoff["Next handoff"]
-  Handoff --> State
-  Validators --> Registry["Control registries"]
-```
+The next reading path depends on the reader question. Physics-status questions should continue to ontology, exact-GR benchmark, claim gates, and the derivation roadmap. Workflow questions should continue to research-agent system, Director decisions, role routing, and project-system improvement. Documentation or trust questions should continue to source authority, memory/registry/wiki, validator workflow, roles and skills, and technical requirements before any edit is made. The safe rule is to read laterally, not forward into authority inflation: each destination answers a narrower question and points back to its own source files. When a reader cannot decide, inspect Source Authority first, then choose the workflow whose registry or control record names the required permission.
 
-<!-- mermaid-diagram-id: agentjob-lifecycle -->
-```mermaid
-stateDiagram-v2
-  [*] --> Proposed
-  Proposed --> Active: Director selects role
-  Active --> Decomposing: optional role decomposition
-  Active --> Executing: direct single role execution
-  Decomposing --> Executing: fused output path selected
-  Executing --> Validating: outputs produced
-  Validating --> Completed: validators pass
-  Validating --> Blocked: validator or boundary failure
-  Completed --> HandoffReady: completion recorded
-  Blocked --> HandoffReady: obstruction recorded
-  HandoffReady --> [*]
-```
-
-## What Progress Means Here
-
-Progress is not the same thing as promotion. A job can produce a useful theorem draft, refutation, source-extension classification, documentation reset, validator repair, or negative result. It becomes durable only through source registration, completion evidence, and validators. Strong physics status still needs claim gates.
-
-## For GitHub Readers And AI Agents
+## External AI Navigation Card
 
 You are reading a non-authoritative GitHub-facing explainer.
 
 Safe uses:
-- understand how task state becomes bounded work;
-- locate the control records that prove what happened;
-- distinguish execution evidence from scientific acceptance.
+- learn the project mechanism before inspecting sources;
+- identify which source files and registries to inspect next;
+- summarize authority boundaries without promoting claims.
 
 Before modifying project knowledge:
-- inspect `AGENTS.md`, `research_control/AGENTS.md`, and the relevant task files;
-- verify the AgentJob allowlist and role boundary;
-- run the validators named by the job.
+- inspect the relevant source file and registry row;
+- route through the appropriate research-control or project-system workflow;
+- regenerate derivatives through approved tooling;
+- run the validators named by the task.
 
 Do not:
-- write outside the AgentJob boundary;
-- treat completion as claim promotion;
-- cite generated derivatives as authority.
+- treat this generated page as physics authority;
+- treat generated HTML, wiki, PDF, semantic, Obsidian, or local cache output as independent authority;
+- bypass claim gates, validators, AgentJob boundaries, or documentation-impact receipts.
 
 ## All Source Materials
 
-- `README.md`
 - `AGENTS.md`
-- `research_control/AGENTS.md`
 - `research_control/README.md`
-- `.codex/skills/continue-research/SKILL.md`
-- `.codex/skills/improve-project-system/SKILL.md`
-- `registries/AGENT_JOB_REGISTRY.csv`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`
-- `registries/ROLE_EXECUTION_REGISTRY.csv`
-- `registries/RESEARCH_TASK_REGISTRY.csv`
+- `research_control/AGENTS.md`
 - `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
-- `research_control/templates/COMPLETION_TEMPLATE.yaml`
+- `registries/AGENT_JOB_REGISTRY.csv`
+- `registries/ROLE_EXECUTION_REGISTRY.csv`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`
