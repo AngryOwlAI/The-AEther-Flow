@@ -32,6 +32,39 @@ creation.
 If the role is provisional, the job must include `provisional_role_contract`
 with `expires_after_job_id` equal to the job ID.
 
+For every AgentJob created after `2026-06-18T15:33:00Z`, the job must also
+include `memory_preflight`. The completion record for that job must preserve a
+matching `memory_preflight` receipt.
+
+Required shape:
+
+```yaml
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json"
+      query_type: "lookup"
+      query_text: "<object-id-or-path>"
+      returned_object_ids:
+        - "<source-object-id>"
+  canonical_inspections:
+    - object_id: "<source-object-id>"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "<repo-relative-source-path>"
+      source_hash: "<sha256>"
+  authority_note: "Obsidian, wiki notes, semantic extracts, and .local are retrieval layers only and not authority."
+```
+
+Every returned object ID that influences routing, claims, source selection, or
+project-control changes must have a canonical inspection entry. `source_hash`
+must match both the named source registry row and the current file bytes at
+`canonical_path`.
+
 For every future physics research AgentJob created after
 `2026-06-17T15:46:25Z`, the job must also include:
 

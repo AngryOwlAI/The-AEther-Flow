@@ -24,6 +24,29 @@ an open-ended repository rewrite.
 1. Read `AGENTS.md`, `research_control/AGENTS.md`, relevant registries,
    `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv`, and
    `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`.
+
+   Before classifying, routing, or creating an AgentJob, run the memory
+   preflight:
+
+   ```zsh
+   .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json
+   ```
+
+   Then run at least one targeted memory query:
+
+   ```zsh
+   .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json
+   .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "<targeted phrase>" --limit 10 --json
+   ```
+
+   Use memory hits only as navigation. After any hit that influences a
+   project-system decision, inspect the canonical source file or source
+   registry row named by the hit. New AgentJobs and completions created after
+   `2026-06-18T15:33:00Z` must include a `memory_preflight` receipt with the
+   status command, status summary, query commands, returned object IDs,
+   canonical source inspections, source registries, canonical paths, and source
+   hashes. Obsidian, wiki notes, semantic extracts, and `.local/` remain
+   retrieval layers only; they are not authority.
 2. Classify current Git changes:
 
    ```zsh

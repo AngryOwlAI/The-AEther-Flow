@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import importlib.util
+import csv
+import hashlib
+import shutil
 import sys
 import tempfile
 import unittest
@@ -21,6 +24,10 @@ def load_module(name: str, filename: str):
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 class ResearchControlTests(unittest.TestCase):
@@ -206,6 +213,110 @@ class ResearchControlTests(unittest.TestCase):
             text="# Skill\n",
         )
         self.assertEqual(report.errors, [])
+
+    def memory_preflight_fixture(
+        self,
+        *,
+        include_inspection: bool = True,
+        stale_hash: bool = False,
+    ):
+        root = Path(tempfile.mkdtemp()).resolve()
+        self.addCleanup(lambda: shutil.rmtree(root, ignore_errors=True))
+        source = root / ".codex/skills/continue-research/SKILL.md"
+        source.parent.mkdir(parents=True, exist_ok=True)
+        source.write_text("# Continue Research\n", encoding="utf-8")
+        source_hash = sha256_text("# Continue Research\n")
+        registry = root / "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+        registry.parent.mkdir(parents=True, exist_ok=True)
+        with registry.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=["object_id", "path", "source_hash"])
+            writer.writeheader()
+            writer.writerow(
+                {
+                    "object_id": "MD-SKILL-CONTINUE-RESEARCH",
+                    "path": ".codex/skills/continue-research/SKILL.md",
+                    "source_hash": source_hash,
+                }
+            )
+        receipt = {
+            "status_command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json",
+            "status_summary": {
+                "vault_exists": True,
+                "memory_index_exists": True,
+                "source_object_count": 1,
+            },
+            "queries": [
+                {
+                    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-CONTINUE-RESEARCH --json",
+                    "query_type": "lookup",
+                    "query_text": "MD-SKILL-CONTINUE-RESEARCH",
+                    "returned_object_ids": ["MD-SKILL-CONTINUE-RESEARCH"],
+                }
+            ],
+            "canonical_inspections": [],
+            "authority_note": "Obsidian, semantic extracts, wiki notes, and .local are retrieval layers only and not authority.",
+        }
+        if include_inspection:
+            receipt["canonical_inspections"].append(
+                {
+                    "object_id": "MD-SKILL-CONTINUE-RESEARCH",
+                    "source_registry": "MARKDOWN_SOURCE_REGISTRY.csv",
+                    "registry_path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+                    "canonical_path": ".codex/skills/continue-research/SKILL.md",
+                    "source_hash": "stale" if stale_hash else source_hash,
+                }
+            )
+        return root, receipt
+
+    def validate_memory_preflight_fixture(self, receipt):
+        report = self.validator.ValidationReport()
+        job_row = {
+            "job_id": "AJ-TEST",
+            "created_at": "2026-06-18T15:33:00Z",
+            "started_at": "",
+            "completed_at": "",
+        }
+        self.validator.validate_memory_preflight(
+            report,
+            job_row,
+            {"memory_preflight": receipt},
+            "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+        )
+        return report
+
+    def test_memory_preflight_receipt_accepts_canonical_inspection(self) -> None:
+        root, receipt = self.memory_preflight_fixture()
+        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+            self.validator, "REGISTRY_DIR", root / "registries"
+        ):
+            report = self.validate_memory_preflight_fixture(receipt)
+        self.assertEqual(report.errors, [])
+
+    def test_memory_preflight_required_after_activation(self) -> None:
+        report = self.validator.ValidationReport()
+        self.validator.validate_memory_preflight(
+            report,
+            {"job_id": "AJ-TEST", "created_at": "2026-06-18T15:33:00Z"},
+            {},
+            "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+        )
+        self.assertTrue(any("missing memory_preflight" in error for error in report.errors))
+
+    def test_memory_preflight_requires_canonical_inspection_for_hits(self) -> None:
+        root, receipt = self.memory_preflight_fixture(include_inspection=False)
+        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+            self.validator, "REGISTRY_DIR", root / "registries"
+        ):
+            report = self.validate_memory_preflight_fixture(receipt)
+        self.assertTrue(any("lack canonical inspection" in error for error in report.errors))
+
+    def test_memory_preflight_rejects_stale_source_hash(self) -> None:
+        root, receipt = self.memory_preflight_fixture(stale_hash=True)
+        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+            self.validator, "REGISTRY_DIR", root / "registries"
+        ):
+            report = self.validate_memory_preflight_fixture(receipt)
+        self.assertTrue(any("source_hash does not match registry row" in error for error in report.errors))
 
     def test_project_control_maintainer_rejects_explanatory_section_without_overlay(self) -> None:
         report = self.validate_authority_fixture(

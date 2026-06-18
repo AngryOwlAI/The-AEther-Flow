@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import hashlib
 import importlib.util
 import sqlite3
 import sys
@@ -102,6 +104,86 @@ class ObsidianWikiTests(unittest.TestCase):
             finally:
                 conn.close()
         self.assertTrue(rows)
+
+    def test_status_reports_stale_local_retrieval_as_warning(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "markdown/source.md"
+            raw = root / ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-test.md"
+            note = root / ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-test.md"
+            semantic = root / ".local/content_semantics/markdown/md-test.txt"
+            for path in [source, raw, note, semantic]:
+                path.parent.mkdir(parents=True, exist_ok=True)
+            source.write_text("new source\n", encoding="utf-8")
+            raw.write_text("old source\n", encoding="utf-8")
+            note.write_text('object_id: "MD-TEST"\n', encoding="utf-8")
+            semantic.write_text("new source\n", encoding="utf-8")
+            source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+            semantic_hash = hashlib.sha256(semantic.read_bytes()).hexdigest()
+            registry_dir = root / "registries"
+            registry_dir.mkdir()
+
+            def write_csv(name: str, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
+                with (registry_dir / name).open("w", newline="", encoding="utf-8") as handle:
+                    writer = csv.DictWriter(handle, fieldnames=fieldnames)
+                    writer.writeheader()
+                    writer.writerows(rows)
+
+            write_csv(
+                "MARKDOWN_SOURCE_REGISTRY.csv",
+                ["object_id", "path", "format", "source_hash"],
+                [
+                    {
+                        "object_id": "MD-TEST",
+                        "path": "markdown/source.md",
+                        "format": "markdown",
+                        "source_hash": source_hash,
+                    }
+                ],
+            )
+            write_csv("TEX_SOURCE_REGISTRY.csv", ["object_id", "path", "format", "source_hash"], [])
+            write_csv("PDF_DERIVATIVE_REGISTRY.csv", ["object_id", "path", "format", "source_hash"], [])
+            write_csv("HTML_EXPLAINER_REGISTRY.csv", ["object_id", "path", "format", "source_hash"], [])
+            write_csv("WIKI_ARTIFACT_REGISTRY.csv", ["object_id", "path"], [])
+            write_csv(
+                "OBSIDIAN_VAULT_REGISTRY.csv",
+                ["object_id", "source_object_id", "vault_note_path", "vault_raw_path", "vault_index_path"],
+                [
+                    {
+                        "object_id": "VAULT-MD-TEST",
+                        "source_object_id": "MD-TEST",
+                        "vault_note_path": ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-test.md",
+                        "vault_raw_path": ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-test.md",
+                        "vault_index_path": ".local/obsidian/aether-flow-wiki/03_indexes/by-format-markdown.md",
+                    }
+                ],
+            )
+            write_csv(
+                "CONTENT_SEMANTIC_REGISTRY.csv",
+                [
+                    "object_id",
+                    "source_object_id",
+                    "extraction_status",
+                    "extracted_text_path",
+                    "content_hash",
+                ],
+                [
+                    {
+                        "object_id": "SEMANTIC-MD-TEST",
+                        "source_object_id": "MD-TEST",
+                        "extraction_status": "PASS",
+                        "extracted_text_path": ".local/content_semantics/markdown/md-test.txt",
+                        "content_hash": semantic_hash,
+                    }
+                ],
+            )
+            write_csv("OBJECT_RELATIONSHIP_REGISTRY.csv", ["object_id", "source_object_id", "target_object_id"], [])
+
+            payload = self.obsidian.status(root)
+
+        self.assertEqual(payload["freshness_status"], "WARN")
+        self.assertTrue(any("raw mirror is stale" in warning for warning in payload["freshness_warnings"]))
+        self.assertTrue(any("Memory SQLite index is missing" in warning for warning in payload["freshness_warnings"]))
 
     def test_vault_writes_declared_index_paths(self) -> None:
         rows_by_registry = self.obsidian.load_rows_by_registry(REPO_ROOT)

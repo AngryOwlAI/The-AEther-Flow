@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import fnmatch
+import hashlib
 import json
 import re
 import subprocess
@@ -247,6 +248,14 @@ LOOP_CONTROL_POLICY_ACTIVATED_AT = "2026-06-16T19:17:22Z"
 PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT = "2026-06-17T04:08:16Z"
 THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT = "2026-06-17T04:29:31Z"
 GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT = "2026-06-17T15:46:25Z"
+MEMORY_PREFLIGHT_REQUIRED_AFTER = "2026-06-18T15:33:00Z"
+
+MEMORY_PREFLIGHT_SOURCE_REGISTRIES = {
+    "MARKDOWN_SOURCE_REGISTRY.csv",
+    "TEX_SOURCE_REGISTRY.csv",
+    "PDF_DERIVATIVE_REGISTRY.csv",
+    "HTML_EXPLAINER_REGISTRY.csv",
+}
 
 DISTANCE_TO_GR_LEDGER_COLUMNS = [
     "burden_id",
@@ -596,6 +605,14 @@ def repo_path(relative_path: str) -> Path:
     return REPO_ROOT / relative_path
 
 
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def validate_relative_path(path_text: str) -> str | None:
     if not path_text:
         return None
@@ -668,6 +685,23 @@ def gr_derivation_roadmap_policy_active(
         timestamps.append(completion.get("completed_at", ""))
     return any(
         timestamp_at_or_after(value, GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT)
+        for value in timestamps
+    )
+
+
+def memory_preflight_required(
+    job_row: dict[str, str],
+    completion: dict[str, Any] | None = None,
+) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+    return any(
+        timestamp_at_or_after(value, MEMORY_PREFLIGHT_REQUIRED_AFTER)
         for value in timestamps
     )
 
@@ -1021,6 +1055,7 @@ def validate_agent_jobs(
                 reason = validate_relative_path(item.replace("**", "x").replace("*", "x"))
                 if reason:
                     report.error(f"{row['job_path']}: invalid {field_name} entry {item}: {reason}")
+        validate_memory_preflight(report, row, job, row["job_path"])
         validate_parent_child_decomposition(report, row, job)
         validate_future_physics_job_authority(report, row, job)
         if row["completion_path"]:
@@ -1075,6 +1110,149 @@ def validate_future_physics_job_authority(
             report.error(
                 f"{path_text}: future physics AgentJob may not allow direct write path {item}"
             )
+
+
+def validate_memory_preflight(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    record: dict[str, Any],
+    owner_path: str,
+) -> None:
+    if not memory_preflight_required(job_row):
+        return
+    preflight = record.get("memory_preflight")
+    if not isinstance(preflight, dict):
+        report.error(f"{owner_path}: future AgentJob record missing memory_preflight")
+        return
+
+    status_command = str(preflight.get("status_command", "")).strip()
+    if "query_memory.py status --json" not in status_command:
+        report.error(f"{owner_path}: memory_preflight.status_command must run query_memory.py status --json")
+
+    status_summary = preflight.get("status_summary")
+    if not isinstance(status_summary, dict):
+        report.error(f"{owner_path}: memory_preflight.status_summary must be a map")
+    else:
+        for field_name in ["vault_exists", "memory_index_exists", "source_object_count"]:
+            if field_name not in status_summary:
+                report.error(f"{owner_path}: memory_preflight.status_summary missing {field_name}")
+
+    authority_note = str(preflight.get("authority_note", "")).strip().lower()
+    required_terms = ["obsidian", ".local", "retrieval", "not authority"]
+    missing_terms = [term for term in required_terms if term not in authority_note]
+    if missing_terms:
+        report.error(
+            f"{owner_path}: memory_preflight.authority_note must preserve retrieval-only authority terms {missing_terms}"
+        )
+
+    queries = preflight.get("queries")
+    if not isinstance(queries, list) or not queries:
+        report.error(f"{owner_path}: memory_preflight.queries must contain at least one query receipt")
+        queries = []
+
+    returned_object_ids: set[str] = set()
+    for index, query in enumerate(queries):
+        if not isinstance(query, dict):
+            report.error(f"{owner_path}: memory_preflight.queries[{index}] must be a map")
+            continue
+        command = str(query.get("command", "")).strip()
+        query_type = str(query.get("query_type", "")).strip()
+        if "query_memory.py" not in command:
+            report.error(f"{owner_path}: memory_preflight.queries[{index}].command must run query_memory.py")
+        if query_type not in {"lookup", "search"}:
+            report.error(f"{owner_path}: memory_preflight.queries[{index}].query_type must be lookup or search")
+        if not str(query.get("query_text", "")).strip():
+            report.error(f"{owner_path}: memory_preflight.queries[{index}].query_text is required")
+        object_ids = query.get("returned_object_ids")
+        if not isinstance(object_ids, list) or not object_ids:
+            report.error(
+                f"{owner_path}: memory_preflight.queries[{index}].returned_object_ids must be nonempty"
+            )
+            continue
+        for object_id in object_ids:
+            object_text = str(object_id).strip()
+            if object_text:
+                returned_object_ids.add(object_text)
+
+    inspections = preflight.get("canonical_inspections")
+    if not isinstance(inspections, list) or not inspections:
+        report.error(f"{owner_path}: memory_preflight.canonical_inspections must be nonempty")
+        inspections = []
+
+    inspected_ids: set[str] = set()
+    for index, inspection in enumerate(inspections):
+        if not isinstance(inspection, dict):
+            report.error(f"{owner_path}: memory_preflight.canonical_inspections[{index}] must be a map")
+            continue
+        object_id = str(inspection.get("object_id", "")).strip()
+        source_registry = str(inspection.get("source_registry", "")).strip()
+        registry_path_text = str(inspection.get("registry_path", "")).strip()
+        canonical_path_text = str(inspection.get("canonical_path", "")).strip()
+        source_hash = str(inspection.get("source_hash", "")).strip()
+        if object_id:
+            inspected_ids.add(object_id)
+        for field_name, value in [
+            ("object_id", object_id),
+            ("source_registry", source_registry),
+            ("registry_path", registry_path_text),
+            ("canonical_path", canonical_path_text),
+            ("source_hash", source_hash),
+        ]:
+            if not value:
+                report.error(
+                    f"{owner_path}: memory_preflight.canonical_inspections[{index}].{field_name} is required"
+                )
+
+        if source_registry not in MEMORY_PREFLIGHT_SOURCE_REGISTRIES:
+            report.error(
+                f"{owner_path}: memory_preflight.canonical_inspections[{index}].source_registry is not an allowed source registry"
+            )
+            continue
+        expected_registry_path = f"registries/{source_registry}"
+        if registry_path_text != expected_registry_path:
+            report.error(
+                f"{owner_path}: memory_preflight.canonical_inspections[{index}].registry_path must be {expected_registry_path}"
+            )
+            continue
+        reason = validate_relative_path(canonical_path_text)
+        if reason:
+            report.error(
+                f"{owner_path}: invalid memory_preflight canonical_path {canonical_path_text}: {reason}"
+            )
+            continue
+        registry_path = repo_path(registry_path_text)
+        if not registry_path.exists():
+            report.error(f"{owner_path}: memory_preflight registry path does not exist: {registry_path_text}")
+            continue
+        rows = read_csv_rows(source_registry)
+        row = existing_by_id(rows, "object_id").get(object_id)
+        if not row:
+            report.error(
+                f"{owner_path}: memory_preflight object {object_id} not found in {source_registry}"
+            )
+            continue
+        if row.get("path", "") != canonical_path_text:
+            report.error(
+                f"{owner_path}: memory_preflight canonical_path does not match registry row for {object_id}"
+            )
+        if row.get("source_hash", "") != source_hash:
+            report.error(
+                f"{owner_path}: memory_preflight source_hash does not match registry row for {object_id}"
+            )
+        canonical_path = repo_path(canonical_path_text)
+        if not canonical_path.exists():
+            report.error(f"{owner_path}: memory_preflight canonical path does not exist: {canonical_path_text}")
+            continue
+        if source_hash and sha256_file(canonical_path) != source_hash:
+            report.error(
+                f"{owner_path}: memory_preflight source_hash is stale for {canonical_path_text}"
+            )
+
+    missing_inspections = sorted(returned_object_ids - inspected_ids)
+    if missing_inspections:
+        report.error(
+            f"{owner_path}: memory_preflight returned object IDs lack canonical inspection {missing_inspections}"
+        )
 
 
 def _listish_values(value: Any) -> list[str]:
@@ -1577,6 +1755,7 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     command_results = completion.get("command_results", [])
     if not isinstance(command_results, list) or not command_results:
         report.error(f"{path.relative_to(REPO_ROOT).as_posix()}: missing command_results")
+    validate_memory_preflight(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
 
     job_path_text = job_row.get("job_path", "")
     if not job_path_text:

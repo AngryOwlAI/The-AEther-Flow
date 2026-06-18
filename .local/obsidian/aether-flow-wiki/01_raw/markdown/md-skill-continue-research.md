@@ -17,6 +17,31 @@ skills provide procedures, and gates control claim promotion.
 ## Workflow
 
 1. Read `AGENTS.md` and `research_control/AGENTS.md`.
+
+   Before any Director routing decision, AgentJob creation, or physics
+   claim/control conclusion, run the memory preflight:
+
+   ```zsh
+   .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json
+   ```
+
+   Then run at least one targeted memory query:
+
+   ```zsh
+   .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json
+   .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "<targeted phrase>" --limit 10 --json
+   ```
+
+   Use the memory system only as navigation. After any memory hit that
+   influences routing, claims, source selection, or project-control changes,
+   inspect the canonical source file or the source registry row named by the
+   hit. New AgentJobs and completions created after
+   `2026-06-18T15:33:00Z` must include a `memory_preflight` receipt with the
+   status command, status summary, query commands, returned object IDs,
+   canonical source inspections, source registries, canonical paths, and source
+   hashes. Obsidian, wiki notes, semantic extracts, and `.local/` remain
+   retrieval layers only; they are not authority.
+
 2. Resolve tracked state and request the Director context packet:
 
    ```zsh

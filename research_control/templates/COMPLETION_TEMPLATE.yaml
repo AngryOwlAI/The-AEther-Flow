@@ -11,6 +11,25 @@ command_results:
   - "command | exit_code=0 | status=pass"
 validation_status: "PASS"
 verdict: ""
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json"
+      query_type: "lookup"
+      query_text: "<object-id-or-path>"
+      returned_object_ids:
+        - "<source-object-id>"
+  canonical_inspections:
+    - object_id: "<source-object-id>"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "<repo-relative-source-path>"
+      source_hash: "<sha256>"
+  authority_note: "Obsidian, wiki notes, semantic extracts, and .local are retrieval layers only and not authority."
 distance_to_gr_status:
   - burden: "Source ontology primitives"
     status: ""

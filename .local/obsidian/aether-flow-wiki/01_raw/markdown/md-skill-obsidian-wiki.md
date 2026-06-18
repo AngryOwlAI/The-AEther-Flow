@@ -50,3 +50,9 @@ Query the memory system:
 .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-README --json
 .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "Lorentzian metric" --formats tex,pdf --limit 10 --json
 ```
+
+`status --json` reports `freshness_status` and `freshness_warnings`. Missing or
+stale Obsidian notes, raw mirrors, semantic extracts, or the SQLite memory
+index are retrieval-layer warnings only. They do not make Obsidian or `.local/`
+authoritative and do not replace inspection of registered source files and CSV
+registry rows.

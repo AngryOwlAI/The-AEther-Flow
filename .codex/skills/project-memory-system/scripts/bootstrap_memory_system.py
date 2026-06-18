@@ -29,6 +29,7 @@ if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
 
 from obsidian_wiki_lib import (  # noqa: E402
     GENERATED_REGISTRY_COLUMNS as OBSIDIAN_GENERATED_REGISTRY_COLUMNS,
+    local_retrieval_warnings,
     write_generated_registries,
 )
 from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
@@ -2358,6 +2359,11 @@ def validate_tracked_local_noise(report: ValidationReport) -> None:
             report.error(f"tracked local noise in canonical lane: {line}")
 
 
+def validate_local_retrieval_freshness(report: ValidationReport) -> None:
+    for warning in local_retrieval_warnings(REPO_ROOT):
+        report.warning(f"Local retrieval freshness: {warning}")
+
+
 def validate_all() -> ValidationReport:
     report = ValidationReport()
     validate_columns(report)
@@ -2377,6 +2383,7 @@ def validate_all() -> ValidationReport:
     validate_wiki_registry(report, rows_by_registry)
     validate_file_object_registry(report, rows_by_registry)
     validate_folder_map(report, rows_by_registry)
+    validate_local_retrieval_freshness(report)
     validate_tracked_local_noise(report)
     return report
 

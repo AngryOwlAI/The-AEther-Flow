@@ -1215,6 +1215,81 @@ def lint_vault(repo_root: Path, vault: Path, require_index: bool = False) -> lis
     return issues
 
 
+def local_retrieval_warnings(
+    repo_root: Path,
+    vault: Path | None = None,
+    index_path: Path | None = None,
+) -> list[str]:
+    warnings: list[str] = []
+    rows_by_registry = load_rows_by_registry(repo_root)
+    vault_path = vault or vault_root(repo_root)
+    index = index_path or memory_index_path(repo_root)
+    source_rows = source_rows_with_registry(rows_by_registry)
+    obsidian_by_source = {
+        row.get("source_object_id", ""): row
+        for row in rows_by_registry.get("OBSIDIAN_VAULT_REGISTRY.csv", [])
+    }
+    semantic_by_source = {
+        row.get("source_object_id", ""): row
+        for row in rows_by_registry.get("CONTENT_SEMANTIC_REGISTRY.csv", [])
+    }
+
+    if not vault_path.exists():
+        warnings.append(f"Obsidian vault is missing: {rel_to_repo(repo_root, vault_path) if vault_path.is_absolute() and repo_root in vault_path.parents else vault_path.as_posix()}")
+    else:
+        for row in source_rows:
+            source_id = row.get("object_id", "")
+            vault_row = obsidian_by_source.get(source_id)
+            if not vault_row:
+                warnings.append(f"Obsidian vault registry row is missing for {source_id}")
+                continue
+            note_path = repo_root / vault_row.get("vault_note_path", "")
+            raw_path = repo_root / vault_row.get("vault_raw_path", "")
+            index_note_path = repo_root / vault_row.get("vault_index_path", "")
+            source_path = repo_root / row.get("path", "")
+            if not note_path.exists():
+                warnings.append(f"Obsidian vault note is missing for {source_id}: {vault_row.get('vault_note_path', '')}")
+            if source_path.exists():
+                if not raw_path.exists():
+                    warnings.append(f"Obsidian raw mirror is missing for {source_id}: {vault_row.get('vault_raw_path', '')}")
+                elif sha256_file(raw_path) != sha256_file(source_path):
+                    warnings.append(f"Obsidian raw mirror is stale for {source_id}: {vault_row.get('vault_raw_path', '')}")
+            if not index_note_path.exists():
+                warnings.append(f"Obsidian format index is missing for {source_id}: {vault_row.get('vault_index_path', '')}")
+
+            semantic_row = semantic_by_source.get(source_id)
+            if not semantic_row:
+                warnings.append(f"Content semantic registry row is missing for {source_id}")
+                continue
+            text_path = repo_root / semantic_row.get("extracted_text_path", "")
+            if semantic_row.get("extraction_status") in {"PASS", "EMPTY"}:
+                if not text_path.exists():
+                    warnings.append(f"Content semantic text is missing for {source_id}: {semantic_row.get('extracted_text_path', '')}")
+                elif sha256_file(text_path) != semantic_row.get("content_hash", ""):
+                    warnings.append(f"Content semantic text is stale for {source_id}: {semantic_row.get('extracted_text_path', '')}")
+
+    if not index.exists():
+        warnings.append(f"Memory SQLite index is missing: {rel_to_repo(repo_root, index) if index.is_absolute() and repo_root in index.parents else index.as_posix()}")
+    else:
+        index_mtime = index.stat().st_mtime
+        input_paths: list[Path] = []
+        for name in SOURCE_REGISTRY_NAMES + [
+            "WIKI_ARTIFACT_REGISTRY.csv",
+            "OBSIDIAN_VAULT_REGISTRY.csv",
+            "CONTENT_SEMANTIC_REGISTRY.csv",
+            "OBJECT_RELATIONSHIP_REGISTRY.csv",
+        ]:
+            input_paths.append(registry_path(repo_root, name))
+        for row in source_rows:
+            input_paths.append(repo_root / row.get("path", ""))
+        for row in rows_by_registry.get("CONTENT_SEMANTIC_REGISTRY.csv", []):
+            input_paths.append(repo_root / row.get("extracted_text_path", ""))
+        newest_input = max((path.stat().st_mtime for path in input_paths if path.exists()), default=0)
+        if newest_input > index_mtime + 1:
+            warnings.append("Memory SQLite index is older than one or more registered source, registry, or semantic inputs")
+    return warnings
+
+
 def registry_rows_for_index(repo_root: Path) -> list[tuple[str, dict[str, str]]]:
     rows_by_registry = load_rows_by_registry(repo_root)
     output: list[tuple[str, dict[str, str]]] = []
@@ -1414,6 +1489,7 @@ def status(repo_root: Path, vault: Path | None = None, index_path: Path | None =
     vault_path = vault or vault_root(repo_root)
     index = index_path or memory_index_path(repo_root)
     rows_by_registry = load_rows_by_registry(repo_root)
+    freshness_warnings = local_retrieval_warnings(repo_root, vault_path, index)
     return {
         "vault_path": rel_to_repo(repo_root, vault_path) if vault_path.exists() else vault_path.as_posix(),
         "vault_exists": vault_path.exists(),
@@ -1423,5 +1499,7 @@ def status(repo_root: Path, vault: Path | None = None, index_path: Path | None =
         "vault_row_count": len(rows_by_registry.get("OBSIDIAN_VAULT_REGISTRY.csv", [])),
         "semantic_row_count": len(rows_by_registry.get("CONTENT_SEMANTIC_REGISTRY.csv", [])),
         "relationship_row_count": len(rows_by_registry.get("OBJECT_RELATIONSHIP_REGISTRY.csv", [])),
+        "freshness_status": "PASS" if not freshness_warnings else "WARN",
+        "freshness_warnings": freshness_warnings,
         "lint_issues": lint_vault(repo_root, vault_path) if vault_path.exists() else [],
     }

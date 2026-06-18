@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `skill_contract`
 - Authority status: `project_control`
 - Owner skill: `obsidian-wiki`
-- Source hash: `c38ca75812a57a3f71e4274ee38cbacd7854775f8a09ae7592addeb9cd0f4fe3`
+- Source hash: `69417f268d37571144ce2203783cfb569e8b2ae7e71126752ce0735c2305d2e9`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-10T02:34:32Z`
+- Last validated at: `2026-06-18T15:47:47Z`

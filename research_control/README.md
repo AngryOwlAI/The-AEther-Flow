@@ -77,6 +77,29 @@ full `M_src` or `g_eff` construction.
 Tracked files under `research_control/` are authority. `.local/` prompts,
 logs, previews, and run caches are optional convenience artifacts only.
 
+## Memory Preflight
+
+Future continuation and project-system decisions must use the memory system as
+a disciplined navigation instrument before routing or AgentJob creation. The
+required preflight is:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json
+```
+
+followed by at least one targeted `lookup` or `search` query. Any memory hit
+that influences routing, claim language, source selection, or project-control
+changes must be verified by inspecting the named registered source file or CSV
+registry row. AgentJobs and completions created after
+`2026-06-18T15:33:00Z` must record the `memory_preflight` receipt: status
+summary, query commands, returned object IDs, canonical source inspections,
+source registries, canonical paths, and source hashes.
+
+Obsidian notes, wiki notes, content-semantic extracts, the SQLite memory index,
+and `.local/` files remain retrieval layers only. Stale local retrieval state
+is a validator warning, not authority and not a physics or project-control
+claim.
+
 ## Novel Datum Acquisition
 
 Many blockers in this project are expected to involve data, metrics, witness

@@ -2,14 +2,14 @@
 object_id: "MD-SKILL-OBSIDIAN-WIKI"
 format: "markdown"
 source_path: ".codex/skills/obsidian-wiki/SKILL.md"
-source_hash: "c38ca75812a57a3f71e4274ee38cbacd7854775f8a09ae7592addeb9cd0f4fe3"
+source_hash: "69417f268d37571144ce2203783cfb569e8b2ae7e71126752ce0735c2305d2e9"
 authority_status: "project_control"
 role: "skill_contract"
 owner_skill: "obsidian-wiki"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-skill-obsidian-wiki.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-skill-obsidian-wiki.md"
-content_hash: "c38ca75812a57a3f71e4274ee38cbacd7854775f8a09ae7592addeb9cd0f4fe3"
+content_hash: "69417f268d37571144ce2203783cfb569e8b2ae7e71126752ce0735c2305d2e9"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SKILL-OBSIDIAN-WIKI"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `c38ca75812a57a3f71e4274ee38cbacd7854775f8a09ae7592addeb9cd0f4fe3`
+- Content hash: `69417f268d37571144ce2203783cfb569e8b2ae7e71126752ce0735c2305d2e9`
 - Extracted text path: `.local/content_semantics/markdown/md-skill-obsidian-wiki.txt`
-- Character count: `1473`
+- Character count: `1803`
 
 ## Relationships
 
