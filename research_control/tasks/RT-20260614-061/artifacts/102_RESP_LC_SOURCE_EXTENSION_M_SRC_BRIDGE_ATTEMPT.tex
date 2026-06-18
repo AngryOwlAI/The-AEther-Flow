@@ -1,0 +1,268 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mloc}{\mathcal{M}_{\mathrm{src}}^{\mathrm{loc},+}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\XiR}{\Xi_X^R}
+\newcommand{\SX}{S_X}
+\newcommand{\Splus}{S_X^+}
+\newcommand{\PhiU}{\Phi_{U_X}}
+\newcommand{\Cexact}{\mathcal{C}^{=}_{\mathrm{loc}}}
+\newcommand{\BMsrc}{\mathcal{B}^{+}_{M_{\mathrm{src}}}}
+\newcommand{\AtlasGlue}{\mathsf{AtlasGlue}_{\mathrm{src}}^{+}}
+\newcommand{\ReadLC}{\mathsf{Read}_{\mathrm{lc}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{attempt}{Bridge attempt}
+\newtheorem{finding}{Finding}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{status}{Status}
+\newtheorem{controlrule}{Control rule}
+
+\title{Resp\_lc Source-Extension M\_src Bridge Attempt}
+\author{The AEther-Flow Research Project}
+\date{2026-06-18}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Candidate Constructor packet for
+\texttt{RT-20260614-061}. It executes one bounded bridge attempt
+targeting \(\Msrc\) after the Gate Chair decision in
+\texttt{RT-20260614-060} adopted \(\XiR\) only as admissible
+source-extension data for \(\RespLC\) continuation.
+
+This artifact is not an adoption of \(\Msrc\), not \(\geff\), not
+matter coupling, not Einstein equations, not benchmark evidence, not
+Gate Chair closure, and not completed-derivation evidence. It does not
+claim future source-extension impossibility and does not reject the
+global theory.
+
+\section{Input Data}
+
+The retained source-localization input is the exact-branch
+source observer/readout tuple
+\[
+  \SX=(U_X,[n]_{U_X},\PhiU,T^n,T^\Phi),
+\]
+where \(U_X\), \([n]_{U_X}\), \(\PhiU\), \(T^n\), and \(T^\Phi\)
+are draft/control source-localization data retained from the audited
+\(\ObsLocLC\) branch. The adopted response-extension input is
+\[
+  \XiR=(O_X^R,N_X^R,K_X^R,o_X^R,\nu_X^R,\kappa_X^R),
+\]
+and later packets may read
+\[
+  \Splus=(\SX,\XiR)
+\]
+only as response-extension input. The old tuple \(\SX\) alone still
+does not determine \(o_X^R\), \(\nu_X^R\), or \(\kappa_X^R\).
+
+\section{Candidate Map}
+
+\begin{definition}[Response-labelled source prechart]
+For \(a\in U_X\), define the local source prechart
+\[
+  \chi_X^+(a)=
+  \bigl(\PhiU(a),[n]_{U_X},o_X^R,\nu_X^R,
+  \kappa_X^R([\PhiU(a)])\bigr),
+\]
+where every component is read as source syntax. The expression
+\(\kappa_X^R([\PhiU(a)])\) means that the response-token map is applied
+to the local source readout-token class determined by \(\PhiU(a)\).
+\end{definition}
+
+\begin{definition}[Local source-chart germ]
+Define the local response-labelled source-chart germ
+\[
+  \Mloc =
+  (U_X,\chi_X^+,\Cexact,T^n,T^\Phi,\XiR).
+\]
+This object records one exact-branch source patch, one source prechart,
+the exact certificate family, exact transport, and the adopted
+response-extension datum.
+\end{definition}
+
+\begin{attempt}[Bridge map toward \(\Msrc\)]
+The attempted bridge map is
+\[
+  \BMsrc(\Splus)=\Mloc.
+\]
+It is a candidate map only to a local source-chart germ, not to a full
+source manifold.
+\end{attempt}
+
+\begin{lemma}[Source-purity of the local chart germ]
+Under the source-symbol reading fixed by the prior adoption decision,
+\(\Mloc\) is built from \(\Splus\), the retained exact
+\(\ObsLocLC\) source-localization tuple, and exact certificate
+transport. It does not use a target metric, target proper time,
+target observer protocol, target calibration, benchmark rank,
+validation status, role authority, or generated-derivative visibility.
+\end{lemma}
+
+\begin{proof}
+The carrier \(U_X\), normal-orbit token \([n]_{U_X}\), readout
+\(\PhiU\), and transports \(T^n,T^\Phi\) are inherited from the
+audited source-localization branch. The response entries
+\(o_X^R,\nu_X^R,\kappa_X^R\) are read only as the adopted
+source-extension datum \(\XiR\). The defining formula for
+\(\chi_X^+\) contains no metric tensor, clock functional, causal cone,
+empirical observer protocol, benchmark solution, matter-coupling law,
+validation receipt, role label, or generated derivative. Therefore the
+local chart germ is source-pure as draft/control syntax under the
+stated reading.
+\end{proof}
+
+\section{Why This Is Not \(\Msrc\)}
+
+\begin{finding}[Constructive progress]
+The bridge attempt no longer fails at the older \(\RespLC\) selector
+absence. The adopted \(\XiR\) supplies explicit response-extension
+labels, and the exact \(\ObsLocLC\) branch supplies source-local
+readout and transport. Together they define a local
+response-labelled source-chart germ.
+\end{finding}
+
+\begin{obstruction}[Missing source atlas-gluing primitive]
+A full \(\Msrc\) object requires more than one local chart germ. It
+requires a source-only rule
+\[
+  \AtlasGlue
+\]
+that supplies patch coverage, overlap recognition, transition maps,
+and finite-variation compatibility for independently constructed
+response-labelled source patches
+\(\Mloc_X,\Mloc_Y,\ldots\). No such rule is present in \(\Splus\), in
+the exact \(\ObsLocLC\) branch, or in the adoption decision for
+\(\XiR\).
+\end{obstruction}
+
+\begin{obstruction}[No topology, smoothness, or transition law]
+The local germ does not define a source topology, differentiable
+structure, transition cocycle, quotient-stable overlap relation, or
+variation-stable chart equivalence. Importing any of those objects
+from a target manifold, target metric, target chart, benchmark
+solution, empirical calibration, or candidate reconstruction would
+violate the no-target-import boundary.
+\end{obstruction}
+
+\begin{obstruction}[No metric law follows]
+The local chart germ is not an effective Lorentzian metric. It does
+not define signature, interval scale, causal cones, metric
+compatibility, matter response, stress-energy coupling, or field
+equations. Therefore no \(\geff\), matter coupling, or Einstein
+equation claim follows.
+\end{obstruction}
+
+\section{Bridge Attempt Status}
+
+\begin{status}[Candidate map attempted]
+The attempted candidate map is
+\[
+  \BMsrc:\Splus\mapsto
+  (U_X,\chi_X^+,\Cexact,T^n,T^\Phi,\XiR).
+\]
+This map succeeds only as a draft/control local source-chart germ.
+\end{status}
+
+\begin{status}[Missing primitive]
+The smallest named missing primitive for a full source-manifold claim
+is \(\AtlasGlue\): a source-only atlas-gluing and
+transition-compatibility rule for overlapping response-labelled source
+patches. An equivalent theorem eliminating the need for
+\(\AtlasGlue\) would also be admissible, but no such theorem is
+supplied here.
+\end{status}
+
+\begin{status}[Completion verdict]
+The bridge attempt is completed as a local chart-germ result with
+full \(\Msrc\) blocked by a missing atlas-gluing primitive. This is
+new draft/control mathematical payload, not claim promotion.
+\end{status}
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Retained only as exact-branch source-localization input; no robustness promotion is supplied. \\
+Resp\_lc & Uses adopted \(\XiR\) only as admissible source-extension data in \(\Splus\); the old \(\SX\)-only obstruction remains valid. \\
+M\_src & Local source-chart germ supplied as draft/control; full \(\Msrc\) remains blocked by missing \(\AtlasGlue\). \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; \(\kappa_X^R\) remains response-token semantics and not a coupling law. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Unchanged; no chart-gluing or variation-stable atlas theorem is supplied. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No closure or suspension verdict is supplied. \\
+Current route freeze or hard-fail status & Not globally hard-failed; the route narrows to a local chart germ plus missing source-atlas gluing. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}.
+The child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_bridge\_attempt.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_bridge\_attempt.yaml}.
+\end{itemize}
+The conflict review is
+\texttt{parent\_conflict\_review\_resp\_lc\_m\_src\_bridge\_attempt.yaml}
+and found no blocking conflict. The fusion notes are
+\texttt{parent\_fusion\_notes\_resp\_lc\_m\_src\_bridge\_attempt.md}.
+
+\section{Next Route}
+
+The logical next step is one bounded Smuggling Auditor review of
+\(\BMsrc\), \(\Mloc\), and the \(\AtlasGlue\) missing-primitive
+boundary. That audit should test hidden target-manifold import,
+proper-time or calibration import, empirical observer-protocol import,
+metric-scale import, exact-branch inflation, response-label overread,
+validation-authority inflation, and bridge-ladder collapse.
+
+\section{Claim Boundary}
+
+This packet does not authorize canonical ontology edits, \(\Msrc\)
+adoption, \(\geff\), matter coupling, Einstein equations, benchmark
+promotion, Gate Chair closure, completed-derivation language, future
+source-extension impossibility, or global theory rejection.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{handoff0102}
+The AEther-Flow Research Project. (2026, June 18). \emph{Handoff
+0102} [Internal research-control handoff].
+
+\bibitem{adoption}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension human-gate adoption decision} [Internal
+research-control artifact].
+
+\bibitem{obsloc-stress}
+The AEther-Flow Research Project. (2026, June 16). \emph{Audited
+ObsLoc observer-readout bridge map Refuter stress test} [Internal
+research-control artifact].
+
+\end{thebibliography}
+
+\end{document}
