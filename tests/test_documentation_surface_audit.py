@@ -395,6 +395,39 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             any("must not appear before the first section when authority footer is declared" in error for error in report.errors)
         )
 
+    def test_github_facing_reader_scope_rejects_top_duplicate(self) -> None:
+        report = self.audit.AuditReport()
+        self.audit.check_markdown_authority_footer_guard(
+            report,
+            relative_page="github-facing/example.md",
+            page_text=(
+                "# Example\n\n"
+                "Reader scope: duplicate top boundary.\n\n"
+                "## Main\n\nSubject first.\n\n"
+                "## Reader Scope\n\nReader scope: final boundary.\n\n"
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not change authority.\n"
+            ),
+        )
+        self.assertTrue(any("must not remain above the Reader Scope section" in error for error in report.errors))
+
+    def test_github_facing_reader_scope_rejects_nonadjacent_footer_marker(self) -> None:
+        report = self.audit.AuditReport()
+        self.audit.check_markdown_authority_footer_guard(
+            report,
+            relative_page="github-facing/example.md",
+            page_text=(
+                "# Example\n\n"
+                "## Reader Scope\n\nReader scope: final boundary.\n\n"
+                "## Source Materials\n\n- `README.md`\n\n"
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not change authority.\n"
+            ),
+        )
+        self.assertTrue(any("must immediately precede authority_footer marker" in error for error in report.errors))
+
     def test_github_facing_explainer_accepts_curator_specific_section_shape(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -514,6 +547,47 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             report = self.audit.AuditReport()
             self.audit.check_html_authority_footer_guards(report, root)
         self.assertTrue(any("must appear only in authority_footer" in error for error in report.errors))
+
+    def test_html_reader_scope_accepts_footer_adjacent_section(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            html_dir = root / "html"
+            html_dir.mkdir()
+            (html_dir / "example.html").write_text(
+                "<!doctype html><main><p>Subject first.</p>"
+                '<section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">'
+                '<h2 id="reader-scope-title">Reader Scope</h2>'
+                "<p>Reader scope: final boundary.</p>"
+                "</section></main>"
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not change authority."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.audit.AuditReport()
+            self.audit.check_html_authority_footer_guards(report, root)
+        self.assertEqual(report.errors, [])
+
+    def test_html_reader_scope_rejects_top_duplicate(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            html_dir = root / "html"
+            html_dir.mkdir()
+            (html_dir / "example.html").write_text(
+                "<!doctype html><header>Reader scope: duplicate top boundary.</header>"
+                "<main><p>Subject first.</p>"
+                '<section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">'
+                '<h2 id="reader-scope-title">Reader Scope</h2>'
+                "<p>Reader scope: final boundary.</p>"
+                "</section></main>"
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not change authority."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.audit.AuditReport()
+            self.audit.check_html_authority_footer_guards(report, root)
+        self.assertTrue(any("Reader scope text must appear only in reader_scope section" in error for error in report.errors))
 
 
 if __name__ == "__main__":

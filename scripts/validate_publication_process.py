@@ -122,6 +122,7 @@ SVG_NAMESPACE_MARKERS = (
 HEADING_RE = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
 MERMAID_BLOCK_RE = re.compile(r"(?ms)^```mermaid\s+(.*?)^```")
 MARKDOWN_AUTHORITY_FOOTER_MARKER = "<!-- explainer-control: authority_footer -->"
+MARKDOWN_READER_SCOPE_HEADING = "Reader Scope"
 MARKDOWN_AUTHORITY_FOOTER_HEADINGS = {
     "Source Binding And Authority",
 }
@@ -135,6 +136,11 @@ HTML_AUTHORITY_FOOTER_RE = re.compile(
     r"<footer\b[^>]*data-explainer-control\s*=\s*[\"']authority_footer[\"'][^>]*>.*?</footer>",
     re.IGNORECASE | re.DOTALL,
 )
+HTML_READER_SCOPE_SECTION_RE = re.compile(
+    r"<section\b[^>]*data-explainer-control\s*=\s*[\"']reader_scope[\"'][^>]*>.*?</section>",
+    re.IGNORECASE | re.DOTALL,
+)
+READER_SCOPE_PHRASE_RE = re.compile(r"\bReader scope\s*:", re.IGNORECASE)
 
 
 @dataclass
@@ -221,12 +227,84 @@ def markdown_declares_authority_footer(text: str) -> bool:
     return bool(MARKDOWN_AUTHORITY_FOOTER_HEADINGS & headings)
 
 
+def validate_markdown_reader_scope_placement(
+    brief_id: str,
+    github_text: str,
+    report: Report,
+) -> None:
+    reader_scope_headings = [
+        match for match in HEADING_RE.finditer(github_text) if match.group(1).strip() == MARKDOWN_READER_SCOPE_HEADING
+    ]
+    if not reader_scope_headings:
+        return
+    if len(reader_scope_headings) > 1:
+        report.error(f"{brief_id}: GitHub Markdown must declare at most one Reader Scope section")
+    if MARKDOWN_AUTHORITY_FOOTER_MARKER not in github_text:
+        report.error(f"{brief_id}: GitHub Reader Scope section requires authority_footer marker")
+        return
+
+    marker_index = github_text.find(MARKDOWN_AUTHORITY_FOOTER_MARKER)
+    headings_before_marker = list(HEADING_RE.finditer(github_text[:marker_index]))
+    if not headings_before_marker or headings_before_marker[-1].group(1).strip() != MARKDOWN_READER_SCOPE_HEADING:
+        report.error(f"{brief_id}: GitHub Reader Scope section must immediately precede authority_footer marker")
+        return
+
+    scope_heading = headings_before_marker[-1]
+    scope_text = github_text[scope_heading.end() : marker_index]
+    if not READER_SCOPE_PHRASE_RE.search(scope_text):
+        report.error(f"{brief_id}: GitHub Reader Scope section is missing visible 'Reader scope:' boundary text")
+    if READER_SCOPE_PHRASE_RE.search(github_text[: scope_heading.start()]):
+        report.error(f"{brief_id}: GitHub Reader scope text must not remain above the Reader Scope section")
+
+
+def validate_html_reader_scope_placement(
+    brief_id: str,
+    html_text: str,
+    report: Report,
+) -> None:
+    reader_scope_blocks = list(HTML_READER_SCOPE_SECTION_RE.finditer(html_text))
+    if "reader_scope" in html_text and not reader_scope_blocks:
+        report.error(f"{brief_id}: HTML reader_scope control must be on a section element")
+        return
+    if not reader_scope_blocks:
+        return
+    if len(reader_scope_blocks) > 1:
+        report.error(f"{brief_id}: HTML must declare at most one reader_scope section")
+
+    footer_blocks = list(HTML_AUTHORITY_FOOTER_RE.finditer(html_text))
+    if not footer_blocks:
+        report.error(f"{brief_id}: HTML reader_scope section requires authority_footer footer")
+        return
+
+    reader_scope_block = reader_scope_blocks[-1]
+    authority_footer = footer_blocks[0]
+    if reader_scope_block.start() > authority_footer.start():
+        report.error(f"{brief_id}: HTML reader_scope section must appear before authority_footer")
+        return
+
+    between = html_text[reader_scope_block.end() : authority_footer.start()].strip().lower()
+    if between not in {"", "</main>"}:
+        report.error(f"{brief_id}: HTML reader_scope section must be immediately before authority_footer")
+
+    section_text = reader_scope_block.group(0)
+    if not re.search(r"<h2\b[^>]*>\s*Reader Scope\s*</h2>", section_text, re.IGNORECASE):
+        report.error(f"{brief_id}: HTML reader_scope section must use a Reader Scope h2")
+    if not READER_SCOPE_PHRASE_RE.search(section_text):
+        report.error(f"{brief_id}: HTML reader_scope section is missing visible 'Reader scope:' boundary text")
+    outside_scope = HTML_READER_SCOPE_SECTION_RE.sub("", html_text)
+    if READER_SCOPE_PHRASE_RE.search(outside_scope):
+        report.error(f"{brief_id}: HTML Reader scope text must appear only in reader_scope section")
+
+
 def validate_authority_footer_placement(
     brief_id: str,
     github_text: str,
     html_text: str,
     report: Report,
 ) -> None:
+    validate_markdown_reader_scope_placement(brief_id, github_text, report)
+    validate_html_reader_scope_placement(brief_id, html_text, report)
+
     if markdown_declares_authority_footer(github_text):
         if not contains_full_authority_marker(github_text):
             report.error(f"{brief_id}: GitHub authority footer is missing generated-noncanonical paragraph")

@@ -67,6 +67,32 @@ reader-facing label. The control marker is the stable deterministic hook. Once
 the hook is present, validators must reject moving the full
 generated-noncanonical paragraph back into the opening block.
 
+## Reader Scope Footer Hook
+
+For Reader Scope footer-relocation revisions, every revised GitHub-facing page
+must use an explicit bottom section:
+
+```markdown
+## Reader Scope
+
+Reader scope: ...
+
+<!-- explainer-control: authority_footer -->
+## Source Binding And Authority
+```
+
+`## Reader Scope` must immediately precede the authority-footer marker. The
+full `Reader scope:` boundary text must not remain above the first subject
+section after the page declares this section. This is a reader contract and
+final boundary check, not a main article destination; section navigation should
+omit it unless the page-specific publication brief requires a visible route to
+that final boundary.
+
+The validator guard is opt-in during the staged relocation. Legacy pages that
+have not yet declared `## Reader Scope` remain valid until their migration
+packet moves the text. Once the section is declared, the duplicate top
+`Reader scope:` pattern is a regression.
+
 ## Publication Standard
 
 The Curator chooses the Markdown shape from the brief. A page may be an

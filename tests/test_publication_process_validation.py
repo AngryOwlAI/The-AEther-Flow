@@ -166,6 +166,99 @@ class PublicationProcessValidatorTests(unittest.TestCase):
             any("HTML generated-noncanonical paragraph must appear only in authority_footer" in error for error in report.errors)
         )
 
+    def test_github_reader_scope_accepts_bottom_section(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "github-facing/test.md").write_text(
+                "# Test Page\n\n"
+                "Subject first. This generated noncanonical page does not authorize changes.\n\n"
+                "## Article Shape\n\nUses `README.md` and `AGENTS.md`.\n\n"
+                "## Source Materials\n\n- `README.md`\n- `AGENTS.md`\n\n"
+                "## Reader Scope\n\nReader scope: fixture boundary only.\n\n"
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not authorize changes.\n",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertEqual(report.errors, [])
+
+    def test_github_reader_scope_rejects_top_duplicate(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "github-facing/test.md").write_text(
+                "# Test Page\n\n"
+                "Reader scope: duplicate top boundary.\n\n"
+                "## Article Shape\n\nUses `README.md` and `AGENTS.md`.\n\n"
+                "## Source Materials\n\n- `README.md`\n- `AGENTS.md`\n\n"
+                "## Reader Scope\n\nReader scope: fixture boundary only.\n\n"
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not authorize changes.\n",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(any("must not remain above the Reader Scope section" in error for error in report.errors))
+
+    def test_github_reader_scope_rejects_nonadjacent_authority_footer(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "github-facing/test.md").write_text(
+                "# Test Page\n\n"
+                "Subject first. This generated noncanonical page does not authorize changes.\n\n"
+                "## Article Shape\n\nUses `README.md` and `AGENTS.md`.\n\n"
+                "## Reader Scope\n\nReader scope: fixture boundary only.\n\n"
+                "## Source Materials\n\n- `README.md`\n- `AGENTS.md`\n\n"
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not authorize changes.\n",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(any("must immediately precede authority_footer marker" in error for error in report.errors))
+
+    def test_html_reader_scope_accepts_footer_adjacent_section(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "html/test.html").write_text(
+                '<!doctype html><meta name="aether-flow-human-visual-only" content="true">'
+                "<main><p>README.md AGENTS.md</p>"
+                '<section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">'
+                '<h2 id="reader-scope-title">Reader Scope</h2>'
+                "<p>Reader scope: fixture boundary only.</p>"
+                "</section></main>"
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not authorize changes."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertEqual(report.errors, [])
+
+    def test_html_reader_scope_rejects_top_duplicate(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "html/test.html").write_text(
+                '<!doctype html><meta name="aether-flow-human-visual-only" content="true">'
+                "<header>Reader scope: duplicate top boundary.</header>"
+                "<main><p>README.md AGENTS.md</p>"
+                '<section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">'
+                '<h2 id="reader-scope-title">Reader Scope</h2>'
+                "<p>Reader scope: fixture boundary only.</p>"
+                "</section></main>"
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not authorize changes."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(any("HTML Reader scope text must appear only in reader_scope section" in error for error in report.errors))
+
     def test_retired_topic_registry_fails_if_present(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
