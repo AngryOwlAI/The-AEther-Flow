@@ -58,6 +58,17 @@ overview page is a route map, not authority, and should be able to choose the
 next page family or canonical source lane before summarizing claims or changing
 files.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: first-entry orientation only. This page cannot certify a
+derivation, expand a role, change routing, change validators, grant write
+permission, or make generated documentation authoritative.
+
 ## Visual Strategy
 
 Use a compact first-entry route map plus a source matrix. The route map must be
@@ -72,6 +83,8 @@ assets, or external runtime packages.
 
 - Opens with subject-specific project orientation before the full authority
   paragraph.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Points readers to the correct page family and source lane without making the

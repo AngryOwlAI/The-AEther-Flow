@@ -63,6 +63,12 @@ from the publication brief and source spec.
 5. Use generated GitHub-facing Markdown and HTML as navigation back to sources,
    not as independent evidence.
 
+## Reader Scope
+
+Reader scope: first-entry orientation only. This page cannot certify a
+derivation, expand a role, change routing, change validators, grant write
+permission, or make generated documentation authoritative.
+
 <!-- explainer-control: authority_footer -->
 
 ## Source Binding And Authority
