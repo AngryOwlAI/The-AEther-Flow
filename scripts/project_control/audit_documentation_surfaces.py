@@ -41,18 +41,10 @@ ACTIVE_REFERENCE_ROOTS = (
     "github-facing",
     "markdown",
 )
-GITHUB_FACING_RECOMMENDED_SECTIONS = (
-    "Source Binding",
-    "What This Feature Does",
-    "Why The Project Needs It",
-    "How It Works",
-    "What It Is Not",
-    "Diagram Reading Guide",
-    "Source Authority",
-    "External AI Navigation Card",
-    "Where To Go Next",
-    "All Source Materials",
-)
+# The brief-first publication process permits page-specific visible headings.
+# Keep this tuple empty so the audit no longer encodes the retired universal
+# GitHub-facing skeleton as a warning contract.
+GITHUB_FACING_RECOMMENDED_SECTIONS: tuple[str, ...] = ()
 GITHUB_FACING_FORBIDDEN_HEADINGS = (
     "Rendering Intent",
     "Required Visual Structure",
@@ -63,11 +55,21 @@ GITHUB_FACING_FORBIDDEN_TRANSCRIPT_MARKERS = (
     "**Student:**",
     "**Teacher:**",
 )
-GITHUB_FACING_AI_CARD_MARKERS = (
-    "You are reading a non-authoritative GitHub-facing explainer.",
-    "Safe uses:",
-    "Before modifying project knowledge:",
-    "Do not:",
+GITHUB_FACING_AI_CARD_MARKERS: tuple[str, ...] = ()
+GITHUB_FACING_AUTHORITY_STATUS_VALUES = {
+    "generated_noncanonical",
+    "generated noncanonical",
+    "generated noncanonical reader surface",
+}
+MARKDOWN_AUTHORITY_FOOTER_MARKER = "<!-- explainer-control: authority_footer -->"
+MARKDOWN_AUTHORITY_FOOTER_HEADINGS = (
+    "Source Binding And Authority",
+)
+FULL_GENERATED_NONCANONICAL_MARKERS = (
+    "this page is a generated noncanonical reader surface",
+    "this generated noncanonical reader surface",
+    "this is a generated noncanonical reader surface",
+    "this html file is a generated noncanonical reader surface",
 )
 UNSAFE_CLAIM_PHRASES = (
     "derivation is complete",
@@ -87,6 +89,10 @@ SAFE_CLAIM_CONTEXT_MARKERS = (
 )
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
 MERMAID_RE = re.compile(r"```mermaid\n(.*?)\n```", re.DOTALL)
+HTML_AUTHORITY_FOOTER_RE = re.compile(
+    r"<footer\b[^>]*data-explainer-control\s*=\s*[\"']authority_footer[\"'][^>]*>.*?</footer>",
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 @dataclass
@@ -192,10 +198,95 @@ def first_markdown_section(text: str, headings: tuple[str, ...]) -> str:
     return ""
 
 
+def markdown_sections(text: str, headings: tuple[str, ...]) -> list[str]:
+    sections: list[str] = []
+    for heading in headings:
+        pattern = re.compile(
+            rf"^##\s+{re.escape(heading)}\s*$\n(.*?)(?=^##\s+|\Z)",
+            re.MULTILINE | re.DOTALL,
+        )
+        sections.extend(match.group(1).strip() for match in pattern.finditer(text))
+    return [section for section in sections if section]
+
+
 def binding_value(text: str, label: str) -> str:
-    pattern = re.compile(rf"^- \*\*{re.escape(label)}:\*\* `([^`]+)`", re.MULTILINE)
+    pattern = re.compile(
+        rf"^- \*\*{re.escape(label)}:\*\*\s+`?([^`\n]+?)`?\s*$",
+        re.MULTILINE,
+    )
     match = pattern.search(text)
     return match.group(1).strip() if match else ""
+
+
+def normalized_authority_status(value: str) -> str:
+    return " ".join(value.strip().strip("`").lower().replace("_", " ").split())
+
+
+def is_generated_noncanonical_status(value: str) -> bool:
+    normalized = normalized_authority_status(value)
+    return normalized in GITHUB_FACING_AUTHORITY_STATUS_VALUES
+
+
+def contains_full_authority_marker(text: str) -> bool:
+    lowered = text.lower()
+    return any(marker in lowered for marker in FULL_GENERATED_NONCANONICAL_MARKERS)
+
+
+def markdown_opening_region(text: str) -> str:
+    body = strip_frontmatter(text)
+    match = re.search(r"^##\s+", body, re.MULTILINE)
+    return body[: match.start()] if match else body
+
+
+def markdown_declares_authority_footer(text: str) -> bool:
+    if MARKDOWN_AUTHORITY_FOOTER_MARKER in text:
+        return True
+    titles = heading_titles(text, level=2)
+    return any(heading in titles for heading in MARKDOWN_AUTHORITY_FOOTER_HEADINGS)
+
+
+def check_markdown_authority_footer_guard(
+    report: AuditReport,
+    *,
+    relative_page: str,
+    page_text: str,
+) -> None:
+    if not markdown_declares_authority_footer(page_text):
+        return
+    if not contains_full_authority_marker(page_text):
+        report.error(
+            f"{relative_page}: declared authority footer is missing the full generated-noncanonical paragraph"
+        )
+    if contains_full_authority_marker(markdown_opening_region(page_text)):
+        report.error(
+            f"{relative_page}: full generated-noncanonical paragraph must not appear before the first section when authority footer is declared"
+        )
+
+
+def check_html_authority_footer_guards(report: AuditReport, root: Path) -> None:
+    html_dir = root / "html"
+    if not html_dir.exists():
+        return
+    for html_path in sorted(html_dir.glob("*.html")):
+        relative = html_path.relative_to(root).as_posix()
+        html_text = html_path.read_text(encoding="utf-8", errors="replace")
+        footer_blocks = HTML_AUTHORITY_FOOTER_RE.findall(html_text)
+        if "authority_footer" in html_text and not footer_blocks:
+            report.error(f"{relative}: authority_footer control must be on a footer element")
+            continue
+        if not footer_blocks:
+            continue
+        footer_text = "\n".join(footer_blocks)
+        if not contains_full_authority_marker(footer_text):
+            report.error(
+                f"{relative}: authority_footer is missing the full generated-noncanonical paragraph"
+            )
+        outside_footer = HTML_AUTHORITY_FOOTER_RE.sub("", html_text)
+        if contains_full_authority_marker(outside_footer):
+            report.error(
+                f"{relative}: full generated-noncanonical paragraph must appear only in authority_footer"
+            )
+        report.count("checked_html_authority_footer_hooks")
 
 
 def code_spans(text: str) -> set[str]:
@@ -468,6 +559,11 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
 
         page_text = normalized_text(page_path.read_text(encoding="utf-8"))
         source_text = normalized_text(source_path.read_text(encoding="utf-8"))
+        check_markdown_authority_footer_guard(
+            report,
+            relative_page=relative_page,
+            page_text=page_text,
+        )
         titles = heading_titles(page_text, level=2)
         for section in GITHUB_FACING_RECOMMENDED_SECTIONS:
             if section not in titles:
@@ -496,13 +592,18 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
                 f"{relative_page}: Related HTML must be {relative_html}, "
                 f"got {declared_html or '<missing>'}"
             )
-        if declared_authority != "generated_noncanonical":
+        if not is_generated_noncanonical_status(declared_authority):
             report.error(
-                f"{relative_page}: Authority status must be generated_noncanonical, "
+                f"{relative_page}: Authority status must identify generated_noncanonical status, "
                 f"got {declared_authority or '<missing>'}"
             )
 
-        all_sources = first_markdown_section(page_text, ("All Source Materials", "Source Materials"))
+        all_sources = "\n".join(
+            markdown_sections(
+                page_text,
+                ("All Source Materials", "Source Materials", "Source Authority"),
+            )
+        )
         declared_sources = code_spans(all_sources)
         for source_material in frontmatter_list(source_text, "source_materials"):
             if source_material not in declared_sources:
@@ -616,6 +717,7 @@ def audit_documentation_surfaces(
     )
     check_relationship_rows(report, root, registries["relationships"])
     check_github_facing_explainers(report, root)
+    check_html_authority_footer_guards(report, root)
     check_stale_references(report, root, stale_reference)
     return report
 

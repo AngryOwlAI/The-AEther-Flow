@@ -2,14 +2,14 @@
 object_id: "MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT"
 format: "markdown"
 source_path: "research_control/design/html_explainer_flexible_presentation_contract.md"
-source_hash: "9b6cd3d802e9e601c411e9eed956debf460bdcabce86f9011c6745a20d8db556"
+source_hash: "91054069ff8b13313c14ad176adc510cd538d4ddc962f44a86fcc0c5320b9af3"
 authority_status: "project_control"
 role: "research_control_design"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md"
-content_hash: "9b6cd3d802e9e601c411e9eed956debf460bdcabce86f9011c6745a20d8db556"
+content_hash: "91054069ff8b13313c14ad176adc510cd538d4ddc962f44a86fcc0c5320b9af3"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `9b6cd3d802e9e601c411e9eed956debf460bdcabce86f9011c6745a20d8db556`
+- Content hash: `91054069ff8b13313c14ad176adc510cd538d4ddc962f44a86fcc0c5320b9af3`
 - Extracted text path: `.local/content_semantics/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.txt`
-- Character count: `12885`
+- Character count: `13825`
 
 ## Relationships
 

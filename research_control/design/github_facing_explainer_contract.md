@@ -46,6 +46,27 @@ The source basis and authority boundary must match the publication brief and
 the paired source spec. The visible structure may differ from the HTML
 derivative.
 
+## Footer Authority Placement
+
+For post-migration revisions, the full generated-noncanonical paragraph belongs
+near the end of the page with source binding and source-material guidance, not
+immediately after the title. A page may keep a short machine-readable status
+line such as `Authority status: generated noncanonical reader surface`, but the
+opening must teach the subject before presenting the full disclaimer.
+
+Use a footer authority block when a page is revised under the post-migration
+quality plan:
+
+```markdown
+<!-- explainer-control: authority_footer -->
+## Source Binding And Authority
+```
+
+The heading may be adapted only when the publication brief gives a better
+reader-facing label. The control marker is the stable deterministic hook. Once
+the hook is present, validators must reject moving the full
+generated-noncanonical paragraph back into the opening block.
+
 ## Publication Standard
 
 The Curator chooses the Markdown shape from the brief. A page may be an

@@ -140,6 +140,25 @@ Every tracked explainer must also expose the complete source list as a visible
 and claim-boundary toggles remain valid only when a source spec explicitly
 declares them; they are not universal visible panels.
 
+## Authority Footer Placement
+
+For post-migration revisions, the full generated-noncanonical paragraph belongs
+in the page footer with source binding and source-material context. The hero,
+header, and first explanatory summary should teach the subject before presenting
+the full generated-output disclaimer. A short status label may remain where it
+helps scanning, but the full paragraph must move to the footer.
+
+The deterministic hook is:
+
+```html
+<footer data-explainer-control="authority_footer">
+```
+
+When this hook is present, validators must require the full
+generated-noncanonical paragraph inside that footer and reject a duplicate full
+paragraph in the hero, header, or opening content. This rule is a generated
+output boundary guard. It does not promote tracked HTML into source authority.
+
 ## Validator Scope
 
 Validators enforce deterministic structural evidence only:
@@ -166,6 +185,8 @@ Validators enforce deterministic structural evidence only:
   `Reader orientation` or `What This Explainer Describes`
 - required control, source-material, analysis-capsule, source-basis, hash, and
   Mermaid parity markers remain valid
+- declared `authority_footer` hooks contain the full generated-noncanonical
+  paragraph and keep that paragraph out of the opening region
 - Mermaid inline SVG output uses explicit numeric dimensions derived from
   `viewBox`
 - tracked HTML remains generated, human-only, source-backed, and

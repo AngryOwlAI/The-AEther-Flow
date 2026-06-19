@@ -344,6 +344,57 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
         self.assertTrue(any("Derived from spec must be" in error for error in report.errors))
 
+    def test_github_facing_explainer_accepts_prose_authority_status(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            page.write_text(
+                github_facing_page_text().replace(
+                    "- **Authority status:** `generated_noncanonical`",
+                    "- **Authority status:** generated noncanonical reader surface",
+                ),
+                encoding="utf-8",
+            )
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertFalse(any("Authority status must identify" in error for error in report.errors))
+        self.assertEqual(report.errors, [])
+
+    def test_github_facing_explainer_accepts_source_authority_source_list(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            page.write_text(
+                github_facing_page_text().replace("## All Source Materials", "## Source Authority"),
+                encoding="utf-8",
+            )
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertFalse(any("missing source material from source spec" in error for error in report.errors))
+        self.assertEqual(report.errors, [])
+
+    def test_github_facing_authority_footer_rejects_top_full_paragraph(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            build_minimal_documentation_surface(root)
+            page = root / "github-facing" / "example.md"
+            text = github_facing_page_text().replace(
+                "# Example\n\n",
+                "# Example\n\n"
+                "This page is a generated noncanonical reader surface. It orients readers without changing authority.\n\n",
+            ).replace(
+                "## Source Binding\n\n",
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not change source authority.\n\n"
+                "## Source Binding\n\n",
+            )
+            page.write_text(text, encoding="utf-8")
+            report = self.audit.audit_documentation_surfaces(root, include_local=False)
+        self.assertTrue(
+            any("must not appear before the first section when authority footer is declared" in error for error in report.errors)
+        )
+
     def test_github_facing_explainer_accepts_curator_specific_section_shape(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -429,6 +480,40 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
             )
             report = self.audit.audit_documentation_surfaces(root, include_local=False)
         self.assertTrue(any("source_basis is not registered" in error for error in report.errors))
+
+    def test_html_authority_footer_accepts_footer_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            html_dir = root / "html"
+            html_dir.mkdir()
+            (html_dir / "example.html").write_text(
+                '<!doctype html><main><p>Subject first.</p></main>'
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not change authority."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.audit.AuditReport()
+            self.audit.check_html_authority_footer_guards(report, root)
+        self.assertEqual(report.errors, [])
+
+    def test_html_authority_footer_rejects_top_full_paragraph(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            html_dir = root / "html"
+            html_dir.mkdir()
+            (html_dir / "example.html").write_text(
+                "<!doctype html><header>"
+                "This HTML file is a generated noncanonical reader surface. It does not change authority."
+                "</header><main><p>Subject first.</p></main>"
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not change authority."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.audit.AuditReport()
+            self.audit.check_html_authority_footer_guards(report, root)
+        self.assertTrue(any("must appear only in authority_footer" in error for error in report.errors))
 
 
 if __name__ == "__main__":

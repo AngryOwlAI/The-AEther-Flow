@@ -121,6 +121,20 @@ SVG_NAMESPACE_MARKERS = (
 )
 HEADING_RE = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
 MERMAID_BLOCK_RE = re.compile(r"(?ms)^```mermaid\s+(.*?)^```")
+MARKDOWN_AUTHORITY_FOOTER_MARKER = "<!-- explainer-control: authority_footer -->"
+MARKDOWN_AUTHORITY_FOOTER_HEADINGS = {
+    "Source Binding And Authority",
+}
+FULL_GENERATED_NONCANONICAL_MARKERS = (
+    "this page is a generated noncanonical reader surface",
+    "this generated noncanonical reader surface",
+    "this is a generated noncanonical reader surface",
+    "this html file is a generated noncanonical reader surface",
+)
+HTML_AUTHORITY_FOOTER_RE = re.compile(
+    r"<footer\b[^>]*data-explainer-control\s*=\s*[\"']authority_footer[\"'][^>]*>.*?</footer>",
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 @dataclass
@@ -188,6 +202,53 @@ def markdown_headings(text: str) -> tuple[str, ...]:
 def has_authority_boundary(text: str) -> bool:
     lowered = text.lower()
     return any(term in lowered for term in AUTHORITY_TERMS)
+
+
+def contains_full_authority_marker(text: str) -> bool:
+    lowered = text.lower()
+    return any(marker in lowered for marker in FULL_GENERATED_NONCANONICAL_MARKERS)
+
+
+def markdown_opening_region(text: str) -> str:
+    match = re.search(r"^##\s+", text, re.MULTILINE)
+    return text[: match.start()] if match else text
+
+
+def markdown_declares_authority_footer(text: str) -> bool:
+    if MARKDOWN_AUTHORITY_FOOTER_MARKER in text:
+        return True
+    headings = set(markdown_headings(text))
+    return bool(MARKDOWN_AUTHORITY_FOOTER_HEADINGS & headings)
+
+
+def validate_authority_footer_placement(
+    brief_id: str,
+    github_text: str,
+    html_text: str,
+    report: Report,
+) -> None:
+    if markdown_declares_authority_footer(github_text):
+        if not contains_full_authority_marker(github_text):
+            report.error(f"{brief_id}: GitHub authority footer is missing generated-noncanonical paragraph")
+        if contains_full_authority_marker(markdown_opening_region(github_text)):
+            report.error(
+                f"{brief_id}: GitHub generated-noncanonical paragraph must not appear before first section when authority footer is declared"
+            )
+
+    footer_blocks = HTML_AUTHORITY_FOOTER_RE.findall(html_text)
+    if "authority_footer" in html_text and not footer_blocks:
+        report.error(f"{brief_id}: HTML authority_footer control must be on a footer element")
+        return
+    if not footer_blocks:
+        return
+    footer_text = "\n".join(footer_blocks)
+    if not contains_full_authority_marker(footer_text):
+        report.error(f"{brief_id}: HTML authority_footer is missing generated-noncanonical paragraph")
+    outside_footer = HTML_AUTHORITY_FOOTER_RE.sub("", html_text)
+    if contains_full_authority_marker(outside_footer):
+        report.error(
+            f"{brief_id}: HTML generated-noncanonical paragraph must appear only in authority_footer"
+        )
 
 
 def validate_registry_shapes(root: Path, report: Report) -> list[dict[str, str]]:
@@ -317,6 +378,7 @@ def validate_migrated_surfaces(
         report.error(f"{brief_id}: GitHub Markdown missing non-authority boundary language")
     if not has_authority_boundary(html_text):
         report.error(f"{brief_id}: HTML missing non-authority boundary language")
+    validate_authority_footer_placement(brief_id, github_text, html_text, report)
     headings = set(markdown_headings(github_text))
     unauthorized = FORBIDDEN_MIGRATED_HEADINGS & headings
     if unauthorized:

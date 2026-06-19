@@ -129,6 +129,43 @@ class PublicationProcessValidatorTests(unittest.TestCase):
             report = self.validator.validate_publication_process(root)
         self.assertTrue(any("banned public-doc runtime" in error for error in report.errors))
 
+    def test_github_authority_footer_rejects_top_full_paragraph(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "github-facing/test.md").write_text(
+                "# Test Page\n\n"
+                "This page is a generated noncanonical reader surface. It orients readers without changing authority.\n\n"
+                "## Article Shape\n\nUses `README.md` and `AGENTS.md`.\n\n"
+                "<!-- explainer-control: authority_footer -->\n"
+                "## Source Binding And Authority\n\n"
+                "This page is a generated noncanonical reader surface. It does not authorize changes.\n\n"
+                "## Source Materials\n\n- `README.md`\n- `AGENTS.md`\n",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(
+            any("GitHub generated-noncanonical paragraph must not appear before first section" in error for error in report.errors)
+        )
+
+    def test_html_authority_footer_rejects_top_full_paragraph(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_valid_fixture(root)
+            (root / "html/test.html").write_text(
+                '<!doctype html><meta name="aether-flow-human-visual-only" content="true">'
+                "<header>This HTML file is a generated noncanonical reader surface. It does not change authority.</header>"
+                "<main><p>README.md AGENTS.md</p></main>"
+                '<footer data-explainer-control="authority_footer">'
+                "This HTML file is a generated noncanonical reader surface. It does not change authority."
+                "</footer>",
+                encoding="utf-8",
+            )
+            report = self.validator.validate_publication_process(root)
+        self.assertTrue(
+            any("HTML generated-noncanonical paragraph must appear only in authority_footer" in error for error in report.errors)
+        )
+
     def test_retired_topic_registry_fails_if_present(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
