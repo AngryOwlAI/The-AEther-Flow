@@ -10,6 +10,8 @@ research-control behavior.
 - Director-led agent architecture decisions.
 - Documentation Curator publication process, phased corpus migration, and
   post-migration quality planning.
+- Reader-scope footer relocation planning for GitHub-facing Markdown and
+  tracked HTML publication outputs.
 - GitHub-facing explainer contract.
 - GR derivation burden map.
 - HTML explainer depth and flexible presentation contracts.
