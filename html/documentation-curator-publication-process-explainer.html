@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="9ce84bc9170405b204d051d8665fe0211c44025b8c030eb654c3775b53bc16e9">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Documentation Curator Publication Process</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f7f4;
+      --ink: #20252a;
+      --muted: #59636d;
+      --line: #c5ccc6;
+      --panel: #ffffff;
+      --blue: #236f8d;
+      --blue-soft: #e2f0f5;
+      --green: #28724f;
+      --green-soft: #e4f1ea;
+      --gold: #8a641e;
+      --gold-soft: #f4ead0;
+      --red: #9d3d36;
+      --red-soft: #f4dedb;
+      --slate: #39434d;
+      --slate-soft: #e8ecef;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.56;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 52px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 940px;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+    }
+
+    .lead {
+      max-width: 830px;
+      margin: 18px 0 0;
+      color: #36424a;
+      font-size: 1.1rem;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      max-width: 960px;
+      margin: 22px 0 0;
+      padding: 14px 16px;
+      border-left: 4px solid var(--blue);
+      background: var(--blue-soft);
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    nav a {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 650;
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.55rem;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+
+    p { margin: 0 0 14px; }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+      overflow-wrap: anywhere;
+    }
+
+    .lifecycle {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      counter-reset: pubstep;
+    }
+
+    .life-step {
+      min-height: 178px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow-wrap: anywhere;
+    }
+
+    .life-step::before {
+      counter-increment: pubstep;
+      content: counter(pubstep);
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .life-step:nth-child(1) { border-top: 6px solid var(--blue); }
+    .life-step:nth-child(2) { border-top: 6px solid var(--green); }
+    .life-step:nth-child(3) { border-top: 6px solid var(--gold); }
+    .life-step:nth-child(4) { border-top: 6px solid var(--slate); }
+    .life-step:nth-child(5) { border-top: 6px solid var(--red); }
+    .life-step:nth-child(6) { border-top: 6px solid var(--blue); }
+
+    .palette,
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .tile,
+    .check,
+    .panel {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow-wrap: anywhere;
+    }
+
+    .tile strong,
+    .check strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .panel.good { border-top: 6px solid var(--green); }
+    .panel.stop { border-top: 6px solid var(--red); }
+
+    .anti-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .anti-list li {
+      padding: 14px 16px;
+      border-left: 4px solid var(--red);
+      border-radius: 8px;
+      background: var(--red-soft);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+      overflow-wrap: break-word;
+    }
+
+    th { background: var(--slate-soft); }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .source-grid div {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 24px 0 44px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1020px) {
+      .lifecycle,
+      .palette,
+      .checks {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .split,
+      .source-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: calc(100% - 22px);
+        max-width: 360px;
+        margin-left: 11px;
+        margin-right: 0;
+      }
+
+      header { padding-top: 34px; }
+
+      .lifecycle,
+      .palette,
+      .checks,
+      .anti-list {
+        grid-template-columns: 1fr;
+      }
+
+      th,
+      td { padding: 10px; }
+
+      h1 { font-size: 1.72rem; }
+
+      nav a {
+        max-width: 100%;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Phase 4B public workflow guide</p>
+      <h1>Documentation Curator Publication Process</h1>
+      <p class="lead">How AEther-Flow public pages are planned, briefed, written, reviewed, and checked without turning generated reader surfaces into authority.</p>
+      <p class="notice">Generated noncanonical reader surface. This page explains the active publication process; it does not change role authority, validator behavior, schemas, routing, checkpoint gates, source authority, generated-output authority, corpus-migration approval, or physics claim status.</p>
+      <nav data-explainer-control="section_toc" aria-label="Page sections">
+        <a href="#lifecycle">Lifecycle</a>
+        <a href="#types">Document Types</a>
+        <a href="#mediums">Markdown And HTML</a>
+        <a href="#review">Review Evidence</a>
+        <a href="#retired">Retired Paths</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <section id="lifecycle">
+      <h2>Publication Lifecycle</h2>
+      <div class="lifecycle" aria-label="Publication process timeline">
+        <article class="life-step">
+          <h3>Brief</h3>
+          <p>Define subject, reader, reader job, document type, visual strategy, source basis, boundaries, acceptance criteria, and forbidden patterns.</p>
+        </article>
+        <article class="life-step">
+          <h3>Bind</h3>
+          <p>Create a Markdown source spec that names the brief, output paths, source materials, claim boundary, and standalone HTML constraints.</p>
+        </article>
+        <article class="life-step">
+          <h3>Write</h3>
+          <p>Author native GitHub Markdown and a single-file HTML derivative from the same source basis and authority boundary.</p>
+        </article>
+        <article class="life-step">
+          <h3>Inspect</h3>
+          <p>Capture desktop and mobile screenshots for tracked HTML and record the visual result in task artifacts.</p>
+        </article>
+        <article class="life-step">
+          <h3>Review</h3>
+          <p>Write a before/after artifact that names improvements, risks, source limits, and non-authority boundaries.</p>
+        </article>
+        <article class="life-step">
+          <h3>Check</h3>
+          <p>Run publication checks, bootstrap refresh, documentation-impact validation, research-control validation, and diff checks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="types">
+      <h2>Document-Type Palette</h2>
+      <div class="palette">
+        <article class="tile"><strong>Overview article</strong><p>Orients a reader to a subject and first reading path.</p></article>
+        <article class="tile"><strong>Workflow guide</strong><p>Explains an ordered process with inputs, boundaries, and evidence.</p></article>
+        <article class="tile"><strong>Boundary map</strong><p>Separates similar claims, authorities, or generated surfaces.</p></article>
+        <article class="tile"><strong>Reference catalog</strong><p>Collects roles, commands, registries, or surfaces without replacing them.</p></article>
+        <article class="tile"><strong>Lifecycle guide</strong><p>Shows record states, handoffs, and safe transitions.</p></article>
+        <article class="tile"><strong>Operator guide</strong><p>Helps a maintainer run the right command chain and preserve evidence.</p></article>
+      </div>
+      <p>The document type controls reader fit, not heading uniformity. Repeated visible skeletons across unrelated pages require explicit brief authorization.</p>
+    </section>
+
+    <section id="mediums">
+      <h2>Markdown And HTML May Diverge</h2>
+      <div class="split">
+        <article class="panel good">
+          <h3>Shared Contract</h3>
+          <p>GitHub Markdown and tracked HTML share source basis, authority boundary, and core claims. Both must show source paths and generated noncanonical status.</p>
+        </article>
+        <article class="panel good">
+          <h3>Different Strengths</h3>
+          <p>Markdown reads as a native technical article. HTML can use layout, tables, timelines, and responsive hierarchy while remaining readable without JavaScript.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="review">
+      <h2>Review Checklist</h2>
+      <div class="checks">
+        <article class="check"><strong>Brief and registry row</strong><p>The brief and <code>registries/PUBLICATION_BRIEF_REGISTRY.csv</code> row agree on paths, sources, visual strategy, and migration status.</p></article>
+        <article class="check"><strong>Source-visible outputs</strong><p>Both public derivatives name every source path and state generated noncanonical status.</p></article>
+        <article class="check"><strong>No-network HTML</strong><p>The HTML file is standalone and avoids external scripts, remote fonts, browser-side Mermaid execution, and local bridge dependencies.</p></article>
+        <article class="check"><strong>Screenshots</strong><p>Desktop and mobile captures prove the tracked HTML is readable and responsive enough for review.</p></article>
+        <article class="check"><strong>Before and after</strong><p>The review artifact names what changed, what improved, and which risks remain.</p></article>
+        <article class="check"><strong>Checks do not replace judgment</strong><p><code>scripts/validate_publication_process.py</code> catches mechanical failures and retired patterns; it does not certify taste by itself.</p></article>
+      </div>
+    </section>
+
+    <section id="retired">
+      <h2>Do Not Migrate This Way</h2>
+      <ul class="anti-list">
+        <li>Do not revive Visual Atlas as the active process.</li>
+        <li>Do not use a topic registry as the public page creation path.</li>
+        <li>Do not restore teaching packets as active public-page source.</li>
+        <li>Do not force old universal section headings onto unrelated subjects.</li>
+        <li>Do not add diagrams because a script rewards diagrams.</li>
+        <li>Do not treat validator PASS as publication quality by itself.</li>
+        <li>Do not put source metadata before the subject and reader problem.</li>
+        <li>Do not treat generated HTML, Markdown, wiki notes, Obsidian notes, semantic extracts, or <code>.local</code> caches as authority.</li>
+      </ul>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <div class="source-grid">
+        <div>AEther-Flow Project. (2026). <code data-source-path="research_control/design/documentation_curator_publication_process.md">research_control/design/documentation_curator_publication_process.md</code> [Publication process control note].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path=".agents/roles/research_ops/documentation-curator.v2.0.0.md">.agents/roles/research_ops/documentation-curator.v2.0.0.md</code> [Documentation Curator role contract].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="markdown/publication-briefs/README.md">markdown/publication-briefs/README.md</code> [Publication brief guidance].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="registries/PUBLICATION_BRIEF_REGISTRY.csv">registries/PUBLICATION_BRIEF_REGISTRY.csv</code> [Publication brief registry].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="scripts/validate_publication_process.py">scripts/validate_publication_process.py</code> [Publication process validator].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="research_control/tasks/RT-20260618-007/artifacts/publication_process_requirement_audit.md">research_control/tasks/RT-20260618-007/artifacts/publication_process_requirement_audit.md</code> [Requirement audit].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="research_control/tasks/RT-20260618-007/artifacts/publication_pilot_before_after_review.md">research_control/tasks/RT-20260618-007/artifacts/publication_pilot_before_after_review.md</code> [Pilot before/after review].</div>
+      </div>
+    </section>
+
+    <section id="binding">
+      <h2>Source Binding</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Derived from spec</th>
+            <td><code>markdown/html-explainer-specs/documentation-curator-publication-process-explainer.md</code></td>
+          </tr>
+          <tr>
+            <th>GitHub Markdown</th>
+            <td><code>github-facing/documentation-curator-publication-process-explainer.md</code></td>
+          </tr>
+          <tr>
+            <th>Publication brief</th>
+            <td><code>markdown/publication-briefs/documentation-curator-publication-process.publication-brief.md</code></td>
+          </tr>
+          <tr>
+            <th>Authority status</th>
+            <td>Generated noncanonical reader surface; source files and registries remain authority.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      Safe summary: brief first, write for the medium, preserve source authority, record review evidence, and treat checks as boundary protection rather than a substitute for editorial judgment.
+    </footer>
+  </main>
+</body>
+</html>

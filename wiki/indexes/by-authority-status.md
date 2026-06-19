@@ -36,12 +36,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF` `markdown/publication-briefs/aether-flow-physics-program.publication-brief.md`
 - `MD-CLAIM-GATES-PUBLICATION-BRIEF` `markdown/publication-briefs/claim-gates.publication-brief.md`
 - `MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `markdown/publication-briefs/director-agentjob-lifecycle.publication-brief.md`
+- `MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `markdown/publication-briefs/documentation-curator-publication-process.publication-brief.md`
 - `MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md`
 - `MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - `MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `markdown/html-explainer-specs/aether-flow-physics-program-explainer.md`
 - `MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `markdown/html-explainer-specs/claim-gates-explainer.md`
 - `MD-HTML-SPEC-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `markdown/html-explainer-specs/director-agentjob-lifecycle-explainer.md`
+- `MD-HTML-SPEC-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER` `markdown/html-explainer-specs/documentation-curator-publication-process-explainer.md`
 - `MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - `MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
 - `MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
@@ -191,6 +193,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `html/aether-flow-physics-program-explainer.html`
 - `HTML-CLAIM-GATES-EXPLAINER` `html/claim-gates-explainer.html`
 - `HTML-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `html/director-agentjob-lifecycle-explainer.html`
+- `HTML-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER` `html/documentation-curator-publication-process-explainer.html`
 - `HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `html/exact-gr-benchmark-boundary-explainer.html`
 - `HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `html/gr-derivation-roadmap-explainer.html`
 - `HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `html/parent-child-synthesis-explainer.html`
@@ -203,6 +206,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `github-facing/aether-flow-physics-program-explainer.md`
 - `MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `github-facing/claim-gates-explainer.md`
 - `MD-GITHUB-FACING-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `github-facing/director-agentjob-lifecycle-explainer.md`
+- `MD-GITHUB-FACING-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER` `github-facing/documentation-curator-publication-process-explainer.md`
 - `MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `github-facing/exact-gr-benchmark-boundary-explainer.md`
 - `MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `github-facing/gr-derivation-roadmap-explainer.md`
 - `MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `github-facing/parent-child-synthesis-explainer.md`
@@ -231,6 +235,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
 - `WIKI-HTML-CLAIM-GATES-EXPLAINER` `wiki/html/html-claim-gates-explainer.md`
 - `WIKI-HTML-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `wiki/html/html-director-agentjob-lifecycle-explainer.md`
+- `WIKI-HTML-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER` `wiki/html/html-documentation-curator-publication-process-explainer.md`
 - `WIKI-HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/html/html-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/html/html-gr-derivation-roadmap-explainer.md`
 - `WIKI-HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/html/html-parent-child-synthesis-explainer.md`
@@ -247,11 +252,13 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-CLAIM-GATES-PUBLICATION-BRIEF` `wiki/markdown/md-claim-gates-publication-brief.md`
 - `WIKI-MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `wiki/markdown/md-director-agentjob-lifecycle-publication-brief.md`
+- `WIKI-MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `wiki/markdown/md-documentation-curator-publication-process-publication-brief.md`
 - `WIKI-MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-ontology-explainer.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-physics-program-explainer.md`
 - `WIKI-MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-github-facing-claim-gates-explainer.md`
 - `WIKI-MD-GITHUB-FACING-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `wiki/markdown/md-github-facing-director-agentjob-lifecycle-explainer.md`
+- `WIKI-MD-GITHUB-FACING-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER` `wiki/markdown/md-github-facing-documentation-curator-publication-process-explainer.md`
 - `WIKI-MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-github-facing-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-github-facing-parent-child-synthesis-explainer.md`
@@ -265,6 +272,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-physics-program-explainer.md`
 - `WIKI-MD-HTML-SPEC-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-html-spec-claim-gates-explainer.md`
 - `WIKI-MD-HTML-SPEC-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `wiki/markdown/md-html-spec-director-agentjob-lifecycle-explainer.md`
+- `WIKI-MD-HTML-SPEC-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER` `wiki/markdown/md-html-spec-documentation-curator-publication-process-explainer.md`
 - `WIKI-MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-html-spec-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-html-spec-parent-child-synthesis-explainer.md`
