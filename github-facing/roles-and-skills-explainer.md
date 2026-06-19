@@ -6,8 +6,6 @@ Current authority is task-local. A registered role is a stable template; a skill
 
 That inspection order matters because public catalogs can become misleading when read as permission. Superseded roles remain for history, the Gate Chair remains human-gated, Documentation Curator output remains noncanonical for claims, and provisional or overlay roles do not become reusable just because a page describes them.
 
-Reader scope: role and skill navigation only. This page cannot change role status, register roles, supersede roles, expand role authority, change skill contracts, change validator behavior, change routing, change allowlists, or promote physics claims.
-
 ## Authority Inspection Order
 
 | Item | Function | Boundary |
@@ -46,6 +44,10 @@ Reader scope: role and skill navigation only. This page cannot change role statu
 | Skill mention | A workflow entry point exists. | AgentJob allowlist still controls writes. |
 | Gate Chair row | The role is defined. | Execution and promotion remain human-gated. |
 | Public catalog | The page orients readers. | It cannot register or modify roles. |
+
+## Reader Scope
+
+Reader scope: role and skill navigation only. This page cannot change role status, register roles, supersede roles, expand role authority, change skill contracts, change validator behavior, change routing, change allowlists, or promote physics claims.
 
 <!-- explainer-control: authority_footer -->
 

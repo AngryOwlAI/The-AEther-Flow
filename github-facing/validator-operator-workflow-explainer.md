@@ -6,8 +6,6 @@ AEther-Flow therefore groups checks by change type. Memory and registry refresh 
 
 The final interpretation is bounded. PASS means the named deterministic check accepted the current state. It does not certify scientific truth, ontology adoption, benchmark promotion, completed derivation, editorial taste, or generated-output authority.
 
-Reader scope: operator command-selection guide only. This page cannot change validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, schemas, checkpoint gates, or physics status.
-
 ## Command Decision Matrix
 
 | Item | Function | Boundary |
@@ -43,6 +41,10 @@ Reader scope: operator command-selection guide only. This page cannot change val
 | Deterministic acceptance | The command accepted the current checked state. | Necessary transaction evidence. |
 | No broad promotion | PASS does not promote physics claims, role authority, or generated outputs. | Human-gated authority remains protected. |
 | Review still needed | Publication quality depends on screenshots and before/after review. | Taste and clarity are not fully deterministic. |
+
+## Reader Scope
+
+Reader scope: operator command-selection guide only. This page cannot change validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, schemas, checkpoint gates, or physics status.
 
 <!-- explainer-control: authority_footer -->
 

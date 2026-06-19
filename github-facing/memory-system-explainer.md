@@ -6,8 +6,6 @@ The authority split remains strict. Registered TeX carries physics and derivatio
 
 The practical workflow is therefore two-stage. Use memory preflight to locate the likely source, then inspect the canonical source file and source registry row before routing, editing, citing, or summarizing. Freshness warnings are useful because they reveal retrieval drift; they do not override tracked files.
 
-Reader scope: memory and retrieval orientation only. This page cannot change memory-system behavior, registry schema, validator behavior, routing behavior, role authority, checkpoint behavior, source authority, or physics status.
-
 ## Authority And Retrieval Layers
 
 | Item | Function | Boundary |
@@ -43,6 +41,10 @@ Reader scope: memory and retrieval orientation only. This page cannot change mem
 | Bootstrap | Refreshes generated registry, wiki, semantic, and folder-map derivatives. | Use after source or registry changes. |
 | Validate-only | Checks current generated state without writing. | Does not refresh stale derivatives. |
 | Generated lanes | Wiki, HTML, PDFs, semantic extracts, and local mirrors are support surfaces. | Do not hand-edit as authority. |
+
+## Reader Scope
+
+Reader scope: memory and retrieval orientation only. This page cannot change memory-system behavior, registry schema, validator behavior, routing behavior, role authority, checkpoint behavior, source authority, or physics status.
 
 <!-- explainer-control: authority_footer -->
 

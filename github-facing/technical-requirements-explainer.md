@@ -6,8 +6,6 @@ Those requirements answer only one question: what tools are needed to perform an
 
 The useful operator model is tiered. Read-only inspection has minimal requirements. Governed agent work currently assumes the Codex app and repo-local skills. Python validators need `.venv` and `requirements.txt`. HTML QA may need browser tooling. Diagram-backed tracked HTML may need the pinned Mermaid/Playwright setup. PDF derivatives use the managed TeX-to-PDF lane only when registered TeX derivatives are in scope.
 
-Reader scope: local operation requirements only. This page cannot change dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics status.
-
 ## Requirement Tier Matrix
 
 | Item | Function | Boundary |
@@ -45,6 +43,10 @@ Reader scope: local operation requirements only. This page cannot change depende
 | Tool works | The local operation can run. | Still inspect the authority source. |
 | Check passes | The configured deterministic check accepted the state. | Does not grant promotion or publication taste. |
 | Cache exists | A generated or local retrieval layer is available. | Does not replace canonical source inspection. |
+
+## Reader Scope
+
+Reader scope: local operation requirements only. This page cannot change dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics status.
 
 <!-- explainer-control: authority_footer -->
 

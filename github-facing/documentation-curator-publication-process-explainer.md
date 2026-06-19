@@ -6,8 +6,6 @@ The active process starts with a page-specific publication brief. The brief defi
 
 The process also keeps quality separate from mere command success. Deterministic checks protect known boundaries; screenshot QA and before/after review record human-facing readability and remaining risks. The retired Visual Atlas, topic-registry creation path, universal heading skeleton, and active teaching-packet fallback remain outside the accepted process.
 
-Reader scope: publication-process orientation only. This page cannot change role authority, validator behavior, schemas, routing, checkpoint gates, generated-output authority, or corpus-migration approval.
-
 ## Publication Lifecycle
 
 | Item | Function | Boundary |
@@ -42,6 +40,10 @@ Reader scope: publication-process orientation only. This page cannot change role
 | Topic registry creation | Historical topics can inform reader needs but do not create pages. | Use the publication brief registry. |
 | Universal headings | A repeated skeleton is not the public-page model. | Choose headings for the subject. |
 | Teaching transcript | Teaching packets are not active public-page source. | Use inspected source bundles. |
+
+## Reader Scope
+
+Reader scope: publication-process orientation only. This page cannot change role authority, validator behavior, schemas, routing, checkpoint gates, generated-output authority, or corpus-migration approval.
 
 <!-- explainer-control: authority_footer -->
 

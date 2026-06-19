@@ -6,8 +6,6 @@ The loop starts from observable evidence. A current working-tree diff can trigge
 
 A reader should come away with a practical rule: classify or resolve the state first, execute at most one project-system packet, record documentation impact when the packet changes state, and close any signal only with explicit PASS completion evidence or a documented rejection decision.
 
-Reader scope: project-system workflow orientation only. This page cannot create or close signals, change routing behavior, change validator behavior, expand role authority, or authorize physics claim promotion.
-
 ## Improvement Loop Map
 
 | Item | Function | Boundary |
@@ -43,6 +41,10 @@ Reader scope: project-system workflow orientation only. This page cannot create 
 | Resolver overread | A future recommendation is treated as a hard checkpoint block. | Use validators and concrete authority violations as hard gates. |
 | Receipt gap | A project-system AgentJob changes state without documentation impact. | Write the receipt or stop before checkpointing. |
 | Physics overreach | A project-system packet changes science status. | Route physics continuation or human-gated authority separately. |
+
+## Reader Scope
+
+Reader scope: project-system workflow orientation only. This page cannot create or close signals, change routing behavior, change validator behavior, expand role authority, or authorize physics claim promotion.
 
 <!-- explainer-control: authority_footer -->
 

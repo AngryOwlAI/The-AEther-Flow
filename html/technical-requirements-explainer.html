@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="f4610700c095d5fe16bee4949fdf0137ef04d6969a83bf38a63e615f3845c130">
+  <meta name="aether-flow-source-basis-hash" content="1e4a2d3b85ae904bbe0e88b82948167d7810c1b2122bf0d2d443942cb1874e28">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Technical Requirements For Reproducible Operation</title>
@@ -159,7 +159,6 @@
     <h1>Technical Requirements For Reproducible Operation</h1>
     <p class="lede">Technical requirements are the local operating conditions that make AEther-Flow reproducible: the current Codex app harness for governed agent work, the Python virtual environment, dependency ledger, repository-owned scripts, Makefile targets, screenshot tooling, diagram tooling when needed, and managed PDF derivative path.</p>
     <p class="lede">Those requirements answer only one question: what tools are needed to perform an operation. They do not answer whether the operation is authorized. Authorization still comes from tracked sources, registries, task records, role or skill contracts, AgentJob allowlists, completion evidence, claim boundaries, and checks.</p>
-    <div class="scope">Reader scope: local operation requirements only. This page cannot change dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics status.</div>
     <nav data-explainer-control="section_toc" aria-label="Section navigation">
       <a href="#s1">Requirement Tier Matrix</a>
       <a href="#s2">Repository Command Families</a>
@@ -217,6 +216,10 @@
         <article class="summary safe"><h3>Safe</h3><p>Use the required tool tier, inspect the source path that owns the operation, confirm the current task allowlist, run the repository-owned command family, and preserve evidence.</p></article>
         <article class="summary unsafe"><h3>Unsafe</h3><p>A working tool, generated cache, screenshot, or PASS result creates source authority, changes dependencies, or authorizes physics claims.</p></article>
       </div>
+    </section>
+    <section class="scope reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">
+      <h2 id="reader-scope-title">Reader Scope</h2>
+      <p>Reader scope: local operation requirements only. This page cannot change dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics status.</p>
     </section>
   </main>
 

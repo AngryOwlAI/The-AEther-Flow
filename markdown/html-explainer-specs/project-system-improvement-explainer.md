@@ -64,9 +64,21 @@ as local CSS cards and tables; the GitHub Markdown derivative should remain a
 native article with compact tables. Do not use browser-side Mermaid, remote
 assets, or external runtime packages.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: project-system workflow orientation only. This page cannot
+create or close signals, change routing behavior, change validator behavior,
+expand role authority, or authorize physics claim promotion.
+
 ## Acceptance Criteria
 
 - Opens with subject-specific operational explanation before the full authority paragraph.
+- Uses the bottom Reader Scope hook immediately above the marked authority footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
 - Includes visible source paths in both public derivatives.
 - Preserves generated noncanonical status and source authority boundaries.

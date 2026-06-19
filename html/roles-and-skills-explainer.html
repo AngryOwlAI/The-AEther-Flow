@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="d90b16a75f97249ab681377db609032c9601dc8b46202dfbeaeebb794bb45aed">
+  <meta name="aether-flow-source-basis-hash" content="972947e325d13d272267e5332a0ccfca92977a0a5f81770be48658ddeab5cf91">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Roles And Skills Catalog</title>
@@ -159,7 +159,6 @@
     <h1>Roles And Skills Catalog</h1>
     <p class="lede">The roles and skills catalog is a navigation aid. It helps a maintainer or future agent find the role registry, versioned role contracts, skill entry points, default validator families, and human-gate cautions. It does not decide live authority for a transaction.</p>
     <p class="lede">Current authority is task-local. A registered role is a stable template; a skill contract defines a workflow; an execution-role record binds one job to exact semantics; the AgentJob allowlist defines what paths can be read or written; the claim boundary states what must not be promoted; and completion evidence plus validators record whether the bounded transaction passed.</p>
-    <div class="scope">Reader scope: role and skill navigation only. This page cannot change role status, register roles, supersede roles, expand role authority, change skill contracts, change validator behavior, change routing, change allowlists, or promote physics claims.</div>
     <nav data-explainer-control="section_toc" aria-label="Section navigation">
       <a href="#s1">Authority Inspection Order</a>
       <a href="#s2">Active Role Families</a>
@@ -210,6 +209,10 @@
         <article class="summary safe"><h3>Safe</h3><p>Use this catalog to locate current registry rows, role contracts, skill contracts, execution records, AgentJobs, and completion evidence.</p></article>
         <article class="summary unsafe"><h3>Unsafe</h3><p>A catalog row grants write permission, a superseded role is active because it appears in a table, or a skill entry point bypasses the AgentJob allowlist.</p></article>
       </div>
+    </section>
+    <section class="scope reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">
+      <h2 id="reader-scope-title">Reader Scope</h2>
+      <p>Reader scope: role and skill navigation only. This page cannot change role status, register roles, supersede roles, expand role authority, change skill contracts, change validator behavior, change routing, change allowlists, or promote physics claims.</p>
     </section>
   </main>
 
