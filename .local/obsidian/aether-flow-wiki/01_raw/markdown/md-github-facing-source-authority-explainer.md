@@ -1,112 +1,69 @@
-# Source Authority
+# Source Authority And Generated Derivatives
 
-Source authority is the repository rule that decides which files can define project truth and which files are reading, retrieval, validation, or publication derivatives.
+The trust question in AEther-Flow is not "which page is clearest?" It is
+"which source is allowed to define the project state?" Public documentation can
+be polished and useful, but it remains downstream of registered TeX,
+registries, and registered Markdown.
+
+This page is a noncanonical reader surface. Use it to understand the authority
+ladder before citing, editing, or summarizing project knowledge.
+
+## Authority Ladder
+
+| Surface | Authority It Carries | How To Use It |
+| --- | --- | --- |
+| Registered TeX | Physics and derivational claims. | Cite for scientific content only within its stated claim status. |
+| Registries | Routing, provenance, generated-output tracking, and memory fields. | Inspect rows before changing controlled project state. |
+| Registered Markdown | Guidance, role and skill contracts, source specs, briefs, and control notes. | Treat as source authority for its declared lane. |
+| GitHub-facing Markdown and HTML | Reader orientation and teaching. | Use as navigation back to source, not as independent authority. |
+| Wiki notes, PDFs, semantic extracts, Obsidian notes, `.local` caches | Reading, retrieval, or build convenience. | Verify against the registered source before relying on them. |
+
+## How To Use A Generated Page Safely
+
+Read the generated page for orientation, then follow its source paths. If a
+claim matters, inspect the registered source that carries that claim. If a
+workflow action matters, inspect the task, role, registry, or validator surface
+that authorizes that action. If a generated page and a source disagree, the
+source wins and the generated derivative needs repair.
+
+## Failure Modes
+
+- Treating a clear HTML page as if it can promote a physics claim.
+- Treating a wiki note or semantic extract as if it can override a registry
+  row.
+- Treating `.local` cache state as tracked control state.
+- Treating a validator pass as a broad endorsement of reader quality or
+  scientific truth.
+
+## Source-First Checklist
+
+1. Name the question: physics claim, workflow state, role authority,
+   documentation quality, or generated artifact.
+2. Identify the source lane that owns that question.
+3. Inspect the source file and registry row.
+4. Use generated documentation only to navigate and explain.
+5. Preserve noncanonical and claim-boundary language when summarizing.
 
 ## Source Binding
 
 - **Derived from spec:** `markdown/html-explainer-specs/source-authority-explainer.md`
 - **Related HTML:** `html/source-authority-explainer.html`
-- **Authority status:** `generated_noncanonical`
+- **Publication brief:** `markdown/publication-briefs/source-authority.publication-brief.md`
+- **Authority status:** generated noncanonical reader surface
 
-## Authority Ladder
+## Source Materials
 
-The highest science-bearing authority is registered TeX. Format registries carry routing, provenance, source hash, generated-output, and memory authority. Registered Markdown carries front-door guidance, source specs, and project-control notes. PDFs, HTML explainers, GitHub-facing Markdown, generated wiki notes, indexes, semantic extracts, local Obsidian vaults, and `.local/` caches are useful only because they point back to those sources.
-
-## Workflow Step Inspector
-
-1. Edit the authoritative TeX, registry, or registered Markdown source first.
-2. Update the corresponding registry row and source hash when required.
-3. Regenerate dependent wiki, HTML, PDF, semantic, or local retrieval surfaces through approved tooling.
-4. Preserve source-basis metadata and visible source evidence in derivatives.
-5. Validate source parity, hashes, generated-output bindings, and authority status.
-6. Use generated surfaces for reading and retrieval, not independent claims.
-7. Treat `.local/` caches as scratch or machine-local retrieval aids.
-8. Return to the canonical source or registry before making project-knowledge changes.
-
-## Practical Authority Rule
-
-Better readability does not create authority. A generated page can be the
-clearest way to learn the system, but it should send the reader back to the
-registered source and registry row before any project-knowledge change.
-
-Registries are central because they carry object identity, provenance, source
-hashes, related sources, generated outputs, and validation status. They are the
-spine that tells humans and agents whether a derivative still points to the
-source it claims to represent.
-
-Local retrieval output is weaker still. `.local/` caches, semantic extracts,
-SQLite indexes, and local vault notes can help find evidence, but disagreement
-is settled by tracked sources and registries.
-
-## Authority And Generation Diagrams
-
-<!-- mermaid-diagram-id: source-authority-ladder -->
-```mermaid
-flowchart TD
-  Tex["Registered TeX<br/>scientific authority"] --> Registries["Format registries<br/>routing and provenance authority"]
-  Registries --> Markdown["Registered Markdown<br/>front door and specs"]
-  Markdown --> Html["Tracked HTML explainers<br/>human-only generated derivatives"]
-  Tex --> Pdf["PDF derivatives<br/>human reading"]
-  Registries --> Wiki["Generated wiki and indexes<br/>metadata retrieval"]
-  Wiki --> Local["Local Obsidian and .local caches<br/>scratch or retrieval"]
-  Html --> Local
-```
-
-<!-- mermaid-diagram-id: derivative-generation-flow -->
-```mermaid
-flowchart TD
-  Source["Authoritative source edit"] --> Registry["Registry row and source hash"]
-  Registry --> Bootstrap["Memory bootstrap"]
-  Bootstrap --> Wiki["Generated wiki notes"]
-  Bootstrap --> Html["Generated HTML derivative"]
-  Bootstrap --> Pdf["Generated PDF derivative"]
-  Html --> Metadata["Source-basis metadata"]
-  Wiki --> Banner["Non-authority banner"]
-  Pdf --> Link["PDF registry row"]
-  Metadata --> Validate["Validate source parity"]
-  Banner --> Validate
-  Link --> Validate
-```
-
-## Practical Use Matrix
-
-| Surface | Use | Authority Boundary |
-| --- | --- | --- |
-| Registered TeX | Physics and derivational claims | Science authority when registered and valid |
-| Registries | Provenance, routing, memory, generated-output tracking | Canonical for their schema-owned fields |
-| Registered Markdown | Guidance, specs, project-control notes | Authority for its declared lane |
-| Generated HTML and GitHub Markdown | Human orientation | Nonauthoritative derivatives |
-| Wiki, semantic extracts, `.local/` | Search and retrieval | Evidence-finding aids only |
-
-## For GitHub Readers And AI Agents
-
-You are reading a non-authoritative GitHub-facing explainer.
-
-Safe uses:
-- learn which source type to inspect;
-- trace generated surfaces back to sources;
-- explain why a derivative is not independent authority.
-
-Before modifying project knowledge:
-- inspect the source and registry row;
-- regenerate derivatives through the approved path;
-- run the relevant validation gates.
-
-Do not:
-- edit generated wiki notes by hand;
-- cite generated HTML as physics authority;
-- let a local cache override tracked control state.
-
-## All Source Materials
-
-- `README.md`
 - `AGENTS.md`
 - `.codex/skills/project-memory-system/SKILL.md`
 - `.codex/skills/html-visual-explainer/SKILL.md`
-- `registries/TEX_SOURCE_REGISTRY.csv`
 - `registries/MARKDOWN_SOURCE_REGISTRY.csv`
 - `registries/HTML_EXPLAINER_REGISTRY.csv`
 - `registries/WIKI_ARTIFACT_REGISTRY.csv`
-- `registries/PDF_DERIVATIVE_REGISTRY.csv`
 - `registries/FILE_OBJECT_REGISTRY.csv`
-- `research_control/design/html_explainer_flexible_presentation_contract.md`
+
+## Boundary
+
+This page does not change the authority hierarchy, grant generated-output
+authority, promote ontology, certify benchmarks, issue Gate Chair verdicts,
+expand roles, or modify routing behavior. It explains how to find the source
+that can answer those questions.

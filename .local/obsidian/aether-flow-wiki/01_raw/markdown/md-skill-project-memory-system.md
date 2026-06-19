@@ -36,6 +36,20 @@ Validate without writing:
 `--check` is accepted as a compatibility alias for `--validate-only`; prefer
 `--validate-only` in new documentation.
 
+Documentation publication validation modes:
+
+```zsh
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-only
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-validate-only
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only --strict-docs
+```
+
+These modes run the active publication-process validator. They check source
+grounding, authority boundaries, no-network public HTML, publication brief
+conformance, orphan public explainer files, and known anti-template failures.
+They do not promote generated artifacts to authority or replace human-facing
+editorial review.
+
 Clean ignored local noise from canonical lanes:
 
 ```zsh

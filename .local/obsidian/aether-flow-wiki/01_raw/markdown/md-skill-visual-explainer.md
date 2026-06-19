@@ -70,93 +70,45 @@ Markdown source spec under `markdown/html-explainer-specs/`, then render the
 HTML file named by that spec. The tracked HTML remains human-only generated
 output; the Markdown spec and registries carry authority.
 
+For governed Documentation Curator publication work, use
+`research_control/design/documentation_curator_publication_process.md`,
+`registries/PUBLICATION_BRIEF_REGISTRY.csv`, and the relevant publication
+brief under `markdown/publication-briefs/`. Design from the brief and source
+bundle; do not fall back to a universal page skeleton. Tracked public docs must
+not use NPX, `@agent-native/core`, hosted Plan MCP, localhost bridge tooling,
+CDN diagram rendering, remote CSS, remote fonts, external analytics, hosted
+comments, or browser-side Mermaid execution.
+
 When creating or updating diagrams in registered explanatory Markdown or
 tracked HTML explainers, load and follow
 `subskills/mermaid-documentation/SKILL.md`. For `.local/` scratch visual
 explainers, the Mermaid guidance in this parent skill remains sufficient
 unless the user asks for governed project documentation.
 
-Tracked project explainers must implement the project interactive analysis
-contract declared by the Markdown source spec. Use a low-risk
-progressive-disclosure model rather than a heavy app framework:
+Tracked project explainers must implement the publication brief:
 
-- Provide section navigation.
-- Use a deep-first reading surface with expandable analysis panels for
-  reasoning, constraints, risks, and examples.
-- Provide a visible All Source Materials section that exposes registered
-  source-path evidence.
-- Preserve claim-boundary text as source-spec metadata unless a page-specific
-  source spec explicitly requires a visible claim-boundary control.
-- Provide workflow step inspectors for workflow and control-system pages.
-  These inspectors must be page-specific. Avoid a generic task-object trace
-  unless the source spec is actually about that object path. When updating the
-  paired GitHub-facing Markdown derivative, add a matching
-  `## Workflow Step Inspector` section for specs that declare the
-  `workflow_step_inspector` control.
+- open with subject framing, not source metadata;
+- expose visible source grounding and a clear noncanonical boundary;
+- choose headings and visual treatment for the page's reader job;
+- let GitHub Markdown and HTML diverge where the media differ;
+- avoid repeated section skeletons across unrelated topics; and
+- preserve source and claim parity without requiring visible section parity.
 
-Tracked project explainers must also implement the flexible presentation
-contract declared by the Markdown source spec:
+Use concise local enhancements only when the page still reads without
+JavaScript. Navigation, source chips, and copy buttons are acceptable when they
+support the brief. Do not add generic global modes or controls unless the
+brief requires them and browser QA verifies them.
 
-- `presentation_profile` names the layout archetype, not hidden content rules.
-- `layout_intent` explains how this page should adapt the profile.
-  It is renderer guidance and validation metadata, not reader-facing content.
-  Do not render `layout_intent`, registry `source_basis`, or derivative
-  authority status as hero/title metadata chips. Keep registry binding in
-  `<meta>` tags and visible source grounding in the summary/source sections.
-- `required_content_blocks` names the page-local factual obligations.
-- `subject_summary` is universal and must be the first declared content block,
-  the first body definition under `## Required Content Blocks`, and the first
-  generated `data-content-block`.
-- Render `subject_summary` immediately after the hero/title area and before the
-  section table of contents under a reader-facing heading in the form
-  `Summary of [Subject]`.
-- `subject_summary` must include `data-summary-field` markers for
-  `summary_text` and `source_basis`.
-  The `summary_text` field is one coherent prose block that explains what the
-  subject is, what functionality or role it has, why it matters to the project,
-  and how it fits the surrounding research or project-control system.
-  The `summary_text` field must not include prose source-grounding sentences or
-  source-list restatements. Grounding belongs in the separate `source_basis`
-  field.
-  The `source_basis` field must contain visible source-path chips or an
-  equivalent visible source list, and every cited `data-source-path` must be
-  listed in the spec's `source_materials`.
-- Source chips in tracked HTML display paths only; do not add local file links.
-- Active tracked HTML must not render the obsolete labels `Reader orientation`
-  or `What This Explainer Describes`.
-- Each generated content block must appear as `data-content-block="<id>"`.
-- Each generated content block must contain at least one `data-source-path`.
-- Each non-summary content block must be completed human documentation, not a
-  source-spec instruction copied into the page. Treat
-  `required_content_blocks` as coverage obligations: explain what the block is,
-  why the project needs it, how it works in the project, which sources ground
-  it, what it can and cannot claim, and where the reader should go next.
-- Follow `research_control/design/html_explainer_depth_contract.md` for tracked
-  explainers and run `scripts/spec_depth_lint.py --root .` after generation.
-  Current tracked explainers should be kept warning-free even though the lint is
-  advisory.
-- Use the shared no-network reader layer for tracked explainers: reading
-  progress, local search, active-section navigation, and copyable source chips.
-  Do not add global simple/technical mode toggles or global expand/collapse
-  buttons unless a later source-spec-backed task defines a page-specific need
-  and browser-verifies it. The helper script is
-  `scripts/enhance_html_explainers.py`; it is a renderer aid, not an authority
-  source.
+Run `scripts/validate_publication_process.py --root .` after governed
+publication work. Use screenshot evidence and a human-facing review artifact
+for pilot pages because deterministic scripts cannot certify professional
+editorial quality.
 
-Allowed presentation profiles are `atlas_hub`, `role_catalog`,
-`format_ladder`, `memory_system_map`, `workflow_lifecycle`,
-`technical_requirements`, `conceptual_model`, and `claim_boundary_map`.
-Choose the visual form that best fits the subject while preserving source
-evidence: atlas cards, role catalogs, format matrices, tier tables, memory
-maps, workflow timelines, claim-boundary panels when explicitly required, or source inspectors are all
-valid when the spec supports them.
-
-Mermaid is profile-guided, not mandatory. `memory_system_map`,
-`workflow_lifecycle`, `claim_boundary_map`, and `atlas_hub` usually merit a
-registered Mermaid overview. `role_catalog`, `format_ladder`, and
-`technical_requirements` may be clearer as tables, matrices, tier cards, or
-catalog panels. Do not add a full deterministic HTML generator; render
-creatively from the spec while keeping structural evidence markers intact.
+Mermaid is brief-guided, not mandatory. Process, authority, memory, and claim
+boundary pages often merit a registered Mermaid overview. Reference pages may
+be clearer as tables, matrices, tier cards, or catalog panels. Do not add a
+full deterministic HTML generator; render creatively from the spec while
+keeping source-path evidence markers intact.
 
 For the shared three-layer model (`High Level, Operational, Evidence`), stack
 the three layer sections vertically and let cards inside each layer auto-fit:
@@ -168,10 +120,9 @@ text and reserve `overflow-wrap: anywhere` for `code` and `pre`.
 Active tracked explainers should not render the obsolete analysis-capsule
 section. Do not add `Analysis capsules`, `Claim-Aware Analysis`,
 `data-analysis-capsule`, `data-capsule-field`, or `analysis_capsule_schema` to
-current source specs or generated HTML. Use `data-content-block`,
-`data-summary-field`, `data-explainer-control`, and `data-source-path` markers
-for validator evidence. Manually author summary prose per source spec, with a
-150-240 word target excluding source chips.
+current source specs or generated HTML. Use `data-explainer-control` and
+`data-source-path` markers for validator evidence. Manually author summary
+prose per source spec when the brief calls for it.
 
 For the front-facing project overview, treat
 `html/project-overview-explainer.html` as the explainer hub. It should orient

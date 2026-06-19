@@ -32,19 +32,41 @@ Generated Obsidian index. Not canonical authority.
 ## canonical_markdown_source
 
 - [[02_sources/markdown/md-aether-flow-interpretation-lemen|MD-AETHER-FLOW-INTERPRETATION-LEMEN]] `ontology/aether_flow_interpretation-lemen.md`
+- [[02_sources/markdown/md-aether-flow-ontology-publication-brief|MD-AETHER-FLOW-ONTOLOGY-PUBLICATION-BRIEF]] `markdown/publication-briefs/aether-flow-ontology.publication-brief.md`
+- [[02_sources/markdown/md-aether-flow-physics-program-publication-brief|MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF]] `markdown/publication-briefs/aether-flow-physics-program.publication-brief.md`
+- [[02_sources/markdown/md-claim-gates-publication-brief|MD-CLAIM-GATES-PUBLICATION-BRIEF]] `markdown/publication-briefs/claim-gates.publication-brief.md`
+- [[02_sources/markdown/md-director-agentjob-lifecycle-publication-brief|MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF]] `markdown/publication-briefs/director-agentjob-lifecycle.publication-brief.md`
+- [[02_sources/markdown/md-documentation-curator-publication-process-publication-brief|MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF]] `markdown/publication-briefs/documentation-curator-publication-process.publication-brief.md`
+- [[02_sources/markdown/md-exact-gr-benchmark-boundary-publication-brief|MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF]] `markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md`
+- [[02_sources/markdown/md-gr-derivation-roadmap-publication-brief|MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF]] `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - [[02_sources/markdown/md-html-spec-aether-flow-ontology-explainer|MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
+- [[02_sources/markdown/md-html-spec-aether-flow-physics-program-explainer|MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER]] `markdown/html-explainer-specs/aether-flow-physics-program-explainer.md`
 - [[02_sources/markdown/md-html-spec-claim-gates-explainer|MD-HTML-SPEC-CLAIM-GATES-EXPLAINER]] `markdown/html-explainer-specs/claim-gates-explainer.md`
-- [[02_sources/markdown/md-html-spec-documentation-curator-teaching-loop-explainer|MD-HTML-SPEC-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER]] `markdown/html-explainer-specs/documentation-curator-teaching-loop-explainer.md`
+- [[02_sources/markdown/md-html-spec-director-agentjob-lifecycle-explainer|MD-HTML-SPEC-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER]] `markdown/html-explainer-specs/director-agentjob-lifecycle-explainer.md`
+- [[02_sources/markdown/md-html-spec-documentation-curator-publication-process-explainer|MD-HTML-SPEC-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER]] `markdown/html-explainer-specs/documentation-curator-publication-process-explainer.md`
+- [[02_sources/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer|MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER]] `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - [[02_sources/markdown/md-html-spec-gr-derivation-roadmap-explainer|MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER]] `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
 - [[02_sources/markdown/md-html-spec-memory-system-explainer|MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/memory-system-explainer.md`
+- [[02_sources/markdown/md-html-spec-parent-child-synthesis-explainer|MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER]] `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
 - [[02_sources/markdown/md-html-spec-project-overview-explainer|MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER]] `markdown/html-explainer-specs/project-overview-explainer.md`
 - [[02_sources/markdown/md-html-spec-project-system-improvement-explainer|MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER]] `markdown/html-explainer-specs/project-system-improvement-explainer.md`
 - [[02_sources/markdown/md-html-spec-research-agent-workflow-explainer|MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
-- [[02_sources/markdown/md-html-spec-research-control-system-explainer|MD-HTML-SPEC-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `markdown/html-explainer-specs/research-control-system-explainer.md`
 - [[02_sources/markdown/md-html-spec-role-routing-explainer|MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER]] `markdown/html-explainer-specs/role-routing-explainer.md`
 - [[02_sources/markdown/md-html-spec-roles-and-skills-explainer|MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER]] `markdown/html-explainer-specs/roles-and-skills-explainer.md`
 - [[02_sources/markdown/md-html-spec-source-authority-explainer|MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER]] `markdown/html-explainer-specs/source-authority-explainer.md`
 - [[02_sources/markdown/md-html-spec-technical-requirements-explainer|MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER]] `markdown/html-explainer-specs/technical-requirements-explainer.md`
+- [[02_sources/markdown/md-html-spec-validator-operator-workflow-explainer|MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER]] `markdown/html-explainer-specs/validator-operator-workflow-explainer.md`
+- [[02_sources/markdown/md-memory-system-publication-brief|MD-MEMORY-SYSTEM-PUBLICATION-BRIEF]] `markdown/publication-briefs/memory-system.publication-brief.md`
+- [[02_sources/markdown/md-parent-child-synthesis-publication-brief|MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF]] `markdown/publication-briefs/parent-child-synthesis.publication-brief.md`
+- [[02_sources/markdown/md-project-overview-publication-brief|MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF]] `markdown/publication-briefs/project-overview.publication-brief.md`
+- [[02_sources/markdown/md-project-system-improvement-publication-brief|MD-PROJECT-SYSTEM-IMPROVEMENT-PUBLICATION-BRIEF]] `markdown/publication-briefs/project-system-improvement.publication-brief.md`
+- [[02_sources/markdown/md-readme-markdown-publication-briefs|MD-README-MARKDOWN-PUBLICATION-BRIEFS]] `markdown/publication-briefs/README.md`
+- [[02_sources/markdown/md-research-agent-workflow-publication-brief|MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF]] `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
+- [[02_sources/markdown/md-role-routing-publication-brief|MD-ROLE-ROUTING-PUBLICATION-BRIEF]] `markdown/publication-briefs/role-routing.publication-brief.md`
+- [[02_sources/markdown/md-roles-and-skills-publication-brief|MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF]] `markdown/publication-briefs/roles-and-skills.publication-brief.md`
+- [[02_sources/markdown/md-source-authority-publication-brief|MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF]] `markdown/publication-briefs/source-authority.publication-brief.md`
+- [[02_sources/markdown/md-technical-requirements-publication-brief|MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF]] `markdown/publication-briefs/technical-requirements.publication-brief.md`
+- [[02_sources/markdown/md-validator-operator-workflow-publication-brief|MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF]] `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## draft_control_artifact
 
@@ -143,6 +165,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/tex/tex-research-control-resp-lc-source-extension-candidate-refuter-stress-test|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST]] `research_control/tasks/RT-20260614-059/artifacts/100_RESP_LC_SOURCE_EXTENSION_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - [[02_sources/tex/tex-research-control-resp-lc-source-extension-candidate-smuggling-audit|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260614-058/artifacts/99_RESP_LC_SOURCE_EXTENSION_CANDIDATE_SMUGGLING_AUDIT.tex`
 - [[02_sources/tex/tex-research-control-resp-lc-source-extension-human-gate-adoption-decision|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-HUMAN-GATE-ADOPTION-DECISION]] `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex`
+- [[02_sources/tex/tex-research-control-resp-lc-source-extension-m-src-atlas-glue-source-primitive|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-SOURCE-PRIMITIVE]] `research_control/tasks/RT-20260614-065/artifacts/106_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_SOURCE_PRIMITIVE.tex`
 - [[02_sources/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-attempt|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-ATTEMPT]] `research_control/tasks/RT-20260614-061/artifacts/102_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_ATTEMPT.tex`
 - [[02_sources/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-refuter-stress-test|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-REFUTER-STRESS-TEST]] `research_control/tasks/RT-20260614-063/artifacts/104_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_REFUTER_STRESS_TEST.tex`
 - [[02_sources/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-smuggling-audit|TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260614-062/artifacts/103_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_SMUGGLING_AUDIT.tex`
@@ -159,7 +182,6 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-readme-codex-skills|MD-README-CODEX-SKILLS]] `.codex/skills/README.md`
 - [[02_sources/markdown/md-readme-markdown|MD-README-MARKDOWN]] `markdown/README.md`
 - [[02_sources/markdown/md-readme-markdown-html-explainer-specs|MD-README-MARKDOWN-HTML-EXPLAINER-SPECS]] `markdown/html-explainer-specs/README.md`
-- [[02_sources/markdown/md-readme-markdown-teaching-packets|MD-README-MARKDOWN-TEACHING-PACKETS]] `markdown/teaching-packets/README.md`
 - [[02_sources/markdown/md-readme-ontology|MD-README-ONTOLOGY]] `ontology/README.md`
 - [[02_sources/markdown/md-readme-ontology-tex|MD-README-ONTOLOGY-TEX]] `ontology/tex/README.md`
 - [[02_sources/markdown/md-readme-registries|MD-README-REGISTRIES]] `registries/README.md`
@@ -173,39 +195,42 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-readme-tests|MD-README-TESTS]] `tests/README.md`
 - [[02_sources/markdown/md-readme-tex-shared|MD-README-TEX-SHARED]] `tex_shared/README.md`
 
-## explanatory_support_noncanonical
-
-- [[02_sources/markdown/md-teaching-qa-packet-project-overview-teaching-qa|MD-TEACHING-QA-PACKET-PROJECT-OVERVIEW-TEACHING-QA]] `markdown/teaching-packets/project-overview.teaching-qa.md`
-- [[02_sources/markdown/md-teaching-qa-packet-role-routing-teaching-qa|MD-TEACHING-QA-PACKET-ROLE-ROUTING-TEACHING-QA]] `markdown/teaching-packets/role-routing.teaching-qa.md`
-
 ## generated_noncanonical
 
 - [[02_sources/html/html-aether-flow-ontology-explainer|HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `html/aether-flow-ontology-explainer.html`
+- [[02_sources/html/html-aether-flow-physics-program-explainer|HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER]] `html/aether-flow-physics-program-explainer.html`
 - [[02_sources/html/html-claim-gates-explainer|HTML-CLAIM-GATES-EXPLAINER]] `html/claim-gates-explainer.html`
-- [[02_sources/html/html-documentation-curator-teaching-loop-explainer|HTML-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER]] `html/documentation-curator-teaching-loop-explainer.html`
+- [[02_sources/html/html-director-agentjob-lifecycle-explainer|HTML-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER]] `html/director-agentjob-lifecycle-explainer.html`
+- [[02_sources/html/html-documentation-curator-publication-process-explainer|HTML-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER]] `html/documentation-curator-publication-process-explainer.html`
+- [[02_sources/html/html-exact-gr-benchmark-boundary-explainer|HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER]] `html/exact-gr-benchmark-boundary-explainer.html`
 - [[02_sources/html/html-gr-derivation-roadmap-explainer|HTML-GR-DERIVATION-ROADMAP-EXPLAINER]] `html/gr-derivation-roadmap-explainer.html`
 - [[02_sources/html/html-memory-system-explainer|HTML-MEMORY-SYSTEM-EXPLAINER]] `html/memory-system-explainer.html`
+- [[02_sources/html/html-parent-child-synthesis-explainer|HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER]] `html/parent-child-synthesis-explainer.html`
 - [[02_sources/html/html-project-overview-explainer|HTML-PROJECT-OVERVIEW-EXPLAINER]] `html/project-overview-explainer.html`
 - [[02_sources/html/html-project-system-improvement-explainer|HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER]] `html/project-system-improvement-explainer.html`
 - [[02_sources/html/html-research-agent-workflow-explainer|HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `html/research-agent-workflow-explainer.html`
-- [[02_sources/html/html-research-control-system-explainer|HTML-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `html/research-control-system-explainer.html`
 - [[02_sources/html/html-role-routing-explainer|HTML-ROLE-ROUTING-EXPLAINER]] `html/role-routing-explainer.html`
 - [[02_sources/html/html-roles-and-skills-explainer|HTML-ROLES-AND-SKILLS-EXPLAINER]] `html/roles-and-skills-explainer.html`
 - [[02_sources/html/html-source-authority-explainer|HTML-SOURCE-AUTHORITY-EXPLAINER]] `html/source-authority-explainer.html`
 - [[02_sources/html/html-technical-requirements-explainer|HTML-TECHNICAL-REQUIREMENTS-EXPLAINER]] `html/technical-requirements-explainer.html`
+- [[02_sources/html/html-validator-operator-workflow-explainer|HTML-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER]] `html/validator-operator-workflow-explainer.html`
 - [[02_sources/markdown/md-github-facing-aether-flow-ontology-explainer|MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER]] `github-facing/aether-flow-ontology-explainer.md`
+- [[02_sources/markdown/md-github-facing-aether-flow-physics-program-explainer|MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER]] `github-facing/aether-flow-physics-program-explainer.md`
 - [[02_sources/markdown/md-github-facing-claim-gates-explainer|MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER]] `github-facing/claim-gates-explainer.md`
-- [[02_sources/markdown/md-github-facing-documentation-curator-teaching-loop-explainer|MD-GITHUB-FACING-DOCUMENTATION-CURATOR-TEACHING-LOOP-EXPLAINER]] `github-facing/documentation-curator-teaching-loop-explainer.md`
+- [[02_sources/markdown/md-github-facing-director-agentjob-lifecycle-explainer|MD-GITHUB-FACING-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER]] `github-facing/director-agentjob-lifecycle-explainer.md`
+- [[02_sources/markdown/md-github-facing-documentation-curator-publication-process-explainer|MD-GITHUB-FACING-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-EXPLAINER]] `github-facing/documentation-curator-publication-process-explainer.md`
+- [[02_sources/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer|MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER]] `github-facing/exact-gr-benchmark-boundary-explainer.md`
 - [[02_sources/markdown/md-github-facing-gr-derivation-roadmap-explainer|MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER]] `github-facing/gr-derivation-roadmap-explainer.md`
 - [[02_sources/markdown/md-github-facing-memory-system-explainer|MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER]] `github-facing/memory-system-explainer.md`
+- [[02_sources/markdown/md-github-facing-parent-child-synthesis-explainer|MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER]] `github-facing/parent-child-synthesis-explainer.md`
 - [[02_sources/markdown/md-github-facing-project-overview-explainer|MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER]] `github-facing/project-overview-explainer.md`
 - [[02_sources/markdown/md-github-facing-project-system-improvement-explainer|MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER]] `github-facing/project-system-improvement-explainer.md`
 - [[02_sources/markdown/md-github-facing-research-agent-workflow-explainer|MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER]] `github-facing/research-agent-workflow-explainer.md`
-- [[02_sources/markdown/md-github-facing-research-control-system-explainer|MD-GITHUB-FACING-RESEARCH-CONTROL-SYSTEM-EXPLAINER]] `github-facing/research-control-system-explainer.md`
 - [[02_sources/markdown/md-github-facing-role-routing-explainer|MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER]] `github-facing/role-routing-explainer.md`
 - [[02_sources/markdown/md-github-facing-roles-and-skills-explainer|MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER]] `github-facing/roles-and-skills-explainer.md`
 - [[02_sources/markdown/md-github-facing-source-authority-explainer|MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER]] `github-facing/source-authority-explainer.md`
 - [[02_sources/markdown/md-github-facing-technical-requirements-explainer|MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER]] `github-facing/technical-requirements-explainer.md`
+- [[02_sources/markdown/md-github-facing-validator-operator-workflow-explainer|MD-GITHUB-FACING-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER]] `github-facing/validator-operator-workflow-explainer.md`
 - [[02_sources/pdf/pdf-legacy-ontology-aether-flow-consistency|PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY]] `legacy_ontology/pdfs/aether_flow_consistency.pdf`
 - [[02_sources/pdf/pdf-legacy-ontology-aether-flow-dynamics|PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS]] `legacy_ontology/pdfs/aether_flow_dynamics.pdf`
 - [[02_sources/pdf/pdf-legacy-ontology-aether-flow-exact-closure-flagship-article|PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE]] `legacy_ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
@@ -233,6 +258,10 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-readme-research-control|MD-README-RESEARCH-CONTROL]] `research_control/README.md`
 - [[02_sources/markdown/md-readme-research-control-approvals|MD-README-RESEARCH-CONTROL-APPROVALS]] `research_control/approvals/README.md`
 - [[02_sources/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions|MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS]] `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- [[02_sources/markdown/md-research-control-design-documentation-curator-corpus-migration-plan|MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN]] `research_control/design/documentation_curator_corpus_migration_plan.md`
+- [[02_sources/markdown/md-research-control-design-documentation-curator-post-migration-quality-plan|MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-POST-MIGRATION-QUALITY-PLAN]] `research_control/design/documentation_curator_post_migration_quality_plan.md`
+- [[02_sources/markdown/md-research-control-design-documentation-curator-publication-process|MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS]] `research_control/design/documentation_curator_publication_process.md`
+- [[02_sources/markdown/md-research-control-design-documentation-curator-visual-atlas-contract|MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT]] `research_control/design/documentation_curator_visual_atlas_contract.md`
 - [[02_sources/markdown/md-research-control-design-github-facing-explainer-contract|MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT]] `research_control/design/github_facing_explainer_contract.md`
 - [[02_sources/markdown/md-research-control-design-gr-derivation-burden-map|MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP]] `research_control/design/gr_derivation_burden_map.md`
 - [[02_sources/markdown/md-research-control-design-html-explainer-depth-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT]] `research_control/design/html_explainer_depth_contract.md`
@@ -258,8 +287,8 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-7-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-7-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.7.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-8-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-8-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.8.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-9-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-9-0-MD]] `.agents/roles/research_ops/documentation-curator.v0.9.0.md`
-- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-student-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-STUDENT-V0-1-0-MD]] `.agents/roles/research_ops/documentation-student.v0.1.0.md`
-- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-teacher-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-TEACHER-V0-1-0-MD]] `.agents/roles/research_ops/documentation-teacher.v0.1.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v1-0-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V1-0-0-MD]] `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
+- [[02_sources/markdown/md-role-agents-roles-research-ops-documentation-curator-v2-0-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD]] `.agents/roles/research_ops/documentation-curator.v2.0.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD]] `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md|MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD]] `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
@@ -270,8 +299,6 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-schema-documentation-impact-schema|MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA]] `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - [[02_sources/markdown/md-schema-execution-role-schema|MD-SCHEMA-EXECUTION-ROLE-SCHEMA]] `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
 - [[02_sources/markdown/md-schema-role-schema|MD-SCHEMA-ROLE-SCHEMA]] `.agents/schemas/ROLE_SCHEMA.md`
-- [[02_sources/markdown/md-schema-teaching-qa-packet-schema|MD-SCHEMA-TEACHING-QA-PACKET-SCHEMA]] `.agents/schemas/TEACHING_QA_PACKET_SCHEMA.md`
-- [[02_sources/markdown/md-skill-aether-teaching-explainer|MD-SKILL-AETHER-TEACHING-EXPLAINER]] `.codex/skills/aether-teaching-explainer/SKILL.md`
 - [[02_sources/markdown/md-skill-continue-research|MD-SKILL-CONTINUE-RESEARCH]] `.codex/skills/continue-research/SKILL.md`
 - [[02_sources/markdown/md-skill-grill-me|MD-SKILL-GRILL-ME]] `.codex/skills/grill-me/SKILL.md`
 - [[02_sources/markdown/md-skill-grill-with-docs|MD-SKILL-GRILL-WITH-DOCS]] `.codex/skills/grill-with-docs/SKILL.md`
