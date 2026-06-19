@@ -80,6 +80,17 @@ record, claim boundary, write allowlist, source restrictions, validators, and
 stop conditions. Child outputs support review; the fused output remains the
 final artifact for completion, handoff, and downstream registry references.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: concept orientation only. This explanation cannot change the
+one-job rule, AgentJob schema, execution-role schema, validators, routing
+behavior, role authority, write permissions, or physics claim status.
+
 ## Acceptance Criteria
 
 - States one Director decision, one outer AgentJob, one execution-role record,
@@ -89,6 +100,8 @@ final artifact for completion, handoff, and downstream registry references.
 - States that child outputs are supporting draft/control artifacts.
 - Explains that unresolved blocking conflicts prevent PASS completion.
 - States that the mode is not required for all non-physics tasks.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.

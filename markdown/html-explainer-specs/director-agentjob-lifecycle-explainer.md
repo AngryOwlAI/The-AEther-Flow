@@ -84,6 +84,17 @@ know that a completion record is evidence for one bounded transaction, not a
 broad proof, role-registration act, schema change, or generated-output
 authority grant.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: lifecycle orientation only. This explanation cannot edit
+schemas, change task behavior, alter routing, expand role authority, mutate
+historical records, or treat completion evidence as broad proof.
+
 ## Acceptance Criteria
 
 - Explains task, DDR, AgentJob, execution-role record, completion, handoff,
@@ -93,6 +104,8 @@ authority grant.
 - Explains allowlists, validators, claim boundaries, and stop conditions.
 - States that completion evidence is transaction evidence, not broad proof.
 - Names common operator mistakes and safe corrective actions.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.

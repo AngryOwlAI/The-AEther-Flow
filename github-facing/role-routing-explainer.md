@@ -16,10 +16,6 @@ boundary, and the completion evidence. The Gate Chair remains human-gated;
 Documentation Curator output remains non-authoritative for claims; and
 provisional-role patterns are reviewed instead of becoming reusable by habit.
 
-Reader scope: role-routing reference only. This explanation cannot register
-roles, expand role authority, change schemas, change routing behavior, change
-AgentJob allowlists, or authorize claim promotion.
-
 ## Contract Stack
 
 | Layer | Function | Boundary |
@@ -90,6 +86,12 @@ Common mistakes are avoidable:
 
 The logical inspection order is role registry, role contract, execution-role
 record, AgentJob, claim boundary, and completion evidence.
+
+## Reader Scope
+
+Reader scope: role-routing reference only. This explanation cannot register
+roles, expand role authority, change schemas, change routing behavior, change
+AgentJob allowlists, or authorize claim promotion.
 
 <!-- explainer-control: authority_footer -->
 

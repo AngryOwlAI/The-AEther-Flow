@@ -77,6 +77,17 @@ direct registered-role use, task overlays, and one-job provisional roles; how
 to preserve Gate Chair human-gated status; and why repeated provisional-role
 patterns route to project-system review instead of becoming reusable by habit.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: role-routing reference only. This explanation cannot register
+roles, expand role authority, change schemas, change routing behavior, change
+AgentJob allowlists, or authorize claim promotion.
+
 ## Acceptance Criteria
 
 - Distinguishes registered role, task overlay, and one-job provisional role.
@@ -86,6 +97,8 @@ patterns route to project-system review instead of becoming reusable by habit.
   records.
 - Explains recurring provisional-role review as a project-system signal.
 - States that role presence does not expand a current AgentJob allowlist.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.

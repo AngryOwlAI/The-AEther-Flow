@@ -16,10 +16,6 @@ records without changing physics status. Generated pages, local caches, and
 validator success remain supporting evidence for their own transaction, not
 source authority.
 
-Reader scope: public workflow orientation only. This explanation cannot change
-routing behavior, role authority, validator requirements, write permissions,
-claim boundaries, or physics status.
-
 ## Process Lane
 
 The reader learns how a request narrows from intake to exactly one bounded
@@ -104,6 +100,12 @@ work would:
 - require more than one AgentJob to complete honestly.
 
 A stop condition is useful information. It marks the next honest boundary.
+
+## Reader Scope
+
+Reader scope: public workflow orientation only. This explanation cannot change
+routing behavior, role authority, validator requirements, write permissions,
+claim boundaries, or physics status.
 
 <!-- explainer-control: authority_footer -->
 

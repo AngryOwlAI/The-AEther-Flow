@@ -16,10 +16,6 @@ job cannot receive PASS completion. This mode is scoped to future physics
 research AgentJobs; it is not a rule that all project-system or documentation
 tasks use parent-child decomposition.
 
-Reader scope: concept orientation only. This explanation cannot change the
-one-job rule, AgentJob schema, execution-role schema, validators, routing
-behavior, role authority, write permissions, or physics claim status.
-
 ## Single Outer Frame
 
 The reader learns how internal perspective decomposition improves review
@@ -85,6 +81,12 @@ This makes the mode stricter than a normal single-voice draft. It does not let
 a parent select the convenient child and ignore the other. It requires the
 fused output to preserve shared consensus, unique contributions, and
 unresolved limitations.
+
+## Reader Scope
+
+Reader scope: concept orientation only. This explanation cannot change the
+one-job rule, AgentJob schema, execution-role schema, validators, routing
+behavior, role authority, write permissions, or physics claim status.
 
 <!-- explainer-control: authority_footer -->
 

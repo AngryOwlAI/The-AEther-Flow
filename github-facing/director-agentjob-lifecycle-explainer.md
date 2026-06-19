@@ -14,10 +14,6 @@ the record discoverable and checkable. If a record was wrong or later becomes
 obsolete, the correction is a superseding packet, not silent mutation of the
 old evidence.
 
-Reader scope: lifecycle orientation only. This explanation cannot edit
-schemas, change task behavior, alter routing, expand role authority, mutate
-historical records, or treat completion evidence as broad proof.
-
 ## Lifecycle State Map
 
 The reader learns which record narrows the next one and why corrections move
@@ -96,6 +92,12 @@ outputs as source authority. Those actions require their own authority paths.
 | Adding generated HTML without a publication brief and source spec. | It creates an orphan public surface. | Route a Documentation Curator publication packet. |
 | Using validator success as physics evidence. | Checks only enforce repository boundaries. | Inspect scientific sources and claim gates. |
 | Folding multiple objectives into one transaction. | It breaks the one-job boundary. | Split into bounded packets. |
+
+## Reader Scope
+
+Reader scope: lifecycle orientation only. This explanation cannot edit
+schemas, change task behavior, alter routing, expand role authority, mutate
+historical records, or treat completion evidence as broad proof.
 
 <!-- explainer-control: authority_footer -->
 
