@@ -10,8 +10,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `html/director-agentjob-lifecycle-explainer.html`
 - `HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `html/exact-gr-benchmark-boundary-explainer.html`
 - `HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `html/gr-derivation-roadmap-explainer.html`
+- `HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `html/parent-child-synthesis-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
 - `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
+- `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
 
 ## markdown
@@ -31,8 +33,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `github-facing/director-agentjob-lifecycle-explainer.md`
 - `MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `github-facing/exact-gr-benchmark-boundary-explainer.md`
 - `MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `github-facing/gr-derivation-roadmap-explainer.md`
+- `MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `github-facing/parent-child-synthesis-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
 - `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
+- `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
 - `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
 - `MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
@@ -41,12 +45,15 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `markdown/html-explainer-specs/director-agentjob-lifecycle-explainer.md`
 - `MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - `MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
+- `MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
+- `MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `markdown/html-explainer-specs/role-routing-explainer.md`
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `legacy_ontology/aether_flow_interpretation-lemen.md`
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
+- `MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF` `markdown/publication-briefs/parent-child-synthesis.publication-brief.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `markdown/publication-briefs/project-overview.publication-brief.md`
 - `MD-README` `README.md`
@@ -113,6 +120,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
+- `MD-ROLE-ROUTING-PUBLICATION-BRIEF` `markdown/publication-briefs/role-routing.publication-brief.md`
 - `MD-SCHEMA-AGENT-JOB-SCHEMA` `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
@@ -280,8 +288,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-HTML-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `wiki/html/html-director-agentjob-lifecycle-explainer.md`
 - `WIKI-HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/html/html-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/html/html-gr-derivation-roadmap-explainer.md`
+- `WIKI-HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/html/html-parent-child-synthesis-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
 - `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
+- `WIKI-HTML-ROLE-ROUTING-EXPLAINER` `wiki/html/html-role-routing-explainer.md`
 - `WIKI-HTML-SOURCE-AUTHORITY-EXPLAINER` `wiki/html/html-source-authority-explainer.md`
 - `WIKI-MD-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-AETHER-FLOW-ONTOLOGY-PUBLICATION-BRIEF` `wiki/markdown/md-aether-flow-ontology-publication-brief.md`
@@ -298,8 +308,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GITHUB-FACING-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `wiki/markdown/md-github-facing-director-agentjob-lifecycle-explainer.md`
 - `WIKI-MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-github-facing-gr-derivation-roadmap-explainer.md`
+- `WIKI-MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-github-facing-parent-child-synthesis-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-github-facing-project-overview-explainer.md`
 - `WIKI-MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-research-agent-workflow-explainer.md`
+- `WIKI-MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-github-facing-role-routing-explainer.md`
 - `WIKI-MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-github-facing-source-authority-explainer.md`
 - `WIKI-MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `wiki/markdown/md-gr-derivation-roadmap-publication-brief.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
@@ -308,12 +320,15 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER` `wiki/markdown/md-html-spec-director-agentjob-lifecycle-explainer.md`
 - `WIKI-MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-html-spec-gr-derivation-roadmap-explainer.md`
+- `WIKI-MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-html-spec-parent-child-synthesis-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
+- `WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-html-spec-role-routing-explainer.md`
 - `WIKI-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-html-spec-source-authority-explainer.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-legacy-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-legacy-ontology-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
+- `WIKI-MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF` `wiki/markdown/md-parent-child-synthesis-publication-brief.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `wiki/markdown/md-project-overview-publication-brief.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
@@ -380,6 +395,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md`
+- `WIKI-MD-ROLE-ROUTING-PUBLICATION-BRIEF` `wiki/markdown/md-role-routing-publication-brief.md`
 - `WIKI-MD-SCHEMA-AGENT-JOB-SCHEMA` `wiki/markdown/md-schema-agent-job-schema.md`
 - `WIKI-MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `wiki/markdown/md-schema-director-decision-schema.md`
 - `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`
