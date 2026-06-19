@@ -1,0 +1,32 @@
+execution_role_ref: "project-control-maintainer@0.1.0--RT-20260618-017"
+role_execution_kind: "task_overlay"
+task_id: "RT-20260618-017"
+agent_job_id: "AJ-RT-20260618-017-001"
+record_path: "research_control/tasks/RT-20260618-017/roles/project-control-maintainer@0.1.0--RT-20260618-017.yaml"
+base_role_id: "project-control-maintainer"
+base_role_version: "0.1.0"
+provisional_role_name: ""
+authority_delta_summary: "Project-Control Maintainer task overlay for Phase 3C research-control-system merge decision receipt."
+added_constraints:
+  - "Decide only whether research-control-system-explainer remains standalone or merged after Phase 3A and Phase 3B."
+  - "Do not create a publication brief source spec GitHub-facing Markdown page tracked HTML page or screenshot QA for research-control-system-explainer."
+  - "Preserve the distinct-reader-job rule and generated noncanonical output boundary."
+  - "Do not modify canonical science sources role authority schemas validators routing behavior or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - "documentation_impact"
+  - "generated_memory_derivative"
+allowed_write_paths:
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260618-017/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/md-research-control-design-documentation-curator-corpus-migration-plan.md"
+requires_human_gate: false
+expires_after: "AJ-RT-20260618-017-001"
+justification: "The user instructed the next logical step after Phase 3B which was to decide Phase 3C before any public-page migration."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-19T01:22:00Z"
+updated_at: "2026-06-19T01:22:00Z"
+notes: "Execution-role overlay completed for Phase 3C merge decision."
