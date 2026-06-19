@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="0e148acd23d73dfcc58b2d82e5c530711b76f76f09814c6d89030e88b31f45bf">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Project-System Improvement Loop</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f1ea;
+      --ink: #20262b;
+      --muted: #5c6670;
+      --line: #c9c2b6;
+      --panel: #fffdf9;
+      --green: #1d714d;
+      --green-soft: #dfeee4;
+      --blue: #286f8f;
+      --blue-soft: #dcebf2;
+      --gold: #9b6818;
+      --gold-soft: #f2e2bd;
+      --red: #a43d35;
+      --red-soft: #f3dad7;
+      --violet: #61508c;
+      --violet-soft: #e6e1f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.56;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 52px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+    }
+
+    .lead {
+      max-width: 800px;
+      margin: 18px 0 0;
+      color: #3b454d;
+      font-size: 1.1rem;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      margin: 22px 0 0;
+      padding: 14px 16px;
+      border-left: 4px solid var(--blue);
+      background: var(--blue-soft);
+      max-width: 930px;
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    nav a {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 650;
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.55rem;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      min-height: 190px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow-wrap: anywhere;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .step:nth-child(1) { border-top: 6px solid var(--blue); }
+    .step:nth-child(2) { border-top: 6px solid var(--violet); }
+    .step:nth-child(3) { border-top: 6px solid var(--green); }
+    .step:nth-child(4) { border-top: 6px solid var(--gold); }
+    .step:nth-child(5) { border-top: 6px solid var(--red); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+      overflow-wrap: break-word;
+    }
+
+    th {
+      background: #ebe4d8;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+      overflow-wrap: anywhere;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .panel.green { border-top: 6px solid var(--green); }
+    .panel.gold { border-top: 6px solid var(--gold); }
+    .panel.red { border-top: 6px solid var(--red); }
+    .panel.violet { border-top: 6px solid var(--violet); }
+
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .check {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      min-height: 138px;
+    }
+
+    .check strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .failure-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .failure-list li {
+      padding: 14px 16px;
+      border-left: 4px solid var(--red);
+      background: var(--red-soft);
+      border-radius: 8px;
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .source-grid div {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 24px 0 44px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 920px) {
+      .flow,
+      .checks {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .split,
+      .source-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: calc(100% - 22px);
+        max-width: 360px;
+        margin-left: 11px;
+        margin-right: 0;
+      }
+
+      header {
+        padding-top: 34px;
+      }
+
+      .flow,
+      .checks,
+      .failure-list {
+        grid-template-columns: 1fr;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.78rem;
+      }
+
+      nav a {
+        max-width: 100%;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Phase 4A public workflow guide</p>
+      <h1>Project-System Improvement Loop</h1>
+      <p class="lead">How documentation drift, control drift, validator gaps, memory issues, and routing ambiguity become bounded project-system work.</p>
+      <p class="notice">Generated noncanonical reader surface. This page explains existing controls; it does not create signals, resolve signals, change validators, alter routing, expand role authority, or authorize physics claim promotion.</p>
+      <nav data-explainer-control="section_toc" aria-label="Page sections">
+        <a href="#flow">Flow</a>
+        <a href="#compare">Classifier, Resolver, Gate</a>
+        <a href="#signals">Signals</a>
+        <a href="#receipts">Receipts</a>
+        <a href="#failures">Failure Modes</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <section id="flow">
+      <h2>Signal To AgentJob Flow</h2>
+      <div class="flow" aria-label="Project-system improvement process timeline">
+        <article class="step">
+          <h3>Observe State</h3>
+          <p>Start with tracked state: current Git diff, registered open signals, memory preflight, and inspected canonical sources.</p>
+        </article>
+        <article class="step">
+          <h3>Classify</h3>
+          <p>The classifier script identifies documentation-impact and project-system reason codes.</p>
+        </article>
+        <article class="step">
+          <h3>Resolve</h3>
+          <p>The resolver script compares current diff work with registered signals and recommends one boundary.</p>
+        </article>
+        <article class="step">
+          <h3>Execute One Job</h3>
+          <p>The selected role executes one bounded AgentJob with explicit write paths, source classes, outputs, and stop conditions.</p>
+        </article>
+        <article class="step">
+          <h3>Record Evidence</h3>
+          <p>Completion, documentation-impact receipt, checks, and signal-resolution fields preserve the transaction.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="compare">
+      <h2>Classifier, Resolver, Checkpoint Gate</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Surface</th>
+            <th>Question answered</th>
+            <th>Boundary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>classify_project_changes.py</code></td>
+            <td>Does the current Git diff require documentation impact or project-system routing?</td>
+            <td>Classification evidence only. It does not prove the change is correct.</td>
+          </tr>
+          <tr>
+            <td><code>resolve_project_improvement.py</code></td>
+            <td>Which open signal or current diff should be handled as the next bounded project-system step?</td>
+            <td>Advisory routing state. It is not a hard checkpoint gate by itself.</td>
+          </tr>
+          <tr>
+            <td>Checkpoint checks</td>
+            <td>Are changed paths allowed, required records present, and deterministic checks passing?</td>
+            <td>Blocking comes from failed checks or concrete authority-boundary violations.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="signals">
+      <h2>Signal Registries</h2>
+      <div class="split">
+        <article class="panel violet">
+          <h3>Type Registry</h3>
+          <p><code>registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv</code> defines the allowed signal vocabulary and default recommended routing metadata.</p>
+          <p>Examples include documentation drift, control contract drift, validator gaps, memory retrieval failure, routing ambiguity, and claim-boundary confusion.</p>
+        </article>
+        <article class="panel green">
+          <h3>Instance Registry</h3>
+          <p><code>registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv</code> records concrete signals with task, job, role, severity, status, evidence, and resolution fields.</p>
+          <p>High and critical open signals take priority. Low and medium signals remain backlog unless no current project-system action is pending.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="receipts">
+      <h2>Evidence Checklist</h2>
+      <div class="checks">
+        <article class="check">
+          <strong>One bounded AgentJob</strong>
+          <p>The objective, allowlist, source classes, forbidden paths, outputs, and claim boundary define the actual work.</p>
+        </article>
+        <article class="check">
+          <strong>Documentation impact</strong>
+          <p>Every state-changing project-system AgentJob needs <code>research_control/tasks/&lt;task_id&gt;/documentation_impact.yaml</code>.</p>
+        </article>
+        <article class="check">
+          <strong>Signal closure</strong>
+          <p>Resolved, completed, or closed signals need <code>resolved_by_job_id</code>, <code>resolution_evidence_path</code>, and <code>resolved_at</code>.</p>
+        </article>
+      </div>
+      <p>For a successful signal resolution, the evidence path must point to a completion YAML with <code>validation_status: "PASS"</code> and a matching <code>job_id</code>. A rejected signal may instead cite a Director decision that names the signal and explains the rejection.</p>
+    </section>
+
+    <section id="failures">
+      <h2>Failure Modes</h2>
+      <ul class="failure-list">
+        <li>Closing a signal without PASS completion evidence or a rejection decision.</li>
+        <li>Using free-text signal language without a concrete registry row.</li>
+        <li>Treating resolver output as a hard checkpoint gate by itself.</li>
+        <li>Omitting documentation-impact receipts for state-changing project-system jobs.</li>
+        <li>Promoting generated HTML, wiki notes, Obsidian notes, semantic extracts, or <code>.local</code> caches to authority.</li>
+        <li>Using project-system improvement to alter physics claim status.</li>
+      </ul>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <div class="source-grid">
+        <div>AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Root agent guidance].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code> [Project-system improvement skill].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="scripts/project_control/classify_project_changes.py">scripts/project_control/classify_project_changes.py</code> [Project change classifier].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="scripts/project_control/resolve_project_improvement.py">scripts/project_control/resolve_project_improvement.py</code> [Project-improvement resolver].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv">registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv</code> [Signal type registry].</div>
+        <div>AEther-Flow Project. (2026). <code data-source-path="registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv">registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv</code> [Signal instance registry].</div>
+      </div>
+    </section>
+
+    <section id="binding">
+      <h2>Source Binding</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Derived from spec</th>
+            <td><code>markdown/html-explainer-specs/project-system-improvement-explainer.md</code></td>
+          </tr>
+          <tr>
+            <th>GitHub Markdown</th>
+            <td><code>github-facing/project-system-improvement-explainer.md</code></td>
+          </tr>
+          <tr>
+            <th>Publication brief</th>
+            <td><code>markdown/publication-briefs/project-system-improvement.publication-brief.md</code></td>
+          </tr>
+          <tr>
+            <th>Authority status</th>
+            <td>Generated noncanonical reader surface; source and registry files remain authority.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      Safe summary: classify current state, inspect registered signals, execute one bounded AgentJob, record documentation impact, and close signals only with explicit evidence.
+    </footer>
+  </main>
+</body>
+</html>
