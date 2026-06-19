@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="f4a1f928b30d50f4bf091ef9ff93d7720724ed61f059a9f365c5f883404f2ee4">
+  <meta name="aether-flow-source-basis-hash" content="0fafeed53412ca9b3cae956a095605c932ceb8a5ca74cc2b8904ca37cf4416db">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>GR Derivation Roadmap</title>
   <style>
@@ -96,13 +96,13 @@
       padding: .08em .25em;
       overflow-wrap: anywhere;
     }
-    .notice {
+    .reader-scope {
       max-width: 900px;
       border-left: 5px solid var(--amber);
       background: #fff8ec;
       padding: 18px 20px;
-      margin-top: 22px;
     }
+    .reader-scope p { margin: 0; }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -258,9 +258,6 @@
     <section id="scope">
       <h2>Roadmap, Not Proof</h2>
       <p>The roadmap names the objects and gates that would have to exist before AEther-Flow could claim a first-principles derivation of ordinary GR or promote an exact-GR benchmark from source structure.</p>
-      <div class="notice">
-        Reader scope: roadmap explanation only. It does not update the Distance-to-GR ledger, adopt <code>M_src</code>, derive <code>g_eff</code>, derive matter coupling, derive Einstein equations, promote a benchmark, or issue a Gate Chair verdict.
-      </div>
       <nav data-explainer-control="section_toc" aria-label="Section navigation">
         <a href="#ladder">Milestones</a>
         <a href="#matrix">Burden matrix</a>
@@ -429,10 +426,15 @@
       </div>
     </section>
 
-    <footer data-explainer-control="authority_footer">
-      <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md</code> and the publication brief <code>markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md</code>. It explains the roadmap, but it does not update physics status, discharge a milestone, adopt <code>M_src</code>, derive <code>g_eff</code>, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, change source authority, or supersede tracked source files.</p>
-      <p>Related GitHub Markdown: <code>github-facing/gr-derivation-roadmap-explainer.md</code>. Authority status: generated noncanonical reader surface.</p>
-    </footer>
+    <section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">
+      <h2 id="reader-scope-title">Reader Scope</h2>
+      <p>Reader scope: roadmap explanation only. It does not update physics status, discharge a milestone, adopt <code>M_src</code>, derive <code>g_eff</code>, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or supersede tracked source files.</p>
+    </section>
   </main>
+
+  <footer data-explainer-control="authority_footer">
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md</code> and the publication brief <code>markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md</code>. It explains the roadmap, but it does not update physics status, discharge a milestone, adopt <code>M_src</code>, derive <code>g_eff</code>, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, change source authority, or supersede tracked source files.</p>
+    <p>Related GitHub Markdown: <code>github-facing/gr-derivation-roadmap-explainer.md</code>. Authority status: generated noncanonical reader surface.</p>
+  </footer>
 </body>
 </html>

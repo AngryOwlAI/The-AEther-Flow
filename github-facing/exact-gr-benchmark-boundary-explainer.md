@@ -9,10 +9,6 @@ reader task is to keep four states separate: adoption of the benchmark,
 compatibility with the ontology, derivation from source structure, and
 human-gated benchmark promotion.
 
-Reader scope: boundary explanation only. It does not change benchmark status,
-certify a derivation, issue a Gate Chair verdict, or make HTML, PDFs, or
-GitHub-facing Markdown into scientific authority.
-
 ## Benchmark Boundary Matrix
 
 | Question | Conservative Answer | Authority To Inspect |
@@ -67,6 +63,12 @@ This page is forbidden to prove or imply:
 - generated HTML, PDFs, wiki notes, semantic extracts, or `.local` files as
   scientific authority; or
 - global rejection of the ontology from any scoped obstruction.
+
+## Reader Scope
+
+Reader scope: boundary explanation only. It does not change benchmark status,
+certify a derivation, issue a Gate Chair verdict, or make HTML, PDFs, or
+GitHub-facing Markdown into scientific authority.
 
 <!-- explainer-control: authority_footer -->
 

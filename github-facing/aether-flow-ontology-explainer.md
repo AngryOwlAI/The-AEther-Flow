@@ -7,11 +7,6 @@ vocabulary is useful only when it remains separated from mathematical
 derivation and empirical prediction. The current ontology lane explains what
 the project is about; it does not by itself force the exact-GR benchmark.
 
-Reader scope: ontology orientation only. It can help readers use the
-vocabulary, but it does not promote ontology, certify exact-GR recovery,
-complete the derivation, change a claim boundary, or supersede registered TeX
-sources.
-
 ## Vocabulary Map
 
 | Term | Meaning in this project | Boundary |
@@ -95,6 +90,13 @@ and gates before claiming a first-principles derivation of GR.
 Unsafe summary: AEther-Flow ontology has already forced GR, generated pages
 certify ontology promotion, or AEther-flow is just an ordinary fluid moving
 through observed three-dimensional space.
+
+## Reader Scope
+
+Reader scope: ontology orientation only. It can help readers use the
+vocabulary, but it does not promote ontology, certify exact-GR recovery,
+complete the derivation, change a claim boundary, or supersede registered TeX
+sources.
 
 <!-- explainer-control: authority_footer -->
 

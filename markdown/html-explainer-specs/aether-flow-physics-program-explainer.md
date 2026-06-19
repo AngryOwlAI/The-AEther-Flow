@@ -58,6 +58,17 @@ teach this status architecture before authority metadata, while the full
 generated-noncanonical authority paragraph belongs in the footer authority
 section.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: public orientation only. This explanation cannot promote
+ontology, certify benchmark recovery, complete the derivation, issue a Gate
+Chair decision, or change any control record.
+
 ## Visual Strategy
 
 Use layered architecture: ontology, benchmark, derivation burden, negative
@@ -72,6 +83,8 @@ examples. Do not turn the page into a task transcript or role manual.
 - Preserves qualifiers such as `draft/control`, `source-only`, `local`,
   `exact-branch`, `source-extension data`, and `human-gated`.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the
   GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.

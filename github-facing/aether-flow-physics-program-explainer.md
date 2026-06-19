@@ -9,10 +9,6 @@ five-layer status model: ontology vocabulary, exact-GR benchmark discipline,
 derivation burden, negative-result preservation, and protected claim gates
 must stay distinct when the program is summarized.
 
-Reader scope: public orientation only. This explanation cannot promote
-ontology, certify benchmark recovery, complete the derivation, issue a Gate
-Chair decision, or change any control record.
-
 ## Program Map
 
 | Layer | Current Function | Boundary |
@@ -87,6 +83,12 @@ summaries inherit only what those sources actually authorize.
    derivation burdens and status categories.
 5. Inspect `registries/CLAIM_BOUNDARY_REGISTRY.csv` before turning any local
    result into a public claim.
+
+## Reader Scope
+
+Reader scope: public orientation only. This explanation cannot promote
+ontology, certify benchmark recovery, complete the derivation, issue a Gate
+Chair decision, or change any control record.
 
 <!-- explainer-control: authority_footer -->
 

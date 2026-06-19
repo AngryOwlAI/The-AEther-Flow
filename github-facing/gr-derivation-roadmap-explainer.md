@@ -8,11 +8,6 @@ use of the roadmap is not to celebrate progress; it is to keep every burden,
 status term, source-extension qualifier, freeze label, and human gate attached
 to its proper evidential weight.
 
-Reader scope: roadmap explanation only. It does not update physics status,
-discharge a milestone, adopt `M_src`, derive `g_eff`, derive matter coupling,
-derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or
-supersede tracked source files.
-
 ## Milestone Ladder
 
 | Milestone | Required object | Current reading |
@@ -126,6 +121,13 @@ and human gates where the control system says a gate is required.
 - AEther-Flow Project. (2026). `registries/AGENT_JOB_REGISTRY.csv` [AgentJob registry].
 - AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
+
+## Reader Scope
+
+Reader scope: roadmap explanation only. It does not update physics status,
+discharge a milestone, adopt `M_src`, derive `g_eff`, derive matter coupling,
+derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or
+supersede tracked source files.
 
 <!-- explainer-control: authority_footer -->
 

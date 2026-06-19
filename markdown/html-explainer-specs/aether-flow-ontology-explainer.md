@@ -67,6 +67,18 @@ and empirical-prediction separation before authority metadata, while the full
 generated-noncanonical authority paragraph belongs in the footer authority
 section.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: ontology orientation only. It can help readers use the
+vocabulary, but it does not promote ontology, certify exact-GR recovery,
+complete the derivation, change a claim boundary, or supersede registered TeX
+sources.
+
 ## Visual Strategy
 
 Use layered architecture. The visual should separate ontology vocabulary,
@@ -85,6 +97,8 @@ panel. Do not use a generic workflow diagram or browser-side Mermaid.
 - Avoids older three-dimensional aether, wind, river, or ordinary fluid
   overreadings.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the
   GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.

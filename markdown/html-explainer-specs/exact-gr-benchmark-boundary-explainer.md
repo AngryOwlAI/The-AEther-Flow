@@ -60,6 +60,17 @@ teach adoption, compatibility, derivation, and promotion as separate statuses
 before authority metadata, while the full generated-noncanonical authority
 paragraph belongs in the footer authority section.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: boundary explanation only. It does not change benchmark status,
+certify a derivation, issue a Gate Chair verdict, or make HTML, PDFs, or
+GitHub-facing Markdown into scientific authority.
+
 ## Visual Strategy
 
 Use a source matrix and comparison table. The visual should teach which layer
@@ -74,6 +85,8 @@ generic documentation-flow diagram.
 - Includes a failure-mode panel for common overclaims.
 - Names `registries/TEX_SOURCE_REGISTRY.csv` and
   `registries/CLAIM_BOUNDARY_REGISTRY.csv` as source paths.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the
   GitHub Markdown and HTML authority footer.
 - Preserves the noncanonical status of GitHub-facing Markdown and HTML.

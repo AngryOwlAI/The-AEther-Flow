@@ -64,6 +64,18 @@ scope discipline before authority metadata, while the full
 generated-noncanonical authority paragraph belongs in the footer authority
 section.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: claim-control explanation only. It does not create a claim
+boundary, issue a Gate Chair verdict, promote a benchmark, reject the global
+ontology, change role authority, supersede tracked source files, or treat
+validator pass state as scientific evidence.
+
 ## Visual Strategy
 
 Use a state model. The visual should show movement from proposal to audit,
@@ -82,6 +94,8 @@ source-to-validation diagram or browser-side Mermaid.
 - Includes allowed and forbidden claim examples grounded in
   `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the
   GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.

@@ -7,10 +7,6 @@ proposals, audits, refutations, completions, handoffs, freeze labels, and
 human gates each authorize narrower language than a tempting public summary
 usually wants to use.
 
-Reader scope: claim-control explanation only. It does not create a claim
-boundary, issue a Gate Chair verdict, promote a benchmark, reject the global
-ontology, change role authority, or supersede tracked source files.
-
 ## The Claim Lifecycle
 
 | Lifecycle state | What it means | What it does not mean |
@@ -122,6 +118,13 @@ The safe answer is usually narrower than the tempting summary.
 - AEther-Flow Project. (2026). `research_control/design/gr_derivation_burden_map.md` [GR derivation burden map].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_ROLE_REGISTRY.csv` [Agent role registry].
+
+## Reader Scope
+
+Reader scope: claim-control explanation only. It does not create a claim
+boundary, issue a Gate Chair verdict, promote a benchmark, reject the global
+ontology, change role authority, supersede tracked source files, or treat
+validator pass state as scientific evidence.
 
 <!-- explainer-control: authority_footer -->
 
