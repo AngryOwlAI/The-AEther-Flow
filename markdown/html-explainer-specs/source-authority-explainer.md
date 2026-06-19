@@ -1,6 +1,6 @@
 ---
 title: "Source Authority And Generated Derivatives"
-purpose: "Explain which repository surfaces carry authority and which are derivative or retrieval aids."
+purpose: "Explain which repository surfaces carry authority, which surfaces are derivative or local retrieval aids, and what must be inspected before citing, editing, or routing work."
 audience: "Contributors, maintainers, research agents, reviewers, and external AI readers."
 output_path: "html/source-authority-explainer.html"
 github_markdown_output_path: "github-facing/source-authority-explainer.md"
@@ -18,7 +18,7 @@ source_materials:
   - "registries/HTML_EXPLAINER_REGISTRY.csv"
   - "registries/WIKI_ARTIFACT_REGISTRY.csv"
   - "registries/FILE_OBJECT_REGISTRY.csv"
-claim_boundary: "Human-only publication explainer for Source Authority And Generated Derivatives. It teaches authority boundaries without creating physics claims, control authority, role authority, routing behavior, validator authority, write permissions, or generated-output authority."
+claim_boundary: "Human-only publication explainer for Source Authority And Generated Derivatives. It teaches source-authority and derivative-surface boundaries without creating physics claims, control authority, role authority, routing behavior, validator authority, write permissions, or generated-output authority."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -33,33 +33,59 @@ required_controls:
 
 Use `markdown/publication-briefs/source-authority.publication-brief.md` as the
 page-specific editorial contract. The page is a boundary map and trust
-reference, not a universal atlas page.
+reference under Phase 5 of
+`research_control/design/documentation_curator_post_migration_quality_plan.md`.
+It improves source-authority clarity, source-to-derivative visualization, and
+footer-authority placement without changing the authority hierarchy.
 
 ## Source Basis
 
-- `AGENTS.md` defines the authority hierarchy and generated-output boundaries.
-- `.codex/skills/project-memory-system/SKILL.md` explains memory, registry,
-  wiki, and derivative refresh behavior.
-- `.codex/skills/html-visual-explainer/SKILL.md` defines tracked HTML
-  publication boundaries.
-- The Markdown, HTML, wiki, and file-object registries provide concrete
-  examples of source and derivative rows.
+- `AGENTS.md`: authority hierarchy, generated-output boundaries,
+  research-control continuation rules, project-system improvement boundaries,
+  and generated-output editing rules.
+- `.codex/skills/project-memory-system/SKILL.md`: memory, registry, wiki,
+  bootstrap, validate-only, and generated-derivative refresh behavior.
+- `.codex/skills/html-visual-explainer/SKILL.md`: tracked HTML publication
+  boundaries, source-spec authority, and direct HTML-only edit restrictions.
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`: concrete rows for registered
+  Markdown sources, source specs, role and skill contracts, and generated
+  GitHub-facing Markdown derivatives.
+- `registries/HTML_EXPLAINER_REGISTRY.csv`: generated HTML rows bound to
+  source specs and source-basis hashes.
+- `registries/WIKI_ARTIFACT_REGISTRY.csv`: generated wiki-note rows and
+  source-object hash bindings.
+- `registries/FILE_OBJECT_REGISTRY.csv`: generated file object index rows used
+  for local discovery and routing support.
 
 ## Required Reader Outcome
 
-After reading, a contributor or external AI reader should know which surfaces
-can be cited as authority, which are reader aids, and what to inspect before
-editing or summarizing project knowledge.
+After reading, a contributor or external AI reader should be able to answer the
+trust question: which file or registry row can define the project state for the
+claim being made? The reader should know that generated pages, wiki notes,
+semantic extracts, Obsidian mirrors, PDFs, and `.local` caches can support
+navigation only after they are traced back to registered sources.
 
 ## Visual Strategy
 
-Use an authority matrix and failure-mode checklist. Do not use a generic
-source-to-validation flow. A diagram is not required.
+Use a source-authority ladder and source-to-derivative boundary map. The visual
+must make the canonical-versus-derivative distinction obvious: TeX, registries,
+and registered Markdown define their lanes; GitHub-facing Markdown, tracked
+HTML, wiki notes, PDFs, semantic extracts, Obsidian mirrors, and `.local`
+caches help readers or agents navigate back to those lanes. Do not use a
+generic validation flow, browser-side Mermaid, remote assets, or external
+runtime packages.
 
 ## Acceptance Criteria
 
-- Opens with the trust-boundary question.
-- Makes the authority ladder concrete through source rows and examples.
-- Separates generated/readable from canonical/authoritative.
-- HTML is standalone, no-network, and mobile-safe.
-- GitHub Markdown is readable without opening the HTML page.
+- Opens with the trust-boundary problem before the full authority paragraph.
+- Adds a page-specific authority ladder or source-to-derivative visual.
+- Names concrete source surfaces, generated surfaces, and local retrieval
+  surfaces.
+- Moves the full generated-noncanonical paragraph to the marked authority
+  footer in GitHub Markdown and tracked HTML.
+- Preserves generated noncanonical status and source authority boundaries.
+- Does not change validators, commands, schemas, role contracts, skill
+  contracts, routing behavior, checkpoint behavior, generated-output authority,
+  or physics claim status.
+- Uses screenshot QA and before/after review evidence for the changed HTML
+  derivative.
