@@ -17,6 +17,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `html/project-system-improvement-explainer.html`
 - `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
 - `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
+- `HTML-ROLES-AND-SKILLS-EXPLAINER` `html/roles-and-skills-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
 - `HTML-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `html/validator-operator-workflow-explainer.html`
 
@@ -45,6 +46,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `github-facing/project-system-improvement-explainer.md`
 - `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
 - `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
+- `MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `github-facing/roles-and-skills-explainer.md`
 - `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
 - `MD-GITHUB-FACING-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `github-facing/validator-operator-workflow-explainer.md`
 - `MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
@@ -61,6 +63,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `markdown/html-explainer-specs/project-system-improvement-explainer.md`
 - `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `markdown/html-explainer-specs/role-routing-explainer.md`
+- `MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `markdown/html-explainer-specs/roles-and-skills-explainer.md`
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
 - `MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/validator-operator-workflow-explainer.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
@@ -136,6 +139,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `.agents/roles/research_ops/project-system-director.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
 - `MD-ROLE-ROUTING-PUBLICATION-BRIEF` `markdown/publication-briefs/role-routing.publication-brief.md`
+- `MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF` `markdown/publication-briefs/roles-and-skills.publication-brief.md`
 - `MD-SCHEMA-AGENT-JOB-SCHEMA` `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
@@ -311,6 +315,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/html/html-project-system-improvement-explainer.md`
 - `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
 - `WIKI-HTML-ROLE-ROUTING-EXPLAINER` `wiki/html/html-role-routing-explainer.md`
+- `WIKI-HTML-ROLES-AND-SKILLS-EXPLAINER` `wiki/html/html-roles-and-skills-explainer.md`
 - `WIKI-HTML-SOURCE-AUTHORITY-EXPLAINER` `wiki/html/html-source-authority-explainer.md`
 - `WIKI-HTML-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `wiki/html/html-validator-operator-workflow-explainer.md`
 - `WIKI-MD-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-aether-flow-interpretation-lemen.md`
@@ -336,6 +341,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-github-facing-project-system-improvement-explainer.md`
 - `WIKI-MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-research-agent-workflow-explainer.md`
 - `WIKI-MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-github-facing-role-routing-explainer.md`
+- `WIKI-MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `wiki/markdown/md-github-facing-roles-and-skills-explainer.md`
 - `WIKI-MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-github-facing-source-authority-explainer.md`
 - `WIKI-MD-GITHUB-FACING-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-validator-operator-workflow-explainer.md`
 - `WIKI-MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `wiki/markdown/md-gr-derivation-roadmap-publication-brief.md`
@@ -352,6 +358,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-html-spec-project-system-improvement-explainer.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
 - `WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-html-spec-role-routing-explainer.md`
+- `WIKI-MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `wiki/markdown/md-html-spec-roles-and-skills-explainer.md`
 - `WIKI-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-html-spec-source-authority-explainer.md`
 - `WIKI-MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-validator-operator-workflow-explainer.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-legacy-ontology-aether-and-aether-flow.md`
@@ -427,6 +434,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-ROUTING-PUBLICATION-BRIEF` `wiki/markdown/md-role-routing-publication-brief.md`
+- `WIKI-MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF` `wiki/markdown/md-roles-and-skills-publication-brief.md`
 - `WIKI-MD-SCHEMA-AGENT-JOB-SCHEMA` `wiki/markdown/md-schema-agent-job-schema.md`
 - `WIKI-MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `wiki/markdown/md-schema-director-decision-schema.md`
 - `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`

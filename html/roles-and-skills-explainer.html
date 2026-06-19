@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="91dbc603d7c41f626906f887f8bddc61b50a45f54ce6c013d699d0492b918fbd">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Roles And Skills Catalog</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8f6;
+      --paper: #ffffff;
+      --paper-2: #f1f4f0;
+      --ink: #182026;
+      --muted: #58646f;
+      --line: #c8d0ca;
+      --line-strong: #9ba89f;
+      --blue: #245b78;
+      --blue-soft: #dfeaf0;
+      --green: #2f6f54;
+      --green-soft: #e1eee6;
+      --gold: #9d711e;
+      --gold-soft: #f0e5c8;
+      --red: #9c3f3b;
+      --red-soft: #f0dddb;
+      --mono: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+      --sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(24, 32, 38, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(24, 32, 38, 0.035) 1px, transparent 1px),
+        var(--bg);
+      background-size: 28px 28px;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      background: rgba(36, 91, 120, 0.09);
+      color: #123d55;
+      border-radius: 4px;
+      padding: 0.08rem 0.3rem;
+      overflow-wrap: anywhere;
+    }
+
+    .wrap {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 34px;
+      padding: 34px 0 54px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      padding: 12px 0;
+      max-height: calc(100dvh - 36px);
+      overflow-y: auto;
+    }
+
+    .toc-title {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .toc a {
+      display: block;
+      margin: 0 0 4px;
+      padding: 6px 8px;
+      border-left: 3px solid transparent;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .toc a:hover {
+      background: var(--paper-2);
+      color: var(--ink);
+      border-left-color: var(--blue);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    header {
+      padding: 28px 0 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-family: var(--serif);
+      font-size: clamp(2.45rem, 7vw, 5.2rem);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 850px;
+      margin: 20px 0 0;
+      color: #2c3842;
+      font-size: clamp(1.04rem, 2.4vw, 1.28rem);
+    }
+
+    .notice {
+      max-width: 920px;
+      margin: 22px 0 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--blue);
+      background: var(--blue-soft);
+      font-weight: 650;
+    }
+
+    section {
+      padding: 36px 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .step {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--blue);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .step b {
+      display: block;
+      margin-bottom: 6px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--blue);
+      text-transform: uppercase;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .panel.emphasis {
+      background: var(--paper-2);
+      border-color: var(--line-strong);
+    }
+
+    .panel.warning {
+      background: var(--red-soft);
+      border-color: rgba(156, 63, 59, 0.35);
+    }
+
+    .panel.safe {
+      background: var(--green-soft);
+      border-color: rgba(47, 111, 84, 0.35);
+    }
+
+    .table-wrap {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: var(--paper-2);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line-strong);
+      white-space: nowrap;
+    }
+
+    td {
+      vertical-align: top;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(47, 111, 84, 0.045);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td:first-child {
+      font-weight: 750;
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 0 4px 4px 0;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge.blue {
+      color: var(--blue);
+      background: var(--blue-soft);
+    }
+
+    .badge.green {
+      color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .badge.gold {
+      color: var(--gold);
+      background: var(--gold-soft);
+    }
+
+    .badge.red {
+      color: var(--red);
+      background: var(--red-soft);
+    }
+
+    .role-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+    }
+
+    .role-card {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .role-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .role-card .role-name {
+      display: block;
+      margin-bottom: 6px;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      font-weight: 750;
+      overflow-wrap: anywhere;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 1.35rem;
+    }
+
+    li {
+      margin: 0 0 8px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .source-chip {
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .source-chip small {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .binding {
+      font-size: 0.93rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #12171b;
+        --paper: #1a2228;
+        --paper-2: #202b32;
+        --ink: #ecf1f2;
+        --muted: #a8b5bc;
+        --line: #334048;
+        --line-strong: #53636b;
+        --blue: #80b9d2;
+        --blue-soft: #203945;
+        --green: #8cc9aa;
+        --green-soft: #1d372b;
+        --gold: #e0c16f;
+        --gold-soft: #3b3220;
+        --red: #e3948f;
+        --red-soft: #402725;
+      }
+
+      code {
+        color: #c7e6f4;
+        background: rgba(128, 185, 210, 0.12);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .wrap {
+        width: min(100% - 24px, 900px);
+        display: block;
+        padding-top: 0;
+      }
+
+      .toc {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        max-height: none;
+        overflow-x: auto;
+        margin: 0 -12px 10px;
+        padding: 9px 12px;
+        border-bottom: 1px solid var(--line);
+        background: var(--bg);
+      }
+
+      .toc-title {
+        display: none;
+      }
+
+      .toc a {
+        flex: 0 0 auto;
+        margin: 0;
+        border-left: 0;
+        border-bottom: 2px solid transparent;
+        padding: 6px 9px;
+        white-space: nowrap;
+      }
+
+      .toc a:hover {
+        border-bottom-color: var(--blue);
+      }
+
+      .steps,
+      .matrix-grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        min-width: 700px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100% - 18px, 900px);
+      }
+
+      header {
+        padding-top: 24px;
+      }
+
+      section {
+        padding: 28px 0;
+      }
+
+      .notice,
+      .panel,
+      .role-card,
+      .source-chip,
+      .step {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="toc" data-explainer-control="section_toc" aria-label="Section navigation">
+      <div class="toc-title">Contents</div>
+      <a href="#read-order">Read Order</a>
+      <a href="#roles">Active Roles</a>
+      <a href="#superseded">Superseded</a>
+      <a href="#skills">Skills</a>
+      <a href="#validators">Validators</a>
+      <a href="#boundaries">Boundaries</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+    <main>
+      <header>
+        <p class="eyebrow">Phase 5B Reference Catalog</p>
+        <h1>Roles And Skills Catalog</h1>
+        <p class="lead">Find the current role and skill surfaces quickly, then inspect the authoritative registry row, contract, execution-role record, AgentJob, claim boundary, completion, and validators before acting.</p>
+        <p class="notice">This generated noncanonical page is navigation only. It does not change role status, register roles, supersede roles, expand role authority, change skill contracts, change validators, change routing, change allowlists, change checkpoints, or promote physics claims.</p>
+      </header>
+
+      <section id="read-order" aria-labelledby="read-order-title">
+        <p class="section-kicker">Authority path</p>
+        <h2 id="read-order-title">Read The Catalog As A Pointer, Not A Contract</h2>
+        <p>The catalog helps a reader find the right source. It is not the source that grants current execution authority.</p>
+        <div class="steps" aria-label="Inspection order">
+          <article class="step">
+            <b>1 Registry</b>
+            <p><code>AGENT_ROLE_REGISTRY.csv</code> gives current status, version, role kind, gate flag, and default validators.</p>
+          </article>
+          <article class="step">
+            <b>2 Contract</b>
+            <p>The active role contract or skill contract defines the stable mission, permissions, and boundaries.</p>
+          </article>
+          <article class="step">
+            <b>3 Execution Role</b>
+            <p>The task-local role record binds a role to exactly one AgentJob and records any overlay constraints.</p>
+          </article>
+          <article class="step">
+            <b>4 AgentJob</b>
+            <p>The AgentJob allowlist is the practical read/write and output contract for the transaction.</p>
+          </article>
+          <article class="step">
+            <b>5 Evidence</b>
+            <p>The claim boundary, completion record, and validators decide whether the transaction closed cleanly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="roles" aria-labelledby="roles-title">
+        <p class="section-kicker">Role matrix</p>
+        <h2 id="roles-title">Active Roles And Gate Status</h2>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table aria-label="Active roles and authority boundaries">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Family</th>
+                  <th>Responsibility</th>
+                  <th>Authority Boundary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>director-of-research@0.2.0</code></td>
+                  <td><span class="badge blue">research ops</span></td>
+                  <td>Routes the next bounded research-control step and creates one AgentJob when no human gate is required.</td>
+                  <td>Routing control. It does not validate or promote physics claims.</td>
+                </tr>
+                <tr>
+                  <td><code>project-system-director@0.1.0</code></td>
+                  <td><span class="badge blue">research ops</span></td>
+                  <td>Selects one bounded project-system improvement step from signals, Git state, guidance, and validation state.</td>
+                  <td>Project control. It does not perform physics derivation.</td>
+                </tr>
+                <tr>
+                  <td><code>documentation-curator@2.0.0</code></td>
+                  <td><span class="badge gold">documentation</span></td>
+                  <td>Writes source-backed public articles, visual briefs, workflow guides, reference catalogs, and boundary maps.</td>
+                  <td>Generated Markdown and HTML stay noncanonical.</td>
+                </tr>
+                <tr>
+                  <td><code>project-control-maintainer@0.1.0</code></td>
+                  <td><span class="badge gold">project control</span></td>
+                  <td>Maintains project-control markdown, role/schema/skill contracts, registries, and validator hooks when authorized.</td>
+                  <td>No explanatory-doc edits unless a task overlay grants that narrow permission.</td>
+                </tr>
+                <tr>
+                  <td><code>validator-engineer@0.1.0</code></td>
+                  <td><span class="badge gold">project control</span></td>
+                  <td>Improves deterministic validators, tests, and checkpoint gates.</td>
+                  <td>No physics claim promotion.</td>
+                </tr>
+                <tr>
+                  <td><code>memory-system-maintainer@0.1.0</code></td>
+                  <td><span class="badge gold">memory tooling</span></td>
+                  <td>Maintains source-first memory, wiki, registry, Obsidian, and derivative metadata tooling.</td>
+                  <td>Generated memory remains retrieval support only.</td>
+                </tr>
+                <tr>
+                  <td><code>process-integrity-auditor@0.1.0</code></td>
+                  <td><span class="badge blue">process control</span></td>
+                  <td>Repairs control-state defects when tracked evidence uniquely determines the correct state.</td>
+                  <td>No broad rewrite or authority expansion.</td>
+                </tr>
+                <tr>
+                  <td><code>ontology-formalizer@0.2.0</code></td>
+                  <td><span class="badge green">physics</span></td>
+                  <td>Defines source-side primitives, assumptions, forbidden imports, and Gate 0 burdens as draft/control artifacts.</td>
+                  <td>Science draft. It cannot promote ontology.</td>
+                </tr>
+                <tr>
+                  <td><code>candidate-constructor@0.2.0</code></td>
+                  <td><span class="badge green">physics</span></td>
+                  <td>Constructs one bounded candidate derivation step as a registered draft/control artifact.</td>
+                  <td>Bridge attempts remain gated.</td>
+                </tr>
+                <tr>
+                  <td><code>refuter@0.2.0</code></td>
+                  <td><span class="badge green">physics</span></td>
+                  <td>Attacks candidate steps, mechanisms, laws, or bridges and preserves local negative results.</td>
+                  <td>Negative results are local unless a gated route says otherwise.</td>
+                </tr>
+                <tr>
+                  <td><code>smuggling-auditor@0.2.0</code></td>
+                  <td><span class="badge green">physics</span></td>
+                  <td>Audits derivation and ontology-promotion packets for hidden target imports.</td>
+                  <td>Audits do not promote claims.</td>
+                </tr>
+                <tr>
+                  <td><code>theoretical-continuation-selector@0.1.0</code></td>
+                  <td><span class="badge green">physics</span></td>
+                  <td>Selects one bounded theoretical packet when continuation is valid but no single role is already determined.</td>
+                  <td>Selection is not claim promotion.</td>
+                </tr>
+                <tr>
+                  <td><code>gate-chair@0.1.0</code></td>
+                  <td><span class="badge red">human gated</span></td>
+                  <td>Renders promotion, closure, or suspension decisions after required evidence exists.</td>
+                  <td>Defined but paused. Execution and promotion require explicit tracked approval.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="superseded" aria-labelledby="superseded-title">
+        <p class="section-kicker">Historical contracts</p>
+        <h2 id="superseded-title">Superseded Means Interpretable, Not Active</h2>
+        <div class="matrix-grid">
+          <article class="panel emphasis">
+            <h3>Why old versions stay registered</h3>
+            <p>Historical tasks point to the role version they used. Superseded contracts remain readable so old execution records remain auditable.</p>
+            <p>The deciding signal is the registry <code>status</code> field. A public catalog cannot revive a superseded role.</p>
+          </article>
+          <article class="panel">
+            <h3>Common superseded groups</h3>
+            <ul>
+              <li><code>documentation-curator@0.1.0</code> through <code>documentation-curator@1.0.0</code></li>
+              <li><code>director-of-research@0.1.0</code></li>
+              <li><code>ontology-formalizer@0.1.0</code>, <code>candidate-constructor@0.1.0</code>, <code>refuter@0.1.0</code>, and <code>smuggling-auditor@0.1.0</code></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-title">
+        <p class="section-kicker">Workflow entry points</p>
+        <h2 id="skills-title">Skills Map To Lanes, Not Bypasses</h2>
+        <div class="role-list">
+          <article class="role-card">
+            <span class="role-name">continue-research</span>
+            <p>Owns research-control continuation, Director routing, one bounded AgentJob, execution-role records, memory preflight, parent-child synthesis, and checkpoint boundaries.</p>
+          </article>
+          <article class="role-card">
+            <span class="role-name">improve-project-system</span>
+            <p>Owns project-system improvement, classifier and resolver usage, signal validation, documentation-impact receipts, and one bounded project-system AgentJob.</p>
+          </article>
+          <article class="role-card">
+            <span class="role-name">project-memory-system</span>
+            <p>Owns bootstrap, validate-only, documentation publication validation modes, generated registry/wiki/memory refresh, and local-noise cleanup.</p>
+          </article>
+          <article class="role-card">
+            <span class="role-name">html-visual-explainer</span>
+            <p>Owns governed tracked HTML requirements, publication-brief binding, no-network HTML, GitHub Markdown pairing, validation, and screenshot QA.</p>
+          </article>
+          <article class="role-card">
+            <span class="role-name">visual-explainer</span>
+            <p>Owns visual treatment for source-backed explainers, including role matrices, annotated tables, source grounding, and screenshot review discipline.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="validators" aria-labelledby="validators-title">
+        <p class="section-kicker">Default checks</p>
+        <h2 id="validators-title">Validator Defaults Explain Risk, Not Truth</h2>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table aria-label="Validator families by role group">
+              <thead>
+                <tr>
+                  <th>Role group</th>
+                  <th>Typical validators</th>
+                  <th>Interpretation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Physics draft and routing roles</td>
+                  <td><code>validate_research_control</code>; <code>claim_boundary_phrase_scan</code></td>
+                  <td>Checks control state and unsafe-claim boundaries. It is not a physics proof.</td>
+                </tr>
+                <tr>
+                  <td>Documentation Curator</td>
+                  <td><code>bootstrap_memory_system</code>; <code>validate_research_control</code>; <code>validate_documentation_impact</code>; <code>scripts/validate_publication_process.py --root .</code></td>
+                  <td>Checks generated-memory sync, control state, documentation-impact receipts, and publication-process safety.</td>
+                </tr>
+                <tr>
+                  <td>Project-control and validator roles</td>
+                  <td><code>validate_documentation_impact</code>; <code>validate_research_control</code>; <code>unittest</code> when scripts or tests change</td>
+                  <td>Checks project-system edits and deterministic behavior.</td>
+                </tr>
+                <tr>
+                  <td>Memory-System Maintainer</td>
+                  <td><code>bootstrap_memory_system</code>; <code>validate_documentation_impact</code>; <code>validate_research_control</code>; <code>unittest</code></td>
+                  <td>Checks memory/tooling changes and generated derivative refresh.</td>
+                </tr>
+                <tr>
+                  <td>Gate Chair</td>
+                  <td><code>validate_research_control</code>; <code>claim_boundary_phrase_scan</code>; explicit tracked human approval</td>
+                  <td>A defined role status is not execution approval.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="boundaries" aria-labelledby="boundaries-title">
+        <p class="section-kicker">Failure modes</p>
+        <h2 id="boundaries-title">The Catalog Must Not Become Authority</h2>
+        <div class="split">
+          <article class="panel safe">
+            <h3>Safe Use</h3>
+            <ul>
+              <li>Use the page to locate active role rows and skill entry points.</li>
+              <li>Inspect source contracts before acting.</li>
+              <li>Read execution-role records and AgentJobs for current authority.</li>
+              <li>Treat validator PASS as configured-check success only.</li>
+            </ul>
+          </article>
+          <article class="panel warning">
+            <h3>Unsafe Use</h3>
+            <ul>
+              <li>Using a catalog row as current write permission.</li>
+              <li>Presenting superseded roles as active.</li>
+              <li>Letting a skill bypass the AgentJob allowlist.</li>
+              <li>Executing Gate Chair work without tracked approval.</li>
+              <li>Treating generated documentation as physics or control authority.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="sources" aria-labelledby="sources-title">
+        <p class="section-kicker">Source basis</p>
+        <h2 id="sources-title">Source Materials</h2>
+        <div class="source-grid" data-explainer-control="source_materials_section">
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path="registries/AGENT_ROLE_REGISTRY.csv">registries/AGENT_ROLE_REGISTRY.csv</code> [Agent role registry].</p>
+            <small>Current role identity, version, status, gate flag, validators, and contract paths.</small>
+          </div>
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path=".agents/roles/">.agents/roles/</code> [Versioned role contracts].</p>
+            <small>Active and superseded role contracts named by the registry.</small>
+          </div>
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path=".codex/skills/continue-research/SKILL.md">.codex/skills/continue-research/SKILL.md</code> [Research continuation skill].</p>
+            <small>Research-control continuation and one bounded AgentJob discipline.</small>
+          </div>
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code> [Project-system improvement skill].</p>
+            <small>Project-system classifier, resolver, signal, validation, and checkpoint lane.</small>
+          </div>
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</code> [Project memory system skill].</p>
+            <small>Bootstrap, validate-only, publication validation, and generated memory refresh.</small>
+          </div>
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</code> [Governed HTML publication skill].</p>
+            <small>Tracked HTML source-spec, no-network, GitHub-pair, and screenshot rules.</small>
+          </div>
+          <div class="source-chip">
+            <p>AEther-Flow Project. (2026). <code data-source-path=".codex/skills/visual-explainer/SKILL.md">.codex/skills/visual-explainer/SKILL.md</code> [Visual explainer skill].</p>
+            <small>Visual rendering discipline for governed source-backed explainers.</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="binding" class="binding" aria-labelledby="binding-title">
+        <h2 id="binding-title">Source Binding</h2>
+        <p><strong>Derived from spec:</strong> <code>markdown/html-explainer-specs/roles-and-skills-explainer.md</code></p>
+        <p><strong>GitHub-facing pair:</strong> <code>github-facing/roles-and-skills-explainer.md</code></p>
+        <p><strong>Publication brief:</strong> <code>markdown/publication-briefs/roles-and-skills.publication-brief.md</code></p>
+        <p><strong>Authority status:</strong> generated noncanonical reader surface.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
