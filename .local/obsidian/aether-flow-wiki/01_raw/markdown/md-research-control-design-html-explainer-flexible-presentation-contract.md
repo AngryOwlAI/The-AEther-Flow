@@ -159,6 +159,33 @@ generated-noncanonical paragraph inside that footer and reject a duplicate full
 paragraph in the hero, header, or opening content. This rule is a generated
 output boundary guard. It does not promote tracked HTML into source authority.
 
+## Reader Scope Footer Hook
+
+For Reader Scope footer-relocation revisions, the tracked HTML page must place
+the visible scope boundary in a section immediately above the authority footer:
+
+```html
+<section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">
+  <h2 id="reader-scope-title">Reader Scope</h2>
+  <p>Reader scope: ...</p>
+</section>
+</main>
+
+<footer data-explainer-control="authority_footer">
+```
+
+The `reader_scope` control must be on a `section` element, contain a visible
+`Reader Scope` `h2`, and include the page-specific `Reader scope:` text. It is
+a final boundary check rather than a primary section-navigation destination;
+HTML section navigation should omit it unless a source spec explicitly calls
+for the final boundary to be navigable.
+
+During the staged relocation, validators enforce the strict bottom placement
+only after a page declares `data-explainer-control="reader_scope"`. Existing
+legacy header text without that hook remains valid until the relevant page
+packet moves it. Once the hook is declared, duplicate visible `Reader scope:`
+text outside the hook is a regression.
+
 ## Validator Scope
 
 Validators enforce deterministic structural evidence only:
@@ -187,6 +214,9 @@ Validators enforce deterministic structural evidence only:
   Mermaid parity markers remain valid
 - declared `authority_footer` hooks contain the full generated-noncanonical
   paragraph and keep that paragraph out of the opening region
+- declared `reader_scope` hooks are section elements immediately above the
+  `authority_footer`, contain a visible `Reader Scope` heading, and keep the
+  visible `Reader scope:` boundary out of the opening region
 - Mermaid inline SVG output uses explicit numeric dimensions derived from
   `viewBox`
 - tracked HTML remains generated, human-only, source-backed, and

@@ -60,6 +60,12 @@ answer is that the page cannot establish it.
   editorial quality, role authority, or generated-output authority.
 - Treating this trust map as a replacement for the registries it points to.
 
+## Reader Scope
+
+Reader scope: source-authority orientation only. This page cannot change the
+hierarchy, replace a registry, promote ontology, certify a benchmark, issue a
+Gate Chair verdict, expand roles, or modify routing behavior.
+
 <!-- explainer-control: authority_footer -->
 
 ## Source Binding And Authority

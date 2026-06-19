@@ -2,14 +2,14 @@
 object_id: "MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER"
 format: "markdown"
 source_path: "github-facing/source-authority-explainer.md"
-source_hash: "8ba618bc8037ffa6da38a246ee3db3024d0b924631261ccb03b20c37960ae581"
+source_hash: "b3d9145c6e9cfebe1dfa5ec59e5905eeec636fa188cc8b65562689337a2a8ebf"
 authority_status: "generated_noncanonical"
 role: "github_facing_documentation"
 owner_skill: "documentation-curator"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-github-facing-source-authority-explainer.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-github-facing-source-authority-explainer.md"
-content_hash: "8ba618bc8037ffa6da38a246ee3db3024d0b924631261ccb03b20c37960ae581"
+content_hash: "b3d9145c6e9cfebe1dfa5ec59e5905eeec636fa188cc8b65562689337a2a8ebf"
 extraction_status: "PASS"
 related_object_ids:
   - "MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER"
@@ -34,9 +34,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `8ba618bc8037ffa6da38a246ee3db3024d0b924631261ccb03b20c37960ae581`
+- Content hash: `b3d9145c6e9cfebe1dfa5ec59e5905eeec636fa188cc8b65562689337a2a8ebf`
 - Extracted text path: `.local/content_semantics/markdown/md-github-facing-source-authority-explainer.txt`
-- Character count: `6124`
+- Character count: `6359`
 
 ## Relationships
 

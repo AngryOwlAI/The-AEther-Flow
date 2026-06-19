@@ -65,6 +65,17 @@ claim being made? The reader should know that generated pages, wiki notes,
 semantic extracts, Obsidian mirrors, PDFs, and `.local` caches can support
 navigation only after they are traced back to registered sources.
 
+## Reader Scope Footer Binding
+
+GitHub Markdown and tracked HTML derivatives must place the page-specific
+Reader Scope boundary at the bottom of the reader content, immediately before
+the marked authority footer. Preserve this boundary text exactly unless a
+future source inspection authorizes a wording repair:
+
+Reader scope: source-authority orientation only. This page cannot change the
+hierarchy, replace a registry, promote ontology, certify a benchmark, issue a
+Gate Chair verdict, expand roles, or modify routing behavior.
+
 ## Visual Strategy
 
 Use a source-authority ladder and source-to-derivative boundary map. The visual
@@ -81,6 +92,8 @@ runtime packages.
 - Adds a page-specific authority ladder or source-to-derivative visual.
 - Names concrete source surfaces, generated surfaces, and local retrieval
   surfaces.
+- Uses the bottom Reader Scope hook immediately above the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Preserves generated noncanonical status and source authority boundaries.

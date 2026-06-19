@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="d41f42b0edea8333058c520827a7de14328827b861254c1c735cf20ba0f82c09">
+  <meta name="aether-flow-source-basis-hash" content="d1e058a932fa1a4265c240099e4f84577b060c8df5aa7980ab4782799c3e83f8">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Source Authority And Generated Derivatives</title>
@@ -57,13 +57,13 @@
       color: var(--muted);
       font-size: 1.08rem;
     }
-    .scope {
+    .reader-scope {
       max-width: 980px;
-      margin-top: 22px;
       border-left: 5px solid var(--green);
       background: #eaf5f0;
       padding: 14px 16px;
     }
+    .reader-scope p { margin: 0; }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -168,7 +168,6 @@
     <h1>Source Authority And Generated Derivatives</h1>
     <p class="lede">The trust question in AEther-Flow is not which page is clearest. It is which source is allowed to define project state for the claim being made. Public HTML, GitHub-facing Markdown, wiki notes, semantic extracts, Obsidian mirrors, and local caches can help a reader navigate; they do not outrank registered sources.</p>
     <p class="lede">Use generated surfaces for orientation, then follow their source paths. If a generated derivative and a registered source disagree, the source wins and the derivative needs repair.</p>
-    <div class="scope">Reader scope: source-authority orientation only. This page cannot change the hierarchy, replace a registry, promote ontology, certify a benchmark, issue a Gate Chair verdict, expand roles, or modify routing behavior.</div>
     <nav data-explainer-control="section_toc" aria-label="Section navigation">
       <a href="#ladder">Authority ladder</a>
       <a href="#boundary">Derivative boundary</a>
@@ -241,6 +240,11 @@
         <article class="summary"><h3>Safe</h3><p>Use generated and local surfaces to find the right source, then inspect the registered source file and registry row before citing, editing, or routing.</p></article>
         <article class="summary"><h3>Unsafe</h3><p>A generated page, wiki note, PDF, semantic extract, Obsidian mirror, or `.local` cache can override the authority hierarchy.</p></article>
       </div>
+    </section>
+
+    <section class="reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">
+      <h2 id="reader-scope-title">Reader Scope</h2>
+      <p>Reader scope: source-authority orientation only. This page cannot change the hierarchy, replace a registry, promote ontology, certify a benchmark, issue a Gate Chair verdict, expand roles, or modify routing behavior.</p>
     </section>
   </main>
 
