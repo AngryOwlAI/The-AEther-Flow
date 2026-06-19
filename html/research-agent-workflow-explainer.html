@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="81d727fc362328fa1759fb29ce47fbe5a3523c515a9a55fd951e2300588af83a">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Research-Agent Workflow</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18222d;
+      --muted: #5a6570;
+      --paper: #f4f6f1;
+      --panel: #ffffff;
+      --line: #d8ddd4;
+      --blue: #2d688b;
+      --green: #2f735d;
+      --amber: #9a6421;
+      --red: #9b4b42;
+      --plum: #685982;
+      --soft-blue: #e9f2f6;
+      --soft-green: #edf6f1;
+      --soft-amber: #fff5e6;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.56;
+    }
+    a {
+      color: inherit;
+    }
+    header {
+      min-height: 68vh;
+      display: grid;
+      align-items: end;
+      padding: 64px;
+      color: #fbfcf7;
+      background:
+        linear-gradient(125deg, rgba(24, 34, 45, .96), rgba(47, 115, 93, .88)),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .12) 0 1px, transparent 1px 52px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .10) 0 1px, transparent 1px 52px);
+    }
+    .hero {
+      max-width: 980px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: 4.2rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 820px;
+      margin: 24px 0 0;
+      font-size: 1.24rem;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px 38px 76px;
+    }
+    section {
+      margin: 56px 0;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 2rem;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 860px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .94em;
+      background: rgba(24, 34, 45, .08);
+      padding: .08em .25em;
+      overflow-wrap: anywhere;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
+    }
+    .notice {
+      max-width: 920px;
+      border-left: 5px solid var(--amber);
+      background: var(--soft-amber);
+      padding: 18px 20px;
+      margin-top: 22px;
+    }
+    .lanes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .lane {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 18px;
+    }
+    .lane.physics {
+      border-top: 6px solid var(--blue);
+    }
+    .lane.system {
+      border-top: 6px solid var(--green);
+    }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+      counter-reset: step;
+    }
+    .step {
+      min-height: 190px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      position: relative;
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 14px;
+      color: #fff;
+      background: var(--plum);
+      font-weight: 700;
+    }
+    .boundary-grid,
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .panel,
+    .source {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      overflow-wrap: anywhere;
+    }
+    .panel.good {
+      background: var(--soft-green);
+      border-color: #acd0c0;
+    }
+    .panel.warn {
+      background: #fff1ef;
+      border-color: #d9aaa4;
+    }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .matrix th,
+    .matrix td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 14px;
+    }
+    .matrix th {
+      background: var(--soft-blue);
+    }
+    ol,
+    ul {
+      max-width: 860px;
+    }
+    li + li {
+      margin-top: 8px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding-top: 24px;
+      margin-top: 64px;
+      font-size: .92rem;
+    }
+    @media (max-width: 980px) {
+      header {
+        padding: 48px 28px;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      main {
+        padding: 36px 22px 64px;
+      }
+      .timeline,
+      .boundary-grid,
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .lanes {
+        grid-template-columns: 1fr;
+      }
+      .matrix {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+    @media (max-width: 620px) {
+      header {
+        min-height: 62vh;
+        padding: 38px 20px;
+      }
+      h1 {
+        font-size: 2.32rem;
+      }
+      .lede {
+        font-size: 1.04rem;
+      }
+      .timeline,
+      .boundary-grid,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Phase 3A Research-Control Operation</p>
+      <h1>Research-Agent Workflow</h1>
+      <p class="lede">A source-first operating map for routing physics continuation and project-system improvement through one bounded AgentJob, role constraints, checks, completion evidence, and human gates.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="scope">
+      <h2>Operating Discipline, Not Proof Engine</h2>
+      <p>The research-agent system makes theoretical work auditable. It turns requests into bounded transactions whose sources, role limits, write paths, and outcomes can be inspected later.</p>
+      <div class="notice">
+        This generated noncanonical reader surface explains workflow operation. It does not change routing behavior, role authority, validator requirements, write permissions, claim boundaries, or physics status.
+      </div>
+      <nav data-explainer-control="section_toc" aria-label="Section navigation">
+        <a href="#lanes">Lanes</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#memory">Memory</a>
+        <a href="#authority">Authority</a>
+        <a href="#stops">Stops</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </section>
+
+    <section id="lanes">
+      <h2>Two Lanes, One Boundary Rule</h2>
+      <div class="lanes">
+        <article class="lane physics">
+          <h3>Physics Continuation</h3>
+          <p>Use this lane for derivation work, candidate construction, refutation, audit, theoretical packet selection, or scientific handoff. Source: <code>.codex/skills/continue-research/SKILL.md</code>.</p>
+          <p>Boundary: continuation may construct or test draft/control material, but it does not promote claims without the required gates.</p>
+        </article>
+        <article class="lane system">
+          <h3>Project-System Improvement</h3>
+          <p>Use this lane for documentation drift, validators, role or schema maintenance, memory tooling, workflow clarification, and public explainer packets. Source: <code>.codex/skills/improve-project-system/SKILL.md</code>.</p>
+          <p>Boundary: project-system work improves operation and documentation without changing physics status or canonical science sources.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <h2>Request To One Bounded AgentJob</h2>
+      <div class="timeline" aria-label="Workflow timeline">
+        <article class="step">
+          <h3>Inspect</h3>
+          <p>Read <code>README.md</code>, <code>AGENTS.md</code>, scoped guidance, active task state, and relevant registries before choosing a route.</p>
+        </article>
+        <article class="step">
+          <h3>Preflight</h3>
+          <p>Use memory queries to locate prior context, then verify any influential hit against canonical files or registry rows.</p>
+        </article>
+        <article class="step">
+          <h3>Route</h3>
+          <p>Classify the request or resolve tracked state, then choose continuation or project-system improvement.</p>
+        </article>
+        <article class="step">
+          <h3>Bind</h3>
+          <p>Create or reuse exactly one AgentJob and bind it to an execution-role record.</p>
+        </article>
+        <article class="step">
+          <h3>Execute</h3>
+          <p>Read and write only the allowed paths. Preserve forbidden paths, source classes, and claim boundaries.</p>
+        </article>
+        <article class="step">
+          <h3>Check</h3>
+          <p>Run the required repository checks for the selected lane and transaction type.</p>
+        </article>
+        <article class="step">
+          <h3>Complete</h3>
+          <p>Record outputs, command evidence, remaining limits, and next recommendation.</p>
+        </article>
+        <article class="step">
+          <h3>Handoff</h3>
+          <p>When needed, name the next route precisely instead of expanding the completed job.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="memory">
+      <h2>Memory Finds Sources, Sources Decide</h2>
+      <p>Memory preflight is mandatory navigation for current routing and AgentJob creation. It can identify relevant objects, prior rollouts, or old surfaces, but it cannot override tracked source files.</p>
+      <div class="boundary-grid">
+        <article class="panel good">
+          <h3>Correct Use</h3>
+          <p>Use a memory hit to decide which canonical Markdown file, TeX source, schema, skill contract, or registry row to inspect next.</p>
+        </article>
+        <article class="panel warn">
+          <h3>Unsafe Use</h3>
+          <p>Do not treat Obsidian notes, wiki notes, semantic extracts, `.local` files, or the memory index as authority.</p>
+        </article>
+        <article class="panel">
+          <h3>Receipt</h3>
+          <p>New jobs preserve the preflight commands, returned object IDs, canonical inspections, source registries, paths, and hashes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="authority">
+      <h2>Roles, Checks, And Generated Outputs</h2>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Object</th>
+            <th>What it controls</th>
+            <th>What it cannot do alone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>registries/AGENT_ROLE_REGISTRY.csv</code></td>
+            <td>Role identity, authority level, human-gate status, and default checks.</td>
+            <td>Grant permission beyond the current execution-role record.</td>
+          </tr>
+          <tr>
+            <td>Execution-role record</td>
+            <td>The exact task-local role semantics for one AgentJob.</td>
+            <td>Become reusable role authority without registration.</td>
+          </tr>
+          <tr>
+            <td>Repository checks</td>
+            <td>Boundary integrity, source sync, publication safety, and write-path discipline.</td>
+            <td>Prove physics, adopt ontology, or promote benchmark status.</td>
+          </tr>
+          <tr>
+            <td>Generated public pages</td>
+            <td>Reader guidance and visual explanation.</td>
+            <td>Override canonical TeX, registries, Markdown control files, or human gates.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="stops">
+      <h2>When The Workflow Must Stop</h2>
+      <ul>
+        <li>A required write path is outside the AgentJob allowlist.</li>
+        <li>The work would edit canonical ontology, benchmark, or science-draft sources without the required gate.</li>
+        <li>The work would change role, schema, routing, validator, permission, or checkpoint behavior without a matching project-system packet.</li>
+        <li>A generated output, memory hit, or check result is being treated as authority.</li>
+        <li>The request honestly needs more than one AgentJob.</li>
+      </ul>
+    </section>
+
+    <section id="sources">
+      <h2>Source Materials</h2>
+      <div class="summary-grid" data-explainer-control="source_materials_section">
+        <div class="source"><code data-source-path="README.md">README.md</code></div>
+        <div class="source"><code data-source-path="AGENTS.md">AGENTS.md</code></div>
+        <div class="source"><code data-source-path="research_control/README.md">research_control/README.md</code></div>
+        <div class="source"><code data-source-path="research_control/AGENTS.md">research_control/AGENTS.md</code></div>
+        <div class="source"><code data-source-path=".codex/skills/continue-research/SKILL.md">.codex/skills/continue-research/SKILL.md</code></div>
+        <div class="source"><code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code></div>
+        <div class="source"><code data-source-path="registries/AGENT_ROLE_REGISTRY.csv">registries/AGENT_ROLE_REGISTRY.csv</code></div>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>Safe Operating Summary</h2>
+      <div class="summary-grid">
+        <article class="panel good">
+          <h3>Safe</h3>
+          <p>One bounded AgentJob, source inspection, role constraints, checks, completion evidence, and human gates keep research progress auditable.</p>
+        </article>
+        <article class="panel warn">
+          <h3>Unsafe</h3>
+          <p>The workflow proves physics autonomously, memory overrides tracked sources, validators promote claims, or generated pages become authority.</p>
+        </article>
+        <article class="panel">
+          <h3>Binding</h3>
+          <p>Derived from <code>markdown/html-explainer-specs/research-agent-workflow-explainer.md</code>. Related GitHub Markdown: <code>github-facing/research-agent-workflow-explainer.md</code>. Publication brief: <code>markdown/publication-briefs/research-agent-workflow.publication-brief.md</code>.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Generated noncanonical reader surface. It is human-only documentation and is not independent authority for physics claims, routing behavior, role authority, or generated-output authority.
+    </footer>
+  </main>
+</body>
+</html>
