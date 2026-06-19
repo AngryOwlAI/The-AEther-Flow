@@ -8,7 +8,8 @@ research-control behavior.
 ## Current Subjects
 
 - Director-led agent architecture decisions.
-- Documentation Curator publication process and phased corpus migration.
+- Documentation Curator publication process, phased corpus migration, and
+  post-migration quality planning.
 - GitHub-facing explainer contract.
 - GR derivation burden map.
 - HTML explainer depth and flexible presentation contracts.
