@@ -52,6 +52,22 @@ a role, expand authority, change schemas, or alter routing behavior.
 - `.agents/roles/` contains the active and historical role contracts named by
   the role registry.
 
+## Required Opening
+
+Open by separating role names from current authority. Explain that a registered
+role is a template, a task overlay is one-job constrained adaptation, a
+one-job provisional role is temporary, and an execution-role record plus the
+AgentJob allowlist decide the actual write and claim boundary for one
+transaction. Preserve Gate Chair human-gated status and do not imply that role
+presence alone expands a current job.
+
+## Visual Strategy
+
+Use a role matrix and a routing decision table rather than a decorative graph.
+The matrix should group active role families by authority level, output form,
+validator family, and gate status. The decision table should distinguish
+`registered_role`, `task_overlay`, and `one_job_provisional_role`.
+
 ## Required Reader Outcome
 
 After reading, a maintainer or future agent should know that a role contract
@@ -60,13 +76,6 @@ define actual one-job authority. The reader should know how to distinguish
 direct registered-role use, task overlays, and one-job provisional roles; how
 to preserve Gate Chair human-gated status; and why repeated provisional-role
 patterns route to project-system review instead of becoming reusable by habit.
-
-## Visual Strategy
-
-Use a role matrix that groups active physics roles and active research-ops
-roles by authority level, output form, validator family, and human-gate
-status. Add a routing decision table for the three execution-role kinds. Do
-not present the matrix as a role-registration action.
 
 ## Acceptance Criteria
 
@@ -77,5 +86,7 @@ not present the matrix as a role-registration action.
   records.
 - Explains recurring provisional-role review as a project-system signal.
 - States that role presence does not expand a current AgentJob allowlist.
+- Moves the full generated-noncanonical paragraph to the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Preserves generated noncanonical status.

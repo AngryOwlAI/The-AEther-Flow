@@ -59,6 +59,22 @@ control records.
 - `registries/ROLE_EXECUTION_REGISTRY.csv` records the exact execution-role
   contract used for each AgentJob.
 
+## Required Opening
+
+Open with the durable record chain and the reason it exists: future operators
+must be able to inspect what was authorized, what was allowed, what was
+checked, and what remains next without rewriting the historical record. The
+opening should distinguish transaction evidence from broad proof and should
+place immutable-record discipline before source metadata.
+
+## Visual Strategy
+
+Use a lifecycle state diagram paired with a record matrix. The reader learns
+which record narrows the next one and why the correction path is supersession,
+not historical mutation. The tracked HTML may render this as a local CSS
+record chain; GitHub Markdown may render it as a native table or ordered
+lifecycle map.
+
 ## Required Reader Outcome
 
 After reading, a maintainer or future agent should understand the durable
@@ -67,13 +83,6 @@ approvals, and handoffs are superseded rather than edited. They should also
 know that a completion record is evidence for one bounded transaction, not a
 broad proof, role-registration act, schema change, or generated-output
 authority grant.
-
-## Visual Strategy
-
-Use a state model. The visual should place task, DDR, AgentJob, execution-role
-record, completion, handoff, and registry rows in order. Pair it with a record
-matrix, an allowlist and stop-condition checklist, and safe-versus-unsafe edit
-examples. Do not use browser-side Mermaid.
 
 ## Acceptance Criteria
 
@@ -84,5 +93,7 @@ examples. Do not use browser-side Mermaid.
 - Explains allowlists, validators, claim boundaries, and stop conditions.
 - States that completion evidence is transaction evidence, not broad proof.
 - Names common operator mistakes and safe corrective actions.
+- Moves the full generated-noncanonical paragraph to the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Preserves generated noncanonical status.

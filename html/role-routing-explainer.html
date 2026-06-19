@@ -4,430 +4,244 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="e59d08207380b8be1cb2e85b90cd40747b77b3953d1a3b18fa1f5765ba4ca4f3">
+  <meta name="aether-flow-source-basis-hash" content="5ec9bcc9107918ad4bd7f9017e78ee6c98d592904b0e3c8f984b55003ba2aa6d">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Role Routing And Execution Contracts</title>
   <style>
     :root {
       color-scheme: light;
-      --paper: #f5f2eb;
-      --ink: #1f2428;
-      --muted: #5d6670;
-      --line: #c7c0b4;
-      --panel: #fffdf9;
-      --green: #1f7a4f;
-      --green-soft: #dceee3;
-      --blue: #2b6c8a;
-      --blue-soft: #dcebf1;
-      --gold: #9f6b15;
-      --gold-soft: #f1e2bd;
-      --red: #a33a32;
-      --red-soft: #f2d9d6;
+      --ink: #18212a;
+      --muted: #5c6670;
+      --paper: #f6f4ee;
+      --panel: #ffffff;
+      --line: #dcd6ca;
+      --blue: #2b668b;
+      --green: #2f7357;
+      --gold: #936616;
+      --red: #98423f;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: var(--paper);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-    }
-
-    main {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 52px 0 28px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 800;
+      background: var(--paper);
+      line-height: 1.56;
       letter-spacing: 0;
+    }
+    header, main, footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    header { padding-top: 42px; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: .82rem;
+      font-weight: 800;
       text-transform: uppercase;
     }
-
     h1 {
       margin: 0;
-      max-width: 940px;
-      font-size: clamp(2rem, 6vw, 4rem);
-      line-height: 1;
+      max-width: 960px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.04;
       letter-spacing: 0;
     }
-
-    .lead {
-      max-width: 790px;
+    .lede {
+      max-width: 920px;
       margin: 18px 0 0;
-      color: #39434c;
-      font-size: 1.1rem;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
-
-    .notice {
-      margin: 22px 0 0;
+    .scope {
+      max-width: 920px;
+      margin-top: 22px;
+      border-left: 5px solid var(--blue);
+      background: #eaf2f6;
       padding: 14px 16px;
-      border-left: 4px solid var(--blue);
-      background: var(--blue-soft);
-      max-width: 900px;
-      font-weight: 650;
     }
-
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 18px;
+      margin-top: 20px;
     }
-
     nav a {
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
       color: var(--ink);
       text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 650;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
     }
-
-    section {
-      padding: 34px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
+    section { margin: 30px 0; }
     h2 {
-      margin: 0 0 16px;
-      font-size: 1.55rem;
-      letter-spacing: 0;
-    }
-
-    h3 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-      letter-spacing: 0;
-    }
-
-    p {
       margin: 0 0 14px;
+      font-size: 1.45rem;
+      letter-spacing: 0;
     }
-
-    .contract-stack {
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    .stack, .source-grid, .summaries {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
-
-    .stack-item {
-      padding: 18px;
+    .stack-item, .source-panel, .summary {
+      background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--panel);
-      min-height: 168px;
+      padding: 14px;
     }
-
-    .stack-item:nth-child(1) {
-      border-top: 6px solid var(--green);
-    }
-
-    .stack-item:nth-child(2) {
-      border-top: 6px solid var(--gold);
-    }
-
-    .stack-item:nth-child(3) {
-      border-top: 6px solid var(--blue);
-    }
-
+    .stack-item:nth-child(1) { border-top: 5px solid var(--green); }
+    .stack-item:nth-child(2) { border-top: 5px solid var(--gold); }
+    .stack-item:nth-child(3) { border-top: 5px solid var(--blue); }
     table {
       width: 100%;
       border-collapse: collapse;
       background: var(--panel);
       border: 1px solid var(--line);
     }
-
-    th,
-    td {
-      padding: 12px;
-      border: 1px solid var(--line);
-      vertical-align: top;
+    th, td {
       text-align: left;
+      vertical-align: top;
+      border: 1px solid var(--line);
+      padding: 12px;
     }
-
-    th {
-      background: #ebe4d8;
-    }
-
+    th { background: #eaf2f6; }
     .badge {
       display: inline-block;
-      padding: 3px 8px;
+      padding: 2px 8px;
       border-radius: 999px;
-      font-size: 0.78rem;
+      font-size: .78rem;
       font-weight: 800;
       white-space: nowrap;
     }
-
-    .badge.green {
-      background: var(--green-soft);
-      color: var(--green);
-    }
-
-    .badge.gold {
-      background: var(--gold-soft);
-      color: var(--gold);
-    }
-
-    .badge.red {
-      background: var(--red-soft);
-      color: var(--red);
-    }
-
-    .decision {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .decision article {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-
-    .checks {
-      columns: 2;
-      column-gap: 34px;
-      padding-left: 1.2rem;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .panel {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-
-    .panel.warning {
-      border-color: #d79d97;
-      background: var(--red-soft);
-    }
-
-    .panel.safe {
-      border-color: #95c8aa;
-      background: var(--green-soft);
-    }
-
+    .badge.green { background: #e3f2e8; color: var(--green); }
+    .badge.gold { background: #f4e9c9; color: var(--gold); }
+    .badge.red { background: #f3dddd; color: var(--red); }
     code {
-      padding: 1px 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: .92em;
+      background: #eef2f5;
+      padding: .08rem .28rem;
       border-radius: 4px;
-      background: #ebe4d8;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.92em;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
     }
-
-    .sources {
-      font-size: 0.95rem;
-      color: #3d4650;
+    ul {
+      margin: 8px 0 0 1.2rem;
+      padding: 0;
     }
-
-    @media (max-width: 900px) {
-      main {
-        width: min(100% - 24px, 740px);
-      }
-
-      header {
-        padding-top: 36px;
-      }
-
-      .contract-stack,
-      .decision,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .checks {
-        columns: 1;
-      }
-
-      table {
-        display: block;
-        overflow-x: auto;
-      }
+    li { margin: 5px 0; }
+    .summary.safe { border-top: 5px solid var(--green); }
+    .summary.unsafe { border-top: 5px solid var(--red); }
+    footer {
+      color: var(--muted);
+      font-size: .92rem;
+      padding-bottom: 42px;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 920px) {
+      .stack, .source-grid, .summaries { grid-template-columns: 1fr; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { display: none; }
+    }
+    @media (max-width: 540px) {
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <p class="eyebrow">Phase 3 Research-Control Operation</p>
+    <h1>Role Routing And Execution Contracts</h1>
+    <p class="lede">A role name is not current job authority. Registered roles are templates, task overlays are one-job constrained adaptations, provisional roles expire, and the execution-role record plus AgentJob allowlist decide what one transaction may actually do.</p>
+    <div class="scope">Reader scope: role-routing reference only. This page cannot register roles, expand role authority, change schemas, change routing behavior, change AgentJob allowlists, or authorize claim promotion.</div>
+    <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#stack">Contract Stack</a>
+      <a href="#choices">Execution Choices</a>
+      <a href="#families">Role Families</a>
+      <a href="#inspect">Inspect</a>
+      <a href="#sources">Sources</a>
+      <a href="#summary">Summary</a>
+    </nav>
+  </header>
+
   <main>
-    <header>
-      <p class="eyebrow">Generated noncanonical reader surface</p>
-      <h1>Role Routing And Execution Contracts</h1>
-      <p class="lead">A role contract is a template. The execution-role record and AgentJob allowlist decide what the current job may actually do.</p>
-      <p class="notice">This page explains role routing. It does not register roles, expand authority, change schemas, change routing behavior, change AgentJob allowlists, or authorize claim promotion.</p>
-      <nav data-explainer-control="section_toc" aria-label="Section navigation">
-        <a href="#stack">Surfaces</a>
-        <a href="#routing">Routing</a>
-        <a href="#families">Families</a>
-        <a href="#inspect">Fields</a>
-        <a href="#mistakes">Errors</a>
-        <a href="#sources">Sources</a>
-      </nav>
-    </header>
-
-    <section aria-labelledby="stack">
-      <h2 id="stack">Three Surfaces To Inspect</h2>
-      <div class="contract-stack">
-        <article class="stack-item">
-          <h3>Registered Role</h3>
-          <p>Stable versioned template in <code>.agents/roles/</code> and <code>registries/AGENT_ROLE_REGISTRY.csv</code>.</p>
-          <p>Useful for role identity, status, default validators, and human-gate flags.</p>
-        </article>
-        <article class="stack-item">
-          <h3>Execution-Role Record</h3>
-          <p>Task-local role contract in the task <code>roles/</code> file and <code>ROLE_EXECUTION_REGISTRY.csv</code>.</p>
-          <p>Defines registered-role use, overlay, or one-job provisional role.</p>
-        </article>
-        <article class="stack-item">
-          <h3>AgentJob Allowlist</h3>
-          <p>Executable contract for reads, writes, expected outputs, validators, source classes, and claim boundary.</p>
-          <p>This is the practical permission surface for one transaction.</p>
-        </article>
+    <section id="stack" aria-labelledby="stack-title">
+      <h2 id="stack-title">Contract Stack</h2>
+      <div class="stack">
+        <article class="stack-item"><h3>Registered Role Contract</h3><p>Stable versioned template in <code>.agents/roles/</code> and <code>registries/AGENT_ROLE_REGISTRY.csv</code>.</p><p>Boundary: no current write permission by itself.</p></article>
+        <article class="stack-item"><h3>Execution-Role Record</h3><p>Task-local contract in <code>registries/ROLE_EXECUTION_REGISTRY.csv</code> and the task <code>roles/</code> file.</p><p>Boundary: binds one AgentJob to exact role semantics.</p></article>
+        <article class="stack-item"><h3>AgentJob Allowlist</h3><p>Executable read/write, output, validator, source-class, and claim-boundary contract.</p><p>Boundary: controls actual file access for that transaction.</p></article>
       </div>
     </section>
 
-    <section aria-labelledby="routing">
-      <h2 id="routing">Execution-Role Routing</h2>
-      <div class="decision">
-        <article>
-          <h3><code>registered_role</code></h3>
-          <p>Use direct template fit when no authority delta is needed. It may not silently add permissions.</p>
-        </article>
-        <article>
-          <h3><code>task_overlay</code></h3>
-          <p>Use when the base role remains correct but needs task-specific constraints or bounded non-promotional adjustment.</p>
-        </article>
-        <article>
-          <h3><code>one_job_provisional_role</code></h3>
-          <p>Use for a temporary one-job identity. It expires after the AgentJob and is not reusable until registered.</p>
-        </article>
-      </div>
-    </section>
-
-    <section aria-labelledby="families">
-      <h2 id="families">Active Role Families</h2>
-      <table aria-label="Role family matrix">
-        <thead>
-          <tr>
-            <th>Family</th>
-            <th>Examples</th>
-            <th>Authority</th>
-            <th>Gate Status</th>
-          </tr>
-        </thead>
+    <section id="choices" aria-labelledby="choices-title">
+      <h2 id="choices-title">Execution-Role Choices</h2>
+      <table>
+        <thead><tr><th>Kind</th><th>Use when</th><th>Must not do</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Research routing</td>
-            <td>Director of Research, Project-System Director</td>
-            <td><span class="badge gold">routing or project control</span></td>
-            <td>Not claim-promoting.</td>
-          </tr>
-          <tr>
-            <td>Physics drafts</td>
-            <td>Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector</td>
-            <td><span class="badge green">science draft</span></td>
-            <td>Autonomous only inside draft/control limits.</td>
-          </tr>
-          <tr>
-            <td>Scientific gate</td>
-            <td>Gate Chair</td>
-            <td><span class="badge red">human gated</span></td>
-            <td>Defined but paused; execution and promotion need explicit tracked approval.</td>
-          </tr>
-          <tr>
-            <td>Project system</td>
-            <td>Project-Control Maintainer, Validator Engineer, Memory-System Maintainer</td>
-            <td><span class="badge gold">project control</span></td>
-            <td>Cannot promote physics claims.</td>
-          </tr>
-          <tr>
-            <td>Public documentation</td>
-            <td>Documentation Curator</td>
-            <td><span class="badge gold">project control</span></td>
-            <td>Cannot change source authority or role authority.</td>
-          </tr>
+          <tr><td><code>registered_role</code></td><td>The registered role fits directly and no authority delta is needed.</td><td>Silently add permissions.</td></tr>
+          <tr><td><code>task_overlay</code></td><td>The base role remains correct but needs task-specific constraints or a bounded non-promotional adjustment.</td><td>Expand protected authority without a gate.</td></tr>
+          <tr><td><code>one_job_provisional_role</code></td><td>No registered role fits, or a template-derived one-job identity is needed.</td><td>Become reusable by convention.</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section aria-labelledby="inspect">
-      <h2 id="inspect">Authority Fields</h2>
-      <p>When a route is under review, the useful fields are concrete and mechanical.</p>
-      <ul class="checks">
-        <li><code>authority_level</code></li>
-        <li><code>may_execute_autonomously</code></li>
-        <li><code>may_create_outputs</code></li>
-        <li><code>may_modify_sources</code></li>
-        <li><code>may_promote_claims</code></li>
-        <li><code>requires_human_gate</code></li>
-        <li><code>allowed_source_classes</code></li>
-        <li><code>forbidden_source_classes</code></li>
-        <li>default validators</li>
-        <li>current AgentJob write allowlist</li>
-      </ul>
+    <section id="families" aria-labelledby="families-title">
+      <h2 id="families-title">Active Role Families</h2>
+      <table>
+        <thead><tr><th>Family</th><th>Examples</th><th>Gate status</th></tr></thead>
+        <tbody>
+          <tr><td>Research routing</td><td>Director of Research, Project-System Director</td><td><span class="badge green">Not claim-promoting</span></td></tr>
+          <tr><td>Physics drafts</td><td>Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector</td><td><span class="badge gold">Draft/control limits</span></td></tr>
+          <tr><td>Scientific gate</td><td>Gate Chair</td><td><span class="badge red">Human gated and paused</span></td></tr>
+          <tr><td>Project system</td><td>Project-Control Maintainer, Validator Engineer, Memory-System Maintainer</td><td><span class="badge green">Cannot promote physics claims</span></td></tr>
+          <tr><td>Public documentation</td><td>Documentation Curator</td><td><span class="badge green">Generated surfaces stay non-authoritative</span></td></tr>
+        </tbody>
+      </table>
     </section>
 
-    <section aria-labelledby="mistakes">
-      <h2 id="mistakes">Common Routing Errors</h2>
-      <div class="split">
-        <article class="panel warning">
-          <h3>Unsafe</h3>
-          <ul>
-            <li>Using a role name as current write permission.</li>
-            <li>Treating a task overlay as a reusable role version.</li>
-            <li>Reusing a provisional role after its AgentJob expires.</li>
-            <li>Assuming parent-child synthesis creates child role records.</li>
-            <li>Treating validator PASS as physics proof.</li>
-          </ul>
-        </article>
-        <article class="panel safe">
-          <h3>Safe</h3>
-          <p>Inspect the role registry, role contract, execution-role record, AgentJob, claim boundary, and completion evidence in that order. Protected authority remains protected unless a human-gated path explicitly opens it.</p>
-        </article>
+    <section id="inspect" aria-labelledby="inspect-title">
+      <h2 id="inspect-title">Authority Fields To Inspect</h2>
+      <p>Review <code>authority_level</code>, <code>may_execute_autonomously</code>, <code>may_create_outputs</code>, <code>may_modify_sources</code>, <code>may_promote_claims</code>, <code>requires_human_gate</code>, allowed and forbidden source classes, default validators, and the current AgentJob write allowlist.</p>
+      <p>The logical inspection order is role registry, role contract, execution-role record, AgentJob, claim boundary, and completion evidence.</p>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-title" data-explainer-control="source_materials_section">
+      <h2 id="sources-title">Source Materials</h2>
+      <div class="source-grid">
+        <article class="source-panel"><code data-source-path="research_control/README.md">research_control/README.md</code><p>Research-control role and execution authority model.</p></article>
+        <article class="source-panel"><code data-source-path="registries/AGENT_ROLE_REGISTRY.csv">registries/AGENT_ROLE_REGISTRY.csv</code><p>Registered role identity, status, validators, and gate status.</p></article>
+        <article class="source-panel"><code data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv">registries/ROLE_EXECUTION_REGISTRY.csv</code><p>Task-local execution-role records.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/ROLE_SCHEMA.md">.agents/schemas/ROLE_SCHEMA.md</code><p>Role schema.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md">.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code><p>Execution-role schema.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/roles/">.agents/roles/</code><p>Active and historical role contracts.</p></article>
       </div>
     </section>
 
-    <section aria-labelledby="sources">
-      <h2 id="sources">Source Materials</h2>
-      <div class="sources" data-explainer-control="source_materials_section">
-        <p>AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path="registries/AGENT_ROLE_REGISTRY.csv">registries/AGENT_ROLE_REGISTRY.csv</code> [Agent role registry].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv">registries/ROLE_EXECUTION_REGISTRY.csv</code> [Execution-role registry].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path=".agents/schemas/ROLE_SCHEMA.md">.agents/schemas/ROLE_SCHEMA.md</code> [Role schema].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md">.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code> [Execution-role schema].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path=".agents/roles/">.agents/roles/</code> [Role contracts directory].</p>
+    <section id="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Safe And Unsafe Summaries</h2>
+      <div class="summaries">
+        <article class="summary safe"><h3>Safe</h3><p>Registered roles are templates; execution-role records and AgentJob allowlists define one-job authority; protected promotion remains human-gated.</p></article>
+        <article class="summary unsafe"><h3>Unsafe</h3><p>A role name alone grants permission, a provisional role becomes reusable by habit, or a documentation page can register roles or promote claims.</p></article>
       </div>
-    </section>
-
-    <section aria-labelledby="binding">
-      <h2 id="binding">Source Binding</h2>
-      <p><strong>Derived from spec:</strong> <code>markdown/html-explainer-specs/role-routing-explainer.md</code></p>
-      <p><strong>GitHub-facing pair:</strong> <code>github-facing/role-routing-explainer.md</code></p>
-      <p><strong>Publication brief:</strong> <code>markdown/publication-briefs/role-routing.publication-brief.md</code></p>
-      <p><strong>Authority status:</strong> generated noncanonical reader surface.</p>
     </section>
   </main>
+
+  <footer data-explainer-control="authority_footer">
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/role-routing-explainer.md</code> and the publication brief <code>markdown/publication-briefs/role-routing.publication-brief.md</code>. It does not register roles, expand role authority, change schemas, change routing behavior, change AgentJob allowlists, or authorize claim promotion.</p>
+    <p>Safe operating rule: inspect the execution-role record and AgentJob allowlist before treating any role name as current authority.</p>
+  </footer>
 </body>
 </html>

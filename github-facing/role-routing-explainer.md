@@ -1,18 +1,26 @@
 # Role Routing And Execution Contracts
 
-AEther-Flow separates role identity from current job authority. A registered
-role tells the Director what kind of work a role can normally perform. The
-execution-role record and AgentJob allowlist decide what one job may actually
-do.
+AEther-Flow separates a role name from current job authority. A registered
+role is a stable template that helps the Director reason about suitable work.
+A task overlay is a one-job constrained adaptation of an existing role. A
+one-job provisional role is temporary and expires unless later registered
+through the proper project-system path. The execution-role record and AgentJob
+allowlist decide what one current transaction may actually do.
 
-This page is a generated noncanonical reader surface. It explains role
-routing and execution contracts, but it does not register roles, expand role
-authority, change schemas, change routing behavior, change AgentJob allowlists,
-or authorize claim promotion.
+That distinction prevents role labels from smuggling permissions. A role
+contract can describe normal capabilities, default validators, output form,
+human-gate status, and may/may-not fields. It does not by itself grant write
+permission for a live job. To inspect authority, read the role registry, the
+role contract, the execution-role record, the AgentJob allowlist, the claim
+boundary, and the completion evidence. The Gate Chair remains human-gated;
+Documentation Curator output remains non-authoritative for claims; and
+provisional-role patterns are reviewed instead of becoming reusable by habit.
 
-## Template Versus Job Contract
+Reader scope: role-routing reference only. This explanation cannot register
+roles, expand role authority, change schemas, change routing behavior, change
+AgentJob allowlists, or authorize claim promotion.
 
-The control spine uses three layers:
+## Contract Stack
 
 | Layer | Function | Boundary |
 | --- | --- | --- |
@@ -20,7 +28,7 @@ The control spine uses three layers:
 | Execution-role record | Task-local contract in `registries/ROLE_EXECUTION_REGISTRY.csv` and the task `roles/` file. | Binds one AgentJob to exact role semantics. |
 | AgentJob allowlist | Executable read/write, output, validator, source-class, and claim-boundary contract. | Controls actual file access for that transaction. |
 
-A role name is therefore not enough. To understand a job, inspect the
+A role name is therefore insufficient. To understand a job, inspect the
 execution-role record and the AgentJob, not only the base role.
 
 ## Execution-Role Choices
@@ -62,7 +70,7 @@ When reviewing a role route, check:
 - `requires_human_gate`;
 - `allowed_source_classes`;
 - `forbidden_source_classes`;
-- default validators;
+- default validators; and
 - the current AgentJob write allowlist.
 
 The Gate Chair is the clearest example. Its role contract may promote claims,
@@ -77,11 +85,25 @@ Common mistakes are avoidable:
 - treating a task overlay as a reusable role version;
 - reusing a provisional role after its AgentJob expires;
 - assuming parent-child synthesis creates child execution-role records;
-- treating Documentation Curator output as source authority;
+- treating Documentation Curator output as source authority; and
 - treating validator PASS as physics proof or claim promotion.
 
 The logical inspection order is role registry, role contract, execution-role
 record, AgentJob, claim boundary, and completion evidence.
+
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
+
+- **Derived from spec:** `markdown/html-explainer-specs/role-routing-explainer.md`
+- **Related HTML:** `html/role-routing-explainer.html`
+- **Publication brief:** `markdown/publication-briefs/role-routing.publication-brief.md`
+- **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It explains role
+routing and execution contracts, but it does not register roles, expand role
+authority, change schemas, change routing behavior, change AgentJob allowlists,
+or authorize claim promotion.
 
 ## Source Materials
 
@@ -91,13 +113,6 @@ record, AgentJob, claim boundary, and completion evidence.
 - AEther-Flow Project. (2026). `.agents/schemas/ROLE_SCHEMA.md` [Role schema].
 - AEther-Flow Project. (2026). `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` [Execution-role schema].
 - AEther-Flow Project. (2026). `.agents/roles/` [Role contracts directory].
-
-## Source Binding
-
-- **Derived from spec:** `markdown/html-explainer-specs/role-routing-explainer.md`
-- **Related HTML:** `html/role-routing-explainer.html`
-- **Publication brief:** `markdown/publication-briefs/role-routing.publication-brief.md`
-- **Authority status:** generated noncanonical reader surface
 
 ## Safe Summary
 

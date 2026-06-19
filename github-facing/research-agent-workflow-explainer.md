@@ -1,102 +1,92 @@
 # Research-Agent Workflow
 
-AEther-Flow uses a research-agent workflow to keep theoretical work auditable.
-The workflow does not replace scientific proof, human gates, or source
-authority. It is the operating discipline that turns a request into one
-bounded transaction with explicit sources, role limits, checks, and completion
-evidence.
+AEther-Flow uses its research-agent workflow as an operating discipline for
+turning requests into bounded, inspectable transactions. A request first has
+to be understood as either physics continuation, project-system improvement,
+or a stop condition. The workflow then uses memory as navigation, verifies any
+useful memory hit against canonical sources or registry rows, selects one
+execution lane, binds the work to a role or execution-role record, runs only
+the allowed job, and records validation and handoff evidence.
 
-This page is a generated noncanonical reader surface. It explains the
-workflow, but it does not change routing behavior, role authority, validator
-requirements, write permissions, claim boundaries, or physics status.
+The important constraint is not speed. The important constraint is that each
+state change remains small enough to audit. A physics packet can search,
+construct, refute, or hand off without promoting a claim. A project-system
+packet can repair documentation, validators, memory tooling, or control
+records without changing physics status. Generated pages, local caches, and
+validator success remain supporting evidence for their own transaction, not
+source authority.
 
-## Operating Lanes
+Reader scope: public workflow orientation only. This explanation cannot change
+routing behavior, role authority, validator requirements, write permissions,
+claim boundaries, or physics status.
 
-The repository has two linked missions: a physics research program and an AI
-research-agent system. The workflow exists because both missions need bounded
-state changes.
+## Process Lane
+
+The reader learns how a request narrows from intake to exactly one bounded
+AgentJob and then to completion or handoff.
+
+| Step | Narrowing action | Boundary preserved |
+| --- | --- | --- |
+| Request | Identify whether the user is asking for physics continuation, project-system improvement, documentation, validation, or a stop condition. | No action before source inspection. |
+| Classify or resolve | Run the relevant classifier or resolve tracked control state. | Advisory routing does not override validators. |
+| Memory preflight | Use memory to find likely sources and prior decisions. | Memory is navigation, not authority. |
+| Source inspection | Inspect the canonical file or registry row named by useful memory hits. | Source authority remains tracked. |
+| One lane | Route one physics or project-system AgentJob. | No hidden second objective. |
+| Completion | Run checks, record outputs, and hand off if needed. | Completion proves only the bounded transaction. |
+
+## Two Operating Lanes
 
 | Lane | Use it for | Primary skill | Authority limit |
 | --- | --- | --- | --- |
-| Physics continuation | Derivation work, candidate construction, refutation, audit, theoretical packet selection, or controlled scientific handoff. | `.codex/skills/continue-research/SKILL.md` | Does not promote claims without the required gates. |
+| Physics continuation | Derivation work, candidate construction, refutation, audit, theoretical packet selection, or controlled scientific handoff. | `.codex/skills/continue-research/SKILL.md` | Does not promote claims without required gates. |
 | Project-system improvement | Documentation drift, validator work, role or schema maintenance, memory tooling, workflow clarification, or public explainer packets. | `.codex/skills/improve-project-system/SKILL.md` | Does not change physics status or canonical science sources. |
 
-The lane matters because each one has different stop conditions. A missing
-scientific datum may justify a bounded research packet. A stale documentation
-surface may justify a Documentation Curator packet. Neither lane allows a
-generated page, local cache, or validator pass to become source authority.
+The lane matters because the honest next step differs by problem type. A
+missing theoretical datum may authorize one bounded physics packet. A stale
+public explanation may authorize one Documentation Curator packet. A request
+that needs role authority, schema behavior, routing behavior, checkpoint
+behavior, ontology adoption, or claim promotion needs its own protected path.
 
-## Request To Bounded Job
-
-The usual path is deliberately narrow:
-
-1. Inspect repository guidance, tracked state, and relevant registries.
-2. Run memory preflight as navigation.
-3. Classify the request or resolve the active research-control state.
-4. Route exactly one bounded AgentJob when a state change is authorized.
-5. Bind the job to a role or execution-role record.
-6. Execute only the allowed read and write paths.
-7. Run the required checks.
-8. Write completion evidence and any required handoff or documentation-impact
-   receipt.
-
-The key invariant is one bounded AgentJob per invocation. The rule is not a
-ceremony. It prevents a documentation repair from silently becoming a schema
-change, and it prevents a physics packet from silently becoming a claim
-promotion.
-
-## Memory As Navigation
+## Memory And Source Inspection
 
 Memory preflight is required before current routing and AgentJob creation. It
-helps find relevant source objects and prior decisions, but it does not decide
-truth or authority.
+helps find prior tasks, registered source objects, and relevant decision
+history. It does not decide truth. It does not override the hierarchy in
+`AGENTS.md`, where registered TeX, registries, and registered Markdown remain
+the authority layers.
 
-The source rule is simple: if memory influences routing, claim language, source
-selection, or project-control changes, inspect the canonical file or registry
-row named by the memory hit. Obsidian notes, wiki notes, content-semantic
-extracts, `.local` files, and the memory index remain retrieval layers only.
+The safe rule is direct: if memory influences routing, claim language, source
+selection, or project-control changes, inspect the canonical source file or
+CSV registry row named by the hit. Obsidian notes, wiki notes, semantic
+extracts, `.local` files, and the SQLite memory index are retrieval layers.
+Freshness warnings from those layers can be useful maintenance signals while
+remaining non-authoritative.
 
-This is why stale local retrieval warnings can coexist with a valid
-transaction. They are useful maintenance information, not source authority.
+## One Bounded AgentJob
 
-## Role Authority And Human Gates
+The workflow reduces action to one bounded AgentJob per invocation. The
+AgentJob states allowed reads, allowed writes, generated paths, forbidden
+paths, source classes, validators, expected outputs, and claim boundary. Its
+role binding says whether the job uses a registered role directly, a
+task-local overlay, or a one-job provisional role.
+
+This one-job invariant prevents silent widening. A documentation repair should
+not become a schema change by accident. A physics construction should not
+become benchmark promotion by wording drift. A validator pass should not be
+treated as scientific proof.
+
+## Roles, Gates, And Outputs
 
 `registries/AGENT_ROLE_REGISTRY.csv` records role identity, authority level,
-human-gate status, and default checks. A registered role is a template. The
-execution-role record is the task-local contract that states the exact role
-semantics for one AgentJob.
-
-The workflow distinguishes:
-
-- registered role: the template fits without authority change;
-- task overlay: the same role is used with explicit task-local constraints or
-  non-protected adjustments;
-- one-job provisional role: a temporary role exists for one job and is not
-  reusable until registered.
+human-gate status, and default checks. A role contract is a template; an
+execution-role record and AgentJob allowlist are the task-local authority
+surface for one transaction.
 
 Protected authority remains protected. Ontology adoption, benchmark promotion,
 Gate Chair approval, role authority expansion, and claim promotion require the
-appropriate human-gated path. A normal AgentJob cannot imply those outcomes by
-finishing successfully.
-
-## Validators And Generated Outputs
-
-Checks enforce the transaction boundary. They can detect malformed YAML,
-missing documentation-impact evidence, orphan public pages, unsafe authority
-phrasing, write-path violations, or registry drift.
-
-They do not prove physics. They do not authorize ontology adoption. They do
-not promote a benchmark. They do not turn generated public documentation into
-source authority.
-
-Generated outputs have specific jobs:
-
-| Output | Useful for | Boundary |
-| --- | --- | --- |
-| GitHub-facing Markdown | Human-readable orientation. | Generated noncanonical reader surface. |
-| Tracked HTML | Human-only visual explanation. | Generated noncanonical reader surface. |
-| Wiki notes and indexes | Retrieval and navigation. | Generated derivative, not authority. |
-| `.local` caches | Scratch, mirrors, previews, and indexes. | Local retrieval layer only. |
+appropriate human-gated path. Generated GitHub Markdown, tracked HTML, wiki
+notes, semantic extracts, Obsidian mirrors, and local caches remain reader or
+retrieval derivatives.
 
 ## Stop Conditions
 
@@ -110,11 +100,23 @@ work would:
 - change role authority, schema behavior, validator behavior, routing
   behavior, or checkpoint gates without a matching project-system packet;
 - treat a generated output, validator pass, or memory hit as scientific
-  authority;
+  authority; or
 - require more than one AgentJob to complete honestly.
 
-A stop condition is not failure. It is the control system identifying the
-next honest boundary.
+A stop condition is useful information. It marks the next honest boundary.
+
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
+
+- **Derived from spec:** `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
+- **Related HTML:** `html/research-agent-workflow-explainer.html`
+- **Publication brief:** `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
+- **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It explains the
+workflow, but it does not change routing behavior, role authority, validator
+requirements, write permissions, claim boundaries, or physics status.
 
 ## Source Materials
 
@@ -125,13 +127,6 @@ next honest boundary.
 - AEther-Flow Project. (2026). `.codex/skills/continue-research/SKILL.md` [Continuation workflow].
 - AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Project-system workflow].
 - AEther-Flow Project. (2026). `registries/AGENT_ROLE_REGISTRY.csv` [Agent role registry].
-
-## Source Binding
-
-- **Derived from spec:** `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
-- **Related HTML:** `html/research-agent-workflow-explainer.html`
-- **Publication brief:** `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
-- **Authority status:** generated noncanonical reader surface
 
 ## Safe Operating Summary
 

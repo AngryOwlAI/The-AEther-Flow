@@ -1,20 +1,39 @@
 # Parent-Child Parallel Synthesis
 
-Parent-child parallel synthesis is an internal perspective structure for
-future physics AgentJobs. It lets the project compare two child perspectives
-under a parent review without breaking the external control invariant: one
-Director decision, one outer AgentJob, one execution-role record, one
-completion record, and one final fused output.
+Parent-child parallel synthesis is an internal perspective structure inside
+one future physics AgentJob. It does not create extra jobs. It does not create
+child execution-role records. It keeps the external control invariant fixed:
+one Director decision, one outer AgentJob, one execution-role record, one
+completion record, and one fused output.
 
-This page is a generated noncanonical reader surface. It explains the mode,
-but it does not change the one-job rule, AgentJob schema, execution-role
-schema, validators, routing behavior, role authority, write permissions, or
-physics claim status.
+The mode exists because some physics packets need more than one analytical
+view before a final artifact is honest. Child outputs can surface different
+mathematical, physical, or philosophical pressures, but they inherit the same
+claim boundary, source restrictions, write allowlist, validators, and stop
+conditions as the outer job. Child outputs are supporting `draft/control`
+artifacts. A declared blocking conflict must be reviewed and resolved, or the
+job cannot receive PASS completion. This mode is scoped to future physics
+research AgentJobs; it is not a rule that all project-system or documentation
+tasks use parent-child decomposition.
 
-## The Invariant
+Reader scope: concept orientation only. This explanation cannot change the
+one-job rule, AgentJob schema, execution-role schema, validators, routing
+behavior, role authority, write permissions, or physics claim status.
 
-The mode is named `parent_child_parallel_synthesis`. Its purpose is analytical
-coverage, not extra authority.
+## Single Outer Frame
+
+The reader learns how internal perspective decomposition improves review
+coverage without adding AgentJobs, write authority, role records, or claim
+authority.
+
+| Inside the one outer AgentJob | Function | Authority result |
+| --- | --- | --- |
+| Parent review and fusion | Enforces the shared claim boundary, reviews child outputs, and fuses the final artifact. | No extra role record. |
+| Child draft/control outputs | Surface analytical perspectives under the same source restrictions and validators. | No independent authority. |
+| Conflict review | Preserves disagreement long enough to inspect it. | Unresolved declared blocking conflict prevents PASS completion. |
+| Fused output | Carries the final old-style output for completion and handoff. | One completion record and one downstream reference path. |
+
+## External Invariant
 
 | External record | What remains singular | Why it matters |
 | --- | --- | --- |
@@ -24,28 +43,17 @@ coverage, not extra authority.
 | Completion record | One validation and verdict receipt closes the transaction. | A child note cannot independently certify PASS. |
 | Fused output | One final artifact is used for downstream handoff and registry references. | Supporting drafts do not replace the final source artifact. |
 
-For physics jobs created after the activation point recorded in
-`research_control/README.md` and `.agents/schemas/AGENT_JOB_SCHEMA.md`, the
-decomposition is mandatory. That requirement is scoped to future physics
-research AgentJobs. It is not a claim that all project-system or documentation
-work must use this mode.
-
 ## Internal Units
 
 The parent unit enforces the shared claim boundary, reviews child outputs for
 conflicts, requests bounded conflict resolution when needed, and fuses the
-final output.
-
-The child units are analytical perspectives. The schema names common
-perspectives such as a physicist-mathematician child and a
-physicist-philosopher child. Those labels describe what each child should
-notice. They do not create new permissions, roles, claim boundaries, or
-validators.
+final output. The child units are analytical perspectives. Their labels
+describe what each perspective should notice; they do not create permissions,
+roles, claim boundaries, or validators.
 
 Child output paths, conflict-review paths, fusion notes, and the fused output
-must all sit inside the outer AgentJob write allowlist. The fused output is the
-old-style final artifact for completion, handoff, and registry use. Child
-outputs are supporting draft/control artifacts.
+must all sit inside the outer AgentJob write allowlist. The fused output is
+the old-style final artifact for completion, handoff, and registry use.
 
 ## Inherited Authority
 
@@ -57,7 +65,7 @@ Everything important is inherited from the outer job:
 - forbidden paths;
 - source restrictions;
 - validators;
-- human-gate status;
+- human-gate status; and
 - stop conditions.
 
 If a task needs actual authority expansion, parent-child synthesis is the
@@ -68,31 +76,29 @@ paths first: `registered_role`, `task_overlay`, or
 ## Conflict Handling
 
 Parallel perspectives are useful only if disagreement is preserved long enough
-to be inspected.
-
-The AgentJob schema requires a conflict policy. A declared blocking conflict
-must be reviewed, resolved within the stated resolution limit, or leave the job
-blocked. A PASS completion is not valid while a blocking parent-child conflict
-remains unresolved.
+to be inspected. The AgentJob schema requires a conflict policy. A declared
+blocking conflict must be reviewed, resolved within the stated resolution
+limit, or leave the job blocked. A PASS completion is not valid while a
+blocking parent-child conflict remains unresolved.
 
 This makes the mode stricter than a normal single-voice draft. It does not let
 a parent select the convenient child and ignore the other. It requires the
-fused output to preserve shared consensus, unique contributions, and unresolved
-limitations.
+fused output to preserve shared consensus, unique contributions, and
+unresolved limitations.
 
-## What The Mode Is Not
+<!-- explainer-control: authority_footer -->
 
-Parent-child synthesis is not:
+## Source Binding And Authority
 
-- multiple AgentJobs inside one invocation;
-- a way to add child write paths;
-- a way to create child execution-role records;
-- a way to bypass a Smuggling Auditor, Refuter, or Gate Chair boundary;
-- a source of benchmark promotion, ontology adoption, or completed-derivation
-  language;
-- a rule for all non-physics project-system work.
+- **Derived from spec:** `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
+- **Related HTML:** `html/parent-child-synthesis-explainer.html`
+- **Publication brief:** `markdown/publication-briefs/parent-child-synthesis.publication-brief.md`
+- **Authority status:** generated noncanonical reader surface
 
-The mode improves review geometry. It does not change authority.
+This page is a generated noncanonical reader surface. It explains the mode,
+but it does not change the one-job rule, AgentJob schema, execution-role
+schema, validators, routing behavior, role authority, write permissions, or
+physics claim status.
 
 ## Source Materials
 
@@ -104,13 +110,6 @@ The mode improves review geometry. It does not change authority.
 - AEther-Flow Project. (2026). `.agents/schemas/EXECUTION_ROLE_SCHEMA.md` [Execution-role schema].
 - AEther-Flow Project. (2026). `registries/AGENT_JOB_REGISTRY.csv` [AgentJob registry].
 
-## Source Binding
-
-- **Derived from spec:** `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
-- **Related HTML:** `html/parent-child-synthesis-explainer.html`
-- **Publication brief:** `markdown/publication-briefs/parent-child-synthesis.publication-brief.md`
-- **Authority status:** generated noncanonical reader surface
-
 ## Safe Summary
 
 Safe summary: parent-child synthesis is an internal perspective structure
@@ -118,5 +117,5 @@ inside one physics AgentJob; child outputs support parent review, and only the
 fused output enters completion and downstream references.
 
 Unsafe summary: parent-child synthesis creates extra jobs, extra role records,
-extra write authority, independent child verdicts, or a path around conflict
-review.
+extra write authority, independent child verdicts, a path around conflict
+review, or a mandatory mode for all non-physics work.

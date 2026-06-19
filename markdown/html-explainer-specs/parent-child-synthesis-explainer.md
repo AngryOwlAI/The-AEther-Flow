@@ -53,6 +53,24 @@ extra AgentJobs.
 - `registries/AGENT_JOB_REGISTRY.csv` supplies AgentJob record evidence and
   output-path anchoring.
 
+## Required Opening
+
+Open with the external invariant: one Director decision, one outer AgentJob,
+one execution-role record, one completion record, and one fused output. Then
+explain that child outputs are supporting `draft/control` artifacts, that all
+authority is inherited from the outer job, and that an unresolved declared
+blocking conflict prevents PASS completion. State explicitly that this mode is
+scoped to future physics research AgentJobs and is not a universal rule for
+all non-physics project-system work.
+
+## Visual Strategy
+
+Use a two-lane parent/child/fusion diagram inside a single outer AgentJob
+frame. The reader learns how internal perspective decomposition improves
+review coverage without adding AgentJobs, write authority, role records, or
+claim authority. The tracked HTML may render this as a local CSS frame; GitHub
+Markdown may render it as a native invariant table plus conflict path.
+
 ## Required Reader Outcome
 
 After reading, a maintainer or future agent should know that
@@ -62,14 +80,6 @@ record, claim boundary, write allowlist, source restrictions, validators, and
 stop conditions. Child outputs support review; the fused output remains the
 final artifact for completion, handoff, and downstream registry references.
 
-## Visual Strategy
-
-Use a state-model visual with two internal lanes: parent review/fusion and
-child perspective outputs. The visual must keep a single outer AgentJob frame
-around both lanes. It should teach the one-job invariant, inherited authority,
-conflict review, and fused-output endpoint. Do not use browser-side Mermaid or
-a generic validation flow.
-
 ## Acceptance Criteria
 
 - States one Director decision, one outer AgentJob, one execution-role record,
@@ -78,5 +88,8 @@ a generic validation flow.
   boundaries, validators, and stop conditions.
 - States that child outputs are supporting draft/control artifacts.
 - Explains that unresolved blocking conflicts prevent PASS completion.
+- States that the mode is not required for all non-physics tasks.
+- Moves the full generated-noncanonical paragraph to the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Preserves generated noncanonical status.

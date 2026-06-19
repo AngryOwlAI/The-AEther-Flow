@@ -4,405 +4,264 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="03d049d9a9dbc4a7d31e651a6b6ef9667916daef2afd9c3588e642f233be8894">
+  <meta name="aether-flow-source-basis-hash" content="397fd9a01c1c25a77bda0390525b18185cef2907f697b1235dee98ded5b7e517">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Parent-Child Parallel Synthesis</title>
   <style>
     :root {
       color-scheme: light;
-      --paper: #f7f4ee;
-      --ink: #20242a;
-      --muted: #5b6570;
-      --line: #c9c2b7;
-      --panel: #fffdfa;
-      --teal: #0f766e;
-      --teal-soft: #d9eeeb;
-      --amber: #b7791f;
-      --amber-soft: #f3e4c7;
-      --red: #b42318;
-      --red-soft: #f6d7d2;
-      --violet: #5b4b8a;
-      --violet-soft: #e5def6;
+      --ink: #18222c;
+      --muted: #5c6670;
+      --paper: #f7f5ef;
+      --panel: #ffffff;
+      --line: #dcd6cc;
+      --teal: #19736b;
+      --amber: #946516;
+      --violet: #5f548b;
+      --red: #98443f;
+      --blue: #2b668d;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: var(--paper);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-    }
-
-    main {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 56px 0 28px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--teal);
-      font-size: 0.78rem;
-      font-weight: 800;
+      background: var(--paper);
+      line-height: 1.56;
       letter-spacing: 0;
+    }
+    header, main, footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    header { padding-top: 42px; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-size: .82rem;
+      font-weight: 800;
       text-transform: uppercase;
     }
-
     h1 {
       margin: 0;
-      max-width: 880px;
-      font-size: clamp(2.15rem, 6vw, 4.25rem);
-      line-height: 1;
+      max-width: 940px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.04;
       letter-spacing: 0;
     }
-
-    .lead {
-      max-width: 760px;
+    .lede {
+      max-width: 900px;
       margin: 18px 0 0;
-      color: #38414a;
-      font-size: 1.12rem;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
-
-    .notice {
-      margin: 22px 0 0;
+    .scope {
+      max-width: 920px;
+      margin-top: 22px;
+      border-left: 5px solid var(--teal);
+      background: #e9f5f2;
       padding: 14px 16px;
-      border-left: 4px solid var(--teal);
-      background: var(--teal-soft);
-      max-width: 860px;
-      font-weight: 650;
     }
-
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 18px;
+      margin-top: 20px;
     }
-
     nav a {
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
       color: var(--ink);
       text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 650;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
     }
-
-    section {
-      padding: 34px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
+    section { margin: 30px 0; }
     h2 {
-      margin: 0 0 16px;
-      font-size: 1.55rem;
-      letter-spacing: 0;
-    }
-
-    p {
       margin: 0 0 14px;
-    }
-
-    .invariant {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .invariant div {
-      min-height: 112px;
-      padding: 14px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      border-radius: 8px;
-    }
-
-    .invariant strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--teal);
-    }
-
-    .lanes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .lane {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-
-    .lane h3,
-    .panel h3 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
+      font-size: 1.45rem;
       letter-spacing: 0;
     }
-
-    .lane.parent {
-      border-top: 6px solid var(--violet);
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
     }
-
-    .lane.child {
-      border-top: 6px solid var(--amber);
-    }
-
-    .flow {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
+    .outer {
+      border: 2px solid var(--teal);
+      border-radius: 10px;
+      padding: 16px;
+      background: #fbfdfb;
       margin-top: 16px;
     }
-
-    .step {
-      padding: 14px;
-      min-height: 120px;
+    .outer h3 { color: var(--teal); }
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .lane, .node, .source-panel, .summary, .panel {
+      background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--panel);
+      padding: 14px;
     }
-
-    .step span {
-      display: inline-block;
+    .lane.parent { border-top: 5px solid var(--violet); }
+    .lane.child { border-top: 5px solid var(--amber); }
+    .fusion {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .node strong {
+      display: block;
       margin-bottom: 8px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: var(--violet-soft);
-      color: var(--violet);
-      font-weight: 800;
-      font-size: 0.78rem;
+      color: var(--blue);
     }
-
-    .matrix {
+    .invariant, .source-grid, .summaries {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    table {
       width: 100%;
       border-collapse: collapse;
       background: var(--panel);
       border: 1px solid var(--line);
     }
-
-    .matrix th,
-    .matrix td {
-      padding: 12px;
-      border: 1px solid var(--line);
-      vertical-align: top;
+    th, td {
       text-align: left;
-    }
-
-    .matrix th {
-      background: #ece7df;
-    }
-
-    .panel {
-      padding: 18px;
+      vertical-align: top;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
+      padding: 12px;
     }
-
-    .panel.warning {
-      border-color: #d9a59e;
-      background: var(--red-soft);
-    }
-
-    .panel.safe {
-      border-color: #8fc6bd;
-      background: var(--teal-soft);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
+    th { background: #e9f5f2; }
+    .panel.warn { border-top: 5px solid var(--red); }
     code {
-      padding: 1px 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: .92em;
+      background: #eef2f5;
+      padding: .08rem .28rem;
       border-radius: 4px;
-      background: #ece7df;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.92em;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
     }
-
     ul {
-      padding-left: 1.2rem;
+      margin: 8px 0 0 1.2rem;
+      padding: 0;
     }
-
-    .sources {
-      font-size: 0.95rem;
-      color: #3d4650;
+    li { margin: 5px 0; }
+    .summary.safe { border-top: 5px solid var(--teal); }
+    .summary.unsafe { border-top: 5px solid var(--red); }
+    footer {
+      color: var(--muted);
+      font-size: .92rem;
+      padding-bottom: 42px;
+      border-top: 1px solid var(--line);
     }
-
-    @media (max-width: 860px) {
-      main {
-        width: min(100% - 24px, 720px);
-      }
-
-      header {
-        padding-top: 36px;
-      }
-
-      .invariant,
-      .flow,
-      .lanes,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .matrix {
-        display: block;
-        overflow-x: auto;
-      }
+    @media (max-width: 900px) {
+      .flow, .fusion, .invariant, .source-grid, .summaries { grid-template-columns: 1fr; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { display: none; }
+    }
+    @media (max-width: 540px) {
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <p class="eyebrow">Phase 3 Research-Control Operation</p>
+    <h1>Parent-Child Parallel Synthesis</h1>
+    <p class="lede">Parent-child synthesis is internal perspective decomposition inside one future physics AgentJob. It preserves one Director decision, one outer AgentJob, one execution-role record, one completion record, and one fused output.</p>
+    <div class="scope">Reader scope: concept orientation only. This page cannot change the one-job rule, AgentJob schema, execution-role schema, validators, routing behavior, role authority, write permissions, or physics claim status.</div>
+    <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#frame">Single Frame</a>
+      <a href="#invariant">Invariant</a>
+      <a href="#authority">Inherited Authority</a>
+      <a href="#conflict">Conflict Handling</a>
+      <a href="#sources">Sources</a>
+      <a href="#summary">Summary</a>
+    </nav>
+  </header>
+
   <main>
-    <header>
-      <p class="eyebrow">Generated noncanonical reader surface</p>
-      <h1>Parent-Child Parallel Synthesis</h1>
-      <p class="lead">A parent-child physics job is still one bounded AgentJob. The decomposition adds internal perspectives for review and fusion; it does not add authority.</p>
-      <p class="notice">This page explains `parent_child_parallel_synthesis`. It does not change the one-job rule, schemas, validators, routing behavior, role authority, write permissions, or physics claim status.</p>
-      <nav data-explainer-control="section_toc" aria-label="Section navigation">
-        <a href="#invariant">Invariant</a>
-        <a href="#internal-lanes">Internal Lanes</a>
-        <a href="#authority">Authority</a>
-        <a href="#conflict">Conflict</a>
-        <a href="#not-route">Limits</a>
-        <a href="#sources">Sources</a>
-      </nav>
-    </header>
-
-    <section aria-labelledby="invariant">
-      <h2 id="invariant">One External Transaction</h2>
-      <p>The public-facing control invariant remains singular even when the inside of the job uses parent and child perspectives.</p>
-      <div class="invariant" aria-label="One-job invariant">
-        <div><strong>One DDR</strong>One Director decision selects the bounded job.</div>
-        <div><strong>One AgentJob</strong>One executable contract owns reads, writes, validators, and outputs.</div>
-        <div><strong>One Role Record</strong>One execution-role record constrains the job.</div>
-        <div><strong>One Completion</strong>One validation receipt closes the transaction.</div>
-        <div><strong>One Fused Output</strong>One final artifact enters handoff and registry references.</div>
+    <section id="frame" aria-labelledby="frame-title">
+      <h2 id="frame-title">Single Outer AgentJob Frame</h2>
+      <p>The visual keeps the parent and child perspectives inside one outer contract. Child outputs improve review coverage; they do not add authority.</p>
+      <div class="outer">
+        <h3>One Outer Physics AgentJob</h3>
+        <div class="flow">
+          <article class="lane parent"><h3>Parent Review And Fusion</h3><p>Enforces the shared claim boundary, reviews child outputs for conflicts, and fuses the final output.</p></article>
+          <article class="lane child"><h3>Child Draft/Control Outputs</h3><p>Provide analytical perspectives under the same source restrictions, validators, allowlist, and stop conditions.</p></article>
+        </div>
+        <div class="fusion">
+          <article class="node"><strong>Conflict review</strong>Declared blocking conflicts must be inspected.</article>
+          <article class="node"><strong>Resolved path</strong>Consensus, unique contributions, and limitations are fused.</article>
+          <article class="node"><strong>Blocked path</strong>Unresolved declared blocking conflict prevents PASS completion.</article>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="internal-lanes">
-      <h2 id="internal-lanes">Internal Lanes</h2>
-      <div class="lanes">
-        <article class="lane parent">
-          <h3>Parent Review And Fusion</h3>
-          <p>The parent derives child perspective duties from the selected execution role, enforces the shared boundary, reviews conflict, and fuses the final artifact.</p>
-          <p>The parent cannot add write paths, claim boundaries, source classes, validators, or human-gate exemptions.</p>
-        </article>
-        <article class="lane child">
-          <h3>Child Perspective Outputs</h3>
-          <p>Child units provide analytical coverage, such as physicist-mathematician and physicist-philosopher perspectives.</p>
-          <p>Child outputs are supporting draft/control artifacts. They are not independent AgentJobs or execution-role records.</p>
-        </article>
-      </div>
-    </section>
-
-    <section aria-labelledby="authority">
-      <h2 id="authority">Inherited Authority</h2>
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th>Inherited Element</th>
-            <th>Meaning</th>
-            <th>Boundary</th>
-          </tr>
-        </thead>
+    <section id="invariant" aria-labelledby="invariant-title">
+      <h2 id="invariant-title">External Invariant</h2>
+      <table>
+        <thead><tr><th>External record</th><th>What remains singular</th><th>Why it matters</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Execution-role record</td>
-            <td>The task-local role contract for the outer job.</td>
-            <td>No child execution-role records.</td>
-          </tr>
-          <tr>
-            <td>Claim boundary</td>
-            <td>The allowed and forbidden claim surface for the transaction.</td>
-            <td>No child-local claim expansion.</td>
-          </tr>
-          <tr>
-            <td>Write allowlist</td>
-            <td>The only paths the job may change.</td>
-            <td>No extra child write paths.</td>
-          </tr>
-          <tr>
-            <td>Validators</td>
-            <td>The checks required before completion.</td>
-            <td>PASS is blocked by unresolved declared conflict.</td>
-          </tr>
+          <tr><td>Director decision</td><td>One routing decision selects the job.</td><td>The Director still authorizes one bounded action.</td></tr>
+          <tr><td>Outer AgentJob</td><td>One executable contract owns reads, writes, validators, and expected outputs.</td><td>Child units cannot add write paths or source classes.</td></tr>
+          <tr><td>Execution-role record</td><td>One task-local role contract constrains the job.</td><td>Child perspectives do not become separate role records.</td></tr>
+          <tr><td>Completion record</td><td>One validation and verdict receipt closes the transaction.</td><td>A child note cannot independently certify PASS.</td></tr>
+          <tr><td>Fused output</td><td>One final artifact is used for downstream handoff and registry references.</td><td>Supporting drafts do not replace the final source artifact.</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section aria-labelledby="conflict">
-      <h2 id="conflict">Conflict Review</h2>
-      <div class="flow" aria-label="Conflict review sequence">
-        <div class="step"><span>1</span><strong>Child drafts</strong><br>Each child writes within inherited constraints.</div>
-        <div class="step"><span>2</span><strong>Parent review</strong><br>The parent identifies agreement, disagreement, and missing burdens.</div>
-        <div class="step"><span>3</span><strong>Resolution</strong><br>Blocking conflict receives bounded review or revision.</div>
-        <div class="step"><span>4</span><strong>Fusion</strong><br>The final artifact preserves consensus, unique contributions, and limitations.</div>
-      </div>
-      <p class="notice">A declared blocking conflict that remains unresolved prevents PASS completion. This is a control rule, not an editorial preference.</p>
-    </section>
-
-    <section aria-labelledby="not-route">
-      <h2 id="not-route">What This Mode Cannot Do</h2>
-      <div class="split">
-        <article class="panel warning">
-          <h3>Unsafe Interpretations</h3>
-          <ul>
-            <li>Multiple AgentJobs hidden inside one invocation.</li>
-            <li>Child outputs as independent authority.</li>
-            <li>Child execution units as separate role records.</li>
-            <li>A way around Smuggling Auditor, Refuter, or Gate Chair review.</li>
-            <li>A route to benchmark promotion or completed-derivation language.</li>
-          </ul>
-        </article>
-        <article class="panel safe">
-          <h3>Safe Interpretation</h3>
-          <p>Parent-child synthesis improves the review geometry of a single physics AgentJob. It preserves the old external completion model while making internal disagreement visible.</p>
-        </article>
+    <section id="authority" aria-labelledby="authority-title">
+      <h2 id="authority-title">Inherited Authority</h2>
+      <div class="invariant">
+        <article class="panel"><h3>Inherited</h3><p>Execution-role record, claim boundary, allowed paths, forbidden paths, source restrictions, validators, human-gate status, and stop conditions.</p></article>
+        <article class="panel warn"><h3>Not Created</h3><p>No child AgentJobs, child execution-role records, child claim boundaries, child write paths, or independent child verdicts.</p></article>
       </div>
     </section>
 
-    <section aria-labelledby="sources">
-      <h2 id="sources">Source Materials</h2>
-      <div class="sources" data-explainer-control="source_materials_section">
-        <p>AEther-Flow Project. (2026). <code data-source-path="README.md">README.md</code> [Project front door].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path="AGENTS.md">AGENTS.md</code> [Repository authority hierarchy].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path="research_control/AGENTS.md">research_control/AGENTS.md</code> [Scoped research-control guidance].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path=".agents/schemas/AGENT_JOB_SCHEMA.md">.agents/schemas/AGENT_JOB_SCHEMA.md</code> [AgentJob schema].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md">.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code> [Execution-role schema].</p>
-        <p>AEther-Flow Project. (2026). <code data-source-path="registries/AGENT_JOB_REGISTRY.csv">registries/AGENT_JOB_REGISTRY.csv</code> [AgentJob registry].</p>
+    <section id="conflict" aria-labelledby="conflict-title">
+      <h2 id="conflict-title">Conflict Handling</h2>
+      <p>A declared blocking conflict must be reviewed, resolved within the stated resolution limit, or leave the job blocked. A PASS completion is not valid while a blocking parent-child conflict remains unresolved.</p>
+      <p>This mode is stricter than a single-voice draft: the parent cannot simply choose the convenient child and ignore the other. The fused output must preserve shared consensus, unique contributions, and unresolved limitations.</p>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-title" data-explainer-control="source_materials_section">
+      <h2 id="sources-title">Source Materials</h2>
+      <div class="source-grid">
+        <article class="source-panel"><code data-source-path="README.md">README.md</code><p>Project front door.</p></article>
+        <article class="source-panel"><code data-source-path="AGENTS.md">AGENTS.md</code><p>Repository authority hierarchy.</p></article>
+        <article class="source-panel"><code data-source-path="research_control/README.md">research_control/README.md</code><p>One-job and parent-child synthesis rules.</p></article>
+        <article class="source-panel"><code data-source-path="research_control/AGENTS.md">research_control/AGENTS.md</code><p>Scoped research-control guidance.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/AGENT_JOB_SCHEMA.md">.agents/schemas/AGENT_JOB_SCHEMA.md</code><p>AgentJob schema and role decomposition shape.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md">.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code><p>Execution-role one-to-one rule.</p></article>
+        <article class="source-panel"><code data-source-path="registries/AGENT_JOB_REGISTRY.csv">registries/AGENT_JOB_REGISTRY.csv</code><p>AgentJob registry evidence.</p></article>
       </div>
     </section>
 
-    <section aria-labelledby="binding">
-      <h2 id="binding">Source Binding</h2>
-      <p><strong>Derived from spec:</strong> <code>markdown/html-explainer-specs/parent-child-synthesis-explainer.md</code></p>
-      <p><strong>GitHub-facing pair:</strong> <code>github-facing/parent-child-synthesis-explainer.md</code></p>
-      <p><strong>Publication brief:</strong> <code>markdown/publication-briefs/parent-child-synthesis.publication-brief.md</code></p>
-      <p><strong>Authority status:</strong> generated noncanonical reader surface.</p>
+    <section id="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Safe And Unsafe Summaries</h2>
+      <div class="summaries">
+        <article class="summary safe"><h3>Safe</h3><p>Parent-child synthesis is an internal perspective structure inside one physics AgentJob; child outputs support parent review, and only the fused output enters completion and downstream references.</p></article>
+        <article class="summary unsafe"><h3>Unsafe</h3><p>Parent-child synthesis creates extra jobs, extra role records, extra write authority, independent child verdicts, a route around conflict review, or a mandatory mode for all non-physics work.</p></article>
+      </div>
     </section>
   </main>
+
+  <footer data-explainer-control="authority_footer">
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/parent-child-synthesis-explainer.md</code> and the publication brief <code>markdown/publication-briefs/parent-child-synthesis.publication-brief.md</code>. It does not change the one-job rule, AgentJob schema, execution-role schema, validators, routing behavior, role authority, write permissions, or physics claim status.</p>
+    <p>Safe operating rule: keep child outputs as draft/control support and require fused-output completion evidence for the outer job.</p>
+  </footer>
 </body>
 </html>

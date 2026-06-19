@@ -4,422 +4,258 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-DIRECTOR-AGENTJOB-LIFECYCLE-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="b1ccff5be663095dbee39967824084a5d1abc1597d055a56ad25115d18ff3a23">
+  <meta name="aether-flow-source-basis-hash" content="f0133254060576802afc913e8042e5232a9f4f6330f7df7b52eaba0d30a96ce5">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Director Decisions And AgentJob Lifecycle</title>
   <style>
     :root {
       color-scheme: light;
-      --ink: #1b222a;
-      --muted: #5c6670;
-      --paper: #f6f4ef;
+      --ink: #17212b;
+      --muted: #5c6671;
+      --paper: #f7f5ef;
       --panel: #ffffff;
       --line: #ded8cf;
-      --blue: #2f6689;
-      --green: #34735b;
-      --amber: #a46621;
-      --red: #9a4b42;
-      --slate: #334452;
-      --soft-blue: #e8f1f6;
-      --soft-green: #edf6f0;
-      --soft-red: #fff0ee;
+      --blue: #2c6590;
+      --green: #33715b;
+      --gold: #9a6a20;
+      --red: #984641;
+      --violet: #605487;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--paper);
       color: var(--ink);
+      background: var(--paper);
       line-height: 1.56;
-    }
-    a {
-      color: inherit;
-    }
-    header {
-      min-height: 68vh;
-      display: grid;
-      align-items: end;
-      padding: 64px;
-      color: #fffdf7;
-      background:
-        linear-gradient(120deg, rgba(27, 34, 42, .96), rgba(47, 102, 137, .86)),
-        repeating-linear-gradient(90deg, rgba(255, 255, 255, .12) 0 1px, transparent 1px 48px),
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, .10) 0 1px, transparent 1px 48px);
-    }
-    .hero {
-      max-width: 1000px;
-    }
-    .eyebrow {
-      margin: 0 0 12px;
-      text-transform: uppercase;
       letter-spacing: 0;
+    }
+    header, main, footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    header { padding-top: 42px; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
       font-size: .82rem;
-      font-weight: 700;
+      font-weight: 800;
+      text-transform: uppercase;
     }
     h1 {
       margin: 0;
-      font-size: 4rem;
-      line-height: 1;
+      max-width: 960px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.04;
       letter-spacing: 0;
     }
     .lede {
-      max-width: 830px;
-      margin: 24px 0 0;
-      font-size: 1.22rem;
-    }
-    main {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 44px 38px 76px;
-    }
-    section {
-      margin: 56px 0;
-    }
-    h2 {
-      margin: 0 0 16px;
-      font-size: 2rem;
-      line-height: 1.14;
-      letter-spacing: 0;
-    }
-    h3 {
-      margin: 0 0 8px;
+      max-width: 900px;
+      margin: 18px 0 0;
+      color: var(--muted);
       font-size: 1.08rem;
-      letter-spacing: 0;
     }
-    p {
-      max-width: 860px;
-    }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .94em;
-      background: rgba(27, 34, 42, .08);
-      padding: .08em .25em;
-      overflow-wrap: anywhere;
+    .scope {
+      max-width: 920px;
+      margin-top: 22px;
+      border-left: 5px solid var(--blue);
+      background: #eaf2f8;
+      padding: 14px 16px;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
     nav a {
       color: var(--ink);
       text-decoration: none;
       border: 1px solid var(--line);
+      border-radius: 999px;
       background: var(--panel);
       padding: 8px 12px;
       font-size: .92rem;
     }
-    .notice {
-      max-width: 930px;
-      border-left: 5px solid var(--amber);
-      background: #fff6e9;
-      padding: 18px 20px;
-      margin-top: 22px;
+    section { margin: 30px 0; }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
     }
     .chain {
       display: grid;
       grid-template-columns: repeat(7, minmax(0, 1fr));
       gap: 8px;
-      margin-top: 24px;
+      margin-top: 16px;
     }
-    .node {
-      min-height: 152px;
-      border: 1px solid var(--line);
+    .record, .state, .source-panel, .summary {
       background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
       padding: 14px;
-      position: relative;
     }
-    .node::after {
-      content: "";
+    .record {
+      min-height: 150px;
+      border-top: 5px solid var(--blue);
+    }
+    .record:nth-child(2n) { border-top-color: var(--green); }
+    .record:nth-child(3n) { border-top-color: var(--violet); }
+    .record strong {
       display: block;
-      width: 34px;
-      height: 3px;
-      background: var(--blue);
-      margin-top: 14px;
-    }
-    .node strong {
+      margin-bottom: 8px;
       color: var(--blue);
     }
-    .state-grid,
-    .summary-grid {
+    .state-grid, .source-grid, .summaries {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 18px;
     }
-    .panel,
-    .source {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      padding: 16px;
-      overflow-wrap: anywhere;
-    }
-    .panel.keep {
-      background: var(--soft-green);
-      border-color: #afd1c1;
-    }
-    .panel.stop {
-      background: var(--soft-red);
-      border-color: #d9aaa4;
-    }
-    .matrix {
+    .state.keep { border-top: 5px solid var(--green); }
+    .state.stop { border-top: 5px solid var(--red); }
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 18px;
       background: var(--panel);
       border: 1px solid var(--line);
     }
-    .matrix th,
-    .matrix td {
+    th, td {
       text-align: left;
       vertical-align: top;
-      border-bottom: 1px solid var(--line);
-      padding: 14px;
+      border: 1px solid var(--line);
+      padding: 12px;
     }
-    .matrix th {
-      background: var(--soft-blue);
+    th { background: #e8f1f7; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: .92em;
+      background: #eef2f5;
+      padding: .08rem .28rem;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
     }
-    ol,
     ul {
-      max-width: 860px;
+      margin: 8px 0 0 1.2rem;
+      padding: 0;
     }
-    li + li {
-      margin-top: 8px;
-    }
+    li { margin: 5px 0; }
+    .summary.safe { border-top: 5px solid var(--green); }
+    .summary.unsafe { border-top: 5px solid var(--red); }
     footer {
-      border-top: 1px solid var(--line);
       color: var(--muted);
-      padding-top: 24px;
-      margin-top: 64px;
       font-size: .92rem;
-    }
-    @media (max-width: 1080px) {
-      .chain {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .state-grid,
-      .summary-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      padding-bottom: 42px;
+      border-top: 1px solid var(--line);
     }
     @media (max-width: 980px) {
-      header {
-        padding: 48px 28px;
-      }
-      h1 {
-        font-size: 3rem;
-      }
-      main {
-        padding: 36px 22px 64px;
-      }
-      .matrix {
-        display: block;
-        overflow-x: auto;
-      }
+      .chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .state-grid, .source-grid, .summaries { grid-template-columns: 1fr; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { display: none; }
     }
-    @media (max-width: 620px) {
-      header {
-        min-height: 62vh;
-        padding: 38px 20px;
-      }
-      h1 {
-        font-size: 2.26rem;
-      }
-      .lede {
-        font-size: 1.04rem;
-      }
-      .chain,
-      .state-grid,
-      .summary-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 540px) {
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
+      .chain { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="hero">
-      <p class="eyebrow">Phase 3A Control Records</p>
-      <h1>Director Decisions And AgentJob Lifecycle</h1>
-      <p class="lede">A lifecycle guide for the durable record chain that binds tasks, decisions, AgentJobs, execution roles, completions, handoffs, and registries into one inspectable transaction history.</p>
-    </div>
+    <p class="eyebrow">Phase 3 Research-Control Operation</p>
+    <h1>Director Decisions And AgentJob Lifecycle</h1>
+    <p class="lede">The lifecycle records what was authorized, what was allowed, what was checked, and what remains next. Each record narrows the next one, so correction happens through supersession rather than silent mutation.</p>
+    <div class="scope">Reader scope: lifecycle orientation only. This page cannot edit schemas, change task behavior, alter routing, expand role authority, mutate historical records, or treat completion evidence as broad proof.</div>
+    <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#chain">Record Chain</a>
+      <a href="#immutable">Immutable Evidence</a>
+      <a href="#allowlists">Allowlists</a>
+      <a href="#mistakes">Mistakes</a>
+      <a href="#sources">Sources</a>
+      <a href="#summary">Summary</a>
+    </nav>
   </header>
 
   <main>
-    <section id="scope">
-      <h2>Transaction Evidence, Not Broad Authority</h2>
-      <p>The lifecycle records what was authorized, what was done, what was checked, and what should happen next. Each record narrows the transaction boundary.</p>
-      <div class="notice">
-        This generated noncanonical reader surface explains the record lifecycle. It does not edit schemas, change task behavior, alter routing, expand role authority, mutate historical records, or treat completion evidence as broad proof.
-      </div>
-      <nav data-explainer-control="section_toc" aria-label="Section navigation">
-        <a href="#chain">Record chain</a>
-        <a href="#states">States</a>
-        <a href="#immutability">Immutability</a>
-        <a href="#allowlists">Allowlists</a>
-        <a href="#mistakes">Mistakes</a>
-        <a href="#sources">Sources</a>
-      </nav>
-    </section>
-
-    <section id="chain">
-      <h2>Record Chain</h2>
-      <div class="chain" aria-label="Director and AgentJob record chain">
-        <article class="node"><strong>Task</strong><p>Objective, status, current decision, current job, parent, closure, and next recommendation.</p></article>
-        <article class="node"><strong>DDR</strong><p>Role selection, rejected candidates, claim boundary, and required checks.</p></article>
-        <article class="node"><strong>AgentJob</strong><p>Allowed reads, writes, generated paths, commands, outputs, and forbidden scope.</p></article>
-        <article class="node"><strong>Execution Role</strong><p>The exact role semantics for one job.</p></article>
-        <article class="node"><strong>Completion</strong><p>Outputs, command evidence, limits, verdict, and next recommendation.</p></article>
-        <article class="node"><strong>Handoff</strong><p>Precise next route when future work is needed.</p></article>
-        <article class="node"><strong>Registry</strong><p>Discoverable provenance, status, paths, and check state.</p></article>
+    <section id="chain" aria-labelledby="chain-title">
+      <h2 id="chain-title">Record Chain</h2>
+      <p>The visual state chain is intentionally narrow. Each record constrains the next record instead of expanding the previous authority.</p>
+      <div class="chain" aria-label="Task to registry lifecycle">
+        <article class="record"><strong>Task</strong>Objective, status, current decision, current job, parent, closure, and next route.</article>
+        <article class="record"><strong>DDR</strong>Role selection, rejected alternatives, claim boundary, and checks.</article>
+        <article class="record"><strong>AgentJob</strong>Allowed paths, source classes, commands, outputs, and validators.</article>
+        <article class="record"><strong>Execution Role</strong>Task-local role semantics for exactly one job.</article>
+        <article class="record"><strong>Completion</strong>Outputs, command evidence, verdict, uncertainty, and recommendation.</article>
+        <article class="record"><strong>Handoff</strong>Future route when continuation remains in scope.</article>
+        <article class="record"><strong>Registry Rows</strong>Provenance, discovery, and validator visibility.</article>
       </div>
     </section>
 
-    <section id="states">
-      <h2>Lifecycle States</h2>
+    <section id="immutable" aria-labelledby="immutable-title">
+      <h2 id="immutable-title">Immutable Evidence</h2>
+      <p><code>research_control/AGENTS.md</code> gives the editing rule: keep Director decisions, AgentJobs, completions, approvals, and handoffs immutable after activation or creation. Supersede rather than rewrite.</p>
       <div class="state-grid">
-        <article class="panel">
-          <h3>Decision</h3>
-          <p>A Director Decision Record follows <code>.agents/schemas/DIRECTOR_DECISION_SCHEMA.md</code> and explains why one role is selected.</p>
-        </article>
-        <article class="panel">
-          <h3>Execution Contract</h3>
-          <p>An AgentJob follows <code>.agents/schemas/AGENT_JOB_SCHEMA.md</code> and defines the bounded executable contract.</p>
-        </article>
-        <article class="panel">
-          <h3>Role Binding</h3>
-          <p>The execution-role record follows <code>.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code> and binds role semantics to one job.</p>
-        </article>
-        <article class="panel keep">
-          <h3>Completion</h3>
-          <p>The completion records transaction evidence and remaining limits. It does not prove broader claims.</p>
-        </article>
-        <article class="panel keep">
-          <h3>Registry Refresh</h3>
-          <p>Registry rows make the records discoverable and checkable by future agents.</p>
-        </article>
-        <article class="panel stop">
-          <h3>Stop Or Supersede</h3>
-          <p>If the boundary is wrong, create a new bounded record. Do not rewrite the old decision into a different history.</p>
-        </article>
+        <article class="state keep"><h3>Acceptable Correction</h3><p>Create a new bounded packet, explain what it supersedes, and preserve the old evidence.</p></article>
+        <article class="state stop"><h3>Unsafe Correction</h3><p>Edit an activated historical record so it appears to have authorized different work.</p></article>
       </div>
     </section>
 
-    <section id="immutability">
-      <h2>Supersede Rather Than Rewrite</h2>
-      <p><code>research_control/AGENTS.md</code> states that Director decisions, AgentJobs, completions, approvals, and handoffs are immutable after activation or creation. That rule protects evidence from retroactive cleanup.</p>
-      <p>A repair can update registries, create a superseding decision, or open a new bounded task. It should not silently change what a prior job authorized or concluded.</p>
-    </section>
-
-    <section id="allowlists">
-      <h2>Allowlists And Stop Conditions</h2>
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th>Boundary</th>
-            <th>Safe use</th>
-            <th>Unsafe use</th>
-          </tr>
-        </thead>
+    <section id="allowlists" aria-labelledby="allowlists-title">
+      <h2 id="allowlists-title">Allowlists And Stop Conditions</h2>
+      <table>
+        <thead><tr><th>Boundary</th><th>Meaning</th><th>Stop signal</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Write allowlist</td>
-            <td>Change only the paths named by the AgentJob.</td>
-            <td>Infer permission for neighboring files or later packets.</td>
-          </tr>
-          <tr>
-            <td>Forbidden paths</td>
-            <td>Keep ontology, science drafts, control contracts, or other protected lanes out of scope when forbidden.</td>
-            <td>Hand-edit protected sources because the current task is nearby.</td>
-          </tr>
-          <tr>
-            <td>Claim boundary</td>
-            <td>State only the narrow transaction claims that were authorized.</td>
-            <td>Promote benchmark, ontology, role, or generated-output authority.</td>
-          </tr>
-          <tr>
-            <td>Completion evidence</td>
-            <td>Use it to inspect what one job did and checked.</td>
-            <td>Treat it as broad proof or reusable permission.</td>
-          </tr>
+          <tr><td>Write allowlist</td><td>Files the job may change.</td><td>Required path is outside the allowlist.</td></tr>
+          <tr><td>Forbidden source classes</td><td>Authority surfaces that remain out of scope.</td><td>Canonical ontology, science draft, role, schema, validator, routing, or checkpoint behavior would change.</td></tr>
+          <tr><td>Claim boundary</td><td>What the transaction can and cannot assert.</td><td>Benchmark promotion, ontology adoption, Gate Chair verdict, or broad proof is needed.</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section id="mistakes">
-      <h2>Operator Mistakes</h2>
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th>Mistake</th>
-            <th>Risk</th>
-            <th>Safer action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Editing an activated AgentJob to fit new work.</td>
-            <td>The old authority boundary is rewritten.</td>
-            <td>Supersede with a new decision and job.</td>
-          </tr>
-          <tr>
-            <td>Using a role template as current permission.</td>
-            <td>The actual execution-role record is bypassed.</td>
-            <td>Inspect <code>registries/ROLE_EXECUTION_REGISTRY.csv</code> and the job-local record.</td>
-          </tr>
-          <tr>
-            <td>Adding public HTML without brief and source spec.</td>
-            <td>The page becomes an orphan public surface.</td>
-            <td>Route a Documentation Curator publication packet.</td>
-          </tr>
-          <tr>
-            <td>Folding several objectives into one job.</td>
-            <td>The one-job boundary becomes ambiguous.</td>
-            <td>Split the work into bounded packets.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="sources">
-      <h2>Source Materials</h2>
-      <div class="summary-grid" data-explainer-control="source_materials_section">
-        <div class="source"><code data-source-path="research_control/README.md">research_control/README.md</code></div>
-        <div class="source"><code data-source-path="research_control/AGENTS.md">research_control/AGENTS.md</code></div>
-        <div class="source"><code data-source-path=".agents/schemas/DIRECTOR_DECISION_SCHEMA.md">.agents/schemas/DIRECTOR_DECISION_SCHEMA.md</code></div>
-        <div class="source"><code data-source-path=".agents/schemas/AGENT_JOB_SCHEMA.md">.agents/schemas/AGENT_JOB_SCHEMA.md</code></div>
-        <div class="source"><code data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md">.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code></div>
-        <div class="source"><code data-source-path="registries/DIRECTOR_DECISION_REGISTRY.csv">registries/DIRECTOR_DECISION_REGISTRY.csv</code></div>
-        <div class="source"><code data-source-path="registries/AGENT_JOB_REGISTRY.csv">registries/AGENT_JOB_REGISTRY.csv</code></div>
-        <div class="source"><code data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv">registries/ROLE_EXECUTION_REGISTRY.csv</code></div>
+    <section id="mistakes" aria-labelledby="mistakes-title">
+      <h2 id="mistakes-title">Operator Mistakes</h2>
+      <div class="state-grid">
+        <article class="state stop"><h3>Mutating Records</h3><p>Editing an activated AgentJob rewrites the old authority boundary. Supersede it instead.</p></article>
+        <article class="state stop"><h3>Reusing Permissions</h3><p>An allowlist is not a general permission. It belongs to one transaction.</p></article>
+        <article class="state stop"><h3>Overreading Completion</h3><p>A PASS completion proves that one transaction met its checks, not that a broad theory claim is true.</p></article>
+        <article class="state stop"><h3>Orphaning Pages</h3><p>Generated HTML needs a publication brief and source spec.</p></article>
       </div>
     </section>
 
-    <section id="summary">
-      <h2>Safe Operating Summary</h2>
-      <div class="summary-grid">
-        <article class="panel keep">
-          <h3>Safe</h3>
-          <p>The lifecycle creates a narrow, inspectable record chain for one bounded transaction and preserves correction through supersession.</p>
-        </article>
-        <article class="panel stop">
-          <h3>Unsafe</h3>
-          <p>Historical records can be edited for convenience, completion evidence proves broad claims, or allowlists become reusable permissions.</p>
-        </article>
-        <article class="panel">
-          <h3>Binding</h3>
-          <p>Derived from <code>markdown/html-explainer-specs/director-agentjob-lifecycle-explainer.md</code>. Related GitHub Markdown: <code>github-facing/director-agentjob-lifecycle-explainer.md</code>. Publication brief: <code>markdown/publication-briefs/director-agentjob-lifecycle.publication-brief.md</code>.</p>
-        </article>
+    <section id="sources" aria-labelledby="sources-title" data-explainer-control="source_materials_section">
+      <h2 id="sources-title">Source Materials</h2>
+      <div class="source-grid">
+        <article class="source-panel"><code data-source-path="research_control/README.md">research_control/README.md</code><p>Research-control guide and documentation-impact discipline.</p></article>
+        <article class="source-panel"><code data-source-path="research_control/AGENTS.md">research_control/AGENTS.md</code><p>Scoped control authority and editing rules.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/DIRECTOR_DECISION_SCHEMA.md">.agents/schemas/DIRECTOR_DECISION_SCHEMA.md</code><p>Director Decision Record schema.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/AGENT_JOB_SCHEMA.md">.agents/schemas/AGENT_JOB_SCHEMA.md</code><p>AgentJob schema and memory-preflight receipt.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/EXECUTION_ROLE_SCHEMA.md">.agents/schemas/EXECUTION_ROLE_SCHEMA.md</code><p>Execution-role schema.</p></article>
+        <article class="source-panel"><code data-source-path="registries/DIRECTOR_DECISION_REGISTRY.csv">registries/DIRECTOR_DECISION_REGISTRY.csv</code><p>DDR provenance registry.</p></article>
+        <article class="source-panel"><code data-source-path="registries/AGENT_JOB_REGISTRY.csv">registries/AGENT_JOB_REGISTRY.csv</code><p>AgentJob provenance and completion paths.</p></article>
+        <article class="source-panel"><code data-source-path="registries/ROLE_EXECUTION_REGISTRY.csv">registries/ROLE_EXECUTION_REGISTRY.csv</code><p>Execution-role records.</p></article>
       </div>
     </section>
 
-    <footer>
-      Generated noncanonical reader surface. It is human-only documentation and is not independent authority for schemas, routing, role authority, physics claims, historical record mutation, or generated-output authority.
-    </footer>
+    <section id="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Safe And Unsafe Summaries</h2>
+      <div class="summaries">
+        <article class="summary safe"><h3>Safe</h3><p>The lifecycle creates a narrow, inspectable record chain for one bounded transaction and preserves corrections through supersession.</p></article>
+        <article class="summary unsafe"><h3>Unsafe</h3><p>Historical records can be edited for convenience, completion evidence proves broad claims, allowlists are reusable permissions, or generated documentation changes authority.</p></article>
+      </div>
+    </section>
   </main>
+
+  <footer data-explainer-control="authority_footer">
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/director-agentjob-lifecycle-explainer.md</code> and the publication brief <code>markdown/publication-briefs/director-agentjob-lifecycle.publication-brief.md</code>. It does not edit schemas, change task behavior, alter routing, expand role authority, mutate historical records, or treat completion evidence as broad proof.</p>
+    <p>Safe operating rule: preserve the record chain and supersede historical evidence when the route changes.</p>
+  </footer>
 </body>
 </html>

@@ -55,6 +55,24 @@ generated outputs as authority.
 - `registries/AGENT_ROLE_REGISTRY.csv` supplies role authority levels,
   human-gate status, default validators, and Documentation Curator limits.
 
+## Required Opening
+
+Open by explaining the workflow as the operating discipline that turns a
+request into a bounded, source-inspected transaction. The opening should teach
+classification, memory preflight, Director routing, one AgentJob, validation,
+completion, and handoff before presenting the full generated-output authority
+paragraph. It must distinguish physics continuation from project-system
+improvement without implying a new routing rule.
+
+## Visual Strategy
+
+Use a process-lane diagram plus a compact lane table. The reader learns how a
+request narrows from intake to exactly one bounded AgentJob and then to
+completion or handoff. The diagram must show memory preflight as navigation,
+not authority, and must not become a generic source-to-validator graphic. The
+tracked HTML may render this as a local CSS flow; GitHub Markdown may render it
+as a native table or ordered process map.
+
 ## Required Reader Outcome
 
 After reading, a maintainer or future agent should know which workflow lane to
@@ -62,14 +80,6 @@ use, why there is at most one bounded AgentJob per invocation, how memory
 preflight should guide source inspection without overriding source authority,
 and why validators, generated artifacts, and public explainers do not promote
 physics claims or role authority.
-
-## Visual Strategy
-
-Use a process timeline with two lanes: physics continuation and project-system
-improvement. The visual should show request intake, classification or state
-resolution, memory preflight, Director routing, one AgentJob, validation,
-completion, and handoff. Include a separate stop-condition decision tree. Do
-not use a generic source-to-checks diagram or browser-side Mermaid.
 
 ## Acceptance Criteria
 
@@ -81,5 +91,7 @@ not use a generic source-to-checks diagram or browser-side Mermaid.
   authority.
 - States that validators and generated outputs are boundary checks or reader
   aids, not scientific verdicts.
+- Moves the full generated-noncanonical paragraph to the marked authority
+  footer in GitHub Markdown and tracked HTML.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Preserves generated noncanonical status.
