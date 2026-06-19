@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="134da4a03cc312ab6c9d92a0a870db191957db91d1cea07487748694f7b8ba02">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Technical Requirements For Reproducible Operation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7f2;
+      --paper: #ffffff;
+      --paper-2: #eef2ea;
+      --ink: #172026;
+      --muted: #5a6670;
+      --line: #cbd4c9;
+      --line-strong: #99a794;
+      --teal: #0f6d73;
+      --teal-soft: #dceced;
+      --olive: #516f2f;
+      --olive-soft: #e6eddc;
+      --amber: #946a17;
+      --amber-soft: #f0e5c7;
+      --red: #98413f;
+      --red-soft: #eedbd9;
+      --mono: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+      --sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(23, 32, 38, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(23, 32, 38, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 14% 10%, rgba(15, 109, 115, 0.08), transparent 34%),
+        var(--bg);
+      background-size: 30px 30px, 30px 30px, auto, auto;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+      overflow-wrap: break-word;
+    }
+
+    a { color: var(--teal); }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      background: rgba(15, 109, 115, 0.09);
+      color: #0a5055;
+      border-radius: 4px;
+      padding: 0.08rem 0.3rem;
+      overflow-wrap: anywhere;
+    }
+
+    .wrap {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 34px;
+      padding: 34px 0 58px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      padding: 12px 0;
+      max-height: calc(100dvh - 36px);
+      overflow-y: auto;
+    }
+
+    .toc-title {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .toc a {
+      display: block;
+      margin: 0 0 4px;
+      padding: 6px 8px;
+      border-left: 3px solid transparent;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .toc a:hover {
+      background: var(--paper-2);
+      color: var(--ink);
+      border-left-color: var(--teal);
+    }
+
+    main { min-width: 0; }
+
+    header {
+      padding: 28px 0 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 940px;
+      font-family: var(--serif);
+      font-size: clamp(2.35rem, 7vw, 5rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 880px;
+      margin: 20px 0 0;
+      color: #2d3a42;
+      font-size: clamp(1.04rem, 2.4vw, 1.25rem);
+    }
+
+    .notice {
+      max-width: 940px;
+      margin: 22px 0 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--teal);
+      background: var(--teal-soft);
+      font-weight: 650;
+    }
+
+    section {
+      padding: 36px 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.45rem, 3vw, 2.08rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    p { margin: 0 0 14px; }
+
+    ul, ol {
+      margin: 0;
+      padding-left: 1.35rem;
+    }
+
+    li { margin-bottom: 8px; }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--olive);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .triad {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .triad-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--teal);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .triad-card b {
+      display: block;
+      margin-bottom: 6px;
+      font-family: var(--mono);
+      color: var(--teal);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+    }
+
+    .table-wrap {
+      margin-top: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th {
+      background: var(--paper-2);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    th, td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(15, 109, 115, 0.045);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .tier {
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 0 6px 6px 0;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .command-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .command-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .command-card h3 {
+      color: var(--teal);
+    }
+
+    .command-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sequence {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+      counter-reset: seq;
+    }
+
+    .sequence-step {
+      counter-increment: seq;
+      position: relative;
+      min-width: 0;
+      padding: 14px 16px 14px 58px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .sequence-step::before {
+      content: counter(seq);
+      position: absolute;
+      left: 16px;
+      top: 14px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--olive-soft);
+      color: var(--olive);
+      font-family: var(--mono);
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .boundary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .boundary-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .boundary-card.good {
+      border-left: 5px solid var(--olive);
+      background: var(--olive-soft);
+    }
+
+    .boundary-card.bad {
+      border-left: 5px solid var(--red);
+      background: var(--red-soft);
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list li {
+      min-width: 0;
+      margin: 0;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .source-list small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 30px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1000px) {
+      .wrap {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+      }
+
+      .toc {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        gap: 4px;
+        margin: 0 -16px;
+        padding: 10px 16px;
+        max-height: none;
+        overflow-x: auto;
+        background: rgba(245, 247, 242, 0.96);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .toc-title { display: none; }
+
+      .toc a {
+        flex: 0 0 auto;
+        border-left: 0;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        font-size: 0.76rem;
+      }
+
+      main { padding-top: 20px; }
+    }
+
+    @media (max-width: 760px) {
+      .triad,
+      .command-grid,
+      .boundary-grid,
+      .source-list {
+        grid-template-columns: 1fr;
+      }
+
+      .table-wrap {
+        border: 0;
+        background: transparent;
+      }
+
+      .table-scroll {
+        overflow-x: visible;
+      }
+
+      table {
+        min-width: 0;
+        border-collapse: separate;
+        border-spacing: 0 12px;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody,
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      tr {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+      }
+
+      tbody tr:nth-child(even) {
+        background: var(--paper);
+      }
+
+      td {
+        display: grid;
+        grid-template-columns: minmax(96px, 34%) minmax(0, 1fr);
+        gap: 10px;
+        padding: 11px 12px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: 1px solid var(--line);
+      }
+
+      tbody tr td:last-child {
+        border-bottom: 0;
+      }
+
+      .tier {
+        white-space: normal;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #101513;
+        --paper: #18201d;
+        --paper-2: #202a26;
+        --ink: #eef3ed;
+        --muted: #a8b3aa;
+        --line: #35423a;
+        --line-strong: #617061;
+        --teal: #7fcfd2;
+        --teal-soft: #183236;
+        --olive: #b0c987;
+        --olive-soft: #25311f;
+        --amber: #f0c46b;
+        --amber-soft: #362d19;
+        --red: #e3908d;
+        --red-soft: #3a2424;
+      }
+
+      body {
+        background:
+          linear-gradient(90deg, rgba(238, 243, 237, 0.035) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(238, 243, 237, 0.035) 1px, transparent 1px),
+          radial-gradient(circle at 14% 10%, rgba(127, 207, 210, 0.08), transparent 34%),
+          var(--bg);
+        background-size: 30px 30px, 30px 30px, auto, auto;
+      }
+
+      code {
+        color: #bcecef;
+      }
+
+      .lead {
+        color: #d6ddd7;
+      }
+
+      @media (max-width: 1000px) {
+        .toc {
+          background: rgba(16, 21, 19, 0.96);
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="toc" data-explainer-control="section_toc" aria-label="Page sections">
+      <div class="toc-title">Contents</div>
+      <a href="#model">Operating model</a>
+      <a href="#tiers">Requirement tiers</a>
+      <a href="#commands">Command families</a>
+      <a href="#html">HTML and diagrams</a>
+      <a href="#boundaries">Failure boundaries</a>
+      <a href="#sequence">Operator sequence</a>
+      <a href="#sources">Source materials</a>
+    </nav>
+
+    <main>
+      <header>
+        <p class="eyebrow">Phase 5C publication guide</p>
+        <h1>Technical Requirements For Reproducible Operation</h1>
+        <p class="lead">
+          Technical requirements make AEther-Flow operable: Codex app access
+          for governed agent work, Python environment setup, dependency
+          ledgers, repository-owned scripts, screenshot tooling, memory refresh
+          commands, and managed PDF derivative paths.
+        </p>
+        <p class="notice">
+          This is a generated noncanonical reader surface. It does not change
+          dependencies, validators, Makefile targets, command semantics,
+          harness policy, role authority, routing behavior, checkpoint
+          behavior, generated-output authority, or physics claim status.
+        </p>
+      </header>
+
+      <section id="model">
+        <p class="section-kicker">Operating model</p>
+        <h2>Tools answer capability; sources answer authority.</h2>
+        <p>
+          A reproducible operator needs to know which local tools are required,
+          which repository source names the workflow, and which task evidence
+          proves a specific transaction stayed inside its boundary. The
+          technical requirement answers the first part only.
+        </p>
+        <div class="triad" aria-label="Capability authority evidence model">
+          <div class="triad-card">
+            <b>Capability</b>
+            <p>Can the local environment inspect, run, refresh, screenshot, or build the requested artifact?</p>
+          </div>
+          <div class="triad-card">
+            <b>Authority</b>
+            <p>Which registered source, registry row, role or skill contract, and AgentJob allowlist permits the action?</p>
+          </div>
+          <div class="triad-card">
+            <b>Evidence</b>
+            <p>Which completion record, artifact, screenshot, or check result shows what actually happened?</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tiers">
+        <p class="section-kicker">Annotated requirement table</p>
+        <h2>Choose the smallest tool tier that matches the work.</h2>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Needed tools</th>
+                  <th>Evidence paths</th>
+                  <th>Does not authorize</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tier" data-label="Tier">Inspection</td>
+                  <td data-label="Needed tools">Browser or editor, shell, Git.</td>
+                  <td data-label="Evidence paths"><code data-source-path="README.md">README.md</code><br><code data-source-path="AGENTS.md">AGENTS.md</code></td>
+                  <td data-label="Does not authorize">Source edits, registry changes, or generated-doc authority.</td>
+                </tr>
+                <tr>
+                  <td class="tier" data-label="Tier">Governed agent work</td>
+                  <td data-label="Needed tools">Codex app plus repo-local skills, prompts, and configuration.</td>
+                  <td data-label="Evidence paths"><code>README.md</code><br><code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code></td>
+                  <td data-label="Does not authorize">Scientific authority, permanent harness lock-in, or future harness parity claims.</td>
+                </tr>
+                <tr>
+                  <td class="tier" data-label="Tier">Python checks</td>
+                  <td data-label="Needed tools"><code>.venv</code>, Python 3.12.13, and dependency install from the ledger.</td>
+                  <td data-label="Evidence paths"><code data-source-path="requirements.txt">requirements.txt</code><br><code data-source-path="scripts/README.md">scripts/README.md</code></td>
+                  <td data-label="Does not authorize">New dependencies, changed command semantics, or skipped receipts.</td>
+                </tr>
+                <tr>
+                  <td class="tier" data-label="Tier">Memory refresh</td>
+                  <td data-label="Needed tools">Bootstrap scripts, optional Obsidian sync, local memory index support.</td>
+                  <td data-label="Evidence paths"><code data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</code><br><code data-source-path="Makefile">Makefile</code></td>
+                  <td data-label="Does not authorize">Making wiki, semantic extracts, Obsidian mirrors, SQLite, or <code>.local</code> authoritative.</td>
+                </tr>
+                <tr>
+                  <td class="tier" data-label="Tier">HTML screenshot QA</td>
+                  <td data-label="Needed tools">Publication brief, source spec, no-network HTML, browser screenshot path, Playwright Chromium when needed.</td>
+                  <td data-label="Evidence paths"><code data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</code><br><code data-source-path=".codex/skills/visual-explainer/SKILL.md">.codex/skills/visual-explainer/SKILL.md</code></td>
+                  <td data-label="Does not authorize">Direct HTML-only edits, browser-side Mermaid execution, or public deployment.</td>
+                </tr>
+                <tr>
+                  <td class="tier" data-label="Tier">PDF derivatives</td>
+                  <td data-label="Needed tools">Managed TeX-to-PDF build path for registered derivatives.</td>
+                  <td data-label="Evidence paths"><code data-source-path=".codex/skills/pdf-derivative-build/SKILL.md">.codex/skills/pdf-derivative-build/SKILL.md</code></td>
+                  <td data-label="Does not authorize">PDFs as canonical science authority or scratch builds outside <code>.local</code>.</td>
+                </tr>
+                <tr>
+                  <td class="tier" data-label="Tier">Tests</td>
+                  <td data-label="Needed tools">Python test runner and repository test modules.</td>
+                  <td data-label="Evidence paths"><code data-source-path="tests/README.md">tests/README.md</code></td>
+                  <td data-label="Does not authorize">Physics proof, source-registry replacement, or unbounded behavioral changes.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="commands">
+        <p class="section-kicker">Command families</p>
+        <h2>Inspect the source path, then run the narrow command family.</h2>
+        <div class="command-grid">
+          <div class="command-card">
+            <h3>Python environment</h3>
+            <p>Use <code>README.md</code> and <code>requirements.txt</code> to create or refresh <code>.venv</code> and install the ledgered dependencies.</p>
+            <span class="badge">.venv</span><span class="badge">requirements.txt</span>
+          </div>
+          <div class="command-card">
+            <h3>Memory and registries</h3>
+            <p>Use <code>.codex/skills/project-memory-system/SKILL.md</code> for bootstrap, read-only checks, docs-only modes, and local-noise cleanup.</p>
+            <span class="badge">bootstrap</span><span class="badge">validate-only</span>
+          </div>
+          <div class="command-card">
+            <h3>Project-system work</h3>
+            <p>Use <code>research_control/README.md</code> and <code>.codex/skills/improve-project-system/SKILL.md</code> for memory preflight, classification, resolver, signal checks, and receipts.</p>
+            <span class="badge">classify</span><span class="badge">resolver</span><span class="badge">receipts</span>
+          </div>
+          <div class="command-card">
+            <h3>Publication pages</h3>
+            <p>Use the HTML publication skills to update the brief and source spec before GitHub Markdown, tracked HTML, screenshots, review evidence, and publication-process checks.</p>
+            <span class="badge">brief first</span><span class="badge">no network</span><span class="badge">screenshots</span>
+          </div>
+          <div class="command-card">
+            <h3>Tests</h3>
+            <p>Use <code>tests/README.md</code> and <code>Makefile</code> when scripts, validators, schemas, role contracts, or memory-system machinery change.</p>
+            <span class="badge">unit tests</span><span class="badge">evidence only</span>
+          </div>
+          <div class="command-card">
+            <h3>PDF derivatives</h3>
+            <p>Use the PDF derivative skill only for registered TeX-to-PDF lanes; scratch output stays under <code>.local</code>.</p>
+            <span class="badge">registered TeX</span><span class="badge">managed lanes</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="html">
+        <p class="section-kicker">Tracked HTML and diagrams</p>
+        <h2>The publication path is source-spec first.</h2>
+        <p>
+          Tracked HTML under <code>html/</code> must come from a page brief and
+          a source spec. It must be standalone, no-network, and readable without
+          JavaScript. Diagram and screenshot tooling may be needed to produce
+          evidence, but the rendered page cannot require remote fonts, remote
+          CSS, external scripts, browser-side Mermaid execution, hosted
+          comments, or network assets.
+        </p>
+        <div class="sequence">
+          <div class="sequence-step">Write the publication brief under <code>markdown/publication-briefs/</code>.</div>
+          <div class="sequence-step">Write the source spec under <code>markdown/html-explainer-specs/</code>.</div>
+          <div class="sequence-step">Produce native GitHub Markdown under <code>github-facing/</code>.</div>
+          <div class="sequence-step">Produce tracked no-network HTML under <code>html/</code>.</div>
+          <div class="sequence-step">Capture desktop and mobile screenshots under the task artifacts.</div>
+          <div class="sequence-step">Refresh generated registries, wiki notes, and local retrieval support through bootstrap.</div>
+        </div>
+      </section>
+
+      <section id="boundaries">
+        <p class="section-kicker">Failure boundaries</p>
+        <h2>A working tool is not a permission grant.</h2>
+        <div class="boundary-grid">
+          <div class="boundary-card good">
+            <h3>Safe inference</h3>
+            <p>The environment can run the command family named by the source, and the task packet records the evidence required by that workflow.</p>
+          </div>
+          <div class="boundary-card bad">
+            <h3>Unsafe inference</h3>
+            <p>The tool exists, so the operator can edit authority surfaces, skip the AgentJob allowlist, or treat generated output as source truth.</p>
+          </div>
+        </div>
+        <p>
+          Corrective rule: return to the source path, registry row, role or
+          skill contract, AgentJob allowlist, completion evidence, and claim
+          boundary. Local retrieval hits, screenshots, generated HTML, and test
+          results can support the review; they cannot replace the authority
+          chain.
+        </p>
+      </section>
+
+      <section id="sequence">
+        <p class="section-kicker">Operator sequence</p>
+        <h2>Use technical requirements in a source-first order.</h2>
+        <div class="sequence">
+          <div class="sequence-step">Identify the work tier: inspection, governed agent work, Python check, memory refresh, HTML screenshot QA, PDF derivative, or tests.</div>
+          <div class="sequence-step">Inspect the listed source path before running commands.</div>
+          <div class="sequence-step">Confirm the current task or AgentJob allows the write path if any source changes are involved.</div>
+          <div class="sequence-step">Run the narrow command family from the repository source.</div>
+          <div class="sequence-step">Preserve output evidence in the task packet when the workflow requires it.</div>
+          <div class="sequence-step">Treat generated outputs and <code>.local</code> surfaces as support, not authority.</div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <p class="section-kicker">Source materials</p>
+        <h2>The page points back to these authority and support paths.</h2>
+        <ul class="source-list" data-explainer-control="source_materials_section">
+          <li><code>README.md</code><small>Project front door, current harness, Python environment, requirement tiers, command families.</small></li>
+          <li><code>AGENTS.md</code><small>Root authority hierarchy, generated-output boundaries, required checks.</small></li>
+          <li><code>research_control/README.md</code><small>Research-control memory preflight, classifier, resolver, and check commands.</small></li>
+          <li><code>requirements.txt</code><small>Python dependency ledger.</small></li>
+          <li><code>Makefile</code><small>Grouped local targets for memory, project-control, HTML explainer, and audit work.</small></li>
+          <li><code>scripts/README.md</code><small>Script group boundaries and source-script authority caution.</small></li>
+          <li><code>tests/README.md</code><small>Unit-test coverage areas and test evidence boundary.</small></li>
+          <li><code>.codex/skills/project-memory-system/SKILL.md</code><small>Bootstrap, validate-only, docs-only modes, and local-noise cleanup.</small></li>
+          <li><code>.codex/skills/improve-project-system/SKILL.md</code><small>Project-system lane, memory preflight, classifier/resolver, receipts, and checks.</small></li>
+          <li><code>.codex/skills/html-visual-explainer/SKILL.md</code><small>Governed tracked HTML publication process and screenshot QA.</small></li>
+          <li><code>.codex/skills/visual-explainer/SKILL.md</code><small>Project-local visual constraints and no external runtime for tracked HTML.</small></li>
+          <li><code>.codex/skills/pdf-derivative-build/SKILL.md</code><small>Managed TeX-to-PDF derivative build boundaries.</small></li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>
+          Derived from <code>markdown/html-explainer-specs/technical-requirements-explainer.md</code>.
+          Related GitHub Markdown: <code>github-facing/technical-requirements-explainer.md</code>.
+          Publication brief: <code>markdown/publication-briefs/technical-requirements.publication-brief.md</code>.
+          Authority status: generated noncanonical reader surface.
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

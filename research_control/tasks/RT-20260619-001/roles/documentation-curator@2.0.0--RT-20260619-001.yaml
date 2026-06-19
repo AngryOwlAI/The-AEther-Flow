@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@2.0.0--RT-20260619-001"
+role_execution_kind: "registered_role"
+task_id: "RT-20260619-001"
+agent_job_id: "AJ-RT-20260619-001-001"
+record_path: "research_control/tasks/RT-20260619-001/roles/documentation-curator@2.0.0--RT-20260619-001.yaml"
+base_role_id: "documentation-curator"
+base_role_version: "2.0.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role used without permission expansion for Phase 5C technical-requirements operator guide migration."
+added_constraints:
+  - "Migrate only the Phase 5C technical-requirements page."
+  - "Keep Phase 6 optional or deferred pages out of this packet."
+  - "Explain existing requirement tiers current Codex app harness assumption Python environment requirements Makefile command families HTML screenshot QA PDF derivative requirements and tool-versus-authority boundaries without changing any of them."
+  - "Keep generated HTML and GitHub-facing Markdown noncanonical."
+  - "Do not modify dependencies validators Makefile targets command semantics harness policy role authority routing behavior checkpoint behavior generated-output authority or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "markdown/publication-briefs/technical-requirements.publication-brief.md"
+  - "markdown/html-explainer-specs/technical-requirements-explainer.md"
+  - "github-facing/technical-requirements-explainer.md"
+  - "html/technical-requirements-explainer.html"
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260619-001/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/html/**"
+requires_human_gate: false
+expires_after: "AJ-RT-20260619-001-001"
+justification: "The user explicitly approved the next logical step Phase 5C."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-19T13:35:00Z"
+updated_at: "2026-06-19T13:35:00Z"
+notes: "Execution-role record completed for Phase 5C technical-requirements operator guide migration."
