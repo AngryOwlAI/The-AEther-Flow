@@ -3,11 +3,12 @@
 AEther-Flow ontology is the project's vocabulary for what the relativistic
 mathematics is about. It names a deeper four-dimensional substrate, its ordered
 motion, and the observer-level experience of space, time, and expansion. That
-vocabulary is useful, but it is not by itself a first-principles derivation of
-general relativity.
+vocabulary is useful only when it remains separated from mathematical
+derivation and empirical prediction. The current ontology lane explains what
+the project is about; it does not by itself force the exact-GR benchmark.
 
-This page is a generated noncanonical reader surface. It can orient readers to
-the ontology, but it does not promote ontology, certify exact-GR recovery,
+Reader scope: ontology orientation only. It can help readers use the
+vocabulary, but it does not promote ontology, certify exact-GR recovery,
 complete the derivation, change a claim boundary, or supersede registered TeX
 sources.
 
@@ -95,9 +96,16 @@ Unsafe summary: AEther-Flow ontology has already forced GR, generated pages
 certify ontology promotion, or AEther-flow is just an ordinary fluid moving
 through observed three-dimensional space.
 
-## Source Binding
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - **Related HTML:** `html/aether-flow-ontology-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/aether-flow-ontology.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It can orient readers to
+the ontology, but it does not promote ontology, certify exact-GR recovery,
+complete the derivation, change a claim boundary, change source authority, or
+supersede registered TeX sources.

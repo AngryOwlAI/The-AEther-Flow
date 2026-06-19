@@ -53,7 +53,10 @@ physics status, not a derivation note.
 After reading, a reader should be able to summarize the physics program as a
 controlled research program: ontology and benchmark discipline are present,
 the first-principles derivation remains open, negative results are preserved,
-and claim promotion requires source authority and gates.
+and claim promotion requires source authority and gates. The opening should
+teach this status architecture before authority metadata, while the full
+generated-noncanonical authority paragraph belongs in the footer authority
+section.
 
 ## Visual Strategy
 
@@ -69,5 +72,6 @@ examples. Do not turn the page into a task transcript or role manual.
 - Preserves qualifiers such as `draft/control`, `source-only`, `local`,
   `exact-branch`, `source-extension data`, and `human-gated`.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Places the full generated-noncanonical authority paragraph only in the
+  GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.
-

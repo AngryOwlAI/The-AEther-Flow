@@ -2,12 +2,14 @@
 
 AEther-Flow uses claim gates to keep research work honest. A proposal can be
 useful, a stress test can fail, and a route can be frozen without any of those
-events becoming a public physics verdict.
+events becoming a public physics verdict. The core discipline is scope:
+proposals, audits, refutations, completions, handoffs, freeze labels, and
+human gates each authorize narrower language than a tempting public summary
+usually wants to use.
 
-This page is a generated noncanonical reader surface. It explains the claim
-control model, but it does not create a claim boundary, issue a Gate Chair
-verdict, promote a benchmark, reject the global ontology, change role
-authority, or supersede tracked source files.
+Reader scope: claim-control explanation only. It does not create a claim
+boundary, issue a Gate Chair verdict, promote a benchmark, reject the global
+ontology, change role authority, or supersede tracked source files.
 
 ## The Claim Lifecycle
 
@@ -121,12 +123,19 @@ The safe answer is usually narrower than the tempting summary.
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_ROLE_REGISTRY.csv` [Agent role registry].
 
-## Source Binding
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/claim-gates-explainer.md`
 - **Related HTML:** `html/claim-gates-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/claim-gates.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It explains the claim
+control model, but it does not create a claim boundary, issue a Gate Chair
+verdict, promote a benchmark, reject the global ontology, change role
+authority, change source authority, or supersede tracked source files.
 
 ## Safe And Unsafe Summaries
 

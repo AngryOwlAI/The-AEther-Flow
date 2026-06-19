@@ -4,12 +4,14 @@ AEther-Flow uses exact general relativity as a conservative public benchmark.
 At the observable scale, the benchmark keeps one operative Lorentzian metric,
 universal matter coupling, ordinary causal structure, and no empirical
 deviation claim from ordinary GR. That boundary is not the same thing as a
-first-principles derivation from AEther / AEther-flow substrate structure.
+first-principles derivation from AEther / AEther-flow substrate structure. The
+reader task is to keep four states separate: adoption of the benchmark,
+compatibility with the ontology, derivation from source structure, and
+human-gated benchmark promotion.
 
-This page is a generated noncanonical reader surface. It explains how to avoid
-overclaiming; it does not change benchmark status, certify a derivation, issue
-a Gate Chair verdict, or make HTML, PDFs, or GitHub-facing Markdown into
-scientific authority.
+Reader scope: boundary explanation only. It does not change benchmark status,
+certify a derivation, issue a Gate Chair verdict, or make HTML, PDFs, or
+GitHub-facing Markdown into scientific authority.
 
 ## Benchmark Boundary Matrix
 
@@ -66,12 +68,19 @@ This page is forbidden to prove or imply:
   scientific authority; or
 - global rejection of the ontology from any scoped obstruction.
 
-## Source Binding
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - **Related HTML:** `html/exact-gr-benchmark-boundary-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It explains how to avoid
+overclaiming; it does not change benchmark status, certify a derivation, issue
+a Gate Chair verdict, change source authority, or make HTML, PDFs, or
+GitHub-facing Markdown into scientific authority.
 
 ## Source Materials
 
@@ -88,4 +97,3 @@ Safe summary: AEther-Flow keeps ordinary GR as an exact operational benchmark
 while the substrate derivation remains open and claim-gated. Unsafe summary:
 the public page, the ontology note, or a generated derivative proves GR from
 AEther-flow.
-

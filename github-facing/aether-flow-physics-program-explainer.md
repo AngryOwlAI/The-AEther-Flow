@@ -4,12 +4,14 @@ The AEther-Flow physics program asks whether ordinary general relativity can be
 interpreted, and eventually derived, from a deeper four-dimensional AEther /
 AEther-flow ontology. The current project state is deliberately conservative:
 exact GR is preserved as the observable-scale benchmark, while the
-first-principles substrate derivation remains open.
+first-principles substrate derivation remains open. The useful reading is a
+five-layer status model: ontology vocabulary, exact-GR benchmark discipline,
+derivation burden, negative-result preservation, and protected claim gates
+must stay distinct when the program is summarized.
 
-This page is a generated noncanonical reader surface. It is useful for public
-orientation, but it does not promote ontology, certify benchmark recovery,
-complete the derivation, issue a Gate Chair decision, or change any control
-record.
+Reader scope: public orientation only. This explanation cannot promote
+ontology, certify benchmark recovery, complete the derivation, issue a Gate
+Chair decision, or change any control record.
 
 ## Program Map
 
@@ -86,12 +88,19 @@ summaries inherit only what those sources actually authorize.
 5. Inspect `registries/CLAIM_BOUNDARY_REGISTRY.csv` before turning any local
    result into a public claim.
 
-## Source Binding
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/aether-flow-physics-program-explainer.md`
 - **Related HTML:** `html/aether-flow-physics-program-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/aether-flow-physics-program.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It is useful for public
+orientation, but it does not promote ontology, certify benchmark recovery,
+complete the derivation, issue a Gate Chair decision, change source authority,
+or change any control record.
 
 ## Source Materials
 
@@ -110,4 +119,3 @@ substrate structure can earn a derivation.
 
 Unsafe summary: AEther-Flow has already derived GR, public explainers certify
 benchmark recovery, or a scoped obstruction proves the whole ontology false.
-

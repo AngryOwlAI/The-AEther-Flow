@@ -59,7 +59,10 @@ routes and scoped obstructions because they improve future reasoning. They
 should also know that a completion record, validator pass, freeze label, public
 explainer, wiki note, or screenshot is not enough to promote a physics claim.
 Human-gated roles remain human-gated, and a rejected or frozen draft/control
-packet is not a global rejection of the whole theory.
+packet is not a global rejection of the whole theory. The opening should teach
+scope discipline before authority metadata, while the full
+generated-noncanonical authority paragraph belongs in the footer authority
+section.
 
 ## Visual Strategy
 
@@ -79,4 +82,6 @@ source-to-validation diagram or browser-side Mermaid.
 - Includes allowed and forbidden claim examples grounded in
   `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Places the full generated-noncanonical authority paragraph only in the
+  GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.

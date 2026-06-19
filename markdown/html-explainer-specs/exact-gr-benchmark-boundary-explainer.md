@@ -55,7 +55,10 @@ map, not a proof and not a claim gate.
 After reading, a reader should be able to say: the project uses an exact-GR
 benchmark as a conservative operational boundary; it has not completed a
 first-principles substrate derivation; benchmark promotion remains a gated
-matter for source authority, not public derivative prose.
+matter for source authority, not public derivative prose. The opening should
+teach adoption, compatibility, derivation, and promotion as separate statuses
+before authority metadata, while the full generated-noncanonical authority
+paragraph belongs in the footer authority section.
 
 ## Visual Strategy
 
@@ -71,5 +74,6 @@ generic documentation-flow diagram.
 - Includes a failure-mode panel for common overclaims.
 - Names `registries/TEX_SOURCE_REGISTRY.csv` and
   `registries/CLAIM_BOUNDARY_REGISTRY.csv` as source paths.
+- Places the full generated-noncanonical authority paragraph only in the
+  GitHub Markdown and HTML authority footer.
 - Preserves the noncanonical status of GitHub-facing Markdown and HTML.
-

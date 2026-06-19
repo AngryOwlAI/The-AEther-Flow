@@ -66,7 +66,9 @@ chain from source ontology to benchmark promotion. They should know why
 `matter_coupling`, `einstein_equations`, `finite_toy_metric_response`, and
 `benchmark_promotion` are separate burdens. They should also know that a
 validator pass, generated public page, screenshot, or bootstrap refresh is
-not physics evidence.
+not physics evidence. The opening should teach the roadmap as burden control,
+not progress celebration, while the full generated-noncanonical authority
+paragraph belongs in the footer authority section.
 
 ## Visual Strategy
 
@@ -88,4 +90,6 @@ a generic source-to-output diagram or browser-side Mermaid.
 - Explains freeze labels as scoped route-control labels, not global theory
   rejection.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Places the full generated-noncanonical authority paragraph only in the
+  GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.

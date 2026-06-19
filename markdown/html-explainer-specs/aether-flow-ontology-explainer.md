@@ -62,6 +62,10 @@ its intrinsic ordered motion, observed three-dimensional space is an
 observer-level slice, S-time is experienced order of change, and observed
 expansion is a three-dimensional appearance of deeper ordered motion. The
 reader should also know that this vocabulary does not by itself derive GR.
+The opening should teach vocabulary, source authority, mathematical burden,
+and empirical-prediction separation before authority metadata, while the full
+generated-noncanonical authority paragraph belongs in the footer authority
+section.
 
 ## Visual Strategy
 
@@ -81,4 +85,6 @@ panel. Do not use a generic workflow diagram or browser-side Mermaid.
 - Avoids older three-dimensional aether, wind, river, or ordinary fluid
   overreadings.
 - Names source paths visibly in GitHub Markdown and HTML.
+- Places the full generated-noncanonical authority paragraph only in the
+  GitHub Markdown and HTML authority footer.
 - Preserves generated noncanonical status.

@@ -3,12 +3,15 @@
 The GR derivation roadmap is the project's control surface for the open
 first-principles derivation problem. It names the sequence of burdens that
 would have to be discharged before the project could move from AEther /
-AEther-flow source structure to an exact-GR benchmark promotion.
+AEther-flow source structure to an exact-GR benchmark promotion. The practical
+use of the roadmap is not to celebrate progress; it is to keep every burden,
+status term, source-extension qualifier, freeze label, and human gate attached
+to its proper evidential weight.
 
-This page is a generated noncanonical reader surface. It explains the roadmap,
-but it does not update physics status, discharge a milestone, adopt `M_src`,
-derive `g_eff`, derive matter coupling, derive Einstein equations, promote a
-benchmark, issue a Gate Chair verdict, or supersede tracked source files.
+Reader scope: roadmap explanation only. It does not update physics status,
+discharge a milestone, adopt `M_src`, derive `g_eff`, derive matter coupling,
+derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or
+supersede tracked source files.
 
 ## Milestone Ladder
 
@@ -124,12 +127,20 @@ and human gates where the control system says a gate is required.
 - AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
 
-## Source Binding
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
 - **Related HTML:** `html/gr-derivation-roadmap-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It explains the roadmap,
+but it does not update physics status, discharge a milestone, adopt `M_src`,
+derive `g_eff`, derive matter coupling, derive Einstein equations, promote a
+benchmark, issue a Gate Chair verdict, change source authority, or supersede
+tracked source files.
 
 ## Safe And Unsafe Summaries
 
