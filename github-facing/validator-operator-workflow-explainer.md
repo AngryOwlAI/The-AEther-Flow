@@ -1,141 +1,74 @@
 # Validator And Operator Workflow
 
-AEther-Flow operators do not run every command by habit. They choose checks
-from the kind of change being made: memory and registry refresh, public
-publication page work, project-system control work, research-control state
-work, script changes, test changes, or tracked HTML review.
+The operator problem is not simply which command to run. It is which evidence chain fits the changed authority surface. A Markdown article, source spec, validator script, role contract, memory bootstrap, research-control task, and screenshot artifact do not carry the same risk or require the same proof.
 
-This page is a generated noncanonical reader surface. It explains the existing
-operator workflow, but it does not change validator behavior, command
-semantics, routing behavior, documentation-impact requirements,
-research-control requirements, role authority, schemas, checkpoint gates,
-generated-output authority, or physics claim status.
+AEther-Flow therefore groups checks by change type. Memory and registry refresh work uses bootstrap. Public page work uses the publication-process check plus rendered screenshot evidence. State-changing project-system AgentJobs need documentation-impact and research-control receipts. Script, validator, schema, role, or memory-tooling changes need focused tests in addition to the control validators.
 
-## What Operators Need To Decide
+The final interpretation is bounded. PASS means the named deterministic check accepted the current state. It does not certify scientific truth, ontology adoption, benchmark promotion, completed derivation, editorial taste, or generated-output authority.
 
-The first question is the change type:
+Reader scope: operator command-selection guide only. This page cannot change validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, schemas, checkpoint gates, or physics status.
 
-- A Markdown source spec, publication brief, GitHub-facing page, or tracked
-  HTML page needs publication-process checks and screenshot evidence.
-- A source or registry change that affects generated wiki, registry, semantic,
-  Obsidian, or memory-index artifacts needs the memory bootstrap path.
-- A state-changing project-system AgentJob needs classifier, resolver,
-  emitted-signal validation, documentation-impact validation, bootstrap, and
-  research-control checks.
-- A research-control state change needs research-control validation, and
-  `--check-diff` when write-path boundaries matter.
-- A script or test change needs targeted or full unit tests.
+## Command Decision Matrix
 
-The logical next step is not "run the largest command list." It is to identify
-the smallest command set that covers the authority surfaces touched by the
-change.
-
-## Command Matrix
-
-| Change or review need | Command | What the command proves |
+| Item | Function | Boundary |
 | --- | --- | --- |
-| Refresh generated memory, wiki, registry, and derivative artifacts | `.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py` | The generated retrieval and metadata layers can be rebuilt from tracked sources. |
-| Check memory/wiki/registry state without writing | `.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only` | The current generated state is mechanically consistent enough for read-only review. |
-| Check governed public pages | `.venv/bin/python scripts/validate_publication_process.py --root . --strict` | Publication brief, source spec, GitHub Markdown, HTML, evidence paths, no-network HTML, source visibility, and retired-pattern guards pass. |
-| Classify changed paths before routing | `.venv/bin/python scripts/project_control/classify_project_changes.py --json` | The live diff is mapped to documentation-impact and project-system reason codes. |
-| Resolve project-system routing state | `.venv/bin/python scripts/project_control/resolve_project_improvement.py --json` | Current diff work and registered open project-improvement signals are compared for advisory routing. |
-| Check emitted project-improvement signals | `.venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted` | Completion and handoff signal entries are backed by registered signal rows and types. |
-| Check documentation-impact receipts | `.venv/bin/python scripts/project_control/validate_documentation_impact.py` | The receipt covers live source changes, generated derivatives, reason codes, and required validators. |
-| Check research-control records | `.venv/bin/python scripts/research_control/validate_research_control.py` | Task, decision, AgentJob, execution-role, claim-boundary, and registry constraints pass. |
-| Check write-path boundaries against the diff | `.venv/bin/python scripts/research_control/validate_research_control.py --check-diff` | Changed paths stay within the active control boundary and allowed write rules. |
-| Run unit tests after tooling changes | `.venv/bin/python -m unittest discover -s tests` | The Python test suite still passes for project-control, research-control, memory, and explainer tooling. |
+| Memory or registry refresh | Run project-memory bootstrap, then validate-only. | Refresh generated derivatives through the approved path. |
+| Publication page rewrite | Run strict publication check, screenshot QA, bootstrap, docs impact, and research-control checks. | Screenshots and review evidence are part of the publication receipt. |
+| Project-system AgentJob | Run memory preflight, classifier, resolver, emitted-signal validation, documentation-impact, research-control, and checkpoint checks. | One bounded AgentJob per invocation. |
+| Script or validator change | Run focused unit tests plus project-control validators. | Tests are evidence of behavior, not physics proof. |
+| Research-control record | Run research-control validation and `--check-diff` when checking write boundaries. | Do not mutate completed records without supersession. |
 
-## Bootstrap And Validate-Only
+## When Extra Evidence Is Required
 
-Bootstrap writes generated derivatives. It is the correct command after
-changing registered Markdown, TeX, source specs, registry rows, or other
-source material that feeds wiki notes, content semantics, Obsidian mirrors,
-file registries, object relationships, or memory-index state.
-
-Validate-only checks current generated state without writing. It is useful for
-read-only review and final gates, but it does not refresh stale generated
-artifacts. If source material changed, validate-only by itself is insufficient.
-
-Known `.local`, Obsidian, or memory-index freshness warnings are retrieval-layer
-warnings. They do not override tracked source files, registry rows, or
-research-control records.
-
-## Documentation And Research-Control Gates
-
-Project-system work has a stronger receipt burden than ordinary explanatory
-editing. A state-changing project-system AgentJob needs
-`research_control/tasks/<task_id>/documentation_impact.yaml`. The receipt must
-cover changed paths, reason codes, inspected source surfaces, updated source
-docs or no-op rationale, registries, generated derivatives, and validators run.
-
-Research-control checks verify the tracked control spine. They are required
-after changes to task records, Director decisions, AgentJobs, execution-role
-records, completions, claim boundaries, or research-control registries. Add
-`--check-diff` when the review must prove that live file changes remain inside
-the authorized write boundary.
-
-## Tests And Screenshots
-
-Run unit tests when the change touches scripts, validators, project-control
-behavior, research-control behavior, memory-system behavior, test fixtures, or
-test files. Use the full test command when the impact crosses modules; use a
-targeted module command only when the change is narrow and the risk is local.
-
-Tracked HTML pages also need visual evidence. For governed publication pages,
-capture desktop and mobile screenshots under the current task artifact
-directory and reference both paths from
-`registries/PUBLICATION_BRIEF_REGISTRY.csv`. Screenshot evidence proves the
-page renders and fits the target viewports; it does not prove editorial
-quality by itself.
-
-## Troubleshooting
-
-| Symptom | Likely cause | Correct response |
+| Item | Function | Boundary |
 | --- | --- | --- |
-| Publication check reports an orphan public page | A source spec, GitHub Markdown page, or HTML page exists without a publication brief registry row. | Add or correct the governed brief, spec, output path, and registry row in one bounded packet. |
-| Publication check reports missing screenshot evidence | The registry row points to desktop or mobile screenshot paths that do not exist. | Capture screenshots into the current task artifact directory and keep the paths stable. |
-| Documentation-impact check reports missing live source change | The receipt did not list a changed source path. | Update `documentation_impact.yaml` to cover the live diff; do not delete the source change to satisfy the receipt. |
-| Research-control diff check reports a write-path boundary failure | A changed path is outside the AgentJob allowlist or protected by role/source-class rules. | Narrow the packet, adjust the authorized task if valid, or stop for human authorization. |
-| Bootstrap reports stale `.local` retrieval state | Local Obsidian, semantic, or memory-index derivatives lag source state. | Treat as a retrieval-layer warning unless a validator makes it a hard failure; source authority remains tracked files and registries. |
+| HTML changed | Capture desktop and mobile screenshots. | Visual rendering evidence. |
+| Generated derivatives changed | Run bootstrap and validate-only. | Registry/wiki/hash sync. |
+| Project-system state changed | Write documentation-impact receipt. | Covers live diff, generated derivatives, reason codes, and checks. |
+| Tooling changed | Run unit tests. | Checks deterministic behavior. |
 
-## What PASS Means
+## Troubleshooting Operator Failures
 
-Validator PASS means the deterministic checks run by that command accepted the
-current state. It is necessary evidence for governed work, but it is not proof
-of scientific truth, ontology adoption, benchmark promotion, completed
-derivation, or publication taste.
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Missing screenshot | Publication registry evidence path points to absent file. | Capture or correct task artifact path. |
+| Orphan public surface | GitHub, spec, or HTML exists without its paired row/path. | Synchronize brief, spec, output, and registry. |
+| Write-path failure | Diff check sees a changed path outside the AgentJob allowlist. | Narrow the packet or stop for authorization. |
+| Stale local retrieval | Obsidian, semantic, or SQLite support lags inputs. | Treat as retrieval drift unless a validator makes it hard failure. |
 
-For final review, pair PASS results with concrete evidence: changed source
-paths, generated derivative paths, screenshot paths where HTML is involved,
-before/after review notes, and a clear claim boundary.
+## PASS Result Limits
 
-## Source Materials
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Deterministic acceptance | The command accepted the current checked state. | Necessary transaction evidence. |
+| No broad promotion | PASS does not promote physics claims, role authority, or generated outputs. | Human-gated authority remains protected. |
+| Review still needed | Publication quality depends on screenshots and before/after review. | Taste and clarity are not fully deterministic. |
 
-- AEther-Flow Project. (2026). `README.md` [Project front door].
-- AEther-Flow Project. (2026). `AGENTS.md` [Repository authority guidance].
-- AEther-Flow Project. (2026). `.codex/skills/project-memory-system/SKILL.md` [Project memory system skill].
-- AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Project-system improvement skill].
-- AEther-Flow Project. (2026). `scripts/README.md` [Scripts folder guide].
-- AEther-Flow Project. (2026). `tests/README.md` [Tests folder guide].
-- AEther-Flow Project. (2026). `scripts/validate_publication_process.py` [Publication-process checker].
-- AEther-Flow Project. (2026). `scripts/project_control/validate_documentation_impact.py` [Documentation-impact checker].
-- AEther-Flow Project. (2026). `scripts/research_control/validate_research_control.py` [Research-control checker].
+<!-- explainer-control: authority_footer -->
 
-## Source Binding
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/validator-operator-workflow-explainer.md`
 - **Related HTML:** `html/validator-operator-workflow-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
 
-## Safe Summary
+This page is a generated noncanonical reader surface. It explains existing command selection by change type, bootstrap versus validate-only, publication checks, documentation-impact checks, research-control checks, unit-test triggers, screenshot evidence, troubleshooting, final review evidence, and PASS-result limits without changing validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, role authority, schemas, checkpoint gates, generated-output authority, or physics claim status.
 
-Safe summary: choose checks by changed authority surface, refresh generated
-derivatives through bootstrap, validate publication pages and screenshots,
-record documentation impact for project-system AgentJobs, run research-control
-checks for control records, run tests for tooling changes, and treat PASS as
-bounded evidence.
+## Source Materials
 
-Unsafe summary: a validator PASS proves scientific truth, approves ontology,
-certifies editorial quality, changes command behavior, or gives generated
-documentation independent authority.
+- AEther-Flow Project. (2026). `README.md` [Project front door, local environment, and public requirements.]
+- AEther-Flow Project. (2026). `AGENTS.md` [Authority hierarchy, generated-output boundaries, and required checks.]
+- AEther-Flow Project. (2026). `.codex/skills/project-memory-system/SKILL.md` [Bootstrap, validate-only, docs modes, and cleanup commands.]
+- AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Project-system memory preflight, classifier, resolver, signal, documentation-impact, and checkpoint chain.]
+- AEther-Flow Project. (2026). `scripts/README.md` [Script groups and tooling authority boundary.]
+- AEther-Flow Project. (2026). `tests/README.md` [Unit-test coverage areas and command shape.]
+- AEther-Flow Project. (2026). `scripts/validate_publication_process.py` [Publication brief/spec/output consistency and no-network checks.]
+- AEther-Flow Project. (2026). `scripts/project_control/validate_documentation_impact.py` [Documentation-impact receipt validation.]
+- AEther-Flow Project. (2026). `scripts/research_control/validate_research_control.py` [Tracked research-control and diff boundary checks.]
+
+## Safe Operating Summary
+
+Safe summary: Choose checks by changed authority surface, refresh generated derivatives through bootstrap, record screenshots for HTML, include documentation impact for project-system work, and treat PASS as bounded evidence.
+
+Unsafe summary: A validator PASS proves scientific truth, approves ontology, certifies editorial quality, changes command behavior, or gives generated documentation independent authority.

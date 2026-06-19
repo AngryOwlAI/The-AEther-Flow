@@ -34,63 +34,47 @@ required_controls:
 
 ## Publication Brief Binding
 
-Use `markdown/publication-briefs/memory-system.publication-brief.md` as the
-page-specific editorial contract. The page is a reference catalog for the
-memory and retrieval system. It is not a memory-system implementation packet,
-registry schema change, validator change, routing change, role change, or
-physics continuation.
+Use `markdown/publication-briefs/memory-system.publication-brief.md` as the page-specific editorial contract. The page is a
+reference catalog under the post-migration Phase 4 quality
+packet. It improves reader orientation, footer-authority placement, and
+page-specific operational structure without changing executable project
+behavior or physics claim status.
 
 ## Source Basis
 
-- `AGENTS.md` defines the repository authority hierarchy and the rule that
-  generated artifacts may be read but are not independent authority.
-- `.codex/skills/project-memory-system/SKILL.md` defines the bootstrap,
-  validate-only, docs-only, docs-validate-only, strict-docs, and cleanup
-  commands for generated memory, wiki, registry, and derivative artifacts.
-- `.codex/skills/obsidian-wiki/SKILL.md` defines the Obsidian vault,
-  content-semantic extraction, vault sync, lint, and query commands while
-  stating that local vault and memory-index surfaces are retrieval layers.
-- `registries/MARKDOWN_SOURCE_REGISTRY.csv` gives registered Markdown source
-  rows for front-door documentation, source specs, publication briefs, roles,
-  skills, and project-control notes.
-- `registries/TEX_SOURCE_REGISTRY.csv` gives registered TeX rows for physics
-  and derivational source material.
-- `registries/HTML_EXPLAINER_REGISTRY.csv` gives generated HTML rows and
-  binds each tracked HTML page back to its Markdown source spec.
-- `registries/WIKI_ARTIFACT_REGISTRY.csv` gives generated wiki-note rows and
-  their source-object hashes.
-- `registries/OBSIDIAN_VAULT_REGISTRY.csv` gives local generated Obsidian
-  note and raw mirror paths.
-- `registries/CONTENT_SEMANTIC_REGISTRY.csv` gives deterministic semantic
-  extraction rows used for local agent retrieval.
-- `FOLDER_MAP.md` classifies `wiki/` as generated derivative and `.local/` as
-  local retrieval.
+- `AGENTS.md`: Repository authority hierarchy and generated-output boundary.
+- `.codex/skills/project-memory-system/SKILL.md`: Bootstrap, validate-only, docs modes, and cleanup commands.
+- `.codex/skills/obsidian-wiki/SKILL.md`: Local vault, semantic extraction, vault sync, lint, and query guidance.
+- `registries/MARKDOWN_SOURCE_REGISTRY.csv`: Registered Markdown source rows and generated outputs.
+- `registries/TEX_SOURCE_REGISTRY.csv`: Registered TeX rows for physics and derivational source material.
+- `registries/HTML_EXPLAINER_REGISTRY.csv`: Generated HTML rows bound to source specs.
+- `registries/WIKI_ARTIFACT_REGISTRY.csv`: Generated wiki-note rows and source-object hashes.
+- `registries/OBSIDIAN_VAULT_REGISTRY.csv`: Local Obsidian note and raw mirror paths.
+- `registries/CONTENT_SEMANTIC_REGISTRY.csv`: Deterministic semantic extraction rows for local search.
+- `FOLDER_MAP.md`: Generated folder classification for canonical, generated, local, tooling, and reserved lanes.
 
 ## Required Reader Outcome
 
-After reading, an operator should know that memory lookup is a navigation
-step. A memory hit must lead to inspection of the canonical source path and
-the relevant registry row before routing, editing, citing, or summarizing
-project knowledge.
+After reading, a maintainer or future agent should understand the existing
+Memory, Registries, Wiki, And Retrieval Surfaces function, which source paths ground it, which adjacent systems
+it connects to, and which authority boundary prevents overread. The reader
+should be able to use the page as orientation, then inspect the named source
+files, registries, task records, role or skill contracts, AgentJob allowlists,
+completion records, and checks before acting.
 
 ## Visual Strategy
 
-Use a layered architecture showing canonical sources, control registries,
-generated derivatives, and local retrieval layers. Add a source matrix that
-states what each surface can be used for. Add a query workflow panel and a
-stale-local-retrieval troubleshooting section.
+Use page-specific operational structure rather than a reusable template. The
+main reader sections are `Authority And Retrieval Layers`, `Query Workflow`, `Freshness Warnings`, `Bootstrap Boundaries`. The HTML derivative may render these
+as local CSS cards and tables; the GitHub Markdown derivative should remain a
+native article with compact tables. Do not use browser-side Mermaid, remote
+assets, or external runtime packages.
 
 ## Acceptance Criteria
 
-- Explains the source-first memory principle.
-- Explains registry rows as canonical routing, provenance, generated-output,
-  and memory metadata.
-- Explains generated wiki notes as derivative metadata.
-- Explains Obsidian, semantic extracts, SQLite, and `.local` retrieval as
-  local non-authority layers.
-- Explains memory preflight requirements for future AgentJobs.
-- Explains freshness warnings as retrieval warnings rather than source
-  authority.
-- Explains bootstrap regeneration boundaries and validate-only limits.
-- Names source paths visibly in GitHub Markdown and HTML.
-- Preserves generated noncanonical status.
+- Opens with subject-specific operational explanation before the full authority paragraph.
+- Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
+- Includes visible source paths in both public derivatives.
+- Preserves generated noncanonical status and source authority boundaries.
+- Does not change validators, commands, schemas, role contracts, skill contracts, routing behavior, checkpoint behavior, generated-output authority, or physics claim status.
+- Uses screenshot QA and before/after review evidence for the changed HTML derivative.

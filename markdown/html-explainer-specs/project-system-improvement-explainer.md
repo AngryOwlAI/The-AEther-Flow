@@ -18,7 +18,7 @@ source_materials:
   - "scripts/project_control/resolve_project_improvement.py"
   - "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv"
   - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
-claim_boundary: "Human-only publication explainer for the AEther-Flow project-system improvement loop. It explains classifier output, registered signal routing, advisory resolver output, one bounded AgentJob execution, documentation-impact receipts, and signal-resolution evidence without changing validators, routing behavior, role authority, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status."
+claim_boundary: "Human-only publication explainer for Project-System Improvement Loop. It explains classifier output, registered signal routing, advisory resolver output, one bounded AgentJob execution, documentation-impact receipts, and signal-resolution evidence without changing validators, routing behavior, role authority, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -31,62 +31,44 @@ required_controls:
 
 ## Publication Brief Binding
 
-Use `markdown/publication-briefs/project-system-improvement.publication-brief.md`
-as the page-specific editorial contract. The page is a workflow guide. It
-explains the existing project-system improvement loop; it does not register
-signals, close signals, change validators, change routing, expand role
-authority, or promote physics claims.
+Use `markdown/publication-briefs/project-system-improvement.publication-brief.md` as the page-specific editorial contract. The page is a
+workflow guide under the post-migration Phase 4 quality
+packet. It improves reader orientation, footer-authority placement, and
+page-specific operational structure without changing executable project
+behavior or physics claim status.
 
 ## Source Basis
 
-- `AGENTS.md` separates project-system improvement from physics continuation,
-  requires memory use before project-knowledge changes, and states generated
-  artifact boundaries.
-- `research_control/README.md` defines the research-control authority model,
-  memory preflight, documentation-impact receipt gate, signal registry rules,
-  resolver advisory status, and one-bounded-Job discipline.
-- `.codex/skills/improve-project-system/SKILL.md` defines the execution
-  workflow for project-system work, including memory preflight, classifier and
-  resolver checks, signal validation, one bounded AgentJob, documentation
-  impact, and checkpoint behavior.
-- `scripts/project_control/classify_project_changes.py` supplies the
-  deterministic current-diff classification behavior for documentation impact
-  and project-system improvement requirements.
-- `scripts/project_control/resolve_project_improvement.py` supplies advisory
-  routing behavior that compares open signals with current Git-change
-  classification.
-- `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv` supplies the
-  controlled signal vocabulary and default recommended routing metadata.
-- `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv` supplies concrete
-  signal instances, status, severity, evidence, and resolution fields.
+- `AGENTS.md`: Root authority hierarchy and the split between physics continuation and project-system work.
+- `research_control/README.md`: Research-control memory preflight, project-system signal, documentation-impact, and resolver rules.
+- `.codex/skills/improve-project-system/SKILL.md`: Execution workflow for project-system improvement packets.
+- `scripts/project_control/classify_project_changes.py`: Deterministic current-diff classification.
+- `scripts/project_control/resolve_project_improvement.py`: Advisory routing across current diffs and open signals.
+- `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv`: Controlled signal vocabulary and default routing metadata.
+- `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`: Concrete signal instances, severity, status, evidence, and resolution fields.
 
 ## Required Reader Outcome
 
-After reading, a maintainer or future agent should know that project-system
-work starts from observed state: current Git diff classification, registered
-open signals, and memory-backed source inspection. The reader should know that
-the resolver is advisory, that one invocation may execute at most one bounded
-AgentJob, that every state-changing project-system AgentJob needs a
-documentation-impact receipt, and that a signal cannot leave the open backlog
-without explicit evidence.
+After reading, a maintainer or future agent should understand the existing
+Project-System Improvement Loop function, which source paths ground it, which adjacent systems
+it connects to, and which authority boundary prevents overread. The reader
+should be able to use the page as orientation, then inspect the named source
+files, registries, task records, role or skill contracts, AgentJob allowlists,
+completion records, and checks before acting.
 
 ## Visual Strategy
 
-Use a process timeline from observed issue to bounded AgentJob and evidence.
-Add a classifier/resolver/checkpoint-gate comparison table and an evidence
-checklist. Do not make the timeline look like a validator change or a signal
-closure action.
+Use page-specific operational structure rather than a reusable template. The
+main reader sections are `Improvement Loop Map`, `Diff, Signal, Resolver`, `Evidence To Close A Signal`, `Failure Boundaries`. The HTML derivative may render these
+as local CSS cards and tables; the GitHub Markdown derivative should remain a
+native article with compact tables. Do not use browser-side Mermaid, remote
+assets, or external runtime packages.
 
 ## Acceptance Criteria
 
-- Explains classification before routing.
-- Distinguishes current Git diff work from registered open signals.
-- States that resolver output is advisory and checkpoint blocking comes from
-  validators or concrete authority violations.
-- Explains signal type registry versus signal instance registry.
-- Explains one bounded AgentJob per invocation.
-- Explains documentation-impact receipts for state-changing project-system
-  AgentJobs.
-- Explains evidence required to move a signal out of open backlog.
-- Names source paths visibly in GitHub Markdown and HTML.
-- Preserves generated noncanonical status.
+- Opens with subject-specific operational explanation before the full authority paragraph.
+- Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
+- Includes visible source paths in both public derivatives.
+- Preserves generated noncanonical status and source authority boundaries.
+- Does not change validators, commands, schemas, role contracts, skill contracts, routing behavior, checkpoint behavior, generated-output authority, or physics claim status.
+- Uses screenshot QA and before/after review evidence for the changed HTML derivative.

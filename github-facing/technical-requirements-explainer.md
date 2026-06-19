@@ -1,122 +1,79 @@
 # Technical Requirements For Reproducible Operation
 
-Technical requirements are the local operating conditions that make
-AEther-Flow reproducible: the current Codex app harness for governed agent
-work, the Python virtual environment, dependency ledger, repository-owned
-scripts, Makefile targets, screenshot tooling, and PDF derivative path.
+Technical requirements are the local operating conditions that make AEther-Flow reproducible: the current Codex app harness for governed agent work, the Python virtual environment, dependency ledger, repository-owned scripts, Makefile targets, screenshot tooling, diagram tooling when needed, and managed PDF derivative path.
 
-This page is a generated noncanonical reader surface. It does not change
-dependencies, validators, Makefile targets, command semantics, harness policy,
-role authority, routing behavior, checkpoint behavior, generated-output
-authority, or physics claim status. Tool availability is support, not
-permission.
+Those requirements answer only one question: what tools are needed to perform an operation. They do not answer whether the operation is authorized. Authorization still comes from tracked sources, registries, task records, role or skill contracts, AgentJob allowlists, completion evidence, claim boundaries, and checks.
 
-## Operating Model
+The useful operator model is tiered. Read-only inspection has minimal requirements. Governed agent work currently assumes the Codex app and repo-local skills. Python validators need `.venv` and `requirements.txt`. HTML QA may need browser tooling. Diagram-backed tracked HTML may need the pinned Mermaid/Playwright setup. PDF derivatives use the managed TeX-to-PDF lane only when registered TeX derivatives are in scope.
 
-The repository separates three questions:
+Reader scope: local operation requirements only. This page cannot change dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics status.
 
-1. What tools are needed to perform a local operation?
-2. Which source file or registry says that operation is valid?
-3. Which task, role, AgentJob, completion record, and checks prove this
-   transaction stayed inside its boundary?
+## Requirement Tier Matrix
 
-The technical requirement answers only the first question. `README.md` states
-that the governed research-agent workflow currently assumes the Codex app, and
-that read-only inspection, normal Git use, and Python validators can still run
-outside the Codex app. `AGENTS.md` and `research_control/README.md` then keep
-authority with tracked sources, registries, task records, claim boundaries, and
-checks.
-
-## Requirement Tiers
-
-| Tier | Needed tools | Repository evidence | Does not authorize |
-| --- | --- | --- | --- |
-| Read-only inspection | Browser or editor, shell, Git | `README.md`; `AGENTS.md` | Editing source truth, changing registries, or treating generated docs as authority. |
-| Governed agent workflow | Codex app plus repo-local `.codex/` skills, prompts, and configuration | `README.md`; `.codex/skills/improve-project-system/SKILL.md` | Scientific authority, permanent harness lock-in, or future harness parity claims. |
-| Python checks and scripts | `.venv`, Python 3.12.13, `requirements.txt`, repository scripts | `README.md`; `requirements.txt`; `scripts/README.md` | New dependencies, changed command semantics, or skipped documentation-impact receipts. |
-| Memory and wiki refresh | Project memory bootstrap, optional Obsidian sync, local memory index | `README.md`; `.codex/skills/project-memory-system/SKILL.md`; `Makefile` | Making `.local`, wiki notes, semantic extracts, or Obsidian mirrors authoritative. |
-| HTML screenshot QA | Tracked source spec, no-network HTML, browser screenshot tooling, Playwright Chromium when needed | `.codex/skills/html-visual-explainer/SKILL.md`; `.codex/skills/visual-explainer/SKILL.md` | Direct HTML-only edits, browser-side Mermaid execution, or public deployment. |
-| PDF derivatives | Managed TeX-to-PDF build path for registered TeX derivatives | `.codex/skills/pdf-derivative-build/SKILL.md` | Treating PDFs as canonical scientific authority or building unregistered scratch output outside `.local/`. |
-| Unit-test evidence | Python test runner and test modules | `tests/README.md`; `Makefile` | Treating tests as physics proof or as replacements for source registries. |
-
-## Command Families
-
-Use repository-owned command families from the source files rather than
-inventing ad hoc local shortcuts.
-
-| Work | Source path to inspect | Command family |
+| Item | Function | Boundary |
 | --- | --- | --- |
-| Python environment | `README.md`; `requirements.txt` | Create `.venv`, activate it, install from `requirements.txt`, then run scripts through `.venv/bin/python`. |
-| Memory refresh | `.codex/skills/project-memory-system/SKILL.md`; `Makefile` | Run `bootstrap_memory_system.py` for refresh and `bootstrap_memory_system.py --validate-only` for read-only checks. |
-| Project-system routing | `.codex/skills/improve-project-system/SKILL.md`; `research_control/README.md` | Run memory preflight, classify current Git changes, resolve advisory routing, then run required project-system checks. |
-| Publication pages | `.codex/skills/html-visual-explainer/SKILL.md`; `.codex/skills/visual-explainer/SKILL.md` | Update the publication brief and source spec first, then produce GitHub Markdown, tracked HTML, screenshots, review evidence, and strict publication-process checks. |
-| Tests | `tests/README.md`; `Makefile` | Run the full test suite when scripts, validators, schemas, role contracts, or memory-system machinery change. |
-| PDF derivatives | `.codex/skills/pdf-derivative-build/SKILL.md` | Build only registered TeX derivatives into their managed PDF lanes; write scratch builds under `.local/`. |
+| Read-only inspection | Browser or editor, shell, and Git. | Does not authorize source edits. |
+| Governed agent workflow | Codex app plus repo-local skills and control files. | Current harness, not scientific authority. |
+| Python checks | `.venv`, Python 3.12.13, `requirements.txt`, and repository scripts. | No dependency or command-semantics change. |
+| Memory refresh | Project-memory bootstrap, optional Obsidian sync, and local memory index. | Generated retrieval remains non-authority. |
+| HTML QA | Source spec, no-network HTML, browser screenshot tooling, and Playwright Chromium when needed. | No direct HTML-only authority. |
+| PDF derivatives | Managed TeX-to-PDF build path for registered TeX derivatives. | PDFs remain human-reading derivatives. |
 
-## HTML And Diagram Constraints
+## Repository Command Families
 
-Tracked HTML is a generated human-only derivative. The governed path is:
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Environment | Use README and requirements before running Python scripts. | Prefer `.venv/bin/python` for receipts. |
+| Memory | Use project-memory bootstrap for refresh and validate-only for checks. | Do not hand-edit generated wiki notes. |
+| Project-system | Use memory preflight, classifier, resolver, signals, receipts, and research-control checks. | One bounded AgentJob. |
+| Publication | Update brief/spec pair, GitHub Markdown, HTML, screenshots, review evidence, and strict checks. | Generated outputs stay derived. |
+| Tests | Run unit tests when scripts, validators, schemas, roles, or memory machinery change. | Tests do not prove physics. |
 
-1. Write or update the page publication brief under `markdown/publication-briefs/`.
-2. Write or update the source spec under `markdown/html-explainer-specs/`.
-3. Produce GitHub-facing Markdown under `github-facing/`.
-4. Produce no-network tracked HTML under `html/`.
-5. Capture desktop and mobile screenshot evidence under the task artifacts.
-6. Refresh generated registries, wiki notes, and local retrieval support through
-   the approved bootstrap path.
+## Scoped Tooling
 
-The HTML page may use local reading enhancements only when the document still
-reads without JavaScript. It must not depend on remote fonts, remote CSS,
-external scripts, browser-side Mermaid rendering, hosted comments, or network
-assets.
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Node/npm | Used for diagram and Playwright-related workflows when required. | Not a general authority requirement. |
+| Playwright | Captures rendered evidence for tracked HTML. | A screenshot is not a source contract. |
+| Mermaid | Build-time diagram support only for tracked HTML. | No browser-side Mermaid runtime. |
+| Codex app | Current governed AI-agent harness. | Not permanent lock-in or scientific authority. |
 
-## Failure Boundaries
+## Tool Authority Boundary
 
-Common operational mistakes have the same pattern: the tool works, therefore
-the user assumes authority changed. That inference is invalid.
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Tool works | The local operation can run. | Still inspect the authority source. |
+| Check passes | The configured deterministic check accepted the state. | Does not grant promotion or publication taste. |
+| Cache exists | A generated or local retrieval layer is available. | Does not replace canonical source inspection. |
 
-- A working `.venv` does not authorize a registry edit.
-- Codex app access does not make the app scientific authority.
-- A screenshot proves rendered evidence exists; it is not a source contract.
-- A generated HTML page can clarify a workflow; it cannot create one.
-- A local memory hit can route attention; it cannot replace canonical source
-  inspection.
-- A test or check PASS means the checked contract passed; it is not a broad
-  scientific verdict.
+<!-- explainer-control: authority_footer -->
 
-The correction is always source-first: inspect the relevant source path,
-registry row, role or skill contract, AgentJob allowlist, completion evidence,
-and claim boundary.
-
-## Operator Sequence
-
-1. Identify the work tier: inspection, governed agent work, Python check,
-   memory refresh, HTML screenshot QA, PDF derivative, or tests.
-2. Inspect the listed source path before running commands.
-3. Confirm the current task or AgentJob allows the write path if any source
-   changes are involved.
-4. Run the narrow command family from the repository source.
-5. Preserve output evidence in the task packet when the workflow requires it.
-6. Treat generated outputs and `.local` surfaces as support, not authority.
-
-## Source Materials
-
-- AEther-Flow Project. (2026). `README.md` [Project front door and requirements].
-- AEther-Flow Project. (2026). `AGENTS.md` [Root authority hierarchy].
-- AEther-Flow Project. (2026). `research_control/README.md` [Research-control operation].
-- AEther-Flow Project. (2026). `requirements.txt` [Python dependency ledger].
-- AEther-Flow Project. (2026). `Makefile` [Grouped local command targets].
-- AEther-Flow Project. (2026). `scripts/README.md` [Repository script boundaries].
-- AEther-Flow Project. (2026). `tests/README.md` [Test coverage and command guidance].
-- AEther-Flow Project. (2026). `.codex/skills/project-memory-system/SKILL.md` [Memory and registry refresh].
-- AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Project-system improvement workflow].
-- AEther-Flow Project. (2026). `.codex/skills/html-visual-explainer/SKILL.md` [Governed HTML publication].
-- AEther-Flow Project. (2026). `.codex/skills/visual-explainer/SKILL.md` [Visual explainer constraints].
-- AEther-Flow Project. (2026). `.codex/skills/pdf-derivative-build/SKILL.md` [Managed PDF derivative builds].
-
-## Source Binding
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/technical-requirements-explainer.md`
 - **Related HTML:** `html/technical-requirements-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/technical-requirements.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It explains current local requirement tiers, Codex app harness assumptions, Python virtual environment setup, repository-owned command families, generated-memory refresh, screenshot QA, and PDF derivative build requirements without changing dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics claim status.
+
+## Source Materials
+
+- AEther-Flow Project. (2026). `README.md` [Codex app harness statement, Python environment, requirement tiers, and command families.]
+- AEther-Flow Project. (2026). `AGENTS.md` [Authority hierarchy, memory requirement, generated-output boundaries, and required checks.]
+- AEther-Flow Project. (2026). `research_control/README.md` [Memory preflight, classifier/resolver, documentation-impact, and research-control checks.]
+- AEther-Flow Project. (2026). `requirements.txt` [Repository Python dependency ledger.]
+- AEther-Flow Project. (2026). `Makefile` [Grouped local command targets.]
+- AEther-Flow Project. (2026). `scripts/README.md` [Script groups and script authority boundary.]
+- AEther-Flow Project. (2026). `tests/README.md` [Unit-test areas and commands.]
+- AEther-Flow Project. (2026). `.codex/skills/project-memory-system/SKILL.md` [Memory/wiki/registry refresh and validate-only modes.]
+- AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Project-system workflow and checks.]
+- AEther-Flow Project. (2026). `.codex/skills/html-visual-explainer/SKILL.md` [Governed tracked HTML publication and screenshot QA.]
+- AEther-Flow Project. (2026). `.codex/skills/visual-explainer/SKILL.md` [Visual explainer constraints and no external runtime for tracked pages.]
+- AEther-Flow Project. (2026). `.codex/skills/pdf-derivative-build/SKILL.md` [Managed TeX-to-PDF derivative build lane.]
+
+## Safe Operating Summary
+
+Safe summary: Use the required tool tier, inspect the source path that owns the operation, confirm the current task allowlist, run the repository-owned command family, and preserve evidence.
+
+Unsafe summary: A working tool, generated cache, screenshot, or PASS result creates source authority, changes dependencies, or authorizes physics claims.

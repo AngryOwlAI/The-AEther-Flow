@@ -20,7 +20,7 @@ source_materials:
   - "scripts/validate_publication_process.py"
   - "scripts/project_control/validate_documentation_impact.py"
   - "scripts/research_control/validate_research_control.py"
-claim_boundary: "Human-only publication explainer for the AEther-Flow validator and operator workflow. It explains existing command selection by change type, bootstrap versus validate-only, publication checks, documentation-impact checks, research-control checks, unit-test triggers, screenshot evidence, troubleshooting, final review evidence, and PASS-result limits without changing validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, role authority, schemas, checkpoint gates, generated-output authority, or physics claim status."
+claim_boundary: "Human-only publication explainer for Validator And Operator Workflow. It explains existing command selection by change type, bootstrap versus validate-only, publication checks, documentation-impact checks, research-control checks, unit-test triggers, screenshot evidence, troubleshooting, final review evidence, and PASS-result limits without changing validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, role authority, schemas, checkpoint gates, generated-output authority, or physics claim status."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -33,68 +33,46 @@ required_controls:
 
 ## Publication Brief Binding
 
-Use `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
-as the page-specific editorial contract. The page is a contributor/operator
-guide. It explains existing checks and evidence expectations; it does not
-change validators, commands, role contracts, schemas, routing behavior,
-checkpoint gates, generated-output authority, or physics claim status.
+Use `markdown/publication-briefs/validator-operator-workflow.publication-brief.md` as the page-specific editorial contract. The page is a
+contributor operator guide under the post-migration Phase 4 quality
+packet. It improves reader orientation, footer-authority placement, and
+page-specific operational structure without changing executable project
+behavior or physics claim status.
 
 ## Source Basis
 
-- `README.md` gives the public front-door context, separates physics claims
-  from project-system tooling claims, and names the local Python environment.
-- `AGENTS.md` defines repository authority, generated-output boundaries,
-  required bootstrap checks, documentation-impact checks, and the rule against
-  hand-editing generated artifacts.
-- `.codex/skills/project-memory-system/SKILL.md` defines bootstrap,
-  validate-only, docs-only, docs-validate-only, and strict-docs modes for the
-  memory/wiki/registry derivative system.
-- `.codex/skills/improve-project-system/SKILL.md` defines the project-system
-  execution chain: memory preflight, classifier, resolver, signal validation,
-  one bounded AgentJob, documentation impact, bootstrap, research-control
-  checks, and checkpoint.
-- `scripts/README.md` explains script groups and the authority boundary for
-  tooling changes.
-- `tests/README.md` explains unit-test coverage areas and full or targeted
-  test commands.
-- `scripts/validate_publication_process.py` checks publication brief/spec/page
-  consistency, no-network HTML, source visibility, authority language,
-  evidence paths, orphan public pages, duplicate section skeletons, and retired
-  process patterns.
-- `scripts/project_control/validate_documentation_impact.py` checks that
-  documentation-impact receipts cover live source changes, generated
-  derivatives, classifier reason codes, and required validators.
-- `scripts/research_control/validate_research_control.py` checks the tracked
-  research-control spine, registry shapes, role/job/task/claim-boundary
-  records, memory preflight receipts, protected authority markers, and optional
-  diff write-path boundaries.
+- `README.md`: Project front door, local environment, and public requirements.
+- `AGENTS.md`: Authority hierarchy, generated-output boundaries, and required checks.
+- `.codex/skills/project-memory-system/SKILL.md`: Bootstrap, validate-only, docs modes, and cleanup commands.
+- `.codex/skills/improve-project-system/SKILL.md`: Project-system memory preflight, classifier, resolver, signal, documentation-impact, and checkpoint chain.
+- `scripts/README.md`: Script groups and tooling authority boundary.
+- `tests/README.md`: Unit-test coverage areas and command shape.
+- `scripts/validate_publication_process.py`: Publication brief/spec/output consistency and no-network checks.
+- `scripts/project_control/validate_documentation_impact.py`: Documentation-impact receipt validation.
+- `scripts/research_control/validate_research_control.py`: Tracked research-control and diff boundary checks.
 
 ## Required Reader Outcome
 
-After reading, an operator should know how to choose checks by change type:
-memory/source registry changes need bootstrap, publication pages need the
-publication-process check plus screenshots, state-changing project-system
-AgentJobs need documentation-impact and research-control checks, script or
-test changes need unit tests, and final review needs evidence paths rather
-than a free-text claim of success.
+After reading, a maintainer or future agent should understand the existing
+Validator And Operator Workflow function, which source paths ground it, which adjacent systems
+it connects to, and which authority boundary prevents overread. The reader
+should be able to use the page as orientation, then inspect the named source
+files, registries, task records, role or skill contracts, AgentJob allowlists,
+completion records, and checks before acting.
 
 ## Visual Strategy
 
-Use an annotated command matrix as the primary visual. Add a compact decision
-path for when to add documentation-impact, research-control, unit-test, and
-screenshot checks. Add a troubleshooting panel for known failures such as
-stale `.local` retrieval warnings, missing screenshot evidence, orphan public
-surfaces, and write-path boundary errors.
+Use page-specific operational structure rather than a reusable template. The
+main reader sections are `Command Decision Matrix`, `When Extra Evidence Is Required`, `Troubleshooting Operator Failures`, `PASS Result Limits`. The HTML derivative may render these
+as local CSS cards and tables; the GitHub Markdown derivative should remain a
+native article with compact tables. Do not use browser-side Mermaid, remote
+assets, or external runtime packages.
 
 ## Acceptance Criteria
 
-- Explains validation by change type.
-- Explains bootstrap versus validate-only.
-- Explains publication-process checks.
-- Explains documentation-impact checks.
-- Explains research-control validation and `--check-diff`.
-- Explains unit-test trigger conditions.
-- Explains screenshot evidence for tracked HTML pages.
-- Explains what validator PASS does and does not mean.
-- Names source paths visibly in GitHub Markdown and HTML.
-- Preserves generated noncanonical status.
+- Opens with subject-specific operational explanation before the full authority paragraph.
+- Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
+- Includes visible source paths in both public derivatives.
+- Preserves generated noncanonical status and source authority boundaries.
+- Does not change validators, commands, schemas, role contracts, skill contracts, routing behavior, checkpoint behavior, generated-output authority, or physics claim status.
+- Uses screenshot QA and before/after review evidence for the changed HTML derivative.

@@ -4,785 +4,225 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="134da4a03cc312ab6c9d92a0a870db191957db91d1cea07487748694f7b8ba02">
+  <meta name="aether-flow-source-basis-hash" content="f4610700c095d5fe16bee4949fdf0137ef04d6969a83bf38a63e615f3845c130">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Technical Requirements For Reproducible Operation</title>
   <style>
     :root {
       color-scheme: light;
-      --bg: #f5f7f2;
-      --paper: #ffffff;
-      --paper-2: #eef2ea;
-      --ink: #172026;
-      --muted: #5a6670;
-      --line: #cbd4c9;
-      --line-strong: #99a794;
-      --teal: #0f6d73;
-      --teal-soft: #dceced;
-      --olive: #516f2f;
-      --olive-soft: #e6eddc;
-      --amber: #946a17;
-      --amber-soft: #f0e5c7;
-      --red: #98413f;
-      --red-soft: #eedbd9;
-      --mono: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
-      --sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
-      --serif: Georgia, "Times New Roman", serif;
+      --ink: #18212a;
+      --muted: #5c6670;
+      --paper: #f7f5ef;
+      --panel: #ffffff;
+      --wash: #eef4f1;
+      --line: #d9ded6;
+      --blue: #275f8f;
+      --green: #2f7357;
+      --gold: #936616;
+      --red: #98423f;
     }
-
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
       background:
-        linear-gradient(90deg, rgba(23, 32, 38, 0.035) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(23, 32, 38, 0.035) 1px, transparent 1px),
-        radial-gradient(circle at 14% 10%, rgba(15, 109, 115, 0.08), transparent 34%),
-        var(--bg);
-      background-size: 30px 30px, 30px 30px, auto, auto;
-      color: var(--ink);
-      font-family: var(--sans);
-      line-height: 1.55;
-      overflow-wrap: break-word;
+        linear-gradient(180deg, #fbfaf6 0%, var(--paper) 52%, #efe9dc 100%);
+      line-height: 1.56;
+      letter-spacing: 0;
     }
-
-    a { color: var(--teal); }
-
-    code {
-      font-family: var(--mono);
-      font-size: 0.92em;
-      background: rgba(15, 109, 115, 0.09);
-      color: #0a5055;
-      border-radius: 4px;
-      padding: 0.08rem 0.3rem;
-      overflow-wrap: anywhere;
-    }
-
-    .wrap {
-      width: min(1240px, calc(100% - 32px));
+    header, main, footer {
+      max-width: 1180px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 190px minmax(0, 1fr);
-      gap: 34px;
-      padding: 34px 0 58px;
+      padding: 28px 20px;
     }
-
-    .toc {
-      position: sticky;
-      top: 18px;
-      align-self: start;
-      padding: 12px 0;
-      max-height: calc(100dvh - 36px);
-      overflow-y: auto;
-    }
-
-    .toc-title {
-      margin-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 8px;
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .toc a {
-      display: block;
-      margin: 0 0 4px;
-      padding: 6px 8px;
-      border-left: 3px solid transparent;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.82rem;
-      line-height: 1.25;
-    }
-
-    .toc a:hover {
-      background: var(--paper-2);
-      color: var(--ink);
-      border-left-color: var(--teal);
-    }
-
-    main { min-width: 0; }
-
-    header {
-      padding: 28px 0 34px;
-      border-bottom: 1px solid var(--line);
-    }
-
+    header { padding-top: 42px; }
     .eyebrow {
-      margin: 0 0 12px;
-      color: var(--teal);
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: .82rem;
+      font-weight: 800;
       text-transform: uppercase;
     }
-
     h1 {
       margin: 0;
-      max-width: 940px;
-      font-family: var(--serif);
-      font-size: clamp(2.35rem, 7vw, 5rem);
-      font-weight: 500;
-      line-height: 0.98;
+      max-width: 980px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.04;
       letter-spacing: 0;
     }
-
-    .lead {
-      max-width: 880px;
-      margin: 20px 0 0;
-      color: #2d3a42;
-      font-size: clamp(1.04rem, 2.4vw, 1.25rem);
-    }
-
-    .notice {
+    .lede {
       max-width: 940px;
-      margin: 22px 0 0;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .scope {
+      max-width: 960px;
+      margin-top: 22px;
+      border-left: 5px solid var(--blue);
+      background: #eaf2f6;
       padding: 14px 16px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
       border: 1px solid var(--line);
-      border-left: 5px solid var(--teal);
-      background: var(--teal-soft);
-      font-weight: 650;
+      border-radius: 999px;
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
     }
-
-    section {
-      padding: 36px 0;
-      border-bottom: 1px solid var(--line);
-      scroll-margin-top: 18px;
-    }
-
+    section { margin: 30px 0; }
     h2 {
-      margin: 0 0 16px;
-      font-size: clamp(1.45rem, 3vw, 2.08rem);
-      line-height: 1.12;
+      margin: 0 0 14px;
+      font-size: 1.45rem;
       letter-spacing: 0;
     }
-
     h3 {
       margin: 0 0 8px;
       font-size: 1rem;
       letter-spacing: 0;
     }
-
-    p { margin: 0 0 14px; }
-
-    ul, ol {
-      margin: 0;
-      padding-left: 1.35rem;
-    }
-
-    li { margin-bottom: 8px; }
-
-    .section-kicker {
-      margin: 0 0 8px;
-      color: var(--olive);
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .triad {
+    .matrix, .source-grid, .summaries {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
-
-    .triad-card {
-      min-width: 0;
-      padding: 16px;
+    .ve-card, .source-panel, .summary {
+      background: var(--panel);
       border: 1px solid var(--line);
-      border-top: 4px solid var(--teal);
       border-radius: 8px;
-      background: var(--paper);
+      padding: 14px;
     }
-
-    .triad-card b {
+    .ve-card:nth-child(4n+1) { border-top: 5px solid var(--blue); }
+    .ve-card:nth-child(4n+2) { border-top: 5px solid var(--green); }
+    .ve-card:nth-child(4n+3) { border-top: 5px solid var(--gold); }
+    .ve-card:nth-child(4n+4) { border-top: 5px solid var(--red); }
+    .ve-card strong {
       display: block;
-      margin-bottom: 6px;
-      font-family: var(--mono);
-      color: var(--teal);
-      font-size: 0.76rem;
-      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
     }
-
-    .table-wrap {
-      margin-top: 20px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-      overflow: hidden;
-    }
-
-    .table-scroll {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
     table {
       width: 100%;
-      min-width: 900px;
       border-collapse: collapse;
-      font-size: 0.92rem;
+      background: var(--panel);
+      border: 1px solid var(--line);
     }
-
-    th {
-      background: var(--paper-2);
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-align: left;
-      text-transform: uppercase;
-    }
-
     th, td {
-      padding: 13px 14px;
-      border-bottom: 1px solid var(--line);
+      text-align: left;
       vertical-align: top;
-    }
-
-    tbody tr:nth-child(even) {
-      background: rgba(15, 109, 115, 0.045);
-    }
-
-    tbody tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .tier {
-      font-family: var(--mono);
-      font-weight: 700;
-      color: var(--teal);
-      white-space: nowrap;
-    }
-
-    .badge {
-      display: inline-block;
-      margin: 0 6px 6px 0;
-      padding: 3px 8px;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--paper-2);
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
+      padding: 11px;
     }
-
-    .command-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 20px;
+    th { background: #eaf2f6; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: .92em;
+      background: #eef2f5;
+      padding: .08rem .28rem;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
     }
-
-    .command-card {
-      min-width: 0;
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-    }
-
-    .command-card h3 {
-      color: var(--teal);
-    }
-
-    .command-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .sequence {
-      display: grid;
-      gap: 10px;
-      margin-top: 20px;
-      counter-reset: seq;
-    }
-
-    .sequence-step {
-      counter-increment: seq;
-      position: relative;
-      min-width: 0;
-      padding: 14px 16px 14px 58px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-    }
-
-    .sequence-step::before {
-      content: counter(seq);
-      position: absolute;
-      left: 16px;
-      top: 14px;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--olive-soft);
-      color: var(--olive);
-      font-family: var(--mono);
-      font-weight: 800;
-      font-size: 0.78rem;
-    }
-
-    .boundary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .boundary-card {
-      min-width: 0;
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-    }
-
-    .boundary-card.good {
-      border-left: 5px solid var(--olive);
-      background: var(--olive-soft);
-    }
-
-    .boundary-card.bad {
-      border-left: 5px solid var(--red);
-      background: var(--red-soft);
-    }
-
-    .source-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 18px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .source-list li {
-      min-width: 0;
-      margin: 0;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-    }
-
-    .source-list small {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-    }
-
+    .summary.safe { border-top: 5px solid var(--green); }
+    .summary.unsafe { border-top: 5px solid var(--red); }
     footer {
-      padding: 30px 0 0;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: .92rem;
+      padding-bottom: 42px;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 860px) {
+      .matrix, .source-grid, .summaries { grid-template-columns: 1fr; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { display: none; }
+    }
+    @media (max-width: 540px) {
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
     }
 
-    @media (max-width: 1000px) {
-      .wrap {
-        grid-template-columns: 1fr;
-        padding-top: 0;
-      }
-
-      .toc {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        gap: 4px;
-        margin: 0 -16px;
-        padding: 10px 16px;
-        max-height: none;
-        overflow-x: auto;
-        background: rgba(245, 247, 242, 0.96);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .toc-title { display: none; }
-
-      .toc a {
-        flex: 0 0 auto;
-        border-left: 0;
-        border-bottom: 2px solid transparent;
-        white-space: nowrap;
-        font-size: 0.76rem;
-      }
-
-      main { padding-top: 20px; }
-    }
-
-    @media (max-width: 760px) {
-      .triad,
-      .command-grid,
-      .boundary-grid,
-      .source-list {
-        grid-template-columns: 1fr;
-      }
-
-      .table-wrap {
-        border: 0;
-        background: transparent;
-      }
-
-      .table-scroll {
-        overflow-x: visible;
-      }
-
-      table {
-        min-width: 0;
-        border-collapse: separate;
-        border-spacing: 0 12px;
-      }
-
-      thead {
-        display: none;
-      }
-
-      tbody,
-      tr,
-      td {
-        display: block;
-        width: 100%;
-      }
-
-      tr {
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--paper);
-      }
-
-      tbody tr:nth-child(even) {
-        background: var(--paper);
-      }
-
-      td {
-        display: grid;
-        grid-template-columns: minmax(96px, 34%) minmax(0, 1fr);
-        gap: 10px;
-        padding: 11px 12px;
-      }
-
-      td::before {
-        content: attr(data-label);
-        color: var(--muted);
-        font-family: var(--mono);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      tbody tr:last-child td {
-        border-bottom: 1px solid var(--line);
-      }
-
-      tbody tr td:last-child {
-        border-bottom: 0;
-      }
-
-      .tier {
-        white-space: normal;
-      }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        color-scheme: dark;
-        --bg: #101513;
-        --paper: #18201d;
-        --paper-2: #202a26;
-        --ink: #eef3ed;
-        --muted: #a8b3aa;
-        --line: #35423a;
-        --line-strong: #617061;
-        --teal: #7fcfd2;
-        --teal-soft: #183236;
-        --olive: #b0c987;
-        --olive-soft: #25311f;
-        --amber: #f0c46b;
-        --amber-soft: #362d19;
-        --red: #e3908d;
-        --red-soft: #3a2424;
-      }
-
-      body {
-        background:
-          linear-gradient(90deg, rgba(238, 243, 237, 0.035) 1px, transparent 1px),
-          linear-gradient(180deg, rgba(238, 243, 237, 0.035) 1px, transparent 1px),
-          radial-gradient(circle at 14% 10%, rgba(127, 207, 210, 0.08), transparent 34%),
-          var(--bg);
-        background-size: 30px 30px, 30px 30px, auto, auto;
-      }
-
-      code {
-        color: #bcecef;
-      }
-
-      .lead {
-        color: #d6ddd7;
-      }
-
-      @media (max-width: 1000px) {
-        .toc {
-          background: rgba(16, 21, 19, 0.96);
-        }
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="toc" data-explainer-control="section_toc" aria-label="Page sections">
-      <div class="toc-title">Contents</div>
-      <a href="#model">Operating model</a>
-      <a href="#tiers">Requirement tiers</a>
-      <a href="#commands">Command families</a>
-      <a href="#html">HTML and diagrams</a>
-      <a href="#boundaries">Failure boundaries</a>
-      <a href="#sequence">Operator sequence</a>
-      <a href="#sources">Source materials</a>
+  <header>
+    <p class="eyebrow">Post-Migration Phase 4</p>
+    <h1>Technical Requirements For Reproducible Operation</h1>
+    <p class="lede">Technical requirements are the local operating conditions that make AEther-Flow reproducible: the current Codex app harness for governed agent work, the Python virtual environment, dependency ledger, repository-owned scripts, Makefile targets, screenshot tooling, diagram tooling when needed, and managed PDF derivative path.</p>
+    <p class="lede">Those requirements answer only one question: what tools are needed to perform an operation. They do not answer whether the operation is authorized. Authorization still comes from tracked sources, registries, task records, role or skill contracts, AgentJob allowlists, completion evidence, claim boundaries, and checks.</p>
+    <div class="scope">Reader scope: local operation requirements only. This page cannot change dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics status.</div>
+    <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#s1">Requirement Tier Matrix</a>
+      <a href="#s2">Repository Command Families</a>
+      <a href="#s3">Scoped Tooling</a>
+      <a href="#s4">Tool Authority Boundary</a>
+      <a href="#sources">Sources</a>
+      <a href="#summary">Summary</a>
     </nav>
+  </header>
 
-    <main>
-      <header>
-        <p class="eyebrow">Phase 5C publication guide</p>
-        <h1>Technical Requirements For Reproducible Operation</h1>
-        <p class="lead">
-          Technical requirements make AEther-Flow operable: Codex app access
-          for governed agent work, Python environment setup, dependency
-          ledgers, repository-owned scripts, screenshot tooling, memory refresh
-          commands, and managed PDF derivative paths.
-        </p>
-        <p class="notice">
-          This is a generated noncanonical reader surface. It does not change
-          dependencies, validators, Makefile targets, command semantics,
-          harness policy, role authority, routing behavior, checkpoint
-          behavior, generated-output authority, or physics claim status.
-        </p>
-      </header>
+  <main>
+    <section id="s1" aria-labelledby="s1-title">
+      <h2 id="s1-title">Requirement Tier Matrix</h2>
+      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Read-only inspection</strong></td><td>Browser or editor, shell, and Git.</td><td>Does not authorize source edits.</td></tr><tr><td><strong>Governed agent workflow</strong></td><td>Codex app plus repo-local skills and control files.</td><td>Current harness, not scientific authority.</td></tr><tr><td><strong>Python checks</strong></td><td>`.venv`, Python 3.12.13, `requirements.txt`, and repository scripts.</td><td>No dependency or command-semantics change.</td></tr><tr><td><strong>Memory refresh</strong></td><td>Project-memory bootstrap, optional Obsidian sync, and local memory index.</td><td>Generated retrieval remains non-authority.</td></tr><tr><td><strong>HTML QA</strong></td><td>Source spec, no-network HTML, browser screenshot tooling, and Playwright Chromium when needed.</td><td>No direct HTML-only authority.</td></tr><tr><td><strong>PDF derivatives</strong></td><td>Managed TeX-to-PDF build path for registered TeX derivatives.</td><td>PDFs remain human-reading derivatives.</td></tr></tbody></table>
+    </section>
+    <section id="s2" aria-labelledby="s2-title">
+      <h2 id="s2-title">Repository Command Families</h2>
+      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Environment</strong></td><td>Use README and requirements before running Python scripts.</td><td>Prefer `.venv/bin/python` for receipts.</td></tr><tr><td><strong>Memory</strong></td><td>Use project-memory bootstrap for refresh and validate-only for checks.</td><td>Do not hand-edit generated wiki notes.</td></tr><tr><td><strong>Project-system</strong></td><td>Use memory preflight, classifier, resolver, signals, receipts, and research-control checks.</td><td>One bounded AgentJob.</td></tr><tr><td><strong>Publication</strong></td><td>Update brief/spec pair, GitHub Markdown, HTML, screenshots, review evidence, and strict checks.</td><td>Generated outputs stay derived.</td></tr><tr><td><strong>Tests</strong></td><td>Run unit tests when scripts, validators, schemas, roles, or memory machinery change.</td><td>Tests do not prove physics.</td></tr></tbody></table>
+    </section>
+    <section id="s3" aria-labelledby="s3-title">
+      <h2 id="s3-title">Scoped Tooling</h2>
+      <div class="matrix">        <article class="ve-card"><strong>Node/npm</strong><p>Used for diagram and Playwright-related workflows when required.</p><p>Not a general authority requirement.</p></article>
+        <article class="ve-card"><strong>Playwright</strong><p>Captures rendered evidence for tracked HTML.</p><p>A screenshot is not a source contract.</p></article>
+        <article class="ve-card"><strong>Mermaid</strong><p>Build-time diagram support only for tracked HTML.</p><p>No browser-side Mermaid runtime.</p></article>
+        <article class="ve-card"><strong>Codex app</strong><p>Current governed AI-agent harness.</p><p>Not permanent lock-in or scientific authority.</p></article></div>
+    </section>
+    <section id="s4" aria-labelledby="s4-title">
+      <h2 id="s4-title">Tool Authority Boundary</h2>
+      <div class="matrix">        <article class="ve-card"><strong>Tool works</strong><p>The local operation can run.</p><p>Still inspect the authority source.</p></article>
+        <article class="ve-card"><strong>Check passes</strong><p>The configured deterministic check accepted the state.</p><p>Does not grant promotion or publication taste.</p></article>
+        <article class="ve-card"><strong>Cache exists</strong><p>A generated or local retrieval layer is available.</p><p>Does not replace canonical source inspection.</p></article></div>
+    </section>
 
-      <section id="model">
-        <p class="section-kicker">Operating model</p>
-        <h2>Tools answer capability; sources answer authority.</h2>
-        <p>
-          A reproducible operator needs to know which local tools are required,
-          which repository source names the workflow, and which task evidence
-          proves a specific transaction stayed inside its boundary. The
-          technical requirement answers the first part only.
-        </p>
-        <div class="triad" aria-label="Capability authority evidence model">
-          <div class="triad-card">
-            <b>Capability</b>
-            <p>Can the local environment inspect, run, refresh, screenshot, or build the requested artifact?</p>
-          </div>
-          <div class="triad-card">
-            <b>Authority</b>
-            <p>Which registered source, registry row, role or skill contract, and AgentJob allowlist permits the action?</p>
-          </div>
-          <div class="triad-card">
-            <b>Evidence</b>
-            <p>Which completion record, artifact, screenshot, or check result shows what actually happened?</p>
-          </div>
-        </div>
-      </section>
+    <section id="sources" aria-labelledby="sources-title" data-explainer-control="source_materials_section">
+      <h2 id="sources-title">Source Materials</h2>
+      <div class="source-grid">
+        <article class="source-panel"><code data-source-path="README.md">README.md</code><p>Codex app harness statement, Python environment, requirement tiers, and command families.</p></article>
+        <article class="source-panel"><code data-source-path="AGENTS.md">AGENTS.md</code><p>Authority hierarchy, memory requirement, generated-output boundaries, and required checks.</p></article>
+        <article class="source-panel"><code data-source-path="research_control/README.md">research_control/README.md</code><p>Memory preflight, classifier/resolver, documentation-impact, and research-control checks.</p></article>
+        <article class="source-panel"><code data-source-path="requirements.txt">requirements.txt</code><p>Repository Python dependency ledger.</p></article>
+        <article class="source-panel"><code data-source-path="Makefile">Makefile</code><p>Grouped local command targets.</p></article>
+        <article class="source-panel"><code data-source-path="scripts/README.md">scripts/README.md</code><p>Script groups and script authority boundary.</p></article>
+        <article class="source-panel"><code data-source-path="tests/README.md">tests/README.md</code><p>Unit-test areas and commands.</p></article>
+        <article class="source-panel"><code data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</code><p>Memory/wiki/registry refresh and validate-only modes.</p></article>
+        <article class="source-panel"><code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code><p>Project-system workflow and checks.</p></article>
+        <article class="source-panel"><code data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</code><p>Governed tracked HTML publication and screenshot QA.</p></article>
+        <article class="source-panel"><code data-source-path=".codex/skills/visual-explainer/SKILL.md">.codex/skills/visual-explainer/SKILL.md</code><p>Visual explainer constraints and no external runtime for tracked pages.</p></article>
+        <article class="source-panel"><code data-source-path=".codex/skills/pdf-derivative-build/SKILL.md">.codex/skills/pdf-derivative-build/SKILL.md</code><p>Managed TeX-to-PDF derivative build lane.</p></article>
+      </div>
+    </section>
 
-      <section id="tiers">
-        <p class="section-kicker">Annotated requirement table</p>
-        <h2>Choose the smallest tool tier that matches the work.</h2>
-        <div class="table-wrap">
-          <div class="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Tier</th>
-                  <th>Needed tools</th>
-                  <th>Evidence paths</th>
-                  <th>Does not authorize</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="tier" data-label="Tier">Inspection</td>
-                  <td data-label="Needed tools">Browser or editor, shell, Git.</td>
-                  <td data-label="Evidence paths"><code data-source-path="README.md">README.md</code><br><code data-source-path="AGENTS.md">AGENTS.md</code></td>
-                  <td data-label="Does not authorize">Source edits, registry changes, or generated-doc authority.</td>
-                </tr>
-                <tr>
-                  <td class="tier" data-label="Tier">Governed agent work</td>
-                  <td data-label="Needed tools">Codex app plus repo-local skills, prompts, and configuration.</td>
-                  <td data-label="Evidence paths"><code>README.md</code><br><code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code></td>
-                  <td data-label="Does not authorize">Scientific authority, permanent harness lock-in, or future harness parity claims.</td>
-                </tr>
-                <tr>
-                  <td class="tier" data-label="Tier">Python checks</td>
-                  <td data-label="Needed tools"><code>.venv</code>, Python 3.12.13, and dependency install from the ledger.</td>
-                  <td data-label="Evidence paths"><code data-source-path="requirements.txt">requirements.txt</code><br><code data-source-path="scripts/README.md">scripts/README.md</code></td>
-                  <td data-label="Does not authorize">New dependencies, changed command semantics, or skipped receipts.</td>
-                </tr>
-                <tr>
-                  <td class="tier" data-label="Tier">Memory refresh</td>
-                  <td data-label="Needed tools">Bootstrap scripts, optional Obsidian sync, local memory index support.</td>
-                  <td data-label="Evidence paths"><code data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</code><br><code data-source-path="Makefile">Makefile</code></td>
-                  <td data-label="Does not authorize">Making wiki, semantic extracts, Obsidian mirrors, SQLite, or <code>.local</code> authoritative.</td>
-                </tr>
-                <tr>
-                  <td class="tier" data-label="Tier">HTML screenshot QA</td>
-                  <td data-label="Needed tools">Publication brief, source spec, no-network HTML, browser screenshot path, Playwright Chromium when needed.</td>
-                  <td data-label="Evidence paths"><code data-source-path=".codex/skills/html-visual-explainer/SKILL.md">.codex/skills/html-visual-explainer/SKILL.md</code><br><code data-source-path=".codex/skills/visual-explainer/SKILL.md">.codex/skills/visual-explainer/SKILL.md</code></td>
-                  <td data-label="Does not authorize">Direct HTML-only edits, browser-side Mermaid execution, or public deployment.</td>
-                </tr>
-                <tr>
-                  <td class="tier" data-label="Tier">PDF derivatives</td>
-                  <td data-label="Needed tools">Managed TeX-to-PDF build path for registered derivatives.</td>
-                  <td data-label="Evidence paths"><code data-source-path=".codex/skills/pdf-derivative-build/SKILL.md">.codex/skills/pdf-derivative-build/SKILL.md</code></td>
-                  <td data-label="Does not authorize">PDFs as canonical science authority or scratch builds outside <code>.local</code>.</td>
-                </tr>
-                <tr>
-                  <td class="tier" data-label="Tier">Tests</td>
-                  <td data-label="Needed tools">Python test runner and repository test modules.</td>
-                  <td data-label="Evidence paths"><code data-source-path="tests/README.md">tests/README.md</code></td>
-                  <td data-label="Does not authorize">Physics proof, source-registry replacement, or unbounded behavioral changes.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+    <section id="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Safe And Unsafe Summaries</h2>
+      <div class="summaries">
+        <article class="summary safe"><h3>Safe</h3><p>Use the required tool tier, inspect the source path that owns the operation, confirm the current task allowlist, run the repository-owned command family, and preserve evidence.</p></article>
+        <article class="summary unsafe"><h3>Unsafe</h3><p>A working tool, generated cache, screenshot, or PASS result creates source authority, changes dependencies, or authorizes physics claims.</p></article>
+      </div>
+    </section>
+  </main>
 
-      <section id="commands">
-        <p class="section-kicker">Command families</p>
-        <h2>Inspect the source path, then run the narrow command family.</h2>
-        <div class="command-grid">
-          <div class="command-card">
-            <h3>Python environment</h3>
-            <p>Use <code>README.md</code> and <code>requirements.txt</code> to create or refresh <code>.venv</code> and install the ledgered dependencies.</p>
-            <span class="badge">.venv</span><span class="badge">requirements.txt</span>
-          </div>
-          <div class="command-card">
-            <h3>Memory and registries</h3>
-            <p>Use <code>.codex/skills/project-memory-system/SKILL.md</code> for bootstrap, read-only checks, docs-only modes, and local-noise cleanup.</p>
-            <span class="badge">bootstrap</span><span class="badge">validate-only</span>
-          </div>
-          <div class="command-card">
-            <h3>Project-system work</h3>
-            <p>Use <code>research_control/README.md</code> and <code>.codex/skills/improve-project-system/SKILL.md</code> for memory preflight, classification, resolver, signal checks, and receipts.</p>
-            <span class="badge">classify</span><span class="badge">resolver</span><span class="badge">receipts</span>
-          </div>
-          <div class="command-card">
-            <h3>Publication pages</h3>
-            <p>Use the HTML publication skills to update the brief and source spec before GitHub Markdown, tracked HTML, screenshots, review evidence, and publication-process checks.</p>
-            <span class="badge">brief first</span><span class="badge">no network</span><span class="badge">screenshots</span>
-          </div>
-          <div class="command-card">
-            <h3>Tests</h3>
-            <p>Use <code>tests/README.md</code> and <code>Makefile</code> when scripts, validators, schemas, role contracts, or memory-system machinery change.</p>
-            <span class="badge">unit tests</span><span class="badge">evidence only</span>
-          </div>
-          <div class="command-card">
-            <h3>PDF derivatives</h3>
-            <p>Use the PDF derivative skill only for registered TeX-to-PDF lanes; scratch output stays under <code>.local</code>.</p>
-            <span class="badge">registered TeX</span><span class="badge">managed lanes</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="html">
-        <p class="section-kicker">Tracked HTML and diagrams</p>
-        <h2>The publication path is source-spec first.</h2>
-        <p>
-          Tracked HTML under <code>html/</code> must come from a page brief and
-          a source spec. It must be standalone, no-network, and readable without
-          JavaScript. Diagram and screenshot tooling may be needed to produce
-          evidence, but the rendered page cannot require remote fonts, remote
-          CSS, external scripts, browser-side Mermaid execution, hosted
-          comments, or network assets.
-        </p>
-        <div class="sequence">
-          <div class="sequence-step">Write the publication brief under <code>markdown/publication-briefs/</code>.</div>
-          <div class="sequence-step">Write the source spec under <code>markdown/html-explainer-specs/</code>.</div>
-          <div class="sequence-step">Produce native GitHub Markdown under <code>github-facing/</code>.</div>
-          <div class="sequence-step">Produce tracked no-network HTML under <code>html/</code>.</div>
-          <div class="sequence-step">Capture desktop and mobile screenshots under the task artifacts.</div>
-          <div class="sequence-step">Refresh generated registries, wiki notes, and local retrieval support through bootstrap.</div>
-        </div>
-      </section>
-
-      <section id="boundaries">
-        <p class="section-kicker">Failure boundaries</p>
-        <h2>A working tool is not a permission grant.</h2>
-        <div class="boundary-grid">
-          <div class="boundary-card good">
-            <h3>Safe inference</h3>
-            <p>The environment can run the command family named by the source, and the task packet records the evidence required by that workflow.</p>
-          </div>
-          <div class="boundary-card bad">
-            <h3>Unsafe inference</h3>
-            <p>The tool exists, so the operator can edit authority surfaces, skip the AgentJob allowlist, or treat generated output as source truth.</p>
-          </div>
-        </div>
-        <p>
-          Corrective rule: return to the source path, registry row, role or
-          skill contract, AgentJob allowlist, completion evidence, and claim
-          boundary. Local retrieval hits, screenshots, generated HTML, and test
-          results can support the review; they cannot replace the authority
-          chain.
-        </p>
-      </section>
-
-      <section id="sequence">
-        <p class="section-kicker">Operator sequence</p>
-        <h2>Use technical requirements in a source-first order.</h2>
-        <div class="sequence">
-          <div class="sequence-step">Identify the work tier: inspection, governed agent work, Python check, memory refresh, HTML screenshot QA, PDF derivative, or tests.</div>
-          <div class="sequence-step">Inspect the listed source path before running commands.</div>
-          <div class="sequence-step">Confirm the current task or AgentJob allows the write path if any source changes are involved.</div>
-          <div class="sequence-step">Run the narrow command family from the repository source.</div>
-          <div class="sequence-step">Preserve output evidence in the task packet when the workflow requires it.</div>
-          <div class="sequence-step">Treat generated outputs and <code>.local</code> surfaces as support, not authority.</div>
-        </div>
-      </section>
-
-      <section id="sources">
-        <p class="section-kicker">Source materials</p>
-        <h2>The page points back to these authority and support paths.</h2>
-        <ul class="source-list" data-explainer-control="source_materials_section">
-          <li><code>README.md</code><small>Project front door, current harness, Python environment, requirement tiers, command families.</small></li>
-          <li><code>AGENTS.md</code><small>Root authority hierarchy, generated-output boundaries, required checks.</small></li>
-          <li><code>research_control/README.md</code><small>Research-control memory preflight, classifier, resolver, and check commands.</small></li>
-          <li><code>requirements.txt</code><small>Python dependency ledger.</small></li>
-          <li><code>Makefile</code><small>Grouped local targets for memory, project-control, HTML explainer, and audit work.</small></li>
-          <li><code>scripts/README.md</code><small>Script group boundaries and source-script authority caution.</small></li>
-          <li><code>tests/README.md</code><small>Unit-test coverage areas and test evidence boundary.</small></li>
-          <li><code>.codex/skills/project-memory-system/SKILL.md</code><small>Bootstrap, validate-only, docs-only modes, and local-noise cleanup.</small></li>
-          <li><code>.codex/skills/improve-project-system/SKILL.md</code><small>Project-system lane, memory preflight, classifier/resolver, receipts, and checks.</small></li>
-          <li><code>.codex/skills/html-visual-explainer/SKILL.md</code><small>Governed tracked HTML publication process and screenshot QA.</small></li>
-          <li><code>.codex/skills/visual-explainer/SKILL.md</code><small>Project-local visual constraints and no external runtime for tracked HTML.</small></li>
-          <li><code>.codex/skills/pdf-derivative-build/SKILL.md</code><small>Managed TeX-to-PDF derivative build boundaries.</small></li>
-        </ul>
-      </section>
-
-      <footer>
-        <p>
-          Derived from <code>markdown/html-explainer-specs/technical-requirements-explainer.md</code>.
-          Related GitHub Markdown: <code>github-facing/technical-requirements-explainer.md</code>.
-          Publication brief: <code>markdown/publication-briefs/technical-requirements.publication-brief.md</code>.
-          Authority status: generated noncanonical reader surface.
-        </p>
-      </footer>
-    </main>
-  </div>
+  <footer data-explainer-control="authority_footer">
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/technical-requirements-explainer.md</code> and the publication brief <code>markdown/publication-briefs/technical-requirements.publication-brief.md</code>. It explains current local requirement tiers, Codex app harness assumptions, Python virtual environment setup, repository-owned command families, generated-memory refresh, screenshot QA, and PDF derivative build requirements without changing dependencies, validators, Makefile targets, command semantics, harness policy, role authority, routing behavior, checkpoint behavior, generated-output authority, or physics claim status.</p>
+    <p>Safe operating rule: use this page for orientation, then inspect the named source files, registries, task records, contracts, allowlists, completion evidence, and checks before acting.</p>
+  </footer>
 </body>
 </html>

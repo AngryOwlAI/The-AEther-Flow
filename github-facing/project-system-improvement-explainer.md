@@ -1,137 +1,72 @@
 # Project-System Improvement Loop
 
-AEther-Flow separates physics continuation from project-system improvement.
-Physics continuation advances source-side research under claim gates.
-Project-system improvement repairs or clarifies the machinery around the
-research: documentation drift, control-contract drift, validator gaps, memory
-retrieval issues, and routing ambiguity.
+Project-system improvement is the maintenance lane for the research system itself. It handles documentation drift, control-contract drift, validator gaps, memory retrieval problems, trigger logic, generated-document pipelines, and routing ambiguity. It is deliberately separate from physics continuation: it can repair the operating machinery around the research, but it cannot promote ontology, benchmark status, Gate Chair decisions, or completed derivation language.
 
-This page is a generated noncanonical reader surface. It explains the
-project-system improvement loop, but it does not create signals, resolve
-signals, change validators, change routing behavior, expand role authority,
-change AgentJob allowlists, or authorize physics claim promotion.
+The loop starts from observable evidence. A current working-tree diff can trigger the classifier. A registered open signal can trigger advisory routing. Useful memory hits can point to prior decisions, but they must lead back to canonical source files and registry rows before they influence action. Only after that source inspection does the Director route one bounded AgentJob with a write-path allowlist and a claim boundary.
 
-## The Work Lane
+A reader should come away with a practical rule: classify or resolve the state first, execute at most one project-system packet, record documentation impact when the packet changes state, and close any signal only with explicit PASS completion evidence or a documented rejection decision.
 
-Project-system improvement is the lane for work on the research system itself:
-roles, schemas, validators, control-marked Markdown, memory tooling, trigger
-logic, generated-document pipelines, and operational reliability. It is not the
-lane for canonical ontology edits, science drafts, benchmark promotion, or Gate
-Chair decisions.
+Reader scope: project-system workflow orientation only. This page cannot create or close signals, change routing behavior, change validator behavior, expand role authority, or authorize physics claim promotion.
 
-One invocation may execute at most one bounded AgentJob. The job must name its
-allowed reads, allowed writes, forbidden paths, source classes, expected
-outputs, claim boundary, commands, and required checks. Generated outputs and
-`.local` retrieval layers remain non-authority.
+## Improvement Loop Map
 
-## Classify Before Routing
-
-The first mechanical question is whether the current working tree already
-contains a project-system or documentation-impact change.
-
-`scripts/project_control/classify_project_changes.py` reads changed paths and
-classifies them into reason codes. A plain documentation-surface change may
-route to Documentation Curator. A role contract, schema, validator, control
-registry, or control-marked mixed Markdown change routes to a more specific
-project-system role unless the task overlay authorizes explanatory Markdown
-work.
-
-Classification is evidence for routing. It is not a claim that the change is
-correct.
-
-## Diff Or Signal
-
-There are two normal sources of project-system work:
-
-| Source | What it means | Routing consequence |
+| Item | Function | Boundary |
 | --- | --- | --- |
-| Current Git diff | The working tree has paths that affect documentation impact or project-system machinery. | Classifier output suggests the role and required receipt surfaces. |
-| Registered open signal | A completion or handoff emitted a concrete project-improvement signal that is represented in `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`. | High or critical open signals take priority; lower severity signals remain backlog unless no current diff work is pending. |
+| Observed issue | Current Git diff, registered open signal, or a repeated workflow problem. | No action is authorized before source inspection. |
+| Memory preflight | Status plus targeted lookup or search identifies likely prior context. | Memory is navigation; source files and registry rows remain authority. |
+| Classification | The classifier determines live documentation-impact and project-system reason codes. | Classification is routing evidence, not correctness proof. |
+| Resolver | The resolver ranks open signals against live diff state. | Resolver output is advisory unless validators or boundaries fail. |
+| One AgentJob | The selected role executes one bounded write-path packet. | No hidden second objective or permission expansion. |
+| Completion | Checks, documentation-impact receipt, and completion evidence close the transaction. | Signals close only with explicit evidence. |
 
-The signal type registry and signal instance registry serve different roles.
-`registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv` defines allowed
-signal types and default routing metadata. `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`
-records concrete instances with severity, status, evidence, and resolution
-fields.
+## Diff, Signal, Resolver
 
-## Resolver Is Advisory
-
-`scripts/project_control/resolve_project_improvement.py` compares open signals
-with current Git-change classification. It selects the next recommended
-project-system boundary, but its output is advisory routing state.
-
-Checkpoint blocking comes from validator failures and concrete
-authority-boundary violations, not from the resolver merely seeing future
-work. Ordinary documentation and validator jobs do not inherit resolver
-snapshot requirements unless the AgentJob explicitly sets
-`resolves_signal_routing: true`.
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Current diff | Changed paths drive immediate classifier output. | Use when the working tree already contains project-system or documentation-impact work. |
+| Registered signal | A concrete row in the signal registry records backlog or routed project-system work. | High or critical open signals outrank ordinary backlog. |
+| Advisory resolver | The resolver compares those inputs and recommends one boundary. | It does not create a hard checkpoint gate by itself. |
 
 ## Evidence To Close A Signal
 
-A signal row that moves to `resolved`, `completed`, or `closed` needs:
+| Item | Function | Boundary |
+| --- | --- | --- |
+| resolved_by_job_id | Names the bounded AgentJob that resolved, completed, or closed the signal. | Required for non-open terminal states. |
+| resolution_evidence_path | Points to a PASS completion YAML with matching job_id, or to a rejection decision. | Command strings stay in the completion record. |
+| resolved_at | Records the timestamp for the resolution row. | Resolution must be auditable, not implied by prose. |
 
-| Field | Required content |
-| --- | --- |
-| `resolved_by_job_id` | The bounded AgentJob that resolved the signal. |
-| `resolution_evidence_path` | A completion YAML with `validation_status: "PASS"` and a matching `job_id`. |
-| `resolved_at` | The timestamp for the resolution record. |
+## Failure Boundaries
 
-For `rejected`, the evidence path may instead be a Director decision record
-that names the signal and explains the rejection. A signal row should not
-duplicate command strings; the completion record owns command evidence through
-`command_results`.
+| Item | Function | Boundary |
+| --- | --- | --- |
+| Free-text signal | A completion mentions a signal term that is absent from the registry. | Register or reject through the controlled signal path. |
+| Resolver overread | A future recommendation is treated as a hard checkpoint block. | Use validators and concrete authority violations as hard gates. |
+| Receipt gap | A project-system AgentJob changes state without documentation impact. | Write the receipt or stop before checkpointing. |
+| Physics overreach | A project-system packet changes science status. | Route physics continuation or human-gated authority separately. |
 
-## Documentation Impact Receipts
+<!-- explainer-control: authority_footer -->
 
-Every state-changing project-system AgentJob needs
-`research_control/tasks/<task_id>/documentation_impact.yaml`. The receipt must
-cover changed paths, reason codes, source surfaces inspected, source docs
-updated or no-op rationale, registries, generated derivatives, and checks run.
-
-A source documentation edit alone is sufficient only for plain documentation
-edits outside a project-system AgentJob. Once the work is a project-system
-AgentJob, the receipt is mandatory.
-
-## Failure Modes
-
-The common failures are concrete:
-
-- closing a signal without PASS completion evidence or an explicit rejection
-  decision;
-- treating an unregistered free-text signal term as a routed signal;
-- treating resolver output as a hard checkpoint gate by itself;
-- omitting a documentation-impact receipt for a state-changing project-system
-  AgentJob;
-- treating generated HTML, wiki notes, Obsidian notes, semantic extracts, or
-  `.local` caches as authority;
-- using project-system improvement to alter physics claim status.
-
-The safe pattern is state first, one bounded AgentJob, source-backed receipt,
-then checks.
-
-## Source Materials
-
-- AEther-Flow Project. (2026). `AGENTS.md` [Root agent guidance].
-- AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].
-- AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Project-system improvement skill].
-- AEther-Flow Project. (2026). `scripts/project_control/classify_project_changes.py` [Project change classifier].
-- AEther-Flow Project. (2026). `scripts/project_control/resolve_project_improvement.py` [Project-improvement resolver].
-- AEther-Flow Project. (2026). `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv` [Signal type registry].
-- AEther-Flow Project. (2026). `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv` [Signal instance registry].
-
-## Source Binding
+## Source Binding And Authority
 
 - **Derived from spec:** `markdown/html-explainer-specs/project-system-improvement-explainer.md`
 - **Related HTML:** `html/project-system-improvement-explainer.html`
 - **Publication brief:** `markdown/publication-briefs/project-system-improvement.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
 
-## Safe Summary
+This page is a generated noncanonical reader surface. It explains classifier output, registered signal routing, advisory resolver output, one bounded AgentJob execution, documentation-impact receipts, and signal-resolution evidence without changing validators, routing behavior, role authority, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status.
 
-Safe summary: project-system improvement classifies current diffs, inspects
-registered signals, routes one bounded AgentJob, records documentation impact,
-and closes signals only with explicit evidence.
+## Source Materials
 
-Unsafe summary: project-system improvement is physics continuation, resolver
-output alone blocks checkpointing, or a signal can be closed without a PASS
-completion or rejection decision.
+- AEther-Flow Project. (2026). `AGENTS.md` [Root authority hierarchy and the split between physics continuation and project-system work.]
+- AEther-Flow Project. (2026). `research_control/README.md` [Research-control memory preflight, project-system signal, documentation-impact, and resolver rules.]
+- AEther-Flow Project. (2026). `.codex/skills/improve-project-system/SKILL.md` [Execution workflow for project-system improvement packets.]
+- AEther-Flow Project. (2026). `scripts/project_control/classify_project_changes.py` [Deterministic current-diff classification.]
+- AEther-Flow Project. (2026). `scripts/project_control/resolve_project_improvement.py` [Advisory routing across current diffs and open signals.]
+- AEther-Flow Project. (2026). `registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv` [Controlled signal vocabulary and default routing metadata.]
+- AEther-Flow Project. (2026). `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv` [Concrete signal instances, severity, status, evidence, and resolution fields.]
+
+## Safe Operating Summary
+
+Safe summary: Project-system improvement classifies current diffs, inspects registered signals, routes one bounded AgentJob, records documentation impact, and closes signals only with explicit evidence.
+
+Unsafe summary: Project-system improvement is physics continuation, resolver output alone blocks checkpointing, or a signal can close without PASS completion or rejection evidence.
