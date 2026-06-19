@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="9a099339179fe84eaba7dc95a1fee003e11264d22b72e0401beb618781f40966">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Validator And Operator Workflow</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --font-body: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+      --font-mono: "SFMono-Regular", "Cascadia Code", "Liberation Mono", Consolas, monospace;
+      --bg: #f4f2ec;
+      --surface: #fffdf8;
+      --surface-2: #ebe7db;
+      --surface-3: #e1ded2;
+      --border: rgba(36, 45, 55, 0.14);
+      --border-strong: rgba(36, 45, 55, 0.26);
+      --text: #242d37;
+      --muted: #68707a;
+      --teal: #0f766e;
+      --teal-soft: rgba(15, 118, 110, 0.11);
+      --amber: #b45309;
+      --amber-soft: rgba(180, 83, 9, 0.12);
+      --rose: #be123c;
+      --rose-soft: rgba(190, 18, 60, 0.1);
+      --blue: #1d4e89;
+      --blue-soft: rgba(29, 78, 137, 0.1);
+      --green: #15803d;
+      --green-soft: rgba(21, 128, 61, 0.1);
+      --shadow: 0 14px 40px rgba(36, 45, 55, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111418;
+        --surface: #191f25;
+        --surface-2: #202831;
+        --surface-3: #27323b;
+        --border: rgba(231, 238, 232, 0.12);
+        --border-strong: rgba(231, 238, 232, 0.23);
+        --text: #ece7da;
+        --muted: #aab0af;
+        --teal: #5eead4;
+        --teal-soft: rgba(94, 234, 212, 0.1);
+        --amber: #fbbf24;
+        --amber-soft: rgba(251, 191, 36, 0.12);
+        --rose: #fb7185;
+        --rose-soft: rgba(251, 113, 133, 0.1);
+        --blue: #93c5fd;
+        --blue-soft: rgba(147, 197, 253, 0.1);
+        --green: #86efac;
+        --green-soft: rgba(134, 239, 172, 0.1);
+        --shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, var(--border) 1px, transparent 1px),
+        linear-gradient(0deg, var(--border) 1px, transparent 1px),
+        var(--bg);
+      background-size: 56px 56px;
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.92em;
+      background: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.12rem 0.34rem;
+      overflow-wrap: anywhere;
+    }
+
+    .wrap {
+      width: min(1380px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 36px;
+      padding: 34px 0 56px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+      max-height: calc(100dvh - 40px);
+      overflow-y: auto;
+      padding: 14px 0;
+    }
+
+    .toc-title {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      line-height: 1.35;
+      border-left: 2px solid transparent;
+      padding: 6px 9px;
+      border-radius: 0 6px 6px 0;
+      margin: 2px 0;
+    }
+
+    .toc a:hover {
+      color: var(--text);
+      background: var(--surface-2);
+      border-left-color: var(--teal);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    main,
+    .hero,
+    section,
+    .boundary,
+    .boundary-card,
+    .decision,
+    .panel,
+    .flow-step,
+    .binding div,
+    .safe-unsafe > div,
+    details {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    p,
+    li,
+    span,
+    small,
+    td,
+    summary {
+      overflow-wrap: break-word;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 5vw, 56px);
+      margin-bottom: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, var(--teal-soft), transparent 35%),
+        linear-gradient(315deg, var(--amber-soft), transparent 38%);
+      pointer-events: none;
+    }
+
+    .hero > * {
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 5.1rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 930px;
+      overflow-wrap: anywhere;
+      text-wrap: balance;
+    }
+
+    .lead {
+      font-size: clamp(1rem, 1.8vw, 1.22rem);
+      color: var(--muted);
+      max-width: 860px;
+      margin: 24px 0 0;
+    }
+
+    .boundary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .boundary-card {
+      background: color-mix(in srgb, var(--surface) 76%, var(--surface-2) 24%);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 15px;
+      min-width: 0;
+    }
+
+    .boundary-card strong {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .boundary-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: clamp(20px, 3vw, 32px);
+      margin: 18px 0;
+      min-width: 0;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--teal);
+      margin-bottom: 9px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 2.6vw, 2.3rem);
+      line-height: 1.08;
+      margin: 0 0 15px;
+      letter-spacing: 0;
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      max-width: 860px;
+      color: var(--muted);
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .decision {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--surface-2);
+      min-width: 0;
+    }
+
+    .decision b {
+      display: block;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .decision small {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .table-shell {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 860px;
+      font-size: 0.94rem;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--surface-3);
+      color: var(--muted);
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 13px 15px;
+      border-bottom: 2px solid var(--border-strong);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 15px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background: color-mix(in srgb, var(--surface) 78%, var(--teal-soft) 22%);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .wide {
+      min-width: 260px;
+      max-width: 520px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .badge-write {
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .badge-check {
+      background: var(--teal-soft);
+      color: var(--teal);
+    }
+
+    .badge-evidence {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .badge-tests {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 16px;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--surface-2);
+      min-width: 0;
+    }
+
+    .panel h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    .panel p,
+    .panel li {
+      color: var(--muted);
+    }
+
+    .panel ul,
+    .panel ol {
+      padding-left: 1.4rem;
+      margin: 10px 0 0;
+    }
+
+    .flow {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      border-radius: 8px;
+      padding: 13px;
+    }
+
+    .num {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--surface);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .flow-step b {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .flow-step span {
+      color: var(--muted);
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface-2);
+      margin: 10px 0;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 13px 15px;
+      font-weight: 700;
+      list-style-position: inside;
+    }
+
+    details div {
+      border-top: 1px solid var(--border);
+      padding: 14px 15px;
+      color: var(--muted);
+    }
+
+    .source-list {
+      columns: 2;
+      column-gap: 28px;
+      padding-left: 1.2rem;
+    }
+
+    .source-list li {
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    .binding {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .binding div {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--surface-2);
+      min-width: 0;
+    }
+
+    .binding strong {
+      display: block;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 5px;
+    }
+
+    .safe-unsafe {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+      margin-top: 15px;
+    }
+
+    .safe-unsafe .safe {
+      border-left: 4px solid var(--green);
+    }
+
+    .safe-unsafe .unsafe {
+      border-left: 4px solid var(--rose);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero,
+      section {
+        animation: fadeUp 0.45s ease-out both;
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    @media (max-width: 1120px) {
+      .wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        overflow-x: auto;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 10px 0;
+      }
+
+      .toc-title {
+        display: none;
+      }
+
+      .toc a {
+        border-left: 0;
+        border-bottom: 2px solid transparent;
+        border-radius: 4px 4px 0 0;
+        white-space: nowrap;
+        flex: 0 0 auto;
+      }
+
+      .toc a:hover {
+        border-left-color: transparent;
+        border-bottom-color: var(--teal);
+      }
+
+      section {
+        scroll-margin-top: 62px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .wrap {
+        display: block;
+        width: auto;
+        margin: 0 11px;
+        padding-top: 0;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 2.35rem);
+        line-height: 1.04;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+
+      .boundary,
+      .decision-grid,
+      .split,
+      .binding,
+      .safe-unsafe {
+        grid-template-columns: 1fr;
+      }
+
+      .source-list {
+        columns: 1;
+      }
+
+      .hero,
+      section {
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .wrap {
+        margin: 0 9px;
+      }
+
+      .hero,
+      section {
+        padding: 16px;
+      }
+
+      h1 {
+        font-size: 1.78rem;
+      }
+
+      .eyebrow {
+        font-size: 0.62rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="toc" data-explainer-control="section_toc" aria-label="Page sections">
+      <div class="toc-title">Contents</div>
+      <a href="#decide">Decide</a>
+      <a href="#matrix">Commands</a>
+      <a href="#bootstrap">Bootstrap</a>
+      <a href="#gates">Gates</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#trouble">Trouble</a>
+      <a href="#pass">PASS limits</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+    <main>
+      <header class="hero" data-explainer-control="generated_noncanonical">
+        <p class="eyebrow">Phase 4C - contributor/operator guide</p>
+        <h1>Validator And Operator Workflow</h1>
+        <p class="lead">
+          Choose repository checks from the changed authority surface. Refresh generated
+          derivatives through bootstrap, review publication pages with evidence, check
+          project-system receipts, run research-control gates for control state, and
+          treat PASS as bounded mechanical evidence.
+        </p>
+        <div class="boundary" aria-label="Authority boundary summary">
+          <div class="boundary-card">
+            <strong>This page explains</strong>
+            <span>Existing command selection, evidence paths, screenshot QA, and PASS-result limits.</span>
+          </div>
+          <div class="boundary-card">
+            <strong>It does not change</strong>
+            <span>Validator behavior, command semantics, role authority, schemas, routing, or checkpoint gates.</span>
+          </div>
+          <div class="boundary-card">
+            <strong>It cannot prove</strong>
+            <span>Scientific truth, ontology adoption, benchmark promotion, completed derivation, or publication taste.</span>
+          </div>
+        </div>
+      </header>
+
+      <section id="decide">
+        <div class="section-label">operator decision</div>
+        <h2>Start From The Change Type</h2>
+        <p class="kicker">
+          The correct command set comes from what changed, not from habit. A small
+          Markdown-only update, a governed public HTML page, a project-system AgentJob,
+          and a validator script change carry different evidence burdens.
+        </p>
+        <div class="decision-grid">
+          <div class="decision">
+            <b>Memory or registry source</b>
+            <small>Run bootstrap, then validate-only. Generated derivatives are refreshed by script.</small>
+          </div>
+          <div class="decision">
+            <b>Publication page</b>
+            <small>Run publication checks and keep desktop/mobile screenshots under task artifacts.</small>
+          </div>
+          <div class="decision">
+            <b>Project-system AgentJob</b>
+            <small>Classify, resolve, check emitted signals, document impact, and run control gates.</small>
+          </div>
+          <div class="decision">
+            <b>Research-control state</b>
+            <small>Validate the tracked control spine and add <code>--check-diff</code> for write boundaries.</small>
+          </div>
+          <div class="decision">
+            <b>Scripts or tests</b>
+            <small>Run targeted or full unit tests based on blast radius.</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="matrix">
+        <div class="section-label">annotated command matrix</div>
+        <h2>Command Matrix</h2>
+        <p class="kicker">
+          Each command proves a bounded property. None of them gives generated
+          documentation independent authority.
+        </p>
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Need</th>
+                  <th>Command</th>
+                  <th>Evidence Type</th>
+                  <th>What It Proves</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="wide">Refresh generated memory, wiki, registry, and derivative outputs.</td>
+                  <td><code>.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py</code></td>
+                  <td><span class="badge badge-write">Writes</span></td>
+                  <td>Generated retrieval and metadata layers can be rebuilt from tracked sources.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Check generated state without writing.</td>
+                  <td><code>.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only</code></td>
+                  <td><span class="badge badge-check">Check</span></td>
+                  <td>Current generated state is mechanically consistent enough for read-only review.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Check governed public pages.</td>
+                  <td><code>.venv/bin/python scripts/validate_publication_process.py --root . --strict</code></td>
+                  <td><span class="badge badge-evidence">Evidence</span></td>
+                  <td>Brief/spec/output alignment, no-network HTML, source visibility, evidence paths, and retired-pattern guards pass.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Classify changed paths before routing.</td>
+                  <td><code>.venv/bin/python scripts/project_control/classify_project_changes.py --json</code></td>
+                  <td><span class="badge badge-check">Check</span></td>
+                  <td>Live diff paths are mapped to documentation-impact and project-system reason codes.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Resolve project-system routing state.</td>
+                  <td><code>.venv/bin/python scripts/project_control/resolve_project_improvement.py --json</code></td>
+                  <td><span class="badge badge-check">Advisory</span></td>
+                  <td>Current diff work and registered open project-improvement signals are compared for routing guidance.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Check emitted project-improvement signals.</td>
+                  <td><code>.venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted</code></td>
+                  <td><span class="badge badge-check">Check</span></td>
+                  <td>Completion and handoff signal entries are backed by registered signal rows and signal types.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Check documentation-impact receipts.</td>
+                  <td><code>.venv/bin/python scripts/project_control/validate_documentation_impact.py</code></td>
+                  <td><span class="badge badge-evidence">Evidence</span></td>
+                  <td>The receipt covers live source changes, generated derivatives, reason codes, and required validators.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Check research-control records.</td>
+                  <td><code>.venv/bin/python scripts/research_control/validate_research_control.py</code></td>
+                  <td><span class="badge badge-check">Check</span></td>
+                  <td>Task, decision, AgentJob, execution-role, claim-boundary, and registry constraints pass.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Check write-path boundaries against the diff.</td>
+                  <td><code>.venv/bin/python scripts/research_control/validate_research_control.py --check-diff</code></td>
+                  <td><span class="badge badge-evidence">Boundary</span></td>
+                  <td>Changed paths stay inside the authorized write boundary and role/source-class rules.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Run tests after tooling changes.</td>
+                  <td><code>.venv/bin/python -m unittest discover -s tests</code></td>
+                  <td><span class="badge badge-tests">Tests</span></td>
+                  <td>The Python test suite still passes for project-control, research-control, memory, and explainer tooling.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="bootstrap">
+        <div class="section-label">bootstrap discipline</div>
+        <h2>Bootstrap Is A Refresh; Validate-Only Is A Check</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Use bootstrap after source changes</h3>
+            <p>
+              Run bootstrap after changing registered Markdown, TeX, source specs,
+              registry rows, or source material that feeds wiki notes, content
+              semantics, Obsidian mirrors, file registries, object relationships, or
+              memory-index state.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Use validate-only for read-only review</h3>
+            <p>
+              Validate-only checks the current generated state without writing. It is
+              useful for final review, but it cannot refresh stale derivatives after a
+              source change.
+            </p>
+          </div>
+        </div>
+        <details>
+          <summary>How to interpret stale local retrieval warnings</summary>
+          <div>
+            `.local`, Obsidian, semantic, and memory-index warnings are retrieval-layer
+            warnings. They do not override tracked source files, registry rows, or
+            research-control records unless a validator reports a hard failure.
+          </div>
+        </details>
+      </section>
+
+      <section id="gates">
+        <div class="section-label">project and control gates</div>
+        <h2>When Extra Gates Are Required</h2>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="num">1</div>
+            <div>
+              <b>Classify the live diff.</b>
+              <span><code>classify_project_changes.py --json</code> identifies documentation-impact and project-system reason codes.</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="num">2</div>
+            <div>
+              <b>For state-changing project-system jobs, write the receipt.</b>
+              <span><code>research_control/tasks/&lt;task_id&gt;/documentation_impact.yaml</code> must cover source paths, generated derivatives, reason codes, registries, and commands.</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="num">3</div>
+            <div>
+              <b>For research-control state, run control checks.</b>
+              <span>Use the base research-control checker and add <code>--check-diff</code> when the live diff must be compared against allowed writes.</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="num">4</div>
+            <div>
+              <b>For tooling changes, run tests.</b>
+              <span>Full test discovery is appropriate when the change crosses project-control, research-control, memory, or explainer boundaries.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="evidence">
+        <div class="section-label">review evidence</div>
+        <h2>Screenshots And Final Receipts</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Tracked HTML needs visual evidence</h3>
+            <p>
+              Governed publication pages need desktop and mobile screenshots under the
+              current task artifact directory. When using the Playwright wrapper, check
+              <code>command -v npx</code> first; screenshots still remain task evidence,
+              not source authority.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Final review needs paths, not vibes</h3>
+            <ul>
+              <li>Changed source paths.</li>
+              <li>Generated derivative paths.</li>
+              <li>Screenshot paths for tracked HTML.</li>
+              <li>Before/after review notes.</li>
+              <li>Validator command results and claim boundary.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="trouble">
+        <div class="section-label">troubleshooting</div>
+        <h2>Common Failures</h2>
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symptom</th>
+                  <th>Likely Cause</th>
+                  <th>Correct Response</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="wide">Orphan public page report</td>
+                  <td>A source spec, GitHub Markdown page, or HTML page exists without a publication brief registry row.</td>
+                  <td>Add or correct the governed brief, spec, output path, and registry row in one bounded packet.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Missing screenshot evidence</td>
+                  <td>The registry row points to desktop or mobile screenshot paths that do not exist.</td>
+                  <td>Capture screenshots into the current task artifact directory and keep the paths stable.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Documentation-impact path gap</td>
+                  <td>The receipt did not list a changed source path or generated derivative pattern.</td>
+                  <td>Update the receipt to cover the live diff; do not remove a real source change to satisfy the receipt.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Write-path boundary failure</td>
+                  <td>A changed path is outside the AgentJob allowlist or protected by role/source-class rules.</td>
+                  <td>Narrow the packet, adjust the authorized task if valid, or stop for human authorization.</td>
+                </tr>
+                <tr>
+                  <td class="wide">Stale local retrieval warning</td>
+                  <td>Obsidian, semantic, or memory-index derivatives lag source state.</td>
+                  <td>Treat as retrieval-layer warning unless a validator makes it a hard failure; tracked files and registries remain authority.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="pass">
+        <div class="section-label">PASS boundaries</div>
+        <h2>What PASS Does And Does Not Mean</h2>
+        <p class="kicker">
+          PASS means the deterministic checks run by that command accepted the
+          current state. It is necessary evidence for governed work, but it is
+          not independent authority.
+        </p>
+        <div class="safe-unsafe">
+          <div class="panel safe">
+            <h3>Safe reading</h3>
+            <p>
+              The command's mechanical conditions passed for the current repository
+              state. The result can support a bounded completion when paired with
+              source paths, generated paths, evidence artifacts, and a claim boundary.
+            </p>
+          </div>
+          <div class="panel unsafe">
+            <h3>Unsafe reading</h3>
+            <p>
+              PASS proves scientific truth, approves ontology, promotes the benchmark,
+              certifies editorial quality, changes command behavior, or gives generated
+              documentation independent authority.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources" data-explainer-control="source_materials_section">
+        <div class="section-label">source grounding</div>
+        <h2>Source Materials</h2>
+        <ul class="source-list">
+          <li data-source-path="README.md">AEther-Flow Project. (2026). <code>README.md</code> [Project front door].</li>
+          <li data-source-path="AGENTS.md">AEther-Flow Project. (2026). <code>AGENTS.md</code> [Repository authority guidance].</li>
+          <li data-source-path=".codex/skills/project-memory-system/SKILL.md">AEther-Flow Project. (2026). <code>.codex/skills/project-memory-system/SKILL.md</code> [Project memory system skill].</li>
+          <li data-source-path=".codex/skills/improve-project-system/SKILL.md">AEther-Flow Project. (2026). <code>.codex/skills/improve-project-system/SKILL.md</code> [Project-system improvement skill].</li>
+          <li data-source-path="scripts/README.md">AEther-Flow Project. (2026). <code>scripts/README.md</code> [Scripts folder guide].</li>
+          <li data-source-path="tests/README.md">AEther-Flow Project. (2026). <code>tests/README.md</code> [Tests folder guide].</li>
+          <li data-source-path="scripts/validate_publication_process.py">AEther-Flow Project. (2026). <code>scripts/validate_publication_process.py</code> [Publication-process checker].</li>
+          <li data-source-path="scripts/project_control/validate_documentation_impact.py">AEther-Flow Project. (2026). <code>scripts/project_control/validate_documentation_impact.py</code> [Documentation-impact checker].</li>
+          <li data-source-path="scripts/research_control/validate_research_control.py">AEther-Flow Project. (2026). <code>scripts/research_control/validate_research_control.py</code> [Research-control checker].</li>
+        </ul>
+
+        <h2>Source Binding</h2>
+        <div class="binding">
+          <div>
+            <strong>Derived from spec</strong>
+            <code>markdown/html-explainer-specs/validator-operator-workflow-explainer.md</code>
+          </div>
+          <div>
+            <strong>GitHub pair</strong>
+            <code>github-facing/validator-operator-workflow-explainer.md</code>
+          </div>
+          <div>
+            <strong>Publication brief</strong>
+            <code>markdown/publication-briefs/validator-operator-workflow.publication-brief.md</code>
+          </div>
+          <div>
+            <strong>Authority status</strong>
+            <span>Generated noncanonical reader surface.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

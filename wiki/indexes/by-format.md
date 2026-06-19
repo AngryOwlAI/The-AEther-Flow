@@ -17,6 +17,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
 - `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
 - `HTML-SOURCE-AUTHORITY-EXPLAINER` `html/source-authority-explainer.html`
+- `HTML-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `html/validator-operator-workflow-explainer.html`
 
 ## markdown
 
@@ -43,6 +44,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
 - `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
 - `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
+- `MD-GITHUB-FACING-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `github-facing/validator-operator-workflow-explainer.md`
 - `MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - `MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `markdown/html-explainer-specs/aether-flow-ontology-explainer.md`
 - `MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `markdown/html-explainer-specs/aether-flow-physics-program-explainer.md`
@@ -57,6 +59,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `markdown/html-explainer-specs/role-routing-explainer.md`
 - `MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `markdown/html-explainer-specs/source-authority-explainer.md`
+- `MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/validator-operator-workflow-explainer.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `legacy_ontology/aether_flow_interpretation-lemen.md`
 - `MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `ontology/aether-and-aether-flow.md`
@@ -149,6 +152,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-VISUAL-EXPLAINER` `.codex/skills/visual-explainer/SKILL.md`
 - `MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
 - `MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `markdown/publication-briefs/source-authority.publication-brief.md`
+- `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
 
@@ -303,6 +307,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
 - `WIKI-HTML-ROLE-ROUTING-EXPLAINER` `wiki/html/html-role-routing-explainer.md`
 - `WIKI-HTML-SOURCE-AUTHORITY-EXPLAINER` `wiki/html/html-source-authority-explainer.md`
+- `WIKI-HTML-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `wiki/html/html-validator-operator-workflow-explainer.md`
 - `WIKI-MD-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-AETHER-FLOW-ONTOLOGY-PUBLICATION-BRIEF` `wiki/markdown/md-aether-flow-ontology-publication-brief.md`
 - `WIKI-MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF` `wiki/markdown/md-aether-flow-physics-program-publication-brief.md`
@@ -326,6 +331,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-research-agent-workflow-explainer.md`
 - `WIKI-MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-github-facing-role-routing-explainer.md`
 - `WIKI-MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-github-facing-source-authority-explainer.md`
+- `WIKI-MD-GITHUB-FACING-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-validator-operator-workflow-explainer.md`
 - `WIKI-MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `wiki/markdown/md-gr-derivation-roadmap-publication-brief.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md`
 - `WIKI-MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-html-spec-aether-flow-physics-program-explainer.md`
@@ -340,6 +346,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
 - `WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-html-spec-role-routing-explainer.md`
 - `WIKI-MD-HTML-SPEC-SOURCE-AUTHORITY-EXPLAINER` `wiki/markdown/md-html-spec-source-authority-explainer.md`
+- `WIKI-MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-validator-operator-workflow-explainer.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-legacy-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-legacy-ontology-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
@@ -432,6 +439,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
 - `WIKI-MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `wiki/markdown/md-source-authority-publication-brief.md`
+- `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `wiki/pdf/pdf-legacy-ontology-aether-flow-exact-closure-flagship-article.md`

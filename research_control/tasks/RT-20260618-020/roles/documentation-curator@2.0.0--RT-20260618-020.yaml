@@ -1,0 +1,37 @@
+execution_role_ref: "documentation-curator@2.0.0--RT-20260618-020"
+role_execution_kind: "registered_role"
+task_id: "RT-20260618-020"
+agent_job_id: "AJ-RT-20260618-020-001"
+record_path: "research_control/tasks/RT-20260618-020/roles/documentation-curator@2.0.0--RT-20260618-020.yaml"
+base_role_id: "documentation-curator"
+base_role_version: "2.0.0"
+provisional_role_name: ""
+authority_delta_summary: "Registered Documentation Curator role used without permission expansion for Phase 4C validator-operator workflow migration."
+added_constraints:
+  - "Migrate only the Phase 4C validator-operator-workflow page."
+  - "Keep Phase 5 memory-system page out of this packet."
+  - "Explain existing command selection bootstrap publication checks documentation-impact checks research-control checks unit-test triggers screenshot evidence and PASS-result limits without changing any of them."
+  - "Keep generated HTML and GitHub-facing Markdown noncanonical."
+  - "Do not modify validators command semantics role authority schemas routing behavior checkpoint behavior or physics claim status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "markdown/publication-briefs/validator-operator-workflow.publication-brief.md"
+  - "markdown/html-explainer-specs/validator-operator-workflow-explainer.md"
+  - "github-facing/validator-operator-workflow-explainer.md"
+  - "html/validator-operator-workflow-explainer.html"
+  - "registries/*.csv"
+  - "research_control/tasks/RT-20260618-020/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/html/**"
+requires_human_gate: false
+expires_after: "AJ-RT-20260618-020-001"
+justification: "The user requested the next logical step after Phase 4B recommended explicit approval for Phase 4C."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-19T03:00:00Z"
+updated_at: "2026-06-19T03:00:00Z"
+notes: "Execution-role record completed for Phase 4C validator-operator workflow migration."
