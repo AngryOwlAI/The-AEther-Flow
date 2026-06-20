@@ -163,6 +163,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-054/artifacts/95_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-CANDIDATE-BRIDGE-WITNESS` `research_control/tasks/RT-20260614-080/artifacts/121_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_CANDIDATE_BRIDGE_WITNESS.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-CANDIDATE-BRIDGE-WITNESS-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-081/artifacts/122_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_CANDIDATE_BRIDGE_WITNESS_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-PROPOSAL` `research_control/tasks/RT-20260614-077/artifacts/118_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_PROPOSAL.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-079/artifacts/120_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-078/artifacts/119_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_SMUGGLING_AUDIT.tex`
@@ -546,6 +547,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-CANDIDATE-BRIDGE-WITNESS` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-candidate-bridge-witness.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-CANDIDATE-BRIDGE-WITNESS-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-candidate-bridge-witness-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-PROPOSAL` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-proposal.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-smuggling-audit.md`
