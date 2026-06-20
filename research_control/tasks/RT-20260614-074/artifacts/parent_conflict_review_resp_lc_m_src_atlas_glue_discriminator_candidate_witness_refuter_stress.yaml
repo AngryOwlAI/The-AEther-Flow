@@ -1,0 +1,26 @@
+conflict_review_id: "PCR-RT-20260614-074-001"
+task_id: "RT-20260614-074"
+job_id: "AJ-RT-20260614-074-001"
+parent_execution_unit_id: "parent"
+mode: "parent_child_parallel_synthesis"
+decomposition_version: "0.1.0"
+reviewed_outputs:
+  - "research_control/tasks/RT-20260614-074/artifacts/child_phys_math_resp_lc_m_src_atlas_glue_discriminator_candidate_witness_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260614-074/artifacts/child_phys_phil_resp_lc_m_src_atlas_glue_discriminator_candidate_witness_refuter_stress.yaml"
+conflicts:
+  - conflict_id: "C1"
+    type: "next_route"
+    severity: "nonblocking"
+    child_phys_math_claim: "The exact written finite datum survives only under preservation of supplied profiles selector preorder inverse checks and cocycle checks."
+    child_phys_phil_claim: "Using those supplied objects as source authority beyond draft/control requires a protected source-extension or ontology adoption gate."
+    parent_analysis: "These claims are compatible. The mathematical result preserves a finite exact supplied witness, while the authority result blocks autonomous adoption or generalization."
+    resolution_instruction: "Fuse as scoped_obstruction with next_route human_gated_ontology_change_required and freeze_decision human_gate_required."
+    required_child_revision: false
+verdict: "no_blocking_conflict"
+resolution_rounds: 0
+unresolved_conflicts:
+  - conflict_id: ""
+    type: ""
+    severity: ""
+    summary: ""
+fusion_instruction: "Preserve the finite witness as guarded draft/control source-extension evidence, record fragility and source-authority obstructions, and route adoption or generalization to protected human authority."
