@@ -1,0 +1,276 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\XiR}{\Xi_X^R}
+\newcommand{\SX}{S_X}
+\newcommand{\Splus}{S_X^+}
+\newcommand{\AtlasGlue}{\mathsf{AtlasGlue}_{\mathrm{src}}^{+}}
+\newcommand{\Cov}{\mathsf{Cov}^{+}}
+\newcommand{\Ov}{\mathsf{Ov}^{+}}
+\newcommand{\Tau}{\mathsf{Tau}^{+}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{+}}
+\newcommand{\Disj}{\bigsqcup}
+
+\newtheorem{definition}{Definition}
+\newtheorem{countermodel}{Countermodel}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc Source-Extension M\_src AtlasGlue\_src\^{}+ Refuter Stress Test}
+\author{The AEther-Flow Research Project}
+\date{2026-06-20}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Refuter packet for
+\texttt{RT-20260614-067}. It stress-tests the audited \(\AtlasGlue\)
+primitive drafted in \texttt{RT-20260614-065} and conditionally passed by the
+Smuggling Auditor in \texttt{RT-20260614-066}.
+
+This artifact is not an adoption of \(\AtlasGlue\), not an adoption or
+construction of \(\Msrc\), not \(\geff\), not matter coupling, not Einstein
+equations, not benchmark evidence, not Gate Chair closure, and not
+completed-derivation evidence. It does not claim future source-extension
+impossibility and does not reject the global theory.
+
+\section{Stress Question}
+
+The bounded question is:
+\[
+\text{Does the audited }\AtlasGlue\text{ primitive support direct }
+\Msrc\text{ construction, or does it remain underdetermined by transition and label data?}
+\]
+
+The stress target is not the conditional theorem itself. If an admissible
+\(\AtlasGlue\) datum is supplied, the source quotient construction remains
+well-defined under its hypotheses. The adversarial question is whether the
+primitive or its audit pass determines the needed coverage, overlap,
+transition-token, and label-comparison data strongly enough to authorize
+\(\Msrc\) construction.
+
+\section{Transition-Token Nonuniqueness}
+
+\begin{countermodel}[Duplicate-compatible-token transitions]
+Let
+\[
+  U_X=\{x\},\qquad U_Y=\{y_0,y_1\}.
+\]
+Let the source readout and response-label comparison rule classify both
+\(y_0\) and \(y_1\) as compatible with \(x\):
+\[
+  \chi_X^+(x)\sim_{\mathrm{cmp}}\chi_Y^+(y_0),
+  \qquad
+  \chi_X^+(x)\sim_{\mathrm{cmp}}\chi_Y^+(y_1).
+\]
+Let both pairs lie in the declared source overlap relation:
+\[
+  (x,y_0)\in\Ov_{XY},\qquad (x,y_1)\in\Ov_{XY}.
+\]
+Then the partial bijection \(\tau_{XY,0}^+(x)=y_0\) and the partial
+bijection \(\tau_{XY,1}^+(x)=y_1\) both satisfy local label compatibility.
+They generate different quotient supports:
+\[
+  [(X,x)]=[(Y,y_0)]\quad\text{or}\quad
+  [(X,x)]=[(Y,y_1)].
+\]
+Unless a further source-side discriminator is supplied, the local readout and
+label-compatibility conditions do not select one transition-token family.
+\end{countermodel}
+
+This countermodel does not use target topology, target smooth charts, metric
+scale, calibration, benchmark behavior, validation status, or role authority.
+It is a source-internal nonuniqueness pressure on direct \(\Msrc\)
+construction.
+
+\section{Label-Compatibility Collapse}
+
+\begin{obstruction}[Coarse comparison collapses distinct source sites]
+If the label-comparison rule is too coarse, an admissible transition family can
+identify distinct source sites that differ only by data ignored by the
+comparison rule. In the duplicate-compatible-token model, a transition policy
+that alternately chooses \(y_0\) and \(y_1\), or a transitive closure combining
+both choices through additional patches, can force
+\[
+  [(Y,y_0)]=[(Y,y_1)]
+\]
+even when \(y_0\) and \(y_1\) are distinct source-site tokens. Thus label
+compatibility alone is not enough. The comparison rule must carry explicit
+source-side discriminants that prevent collapse when collapse is not intended.
+\end{obstruction}
+
+\begin{lemma}[Supplied datum versus derived datum]
+The \(\AtlasGlue\) theorem proves a quotient support for a supplied admissible
+datum. It does not derive the admissible transition family or the
+label-comparison discriminator from the old \(\SX\) tuple or from the audit
+pass.
+\end{lemma}
+
+\begin{proof}
+The primitive lists \(\Cov\), \(\Ov\), \(\Tau\), and source-token comparison
+rules as components or assumptions of the \(\AtlasGlue\) datum. The proof of
+well-defined quotient support begins after those components are supplied.
+Therefore the theorem cannot also be read as deriving those components from
+the retained exact-branch tuple, from \(\XiR\), from validation status, or
+from role authority. That would change the dependency basis.
+\end{proof}
+
+\section{Finite-Variation Fragility}
+
+The formal primitive proves stability only under strict source-isomorphic
+finite variation. The countermodel above gives a concrete non-isomorphic
+finite perturbation: duplicate a compatible target-side source token, or
+delete a discriminating comparison datum. Local germ syntax can remain
+unchanged while the set of admissible transition-token families changes. Thus
+arbitrary finite-variation robustness remains undischarged.
+
+\section{Overread Screens}
+
+\paragraph{Target-atlas side-door import.}
+The countermodels do not require target topology or target smooth atlas data.
+Their point is stronger: direct construction is already underdetermined inside
+the source-token interface. Importing target charts would only mask the
+missing source-side discriminator.
+
+\paragraph{Quotient-support overread.}
+\(\Qsrc\) is canonical only relative to a chosen admissible transition family
+and comparison rule. The notation must not be read as a unique source
+manifold support determined by local labels alone.
+
+\paragraph{Source-authority laundering.}
+Coverage, overlap, transition, and comparison data must be explicit
+source-side data. They cannot be inferred from the word ``source'', registry
+visibility, validation success, handoff status, generated derivatives, role
+labels, target charts, or benchmark behavior.
+
+\paragraph{Bridge-ladder collapse.}
+The sequence ``formal source-only primitive, smuggling-audit pass, finite
+witness'' does not by itself become \(\Msrc\). The missing rung is a source
+rule or source datum that selects and stabilizes atlas transitions.
+
+\section{Loop-Risk Decision}
+
+\begin{verdict}[Registered category]
+The Refuter classification is
+\[
+  \texttt{scoped\_obstruction}.
+\]
+The obstruction scope is direct \(\Msrc\) construction or adoption from the
+audited \(\AtlasGlue\) primitive alone. The obstruction is transition-token
+nonuniqueness and label-compatibility collapse without an explicit
+source-side discriminator.
+\end{verdict}
+
+\begin{verdict}[Next route]
+The next route is
+\[
+  \texttt{theoretical\_decision\_role\_selection}.
+\]
+A bounded theoretical-continuation selector should choose exactly one next
+packet: source-discriminator repair, concrete source-atlas datum construction,
+bounded irrelevance or no-go theorem, or a human-gated source-authority route
+if protected adoption is required.
+\end{verdict}
+
+\section{Freeze Criteria Status}
+
+The evaluated local freeze label is
+\[
+\texttt{NDCL-M-SRC-ATLAS-GLUE-TRANSITION-LABEL-UNDERDETERMINATION}.
+\]
+The freeze decision is \(\texttt{not\_frozen}\). The direct-construction
+route is obstructed, but the obstruction names a concrete missing payload: an
+explicit source-side transition selector, discriminator, or protected source
+authority for the comparison rule. Therefore this packet does not freeze all
+\(\AtlasGlue\) work and does not claim future source-extension impossibility.
+
+\section{New Mathematical Payload}
+
+This stress test supplies three draft/control payload items:
+\begin{itemize}
+  \item a duplicate-compatible-token transition nonuniqueness countermodel;
+  \item a label-compatibility collapse obstruction for coarse comparison
+  rules;
+  \item a dependency-map update separating conditional quotient support from
+  derivability or canonical selection of the \(\AtlasGlue\) datum.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Retained only as exact-branch source-localization input; no robustness promotion is supplied. \\
+Resp\_lc & Uses adopted \(\XiR\) only as admissible source-extension data in \(\Splus\); the old \(\SX\)-only obstruction remains valid. \\
+M\_src & Refuter stress passes as scoped obstruction: direct construction from the audited \(\AtlasGlue\) primitive alone is blocked by transition-token nonuniqueness and label-compatibility collapse. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; response-token semantics remain non-coupling data. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Blocked; strict source-isomorphic stability remains the only positive result and non-isomorphic finite perturbations can change transition choices. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No closure or suspension verdict is supplied. \\
+Current route freeze or hard-fail status & Not frozen; selector must choose a source-discriminator repair, concrete datum construction, bounded no-go, or human-gated source-authority route. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_atlas\_glue\_refuter\_stress.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_atlas\_glue\_refuter\_stress.yaml}.
+\end{itemize}
+The conflict review is
+\texttt{parent\_conflict\_review\_resp\_lc\_m\_src\_atlas\_glue\_refuter\_stress.yaml}
+and found no blocking conflict. The fusion notes are
+\texttt{parent\_fusion\_notes\_resp\_lc\_m\_src\_atlas\_glue\_refuter\_stress.md}.
+
+\section{Conclusion}
+
+\(\AtlasGlue\) remains a useful conditional source-only primitive interface,
+but the audited primitive does not by itself determine a unique source-atlas
+transition family or label-comparison discriminator. Direct \(\Msrc\)
+construction from the primitive alone is therefore scoped-obstructed. The
+logical next route is one bounded theoretical-continuation selector packet.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{primitive}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension M\_src AtlasGlue\_src\^{}+ source primitive} [Internal
+research-control artifact].
+
+\bibitem{bridge-refuter}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension M\_src bridge Refuter stress test} [Internal
+research-control artifact].
+
+\bibitem{audit}
+The AEther-Flow Research Project. (2026, June 20). \emph{Resp\_lc
+source-extension M\_src AtlasGlue\_src\^{}+ smuggling audit} [Internal
+research-control artifact].
+
+\end{thebibliography}
+
+\end{document}

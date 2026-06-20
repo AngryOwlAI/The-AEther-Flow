@@ -165,6 +165,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-059/artifacts/100_RESP_LC_SOURCE_EXTENSION_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-058/artifacts/99_RESP_LC_SOURCE_EXTENSION_CANDIDATE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-HUMAN-GATE-ADOPTION-DECISION` `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-067/artifacts/108_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-066/artifacts/107_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-SOURCE-PRIMITIVE` `research_control/tasks/RT-20260614-065/artifacts/106_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_SOURCE_PRIMITIVE.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-ATTEMPT` `research_control/tasks/RT-20260614-061/artifacts/102_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_ATTEMPT.tex`
@@ -535,6 +536,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-HUMAN-GATE-ADOPTION-DECISION` `wiki/tex/tex-research-control-resp-lc-source-extension-human-gate-adoption-decision.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-atlas-glue-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-atlas-glue-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-SOURCE-PRIMITIVE` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-atlas-glue-source-primitive.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-ATTEMPT` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-attempt.md`
