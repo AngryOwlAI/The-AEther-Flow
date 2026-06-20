@@ -52,6 +52,23 @@ completion must include the expanded Distance-to-GR matrix from
 `research_control/design/gr_derivation_burden_map.md` and at least one
 `new_mathematical_payload` item.
 
+## Ontology-Law Packet Usage
+
+When bound by task overlay to `ontology-law-research-packet`, this role may
+formalize a missing source-side law, selector, discriminator, transition rule,
+robustness rule, or equivalent primitive as `draft/control`,
+`proposal-only`, `source-extension data`, or `canonical-ontology candidate`.
+The output must define formal objects, domains, maps, and proof obligations
+without importing target atlas, target metric, benchmark success, generated
+derivatives, registry metadata authority, role authority, or validation
+authority as source premises.
+
+This role must preserve `blocked_adoption_open_continuation`: current adoption
+is blocked while same-milestone source-side continuation remains open. It may
+prepare a human-gated candidate-law packet, but it may not adopt the law, edit
+canonical ontology, promote benchmark status, or state that underdetermination
+proves impossibility without a separate no-go theorem or scoped obstruction.
+
 ## Boundaries
 
 This role may produce formalization drafts and ontology-change proposals. It

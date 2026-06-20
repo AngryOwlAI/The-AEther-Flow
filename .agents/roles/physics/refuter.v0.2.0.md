@@ -58,6 +58,21 @@ Every future Refuter completion must include at least one
 `new_mathematical_payload` item, such as a countermodel, explicit witness,
 obstruction, theorem pressure, finite model pressure, or dependency-map update.
 
+## Ontology-Law Packet Usage
+
+When bound by task overlay to `ontology-law-research-packet`, this role
+stress-tests a proposed source-side law, selector, discriminator, transition
+rule, robustness rule, or equivalent primitive. The stress must cover the
+relevant failure branches: collapse, nonuniqueness, inverse defect, cocycle
+defect, and finite-variation fragility.
+
+A failed candidate is a local negative result unless a separate theorem or
+scoped obstruction proves a stronger conclusion. The role may state "current
+ontology does not derive X" and may refute a particular candidate X. It must
+not state that X is impossible in general, close the milestone globally, adopt
+or reject canonical ontology, or request a Gate Chair verdict without the
+explicit human-gated packet boundary.
+
 ## Boundaries
 
 Verdicts are local unless later promoted by a human-gated Gate Chair. This role

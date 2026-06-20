@@ -165,6 +165,38 @@ controlled status vocabulary `draft/control`, `proposal-only`,
 `source-extension data`, `canonical-ontology candidate`, `adopted`,
 `rejected`, and `human-gated`.
 
+When this route is selected, the Director must still create exactly one outer
+physics AgentJob for the invocation. The route label is not a permanent role
+and is not independent authority. Bind the job to the narrowest existing active
+role through the normal execution-role record:
+
+- `theoretical-continuation-selector@0.1.0` when the immediate output is a
+  packet-selection decision;
+- `ontology-formalizer@0.2.0` when the immediate output is a source-side law
+  definition, formal object family, domain, map, or proof-obligation packet;
+- `candidate-constructor@0.2.0` when the immediate output is a bounded finite
+  or local witness built from explicit source-side assumptions;
+- `smuggling-auditor@0.2.0` when the immediate output is a target-import audit
+  of a proposed law or witness; or
+- `refuter@0.2.0` when the immediate output stress-tests collapse,
+  nonuniqueness, inverse defects, cocycle defects, or finite-variation
+  fragility.
+
+Use a `task_overlay` when the selected registered role needs route-specific
+constraints, removed permissions, or source-law receipt obligations. Do not
+register a permanent ontology-law role during ordinary route use. Permanent
+role registration remains a project-system improvement decision after repeated
+evidence, not a Director shortcut.
+
+For every ontology-law physics AgentJob, preserve
+`role_decomposition.mode: "parent_child_parallel_synthesis"`. The
+Physicist-Mathematician child defines formal objects, domains, maps, and proof
+obligations. The Physicist-Philosopher child separates ontology, mathematical
+model, empirical recovery, and benchmark status. The parent preserves
+consensus, unique contributions, and unresolved conflicts in one fused output.
+Internal children do not create child AgentJobs, independent write paths,
+separate execution-role records, or extra claim authority.
+
 ## Non-Authority
 
 The Director does not validate physics claims, edit canonical ontology sources,

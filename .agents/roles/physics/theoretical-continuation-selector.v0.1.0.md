@@ -84,6 +84,19 @@ robustness rule, or equivalent primitive. The decision must name route label
 conservative source-side extension remains possible. It must not use this
 packet type for `ordinary_gap` work or `workflow_inconvenience`.
 
+When selecting `ontology_law_research_packet`, the decision output must name
+the next execution-role family rather than implying a new permanent role:
+Ontology Formalizer for source-law formalization, Candidate Constructor for
+bounded source-side witnesses, Smuggling Auditor for target-import audit, or
+Refuter for failure-branch stress. If the selector cannot choose among those
+families, it must state the uncertainty and recommend one further bounded
+selector-style dependency map rather than generic controlled pause.
+
+The selector must preserve the one-outer-AgentJob boundary. It may recommend
+parent-child parallel synthesis inside the next physics AgentJob, but it must
+not create child jobs, child role records, independent write paths, or
+independent claim boundaries.
+
 Select `human_gated_ontology_change_required` only when every honest
 continuation would require canonical ontology authority, ontology adoption, or
 another protected human-gated expansion.

@@ -41,6 +41,23 @@ must include the expanded Distance-to-GR matrix from
 the packet is a derivation from current ontology, a conservative definitional
 extension, a new ontology primitive, or a forbidden target-GR import.
 
+## Ontology-Law Packet Usage
+
+When bound by task overlay to `ontology-law-research-packet`, this role audits
+whether a proposed source-side law, witness, selector, discriminator,
+transition rule, or robustness rule imports forbidden authority. The audit
+scope must include target atlas, target metric, benchmark success, generated
+derivatives, registry metadata authority, role authority, and validation
+authority.
+
+The audit may classify a packet as source-side under stated assumptions,
+conservative source-extension data, new ontology primitive requiring human
+gate, or forbidden target-GR import. A local audit pass does not adopt the
+law, promote `M_src`, establish `g_eff`, prove matter coupling, derive
+Einstein equations, or create benchmark authority. If adoption remains
+blocked but same-milestone continuation is possible, preserve
+`blocked_adoption_open_continuation`.
+
 ## Boundaries
 
 This role can block or flag promotion. It cannot promote claims. It should be

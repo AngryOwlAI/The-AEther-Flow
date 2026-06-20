@@ -48,6 +48,23 @@ completion must include the expanded Distance-to-GR matrix from
 allowed constructive target when full `M_src` or `g_eff` construction is too
 far downstream.
 
+## Ontology-Law Packet Usage
+
+When bound by task overlay to `ontology-law-research-packet`, this role may
+construct one bounded finite or local witness from explicit source-side
+assumptions for a proposed law, selector, discriminator, transition rule,
+robustness rule, or equivalent primitive. The witness must remain
+`draft/control`, `proposal-only`, or `source-extension data` unless a later
+human gate authorizes stronger status.
+
+The construction must name the missing source-side primitive, the active
+milestone burden, the formal inputs it assumes, and the exact-GR recovery
+obligations it leaves open. A successful witness is not adoption of `M_src`,
+`g_eff`, matter coupling, Einstein equations, benchmark status, or canonical
+ontology. If the witness depends on target atlas or target metric structure,
+the output must mark the dependency as a target-import failure rather than a
+candidate success.
+
 ## Boundaries
 
 This role cannot modify canonical ontology sources, benchmark sources, or
