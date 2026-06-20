@@ -897,14 +897,22 @@ class ResearchControlTests(unittest.TestCase):
             ]
         )
 
-    def ontology_law_selector_yaml(self) -> str:
+    def ontology_law_selector_yaml(
+        self,
+        *,
+        decision_basis: str = "The active milestone lacks a derivation-critical source-side selector law.",
+        preserves_claim_blocks: str = (
+            "No canonical ontology edit benchmark promotion Gate Chair review "
+            "or completed derivation is authorized."
+        ),
+    ) -> str:
         return "\n".join(
             [
                 "theoretical_decision_output:",
                 '  selected_next_packet_type: "ontology_law_research_packet"',
-                '  decision_basis: "The active milestone lacks a derivation-critical source-side selector law."',
+                f'  decision_basis: "{decision_basis}"',
                 '  theoretical_method: "Route one bounded same-milestone ontology-law research packet."',
-                '  preserves_claim_blocks: "No canonical ontology edit benchmark promotion Gate Chair review or completed derivation is authorized."',
+                f'  preserves_claim_blocks: "{preserves_claim_blocks}"',
                 "  requires_human_gate: false",
                 '  human_gate_reason: ""',
             ]
@@ -914,57 +922,80 @@ class ResearchControlTests(unittest.TestCase):
         self,
         *,
         trigger_classification: str = "derivation_critical_missing_source_law",
+        target_derivation_milestone: str = "source_manifold_m_src",
+        milestone_burden: str = "M_src",
+        missing_source_law: str = "source-side atlas-glue selector law",
         underdetermination_statement: str = "current ontology does not derive the source-side atlas-glue selector law.",
         source_side_definition: str = "Define a source-side selector preorder from source-local discriminator profiles only.",
         status_label: str = "proposal-only",
+        current_adoption: str = "blocked",
+        continuation: str = "open",
+        status_pair: str = "blocked_adoption_open_continuation",
         gate_required: str = "true",
+        include_exact_gr_obligations: bool = True,
+        include_no_target_import_scope: bool = True,
+        include_human_gate_request: bool = True,
     ) -> str:
-        return "\n".join(
-            [
-                "ontology_law_research_packet:",
-                '  route: "ontology-law-research-packet"',
-                f'  trigger_classification: "{trigger_classification}"',
-                '  target_derivation_milestone: "source_manifold_m_src"',
-                '  milestone_burden: "M_src"',
-                '  missing_source_law: "source-side atlas-glue selector law"',
-                f'  underdetermination_statement: "{underdetermination_statement}"',
-                '  no_go_theorem_status: "not_proved"',
-                "  adoption_status:",
-                '    current_adoption: "blocked"',
-                '    continuation: "open"',
-                '    status_pair: "blocked_adoption_open_continuation"',
-                '  packet_payload_mode: "candidate_law_payload"',
-                "  candidate_law_payload:",
-                f'    status_label: "{status_label}"',
-                f'    source_side_definition: "{source_side_definition}"',
-                "    formal_objects:",
-                '      - "source-local discriminator profile"',
-                "    domains:",
-                '      - "same-milestone source objects before target atlas selection"',
-                "    maps:",
-                '      - "selector preorder map on source-local profiles"',
-                "    proof_obligations:",
-                '      - "prove source-only definition and finite-variation robustness before adoption"',
-                "  exact_gr_recovery_obligations:",
-                "    checklist:",
-                '      - "preserve exact-GR benchmark recovery as a downstream obligation"',
-                "    distance_to_gr_links:",
-                '      - "M_src"',
-                "  no_target_import_audit_scope:",
-                "    forbidden_source_classes:",
-                '      - "target_atlas"',
-                '      - "target_metric"',
-                '      - "benchmark_success"',
-                '      - "generated_derivative"',
-                '      - "registry_metadata_authority"',
-                '      - "role_authority"',
-                '      - "validation_authority"',
-                "  human_gate_request:",
-                f"    required_before_adoption: {gate_required}",
-                '    requested_decision: "Review only after candidate law audit and refutation; no adoption in this packet."',
-                '    exact_requested_ontology_edit: ""',
-            ]
-        )
+        lines = [
+            "ontology_law_research_packet:",
+            '  route: "ontology-law-research-packet"',
+            f'  trigger_classification: "{trigger_classification}"',
+            f'  target_derivation_milestone: "{target_derivation_milestone}"',
+            f'  milestone_burden: "{milestone_burden}"',
+            f'  missing_source_law: "{missing_source_law}"',
+            f'  underdetermination_statement: "{underdetermination_statement}"',
+            '  no_go_theorem_status: "not_proved"',
+            "  adoption_status:",
+            f'    current_adoption: "{current_adoption}"',
+            f'    continuation: "{continuation}"',
+            f'    status_pair: "{status_pair}"',
+            '  packet_payload_mode: "candidate_law_payload"',
+            "  candidate_law_payload:",
+            f'    status_label: "{status_label}"',
+            f'    source_side_definition: "{source_side_definition}"',
+            "    formal_objects:",
+            '      - "source-local discriminator profile"',
+            "    domains:",
+            '      - "same-milestone source objects before target atlas selection"',
+            "    maps:",
+            '      - "selector preorder map on source-local profiles"',
+            "    proof_obligations:",
+            '      - "prove source-only definition and finite-variation robustness before adoption"',
+        ]
+        if include_exact_gr_obligations:
+            lines.extend(
+                [
+                    "  exact_gr_recovery_obligations:",
+                    "    checklist:",
+                    '      - "preserve exact-GR benchmark recovery as a downstream obligation"',
+                    "    distance_to_gr_links:",
+                    '      - "M_src"',
+                ]
+            )
+        if include_no_target_import_scope:
+            lines.extend(
+                [
+                    "  no_target_import_audit_scope:",
+                    "    forbidden_source_classes:",
+                    '      - "target_atlas"',
+                    '      - "target_metric"',
+                    '      - "benchmark_success"',
+                    '      - "generated_derivative"',
+                    '      - "registry_metadata_authority"',
+                    '      - "role_authority"',
+                    '      - "validation_authority"',
+                ]
+            )
+        if include_human_gate_request:
+            lines.extend(
+                [
+                    "  human_gate_request:",
+                    f"    required_before_adoption: {gate_required}",
+                    '    requested_decision: "Review only after candidate law audit and refutation; no adoption in this packet."',
+                    '    exact_requested_ontology_edit: ""',
+                ]
+            )
+        return "\n".join(lines)
 
     def freeze_status_yaml(self) -> str:
         return "\n".join(
@@ -1260,6 +1291,46 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertEqual(report.errors, [])
 
+    def test_ontology_law_fixture_accepts_atlasglue_underdetermination_without_claim_promotion(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("packet_selection"),
+                self.ontology_law_selector_yaml(
+                    decision_basis=(
+                        "AtlasGlue_src^+ and M_src adoption remain blocked because current ontology "
+                        "does not derive a source-side profile selector transition inverse cocycle "
+                        "or finite-variation law."
+                    ),
+                    preserves_claim_blocks=(
+                        "No AtlasGlue_src^+ adoption, M_src adoption, g_eff, matter coupling, "
+                        "Einstein equations, benchmark promotion, Gate Chair status, canonical "
+                        "ontology edit, or completed derivation is authorized."
+                    ),
+                ),
+                self.ontology_law_receipt_yaml(
+                    missing_source_law=(
+                        "AtlasGlue_src^+ profile selector transition inverse cocycle "
+                        "and finite-variation law"
+                    ),
+                    underdetermination_statement=(
+                        "current ontology does not derive the AtlasGlue_src^+ profile selector "
+                        "transition inverse cocycle and finite-variation law."
+                    ),
+                    source_side_definition=(
+                        "Define AtlasGlue_src^+ candidate ordering from source-local discriminator "
+                        "profiles and source transition data only."
+                    ),
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertEqual(report.errors, [])
+
     def test_ontology_law_receipt_rejects_ordinary_gap_trigger(self) -> None:
         completion_extra = "\n".join(
             [
@@ -1267,6 +1338,31 @@ class ResearchControlTests(unittest.TestCase):
                 self.minimal_payload_yaml("packet_selection"),
                 self.ontology_law_selector_yaml(),
                 self.ontology_law_receipt_yaml(trigger_classification="ordinary_gap"),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("ordinary gaps" in error for error in report.errors))
+
+    def test_ontology_law_fixture_rejects_documentation_or_registry_repair_route(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("packet_selection"),
+                self.ontology_law_selector_yaml(
+                    decision_basis="A missing documentation page and registry row are incorrectly escalated.",
+                ),
+                self.ontology_law_receipt_yaml(
+                    trigger_classification="ordinary_gap",
+                    missing_source_law="missing README section and registry row",
+                    underdetermination_statement=(
+                        "current ontology does not derive the missing README section and registry row."
+                    ),
+                    source_side_definition="Repair the documentation and registry row.",
+                ),
             ]
         )
         report = self.validate_completion_fixture(
@@ -1284,6 +1380,27 @@ class ResearchControlTests(unittest.TestCase):
                 self.ontology_law_selector_yaml(),
                 self.ontology_law_receipt_yaml(
                     source_side_definition="Define the selector directly from target metric and target atlas data."
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("target-GR imports" in error for error in report.errors))
+
+    def test_ontology_law_fixture_rejects_selector_data_from_target_gr_atlas(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("packet_selection"),
+                self.ontology_law_selector_yaml(),
+                self.ontology_law_receipt_yaml(
+                    source_side_definition=(
+                        "Define selector data by reading the target GR atlas chart and target metric "
+                        "before source-side construction."
+                    )
                 ),
             ]
         )
@@ -1314,6 +1431,88 @@ class ResearchControlTests(unittest.TestCase):
             timestamp="2026-06-17T15:46:25Z",
         )
         self.assertTrue(any("impossibility" in error for error in report.errors))
+
+    def test_ontology_law_fixture_accepts_human_gated_canonical_candidate(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("packet_selection"),
+                self.ontology_law_selector_yaml(),
+                self.ontology_law_receipt_yaml(status_label="canonical-ontology candidate"),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_ontology_law_fixture_rejects_canonical_candidate_without_human_gate(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("packet_selection"),
+                self.ontology_law_selector_yaml(),
+                self.ontology_law_receipt_yaml(
+                    status_label="canonical-ontology candidate",
+                    gate_required="false",
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-06-17T15:46:25Z",
+        )
+        self.assertTrue(any("human gate" in error for error in report.errors))
+
+    def test_ontology_law_receipt_rejects_missing_required_boundary_fields(self) -> None:
+        cases = [
+            (
+                "milestone",
+                {"target_derivation_milestone": ""},
+                "target_derivation_milestone is required",
+            ),
+            ("burden", {"milestone_burden": ""}, "milestone_burden is required"),
+            ("missing-law", {"missing_source_law": ""}, "missing_source_law is required"),
+            (
+                "blocked-adoption",
+                {"current_adoption": "adopted"},
+                "adoption_status.current_adoption must be blocked",
+            ),
+            (
+                "exact-gr",
+                {"include_exact_gr_obligations": False},
+                "exact_gr_recovery_obligations must be a map",
+            ),
+            (
+                "no-target-scope",
+                {"include_no_target_import_scope": False},
+                "no_target_import_audit_scope must be a map",
+            ),
+            (
+                "human-gate",
+                {"include_human_gate_request": False},
+                "human_gate_request must be a map",
+            ),
+        ]
+        for name, receipt_kwargs, expected_error in cases:
+            with self.subTest(name=name):
+                completion_extra = "\n".join(
+                    [
+                        self.roadmap_distance_matrix_yaml(),
+                        self.minimal_payload_yaml("packet_selection"),
+                        self.ontology_law_selector_yaml(),
+                        self.ontology_law_receipt_yaml(**receipt_kwargs),
+                    ]
+                )
+                report = self.validate_completion_fixture(
+                    role_id="theoretical-continuation-selector",
+                    completion_extra=completion_extra,
+                    timestamp="2026-06-17T15:46:25Z",
+                )
+                self.assertTrue(any(expected_error in error for error in report.errors))
 
     def test_future_physics_job_rejects_direct_ontology_write(self) -> None:
         report = self.validator.ValidationReport()
