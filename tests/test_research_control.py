@@ -375,15 +375,51 @@ class ResearchControlTests(unittest.TestCase):
             )
         )
 
-    def test_checkpoint_stageable_paths_exclude_local_cache(self) -> None:
+    def test_checkpoint_stageable_paths_include_tracked_local_derivative(self) -> None:
         self.assertEqual(
             self.checkpoint.stageable_paths(
                 [
                     ".local/content_semantics/markdown/md-readme.txt",
+                    ".local/content_semantics/markdown/scratch.txt",
+                    "research_control/README.md",
+                ],
+                tracked_local={".local/content_semantics/markdown/md-readme.txt"},
+            ),
+            [
+                ".local/content_semantics/markdown/md-readme.txt",
+                "research_control/README.md",
+            ],
+        )
+
+    def test_checkpoint_add_stageable_paths_force_adds_local_derivative(self) -> None:
+        commands: list[list[str]] = []
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        with mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run):
+            results = self.checkpoint.add_stageable_paths(
+                [
+                    ".local/content_semantics/markdown/md-readme.txt",
+                    "FOLDER_MAP.md",
                     "research_control/README.md",
                 ]
-            ),
-            ["research_control/README.md"],
+            )
+
+        self.assertEqual([result.returncode for result in results], [0, 0])
+        self.assertEqual(
+            commands,
+            [
+                ["git", "add", "--", "FOLDER_MAP.md", "research_control/README.md"],
+                [
+                    "git",
+                    "add",
+                    "-f",
+                    "--",
+                    ".local/content_semantics/markdown/md-readme.txt",
+                ],
+            ],
         )
 
     def test_commit_message_uses_execution_role_ref(self) -> None:

@@ -207,8 +207,10 @@ Required receipt behavior:
   packet that proposes, compares, refutes, or prepares an ontology-law
   candidate.
 
-This Phase 2 schema defines the machine-checkable receipt contract. Validator
-enforcement and test fixtures remain separate Phase 4 and Phase 5 work.
+This schema defines the machine-checkable receipt contract. Phase 4 validator
+enforcement checks the receipt fields, labels, blocked-adoption/open-continuation
+boundary, no-target-import scope, exact-GR recovery obligations, and human-gate
+boundary. Broader route fixtures remain Phase 5 work.
 
 ## Optional Fields
 

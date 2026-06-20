@@ -106,8 +106,39 @@ def allowed_by_any(path: str, patterns: Iterable[str]) -> bool:
     return any(path_matches(path, pattern) for pattern in patterns)
 
 
-def stageable_paths(paths: Iterable[str]) -> list[str]:
-    return sorted(path for path in paths if not path.startswith(".local/"))
+def tracked_local_paths(paths: Iterable[str]) -> set[str]:
+    local_paths = sorted({path for path in paths if path.startswith(".local/")})
+    if not local_paths:
+        return set()
+    result = run_command(["git", "ls-files", "--", *local_paths])
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr)
+    return {line.strip() for line in result.stdout.splitlines() if line.strip()}
+
+
+def stageable_paths(paths: Iterable[str], tracked_local: set[str] | None = None) -> list[str]:
+    unique_paths = sorted(set(paths))
+    if tracked_local is None:
+        tracked_local = tracked_local_paths(unique_paths)
+    return [
+        path
+        for path in unique_paths
+        if not path.startswith(".local/") or path in tracked_local
+    ]
+
+
+def add_stageable_paths(paths: Iterable[str]) -> list[CommandResult]:
+    unique_paths = sorted(set(paths))
+    normal_paths = [path for path in unique_paths if not path.startswith(".local/")]
+    local_paths = [path for path in unique_paths if path.startswith(".local/")]
+    results: list[CommandResult] = []
+    if normal_paths:
+        results.append(run_command(["git", "add", "--", *normal_paths]))
+    if local_paths:
+        # Git ignored-directory rules can reject tracked files under .local/
+        # without -f. stageable_paths already limits this set to tracked paths.
+        results.append(run_command(["git", "add", "-f", "--", *local_paths]))
+    return results
 
 
 def load_job_contract(job_row: dict[str, str]) -> dict[str, object]:
@@ -347,9 +378,9 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
             "committed": False,
         }
 
-    add_result = run_command(["git", "add", "--", *paths_to_stage])
-    commands.append(add_result)
-    if add_result.returncode != 0:
+    add_results = add_stageable_paths(paths_to_stage)
+    commands.extend(add_results)
+    if any(result.returncode != 0 for result in add_results):
         return block_report("git add failed", job_row, final_changes, commands)
 
     staged_project_classifier = run_command([
