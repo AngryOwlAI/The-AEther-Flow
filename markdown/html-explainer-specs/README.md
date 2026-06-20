@@ -13,6 +13,11 @@ Each retained public spec must be paired with a publication brief under
 materials, claim boundary, output paths, document type, visual strategy, and
 runtime boundary for the generated HTML and GitHub-facing Markdown surfaces.
 
+The current retained corpus contains 17 reviewed page stacks. Phase 6 of the
+Reader Scope footer relocation work verified that each reviewed GitHub-facing
+Markdown page and tracked HTML page keeps Reader Scope material at the bottom
+authority hook, immediately before the footer authority language.
+
 ## What Belongs Here
 
 - Source specs listed in `registries/PUBLICATION_BRIEF_REGISTRY.csv`.

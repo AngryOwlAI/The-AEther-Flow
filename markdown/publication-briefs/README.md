@@ -10,10 +10,15 @@ Each brief must name the subject, reader, reader job, document type, reading
 experience, narrative structure, visual strategy, source basis, authority
 boundaries, output surfaces, acceptance criteria, and forbidden patterns.
 
-Approved examples in this directory:
+Reviewed corpus status:
 
-- `project-overview.publication-brief.md`
-- `source-authority.publication-brief.md`
+- The current reviewed publication corpus contains 17 page stacks.
+- `registries/PUBLICATION_BRIEF_REGISTRY.csv` is the authoritative list of
+  reviewed brief/spec/GitHub-facing Markdown/HTML output paths.
+- Phase 6 Reader Scope footer relocation QA recorded full-corpus evidence in
+  `research_control/tasks/RT-20260619-017/artifacts/reader_scope_footer_relocation_phase6_full_corpus_qa_review.md`.
+- New or retired public pages must update the registry, not only this folder
+  README.
 
 Rejected patterns:
 

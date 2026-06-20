@@ -127,8 +127,42 @@ source-backed reader surfaces, but they are generated noncanonical derivatives:
 they are non-authoritative for physics claims, control decisions, routing,
 validator behavior, and registry authority.
 
-- [Project Overview](github-facing/project-overview-explainer.md): a front-door orientation to the project missions, source spine, authority boundaries, and first reading path.
-- [Source Authority](github-facing/source-authority-explainer.md): a boundary map for TeX, registries, Markdown specs, generated wiki/PDF/HTML derivatives, and `.local` retrieval surfaces.
+### Start here
+
+| Page | Reader job | GitHub Markdown | HTML |
+| --- | --- | --- | --- |
+| Project Overview | Front-door orientation to the two project missions and first reading path. | [`project-overview-explainer.md`](github-facing/project-overview-explainer.md) | [`project-overview-explainer.html`](html/project-overview-explainer.html) |
+| Source Authority And Generated Derivatives | Boundary map for source authority, generated derivatives, registries, and local retrieval layers. | [`source-authority-explainer.md`](github-facing/source-authority-explainer.md) | [`source-authority-explainer.html`](html/source-authority-explainer.html) |
+
+### Physics frame
+
+| Page | Reader job | GitHub Markdown | HTML |
+| --- | --- | --- | --- |
+| AEther-Flow Physics Program | Overview of the physics mission, exact-GR benchmark boundary, and open derivation burden. | [`aether-flow-physics-program-explainer.md`](github-facing/aether-flow-physics-program-explainer.md) | [`aether-flow-physics-program-explainer.html`](html/aether-flow-physics-program-explainer.html) |
+| AEther-Flow Ontology | Concept explainer for the proposed substrate ontology and its current claim limits. | [`aether-flow-ontology-explainer.md`](github-facing/aether-flow-ontology-explainer.md) | [`aether-flow-ontology-explainer.html`](html/aether-flow-ontology-explainer.html) |
+| Exact-GR Benchmark Boundary | Comparison map separating benchmark compatibility from first-principles derivation. | [`exact-gr-benchmark-boundary-explainer.md`](github-facing/exact-gr-benchmark-boundary-explainer.md) | [`exact-gr-benchmark-boundary-explainer.html`](html/exact-gr-benchmark-boundary-explainer.html) |
+| GR Derivation Roadmap | Decision guide for the staged burden from ontology to effective Lorentzian geometry and GR. | [`gr-derivation-roadmap-explainer.md`](github-facing/gr-derivation-roadmap-explainer.md) | [`gr-derivation-roadmap-explainer.html`](html/gr-derivation-roadmap-explainer.html) |
+| Claim Gates, Negative Results, And Freeze Criteria | Boundary map for accepted claims, stopped lines, no-go records, and freeze conditions. | [`claim-gates-explainer.md`](github-facing/claim-gates-explainer.md) | [`claim-gates-explainer.html`](html/claim-gates-explainer.html) |
+
+### Research-control operation
+
+| Page | Reader job | GitHub Markdown | HTML |
+| --- | --- | --- | --- |
+| Research-Agent Workflow | Workflow guide for Director routing, AgentJobs, roles, completions, and handoffs. | [`research-agent-workflow-explainer.md`](github-facing/research-agent-workflow-explainer.md) | [`research-agent-workflow-explainer.html`](html/research-agent-workflow-explainer.html) |
+| Director Decisions And AgentJob Lifecycle | Lifecycle guide for decisions, job contracts, execution records, and completion evidence. | [`director-agentjob-lifecycle-explainer.md`](github-facing/director-agentjob-lifecycle-explainer.md) | [`director-agentjob-lifecycle-explainer.html`](html/director-agentjob-lifecycle-explainer.html) |
+| Parent-Child Parallel Synthesis | Concept explainer for one outer AgentJob with internal parent/child synthesis. | [`parent-child-synthesis-explainer.md`](github-facing/parent-child-synthesis-explainer.md) | [`parent-child-synthesis-explainer.html`](html/parent-child-synthesis-explainer.html) |
+| Role Routing And Execution Contracts | Reference catalog for role identity, task overlays, provisional roles, and write boundaries. | [`role-routing-explainer.md`](github-facing/role-routing-explainer.md) | [`role-routing-explainer.html`](html/role-routing-explainer.html) |
+
+### Project-system/operator references
+
+| Page | Reader job | GitHub Markdown | HTML |
+| --- | --- | --- | --- |
+| Documentation Curator Publication Process | Workflow guide for brief-first public documentation and review evidence. | [`documentation-curator-publication-process-explainer.md`](github-facing/documentation-curator-publication-process-explainer.md) | [`documentation-curator-publication-process-explainer.html`](html/documentation-curator-publication-process-explainer.html) |
+| Project-System Improvement Loop | Workflow guide for non-physics repairs to roles, validators, memory tooling, and docs. | [`project-system-improvement-explainer.md`](github-facing/project-system-improvement-explainer.md) | [`project-system-improvement-explainer.html`](html/project-system-improvement-explainer.html) |
+| Memory Registries Wiki And Retrieval Surfaces | Reference catalog for CSV registries, wiki notes, Obsidian, semantic extracts, and retrieval limits. | [`memory-system-explainer.md`](github-facing/memory-system-explainer.md) | [`memory-system-explainer.html`](html/memory-system-explainer.html) |
+| Roles And Skills Catalog | Reference catalog for active role contracts and repo-local skills. | [`roles-and-skills-explainer.md`](github-facing/roles-and-skills-explainer.md) | [`roles-and-skills-explainer.html`](html/roles-and-skills-explainer.html) |
+| Validator And Operator Workflow | Operator guide for deterministic checks, documentation impact, and checkpoint gates. | [`validator-operator-workflow-explainer.md`](github-facing/validator-operator-workflow-explainer.md) | [`validator-operator-workflow-explainer.html`](html/validator-operator-workflow-explainer.html) |
+| Technical Requirements For Reproducible Operation | Operator guide for the local Python, Codex, memory, validation, and rendering requirements. | [`technical-requirements-explainer.md`](github-facing/technical-requirements-explainer.md) | [`technical-requirements-explainer.html`](html/technical-requirements-explainer.html) |
 
 ---
 
@@ -414,6 +448,8 @@ from the canonical type registry rather than duplicated local constant sets.
 
 ---
 
+<!-- authority: explanatory -->
+
 ## Project map
 
 ```
@@ -453,10 +489,14 @@ from the canonical type registry rather than duplicated local constant sets.
 │       └── readme-banner-old*.png
 ├── html/
 │   └── Generated human-only visual explainers backed by Markdown specs.
+├── github-facing/
+│   └── Reviewed GitHub-facing Markdown derivatives backed by publication briefs and source specs.
 ├── markdown/
 │   ├── grill-memory-wiki-registry-design-handoff.md
 │   ├── html-explainer-specs/
 │   │   └── Source specs for tracked human-only HTML explainers.
+│   ├── publication-briefs/
+│   │   └── Briefs governing reviewed GitHub-facing Markdown and HTML publication pages.
 │   └── ontology-promotions/
 ├── manuscripts/
 │   ├── tex/
