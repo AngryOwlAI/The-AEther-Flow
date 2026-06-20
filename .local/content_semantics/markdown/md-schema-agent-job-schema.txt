@@ -100,9 +100,115 @@ vocabulary is `draft/control`, `proposal-only`, `source-extension data`,
 `canonical-ontology candidate`, adoption, and ontology-edit effects remain
 human-gated.
 
-Phase 2 will define the machine-checkable receipt block for this route. Until
-that receipt schema exists, this section defines route vocabulary and claim
-boundaries only; it does not add a new validator-enforced field requirement.
+## Ontology-Law Research Packet Completion Receipt
+
+When a completion selects `ontology_law_research_packet`, or otherwise names
+the route label `ontology-law-research-packet`, the completion record must
+include a top-level `ontology_law_research_packet` block. This is a
+completion-level receipt, not an independent ontology artifact.
+
+Required shape:
+
+```yaml
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: ""
+  milestone_burden: ""
+  missing_source_law: ""
+  underdetermination_statement: ""
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: ""
+    formal_objects: []
+    domains: []
+    maps: []
+    proof_obligations: []
+  candidate_law_comparison:
+    candidates: []
+    comparison_basis: []
+    selection_status: ""
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: ""
+  exact_gr_recovery_obligations:
+    checklist: []
+    distance_to_gr_links: []
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: ""
+    selector_law: ""
+    transition_law: ""
+    inverse_checks: ""
+    cocycle_checks: ""
+    finite_variation_robustness: ""
+  failure_branches:
+    collapse: ""
+    nonuniqueness: ""
+    inverse_defect: ""
+    cocycle_defect: ""
+    variation_fragility: ""
+  known_risks: []
+  failed_alternatives: []
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: ""
+    exact_requested_ontology_edit: ""
+```
+
+Required receipt behavior:
+
+- `route` must be `ontology-law-research-packet`.
+- `trigger_classification` must be `derivation_critical_missing_source_law`.
+- `target_derivation_milestone` and `milestone_burden` must name the active
+  derivation burden rather than opening an unrelated route.
+- `missing_source_law` must name the missing source-side law, selector,
+  discriminator, transition rule, robustness rule, or equivalent primitive.
+- `underdetermination_statement` must use the precise form "current ontology
+  does not derive X" or an equivalent statement that does not assert
+  impossibility without a separate no-go theorem or scoped obstruction.
+- `adoption_status.status_pair` must be
+  `blocked_adoption_open_continuation` when current adoption is blocked but
+  same-milestone continuation remains open.
+- `packet_payload_mode` must be one of `candidate_law_payload`,
+  `candidate_law_comparison`, `candidate_law_refutation`, or
+  `human_gate_precondition`.
+- At least one payload branch matching `packet_payload_mode` must be
+  substantive: a candidate source law, a bounded candidate comparison, a
+  candidate refutation, or a precise explanation that human Gate Chair
+  authority is required before such a law can be proposed.
+- `candidate_law_payload.status_label` must use the controlled status
+  vocabulary: `draft/control`, `proposal-only`, `source-extension data`,
+  `canonical-ontology candidate`, `adopted`, `rejected`, or `human-gated`.
+- `exact_gr_recovery_obligations.checklist` must name recovery obligations
+  that the candidate would have to preserve.
+- `no_target_import_audit_scope.forbidden_source_classes` must include the
+  target atlas, target metric, benchmark success, generated derivatives,
+  registry metadata authority, role authority, and validation authority.
+- `human_gate_request.required_before_adoption` must be `true` for every
+  packet that proposes, compares, refutes, or prepares an ontology-law
+  candidate.
+
+This Phase 2 schema defines the machine-checkable receipt contract. Validator
+enforcement and test fixtures remain separate Phase 4 and Phase 5 work.
 
 ## Optional Fields
 
