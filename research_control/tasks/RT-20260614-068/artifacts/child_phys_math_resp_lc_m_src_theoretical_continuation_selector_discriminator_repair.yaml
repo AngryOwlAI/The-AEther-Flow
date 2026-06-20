@@ -1,0 +1,40 @@
+artifact_id: "child-phys-math-RT-20260614-068"
+task_id: "RT-20260614-068"
+job_id: "AJ-RT-20260614-068-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+question: "Which bounded next packet most directly addresses the transition-token nonuniqueness and label-compatibility collapse found in RT-20260614-067?"
+option_analysis:
+  - packet_type: "source_side_selector_primitive"
+    rank: 1
+    decision: "select"
+    rationale: "The obstruction is caused by missing source-side discriminants and transition-selection data. A discriminator repair primitive targets that missing datum without adopting AtlasGlue_src^+ or M_src."
+  - packet_type: "bounded_theoretical_calculation"
+    rank: 2
+    decision: "defer"
+    rationale: "A calculation can test a proposed discriminator after it exists but does not by itself specify the needed selector rule."
+  - packet_type: "source_side_irrelevance_theorem"
+    rank: 3
+    decision: "defer"
+    rationale: "A no-go theorem is premature because a constructive discriminator repair remains available."
+  - packet_type: "human_gated_ontology_change_required"
+    rank: 4
+    decision: "reject_now"
+    rationale: "No protected authority is required to draft a non-promotional repair target."
+selected_packet:
+  selected_next_packet_type: "source_side_selector_primitive"
+  selected_next_packet_name: "AtlasGlue_src^+ source-discriminator repair primitive"
+  target_obligations:
+    - "explicit source-side discriminator token family for duplicate-compatible tokens"
+    - "label-comparison refinement that separates source sites when separation is source-supported"
+    - "transition-token selector rule using only source data"
+    - "uniqueness condition for admissible transition families"
+    - "finite-variation stability obligation under strict source-isomorphic perturbations"
+    - "explicit failure branch when discriminating source data are absent"
+new_mathematical_payload:
+  - payload_type: "packet_selection"
+    summary: "Selected a source_side_selector_primitive packet specialized to source-discriminator repair."
+  - payload_type: "dependency_map_update"
+    summary: "Separated the next M_src burden into explicit source discriminants comparison refinement transition-token selection and stability obligations."
+claim_boundary_preservation: "No AtlasGlue_src^+ adoption M_src adoption M_src construction g_eff matter coupling Einstein equations benchmark Gate Chair closure completed-derivation future source-extension impossibility or global theory rejection is authorized."

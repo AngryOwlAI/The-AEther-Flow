@@ -1,0 +1,21 @@
+artifact_id: "parent-conflict-review-RT-20260614-068"
+task_id: "RT-20260614-068"
+job_id: "AJ-RT-20260614-068-001"
+execution_unit_id: "parent"
+status: "completed"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260614-068/artifacts/child_phys_math_resp_lc_m_src_theoretical_continuation_selector_discriminator_repair.yaml"
+  - "research_control/tasks/RT-20260614-068/artifacts/child_phys_phil_resp_lc_m_src_theoretical_continuation_selector_discriminator_repair.yaml"
+conflict_review:
+  status: "no_conflict"
+  resolution_rounds: 0
+  unresolved_conflicts:
+    - conflict_id: ""
+      type: ""
+      severity: ""
+      summary: ""
+findings:
+  shared_selection: "Both children select source_side_selector_primitive specialized to source-discriminator repair."
+  mathematical_alignment: "Both children treat transition-token nonuniqueness and label-compatibility collapse as missing source discriminants rather than as M_src construction evidence."
+  authority_alignment: "Both children preserve adoption and downstream GR claim blocks and do not require a human gate for a draft/control repair target."
+fusion_instruction: "Fuse the child outputs into one old-style selector artifact with theoretical_decision_output distance_to_gr_status new_mathematical_payload and next ontology-formalizer routing."
