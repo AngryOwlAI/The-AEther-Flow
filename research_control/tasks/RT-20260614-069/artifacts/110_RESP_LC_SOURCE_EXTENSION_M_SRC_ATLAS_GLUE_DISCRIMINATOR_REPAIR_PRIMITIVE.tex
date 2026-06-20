@@ -1,0 +1,477 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\XiR}{\Xi_X^R}
+\newcommand{\SX}{S_X}
+\newcommand{\Splus}{S_X^+}
+\newcommand{\AtlasGlue}{\mathsf{AtlasGlue}_{\mathrm{src}}^{+}}
+\newcommand{\AtlasGlueDisc}{\mathsf{AtlasGlueDisc}_{\mathrm{src}}^{+}}
+\newcommand{\Cov}{\mathsf{Cov}^{+}}
+\newcommand{\Ov}{\mathsf{Ov}^{+}}
+\newcommand{\Tau}{\mathsf{Tau}^{+}}
+\newcommand{\Germ}{\mathcal{G}^{+}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{+}}
+\newcommand{\Disc}{\Delta^{+}}
+\newcommand{\Prof}{\Pi^{+}}
+\newcommand{\Cand}{\mathcal{C}^{\Delta}}
+\newcommand{\Sel}{\mathsf{Sel}_{\Delta}}
+\newcommand{\Disj}{\bigsqcup}
+
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{construction}{Construction}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+\newtheorem{counterexample}{Counterexample}
+\newtheorem{failure}{Failure}
+\newtheorem{status}{Status}
+
+\title{Resp\_lc Source-Extension M\_src AtlasGlueDisc\_src\^{}+ Discriminator Repair Primitive}
+\author{The AEther-Flow Research Project}
+\date{2026-06-20}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Ontology Formalizer packet for
+\texttt{RT-20260614-069}. It drafts \(\AtlasGlueDisc\), a source-side
+discriminator repair primitive for \(\AtlasGlue\) transition-token and
+label-comparison selection after \texttt{RT-20260614-068} selected a
+\texttt{source\_side\_selector\_primitive} packet.
+
+This artifact is not an adoption of \(\AtlasGlue\), not an adoption of
+\(\AtlasGlueDisc\), not an adoption or construction of \(\Msrc\), not
+\(\geff\), not matter coupling, not Einstein equations, not benchmark
+evidence, not Gate Chair closure, and not completed-derivation evidence. It
+does not claim future source-extension impossibility and does not reject the
+global theory.
+
+\section{Repair Target}
+
+\begin{definition}[Discriminator repair setting]
+Let
+\[
+  \mathcal A^+ =
+  (I,\{\Germ_i\}_{i\in I},\Omega^+,\Cov,\{\Ov_{ij}\}_{i,j\in I},
+  \{\tau_{ij}^+\}_{i,j\in I})
+\]
+be a draft/control \(\AtlasGlue\) datum in the sense of
+\texttt{RT-20260614-065}. A discriminator repair setting is a tuple
+\[
+  \mathcal D^+=(\Disc,\{\Prof_i\}_{i\in I},\{\equiv_{ij}^{\Delta}\}_{i,j\in I},
+  \{\preceq_{ij}^{\Delta}\}_{i,j\in I})
+\]
+where all entries are supplied as source-side data. No target topology,
+target smooth atlas, target transition map, metric scale, proper time,
+empirical calibration, benchmark solution, validation status, generated
+derivative, or role authority is part of the datum.
+\end{definition}
+
+\begin{definition}[Source discriminator profile]
+For each patch \(i\), a discriminator profile is a source function
+\[
+  \Prof_i:U_i\to D_i^+
+\]
+whose values are source tokens or finite tuples of source tokens. The profile
+may use source carriers, source readout syntax, response-label syntax,
+coverage tokens, retained exact-branch certificates, and explicitly supplied
+source-comparison tokens. It may not use target-coordinate, metric, empirical,
+benchmark, validator, generated-output, or role-authority data.
+\end{definition}
+
+\begin{definition}[\(\Delta\)-refined source compatibility]
+For \(u\in U_i\) and \(v\in U_j\), write
+\[
+  u\equiv_{ij}^{\Delta}v
+\]
+when three source-side checks hold:
+\begin{enumerate}
+  \item \((u,v)\in\Ov_{ij}\);
+  \item the readout and response-label syntax of \(u\) and \(v\) are
+  compatible under the declared \(\AtlasGlue\) comparison rule;
+  \item \(\Prof_i(u)\) and \(\Prof_j(v)\) are compatible under the declared
+  discriminator comparison rule.
+\end{enumerate}
+The third condition is the repair term. It prevents a label-only comparison
+from collapsing source tokens that remain distinct under supplied source
+discriminants.
+\end{definition}
+
+\begin{definition}[Candidate repaired transition family]
+For each ordered pair \((i,j)\), let \(\Cand_{ij}\) be the set of partial
+bijections \(c:U_i\rightharpoonup U_j\) such that:
+\begin{enumerate}
+  \item for all \(u\in\operatorname{dom}(c)\), \(u\equiv_{ij}^{\Delta}c(u)\);
+  \item the inverse candidate \(c^{-1}\) belongs to \(\Cand_{ji}\) whenever
+  both candidate sets are defined;
+  \item candidates are compatible with declared coverage and double-overlap
+  closure;
+  \item candidates do not import target topology, target atlas structure, or
+  metric information.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Source selector rule]
+The selector relation \(\preceq_{ij}^{\Delta}\) is a source-supplied preorder
+on \(\Cand_{ij}\). Define
+\[
+  \Sel_{ij}(\Cand_{ij}) =
+  \begin{cases}
+    c_{ij}, & \text{if \(c_{ij}\) is the unique \(\preceq_{ij}^{\Delta}\)-minimal candidate;}\\
+    \bot, & \text{if no unique source-minimal candidate exists.}
+  \end{cases}
+\]
+The symbol \(\bot\) is a failure value. It is not permission to choose by
+arbitrary convention, target geometry, benchmark behavior, validation status,
+role authority, or generated-derivative visibility.
+\end{definition}
+
+\begin{definition}[\(\AtlasGlueDisc\) datum]
+An \(\AtlasGlueDisc\) datum is an \(\AtlasGlue\) datum together with a
+discriminator repair setting \(\mathcal D^+\) such that every selected
+transition
+\[
+  \widehat{\tau}_{ij}^+ = \Sel_{ij}(\Cand_{ij})
+\]
+is defined or else the repair packet explicitly records selector failure for
+that overlap.
+\end{definition}
+
+\section{Assumptions}
+
+\begin{assumption}[Source-side discriminator sufficiency]
+For every declared overlap pair \((i,j)\), if two candidate transition tokens
+identify the same readout and response-label syntax but lead to different
+quotient identifications, then the discriminator profiles separate them or
+the selector returns \(\bot\).
+\end{assumption}
+
+\begin{assumption}[Unique source-minimal transition]
+For each overlap pair needed by the packet, \(\Cand_{ij}\) has exactly one
+\(\preceq_{ij}^{\Delta}\)-minimal candidate. If this assumption fails, the
+repair does not select a transition token.
+\end{assumption}
+
+\begin{assumption}[Repaired inverse and cocycle]
+The selected candidates satisfy:
+\[
+  \widehat{\tau}_{ji}^+=(\widehat{\tau}_{ij}^+)^{-1}
+\]
+whenever both sides are defined, and for all \(i,j,k\) and all \(u\) where
+both sides are defined,
+\[
+  \widehat{\tau}_{ik}^+(u)=
+  \widehat{\tau}_{jk}^+(\widehat{\tau}_{ij}^+(u)).
+\]
+These are source-token conditions. They are not target smooth-atlas
+conditions.
+\end{assumption}
+
+\begin{assumption}[No-target-import screen]
+The construction of \(\Disc\), \(\Prof_i\), \(\equiv_{ij}^{\Delta}\),
+\(\preceq_{ij}^{\Delta}\), \(\Cand_{ij}\), and \(\Sel_{ij}\) may use only
+source-side carriers, source readout syntax, response-label syntax, coverage
+tokens, overlap predicates, retained exact-branch certificates, and explicit
+source comparison rules. It may not use target topology, target differentiable
+structure, target transition functions, target metric scale, proper time,
+empirical observer protocol, matter coupling, benchmark solution structure,
+validation status, generated wiki visibility, or role authority as physics
+evidence.
+\end{assumption}
+
+\section{Construction}
+
+\begin{construction}[Repaired source quotient support]
+Given an \(\AtlasGlueDisc\) datum with all required selected transitions
+defined, form
+\[
+  D=\Disj_{i\in I}(\{i\}\times U_i).
+\]
+Generate a relation \(\sim_{\Delta}\) on \(D\) by
+\[
+  (i,u)\sim_{\Delta}(j,v)
+  \quad\text{when}\quad
+  \widehat{\tau}_{ij}^+(u)=v,
+\]
+and take its reflexive, symmetric, and transitive closure. Define
+\[
+  \Qsrc^{\Delta}=D/{\sim_{\Delta}}.
+\]
+This object is a repaired source quotient support. It is not a target
+manifold, not a smooth atlas, and not \(\Msrc\) adoption.
+\end{construction}
+
+\section{Conditional Theorem}
+
+\begin{theorem}[Source-side discriminator repair theorem]
+Suppose an \(\AtlasGlueDisc\) datum satisfies source-side discriminator
+sufficiency, unique source-minimal transition selection, repaired inverse and
+cocycle, and the no-target-import screen. Then:
+\begin{enumerate}
+  \item the repaired transition family
+  \(\{\widehat{\tau}_{ij}^+\}_{i,j\in I}\) is unique relative to the supplied
+  source data \((\mathcal A^+,\mathcal D^+)\);
+  \item the repaired source quotient support \(\Qsrc^{\Delta}\) is
+  well-defined;
+  \item source tokens that are label-compatible but discriminator-distinct are
+  not identified unless the supplied discriminator comparison rule says they
+  are compatible;
+  \item if the selector returns \(\bot\) on a required overlap, the repair
+  blocks construction rather than importing target-side selection authority.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For each overlap pair \((i,j)\), the selected transition
+\(\widehat{\tau}_{ij}^+\) is either the unique source-minimal element of
+\(\Cand_{ij}\) or is undefined. Under the unique source-minimal transition
+assumption, the selected transition is unique relative to the supplied
+source-side preorder and candidate set. No target structure enters the
+selection because the no-target-import screen restricts the candidate filter,
+compatibility relation, and selector preorder to source-side data.
+
+Each selected candidate is a partial bijection respecting
+\(\Delta\)-refined compatibility. The repaired inverse assumption makes
+pairwise identifications direction-independent. The repaired cocycle
+assumption makes triple-overlap transport path-independent at the source-token
+level. The reflexive, symmetric, and transitive closure of the selected
+transition pairs therefore defines a quotient set
+\(\Qsrc^{\Delta}\).
+
+If two source tokens agree in readout or response-label syntax but differ in
+discriminator profile, they fail \(\Delta\)-refined compatibility unless the
+declared source discriminator comparison rule explicitly permits the
+identification. Hence the repaired quotient does not collapse them by label
+compatibility alone.
+
+If \(\Sel_{ij}(\Cand_{ij})=\bot\), no transition token is selected for that
+required overlap. The construction records selector failure. It does not
+license target-topology import, benchmark inference, role-authority
+selection, or arbitrary tie-breaking. This proves the conditional result.
+\end{proof}
+
+\section{Finite Source-Only Witness}
+
+\begin{example}[Duplicate-compatible source label repaired by discriminator]
+Let \(I=\{X,Y,Z\}\). Use carriers
+\[
+  U_X=\{x_A,x_B\},\quad
+  U_Y=\{y_B,y_C\},\quad
+  U_Z=\{z_{B0},z_{B1},z_D\}.
+\]
+Let source readout syntax assign
+\[
+  \chi_X^+(x_B)=B,\quad
+  \chi_Y^+(y_B)=B,\quad
+  \chi_Z^+(z_{B0})=B,\quad
+  \chi_Z^+(z_{B1})=B.
+\]
+Thus \(z_{B0}\) and \(z_{B1}\) are duplicate-compatible under the old
+label-only screen.
+
+Supply a source discriminator profile \(\Prof\) whose relevant values are
+\[
+  \Prof_X(x_B)=h_0,\quad
+  \Prof_Y(y_B)=h_0,\quad
+  \Prof_Z(z_{B0})=h_0,\quad
+  \Prof_Z(z_{B1})=h_1.
+\]
+The refined compatibility rule requires equality of the \(h\)-token on
+overlaps with \(X\) and \(Y\). Then the candidate transition
+\[
+  x_B\mapsto z_{B0}
+\]
+is compatible and the candidate transition
+\[
+  x_B\mapsto z_{B1}
+\]
+is rejected by discriminator mismatch. The repaired selector therefore
+chooses
+\[
+  \widehat{\tau}_{XZ}^+(x_B)=z_{B0},
+  \qquad
+  \widehat{\tau}_{YZ}^+(y_B)=z_{B0}.
+\]
+The quotient has a class \([x_B]=[y_B]=[z_{B0}]\), while \(z_{B1}\) remains a
+separate source token unless some other source-side compatibility datum
+identifies it.
+\end{example}
+
+This witness repairs exactly the direct transition-label nonuniqueness that
+the prior Refuter stress exposed. It does not show that the present canonical
+ontology already supplies \(h_0,h_1\), and it does not construct \(\Msrc\).
+
+\section{Failure Branch}
+
+\begin{failure}[Underdetermined discriminator repair]
+If \(z_{B0}\) and \(z_{B1}\) have the same readout label and the same supplied
+discriminator profile, then the repaired compatibility relation does not
+separate them. If the source selector preorder also gives a tie between the
+candidate transitions \(x_B\mapsto z_{B0}\) and \(x_B\mapsto z_{B1}\), then
+\[
+  \Sel_{XZ}(\Cand_{XZ})=\bot.
+\]
+The repair primitive then blocks the transition selection. Choosing one
+candidate by target chart smoothness, metric regularity, empirical calibration,
+benchmark resemblance, validation status, role label, file name, or generated
+wiki visibility would violate the no-target-import screen.
+\end{failure}
+
+\section{Finite-Variation Stability}
+
+\begin{definition}[Strict discriminator-preserving finite variation]
+A strict discriminator-preserving finite variation of an \(\AtlasGlueDisc\)
+datum consists of source bijections on carriers, site tokens, readout tokens,
+response-label tokens, and discriminator-token values that preserve coverage,
+overlap membership, refined compatibility, candidate transition membership,
+and the selector preorder:
+\[
+  c\preceq_{ij}^{\Delta}c'
+  \quad\Longleftrightarrow\quad
+  \sigma(c)\preceq_{ij}^{\Delta\prime}\sigma(c').
+\]
+\end{definition}
+
+\begin{lemma}[Strict discriminator-variation stability]
+An \(\AtlasGlueDisc\) datum satisfying the theorem hypotheses remains
+admissible under strict discriminator-preserving finite variation, and the
+repaired quotient supports are source-isomorphic.
+\end{lemma}
+
+\begin{proof}
+The variation maps preserve exactly the relations used by the candidate
+filter, refined compatibility, selector preorder, inverse condition, and
+cocycle condition. Therefore a unique source-minimal candidate maps to a
+unique source-minimal candidate in the varied datum. The quotient map
+\[
+  [(i,u)]_{\Delta}\mapsto[(i,\sigma_i(u))]_{\Delta'}
+\]
+is well-defined and has inverse induced by the inverse source bijections.
+\end{proof}
+
+\begin{failure}[Arbitrary finite-variation robustness is not proved]
+The broader finite-variation burden is not discharged. A perturbation that
+deletes discriminator tokens, merges \(h_0\) and \(h_1\), adds an
+uncontrolled duplicate-compatible token, or changes the selector preorder can
+make \(\Sel_{ij}(\Cand_{ij})=\bot\). The repair proves only strict
+discriminator-preserving stability and explicitly fails to prove arbitrary
+finite-variation robustness.
+\end{failure}
+
+\section{Source-Extension Classification}
+
+\begin{center}
+\begin{tabular}{p{0.34\linewidth}p{0.56\linewidth}}
+\hline
+Category & Classification for this packet \\
+\hline
+Derivable from current ontology & Not shown. The packet does not prove that
+the current canonical ontology already supplies discriminator profiles or
+selector preorders. \\
+Conservative definitional extension & Candidate only relative to an expanded
+source signature containing discriminator profiles and source selector
+preorders. \\
+Genuinely new ontology primitive & Would require later protected adoption if
+promoted beyond draft/control. \\
+Forbidden target-GR import & Not detected as written in this formalization,
+because the packet states explicit no-target-import screens. A separate
+Smuggling Auditor task remains required. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Rejection Screens}
+
+This repaired primitive rejects the following as inputs to \(\Disc\),
+\(\Prof_i\), \(\equiv_{ij}^{\Delta}\), \(\preceq_{ij}^{\Delta}\),
+\(\Cand_{ij}\), or \(\Sel_{ij}\): target topology, target smooth atlas,
+target coordinate transition functions, metric scale, proper time, empirical
+calibration, empirical observer protocol, benchmark solution structure,
+matter coupling, Einstein-equation structure, validation status, generated
+derivative visibility, and role-authority labels.
+
+It also rejects source-authority laundering: a datum is not source-side
+physics evidence merely because a role, file, registry row, or generated note
+names it. The discriminants and selector preorders must be explicit source
+data or the repair returns \(\bot\).
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Retained only as exact-branch source-localization input; no robustness promotion is supplied. \\
+Resp\_lc & Uses adopted \(\XiR\) only as admissible source-extension data in \(\Splus\); the old \(\SX\)-only obstruction remains valid. \\
+M\_src & \(\AtlasGlueDisc\) is drafted as a discriminator repair primitive for transition-token selection; full \(\Msrc\) remains unconstructed and unadopted. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; response-token semantics remain non-coupling data. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Strict discriminator-preserving stability is proved; arbitrary finite-variation robustness explicitly fails here. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No closure or suspension verdict is supplied. \\
+Current route freeze or hard-fail status & Not frozen; the next route is audit of the draft repaired primitive. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_atlas\_glue\_discriminator\_repair.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_atlas\_glue\_discriminator\_repair.yaml}.
+\end{itemize}
+The conflict review is
+\texttt{parent\_conflict\_review\_resp\_lc\_m\_src\_atlas\_glue\_discriminator\_repair.yaml}
+and found no blocking conflict. The fusion notes are
+\texttt{parent\_fusion\_notes\_resp\_lc\_m\_src\_atlas\_glue\_discriminator\_repair.md}.
+
+\section{Conclusion}
+
+\(\AtlasGlueDisc\) can be drafted as a source-side discriminator repair
+primitive. Under explicit source-discriminator profiles and a source-supplied
+selector preorder, it gives a conditional uniqueness theorem for repaired
+transition-token selection and a finite witness that separates
+duplicate-compatible labels. It also records failure when source discriminants
+or selector uniqueness are absent. The logical next route is one bounded
+Smuggling Auditor task.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{atlasglue}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension M\_src AtlasGlue\_src\^{}+ source primitive} [Internal
+research-control artifact].
+
+\bibitem{handoff0110}
+The AEther-Flow Research Project. (2026, June 20). \emph{Handoff 0110}
+[Internal research-control handoff].
+
+\bibitem{selector}
+The AEther-Flow Research Project. (2026, June 20). \emph{Resp\_lc
+source-extension M\_src theoretical continuation selector discriminator
+repair decision} [Internal research-control artifact].
+
+\end{thebibliography}
+
+\end{document}
