@@ -2,14 +2,14 @@
 object_id: "MD-SKILL-CONTINUE-RESEARCH"
 format: "markdown"
 source_path: ".codex/skills/continue-research/SKILL.md"
-source_hash: "f1c8c08f64d99f04ee6221c31a4f3fba4ec648ae0e0fd52b8bb50cd877882967"
+source_hash: "ff63af2258cf7a39ea54f374352c0c6e05da6b45f48dfc94d31e844a7a7bf350"
 authority_status: "project_control"
 role: "skill_contract"
 owner_skill: "continue-research"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-skill-continue-research.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-skill-continue-research.md"
-content_hash: "f1c8c08f64d99f04ee6221c31a4f3fba4ec648ae0e0fd52b8bb50cd877882967"
+content_hash: "ff63af2258cf7a39ea54f374352c0c6e05da6b45f48dfc94d31e844a7a7bf350"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SKILL-CONTINUE-RESEARCH"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `f1c8c08f64d99f04ee6221c31a4f3fba4ec648ae0e0fd52b8bb50cd877882967`
+- Content hash: `ff63af2258cf7a39ea54f374352c0c6e05da6b45f48dfc94d31e844a7a7bf350`
 - Extracted text path: `.local/content_semantics/markdown/md-skill-continue-research.txt`
-- Character count: `12130`
+- Character count: `15004`
 
 ## Relationships
 

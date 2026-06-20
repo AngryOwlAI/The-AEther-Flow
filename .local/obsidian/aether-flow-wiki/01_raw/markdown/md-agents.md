@@ -61,6 +61,36 @@ Source-extension and finite toy metric-response packets are controlled
 categories; they do not promote ontology, metric, coupling, Einstein-equation,
 benchmark, or Gate Chair claims.
 
+## Ontology-Law Research Packet Route
+
+`ontology-law-research-packet` is a named research-control route for the
+narrow case where the active derivation milestone is blocked because the
+current ontology does not derive a derivation-critical source-side law,
+selector, discriminator, transition rule, robustness rule, or equivalent
+primitive.
+
+Use this route only for `derivation_critical_missing_source_law`. Do not use it
+for `ordinary_gap` work such as missing documentation, missing registry rows,
+generated derivative drift, missing citations, computations that can be
+performed under the existing ontology, or proof-detail work under existing
+ontology. Do not use it for `workflow_inconvenience` such as tedious casework,
+slow literature review, awkward templates, or strict validation friction.
+
+Underdetermination language must remain precise. Allowed: "current ontology
+does not derive X." Disallowed without a separate no-go theorem: "therefore X
+is impossible." When a conservative source-side extension remains possible,
+the control record must use `blocked_adoption_open_continuation` or equivalent
+plain language: current adoption is blocked while same-milestone continuation
+remains open.
+
+Candidate-law outputs must preserve status vocabulary exactly: `draft/control`,
+`proposal-only`, `source-extension data`, `canonical-ontology candidate`,
+`adopted`, `rejected`, and `human-gated`. `canonical-ontology candidate`,
+`adopted`, and ontology modification language remain blocked until explicit
+human Gate Chair authority. The route must preserve exact-GR recovery
+obligations, target-atlas-free source definitions, and the active
+`target_derivation_milestone` plus `milestone_burden`.
+
 ## Project-System Improvement
 
 For project-system repair, explanatory documentation synchronization,

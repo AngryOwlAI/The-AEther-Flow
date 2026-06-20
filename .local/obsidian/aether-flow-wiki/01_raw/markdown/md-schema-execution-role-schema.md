@@ -28,6 +28,21 @@ contract that decides how that template, overlay, or provisional role is used.
 - `task_overlay`
 - `one_job_provisional_role`
 
+## Route Labels And Execution Roles
+
+Research-control route labels do not create new execution-role kinds. The
+route `ontology-law-research-packet` may be bound to an existing registered
+role, a task overlay, or a one-job provisional role only through the normal
+Director decision and AgentJob contract.
+
+For this route, the execution role must preserve the same-milestone burden,
+the `derivation_critical_missing_source_law` trigger, and the distinction
+between `ordinary_gap`, `workflow_inconvenience`, and genuine ontology-law
+underdetermination. It may not use role authority to promote a candidate law
+from `draft/control`, `proposal-only`, `source-extension data`, or
+`canonical-ontology candidate` into adopted ontology without explicit human
+Gate Chair authority.
+
 Use `registered_role` only when the registered role fits directly and no
 authority delta is needed. Use `task_overlay` when the selected role remains a
 registered role but needs task-specific constraints, removed permissions, or a

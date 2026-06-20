@@ -78,6 +78,140 @@ cannot name a derivation milestone should be routed as documentation,
 methodology, validation, or project-system work rather than physics
 derivation work.
 
+## Route Contract Vocabulary
+
+`ontology-law-research-packet` is a named route label for the narrow case where
+the current ontology does not derive a derivation-critical source-side law,
+selector, discriminator, transition rule, robustness rule, or equivalent
+primitive. The trigger classification is
+`derivation_critical_missing_source_law`.
+
+The non-trigger classifications are `ordinary_gap` and
+`workflow_inconvenience`. Ordinary gaps include missing documentation, missing
+registry rows, generated derivative drift, missing citations, computations
+available under existing ontology, and proof-detail work under existing
+ontology. Workflow inconvenience includes tedious casework, slow literature
+review, awkward templates, and strict validation friction.
+
+Use `blocked_adoption_open_continuation` when current adoption is blocked but
+same-milestone source-side continuation remains open. Candidate-law status
+vocabulary is `draft/control`, `proposal-only`, `source-extension data`,
+`canonical-ontology candidate`, `adopted`, `rejected`, and `human-gated`.
+`canonical-ontology candidate`, adoption, and ontology-edit effects remain
+human-gated.
+
+## Ontology-Law Research Packet Completion Receipt
+
+When a completion selects `ontology_law_research_packet`, or otherwise names
+the route label `ontology-law-research-packet`, the completion record must
+include a top-level `ontology_law_research_packet` block. This is a
+completion-level receipt, not an independent ontology artifact.
+
+Required shape:
+
+```yaml
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: ""
+  milestone_burden: ""
+  missing_source_law: ""
+  underdetermination_statement: ""
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: ""
+    formal_objects: []
+    domains: []
+    maps: []
+    proof_obligations: []
+  candidate_law_comparison:
+    candidates: []
+    comparison_basis: []
+    selection_status: ""
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: ""
+  exact_gr_recovery_obligations:
+    checklist: []
+    distance_to_gr_links: []
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: ""
+    selector_law: ""
+    transition_law: ""
+    inverse_checks: ""
+    cocycle_checks: ""
+    finite_variation_robustness: ""
+  failure_branches:
+    collapse: ""
+    nonuniqueness: ""
+    inverse_defect: ""
+    cocycle_defect: ""
+    variation_fragility: ""
+  known_risks: []
+  failed_alternatives: []
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: ""
+    exact_requested_ontology_edit: ""
+```
+
+Required receipt behavior:
+
+- `route` must be `ontology-law-research-packet`.
+- `trigger_classification` must be `derivation_critical_missing_source_law`.
+- `target_derivation_milestone` and `milestone_burden` must name the active
+  derivation burden rather than opening an unrelated route.
+- `missing_source_law` must name the missing source-side law, selector,
+  discriminator, transition rule, robustness rule, or equivalent primitive.
+- `underdetermination_statement` must use the precise form "current ontology
+  does not derive X" or an equivalent statement that does not assert
+  impossibility without a separate no-go theorem or scoped obstruction.
+- `adoption_status.status_pair` must be
+  `blocked_adoption_open_continuation` when current adoption is blocked but
+  same-milestone continuation remains open.
+- `packet_payload_mode` must be one of `candidate_law_payload`,
+  `candidate_law_comparison`, `candidate_law_refutation`, or
+  `human_gate_precondition`.
+- At least one payload branch matching `packet_payload_mode` must be
+  substantive: a candidate source law, a bounded candidate comparison, a
+  candidate refutation, or a precise explanation that human Gate Chair
+  authority is required before such a law can be proposed.
+- `candidate_law_payload.status_label` must use the controlled status
+  vocabulary: `draft/control`, `proposal-only`, `source-extension data`,
+  `canonical-ontology candidate`, `adopted`, `rejected`, or `human-gated`.
+- `exact_gr_recovery_obligations.checklist` must name recovery obligations
+  that the candidate would have to preserve.
+- `no_target_import_audit_scope.forbidden_source_classes` must include the
+  target atlas, target metric, benchmark success, generated derivatives,
+  registry metadata authority, role authority, and validation authority.
+- `human_gate_request.required_before_adoption` must be `true` for every
+  packet that proposes, compares, refutes, or prepares an ontology-law
+  candidate.
+
+This schema defines the machine-checkable receipt contract. Phase 4 validator
+enforcement checks the receipt fields, labels, blocked-adoption/open-continuation
+boundary, no-target-import scope, exact-GR recovery obligations, and human-gate
+boundary. Broader route fixtures remain Phase 5 work.
+
 ## Optional Fields
 
 - `objective`
@@ -194,6 +328,7 @@ The selector may choose only one future packet type:
 - `distinct_scoped_no_go_question`
 - `bounded_theoretical_calculation`
 - `finite_toy_metric_response_model`
+- `ontology_law_research_packet`
 - `source_extension_candidate`
 - `source_extension_smuggling_audit`
 - `source_extension_refuter_stress`
@@ -203,6 +338,10 @@ The selector may choose only one future packet type:
 The last option is reserved for cases where the next honest continuation needs
 canonical ontology authority, ontology adoption, or another protected human
 gate. Missing empirical data or absent experiment access is not sufficient.
+When `ontology_law_research_packet` is selected, the route label is
+`ontology-law-research-packet`, the trigger classification must be
+`derivation_critical_missing_source_law`, and current adoption must remain
+blocked unless a later explicit human Gate Chair action authorizes otherwise.
 
 After `2026-06-17T15:46:25Z`, `distinct_scoped_no_go_question` must include a
 new-payload novelty statement and a decision consequence. Source-extension

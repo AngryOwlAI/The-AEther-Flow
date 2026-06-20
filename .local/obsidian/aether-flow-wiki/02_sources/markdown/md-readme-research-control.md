@@ -2,14 +2,14 @@
 object_id: "MD-README-RESEARCH-CONTROL"
 format: "markdown"
 source_path: "research_control/README.md"
-source_hash: "75901b75fa48ee85cb4706a4c733196dfcdc46a2b252b01f59bca26fe479562f"
+source_hash: "78afa7b08e725f2b4fb3bc9ca9409e5ed7b440302af357b6d890244ae9cc5fea"
 authority_status: "project_control"
 role: "research_control_documentation"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-readme-research-control.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-readme-research-control.md"
-content_hash: "75901b75fa48ee85cb4706a4c733196dfcdc46a2b252b01f59bca26fe479562f"
+content_hash: "78afa7b08e725f2b4fb3bc9ca9409e5ed7b440302af357b6d890244ae9cc5fea"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-README-RESEARCH-CONTROL"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `75901b75fa48ee85cb4706a4c733196dfcdc46a2b252b01f59bca26fe479562f`
+- Content hash: `78afa7b08e725f2b4fb3bc9ca9409e5ed7b440302af357b6d890244ae9cc5fea`
 - Extracted text path: `.local/content_semantics/markdown/md-readme-research-control.txt`
-- Character count: `11003`
+- Character count: `13383`
 
 ## Relationships
 
