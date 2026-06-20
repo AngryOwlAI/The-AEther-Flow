@@ -1,0 +1,53 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-072"
+job_id: "AJ-RT-20260614-072-001"
+status: "completed"
+claim_boundary: "finite repaired source-atlas witness only; no AtlasGlue_src^+ adoption AtlasGlueDisc_src^+ adoption M_src adoption full M_src construction g_eff matter coupling Einstein equations benchmark promotion Gate Chair closure completed-derivation future source-extension impossibility or global theory rejection"
+finite_source_witness:
+  witness_id: "W_Delta_fin"
+  patch_labels:
+    - "0"
+    - "1"
+    - "2"
+  source_carriers:
+    U0:
+      - "a0"
+      - "b0"
+    U1:
+      - "a1"
+      - "b1"
+    U2:
+      - "a2"
+      - "b2"
+  discriminator_profiles:
+    a_class:
+      - "Pi_0(a0)=(class_a,left,ordinary)"
+      - "Pi_1(a1)=(class_a,left,ordinary)"
+      - "Pi_2(a2)=(class_a,left,ordinary)"
+    b_class:
+      - "Pi_0(b0)=(class_b,right,ordinary)"
+      - "Pi_1(b1)=(class_b,right,ordinary)"
+      - "Pi_2(b2)=(class_b,right,ordinary)"
+  selected_transitions:
+    tau_01: "a0->a1 and b0->b1"
+    tau_12: "a1->a2 and b1->b2"
+    tau_02: "a0->a2 and b0->b2"
+  selector_preorder: "lexicographic source score by discriminator mismatch orientation mismatch inverse defect cocycle defect; selected tau_ij has score 0 and every swap candidate has positive discriminator mismatch"
+  inverse_check: "tau_ji=tau_ij^{-1} for all declared pairs"
+  cocycle_check: "tau_12 after tau_01 equals tau_02 on both source tokens"
+  quotient_support: "Q_Delta^fin has two source equivalence classes [a0,a1,a2] and [b0,b1,b2]"
+bot_failure_branches:
+  discriminator_collapse: "If class_a and class_b discriminators collapse then the selector returns bot."
+  selector_nonuniqueness: "If two candidates tie for source-minimal score then the selector returns bot."
+  inverse_failure: "If tau_ji is not the inverse of tau_ij then the repaired witness returns bot."
+  cocycle_failure: "If a triple-overlap composition differs from the declared direct transition then the repaired witness returns bot."
+new_mathematical_payload:
+  - payload_type: "finite_model"
+    summary: "Constructed a three-patch finite repaired source-atlas witness with source-only discriminator profiles and selected transitions."
+  - payload_type: "explicit_witness"
+    summary: "Exhibited inverse and cocycle checks and the resulting two-class source quotient support."
+  - payload_type: "lemma"
+    summary: "Finite repaired source-atlas witness lemma under unique source-minimal selector and bot failure branches."
+mathematical_result: "A finite supplied-datum positive branch exists for AtlasGlueDisc_src^+ as draft/control source-atlas support. It is not a full M_src construction and does not supply general finite-variation robustness or protected source-authority adoption."
+recommended_next_route: "source_extension_smuggling_audit"

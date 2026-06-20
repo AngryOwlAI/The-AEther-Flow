@@ -1,0 +1,318 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\ObsLocLC}{\mathsf{ObsLoc}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\XiR}{\Xi_X^R}
+\newcommand{\Splus}{S_X^+}
+\newcommand{\AtlasGlue}{\mathsf{AtlasGlue}_{\mathrm{src}}^{+}}
+\newcommand{\AtlasGlueDisc}{\mathsf{AtlasGlueDisc}_{\mathrm{src}}^{+}}
+\newcommand{\Disc}{\Delta^{+}}
+\newcommand{\Prof}{\Pi^{+}}
+\newcommand{\Cand}{\mathcal{C}^{\Delta}}
+\newcommand{\Sel}{\mathsf{Sel}_{\Delta}}
+\newcommand{\Qdisc}{Q_{\mathrm{src}}^{\Delta,\mathrm{fin}}}
+\newcommand{\Bot}{\bot}
+\newcommand{\Wfin}{W_{\Delta}^{\mathrm{fin}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{construction}{Construction}
+\newtheorem{lemma}{Lemma}
+\newtheorem{checkresult}{Check}
+\newtheorem{failure}{Failure Branch}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc Source-Extension M\_src AtlasGlueDisc\_src\^{}+ Candidate Witness}
+\author{The AEther-Flow Research Project}
+\date{2026-06-20}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is a draft/control Candidate Constructor packet for
+\texttt{RT-20260614-072}. It responds to the \texttt{RT-20260614-071}
+Refuter result by constructing one finite repaired source-atlas witness for
+\(\AtlasGlueDisc\) under explicit source data.
+
+This artifact is not an adoption of \(\AtlasGlue\), not an adoption of
+\(\AtlasGlueDisc\), not an adoption or full construction of \(\Msrc\), not
+\(\geff\), not matter coupling, not Einstein equations, not benchmark
+evidence, not Gate Chair closure, and not completed-derivation evidence. It
+does not claim future source-extension impossibility and does not reject the
+global theory.
+
+\section{Bounded Question}
+
+The bounded construction question is:
+\[
+\text{Can a finite supplied source datum realize the positive branch of }
+\AtlasGlueDisc\text{ without target or process-authority imports?}
+\]
+
+The answer in this packet is yes for one finite witness. The answer is not a
+general theorem for arbitrary source covers and not an adoption of the repaired
+primitive.
+
+\section{Finite Source Data}
+
+\begin{definition}[Finite repaired source-atlas datum]
+Let the source patch labels be \(I=\{0,1,2\}\). Let
+\[
+U_0=\{a_0,b_0\},\qquad
+U_1=\{a_1,b_1\},\qquad
+U_2=\{a_2,b_2\}.
+\]
+Define explicit source discriminator profiles
+\[
+\begin{aligned}
+\Prof_0(a_0)&=(A,L,0), & \Prof_0(b_0)&=(B,R,0),\\
+\Prof_1(a_1)&=(A,L,1), & \Prof_1(b_1)&=(B,R,1),\\
+\Prof_2(a_2)&=(A,L,2), & \Prof_2(b_2)&=(B,R,2).
+\end{aligned}
+\]
+The first coordinate is a source class tag, the second is a source orientation
+tag, and the third is a patch tag. These are declared source tokens. They are
+not target coordinates, metric data, detector readings, or benchmark labels.
+\end{definition}
+
+\begin{definition}[Candidate transition family]
+For each \(i<j\), let the intended transition token be
+\[
+\tau_{ij}^{+}(a_i)=a_j,\qquad \tau_{ij}^{+}(b_i)=b_j.
+\]
+Let \(\tau_{ji}^{+}=(\tau_{ij}^{+})^{-1}\) and let
+\(\tau_{ii}^{+}\) be the identity on \(U_i\).
+\end{definition}
+
+\begin{definition}[Source selector preorder]
+For each pair \((i,j)\), the candidate set \(\Cand_{ij}\) contains source
+partial bijections \(U_i\to U_j\). Assign each candidate \(c\) the source
+score
+\[
+\sigma_{ij}(c)=
+(d_{\Delta}(c),d_{\mathrm{orient}}(c),d_{\mathrm{inv}}(c),
+d_{\mathrm{cocycle}}(c)),
+\]
+ordered lexicographically. The terms count, respectively, discriminator class
+mismatches, orientation mismatches, inverse-check defects, and cocycle-check
+defects. The selector \(\Sel_{ij}\) returns the unique source-minimal
+candidate when it exists and returns \(\Bot\) otherwise.
+\end{definition}
+
+\section{Construction}
+
+\begin{construction}[Finite witness \(\Wfin\)]
+Let \(\Wfin\) be the datum consisting of the three source carriers, the
+profile family \(\Prof\), the candidate families \(\Cand_{ij}\), the selector
+preorders above, and the selected transitions \(\tau_{ij}^{+}\).
+
+For each \(i<j\), the transition \(\tau_{ij}^{+}\) has score
+\((0,0,0,0)\). A swap candidate \(a_i\mapsto b_j,\ b_i\mapsto a_j\) has
+positive discriminator and orientation mismatch score. Hence
+\(\tau_{ij}^{+}\) is the unique selected source-minimal candidate.
+\end{construction}
+
+\begin{checkresult}[Inverse]
+For every declared pair, \(\tau_{ji}^{+}=(\tau_{ij}^{+})^{-1}\).
+\end{checkresult}
+
+\begin{checkresult}[Cocycle]
+On the triple \((0,1,2)\),
+\[
+\tau_{12}^{+}(\tau_{01}^{+}(a_0))=a_2=\tau_{02}^{+}(a_0),
+\qquad
+\tau_{12}^{+}(\tau_{01}^{+}(b_0))=b_2=\tau_{02}^{+}(b_0).
+\]
+The inverse-oriented cocycles follow by inversion of the same selected source
+tokens.
+\end{checkresult}
+
+\begin{construction}[Finite source quotient support]
+Form the disjoint union
+\[
+D=(\{0\}\times U_0)\sqcup(\{1\}\times U_1)\sqcup(\{2\}\times U_2)
+\]
+and quotient by the selected transition identifications. The quotient
+\(\Qdisc\) has two source equivalence classes:
+\[
+[(0,a_0)]=[(1,a_1)]=[(2,a_2)],
+\qquad
+[(0,b_0)]=[(1,b_1)]=[(2,b_2)].
+\]
+This is a finite source quotient support. It is not a target manifold and not
+full \(\Msrc\).
+\end{construction}
+
+\section{Failure Branches}
+
+\begin{failure}[Discriminator collapse]
+If the source profiles collapse the class tags \(A\) and \(B\), then the
+identity-style and swap-style candidates are no longer separated by the
+source score. The selector returns \(\Bot\).
+\end{failure}
+
+\begin{failure}[Selector nonuniqueness]
+If two candidates have the same minimal source score, then no role label, file
+order, validation status, generated derivative, benchmark resemblance, or
+target chart may break the tie. The selector returns \(\Bot\).
+\end{failure}
+
+\begin{failure}[Inverse defect]
+If a selected transition lacks the declared inverse transition, the repaired
+witness returns \(\Bot\).
+\end{failure}
+
+\begin{failure}[Cocycle defect]
+If a triple-overlap composition differs from the selected direct transition,
+the repaired witness returns \(\Bot\).
+\end{failure}
+
+\section{Finite Witness Lemma}
+
+\begin{lemma}[Finite repaired source-atlas witness]
+The datum \(\Wfin\) realizes a finite positive branch of \(\AtlasGlueDisc\):
+the source discriminator profiles separate the candidate transition families,
+the selector preorders choose unique source-minimal transitions, inverse and
+cocycle checks pass, and the resulting source quotient support \(\Qdisc\) is
+defined without target or process-authority input.
+\end{lemma}
+
+\begin{proof}
+The profiles distinguish \(A\)-class from \(B\)-class source tokens and assign
+the same orientation tags along intended transitions. Therefore each intended
+\(\tau_{ij}^{+}\) has zero discriminator and orientation mismatch. By
+construction the inverse and cocycle defect terms are also zero for these
+transitions. Any swap candidate has positive discriminator mismatch, so the
+intended transition is the unique source-minimal candidate for each pair.
+The inverse and cocycle checks are explicit source-token equations. The
+quotient support is then the ordinary quotient of a finite source set by the
+selected transition equivalence relation. No target topology, target smooth
+atlas, target transition map, metric scale, proper time, empirical observer
+protocol, benchmark behavior, validation authority, role authority, or
+generated derivative is used.
+\end{proof}
+
+\section{Overread Screens}
+
+\paragraph{Finite witness only.}
+\(\Wfin\) is a finite supplied-datum witness. It does not prove that the
+current canonical ontology already supplies the discriminator profiles or
+selector preorders.
+
+\paragraph{No adoption.}
+The construction does not adopt \(\AtlasGlue\), does not adopt
+\(\AtlasGlueDisc\), and does not adopt or fully construct \(\Msrc\).
+
+\paragraph{No target atlas.}
+The quotient \(\Qdisc\) is a source quotient support, not a target topology,
+not a smooth atlas, not a coordinate transition family, and not a metric
+object.
+
+\paragraph{No downstream GR payload.}
+The construction supplies no \(\geff\), matter coupling, Einstein equations,
+benchmark promotion, Gate Chair closure, completed derivation, future
+source-extension impossibility, or global theory rejection.
+
+\section{Bridge Attempt Status}
+
+\begin{verdict}[Candidate map]
+The bridge attempt status is:
+\[
+\texttt{candidate\_map} =
+\Wfin \mapsto (\Qdisc,\{\tau_{ij}^{+}\},\Prof,\Sel).
+\]
+This is a finite repaired source-atlas witness under explicit source data.
+\end{verdict}
+
+\begin{verdict}[Remaining missing primitive]
+The remaining missing primitive is a general source-authorized and
+finite-variation-robust rule that supplies admissible discriminator profiles,
+selector preorders, coverage, overlap recognition, inverse checks, and cocycle
+checks beyond this finite supplied datum. That primitive is not adopted here.
+\end{verdict}
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made and \(\AtlasGlueDisc\) remains draft/control. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Retained only as exact-branch source-localization input; no robustness promotion is supplied. \\
+Resp\_lc & Uses adopted \(\XiR\) only as admissible source-extension data in \(\Splus\); the old source-only obstruction remains valid. \\
+M\_src & A finite repaired source-atlas witness is supplied as draft/control bridge-facing data. Full \(\Msrc\) remains unconstructed and unadopted. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; response-token semantics remain non-coupling data. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Not discharged; the witness states explicit failure branches and requires later robustness audit or theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No closure or suspension verdict is supplied. \\
+Current route freeze or hard-fail status & Not frozen; next route is a bounded Smuggling Auditor review of the finite repaired witness. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{New Mathematical Payload}
+
+This construction supplies four draft/control payload items:
+\begin{itemize}
+  \item a finite three-patch repaired source-atlas model;
+  \item an explicit source discriminator and selector witness;
+  \item inverse and cocycle checks for selected transition tokens;
+  \item bot failure branches for discriminator collapse, selector
+  nonuniqueness, inverse defect, and cocycle defect.
+\end{itemize}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_atlas\_glue\_discriminator\_candidate\_witness.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_atlas\_glue\_discriminator\_candidate\_witness.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The fusion preserves both the
+finite witness and the non-promotional authority boundary.
+
+\section{Conclusion}
+
+\(\Wfin\) gives one finite repaired source-atlas witness for the positive
+branch of \(\AtlasGlueDisc\) under explicit source data. It is useful because
+it converts the prior fail-closed interface into a concrete bridge-facing
+candidate. It remains draft/control. The logical next route is one bounded
+Smuggling Auditor packet before any adoption, generalization, or downstream GR
+claim.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{source-primitive}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc
+source-extension M\_src AtlasGlue\_src\^{}+ source primitive} [Internal
+research-control artifact].
+
+\bibitem{disc-refuter}
+The AEther-Flow Research Project. (2026, June 20). \emph{Resp\_lc
+source-extension M\_src AtlasGlueDisc\_src\^{}+ Refuter stress test}
+[Internal research-control artifact].
+
+\bibitem{handoff}
+The AEther-Flow Research Project. (2026, June 20). \emph{Handoff 0113}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
