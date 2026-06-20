@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT`
+- Source path: `research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `6eb83b8e714641730d28e53af3f43757ae262912deb7b958d571c7ea656e2c0d`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-ATLAS-GLUE-DISCRIMINATOR-CANDIDATE-WITNESS-REFUTER-STRESS-TEST;TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS;TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS;TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY;TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY;TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY;TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE;TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW;TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` ``
+- Generated output path: `wiki/tex/tex-research-control-resp-lc-current-ontology-atlas-glue-derivation-attempt.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-20T03:06:26Z`
