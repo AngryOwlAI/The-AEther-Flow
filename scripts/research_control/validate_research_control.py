@@ -440,11 +440,68 @@ THEORETICAL_DECISION_PACKET_TYPES = {
     "distinct_scoped_no_go_question",
     "bounded_theoretical_calculation",
     "finite_toy_metric_response_model",
+    "ontology_law_research_packet",
     "source_extension_candidate",
     "source_extension_smuggling_audit",
     "source_extension_refuter_stress",
     "source_extension_human_gate",
     "human_gated_ontology_change_required",
+}
+
+ONTOLOGY_LAW_ROUTE_LABEL = "ontology-law-research-packet"
+ONTOLOGY_LAW_SELECTOR_PACKET = "ontology_law_research_packet"
+ONTOLOGY_LAW_TRIGGER_CLASSIFICATION = "derivation_critical_missing_source_law"
+ONTOLOGY_LAW_STATUS_PAIR = "blocked_adoption_open_continuation"
+ONTOLOGY_LAW_PAYLOAD_MODES = {
+    "candidate_law_payload",
+    "candidate_law_comparison",
+    "candidate_law_refutation",
+    "human_gate_precondition",
+}
+ONTOLOGY_LAW_STATUS_LABELS = {
+    "draft/control",
+    "proposal-only",
+    "source-extension data",
+    "canonical-ontology candidate",
+    "adopted",
+    "rejected",
+    "human-gated",
+}
+ONTOLOGY_LAW_NON_TRIGGERS = {
+    "ordinary_gap",
+    "workflow_inconvenience",
+}
+ONTOLOGY_LAW_REQUIRED_FORBIDDEN_SOURCE_CLASSES = {
+    "target_atlas",
+    "target_metric",
+    "benchmark_success",
+    "generated_derivative",
+    "registry_metadata_authority",
+    "role_authority",
+    "validation_authority",
+}
+ONTOLOGY_LAW_TARGET_IMPORT_MARKERS = {
+    "target atlas",
+    "target_atlas",
+    "target metric",
+    "target_metric",
+    "benchmark success",
+    "benchmark_success",
+    "generated derivative",
+    "generated_derivative",
+    "registry metadata authority",
+    "registry_metadata_authority",
+    "role authority",
+    "role_authority",
+    "validation authority",
+    "validation_authority",
+}
+ONTOLOGY_LAW_NO_GO_PRESENT_MARKERS = {
+    "proved",
+    "scoped_obstruction",
+    "scoped obstruction",
+    "no_go_theorem",
+    "no-go theorem",
 }
 
 SOURCE_EXTENSION_WORKFLOW_CATEGORIES = {
@@ -1267,6 +1324,27 @@ def _has_substantive_value(value: Any) -> bool:
     return any(item.strip().lower() not in {"", "none"} for item in _listish_values(value))
 
 
+def _substantive_list(value: Any) -> list[str]:
+    return [
+        item.strip()
+        for item in _listish_values(value)
+        if item.strip() and item.strip().lower() != "none"
+    ]
+
+
+def _string_field(record: Any, field_name: str) -> str:
+    if not isinstance(record, dict):
+        return ""
+    return str(record.get(field_name, "")).strip()
+
+
+def _is_no_go_present(status: str) -> bool:
+    lowered = status.strip().lower()
+    if not lowered or lowered in {"not_proved", "not proved", "none", "false"}:
+        return False
+    return any(marker in lowered for marker in ONTOLOGY_LAW_NO_GO_PRESENT_MARKERS)
+
+
 def _protected_authority_expansions(value: Any) -> list[str]:
     protected: list[str] = []
     for item in _listish_values(value):
@@ -1767,6 +1845,7 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
         return
     validate_parent_child_completion(report, job_row, job_contract, completion, path)
     validate_loop_control_completion(report, job_row, job_contract, completion, path)
+    validate_ontology_law_research_packet(report, job_row, job_contract, completion, path)
     validate_completion_resolver_snapshots(report, completion, job_contract, path)
 
 
@@ -1808,6 +1887,269 @@ def validate_loop_control_completion(
         validate_candidate_bridge_attempt(report, completion, path_text)
     if role_id == "theoretical-continuation-selector":
         validate_theoretical_continuation_decision(report, job_row, completion, path_text)
+
+
+def ontology_law_receipt_required(
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+) -> bool:
+    if isinstance(completion.get("ontology_law_research_packet"), dict):
+        return True
+    role_id = job_row.get("role_id", "")
+    if role_id not in PHYSICS_ROLE_IDS:
+        return False
+    decision = completion.get("theoretical_decision_output", {})
+    if isinstance(decision, dict):
+        packet_type = str(decision.get("selected_next_packet_type", "")).strip()
+        if packet_type == ONTOLOGY_LAW_SELECTOR_PACKET:
+            return True
+    blob = text_blob(job_contract, completion)
+    return ONTOLOGY_LAW_ROUTE_LABEL in blob
+
+
+def validate_ontology_law_research_packet(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+    path: Path,
+) -> None:
+    if not ontology_law_receipt_required(job_row, job_contract, completion):
+        return
+
+    path_text = path.relative_to(REPO_ROOT).as_posix()
+    receipt = completion.get("ontology_law_research_packet")
+    if not isinstance(receipt, dict):
+        report.error(f"{path_text}: ontology-law route completion missing ontology_law_research_packet receipt")
+        return
+
+    route = _string_field(receipt, "route")
+    trigger = _string_field(receipt, "trigger_classification")
+    target_milestone = _string_field(receipt, "target_derivation_milestone")
+    milestone_burden = _string_field(receipt, "milestone_burden")
+    missing_law = _string_field(receipt, "missing_source_law")
+    underdetermination = _string_field(receipt, "underdetermination_statement")
+    no_go_status = _string_field(receipt, "no_go_theorem_status")
+    payload_mode = _string_field(receipt, "packet_payload_mode")
+
+    if route != ONTOLOGY_LAW_ROUTE_LABEL:
+        report.error(f"{path_text}: ontology_law_research_packet.route must be {ONTOLOGY_LAW_ROUTE_LABEL}")
+    if trigger != ONTOLOGY_LAW_TRIGGER_CLASSIFICATION:
+        report.error(
+            f"{path_text}: ontology_law_research_packet.trigger_classification must be "
+            f"{ONTOLOGY_LAW_TRIGGER_CLASSIFICATION}"
+        )
+    if trigger in ONTOLOGY_LAW_NON_TRIGGERS:
+        report.error(f"{path_text}: ordinary gaps and workflow inconvenience may not use ontology-law route")
+    if not target_milestone:
+        report.error(f"{path_text}: ontology_law_research_packet.target_derivation_milestone is required")
+    elif target_milestone not in GR_DERIVATION_MILESTONES:
+        report.error(
+            f"{path_text}: ontology_law_research_packet.target_derivation_milestone is not registered: "
+            f"{target_milestone}"
+        )
+    if not milestone_burden:
+        report.error(f"{path_text}: ontology_law_research_packet.milestone_burden is required")
+    if not missing_law:
+        report.error(f"{path_text}: ontology_law_research_packet.missing_source_law is required")
+
+    lowered_statement = underdetermination.lower()
+    if "current ontology" not in lowered_statement or "does not derive" not in lowered_statement:
+        report.error(
+            f"{path_text}: ontology_law_research_packet.underdetermination_statement must state "
+            "that current ontology does not derive the missing source law"
+        )
+    impossibility_markers = ["therefore", "impossible", "cannot exist", "no possible"]
+    if any(marker in lowered_statement for marker in impossibility_markers) and not _is_no_go_present(no_go_status):
+        report.error(
+            f"{path_text}: ontology_law_research_packet.underdetermination_statement may not assert "
+            "impossibility without a no-go theorem or scoped obstruction"
+        )
+
+    adoption_status = receipt.get("adoption_status")
+    if not isinstance(adoption_status, dict):
+        report.error(f"{path_text}: ontology_law_research_packet.adoption_status must be a map")
+    else:
+        current_adoption = _string_field(adoption_status, "current_adoption")
+        continuation = _string_field(adoption_status, "continuation")
+        status_pair = _string_field(adoption_status, "status_pair")
+        if current_adoption != "blocked":
+            report.error(f"{path_text}: ontology_law_research_packet.adoption_status.current_adoption must be blocked")
+        if continuation != "open":
+            report.error(f"{path_text}: ontology_law_research_packet.adoption_status.continuation must be open")
+        if status_pair != ONTOLOGY_LAW_STATUS_PAIR:
+            report.error(
+                f"{path_text}: ontology_law_research_packet.adoption_status.status_pair must be "
+                f"{ONTOLOGY_LAW_STATUS_PAIR}"
+            )
+
+    if payload_mode not in ONTOLOGY_LAW_PAYLOAD_MODES:
+        report.error(
+            f"{path_text}: ontology_law_research_packet.packet_payload_mode is not allowed: {payload_mode}"
+        )
+    else:
+        validate_ontology_law_payload_mode(report, receipt, payload_mode, path_text)
+
+    validate_ontology_law_status_label(report, receipt, path_text)
+    validate_ontology_law_recovery_obligations(report, receipt, path_text)
+    validate_ontology_law_no_target_scope(report, receipt, path_text)
+    validate_ontology_law_human_gate(report, receipt, path_text)
+
+
+def validate_ontology_law_payload_mode(
+    report: ValidationReport,
+    receipt: dict[str, Any],
+    payload_mode: str,
+    path_text: str,
+) -> None:
+    if payload_mode == "candidate_law_payload":
+        payload = receipt.get("candidate_law_payload")
+        if not isinstance(payload, dict):
+            report.error(f"{path_text}: ontology_law_research_packet.candidate_law_payload must be a map")
+            return
+        if not _string_field(payload, "source_side_definition"):
+            report.error(
+                f"{path_text}: ontology_law_research_packet.candidate_law_payload.source_side_definition is required"
+            )
+        for field_name in ["formal_objects", "domains", "maps", "proof_obligations"]:
+            if not _substantive_list(payload.get(field_name)):
+                report.error(
+                    f"{path_text}: ontology_law_research_packet.candidate_law_payload.{field_name} "
+                    "must be nonempty"
+                )
+    elif payload_mode == "candidate_law_comparison":
+        comparison = receipt.get("candidate_law_comparison")
+        if not isinstance(comparison, dict):
+            report.error(f"{path_text}: ontology_law_research_packet.candidate_law_comparison must be a map")
+            return
+        for field_name in ["candidates", "comparison_basis"]:
+            if not _substantive_list(comparison.get(field_name)):
+                report.error(
+                    f"{path_text}: ontology_law_research_packet.candidate_law_comparison.{field_name} "
+                    "must be nonempty"
+                )
+        if not _string_field(comparison, "selection_status"):
+            report.error(
+                f"{path_text}: ontology_law_research_packet.candidate_law_comparison.selection_status is required"
+            )
+    elif payload_mode == "candidate_law_refutation":
+        refutation = receipt.get("candidate_law_refutation")
+        if not isinstance(refutation, dict):
+            report.error(f"{path_text}: ontology_law_research_packet.candidate_law_refutation must be a map")
+            return
+        for field_name in ["refuted_candidate", "refutation_basis"]:
+            if not _string_field(refutation, field_name):
+                report.error(
+                    f"{path_text}: ontology_law_research_packet.candidate_law_refutation.{field_name} is required"
+                )
+        if not _substantive_list(refutation.get("surviving_obligations")):
+            report.error(
+                f"{path_text}: ontology_law_research_packet.candidate_law_refutation.surviving_obligations "
+                "must be nonempty"
+            )
+    elif payload_mode == "human_gate_precondition":
+        precondition = receipt.get("human_gate_precondition")
+        if not isinstance(precondition, dict):
+            report.error(f"{path_text}: ontology_law_research_packet.human_gate_precondition must be a map")
+            return
+        if not bool_value(precondition.get("blocks_payload_definition", False)):
+            report.error(
+                f"{path_text}: ontology_law_research_packet.human_gate_precondition.blocks_payload_definition "
+                "must be true"
+            )
+        if not _string_field(precondition, "reason"):
+            report.error(f"{path_text}: ontology_law_research_packet.human_gate_precondition.reason is required")
+
+
+def validate_ontology_law_status_label(
+    report: ValidationReport,
+    receipt: dict[str, Any],
+    path_text: str,
+) -> None:
+    payload = receipt.get("candidate_law_payload")
+    if not isinstance(payload, dict):
+        return
+    status_label = _string_field(payload, "status_label")
+    if status_label and status_label not in ONTOLOGY_LAW_STATUS_LABELS:
+        report.error(
+            f"{path_text}: ontology_law_research_packet.candidate_law_payload.status_label is not allowed: "
+            f"{status_label}"
+        )
+    if status_label in {"canonical-ontology candidate", "adopted"}:
+        gate = receipt.get("human_gate_request")
+        gate_required = isinstance(gate, dict) and bool_value(gate.get("required_before_adoption", False))
+        if not gate_required:
+            report.error(
+                f"{path_text}: ontology-law candidate or adopted labels must remain blocked pending human gate"
+            )
+    if status_label == "adopted":
+        report.error(f"{path_text}: ontology_law_research_packet may not mark candidate law as adopted")
+
+
+def validate_ontology_law_recovery_obligations(
+    report: ValidationReport,
+    receipt: dict[str, Any],
+    path_text: str,
+) -> None:
+    obligations = receipt.get("exact_gr_recovery_obligations")
+    if not isinstance(obligations, dict):
+        report.error(f"{path_text}: ontology_law_research_packet.exact_gr_recovery_obligations must be a map")
+        return
+    if not _substantive_list(obligations.get("checklist")):
+        report.error(
+            f"{path_text}: ontology_law_research_packet.exact_gr_recovery_obligations.checklist "
+            "must be nonempty"
+        )
+    if not _substantive_list(obligations.get("distance_to_gr_links")):
+        report.error(
+            f"{path_text}: ontology_law_research_packet.exact_gr_recovery_obligations.distance_to_gr_links "
+            "must be nonempty"
+        )
+
+
+def validate_ontology_law_no_target_scope(
+    report: ValidationReport,
+    receipt: dict[str, Any],
+    path_text: str,
+) -> None:
+    scope = receipt.get("no_target_import_audit_scope")
+    if not isinstance(scope, dict):
+        report.error(f"{path_text}: ontology_law_research_packet.no_target_import_audit_scope must be a map")
+        return
+    classes = set(_substantive_list(scope.get("forbidden_source_classes")))
+    missing = sorted(ONTOLOGY_LAW_REQUIRED_FORBIDDEN_SOURCE_CLASSES - classes)
+    if missing:
+        report.error(
+            f"{path_text}: ontology_law_research_packet.no_target_import_audit_scope missing "
+            f"forbidden_source_classes {missing}"
+        )
+
+    payload = receipt.get("candidate_law_payload")
+    if isinstance(payload, dict):
+        definition = _string_field(payload, "source_side_definition").lower()
+        if any(marker in definition for marker in ONTOLOGY_LAW_TARGET_IMPORT_MARKERS):
+            report.error(
+                f"{path_text}: ontology_law_research_packet.candidate_law_payload.source_side_definition "
+                "must not define the source law from target-GR imports"
+            )
+
+
+def validate_ontology_law_human_gate(
+    report: ValidationReport,
+    receipt: dict[str, Any],
+    path_text: str,
+) -> None:
+    gate = receipt.get("human_gate_request")
+    if not isinstance(gate, dict):
+        report.error(f"{path_text}: ontology_law_research_packet.human_gate_request must be a map")
+        return
+    if not bool_value(gate.get("required_before_adoption", False)):
+        report.error(
+            f"{path_text}: ontology_law_research_packet.human_gate_request.required_before_adoption must be true"
+        )
+    if not _string_field(gate, "requested_decision"):
+        report.error(f"{path_text}: ontology_law_research_packet.human_gate_request.requested_decision is required")
 
 
 def validate_distance_to_gr_status(
