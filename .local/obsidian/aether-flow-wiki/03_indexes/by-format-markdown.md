@@ -50,6 +50,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-legacy-ontology-aether-and-aether-flow|MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `legacy_ontology/aether-and-aether-flow.md`
 - [[02_sources/markdown/md-legacy-ontology-aether-flow-interpretation-lemen|MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN]] `legacy_ontology/aether_flow_interpretation-lemen.md`
 - [[02_sources/markdown/md-memory-system-publication-brief|MD-MEMORY-SYSTEM-PUBLICATION-BRIEF]] `markdown/publication-briefs/memory-system.publication-brief.md`
+- [[02_sources/markdown/md-missing-source-law-inventory|MD-MISSING-SOURCE-LAW-INVENTORY]] `research_control/missing_laws/missing_source_law_inventory.md`
 - [[02_sources/markdown/md-ontology-aether-and-aether-flow|MD-ONTOLOGY-AETHER-AND-AETHER-FLOW]] `ontology/aether-and-aether-flow.md`
 - [[02_sources/markdown/md-parent-child-synthesis-publication-brief|MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF]] `markdown/publication-briefs/parent-child-synthesis.publication-brief.md`
 - [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`

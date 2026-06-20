@@ -262,6 +262,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-agents|MD-AGENTS]] `AGENTS.md`
 - [[02_sources/markdown/md-agents-agents|MD-AGENTS-AGENTS]] `.agents/AGENTS.md`
 - [[02_sources/markdown/md-agents-research-control|MD-AGENTS-RESEARCH-CONTROL]] `research_control/AGENTS.md`
+- [[02_sources/markdown/md-missing-source-law-inventory|MD-MISSING-SOURCE-LAW-INVENTORY]] `research_control/missing_laws/missing_source_law_inventory.md`
 - [[02_sources/markdown/md-project-control-grill-memory-wiki-registry-design-handoff|MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF]] `markdown/grill-memory-wiki-registry-design-handoff.md`
 - [[02_sources/markdown/md-readme|MD-README]] `README.md`
 - [[02_sources/markdown/md-readme-research-control|MD-README-RESEARCH-CONTROL]] `research_control/README.md`

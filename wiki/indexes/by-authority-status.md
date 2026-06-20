@@ -321,6 +321,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-legacy-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-legacy-ontology-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-MEMORY-SYSTEM-PUBLICATION-BRIEF` `wiki/markdown/md-memory-system-publication-brief.md`
+- `WIKI-MD-MISSING-SOURCE-LAW-INVENTORY` `wiki/markdown/md-missing-source-law-inventory.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF` `wiki/markdown/md-parent-child-synthesis-publication-brief.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
@@ -563,6 +564,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AGENTS` `AGENTS.md`
 - `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
+- `MD-MISSING-SOURCE-LAW-INVENTORY` `research_control/missing_laws/missing_source_law_inventory.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-README` `README.md`
 - `MD-README-RESEARCH-CONTROL` `research_control/README.md`
