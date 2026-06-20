@@ -1,0 +1,526 @@
+inventory_id: "missing_source_law_inventory"
+authority: "control"
+status: "active"
+phase_created: "Phase 1"
+created_at: "2026-06-20T19:19:28Z"
+updated_at: "2026-06-20T19:19:28Z"
+owner_task_id: "RT-20260620-010"
+source_of_truth_note: "Tracked task artifacts and registries are authority; generated wiki notes semantic extracts Obsidian notes and .local caches are retrieval only."
+active_control_state:
+  active_task_id: "RT-20260614-075"
+  latest_handoff_id: "handoff-0117"
+  current_status: "current_ontology_derivation_attempt_completed_as_obstruction_to_deriving_atlasglue_data"
+  next_recommended_action: "Do not adopt supplied finite data AtlasGlueDisc_src^+ AtlasGlue_src^+ or M_src. Continue only through a new source-side profile selector transition finite-variation law proposal or one theoretical-continuation selector decision if multiple bounded proposals are available."
+selection_policy:
+  consumed_by: "/continue-research"
+  one_active_candidate_per_invocation: true
+  router_remains_authoritative: true
+  use_inventory_as: "navigation_and_candidate_backlog"
+  default_if_multiple_candidates: "route theoretical-continuation-selector"
+  inventory_does_not_execute_jobs: true
+  non_trigger_rows_are_not_eligible_for_ontology_law_routing: true
+controlled_vocabularies:
+  route_trigger_classifications:
+    - "derivation_critical_missing_source_law"
+    - "ordinary_gap"
+    - "workflow_inconvenience"
+    - "not_yet_classified"
+  candidate_statuses:
+    - "open"
+    - "selected_by_handoff"
+    - "deferred"
+    - "blocked_by_dependency"
+    - "human_gated"
+    - "frozen_negative"
+    - "consumed_by_continue_research"
+    - "superseded"
+    - "closed"
+  candidate_law_output_statuses:
+    - "draft/control"
+    - "proposal-only"
+    - "source-extension data"
+    - "canonical-ontology candidate"
+    - "adopted"
+    - "rejected"
+    - "human-gated"
+common_forbidden_overreads: &common_forbidden_overreads
+  - "canonical ontology adoption"
+  - "canonical ontology edit"
+  - "AtlasGlue_src^+ adoption"
+  - "AtlasGlueDisc_src^+ adoption"
+  - "M_src adoption"
+  - "full M_src construction"
+  - "g_eff derivation"
+  - "matter coupling derivation"
+  - "Einstein equations derivation"
+  - "benchmark promotion"
+  - "Gate Chair verdict"
+  - "completed derivation claim"
+  - "global theory rejection"
+  - "future source-extension impossibility"
+  - "target manifold import"
+  - "target topology import"
+  - "target smooth atlas import"
+  - "target coordinate transition import"
+  - "metric import"
+  - "proper-time import"
+  - "validation status as physics evidence"
+  - "role authority as physics evidence"
+  - "registry authority as physics evidence"
+  - "generated derivative authority as physics evidence"
+candidate_laws:
+  - law_id: "MSL-MSRC-ATLASGLUE-LAW"
+    title: "Source-authorized atlas-glue law for M_src"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "selected_by_handoff"
+    target_derivation_milestone: "source_manifold_m_src"
+    milestone_burden: "general source-authorized finite-variation-robust repaired source-atlas rule beyond finite supplied datum"
+    missing_source_law: "A source-authorized atlas-glue law deriving profile semantics selector preorder transition algebra inverse checks cocycle checks and finite-variation robustness without target-atlas import."
+    underdetermination_statement: "Current ontology does not derive discriminator profiles selector preorder inverse checks cocycle checks or finite-variation robustness for AtlasGlueDisc_src^+ AtlasGlue_src^+ or M_src."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "draft/control"
+    evidence:
+      task_ids:
+        - "RT-20260614-075"
+      handoff_ids:
+        - "handoff-0117"
+      completion_paths:
+        - "research_control/tasks/RT-20260614-075/jobs/completions/AJC-AJ-RT-20260614-075-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex"
+      registry_rows:
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:m_src"
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:finite_variation_robustness"
+        - "registries/RESEARCH_TASK_REGISTRY.csv:RT-20260614-075"
+      generated_retrieval_paths: []
+      evidence_note: "Live program state and handoff-0117 name this as the active continuation family after current-ontology no-derivation."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex"
+      source_extension_data: []
+      rejected_or_frozen_results:
+        - "AtlasGlueDisc_src^+ AtlasGlue_src^+ and M_src adoption rejected at the RT-20260614-075 gate"
+      human_gated_items:
+        - "any canonical ontology edit or source-authority adoption"
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "theoretical-continuation-selector@0.1.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "The active handoff allows a new source-side profile selector transition finite-variation law proposal or a selector decision if multiple bounded proposal branches are available."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids:
+        - "MSL-FINITE-VARIATION-ROBUSTNESS-LAW"
+      downstream_law_ids:
+        - "MSL-MSRC-METRIC-RESPONSE-LAW"
+      dependency_note: "A general atlas-glue law depends on an admissible variation class and preservation theorem."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-MSRC-ATLASGLUE-DISCRIMINATOR-LAW"
+    title: "Source-side discriminator repair law for AtlasGlueDisc_src^+"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "open"
+    target_derivation_milestone: "source_manifold_m_src"
+    milestone_burden: "source-side discriminator repair primitive avoiding selector collapse and preserving fail-closed behavior"
+    missing_source_law: "A general source-side discriminator repair law that separates duplicate-compatible source tokens selects transition tokens without target import and fails closed under collapse or selector ties."
+    underdetermination_statement: "Current source-extension evidence supplies finite discriminator data and strict branches but does not adopt a general source-authorized discriminator law."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "source-extension data"
+    evidence:
+      task_ids:
+        - "RT-20260614-069"
+        - "RT-20260614-070"
+        - "RT-20260614-071"
+        - "RT-20260614-072"
+        - "RT-20260614-073"
+        - "RT-20260614-074"
+      handoff_ids:
+        - "handoff-0117"
+      completion_paths:
+        - "research_control/tasks/RT-20260614-074/jobs/completions/AJC-AJ-RT-20260614-074-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-069/artifacts/110_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_DISCRIMINATOR_REPAIR_PRIMITIVE.tex"
+        - "research_control/tasks/RT-20260614-074/artifacts/115_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_DISCRIMINATOR_CANDIDATE_WITNESS_REFUTER_STRESS_TEST.tex"
+      registry_rows:
+        - "registries/RESEARCH_TASK_REGISTRY.csv:RT-20260614-069"
+        - "registries/RESEARCH_TASK_REGISTRY.csv:RT-20260614-074"
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-074-001"
+      generated_retrieval_paths: []
+      evidence_note: "The finite discriminator witness survives as draft/control evidence while source-authority adoption remains human-gated."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-069/artifacts/110_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_DISCRIMINATOR_REPAIR_PRIMITIVE.tex"
+      source_extension_data:
+        - "finite repaired source-atlas witness and discriminator profiles"
+      rejected_or_frozen_results:
+        - "autonomous promotion from finite supplied data to adopted AtlasGlueDisc_src^+ is obstructed"
+      human_gated_items:
+        - "adoption of finite discriminator and selector data as source authority"
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "ontology-formalizer@0.2.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "General-law research remains open, but adoption of the finite data is protected by a human gate."
+      requires_human_gate: false
+      human_gate_reason: "Human gate is required only for adoption, not for a non-promotional research packet."
+    dependencies:
+      prerequisite_law_ids:
+        - "MSL-RESP-LC-SELECTOR-LAW"
+      downstream_law_ids:
+        - "MSL-MSRC-ATLASGLUE-LAW"
+      dependency_note: "Discriminator repair is a narrower law candidate inside the broader atlas-glue burden."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-RESP-LC-SELECTOR-LAW"
+    title: "Resp_lc source-side response selector law"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "deferred"
+    target_derivation_milestone: "response_localization_resp_lc"
+    milestone_burden: "response selector sign scale and token semantics"
+    missing_source_law: "A source-only rule for response sign orientation positive normalization and response-token semantics that does not import target metric data or arbitrary conventions."
+    underdetermination_statement: "The old S_X selector obstruction remains valid: S_X alone does not determine response sign orientation scale normalization or response-token semantics."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "source-extension data"
+    evidence:
+      task_ids:
+        - "RT-20260614-041"
+        - "RT-20260614-042"
+        - "RT-20260614-046"
+        - "RT-20260614-047"
+        - "RT-20260614-048"
+        - "RT-20260614-049"
+        - "RT-20260614-050"
+        - "RT-20260614-051"
+      handoff_ids: []
+      completion_paths:
+        - "research_control/tasks/RT-20260614-051/jobs/completions/AJC-AJ-RT-20260614-051-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-041/artifacts/82_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_METRIC_RESPONSE_LAW_BRIDGE_ATTEMPT.tex"
+        - "research_control/tasks/RT-20260614-046/artifacts/87_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_RESP_LC_SOURCE_SIDE_SELECTOR_PRIMITIVE_PACKET.tex"
+        - "research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex"
+      registry_rows:
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:resp_lc"
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-051-001"
+      generated_retrieval_paths: []
+      evidence_note: "Ledger accepts Xi_X^R only as admissible source-extension data through S_X^+; the old S_X selector obstruction remains valid."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-046/artifacts/87_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_RESP_LC_SOURCE_SIDE_SELECTOR_PRIMITIVE_PACKET.tex"
+      source_extension_data:
+        - "Xi_X^R for Resp_lc continuation through S_X^+"
+      rejected_or_frozen_results:
+        - "S_X-only selector determination remains a scoped obstruction"
+      human_gated_items: []
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "theoretical-continuation-selector@0.1.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "Deferred unless live state returns to the Resp_lc selector burden or a downstream candidate depends on it explicitly."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids: []
+      downstream_law_ids:
+        - "MSL-MSRC-METRIC-RESPONSE-LAW"
+        - "MSL-MSRC-ATLASGLUE-DISCRIMINATOR-LAW"
+      dependency_note: "Response selector semantics feed later source-extension and metric-response attempts."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-OBSLOC-SOLDERING-LAW"
+    title: "ObsLoc_lc observer-localizing soldering law beyond exact branch"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "deferred"
+    target_derivation_milestone: "source_localization_obsloc_lc"
+    milestone_burden: "robustness and exact-branch limits"
+    missing_source_law: "A source-only observer-localizing soldering rule that extends beyond local exact-branch witness status while preserving no-target-import and robustness boundaries."
+    underdetermination_statement: "The existing ObsLoc_lc witness is local and exact-branch qualified; it does not discharge relaxed transport quotient robustness or bridge use."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "draft/control"
+    evidence:
+      task_ids:
+        - "RT-20260614-035"
+        - "RT-20260614-036"
+        - "RT-20260614-037"
+        - "RT-20260614-038"
+        - "RT-20260614-039"
+        - "RT-20260614-040"
+      handoff_ids: []
+      completion_paths:
+        - "research_control/tasks/RT-20260614-040/jobs/completions/AJC-AJ-RT-20260614-040-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-035/artifacts/76_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_OBSERVER_READOUT_BRIDGE_ATTEMPT.tex"
+        - "research_control/tasks/RT-20260614-036/artifacts/77_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_OBSERVER_LOCALIZING_SOLDERING_RULE_CONCRETE_WITNESS.tex"
+        - "research_control/tasks/RT-20260614-040/artifacts/81_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_BRIDGE_MAP_REFUTER_STRESS_TEST.tex"
+      registry_rows:
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:obsloc_lc"
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-040-001"
+      generated_retrieval_paths: []
+      evidence_note: "ObsLoc_lc has a constructive local exact-branch witness but no robustness promotion or metric bridge."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-036/artifacts/77_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_OBSERVER_LOCALIZING_SOLDERING_RULE_CONCRETE_WITNESS.tex"
+      source_extension_data: []
+      rejected_or_frozen_results:
+        - "relaxed transport and metric-bridge overreads remain blocked"
+      human_gated_items: []
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "ontology-formalizer@0.2.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "Deferred unless live state returns to observer-localization rather than the active M_src atlas-glue burden."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids:
+        - "MSL-EQSRC-GENERALIZATION-LAW"
+      downstream_law_ids:
+        - "MSL-MSRC-METRIC-RESPONSE-LAW"
+      dependency_note: "General use depends on source-equivalence and finite-variation controls beyond the exact branch."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-MSRC-METRIC-RESPONSE-LAW"
+    title: "Source-to-metric response law from source observer/readout data"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "blocked_by_dependency"
+    target_derivation_milestone: "source_manifold_m_src"
+    milestone_burden: "source-to-metric interpretation or response law from source observer/readout data"
+    missing_source_law: "A source-internal response or metric-interpretation law assigning signed interval class scale covariance and response or coupling tokens from source data alone."
+    underdetermination_statement: "The retained source observer/readout tuple does not by itself define metric signature interval scale causal cones metric response or coupling hooks."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "draft/control"
+    evidence:
+      task_ids:
+        - "RT-20260614-038"
+        - "RT-20260614-040"
+        - "RT-20260614-041"
+        - "RT-20260614-061"
+      handoff_ids: []
+      completion_paths:
+        - "research_control/tasks/RT-20260614-041/jobs/completions/AJC-AJ-RT-20260614-041-001.yaml"
+        - "research_control/tasks/RT-20260614-061/jobs/completions/AJC-AJ-RT-20260614-061-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-038/artifacts/79_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_BRIDGE_ATTEMPT.tex"
+        - "research_control/tasks/RT-20260614-041/artifacts/82_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_METRIC_RESPONSE_LAW_BRIDGE_ATTEMPT.tex"
+        - "research_control/tasks/RT-20260614-061/artifacts/102_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_ATTEMPT.tex"
+      registry_rows:
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-041-001"
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-061-001"
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:m_src"
+      generated_retrieval_paths: []
+      evidence_note: "The metric-response law remains blocked behind response selector semantics and atlas-glue source-manifold prerequisites."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-041/artifacts/82_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_AUDITED_OBSLOC_OBSERVER_READOUT_METRIC_RESPONSE_LAW_BRIDGE_ATTEMPT.tex"
+      source_extension_data: []
+      rejected_or_frozen_results:
+        - "no effective Lorentzian metric or coupling law follows from the retained tuple"
+      human_gated_items: []
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "candidate-constructor@0.2.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "Do not select before atlas-glue and response-selector dependencies improve."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids:
+        - "MSL-MSRC-ATLASGLUE-LAW"
+        - "MSL-RESP-LC-SELECTOR-LAW"
+      downstream_law_ids: []
+      dependency_note: "A metric-response law is downstream of source-atlas and response-selector primitives."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-FINITE-VARIATION-ROBUSTNESS-LAW"
+    title: "Finite-variation robustness class and preservation theorem"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "open"
+    target_derivation_milestone: "source_equivalence_eqsrc"
+    milestone_burden: "finite source-family perturbation coverage"
+    missing_source_law: "An admissible finite-variation class plus preservation theorem for source families profile selectors inverse checks cocycle checks and atlas-glue data."
+    underdetermination_statement: "Current ontology has no admissible finite-variation class or preservation theorem for atlas-glue profile selector inverse and cocycle data."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "draft/control"
+    evidence:
+      task_ids:
+        - "RT-20260614-034"
+        - "RT-20260614-072"
+        - "RT-20260614-074"
+        - "RT-20260614-075"
+      handoff_ids:
+        - "handoff-0117"
+      completion_paths:
+        - "research_control/tasks/RT-20260614-075/jobs/completions/AJC-AJ-RT-20260614-075-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-034/artifacts/75_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_FINITE_VARIATION_REPAIR_OR_CONTROLLED_PAUSE_PACKET_REFUTER_STRESS_TEST.tex"
+        - "research_control/tasks/RT-20260614-072/artifacts/113_RESP_LC_SOURCE_EXTENSION_M_SRC_ATLAS_GLUE_DISCRIMINATOR_CANDIDATE_WITNESS.tex"
+        - "research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex"
+      registry_rows:
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:finite_variation_robustness"
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:source_equivalence_eqsrc"
+      generated_retrieval_paths: []
+      evidence_note: "Finite-variation robustness is a cross-cutting dependency and is active in the current atlas-glue obstruction."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-034/artifacts/75_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_FINITE_VARIATION_REPAIR_OR_CONTROLLED_PAUSE_PACKET_REFUTER_STRESS_TEST.tex"
+      source_extension_data: []
+      rejected_or_frozen_results:
+        - "strict finite preservation is not arbitrary finite-variation robustness"
+      human_gated_items: []
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "ontology-formalizer@0.2.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "This law can be selected as a bounded prerequisite branch for the active atlas-glue candidate."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids:
+        - "MSL-EQSRC-GENERALIZATION-LAW"
+      downstream_law_ids:
+        - "MSL-MSRC-ATLASGLUE-LAW"
+      dependency_note: "Atlas-glue generalization cannot be promoted without a finite-variation class and preservation theorem."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-FINITE-TOY-RESPONSE-LAW"
+    title: "Finite source-to-response toy model redesign"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: false
+    candidate_status: "frozen_negative"
+    target_derivation_milestone: "finite_toy_metric_response"
+    milestone_burden: "minimal finite response analogue"
+    missing_source_law: "A redesigned finite source-to-response toy model with invariance checks that survives tag-removal stress."
+    underdetermination_statement: "The explicit-tag finite toy model does not solve the missing primitive for the untagged retained tuple."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "rejected"
+    evidence:
+      task_ids:
+        - "RT-20260614-053"
+      handoff_ids: []
+      completion_paths:
+        - "research_control/tasks/RT-20260614-053/jobs/completions/AJC-AJ-RT-20260614-053-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-053/artifacts/94_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL.tex"
+      registry_rows:
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:finite_toy_metric_response"
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-053-001"
+      generated_retrieval_paths: []
+      evidence_note: "Distance ledger marks this route frozen negative after tag-removal stress; redesign may be possible but it is not eligible as the next active ontology-law packet."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-053/artifacts/94_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL.tex"
+      source_extension_data: []
+      rejected_or_frozen_results:
+        - "explicit-tag-only finite toy route failed tag-removal stress and is frozen locally"
+      human_gated_items: []
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: ""
+      recommended_packet_type: "none"
+      reason: "Frozen locally until selector and variation prerequisites improve or a redesigned toy question is explicitly authorized."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids:
+        - "MSL-RESP-LC-SELECTOR-LAW"
+        - "MSL-FINITE-VARIATION-ROBUSTNESS-LAW"
+      downstream_law_ids: []
+      dependency_note: "The frozen toy route is evidence for failure modes rather than an active packet target."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+  - law_id: "MSL-EQSRC-GENERALIZATION-LAW"
+    title: "General source-equivalence and source-family stability law"
+    route_trigger_classification: "derivation_critical_missing_source_law"
+    eligible_for_ontology_law_route: true
+    candidate_status: "deferred"
+    target_derivation_milestone: "source_equivalence_eqsrc"
+    milestone_burden: "general equivalence under variations"
+    missing_source_law: "A general EqSrc and source-family stability theorem beyond local exact-interface controls and repeated finite-variation repair cycles."
+    underdetermination_statement: "General EqSrc remains undischarged; existing exact baselines do not provide a general robustness theorem or scoped no-go theorem."
+    adoption_status:
+      current_adoption: "blocked"
+      continuation: "open"
+      status_pair: "blocked_adoption_open_continuation"
+      candidate_law_output_status: "draft/control"
+    evidence:
+      task_ids:
+        - "RT-20260614-034"
+      handoff_ids: []
+      completion_paths:
+        - "research_control/tasks/RT-20260614-034/jobs/completions/AJC-AJ-RT-20260614-034-001.yaml"
+      artifact_paths:
+        - "research_control/tasks/RT-20260614-034/artifacts/75_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_FINITE_VARIATION_REPAIR_OR_CONTROLLED_PAUSE_PACKET_REFUTER_STRESS_TEST.tex"
+      registry_rows:
+        - "registries/DISTANCE_TO_GR_LEDGER.csv:source_equivalence_eqsrc"
+        - "registries/AGENT_JOB_REGISTRY.csv:AJ-RT-20260614-034-001"
+      generated_retrieval_paths: []
+      evidence_note: "The seed row is intentionally narrow because the broader RT-20260613 and RT-20260614-001 through RT-20260614-034 chain requires later focused curation."
+    prior_outputs:
+      draft_control_artifacts:
+        - "research_control/tasks/RT-20260614-034/artifacts/75_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_LEDGER_COMPLETE_SOURCE_FAMILY_GENERATOR_PACKET_FINITE_VARIATION_REPAIR_OR_CONTROLLED_PAUSE_PACKET_REFUTER_STRESS_TEST.tex"
+      source_extension_data: []
+      rejected_or_frozen_results:
+        - "controlled pause for repeated unmet burdens without new payload"
+      human_gated_items: []
+    forbidden_overreads: *common_forbidden_overreads
+    route_recommendation:
+      recommended_next_role: "theoretical-continuation-selector@0.1.0"
+      recommended_packet_type: "ontology-law-research-packet"
+      reason: "Deferred broad-scope law; should be narrowed by a selector before execution."
+      requires_human_gate: false
+      human_gate_reason: ""
+    dependencies:
+      prerequisite_law_ids: []
+      downstream_law_ids:
+        - "MSL-FINITE-VARIATION-ROBUSTNESS-LAW"
+        - "MSL-OBSLOC-SOLDERING-LAW"
+      dependency_note: "General source-equivalence stability underlies later robustness and observer-localization use."
+    review:
+      last_reviewed_at: "2026-06-20T19:19:28Z"
+      reviewed_by_role: "project-control-maintainer@0.1.0--RT-20260620-010"
+      validation_status: "seed_evidence_inspected"
+review_summary:
+  active_candidate_id: "MSL-MSRC-ATLASGLUE-LAW"
+  active_handoff_mapping: "handoff-0117 maps to MSL-MSRC-ATLASGLUE-LAW with MSL-FINITE-VARIATION-ROBUSTNESS-LAW as a direct dependency."
+  phase_1_boundary: "Inventory creation only. No route behavior validator behavior ontology source dedicated CSV registry or generated-output authority change."
