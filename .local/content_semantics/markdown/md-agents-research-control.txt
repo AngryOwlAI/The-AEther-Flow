@@ -39,6 +39,33 @@ evaluate freeze criteria for repeated-burden or scoped-obstruction outcomes.
 Source-extension and finite toy metric-response packets are controlled
 categories, not claim-promotion shortcuts.
 
+## Ontology-Law Research Packet Route
+
+Use route label `ontology-law-research-packet` only when the active derivation
+milestone is blocked by `derivation_critical_missing_source_law`: the current
+ontology lacks a required source-side law, selector, discriminator, transition
+rule, robustness rule, or equivalent primitive.
+
+Non-triggers are `ordinary_gap` and `workflow_inconvenience`. Ordinary gaps
+include missing documentation, missing registry rows, generated derivative
+drift, missing citations, missing computations that can be done under existing
+ontology, and proof-detail work under existing ontology. Workflow
+inconvenience includes tedious casework, slow literature review, awkward
+templates, and strict validation friction.
+
+A valid underdetermination statement may say "current ontology does not derive
+X." It may not conclude "therefore X is impossible" unless a separate no-go
+theorem or scoped obstruction proves that stronger claim. If conservative
+source-side extension remains possible, record the status pair
+`blocked_adoption_open_continuation`: current adoption is blocked while
+same-milestone research continuation stays open.
+
+Candidate status vocabulary is `draft/control`, `proposal-only`,
+`source-extension data`, `canonical-ontology candidate`, `adopted`,
+`rejected`, and `human-gated`. The route does not edit canonical ontology,
+promote benchmark status, adopt `M_src` or atlas-glue data, create Gate Chair
+authority, or weaken exact-GR recovery obligations.
+
 ## Editing Rules
 
 - Keep DDRs, AgentJobs, completions, approvals, and handoffs immutable after

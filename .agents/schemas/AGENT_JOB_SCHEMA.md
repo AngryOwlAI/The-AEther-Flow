@@ -78,6 +78,32 @@ cannot name a derivation milestone should be routed as documentation,
 methodology, validation, or project-system work rather than physics
 derivation work.
 
+## Route Contract Vocabulary
+
+`ontology-law-research-packet` is a named route label for the narrow case where
+the current ontology does not derive a derivation-critical source-side law,
+selector, discriminator, transition rule, robustness rule, or equivalent
+primitive. The trigger classification is
+`derivation_critical_missing_source_law`.
+
+The non-trigger classifications are `ordinary_gap` and
+`workflow_inconvenience`. Ordinary gaps include missing documentation, missing
+registry rows, generated derivative drift, missing citations, computations
+available under existing ontology, and proof-detail work under existing
+ontology. Workflow inconvenience includes tedious casework, slow literature
+review, awkward templates, and strict validation friction.
+
+Use `blocked_adoption_open_continuation` when current adoption is blocked but
+same-milestone source-side continuation remains open. Candidate-law status
+vocabulary is `draft/control`, `proposal-only`, `source-extension data`,
+`canonical-ontology candidate`, `adopted`, `rejected`, and `human-gated`.
+`canonical-ontology candidate`, adoption, and ontology-edit effects remain
+human-gated.
+
+Phase 2 will define the machine-checkable receipt block for this route. Until
+that receipt schema exists, this section defines route vocabulary and claim
+boundaries only; it does not add a new validator-enforced field requirement.
+
 ## Optional Fields
 
 - `objective`
@@ -194,6 +220,7 @@ The selector may choose only one future packet type:
 - `distinct_scoped_no_go_question`
 - `bounded_theoretical_calculation`
 - `finite_toy_metric_response_model`
+- `ontology_law_research_packet`
 - `source_extension_candidate`
 - `source_extension_smuggling_audit`
 - `source_extension_refuter_stress`
@@ -203,6 +230,10 @@ The selector may choose only one future packet type:
 The last option is reserved for cases where the next honest continuation needs
 canonical ontology authority, ontology adoption, or another protected human
 gate. Missing empirical data or absent experiment access is not sufficient.
+When `ontology_law_research_packet` is selected, the route label is
+`ontology-law-research-packet`, the trigger classification must be
+`derivation_critical_missing_source_law`, and current adoption must remain
+blocked unless a later explicit human Gate Chair action authorizes otherwise.
 
 After `2026-06-17T15:46:25Z`, `distinct_scoped_no_go_question` must include a
 new-payload novelty statement and a decision consequence. Source-extension

@@ -51,6 +51,36 @@ canonical ontology edit or ontology adoption. Future completions and handoffs
 must record that route as `human_gated_ontology_change_required` or another
 specific human-gated route, not as generic `controlled_pause`.
 
+## Ontology-Law Research Packet Route
+
+The named route `ontology-law-research-packet` is available only for
+derivation-critical ontology underdetermination. Its trigger classification is
+`derivation_critical_missing_source_law`: the current ontology does not derive
+a required source-side law, selector, discriminator, transition rule,
+robustness rule, or equivalent primitive needed by the active milestone.
+
+This route is not for `ordinary_gap` or `workflow_inconvenience`. Ordinary gaps
+include missing documentation, missing registry rows, generated derivative
+drift, missing citations, missing computations available under existing
+ontology, and proof-detail work under existing ontology. Workflow
+inconvenience includes tedious casework, slow literature review, awkward
+templates, and strict validation friction.
+
+The route preserves same-milestone continuity. The AgentJob must name the
+active `target_derivation_milestone` and `milestone_burden`; it must not open
+an unrelated path merely because adoption is blocked. Use the status pair
+`blocked_adoption_open_continuation` when current adoption is rejected but a
+conservative source-side extension remains possible.
+
+Allowed underdetermination language is "current ontology does not derive X."
+Without a separate no-go theorem or scoped obstruction, do not write
+"therefore X is impossible." Candidate outputs must use the controlled status
+vocabulary `draft/control`, `proposal-only`, `source-extension data`,
+`canonical-ontology candidate`, `adopted`, `rejected`, and `human-gated`.
+Human-gated ontology adoption, exact requested ontology edits, benchmark
+promotion, `M_src` adoption, downstream metric or coupling claims, and Gate
+Chair verdicts remain blocked unless separately authorized.
+
 ## GR Derivation Burden Map
 
 Future physics AgentJobs after `2026-06-17T15:46:25Z` must name a

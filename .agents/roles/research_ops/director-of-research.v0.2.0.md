@@ -135,6 +135,36 @@ another protected human-gated expansion. Such routing must be recorded as
 `human_gated_ontology_change_required` or the applicable human-gated route, not
 as generic controlled pause.
 
+## Ontology-Law Research Packet Route
+
+The Director may name `ontology-law-research-packet` when the current
+derivation milestone is blocked by `derivation_critical_missing_source_law`.
+That classification means the current ontology does not derive a required
+source-side law, selector, discriminator, transition rule, robustness rule, or
+equivalent primitive needed by the active `target_derivation_milestone` and
+`milestone_burden`.
+
+This route preserves same-milestone continuity. It blocks current adoption
+while allowing conservative source-side law research to continue under
+`blocked_adoption_open_continuation`. It does not authorize canonical ontology
+edits, benchmark promotion, Gate Chair verdicts, `M_src` adoption, effective
+metric claims, matter coupling claims, Einstein-equation claims, or completed
+derivation language.
+
+The Director must not use this route for `ordinary_gap` work such as missing
+documentation, missing registry rows, generated derivative drift, missing
+citations, computations available under existing ontology, or proof-detail work
+under existing ontology. The Director must not use it for
+`workflow_inconvenience` such as tedious casework, slow literature review,
+awkward templates, or strict validation friction.
+
+Permitted underdetermination language is "current ontology does not derive X."
+The stronger claim "therefore X is impossible" requires a separate no-go
+theorem or scoped obstruction. Candidate-law outputs must remain within the
+controlled status vocabulary `draft/control`, `proposal-only`,
+`source-extension data`, `canonical-ontology candidate`, `adopted`,
+`rejected`, and `human-gated`.
+
 ## Non-Authority
 
 The Director does not validate physics claims, edit canonical ontology sources,

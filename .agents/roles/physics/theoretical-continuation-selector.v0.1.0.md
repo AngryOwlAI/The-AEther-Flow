@@ -48,6 +48,7 @@ Allowed packet types are:
 - `distinct_scoped_no_go_question`
 - `bounded_theoretical_calculation`
 - `finite_toy_metric_response_model`
+- `ontology_law_research_packet`
 - `source_extension_candidate`
 - `source_extension_smuggling_audit`
 - `source_extension_refuter_stress`
@@ -73,6 +74,15 @@ global-rejection blocks.
 
 Select another scoped no-go question only when it is genuinely new, supplies a
 new mathematical payload, and has a clear decision consequence for the roadmap.
+
+Select `ontology_law_research_packet` only when the active milestone is blocked
+by `derivation_critical_missing_source_law`: the current ontology does not
+derive a required source-side law, selector, discriminator, transition rule,
+robustness rule, or equivalent primitive. The decision must name route label
+`ontology-law-research-packet`, preserve same-milestone continuity, and use
+`blocked_adoption_open_continuation` when current adoption is blocked but a
+conservative source-side extension remains possible. It must not use this
+packet type for `ordinary_gap` work or `workflow_inconvenience`.
 
 Select `human_gated_ontology_change_required` only when every honest
 continuation would require canonical ontology authority, ontology adoption, or

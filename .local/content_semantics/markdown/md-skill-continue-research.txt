@@ -132,6 +132,30 @@ skills provide procedures, and gates control claim promotion.
    as `human_gated_ontology_change_required` or the applicable human-gated
    route, not as generic `controlled_pause`.
 
+   If the active derivation milestone is blocked because the current ontology
+   does not derive a required source-side law, selector, discriminator,
+   transition rule, robustness rule, or equivalent primitive, the Director may
+   use the named route `ontology-law-research-packet`. The trigger
+   classification is `derivation_critical_missing_source_law`. The route is
+   not available for `ordinary_gap` work, including missing documentation,
+   missing registry rows, generated derivative drift, missing citations,
+   computations available under existing ontology, or proof-detail work under
+   existing ontology. The route is also not available for
+   `workflow_inconvenience`, including tedious casework, slow literature
+   review, awkward templates, or strict validation friction.
+
+   Underdetermination language must stay exact. A packet may state "current
+   ontology does not derive X." It must not state "therefore X is impossible"
+   unless a separate no-go theorem or scoped obstruction supports that claim.
+   When conservative source-side extension remains possible, use the status
+   pair `blocked_adoption_open_continuation`: current adoption is blocked while
+   same-milestone continuation remains open. Candidate-law status labels are
+   `draft/control`, `proposal-only`, `source-extension data`,
+   `canonical-ontology candidate`, `adopted`, `rejected`, and `human-gated`.
+   `canonical-ontology candidate`, `adopted`, ontology-edit, benchmark,
+   `M_src`, metric, coupling, Einstein-equation, and Gate Chair authority
+   claims remain protected until explicit human-gated authorization.
+
    For Refuter stress tests created after the bridge-or-fail loop-control
    policy activation, the completion must classify the result as one of:
    `concrete_witness_path`, `source_side_irrelevance_theorem_path`,
