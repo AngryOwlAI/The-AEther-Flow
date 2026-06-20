@@ -156,6 +156,25 @@ skills provide procedures, and gates control claim promotion.
    `M_src`, metric, coupling, Einstein-equation, and Gate Chair authority
    claims remain protected until explicit human-gated authorization.
 
+   When using `ontology-law-research-packet`, keep one outer physics AgentJob
+   for the invocation. The route label is not a new permanent role. Bind the
+   AgentJob through the normal execution-role record to the narrowest active
+   role that fits the immediate payload: Theoretical Continuation Selector for
+   packet selection, Ontology Formalizer for source-law definitions and proof
+   obligations, Candidate Constructor for bounded finite or local witnesses,
+   Smuggling Auditor for hidden target-import audits, or Refuter for collapse,
+   nonuniqueness, inverse, cocycle, and finite-variation stress tests. Use a
+   `task_overlay` for route-specific constraints; use permanent role
+   registration only through the project-system improvement loop.
+
+   The parent-child synthesis rule still applies. The Physicist-Mathematician
+   child defines formal objects, domains, maps, and proof obligations. The
+   Physicist-Philosopher child separates ontology, mathematical model,
+   empirical recovery, and benchmark status. The parent fuses consensus,
+   unique contributions, and unresolved conflicts into one output. Children
+   inherit the single outer execution-role record and may not add authority,
+   claim boundaries, write paths, or child AgentJobs.
+
    For Refuter stress tests created after the bridge-or-fail loop-control
    policy activation, the completion must classify the result as one of:
    `concrete_witness_path`, `source_side_irrelevance_theorem_path`,
