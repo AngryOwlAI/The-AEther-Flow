@@ -81,6 +81,16 @@ Human-gated ontology adoption, exact requested ontology edits, benchmark
 promotion, `M_src` adoption, downstream metric or coupling claims, and Gate
 Chair verdicts remain blocked unless separately authorized.
 
+Validator and fixture evidence for this route is operational receipt evidence
+only. A PASS result can show that a completion preserved the route label,
+trigger classification, blocked-adoption/open-continuation pair, exact-GR
+recovery obligations, no-target-import audit scope, and human-gate boundary.
+It does not prove that a candidate source-side law is mathematically correct,
+source-complete, sufficient for exact-GR recovery, or adopted. Use task-local
+Phase 4 and Phase 5 artifacts for validator and fixture audit evidence; use
+registered physics sources plus explicit human-gated authority for scientific
+promotion.
+
 ## GR Derivation Burden Map
 
 Future physics AgentJobs after `2026-06-17T15:46:25Z` must name a
