@@ -12,6 +12,8 @@ machine.
 - `resolve_latest_handoff.py` reads the latest handoff chain.
 - `validate_research_control.py` validates task records, registries, handoffs,
   parent-child synthesis constraints, and diff allowlists.
+- `report_physics_progress_metrics.py` reports operational AI-science and
+  research-system health metrics from tracked completions and registries.
 - `checkpoint_research_transaction.py` regenerates, validates, stages, and
   commits a bounded transaction.
 - `strict_yaml.py` provides deterministic YAML parsing for control records.
@@ -32,6 +34,7 @@ machine.
 ```zsh
 .venv/bin/python scripts/research_control/validate_research_control.py
 .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
+.venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format markdown
 .venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id <job_id>
 ```
 
@@ -40,4 +43,3 @@ machine.
 These scripts enforce tracked state. They do not replace Director decisions,
 AgentJob allowlists, role contracts, or human gates. If validation fails, treat
 the failure as evidence to repair the transaction rather than bypass the gate.
-

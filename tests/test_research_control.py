@@ -38,6 +38,10 @@ class ResearchControlTests(unittest.TestCase):
         cls.resolver = load_module("resolve_latest_handoff", "resolve_latest_handoff.py")
         cls.continue_research = load_module("continue_research", "continue_research.py")
         cls.checkpoint = load_module("checkpoint_research_transaction", "checkpoint_research_transaction.py")
+        cls.metrics = load_module(
+            "report_physics_progress_metrics",
+            "report_physics_progress_metrics.py",
+        )
 
     def test_strict_yaml_parses_nested_maps_and_lists(self) -> None:
         parsed = self.strict_yaml.loads(
@@ -60,6 +64,13 @@ class ResearchControlTests(unittest.TestCase):
     def test_static_research_control_validation_passes(self) -> None:
         report = self.validator.validate_all()
         self.assertEqual(report.errors, [])
+
+    def test_physics_progress_metrics_report_reads_tracked_completions(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        metrics = report["metrics"]
+        self.assertGreater(metrics["input_counts"]["completions_read"], 0)
+        self.assertIn("physics_progress_metrics", metrics)
+        self.assertFalse(report["authority_boundary"]["physics_claim_promotion_authorized"])
 
     def test_role_registry_accepts_distinct_role_versions(self) -> None:
         report = self.validator.ValidationReport()
