@@ -36,3 +36,30 @@ documentation updates and how that decision was validated.
 - Generated derivatives may be listed only as outputs of approved generation
   commands, never as independent authority.
 - Records live at `research_control/tasks/<task_id>/documentation_impact.yaml`.
+
+## No-Op Receipt Example
+
+Use a no-op receipt when classifier output requires documentation-impact
+accounting but the correct conclusion is that no source documentation or
+registry documentation update is needed:
+
+```yaml
+documentation_impact_id: "DI-RT-YYYYMMDD-NNN-001"
+task_id: "RT-YYYYMMDD-NNN"
+job_id: "AJ-RT-YYYYMMDD-NNN-001"
+changed_paths:
+  - "scripts/project_control/example.py"
+docs_update_required: false
+reason_codes:
+  - "project_control_tooling_changed"
+source_surfaces_inspected:
+  - "scripts/project_control/example.py"
+updated_source_docs: []
+updated_registries: []
+generated_derivatives: []
+no_update_rationale: "No source documentation update was needed because the change only clarified an existing validator message and did not alter workflow commands or authority boundaries."
+validators_run:
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+status: "no_update_required"
+```

@@ -118,6 +118,16 @@ class Classification:
             recommended_role = DOCUMENTATION_ROLE
         elif not recommended_role and self.project_system_improvement_required:
             recommended_role = VALIDATOR_ROLE
+        if self.docs_impact_required or self.project_system_improvement_required:
+            documentation_impact_guidance = (
+                "State-changing project-system work requires research_control/tasks/<task_id>/documentation_impact.yaml. "
+                "Use docs_update_required: false only when no source documentation or registry documentation update is needed; "
+                "the receipt must still list live changed_paths, exact classifier reason_codes, generated_derivatives, validators_run, and a no_update_rationale."
+            )
+        else:
+            documentation_impact_guidance = (
+                "No documentation-impact receipt is required for the current path set."
+            )
         return {
             "docs_impact_required": self.docs_impact_required,
             "project_system_improvement_required": self.project_system_improvement_required,
@@ -137,6 +147,7 @@ class Classification:
             ]
             if self.docs_impact_required or self.project_system_improvement_required
             else [],
+            "documentation_impact_guidance": documentation_impact_guidance,
             "block_checkpoint_until_addressed": bool(
                 self.docs_impact_required or self.blocked_paths
             ),

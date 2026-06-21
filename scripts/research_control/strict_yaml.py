@@ -45,6 +45,8 @@ def parse_scalar(token: str, line_number: int = 0) -> Any:
     token = token.strip()
     if token == "":
         return ""
+    if token == "[]":
+        return []
     if token == "true":
         return True
     if token == "false":
@@ -199,14 +201,17 @@ def dumps(data: dict[str, Any], field_order: list[str] | None = None) -> str:
             for child_key, child_value in value.items():
                 emit(child_key, child_value, indent + 2)
         elif isinstance(value, list):
-            lines.append(f"{prefix}{key}:")
-            for item in value:
-                if isinstance(item, dict):
-                    lines.append(f"{prefix}  -")
-                    for child_key, child_value in item.items():
-                        emit(child_key, child_value, indent + 4)
-                else:
-                    lines.append(f"{prefix}  - {quote_scalar(item)}")
+            if not value:
+                lines.append(f"{prefix}{key}: []")
+            else:
+                lines.append(f"{prefix}{key}:")
+                for item in value:
+                    if isinstance(item, dict):
+                        lines.append(f"{prefix}  -")
+                        for child_key, child_value in item.items():
+                            emit(child_key, child_value, indent + 4)
+                    else:
+                        lines.append(f"{prefix}  - {quote_scalar(item)}")
         else:
             lines.append(f"{prefix}{key}: {quote_scalar(value)}")
 

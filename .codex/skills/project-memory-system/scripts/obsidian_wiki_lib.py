@@ -42,6 +42,36 @@ SOURCE_REGISTRY_NAMES = [
     "HTML_EXPLAINER_REGISTRY.csv",
 ]
 
+EXACT_IDENTIFIER_FIELDS = {
+    "object_id",
+    "path",
+    "task_id",
+    "job_id",
+    "agent_job_id",
+    "decision_id",
+    "signal_id",
+    "edge_id",
+    "source_id",
+    "source_object_id",
+    "source_task_id",
+    "source_job_id",
+    "source_role_id",
+    "source_path",
+    "source_registry",
+    "target_object_id",
+    "target_path",
+    "related_source",
+    "generated_from",
+    "claim_boundary_id",
+    "execution_role_ref",
+    "role_id",
+    "completion_id",
+    "completion_path",
+    "job_path",
+    "record_path",
+    "documentation_impact_id",
+}
+
 OBSIDIAN_VAULT_COLUMNS = COMMON_COLUMNS + [
     "source_object_id",
     "source_registry",
@@ -284,6 +314,16 @@ def load_rows_by_registry(repo_root: Path) -> dict[str, list[dict[str, str]]]:
         "OBJECT_RELATIONSHIP_REGISTRY.csv",
     ]
     return {name: read_csv_rows(registry_path(repo_root, name)) for name in names}
+
+
+def load_lookup_rows_by_registry(repo_root: Path) -> dict[str, list[dict[str, str]]]:
+    rows_by_registry = load_rows_by_registry(repo_root)
+    registry_dir = repo_root / "registries"
+    if not registry_dir.exists():
+        return rows_by_registry
+    for path in sorted(registry_dir.glob("*.csv")):
+        rows_by_registry.setdefault(path.name, read_csv_rows(path))
+    return rows_by_registry
 
 
 def source_rows_with_registry(
@@ -1220,7 +1260,22 @@ def local_retrieval_warnings(
     vault: Path | None = None,
     index_path: Path | None = None,
 ) -> list[str]:
-    warnings: list[str] = []
+    return [
+        str(warning["message"])
+        for warning in local_retrieval_warning_records(repo_root, vault, index_path)
+    ]
+
+
+def local_retrieval_warning_records(
+    repo_root: Path,
+    vault: Path | None = None,
+    index_path: Path | None = None,
+) -> list[dict[str, str]]:
+    warnings: list[dict[str, str]] = []
+
+    def warn(message: str, category: str = "local_cache_only") -> None:
+        warnings.append({"category": category, "message": message})
+
     rows_by_registry = load_rows_by_registry(repo_root)
     vault_path = vault or vault_root(repo_root)
     index = index_path or memory_index_path(repo_root)
@@ -1235,41 +1290,41 @@ def local_retrieval_warnings(
     }
 
     if not vault_path.exists():
-        warnings.append(f"Obsidian vault is missing: {rel_to_repo(repo_root, vault_path) if vault_path.is_absolute() and repo_root in vault_path.parents else vault_path.as_posix()}")
+        warn(f"Obsidian vault is missing: {rel_to_repo(repo_root, vault_path) if vault_path.is_absolute() and repo_root in vault_path.parents else vault_path.as_posix()}")
     else:
         for row in source_rows:
             source_id = row.get("object_id", "")
             vault_row = obsidian_by_source.get(source_id)
             if not vault_row:
-                warnings.append(f"Obsidian vault registry row is missing for {source_id}")
+                warn(f"Obsidian vault registry row is missing for {source_id}")
                 continue
             note_path = repo_root / vault_row.get("vault_note_path", "")
             raw_path = repo_root / vault_row.get("vault_raw_path", "")
             index_note_path = repo_root / vault_row.get("vault_index_path", "")
             source_path = repo_root / row.get("path", "")
             if not note_path.exists():
-                warnings.append(f"Obsidian vault note is missing for {source_id}: {vault_row.get('vault_note_path', '')}")
+                warn(f"Obsidian vault note is missing for {source_id}: {vault_row.get('vault_note_path', '')}")
             if source_path.exists():
                 if not raw_path.exists():
-                    warnings.append(f"Obsidian raw mirror is missing for {source_id}: {vault_row.get('vault_raw_path', '')}")
+                    warn(f"Obsidian raw mirror is missing for {source_id}: {vault_row.get('vault_raw_path', '')}")
                 elif sha256_file(raw_path) != sha256_file(source_path):
-                    warnings.append(f"Obsidian raw mirror is stale for {source_id}: {vault_row.get('vault_raw_path', '')}")
+                    warn(f"Obsidian raw mirror is stale for {source_id}: {vault_row.get('vault_raw_path', '')}")
             if not index_note_path.exists():
-                warnings.append(f"Obsidian format index is missing for {source_id}: {vault_row.get('vault_index_path', '')}")
+                warn(f"Obsidian format index is missing for {source_id}: {vault_row.get('vault_index_path', '')}")
 
             semantic_row = semantic_by_source.get(source_id)
             if not semantic_row:
-                warnings.append(f"Content semantic registry row is missing for {source_id}")
+                warn(f"Content semantic registry row is missing for {source_id}")
                 continue
             text_path = repo_root / semantic_row.get("extracted_text_path", "")
             if semantic_row.get("extraction_status") in {"PASS", "EMPTY"}:
                 if not text_path.exists():
-                    warnings.append(f"Content semantic text is missing for {source_id}: {semantic_row.get('extracted_text_path', '')}")
+                    warn(f"Content semantic text is missing for {source_id}: {semantic_row.get('extracted_text_path', '')}")
                 elif sha256_file(text_path) != semantic_row.get("content_hash", ""):
-                    warnings.append(f"Content semantic text is stale for {source_id}: {semantic_row.get('extracted_text_path', '')}")
+                    warn(f"Content semantic text is stale for {source_id}: {semantic_row.get('extracted_text_path', '')}")
 
     if not index.exists():
-        warnings.append(f"Memory SQLite index is missing: {rel_to_repo(repo_root, index) if index.is_absolute() and repo_root in index.parents else index.as_posix()}")
+        warn(f"Memory SQLite index is missing: {rel_to_repo(repo_root, index) if index.is_absolute() and repo_root in index.parents else index.as_posix()}")
     else:
         index_mtime = index.stat().st_mtime
         input_paths: list[Path] = []
@@ -1286,7 +1341,7 @@ def local_retrieval_warnings(
             input_paths.append(repo_root / row.get("extracted_text_path", ""))
         newest_input = max((path.stat().st_mtime for path in input_paths if path.exists()), default=0)
         if newest_input > index_mtime + 1:
-            warnings.append("Memory SQLite index is older than one or more registered source, registry, or semantic inputs")
+            warn("Memory SQLite index is older than one or more registered source, registry, or semantic inputs")
     return warnings
 
 
@@ -1387,34 +1442,85 @@ def build_memory_index(repo_root: Path, index_path: Path | None = None) -> Path:
     return target
 
 
-def lookup_object(repo_root: Path, identifier: str) -> dict[str, object]:
-    rows_by_registry = load_rows_by_registry(repo_root)
-    matches: list[tuple[str, dict[str, str]]] = []
+def semicolon_values(value: str) -> set[str]:
+    return {item.strip() for item in value.split(";") if item.strip()}
+
+
+def exact_match_fields(row: dict[str, str], identifier: str) -> list[str]:
+    fields: list[str] = []
+    for field_name, value in row.items():
+        if field_name not in EXACT_IDENTIFIER_FIELDS:
+            continue
+        if value == identifier or identifier in semicolon_values(value):
+            fields.append(field_name)
+    return fields
+
+
+def exact_registry_matches(
+    repo_root: Path,
+    identifier: str,
+) -> list[tuple[str, dict[str, str], list[str]]]:
+    rows_by_registry = load_lookup_rows_by_registry(repo_root)
+    matches: list[tuple[str, dict[str, str], list[str]]] = []
     for registry_name, rows in rows_by_registry.items():
         for row in rows:
-            candidates = {
-                row.get("object_id", ""),
-                row.get("path", ""),
+            fields = exact_match_fields(row, identifier)
+            if fields:
+                matches.append((registry_name, row, fields))
+    return matches
+
+
+def fallback_object_id(row: dict[str, str], identifier: str) -> str:
+    for field_name in [
+        "object_id",
+        "task_id",
+        "job_id",
+        "agent_job_id",
+        "decision_id",
+        "signal_id",
+        "edge_id",
+        "claim_boundary_id",
+        "execution_role_ref",
+        "documentation_impact_id",
+    ]:
+        value = row.get(field_name, "")
+        if value:
+            return value
+    return identifier
+
+
+def exact_matches_as_search_results(
+    matches: list[tuple[str, dict[str, str], list[str]]],
+    identifier: str,
+) -> list[dict[str, object]]:
+    results: list[dict[str, object]] = []
+    for registry_name, row, fields in matches:
+        object_id = fallback_object_id(row, identifier)
+        results.append(
+            {
+                "object_id": object_id,
+                "title": object_id,
+                "snippet": f"Exact registry-field match in {registry_name}: {', '.join(fields)}",
+                "format": row.get("format", "registry") or "registry",
+                "source_path": row.get("path") or row.get("source_path") or row.get("job_path") or row.get("record_path") or "",
+                "rank": 0,
+                "registry": registry_name,
+                "matched_fields": fields,
+                "row": row,
             }
-            if registry_name in {
-                "WIKI_ARTIFACT_REGISTRY.csv",
-                "OBSIDIAN_VAULT_REGISTRY.csv",
-                "CONTENT_SEMANTIC_REGISTRY.csv",
-            }:
-                candidates.update(
-                    {
-                        row.get("source_object_id", ""),
-                        row.get("source_path", ""),
-                        row.get("vault_note_path", ""),
-                        row.get("vault_raw_path", ""),
-                    }
-                )
-            if registry_name == "OBJECT_RELATIONSHIP_REGISTRY.csv":
-                candidates.add(row.get("edge_id", ""))
-            if identifier in candidates:
-                matches.append((registry_name, row))
+        )
+    return results
+
+
+def lookup_object(repo_root: Path, identifier: str) -> dict[str, object]:
+    rows_by_registry = load_lookup_rows_by_registry(repo_root)
+    matches: list[tuple[str, dict[str, str]]] = []
+    match_fields: dict[tuple[str, str], list[str]] = {}
+    for registry_name, row, fields in exact_registry_matches(repo_root, identifier):
+        matches.append((registry_name, row))
+        match_fields[(registry_name, json.dumps(row, sort_keys=True))] = fields
     primary = matches[0] if matches else ("", {})
-    object_id = primary[1].get("object_id", identifier)
+    object_id = fallback_object_id(primary[1], identifier) if primary[1] else identifier
     source_id = primary[1].get("source_object_id", object_id)
     relationships = [
         row
@@ -1427,7 +1533,14 @@ def lookup_object(repo_root: Path, identifier: str) -> dict[str, object]:
         "match_count": len(matches),
         "primary_registry": primary[0],
         "primary_row": primary[1],
-        "matches": [{"registry": name, "row": row} for name, row in matches],
+        "matches": [
+            {
+                "registry": name,
+                "matched_fields": match_fields.get((name, json.dumps(row, sort_keys=True)), []),
+                "row": row,
+            }
+            for name, row in matches
+        ],
         "relationships": relationships,
     }
 
@@ -1461,10 +1574,26 @@ def search_index(
     formats: set[str] | None,
     limit: int,
     index_path: Path | None = None,
+    *,
+    literal: bool = False,
+    exact_id: bool = False,
 ) -> dict[str, object]:
+    exact_matches = exact_registry_matches(repo_root, query)
+    if exact_id:
+        return {
+            "query": query,
+            "search_mode": "exact_id",
+            "results": exact_matches_as_search_results(exact_matches, query)[:limit],
+        }
     target = index_path or memory_index_path(repo_root)
     if not target.exists():
-        return {"query": query, "error": f"memory index does not exist: {target}", "results": []}
+        return {
+            "query": query,
+            "error": f"memory index does not exist: {target}",
+            "fallback": "exact_registry_field_lookup",
+            "results": exact_matches_as_search_results(exact_matches, query)[:limit],
+        }
+    match_query = f'"{query.replace(chr(34), chr(34) + chr(34))}"' if literal else query
     connection = sqlite3.connect(target)
     connection.row_factory = sqlite3.Row
     try:
@@ -1472,24 +1601,52 @@ def search_index(
             "SELECT object_id, title, snippet(docs_fts, 2, '[', ']', '...', 16) AS snippet, "
             "format, source_path, bm25(docs_fts) AS rank FROM docs_fts WHERE docs_fts MATCH ?"
         )
-        params: list[object] = [query]
+        params: list[object] = [match_query]
         if formats:
             placeholders = ",".join("?" for _ in formats)
             sql += f" AND format IN ({placeholders})"
             params.extend(sorted(formats))
         sql += " ORDER BY rank LIMIT ?"
         params.append(limit)
-        rows = [dict(row) for row in connection.execute(sql, params)]
+        try:
+            rows = [dict(row) for row in connection.execute(sql, params)]
+        except sqlite3.OperationalError as exc:
+            literal_rows: list[dict[str, object]] = []
+            if not literal:
+                literal_params = list(params)
+                literal_params[0] = f'"{query.replace(chr(34), chr(34) + chr(34))}"'
+                try:
+                    literal_rows = [dict(row) for row in connection.execute(sql, literal_params)]
+                except sqlite3.OperationalError:
+                    literal_rows = []
+            return {
+                "query": query,
+                "fts_error": str(exc),
+                "fallback": "exact_registry_field_lookup",
+                "literal_fts_retried": bool(literal_rows),
+                "results": (
+                    exact_matches_as_search_results(exact_matches, query) + literal_rows
+                )[:limit],
+            }
     finally:
         connection.close()
-    return {"query": query, "results": rows}
+    if literal:
+        rows = exact_matches_as_search_results(exact_matches, query)[:limit] + rows
+    return {"query": query, "search_mode": "literal" if literal else "fts", "results": rows[:limit]}
 
 
 def status(repo_root: Path, vault: Path | None = None, index_path: Path | None = None) -> dict[str, object]:
     vault_path = vault or vault_root(repo_root)
     index = index_path or memory_index_path(repo_root)
     rows_by_registry = load_rows_by_registry(repo_root)
-    freshness_warnings = local_retrieval_warnings(repo_root, vault_path, index)
+    warning_records = local_retrieval_warning_records(repo_root, vault_path, index)
+    freshness_warnings = [record["message"] for record in warning_records]
+    freshness_categories = {
+        "blocking": [record["message"] for record in warning_records if record["category"] == "blocking"],
+        "non_blocking": [record["message"] for record in warning_records if record["category"] == "non_blocking"],
+        "local_cache_only": [record["message"] for record in warning_records if record["category"] == "local_cache_only"],
+    }
+    local_retrieval_status = "PASS" if not freshness_warnings else "WARN"
     return {
         "vault_path": rel_to_repo(repo_root, vault_path) if vault_path.exists() else vault_path.as_posix(),
         "vault_exists": vault_path.exists(),
@@ -1499,7 +1656,11 @@ def status(repo_root: Path, vault: Path | None = None, index_path: Path | None =
         "vault_row_count": len(rows_by_registry.get("OBSIDIAN_VAULT_REGISTRY.csv", [])),
         "semantic_row_count": len(rows_by_registry.get("CONTENT_SEMANTIC_REGISTRY.csv", [])),
         "relationship_row_count": len(rows_by_registry.get("OBJECT_RELATIONSHIP_REGISTRY.csv", [])),
-        "freshness_status": "PASS" if not freshness_warnings else "WARN",
+        "core_validation_status": "PASS",
+        "freshness_status": local_retrieval_status,
+        "local_retrieval_status": local_retrieval_status,
+        "freshness_categories": freshness_categories,
+        "freshness_warning_records": warning_records,
         "freshness_warnings": freshness_warnings,
         "lint_issues": lint_vault(repo_root, vault_path) if vault_path.exists() else [],
     }

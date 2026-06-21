@@ -50,9 +50,9 @@ memory_preflight:
       query_type: "lookup"
       query_text: "<object-id-or-path>"
       returned_object_ids:
-        - "<source-object-id>"
+        - "<canonical-source-object-id>"
   canonical_inspections:
-    - object_id: "<source-object-id>"
+    - object_id: "<canonical-source-object-id>"
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: "<repo-relative-source-path>"
@@ -60,10 +60,22 @@ memory_preflight:
   authority_note: "Obsidian, wiki notes, semantic extracts, and .local are retrieval layers only and not authority."
 ```
 
-Every returned object ID that influences routing, claims, source selection, or
-project-control changes must have a canonical inspection entry. `source_hash`
-must match both the named source registry row and the current file bytes at
+Every `returned_object_ids` entry that influences routing, claims, source
+selection, or project-control changes must be an inspected canonical source
+object ID from `MARKDOWN_SOURCE_REGISTRY.csv`, `TEX_SOURCE_REGISTRY.csv`,
+`PDF_DERIVATIVE_REGISTRY.csv`, or `HTML_EXPLAINER_REGISTRY.csv`. Generated
+wiki, semantic, Obsidian, relationship, and `.local` IDs are retrieval evidence;
+they must not be listed as canonical memory-preflight returns. Each returned
+canonical source ID must have a canonical inspection entry. `source_hash` must
+match both the named source registry row and the current file bytes at
 `canonical_path`.
+
+For physics-facing AgentJobs, use explicit forbidden source classes rather than
+empty placeholders. The expected vocabulary includes `canonical_ontology_write`,
+`benchmark_promotion`, `physics_claim_promotion`, `source_law_adoption`,
+`M_src_adoption`, `candidate_reconstruction`, `gate_chair_verdict`,
+`completed_derivation_claim`, and `generated_derivative_authority`, with
+additional packet-specific forbidden classes as needed.
 
 For every future physics research AgentJob created after
 `2026-06-17T15:46:25Z`, the job must also include:
@@ -172,6 +184,7 @@ ontology_law_research_packet:
       - "target_atlas"
       - "target_metric"
       - "benchmark_success"
+      - "candidate_reconstruction"
       - "generated_derivative"
       - "registry_metadata_authority"
       - "role_authority"
@@ -224,8 +237,9 @@ Required receipt behavior:
 - `exact_gr_recovery_obligations.checklist` must name recovery obligations
   that the candidate would have to preserve.
 - `no_target_import_audit_scope.forbidden_source_classes` must include the
-  target atlas, target metric, benchmark success, generated derivatives,
-  registry metadata authority, role authority, and validation authority.
+  target atlas, target metric, benchmark success, candidate reconstruction,
+  generated derivatives, registry metadata authority, role authority, and
+  validation authority.
 - `human_gate_request.required_before_adoption` must be `true` for every
   packet that proposes, compares, refutes, or prepares an ontology-law
   candidate.

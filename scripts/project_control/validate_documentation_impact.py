@@ -61,6 +61,11 @@ VALIDATOR_COMMAND_TERMS = {
     ),
     "unittest": ("unittest",),
 }
+NO_OP_RECEIPT_GUIDANCE = (
+    "If no source documentation update is needed, add a task-local documentation_impact.yaml "
+    "with docs_update_required: false, a no_update_rationale, exact classifier reason_codes, "
+    "covered changed_paths, generated_derivatives, and validators_run."
+)
 
 
 @dataclass
@@ -288,7 +293,7 @@ def validate_paths(paths: Iterable[str]) -> DocumentationImpactReport:
 
     if project_system_task_ids(path_list) and not report.impact_record_paths:
         report.error(
-            "state-changing project-system AgentJob requires documentation_impact.yaml"
+            f"state-changing project-system AgentJob requires documentation_impact.yaml. {NO_OP_RECEIPT_GUIDANCE}"
         )
         return report
 
@@ -296,7 +301,7 @@ def validate_paths(paths: Iterable[str]) -> DocumentationImpactReport:
         return report
 
     report.error(
-        "documentation impact is required but no source documentation update or documentation_impact.yaml rationale was found"
+        f"documentation impact is required but no source documentation update or documentation_impact.yaml rationale was found. {NO_OP_RECEIPT_GUIDANCE}"
     )
     return report
 

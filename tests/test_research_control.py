@@ -61,6 +61,14 @@ class ResearchControlTests(unittest.TestCase):
         with self.assertRaises(self.strict_yaml.StrictYamlError):
             self.strict_yaml.loads('name: &bad "demo"\n')
 
+    def test_strict_yaml_accepts_only_inline_empty_lists(self) -> None:
+        parsed = self.strict_yaml.loads("unresolved_conflicts: []\n")
+        self.assertEqual(parsed["unresolved_conflicts"], [])
+        dumped = self.strict_yaml.dumps({"unresolved_conflicts": []})
+        self.assertIn("unresolved_conflicts: []", dumped)
+        with self.assertRaises(self.strict_yaml.StrictYamlError):
+            self.strict_yaml.loads("unresolved_conflicts: [alpha]\n")
+
     def test_static_research_control_validation_passes(self) -> None:
         report = self.validator.validate_all()
         self.assertEqual(report.errors, [])
@@ -320,6 +328,15 @@ class ResearchControlTests(unittest.TestCase):
         ):
             report = self.validate_memory_preflight_fixture(receipt)
         self.assertTrue(any("lack canonical inspection" in error for error in report.errors))
+
+    def test_memory_preflight_explains_generated_retrieval_ids(self) -> None:
+        root, receipt = self.memory_preflight_fixture(include_inspection=False)
+        receipt["queries"][0]["returned_object_ids"] = ["WIKI-MD-SKILL-CONTINUE-RESEARCH"]
+        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+            self.validator, "REGISTRY_DIR", root / "registries"
+        ):
+            report = self.validate_memory_preflight_fixture(receipt)
+        self.assertTrue(any("generated retrieval IDs" in error for error in report.errors))
 
     def test_memory_preflight_rejects_stale_source_hash(self) -> None:
         root, receipt = self.memory_preflight_fixture(stale_hash=True)

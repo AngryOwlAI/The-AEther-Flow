@@ -19,7 +19,15 @@ forbidden_paths:
 allowed_source_classes:
   - ""
 forbidden_source_classes:
-  - ""
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
 approved_commands:
   - ""
 required_validators:
@@ -37,10 +45,13 @@ memory_preflight:
     - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json"
       query_type: "lookup"
       query_text: "<object-id-or-path>"
+      # List inspected canonical source object IDs only. Generated wiki,
+      # semantic, Obsidian, relationship, or .local IDs are retrieval evidence,
+      # not canonical memory-preflight returns.
       returned_object_ids:
-        - "<source-object-id>"
+        - "<canonical-source-object-id>"
   canonical_inspections:
-    - object_id: "<source-object-id>"
+    - object_id: "<canonical-source-object-id>"
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: "<repo-relative-source-path>"

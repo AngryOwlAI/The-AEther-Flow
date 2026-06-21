@@ -34,6 +34,8 @@ def parse_args() -> argparse.Namespace:
     search.add_argument("--formats", help="Comma-separated format filter.")
     search.add_argument("--limit", type=int, default=20)
     search.add_argument("--index", help="SQLite index path override.")
+    search.add_argument("--literal", action="store_true", help="Treat the search text as a literal FTS phrase and include exact registry-field hits.")
+    search.add_argument("--exact-id", action="store_true", help="Skip FTS and search exact identifier fields across registry CSVs.")
     search.add_argument("--json", action="store_true", help=argparse.SUPPRESS)
 
     related = subparsers.add_parser("related", help="Traverse relationship edges.")
@@ -68,6 +70,8 @@ def main() -> int:
             formats,
             args.limit,
             memory_index_path(REPO_ROOT, args.index) if args.index else None,
+            literal=args.literal,
+            exact_id=args.exact_id,
         )
     elif args.command == "related":
         payload = related_objects(REPO_ROOT, args.object_id, args.depth)

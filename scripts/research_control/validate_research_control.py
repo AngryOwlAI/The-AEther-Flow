@@ -1479,9 +1479,19 @@ def validate_memory_preflight(
 
     missing_inspections = sorted(returned_object_ids - inspected_ids)
     if missing_inspections:
-        report.error(
-            f"{owner_path}: memory_preflight returned object IDs lack canonical inspection {missing_inspections}"
-        )
+        generated_ids = [
+            object_id
+            for object_id in missing_inspections
+            if object_id.startswith(("WIKI-", "VAULT-", "SEMANTIC-", "REL-"))
+        ]
+        if generated_ids:
+            report.error(
+                f"{owner_path}: memory_preflight returned generated retrieval IDs {generated_ids}; returned_object_ids must list inspected canonical source object IDs from source registries and generated retrieval IDs belong only in relationship or query evidence"
+            )
+        else:
+            report.error(
+                f"{owner_path}: memory_preflight returned canonical object IDs lack canonical inspection {missing_inspections}"
+            )
 
 
 def _listish_values(value: Any) -> list[str]:

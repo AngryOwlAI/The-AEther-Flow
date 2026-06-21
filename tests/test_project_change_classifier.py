@@ -406,6 +406,72 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             ["scripts/project_control/validate_documentation_impact.py"]
         )
         self.assertTrue(any("documentation impact is required" in error for error in report.errors))
+        self.assertTrue(any("docs_update_required: false" in error for error in report.errors))
+
+    def test_classifier_outputs_no_op_documentation_impact_guidance(self) -> None:
+        result = self.classifier.classify_paths(
+            ["scripts/project_control/validate_documentation_impact.py"]
+        )
+        self.assertIn("documentation_impact_guidance", result)
+        self.assertIn("docs_update_required: false", result["documentation_impact_guidance"])
+
+    def test_documentation_impact_accepts_no_op_project_system_receipt(self) -> None:
+        original_doc_root = self.doc_impact.REPO_ROOT
+        original_classifier_root = self.classifier.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            task = root / "research_control/tasks/RT-TEST/00_TASK.yaml"
+            task.parent.mkdir(parents=True)
+            task.write_text(
+                'task_id: "RT-TEST"\n'
+                'task_type: "project_system_synthetic"\n'
+                'status: "active"\n',
+                encoding="utf-8",
+            )
+            impact = root / "research_control/tasks/RT-TEST/documentation_impact.yaml"
+            impact.write_text(
+                'documentation_impact_id: "DI-RT-TEST-001"\n'
+                'task_id: "RT-TEST"\n'
+                'job_id: "AJ-RT-TEST-001"\n'
+                "changed_paths:\n"
+                '  - "scripts/project_control/synthetic_validate.py"\n'
+                '  - "research_control/tasks/RT-TEST/00_TASK.yaml"\n'
+                '  - "research_control/tasks/RT-TEST/documentation_impact.yaml"\n'
+                "docs_update_required: false\n"
+                "reason_codes:\n"
+                '  - "validator_changed"\n'
+                '  - "research_control_state_changed"\n'
+                "source_surfaces_inspected:\n"
+                '  - "scripts/project_control/synthetic_validate.py"\n'
+                "updated_source_docs: []\n"
+                "updated_registries: []\n"
+                "generated_derivatives: []\n"
+                'no_update_rationale: "No source documentation update was needed for this synthetic validator message-only change."\n'
+                "validators_run:\n"
+                '  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"\n'
+                '  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"\n'
+                '  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"\n'
+                '  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"\n'
+                '  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"\n'
+                '  - ".venv/bin/python scripts/research_control/validate_research_control.py"\n'
+                '  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"\n'
+                'status: "no_update_required"\n',
+                encoding="utf-8",
+            )
+            self.doc_impact.REPO_ROOT = root
+            self.classifier.REPO_ROOT = root
+            try:
+                report = self.doc_impact.validate_paths(
+                    [
+                        "scripts/project_control/synthetic_validate.py",
+                        "research_control/tasks/RT-TEST/00_TASK.yaml",
+                        "research_control/tasks/RT-TEST/documentation_impact.yaml",
+                    ]
+                )
+            finally:
+                self.doc_impact.REPO_ROOT = original_doc_root
+                self.classifier.REPO_ROOT = original_classifier_root
+        self.assertEqual(report.errors, [])
 
     def test_classifier_detects_project_signals_structurally(self) -> None:
         original_root = self.classifier.REPO_ROOT

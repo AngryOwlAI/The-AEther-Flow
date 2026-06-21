@@ -2,14 +2,14 @@
 object_id: "MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA"
 format: "markdown"
 source_path: ".agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md"
-source_hash: "cedfc214d015b2bfb6647be62c375533d9f96bd731230013069f2854be5ec5e9"
+source_hash: "64c3f41c96692a9f0103c4277b572da9bc99ff9f529302ab412daf9a5e07401d"
 authority_status: "project_control"
 role: "schema_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-schema-documentation-impact-schema.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-schema-documentation-impact-schema.md"
-content_hash: "cedfc214d015b2bfb6647be62c375533d9f96bd731230013069f2854be5ec5e9"
+content_hash: "64c3f41c96692a9f0103c4277b572da9bc99ff9f529302ab412daf9a5e07401d"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `cedfc214d015b2bfb6647be62c375533d9f96bd731230013069f2854be5ec5e9`
+- Content hash: `64c3f41c96692a9f0103c4277b572da9bc99ff9f529302ab412daf9a5e07401d`
 - Extracted text path: `.local/content_semantics/markdown/md-schema-documentation-impact-schema.txt`
-- Character count: `1111`
+- Character count: `2122`
 
 ## Relationships
 

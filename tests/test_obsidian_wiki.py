@@ -105,6 +105,48 @@ class ObsidianWikiTests(unittest.TestCase):
                 conn.close()
         self.assertTrue(rows)
 
+    def test_lookup_matches_control_registry_identifier_fields(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            registry_dir = root / "registries"
+            registry_dir.mkdir()
+            (registry_dir / "RESEARCH_TASK_REGISTRY.csv").write_text(
+                "task_id,path,task_type,status\n"
+                "RT-TEST-001,research_control/tasks/RT-TEST-001,synthetic,completed\n",
+                encoding="utf-8",
+            )
+
+            payload = self.obsidian.lookup_object(root, "RT-TEST-001")
+
+        self.assertEqual(payload["match_count"], 1)
+        self.assertEqual(payload["primary_registry"], "RESEARCH_TASK_REGISTRY.csv")
+        self.assertIn("task_id", payload["matches"][0]["matched_fields"])
+
+    def test_search_falls_back_to_exact_registry_lookup_on_fts_parse_error(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            registry_dir = root / "registries"
+            registry_dir.mkdir()
+            (registry_dir / "PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv").write_text(
+                "signal_id,status,signal_type\n"
+                "MSL-MSRC-ATLASGLUE-LAW,open,memory_retrieval_failure\n",
+                encoding="utf-8",
+            )
+            index_path = Path(tmp) / "memory.sqlite"
+            self.obsidian.build_memory_index(root, index_path)
+
+            payload = self.obsidian.search_index(
+                root,
+                "MSL-MSRC-ATLASGLUE-LAW",
+                None,
+                10,
+                index_path,
+            )
+
+        self.assertEqual(payload["fallback"], "exact_registry_field_lookup")
+        self.assertIn("fts_error", payload)
+        self.assertEqual(payload["results"][0]["object_id"], "MSL-MSRC-ATLASGLUE-LAW")
+
     def test_status_reports_stale_local_retrieval_as_warning(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -182,8 +224,15 @@ class ObsidianWikiTests(unittest.TestCase):
             payload = self.obsidian.status(root)
 
         self.assertEqual(payload["freshness_status"], "WARN")
+        self.assertEqual(payload["core_validation_status"], "PASS")
+        self.assertEqual(payload["local_retrieval_status"], "WARN")
+        self.assertEqual(payload["freshness_categories"]["blocking"], [])
+        self.assertEqual(payload["freshness_categories"]["non_blocking"], [])
         self.assertTrue(any("raw mirror is stale" in warning for warning in payload["freshness_warnings"]))
         self.assertTrue(any("Memory SQLite index is missing" in warning for warning in payload["freshness_warnings"]))
+        self.assertTrue(
+            any("raw mirror is stale" in warning for warning in payload["freshness_categories"]["local_cache_only"])
+        )
 
     def test_vault_writes_declared_index_paths(self) -> None:
         rows_by_registry = self.obsidian.load_rows_by_registry(REPO_ROOT)
