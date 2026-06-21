@@ -112,6 +112,31 @@ ontology primitive, and a forbidden target-GR import. A finite toy
 metric-response target is an allowed constructive packet before attempting a
 full `M_src` or `g_eff` construction.
 
+## Mathematical Decisiveness Contract
+
+`research_control/design/mathematical_decisiveness_completion_contract.md`
+defines the prospective contract for physics AgentJobs that opt into
+mathematical-decisiveness enforcement. A `validation_status: "PASS"` completion
+is operational receipt evidence only; it does not prove a theorem, adopt a
+source-side law, construct `M_src`, define `g_eff`, derive coupling or Einstein
+equations, promote the benchmark, or close a Gate Chair decision.
+
+Opted-in physics completions must state the actual burden effect through
+`physics_progress_status`, `distance_to_gr_delta`,
+`mathematical_payload_manifest`, and `forbidden_conclusion_summary`.
+Obstruction and repeated-burden completions add `obstruction_record`,
+`freeze_criteria_status`, and `route_cycle_control` where applicable. Candidate
+Constructor completions governed by
+`.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md` must end with one
+decisive `candidate_constructor_result` rather than vague continuation
+language.
+
+The completion template in `research_control/templates/COMPLETION_TEMPLATE.yaml`
+contains the active field shape. `scripts/research_control/report_physics_progress_metrics.py`
+reports descriptive AI-system metrics from tracked completions and registries.
+Those metrics are useful for research-system health, but they remain
+non-promotional operational diagnostics.
+
 ## Local Cache Boundary
 
 Tracked files under `research_control/` are authority. `.local/` prompts,

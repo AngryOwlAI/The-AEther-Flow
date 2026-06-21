@@ -101,6 +101,16 @@ Future routing after `2026-06-17T04:29:31Z` treats generic controlled pause as a
 
 Every new physics research AgentJob created after `2026-06-17T15:46:25Z` must name a `target_derivation_milestone` and `milestone_burden` from `research_control/design/gr_derivation_burden_map.md`. Future completions must update the expanded Distance-to-GR matrix and include a new mathematical payload. Repeated-burden or scoped-obstruction results must evaluate freeze criteria rather than orbiting the same missing bridge step indefinitely.
 
+Physics AgentJobs that opt into the mathematical-decisiveness completion
+contract must state the actual research delta separately from validator
+success. Their completions use `physics_progress_status`,
+`distance_to_gr_delta`, `mathematical_payload_manifest`, and explicit
+forbidden-conclusion language; Candidate Constructor work must additionally end
+with a decisive `candidate_constructor_result`. The operational metrics report
+under `research_control/tasks/` can count candidates, obstructions, freeze
+reviews, and selector cycles, but those counts remain AI-system diagnostics,
+not scientific promotion.
+
 The system deliberately separates several kinds of claims:
 
 - Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.
