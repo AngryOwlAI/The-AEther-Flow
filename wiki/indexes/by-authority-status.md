@@ -168,6 +168,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-PROPOSAL` `research_control/tasks/RT-20260614-077/artifacts/118_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_PROPOSAL.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-079/artifacts/120_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-078/artifacts/119_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-CANDIDATE` `research_control/tasks/RT-20260614-084/artifacts/125_RESP_LC_M_SRC_ONTOLOGY_LAW_GENERAL_SOURCE_COVER_CANDIDATE.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE` `research_control/tasks/RT-20260614-057/artifacts/98_RESP_LC_SOURCE_EXTENSION_CANDIDATE.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-059/artifacts/100_RESP_LC_SOURCE_EXTENSION_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-058/artifacts/99_RESP_LC_SOURCE_EXTENSION_CANDIDATE_SMUGGLING_AUDIT.tex`
@@ -372,6 +373,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md.md`
@@ -406,6 +408,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `wiki/markdown/md-schema-director-decision-schema.md`
 - `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`
 - `WIKI-MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `wiki/markdown/md-schema-execution-role-schema.md`
+- `WIKI-MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `wiki/markdown/md-schema-physics-completion-decisiveness-schema.md`
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
 - `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
 - `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
@@ -554,6 +557,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-PROPOSAL` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-proposal.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-CANDIDATE` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-general-source-cover-candidate.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-smuggling-audit.md`
@@ -593,6 +597,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `research_control/design/mathematical_decisiveness_completion_contract.md`
+- `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `.agents/roles/physics/gate-chair.v0.1.0.md`
@@ -625,6 +630,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - `MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`
 - `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`
 - `MD-SKILL-CONTINUE-RESEARCH` `.codex/skills/continue-research/SKILL.md`
 - `MD-SKILL-GRILL-ME` `.codex/skills/grill-me/SKILL.md`

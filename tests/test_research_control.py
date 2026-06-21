@@ -803,6 +803,7 @@ class ResearchControlTests(unittest.TestCase):
         *,
         role_id: str,
         job_objective: str = "",
+        job_extra: str = "",
         completion_extra: str = "",
         timestamp: str = "2026-06-16T20:00:00Z",
     ):
@@ -834,6 +835,7 @@ class ResearchControlTests(unittest.TestCase):
                         '  - "global_theory_rejection"',
                         '  - "generated_derivative_authority"',
                         'resolves_signal_routing: false',
+                        *job_extra.splitlines(),
                         "",
                     ]
                 ),
@@ -930,6 +932,246 @@ class ResearchControlTests(unittest.TestCase):
                 "new_mathematical_payload:",
                 f'  - payload_type: "{payload_type}"',
                 '    summary: "Synthetic payload evidence for future-roadmap validation."',
+            ]
+        )
+
+    def decisiveness_opt_in_job_yaml(self) -> str:
+        return "\n".join(
+            [
+                'mathematical_decisiveness_contract_active_after: "2026-06-18T15:32:59Z"',
+                'mathematical_decisiveness_schema: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"',
+            ]
+        )
+
+    def decisiveness_completion_yaml(self) -> str:
+        return "\n".join(
+            [
+                "physics_progress_status:",
+                '  status: "selector_only_no_distance_delta"',
+                '  target_derivation_milestone: "source_manifold_m_src"',
+                '  milestone_burden: "M_src"',
+                '  explanation: "Selector-only fixture records no physics promotion."',
+                "  physics_promotion_authorized: false",
+                '  promotion_authority_path: ""',
+                "distance_to_gr_delta:",
+                "  changed: false",
+                '  burden_id: "m_src"',
+                '  milestone: "source_manifold_m_src"',
+                '  old_status: "not discharged"',
+                '  new_status: "not discharged"',
+                "  ledger_row_updated: false",
+                '  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"',
+                "  downstream_unlocked:",
+                '    - "none"',
+                "  downstream_still_blocked:",
+                '    - "g_eff"',
+                '    - "matter_coupling"',
+                '    - "einstein_equations"',
+                '    - "benchmark_promotion"',
+                '  explanation: "No Distance-to-GR delta in this selector-only fixture."',
+                "mathematical_payload_manifest:",
+                '  - payload_id: "PAYLOAD-001"',
+                '    payload_type: "packet_selection"',
+                '    object_name: "source-cover selector fixture"',
+                '    claim_status: "draft/control"',
+                '    source_path: "research_control/tasks/RT-TEST/artifacts/fixture.yaml"',
+                '    burden_effect: "selects_next"',
+                '    summary: "Names a packet without adoption."',
+                "forbidden_conclusion_summary:",
+                "  physics_promotion_authorized: false",
+                "  forbidden_conclusions:",
+                '    - "canonical ontology edit"',
+                '    - "M_src adoption"',
+                '    - "g_eff claim"',
+                '    - "matter coupling claim"',
+                '    - "Einstein-equation claim"',
+                '    - "benchmark promotion"',
+                '    - "Gate Chair verdict"',
+                '    - "completed derivation"',
+                '    - "global theory rejection"',
+                '  summary: "Validator PASS and role authority are not physics evidence."',
+            ]
+        )
+
+    def decisiveness_candidate_constructor_yaml(self) -> str:
+        return "\n".join(
+            [
+                "physics_progress_status:",
+                '  status: "candidate_constructed_pending_audit"',
+                '  target_derivation_milestone: "source_manifold_m_src"',
+                '  milestone_burden: "M_src"',
+                '  explanation: "Candidate Constructor fixture creates a source-side candidate pending audit."',
+                "  physics_promotion_authorized: false",
+                '  promotion_authority_path: ""',
+                "distance_to_gr_delta:",
+                "  changed: false",
+                '  burden_id: "m_src"',
+                '  milestone: "source_manifold_m_src"',
+                '  old_status: "not discharged"',
+                '  new_status: "candidate constructed pending audit"',
+                "  ledger_row_updated: false",
+                '  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"',
+                "  downstream_unlocked:",
+                '    - "none"',
+                "  downstream_still_blocked:",
+                '    - "g_eff"',
+                '    - "matter_coupling"',
+                '    - "einstein_equations"',
+                '    - "benchmark_promotion"',
+                '  explanation: "The candidate still requires audit and stress before any GR promotion."',
+                "mathematical_payload_manifest:",
+                '  - payload_id: "PAYLOAD-001"',
+                '    payload_type: "construction"',
+                '    object_name: "source-side selector candidate"',
+                '    claim_status: "draft/control"',
+                '    source_path: "research_control/tasks/RT-TEST/artifacts/candidate.yaml"',
+                '    burden_effect: "narrows"',
+                '    summary: "Constructs a draft/control candidate without adoption."',
+                "candidate_constructor_result:",
+                '  result_type: "constructed_candidate"',
+                '  constructed_candidate_path: "research_control/tasks/RT-TEST/artifacts/candidate.yaml"',
+                '  minimal_countermodel_path: ""',
+                '  obstruction_id: ""',
+                "  formal_objects:",
+                '    - "selector preorder S_src"',
+                "  maps:",
+                '    - "source profiles to candidate selector branches"',
+                "  proof_obligations:",
+                '    - "hidden target import audit"',
+                "  failed_components:",
+                '    - ""',
+                '  next_required_role: "smuggling_auditor"',
+                "  no_fog_check: true",
+                '  no_fog_explanation: "A draft/control selector candidate was constructed with named formal objects maps and proof obligations; downstream GR objects remain blocked."',
+                "  claim_boundary_preserved: true",
+                '  claim_boundary_citation: ""',
+                "bridge_attempt_status:",
+                '  candidate_map: "source-side selector candidate only"',
+                '  missing_primitive: ""',
+                '  preserves_blocks: "No g_eff matter-coupling Einstein-equation or benchmark promotion is authorized."',
+                "forbidden_conclusion_summary:",
+                "  physics_promotion_authorized: false",
+                "  forbidden_conclusions:",
+                '    - "canonical ontology edit"',
+                '    - "M_src adoption"',
+                '    - "g_eff claim"',
+                '    - "matter coupling claim"',
+                '    - "Einstein-equation claim"',
+                '    - "benchmark promotion"',
+                '    - "Gate Chair verdict"',
+                '    - "completed derivation"',
+                '    - "global theory rejection"',
+                '  summary: "Candidate construction is draft/control and does not authorize GR promotion."',
+            ]
+        )
+
+    def decisiveness_candidate_constructor_precise_obstruction_yaml(self) -> str:
+        return "\n".join(
+            [
+                "candidate_constructor_result:",
+                '  result_type: "precise_obstruction"',
+                '  constructed_candidate_path: ""',
+                '  minimal_countermodel_path: ""',
+                '  obstruction_id: "OBST-TEST-001"',
+                "  formal_objects:",
+                '    - ""',
+                "  maps:",
+                '    - ""',
+                "  proof_obligations:",
+                '    - ""',
+                "  failed_components:",
+                '    - "source-side selector preorder"',
+                '  next_required_role: "theoretical-continuation-selector"',
+                "  no_fog_check: true",
+                '  no_fog_explanation: "The source-side selector preorder fails by a named obstruction, and the route consequence is theoretical-continuation-selector."',
+                "  claim_boundary_preserved: true",
+                '  claim_boundary_citation: "CB-TEST"',
+                "bridge_attempt_status:",
+                '  candidate_map: ""',
+                '  missing_primitive: "source-side selector preorder"',
+                '  preserves_blocks: "No g_eff matter-coupling Einstein-equation or benchmark promotion is authorized."',
+            ]
+        )
+
+    def decisiveness_obstruction_yaml(self) -> str:
+        return "\n".join(
+            [
+                "physics_progress_status:",
+                '  status: "precise_obstruction_found"',
+                '  target_derivation_milestone: "source_manifold_m_src"',
+                '  milestone_burden: "M_src"',
+                '  explanation: "Fixture records a precise current-ontology obstruction."',
+                "  physics_promotion_authorized: false",
+                '  promotion_authority_path: ""',
+                "distance_to_gr_delta:",
+                "  changed: false",
+                '  burden_id: "m_src"',
+                '  milestone: "source_manifold_m_src"',
+                '  old_status: "not discharged"',
+                '  new_status: "precise obstruction found"',
+                "  ledger_row_updated: false",
+                '  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"',
+                "  downstream_unlocked:",
+                '    - "none"',
+                "  downstream_still_blocked:",
+                '    - "g_eff"',
+                '    - "matter_coupling"',
+                '    - "einstein_equations"',
+                '    - "benchmark_promotion"',
+                '  explanation: "The obstruction sharpens the route but does not update the ledger."',
+                "mathematical_payload_manifest:",
+                '  - payload_id: "PAYLOAD-001"',
+                '    payload_type: "obstruction"',
+                '    object_name: "current-ontology selector obstruction"',
+                '    claim_status: "draft/control"',
+                '    source_path: "research_control/tasks/RT-TEST/artifacts/obstruction.yaml"',
+                '    burden_effect: "obstructs"',
+                '    summary: "Names the failed object and route consequence."',
+                "obstruction_record:",
+                "  present: true",
+                '  obstruction_id: "OBST-TEST-001"',
+                '  scope: "current_ontology_only"',
+                '  failed_object: "source-side selector preorder"',
+                '  exact_failure: "The selector is not determined by the current ontology assumptions."',
+                '  minimal_counterexample_path: ""',
+                '  current_ontology_implication: "does_not_derive"',
+                '  source_extension_implication: "repair_allowed"',
+                '  consequence: "repair_candidate_allowed"',
+                '  forbidden_overread: "This does not prove global theory rejection or future repair impossibility."',
+                "freeze_criteria_status:",
+                "  repeated_burden: true",
+                "  freeze_evaluation_required: true",
+                '  active_freeze_label: "M-SRC-SELECTOR-CURRENT-ONTOLOGY-OBSTRUCTION"',
+                "  prior_attempts_considered:",
+                '    - "RT-TEST-PRIOR"',
+                "  freeze_if:",
+                '    - "same failed object recurs without new payload"',
+                "  do_not_freeze_if:",
+                '    - "next packet constructs a source-side repair candidate"',
+                '  freeze_decision: "not_frozen"',
+                '  decision_reason: "The obstruction routes to a concrete repair-candidate packet."',
+                '  next_allowed_route: "candidate_constructor"',
+                "route_cycle_control:",
+                '  cycle_family: "m_src_atlas_glue"',
+                '  current_cycle_step: "obstruction_review"',
+                "  prior_related_tasks:",
+                '    - "RT-TEST-PRIOR"',
+                '  cycle_risk: "medium"',
+                '  orbit_avoidance_reason: "The next packet must construct a repair candidate or return a sharper obstruction."',
+                '  next_role_consequence: "candidate_constructor"',
+                "forbidden_conclusion_summary:",
+                "  physics_promotion_authorized: false",
+                "  forbidden_conclusions:",
+                '    - "canonical ontology edit"',
+                '    - "M_src adoption"',
+                '    - "g_eff claim"',
+                '    - "matter coupling claim"',
+                '    - "Einstein-equation claim"',
+                '    - "benchmark promotion"',
+                '    - "Gate Chair verdict"',
+                '    - "completed derivation"',
+                '    - "global theory rejection"',
+                '  summary: "A precise obstruction preserves downstream blocks and does not authorize GR promotion."',
             ]
         )
 
@@ -1138,6 +1380,251 @@ class ResearchControlTests(unittest.TestCase):
             timestamp="2026-06-17T15:46:25Z",
         )
         self.assertTrue(any("missing new_mathematical_payload" in error for error in report.errors))
+
+    def test_mathematical_decisiveness_opt_in_missing_fields_fails(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("mathematical decisiveness: missing physics_progress_status" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("mathematical decisiveness: missing distance_to_gr_delta" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_opt_in_valid_selector_completion_passes(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_completion_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertEqual(report.errors, [])
+        self.assertFalse(
+            any("mathematical decisiveness:" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_valid_candidate_constructor_passes(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_candidate_constructor_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="candidate-constructor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_mathematical_decisiveness_valid_candidate_constructor_precise_obstruction_passes(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.decisiveness_obstruction_yaml(),
+                self.decisiveness_candidate_constructor_precise_obstruction_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="candidate-constructor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_mathematical_decisiveness_valid_obstruction_with_freeze_review_passes(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.decisiveness_obstruction_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_mathematical_decisiveness_rejects_vague_candidate_constructor_output(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_candidate_constructor_yaml().replace(
+                    '  no_fog_explanation: "A draft/control selector candidate was constructed with named formal objects maps and proof obligations; downstream GR objects remain blocked."',
+                    '  no_fog_explanation: "more work required"',
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="candidate-constructor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("candidate_constructor_result.no_fog_explanation contains fog-only phrase" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_rejects_candidate_constructor_missing_formal_objects(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_candidate_constructor_yaml().replace(
+                    '    - "selector preorder S_src"',
+                    '    - ""',
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="candidate-constructor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("candidate_constructor_result.formal_objects" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_rejects_obstruction_missing_consequence(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.decisiveness_obstruction_yaml().replace(
+                    '  consequence: "repair_candidate_allowed"',
+                    '  consequence: ""',
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("obstruction_record.consequence is required" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_accepts_downstream_obstruction_vocabulary(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.decisiveness_obstruction_yaml()
+                .replace('  scope: "current_ontology_only"', '  scope: "matter_coupling"')
+                .replace(
+                    '  consequence: "repair_candidate_allowed"',
+                    '  consequence: "target_import_detected"',
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertEqual(report.errors, [])
+
+    def test_mathematical_decisiveness_rejects_freeze_missing_next_route(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.decisiveness_obstruction_yaml().replace(
+                    '  next_allowed_route: "candidate_constructor"',
+                    '  next_allowed_route: ""',
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("freeze_criteria_status.next_allowed_route is required" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_rejects_route_cycle_missing_orbit_reason(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("obstruction"),
+                self.decisiveness_obstruction_yaml().replace(
+                    '  orbit_avoidance_reason: "The next packet must construct a repair candidate or return a sharper obstruction."',
+                    '  orbit_avoidance_reason: ""',
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("route_cycle_control.orbit_avoidance_reason is required" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_rejects_promotion_without_gate(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_completion_yaml().replace(
+                    "  physics_promotion_authorized: false",
+                    "  physics_promotion_authorized: true",
+                    1,
+                ),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("physics_promotion_authorized requires promotion_authority_path" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_non_physics_completion_unaffected(self) -> None:
+        report = self.validate_completion_fixture(
+            role_id="project-control-maintainer",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra='validation_status: "PASS"',
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertEqual(report.errors, [])
 
     def test_roadmap_refuter_scoped_obstruction_requires_freeze_status(self) -> None:
         completion_extra = "\n".join(

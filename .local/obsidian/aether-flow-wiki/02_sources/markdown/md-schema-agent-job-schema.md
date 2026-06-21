@@ -2,14 +2,14 @@
 object_id: "MD-SCHEMA-AGENT-JOB-SCHEMA"
 format: "markdown"
 source_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
-source_hash: "c087d314917d129d80a1c54d117f17e20a5de5dc2d49c259171a447bcbe21391"
+source_hash: "37fbf4d655997ae98f3d80516937506f1858b48491c711ee2d8e8226eabab82d"
 authority_status: "project_control"
 role: "schema_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-schema-agent-job-schema.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-schema-agent-job-schema.md"
-content_hash: "c087d314917d129d80a1c54d117f17e20a5de5dc2d49c259171a447bcbe21391"
+content_hash: "37fbf4d655997ae98f3d80516937506f1858b48491c711ee2d8e8226eabab82d"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-SCHEMA-AGENT-JOB-SCHEMA"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `c087d314917d129d80a1c54d117f17e20a5de5dc2d49c259171a447bcbe21391`
+- Content hash: `37fbf4d655997ae98f3d80516937506f1858b48491c711ee2d8e8226eabab82d`
 - Extracted text path: `.local/content_semantics/markdown/md-schema-agent-job-schema.txt`
-- Character count: `15264`
+- Character count: `16136`
 
 ## Relationships
 

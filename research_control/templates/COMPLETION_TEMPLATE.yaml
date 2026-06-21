@@ -11,6 +11,92 @@ command_results:
   - "command | exit_code=0 | status=pass"
 validation_status: "PASS"
 verdict: ""
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: ""
+  milestone_burden: ""
+  explanation: ""
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: ""
+  milestone: ""
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: ""
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "packet_selection"
+    object_name: ""
+    claim_status: "draft/control"
+    source_path: ""
+    burden_effect: "no_distance_delta"
+    summary: ""
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: ""
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: ""
+  forbidden_overread: ""
+candidate_constructor_result:
+  result_type: ""
+  constructed_candidate_path: ""
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - ""
+  maps:
+    - ""
+  proof_obligations:
+    - ""
+  failed_components:
+    - ""
+  next_required_role: ""
+  no_fog_check: false
+  no_fog_explanation: ""
+  claim_boundary_preserved: true
+  claim_boundary_citation: ""
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "M_src adoption"
+    - "g_eff claim"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+  summary: ""
+route_cycle_control:
+  cycle_family: ""
+  current_cycle_step: ""
+  prior_related_tasks:
+    - ""
+  cycle_risk: ""
+  orbit_avoidance_reason: ""
+  next_role_consequence: ""
 memory_preflight:
   status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
   status_summary:
@@ -67,6 +153,19 @@ loop_risk_decision:
     - ""
   obstruction_summary: ""
 freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: false
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - ""
+  freeze_if:
+    - ""
+  do_not_freeze_if:
+    - ""
+  decision_reason: ""
+  next_allowed_route: ""
+  status_update_path: ""
+  no_status_update_rationale: ""
   candidate_freeze_label: ""
   freeze_decision: ""
   criteria_evaluated:

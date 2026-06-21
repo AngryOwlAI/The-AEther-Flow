@@ -95,6 +95,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-research-control-design-html-explainer-depth-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT]] `research_control/design/html_explainer_depth_contract.md`
 - [[02_sources/markdown/md-research-control-design-html-explainer-flexible-presentation-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT]] `research_control/design/html_explainer_flexible_presentation_contract.md`
 - [[02_sources/markdown/md-research-control-design-mathematical-decisiveness-completion-contract|MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT]] `research_control/design/mathematical_decisiveness_completion_contract.md`
+- [[02_sources/markdown/md-research-control-design-obstruction-and-freeze-control|MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL]] `research_control/design/obstruction_and_freeze_control.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD]] `.agents/roles/physics/candidate-constructor.v0.2.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD]] `.agents/roles/physics/gate-chair.v0.1.0.md`
@@ -129,6 +130,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-schema-director-decision-schema|MD-SCHEMA-DIRECTOR-DECISION-SCHEMA]] `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
 - [[02_sources/markdown/md-schema-documentation-impact-schema|MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA]] `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - [[02_sources/markdown/md-schema-execution-role-schema|MD-SCHEMA-EXECUTION-ROLE-SCHEMA]] `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- [[02_sources/markdown/md-schema-physics-completion-decisiveness-schema|MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA]] `.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`
 - [[02_sources/markdown/md-schema-role-schema|MD-SCHEMA-ROLE-SCHEMA]] `.agents/schemas/ROLE_SCHEMA.md`
 - [[02_sources/markdown/md-skill-continue-research|MD-SKILL-CONTINUE-RESEARCH]] `.codex/skills/continue-research/SKILL.md`
 - [[02_sources/markdown/md-skill-grill-me|MD-SKILL-GRILL-ME]] `.codex/skills/grill-me/SKILL.md`

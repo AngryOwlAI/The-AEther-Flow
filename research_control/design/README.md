@@ -15,6 +15,10 @@ research-control behavior.
 - GitHub-facing explainer contract.
 - GR derivation burden map.
 - Mathematical-decisiveness completion contract for future physics AgentJobs.
+- Obstruction and freeze-control policy for future opted-in physics
+  completions.
+- Candidate Constructor no-fog output rules through the active role contract
+  and physics completion decisiveness schema.
 - HTML explainer depth and flexible presentation contracts.
 
 ## What Belongs Here

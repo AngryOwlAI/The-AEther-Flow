@@ -264,21 +264,39 @@ Required shape:
 ```yaml
 candidate_constructor_result:
   result_type: "constructed_candidate"
-  constructed_object: "..."
-  failed_object: ""
-  source_path: "..."
-  audit_next: "smuggling_auditor"
-  no_fog_summary: "..."
+  constructed_candidate_path: "..."
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "..."
+  maps:
+    - "..."
+  proof_obligations:
+    - "..."
+  failed_components:
+    - ""
+  next_required_role: "smuggling_auditor"
+  no_fog_check: true
+  no_fog_explanation: "States exactly what was constructed or exactly what failed."
   claim_boundary_preserved: true
+  claim_boundary_citation: ""
 ```
 
 Rules:
 
-- A constructed candidate must name the constructed object and the next audit
-  route.
-- A countermodel or obstruction must name the failed object and route
-  consequence.
-- `no_fog_summary` must state the decisive result in plain language.
+- A constructed candidate must name the constructed candidate path, formal
+  objects, maps, proof obligations, and next role.
+- A countermodel must name the countermodel path and failed components.
+- A precise obstruction must name the obstruction identifier, failed
+  components, and a present `obstruction_record`.
+- An invalid-under-claim-boundary result must name failed components and cite
+  the claim boundary it violates.
+- `no_fog_check` must be `true`.
+- `no_fog_explanation` must state the decisive result in plain language. It may
+  not use fog-only language such as "more work required", "candidate remains
+  open", "future work should explore", "insufficient time",
+  "controlled pause", "selector should decide next", or "generalization not
+  attempted" as the primary result.
 
 ## `forbidden_conclusion_summary`
 

@@ -78,6 +78,29 @@ cannot name a derivation milestone should be routed as documentation,
 methodology, validation, or project-system work rather than physics
 derivation work.
 
+Future physics AgentJobs may opt into the mathematical-decisiveness
+completion schema by including:
+
+```yaml
+mathematical_decisiveness_contract_active_after: "2026-06-21T02:32:39Z"
+mathematical_decisiveness_schema: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+```
+
+or by including:
+
+```yaml
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+```
+
+Opt-in support is prospective. Missing or malformed mathematical-decisiveness
+fields become validator errors for opted-in future physics jobs at or after the
+active timestamp. Historical tasks and non-physics project-system completions
+remain outside this hard-enforcement boundary.
+
 ## Route Contract Vocabulary
 
 `ontology-law-research-packet` is a named route label for the narrow case where

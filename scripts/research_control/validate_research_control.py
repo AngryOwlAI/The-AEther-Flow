@@ -504,6 +504,127 @@ ONTOLOGY_LAW_NO_GO_PRESENT_MARKERS = {
     "no-go theorem",
 }
 
+MATHEMATICAL_DECISIVENESS_CONTRACT_ACTIVE_AFTER = "2026-06-21T02:32:39Z"
+MATHEMATICAL_DECISIVENESS_SCHEMA_PATH = ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+MATHEMATICAL_DECISIVENESS_CONTRACT_PATH = (
+    "research_control/design/mathematical_decisiveness_completion_contract.md"
+)
+MATHEMATICAL_DECISIVENESS_REQUIRED_FIELDS = (
+    "physics_progress_status",
+    "distance_to_gr_delta",
+    "mathematical_payload_manifest",
+    "forbidden_conclusion_summary",
+)
+PHYSICS_PROGRESS_STATUS_VALUES = {
+    "burden_discharged",
+    "candidate_constructed_pending_audit",
+    "candidate_audited_pending_stress",
+    "candidate_stress_passed_pending_gate",
+    "precise_obstruction_found",
+    "route_frozen",
+    "human_gate_required",
+    "selector_only_no_distance_delta",
+    "documentation_or_control_only_no_physics_delta",
+    "invalid_under_claim_boundary",
+    "no_distance_delta",
+}
+MATHEMATICAL_PAYLOAD_MANIFEST_TYPES = {
+    "definition",
+    "lemma",
+    "theorem",
+    "finite_model",
+    "countermodel",
+    "explicit_witness",
+    "obstruction",
+    "construction",
+    "dependency_map_update",
+    "packet_selection",
+    "source_extension_classification",
+}
+CANDIDATE_CONSTRUCTOR_RESULT_TYPES = {
+    "constructed_candidate",
+    "minimal_countermodel",
+    "precise_obstruction",
+    "invalid_under_claim_boundary",
+}
+CANDIDATE_CONSTRUCTOR_NEXT_REQUIRED_ROLES = {
+    "smuggling_auditor",
+    "smuggling-auditor",
+    "refuter",
+    "theoretical-continuation-selector",
+    "theoretical_selector",
+    "gate-chair",
+    "gate_chair",
+    "none",
+}
+CANDIDATE_CONSTRUCTOR_FOG_ONLY_PHRASES = (
+    "more work required",
+    "candidate remains open",
+    "future work should explore",
+    "insufficient time",
+    "controlled pause",
+    "selector should decide next",
+    "generalization not attempted",
+)
+OBSTRUCTION_RECORD_SCOPES = {
+    "local_finite_example",
+    "exact_finite_local_branch",
+    "current_ontology_only",
+    "source_extension_candidate",
+    "general_source_cover",
+    "downstream_metric",
+    "matter_coupling",
+    "einstein_equations",
+    "benchmark_promotion",
+}
+OBSTRUCTION_CURRENT_ONTOLOGY_IMPLICATIONS = {
+    "does_not_derive",
+    "contradicts",
+    "not_applicable",
+}
+OBSTRUCTION_SOURCE_EXTENSION_IMPLICATIONS = {
+    "repair_allowed",
+    "new_primitive_required",
+    "target_import_detected",
+    "not_applicable",
+}
+OBSTRUCTION_CONSEQUENCES = {
+    "repair_candidate_allowed",
+    "selector_required",
+    "route_frozen",
+    "human_gate_required",
+    "downstream_block_preserved",
+    "new_primitive_required",
+    "target_import_detected",
+}
+MATHEMATICAL_DECISIVENESS_FREEZE_DECISIONS = {
+    "not_frozen",
+    "locally_frozen",
+    "freeze_review_required",
+    "human_gate_required",
+}
+MATHEMATICAL_DECISIVENESS_NEXT_ALLOWED_ROUTES = {
+    "candidate_constructor",
+    "smuggling_auditor",
+    "refuter",
+    "theoretical_selector",
+    "gate_chair",
+    "freeze_review",
+    "none",
+}
+UNAUTHORIZED_DOWNSTREAM_GR_UNLOCKS = {
+    "g_eff",
+    "matter_coupling",
+    "matter coupling",
+    "einstein_equations",
+    "einstein equations",
+    "benchmark_promotion",
+    "benchmark promotion",
+}
+CANDIDATE_CONSTRUCTOR_ROLE_IDS = {
+    "candidate-constructor",
+}
+
 SOURCE_EXTENSION_WORKFLOW_CATEGORIES = {
     "source_extension_candidate",
     "source_extension_smuggling_audit",
@@ -744,6 +865,57 @@ def gr_derivation_roadmap_policy_active(
         timestamp_at_or_after(value, GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT)
         for value in timestamps
     )
+
+
+def _mathematical_decisiveness_active_after(
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+) -> str:
+    for source in (job_contract, completion):
+        active_after = str(source.get("mathematical_decisiveness_contract_active_after", "")).strip()
+        if _clean_timestamp(active_after):
+            return active_after
+        block = source.get("mathematical_decisiveness_contract")
+        if isinstance(block, dict):
+            block_active_after = str(block.get("active_after", "")).strip()
+            if _clean_timestamp(block_active_after):
+                return block_active_after
+    return MATHEMATICAL_DECISIVENESS_CONTRACT_ACTIVE_AFTER
+
+
+def mathematical_decisiveness_warning_policy_active(
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+) -> bool:
+    if job_row.get("role_id", "") not in PHYSICS_ROLE_IDS:
+        return False
+    requested_by_key = any(
+        "mathematical_decisiveness_contract_active_after" in source
+        or "mathematical_decisiveness_contract" in source
+        or "mathematical_decisiveness_schema" in source
+        for source in (job_contract, completion)
+    )
+    blob = text_blob(job_contract, completion)
+    requested_by_value = any(
+        marker.lower() in blob
+        for marker in (
+            "PHYSICS_COMPLETION_DECISIVENESS_SCHEMA",
+            MATHEMATICAL_DECISIVENESS_SCHEMA_PATH,
+            MATHEMATICAL_DECISIVENESS_CONTRACT_PATH,
+        )
+    )
+    requested = requested_by_key or requested_by_value
+    if not requested:
+        return False
+    active_after = _mathematical_decisiveness_active_after(job_contract, completion)
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+        completion.get("completed_at", ""),
+    ]
+    return any(timestamp_at_or_after(value, active_after) for value in timestamps)
 
 
 def memory_preflight_required(
@@ -1845,6 +2017,13 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
         return
     validate_parent_child_completion(report, job_row, job_contract, completion, path)
     validate_loop_control_completion(report, job_row, job_contract, completion, path)
+    validate_mathematical_decisiveness_completion(
+        report,
+        job_row,
+        job_contract,
+        completion,
+        path,
+    )
     validate_ontology_law_research_packet(report, job_row, job_contract, completion, path)
     validate_completion_resolver_snapshots(report, completion, job_contract, path)
 
@@ -1887,6 +2066,335 @@ def validate_loop_control_completion(
         validate_candidate_bridge_attempt(report, completion, path_text)
     if role_id == "theoretical-continuation-selector":
         validate_theoretical_continuation_decision(report, job_row, completion, path_text)
+
+
+def validate_mathematical_decisiveness_completion(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+    path: Path,
+) -> None:
+    if not mathematical_decisiveness_warning_policy_active(job_row, job_contract, completion):
+        return
+
+    path_text = path.relative_to(REPO_ROOT).as_posix()
+    prefix = f"{path_text}: mathematical decisiveness"
+
+    for field_name in MATHEMATICAL_DECISIVENESS_REQUIRED_FIELDS:
+        if field_name not in completion:
+            report.error(f"{prefix}: missing {field_name}")
+
+    progress = completion.get("physics_progress_status")
+    status = ""
+    promotion_authorized = False
+    if isinstance(progress, dict):
+        status = str(progress.get("status", "")).strip()
+        promotion_authorized = bool_value(progress.get("physics_promotion_authorized"))
+        if not status:
+            report.error(f"{prefix}: physics_progress_status.status is required")
+        elif status not in PHYSICS_PROGRESS_STATUS_VALUES:
+            report.error(f"{prefix}: physics_progress_status.status is not allowed: {status}")
+        if promotion_authorized and not str(progress.get("promotion_authority_path", "")).strip():
+            report.error(f"{prefix}: physics_promotion_authorized requires promotion_authority_path")
+    elif "physics_progress_status" in completion:
+        report.error(f"{prefix}: physics_progress_status should be a map")
+
+    delta = completion.get("distance_to_gr_delta")
+    if isinstance(delta, dict):
+        if bool_value(delta.get("changed")) and not (
+            bool_value(delta.get("ledger_row_updated"))
+            or str(delta.get("ledger_update_rationale", "")).strip()
+            or str(delta.get("explanation", "")).strip()
+        ):
+            report.error(
+                f"{prefix}: changed distance_to_gr_delta should include ledger update or rationale"
+            )
+        downstream_unlocked = delta.get("downstream_unlocked", [])
+        if isinstance(downstream_unlocked, list):
+            for item in downstream_unlocked:
+                unlocked = str(item).strip().lower().replace("-", "_")
+                if unlocked in UNAUTHORIZED_DOWNSTREAM_GR_UNLOCKS and not promotion_authorized:
+                    report.error(
+                        f"{prefix}: distance_to_gr_delta.downstream_unlocked may not unlock "
+                        f"{item} without human-gated physics promotion authority"
+                    )
+    elif "distance_to_gr_delta" in completion:
+        report.error(f"{prefix}: distance_to_gr_delta should be a map")
+
+    manifest = completion.get("mathematical_payload_manifest")
+    if isinstance(manifest, list):
+        if not manifest:
+            report.error(f"{prefix}: mathematical_payload_manifest should not be empty")
+        for index, payload in enumerate(manifest, start=1):
+            if not isinstance(payload, dict):
+                report.error(
+                    f"{prefix}: mathematical_payload_manifest[{index}] should be a map"
+                )
+                continue
+            payload_type = str(payload.get("payload_type", "")).strip()
+            if not payload_type:
+                report.error(
+                    f"{prefix}: mathematical_payload_manifest[{index}].payload_type is required"
+                )
+            elif payload_type not in MATHEMATICAL_PAYLOAD_MANIFEST_TYPES:
+                report.error(
+                    f"{prefix}: mathematical_payload_manifest[{index}].payload_type "
+                    f"is not allowed: {payload_type}"
+                )
+            if not str(payload.get("object_name", "")).strip():
+                report.error(
+                    f"{prefix}: mathematical_payload_manifest[{index}].object_name is empty"
+                )
+            if not str(payload.get("burden_effect", "")).strip():
+                report.error(
+                    f"{prefix}: mathematical_payload_manifest[{index}].burden_effect is empty"
+                )
+    elif "mathematical_payload_manifest" in completion:
+        report.error(f"{prefix}: mathematical_payload_manifest should be a list")
+
+    obstruction_required = status in {"precise_obstruction_found", "route_frozen"}
+    obstruction = completion.get("obstruction_record")
+    if obstruction_required and not isinstance(obstruction, dict):
+        report.error(f"{prefix}: obstruction status requires obstruction_record")
+    if isinstance(obstruction, dict) and (obstruction_required or bool_value(obstruction.get("present"))):
+        if obstruction_required and not bool_value(obstruction.get("present")):
+            report.error(f"{prefix}: obstruction_record.present must be true for obstruction status")
+        for field_name in ("scope", "failed_object", "exact_failure", "consequence", "forbidden_overread"):
+            if not str(obstruction.get(field_name, "")).strip():
+                report.error(f"{prefix}: obstruction_record.{field_name} is required")
+        scope = str(obstruction.get("scope", "")).strip()
+        if scope and scope not in OBSTRUCTION_RECORD_SCOPES:
+            report.error(f"{prefix}: obstruction_record.scope is not allowed: {scope}")
+        current_implication = str(obstruction.get("current_ontology_implication", "")).strip()
+        if current_implication and current_implication not in OBSTRUCTION_CURRENT_ONTOLOGY_IMPLICATIONS:
+            report.error(
+                f"{prefix}: obstruction_record.current_ontology_implication is not allowed: "
+                f"{current_implication}"
+            )
+        source_implication = str(obstruction.get("source_extension_implication", "")).strip()
+        if source_implication and source_implication not in OBSTRUCTION_SOURCE_EXTENSION_IMPLICATIONS:
+            report.error(
+                f"{prefix}: obstruction_record.source_extension_implication is not allowed: "
+                f"{source_implication}"
+            )
+        consequence = str(obstruction.get("consequence", "")).strip()
+        if consequence and consequence not in OBSTRUCTION_CONSEQUENCES:
+            report.error(f"{prefix}: obstruction_record.consequence is not allowed: {consequence}")
+
+    loop_risk = completion.get("loop_risk_decision")
+    loop_category = ""
+    if isinstance(loop_risk, dict):
+        loop_category = str(loop_risk.get("category", "")).strip()
+    freeze_required = obstruction_required or loop_category in {
+        "scoped_obstruction",
+        "repeated_unmet_burdens_no_new_payload",
+    }
+    route_cycle = completion.get("route_cycle_control")
+    if freeze_required and not isinstance(route_cycle, dict):
+        report.error(f"{prefix}: repeated-burden or obstruction completion requires route_cycle_control")
+    if isinstance(route_cycle, dict) and (
+        freeze_required or text_blob(route_cycle).strip()
+    ):
+        for field_name in (
+            "cycle_family",
+            "current_cycle_step",
+            "cycle_risk",
+            "orbit_avoidance_reason",
+            "next_role_consequence",
+        ):
+            if not str(route_cycle.get(field_name, "")).strip():
+                report.error(f"{prefix}: route_cycle_control.{field_name} is required")
+        if not _substantive_list(route_cycle.get("prior_related_tasks", [])):
+            report.error(f"{prefix}: route_cycle_control.prior_related_tasks must list prior tasks")
+
+    freeze = completion.get("freeze_criteria_status")
+    if freeze_required and not isinstance(freeze, dict):
+        report.error(f"{prefix}: scoped obstruction or route freeze requires freeze_criteria_status")
+    if isinstance(freeze, dict) and freeze_required:
+        freeze_decision = str(freeze.get("freeze_decision", "")).strip()
+        if not freeze_decision:
+            report.error(f"{prefix}: freeze_criteria_status.freeze_decision is required")
+        elif freeze_decision not in MATHEMATICAL_DECISIVENESS_FREEZE_DECISIONS:
+            report.error(
+                f"{prefix}: freeze_criteria_status.freeze_decision is not allowed: "
+                f"{freeze_decision}"
+            )
+        if not (
+            str(freeze.get("decision_reason", "")).strip()
+            or str(freeze.get("rationale", "")).strip()
+        ):
+            report.error(f"{prefix}: freeze_criteria_status requires decision_reason or rationale")
+        freeze_label = str(
+            freeze.get("active_freeze_label")
+            or freeze.get("candidate_freeze_label")
+            or ""
+        ).strip()
+        if not freeze_label:
+            report.error(f"{prefix}: freeze_criteria_status.active_freeze_label is required")
+        if bool_value(freeze.get("repeated_burden")) and not _substantive_list(
+            freeze.get("prior_attempts_considered", [])
+        ):
+            report.error(
+                f"{prefix}: freeze_criteria_status.prior_attempts_considered must list prior tasks"
+            )
+        if bool_value(freeze.get("freeze_evaluation_required")):
+            if not (
+                _substantive_list(freeze.get("freeze_if", []))
+                or _substantive_list(freeze.get("criteria_evaluated", []))
+            ):
+                report.error(f"{prefix}: freeze_criteria_status must list freeze_if criteria")
+            if freeze_decision == "not_frozen" and not _substantive_list(
+                freeze.get("do_not_freeze_if", [])
+            ):
+                report.error(
+                    f"{prefix}: freeze_criteria_status.do_not_freeze_if is required "
+                    "when not frozen"
+                )
+        next_allowed_route = str(freeze.get("next_allowed_route", "")).strip()
+        if not next_allowed_route:
+            report.error(f"{prefix}: freeze_criteria_status.next_allowed_route is required")
+        elif next_allowed_route not in MATHEMATICAL_DECISIVENESS_NEXT_ALLOWED_ROUTES:
+            report.error(
+                f"{prefix}: freeze_criteria_status.next_allowed_route is not allowed: "
+                f"{next_allowed_route}"
+            )
+        if next_allowed_route == "none" and freeze_decision not in {
+            "locally_frozen",
+            "freeze_review_required",
+            "human_gate_required",
+        }:
+            report.error(
+                f"{prefix}: freeze_criteria_status.next_allowed_route none requires "
+                "local freeze, freeze review, or human gate"
+            )
+        if freeze_decision == "locally_frozen" and not (
+            str(freeze.get("status_update_path", "")).strip()
+            or str(freeze.get("ledger_or_registry_update_path", "")).strip()
+            or str(freeze.get("no_status_update_rationale", "")).strip()
+        ):
+            report.error(
+                f"{prefix}: locally_frozen requires status update path or "
+                "no_status_update_rationale"
+            )
+
+    if job_row.get("role_id", "") in CANDIDATE_CONSTRUCTOR_ROLE_IDS:
+        result = completion.get("candidate_constructor_result")
+        if not isinstance(result, dict):
+            report.error(f"{prefix}: Candidate Constructor completion requires candidate_constructor_result")
+        else:
+            result_type = str(result.get("result_type", "")).strip()
+            if not result_type:
+                report.error(f"{prefix}: candidate_constructor_result.result_type is required")
+            elif result_type not in CANDIDATE_CONSTRUCTOR_RESULT_TYPES:
+                report.error(
+                    f"{prefix}: candidate_constructor_result.result_type is not allowed: "
+                    f"{result_type}"
+                )
+            no_fog_explanation = str(result.get("no_fog_explanation", "")).strip()
+            if not bool_value(result.get("no_fog_check")):
+                report.error(f"{prefix}: candidate_constructor_result.no_fog_check must be true")
+            if not no_fog_explanation:
+                report.error(f"{prefix}: candidate_constructor_result.no_fog_explanation is empty")
+            else:
+                lowered_no_fog = no_fog_explanation.lower()
+                for phrase in CANDIDATE_CONSTRUCTOR_FOG_ONLY_PHRASES:
+                    if phrase in lowered_no_fog:
+                        report.error(
+                            f"{prefix}: candidate_constructor_result.no_fog_explanation "
+                            f"contains fog-only phrase: {phrase}"
+                        )
+            next_required_role = str(result.get("next_required_role", "")).strip()
+            if not next_required_role:
+                report.error(f"{prefix}: candidate_constructor_result.next_required_role is required")
+            elif next_required_role not in CANDIDATE_CONSTRUCTOR_NEXT_REQUIRED_ROLES:
+                report.error(
+                    f"{prefix}: candidate_constructor_result.next_required_role is not allowed: "
+                    f"{next_required_role}"
+                )
+            if result_type == "constructed_candidate":
+                if not str(result.get("constructed_candidate_path", "")).strip():
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.constructed_candidate_path "
+                        "is required for constructed_candidate"
+                    )
+                for list_field in ("formal_objects", "maps", "proof_obligations"):
+                    if not _substantive_list(result.get(list_field, [])):
+                        report.error(
+                            f"{prefix}: candidate_constructor_result.{list_field} "
+                            "must list concrete entries for constructed_candidate"
+                        )
+            if result_type == "minimal_countermodel":
+                if not str(result.get("minimal_countermodel_path", "")).strip():
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.minimal_countermodel_path "
+                        "is required for minimal_countermodel"
+                    )
+                if not _substantive_list(result.get("failed_components", [])):
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.failed_components "
+                        "must list concrete entries for minimal_countermodel"
+                    )
+            if result_type == "precise_obstruction":
+                if not str(result.get("obstruction_id", "")).strip():
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.obstruction_id "
+                        "is required for precise_obstruction"
+                    )
+                if not _substantive_list(result.get("failed_components", [])):
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.failed_components "
+                        "must list concrete entries for precise_obstruction"
+                    )
+                if not (isinstance(obstruction, dict) and bool_value(obstruction.get("present"))):
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.precise_obstruction "
+                        "requires present obstruction_record"
+                    )
+            if result_type == "invalid_under_claim_boundary":
+                if not _substantive_list(result.get("failed_components", [])):
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.failed_components "
+                        "must list concrete entries for invalid_under_claim_boundary"
+                    )
+                if not str(result.get("claim_boundary_citation", "")).strip():
+                    report.error(
+                        f"{prefix}: candidate_constructor_result.claim_boundary_citation "
+                        "is required for invalid_under_claim_boundary"
+                    )
+            if not bool_value(result.get("claim_boundary_preserved")):
+                report.error(
+                    f"{prefix}: candidate_constructor_result.claim_boundary_preserved must be true"
+                )
+
+    forbidden = completion.get("forbidden_conclusion_summary")
+    if isinstance(forbidden, dict):
+        if bool_value(forbidden.get("physics_promotion_authorized")) and not promotion_authorized:
+            report.error(
+                f"{prefix}: forbidden_conclusion_summary authorizes physics promotion "
+                f"without physics_progress_status authority"
+            )
+        if not str(forbidden.get("summary", "")).strip():
+            report.error(f"{prefix}: forbidden_conclusion_summary.summary is empty")
+        forbidden_text = text_blob(
+            forbidden.get("forbidden_conclusions", []),
+            forbidden.get("summary", ""),
+        ).lower()
+        for marker in (
+            "m_src adoption",
+            "g_eff",
+            "matter coupling",
+            "einstein",
+            "benchmark",
+            "completed derivation",
+            "global theory rejection",
+        ):
+            if marker not in forbidden_text:
+                report.error(
+                    f"{prefix}: forbidden_conclusion_summary must preserve {marker} block"
+                )
+    elif "forbidden_conclusion_summary" in completion:
+        report.error(f"{prefix}: forbidden_conclusion_summary should be a map")
 
 
 def ontology_law_receipt_required(

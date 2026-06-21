@@ -10,6 +10,8 @@ objects used by the research-agent system.
 - Abstract schema descriptions for Director decisions, AgentJobs, execution
   roles, role contracts, documentation-impact records, and teaching Q&A
   packets.
+- Prospective completion schemas that define reusable field meanings and
+  allowed values for future governed research-control receipts.
 - Schema notes that define required fields, field meanings, and authority
   constraints for repeated control objects.
 
@@ -27,10 +29,17 @@ files under `research_control/templates/` are practical starting points for
 creating new records. A template may be copied into a task folder, but this
 schema folder remains the explanatory source for object structure.
 
+## Active Schema Contracts
+
+- `PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md` defines the Phase 5 prospective
+  hard-enforcement completion fields, obstruction/freeze receipt vocabulary,
+  route-cycle controls, and Candidate Constructor no-fog result rules for
+  future physics AgentJobs that opt into the mathematical-decisiveness
+  contract.
+
 ## Authority Boundary
 
 Schema files are project-control authority. They can affect validator
 expectations, routing behavior, and checkpoint boundaries. Do not alter schema
 meaning as part of ordinary documentation cleanup unless the owning task
 explicitly authorizes schema-contract work.
-

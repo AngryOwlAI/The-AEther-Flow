@@ -65,6 +65,29 @@ ontology. If the witness depends on target atlas or target metric structure,
 the output must mark the dependency as a target-import failure rather than a
 candidate success.
 
+## No-Fog Output Rule
+
+For future physics AgentJobs that opt into
+`.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`, this role must end
+with exactly one decisive `candidate_constructor_result.result_type`:
+
+- `constructed_candidate`
+- `minimal_countermodel`
+- `precise_obstruction`
+- `invalid_under_claim_boundary`
+
+The completion must include `no_fog_check: true` and a `no_fog_explanation`
+that states exactly what was constructed or exactly what failed. The primary
+result may not be only "more work required", "candidate remains open",
+"future work should explore", "insufficient time", "controlled pause",
+"selector should decide next", or "generalization not attempted".
+
+A constructed candidate must name its artifact path, formal objects, maps,
+proof obligations, and next required role. A minimal countermodel must name the
+countermodel path and failed components. A precise obstruction must name the
+obstruction identifier, failed components, and corresponding obstruction
+record. An invalid-under-claim-boundary result must cite the claim boundary.
+
 ## Boundaries
 
 This role cannot modify canonical ontology sources, benchmark sources, or

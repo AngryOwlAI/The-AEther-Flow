@@ -1,0 +1,47 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+question: "Can the finite/local A_star pattern be extended to a source-only general source-cover candidate without target-atlas import?"
+analysis:
+  premises:
+    - "RT-20260614-082 preserves A_star as exact finite/local source-extension data only."
+    - "RT-20260614-083 selects a general source-cover construction attempt before formal theorem scoped no-go or human-gated framing."
+    - "The candidate can be total and source-only if it returns bottom whenever source data do not determine a unique compatible transition."
+  construction:
+    object_name: "GSC_src"
+    summary: "A fail-closed source-cover candidate assigning selected transition data and quotient support to admissible source-cover packages."
+    formal_objects:
+      - "index set I and source carriers U_i"
+      - "source overlap predicates Ov_ij_src"
+      - "source profiles Pi_i"
+      - "candidate transition families C_ij_src"
+      - "source defect vector d_ij"
+      - "selector preorder preceq_ij_src"
+      - "selected transitions tauhat_ij_src or bottom"
+      - "source inverse and composition operations"
+      - "admissible variation class Var_GSC"
+      - "stability predicate Stab_GSC"
+      - "conditional quotient support Q_src_GSC"
+    maps:
+      - "Pi_i: U_i -> P_i_src"
+      - "Sel_ij: C_ij_src -> C_ij_src union bottom"
+      - "GSC_src: source-cover package -> (Q_src_GSC, Pi, tauhat, Var_GSC, Stab_GSC) or bottom"
+      - "inv_src and comp_src on selected transition tokens"
+    fail_closed_conditions:
+      - "empty overlap candidate family"
+      - "nonunique selector minimum"
+      - "missing reverse transition token"
+      - "cocycle mismatch on a declared triple overlap"
+      - "variation outside Var_GSC"
+  result: "constructed_candidate"
+new_mathematical_payload:
+  - payload_type: "construction"
+    summary: "General fail-closed source-cover candidate GSC_src constructed from source-side cover and transition data."
+  - payload_type: "definition"
+    summary: "Defined selector defect vector and admissible variation class using source data only."
+  - payload_type: "lemma"
+    summary: "Stability holds under admissible relabeling variations preserving selector minima and transition algebra."
+limitations:
+  - "The construction is not canonical ontology and not adopted source authority."
+  - "Non-bottom behavior depends on supplied source profiles transition candidates inverse and cocycle data."
+  - "Arbitrary finite-variation robustness remains undischarged beyond Var_GSC."
