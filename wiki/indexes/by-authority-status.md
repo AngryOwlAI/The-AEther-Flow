@@ -169,6 +169,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-079/artifacts/120_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-078/artifacts/119_RESP_LC_M_SRC_ONTOLOGY_LAW_ATLAS_GLUE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-CANDIDATE` `research_control/tasks/RT-20260614-084/artifacts/125_RESP_LC_M_SRC_ONTOLOGY_LAW_GENERAL_SOURCE_COVER_CANDIDATE.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-085/artifacts/126_RESP_LC_M_SRC_ONTOLOGY_LAW_GENERAL_SOURCE_COVER_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE` `research_control/tasks/RT-20260614-057/artifacts/98_RESP_LC_SOURCE_EXTENSION_CANDIDATE.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-059/artifacts/100_RESP_LC_SOURCE_EXTENSION_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-058/artifacts/99_RESP_LC_SOURCE_EXTENSION_CANDIDATE_SMUGGLING_AUDIT.tex`
@@ -558,6 +559,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-atlas-glue-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-CANDIDATE` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-general-source-cover-candidate.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-general-source-cover-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-candidate-smuggling-audit.md`

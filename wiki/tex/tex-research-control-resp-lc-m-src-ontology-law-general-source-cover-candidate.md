@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-CANDIDATE-BRIDGE-WITNESS-REFUTER-STRESS-TEST;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-CANDIDATE-BRIDGE-WITNESS;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-ATLAS-GLUE-PROPOSAL` ``
 - Generated output path: `wiki/tex/tex-research-control-resp-lc-m-src-ontology-law-general-source-cover-candidate.md`
+- Backlink from `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-ONTOLOGY-LAW-GENERAL-SOURCE-COVER-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-085/artifacts/126_RESP_LC_M_SRC_ONTOLOGY_LAW_GENERAL_SOURCE_COVER_SMUGGLING_AUDIT.tex`
 
 ## Validation
 
