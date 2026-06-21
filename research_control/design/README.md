@@ -14,6 +14,7 @@ research-control behavior.
   tracked HTML publication outputs.
 - GitHub-facing explainer contract.
 - GR derivation burden map.
+- Mathematical-decisiveness completion contract for future physics AgentJobs.
 - HTML explainer depth and flexible presentation contracts.
 
 ## What Belongs Here

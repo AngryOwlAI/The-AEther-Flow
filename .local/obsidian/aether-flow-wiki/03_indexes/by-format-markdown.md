@@ -94,6 +94,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-research-control-design-gr-derivation-burden-map|MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP]] `research_control/design/gr_derivation_burden_map.md`
 - [[02_sources/markdown/md-research-control-design-html-explainer-depth-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT]] `research_control/design/html_explainer_depth_contract.md`
 - [[02_sources/markdown/md-research-control-design-html-explainer-flexible-presentation-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT]] `research_control/design/html_explainer_flexible_presentation_contract.md`
+- [[02_sources/markdown/md-research-control-design-mathematical-decisiveness-completion-contract|MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT]] `research_control/design/mathematical_decisiveness_completion_contract.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD]] `.agents/roles/physics/candidate-constructor.v0.2.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD]] `.agents/roles/physics/gate-chair.v0.1.0.md`
