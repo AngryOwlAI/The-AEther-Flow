@@ -103,6 +103,12 @@ memory_preflight:
     vault_exists: true
     memory_index_exists: true
     source_object_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
   queries:
     - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json"
       query_type: "lookup"

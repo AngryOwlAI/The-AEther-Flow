@@ -19,13 +19,23 @@ skills provide procedures, and gates control claim promotion.
 1. Read `AGENTS.md` and `research_control/AGENTS.md`.
 
    Before any Director routing decision, AgentJob creation, or physics
-   claim/control conclusion, run the memory preflight:
+   claim/control conclusion, run the memory preflight refresh:
+
+   ```zsh
+   .venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json
+   ```
+
+   This command runs the memory status check, refreshes the local Obsidian
+   vault notes, raw mirrors, semantic extracts, and SQLite retrieval index when
+   `local_retrieval_status` reports local-cache drift, then reports the final
+   status summary. The receipt-facing status command remains:
 
    ```zsh
    .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json
    ```
 
-   Then run at least one targeted memory query:
+   Then run at least one targeted memory query against the refreshed retrieval
+   layer:
 
    ```zsh
    .venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id-or-path> --json
@@ -39,8 +49,10 @@ skills provide procedures, and gates control claim promotion.
    `2026-06-18T15:33:00Z` must include a `memory_preflight` receipt with the
    status command, status summary, query commands, returned object IDs,
    canonical source inspections, source registries, canonical paths, and source
-   hashes. Obsidian, wiki notes, semantic extracts, and `.local/` remain
-   retrieval layers only; they are not authority.
+   hashes. If the preflight refresh ran, record the refresh command and before
+   or after local-retrieval status in the AgentJob or completion evidence.
+   Obsidian, wiki notes, semantic extracts, SQLite memory, and `.local/`
+   remain retrieval layers only; they are not authority.
 
 2. Resolve tracked state and request the Director context packet:
 

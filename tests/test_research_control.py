@@ -37,6 +37,10 @@ class ResearchControlTests(unittest.TestCase):
         cls.validator = load_module("validate_research_control", "validate_research_control.py")
         cls.resolver = load_module("resolve_latest_handoff", "resolve_latest_handoff.py")
         cls.continue_research = load_module("continue_research", "continue_research.py")
+        cls.continue_research_memory_preflight = load_module(
+            "continue_research_memory_preflight",
+            "continue_research_memory_preflight.py",
+        )
         cls.checkpoint = load_module("checkpoint_research_transaction", "checkpoint_research_transaction.py")
         cls.metrics = load_module(
             "report_physics_progress_metrics",
@@ -118,6 +122,88 @@ class ResearchControlTests(unittest.TestCase):
         latest = self.resolver.resolve_latest()
         self.assertEqual(latest["handoff_id"], program_state["latest_handoff_id"])
         self.assertEqual(latest["task_id"], program_state["active_task_id"])
+
+    def test_continue_research_memory_preflight_refreshes_local_cache_warning(self) -> None:
+        warning_payload = {
+            "core_validation_status": "PASS",
+            "freshness_status": "WARN",
+            "local_retrieval_status": "WARN",
+            "vault_exists": True,
+            "memory_index_exists": True,
+            "source_object_count": 3,
+            "vault_row_count": 3,
+            "semantic_row_count": 3,
+            "relationship_row_count": 7,
+            "freshness_categories": {
+                "blocking": [],
+                "non_blocking": [],
+                "local_cache_only": ["Memory SQLite index is older than inputs"],
+            },
+            "freshness_warnings": ["Memory SQLite index is older than inputs"],
+        }
+        fresh_payload = {
+            **warning_payload,
+            "freshness_status": "PASS",
+            "local_retrieval_status": "PASS",
+            "freshness_categories": {
+                "blocking": [],
+                "non_blocking": [],
+                "local_cache_only": [],
+            },
+            "freshness_warnings": [],
+        }
+
+        with mock.patch.object(
+            self.continue_research_memory_preflight,
+            "memory_status",
+            side_effect=[warning_payload, fresh_payload],
+        ) as status_mock, mock.patch.object(
+            self.continue_research_memory_preflight,
+            "sync_local_retrieval",
+            return_value={"command": "sync"},
+        ) as sync_mock:
+            payload = self.continue_research_memory_preflight.run_preflight(Path("/tmp/repo"))
+
+        self.assertTrue(payload["refresh_needed"])
+        self.assertTrue(payload["refresh_performed"])
+        self.assertEqual(payload["status_summary"]["local_retrieval_status"], "PASS")
+        self.assertEqual(status_mock.call_count, 2)
+        sync_mock.assert_called_once()
+
+    def test_continue_research_memory_preflight_skips_refresh_when_fresh(self) -> None:
+        fresh_payload = {
+            "core_validation_status": "PASS",
+            "freshness_status": "PASS",
+            "local_retrieval_status": "PASS",
+            "vault_exists": True,
+            "memory_index_exists": True,
+            "source_object_count": 3,
+            "vault_row_count": 3,
+            "semantic_row_count": 3,
+            "relationship_row_count": 7,
+            "freshness_categories": {
+                "blocking": [],
+                "non_blocking": [],
+                "local_cache_only": [],
+            },
+            "freshness_warnings": [],
+        }
+
+        with mock.patch.object(
+            self.continue_research_memory_preflight,
+            "memory_status",
+            return_value=fresh_payload,
+        ) as status_mock, mock.patch.object(
+            self.continue_research_memory_preflight,
+            "sync_local_retrieval",
+        ) as sync_mock:
+            payload = self.continue_research_memory_preflight.run_preflight(Path("/tmp/repo"))
+
+        self.assertFalse(payload["refresh_needed"])
+        self.assertFalse(payload["refresh_performed"])
+        self.assertEqual(payload["status_summary"]["local_retrieval_status"], "PASS")
+        status_mock.assert_called_once()
+        sync_mock.assert_not_called()
 
     def test_write_path_diff_rejects_undeclared_path(self) -> None:
         report = self.validator.ValidationReport()
