@@ -177,6 +177,48 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
                 markdown_path.read_text(encoding="utf-8"),
             )
 
+    def test_generator_updates_source_bridge_reference_when_requested(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root)
+
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                update_source_bridge=True,
+                repo_root=root,
+            )
+
+            self.assertTrue(result["ok"])
+            self.assertEqual(len(result["source_bridge_updates"]), 1)
+            self.assertEqual(
+                result["source_bridge_updates"][0]["source_path"],
+                (
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+            )
+            completion_path = (
+                root
+                / "research_control/tasks/RT-20260622-090/jobs/completions/"
+                "AJC-AJ-RT-20260622-090-001.yaml"
+            )
+            completion = self.strict_yaml.load(completion_path)
+            self.assertTrue(completion["project_improvement_bridge"]["required"])
+            self.assertEqual(
+                completion["project_improvement_bridge"]["improvement_handoff_path"],
+                "research_control/project_improvement_handoffs/improve-project-handoff_20260622_090.yaml",
+            )
+            self.assertEqual(completion["project_improvement_bridge"]["bridge_status"], "generated")
+
+            report = self.bridge_validator.validate_project_improvement_handoffs(root)
+            self.assertEqual(report["errors"], [])
+
     def test_generator_blank_signal_placeholder_noops(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

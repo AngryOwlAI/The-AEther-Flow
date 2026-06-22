@@ -603,6 +603,99 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertEqual(result["recommended_role"], "validator-engineer")
         self.assertEqual(result["selected_signal"]["signal_id"], "PIS-HIGH")
 
+    def test_resolver_surfaces_sidecar_context_for_selected_signal(self) -> None:
+        original_collect = self.resolver.collect_signals
+        original_sidecars = self.resolver.open_improvement_handoffs
+        self.resolver.collect_signals = lambda: {
+            "open_signals": [
+                {
+                    "signal_id": "PIS-HIGH",
+                    "signal_type": "validator_gap",
+                    "severity": "high",
+                    "recommended_role": "validator-engineer",
+                    "created_at": "2026-06-10T00:00:00Z",
+                }
+            ]
+        }
+        self.resolver.open_improvement_handoffs = lambda repo_root: (
+            [
+                {
+                    "improvement_handoff_id": "improve-project-handoff_20260622_090",
+                    "path": "research_control/project_improvement_handoffs/improve-project-handoff_20260622_090.yaml",
+                    "status": "open",
+                    "signal_ids": ["PIS-HIGH"],
+                    "highest_severity": "high",
+                    "solution_plan": {
+                        "present": False,
+                        "status": "absent",
+                        "implementation_role": "",
+                        "objective": "",
+                        "routing_status": "absent",
+                        "routing_blockers": [],
+                    },
+                }
+            ],
+            [],
+        )
+        try:
+            result = self.resolver.resolve_project_improvement([])
+        finally:
+            self.resolver.collect_signals = original_collect
+            self.resolver.open_improvement_handoffs = original_sidecars
+
+        self.assertEqual(result["boundary"], "project_improvement_signal_ready")
+        self.assertEqual(result["selected_signal_source"], "improvement_handoff")
+        self.assertEqual(
+            result["selected_improvement_handoff"]["improvement_handoff_id"],
+            "improve-project-handoff_20260622_090",
+        )
+        self.assertEqual(result["recommended_role"], "project-system-director")
+        self.assertEqual(result["solution_plan"]["routing_status"], "absent")
+
+    def test_resolver_uses_ready_sidecar_solution_plan_role(self) -> None:
+        original_collect = self.resolver.collect_signals
+        original_sidecars = self.resolver.open_improvement_handoffs
+        self.resolver.collect_signals = lambda: {
+            "open_signals": [
+                {
+                    "signal_id": "PIS-HIGH",
+                    "signal_type": "validator_gap",
+                    "severity": "high",
+                    "recommended_role": "project-system-director",
+                    "created_at": "2026-06-10T00:00:00Z",
+                }
+            ]
+        }
+        self.resolver.open_improvement_handoffs = lambda repo_root: (
+            [
+                {
+                    "improvement_handoff_id": "improve-project-handoff_20260622_091",
+                    "path": "research_control/project_improvement_handoffs/improve-project-handoff_20260622_091.yaml",
+                    "status": "open",
+                    "signal_ids": ["PIS-HIGH"],
+                    "highest_severity": "high",
+                    "solution_plan": {
+                        "present": True,
+                        "status": "ready_to_implement",
+                        "implementation_role": "validator-engineer",
+                        "objective": "Repair one validator behavior.",
+                        "routing_status": "ready",
+                        "routing_blockers": [],
+                    },
+                }
+            ],
+            [],
+        )
+        try:
+            result = self.resolver.resolve_project_improvement([])
+        finally:
+            self.resolver.collect_signals = original_collect
+            self.resolver.open_improvement_handoffs = original_sidecars
+
+        self.assertEqual(result["selected_signal_source"], "improvement_handoff")
+        self.assertEqual(result["recommended_role"], "validator-engineer")
+        self.assertEqual(result["solution_plan"]["routing_status"], "ready")
+
     def test_resolver_uses_signal_type_registry_default_role(self) -> None:
         original_collect = self.resolver.collect_signals
         original_role_map = self.resolver.signal_type_role_map
