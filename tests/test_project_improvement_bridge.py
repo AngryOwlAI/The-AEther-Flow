@@ -41,6 +41,11 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
             PROJECT_SCRIPT_DIR,
             "generate_project_improvement_handoff.py",
         )
+        cls.bridge_validator = load_module(
+            "project_improvement_handoff_validation",
+            PROJECT_SCRIPT_DIR,
+            "project_improvement_handoff_validation.py",
+        )
 
     def test_project_improvement_handoff_yaml_template_parses(self) -> None:
         template_path = TEMPLATE_DIR / "IMPROVE_PROJECT_HANDOFF_TEMPLATE.yaml"
@@ -214,6 +219,76 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
                 result["errors"],
             )
 
+    def test_bridge_validator_accepts_generated_sidecar_parity(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, include_bridge_reference=True)
+
+            self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+
+            report = self.bridge_validator.validate_project_improvement_handoffs(root)
+            self.assertEqual(report["errors"], [])
+            self.assertEqual(report["improvement_handoff_count"], 1)
+            self.assertEqual(report["open_improvement_handoff_count"], 1)
+
+    def test_bridge_validator_rejects_missing_sidecar_after_activation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, include_bridge_reference=True)
+
+            report = self.bridge_validator.validate_project_improvement_handoffs(root)
+
+            self.assertTrue(
+                any("project_improvement_bridge sidecar does not exist" in error for error in report["errors"])
+            )
+
+    def test_bridge_validator_rejects_missing_bridge_reference_after_activation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root)
+
+            report = self.bridge_validator.validate_project_improvement_handoffs(root)
+
+            self.assertTrue(
+                any("require project_improvement_bridge" in error for error in report["errors"])
+            )
+
+    def test_bridge_validator_rejects_markdown_yaml_signal_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, include_bridge_reference=True)
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+            markdown_path = root / result["output_paths"]["markdown"]
+            markdown_path.write_text(
+                markdown_path.read_text(encoding="utf-8").replace(
+                    "PIS-RT-20260622-090-001",
+                    "PIS-RT-20260622-090-DRIFTED",
+                ),
+                encoding="utf-8",
+            )
+
+            report = self.bridge_validator.validate_project_improvement_handoffs(root)
+
+            self.assertTrue(any("Markdown mirror missing signal_id" in error for error in report["errors"]))
+
     @staticmethod
     def write_handoff_pair(handoff_dir: Path, number: int) -> None:
         handoff_id = f"handoff-{number:04d}"
@@ -243,6 +318,7 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
         *,
         blank_signal: bool = False,
         omit_signal_row: bool = False,
+        include_bridge_reference: bool = False,
     ) -> None:
         registry_dir = root / "registries"
         registry_dir.mkdir(parents=True)
@@ -313,6 +389,48 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
                 ]
             )
         )
+        bridge_block = (
+            "\n".join(
+                [
+                    "project_improvement_bridge:",
+                    "  required: true",
+                    "  improvement_handoff_path: \"research_control/project_improvement_handoffs/improve-project-handoff_20260622_090.yaml\"",
+                    "  signal_ids:",
+                    "    - \"PIS-RT-20260622-090-001\"",
+                    "  bridge_status: \"generated\"",
+                    "  notes: \"Fixture bridge reference.\"",
+                ]
+            )
+            if include_bridge_reference and not blank_signal
+            else "\n".join(
+                [
+                    "project_improvement_bridge:",
+                    "  required: false",
+                    "  improvement_handoff_path: \"\"",
+                    "  signal_ids:",
+                    "    - \"\"",
+                    "  bridge_status: \"not_required\"",
+                    "  notes: \"\"",
+                ]
+            )
+            if include_bridge_reference
+            else ""
+        )
+        handoff_bridge_block = (
+            "\n".join(
+                [
+                    "project_improvement_bridge:",
+                    "  required: false",
+                    "  improvement_handoff_path: \"\"",
+                    "  signal_ids:",
+                    "    - \"\"",
+                    "  bridge_status: \"not_required\"",
+                    "  notes: \"\"",
+                ]
+            )
+            if include_bridge_reference
+            else ""
+        )
         (completion_dir / "AJC-AJ-RT-20260622-090-001.yaml").write_text(
             "\n".join(
                 [
@@ -323,6 +441,7 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
                     "completed_at: \"2026-06-22T05:00:00Z\"",
                     "status: \"completed\"",
                     signal_block,
+                    bridge_block,
                     "",
                 ]
             ),
@@ -349,6 +468,7 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
                     "    evidence_path: \"\"",
                     "    recommended_skill: \"\"",
                     "    recommended_role: \"\"",
+                    handoff_bridge_block,
                     "",
                 ]
             ),

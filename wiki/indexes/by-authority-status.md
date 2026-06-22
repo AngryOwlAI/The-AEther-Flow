@@ -411,6 +411,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`
 - `WIKI-MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `wiki/markdown/md-schema-execution-role-schema.md`
 - `WIKI-MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `wiki/markdown/md-schema-physics-completion-decisiveness-schema.md`
+- `WIKI-MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA` `wiki/markdown/md-schema-project-improvement-handoff-schema.md`
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
 - `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
 - `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
@@ -635,6 +636,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - `MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
 - `MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`
+- `MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA` `.agents/schemas/PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md`
 - `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`
 - `MD-SKILL-CONTINUE-RESEARCH` `.codex/skills/continue-research/SKILL.md`
 - `MD-SKILL-GRILL-ME` `.codex/skills/grill-me/SKILL.md`

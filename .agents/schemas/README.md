@@ -36,6 +36,9 @@ schema folder remains the explanatory source for object structure.
   route-cycle controls, and Candidate Constructor no-fog result rules for
   future physics AgentJobs that opt into the mathematical-decisiveness
   contract.
+- `PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md` defines the prospective sidecar
+  contract, activation timestamp, source bridge reference, signal parity
+  checks, and non-activation boundary for project-improvement handoffs.
 
 ## Authority Boundary
 

@@ -208,6 +208,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-schema-documentation-impact-schema|MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA]] `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - [[02_sources/markdown/md-schema-execution-role-schema|MD-SCHEMA-EXECUTION-ROLE-SCHEMA]] `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
 - [[02_sources/markdown/md-schema-physics-completion-decisiveness-schema|MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA]] `.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`
+- [[02_sources/markdown/md-schema-project-improvement-handoff-schema|MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA]] `.agents/schemas/PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md`
 - [[02_sources/markdown/md-schema-role-schema|MD-SCHEMA-ROLE-SCHEMA]] `.agents/schemas/ROLE_SCHEMA.md`
 - [[02_sources/markdown/md-skill-project-memory-system|MD-SKILL-PROJECT-MEMORY-SYSTEM]] `.codex/skills/project-memory-system/SKILL.md`
 

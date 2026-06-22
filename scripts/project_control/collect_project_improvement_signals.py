@@ -28,6 +28,9 @@ from project_signal_types import (  # noqa: E402
     registry_path as signal_type_registry_path,
     signal_type_names,
 )
+from project_improvement_handoff_validation import (  # noqa: E402
+    validate_project_improvement_handoffs,
+)
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
 
 SIGNAL_REGISTRY = REPO_ROOT / "registries" / "PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
@@ -187,9 +190,13 @@ def collect_signals(*, status: str | None = None, signal_type: str | None = None
     if signal_type:
         rows = [row for row in rows if row.get("signal_type") == signal_type]
     open_rows = [row for row in rows if row.get("status") in OPEN_STATUSES]
+    sidecar_report = validate_project_improvement_handoffs(REPO_ROOT)
     return {
         "signal_count": len(rows),
         "open_signal_count": len(open_rows),
+        "improvement_handoff_count": sidecar_report["improvement_handoff_count"],
+        "open_improvement_handoff_count": sidecar_report["open_improvement_handoff_count"],
+        "sidecar_validation_errors": sidecar_report["errors"],
         "signals": rows,
         "open_signals": open_rows,
     }
@@ -542,8 +549,11 @@ def validate_signal_registration() -> dict[str, object]:
             errors.extend(resolution_evidence_errors(row))
 
     emitted, parse_errors = emitted_signal_records()
+    sidecar_report = validate_project_improvement_handoffs(REPO_ROOT)
     errors.extend(shared_resolution_errors(rows, jobs))
     errors.extend(parse_errors)
+    errors.extend(sidecar_report["errors"])
+    warnings.extend(sidecar_report["warnings"])
     for record in emitted:
         signal = record["signal"]
         missing = [
@@ -573,6 +583,10 @@ def validate_signal_registration() -> dict[str, object]:
         "registered_signal_type_count": len(signal_type_rows),
         "registered_signal_count": len(rows),
         "emitted_signal_count": len(emitted),
+        "improvement_handoff_count": sidecar_report["improvement_handoff_count"],
+        "open_improvement_handoff_count": sidecar_report["open_improvement_handoff_count"],
+        "sidecar_validation_errors": sidecar_report["errors"],
+        "sidecar_activation_timestamp": sidecar_report["activation_timestamp"],
     }
 
 

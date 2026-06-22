@@ -24,6 +24,13 @@ except ImportError:  # pragma: no cover - package import path for tests
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_DIR = REPO_ROOT / "registries"
 CONTROL_DIR = REPO_ROOT / "research_control"
+PROJECT_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "project_control"
+if str(PROJECT_CONTROL_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_CONTROL_SCRIPT_DIR))
+
+from project_improvement_handoff_validation import (  # noqa: E402
+    validate_project_improvement_handoffs as validate_project_improvement_handoff_records,
+)
 
 RESOLVER_SNAPSHOT_REQUIRED_FIELDS = (
     "status",
@@ -3080,6 +3087,14 @@ def validate_handoffs(
         report.error("handoff IDs must be monotonic without gaps")
 
 
+def validate_project_improvement_handoffs(report: ValidationReport) -> None:
+    result = validate_project_improvement_handoff_records(REPO_ROOT)
+    for error in result["errors"]:
+        report.error(error)
+    for warning in result["warnings"]:
+        report.warn(warning)
+
+
 def validate_loop_control_handoff(
     report: ValidationReport,
     data: dict[str, Any],
@@ -3428,6 +3443,7 @@ def validate_all(
     )
     validate_program_state(report, tasks)
     validate_handoffs(report, tasks, jobs)
+    validate_project_improvement_handoffs(report)
     validate_approvals(report, decisions)
     validate_claim_boundaries(report, rows_by_registry["CLAIM_BOUNDARY_REGISTRY.csv"])
     scan_for_forbidden_claims(report, rows_by_registry["CLAIM_BOUNDARY_REGISTRY.csv"])
