@@ -9,15 +9,17 @@ from unittest import mock
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SCRIPT_DIR = REPO_ROOT / "scripts" / "research_control"
+RESEARCH_SCRIPT_DIR = REPO_ROOT / "scripts" / "research_control"
+PROJECT_SCRIPT_DIR = REPO_ROOT / "scripts" / "project_control"
 TEMPLATE_DIR = REPO_ROOT / "research_control" / "templates"
 FIXTURE_DIR = REPO_ROOT / "tests" / "fixtures" / "project_improvement_bridge"
 
 
-def load_module(name: str, filename: str):
-    if str(SCRIPT_DIR) not in sys.path:
-        sys.path.insert(0, str(SCRIPT_DIR))
-    spec = importlib.util.spec_from_file_location(name, SCRIPT_DIR / filename)
+def load_module(name: str, script_dir: Path, filename: str):
+    for path in (RESEARCH_SCRIPT_DIR, PROJECT_SCRIPT_DIR):
+        if str(path) not in sys.path:
+            sys.path.insert(0, str(path))
+    spec = importlib.util.spec_from_file_location(name, script_dir / filename)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     sys.modules[spec.name] = module
@@ -28,8 +30,17 @@ def load_module(name: str, filename: str):
 class ProjectImprovementBridgeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.strict_yaml = load_module("strict_yaml", "strict_yaml.py")
-        cls.resolver = load_module("resolve_latest_handoff", "resolve_latest_handoff.py")
+        cls.strict_yaml = load_module("strict_yaml", RESEARCH_SCRIPT_DIR, "strict_yaml.py")
+        cls.resolver = load_module(
+            "resolve_latest_handoff",
+            RESEARCH_SCRIPT_DIR,
+            "resolve_latest_handoff.py",
+        )
+        cls.generator = load_module(
+            "generate_project_improvement_handoff",
+            PROJECT_SCRIPT_DIR,
+            "generate_project_improvement_handoff.py",
+        )
 
     def test_project_improvement_handoff_yaml_template_parses(self) -> None:
         template_path = TEMPLATE_DIR / "IMPROVE_PROJECT_HANDOFF_TEMPLATE.yaml"
@@ -96,6 +107,113 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
             "research_control/handoffs/handoff-0002.yaml",
         )
 
+    def test_generator_dry_run_reports_sidecar_without_writing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root)
+
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=False,
+                repo_root=root,
+            )
+
+            self.assertTrue(result["ok"])
+            self.assertTrue(result["bridge_required"])
+            self.assertEqual(result["write_status"], "dry_run")
+            self.assertEqual(
+                result["improvement_handoff_id"],
+                "improve-project-handoff_20260622_090",
+            )
+            self.assertFalse(
+                (
+                    root
+                    / "research_control/project_improvement_handoffs/"
+                    "improve-project-handoff_20260622_090.yaml"
+                ).exists()
+            )
+            data = self.strict_yaml.loads(result["yaml_text"])
+            self.assertEqual(data["signal_summary"]["selected_signal_id"], "PIS-RT-20260622-090-001")
+            self.assertTrue(
+                data["normal_research_continuation"]["sidecar_does_not_replace_regular_handoff"]
+            )
+
+    def test_generator_write_creates_yaml_and_markdown_sidecar(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root)
+
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+
+            self.assertTrue(result["ok"])
+            yaml_path = root / result["output_paths"]["yaml"]
+            markdown_path = root / result["output_paths"]["markdown"]
+            self.assertTrue(yaml_path.exists())
+            self.assertTrue(markdown_path.exists())
+            data = self.strict_yaml.load(yaml_path)
+            self.assertEqual(data["improvement_handoff_id"], "improve-project-handoff_20260622_090")
+            self.assertFalse(data["project_boundary"]["physics_claim_promotion_authorized"])
+            self.assertIn(
+                "Project-Improvement Handoff",
+                markdown_path.read_text(encoding="utf-8"),
+            )
+
+    def test_generator_blank_signal_placeholder_noops(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, blank_signal=True)
+
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+
+            self.assertTrue(result["ok"])
+            self.assertFalse(result["bridge_required"])
+            self.assertEqual(result["write_status"], "not_required")
+
+    def test_generator_rejects_missing_signal_registry_row(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, omit_signal_row=True)
+
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+
+            self.assertFalse(result["ok"])
+            self.assertIn(
+                "PIS-RT-20260622-090-001: missing registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv row",
+                result["errors"],
+            )
+
     @staticmethod
     def write_handoff_pair(handoff_dir: Path, number: int) -> None:
         handoff_id = f"handoff-{number:04d}"
@@ -116,5 +234,127 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
         )
         (handoff_dir / f"{handoff_id}.md").write_text(
             f"# {handoff_id}\n",
+            encoding="utf-8",
+        )
+
+    @staticmethod
+    def write_generator_fixture(
+        root: Path,
+        *,
+        blank_signal: bool = False,
+        omit_signal_row: bool = False,
+    ) -> None:
+        registry_dir = root / "registries"
+        registry_dir.mkdir(parents=True)
+        (registry_dir / "PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv").write_text(
+            "\n".join(
+                [
+                    "signal_type,default_recommended_skill,default_recommended_role,status,notes",
+                    "validator_gap,improve-project-system,validator-engineer,active,Validator coverage gap.",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        signal_rows = [
+            (
+                "signal_id,created_at,source_task_id,source_job_id,source_role_id,"
+                "signal_type,severity,status,evidence_path,recommended_skill,"
+                "recommended_role,notes,resolved_by_job_id,resolution_evidence_path,resolved_at"
+            )
+        ]
+        if not omit_signal_row:
+            signal_rows.append(
+                (
+                    "PIS-RT-20260622-090-001,2026-06-22T05:00:00Z,"
+                    "RT-20260622-090,AJ-RT-20260622-090-001,validator-engineer,"
+                    "validator_gap,high,open,"
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml,"
+                    "improve-project-system,validator-engineer,"
+                    "Focused bridge generator fixture.,,,"
+                )
+            )
+        signal_rows.append("")
+        (registry_dir / "PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv").write_text(
+            "\n".join(signal_rows),
+            encoding="utf-8",
+        )
+
+        completion_dir = (
+            root
+            / "research_control/tasks/RT-20260622-090/jobs/completions"
+        )
+        completion_dir.mkdir(parents=True)
+        signal_block = (
+            "\n".join(
+                [
+                    "project_improvement_signals:",
+                    "  - signal_id: \"\"",
+                    "    signal_type: \"\"",
+                    "    severity: \"\"",
+                    "    evidence: \"\"",
+                    "    evidence_path: \"\"",
+                    "    recommended_skill: \"\"",
+                    "    recommended_role: \"\"",
+                ]
+            )
+            if blank_signal
+            else "\n".join(
+                [
+                    "project_improvement_signals:",
+                    "  - signal_id: \"PIS-RT-20260622-090-001\"",
+                    "    signal_type: \"validator_gap\"",
+                    "    severity: \"high\"",
+                    "    evidence: \"Focused bridge generator fixture.\"",
+                    "    evidence_path: \"research_control/tasks/RT-20260622-090/jobs/completions/AJC-AJ-RT-20260622-090-001.yaml\"",
+                    "    recommended_skill: \"improve-project-system\"",
+                    "    recommended_role: \"validator-engineer\"",
+                ]
+            )
+        )
+        (completion_dir / "AJC-AJ-RT-20260622-090-001.yaml").write_text(
+            "\n".join(
+                [
+                    "completion_id: \"AJC-AJ-RT-20260622-090-001\"",
+                    "job_id: \"AJ-RT-20260622-090-001\"",
+                    "task_id: \"RT-20260622-090\"",
+                    "decision_id: \"DDR-20260622-090\"",
+                    "completed_at: \"2026-06-22T05:00:00Z\"",
+                    "status: \"completed\"",
+                    signal_block,
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+
+        handoff_dir = root / "research_control/handoffs"
+        handoff_dir.mkdir(parents=True)
+        (handoff_dir / "handoff-0090.yaml").write_text(
+            "\n".join(
+                [
+                    "handoff_id: \"handoff-0090\"",
+                    "created_at: \"2026-06-22T05:00:00Z\"",
+                    "task_id: \"RT-20260622-090\"",
+                    "decision_id: \"DDR-20260622-090\"",
+                    "job_id: \"AJ-RT-20260622-090-001\"",
+                    "completion_path: \"research_control/tasks/RT-20260622-090/jobs/completions/AJC-AJ-RT-20260622-090-001.yaml\"",
+                    "next_action: \"Continue normal research.\"",
+                    "project_improvement_signals:",
+                    "  - signal_id: \"\"",
+                    "    signal_type: \"\"",
+                    "    severity: \"\"",
+                    "    evidence: \"\"",
+                    "    evidence_path: \"\"",
+                    "    recommended_skill: \"\"",
+                    "    recommended_role: \"\"",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        (handoff_dir / "handoff-0090.md").write_text(
+            "# handoff-0090\n",
             encoding="utf-8",
         )
