@@ -4,7 +4,7 @@ version: "0.1.0"
 role_name: "Memory-System Maintainer"
 role_kind: "memory_system_maintenance"
 authority_level: "project_control"
-status: "active"
+status: "superseded"
 may_execute_autonomously: true
 may_create_outputs: true
 may_modify_sources: true

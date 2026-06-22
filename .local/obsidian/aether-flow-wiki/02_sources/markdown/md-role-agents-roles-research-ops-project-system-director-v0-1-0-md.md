@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/research_ops/project-system-director.v0.1.0.md"
-source_hash: "38e37c63637c81ddaabe7fcba760efea348665b2d4534e46961d7ba2c7a32972"
+source_hash: "b0d42fe9c5f208659487b14bd66d4ae0c9b2795c6ba085968af8efc79ee9c28f"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md"
-content_hash: "38e37c63637c81ddaabe7fcba760efea348665b2d4534e46961d7ba2c7a32972"
+content_hash: "b0d42fe9c5f208659487b14bd66d4ae0c9b2795c6ba085968af8efc79ee9c28f"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `38e37c63637c81ddaabe7fcba760efea348665b2d4534e46961d7ba2c7a32972`
+- Content hash: `b0d42fe9c5f208659487b14bd66d4ae0c9b2795c6ba085968af8efc79ee9c28f`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.txt`
-- Character count: `1336`
+- Character count: `1340`
 
 ## Relationships
 

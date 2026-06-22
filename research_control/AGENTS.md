@@ -15,6 +15,15 @@ caches and never override tracked control state.
 Use `.codex/skills/continue-research/SKILL.md` for continuation. Execute at
 most one bounded AgentJob per invocation.
 
+If a completion or regular research handoff emits nonblank
+`project_improvement_signals`, keep the normal `handoff-####` pair as the
+research-continuation authority and generate a separate project-improvement
+handoff sidecar under `research_control/project_improvement_handoffs/`. The
+sidecar is a project-system bridge only. Consume it through
+`.codex/skills/improve-project-system/SKILL.md`; do not execute the
+project-system repair from `/continue-research` unless the active AgentJob
+explicitly authorizes that project-system boundary.
+
 If the active blocker is a missing datum or metric and the datum is not present
 in tracked repository sources, do not infer that the research line must stop
 solely from local absence. When tracked state or explicit user instruction

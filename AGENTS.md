@@ -33,6 +33,14 @@ and tracked state under `research_control/`. The Director of Research may create
 one bounded AgentJob per invocation after validation. Generated outputs and
 `.local/` caches never override tracked control state.
 
+When a research completion or regular research handoff emits one or more
+nonblank `project_improvement_signals`, preserve the normal research handoff as
+the research-continuation authority and generate a separate project-improvement
+handoff sidecar under `research_control/project_improvement_handoffs/`. The
+sidecar is consumed by `/improve-project-system`; `/continue-research` must not
+repair project-system machinery unless the active AgentJob explicitly
+authorizes that boundary.
+
 When a required scientific datum, metric, witness family, computation, or
 experimental input is absent from the repository, that absence is not by
 itself a terminal result if tracked state or explicit user instruction

@@ -388,6 +388,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-THEORETICAL-CONTINUATION-SELECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-theoretical-continuation-selector-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-2-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-3-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-director-of-research-v0-3-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-3-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v0-3-0-md.md`
@@ -400,10 +401,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V1-0-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v1-0-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-documentation-curator-v2-0-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-process-integrity-auditor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-control-maintainer-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-system-director-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-project-system-director-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-2-0-md.md`
 - `WIKI-MD-ROLE-ROUTING-PUBLICATION-BRIEF` `wiki/markdown/md-role-routing-publication-brief.md`
 - `WIKI-MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF` `wiki/markdown/md-roles-and-skills-publication-brief.md`
 - `WIKI-MD-SCHEMA-AGENT-JOB-SCHEMA` `wiki/markdown/md-schema-agent-job-schema.md`
@@ -615,6 +620,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-THEORETICAL-CONTINUATION-SELECTOR-V0-1-0-MD` `.agents/roles/physics/theoretical-continuation-selector.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-1-0-MD` `.agents/roles/research_ops/director-of-research.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-2-0-MD` `.agents/roles/research_ops/director-of-research.v0.2.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DIRECTOR-OF-RESEARCH-V0-3-0-MD` `.agents/roles/research_ops/director-of-research.v0.3.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-1-0-MD` `.agents/roles/research_ops/documentation-curator.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-2-0-MD` `.agents/roles/research_ops/documentation-curator.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V0-3-0-MD` `.agents/roles/research_ops/documentation-curator.v0.3.0.md`
@@ -627,10 +633,14 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V1-0-0-MD` `.agents/roles/research_ops/documentation-curator.v1.0.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD` `.agents/roles/research_ops/documentation-curator.v2.0.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-2-0-MD` `.agents/roles/research_ops/memory-system-maintainer.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD` `.agents/roles/research_ops/process-integrity-auditor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-1-0-MD` `.agents/roles/research_ops/project-control-maintainer.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-2-0-MD` `.agents/roles/research_ops/project-control-maintainer.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-1-0-MD` `.agents/roles/research_ops/project-system-director.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-SYSTEM-DIRECTOR-V0-2-0-MD` `.agents/roles/research_ops/project-system-director.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD` `.agents/roles/research_ops/validator-engineer.v0.1.0.md`
+- `MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-2-0-MD` `.agents/roles/research_ops/validator-engineer.v0.2.0.md`
 - `MD-SCHEMA-AGENT-JOB-SCHEMA` `.agents/schemas/AGENT_JOB_SCHEMA.md`
 - `MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`

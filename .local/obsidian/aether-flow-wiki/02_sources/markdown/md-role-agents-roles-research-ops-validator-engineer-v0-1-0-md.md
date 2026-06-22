@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/research_ops/validator-engineer.v0.1.0.md"
-source_hash: "bcc23bae02e78fcafabffb8d5fe1afca48a591edc56c0bc05b868b9d9e400c77"
+source_hash: "f1c8e82288f296e703ba22d3758376f1de955df7cd5718d6c486640d26613f37"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.md"
-content_hash: "bcc23bae02e78fcafabffb8d5fe1afca48a591edc56c0bc05b868b9d9e400c77"
+content_hash: "f1c8e82288f296e703ba22d3758376f1de955df7cd5718d6c486640d26613f37"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `bcc23bae02e78fcafabffb8d5fe1afca48a591edc56c0bc05b868b9d9e400c77`
+- Content hash: `f1c8e82288f296e703ba22d3758376f1de955df7cd5718d6c486640d26613f37`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-research-ops-validator-engineer-v0-1-0-md.txt`
-- Character count: `1182`
+- Character count: `1186`
 
 ## Relationships
 

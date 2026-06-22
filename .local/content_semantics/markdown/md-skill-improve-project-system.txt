@@ -62,6 +62,14 @@ an open-ended repository rewrite.
    Resolver output is advisory routing state. It must not block checkpointing
    by itself; hard checkpoint gates are validator failures and concrete
    authority-boundary violations.
+   If resolver output selects an `improve-project-handoff_*.yaml` sidecar, use
+   that sidecar as the local implementation context for the selected signal.
+   A sidecar with `solution_plan.status: "ready_to_implement"` may route one
+   bounded AgentJob to the named implementation role only when the plan fits
+   role authority and write-path allowlists. A sidecar without an executable
+   solution plan routes one bounded Project-System Director step to convert the
+   issue inventory into a concrete AgentJob or to reject the signal with an
+   evidence-bearing decision.
 
 4. Validate emitted project-improvement signals against the canonical type and
    instance registries:
@@ -115,6 +123,10 @@ an open-ended repository rewrite.
    nonblank `coherent_resolution_summary`. For shared closures, every signal
    row must use the resolving job's canonical `completion_path` from
    `registries/AGENT_JOB_REGISTRY.csv` as `resolution_evidence_path`.
+   A project-system AgentJob resolving a sidecar must list all sidecar-resolved
+   signal IDs in `resolved_project_improvement_signals`; when more than one
+   signal is closed, the completion must include a nonblank
+   `coherent_resolution_summary`.
 9. Execute at most one bounded AgentJob. Update only paths in the AgentJob
    allowlist.
 10. Write `research_control/tasks/<task_id>/documentation_impact.yaml` for any

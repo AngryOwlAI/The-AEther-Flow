@@ -52,7 +52,7 @@ skills provide procedures, and gates control claim promotion.
    rendering of the same packet.
 
 3. If the packet boundary is `director_decision_required`, enter Director of
-   Research mode under `.agents/roles/research_ops/director-of-research.v0.2.0.md`.
+   Research mode under `.agents/roles/research_ops/director-of-research.v0.3.0.md`.
    Write or reuse exactly one Director Decision Record and one AgentJob. The
    Director may create a new task only when tracked state proves that the active
    task is completed, blocked, human-gated, or the latest handoff explicitly
@@ -207,6 +207,19 @@ skills provide procedures, and gates control claim promotion.
    The completion or handoff may record `project_improvement_signals`, but
    `/continue-research` must not opportunistically repair project-system
    machinery unless the active AgentJob explicitly authorizes that boundary.
+   After the completion record and normal `handoff-####.yaml/md` pair exist,
+   inspect `project_improvement_signals` in both sources. If all entries are
+   blank placeholders, no bridge is required. If one or more nonblank signals
+   exist, keep the normal research handoff as the research-continuation
+   authority, ensure every signal has a concrete row in
+   `registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv`, generate one
+   project-improvement handoff sidecar under
+   `research_control/project_improvement_handoffs/`, record that sidecar in the
+   source `project_improvement_bridge` blocks, run
+   `scripts/project_control/collect_project_improvement_signals.py
+   --validate-emitted`, and report the research result before the improvement
+   sidecar. The sidecar instructs operators to run `/improve-project-system`
+   separately for project-system repair.
    If the AgentJob sets `resolves_signal_routing: true`, its completion must
    preserve repo-relative `resolver_snapshots.before` and
    `resolver_snapshots.after` paths to JSON output from

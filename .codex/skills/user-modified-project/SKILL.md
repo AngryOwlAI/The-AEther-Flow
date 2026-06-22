@@ -50,6 +50,12 @@ proceeding.
    - Project-system, skill, role, validator, registry, README, workflow, memory,
      wiki, and generated-document pipeline changes belong to
      `.codex/skills/improve-project-system/SKILL.md`.
+   - A newly added project-improvement handoff sidecar without matching signal
+     registry rows routes to `/improve-project-system` or Process Integrity
+     repair. An edit to an immutable sidecar is blocked and must be superseded
+     by a new sidecar. If the diff includes project-system repair files and an
+     open sidecar, let `/improve-project-system` decide whether the diff is the
+     selected signal's implementation or unrelated work.
    - Documentation-source changes must update the canonical Markdown source
      first, then regenerate derivatives.
    - Generated wiki notes, generated registry sidecars, HTML derivatives, PDFs,

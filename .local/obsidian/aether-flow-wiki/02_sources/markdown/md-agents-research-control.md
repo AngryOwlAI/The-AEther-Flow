@@ -2,14 +2,14 @@
 object_id: "MD-AGENTS-RESEARCH-CONTROL"
 format: "markdown"
 source_path: "research_control/AGENTS.md"
-source_hash: "49a33a080585586f74f17825606713f752b102db1ffee13745e49ffa10fda194"
+source_hash: "3faecd98ff3d9bad48962a1d1b590210b80523659c0b950c22b291dd540f5a90"
 authority_status: "project_control"
 role: "scoped_agent_guidance"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-agents-research-control.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-agents-research-control.md"
-content_hash: "49a33a080585586f74f17825606713f752b102db1ffee13745e49ffa10fda194"
+content_hash: "3faecd98ff3d9bad48962a1d1b590210b80523659c0b950c22b291dd540f5a90"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-AGENTS-RESEARCH-CONTROL"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `49a33a080585586f74f17825606713f752b102db1ffee13745e49ffa10fda194`
+- Content hash: `3faecd98ff3d9bad48962a1d1b590210b80523659c0b950c22b291dd540f5a90`
 - Extracted text path: `.local/content_semantics/markdown/md-agents-research-control.txt`
-- Character count: `3818`
+- Character count: `4359`
 
 ## Relationships
 

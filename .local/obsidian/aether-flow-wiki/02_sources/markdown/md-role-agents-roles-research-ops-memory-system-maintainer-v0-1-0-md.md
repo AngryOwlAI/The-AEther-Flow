@@ -2,14 +2,14 @@
 object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD"
 format: "markdown"
 source_path: ".agents/roles/research_ops/memory-system-maintainer.v0.1.0.md"
-source_hash: "0ec40aa61444ef33b1fc375c772df6df2139b0d46ae33ff085a2b5a886712267"
+source_hash: "0b1911bfa96f5d5ad261b3ba9be36ff000790f25f63c8d8f0f428edab29af7ce"
 authority_status: "project_control"
 role: "role_contract"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.md"
-content_hash: "0ec40aa61444ef33b1fc375c772df6df2139b0d46ae33ff085a2b5a886712267"
+content_hash: "0b1911bfa96f5d5ad261b3ba9be36ff000790f25f63c8d8f0f428edab29af7ce"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-1-0-MD"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `0ec40aa61444ef33b1fc375c772df6df2139b0d46ae33ff085a2b5a886712267`
+- Content hash: `0b1911bfa96f5d5ad261b3ba9be36ff000790f25f63c8d8f0f428edab29af7ce`
 - Extracted text path: `.local/content_semantics/markdown/md-role-agents-roles-research-ops-memory-system-maintainer-v0-1-0-md.txt`
-- Character count: `1313`
+- Character count: `1317`
 
 ## Relationships
 
