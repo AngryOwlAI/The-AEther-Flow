@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="0342a86de6da8f9b8546e282a2cb445326f370d5cb4694ca0dc6a8686e4049c7">
+  <meta name="aether-flow-source-basis-hash" content="e8fd64d8b601632e3e5797d08bf06a21db864343a77561eab519c6c528e68a3b">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Validator And Operator Workflow</title>
@@ -158,12 +158,13 @@
     <p class="eyebrow">Post-Migration Phase 4</p>
     <h1>Validator And Operator Workflow</h1>
     <p class="lede">The operator problem is not simply which command to run. It is which evidence chain fits the changed authority surface. A Markdown article, source spec, validator script, role contract, memory bootstrap, research-control task, and screenshot artifact do not carry the same risk or require the same proof.</p>
-    <p class="lede">AEther-Flow therefore groups checks by change type. Memory and registry refresh work uses bootstrap. Public page work uses the publication-process check plus rendered screenshot evidence. State-changing project-system AgentJobs need documentation-impact and research-control receipts. Script, validator, schema, role, or memory-tooling changes need focused tests in addition to the control validators.</p>
+    <p class="lede">AEther-Flow therefore groups checks by change type. Memory and registry refresh work uses bootstrap. Public page work uses the publication-process check plus rendered screenshot evidence. State-changing project-system AgentJobs need documentation-impact and research-control receipts. Source-bridged project-improvement sidecars need exact sidecar path evidence before checkpoint and <code>--check-diff</code> can accept them. Script, validator, schema, role, or memory-tooling changes need focused tests in addition to the control validators.</p>
     <nav data-explainer-control="section_toc" aria-label="Section navigation">
       <a href="#s1">Command Decision Matrix</a>
-      <a href="#s2">When Extra Evidence Is Required</a>
-      <a href="#s3">Troubleshooting Operator Failures</a>
-      <a href="#s4">PASS Result Limits</a>
+      <a href="#s2">Conditional Sidecar Allowlist</a>
+      <a href="#s3">When Extra Evidence Is Required</a>
+      <a href="#s4">Troubleshooting Operator Failures</a>
+      <a href="#s5">PASS Result Limits</a>
       <a href="#sources">Sources</a>
       <a href="#summary">Summary</a>
     </nav>
@@ -172,26 +173,32 @@
   <main>
     <section id="s1" aria-labelledby="s1-title">
       <h2 id="s1-title">Command Decision Matrix</h2>
-      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Memory or registry refresh</strong></td><td>Run project-memory bootstrap, then validate-only.</td><td>Refresh generated derivatives through the approved path.</td></tr><tr><td><strong>Publication page rewrite</strong></td><td>Run strict publication check, screenshot QA, bootstrap, docs impact, and research-control checks.</td><td>Screenshots and review evidence are part of the publication receipt.</td></tr><tr><td><strong>Project-system AgentJob</strong></td><td>Run memory preflight, classifier, resolver, emitted-signal validation, documentation-impact, research-control, and checkpoint checks.</td><td>One bounded AgentJob per invocation.</td></tr><tr><td><strong>Script or validator change</strong></td><td>Run focused unit tests plus project-control validators.</td><td>Tests are evidence of behavior, not physics proof.</td></tr><tr><td><strong>Research-control record</strong></td><td>Run research-control validation and `--check-diff` when checking write boundaries.</td><td>Do not mutate completed records without supersession.</td></tr></tbody></table>
+      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Memory or registry refresh</strong></td><td>Run project-memory bootstrap, then validate-only.</td><td>Refresh generated derivatives through the approved path.</td></tr><tr><td><strong>Publication page rewrite</strong></td><td>Run strict publication check, screenshot QA, bootstrap, docs impact, and research-control checks.</td><td>Screenshots and review evidence are part of the publication receipt.</td></tr><tr><td><strong>Project-system AgentJob</strong></td><td>Run memory preflight, classifier, resolver, emitted-signal validation, documentation-impact, research-control, and checkpoint checks.</td><td>One bounded AgentJob per invocation.</td></tr><tr><td><strong>Source-bridged sidecar</strong></td><td>Run sidecar generation or validation only when an authorized source completion names project-improvement signals.</td><td>Sidecar paths are accepted only when source-bridge metadata names the exact YAML/Markdown pair.</td></tr><tr><td><strong>Script or validator change</strong></td><td>Run focused unit tests plus project-control validators.</td><td>Tests are evidence of behavior, not physics proof.</td></tr><tr><td><strong>Research-control record</strong></td><td>Run research-control validation and <code>--check-diff</code> when checking write boundaries.</td><td>Do not mutate completed records without supersession.</td></tr></tbody></table>
     </section>
     <section id="s2" aria-labelledby="s2-title">
-      <h2 id="s2-title">When Extra Evidence Is Required</h2>
+      <h2 id="s2-title">Conditional Sidecar Allowlist</h2>
+      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Required source bridge</strong></td><td>A changed AgentJob source must name the generated project-improvement sidecar paths through <code>project_improvement_bridge</code>.</td><td>Unreferenced sidecar files remain outside the checkpoint and <code>--check-diff</code> allowance.</td></tr><tr><td><strong>Exact path pair</strong></td><td>The accepted pair is the specific YAML sidecar plus its Markdown companion.</td><td>The directory <code>research_control/project_improvement_handoffs/**</code> is not globally allowed.</td></tr><tr><td><strong>Positive control</strong></td><td>A qualifying source bridge plus matching sidecar pair should pass checkpoint and diff validation.</td><td>PASS confirms the rule accepted that exact state.</td></tr><tr><td><strong>Negative control</strong></td><td>Missing bridge metadata, path mismatch, or extra sidecar paths should fail.</td><td>Failure protects the normal handoff spine and prevents sidecar drift.</td></tr></tbody></table>
+    </section>
+    <section id="s3" aria-labelledby="s3-title">
+      <h2 id="s3-title">When Extra Evidence Is Required</h2>
       <div class="matrix">        <article class="ve-card"><strong>HTML changed</strong><p>Capture desktop and mobile screenshots.</p><p>Visual rendering evidence.</p></article>
         <article class="ve-card"><strong>Generated derivatives changed</strong><p>Run bootstrap and validate-only.</p><p>Registry/wiki/hash sync.</p></article>
         <article class="ve-card"><strong>Project-system state changed</strong><p>Write documentation-impact receipt.</p><p>Covers live diff, generated derivatives, reason codes, and checks.</p></article>
+        <article class="ve-card"><strong>Sidecar paths changed</strong><p>Verify source-bridge metadata and sidecar validation before checkpointing.</p><p>Sidecar existence is not signal closure or research continuation.</p></article>
         <article class="ve-card"><strong>Tooling changed</strong><p>Run unit tests.</p><p>Checks deterministic behavior.</p></article></div>
     </section>
-    <section id="s3" aria-labelledby="s3-title">
-      <h2 id="s3-title">Troubleshooting Operator Failures</h2>
+    <section id="s4" aria-labelledby="s4-title">
+      <h2 id="s4-title">Troubleshooting Operator Failures</h2>
       <div class="matrix">        <article class="ve-card"><strong>Missing screenshot</strong><p>Publication registry evidence path points to absent file.</p><p>Capture or correct task artifact path.</p></article>
         <article class="ve-card"><strong>Orphan public surface</strong><p>GitHub, spec, or HTML exists without its paired row/path.</p><p>Synchronize brief, spec, output, and registry.</p></article>
+        <article class="ve-card"><strong>Orphan sidecar</strong><p>A sidecar file changes without a changed source bridge naming it.</p><p>Stop before checkpoint or correct the source-bridge packet.</p></article>
         <article class="ve-card"><strong>Write-path failure</strong><p>Diff check sees a changed path outside the AgentJob allowlist.</p><p>Narrow the packet or stop for authorization.</p></article>
         <article class="ve-card"><strong>Stale local retrieval</strong><p>Obsidian, semantic, or SQLite support lags inputs.</p><p>Treat as retrieval drift unless a validator makes it hard failure.</p></article></div>
     </section>
-    <section id="s4" aria-labelledby="s4-title">
-      <h2 id="s4-title">PASS Result Limits</h2>
+    <section id="s5" aria-labelledby="s5-title">
+      <h2 id="s5-title">PASS Result Limits</h2>
       <div class="matrix">        <article class="ve-card"><strong>Deterministic acceptance</strong><p>The command accepted the current checked state.</p><p>Necessary transaction evidence.</p></article>
-        <article class="ve-card"><strong>No broad promotion</strong><p>PASS does not promote physics claims, role authority, or generated outputs.</p><p>Human-gated authority remains protected.</p></article>
+        <article class="ve-card"><strong>No broad promotion</strong><p>PASS does not promote physics claims, role authority, sidecar adoption, or generated outputs.</p><p>Human-gated authority remains protected.</p></article>
         <article class="ve-card"><strong>Review still needed</strong><p>Publication quality depends on screenshots and before/after review.</p><p>Taste and clarity are not fully deterministic.</p></article></div>
     </section>
 
@@ -202,29 +209,36 @@
         <article class="source-panel"><code data-source-path="AGENTS.md">AGENTS.md</code><p>Authority hierarchy, generated-output boundaries, and required checks.</p></article>
         <article class="source-panel"><code data-source-path=".codex/skills/project-memory-system/SKILL.md">.codex/skills/project-memory-system/SKILL.md</code><p>Bootstrap, validate-only, docs modes, and cleanup commands.</p></article>
         <article class="source-panel"><code data-source-path=".codex/skills/improve-project-system/SKILL.md">.codex/skills/improve-project-system/SKILL.md</code><p>Project-system memory preflight, classifier, resolver, signal, documentation-impact, and checkpoint chain.</p></article>
+        <article class="source-panel"><code data-source-path=".agents/schemas/PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md">.agents/schemas/PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md</code><p>Project-improvement sidecar field contract and source-bridge metadata.</p></article>
         <article class="source-panel"><code data-source-path="scripts/README.md">scripts/README.md</code><p>Script groups and tooling authority boundary.</p></article>
+        <article class="source-panel"><code data-source-path="scripts/project_control/README.md">scripts/project_control/README.md</code><p>Project-control sidecar generation and validation guidance.</p></article>
+        <article class="source-panel"><code data-source-path="scripts/research_control/README.md">scripts/research_control/README.md</code><p>Checkpoint and research-control validator guidance.</p></article>
         <article class="source-panel"><code data-source-path="tests/README.md">tests/README.md</code><p>Unit-test coverage areas and command shape.</p></article>
         <article class="source-panel"><code data-source-path="scripts/validate_publication_process.py">scripts/validate_publication_process.py</code><p>Publication brief/spec/output consistency and no-network checks.</p></article>
         <article class="source-panel"><code data-source-path="scripts/project_control/validate_documentation_impact.py">scripts/project_control/validate_documentation_impact.py</code><p>Documentation-impact receipt validation.</p></article>
+        <article class="source-panel"><code data-source-path="scripts/project_control/generate_project_improvement_handoff.py">scripts/project_control/generate_project_improvement_handoff.py</code><p>Project-improvement sidecar generation from qualifying completion signals.</p></article>
+        <article class="source-panel"><code data-source-path="scripts/project_control/project_improvement_handoff_validation.py">scripts/project_control/project_improvement_handoff_validation.py</code><p>Sidecar schema, source-bridge, and parity validation.</p></article>
+        <article class="source-panel"><code data-source-path="scripts/research_control/checkpoint_research_transaction.py">scripts/research_control/checkpoint_research_transaction.py</code><p>Checkpoint guard for exact source-bridge sidecar paths.</p></article>
         <article class="source-panel"><code data-source-path="scripts/research_control/validate_research_control.py">scripts/research_control/validate_research_control.py</code><p>Tracked research-control and diff boundary checks.</p></article>
+        <article class="source-panel"><code data-source-path="research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md">research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md</code><p>Phase 6 conditional sidecar checkpoint governance evidence.</p></article>
       </div>
     </section>
 
     <section id="summary" aria-labelledby="summary-title">
       <h2 id="summary-title">Safe And Unsafe Summaries</h2>
       <div class="summaries">
-        <article class="summary safe"><h3>Safe</h3><p>Choose checks by changed authority surface, refresh generated derivatives through bootstrap, record screenshots for HTML, include documentation impact for project-system work, and treat PASS as bounded evidence.</p></article>
-        <article class="summary unsafe"><h3>Unsafe</h3><p>A validator PASS proves scientific truth, approves ontology, certifies editorial quality, changes command behavior, or gives generated documentation independent authority.</p></article>
+        <article class="summary safe"><h3>Safe</h3><p>Choose checks by changed authority surface, refresh generated derivatives through bootstrap, record screenshots for HTML, include documentation impact for project-system work, verify exact source-bridge evidence for sidecar paths, and treat PASS as bounded evidence.</p></article>
+        <article class="summary unsafe"><h3>Unsafe</h3><p>A validator PASS proves scientific truth, approves ontology, adopts sidecars, certifies editorial quality, changes command behavior, globally allowlists the sidecar directory, or gives generated documentation independent authority.</p></article>
       </div>
     </section>
     <section class="scope reader-scope" data-explainer-control="reader_scope" aria-labelledby="reader-scope-title">
       <h2 id="reader-scope-title">Reader Scope</h2>
-      <p>Reader scope: operator command-selection guide only. This page cannot change validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, schemas, checkpoint gates, or physics status.</p>
+      <p>Reader scope: operator command-selection guide only. This page cannot change validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, schemas, checkpoint gates, or physics status. It also cannot turn conditional sidecar path acceptance into a global sidecar directory allowance or sidecar adoption claim.</p>
     </section>
   </main>
 
   <footer data-explainer-control="authority_footer">
-    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/validator-operator-workflow-explainer.md</code> and the publication brief <code>markdown/publication-briefs/validator-operator-workflow.publication-brief.md</code>. It explains existing command selection by change type, bootstrap versus validate-only, publication checks, documentation-impact checks, research-control checks, unit-test triggers, screenshot evidence, troubleshooting, final review evidence, and PASS-result limits without changing validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, role authority, schemas, checkpoint gates, generated-output authority, or physics claim status.</p>
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/validator-operator-workflow-explainer.md</code> and the publication brief <code>markdown/publication-briefs/validator-operator-workflow.publication-brief.md</code>. It explains existing command selection by change type, bootstrap versus validate-only, publication checks, documentation-impact checks, research-control checks, conditional source-bridge sidecar checkpoint evidence, unit-test triggers, screenshot evidence, troubleshooting, final review evidence, and PASS-result limits without changing validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, role authority, schemas, checkpoint gates, sidecar adoption status, generated-output authority, or physics claim status.</p>
     <p>Safe operating rule: use this page for orientation, then inspect the named source files, registries, task records, contracts, allowlists, completion evidence, and checks before acting.</p>
   </footer>
 </body>
