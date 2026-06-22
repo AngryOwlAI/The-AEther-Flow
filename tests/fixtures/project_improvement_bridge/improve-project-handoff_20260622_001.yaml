@@ -1,0 +1,69 @@
+improvement_handoff_id: "improve-project-handoff_20260622_001"
+created_at: "2026-06-22T03:27:07Z"
+status: "resolved"
+source:
+  source_kind: "backfilled_from_immutable_source"
+  task_id: "RT-20260621-010"
+  decision_id: "DDR-20260621-010"
+  job_id: "AJ-RT-20260621-010-001"
+  completion_path: "research_control/tasks/RT-20260621-010/jobs/completions/AJC-AJ-RT-20260621-010-001.yaml"
+  regular_handoff_id: ""
+  regular_handoff_yaml_path: ""
+  regular_handoff_markdown_path: ""
+normal_research_continuation:
+  regular_handoff_created: false
+  continue_research_next_action: ""
+  sidecar_does_not_replace_regular_handoff: true
+project_boundary:
+  recommended_skill: "improve-project-system"
+  project_system_only: true
+  physics_claim_promotion_authorized: false
+  canonical_science_source_edits_authorized: false
+  generated_derivative_hand_edits_authorized: false
+  requires_human_gate: false
+signal_summary:
+  signal_ids:
+    - "PIS-RT-20260621-010-001"
+    - "PIS-RT-20260621-010-002"
+    - "PIS-RT-20260621-010-003"
+    - "PIS-RT-20260621-010-004"
+  signal_count: 4
+  highest_severity: "high"
+  selected_signal_id: "PIS-RT-20260621-010-001"
+  routing_basis: "highest_severity_then_created_at_then_signal_id"
+issues:
+  - issue_id: "IPH-ISSUE-001"
+    signal_id: "PIS-RT-20260621-010-001"
+    signal_type: "memory_retrieval_failure"
+    severity: "high"
+    title: "Exact-ID and hyphenated memory search failure"
+    description: "Exact project-control identifiers were difficult to retrieve reliably before the resolved memory-tooling packet."
+    evidence:
+      - evidence_path: "research_control/tasks/RT-20260621-010/DDR-20260621-010.md"
+        evidence_summary: "The resolved project-system packet recorded exact-ID and literal lookup hardening."
+    impact: "Memory preflight can miss canonical project-control objects."
+    recommended_skill: "improve-project-system"
+    recommended_role: "memory-system-maintainer"
+    recommended_next_step: "Use as a resolved regression fixture only; do not reopen the signal."
+solution_plan:
+  present: false
+  status: "absent"
+  plan_owner_role: "project-system-director"
+  implementation_role: ""
+  objective: ""
+  allowed_write_paths_hint:
+    - ""
+  required_validators:
+    - "collect_project_improvement_signals --validate-emitted"
+    - "validate_documentation_impact"
+    - "validate_research_control"
+  plan_steps:
+    - step_id: "PLAN-001"
+      action: "No action; this fixture represents an already resolved historical issue class."
+      expected_output: "Fixture parses and preserves bridge boundaries."
+      stop_condition: "Do not treat fixture state as live sidecar queue state."
+resolution:
+  resolved_by_job_id: "AJ-RT-20260621-010-001"
+  resolution_evidence_path: "research_control/tasks/RT-20260621-010/jobs/completions/AJC-AJ-RT-20260621-010-001.yaml"
+  resolved_at: "2026-06-21T18:03:01Z"
+notes: "Test fixture only; not tracked bridge queue state."
