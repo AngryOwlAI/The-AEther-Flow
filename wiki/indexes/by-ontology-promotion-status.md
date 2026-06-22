@@ -12,6 +12,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `ontology/tex/aether_flow_foundations.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `ontology/tex/aether_flow_geometry.tex`
 - `TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `ontology/tex/aether_flow_relativistic_recovery.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GENERAL-SOURCE-COVER-HUMAN-GATE-ADOPTION-DECISION` `research_control/tasks/RT-20260614-087/artifacts/128_RESP_LC_M_SRC_GENERAL_SOURCE_COVER_HUMAN_GATE_ADOPTION_DECISION.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-HUMAN-GATE-ADOPTION-DECISION` `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex`
 
 ## not_applicable
