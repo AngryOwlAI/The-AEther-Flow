@@ -29,6 +29,7 @@ if str(PROJECT_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_CONTROL_SCRIPT_DIR))
 
 from project_improvement_handoff_validation import (  # noqa: E402
+    conditional_checkpoint_sidecar_paths,
     validate_project_improvement_handoffs as validate_project_improvement_handoff_records,
 )
 
@@ -3393,6 +3394,7 @@ def validate_diff(
     except RuntimeError as exc:
         report.error(str(exc))
         return
+    allowed.extend(conditional_checkpoint_sidecar_paths(REPO_ROOT, paths, allowed))
     for pattern in allowed:
         if _pattern_is_too_broad(pattern):
             report.error(f"{job['job_id']}: overly broad allowlist pattern {pattern}")

@@ -21,8 +21,8 @@ project-system changes.
 - `audit_documentation_surfaces.py` checks source-backed documentation
   surfaces.
 - `project_improvement_handoff_validation.py` supplies sidecar schema and
-  parity checks used by project-improvement signal validation and the global
-  research-control validator.
+  parity checks used by project-improvement signal validation, the global
+  research-control validator, and checkpoint conditional sidecar allowlists.
 - `project_signal_types.py` reads the registered signal-type vocabulary.
 
 ## What Belongs Here
@@ -51,4 +51,7 @@ project-system changes.
 
 Classifier and resolver output is routing evidence, not final authority.
 Checkpoint validity is decided by validators, task receipts, allowlists, and
-the checkpoint gate.
+the checkpoint gate. Project-improvement sidecar files are not globally
+allowlisted; checkpoint and diff validation allow only the exact sidecar
+YAML/Markdown pair referenced by a changed, AgentJob-allowed source YAML
+through a generated `project_improvement_bridge` block.

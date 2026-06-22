@@ -15,7 +15,9 @@ machine.
 - `report_physics_progress_metrics.py` reports operational AI-science and
   research-system health metrics from tracked completions and registries.
 - `checkpoint_research_transaction.py` regenerates, validates, stages, and
-  commits a bounded transaction.
+  commits a bounded transaction. It conditionally accepts generated
+  project-improvement sidecar YAML/Markdown pairs only when the active
+  AgentJob already allows the changed source YAML that references the sidecar.
 - `strict_yaml.py` provides deterministic YAML parsing for control records.
 
 ## What Belongs Here

@@ -46,6 +46,11 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
             PROJECT_SCRIPT_DIR,
             "project_improvement_handoff_validation.py",
         )
+        cls.checkpoint = load_module(
+            "checkpoint_research_transaction_bridge_test",
+            RESEARCH_SCRIPT_DIR,
+            "checkpoint_research_transaction.py",
+        )
 
     def test_project_improvement_handoff_yaml_template_parses(self) -> None:
         template_path = TEMPLATE_DIR / "IMPROVE_PROJECT_HANDOFF_TEMPLATE.yaml"
@@ -330,6 +335,115 @@ class ProjectImprovementBridgeTests(unittest.TestCase):
             report = self.bridge_validator.validate_project_improvement_handoffs(root)
 
             self.assertTrue(any("Markdown mirror missing signal_id" in error for error in report["errors"]))
+
+    def test_conditional_checkpoint_sidecar_paths_accepts_bridge_referenced_pair(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, include_bridge_reference=True)
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+            source_path = (
+                "research_control/tasks/RT-20260622-090/jobs/completions/"
+                "AJC-AJ-RT-20260622-090-001.yaml"
+            )
+            changed_paths = [
+                source_path,
+                result["output_paths"]["yaml"],
+                result["output_paths"]["markdown"],
+            ]
+
+            allowed = self.bridge_validator.conditional_checkpoint_sidecar_paths(
+                root,
+                changed_paths,
+                [source_path],
+            )
+
+            self.assertEqual(
+                allowed,
+                [
+                    "research_control/project_improvement_handoffs/improve-project-handoff_20260622_090.md",
+                    "research_control/project_improvement_handoffs/improve-project-handoff_20260622_090.yaml",
+                ],
+            )
+
+    def test_conditional_checkpoint_sidecar_paths_rejects_unreferenced_sidecar(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root)
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+            source_path = (
+                "research_control/tasks/RT-20260622-090/jobs/completions/"
+                "AJC-AJ-RT-20260622-090-001.yaml"
+            )
+
+            allowed = self.bridge_validator.conditional_checkpoint_sidecar_paths(
+                root,
+                [source_path, result["output_paths"]["yaml"], result["output_paths"]["markdown"]],
+                [source_path],
+            )
+
+            self.assertEqual(allowed, [])
+
+    def test_checkpoint_extends_allowlist_only_for_valid_sidecar_pair(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.write_generator_fixture(root, include_bridge_reference=True)
+            result = self.generator.generate_project_improvement_handoff(
+                completion_path=(
+                    "research_control/tasks/RT-20260622-090/jobs/completions/"
+                    "AJC-AJ-RT-20260622-090-001.yaml"
+                ),
+                source_handoff_path="research_control/handoffs/handoff-0090.yaml",
+                created_at="2026-06-22T05:00:00Z",
+                write=True,
+                repo_root=root,
+            )
+            source_path = (
+                "research_control/tasks/RT-20260622-090/jobs/completions/"
+                "AJC-AJ-RT-20260622-090-001.yaml"
+            )
+            changed_paths = [
+                source_path,
+                result["output_paths"]["yaml"],
+                result["output_paths"]["markdown"],
+            ]
+            job_row = {
+                "allowed_write_paths": source_path,
+                "output_paths": "",
+            }
+
+            with mock.patch.object(self.checkpoint, "REPO_ROOT", root):
+                allowed = self.checkpoint.allowed_patterns_for_changed_paths(
+                    job_row,
+                    {},
+                    changed_paths,
+                )
+
+            self.assertTrue(self.checkpoint.allowed_by_any(result["output_paths"]["yaml"], allowed))
+            self.assertTrue(self.checkpoint.allowed_by_any(result["output_paths"]["markdown"], allowed))
+            self.assertFalse(
+                self.checkpoint.allowed_by_any(
+                    "research_control/project_improvement_handoffs/improve-project-handoff_20260622_999.yaml",
+                    allowed,
+                )
+            )
 
     @staticmethod
     def write_handoff_pair(handoff_dir: Path, number: int) -> None:

@@ -22,6 +22,12 @@ except ImportError:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_DIR = REPO_ROOT / "registries"
 PROGRAM_STATE_PATH = REPO_ROOT / "research_control" / "program_state.yaml"
+PROJECT_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "project_control"
+if str(PROJECT_CONTROL_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_CONTROL_SCRIPT_DIR))
+
+from project_improvement_handoff_validation import conditional_checkpoint_sidecar_paths  # noqa: E402
+
 GLOBAL_SYNC_ALLOWLIST = {
     "registries/FILE_OBJECT_REGISTRY.csv",
     "registries/FILE_OBJECT_REGISTRY.meta.json",
@@ -199,6 +205,18 @@ def allowed_patterns(job_row: dict[str, str], job_contract: dict[str, object]) -
     return sorted(set(allowed))
 
 
+def allowed_patterns_for_changed_paths(
+    job_row: dict[str, str],
+    job_contract: dict[str, object],
+    changed_paths: Iterable[str],
+) -> list[str]:
+    allowed = allowed_patterns(job_row, job_contract)
+    allowed.extend(
+        conditional_checkpoint_sidecar_paths(REPO_ROOT, changed_paths, allowed)
+    )
+    return sorted(set(allowed))
+
+
 def changed_registered_tex_requiring_pdf(changed_paths: Iterable[str]) -> list[str]:
     changed = set(changed_paths)
     rows = read_csv_registry("TEX_SOURCE_REGISTRY.csv")
@@ -262,9 +280,9 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     job_row = select_job(job_id)
     job_contract = load_job_contract(job_row)
     execution_ref = execution_role_ref_for_job(job_row["job_id"], job_contract)
-    allowed = allowed_patterns(job_row, job_contract)
 
     preflight = git_status_paths()
+    allowed = allowed_patterns_for_changed_paths(job_row, job_contract, preflight)
     disallowed_preexisting = [
         path for path in preflight if not allowed_by_any(path, allowed)
     ]
@@ -343,6 +361,7 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
             )
 
     final_changes = git_status_paths()
+    allowed = allowed_patterns_for_changed_paths(job_row, job_contract, final_changes)
     disallowed_final = [
         path for path in final_changes if not allowed_by_any(path, allowed)
     ]

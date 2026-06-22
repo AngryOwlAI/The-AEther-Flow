@@ -153,6 +153,96 @@ class ResearchControlTests(unittest.TestCase):
             self.validator.validate_diff(report, jobs, "HEAD", False)
         self.assertEqual(report.errors, [])
 
+    def test_write_path_diff_accepts_bridge_referenced_sidecar_pair(self) -> None:
+        report = self.validator.ValidationReport()
+        source_path = (
+            "research_control/tasks/RT-TEST/jobs/completions/"
+            "AJC-AJ-RT-TEST-001.yaml"
+        )
+        sidecar_yaml = (
+            "research_control/project_improvement_handoffs/"
+            "improve-project-handoff_20260622_777.yaml"
+        )
+        sidecar_markdown = sidecar_yaml.replace(".yaml", ".md")
+        jobs = {
+            "AJ-TEST": {
+                "job_id": "AJ-TEST",
+                "status": "completed",
+                "created_at": "2026-06-22T00:00:00Z",
+                "allowed_write_paths": source_path,
+                "output_paths": "",
+                "job_path": "",
+            }
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            source = root / source_path
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                "\n".join(
+                    [
+                        'completion_id: "AJC-AJ-RT-TEST-001"',
+                        'completed_at: "2026-06-22T06:00:00Z"',
+                        "project_improvement_signals:",
+                        '  - signal_id: "PIS-RT-TEST-001"',
+                        '    signal_type: "validator_gap"',
+                        '    severity: "high"',
+                        '    evidence: "Synthetic test signal."',
+                        f'    evidence_path: "{source_path}"',
+                        '    recommended_skill: "improve-project-system"',
+                        '    recommended_role: "validator-engineer"',
+                        "project_improvement_bridge:",
+                        "  required: true",
+                        f'  improvement_handoff_path: "{sidecar_yaml}"',
+                        "  signal_ids:",
+                        '    - "PIS-RT-TEST-001"',
+                        '  bridge_status: "generated"',
+                        '  notes: "Synthetic bridge reference."',
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            sidecar = root / sidecar_yaml
+            sidecar.parent.mkdir(parents=True)
+            sidecar.write_text(
+                "\n".join(
+                    [
+                        'improvement_handoff_id: "improve-project-handoff_20260622_777"',
+                        'status: "open"',
+                        "source:",
+                        f'  completion_path: "{source_path}"',
+                        '  regular_handoff_yaml_path: ""',
+                        "normal_research_continuation:",
+                        "  sidecar_does_not_replace_regular_handoff: true",
+                        "project_boundary:",
+                        '  recommended_skill: "improve-project-system"',
+                        "  project_system_only: true",
+                        "  physics_claim_promotion_authorized: false",
+                        "  canonical_science_source_edits_authorized: false",
+                        "  generated_derivative_hand_edits_authorized: false",
+                        "signal_summary:",
+                        "  signal_ids:",
+                        '    - "PIS-RT-TEST-001"',
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / sidecar_markdown).write_text(
+                "# improve-project-handoff_20260622_777\n",
+                encoding="utf-8",
+            )
+
+            with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+                self.validator,
+                "changed_paths",
+                return_value=[source_path, sidecar_yaml, sidecar_markdown],
+            ):
+                self.validator.validate_diff(report, jobs, "HEAD", False)
+
+        self.assertEqual(report.errors, [])
+
     def test_write_path_diff_rejects_broad_wiki_allowlist(self) -> None:
         report = self.validator.ValidationReport()
         jobs = {

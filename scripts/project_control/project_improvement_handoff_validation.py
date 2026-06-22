@@ -4,10 +4,11 @@
 from __future__ import annotations
 
 import csv
+import fnmatch
 import re
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -111,6 +112,43 @@ def _repo_path(repo_root: Path, path_text: str) -> Path:
 
 def _relative(repo_root: Path, path: Path) -> str:
     return path.relative_to(repo_root).as_posix()
+
+
+def _path_matches(path: str, pattern: str) -> bool:
+    return path == pattern or fnmatch.fnmatch(path, pattern)
+
+
+def _allowed_by_patterns(path: str, patterns: list[str]) -> bool:
+    return any(_path_matches(path, pattern) for pattern in patterns)
+
+
+def _is_sidecar_yaml_path(path_text: str) -> bool:
+    path = Path(path_text)
+    return (
+        path.parent == PROJECT_IMPROVEMENT_HANDOFF_DIR
+        and path.suffix == ".yaml"
+        and HANDOFF_ID_RE.fullmatch(path.stem) is not None
+    )
+
+
+def _is_sidecar_markdown_path(path_text: str) -> bool:
+    path = Path(path_text)
+    return (
+        path.parent == PROJECT_IMPROVEMENT_HANDOFF_DIR
+        and path.suffix == ".md"
+        and HANDOFF_ID_RE.fullmatch(path.stem) is not None
+    )
+
+
+def _is_signal_source_path(path_text: str) -> bool:
+    path = Path(path_text)
+    return (
+        path.suffix == ".yaml"
+        and (
+            fnmatch.fnmatch(path_text, "research_control/tasks/*/jobs/completions/*.yaml")
+            or fnmatch.fnmatch(path_text, "research_control/handoffs/handoff-*.yaml")
+        )
+    )
 
 
 def _read_csv_rows(repo_root: Path, relative_path: Path) -> list[dict[str, str]]:
@@ -529,6 +567,91 @@ def _sidecar_signal_ids(data: dict[str, Any]) -> set[str]:
     if not isinstance(signal_ids, list):
         return set()
     return {_text(signal_id) for signal_id in signal_ids if _text(signal_id)}
+
+
+def _sidecar_boundary_is_safe(data: dict[str, Any]) -> bool:
+    continuation = data.get("normal_research_continuation", {})
+    boundary = data.get("project_boundary", {})
+    if not isinstance(continuation, dict) or not isinstance(boundary, dict):
+        return False
+    return (
+        continuation.get("sidecar_does_not_replace_regular_handoff") is True
+        and boundary.get("project_system_only") is True
+        and boundary.get("physics_claim_promotion_authorized") is False
+        and boundary.get("canonical_science_source_edits_authorized") is False
+        and boundary.get("generated_derivative_hand_edits_authorized") is False
+    )
+
+
+def _load_yaml_or_none(path: Path) -> dict[str, Any] | None:
+    if not path.is_file():
+        return None
+    try:
+        data = load_yaml(path)
+    except StrictYamlError:
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def conditional_checkpoint_sidecar_paths(
+    repo_root: Path,
+    candidate_paths: Iterable[str],
+    base_allowed_patterns: Iterable[str],
+) -> list[str]:
+    """Return sidecar paths allowed only by a valid source bridge reference.
+
+    This is intentionally narrower than a directory allowlist. A sidecar YAML
+    and Markdown mirror are checkpoint-eligible only when a changed source YAML
+    already allowed by the active AgentJob points at that exact sidecar through
+    ``project_improvement_bridge`` and the sidecar points back to the source.
+    Full sidecar schema validation still runs through the normal validators.
+    """
+
+    candidates = {path for path in candidate_paths if path}
+    base_allowed = [pattern for pattern in base_allowed_patterns if pattern]
+    allowed_sidecars: set[str] = set()
+
+    for source_path in sorted(candidates):
+        if not _is_signal_source_path(source_path):
+            continue
+        if not _allowed_by_patterns(source_path, base_allowed):
+            continue
+        source = _load_yaml_or_none(repo_root / source_path)
+        if not source:
+            continue
+        signal_ids = {
+            _text(signal.get("signal_id"))
+            for signal in nonblank_project_improvement_signals(source)
+            if _text(signal.get("signal_id"))
+        }
+        if not signal_ids:
+            continue
+        bridge = source.get("project_improvement_bridge")
+        if not isinstance(bridge, dict):
+            continue
+        if bridge.get("required") is not True or _text(bridge.get("bridge_status")) != "generated":
+            continue
+        sidecar_path = _text(bridge.get("improvement_handoff_path"))
+        if not sidecar_path or _invalid_relative_path(sidecar_path):
+            continue
+        if not _is_sidecar_yaml_path(sidecar_path):
+            continue
+        sidecar = _load_yaml_or_none(repo_root / sidecar_path)
+        if not sidecar:
+            continue
+        if source_path not in _source_paths_for_sidecar(sidecar):
+            continue
+        if not signal_ids.issubset(_sidecar_signal_ids(sidecar)):
+            continue
+        if not _sidecar_boundary_is_safe(sidecar):
+            continue
+
+        markdown_path = str(Path(sidecar_path).with_suffix(".md"))
+        for candidate_sidecar in (sidecar_path, markdown_path):
+            if candidate_sidecar in candidates:
+                allowed_sidecars.add(candidate_sidecar)
+
+    return sorted(allowed_sidecars)
 
 
 def _bridge_reference_errors(
