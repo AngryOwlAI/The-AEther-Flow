@@ -349,6 +349,17 @@ Use `.codex/skills/improve-project-system/SKILL.md` when a change affects
 roles, schemas, validators, checkpoint gates, memory tooling, control-marked
 skill guidance, project-control documentation, or generated-doc pipelines.
 
+When physics research discovers a project-system issue, the bridge path is a
+validated project-improvement sidecar under
+`research_control/project_improvement_handoffs/`. The normal
+`research_control/handoffs/handoff-####.yaml` chain remains the
+`/continue-research` authority; the sidecar is consumed only by
+`/improve-project-system`. Checkpointing and
+`validate_research_control.py --check-diff` do not allowlist sidecars
+globally: they accept only the exact sidecar YAML/Markdown pair referenced by a
+changed, AgentJob-allowed source YAML through `project_improvement_bridge`,
+with the sidecar pointing back to that source.
+
 Mixed Markdown files use authority markers. Explanatory sections describe
 current behavior without changing obligations. Control sections change or define
 agent behavior, routing, authority, validator expectations, allowed paths,

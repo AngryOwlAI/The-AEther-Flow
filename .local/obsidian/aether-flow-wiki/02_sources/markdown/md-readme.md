@@ -2,14 +2,14 @@
 object_id: "MD-README"
 format: "markdown"
 source_path: "README.md"
-source_hash: "bc6a06d40590998d1655394541ce3de802a76e61bf2a00217dcca2a22744504d"
+source_hash: "bc8ba6b47a215e62471d4d5d5210f7b54271d20e6d5ea2d5ef7b553ca4e3fcb1"
 authority_status: "project_control"
 role: "project_front_door"
 owner_skill: "project-memory-system"
 source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
 vault_note_path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-readme.md"
 vault_raw_path: ".local/obsidian/aether-flow-wiki/01_raw/markdown/md-readme.md"
-content_hash: "bc6a06d40590998d1655394541ce3de802a76e61bf2a00217dcca2a22744504d"
+content_hash: "bc8ba6b47a215e62471d4d5d5210f7b54271d20e6d5ea2d5ef7b553ca4e3fcb1"
 extraction_status: "PASS"
 related_object_ids:
   - "SEMANTIC-MD-README"
@@ -33,9 +33,9 @@ related_object_ids:
 
 - Extraction status: `PASS`
 - Extractor: `markdown`
-- Content hash: `bc6a06d40590998d1655394541ce3de802a76e61bf2a00217dcca2a22744504d`
+- Content hash: `bc8ba6b47a215e62471d4d5d5210f7b54271d20e6d5ea2d5ef7b553ca4e3fcb1`
 - Extracted text path: `.local/content_semantics/markdown/md-readme.txt`
-- Character count: `32374`
+- Character count: `33003`
 
 ## Relationships
 
