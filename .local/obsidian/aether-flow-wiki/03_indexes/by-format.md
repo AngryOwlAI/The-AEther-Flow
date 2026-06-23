@@ -106,6 +106,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-readme-tests|MD-README-TESTS]] `tests/README.md`
 - [[02_sources/markdown/md-readme-tex-shared|MD-README-TEX-SHARED]] `tex_shared/README.md`
 - [[02_sources/markdown/md-research-agent-workflow-publication-brief|MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF]] `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
+- [[02_sources/markdown/md-research-control-current-frontier|MD-RESEARCH-CONTROL-CURRENT-FRONTIER]] `research_control/current_frontier.md`
 - [[02_sources/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions|MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS]] `research_control/design/director_led_agent_architecture_grill_decisions.md`
 - [[02_sources/markdown/md-research-control-design-documentation-curator-corpus-migration-plan|MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN]] `research_control/design/documentation_curator_corpus_migration_plan.md`
 - [[02_sources/markdown/md-research-control-design-documentation-curator-post-migration-quality-plan|MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-POST-MIGRATION-QUALITY-PLAN]] `research_control/design/documentation_curator_post_migration_quality_plan.md`
@@ -118,6 +119,7 @@ Generated Obsidian index. Not canonical authority.
 - [[02_sources/markdown/md-research-control-design-html-explainer-depth-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT]] `research_control/design/html_explainer_depth_contract.md`
 - [[02_sources/markdown/md-research-control-design-html-explainer-flexible-presentation-contract|MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT]] `research_control/design/html_explainer_flexible_presentation_contract.md`
 - [[02_sources/markdown/md-research-control-design-mathematical-decisiveness-completion-contract|MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT]] `research_control/design/mathematical_decisiveness_completion_contract.md`
+- [[02_sources/markdown/md-research-control-design-no-target-import-guard-map|MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP]] `research_control/design/no_target_import_guard_map.md`
 - [[02_sources/markdown/md-research-control-design-obstruction-and-freeze-control|MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL]] `research_control/design/obstruction_and_freeze_control.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD]] `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - [[02_sources/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md|MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD]] `.agents/roles/physics/candidate-constructor.v0.2.0.md`

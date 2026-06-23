@@ -169,6 +169,7 @@ PROJECT_MARKDOWN_FILES = [
     ".agents/AGENTS.md",
     "research_control/README.md",
     "research_control/AGENTS.md",
+    "research_control/current_frontier.md",
     "research_control/approvals/README.md",
 ]
 FOLDER_README_FILES = [
@@ -544,6 +545,8 @@ def markdown_object_id(path: Path) -> str:
         )
     if relative.startswith(".codex/skills/") and path.name == "SKILL.md":
         return f"MD-SKILL-{object_suffix_from_path(Path(relative).parts[2])}"
+    if relative == "research_control/current_frontier.md":
+        return "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
     if relative.startswith("research_control/design/"):
         return f"MD-RESEARCH-CONTROL-DESIGN-{object_suffix_from_stem(path.stem)}"
     if relative == "ontology/aether-and-aether-flow.md":
@@ -600,6 +603,14 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "agents",
             "project-memory-system",
             "Scoped guidance for tracked research-control state.",
+        )
+    if relative == "research_control/current_frontier.md":
+        return (
+            "current_frontier_report",
+            "project_control",
+            "agents",
+            "project-memory-system",
+            "Current research-control frontier report and next legal packet summary.",
         )
     if relative == "research_control/approvals/README.md":
         return (

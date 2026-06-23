@@ -1,0 +1,37 @@
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260614-105"
+role_execution_kind: "task_overlay"
+task_id: "RT-20260614-105"
+agent_job_id: "AJ-RT-20260614-105-001"
+record_path: "research_control/tasks/RT-20260614-105/roles/memory-system-maintainer@0.2.0--RT-20260614-105.yaml"
+base_role_id: "memory-system-maintainer"
+base_role_version: "0.2.0"
+provisional_role_name: ""
+authority_delta_summary: "Memory-System Maintainer task overlay for Phase 1 current-frontier report and Phase 3 no-target-import guard map registration."
+added_constraints:
+  - "Add control-marked Markdown surfaces rather than science-source artifacts."
+  - "Register the preferred current-frontier path through bootstrap discovery."
+  - "Preserve generated wiki and local retrieval layers as derivatives only."
+  - "Do not alter physics claim status or Distance-to-GR ledger status."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "research_control/current_frontier.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/tasks/RT-20260614-105/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+requires_human_gate: false
+expires_after: "AJ-RT-20260614-105-001"
+justification: "The implementation plan requires a current-frontier report and no-target-import guard map. The preferred frontier path requires a minimal memory bootstrap discovery hook."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-23T04:12:18Z"
+updated_at: "2026-06-23T04:12:18Z"
+notes: "Execution-role overlay completed for Phase 1 and Phase 3 project-control surfaces with no physics claim promotion."
