@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVRSrc}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\GenCover}{\mathsf{GenCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\AdmExt}{\mathsf{AdmExt}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\CoverExt}{\mathsf{CoverExtend}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\NonBottom}{\mathsf{NonBottomCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Cert}{\mathsf{GenCoverCert}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{stress}{Stress Test}
+\newtheorem{lemma}{Lemma}
+\newtheorem{finding}{Finding}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC General Source-Cover Law Refuter Stress Test}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Refuter output for
+\texttt{RT-20260614-112}. It stress-tests audited proposal-only
+\(\GenCover\), defined in \texttt{RT-20260614-110} and audited in
+\texttt{RT-20260614-111}.
+
+The Refuter result is
+\[
+  \texttt{candidate\_stress\_passed\_pending\_gate}.
+\]
+The loop-risk category is
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+The result is local and non-promotional. It does not adopt \(\GenCover\),
+does not adopt \(\FVRSrc\), does not adopt \(\RegSold\), does not adopt or
+fully construct \(\Msrc\), does not prove general non-bottom source-cover
+existence for arbitrary source data, does not define \(\geff\), does not
+derive matter coupling, does not derive Einstein equations, does not promote
+benchmark status, does not issue a Gate Chair verdict, does not claim
+completed derivation, does not claim future source-extension impossibility,
+and does not reject the global theory.
+
+The status pair remains
+\[
+  \texttt{blocked\_adoption\_open\_continuation}.
+\]
+
+\section{Stress Question}
+
+The bounded question is whether audited \(\GenCover\), as written, fails under
+unsupported extension, selector nonuniqueness, inverse-token degeneration,
+cocycle-token degeneration, soldering nonuniqueness, finite-replay overread,
+\(\BottomSrc\) leakage, finite-variation fragility, process-authority
+laundering, or bridge-ladder overread.
+
+\section{Fail-Closed Stress Tests}
+
+\begin{stress}[Unsupported extension]
+If a source-cover extension record lacks source-local separation, source chart
+support, transition tokens, inverse certificates, cocycle certificates,
+soldering certificates, or admissible source-variation records, then
+\(\AdmExt\) is not true. The non-bottom branch of \(\CoverExt\) is therefore
+not reached.
+\end{stress}
+
+\begin{stress}[Selector nonuniqueness]
+If two transition-token candidates are tied under the supplied source data and
+no explicit source equivalence resolves the tie, the packet has no authorized
+tie breaker. File order, registry order, validation status, role identity,
+handoff authority, generated derivatives, benchmark resemblance, and target
+coordinate resemblance are forbidden. The branch returns \(\Bot\).
+\end{stress}
+
+\begin{stress}[Inverse-token degeneration]
+If a selected transition token lacks a source inverse certificate, or if the
+available inverse certificates are nonunique without source equivalence, the
+non-bottom certificate family is absent and the branch returns \(\Bot\).
+\end{stress}
+
+\begin{stress}[Cocycle-token degeneration]
+If triple-overlap token composition fails, the packet may not import a target
+smooth-atlas cocycle to repair it. The branch returns \(\Bot\).
+\end{stress}
+
+\begin{stress}[Soldering nonuniqueness]
+If \(\RespLC\) readout-token attachment is nonunique without explicit source
+equivalence, \(\SolderSrc\) is not a non-bottom source certificate. Proper
+time, detector semantics, target metric behavior, or benchmark resemblance
+cannot repair the branch.
+\end{stress}
+
+\begin{lemma}[GenCover fail-closed stress survival]
+The unsupported-extension, selector-nonuniqueness, inverse-token,
+cocycle-token, and soldering-nonuniqueness cases do not refute
+\(\GenCover\) as written. They refute non-fail-closed variants that would
+repair missing source data with target or process authority.
+\end{lemma}
+
+\begin{proof}
+Each named defect violates a required non-bottom premise of either
+\(\AdmExt\), \(\NonBottom\), or \(\Cert\). The law package explicitly routes
+forbidden target or process premises to \(\BottomSrc\). Therefore these
+defects prevent a non-bottom candidate rather than forcing a hidden import.
+This proves fail-closed behavior only. It does not prove that non-bottom
+certificates exist for arbitrary source-cover extension records.
+\end{proof}
+
+\section{Replay, Bottom, And Variation Stress}
+
+\begin{stress}[Finite replay overread]
+The finite checker replay record is an anchor inside an extension record. It
+does not prove arbitrary source-cover existence, arbitrary finite-variation
+robustness, source-law adoption, or \(\Msrc\) adoption. Treating the replay
+as such a proof violates the packet boundary and bottoms.
+\end{stress}
+
+\begin{stress}[\(\BottomSrc\) leak]
+If a forbidden premise is required, \(\BottomSrc\) returns \(\Bot\). If source
+data are missing or explicitly fail a stated condition, no non-bottom output
+is returned. Thus the false-versus-bottom distinction does not leak into an
+unauthorized non-bottom candidate as written.
+\end{stress}
+
+\begin{stress}[Finite-variation fragility]
+\(\VarRegSrc\) is a proof obligation over admitted source-cover variations.
+The packet does not prove arbitrary robustness under all finite variations.
+Variations that break separation, chart support, transition tokens, inverse
+certificates, cocycle certificates, or soldering certificates remain outside
+the non-bottom result.
+\end{stress}
+
+\begin{lemma}[Bounded replay and robustness only]
+The finite replay anchor and \(\VarRegSrc\) obligations are useful
+source-extension control data, but they do not discharge arbitrary
+source-cover existence or arbitrary finite-variation robustness.
+\end{lemma}
+
+\section{Authority-Laundering Stress}
+
+\begin{finding}[No process-authority repair]
+Validation, registry registration, role assignment, generated wiki or
+semantic notes, and handoff completion are process controls. They do not
+supply source separation, transition-token selection, inverse certificates,
+cocycle certificates, soldering certificates, or variation preservation.
+\end{finding}
+
+\begin{finding}[No bridge-ladder promotion]
+The bridge ladder remains blocked:
+\[
+  \GenCover \nRightarrow \Msrc \nRightarrow \geff
+  \nRightarrow \text{matter coupling}
+  \nRightarrow \text{Einstein equations}.
+\]
+The first implication is not authorized because stress survival is not source
+law adoption and does not prove general non-bottom source-cover existence.
+\end{finding}
+
+\section{Countermodel-Style Pressure Cases}
+
+Two pressure families preserve the Refuter boundary:
+
+\begin{itemize}
+  \item Selector tie family: two transition-token candidates are source-tied
+  without a source equivalence. The candidate cannot choose by file order,
+  validation status, target resemblance, or benchmark behavior. It returns
+  \(\Bot\).
+  \item Certificate degeneration family: inverse, cocycle, or soldering
+  certificates are absent or nonunique. The candidate cannot repair the
+  missing source certificate with target atlas, metric, proper time, or
+  detector semantics. It returns \(\Bot\).
+\end{itemize}
+
+These families are not global no-go theorems. They show why the candidate
+survives only as a fail-closed proposal and why adoption would require
+human-gated source-law authority.
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & \(\GenCover\) survives Refuter stress as fail-closed proposal-only source-extension data pending human gate; full \(\Msrc\) remains unconstructed and unadopted. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & \(\VarRegSrc\) obligations remain source-extension obligations; arbitrary finite-variation robustness is not discharged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & Human gate required before any source-law adoption or canonical ontology promotion. \\
+Current route freeze or hard-fail status & Not frozen; stress survival routes to human-gated ontology/source-law authority before adoption. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{New Mathematical Payload}
+
+This packet supplies four draft/control payload items:
+\begin{itemize}
+  \item a fail-closed stress lemma for unsupported extension, selector
+  nonuniqueness, inverse-token degeneration, cocycle-token degeneration,
+  soldering nonuniqueness, and bottom leaks;
+  \item a selector-tie pressure family showing that nonunique transition
+  candidates force bottom unless an additional source law supplies a tie
+  breaker;
+  \item a certificate-degeneration pressure family for missing inverse,
+  cocycle, or soldering certificates;
+  \item a dependency-map update separating stress survival from source-law
+  adoption, \(\Msrc\), and downstream GR objects.
+\end{itemize}
+
+\section{Refuter Verdict}
+
+\begin{verdict}[General source-cover law Refuter stress result]
+Audited proposal-only \(\GenCover\) is not refuted as written. It survives
+the named stress cases as fail-closed draft/control source-extension data:
+structural failures return \(\Bot\) or fail to produce a non-bottom output,
+process authority cannot repair failures, and target geometry cannot supply
+missing source certificates.
+
+The result refutes adoption overread, finite-replay overread, arbitrary
+finite-variation overread, non-fail-closed repair variants, target-geometry
+repair variants, and process-authority repair variants. The loop-risk
+category is \texttt{bridge\_facing\_candidate\_path}. The next route is
+\texttt{human\_gated\_ontology\_change\_required}: human-gated ontology or
+source-law authority is required before any adoption or downstream claim.
+\end{verdict}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_general\_source\_cover\_law\_refuter\_stress.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_general\_source\_cover\_law\_refuter\_stress.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The
+Physicist-Mathematician child supplied the stress classification and
+countermodel-style pressure families. The Physicist-Philosopher child
+preserved the boundary between stress survival, source-extension data,
+canonical ontology, empirical recovery, benchmark status, and protected Gate
+Chair authority.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{gencover-formalization}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src GSC
+general source-cover law formalization} [Internal research-control artifact].
+
+\bibitem{gencover-audit}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src GSC
+general source-cover law smuggling audit} [Internal research-control artifact].
+
+\bibitem{handoff-0152}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0152}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
