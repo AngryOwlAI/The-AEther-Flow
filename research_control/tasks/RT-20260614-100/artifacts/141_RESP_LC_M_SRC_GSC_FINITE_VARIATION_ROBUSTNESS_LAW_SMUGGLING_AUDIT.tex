@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVR}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\VarDom}{\mathsf{VarDom}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\AdmVar}{\mathsf{AdmVar}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\PresVar}{\mathsf{PresVar}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{verdict}{Verdict}
+\newtheorem{finding}{Finding}
+\newtheorem{lemma}{Lemma}
+
+\title{Resp\_lc M\_src GSC Finite-Variation Robustness Law Smuggling Audit}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Smuggling Auditor output for
+\texttt{RT-20260614-100}. It audits the proposal-only law package
+\[
+  \FVR =
+  (
+    \VarDom,
+    \AdmVar,
+    \mathsf{Transport}_{\SepSrc},
+    \mathsf{Transport}_{\ChartSuppSrc},
+    \mathsf{Transport}_{\Tau},
+    \mathsf{Transport}_{\SolderSrc},
+    \PresVar,
+    \BottomSrc
+  )
+\]
+defined in \texttt{RT-20260614-099}.
+
+The decisive result is
+\[
+  \texttt{smuggling\_audit\_result.status}
+  =
+  \texttt{conditional\_source\_purity\_pass}.
+\]
+This is a local audit result. It does not adopt \(\FVR\), does not adopt
+\(\RegSold\), does not adopt or fully construct \(\Msrc\), does not prove
+arbitrary finite-variation robustness, does not define \(\geff\), does not
+derive matter coupling, does not derive Einstein equations, does not promote
+benchmark status, does not issue a Gate Chair closure, does not claim
+completed derivation, does not claim future source-extension impossibility,
+and does not reject the global theory.
+
+\section{Audit Question}
+
+The audit question is whether \(\FVR\), as written, imports target topology,
+target smooth atlas, target coordinate transitions, target metric, proper
+time, empirical detector semantics, benchmark behavior, validation or registry
+authority, role authority, handoff authority, generated derivatives, file
+order, or adoption authority as source evidence.
+
+\section{Audit Matrix}
+
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.36\linewidth}p{0.32\linewidth}}
+\hline
+Object & Audit finding & Remaining burden \\
+\hline
+\(\VarDom\) &
+Source-pure as written: finite variation records are source-support,
+quotient, chart-support, transition-token, readout-token, and scope records. &
+Refuter stress must test unsupported merges and scope widening. \\
+\(\AdmVar\) &
+Source-pure as written: admissibility requires source-side finite support,
+source quotient preservation or refinement, source transport data, and no
+forbidden premise. &
+Stress must test whether admissibility hides target smoothness or metric
+tie-breakers. \\
+Transport certificates &
+Source-pure as written: separation, chart-support, transition-token, and
+soldering transports are certificate families, not target maps. &
+Stress must test inverse-token, cocycle-token, and soldering nonuniqueness
+cases. \\
+\(\PresVar\) &
+Source-pure as written: outcomes are preserved, transformed-equivalent,
+failed, or bottom. &
+Stress must test whether transformed equivalence smuggles unsupported
+equivalence. \\
+\(\BottomSrc\) &
+Source-pure as written: forbidden premises return \(\Bot\), not a weak pass. &
+Stress must test bottom-condition leaks. \\
+Bounded witness boundary &
+Honest as written: finite/local witness data are not treated as arbitrary
+finite-variation robustness. &
+Stress must test finite/local overread. \\
+Process receipts &
+Non-promotional as written: validation, registry, role, handoff, generated
+derivative, and file-order surfaces are not premises. &
+Continue to reject process-authority laundering. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Source-Purity Lemma}
+
+\begin{lemma}[Conditional packet-interface source-purity]
+Assume the \(\FVR\) source-domain signatures and \(\BottomSrc\) rules from
+\texttt{RT-20260614-099} are enforced. Then any non-bottom certificate
+returned by \(\FVR\) does not use target topology, target atlas, target
+coordinate transition, target metric, proper time, empirical detector
+semantics, benchmark success, validation status, registry metadata, role
+identity, handoff authority, generated derivatives, file order, or adoption
+authority as a source premise.
+\end{lemma}
+
+\begin{proof}
+Each component of \(\FVR\) is typed over source-side inputs: finite variation
+records, draft/control \(\RegSold\) certificates, source separation
+certificates, source chart-support certificates, source transition-token
+certificates, source soldering certificates, and explicit source equivalence
+data. The formalization excludes target and process-authority data from the
+source data universe. If such a premise is required, \(\BottomSrc\) returns
+\(\Bot\). Therefore a non-bottom certificate cannot depend on those forbidden
+premises under the packet interface. The argument is conditional on the
+interface being enforced and does not prove that non-bottom certificates exist
+for arbitrary source variations.
+\end{proof}
+
+\section{Authority Boundary}
+
+\begin{finding}[No adoption follows]
+The audit pass is not law adoption. It classifies \(\FVR\) as conditionally
+source-pure as written under stated assumptions. If promoted to source
+authority, \(\FVR\) would require a human gate.
+\end{finding}
+
+\begin{finding}[Robustness debt remains]
+\(\FVR\) is source-pure as a proposal-only law interface, but arbitrary
+finite-variation robustness is not discharged. Refuter stress and any later
+generalization or human-gated adoption decision remain required.
+\end{finding}
+
+\begin{finding}[Transformed equivalence remains stress-sensitive]
+\(\PresVar\) permits a transformed-equivalent outcome only when explicit
+source equivalence data are supplied. The audit does not prove that such
+equivalence data exist for arbitrary variations.
+\end{finding}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & \(\FVR\) passes hidden-import audit conditionally as written; \(\Msrc\) remains blocked pending Refuter stress and human gate. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & \(\FVR\) is conditionally source-pure as a proposal-only interface; arbitrary finite-variation robustness is not discharged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the audited law has named Refuter stress targets. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_finite\_variation\_robustness\_law\_smuggling\_audit.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_finite\_variation\_robustness\_law\_smuggling\_audit.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The mathematical child
+supplied the component-by-component audit. The philosophical child preserved
+the authority distinction between source-purity audit, proposal-only law
+interface, source-law adoption, empirical recovery, process receipts, and
+downstream GR claims.
+
+\section{Conclusion}
+
+\begin{verdict}
+\(\FVR\) receives a conditional source-purity pass as written. No hidden
+target topology, target smooth atlas, target coordinate transition, target
+metric, proper time, empirical detector semantics, benchmark behavior, or
+process-authority import is detected under the stated source-domain and
+\(\BottomSrc\) rules.
+\end{verdict}
+
+The logical next packet is a Refuter stress test of audited \(\FVR\). No
+source-law adoption, \(\RegSold\) adoption, \(\Msrc\) adoption, or downstream
+\(\geff\) route is opened by this audit.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{fvr-formalization}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC finite-variation robustness law formalization}
+[Internal research-control artifact].
+
+\bibitem{regsold-audit}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law smuggling audit}
+[Internal research-control artifact].
+
+\bibitem{handoff0141}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0141}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
