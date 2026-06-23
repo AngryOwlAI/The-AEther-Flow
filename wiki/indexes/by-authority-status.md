@@ -383,6 +383,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `wiki/markdown/md-research-control-design-documentation-curator-publication-process.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-READER-SCOPE-FOOTER-RELOCATION-PLAN` `wiki/markdown/md-research-control-design-documentation-curator-reader-scope-footer-relocation-plan.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `wiki/markdown/md-research-control-design-documentation-curator-visual-atlas-contract.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-FINITE-SOURCE-COVER-MODEL-CHECKER` `wiki/markdown/md-research-control-design-finite-source-cover-model-checker.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `wiki/markdown/md-research-control-design-github-facing-explainer-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `wiki/markdown/md-research-control-design-gr-derivation-burden-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
@@ -628,6 +629,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `research_control/design/documentation_curator_publication_process.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-READER-SCOPE-FOOTER-RELOCATION-PLAN` `research_control/design/documentation_curator_reader_scope_footer_relocation_plan.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `research_control/design/documentation_curator_visual_atlas_contract.md`
+- `MD-RESEARCH-CONTROL-DESIGN-FINITE-SOURCE-COVER-MODEL-CHECKER` `research_control/design/finite_source_cover_model_checker.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `research_control/design/github_facing_explainer_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `research_control/design/gr_derivation_burden_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
