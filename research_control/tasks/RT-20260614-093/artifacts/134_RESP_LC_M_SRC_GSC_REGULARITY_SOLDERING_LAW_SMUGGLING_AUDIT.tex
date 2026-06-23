@@ -1,0 +1,240 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mgsccand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{cand}}}
+\newcommand{\Mgscregcand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{reg}\text{-}\mathrm{cand}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\TopRegSrc}{\mathsf{TopReg}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\RegSrc}{\mathsf{Reg}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{verdict}{Verdict}
+\newtheorem{finding}{Finding}
+\newtheorem{lemma}{Lemma}
+
+\title{Resp\_lc M\_src GSC Regularity and Soldering Law Smuggling Audit}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Smuggling Auditor output for
+\texttt{RT-20260614-093}. It audits the proposal-only law package
+\[
+  \RegSold =
+  (\SepSrc,\TopRegSrc,\ChartSuppSrc,\RegSrc,\SolderSrc,\VarRegSrc,\BottomSrc)
+\]
+defined in \texttt{RT-20260614-092}.
+
+The decisive result is
+\[
+  \texttt{smuggling\_audit\_result.status}
+  =
+  \texttt{conditional\_source\_purity\_pass}.
+\]
+This is a local audit result. It does not adopt \(\RegSold\), does not adopt
+\(\Mgsccand\), does not adopt or fully construct \(\Msrc\), does not define
+\(\geff\), does not derive matter coupling, does not derive Einstein
+equations, does not promote benchmark status, does not issue a Gate Chair
+closure, does not claim completed derivation, does not claim future
+source-extension impossibility, and does not reject the global theory.
+
+\section{Audit Question}
+
+The audit question is whether \(\RegSold\), as written, imports target
+topology, target smooth atlas, target coordinate transitions, target metric,
+proper time, empirical detector semantics, benchmark behavior, validation or
+registry authority, role authority, handoff authority, generated derivatives,
+file order, or adoption authority as source evidence.
+
+\section{Audit Matrix}
+
+\begin{center}
+\begin{tabular}{p{0.18\linewidth}p{0.36\linewidth}p{0.34\linewidth}}
+\hline
+Object & Audit finding & Remaining burden \\
+\hline
+\(\SepSrc\) &
+Source-pure as written: separation reads \(\Qsrc\), source context, and
+source-local evidence only. &
+Refuter stress must test separation collapse and quotient identification. \\
+\(\TopRegSrc\) &
+Source-pure as written: support data are source support, overlap, refinement,
+and locality objects; target open sets and target atlases bottom out. &
+Stress must test support-mode noncanonicity. \\
+\(\ChartSuppSrc\) &
+Source-pure as written: chart names are candidates, not adopted coordinate
+domains. &
+Stress must test domain ambiguity and overlap support. \\
+\(\RegSrc\) &
+Source-pure as written: transition tokens are not differentiable transition
+maps by name. &
+Stress must test inverse-token, cocycle-token, rank, and regularity coherence. \\
+\(\SolderSrc\) &
+Source-pure as written: \(\RespLC\) readouts are treated as source syntax;
+target metric, proper time, and empirical detector semantics bottom out. &
+Stress must test nonunique soldering and equivalence handling. \\
+\(\VarRegSrc\) &
+Source-pure as written: variation families and preservation predicates are
+source-side and arbitrary robustness is not claimed. &
+Stress must test finite-variation fragility and bounded scope. \\
+\(\BottomSrc\) &
+Source-pure as written: forbidden premises return \(\Bot\), not a weak pass. &
+Stress must test bottom-condition leaks. \\
+Theorem obligations &
+Honest as written: separation, regularity, soldering, and robustness claims
+are stated as obligations. &
+Later packets must prove, refute, or bound these obligations. \\
+Process receipts &
+Non-promotional as written: validation, registry, role, handoff, generated
+derivative, and file-order surfaces are not premises. &
+Continue to reject process-authority laundering. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Source-Purity Lemma}
+
+\begin{lemma}[Conditional packet-interface source-purity]
+Assume the \(\RegSold\) source-domain signatures and \(\BottomSrc\) rules from
+\texttt{RT-20260614-092} are enforced. Then any non-bottom certificate
+returned by \(\RegSold\) does not use target topology, target atlas, target
+coordinate transition, target metric, proper time, empirical detector
+semantics, benchmark success, validation status, registry metadata, role
+identity, handoff authority, generated derivatives, or file order as a source
+premise.
+\end{lemma}
+
+\begin{proof}
+Each component of \(\RegSold\) is typed over source-side inputs: quotient
+support, source context, source support regions, source chart candidates,
+source transition tokens, \(\RespLC\) readout tokens treated as syntax, and
+admissible source variation families. The formalization explicitly excludes
+target and process-authority data from the source data universe. If such a
+premise is required, \(\BottomSrc\) returns \(\Bot\). Therefore a non-bottom
+certificate cannot depend on those forbidden premises under the packet
+interface. The argument is conditional on the interface being enforced and
+does not prove that non-bottom certificates exist generally.
+\end{proof}
+
+\section{Authority Boundary}
+
+\begin{finding}[No adoption follows]
+The audit pass is not law adoption. It classifies \(\RegSold\) as
+conditionally source-pure as written under stated assumptions. If promoted to
+source authority, \(\RegSold\) would require a human gate.
+\end{finding}
+
+\begin{finding}[Finite-variation debt remains]
+\(\VarRegSrc\) is source-pure as an obligation class, but arbitrary
+finite-variation robustness is not discharged. This remains a Distance-to-GR
+burden.
+\end{finding}
+
+\begin{finding}[Soldering semantics remain syntactic]
+\(\SolderSrc\) attaches \(\RespLC\) readout tokens to source-chart support
+obligations as source syntax. The audit does not import proper time, empirical
+detector semantics, target metric semantics, or observer protocol semantics.
+\end{finding}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & \(\RegSold\) passes hidden-import audit conditionally as written; \(\Msrc\) remains unadopted pending Refuter stress, any permitted witness construction, and human gate. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & \(\VarRegSrc\) is source-pure as an obligation class, but arbitrary finite-variation robustness is not discharged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the audited law has named Refuter stress targets. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_law\_smuggling\_audit.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_law\_smuggling\_audit.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The mathematical child
+supplied the component-by-component audit. The philosophical child preserved
+the authority distinction between source-purity audit, proposal-only law data,
+human-gated source-law adoption, empirical recovery, process receipts, and
+downstream GR claims.
+
+\section{Conclusion}
+
+\begin{verdict}
+\(\RegSold\) receives a conditional source-purity pass as written. No hidden
+target topology, target smooth atlas, target coordinate transition, target
+metric, proper time, empirical detector semantics, benchmark behavior, or
+process-authority import is detected under the stated source-domain and
+\(\BottomSrc\) rules.
+\end{verdict}
+
+The logical next packet is a Refuter stress test of audited \(\RegSold\). No
+witness construction, source-law adoption, \(\Msrc\) adoption, or downstream
+\(\geff\) route is opened by this audit.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{candidate-audit}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC source-manifold candidate smuggling audit}
+[Internal research-control artifact].
+
+\bibitem{candidate-stress}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC source-manifold candidate Refuter stress test}
+[Internal research-control artifact].
+
+\bibitem{selector}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC regular soldering selector decision}
+[Internal research-control artifact].
+
+\bibitem{law-formalization}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law formalization}
+[Internal research-control artifact].
+
+\bibitem{handoff0134}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0134}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
