@@ -70,6 +70,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## draft_control_artifact
 
+- `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-108/artifacts/146_CHECKER_REPLAY_CONSUMPTION_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-107/artifacts/145_CHECKER_REPLAY_CONSUMPTION_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
@@ -484,6 +485,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `wiki/tex/tex-ontology-aether-flow-foundations.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `wiki/tex/tex-ontology-aether-flow-geometry.md`
 - `WIKI-TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `wiki/tex/tex-ontology-aether-flow-relativistic-recovery.md`
+- `WIKI-TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-checker-replay-consumption-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-checker-replay-consumption-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION` `wiki/tex/tex-research-control-gate0-ontology-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET` `wiki/tex/tex-research-control-localization-candidate-packet.md`

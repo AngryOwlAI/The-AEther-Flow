@@ -1,0 +1,22 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-108"
+status: "completed"
+stress_target: "audited finite source-cover checker replay for FSW-REGSOLD-GSC-001"
+input_paths:
+  - "research_control/tasks/RT-20260614-107/artifacts/145_CHECKER_REPLAY_CONSUMPTION_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260614-104/artifacts/finite_source_cover_checker_replay_summary.yaml"
+  - "research_control/tasks/RT-20260614-095/artifacts/finite_source_witness.yaml"
+  - "scripts/research_control/finite_source_cover_model_checker.py"
+stress_branch_results:
+  target_import_flag_bypass: "no bypass found for the replayed finite fixture; forbidden fields remain fail-closed outside bottom or authority-warning contexts"
+  checker_schema_fragility: "schema remains deterministic for the registered fixture but does not establish arbitrary schema completeness"
+  finite_model_overread: "pass_candidate_local remains bounded finite/local evidence only"
+  witness_linkage_normalization_defects: "no defect found for the registered witness linkage; arbitrary witness normalizations remain unproved"
+  bottom_condition_leaks: "listed bottom demonstrations remain bottom; unlisted bottom branches are not proved complete"
+  authority_flag_laundering: "all promotion authority flags remain false and cannot repair missing mathematics"
+  bounded_variation_fragility: "listed relabeling and bounded refinement remain finite/local; arbitrary finite-variation robustness remains undischarged"
+  adversarial_finite_source_cover_perturbations: "merge and incompatible soldering perturbations bottom; arbitrary perturbation family not discharged"
+result: "bounded_scope_only"
+mathematical_contribution: "Finite checker replay bounded-scope stress lemma and adversarial-perturbation dependency map."
+claim_boundary_preserved: true

@@ -1,0 +1,230 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVRSrc}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{stress}{Stress Test}
+\newtheorem{lemma}{Lemma}
+\newtheorem{guard}{Guard}
+\newtheorem{verdict}{Verdict}
+
+\title{Checker Replay Consumption Refuter Stress Test}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Refuter output for
+\texttt{RT-20260614-108}. It stress-tests the audited finite source-cover
+checker replay from \texttt{RT-20260614-104} after the Smuggling Auditor
+conditional source-purity pass in \texttt{RT-20260614-107}.
+
+The decisive result is
+\[
+  \texttt{checker\_replay\_refuter\_stress\_result.status}
+  =
+  \texttt{bounded\_scope\_only}.
+\]
+The loop-risk category is
+\[
+  \texttt{loop\_risk\_decision.category}
+  =
+  \texttt{concrete\_witness\_path}.
+\]
+
+This is a finite/local and non-promotional stress result. It does not adopt
+\(\FVRSrc\), does not adopt \(\RegSold\), does not adopt or fully construct
+\(\Msrc\), does not define \(\geff\), does not derive matter coupling, does
+not derive Einstein equations, does not promote benchmark status, does not
+issue a Gate Chair closure, does not claim completed derivation, does not
+claim future source-extension impossibility, and does not reject the global
+theory.
+
+\section{Stress Target}
+
+The target is the replay of \texttt{finite\_source\_witness.yaml} through
+\texttt{finite\_source\_cover\_model\_checker.py}. The replay returns
+\[
+  \texttt{status}=\texttt{pass\_candidate\_local},
+  \quad
+  \texttt{failures}=[],
+  \quad
+  \texttt{bottom\_demonstrations\_checked}=3.
+\]
+It checks \(\SepSrc\), \(\ChartSuppSrc\), overlap support, inverse tokens,
+cocycle tokens, rank analogue, \(\SolderSrc\), \(\VarRegSrc\), no-target-import
+flags, and \(\BottomSrc\) for one finite/local fixture.
+
+\section{Stress Matrix}
+
+\begin{stress}[Target-import flag bypass]
+Can forbidden target or downstream GR fields enter the replay's non-bottom
+branch by changing field names or location?
+\end{stress}
+
+\begin{proof}
+No bypass is found for the registered fixture. The checker rejects forbidden
+target metric, target atlas, target topology, target coordinate, proper time,
+benchmark, \(\geff\), matter-coupling, and Einstein-equation keys outside
+bottom or authority-warning contexts. This does not prove all future schemas
+complete; it only stress-tests the registered replay path.
+\end{proof}
+
+\begin{stress}[Checker-schema fragility]
+Does the checker pass prove that every legal finite source-cover schema has
+been captured?
+\end{stress}
+
+\begin{proof}
+No. The replay is deterministic and stable for the registered witness, but the
+checker remains a finite project-control tool. It does not prove schema
+completeness or general source-cover existence.
+\end{proof}
+
+\begin{stress}[Finite-model overread]
+Can \(\texttt{pass\_candidate\_local}\) be read as proof of source regularity,
+soldering, arbitrary finite-variation robustness, or \(\Msrc\)?
+\end{stress}
+
+\begin{proof}
+No. The status names a finite/local candidate pass only. It supplies useful
+draft/control evidence, not a theorem or adoption authority.
+\end{proof}
+
+\begin{stress}[Witness-linkage normalization defects]
+Does the replay hide a defect by normalizing the witness into checker syntax?
+\end{stress}
+
+\begin{proof}
+No defect is found for the registered witness linkage. The replay consumes the
+same source tokens, quotient support, chart-support data, transition tokens,
+rank analogue, soldering equivalence, bounded variations, and bottom
+demonstrations recorded in the witness file. This does not prove arbitrary
+witness normalizations valid.
+\end{proof}
+
+\begin{stress}[Bottom-condition leaks]
+Do listed bottom branches leak into non-bottom output?
+\end{stress}
+
+\begin{proof}
+No leak is found for the three listed bottom demonstrations: target-metric
+soldering tie-breaker, nonseparation merge, and incompatible soldering. The
+result is scoped to those recorded branches; unlisted bottom branches remain
+future stress targets if a later packet authorizes them.
+\end{proof}
+
+\begin{stress}[Authority-flag laundering]
+Can false authority flags be laundered into proof by validation, registry,
+role, handoff, generated derivative, or file-order status?
+\end{stress}
+
+\begin{proof}
+No. All promotion authority flags remain false. Process surfaces are
+provenance and routing controls; they are not source data and cannot repair
+missing mathematical witnesses.
+\end{proof}
+
+\begin{stress}[Bounded-variation fragility]
+Does the replay discharge arbitrary finite-variation robustness?
+\end{stress}
+
+\begin{proof}
+No. The replay supports the listed relabeling and one bounded refinement and
+bottoms the quotient merge. Arbitrary finite-variation robustness remains
+undischarged.
+\end{proof}
+
+\begin{stress}[Adversarial finite source-cover perturbations]
+Does the replay survive perturbations that remove inverse tokens, change
+cocycle composition, collapse quotient separation, or introduce incompatible
+soldering?
+\end{stress}
+
+\begin{proof}
+The stress branches either remain covered by the registered finite data or
+return defined failure or \(\Bot\). This blocks adoption overread, but it does
+not construct a general perturbation theorem.
+\end{proof}
+
+\section{Bounded-Scope Lemma}
+
+\begin{lemma}[Audited checker replay survives only with bounded scope]
+Under the registered source-domain witness data, checker contract,
+no-target-import guard map, and \(\BottomSrc\) demonstrations, the audited
+checker replay survives the listed Refuter stress branches as
+finite/local source-extension data. The survival does not establish general
+source-cover existence, arbitrary finite-variation robustness, source-law
+adoption, \(\Msrc\), or downstream GR objects.
+\end{lemma}
+
+\begin{proof}
+Each non-bottom branch is backed by explicit finite source data: source tokens,
+quotient classes, finite source-cover supports, transition-token certificates,
+rank-cardinality coherence, \(\RespLC\) source syntax, bounded variations, and
+declared bottom cases. Unsupported repairs either fail, bottom out, or require
+forbidden target/process authority and are therefore blocked. The replay
+survives as a bounded finite/local fixture only.
+\end{proof}
+
+\begin{guard}[No promotion]
+\(\texttt{bounded\_scope\_only}\) is not checker proof, source-law adoption,
+arbitrary finite-variation robustness, \(\RegSold\) adoption, \(\Msrc\)
+adoption, or a route to \(\geff\).
+\end{guard}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & The audited checker replay survives stress only with bounded scope; \(\Msrc\) remains blocked pending route selection, generalization or robustness work, and human gate before adoption. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Bounded relabeling and one bounded refinement survive; arbitrary finite-variation robustness remains undischarged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the next packet is a Phase 8C route selector because bounded-scope survival leaves multiple legal same-milestone continuations. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Route Consequence}
+
+The stress result leaves multiple legal same-milestone continuations: a
+generalization packet, a refinement or robustness packet, a scoped repair or
+no-go framing if a later selector finds one, a freeze decision if repetition
+continues without new payload, or human-gated adoption framing only after a
+specific adoption proposal exists. Therefore the next bounded task should be
+a Theoretical Continuation Selector route decision. No automatic adoption,
+\(\geff\) route, or Gate Chair request is authorized here.
+
+\section*{Citation Note}
+
+No external literature is cited in this control artifact. The stressed
+material is repository-local draft/control source-extension data.
+
+\end{document}
