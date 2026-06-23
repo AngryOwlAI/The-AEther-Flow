@@ -70,6 +70,7 @@ Generated Obsidian index. Not canonical authority.
 
 ## draft_control_artifact
 
+- [[02_sources/tex/tex-research-control-checker-replay-consumption-refuter-stress-test|TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-REFUTER-STRESS-TEST]] `research_control/tasks/RT-20260614-108/artifacts/146_CHECKER_REPLAY_CONSUMPTION_REFUTER_STRESS_TEST.tex`
 - [[02_sources/tex/tex-research-control-checker-replay-consumption-smuggling-audit|TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-SMUGGLING-AUDIT]] `research_control/tasks/RT-20260614-107/artifacts/145_CHECKER_REPLAY_CONSUMPTION_SMUGGLING_AUDIT.tex`
 - [[02_sources/tex/tex-research-control-gate0-ontology-formalization|TEX-RESEARCH-CONTROL-GATE0-ONTOLOGY-FORMALIZATION]] `research_control/tasks/RT-20260608-002/artifacts/01_GATE0_ONTOLOGY_FORMALIZATION.tex`
 - [[02_sources/tex/tex-research-control-localization-candidate-packet|TEX-RESEARCH-CONTROL-LOCALIZATION-CANDIDATE-PACKET]] `research_control/tasks/RT-20260608-003/artifacts/02_LOCALIZATION_CANDIDATE_PACKET.tex`
