@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-118"
+status: "completed"
+claim_boundary_preserved: true
+result: "conditional_source_purity_pass"
+audit_findings:
+  target_topology_import: "not_detected_as_required_premise"
+  target_atlas_import: "not_detected_as_required_premise"
+  target_metric_import: "not_detected_as_required_premise"
+  lorentzian_signature_import: "not_detected_as_required_premise"
+  benchmark_as_proof_import: "not_detected_as_required_premise"
+  registry_or_validator_proof_import: "not_detected_as_required_premise"
+  unadopted_fvr_or_regsold_consumption: "not_detected_as_adopted_premise"
+  qsrc_to_msrc_notation_collapse: "not_detected_as_written"
+mathematical_reasoning:
+  candidate_record_boundary: "M_src^{GSC-cand}(E) is defined as a tuple of source quotient support, source cover supports, source overlaps, source chart-support names, transition tokens, certificates, and Bottom_src guards."
+  source_purity_basis: "The candidate explicitly states that it is not a target topological space, not a target smooth atlas, and not a metric object."
+  remaining_stress_targets:
+    - "quotient stability"
+    - "source-support topology or analogue"
+    - "chart-support ambiguity"
+    - "transition-token inverse and cocycle degeneration"
+    - "bottom leak"
+    - "candidate notation overread"
+next_route: "refuter"
