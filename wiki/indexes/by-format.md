@@ -313,6 +313,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-054/artifacts/95_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GENERAL-SOURCE-COVER-HUMAN-GATE-ADOPTION-DECISION` `research_control/tasks/RT-20260614-087/artifacts/128_RESP_LC_M_SRC_GENERAL_SOURCE_COVER_HUMAN_GATE_ADOPTION_DECISION.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-HUMAN-GATE-ADOPTION-REVIEW` `research_control/tasks/RT-20260614-123/artifacts/155_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_HUMAN_GATE_ADOPTION_REVIEW.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-119/artifacts/154_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-118/artifacts/153_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-FORMALIZATION` `research_control/tasks/RT-20260614-099/artifacts/140_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_FORMALIZATION.tex`
@@ -661,6 +662,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GENERAL-SOURCE-COVER-HUMAN-GATE-ADOPTION-DECISION` `wiki/tex/tex-research-control-resp-lc-m-src-general-source-cover-human-gate-adoption-decision.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-HUMAN-GATE-ADOPTION-REVIEW` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-bridge-candidate-human-gate-adoption-review.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-bridge-candidate-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-bridge-candidate-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-FORMALIZATION` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-finite-variation-robustness-law-formalization.md`
