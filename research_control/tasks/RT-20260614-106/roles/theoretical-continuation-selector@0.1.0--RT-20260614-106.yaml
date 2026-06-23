@@ -1,0 +1,37 @@
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260614-106"
+role_execution_kind: "task_overlay"
+task_id: "RT-20260614-106"
+agent_job_id: "AJ-RT-20260614-106-001"
+record_path: "research_control/tasks/RT-20260614-106/roles/theoretical-continuation-selector@0.1.0--RT-20260614-106.yaml"
+base_role_id: "theoretical-continuation-selector"
+base_role_version: "0.1.0"
+provisional_role_name: ""
+authority_delta_summary: "Checker replay consumption selector overlay under the active source_manifold_m_src burden."
+added_constraints:
+  - "Treat checker pass_candidate_local as draft/control source-extension data only."
+  - "Select exactly one next consumption route for the checker replay."
+  - "Prefer audit before stress or human-gated framing because the replay result is a process-mediated evidence surface."
+  - "Preserve the global g_eff embargo while M_src remains blocked."
+  - "Do not re-run or alter the finite source-cover checker inside this selector packet."
+removed_permissions:
+  - ""
+expanded_permissions:
+  - ""
+allowed_write_paths:
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260614-106/**"
+  - "research_control/handoffs/handoff-0147.yaml"
+  - "research_control/handoffs/handoff-0147.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+requires_human_gate: false
+expires_after: "AJ-RT-20260614-106-001"
+justification: "Handoff-0146 requires one bounded selector or audit packet to decide how the checker replay result should be consumed."
+non_reusable_until_registered: false
+validation_status: "PASS"
+created_at: "2026-06-23T13:03:18Z"
+updated_at: "2026-06-23T13:03:18Z"
+notes: "Execution-role overlay completed for checker replay consumption decision with Smuggling Auditor selected as the next bounded packet."

@@ -1,0 +1,29 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-106"
+status: "completed"
+inputs_inspected:
+  - "research_control/tasks/RT-20260614-104/artifacts/finite_source_cover_checker_replay_summary.yaml"
+  - "scripts/research_control/finite_source_cover_model_checker.py"
+  - "research_control/tasks/RT-20260614-095/artifacts/finite_source_witness.yaml"
+  - "research_control/design/no_target_import_guard_map.md"
+mathematical_assessment:
+  replay_status: "pass_candidate_local"
+  failures_count: "0"
+  bottom_demonstrations_checked: "3"
+  mathematical_value: "The replay is finite/local consistency evidence for the existing witness representation and checker predicates."
+  mathematical_limitation: "The replay does not prove source regularity soldering arbitrary finite-variation robustness general source-cover existence or adoption-level M_src."
+route_recommendation:
+  selected_next_packet_type: "source_extension_smuggling_audit"
+  next_execution_role_family: "smuggling-auditor@0.2.0"
+  reason: "Before replay output is used as source-extension evidence, audit whether the checker schema witness linkage bottom branches and authority flags hide target import or process-authority laundering."
+deferred_routes:
+  - route: "source_extension_refuter_stress"
+    reason: "Stress should follow source-purity audit of the checker replay object."
+  - route: "source_extension_human_gate"
+    reason: "No adoption-ready theorem or exact protected decision exists."
+  - route: "human_gated_ontology_change_required"
+    reason: "Continuation does not require canonical ontology authority."
+claim_boundary:
+  physics_promotion_authorized: false
+  g_eff_embargo_remains_active: true
