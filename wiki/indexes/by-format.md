@@ -309,6 +309,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-054/artifacts/95_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GENERAL-SOURCE-COVER-HUMAN-GATE-ADOPTION-DECISION` `research_control/tasks/RT-20260614-087/artifacts/128_RESP_LC_M_SRC_GENERAL_SOURCE_COVER_HUMAN_GATE_ADOPTION_DECISION.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-FORMALIZATION` `research_control/tasks/RT-20260614-092/artifacts/133_RESP_LC_M_SRC_GSC_REGULARITY_SOLDERING_LAW_FORMALIZATION.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260614-094/artifacts/135_RESP_LC_M_SRC_GSC_REGULARITY_SOLDERING_LAW_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-093/artifacts/134_RESP_LC_M_SRC_GSC_REGULARITY_SOLDERING_LAW_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-SOURCE-MANIFOLD-CANDIDATE` `research_control/tasks/RT-20260614-088/artifacts/129_RESP_LC_M_SRC_GSC_SOURCE_MANIFOLD_CANDIDATE.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-SOURCE-MANIFOLD-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260614-090/artifacts/131_RESP_LC_M_SRC_GSC_SOURCE_MANIFOLD_CANDIDATE_REFUTER_STRESS_TEST.tex`
@@ -638,6 +639,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GENERAL-SOURCE-COVER-HUMAN-GATE-ADOPTION-DECISION` `wiki/tex/tex-research-control-resp-lc-m-src-general-source-cover-human-gate-adoption-decision.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-FORMALIZATION` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-regularity-soldering-law-formalization.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-REFUTER-STRESS` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-regularity-soldering-law-refuter-stress.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-regularity-soldering-law-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-SOURCE-MANIFOLD-CANDIDATE` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-source-manifold-candidate.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-SOURCE-MANIFOLD-CANDIDATE-REFUTER-STRESS` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-source-manifold-candidate-refuter-stress.md`

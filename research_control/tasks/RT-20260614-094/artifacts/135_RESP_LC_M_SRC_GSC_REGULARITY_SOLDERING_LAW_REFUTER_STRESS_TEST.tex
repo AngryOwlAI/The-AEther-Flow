@@ -1,0 +1,313 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mgsccand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{cand}}}
+\newcommand{\Mgscregcand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{reg}\text{-}\mathrm{cand}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\TopRegSrc}{\mathsf{TopReg}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\RegSrc}{\mathsf{Reg}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{stress}{Stress Test}
+\newtheorem{lemma}{Lemma}
+\newtheorem{finding}{Finding}
+\newtheorem{guard}{Guard}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC Regularity and Soldering Law Refuter Stress Test}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Refuter output for
+\texttt{RT-20260614-094}. It stress-tests the proposal-only law package
+\[
+  \RegSold =
+  (\SepSrc,\TopRegSrc,\ChartSuppSrc,\RegSrc,\SolderSrc,\VarRegSrc,\BottomSrc)
+\]
+after \texttt{RT-20260614-093} found a conditional source-purity pass as
+written.
+
+The decisive result is
+\[
+  \texttt{regsold\_stress\_result.status}
+  =
+  \texttt{finite\_or\_local\_scope\_survived}.
+\]
+The loop-risk category is
+\[
+  \texttt{loop\_risk\_decision.category}
+  =
+  \texttt{concrete\_witness\_path}.
+\]
+
+This is a local and non-promotional stress result. It does not adopt
+\(\RegSold\), does not adopt \(\Mgsccand\), does not adopt or fully construct
+\(\Msrc\), does not define \(\geff\), does not derive matter coupling, does
+not derive Einstein equations, does not promote benchmark status, does not
+issue a Gate Chair closure, does not claim completed derivation, does not
+claim future source-extension impossibility, and does not reject the global
+theory.
+
+\section{Stress Target}
+
+The stress target is the law package from \texttt{RT-20260614-092}, audited in
+\texttt{RT-20260614-093}. Its non-bottom output is proposal-only certificate
+data for \(\Mgscregcand\), not adopted \(\Msrc\).
+
+The Refuter question is not whether the law has useful syntax. It is whether
+the audited law can survive the named failure modes without importing target
+structure, laundering process authority, or silently promoting downstream
+claims. The answer is bounded: it survives only as finite/local witness-ready
+scaffolding.
+
+\section{Stress Matrix}
+
+\begin{stress}[Source-local nonseparation]
+Can non-bottom \(\RegSold\) still identify source tokens or quotient classes
+that must remain separated for adoption-level \(\Msrc\)?
+\end{stress}
+
+\begin{proof}
+\(\SepSrc\) returns non-bottom only when source context supplies
+distinguishing evidence invariant under admissible source relabelings. This
+blocks the simplest collapse branch in a finite or local witness where the
+separating evidence is explicit. It does not prove a general separation
+theorem for all source-cover data. Therefore the stress survives only with an
+explicit witness-level separation certificate; otherwise \(\BottomSrc\) must
+return \(\Bot\).
+\end{proof}
+
+\begin{stress}[Topology or regularity noncanonicity]
+Does \(\TopRegSrc\) select a canonical source regularity structure, or can
+multiple incompatible structures satisfy the same source data?
+\end{stress}
+
+\begin{proof}
+\(\TopRegSrc\) is source-pure as audited, but its support mode may be
+topological, order-theoretic, sheaf-like, combinatorial, categorical, or
+algebraic. If a witness leaves the support mode unspecified, multiple
+non-equivalent structures can satisfy the same loose data. The stress
+therefore requires the finite/local witness to state the support mode,
+overlap rule, and refinement behavior. Without that, the branch bottoms out.
+\end{proof}
+
+\begin{stress}[Transition-token degeneracy]
+Do inverse and cocycle tokens genuinely imply the selected source regularity
+class?
+\end{stress}
+
+\begin{proof}
+Inverse-token and cocycle-token checks remain algebraic unless a further
+certificate connects them to the selected source regularity class over the
+chosen overlap supports. Thus \(\RegSrc\) survives the stress only when a
+finite/local witness supplies a transition-compatibility certificate. The
+stress does not upgrade tokens into differentiable transition maps and does
+not import target smoothness.
+\end{proof}
+
+\begin{stress}[Rank or dimension incoherence]
+Can source-chart support produce inconsistent local rank or dimension
+analogues across overlaps?
+\end{stress}
+
+\begin{proof}
+Rank coherence is not automatic from chart names or transition-token syntax.
+A witness must supply a source rank analogue and show that it is stable on the
+listed overlaps, or it must define an equivalence class that controls the
+variation. If incompatible local ranks remain, \(\BottomSrc\) returns
+\(\Bot\). The stress therefore permits finite/local witness construction but
+not global rank adoption.
+\end{proof}
+
+\begin{stress}[Soldering nonuniqueness]
+Can the same \(\RespLC\) token solder to multiple incompatible source-chart
+supports?
+\end{stress}
+
+\begin{proof}
+\(\SolderSrc\) treats \(\RespLC\) readouts as source syntax. The stress branch
+is nonuniqueness: a single readout token may attach to multiple supports. The
+law survives only if a source equivalence relation identifies those supports
+as admissibly equivalent, or if the ambiguity returns \(\Bot\). No target
+metric, proper time, empirical detector semantics, or observer protocol may
+break the tie.
+\end{proof}
+
+\begin{stress}[Finite-variation fragility]
+Does \(\VarRegSrc\) preserve the required structures under admissible finite
+variations, or only under the original candidate-local variation family?
+\end{stress}
+
+\begin{proof}
+\(\VarRegSrc\) is an obligation class, not a proof of arbitrary robustness.
+For a finite/local witness, the allowed variation family can be listed and
+the preservation of \(\SepSrc\), \(\TopRegSrc\), \(\RegSrc\), and
+\(\SolderSrc\) can be checked case by case. This survives as bounded
+source-extension scaffolding. It does not discharge arbitrary finite-variation
+robustness.
+\end{proof}
+
+\begin{stress}[Bottom-condition leak]
+Does every forbidden target import route bottom out?
+\end{stress}
+
+\begin{proof}
+As written and audited, \(\BottomSrc\) is fail-closed for target topology,
+target smooth atlas, target metric, proper time, empirical detector
+semantics, benchmark success, process authority, missing separation,
+nonunique soldering without equivalence, and unsupported finite-variation
+claims. The stress passes this branch as an interface property. Existence of
+non-bottom witnesses remains a separate burden.
+\end{proof}
+
+\begin{stress}[Process-authority laundering]
+Does validation, registry, handoff, role, generated derivative, or file order
+repair missing mathematics?
+\end{stress}
+
+\begin{proof}
+No. Those surfaces are receipts and routing controls. They are not source
+tokens, source supports, transition certificates, soldering equivalences,
+rank analogues, or finite-variation preservation proofs. The stress passes
+only because the law and audit keep these surfaces non-promotional.
+\end{proof}
+
+\begin{stress}[Bridge-ladder collapse]
+Does \(\RegSold\) incorrectly unlock \(\Msrc\) adoption, \(\geff\), matter
+coupling, Einstein equations, benchmark promotion, or Gate Chair closure?
+\end{stress}
+
+\begin{proof}
+No. \(\RegSold\) supplies a proposal-only interface and possible
+finite/local witness target. It does not supply a source-to-metric map,
+universal matter-coupling law, dynamics or action principle, Einstein-equation
+derivation, benchmark recovery, or human-gated adoption verdict.
+\end{proof}
+
+\section{Finite/Local Stress-Survival Lemma}
+
+\begin{lemma}[Finite/local RegSold stress survival]
+Suppose a finite or local witness supplies explicit source data for
+\(\SepSrc\), \(\TopRegSrc\), \(\ChartSuppSrc\), \(\RegSrc\), \(\SolderSrc\),
+\(\VarRegSrc\), and \(\BottomSrc\). Suppose further that every ambiguous,
+nonunique, unsupported, target-importing, or process-authority branch returns
+\(\Bot\). Then \(\RegSold\) survives the nine stress tests as proposal-only
+finite/local source-extension scaffolding.
+\end{lemma}
+
+\begin{proof}
+Each stress branch either demands explicit source-side witness data or a
+fail-closed bottom result. In the finite/local case, the witness can list the
+tokens, quotient classes, support regions, transition tokens, overlap
+certificates, rank analogue, soldering equivalence relation, and bounded
+variation family directly. If all listed branches are source-side and all
+unsupported branches bottom out, no target structure or process authority is
+needed. The conclusion is bounded to the listed witness domain.
+\end{proof}
+
+\begin{guard}[Bounded scope]
+The lemma does not prove arbitrary finite-variation robustness, does not prove
+that non-bottom witnesses exist generally, and does not adopt \(\RegSold\) or
+\(\Msrc\).
+\end{guard}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & \(\RegSold\) survives Refuter stress only as proposal-only finite/local witness scaffolding; \(\Msrc\) remains unadopted pending concrete witness construction, audit, later stress if needed, and human gate before adoption. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Bounded finite/local \(\VarRegSrc\) witness construction is now permitted, but arbitrary finite-variation robustness is not discharged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the next non-orbital packet is finite/local Candidate Constructor witness construction. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_law\_refuter\_stress.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_law\_refuter\_stress.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The mathematical child
+supplied the nine-branch stress matrix and the finite/local survival lemma.
+The philosophical child preserved the authority distinction between
+proposal-law stress survival, source-law adoption, \(\Msrc\) adoption,
+empirical recovery, process receipts, and downstream GR claims.
+
+\section{Conclusion}
+
+\begin{verdict}
+\(\RegSold\) survives Refuter stress as proposal-only finite/local
+source-extension scaffolding. No precise obstruction is found against using it
+to construct a concrete finite/local witness. The stress does not prove
+general non-bottom existence, arbitrary finite-variation robustness, source-law
+adoption, or adoption-level \(\Msrc\).
+\end{verdict}
+
+The logical next packet is one bounded Candidate Constructor task to construct
+a finite/local \(\RegSold\) source witness with explicit separation,
+support-mode, transition-token, rank, soldering-equivalence, and bounded
+variation data. No downstream \(\geff\) route is opened.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{candidate-stress}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC source-manifold candidate Refuter stress test}
+[Internal research-control artifact].
+
+\bibitem{law-formalization}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law formalization}
+[Internal research-control artifact].
+
+\bibitem{law-audit}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law smuggling audit}
+[Internal research-control artifact].
+
+\bibitem{handoff0135}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0135}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
