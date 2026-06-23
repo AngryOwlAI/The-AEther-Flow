@@ -82,7 +82,20 @@ class ResearchControlTests(unittest.TestCase):
         metrics = report["metrics"]
         self.assertGreater(metrics["input_counts"]["completions_read"], 0)
         self.assertIn("physics_progress_metrics", metrics)
+        self.assertIn("operational_validation_metrics", metrics)
+        self.assertIn("scientific_progress_metrics", metrics)
         self.assertFalse(report["authority_boundary"]["physics_claim_promotion_authorized"])
+
+    def test_physics_progress_metrics_separate_operational_and_scientific_scoreboards(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        metrics = report["metrics"]
+        operational = metrics["operational_validation_metrics"]
+        scientific = metrics["scientific_progress_metrics"]
+
+        self.assertIn("completion_validation_status_counts", operational)
+        self.assertNotIn("completion_validation_status_counts", scientific)
+        self.assertEqual(self.metrics.scientific_metric_key_violations(scientific), [])
+        self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
     def test_role_registry_accepts_distinct_role_versions(self) -> None:
         report = self.validator.ValidationReport()

@@ -1,0 +1,116 @@
+completion_id: "AJC-AJ-RT-20260614-120-001"
+job_id: "AJ-RT-20260614-120-001"
+task_id: "RT-20260614-120"
+source_role_id: "validator-engineer"
+completed_at: "2026-06-23T22:28:21Z"
+status: "completed"
+output_paths:
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "scripts/research_control/README.md"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260614-120/artifacts/metrics_separation_phase6_report.md"
+  - "research_control/tasks/RT-20260614-120/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260614-120/jobs/completions/AJC-AJ-RT-20260614-120-001.yaml"
+  - "research_control/tasks/RT-20260622-010/jobs/AJ-RT-20260622-010-001.yaml"
+  - "research_control/tasks/RT-20260622-010/jobs/completions/AJC-AJ-RT-20260622-010-001.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v3.md"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"operational scientific metrics separation report_physics_progress_metrics\" --limit 10 --json | exit_code=0 | status=pass_no_hits"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup scripts/research_control/report_physics_progress_metrics.py --json | exit_code=0 | status=pass_no_hits"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/research_ops/validator-engineer.v0.2.0.md --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=pass_advisory_no_action"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_refresh_performed"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format markdown --output research_control/tasks/RT-20260614-120/artifacts/metrics_separation_phase6_report.md | exit_code=0 | status=pass"
+  - ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_physics_progress_metrics_separate_operational_and_scientific_scoreboards | exit_code=0 | status=pass"
+  - ".venv/bin/python -m unittest tests.test_research_control | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "Phase 6 completed as separated operational and scientific metrics scoreboards with a deterministic guard and focused regression test."
+coherent_resolution_summary: "The packet splits the metrics report into operational_validation_metrics and scientific_progress_metrics and adds a guard plus unittest that prevents operational-only metric keys from appearing in the scientific scoreboard. It does not promote physics claims or change checkpoint behavior."
+next_recommendation: "Proceed to Phase 7 as a separate source-backed external-review packet only if the packet preserves the RT-119 M_src^{GSC-cand}(E) candidate-only claim boundary."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 345
+    relationship_row_count: 1993
+    semantic_row_count: 345
+    vault_row_count: 345
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/research_ops/validator-engineer.v0.2.0.md --json"
+      query_type: "lookup"
+      query_text: ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-2-0-MD"
+  canonical_inspections:
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-2-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+      source_hash: "424e68bb9b741f031479cd1f507209a90ccdda7c2e82a58652879e4c2c2beccd"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory index, and .local are retrieval layers only and not authority."
+operational_validation_status:
+  validators_passed:
+    - "focused_unittest"
+    - "tests.test_research_control"
+    - "continue_research_memory_preflight"
+    - "bootstrap_memory_system"
+    - "bootstrap_memory_system_validate_only"
+    - "validate_documentation_impact"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+  registry_sync: "pass"
+  generated_surfaces_refreshed: true
+  notes: "Operational hygiene only; not physics evidence."
+scientific_progress_status:
+  result_type: "no_scientific_delta"
+  target_derivation_milestone: ""
+  mathematical_payload:
+    - ""
+  distance_to_gr_delta:
+    changed: false
+    burden_id: ""
+    old_status: ""
+    new_status: ""
+  forbidden_overread:
+    - "validator success is not proof"
+    - "registry status is not physics evidence"
+    - "operational metrics are not scientific progress"
+resolved_project_improvement_signals:
+  - signal_id: ""
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""

@@ -29,6 +29,17 @@ ROLE_METRIC_KEYS = {
     "refuter": "refuter_tasks",
     "gate-chair": "gate_chair_tasks",
 }
+OPERATIONAL_METRIC_KEY_TOKENS = {
+    "validator",
+    "validation",
+    "registry",
+    "generated",
+    "memory",
+    "wiki",
+    "receipt",
+    "role_schema",
+    "handoff_continuity",
+}
 
 
 def read_csv_rows(repo_root: Path, registry_name: str) -> list[dict[str, str]]:
@@ -109,6 +120,16 @@ def freeze_decision(completion: dict[str, Any]) -> str:
     if not isinstance(record, dict):
         return ""
     return str(record.get("freeze_decision", "")).strip()
+
+
+def scientific_metric_key_violations(metrics: dict[str, Any]) -> list[str]:
+    """Return scientific scoreboard keys that look operational-only."""
+    violations: list[str] = []
+    for key in metrics:
+        normalized = key.lower()
+        if any(token in normalized for token in OPERATIONAL_METRIC_KEY_TOKENS):
+            violations.append(key)
+    return violations
 
 
 def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
@@ -251,53 +272,85 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     for role_id, metric_key in ROLE_METRIC_KEYS.items():
         role_metrics[metric_key] = physics_role_counts.get(role_id, 0)
 
+    input_counts = {
+        "tasks_registered": len(task_rows),
+        "jobs_registered": len(job_rows),
+        "completions_read": len(completion_records),
+        "physics_completions_read": sum(1 for row in completion_records if row["is_physics"]),
+        "claim_boundary_rows": len(claim_rows),
+        "active_claim_boundary_rows": sum(1 for row in claim_rows if row.get("status") == "active"),
+    }
+    claim_hygiene_metrics = {
+        "tasks_with_forbidden_conclusion_summary": forbidden_summary_count,
+        "physics_promotion_authorized_true": promotion_authorized_count,
+        "physics_promotion_authorized_false": max(0, forbidden_summary_count - promotion_authorized_count),
+        "claim_boundary_rows_active": sum(1 for row in claim_rows if row.get("status") == "active"),
+    }
+    agent_workflow_metrics = {
+        **role_metrics,
+        "average_tasks_per_construct_audit_stress_cycle": average_cycle,
+        "construct_audit_stress_cycle_count": len(cycle_lengths),
+        "selector_cycles_without_construction": selector_without_construction,
+    }
+    operational_validation_metrics = {
+        **input_counts,
+        "completion_validation_status_counts": dict(sorted(completion_status_counts.items())),
+        **claim_hygiene_metrics,
+        **agent_workflow_metrics,
+    }
+    scientific_progress_metrics = {
+        "distance_to_gr_delta_true_count": distance_true,
+        "distance_to_gr_delta_false_count": distance_false,
+        "burden_discharged_count": physics_progress_counts.get("burden_discharged", 0),
+        "constructed_candidate_count": (
+            physics_progress_counts.get("candidate_constructed_pending_audit", 0)
+            + candidate_result_counts.get("constructed_candidate", 0)
+        ),
+        "candidate_smuggling_audit_pass_count": physics_progress_counts.get(
+            "candidate_audited_pending_stress",
+            0,
+        ),
+        "candidate_refuter_stress_pass_count": physics_progress_counts.get(
+            "candidate_stress_passed_pending_gate",
+            0,
+        ),
+        "precise_obstruction_count": (
+            physics_progress_counts.get("precise_obstruction_found", 0)
+            + candidate_result_counts.get("precise_obstruction", 0)
+        ),
+        "minimal_countermodel_count": candidate_result_counts.get("minimal_countermodel", 0),
+        "route_frozen_count": physics_progress_counts.get("route_frozen", 0),
+        "human_gate_required_count": physics_progress_counts.get("human_gate_required", 0),
+        "obstruction_records_created": len(obstruction_records),
+        "obstruction_records_referenced_by_later_tasks": referenced_obstructions,
+        "repeated_obstructions_triggering_freeze_review": freeze_review_count,
+        "frozen_routes_reopened_by_human_gate": human_gate_freeze_count,
+        "physics_progress_status_counts": dict(sorted(physics_progress_counts.items())),
+    }
+    separation_violations = scientific_metric_key_violations(scientific_progress_metrics)
     metrics = {
-        "input_counts": {
-            "tasks_registered": len(task_rows),
-            "jobs_registered": len(job_rows),
-            "completions_read": len(completion_records),
-            "physics_completions_read": sum(1 for row in completion_records if row["is_physics"]),
-            "claim_boundary_rows": len(claim_rows),
-            "active_claim_boundary_rows": sum(1 for row in claim_rows if row.get("status") == "active"),
+        "operational_validation_metrics": operational_validation_metrics,
+        "scientific_progress_metrics": scientific_progress_metrics,
+        "metric_separation_guard": {
+            "status": "pass" if not separation_violations else "fail",
+            "operational_metric_key_tokens": sorted(OPERATIONAL_METRIC_KEY_TOKENS),
+            "scientific_key_violations": separation_violations,
+            "rule": "Operational validation registry generated memory wiki receipt role-schema and handoff-continuity metrics stay out of scientific_progress_metrics.",
         },
-        "claim_hygiene_metrics": {
-            "tasks_with_forbidden_conclusion_summary": forbidden_summary_count,
-            "physics_promotion_authorized_true": promotion_authorized_count,
-            "physics_promotion_authorized_false": max(0, forbidden_summary_count - promotion_authorized_count),
-            "claim_boundary_rows_active": sum(1 for row in claim_rows if row.get("status") == "active"),
-        },
-        "physics_progress_metrics": {
-            "tasks_with_distance_to_gr_delta_true": distance_true,
-            "tasks_with_distance_to_gr_delta_false": distance_false,
-            "burden_discharged_count": physics_progress_counts.get("burden_discharged", 0),
-            "candidate_constructed_count": (
-                physics_progress_counts.get("candidate_constructed_pending_audit", 0)
-                + candidate_result_counts.get("constructed_candidate", 0)
-            ),
-            "precise_obstruction_count": (
-                physics_progress_counts.get("precise_obstruction_found", 0)
-                + candidate_result_counts.get("precise_obstruction", 0)
-            ),
-            "route_frozen_count": physics_progress_counts.get("route_frozen", 0),
-            "human_gate_required_count": physics_progress_counts.get("human_gate_required", 0),
-            "physics_progress_status_counts": dict(sorted(physics_progress_counts.items())),
-        },
+        "input_counts": input_counts,
+        "claim_hygiene_metrics": claim_hygiene_metrics,
+        "physics_progress_metrics": scientific_progress_metrics,
         "obstruction_reuse_metrics": {
             "obstruction_records_created": len(obstruction_records),
             "obstruction_records_referenced_by_later_tasks": referenced_obstructions,
             "repeated_obstructions_triggering_freeze_review": freeze_review_count,
             "frozen_routes_reopened_by_human_gate": human_gate_freeze_count,
         },
-        "agent_workflow_metrics": {
-            **role_metrics,
-            "average_tasks_per_construct_audit_stress_cycle": average_cycle,
-            "construct_audit_stress_cycle_count": len(cycle_lengths),
-            "selector_cycles_without_construction": selector_without_construction,
-        },
+        "agent_workflow_metrics": agent_workflow_metrics,
     }
 
     return {
-        "report_id": "mathematical_decisiveness_phase9_metrics",
+        "report_id": "research_control_metrics_separation",
         "as_of": max(
             [row.get("updated_at", "") for row in task_rows]
             + [row.get("completed_at", "") for row in job_rows]
@@ -312,12 +365,14 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         ],
         "authority_boundary": {
             "metrics_are_operational": True,
+            "scoreboards_are_separated": True,
             "physics_claim_promotion_authorized": False,
             "validation_status_is_not_physics_evidence": True,
         },
         "metrics": metrics,
         "limitations": [
-            "Counts are descriptive operational diagnostics, not physics evidence.",
+            "Operational validation metrics are workflow diagnostics and not physics evidence.",
+            "Scientific progress metrics are counts of tracked science-claim fields and must still cite source artifacts before any claim is reused.",
             "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
         ],
@@ -337,7 +392,7 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines: list[str] = [
         "<!-- authority: control -->",
         "",
-        "# Mathematical Decisiveness Phase 9 Metrics Report",
+        "# Research-Control Metrics Separation Report",
         "",
         "## Analysis",
         "",
@@ -350,25 +405,17 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
-            "## Input Counts",
+            "## Operational Validation Metrics",
             "",
-            *render_table(metrics["input_counts"]),
+            *render_table(metrics["operational_validation_metrics"]),
             "",
-            "## Claim Hygiene Metrics",
+            "## Scientific Progress Metrics",
             "",
-            *render_table(metrics["claim_hygiene_metrics"]),
+            *render_table(metrics["scientific_progress_metrics"]),
             "",
-            "## Physics Progress Metrics",
+            "## Separation Guard",
             "",
-            *render_table(metrics["physics_progress_metrics"]),
-            "",
-            "## Obstruction Reuse Metrics",
-            "",
-            *render_table(metrics["obstruction_reuse_metrics"]),
-            "",
-            "## Agent Workflow Metrics",
-            "",
-            *render_table(metrics["agent_workflow_metrics"]),
+            *render_table(metrics["metric_separation_guard"]),
             "",
             "## Limitations",
             "",
@@ -380,7 +427,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "",
             "## Conclusion",
             "",
-            "Phase 9 provides an operational metrics layer for future evaluation. The metrics show whether tracked work is producing candidates, obstructions, freeze reviews, human-gate requirements, or repeated selector cycles. They do not change the authority of any scientific artifact.",
+            "This report provides separated operational and scientific scoreboards for future evaluation. The metrics show workflow health separately from tracked science-result fields. They do not change the authority of any scientific artifact.",
             "",
             "## References",
             "",

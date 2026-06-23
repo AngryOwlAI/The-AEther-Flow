@@ -12,8 +12,11 @@ machine.
 - `resolve_latest_handoff.py` reads the latest handoff chain.
 - `validate_research_control.py` validates task records, registries, handoffs,
   parent-child synthesis constraints, and diff allowlists.
-- `report_physics_progress_metrics.py` reports operational AI-science and
-  research-system health metrics from tracked completions and registries.
+- `report_physics_progress_metrics.py` reports separated operational
+  validation metrics and scientific progress metrics from tracked completions
+  and registries. Operational counts are workflow health only; scientific
+  counts summarize tracked science-result fields and still require source
+  artifact inspection before reuse.
 - `checkpoint_research_transaction.py` regenerates, validates, stages, and
   commits a bounded transaction. It conditionally accepts generated
   project-improvement sidecar YAML/Markdown pairs only when the active
