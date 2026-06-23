@@ -1,0 +1,261 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVRSrc}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\GenCover}{\mathsf{GenCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\AdmExt}{\mathsf{AdmExt}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\CoverExt}{\mathsf{CoverExtend}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\NonBottom}{\mathsf{NonBottomCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Cert}{\mathsf{GenCoverCert}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Anchor}{\mathsf{Anchor}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{verdict}{Verdict}
+\newtheorem{finding}{Finding}
+\newtheorem{lemma}{Lemma}
+
+\title{Resp\_lc M\_src GSC General Source-Cover Law Smuggling Audit}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Smuggling Auditor output for
+\texttt{RT-20260614-111}. It audits the proposal-only law package
+\[
+  \GenCover =
+  (
+    \mathcal{S}_{\mathrm{src}},
+    R_{\mathrm{replay}},
+    \AdmExt,
+    \NonBottom,
+    \CoverExt,
+    \Cert,
+    \BottomSrc
+  )
+\]
+defined in \texttt{RT-20260614-110}.
+
+The decisive result is
+\[
+  \texttt{smuggling\_audit\_result.status}
+  =
+  \texttt{conditional\_source\_purity\_pass}.
+\]
+This is a local audit result. It does not adopt \(\GenCover\), does not adopt
+\(\FVRSrc\), does not adopt \(\RegSold\), does not adopt or fully construct
+\(\Msrc\), does not prove general source-cover existence for arbitrary source
+data, does not define \(\geff\), does not derive matter coupling, does not
+derive Einstein equations, does not promote benchmark status, does not issue a
+Gate Chair closure, does not claim completed derivation, does not claim future
+source-extension impossibility, and does not reject the global theory.
+
+\section{Audit Question}
+
+The audit question is whether \(\GenCover\), as written, imports target
+topology, target smooth atlas, target coordinate transitions, target metric,
+proper time, empirical detector semantics, benchmark behavior, validation or
+registry authority, role authority, handoff authority, generated derivatives,
+file order, finite-replay overread, or adoption authority as source evidence.
+
+\section{Audit Matrix}
+
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.36\linewidth}p{0.32\linewidth}}
+\hline
+Object & Audit finding & Remaining burden \\
+\hline
+\(\mathcal{S}_{\mathrm{src}}\) &
+Source-pure as written: target geometry and process receipts are explicitly
+excluded from the source data universe. &
+Refuter stress must test whether later uses reintroduce excluded premises. \\
+\(\AdmExt\) &
+Source-pure as written: admissibility requires source anchoring, source
+separation, source chart support, source transition tokens, source inverse
+and cocycle certificates, source soldering, source variation records, and no
+forbidden premise. &
+Stress must test unsupported extension and hidden target-topology dependency. \\
+\(\NonBottom\) and \(\Cert\) &
+Source-pure as written: non-bottom output requires every certificate family
+to be supplied from source data. &
+Stress must test certificate absence, nonunique certificates, and disguised
+target tie-breakers. \\
+\(\CoverExt\) &
+Source-pure as written: the map returns a generalized source-cover candidate
+only after \(\AdmExt=\mathsf{true}\) and \(\NonBottom\neq\Bot\). &
+Stress must test finite-replay overread and arbitrary-generalization claims. \\
+\(\Anchor\) &
+Source-pure as written: anchor extension is by source-token identity or
+explicit source equivalence. &
+Stress must test anchor spoofing and unsupported equivalence. \\
+\(\SepSrc\) &
+Source-pure as written: separation must be a source certificate and may not
+use target neighborhoods. &
+Stress must test nonseparation and target-open-set laundering. \\
+\(\ChartSuppSrc\) &
+Source-pure as written: chart support records are source supports and chart
+names are not adopted coordinates. &
+Stress must test target coordinate-domain smuggling. \\
+\(\mathsf{Inv}_{\mathrm{src}}\) and \(\mathsf{Cocycle}_{\mathrm{src}}\) &
+Source-pure as written: inverse and cocycle data are transition-token
+certificates, not differentiable transition maps. &
+Stress must test inverse-token defects and triple-overlap degeneration. \\
+\(\SolderSrc\) &
+Source-pure as written: \(\RespLC\) attachment is mediated by source readout
+tokens and source equivalence, not proper time, detector semantics, or target
+metric. &
+Stress must test soldering nonuniqueness and observer-semantics laundering. \\
+\(\VarRegSrc\) &
+Source-pure as written: variation records state preservation, transformed
+equivalence, failure, or bottom for source-cover data. &
+Stress must test arbitrary finite-variation overread. \\
+\(\BottomSrc\) &
+Source-pure as written: forbidden premises return \(\Bot\), not a weak pass. &
+Stress must test bottom-condition leaks and ambiguous false-vs-bottom cases. \\
+Theorem obligations &
+Honest as written: the source-only dependency lemma is conditional on
+\(\AdmExt\), \(\NonBottom\), and enforced bottom rules. &
+Stress must test whether the hypotheses hide existence or uniqueness claims. \\
+Process receipts &
+Non-promotional as written: validation, registry, role, handoff, generated
+derivative, and file-order surfaces are not premises. &
+Continue to reject process-authority laundering. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Conditional Source-Purity Lemma}
+
+\begin{lemma}[GenCover packet-interface source-purity]
+Assume the \(\GenCover\) source-domain declarations and \(\BottomSrc\) rules
+from \texttt{RT-20260614-110} are enforced. Then any non-bottom output
+returned by \(\CoverExt\) does not use target topology, target atlas, target
+coordinate transition, target metric, proper time, empirical detector
+semantics, benchmark success, validation status, registry metadata, role
+identity, handoff authority, generated derivatives, file order, finite-replay
+overread, or adoption authority as a source premise.
+\end{lemma}
+
+\begin{proof}
+The non-bottom path for \(\GenCover\) first requires \(\AdmExt\) to be true.
+That predicate requires source anchoring, source-local separation, source chart
+support, source transition-token candidates, source inverse and cocycle
+certificates, source soldering certificates, admissible source-variation
+records, and explicit exclusion of forbidden premises. The non-bottom
+certificate repeats those components as source-only certificate families.
+The formalization excludes target and process-authority data from
+\(\mathcal{S}_{\mathrm{src}}\). If such a premise is required, \(\BottomSrc\)
+returns \(\Bot\). Therefore a non-bottom \(\CoverExt\) output cannot depend on
+the forbidden premises under the packet interface. The argument is conditional
+on the interface being enforced and does not prove that non-bottom
+certificates exist for arbitrary source-cover extension records.
+\end{proof}
+
+\section{Authority Boundary}
+
+\begin{finding}[No adoption follows]
+The audit pass is not law adoption. It classifies \(\GenCover\) as
+conditionally source-pure as written under stated assumptions. If promoted to
+source authority, \(\GenCover\) would require a human gate.
+\end{finding}
+
+\begin{finding}[General existence debt remains]
+\(\GenCover\) is source-pure as a proposal-only law interface, but general
+non-bottom source-cover existence is not discharged. Refuter stress,
+candidate construction or witness generalization if later authorized, and any
+human-gated adoption decision remain required.
+\end{finding}
+
+\begin{finding}[Finite replay remains bounded]
+The finite checker replay anchors the proposal but does not prove arbitrary
+source-cover existence, arbitrary finite-variation robustness, or
+\(\Msrc\) adoption. Treating finite replay as general proof is a bottom
+branch, not a permitted inference.
+\end{finding}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & \(\GenCover\) passes hidden-import audit conditionally as written; \(\Msrc\) remains blocked pending Refuter stress and human gate. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & \(\FVRSrc\) remains proposal-only fail-closed source-extension data; arbitrary robustness is not discharged by this audit. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the audited law has named Refuter stress targets. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_general\_source\_cover\_law\_smuggling\_audit.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_general\_source\_cover\_law\_smuggling\_audit.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The mathematical child
+supplied the component-by-component audit and stress-target map. The
+philosophical child preserved the authority distinction between source-purity
+audit, proposal-only law interface, source-law adoption, empirical recovery,
+process receipts, and downstream GR claims.
+
+\section{Conclusion}
+
+\begin{verdict}
+\(\GenCover\) receives a conditional source-purity pass as written. No hidden
+target topology, target smooth atlas, target coordinate transition, target
+metric, proper time, empirical detector semantics, benchmark behavior,
+finite-replay overread, adoption authority, or process-authority import is
+detected as a required non-bottom premise under the stated source-domain and
+\(\BottomSrc\) rules.
+\end{verdict}
+
+The logical next packet is a Refuter stress test of audited \(\GenCover\).
+No source-law adoption, \(\FVRSrc\) adoption, \(\RegSold\) adoption,
+\(\Msrc\) adoption, or downstream \(\geff\) route is opened by this audit.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{gencover-formalization}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src GSC
+general source-cover law formalization} [Internal research-control artifact].
+
+\bibitem{handoff-0151}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0151}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
