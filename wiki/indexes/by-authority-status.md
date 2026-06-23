@@ -168,6 +168,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-FORMALIZATION` `research_control/tasks/RT-20260614-099/artifacts/140_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-100/artifacts/141_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENCOVER-TO-MSRC-BRIDGE-ATTEMPT` `research_control/tasks/RT-20260614-117/artifacts/152_RESP_LC_M_SRC_GSC_GENCOVER_TO_MSRC_BRIDGE_ATTEMPT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENERAL-SOURCE-COVER-LAW-FORMALIZATION` `research_control/tasks/RT-20260614-110/artifacts/148_RESP_LC_M_SRC_GSC_GENERAL_SOURCE_COVER_LAW_FORMALIZATION.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENERAL-SOURCE-COVER-LAW-HUMAN-GATE-REVIEW` `research_control/tasks/RT-20260614-114/artifacts/151_RESP_LC_M_SRC_GSC_GENERAL_SOURCE_COVER_LAW_HUMAN_GATE_REVIEW.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENERAL-SOURCE-COVER-LAW-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-112/artifacts/150_RESP_LC_M_SRC_GSC_GENERAL_SOURCE_COVER_LAW_REFUTER_STRESS_TEST.tex`
@@ -587,6 +588,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-FORMALIZATION` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-finite-variation-robustness-law-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-finite-variation-robustness-law-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-finite-variation-robustness-law-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENCOVER-TO-MSRC-BRIDGE-ATTEMPT` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-gencover-to-msrc-bridge-attempt.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENERAL-SOURCE-COVER-LAW-FORMALIZATION` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-general-source-cover-law-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENERAL-SOURCE-COVER-LAW-HUMAN-GATE-REVIEW` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-general-source-cover-law-human-gate-review.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENERAL-SOURCE-COVER-LAW-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-m-src-gsc-general-source-cover-law-refuter-stress-test.md`

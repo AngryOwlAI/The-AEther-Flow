@@ -1,0 +1,305 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+
+\newcommand{\GSC}{\mathsf{GSC}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}}
+\newcommand{\Bottomsrc}{\mathrm{Bottom}_{\mathrm{src}}}
+\newcommand{\GenCover}{\mathrm{GenCover}_{\mathrm{src}}^{\GSC}}
+
+\title{GenCover-to-Msrc Bridge Attempt}
+\author{Candidate Constructor Packet RT-20260614-117}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+Task: \texttt{RT-20260614-117}. Role:
+\texttt{candidate-constructor@0.2.0}. Target milestone:
+\texttt{source\_manifold\_m\_src}. Source-law input consumed:
+\(\GenCover\), adopted by \texttt{RT-20260614-114} only as an
+admissible source-extension law for later \texttt{source\_manifold\_m\_src}
+continuation.
+
+This packet does not edit canonical ontology TeX. It does not adopt
+\(\mathrm{FVR}_{\mathrm{src}}^{\GSC}\), does not adopt
+\(\mathrm{RegSold}_{\mathrm{src}}^{\GSC}\), does not adopt \(\Msrc\), does
+not construct full \(\Msrc\), does not define \(g_{\mathrm{eff}}\), does not
+derive matter coupling, does not derive Einstein equations, does not promote
+benchmark status, does not issue Gate Chair closure, does not use
+completed-derivation language, does not claim future source-extension
+impossibility, and does not reject the global theory.
+
+\section{Interface Table}
+
+\begin{longtable}{|p{0.18\linewidth}|p{0.20\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.14\linewidth}|p{0.14\linewidth}|}
+\hline
+\textbf{Interface component} & \textbf{Source-side datum} &
+\textbf{Provided by \(\GenCover\)?} & \textbf{Used by bridge attempt?} &
+\textbf{Failure branch} & \textbf{Open obligation} \\
+\hline
+Source carrier family & source carrier data \(C_i\) or equivalent tokens &
+conditional yes & yes & \(\Bottomsrc\) if absent & carrier coverage and admissibility \\
+\hline
+Source cover family & source-local cover data \(U_i\) & conditional yes &
+yes & \(\Bottomsrc\) if no cover & non-bottom cover existence \\
+\hline
+Overlap predicate & source overlap relation \(O_{ij}\) & conditional yes &
+yes & \(\Bottomsrc\) if inconsistent & overlap stability \\
+\hline
+Transition tokens & source transition data \(\tau_{ij}\) & conditional yes &
+yes & \(\Bottomsrc\) if missing & inverse and cocycle law \\
+\hline
+Inverse certificates & source inverse witness & conditional yes & yes &
+\(\Bottomsrc\) if degenerate & invertibility \\
+\hline
+Cocycle certificates & source cocycle witness & conditional yes & yes &
+\(\Bottomsrc\) if degenerate & associativity on triple overlaps \\
+\hline
+Regularity certificates & source regularity witness & only if supplied by
+certificate & recorded as conditional & unproved if absent &
+regularity class remains unadopted \\
+\hline
+Soldering certificates & source soldering witness & only if supplied by
+certificate & recorded as conditional & unproved if absent &
+soldering compatibility remains unadopted \\
+\hline
+Quotient support & \(\Qsrc^{\GSC}\) & conditional yes & yes &
+\(\Bottomsrc\) if relation invalid & relation to candidate \(\Msrc\) \\
+\hline
+\end{longtable}
+
+Forbidden inputs are target topology, target atlas data, target differentiable
+structure, target metric data, Lorentzian signature, empirical detector
+semantics, benchmark success, validator receipts, role identity, registry
+metadata as mathematical evidence, generated wiki notes as authority, file
+order, and unstated intuition about GR geometry.
+
+\section{Candidate Construction Attempt}
+
+Let \(E\) be a source extension package such that
+\(\mathrm{AdmExt}(E,R_{\mathrm{replay}})=\mathrm{true}\) and
+\(\mathrm{NonBottom}(E)\ne \Bottomsrc\). By the adopted source-extension-law
+use of \(\GenCover\), the formal package
+\[
+  \mathrm{CoverExt}(R_{\mathrm{replay}},E)
+  =
+  \left(
+  \Qsrc^{\GSC}(E),
+  \{\chi_i^{\mathrm{src}}\},
+  \{\tau_{ij}^{\mathrm{src}}\},
+  \mathrm{Cert}(E)
+  \right)
+\]
+is admissible as source-side input, not as ontology adoption.
+
+Define the bridge candidate map
+\[
+  B_{\Msrc}^{\GSC}(E) = \Msrc^{\GSC\mbox{-}\mathrm{cand}}(E),
+\]
+where \(\Msrc^{\GSC\mbox{-}\mathrm{cand}}(E)\) is the draft/control record
+\[
+  \left(
+  \Qsrc^{\GSC}(E),
+  I_E,
+  \{U_i^{\mathrm{src}}\},
+  \{O_{ij}^{\mathrm{src}}\},
+  \{\chi_i^{\mathrm{src}}\},
+  \{\tau_{ij}^{\mathrm{src}}\},
+  \mathrm{Cert}(E),
+  \Bottomsrc
+  \right).
+\]
+Here \(I_E\) indexes the source-local supports, \(U_i^{\mathrm{src}}\) are
+source carriers or source-local supports, \(O_{ij}^{\mathrm{src}}\) are
+source overlap predicates, \(\chi_i^{\mathrm{src}}\) are chart-support names
+or support tokens, \(\tau_{ij}^{\mathrm{src}}\) are transition tokens, and
+\(\mathrm{Cert}(E)\) collects anchor, separation, inverse, cocycle, source
+soldering, source variation, and bottom certificates when present.
+
+This is a constructed candidate record. It is not adopted \(\Msrc\). It is not
+a target topological space, not a target smooth atlas, and not a metric object.
+It packages the source-side support needed for a later audit and stress test.
+
+\section{No-Target-Import Precheck}
+
+\begin{longtable}{|p{0.55\linewidth}|p{0.15\linewidth}|p{0.22\linewidth}|}
+\hline
+\textbf{Question} & \textbf{Answer} & \textbf{Reason} \\
+\hline
+Did the construction use target topology? & No & It names source quotient support only. \\
+\hline
+Did it use target atlas data? & No & \(\chi_i^{\mathrm{src}}\) are source support names. \\
+\hline
+Did it use a target metric? & No & No metric tensor or distance object is defined. \\
+\hline
+Did it assume Lorentzian signature? & No & Signature data is absent. \\
+\hline
+Did it use empirical detector semantics? & No & No detector protocol is a premise. \\
+\hline
+Did it use exact-GR benchmark recovery as evidence? & No & Benchmark status is not invoked as proof. \\
+\hline
+Did it treat validator status as proof? & No & Validators are repository consistency checks only. \\
+\hline
+Did it treat registry status as proof? & No & Registries route provenance and authority; they do not prove the construction. \\
+\hline
+Did it identify \(\Qsrc^{\GSC}\) with adopted \(\Msrc\)? & No &
+\(\Qsrc^{\GSC}\) remains quotient-support data inside candidate notation. \\
+\hline
+\end{longtable}
+
+\section{Msrc Proof-Obligation Matrix}
+
+\begin{longtable}{|p{0.22\linewidth}|p{0.12\linewidth}|p{0.14\linewidth}|p{0.24\linewidth}|p{0.18\linewidth}|}
+\hline
+\textbf{Obligation} & \textbf{Required?} & \textbf{Supplied here?} &
+\textbf{Source-only evidence path} & \textbf{Downstream status} \\
+\hline
+Non-bottom source-cover existence & yes & conditional & RT-110, RT-111,
+RT-112, RT-114, current candidate & blocks adoption until audited and gated \\
+\hline
+Source quotient relation & yes & candidate & current candidate record &
+blocks adoption until audited \\
+\hline
+Quotient stability & yes & conditional & current candidate plus GenCover
+certificates & blocks adoption until audited and stressed \\
+\hline
+Source-induced topology or analogue & yes & candidate support only & current
+candidate & blocks full construction \\
+\hline
+Local chart candidates & yes & source-support names & current candidate &
+blocks full construction until regularity is established \\
+\hline
+Overlap maps & yes & transition tokens & current candidate and RT-110 &
+blocks full construction until audited \\
+\hline
+Inverse law & yes & conditional certificate & RT-110 and current candidate &
+fail-closed if degenerate \\
+\hline
+Cocycle law & yes & conditional certificate & RT-110 and current candidate &
+fail-closed if degenerate \\
+\hline
+Hausdorff or separation condition & usually yes & conditional certificate &
+current candidate & blocks adoption \\
+\hline
+Countability or size condition & usually yes & not adopted & current
+candidate notes absence & blocks adoption \\
+\hline
+Regularity class & yes for smooth route & not adopted & RT-114 and current
+candidate & RegSold_src^GSC remains unadopted \\
+\hline
+Soldering compatibility & yes for geometric continuation & conditional only &
+RT-110 and current candidate & RegSold_src^GSC remains unadopted \\
+\hline
+Finite-variation robustness & yes before robust adoption & not adopted &
+current candidate records block & FVR_src^GSC remains unadopted \\
+\hline
+No target topology import & mandatory & yes, precheck & current self-audit &
+audit still required \\
+\hline
+No target metric import & mandatory & yes, precheck & current self-audit &
+audit still required \\
+\hline
+No benchmark-as-proof import & mandatory & yes, precheck & current self-audit &
+audit still required \\
+\hline
+\end{longtable}
+
+\section{Candidate Constructor Result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path:
+    "research_control/tasks/RT-20260614-117/artifacts/
+     152_RESP_LC_M_SRC_GSC_GENCOVER_TO_MSRC_BRIDGE_ATTEMPT.tex"
+  next_required_role: "smuggling_auditor"
+  no_fog_check: true
+\end{verbatim}
+
+The concrete result is the record map \(B_{\Msrc}^{\GSC}\) and the candidate
+record \(\Msrc^{\GSC\mbox{-}\mathrm{cand}}(E)\). The construction supplies a
+draft/control source bridge candidate from non-bottom \(\GenCover\) output,
+with source quotient support, source cover support, source chart-support names,
+transition tokens, certificates, bottom guards, no-target-import precheck, and
+proof-obligation matrix.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{|p{0.28\linewidth}|p{0.28\linewidth}|p{0.34\linewidth}|}
+\hline
+\textbf{Burden} & \textbf{Status after this packet} & \textbf{Boundary} \\
+\hline
+Source ontology primitives & unchanged & no ontology TeX edit \\
+\hline
+Source equivalence EqSrc & unchanged & no new adoption \\
+\hline
+RetainH & unchanged & not in scope \\
+\hline
+GenH & unchanged & not in scope \\
+\hline
+ObsLoc_lc & unchanged & not in scope \\
+\hline
+Resp_lc & consumed only through prior source-side artifacts & no new observer-level claim \\
+\hline
+M_src & draft/control bridge candidate exists & not adopted, not full construction \\
+\hline
+g_eff & blocked & not defined \\
+\hline
+Matter coupling & blocked & not derived \\
+\hline
+Einstein equations & blocked & not derived \\
+\hline
+Finite-variation robustness & blocked & FVR_src^GSC not adopted \\
+\hline
+Benchmark promotion & blocked & no benchmark-as-proof use \\
+\hline
+Gate Chair status & no new gate & RT-114 approval not reused \\
+\hline
+Route freeze or hard-fail status & not frozen & candidate routes to audit \\
+\hline
+\end{longtable}
+
+\section{Next Route}
+
+Because the result type is \texttt{constructed\_candidate}, the next legal
+research packet is one bounded Smuggling Auditor audit of this bridge candidate.
+The audit must test target topology import, target atlas import, target metric
+import, Lorentzian-signature smuggling, benchmark-as-proof smuggling,
+generated-authority overread, registry or validator proof overread, unadopted
+\(\mathrm{FVR}_{\mathrm{src}}^{\GSC}\) or
+\(\mathrm{RegSold}_{\mathrm{src}}^{\GSC}\) consumption, and
+\(\Qsrc^{\GSC}\)-to-\(\Msrc\) notation collapse.
+
+\section*{References}
+
+Candidate Constructor. (2026). \textit{Candidate constructor role contract
+v0.2.0} [Project control role file]. The AEther-Flow Interpretation of
+Relativity Research Project, \texttt{.agents/roles/physics/candidate-constructor.v0.2.0.md}.
+
+Gate Chair. (2026). \textit{Resp-lc M-src GSC general source-cover law
+human-gate review} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-114/artifacts/151\_RESP\_LC\_M\_SRC\_GSC\_GENERAL\_SOURCE\_COVER\_LAW\_HUMAN\_GATE\_REVIEW.tex}.
+
+Ontology Formalizer. (2026). \textit{Resp-lc M-src GSC general source-cover
+law formalization} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-110/artifacts/148\_RESP\_LC\_M\_SRC\_GSC\_GENERAL\_SOURCE\_COVER\_LAW\_FORMALIZATION.tex}.
+
+Refuter. (2026). \textit{Resp-lc M-src GSC general source-cover law refuter
+stress test} [Research-control TeX artifact]. The AEther-Flow Interpretation
+of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-112/artifacts/150\_RESP\_LC\_M\_SRC\_GSC\_GENERAL\_SOURCE\_COVER\_LAW\_REFUTER\_STRESS\_TEST.tex}.
+
+Smuggling Auditor. (2026). \textit{Resp-lc M-src GSC general source-cover law
+smuggling audit} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project,
+\texttt{research\_control/tasks/RT-20260614-111/artifacts/149\_RESP\_LC\_M\_SRC\_GSC\_GENERAL\_SOURCE\_COVER\_LAW\_SMUGGLING\_AUDIT.tex}.
+
+\end{document}

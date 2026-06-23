@@ -1,0 +1,27 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-117"
+status: "completed"
+claim_boundary_preserved: true
+result: "constructed_candidate_supported"
+analysis:
+  interface_read: "GenCover_src^GSC may supply conditional source carriers, source covers, overlap predicates, transition tokens, inverse and cocycle certificates, source-local regularity or soldering certificates when present, bottom branches, and Q_src^GSC quotient-support data."
+  construction: "For any non-bottom admissible extension package E, define M_src^{GSC-cand}(E) as a record containing Q_src^GSC(E), source cover supports, source chart-support names, source transition-token data, certificates, and bottom guards."
+  no_target_import_result: "pass_as_syntax"
+  decisive_result: "constructed_candidate"
+formal_objects:
+  - "admissible non-bottom GenCover extension package E"
+  - "CoverExt(R_replay,E)"
+  - "Q_src^GSC(E) quotient-support data"
+  - "M_src^{GSC-cand}(E) draft/control bridge candidate record"
+  - "Bottom_src fail-closed branch family"
+maps:
+  - "B_Msrc^GSC: E -> M_src^{GSC-cand}(E)"
+  - "pi_src: disjoint source-local supports -> Q_src^GSC(E)"
+  - "supp_chi: source chart-support token -> quotient-support neighborhood label"
+  - "tau_src: overlap token -> transition-token certificate"
+proof_obligations_remaining:
+  - "Smuggling Auditor audit of hidden target topology, target atlas, and target metric import"
+  - "Refuter stress if the audit passes conditionally"
+  - "human gate before M_src adoption"
+  - "unadopted FVR_src^GSC and RegSold_src^GSC remain blocked"
