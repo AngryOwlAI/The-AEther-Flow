@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-SOURCE-MANIFOLD-CANDIDATE;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-SOURCE-MANIFOLD-CANDIDATE-SMUGGLING-AUDIT` ``
 - Generated output path: `wiki/tex/tex-research-control-resp-lc-m-src-gsc-source-manifold-candidate-refuter-stress.md`
+- Backlink from `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-FORMALIZATION` `research_control/tasks/RT-20260614-092/artifacts/133_RESP_LC_M_SRC_GSC_REGULARITY_SOLDERING_LAW_FORMALIZATION.tex`
 
 ## Validation
 

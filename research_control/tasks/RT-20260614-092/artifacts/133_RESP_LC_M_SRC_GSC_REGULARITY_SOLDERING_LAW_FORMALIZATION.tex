@@ -1,0 +1,428 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mgsccand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{cand}}}
+\newcommand{\Mgscregcand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{reg}\text{-}\mathrm{cand}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\TopRegSrc}{\mathsf{TopReg}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\RegSrc}{\mathsf{Reg}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Vargsc}{\mathsf{Var}_{\GSC}}
+\newcommand{\Stabgsc}{\mathsf{Stab}_{\GSC}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law Package}
+\newtheorem{obligation}{Theorem Obligation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{guard}{Guard}
+\newtheorem{branch}{Failure Branch}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC Regularity and Soldering Law Formalization}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Ontology Formalizer output for
+\texttt{RT-20260614-092}. It executes the bounded packet selected by
+\texttt{RT-20260614-091}: define a proposal-only source-manifold regularity
+and soldering law for \(\Mgsccand\).
+
+The decisive result is
+\[
+  \texttt{ontology\_law\_formalization\_result.status}
+  =
+  \texttt{candidate\_law\_defined}.
+\]
+The law identifier is
+\[
+  \texttt{MSRC-GSC-REGULARITY-SOLDERING-LAW},
+\]
+with notation \(\RegSold\).
+
+This artifact is draft/control and proposal-only. It does not canonically
+adopt \(\RegSold\), does not adopt \(\Mgsccand\), does not adopt or fully
+construct \(\Msrc\), does not define \(\geff\), does not derive matter
+coupling, does not derive Einstein equations, does not promote benchmark
+status, does not issue a Gate Chair closure, does not claim completed
+derivation, does not claim future source-extension impossibility, and does
+not reject the global theory.
+
+\section{Source Domain}
+
+\begin{definition}[Source data universe]
+Let \(\mathcal{S}_{\mathrm{src}}\) be the source-side data universe available
+to the packet. It may contain source tokens, source quotient support,
+source-cover labels, source transition tokens, source admissibility
+predicates, and \(\RespLC\) readout tokens already admitted by source-side
+localization.
+\end{definition}
+
+\begin{definition}[Forbidden premises]
+The following are not members of \(\mathcal{S}_{\mathrm{src}}\): target open
+sets, target neighborhoods, target manifold topology, target smooth atlases,
+target coordinate domains, target metric data, metric signature, proper time,
+empirical detector semantics, benchmark success, validation status, registry
+metadata, role identity, handoff authority, generated derivatives, or file
+order.
+\end{definition}
+
+\begin{definition}[Three-valued source outcome]
+Let
+\[
+  \mathbb{B}_{\Bot}=\{\mathsf{true},\mathsf{false},\Bot\}.
+\]
+\(\Bot\) means fail-closed. It is not a weak pass and not an invitation to
+repair the branch with target or process authority.
+\end{definition}
+
+\section{Law Package}
+
+\begin{law}[Proposal-only \(\RegSold\)]
+Define the proposal-only law package
+\[
+  \RegSold =
+  (
+    \SepSrc,
+    \TopRegSrc,
+    \ChartSuppSrc,
+    \RegSrc,
+    \SolderSrc,
+    \VarRegSrc,
+    \BottomSrc
+  ).
+\]
+For non-bottom output, this package returns proposal-only certificate data
+for
+\[
+  \Mgscregcand.
+\]
+\(\Mgscregcand\) is not adopted \(\Msrc\). It is a regularized candidate
+notation for draft/control source-extension data awaiting audit, stress, and
+human gate before any adoption claim.
+\end{law}
+
+\subsection{Source-Local Separation}
+
+\begin{definition}[\(\SepSrc\)]
+\[
+  \SepSrc : \Qsrc \times \Qsrc \times C_{\mathrm{src}}
+  \longrightarrow \mathbb{B}_{\Bot}.
+\]
+\(\SepSrc(q,q',C)=\mathsf{true}\) only when \(C\) supplies source-side
+evidence distinguishing \(q\) and \(q'\). The evidence must be invariant
+under admissible source relabelings and must not use target topology,
+target metric, proper time, empirical detector semantics, benchmark success,
+or process authority.
+\end{definition}
+
+\begin{obligation}[Source-local separation]
+Under non-bottom \(\RegSold\) output, \(\Qsrc\) carries source-local
+separation sufficient for candidate source-manifold support.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\subsection{Source Topology or Regularity Analogue}
+
+\begin{definition}[\(\TopRegSrc\)]
+\[
+  \TopRegSrc(\Qsrc,\ChartSuppSrc,\{\Tau_{ij}\})
+  \longrightarrow
+  \mathsf{TopRegData}_{\mathrm{src}}
+  \ \text{or}\ \Bot .
+\]
+\(\mathsf{TopRegData}_{\mathrm{src}}\) is a source support structure
+\[
+  (\mathsf{Cover}_{\mathrm{src}},
+   \mathsf{Overlap}_{\mathrm{src}},
+   \mathsf{Refine}_{\mathrm{src}},
+   \mathsf{Locality}_{\mathrm{src}}).
+\]
+It may be topological, order-theoretic, sheaf-like, combinatorial,
+categorical, or algebraic, but it must state which mode is being used. It
+returns \(\Bot\) if target open sets or a target smooth atlas are required.
+\end{definition}
+
+\begin{obligation}[Source topology or regularity]
+Under non-bottom \(\RegSold\) output, source-chart supports generate
+\(\TopRegSrc\) without target topology import.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\subsection{Source Chart Support}
+
+\begin{definition}[\(\ChartSuppSrc\)]
+\[
+  \ChartSuppSrc(i,q,U_{\mathrm{src}})
+  \longrightarrow
+  \{\mathsf{supported},\mathsf{unsupported},\Bot\}.
+\]
+Here \(i\) is a source-chart candidate name, \(q\in\Qsrc\), and
+\(U_{\mathrm{src}}\) is a source support region. A chart name is not an
+adopted coordinate chart. Overlap support is source-defined by shared support
+evidence and selected transition tokens. Domain failure returns \(\Bot\).
+\end{definition}
+
+\begin{obligation}[Chart support]
+\(\ChartSuppSrc\) must not assume that \(\chi_i^{\mathrm{src}}\) maps into a
+pre-existing smooth coordinate domain.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\subsection{Regularity and Rank Coherence}
+
+\begin{definition}[\(\RegSrc\)]
+\[
+  \RegSrc(\Qsrc,\{\chi_i^{\mathrm{src}}\},\{\Tau_{ij}\},\TopRegSrc)
+  \longrightarrow
+  \mathsf{RegCertificate}_{\mathrm{src}}
+  \ \text{or}\ \Bot .
+\]
+A \(\mathsf{RegCertificate}_{\mathrm{src}}\) records a selected source
+regularity class, a rank or dimension analogue, overlap compatibility,
+transition-token coherence, and explicit limitations. It distinguishes
+inverse-token and cocycle-token checks from differentiable transition maps.
+It returns \(\Bot\) when rank, regularity, or transition compatibility cannot
+be source-derived.
+\end{definition}
+
+\begin{obligation}[Transition regularity]
+\(\GSC\) transition tokens plus \(\RegSrc\) imply the selected source
+regularity class across overlaps.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\subsection{Soldering}
+
+\begin{definition}[\(\SolderSrc\)]
+\[
+  \SolderSrc(r,\ChartSuppSrc,\Qsrc)
+  \longrightarrow
+  \mathsf{SolderCertificate}_{\mathrm{src}}
+  \ \text{or}\ \Bot ,
+\]
+where \(r\) is a \(\RespLC\) readout token treated only as source-side
+syntax. A soldering certificate states which readout tokens attach to which
+source-chart support obligations. It states uniqueness, nonuniqueness, or
+equivalence-class behavior. It returns \(\Bot\) for ambiguous, nonunique, or
+target-dependent attachment unless an explicit source equivalence relation
+handles the ambiguity.
+\end{definition}
+
+\begin{obligation}[Soldering compatibility]
+\(\SolderSrc\) attaches \(\RespLC\) readouts to source-chart support
+obligations without target metric, proper time, or empirical detector import.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\subsection{Finite-Variation Robustness}
+
+\begin{definition}[\(\VarRegSrc\)]
+\(\VarRegSrc\) is the finite-variation robustness class
+\[
+  (
+    \mathsf{VariationFamily}_{\mathrm{src}},
+    \mathsf{AffectedObjects}_{\mathrm{src}},
+    \mathsf{Preserve}_{\SepSrc},
+    \mathsf{Preserve}_{\TopRegSrc},
+    \mathsf{Preserve}_{\RegSrc},
+    \mathsf{Preserve}_{\SolderSrc},
+    \mathsf{FailureModes}_{\mathrm{src}},
+    \mathsf{BottomConditions}_{\mathrm{src}}
+  ).
+\]
+It generalizes beyond candidate-local \(\Vargsc\) only when the preservation
+predicates are stated. If the packet supports only bounded finite variation,
+that scope must be stated and arbitrary finite-variation robustness remains
+undischarged.
+\end{definition}
+
+\begin{obligation}[Finite-variation preservation]
+For every admissible finite variation \(v\in\VarRegSrc\), the law specifies
+whether separation, regularity, and soldering are preserved, transformed
+equivalently, or fail closed.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\subsection{Bottom Conditions}
+
+\begin{definition}[\(\BottomSrc\)]
+\[
+  \BottomSrc(\mathsf{reason\_code},\mathsf{evidence\_path},
+             \mathsf{violated\_guard})
+  \longrightarrow \Bot .
+\]
+\(\BottomSrc\) is mandatory when target topology, target smooth atlas, target
+metric, proper time, empirical detector semantics, benchmark success,
+registry or validator authority, role authority, handoff authority, generated
+derivatives, file order, missing source-local separation, nonunique soldering
+without equivalence handling, or missing finite-variation robustness are used
+as if they were source evidence.
+\end{definition}
+
+\section{No-Target-Import Theorem}
+
+\begin{lemma}[Packet-interface no-target-import]
+Every non-bottom certificate produced by \(\RegSold\), as defined in this
+packet, depends only on \(\mathcal{S}_{\mathrm{src}}\) and allowed
+source-extension assumptions.
+\end{lemma}
+
+\begin{proof}
+Each component of \(\RegSold\) has a source-domain signature:
+\(\SepSrc\) reads \(\Qsrc\) and source context, \(\TopRegSrc\) reads source
+support and source transition data, \(\ChartSuppSrc\) reads chart names and
+source supports, \(\RegSrc\) reads source chart candidates and source
+transition tokens, \(\SolderSrc\) reads \(\RespLC\) source readout tokens and
+source-chart support obligations, and \(\VarRegSrc\) reads finite source
+variation data. The forbidden premises are not elements of
+\(\mathcal{S}_{\mathrm{src}}\). If any forbidden premise is used, the
+\(\BottomSrc\) rule returns \(\Bot\). Therefore a non-bottom certificate
+cannot depend on target topology, target atlas, target metric, empirical
+semantics, benchmark success, or process authority under this packet
+interface.
+\end{proof}
+
+This lemma proves only the packet-interface guard. It does not prove that
+non-bottom certificates exist for arbitrary source-cover data.
+
+\section{Failure Branches}
+
+\begin{branch}[Separation collapse]
+If source-local separation collapses, route to a Refuter scoped regularity
+obstruction. Do not infer global theory rejection.
+\end{branch}
+
+\begin{branch}[Target topology or atlas import]
+If topology requires target open sets or smoothness requires target atlas,
+route to Smuggling Auditor hidden-import failure.
+\end{branch}
+
+\begin{branch}[Transition regularity failure]
+If transition tokens do not imply the selected source regularity class, route
+to Refuter transition-token obstruction.
+\end{branch}
+
+\begin{branch}[Rank or soldering nonuniqueness]
+If rank coherence or soldering is nonunique without source equivalence
+handling, route to law refinement or Theoretical Continuation Selector.
+\end{branch}
+
+\begin{branch}[Finite-variation fragility]
+If finite variation breaks regularity or soldering, route to finite-variation
+robustness law refinement or scoped obstruction.
+\end{branch}
+
+\begin{branch}[Finite or local scope only]
+If the law works only on finite or local cases, route to Candidate Constructor
+finite witness. Do not claim adoption.
+\end{branch}
+
+\begin{branch}[Source definition failure]
+If the law cannot be source-defined, route to scoped no-go refinement or route
+freeze. Do not claim future source-extension impossibility without a separate
+no-go theorem.
+\end{branch}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & Proposal-only \(\RegSold\) is defined as candidate-law data; \(\Msrc\) remains blocked pending audit, stress, and human gate. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & \(\VarRegSrc\) is formalized as an obligation class; arbitrary finite-variation robustness is not discharged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; continuation is non-orbital because a new source-law package and theorem-obligation suite were defined. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_law.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_law.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The
+Physicist-Mathematician child supplied the formal object and certificate
+families. The Physicist-Philosopher child preserved the authority distinction
+between proposal-only source-extension candidate data, canonical ontology,
+empirical recovery, process receipts, and benchmark status.
+
+\section{Conclusion}
+
+\(\RegSold\) is defined as a proposal-only source-manifold regularity and
+soldering law package. It converts the post-\(\Mgsccand\) obstruction into a
+typed law interface and proof-obligation suite rather than repeating the same
+missing primitive. The logical next packet is a Smuggling Auditor audit of
+\(\RegSold\). No adoption or downstream GR route is opened.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{m-src-candidate}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC source-manifold candidate} [Internal research-control artifact].
+
+\bibitem{m-src-audit}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC source-manifold candidate smuggling audit}
+[Internal research-control artifact].
+
+\bibitem{m-src-stress}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC source-manifold candidate Refuter stress test}
+[Internal research-control artifact].
+
+\bibitem{selector}
+The AEther-Flow Research Project. (2026, June 22). \emph{Resp\_lc M\_src
+GSC regular soldering selector decision}
+[Internal research-control artifact].
+
+\bibitem{handoff0133}
+The AEther-Flow Research Project. (2026, June 22). \emph{Handoff 0133}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
