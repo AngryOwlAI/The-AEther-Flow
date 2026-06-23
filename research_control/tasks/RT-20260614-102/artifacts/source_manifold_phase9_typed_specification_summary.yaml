@@ -1,0 +1,54 @@
+artifact_id: "SOURCE-MANIFOLD-PHASE9-TYPED-SPECIFICATION-SUMMARY"
+task_id: "RT-20260614-102"
+job_id: "AJ-RT-20260614-102-001"
+status: "completed"
+created_at: "2026-06-23T03:07:56Z"
+typed_interface_path: "scripts/research_control/source_manifold_types.py"
+test_path: "tests/test_source_manifold_types.py"
+claim_status:
+  typed_namespace: "draft/control"
+  reg_sold_law: "proposal-only"
+  proof_status: "not_proved"
+  adoption_authorized: false
+required_interfaces:
+  - "SourceToken"
+  - "SourceCarrier"
+  - "SourceRelation"
+  - "SourceCover"
+  - "QuotientSupport"
+  - "ChartCandidate"
+  - "ChartSupport"
+  - "TransitionToken"
+  - "InverseCheck"
+  - "CocycleCheck"
+  - "RespReadoutToken"
+  - "SolderingRelation"
+  - "VariationFamily"
+  - "RegularityCertificate"
+  - "SolderingCertificate"
+  - "BottomCondition"
+  - "RegSoldLaw"
+invariants:
+  SepSrcNoTargetTopology: "Source-cover and relation evidence rejects target topology and process authority."
+  ChartNamesAreNotCoordinates: "ChartCandidate names do not imply adopted coordinate charts."
+  TransitionTokensAreNotSmoothMaps: "TransitionToken records do not imply differentiability or smooth target maps without source regularity certificate identity."
+  SolderingNoTargetMetric: "SolderingRelation rejects target metric proper time and empirical detector semantics."
+  ValidationIsNotProof: "Validator PASS cannot instantiate a RegularityCertificate."
+acceptance_criteria_status:
+  clarifies_meanings: true
+  no_proof_overclaim: true
+  future_validator_integration: true
+  no_target_import_boundary: true
+  no_promotion_boundary: true
+forbidden_overread:
+  - "proof of source regularity"
+  - "proof of soldering"
+  - "FVR_src^GSC adoption"
+  - "RegSold_src^GSC adoption"
+  - "M_src adoption"
+  - "g_eff route"
+  - "matter coupling"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "Gate Chair verdict"
+logical_next_step: "Phase 10 route decision: freeze, human gate, or continue."
