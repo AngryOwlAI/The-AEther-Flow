@@ -1,0 +1,240 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mgsccand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{cand}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\TopRegSrc}{\mathsf{TopReg}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\RegSrc}{\mathsf{Reg}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{stress}{Stress Test}
+\newtheorem{lemma}{Lemma}
+\newtheorem{finding}{Finding}
+\newtheorem{guard}{Guard}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC Regularity and Soldering Finite Source Witness Refuter Stress Test}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Refuter output for
+\texttt{RT-20260614-097}. It stress-tests the audited finite/local source
+witness \(\mathsf{W}_*\) constructed in \texttt{RT-20260614-095} and audited
+in \texttt{RT-20260614-096}.
+
+The decisive result is
+\[
+  \texttt{finite\_witness\_stress\_result.status}
+  =
+  \texttt{bounded\_scope\_only}.
+\]
+The loop-risk category is
+\[
+  \texttt{loop\_risk\_decision.category}
+  =
+  \texttt{concrete\_witness\_path}.
+\]
+
+This is a local and non-promotional stress result. It does not adopt
+\(\RegSold\), does not adopt \(\Mgsccand\), does not adopt or fully construct
+\(\Msrc\), does not define \(\geff\), does not derive matter coupling, does
+not derive Einstein equations, does not promote benchmark status, does not
+issue a Gate Chair closure, does not claim completed derivation, does not
+claim future source-extension impossibility, and does not reject the global
+theory.
+
+\section{Stress Target}
+
+The target is the finite witness \(\mathsf{W}_*\) whose explicit data are:
+six source tokens, two quotient classes \(q_0,q_1\), three source chart labels,
+finite transition tokens that preserve quotient labels, a cardinality-rank
+analogue, \(\RespLC\) readout tokens \(r_0,r_1\), bounded relabeling and
+refinement variations, and fail-closed bottom branches.
+
+The Refuter question is whether this audited witness survives the Phase 8B
+stress targets without overfitting into a false adoption claim.
+
+\section{Stress Matrix}
+
+\begin{stress}[Finite witness overfitting]
+Does \(\mathsf{W}_*\) generalize beyond its listed finite token, quotient,
+chart, transition, rank, soldering, and variation data?
+\end{stress}
+
+\begin{proof}
+No. \(\mathsf{W}_*\) is explicit and non-bottom only for the listed finite
+source data. This is useful evidence, but it is not a general source-cover
+existence theorem and not adoption-level \(\Msrc\). The stress result is
+therefore bounded scope, not failure and not promotion.
+\end{proof}
+
+\begin{stress}[Relabeling fragility]
+Does chart relabeling or token renaming break the witness?
+\end{stress}
+
+\begin{proof}
+The recorded relabeling variation preserves profile incidence, quotient
+support, transition-token action, and soldering support. The witness survives
+the listed relabeling stress. This survival does not prove invariance under
+all possible source automorphisms.
+\end{proof}
+
+\begin{stress}[Refinement fragility]
+Does the witness survive source refinement?
+\end{stress}
+
+\begin{proof}
+The recorded refinement splits \(q_0\) into \(q_{0a},q_{0b}\) with duplicated
+profile \(p_0\) evidence and preserved transition-token action. That bounded
+refinement survives. Arbitrary refinement families remain unproved.
+\end{proof}
+
+\begin{stress}[Soldering nonuniqueness]
+Can one \(\RespLC\) token attach to incompatible quotient supports?
+\end{stress}
+
+\begin{proof}
+The witness treats multiple attachments as equivalent only when they share
+the same \(\RespLC\) token and quotient support across source-chart labels.
+If a token attaches to incompatible quotient supports, the witness returns
+\(\Bot\). This handles the listed nonuniqueness stress but does not establish
+a general soldering uniqueness theorem.
+\end{proof}
+
+\begin{stress}[Transition-token degeneracy]
+Do finite transition tokens become target coordinate transitions or smooth
+maps by implication?
+\end{stress}
+
+\begin{proof}
+No. The transition tokens preserve \(q_0\) and \(q_1\) and satisfy the listed
+finite inverse and cocycle checks. If a reverse token is missing, composition
+changes quotient labels, or smooth differentiability is inferred, the branch
+bottoms. The transition stress survives only as finite source-token
+compatibility.
+\end{proof}
+
+\begin{stress}[Variation fragility]
+Does \(\VarRegSrc\) discharge arbitrary finite-variation robustness?
+\end{stress}
+
+\begin{proof}
+No. The relabeling and one bounded refinement survive; the \(q_0,q_1\) merge
+bottoms. This is meaningful bounded variation evidence, but arbitrary
+finite-variation robustness remains a separate proof obligation.
+\end{proof}
+
+\begin{stress}[Bottom-condition leak]
+Do forbidden target or invalid source conditions leak into non-bottom output?
+\end{stress}
+
+\begin{proof}
+No leak is found for the listed target metric tie-breaker, target topology
+separation, quotient merge, incompatible soldering, and differentiability
+overread branches. The result is still scoped to the recorded bottom cases.
+\end{proof}
+
+\begin{stress}[Process-authority laundering]
+Do validation, registry, role, handoff, generated derivative, or file order
+repair missing witness mathematics?
+\end{stress}
+
+\begin{proof}
+No. These surfaces certify process and provenance only. They are not source
+tokens, quotient support, transition certificates, rank analogues, soldering
+equivalence, or finite-variation preservation data.
+\end{proof}
+
+\begin{stress}[Bridge-ladder collapse]
+Does finite witness survival unlock \(\Msrc\), \(\geff\), matter coupling,
+Einstein equations, benchmark promotion, or Gate Chair closure?
+\end{stress}
+
+\begin{proof}
+No. The finite witness supplies bounded source-extension evidence only. It
+does not define a source-to-metric map, universal coupling, dynamics, exact-GR
+benchmark recovery, or human-gated adoption verdict.
+\end{proof}
+
+\section{Bounded-Scope Lemma}
+
+\begin{lemma}[Audited finite witness survives only with bounded scope]
+Under the source-domain declarations and \(\BottomSrc\) rules recorded for
+\(\mathsf{W}_*\), the witness survives the listed finite/local Refuter stress
+branches. The survival is bounded to the explicit witness data and does not
+establish general source-cover existence, arbitrary finite-variation
+robustness, source-law adoption, or adoption-level \(\Msrc\).
+\end{lemma}
+
+\begin{proof}
+Each stress branch either has an explicit finite source witness datum or a
+fail-closed bottom result. Relabeling and one bounded refinement are witnessed;
+quotient merge, incompatible soldering, target-metric tie-breaking,
+target-topology separation, and differentiability overread bottom out. The
+remaining unsupported moves are not promoted. Therefore the finite witness
+survives as bounded source-extension data only.
+\end{proof}
+
+\begin{guard}[No promotion]
+The result \texttt{bounded\_scope\_only} is not a source-law adoption, not a
+generalization theorem, not arbitrary finite-variation robustness, and not
+\(\Msrc\) adoption.
+\end{guard}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & The finite/local witness survives stress only with bounded scope; \(\Msrc\) remains blocked pending route selection, generalization or robustness work, and human gate before adoption. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Bounded relabeling and one bounded refinement survive; arbitrary finite-variation robustness remains undischarged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the next packet is a route selector because bounded-scope survival leaves multiple legal same-milestone continuations. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Route Consequence}
+
+The stress result leaves multiple legal same-milestone continuations: a
+generalization law packet, a finite-variation robustness packet, a scoped
+repair or no-go refinement if a later selector frames one, or human-gated
+adoption framing only after a specific adoption proposal exists. Therefore
+the next bounded task should be a Theoretical Continuation Selector route
+decision. No automatic adoption, \(\geff\) route, or Gate Chair request is
+authorized here.
+
+\section*{Citation Note}
+
+No external literature is cited in this control artifact. The stressed
+material is repository-local draft/control source-extension data.
+
+\end{document}
