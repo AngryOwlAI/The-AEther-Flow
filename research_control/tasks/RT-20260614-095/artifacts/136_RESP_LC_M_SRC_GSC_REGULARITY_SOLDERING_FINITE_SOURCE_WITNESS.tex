@@ -1,0 +1,319 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mgsccand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{cand}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\TopRegSrc}{\mathsf{TopReg}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\RegSrc}{\mathsf{Reg}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{definition}{Definition}
+\newtheorem{construction}{Construction}
+\newtheorem{lemma}{Lemma}
+\newtheorem{guard}{Guard}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC Regularity and Soldering Finite Source Witness}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Candidate Constructor output for
+\texttt{RT-20260614-095}. It constructs one finite/local source witness for
+the proposal-only law package
+\[
+  \RegSold =
+  (\SepSrc,\TopRegSrc,\ChartSuppSrc,\RegSrc,\SolderSrc,\VarRegSrc,\BottomSrc)
+\]
+after \texttt{RT-20260614-094} found finite/local stress survival.
+
+The decisive result is
+\[
+  \texttt{candidate\_constructor\_result.result\_type}
+  =
+  \texttt{constructed\_candidate}.
+\]
+The witness is also recorded in the machine-readable artifact
+\texttt{finite\_source\_witness.yaml}.
+
+This is draft/control source-extension data. It does not adopt \(\RegSold\),
+does not adopt \(\Mgsccand\), does not adopt or fully construct \(\Msrc\),
+does not define \(\geff\), does not derive matter coupling, does not derive
+Einstein equations, does not promote benchmark status, does not issue a Gate
+Chair closure, does not claim completed derivation, does not claim future
+source-extension impossibility, and does not reject the global theory.
+
+\section{Finite Source Data}
+
+\begin{definition}[Token set]
+Let
+\[
+S_*=\{u_0,u_1,v_0,v_1,w_0,w_1\}.
+\]
+Each token carries only source-side labels: a profile marker \(p_0\) or
+\(p_1\), and a support marker \(\mathsf{left}\), \(\mathsf{middle}\), or
+\(\mathsf{right}\). These labels are not target coordinates, target
+neighborhoods, metric data, proper time, detector semantics, or benchmark
+data.
+\end{definition}
+
+\begin{definition}[Quotient support]
+Define finite quotient classes
+\[
+q_0=\{u_0,v_0,w_0\},\qquad
+q_1=\{u_1,v_1,w_1\}.
+\]
+The source-local separation certificate is the profile/incidence evidence
+distinguishing \(p_0\) from \(p_1\) across the finite cover. Thus
+\[
+\SepSrc(q_0,q_1,C_*)=\mathsf{true}.
+\]
+If that source evidence is collapsed, or if a target topology or target
+metric is used to separate \(q_0\) and \(q_1\), the branch returns \(\Bot\).
+\end{definition}
+
+\section{Source Cover and Chart Support}
+
+\begin{construction}[Finite combinatorial support]
+Let the source chart-candidate names be
+\[
+\chi_U^{\mathrm{src}},\quad
+\chi_V^{\mathrm{src}},\quad
+\chi_W^{\mathrm{src}},
+\]
+each supported on \(\{q_0,q_1\}\). The support mode is a finite
+combinatorial source cover with overlaps \(UV\), \(VW\), and \(UW\), each
+also supported on \(\{q_0,q_1\}\).
+
+This instantiates \(\TopRegSrc\) and \(\ChartSuppSrc\) only as finite support
+data. Chart names are not adopted coordinates. No target open set or smooth
+atlas is used.
+\end{construction}
+
+\section{Transition and Rank Certificates}
+
+\begin{construction}[Transition tokens]
+Define source transition tokens
+\[
+\tau_{UV},\tau_{VU},\tau_{VW},\tau_{WV},\tau_{UW},\tau_{WU}
+\]
+as finite relations sending \(q_0\mapsto q_0\) and \(q_1\mapsto q_1\) on the
+declared overlaps. The inverse checks are
+\[
+\tau_{VU}=\mathsf{inv}_{\mathrm{src}}(\tau_{UV}),\quad
+\tau_{WV}=\mathsf{inv}_{\mathrm{src}}(\tau_{VW}),\quad
+\tau_{WU}=\mathsf{inv}_{\mathrm{src}}(\tau_{UW}).
+\]
+The cocycle checks include
+\[
+\mathsf{comp}_{\mathrm{src}}(\tau_{VW},\tau_{UV})=\tau_{UW}
+\]
+and the corresponding reverse relation.
+\end{construction}
+
+\begin{definition}[Rank analogue]
+The finite rank analogue is
+\[
+\mathsf{rank}_{\mathrm{src}}(\chi_U)
+=\mathsf{rank}_{\mathrm{src}}(\chi_V)
+=\mathsf{rank}_{\mathrm{src}}(\chi_W)=2,
+\]
+where rank means the cardinality of the quotient support in the finite
+source-cover witness. It is overlap-stable in this witness. It is not a
+smooth dimension theorem.
+\end{definition}
+
+\section{Soldering}
+
+\begin{definition}[Response readout tokens]
+Let \(r_0\) and \(r_1\) be \(\RespLC\) readout tokens treated only as source
+syntax:
+\[
+  r_0 \leadsto q_0,\qquad r_1 \leadsto q_1.
+\]
+\end{definition}
+
+\begin{construction}[Soldering equivalence]
+\(\SolderSrc\) attaches \(r_0\) to the \(q_0\) support in
+\(\chi_U,\chi_V,\chi_W\), and \(r_1\) to the \(q_1\) support in the same
+chart candidates. Multiple attachments are equivalent exactly when they share
+the same readout token and quotient support across source-chart candidates.
+
+If a single readout token attaches to incompatible quotient supports without
+source equivalence, or if proper time or target metric data are used to
+select the attachment, \(\BottomSrc\) returns \(\Bot\).
+\end{construction}
+
+\section{Bounded Variation}
+
+\begin{construction}[Bounded \(\VarRegSrc\)]
+The witness admits two nontrivial finite variations:
+\begin{enumerate}
+  \item cyclic relabeling of the chart names \(U,V,W\), preserving
+  \(\SepSrc\), \(\TopRegSrc\), \(\ChartSuppSrc\), \(\RegSrc\), and
+  \(\SolderSrc\) up to source equivalence;
+  \item bounded refinement of \(q_0\) into \(q_{0a},q_{0b}\), with duplicated
+  profile evidence and preserved transition-token action.
+\end{enumerate}
+The merge variation \(q_0\sim q_1\) returns \(\Bot\). Therefore this witness
+shows bounded finite/local preservation only. It does not discharge arbitrary
+finite-variation robustness.
+\end{construction}
+
+\section{Bottom Demonstrations}
+
+\begin{construction}[Fail-closed branches]
+The witness records three explicit bottom branches:
+\begin{itemize}
+  \item target metric supplied as soldering tie-breaker returns \(\Bot\);
+  \item quotient merge of \(q_0\) and \(q_1\) without separating evidence
+  returns \(\Bot\);
+  \item nonunique soldering of \(r_0\) to both \(q_0\) and \(q_1\) without
+  source equivalence returns \(\Bot\).
+\end{itemize}
+\end{construction}
+
+\section{Finite Witness Lemma}
+
+\begin{lemma}[Finite/local RegSold witness]
+The finite data
+\[
+W_*=(S_*,\{q_0,q_1\},\{\chi_U,\chi_V,\chi_W\},
+\{\tau_{ij}\},\{r_0,r_1\},\VarRegSrc,\BottomSrc)
+\]
+instantiate non-bottom finite/local values for \(\SepSrc\), \(\TopRegSrc\),
+\(\ChartSuppSrc\), \(\RegSrc\), and \(\SolderSrc\), and bounded values for
+\(\VarRegSrc\), while forbidden or unsupported branches fail closed.
+\end{lemma}
+
+\begin{proof}
+The separation certificate distinguishes \(q_0\) and \(q_1\) using source
+profile/incidence evidence. The finite cover and chart supports are explicit
+combinatorial support data. The transition tokens have inverse and cocycle
+certificates over the listed quotient support. The rank analogue is constant
+over each chart and overlap. The soldering relation attaches readout tokens
+to source supports up to an explicit source equivalence. The bounded
+variations preserve the listed structures or return \(\Bot\). None of these
+steps uses target topology, target atlas, target metric, proper time,
+empirical detector semantics, benchmark behavior, validation status, registry
+authority, role authority, handoff authority, generated derivatives, or file
+order as a source premise.
+\end{proof}
+
+\begin{guard}[Bounded scope]
+The lemma is finite/local. It does not prove general non-bottom existence,
+arbitrary finite-variation robustness, source-law adoption, adoption-level
+\(\Msrc\), or any downstream GR object.
+\end{guard}
+
+\section{Checker Integration}
+
+No finite source-cover model checker is present in the current worktree.
+The implementation plan allows Phase 7 entry when either the checker exists
+or an explicit manual finite witness format is approved. Here
+\texttt{handoff-0136} explicitly requested source quotient tokens, source
+support mode, transition-token certificates, rank analogue, soldering
+equivalence, and bounded \(\VarRegSrc\) preservation data. This artifact and
+\texttt{finite\_source\_witness.yaml} provide that manual format. A later
+project-system packet may still implement the checker and replay this witness
+as test data.
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & A finite/local \(\RegSold\) witness is constructed as source-extension data; \(\Msrc\) remains unadopted pending audit, stress if needed, generalization, and human gate. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Bounded finite/local variation preservation is witnessed; arbitrary finite-variation robustness remains undischarged. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; the next packet is Smuggling Auditor audit of this witness. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_finite\_source\_witness.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_regularity\_soldering\_finite\_source\_witness.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The mathematical child
+supplied the explicit finite witness. The philosophical child preserved the
+distinction between finite source-extension data, source-law adoption,
+adoption-level \(\Msrc\), empirical recovery, process receipts, and downstream
+GR claims.
+
+\section{Conclusion}
+
+\begin{verdict}
+A finite/local \(\RegSold\) source witness has been constructed as
+draft/control source-extension data. The witness is explicit enough for audit:
+it names source tokens, quotient support, finite cover support, transition
+certificates, rank analogue, soldering equivalence, bounded variations, and
+bottom branches.
+\end{verdict}
+
+The logical next packet is one bounded Smuggling Auditor audit of the witness.
+No source-law adoption, \(\Msrc\) adoption, full \(\Msrc\) construction,
+\(\geff\), matter coupling, Einstein equations, benchmark promotion, Gate
+Chair closure, completed derivation, future source-extension impossibility, or
+global theory rejection is opened by this construction.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{law-formalization}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law formalization}
+[Internal research-control artifact].
+
+\bibitem{law-audit}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law smuggling audit}
+[Internal research-control artifact].
+
+\bibitem{law-stress}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law Refuter stress test}
+[Internal research-control artifact].
+
+\bibitem{handoff0136}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0136}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}

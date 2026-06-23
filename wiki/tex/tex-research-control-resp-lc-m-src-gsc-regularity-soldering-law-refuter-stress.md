@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-093/artifacts/134_RESP_LC_M_SRC_GSC_REGULARITY_SOLDERING_LAW_SMUGGLING_AUDIT.tex`
 - Generated output path: `wiki/tex/tex-research-control-resp-lc-m-src-gsc-regularity-soldering-law-refuter-stress.md`
+- Backlink from `TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-FINITE-SOURCE-WITNESS` `research_control/tasks/RT-20260614-095/artifacts/136_RESP_LC_M_SRC_GSC_REGULARITY_SOLDERING_FINITE_SOURCE_WITNESS.tex`
 
 ## Validation
 

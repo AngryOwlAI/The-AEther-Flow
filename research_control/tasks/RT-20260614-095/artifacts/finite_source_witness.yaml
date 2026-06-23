@@ -1,0 +1,220 @@
+witness_id: "FSW-REGSOLD-GSC-001"
+status: "source-extension data"
+claim_status: "draft/control"
+constructed_for: "RegSold_src^GSC"
+task_id: "RT-20260614-095"
+authority_note: "This witness is finite/local source-extension data only. It does not adopt RegSold_src^GSC, M_src, g_eff, matter coupling, Einstein equations, benchmark status, or a Gate Chair verdict."
+source_support_mode: "finite combinatorial source cover"
+source_tokens:
+  - id: "u0"
+    profile: "p0"
+    support_marker: "left"
+  - id: "u1"
+    profile: "p1"
+    support_marker: "left"
+  - id: "v0"
+    profile: "p0"
+    support_marker: "middle"
+  - id: "v1"
+    profile: "p1"
+    support_marker: "middle"
+  - id: "w0"
+    profile: "p0"
+    support_marker: "right"
+  - id: "w1"
+    profile: "p1"
+    support_marker: "right"
+quotient_support:
+  classes:
+    - id: "q0"
+      members:
+        - "u0"
+        - "v0"
+        - "w0"
+      separating_evidence: "profile p0 plus support-marker incidence"
+    - id: "q1"
+      members:
+        - "u1"
+        - "v1"
+        - "w1"
+      separating_evidence: "profile p1 plus support-marker incidence"
+  sep_src:
+    result: "non_bottom"
+    separated_pairs:
+      - "q0,q1"
+    invariant_under_relabelings:
+      - "swap chart names U,V,W while preserving profile incidence"
+      - "rename source tokens within each quotient class"
+    bottom_if:
+      - "profile evidence collapses q0 and q1"
+      - "target topology or metric is used to separate q0 and q1"
+chart_candidates:
+  - id: "chi_U_src"
+    support:
+      - "q0"
+      - "q1"
+  - id: "chi_V_src"
+    support:
+      - "q0"
+      - "q1"
+  - id: "chi_W_src"
+    support:
+      - "q0"
+      - "q1"
+chart_support:
+  topreg_src:
+    cover_mode: "finite combinatorial cover"
+    cover:
+      - "U"
+      - "V"
+      - "W"
+    overlaps:
+      - id: "UV"
+        support:
+          - "q0"
+          - "q1"
+      - id: "VW"
+        support:
+          - "q0"
+          - "q1"
+      - id: "UW"
+        support:
+          - "q0"
+          - "q1"
+    refinement_rule: "refinement may split a support only when each quotient class receives a source-token refinement witness"
+    bottom_if:
+      - "target open sets are invoked"
+      - "chart names are treated as adopted coordinates"
+transition_tokens:
+  - id: "tau_UV"
+    source_chart: "chi_U_src"
+    target_chart: "chi_V_src"
+    relation:
+      - ["q0", "q0"]
+      - ["q1", "q1"]
+  - id: "tau_VU"
+    source_chart: "chi_V_src"
+    target_chart: "chi_U_src"
+    relation:
+      - ["q0", "q0"]
+      - ["q1", "q1"]
+  - id: "tau_VW"
+    source_chart: "chi_V_src"
+    target_chart: "chi_W_src"
+    relation:
+      - ["q0", "q0"]
+      - ["q1", "q1"]
+  - id: "tau_WV"
+    source_chart: "chi_W_src"
+    target_chart: "chi_V_src"
+    relation:
+      - ["q0", "q0"]
+      - ["q1", "q1"]
+  - id: "tau_UW"
+    source_chart: "chi_U_src"
+    target_chart: "chi_W_src"
+    relation:
+      - ["q0", "q0"]
+      - ["q1", "q1"]
+  - id: "tau_WU"
+    source_chart: "chi_W_src"
+    target_chart: "chi_U_src"
+    relation:
+      - ["q0", "q0"]
+      - ["q1", "q1"]
+transition_certificates:
+  inverse_checks:
+    - "tau_VU is inv_src(tau_UV)"
+    - "tau_WV is inv_src(tau_VW)"
+    - "tau_WU is inv_src(tau_UW)"
+  cocycle_checks:
+    - "comp_src(tau_VW,tau_UV)=tau_UW"
+    - "comp_src(tau_WU,tau_VW)=tau_VU"
+  bottom_if:
+    - "a reverse source token is missing"
+    - "composition changes quotient labels"
+    - "smooth differentiability is inferred from transition-token syntax"
+rank_analogue:
+  rank_id: "rank_src_cardinality_2"
+  rule: "rank is the cardinality of each chart support over quotient classes"
+  value_by_chart:
+    chi_U_src: 2
+    chi_V_src: 2
+    chi_W_src: 2
+  overlap_stable: true
+  bottom_if:
+    - "overlap rank differs without equivalence handling"
+resp_lc_tokens:
+  - id: "r0"
+    source_support:
+      - "q0"
+  - id: "r1"
+    source_support:
+      - "q1"
+soldering:
+  equivalence_relation: "attachments are equivalent when they share the same Resp_lc token and quotient support across source-chart candidates"
+  candidates:
+    - resp_token: "r0"
+      chart_id: "chi_U_src"
+      support:
+        - "q0"
+    - resp_token: "r0"
+      chart_id: "chi_V_src"
+      support:
+        - "q0"
+    - resp_token: "r0"
+      chart_id: "chi_W_src"
+      support:
+        - "q0"
+    - resp_token: "r1"
+      chart_id: "chi_U_src"
+      support:
+        - "q1"
+    - resp_token: "r1"
+      chart_id: "chi_V_src"
+      support:
+        - "q1"
+    - resp_token: "r1"
+      chart_id: "chi_W_src"
+      support:
+        - "q1"
+  nonunique_but_equivalent: true
+  bottom_if:
+    - "one Resp_lc token attaches to incompatible quotient supports"
+    - "proper time or target metric resolves attachment"
+finite_variations:
+  - id: "var_relabel_charts"
+    operation: "rename charts U,V,W cyclically"
+    preserved_objects:
+      - "Sep_src"
+      - "TopReg_src"
+      - "ChartSupp_src"
+      - "Reg_src"
+      - "Solder_src"
+    result: "preserved_equivalently"
+  - id: "var_refine_q0"
+    operation: "split q0 into q0a,q0b with duplicated profile p0 evidence and preserved transition-token action"
+    preserved_objects:
+      - "Sep_src"
+      - "TopReg_src"
+      - "Reg_src"
+      - "Solder_src"
+    result: "preserved_under_bounded_refinement"
+  - id: "var_merge_q0_q1"
+    operation: "merge q0 and q1"
+    preserved_objects: []
+    result: "bottom"
+bottom_demonstrations:
+  - id: "BOTTOM-TARGET-METRIC"
+    trigger: "target metric supplied as soldering tie-breaker"
+    result: "bottom"
+  - id: "BOTTOM-NONSEPARATION"
+    trigger: "q0 and q1 merged without source evidence preserving separation"
+    result: "bottom"
+  - id: "BOTTOM-SOLDER-NONUNIQUE"
+    trigger: "r0 solders to q0 and q1 without source equivalence"
+    result: "bottom"
+checker_integration:
+  finite_source_cover_model_checker_present: false
+  checker_result: "not_applicable"
+  manual_witness_format_approval: "handoff-0136 explicitly requested source quotient tokens, source support mode, transition-token certificates, rank analogue, soldering equivalence, and bounded Var_reg_src preservation data"
