@@ -1,0 +1,188 @@
+completion_id: "AJC-AJ-RT-20260614-116-001"
+job_id: "AJ-RT-20260614-116-001"
+task_id: "RT-20260614-116"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-06-23T21:21:39Z"
+status: "completed"
+output_paths:
+  - ".gitignore"
+  - ".local/**"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0155.yaml"
+  - "research_control/handoffs/handoff-0155.md"
+  - "research_control/tasks/RT-20260614-116/jobs/completions/AJC-AJ-RT-20260614-116-001.yaml"
+  - "research_control/tasks/RT-20260614-078/jobs/AJ-RT-20260614-078-001.yaml"
+  - "research_control/tasks/RT-20260614-078/jobs/completions/AJC-AJ-RT-20260614-078-001.yaml"
+  - "research_control/tasks/RT-20260614-081/jobs/AJ-RT-20260614-081-001.yaml"
+  - "research_control/tasks/RT-20260614-081/jobs/completions/AJC-AJ-RT-20260614-081-001.yaml"
+  - "research_control/tasks/RT-20260618-011/jobs/AJ-RT-20260618-011-001.yaml"
+  - "research_control/tasks/RT-20260618-011/jobs/completions/AJC-AJ-RT-20260618-011-001.yaml"
+  - "research_control/tasks/RT-20260618-012/jobs/AJ-RT-20260618-012-001.yaml"
+  - "research_control/tasks/RT-20260618-012/jobs/completions/AJC-AJ-RT-20260618-012-001.yaml"
+  - "research_control/tasks/RT-20260618-013/jobs/AJ-RT-20260618-013-001.yaml"
+  - "research_control/tasks/RT-20260618-013/jobs/completions/AJC-AJ-RT-20260618-013-001.yaml"
+  - "research_control/tasks/RT-20260618-014/jobs/AJ-RT-20260618-014-001.yaml"
+  - "research_control/tasks/RT-20260618-014/jobs/completions/AJC-AJ-RT-20260618-014-001.yaml"
+  - "research_control/tasks/RT-20260618-015/jobs/AJ-RT-20260618-015-001.yaml"
+  - "research_control/tasks/RT-20260618-016/jobs/AJ-RT-20260618-016-001.yaml"
+  - "research_control/tasks/RT-20260618-018/jobs/AJ-RT-20260618-018-001.yaml"
+  - "research_control/tasks/RT-20260618-018/jobs/completions/AJC-AJ-RT-20260618-018-001.yaml"
+  - "research_control/tasks/RT-20260618-020/jobs/AJ-RT-20260618-020-001.yaml"
+  - "research_control/tasks/RT-20260618-020/jobs/completions/AJC-AJ-RT-20260618-020-001.yaml"
+  - "research_control/tasks/RT-20260619-001/jobs/AJ-RT-20260619-001-001.yaml"
+  - "research_control/tasks/RT-20260619-001/jobs/completions/AJC-AJ-RT-20260619-001-001.yaml"
+  - "research_control/tasks/RT-20260619-005/jobs/AJ-RT-20260619-005-001.yaml"
+  - "research_control/tasks/RT-20260619-005/jobs/completions/AJC-AJ-RT-20260619-005-001.yaml"
+  - "research_control/tasks/RT-20260619-006/jobs/AJ-RT-20260619-006-001.yaml"
+  - "research_control/tasks/RT-20260619-006/jobs/completions/AJC-AJ-RT-20260619-006-001.yaml"
+  - "research_control/tasks/RT-20260619-007/jobs/AJ-RT-20260619-007-001.yaml"
+  - "research_control/tasks/RT-20260619-007/jobs/completions/AJC-AJ-RT-20260619-007-001.yaml"
+  - "research_control/tasks/RT-20260619-008/jobs/AJ-RT-20260619-008-001.yaml"
+  - "research_control/tasks/RT-20260619-008/jobs/completions/AJC-AJ-RT-20260619-008-001.yaml"
+  - "research_control/tasks/RT-20260622-001/jobs/AJ-RT-20260622-001-001.yaml"
+  - "research_control/tasks/RT-20260622-001/jobs/completions/AJC-AJ-RT-20260622-001-001.yaml"
+  - "research_control/tasks/RT-20260622-002/jobs/AJ-RT-20260622-002-001.yaml"
+  - "research_control/tasks/RT-20260622-002/jobs/completions/AJC-AJ-RT-20260622-002-001.yaml"
+  - "research_control/tasks/RT-20260622-003/jobs/AJ-RT-20260622-003-001.yaml"
+  - "research_control/tasks/RT-20260622-003/jobs/completions/AJC-AJ-RT-20260622-003-001.yaml"
+  - "research_control/tasks/RT-20260622-008/jobs/AJ-RT-20260622-008-001.yaml"
+  - "research_control/tasks/RT-20260622-008/jobs/completions/AJC-AJ-RT-20260622-008-001.yaml"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v3.md"
+  - "research_control/handoffs/handoff-0154.yaml"
+  - "research_control/handoffs/handoff-0154.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"local retrieval cache authority\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup AGENTS.md --json | exit_code=0 | status=pass"
+  - "git status --short | exit_code=0 | status=clean_preflight"
+  - "git ls-files .local | exit_code=0 | status=tracked_local_paths_present_before_cleanup | count=320"
+  - "git check-ignore -v .local .local/* .local/content_semantics | exit_code=0 | status=local_ignore_rule_present_pre_cleanup"
+  - "git rm -r --cached .local | exit_code=0 | status=pass_index_only_removal"
+  - "git ls-files .local | exit_code=0 | status=no_tracked_local_paths_after_cleanup"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | status=failed_before_agents_preflight_hash_repair"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "local_tracking_governance_completed_candidate_constructor_next"
+local_tracking_governance:
+  preferred_policy: "local_untracked_retrieval_cache"
+  gitignore_policy: "/.local/ is tracked in .gitignore"
+  tracked_local_paths_before: 320
+  tracked_local_paths_after: 0
+  working_copy_deletion_performed: false
+  authority_status: ".local is retrieval/cache support only and not scientific or control authority."
+  stale_preflight_hash_repair:
+    status: "synchronized"
+    repaired_object_ids:
+      - "MD-AGENTS"
+      - "MD-AGENTS-RESEARCH-CONTROL"
+    repaired_receipt_count: 36
+    authority_status: "Validator-required memory-preflight hash synchronization only; no historical verdict or physics claim changed."
+acceptance_criteria_status:
+  git_ls_files_local_returns_no_files: true
+  local_not_scientific_authority: true
+  bootstrap_behavior_and_allowlists_agree: true
+  validators_pass: true
+  handoff_routes_to_candidate_constructor: true
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "FVR_src^GSC adoption"
+    - "RegSold_src^GSC adoption"
+    - "M_src adoption"
+    - "full M_src construction"
+    - "g_eff claim"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair closure"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "The .local cleanup is project-system governance only and not physics evidence."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 342
+    relationship_row_count: 1981
+    semantic_row_count: 342
+    vault_row_count: 342
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"local retrieval cache authority\" --limit 10 --json"
+      query_type: "search"
+      query_text: "local retrieval cache authority"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-2-0-MD"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup AGENTS.md --json"
+      query_type: "lookup"
+      query_text: "AGENTS.md"
+      returned_object_ids:
+        - "MD-AGENTS"
+  canonical_inspections:
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-MEMORY-SYSTEM-MAINTAINER-V0-2-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+      source_hash: "8e004432452888b82432f16b82dc51839c69a5f363ac5aa2559ad4f9ba3deeb4"
+    - object_id: "MD-AGENTS"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "AGENTS.md"
+      source_hash: "0ffe3ee1150276d72daf9b11aa2862496637ea5a6648158a9293ce8e293393fb"
+    - object_id: "MD-AGENTS-RESEARCH-CONTROL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/AGENTS.md"
+      source_hash: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROJECT-CONTROL-MAINTAINER-V0-2-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+      source_hash: "91fb7697fb5c493bb876c2b3dd79ac1d7ca013ae8e19c368c5e915e93af5fa6f"
+  direct_source_inspections:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v3.md"
+    - "research_control/program_state.yaml"
+    - "research_control/handoffs/handoff-0154.yaml"
+    - "research_control/handoffs/handoff-0154.md"
+    - "research_control/tasks/RT-20260614-115/jobs/completions/AJC-AJ-RT-20260614-115-001.yaml"
+    - ".gitignore"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory index, and .local are retrieval layers only and not authority."
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids:
+    - ""
+  bridge_status: "not_required"
+  notes: "Only blank project_improvement_signals were emitted."
+next_required_packet: "candidate_constructor_gencover_to_msrc_bridge_attempt"

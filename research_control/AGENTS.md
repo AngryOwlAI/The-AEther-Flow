@@ -8,7 +8,8 @@ Scoped guidance for `research_control/`.
 
 Tracked research-control files define task state, Director decisions, AgentJobs,
 completion records, approvals, and handoffs. `.local/` files are optional
-caches and never override tracked control state.
+local retrieval caches. They may be regenerated locally, but they must remain
+untracked and never override tracked control state.
 
 ## Continuation Rule
 
@@ -81,6 +82,9 @@ authority, or weaken exact-GR recovery obligations.
   activation or creation. Supersede rather than rewrite.
 - Science-bearing role outputs must be tracked task artifacts and registered in
   the TeX registry when they are `.tex`.
+- Do not commit `.local/` retrieval cache files as research-control outputs.
+  Bootstrap may refresh `.local/` locally, but those changes must remain
+  outside committed transaction diffs.
 - Do not edit generated wiki notes here.
 - Run ` .venv/bin/python scripts/research_control/validate_research_control.py`
   after control changes.
