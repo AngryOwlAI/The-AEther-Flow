@@ -1,0 +1,195 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVRSrc}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{verdict}{Verdict}
+\newtheorem{finding}{Finding}
+\newtheorem{lemma}{Lemma}
+
+\title{Checker Replay Consumption Smuggling Audit}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Smuggling Auditor output for
+\texttt{RT-20260614-107}. It audits the finite source-cover checker replay
+recorded in
+\texttt{research\_control/tasks/RT-20260614-104/artifacts/finite\_source\_cover\_checker\_replay\_summary.yaml}
+and its linkage to the finite/local witness
+\texttt{FSW-REGSOLD-GSC-001}.
+
+The audit result is
+\[
+  \texttt{checker\_replay\_audit\_result.status}
+  =
+  \texttt{conditional\_source\_purity\_pass}.
+\]
+This is not a proof result. It does not adopt \(\FVRSrc\), does not adopt
+\(\RegSold\), does not adopt or fully construct \(\Msrc\), does not define
+\(\geff\), does not derive matter coupling, does not derive Einstein equations,
+does not promote benchmark status, does not issue a Gate Chair closure, does
+not claim completed derivation, does not claim future source-extension
+impossibility, and does not reject the global theory.
+
+\section{Audit Question}
+
+The audit question is whether the checker replay, as written, imports target
+topology, target smooth atlas, target coordinate transitions, target metric,
+proper time, empirical detector semantics, benchmark behavior, validation
+authority, registry authority, role authority, handoff authority, generated
+derivatives, file order, or checker PASS as source evidence.
+
+\section{Replay Evidence}
+
+The replay command was:
+\[
+\texttt{.venv/bin/python scripts/research\_control/finite\_source\_cover\_model\_checker.py --input research\_control/tasks/RT-20260614-095/artifacts/finite\_source\_witness.yaml --json}.
+\]
+It returned:
+\[
+  \texttt{status}=\texttt{pass\_candidate\_local},
+  \quad
+  \texttt{failures}=[],
+  \quad
+  \texttt{bottom\_demonstrations\_checked}=3.
+\]
+The replay reports all authority flags as false: no physics claim authority,
+no source-law adoption authority, no \(\Msrc\) adoption authority, no
+\(\geff\) authority, and no benchmark-promotion authority.
+
+\section{Audit Matrix}
+
+\begin{center}
+\begin{tabular}{p{0.22\linewidth}p{0.42\linewidth}p{0.27\linewidth}}
+\hline
+Replay component & Audit finding & Remaining burden \\
+\hline
+Checked objects &
+The replay checks \(\SepSrc\), \(\ChartSuppSrc\), overlap support, inverse
+tokens, cocycle tokens, rank analogue, \(\SolderSrc\), \(\VarRegSrc\),
+no-target-import flags, and \(\BottomSrc\) at finite/local scope. &
+Refuter stress must test whether these finite checks survive adversarial
+finite perturbations. \\
+Target-import flags &
+The checker rejects target metric, target atlas, target topology, target open
+set, target coordinate, proper time, benchmark success, \(\geff\),
+matter-coupling, and Einstein-equation fields outside bottom or
+authority-warning contexts. &
+Stress must test whether the flag logic can be bypassed or laundered. \\
+Bottom demonstrations &
+The replay checks three bottom demonstrations: target-metric tie-breaker,
+nonseparation merge, and incompatible soldering. &
+Stress must test bottom-condition leaks and unlisted bottom branches. \\
+Witness linkage &
+The replay consumes \texttt{finite\_source\_witness.yaml} as finite source data
+and does not add target coordinate domains, target topology, target metric, or
+observer protocol premises. &
+Stress must test whether replay-schema normalization hides a witness defect. \\
+Finite scope &
+\texttt{pass\_candidate\_local} is finite/local evidence only. It is not a
+general source-cover theorem, arbitrary finite-variation theorem, or
+adoption-level \(\Msrc\) construction. &
+Generalization and adoption remain blocked. \\
+Authority flags &
+The checker output explicitly sets physics, source-law adoption, \(\Msrc\)
+adoption, \(\geff\), and benchmark-promotion authority to false. &
+Later packets must not treat these flags as proof; they are guardrails. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Process-Authority Audit}
+
+\begin{finding}[Checker pass is not proof]
+The string \(\texttt{pass\_candidate\_local}\), the process exit code, the
+validation status, registry rows, role labels, handoffs, file order, generated
+wiki notes, Obsidian mirrors, semantic extracts, and SQLite retrieval rows are
+process and retrieval evidence. They do not prove source regularity, soldering,
+arbitrary finite-variation robustness, \(\Msrc\), \(\geff\), matter coupling,
+Einstein equations, or benchmark success.
+\end{finding}
+
+\begin{finding}[Finite replay overread is blocked]
+The replay verifies one finite/local fixture against one deterministic checker
+contract. It does not establish general source-cover existence, arbitrary
+finite-variation robustness, or source-law adoption. It may route the branch to
+stress because it provides a concrete finite artifact with explicit bottom
+cases.
+\end{finding}
+
+\section{Conditional Source-Purity Lemma}
+
+\begin{lemma}[Checker replay source-purity as written]
+Assume the source-domain declarations in
+\texttt{finite\_source\_witness.yaml}, the no-target-import guard map, and the
+checker's fail-closed target-import flag handling. Then the replay result as
+written does not require target topology, target smooth atlas, target
+coordinate transition, target metric, proper time, empirical detector
+semantics, benchmark success, validation authority, registry authority, role
+authority, handoff authority, generated derivative authority, file-order
+authority, checker PASS authority, or adoption authority as a non-bottom source
+premise.
+\end{lemma}
+
+\begin{proof}
+The replay's non-bottom path uses finite source tokens, finite quotient
+classes, finite source-cover supports, source transition relations, inverse and
+cocycle checks, rank-cardinality coherence, \(\RespLC\) source syntax,
+bounded source variations, and declared \(\BottomSrc\) demonstrations. The
+checker contract rejects forbidden target and downstream GR fields outside
+bottom or authority-warning contexts, and the replay summary records all
+promotion and adoption authority flags as false. Therefore no forbidden target
+or process-authority class is needed for the replay's finite/local non-bottom
+reading as written.
+\end{proof}
+
+\section{Verdict}
+
+\begin{verdict}[Conditional source-purity pass]
+The finite source-cover checker replay receives
+\[
+  \texttt{conditional\_source\_purity\_pass}.
+\]
+No hidden target import or process-authority laundering is detected as a
+required non-bottom premise in the replay evidence as written. The pass is
+conditional on retaining the source-domain declarations, checker contract,
+bottom rules, authority flags, and non-adoption claim boundary.
+\end{verdict}
+
+\section{Next Stress Targets}
+
+The next required packet is one bounded Refuter stress test of the audited
+checker replay consequences. The stress packet should test target-import flag
+bypass, checker-schema fragility, finite-model overread, witness-linkage
+normalization defects, bottom-condition leaks, authority-flag laundering,
+bounded-variation fragility, and whether \(\texttt{pass\_candidate\_local}\)
+survives adversarial finite source-cover perturbations.
+
+The following remain blocked: source-law adoption, \(\FVRSrc\) adoption,
+\(\RegSold\) adoption, \(\Msrc\) adoption, full \(\Msrc\) construction,
+\(\geff\), matter coupling, Einstein equations, benchmark promotion, Gate
+Chair closure, completed derivation, future source-extension impossibility,
+and global theory rejection.
+
+\section*{Citation Note}
+
+No external literature is cited in this control artifact. The audited material
+is repository-local draft/control source-extension data.
+
+\end{document}

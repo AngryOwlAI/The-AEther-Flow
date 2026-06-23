@@ -1,0 +1,27 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-107"
+status: "completed"
+audited_inputs:
+  replay_summary_path: "research_control/tasks/RT-20260614-104/artifacts/finite_source_cover_checker_replay_summary.yaml"
+  witness_yaml_path: "research_control/tasks/RT-20260614-095/artifacts/finite_source_witness.yaml"
+  checker_path: "scripts/research_control/finite_source_cover_model_checker.py"
+  guard_map_path: "research_control/design/no_target_import_guard_map.md"
+audit_scope:
+  - "checker replay status"
+  - "checked finite objects"
+  - "target-import flag handling"
+  - "bottom demonstrations"
+  - "finite/local witness linkage"
+  - "authority flags"
+  - "finite-model overread"
+math_findings:
+  replay_status: "pass_candidate_local with failures_count 0 and bottom_demonstrations_checked 3."
+  checked_objects: "Sep_src ChartSupp_src OverlapSupp_src Inv_src Cocycle_src Rank_src Solder_src Var_reg_src NoTargetImport and Bottom_src were checked at finite/local scope."
+  target_import_flags: "The checker rejects target_metric target_atlas target_topology target_open_set target_coordinate proper_time benchmark_success g_eff matter_coupling and Einstein-equation fields outside bottom or authority-warning contexts."
+  bottom_handling: "The replay checked three bottom demonstrations: target metric tie-breaker nonseparation merge and incompatible soldering."
+  witness_linkage: "The replay uses finite_source_witness.yaml as source data and does not introduce target coordinate domains or target metrics."
+  finite_model_scope: "The replay is finite/local. It does not imply general source-cover existence or arbitrary finite-variation robustness."
+verdict: "conditional_source_purity_pass"
+next_required_role: "refuter"
+claim_boundary_preserved: true
