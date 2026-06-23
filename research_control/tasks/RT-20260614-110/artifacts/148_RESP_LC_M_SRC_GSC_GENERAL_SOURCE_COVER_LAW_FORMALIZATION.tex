@@ -1,0 +1,433 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVRSrc}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\GenCover}{\mathsf{GenCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\AdmExt}{\mathsf{AdmExt}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\CoverExt}{\mathsf{CoverExtend}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\NonBottom}{\mathsf{NonBottomCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Cert}{\mathsf{GenCoverCert}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Anchor}{\mathsf{Anchor}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law Package}
+\newtheorem{obligation}{Theorem Obligation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{branch}{Failure Branch}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC General Source-Cover Law Formalization}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Ontology Formalizer output for
+\texttt{RT-20260614-110}. It executes the bounded packet selected by
+\texttt{RT-20260614-109}: define proposal-only
+\texttt{MSRC-GSC-GENERAL-SOURCE-COVER-LAW}.
+
+The decisive result is
+\[
+  \texttt{ontology\_law\_formalization\_result.status}
+  =
+  \texttt{candidate\_law\_defined}.
+\]
+The law identifier is
+\[
+  \texttt{MSRC-GSC-GENERAL-SOURCE-COVER-LAW},
+\]
+with notation \(\GenCover\).
+
+This artifact is draft/control and proposal-only. It does not canonically
+adopt \(\GenCover\), does not adopt \(\FVRSrc\), does not adopt
+\(\RegSold\), does not adopt or fully construct \(\Msrc\), does not define
+\(\geff\), does not derive matter coupling, does not derive Einstein
+equations, does not promote benchmark status, does not issue a Gate Chair
+closure, does not claim completed derivation, does not claim future
+source-extension impossibility, and does not reject the global theory.
+
+\section{Source Domain}
+
+\begin{definition}[Source data universe]
+Let \(\mathcal{S}_{\mathrm{src}}\) be the source-side data universe available
+to this packet. It may contain source tokens, source quotient-support records,
+source-cover labels, source chart-support records, source transition tokens,
+inverse-token and cocycle-token certificates, \(\RespLC\) readout tokens
+already admitted by source-side localization, draft/control \(\RegSold\)
+certificates, draft/control \(\FVRSrc\) certificates, and the finite checker
+replay record from \texttt{RT-20260614-104}.
+\end{definition}
+
+\begin{definition}[Forbidden premises]
+The following are not members of \(\mathcal{S}_{\mathrm{src}}\): target open
+sets, target neighborhoods, target manifold topology, target smooth atlases,
+target coordinate transitions, target metric data, metric signature, proper
+time, empirical detector semantics, benchmark success, validation status,
+registry metadata, role identity, handoff authority, generated derivatives,
+or file order.
+\end{definition}
+
+\begin{definition}[Three-valued source outcome]
+Let
+\[
+  \mathbb{B}_{\Bot}=\{\mathsf{true},\mathsf{false},\Bot\}.
+\]
+\(\Bot\) means fail-closed. It is not a weak pass and not an invitation to
+repair the branch with target or process authority.
+\end{definition}
+
+\section{Extension Records}
+
+\begin{definition}[Finite replay anchor]
+The finite checker replay anchor is a record
+\[
+  R_{\mathrm{replay}} =
+  (Q_{\mathrm{fin}}, C_{\mathrm{fin}}, T_{\mathrm{fin}},
+   S_{\mathrm{fin}}, V_{\mathrm{fin}}, B_{\mathrm{fin}})
+\]
+containing finite quotient classes, finite chart-support data, finite
+transition-token certificates, finite soldering evidence, bounded variation
+checks, and bottom demonstrations from the registered checker replay. It is
+source-extension data only.
+\end{definition}
+
+\begin{definition}[General source-cover extension record]
+A source-cover extension record is a tuple
+\[
+  E =
+  (I,\{U_i\}_{i\in I},\{\mathsf{Ov}^{\mathrm{src}}_{ij}\},
+   \{\chi_i^{\mathrm{src}}\},\{\Cand_{ij}^{\mathrm{src}}\},
+   \rho,\Sigma,\mathcal{V},\mathcal{B})
+\]
+where:
+\begin{itemize}
+  \item \(I\) is a finite or locally finite source index set;
+  \item \(U_i\) are source carriers, not target coordinate domains;
+  \item \(\mathsf{Ov}^{\mathrm{src}}_{ij}\) are source overlap relations;
+  \item \(\chi_i^{\mathrm{src}}\) are chart-candidate names with source
+        support obligations, not adopted coordinates;
+  \item \(\Cand_{ij}^{\mathrm{src}}\) are source transition-token candidates;
+  \item \(\rho\) anchors the finite replay data inside the extension record;
+  \item \(\Sigma\) records source separation, support, inverse, cocycle,
+        and soldering certificates;
+  \item \(\mathcal{V}\) records admissible source-cover variations; and
+  \item \(\mathcal{B}\) records bottom branches.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Admissible extension predicate]
+For \(E\) and \(R_{\mathrm{replay}}\), define
+\[
+  \AdmExt(E,R_{\mathrm{replay}})\in\mathbb{B}_{\Bot}.
+\]
+The value is \(\mathsf{true}\) only when all of the following source-side
+conditions are supplied:
+\begin{enumerate}
+  \item \(\rho\) embeds the finite replay anchor into \(E\) by source-token
+        identities or explicit source equivalence;
+  \item source-local separation certificates extend the finite replay
+        separation data to every declared source-overlap class;
+  \item source chart-support records are supplied without target open sets or
+        target coordinate neighborhoods;
+  \item selected transition tokens have source inverse and cocycle
+        certificates wherever overlap composition is declared;
+  \item \(\RespLC\) readout-token attachment is mediated by
+        \(\SolderSrc\) certificates or explicit source equivalence classes;
+  \item \(\mathcal{V}\) states admissible source variations and what they
+        preserve, transform equivalently, fail, or bottom; and
+  \item no forbidden premise is used.
+\end{enumerate}
+The value is \(\Bot\) if a branch requires target geometry or process
+authority. It is \(\mathsf{false}\) if source data are present but explicitly
+fail a stated source condition.
+\end{definition}
+
+\section{Law Package}
+
+\begin{law}[Proposal-only general source-cover law \(\GenCover\)]
+Define the proposal-only law package
+\[
+  \GenCover =
+  (
+    \mathcal{S}_{\mathrm{src}},
+    R_{\mathrm{replay}},
+    \AdmExt,
+    \NonBottom,
+    \CoverExt,
+    \Cert,
+    \BottomSrc
+  ).
+\]
+For non-bottom output, this package returns draft/control source-extension
+data for a generalized source-cover candidate. It does not adopt
+\(\GenCover\), \(\FVRSrc\), \(\RegSold\), or \(\Msrc\).
+\end{law}
+
+\begin{definition}[Non-bottom certificate]
+\[
+  \NonBottom(E) \longrightarrow \Cert(E)\ \text{or}\ \Bot .
+\]
+\(\Cert(E)\) contains source-only certificate families:
+\[
+  \Cert(E)=
+  (
+    \Anchor,
+    \SepSrc,
+    \ChartSuppSrc,
+    \mathsf{Inv}_{\mathrm{src}},
+    \mathsf{Cocycle}_{\mathrm{src}},
+    \SolderSrc,
+    \VarRegSrc,
+    \BottomSrc
+  ).
+\]
+The certificate is non-bottom only when every listed component is supplied
+from \(\mathcal{S}_{\mathrm{src}}\).
+\end{definition}
+
+\begin{definition}[Cover-extension map]
+The source-cover extension map is
+\[
+  \CoverExt(R_{\mathrm{replay}},E)
+  =
+  \begin{cases}
+    (\Qsrc,\{\chi_i^{\mathrm{src}}\},\{\Tau_{ij}\},\Cert(E)),
+    & \text{if }\AdmExt(E,R_{\mathrm{replay}})=\mathsf{true}
+      \text{ and }\NonBottom(E)\neq\Bot,\\
+    \Bot, & \text{otherwise.}
+  \end{cases}
+\]
+The non-bottom output is a proposal-only generalized source-cover candidate.
+It is not a target manifold and not adopted \(\Msrc\).
+\end{definition}
+
+\section{Theorem With Hypotheses}
+
+\begin{lemma}[Source-only non-bottom dependency]
+Assume \(\AdmExt(E,R_{\mathrm{replay}})=\mathsf{true}\) and
+\(\NonBottom(E)\neq\Bot\). Then every component of
+\(\CoverExt(R_{\mathrm{replay}},E)\) depends only on
+\(\mathcal{S}_{\mathrm{src}}\).
+\end{lemma}
+
+\begin{proof}
+The admissible-extension predicate requires source anchoring, source-local
+separation, source chart support, source transition tokens, source inverse
+and cocycle certificates, source soldering certificates, admissible
+source-variation records, and explicit bottom branches. The non-bottom
+certificate repeats those components as source-only certificate families.
+Every forbidden premise is excluded from \(\mathcal{S}_{\mathrm{src}}\), and
+any branch requiring target topology, target atlas, target coordinate
+transition, target metric, proper time, empirical detector semantics,
+benchmark success, validation status, registry metadata, role identity,
+handoff status, generated derivatives, or file order returns \(\Bot\).
+Therefore a non-bottom output cannot depend on forbidden target or process
+authority.
+\end{proof}
+
+\section{Proof Obligations}
+
+\begin{obligation}[Anchor extension]
+Show that \(\rho\) embeds the finite checker replay anchor into \(E\) by
+source-token identity or explicit source equivalence.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Source-local separation extension]
+For every declared source-overlap class in \(E\), source-local separation
+evidence must be supplied or the branch must fail closed.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Transition inverse and cocycle extension]
+Every selected transition token \(\Tau_{ij}\) must have source inverse and
+cocycle certificates on declared overlaps. Missing or nonunique certificates
+return \(\Bot\).
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Soldering compatibility]
+\(\SolderSrc\) must attach \(\RespLC\) readout tokens to source chart-support
+obligations without target metric, proper time, or empirical detector import.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Variation compatibility]
+\(\VarRegSrc\) must state which source-cover variations preserve, transform
+equivalently, fail, or bottom for \(\SepSrc\), \(\ChartSuppSrc\), transition
+tokens, and \(\SolderSrc\).
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[No-target-import audit]
+Before \(\GenCover\) can be used as source-pure source-extension data, a
+Smuggling Auditor must audit every non-bottom certificate family and bottom
+branch.
+
+Status: \texttt{pending\_audit}.
+\end{obligation}
+
+\section{Failure Branches}
+
+\begin{branch}[Unsupported extension]
+If \(E\) lacks source-local separation, chart support, transition, inverse,
+cocycle, soldering, or variation records required by \(\AdmExt\), then
+\(\CoverExt(R_{\mathrm{replay}},E)=\Bot\).
+\end{branch}
+
+\begin{branch}[Selector nonuniqueness]
+If transition candidates are tied under source data and no explicit source
+equivalence resolves the tie, file order, registry order, validation status,
+role identity, or target resemblance may not break the tie. The output is
+\(\Bot\).
+\end{branch}
+
+\begin{branch}[Soldering nonuniqueness]
+If \(\RespLC\) readout attachment is nonunique without an explicit source
+equivalence relation, \(\SolderSrc\) bottoms the branch.
+\end{branch}
+
+\begin{branch}[Target or process import]
+If a branch uses target topology, target atlas, target metric, proper time,
+empirical detector semantics, benchmark success, validation status, registry
+metadata, role identity, handoff status, generated derivatives, or file
+order as a source premise, \(\BottomSrc\) returns \(\Bot\).
+\end{branch}
+
+\begin{branch}[Finite replay overread]
+If the finite checker replay is treated as proof of arbitrary source-cover
+existence, arbitrary finite-variation robustness, source-law adoption, or
+\(\Msrc\) adoption, the branch violates this packet boundary and bottoms.
+\end{branch}
+
+\section{Source-Extension Classification}
+
+\begin{center}
+\begin{tabular}{p{0.34\linewidth}p{0.56\linewidth}}
+\hline
+Category & Classification \\
+\hline
+Derivable from current ontology & Not shown. Current ontology does not derive
+general non-bottom source-cover existence beyond the finite replay. \\
+Conservative definitional extension & Proposal-only and conditional. The
+interface returns non-bottom output only when source certificates are supplied. \\
+New ontology primitive & Would require protected human Gate Chair authority
+if promoted beyond proposal-only source-extension data. \\
+Forbidden target-GR import & Blocked by \(\BottomSrc\) and pending Smuggling
+Auditor audit. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & Proposal-only \(\GenCover\) law interface is defined pending audit and stress; \(\Msrc\) remains blocked and unadopted. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & \(\FVRSrc\) remains proposal-only fail-closed source-extension data; arbitrary robustness is not adopted. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; this packet defines a new auditable law interface and routes to Smuggling Auditor audit. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{No-Fog Result}
+
+\begin{verdict}[General source-cover law formalization result]
+The decisive result is \texttt{candidate\_law\_defined}. The proposal-only
+law is \(\GenCover\), with artifact path
+\[
+\texttt{research\_control/tasks/RT-20260614-110/artifacts/148\_RESP\_LC\_M\_SRC\_GSC\_GENERAL\_SOURCE\_COVER\_LAW\_FORMALIZATION.tex}.
+\]
+The next required role is \texttt{smuggling-auditor@0.2.0}.
+\end{verdict}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_general\_source\_cover\_law.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_general\_source\_cover\_law.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The mathematical child
+supplied the law package, certificate families, and theorem obligations. The
+philosophical child preserved the distinction between source-extension data,
+canonical ontology, empirical recovery, benchmark status, process receipts,
+and protected adoption authority.
+
+\section{Conclusion}
+
+\(\GenCover\) is a source-only, fail-closed, proposal-only law interface for
+general source-cover extension beyond the finite checker replay. It is useful
+because it fixes a concrete auditable object rather than repeating that
+general source-cover existence remains missing.
+
+The law remains draft/control source-extension data. It does not prove
+current-ontology derivation, does not adopt source authority, does not build
+full \(\Msrc\), and does not advance downstream GR claims. The logical next
+route is one bounded Smuggling Auditor review of \(\GenCover\).
+
+\begin{thebibliography}{9}
+
+\bibitem{burden}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{selector}
+The AEther-Flow Research Project. (2026, June 23). \emph{Checker replay Phase
+8C route decision} [Internal research-control artifact].
+
+\bibitem{checker-stress}
+The AEther-Flow Research Project. (2026, June 23). \emph{Checker replay
+consumption Refuter stress test} [Internal research-control artifact].
+
+\bibitem{gsc-candidate}
+The AEther-Flow Research Project. (2026, June 21). \emph{Resp\_lc M\_src
+ontology-law general source-cover candidate} [Internal research-control
+artifact].
+
+\bibitem{fvr-stress}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src GSC
+finite-variation robustness law Refuter stress test} [Internal
+research-control artifact].
+
+\end{thebibliography}
+
+\end{document}
