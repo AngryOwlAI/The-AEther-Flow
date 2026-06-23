@@ -1,0 +1,117 @@
+completion_id: "AJC-AJ-RT-20260614-121-001"
+job_id: "AJ-RT-20260614-121-001"
+task_id: "RT-20260614-121"
+completed_at: "2026-06-23T22:41:08Z"
+status: "completed"
+output_paths:
+  - "FOLDER_MAP.md"
+  - "research_control/tasks/RT-20260614-119/artifacts/external_review_brief_msrc_gsc_candidate.md"
+  - "research_control/tasks/RT-20260614-121/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260614-121/jobs/completions/AJC-AJ-RT-20260614-121-001.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v3.md"
+  - "research_control/handoffs/handoff-0158.yaml"
+  - "research_control/tasks/RT-20260614-114/artifacts/151_RESP_LC_M_SRC_GSC_GENERAL_SOURCE_COVER_LAW_HUMAN_GATE_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-117/artifacts/152_RESP_LC_M_SRC_GSC_GENCOVER_TO_MSRC_BRIDGE_ATTEMPT.tex"
+  - "research_control/tasks/RT-20260614-118/artifacts/153_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260614-119/artifacts/154_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+  - "research_control/tasks/RT-20260614-119/jobs/completions/AJC-AJ-RT-20260614-119-001.yaml"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/research_ops/documentation-curator.v2.0.0.md --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"external review packet GenCover M_src bridge candidate\" --limit 10 --json | exit_code=0 | status=pass_no_hits"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260614-119/artifacts/154_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_REFUTER_STRESS_TEST.tex --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=pass_advisory_no_action"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "Phase 7 completed as an internal source-backed external-review packet for M_src^{GSC-cand}(E) with no physics claim promotion and no public publication output."
+review_packet_path: "research_control/tasks/RT-20260614-119/artifacts/external_review_brief_msrc_gsc_candidate.md"
+coherent_resolution_summary: "The packet cites registered RT-114 RT-117 RT-118 and RT-119 TeX source artifacts by path states the exact candidate-only claim defines the review vocabulary summarizes construction and stress state records no-target-import constraints and repeats all blocked downstream claims."
+next_recommendation: "Do not continue autonomous physics beyond the RT-119 human-gated M_src adoption boundary. Treat the recommendations implementation plan as complete after Phase 8 validation and checkpoint discipline closes."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 345
+    relationship_row_count: 1993
+    semantic_row_count: 345
+    vault_row_count: 345
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/research_ops/documentation-curator.v2.0.0.md --json"
+      query_type: "lookup"
+      query_text: ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260614-119/artifacts/154_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_REFUTER_STRESS_TEST.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260614-119/artifacts/154_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-REFUTER-STRESS-TEST"
+  canonical_inspections:
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+      source_hash: "c63afb6871219f7c489b4a6153077ba0719ded191589594f4dd93ddc7dbe48bc"
+    - object_id: "TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-REFUTER-STRESS-TEST"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-119/artifacts/154_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+      source_hash: "023a375d429ce91ac477355896108e9d9a74415cfa2b24ed8a3ba263a0c16ab6"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory, and .local are retrieval layers only and not authority."
+operational_validation_status:
+  validators_passed:
+    - "bootstrap_memory_system"
+    - "bootstrap_memory_system_validate_only"
+    - "validate_documentation_impact"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+  generated_surfaces_refreshed: true
+  notes: "Operational hygiene only; not physics evidence."
+scientific_progress_status:
+  result_type: "no_scientific_delta"
+  target_derivation_milestone: "source_manifold_m_src"
+  mathematical_payload:
+    - ""
+  distance_to_gr_delta:
+    changed: false
+    burden_id: "m_src"
+    old_status: "Refuter stress passed"
+    new_status: "Refuter stress passed"
+  forbidden_overread:
+    - "external review packet is not proof"
+    - "brief clarity is not M_src adoption"
+    - "review readiness is not downstream GR evidence"
+resolved_project_improvement_signals:
+  - signal_id: ""
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
