@@ -1,0 +1,41 @@
+execution_unit_id: "child_phys_math"
+task_id: "RT-20260614-099"
+job_id: "AJ-RT-20260614-099-001"
+perspective: "physicist_mathematician"
+status: "completed"
+question: "What source-side formal objects maps and proof obligations define a proposal-only finite-variation robustness law for RegSold_src^GSC?"
+analysis:
+  premises:
+    - "RT-20260614-098 selected finite-variation robustness law formalization as the next same-milestone packet."
+    - "RT-20260614-097 supplies only bounded finite/local witness survival and leaves arbitrary finite-variation robustness undischarged."
+    - "RT-20260614-092 already defines RegSold_src^GSC with Var_reg_src as an obligation class, not a discharged theorem."
+    - "A law packet may be proposal-only draft/control data if it uses source-side signatures and fail-closed guards."
+  formal_objects:
+    - "VarDom_src^GSC admissible finite source-variation records"
+    - "AdmVar_src^GSC admissibility predicate"
+    - "FVR_src^GSC proposal-only finite-variation robustness law package"
+    - "PresVar_src^GSC preservation map"
+    - "Transport_sep Transport_chart Transport_trans and Transport_solder certificate families"
+    - "Bottom_src fail-closed output"
+  maps:
+    - "AdmVar_src^GSC maps variation records and RegSold_src^GSC witnesses to true false or bottom"
+    - "PresVar_src^GSC maps admissible variations and RegSold_src^GSC certificates to preserved transformed_equivalent or bottom"
+    - "Transport maps move source-side separation chart support transition and soldering certificates across admissible variations"
+  proof_obligations:
+    - "source-domain closure"
+    - "support and quotient compatibility"
+    - "transition-token inverse and cocycle preservation"
+    - "soldering uniqueness or equivalence preservation"
+    - "bounded witness preservation without arbitrary robustness overread"
+    - "packet-interface no-target-import"
+selected_formalization:
+  law_id: "MSRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW"
+  law_symbol: "FVR_src^GSC"
+  status_label: "proposal-only"
+  theorem_status: "defined_obligations_pending_audit_and_stress"
+claim_boundary:
+  allowed: "definition theorem-obligation suite and source-side bottom branches only"
+  forbidden: "finite-variation robustness law adoption RegSold_src adoption M_src adoption full M_src construction g_eff matter coupling Einstein equations benchmark promotion Gate Chair closure completed derivation future source-extension impossibility global rejection"
+limitations:
+  - "The formalization defines a law interface and proof obligations but does not prove arbitrary finite-variation robustness."
+  - "A future Smuggling Auditor must audit the law before Refuter stress or witness generalization."

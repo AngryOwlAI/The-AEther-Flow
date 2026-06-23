@@ -1,0 +1,422 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\RespLC}{\mathsf{Resp}_{\mathrm{lc}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Mgsccand}{\mathcal{M}_{\mathrm{src}}^{\mathsf{GSC}\text{-}\mathrm{cand}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\GSC}{\mathsf{GSC}_{\mathrm{src}}}
+\newcommand{\RegSold}{\mathsf{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVR}{\mathsf{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\VarDom}{\mathsf{VarDom}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\AdmVar}{\mathsf{AdmVar}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\PresVar}{\mathsf{PresVar}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\mathsf{Bottom}_{\mathrm{src}}}
+\newcommand{\VarRegSrc}{\mathsf{Var}^{\mathrm{reg}}_{\mathrm{src}}}
+\newcommand{\SepSrc}{\mathsf{Sep}_{\mathrm{src}}}
+\newcommand{\ChartSuppSrc}{\mathsf{ChartSupp}_{\mathrm{src}}}
+\newcommand{\RegSrc}{\mathsf{Reg}_{\mathrm{src}}}
+\newcommand{\SolderSrc}{\mathsf{Solder}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Wstar}{W_{\star}}
+\newcommand{\Tau}{\widehat{\tau}^{\mathrm{src}}}
+\newcommand{\Bot}{\bot}
+
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law Package}
+\newtheorem{obligation}{Theorem Obligation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{guard}{Guard}
+\newtheorem{branch}{Failure Branch}
+\newtheorem{verdict}{Verdict}
+
+\title{Resp\_lc M\_src GSC Finite-Variation Robustness Law Formalization}
+\author{The AEther-Flow Research Project}
+\date{2026-06-23}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact is the fused parent Ontology Formalizer output for
+\texttt{RT-20260614-099}. It executes the bounded packet selected by
+\texttt{RT-20260614-098}: define a proposal-only finite-variation robustness
+law for \(\RegSold\) and \(\VarRegSrc\).
+
+The decisive result is
+\[
+  \texttt{ontology\_law\_formalization\_result.status}
+  =
+  \texttt{candidate\_law\_defined}.
+\]
+The law identifier is
+\[
+  \texttt{MSRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW},
+\]
+with notation \(\FVR\).
+
+This artifact is draft/control and proposal-only. It does not canonically
+adopt \(\FVR\), does not adopt \(\RegSold\), does not adopt or fully
+construct \(\Msrc\), does not define \(\geff\), does not derive matter
+coupling, does not derive Einstein equations, does not promote benchmark
+status, does not issue a Gate Chair closure, does not claim completed
+derivation, does not claim future source-extension impossibility, and does
+not reject the global theory.
+
+\section{Source Domain}
+
+\begin{definition}[Source data universe]
+Let \(\mathcal{S}_{\mathrm{src}}\) be the source-side data universe available
+to the packet. It may contain source quotient support, source-cover labels,
+source transition tokens, source admissibility predicates, \(\RespLC\) readout
+tokens already admitted by source-side localization, and draft/control
+\(\RegSold\) certificates.
+\end{definition}
+
+\begin{definition}[Forbidden premises]
+The following are not members of \(\mathcal{S}_{\mathrm{src}}\): target open
+sets, target neighborhoods, target manifold topology, target smooth atlases,
+target coordinate transitions, target metric data, metric signature, proper
+time, empirical detector semantics, benchmark success, validation status,
+registry metadata, role identity, handoff authority, generated derivatives,
+or file order.
+\end{definition}
+
+\begin{definition}[Three-valued source outcome]
+Let
+\[
+  \mathbb{B}_{\Bot}=\{\mathsf{true},\mathsf{false},\Bot\}.
+\]
+\(\Bot\) means fail-closed. It is not a weak pass and not an invitation to
+repair the branch with target or process authority.
+\end{definition}
+
+\section{Finite Source-Variation Domain}
+
+\begin{definition}[Finite variation records]
+The proposal-only variation domain \(\VarDom\) consists of records
+\[
+  v =
+  (
+    \Delta Q,
+    \Delta\!\sim_{\mathrm{src}},
+    \Delta\mathsf{Supp},
+    \Delta\Tau,
+    \Delta r,
+    \sigma
+  ),
+\]
+where \(\Delta Q\) is a finite source-support change,
+\(\Delta\!\sim_{\mathrm{src}}\) is a finite quotient-relation preservation or
+refinement record, \(\Delta\mathsf{Supp}\) is a finite source-chart support
+transport record, \(\Delta\Tau\) is a finite source transition-token transport
+record, \(\Delta r\) is a finite \(\RespLC\) readout-token transport record,
+and \(\sigma\) is a source-scope tag.
+\end{definition}
+
+\begin{definition}[Admissible source variations]
+For \(v\in\VarDom\) and a draft/control \(\RegSold\) certificate \(C\), define
+\[
+  \AdmVar(v,C) \in \mathbb{B}_{\Bot}.
+\]
+\(\AdmVar(v,C)=\mathsf{true}\) only when all of the following source-side
+conditions are supplied:
+\begin{enumerate}
+  \item finite support of the variation is explicitly named;
+  \item quotient classes are preserved or refined by a source relation;
+  \item chart-support transport is given without target-coordinate
+        interpretation;
+  \item transition-token transport includes inverse-token and cocycle-token
+        checks where those checks were part of \(C\);
+  \item soldering transport either preserves attachment uniqueness or gives a
+        source equivalence relation for nonunique attachment; and
+  \item no forbidden premise is used.
+\end{enumerate}
+\(\AdmVar(v,C)=\Bot\) if any branch requires target geometry or process
+authority. \(\AdmVar(v,C)=\mathsf{false}\) if source data are present but
+explicitly fail a stated admissibility condition.
+\end{definition}
+
+\section{Law Package}
+
+\begin{law}[Proposal-only finite-variation robustness law \(\FVR\)]
+Define the proposal-only law package
+\[
+  \FVR =
+  (
+    \VarDom,
+    \AdmVar,
+    \mathsf{Transport}_{\SepSrc},
+    \mathsf{Transport}_{\ChartSuppSrc},
+    \mathsf{Transport}_{\Tau},
+    \mathsf{Transport}_{\SolderSrc},
+    \PresVar,
+    \BottomSrc
+  ).
+\]
+For non-bottom output, this package returns draft/control preservation data
+for the already proposal-only \(\RegSold\) law interface. It does not adopt
+\(\FVR\), \(\RegSold\), or \(\Msrc\).
+\end{law}
+
+\begin{definition}[Preservation outcomes]
+For an admissible variation \(v\) and a \(\RegSold\) certificate \(C\), define
+\[
+  \PresVar(v,C)
+  \in
+  \{
+    \mathsf{preserved},
+    \mathsf{transformed\_equivalent},
+    \mathsf{failed},
+    \Bot
+  \}.
+\]
+The outcome is \(\mathsf{preserved}\) when the same source certificate
+families remain valid. It is \(\mathsf{transformed\_equivalent}\) when
+transported source certificates satisfy the same obligations under an
+explicit source equivalence. It is \(\mathsf{failed}\) when source data show a
+defined preservation failure. It is \(\Bot\) when the packet lacks source data
+or a forbidden premise is needed.
+\end{definition}
+
+\subsection{Transport Certificate Families}
+
+\begin{definition}[Separation transport]
+\[
+  \mathsf{Transport}_{\SepSrc}(v,C)
+  \longrightarrow
+  \mathsf{SepTransportCert}_{\mathrm{src}}
+  \ \text{or}\ \Bot .
+\]
+The certificate states how source-local separation evidence for quotient
+classes is preserved or transformed under \(v\). Unsupported merges return
+\(\Bot\) or \(\mathsf{failed}\), according to whether source evidence is
+absent or explicitly contradictory.
+\end{definition}
+
+\begin{definition}[Chart-support transport]
+\[
+  \mathsf{Transport}_{\ChartSuppSrc}(v,C)
+  \longrightarrow
+  \mathsf{ChartTransportCert}_{\mathrm{src}}
+  \ \text{or}\ \Bot .
+\]
+The certificate states how source-chart support labels and overlap support are
+transported. It does not interpret chart labels as target coordinate charts.
+\end{definition}
+
+\begin{definition}[Transition-token transport]
+\[
+  \mathsf{Transport}_{\Tau}(v,C)
+  \longrightarrow
+  \mathsf{TransitionTransportCert}_{\mathrm{src}}
+  \ \text{or}\ \Bot .
+\]
+The certificate states inverse-token and cocycle-token preservation or
+source-equivalent transformation. It does not convert transition tokens into
+target smooth maps.
+\end{definition}
+
+\begin{definition}[Soldering transport]
+\[
+  \mathsf{Transport}_{\SolderSrc}(v,C)
+  \longrightarrow
+  \mathsf{SolderTransportCert}_{\mathrm{src}}
+  \ \text{or}\ \Bot .
+\]
+The certificate states how \(\RespLC\) readout tokens remain attached to
+source-chart support obligations. Nonunique attachment requires an explicit
+source equivalence relation; otherwise the branch fails closed.
+\end{definition}
+
+\section{Theorem Obligations}
+
+\begin{obligation}[Source-domain closure]
+If \(\AdmVar(v,C)=\mathsf{true}\), then all inputs required by
+\(\PresVar(v,C)\) are in \(\mathcal{S}_{\mathrm{src}}\).
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Separation preservation]
+For every admissible \(v\), transported source-local separation certificates
+are preserved, transformed equivalently, or fail closed.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Chart support preservation]
+For every admissible \(v\), source-chart support and overlap support are
+preserved, transformed equivalently, or fail closed without target-coordinate
+import.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Transition-token preservation]
+For every admissible \(v\), inverse-token and cocycle-token checks required by
+the input \(\RegSold\) certificate are preserved, transformed equivalently, or
+fail closed.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Soldering preservation]
+For every admissible \(v\), \(\RespLC\) readout-token attachments to
+source-chart support obligations are preserved, transformed equivalently, or
+fail closed.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\begin{obligation}[Bounded witness boundary]
+The finite/local witness \(\Wstar\) remains bounded source-extension data. Its
+listed relabeling and one bounded refinement cases do not by themselves prove
+arbitrary finite-variation robustness.
+
+Status: \texttt{stated\_as\_obligation}.
+\end{obligation}
+
+\section{No-Target-Import Lemma}
+
+\begin{lemma}[Packet-interface no-target-import]
+Every non-bottom certificate produced by \(\FVR\), as defined in this packet,
+depends only on \(\mathcal{S}_{\mathrm{src}}\), a draft/control \(\RegSold\)
+certificate, and explicit source-extension assumptions.
+\end{lemma}
+
+\begin{proof}
+Each component of \(\FVR\) has a source-domain signature. The variation domain
+\(\VarDom\) contains only finite source variation records. The predicate
+\(\AdmVar\) reads a source variation record and a draft/control \(\RegSold\)
+certificate. The transport maps read only source separation, source chart
+support, source transition-token, and source soldering certificate data.
+\(\PresVar\) returns preservation, transformed equivalence, defined failure,
+or \(\Bot\) from those source records. The forbidden premises are not elements
+of \(\mathcal{S}_{\mathrm{src}}\). If any forbidden premise is required, the
+\(\BottomSrc\) rule returns \(\Bot\). Therefore a non-bottom certificate
+cannot depend on target topology, target atlas, target coordinate transition,
+target metric, empirical semantics, benchmark success, or process authority
+under this packet interface.
+\end{proof}
+
+This lemma proves only the packet-interface guard. It does not prove that
+non-bottom robustness certificates exist for arbitrary source variations.
+
+\section{Failure Branches}
+
+\begin{branch}[Unsupported merge]
+If a finite source variation merges quotient classes without source-side
+separation transport, return \(\Bot\) or route to a scoped obstruction.
+\end{branch}
+
+\begin{branch}[Incompatible soldering]
+If readout-token attachment changes without a source equivalence relation,
+return \(\Bot\) or route to soldering-law refinement.
+\end{branch}
+
+\begin{branch}[Transition-token degeneration]
+If inverse-token or cocycle-token checks fail under variation, record
+\(\mathsf{failed}\) and route to Refuter stress or scoped obstruction.
+\end{branch}
+
+\begin{branch}[Forbidden import]
+If a branch requires target topology, target atlas, target coordinate
+transition, target metric, proper time, empirical detector semantics,
+benchmark success, validation authority, registry authority, role authority,
+handoff authority, generated derivatives, or file order, return \(\Bot\) and
+route to Smuggling Auditor failure.
+\end{branch}
+
+\begin{branch}[Finite or local scope only]
+If preservation holds only for listed finite/local cases, preserve that result
+as source-extension data. Do not infer arbitrary finite-variation robustness,
+source-law adoption, or \(\Msrc\) adoption.
+\end{branch}
+
+\begin{branch}[Source definition failure]
+If the law cannot be source-defined, route to scoped no-go refinement or route
+freeze. Do not claim future source-extension impossibility without a separate
+no-go theorem.
+\end{branch}
+
+\section{Distance-To-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; general EqSrc remains undischarged. \\
+RetainH & Unchanged; no canonical RetainH adoption is supplied. \\
+GenH & Unchanged; no canonical GenH adoption is supplied. \\
+ObsLoc\_lc & Unchanged; observer-localization status is not promoted. \\
+Resp\_lc & Prior response-localization source-extension data remain routing context only. \\
+M\_src & \(\FVR\) is defined as proposal-only robustness law data; \(\Msrc\) remains blocked pending audit, stress, and human gate. \\
+g\_eff & Not started; no effective metric is supplied. \\
+Matter coupling & Not started; no coupling law is derived. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & Proposal-only \(\FVR\) law interface is defined; arbitrary finite-variation robustness remains pending audit and stress. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; continuation is non-orbital because a new robustness law interface and proof-obligation suite were defined. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Parent-Child Synthesis}
+
+This artifact is the fused parent output for
+\texttt{role\_decomposition.mode = parent\_child\_parallel\_synthesis}. The
+child outputs are:
+\begin{itemize}
+  \item \texttt{child\_phys\_math\_resp\_lc\_m\_src\_gsc\_finite\_variation\_robustness\_law.yaml};
+  \item \texttt{child\_phys\_phil\_resp\_lc\_m\_src\_gsc\_finite\_variation\_robustness\_law.yaml}.
+\end{itemize}
+The conflict review found no blocking conflict. The Physicist-Mathematician
+child supplied the variation domain, transport maps, preservation map, and
+proof-obligation suite. The Physicist-Philosopher child preserved the
+authority distinction among proposal-only source-extension candidate data,
+canonical ontology, empirical recovery, process receipts, and benchmark
+status.
+
+\section{Conclusion}
+
+\(\FVR\) is defined as a proposal-only finite-variation robustness law package
+for \(\RegSold\) and \(\VarRegSrc\). It converts the bounded-scope witness
+survival result into a typed robustness interface and proof-obligation suite
+rather than treating the witness as adoption-level evidence. The logical next
+packet is a Smuggling Auditor audit of \(\FVR\). No adoption or downstream GR
+route is opened.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{regsold-law}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering law formalization}
+[Internal research-control artifact].
+
+\bibitem{finite-witness-stress}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC regularity and soldering finite source witness Refuter stress test}
+[Internal research-control artifact].
+
+\bibitem{selector}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src
+GSC finite-variation robustness selector decision}
+[Internal research-control artifact].
+
+\bibitem{handoff0140}
+The AEther-Flow Research Project. (2026, June 23). \emph{Handoff 0140}
+[Internal research-control handoff].
+
+\end{thebibliography}
+
+\end{document}
