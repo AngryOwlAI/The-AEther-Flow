@@ -1,0 +1,53 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-125"
+status: "completed"
+output_type: "source_topology_route_component"
+claim_boundary:
+  m_src_adoption_granted: false
+  downstream_gr_unlocked: false
+formal_route_comparison:
+  generated_source_topology:
+    status: "rejected_for_now"
+    reason: "It would be closest to ordinary manifold language but would require point-set open-set behavior not supplied by current source data and would carry high target-topology import pressure."
+    primary_risk: "OB-MSRC-SO-TOPOLOGY-NONCANONICAL"
+  site_coverage:
+    status: "selected"
+    reason: "It is definable from source-local supports U_i^{src}, source overlap predicates O_ij^{src}, refinement or cover rules when supplied, certificates, and Bottom_src guards without asserting target open sets."
+    primary_payload: "source_site_coverage_route"
+  source_groupoid_stack:
+    status: "compatible_deferred"
+    reason: "It naturally fits transition tokens but should follow after the coverage domain is selected so Phase 3 can formalize identity inverse composition and cocycle obligations."
+    primary_risk: "OB-MSRC-LOCAL-GLOBAL-GAP"
+  finite_refinement_limit:
+    status: "deferred_to_counterexample_factory"
+    reason: "Finite and refinement objects are useful for witnesses and counterexamples but do not by themselves supply a global source topology analogue."
+    primary_risk: "OB-MSRC-LOCAL-GLOBAL-GAP"
+  obstruction:
+    status: "not_selected"
+    reason: "Current source data do supply enough support and overlap syntax to select a site coverage route as a conservative theorem-input branch."
+selected_route:
+  result_type: "selected_source_topology_route"
+  selected_route: "site_coverage"
+  route_object_name: "Cov_src^{GSC}(E)"
+  minimal_interface:
+    - "I_E source-local support index set"
+    - "U_i^{src} source-local supports or support tokens"
+    - "O_ij^{src} source overlap predicates"
+    - "refinement_or_cover_rules when supplied by Cert(E)"
+    - "tau_ij^{src} transition tokens as later arrows over the coverage"
+    - "Cert(E) source certificates"
+    - "Bottom_src fail-closed branch"
+  definition_status: "route_selected_formalization_pending"
+assumption_effects:
+  A2_source_topology_or_analogue: "route selected as site_coverage but not adopted or proven"
+  A3_chart_support_regular: "can be restated as support-token regularity over coverage"
+  A4_transition_inverse_cocycle: "next Phase 3 groupoid or pseudogroup obligation over selected coverage"
+  A5_separation_countability_regular: "can be stated as site coverage analogues or obstructions"
+  A8_bottom_behavior: "ambiguity noncoverage nonrefinement or incompatible overlaps must return Bottom_src or OB-MSRC-*"
+open_obligations:
+  - "formal coverage axioms are not proven in this packet"
+  - "representability as ordinary source manifold is not claimed"
+  - "chart regularity inverse cocycle separation countability soldering finite variation and no-target-import remain open"
+  - "multiple incompatible coverage choices may still trigger OB-MSRC-SO-TOPOLOGY-NONCANONICAL in a later packet"
+next_route_recommendation: "Phase 3 should formalize transition-token groupoid conditions over the selected site_coverage route."
