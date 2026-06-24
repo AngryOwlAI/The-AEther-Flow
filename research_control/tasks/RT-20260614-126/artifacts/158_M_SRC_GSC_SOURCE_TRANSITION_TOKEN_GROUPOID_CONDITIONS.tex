@@ -1,0 +1,320 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{longtable}
+
+\newcommand{\GSC}{\mathsf{GSC}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\Mgsccand}{M_{\mathrm{src}}^{\GSC\mbox{-}\mathrm{cand}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\GSC}}
+\newcommand{\Bottomsrc}{\mathrm{Bottom}_{\mathrm{src}}}
+\newcommand{\Covsrc}{\mathrm{Cov}_{\mathrm{src}}^{\GSC}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{condition}{Condition}
+\newtheorem{rulebox}{Rule}
+
+\title{Source Transition-Token Groupoid Conditions for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\)}
+\author{Ontology Formalizer Packet RT-20260614-126}
+\date{2026-06-24}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the Phase 3 Ontology Formalizer output for
+\texttt{RT-20260614-126}. The selected role is
+\texttt{ontology-formalizer@0.2.0}. The parent handoff is
+\texttt{handoff-0161}. The target derivation milestone is
+\texttt{source\_manifold\_m\_src}.
+
+This packet formalizes transition-token candidate conditions over the selected
+Phase 2 site-coverage route. It does not adopt a transition groupoid, does not
+adopt full \(\Msrc\), does not construct full \(\Msrc\), does not edit
+canonical ontology TeX, does not define \(\geff\), does not derive matter
+coupling, does not derive Einstein equations, does not promote benchmark
+status, does not issue Gate Chair closure, does not claim completed
+derivation, does not claim future source-extension impossibility, and does
+not reject the global theory.
+
+The input candidate remains \(\Mgsccand(E)\) as reviewed source-extension
+bridge-candidate data. The selected topology analogue remains
+\(\Covsrc(E)\), a source-only site or coverage route. The result of this
+packet is:
+\[
+  \texttt{transition\_groupoid\_status = formalized\_candidate\_conditions}.
+\]
+
+\section{Inputs}
+
+The candidate data are
+\[
+  \Mgsccand(E)=
+  \left(
+  \Qsrc(E),
+  I_E,
+  \{U_i^{\mathrm{src}}\},
+  \{O_{ij}^{\mathrm{src}}\},
+  \{\chi_i^{\mathrm{src}}\},
+  \{\tau_{ij}^{\mathrm{src}}\},
+  \mathrm{Cert}(E),
+  \Bottomsrc
+  \right).
+\]
+
+Phase 2 selected \(\Covsrc(E)\) as the source-only topology analogue route.
+Here \(\Covsrc(E)\) is used only as a coverage domain on which source overlap
+and transition-token obligations can be stated. It is not a target topology,
+not a target smooth atlas, and not adopted \(\Msrc\).
+
+\section{Source Overlap Domains}
+
+\begin{definition}[Source overlap domain]
+For \(i,j\in I_E\), define the source overlap domain as the source predicate
+\[
+  D_{ij}^{\mathrm{src}}(E)
+  :=
+  O_{ij}^{\mathrm{src}}
+  \subseteq_{\mathrm{src}}
+  U_i^{\mathrm{src}}\times U_j^{\mathrm{src}},
+\]
+when the selected coverage route allows subset notation. If subset notation
+is not source-defined, \(D_{ij}^{\mathrm{src}}(E)\) denotes the binary source
+predicate
+\[
+  D_{ij}^{\mathrm{src}}(E)(u_i,u_j)
+  \equiv
+  O_{ij}^{\mathrm{src}}(u_i,u_j).
+\]
+\end{definition}
+
+The triple-overlap support is the source predicate
+\[
+  D_{ijk}^{\mathrm{src}}(E)
+  :=
+  D_{ij}^{\mathrm{src}}(E)
+  \wedge D_{jk}^{\mathrm{src}}(E)
+  \wedge D_{ik}^{\mathrm{src}}(E),
+\]
+read only as coverage-compatible source support. It is not a target triple
+intersection of coordinate charts.
+
+\section{Transition Tokens}
+
+\begin{definition}[Source transition token]
+For each source overlap domain with non-bottom support, a transition token is
+a symbolic source arrow
+\[
+  \tau_{ij}^{\mathrm{src}}:
+  D_{ij}^{\mathrm{src}}(E)\rightsquigarrow D_{ji}^{\mathrm{src}}(E).
+\]
+The symbol \(\rightsquigarrow\) records source-transition syntax only. It
+does not assert a function space, differentiability class, target coordinate
+transition map, or smooth atlas.
+\end{definition}
+
+\begin{definition}[Identity token]
+An identity token \(id_i^{\mathrm{src}}\) is source-defined when
+\(\mathrm{Cert}(E)\) or the selected coverage route supplies a non-bottom
+identity certificate on \(D_{ii}^{\mathrm{src}}(E)\). When present, write
+\[
+  \tau_{ii}^{\mathrm{src}} = id_i^{\mathrm{src}}.
+\]
+If no source identity token is supplied, the branch returns \(\Bottomsrc\) or
+the primary obstruction \texttt{OB-MSRC-TRANSITION-INVERSE-FAIL}.
+\end{definition}
+
+\begin{definition}[Source composition predicate]
+The partial source composition predicate
+\[
+  \mathrm{Comp}_{\mathrm{src}}
+  \left(\tau_{jk}^{\mathrm{src}},\tau_{ij}^{\mathrm{src}}\right)
+\]
+is defined only on coverage-compatible triple support
+\(D_{ijk}^{\mathrm{src}}(E)\) and only when source certificates supply a
+non-bottom composition witness. If defined, the composite is written
+\[
+  \tau_{jk}^{\mathrm{src}}\circ_{\mathrm{src}}\tau_{ij}^{\mathrm{src}}.
+\]
+The composition symbol is source syntax. It does not import target coordinate
+composition.
+\end{definition}
+
+\section{Lemma Schemas}
+
+\begin{lemma}[Identity candidate condition]
+Assume \(D_{ii}^{\mathrm{src}}(E)\) is non-bottom and
+\(\mathrm{Cert}(E)\) supplies an identity certificate for support \(i\). Then
+the candidate transition-token system satisfies the identity schema
+\[
+  \tau_{ii}^{\mathrm{src}} = id_i^{\mathrm{src}}.
+\]
+If the identity certificate is absent or degenerate, the branch returns
+\(\Bottomsrc\) or \texttt{OB-MSRC-TRANSITION-INVERSE-FAIL}.
+\end{lemma}
+
+\begin{lemma}[Inverse candidate condition]
+Assume \(D_{ij}^{\mathrm{src}}(E)\) and \(D_{ji}^{\mathrm{src}}(E)\) are
+non-bottom and \(\mathrm{Cert}(E)\) supplies source inverse certificates for
+\(\tau_{ij}^{\mathrm{src}}\) and \(\tau_{ji}^{\mathrm{src}}\). Then the
+candidate transition-token system satisfies
+\[
+  \tau_{ji}^{\mathrm{src}}\circ_{\mathrm{src}}\tau_{ij}^{\mathrm{src}}
+  =
+  id_i^{\mathrm{src}},
+  \qquad
+  \tau_{ij}^{\mathrm{src}}\circ_{\mathrm{src}}\tau_{ji}^{\mathrm{src}}
+  =
+  id_j^{\mathrm{src}},
+\]
+on the corresponding source overlap supports. If inverse support or source
+composition is absent or degenerate, the branch returns \(\Bottomsrc\) or
+\texttt{OB-MSRC-TRANSITION-INVERSE-FAIL}.
+\end{lemma}
+
+\begin{lemma}[Cocycle candidate condition]
+Assume \(D_{ijk}^{\mathrm{src}}(E)\) is non-bottom and
+\(\mathrm{Cert}(E)\) supplies source composition and cocycle certificates.
+Then the candidate transition-token system satisfies one of the equivalent
+source cocycle schemas chosen by the later integrated theorem:
+\[
+  \tau_{ki}^{\mathrm{src}}\circ_{\mathrm{src}}
+  \tau_{jk}^{\mathrm{src}}\circ_{\mathrm{src}}
+  \tau_{ij}^{\mathrm{src}}
+  =
+  id_i^{\mathrm{src}},
+\]
+or
+\[
+  \tau_{jk}^{\mathrm{src}}\circ_{\mathrm{src}}\tau_{ij}^{\mathrm{src}}
+  =
+  \tau_{ik}^{\mathrm{src}}.
+\]
+If triple support, source composition, or source cocycle certificates are
+absent or degenerate, the branch returns \(\Bottomsrc\) or
+\texttt{OB-MSRC-TRANSITION-COCYCLE-FAIL}.
+\end{lemma}
+
+\section{Bottom and Obstruction Rule}
+
+\begin{rulebox}[Transition fail-closed rule]
+If identity, inverse, composition, or cocycle structure cannot be stated from
+source-local supports, source overlap predicates, source transition tokens,
+\(\mathrm{Cert}(E)\), and \(\Bottomsrc\) guards, the branch must return
+\(\Bottomsrc\) or exactly one primary obstruction label. The allowed primary
+labels for this packet are:
+\[
+\begin{array}{ll}
+\texttt{OB-MSRC-TRANSITION-INVERSE-FAIL}, &
+\text{identity or inverse support absent, nonunique, or degenerate},\\
+\texttt{OB-MSRC-TRANSITION-COCYCLE-FAIL}, &
+\text{composition or triple-overlap coherence absent or degenerate},\\
+\texttt{OB-MSRC-BOTTOM-LEAK}, &
+\text{failure branch becomes non-bottom by notation or process authority},\\
+\texttt{OB-MSRC-ADOPTION-THEOREM-UNFORMED}, &
+\text{transition conditions cannot be stated without a new primitive}.
+\end{array}
+\]
+\end{rulebox}
+
+\section{No-Target Guard}
+
+The transition tokens \(\tau_{ij}^{\mathrm{src}}\) are not target
+coordinate-transition maps and do not inherit smoothness from a target atlas.
+The following arguments are forbidden:
+
+\begin{itemize}
+  \item ``They look like chart transitions.''
+  \item ``A manifold atlas would require this, so assume it.''
+  \item ``The exact-GR benchmark supplies smooth transitions.''
+  \item ``The target atlas is the intended model.''
+  \item ``Validator PASS confirms transition coherence.''
+\end{itemize}
+
+Allowed evidence is narrower:
+
+\begin{itemize}
+  \item \(\mathrm{Cert}(E)\) contains source identity, inverse, composition,
+  or cocycle certificates.
+  \item The selected \(\Covsrc(E)\) route provides a source-only support
+  domain on which composition can be stated.
+  \item Failure to compose returns \(\Bottomsrc\) or a named obstruction.
+  \item Future finite checker counterexamples may demonstrate where a
+  condition fails, but checker PASS is not adoption proof.
+\end{itemize}
+
+\section{Adoption Theorem Effect}
+
+This packet narrows assumption A4,
+\(\mathrm{transition\_inverse\_cocycle}(E)\), from a vague obligation to a
+source transition-token candidate-condition family. It does not discharge A4
+as an adopted fact. It also does not discharge carrier support, chart-support
+regularity, separation, countability, soldering, finite-variation robustness,
+bottom behavior, no-target-import, or the local-to-global representability
+burden.
+
+\begin{longtable}{|p{0.26\linewidth}|p{0.25\linewidth}|p{0.39\linewidth}|}
+\hline
+\textbf{Obligation} & \textbf{Status after Phase 3} & \textbf{Reason} \\
+\hline
+A2 topology analogue & selected route & \(\Covsrc(E)\) is selected from Phase 2, formal proof remains pending. \\
+\hline
+A4 transition inverse & formalized candidate condition & Identity and inverse schemas are stated with source certificates and bottom branches. \\
+\hline
+A4 transition cocycle & formalized candidate condition & Composition and triple-overlap schemas are stated with source certificates and bottom branches. \\
+\hline
+A8 bottom behavior & narrowed & Missing or degenerate transition data returns \(\Bottomsrc\) or an obstruction. \\
+\hline
+A9 no-target-import & narrowed but unaudited & Target coordinate maps and smooth atlas imports are explicitly forbidden. Later audit remains required. \\
+\hline
+\end{longtable}
+
+\section{Next Route}
+
+The next legal packet is Phase 4: one bounded finite/local witness
+classification packet. That packet should separate finite or local transition
+and coverage survival from global \(\Msrc\) adoption. It must not route to
+\(\geff\), matter coupling, Einstein equations, benchmark promotion, Gate
+Chair closure, completed derivation, future source-extension impossibility,
+or global theory rejection.
+
+\section{Conclusion}
+
+The transition-token groupoid candidate conditions for \(\Mgsccand(E)\) are
+now formalized over the selected source-only site-coverage route. The
+adoption-level obligation remains open. Same-milestone continuation remains
+open. Downstream GR claims remain blocked. No target coordinate-transition
+map is used as mathematical evidence.
+
+\begin{thebibliography}{9}
+
+\bibitem{plan}
+The AEther-Flow Research Project. (2026, June 24). \emph{Recommendations
+implementation plan for continue-research v4} [Internal implementation plan].
+
+\bibitem{theorem-envelope}
+The AEther-Flow Research Project. (2026, June 24). \emph{Minimum source-only
+adoption theorem envelope for M\_src GSC candidate} [Internal
+research-control artifact].
+
+\bibitem{route-decision}
+The AEther-Flow Research Project. (2026, June 24). \emph{Source-only
+topology analogue route decision for M\_src GSC candidate} [Internal
+research-control artifact].
+
+\bibitem{bridge-attempt}
+The AEther-Flow Research Project. (2026, June 23). \emph{GenCover-to-Msrc
+bridge attempt} [Internal research-control artifact].
+
+\bibitem{gate-review}
+The AEther-Flow Research Project. (2026, June 23). \emph{Resp\_lc M\_src GSC
+bridge candidate human-gate adoption review} [Internal research-control
+artifact].
+
+\end{thebibliography}
+
+\end{document}

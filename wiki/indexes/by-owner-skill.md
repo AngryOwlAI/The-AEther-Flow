@@ -420,6 +420,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-localization-source-basis-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `wiki/tex/tex-research-control-localization-source-repair-packet.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `wiki/tex/tex-research-control-m-src-gsc-minimum-source-only-adoption-theorem-envelope.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `wiki/tex/tex-research-control-m-src-gsc-source-transition-token-groupoid-conditions.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT` `wiki/tex/tex-research-control-resp-lc-current-ontology-atlas-glue-derivation-attempt.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model-refuter-stress-test.md`
@@ -677,6 +678,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-SMUGGLING-AUDIT` `research_control/tasks/RT-20260608-008/artifacts/07_LOCALIZATION_SOURCE_BASIS_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT` `research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `research_control/tasks/RT-20260614-053/artifacts/94_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex`

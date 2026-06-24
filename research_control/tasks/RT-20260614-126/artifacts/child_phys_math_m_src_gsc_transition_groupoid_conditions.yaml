@@ -1,0 +1,30 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-126"
+status: "completed"
+output_type: "transition_groupoid_formalization_component"
+claim_boundary:
+  m_src_adoption_granted: false
+  downstream_gr_unlocked: false
+formal_objects:
+  - name: "Cov_src^{GSC}(E)"
+    status: "selected site_coverage route formalization input"
+  - name: "D_ij^{src}(E)"
+    status: "source overlap domain predicate"
+  - name: "tau_ij^{src}"
+    status: "symbolic source transition token"
+  - name: "id_i^{src}"
+    status: "source identity token schema"
+  - name: "Comp_src"
+    status: "partial source composition predicate over compatible overlaps"
+main_contribution: "The mathematical child supplied source overlap domains, symbolic transition-token arrows, identity inverse and cocycle lemma schemas, and bottom or obstruction branches for degenerate transition data."
+transition_conditions:
+  identity: "tau_ii^{src} = id_i^{src} when source identity support is certified; otherwise Bottom_src or OB-MSRC-TRANSITION-INVERSE-FAIL"
+  inverse: "tau_ji^{src} circ tau_ij^{src} = id_i^{src} on source overlap support when inverse certificates are present"
+  cocycle: "tau_ki^{src} circ tau_jk^{src} circ tau_ij^{src} = id_i^{src} on triple source overlap support when composition is source-defined"
+  bottom_branch: "missing or degenerate identity inverse composition or cocycle data returns Bottom_src or a primary OB-MSRC-* obstruction"
+open_obligations:
+  - "Actual source certificates are not audited in this packet."
+  - "The transition-token structure is not adopted as a target smooth atlas."
+  - "Representability as full M_src remains open."
+next_route_recommendation: "Phase 4 should classify finite/local witness survival versus global M_src adoption before integrated theorem work."
