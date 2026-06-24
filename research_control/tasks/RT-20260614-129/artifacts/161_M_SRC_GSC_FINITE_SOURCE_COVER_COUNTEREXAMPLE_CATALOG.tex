@@ -1,0 +1,172 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{longtable}
+
+\newcommand{\GSC}{\mathsf{GSC}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\Mgsccand}{M_{\mathrm{src}}^{\GSC\mbox{-}\mathrm{cand}}}
+\newcommand{\Bottomsrc}{\mathrm{Bottom}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\title{Finite Source-Cover Counterexample Catalog for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\)}
+\author{Candidate Constructor Packet RT-20260614-129}
+\date{2026-06-24}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the Phase 6 Candidate Constructor output for
+\texttt{RT-20260614-129}. The selected role is
+\texttt{candidate-constructor@0.2.0}. The parent handoff is
+\texttt{handoff-0164}. The target derivation milestone is
+\texttt{source\_manifold\_m\_src}.
+
+The purpose is to use the existing finite source-cover checker as a
+counterexample factory for the later integrated \(\Mgsccand(E)\) adoption
+theorem attempt. This packet uses Mode A from the implementation plan: no
+checker code, tests, schemas, validators, or checkpoint behavior are changed.
+
+This packet does not adopt \(\Msrc\), does not construct full \(\Msrc\), does
+not adopt \(\mathsf{RegSold}_{\mathrm{src}}^{\GSC}\), does not adopt
+\(\mathsf{FVR}_{\mathrm{src}}^{\GSC}\), does not edit canonical ontology TeX,
+does not define \(\geff\), does not derive matter coupling, does not derive
+Einstein equations, does not promote benchmark status, does not issue Gate
+Chair closure, does not claim completed derivation, does not claim future
+source-extension impossibility, and does not reject the global theory.
+
+\section{Method}
+
+The reference finite witness is
+\texttt{research\_control/tasks/RT-20260614-095/artifacts/finite\_source\_witness.yaml}.
+The checker is
+\texttt{scripts/research\_control/finite\_source\_cover\_model\_checker.py}.
+
+The packet applies finite in-memory mutations to the reference witness and
+records the checker status for each mutation. The replay summary is
+\texttt{research\_control/tasks/RT-20260614-129/artifacts/finite\_checker\_counterexample\_replay\_summary.yaml}.
+
+All checker authority flags remain false:
+\[
+\begin{array}{ll}
+\texttt{physics\_claim\_authority} &= \texttt{false},\\
+\texttt{source\_law\_adoption\_authority} &= \texttt{false},\\
+\texttt{m\_src\_adoption\_authority} &= \texttt{false},\\
+\texttt{g\_eff\_authority} &= \texttt{false},\\
+\texttt{benchmark\_promotion\_authority} &= \texttt{false}.
+\end{array}
+\]
+
+\section{Counterexample Catalog}
+
+\begin{longtable}{|p{0.20\linewidth}|p{0.22\linewidth}|p{0.16\linewidth}|p{0.18\linewidth}|p{0.14\linewidth}|}
+\hline
+\textbf{Counterexample} & \textbf{Intended obstruction} & \textbf{Checker status} & \textbf{Theorem assumption attacked} & \textbf{Adoption consequence} \\
+\hline
+nonseparation & \texttt{OB-MSRC-SEPARATION-FAIL} & \texttt{fail\_nonseparation} & separation & blocks theorem unless assumption excludes it \\
+\hline
+noncanonical topology & \texttt{OB-MSRC-SO-TOPOLOGY-NONCANONICAL} & \texttt{fail\_topology\_noncanonical} & topology analogue & requires selector or new primitive \\
+\hline
+inverse failure & \texttt{OB-MSRC-TRANSITION-INVERSE-FAIL} & \texttt{fail\_transition\_incoherent} & transition inverse law & blocks transition law \\
+\hline
+cocycle failure & \texttt{OB-MSRC-TRANSITION-COCYCLE-FAIL} & \texttt{fail\_transition\_incoherent} & transition cocycle law & blocks atlas-like structure \\
+\hline
+soldering nonunique & \texttt{OB-MSRC-SOLDERING-NONUNIQUE} & \texttt{fail\_soldering\_nonunique} & regularity/soldering & blocks geometry continuation \\
+\hline
+variation fragile & \texttt{OB-MSRC-FVR-FRAGILE} & \texttt{fail\_variation\_fragile} & finite-variation robustness & blocks robust adoption \\
+\hline
+target import & \texttt{OB-MSRC-TARGET-IMPORT} & \texttt{fail\_target\_import} & no-target-import & invalid route \\
+\hline
+bottom leak & \texttt{OB-MSRC-BOTTOM-LEAK} & \texttt{bottom} & bottom behavior & invalid fail-closed semantics \\
+\hline
+\end{longtable}
+
+\section{Required Counterexample Schema}
+
+Each catalog entry is treated as a finite/local counterexample schema with the
+following fields:
+
+\begin{itemize}
+  \item \texttt{case\_id};
+  \item \texttt{case\_scope = finite\_local\_counterexample};
+  \item \texttt{intended\_obstruction};
+  \item \texttt{source\_carriers}, \texttt{source\_supports}, and
+        \texttt{source\_overlaps};
+  \item \texttt{transition\_tokens};
+  \item \texttt{certificates};
+  \item \texttt{finite\_variations};
+  \item \texttt{expected\_checker\_status};
+  \item \texttt{claim\_boundary =
+        counterexample\_or\_stress\_data\_only\_not\_msrc\_adoption}; and
+  \item forbidden-overread warnings that checker pass or fail is not adoption,
+        finite/local status does not globalize without a theorem, and target
+        topology, target atlas, target metric, and benchmark data are not used
+        as proof.
+\end{itemize}
+
+\section{Interpretation}
+
+The catalog is useful because it gives the Phase 7 theorem attempt concrete
+failure surfaces. Each case asks whether the future integrated theorem has an
+assumption strong enough to exclude the finite model or whether the theorem
+must return \(\Bottomsrc\) with the named obstruction.
+
+The catalog is limited because finite checker output is not a proof engine.
+A local pass would not adopt \(\Msrc\). A local failure would not reject the
+global theory. The correct use is:
+\[
+  \text{finite counterexample}
+  \Longrightarrow
+  \text{theorem assumption attacked}
+  \Longrightarrow
+  \text{integrated theorem or obstruction still required}.
+\]
+
+\section{Acceptance Criterion}
+
+Phase 6 passes because the packet produces a counterexample catalog that maps
+finite cases to obstruction labels and records existing checker statuses for
+the required failure classes. No checker success is treated as adoption proof.
+
+\section{Next Route}
+
+The next legal packet is Phase 7: one bounded integrated minimum source-only
+adoption theorem attempt or precise obstruction. It should consume Phases 1
+through 6 and either formulate a conditional source-only \(\Msrc\) adoption
+theorem candidate or identify a named source-only obstruction. It must not
+route directly to \(\geff\), matter coupling, Einstein equations, benchmark
+promotion, Gate Chair closure, completed derivation, future source-extension
+impossibility, or global theory rejection.
+
+\section{Conclusion}
+
+The finite checker has been used as a counterexample factory. The resulting
+catalog sharpens the Phase 7 theorem burden but does not discharge it. Full
+\(\Msrc\) adoption remains not granted. The same-milestone continuation
+remains open.
+
+\begin{thebibliography}{9}
+
+\bibitem{plan}
+The AEther-Flow Research Project. (2026, June 24). \emph{Recommendations
+implementation plan for continue-research v4} [Internal implementation plan].
+
+\bibitem{checker-design}
+The AEther-Flow Research Project. (2026, June 23). \emph{Finite source-cover
+model checker} [Internal control note].
+
+\bibitem{reference-witness}
+The AEther-Flow Research Project. (2026, June 23). \emph{Finite source witness}
+[Internal research-control artifact].
+
+\bibitem{no-target}
+The AEther-Flow Research Project. (2026, June 24). \emph{No-target-import
+criterion for M\_src GSC candidate adoption} [Internal research-control
+artifact].
+
+\end{thebibliography}
+
+\end{document}

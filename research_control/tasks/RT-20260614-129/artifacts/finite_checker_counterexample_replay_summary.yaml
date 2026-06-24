@@ -1,0 +1,78 @@
+artifact_id: "FINITE-CHECKER-COUNTEREXAMPLE-REPLAY-SUMMARY"
+task_id: "RT-20260614-129"
+job_id: "AJ-RT-20260614-129-001"
+status: "completed"
+created_at: "2026-06-24T14:35:21Z"
+checker_path: "scripts/research_control/finite_source_cover_model_checker.py"
+reference_input_path: "research_control/tasks/RT-20260614-095/artifacts/finite_source_witness.yaml"
+mode: "in_memory_mutations_no_code_changes"
+command: ".venv/bin/python - <<'PY' ... finite source-cover checker in-memory mutation replay ... PY"
+checker_result_summary:
+  - case_id: "finite-counterexample-nonseparation"
+    intended_obstruction: "OB-MSRC-SEPARATION-FAIL"
+    checker_status: "fail_nonseparation"
+    checks:
+      - "check_sep_src"
+    failure_count: 1
+  - case_id: "finite-counterexample-topology-noncanonical"
+    intended_obstruction: "OB-MSRC-SO-TOPOLOGY-NONCANONICAL"
+    checker_status: "fail_topology_noncanonical"
+    checks:
+      - "check_chart_support"
+      - "check_rank_coherence"
+    failure_count: 2
+  - case_id: "finite-counterexample-transition-inverse-failure"
+    intended_obstruction: "OB-MSRC-TRANSITION-INVERSE-FAIL"
+    checker_status: "fail_transition_incoherent"
+    checks:
+      - "check_cocycle_tokens"
+      - "check_inverse_tokens"
+    failure_count: 2
+  - case_id: "finite-counterexample-transition-cocycle-failure"
+    intended_obstruction: "OB-MSRC-TRANSITION-COCYCLE-FAIL"
+    checker_status: "fail_transition_incoherent"
+    checks:
+      - "check_cocycle_tokens"
+    failure_count: 2
+  - case_id: "finite-counterexample-soldering-nonunique"
+    intended_obstruction: "OB-MSRC-SOLDERING-NONUNIQUE"
+    checker_status: "fail_soldering_nonunique"
+    checks:
+      - "check_soldering_uniqueness"
+    failure_count: 1
+  - case_id: "finite-counterexample-variation-fragile"
+    intended_obstruction: "OB-MSRC-FVR-FRAGILE"
+    checker_status: "fail_variation_fragile"
+    checks:
+      - "check_variation_preservation"
+    failure_count: 1
+  - case_id: "finite-counterexample-target-import"
+    intended_obstruction: "OB-MSRC-TARGET-IMPORT"
+    checker_status: "fail_target_import"
+    checks:
+      - "check_target_import_flags"
+    failure_count: 1
+  - case_id: "finite-counterexample-bottom-leak"
+    intended_obstruction: "OB-MSRC-BOTTOM-LEAK"
+    checker_status: "bottom"
+    checks:
+      - "check_bottom_conditions"
+    failure_count: 1
+authority_flags_all_false: true
+authority_flags:
+  physics_claim_authority: false
+  source_law_adoption_authority: false
+  m_src_adoption_authority: false
+  g_eff_authority: false
+  benchmark_promotion_authority: false
+claim_status:
+  checker: "project-control tooling"
+  counterexample_catalog: "draft/control"
+  finite_counterexamples: "finite_local_counterexample_data"
+  m_src: "blocked"
+  g_eff: "not_started"
+forbidden_overread:
+  - "checker pass/fail is not adoption"
+  - "finite/local result does not globalize without theorem"
+  - "no target topology atlas metric or benchmark data as proof"
+  - "counterexample catalog is not global theory rejection"
