@@ -1,0 +1,47 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-137"
+job_id: "AJ-RT-20260614-137-001"
+status: "completed"
+audited_object: "proposal-only MetricLaw_src^{GSC}"
+audited_source_path: "research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex"
+audit_focus:
+  - "source-only definability of domain and output package"
+  - "Lorentzian signature import through Sigma_src"
+  - "target metric import through MetricData"
+  - "target transition-map import through Cov_tau^met"
+  - "proper-time or detector-semantics import through Lambda_src"
+  - "g_eff construction language"
+findings:
+  target_metric_import:
+    status: "not_detected_as_required_premise"
+    basis: "The formalization names MetricData as prerequisite source-law data and explicitly states that MetricData is not g_eff."
+  lorentzian_signature_import:
+    status: "not_detected_as_required_premise"
+    basis: "Sigma_src is introduced as a source-side selector obligation and target signature import triggers OB-GEFF-TARGET-METRIC-IMPORT."
+  target_transition_map_import:
+    status: "not_detected_as_required_premise"
+    basis: "Cov_tau^met is constrained to source transition tokens; target transition maps trigger OB-GEFF-TRANSITION-COVARIANCE-FAILURE or target-import failure."
+  proper_time_or_detector_import:
+    status: "not_detected_as_required_premise"
+    basis: "Lambda_src must be source-determined; target proper time or detector calibration triggers scale underdetermination or target-import obstruction."
+  accidental_geff_construction:
+    status: "not_detected_as_written"
+    basis: "The artifact repeatedly states that the interface is proposal-only and no non-bottom output is g_eff."
+mathematical_result:
+  status: "conditional_source_purity_pass"
+  lemma: "As written, MetricLaw_src^{GSC} is an auditable source-law interface rather than a target-metric construction."
+  limitations:
+    - "The audit does not prove selector existence."
+    - "The audit does not prove uniqueness."
+    - "The audit does not prove nondegeneracy."
+    - "The audit does not adopt MetricLaw_src or construct g_eff."
+stress_targets:
+  - "signature or orientation selector underdetermination"
+  - "scale or measure nonuniqueness"
+  - "causal-preorder ambiguity"
+  - "source transition covariance failure"
+  - "nondegeneracy failure"
+  - "finite-variation fragility"
+  - "bottom leak from OB-GEFF branches"
+claim_boundary: "No MetricLaw_src adoption, no g_eff construction, no matter coupling, no Einstein equations, no benchmark promotion."

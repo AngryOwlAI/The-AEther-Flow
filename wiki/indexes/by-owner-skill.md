@@ -427,6 +427,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-GATE-CHAIR-REVIEW` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-gate-chair-review.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-refuter-stress.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-metric-law-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `wiki/tex/tex-research-control-m-src-gsc-metric-law-source-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `wiki/tex/tex-research-control-m-src-gsc-minimum-source-only-adoption-theorem-envelope.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `wiki/tex/tex-research-control-m-src-gsc-no-target-import-criterion.md`
@@ -693,6 +694,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260614-132/artifacts/164_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_REFUTER_STRESS.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-131/artifacts/163_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-137/artifacts/168_M_SRC_GSC_METRIC_LAW_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex`

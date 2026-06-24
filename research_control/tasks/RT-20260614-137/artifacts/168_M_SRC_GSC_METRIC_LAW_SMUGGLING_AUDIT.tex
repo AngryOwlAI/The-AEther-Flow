@@ -1,0 +1,220 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{status}{Status}
+
+\title{Smuggling Audit of Proposal-Only MetricLaw\(_{\mathrm{src}}^{\mathsf{GSC}}\)}
+\author{Smuggling Auditor Packet RT-20260614-137}
+\date{2026-06-24}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+Task: \texttt{RT-20260614-137}. Role:
+\texttt{smuggling-auditor@0.2.0}. Target milestone:
+\texttt{effective\_metric\_g\_eff}. Audited artifact:
+\texttt{research\_control/tasks/RT-20260614-136/artifacts/167\_M\_SRC\_GSC\_METRIC\_LAW\_SOURCE\_FORMALIZATION\_OR\_OBSTRUCTION.tex}.
+
+This audit tests proposal-only \(\MetricLaw\) for hidden target import and
+authority overread. It does not edit canonical ontology TeX, does not change
+the scoped \(\MsrcGSC(E)\) adoption boundary from \texttt{RT-20260614-134},
+does not adopt \(\MetricLaw\), does not define or construct \(\geff\), does
+not derive matter coupling, does not derive Einstein equations, does not
+promote benchmark status, does not issue benchmark Gate Chair closure, does
+not claim completed derivation, does not claim future source-extension
+impossibility, and does not reject the global theory.
+
+\begin{verbatim}
+result_type: "metric_law_smuggling_audit"
+audited_object: "proposal-only MetricLaw_src^{GSC}"
+audit_status: "conditional_source_purity_pass"
+g_eff_constructed: false
+next_route: "Refuter stress of MetricLaw_src^{GSC}"
+\end{verbatim}
+
+\section{Audited Object}
+
+The audited object is the proposal-only partial source-law interface
+\[
+  \MetricLaw:
+  D_{\MetricLaw}(E)
+  \dashrightarrow
+  \MetricData(E)
+  \cup
+  \{\BottomSrc\}
+  \cup
+  \mathrm{OB\mbox{-}GEFF\mbox{-}*}.
+\]
+The non-bottom output package names source-side obligations:
+\[
+  \MetricData(E)
+  =
+  (
+    \Sigma_{\mathrm{src}},
+    \Lambda_{\mathrm{src}},
+    C_{\mathrm{src}},
+    \mathrm{Cov}_{\tau}^{\mathrm{met}},
+    N_{\mathrm{src}},
+    \mathrm{VarML}_{\mathrm{src}},
+    B_{\mathrm{src}}
+  ).
+\]
+The object is not \(\geff\). It is not an adopted source law. It is only an
+auditable interface that states what source-side data would be needed before
+any future effective metric construction could be attempted.
+
+\section{Audit Matrix}
+
+\begin{longtable}{p{0.30\linewidth}p{0.23\linewidth}p{0.37\linewidth}}
+\toprule
+Audit target & Finding & Reason \\
+\midrule
+Target metric import & not detected as required premise & The audited artifact
+defines \(\MetricData(E)\) as prerequisite source-law data and explicitly
+states that it is not \(\geff\). Any branch requiring target metric structure
+returns \(\mathrm{OB\mbox{-}GEFF\mbox{-}TARGET\mbox{-}METRIC\mbox{-}IMPORT}\). \\
+Lorentzian signature import & not detected as required premise &
+\(\Sigma_{\mathrm{src}}\) is a source-side selector obligation, not a
+Lorentzian-signature premise. \\
+Target atlas or transition-map import & not detected as required premise &
+\(\mathrm{Cov}_{\tau}^{\mathrm{met}}\) is constrained to source transition
+tokens. Dependence on target transition maps triggers a fail-closed branch. \\
+Proper-time or detector-semantics import & not detected as required premise &
+\(\Lambda_{\mathrm{src}}\) must be source-determined; target proper time or
+detector calibration triggers scale underdetermination or target-import
+failure. \\
+Benchmark-as-proof & not detected as required premise & Benchmark behavior is
+listed as forbidden input and is not used to justify the interface. \\
+Process-authority laundering & not detected as required premise & Generated
+derivatives, registries, validators, roles, handoffs, approvals, local caches,
+file order, and commit status are excluded as mathematical premises. \\
+Scoped \(\Msrc\) overread & not detected as written & Scoped \(\MsrcGSC(E)\)
+is consumed only as input from \texttt{RT-20260614-134}; the audit finds no
+change to its adoption boundary. \\
+Law naming as law adoption & not detected as written & \(\MetricLaw\) is
+labelled proposal-only pending audit, stress, and any future gate. \\
+Accidental \(\geff\) construction & not detected as written & The audited
+artifact states that no effective metric is supplied and routes only to audit
+and stress. \\
+\bottomrule
+\end{longtable}
+
+\section{Audit Lemma}
+
+\begin{lemma}[Conditional source-purity of the proposal-only interface]
+As written in \texttt{RT-20260614-136}, \(\MetricLaw\) does not require target
+metric, Lorentzian signature, target atlas, target transition-map, proper-time
+semantics, detector semantics, benchmark behavior, generated derivative,
+registry, validator, role, handoff, approval, local cache, file order, or
+commit status premises in order to be stated as proposal-only source-law
+interface data.
+\end{lemma}
+
+\begin{proof}
+Each non-bottom component of \(\MetricData(E)\) is stated as a source-side
+selector, relation, covariance, nondegeneracy, finite-variation, or bottom
+obligation. The audited artifact declares target metric, target signature,
+proper time, detector semantics, benchmark behavior, and process status
+forbidden as mathematical premises. Each contaminated branch returns
+\(\BottomSrc\) or a named \(\mathrm{OB\mbox{-}GEFF}\) obstruction. Therefore
+the interface can be audited as source-side proposal data. This proves only
+source-purity of the written interface under the stated restrictions; it does
+not prove existence, uniqueness, adoption, or metric construction.
+\end{proof}
+
+\section{Limitations}
+
+The audit does not prove that \(\Sigma_{\mathrm{src}}\),
+\(\Lambda_{\mathrm{src}}\), \(C_{\mathrm{src}}\), or
+\(\mathrm{Cov}_{\tau}^{\mathrm{met}}\) exist. It does not prove that the
+candidate data are unique, nondegenerate, finite-variation robust, or
+bottom-sound. It does not prove that \(\MetricLaw\) is explanatory,
+predictive, adopted, or sufficient for \(\geff\). It only states that the
+proposal-only interface, as written, does not smuggle the audited forbidden
+premises.
+
+\section{Refuter Stress Targets}
+
+The next Refuter packet should stress:
+
+\begin{itemize}[leftmargin=*]
+  \item signature or orientation selector underdetermination;
+  \item interval scale or measure nonuniqueness;
+  \item causal-preorder or cone-analogue ambiguity;
+  \item source transition covariance failure;
+  \item nondegeneracy or uncontrolled degeneracy;
+  \item finite-variation fragility;
+  \item bottom leaks from \(\BottomSrc\) or \(\mathrm{OB\mbox{-}GEFF}\)
+  branches;
+  \item scoped \(\Msrc\) overread; and
+  \item accidental promotion from proposal-only interface data to adopted
+  source law or \(\geff\) construction.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension input only; response-token limits remain stress targets. \\
+\(\Msrc\) & Accepted only within the scoped source-only \(\MsrcGSC(E)\) boundary from RT-20260614-134. \\
+\(\geff\) & Not started; proposal-only \(\MetricLaw\) interface is conditionally source-pure as written but unstressed and unadopted. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Known but limited; metric-law compatibility remains a stress target. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; no metric-law adoption or benchmark closure is requested. \\
+Current route freeze or hard-fail status & Not frozen; next lawful route is Refuter stress of \(\MetricLaw\). \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+Because the audit status is
+\texttt{conditional\_source\_purity\_pass}, the next legal research packet is
+one bounded Refuter stress test of proposal-only \(\MetricLaw\). No
+\(\MetricLaw\) adoption, \(\geff\) construction, matter coupling,
+Einstein-equation, benchmark-promotion, completed-derivation, or global
+theory-rejection route is authorized by this audit.
+
+\section*{References}
+
+Ontology Formalizer Packet RT-20260614-136. (2026). \textit{Proposal-only
+source-to-effective-metric law interface for scoped M\_src GSC(E)}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Gate Chair Packet RT-20260614-134. (2026). \textit{Gate Chair review of the
+integrated source-only M\_src adoption theorem candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation
+burden map} [Internal control note].
+
+Smuggling Auditor. (2026). \textit{Smuggling auditor role contract v0.2.0}
+[Project control role file]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}

@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex`
 - Generated output path: `wiki/tex/tex-research-control-m-src-gsc-metric-law-source-formalization.md`
+- Backlink from `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-137/artifacts/168_M_SRC_GSC_METRIC_LAW_SMUGGLING_AUDIT.tex`
 
 ## Validation
 
