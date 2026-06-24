@@ -1,0 +1,348 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Mgsccand}{M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\CovSrc}{\mathrm{Cov}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\TargetCtx}{\mathcal{T}_{\mathrm{target}}}
+\newcommand{\ProcCtx}{\mathcal{P}_{\mathrm{process}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{status}{Status}
+
+\title{Proposal-Only Source-to-Effective-Metric Law Interface for Scoped \(\MsrcGSC(E)\)}
+\author{Ontology Formalizer Packet RT-20260614-136}
+\date{2026-06-24}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Ontology Formalizer output for
+\texttt{RT-20260614-136}. It executes the route selected by
+\texttt{RT-20260614-135}: formulate proposal-only source-to-effective-metric
+law data \(\MetricLaw\), or emit a precise \(\mathrm{OB\mbox{-}GEFF}\)
+obstruction.
+
+The artifact does not edit canonical ontology TeX. It does not change the
+scoped \(\Msrc\) adoption boundary from \texttt{RT-20260614-134}. It does not
+define or construct \(\geff\), derive matter coupling, derive Einstein
+equations, promote benchmark status, issue benchmark Gate Chair closure, claim
+completed derivation, claim future source-extension impossibility, or reject
+the global theory.
+
+\begin{verbatim}
+result_type: "proposal_only_metric_law_interface"
+candidate_interface: "MetricLaw_src^{GSC}"
+claim_status: "proposal-only pending Smuggling Auditor and Refuter"
+g_eff_constructed: false
+next_route: "Smuggling Auditor audit of MetricLaw_src^{GSC}"
+\end{verbatim}
+
+\section{Input Boundary}
+
+The only admitted source-side starting point is the scoped adopted object
+\[
+  \MsrcGSC(E)
+  =
+  \left(
+    \Mgsccand(E),
+    \CovSrc(E),
+    H1\mbox{--}H13,
+    \BottomSrc/\mathrm{OB\mbox{-}MSRC\mbox{-}*}
+  \right)
+\]
+from \texttt{RT-20260614-134}. This object is adopted only inside the
+source-only H1--H13 boundary. It is not a target smooth manifold, not a target
+metric space, and not a completed GR derivation.
+
+The preflight selector in \texttt{RT-20260614-135} identified the missing
+source law as a source-to-effective-metric response law. The older
+metric-response attempts showed that source observer/readout data alone do not
+determine metric signature, interval scale, causal cones, metric response, or
+coupling hooks. The present packet therefore formalizes a law interface rather
+than an effective metric.
+
+\section{Proposal-Only Metric-Law Interface}
+
+\begin{definition}[Source metric-law domain]
+Let \(D_{\MetricLaw}(E)\) be the class of source packages containing:
+\begin{enumerate}[leftmargin=*]
+  \item scoped adopted \(\MsrcGSC(E)\);
+  \item selected source coverage \(\CovSrc(E)\);
+  \item source chart-support tokens and source transition-token identity,
+  inverse, composition, and cocycle conditions;
+  \item source response or readout tokens only when explicitly present as
+  source-side data;
+  \item fail-closed \(\BottomSrc\) and \(\mathrm{OB\mbox{-}MSRC}\) discipline;
+  \item no target context \(\TargetCtx\) and no process context
+  \(\ProcCtx\) as mathematical premises.
+\end{enumerate}
+If any entry is unavailable, malformed, or target-contaminated, the branch
+returns \(\BottomSrc\) or a named \(\mathrm{OB\mbox{-}GEFF}\) obstruction.
+\end{definition}
+
+\begin{definition}[Proposal-only \(\MetricLaw\)]
+\(\MetricLaw\) is a partial source-law interface
+\[
+  \MetricLaw:
+  D_{\MetricLaw}(E)
+  \dashrightarrow
+  \MetricData(E)
+  \cup
+  \{\BottomSrc\}
+  \cup
+  \mathrm{OB\mbox{-}GEFF\mbox{-}*},
+\]
+where a non-bottom output has the form
+\[
+  \MetricData(E)
+  =
+  (
+    \Sigma_{\mathrm{src}},
+    \Lambda_{\mathrm{src}},
+    C_{\mathrm{src}},
+    \mathrm{Cov}_{\tau}^{\mathrm{met}},
+    N_{\mathrm{src}},
+    \mathrm{VarML}_{\mathrm{src}},
+    B_{\mathrm{src}}
+  ).
+\]
+Here \(\Sigma_{\mathrm{src}}\) is an orientation or signature selector,
+\(\Lambda_{\mathrm{src}}\) is an interval-scale or measure selector,
+\(C_{\mathrm{src}}\) is a causal-preorder or causal-cone analogue,
+\(\mathrm{Cov}_{\tau}^{\mathrm{met}}\) is source-transition covariance,
+\(N_{\mathrm{src}}\) is nondegeneracy or controlled degeneracy,
+\(\mathrm{VarML}_{\mathrm{src}}\) is finite-variation compatibility, and
+\(B_{\mathrm{src}}\) is bottom or obstruction behavior.
+\end{definition}
+
+\begin{status}[No metric construction]
+\(\MetricData(E)\) is metric-law prerequisite data. It is not \(\geff\). The
+symbol \(\Sigma_{\mathrm{src}}\) does not import Lorentzian signature; it is a
+source-side selector obligation. The symbol \(C_{\mathrm{src}}\) does not
+import a target causal cone; it is a source-side preorder or cone-analogue
+obligation. Any branch that needs target metric structure returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TARGET\mbox{-}METRIC\mbox{-}IMPORT}\).
+\end{status}
+
+\section{Required Conditions}
+
+\begin{condition}[ML1: source-only definability]
+Every non-bottom premise and every non-bottom output of \(\MetricLaw\) must
+factor through source-side data in \(D_{\MetricLaw}(E)\). No target topology,
+target atlas, target transition map, target metric, Lorentzian signature,
+proper-time semantics, detector semantics, benchmark success, generated
+derivative, registry row, validator result, role identity, handoff, approval,
+local cache, file order, or commit status may enter as a mathematical premise.
+\end{condition}
+
+\begin{condition}[ML2: orientation or signature selection]
+\(\Sigma_{\mathrm{src}}\) must be determined by source-side tokens, response
+data, or an explicit source-side gauge. If source data do not determine this
+selector, the branch returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}UNDERDETERMINED}\).
+\end{condition}
+
+\begin{condition}[ML3: scale or measure selection]
+\(\Lambda_{\mathrm{src}}\) must determine interval scale, measure, or a stated
+source-side scale gauge. If only target proper time, benchmark fit, or
+empirical detector calibration fixes scale, the branch returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SCALE\mbox{-}UNDERDETERMINED}\) or
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TARGET\mbox{-}METRIC\mbox{-}IMPORT}\).
+\end{condition}
+
+\begin{condition}[ML4: causal preorder or cone analogue]
+\(C_{\mathrm{src}}\) must be a source preorder, relation, cone analogue, or
+explicitly weaker causal-response placeholder. If no source-side relation can
+be defined, the branch returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}CAUSAL\mbox{-}CONE\mbox{-}UNDERDETERMINED}\).
+\end{condition}
+
+\begin{condition}[ML5: source transition covariance]
+\(\mathrm{Cov}_{\tau}^{\mathrm{met}}\) must state how
+\(\MetricData(E)\) is invariant or covariant under source transition tokens on
+overlaps. If the law depends on chart naming or target transition maps, the
+branch returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TRANSITION\mbox{-}COVARIANCE\mbox{-}FAILURE}\).
+\end{condition}
+
+\begin{condition}[ML6: nondegeneracy or controlled degeneracy]
+\(N_{\mathrm{src}}\) must define a source-side nondegeneracy condition or a
+controlled degeneracy branch. Uncontrolled collapse returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}NONDEGENERACY\mbox{-}FAILURE}\).
+\end{condition}
+
+\begin{condition}[ML7: finite-variation compatibility]
+\(\mathrm{VarML}_{\mathrm{src}}\) must state whether the metric-law data are
+stable, repaired, or fail-closed under the finite-variation discipline
+available inside the scoped \(\Msrc\) boundary. Fragility returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILITY}\).
+\end{condition}
+
+\begin{condition}[ML8: uniqueness or selector discipline]
+If multiple incompatible metric-law data packages satisfy ML1--ML7 with no
+source-only selector, the branch returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}LAW\mbox{-}NONUNIQUE}\).
+\end{condition}
+
+\section{Obstruction Branches}
+
+\begin{longtable}{p{0.33\linewidth}p{0.57\linewidth}}
+\toprule
+Obstruction & Trigger \\
+\midrule
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}RESPONSE\mbox{-}TOKEN\mbox{-}MISSING}\) &
+No source response or readout token sufficient to state orientation, scale, or causal-response obligations is present. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}UNDERDETERMINED}\) &
+Source data do not determine orientation, signature, or an explicit source-side signature gauge. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SCALE\mbox{-}UNDERDETERMINED}\) &
+Source data do not determine interval scale, measure, normalization, or an explicit source-side scale gauge. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}CAUSAL\mbox{-}CONE\mbox{-}UNDERDETERMINED}\) &
+No source causal preorder, cone analogue, or explicitly weaker relation is defined. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TRANSITION\mbox{-}COVARIANCE\mbox{-}FAILURE}\) &
+Candidate law data fail invariance or covariance under source transition tokens. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}NONDEGENERACY\mbox{-}FAILURE}\) &
+Candidate data collapse without a controlled degeneracy branch. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILITY}\) &
+Candidate data are unstable under admitted finite-variation or source-cover perturbations. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}LAW\mbox{-}NONUNIQUE}\) &
+Multiple incompatible source-law outputs satisfy the same source evidence without a source-only selector. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TARGET\mbox{-}METRIC\mbox{-}IMPORT}\) &
+Target Lorentzian metric, target signature, proper time, target atlas, detector semantics, or benchmark behavior is used as a premise. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}PROCESS\mbox{-}AUTHORITY\mbox{-}LAUNDERING}\) &
+Registry, validator, role, handoff, approval, generated derivative, local cache, file order, or commit status is used as metric-law evidence. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}LAW\mbox{-}UNFORMED}\) &
+The source law cannot be stated without adding a new source primitive or protected ontology authority. \\
+\bottomrule
+\end{longtable}
+
+\section{Proposition: What This Packet Establishes}
+
+\begin{proposition}[Proposal-only metric-law interface]
+Under the scoped \(\MsrcGSC(E)\) adoption boundary and the no-target-import
+rules, the first lawful \(\geff\)-milestone packet can be stated as the
+proposal-only interface \(\MetricLaw\) above. The interface specifies the
+minimum source-side data and proof obligations needed before any future
+effective metric construction may be attempted.
+\end{proposition}
+
+\begin{proof}
+The Phase 11 selector rejects immediate \(\geff\) construction because no
+source-to-effective-metric law exists. The scoped \(\MsrcGSC(E)\) object
+supplies source carriers, source coverage, source chart-support tokens,
+transition-token conditions, and fail-closed obstruction behavior, but not a
+metric, signature, scale, causal cone, or nondegenerate form. Therefore the
+smallest non-promotional next object is not \(\geff\), but a partial source
+law interface whose non-bottom output names the missing selector and
+covariance data. Each branch that cannot be source-defined returns
+\(\BottomSrc\) or an \(\mathrm{OB\mbox{-}GEFF}\) obstruction. This proves only
+that the interface is formulable as proposal-only law data; it does not prove
+that the law is adopted or that all selectors exist.
+\end{proof}
+
+\section{Forbidden Inferences}
+
+\begin{center}
+\begin{tabular}{p{0.42\linewidth}p{0.45\linewidth}}
+\toprule
+Invalid inference & Correct reading \\
+\midrule
+Scoped \(\Msrc\) adoption implies \(\geff\). & Scoped \(\Msrc\) adoption permits only metric-law preflight work. \\
+\(\MetricLaw\) is named, therefore adopted. & \(\MetricLaw\) is proposal-only pending audit, stress, and any future gate. \\
+\(\Sigma_{\mathrm{src}}\) is Lorentzian signature. & It is a source-side selector obligation; target signature import fails. \\
+\(C_{\mathrm{src}}\) is a target causal cone. & It is a source relation or analogue obligation; target causal structure fails. \\
+Validator PASS proves metric law. & Validators check structure and receipts only. \\
+Missing metric law rejects the theory. & It records a local downstream-metric obstruction or missing primitive only. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension input only; response-token limits remain relevant to metric-law work. \\
+\(\Msrc\) & Accepted only within the scoped source-only \(\MsrcGSC(E)\) boundary from RT-20260614-134. \\
+\(\geff\) & Not started; proposal-only \(\MetricLaw\) interface is formulated but no effective metric is supplied. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Known but limited; compatibility with metric-law data is an explicit ML7 obligation. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; no metric-law adoption or benchmark closure is requested. \\
+Current route freeze or hard-fail status & Not frozen; next lawful route is Smuggling Auditor audit of \(\MetricLaw\). \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next packet should be one bounded Smuggling Auditor audit of
+\(\MetricLaw\). The audit should test target metric import, Lorentzian
+signature import, target atlas import, proper-time or detector-semantics
+import, benchmark-as-proof, process-authority laundering, scoped \(\Msrc\)
+overread, and accidental \(\geff\) construction language.
+
+If the audit passes, a later Refuter packet may stress selector
+underdetermination, scale nonuniqueness, transition covariance failure,
+nondegeneracy failure, finite-variation fragility, and bottom leaks. Any law
+adoption or \(\geff\) construction remains outside this packet.
+
+\section{Conclusion}
+
+This packet formulates a proposal-only \(\MetricLaw\) source-law interface and
+an \(\mathrm{OB\mbox{-}GEFF}\) obstruction family. It narrows the first
+\(\geff\)-milestone burden without constructing \(\geff\). Same-milestone
+continuation remains open under audit and stress discipline.
+
+\begin{thebibliography}{9}
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\bibitem{missing-laws}
+The AEther-Flow Research Project. (2026, June 20). \emph{Missing source-law
+inventory} [Internal control artifact].
+
+\bibitem{gate-chair}
+Gate Chair Packet RT-20260614-134. (2026). \emph{Gate Chair review of the
+integrated source-only M\_src adoption theorem candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+\bibitem{selector}
+Theoretical Continuation Selector Packet RT-20260614-135. (2026).
+\emph{Effective metric preflight selector for scoped M\_src GSC}
+[Research-control YAML artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+\bibitem{metric-response}
+Candidate Constructor Packet RT-20260614-041. (2026). \emph{Audited ObsLoc
+observer-readout metric-response law bridge attempt} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+\end{thebibliography}
+
+\end{document}
