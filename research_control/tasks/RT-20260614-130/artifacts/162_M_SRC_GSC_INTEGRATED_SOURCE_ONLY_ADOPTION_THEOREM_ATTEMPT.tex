@@ -1,0 +1,311 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\Mgsccand}{M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\GenCover}{\mathrm{GenCover}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\RegSold}{\mathrm{RegSold}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\FVR}{\mathrm{FVR}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\CovSrc}{\mathrm{Cov}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SourceData}{\mathcal{S}(E)}
+\newcommand{\TargetCtx}{\mathcal{T}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\title{Integrated Source-Only \(\Msrc\) Adoption Theorem Attempt for \(\Mgsccand(E)\)}
+\author{The AEther-Flow Research Project}
+\date{2026-06-24}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This Phase 7 artifact is a draft/control science artifact for
+\texttt{RT-20260614-130}. It integrates the Phase 1 through Phase 6
+recommendations-plan packets for \(\Mgsccand(E)\). It does not adopt
+\(\Msrc\), does not construct full \(\Msrc\), does not adopt \(\RegSold\), does
+not adopt \(\FVR\), does not adopt transition structure, does not define
+\(g_{\mathrm{eff}}\), does not claim matter coupling, does not derive Einstein
+equations, does not promote benchmark status, does not issue Gate Chair
+closure, does not claim completed derivation, does not claim future
+source-extension impossibility, and does not reject the global theory.
+
+\begin{verbatim}
+result_type: adoption_theorem_candidate
+claim_status: not_adopted_pending_audit_refuter_human_gate
+integrated_theorem_status: conditional_candidate_formed
+next_route: Phase 8A Smuggling Auditor
+\end{verbatim}
+
+\section{Inputs Consumed}
+
+The theorem attempt consumes the following tracked source/control surfaces.
+They are used as science-draft or control evidence only, according to their
+registered authority status.
+
+\begin{itemize}[leftmargin=*]
+  \item Phase 1 theorem envelope:
+  \texttt{research\_control/tasks/RT-20260614-124/artifacts/156\_M\_SRC\_GSC\_MINIMUM\_SOURCE\_ONLY\_ADOPTION\_THEOREM\_ENVELOPE.tex}.
+  \item Phase 2 topology analogue route:
+  \texttt{research\_control/tasks/RT-20260614-125/artifacts/157\_M\_SRC\_GSC\_SOURCE\_TOPOLOGY\_ANALOGUE\_ROUTE\_DECISION.yaml}.
+  \item Phase 3 transition-token groupoid conditions:
+  \texttt{research\_control/tasks/RT-20260614-126/artifacts/158\_M\_SRC\_GSC\_SOURCE\_TRANSITION\_TOKEN\_GROUPOID\_CONDITIONS.tex}.
+  \item Phase 4 finite/local witness classification:
+  \texttt{research\_control/tasks/RT-20260614-127/artifacts/159\_M\_SRC\_GSC\_FINITE\_LOCAL\_WITNESS\_CLASSIFICATION.tex}.
+  \item Phase 5 no-target-import criterion:
+  \texttt{research\_control/tasks/RT-20260614-128/artifacts/160\_M\_SRC\_GSC\_NO\_TARGET\_IMPORT\_CRITERION.tex}.
+  \item Phase 6 finite counterexample catalog:
+  \texttt{research\_control/tasks/RT-20260614-129/artifacts/161\_M\_SRC\_GSC\_FINITE\_SOURCE\_COVER\_COUNTEREXAMPLE\_CATALOG.tex}.
+  \item Prior bridge and gate surfaces:
+  \texttt{RT-114}, \texttt{RT-117}, \texttt{RT-118}, \texttt{RT-119}, and
+  \texttt{RT-123} artifacts.
+\end{itemize}
+
+\section{Source Data And Theorem Object}
+
+\begin{definition}[Integrated source data]
+For the present packet, \(\SourceData\) denotes the source-side data explicitly
+available to the theorem attempt: \(E\), the adopted source-extension law
+\(\GenCover\) only at its authorized source-extension status, source supports
+\(U_i^{\mathrm{src}}\), overlap predicates \(O_{ij}^{\mathrm{src}}\), chart
+support tokens \(\chi_i^{\mathrm{src}}\), source transition tokens
+\(\tau_{ij}^{\mathrm{src}}\), certificates \(\mathrm{Cert}(E)\), the selected
+site-coverage route \(\CovSrc(E)\), and fail-closed \(\BottomSrc\) guards.
+\end{definition}
+
+\begin{definition}[Integrated theorem candidate]
+An integrated source-only \(\Msrc\) adoption theorem candidate for
+\(\Mgsccand(E)\) is a proof object \(\Pi_{\mathrm{int}}(E)\) whose non-bottom
+premises and conclusions are stated only in terms of \(\SourceData\), whose
+failed branches return \(\BottomSrc\) or a named \texttt{OB-MSRC-*}
+obstruction, and whose conclusion is limited to audit/refuter/human-gate
+readiness rather than adoption.
+\end{definition}
+
+\section{Theorem Statement}
+
+\begin{theorem}[Conditional integrated source-only adoption theorem candidate]
+Let \(E\) be a source-side input for which \(\Mgsccand(E)\) has the prior
+bridge-candidate status recorded in \texttt{RT-117} through \texttt{RT-123}.
+Assume the following hypothesis families.
+
+\begin{enumerate}[label=\textbf{H\arabic*.}, leftmargin=*]
+  \item Carrier and quotient support are source-defined and stable under the
+  allowed source overlaps.
+  \item \(\CovSrc(E)\) is the selected site-coverage topology analogue and is
+  generated from source supports, overlap predicates, certificates, and
+  \(\BottomSrc\) guards, not from target open sets.
+  \item Chart-support tokens are regular only in the source-token sense
+  required by the Phase 1 theorem envelope.
+  \item Transition tokens satisfy source identity, inverse, composition, and
+  cocycle conditions over the selected coverage overlaps.
+  \item Separation, countability or size, and regularity analogues are stated
+  and discharged as source-only conditions or else return their named
+  obstruction labels.
+  \item Any soldering use is conditional on \(\RegSold\)-style source data and
+  does not adopt \(\RegSold\).
+  \item Any finite-variation use is conditional on \(\FVR\)-style source data
+  and does not adopt \(\FVR\).
+  \item \(\BottomSrc\) is fail-closed for missing, ambiguous, noncanonical, or
+  process-only premises.
+  \item Every non-bottom proof step factors through \(\SourceData\) and is
+  invariant under replacement of the diagnostic target context \(\TargetCtx\).
+  \item Finite/local witnesses and finite checker outputs are used only as
+  examples, counterexample surfaces, or stress data; they do not globalize to
+  \(\Msrc\) adoption by themselves.
+  \item Every Phase 6 counterexample family is either excluded by one of the
+  hypotheses above or returns \(\BottomSrc\) or the corresponding obstruction
+  label.
+  \item No registry row, validator pass, role assignment, handoff status,
+  generated derivative, local cache, commit status, or file order is used as a
+  mathematical premise.
+  \item The theorem candidate remains subject to later Smuggling Auditor
+  review, Refuter stress, and explicit human Gate Chair adoption authority.
+\end{enumerate}
+
+Then \(\Pi_{\mathrm{int}}(E)\) is a conditional source-only adoption theorem
+candidate for \(\Mgsccand(E)\): it is well-formed enough to be submitted to
+Smuggling Auditor and Refuter review as the integrated Phase 7 theorem
+candidate. The theorem does not adopt \(\Msrc\), does not construct full
+\(\Msrc\), and does not unlock \(g_{\mathrm{eff}}\), matter coupling, Einstein
+equations, or benchmark promotion.
+\end{theorem}
+
+\section{Proof Attempt}
+
+The proof is an integration proof rather than an adoption proof.
+
+\begin{enumerate}[leftmargin=*]
+  \item The Phase 1 envelope supplies the minimum theorem shape: carrier or
+  quotient support, topology or topology analogue, chart support, transition
+  compatibility, separation/countability/regularity analogues, conditional
+  soldering and finite-variation burdens, bottom behavior, and no-target
+  import. Hypotheses H1 through H13 restate these as source-only obligations.
+  \item The Phase 2 packet selects \(\CovSrc(E)\) as the site-coverage route.
+  H2 uses that route only as a source-only topology analogue. It does not
+  identify \(\CovSrc(E)\) with target open sets or a target smooth manifold.
+  \item The Phase 3 packet states source transition-token identity, inverse,
+  composition, and cocycle conditions. H4 incorporates those conditions as
+  assumptions with fail-closed transition obstruction branches.
+  \item The Phase 4 packet proves the relevant non-implication: finite/local
+  survival is not global \(\Msrc\) adoption. H10 therefore treats finite/local
+  objects as theorem inputs or stress data only.
+  \item The Phase 5 packet states the source-only factorization criterion. H9
+  imports that criterion as an audit obligation on every non-bottom proof step.
+  \item The Phase 6 catalog supplies finite/local counterexample pressure
+  against separation, topology canonicity, transition inverse and cocycle
+  laws, soldering uniqueness, finite-variation robustness, target import, and
+  bottom behavior. H11 requires those branches to be excluded by explicit
+  source hypotheses or to fail closed with named obstruction labels.
+  \item H12 blocks process-authority laundering. Therefore validation,
+  registry, handoff, role, generated-derivative, and local-cache states can
+  track the packet but cannot serve as proof premises.
+  \item Given H1 through H13, every non-bottom step of
+  \(\Pi_{\mathrm{int}}(E)\) is source-factorized, every failed branch has a
+  stable obstruction label or \(\BottomSrc\), and all downstream claim gates
+  remain outside the theorem. Hence the theorem candidate is formed, but the
+  only authorized conclusion is readiness for audit and stress.
+\end{enumerate}
+
+This proof attempt is conditional. If a later audit finds target-context
+dependence, process-authority laundering, or an unexcluded Phase 6
+counterexample family, the theorem candidate fails under the corresponding
+obstruction label rather than becoming an adoption proof.
+
+\section{Obligation Discharge Matrix}
+
+\begin{longtable}{p{0.22\linewidth}p{0.14\linewidth}p{0.37\linewidth}p{0.20\linewidth}}
+\toprule
+Obligation & Status & Evidence & If not discharged, obstruction \\
+\midrule
+Carrier/quotient support & conditional &
+\texttt{RT-117}, \texttt{RT-123}, \texttt{RT-124}; H1 &
+\texttt{OB-MSRC-CARRIER-UNDEF}; \texttt{OB-MSRC-QUOTIENT-NONSTABLE} \\
+Source topology/analogue & conditional &
+\texttt{RT-125}; \(\CovSrc(E)\) selected as site-coverage route; H2 &
+\texttt{OB-MSRC-SO-TOPOLOGY-MISSING}; \texttt{OB-MSRC-SO-TOPOLOGY-NONCANONICAL} \\
+Chart support & conditional &
+\texttt{RT-124}, \texttt{RT-126}; source chart-support tokens only; H3 &
+\texttt{OB-MSRC-CHART-NONREGULAR} \\
+Transition inverse & conditional &
+\texttt{RT-126}; H4 &
+\texttt{OB-MSRC-TRANSITION-INVERSE-FAIL} \\
+Transition cocycle & conditional &
+\texttt{RT-126}; H4 &
+\texttt{OB-MSRC-TRANSITION-COCYCLE-FAIL} \\
+Separation & conditional &
+\texttt{RT-124}, \texttt{RT-127}, \texttt{RT-129}; H5 and H11 &
+\texttt{OB-MSRC-SEPARATION-FAIL} \\
+Countability/size & conditional &
+\texttt{RT-124}; H5 &
+\texttt{OB-MSRC-COUNTABILITY-FAIL} \\
+Regularity & conditional &
+\texttt{RT-092} through \texttt{RT-097}, \texttt{RT-124}; H5 and H6 &
+\texttt{OB-MSRC-REGULARITY-UNPROVED} \\
+Soldering & conditional &
+\texttt{RT-092} through \texttt{RT-097}, \texttt{RT-129}; H6 and H11 &
+\texttt{OB-MSRC-SOLDERING-NONUNIQUE} \\
+Finite-variation robustness & conditional &
+\texttt{RT-098} through \texttt{RT-101}, \texttt{RT-129}; H7 and H11 &
+\texttt{OB-MSRC-FVR-FRAGILE} \\
+Bottom behavior & conditional &
+\texttt{RT-124}, \texttt{RT-125}, \texttt{RT-126}, \texttt{RT-129}; H8 and H11 &
+\texttt{OB-MSRC-BOTTOM-LEAK} \\
+No-target-import & conditional &
+\texttt{RT-128}; H9 and H12 &
+\texttt{OB-MSRC-TARGET-IMPORT}; \texttt{OB-MSRC-PROCESS-AUTHORITY-LAUNDERING} \\
+Local-to-global bridge & conditional &
+\texttt{RT-127}; H10 and H13 &
+\texttt{OB-MSRC-LOCAL-GLOBAL-GAP}; \texttt{OB-MSRC-ADOPTION-THEOREM-UNFORMED} \\
+\bottomrule
+\end{longtable}
+
+\section{Counterexample Handling}
+
+The Phase 6 counterexample catalog is consumed as a stress map. It does not
+prove adoption, and it does not prove a global no-go theorem. Its effect on
+this packet is narrower:
+
+\begin{itemize}[leftmargin=*]
+  \item each catalog family names a branch the theorem must exclude or handle;
+  \item an unexcluded family forces \(\BottomSrc\) or the corresponding
+  \texttt{OB-MSRC-*} obstruction;
+  \item checker authority flags remain false; and
+  \item checker output cannot replace Smuggling Auditor, Refuter, or Gate Chair
+  review.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}[leftmargin=*]
+  \item \(\Msrc\): integrated conditional theorem candidate formed; not
+  adopted; pending Smuggling Auditor, Refuter, and explicit human Gate Chair
+  review.
+  \item \(g_{\mathrm{eff}}\): blocked and not started.
+  \item Matter coupling: blocked and not started.
+  \item Einstein equations: blocked and not started.
+  \item Benchmark promotion: blocked.
+\end{itemize}
+
+\section{Next Route}
+
+Because a theorem candidate exists, the legal next route is one bounded Phase
+8A Smuggling Auditor packet on this artifact. If the audit passes as written,
+the later route is a separate Refuter stress packet. If the audit finds target
+import or process-authority laundering, the next legal route is repair,
+selector, or freeze evaluation under the relevant obstruction label. Gate Chair
+review remains unavailable until audit and stress have both passed and the
+human explicitly authorizes a protected adoption review.
+
+\section{Conclusion}
+
+The integrated Phase 7 theorem candidate is formed. Its mathematical content
+is a conditional source-only proof object with explicit assumptions and
+obstruction branches. It is not \(\Msrc\) adoption. It does not unlock
+downstream GR work. The logical next step is a separate Phase 8A Smuggling
+Auditor packet.
+
+\begin{thebibliography}{9}
+\bibitem{phase1}
+The AEther-Flow Research Project. (2026, June 24). \emph{Minimum source-only
+adoption theorem envelope for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\)}
+[Internal research-control artifact].
+
+\bibitem{phase2}
+The AEther-Flow Research Project. (2026, June 24). \emph{Source-only topology
+analogue route decision for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\)}
+[Internal research-control artifact].
+
+\bibitem{phase3}
+The AEther-Flow Research Project. (2026, June 24). \emph{Source
+transition-token groupoid conditions for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\)}
+[Internal research-control artifact].
+
+\bibitem{phase4}
+The AEther-Flow Research Project. (2026, June 24). \emph{Finite/local witness
+classification and global \(M_{\mathrm{src}}\) adoption gap}
+[Internal research-control artifact].
+
+\bibitem{phase5}
+The AEther-Flow Research Project. (2026, June 24). \emph{No-target-import
+criterion for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\) adoption}
+[Internal research-control artifact].
+
+\bibitem{phase6}
+The AEther-Flow Research Project. (2026, June 24). \emph{Finite source-cover
+counterexample catalog for \(M_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}(E)\)}
+[Internal research-control artifact].
+\end{thebibliography}
+
+\end{document}

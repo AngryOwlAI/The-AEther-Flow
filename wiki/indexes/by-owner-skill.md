@@ -421,6 +421,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `wiki/tex/tex-research-control-localization-source-repair-packet.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-FINITE-LOCAL-WITNESS-CLASSIFICATION` `wiki/tex/tex-research-control-m-src-gsc-finite-local-witness-classification.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-FINITE-SOURCE-COVER-COUNTEREXAMPLE-CATALOG` `wiki/tex/tex-research-control-m-src-gsc-finite-source-cover-counterexample-catalog.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-ATTEMPT` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-attempt.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `wiki/tex/tex-research-control-m-src-gsc-minimum-source-only-adoption-theorem-envelope.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `wiki/tex/tex-research-control-m-src-gsc-no-target-import-criterion.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `wiki/tex/tex-research-control-m-src-gsc-source-transition-token-groupoid-conditions.md`
@@ -682,6 +683,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-REPAIR-PACKET` `research_control/tasks/RT-20260608-005/artifacts/04_LOCALIZATION_SOURCE_REPAIR_PACKET.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-FINITE-LOCAL-WITNESS-CLASSIFICATION` `research_control/tasks/RT-20260614-127/artifacts/159_M_SRC_GSC_FINITE_LOCAL_WITNESS_CLASSIFICATION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-FINITE-SOURCE-COVER-COUNTEREXAMPLE-CATALOG` `research_control/tasks/RT-20260614-129/artifacts/161_M_SRC_GSC_FINITE_SOURCE_COVER_COUNTEREXAMPLE_CATALOG.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-ATTEMPT` `research_control/tasks/RT-20260614-130/artifacts/162_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_ATTEMPT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex`
