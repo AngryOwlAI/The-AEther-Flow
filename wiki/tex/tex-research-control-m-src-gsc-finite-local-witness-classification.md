@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-FINITE-LOCAL-WITNESS-CLASSIFICATION
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-M-SRC-GSC-FINITE-LOCAL-WITNESS-CLASSIFICATION`
+- Source path: `research_control/tasks/RT-20260614-127/artifacts/159_M_SRC_GSC_FINITE_LOCAL_WITNESS_CLASSIFICATION.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `0158cc12e4b428d49032a16b97ff0516243146f4cb43961ba8196151cad2c202`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS;TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-BRIDGE-CANDIDATE-HUMAN-GATE-ADOPTION-REVIEW;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-GENCOVER-TO-MSRC-BRIDGE-ATTEMPT;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-FINITE-VARIATION-ROBUSTNESS-LAW-REFUTER-STRESS-TEST;TEX-RESEARCH-CONTROL-RESP-LC-M-SRC-GSC-REGULARITY-SOLDERING-FINITE-SOURCE-WITNESS-REFUTER-STRESS-TEST` ``
+- Generated output path: `wiki/tex/tex-research-control-m-src-gsc-finite-local-witness-classification.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-24T14:04:54Z`
