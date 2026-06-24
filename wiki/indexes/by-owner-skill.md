@@ -118,6 +118,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-LEGACY-ONTOLOGY-TEX` `legacy_ontology/tex/README.md`
 - `MD-README-MARKDOWN-PUBLICATION-BRIEFS` `markdown/publication-briefs/README.md`
 - `MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `research_control/tasks/RT-20260614-133/artifacts/external_review_brief_m_src_gsc_integrated_theorem.md`
 - `MD-ROLE-ROUTING-PUBLICATION-BRIEF` `markdown/publication-briefs/role-routing.publication-brief.md`
 - `MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF` `markdown/publication-briefs/roles-and-skills.publication-brief.md`
 - `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
@@ -238,6 +239,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `wiki/markdown/md-research-control-tasks-rt-20260614-133-external-review-brief-m-src-gsc-integrated-theorem.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md.md`

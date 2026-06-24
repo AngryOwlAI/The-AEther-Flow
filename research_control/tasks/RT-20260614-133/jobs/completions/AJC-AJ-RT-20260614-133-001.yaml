@@ -1,0 +1,140 @@
+completion_id: "AJC-AJ-RT-20260614-133-001"
+job_id: "AJ-RT-20260614-133-001"
+task_id: "RT-20260614-133"
+completed_at: "2026-06-24T15:35:03Z"
+status: "completed"
+output_paths:
+  - "FOLDER_MAP.md"
+  - "research_control/tasks/RT-20260614-133/artifacts/external_review_brief_m_src_gsc_integrated_theorem.md"
+  - "research_control/tasks/RT-20260614-133/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260614-133/jobs/completions/AJC-AJ-RT-20260614-133-001.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v4.md"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0168.yaml"
+  - "research_control/handoffs/handoff-0168.md"
+  - "research_control/tasks/RT-20260614-123/artifacts/155_RESP_LC_M_SRC_GSC_BRIDGE_CANDIDATE_HUMAN_GATE_ADOPTION_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex"
+  - "research_control/tasks/RT-20260614-125/artifacts/157_M_SRC_GSC_SOURCE_TOPOLOGY_ANALOGUE_ROUTE_DECISION.yaml"
+  - "research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex"
+  - "research_control/tasks/RT-20260614-127/artifacts/159_M_SRC_GSC_FINITE_LOCAL_WITNESS_CLASSIFICATION.tex"
+  - "research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex"
+  - "research_control/tasks/RT-20260614-129/artifacts/161_M_SRC_GSC_FINITE_SOURCE_COVER_COUNTEREXAMPLE_CATALOG.tex"
+  - "research_control/tasks/RT-20260614-130/artifacts/162_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_ATTEMPT.tex"
+  - "research_control/tasks/RT-20260614-131/artifacts/163_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260614-132/artifacts/164_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_REFUTER_STRESS.tex"
+  - "research_control/tasks/RT-20260614-132/jobs/completions/AJC-AJ-RT-20260614-132-001.yaml"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/research_ops/documentation-curator.v2.0.0.md --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"external review mathematical brief integrated theorem candidate M_src GSC\" --limit 10 --json | exit_code=0 | status=pass_no_hits"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=pass_advisory_no_action"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_local_retrieval_refresh_needed"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_post_bootstrap_refresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "Phase 10 completed as an internal source-backed external-review mathematical brief for the audited and stressed integrated M_src theorem candidate with no physics claim promotion and no public publication output."
+review_packet_path: "research_control/tasks/RT-20260614-133/artifacts/external_review_brief_m_src_gsc_integrated_theorem.md"
+coherent_resolution_summary: "The packet cites registered RT-123 through RT-132 source artifacts by path, states the exact non-adoption status, summarizes definitions theorem-candidate status no-target-import discipline finite/local witness boundaries Distance-to-GR status and the single next gate request."
+next_recommendation: "Preserve the active research-control boundary: request explicit human approval for one bounded Phase 9 human Gate Chair M_src adoption review before any Gate Chair or downstream GR work."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 355
+    relationship_row_count: 2033
+    semantic_row_count: 355
+    vault_row_count: 355
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/research_ops/documentation-curator.v2.0.0.md --json"
+      query_type: "lookup"
+      query_text: ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"external review mathematical brief integrated theorem candidate M_src GSC\" --limit 10 --json"
+      query_type: "search"
+      query_text: "external review mathematical brief integrated theorem candidate M_src GSC"
+      returned_object_ids:
+        - ""
+      limitation: "No direct memory hit was returned for the Phase 10 integrated theorem brief; tracked plan and task files were inspected directly."
+  canonical_inspections:
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-DOCUMENTATION-CURATOR-V2-0-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+      source_hash: "c63afb6871219f7c489b4a6153077ba0719ded191589594f4dd93ddc7dbe48bc"
+    - object_id: "TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-132/artifacts/164_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_REFUTER_STRESS.tex"
+      source_hash: "10950af34612f8bda8b67ba9701e96bb47283f57413361a0f9a6aad303095d35"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory, and .local are retrieval layers only and not authority."
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+operational_validation_status:
+  validators_passed:
+    - "bootstrap_memory_system"
+    - "bootstrap_memory_system_validate_only"
+    - "validate_documentation_impact"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+  generated_surfaces_refreshed: true
+  notes: "Operational hygiene only; not physics evidence."
+scientific_progress_status:
+  result_type: "no_scientific_delta"
+  target_derivation_milestone: "source_manifold_m_src"
+  mathematical_payload:
+    - ""
+  distance_to_gr_delta:
+    changed: false
+    burden_id: "m_src"
+    old_status: "human-gated theorem_candidate_stress_passed_pending_human_gate"
+    new_status: "human-gated theorem_candidate_stress_passed_pending_human_gate"
+  forbidden_overread:
+    - "external review packet is not proof"
+    - "brief clarity is not M_src adoption"
+    - "review readiness is not downstream GR evidence"
+resolved_project_improvement_signals:
+  - signal_id: ""
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
