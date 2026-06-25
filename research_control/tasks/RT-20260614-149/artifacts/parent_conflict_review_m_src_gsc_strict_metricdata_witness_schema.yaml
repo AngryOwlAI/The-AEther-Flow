@@ -1,0 +1,27 @@
+artifact_id: "PARENT-CONFLICT-REVIEW-RT-20260614-149-001"
+task_id: "RT-20260614-149"
+created_at: "2026-06-25T15:58:44Z"
+status: "completed"
+reviewed_children:
+  - "research_control/tasks/RT-20260614-149/artifacts/child_phys_math_m_src_gsc_strict_metricdata_witness_schema.yaml"
+  - "research_control/tasks/RT-20260614-149/artifacts/child_phys_phil_m_src_gsc_strict_metricdata_witness_schema.yaml"
+conflicts:
+  - conflict_id: "none"
+    status: "resolved"
+    description: "No substantive conflict. The mathematical child focuses on typed fields and proof obligations; the philosophical child constrains interpretation and anti-smuggling language."
+shared_consensus:
+  - "The packet may define NonBottomMetricDataWitness_src^{GSC}(E) only as a draft/control schema."
+  - "No concrete MetricData(E) witness is constructed in this packet."
+  - "No g_eff object, matter coupling, Einstein equations, benchmark promotion, or completed derivation is authorized."
+  - "No name-only satisfaction and no target import are mandatory clauses."
+  - "Failures must use precise fail-closed OB-GEFF branches."
+unique_contributions_preserved:
+  child_phys_math:
+    - "Field-level schema requirements."
+    - "Proof obligations for covariance, nondegeneracy, finite variation, and uniqueness."
+  child_phys_phil:
+    - "Ontology/schema/witness/metric/GR distinctions."
+    - "Interpretive restraint for obstruction branches."
+unresolved_conflicts: []
+fusion_authorized: true
+fusion_output_path: "research_control/tasks/RT-20260614-149/artifacts/180_M_SRC_GSC_STRICT_METRICDATA_WITNESS_SCHEMA.tex"

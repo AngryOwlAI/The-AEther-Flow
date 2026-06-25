@@ -1,0 +1,248 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathrm{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathrm{GSC}}}
+\newcommand{\MetricRespTok}{\mathrm{MetricRespTok}_{\mathrm{src}}^{\mathrm{GSC}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathrm{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\title{Strict Non-Bottom MetricData Witness Schema}
+\author{Ontology Formalizer Packet RT-20260614-149}
+\date{2026-06-25}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact defines a draft/control schema
+\[
+  \Witness(E)
+\]
+for testing whether a later packet has supplied enough source-side token
+valuation data to attempt non-bottom \(\MetricData(E)\) construction under the
+scoped source boundary. It is not a construction of \(\MetricData(E)\). It is
+not an adoption of \(\MetricData(E)\). It does not define or construct
+\(\geff\), matter coupling, Einstein equations, exact-GR benchmark promotion,
+or completed derivation.
+
+The schema is a continuation response to the local obstruction
+\[
+  \mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}DATA\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}MISSING}.
+\]
+That obstruction remains local to the tracked input boundary. It does not prove
+future source-extension impossibility and does not reject the global theory.
+
+\section{Input Boundary}
+
+The only accepted inputs for this schema are:
+\begin{enumerate}[label=\textbf{I\arabic*.}]
+  \item the scoped source-only object \(\MsrcGSC(E)\), accepted only within the
+  boundary recorded by RT-20260614-134;
+  \item the fail-closed interface \(\MetricLaw\), adopted only as source-law
+  interface data by RT-20260614-139;
+  \item the fail-closed response-token source-extension data
+  \(\MetricRespTok\), adopted only within the boundary recorded by
+  RT-20260614-146;
+  \item the prior post-response-token obstruction analysis in RT-20260614-147;
+  \item the selector decision in RT-20260614-148 choosing strict schema
+  formalization before renewed concrete witness attempt.
+\end{enumerate}
+
+Generated wiki notes, registry metadata, validation status, role identity,
+handoff status, approval status, local caches, file order, and commit status
+are process evidence only. They are not mathematical witnesses.
+
+\section{Strict Schema}
+
+\begin{definition}[Strict non-bottom MetricData witness schema]
+For an event package \(E\), a value \(W\) satisfies
+\(\Witness(E)\) only if \(W\) is a finite typed record whose fields are
+nonempty source-side values, proof objects, or explicit fail-closed obstruction
+branches as listed in Table~\ref{tab:schema}. Empty strings, placeholders,
+deferred labels, role names, registry rows, or validator results do not satisfy
+any constructive field.
+\end{definition}
+
+\begin{longtable}{p{0.22\linewidth}p{0.70\linewidth}}
+\caption{Required fields for \(\Witness(E)\).}\label{tab:schema}\\
+\toprule
+Group & Required fields \\
+\midrule
+\endfirsthead
+\toprule
+Group & Required fields \\
+\midrule
+\endhead
+source package &
+\(E\); \(E\)-selection rule; source-boundary citation. \\
+input authority &
+Scoped \(\MsrcGSC\); adopted fail-closed \(\MetricLaw\); adopted fail-closed
+\(\MetricRespTok\). \\
+token valuation &
+\(T_{\Sigma}\)-class; \(T_{\Sigma}\) source-derivation or extension
+classification; \(T_{\Lambda}\)-class; \(T_{\Lambda}\) source-derivation or
+extension classification; \(R_C\) relation; \(R_C\) properties; \(K_{\tau}\)
+covariance rule; \(K_{\tau}\) covariance proof; \(D_N\) nondegeneracy or
+controlled-degeneracy branch; \(D_N\) proof; \(V_{ML}\) finite-variation
+compatibility branch; \(V_{ML}\) proof or fail-closed repair; \(B_{\mathrm{src}}\)
+bottom behavior. \\
+no-target import &
+No target metric; no target signature; no target proper time; no detector
+semantics; no benchmark fit; no process authority. \\
+uniqueness and gauge &
+Selector uniqueness or source-side gauge equivalence; nonuniqueness obstruction
+if absent. \\
+result &
+Status; obstruction identifier if any. \\
+\bottomrule
+\end{longtable}
+
+The permitted status values are:
+\[
+  \mathrm{witness},\quad
+  \mathrm{obstructed},\quad
+  \mathrm{invalid\_under\_claim\_boundary}.
+\]
+The value \(\mathrm{witness}\) is allowed only when every constructive slot is
+inhabited by source-side data and every proof slot is supplied. Otherwise the
+record must be \(\mathrm{obstructed}\) or
+\(\mathrm{invalid\_under\_claim\_boundary}\).
+
+\section{Formal Clauses}
+
+\paragraph{S1. Inhabitation.}
+Every constructive field in Table~\ref{tab:schema} must contain an actual
+source-side representative, relation, rule, branch, or proof object. A missing
+field, blank field, unresolved pointer, or placeholder value makes witness
+status unavailable.
+
+\paragraph{S2. No name-only satisfaction.}
+The mere names \(\MetricLaw\), \(\MetricRespTok\), \(\MetricData(E)\), or
+\(\geff\) do not satisfy any slot. Neither does a validation PASS, registry row,
+role selection, handoff, approval, generated derivative, local cache, file
+order, or commit. The record must state the relevant value and why it is
+source-side.
+
+\paragraph{S3. Extension classification.}
+Each valuation component must be classified as exactly one of:
+\[
+  \mathrm{source\mbox{-}derived},\quad
+  \mathrm{definitional},\quad
+  \mathrm{conservative\ source\ extension},\quad
+  \mathrm{new\ primitive\ request},\quad
+  \mathrm{forbidden\ target\ import}.
+\]
+The first three classes may remain within draft/control witness work. A new
+primitive request blocks witness status until separately authorized. A
+forbidden target import blocks witness status immediately.
+
+\paragraph{S4. No empty constructive slots.}
+No constructive slot may be discharged by the statement that the slot will be
+filled later. If a later packet cannot fill a slot, it must emit the exact
+fail-closed obstruction branch rather than preserving ambiguous open language.
+
+\paragraph{S5. Obstruction discipline.}
+Every failure must name the failed field, the exact failure mode, the local
+claim consequence, and the forbidden overread. Obstructions do not authorize
+\(\geff\), matter coupling, Einstein equations, benchmark promotion, completed
+derivation, future source-extension impossibility, or global theory rejection.
+
+\section{Fail-Closed Branches}
+
+The following branches are mandatory:
+\begin{enumerate}[label=\textbf{OB\arabic*.}]
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}MISSING}\):
+  at least one required valuation field or proof object is absent.
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}NONUNIQUE}\):
+  the selector is nonunique and no source-side gauge equivalence is proved.
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}TARGET\mbox{-}IMPORT}\):
+  a field imports target metric, target signature, target proper time,
+  detector semantics, or benchmark fit.
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}PROCESS\mbox{-}AUTHORITY}\):
+  a field is discharged by registry, validation, role, handoff, approval,
+  generated derivative, local cache, file order, or commit status.
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILE}\):
+  the \(V_{ML}\) branch fails under the required finite-variation discipline.
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}COVARIANCE\mbox{-}FAILURE}\):
+  the \(K_{\tau}\) covariance rule or proof fails.
+  \item \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}NONDEGENERACY\mbox{-}FAILURE}\):
+  neither nondegeneracy nor a controlled-degeneracy branch is proved.
+\end{enumerate}
+
+\section{Schema Blocking Proposition}
+
+\begin{proposition}[The schema blocks placeholder MetricData claims]
+Under clauses S1--S5, a record satisfying \(\Witness(E)\) cannot obtain
+witness status from names, process metadata, target-side facts, or empty
+constructive fields.
+\end{proposition}
+
+\begin{proof}
+By S1 and S4, every constructive field must be inhabited by a source-side value
+or proof object. By S2, labels and process metadata are inadmissible as field
+values. By S3, every valuation component must be classified; target import and
+new primitive request do not permit witness status inside this packet. By S5,
+each failure is routed to an explicit obstruction branch rather than to an
+ambiguous placeholder. Therefore witness status is unavailable unless all
+source-side fields and proofs are present. This is only an admissibility result
+for a later attempt; it does not construct \(\MetricData(E)\) or \(\geff\).
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+The active milestone remains \(\geff\). The g-eff ledger status remains
+\emph{not started}: no non-bottom effective metric has been constructed. This
+packet narrows the burden by replacing an ambiguous future witness attempt with
+a strict admissibility schema.
+
+Downstream blocked objects remain:
+\[
+  \MetricData(E)\ \mathrm{adoption},\quad
+  \geff,\quad
+  \mathrm{matter\ coupling},\quad
+  \mathrm{Einstein\ equations},\quad
+  \mathrm{benchmark\ promotion}.
+\]
+
+\section{Next Route}
+
+The lawful next packet is one bounded Candidate Constructor attempt to fill
+the schema for a concrete source package \(E\), or to emit one precise
+fail-closed obstruction branch. The next packet must still not construct
+\(\geff\).
+
+\section{Conclusion}
+
+\(\Witness(E)\) is now defined as a strict typed draft/control schema with
+required source package, input authority, token valuation, no-target-import,
+uniqueness, and result fields. It supplies a testable boundary for the next
+source-token valuation attempt and prevents name-only satisfaction of
+\(\MetricData(E)\)-related claims.
+
+\section*{References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 25). \emph{Handoff 0183}
+[Internal research-control handoff].
+
+Candidate Constructor Packet RT-20260614-147. (2026). \emph{Post-response-token
+non-bottom MetricData witness attempt or obstruction} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for /continue-research, v5} [Internal implementation plan].
+
+\end{document}
