@@ -1,0 +1,232 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricTokenVal}{\mathrm{MetricTokenVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\DomMTV}{\mathrm{Dom}_{\mathrm{MTV,src}}^{\mathsf{GSC}}}
+\newcommand{\ValRecord}{\mathrm{ValRecord}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\ClassVal}{\mathrm{ClassifyVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\NoTarget}{\Pi_{\mathrm{no\mbox{-}target}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Pass}{\mathrm{pass\_no\_smuggling\_detected}}
+
+\newtheorem{finding}{Finding}
+\newtheorem{status}{Status}
+
+\title{Smuggling Audit of Proposal-Only Metric-Token Valuation Selector Candidate}
+\author{Smuggling Auditor Packet RT-20260614-155}
+\date{2026-06-25}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Smuggling Auditor output for
+\texttt{RT-20260614-155}. It audits the proposal-only \(\MetricTokenVal\)
+candidate from \texttt{RT-20260614-154}.
+
+\begin{verbatim}
+audit_result: "audit_passed_for_stress_testing"
+audited_object: "MetricTokenVal_src^{GSC}"
+claim_status: "proposal-only source-extension candidate pending Refuter stress"
+adoption_authorized: false
+metric_data_constructed: false
+g_eff_constructed: false
+next_route: "Refuter stress"
+\end{verbatim}
+
+This audit does not adopt \(\MetricTokenVal\), does not construct or adopt
+\(\MetricData(E)\), does not define or construct \(\geff\), does not derive
+matter coupling or Einstein equations, does not promote benchmark status, and
+does not close the current route globally.
+
+\section{Audit Method}
+
+The audit checks whether the selector candidate requires any forbidden
+premise:
+\begin{itemize}[leftmargin=*]
+  \item target metric, target signature, target atlas, target coordinate
+  transition, target proper time, detector semantics, benchmark fit, or
+  target-GR reconstruction;
+  \item registry metadata, validator status, role identity, handoff status,
+  approval status, user preauthorization, generated derivative, local cache,
+  file order, commit status, or repository process state as mathematical
+  evidence; or
+  \item status overread from proposal-only selector definition into
+  \(\Witness(E)\), \(\MetricData(E)\), or \(\geff\).
+\end{itemize}
+
+\section{Component Audit Table}
+
+\begin{longtable}{p{0.14\linewidth}p{0.20\linewidth}p{0.20\linewidth}p{0.18\linewidth}p{0.14\linewidth}p{0.14\linewidth}}
+\toprule
+Component & Claimed classification & Audit classification & Evidence path & Verdict & Branch if failed \\
+\midrule
+\(T_{\Sigma}\) &
+source orientation/signature token obligation &
+source-side obligation; no target signature premise &
+RT-154 artifact, component clauses &
+\Pass &
+target-import or missing-token branch \\
+\(T_{\Lambda}\) &
+source scale/normalization token obligation &
+source-side obligation; no proper-time or detector premise &
+RT-154 artifact, component clauses &
+\Pass &
+target-import or missing-token branch \\
+\(R_C\) &
+source causal-response relation obligation &
+source relation/preorder/cone analogue; no target causal cone premise &
+RT-154 artifact, component clauses &
+\Pass &
+target-import or missing-relation branch \\
+\(K_{\tau}\) &
+source transition covariance rule &
+source transition-token covariance; no target coordinate transition premise &
+RT-154 artifact, MTV4 &
+\Pass &
+covariance-failure branch \\
+\(D_N\) &
+source nondegeneracy or controlled-degeneracy branch &
+source-side condition; no target metric determinant premise &
+RT-154 artifact, MTV5 &
+\Pass &
+collapse branch \\
+\(V_{\mathrm{ML}}\) &
+finite-variation compatibility branch &
+admitted finite source-variation obligation; no benchmark-fit premise &
+RT-154 artifact, MTV6 &
+\Pass &
+finite-variation-fragile branch \\
+\(B_{\mathrm{src}}\) &
+bottom or obstruction behavior &
+fail-closed source obstruction behavior &
+RT-154 artifact, branch catalogue &
+\Pass &
+process-laundering or target-import branch \\
+\(\NoTarget\) &
+no-target-import predicate &
+explicitly rejects target and process authority classes &
+RT-154 artifact, no-target section &
+\Pass &
+target-import or process-laundering branch \\
+\(\Pi_{\mathrm{cov}}\) &
+covariance proof obligation &
+represented by \(K_{\tau}\) source transition-token obligation &
+RT-154 artifact, MTV4 &
+\Pass &
+covariance-failure branch \\
+\(\Pi_{\mathrm{var}}\) &
+finite-variation proof obligation &
+represented by \(V_{\mathrm{ML}}\) source variation obligation &
+RT-154 artifact, MTV6 &
+\Pass &
+finite-variation-fragile branch \\
+\(\Pi_{\mathrm{nondeg}}\) &
+nondegeneracy proof obligation &
+represented by \(D_N\) nondegeneracy/control branch &
+RT-154 artifact, MTV5 &
+\Pass &
+collapse branch \\
+\(\Pi_{\mathrm{unique\_or\_gauge}}\) &
+source uniqueness or gauge obligation &
+explicitly source-side; target gauge is not used &
+RT-154 artifact, MTV7 &
+\Pass &
+nonunique branch \\
+\(\Pi_{\mathrm{conservative}}\) &
+conservative source-extension boundary &
+proposal-only boundary explains forgetting to the prior boundary; stress must test tag-only behavior &
+RT-154 classification map and status sections &
+\Pass &
+new-primitive or repair branch \\
+\(\ClassVal\) &
+field classification map &
+separates derived, definitional, conservative-extension, new-primitive request, and forbidden target import &
+RT-154 classification map &
+\Pass &
+classification repair branch \\
+\bottomrule
+\end{longtable}
+
+\section{Findings}
+
+\begin{finding}[No hidden target metric premise as written]
+The selector candidate does not require target metric, target Lorentzian
+signature, target proper time, target atlas, detector semantics, benchmark
+fit, or target-GR reconstruction as a mathematical premise. Each such import
+is either explicitly forbidden by \(\NoTarget\) or routed to a named
+\(\mathrm{OB\mbox{-}GEFF}\) branch.
+\end{finding}
+
+\begin{finding}[No process-authority laundering as written]
+The selector candidate does not use registry metadata, validator status, role
+identity, handoff status, approval status, user preauthorization, generated
+derivatives, local caches, file order, commit status, or repository process
+state to fill a mathematical slot.
+\end{finding}
+
+\begin{finding}[No status overread as written]
+The selector candidate explicitly states that it does not inhabit
+\(\Witness(E)\), does not construct \(\MetricData(E)\), and does not define or
+construct \(\geff\). The audit therefore detects no accidental promotion from
+proposal-only selector data into metric or GR claims.
+\end{finding}
+
+\begin{finding}[Conservative boundary is adequate for audit but remains a stress target]
+The candidate gives a conservative-boundary explanation: proposal-only
+source-extension data forgets back to the prior boundary and does not force a
+new source law into current ontology. This is adequate for a source-purity
+audit pass. It is not a proof of mathematical robustness. Refuter stress must
+test tag-only behavior, erasure, nonuniqueness, and finite-variation
+fragility.
+\end{finding}
+
+\section{Verdict}
+
+\begin{status}[Audit verdict]
+The audit verdict is:
+\[
+  \mathrm{audit\_passed\_for\_stress\_testing}.
+\]
+This is a local source-purity pass as written. It is not adoption, not
+\(\MetricData(E)\), not \(\geff\), and not downstream GR progress.
+\end{status}
+
+\section{Next Stress Targets}
+
+The next Refuter packet should stress:
+\begin{itemize}[leftmargin=*]
+  \item collapse of \(D_N\);
+  \item nonuniqueness without source gauge;
+  \item \(K_{\tau}\) covariance failure under source transition tokens;
+  \item \(V_{\mathrm{ML}}\) finite-variation fragility;
+  \item conservative-boundary failure or tag-only behavior;
+  \item process-authority relapse under generated or registry evidence; and
+  \item premature promotion from proposal-only selector to witness, metric
+  data, effective metric, or downstream GR claim.
+\end{itemize}
+
+\section{References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan for /continue-research, v6} [Internal implementation
+plan].
+
+Ontology Formalizer Packet RT-20260614-154. (2026). \emph{Proposal-only
+source-side metric-token valuation selector candidate} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 25). \emph{Handoff 0188}
+[Internal research-control handoff].
+
+\end{document}
