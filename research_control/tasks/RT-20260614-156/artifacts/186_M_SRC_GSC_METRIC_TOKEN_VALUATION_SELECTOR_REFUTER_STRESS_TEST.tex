@@ -1,0 +1,257 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricTokenVal}{\mathrm{MetricTokenVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\DomMTV}{\mathrm{Dom}_{\mathrm{MTV,src}}^{\mathsf{GSC}}}
+\newcommand{\ValRecord}{\mathrm{ValRecord}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\ClassVal}{\mathrm{ClassifyVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\NoTarget}{\Pi_{\mathrm{no\mbox{-}target}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBGEFF}{\mathrm{OB\mbox{-}GEFF}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{countermodel}{Countermodel}
+\newtheorem{status}{Status}
+
+\title{Refuter Stress Test of Proposal-Only Metric-Token Valuation Selector}
+\author{Refuter Packet RT-20260614-156}
+\date{2026-06-25}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260614-156}. It
+stress-tests the audited proposal-only \(\MetricTokenVal\) candidate from
+\texttt{RT-20260614-154} and \texttt{RT-20260614-155}.
+
+\begin{verbatim}
+stress_result: "selector_survives_refuter_stress_proposal_only"
+stressed_object: "MetricTokenVal_src^{GSC}"
+claim_status: "proposal-only source-extension candidate pending Phase 5"
+adoption_authorized: false
+metric_data_constructed: false
+g_eff_constructed: false
+next_route: "Phase 5 classification or narrow gate question"
+\end{verbatim}
+
+This packet does not adopt \(\MetricTokenVal\), does not construct or adopt
+\(\MetricData(E)\), does not define or construct \(\geff\), does not derive
+matter coupling or Einstein equations, does not promote benchmark status, and
+does not close the current route globally.
+
+\section{Stress Method}
+
+The stress test asks whether the selector candidate turns failures into
+non-bottom valuation data, target-side repairs, process-authority repairs,
+\(\Witness(E)\), \(\MetricData(E)\), or \(\geff\). A stress dimension survives
+only if it remains source-side and fail-closed as written.
+
+\section{Required Stress Matrix}
+
+\begin{longtable}{p{0.16\linewidth}p{0.17\linewidth}p{0.21\linewidth}p{0.16\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+\toprule
+Stress dimension & Tested object & Method & Result & Obstruction branch & Forbidden overread \\
+\midrule
+Collapse &
+\(D_N\) and valuation record status &
+Erase nondegeneracy support and require controlled degeneracy or bottom &
+survives\_collapse\_test &
+\(\OBGEFF\)-TOKEN-VALUATION-COLLAPSE &
+collapse is not \(\MetricData(E)\) \\
+Nonuniqueness &
+\(\Pi_{\mathrm{unique\_or\_gauge}}\) and \(\ClassVal\) &
+Allow two incompatible source valuations with no source gauge &
+survives\_nonuniqueness\_test &
+\(\OBGEFF\)-TOKEN-VALUATION-NONUNIQUE &
+tie-breaking is not allowed by file order role or target metric \\
+Covariance &
+\(K_{\tau}\) &
+Demand source transition-token preservation of domains and classifications &
+survives\_covariance\_test &
+\(\OBGEFF\)-TOKEN-VALUATION-COVARIANCE-FAILURE &
+target atlas transition is not a repair \\
+Nondegeneracy &
+\(D_N\) &
+Demand source-side nondegeneracy or controlled degeneracy without target rank &
+survives\_nondegeneracy\_test &
+\(\OBGEFF\)-TOKEN-VALUATION-NONDEGENERACY-FAILURE &
+target determinant or inverse metric is not a proof \\
+Finite variation &
+\(V_{\mathrm{ML}}\) &
+Erase tag-only support and vary admitted source fields &
+survives\_finite\_variation\_test &
+\(\OBGEFF\)-TOKEN-VALUATION-FINITE-VARIATION-FRAGILE &
+target variational geometry is not admitted \\
+Conservativity &
+\(\Pi_{\mathrm{conservative}}\) and forgetting boundary &
+Forget proposal-only fields back to prior source boundary &
+survives\_conservativity\_test &
+\(\OBGEFF\)-TOKEN-VALUATION-CONSERVATIVITY-UNPROVED &
+conservative label is not adoption \\
+Bottom-only behavior &
+\(B_{\mathrm{src}}\), \(\BottomSrc\), branch catalogue &
+Force missing malformed target or process-contaminated fields &
+survives\_bottom\_only\_behavior\_test &
+\(\BottomSrc\) or named \(\OBGEFF\) &
+bottom is not a witness \\
+Promotion pressure &
+whole selector candidate &
+Try to read audit plus stress as adoption witness metric or GR progress &
+blocked &
+invalid-under-claim-boundary &
+stress survival is not downstream GR promotion \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemma}
+
+\begin{lemma}[Fail-closed proposal-only survival]
+Under the \texttt{RT-20260614-154} selector candidate and the
+\texttt{RT-20260614-155} audit boundary, each Phase 4 stress dimension either
+preserves proposal-only source-extension candidate status or returns
+\(\BottomSrc\) or a named \(\OBGEFF\) obstruction. No tested branch yields
+adopted \(\MetricTokenVal\), non-bottom \(\Witness(E)\),
+\(\MetricData(E)\), or \(\geff\).
+\end{lemma}
+
+\begin{proof}
+Collapse is governed by the \(D_N\) branch. Without a source-side
+nondegeneracy or controlled-degeneracy proof, the selector returns a collapse
+or nondegeneracy obstruction. Nonuniqueness is governed by the source-side
+gauge condition; incompatible surviving valuations without a source gauge
+return the nonunique branch. Covariance is governed by \(K_{\tau}\), which
+uses source transition tokens and fails closed if target coordinate
+transitions are required. Finite variation is governed by \(V_{\mathrm{ML}}\),
+which either supplies source-side stability, repair, or fail-closed fragility.
+Conservativity is bounded by the proposal-only forgetting condition and does
+not create source-law adoption. Finally, \(B_{\mathrm{src}}\) and the branch
+catalogue prevent bottom or obstruction outputs from becoming non-bottom
+witnesses by notation or process status. Therefore all tested failures remain
+inside the fail-closed proposal-only boundary.
+\end{proof}
+
+\section{Countermodel Pressure}
+
+\begin{countermodel}[Nonunique valuation pair]
+Let \(X\in\DomMTV(E)\) admit two source-side valuation records
+\[
+  V_1=(T_{\Sigma}^{1},T_{\Lambda}^{1},R_C^{1},K_{\tau}^{1},D_N^{1},V_{\mathrm{ML}}^{1})
+\]
+and
+\[
+  V_2=(T_{\Sigma}^{2},T_{\Lambda}^{2},R_C^{2},K_{\tau}^{2},D_N^{2},V_{\mathrm{ML}}^{2})
+\]
+that satisfy the same available source obligations but are not related by an
+explicitly source-side gauge equivalence.
+\end{countermodel}
+
+\begin{proof}
+If \(\MetricTokenVal\) chooses \(V_1\) or \(V_2\) by target metric behavior,
+proper-time calibration, detector semantics, benchmark fit, registry row,
+validation status, handoff status, approval status, local cache, file order,
+or commit status, it violates \(\NoTarget\) or the process-authority boundary.
+If it chooses neither and no source gauge is supplied, the nonunique branch
+fires. Hence the candidate cannot use a tie to construct non-bottom
+\(\Witness(E)\), \(\MetricData(E)\), or \(\geff\). The countermodel is local
+pressure on this proposal-only candidate; it is not a global no-go theorem.
+\end{proof}
+
+\section{Refuted Overreads}
+
+\begin{center}
+\begin{tabular}{p{0.42\linewidth}p{0.45\linewidth}}
+\toprule
+Invalid overread & Refuter result \\
+\midrule
+\(\MetricTokenVal\) survived stress, so it is adopted. & Refuted; survival is proposal-only and Phase 5 remains required. \\
+Stress survival supplies \(\Witness(E)\). & Refuted; no strict witness record is inhabited. \\
+Stress survival supplies \(\MetricData(E)\). & Refuted; no metric data object is constructed. \\
+Stress survival supplies \(\geff\). & Refuted; no effective metric is defined or constructed. \\
+Bottom branches are negative global theory results. & Refuted; they are local fail-closed outcomes. \\
+Validation or registry status repairs a failed field. & Refuted; process artifacts are not mathematical premises. \\
+The user's broad preauthorization is mathematical evidence. & Refuted; human authorization can authorize a future gate packet but cannot fill a source-side field. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Limitations}
+
+This stress pass does not prove that \(T_{\Sigma}\), \(T_{\Lambda}\), \(R_C\),
+\(K_{\tau}\), \(D_N\), \(V_{\mathrm{ML}}\), or \(B_{\mathrm{src}}\) exist as
+non-bottom source data. It does not prove that \(\MetricTokenVal\) is derived
+from current ontology. It does not adopt \(\MetricTokenVal\), construct
+\(\MetricData(E)\), define \(\geff\), derive matter coupling, derive Einstein
+equations, promote benchmark status, or complete a GR derivation.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made and no source-law adoption occurs. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+\(M_{\mathrm{src}}\) & Accepted only within the scoped source-only \(M_{\mathrm{src}}^{\mathsf{GSC}}(E)\) boundary from RT-20260614-134. \\
+\(\geff\) & Frozen negative for the current route; proposal-only \(\MetricTokenVal\) survives stress only as fail-closed candidate data and no \(\MetricData(E)\) or effective metric is supplied. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged for metric data; \(V_{\mathrm{ML}}\) survives only as a fail-closed obligation and stress target. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued; any adoption question remains protected. \\
+Current route freeze or hard-fail status & Current \(g_{\mathrm{eff}}\) route remains locally frozen under current inputs; this packet supplies a proposal-only stress-survived selector candidate for Phase 5 classification. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The Phase 4 result is:
+
+\begin{verbatim}
+selector_survives_refuter_stress_proposal_only
+\end{verbatim}
+
+The next lawful packet is one bounded Phase 5 classification packet under
+\texttt{ontology-law-research-packet}. That packet should decide whether the
+audited and stress-tested selector remains proposal-only source-extension
+candidate data or should be routed to a narrow Gate Chair question, repair,
+rejection, or ontology-amendment proposal. It must not adopt the selector,
+construct \(\MetricData(E)\), construct \(\geff\), or promote downstream GR
+claims.
+
+\section*{References}
+
+Refuter. (2026). \textit{Refuter role contract v0.2.0} [Project control role
+file]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-155. (2026). \textit{Smuggling audit of
+proposal-only metric-token valuation selector candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-154. (2026). \textit{Proposal-only
+source-side metric-token valuation selector candidate} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for /continue-research, v6} [Internal implementation
+plan].
+
+The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation
+burden map} [Internal control note].
+
+\end{document}

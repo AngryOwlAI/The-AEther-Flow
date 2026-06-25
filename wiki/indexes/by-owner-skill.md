@@ -434,6 +434,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-metric-law-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `wiki/tex/tex-research-control-m-src-gsc-metric-law-source-formalization.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-CANDIDATE` `wiki/tex/tex-research-control-m-src-gsc-metric-token-valuation-selector-candidate.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-m-src-gsc-metric-token-valuation-selector-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-metric-token-valuation-selector-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `wiki/tex/tex-research-control-m-src-gsc-minimum-source-only-adoption-theorem-envelope.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `wiki/tex/tex-research-control-m-src-gsc-no-target-import-criterion.md`
@@ -713,6 +714,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-137/artifacts/168_M_SRC_GSC_METRIC_LAW_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-CANDIDATE` `research_control/tasks/RT-20260614-154/artifacts/184_M_SRC_GSC_METRIC_TOKEN_VALUATION_SELECTOR_CANDIDATE.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-156/artifacts/186_M_SRC_GSC_METRIC_TOKEN_VALUATION_SELECTOR_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-155/artifacts/185_M_SRC_GSC_METRIC_TOKEN_VALUATION_SELECTOR_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex`
