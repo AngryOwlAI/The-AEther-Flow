@@ -174,6 +174,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION` `research_control/tasks/RT-20260614-141/artifacts/172_M_SRC_GSC_NONBOTTOM_METRIC_DATA_WITNESS_OR_OBSTRUCTION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE` `research_control/tasks/RT-20260614-143/artifacts/174_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_CANDIDATE.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260614-146/artifacts/177_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_GATE_CHAIR_REVIEW.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-145/artifacts/176_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-144/artifacts/175_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex`
@@ -615,6 +616,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `wiki/tex/tex-research-control-m-src-gsc-no-target-import-criterion.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION` `wiki/tex/tex-research-control-m-src-gsc-nonbottom-metric-data-witness-or-obstruction.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE` `wiki/tex/tex-research-control-m-src-gsc-response-token-source-extension-candidate.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW` `wiki/tex/tex-research-control-m-src-gsc-response-token-source-extension-gate-chair-review.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-m-src-gsc-response-token-source-extension-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-response-token-source-extension-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `wiki/tex/tex-research-control-m-src-gsc-source-transition-token-groupoid-conditions.md`
