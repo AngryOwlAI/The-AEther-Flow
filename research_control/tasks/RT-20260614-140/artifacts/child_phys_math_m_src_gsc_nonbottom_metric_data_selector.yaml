@@ -1,0 +1,56 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-140"
+status: "completed"
+question: "After MetricLaw_src^{GSC} interface adoption, what is the next lawful mathematical packet for non-bottom MetricData(E)?"
+inputs_reviewed:
+  - "research_control/handoffs/handoff-0174.md"
+  - "research_control/tasks/RT-20260614-139/artifacts/170_M_SRC_GSC_METRIC_LAW_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+mathematical_findings:
+  - finding_id: "MATH-001"
+    summary: "The adopted object is an interface from source packages to MetricData(E), Bottom_src, or OB-GEFF branches; it is not itself non-bottom MetricData(E)."
+  - finding_id: "MATH-002"
+    summary: "A non-bottom output would require Sigma_src, Lambda_src, C_src, Cov_tau^met, N_src, VarML_src, and B_src to be source-defined and mutually compatible."
+  - finding_id: "MATH-003"
+    summary: "Direct g_eff construction is mathematically premature because no metric tensor, interval form, signature, scale, or nondegenerate form has been constructed."
+route_evaluation:
+  direct_g_eff_construction:
+    decision: "reject"
+    reason: "Would overread interface adoption as metric construction."
+  repeat_metric_law_formalization:
+    decision: "reject"
+    reason: "RT-20260614-136 through RT-20260614-139 already formalized, audited, stressed, and adopted the interface scope."
+  new_smuggling_or_refuter_packet:
+    decision: "defer"
+    reason: "Audit and stress require a new non-bottom MetricData(E) candidate or a precise obstruction proof."
+  candidate_constructor_witness_or_obstruction:
+    decision: "accept"
+    reason: "It is the smallest constructive next packet: either produce source-side prerequisite data or return a primary OB-GEFF obstruction."
+selected_next_packet:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  next_role: "candidate-constructor@0.2.0"
+  next_task_type: "metric_law_src_gsc_nonbottom_metric_data_witness_or_obstruction"
+  output_status_limit: "draft/control prerequisite data or precise obstruction"
+  no_g_eff_construction: true
+required_next_packet_components:
+  - "orientation_or_signature_selector Sigma_src"
+  - "scale_or_measure_selector Lambda_src"
+  - "causal_preorder_or_cone_analogue C_src"
+  - "source_transition_covariance Cov_tau^met"
+  - "nondegeneracy_or_controlled_degeneracy N_src"
+  - "finite_variation_metric_law_compatibility VarML_src"
+  - "bottom_or_obstruction_behavior B_src"
+primary_obstruction_candidates:
+  - "OB-GEFF-RESPONSE-TOKEN-MISSING"
+  - "OB-GEFF-SIGNATURE-UNDERDETERMINED"
+  - "OB-GEFF-SCALE-UNDERDETERMINED"
+  - "OB-GEFF-CAUSAL-CONE-UNDERDETERMINED"
+  - "OB-GEFF-TRANSITION-COVARIANCE-FAILURE"
+  - "OB-GEFF-NONDEGENERACY-FAILURE"
+  - "OB-GEFF-FINITE-VARIATION-FRAGILITY"
+  - "OB-GEFF-METRIC-LAW-NONUNIQUE"
+  - "OB-GEFF-TARGET-METRIC-IMPORT"
+  - "OB-GEFF-PROCESS-AUTHORITY-LAUNDERING"
+conclusion: "Select a bounded Candidate Constructor packet for source-only MetricData(E) witness-or-primary-obstruction work. Preserve that the packet cannot define g_eff."
