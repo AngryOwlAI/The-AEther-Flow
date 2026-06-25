@@ -1,0 +1,22 @@
+artifact_id: "PARENT-CONFLICT-REVIEW-RT-20260614-159-001"
+task_id: "RT-20260614-159"
+created_at: "2026-06-25T21:25:37Z"
+status: "completed"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260614-159/artifacts/child_phys_math_nonbottom_metricdata_witness_src_gsc.yaml"
+  - "research_control/tasks/RT-20260614-159/artifacts/child_phys_phil_nonbottom_metricdata_witness_src_gsc.yaml"
+conflict_review:
+  status: "no_blocking_conflict"
+  resolution_rounds: 0
+  unresolved_conflicts: []
+  nonblocking_notes:
+    - "The mathematical child treats the finite/local valuation as a constructed draft/control candidate."
+    - "The philosophical child requires explicit language that this is not g_eff, not accepted MetricData(E), and not downstream GR promotion."
+parent_resolution:
+  fused_result_type: "constructed_candidate"
+  fused_claim_status: "draft/control pending Smuggling Auditor review"
+  next_required_role: "smuggling_auditor"
+  claim_boundary_preserved: true
+  no_geff_overread: true
+  downstream_gr_blocks_preserved: true
+validation_decision: "The child outputs agree that the finite/local source package supplies source-side fields for a draft/control candidate while preserving all claim blocks."
