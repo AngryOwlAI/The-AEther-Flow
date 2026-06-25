@@ -1,0 +1,339 @@
+completion_id: "AJC-AJ-RT-20260614-147-001"
+job_id: "AJ-RT-20260614-147-001"
+task_id: "RT-20260614-147"
+source_role_id: "candidate-constructor"
+completed_at: "2026-06-25T04:28:27Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260614-147/artifacts/child_phys_math_m_src_gsc_metric_data_after_response_token.yaml"
+  - "research_control/tasks/RT-20260614-147/artifacts/child_phys_phil_m_src_gsc_metric_data_after_response_token.yaml"
+  - "research_control/tasks/RT-20260614-147/artifacts/parent_conflict_review_m_src_gsc_metric_data_after_response_token.yaml"
+  - "research_control/tasks/RT-20260614-147/artifacts/parent_fusion_notes_m_src_gsc_metric_data_after_response_token.md"
+  - "research_control/tasks/RT-20260614-147/artifacts/178_M_SRC_GSC_METRIC_DATA_AFTER_RESPONSE_TOKEN_WITNESS_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-147/jobs/completions/AJC-AJ-RT-20260614-147-001.yaml"
+  - "research_control/handoffs/handoff-0182.yaml"
+  - "research_control/handoffs/handoff-0182.md"
+extra_read_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v4.md"
+  - "research_control/handoffs/handoff-0181.yaml"
+  - "research_control/handoffs/handoff-0181.md"
+  - "research_control/tasks/RT-20260614-146/00_TASK.yaml"
+  - "research_control/tasks/RT-20260614-146/jobs/AJ-RT-20260614-146-001.yaml"
+  - "research_control/tasks/RT-20260614-146/jobs/completions/AJC-AJ-RT-20260614-146-001.yaml"
+  - "research_control/tasks/RT-20260614-146/artifacts/177_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-145/artifacts/176_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_REFUTER_STRESS_TEST.tex"
+  - "research_control/tasks/RT-20260614-143/artifacts/174_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_CANDIDATE.tex"
+  - "research_control/tasks/RT-20260614-141/artifacts/172_M_SRC_GSC_NONBOTTOM_METRIC_DATA_WITNESS_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-139/artifacts/170_M_SRC_GSC_METRIC_LAW_GATE_CHAIR_REVIEW.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=director_decision_required"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_local_retrieval_refresh_needed"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_post_bootstrap_refresh"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "precise_obstruction_found_ob_geff_metric_data_token_valuation_missing"
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Attempt a source-only non-bottom MetricData(E) witness under adopted fail-closed MetricLaw_src^{GSC} and adopted fail-closed MetricRespTok_src^{GSC}, or emit a primary OB-GEFF obstruction, without constructing g_eff."
+  explanation: "The Candidate Constructor attempted the post-response-token MetricData(E) map. The adopted response-token boundary is lawful input, but no concrete source-side token valuation for T_Sigma T_Lambda R_C K_tau D_N and V_ML is present for a non-bottom MetricData(E) witness. No MetricData(E) and no g_eff are constructed."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "not started"
+  new_status: "not started"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_theoretical_selector_for_concrete_token_valuation_route_only"
+  downstream_still_blocked:
+    - "nonbottom_MetricData_existence"
+    - "MetricData_adoption"
+    - "g_eff_construction"
+    - "g_eff_adoption"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The g_eff ledger remains not started. The new evidence records a precise OB-GEFF obstruction at the concrete MetricData(E) token-valuation layer after MetricRespTok_src adoption."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology TeX edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "prior accepted source-extension input only; downstream metric response-token boundary is adopted, but concrete token valuation for MetricData(E) is missing"
+  - burden: "M_src"
+    status: "accepted only within the scoped source-only M_src^{GSC}(E) boundary from RT-20260614-134"
+  - burden: "g_eff"
+    status: "not started; non-bottom MetricData(E) is obstructed by OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING and no g_eff is defined"
+  - burden: "matter coupling"
+    status: "blocked; no coupling law is derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "not discharged for metric data; no concrete valuation is available for finite-variation testing"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "no new Gate Chair authority; MetricRespTok_src remains adopted only as fail-closed response-token source-extension data"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; continuation narrows to selector-controlled concrete token-valuation route or local freeze review"
+new_mathematical_payload:
+  - payload_type: "obstruction"
+    summary: "Defines OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING as the primary obstruction to non-bottom MetricData(E) after response-token source-extension adoption."
+  - payload_type: "dependency_map_update"
+    summary: "Narrows the effective_metric_g_eff burden from missing response-token source-extension boundary to missing concrete source-token valuation for MetricData(E)."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "obstruction"
+    object_name: "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING"
+    claim_status: "precise_obstruction"
+    source_path: "research_control/tasks/RT-20260614-147/artifacts/178_M_SRC_GSC_METRIC_DATA_AFTER_RESPONSE_TOKEN_WITNESS_OR_OBSTRUCTION.tex"
+    burden_effect: "obstructs"
+    summary: "The adopted response-token boundary does not provide concrete source-side values for T_Sigma T_Lambda R_C K_tau D_N and V_ML for a non-bottom MetricData(E) witness."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "dependency_map_update"
+    object_name: "post-response-token MetricData(E) dependency map"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-147/artifacts/178_M_SRC_GSC_METRIC_DATA_AFTER_RESPONSE_TOKEN_WITNESS_OR_OBSTRUCTION.tex"
+    burden_effect: "narrows"
+    summary: "Updates the missing object from response-token law boundary to concrete token valuation under adopted MetricRespTok_src^{GSC}."
+obstruction_record:
+  present: true
+  obstruction_id: "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING"
+  scope: "downstream_metric"
+  failed_object: "non-bottom MetricData_src^{GSC-cand}(E)"
+  exact_failure: "No concrete source-side valuation of T_Sigma T_Lambda R_C K_tau D_N and V_ML is present for a non-bottom MetricData(E) witness under the adopted response-token boundary."
+  minimal_counterexample_path: "research_control/tasks/RT-20260614-147/artifacts/178_M_SRC_GSC_METRIC_DATA_AFTER_RESPONSE_TOKEN_WITNESS_OR_OBSTRUCTION.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "selector_required"
+  forbidden_overread: "This local obstruction is not a global no-go theorem and not future source-extension impossibility."
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: ""
+  obstruction_id: "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING"
+  formal_objects:
+    - ""
+  maps:
+    - ""
+  proof_obligations:
+    - ""
+  failed_components:
+    - "T_Sigma valuation"
+    - "T_Lambda valuation"
+    - "R_C relation"
+    - "K_tau covariance"
+    - "D_N branch"
+    - "V_ML branch"
+  next_required_role: "theoretical-continuation-selector"
+  no_fog_check: true
+  no_fog_explanation: "The attempted post-response-token MetricData(E) map fails because the adopted response-token boundary supplies lawful fail-closed data authority but no concrete source-side token valuation for T_Sigma T_Lambda R_C K_tau D_N and V_ML; no MetricData(E) witness and no g_eff are constructed."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-M-SRC-GSC-METRIC-DATA-AFTER-RESPONSE-TOKEN-WITNESS-OR-OBSTRUCTION-001"
+bridge_attempt_status:
+  candidate_map: "R_MRT maps scoped M_src^{GSC}(E), adopted MetricLaw_src^{GSC}, and adopted MetricRespTok_src^{GSC}(E) to MetricData_src^{GSC-cand}(E) or Bottom_src or OB-GEFF-*."
+  missing_primitive: "concrete source-side token valuation for T_Sigma T_Lambda R_C K_tau D_N and V_ML under MRT1-MRT8"
+  preserves_blocks: "true"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Precise obstruction to non-bottom MetricData(E) under adopted response-token source-extension data."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "M_src adoption scope change"
+    - "MetricData(E) adoption"
+    - "g_eff construction"
+    - "g_eff adoption"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "benchmark Gate Chair closure"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "This packet records a local downstream-metric obstruction only. It does not adopt MetricData(E), construct g_eff, promote any downstream GR claim, or close the possibility of a conservative source-side token valuation."
+route_cycle_control:
+  cycle_family: "effective_metric_g_eff_metric_law"
+  current_cycle_step: "post_response_token_metric_data_witness_or_obstruction"
+  prior_related_tasks:
+    - "RT-20260614-141"
+    - "RT-20260614-142"
+    - "RT-20260614-143"
+    - "RT-20260614-144"
+    - "RT-20260614-145"
+    - "RT-20260614-146"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "This packet does not repeat the pre-adoption response-token obstruction; it consumes the adopted response-token boundary and narrows the failed object to concrete token valuation for MetricData(E)."
+  next_role_consequence: "theoretical_selector_concrete_token_valuation_route"
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "theoretical_decision_role_selection"
+  rationale: "The post-response-token MetricData(E) attempt found a scoped obstruction at concrete source-token valuation rather than a global hard fail."
+  repeated_burdens:
+    - "non-bottom MetricData(E) remains unavailable without concrete source-token valuation"
+    - "g_eff remains not started because no non-bottom MetricData(E) witness is supplied"
+  obstruction_summary: "MetricRespTok_src^{GSC} adoption removes the prior missing-boundary obstruction but does not supply concrete values for the metric-data components."
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING"
+  candidate_freeze_label: "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING"
+  prior_attempts_considered:
+    - "RT-20260614-141"
+    - "RT-20260614-143"
+    - "RT-20260614-145"
+    - "RT-20260614-146"
+  freeze_if:
+    - "The same token-valuation obstruction recurs after a bounded selector finds no concrete source-token valuation route and no scoped no-go question with new payload."
+    - "A route tries to construct g_eff directly from MetricRespTok_src adoption without non-bottom MetricData(E)."
+  do_not_freeze_if:
+    - "A bounded selector can choose a concrete source-token valuation witness attempt or a scoped no-go packet with new mathematical payload."
+  criteria_evaluated:
+    - "current packet consumed adopted MetricRespTok_src^{GSC}"
+    - "current packet added a named token-valuation obstruction"
+    - "current packet preserved source-extension continuation"
+    - "current packet did not repeat pre-adoption response-token formalization audit stress or gate"
+  freeze_decision: "not_frozen"
+  rationale: "Continuation is non-orbital because the failed object has been narrowed from response-token boundary to concrete token valuation."
+  decision_reason: "Continuation remains open only for bounded selector-level routing among concrete token-valuation witness attempt scoped obstruction or local freeze review."
+  next_allowed_route: "theoretical_selector"
+theoretical_followup_recommendation:
+  selected_next_packet_family: "theoretical-continuation-selector"
+  route_question: "Choose between a concrete source-token valuation witness target for MetricData(E), a scoped no-go or obstruction packet for token valuations, or a local route-freeze review."
+  no_human_gate_required_for_selector: true
+  blocked_without_gate:
+    - "MetricData(E) adoption"
+    - "g_eff adoption"
+    - "benchmark promotion"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 365
+    relationship_row_count: 2076
+    semantic_row_count: 365
+    vault_row_count: 365
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  post_bootstrap_local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+    before_source_object_count: 366
+    after_source_object_count: 366
+    after_relationship_row_count: 2080
+    after_semantic_row_count: 366
+    after_vault_row_count: 366
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE"
+  canonical_inspections:
+    - object_id: "TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-GATE-CHAIR-REVIEW"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-146/artifacts/177_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_GATE_CHAIR_REVIEW.tex"
+      source_hash: "0eb2d6b60f9d70a7208825303c014d1b2a8e0544d0b8b0a590aba6cbd0d455c5"
+    - object_id: "TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-141/artifacts/172_M_SRC_GSC_NONBOTTOM_METRIC_DATA_WITNESS_OR_OBSTRUCTION.tex"
+      source_hash: "f524125aeef749bec1079fd0e9b537e05e106c968f9e02cd92ce7a2ccb9f3772"
+    - object_id: "TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-143/artifacts/174_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_CANDIDATE.tex"
+      source_hash: "d67e80b68ac2a4eee7f897b988348e05be1266d1a905cf6e0cc243a693f3de2b"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory index, and .local are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260614-147/artifacts/child_phys_math_m_src_gsc_metric_data_after_response_token.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260614-147/artifacts/child_phys_phil_m_src_gsc_metric_data_after_response_token.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260614-147/artifacts/parent_conflict_review_m_src_gsc_metric_data_after_response_token.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260614-147/artifacts/178_M_SRC_GSC_METRIC_DATA_AFTER_RESPONSE_TOKEN_WITNESS_OR_OBSTRUCTION.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260614-147/artifacts/parent_fusion_notes_m_src_gsc_metric_data_after_response_token.md"
+    summary: "Both child perspectives identify OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING and preserve no MetricData(E) adoption, no g_eff, and no downstream GR promotion."
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids:
+    - ""
+  bridge_status: "not_required"
+  notes: "Only blank project_improvement_signals were emitted."
