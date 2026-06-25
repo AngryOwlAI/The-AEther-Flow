@@ -1,0 +1,58 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-138"
+job_id: "AJ-RT-20260614-138-001"
+status: "completed"
+stressed_object: "proposal-only MetricLaw_src^{GSC}"
+audited_source_path: "research_control/tasks/RT-20260614-137/artifacts/168_M_SRC_GSC_METRIC_LAW_SMUGGLING_AUDIT.tex"
+formal_source_path: "research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex"
+stress_focus:
+  - "signature or orientation selector underdetermination"
+  - "scale or measure nonuniqueness"
+  - "causal-preorder or cone-analogue ambiguity"
+  - "source transition covariance failure"
+  - "nondegeneracy or uncontrolled degeneracy"
+  - "finite-variation fragility"
+  - "bottom or obstruction leakage"
+component_results:
+  signature_or_orientation_selector:
+    stress_result: "fail_closed"
+    branch: "OB-GEFF-SIGNATURE-UNDERDETERMINED"
+    mathematical_reading: "The interface does not prove Sigma_src exists; it survives only because missing selector data return obstruction."
+  interval_scale_or_measure:
+    stress_result: "fail_closed"
+    branch: "OB-GEFF-SCALE-UNDERDETERMINED | OB-GEFF-METRIC-LAW-NONUNIQUE"
+    mathematical_reading: "The interface does not choose a scale; multiple source-compatible scales remain a stress risk unless a later source selector is supplied."
+  causal_preorder_or_cone_analogue:
+    stress_result: "fail_closed"
+    branch: "OB-GEFF-CAUSAL-CONE-UNDERDETERMINED"
+    mathematical_reading: "The interface avoids target causal cones by returning obstruction when no source relation is defined."
+  source_transition_covariance:
+    stress_result: "fail_closed"
+    branch: "OB-GEFF-TRANSITION-COVARIANCE-FAILURE"
+    mathematical_reading: "Covariance is an obligation rather than a theorem; failure blocks non-bottom output."
+  nondegeneracy:
+    stress_result: "fail_closed"
+    branch: "OB-GEFF-NONDEGENERACY-FAILURE"
+    mathematical_reading: "The interface does not prove a nondegenerate metric analogue; uncontrolled degeneracy blocks non-bottom output."
+  finite_variation:
+    stress_result: "fail_closed"
+    branch: "OB-GEFF-FINITE-VARIATION-FRAGILITY"
+    mathematical_reading: "Finite-variation compatibility remains unproved for metric-law data and must be tested before any law adoption."
+  bottom_soundness:
+    stress_result: "survives_as_written"
+    branch: "Bottom_src or OB-GEFF-*"
+    mathematical_reading: "No bottom leak is detected as written; every failed component remains bottom or obstruction rather than metric output."
+mathematical_result:
+  status: "candidate_stress_passed_pending_gate"
+  loop_risk_category: "bridge_facing_candidate_path"
+  lemma: "MetricLaw_src^{GSC} survives the named stress branches only as fail-closed proposal-only interface data."
+  not_proved:
+    - "selector existence"
+    - "selector uniqueness"
+    - "source metric-law nondegeneracy"
+    - "finite-variation compatibility"
+    - "MetricLaw_src adoption"
+    - "g_eff construction"
+next_route_recommendation: "protected_human_gate_before_any_metric_law_adoption"
+claim_boundary: "No MetricLaw_src adoption, no g_eff construction, no matter coupling, no Einstein equations, no benchmark promotion."

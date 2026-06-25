@@ -1,0 +1,220 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{status}{Status}
+
+\title{Refuter Stress Test of Proposal-Only MetricLaw\(_{\mathrm{src}}^{\mathsf{GSC}}\)}
+\author{Refuter Packet RT-20260614-138}
+\date{2026-06-24}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+Task: \texttt{RT-20260614-138}. Role: \texttt{refuter@0.2.0}. Target
+milestone: \texttt{effective\_metric\_g\_eff}. Stressed artifact:
+\texttt{research\_control/tasks/RT-20260614-137/artifacts/168\_M\_SRC\_GSC\_METRIC\_LAW\_SMUGGLING\_AUDIT.tex}.
+
+This packet stress-tests proposal-only \(\MetricLaw\) after its hidden-import
+audit. It does not edit canonical ontology TeX, does not change the scoped
+\(\MsrcGSC(E)\) adoption boundary from \texttt{RT-20260614-134}, does not
+adopt \(\MetricLaw\), does not define or construct \(\geff\), does not derive
+matter coupling, does not derive Einstein equations, does not promote
+benchmark status, does not issue benchmark Gate Chair closure, does not claim
+completed derivation, does not claim future source-extension impossibility,
+and does not reject the global theory.
+
+\begin{verbatim}
+result_type: "metric_law_refuter_stress"
+stressed_object: "proposal-only MetricLaw_src^{GSC}"
+stress_status: "candidate_stress_passed_pending_gate"
+loop_risk_category: "bridge_facing_candidate_path"
+g_eff_constructed: false
+next_route: "explicit human-gated MetricLaw_src review before adoption"
+\end{verbatim}
+
+\section{Stressed Object}
+
+The stressed object is the audited proposal-only partial source-law interface
+\[
+  \MetricLaw:
+  D_{\MetricLaw}(E)
+  \dashrightarrow
+  \MetricData(E)
+  \cup
+  \{\BottomSrc\}
+  \cup
+  \mathrm{OB\mbox{-}GEFF\mbox{-}*}.
+\]
+Its non-bottom package names source-side obligations
+\[
+  \MetricData(E)
+  =
+  (
+    \Sigma_{\mathrm{src}},
+    \Lambda_{\mathrm{src}},
+    C_{\mathrm{src}},
+    \mathrm{Cov}_{\tau}^{\mathrm{met}},
+    N_{\mathrm{src}},
+    \mathrm{VarML}_{\mathrm{src}},
+    B_{\mathrm{src}}
+  ).
+\]
+The stress target is not whether these objects already exist. The target is
+whether the interface fails safely when they do not exist, are nonunique, or
+would require target or process authority.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.28\linewidth}p{0.24\linewidth}p{0.38\linewidth}}
+\toprule
+Stress branch & Result & Reason \\
+\midrule
+Signature or orientation selector & fail-closed & Missing source selector
+data return \(\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}UNDERDETERMINED}\);
+no target Lorentzian signature is admitted. \\
+Interval scale or measure & fail-closed & Missing or nonunique scale returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SCALE\mbox{-}UNDERDETERMINED}\) or
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}LAW\mbox{-}NONUNIQUE}\). \\
+Causal preorder or cone analogue & fail-closed & Missing source causal
+relation returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}CAUSAL\mbox{-}CONE\mbox{-}UNDERDETERMINED}\);
+target causal cones are not imported. \\
+Source transition covariance & fail-closed & Failure of source transition
+covariance returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TRANSITION\mbox{-}COVARIANCE\mbox{-}FAILURE}\).
+\\
+Nondegeneracy or controlled degeneracy & fail-closed & Uncontrolled collapse
+returns \(\mathrm{OB\mbox{-}GEFF\mbox{-}NONDEGENERACY\mbox{-}FAILURE}\). \\
+Finite-variation compatibility & fail-closed & Fragility under admitted
+finite variation returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILITY}\).
+\\
+Bottom or obstruction leakage & survives as written & No branch converts
+\(\BottomSrc\) or \(\mathrm{OB\mbox{-}GEFF}\) into non-bottom metric output by
+notation or process authority. \\
+Scoped \(\Msrc\) overread & blocked & The interface consumes scoped
+\(\MsrcGSC(E)\) as input only and does not expand its adoption boundary. \\
+Proposal-only law promotion & blocked & Stress survival does not adopt
+\(\MetricLaw\) and does not construct \(\geff\). \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemma}
+
+\begin{lemma}[Fail-closed stress survival of \(\MetricLaw\)]
+Under the \texttt{RT-20260614-136} proposal-only definition and the
+\texttt{RT-20260614-137} hidden-import audit boundary, every named Refuter
+stress branch either remains a source-side obligation, returns \(\BottomSrc\),
+or returns a named \(\mathrm{OB\mbox{-}GEFF}\) obstruction. No branch yields an
+adopted \(\MetricLaw\) or \(\geff\).
+\end{lemma}
+
+\begin{proof}
+For each selector, covariance, nondegeneracy, variation, and bottom condition,
+the formalization provides a fail-closed branch. The audit ruled out target
+metric, Lorentzian signature, target atlas, target transition-map, proper time,
+detector semantics, benchmark success, and process artifacts as required
+premises. The Refuter stress therefore cannot extract a non-bottom metric law
+from missing or nonunique source data. It can only preserve the interface as
+proposal-only source-law candidate data. This proves stress survival of the
+fail-closed interface as written; it does not prove existence, uniqueness,
+adoption, or metric construction.
+\end{proof}
+
+\section{Refuted Overreads}
+
+\begin{center}
+\begin{tabular}{p{0.42\linewidth}p{0.45\linewidth}}
+\toprule
+Invalid overread & Refuter result \\
+\midrule
+\(\MetricLaw\) is named, so it is adopted. & Refuted; naming records a
+proposal-only interface. \\
+Stress pass supplies \(\geff\). & Refuted; no metric tensor, interval form, or
+non-bottom metric object is constructed. \\
+Failure branches prove global impossibility. & Refuted; branches are local
+obstruction behavior, not a global no-go theorem. \\
+Audit or validation proves physics. & Refuted; process artifacts are not
+mathematical premises. \\
+Scoped \(\MsrcGSC(E)\) adoption entails metric emergence. & Refuted; it only
+permits bounded metric-law work. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Limitations}
+
+This packet does not prove that \(\Sigma_{\mathrm{src}}\),
+\(\Lambda_{\mathrm{src}}\), \(C_{\mathrm{src}}\), or
+\(\mathrm{Cov}_{\tau}^{\mathrm{met}}\) exist. It does not prove uniqueness,
+nondegeneracy, finite-variation compatibility, or bottom soundness for any
+future non-bottom metric-law data. It does not adopt \(\MetricLaw\), define
+\(\geff\), derive matter coupling, derive Einstein equations, or promote
+benchmark status.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension input only; response-token limits remain relevant to future metric-law work. \\
+\(\Msrc\) & Accepted only within the scoped source-only \(\MsrcGSC(E)\) boundary from RT-20260614-134. \\
+\(\geff\) & Not started; proposal-only \(\MetricLaw\) interface has survived audit and stress only as fail-closed interface data. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Known but limited; compatibility for non-bottom metric-law data remains unproved. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & Explicit human gate is required before any \(\MetricLaw\) adoption review. \\
+Current route freeze or hard-fail status & Not frozen; autonomous construction remains blocked pending protected authority or a later lawful selector after human decision. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The stress result is
+\texttt{candidate\_stress\_passed\_pending\_gate}. Any adoption question for
+\(\MetricLaw\) requires explicit protected human-gated authority. This packet
+does not authorize \(\MetricLaw\) adoption, \(\geff\) construction, matter
+coupling, Einstein-equation derivation, benchmark promotion, completed
+derivation, future source-extension impossibility, or global theory rejection.
+
+\section*{References}
+
+Refuter. (2026). \textit{Refuter role contract v0.2.0} [Project control role
+file]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-137. (2026). \textit{Smuggling audit of
+proposal-only MetricLaw\_src GSC} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-136. (2026). \textit{Proposal-only
+source-to-effective-metric law interface for scoped M\_src GSC(E)}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation
+burden map} [Internal control note].
+
+\end{document}

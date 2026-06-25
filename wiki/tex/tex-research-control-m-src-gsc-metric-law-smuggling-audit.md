@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex`
 - Generated output path: `wiki/tex/tex-research-control-m-src-gsc-metric-law-smuggling-audit.md`
+- Backlink from `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-138/artifacts/169_M_SRC_GSC_METRIC_LAW_REFUTER_STRESS_TEST.tex`
 
 ## Validation
 
