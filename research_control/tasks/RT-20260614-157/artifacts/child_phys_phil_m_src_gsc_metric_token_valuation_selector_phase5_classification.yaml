@@ -1,0 +1,47 @@
+artifact_id: "child_phys_phil_m_src_gsc_metric_token_valuation_selector_phase5_classification"
+task_id: "RT-20260614-157"
+job_id: "AJ-RT-20260614-157-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+ontology_model_empirical_separation:
+  ontology:
+    classification: "not_derived_from_current_ontology"
+    reason: "The project may research a conservative source-side selector, but current ontology does not already derive MetricTokenVal_src^{GSC}."
+  mathematical_model:
+    classification: "proposal_only_source_extension_candidate"
+    reason: "The candidate is a formal selector model with source-side fields, classification map, no-target predicate, and fail-closed branches."
+  empirical_recovery:
+    classification: "not_started"
+    reason: "The candidate does not supply empirical detector semantics, target metric behavior, exact-GR benchmark recovery, or matter coupling."
+  benchmark_status:
+    classification: "blocked"
+    reason: "No benchmark Gate Chair verdict or exact-GR recovery claim is produced."
+status_vocabulary:
+  allowed_current_status: "proposal-only"
+  selected_phase5_status: "source-extension human gate ready"
+  forbidden_current_statuses:
+    - "adopted"
+    - "canonical-ontology candidate"
+    - "MetricData(E)"
+    - "g_eff"
+    - "benchmark promotion"
+gate_discipline:
+  gate_required_before_adoption: true
+  gate_scope: "source-extension law data only"
+  gate_must_not_bundle:
+    - "MetricData(E) construction"
+    - "MetricData(E) adoption"
+    - "g_eff construction"
+    - "g_eff adoption"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  approval_overread_block: "User or process approval can authorize a future packet but cannot itself supply a source-side valuation field or mathematical proof."
+recommended_next_role: "gate-chair@0.1.0"
+recommended_next_packet_type: "source_extension_human_gate"
+child_limitations:
+  - "The child does not promote the selector to source law."
+  - "The child does not modify canonical ontology."
+  - "The child does not claim that source-extension adoption, if later granted, proves g_eff."

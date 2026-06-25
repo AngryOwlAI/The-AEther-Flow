@@ -1,0 +1,28 @@
+artifact_id: "parent_conflict_review_m_src_gsc_metric_token_valuation_selector_phase5_classification"
+task_id: "RT-20260614-157"
+job_id: "AJ-RT-20260614-157-001"
+execution_unit_id: "parent"
+status: "completed"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260614-157/artifacts/child_phys_math_m_src_gsc_metric_token_valuation_selector_phase5_classification.yaml"
+  - "research_control/tasks/RT-20260614-157/artifacts/child_phys_phil_m_src_gsc_metric_token_valuation_selector_phase5_classification.yaml"
+conflicts:
+  - conflict_id: "none"
+    conflict_type: "none"
+    severity: "none"
+    description: "Both children classify MetricTokenVal_src^{GSC} as not derived from current ontology, source-pure and fail-closed as written, proposal-only, and gate-ready only for a narrow source-extension-law-data question."
+    resolution: "No revision required."
+blocking_conflicts_present: false
+nonblocking_conflicts_present: false
+claim_boundary_review:
+  adoption_overread_detected: false
+  metricdata_overread_detected: false
+  geff_overread_detected: false
+  downstream_gr_overread_detected: false
+  human_gate_overread_detected: false
+parent_decision:
+  fused_status: "ready"
+  final_artifact: "research_control/tasks/RT-20260614-157/artifacts/187_M_SRC_GSC_METRIC_TOKEN_VALUATION_SELECTOR_PHASE5_CLASSIFICATION.yaml"
+  preserve_unique_contributions:
+    - "physicist-mathematician child supplies field-level classification and narrow gate wording"
+    - "physicist-philosopher child supplies ontology/model/empirical/benchmark separation and approval-overread block"
