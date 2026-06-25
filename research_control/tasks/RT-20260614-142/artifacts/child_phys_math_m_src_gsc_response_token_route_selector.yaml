@@ -1,0 +1,38 @@
+artifact_id: "child_phys_math_m_src_gsc_response_token_route_selector"
+task_id: "RT-20260614-142"
+perspective: "physicist_mathematician"
+input_artifacts:
+  - "research_control/tasks/RT-20260614-141/artifacts/172_M_SRC_GSC_NONBOTTOM_METRIC_DATA_WITNESS_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-139/artifacts/170_M_SRC_GSC_METRIC_LAW_GATE_CHAIR_REVIEW.tex"
+route_comparison:
+  source_extension_candidate:
+    decision: "preferred"
+    reason: "The obstruction identifies a missing source-internal response-token primitive. A conservative proposal-only extension candidate can supply a falsifiable object for later audit and stress."
+  sufficiency_formalization_only:
+    decision: "deferred"
+    reason: "Sufficiency criteria without candidate response-token data would restate the obstruction rather than advance the dependency."
+  local_route_freeze_review:
+    decision: "premature"
+    reason: "Current evidence names a concrete missing primitive and preserves source-extension continuation."
+selected_next_packet:
+  packet_type: "ontology_law_research_packet"
+  next_role: "ontology-formalizer@0.2.0"
+  next_task_type: "metric_law_src_gsc_response_token_source_extension_candidate"
+formal_payload_needed:
+  proposed_object_name: "MetricRespTok_src^{GSC}"
+  required_components:
+    - "source orientation or signature token family"
+    - "source scale or normalization token family"
+    - "source causal-response relation or preorder"
+    - "source transition covariance rule for response tokens"
+    - "source nondegeneracy or controlled degeneracy branch"
+    - "finite-variation metric-law compatibility condition"
+    - "Bottom_src or OB-GEFF fail-closed branch"
+  proof_obligations:
+    - "source-only definability"
+    - "forgetful conservativity over prior scoped M_src and MetricLaw interfaces"
+    - "no target metric or proper-time import"
+    - "no detector semantics or benchmark import"
+    - "explicit status as proposal-only source-extension candidate"
+conclusion: "Select a proposal-only source-extension candidate packet before audit stress or freeze."
