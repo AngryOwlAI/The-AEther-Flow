@@ -1,0 +1,203 @@
+completion_id: "AJC-AJ-RT-20260614-153-001"
+job_id: "AJ-RT-20260614-153-001"
+task_id: "RT-20260614-153"
+source_role_id: "memory-system-maintainer"
+completed_at: "2026-06-25T18:47:13Z"
+status: "completed"
+output_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260614-106/jobs/AJ-RT-20260614-106-001.yaml"
+  - "research_control/tasks/RT-20260614-106/jobs/completions/AJC-AJ-RT-20260614-106-001.yaml"
+  - "research_control/tasks/RT-20260614-107/jobs/AJ-RT-20260614-107-001.yaml"
+  - "research_control/tasks/RT-20260614-107/jobs/completions/AJC-AJ-RT-20260614-107-001.yaml"
+  - "research_control/tasks/RT-20260614-108/jobs/AJ-RT-20260614-108-001.yaml"
+  - "research_control/tasks/RT-20260614-108/jobs/completions/AJC-AJ-RT-20260614-108-001.yaml"
+  - "research_control/tasks/RT-20260614-113/jobs/AJ-RT-20260614-113-001.yaml"
+  - "research_control/tasks/RT-20260614-113/jobs/completions/AJC-AJ-RT-20260614-113-001.yaml"
+  - "research_control/tasks/RT-20260614-114/jobs/AJ-RT-20260614-114-001.yaml"
+  - "research_control/tasks/RT-20260614-114/jobs/completions/AJC-AJ-RT-20260614-114-001.yaml"
+  - "research_control/tasks/RT-20260614-115/jobs/AJ-RT-20260614-115-001.yaml"
+  - "research_control/tasks/RT-20260614-115/jobs/completions/AJC-AJ-RT-20260614-115-001.yaml"
+  - "research_control/tasks/RT-20260614-117/jobs/AJ-RT-20260614-117-001.yaml"
+  - "research_control/tasks/RT-20260614-117/jobs/completions/AJC-AJ-RT-20260614-117-001.yaml"
+  - "research_control/tasks/RT-20260614-118/jobs/AJ-RT-20260614-118-001.yaml"
+  - "research_control/tasks/RT-20260614-118/jobs/completions/AJC-AJ-RT-20260614-118-001.yaml"
+  - "research_control/tasks/RT-20260614-119/jobs/AJ-RT-20260614-119-001.yaml"
+  - "research_control/tasks/RT-20260614-119/jobs/completions/AJC-AJ-RT-20260614-119-001.yaml"
+  - "research_control/tasks/RT-20260614-153/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260614-153/jobs/completions/AJC-AJ-RT-20260614-153-001.yaml"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v6.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0187.yaml"
+  - "research_control/handoffs/handoff-0187.md"
+  - "research_control/tasks/RT-20260614-151/artifacts/182_M_SRC_GSC_GEFF_CURRENT_ROUTE_FREEZE_OR_HARD_FAIL_REVIEW.yaml"
+  - "research_control/tasks/RT-20260614-152/DDR-20260614-152.md"
+  - "research_control/tasks/RT-20260614-152/artifacts/183_M_SRC_GSC_POST_FREEZE_ONTOLOGY_LAW_ROUTE_SELECTOR.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup RT-20260614-152 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"post freeze ontology law metric token selector\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"MetricData token valuation obstruction\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=director_decision_required"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass_clean_preflight"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=pass_advisory_no_action_preflight"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_initial_local_retrieval_refresh_needed"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "current_frontier_synced_to_handoff0187_metric_token_selector_boundary"
+sync_result:
+  current_frontier_report:
+    status: "synchronized"
+    path: "research_control/current_frontier.md"
+    authority_status: "project_control"
+    latest_task_id: "RT-20260614-152"
+    latest_handoff_id: "handoff-0187"
+    next_boundary: "proposal_only_metric_token_valuation_selector_candidate_formalization"
+    physics_claim_authority: false
+  program_state:
+    status: "unchanged"
+    path: "research_control/program_state.yaml"
+    rationale: "RT-20260614-152 and handoff-0187 remain the scientific continuation authority."
+  stale_preflight_hash_repair:
+    status: "synchronized"
+    object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    source_hash: "1d0de0e5e54da09b26efeb19e319898ab88cb52ade4b292336011300f21e869a"
+    paths:
+      - "research_control/tasks/RT-20260614-106/jobs/AJ-RT-20260614-106-001.yaml"
+      - "research_control/tasks/RT-20260614-106/jobs/completions/AJC-AJ-RT-20260614-106-001.yaml"
+      - "research_control/tasks/RT-20260614-107/jobs/AJ-RT-20260614-107-001.yaml"
+      - "research_control/tasks/RT-20260614-107/jobs/completions/AJC-AJ-RT-20260614-107-001.yaml"
+      - "research_control/tasks/RT-20260614-108/jobs/AJ-RT-20260614-108-001.yaml"
+      - "research_control/tasks/RT-20260614-108/jobs/completions/AJC-AJ-RT-20260614-108-001.yaml"
+      - "research_control/tasks/RT-20260614-113/jobs/AJ-RT-20260614-113-001.yaml"
+      - "research_control/tasks/RT-20260614-113/jobs/completions/AJC-AJ-RT-20260614-113-001.yaml"
+      - "research_control/tasks/RT-20260614-114/jobs/AJ-RT-20260614-114-001.yaml"
+      - "research_control/tasks/RT-20260614-114/jobs/completions/AJC-AJ-RT-20260614-114-001.yaml"
+      - "research_control/tasks/RT-20260614-115/jobs/AJ-RT-20260614-115-001.yaml"
+      - "research_control/tasks/RT-20260614-115/jobs/completions/AJC-AJ-RT-20260614-115-001.yaml"
+      - "research_control/tasks/RT-20260614-117/jobs/AJ-RT-20260614-117-001.yaml"
+      - "research_control/tasks/RT-20260614-117/jobs/completions/AJC-AJ-RT-20260614-117-001.yaml"
+      - "research_control/tasks/RT-20260614-118/jobs/AJ-RT-20260614-118-001.yaml"
+      - "research_control/tasks/RT-20260614-118/jobs/completions/AJC-AJ-RT-20260614-118-001.yaml"
+      - "research_control/tasks/RT-20260614-119/jobs/AJ-RT-20260614-119-001.yaml"
+      - "research_control/tasks/RT-20260614-119/jobs/completions/AJC-AJ-RT-20260614-119-001.yaml"
+acceptance_criteria_status:
+  report_matches_latest_handoff: true
+  report_not_physics_proof: true
+  no_metric_token_val_adoption_claim: true
+  no_metricdata_construction_claim: true
+  no_geff_construction_claim: true
+  next_route_identified: true
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "MetricTokenVal_src^{GSC} adoption"
+    - "MetricData(E) construction"
+    - "MetricData(E) adoption"
+    - "g_eff definition"
+    - "g_eff construction"
+    - "g_eff adoption"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair closure"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "The current-frontier report is control context only and is not proof or adoption authority."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 368
+    relationship_row_count: 2090
+    semantic_row_count: 368
+    vault_row_count: 368
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"post freeze ontology law metric token selector\" --limit 10 --json"
+      query_type: "search"
+      query_text: "post freeze ontology law metric token selector"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-CONCRETE-METRICDATA-TOKEN-VALUATION-WITNESS-OR-OBSTRUCTION"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"MetricData token valuation obstruction\" --limit 10 --json"
+      query_type: "search"
+      query_text: "MetricData token valuation obstruction"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-CONCRETE-METRICDATA-TOKEN-VALUATION-WITNESS-OR-OBSTRUCTION"
+        - "TEX-RESEARCH-CONTROL-M-SRC-GSC-STRICT-METRICDATA-WITNESS-SCHEMA"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "1d0de0e5e54da09b26efeb19e319898ab88cb52ade4b292336011300f21e869a"
+    - object_id: "TEX-RESEARCH-CONTROL-M-SRC-GSC-STRICT-METRICDATA-WITNESS-SCHEMA"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-149/artifacts/180_M_SRC_GSC_STRICT_METRICDATA_WITNESS_SCHEMA.tex"
+      source_hash: "54595516017e9da4ecf37d68b52440b80876608e4884e19e80f88e7ec990c2ae"
+    - object_id: "TEX-RESEARCH-CONTROL-M-SRC-GSC-CONCRETE-METRICDATA-TOKEN-VALUATION-WITNESS-OR-OBSTRUCTION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-150/artifacts/181_M_SRC_GSC_CONCRETE_METRICDATA_TOKEN_VALUATION_WITNESS_OR_OBSTRUCTION.tex"
+      source_hash: "df037dd9c146adbcca9553ecfc585a145af724c785a3dbd15e3033cdfb595050"
+  direct_source_inspections:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v6.md"
+    - "research_control/program_state.yaml"
+    - "research_control/handoffs/handoff-0187.yaml"
+    - "research_control/handoffs/handoff-0187.md"
+    - "research_control/tasks/RT-20260614-151/artifacts/182_M_SRC_GSC_GEFF_CURRENT_ROUTE_FREEZE_OR_HARD_FAIL_REVIEW.yaml"
+    - "research_control/tasks/RT-20260614-152/DDR-20260614-152.md"
+    - "research_control/tasks/RT-20260614-152/artifacts/183_M_SRC_GSC_POST_FREEZE_ONTOLOGY_LAW_ROUTE_SELECTOR.yaml"
+    - "research_control/design/gr_derivation_burden_map.md"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+    - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    - "registries/TEX_SOURCE_REGISTRY.csv"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory index, and .local are retrieval layers only and not authority."
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids:
+    - ""
+  bridge_status: "not_required"
+  notes: "Only blank project_improvement_signals were emitted."
+next_required_packet: "proposal_only_metric_token_valuation_selector_candidate_formalization"
