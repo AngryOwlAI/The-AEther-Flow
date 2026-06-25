@@ -1,0 +1,258 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricRespTok}{\mathrm{MetricRespTok}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBGEFF}{\mathrm{OB\mbox{-}GEFF}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{countermodel}{Countermodel}
+
+\title{Refuter Stress Test of Proposal-Only MetricRespTok\(_{\mathrm{src}}^{\mathsf{GSC}}\)}
+\author{Refuter Packet RT-20260614-145}
+\date{2026-06-25}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+Task: \texttt{RT-20260614-145}. Role: \texttt{refuter@0.2.0}. Target
+milestone: \texttt{effective\_metric\_g\_eff}. Stressed artifact:
+\texttt{research\_control/tasks/RT-20260614-144/artifacts/175\_M\_SRC\_GSC\_RESPONSE\_TOKEN\_SOURCE\_EXTENSION\_SMUGGLING\_AUDIT.tex}.
+
+This packet stress-tests proposal-only \(\MetricRespTok\) and MRT1--MRT8 after
+hidden-import audit. It does not edit canonical ontology TeX, does not change
+the scoped \(\MsrcGSC(E)\) adoption boundary from \texttt{RT-20260614-134},
+does not adopt \(\MetricRespTok\), does not construct or adopt non-bottom
+\(\MetricData(E)\), does not define or construct \(\geff\), does not derive
+matter coupling, does not derive Einstein equations, does not promote
+benchmark status, does not issue Gate Chair closure, does not claim completed
+derivation, does not claim future source-extension impossibility, and does
+not reject the global theory.
+
+\begin{verbatim}
+result_type: "response_token_source_extension_refuter_stress"
+stressed_object: "proposal-only MetricRespTok_src^{GSC} and MRT1-MRT8"
+stress_status: "candidate_stress_passed_pending_gate"
+loop_risk_category: "bridge_facing_candidate_path"
+MetricData_constructed: false
+g_eff_constructed: false
+next_route: "explicit human-gated MetricRespTok_src review before adoption"
+\end{verbatim}
+
+\section{Stressed Object}
+
+The stressed object is the audited proposal-only response-token source
+extension
+\[
+  \MetricRespTok(E)
+  =
+  (
+    T_{\Sigma},
+    T_{\Lambda},
+    R_C,
+    K_{\tau},
+    D_N,
+    V_{\mathrm{ML}},
+    B_{\mathrm{src}}
+  ).
+\]
+The intended use is not to supply \(\geff\). It is to name candidate
+source-side response-token data that a later, separately authorized
+\(\MetricData(E)\) attempt would have to consume. The stress target is whether
+the candidate fails safely when the token data are absent, tied, nonunique,
+ambiguous, covariance-defective, degenerate, variation-fragile, or status
+contaminated.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.28\linewidth}p{0.24\linewidth}p{0.38\linewidth}}
+\toprule
+Stress branch & Result & Reason \\
+\midrule
+Token collapse into target metric components & fail-closed & A branch that
+identifies response tokens with target metric components violates MRT1 and
+the audit boundary; it returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TARGET\mbox{-}METRIC\mbox{-}IMPORT}\). \\
+Signature or orientation nonuniqueness & fail-closed & Tied or absent
+\(T_{\Sigma}\) data return
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}UNDERDETERMINED}\) or
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}LAW\mbox{-}NONUNIQUE}\);
+target Lorentzian signature is not admitted as a repair. \\
+Scale or normalization nonuniqueness & fail-closed & Tied or absent
+\(T_{\Lambda}\) data return
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}SCALE\mbox{-}UNDERDETERMINED}\) or
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}METRIC\mbox{-}LAW\mbox{-}NONUNIQUE}\);
+target proper time and detector calibration are not admitted as repairs. \\
+Causal-response ambiguity & fail-closed & Missing or incompatible \(R_C\)
+data return
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}CAUSAL\mbox{-}CONE\mbox{-}UNDERDETERMINED}\);
+target causal cones are not imported. \\
+Transition covariance failure & fail-closed & Failure of \(K_{\tau}\) over
+source transition tokens returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TRANSITION\mbox{-}COVARIANCE\mbox{-}FAILURE}\).
+\\
+Nondegeneracy failure & fail-closed & Uncontrolled collapse in \(D_N\) returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}NONDEGENERACY\mbox{-}FAILURE}\). \\
+Finite-variation fragility & fail-closed & Fragility of \(V_{\mathrm{ML}}\)
+under admitted source variation returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILITY}\).
+\\
+Bottom leakage & survives as written & \(B_{\mathrm{src}}\), \(\BottomSrc\),
+and named \(\OBGEFF\) branches do not convert into non-bottom
+\(\MetricData(E)\) by notation or process status. \\
+Scoped \(\Msrc\) or \(\MetricLaw\) overread & blocked & The candidate consumes
+scoped \(\MsrcGSC(E)\) and the fail-closed \(\MetricLaw\) interface only as
+input boundaries; it does not expand either boundary. \\
+Proposal-only candidate promotion & blocked & Stress survival does not adopt
+\(\MetricRespTok\), construct \(\MetricData(E)\), or construct \(\geff\). \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemma}
+
+\begin{lemma}[Fail-closed stress survival of \(\MetricRespTok\)]
+Under the \texttt{RT-20260614-143} proposal-only candidate and the
+\texttt{RT-20260614-144} hidden-import audit boundary, every named Refuter
+stress branch either remains a source-side proof obligation, returns
+\(\BottomSrc\), or returns a named \(\OBGEFF\) obstruction. No branch yields
+adopted \(\MetricRespTok\), non-bottom \(\MetricData(E)\), or \(\geff\).
+\end{lemma}
+
+\begin{proof}
+MRT1 requires a source-only domain and forgetful conservativity. MRT2 through
+MRT5 require source-side token families, response relations, and transition
+covariance rather than target metric, target atlas, target transition,
+Lorentzian-signature, or proper-time structure. MRT6 through MRT8 require
+nondegeneracy, finite-variation compatibility, selector discipline, and bottom
+behavior. Each failure of these requirements is explicitly a bottom or
+obstruction branch. The audit excludes benchmark and process authority as
+mathematical premises. Therefore the stress branches cannot promote missing,
+nonunique, or contaminated data into non-bottom \(\MetricData(E)\). They can
+only preserve the candidate as fail-closed proposal-only source-extension data
+pending protected authority.
+\end{proof}
+
+\section{Selector-Tie Countermodel}
+
+\begin{countermodel}[Response-token tie]
+Let a source package \(E\) admit two source-internal orientation tokens
+\(t_{\Sigma}^{(1)}\) and \(t_{\Sigma}^{(2)}\) satisfying the same available
+source constraints, and suppose no adopted source selector distinguishes them.
+Likewise let two scale tokens \(t_{\Lambda}^{(1)}\) and
+\(t_{\Lambda}^{(2)}\) satisfy the same available normalization constraints.
+Then the proposal-only candidate cannot choose a unique non-bottom
+\(\MetricData(E)\) component without importing an additional selector.
+\end{countermodel}
+
+\begin{proof}
+If the candidate chooses one tied token by file order, role identity,
+validation status, handoff order, approval status, target metric signature, or
+proper-time calibration, it violates the claim boundary. If it chooses neither,
+MRT2 or MRT3 is not discharged. Therefore the only lawful outcome under the
+written candidate is \(\BottomSrc\) or a named nonuniqueness or
+underdetermination branch. This is a local stress case for the candidate; it
+does not prove that no future source-side selector can exist.
+\end{proof}
+
+\section{Refuted Overreads}
+
+\begin{center}
+\begin{tabular}{p{0.42\linewidth}p{0.45\linewidth}}
+\toprule
+Invalid overread & Refuter result \\
+\midrule
+\(\MetricRespTok\) is named, so it is adopted. & Refuted; naming records a
+proposal-only candidate. \\
+Audit plus stress supplies \(\MetricData(E)\). & Refuted; no non-bottom data
+witness is constructed. \\
+Audit plus stress supplies \(\geff\). & Refuted; no effective metric tensor,
+interval form, or metric object is constructed. \\
+Tie failures prove global impossibility. & Refuted; they are local stress
+branches without a no-go theorem. \\
+Validation or registry status proves response-token data. & Refuted; process
+artifacts are not mathematical premises. \\
+Scoped \(\MsrcGSC(E)\) and adopted \(\MetricLaw\) entail response tokens. &
+Refuted; they only permit bounded candidate work. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Limitations}
+
+This stress pass does not prove that \(T_{\Sigma}\), \(T_{\Lambda}\), \(R_C\),
+\(K_{\tau}\), \(D_N\), \(V_{\mathrm{ML}}\), or \(B_{\mathrm{src}}\) exist as
+non-bottom source data. It does not prove uniqueness, covariance,
+nondegeneracy, finite-variation robustness, or bottom soundness. It does not
+adopt \(\MetricRespTok\), construct \(\MetricData(E)\), define \(\geff\),
+derive matter coupling, derive Einstein equations, promote benchmark status,
+or complete a GR derivation.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension input only; downstream metric response-token semantics remain proposal-only candidate data. \\
+\(\Msrc\) & Accepted only within the scoped source-only \(\MsrcGSC(E)\) boundary from RT-20260614-134. \\
+\(\geff\) & Not started; proposal-only \(\MetricRespTok\) has survived audit and stress only as fail-closed source-extension candidate data; no non-bottom \(\MetricData(E)\) witness is supplied. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Candidate-level compatibility criterion MRT7 survives only as a fail-closed obligation; it is not discharged as arbitrary finite-variation robustness. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & Explicit human gate is required before any \(\MetricRespTok\) adoption review. \\
+Current route freeze or hard-fail status & Not frozen; the automatic audit-stress sequence reaches a protected human-gated adoption boundary. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The stress result is
+\texttt{candidate\_stress\_passed\_pending\_gate} with loop-risk category
+\texttt{bridge\_facing\_candidate\_path}. Any adoption question for
+\(\MetricRespTok\) requires explicit protected human-gated authority. This
+packet does not authorize \(\MetricRespTok\) adoption, non-bottom
+\(\MetricData(E)\), \(\geff\) construction, matter coupling, Einstein-equation
+derivation, benchmark promotion, completed derivation,
+future-source-extension impossibility, or global theory rejection.
+
+\section*{References}
+
+Refuter. (2026). \textit{Refuter role contract v0.2.0} [Project control role
+file]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-144. (2026). \textit{Smuggling audit of
+proposal-only MetricRespTok\_src GSC} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-143. (2026). \textit{MetricRespTok\_src
+GSC response-token source-extension candidate and MetricData sufficiency
+criteria} [Research-control TeX artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+Gate Chair Packet RT-20260614-139. (2026). \textit{Gate Chair review of
+proposal-only MetricLaw\_src GSC} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation
+burden map} [Internal control note].
+
+\end{document}
