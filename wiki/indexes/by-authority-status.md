@@ -173,6 +173,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION` `research_control/tasks/RT-20260614-141/artifacts/172_M_SRC_GSC_NONBOTTOM_METRIC_DATA_WITNESS_OR_OBSTRUCTION.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE` `research_control/tasks/RT-20260614-143/artifacts/174_M_SRC_GSC_RESPONSE_TOKEN_SOURCE_EXTENSION_CANDIDATE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT` `research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `research_control/tasks/RT-20260614-053/artifacts/94_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL.tex`
@@ -611,6 +612,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `wiki/tex/tex-research-control-m-src-gsc-minimum-source-only-adoption-theorem-envelope.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `wiki/tex/tex-research-control-m-src-gsc-no-target-import-criterion.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION` `wiki/tex/tex-research-control-m-src-gsc-nonbottom-metric-data-witness-or-obstruction.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-RESPONSE-TOKEN-SOURCE-EXTENSION-CANDIDATE` `wiki/tex/tex-research-control-m-src-gsc-response-token-source-extension-candidate.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `wiki/tex/tex-research-control-m-src-gsc-source-transition-token-groupoid-conditions.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT` `wiki/tex/tex-research-control-resp-lc-current-ontology-atlas-glue-derivation-attempt.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model.md`

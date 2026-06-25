@@ -1,0 +1,25 @@
+artifact_id: "parent_conflict_review_m_src_gsc_response_token_source_extension_candidate"
+task_id: "RT-20260614-143"
+job_id: "AJ-RT-20260614-143-001"
+execution_unit_id: "parent"
+perspective: "physicist_mathematician_philosopher"
+status: "completed"
+created_at: "2026-06-25T01:14:37Z"
+child_outputs:
+  - "research_control/tasks/RT-20260614-143/artifacts/child_phys_math_m_src_gsc_response_token_source_extension_candidate.yaml"
+  - "research_control/tasks/RT-20260614-143/artifacts/child_phys_phil_m_src_gsc_response_token_source_extension_candidate.yaml"
+conflicts:
+  - conflict_id: "CONF-001"
+    conflict_type: "claim_boundary"
+    severity: "nonblocking"
+    description: "The math child names component candidates for MetricData(E), while the philosophy child emphasizes that these names must not be read as constructed MetricData(E)."
+    resolution: "The fused artifact labels every component as proposal-only source-extension data and states that non-bottom MetricData(E) is not constructed."
+unresolved_conflicts: []
+resolution_rounds: 0
+consensus:
+  - "MetricRespTok_src^{GSC}(E) can be stated as a proposal-only source-extension candidate."
+  - "The packet supplies sufficiency criteria MRT1-MRT8 and fail-closed OB-GEFF branches."
+  - "No source-law adoption, MetricData(E) witness, g_eff construction, or downstream GR promotion follows."
+  - "The next route should be Smuggling Auditor audit before stress or adoption."
+blocking_conflict_status: "none"
+conclusion: "No unresolved blocking conflict remains; the fused artifact may proceed."
