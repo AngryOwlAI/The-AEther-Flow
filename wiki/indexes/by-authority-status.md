@@ -186,6 +186,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-STRICT-METRICDATA-WITNESS-SCHEMA` `research_control/tasks/RT-20260614-149/artifacts/180_M_SRC_GSC_STRICT_METRICDATA_WITNESS_SCHEMA.tex`
 - `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-CANDIDATE-OR-OBSTRUCTION` `research_control/tasks/RT-20260614-159/artifacts/189_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_CANDIDATE_OR_OBSTRUCTION.tex`
+- `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-161/artifacts/191_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-160/artifacts/190_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT` `research_control/tasks/RT-20260614-075/artifacts/116_RESP_LC_CURRENT_ONTOLOGY_ATLAS_GLUE_DERIVATION_ATTEMPT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `research_control/tasks/RT-20260614-053/artifacts/94_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL.tex`
@@ -637,6 +638,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-SOURCE-TRANSITION-TOKEN-GROUPOID-CONDITIONS` `wiki/tex/tex-research-control-m-src-gsc-source-transition-token-groupoid-conditions.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-STRICT-METRICDATA-WITNESS-SCHEMA` `wiki/tex/tex-research-control-m-src-gsc-strict-metricdata-witness-schema.md`
 - `WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-CANDIDATE-OR-OBSTRUCTION` `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-candidate-or-obstruction.md`
+- `WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-ATTEMPT` `wiki/tex/tex-research-control-resp-lc-current-ontology-atlas-glue-derivation-attempt.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL` `wiki/tex/tex-research-control-resp-lc-finite-toy-metric-response-model.md`

@@ -1,0 +1,37 @@
+artifact_id: "child_phys_math_nonbottom_metricdata_witness_src_gsc_refuter_stress"
+task_id: "RT-20260614-161"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+stressed_object: "NonBottomMetricDataWitness_src^{GSC}(E_0)"
+claim_status: "draft/control finite/local candidate only"
+metric_data_adopted: false
+g_eff_constructed: false
+stress_results:
+  collapse:
+    result: "survives_finite_local_test"
+    reason: "The E_0 response profiles remain distinct for the admitted chain-preserving package; collapsing variations route to OB-GEFF-NONBOTTOM-METRICDATA-COLLAPSE or SOURCE-DEGENERACY."
+  nonuniqueness:
+    result: "survives_under_stated_source_gauge"
+    reason: "Inside the admitted E_0 boundary the valuation fields are deterministic up to source relabeling and positive normalization scale; broader gauges require a separate route decision."
+  source_transition_covariance:
+    result: "survives_for_admitted_transition_tokens"
+    reason: "Covariance holds only for source relabeling isomorphisms preserving directed incidence and marked chain class. Unmarked reversal or broader transition policies are outside the candidate and must fail closed."
+  finite_variation:
+    result: "survives_repair_or_bottom_test"
+    reason: "Relabeling preserves the record, equivalent single-edge repair re-evaluates the source package, and chain removal or distinguishability collapse returns named bottom branches."
+  bottom_branch_completeness:
+    result: "sufficient_for_finite_local_candidate"
+    reason: "The branch table covers domain missing, token valuation missing, target import, process laundering, noncovariance, source degeneracy, finite-variation fragility, and premature promotion for this finite/local stress."
+  finite_local_overread:
+    result: "blocked"
+    reason: "Stress survival does not generalize from E_0 to arbitrary E and cannot become MetricData(E) adoption."
+  premature_promotion:
+    result: "blocked"
+    reason: "No stress branch constructs MetricData(E), g_eff, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory rejection."
+loop_risk_category: "concrete_witness_path"
+new_payload:
+  - "finite_local_stress_lemma"
+  - "transition_boundary_counterexample_pressure"
+  - "repair_or_bottom_variation_table"
+recommendation: "Parent fusion should report finite/local stress survival only and route next to a bounded Theoretical Continuation Selector for post-stress classification."
