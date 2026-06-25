@@ -1,0 +1,275 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricDataCand}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RespLC}{\mathrm{Resp}_{\mathrm{lc}}}
+
+\newtheorem{attempt}{Attempt}
+\newtheorem{finding}{Finding}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{status}{Status}
+
+\title{Non-Bottom MetricData Witness Attempt or Obstruction for MetricLaw\(_{\mathrm{src}}^{\mathsf{GSC}}\)}
+\author{Candidate Constructor Packet RT-20260614-141}
+\date{2026-06-25}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Candidate Constructor output for
+\texttt{RT-20260614-141}. It consumes \texttt{handoff-0175}, which selected
+one bounded witness-or-primary-obstruction packet after
+\(\MetricLaw\) was adopted only as a fail-closed source-law interface.
+
+The packet does not edit canonical ontology TeX. It does not change the scoped
+\(\MsrcGSC(E)\) adoption boundary from \texttt{RT-20260614-134}. It does not
+adopt a source-extension primitive, does not define or construct \(\geff\),
+does not derive matter coupling, does not derive Einstein equations, does not
+promote benchmark status, does not issue benchmark Gate Chair closure, does
+not claim completed derivation, does not claim future source-extension
+impossibility, and does not reject the global theory.
+
+\begin{verbatim}
+result_type: "precise_obstruction"
+obstruction_id: "OB-GEFF-RESPONSE-TOKEN-MISSING"
+constructed_metric_data: false
+g_eff_constructed: false
+next_route: "bounded selector for response-primitive continuation"
+\end{verbatim}
+
+\section{Input Boundary}
+
+The admitted interface is the adopted fail-closed source-law interface
+\[
+  \MetricLaw:
+  D_{\MetricLaw}(E)
+  \dashrightarrow
+  \MetricData(E)
+  \cup \{\BottomSrc\}
+  \cup \mathrm{OB\mbox{-}GEFF\mbox{-}*}.
+\]
+The Gate Chair review in \texttt{RT-20260614-139} adopted only this interface
+discipline. It explicitly did not prove non-bottom \(\MetricData(E)\),
+selector existence, selector uniqueness, nondegeneracy, finite-variation
+compatibility, or \(\geff\) construction.
+
+The attempted positive output is a draft/control source-side prerequisite
+package
+\[
+  \MetricDataCand(E)
+  =
+  (
+    \Sigma_{\mathrm{src}},
+    \Lambda_{\mathrm{src}},
+    C_{\mathrm{src}},
+    \mathrm{Cov}_{\tau}^{\mathrm{met}},
+    N_{\mathrm{src}},
+    \mathrm{VarML}_{\mathrm{src}},
+    B_{\mathrm{src}}
+  ).
+\]
+This package would still not be \(\geff\). It would only be data required
+before a later metric construction attempt.
+
+\section{Attempted Candidate Map}
+
+\begin{attempt}[MetricData prerequisite map]
+Attempt the bounded source-only map
+\[
+  \mathcal{W}_{\mathrm{met}}:
+  \bigl(
+    \MsrcGSC(E),
+    \mathrm{Cov}_{\mathrm{src}}^{\mathsf{GSC}}(E),
+    \tau_{ij}^{\mathrm{src}},
+    R_{\mathrm{src}}
+  \bigr)
+  \dashrightarrow
+  \MetricDataCand(E),
+\]
+where \(R_{\mathrm{src}}\) denotes source response or readout material only
+when explicitly present as source data.
+\end{attempt}
+
+The construction rule is strict: every component of \(\MetricDataCand(E)\)
+must be determined by source-side data. If any component requires target
+metric structure, target signature, target atlas, proper-time semantics,
+detector semantics, benchmark behavior, registry status, validation status,
+role identity, handoff status, approval status, local caches, file order, or
+commit status, the attempt fails.
+
+\section{Component Check}
+
+\begin{longtable}{p{0.24\linewidth}p{0.25\linewidth}p{0.39\linewidth}}
+\toprule
+Component & Status & Reason \\
+\midrule
+\(\Sigma_{\mathrm{src}}\) & not source-determined & The available source
+coverage, transition tokens, and readout syntax do not select orientation,
+signature, or a signature gauge without extra response structure. \\
+\(\Lambda_{\mathrm{src}}\) & not source-determined & No source-internal scale,
+measure, or normalization selector is present; target proper time or benchmark
+fit remains forbidden. \\
+\(C_{\mathrm{src}}\) & not source-determined & No causal preorder, causal-cone
+analogue, or weaker causal-response relation is determined by the retained
+source material. \\
+\(\mathrm{Cov}_{\tau}^{\mathrm{met}}\) & not source-determined & Transition
+tokens are available inside scoped \(\MsrcGSC(E)\), but there is no
+metric-data object whose transition covariance can be checked. \\
+\(N_{\mathrm{src}}\) & not source-determined & Nondegeneracy or controlled
+degeneracy cannot be evaluated without a candidate response relation or form.
+\\
+\(\mathrm{VarML}_{\mathrm{src}}\) & not source-determined & Prior finite toy
+metric-response stress showed that explicit tags fail under tag erasure and
+therefore do not supply robust untagged response data. \\
+\(B_{\mathrm{src}}\) & available as fail-closed discipline & The interface can
+return \(\BottomSrc\) or an \(\mathrm{OB\mbox{-}GEFF}\) obstruction. It cannot
+convert missing data into a non-bottom output. \\
+\bottomrule
+\end{longtable}
+
+\section{Precise Obstruction}
+
+\begin{obstruction}[OB-GEFF-RESPONSE-TOKEN-MISSING]
+No source response or readout token family sufficient to state
+\(\Sigma_{\mathrm{src}}\), \(\Lambda_{\mathrm{src}}\),
+\(C_{\mathrm{src}}\), \(\mathrm{Cov}_{\tau}^{\mathrm{met}}\),
+\(N_{\mathrm{src}}\), and \(\mathrm{VarML}_{\mathrm{src}}\) is present in the
+tracked source-side inputs. Therefore the attempted map
+\(\mathcal{W}_{\mathrm{met}}\) returns
+\[
+  \mathrm{OB\mbox{-}GEFF\mbox{-}RESPONSE\mbox{-}TOKEN\mbox{-}MISSING}
+\]
+instead of non-bottom \(\MetricDataCand(E)\).
+\end{obstruction}
+
+\begin{finding}[Minimal missing source primitive]
+The missing primitive is a source-internal response rule, equivalent in burden
+to \(\RespLC\), that assigns signed interval class, scale or normalization,
+causal-response relation, covariance behavior, and response tokens from
+source data alone. Naming that primitive here does not adopt it and does not
+edit canonical ontology.
+\end{finding}
+
+\begin{status}[No global no-go theorem]
+The obstruction is local to the present tracked input boundary and the adopted
+\(\MetricLaw\) interface. It says the current source-side material does not
+derive the needed response-token family. It does not prove that a conservative
+future source extension is impossible.
+\end{status}
+
+\section{Bridge Attempt Status}
+
+\begin{status}[Attempted map]
+The attempted map was \(\mathcal{W}_{\mathrm{met}}\), from scoped
+\(\MsrcGSC(E)\), source coverage, transition tokens, and explicit source
+response/readout material to \(\MetricDataCand(E)\).
+\end{status}
+
+\begin{status}[Missing primitive]
+The missing primitive is a \(\RespLC\)-like source-internal response rule
+sufficient for orientation or signature, scale or measure, causal-response,
+source-transition covariance, nondegeneracy, and finite-variation
+compatibility.
+\end{status}
+
+\begin{status}[Completion verdict]
+The Candidate Constructor result is a precise obstruction, not a constructed
+candidate:
+\[
+  \mathrm{OB\mbox{-}GEFF\mbox{-}RESPONSE\mbox{-}TOKEN\mbox{-}MISSING}.
+\]
+\end{status}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Still insufficient for metric-law data; a source-internal response
+rule remains missing at the downstream metric-law boundary. \\
+\(\Msrc\) & Accepted only within the scoped source-only
+\(\MsrcGSC(E)\) boundary from \texttt{RT-20260614-134}. \\
+\(\MetricLaw\) & Adopted only as a fail-closed source-law interface. \\
+\(\geff\) & Not constructed; non-bottom \(\MetricData(E)\) is not supplied. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged for metric-law data; response
+tag-erasure remains a stress failure for toy response tags. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict is supplied. \\
+Current route freeze or hard-fail status & Not globally frozen; route should
+advance only through bounded selection of response-primitive continuation or
+local freeze review. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Theoretical Continuation Selector for
+the \texttt{effective\_metric\_g\_eff} milestone. It should choose among:
+\begin{itemize}[leftmargin=*]
+  \item a conservative source-extension candidate for the missing
+  \(\RespLC\)-like response primitive;
+  \item an Ontology Formalizer packet defining response-token sufficiency
+  criteria for \(\MetricData(E)\); or
+  \item a local route-freeze review if the same obstruction should be treated
+  as locally frozen under the current inputs.
+\end{itemize}
+
+It must not define or adopt \(\geff\).
+
+\section{Conclusion}
+
+The bounded construction attempt failed decisively and fail-closed:
+\[
+  \mathcal{W}_{\mathrm{met}}
+  \leadsto
+  \mathrm{OB\mbox{-}GEFF\mbox{-}RESPONSE\mbox{-}TOKEN\mbox{-}MISSING}.
+\]
+No non-bottom \(\MetricData(E)\) and no \(\geff\) are constructed.
+Same-milestone continuation remains open through a bounded selector for the
+missing response-primitive path or a local freeze review.
+
+\section*{References}
+
+Candidate Constructor Packet RT-20260614-041. (2026). \textit{Audited ObsLoc
+observer-readout metric-response law bridge attempt} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-136. (2026). \textit{Proposal-only
+source-to-effective-metric law interface for scoped M\_src GSC(E)}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Gate Chair Packet RT-20260614-139. (2026). \textit{Gate Chair review of
+proposal-only MetricLaw\_src GSC} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Refuter Packet RT-20260614-055. (2026). \textit{Resp\_lc finite toy
+metric-response model Refuter stress test} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation
+burden map} [Internal control note].
+
+\end{document}

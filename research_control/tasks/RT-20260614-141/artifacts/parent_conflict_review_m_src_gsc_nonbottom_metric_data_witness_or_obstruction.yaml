@@ -1,0 +1,16 @@
+review_id: "parent_conflict_review_m_src_gsc_nonbottom_metric_data_witness_or_obstruction"
+task_id: "RT-20260614-141"
+status: "no_conflict"
+resolution_rounds: 0
+child_outputs_reviewed:
+  - "research_control/tasks/RT-20260614-141/artifacts/child_phys_math_m_src_gsc_nonbottom_metric_data_witness_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260614-141/artifacts/child_phys_phil_m_src_gsc_nonbottom_metric_data_witness_or_obstruction.yaml"
+consensus_points:
+  - "No non-bottom MetricData(E) candidate is source-defined by the tracked inputs."
+  - "The primary obstruction is OB-GEFF-RESPONSE-TOKEN-MISSING."
+  - "The missing object is a source-internal response rule sufficient for sign/orientation, scale, causal-response, covariance, nondegeneracy, and finite-variation compatibility."
+  - "The result does not construct g_eff and does not reject future source-extension continuation."
+unresolved_conflicts: []
+nonblocking_limitations:
+  - "The packet does not choose the next source-extension or freeze route; that requires a later selector."
+parent_resolution: "Fuse the child outputs into a TeX obstruction artifact with decisive candidate_constructor_result.precise_obstruction status."
