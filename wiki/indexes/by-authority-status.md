@@ -166,6 +166,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260614-132/artifacts/164_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_REFUTER_STRESS.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-131/artifacts/163_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_SMUGGLING_AUDIT.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260614-139/artifacts/170_M_SRC_GSC_METRIC_LAW_GATE_CHAIR_REVIEW.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-138/artifacts/169_M_SRC_GSC_METRIC_LAW_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-137/artifacts/168_M_SRC_GSC_METRIC_LAW_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex`
@@ -602,6 +603,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-GATE-CHAIR-REVIEW` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-gate-chair-review.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-REFUTER-STRESS` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-refuter-stress.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-INTEGRATED-SOURCE-ONLY-ADOPTION-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-integrated-source-only-adoption-theorem-smuggling-audit.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-GATE-CHAIR-REVIEW` `wiki/tex/tex-research-control-m-src-gsc-metric-law-gate-chair-review.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-m-src-gsc-metric-law-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-metric-law-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `wiki/tex/tex-research-control-m-src-gsc-metric-law-source-formalization.md`
