@@ -433,6 +433,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-m-src-gsc-metric-law-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-m-src-gsc-metric-law-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `wiki/tex/tex-research-control-m-src-gsc-metric-law-source-formalization.md`
+- `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-CANDIDATE` `wiki/tex/tex-research-control-m-src-gsc-metric-token-valuation-selector-candidate.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `wiki/tex/tex-research-control-m-src-gsc-minimum-source-only-adoption-theorem-envelope.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `wiki/tex/tex-research-control-m-src-gsc-no-target-import-criterion.md`
 - `WIKI-TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION` `wiki/tex/tex-research-control-m-src-gsc-nonbottom-metric-data-witness-or-obstruction.md`
@@ -710,6 +711,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-138/artifacts/169_M_SRC_GSC_METRIC_LAW_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-137/artifacts/168_M_SRC_GSC_METRIC_LAW_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION` `research_control/tasks/RT-20260614-136/artifacts/167_M_SRC_GSC_METRIC_LAW_SOURCE_FORMALIZATION_OR_OBSTRUCTION.tex`
+- `TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-TOKEN-VALUATION-SELECTOR-CANDIDATE` `research_control/tasks/RT-20260614-154/artifacts/184_M_SRC_GSC_METRIC_TOKEN_VALUATION_SELECTOR_CANDIDATE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-MINIMUM-SOURCE-ONLY-ADOPTION-THEOREM-ENVELOPE` `research_control/tasks/RT-20260614-124/artifacts/156_M_SRC_GSC_MINIMUM_SOURCE_ONLY_ADOPTION_THEOREM_ENVELOPE.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NO-TARGET-IMPORT-CRITERION` `research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex`
 - `TEX-RESEARCH-CONTROL-M-SRC-GSC-NONBOTTOM-METRIC-DATA-WITNESS-OR-OBSTRUCTION` `research_control/tasks/RT-20260614-141/artifacts/172_M_SRC_GSC_NONBOTTOM_METRIC_DATA_WITNESS_OR_OBSTRUCTION.tex`

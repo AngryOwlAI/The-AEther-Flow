@@ -1,0 +1,428 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MsrcGSC}{M_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricLaw}{\mathrm{MetricLaw}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricRespTok}{\mathrm{MetricRespTok}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricTokenVal}{\mathrm{MetricTokenVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\DomMTV}{\mathrm{Dom}_{\mathrm{MTV,src}}^{\mathsf{GSC}}}
+\newcommand{\ValRecord}{\mathrm{ValRecord}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\ClassVal}{\mathrm{ClassifyVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\NoTarget}{\Pi_{\mathrm{no\mbox{-}target}}^{\mathsf{GSC}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{status}{Status}
+
+\title{Proposal-Only Source-Side Metric-Token Valuation Selector Candidate}
+\author{Ontology Formalizer Packet RT-20260614-154}
+\date{2026-06-25}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Ontology Formalizer output for
+\texttt{RT-20260614-154}. It consumes \texttt{handoff-0187}, which selected
+one bounded ontology-law research packet after the current \(\geff\) route
+was locally frozen under current inputs.
+
+The packet defines proposal-only \(\MetricTokenVal\) selector-candidate data
+for the strict \(\Witness(E)\) schema. It does not edit canonical ontology
+TeX, does not adopt \(\MetricTokenVal\), does not adopt a new source
+primitive, does not expand \(\MetricRespTok\), does not construct or adopt
+\(\MetricData(E)\), does not define or construct \(\geff\), does not derive
+matter coupling, does not derive Einstein equations, does not promote
+benchmark status, does not issue benchmark Gate Chair closure, does not claim
+completed derivation, does not claim future source-extension impossibility,
+and does not reject the global theory.
+
+\begin{verbatim}
+result_type: "metric_token_valuation_selector_candidate"
+candidate_object: "MetricTokenVal_src^{GSC}"
+claim_status: "draft/control proposal-only"
+ontology_law_route: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+metric_data_constructed: false
+g_eff_constructed: false
+next_route: "Smuggling Auditor audit"
+\end{verbatim}
+
+\section{Input Boundary}
+
+The admitted source-side background is:
+\begin{itemize}[leftmargin=*]
+  \item scoped source-only \(\MsrcGSC(E)\) from the prior bounded adoption
+  boundary;
+  \item adopted fail-closed \(\MetricLaw\) as source-law interface data;
+  \item adopted fail-closed \(\MetricRespTok\) as response-token
+  source-extension data;
+  \item the strict draft/control witness schema \(\Witness(E)\); and
+  \item the obstruction
+  \(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}MISSING}\).
+\end{itemize}
+
+Current ontology does not derive the source-side metric-token valuation
+selector required to fill \(\Witness(E)\). This is an underdetermination
+statement, not a no-go theorem. Same-milestone source-side continuation
+remains open through proposal-only candidate work. Adoption remains blocked
+until a separate human-gated packet authorizes it.
+
+\section{Selector Domain}
+
+\begin{definition}[Source-side selector domain]
+\(\DomMTV(E)\) is the class of records
+\[
+  X =
+  (E,\MsrcGSC(E),\MetricLaw,\MetricRespTok,\Witness_{\mathrm{req}}(E),
+  \mathcal{T}_{\mathrm{src}},\mathcal{V}_{\mathrm{fin}},\mathcal{B}_{\mathrm{src}})
+\]
+where:
+\begin{enumerate}[leftmargin=*]
+  \item \(E\) is an admitted scoped source package;
+  \item \(\MsrcGSC(E)\) is used only inside its scoped source-only boundary;
+  \item \(\MetricLaw\) and \(\MetricRespTok\) are used only inside their
+  fail-closed adopted boundaries;
+  \item \(\Witness_{\mathrm{req}}(E)\) is the list of required strict-schema
+  fields, not a claim that the witness is inhabited;
+  \item \(\mathcal{T}_{\mathrm{src}}\) contains only source transition tokens,
+  overlap syntax, and source-side covariance obligations;
+  \item \(\mathcal{V}_{\mathrm{fin}}\) contains only admitted finite source
+  variations and repair contexts; and
+  \item \(\mathcal{B}_{\mathrm{src}}\) is bottom or named obstruction
+  discipline.
+\end{enumerate}
+If any component is absent, malformed, or contaminated by forbidden target or
+process authority, the selector returns \(\BottomSrc\) or a named
+\(\mathrm{OB\mbox{-}GEFF}\) branch.
+\end{definition}
+
+\section{Selector Signature and Record}
+
+\begin{definition}[Proposal-only metric-token valuation selector]
+\(\MetricTokenVal\) is a partial source-side selector candidate
+\[
+  \MetricTokenVal:
+  \DomMTV(E)
+  \dashrightarrow
+  \ValRecord(E)
+  \cup
+  \{\BottomSrc\}
+  \cup
+  \mathrm{OB\mbox{-}GEFF\mbox{-}*}.
+\]
+A non-bottom record has the form
+\[
+  \ValRecord(E)
+  =
+  (
+    T_{\Sigma},
+    T_{\Lambda},
+    R_C,
+    K_{\tau},
+    D_N,
+    V_{\mathrm{ML}},
+    B_{\mathrm{src}},
+    \ClassVal,
+    \NoTarget,
+    \mathcal{P}_{\mathrm{ob}}
+  ).
+\]
+Here \(\mathcal{P}_{\mathrm{ob}}\) is the proof-obligation assignment for the
+field record. The selector is proposal-only source-extension data. It is not
+an adopted source law and does not itself populate \(\Witness(E)\).
+\end{definition}
+
+\section{Component Clauses}
+
+\begin{longtable}{p{0.16\linewidth}p{0.30\linewidth}p{0.38\linewidth}}
+\toprule
+Field & Type & Required source-side burden \\
+\midrule
+\(T_{\Sigma}\) &
+orientation or signature token valuation &
+source-side token sufficient to state an orientation, sign, or signature-like
+branch without importing target Lorentzian signature \\
+\(T_{\Lambda}\) &
+scale or normalization token valuation &
+source-side token sufficient to state interval scale, measure, normalization,
+or a source-side scale gauge without target proper time or detector
+calibration \\
+\(R_C\) &
+causal-response relation valuation &
+source relation, preorder, cone analogue, or explicitly weaker relation,
+with no target causal cone imported \\
+\(K_{\tau}\) &
+transition-covariance valuation rule &
+source transition-token covariance rule for the valuation fields on overlaps,
+with inverse and composition obligations only when the source transition
+structure requires them \\
+\(D_N\) &
+nondegeneracy or controlled-degeneracy branch &
+source-side nondegeneracy condition, controlled degeneracy branch, or named
+collapse obstruction \\
+\(V_{\mathrm{ML}}\) &
+finite-variation compatibility branch &
+stability, repair, or fail-closed behavior under admitted finite source
+variations \\
+\(B_{\mathrm{src}}\) &
+bottom or obstruction behavior &
+explicit \(\BottomSrc\) or named \(\mathrm{OB\mbox{-}GEFF}\) branch for every
+malformed, missing, nonunique, target-importing, process-laundered,
+noncovariant, degenerate, or fragile case \\
+\bottomrule
+\end{longtable}
+
+\section{Classification Map}
+
+\begin{definition}[Field classification]
+\(\ClassVal\) assigns each field of \(\ValRecord(E)\) one of five labels:
+\[
+\{\mathrm{derived},\ \mathrm{definitional},\
+\mathrm{conservative\mbox{-}extension},\ \mathrm{new\mbox{-}primitive\mbox{-}request},\
+\mathrm{forbidden\mbox{-}target\mbox{-}import}\}.
+\]
+The labels mean:
+\begin{enumerate}[leftmargin=*]
+  \item \(\mathrm{derived}\): the field is derived from the current adopted
+  source-side inputs without adding a primitive;
+  \item \(\mathrm{definitional}\): the field only unpacks an already admitted
+  source-side record;
+  \item \(\mathrm{conservative\mbox{-}extension}\): the field is proposal-only
+  source-extension data that forgets back to the previous boundary;
+  \item \(\mathrm{new\mbox{-}primitive\mbox{-}request}\): the field would
+  require protected ontology authority before adoption; and
+  \item \(\mathrm{forbidden\mbox{-}target\mbox{-}import}\): the field depends
+  on target metric, target atlas, benchmark, detector, or process authority
+  and is invalid under the current claim boundary.
+\end{enumerate}
+\end{definition}
+
+\section{No-Target-Import Predicate}
+
+\begin{definition}[No-target-import predicate]
+\(\NoTarget(X,F)\) holds for field \(F\) in input record \(X\) only when the
+field is stated and justified without using any of the following as a
+mathematical premise:
+\begin{itemize}[leftmargin=*]
+  \item target topology, target atlas, target transition map, target metric,
+  target Lorentzian signature, target causal cone, proper time, empirical
+  detector semantics, benchmark success, or candidate reconstruction;
+  \item generated wiki or HTML derivatives, registry metadata, validator
+  status, role identity, handoff status, approval status, local cache state,
+  file order, commit status, or repository process state.
+\end{itemize}
+If \(\NoTarget(X,F)\) fails, then
+\[
+  \MetricTokenVal(X)
+  =
+  \mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}TARGET\mbox{-}IMPORT}
+\]
+or a sharper target-import obstruction.
+\end{definition}
+
+\section{Proof Obligations}
+
+\begin{condition}[MTV1: domain inhabitation]
+Every non-bottom call to \(\MetricTokenVal\) must prove
+\(X\in\DomMTV(E)\). Missing or contaminated domain components return
+\(\BottomSrc\) or
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}DOMAIN\mbox{-}FAILURE}\).
+\end{condition}
+
+\begin{condition}[MTV2: field-level classification]
+Every field in \(\ValRecord(E)\) must have a nonempty \(\ClassVal\) label.
+Fields labeled \(\mathrm{new\mbox{-}primitive\mbox{-}request}\) are not
+adopted and cannot produce witness status. Fields labeled
+\(\mathrm{forbidden\mbox{-}target\mbox{-}import}\) invalidate the valuation.
+\end{condition}
+
+\begin{condition}[MTV3: no-target-import field proof]
+\(\NoTarget(X,F)\) must be proved for
+\[
+F\in \{T_{\Sigma},T_{\Lambda},R_C,K_{\tau},D_N,V_{\mathrm{ML}},B_{\mathrm{src}}\}.
+\]
+Process authority is not a substitute for a source-side proof.
+\end{condition}
+
+\begin{condition}[MTV4: transition covariance]
+\(K_{\tau}\) must state how \(T_{\Sigma}\), \(T_{\Lambda}\), \(R_C\),
+\(D_N\), and \(V_{\mathrm{ML}}\) transform under source transition tokens.
+Any dependence on target coordinate transitions returns a covariance
+obstruction.
+\end{condition}
+
+\begin{condition}[MTV5: nondegeneracy or controlled degeneracy]
+\(D_N\) must either prove a source-side nondegeneracy condition or provide a
+controlled-degeneracy branch. Uncontrolled collapse returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}COLLAPSE}\).
+\end{condition}
+
+\begin{condition}[MTV6: finite-variation compatibility]
+\(V_{\mathrm{ML}}\) must prove stability, repair, or fail-closed behavior for
+admitted finite source variations. Tag-only behavior that fails when labels
+are erased returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILE}\).
+\end{condition}
+
+\begin{condition}[MTV7: uniqueness or source gauge]
+If multiple incompatible non-bottom valuation records satisfy MTV1--MTV6, the
+selector must prove uniqueness up to an explicitly source-side gauge. Without
+that proof, the branch returns
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}NONUNIQUE}\).
+\end{condition}
+
+\section{Fail-Closed Branch Catalogue}
+
+\begin{longtable}{p{0.36\linewidth}p{0.54\linewidth}}
+\toprule
+Branch & Trigger \\
+\midrule
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}MISSING}\) &
+One or more required valuation fields is absent from admitted source-side
+inputs. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}DOMAIN\mbox{-}FAILURE}\) &
+The input record does not inhabit \(\DomMTV(E)\). \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}TARGET\mbox{-}IMPORT}\) &
+A field depends on target metric, target atlas, target signature, proper time,
+detector semantics, benchmark behavior, or candidate reconstruction. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}PROCESS\mbox{-}LAUNDERING}\) &
+A field depends on registry, validator, role, handoff, approval, generated
+derivative, local cache, file order, or commit status as mathematical
+evidence. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}NEW\mbox{-}PRIMITIVE\mbox{-}REQUEST}\) &
+The selector can be stated only by requesting a new source-side primitive
+that has not passed a human-gated adoption packet. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}NONUNIQUE}\) &
+Multiple incompatible valuation records survive without source-side uniqueness
+or gauge equivalence. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}COVARIANCE\mbox{-}FAILURE}\) &
+\(K_{\tau}\) does not supply transition-token covariance for the valuation
+record. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}COLLAPSE}\) &
+\(D_N\) fails nondegeneracy and no controlled-degeneracy branch is supplied. \\
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}FINITE\mbox{-}VARIATION\mbox{-}FRAGILE}\) &
+\(V_{\mathrm{ML}}\) fails under admitted finite source variations. \\
+\bottomrule
+\end{longtable}
+
+\section{Propositions}
+
+\begin{proposition}[Selector formalization is not witness construction]
+Defining \(\MetricTokenVal\) as above does not construct \(\MetricData(E)\),
+does not inhabit \(\Witness(E)\), and does not define or construct \(\geff\).
+\end{proposition}
+
+\begin{proof}
+The definition supplies only a partial selector type, a domain, a valuation
+record shape, a classification map, and proof obligations. A non-bottom
+\(\Witness(E)\) additionally requires actual source-side representatives,
+field-level no-target-import proofs, covariance, nondegeneracy,
+finite-variation compatibility, and uniqueness or gauge proof. Those are
+obligations for later audited and stressed packets. Therefore this packet is
+proposal-only selector formalization, not witness construction.
+\end{proof}
+
+\begin{proposition}[Fail-closed target-import discipline]
+If any field of \(\ValRecord(E)\) fails \(\NoTarget\), the output of
+\(\MetricTokenVal\) is a named target-import obstruction, not a valuation
+record.
+\end{proposition}
+
+\begin{proof}
+MTV3 requires \(\NoTarget(X,F)\) for every valuation field. The
+No-target-import predicate explicitly rejects target metric, target atlas,
+target signature, proper time, detector semantics, benchmark behavior,
+candidate reconstruction, and process authority as premises. The branch
+catalogue assigns such failure to
+\(\mathrm{OB\mbox{-}GEFF\mbox{-}TOKEN\mbox{-}VALUATION\mbox{-}TARGET\mbox{-}IMPORT}\)
+or the process-laundering obstruction. Thus contaminated fields fail closed.
+\end{proof}
+
+\begin{proposition}[New primitive requests preserve blocked adoption]
+If \(\ClassVal\) labels a required field as
+\(\mathrm{new\mbox{-}primitive\mbox{-}request}\), the selector may prepare a
+human-gated question but cannot treat that field as adopted source law.
+\end{proposition}
+
+\begin{proof}
+The ontology-law route permits proposal-only candidate-law definition but
+blocks adoption without a separate human-gated packet. Therefore a
+new-primitive request is a routing consequence, not mathematical evidence and
+not adoption.
+\end{proof}
+
+\section{Forbidden Inferences}
+
+This artifact does not authorize any of the following inferences:
+\begin{itemize}[leftmargin=*]
+  \item \(\MetricTokenVal\) is adopted ontology.
+  \item \(\MetricTokenVal\) is derived from the current ontology.
+  \item \(\MetricTokenVal\) inhabits \(\Witness(E)\).
+  \item \(\MetricData(E)\) is constructed or adopted.
+  \item \(\geff\) is defined, constructed, or adopted.
+  \item matter coupling or Einstein equations are derived.
+  \item benchmark promotion or Gate Chair closure is available.
+  \item validator success, registry presence, handoff status, role identity,
+  approval status, generated derivative status, or commit status is physics
+  evidence.
+  \item route-local freeze proves global theory rejection.
+  \item current underdetermination proves future source-extension
+  impossibility.
+\end{itemize}
+
+\section{Distance-to-GR Delta}
+
+The \(\geff\) burden remains \(\mathrm{frozen\ negative}\) for the current
+route. This packet contributes a new proposal-only mathematical payload: the
+typed source-side selector candidate that a later audit and stress sequence
+can inspect. It unlocks only a bounded Smuggling Auditor packet. It does not
+unlock \(\MetricData(E)\) construction, \(\geff\) construction, matter
+coupling, Einstein equations, benchmark promotion, Gate Chair closure, or
+completed derivation.
+
+\section{Next Route}
+
+The logical next step is one bounded `smuggling-auditor@0.2.0` task overlay
+under `ontology-law-research-packet` to audit \(\MetricTokenVal\) for hidden
+target import, process-authority laundering, source-extension classification,
+tag-only behavior, and premature promotion.
+
+\section{References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan for /continue-research, v6} [Internal implementation
+plan].
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+Candidate Constructor Packet RT-20260614-150. (2026). \emph{Strict-schema
+concrete MetricData token valuation attempt or obstruction}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Ontology Formalizer Packet RT-20260614-149. (2026). \emph{Strict
+NonBottomMetricDataWitness schema} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 25). \emph{Post-freeze g_eff
+ontology-law route selector} [Internal research-control artifact].
+
+\end{document}
