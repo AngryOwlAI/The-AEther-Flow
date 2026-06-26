@@ -1,0 +1,252 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricTokenVal}{\mathrm{MetricTokenVal}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Bn}{B_n}
+\newcommand{\Diamond}{D_{\diamond}}
+\newcommand{\BranchDisc}{\mathrm{BranchDisc}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MarkedPkg}{\mathsf{MarkPkg}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BranchSet}{\mathsf{Br}_{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{status}{Status}
+
+\title{Proposal-Only Reconvergent Branch Discriminator Ontology-Law Packet}
+\author{Ontology Formalizer Packet RT-20260614-173}
+\date{2026-06-26}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Ontology Formalizer output for
+\texttt{RT-20260614-173}. It consumes \texttt{handoff-0206}, the
+\texttt{RT-20260614-172} route selector, and the
+\texttt{RT-20260614-171} obstruction
+\[
+\mathrm{OB\mbox{-}GEFF\mbox{-}RECONVERGENT\mbox{-}BRANCH\mbox{-}DISCRIMINATOR\mbox{-}MISSING}.
+\]
+
+The output is a proposal-only source-side law candidate:
+\[
+  \BranchDisc.
+\]
+It is draft/control source-extension data only. It is not adopted ontology, not
+\(\MetricData(E)\) adoption, not an arbitrary finite-source-package theorem,
+not an arbitrary finite-DAG theorem, and not a construction of \(\geff\). It
+does not derive matter coupling, Einstein equations, benchmark promotion,
+benchmark Gate Chair closure, completed derivation, future source-extension
+impossibility, or global theory rejection.
+
+\begin{verbatim}
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "BranchDisc_src^GSC is a source-internal
+      branch-origin marking on marked finite source packages, preserved
+      functorially by admitted source transitions and returning Bottom_src
+      when the marking is absent ambiguous external or not preserved."
+  adoption_status:
+    status_pair: "blocked_adoption_open_continuation"
+\end{verbatim}
+
+\section{Input Boundary}
+
+The admitted source inputs are finite source sites, primitive source response
+tokens, strict source reachability, source relabelings, marked source
+presentations, branch-origin labels, path-history tokens when supplied as
+source data, and fail-closed transition rules.
+
+No target topology, atlas, coordinate transition, metric, Lorentzian signature,
+proper time, detector semantics, benchmark fit, candidate reconstruction,
+registry row, validator result, role name, handoff state, approval state, file
+order, local cache, or commit state is a mathematical premise.
+
+\section{Candidate Law}
+
+\begin{definition}[Marked source package]
+A marked source package is a pair
+\[
+  (E,\beta)
+\]
+where \(E=(S,T,R_C,\mathcal V,B_{\mathrm{src}})\) is a finite source package
+and \(\beta\) is finite source-side branch-origin data. The datum \(\beta\)
+may be represented as a color on primitive outgoing branch tokens, a
+path-history token, or an equivalent source-internal branch-origin record.
+\end{definition}
+
+\begin{definition}[Proposal-only branch discriminator]
+For a marked source package \((E,\beta)\), define
+\[
+  \BranchDisc(E,\beta) : \BranchSet(E,\beta)\longrightarrow
+  \mathrm{Labels}(\beta)
+\]
+to be the branch-origin map induced by the supplied source-side marking
+\(\beta\). The map is defined only when all of the following hold:
+\begin{enumerate}[leftmargin=*]
+  \item \(\beta\) is part of the source presentation of \((E,\beta)\);
+  \item \(\beta\) distinguishes the branch histories whose later
+  reconvergence must be tracked;
+  \item every admitted source transition \(\tau\) carries \(\beta\) to the
+  corresponding marking \(\tau_\ast\beta\); and
+  \item the branch labels are used only up to isomorphism of marked source
+  packages.
+\end{enumerate}
+If any condition fails, \(\BranchDisc(E,\beta)=\BottomSrc\) for this route.
+\end{definition}
+
+\begin{status}[Proposal-only status]
+\(\BranchDisc\) is not derived by the current ontology. It is a candidate
+source-side law for later audit, stress testing, and human-gated adoption
+review. Current adoption is blocked while same-milestone continuation remains
+open:
+\[
+\texttt{blocked\_adoption\_open\_continuation}.
+\]
+\end{status}
+
+\section{Covariance Rule}
+
+\begin{definition}[Marked transition preservation]
+Let \(\tau:(E,\beta)\to(E',\beta')\) be an admitted source transition. The
+transition is branch-discriminator preserving when
+\[
+  \BranchDisc(E',\beta')(\tau(e))=\tau_\ast(\BranchDisc(E,\beta)(e))
+\]
+for every branch-history token \(e\) in the domain where the expression is
+defined. If no such transported marking exists, the transition is not admitted
+for a non-bottom reconvergent witness and the route returns \(\BottomSrc\).
+\end{definition}
+
+\begin{lemma}[Unmarked diamond remains bottom]
+For the unmarked diamond package \(\Diamond\), the proposal-only
+\(\BranchDisc\) construction returns \(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+The \(\Diamond\) package from \texttt{RT-20260614-171} has middle sites that
+are exchanged by a source automorphism and have identical strict
+predecessor/successor profile. Without a source-side marking \(\beta\), the
+domain condition for \(\BranchDisc(\Diamond,\beta)\) is absent. The
+proposal-only rule therefore does not choose one middle branch over the other.
+It returns \(\BottomSrc\).
+\end{proof}
+
+\begin{proposition}[Marked-source covariance obligation]
+If \((E,\beta)\) is a marked package and every admitted transition preserves
+\(\beta\) up to marked source isomorphism, then \(\BranchDisc\) is covariant
+under those admitted marked transitions.
+\end{proposition}
+
+\begin{proof}
+This is an obligation attached to the candidate law, not an adopted theorem.
+Under the stated hypothesis, every branch-history token and its label are
+transported by the same marked transition. Thus branch identity is not selected
+from unmarked symmetry; it is transported as source-side marked data. A later
+Smuggling Auditor must verify that the hypothesis does not conceal forbidden
+imports or process authority.
+\end{proof}
+
+\section{Fail-Closed Cases}
+
+The candidate law returns \(\BottomSrc\), or preserves the named obstruction,
+in each of these cases:
+\begin{itemize}[leftmargin=*]
+  \item the source package is unmarked and source-automorphic branches must be
+  distinguished;
+  \item the branch-origin datum is not source-side package data;
+  \item the branch-origin datum is ambiguous or partial for a required
+  reconvergent history;
+  \item an admitted transition does not preserve the marking functorially;
+  \item a downstream metric, benchmark, detector, or process record is used to
+  choose the branch label; or
+  \item the candidate is read as adopted ontology rather than proposal-only
+  source-extension data.
+\end{itemize}
+
+\section{Proof Obligations}
+
+The proposal-only packet leaves the following obligations for later packets:
+\begin{enumerate}[leftmargin=*]
+  \item A Smuggling Auditor must check that \(\beta\), \(\BranchDisc\), and the
+  marked-transition rule use source-side data only.
+  \item A Refuter must stress collapse, nonuniqueness, inverse defects,
+  cocycle defects, and finite-variation fragility for marked reconvergent
+  packages.
+  \item A Candidate Constructor may use \(\BranchDisc\) only if it has passed
+  audit and stress under its proposal-only status.
+  \item A human Gate Chair decision is required before any canonical ontology
+  edit or source-law adoption.
+  \item A separate construction remains required before any \(\MetricData(E)\)
+  adoption or \(\geff\) construction.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+\(\Witness(\Bn)\) & Rooted tail-branch family remains draft/control evidence only. \\
+reconvergent or diamond-aware \(\Witness(E)\) & Proposal-only
+\(\BranchDisc\) candidate drafted pending audit; unmarked diamond remains
+\(\BottomSrc\). \\
+arbitrary finite source package \(\Witness(E)\) & Not proved. \\
+arbitrary finite DAG witness & Not proved. \\
+\(\MetricData(E)\) & Not adopted; general inhabitation remains unproved. \\
+\(\geff\) & Not constructed and not adopted. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged for marked reconvergent families. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; Smuggling Auditor review
+is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Smuggling Auditor review of the
+proposal-only \(\BranchDisc\) candidate. The audit must test hidden import,
+process-authority laundering, marked-source overread, failure-closed behavior,
+and premature promotion. It must not adopt the law, adopt \(\MetricData(E)\),
+construct \(\geff\), or promote downstream GR claims.
+
+\section*{References}
+
+Candidate Constructor Packet RT-20260614-171. (2026).
+\textit{Reconvergent or diamond-aware broader metric-data witness candidate or
+obstruction} [Research-control TeX artifact]. The AEther-Flow Interpretation
+of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for /continue-research, v8} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 26). \textit{Handoff 0206}
+[Internal research-control handoff].
+
+\end{document}

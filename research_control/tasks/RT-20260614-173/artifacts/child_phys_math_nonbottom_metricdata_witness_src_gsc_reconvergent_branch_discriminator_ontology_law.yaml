@@ -1,0 +1,30 @@
+artifact_id: "child_phys_math_nonbottom_metricdata_witness_src_gsc_reconvergent_branch_discriminator_ontology_law"
+task_id: "RT-20260614-173"
+job_id: "AJ-RT-20260614-173-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+control_status:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  status_label: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+formal_candidate:
+  name: "BranchDisc_src^{GSC}"
+  object_kind: "source-side branch discriminator or branch-origin selector"
+  domain: "marked finite source packages (E, beta) whose primitive branch histories are source-internal data"
+  codomain: "finite branch-origin labels modulo source relabeling of the marked package"
+  transition_rule: "admissible source transitions must preserve beta functorially or fail closed"
+  bottom_cases:
+    - "unmarked source-automorphic diamond package"
+    - "non-source discriminator input"
+    - "ambiguous branch history"
+    - "transition token that does not preserve beta"
+    - "attempted use of process authority as source evidence"
+proof_obligations:
+  - "show source-internal definability for each admitted marked package"
+  - "show source-transition covariance under marked source isomorphisms"
+  - "show unmarked symmetric diamonds return Bottom_src rather than arbitrary branch choice"
+  - "show no MetricData(E) or g_eff construction follows from the proposal alone"
+claim_boundary_preserved: true
+next_role: "smuggling-auditor@0.2.0"
