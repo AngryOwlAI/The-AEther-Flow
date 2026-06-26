@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-BETA-SEPARATED-MARKED-FINITE-GRAPH-FAMILY-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-BETA-SEPARATED-MARKED-FINITE-GRAPH-FAMILY-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW`
+- Source path: `research_control/tasks/RT-20260614-186/artifacts/215_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_BETA_SEPARATED_MARKED_FINITE_GRAPH_FAMILY_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex`
+- Format: `tex`
+- Role: `scientific_gate`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `11067318067fb7f6bd880ffb8c91b7c12b20401607b085bc2fa1416b05b7ab68`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-BETA-SEPARATED-MARKED-FINITE-GRAPH-FAMILY-REFUTER-STRESS-TEST;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-BETA-SEPARATED-MARKED-FINITE-GRAPH-FAMILY-SMUGGLING-AUDIT;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-BETA-SEPARATED-MARKED-FINITE-GRAPH-FAMILY-CANDIDATE-OR-OBSTRUCTION` ``
+- Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-beta-separated-marked-finite-graph-family-source-extension-evidence-gate-chair-review.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-26T09:00:00Z`
