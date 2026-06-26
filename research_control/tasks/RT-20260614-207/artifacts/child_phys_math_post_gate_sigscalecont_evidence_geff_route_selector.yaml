@@ -1,0 +1,47 @@
+artifact_id: "child_phys_math_post_gate_sigscalecont_evidence_geff_route_selector"
+artifact_type: "selector_child_output"
+task_id: "RT-20260614-207"
+job_id: "AJ-RT-20260614-207-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+created_at: "2026-06-27T02:00:00Z"
+status: "completed"
+input_basis:
+  - "handoff-0239"
+  - "RT-20260614-206 Gate Chair artifact"
+  - "accepted scoped MetricData(E) evidence route"
+  - "v9 Phase 9 precondition list"
+mathematical_assessment:
+  accepted_inputs:
+    - "scoped MetricData(E) evidence under declared beta-separated marked finite graph scope"
+    - "scoped SigScaleCont_src^{GSC} selector evidence/precondition"
+  missing_outputs:
+    - "actual source-to-effective-metric construction"
+    - "source-side nondegenerate form or precise obstruction"
+    - "transition-covariant g_eff candidate or exact failure"
+  route_options:
+    candidate_constructor_geff_candidate_or_obstruction:
+      disposition: "selected"
+      reason: "The accepted selector evidence removes the previous SigScaleCont human-gate precondition, so a new construction-or-obstruction attempt is now mathematically available."
+    repair_packet:
+      disposition: "not_selected"
+      reason: "No post-SigScaleCont constructor attempt exists yet to repair."
+    scoped_obstruction:
+      disposition: "not_selected"
+      reason: "A new obstruction would require a constructor or refuter payload, not selector assertion."
+    route_freeze:
+      disposition: "not_selected"
+      reason: "A fresh construction-or-obstruction packet is available and has not yet been attempted."
+    ontology_law_research_packet:
+      disposition: "not_selected_now"
+      reason: "If the next construction fails, the constructor should first name the exact missing primitive or obstruction."
+selected_next_packet_type: "bounded_theoretical_calculation"
+selected_next_role: "candidate-constructor@0.2.0"
+selected_next_objective: "Construct one draft/control g_eff candidate from accepted scoped MetricData(E) evidence and scoped SigScaleCont_src^{GSC} selector evidence/precondition, or return one precise OB-GEFF obstruction."
+claim_blocks_preserved:
+  - "no g_eff definition by selector"
+  - "no g_eff construction by selector"
+  - "no g_eff adoption"
+  - "no source-law adoption"
+  - "no MetricData(E) adoption"
+  - "no downstream GR promotion"
