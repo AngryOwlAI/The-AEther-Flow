@@ -1,0 +1,410 @@
+completion_id: "AJC-AJ-RT-20260614-211-001"
+job_id: "AJ-RT-20260614-211-001"
+task_id: "RT-20260614-211"
+source_role_id: "smuggling-auditor"
+completed_at: "2026-06-27T03:12:00Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260614-211/artifacts/child_phys_math_post_sigscalecont_metricformassign_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260614-211/artifacts/child_phys_phil_post_sigscalecont_metricformassign_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260614-211/artifacts/parent_conflict_review_post_sigscalecont_metricformassign_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260614-211/artifacts/parent_fusion_notes_post_sigscalecont_metricformassign_smuggling_audit.md"
+  - "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260614-211/jobs/completions/AJC-AJ-RT-20260614-211-001.yaml"
+  - "research_control/handoffs/handoff-0244.yaml"
+  - "research_control/handoffs/handoff-0244.md"
+extra_read_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v9.md"
+  - "research_control/handoffs/handoff-0243.yaml"
+  - "research_control/handoffs/handoff-0243.md"
+  - "research_control/tasks/RT-20260614-210/00_TASK.yaml"
+  - "research_control/tasks/RT-20260614-210/DDR-20260614-210.md"
+  - "research_control/tasks/RT-20260614-210/jobs/AJ-RT-20260614-210-001.yaml"
+  - "research_control/tasks/RT-20260614-210/jobs/completions/AJC-AJ-RT-20260614-210-001.yaml"
+  - "research_control/tasks/RT-20260614-210/artifacts/239_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_ONTOLOGY_LAW_PACKET.tex"
+  - "research_control/tasks/RT-20260614-208/artifacts/237_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-202/artifacts/231_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_ONTOLOGY_LAW_PACKET.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass source_object_count=407"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass source_object_count=407"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"MetricFormAssign source metric form assignment smuggling audit\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=director_decision_required"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_local_retrieval_refresh_needed"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass refresh_performed=true source_object_count=408"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass source_object_count=408"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=docs_impact_required_receipt_present"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=director_decision_required latest_handoff=handoff-0244"
+validation_status: "PASS"
+verdict: "metricformassign_candidate_audited_pending_refuter_stress_no_geff"
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_progress_status:
+  status: "candidate_audited_pending_stress"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit proposal-only MetricFormAssign_src^{GSC} before any Refuter stress source-law adoption MetricData(E) adoption SigScaleCont source-law adoption protected gate g_eff construction or downstream GR promotion."
+  explanation: "The packet audits MetricFormAssign_src^{GSC} as source-pure as written. The pass is conditional on the object remaining proposal-only source-extension data with no target geometry target metric target atlas proper-time or detector import benchmark import process authority MetricData(E) adoption SigScaleCont source-law adoption g_eff construction or downstream GR promotion."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_refuter_metricformassign_stress_only"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "SigScaleCont_src^{GSC}_source_law_adoption"
+    - "BranchDisc_src^{GSC}_source_law_adoption"
+    - "checker_proof_authority"
+    - "arbitrary_source_package_witness_theorem"
+    - "arbitrary_finite_DAG_witness_theorem"
+    - "g_eff_construction"
+    - "g_eff_adoption"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The g_eff ledger remains blocked by missing primitive because MetricFormAssign_src^{GSC} is only audited proposal-only data pending Refuter stress. The only unlocked route is bounded Refuter stress."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology TeX edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "prior accepted source-extension context only"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only boundary remains previously accepted"
+  - burden: "BranchDisc_src^{GSC}"
+    status: "proposal-only prior input only; not adopted"
+  - burden: "MetricData(E)"
+    status: "accepted only as scoped source-extension evidence under declared beta-separated marked finite graph scope; no new adoption"
+  - burden: "SigScaleCont_src^{GSC}"
+    status: "accepted only as scoped source-extension selector evidence/precondition; not adopted as source law"
+  - burden: "arbitrary finite source packages"
+    status: "no witness theorem supplied"
+  - burden: "arbitrary finite DAGs"
+    status: "no witness theorem supplied"
+  - burden: "g_eff"
+    status: "blocked by missing source-side MetricFormAssign_src^{GSC}; proposal-only metric-form assignment candidate is audited as source-pure as written pending Refuter stress"
+  - burden: "matter coupling"
+    status: "blocked; no coupling law is derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "not discharged for MetricFormAssign-based routes"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "no Gate Chair verdict is issued by this packet"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; Refuter stress is the next bounded route"
+new_mathematical_payload:
+  - payload_type: "lemma"
+    object_name: "MetricFormAssign_src^{GSC} source-purity audit lemma"
+    source_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    summary: "Shows that the proposal-only metric-form assignment as written does not require target topology target atlas target coordinate transitions target metric Lorentzian metric proper time detector semantics benchmark fit process authority MetricData(E) adoption SigScaleCont source-law adoption or g_eff."
+  - payload_type: "source_extension_classification"
+    object_name: "MetricFormAssign_src^{GSC} post-audit status"
+    source_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    summary: "Classifies MetricFormAssign_src^{GSC} as proposal-only source-extension data with blocked_adoption_open_continuation preserved."
+  - payload_type: "dependency_map_update"
+    object_name: "MetricFormAssign Refuter stress target map"
+    source_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    summary: "Routes the audited metric-form assignment candidate to one bounded Refuter stress packet for form-token nonuniqueness pairing ambiguity nondegeneracy certificate ambiguity transition defects finite-variation fragility bottom completeness and promotion pressure."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "lemma"
+    object_name: "MetricFormAssign_src^{GSC} source-purity audit lemma"
+    claim_status: "proposal-only audit"
+    source_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    burden_effect: "audits"
+    summary: "Audits the metric-form assignment against hidden target import proper-time or detector import benchmark import process authority laundering transition-covariance overread nondegeneracy overread fail-closed behavior g_eff laundering and premature promotion."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "source_extension_classification"
+    object_name: "blocked_adoption_open_continuation post-audit status"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    burden_effect: "preserves_boundary"
+    summary: "Preserves proposal-only source-extension status and blocks source-law adoption MetricData(E) adoption SigScaleCont source-law adoption and g_eff."
+  - payload_id: "PAYLOAD-003"
+    payload_type: "dependency_map_update"
+    object_name: "MetricFormAssign stress proof-obligation map"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    burden_effect: "selects_next"
+    summary: "Routes the proposal-only metric-form assignment candidate to Refuter stress before any adoption or g_eff work."
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit proposal-only MetricFormAssign_src^{GSC} before any Refuter stress source-law adoption MetricData(E) adoption SigScaleCont source-law adoption protected gate g_eff construction or downstream GR promotion."
+  missing_source_law: "MetricFormAssign_src^{GSC} source-side metric-form assignment"
+  underdetermination_statement: "Current ontology does not derive MetricFormAssign_src^{GSC}, the source-side metric-form assignment primitive required to continue the post-SigScaleCont g_eff construction route from accepted scoped MetricData(E) evidence and accepted scoped SigScaleCont selector evidence/precondition."
+  no_go_theorem_status: "not_present; RT-20260614-208 is a current-input scoped obstruction only"
+  packet_payload_mode: "candidate_law_payload"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "MetricFormAssign_src^GSC is a source-internal assignment tuple mapping accepted scoped MetricData(E) evidence accepted scoped SigScaleCont evidence/precondition and source-transition records to a source metric-form record or Bottom_src while returning Bottom_src when any component is absent ambiguous external or not transition-preserved."
+    formal_objects:
+      - "MetricData_src^{GSC-cand}(E;G^beta)"
+      - "SigScaleCont_src^{GSC}"
+      - "source-side transition records"
+      - "source carrier or finite source package scope"
+      - "metric-form token family q_src"
+      - "pairing or interval syntax record Pi_src"
+      - "source transition transport record"
+      - "nondegeneracy or controlled bottom certificate"
+      - "Bottom_src fail-closed value"
+    domains:
+      - "accepted scoped MetricData(E) evidence under the declared beta-separated marked finite graph scope"
+      - "accepted scoped SigScaleCont_src^{GSC} selector evidence/precondition"
+      - "source-side transition data available within the same declared scope"
+      - "explicit source-side metric-form record tokens"
+    maps:
+      - "MetricFormAssign_src^GSC(E;G^beta,T_src(E)): MetricData evidence plus SigScaleCont evidence plus source transitions to source metric-form record"
+      - "tau_* transport of metric-form record slots under admitted source transitions"
+      - "Bottom_src return map for missing ambiguous external or non-preserved metric-form record data"
+    proof_obligations:
+      - "Stress form-token nonuniqueness and algebraic underdetermination."
+      - "Stress pairing syntax ambiguity and interval-token overread."
+      - "Stress degeneracy nondegeneracy-certificate ambiguity inverse defects and determinant laundering pressure."
+      - "Stress transition inverse defects transition-cocycle defects and finite-variation fragility."
+      - "Stress Bottom_src completeness."
+      - "Stress promotion pressure to MetricData(E) SigScaleCont source-law adoption g_eff and downstream GR claims."
+  audit_payload:
+    status_label: "proposal-only source-extension data"
+    audit_verdict: "source_pure_as_written_pending_refuter_stress"
+    proof_obligations:
+      - "Stress form-token nonuniqueness and algebraic underdetermination."
+      - "Stress pairing syntax ambiguity and interval-token overread."
+      - "Stress degeneracy nondegeneracy-certificate ambiguity inverse defects and determinant laundering pressure."
+      - "Stress transition inverse defects transition-cocycle defects and finite-variation fragility."
+      - "Stress Bottom_src completeness."
+      - "Stress promotion pressure to MetricData(E) SigScaleCont source-law adoption g_eff and downstream GR claims."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Recover a lawful source-to-g_eff candidate route only after the metric-form assignment packet survives audit and stress."
+      - "Preserve matter coupling and Einstein-equation derivation as downstream blocked burdens."
+      - "Preserve benchmark promotion as blocked pending later evidence and gate review."
+      - "Require a later human Gate Chair decision before source-law adoption or canonical ontology edit."
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "target_topology"
+      - "proper_time"
+      - "detector_semantics"
+      - "candidate_reconstruction"
+    required_checks:
+      - "Metric-form tokens remain supplied as source-side data."
+      - "Pairing or interval syntax is not supplied by coordinate differentials proper time detector calibration or empirical clocks."
+      - "Transition obligations are not copied from exact-GR atlas or benchmark behavior."
+      - "Nondegeneracy is not copied from target determinant inverse target metric causal cone or benchmark fit."
+      - "Role registry validation handoff state generated derivatives and validator success are process evidence only."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "A future human Gate Chair decision is required before MetricFormAssign_src^GSC can be adopted as canonical ontology source-law authority MetricData(E) basis or g_eff basis."
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  audited_candidate_path: "research_control/tasks/RT-20260614-210/artifacts/239_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_ONTOLOGY_LAW_PACKET.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+  hidden_target_import_detected: false
+  proper_time_or_detector_import_detected: false
+  benchmark_import_detected: false
+  process_authority_laundering_detected: false
+  registry_metadata_authority_laundering_detected: false
+  role_authority_laundering_detected: false
+  validation_authority_laundering_detected: false
+  transition_covariance_overread_detected: false
+  nondegeneracy_overread_detected: false
+  fail_closed_failure_detected: false
+  metricdata_adoption_laundering_detected: false
+  sigscalecont_adoption_laundering_detected: false
+  geff_laundering_detected: false
+  premature_promotion_detected: false
+  next_required_role: "refuter"
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-SMUGGLING-AUDIT-001"
+obstruction_record:
+  present: true
+  obstruction_id: "OB-GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED"
+  scope: "current_ontology_only"
+  failed_object: "draft/control g_eff candidate"
+  exact_failure: "Current ontology does not derive MetricFormAssign_src^{GSC}; this audit shows only that the proposal-only source-extension candidate is source-pure as written pending Refuter stress."
+  minimal_counterexample_path: "research_control/tasks/RT-20260614-208/artifacts/237_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This audit does not prove future source-extension success or failure and does not reject the global theory."
+source_extension_category: "source_extension_candidate_audited_pending_stress"
+source_extension_import_classification: "proposal-only MetricFormAssign source metric-form assignment audit passed as written; not adopted; no MetricData(E); no SigScaleCont adoption; no g_eff"
+route_cycle_control:
+  cycle_family: "effective_metric_g_eff_post_gate_sigscalecont_metricformassign"
+  current_cycle_step: "metricformassign_smuggling_audit"
+  prior_related_tasks:
+    - "RT-20260614-208"
+    - "RT-20260614-209"
+    - "RT-20260614-210"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "This packet adds a source-purity audit result and stress target map instead of repeating the failed g_eff construction or ontology-law drafting step."
+  next_role_consequence: "refuter"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED"
+  candidate_freeze_label: "GEFF-METRICFORMASSIGN-AUDITED-PENDING-STRESS"
+  prior_attempts_considered:
+    - "RT-20260614-208"
+    - "RT-20260614-209"
+    - "RT-20260614-210"
+  freeze_if:
+    - "The same missing metric-form assignment primitive recurs after audit and stress without new mathematical payload."
+    - "Refuter stress detects unavoidable hidden target import under every source-side metric-form assignment variant."
+  do_not_freeze_if:
+    - "A proposal-only candidate law has been audited as source-pure as written and routed to stress."
+    - "A later stress packet returns a concrete repair or precise scoped obstruction."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because this packet supplies the first source-purity audit and explicit Refuter stress map for MetricFormAssign_src^{GSC}."
+  next_allowed_route: "refuter"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Proposal-only source-purity audit packet."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "M_src adoption scope change"
+    - "BranchDisc_src^{GSC} adoption"
+    - "SigScaleCont_src^{GSC} adoption"
+    - "MetricFormAssign_src^{GSC} adoption"
+    - "MetricData(E) adoption"
+    - "checker proof authority"
+    - "arbitrary finite-source-package witness theorem"
+    - "arbitrary finite DAG witness theorem"
+    - "g_eff definition"
+    - "g_eff construction"
+    - "g_eff adoption"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "benchmark Gate Chair closure"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "Validator PASS role authority registry rows generated derivatives handoff state and audit pass are not physics promotion evidence. MetricFormAssign_src^{GSC} remains unadopted and pending Refuter stress."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 407
+    relationship_row_count: 2290
+    semantic_row_count: 407
+    vault_row_count: 407
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"MetricFormAssign source metric form assignment smuggling audit\" --limit 10 --json"
+      query_type: "search"
+      query_text: "MetricFormAssign source metric form assignment smuggling audit"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET"
+  canonical_inspections:
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-210/artifacts/239_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_ONTOLOGY_LAW_PACKET.tex"
+      source_hash: "d2b089cc3926b7d77d16dcd0b0466d4ed6396153093818d92ed47b10b04df37d"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260614-211/artifacts/child_phys_math_post_sigscalecont_metricformassign_smuggling_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260614-211/artifacts/child_phys_phil_post_sigscalecont_metricformassign_smuggling_audit.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260614-211/artifacts/parent_conflict_review_post_sigscalecont_metricformassign_smuggling_audit.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260614-211/artifacts/240_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_SMUGGLING_AUDIT.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260614-211/artifacts/parent_fusion_notes_post_sigscalecont_metricformassign_smuggling_audit.md"
+    summary: "Both child perspectives support a proposal-only MetricFormAssign_src^{GSC} audit pass as source-pure as written with transition covariance and nondegeneracy preserved as stress targets and all downstream GR claim blocks preserved."
+next_recommendation: "Run one bounded Refuter packet to stress the audited proposal-only MetricFormAssign_src^{GSC} candidate for form-token nonuniqueness pairing ambiguity degeneracy inverse defects transition-cocycle defects finite-variation fragility bottom completeness and promotion pressure. Do not adopt the law construct g_eff or promote downstream GR claims."
+documentation_impact_id: "DI-RT-20260614-211-001"
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
