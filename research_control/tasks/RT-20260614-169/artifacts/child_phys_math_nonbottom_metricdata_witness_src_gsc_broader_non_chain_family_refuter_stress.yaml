@@ -1,0 +1,54 @@
+artifact_id: "child_phys_math_nonbottom_metricdata_witness_src_gsc_broader_non_chain_family_refuter_stress"
+task_id: "RT-20260614-169"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_status: "draft/control analysis only"
+object_under_stress: "NonBottomMetricDataWitness_src^{GSC}(B_n)"
+family_scope: "rooted tail-branch finite source family n >= 2"
+stress_result: "witness_family_candidate_survives_refuter_stress_finite_local_only"
+loop_risk_category: "bridge_facing_candidate_path"
+metric_data_adopted: false
+arbitrary_source_package_theorem: false
+arbitrary_finite_dag_theorem: false
+g_eff_constructed: false
+stress_dimensions:
+  collapse:
+    status: "survives_declared_family"
+    reasoning: "Profiles p(r)=(n+1,0), p(x_i)=(n-i,i), and p(y)=(0,1) are pairwise distinct for n >= 2."
+    limitation: "diamond and reconvergent branching profiles can collapse and remain outside the declared family"
+  nonuniqueness:
+    status: "survives_up_to_source_presentation"
+    reasoning: "The valuation record identifies r, y, each x_i, and the compatible primitive source edges up to admitted relabeling."
+    limitation: "broader gauge policies require a separate source-side law"
+  source_transition_covariance:
+    status: "survives_admitted_tokens_only"
+    reasoning: "Admitted tokens preserve root role, isolated branch leaf role, ordered tail roles, primitive edges, and strict reachability."
+    limitation: "broadened transition demands route to bottom rather than target-coordinate covariance"
+  finite_variation_fragility:
+    status: "survives_repair_or_bottom"
+    reasoning: "Tail extension, admissible tail shortening with n' >= 2, and source-isomorphic edits repair to B_n or B_n'; schema-breaking edits bottom out."
+    limitation: "reconvergent repair, deletion of r->y, deletion of r->x_1, or collapse variants do not silently repair"
+  bottom_completeness:
+    status: "survives_declared_branch_table"
+    reasoning: "Known failure cases map to named OB-GEFF branches in the candidate artifact."
+    limitation: "newly authorized source families would require new branch review"
+  finite_family_overread:
+    status: "blocked"
+    reasoning: "The result is quantified only over B_n for n >= 2."
+  non_chain_pressure:
+    status: "survives_declared_non_chain_family_only"
+    reasoning: "Primitive branching without reconvergence is stressed and survives; diamond pressure remains a counterpressure against arbitrary finite-DAG overread."
+  source_extension_inflation:
+    status: "blocked"
+    reasoning: "MetricTokenVal_src^{GSC} remains source-extension law data only."
+  process_relapse:
+    status: "blocked"
+    reasoning: "No validation, registry, role, handoff, approval, file-order, commit, or generated derivative status repairs a mathematical branch."
+  premature_promotion:
+    status: "blocked"
+    reasoning: "No MetricData(E), g_eff, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory verdict follows."
+recommended_parent_result:
+  stress_result: "witness_family_candidate_survives_refuter_stress_finite_local_only"
+  next_route: "theoretical-continuation-selector@0.1.0"
+  notes: "Stress survival is family-scoped and should route to post-stress selector classification."
