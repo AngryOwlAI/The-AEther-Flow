@@ -1,0 +1,25 @@
+artifact_id: "child_phys_math_nonbottom_metricdata_witness_src_gsc_reconvergent_family_constructor"
+task_id: "RT-20260614-171"
+job_id: "AJ-RT-20260614-171-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-06-26T03:20:00Z"
+question: "Can the current source data construct a reconvergent or diamond-aware NonBottomMetricDataWitness_src^{GSC}(E) route without importing target structure or adding a new source primitive?"
+analysis:
+  - "The rooted tail-branch family B_n succeeds because the strict reachability profile is injective on its declared sites."
+  - "The diamond source package D_diamond has middle sites b and c with identical strict predecessor/successor profile (1,1)."
+  - "The source package has an automorphism that fixes the root and terminal site while swapping b and c."
+  - "A source-transition-covariant valuation using only the current fields cannot distinguish b from c without breaking that automorphism or adding extra source-side data."
+  - "A reconvergent branch y -> x_j in the rooted tail-branch family creates the same branch-origin pressure: the current profile and repair-or-bottom rule identify a schema break but do not supply a canonical branch-origin selector."
+result:
+  result_type: "precise_obstruction"
+  obstruction_id: "OB-GEFF-RECONVERGENT-BRANCH-DISCRIMINATOR-MISSING"
+  failed_components:
+    - "D_N diamond middle-site discriminator"
+    - "K_tau covariance under middle-site swap"
+    - "V_ML reconvergent branch repair rule"
+    - "source-side branch-origin selector"
+  no_target_import_detected_in_obstruction: true
+  conclusion: "The current source inputs precisely obstruct this reconvergent or diamond-aware construction route. A successful route would require a source-side discriminator, branch color, path-history primitive, or equivalent source law not present in the current input boundary."
+forbidden_overread: "This is not a global no-go theorem for all future source extensions and not a rejection of the rooted tail-branch family B_n."
