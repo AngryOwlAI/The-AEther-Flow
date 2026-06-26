@@ -1,0 +1,281 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricDataCand}{\mathrm{MetricData}_{\mathrm{src}}^{\mathsf{GSC\mbox{-}cand}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SigTok}{\sigma_{\mathrm{src}}}
+\newcommand{\ScaleTok}{\lambda_{\mathrm{src}}}
+\newcommand{\ContTok}{\kappa_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\ObGeff}{\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}SCALE\mbox{-}CONTINUUM\mbox{-}UNDERDETERMINED}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{status}{Status}
+
+\title{Proposal-Only Signature-Scale-Continuum Selector Ontology-Law Packet}
+\author{Ontology Formalizer Packet RT-20260614-202}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Ontology Formalizer output for
+\texttt{RT-20260614-202}. It consumes \texttt{handoff-0234}, the
+\texttt{RT-20260614-201} obstruction-route selector, and the
+\texttt{RT-20260614-200} obstruction
+\[
+  \ObGeff .
+\]
+
+The output is a proposal-only source-side law candidate:
+\[
+  \SigScaleCont .
+\]
+It is draft/control source-extension data only. It is not adopted ontology, not
+a source-law adoption, not \(\MetricData(E)\) adoption, not a construction or
+adoption of \(\geff\), and not a derivation of matter coupling or Einstein
+equations. It does not promote benchmark status, claim completed derivation,
+claim future source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+  adoption_status:
+    status_pair: "blocked_adoption_open_continuation"
+g_eff_constructed: false
+g_eff_adopted: false
+\end{verbatim}
+
+\section{Input Boundary}
+
+The admitted source inputs are the accepted scoped source-extension
+\(\MetricData(E)\) evidence \(\MetricDataCand(E;\Gbeta)\), source-side finite
+package records, source-side transition records, bottom markers, and explicit
+selector tokens supplied as source data.
+
+No target topology, target smooth atlas, coordinate transition, target metric,
+Lorentzian signature, proper-time scale, detector semantics, empirical
+calibration, benchmark fit, candidate reconstruction, registry row, validator
+result, role name, handoff state, approval state, generated derivative, file
+order, local cache, or commit state is a mathematical premise.
+
+\section{Candidate Law}
+
+\begin{definition}[Signature-scale-continuum selector datum]
+A \(\SigScaleCont\) datum for the declared scoped source setting is a tuple
+\[
+  \Xi_{\mathrm{SSC}}(E)=(\SigTok(E),\ScaleTok(E),\ContTok(E),B_{\mathrm{SSC}}(E)).
+\]
+Here \(\SigTok(E)\) is a source-side signature-label token,
+\(\ScaleTok(E)\) is a source-side scale-normalization token, \(\ContTok(E)\)
+is a source-side transition-continuum obligation record, and
+\(B_{\mathrm{SSC}}(E)\) is a fail-closed bottom condition.
+\end{definition}
+
+\begin{definition}[Proposal-only selector law]
+For accepted scoped \(\MetricDataCand(E;\Gbeta)\) and source-side transition
+data \(\mathcal T_{\mathrm{src}}(E)\), define
+\[
+  \SigScaleCont(E;\Gbeta,\mathcal T_{\mathrm{src}}(E))
+  =
+  \begin{cases}
+    (\SigTok,\ScaleTok,\ContTok,B_{\mathrm{SSC}}), & \text{if source-side
+    selector tokens are supplied and transition-preserved},\\
+    \BottomSrc, & \text{otherwise.}
+  \end{cases}
+\]
+The first branch is available only when all tokens are source-side data,
+independent of target geometry, detector semantics, benchmark behavior, and
+process authority.
+\end{definition}
+
+\begin{status}[Proposal-only status]
+The current ontology does not derive \(\SigScaleCont\). This packet proposes
+\(\SigScaleCont\) only as source-extension data for later audit, stress
+testing, and human-gated adoption review. Current adoption is blocked while
+same-milestone continuation remains open:
+\[
+\texttt{blocked\_adoption\_open\_continuation}.
+\]
+\end{status}
+
+\section{Selector Components}
+
+\begin{longtable}{p{0.24\linewidth}p{0.32\linewidth}p{0.30\linewidth}}
+\toprule
+Component & Source-side role & Forbidden source of content \\
+\midrule
+\(\SigTok\) & A discrete or structured source label recording the signature
+class required by a later candidate construction attempt. & Lorentzian
+signature imported from a target metric or benchmark solution. \\
+\(\ScaleTok\) & A source-normalization token recording how comparable
+source-side metric-data weights would be normalized in a later attempt. &
+Proper time, detector calibration, empirical clock behavior, or benchmark
+fit. \\
+\(\ContTok\) & A source-side record of transition or continuum obligations
+that a later candidate must satisfy. & Target smooth atlas, coordinate
+transition maps, or continuum structure imported from exact GR. \\
+\(B_{\mathrm{SSC}}\) & Fail-closed bottom behavior for absent, ambiguous, or
+non-preserved selector data. & Process success, validator success, role
+authority, registry metadata, or generated derivative existence. \\
+\bottomrule
+\end{longtable}
+
+\section{Transition Preservation}
+
+\begin{definition}[SSC-preserving source transition]
+An admitted source transition
+\[
+  \tau:E\to E'
+\]
+is \(\SigScaleCont\)-preserving when the transported selector tuple satisfies
+\[
+  \tau_{\ast}\Xi_{\mathrm{SSC}}(E)=\Xi_{\mathrm{SSC}}(E')
+\]
+up to the declared equivalence of source selector tokens. If any component is
+not transported as source-side data, the transition is not admitted for a
+non-bottom \(\SigScaleCont\)-based effective-metric attempt and the route
+returns \(\BottomSrc\).
+\end{definition}
+
+\begin{lemma}[Absent selector data remains bottom]
+If \(\SigTok\), \(\ScaleTok\), or \(\ContTok\) is absent, ambiguous, externally
+chosen, or not preserved by admitted source transitions, then
+\[
+  \SigScaleCont(E;\Gbeta,\mathcal T_{\mathrm{src}}(E))=\BottomSrc .
+\]
+\end{lemma}
+
+\begin{proof}
+The candidate law is explicitly partial and fail-closed. Each component is a
+required source-side datum for the selector tuple. If a component is absent,
+ambiguous, external, or not transition-preserved, then the domain condition
+for the non-bottom branch fails. The rule therefore returns \(\BottomSrc\)
+instead of importing a target signature, target scale, target atlas, detector
+semantics, benchmark behavior, or process authority.
+\end{proof}
+
+\begin{proposition}[Source-transition covariance obligation]
+Suppose \(\Xi_{\mathrm{SSC}}(E)\) is source-side data and every admitted source
+transition \(\tau:E\to E'\) is \(\SigScaleCont\)-preserving. Then the
+proposal-only selector tuple is covariant under those admitted transitions.
+\end{proposition}
+
+\begin{proof}
+Under the stated hypothesis, each component of
+\(\Xi_{\mathrm{SSC}}(E)\) is transported by \(\tau_{\ast}\) to the corresponding
+component of \(\Xi_{\mathrm{SSC}}(E')\). Therefore the selector record is not
+chosen from target geometry or process evidence; it is carried as source-side
+data. This is an obligation attached to the candidate law, not an adopted
+theorem about \(\geff\). A later Smuggling Auditor must test whether the
+hypothesis hides forbidden import.
+\end{proof}
+
+\section{Fail-Closed Cases}
+
+The candidate law returns \(\BottomSrc\), or preserves the named obstruction,
+in each of these cases:
+\begin{itemize}[leftmargin=*]
+  \item signature class is copied from a target Lorentzian metric;
+  \item scale normalization is copied from proper time, detector semantics, or
+  empirical calibration;
+  \item continuum or transition structure is copied from a target atlas or GR
+  benchmark solution;
+  \item selector data exist only because a role, validator, registry row,
+  handoff, generated derivative, file order, local cache, or commit exists;
+  \item selector data are ambiguous or not preserved under admitted source
+  transitions;
+  \item the candidate is read as source-law adoption rather than proposal-only
+  source-extension data; or
+  \item the candidate is read as \(\geff\) construction or adoption.
+\end{itemize}
+
+\section{Proof Obligations}
+
+The proposal-only packet leaves the following obligations for later packets:
+\begin{enumerate}[leftmargin=*]
+  \item A Smuggling Auditor must check that \(\SigTok\), \(\ScaleTok\),
+  \(\ContTok\), and \(B_{\mathrm{SSC}}\) use source-side data only.
+  \item A Refuter must stress collapse, nonuniqueness, inverse defects,
+  transition-cocycle defects, finite-variation fragility, and bottom behavior.
+  \item A Candidate Constructor may use \(\SigScaleCont\) only if it has
+  passed audit and stress under proposal-only status.
+  \item A human Gate Chair decision is required before any canonical ontology
+  edit or source-law adoption.
+  \item A separate construction remains required before any \(\geff\)
+  candidate, matter coupling, Einstein-equation, or benchmark-promotion claim.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Scoped source-only M\_src boundary remains unchanged. \\
+BranchDisc\_src\textasciicircum GSC & Proposal-only prior input only; not adopted. \\
+\(\MetricData(E)\) & Accepted only as scoped source-extension evidence under
+declared beta-separated marked finite graph scope. \\
+arbitrary finite source package evidence & Not proved. \\
+arbitrary finite DAG evidence & Not proved. \\
+\(\geff\) & Not constructed and not adopted; proposal-only
+\(\SigScaleCont\) candidate is pending audit. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged for \(\SigScaleCont\)-based routes. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; Smuggling Auditor review
+is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Smuggling Auditor review of the
+proposal-only \(\SigScaleCont\) candidate. The audit must test hidden target
+import, proper-time or detector-scale import, benchmark import, process
+authority laundering, transition-covariance overread, fail-closed behavior,
+and premature \(\geff\) promotion. It must not adopt the law, construct
+\(\geff\), or promote downstream GR claims.
+
+\section*{References}
+
+Candidate Constructor Packet RT-20260614-200. (2026).
+\textit{Phase 9 g\_eff candidate attempt or obstruction}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Theoretical Continuation Selector Packet RT-20260614-201. (2026).
+\textit{Phase 9 g\_eff obstruction route selector}
+[Research-control YAML artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+\end{document}
