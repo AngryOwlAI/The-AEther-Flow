@@ -1,0 +1,250 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\PreMetricData}{\mathrm{PreMetricData}_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\BranchDisc}{\mathrm{BranchDisc}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BetaGraph}{\mathsf{BetaSepDAG}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\OBGEFF}{\mathrm{OB\mbox{-}GEFF}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{status}{Status}
+
+\title{Post-Gate MetricData Prerequisite Precursor Smuggling Audit}
+\author{Smuggling Auditor Packet RT-20260614-189}
+\date{2026-06-26}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Smuggling Auditor output for
+\texttt{RT-20260614-189}. It consumes \texttt{handoff-0221} and audits the
+source-only draft/control prerequisite-data precursor
+\[
+  \PreMetricData(\Gbeta)
+\]
+constructed in \texttt{RT-20260614-188}.
+
+The audit result is:
+\begin{verbatim}
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audited_candidate_path: "research_control/tasks/RT-20260614-188/artifacts/217_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICDATA_PREREQUISITE_PRECURSOR_OR_OBSTRUCTION.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260614-189/artifacts/218_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICDATA_PREREQUISITE_PRECURSOR_SMUGGLING_AUDIT.tex"
+  hidden_target_import_detected: false
+  metricdata_laundering_detected: false
+  beta_source_law_laundering_detected: false
+  transition_covariance_overread_detected: false
+  nondegeneracy_smuggling_detected: false
+  checker_proof_authority_laundering_detected: false
+  process_authority_laundering_detected: false
+  g_eff_laundering_detected: false
+  premature_promotion_detected: false
+  next_required_role: "refuter"
+  claim_boundary_preserved: true
+\end{verbatim}
+
+This audit pass is local source-purity only. It is not
+\(\BranchDisc\) source-law adoption, not \(\MetricData(E)\) construction or
+adoption, not checker proof authority, not an arbitrary finite-DAG theorem,
+not \(\geff\) construction, and not downstream GR promotion.
+
+\section{Audited Object}
+
+The audited object is the tuple
+\[
+  \PreMetricData(\Gbeta)=(S_0,S_1,S_2,S_3,S_4,S_5,S_6,S_7,S_8),
+\]
+where \(\Gbeta=(V,A,R_C,\beta,K_\tau)\in\BetaGraph\) is a declared
+beta-separated marked finite acyclic source graph. The slots record accepted
+family evidence scope, source-site carrier data, source reachability and
+branch profiles, marked source transition tokens, source-transition covariance,
+source-only non-bottom status, finite-variation preserve/source-repair/bottom
+behavior, a no-target-import certificate, and an obstruction table.
+
+\section{Audit Method}
+
+The audit asks whether any slot or proof obligation requires a forbidden
+premise. A pass means that the object is source-pure as written and may be
+stressed. A pass does not mean the object is adopted, empirically confirmed, or
+promoted.
+
+\section{Audit Dimension Table}
+
+\begin{longtable}{p{0.20\linewidth}p{0.34\linewidth}p{0.31\linewidth}p{0.08\linewidth}}
+\toprule
+Dimension & Audit question & Finding & Status \\
+\midrule
+Target topology & Does the precursor require a target topological space? &
+The carrier is the finite source tuple \((V,A,R_C,\beta,K_\tau)\) only. &
+pass \\
+Target atlas & Does covariance require coordinate charts? &
+Transitions are admitted source graph isomorphisms with coherent beta
+transport only. &
+pass \\
+Target metric & Does any slot require distances, intervals, bilinear forms,
+determinants, inverse metrics, or metric fields? &
+No metric object appears in any positive slot. Metric language is restricted
+to forbidden-overread statements. &
+pass \\
+Lorentzian signature & Is signature smuggled into non-bottom status? &
+Non-bottom status is finite source-domain population plus explicit injective
+marking. No signature or cone structure appears. &
+pass \\
+Proper time & Are clocks or time normalization imported? &
+No proper-time premise fills or constrains a slot. &
+pass \\
+Detector semantics & Are empirical readouts used as source data? &
+No detector, measurement, or calibration semantics fills a slot. &
+pass \\
+Benchmark fit & Is exact GR used to select the precursor? &
+Exact-GR recovery is listed as blocked and not used as a premise. &
+pass \\
+Process authority & Are validators, registries, roles, handoffs, approvals,
+or commits used as mathematical evidence? &
+They are process receipts only and are explicitly excluded from repair or
+proof authority. &
+pass \\
+Checker authority & Is checker output treated as proof? &
+Checker support remains support-only and cannot repair malformed packages. &
+pass \\
+\(\BranchDisc\) laundering & Do beta marks become adopted source law? &
+Beta marks are declared bounded source-extension evidence under scope only;
+future source-law status remains open. &
+pass \\
+\(\MetricData(E)\) laundering & Is the precursor actually \(\MetricData(E)\)
+under another name? &
+The object has only prerequisite slots and lacks adoption status, metric-data
+law, source-to-metric map, metric-like form, scale, target atlas, and
+downstream interpretation. &
+pass \\
+\(\geff\) laundering & Is an effective metric defined or constructed? &
+No line element, interval, scale, signature, metric tensor, or effective metric
+object is supplied. &
+pass \\
+Arbitrary family overread & Does the scope inflate to arbitrary finite DAGs? &
+The scope remains declared beta-separated marked finite acyclic source graphs
+only. &
+pass \\
+Nondegeneracy smuggling & Is metric nondegeneracy imported? &
+Non-bottom means source-slot population or fail-closed bottom only. &
+pass \\
+Premature promotion & Are matter coupling, Einstein equations, benchmark
+status, or completed derivation implied? &
+All downstream GR claims remain blocked. &
+pass \\
+\bottomrule
+\end{longtable}
+
+\section{Audit Lemma}
+
+\begin{lemma}[Source-purity of the post-Gate precursor as written]
+Under the declared beta-separated marked finite graph scope, the
+\(\PreMetricData(\Gbeta)\) precursor as written in \texttt{RT-20260614-188}
+does not import target topology, target atlas, target metric, Lorentzian
+signature, proper time, detector semantics, benchmark fit, process authority,
+or checker proof authority as a mathematical premise.
+\end{lemma}
+
+\begin{proof}
+The carrier slot is finite source graph data with strict source reachability.
+The marking slot is explicit source-side beta data under the accepted bounded
+source-extension evidence scope. Transition behavior is defined only for
+admitted source graph isomorphisms with coherent beta transport. Non-bottom
+status is a source-domain status and malformed packages fail closed to
+\(\BottomSrc\) or preserve a prior obstruction. The no-target-import
+certificate and obstruction table explicitly reject target topology, target
+atlas, target metric, Lorentzian signature, proper time, detector semantics,
+benchmark success, checker repair, registry repair, validator repair, role
+authority, handoff authority, approval authority, local cache authority, file
+order, and commit status. Therefore the precursor is source-pure as written.
+\end{proof}
+
+\section{Residual Stress Targets}
+
+The audit pass leaves real burdens for the Refuter:
+\begin{itemize}[leftmargin=*]
+  \item beta source-law pressure: whether the precursor collapses if beta
+  cannot later be derived as a source-side law;
+  \item beta nonuniqueness: whether incompatible beta markings produce
+  incompatible precursor data that breaks the intended route;
+  \item transition inverse and cocycle behavior for admitted source
+  transitions;
+  \item relabeling and automorphism pressure;
+  \item finite-variation preserve, source-repair, or bottom behavior;
+  \item nondegeneracy pressure without target metric import;
+  \item checker proof-authority and process-authority overread;
+  \item arbitrary finite-DAG overread;
+  \item \(\MetricData(E)\) and \(\geff\) laundering pressure;
+  \item downstream promotion pressure.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only \(M_{\mathrm{src}}^{\mathsf{GSC}}(E)\) boundary remains previously accepted. \\
+\(\BranchDisc\) & Proposal-only marked-source input; not adopted as source law. \\
+Beta-separated marked finite graph family & Accepted only as source-extension metric-data-family evidence under declared scope. \\
+\(\PreMetricData(\Gbeta)\) & Audited as source-pure as written pending Refuter stress. \\
+Unmarked finite graph packages & Bottom or prior missing-discriminator obstruction. \\
+Arbitrary finite source packages & No witness theorem supplied. \\
+Arbitrary finite DAGs & No witness theorem supplied. \\
+\(\MetricData(E)\) & Not constructed and not adopted. \\
+\(\geff\) & Not defined, not constructed, and not adopted. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged; Refuter stress is required. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; protected review remains deferred. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Refuter stress of
+\(\PreMetricData(\Gbeta)\). Stress survival would not itself adopt
+\(\MetricData(E)\) or \(\geff\); it would route to a later selector under the
+v9 plan.
+
+\section{References}
+
+Candidate Constructor Packet RT-20260614-188. (2026). \textit{Post-Gate
+MetricData prerequisite precursor or obstruction} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-186. (2026). \textit{Gate Chair review of
+beta-separated marked finite graph metric-data-family evidence}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation
+plan].
+
+The AEther-Flow Research Project. (2026, June 26). \textit{Handoff 0221}
+[Internal research-control handoff].
+
+\end{document}
