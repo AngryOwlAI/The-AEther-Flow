@@ -1,0 +1,25 @@
+artifact_id: "parent_conflict_review_nonbottom_metricdata_witness_src_gsc_marked_reconvergent_family_constructor"
+artifact_type: "parent_child_synthesis_conflict_review"
+task_id: "RT-20260614-177"
+job_id: "AJ-RT-20260614-177-001"
+created_at: "2026-06-26T05:35:00Z"
+child_outputs:
+  - "research_control/tasks/RT-20260614-177/artifacts/child_phys_math_nonbottom_metricdata_witness_src_gsc_marked_reconvergent_family_constructor.yaml"
+  - "research_control/tasks/RT-20260614-177/artifacts/child_phys_phil_nonbottom_metricdata_witness_src_gsc_marked_reconvergent_family_constructor.yaml"
+conflicts:
+  - conflict_id: "C-001"
+    conflict_type: "claim_boundary"
+    severity: "nonblocking"
+    summary: "The mathematical child treats explicit beta marking as sufficient for a bounded construction while the philosophical child warns against adoption overread."
+    resolution: "The fused artifact constructs only a proposal-only draft/control marked family candidate and states that BranchDisc_src^{GSC} remains unadopted source-extension data."
+  - conflict_id: "C-002"
+    conflict_type: "mathematical"
+    severity: "nonblocking"
+    summary: "The construction repairs only the marked reconvergent diamond family and does not address arbitrary finite DAGs."
+    resolution: "The fused artifact scopes the theorem to D_m^beta for m >= 2 and records arbitrary finite-DAG inhabitation as still unproved."
+unresolved_conflicts: []
+fusion_decision: "construct_bounded_marked_candidate_pending_audit"
+validation_notes:
+  - "No authority expansion is required."
+  - "No human gate is consumed."
+  - "No source-law adoption or g_eff construction is recorded."
