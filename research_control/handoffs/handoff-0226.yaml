@@ -1,0 +1,109 @@
+handoff_id: "handoff-0226"
+created_at: "2026-06-26T21:04:00Z"
+task_id: "RT-20260614-193"
+decision_id: "DDR-20260614-193"
+job_id: "AJ-RT-20260614-193-001"
+completion_path: "research_control/tasks/RT-20260614-193/jobs/completions/AJC-AJ-RT-20260614-193-001.yaml"
+source_task_id: "RT-20260614-193"
+source_job_id: "AJ-RT-20260614-193-001"
+source_completion_id: "AJC-AJ-RT-20260614-193-001"
+status: "completed"
+summary: "Theoretical Continuation Selector classified the post-prerequisite-evidence route and selected one bounded Candidate Constructor packet for draft/control MetricData(E) construction or one precise OB-GEFF obstruction. This route may construct a draft/control MetricData(E) candidate but may not adopt MetricData(E) and may not define or construct g_eff."
+next_action: "Run one bounded Candidate Constructor packet for v9 Phase 7 to attempt draft/control MetricData(E) construction from accepted prerequisite evidence or return one precise OB-GEFF obstruction. Do not adopt MetricData(E), define or construct g_eff, or promote downstream GR claims."
+loop_risk_route: "effective_metric_g_eff_post_gate_metricdata_phase6_selector_selected_candidate_constructor_no_metricdata_adoption_no_geff"
+decision:
+  selected_role_for_next_packet: "candidate-constructor"
+  selected_role_version: "0.2.0"
+  next_task_type: "post_gate_metricdata_draft_control_construction_or_precise_ob_geff_obstruction"
+  next_recommended_action: "Execute one bounded Phase 7 Candidate Constructor packet."
+  reason: "Accepted prerequisite evidence creates a lawful constructive-or-obstruction route. v9 Phase 6 prefers Candidate Constructor when such a packet remains available."
+claim_boundary:
+  allowed_next_scope: "Candidate Constructor draft/control MetricData(E) construction or precise OB-GEFF obstruction only"
+  source_extension_metric_data_family_evidence_accepted: true
+  precursor_constructed: true
+  precursor_audited_source_pure: true
+  precursor_stress_survived: true
+  precursor_prerequisite_evidence_accepted: true
+  phase6_selector_completed: true
+  branchdisc_source_law_adopted: false
+  metric_data_constructed_by_selector: false
+  metric_data_adopted: false
+  arbitrary_source_package_theorem: false
+  arbitrary_finite_dag_theorem: false
+  checker_proof_authority: false
+  g_eff_defined: false
+  g_eff_constructed: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "BranchDisc_src^{GSC} adoption"
+  - "MetricData(E) adoption"
+  - "general MetricData(E) inhabitation theorem"
+  - "arbitrary finite-source-package witness theorem"
+  - "arbitrary finite-DAG witness theorem"
+  - "checker proof authority"
+  - "g_eff definition"
+  - "g_eff construction"
+  - "g_eff adoption"
+  - "matter coupling"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+phase6_selector_result:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  next_role: "candidate-constructor@0.2.0"
+  required_route_sentence: "This route may construct a draft/control MetricData(E) candidate but may not adopt MetricData(E) and may not define or construct g_eff."
+  artifact_path: "research_control/tasks/RT-20260614-193/artifacts/222_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICDATA_PHASE6_ROUTE_SELECTOR.yaml"
+distance_to_gr:
+  milestone: "effective_metric_g_eff"
+  burden_id: "g_eff"
+  status: "Phase 6 selector selected Candidate Constructor for draft/control MetricData(E) construction or precise OB-GEFF obstruction; no MetricData(E) adoption and no g_eff construction"
+required_next_packet:
+  role_id: "candidate-constructor"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "post_gate_metricdata_draft_control_construction_or_precise_ob_geff_obstruction"
+  must_attempt:
+    - "source domain declaration"
+    - "source-only data fields"
+    - "transition covariance under source-side transitions"
+    - "non-bottom criterion"
+    - "bottom/obstruction table"
+    - "finite-variation preserve/source-repair/bottom rule"
+    - "no-target-import certificate"
+    - "explicit dependency on accepted prerequisite evidence"
+    - "statement that no g_eff is defined or constructed"
+  must_preserve:
+    - "no BranchDisc_src^{GSC} adoption"
+    - "no MetricData(E) adoption"
+    - "no checker proof authority"
+    - "no arbitrary finite-DAG theorem"
+    - "no g_eff definition or construction"
+    - "no downstream GR promotion"
+validation:
+  bootstrap_memory_system: "PASS"
+  classify_project_changes: "PASS"
+  collect_project_improvement_signals: "PASS"
+  validate_documentation_impact: "PASS"
+  validate_research_control: "PASS"
+  validate_research_control_check_diff: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  report_physics_progress_metrics: "PASS"
+  git_diff_check: "PASS"
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
