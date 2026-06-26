@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-DRAFT-CONTROL-METRICDATA-CANDIDATE-OR-OBSTRUCTION
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-DRAFT-CONTROL-METRICDATA-CANDIDATE-OR-OBSTRUCTION`
+- Source path: `research_control/tasks/RT-20260614-194/artifacts/223_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_DRAFT_CONTROL_METRICDATA_CANDIDATE_OR_OBSTRUCTION.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `b96bb8141314de7b9a9cfca9c80fc21f712de795931192e5f073c50c337d0719`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICDATA-PREREQUISITE-PRECURSOR-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICDATA-PREREQUISITE-PRECURSOR-OR-OBSTRUCTION` ``
+- Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-post-gate-draft-control-metricdata-candidate-or-obstruction.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-26T21:38:00Z`
