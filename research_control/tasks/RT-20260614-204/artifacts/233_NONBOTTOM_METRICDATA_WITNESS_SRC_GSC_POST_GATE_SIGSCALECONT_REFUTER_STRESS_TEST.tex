@@ -1,0 +1,223 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SigTok}{\sigma_{\mathrm{src}}}
+\newcommand{\ScaleTok}{\lambda_{\mathrm{src}}}
+\newcommand{\ContTok}{\kappa_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\StressPass}{\mathrm{STRESS\mbox{-}PASS}}
+\newcommand{\ObGeff}{\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}SCALE\mbox{-}CONTINUUM\mbox{-}UNDERDETERMINED}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{status}{Status}
+
+\title{Refuter Stress Test of the Proposal-Only Signature-Scale-Continuum Selector}
+\author{Refuter Packet RT-20260614-204}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260614-204}. It
+stress-tests the audited proposal-only selector candidate
+\[
+  \SigScaleCont
+\]
+from \texttt{RT-20260614-203}. The stress result is local and conditional:
+\[
+  \texttt{sigscalecont\_stress\_survived\_proposal\_only\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "sigscalecont_stress_survived_proposal_only_pending_selector"
+stressed_object: "SigScaleCont_src^{GSC}"
+claim_status: "proposal-only source-extension data"
+source_law_adopted: false
+metric_data_adopted: false
+g_eff_constructed: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\) adoption,
+\(\geff\) construction or adoption, matter coupling, Einstein equations,
+benchmark promotion, completed derivation, future source-extension
+impossibility, or global theory rejection is authorized.
+
+\section{Stress Domain}
+
+The stressed candidate is the tuple
+\[
+  \Xi_{\mathrm{SSC}}(E)
+  =
+  (\SigTok(E),\ScaleTok(E),\ContTok(E),B_{\mathrm{SSC}}(E)).
+\]
+The non-bottom branch is admitted only when all selector components are
+explicit source-side data and are preserved by admitted source transitions.
+Otherwise the route returns \(\BottomSrc\). This stress test treats
+\(\SigScaleCont\) as proposal-only source-extension data, not as adopted
+ontology.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.25\linewidth}p{0.43\linewidth}p{0.18\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Signature-label nonuniqueness & Incompatible \(\SigTok\) values are distinct
+marked source presentations. If a unique unmarked signature is demanded, the
+candidate returns \(\BottomSrc\). & \(\StressPass\) \\
+Relabeling ambiguity & Coherent source relabeling transports selector tokens;
+forgetting, externalizing, or target-choosing labels returns \(\BottomSrc\). &
+\(\StressPass\) \\
+Scale-normalization ambiguity & Distinct \(\ScaleTok\) values are admitted only
+as explicit source-side normalization tokens or equivalence classes. Proper
+time, detector calibration, empirical clock behavior, or benchmark fit cannot
+choose the scale. & \(\StressPass\) \\
+Transition inverse defect & A transition whose token transport lacks an
+admitted source inverse fails closed. Target atlas inverse repair is not
+allowed. & \(\StressPass\) \\
+Transition cocycle defect & Path-dependent transport of selector tokens fails
+closed unless the cocycle is supplied and verified as source-side transition
+data. & \(\StressPass\) \\
+Continuum or finite-variation fragility & Deletion, merging, duplication, edge
+edits, and source repairs preserve, source-repair, or bottom the selector
+tuple. Target or process repairs are excluded. & \(\StressPass\) \\
+Bottom completeness & Absent, ambiguous, external, non-preserved,
+inverse-defective, cocycle-defective, target-repaired, process-repaired, and
+promotion-read components return \(\BottomSrc\). & \(\StressPass\) \\
+\(\MetricData(E)\) laundering & Stress survival supplies no adopted
+\(\MetricData(E)\) object and no general finite-source inhabitation theorem. &
+\(\StressPass\) \\
+\(\geff\) laundering & The selector does not define a metric, line element,
+interval, determinant, scale of proper time, matter coupling, or Einstein
+equation. & \(\StressPass\) \\
+Downstream promotion pressure & Stress survival is not benchmark evidence,
+Gate Chair authority, completed derivation, or global theory rejection. &
+\(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Presentation-indexed selector survival]
+Under signature-label and scale-token nonuniqueness, \(\SigScaleCont\)
+survives only as presentation-indexed source-extension data. If a unique
+unmarked signature or scale is demanded without explicit source-side selector
+tokens, the candidate returns \(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+The proposal admits \(\SigTok\) and \(\ScaleTok\) only as source-side selector
+data. Distinct supplied tokens therefore define distinct marked source
+presentations or declared equivalence classes. A demand for a unique unmarked
+signature or scale asks the candidate to import content from outside the
+source-side token record. That violates the domain condition for the
+non-bottom branch, so the fail-closed branch returns \(\BottomSrc\).
+\end{proof}
+
+\begin{lemma}[Transition-coherence stress lemma]
+\(\SigScaleCont\) survives inverse and cocycle stress only for admitted
+source-transition transport of selector tokens. Inverse-defective,
+cocycle-defective, target-repaired, or process-repaired transport returns
+\(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+The audited candidate makes preservation by admitted source transitions part
+of the non-bottom branch. If inverse or cocycle behavior fails, selector data
+are not preserved as source-side data. If repair uses target atlas structure,
+proper time, benchmark behavior, validator success, role authority, handoff
+state, generated derivatives, local cache state, file order, or commit status,
+the repair is not source-side data. In either case the non-bottom branch is
+unavailable and the candidate returns \(\BottomSrc\).
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\MetricData(E)\) adoption;
+  \item stress survival as \(\geff\) definition or construction;
+  \item unique unmarked signature, scale, or continuum recovery without
+  supplied source tokens;
+  \item target atlas, target metric, proper-time, detector, empirical, or
+  benchmark repair;
+  \item process authority repair by role, registry, validator, handoff,
+  generated derivative, cache, file order, or commit state; and
+  \item downstream GR promotion.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is
+made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+BranchDisc\_src\textasciicircum GSC & Proposal-only prior input only; not
+adopted. \\
+\(\MetricData(E)\) & Accepted only as scoped source-extension evidence under
+declared beta-separated marked finite graph scope; no new adoption. \\
+arbitrary finite source package evidence & Not proved. \\
+arbitrary finite DAG evidence & Not proved. \\
+\(\geff\) & Not constructed and not adopted; stress-survived proposal-only
+\(\SigScaleCont\) is pending selector classification. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve, source-repair, or bottom only;
+no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; theoretical selector
+classification is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Theoretical Continuation Selector
+classification of the stress-survived proposal-only \(\SigScaleCont\) route.
+That selector may choose among Candidate Constructor, repair, scoped
+obstruction, route freeze, Gate Chair evidence-status question, or
+human-gated ontology-change requirement. It must not itself adopt the law,
+construct \(\geff\), or promote downstream GR claims.
+
+\section*{References}
+
+Smuggling Auditor Packet RT-20260614-203. (2026). \textit{Smuggling audit of
+the proposal-only signature-scale-continuum selector} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-202. (2026). \textit{Proposal-only
+signature-scale-continuum selector ontology-law packet} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-200. (2026). \textit{Phase 9
+g\_eff candidate attempt or obstruction} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+\end{document}
