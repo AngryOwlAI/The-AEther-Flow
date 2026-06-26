@@ -1,0 +1,31 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-209"
+job_id: "AJ-RT-20260614-209-001"
+status: "completed"
+input_obstruction:
+  obstruction_id: "OB-GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED"
+  source_artifact: "research_control/tasks/RT-20260614-208/artifacts/237_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+formal_classification:
+  failed_object: "draft/control g_eff candidate"
+  missing_formal_object: "source metric-form assignment primitive Q_src(E)"
+  trigger_classification: "derivation_critical_missing_source_law"
+  reason: "The accepted scoped inputs supply evidence and selector-precondition tokens but no source-side rule assigning a metric-form record to be transported checked for nondegeneracy or interpreted as a g_eff candidate."
+route_ranking:
+  repair_packet:
+    disposition: "deferred"
+    reason: "A repair packet would still need the missing source metric-form assignment primitive before it could repair a g_eff construction."
+  local_freeze:
+    disposition: "deferred"
+    reason: "A conservative proposal-only source-side primitive packet remains available and would add new mathematical payload."
+  ontology_law_research_packet:
+    disposition: "selected"
+    reason: "The missing primitive is derivation-critical for effective_metric_g_eff and is not derived by current ontology."
+  finite_toy_metric_response_model:
+    disposition: "not_selected_now"
+    reason: "A finite toy target would still need a metric-form analogue; drafting the primitive family first is narrower."
+selected_next_packet:
+  type: "ontology_law_research_packet"
+  role_family: "ontology-formalizer@0.2.0"
+  objective: "Draft proposal-only MetricFormAssign_src^{GSC} source metric-form assignment primitive with domains maps proof obligations and fail-closed bottom cases."
+claim_boundary_preserved: true
