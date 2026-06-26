@@ -1,0 +1,307 @@
+completion_id: "AJC-AJ-RT-20260614-200-001"
+job_id: "AJ-RT-20260614-200-001"
+task_id: "RT-20260614-200"
+source_role_id: "candidate-constructor"
+completed_at: "2026-06-26T23:58:00Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260614-200/artifacts/child_phys_math_post_gate_geff_candidate_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260614-200/artifacts/child_phys_phil_post_gate_geff_candidate_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260614-200/artifacts/parent_conflict_review_post_gate_geff_candidate_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260614-200/artifacts/parent_fusion_notes_post_gate_geff_candidate_or_obstruction.md"
+  - "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-200/jobs/completions/AJC-AJ-RT-20260614-200-001.yaml"
+  - "research_control/handoffs/handoff-0233.yaml"
+  - "research_control/handoffs/handoff-0233.md"
+extra_read_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v9.md"
+  - "research_control/handoffs/handoff-0232.yaml"
+  - "research_control/handoffs/handoff-0232.md"
+  - "research_control/tasks/RT-20260614-199/jobs/completions/AJC-AJ-RT-20260614-199-001.yaml"
+  - "research_control/tasks/RT-20260614-199/artifacts/228_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SCOPED_METRICDATA_PHASE9_GEFF_ROUTE_SELECTOR.yaml"
+  - "research_control/tasks/RT-20260614-198/artifacts/227_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_DRAFT_CONTROL_METRICDATA_CANDIDATE_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Phase 9 g_eff candidate obstruction Candidate Constructor scoped MetricData evidence\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=director_decision_required"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_local_retrieval_refresh_needed"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_post_bootstrap_refresh"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=docs_impact_required_receipt_present"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "phase9_geff_constructor_precise_obstruction_signature_scale_continuum_underdetermined"
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Attempt one source-only draft/control g_eff candidate from accepted scoped MetricData(E) evidence and source-side transition data, or return one precise OB-GEFF obstruction."
+  explanation: "The construction attempt fails exactly because accepted scoped MetricData(E) evidence does not determine source-only signature, scale normalization, or continuum/transition structure for g_eff without target import or a new source-side primitive."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "accepted"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_theoretical_continuation_selector_for_obstruction_route_classification"
+  downstream_still_blocked:
+    - "BranchDisc_src^{GSC}_source_law_adoption"
+    - "checker_proof_authority"
+    - "arbitrary_source_package_witness_theorem"
+    - "arbitrary_finite_DAG_witness_theorem"
+    - "g_eff_adoption"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The ledger records that the current Phase 9 construction route is blocked by the missing source-side signature-scale-continuum primitive. Scoped MetricData(E) evidence remains accepted as upstream evidence but does not construct g_eff."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology TeX edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "prior accepted source-extension context only"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only boundary remains previously accepted"
+  - burden: "BranchDisc_src^{GSC}"
+    status: "proposal-only marked-source input; not adopted as source law"
+  - burden: "MetricData(E)"
+    status: "accepted only as scoped source-extension evidence under declared beta-separated marked finite graph scope"
+  - burden: "arbitrary finite source packages"
+    status: "no witness theorem supplied"
+  - burden: "arbitrary finite DAGs"
+    status: "no witness theorem supplied"
+  - burden: "g_eff"
+    status: "precise obstruction found: OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+  - burden: "matter coupling"
+    status: "blocked; no coupling law is derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "local preserve/source-repair/bottom context only; no general theorem"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "no Gate Chair verdict is issued by this constructor"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen by this constructor; selector classification is required"
+new_mathematical_payload:
+  - payload_type: "obstruction"
+    object_name: "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+    source_path: "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    summary: "Records the exact failure of the current Phase 9 g_eff construction attempt."
+  - payload_type: "dependency_map_update"
+    object_name: "accepted scoped MetricData(E) evidence to missing signature-scale-continuum primitive"
+    source_path: "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    summary: "Maps why accepted scoped MetricData(E) evidence is insufficient to construct g_eff without a new source-side primitive."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "obstruction"
+    object_name: "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+    claim_status: "draft/control obstruction"
+    source_path: "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    burden_effect: "obstructs"
+    summary: "Accepted scoped MetricData(E) evidence does not determine source-only signature scale or continuum/transition structure for g_eff."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "dependency_map_update"
+    object_name: "missing SigScaleCont_src^{GSC} primitive"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    burden_effect: "narrows"
+    summary: "Identifies the missing source-side primitive family that a future selector may route to repair freeze or ontology-law research."
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: ""
+  obstruction_id: "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+  formal_objects:
+    - "MetricData_src^{GSC-cand}(E;G^beta)"
+    - "draft/control g_eff candidate target"
+    - "SigScaleCont_src^{GSC} missing primitive placeholder"
+  maps:
+    - "MetricData(E) evidence plus source transitions -> g_eff candidate"
+  proof_obligations:
+    - "Theoretical Continuation Selector obstruction route classification"
+    - "possible ontology-law packet for source-side signature-scale-continuum rule"
+  failed_components:
+    - "source-only signature selector"
+    - "source-only scale normalization"
+    - "source-to-continuum transition structure"
+  next_required_role: "theoretical_selector"
+  no_fog_check: true
+  no_fog_explanation: "The construction fails exactly because scoped MetricData(E) evidence does not determine source-only signature, scale, or continuum/transition structure for g_eff without target import or a new source-side primitive."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CONSTRUCTOR-001"
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "post-Gate scoped MetricData(E) evidence to draft/control g_eff candidate"
+  bridge_result: "precise_obstruction_found"
+  candidate_map: "MetricData_src^{GSC-cand}(E;G^beta) plus source-side transitions -> g_eff candidate"
+  missing_primitive: "source-side signature-scale-continuum selector SigScaleCont_src^{GSC}"
+  preserves_blocks: true
+  blocked_outputs:
+    - "g_eff_adoption"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+obstruction_record:
+  present: true
+  obstruction_id: "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+  scope: "downstream_metric"
+  failed_object: "draft/control g_eff candidate"
+  exact_failure: "Accepted scoped MetricData(E) evidence does not determine source-only signature, scale normalization, or continuum/transition structure for g_eff without target import or a new source-side primitive."
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "selector_required"
+  forbidden_overread: "This obstruction is scoped to the current Phase 9 route. It is not global theory rejection and not future source-extension impossibility."
+route_cycle_control:
+  cycle_family: "effective_metric_g_eff_post_gate_metricdata_evidence"
+  current_cycle_step: "phase9_geff_constructor_obstruction"
+  prior_related_tasks:
+    - "RT-20260614-188"
+    - "RT-20260614-193"
+    - "RT-20260614-198"
+    - "RT-20260614-199"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "This packet does not repeat route selection. It produces a new named obstruction identifying the exact missing signature-scale-continuum primitive."
+  next_role_consequence: "theoretical_continuation_selector"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "HFAIL-GEFF-CURRENT-ROUTE-TOKEN-VALUATION-MISSING"
+  candidate_freeze_label: "GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+  prior_attempts_considered:
+    - "RT-20260614-147"
+    - "RT-20260614-150"
+    - "RT-20260614-151"
+    - "RT-20260614-200"
+  freeze_if:
+    - "A later selector determines that every same-shape construction requires the missing SigScaleCont_src^{GSC} primitive and no repair or ontology-law packet is authorized."
+    - "A later packet repeats g_eff construction without supplying a new source-side signature scale or continuum transition payload."
+  do_not_freeze_if:
+    - "The next selector routes to a distinct repair or ontology-law packet that supplies new source-side payload."
+  freeze_decision: "freeze_review_required"
+  decision_reason: "A named obstruction has been found; one bounded selector must decide whether this is repairable, locally frozen, or routed to ontology-law research."
+  next_allowed_route: "theoretical_selector"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Candidate Constructor obstruction for the Phase 9 g_eff construction attempt."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "M_src adoption scope change"
+    - "BranchDisc_src^{GSC} adoption"
+    - "checker proof authority"
+    - "arbitrary finite-source-package witness theorem"
+    - "arbitrary finite DAG witness theorem"
+    - "g_eff adoption"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "benchmark Gate Chair closure"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "The obstruction identifies a missing source-side signature-scale-continuum primitive for the current g_eff route. It does not reject the global theory, close future source-extension work, or promote any downstream GR object."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 401
+    relationship_row_count: 2262
+    semantic_row_count: 401
+    vault_row_count: 401
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Phase 9 g_eff candidate obstruction Candidate Constructor scoped MetricData evidence\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Phase 9 g_eff candidate obstruction Candidate Constructor scoped MetricData evidence"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-DRAFT-CONTROL-METRICDATA-CANDIDATE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW"
+  canonical_inspections:
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-DRAFT-CONTROL-METRICDATA-CANDIDATE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-198/artifacts/227_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_DRAFT_CONTROL_METRICDATA_CANDIDATE_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      source_hash: "08b9e580a0c5af81999cbdbc7df5f3c79ecf3bbc0cc49f6778953fd0c5a7dc3c"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260614-200/artifacts/child_phys_math_post_gate_geff_candidate_or_obstruction.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260614-200/artifacts/child_phys_phil_post_gate_geff_candidate_or_obstruction.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260614-200/artifacts/parent_conflict_review_post_gate_geff_candidate_or_obstruction.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260614-200/artifacts/parent_fusion_notes_post_gate_geff_candidate_or_obstruction.md"
+    summary: "Both child perspectives identify the same source-only signature scale and continuum transition underdetermination and preserve no global overread."
+next_recommendation:
+  role_id: "theoretical-continuation-selector"
+  role_version: "0.1.0"
+  task_type: "post_gate_geff_obstruction_route_selector"
+  objective: "Classify the OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED route among repair local freeze ontology-law packet or another bounded non-promotional packet."
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
