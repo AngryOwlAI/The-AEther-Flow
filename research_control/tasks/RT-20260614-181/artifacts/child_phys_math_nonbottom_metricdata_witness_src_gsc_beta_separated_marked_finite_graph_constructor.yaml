@@ -1,0 +1,28 @@
+artifact_id: "child_phys_math_nonbottom_metricdata_witness_src_gsc_beta_separated_marked_finite_graph_constructor"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260614-181"
+job_id: "AJ-RT-20260614-181-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+created_at: "2026-06-26T06:45:00Z"
+candidate_assessment:
+  result_type: "constructed_candidate"
+  constructed_object: "NonBottomMetricDataWitness_src^{GSC}(BetaSepDAG_beta)"
+  family_scope: "finite acyclic source graphs with explicit injective source-side beta separation and coherent marked-source transport"
+  reason: "For every declared beta-separated marked source graph the marked profile q_beta(v) uses strict reachability counts plus the explicit beta label. Injective beta separates all vertices and admitted transitions preserve the profile by graph isomorphism plus coherent beta transport."
+formal_objects:
+  - "finite acyclic source graph G=(V,A)"
+  - "strict source reachability R_C as transitive closure of A"
+  - "explicit source-side beta: V -> Lambda with injective site separation"
+  - "marked profile q_beta(v)=(in_R(v),out_R(v),beta(v))"
+  - "valuation record ValRecord_src^{GSC}(G^beta)"
+support_artifacts:
+  - "MARKED_FINITE_GRAPH_WITNESS_FAMILY_TRANSLATION.md"
+  - "marked_finite_graph_witness_checker.py"
+  - "marked_finite_graph_witness_checker_report.json"
+claim_limits:
+  - "not arbitrary finite-DAG inhabitation"
+  - "not BranchDisc_src^{GSC} adoption"
+  - "not MetricData(E) adoption"
+  - "not g_eff construction"
+recommended_next_role: "smuggling_auditor"

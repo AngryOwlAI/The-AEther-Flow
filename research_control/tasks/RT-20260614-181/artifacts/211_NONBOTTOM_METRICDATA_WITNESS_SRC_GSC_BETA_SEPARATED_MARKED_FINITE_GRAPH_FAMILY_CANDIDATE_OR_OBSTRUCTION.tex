@@ -1,0 +1,298 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Witness}{\mathrm{NonBottomMetricDataWitness}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\ValRecord}{\mathrm{ValRecord}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\BranchDisc}{\mathrm{BranchDisc}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\BetaGraph}{\mathsf{BetaSepDAG}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Dmbeta}{D_m^{\beta}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{status}{Status}
+
+\title{Beta-Separated Marked Finite Graph Metric-Data Witness-Family Candidate or Obstruction}
+\author{Candidate Constructor Packet RT-20260614-181}
+\date{2026-06-26}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Candidate Constructor output for
+\texttt{RT-20260614-181}. It consumes \texttt{handoff-0214}, the
+\texttt{RT-20260614-180} post-stress route selector, the
+\texttt{RT-20260614-179} Refuter stress result, and the
+\texttt{RT-20260614-177} marked reconvergent family construction.
+
+The result is a bounded draft/control candidate
+\[
+  \Witness(G^\beta),\qquad G^\beta\in \BetaGraph,
+\]
+where \(G^\beta\) is a finite acyclic source graph with explicit injective
+source-side \(\beta\)-separation and coherent marked-source transport. The
+result is broader than the \(D_m^\beta\) marked reconvergent diamond family
+because \(G\) may be any declared finite acyclic source graph satisfying the
+\(\BetaGraph\) domain conditions. It is still not a theorem for arbitrary
+finite DAGs: unmarked, absent-\(\beta\), ambiguous-\(\beta\), external-\(\beta\),
+non-injective-\(\beta\), non-coherent-transport, cyclic, or target-repaired
+packages fail closed.
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_object: "NonBottomMetricDataWitness_src^{GSC}(BetaSepDAG_beta)"
+  family_scope: "beta-separated marked finite acyclic source graphs"
+  branchdisc_status: "proposal-only input not adopted"
+  metric_data_adopted: false
+  arbitrary_finite_dag_theorem: false
+  g_eff_constructed: false
+  next_required_role: "smuggling_auditor"
+\end{verbatim}
+
+\section{Input Boundary}
+
+The admitted source inputs are finite source sites, primitive source response
+edges, strict source reachability, explicit marked source presentations
+\((G,\beta)\), source-side \(\beta\)-labels supplied as domain data, coherent
+marked-source transition transport \(\tau_\ast\beta\), fail-closed bottom
+rules, and proposal-only \(\BranchDisc\) readout when branch labels are already
+present in the marked source presentation.
+
+No target topology, target atlas, coordinate transition, target metric,
+Lorentzian signature, proper time, detector semantics, benchmark success,
+candidate reconstruction, registry row, validator result, role name, handoff
+status, approval status, file order, local cache, executable checker output,
+or commit status is used as mathematical evidence.
+
+\section{Declared Beta-Separated Marked Finite Graph Family}
+
+\begin{definition}[Beta-separated marked finite DAG family]
+A member \(G^\beta\in\BetaGraph\) consists of:
+\begin{enumerate}[leftmargin=*]
+  \item a finite vertex set \(V\);
+  \item a finite directed acyclic source-edge relation \(A\subseteq V\times V\);
+  \item the strict source reachability relation \(R_C\), defined as the
+  transitive closure of \(A\);
+  \item an explicit source-side marking \(\beta:V\to\Lambda\) whose labels are
+  injective on \(V\);
+  \item an admitted transition class \(K_\tau\) of graph isomorphisms that
+  preserve \(A\) and transport \(\beta\) coherently.
+\end{enumerate}
+The data \(\beta\) are part of the source presentation. They are not inferred
+from target geometry, empirical detector records, benchmark success, process
+authority, or executable checker output.
+\end{definition}
+
+The prior marked reconvergent family \(D_m^\beta\), \(m\ge2\), embeds into
+\(\BetaGraph\) by assigning the root, terminal site, and every middle branch
+site explicit source-side \(\beta\)-labels. Rooted tail-branch graph families
+also embed when their vertices carry explicit injective \(\beta\)-labels.
+
+\section{Valuation Record}
+
+For each \(G^\beta\in\BetaGraph\), define \(\ValRecord(G^\beta)\) by:
+
+\begin{longtable}{p{0.18\textwidth}p{0.70\textwidth}}
+\toprule
+Field & Source-only content \\
+\midrule
+\(T_\Sigma\) & finite directed acyclic source orientation class of \(A\) \\
+\(T_\Lambda\) & finite counting-measure class on \(V\) plus explicit \(\beta(V)\) label set \\
+\(R_C\) & strict source reachability relation generated by \(A\) \\
+\(K_\tau\) & admitted graph isomorphisms with coherent \(\beta\)-transport \\
+\(D_N\) & marked source profile \(q_\beta(v)\) defined below \\
+\(V_{ML}\) & finite variation preserve, source-repair, or bottom rule \\
+\(B_{\mathrm{src}}\) & bottom and obstruction branch table \\
+\bottomrule
+\end{longtable}
+
+Define
+\[
+q_\beta(v)=
+\left(
+|\{w\in V\mid wR_C v\}|,
+|\{w\in V\mid vR_C w\}|,
+\beta(v)
+\right).
+\]
+
+\section{Admitted Transition Tokens}
+
+An admitted transition token
+\[
+  \tau:G^\beta\to H^{\beta'}
+\]
+is a source graph isomorphism preserving the directed source-edge relation and
+strict reachability while transporting the marking coherently:
+\[
+  \tau_\ast(\beta(v))=\beta'(\tau(v)).
+\]
+This is not target atlas covariance and not metric covariance. It is source
+graph structure plus explicit marked source transport.
+
+\begin{lemma}[Marked finite graph profile covariance]
+If \(\tau:G^\beta\to H^{\beta'}\) is admitted, then
+\[
+  q_{\beta'}(\tau(v))=\tau_\ast(q_\beta(v)).
+\]
+\end{lemma}
+
+\begin{proof}
+The graph isomorphism preserves directed edges and therefore preserves strict
+reachability counts. Coherent \(\beta\)-transport preserves the third profile
+component by definition. Thus the marked profile is covariant under admitted
+source graph transitions.
+\end{proof}
+
+\section{Distinguishability and Non-Bottom Status}
+
+\begin{lemma}[Beta-separated site distinction]
+For \(v\ne w\) in \(V\), \(q_\beta(v)\ne q_\beta(w)\).
+\end{lemma}
+
+\begin{proof}
+Even if \(v\) and \(w\) share identical unmarked reachability counts, the
+definition of \(\BetaGraph\) requires \(\beta(v)\ne\beta(w)\). Hence the
+third profile component separates them. This separation is supplied as
+explicit source-side domain data; it is not reconstructed from target
+geometry or downstream metric evidence.
+\end{proof}
+
+\begin{theorem}[Beta-separated marked finite graph witness-family candidate]
+For every \(G^\beta\in\BetaGraph\), the source-only valuation record above
+defines a draft/control candidate
+\[
+  \Witness(G^\beta).
+\]
+\end{theorem}
+
+\begin{proof}
+The finite graph supplies only source vertices, source response edges, and
+strict source reachability. The marking \(\beta\) supplies explicit
+source-side separation data. The valuation fields \(T_\Sigma,T_\Lambda,R_C\),
+\(K_\tau,D_N,V_{ML}\), and \(B_{\mathrm{src}}\) are defined from these source
+inputs.
+
+The profile covariance lemma proves that admitted transitions preserve the
+valuation record up to coherent marked source transport. The site-distinction
+lemma proves that every declared vertex is distinguished inside the marked
+source presentation. Therefore the declared beta-separated finite graph family
+supports a non-bottom draft/control witness candidate.
+
+The proof does not extend to unmarked finite DAGs, absent or ambiguous
+\(\beta\), external target-supplied labels, non-injective markings, non-coherent
+transport, cyclic packages, or target-repaired packages. Those cases are
+outside the domain and return \(\BottomSrc\) or the prior obstruction.
+\end{proof}
+
+\section{Finite Variation and Bottom Branches}
+
+An admitted finite variation of \(G^\beta\) is a bounded source graph edit
+followed by one of three outcomes:
+\begin{enumerate}[leftmargin=*]
+  \item preservation as a member of \(\BetaGraph\);
+  \item source-only repair to another member \(H^{\beta'}\in\BetaGraph\) with
+  coherent \(\beta'\)-transport; or
+  \item \(\BottomSrc\) or the prior obstruction when \(\beta\) is absent,
+  ambiguous, external, non-injective, not coherently transported, cyclic, or
+  repaired by target or process authority.
+\end{enumerate}
+
+\begin{lemma}[Unmarked or incoherent marked graph cases fail closed]
+If the graph package lacks explicit injective source-side \(\beta\), if the
+marking is supplied by target or process authority, or if admitted transition
+transport fails coherence, then this packet does not construct
+\(\Witness(G^\beta)\). It returns \(\BottomSrc\) or preserves the prior
+missing-discriminator obstruction.
+\end{lemma}
+
+\begin{proof}
+The constructed domain is \(G^\beta\in\BetaGraph\), not an unmarked graph
+alone. Removing, merging, externalizing, or incoherently transporting \(\beta\)
+removes a required domain component. No target atlas, metric, detector,
+benchmark, registry, role, handoff, checker, or validator evidence may repair
+that failure. The branch therefore fails closed.
+\end{proof}
+
+\section{Support Artifact Status}
+
+The accompanying
+\texttt{MARKED\_FINITE\_GRAPH\_WITNESS\_FAMILY\_TRANSLATION.md},
+\texttt{marked\_finite\_graph\_witness\_checker.py}, and
+\texttt{marked\_finite\_graph\_witness\_checker\_report.json} artifacts are
+scaffolding only. They expose finite examples, marked diamond pressure,
+malformed-domain cases, and finite-variation pressure. They are not proof of
+an arbitrary finite-family theorem, not \(\MetricData(E)\) adoption, not
+\(\geff\) construction, not benchmark evidence, not external empirical
+evidence, and not validator evidence for physics truth.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Accepted only within the scoped source-only \(M_{\mathrm{src}}^{\mathsf{GSC}}(E)\) boundary. \\
+\(\BranchDisc\) & Proposal-only input status preserved; not adopted. \\
+\(\BetaGraph\) witness family & Draft/control candidate constructed pending Smuggling Auditor audit. \\
+Arbitrary finite source package witness & Not proved. \\
+Arbitrary finite DAG witness & Not proved. \\
+\(\MetricData(E)\) & Not adopted. \\
+\(\geff\) & Not constructed and not adopted. \\
+Matter coupling & Blocked. \\
+Einstein equations & Blocked. \\
+Finite-variation robustness & Local preserve, source-repair, or bottom rule only. \\
+Benchmark promotion & Blocked. \\
+Gate Chair status & No new Gate Chair verdict. \\
+Current route freeze or hard-fail status & Not frozen; audit route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+\begin{status}[Audit required]
+The constructed candidate is a draft/control source-side construction. The
+next bounded route is Smuggling Auditor audit for hidden target import,
+\(\BranchDisc\) adoption laundering, marked-source overread,
+\(\beta\)-separation tautology risk, finite-variation repair discipline,
+checker proof-authority overread, process-authority laundering, and premature
+\(\MetricData(E)\), \(\geff\), or downstream GR promotion.
+\end{status}
+
+\section{References}
+
+Refuter Packet RT-20260614-179. (2026). \emph{Refuter stress test of the
+marked reconvergent metric-data witness-family candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-177. (2026). \emph{Marked
+reconvergent metric-data witness-family candidate or obstruction}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research, v8} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 26). \emph{Handoff 0214}
+[Internal research-control handoff].
+
+\end{document}

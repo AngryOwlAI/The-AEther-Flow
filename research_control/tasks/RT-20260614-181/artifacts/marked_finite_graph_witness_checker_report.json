@@ -1,0 +1,286 @@
+{
+  "arbitrary_finite_dag_theorem": false,
+  "artifact_id": "marked_finite_graph_witness_checker_report",
+  "beta_separated_cases_checked": [
+    {
+      "beta": {
+        "a": "a_beta",
+        "b": "b_beta",
+        "c": "c_beta"
+      },
+      "claim_limit": "support only; TeX controls proof",
+      "classification": "beta_separated_marked_graph_candidate_support",
+      "edges": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "marked_profiles": {
+        "a": [
+          0,
+          2,
+          "a_beta"
+        ],
+        "b": [
+          1,
+          1,
+          "b_beta"
+        ],
+        "c": [
+          2,
+          0,
+          "c_beta"
+        ]
+      },
+      "marked_profiles_distinguish_sites": true,
+      "unmarked_profiles": {
+        "a": [
+          0,
+          2
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "c": [
+          2,
+          0
+        ]
+      },
+      "unmarked_profiles_distinguish_sites": true,
+      "vertices": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "beta": {
+        "r": "root",
+        "x1": "tail_1",
+        "x2": "tail_2",
+        "y": "short_branch"
+      },
+      "claim_limit": "support only; TeX controls proof",
+      "classification": "beta_separated_marked_graph_candidate_support",
+      "edges": [
+        [
+          "r",
+          "x1"
+        ],
+        [
+          "x1",
+          "x2"
+        ],
+        [
+          "r",
+          "y"
+        ]
+      ],
+      "marked_profiles": {
+        "r": [
+          0,
+          3,
+          "root"
+        ],
+        "x1": [
+          1,
+          1,
+          "tail_1"
+        ],
+        "x2": [
+          2,
+          0,
+          "tail_2"
+        ],
+        "y": [
+          1,
+          0,
+          "short_branch"
+        ]
+      },
+      "marked_profiles_distinguish_sites": true,
+      "unmarked_profiles": {
+        "r": [
+          0,
+          3
+        ],
+        "x1": [
+          1,
+          1
+        ],
+        "x2": [
+          2,
+          0
+        ],
+        "y": [
+          1,
+          0
+        ]
+      },
+      "unmarked_profiles_distinguish_sites": true,
+      "vertices": [
+        "r",
+        "x1",
+        "x2",
+        "y"
+      ]
+    }
+  ],
+  "diamond_pressure": {
+    "case": "diamond_pressure",
+    "claim_limit": "unmarked or non-injective beta collapses or fails closed",
+    "marked_beta_case": {
+      "beta": {
+        "r": "root",
+        "t": "terminal",
+        "u1": "branch_1",
+        "u2": "branch_2"
+      },
+      "claim_limit": "support only; TeX controls proof",
+      "classification": "beta_separated_marked_graph_candidate_support",
+      "edges": [
+        [
+          "r",
+          "u1"
+        ],
+        [
+          "r",
+          "u2"
+        ],
+        [
+          "u1",
+          "t"
+        ],
+        [
+          "u2",
+          "t"
+        ]
+      ],
+      "marked_profiles": {
+        "r": [
+          0,
+          3,
+          "root"
+        ],
+        "t": [
+          3,
+          0,
+          "terminal"
+        ],
+        "u1": [
+          1,
+          1,
+          "branch_1"
+        ],
+        "u2": [
+          1,
+          1,
+          "branch_2"
+        ]
+      },
+      "marked_profiles_distinguish_sites": true,
+      "unmarked_profiles": {
+        "r": [
+          0,
+          3
+        ],
+        "t": [
+          3,
+          0
+        ],
+        "u1": [
+          1,
+          1
+        ],
+        "u2": [
+          1,
+          1
+        ]
+      },
+      "unmarked_profiles_distinguish_sites": false,
+      "vertices": [
+        "r",
+        "u1",
+        "u2",
+        "t"
+      ]
+    },
+    "merged_beta_case": {
+      "classification": "malformed_or_bottom_domain",
+      "reason": "beta labels are not injective",
+      "unmarked_profiles": {
+        "r": [
+          0,
+          3
+        ],
+        "t": [
+          3,
+          0
+        ],
+        "u1": [
+          1,
+          1
+        ],
+        "u2": [
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "finite_variation_pressure_cases": [
+    {
+      "case": "delete_beta_label",
+      "status": "bottom_or_source_repair_required"
+    },
+    {
+      "case": "external_target_repair",
+      "status": "blocked_not_source_repair"
+    }
+  ],
+  "g_eff_constructed": false,
+  "malformed_domain_cases": [
+    {
+      "classification": "malformed_or_bottom_domain",
+      "reason": "beta labels are not injective",
+      "unmarked_profiles": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "classification": "malformed_or_bottom_domain",
+      "reason": "cycle detected",
+      "unmarked_profiles": {}
+    },
+    {
+      "classification": "malformed_or_bottom_domain",
+      "reason": "beta domain does not match vertices",
+      "unmarked_profiles": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          1,
+          0
+        ]
+      }
+    }
+  ],
+  "metric_data_adopted": false,
+  "proof_authority": "none; TeX artifact controls mathematical claims",
+  "task_id": "RT-20260614-181"
+}
