@@ -1,0 +1,97 @@
+artifact_id: "NONBOTTOM_METRICDATA_WITNESS_FAMILY_CHECKLIST"
+task_id: "RT-20260614-163"
+claim_status: "draft/control checklist only"
+object_under_test: "NonBottomMetricDataWitness_src^{GSC}(E_n) chain family"
+selector_data_boundary: "MetricTokenVal_src^{GSC} adopted as source-extension law data only"
+g_eff_constructed: false
+downstream_gr_promotion_authorized: false
+checks:
+  family_scope_defined:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#declared-family-scope"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-FAMILY-SCOPE-MISSING"
+  domain_inhabited:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#finite-source-chain-family-e-n"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-DOMAIN-FAILURE"
+  nonbottom_valrecord_returned:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#candidate-valuation-record"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-TOKEN-VALUATION-MISSING"
+  all_fields_classified:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#candidate-valuation-record"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-FIELD-CLASSIFICATION-FAILURE"
+  no_target_import_proved:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#no-target-and-no-process-authority-checks"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-TARGET-IMPORT"
+  transition_covariance_proved:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#source-transition-covariance-lemma"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-COVARIANCE-FAILURE"
+  nondegeneracy_or_controlled_degeneracy_proved:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#source-distinguishability-lemma"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-COLLAPSE"
+  finite_variation_compatibility_proved:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#finite-variation-repair-or-bottom-lemma"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-FINITE-VARIATION-FRAGILE"
+  uniqueness_or_source_gauge_proved:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#source-gauge-uniqueness-lemma"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-NONUNIQUE"
+  bottom_obstruction_table_complete:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#bottom-and-obstruction-branch-completeness"
+    fail_branch: "OB-GEFF-NONBOTTOM-METRICDATA-BOTTOM-TABLE-INCOMPLETE"
+  non_chain_overread_blocked:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#non-chain-pressure"
+    fail_branch: "invalid_under_claim_boundary"
+  g_eff_not_constructed:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#claim-boundary-and-forbidden-overreads"
+    fail_branch: "invalid_under_claim_boundary"
+  downstream_claims_blocked:
+    status: "pass"
+    evidence_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex#distance-to-gr-status"
+    fail_branch: "invalid_under_claim_boundary"
+valuation_fields:
+  - field: "T_Sigma"
+    status: "pass"
+    classification: "derived"
+    source_evidence: "oriented finite directed source-chain family"
+  - field: "T_Lambda"
+    status: "pass"
+    classification: "derived"
+    source_evidence: "cardinality-normalized source counting-measure class"
+  - field: "R_C"
+    status: "pass"
+    classification: "derived"
+    source_evidence: "source reachability preorder"
+  - field: "K_tau"
+    status: "pass"
+    classification: "derived"
+    source_evidence: "source transition-token action for admitted chain-preserving relabelings"
+  - field: "D_N"
+    status: "pass"
+    classification: "derived"
+    source_evidence: "response-profile distinguishability p_n(s_i) = (n-i,i)"
+  - field: "V_ML"
+    status: "pass"
+    classification: "derived"
+    source_evidence: "finite variation repair-or-bottom rule"
+  - field: "B_src"
+    status: "pass"
+    classification: "definitional"
+    source_evidence: "bottom and obstruction table"
+decisive_result:
+  result_type: "constructed_candidate"
+  candidate_path: "research_control/tasks/RT-20260614-163/artifacts/193_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_WITNESS_FAMILY_CANDIDATE_OR_OBSTRUCTION.tex"
+  next_required_role: "smuggling_auditor"
+notes:
+  - "Checklist PASS is not independent proof; it indexes proof locations in the main TeX artifact."
+  - "The constructed witness family is draft/control pending audit and stress."
+  - "The diamond pressure case blocks arbitrary finite-DAG overread."
