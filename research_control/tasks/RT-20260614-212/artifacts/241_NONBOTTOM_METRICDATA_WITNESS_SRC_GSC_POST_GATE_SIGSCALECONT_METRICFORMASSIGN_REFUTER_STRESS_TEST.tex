@@ -1,0 +1,247 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricDataCand}{\mathrm{MetricData}_{\mathrm{src}}^{\mathsf{GSC\mbox{-}cand}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricFormAssign}{\mathrm{MetricFormAssign}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\CarrierSrc}{C_{\mathrm{src}}}
+\newcommand{\FormTok}{q_{\mathrm{src}}}
+\newcommand{\PairTok}{\Pi_{\mathrm{src}}}
+\newcommand{\TransportTok}{\Theta_{\mathrm{src}}}
+\newcommand{\NondegTok}{N_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\StressPass}{\mathrm{STRESS\mbox{-}PASS}}
+\newcommand{\ObMetricForm}{\mathrm{OB\mbox{-}GEFF\mbox{-}SOURCE\mbox{-}METRIC\mbox{-}FORM\mbox{-}UNDERDETERMINED}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{status}{Status}
+
+\title{Refuter Stress Test of the Proposal-Only Metric-Form Assignment}
+\author{Refuter Packet RT-20260614-212}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260614-212}. It
+stress-tests the audited proposal-only metric-form assignment candidate
+\[
+  \MetricFormAssign
+\]
+from \texttt{RT-20260614-211}. The stress result is local and conditional:
+\[
+  \texttt{metricformassign\_stress\_survived\_proposal\_only\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "metricformassign_stress_survived_proposal_only_pending_selector"
+stressed_object: "MetricFormAssign_src^{GSC}"
+claim_status: "proposal-only source-extension data"
+source_law_adopted: false
+metric_data_adopted: false
+sigscalecont_adopted: false
+g_eff_constructed: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\) adoption,
+\(\SigScaleCont\) source-law adoption, \(\geff\) construction or adoption,
+matter coupling, Einstein equations, benchmark promotion, completed
+derivation, future source-extension impossibility, or global theory rejection
+is authorized.
+
+\section{Stress Domain}
+
+The stressed candidate is the proposal-only source metric-form record
+\[
+  \Qsrc(E)=
+  (\CarrierSrc(E),\FormTok(E),\PairTok(E),\Sigma_{\mathrm{bind}}(E),
+  \TransportTok(E),\NondegTok(E),B_{\mathrm{MFA}}(E)).
+\]
+The non-bottom branch is admitted only when all record slots are explicit
+source-side data and are preserved by admitted source transitions. Otherwise
+the route returns \(\BottomSrc\). This stress test treats
+\(\MetricFormAssign\) as proposal-only source-extension data, not as adopted
+ontology.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.25\linewidth}p{0.43\linewidth}p{0.18\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Form-token nonuniqueness & Distinct \(\FormTok\) values are admitted only as
+distinct marked source presentations or declared source equivalence classes.
+If a unique unmarked target metric form is demanded, the candidate returns
+\(\BottomSrc\). & \(\StressPass\) \\
+Algebraic underdetermination & The proposal does not infer bilinearity,
+symmetry, inverse, determinant, signature, or cone structure unless those
+features are supplied as source-side record obligations. Missing structure
+returns \(\BottomSrc\). & \(\StressPass\) \\
+Pairing syntax ambiguity & Ambiguous \(\PairTok\) values survive only as
+explicit source-side syntax or declared equivalence classes. Coordinate
+differentials, proper time, detector intervals, and target tangent vectors
+cannot repair the ambiguity. & \(\StressPass\) \\
+Degeneracy and nondegeneracy certificates & \(\NondegTok\) is a source-side
+certificate obligation or controlled-bottom slot. Target determinants,
+inverse target metrics, causal cones, empirical clocks, and benchmark fit are
+not allowed to certify nondegeneracy. & \(\StressPass\) \\
+Inverse defects & A missing inverse or noninvertible form is not repaired by a
+target metric. It is either an explicit source-side obligation for later
+construction or a \(\BottomSrc\) branch. & \(\StressPass\) \\
+Transition inverse defect & A transition whose metric-form record transport
+lacks an admitted source inverse fails closed. Target atlas inverse repair is
+not allowed. & \(\StressPass\) \\
+Transition cocycle defect & Path-dependent transport of metric-form record
+slots fails closed unless the cocycle is supplied and verified as source-side
+transition data. & \(\StressPass\) \\
+Finite-variation fragility & Deletion, merging, duplication, edge edits, and
+source repairs preserve, source-repair, or bottom the record. Target or
+process repairs are excluded. & \(\StressPass\) \\
+Bottom completeness & Absent, ambiguous, external, non-preserved,
+inverse-defective, cocycle-defective, target-repaired, process-repaired, and
+promotion-read components return \(\BottomSrc\). & \(\StressPass\) \\
+\(\MetricData(E)\) laundering & Stress survival supplies no adopted
+\(\MetricData(E)\) object and no general finite-source inhabitation theorem. &
+\(\StressPass\) \\
+\(\SigScaleCont\) laundering & Stress survival does not upgrade scoped
+\(\SigScaleCont\) evidence or precondition status to source-law adoption. &
+\(\StressPass\) \\
+\(\geff\) laundering & The assignment does not define an effective metric,
+line element, proper-time scale, matter coupling, or Einstein equation. &
+\(\StressPass\) \\
+Downstream promotion pressure & Stress survival is not benchmark evidence,
+Gate Chair authority, completed derivation, future impossibility, or global
+theory rejection. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Presentation-indexed metric-form survival]
+Under form-token and pairing-syntax nonuniqueness, \(\MetricFormAssign\)
+survives only as presentation-indexed source-extension data. If a unique
+unmarked target metric form or interval syntax is demanded without explicit
+source-side record tokens, the candidate returns \(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+The proposal admits \(\FormTok\) and \(\PairTok\) only as source-side record
+data. Distinct supplied tokens therefore define distinct marked source
+presentations or declared equivalence classes. A demand for a unique unmarked
+metric form or interval syntax asks the candidate to import content from
+outside the source-side token record. That violates the domain condition for
+the non-bottom branch, so the fail-closed branch returns \(\BottomSrc\).
+\end{proof}
+
+\begin{lemma}[Nondegeneracy and transition-coherence stress lemma]
+\(\MetricFormAssign\) survives nondegeneracy, inverse, and cocycle stress only
+when the relevant certificates and transports are supplied as source-side
+data. Target-repaired or process-repaired certificates and transports return
+\(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+The audited candidate makes source-side nondegeneracy or controlled-bottom
+certification and preservation by admitted source transitions part of the
+non-bottom branch. If inverse or cocycle behavior fails, metric-form record
+data are not preserved as source-side data. If repair uses target atlas
+structure, target metric structure, proper time, benchmark behavior,
+validator success, role authority, handoff state, generated derivatives,
+local cache state, file order, or commit status, the repair is not source-side
+data. In either case the non-bottom branch is unavailable and the candidate
+returns \(\BottomSrc\).
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\MetricData(E)\) adoption;
+  \item stress survival as \(\SigScaleCont\) source-law adoption;
+  \item stress survival as \(\geff\) definition or construction;
+  \item unique unmarked metric-form, pairing, inverse, determinant, or
+  nondegeneracy recovery without supplied source tokens and certificates;
+  \item target atlas, target metric, proper-time, detector, empirical, or
+  benchmark repair;
+  \item process authority repair by role, registry, validator, handoff,
+  generated derivative, cache, file order, or commit state; and
+  \item downstream GR promotion.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is
+made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+BranchDisc\_src\textasciicircum GSC & Proposal-only prior input only; not
+adopted. \\
+\(\MetricData(E)\) & Accepted only as scoped source-extension evidence under
+declared beta-separated marked finite graph scope; no new adoption. \\
+\(\SigScaleCont\) & Accepted only as scoped source-extension selector
+evidence/precondition; not adopted as source law. \\
+arbitrary finite source package evidence & Not proved. \\
+arbitrary finite DAG evidence & Not proved. \\
+\(\geff\) & Not constructed and not adopted; stress-survived proposal-only
+\(\MetricFormAssign\) is pending selector classification. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve, source-repair, or bottom only;
+no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; theoretical selector
+classification is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Theoretical Continuation Selector
+classification of the stress-survived proposal-only \(\MetricFormAssign\)
+route. That selector may choose among Candidate Constructor, repair, scoped
+obstruction, route freeze, Gate Chair evidence-status question, or
+human-gated ontology-change requirement. It must not itself adopt the law,
+construct \(\geff\), or promote downstream GR claims.
+
+\section*{References}
+
+Smuggling Auditor Packet RT-20260614-211. (2026). \textit{Smuggling audit of
+the proposal-only metric-form assignment} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-210. (2026). \textit{Proposal-only
+metric-form assignment ontology-law packet} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-208. (2026). \textit{Post-Gate
+SigScaleCont g\_eff candidate attempt or obstruction} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+\end{document}
