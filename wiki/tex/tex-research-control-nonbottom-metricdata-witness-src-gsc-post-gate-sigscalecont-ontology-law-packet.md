@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-OR-OBSTRUCTION` `research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex`
 - Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-post-gate-sigscalecont-ontology-law-packet.md`
+- Backlink from `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex`
 
 ## Validation
 

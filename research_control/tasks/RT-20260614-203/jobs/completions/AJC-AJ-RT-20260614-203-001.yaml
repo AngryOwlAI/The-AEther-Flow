@@ -1,0 +1,400 @@
+completion_id: "AJC-AJ-RT-20260614-203-001"
+job_id: "AJ-RT-20260614-203-001"
+task_id: "RT-20260614-203"
+source_role_id: "smuggling-auditor"
+completed_at: "2026-06-27T00:50:00Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260614-203/artifacts/child_phys_math_post_gate_sigscalecont_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260614-203/artifacts/child_phys_phil_post_gate_sigscalecont_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260614-203/artifacts/parent_conflict_review_post_gate_sigscalecont_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260614-203/artifacts/parent_fusion_notes_post_gate_sigscalecont_smuggling_audit.md"
+  - "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260614-203/jobs/completions/AJC-AJ-RT-20260614-203-001.yaml"
+  - "research_control/handoffs/handoff-0236.yaml"
+  - "research_control/handoffs/handoff-0236.md"
+extra_read_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v9.md"
+  - "research_control/handoffs/handoff-0235.yaml"
+  - "research_control/handoffs/handoff-0235.md"
+  - "research_control/tasks/RT-20260614-202/00_TASK.yaml"
+  - "research_control/tasks/RT-20260614-202/DDR-20260614-202.md"
+  - "research_control/tasks/RT-20260614-202/jobs/AJ-RT-20260614-202-001.yaml"
+  - "research_control/tasks/RT-20260614-202/jobs/completions/AJC-AJ-RT-20260614-202-001.yaml"
+  - "research_control/tasks/RT-20260614-202/artifacts/231_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_ONTOLOGY_LAW_PACKET.tex"
+  - "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-ONTOLOGY-LAW-PACKET --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Post-Gate SigScaleCont_src GSC proposal-only source-selector smuggling audit\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=director_decision_required"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_local_retrieval_refresh_needed"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_post_bootstrap_refresh"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=docs_impact_required_receipt_present"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "sigscalecont_candidate_audited_pending_refuter_stress_no_geff"
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_progress_status:
+  status: "candidate_audited_pending_stress"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit proposal-only SigScaleCont_src^{GSC} before any Refuter stress source-law adoption MetricData(E) adoption protected gate g_eff construction or downstream GR promotion."
+  explanation: "The packet audits SigScaleCont_src^{GSC} as source-pure as written. The pass is conditional on the object remaining proposal-only source-extension data with no target geometry, no proper-time or detector-scale import, no process authority, no adoption, no g_eff, and no downstream GR promotion."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_refuter_sigscalecont_stress_only"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "arbitrary_source_package_witness_theorem"
+    - "arbitrary_finite_DAG_witness_theorem"
+    - "g_eff_construction"
+    - "g_eff_adoption"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The g_eff ledger remains blocked by missing primitive because SigScaleCont_src^{GSC} is only audited proposal-only data pending Refuter stress. The only unlocked route is bounded Refuter stress."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology TeX edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "prior accepted source-extension context only"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only boundary remains previously accepted"
+  - burden: "BranchDisc_src^{GSC}"
+    status: "proposal-only prior input only; not adopted"
+  - burden: "MetricData(E)"
+    status: "accepted only as scoped source-extension evidence under declared beta-separated marked finite graph scope; no new adoption"
+  - burden: "arbitrary finite source packages"
+    status: "no witness theorem supplied"
+  - burden: "arbitrary finite DAGs"
+    status: "no witness theorem supplied"
+  - burden: "g_eff"
+    status: "blocked by missing source-side SigScaleCont_src^{GSC}; proposal-only selector candidate is audited as source-pure as written pending Refuter stress"
+  - burden: "matter coupling"
+    status: "blocked; no coupling law is derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "not discharged for SigScaleCont-based routes"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "no Gate Chair verdict is issued by this packet"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; Refuter stress is the next bounded route"
+new_mathematical_payload:
+  - payload_type: "lemma"
+    object_name: "SigScaleCont_src^{GSC} source-purity audit lemma"
+    source_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    summary: "Shows that the proposal-only selector as written does not require target topology target atlas target metric Lorentzian signature proper time detector semantics benchmark fit process authority MetricData(E) adoption or g_eff."
+  - payload_type: "source_extension_classification"
+    object_name: "SigScaleCont_src^{GSC} post-audit status"
+    source_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    summary: "Classifies SigScaleCont_src^{GSC} as proposal-only source-extension data with blocked_adoption_open_continuation preserved."
+  - payload_type: "dependency_map_update"
+    object_name: "SigScaleCont Refuter stress target map"
+    source_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    summary: "Routes the audited selector to one bounded Refuter stress packet for nonuniqueness scale ambiguity transition defects continuum fragility bottom completeness and promotion pressure."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "lemma"
+    object_name: "SigScaleCont_src^{GSC} source-purity audit lemma"
+    claim_status: "proposal-only audit"
+    source_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    burden_effect: "audits"
+    summary: "Audits the selector against hidden target import proper-time or detector-scale import benchmark import process authority laundering transition-covariance overread fail-closed behavior MetricData(E) adoption laundering g_eff laundering and premature promotion."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "source_extension_classification"
+    object_name: "blocked_adoption_open_continuation post-audit status"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    burden_effect: "preserves_boundary"
+    summary: "Preserves proposal-only source-extension status and blocks source-law adoption MetricData(E) adoption and g_eff."
+  - payload_id: "PAYLOAD-003"
+    payload_type: "dependency_map_update"
+    object_name: "SigScaleCont stress proof-obligation map"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    burden_effect: "selects_next"
+    summary: "Routes the proposal-only selector candidate to Refuter stress before any adoption or g_eff work."
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit proposal-only SigScaleCont_src^{GSC} before any Refuter stress source-law adoption MetricData(E) adoption protected gate g_eff construction or downstream GR promotion."
+  missing_source_law: "SigScaleCont_src^{GSC} source-side signature-scale-continuum selector"
+  underdetermination_statement: "Current ontology does not derive SigScaleCont_src^{GSC}, the source-side signature-scale-continuum selector required to continue the g_eff construction route from accepted scoped MetricData(E) evidence."
+  no_go_theorem_status: "not_present; RT-20260614-200 is a current-input scoped obstruction only"
+  packet_payload_mode: "candidate_law_payload"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "SigScaleCont_src^GSC is a source-internal selector tuple assigning signature-label scale-normalization and transition-continuum obligation tokens from source-side MetricData evidence and source-transition records while returning Bottom_src when any component is absent ambiguous external or not preserved."
+    formal_objects:
+      - "MetricData_src^{GSC-cand}(E;G^beta)"
+      - "source-side transition records"
+      - "signature-label token sigma_src"
+      - "scale-normalization token lambda_src"
+      - "source-continuum or transition-obligation token kappa_src"
+      - "Bottom_src fail-closed value"
+    domains:
+      - "accepted scoped MetricData(E) evidence under the declared beta-separated marked finite graph scope"
+      - "source-side transition data available within the same declared scope"
+      - "explicit source-side selector tokens"
+    maps:
+      - "SigScaleCont_src^GSC(E;G^beta,T_src(E)): MetricData evidence plus source transitions to signature-scale-continuum obligation tuple"
+      - "tau_* transport of selector tokens under admitted source transitions"
+      - "Bottom_src return map for missing ambiguous external or non-preserved selector data"
+    proof_obligations:
+      - "Stress signature-label nonuniqueness and relabeling ambiguity."
+      - "Stress scale-token normalization ambiguity."
+      - "Stress transition inverse and cocycle defects."
+      - "Stress continuum or finite-variation fragility."
+      - "Stress Bottom_src completeness."
+      - "Stress promotion pressure to MetricData(E) adoption g_eff and downstream GR claims."
+  audit_payload:
+    status_label: "proposal-only source-extension data"
+    audit_verdict: "source_pure_as_written_pending_refuter_stress"
+    proof_obligations:
+      - "Stress signature-label nonuniqueness and relabeling ambiguity."
+      - "Stress scale-token normalization ambiguity."
+      - "Stress transition inverse and cocycle defects."
+      - "Stress continuum or finite-variation fragility."
+      - "Stress Bottom_src completeness."
+      - "Stress promotion pressure to MetricData(E) adoption g_eff and downstream GR claims."
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "target_topology"
+      - "proper_time"
+      - "detector_semantics"
+      - "candidate_reconstruction"
+    required_checks:
+      - "Signature-label tokens must remain supplied as source-side data."
+      - "Scale-normalization tokens must not be supplied by proper time detector calibration or empirical clocks."
+      - "Continuum and transition obligations must not be copied from exact-GR atlas or benchmark behavior."
+      - "Role registry validation handoff state generated derivatives and validator success are process evidence only."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "A future human Gate Chair decision is required before SigScaleCont_src^GSC can be adopted as canonical ontology source-law authority MetricData(E) basis or g_eff basis."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Recover a lawful source-to-g_eff candidate route only after the selector-law packet survives audit and stress."
+      - "Preserve matter coupling and Einstein-equation derivation as downstream blocked burdens."
+      - "Preserve benchmark promotion as blocked pending later evidence and gate review."
+      - "Require a later human Gate Chair decision before source-law adoption or canonical ontology edit."
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  audited_candidate_path: "research_control/tasks/RT-20260614-202/artifacts/231_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_ONTOLOGY_LAW_PACKET.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+  hidden_target_import_detected: false
+  proper_time_or_detector_scale_import_detected: false
+  benchmark_import_detected: false
+  process_authority_laundering_detected: false
+  registry_metadata_authority_laundering_detected: false
+  role_authority_laundering_detected: false
+  validation_authority_laundering_detected: false
+  transition_covariance_overread_detected: false
+  fail_closed_failure_detected: false
+  metricdata_adoption_laundering_detected: false
+  geff_laundering_detected: false
+  premature_promotion_detected: false
+  next_required_role: "refuter"
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-SMUGGLING-AUDIT-001"
+obstruction_record:
+  present: true
+  obstruction_id: "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+  scope: "current_ontology_only"
+  failed_object: "draft/control g_eff candidate"
+  exact_failure: "Current ontology does not derive adopted SigScaleCont_src^{GSC}; the audited object remains proposal-only source-extension selector data pending Refuter stress."
+  minimal_counterexample_path: "research_control/tasks/RT-20260614-200/artifacts/229_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This audit does not prove future source-extension success or failure and does not reject the global theory."
+source_extension_category: "source_extension_candidate_audited_pending_stress"
+source_extension_import_classification: "proposal-only SigScaleCont source-side selector audit passed as written; not adopted; no MetricData(E) adoption; no g_eff"
+route_cycle_control:
+  cycle_family: "effective_metric_g_eff_post_gate_metricdata_evidence"
+  current_cycle_step: "sigscalecont_smuggling_audit"
+  prior_related_tasks:
+    - "RT-20260614-198"
+    - "RT-20260614-199"
+    - "RT-20260614-200"
+    - "RT-20260614-201"
+    - "RT-20260614-202"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "This packet adds a new source-purity audit with explicit stress targets instead of repeating selector formalization or g_eff construction."
+  next_role_consequence: "refuter"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED"
+  candidate_freeze_label: "SIGSCALECONT-AUDIT-PASSED-PENDING-REFUTER-STRESS"
+  prior_attempts_considered:
+    - "RT-20260614-200"
+    - "RT-20260614-201"
+    - "RT-20260614-202"
+  freeze_if:
+    - "The same missing signature-scale-continuum selector recurs after audit and stress without new mathematical payload."
+    - "Refuter stress detects unavoidable hidden import or non-repairable ambiguity under every source-side selector variant."
+  do_not_freeze_if:
+    - "A proposal-only candidate law has newly passed audit and is routed to stress."
+    - "A later stress packet returns a concrete repair or precise scoped obstruction."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because this packet completes the first source-purity audit of SigScaleCont_src^{GSC} and records concrete stress targets."
+  next_allowed_route: "one bounded Refuter stress packet"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Proposal-only SigScaleCont source-purity audit packet."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "M_src adoption scope change"
+    - "BranchDisc_src^{GSC} adoption"
+    - "SigScaleCont_src^{GSC} adoption"
+    - "MetricData(E) adoption"
+    - "checker proof authority"
+    - "arbitrary finite-source-package witness theorem"
+    - "arbitrary finite DAG witness theorem"
+    - "g_eff definition"
+    - "g_eff construction"
+    - "g_eff adoption"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "benchmark Gate Chair closure"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "Validator PASS role authority registry rows generated derivatives handoff state and proposal-only source-extension data are not physics promotion evidence. Audit pass is local source-purity only and cannot be read as M_src adoption scope change, BranchDisc adoption, SigScaleCont adoption, MetricData(E) adoption, checker proof authority, g_eff construction, or downstream GR progress."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 403
+    relationship_row_count: 2272
+    semantic_row_count: 403
+    vault_row_count: 403
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-ONTOLOGY-LAW-PACKET --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-ONTOLOGY-LAW-PACKET"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-ONTOLOGY-LAW-PACKET"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Post-Gate SigScaleCont_src GSC proposal-only source-selector smuggling audit\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Post-Gate SigScaleCont_src GSC proposal-only source-selector smuggling audit"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-SMUGGLING-AUDIT"
+  canonical_inspections:
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-ONTOLOGY-LAW-PACKET"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-202/artifacts/231_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_ONTOLOGY_LAW_PACKET.tex"
+      source_hash: "3c13d3890c22f478d7d40755bdc3366479a0beee365751786bad9e590e571305"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+      source_hash: "56535593d70882c02779faae73a0b7088e9b80ea1706a88747976f88aa80808f"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260614-203/artifacts/child_phys_math_post_gate_sigscalecont_smuggling_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260614-203/artifacts/child_phys_phil_post_gate_sigscalecont_smuggling_audit.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260614-203/artifacts/parent_conflict_review_post_gate_sigscalecont_smuggling_audit.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260614-203/artifacts/232_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_SMUGGLING_AUDIT.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260614-203/artifacts/parent_fusion_notes_post_gate_sigscalecont_smuggling_audit.md"
+    summary: "Both child perspectives support a source-purity audit pass as written for proposal-only SigScaleCont_src^{GSC}, pending Refuter stress with all adoption and downstream GR claim blocks preserved."
+next_recommendation: "Run one bounded Refuter packet to stress the audited proposal-only SigScaleCont_src^{GSC} candidate for signature-label nonuniqueness scale-token ambiguity transition inverse and cocycle defects continuum or finite-variation fragility bottom completeness and premature MetricData(E) or g_eff promotion. Do not adopt the law construct g_eff or promote downstream GR claims."
+documentation_impact_id: "DI-RT-20260614-203-001"
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""

@@ -1,0 +1,249 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricDataCand}{\mathrm{MetricData}_{\mathrm{src}}^{\mathsf{GSC\mbox{-}cand}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\SigTok}{\sigma_{\mathrm{src}}}
+\newcommand{\ScaleTok}{\lambda_{\mathrm{src}}}
+\newcommand{\ContTok}{\kappa_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\Pass}{\mathrm{PASS}}
+\newcommand{\ObGeff}{\mathrm{OB\mbox{-}GEFF\mbox{-}SIGNATURE\mbox{-}SCALE\mbox{-}CONTINUUM\mbox{-}UNDERDETERMINED}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{status}{Status}
+
+\title{Smuggling Audit of the Proposal-Only Signature-Scale-Continuum Selector}
+\author{Smuggling Auditor Packet RT-20260614-203}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Smuggling Auditor output for
+\texttt{RT-20260614-203}. It audits the proposal-only selector candidate
+\[
+  \SigScaleCont
+\]
+defined in \texttt{RT-20260614-202}. The audit result is local and
+conditional: the candidate is source-pure as written only while it remains
+proposal-only source-extension data pending Refuter stress.
+
+\begin{verbatim}
+audit_result: "audit_passed_for_refuter_stress"
+audited_object: "SigScaleCont_src^{GSC}"
+claim_status: "proposal-only source-extension data"
+source_law_adopted: false
+metric_data_adopted: false
+g_eff_constructed: false
+next_route: "Refuter stress of SigScaleCont_src^{GSC}"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\) adoption,
+\(\geff\) construction or adoption, matter coupling, Einstein equations,
+benchmark promotion, completed derivation, future source-extension
+impossibility, or global theory rejection is authorized.
+
+\section{Audited Object}
+
+The audited object is the proposal-only tuple
+\[
+  \Xi_{\mathrm{SSC}}(E)
+  =
+  (\SigTok(E),\ScaleTok(E),\ContTok(E),B_{\mathrm{SSC}}(E)).
+\]
+The non-bottom branch is available only when all selector components are
+supplied as source-side data and are preserved by admitted source transitions.
+If any component is absent, ambiguous, external, or not preserved, the
+candidate returns
+\[
+  \BottomSrc .
+\]
+
+\section{Audit Method}
+
+The audit checks whether the candidate obtains mathematical content from any
+forbidden source:
+
+\begin{itemize}[leftmargin=*]
+  \item target topology, target atlas, coordinate transitions, target metric,
+  Lorentzian signature, proper time, detector semantics, empirical
+  calibration, benchmark fit, or candidate reconstruction;
+  \item generated derivative existence, registry metadata, validator success,
+  role name, handoff state, approval state, local cache state, file order, or
+  commit state;
+  \item downstream \(\MetricData(E)\), \(\geff\), matter coupling,
+  Einstein-equation, benchmark, or completed-derivation authority;
+  \item overread from proposal-only source-extension data to adopted source
+  law; and
+  \item overread from source-transition obligation to target smooth atlas or
+  adopted transition covariance theorem.
+\end{itemize}
+
+\section{Audit Table}
+
+\begin{longtable}{p{0.23\linewidth}p{0.41\linewidth}p{0.22\linewidth}}
+\toprule
+Audit dimension & Finding & Verdict \\
+\midrule
+Target topology & No topology is imported; the tuple is conditional on source
+tokens and returns \(\BottomSrc\) otherwise. & \(\Pass\) \\
+Target atlas and transitions & Source-transition preservation is stated as an
+obligation, not copied from a target smooth atlas. & \(\Pass\) \\
+Target metric and Lorentzian signature & \(\SigTok\) is a source-side
+signature-label token, not a Lorentzian signature read from a target metric. &
+\(\Pass\) \\
+Proper time and detector scale & \(\ScaleTok\) is a source-normalization token
+and is not supplied by clocks, detectors, empirical calibration, or benchmark
+fit. & \(\Pass\) \\
+Benchmark success & No benchmark solution or exact-GR fit is used as proof of
+the selector. & \(\Pass\) \\
+Generated derivative authority & Wiki notes and other generated artifacts are
+retrieval support only and are not mathematical premises. & \(\Pass\) \\
+Registry metadata authority & Registry rows locate authority but do not supply
+selector content. & \(\Pass\) \\
+Role, validation, handoff, approval, cache, file, or commit authority & Process
+state records routing only; none is used as source law. & \(\Pass\) \\
+Transition-covariance overread & Covariance is conditional on admitted
+source-transition preservation and remains a stress target. & \(\Pass\) \\
+Fail-closed behavior & Absent, ambiguous, external, or non-preserved selector
+data return \(\BottomSrc\). & \(\Pass\) \\
+Candidate reconstruction or circularity & The candidate does not reconstruct
+\(\geff\) or use reconstructed \(\geff\) to define its inputs. & \(\Pass\) \\
+Premature promotion & The candidate remains proposal-only and unaudited for
+stress before this packet; the audit pass routes only to Refuter stress. &
+\(\Pass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Findings}
+
+\begin{lemma}[Source-purity audit lemma]
+As written, \(\SigScaleCont\) does not require target topology, target atlas,
+target metric, Lorentzian signature, proper-time scale, detector semantics,
+empirical calibration, benchmark fit, candidate reconstruction, process
+authority, \(\MetricData(E)\) adoption, or \(\geff\) construction.
+\end{lemma}
+
+\begin{proof}
+The non-bottom branch of the proposal is conditioned on explicit source-side
+selector tokens and source-transition preservation. Each target or process
+source listed above is either excluded by the input boundary or routed to
+\(\BottomSrc\) when it is the only source of a required component. The proof is
+therefore only an audit of the written proposal. It does not prove existence,
+uniqueness, robustness, adoption, or downstream GR recovery.
+\end{proof}
+
+The audit yields six concrete findings:
+\begin{enumerate}[leftmargin=*]
+  \item The signature token is source-pure only when supplied as source-side
+  selector data, not read from a target metric.
+  \item The scale token is source-pure only when not imported from proper
+  time, detector calibration, empirical clock behavior, or benchmark fit.
+  \item The continuum or transition token is an obligation record, not an
+  adopted target atlas or smooth structure.
+  \item The bottom behavior protects absent, ambiguous, external, and
+  non-preserved components.
+  \item Validator success, role authority, registry metadata, handoff state,
+  generated derivatives, local cache, file order, and commit state do not
+  supply selector content.
+  \item No promotion to source-law adoption, \(\MetricData(E)\) adoption, or
+  \(\geff\) construction is detected.
+\end{enumerate}
+
+\section{Classification}
+
+\begin{status}[Post-audit status]
+\(\SigScaleCont\) remains proposal-only source-extension data. Current
+ontology does not derive it, and this packet does not adopt it. The adoption
+status remains
+\[
+  \texttt{blocked\_adoption\_open\_continuation}.
+\]
+\end{status}
+
+The audit permits only Refuter stress of the candidate as written. Any later
+canonical ontology edit, source-law adoption, or use as protected
+\(\MetricData(E)\) or \(\geff\) basis remains human-gated and outside this
+packet.
+
+\section{Refuter Stress Targets}
+
+The next packet should stress:
+\begin{enumerate}[leftmargin=*]
+  \item signature-label nonuniqueness and relabeling ambiguity;
+  \item scale-token normalization ambiguity;
+  \item transition inverse defects and transition-cocycle defects;
+  \item continuum or finite-variation fragility;
+  \item completeness of \(\BottomSrc\) return cases; and
+  \item promotion pressure from audit pass to \(\MetricData(E)\), \(\geff\),
+  matter coupling, Einstein equations, benchmark status, or completed
+  derivation.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is
+made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+BranchDisc\_src\textasciicircum GSC & Proposal-only prior input only; not
+adopted. \\
+\(\MetricData(E)\) & Accepted only as scoped source-extension evidence under
+declared beta-separated marked finite graph scope; no new adoption. \\
+arbitrary finite source package evidence & Not proved. \\
+arbitrary finite DAG evidence & Not proved. \\
+\(\geff\) & Not constructed and not adopted; audited proposal-only
+\(\SigScaleCont\) is pending Refuter stress. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged for \(\SigScaleCont\)-based
+routes. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress is the
+next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Refuter stress test of the audited
+proposal-only \(\SigScaleCont\) candidate. The Refuter must preserve the
+proposal-only status and test the stress targets above without adopting the
+law, constructing \(\geff\), or promoting downstream GR claims.
+
+\section*{References}
+
+Ontology Formalizer Packet RT-20260614-202. (2026). \textit{Proposal-only
+signature-scale-continuum selector ontology-law packet} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-200. (2026). \textit{Phase 9
+g\_eff candidate attempt or obstruction} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+\end{document}
