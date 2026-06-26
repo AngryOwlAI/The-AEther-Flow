@@ -1,0 +1,51 @@
+artifact_id: "child-phys-math-post-gate-metricdata-prerequisite-precursor-refuter-stress"
+task_id: "RT-20260614-190"
+job_id: "AJ-RT-20260614-190-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_status: "draft/control"
+input_artifacts:
+  - "research_control/tasks/RT-20260614-188/artifacts/217_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICDATA_PREREQUISITE_PRECURSOR_OR_OBSTRUCTION.tex"
+  - "research_control/tasks/RT-20260614-189/artifacts/218_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICDATA_PREREQUISITE_PRECURSOR_SMUGGLING_AUDIT.tex"
+stress_tests:
+  beta_source_law_pressure:
+    result: "survives_as_declared_source_extension_data_only"
+    reasoning: "The precursor treats beta as explicit marked-domain data. If later work requires an adopted beta source law, that is a later protected question rather than a failure of the precursor slot record."
+  beta_nonuniqueness:
+    result: "survives_as_presentation_indexed"
+    reasoning: "Different injective beta markings on the same unmarked graph are different G^beta presentations. The precursor makes no uniqueness claim after forgetting beta."
+  transition_inverse_and_cocycle:
+    result: "survives_under_beta_coherent_source_isomorphism_groupoid_reading"
+    reasoning: "A transition token is admissible only when inverse and composition remain beta-coherent source isomorphisms. Nonclosed transition lists bottom rather than acquire target repair."
+  relabeling_and_automorphism:
+    result: "survives_for_coherent_relabelings"
+    reasoning: "Coherent source relabelings transport the tuple. Forgetting or externalizing beta returns bottom or a prior obstruction."
+  finite_variation:
+    result: "survives_fail_closed"
+    reasoning: "Deletion, merging, duplication, edge edits, and beta repair preserve the precursor only when the resulting source package remains explicitly declared, acyclic, beta-injective, and beta-coherent. Otherwise the branch bottoms or preserves a named obstruction."
+  nondegeneracy_pressure:
+    result: "survives_as_source_nonbottom_only"
+    reasoning: "Non-bottom status is slot population under source rules only and does not use determinant, scale, signature, or metric rank."
+  metricdata_laundering:
+    result: "no_laundering_detected"
+    reasoning: "The stress adds no source-to-metric map, metric-data law, adoption status, metric-like form, or downstream interpretation."
+  geff_laundering:
+    result: "no_laundering_detected"
+    reasoning: "No line element, interval, distance, metric tensor, signature, scale, or effective metric object appears."
+local_counterpressure:
+  - pressure_id: "CP-GEFF-BETA-FORGETFULNESS"
+    result: "Forgetting beta destroys the precursor domain and returns bottom; this blocks unmarked finite-DAG overread."
+  - pressure_id: "CP-GEFF-KTAU-GROUPOID"
+    result: "Transition covariance survives only for beta-coherent source-isomorphism groupoid tokens; nonclosed tokens are not admitted."
+  - pressure_id: "CP-GEFF-FINITE-VARIATION"
+    result: "Finite variation is preserve/source-repair/bottom only and does not supply MetricData(E)."
+recommended_result: "precursor_stress_survived_draft_control_pending_selector"
+next_required_role: "theoretical-continuation-selector"
+forbidden_overread:
+  - "no BranchDisc_src^{GSC} adoption"
+  - "no MetricData(E) construction or adoption"
+  - "no checker proof authority"
+  - "no arbitrary finite-DAG theorem"
+  - "no g_eff construction"
+  - "no downstream GR promotion"
