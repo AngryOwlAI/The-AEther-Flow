@@ -1,0 +1,46 @@
+artifact_id: "child_phys_math_post_sigscalecont_metricformassign_ontology_law"
+artifact_type: "parent_child_synthesis_child_output"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-210"
+job_id: "AJ-RT-20260614-210-001"
+status: "completed"
+created_at: "2026-06-27T02:54:00Z"
+claim_boundary:
+  authority: "science_draft"
+  status_label: "proposal-only"
+  source_extension_category: "source_extension_candidate"
+  source_law_adopted: false
+  MetricData_E_adopted: false
+  SigScaleCont_src_GSC_adopted: false
+  g_eff_constructed: false
+analysis:
+  objective: "Define formal source-side data for MetricFormAssign_src^{GSC} without importing target metric structure."
+  input_objects:
+    - "MetricData_src^{GSC-cand}(E;G^beta)"
+    - "SigScaleCont_src^{GSC}(E;G^beta,T_src(E))"
+    - "source-side transition records"
+    - "source carrier or finite declared package scope"
+  proposed_output_object: "source metric-form record Q_src^{GSC}(E)"
+formal_definition:
+  map_signature: "MetricFormAssign_src^{GSC}(E;G^beta,T_src(E)) -> Q_src^{GSC}(E) or Bottom_src"
+  record_slots:
+    - "carrier_scope C_src(E)"
+    - "metric_form_token_family q_src(E)"
+    - "pairing_or_interval_syntax Pi_src(E)"
+    - "signature_scale_binding from scoped SigScaleCont evidence/precondition"
+    - "transition_transport_record for admitted source transitions"
+    - "nondegeneracy_or_bottom_certificate"
+    - "no_target_import_certificate"
+bottom_conditions:
+  - "absent metric-form token family"
+  - "ambiguous pairing or interval syntax"
+  - "transition transport not supplied as source-side data"
+  - "nondegeneracy asserted from target determinant causal cone or line element"
+  - "metric-form record copied from benchmark target metric"
+  - "process authority used as a source premise"
+proof_obligations:
+  - "Audit every record slot for target metric target atlas proper-time detector semantic benchmark or process import."
+  - "Stress nonuniqueness degeneracy transition inverse cocycle finite-variation fragility and bottom completeness."
+  - "Only after audit and stress may a later Candidate Constructor attempt a draft/control g_eff candidate."
+conclusion: "A mathematically precise proposal-only source metric-form assignment interface can be stated. It is not adopted and does not construct g_eff."

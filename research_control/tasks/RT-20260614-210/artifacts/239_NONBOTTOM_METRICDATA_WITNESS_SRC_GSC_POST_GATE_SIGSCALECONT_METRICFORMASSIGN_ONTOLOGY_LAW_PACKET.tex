@@ -1,0 +1,318 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricDataCand}{\mathrm{MetricData}_{\mathrm{src}}^{\mathsf{GSC\mbox{-}cand}}}
+\newcommand{\MetricData}{\mathcal{L}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\MetricFormAssign}{\mathrm{MetricFormAssign}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\CarrierSrc}{C_{\mathrm{src}}}
+\newcommand{\FormTok}{q_{\mathrm{src}}}
+\newcommand{\PairTok}{\Pi_{\mathrm{src}}}
+\newcommand{\TransportTok}{\Theta_{\mathrm{src}}}
+\newcommand{\NondegTok}{N_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\ObMetricForm}{\mathrm{OB\mbox{-}GEFF\mbox{-}SOURCE\mbox{-}METRIC\mbox{-}FORM\mbox{-}UNDERDETERMINED}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{status}{Status}
+
+\title{Proposal-Only Metric-Form Assignment Ontology-Law Packet}
+\author{Ontology Formalizer Packet RT-20260614-210}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Ontology Formalizer output for
+\texttt{RT-20260614-210}. It consumes \texttt{handoff-0242}, the
+\texttt{RT-20260614-209} route selector, and the
+\texttt{RT-20260614-208} obstruction
+\[
+  \ObMetricForm .
+\]
+
+The output is a proposal-only source-side law candidate:
+\[
+  \MetricFormAssign .
+\]
+It is draft/control source-extension data only. It is not adopted ontology,
+not source-law adoption, not \(\MetricData(E)\) adoption, not
+\(\SigScaleCont\) source-law adoption, not a construction or adoption of
+\(\geff\), and not a derivation of matter coupling or Einstein equations. It
+does not promote benchmark status, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+  adoption_status:
+    status_pair: "blocked_adoption_open_continuation"
+g_eff_constructed: false
+g_eff_adopted: false
+\end{verbatim}
+
+\section{Input Boundary}
+
+The admitted source inputs are the accepted scoped source-extension
+\(\MetricData(E)\) evidence \(\MetricDataCand(E;\Gbeta)\), the accepted
+scoped \(\SigScaleCont\) selector evidence/precondition, declared
+source-carrier or finite source package scope, source-side transition records,
+bottom markers, and explicit metric-form tokens supplied as source data.
+
+No target topology, target smooth atlas, coordinate transition, target metric,
+Lorentzian metric, proper-time scale, detector semantics, empirical
+calibration, benchmark fit, candidate reconstruction, registry row, validator
+result, role name, handoff state, approval state, generated derivative, file
+order, local cache, or commit state is a mathematical premise.
+
+\section{Candidate Law}
+
+\begin{definition}[Source metric-form record]
+A source metric-form record for the declared scoped source setting is a tuple
+\[
+  \Qsrc(E) =
+  (\CarrierSrc(E),\FormTok(E),\PairTok(E),\Sigma_{\mathrm{bind}}(E),
+  \TransportTok(E),\NondegTok(E),B_{\mathrm{MFA}}(E)).
+\]
+Here \(\CarrierSrc(E)\) is the admitted source carrier or declared finite
+source package scope, \(\FormTok(E)\) is a source-side metric-form token
+family, \(\PairTok(E)\) is a source-side pairing or interval syntax record,
+\(\Sigma_{\mathrm{bind}}(E)\) records the permitted binding to scoped
+\(\SigScaleCont\) evidence/precondition, \(\TransportTok(E)\) records
+transport obligations under admitted source transitions, \(\NondegTok(E)\) is
+a source-side nondegeneracy or controlled-bottom certificate, and
+\(B_{\mathrm{MFA}}(E)\) is a fail-closed bottom condition.
+\end{definition}
+
+\begin{definition}[Proposal-only metric-form assignment law]
+For accepted scoped \(\MetricDataCand(E;\Gbeta)\), accepted scoped
+\(\SigScaleCont(E;\Gbeta,\mathcal T_{\mathrm{src}}(E))\), and admitted
+source-transition data \(\mathcal T_{\mathrm{src}}(E)\), define
+\[
+  \MetricFormAssign(E;\Gbeta,\mathcal T_{\mathrm{src}}(E))
+  =
+  \begin{cases}
+    \Qsrc(E), & \text{if all metric-form record slots are supplied as
+    source-side data and transition-preserved},\\
+    \BottomSrc, & \text{otherwise.}
+  \end{cases}
+\]
+The first branch is available only when every component of \(\Qsrc(E)\) is
+source-side data independent of target geometry, detector semantics, benchmark
+behavior, and process authority.
+\end{definition}
+
+\begin{status}[Proposal-only status]
+The current ontology does not derive \(\MetricFormAssign\). This packet
+proposes \(\MetricFormAssign\) only as source-extension data for later audit,
+stress testing, construction-or-obstruction work, and human-gated adoption
+review if later earned. Current adoption is blocked while same-milestone
+continuation remains open:
+\[
+\texttt{blocked\_adoption\_open\_continuation}.
+\]
+\end{status}
+
+\section{Record Components}
+
+\begin{longtable}{p{0.23\linewidth}p{0.34\linewidth}p{0.30\linewidth}}
+\toprule
+Component & Source-side role & Forbidden source of content \\
+\midrule
+\(\CarrierSrc\) & Declared source carrier or finite source package scope on
+which a later form-like record may be tested. & Target manifold, target
+topology, target atlas, coordinate chart domain, or benchmark spacetime. \\
+\(\FormTok\) & Source token family naming the form-like algebraic content to
+be used later by a candidate construction attempt. & Metric tensor,
+line-element, interval, inverse metric, determinant, or causal cone copied
+from exact GR or a benchmark solution. \\
+\(\PairTok\) & Source-side pairing or interval syntax record specifying what
+inputs the form token may consume inside the source scope. & Coordinate
+differentials, proper-time intervals, detector calibration, or target tangent
+vectors. \\
+\(\Sigma_{\mathrm{bind}}\) & Binding to already scoped \(\SigScaleCont\)
+evidence/precondition without upgrading it to source law. & Lorentzian
+signature, time orientation, or scale copied from a target metric. \\
+\(\TransportTok\) & Source transition transport obligation for \(\Qsrc\). &
+Target coordinate transition maps or atlas compatibility imported from exact
+GR. \\
+\(\NondegTok\) & Source-side nondegeneracy or controlled-bottom certificate. &
+Target determinant, inverse target metric, causal cone, empirical clocks, or
+benchmark fit. \\
+\(B_{\mathrm{MFA}}\) & Fail-closed behavior for absent, ambiguous, external,
+or non-preserved record data. & Process success, validator success, role
+authority, registry metadata, approval state, or generated derivative
+existence. \\
+\bottomrule
+\end{longtable}
+
+\section{Transition Preservation}
+
+\begin{definition}[Metric-form-preserving source transition]
+An admitted source transition
+\[
+  \tau:E\to E'
+\]
+is \(\MetricFormAssign\)-preserving when the transported source metric-form
+record satisfies
+\[
+  \tau_{\ast}\Qsrc(E)=\Qsrc(E')
+\]
+up to the declared equivalence of source metric-form tokens and pairing
+syntax records. If any component is not transported as source-side data, the
+transition is not admitted for a non-bottom \(\MetricFormAssign\)-based
+effective-metric attempt and the route returns \(\BottomSrc\).
+\end{definition}
+
+\begin{lemma}[Absent metric-form data remains bottom]
+If \(\FormTok\), \(\PairTok\), \(\TransportTok\), or \(\NondegTok\) is absent,
+ambiguous, externally chosen, or not preserved by admitted source transitions,
+then
+\[
+  \MetricFormAssign(E;\Gbeta,\mathcal T_{\mathrm{src}}(E))=\BottomSrc .
+\]
+\end{lemma}
+
+\begin{proof}
+The candidate law is explicitly partial and fail-closed. Each non-bottom
+record slot is required source-side data for \(\Qsrc(E)\). If a component is
+absent, ambiguous, external, or not transition-preserved, then the domain
+condition for the non-bottom branch fails. The rule therefore returns
+\(\BottomSrc\) instead of importing a target metric, target atlas, proper-time
+interval, detector semantics, benchmark behavior, or process authority.
+\end{proof}
+
+\begin{proposition}[Source-transition covariance obligation]
+Suppose \(\Qsrc(E)\) is source-side data and every admitted source transition
+\(\tau:E\to E'\) is \(\MetricFormAssign\)-preserving. Then the proposal-only
+metric-form record is covariant under those admitted transitions.
+\end{proposition}
+
+\begin{proof}
+Under the stated hypothesis, each component of \(\Qsrc(E)\) is transported by
+\(\tau_{\ast}\) to the corresponding component of \(\Qsrc(E')\). Therefore the
+metric-form record is not chosen from target geometry or process evidence; it
+is carried as source-side data. This is an obligation attached to the
+candidate law, not an adopted theorem about \(\geff\). A later Smuggling
+Auditor must test whether the hypothesis hides forbidden import.
+\end{proof}
+
+\section{Fail-Closed Cases}
+
+The candidate law returns \(\BottomSrc\), or preserves the named obstruction,
+in each of these cases:
+\begin{itemize}[leftmargin=*]
+  \item a metric-form token is copied from a target Lorentzian metric;
+  \item pairing or interval syntax is copied from line elements, proper time,
+  detector semantics, coordinate differentials, or empirical calibration;
+  \item transition structure is copied from a target atlas or GR benchmark
+  solution;
+  \item nondegeneracy is asserted from a target determinant, inverse target
+  metric, causal cone, or benchmark fit;
+  \item the record exists only because a role, validator, registry row,
+  handoff, approval, generated derivative, file order, local cache, or commit
+  exists;
+  \item source metric-form record data are ambiguous or not preserved under
+  admitted source transitions;
+  \item the candidate is read as source-law adoption rather than proposal-only
+  source-extension data; or
+  \item the candidate is read as \(\geff\) construction or adoption.
+\end{itemize}
+
+\section{Proof Obligations}
+
+The proposal-only packet leaves the following obligations for later packets:
+\begin{enumerate}[leftmargin=*]
+  \item A Smuggling Auditor must check that \(\CarrierSrc\), \(\FormTok\),
+  \(\PairTok\), \(\Sigma_{\mathrm{bind}}\), \(\TransportTok\),
+  \(\NondegTok\), and \(B_{\mathrm{MFA}}\) use source-side data only.
+  \item A Refuter must stress form-token nonuniqueness, pairing ambiguity,
+  degeneracy, inverse defects, transition-cocycle defects, finite-variation
+  fragility, and bottom behavior.
+  \item A Candidate Constructor may use \(\MetricFormAssign\) only if it has
+  passed audit and stress under proposal-only status.
+  \item A human Gate Chair decision is required before any canonical ontology
+  edit or source-law adoption.
+  \item A separate construction remains required before any \(\geff\)
+  candidate, matter coupling, Einstein-equation, or benchmark-promotion claim.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Scoped source-only M\_src boundary remains unchanged. \\
+BranchDisc\_src\textasciicircum GSC & Prior proposal-only input only; not adopted. \\
+\(\MetricData(E)\) & Accepted only as scoped source-extension evidence under
+declared beta-separated marked finite graph scope; no adoption occurs. \\
+\(\SigScaleCont\) & Accepted only as scoped source-extension selector
+evidence/precondition; not adopted as source law. \\
+arbitrary finite source package evidence & Not proved. \\
+arbitrary finite DAG evidence & Not proved. \\
+\(\geff\) & Not constructed and not adopted; proposal-only
+\(\MetricFormAssign\) candidate is pending audit. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Not discharged for \(\MetricFormAssign\)-based routes. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair verdict; adoption remains protected. \\
+Current route freeze or hard-fail status & Not frozen; Smuggling Auditor review
+is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Smuggling Auditor review of the
+proposal-only \(\MetricFormAssign\) candidate. The audit must test hidden
+target metric import, target-atlas import, proper-time or detector import,
+benchmark import, process-authority laundering, transition-covariance
+overread, nondegeneracy overread, fail-closed behavior, and premature
+\(\geff\) promotion. It must not adopt the law, construct \(\geff\), or
+promote downstream GR claims.
+
+\section*{References}
+
+Candidate Constructor Packet RT-20260614-208. (2026).
+\textit{Post-SigScaleCont g\_eff candidate attempt or obstruction}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Ontology Formalizer Packet RT-20260614-202. (2026).
+\textit{Proposal-only signature-scale-continuum selector ontology-law packet}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0242}
+[Internal research-control handoff].
+
+\end{document}
