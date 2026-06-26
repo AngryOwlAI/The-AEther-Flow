@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-RECONVERGENT-BRANCH-DISCRIMINATOR-ONTOLOGY-LAW-PACKET` `research_control/tasks/RT-20260614-173/artifacts/203_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_RECONVERGENT_BRANCH_DISCRIMINATOR_ONTOLOGY_LAW_PACKET.tex`
 - Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-branch-discriminator-smuggling-audit.md`
+- Backlink from `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-BRANCH-DISCRIMINATOR-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-175/artifacts/205_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_BRANCH_DISCRIMINATOR_REFUTER_STRESS_TEST.tex`
 
 ## Validation
 

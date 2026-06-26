@@ -1,0 +1,20 @@
+artifact_id: "child-phys-math-RT-20260614-175"
+task_id: "RT-20260614-175"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+stress_verdict: "branchdisc_candidate_survives_refuter_stress_proposal_only"
+stressed_object: "BranchDisc_src^{GSC}"
+formal_result:
+  beta_nonuniqueness: "survives only because beta is explicit source-side marked-package data; multiple beta markings on the same unmarked package are distinct marked packages rather than a unique unmarked law"
+  marked_branch_collapse: "survives modulo marked source isomorphism; any relabeling that forgets merges or externalizes labels returns Bottom_src"
+  tau_inverse_defect: "survives only for admitted marked transitions with coherent source-side beta transport; noninvertible or label-collapsing transports fail closed"
+  tau_cocycle_defect: "survives only when tau_* transport is path-independent on beta labels; cocycle-defective transport returns Bottom_src"
+  finite_variation_fragility: "survives as preserve-repair-or-bottom behavior for marked packages; mark deletion ambiguity or external repair fails closed"
+  bottom_completeness: "sufficient for absent ambiguous external non-preserved inverse-defective cocycle-defective and promotion readings"
+new_mathematical_payload:
+  - "marked-package domain separation lemma"
+  - "tau_* coherence stress lemma"
+  - "finite-variation marked-bottom pressure case"
+claim_boundary_preserved: true
+next_recommendation: "theoretical-continuation-selector"
