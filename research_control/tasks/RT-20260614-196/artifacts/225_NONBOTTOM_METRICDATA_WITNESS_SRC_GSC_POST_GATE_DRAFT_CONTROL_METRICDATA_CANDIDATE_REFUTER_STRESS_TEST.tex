@@ -1,0 +1,201 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\PreMetricData}{\mathrm{PreMetricData}_{\mathrm{src}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\BranchDisc}{\mathrm{BranchDisc}_{\mathrm{src}}^{\mathsf{GSC}}}
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Bottom}{\bot_{\mathrm{src}}}
+
+\newtheorem{stress}{Stress}
+\newtheorem{result}{Result}
+
+\title{Refuter Stress Test of Draft/Control MetricData(E) Candidate}
+\author{Refuter Packet RT-20260614-196}
+\date{2026-06-26}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260614-196}. It
+stress-tests the audited draft/control candidate
+\[
+  \MetricData(E;\Gbeta)
+\]
+from \texttt{RT-20260614-194}, after the \texttt{RT-20260614-195} Smuggling
+Auditor pass. The result is only a local draft/control stress result. It is
+not adoption of \(\mathrm{MetricData}(E)\), not \(\BranchDisc\) source-law
+adoption, not checker proof authority, not an arbitrary finite-DAG theorem,
+not \(\geff\), and not downstream GR promotion.
+
+\begin{verbatim}
+stress_result: "metricdata_candidate_stress_survived_draft_control_pending_selector"
+stressed_object: "MetricData_src^{GSC-cand}(E;G^beta)"
+MetricData_E_adopted: false
+BranchDisc_source_law_adopted: false
+checker_proof_authority: false
+arbitrary_finite_DAG_theorem: false
+g_eff_defined: false
+g_eff_constructed: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\section{Stress Target}
+
+The candidate under stress is the source-only record
+\[
+  \MetricData(E;\Gbeta)=
+  (D_E,M_E,T_E,N_E,B_E,F_E,C_E,O_E,L_E),
+\]
+where \(E=(\Gbeta,\PreMetricData(\Gbeta),\rho_E)\) is a declared source
+package. The record uses accepted prerequisite evidence only as bounded
+source-extension input. The stress test attempts to collapse the candidate by
+forcing it to import target geometry, adopt a source law, become an adopted
+metric-data object, or define \(\geff\).
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.24\linewidth}p{0.45\linewidth}p{0.23\linewidth}}
+\toprule
+Stress target & Refuter pressure & Result \\
+\midrule
+Source-law pressure & If \(\beta\) or \(\BranchDisc\) must become an adopted
+source law, the candidate must fail. & survives as presentation-indexed
+source-extension data or returns bottom \\
+Beta nonuniqueness & Incompatible beta markings could produce incompatible
+candidate records. & survives as distinct marked source presentations; no
+unmarked theorem follows \\
+Transition inverse and cocycle & Admitted transitions must close under inverse
+and cocycle behavior without target-atlas covariance. & survives for
+beta-coherent source-isomorphism groupoid tokens; nonclosed tokens bottom \\
+Relabeling and automorphism pressure & Coherent relabeling must preserve
+candidate fields; forgetting beta must fail closed. & survives under coherent
+source relabeling; forgetting or externalizing beta returns \(\Bottom\) \\
+Finite variation & Deletion, merge, duplication, edge edits, and beta repair
+could require target or process authority. & survives only as local
+preserve/source-repair/\(\Bottom\); no general robustness theorem \\
+Non-bottom pressure & Non-bottom could secretly mean determinant or
+Lorentzian nondegeneracy. & survives as source-only \(N_E\); no determinant,
+signature, cone, or scale appears \\
+Checker/process pressure & Executable checks, registries, validation, handoff,
+approval, local cache, or commit state could be smuggled in as proof. & no
+mathematical premise uses those process artifacts \\
+Arbitrary finite-DAG overread & The candidate might be read as a theorem for
+all finite DAGs. & fails closed outside declared beta-separated marked finite
+acyclic source packages \\
+\(\mathrm{MetricData}(E)\) adoption laundering & Stress survival might be read
+as adoption. & survival is draft/control only pending selector and possible
+protected review \\
+\(\geff\) laundering & Candidate fields might define a metric tensor, interval,
+signature, line element, scale, or effective metric. & no \(\geff\) object is
+defined or constructed \\
+Downstream promotion & Survival might imply matter coupling, Einstein
+equations, benchmark promotion, or completed derivation. & all downstream GR
+claims remain blocked \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Findings}
+
+\begin{stress}[Presentation-indexed source-law pressure]
+The candidate survives only because beta marks and the prerequisite evidence
+remain declared source-extension data under the local scope. If a later packet
+requires beta to function as an adopted source law, that later packet must
+route through protected authority or return a precise obstruction. This stress
+therefore does not adopt \(\BranchDisc\).
+\end{stress}
+
+\begin{stress}[Transition and relabeling pressure]
+The transition record \(T_E\) survives inverse and cocycle pressure only for
+beta-coherent source-isomorphism groupoid tokens. Nonclosed transition
+families, target-atlas repairs, and process-authority repairs return
+\(\Bottom\) or preserve the prior obstruction.
+\end{stress}
+
+\begin{stress}[Metric and effective-metric pressure]
+No candidate component supplies a bilinear form, inverse metric, determinant,
+signature, scale, line element, interval, proper-time normalization, detector
+calibration, matter-coupling law, or field equation. Thus stress survival is
+not \(\geff\) construction.
+\end{stress}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this stress test \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\BranchDisc\) & Proposal-only marked-source input stress-tested against laundering; not adopted. \\
+\(\PreMetricData(\Gbeta)\) & Accepted only as source-extension metric-data-prerequisite evidence under declared scope. \\
+\(\mathrm{MetricData}(E)\) & Draft/control candidate audited and stress-survived pending selector classification; not adopted. \\
+Arbitrary finite source packages & No witness theorem supplied. \\
+Arbitrary finite DAGs & No witness theorem supplied. \\
+\(\geff\) & Not defined, not constructed, and not adopted. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Only local preserve/source-repair/bottom behavior for this candidate; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No MetricData(E) adoption review is issued in this packet. \\
+Current route freeze or hard-fail status & Not frozen; selector classification is required. \\
+\bottomrule
+\end{longtable}
+
+\section{Result}
+
+\begin{result}[Stress survival pending selector]
+The audited draft/control \(\MetricData(E;\Gbeta)\) candidate survives the
+Refuter stress matrix only as a scoped source-side draft/control candidate.
+The survival result routes to one bounded Theoretical Continuation Selector
+packet before any protected adoption question, \(\geff\) route, matter
+coupling, Einstein equations, benchmark promotion, or completed-derivation
+claim.
+\end{result}
+
+\begin{verbatim}
+stress_result:
+  result_type: "metricdata_candidate_stress_survived_draft_control_pending_selector"
+  stressed_object: "MetricData_src^{GSC-cand}(E;G^beta)"
+  beta_source_law_pressure: "survives_as_declared_source_extension_data_only"
+  beta_nonuniqueness: "survives_as_presentation_indexed"
+  transition_inverse_cocycle: "survives_for_beta_coherent_source_isomorphism_groupoid_tokens_or_bottom"
+  finite_variation: "preserve_source_repair_or_bottom_only"
+  metricdata_adoption_laundering_detected: false
+  geff_laundering_detected: false
+  downstream_promotion_detected: false
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\section{References}
+
+Candidate Constructor Packet RT-20260614-194. (2026). \textit{Draft/control
+MetricData(E) candidate or obstruction} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-195. (2026). \textit{Smuggling audit of
+draft/control MetricData(E) candidate} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation
+plan].
+
+The AEther-Flow Research Project. (2026, June 26). \textit{Handoff 0228}
+[Internal research-control handoff].
+
+\end{document}
