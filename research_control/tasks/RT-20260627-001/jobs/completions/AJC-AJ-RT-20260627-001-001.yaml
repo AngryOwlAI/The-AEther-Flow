@@ -1,0 +1,67 @@
+completion_id: "AJC-AJ-RT-20260627-001-001"
+job_id: "AJ-RT-20260627-001-001"
+task_id: "RT-20260627-001"
+completed_at: "2026-06-27T15:36:02Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260627-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260627-001/DDR-20260627-001.md"
+  - "research_control/tasks/RT-20260627-001/artifacts/apa7_ontology_title_reference_retrofit_stop_rationale.md"
+  - "research_control/tasks/RT-20260627-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260627-001/jobs/AJ-RT-20260627-001-001.yaml"
+  - "research_control/tasks/RT-20260627-001/jobs/completions/AJC-AJ-RT-20260627-001-001.yaml"
+  - "research_control/tasks/RT-20260627-001/roles/project-control-maintainer@0.2.0--RT-20260627-001.yaml"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".codex/skills/pdf-derivative-build/SKILL.md"
+  - ".codex/skills/tex-wiki/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass | warnings=local retrieval caches stale only"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"APA title page ontology PDF Project Creator\" --limit 10 --json | exit_code=0 | status=pass | results=0"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass | start_state_clean"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=pass | boundary=no_action"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - "authority check against project-system-director@0.2.0 and project-control-maintainer@0.2.0 | status=blocked_source_format_implementation"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass | warnings=local retrieval mirror and SQLite cache stale"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass | warnings=local retrieval mirror and SQLite cache stale"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=pass | advisory_boundary=project_system_agent_job_required"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "The APA 7 ontology title/reference retrofit request reached the plan-specified stop condition because project-system authority cannot edit canonical ontology TeX or PDF derivatives."
+coherent_resolution_summary: "A task-local no-op rationale, Director Decision Record, AgentJob, execution-role overlay, documentation-impact receipt, and control-registry rows record the blocked implementation boundary without changing TeX, PDFs, legacy snapshots, historical task artifacts, physics claims, ontology status, benchmark status, Gate Chair status, or derivational conclusions."
+next_recommendation: "Use explicit source-format retrofit authority for the 8 current ontology TeX files, new shared TeX APA fragments, and rebuilt current ontology PDFs only."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 422
+    warning_summary: "Local retrieval mirrors and memory SQLite cache were stale relative to tracked inputs; canonical sources and registries remained authoritative."
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS --json"
+      query_type: "lookup"
+      query_text: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+  canonical_inspections:
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "c754ac32f4db4e3cd1a4cac5b15048b24c3d9965819c843857c6851e3242fb00"
+  authority_note: "Memory, wiki notes, semantic extracts, Obsidian notes, PDF derivatives, and .local caches are retrieval or reader layers only and not authority; canonical sources and registries remain authority."
+review_artifact_path: "research_control/tasks/RT-20260627-001/artifacts/apa7_ontology_title_reference_retrofit_stop_rationale.md"
+resolved_project_improvement_signals: []
+project_improvement_signals: []
