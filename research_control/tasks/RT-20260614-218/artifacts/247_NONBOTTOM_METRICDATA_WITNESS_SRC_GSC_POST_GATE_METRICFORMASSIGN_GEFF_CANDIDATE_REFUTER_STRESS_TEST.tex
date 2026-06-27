@@ -1,0 +1,281 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\MetricDataCand}{\mathrm{MetricData}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}^{\mathsf{GSC}}_{\mathrm{src}}}
+\newcommand{\MetricFormAssign}{\mathrm{MetricFormAssign}^{\mathsf{GSC}}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBGEFF}{\mathrm{OB\mbox{-}GEFF}}
+\newcommand{\StressPass}{\mathrm{STRESS\mbox{-}PASS}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Refuter Stress Test of Post-MetricFormAssign \texorpdfstring{$g_{\mathrm{eff}}$}{g_eff} Candidate}
+\author{Refuter Packet RT-20260614-218}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260614-218}. It
+stress-tests the audited draft/control source-side candidate
+\[
+  \geffCand(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+from \texttt{RT-20260614-216}, using the source-purity audit in
+\texttt{RT-20260614-217}. The stress result is local and conditional:
+\[
+  \texttt{geff\_candidate\_stress\_survived\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "geff_candidate_stress_survived_pending_selector"
+stressed_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+claim_status: "draft/control source-side candidate"
+g_eff_adopted: false
+MetricData_E_adopted: false
+MetricFormAssign_source_law_adopted: false
+SigScaleCont_source_law_adopted: false
+matter_coupling_derived: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\mathrm{MetricData}(E)\)
+adoption, \(\MetricFormAssign\) or \(\SigScaleCont\) source-law adoption,
+\(\geff\) adoption, matter coupling, Einstein equations, benchmark promotion,
+completed derivation, future source-extension impossibility, or global theory
+rejection is authorized.
+
+\section{Stress Domain}
+
+The stressed candidate is the source-side draft/control tuple
+\[
+  \geffCand(E;\Gbeta,T_{\mathrm{src}}(E))
+  =(D_E,Q_E,S_E,\Theta_E,N_E,B_E,F_E,C_E,O_E,L_E).
+\]
+It survives only when its slots are read as declared source-side records:
+carrier data, source metric-form record, source signature/scale/continuity
+record, declared source transition data, source nondegeneracy or
+controlled-bottom certificate, fail-closed bottom rule, finite-scope receipt,
+no-target-import certificate, obstruction fallback family, and limitation
+record. Any demand for target geometry, empirical semantics, process authority,
+or downstream GR recovery returns \(\BottomSrc\) or a precise \(\OBGEFF\)
+branch.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.26\linewidth}p{0.46\linewidth}p{0.18\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Target import pressure & The candidate does not import target topology,
+target atlas, target metric, proper time, detector semantics, empirical fit,
+or benchmark success. Demanding any of these exits the non-bottom branch. &
+\(\StressPass\) \\
+Form-token ambiguity & Distinct \(Q_E\) records survive only as declared
+source presentations or source equivalence classes. A unique unmarked target
+metric form is not inferred. & \(\StressPass\) \\
+Signature-scale ambiguity & \(S_E\) is a source selector record from scoped
+\(\SigScaleCont\) evidence/precondition. Missing or ambiguous signature,
+scale, or continuity data fail closed rather than importing Lorentzian
+signature. & \(\StressPass\) \\
+Transition inverse behavior & A transition inverse must be source-side data
+inside \(\Theta_E\). Target atlas inverse repair is excluded. & \(\StressPass\) \\
+Transition cocycle behavior & Path-dependent source transport fails closed
+unless cocycle coherence is supplied as source transition data. Target
+coordinate covariance is not inferred. & \(\StressPass\) \\
+Nondegeneracy and bottom behavior & \(N_E\) is a source certificate or
+controlled-bottom obligation. Target determinant, inverse metric, cone,
+clock, or benchmark behavior cannot certify nondegeneracy. & \(\StressPass\) \\
+Finite-scope overread & \(F_E\) restricts the candidate to the declared
+beta-separated marked finite-graph context. No arbitrary finite-source package
+or arbitrary finite-DAG theorem follows. & \(\StressPass\) \\
+Process-authority overread & Validators, registries, roles, handoffs,
+approvals, generated derivatives, local caches, file order, and commit status
+are not mathematical premises or repairs. & \(\StressPass\) \\
+\(\mathrm{MetricData}(E)\) adoption laundering & The carrier input remains
+accepted scoped evidence only; stress survival does not adopt
+\(\mathrm{MetricData}(E)\). & \(\StressPass\) \\
+\(\MetricFormAssign\) and \(\SigScaleCont\) laundering & The source records
+remain scoped evidence/preconditions only and are not promoted to source
+laws. & \(\StressPass\) \\
+\(\geff\) adoption laundering & The stressed object is \(\geffCand\), a
+draft/control candidate. Stress survival is not adoption of \(\geff\). &
+\(\StressPass\) \\
+Matter-coupling pressure & No universal coupling law, stress-energy
+interpretation, or response semantics is derived. & \(\StressPass\) \\
+Einstein-equation pressure & No action, variation, curvature dynamics, or
+field-equation derivation is supplied. & \(\StressPass\) \\
+Benchmark-promotion pressure & Stress survival is not benchmark evidence, not
+Gate Chair closure, and not completed derivation. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Source-record ambiguity stress survival]
+Under form-token and signature-scale ambiguity, \(\geffCand\) survives only
+as a source-record candidate indexed by declared source data. If an unmarked
+target metric form, Lorentzian signature, proper-time scale, or detector
+normalization is demanded without source-side record data, the candidate
+returns \(\BottomSrc\) or a precise \(\OBGEFF\) branch.
+\end{lemma}
+
+\begin{proof}
+The candidate record uses \(Q_E\) and \(S_E\) only as source-side slots. The
+source-purity audit excludes target metric, Lorentzian signature, proper time,
+detector semantics, and benchmark fit as slot fillers. Therefore ambiguity is
+resolved only by supplied source data or declared source equivalence classes.
+Any stronger target reading violates the candidate domain and fails closed.
+\end{proof}
+
+\begin{lemma}[Transition coherence and nondegeneracy stress survival]
+\(\geffCand\) survives transition inverse, cocycle, and nondegeneracy stress
+only when the relevant data are supplied as source transition records and
+source certificates. Target or process repairs return \(\BottomSrc\) or a
+precise \(\OBGEFF\) branch.
+\end{lemma}
+
+\begin{proof}
+The non-bottom branch contains \(\Theta_E\), \(N_E\), \(B_E\), \(C_E\), and
+\(O_E\). These slots require declared source transition data, source
+nondegeneracy or controlled-bottom certificates, fail-closed behavior, and a
+no-target-import certificate. Target atlas covariance, target inverse metric,
+determinants, clocks, detector behavior, validators, registries, roles,
+handoffs, approvals, generated derivatives, local caches, file order, and
+commit status are outside the allowed source records, so they cannot repair a
+stress failure.
+\end{proof}
+
+\begin{lemma}[No downstream recovery follows from stress survival]
+Stress survival of \(\geffCand\) does not by itself provide matter coupling,
+Einstein equations, benchmark promotion, or completed derivation.
+\end{lemma}
+
+\begin{proof}
+The candidate slots contain no matter-coupling law, no action or variation
+principle, no field-equation theorem, no benchmark verdict, and no Gate Chair
+closure. The limitation record \(L_E\) keeps the object draft/control and
+requires later routing before any protected review. Hence downstream recovery
+claims remain blocked.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\mathrm{MetricData}(E)\) adoption;
+  \item stress survival as \(\MetricFormAssign\) or \(\SigScaleCont\)
+  source-law adoption;
+  \item stress survival as \(\geff\) adoption;
+  \item unique unmarked target metric, Lorentzian signature, proper-time,
+  detector, or benchmark recovery without supplied source records;
+  \item target atlas, target metric, empirical, benchmark, validator,
+  registry, role, handoff, approval, generated-derivative, cache, file-order,
+  or commit-state repair; and
+  \item matter coupling, Einstein equations, benchmark promotion, Gate Chair
+  closure, completed derivation, future source-extension impossibility, or
+  global theory rejection.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+BranchDisc\(_{\mathrm{src}}^{\mathrm{GSC}}\) & Proposal-only marked-source input; not adopted. \\
+PreMetricData\(_{\mathrm{src}}^{\mathrm{GSC-cand}}(\Gbeta)\) & Accepted only as source-extension metric-data-prerequisite evidence under declared scope. \\
+\(\mathrm{MetricData}(E)\) & Accepted only as scoped source-extension evidence; not adopted. \\
+\(\SigScaleCont\) & Accepted only as scoped source-extension selector evidence/precondition; not adopted as source law. \\
+\(\MetricFormAssign\) & Accepted only as scoped source-extension metric-form-assignment evidence/precondition; not adopted as source law. \\
+Arbitrary finite source packages & No witness theorem supplied. \\
+Arbitrary finite DAGs & No witness theorem supplied. \\
+\(\geff\) & Draft/control candidate stress-survived under source-side fail-closed readings pending selector classification; not adopted. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No \(\geff\) adoption review is issued. \\
+Current route freeze or hard-fail status & Not frozen; selector classification is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Verdict}
+
+\begin{verdict}[Stress-survived pending selector]
+The audited draft/control \(\geffCand(E;\Gbeta,T_{\mathrm{src}}(E))\)
+candidate survives the named Refuter stress suite only as a source-side
+draft/control candidate with fail-closed bottom behavior. The result is local
+and conditional. It does not adopt \(\geff\), does not adopt the scoped
+evidence stack as source law, and does not promote downstream GR claims.
+\end{verdict}
+
+\begin{verbatim}
+stress_result:
+  result_type: "geff_candidate_stress_survived_pending_selector"
+  stressed_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  form_token_ambiguity: "survives_as_source_record_or_bottom"
+  signature_scale_ambiguity: "survives_as_source_record_or_bottom"
+  transition_inverse_defects: "survives_only_as_source_obligation_or_bottom"
+  transition_cocycle_defects: "survives_only_for_source_cocycle_coherent_transports_or_bottom"
+  nondegeneracy_bottom_behavior: "source_certificate_or_bottom"
+  finite_scope_overread: "blocked"
+  process_authority_overread: "blocked"
+  metricdata_adoption_laundering_detected: false
+  geff_adoption_laundering_detected: false
+  matter_coupling_pressure_detected: false
+  einstein_equation_pressure_detected: false
+  benchmark_promotion_pressure_detected: false
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Theoretical Continuation Selector
+classification of the stress-survived draft/control \(\geff\) candidate
+route. The selector may classify whether the route should proceed to a narrow
+Gate Chair evidence-status/precondition question, repair, scoped obstruction,
+route freeze, or another bounded non-promotional packet. It must not adopt
+\(\geff\), adopt source laws, derive matter coupling or Einstein equations, or
+promote benchmark status.
+
+\section*{References}
+
+Smuggling Auditor Packet RT-20260614-217. (2026). \textit{Smuggling audit of
+Post-MetricFormAssign g\_eff candidate} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-216. (2026). \textit{Post-MetricFormAssign
+g\_eff candidate or obstruction} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0250}
+[Internal research-control handoff].
+
+\end{document}

@@ -1,0 +1,22 @@
+task_id: "RT-20260614-218"
+review_id: "parent_conflict_review_post_metricformassign_geff_candidate_refuter_stress"
+status: "no_conflict"
+resolution_rounds: 0
+child_outputs:
+  - "research_control/tasks/RT-20260614-218/artifacts/child_phys_math_post_metricformassign_geff_candidate_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260614-218/artifacts/child_phys_phil_post_metricformassign_geff_candidate_refuter_stress.yaml"
+conflicts: []
+parent_resolution:
+  selected_result_type: "geff_candidate_stress_survived_pending_selector"
+  selected_status: "stress_survived_as_draft_control_candidate_pending_selector_no_adoption"
+  rationale: "Both children agree that the audited draft/control g_eff candidate survives the named stress suite only under source-side fail-closed readings and must route to one bounded Theoretical Continuation Selector packet before any protected review or adoption."
+claim_boundary_preserved:
+  source_law_adoption: false
+  MetricData_E_adoption: false
+  MetricFormAssign_source_law_adoption: false
+  SigScaleCont_source_law_adoption: false
+  g_eff_adoption: false
+  matter_coupling: false
+  Einstein_equations: false
+  benchmark_promotion: false
+next_required_role: "theoretical-continuation-selector@0.1.0"

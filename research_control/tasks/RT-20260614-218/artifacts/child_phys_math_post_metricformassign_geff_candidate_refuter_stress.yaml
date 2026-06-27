@@ -1,0 +1,34 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-218"
+status: "completed"
+verdict: "stress_survived_as_draft_control_candidate_pending_selector"
+stress_result_type: "geff_candidate_stress_survived_pending_selector"
+stressed_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+findings:
+  - dimension: "form_token_and_signature_scale_ambiguity"
+    result: "stress_survived_fail_closed"
+    rationale: "The candidate treats Q_E and S_E as supplied source records. Ambiguous form tokens or signature-scale records survive only as declared source presentations or return Bottom_src; no unique target metric or Lorentzian signature is inferred."
+  - dimension: "transition_inverse_and_cocycle_behavior"
+    result: "stress_survived_fail_closed"
+    rationale: "Theta_E is only declared source transition data. Missing inverse or cocycle coherence returns Bottom_src or an OB-GEFF label rather than importing target atlas covariance."
+  - dimension: "nondegeneracy_and_bottom_behavior"
+    result: "stress_survived_fail_closed"
+    rationale: "N_E and B_E require source-side certificates or controlled-bottom behavior. Target determinants, inverse metrics, cones, clocks, and benchmark fit cannot repair nondegeneracy."
+  - dimension: "finite_scope"
+    result: "stress_survived_limited_scope"
+    rationale: "F_E restricts the construction to the declared beta-separated marked finite-graph context and supplies no arbitrary finite-source or finite-DAG theorem."
+  - dimension: "adoption_laundering"
+    result: "stress_survived_no_adoption"
+    rationale: "Stress survival does not adopt MetricData(E), MetricFormAssign_src^{GSC}, SigScaleCont_src^{GSC}, or g_eff."
+claim_boundary:
+  source_law_adopted: false
+  MetricData_E_adopted: false
+  MetricFormAssign_source_law_adopted: false
+  SigScaleCont_source_law_adopted: false
+  g_eff_adopted: false
+  matter_coupling_derived: false
+  Einstein_equations_derived: false
+  benchmark_promoted: false
+next_required_role: "theoretical-continuation-selector@0.1.0"
+notes: "Mathematical stress survival is local and draft/control only."
