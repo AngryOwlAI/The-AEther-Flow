@@ -1,0 +1,287 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\MetricFormAssign}{\mathrm{MetricFormAssign}^{\mathsf{GSC}}_{\mathrm{src}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}^{\mathsf{GSC}}_{\mathrm{src}}}
+\newcommand{\CouplingPrecond}{\mathrm{CouplingPrecond}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBCoupling}{\mathrm{OB}\mbox{-}\mathrm{COUPLING}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Refuter Stress Test of Post-Scoped-\texorpdfstring{$g_{\mathrm{eff}}$}{g_eff} Matter-Coupling Precondition Candidate}
+\author{Refuter Packet RT-20260614-226}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260614-226}. It
+stress-tests the audited draft/control source-side matter-coupling
+precondition candidate
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+from \texttt{RT-20260614-224}, using the source-purity audit in
+\texttt{RT-20260614-225}. The stress result is local and conditional:
+\[
+  \texttt{matter\_coupling\_precondition\_stress\_survived\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "matter_coupling_precondition_stress_survived_pending_selector"
+stressed_object: "CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+claim_status: "draft/control source-side precondition"
+coupling_law_adopted: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+MetricData_E_adopted: false
+scoped_g_eff_expanded: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\mathrm{MetricData}(E)\)
+adoption, scoped-\(\geff\) expansion, coupling-law adoption, stress-energy
+semantics import, matter-coupling derivation, Einstein equations, benchmark
+promotion, completed derivation, future source-extension impossibility, or
+global theory rejection is authorized.
+
+\section{Stress Domain}
+
+The stressed candidate is the source-side draft/control tuple
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E)) =
+  (C_E,R^{\mathrm{src}}_E,J^{\mathrm{src}}_E,G_E,I_E,B_E,N_E,O_E,\Lambda_E).
+\]
+It survives only when its slots are read as declared source-side records:
+source support carrier, response/localization syntax record, source
+coupling-token interface, scoped-\(\geff\) compatibility record, source
+transition compatibility record, controlled bottom table, no-target-import
+certificate, obstruction-label family, and limitation record. Any demand for
+target geometry, target stress-energy semantics, empirical matter sector,
+process authority, or downstream GR recovery returns \(\BottomSrc\) or a
+precise \(\OBCoupling\) branch.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.26\linewidth}p{0.46\linewidth}p{0.18\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Source coupling-token ambiguity & \(J^{\mathrm{src}}_E\) survives only as a
+source token-interface record. Missing or ambiguous token support fails to
+\(\BottomSrc\) or \(\OBCoupling\)-SOURCE-TOKEN rather than importing a matter
+sector. & \(\StressPass\) \\
+Hidden stress-energy semantics & The candidate contains no stress-energy
+tensor, matter action, detector calibration, empirical matter field, or
+variational premise. Demanding these exits the non-bottom branch. &
+\(\StressPass\) \\
+Target import pressure & \(C_E\), \(R^{\mathrm{src}}_E\), \(G_E\), and
+\(I_E\) do not import target topology, target atlas, target metric,
+Lorentzian signature, proper time, detector semantics, empirical fit, or
+benchmark success. & \(\StressPass\) \\
+Scoped-\(\geff\) overread & \(G_E\) references \(\geffCand\) only as bounded
+source-extension input. It does not make \(\geff\) a universal coupling
+geometry and does not expand the scoped adoption status. & \(\StressPass\) \\
+Transition inverse behavior & A transition inverse must be source-side data
+inside \(I_E\). Target atlas inverse repair is excluded. & \(\StressPass\) \\
+Transition cocycle behavior & Path-dependent source transport fails closed
+unless source cocycle coherence is supplied by the declared transition data.
+Target-coordinate covariance is not inferred. & \(\StressPass\) \\
+Bottom completeness & \(B_E\), \(N_E\), and \(O_E\) cover absent, ambiguous,
+noncoherent, target-repaired, detector-repaired, benchmark-repaired, and
+process-repaired branches with \(\BottomSrc\) or precise obstruction labels.
+& \(\StressPass\) \\
+Process-authority overread & Validators, registries, roles, handoffs,
+approvals, generated derivatives, local caches, file order, and commit status
+are not mathematical premises or repairs. & \(\StressPass\) \\
+Coupling-law laundering & A precondition record is not a universal coupling
+rule, matter response law, matter action, or source-side law. & \(\StressPass\) \\
+Source-law adoption laundering & Scoped \(\geff\), response/localization
+context, source transitions, \(\mathrm{MetricData}(E)\), \(\MetricFormAssign\),
+and \(\SigScaleCont\) remain bounded inputs or prior scoped evidence, not
+newly adopted source laws. & \(\StressPass\) \\
+Einstein-equation pressure & No curvature dynamics, action, variation,
+field-equation theorem, conservation law, or stress-energy coupling equation
+is supplied. & \(\StressPass\) \\
+Benchmark-promotion pressure & Stress survival is not benchmark evidence, not
+Gate Chair closure, and not completed derivation. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Source-token ambiguity stress survival]
+Under source coupling-token ambiguity, \(\CouplingPrecond\) survives only as
+a source-side precondition record. If \(J^{\mathrm{src}}_E\) is required to
+denote stress-energy semantics, a matter action, empirical detector behavior,
+or target matter fields, the candidate returns \(\BottomSrc\) or a precise
+\(\OBCoupling\) branch.
+\end{lemma}
+
+\begin{proof}
+The source-purity audit identifies \(J^{\mathrm{src}}_E\) as a
+source coupling-token interface only. Its positive content is token support
+and compatibility slots for later source-side work. None of its slots supplies
+stress-energy tensors, matter actions, detector semantics, proper-time
+normalization, or empirical matter fields. Therefore ambiguous token readings
+are resolved only by declared source records. Stronger semantic readings
+violate the candidate domain and fail closed.
+\end{proof}
+
+\begin{lemma}[Transition and bottom-completeness stress survival]
+\(\CouplingPrecond\) survives transition inverse, transition cocycle, and
+bottom-completeness stress only when the relevant data are supplied as source
+transition records and controlled-bottom branches. Target or process repairs
+return \(\BottomSrc\) or a precise \(\OBCoupling\) branch.
+\end{lemma}
+
+\begin{proof}
+The non-bottom branch contains \(I_E\), \(B_E\), \(N_E\), \(O_E\), and
+\(\Lambda_E\). These slots require declared source transition compatibility,
+fail-closed bottom behavior, no-target-import certification, obstruction
+labels, and limitation records. Target atlas covariance, target inverse
+metrics, detector repairs, benchmark repairs, validators, registries, roles,
+handoffs, approvals, generated derivatives, local caches, file order, and
+commit status are outside the allowed source records. They cannot repair a
+stress failure.
+\end{proof}
+
+\begin{lemma}[No coupling law or downstream recovery follows from stress survival]
+Stress survival of \(\CouplingPrecond\) does not by itself provide a coupling
+law, matter-coupling derivation, stress-energy semantics, Einstein equations,
+benchmark promotion, or completed derivation.
+\end{lemma}
+
+\begin{proof}
+The candidate slots contain no universal coupling rule, no matter action, no
+stress-energy tensor, no conservation theorem, no field-equation derivation,
+no benchmark verdict, and no Gate Chair closure. The limitation record
+\(\Lambda_E\) keeps the object draft/control and requires later routing before
+any protected review or adoption question. Hence downstream recovery claims
+remain blocked.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\mathrm{MetricData}(E)\) adoption;
+  \item stress survival as scoped-\(\geff\) expansion or unscoped
+  \(\geff\) adoption;
+  \item stress survival as coupling-law adoption;
+  \item source coupling-token syntax as stress-energy semantics;
+  \item response/localization context as detector semantics or proper-time
+  readout;
+  \item source transition compatibility as target-coordinate covariance;
+  \item target atlas, target metric, empirical, benchmark, validator,
+  registry, role, handoff, approval, generated-derivative, cache, file-order,
+  or commit-state repair; and
+  \item matter coupling, Einstein equations, benchmark promotion, Gate Chair
+  closure, completed derivation, future source-extension impossibility, or
+  global theory rejection.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\mathrm{MetricData}(E)\) & Prior scoped source-extension evidence only; not adopted here. \\
+\(\geff\) & Prior scoped source-extension \(\geff\) object only; no scope expansion. \\
+Matter coupling & Draft/control source-side precondition candidate stress-survived pending selector classification; no coupling law is derived or adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No matter-coupling or coupling-law review is issued. \\
+Current route freeze or hard-fail status & Not frozen; Theoretical Continuation Selector route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Verdict}
+
+\begin{verdict}[Stress-survived pending selector]
+The audited draft/control
+\(\CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E))\) candidate survives the
+named Refuter stress suite only as a source-side precondition record with
+fail-closed bottom behavior. The result is local and conditional. It does not
+adopt a coupling law, does not derive matter coupling, does not import
+stress-energy semantics, and does not promote downstream GR claims.
+\end{verdict}
+
+\begin{verbatim}
+stress_result:
+  result_type: "matter_coupling_precondition_stress_survived_pending_selector"
+  stressed_object: "CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+  source_coupling_token_ambiguity: "survives_as_source_token_record_or_bottom"
+  hidden_stress_energy_semantics_pressure: "fail_closed"
+  target_import_pressure: "fail_closed"
+  transition_inverse_defects: "survives_only_as_source_obligation_or_bottom"
+  transition_cocycle_defects: "survives_only_for_source_coherent_transports_or_bottom"
+  bottom_completeness: "source_bottom_table_or_precise_obstruction"
+  process_authority_overread: "blocked"
+  coupling_law_laundering_detected: false
+  source_law_laundering_detected: false
+  geff_scope_laundering_detected: false
+  stress_energy_semantics_import_detected: false
+  matter_coupling_derivation_detected: false
+  einstein_equation_pressure_detected: false
+  benchmark_promotion_pressure_detected: false
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Theoretical Continuation Selector
+classification of the stress-survived draft/control matter-coupling
+precondition route. The selector may classify whether the route should
+proceed to a narrow Gate Chair evidence-status/precondition question, repair,
+scoped obstruction, route freeze, or another bounded non-promotional packet.
+It must not adopt a coupling law, derive matter coupling, derive Einstein
+equations, or promote benchmark status.
+
+\section*{References}
+
+Smuggling Auditor Packet RT-20260614-225. (2026). \textit{Smuggling audit of
+post-scoped-g\_eff matter-coupling precondition candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-224. (2026). \textit{Post-scoped-g\_eff
+source-side matter-coupling precondition candidate} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-222. (2026). \textit{Scoped g\_eff adoption-status
+review} [Research-control TeX artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0258}
+[Internal research-control handoff].
+
+\end{document}
