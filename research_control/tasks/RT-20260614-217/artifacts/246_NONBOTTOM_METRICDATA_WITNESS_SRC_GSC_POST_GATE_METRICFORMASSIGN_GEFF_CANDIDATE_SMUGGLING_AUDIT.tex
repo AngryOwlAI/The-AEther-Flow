@@ -1,0 +1,216 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\MetricDataCand}{\mathrm{MetricData}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}^{\mathsf{GSC}}_{\mathrm{src}}}
+\newcommand{\MetricFormAssign}{\mathrm{MetricFormAssign}^{\mathsf{GSC}}_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBGEFF}{\mathrm{OB\mbox{-}GEFF}}
+
+\newtheorem{finding}{Finding}
+\newtheorem{verdict}{Verdict}
+
+\title{Smuggling Audit of Post-MetricFormAssign \texorpdfstring{$g_{\mathrm{eff}}$}{g_eff} Candidate}
+\author{Smuggling Auditor Packet RT-20260614-217}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Smuggling Auditor output for
+\texttt{RT-20260614-217}. It audits the draft/control source-side candidate
+\[
+  \geffCand(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+constructed in \texttt{RT-20260614-216}. The audit may pass, fail, or return a
+precise laundering finding. A pass is only local source-purity as written. It
+is not adoption of \(\geff\), not adoption of \(\mathrm{MetricData}(E)\), not
+\(\MetricFormAssign\) or \(\SigScaleCont\) source-law adoption, not matter
+coupling, not Einstein equations, and not downstream GR promotion.
+
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_refuter_stress"
+audited_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+g_eff_adopted: false
+MetricData_E_adopted: false
+MetricFormAssign_source_law_adopted: false
+SigScaleCont_source_law_adopted: false
+matter_coupling_derived: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+next_required_role: "refuter"
+\end{verbatim}
+
+\section{Audit Target}
+
+The audited object is the source-side draft/control tuple
+\[
+  \geffCand(E;\Gbeta,T_{\mathrm{src}}(E))
+  =(D_E,Q_E,S_E,\Theta_E,N_E,B_E,F_E,C_E,O_E,L_E).
+\]
+Its admitted inputs are accepted scoped \(\mathrm{MetricData}(E)\) evidence,
+accepted scoped \(\SigScaleCont\) selector evidence/precondition, accepted
+scoped \(\MetricFormAssign\) metric-form-assignment evidence/precondition, and
+declared source transition data. The candidate itself remains draft/control
+and audit-ready only.
+
+\section{Audit Dimensions}
+
+\begin{longtable}{p{0.26\linewidth}p{0.46\linewidth}p{0.20\linewidth}}
+\toprule
+Audit dimension & Evidence checked & Finding \\
+\midrule
+Hidden target topology & \(D_E\) is scoped source carrier data and accepted
+source-extension input only. & pass \\
+Hidden target atlas or coordinate transitions & \(\Theta_E\) uses declared
+source transition data only. & pass \\
+Hidden target metric or Lorentzian signature & \(Q_E\) is a source
+metric-form record from scoped \(\MetricFormAssign\), not a target metric,
+line element, proper-time metric, or adopted Lorentzian geometry. & pass \\
+Proper-time or detector semantics import & No clock normalization, detector
+calibration, or empirical readout fills a candidate slot. & pass \\
+\(\MetricFormAssign\) source-law laundering & \(Q_E:=Q_{\mathrm{src}}(E)\)
+is used only as scoped metric-form-assignment evidence/precondition. & pass \\
+\(\SigScaleCont\) source-law laundering & \(S_E\) is used only as scoped
+selector evidence/precondition and is not adopted as source law. & pass \\
+\(\mathrm{MetricData}(E)\) adoption laundering & \(D_E\) is bounded input
+from accepted scoped evidence; the audit does not adopt \(\mathrm{MetricData}(E)\). & pass \\
+\(\geff\) adoption laundering & The candidate is named \(\geffCand\) and is
+explicitly draft/control pending audit and stress. & pass \\
+Transition-covariance overread & The tuple \((Q_E,S_E,\Theta_E)\) states only
+a source-side transport obligation and not target-coordinate covariance. & pass \\
+Nondegeneracy and bottom behavior & \(N_E\) and \(B_E\) are controlled
+source-side certificates; target-importing or underdetermined cases fail
+closed to \(\BottomSrc\) or \(\OBGEFF\mbox{-}*\). & pass \\
+Finite-scope overread & \(F_E\) restricts the packet to the declared
+beta-separated marked finite-graph context only. & pass \\
+Checker and process authority & Validators, registries, roles, handoffs,
+approvals, generated derivatives, local caches, file order, and commit status
+are not mathematical premises. & pass \\
+Downstream GR promotion & No matter coupling, Einstein equation, benchmark
+promotion, Gate Chair verdict, or completed derivation is asserted. & pass \\
+\bottomrule
+\end{longtable}
+
+\section{Findings}
+
+\begin{finding}[No hidden target import detected as written]
+Every slot of \(\geffCand\) is declared as source-side data or an explicit
+source-side certificate. The candidate does not require target topology, target
+atlas, target metric, Lorentzian signature import, proper time, detector
+semantics, empirical fit, or benchmark success.
+\end{finding}
+
+\begin{finding}[No source-law or adoption laundering detected as written]
+The accepted scoped evidence stack supplies bounded inputs only. The audit
+does not convert \(\MetricDataCand\), \(\SigScaleCont\), or
+\(\MetricFormAssign\) into canonical source laws, and it does not adopt
+\(\geff\).
+\end{finding}
+
+\begin{finding}[No process-authority laundering detected as written]
+The candidate's limitation record \(L_E\) and no-target certificate \(C_E\)
+exclude validators, registries, roles, handoffs, approvals, generated
+derivatives, local caches, file order, and commit status as mathematical
+premises.
+\end{finding}
+
+\begin{finding}[No downstream promotion detected as written]
+The candidate supplies no matter-coupling law, stress-energy coupling, field
+equations, benchmark verdict, Gate Chair closure, or completed derivation.
+\end{finding}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this audit \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Prior accepted source-extension context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+BranchDisc\(_{\mathrm{src}}^{\mathrm{GSC}}\) & Proposal-only marked-source input; not adopted. \\
+PreMetricData\(_{\mathrm{src}}^{\mathrm{GSC-cand}}(\Gbeta)\) & Accepted only as source-extension metric-data-prerequisite evidence under declared scope. \\
+\(\mathrm{MetricData}(E)\) & Accepted only as scoped source-extension evidence; not adopted. \\
+\(\SigScaleCont\) & Accepted only as scoped source-extension selector evidence/precondition; not adopted as source law. \\
+\(\MetricFormAssign\) & Accepted only as scoped source-extension metric-form-assignment evidence/precondition; not adopted as source law. \\
+Arbitrary finite source packages & No witness theorem supplied. \\
+Arbitrary finite DAGs & No witness theorem supplied. \\
+\(\geff\) & Draft/control candidate audited as source-pure as written pending Refuter stress; not adopted. \\
+Matter coupling & Blocked; no coupling law is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No \(\geff\) adoption review is issued. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Audit Verdict}
+
+\begin{verdict}[Source-pure as written pending stress]
+The draft/control \(\geffCand(E;\Gbeta,T_{\mathrm{src}}(E))\) candidate passes
+the Smuggling Auditor source-purity audit as written. The pass is local and
+conditional. It does not adopt \(\geff\), does not adopt the scoped evidence
+stack as source law, and does not promote downstream GR claims.
+\end{verdict}
+
+\begin{verbatim}
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  audited_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  hidden_target_import_detected: false
+  source_law_laundering_detected: false
+  adoption_laundering_detected: false
+  process_authority_laundering_detected: false
+  transition_covariance_overread_detected: false
+  nondegeneracy_smuggling_detected: false
+  fail_closed_bottom_failure_detected: false
+  finite_scope_overread_detected: false
+  downstream_promotion_detected: false
+  next_required_role: "refuter"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Refuter stress test. It should stress
+the audited candidate against target import pressure, form-token ambiguity,
+signature-scale ambiguity, transition inverse and cocycle behavior,
+nondegeneracy and bottom behavior, finite-scope overread, process-authority
+overread, \(\mathrm{MetricData}(E)\) adoption laundering, \(\geff\) adoption
+laundering, matter-coupling pressure, Einstein-equation pressure, and
+benchmark-promotion pressure.
+
+\section{References}
+
+Candidate Constructor Packet RT-20260614-216. (2026). \textit{Post-MetricFormAssign
+g\_eff candidate or obstruction} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-214. (2026). \textit{MetricFormAssign source-extension
+evidence Gate Chair review} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v9} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0249}
+[Internal research-control handoff].
+
+\end{document}

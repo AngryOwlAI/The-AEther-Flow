@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-SMUGGLING-AUDIT
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-SMUGGLING-AUDIT`
+- Source path: `research_control/tasks/RT-20260614-217/artifacts/246_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_SMUGGLING_AUDIT.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `c7071ec3efb285d0db35902987bb0814544fc0250055a906385749c2b1da6b10`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-ONTOLOGY-LAW-PACKET` ``
+- Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-post-gate-metricformassign-geff-candidate-smuggling-audit.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-27T05:08:00Z`
