@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-213"
+status: "completed"
+input_artifact: "research_control/tasks/RT-20260614-212/artifacts/241_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_SIGSCALECONT_METRICFORMASSIGN_REFUTER_STRESS_TEST.tex"
+classification:
+  candidate: "MetricFormAssign_src^{GSC}"
+  construction_status: "proposal-only formalized in RT-20260614-210"
+  audit_status: "source-pure as written in RT-20260614-211"
+  stress_status: "metricformassign_stress_survived_proposal_only_pending_selector in RT-20260614-212"
+  selected_route: "source_extension_human_gate_narrow_metricformassign_evidence_status_review"
+reasoning:
+  - "The formalization audit and stress sequence for the declared metric-form assignment candidate is complete under the proposal-only scope."
+  - "The Refuter artifact does not identify a lower-authority repair defect or scoped obstruction; it instead records stress survival with fail-closed conditions."
+  - "A Candidate Constructor g_eff attempt is premature because MetricFormAssign_src^{GSC} remains proposal-only and unaccepted as scoped source-extension metric-form evidence."
+  - "The lowest-authority route adding new decision information is a narrow Gate Chair evidence-status/precondition review."
+claim_boundary_preserved: true
+selected_next_packet_type: "source_extension_human_gate"
+selected_next_role: "gate-chair@0.1.0"
+blocked_overreads:
+  - "MetricFormAssign_src^{GSC} adoption"
+  - "MetricData(E) adoption"
+  - "SigScaleCont_src^{GSC} source-law adoption"
+  - "g_eff definition"
+  - "g_eff construction"
+  - "downstream GR promotion"
