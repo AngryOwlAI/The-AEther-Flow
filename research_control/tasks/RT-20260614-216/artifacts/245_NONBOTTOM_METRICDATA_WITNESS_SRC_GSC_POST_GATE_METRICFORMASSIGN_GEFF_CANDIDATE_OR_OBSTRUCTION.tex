@@ -1,0 +1,216 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\MetricDataCand}{\mathrm{MetricData}^{\mathrm{GSC\mbox{-}cand}}_{\mathrm{src}}}
+\newcommand{\SigScaleCont}{\mathrm{SigScaleCont}^{\mathrm{GSC}}_{\mathrm{src}}}
+\newcommand{\MetricFormAssign}{\mathrm{MetricFormAssign}^{\mathrm{GSC}}_{\mathrm{src}}}
+\newcommand{\Qsrc}{Q_{\mathrm{src}}}
+\newcommand{\Tsrc}{T_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathrm{GSC\mbox{-}cand}}}
+\newcommand{\OBGEFF}{\mathrm{OB\mbox{-}GEFF}}
+
+\title{Post-MetricFormAssign \texorpdfstring{$g_{\mathrm{eff}}$}{g_eff} Candidate or Obstruction}
+\author{Research Control Task RT-20260614-216}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section*{Authority and Scope}
+
+This packet is a bounded Candidate Constructor output for the
+\texttt{effective\_metric\_g\_eff} burden. It consumes the
+post-MetricFormAssign route selector in
+\texttt{RT-20260614-215} and constructs exactly one draft/control source-side
+candidate record:
+\[
+  \geffCand(E;\Gbeta,\Tsrc(E)).
+\]
+The construction is audit-pending only. It does not adopt \(\geff\), does not
+adopt \(\mathrm{MetricData}(E)\), does not adopt \(\MetricFormAssign\) or
+\(\SigScaleCont\) as source law, does not import a target Lorentzian metric,
+does not derive matter coupling, does not derive Einstein equations, and does
+not promote benchmark or completed-derivation claims.
+
+\section*{Accepted Scoped Inputs}
+
+The packet uses the following as bounded source-extension inputs only:
+
+\begin{enumerate}[label=\textbf{I\arabic*.}]
+  \item accepted scoped \(\mathrm{MetricData}(E)\) evidence under the
+  beta-separated marked finite-graph route;
+  \item accepted scoped \(\SigScaleCont\) selector evidence/precondition,
+  supplying source-side signature, scale, and continuity tokens;
+  \item accepted scoped \(\MetricFormAssign\) metric-form-assignment
+  evidence/precondition, supplying a source-side metric-form record
+  \(\Qsrc(E)\), pairing data, transport obligation, nondegeneracy or
+  controlled-bottom certificate, and fail-closed bottom behavior;
+  \item declared source-side transition data \(\Tsrc(E)\).
+\end{enumerate}
+
+No input above is promoted from scoped evidence/precondition to canonical
+source law.
+
+\begin{definition}[Declared Source Package]
+A declared source package for this packet is a tuple
+\[
+E_{\mathrm{decl}} =
+(\Gbeta,\MetricDataCand(E;\Gbeta),\SigScaleCont(E),\MetricFormAssign(E),
+\Tsrc(E),\rho_E),
+\]
+where \(\rho_E\) is a receipt that the package is used only inside the declared
+source-extension scope. If any required component is absent, ambiguous outside
+the declared source scope, or dependent on target metric, atlas, proper-time,
+detector, or benchmark semantics, the package evaluates to \(\BottomSrc\).
+\end{definition}
+
+\begin{definition}[Draft/Control Candidate Record]
+For a declared source package \(E_{\mathrm{decl}}\), define the audit-ready
+candidate record
+\[
+  \geffCand(E;\Gbeta,\Tsrc(E)) =
+  (D_E,Q_E,S_E,\Theta_E,N_E,B_E,F_E,C_E,O_E,L_E)
+\]
+when all non-bottom source slots below are supplied:
+\begin{itemize}
+  \item \(D_E\): the scoped source carrier from the accepted
+  \(\mathrm{MetricData}(E)\) evidence;
+  \item \(Q_E := \Qsrc(E)\): the source metric-form record from scoped
+  \(\MetricFormAssign\) evidence/precondition;
+  \item \(S_E\): the source signature, scale, and continuity token record from
+  scoped \(\SigScaleCont\) evidence/precondition;
+  \item \(\Theta_E\): the declared source transition/transport record
+  associated with \(\Tsrc(E)\);
+  \item \(N_E\): the source nondegeneracy or controlled-bottom certificate;
+  \item \(B_E\): the fail-closed bottom rule sending underdetermined or
+  target-importing cases to \(\BottomSrc\);
+  \item \(F_E\): the finite-scope receipt tying the construction to the
+  declared beta-separated marked finite-graph context only;
+  \item \(C_E\): the no-target-import certificate;
+  \item \(O_E\): the obstruction fallback label family
+  \(\OBGEFF\mbox{-}*\);
+  \item \(L_E\): the limitation record stating draft/control only, pending
+  Smuggling Auditor audit.
+\end{itemize}
+If any slot fails, the construction returns either \(\BottomSrc\) or the
+minimal precise obstruction label in \(O_E\).
+\end{definition}
+
+\section*{Construction Lemmas}
+
+\begin{lemma}[Source-Record Assembly]
+If \(D_E\), \(Q_E\), \(S_E\), \(\Theta_E\), \(N_E\), \(B_E\), \(F_E\),
+\(C_E\), \(O_E\), and \(L_E\) are all supplied by the accepted scoped evidence
+stack and declared source-side transition data, then
+\(\geffCand(E;\Gbeta,\Tsrc(E))\) is a well-formed draft/control source-side
+record.
+\end{lemma}
+
+\begin{proof}
+Each slot is typed by source-side data in the declared package. The record is
+well formed because its carrier, form, selector, transport, bottom behavior,
+finite-scope receipt, no-target-import certificate, obstruction fallback, and
+limitation record are explicit. The proof does not require target metric,
+proper-time, detector, matter-coupling, or benchmark semantics.
+\end{proof}
+
+\begin{lemma}[Fail-Closed No-Target Rule]
+If any slot of \(\geffCand\) requires target topology, target atlas, target
+transition maps, Lorentzian metric import, proper time, detector semantics, or
+benchmark success, then the candidate record is not constructed and the packet
+returns \(\BottomSrc\) or a precise \(\OBGEFF\mbox{-}*\) obstruction.
+\end{lemma}
+
+\begin{proof}
+This is exactly the rule encoded by \(B_E\), \(C_E\), and \(O_E\). Those slots
+are part of the candidate record rather than downstream interpretation.
+\end{proof}
+
+\begin{lemma}[Source-Transition Audit Obligation]
+The tuple \((Q_E,S_E,\Theta_E)\) states only a source-side transport obligation
+under declared transitions. It is not a proof of target covariance, not an
+adoption of \(\MetricFormAssign\) or \(\SigScaleCont\) as source law, and not a
+field-equation statement.
+\end{lemma}
+
+\begin{proof}
+The transition data are declared inside \(\Tsrc(E)\) and remain under
+draft/control limitation \(L_E\). Any stronger covariance or physical
+interpretation would require later audit, stress, and gate authority.
+\end{proof}
+
+\begin{proposition}[Candidate Constructor Result]
+Under the accepted scoped evidence stack and declared source-side transition
+data inspected in this packet, the previous obstruction
+\[
+\OBGEFF\mbox{-}\mathrm{SOURCE\mbox{-}METRIC\mbox{-}FORM\mbox{-}UNDERDETERMINED}
+\]
+is narrowed: a draft/control source-side candidate record
+\(\geffCand(E;\Gbeta,\Tsrc(E))\) can be assembled as above. The result is
+\emph{constructed\_candidate\_pending\_audit}.
+\end{proposition}
+
+\begin{proof}
+The prior obstruction arose because a source-side metric-form assignment was
+not yet available. The scoped \(\MetricFormAssign\) evidence/precondition now
+supplies \(Q_E\), pairing/transport obligations, and nondegeneracy or
+controlled-bottom certificates as bounded input. Combining these with the
+scoped \(\mathrm{MetricData}(E)\) carrier, scoped \(\SigScaleCont\) selector
+tokens, and declared transition data supplies every candidate slot in the
+definition. The limitation record keeps the result draft/control and
+audit-pending, so no adoption or downstream promotion follows.
+\end{proof}
+
+\section*{Machine-Readable Result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  construction_status: "draft/control only pending Smuggling Auditor audit"
+  prior_obstruction_narrowed:
+    - "OB-GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED"
+  obstruction_record:
+    present: false
+    obstruction_id: ""
+  source_slots:
+    carrier: "D_E from scoped MetricData(E) source carrier"
+    metric_form_record: "Q_E := Q_src(E) from scoped MetricFormAssign_src^{GSC}"
+    signature_scale_continuity_record: "S_E from scoped SigScaleCont_src^{GSC}"
+    transition_record: "Theta_E from declared source transition data T_src(E)"
+    nondegeneracy_bottom_record: "N_E and B_E"
+    no_target_import_certificate: "C_E"
+    limitation_record: "L_E"
+  g_eff_adopted: false
+  MetricData_E_adopted: false
+  MetricFormAssign_source_law_adopted: false
+  SigScaleCont_source_law_adopted: false
+  matter_coupling_derived: false
+  Einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  next_required_role: "smuggling-auditor@0.2.0"
+  no_fog_check: true
+\end{verbatim}
+
+\section*{Distance-to-GR Status}
+
+This packet changes the \(g_{\mathrm{eff}}\) burden from
+``accepted scoped evidence stack only, candidate not constructed'' to
+``draft/control candidate constructed pending audit''. It does not unlock
+matter coupling, Einstein equations, benchmark promotion, or completed
+derivation. The logical next packet is a Smuggling Auditor audit of the
+candidate record.
+
+\end{document}

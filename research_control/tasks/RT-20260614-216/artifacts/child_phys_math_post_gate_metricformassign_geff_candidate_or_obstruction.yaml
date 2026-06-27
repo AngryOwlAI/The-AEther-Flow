@@ -1,0 +1,34 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-216"
+status: "completed"
+verdict: "constructed_candidate_pending_audit"
+result_type: "constructed_candidate"
+constructed_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+analysis:
+  - "The accepted scoped MetricData(E) evidence supplies only a declared source data carrier under the beta-separated marked finite-graph scope."
+  - "The accepted scoped SigScaleCont_src^{GSC} evidence supplies selector-side signature, scale, and continuity tokens as bounded precondition input only."
+  - "The accepted scoped MetricFormAssign_src^{GSC} evidence supplies Q_src(E), pairing data, transport obligation, nondegeneracy or controlled-bottom certificate, and fail-closed bottom behavior as bounded precondition input only."
+  - "Together these inputs determine an audit-ready source-side candidate record, provided each slot is treated as draft/control and no slot is reinterpreted as a target Lorentzian metric, proper-time structure, detector semantics, or empirical benchmark."
+candidate_slots:
+  carrier: "D_E from scoped MetricData(E) source carrier"
+  metric_form_record: "Q_E := Q_src(E) from scoped MetricFormAssign_src^{GSC} evidence/precondition"
+  signature_scale_continuity_record: "S_E from scoped SigScaleCont_src^{GSC} evidence/precondition"
+  transition_record: "Theta_E from declared source-side transition data T_src(E)"
+  nondegeneracy_bottom_record: "N_E from MetricFormAssign nondegeneracy or controlled Bottom_src certificate"
+  no_target_import_certificate: "C_E"
+  limitation_record: "L_E states draft/control only pending audit"
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  reason: "The previously precise metric-form obstruction is narrowed by accepted scoped MetricFormAssign evidence/precondition, so a draft/control candidate can be assembled without target import as written."
+claim_boundary:
+  g_eff_adopted: false
+  MetricData_E_adopted: false
+  MetricFormAssign_source_law_adopted: false
+  SigScaleCont_source_law_adopted: false
+  matter_coupling_derived: false
+  Einstein_equations_derived: false
+  benchmark_promoted: false
+next_required_role: "smuggling-auditor@0.2.0"
+notes: "The mathematical child output supports construction only at draft/control candidate-record level and requires a source-purity audit before stress or gate review."
