@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `ontology_source`
 - Authority status: `canonical`
 - Owner skill: `tex-wiki`
-- Source hash: `2383e5806808fcbc94c3c407601de50abefc26ea86754118dded44a65cdd96a0`
+- Source hash: `b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2`
 
 ## Related Objects
 
@@ -21,4 +21,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-27T15:59:47Z`
+- Last validated at: `2026-06-27T17:25:22Z`
