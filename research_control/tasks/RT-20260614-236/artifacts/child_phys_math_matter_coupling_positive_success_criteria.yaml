@@ -1,0 +1,35 @@
+artifact_id: "child_phys_math_matter_coupling_positive_success_criteria"
+artifact_type: "parent_child_internal_output"
+task_id: "RT-20260614-236"
+job_id: "AJ-RT-20260614-236-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+summary: "Defines the formal source-side objects, criteria classes, finite/local tests, and eligibility theorem for positive matter-coupling success criteria."
+formal_objects:
+  - "source matter-like response sector S in SrcMatterSec(E)"
+  - "source coupling-token record j in J_E(S)"
+  - "source token-semantics map Sem_E"
+  - "admissibility predicate A_E"
+  - "source transition transport Theta_E"
+  - "compatibility kernel K_E relative only to scoped g_eff source-extension input"
+  - "bottom and obstruction label family OB-MC-*"
+criteria:
+  necessary:
+    - "NC-MC-001 source-intrinsic token semantics"
+    - "NC-MC-002 nontrivial admissibility"
+    - "NC-MC-003 transition coherence or fail-closed bottom"
+    - "NC-MC-004 universality analogue across admissible source sectors"
+    - "NC-MC-005 metric compatibility boundary without target metric import"
+    - "NC-MC-006 conservation-like source obligation when conservation is used"
+    - "NC-MC-007 empirical-semantics separation"
+    - "NC-MC-008 bottom and obstruction completeness"
+  candidate_sufficient_profile:
+    - "CS-MC-001 simultaneous satisfaction of NC-MC-001 through NC-MC-008 for a declared finite/local source family"
+    - "CS-MC-002 proof obligations are stable under declared source transitions"
+    - "CS-MC-003 every non-source repair branch maps to bottom or a precise obstruction"
+future_physical_bridge_obligations:
+  - "derive empirical matter-sector interpretation separately or obtain explicit gate"
+  - "derive stress-energy or matter action separately or obtain explicit gate"
+  - "derive field equations separately after upstream burdens are met"
+claim_boundary_preserved: true

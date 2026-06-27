@@ -1,0 +1,396 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLaw}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\SrcMatterSec}{\mathrm{SrcMatterSec}}
+\newcommand{\Tok}{\mathrm{Tok}}
+\newcommand{\Sem}{\mathrm{Sem}}
+\newcommand{\Adm}{\mathrm{Adm}}
+\newcommand{\Trans}{\mathrm{Trans}}
+\newcommand{\Compat}{\mathrm{Compat}}
+\newcommand{\ConsSrc}{\mathrm{Cons}_{\mathrm{src}}}
+\newcommand{\OBMC}{\mathrm{OB}\mbox{-}\mathrm{MC}}
+\newcommand{\Eligible}{\mathrm{Eligible}_{\mathrm{P7T2}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{criterion}{Criterion}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Positive Source-Side Matter-Coupling Success Criteria}
+\author{Ontology Formalizer Packet RT-20260614-236}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements \texttt{PLAN-P7-T1} as one bounded Ontology
+Formalizer packet. It defines positive source-side matter-coupling success
+criteria after the Gate Chair accepted
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+only as scoped source-extension coupling-law-candidate evidence/precondition.
+
+The artifact is \texttt{draft/control}. It defines obligations and tests only.
+It does not adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, adopt \(\MetricData(E)\), change scoped \(\geff\),
+derive Einstein equations, promote benchmark status, issue a benchmark Gate
+Chair verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control positive success criteria"
+related_plan_task_id: "PLAN-P7-T1"
+CouplingLaw_src_GSC_cand_status:
+  "accepted scoped source-extension coupling-law-candidate evidence/precondition only"
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Source-Side Objects}
+
+\begin{definition}[Source matter-like response sector]
+For a source package \(E\), a source matter-like response sector is an element
+\[
+  S \in \SrcMatterSec(E).
+\]
+The set \(\SrcMatterSec(E)\) is a source-side indexing family for response
+syntax that a later packet may try to couple. It is not an empirical matter
+sector, not a detector model, not a stress-energy carrier, not a matter action,
+and not a target-space field.
+\end{definition}
+
+\begin{definition}[Coupling-token system]
+For each \(S\in\SrcMatterSec(E)\), let
+\[
+  \Tok_E(S)
+\]
+be the source coupling-token records for \(S\). A record
+\(j\in\Tok_E(S)\) has positive source content only through the source
+semantics map
+\[
+  \Sem_E:\coprod_{S\in\SrcMatterSec(E)}\Tok_E(S)\to \mathcal{I}_E,
+\]
+where \(\mathcal{I}_E\) is a source-defined interpretation domain. The map
+\(\Sem_E\) must be stronger than bare labels because it must distinguish at
+least two source cases, and weaker than stress-energy because its codomain is
+not a tensor, action, detector calibration, empirical matter field, or target
+metric datum.
+\end{definition}
+
+\begin{definition}[Admissibility and transition data]
+For \(j\in\Tok_E(S)\) and \(j'\in\Tok_E(S')\), write
+\[
+  j\leadsto_E j'
+  \quad\text{iff}\quad
+  \Adm_E(j,j')=\mathsf{true}.
+\]
+The predicate \(\Adm_E\) is a source-side admissibility relation. Source
+transition data are written
+\[
+  \Trans_E(\tau,j)=\tau_\ast j
+\]
+for declared \(\tau\in T_{\mathrm{src}}(E)\). The compatibility kernel
+\(\Compat_E\) may reference prior scoped \(\geff\) source-extension input only
+as a bounded source-side compatibility record. It may not import target metric
+semantics or expand \(\geff\) scope.
+\end{definition}
+
+\begin{definition}[Bottom and obstruction labels]
+Every ambiguous, degenerate, target-repaired, detector-repaired,
+benchmark-repaired, adoption-repaired, process-repaired, or underdeclared
+branch maps to
+\[
+  \BottomSrc
+  \quad\text{or to a precise label}\quad
+  \OBMC\mbox{-}\ast .
+\]
+These labels are diagnostic control objects. They are not global no-go
+theorems unless a later Refuter packet proves that stronger claim under an
+authorized scope.
+\end{definition}
+
+\section{Obligation Classes}
+
+The criteria below are divided into three classes.
+
+\begin{description}[leftmargin=*]
+  \item[Necessary criteria.] A later source-side matter-coupling candidate
+  must satisfy these before it may be treated as a positive candidate for the
+  \texttt{matter\_coupling} burden.
+  \item[Candidate sufficient profiles.] These are finite/local profiles that
+  would make a candidate eligible for Candidate Constructor repair or
+  strengthening review. They do not imply adoption.
+  \item[Future physical bridge obligations.] These name later obligations
+  needed for empirical matter semantics, stress-energy, actions, conservation
+  laws, or field equations. They are not discharged here.
+\end{description}
+
+No criterion is discharged merely by being listed in this artifact. A later
+packet must either prove the criterion for a declared candidate and source
+family, return a precise obstruction, or fail closed.
+
+\section{Necessary Criteria}
+
+\begin{longtable}{p{0.18\linewidth}p{0.34\linewidth}p{0.38\linewidth}}
+\toprule
+ID & Criterion & Finite/local test \\
+\midrule
+NC-MC-001 &
+Source-intrinsic token semantics. \(\Sem_E\) must assign source-defined
+interpretation stronger than bare labels and weaker than imported
+stress-energy. &
+Exhibit two tokens \(j_1,j_2\) with distinct source interpretations and show
+that no coordinate, target metric, stress-energy tensor, matter action,
+detector calibration, or benchmark behavior is used to distinguish them. \\
+\addlinespace
+NC-MC-002 &
+Nontrivial admissibility. \(\Adm_E\) must admit at least one update and reject
+at least one update for source-intrinsic reasons. &
+Provide \(j\leadsto_E j'\) and \(k\not\leadsto_E k'\), and cite the source
+records deciding both outcomes. If every update is admitted or every update is
+rejected, record \(\OBMC\)-ADMISSIBILITY-DEGENERATE. \\
+\addlinespace
+NC-MC-003 &
+Transition coherence. Coupling-token updates must commute with declared source
+transitions or fail closed. &
+For each declared \(\tau\), verify that
+\[
+  j\leadsto_E j' \Rightarrow
+  \tau_\ast j\leadsto_{\tau E}\tau_\ast j'
+\]
+where both sides are defined. If a transition lacks source data, return
+\(\BottomSrc\) or \(\OBMC\)-TRANSITION-COHERENCE rather than target-atlas
+repair. \\
+\addlinespace
+NC-MC-004 &
+Universality analogue. The same source-side rule must apply across admissible
+source matter-like response sectors. &
+Select a finite family \(S_1,\ldots,S_n\in\SrcMatterSec(E)\). Show that the
+same \(\Sem_E,\Adm_E,\Trans_E,\Compat_E\) schema acts on all sectors, with
+sector parameters declared source-side. Hand-tailored rules per sector return
+\(\OBMC\)-NONUNIVERSAL. \\
+\addlinespace
+NC-MC-005 &
+Metric compatibility boundary. Scoped \(\geff\) compatibility may be used only
+as bounded source-extension compatibility, not as target metric semantics. &
+List every use of \(\Compat_E\). Each use must reference prior scoped
+source-extension data only. Any appeal to Lorentzian signature, proper time,
+target geodesics, stress-energy coupling, or target metric covariance returns
+\(\OBMC\)-TARGET-METRIC-IMPORT. \\
+\addlinespace
+NC-MC-006 &
+Conservation-like source obligation. If conservation is invoked, it must be a
+source-side analogue \(\ConsSrc_E\), not a stress-energy or Bianchi identity. &
+Either omit conservation claims or define
+\(\ConsSrc_E(j,j',\tau)\) as a source invariant. Verify it over the declared
+finite/local family. Any stress-energy conservation, divergence-free tensor,
+Bianchi identity, or action principle import returns
+\(\OBMC\)-CONSERVATION-IMPORT. \\
+\addlinespace
+NC-MC-007 &
+Empirical-semantics separation. Matter-sector, detector, or empirical
+semantics remain absent until separately derived or gated. &
+Scan each non-bottom branch for empirical detector semantics, measured matter
+fields, matter actions, particle content, calibration, or benchmark fit. Any
+such term must be absent, explicitly gated, or mapped to \(\BottomSrc\). \\
+\addlinespace
+NC-MC-008 &
+Bottom and obstruction completeness. All ambiguous, degenerate, target-repaired,
+detector-repaired, benchmark-repaired, adoption-repaired, and process-repaired
+cases fail closed. &
+For each forbidden repair class, provide a branch to \(\BottomSrc\) or a
+precise \(\OBMC\)-label. Validator, registry, role, handoff, approval, local
+cache, file order, or commit status cannot repair a branch. \\
+\bottomrule
+\end{longtable}
+
+\section{Candidate Sufficient Profiles}
+
+\begin{criterion}[Finite/local source-coupling eligibility profile]
+A candidate \(C_E\) is eligible for the next Candidate Constructor repair or
+strengthening packet only if, for a declared finite/local family
+\(\mathcal{F}_E\subseteq\SrcMatterSec(E)\), it supplies:
+\begin{enumerate}[leftmargin=*]
+  \item definitions of \(\Tok_E(S)\), \(\Sem_E\), \(\Adm_E\), \(\Trans_E\),
+  \(\Compat_E\), and bottom labels for every \(S\in\mathcal{F}_E\);
+  \item evidence for NC-MC-001 through NC-MC-008 on \(\mathcal{F}_E\);
+  \item an explicit list of undischarged future physical bridge obligations;
+  \item a no-target-import certificate for every non-bottom branch; and
+  \item a limitation record stating that eligibility is not adoption.
+\end{enumerate}
+\end{criterion}
+
+\begin{criterion}[Candidate sufficient profile for repair]
+A repair or strengthening packet may claim a candidate sufficient profile only
+when it proves finite/local eligibility and identifies exactly which criteria
+remain provisional. The profile is sufficient only for subsequent audit or
+stress routing. It is not sufficient for coupling-law adoption or
+matter-coupling derivation.
+\end{criterion}
+
+\begin{theorem}[Criteria-first eligibility theorem]
+Let \(C_E\) be a later draft/control candidate for source-side matter coupling.
+Suppose \(C_E\) satisfies NC-MC-001 through NC-MC-008 on a declared finite/local
+family \(\mathcal{F}_E\), supplies a candidate sufficient profile, and records
+all future physical bridge obligations as undischarged unless separately
+proved or explicitly gated. Then \(C_E\) is eligible only for bounded
+Candidate Constructor repair or strengthening, Smuggling Auditor review, or
+Refuter stress routing:
+\[
+  C_E \in \Eligible(E,\mathcal{F}_E).
+\]
+This eligibility does not adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, adopt \(\MetricData(E)\), change
+scoped \(\geff\), derive Einstein equations, promote benchmark status, or
+claim completed derivation.
+\end{theorem}
+
+\begin{proof}
+NC-MC-001 gives source-intrinsic interpretation and blocks bare-label
+emptiness. NC-MC-002 gives a nontrivial admissibility predicate. NC-MC-003
+requires source transition coherence or fail-closed bottom behavior. NC-MC-004
+prevents hand-tailored sector rules. NC-MC-005 prevents target metric import
+and preserves scoped \(\geff\). NC-MC-006 blocks stress-energy or Bianchi
+substitution for source conservation. NC-MC-007 separates source syntax from
+empirical matter semantics. NC-MC-008 closes forbidden repair branches. The
+candidate sufficient profile then supplies a finite/local domain over which
+these checks can be audited or stressed. None of these hypotheses supplies a
+human-gated adoption verdict, empirical matter semantics, stress-energy
+tensor, matter action, variational field equation, benchmark verdict, or
+completed derivation. Therefore the only authorized conclusion is eligibility
+for bounded follow-up routing.
+\end{proof}
+
+\section{Future Physical Bridge Obligations}
+
+The following obligations remain future work:
+
+\begin{enumerate}[leftmargin=*]
+  \item derive or explicitly gate empirical matter-sector semantics;
+  \item derive or explicitly gate detector interpretation;
+  \item derive or explicitly gate stress-energy tensors, matter actions, and
+  conservation laws if they are needed;
+  \item derive compatibility with any adopted effective metric under its
+  actual scoped authority, without expanding \(\geff\) by implication;
+  \item derive field equations separately, after upstream source-side
+  structures and matter semantics exist;
+  \item obtain any protected Gate Chair review before adoption, benchmark
+  promotion, benchmark closure, or completed-derivation language.
+\end{enumerate}
+
+These are bridge obligations, not hidden premises of this criteria artifact.
+
+\section{Relation to Prior Scoped Evidence}
+
+The prior \(\CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))\) candidate supplies
+accepted scoped evidence/precondition status only. This packet uses that status
+to define what a later repair or strengthening attempt must satisfy. It does
+not convert the candidate into an adopted law and does not assert that the
+candidate already satisfies NC-MC-001 through NC-MC-008.
+
+\section{Forbidden Shortcuts}
+
+The following shortcuts are invalid under this packet:
+
+\begin{itemize}[leftmargin=*]
+  \item treating source coupling-token syntax as stress-energy semantics;
+  \item treating scoped \(\geff\) compatibility as target metric semantics;
+  \item treating admissibility as empirical matter-sector dynamics;
+  \item using target topology, target atlas, Lorentzian signature, proper
+  time, target covariance, matter action, detector calibration, benchmark fit,
+  or field equations as source premises;
+  \item using validator PASS, registry rows, role identity, handoff status,
+  approval status, local caches, file order, commit status, generated wiki
+  notes, generated semantic extracts, PDFs, or HTML derivatives as
+  mathematical evidence;
+  \item treating evidence/precondition acceptance as coupling-law adoption;
+  \item treating criteria listing as criteria discharge.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Positive source-side success criteria are now formalized as draft/control obligations; no coupling law or matter coupling is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Unchanged. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No benchmark closure or adoption verdict is issued. \\
+current route freeze or hard-fail status & Not frozen; a Candidate Constructor repair-or-obstruction packet is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+This packet discharges the local criteria-formalization burden for
+\texttt{PLAN-P7-T1}: it defines positive source-side matter-coupling success
+criteria, finite/local tests, candidate sufficient profiles, and future
+physical bridge obligations. It leaves the next substantive burden to
+\texttt{PLAN-P7-T2}: repair or strengthen
+\(\CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))\) against these criteria, or
+return one precise obstruction.
+
+No coupling-law adoption, matter-coupling derivation or adoption,
+stress-energy semantics, \(\MetricData(E)\) adoption, scoped-\(\geff\) change,
+Einstein-equation derivation, benchmark promotion, benchmark Gate Chair
+closure, completed derivation, future source-extension impossibility, or
+global theory rejection occurs here.
+
+\section{APA 7 References}
+
+Gate Chair Packet RT-20260614-234. (2026). \emph{Gate Chair review of scoped
+coupling-law candidate evidence} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-236. (2026). \emph{Positive
+source-side matter-coupling success criteria} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Refuter Packet RT-20260614-232. (2026). \emph{Refuter stress test of
+post-precondition-evidence source-side coupling-law candidate}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Research Control Task RT-20260614-230. (2026). \emph{Post-precondition-evidence
+source-side coupling-law candidate or obstruction} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research, v10} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \emph{Handoff 0268}
+[Internal research-control handoff].
+
+\end{document}
