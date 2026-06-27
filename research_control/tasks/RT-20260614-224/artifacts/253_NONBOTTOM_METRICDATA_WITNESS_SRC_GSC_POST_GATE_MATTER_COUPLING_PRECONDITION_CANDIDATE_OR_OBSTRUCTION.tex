@@ -1,0 +1,289 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\CouplingPrecond}{\mathrm{CouplingPrecond}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OB}{\mathrm{OB}\mbox{-}\mathrm{COUPLING}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+\title{Post-Scoped-\texorpdfstring{$g_{\mathrm{eff}}$}{g_eff} Source-Side Matter-Coupling Precondition Candidate}
+\author{Research Control Task RT-20260614-224}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the Candidate Constructor output for
+\texttt{RT-20260614-224}. It constructs one draft/control source-side
+matter-coupling precondition candidate
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+from the scoped source-extension object
+\[
+  \geffCand(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+and existing response/localization context. It does not construct or adopt a
+coupling law.
+
+\begin{verbatim}
+candidate_constructor_result: "constructed_candidate"
+constructed_object: "CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+claim_status: "draft/control"
+coupling_law_adopted: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Accepted Input Boundary}
+
+The only metric-adjacent input is the scoped source-extension \(\geff\) object
+adopted in \texttt{RT-20260614-222}. That verdict is bounded input only. It is
+not canonical ontology, not \(\mathrm{MetricData}(E)\) adoption, not
+\(\mathrm{MetricFormAssign}_{\mathrm{src}}^{\mathsf{GSC}}\) or
+\(\mathrm{SigScaleCont}_{\mathrm{src}}^{\mathsf{GSC}}\) source-law adoption,
+not a universal matter sector, not stress-energy semantics, not Einstein
+equations, not benchmark promotion, and not completed derivation.
+
+The response/localization context is also bounded source-side context only:
+source-localization and response records may name source support and source
+response syntax, but they do not supply detector semantics, proper time,
+empirical matter fields, or target stress-energy tensors.
+
+\section{Forbidden Overreads}
+
+This packet forbids the following inferences:
+
+\begin{itemize}[leftmargin=*]
+  \item scoped \(\geff\) adoption implies matter coupling;
+  \item a precondition record is a coupling law;
+  \item response syntax is detector semantics;
+  \item source coupling-token syntax is stress-energy;
+  \item transition compatibility is target-atlas covariance;
+  \item non-bottom source status is Lorentzian nondegeneracy;
+  \item audit-pending source-extension data is Einstein-equation evidence;
+  \item validator, registry, role, handoff, approval, local-cache, file-order,
+  or commit status is a mathematical premise.
+\end{itemize}
+
+\section{Precondition Schema}
+
+\begin{definition}[Declared input package]
+A declared post-scoped-\(\geff\) source package is a tuple
+\[
+  E_{\mathrm{decl}}=
+  (E,\Gbeta,T_{\mathrm{src}}(E),\geffCand(E;\Gbeta,T_{\mathrm{src}}(E)),
+  R_E,L_E)
+\]
+where \(E\) is the active source event or source package label, \(\Gbeta\) is
+the declared beta-separated marked finite graph context inherited from the
+accepted source-extension chain, \(T_{\mathrm{src}}(E)\) is the declared
+source transition data, \(\geffCand\) is the adopted scoped source-extension
+\(\geff\) object, \(R_E\) is the response-context record available only as
+source-side syntax, and \(L_E\) is the localization-context record available
+only as source-side support.
+\end{definition}
+
+\begin{definition}[Matter-coupling precondition candidate]
+For a declared package \(E_{\mathrm{decl}}\), define
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E)) :=
+  (C_E,R^{\mathrm{src}}_E,J^{\mathrm{src}}_E,G_E,I_E,B_E,N_E,O_E,\Lambda_E).
+\]
+The slots are:
+\begin{description}[leftmargin=*]
+  \item[\(C_E\)] the source support carrier: source vertices, source events,
+  and source support regions admitted by the current source package.
+  \item[\(R^{\mathrm{src}}_E\)] the response/localization context record,
+  restricted to source syntax and support data.
+  \item[\(J^{\mathrm{src}}_E\)] a source coupling-token interface: labels for
+  future source-side matter-response tokens, their source support, and their
+  permitted interaction with scoped \(\geff\). These labels are not stress-energy
+  semantics and not a matter sector.
+  \item[\(G_E\)] a scoped-\(\geff\) compatibility record: the precondition may
+  reference \(\geffCand\) only as bounded source-extension input and may not
+  promote it to a universal coupling metric.
+  \item[\(I_E\)] a source transition compatibility record under
+  \(T_{\mathrm{src}}(E)\), using source relabeling and marked-source transport
+  only.
+  \item[\(B_E\)] a controlled bottom table for absent, ambiguous, noncoherent,
+  target-repaired, detector-repaired, or process-repaired input.
+  \item[\(N_E\)] a no-target-import certificate.
+  \item[\(O_E\)] a precise obstruction label family
+  \(\OB\text{-}\ast\) for failed precondition components.
+  \item[\(\Lambda_E\)] a limitation record stating all downstream blocked
+  claims.
+\end{description}
+\end{definition}
+
+\section{Component Table}
+
+\begin{longtable}{p{0.24\linewidth}p{0.34\linewidth}p{0.28\linewidth}}
+\toprule
+Component & Positive content & Failure branch \\
+\midrule
+Scoped \(\geff\) input & \(\geffCand\) is used only as adopted scoped
+source-extension input. & \(\OB\)-SCOPED-GEFF-INSUFFICIENT \\
+Response/localization context & \(R^{\mathrm{src}}_E\) records source-side
+response and localization context without detector semantics. &
+\(\OB\)-RESPONSE-CONTEXT-UNDERDETERMINED \\
+Source coupling-token interface & \(J^{\mathrm{src}}_E\) names only
+source-side token support and compatibility slots for later audit. &
+\(\OB\)-SOURCE-COUPLING-TOKEN-UNDERDETERMINED \\
+Transition compatibility & \(I_E\) transports slots by admitted source
+transition data only. & \(\OB\)-TRANSITION-COMPATIBILITY-FAILURE \\
+Controlled bottom & \(B_E\) returns \(\BottomSrc\) or an obstruction label when
+data are absent, incoherent, target-repaired, or process-repaired. &
+\(\OB\)-BOTTOM-CONTROL-FAILURE \\
+No-target import & \(N_E\) refuses target topology, target atlas, target
+metric, Lorentzian signature, proper time, detector semantics, benchmark fit,
+and stress-energy tensors. & \(\OB\)-TARGET-IMPORT \\
+\bottomrule
+\end{longtable}
+
+\section{Construction}
+
+\begin{proposition}[Audit-ready precondition candidate]
+For a declared source package \(E_{\mathrm{decl}}\) with scoped
+\(\geffCand(E;\Gbeta,T_{\mathrm{src}}(E))\), source-side response/localization
+context, coherent source transition data, and no-target-import certificate,
+the tuple \(\CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E))\) is a well-formed
+draft/control source-side matter-coupling precondition candidate.
+\end{proposition}
+
+\begin{proof}
+Construct \(C_E\) from the declared source support. Construct
+\(R^{\mathrm{src}}_E\) by recording only source-side response and localization
+syntax. Construct \(J^{\mathrm{src}}_E\) as a token-interface record for future
+source-side matter-response work; it contains no target stress-energy tensor,
+matter action, empirical detector semantics, or proper-time normalization.
+Construct \(G_E\) by citing scoped \(\geffCand\) only as bounded
+source-extension input. Construct \(I_E\) from admitted source transition data.
+Construct \(B_E\) and \(O_E\) so all absent, ambiguous, noncoherent,
+target-repaired, detector-repaired, benchmark-repaired, or process-repaired
+packages fail closed. Construct \(N_E\) and \(\Lambda_E\) as explicit refusal
+and limitation records.
+
+Every slot is source-side or a refusal record. No slot is a coupling law,
+stress-energy semantics, Einstein equation, target metric, benchmark recovery,
+or adoption verdict. Therefore the tuple is an audit-ready precondition
+candidate and not a promoted physics result.
+\end{proof}
+
+\begin{lemma}[Transition and bottom behavior]
+Under admitted source transitions \(\tau\in T_{\mathrm{src}}(E)\), the
+precondition candidate transforms by source-side relabeling of
+\((C_E,R^{\mathrm{src}}_E,J^{\mathrm{src}}_E,G_E,I_E)\). If such relabeling is
+not coherent, or if coherence requires target atlas, target metric, detector,
+benchmark, validator, registry, role, handoff, approval, local-cache,
+file-order, or commit authority, the candidate returns \(\BottomSrc\) or the
+corresponding \(\OB\)-label.
+\end{lemma}
+
+\section{Obstruction Fallback Family}
+
+The construction reserves these exact obstruction labels for later audit,
+stress, repair, or selector work:
+
+\begin{itemize}[leftmargin=*]
+  \item \(\OB\)-SCOPED-GEFF-INSUFFICIENT;
+  \item \(\OB\)-RESPONSE-CONTEXT-UNDERDETERMINED;
+  \item \(\OB\)-SOURCE-COUPLING-TOKEN-UNDERDETERMINED;
+  \item \(\OB\)-TRANSITION-COMPATIBILITY-FAILURE;
+  \item \(\OB\)-BOTTOM-CONTROL-FAILURE;
+  \item \(\OB\)-TARGET-IMPORT;
+  \item \(\OB\)-COUPLING-LAW-LAUNDERING;
+  \item \(\OB\)-STRESS-ENERGY-SEMANTICS-IMPORT.
+\end{itemize}
+
+No obstruction is asserted by this packet because the precondition record is
+constructed. The labels make failure branches explicit for the required audit
+and any later stress or selector route.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this constructor \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\mathrm{MetricData}(E)\) & Prior accepted scoped source-extension evidence only; not adopted here. \\
+\(\geff\) & Prior accepted scoped source-extension \(\geff\) object only. \\
+Matter coupling & Draft/control precondition candidate constructed pending Smuggling Auditor audit; no coupling law is derived or adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this constructor. \\
+Current route freeze or hard-fail status & Not frozen; audit route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Candidate Constructor Result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path:
+    "research_control/tasks/RT-20260614-224/artifacts/253_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_PRECONDITION_CANDIDATE_OR_OBSTRUCTION.tex"
+  formal_objects:
+    - "CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+    - "source support carrier C_E"
+    - "source response/localization context record R_E"
+    - "source coupling-token interface J_E"
+    - "scoped g_eff compatibility record G_E"
+    - "source transition compatibility record I_E"
+    - "controlled bottom table B_E"
+    - "no-target-import certificate N_E"
+  maps:
+    - "E_decl -> CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+  next_required_role: "smuggling_auditor"
+  no_fog_check: true
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful step is one bounded Smuggling Auditor packet. The audit must
+test hidden stress-energy semantics, target metric import, coupling-law
+adoption laundering, source-law adoption laundering, transition overread,
+non-bottom overread, process authority laundering, and premature downstream GR
+promotion. Audit pass may route to Refuter stress. Audit failure may route to
+repair, precise obstruction classification, or local freeze under the normal
+research-control process.
+
+\section{References}
+
+Gate Chair Packet RT-20260614-222. (2026). \emph{Gate Chair review of scoped
+g\_eff adoption status} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project.
+
+Selector Packet RT-20260614-223. (2026). \emph{Post-scoped-g\_eff route
+selector} [Research-control YAML artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{GR derivation burden map}
+[Internal control note].
+
+\end{document}
