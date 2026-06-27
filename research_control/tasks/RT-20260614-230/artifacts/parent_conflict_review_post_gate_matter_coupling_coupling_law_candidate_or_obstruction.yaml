@@ -1,0 +1,23 @@
+artifact_id: "parent_conflict_review_post_gate_matter_coupling_coupling_law_candidate_or_obstruction"
+artifact_type: "parent_child_conflict_review"
+task_id: "RT-20260614-230"
+created_at: "2026-06-27T09:28:00Z"
+mode: "parent_child_parallel_synthesis"
+children_reviewed:
+  - "research_control/tasks/RT-20260614-230/artifacts/child_phys_math_post_gate_matter_coupling_coupling_law_candidate_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260614-230/artifacts/child_phys_phil_post_gate_matter_coupling_coupling_law_candidate_or_obstruction.yaml"
+conflicts:
+  blocking: []
+  nonblocking: []
+resolution_rounds: 0
+consensus:
+  result_type: "constructed_candidate"
+  object_name: "CouplingLaw_src^{GSC-cand}(E;G^beta,T_src(E))"
+  next_required_role: "smuggling-auditor@0.2.0"
+  claim_boundary: "draft/control candidate construction only; no adoption or downstream GR promotion"
+unresolved_limitations:
+  - "No source-purity audit has been performed on the constructed coupling-law candidate."
+  - "No Refuter stress test has been performed."
+  - "No Gate Chair evidence-status or adoption review is authorized."
+  - "No stress-energy semantics or Einstein-equation derivation is supplied."
+verdict: "no_conflict"

@@ -1,0 +1,362 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\CouplingPrecond}{\mathrm{CouplingPrecond}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\CouplingLaw}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBLAW}{\mathrm{OB}\mbox{-}\mathrm{COUPLING}\mbox{-}\mathrm{LAW}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+\title{Post-Precondition-Evidence Source-Side Coupling-Law Candidate or Obstruction}
+\author{Research Control Task RT-20260614-230}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the Candidate Constructor output for
+\texttt{RT-20260614-230}. It consumes \texttt{handoff-0262} and constructs one
+draft/control source-side coupling-law candidate
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+from accepted scoped matter-coupling-precondition evidence
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E)).
+\]
+The construction is audit-pending only. It does not adopt a coupling law, does
+not derive or adopt matter coupling, does not import stress-energy semantics,
+does not adopt \(\MetricData(E)\), does not expand scoped \(\geff\), does not
+derive Einstein equations, does not promote benchmark status, and does not
+claim completed derivation.
+
+\begin{verbatim}
+candidate_constructor_result: "constructed_candidate"
+constructed_object: "CouplingLaw_src^{GSC-cand}(E;G^beta,T_src(E))"
+claim_status: "draft/control"
+source_extension_category: "source_extension_candidate"
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+MetricData_E_adopted: false
+scoped_g_eff_expanded: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Accepted Input Boundary}
+
+The only positive input newly consumed here is the Gate-Chair-accepted scoped
+source-extension matter-coupling-precondition evidence/precondition from
+\texttt{RT-20260614-228}. That evidence supplies a source support carrier,
+source response/localization context, source coupling-token interface,
+scoped-\(\geff\) compatibility, source transition compatibility, controlled
+bottom behavior, a no-target-import certificate, obstruction labels, and
+limitations.
+
+The accepted precondition is bounded input only. It is not a coupling law, not
+matter coupling, not stress-energy semantics, not \(\MetricData(E)\) adoption,
+not unscoped \(\geff\), not a matter action, not an empirical detector model,
+not an Einstein-equation derivation, not benchmark recovery, and not a
+completed derivation.
+
+\section{Forbidden Overreads}
+
+This packet forbids the following inferences:
+
+\begin{itemize}[leftmargin=*]
+  \item a draft/control \(\CouplingLaw\) candidate is an adopted coupling law;
+  \item source coupling-token compatibility is stress-energy semantics;
+  \item source response syntax is an empirical matter sector;
+  \item scoped \(\geff\) compatibility expands the accepted \(\geff\) scope;
+  \item transition compatibility is target-atlas covariance;
+  \item bottom behavior is physical nondegeneracy;
+  \item audit-pending candidate construction is Gate Chair evidence-status
+  acceptance;
+  \item validator, registry, role, handoff, approval, local-cache, file-order,
+  or commit status is a mathematical premise.
+\end{itemize}
+
+\section{Coupling-Law Candidate Schema}
+
+\begin{definition}[Declared coupling-law package]
+A declared package for this packet is a tuple
+\[
+  E_{\mathrm{law}} =
+  (E,\Gbeta,T_{\mathrm{src}}(E),\CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E)),\rho_E)
+\]
+where \(\rho_E\) records that \(\CouplingPrecond\) is accepted only as scoped
+source-extension matter-coupling-precondition evidence/precondition. If this
+receipt is absent, or if any component requires target topology, target
+atlas, target metric, Lorentzian signature, proper time, detector semantics,
+stress-energy tensors, matter actions, benchmark success, or process
+authority, the package evaluates to \(\BottomSrc\).
+\end{definition}
+
+\begin{definition}[Draft/control source-side coupling-law candidate]
+For a declared package \(E_{\mathrm{law}}\), define
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E)) :=
+  (D_E,P_E,J_E,A_E,K_E,\Theta_E,B_E,N_E,O_E,L_E).
+\]
+The slots are:
+\begin{description}[leftmargin=*]
+  \item[\(D_E\)] the declared source support domain inherited from
+  \(\CouplingPrecond\).
+  \item[\(P_E\)] the precondition witness record: a citation of the scoped
+  \(\CouplingPrecond\) slots as evidence/precondition data only.
+  \item[\(J_E\)] the source coupling-token interface inherited from the
+  precondition candidate.
+  \item[\(A_E\)] an admissibility predicate on source coupling-token updates:
+  a token update is admissible only when it preserves source support,
+  source-response syntax, scoped-\(\geff\) compatibility, and source
+  transition compatibility.
+  \item[\(K_E\)] a source compatibility kernel: the finite list of source-side
+  checks applied by \(A_E\), with no stress-energy, matter-action, detector,
+  proper-time, or target-metric semantics.
+  \item[\(\Theta_E\)] the source transition transport rule under
+  \(T_{\mathrm{src}}(E)\), acting by source relabeling and marked-source
+  transport only.
+  \item[\(B_E\)] the controlled bottom rule for absent, ambiguous,
+  noncoherent, target-repaired, detector-repaired, benchmark-repaired, or
+  process-repaired input.
+  \item[\(N_E\)] the no-target-import certificate.
+  \item[\(O_E\)] the obstruction fallback label family
+  \(\OBLAW\text{-}\ast\).
+  \item[\(L_E\)] the limitation record stating draft/control status, audit
+  requirement, and all blocked downstream claims.
+\end{description}
+\end{definition}
+
+\begin{definition}[Admissible source coupling-token update]
+Given two source coupling-token records \(j,j'\in J_E\), write
+\[
+  j \leadsto_E j'
+\]
+when \(A_E(j,j')=\mathsf{true}\). This relation means only that \(j'\) is a
+source-side update compatible with the declared source support, response
+syntax, scoped-\(\geff\) compatibility, and source transitions recorded in
+\(\CouplingPrecond\). It does not mean conservation of stress-energy, a
+matter equation of motion, a variational coupling term, or empirical matter
+detection.
+\end{definition}
+
+\section{Construction Lemmas}
+
+\begin{lemma}[Source-record assembly]
+If \(D_E,P_E,J_E,A_E,K_E,\Theta_E,B_E,N_E,O_E,L_E\) are supplied from the
+accepted scoped \(\CouplingPrecond\) evidence/precondition and declared
+source-side transition data, then
+\(\CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))\) is a well-formed
+draft/control source-side candidate record.
+\end{lemma}
+
+\begin{proof}
+Each slot is either source-side data inherited from \(\CouplingPrecond\), a
+source-side compatibility predicate, a source transition record, a
+fail-closed bottom rule, a no-target-import certificate, an obstruction label,
+or a limitation record. No slot supplies target topology, target atlas, target
+metric, Lorentzian signature, proper time, stress-energy semantics, matter
+action, detector semantics, benchmark success, or adoption authority.
+\end{proof}
+
+\begin{lemma}[Fail-closed coupling-law boundary]
+If \(A_E\), \(K_E\), or \(\Theta_E\) requires stress-energy tensors, matter
+actions, target metric compatibility, target covariance, proper-time
+normalization, detector semantics, benchmark success, validator status,
+registry status, role status, handoff status, approval status, local-cache
+status, file order, or commit status, then the candidate returns
+\(\BottomSrc\) or a precise \(\OBLAW\)-label.
+\end{lemma}
+
+\begin{proof}
+This is encoded in \(B_E\), \(N_E\), \(O_E\), and \(L_E\). The candidate is
+defined only on the source-side information admitted by
+\(\CouplingPrecond\). Any stronger interpretive or target-GR repair exits the
+candidate domain.
+\end{proof}
+
+\begin{lemma}[Transition covariance is only a source obligation]
+For an admitted source transition \(\tau\in T_{\mathrm{src}}(E)\), the
+relation \(j\leadsto_E j'\) transports to the relabeled relation
+\(\tau j \leadsto_{\tau E} \tau j'\) only as a source-side obligation. This
+does not assert target-atlas covariance, physical covariance of stress-energy,
+or field-equation invariance.
+\end{lemma}
+
+\begin{proof}
+The transition rule \(\Theta_E\) is declared inside \(T_{\mathrm{src}}(E)\).
+It acts on source labels, source support, and source coupling-token syntax.
+Any target-atlas or field-equation interpretation would exceed the declared
+source-extension boundary and is rejected by \(N_E\) and \(B_E\).
+\end{proof}
+
+\begin{proposition}[Candidate Constructor result]
+Under the accepted scoped matter-coupling-precondition evidence and declared
+source-side transition data, a draft/control source-side coupling-law
+candidate record
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+can be assembled as above. The result is
+\emph{constructed\_candidate\_pending\_audit}.
+\end{proposition}
+
+\begin{proof}
+The prior selector identified the first lawful construction-or-obstruction
+question after \(\CouplingPrecond\) evidence acceptance. The accepted
+precondition supplies source support, source response/localization syntax,
+source coupling-token interface, scoped-\(\geff\) compatibility, transition
+compatibility, bottom behavior, no-target-import certificate, obstruction
+labels, and limitations. These are exactly the ingredients required to form
+\(D_E,P_E,J_E,K_E,\Theta_E,B_E,N_E,O_E,L_E\). Define \(A_E\) as the
+admissibility predicate that accepts precisely the token updates satisfying
+the \(K_E\) checks and \(\Theta_E\) transport obligation, and rejects all
+inputs requiring forbidden semantics or authority. Therefore every slot is
+specified under the source-side boundary, and a draft/control candidate
+exists. Because the candidate is audit-pending, no adoption or downstream
+promotion follows.
+\end{proof}
+
+\section{Obstruction Fallback Family}
+
+No obstruction is asserted by this packet because the candidate record is
+constructed. The packet defines the exact label family that later audit,
+stress, repair, or selector work may use:
+
+\begin{itemize}[leftmargin=*]
+  \item \(\OBLAW\)-PRECONDITION-MISSING;
+  \item \(\OBLAW\)-TOKEN-INTERFACE-UNDERDETERMINED;
+  \item \(\OBLAW\)-ADMISSIBILITY-PREDICATE-UNDERDETERMINED;
+  \item \(\OBLAW\)-SOURCE-TRANSITION-FAILURE;
+  \item \(\OBLAW\)-BOTTOM-CONTROL-FAILURE;
+  \item \(\OBLAW\)-TARGET-IMPORT;
+  \item \(\OBLAW\)-STRESS-ENERGY-SEMANTICS-IMPORT;
+  \item \(\OBLAW\)-COUPLING-ADOPTION-LAUNDERING.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this constructor \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Prior scoped source-extension evidence only; not adopted here. \\
+\(\geff\) & Prior scoped source-extension \(\geff\) object only; scope is not expanded. \\
+Matter coupling & Draft/control source-side coupling-law candidate constructed pending Smuggling Auditor audit; no coupling law is adopted and no matter coupling is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this constructor. \\
+Current route freeze or hard-fail status & Not frozen; audit route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Candidate Constructor Result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path:
+    "research_control/tasks/RT-20260614-230/artifacts/259_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_COUPLING_LAW_CANDIDATE_OR_OBSTRUCTION.tex"
+  formal_objects:
+    - "declared coupling-law package E_law"
+    - "CouplingLaw_src^{GSC-cand}(E;G^beta,T_src(E))"
+    - "source support domain D_E"
+    - "precondition witness record P_E"
+    - "source coupling-token interface J_E"
+    - "admissibility predicate A_E"
+    - "source compatibility kernel K_E"
+    - "source transition transport rule Theta_E"
+    - "controlled bottom table B_E"
+    - "no-target-import certificate N_E"
+    - "OB-COUPLING-LAW fallback label family O_E"
+  maps:
+    - "E_law -> CouplingLaw_src^{GSC-cand}(E;G^beta,T_src(E))"
+    - "CouplingPrecond slots -> D_E P_E J_E K_E Theta_E B_E N_E O_E L_E"
+    - "source token update (j,j') -> admissibility predicate A_E(j,j')"
+    - "target-importing or underdetermined package -> Bottom_src or OB-COUPLING-LAW fallback"
+  proof_obligations:
+    - "Smuggling Auditor audit of hidden stress-energy semantics, target import, coupling-law adoption laundering, and process authority"
+    - "Refuter stress if audit passes"
+    - "Theoretical Continuation Selector if stress survives"
+    - "separate Gate Chair authority before any evidence-status acceptance or adoption"
+    - "separate route before matter-coupling derivation, Einstein equations, benchmark promotion, or completed derivation"
+  failed_components: []
+  next_required_role: "smuggling_auditor"
+  no_fog_check: true
+  no_fog_explanation:
+    "Constructed an audit-ready source-side draft/control coupling-law candidate tuple from accepted scoped CouplingPrecond_src^{GSC-cand} evidence/precondition. The tuple specifies source support, precondition witness, source coupling-token interface, admissibility predicate, source compatibility kernel, source transition transport, controlled bottom behavior, no-target-import certificate, obstruction fallback, and limitations while refusing adoption and downstream GR claims."
+  claim_boundary_preserved: true
+\end{verbatim}
+
+\section{Bridge Attempt Status}
+
+\begin{verbatim}
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "post-precondition-evidence source-side coupling-law candidate"
+  bridge_result: "constructed_candidate_pending_audit"
+  candidate_map:
+    "E_law -> CouplingLaw_src^{GSC-cand}(E;G^beta,T_src(E)) through accepted scoped CouplingPrecond evidence, source coupling-token interface, source admissibility predicate, source transition transport, controlled bottom behavior, and target-import refusal"
+  missing_primitive: ""
+  preserves_blocks: true
+  blocked_outputs:
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "stress_energy_semantics"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+\end{verbatim}
+
+\section{Conclusion}
+
+The construction succeeds only as a draft/control source-side candidate:
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))
+  \quad\text{is constructed pending Smuggling Auditor audit.}
+\]
+The result is not a coupling-law adoption, not matter coupling, not
+stress-energy semantics, not Einstein equations, not benchmark promotion, and
+not completed derivation.
+
+\section{References}
+
+Candidate Constructor Packet RT-20260614-224. (2026). \textit{Post-scoped
+g\_eff source-side matter-coupling precondition candidate}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Gate Chair Packet RT-20260614-228. (2026). \textit{Gate Chair review of
+scoped matter-coupling precondition evidence} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0262}
+[Internal research-control handoff].
+
+\end{document}
