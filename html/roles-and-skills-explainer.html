@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="972947e325d13d272267e5332a0ccfca92977a0a5f81770be48658ddeab5cf91">
+  <meta name="aether-flow-source-basis-hash" content="e3f771afd9390f98b9bdc316378fe5d8c02e60abda1b6781ffed8c4dc080c093">
   <meta name="aether-flow-human-visual-only" content="true">
   <link rel="icon" href="data:,">
   <title>Roles And Skills Catalog</title>
@@ -158,8 +158,12 @@
     <p class="eyebrow">Post-Migration Phase 4</p>
     <h1>Roles And Skills Catalog</h1>
     <p class="lede">The roles and skills catalog is a navigation aid. It helps a maintainer or future agent find the role registry, versioned role contracts, skill entry points, default validator families, and human-gate cautions. It does not decide live authority for a transaction.</p>
+    <p class="lede">improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.</p>
+    <p class="lede">Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor.</p>
+    <p class="lede">These perspective definitions are descriptive guidance only. They do not change role authority, role semantics, validators, routing behavior, write permissions, checkpoint behavior, generated-output authority, or physics claim status.</p>
     <p class="lede">Current authority is task-local. A registered role is a stable template; a skill contract defines a workflow; an execution-role record binds one job to exact semantics; the AgentJob allowlist defines what paths can be read or written; the claim boundary states what must not be promoted; and completion evidence plus validators record whether the bounded transaction passed.</p>
     <nav data-explainer-control="section_toc" aria-label="Section navigation">
+      <a href="#perspective">Perspective Definitions</a>
       <a href="#s1">Authority Inspection Order</a>
       <a href="#s2">Active Role Families</a>
       <a href="#s3">Skill Workflow Map</a>
@@ -170,17 +174,24 @@
   </header>
 
   <main>
+    <section id="perspective" aria-labelledby="perspective-title">
+      <h2 id="perspective-title">Perspective Definitions</h2>
+      <div class="matrix">
+        <article class="ve-card"><strong>improve-project-system</strong><p>improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.</p><p>Descriptive orientation only, not permission or route semantics.</p></article>
+        <article class="ve-card"><strong>Documentation Curator</strong><p>Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor.</p><p>Descriptive orientation only, not generated-output authority.</p></article>
+      </div>
+    </section>
     <section id="s1" aria-labelledby="s1-title">
       <h2 id="s1-title">Authority Inspection Order</h2>
       <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Role registry</strong></td><td>Inspect identity, version, status, authority level, human-gate state, and defaults.</td><td>Registry row first.</td></tr><tr><td><strong>Role or skill contract</strong></td><td>Inspect the active contract text for mission and boundaries.</td><td>Versioned source, not public summary.</td></tr><tr><td><strong>Execution-role record</strong></td><td>Inspect task-local authority delta and allowed write paths.</td><td>One-job authority surface.</td></tr><tr><td><strong>AgentJob</strong></td><td>Inspect executable allowlist, expected outputs, validators, and claim boundary.</td><td>Actual transaction boundary.</td></tr><tr><td><strong>Completion</strong></td><td>Inspect output paths and command results.</td><td>Evidence, not broad authority.</td></tr></tbody></table>
     </section>
     <section id="s2" aria-labelledby="s2-title">
       <h2 id="s2-title">Active Role Families</h2>
-      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Research routing</strong></td><td>Director of Research and Project-System Director.</td><td>Route one bounded step; do not promote claims.</td></tr><tr><td><strong>Physics drafts</strong></td><td>Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector.</td><td>Draft/control science work only.</td></tr><tr><td><strong>Scientific gate</strong></td><td>Gate Chair.</td><td>Human-gated and paused without explicit tracked approval.</td></tr><tr><td><strong>Project system</strong></td><td>Project-Control Maintainer, Validator Engineer, Memory-System Maintainer.</td><td>Project-control work; no physics claim promotion.</td></tr><tr><td><strong>Public documentation</strong></td><td>Documentation Curator.</td><td>Publication pages and generated HTML remain noncanonical.</td></tr></tbody></table>
+      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>Research routing</strong></td><td>Director of Research and Project-System Director.</td><td>Route one bounded step; do not promote claims.</td></tr><tr><td><strong>Physics drafts</strong></td><td>Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector.</td><td>Draft/control science work only.</td></tr><tr><td><strong>Scientific gate</strong></td><td>Gate Chair.</td><td>Human-gated and paused without explicit tracked approval.</td></tr><tr><td><strong>Project system</strong></td><td>Project-Control Maintainer, Validator Engineer, Memory-System Maintainer; improve-project-system gives descriptive reliability and governance orientation.</td><td>Project-control work; no physics claim promotion and no perspective-based permission expansion.</td></tr><tr><td><strong>Public documentation</strong></td><td>Documentation Curator; source-backed publication and technical-documentation perspective.</td><td>Publication pages and generated HTML remain noncanonical and the perspective is not role-authority expansion.</td></tr></tbody></table>
     </section>
     <section id="s3" aria-labelledby="s3-title">
       <h2 id="s3-title">Skill Workflow Map</h2>
-      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>continue-research</strong></td><td>Research-control continuation and physics AgentJobs.</td><td>Not project-system repair by default.</td></tr><tr><td><strong>improve-project-system</strong></td><td>Project-system classifier, resolver, signals, receipts, and one bounded AgentJob.</td><td>Not physics derivation.</td></tr><tr><td><strong>project-memory-system</strong></td><td>Bootstrap, validate-only, wiki, registry, and memory refresh.</td><td>Not source replacement.</td></tr><tr><td><strong>html-visual-explainer</strong></td><td>Governed tracked HTML and GitHub Markdown pair.</td><td>No direct HTML-only authority.</td></tr><tr><td><strong>visual-explainer</strong></td><td>Visual treatment for governed explainers.</td><td>No external runtime in tracked HTML.</td></tr></tbody></table>
+      <table><thead><tr><th>Item</th><th>Function</th><th>Boundary</th></tr></thead><tbody><tr><td><strong>continue-research</strong></td><td>Research-control continuation and physics AgentJobs.</td><td>Not project-system repair by default.</td></tr><tr><td><strong>improve-project-system</strong></td><td>Project-system classifier, resolver, signals, receipts, one bounded AgentJob, and descriptive reliability/governance orientation.</td><td>Not physics derivation, role-authority expansion, or route-semantics change.</td></tr><tr><td><strong>project-memory-system</strong></td><td>Bootstrap, validate-only, wiki, registry, and memory refresh.</td><td>Not source replacement.</td></tr><tr><td><strong>html-visual-explainer</strong></td><td>Governed tracked HTML and GitHub Markdown pair.</td><td>No direct HTML-only authority.</td></tr><tr><td><strong>visual-explainer</strong></td><td>Visual treatment for governed explainers.</td><td>No external runtime in tracked HTML.</td></tr></tbody></table>
     </section>
     <section id="s4" aria-labelledby="s4-title">
       <h2 id="s4-title">Catalog Overreads</h2>
@@ -206,7 +217,7 @@
     <section id="summary" aria-labelledby="summary-title">
       <h2 id="summary-title">Safe And Unsafe Summaries</h2>
       <div class="summaries">
-        <article class="summary safe"><h3>Safe</h3><p>Use this catalog to locate current registry rows, role contracts, skill contracts, execution records, AgentJobs, and completion evidence.</p></article>
+        <article class="summary safe"><h3>Safe</h3><p>Use this catalog to locate current registry rows, role contracts, skill contracts, execution records, AgentJobs, completion evidence, and descriptive perspective definitions.</p></article>
         <article class="summary unsafe"><h3>Unsafe</h3><p>A catalog row grants write permission, a superseded role is active because it appears in a table, or a skill entry point bypasses the AgentJob allowlist.</p></article>
       </div>
     </section>
@@ -217,7 +228,7 @@
   </main>
 
   <footer data-explainer-control="authority_footer">
-    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/roles-and-skills-explainer.md</code> and the publication brief <code>markdown/publication-briefs/roles-and-skills.publication-brief.md</code>. It explains active and superseded role status, physics and research-ops role families, skill entry points, default validator families, human-gated roles, and source-inspection order without changing role status, registering roles, superseding roles, expanding role authority, changing skill contracts, changing validator behavior, changing routing behavior, changing AgentJob allowlists, changing checkpoint behavior, or promoting physics claims.</p>
+    <p>This HTML file is a generated noncanonical reader surface. It is derived from <code>markdown/html-explainer-specs/roles-and-skills-explainer.md</code> and the publication brief <code>markdown/publication-briefs/roles-and-skills.publication-brief.md</code>. It explains active and superseded role status, physics and research-ops role families, skill entry points, default validator families, human-gated roles, descriptive improve-project-system and Documentation Curator perspectives, and source-inspection order without changing role status, registering roles, superseding roles, expanding role authority, changing role semantics, changing skill contracts, changing validator behavior, changing routing behavior, changing AgentJob allowlists, changing checkpoint behavior, creating generated-output authority, or promoting physics claims.</p>
     <p>Safe operating rule: use this page for orientation, then inspect the named source files, registries, task records, contracts, allowlists, completion evidence, and checks before acting.</p>
   </footer>
 </body>

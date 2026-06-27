@@ -1,6 +1,6 @@
 ---
 name: improve-project-system
-description: Resolve tracked project-system improvement state and set up or execute one bounded AgentJob per invocation.
+description: Resolve tracked project-system improvement state from a project-system reliability and governance perspective and set up or execute one bounded AgentJob per invocation.
 ---
 
 # Improve Project System
@@ -11,6 +11,16 @@ generated-document pipelines, and operational reliability.
 
 Do not use this skill for physics derivation, scientific claim promotion, or
 Gate Chair decisions.
+
+## Perspective
+
+improve-project-system is best understood as a project-system reliability and
+governance perspective. It is closest to system engineer plus software
+engineer plus process auditor.
+
+This perspective definition is descriptive orientation only. It does not
+create role authority, change role semantics, expand write permissions, alter
+validators or routing, or authorize scientific claim promotion.
 
 ## Control Principle
 

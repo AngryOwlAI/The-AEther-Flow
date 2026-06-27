@@ -2,6 +2,10 @@
 
 The Documentation Curator Publication Process is the public-documentation discipline for AEther-Flow. It exists because a mechanically valid page can still be weak: it can repeat a template, hide the subject behind metadata, add a diagram that teaches little, or imply that a generated reader surface carries authority it does not have.
 
+Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor.
+
+This perspective definition is descriptive guidance only. It does not change role authority, role semantics, validators, routing behavior, write permissions, checkpoint behavior, generated-output authority, or physics claim status.
+
 The active process starts with a page-specific publication brief. The brief defines the reader, reader job, document type, source basis, narrative shape, visual strategy, acceptance criteria, and forbidden patterns. From there, the Curator writes a source spec, a native GitHub-facing article, and a standalone HTML derivative. Those surfaces may differ in visible structure, but they must preserve the same source basis, authority boundary, and core claims.
 
 The process also keeps quality separate from mere command success. Deterministic checks protect known boundaries; screenshot QA and before/after review record human-facing readability and remaining risks. The retired Visual Atlas, topic-registry creation path, universal heading skeleton, and active teaching-packet fallback remain outside the accepted process.
@@ -10,6 +14,7 @@ The process also keeps quality separate from mere command success. Deterministic
 
 | Item | Function | Boundary |
 | --- | --- | --- |
+| Perspective | Descriptive source-backed publication and technical-documentation guidance closest to technical editor, science communicator, information architect, and provenance auditor. | Not role authority, role semantics, routing behavior, validator behavior, permissions, checkpoint behavior, generated-output authority, or physics claim authority. |
 | Publication brief | Defines the reader job, document type, sources, visual strategy, and forbidden patterns. | Quality-control surface, not physics authority. |
 | Source spec | Binds HTML output to source materials, claim boundary, and no-network constraints. | Canonical Markdown source for the tracked HTML derivative. |
 | GitHub Markdown | Reads as a native public technical article. | May diverge from HTML layout while preserving source and claim parity. |
@@ -54,7 +59,7 @@ Reader scope: publication-process orientation only. This page cannot change role
 - **Publication brief:** `markdown/publication-briefs/documentation-curator-publication-process.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
 
-This page is a generated noncanonical reader surface. It explains brief-first planning, page-local document types, medium-specific GitHub Markdown and HTML output, visual strategy, pilot discipline, screenshot QA, review evidence, retired-process boundaries, and deterministic publication checks without changing role authority, validator behavior, schemas, routing, checkpoint gates, source authority, generated-output authority, corpus-migration approval, or physics claim status.
+This page is a generated noncanonical reader surface. It explains the descriptive Documentation Curator perspective definition, brief-first planning, page-local document types, medium-specific GitHub Markdown and HTML output, visual strategy, pilot discipline, screenshot QA, review evidence, retired-process boundaries, and deterministic publication checks without changing role authority, role semantics, validator behavior, schemas, routing, checkpoint gates, source authority, generated-output authority, corpus-migration approval, or physics claim status.
 
 ## Source Materials
 
@@ -68,6 +73,6 @@ This page is a generated noncanonical reader surface. It explains brief-first pl
 
 ## Safe Operating Summary
 
-Safe summary: A public page starts from a publication brief, binds to a source spec, produces native Markdown and standalone HTML, records screenshots and review evidence, and passes deterministic boundary checks.
+Safe summary: The Documentation Curator perspective is descriptive publication and technical-documentation orientation; a public page starts from a publication brief, binds to a source spec, produces native Markdown and standalone HTML, records screenshots and review evidence, and passes deterministic boundary checks.
 
 Unsafe summary: Public pages come from a universal template, teaching transcript, topic-registry recipe, or validator PASS alone.

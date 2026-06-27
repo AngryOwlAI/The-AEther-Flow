@@ -1,6 +1,6 @@
 ---
 title: "Project-System Improvement Loop"
-purpose: "Explain how documentation drift, control drift, validator gaps, memory issues, and routing ambiguity become bounded project-system work."
+purpose: "Explain how documentation drift, control drift, validator gaps, memory issues, and routing ambiguity become bounded project-system work, including the descriptive improve-project-system perspective definition."
 audience: "Maintainers, reviewers, future agents, and external AI readers."
 output_path: "html/project-system-improvement-explainer.html"
 github_markdown_output_path: "github-facing/project-system-improvement-explainer.md"
@@ -26,7 +26,7 @@ source_materials:
   - "registries/PROJECT_IMPROVEMENT_SIGNAL_TYPE_REGISTRY.csv"
   - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
   - "research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md"
-claim_boundary: "Human-only publication explainer for Project-System Improvement Loop. It explains classifier output, registered signal routing, advisory resolver output, project-improvement sidecar routing, one bounded AgentJob execution, documentation-impact receipts, exact source-bridge sidecar checkpoint boundaries, and signal-resolution evidence without creating sidecars, replacing normal research handoffs, changing validators, routing behavior, role authority, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status."
+claim_boundary: "Human-only publication explainer for Project-System Improvement Loop. It explains the descriptive improve-project-system perspective definition, classifier output, registered signal routing, advisory resolver output, project-improvement sidecar routing, one bounded AgentJob execution, documentation-impact receipts, exact source-bridge sidecar checkpoint boundaries, and signal-resolution evidence without creating sidecars, replacing normal research handoffs, changing validators, routing behavior, role authority, role semantics, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -45,6 +45,17 @@ packet and the Phase 6 bridge checkpoint governance documentation update. It
 improves reader orientation, footer-authority placement, and page-specific
 operational structure without changing executable project behavior, sidecar
 state, checkpoint behavior, or physics claim status.
+
+## Perspective Definition
+
+improve-project-system is best understood as a project-system reliability and
+governance perspective. It is closest to system engineer plus software
+engineer plus process auditor.
+
+This definition is descriptive guidance only. It does not create role
+authority, change role semantics, expand permissions, alter validators,
+reroute work, change checkpoint behavior, or authorize physics claim
+promotion.
 
 ## Source Basis
 
@@ -67,7 +78,8 @@ state, checkpoint behavior, or physics claim status.
 ## Required Reader Outcome
 
 After reading, a maintainer or future agent should understand the existing
-Project-System Improvement Loop function, which source paths ground it, which adjacent systems
+Project-System Improvement Loop function, what perspective the
+`improve-project-system` skill provides, which source paths ground it, which adjacent systems
 it connects to, and which authority boundary prevents overread. The reader
 should be able to use the page as orientation, then inspect the named source
 files, registries, task records, role or skill contracts, AgentJob allowlists,
@@ -76,7 +88,7 @@ completion records, and checks before acting.
 ## Visual Strategy
 
 Use page-specific operational structure rather than a reusable template. The
-main reader sections are `Improvement Loop Map`, `Bridge Sidecar Flow`, `Diff, Signal, Resolver`, `Evidence To Close A Signal`, `Failure Boundaries`. The HTML derivative may render these
+main reader sections are `Perspective Definition`, `Improvement Loop Map`, `Bridge Sidecar Flow`, `Diff, Signal, Resolver`, `Evidence To Close A Signal`, `Failure Boundaries`. The HTML derivative may render these
 as local CSS cards and tables; the GitHub Markdown derivative should remain a
 native article with compact tables. Do not use browser-side Mermaid, remote
 assets, or external runtime packages.
@@ -96,6 +108,8 @@ change checkpoint behavior, or authorize physics claim promotion.
 ## Acceptance Criteria
 
 - Opens with subject-specific operational explanation before the full authority paragraph.
+- States: improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.
+- States that the perspective definition is descriptive guidance only and does not change role authority, role semantics, validators, routing, permissions, checkpoint behavior, or physics claim authority.
 - Uses the bottom Reader Scope hook immediately above the marked authority footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
 - Includes visible source paths in both public derivatives.

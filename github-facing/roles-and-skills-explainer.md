@@ -2,6 +2,12 @@
 
 The roles and skills catalog is a navigation aid. It helps a maintainer or future agent find the role registry, versioned role contracts, skill entry points, default validator families, and human-gate cautions. It does not decide live authority for a transaction.
 
+improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.
+
+Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor.
+
+These perspective definitions are descriptive guidance only. They do not change role authority, role semantics, validators, routing behavior, write permissions, checkpoint behavior, generated-output authority, or physics claim status.
+
 Current authority is task-local. A registered role is a stable template; a skill contract defines a workflow; an execution-role record binds one job to exact semantics; the AgentJob allowlist defines what paths can be read or written; the claim boundary states what must not be promoted; and completion evidence plus validators record whether the bounded transaction passed.
 
 That inspection order matters because public catalogs can become misleading when read as permission. Superseded roles remain for history, the Gate Chair remains human-gated, Documentation Curator output remains noncanonical for claims, and provisional or overlay roles do not become reusable just because a page describes them.
@@ -23,15 +29,15 @@ That inspection order matters because public catalogs can become misleading when
 | Research routing | Director of Research and Project-System Director. | Route one bounded step; do not promote claims. |
 | Physics drafts | Ontology Formalizer, Candidate Constructor, Refuter, Smuggling Auditor, Theoretical Continuation Selector. | Draft/control science work only. |
 | Scientific gate | Gate Chair. | Human-gated and paused without explicit tracked approval. |
-| Project system | Project-Control Maintainer, Validator Engineer, Memory-System Maintainer. | Project-control work; no physics claim promotion. |
-| Public documentation | Documentation Curator. | Publication pages and generated HTML remain noncanonical. |
+| Project system | Project-Control Maintainer, Validator Engineer, Memory-System Maintainer; improve-project-system gives descriptive reliability and governance orientation. | Project-control work; no physics claim promotion and no perspective-based permission expansion. |
+| Public documentation | Documentation Curator; source-backed publication and technical-documentation perspective. | Publication pages and generated HTML remain noncanonical and the perspective is not role-authority expansion. |
 
 ## Skill Workflow Map
 
 | Item | Function | Boundary |
 | --- | --- | --- |
 | continue-research | Research-control continuation and physics AgentJobs. | Not project-system repair by default. |
-| improve-project-system | Project-system classifier, resolver, signals, receipts, and one bounded AgentJob. | Not physics derivation. |
+| improve-project-system | Project-system classifier, resolver, signals, receipts, one bounded AgentJob, and descriptive reliability/governance orientation. | Not physics derivation, role-authority expansion, or route-semantics change. |
 | project-memory-system | Bootstrap, validate-only, wiki, registry, and memory refresh. | Not source replacement. |
 | html-visual-explainer | Governed tracked HTML and GitHub Markdown pair. | No direct HTML-only authority. |
 | visual-explainer | Visual treatment for governed explainers. | No external runtime in tracked HTML. |
@@ -58,7 +64,7 @@ Reader scope: role and skill navigation only. This page cannot change role statu
 - **Publication brief:** `markdown/publication-briefs/roles-and-skills.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
 
-This page is a generated noncanonical reader surface. It explains active and superseded role status, physics and research-ops role families, skill entry points, default validator families, human-gated roles, and source-inspection order without changing role status, registering roles, superseding roles, expanding role authority, changing skill contracts, changing validator behavior, changing routing behavior, changing AgentJob allowlists, changing checkpoint behavior, or promoting physics claims.
+This page is a generated noncanonical reader surface. It explains active and superseded role status, physics and research-ops role families, skill entry points, default validator families, human-gated roles, descriptive improve-project-system and Documentation Curator perspectives, and source-inspection order without changing role status, registering roles, superseding roles, expanding role authority, changing role semantics, changing skill contracts, changing validator behavior, changing routing behavior, changing AgentJob allowlists, changing checkpoint behavior, creating generated-output authority, or promoting physics claims.
 
 ## Source Materials
 
@@ -72,6 +78,6 @@ This page is a generated noncanonical reader surface. It explains active and sup
 
 ## Safe Operating Summary
 
-Safe summary: Use this catalog to locate current registry rows, role contracts, skill contracts, execution records, AgentJobs, and completion evidence.
+Safe summary: Use this catalog to locate current registry rows, role contracts, skill contracts, execution records, AgentJobs, completion evidence, and descriptive perspective definitions.
 
 Unsafe summary: A catalog row grants write permission, a superseded role is active because it appears in a table, or a skill entry point bypasses the AgentJob allowlist.

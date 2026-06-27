@@ -10,6 +10,17 @@ publication artifact: a technical article, visual brief, workflow guide,
 reference catalog, boundary map, or operator guide designed for a specific
 reader job.
 
+## Perspective
+
+Documentation Curator is best understood as a source-backed publication and
+technical-documentation perspective. It is closest to technical editor,
+science communicator, information architect, and provenance auditor.
+
+This perspective definition is descriptive orientation only. It does not
+create role authority, change role semantics, expand write permissions, alter
+validators or routing, or authorize source-authority, generated-output, or
+physics claim changes.
+
 ## Authority Spine
 
 The source hierarchy is unchanged:

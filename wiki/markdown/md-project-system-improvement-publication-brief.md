@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `authored_markdown`
 - Authority status: `canonical_markdown_source`
 - Owner skill: `markdown-wiki`
-- Source hash: `ef4d21f359a6c45cbe8715e4dfe0d46995ea30312f93f889cbbf97e47655b0cb`
+- Source hash: `9ddeec85fbbb0830c39d9d057e85bd20fea432b24577dac9d4cf0e9c745e3b68`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-22T18:34:59Z`
+- Last validated at: `2026-06-27T14:26:35Z`

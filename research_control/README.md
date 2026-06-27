@@ -225,6 +225,16 @@ the change. When documentation impact is required, the transaction must include
 either a source documentation update or a valid
 `research_control/tasks/<task_id>/documentation_impact.yaml` no-op rationale:
 
+improve-project-system is best understood as a project-system reliability and
+governance perspective. It is closest to system engineer plus software
+engineer plus process auditor. Documentation Curator is best understood as a
+source-backed publication and technical-documentation perspective. It is
+closest to technical editor, science communicator, information architect, and
+provenance auditor. These descriptions orient maintainers and future agents;
+they do not create new role semantics, role authority, routing behavior,
+validator behavior, write permissions, checkpoint gates, or physics claim
+authority.
+
 ```zsh
 .venv/bin/python scripts/project_control/validate_documentation_impact.py
 ```

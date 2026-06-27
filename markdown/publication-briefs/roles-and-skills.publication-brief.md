@@ -2,11 +2,12 @@
 brief_id: "PB-ROLES-AND-SKILLS"
 subject: "Roles And Skills Catalog"
 reader: "Maintainer, reviewer, or future agent trying to find active AEther-Flow role responsibilities, superseded role status, skill entry points, default validator families, and authority boundaries without treating the catalog as an execution contract."
-reader_job: "Use the role and skill catalog as a navigation aid: identify the current registry row, inspect the active role contract or skill contract, then inspect the execution-role record and AgentJob before deciding current authority."
+reader_job: "Use the role and skill catalog as a navigation aid: identify the current registry row, inspect the active role contract or skill contract, then inspect the execution-role record and AgentJob before deciding current authority; understand that improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.; understand that Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor."
 document_type: "reference_catalog"
 reading_experience: "A dense but readable operator catalog with active-role grouping, superseded-role handling, skill-to-workflow mapping, validator defaults, human-gate cautions, and source-boundary reminders."
 narrative_structure:
   - "Open with the rule that registries and contracts carry authority, while the public catalog is navigation."
+  - "Define the improve-project-system and Documentation Curator perspectives as descriptive guidance only, not role authority or role semantics."
   - "Separate active roles, superseded historical roles, and human-gated Gate Chair status."
   - "Map skill entry points to the workflows they own and what they do not own."
   - "Explain default validator families by role group."
@@ -21,6 +22,7 @@ source_basis:
   - ".codex/skills/html-visual-explainer/SKILL.md"
   - ".codex/skills/visual-explainer/SKILL.md"
 authority_boundaries:
+  - "The improve-project-system and Documentation Curator perspective definitions are descriptive guidance only; they cannot change role authority, role semantics, validators, routing, permissions, checkpoint behavior, generated-output authority, or physics claim status."
   - "The page may explain active and superseded role status, physics and research-ops role families, skill entry points, default validators, human-gated roles, and the source-inspection order."
   - "The page may not change role status, register a role, supersede a role, expand role authority, change skill contracts, change validator behavior, change routing behavior, change AgentJob allowlists, change checkpoint behavior, or promote physics claims."
   - "The catalog is navigation only. The current authority chain remains registry row, role or skill contract, execution-role record, AgentJob, claim boundary, completion evidence, and validation."
@@ -28,6 +30,9 @@ output_surfaces:
   - "github-facing/roles-and-skills-explainer.md"
   - "html/roles-and-skills-explainer.html"
 acceptance_criteria:
+  - "States: improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor."
+  - "States: Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor."
+  - "States that the perspective definitions are descriptive guidance only and not role authority or role semantics."
   - "Explains active versus superseded role status."
   - "Separates physics roles, research-ops roles, and the human-gated Gate Chair."
   - "Maps skill entry points to owned workflow lanes."
@@ -50,3 +55,4 @@ This Phase 5B page is an operator reference for AEther-Flow roles and local
 skills. It helps a reader find the authoritative registry rows and contracts,
 but it does not alter those rows, contracts, validators, routing behavior,
 permissions, or claim status.
+The added perspective definitions are descriptive guidance only.

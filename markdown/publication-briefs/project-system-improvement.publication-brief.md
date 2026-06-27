@@ -2,11 +2,12 @@
 brief_id: "PB-PROJECT-SYSTEM-IMPROVEMENT"
 subject: "Project-System Improvement Loop"
 reader: "Maintainer, reviewer, or future agent deciding how non-physics project-system drift becomes bounded work."
-reader_job: "Know how documentation drift, control drift, validator gaps, memory issues, routing ambiguity, and research-improvement bridge sidecar signals become one bounded project-system AgentJob without treating project-system documentation, sidecar existence, or validator PASS as physics continuation or signal closure evidence."
+reader_job: "Know how documentation drift, control drift, validator gaps, memory issues, routing ambiguity, and research-improvement bridge sidecar signals become one bounded project-system AgentJob; understand that improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.; do not treat project-system documentation, sidecar existence, or validator PASS as physics continuation or signal closure evidence."
 document_type: "workflow_guide"
 reading_experience: "A practical workflow guide that separates classifier evidence, registered signals, advisory resolver output, AgentJob boundaries, documentation-impact receipts, and signal-resolution evidence."
 narrative_structure:
   - "Open by separating project-system improvement from physics continuation."
+  - "Define the improve-project-system perspective as descriptive project-system reliability and governance guidance, not role authority or route semantics."
   - "Explain classification before routing and the difference between current Git diff work and registered open signals."
   - "Explain how the resolver ranks open signals and why its output is advisory rather than a hard checkpoint gate."
   - "Explain how bridge sidecars preserve the normal research handoff spine while giving /improve-project-system a separate improvement packet."
@@ -30,12 +31,15 @@ source_basis:
   - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
   - "research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md"
 authority_boundaries:
+  - "The improve-project-system perspective definition is descriptive guidance only; it cannot change role authority, role semantics, validators, routing, permissions, checkpoint rules, or physics claim status."
   - "The page may explain project-system improvement routing, documentation-impact receipts, signal registries, resolver output, generated project-improvement sidecars, conditional sidecar checkpoint allowlisting, and evidence requirements, but it cannot create signals, create sidecars, resolve signals, change validators, alter routing behavior, register roles, or expand AgentJob permissions."
   - "Project-system improvement is separate from physics continuation; this page cannot promote physics claims, authorize ontology edits, make Gate Chair decisions, or treat generated documentation as authority."
 output_surfaces:
   - "github-facing/project-system-improvement-explainer.md"
   - "html/project-system-improvement-explainer.html"
 acceptance_criteria:
+  - "States: improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor."
+  - "States that the perspective definition is descriptive guidance only and not role authority, role semantics, routing behavior, validator behavior, or physics claim authority."
   - "Explains classification before routing."
   - "Distinguishes current Git diff work from registered open signals."
   - "States that resolver output is advisory and checkpoint blocking comes from validators or concrete authority violations."
@@ -64,3 +68,4 @@ problems become bounded project-control work, while preserving the normal
 research handoff spine and keeping sidecars in the project-system lane. It is
 a workflow guide, not a signal-registration packet, sidecar-creation packet,
 validator change, routing change, checkpoint change, or physics continuation.
+The added perspective definition is descriptive guidance only.

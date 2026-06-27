@@ -2,6 +2,10 @@
 
 Project-system improvement is the maintenance lane for the research system itself. It handles documentation drift, control-contract drift, validator gaps, memory retrieval problems, trigger logic, generated-document pipelines, and routing ambiguity. It is deliberately separate from physics continuation: it can repair the operating machinery around the research, but it cannot promote ontology, benchmark status, Gate Chair decisions, or completed derivation language.
 
+improve-project-system is best understood as a project-system reliability and governance perspective. It is closest to system engineer plus software engineer plus process auditor.
+
+This perspective definition is descriptive guidance only. It does not change role authority, role semantics, validators, routing behavior, write permissions, checkpoint behavior, generated-output authority, or physics claim status.
+
 The loop starts from observable evidence. A current working-tree diff can trigger the classifier. A registered open signal can trigger advisory routing. A research completion can emit a project-improvement signal that produces a separate sidecar handoff for `/improve-project-system`. Useful memory hits can point to prior decisions, but they must lead back to canonical source files and registry rows before they influence action. Only after that source inspection does the Director route one bounded AgentJob with a write-path allowlist and a claim boundary.
 
 A reader should come away with a practical rule: classify or resolve the state first, keep normal research handoffs as research-continuation authority, execute at most one project-system packet, record documentation impact when the packet changes state, and close any signal only with explicit PASS completion evidence or a documented rejection decision.
@@ -10,6 +14,7 @@ A reader should come away with a practical rule: classify or resolve the state f
 
 | Item | Function | Boundary |
 | --- | --- | --- |
+| Perspective | Descriptive project-system reliability and governance guidance closest to system engineer plus software engineer plus process auditor. | Not role authority, role semantics, routing behavior, validator behavior, permissions, checkpoint behavior, or physics claim authority. |
 | Observed issue | Current Git diff, registered open signal, or a repeated workflow problem. | No action is authorized before source inspection. |
 | Memory preflight | Status plus targeted lookup or search identifies likely prior context. | Memory is navigation; source files and registry rows remain authority. |
 | Classification | The classifier determines live documentation-impact and project-system reason codes. | Classification is routing evidence, not correctness proof. |
@@ -69,7 +74,7 @@ Reader scope: project-system workflow orientation only. This page cannot create 
 - **Publication brief:** `markdown/publication-briefs/project-system-improvement.publication-brief.md`
 - **Authority status:** generated noncanonical reader surface
 
-This page is a generated noncanonical reader surface. It explains classifier output, registered signal routing, advisory resolver output, project-improvement sidecar routing, one bounded AgentJob execution, documentation-impact receipts, exact source-bridge sidecar checkpoint boundaries, and signal-resolution evidence without creating sidecars, replacing normal research handoffs, changing validators, routing behavior, role authority, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status.
+This page is a generated noncanonical reader surface. It explains the descriptive improve-project-system perspective definition, classifier output, registered signal routing, advisory resolver output, project-improvement sidecar routing, one bounded AgentJob execution, documentation-impact receipts, exact source-bridge sidecar checkpoint boundaries, and signal-resolution evidence without creating sidecars, replacing normal research handoffs, changing validators, routing behavior, role authority, role semantics, signal rows, signal types, checkpoint behavior, generated-output authority, or physics claim status.
 
 ## Source Materials
 
@@ -91,6 +96,6 @@ This page is a generated noncanonical reader surface. It explains classifier out
 
 ## Safe Operating Summary
 
-Safe summary: Project-system improvement classifies current diffs, inspects registered signals, may consume one source-bridged project-improvement sidecar, routes one bounded AgentJob, records documentation impact, and closes signals only with explicit evidence.
+Safe summary: Project-system improvement provides descriptive reliability and governance orientation, classifies current diffs, inspects registered signals, may consume one source-bridged project-improvement sidecar, routes one bounded AgentJob, records documentation impact, and closes signals only with explicit evidence.
 
 Unsafe summary: Project-system improvement is physics continuation, a sidecar replaces a normal research handoff, conditional sidecar acceptance is a global directory allowlist, resolver output alone blocks checkpointing, or a signal can close without PASS completion or rejection evidence.

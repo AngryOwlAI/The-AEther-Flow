@@ -2,11 +2,12 @@
 brief_id: "PB-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS"
 subject: "Documentation Curator Publication Process"
 reader: "Maintainer, reviewer, future agent, or external reader evaluating how AEther-Flow public pages are planned and accepted."
-reader_job: "Understand how public pages move from publication brief to source spec, GitHub Markdown, standalone HTML, screenshot QA, before/after review, and deterministic checks without reviving the retired Visual Atlas or treating generated pages as authority."
+reader_job: "Understand how public pages move from publication brief to source spec, GitHub Markdown, standalone HTML, screenshot QA, before/after review, and deterministic checks; understand that Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor.; do not revive the retired Visual Atlas or treat generated pages as authority."
 document_type: "workflow_guide"
 reading_experience: "A publication-lifecycle guide that explains brief-first planning, page-local structure, medium-specific outputs, reader-specific visual choices, pilot discipline, review evidence, and retired-process boundaries."
 narrative_structure:
   - "Open by defining the publication process as public documentation discipline rather than a source-authority change."
+  - "Define the Documentation Curator perspective as descriptive source-backed publication and technical-documentation guidance, not role authority or route semantics."
   - "Explain why the publication brief is the quality-control surface and why headings remain page-local."
   - "Show how GitHub Markdown and HTML may diverge while sharing source basis, authority boundary, and core claims."
   - "Explain visual strategy as reader-specific work rather than mandatory decoration."
@@ -21,6 +22,7 @@ source_basis:
   - "research_control/tasks/RT-20260618-007/artifacts/publication_process_requirement_audit.md"
   - "research_control/tasks/RT-20260618-007/artifacts/publication_pilot_before_after_review.md"
 authority_boundaries:
+  - "The Documentation Curator perspective definition is descriptive guidance only; it cannot change role authority, role semantics, validators, routing, permissions, checkpoint gates, source authority, generated-output authority, or physics claim status."
   - "The page may explain the active Documentation Curator publication process, publication briefs, page-local document types, medium-specific GitHub Markdown and HTML outputs, screenshot QA, before/after review, and deterministic publication checks."
   - "The page may not change role authority, validator behavior, schemas, routing, checkpoint gates, source authority, generated-output authority, physics claim status, or corpus-wide migration approval."
   - "Retired Visual Atlas, topic-registry creation, universal section headings, and active teaching-packet fallback must be described only as retired or forbidden patterns."
@@ -28,6 +30,8 @@ output_surfaces:
   - "github-facing/documentation-curator-publication-process-explainer.md"
   - "html/documentation-curator-publication-process-explainer.html"
 acceptance_criteria:
+  - "States: Documentation Curator is best understood as a source-backed publication and technical-documentation perspective. It is closest to technical editor, science communicator, information architect, and provenance auditor."
+  - "States that the perspective definition is descriptive guidance only and not role authority, role semantics, routing behavior, validator behavior, generated-output authority, or physics claim authority."
   - "Explains the publication brief as the quality-control surface."
   - "Explains document types and page-local headings without imposing a universal section skeleton."
   - "Explains medium-specific divergence between GitHub Markdown and HTML."
@@ -52,3 +56,4 @@ This Phase 4B page explains how AEther-Flow public documentation is planned,
 written, reviewed, and checked under the active Documentation Curator
 Publication Process. It is a workflow guide, not a validator change, role
 change, routing change, or corpus-wide migration approval.
+The added perspective definition is descriptive guidance only.

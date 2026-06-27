@@ -116,6 +116,12 @@ from physics continuation. It may process one project-improvement signal or
 one deterministic classifier result per invocation, and it must not promote
 physics claims or edit canonical science sources.
 
+improve-project-system is best understood as a project-system reliability and
+governance perspective. It is closest to system engineer plus software
+engineer plus process auditor. This is descriptive guidance for reading the
+workflow, not new role authority, role semantics, permission expansion,
+validator behavior, routing behavior, or scientific claim authority.
+
 For human-made local repository edits that need controlled integration, use
 `.codex/skills/user-modified-project/SKILL.md` as the intake router. It must
 classify the diff, preserve the physics/project-system authority split, route
