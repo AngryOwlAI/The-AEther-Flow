@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `pdf_derivative`
 - Authority status: `generated_noncanonical`
 - Owner skill: `pdf-derivative-build`
-- Source hash: `cf892f9c139a133fab6afb46e277936a4b0716d19684b8d6cb30f782b5ac0c3a`
+- Source hash: `c5bc589dd566a75de8b92cc854391fb4b4ebf99aac0eb047cf9ee3d42a6e240a`
 
 ## Related Objects
 
@@ -20,4 +20,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-08T01:04:12Z`
+- Last validated at: `2026-06-27T15:59:47Z`
