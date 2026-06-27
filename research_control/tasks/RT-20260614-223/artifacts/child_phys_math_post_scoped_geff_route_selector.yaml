@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-223"
+job_id: "AJ-RT-20260614-223-001"
+status: "completed"
+decision:
+  selected_route: "matter_coupling_precondition_candidate_or_obstruction"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_role: "candidate-constructor@0.2.0"
+mathematical_basis:
+  accepted_input: "RT-20260614-222 adopted g_eff^{GSC-cand}(E;G^beta,T_src(E)) only as scoped source-extension g_eff object under declared source-side scope."
+  dependency_order: "A matter-coupling law cannot be derived yet, but the accepted scoped g_eff object is enough bounded input to ask for a source-side matter-coupling precondition candidate or a precise OB-COUPLING obstruction."
+  repair_status: "No repair defect is selected by the scoped g_eff Gate Chair review."
+  obstruction_status: "No new g_eff obstruction is present; the unresolved object is a coupling precondition."
+  freeze_status: "Route freeze is not selected because a constructive precondition packet is available and distinct from prior g_eff work."
+claim_boundary:
+  scoped_geff_available_as_input: true
+  metric_data_adopted: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+next_question: "Can one draft/control source-side matter-coupling precondition candidate be assembled from scoped source-extension g_eff and existing response/localization context, or is there a precise OB-COUPLING obstruction?"
+limitations:
+  - "The child does not define a matter action, stress-energy tensor, or universal coupling law."
+  - "The child does not derive Einstein equations."
+  - "The child does not promote benchmark status."

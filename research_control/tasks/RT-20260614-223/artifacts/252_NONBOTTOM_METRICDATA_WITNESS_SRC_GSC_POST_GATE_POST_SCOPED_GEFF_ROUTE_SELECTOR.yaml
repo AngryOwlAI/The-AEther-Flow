@@ -1,0 +1,136 @@
+artifact_id: "252_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_POST_SCOPED_GEFF_ROUTE_SELECTOR"
+artifact_type: "theoretical_decision_output"
+task_id: "RT-20260614-223"
+job_id: "AJ-RT-20260614-223-001"
+role_id: "theoretical-continuation-selector"
+created_at: "2026-06-27T07:08:00Z"
+title: "Post-Scoped-g_eff Route Selector"
+control_status:
+  parent_task_id: "RT-20260614-222"
+  parent_handoff_id: "handoff-0255"
+  target_derivation_milestone: "matter_coupling"
+  current_status: "scoped source-extension g_eff object adopted; downstream coupling and field-equation claims blocked"
+  claim_boundary: "Selector-only post-scoped-g_eff classification. No canonical ontology edit, no source-law adoption, no MetricData(E) adoption, no MetricFormAssign_src^{GSC} or SigScaleCont_src^{GSC} source-law adoption, no matter-coupling derivation or adoption, no Einstein equations, no benchmark promotion, no completed derivation, no future source-extension impossibility, and no global theory rejection."
+post_scoped_geff_route_classification:
+  scoped_geff_object: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  scoped_geff_status: "adopted only as scoped source-extension g_eff object in RT-20260614-222"
+  selected_route: "matter_coupling_precondition_candidate_or_obstruction"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_role: "candidate-constructor@0.2.0"
+  selected_next_packet_objective: "Attempt one draft/control source-side matter-coupling precondition candidate from scoped source-extension g_eff and existing response/localization context, or return one precise OB-COUPLING obstruction, without deriving or adopting matter coupling."
+  options:
+    matter_coupling_precondition_candidate_or_obstruction:
+      disposition: "selected"
+      reason: "Scoped g_eff adoption removes the prior blocker to asking the next constructive matter-coupling precondition question, while still blocking coupling derivation and downstream GR claims."
+    immediate_matter_coupling_derivation:
+      disposition: "not_selected"
+      reason: "A scoped g_eff object is not a universal matter-coupling law and does not supply stress-energy semantics."
+    source_extension_audit_or_stress_followup:
+      disposition: "not_selected"
+      reason: "No new candidate requiring audit or stress exists yet; the next candidate must first be constructed or precisely obstructed."
+    repair_packet:
+      disposition: "not_selected"
+      reason: "The RT-20260614-222 Gate Chair review selected no repair defect."
+    scoped_obstruction_packet:
+      disposition: "not_selected"
+      reason: "No OB-COUPLING obstruction has been produced yet; the Candidate Constructor packet is the first bounded place to produce one."
+    route_freeze:
+      disposition: "not_selected"
+      reason: "A distinct constructive precondition packet is available, so freeze would be premature."
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_candidate"
+  decision_basis: "RT-20260614-222 adopted g_eff^{GSC-cand}(E;G^beta,T_src(E)) only as scoped source-extension g_eff object. That scoped object does not derive coupling, but it supplies the bounded source-side input needed to attempt a matter-coupling precondition candidate or return a precise obstruction."
+  theoretical_method: "Compare handoff-0255 route options against the scoped g_eff Gate Chair artifact, the GR burden map, and the source-extension claim boundary. Select the lowest-authority constructive packet that can add decision information without importing matter coupling, Einstein equations, or benchmark recovery."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No human gate is required because the selector does not adopt a coupling law, edit ontology, promote benchmark status, or issue a Gate Chair verdict."
+  next_execution_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_objective: "construct one draft/control source-side matter-coupling precondition candidate or return one precise OB-COUPLING obstruction"
+  decision_consequence: "The next AgentJob should attempt the precondition candidate. If it succeeds, later audit and stress remain required before any gate; if it fails, the obstruction route should classify repair, freeze, ontology-law packet, or another bounded route."
+  new_payload_novelty: "Moves from effective_metric_g_eff scoped adoption status to the first bounded matter_coupling precondition construction question."
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "scoped source-extension g_eff is bounded source-side input only; not universal matter coupling, not stress-energy semantics, not Einstein equations, not benchmark promotion"
+obstruction_record:
+  present: false
+  obstruction_id: "No OB-COUPLING obstruction is recorded by this selector because the next packet is selected to attempt construction or produce one."
+  label_family_defined: true
+  scope: "matter_coupling_precondition"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_derive_coupling_yet"
+  source_extension_implication: "constructive_precondition_candidate_open"
+  consequence: "candidate_constructor_required"
+  forbidden_overread: "This selector result is not matter coupling, not Einstein equations, not benchmark promotion, and not completed derivation."
+source_extension_category: "source_extension_candidate"
+source_extension_import_classification: "scoped g_eff adopted as source-extension object; next packet may use it only as bounded input to a draft/control matter-coupling precondition candidate or obstruction"
+distance_to_gr_delta:
+  burden_id: "matter_coupling"
+  old_status: "not started"
+  new_status: "not started"
+  physics_delta: "no_matter_coupling_derivation_no_einstein_equations_no_benchmark_promotion"
+  control_delta: "Post-scoped-g_eff selector classified the next step as Candidate Constructor precondition candidate or obstruction."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "matter_coupling_adoption"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+forbidden_inferences:
+  - "post-scoped-g_eff route selection derives matter coupling"
+  - "scoped g_eff adoption supplies stress-energy semantics"
+  - "Candidate Constructor precondition route is a coupling law"
+  - "matter-coupling precondition work derives Einstein equations"
+  - "route selection is benchmark promotion"
+next_route:
+  next_task_type: "post_scoped_geff_matter_coupling_precondition_candidate_or_obstruction"
+  next_role: "candidate-constructor@0.2.0"
+  next_packet_mode: "source_extension_candidate draft/control precondition candidate or precise obstruction"
+  selected_next_packet_objective: "Attempt one draft/control source-side matter-coupling precondition candidate from scoped source-extension g_eff and existing response/localization context, or return one precise OB-COUPLING obstruction."
+  explicitly_blocked_routes:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "matter coupling adoption"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "benchmark Gate Chair closure"
+    - "completed derivation"
+conclusion:
+  verdict: "post_scoped_geff_selector_selected_matter_coupling_precondition_candidate_constructor"
+  summary: "The selector chooses a bounded Candidate Constructor packet for a source-side matter-coupling precondition candidate or precise obstruction. No matter coupling is derived."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260614-223/artifacts/child_phys_math_post_scoped_geff_route_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260614-223/artifacts/child_phys_phil_post_scoped_geff_route_selector.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260614-223/artifacts/parent_conflict_review_post_scoped_geff_route_selector.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260614-223/artifacts/252_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_POST_SCOPED_GEFF_ROUTE_SELECTOR.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260614-223/artifacts/parent_fusion_notes_post_scoped_geff_route_selector.md"
+    summary: "Both child perspectives select a bounded Candidate Constructor precondition packet and preserve no matter coupling, no Einstein equations, no benchmark promotion, and no completed derivation."
+limitations:
+  - "No matter-coupling law is constructed or adopted."
+  - "No stress-energy semantics are derived."
+  - "No Einstein-equation derivation is supplied."
+  - "No benchmark promotion or completed derivation is supplied."
+references:
+  - "Gate Chair Packet RT-20260614-222. (2026). Gate Chair review of scoped g_eff adoption status [Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project."
+  - "The AEther-Flow Research Project. (2026). GR derivation burden map [Internal control note]."
+  - "The AEther-Flow Research Project. (2026, June 27). Handoff 0255 [Internal research-control handoff]."
