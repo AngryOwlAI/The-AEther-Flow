@@ -1,0 +1,396 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLaw}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{crit}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\Tok}{\mathrm{Tok}}
+\newcommand{\Sem}{\mathrm{Sem}}
+\newcommand{\Adm}{\mathrm{Adm}}
+\newcommand{\Trans}{\mathrm{Trans}}
+\newcommand{\Compat}{\mathrm{Compat}}
+\newcommand{\ConsSrc}{\mathrm{Cons}_{\mathrm{src}}}
+\newcommand{\OBMC}{\mathrm{OB}\mbox{-}\mathrm{MC}}
+\newcommand{\Fsrc}{\mathcal{F}_{E}^{\sharp}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\title{Criteria-Aligned Repair of the Scoped Source-Side Coupling-Law Candidate}
+\author{Candidate Constructor Packet RT-20260614-237}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements \texttt{PLAN-P7-T2} as one bounded Candidate
+Constructor packet. It repairs and strengthens the prior
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+candidate against the positive source-side matter-coupling criteria defined in
+\texttt{RT-20260614-236}. The result is the draft/control,
+proposal-only, criteria-aligned candidate
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E)).
+\]
+
+This artifact constructs a candidate only. It does not adopt a coupling law,
+derive or adopt matter coupling, import stress-energy semantics, adopt
+\(\MetricData(E)\), change scoped \(\geff\), derive Einstein equations,
+promote benchmark status, issue a benchmark Gate Chair verdict, claim
+completed derivation, claim future source-extension impossibility, or reject
+the global theory.
+
+\begin{verbatim}
+candidate_constructor_result: "constructed_candidate"
+constructed_object:
+  "CouplingLaw_src^{GSC-crit-cand}(E;G^beta,T_src(E))"
+claim_status: "draft/control"
+status_label: "proposal-only"
+source_extension_category: "source_extension_candidate"
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "smuggling-auditor@0.2.0"
+\end{verbatim}
+
+\section{Inputs and Repair Target}
+
+The repair target is the draft/control candidate from \texttt{RT-20260614-230},
+later audited, stress-tested, and accepted only as scoped source-extension
+coupling-law-candidate evidence/precondition. The repair obligation is the
+criteria list NC-MC-001 through NC-MC-008 from \texttt{RT-20260614-236}.
+
+The repair is finite/local. It constructs an explicit candidate profile that
+can be audited. It does not assert that the profile is universal matter
+coupling, an adopted source law, a stress-energy coupling, or a GR recovery
+theorem.
+
+\section{Repaired Candidate Package}
+
+\begin{definition}[Criteria-aligned declared package]
+A criteria-aligned declared package is
+\[
+  E_{\mathrm{crit}} =
+  (E,\Gbeta,T_{\mathrm{src}}(E),\rho_E,\Fsrc,\mathcal{I}_E^{\sharp})
+\]
+where \(\rho_E\) records accepted scoped evidence/precondition status for
+\(\CouplingLaw\), \(\Fsrc=\{S_0,S_1\}\) is a finite/local family of source
+matter-like response sectors, and \(\mathcal{I}_E^{\sharp}\) is a
+source-defined interpretation domain. If any component requires target
+topology, target atlas, target metric, Lorentzian signature, proper time,
+stress-energy tensors, matter actions, detector semantics, benchmark success,
+or process authority, the package returns \(\BottomSrc\).
+\end{definition}
+
+\begin{definition}[Token semantics repair]
+For each \(S\in\Fsrc\), define a finite token set
+\[
+  \Tok_E^{\sharp}(S)=
+  \{j_S^{0},j_S^{+},j_S^{\mathrm{rej}}\}.
+\]
+The repaired source semantics map is
+\[
+  \Sem_E^{\sharp}(j)=
+  (S(j),\sigma_E(j),u_E(j),c_E(j))
+  \in \mathcal{I}_E^{\sharp},
+\]
+where \(S(j)\) is the source sector, \(\sigma_E(j)\) is source support
+syntax, \(u_E(j)\) is source update kind, and \(c_E(j)\) is the scoped
+source-compatibility class. These components are source records only. They are
+stronger than bare labels because \(j_S^{0}\), \(j_S^{+}\), and
+\(j_S^{\mathrm{rej}}\) have distinct source interpretation tuples. They are
+weaker than stress-energy because no component is a tensor, action,
+detector calibration, empirical matter field, or target metric datum.
+\end{definition}
+
+\begin{definition}[Criteria-aligned repaired candidate]
+For a declared package \(E_{\mathrm{crit}}\), define
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E)) :=
+  (D_E^{\sharp},P_E^{\sharp},\Fsrc,\Tok_E^{\sharp},
+  \Sem_E^{\sharp},\Adm_E^{\sharp},\Compat_E^{\sharp},
+  \Trans_E^{\sharp},\ConsSrc_E^{\sharp},B_E^{\sharp},
+  N_E^{\sharp},O_E^{\sharp},L_E^{\sharp}).
+\]
+The slots are:
+\begin{description}[leftmargin=*]
+  \item[\(D_E^{\sharp}\)] the declared source support inherited from the
+  accepted scoped evidence/precondition chain and restricted to the finite
+  family \(\Fsrc\).
+  \item[\(P_E^{\sharp}\)] a receipt that \(\CouplingLaw\) is accepted only as
+  scoped coupling-law-candidate evidence/precondition.
+  \item[\(\Fsrc\)] the finite/local source sector family.
+  \item[\(\Tok_E^{\sharp}\)] source coupling-token records.
+  \item[\(\Sem_E^{\sharp}\)] source-intrinsic token interpretation.
+  \item[\(\Adm_E^{\sharp}\)] nontrivial source admissibility.
+  \item[\(\Compat_E^{\sharp}\)] scoped source-extension compatibility with
+  prior \(\geff\) context only.
+  \item[\(\Trans_E^{\sharp}\)] source transition transport.
+  \item[\(\ConsSrc_E^{\sharp}\)] an optional source conservation-like tally;
+  this packet does not invoke physical conservation.
+  \item[\(B_E^{\sharp}\)] bottom behavior.
+  \item[\(N_E^{\sharp}\)] no-target-import certificate.
+  \item[\(O_E^{\sharp}\)] obstruction label family
+  \(\OBMC\text{-}\mathrm{CRIT}\text{-}\ast\).
+  \item[\(L_E^{\sharp}\)] limitation record and future bridge obligations.
+\end{description}
+\end{definition}
+
+\section{Admissibility and Transition Repair}
+
+\begin{definition}[Nontrivial admissibility]
+For \(j,j'\in\coprod_{S\in\Fsrc}\Tok_E^{\sharp}(S)\), define
+\[
+  j\leadsto_E^{\sharp} j'
+  \quad\Longleftrightarrow\quad
+  \Adm_E^{\sharp}(j,j')=\mathsf{true}.
+\]
+The predicate \(\Adm_E^{\sharp}\) is true exactly when:
+\begin{enumerate}[leftmargin=*]
+  \item \(\Sem_E^{\sharp}(j)\) and \(\Sem_E^{\sharp}(j')\) are defined in
+  \(\mathcal{I}_E^{\sharp}\);
+  \item the update kind \(u_E(j,j')\) is a declared source update;
+  \item \(\Compat_E^{\sharp}(j,j')\) records only scoped source-extension
+  compatibility;
+  \item every declared source transition preserves the update or returns
+  \(\BottomSrc\);
+  \item no target, detector, benchmark, adoption, or process-authority repair
+  is required.
+\end{enumerate}
+It admits \(j_S^{0}\leadsto_E^{\sharp}j_S^{+}\) for each \(S\in\Fsrc\) when
+the five conditions hold, and rejects
+\(j_S^{0}\not\leadsto_E^{\sharp}j_S^{\mathrm{rej}}\) because
+\(j_S^{\mathrm{rej}}\) is the declared forbidden-repair token.
+\end{definition}
+
+\begin{definition}[Transition transport]
+For every declared \(\tau\in T_{\mathrm{src}}(E)\), define
+\[
+  \Trans_E^{\sharp}(\tau,j)=\tau_{\ast}^{\sharp}j
+\]
+only when \(\tau\) acts on source sector labels, support syntax, update kind,
+and scoped compatibility class. If \(\tau\) requires target-atlas covariance,
+target inverse repair, target metric compatibility, detector repair, or
+benchmark repair, \(\Trans_E^{\sharp}\) returns \(\BottomSrc\) or
+\(\OBMC\)-CRIT-TRANSITION.
+\end{definition}
+
+\begin{lemma}[Criteria-aligned transition coherence]
+If \(j\leadsto_E^{\sharp} j'\) and \(\tau\) is a declared source transition
+whose repaired transport is defined, then
+\[
+  \tau_{\ast}^{\sharp}j
+  \leadsto_{\tau E}^{\sharp}
+  \tau_{\ast}^{\sharp}j'.
+\]
+If the transported relation cannot be evaluated using source records alone,
+the branch fails closed.
+\end{lemma}
+
+\begin{proof}
+The definition of \(\Adm_E^{\sharp}\) requires source transition preservation
+as a condition of admissibility. The transport \(\Trans_E^{\sharp}\) acts only
+on source sector labels, support syntax, update kind, and scoped compatibility
+class. Therefore a defined transport preserves the admissibility conditions.
+If any required component is absent or target-repaired, \(B_E^{\sharp}\) and
+\(O_E^{\sharp}\) apply.
+\end{proof}
+
+\section{Criteria Addressed}
+
+\begin{longtable}{p{0.16\linewidth}p{0.45\linewidth}p{0.30\linewidth}}
+\toprule
+Criterion & Repair component & Residual obligation \\
+\midrule
+NC-MC-001 &
+\(\Sem_E^{\sharp}\) maps tokens to source interpretation tuples
+\((S,\sigma,u,c)\), stronger than labels and weaker than stress-energy. &
+Smuggling Auditor must check that no hidden empirical matter semantics enter
+\(\mathcal{I}_E^{\sharp}\). \\
+\addlinespace
+NC-MC-002 &
+\(\Adm_E^{\sharp}\) admits \(j_S^0\leadsto j_S^+\) and rejects
+\(j_S^0\leadsto j_S^{\mathrm{rej}}\) for source-intrinsic reasons. &
+Audit must confirm the rejection does not rely on detector or benchmark
+meaning. \\
+\addlinespace
+NC-MC-003 &
+\(\Trans_E^{\sharp}\) gives source transition coherence or fail-closed
+\(\BottomSrc\). &
+Refuter stress should later test inverse and cocycle branches if audit passes. \\
+\addlinespace
+NC-MC-004 &
+The same \((\Sem,\Adm,\Compat,\Trans)\) schema applies over
+\(\Fsrc=\{S_0,S_1\}\). &
+This is finite/local only; no universal matter sector is derived. \\
+\addlinespace
+NC-MC-005 &
+\(\Compat_E^{\sharp}\) records scoped source-extension compatibility only and
+does not use target metric semantics. &
+Audit must inspect every occurrence of \(\geff\) compatibility language. \\
+\addlinespace
+NC-MC-006 &
+\(\ConsSrc_E^{\sharp}\) is optional and inactive here; no physical
+conservation is invoked. &
+Any later conservation claim needs separate source analogue, audit, and gate. \\
+\addlinespace
+NC-MC-007 &
+\(N_E^{\sharp}\) rejects empirical matter, detector, action, and
+stress-energy readings. &
+Future physical bridge obligations remain open. \\
+\addlinespace
+NC-MC-008 &
+\(B_E^{\sharp}\) and \(O_E^{\sharp}\) cover ambiguous, degenerate,
+target-repaired, detector-repaired, benchmark-repaired, adoption-repaired, and
+process-repaired branches. &
+Refuter stress should later test bottom completeness if audit passes. \\
+\bottomrule
+\end{longtable}
+
+\section{Candidate Sufficient Profile}
+
+\begin{proposition}[Constructed criteria-aligned repair candidate]
+Under the declared finite/local package \(E_{\mathrm{crit}}\), the repaired
+tuple \(\CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))\) is a
+draft/control, proposal-only, source-side candidate satisfying the
+Candidate Constructor target of \texttt{PLAN-P7-T2}. It addresses NC-MC-001
+through NC-MC-008 for the declared finite/local family \(\Fsrc\). The result
+is \texttt{constructed\_candidate} pending Smuggling Auditor review.
+\end{proposition}
+
+\begin{proof}
+The repaired tuple adds exactly the missing positive criteria slots to the
+prior candidate: finite/local source sectors, source-intrinsic semantics,
+nontrivial admissibility witnesses, source transition transport,
+source-uniform sector schema, scoped compatibility boundary, optional
+source-conservation placeholder, no-target-import refusal, bottom table, and
+limitation record. The criteria table above maps each NC-MC criterion to a
+candidate component and an explicit residual obligation. Because all slots are
+declared source-side and every forbidden repair returns \(\BottomSrc\) or an
+\(\OBMC\)-CRIT label, the packet constructs a candidate rather than an
+obstruction. Because no human gate, audit, stress test, empirical bridge, or
+field-equation theorem is supplied, the candidate remains only audit-pending
+draft/control data.
+\end{proof}
+
+\section{Proof Obligations}
+
+The constructed candidate requires:
+\begin{enumerate}[leftmargin=*]
+  \item Smuggling Auditor review of hidden target metric import,
+  stress-energy semantics, matter action semantics, detector semantics,
+  coupling-law adoption laundering, source-law adoption laundering, and
+  process-authority laundering.
+  \item Refuter stress after audit if audit passes, especially transition
+  inverse, cocycle, nontriviality, universality, scoped-\(\geff\) overread,
+  and bottom completeness.
+  \item Separate Gate Chair authority before any evidence-status acceptance
+  beyond draft/control candidate status.
+  \item Separate derivation or explicit gate for empirical matter semantics,
+  stress-energy tensors, matter actions, conservation laws, Einstein
+  equations, benchmark promotion, benchmark closure, or completed derivation.
+\end{enumerate}
+
+\section{Obstruction Fallback}
+
+No obstruction is asserted by this packet because the criteria-aligned repair
+candidate is constructed. If a later audit or stress packet finds that
+\(\Sem_E^{\sharp}\), \(\Adm_E^{\sharp}\), \(\Compat_E^{\sharp}\), or
+\(\Trans_E^{\sharp}\) depends on target metric semantics, detector semantics,
+stress-energy semantics, benchmark behavior, or process authority, the
+candidate must return \(\BottomSrc\) or a precise
+\[
+  \OBMC\mbox{-}\mathrm{CRIT}\mbox{-}\ast
+\]
+obstruction label under that later packet's scope.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Criteria-aligned repaired coupling-law candidate constructed pending Smuggling Auditor audit; no coupling law or matter coupling is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Unchanged. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No benchmark closure or adoption verdict is issued. \\
+current route freeze or hard-fail status & Not frozen; Smuggling Auditor audit is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+This packet constructs
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+as a criteria-aligned repaired draft/control coupling-law candidate. It
+addresses NC-MC-001 through NC-MC-008 only for a declared finite/local source
+family and lists proof obligations for audit and later stress. It does not
+adopt the repaired candidate and does not derive matter coupling.
+
+The logical next step is one bounded Smuggling Auditor packet under
+\texttt{PLAN-P7-T3}. Audit must precede Refuter stress because the candidate
+has been materially strengthened.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-230. (2026). \emph{Post-
+precondition-evidence source-side coupling-law candidate or obstruction}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Candidate Constructor Packet RT-20260614-237. (2026). \emph{Criteria-aligned
+repair of the scoped source-side coupling-law candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-234. (2026). \emph{Gate Chair review of scoped
+coupling-law candidate evidence} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-236. (2026). \emph{Positive
+source-side matter-coupling success criteria} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Refuter Packet RT-20260614-232. (2026). \emph{Refuter stress test of
+post-precondition-evidence source-side coupling-law candidate}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research, v10} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \emph{Handoff 0269}
+[Internal research-control handoff].
+
+\end{document}
