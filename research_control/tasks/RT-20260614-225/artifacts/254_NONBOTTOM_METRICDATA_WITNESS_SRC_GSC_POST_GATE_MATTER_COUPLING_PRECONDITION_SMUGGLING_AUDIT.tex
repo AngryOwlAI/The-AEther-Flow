@@ -1,0 +1,207 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\geffCand}{g_{\mathrm{eff}}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}}
+\newcommand{\CouplingPrecond}{\mathrm{CouplingPrecond}^{\mathsf{GSC}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBCoupling}{\mathrm{OB}\mbox{-}\mathrm{COUPLING}}
+
+\newtheorem{finding}{Finding}
+\newtheorem{verdict}{Verdict}
+
+\title{Smuggling Audit of Post-Scoped-\texorpdfstring{$g_{\mathrm{eff}}$}{g_eff} Matter-Coupling Precondition Candidate}
+\author{Smuggling Auditor Packet RT-20260614-225}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Smuggling Auditor output for
+\texttt{RT-20260614-225}. It audits the draft/control source-side
+matter-coupling precondition candidate
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+constructed in \texttt{RT-20260614-224}. The audit may pass, fail, or return a
+precise laundering finding. A pass is only local source-purity as written. It
+is not coupling-law adoption, not matter-coupling derivation, not
+stress-energy semantics, not Einstein equations, not benchmark promotion, and
+not completed derivation.
+
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_refuter_stress"
+audited_object: "CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+coupling_law_adopted: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "refuter"
+\end{verbatim}
+
+\section{Audit Target}
+
+The audited object is the source-side draft/control tuple
+\[
+  \CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E)) =
+  (C_E,R^{\mathrm{src}}_E,J^{\mathrm{src}}_E,G_E,I_E,B_E,N_E,O_E,\Lambda_E).
+\]
+Its admitted inputs are the scoped source-extension object
+\(\geffCand(E;\Gbeta,T_{\mathrm{src}}(E))\), source-side
+response/localization context, and declared source transition data. The
+candidate itself remains precondition data only.
+
+\section{Audit Dimensions}
+
+\begin{longtable}{p{0.26\linewidth}p{0.46\linewidth}p{0.20\linewidth}}
+\toprule
+Audit dimension & Evidence checked & Finding \\
+\midrule
+Hidden target topology or atlas & \(C_E\), \(R^{\mathrm{src}}_E\), and
+\(I_E\) use source support and source transition records only. & pass \\
+Hidden target metric or Lorentzian signature & \(G_E\) references
+\(\geffCand\) only as scoped source-extension input and not as target metric
+or universal coupling geometry. & pass \\
+Proper-time detector semantics import & \(R^{\mathrm{src}}_E\) and
+\(J^{\mathrm{src}}_E\) contain no clock normalization, detector calibration,
+empirical readout, or proper-time semantics. & pass \\
+Stress-energy semantics import & \(J^{\mathrm{src}}_E\) is a source
+coupling-token interface only; it contains no stress-energy tensor, matter
+action, empirical matter sector, or variational field equation. & pass \\
+Coupling-law adoption laundering & The tuple is explicitly a precondition
+record; no slot states a universal coupling rule or adopted matter response
+law. & pass \\
+Source-law adoption laundering & Scoped \(\geff\), response context, and
+source transition data are bounded inputs only, not newly adopted source laws.
+& pass \\
+Transition overread & \(I_E\) states source transition compatibility only and
+not target-coordinate covariance. & pass \\
+Bottom behavior & \(B_E\), \(N_E\), and \(O_E\) fail closed to \(\BottomSrc\)
+or \(\OBCoupling\)-labels when target repair, detector repair, benchmark
+repair, or process repair is required. & pass \\
+Process authority & Validators, registries, roles, handoffs, approvals,
+generated derivatives, local caches, file order, and commit status are not
+mathematical premises. & pass \\
+Downstream GR promotion & No Einstein equation, benchmark verdict, Gate
+Chair closure, or completed derivation is asserted. & pass \\
+\bottomrule
+\end{longtable}
+
+\section{Findings}
+
+\begin{finding}[No hidden target import detected as written]
+Every positive slot of \(\CouplingPrecond\) is source-side data, scoped
+source-extension input, source-transition compatibility, controlled bottom
+behavior, or explicit refusal. The candidate does not require target topology,
+target atlas, target metric, Lorentzian signature import, proper time,
+detector semantics, empirical fit, or benchmark success.
+\end{finding}
+
+\begin{finding}[No stress-energy semantics detected as written]
+The source coupling-token interface \(J^{\mathrm{src}}_E\) names only source
+support and compatibility slots for future work. It does not contain a
+stress-energy tensor, matter action, empirical matter sector, detector
+semantics, or variational field-equation premise.
+\end{finding}
+
+\begin{finding}[No coupling-law or source-law laundering detected as written]
+The audited tuple is a precondition record. It does not convert scoped
+\(\geff\), response/localization context, or source transition data into a
+coupling law, a canonical ontology edit, a source-law adoption, or
+\(\mathrm{MetricData}(E)\) adoption.
+\end{finding}
+
+\begin{finding}[No process-authority laundering detected as written]
+The no-target-import certificate and limitation record exclude validators,
+registries, roles, handoffs, approvals, generated derivatives, local caches,
+file order, and commit status as mathematical premises.
+\end{finding}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this audit \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\mathrm{MetricData}(E)\) & Prior scoped source-extension evidence only; not adopted here. \\
+\(\geff\) & Prior scoped source-extension \(\geff\) object only; no scope expansion. \\
+Matter coupling & Draft/control source-side precondition candidate audited as source-pure as written pending Refuter stress; no coupling law is derived or adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local preserve/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No matter-coupling or coupling-law review is issued. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Audit Verdict}
+
+\begin{verdict}[Source-pure as written pending stress]
+The draft/control \(\CouplingPrecond(E;\Gbeta,T_{\mathrm{src}}(E))\)
+candidate passes the Smuggling Auditor source-purity audit as written. The
+pass is local and conditional. It does not adopt a coupling law, does not
+derive matter coupling, does not import stress-energy semantics, and does not
+promote downstream GR claims.
+\end{verdict}
+
+\begin{verbatim}
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  audited_object: "CouplingPrecond_src^{GSC-cand}(E;G^beta,T_src(E))"
+  hidden_target_import_detected: false
+  stress_energy_semantics_import_detected: false
+  coupling_law_laundering_detected: false
+  source_law_laundering_detected: false
+  process_authority_laundering_detected: false
+  transition_overread_detected: false
+  bottom_control_failure_detected: false
+  downstream_promotion_detected: false
+  next_required_role: "refuter"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Refuter stress test. It should stress
+source coupling-token ambiguity, hidden stress-energy semantics pressure,
+target import pressure, source transition inverse and cocycle behavior,
+bottom completeness, process-authority overread, coupling-law laundering,
+source-law adoption laundering, scoped-\(\geff\) overread, Einstein-equation
+pressure, benchmark-promotion pressure, and completed-derivation pressure.
+
+\section{References}
+
+Candidate Constructor Packet RT-20260614-224. (2026). \textit{Post-scoped-g\_eff
+source-side matter-coupling precondition candidate} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-222. (2026). \textit{Scoped g\_eff adoption-status
+review} [Research-control TeX artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-217. (2026). \textit{Smuggling audit of
+post-MetricFormAssign g\_eff candidate} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0257}
+[Internal research-control handoff].
+
+\end{document}
