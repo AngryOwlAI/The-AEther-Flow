@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-CANDIDATE-V1-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-CANDIDATE-V1-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW`
+- Source path: `research_control/tasks/RT-20260614-262/artifacts/291_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_CANDIDATE_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex`
+- Format: `tex`
+- Role: `scientific_gate`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `8e6480c86ddbe490864737d3a11a9a763f9c56816262e42587acdda61ad31d19`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-CANDIDATE-V1-REFUTER-STRESS-TEST;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-CANDIDATE-V1-SMUGGLING-AUDIT;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-CANDIDATE-V1` ``
+- Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-post-gate-matter-coupling-bridge-candidate-v1-source-extension-evidence-gate-chair-review.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-28T16:07:20Z`
