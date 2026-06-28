@@ -97,6 +97,72 @@ class DependencyGraphTests(unittest.TestCase):
             self.assertIn("navigational_support_only", dot_path.read_text(encoding="utf-8"))
             self.assertEqual(json.loads(json_path.read_text(encoding="utf-8"))["schema_id"], "research_dependency_graph_v1")
 
+    def test_cli_check_passes_for_fresh_outputs(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            json_path = tmp_path / "graph.json"
+            markdown_path = tmp_path / "graph.md"
+            dot_path = tmp_path / "graph.dot"
+            self.graph_module.main(
+                [
+                    "--json",
+                    json_path.as_posix(),
+                    "--markdown",
+                    markdown_path.as_posix(),
+                    "--dot",
+                    dot_path.as_posix(),
+                ]
+            )
+
+            exit_code = self.graph_module.main(
+                [
+                    "--check",
+                    "--json",
+                    json_path.as_posix(),
+                    "--markdown",
+                    markdown_path.as_posix(),
+                    "--dot",
+                    dot_path.as_posix(),
+                ]
+            )
+
+            self.assertEqual(exit_code, 0)
+
+    def test_cli_check_fails_for_stale_output(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            json_path = tmp_path / "graph.json"
+            markdown_path = tmp_path / "graph.md"
+            dot_path = tmp_path / "graph.dot"
+            self.graph_module.main(
+                [
+                    "--json",
+                    json_path.as_posix(),
+                    "--markdown",
+                    markdown_path.as_posix(),
+                    "--dot",
+                    dot_path.as_posix(),
+                ]
+            )
+            markdown_path.write_text(
+                markdown_path.read_text(encoding="utf-8") + "\nstale fixture\n",
+                encoding="utf-8",
+            )
+
+            exit_code = self.graph_module.main(
+                [
+                    "--check",
+                    "--json",
+                    json_path.as_posix(),
+                    "--markdown",
+                    markdown_path.as_posix(),
+                    "--dot",
+                    dot_path.as_posix(),
+                ]
+            )
+
+            self.assertEqual(exit_code, 1)
+
 
 if __name__ == "__main__":
     unittest.main()

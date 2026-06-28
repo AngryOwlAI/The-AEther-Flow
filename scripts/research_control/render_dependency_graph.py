@@ -29,6 +29,9 @@ AUTHORITY_NOTICE = (
     "substitute for registered sources, completions, handoffs, gates, or "
     "control registries."
 )
+DEFAULT_JSON_PATH = "output/research_dependency_graph.json"
+DEFAULT_MARKDOWN_PATH = "wiki/indexes/research_dependency_graph.md"
+DEFAULT_DOT_PATH = "output/research_dependency_graph.dot"
 
 NODE_CLASSES = {
     "accepted_scoped_object",
@@ -1615,6 +1618,14 @@ def render_dot(graph: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def render_json(graph: dict[str, Any]) -> str:
+    return json.dumps(graph, indent=2, sort_keys=True) + "\n"
+
+
+def text_sha256(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
 def write_text(path_text: str, text: str) -> None:
     path = repo_path(path_text)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1624,7 +1635,56 @@ def write_text(path_text: str, text: str) -> None:
 def write_json(path_text: str, graph: dict[str, Any]) -> None:
     path = repo_path(path_text)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(graph, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    path.write_text(render_json(graph), encoding="utf-8")
+
+
+def compare_expected_text(path_text: str, expected_text: str) -> dict[str, Any]:
+    path = repo_path(path_text)
+    expected_hash = text_sha256(expected_text)
+    if not path.exists():
+        return {
+            "path": path_text,
+            "status": "missing",
+            "fresh": False,
+            "expected_hash": expected_hash,
+            "actual_hash": "",
+        }
+    actual_text = path.read_text(encoding="utf-8")
+    actual_hash = text_sha256(actual_text)
+    fresh = actual_text == expected_text
+    return {
+        "path": path_text,
+        "status": "fresh" if fresh else "stale",
+        "fresh": fresh,
+        "expected_hash": expected_hash,
+        "actual_hash": actual_hash,
+    }
+
+
+def check_graph_artifacts(
+    *,
+    json_path: str = DEFAULT_JSON_PATH,
+    markdown_path: str = DEFAULT_MARKDOWN_PATH,
+    dot_path: str = DEFAULT_DOT_PATH,
+) -> dict[str, Any]:
+    graph = build_graph(REPO_ROOT)
+    artifact_checks = {
+        "json": compare_expected_text(json_path, render_json(graph)),
+        "markdown": compare_expected_text(markdown_path, render_markdown(graph)),
+        "dot": compare_expected_text(dot_path, render_dot(graph)),
+    }
+    fresh = all(item["fresh"] for item in artifact_checks.values())
+    return {
+        "status": "PASS" if fresh else "FAIL",
+        "fresh": fresh,
+        "schema_id": graph["schema_id"],
+        "generated_at": graph["generated_at"],
+        "source_fingerprint": graph["source_fingerprint"],
+        "node_count": len(graph["nodes"]),
+        "edge_count": len(graph["edges"]),
+        "artifacts": artifact_checks,
+        "authority_notice": AUTHORITY_NOTICE,
+    }
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
@@ -1632,12 +1692,37 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--json", dest="json_path", help="Write JSON graph to this path.")
     parser.add_argument("--markdown", dest="markdown_path", help="Write Markdown summary to this path.")
     parser.add_argument("--dot", dest="dot_path", help="Write DOT graph to this path.")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Fail if generated graph artifacts are stale relative to tracked state.",
+    )
     parser.add_argument("--stdout", action="store_true", help="Print JSON graph to stdout.")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    if args.check:
+        try:
+            report = check_graph_artifacts(
+                json_path=args.json_path or DEFAULT_JSON_PATH,
+                markdown_path=args.markdown_path or DEFAULT_MARKDOWN_PATH,
+                dot_path=args.dot_path or DEFAULT_DOT_PATH,
+            )
+        except GraphError as exc:
+            print(f"dependency graph freshness check failed: {exc}", file=sys.stderr)
+            return 1
+        if args.stdout:
+            print(json.dumps(report, indent=2, sort_keys=True))
+        else:
+            print(f"dependency graph freshness check: {report['status']}")
+            for format_name, item in report["artifacts"].items():
+                print(
+                    f"- {format_name}: {item['status']} "
+                    f"path={item['path']} actual={item['actual_hash']} expected={item['expected_hash']}"
+                )
+        return 0 if report["fresh"] else 1
     try:
         graph = build_graph(REPO_ROOT)
     except GraphError as exc:
