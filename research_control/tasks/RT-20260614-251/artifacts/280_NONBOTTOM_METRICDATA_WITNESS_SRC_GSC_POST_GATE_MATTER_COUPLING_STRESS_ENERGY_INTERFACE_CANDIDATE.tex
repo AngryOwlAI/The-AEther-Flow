@@ -1,0 +1,489 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}_{\mathrm{src}}^{\mathrm{GSC\mbox{-}crit\mbox{-}cand}}}
+\newcommand{\BridgeCertCand}{\mathrm{BridgeCert}^{\mathrm{cand}}}
+\newcommand{\BErec}{B_E^{\mathrm{rec}}}
+\newcommand{\SEICand}{\mathrm{SEI}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SEICertCand}{\mathrm{SEICert}^{\mathrm{cand}}}
+\newcommand{\SrcME}{\mathrm{SrcME}}
+\newcommand{\BalSrc}{\mathrm{Bal}_{\mathrm{src}}}
+\newcommand{\FluxSrc}{\mathrm{Flux}_{\mathrm{src}}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\EligibleSEICand}{\mathrm{EligibleSEICand}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBMCSEI}{\mathrm{OB}\mbox{-}\mathrm{MC}\mbox{-}\mathrm{SEI}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+
+\title{Draft/Control Source-Side Stress-Energy-Interface Candidate}
+\author{Candidate Constructor Packet RT-20260614-251}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Candidate Constructor packet after
+\texttt{RT-20260614-250}. It constructs a draft/control source-side
+stress-energy-interface candidate satisfying the criteria SEI-MC-001 through
+SEI-MC-010 over a declared finite/local source family. The constructed
+objects are
+\[
+  \SEICand(E,F_E^\sharp)
+  \quad\text{and}\quad
+  \SEICertCand(E,F_E^\sharp).
+\]
+
+The accepted inputs
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E)),
+  \qquad
+  \BErec,\qquad
+  \BridgeCertCand(E,F_E^\sharp)
+\]
+remain scoped source-extension evidence/preconditions only. This artifact
+does not edit canonical ontology, adopt a source law, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote benchmark status, issue a benchmark Gate
+Chair verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\begin{verbatim}
+candidate_constructor_result: "constructed_candidate"
+constructed_object: "SEI_src^{cand}(E,F_E^sharp)"
+certificate_object: "SEICert^{cand}(E,F_E^sharp)"
+claim_status: "draft/control"
+status_label: "proposal-only"
+source_extension_category: "source_extension_candidate"
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "smuggling-auditor@0.2.0"
+\end{verbatim}
+
+\section{Declared Source Family}
+
+Let
+\[
+  F_E^\sharp=\{S_0,S_1\}
+\]
+be the declared finite/local source family. For each
+\(S\in F_E^\sharp\), define source interface tokens
+\[
+  J_E(S)=\{j_S^0,j_S^+,j_S^{\mathrm{rej}}\},
+\]
+source readouts
+\[
+  R_E(S)=\{\rho_S^{\mathrm{bal}},\rho_S^{\mathrm{flux}}\},
+\]
+and source states
+\[
+  x=(S,\sigma,u,\tau,\ell)
+\]
+whose fields are source sector, source support syntax, source update kind,
+declared source transition, and local comparison label. None of these fields
+is a target topology, target atlas, target metric, Lorentzian signature,
+proper time, stress-energy tensor, matter action, detector calibration,
+empirical matter field, benchmark fit, Einstein-equation premise, validator
+status, registry metadata, generated derivative, role authority, handoff
+status, approval status, file order, commit status, PDF, HTML artifact, or
+local cache.
+
+\begin{definition}[Source balance predicate]
+For each \(S\in F_E^\sharp\), define \(\BalSrc_E\) by
+\[
+  \BalSrc_E(j,x)=
+  \begin{cases}
+  \mathsf{accept},&
+  j=j_S^0,\ x=(S,\sigma_S^0,u_S^+,\tau_{\mathrm{id}},\ell_S^+),\\
+  \mathsf{reject},&
+  j=j_S^{\mathrm{rej}}\ \text{or}\ x\notin \mathsf{SrcState}_E,\\
+  \mathsf{undetermined},&\text{otherwise.}
+  \end{cases}
+\]
+The accepting and rejecting branches are source-intrinsic branches. They do
+not use target stress-energy, matter action, detector semantics, or empirical
+matter behavior.
+\end{definition}
+
+\begin{definition}[Source flux ledger]
+Define \(\FluxSrc_E\) as the finite ledger
+\[
+  \FluxSrc_E(S,j,\tau)=
+  (S,\tau,j,\delta_S(j,\tau),\lambda_S(j,\tau)),
+\]
+where \(\delta_S\) is the declared source-token update and
+\(\lambda_S\in\{\mathsf{preserve},\mathsf{modify},\mathsf{bottom}\}\) is the
+source transition verdict. For the declared local transition
+\(\tau_{\mathrm{id}}\),
+\[
+  \lambda_S(j_S^0,\tau_{\mathrm{id}})=\mathsf{preserve},
+  \qquad
+  \lambda_S(j_S^{\mathrm{rej}},\tau_{\mathrm{id}})=\mathsf{bottom}.
+\]
+If any flux entry requires target geometry or empirical matter semantics, the
+ledger returns \(\BottomSrc\) with \(\OBMCSEI\)-FLUX-FAIL or
+\(\OBMCSEI\)-TARGET-IMPORT.
+\end{definition}
+
+\section{Candidate Map}
+
+\begin{definition}[Source-side interface record]
+For \(S\in F_E^\sharp\), \(j\in J_E(S)\), and
+\(x\in\mathsf{SrcState}_E\), define the source-side interface record
+\[
+  i_E(j,x)=
+  (S,j,R_E(S),\BalSrc_E(j,x),\FluxSrc_E(S,j,\tau),
+  \BErec,\BridgeCertCand(E,F_E^\sharp),\mathsf{scope}_{\geff},
+  \NoTargetImport_E(j,x)).
+\]
+The entries \(\BErec\) and \(\BridgeCertCand\) are stored only as accepted
+source-extension evidence/precondition markers and compatibility constraints.
+The entry \(\mathsf{scope}_{\geff}\) records only boundary preservation for
+prior scoped \(\geff\). It is not \(\MetricData(E)\) adoption and not a
+change in \(\geff\) scope.
+\end{definition}
+
+\begin{definition}[Stress-energy-interface candidate map]
+Define
+\[
+  \SEICand(E,F_E^\sharp)(j,x)=
+  \begin{cases}
+  i_E(j,x),&
+  \begin{array}{l}
+  S\in F_E^\sharp,\ j\in J_E(S),\ x\in\mathsf{SrcState}_E,\\
+  \BalSrc_E(j,x)=\mathsf{accept},\\
+  \FluxSrc_E(S,j,\tau)\neq\BottomSrc,\\
+  \BridgeCertCand(E,F_E^\sharp)\ \text{is used only as a source-side}\\
+  \text{compatibility precondition},\\
+  \mathsf{scope}_{\geff}\ \text{preserves its prior scoped boundary},\\
+  \NoTargetImport_E(j,x)=\mathsf{pass};
+  \end{array}\\[4ex]
+  \BottomSrc,&\text{otherwise.}
+  \end{cases}
+\]
+This map is a finite/local source-side candidate. It is not a
+stress-energy tensor, not a matter action, not detector semantics, not
+empirical matter coupling, not an adopted coupling law, and not a field
+equation.
+\end{definition}
+
+\begin{definition}[Candidate certificate]
+The candidate certificate is
+\[
+  \SEICertCand(E,F_E^\sharp)=
+  (F_E^\sharp,\CouplingLawCrit,\BErec,\BridgeCertCand,\SrcME_E,
+  \SEICand,\mathcal{C}_E^{\mathrm{sei}},
+  \mathcal{T}_E^{\mathrm{sei}},\NoTargetImport_E,
+  \mathcal{O}_E^{\mathrm{sei}},\mathcal{G}_E^{\mathrm{sei}}),
+\]
+where \(\SrcME_E=(S_E,J_E,R_E,\BalSrc_E,\FluxSrc_E,\Pi_E)\),
+\(\mathcal{C}_E^{\mathrm{sei}}\) records SEI-MC-001 through SEI-MC-010,
+\(\mathcal{T}_E^{\mathrm{sei}}\) records the finite/local tests,
+\(\mathcal{O}_E^{\mathrm{sei}}\) maps failures to fail-closed labels, and
+\(\mathcal{G}_E^{\mathrm{sei}}\) routes the candidate only to source-purity
+audit.
+\end{definition}
+
+\section{Criteria Satisfaction}
+
+\begin{longtable}{p{0.16\linewidth}p{0.48\linewidth}p{0.26\linewidth}}
+\toprule
+Criterion & Candidate component & Residual obligation \\
+\midrule
+SEI-MC-001 &
+\(\CouplingLawCrit\), \(\BErec\), and \(\BridgeCertCand\) are stored only as
+scoped evidence/precondition markers. &
+Audit must check that evidence status is never used as adoption. \\
+\addlinespace
+SEI-MC-002 &
+\(F_E^\sharp\), \(J_E\), \(R_E\), \(\BalSrc_E\), \(\FluxSrc_E\), and
+\(\Pi_E\) are source-side declarations. &
+Audit must confirm no hidden target datum enters a declaration. \\
+\addlinespace
+SEI-MC-003 &
+\(\BalSrc_E\) accepts \(j_S^0\) in \(x_S^+\) and rejects
+\(j_S^{\mathrm{rej}}\). &
+Refuter may stress nontriviality after audit. \\
+\addlinespace
+SEI-MC-004 &
+\(\FluxSrc_E\) records declared source transition verdicts and bottoms
+target-dependent branches. &
+Audit must check flux entries are source-defined. \\
+\addlinespace
+SEI-MC-005 &
+\(\BErec\) and \(\BridgeCertCand\) constrain compatibility only. &
+They are not treated as matter coupling or stress-energy semantics. \\
+\addlinespace
+SEI-MC-006 &
+The same map \(\SEICand\) applies to each sector \(S\in F_E^\sharp\). &
+Only declared source parameters vary by sector. \\
+\addlinespace
+SEI-MC-007 &
+\(\mathsf{scope}_{\geff}\) is a boundary-preservation flag only. &
+No \(\MetricData(E)\) adoption and no \(\geff\) scope expansion. \\
+\addlinespace
+SEI-MC-008 &
+\(\NoTargetImport_E\) excludes target and process-authority imports. &
+Smuggling Auditor must inspect hidden imports. \\
+\addlinespace
+SEI-MC-009 &
+\(\mathcal{T}_E^{\mathrm{sei}}\) records nonempty output, balance, flux,
+uniformity, bridge compatibility, scoped-\(\geff\), perturbation, and
+no-target tests. &
+Refuter stress is required only if audit passes. \\
+\addlinespace
+SEI-MC-010 &
+\(\mathcal{G}_E^{\mathrm{sei}}\) routes next only to Smuggling Auditor. &
+No Gate Chair adoption or protected review is issued here. \\
+\bottomrule
+\end{longtable}
+
+\section{Finite/Local Witness Checks}
+
+\begin{lemma}[Nonempty source-side interface output]
+For each \(S\in F_E^\sharp\), let
+\[
+  x_S^+=(S,\sigma_S^0,u_S^+,\tau_{\mathrm{id}},\ell_S^+)
+\]
+with \(\NoTargetImport_E(j_S^0,x_S^+)=\mathsf{pass}\). Then
+\[
+  \SEICand(E,F_E^\sharp)(j_S^0,x_S^+)=i_E(j_S^0,x_S^+)
+  \neq \BottomSrc .
+\]
+\end{lemma}
+
+\begin{proof}
+The declared state uses only source-sector, support, update, transition, and
+local label data. By definition \(\BalSrc_E(j_S^0,x_S^+)=\mathsf{accept}\)
+and \(\FluxSrc_E(S,j_S^0,\tau_{\mathrm{id}})\neq\BottomSrc\). The accepted
+recovery-bridge evidence is used only as a source-side compatibility
+precondition, the scoped \(\geff\) flag is boundary-preserving only, and the
+no-target-import scan passes by hypothesis. Therefore the non-bottom branch
+of \(\SEICand\) applies.
+\end{proof}
+
+\begin{lemma}[Rejected and forbidden branches fail closed]
+If \(j=j_S^{\mathrm{rej}}\), if \(x\notin\mathsf{SrcState}_E\), if
+\(\BalSrc_E(j,x)\neq\mathsf{accept}\), if
+\(\FluxSrc_E(S,j,\tau)=\BottomSrc\), if bridge evidence is read as matter
+coupling, if scoped \(\geff\) is read as \(\MetricData(E)\), or if
+\(\NoTargetImport_E(j,x)\neq\mathsf{pass}\), then
+\[
+  \SEICand(E,F_E^\sharp)(j,x)=\BottomSrc
+\]
+with a label from \(\mathcal{O}_E^{\mathrm{sei}}\).
+\end{lemma}
+
+\begin{proof}
+Each listed case negates one of the conjuncts in the non-bottom branch of
+\(\SEICand\). The definition therefore takes the bottom branch. The
+obstruction map is total on these failure classes by the table below.
+\end{proof}
+
+\begin{lemma}[Sector-uniformity]
+The defining clauses of \(\SEICand\) are identical for \(S_0\) and \(S_1\),
+with only declared source records \(J_E(S)\), \(R_E(S)\),
+\(\sigma_S^0\), \(u_S^+\), and \(\ell_S^+\) varying by sector.
+\end{lemma}
+
+\begin{proof}
+The candidate map has one type signature and one branch condition for all
+\(S\in F_E^\sharp\). No sector-specific target repair, benchmark fit, or
+detector calibration is available as an input. Hence the sector variation is
+only the declared source data.
+\end{proof}
+
+\section{Obstruction Map}
+
+\begin{longtable}{p{0.35\linewidth}p{0.49\linewidth}}
+\toprule
+Label & Trigger \\
+\midrule
+\(\OBMCSEI\)-EVIDENCE-AS-ADOPTION &
+Accepted coupling-law or recovery-bridge evidence is used as adopted law,
+matter coupling, or stress-energy semantics. \\
+\(\OBMCSEI\)-DATUM-MISSING &
+\(F_E^\sharp\), \(J_E\), \(R_E\), \(\BalSrc_E\), \(\FluxSrc_E\), or
+\(\Pi_E\) is absent or not source-defined. \\
+\(\OBMCSEI\)-OUTPUT-MISSING &
+No non-bottom interface output exists on the declared finite/local family. \\
+\(\OBMCSEI\)-BALANCE-DEGENERATE &
+\(\BalSrc_E\) fails to accept one declared source branch and reject one
+declared source branch. \\
+\(\OBMCSEI\)-FLUX-FAIL &
+\(\FluxSrc_E\) is absent, incoherent, or target-dependent. \\
+\(\OBMCSEI\)-BRIDGE-OVERREAD &
+\(\BErec\) or \(\BridgeCertCand\) is treated as matter coupling,
+stress-energy semantics, or source-law adoption. \\
+\(\OBMCSEI\)-NONUNIVERSAL &
+The candidate uses hand-tailored sector rules or target-repaired
+universality. \\
+\(\OBMCSEI\)-GEFF-OVERREAD &
+Scoped \(\geff\) compatibility is read as \(\MetricData(E)\) adoption,
+Lorentzian signature import, proper-time import, target covariance, or
+Einstein-equation coupling. \\
+\(\OBMCSEI\)-TARGET-IMPORT &
+Target topology, target atlas, target metric, stress-energy tensor, matter
+action, detector calibration, empirical matter fields, benchmark fit,
+Einstein equations, validator, registry, role, handoff, approval, file-order,
+commit, PDF, HTML, generated derivative, or local-cache import appears. \\
+\(\OBMCSEI\)-STABILITY-FAIL &
+Declared finite/local variations change the verdict except through declared
+source data. \\
+\(\OBMCSEI\)-GATE-CONFUSION &
+Audit, stress, protected review, adoption, benchmark closure, or completed
+derivation is inferred from this construction. \\
+\bottomrule
+\end{longtable}
+
+No obstruction is asserted by this packet because the finite/local candidate
+map is constructed. The labels are fail-closed branches for audit or stress
+if a later packet detects a failure.
+
+\section{Candidate Eligibility Theorem}
+
+\begin{theorem}[Stress-energy-interface candidate eligibility theorem]
+The package \(\SEICertCand(E,F_E^\sharp)\) is a constructed draft/control
+source-side stress-energy-interface candidate satisfying the local Candidate
+Constructor burden for \texttt{RT-20260614-251}. It is eligible only for
+Smuggling Auditor review:
+\[
+  \SEICertCand(E,F_E^\sharp)\in
+  \EligibleSEICand(E,F_E^\sharp).
+\]
+This eligibility does not adopt a source law, adopt
+\(\CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))\), derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, import detector semantics, adopt \(\MetricData(E)\),
+change scoped \(\geff\), derive Einstein equations, promote benchmark status,
+or claim completed derivation.
+\end{theorem}
+
+\begin{proof}
+The package declares a finite/local source family, source tokens, source
+readouts, source balance and flux ledgers, a candidate map with explicit
+non-bottom and bottom branches, a no-target-import certificate, a fail-closed
+obstruction map, and route/gate separation. The criteria table maps these
+objects to SEI-MC-001 through SEI-MC-010. The nonempty-output lemma gives a
+source-side non-bottom branch. The rejected-branch lemma gives explicit
+bottom behavior for invalid or forbidden branches. The sector-uniformity
+lemma verifies that the same source-side rule schema applies across the
+declared sectors.
+
+None of these premises supplies an adoption verdict, target stress-energy
+tensor, matter action, detector semantics, empirical matter semantics,
+variational field equation, benchmark verdict, or completed derivation.
+Therefore the result is exactly a constructed draft/control source-side
+candidate pending source-purity audit.
+\end{proof}
+
+\section{Proof Obligations}
+
+The constructed candidate requires:
+\begin{enumerate}[leftmargin=*]
+  \item Smuggling Auditor review for hidden target metric import,
+  stress-energy semantics, stress-energy tensor semantics, matter action
+  semantics, detector semantics, coupling-law adoption laundering,
+  source-law adoption laundering, evidence-as-adoption laundering,
+  \(B_E\)-as-matter-coupling laundering, scoped \(\geff\) overread, and
+  process-authority laundering.
+  \item Refuter stress only if the audit passes, especially nonempty output,
+  bottom completeness, balance nontriviality, flux coherence,
+  sector-uniformity, perturbation stability, scoped-\(\geff\) boundary
+  preservation, and no-target-import compliance.
+  \item Separate protected Gate Chair authority before any evidence-status
+  acceptance beyond draft/control candidate status.
+  \item Separate derivation or explicit gate for empirical matter semantics,
+  stress-energy tensors, matter actions, conservation laws, Einstein
+  equations, benchmark promotion, benchmark closure, or completed derivation.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Stress-energy-interface candidate data are constructed as draft/control source-side data pending Smuggling Auditor audit; no coupling law matter coupling or stress-energy semantics is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Finite/local interface tests are supplied only for the declared source family; no global robustness theorem is supplied. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No benchmark closure adoption verdict or new protected evidence-status verdict is issued. \\
+current route freeze or hard-fail status & Not frozen; Smuggling Auditor audit is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+This packet constructs \(\SEICand(E,F_E^\sharp)\) and
+\(\SEICertCand(E,F_E^\sharp)\) as finite/local draft/control source-side
+stress-energy-interface candidate data satisfying SEI-MC-001 through
+SEI-MC-010. The construction uses the accepted coupling-law-candidate and
+recovery-bridge-candidate evidence only as scoped source-extension
+preconditions.
+
+It does not adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, import detector semantics, adopt \(\MetricData(E)\), change scoped
+\(\geff\), derive Einstein equations, promote benchmark status, issue
+benchmark Gate Chair closure, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+The logical next step is one bounded Smuggling Auditor packet for the
+constructed stress-energy-interface candidate.
+
+\section{APA 7 References}
+
+Ontology Formalizer Packet RT-20260614-250. (2026). \emph{Source-side
+stress-energy-interface criteria after recovery-bridge evidence acceptance}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Gate Chair Packet RT-20260614-248. (2026). \emph{Recovery-bridge candidate
+source-extension evidence Gate Chair review} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-244. (2026). \emph{Draft/control
+source-side matter-coupling recovery-bridge candidate} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-241. (2026). \emph{Criteria-aligned
+coupling-law candidate source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}
