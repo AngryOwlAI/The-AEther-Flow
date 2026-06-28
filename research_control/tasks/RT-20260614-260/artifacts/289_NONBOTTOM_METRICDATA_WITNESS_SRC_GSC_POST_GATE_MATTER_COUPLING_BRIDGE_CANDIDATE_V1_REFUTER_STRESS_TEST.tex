@@ -1,0 +1,354 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\MCBridgeCertCand}{\mathrm{MCBridgeCert}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PTMI}{\mathrm{PTMI}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+\newcommand{\StressConditionalPass}{\mathrm{CONDITIONAL}\mbox{-}\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Refuter Stress Test of the Matter-Coupling Bridge Candidate v1}
+\author{Refuter Packet RT-20260614-260}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Refuter packet after
+\texttt{RT-20260614-259}. It stress-tests the audited draft/control
+source-side Matter-Coupling Bridge Candidate v1
+\[
+  \MCBridgeCand(E),
+  \qquad
+  \SMI(E)\subseteq\PTMI_E,
+  \qquad
+  \MCBridgeCertCand(E).
+\]
+The local result is
+\[
+  \texttt{bridge\_candidate\_stress\_survived\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "bridge_candidate_stress_survived_pending_selector"
+stressed_object: "MCBridge_src^{cand}(E), SourceMatterInterface_v1(E), and bridge certificate data"
+claim_status: "draft/control source-side bridge candidate"
+conditional_nonempty_output: true
+obstruction_record_required: false
+route_frozen: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+MetricData_E_adopted: false
+scoped_g_eff_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\)
+adoption, scoped-\(\geff\) change, coupling-law adoption, stress-energy
+semantics import, stress-energy tensor construction, matter-action import,
+detector-semantics import, matter-coupling derivation or adoption, Einstein
+equations, benchmark promotion, benchmark Gate Chair closure, completed
+derivation, future source-extension impossibility, or global theory rejection
+is authorized.
+
+\section{Stress Domain}
+
+The stressed package is the audited bridge candidate from
+\texttt{RT-20260614-258} and \texttt{RT-20260614-259}. Its bridge-domain
+package is
+\[
+  \mathcal{D}^{\mathrm{MCB}}_E =
+  (E,\Msrc_E,\geff_E^{\mathrm{sc}},F_E^\sharp,\Sigma_E,
+  \mathrm{SEI}_{\mathrm{src}}^{\mathrm{cand}},
+  \mathrm{SEICert}^{\mathrm{cand}},
+  \mathrm{Bal}_{\mathrm{src}},\mathrm{Flux}_{\mathrm{src}},
+  \mathcal{V}_E,\mathcal{P}_E).
+\]
+The bridge relation returns \(X_E\in\SMI(E)\) exactly when MCB-CAND-001
+through MCB-CAND-009 hold; otherwise it returns \(\BottomSrc\) with one
+primary fail-closed obstruction label.
+
+This stress is adversarial but bounded. It asks whether the audited candidate
+survives the P3-T05 stresses as a finite/local source-side bridge candidate.
+It does not ask whether the candidate is adopted matter coupling.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.24\linewidth}p{0.50\linewidth}p{0.16\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Nonempty output &
+For any declared bridge-domain package \(D_E\) satisfying MCB-CAND-001
+through MCB-CAND-009, the relation returns
+\[
+  X_E=(I_E,Q_E,\Lambda_E,N_E,U_E,C_E,\mathrm{NoTargetImport}_E,\mathcal{O}_E)
+  \in\SMI(E).
+\]
+This is conditional nonempty output, not universal matter-coupling
+existence. & \(\StressConditionalPass\) \\
+\addlinespace
+Bottom completeness &
+If the codomain, locality, covariance, sector-uniformity,
+conservation-analogue, scoped-\(\geff\), tensorial, target-import,
+evidence-as-adoption, or downstream-promotion condition fails, the candidate
+returns \(\BottomSrc\) with a declared primary obstruction label. &
+\(\StressPass\) \\
+\addlinespace
+Source-locality &
+\(\Lambda_E\) records finite support inside \(F_E^\sharp\). No output
+component may depend on target topology, target atlas, target metric,
+empirical detector semantics, matter fields, benchmark fit, or Einstein
+equations. & \(\StressPass\) \\
+\addlinespace
+Relabeling and naturality &
+When the declared source-family morphism transport \(\rho_*\) exists, the
+candidate transports records componentwise. If compatibility cannot be
+supplied, the result fails closed with
+\texttt{OB-MC-BRIDGE-COVARIANCE-FAIL}. & \(\StressConditionalPass\) \\
+\addlinespace
+Finite variation stability &
+Allowed \(v\in\mathcal{V}_E\) source variations update only declared source
+fields and transport the record by the same componentwise schema. Target-data
+repair fails closed. & \(\StressConditionalPass\) \\
+\addlinespace
+Sector-uniformity beyond the original two-sector case &
+The rule is graph-indexed over \(\Sigma_E\), not a two-sector shortcut. A
+hand-tailored sector case fails with
+\texttt{OB-MC-BRIDGE-SECTOR-UNIFORMITY-FAIL}. & \(\StressPass\) \\
+\addlinespace
+Compatibility with scoped \(\Msrc\) &
+The prior scoped \(\Msrc\) object is read only as declared source-side
+context in the bridge-domain package. The stress does not edit or expand
+\(\Msrc\) authority. & \(\StressPass\) \\
+\addlinespace
+Compatibility with scoped \(\geff\) &
+Scoped \(\geff_E^{\mathrm{sc}}\) is boundary-preservation context only.
+\(\MetricData(E)\) adoption or \(\geff\) scope expansion fails closed. &
+\(\StressPass\) \\
+\addlinespace
+Balance/flux conservation-analogue coherence &
+\(C_E\) records source-side \(\mathrm{Bal}_{\mathrm{src}}\) and
+\(\mathrm{Flux}_{\mathrm{src}}\) compatibility. It is not the Bianchi
+identity, not stress-energy conservation, not matter action, and not Einstein
+equations. & \(\StressPass\) \\
+\addlinespace
+Tensorial-overread pressure &
+The codomain remains \(\SMI(E)\subseteq\PTMI_E\). Treating it as a
+stress-energy tensor selects the tensorial-overread obstruction. &
+\(\StressPass\) \\
+\addlinespace
+Target-import pressure &
+Target topology, atlas, metric, Lorentzian signature, proper time, detector
+semantics, empirical matter fields, benchmark fit, and Einstein-equation
+premises are excluded by construction and audit. & \(\StressPass\) \\
+\addlinespace
+Downstream-promotion pressure &
+Stress survival does not issue a Gate Chair verdict, adopt a source law,
+adopt a coupling law, derive matter coupling, derive Einstein equations,
+promote the benchmark, or complete the derivation. & \(\StressPass\) \\
+\addlinespace
+Evidence-as-adoption pressure &
+Accepted stress-energy-interface evidence is precondition data only. It does
+not become a source law, coupling law, matter coupling, or physical
+stress-energy semantics. & \(\StressPass\) \\
+\addlinespace
+Stress-energy semantics pressure &
+\(\SMI(E)\) remains pre-tensorial source-interface data. It carries no
+physical stress-energy semantics. & \(\StressPass\) \\
+\addlinespace
+Matter-action pressure &
+The candidate contains no action functional, Lagrangian, matter variational
+principle, detector model, or empirical matter field. & \(\StressPass\) \\
+\addlinespace
+Einstein-equation pressure &
+No field-equation premise is introduced. Einstein equations remain a blocked
+downstream burden. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Conditional nonempty and bottom-completeness stress survival]
+For any declared bridge-domain package \(D_E\) satisfying MCB-CAND-001
+through MCB-CAND-009, \(\MCBridgeCand(E)\) returns an element of
+\(\SMI(E)\). If any required condition fails or is repaired by forbidden
+target, empirical, tensorial, adoption, or process-authority data, the
+candidate returns \(\BottomSrc\) with a declared obstruction label.
+\end{lemma}
+
+\begin{proof}
+The candidate relation is defined as a partial relation whose successful
+branch is the eight-component record \(X_E\in\SMI(E)\). The success branch is
+guarded by MCB-CAND-001 through MCB-CAND-009. The failure branch returns
+\(\BottomSrc\) with one primary obstruction label. Therefore nonempty output
+survives only conditionally on the declared source-side guards, and forbidden
+repair demands fail closed.
+\end{proof}
+
+\begin{lemma}[Source-locality, naturality, and finite-variation stress survival]
+\(\MCBridgeCand(E)\) survives source-locality, relabeling/naturality, and
+finite-variation stress only inside the declared source package. Failure to
+supply finite support, source-family transport, or allowed source-variation
+transport selects the corresponding fail-closed obstruction label.
+\end{lemma}
+
+\begin{proof}
+MCB-CAND-003 requires finite support in \(F_E^\sharp\). MCB-CAND-004
+requires the source-side transport \(\rho_*\). MCB-CAND-006 requires allowed
+source variations to update only declared source fields. Each condition has a
+named failure branch, so no target or empirical repair is needed or allowed.
+\end{proof}
+
+\begin{lemma}[Graph-indexed sector-uniformity stress survival]
+The bridge candidate survives the sector-uniformity stress beyond a
+two-sector shortcut because its rule is graph-indexed over \(\Sigma_E\).
+Hand-tailored sector cases fail closed.
+\end{lemma}
+
+\begin{proof}
+MCB-CAND-005 states that the construction rule for the output components is
+the same rule at every sector vertex and along every declared sector edge,
+with only declared source parameters varying. This is a graph-indexed schema,
+not a two-sector case split. A hand-tailored sector case triggers
+\texttt{OB-MC-BRIDGE-SECTOR-UNIFORMITY-FAIL}.
+\end{proof}
+
+\begin{lemma}[No adoption or downstream recovery follows from bridge stress survival]
+Stress survival of \(\MCBridgeCand(E)\), \(\SMI(E)\), and
+\(\MCBridgeCertCand(E)\) does not adopt a coupling law, derive or adopt
+matter coupling, import stress-energy semantics, construct a stress-energy
+tensor, import a matter action, import detector semantics, adopt
+\(\MetricData(E)\), change scoped \(\geff\), derive Einstein equations,
+promote benchmark status, or claim completed derivation.
+\end{lemma}
+
+\begin{proof}
+The stressed object is a draft/control source-side bridge candidate. Its
+codomain is pre-tensorial, its balance/flux component is a source-side ledger,
+and its success condition explicitly excludes target geometry, tensorial
+semantics, matter actions, detector semantics, adoption, process authority,
+and downstream promotion as premises. Therefore stress survival supplies only
+candidate stress survival pending route classification.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as coupling-law adoption;
+  \item \(\MCBridgeCand(E)\) as derived or adopted matter coupling;
+  \item \(\SMI(E)\) as stress-energy tensor semantics;
+  \item balance/flux compatibility as the Bianchi identity or physical
+  stress-energy conservation;
+  \item interface records as matter actions, detector semantics, or empirical
+  matter fields;
+  \item graph-indexed finite/local survival as universal matter-sector
+  coverage;
+  \item scoped source-extension compatibility as scoped-\(\geff\) expansion;
+  \item \(\MetricData(E)\) evidence context as \(\MetricData(E)\) adoption;
+  \item validators, registries, handoffs, roles, approvals, generated
+  derivatives, local caches, file order, or commit state as scientific proof;
+  \item stress survival as Einstein equations, benchmark promotion, benchmark
+  Gate Chair closure, completed derivation, future source-extension
+  impossibility, or global theory rejection.
+\end{enumerate}
+
+\section{Loop-Risk Classification}
+
+The Refuter classification is \texttt{bridge\_facing\_candidate\_path}. The
+candidate survived a new stress step after bridge-target formalization,
+candidate construction, and source-purity audit, so the route is not frozen.
+The next bounded packet should classify the stress-survived bridge-candidate
+route before any protected review, repair, freeze, adoption, matter-coupling,
+or downstream GR work.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+Burden & Status after this stress \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope change. \\
+Matter coupling & Matter-Coupling Bridge Candidate v1 stress-survived as conditional finite/local draft/control source-side bridge-candidate data pending selector; no coupling law matter coupling stress-energy semantics stress-energy tensor matter action detector semantics or Einstein equations are adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Finite/local source-variation stress survives only inside the declared bridge-domain package; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this stress packet. \\
+Current route freeze or hard-fail status & Not frozen; Theoretical Continuation Selector route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is one Theoretical Continuation Selector
+classification of the stress-survived bridge-candidate route. The selector
+must choose among narrow protected evidence-status review, constructor repair,
+audit repeat with exact target, stress repeat with exact new target, precise
+obstruction route, local freeze, broader ontology authority human gate, or
+invalid-under-claim-boundary repair.
+
+\section{Conclusion}
+
+The Refuter finds
+\[
+  \MCBridgeCand(E),\quad \SMI(E)\subseteq\PTMI_E,\quad
+  \MCBridgeCertCand(E)
+\]
+stress-survived as draft/control source-side bridge-candidate data pending
+selector. This survival is conditional on the declared source-domain guards
+and fail-closed outside them. It is not source-law adoption,
+\(\MetricData(E)\) adoption, scoped-\(\geff\) expansion, coupling-law
+adoption, matter-coupling derivation or adoption, stress-energy semantics,
+stress-energy tensor construction, matter action, detector semantics,
+Einstein equations, benchmark promotion, or completed derivation.
+
+\section{APA 7 References}
+
+Smuggling Auditor Packet RT-20260614-259. (2026). \emph{Matter-Coupling
+Bridge Candidate v1 smuggling audit} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Candidate Constructor Packet RT-20260614-258. (2026). \emph{Matter-Coupling
+Bridge Candidate v1 after bridge-target formalization} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research
+Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan for continue research, v11} [Internal implementation
+plan].
+
+\end{document}
