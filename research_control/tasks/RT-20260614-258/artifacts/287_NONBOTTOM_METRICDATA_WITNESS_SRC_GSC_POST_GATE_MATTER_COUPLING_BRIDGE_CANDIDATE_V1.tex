@@ -1,0 +1,354 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\SEICand}{\mathrm{SEI}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SEICertCand}{\mathrm{SEICert}^{\mathrm{cand}}}
+\newcommand{\MCBT}{\mathrm{MatterCouplingBridgeTarget}_{v1}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PTMI}{\mathrm{PTMI}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\BalSrc}{\mathrm{Bal}_{\mathrm{src}}}
+\newcommand{\FluxSrc}{\mathrm{Flux}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Matter-Coupling Bridge Candidate v1 After Bridge-Target Formalization}
+\author{Candidate Constructor Packet RT-20260614-258}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260614-258}. It constructs a source-side Matter-Coupling Bridge
+Candidate v1, provisionally named
+\[
+  \MCBridgeCand(E),
+\]
+after \(\MCBT(E)\) was formalized in \texttt{RT-20260614-257}. The output
+codomain is pre-tensorial and is named
+\[
+  \SMI(E) \subseteq \PTMI_E.
+\]
+
+The accepted \(\SEICand(E,F_E^\sharp)\) and
+\(\SEICertCand(E,F_E^\sharp)\) remain scoped source-extension
+evidence/precondition data only. This artifact does not edit canonical
+ontology, adopt a source law, adopt \(\MetricData(E)\), change scoped
+\(\geff\), adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct an adopted stress-energy tensor, import a
+matter action, import detector semantics, derive Einstein equations, promote
+benchmark status, issue a benchmark Gate Chair verdict, claim completed
+derivation, claim future source-extension impossibility, or reject the global
+theory.
+
+\begin{verbatim}
+artifact_status: "draft/control Matter-Coupling Bridge Candidate v1"
+candidate_name: "MCBridge_src^{cand}(E)"
+candidate_codomain: "SourceMatterInterface_v1(E) subset PTMI_E"
+candidate_constructed: true
+candidate_pending_audit: true
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Candidate Domain And Codomain}
+
+\begin{definition}[Bridge-candidate source domain]
+The domain of \(\MCBridgeCand(E)\) is the bridge-target source package
+\[
+  \mathcal{D}^{\mathrm{MCB}}_E =
+  (E,\Msrc_E,\geff_E^{\mathrm{sc}},F_E^\sharp,\Sigma_E,
+  \SEICand_E,\SEICertCand_E,\BalSrc_E,\FluxSrc_E,\mathcal{V}_E,
+  \mathcal{P}_E)
+\]
+from \(\MCBT(E)\). The package is read only as a finite/local source-side
+package. The entries \(\Msrc_E\), \(\geff_E^{\mathrm{sc}}\),
+\(\SEICand_E\), and \(\SEICertCand_E\) are scoped context or evidence
+preconditions; they are not adopted ontology, not \(\MetricData(E)\), not
+stress-energy semantics, and not matter coupling.
+\end{definition}
+
+\begin{definition}[Pre-tensorial source matter-interface record]
+\(\SMI(E)\) is the family of records
+\[
+  X_E =
+  (I_E,Q_E,\Lambda_E,N_E,U_E,C_E,\NoTargetImport_E,\mathcal{O}_E)
+\]
+where:
+\begin{enumerate}[label=(\alph*)]
+  \item \(I_E\) is a finite family of source-interface records copied from
+  source-side interface tokens and source state data;
+  \item \(Q_E\) is a quality ledger naming which source-side criteria are
+  satisfied, failed, or unavailable;
+  \item \(\Lambda_E\) records the finite source support used by each output;
+  \item \(N_E\) records source-family relabeling and morphism compatibility;
+  \item \(U_E\) records one graph-indexed sector-uniformity rule over
+  \(\Sigma_E\);
+  \item \(C_E\) records source-side balance/flux compatibility using
+  \(\BalSrc_E\) and \(\FluxSrc_E\);
+  \item \(\NoTargetImport_E\) is a certificate excluding target topology,
+  target atlas, target metric, Lorentzian signature, proper time,
+  stress-energy tensor, matter action, detector semantics, empirical fit,
+  benchmark success, Einstein equations, generated derivatives, registry
+  metadata, validator status, role authority, handoff status, approval status,
+  local cache state, file order, and commit status as mathematical premises;
+  \item \(\mathcal{O}_E\) maps failures to the fail-closed labels in
+  Section~\ref{sec:failure-labels}.
+\end{enumerate}
+\(\SMI(E)\) is pre-tensorial. It is not an adopted stress-energy tensor and
+does not carry stress-energy semantics.
+\end{definition}
+
+\section{Candidate Relation}
+
+\begin{definition}[Matter-Coupling Bridge Candidate v1]
+\(\MCBridgeCand(E)\) is the source-local partial relation
+\[
+  \mathcal{B}^{\mathrm{MCB\text{-}cand}}_E:
+  \mathcal{D}^{\mathrm{MCB}}_E
+  \dashrightarrow
+  \SMI(E) \cup \{\BottomSrc\}.
+\]
+It returns a record \(X_E\in\SMI(E)\) exactly when Conditions
+MCB-CAND-001 through MCB-CAND-009 hold. Otherwise it returns
+\(\BottomSrc\) with exactly one primary obstruction label from
+\(\mathcal{O}_E\).
+\end{definition}
+
+\begin{condition}[MCB-CAND-001 source-domain discipline]
+Every input field must be a declared source-side field in
+\(\mathcal{D}^{\mathrm{MCB}}_E\). Accepted evidence is used only as
+precondition data and may not be converted into adoption.
+\end{condition}
+
+\begin{condition}[MCB-CAND-002 pre-tensorial codomain]
+The output lands in \(\SMI(E)\subseteq\PTMI_E\). If tensorial semantics are
+needed, the candidate fails closed with
+\texttt{OB-MC-BRIDGE-TENSORIAL-OVERREAD}; it does not import a tensor.
+\end{condition}
+
+\begin{condition}[MCB-CAND-003 source-locality]
+For each output component of \(X_E\), \(\Lambda_E\) records a finite support
+inside \(F_E^\sharp\). No component may depend on target topology, target
+atlas, target metric, empirical detector semantics, matter fields, benchmark
+fit, or Einstein equations.
+\end{condition}
+
+\begin{condition}[MCB-CAND-004 morphism and relabeling behavior]
+For each declared source-family morphism or relabeling
+\[
+  \rho:\mathcal{D}^{\mathrm{MCB}}_E \to
+  \mathcal{D}^{\mathrm{MCB}}_{E'},
+\]
+the candidate supplies a source-side transport
+\[
+  \rho_*:\SMI(E)\to\SMI(E')
+\]
+by relabeling \(I_E,Q_E,\Lambda_E,N_E,U_E,C_E,\NoTargetImport_E\), and
+\(\mathcal{O}_E\) componentwise. Successful outputs satisfy
+\[
+  \rho_*\bigl(\mathcal{B}^{\mathrm{MCB\text{-}cand}}_E(D_E)\bigr)
+  =
+  \mathcal{B}^{\mathrm{MCB\text{-}cand}}_{E'}(\rho D_E)
+\]
+whenever both sides are defined. If this compatibility cannot be supplied,
+the candidate fails closed with \texttt{OB-MC-BRIDGE-COVARIANCE-FAIL}.
+\end{condition}
+
+\begin{condition}[MCB-CAND-005 graph-indexed sector-uniformity]
+Let \(\Sigma_E\) be represented by a finite graph-indexed source-sector
+family. The construction rule for \(I_E,Q_E,\Lambda_E,N_E,U_E,C_E\) is the
+same rule at every sector vertex and along every declared sector edge, with
+only declared source parameters varying. A two-sector shared-form shortcut is
+not enough; hand-tailored sector cases fail with
+\texttt{OB-MC-BRIDGE-SECTOR-UNIFORMITY-FAIL}.
+\end{condition}
+
+\begin{condition}[MCB-CAND-006 source variation behavior]
+For each allowed source variation \(v\in\mathcal{V}_E\), the candidate
+updates only declared source fields and transports the record by the same
+componentwise schema. If the output changes by importing target data rather
+than by declared source variation, the candidate fails closed with
+\texttt{OB-MC-BRIDGE-TARGET-IMPORT}.
+\end{condition}
+
+\begin{condition}[MCB-CAND-007 balance/flux compatibility]
+The compatibility component \(C_E\) records whether the source-side ledgers
+\(\BalSrc_E\) and \(\FluxSrc_E\) are respected by the interface records.
+This is only a source-side balance/flux ledger. It is not the Bianchi
+identity, not stress-energy conservation, not a matter action, and not
+Einstein equations. Failure is
+\texttt{OB-MC-BRIDGE-CONSERVATION-ANALOGUE-FAIL}.
+\end{condition}
+
+\begin{condition}[MCB-CAND-008 scoped-\(\geff\) and interface evidence limits]
+The scoped \(\geff_E^{\mathrm{sc}}\) context is used only as previously
+allowed compatibility context. \(\SEICand_E\) and \(\SEICertCand_E\) are used
+only as accepted scoped precondition data. Any use of these fields as
+\(\MetricData(E)\) adoption, \(\geff\) scope expansion, source-law adoption,
+stress-energy semantics, stress-energy tensor, coupling law, or matter
+coupling fails closed.
+\end{condition}
+
+\begin{condition}[MCB-CAND-009 no-target-import certificate]
+The output includes \(\NoTargetImport_E\). The certificate is part of the
+candidate and must be audited before any later stress or protected review.
+\end{condition}
+
+\section{Constructed Candidate Record}
+
+For a declared source-domain package \(D_E\), define:
+\[
+\begin{aligned}
+  I_E &= \mathrm{InterfaceRecords}_{\mathrm{src}}(D_E),\\
+  Q_E &= \mathrm{CriteriaLedger}_{\mathrm{src}}(D_E;
+       \mathrm{locality},\mathrm{naturality},\mathrm{sector},
+       \mathrm{balance},\mathrm{flux},\mathrm{evidence}),\\
+  \Lambda_E &= \mathrm{FiniteSupport}_{F_E^\sharp}(I_E),\\
+  N_E &= \mathrm{RelabelingWitness}_{\mathrm{src}}(D_E,I_E),\\
+  U_E &= \mathrm{GraphSectorUniformityWitness}_{\mathrm{src}}(D_E,\Sigma_E),\\
+  C_E &= \mathrm{BalanceFluxWitness}_{\mathrm{src}}(I_E,\BalSrc_E,\FluxSrc_E).
+\end{aligned}
+\]
+Then
+\[
+  \mathcal{B}^{\mathrm{MCB\text{-}cand}}_E(D_E)
+  =
+  \begin{cases}
+    (I_E,Q_E,\Lambda_E,N_E,U_E,C_E,\NoTargetImport_E,\mathcal{O}_E),
+    & \text{if MCB-CAND-001--009 hold},\\
+    \BottomSrc\ \text{with one primary obstruction label},
+    & \text{otherwise.}
+  \end{cases}
+\]
+
+This construction is materially stronger than the existing
+\(\SEICand\): it does not merely provide interface tokens or candidate
+evidence. It packages a bridge relation into the bridge-target codomain with
+explicit locality support, source-family naturality, graph-indexed
+sector-uniformity, source-variation behavior, balance/flux compatibility, and
+a no-target-import certificate.
+
+\section{Failure Labels}
+\label{sec:failure-labels}
+
+\begin{longtable}{p{0.36\linewidth}p{0.52\linewidth}}
+\toprule
+Label & Meaning \\
+\midrule
+OB-MC-BRIDGE-CODOMAIN-MISSING & The candidate cannot supply \(\SMI(E)\subseteq\PTMI_E\). \\
+OB-MC-BRIDGE-LOCALITY-FAIL & The candidate depends on nonlocal or undeclared data. \\
+OB-MC-BRIDGE-COVARIANCE-FAIL & Source relabeling or morphism compatibility fails. \\
+OB-MC-BRIDGE-SECTOR-UNIFORMITY-FAIL & The rule is sector hand-tailored or only two-sector uniform. \\
+OB-MC-BRIDGE-CONSERVATION-ANALOGUE-FAIL & Source-side balance/flux compatibility is absent or repaired by target import. \\
+OB-MC-BRIDGE-GEFF-OVERREAD & Scoped \(\geff\) context is treated as \(\MetricData(E)\) adoption or scope expansion. \\
+OB-MC-BRIDGE-TENSORIAL-OVERREAD & The pre-tensorial codomain is treated as a stress-energy tensor. \\
+OB-MC-BRIDGE-TARGET-IMPORT & Target topology atlas metric tensor action detector benchmark or field-equation premise is used. \\
+OB-MC-BRIDGE-EVIDENCE-AS-ADOPTION & Scoped evidence is treated as source-law adoption coupling-law adoption or matter coupling. \\
+OB-MC-BRIDGE-DOWNSTREAM-PROMOTION & Candidate construction is treated as Einstein equations benchmark promotion or completed derivation. \\
+\bottomrule
+\end{longtable}
+
+\section{Eligibility Theorem}
+
+\begin{theorem}[Bridge-candidate audit eligibility without matter-coupling adoption]
+Assume \(D_E\) is a declared source-domain package satisfying the input
+discipline of \(\MCBT(E)\). If \(\mathcal{B}^{\mathrm{MCB\text{-}cand}}_E\)
+returns \(X_E\in\SMI(E)\), then the packet has constructed a draft/control
+Matter-Coupling Bridge Candidate v1 eligible only for Smuggling Auditor
+review, possible later Refuter stress, or separately authorized protected
+evidence-status review. It does not derive or adopt matter coupling.
+\end{theorem}
+
+\begin{proof}
+By construction, \(X_E\) contains only source-side interface records, quality
+ledgers, finite support, relabeling witnesses, graph-indexed
+sector-uniformity witnesses, source-side balance/flux compatibility ledgers,
+a no-target-import certificate, and fail-closed obstruction labels. The
+codomain \(\SMI(E)\) is a subfamily of the pre-tensorial \(\PTMI_E\), not a
+stress-energy tensor.
+
+Conditions MCB-CAND-001 through MCB-CAND-009 exclude target topology, target
+atlas, target metric, Lorentzian signature, proper time, detector semantics,
+empirical fit, benchmark success, stress-energy semantics, matter action,
+\(\MetricData(E)\) adoption, \(\geff\) scope expansion, coupling-law
+adoption, matter-coupling adoption, Einstein equations, and process authority
+as premises. Therefore successful construction supplies only a draft/control
+candidate object. The next authorized role is audit of hidden import and
+claim laundering, not matter-coupling derivation or adoption.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc_lc & Prior source-localization context only. \\
+Resp_lc & Prior accepted response/localization context only. \\
+M_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & \(\MCBridgeCand(E)\), \(\SMI(E)\), and bridge certificate data are constructed as draft/control candidate data pending audit; no coupling law matter coupling stress-energy semantics tensor matter action or Einstein equations are adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Finite/local variation behavior is encoded only for declared source variations; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this constructor. \\
+current route freeze or hard-fail status & Not frozen; Smuggling Auditor bridge-candidate audit is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is a Smuggling Auditor audit of
+\(\MCBridgeCand(E)\), \(\SMI(E)\), and the bridge certificate data for hidden
+target import, tensor laundering, matter-action laundering, conservation-law
+laundering, evidence-as-adoption laundering, scoped \(\geff\) overread, and
+process-authority laundering. No later packet may treat this constructor
+result as matter coupling, stress-energy semantics, stress-energy tensor
+construction, matter action import, \(\MetricData(E)\), expanded \(\geff\),
+Einstein equations, benchmark promotion, or completed derivation without the
+separate required evidence and gates.
+
+\section{APA 7 References}
+
+Ontology Formalizer Packet RT-20260614-257. (2026). \emph{Matter-Coupling
+Bridge Target v1 after scoped stress-energy-interface evidence}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan for continue research, v11} [Internal implementation
+plan].
+
+\end{document}

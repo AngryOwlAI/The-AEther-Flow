@@ -1,0 +1,25 @@
+artifact_id: "parent-conflict-review-matter-coupling-bridge-candidate-v1"
+task_id: "RT-20260614-258"
+execution_unit_id: "parent"
+status: "completed"
+created_at: "2026-06-28T14:55:11Z"
+reviewed_children:
+  - "research_control/tasks/RT-20260614-258/artifacts/child_phys_math_matter_coupling_bridge_candidate_v1.yaml"
+  - "research_control/tasks/RT-20260614-258/artifacts/child_phys_phil_matter_coupling_bridge_candidate_v1.yaml"
+conflict_summary:
+  blocking_conflicts: []
+  nonblocking_conflicts:
+    - conflict_id: "risk-overread-pre-tensorial-as-tensorial"
+      conflict_type: "claim_boundary"
+      severity: "nonblocking"
+      resolution: "The fused TeX labels the codomain pre-tensorial, states no stress-energy tensor or semantics is constructed, and routes only to audit."
+    - conflict_id: "candidate-vs-obstruction-choice"
+      conflict_type: "mathematical"
+      severity: "nonblocking"
+      resolution: "The target already permits a pre-tensorial source-local relation. Construct the candidate and reserve obstruction only for audit or stress if hidden import is found."
+unresolved_conflicts: []
+claim_boundary_preserved: true
+fusion_decision: "construct_candidate"
+fused_output_path: "research_control/tasks/RT-20260614-258/artifacts/287_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_CANDIDATE_V1.tex"
+next_role: "smuggling-auditor"
+notes: "No blocking conflict remains. The parent accepts construction because it is a record-building source-side relation into PTMI_E and does not promote tensorial or physical matter-coupling claims."
