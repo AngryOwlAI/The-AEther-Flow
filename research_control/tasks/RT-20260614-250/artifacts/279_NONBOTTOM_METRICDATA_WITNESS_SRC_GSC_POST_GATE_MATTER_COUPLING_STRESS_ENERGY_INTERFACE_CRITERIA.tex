@@ -1,0 +1,364 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}_{\mathrm{src}}^{\mathrm{GSC\mbox{-}crit\mbox{-}cand}}}
+\newcommand{\BridgeCertCand}{\mathrm{BridgeCert}^{\mathrm{cand}}}
+\newcommand{\BErec}{B_E^{\mathrm{rec}}}
+\newcommand{\SEICert}{\mathrm{SEICert}_{\mathrm{src}}^{\mathrm{MC}}}
+\newcommand{\SrcME}{\mathrm{SrcME}}
+\newcommand{\BalSrc}{\mathrm{Bal}_{\mathrm{src}}}
+\newcommand{\FluxSrc}{\mathrm{Flux}_{\mathrm{src}}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\EligibleSEI}{\mathrm{EligibleSEI}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{criterion}{Criterion}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Source-Side Stress-Energy-Interface Criteria After Recovery-Bridge Evidence Acceptance}
+\author{Ontology Formalizer Packet RT-20260614-250}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260614-250}. It formalizes source-side
+stress-energy-interface criteria after two scoped source-extension
+evidence/precondition acceptances:
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+from \texttt{RT-20260614-241}, and
+\[
+  \BErec,\qquad \BridgeCertCand(E,F_E^\sharp)
+\]
+from \texttt{RT-20260614-248}.
+
+These accepted inputs remain evidence/preconditions only. This artifact does
+not edit canonical ontology, adopt a source law, adopt \(\MetricData(E)\),
+change scoped \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, import detector semantics, derive Einstein equations,
+promote benchmark status, issue a benchmark Gate Chair verdict, claim
+completed derivation, claim future source-extension impossibility, or reject
+the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control stress-energy-interface criteria"
+accepted_preconditions:
+  - "scoped source-extension coupling-law-candidate evidence/precondition"
+  - "scoped source-extension recovery-bridge-candidate evidence/precondition"
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Interface Intent}
+
+The phrase ``stress-energy-interface'' in this packet means a source-side
+criteria surface for a future candidate that may try to relate source
+matter-like response tokens, source balance tokens, and accepted
+recovery-bridge evidence. It is not stress-energy semantics. It is not a
+stress-energy tensor. It is not a matter action. It is not an empirical
+detector model. It is not a target-space field.
+
+The criteria below specify what a later bounded Candidate Constructor packet
+must supply before any future audit, stress, or protected review can even ask
+whether a source-side interface candidate is evidence. The criteria do not
+construct that candidate.
+
+\section{Source-Side Objects}
+
+\begin{definition}[Source interface datum]
+For an event/source context \(E\), a source interface datum is a tuple
+\[
+  \SrcME_E = (S_E,J_E,R_E,\BalSrc_E,\FluxSrc_E,\Pi_E).
+\]
+Here \(S_E\) is a declared finite/local source sector family, \(J_E\) is a
+source-token family, \(R_E\) is a source-side readout family,
+\(\BalSrc_E\) is a source balance predicate, \(\FluxSrc_E\) is a source
+transition ledger, and \(\Pi_E\) is a proof-obligation ledger. None of these
+objects is a stress-energy tensor, matter action, detector semantics, target
+metric datum, or empirical matter field.
+\end{definition}
+
+\begin{definition}[Source-side stress-energy-interface certificate]
+A source-side stress-energy-interface certificate over a declared finite/local
+family \(F_E^\sharp\) is a tuple
+\[
+  \SEICert(E,F_E^\sharp)=
+  (F_E^\sharp,\CouplingLawCrit,\BErec,\BridgeCertCand,\SrcME_E,
+  \mathcal{C}_E,\mathcal{T}_E,\NoTargetImport_E,\mathcal{O}_E,\mathcal{G}_E),
+\]
+where \(\mathcal{C}_E\) is a criteria ledger, \(\mathcal{T}_E\) is a
+finite/local test ledger, \(\NoTargetImport_E\) is a no-target-import
+certificate, \(\mathcal{O}_E\) maps failures to fail-closed obstruction
+labels, and \(\mathcal{G}_E\) records route and gate separation.
+\end{definition}
+
+\section{Required Criteria}
+
+\begin{criterion}[SEI-MC-001 evidence-status separation]
+The certificate must distinguish accepted source-extension evidence from
+adoption. The scoped evidence statuses of \(\CouplingLawCrit\), \(\BErec\),
+and \(\BridgeCertCand(E,F_E^\sharp)\) may be cited only as preconditions.
+They must not be used as source-law adoption, coupling-law adoption,
+matter-coupling derivation, stress-energy semantics, Einstein equations,
+benchmark promotion, or completed derivation.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-002 source interface datum declaration]
+The certificate must declare \(F_E^\sharp\), \(S_E\), \(J_E\), \(R_E\),
+\(\BalSrc_E\), \(\FluxSrc_E\), and \(\Pi_E\) using source-side objects only.
+If any component is repaired by target metric, target stress-energy, matter
+action, detector calibration, or empirical benchmark fit, the construction
+fails closed.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-003 balance-token nontriviality]
+\(\BalSrc_E\) must be more than a label. On the declared finite/local family,
+it must accept at least one source-token transition and reject at least one
+source-token transition for source-intrinsic reasons. All acceptance and
+rejection witnesses must cite source-side records.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-004 source flux ledger]
+\(\FluxSrc_E\) must record how declared source transitions transport or
+modify interface tokens. It may be a finite/local ledger, not a continuum
+tensor. It must fail closed when transition data are absent, underdeclared, or
+dependent on target geometry.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-005 recovery-bridge compatibility]
+The certificate must state how \(\BErec\) and
+\(\BridgeCertCand(E,F_E^\sharp)\) are used as recovery-bridge evidence. This
+use may constrain source-token routing, proof obligations, or tests. It must
+not treat \(\BErec\) as matter coupling and must not treat
+\(\BridgeCertCand\) as stress-energy semantics.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-006 sector-uniformity analogue]
+The same source-side interface rule must apply across the declared
+source-sector family \(S_E\), with only declared source parameters varying by
+sector. Hand-tailored rules per sector, target-repaired universality, or
+benchmark-repaired universality fail closed.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-007 compatibility with scoped \(\geff\)]
+Any compatibility reference to scoped \(\geff\) must remain a source-extension
+compatibility check. It must not adopt \(\MetricData(E)\), expand \(\geff\)'s
+scope, import Lorentzian signature, import proper time, import target metric
+covariance, or invoke Einstein-equation coupling.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-008 no-target-import certificate]
+The certificate must include \(\NoTargetImport_E\). The scan must rule out
+target topology, target atlas, target metric, stress-energy tensor, matter
+action, detector calibration, empirical matter fields, benchmark fit,
+Einstein equations, validator status, registry metadata, generated
+derivatives, role authority, handoff status, approval status, file order,
+commit status, local caches, or PDFs as mathematical premises.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-009 finite/local discriminating tests]
+\(\mathcal{T}_E\) must contain tests that can distinguish a genuine
+source-side interface candidate from a restatement of accepted evidence. At
+minimum it must test nonempty interface output, balance-token nontriviality,
+flux-ledger transition coherence, sector-uniformity, recovery-bridge
+compatibility, scoped-\(\geff\) boundary preservation, perturbation stability,
+and no-target-import compliance.
+\end{criterion}
+
+\begin{criterion}[SEI-MC-010 route and gate separation]
+Criteria satisfaction may authorize only a later bounded Candidate
+Constructor packet, Smuggling Auditor review, Refuter stress test, or
+separately authorized protected Gate Chair review. Criteria satisfaction is
+not stress-energy semantics, not matter coupling, not a coupling-law adoption,
+and not Einstein equations.
+\end{criterion}
+
+\section{Finite/Local Test Skeleton}
+
+\begin{longtable}{p{0.24\linewidth}p{0.50\linewidth}p{0.16\linewidth}}
+\toprule
+Test & Required source-side content & Fail-closed label \\
+\midrule
+Nonempty interface output & At least one admissible source token in
+\(J_E\) produces a non-bottom interface record without target import. &
+OB-MC-SEI-OUTPUT-MISSING \\
+Balance nontriviality & \(\BalSrc_E\) accepts and rejects declared source
+transitions for source-intrinsic reasons. & OB-MC-SEI-BALANCE-DEGENERATE \\
+Flux coherence & \(\FluxSrc_E\) preserves or explicitly fails closed under
+declared source transitions. & OB-MC-SEI-FLUX-FAIL \\
+Sector uniformity & One source-side rule schema acts across \(S_E\). &
+OB-MC-SEI-NONUNIVERSAL \\
+Recovery-bridge compatibility & Accepted recovery-bridge evidence constrains
+only source-side tests and proof obligations. & OB-MC-SEI-BRIDGE-OVERREAD \\
+Scoped \(\geff\) boundary & Compatibility does not adopt \(\MetricData(E)\)
+or expand \(\geff\). & OB-MC-SEI-GEFF-OVERREAD \\
+Perturbation stability & Declared finite/local variations do not change the
+interface verdict except through declared source data. & OB-MC-SEI-STABILITY-FAIL \\
+No-target-import scan & No target metric, stress-energy tensor, matter
+action, detector, benchmark, or process-authority import is used. &
+OB-MC-SEI-TARGET-IMPORT \\
+\bottomrule
+\end{longtable}
+
+\section{Fail-Closed Obstruction Labels}
+
+Any later packet that cannot satisfy the criteria must return a precise label
+instead of repairing the gap by implication:
+\[
+\begin{array}{ll}
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}EVIDENCE\mbox{-}AS\mbox{-}ADOPTION},&
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}DATUM\mbox{-}MISSING},\\
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}BALANCE\mbox{-}DEGENERATE},&
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}FLUX\mbox{-}FAIL},\\
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}BRIDGE\mbox{-}OVERREAD},&
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}NONUNIVERSAL},\\
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}GEFF\mbox{-}OVERREAD},&
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}TARGET\mbox{-}IMPORT},\\
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}STABILITY\mbox{-}FAIL},&
+\mathrm{OB\mbox{-}MC\mbox{-}SEI\mbox{-}GATE\mbox{-}CONFUSION}.
+\end{array}
+\]
+These labels are scoped diagnostic controls. They are not global no-go
+theorems unless a later Refuter packet proves that stronger claim under an
+authorized scope.
+
+\section{Interface-Criteria Eligibility Theorem}
+
+\begin{theorem}[Stress-energy-interface criteria eligibility theorem]
+Suppose a later draft/control packet supplies
+\(\SEICert(E,F_E^\sharp)\) satisfying SEI-MC-001 through SEI-MC-010 for a
+declared finite/local source family \(F_E^\sharp\). Then the packet is
+eligible only for bounded source-side interface candidate construction,
+Smuggling Auditor review, Refuter stress testing, or separately authorized
+protected review:
+\[
+  \SEICert(E,F_E^\sharp) \in \EligibleSEI(E,F_E^\sharp).
+\]
+This eligibility does not adopt a source law, adopt
+\(\CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))\), derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, adopt \(\MetricData(E)\), change scoped \(\geff\),
+derive Einstein equations, promote benchmark status, or claim completed
+derivation.
+\end{theorem}
+
+\begin{proof}
+SEI-MC-001 separates evidence/precondition acceptance from adoption. SEI-MC-002
+requires a source-side interface datum. SEI-MC-003 and SEI-MC-004 require
+nontrivial source balance and source flux ledgers without continuum tensor or
+target geometry import. SEI-MC-005 prevents recovery-bridge evidence from
+being overread as matter coupling or stress-energy semantics. SEI-MC-006 and
+SEI-MC-009 require finite/local tests that distinguish a candidate from a
+restatement of accepted evidence. SEI-MC-007 and SEI-MC-008 preserve the
+scoped \(\geff\) and no-target-import boundaries. SEI-MC-010 separates
+criteria satisfaction from route and gate authority. Therefore the criteria
+can establish only eligibility for a later bounded construction, audit, stress,
+or separately authorized protected review. None of the hypotheses supplies an
+adoption verdict, target stress-energy tensor, matter action, empirical matter
+semantics, variational field equation, benchmark verdict, or completed
+derivation.
+\end{proof}
+
+\section{Forbidden Shortcuts}
+
+The following shortcuts are invalid:
+\begin{itemize}[leftmargin=*]
+  \item treating accepted recovery-bridge evidence as matter coupling;
+  \item treating \(\BridgeCertCand\) as stress-energy semantics;
+  \item treating \(\BalSrc_E\) or \(\FluxSrc_E\) as a stress-energy tensor;
+  \item importing a matter action, detector calibration, benchmark fit, or
+  target metric as a premise;
+  \item treating scoped \(\geff\) compatibility as \(\MetricData(E)\)
+  adoption or \(\geff\) scope expansion;
+  \item treating criteria satisfaction as Einstein equations;
+  \item using validation, registry metadata, generated derivatives, role
+  identity, handoff status, approval status, local cache state, file order, or
+  commit status as mathematical evidence.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Source-side stress-energy-interface criteria are formalized as draft/control obligations; no coupling law matter coupling or stress-energy semantics is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Only finite/local interface-test obligations are named; no global robustness theorem is supplied. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair review or benchmark closure is issued. \\
+current route freeze or hard-fail status & Not frozen; a Candidate Constructor interface candidate-or-obstruction packet is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+This packet formalizes draft/control source-side stress-energy-interface
+criteria after scoped source-extension coupling-law-candidate and
+recovery-bridge-candidate evidence/precondition acceptance. It adds the
+\(\SEICert(E,F_E^\sharp)\) certificate, SEI-MC-001 through SEI-MC-010,
+finite/local tests, fail-closed obstruction labels, and the
+stress-energy-interface criteria eligibility theorem.
+
+It does not construct a stress-energy-interface candidate, adopt a coupling
+law, derive or adopt matter coupling, import stress-energy semantics, construct
+a stress-energy tensor, import a matter action, adopt \(\MetricData(E)\),
+change scoped \(\geff\), derive Einstein equations, promote benchmark status,
+issue benchmark Gate Chair closure, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+The logical next bounded packet is a Candidate Constructor attempt to fill the
+\(\SEICert(E,F_E^\sharp)\) candidate slot or return one precise fail-closed
+obstruction label.
+
+\section{APA 7 References}
+
+Gate Chair Packet RT-20260614-248. (2026). \emph{Recovery-bridge candidate
+source-extension evidence Gate Chair review} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-243. (2026). \emph{Matter-coupling
+recovery-bridge criteria} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-241. (2026). \emph{Criteria-aligned
+coupling-law candidate source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}
