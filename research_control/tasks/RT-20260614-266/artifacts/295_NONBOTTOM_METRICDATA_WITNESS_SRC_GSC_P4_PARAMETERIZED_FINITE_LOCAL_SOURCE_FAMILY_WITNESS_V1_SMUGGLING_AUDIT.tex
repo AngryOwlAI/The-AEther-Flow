@@ -1,0 +1,295 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PFLFW}{\mathrm{ParamFiniteLocalWitness}_{v1}}
+\newcommand{\PFLFT}{\mathrm{ParamFiniteLocalTarget}_{v1}}
+\newcommand{\BridgeSlot}{\mathrm{BridgeSlot}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\VarSrc}{\mathrm{Var}_{\mathrm{src}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+
+\title{Parameterized Finite/Local Source-Family Witness v1 Smuggling Audit}
+\author{Smuggling Auditor Packet RT-20260614-266}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Smuggling Auditor packet for P4-T03 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v11.md}. It
+audits the draft/control source-side witness
+\[
+  \PFLFW(E)=\{\mathcal{F}^{\mathrm{par}}_{E,n}\}_{n\ge 3}
+\]
+constructed in \texttt{RT-20260614-265}. The audit target includes
+\(\BridgeSlot_n(E)\) and \(\NoTargetImport_n\).
+
+The audit verdict is source-pure as written pending Refuter stress. This is
+not source-law adoption, not \(\MetricData(E)\) adoption, not scoped \(\geff\)
+expansion, not coupling-law adoption, not matter-coupling derivation or
+adoption, not stress-energy semantics, not a stress-energy tensor, not a
+matter action, not detector semantics, not Einstein equations, not benchmark
+promotion, not a Gate Chair verdict, not completed derivation, not future
+source-extension impossibility, and not global theory rejection.
+
+\begin{verbatim}
+smuggling_audit_result: "audit_passed_for_refuter_stress"
+audit_verdict: "source_pure_as_written_pending_refuter_stress"
+reviewed_candidate: "ParamFiniteLocalWitness_v1(E)"
+reviewed_bridge_slot: "BridgeSlot_n(E)"
+reviewed_certificate: "NoTargetImport_n"
+claim_status: "draft/control audit"
+source_extension_category: "source_extension_smuggling_audit"
+hidden_target_import_detected: false
+target_topology_import_detected: false
+target_atlas_import_detected: false
+target_metric_import_detected: false
+hidden_universality_import_detected: false
+benchmark_import_detected: false
+source_law_adoption_laundering_detected: false
+evidence_as_adoption_laundering_detected: false
+process_authority_laundering_detected: false
+stress_energy_semantics_import_detected: false
+stress_energy_tensor_semantics_import_detected: false
+matter_action_semantics_import_detected: false
+detector_semantics_import_detected: false
+MetricData_E_adoption_laundering_detected: false
+g_eff_scope_laundering_detected: false
+next_required_role: "refuter@0.2.0"
+\end{verbatim}
+
+\section{Audit Target}
+
+The audited source is
+\[
+\texttt{research\_control/tasks/RT-20260614-265/artifacts/294\_...\_WITNESS\_V1.tex}.
+\]
+Its registered hash is
+\[
+\texttt{2c7b03be73dd23b6cdacdff4ce0ae078d10b3382c7bc2d71b4403713caa5f112}.
+\]
+
+The witness defines a parameter family \(n\ge 3\), finite cyclic
+source-index graphs \(C_n\), source sectors \(S_i^{(n)}\), source tokens,
+source states, edge-local source-interface records, nontrivial cyclic
+relabelings \(\tau_k\), interval restrictions, finite/local variations,
+bridge slots, a no-target-import certificate, and fail-closed labels.
+
+\section{Audit Matrix}
+
+\begin{longtable}{p{0.30\linewidth}p{0.18\linewidth}p{0.42\linewidth}}
+\toprule
+Audit dimension & Verdict & Basis \\
+\midrule
+Source-defined parameterization &
+Pass as written &
+The parameter set is \(n\ge 3\), and \(C_n\) is declared only as a finite
+source-index graph. It is not target topology, target atlas, spacetime
+manifold, or metric scaffold. \\
+\addlinespace
+Nontriviality beyond two sectors &
+Pass as written &
+For every \(n\ge 3\), \(\tau_1\) is nonidentity and the construction is not a
+renaming of \(F_E^\sharp=\{S_0,S_1\}\). This is a source-side nontriviality
+claim only. \\
+\addlinespace
+Target topology import &
+Pass as written &
+The graph \(C_n\), interval restrictions, and boundary stubs are declared
+source syntax. No target topology or spacetime manifold is used. \\
+\addlinespace
+Target atlas import &
+Pass as written &
+Restrictions and relabelings operate on source-index intervals and source
+records only. They do not introduce target coordinate charts or transition
+maps. \\
+\addlinespace
+Target metric, Lorentzian signature, or proper time import &
+Pass as written &
+No metric, signature, proper-time, geodesic, detector-clock, or target
+distance primitive appears as an input or output of \(\PFLFW(E)\). \\
+\addlinespace
+Hidden universality import &
+Pass as written &
+Uniformity is only rule-schema uniformity over the source family. It does not
+assert a universal physical coupling law or universal empirical matter
+behavior. \\
+\addlinespace
+Benchmark import &
+Pass as written &
+The witness does not cite benchmark fit, exact-GR success, or benchmark Gate
+Chair closure as a premise. \\
+\addlinespace
+Stress-energy semantics import &
+Pass as written &
+\(\BridgeSlot_n(E)\) is explicitly pre-tensorial and source-indexed. The
+artifact states that it is not stress-energy semantics, not a stress-energy
+tensor, and not a matter action. \\
+\addlinespace
+Matter action or Lagrangian import &
+Pass as written &
+No action functional, Lagrangian, matter field equation, variational
+principle, or empirical matter model is used. \\
+\addlinespace
+Detector or empirical matter-field semantics import &
+Pass as written &
+Source tokens \(a_i,b_i,f_i,q_i\) and states \(\sigma_i\) are source syntax.
+They do not carry detector calibration, empirical matter-field, or observed
+matter-behavior semantics. \\
+\addlinespace
+Bianchi identity or target conservation-law import &
+Pass as written &
+Balance and flux tags remain source ledgers. They are not the Bianchi
+identity, stress-energy conservation, or an Einstein-equation premise. \\
+\addlinespace
+Source-law adoption laundering &
+Pass as written &
+\(\PFLFW(E)\) is marked draft/control source-extension candidate data and
+routes only to audit and stress. It does not adopt a source law. \\
+\addlinespace
+Evidence-as-adoption laundering &
+Pass as written &
+Accepted bridge-candidate evidence, \(\PFLFT(E)\), validator PASS, registry
+rows, and this witness are excluded as adoption or downstream-GR authority by
+PFLW-CAND-008. \\
+\addlinespace
+\(\MetricData(E)\) adoption or \(\geff\) scope laundering &
+Pass as written &
+The witness does not define or adopt \(\MetricData(E)\), does not construct
+\(\geff\), and does not expand scoped \(\geff\) context. \\
+\addlinespace
+Process-authority laundering &
+Pass as written &
+\(\NoTargetImport_n\) excludes generated derivatives, registry metadata,
+validator status, role authority, handoff status, approval status, local
+cache state, file order, and commit status as mathematical premises. \\
+\addlinespace
+Finite/local variation overread &
+Pass as written &
+The variation rule is a finite-support source-token and source-state edit
+rule. It is not a global robustness theorem and not empirical matter
+variation. \\
+\bottomrule
+\end{longtable}
+
+\section{Source-Purity Lemma}
+
+\begin{lemma}[Parameterized witness source-purity audit]
+As written in \texttt{RT-20260614-265}, the family
+\[
+  \PFLFW(E),\qquad \BridgeSlot_n(E),\qquad \NoTargetImport_n
+\]
+does not require target topology, target atlas, target metric, Lorentzian
+signature, proper time, detector semantics, empirical matter-field behavior,
+stress-energy tensor semantics, matter action, Bianchi identity, target
+conservation law, benchmark fit, process authority, source-law adoption,
+\(\MetricData(E)\) adoption, \(\geff\) scope expansion, coupling-law
+adoption, matter-coupling derivation, Einstein equations, benchmark
+promotion, or completed-derivation authority.
+\end{lemma}
+
+\begin{proof}
+The target artifact \(\PFLFW(E)\) constructs only finite source-index
+packages and source-side maps. Its graph \(C_n\), sectors, tokens, states,
+edge records, relabelings, restrictions, variations, and bridge slot are all
+declared source-side objects. Conditions PFLW-CAND-001 through
+PFLW-CAND-006 supply parameterization, nontrivial relabeling, finite/local
+variation, restriction, sector-uniformity, finite/locality, and bridge-slot
+compatibility without target geometry.
+
+PFLW-CAND-007 is the explicit no-target-import certificate. It excludes
+target topology, target atlas, target metric, Lorentzian signature, proper
+time, detector calibration, empirical matter fields, stress-energy tensor,
+matter action, Bianchi identity, Einstein equations, benchmark fit,
+generated derivative content, registry metadata authority, validator status,
+role authority, handoff status, approval status, local cache state, file
+order, and commit status as mathematical premises.
+
+PFLW-CAND-008 excludes evidence-as-adoption and process-status-as-adoption
+uses. Therefore, as written, the witness is source-pure enough to proceed to
+one bounded Refuter stress test. This conclusion is only an audit pass. It is
+not source-law adoption, coupling-law adoption, matter-coupling derivation or
+adoption, physical stress-energy interpretation, benchmark promotion, or
+completed derivation.
+\end{proof}
+
+\section{Failure Conditions Preserved}
+
+The audit does not erase the constructor's fail-closed labels. Later stress
+or review must still preserve:
+
+\begin{itemize}[leftmargin=*]
+  \item \texttt{OB-PFLW-NONUNIFORM-SECTOR-BEHAVIOR};
+  \item \texttt{OB-PFLW-RELABELING-FAILURE};
+  \item \texttt{OB-PFLW-VARIATION-INSTABILITY};
+  \item \texttt{OB-PFLW-MISSING-MORPHISM-BEHAVIOR};
+  \item \texttt{OB-PFLW-TARGET-IMPORT};
+  \item \texttt{OB-PFLW-EVIDENCE-AS-ADOPTION}.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this audit \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Prior scoped source-only context only; no new \(\Msrc\) adoption or scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & Parameterized finite/local witness audited as source-pure as written pending Refuter stress; no coupling law matter coupling stress-energy semantics tensor matter action detector semantics or Einstein equations are adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local finite/source variation checks remain pending Refuter stress; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this audit. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is P4-T04: a Refuter stress test of
+\(\PFLFW(E)\), \(\BridgeSlot_n(E)\), and \(\NoTargetImport_n\) against
+nonempty witnesses across parameters, bottom completeness, relabeling
+invariance, morphism compatibility, variation stability, sector
+hand-tailoring, target repair, hidden universal matter-coupling import,
+process-authority import, and downstream-promotion pressure.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-265. (2026). \emph{Parameterized
+finite/local source-family witness v1} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-259. (2026). \emph{Matter-coupling
+bridge candidate v1 smuggling audit} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research v11} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 28). \emph{Handoff 0298}
+[Internal research-control handoff].
+
+\end{document}
