@@ -1,0 +1,54 @@
+artifact_id: "child-phys-math-rt-20260614-252"
+task_id: "RT-20260614-252"
+job_id: "AJ-RT-20260614-252-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-06-28T07:13:37Z"
+review_target:
+  object_name: "SEI_src^{cand}(E,F_E^sharp) and SEICert^{cand}(E,F_E^sharp)"
+  source_path: "research_control/tasks/RT-20260614-251/artifacts/280_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE.tex"
+  source_hash: "092822825dc714cfd63d1c44884a8004b14077bccb01b1d288e8feb65fad8bb6"
+audit_dimensions:
+  hidden_target_import:
+    verdict: "pass_as_written"
+    evidence: "The candidate domain is the declared finite/local source family F_E^sharp, source interface tokens J_E(S), source states, source balance predicate Bal_src, source flux ledger Flux_src, and Bottom_src fallback branches."
+    forbidden_import_detected: false
+  stress_energy_semantics:
+    verdict: "pass_as_written"
+    evidence: "The candidate explicitly labels interface records as source-side records and denies stress-energy tensor, matter action, detector, and empirical matter semantics."
+    forbidden_import_detected: false
+  balance_flux_overread:
+    verdict: "pass_as_written"
+    evidence: "Bal_src and Flux_src are finite source predicates and ledgers; neither is used as a stress-energy tensor, conservation law, matter action, or field equation."
+    forbidden_import_detected: false
+  evidence_as_adoption:
+    verdict: "pass_as_written"
+    evidence: "Accepted coupling-law-candidate and recovery-bridge-candidate evidence are stored only as scoped source-extension precondition markers."
+    forbidden_import_detected: false
+  bridge_as_matter_coupling:
+    verdict: "pass_as_written"
+    evidence: "B_E^{rec} and BridgeCert^{cand} constrain compatibility only and are not asserted as matter coupling or stress-energy semantics."
+    forbidden_import_detected: false
+  scoped_geff_overread:
+    verdict: "pass_as_written"
+    evidence: "The g_eff entry is only a boundary-preservation flag and does not adopt MetricData(E) or change g_eff scope."
+    forbidden_import_detected: false
+mathematical_verdict: "source_pure_as_written_pending_refuter_stress"
+required_next_role: "refuter"
+claim_boundary_preserved: true
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope change"
+  - "coupling-law adoption"
+  - "matter-coupling derivation"
+  - "matter-coupling adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+notes: "The mathematical audit finds no target metric, atlas, Lorentzian signature, proper time, stress-energy tensor, matter action, detector, benchmark, validation-authority, role-authority, registry-authority, or local-cache import in the candidate as written."
