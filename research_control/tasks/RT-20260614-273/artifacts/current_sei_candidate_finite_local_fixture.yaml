@@ -1,0 +1,180 @@
+metadata:
+  fixture_id: "current_sei_candidate_support_only"
+  fixture_version: "0.1.0"
+  source_task_ids:
+    - "RT-20260614-251"
+    - "RT-20260614-252"
+    - "RT-20260614-253"
+    - "RT-20260614-270"
+  source_artifact_paths:
+    - "research_control/tasks/RT-20260614-251/artifacts/280_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE.tex"
+    - "research_control/tasks/RT-20260614-252/artifacts/281_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_SMUGGLING_AUDIT.tex"
+    - "research_control/tasks/RT-20260614-253/artifacts/282_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+    - "research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md"
+  scope: "finite_local_source_side_support_only_current_sei_candidate"
+  boundary_statement: "This mechanized report is support-only scaffolding. It is not proof authority, not source-law adoption, not `MetricData(E)` adoption, not `g_eff` adoption or scope expansion, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation."
+source_family:
+  parameters:
+    - "E"
+    - "F_E_sharp={S0,S1}"
+  sectors:
+    - "S0"
+    - "S1"
+  finite_local: true
+  bottom_behavior: "fail_closed"
+source_objects:
+  tokens:
+    - id: "j_S0_0"
+      sector: "S0"
+    - id: "j_S1_0"
+      sector: "S1"
+  states:
+    - id: "x_S0_plus"
+      token: "j_S0_0"
+    - id: "x_S1_plus"
+      token: "j_S1_0"
+    - id: "x_S0_reject"
+      token: "j_S0_0"
+    - id: "x_S1_reject"
+      token: "j_S1_0"
+  carriers:
+    - id: "sei_source_family_carrier"
+      tokens:
+        - "j_S0_0"
+        - "j_S1_0"
+      states:
+        - "x_S0_plus"
+        - "x_S1_plus"
+        - "x_S0_reject"
+        - "x_S1_reject"
+relations:
+  balance_predicates:
+    - id: "balance_accept"
+      support_tokens:
+        - "j_S0_0"
+        - "j_S1_0"
+      result: "balanced"
+    - id: "balance_reject"
+      support_tokens:
+        - "j_S0_0"
+        - "j_S1_0"
+      result: "bottom"
+  flux_ledger:
+    - id: "flux_S0_accept"
+      source_state: "x_S0_plus"
+      target_state: "x_S0_plus"
+      token: "j_S0_0"
+      balance_id: "balance_accept"
+    - id: "flux_S1_accept"
+      source_state: "x_S1_plus"
+      target_state: "x_S1_plus"
+      token: "j_S1_0"
+      balance_id: "balance_accept"
+    - id: "flux_S0_bottom"
+      source_state: "x_S0_reject"
+      target_state: "x_S0_reject"
+      token: "j_S0_0"
+      balance_id: "balance_reject"
+    - id: "flux_S1_bottom"
+      source_state: "x_S1_reject"
+      target_state: "x_S1_reject"
+      token: "j_S1_0"
+      balance_id: "balance_reject"
+  restriction_maps:
+    - id: "restrict_sei_source_family"
+      domain: "sei_source_family_carrier"
+      codomain: "sei_source_family_carrier"
+      maps:
+        - from: "j_S0_0"
+          to: "j_S0_0"
+        - from: "j_S1_0"
+          to: "j_S1_0"
+        - from: "x_S0_plus"
+          to: "x_S0_plus"
+        - from: "x_S1_plus"
+          to: "x_S1_plus"
+        - from: "x_S0_reject"
+          to: "x_S0_reject"
+        - from: "x_S1_reject"
+          to: "x_S1_reject"
+  bottom_results:
+    - id: "bottom_rejected_source_branch"
+      trigger: "nonaccepting_source_branch"
+      result: "bottom"
+      obstruction_label: "bottom"
+      blocked_overread:
+        - "bottom_branch_as_global_theorem"
+        - "checker_failure_as_physics_obstruction"
+    - id: "bottom_hidden_target"
+      trigger: "hidden_target_import"
+      result: "bottom"
+      obstruction_label: "target_import"
+      blocked_overread:
+        - "target_import_as_source_law"
+        - "checker_failure_as_global_theorem"
+boundary_markers:
+  no_target_import: true
+  bridge_compatibility: "scoped_source_extension_evidence_precondition_only"
+  scoped_geff_boundary: "no_adoption_no_scope_expansion"
+  evidence_not_adoption: true
+  process_authority_not_proof: true
+candidate:
+  candidate_map:
+    id: "sei_candidate_map_support_only"
+    domain:
+      - "j_S0_0"
+      - "j_S1_0"
+    codomain:
+      - "x_S0_plus"
+      - "x_S1_plus"
+  certificate_object:
+    id: "sei_candidate_certificate_support_only"
+    references:
+      - "sei_candidate_map_support_only"
+      - "sei_source_family_carrier"
+      - "research_control/tasks/RT-20260614-251/artifacts/280_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE.tex"
+      - "research_control/tasks/RT-20260614-252/artifacts/281_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_SMUGGLING_AUDIT.tex"
+      - "research_control/tasks/RT-20260614-253/artifacts/282_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+  obstruction_labels:
+    - "none"
+    - "bottom"
+variation_relabeling:
+  relabelings:
+    - id: "swap_S0_S1"
+      domain:
+        - "j_S0_0"
+        - "j_S1_0"
+      codomain:
+        - "j_S0_0"
+        - "j_S1_0"
+      map:
+        - from: "j_S0_0"
+          to: "j_S1_0"
+        - from: "j_S1_0"
+          to: "j_S0_0"
+  finite_variations:
+    - id: "sector_swap_variation"
+      relabeling_id: "swap_S0_S1"
+      result: "preserved"
+      preserves:
+        - "balance_accept"
+        - "sei_candidate_map_support_only"
+    - id: "target_repair_variation"
+      relabeling_id: "swap_S0_S1"
+      result: "bottom"
+      obstruction_label: "target_import"
+forbidden_imports:
+  target_metric: false
+  target_atlas: false
+  target_topology: false
+  lorentzian_signature: false
+  proper_time: false
+  stress_energy_semantics: false
+  stress_energy_tensor: false
+  matter_action: false
+  detector_semantics: false
+  einstein_equations: false
+  benchmark_success: false
+  source_law_adoption: false
+  MetricData_E_adoption: false
+  g_eff_adoption: false
