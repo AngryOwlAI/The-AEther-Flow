@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-P4-PARAMETERIZED-FINITE-LOCAL-SOURCE-FAMILY-WITNESS-V1` `research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex`
 - Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-p4-parameterized-finite-local-source-family-witness-v1-smuggling-audit.md`
+- Backlink from `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-P4-PARAMETERIZED-FINITE-LOCAL-SOURCE-FAMILY-WITNESS-V1-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-267/artifacts/296_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_REFUTER_STRESS_TEST.tex`
 
 ## Validation
 

@@ -1,0 +1,323 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PFLFW}{\mathrm{ParamFiniteLocalWitness}_{v1}}
+\newcommand{\PFLFT}{\mathrm{ParamFiniteLocalTarget}_{v1}}
+\newcommand{\BridgeSlot}{\mathrm{BridgeSlot}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\VarSrc}{\mathrm{Var}_{\mathrm{src}}}
+\newcommand{\Restrict}{\mathrm{Res}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+\newcommand{\StressConditionalPass}{\mathrm{CONDITIONAL}\mbox{-}\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Refuter Stress Test of Parameterized Finite/Local Source-Family Witness v1}
+\author{Refuter Packet RT-20260614-267}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Refuter packet for P4-T04 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v11.md}. It
+stress-tests the audited draft/control source-side witness
+\[
+  \PFLFW(E)=\{\mathcal{F}^{\mathrm{par}}_{E,n}\}_{n\ge 3},
+  \qquad
+  \BridgeSlot_n(E),
+  \qquad
+  \NoTargetImport_n.
+\]
+The local result is
+\[
+  \texttt{parameterized\_witness\_stress\_survived\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "parameterized_witness_stress_survived_pending_selector"
+stressed_object: "ParamFiniteLocalWitness_v1(E), BridgeSlot_n(E), NoTargetImport_n"
+claim_status: "draft/control parameterized finite/local source-side witness"
+loop_risk_category: "concrete_witness_path"
+conditional_nonempty_across_parameters: true
+bottom_completeness: "pass_as_written"
+obstruction_record_required: false
+route_frozen: false
+source_law_adopted: false
+MetricData_E_adopted: false
+scoped_g_eff_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\) adoption,
+scoped-\(\geff\) change, coupling-law adoption, stress-energy semantics import,
+stress-energy tensor construction, matter-action import, detector-semantics
+import, matter-coupling derivation or adoption, Einstein equations, benchmark
+promotion, benchmark Gate Chair closure, completed derivation, future
+source-extension impossibility, or global theory rejection is authorized.
+
+\section{Stress Domain}
+
+The stressed source is the audited witness from \texttt{RT-20260614-265} and
+\texttt{RT-20260614-266}. For every \(n\ge 3\), the candidate package is
+\[
+  \mathcal{F}^{\mathrm{par}}_{E,n} =
+  (C_n,S^{(n)},\mathrm{Tok}_{\mathrm{src}}^{(n)},
+  \mathrm{State}_{\mathrm{src}}^{(n)},R^{(n)},\mathcal{M}^{(n)},
+  \VarSrc^{(n)},\Restrict^{(n)},\mathsf{SectUnif}^{(n)},\mathsf{Loc}^{(n)},
+  \mathsf{Bot}^{(n)},\NoTargetImport^{(n)},\mathrm{Inv}^{(n)}).
+\]
+The source-index graph is \(C_n\), the declared relabelings are cyclic shifts
+\(\tau_k\), and the declared restrictions are finite interval restrictions.
+The bridge slot is pre-tensorial source-interface data only. The stress asks
+whether these declared source objects survive P4-T04 pressure as a
+parameterized finite/local witness. It does not ask whether the witness is
+adopted as a source law or as matter coupling.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.25\linewidth}p{0.51\linewidth}p{0.15\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Nonempty witnesses across parameters &
+For each \(n\ge 3\), if the finite source alphabet \(A_E\) is nonempty and
+PFLW-CAND-001 through PFLW-CAND-008 hold, the construction supplies the
+declared source package \(\mathcal{F}^{\mathrm{par}}_{E,n}\) and
+\(\BridgeSlot_n(E)\). This is conditional parameterwise nonempty output, not
+universal matter-coupling existence. & \(\StressConditionalPass\) \\
+\addlinespace
+Bottom completeness &
+The constructor declares fail-closed branches for nonuniform sector behavior,
+relabeling failure, variation instability, missing morphism or restriction
+behavior, target import, and evidence-as-adoption. Failed or forbidden repair
+branches return \(\BottomSrc\) with one primary label. & \(\StressPass\) \\
+\addlinespace
+Relabeling invariance &
+The cyclic shifts \(\tau_k\) transport sectors, tokens, states, and edge
+records componentwise. The invariance condition is required only on the
+declared successful source domain; otherwise the witness selects
+\texttt{OB-PFLW-RELABELING-FAILURE}. & \(\StressConditionalPass\) \\
+\addlinespace
+Morphism compatibility &
+The declared morphism behavior consists of cyclic relabeling transport and
+finite interval restrictions. Restrictions commute with transported intervals
+on their common source domain. This is not a general category theorem beyond
+the declared source maps. & \(\StressConditionalPass\) \\
+\addlinespace
+Variation stability &
+Allowed variations are finitely supported source-token or source-state edits.
+They either produce an updated source state with updated finite support and
+ledger data or fail closed with
+\texttt{OB-PFLW-VARIATION-INSTABILITY}. & \(\StressConditionalPass\) \\
+\addlinespace
+No sector hand-tailoring &
+Sector, edge-record, restriction, variation, and bridge-slot rules are uniform
+in \(i\) and \(n\) except for declared source parameters and finite support.
+Hand-tailored sector behavior fails with
+\texttt{OB-PFLW-NONUNIFORM-SECTOR-BEHAVIOR}. & \(\StressPass\) \\
+\addlinespace
+No target repair &
+The no-target-import certificate excludes target topology, target atlas,
+target metric, Lorentzian signature, proper time, detector calibration,
+stress-energy tensor, matter action, benchmark fit, and Einstein equations as
+mathematical premises or repairs. & \(\StressPass\) \\
+\addlinespace
+No hidden universal matter-coupling import &
+Uniform rule schema over \(n\) is source-family uniformity only. It does not
+assert a universal empirical matter sector, a universal coupling law, a
+stress-energy tensor, or matter coupling. & \(\StressPass\) \\
+\addlinespace
+No process-authority import &
+Validator status, registry rows, generated derivatives, roles, handoffs,
+approvals, local caches, file order, and commit status remain excluded as
+scientific premises by \(\NoTargetImport_n\). & \(\StressPass\) \\
+\addlinespace
+No downstream promotion &
+Stress survival does not issue a Gate Chair verdict, adopt a source law,
+adopt \(\MetricData(E)\), expand \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, derive Einstein equations, promote benchmark status, or
+complete the derivation. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Parameterized nonempty and bottom-completeness stress survival]
+For every \(n\ge 3\), if \(A_E\) is nonempty and PFLW-CAND-001 through
+PFLW-CAND-008 hold, the declared source package
+\(\mathcal{F}^{\mathrm{par}}_{E,n}\) exists and supplies
+\(\BridgeSlot_n(E)\). If any required condition fails or requires forbidden
+target, empirical, tensorial, adoption, or process-authority repair, the
+witness returns \(\BottomSrc\) with a declared obstruction label.
+\end{lemma}
+
+\begin{proof}
+The constructor defines each component of
+\(\mathcal{F}^{\mathrm{par}}_{E,n}\) from the finite source index graph,
+source sectors, source tokens, source states, edge records, relabelings,
+restrictions, variations, invariance ledger, bottom branch, and
+\(\NoTargetImport_n\). The success branch is explicitly conditioned on
+PFLW-CAND-001 through PFLW-CAND-008. The failure-label table covers the
+declared ways the witness can fail inside this packet boundary. Thus nonempty
+output survives only conditionally and bottom completeness survives as
+fail-closed bookkeeping.
+\end{proof}
+
+\begin{lemma}[Relabeling, restriction, and variation stress survival]
+The witness survives relabeling, declared morphism, and finite/local variation
+stress only for the explicitly declared source maps: cyclic shifts, finite
+interval restrictions, and finitely supported source edits. Outside those
+declared maps, the packet supplies no general morphism theorem and must fail
+closed rather than repair with target structure.
+\end{lemma}
+
+\begin{proof}
+The transport equations for \(\tau_k\) are componentwise source transports.
+The restriction equations are finite interval restrictions and transported
+finite interval restrictions. The allowed variations are generated by
+single-site or single-edge source-token and source-state edits. These rules
+are enough for the P4-T04 declared stress targets, but they do not prove
+arbitrary category-level morphism compatibility or global finite-variation
+robustness.
+\end{proof}
+
+\begin{lemma}[No adoption or downstream recovery follows from parameterized stress survival]
+Stress survival of \(\PFLFW(E)\), \(\BridgeSlot_n(E)\), and
+\(\NoTargetImport_n\) does not adopt a source law, adopt \(\MetricData(E)\),
+change scoped \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, import detector semantics, derive Einstein equations,
+promote benchmark status, or claim completed derivation.
+\end{lemma}
+
+\begin{proof}
+The stressed object is a draft/control source-side parameterized witness. Its
+bridge slot is pre-tensorial source-interface data, and its no-target-import
+certificate excludes target geometry, empirical matter behavior, tensorial
+semantics, matter actions, detector semantics, adoption, process authority,
+and downstream promotion as premises. Therefore the stress result is only
+candidate stress survival pending route classification.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\MetricData(E)\) adoption or scoped-\(\geff\)
+  expansion;
+  \item \(\PFLFW(E)\) as a coupling law or derived matter coupling;
+  \item \(\BridgeSlot_n(E)\) as stress-energy semantics, a stress-energy
+  tensor, or matter action;
+  \item source balance or flux tags as the Bianchi identity or physical
+  stress-energy conservation;
+  \item source tokens and states as detector semantics or empirical matter
+  fields;
+  \item parameterized finite/local survival as universal matter-sector
+  coverage;
+  \item declared restriction compatibility as arbitrary target atlas or
+  category-level geometry;
+  \item validators, registries, handoffs, roles, approvals, generated
+  derivatives, local caches, file order, or commit state as scientific proof;
+  \item stress survival as Einstein equations, benchmark promotion, benchmark
+  Gate Chair closure, completed derivation, future source-extension
+  impossibility, or global theory rejection.
+\end{enumerate}
+
+\section{Loop-Risk Classification}
+
+The Refuter classification is \texttt{concrete\_witness\_path}. The candidate
+is an explicit parameterized finite/local witness family that has now passed
+construction, source-purity audit, and this bounded stress packet. The route is
+not frozen because the packet supplies a new stress result and leaves one
+distinct P4-T05 selector route open. The next bounded packet should classify
+the stress-survived parameterized-witness route before any protected evidence
+review, repair, freeze, adoption, matter-coupling, or downstream GR work.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+Burden & Status after this stress \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Prior scoped source-only context only; no new \(\Msrc\) adoption or scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & Parameterized finite/local source-family witness stress-survived as conditional draft/control source-side witness data pending selector; no coupling law matter coupling stress-energy semantics stress-energy tensor matter action detector semantics or Einstein equations are adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Finite/local source-variation stress survives only inside the declared parameterized source package; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this stress packet. \\
+Current route freeze or hard-fail status & Not frozen; Theoretical Continuation Selector route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is P4-T05: one Theoretical Continuation Selector
+classification of the stress-survived parameterized-family route. The selector
+must preserve the stress-survival boundary and decide whether the route should
+go to protected evidence-status review, constructor repair, a narrower
+obstruction or freeze path, or another authorized source-side continuation.
+
+\section{Conclusion}
+
+The Refuter finds that \(\PFLFW(E)\), \(\BridgeSlot_n(E)\), and
+\(\NoTargetImport_n\) stress-survive as conditional draft/control
+parameterized finite/local source-side witness data pending selector. This is
+not source-law adoption, \(\MetricData(E)\) adoption, scoped-\(\geff\)
+expansion, coupling-law adoption, matter-coupling derivation or adoption,
+stress-energy semantics, stress-energy tensor construction, matter action,
+detector semantics, Einstein equations, benchmark promotion, or completed
+derivation.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-265. (2026). \emph{Parameterized
+finite/local source-family witness v1} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-266. (2026). \emph{Parameterized
+finite/local source-family witness v1 smuggling audit} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan for continue research v11} [Internal implementation
+plan].
+
+The AEther-Flow Research Project. (2026, June 28). \emph{Handoff 0299}
+[Internal research-control handoff].
+
+\end{document}
