@@ -1,0 +1,401 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{crit}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\BridgeCert}{\mathrm{BridgeCert}_{\mathrm{src}}^{\mathrm{MC}}}
+\newcommand{\EvCrit}{\mathrm{EvCrit}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\Tok}{\mathrm{Tok}}
+\newcommand{\Sem}{\mathrm{Sem}}
+\newcommand{\Adm}{\mathrm{Adm}}
+\newcommand{\Trans}{\mathrm{Trans}}
+\newcommand{\Compat}{\mathrm{Compat}}
+\newcommand{\ConsSrc}{\mathrm{Cons}_{\mathrm{src}}}
+\newcommand{\BridgeTok}{\mathrm{BridgeTok}}
+\newcommand{\BridgeState}{\mathrm{BridgeState}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\OBMCB}{\mathrm{OB}\mbox{-}\mathrm{MC}\mbox{-}\mathrm{BRIDGE}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\title{Draft/Control Source-Side Matter-Coupling Recovery-Bridge Candidate}
+\author{Candidate Constructor Packet RT-20260614-244}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Candidate Constructor packet after
+\texttt{RT-20260614-243}. It fills the recovery-bridge slot \(B_E\) from
+\[
+  \BridgeCert(E,\mathcal{F}_E)
+\]
+as a draft/control source-side bridge candidate over the criteria-aligned
+source-token package from \texttt{RT-20260614-237}.
+
+The constructed object is
+\[
+  B_E^{\mathrm{rec}}:
+  \mathsf{SrcTok}_E \times \mathsf{SrcState}_E
+  \longrightarrow
+  \BridgeTok_E \cup \{\BottomSrc\}.
+\]
+
+This artifact constructs a candidate only. It does not edit canonical
+ontology, adopt a source law, adopt \(\MetricData(E)\), change scoped
+\(\geff\), adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, derive Einstein equations, promote benchmark status,
+issue a benchmark Gate Chair verdict, claim completed derivation, claim
+future source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+candidate_constructor_result: "constructed_candidate"
+constructed_object: "B_E^{rec}"
+claim_status: "draft/control"
+status_label: "proposal-only"
+source_extension_category: "source_extension_candidate"
+recovery_bridge_constructed: true
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "smuggling-auditor@0.2.0"
+\end{verbatim}
+
+\section{Source Inputs}
+
+Let
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+be the criteria-aligned draft/control source-side candidate from
+\texttt{RT-20260614-237}, accepted by \texttt{RT-20260614-241} only as scoped
+source-extension coupling-law-candidate evidence/precondition. Let
+\[
+  \mathcal{F}_E^\sharp=\{S_0,S_1\}
+\]
+be its declared finite/local source family. For \(S\in\mathcal{F}_E^\sharp\),
+let
+\[
+  \Tok_E^\sharp(S)=\{j_S^0,j_S^+,j_S^{\mathrm{rej}}\}
+\]
+with source semantics \(\Sem_E^\sharp\), admissibility
+\(\Adm_E^\sharp\), transition transport \(\Trans_E^\sharp\), scoped
+compatibility \(\Compat_E^\sharp\), optional inactive source-conservation
+slot \(\ConsSrc_E^\sharp\), no-target-import certificate \(N_E^\sharp\), and
+bottom/obstruction labels from that packet.
+
+The accepted evidence status \(\EvCrit(E)\) is an input marker only. It is not
+an adopted coupling law and is not used as matter-coupling semantics.
+
+\section{Bridge Candidate}
+
+\begin{definition}[Source bridge-token record]
+For a source token \(j\in\Tok_E^\sharp(S)\) and a source state
+\[
+  x=(S,\sigma,u,c,\tau,\ell)
+\]
+whose fields are source sector, support syntax, update kind, scoped
+compatibility class, declared source transition, and local comparison label,
+define a source bridge token
+\[
+  b_E(j,x)=
+  (S,\Sem_E^\sharp(j),\Adm_E^\sharp(j,x),
+  \Trans_E^\sharp(\tau,j),\Compat_E^\sharp(j,x),
+  \EvCrit(E),\ell).
+\]
+The codomain \(\BridgeTok_E\) is the finite set of such records that can be
+formed without target topology, target atlas, target metric, Lorentzian
+signature, proper time, stress-energy tensor, matter action, detector
+calibration, benchmark fit, Einstein equations, validator status, registry
+metadata, generated derivatives, role authority, handoff status, approval
+status, file order, commit status, or local caches as mathematical premises.
+\end{definition}
+
+\begin{definition}[Recovery-bridge candidate map]
+Define
+\[
+  B_E^{\mathrm{rec}}(j,x)=
+  \begin{cases}
+  b_E(j,x),&
+  \begin{array}{l}
+  j\in\Tok_E^\sharp(S),\ x\in\mathsf{SrcState}_E,\\
+  \Adm_E^\sharp(j,x)=\mathsf{true},\\
+  \Trans_E^\sharp(\tau,j)\neq\BottomSrc,\\
+  \Compat_E^\sharp(j,x)\ \text{is scoped source-extension only},\\
+  N_E^\sharp(j,x)=\mathsf{pass};
+  \end{array}\\[3ex]
+  \BottomSrc,&\text{otherwise.}
+  \end{cases}
+\]
+This is a source-side bridge-token candidate. It is not an empirical matter
+map, not a stress-energy coupling, not a matter action, not a target metric
+map, not a detector interpretation, and not a universal matter-coupling law.
+\end{definition}
+
+\begin{definition}[Bridge certificate package]
+The constructed bridge-certificate candidate is
+\[
+  \BridgeCert^{\mathrm{cand}}(E,\mathcal{F}_E^\sharp)
+  =
+  (\mathcal{F}_E^\sharp,\EvCrit(E),B_E^{\mathrm{rec}},
+  \mathcal{L}_E^{\mathrm{rec}},\mathcal{P}_E^{\mathrm{rec}},
+  \mathcal{T}_E^{\mathrm{rec}},\NoTargetImport_E^{\mathrm{rec}},
+  \mathcal{O}_E^{\mathrm{rec}},\mathcal{G}_E^{\mathrm{rec}}).
+\]
+Its non-bottom branches are candidate data for audit. Its bottom branches
+return \(\BottomSrc\) or one of the \(\OBMCB\)-labels defined below.
+\end{definition}
+
+\section{RBC Criteria Addressed}
+
+\begin{longtable}{p{0.16\linewidth}p{0.46\linewidth}p{0.29\linewidth}}
+\toprule
+Criterion & Candidate component & Residual obligation \\
+\midrule
+RBC-MC-001 &
+\(\EvCrit(E)\) is stored inside bridge tokens only as evidence/precondition
+metadata; no branch treats it as an adopted law. &
+Smuggling Auditor must check that evidence-status metadata is never used as
+adoption or physical coupling. \\
+\addlinespace
+RBC-MC-002 &
+\(\mathcal{F}_E^\sharp=\{S_0,S_1\}\), \(\Tok_E^\sharp\),
+\(\mathsf{SrcState}_E\), \(\Adm_E^\sharp\), and \(\Trans_E^\sharp\) declare
+the finite/local source domain. &
+Audit must confirm that all state fields are source-defined. \\
+\addlinespace
+RBC-MC-003 &
+\(B_E^{\mathrm{rec}}\) fills the candidate bridge relation slot with an
+explicit source-side type signature and bottom branch. &
+Audit must inspect every non-bottom condition. \\
+\addlinespace
+RBC-MC-004 &
+\(\mathcal{L}_E^{\mathrm{rec}}\) imports the NC-MC compatibility ledger from
+the criteria-aligned candidate and adds no metric-scope expansion. &
+Refuter may later stress whether compatibility remains nontrivial. \\
+\addlinespace
+RBC-MC-005 &
+\(\mathcal{P}_E^{\mathrm{rec}}\) separates evidence acceptance, bridge
+construction, matter coupling, audit/stress status, and conservation claims. &
+No downstream physical bridge obligation is discharged here. \\
+\addlinespace
+RBC-MC-006 &
+\(\mathcal{T}_E^{\mathrm{rec}}\) contains nonempty output, admissibility,
+transition coherence, sector-uniformity, perturbation, and no-target tests. &
+Refuter stress is required after audit if audit passes. \\
+\addlinespace
+RBC-MC-007 &
+\(\NoTargetImport_E^{\mathrm{rec}}\) is the conjunction of \(N_E^\sharp\) and
+the explicit bridge-token no-target scan. &
+Audit must verify hidden imports are absent. \\
+\addlinespace
+RBC-MC-008 &
+\(\mathcal{O}_E^{\mathrm{rec}}\) maps each failed condition to a precise
+\(\OBMCB\)-label. &
+Later stress may refine obstruction labels if a branch collapses. \\
+\addlinespace
+RBC-MC-009 &
+\(\mathcal{G}_E^{\mathrm{rec}}\) routes the constructed candidate only to
+Smuggling Auditor review before Refuter stress or protected review. &
+No Gate Chair or adoption authority is issued here. \\
+\bottomrule
+\end{longtable}
+
+\section{Finite/Local Witness Checks}
+
+\begin{lemma}[Nonempty bridge output]
+For each \(S\in\mathcal{F}_E^\sharp\), if the repaired candidate's admissible
+transition \(j_S^0\leadsto_E^\sharp j_S^+\) is evaluated in the source state
+\[
+  x_S^+=(S,\sigma_E(j_S^0),u_E(j_S^0,j_S^+),c_E(j_S^0,j_S^+),
+  \tau_{\mathrm{id}},\ell_S),
+\]
+and \(N_E^\sharp(j_S^0,x_S^+)=\mathsf{pass}\), then
+\[
+  B_E^{\mathrm{rec}}(j_S^0,x_S^+) = b_E(j_S^0,x_S^+)
+  \neq \BottomSrc .
+\]
+\end{lemma}
+
+\begin{proof}
+The state \(x_S^+\) uses only the finite/local source records already named
+by \(\CouplingLawCrit\). The identity source transition is declared, scoped
+compatibility is recorded only as source-extension compatibility, and
+\(N_E^\sharp\) passes by hypothesis. The first branch of
+\(B_E^{\mathrm{rec}}\) therefore applies. No target or empirical matter datum
+is required.
+\end{proof}
+
+\begin{lemma}[Rejected and forbidden branches fail closed]
+If \(j=j_S^{\mathrm{rej}}\), if \(\Adm_E^\sharp(j,x)\neq\mathsf{true}\), if
+\(\Trans_E^\sharp(\tau,j)=\BottomSrc\), if \(\Compat_E^\sharp\) is read as
+target metric semantics, or if \(N_E^\sharp(j,x)\neq\mathsf{pass}\), then
+\[
+  B_E^{\mathrm{rec}}(j,x)=\BottomSrc
+\]
+with a label from \(\mathcal{O}_E^{\mathrm{rec}}\).
+\end{lemma}
+
+\begin{proof}
+Each listed case negates one of the conjuncts in the first branch of
+\(B_E^{\mathrm{rec}}\). The definition therefore takes the bottom branch.
+The obstruction map is total on the failure classes in the next section.
+\end{proof}
+
+\begin{proposition}[Constructed recovery-bridge candidate]
+\(\BridgeCert^{\mathrm{cand}}(E,\mathcal{F}_E^\sharp)\) is a constructed
+draft/control source-side recovery-bridge candidate satisfying the local
+Candidate Constructor burden for \texttt{RT-20260614-244}. It fills the
+\(B_E\) slot required by \texttt{RT-20260614-243} and is eligible only for
+Smuggling Auditor review.
+\end{proposition}
+
+\begin{proof}
+The package declares the finite/local source domain, records
+\(\EvCrit(E)\) only as evidence/precondition metadata, defines an explicit
+candidate bridge relation \(B_E^{\mathrm{rec}}\), maps RBC-MC-001 through
+RBC-MC-009 to source-side candidate slots, supplies finite/local non-bottom
+and bottom checks, and names all forbidden import classes. Therefore it fills
+the \(B_E\) bridge slot as a draft/control candidate. It does not adopt
+\(\CouplingLawCrit\), does not derive matter coupling, and supplies no audit,
+stress, protected gate, stress-energy, matter action, or field-equation
+result. The only allowed next route is source-purity audit.
+\end{proof}
+
+\section{Obstruction Map}
+
+\begin{longtable}{p{0.38\linewidth}p{0.48\linewidth}}
+\toprule
+Label & Trigger \\
+\midrule
+\(\OBMCB\)-EVIDENCE-AS-LAW &
+\(\EvCrit(E)\) is used as adopted law or physical coupling. \\
+\(\OBMCB\)-DOMAIN-MISSING &
+\(\mathcal{F}_E^\sharp\), \(\Tok_E^\sharp\), or \(\mathsf{SrcState}_E\) is
+not source-defined. \\
+\(\OBMCB\)-MAP-MISSING &
+No non-bottom \(B_E^{\mathrm{rec}}\) output exists on the declared finite
+family. \\
+\(\OBMCB\)-NC-MC-FAIL &
+An NC-MC source-side compatibility condition fails. \\
+\(\OBMCB\)-PROOF-GAP &
+A proof-obligation status is collapsed into a stronger claim. \\
+\(\OBMCB\)-TEST-FAIL &
+Nonempty output, admissibility, transition, sector-uniformity, perturbation,
+or no-target test fails. \\
+\(\OBMCB\)-TARGET-IMPORT &
+Target metric, stress-energy, matter action, detector, benchmark,
+Einstein-equation, validator, registry, role, handoff, approval, file-order,
+commit, PDF, generated derivative, or local-cache import appears. \\
+\(\OBMCB\)-GATE-CONFUSION &
+Audit, stress, or Gate Chair authority is inferred from this construction. \\
+\bottomrule
+\end{longtable}
+
+No obstruction is asserted by this packet because the candidate map is
+constructed. The labels are fail-closed branches for audit or stress if a
+later packet detects a failure.
+
+\section{Proof Obligations}
+
+The constructed candidate requires:
+\begin{enumerate}[leftmargin=*]
+  \item Smuggling Auditor review for hidden target metric import,
+  stress-energy semantics, matter action semantics, detector semantics,
+  coupling-law adoption laundering, source-law adoption laundering,
+  evidence-as-law laundering, \(B_E\)-as-matter-coupling laundering, scoped
+  \(\geff\) overread, and process-authority laundering.
+  \item Refuter stress only if the audit passes, especially nonempty output,
+  bottom completeness, transition coherence, sector-uniformity, perturbation
+  stability, and evidence-status overread.
+  \item Separate protected Gate Chair authority before any evidence-status
+  acceptance beyond draft/control candidate status.
+  \item Separate derivation or explicit gate for empirical matter semantics,
+  stress-energy tensors, matter actions, conservation laws, Einstein
+  equations, benchmark promotion, benchmark closure, or completed derivation.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Recovery-bridge candidate \(B_E^{\mathrm{rec}}\) is constructed as draft/control data pending Smuggling Auditor audit; no coupling law or matter coupling is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Finite/local bridge tests are supplied only for the declared source family; no global robustness theorem is supplied. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No benchmark closure adoption verdict or new protected evidence-status verdict is issued. \\
+current route freeze or hard-fail status & Not frozen; Smuggling Auditor audit is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+This packet constructs \(B_E^{\mathrm{rec}}\) and
+\(\BridgeCert^{\mathrm{cand}}(E,\mathcal{F}_E^\sharp)\) as a finite/local
+draft/control source-side recovery-bridge candidate. The construction fills
+the \(B_E\) slot required by \texttt{RT-20260614-243} without using target
+metric data, stress-energy semantics, matter actions, detector semantics,
+benchmark behavior, validator status, registry metadata, generated
+derivatives, role authority, handoff status, approval status, local caches,
+file order, commit status, PDFs, or HTML as mathematical premises.
+
+It does not adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, adopt \(\MetricData(E)\), change scoped \(\geff\),
+derive Einstein equations, promote benchmark status, issue benchmark Gate
+Chair closure, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+The logical next step is one bounded Smuggling Auditor packet for the
+constructed recovery-bridge candidate.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-237. (2026). \emph{Criteria-aligned
+repair of the scoped source-side coupling-law candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-241. (2026). \emph{Criteria-aligned
+coupling-law candidate source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Ontology Formalizer Packet RT-20260614-236. (2026). \emph{Positive
+source-side matter-coupling success criteria} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-243. (2026). \emph{Matter-coupling
+recovery-bridge criteria after criteria-aligned source-extension evidence}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}
