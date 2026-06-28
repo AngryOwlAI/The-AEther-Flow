@@ -549,6 +549,15 @@ MATHEMATICAL_PAYLOAD_MANIFEST_TYPES = {
     "packet_selection",
     "source_extension_classification",
 }
+MATHEMATICAL_PAYLOAD_MANIFEST_REQUIRED_FIELDS = (
+    "payload_id",
+    "payload_type",
+    "object_name",
+    "claim_status",
+    "source_path",
+    "burden_effect",
+    "summary",
+)
 CANDIDATE_CONSTRUCTOR_RESULT_TYPES = {
     "constructed_candidate",
     "minimal_countermodel",
@@ -2150,23 +2159,17 @@ def validate_mathematical_decisiveness_completion(
                     f"{prefix}: mathematical_payload_manifest[{index}] should be a map"
                 )
                 continue
+            for field_name in MATHEMATICAL_PAYLOAD_MANIFEST_REQUIRED_FIELDS:
+                if not str(payload.get(field_name, "")).strip():
+                    report.error(
+                        f"{prefix}: mathematical_payload_manifest[{index}]."
+                        f"{field_name} is empty"
+                    )
             payload_type = str(payload.get("payload_type", "")).strip()
-            if not payload_type:
-                report.error(
-                    f"{prefix}: mathematical_payload_manifest[{index}].payload_type is required"
-                )
-            elif payload_type not in MATHEMATICAL_PAYLOAD_MANIFEST_TYPES:
+            if payload_type and payload_type not in MATHEMATICAL_PAYLOAD_MANIFEST_TYPES:
                 report.error(
                     f"{prefix}: mathematical_payload_manifest[{index}].payload_type "
                     f"is not allowed: {payload_type}"
-                )
-            if not str(payload.get("object_name", "")).strip():
-                report.error(
-                    f"{prefix}: mathematical_payload_manifest[{index}].object_name is empty"
-                )
-            if not str(payload.get("burden_effect", "")).strip():
-                report.error(
-                    f"{prefix}: mathematical_payload_manifest[{index}].burden_effect is empty"
                 )
     elif "mathematical_payload_manifest" in completion:
         report.error(f"{prefix}: mathematical_payload_manifest should be a list")

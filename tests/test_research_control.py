@@ -1806,6 +1806,54 @@ class ResearchControlTests(unittest.TestCase):
         self.assertTrue(
             any("mathematical decisiveness: missing distance_to_gr_delta" in error for error in report.errors)
         )
+        self.assertTrue(
+            any("mathematical decisiveness: missing mathematical_payload_manifest" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("mathematical decisiveness: missing forbidden_conclusion_summary" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_rejects_incomplete_payload_manifest_item(self) -> None:
+        replacements = {
+            "payload_id": ('  - payload_id: "PAYLOAD-001"', '  - payload_id: ""'),
+            "payload_type": ('    payload_type: "packet_selection"', '    payload_type: ""'),
+            "object_name": (
+                '    object_name: "source-cover selector fixture"',
+                '    object_name: ""',
+            ),
+            "claim_status": ('    claim_status: "draft/control"', '    claim_status: ""'),
+            "source_path": (
+                '    source_path: "research_control/tasks/RT-TEST/artifacts/fixture.yaml"',
+                '    source_path: ""',
+            ),
+            "burden_effect": ('    burden_effect: "selects_next"', '    burden_effect: ""'),
+            "summary": (
+                '    summary: "Names a packet without adoption."',
+                '    summary: ""',
+            ),
+        }
+
+        for field_name, (original, replacement) in replacements.items():
+            with self.subTest(field_name=field_name):
+                completion_extra = "\n".join(
+                    [
+                        self.roadmap_distance_matrix_yaml(),
+                        self.minimal_payload_yaml(),
+                        self.decisiveness_completion_yaml().replace(original, replacement),
+                    ]
+                )
+                report = self.validate_completion_fixture(
+                    role_id="smuggling-auditor",
+                    job_extra=self.decisiveness_opt_in_job_yaml(),
+                    completion_extra=completion_extra,
+                    timestamp="2026-06-18T15:32:59Z",
+                )
+                self.assertTrue(
+                    any(
+                        f"mathematical_payload_manifest[1].{field_name} is empty" in error
+                        for error in report.errors
+                    )
+                )
 
     def test_mathematical_decisiveness_opt_in_valid_selector_completion_passes(self) -> None:
         completion_extra = "\n".join(
@@ -1841,6 +1889,24 @@ class ResearchControlTests(unittest.TestCase):
             timestamp="2026-06-18T15:32:59Z",
         )
         self.assertEqual(report.errors, [])
+
+    def test_mathematical_decisiveness_candidate_constructor_requires_result(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_completion_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="candidate-constructor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("Candidate Constructor completion requires candidate_constructor_result" in error for error in report.errors)
+        )
 
     def test_mathematical_decisiveness_valid_candidate_constructor_precise_obstruction_passes(self) -> None:
         completion_extra = "\n".join(
@@ -1999,6 +2065,33 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertTrue(
             any("route_cycle_control.orbit_avoidance_reason is required" in error for error in report.errors)
+        )
+
+    def test_mathematical_decisiveness_repeated_burden_requires_freeze_and_route_cycle(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.decisiveness_completion_yaml(),
+                "loop_risk_decision:",
+                '  category: "repeated_unmet_burdens_no_new_payload"',
+                '  next_route: "theoretical_decision_role_selection"',
+                '  rationale: "The same burden recurred without new mathematical payload."',
+                "  repeated_burdens:",
+                '    - "M_src"',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="smuggling-auditor",
+            job_extra=self.decisiveness_opt_in_job_yaml(),
+            completion_extra=completion_extra,
+            timestamp="2026-06-18T15:32:59Z",
+        )
+        self.assertTrue(
+            any("requires route_cycle_control" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("requires freeze_criteria_status" in error for error in report.errors)
         )
 
     def test_mathematical_decisiveness_rejects_promotion_without_gate(self) -> None:
