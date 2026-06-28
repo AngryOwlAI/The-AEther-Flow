@@ -1,0 +1,325 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PFLFT}{\mathrm{ParamFiniteLocalTarget}_{v1}}
+\newcommand{\Graph}{\Gamma}
+\newcommand{\SrcTok}{\mathrm{Tok}_{\mathrm{src}}}
+\newcommand{\SrcSt}{\mathrm{State}_{\mathrm{src}}}
+\newcommand{\VarSrc}{\mathrm{Var}_{\mathrm{src}}}
+\newcommand{\Restrict}{\mathrm{Res}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\Inv}{\mathrm{Inv}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Parameterized Finite/Local Source-Family Target v1}
+\author{Ontology Formalizer Packet RT-20260614-264}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260614-264}. It implements P4-T01 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v11.md} by
+formalizing a parameterized finite/local source-family target
+\[
+  \PFLFT(E)
+\]
+after \texttt{RT-20260614-263} selected this route.
+
+The prior Gate Chair result in \texttt{RT-20260614-262} accepted
+\(\MCBridgeCand(E)\), \(\SMI(E)\), and bridge certificate data only as scoped
+source-extension bridge-candidate evidence/precondition. This artifact uses
+that result only as controlled route context. It does not edit canonical
+ontology, adopt a source law, adopt \(\MetricData(E)\), change scoped
+\(\geff\), adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, import detector semantics, derive Einstein equations, promote
+benchmark status, issue a Gate Chair verdict, claim completed derivation,
+claim future source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control parameterized finite/local source-family target"
+target_name: "ParamFiniteLocalTarget_v1(E)"
+selected_target_form: "hybrid graph-indexed finite source-family target"
+source_extension_category: "source_extension_candidate"
+bridge_candidate_evidence_status: "accepted scoped evidence/precondition only"
+parameterized_witness_constructed: false
+source_law_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Target Choice}
+
+P4-T01 allowed four target forms: finite-cardinality families \(F_n\),
+graph/DAG-indexed finite families, category-like finite packages with
+morphisms, or a hybrid graph-indexed family with finite variations. This
+packet chooses the hybrid form.
+
+\begin{definition}[Hybrid graph-indexed finite/local target]
+For a source context \(E\), \(\PFLFT(E)\) is the obligation to define a finite
+source package
+\[
+  \mathcal{F}^{\mathrm{par}}_E =
+  (\Graph_E,S_E,\SrcTok_E,\SrcSt_E,R_E,\mathcal{M}_E,
+   \VarSrc_E,\Restrict_E,\mathsf{SectUnif}_E,\mathsf{Loc}_E,
+   \mathsf{Bot}_E,\NoTargetImport_E,\Inv_E).
+\]
+Here \(\Graph_E=(V_E,A_E)\) is a finite directed source-index graph or finite
+DAG, \(S_E=\{S_v\}_{v\in V_E}\) is the source-sector family,
+\(\SrcTok_E=\{\SrcTok_v\}_{v\in V_E}\) is the source-token family,
+\(\SrcSt_E=\{\SrcSt_v\}_{v\in V_E}\) is the source-state family, \(R_E\)
+records edge-local source-interface relations, \(\mathcal{M}_E\) is the
+declared relabeling or morphism family, \(\VarSrc_E\) is the allowed
+finite/local variation family, \(\Restrict_E\) is the family restriction
+operation, \(\mathsf{SectUnif}_E\) is the sector-uniformity rule,
+\(\mathsf{Loc}_E\) is the finite/locality rule, \(\mathsf{Bot}_E\) records
+bottom branches, \(\NoTargetImport_E\) is the no-target-import certificate,
+and \(\Inv_E\) is the invariance-test ledger.
+\end{definition}
+
+\begin{remark}[Strictly stronger than the two-sector family]
+The earlier two-sector style \(F_E^\sharp=\{S_0,S_1\}\) is a degenerate
+subcase obtained by taking \(|V_E|=2\), no nontrivial edge-local morphism
+structure, and only the declared two-sector variation support. The target
+\(\PFLFT(E)\) is strictly more general because it admits arbitrary finite
+\(|V_E|\), edge-indexed source interfaces, nonidentity relabelings or
+morphisms, restriction maps to finite subfamilies, and finite/local variation
+tests over vertices and edges.
+\end{remark}
+
+\section{Required Definitions}
+
+\begin{definition}[Objects and sectors]
+The objects of \(\PFLFT(E)\) are the source sectors \(S_v\) indexed by
+vertices \(v\in V_E\), together with edge-local source-interface records
+\(R_a\) for arrows \(a:u\to v\). The graph \(\Graph_E\) is an index of source
+relations only. It is not a target manifold, not target topology, not a
+spacetime atlas, and not a target metric scaffold.
+\end{definition}
+
+\begin{definition}[Source tokens and source states]
+Each sector \(S_v\) carries a finite or declared source-local token set
+\(\SrcTok_v\) and a source-state domain \(\SrcSt_v\). A source state
+\(\sigma_v\in\SrcSt_v\) may reference only declared source tokens, declared
+source relations, and previously scoped source-side context. It may not use
+target fields, detector semantics, empirical matter behavior, a matter action,
+or Einstein-equation premises.
+\end{definition}
+
+\begin{definition}[Morphisms and relabelings]
+A morphism or relabeling
+\[
+  m:\mathcal{F}^{\mathrm{par}}_E\to
+  \mathcal{F}^{\mathrm{par}}_{E'}
+\]
+consists of a finite graph map \(m_V:V_E\to V_{E'}\), arrow transport
+where defined, token maps \(m_{\Tok,v}:\SrcTok_v\to\SrcTok_{m_V(v)}\), and
+state maps \(m_{\State,v}:\SrcSt_v\to\SrcSt_{m_V(v)}\), all preserving the
+declared source-interface relations. If any part is undefined, the result is
+a fail-closed relabeling failure, not an invitation to import target
+covariance.
+\end{definition}
+
+\begin{definition}[Allowed finite/local variations]
+An allowed variation \(\delta\in\VarSrc_E\) is a finite-support modification
+of declared source tokens, source states, or edge-local source-interface
+records. Its support \(\mathrm{supp}(\delta)\subseteq V_E\cup A_E\) must be
+finite and declared. A variation may not add target geometry, target metric
+data, stress-energy semantics, matter-action semantics, detector semantics,
+benchmark fit, or field-equation structure.
+\end{definition}
+
+\begin{definition}[Family restriction maps]
+For each declared finite subgraph \(H\subseteq \Graph_E\), the restriction map
+\[
+  \Restrict_{E,H}:\mathcal{F}^{\mathrm{par}}_E
+  \longrightarrow \mathcal{F}^{\mathrm{par}}_{E|H}
+\]
+keeps exactly the sectors, tokens, states, edge-local records, morphism
+fragments, and variations whose support lies in \(H\). Restriction must
+commute with relabeling on its common domain or fail closed with a missing
+morphism behavior label.
+\end{definition}
+
+\begin{condition}[Sector-uniformity rule]
+There must be one source-side rule schema \(\mathcal{R}^{\mathrm{par}}\) for
+all sectors and edge-local records. The rule may depend on declared source
+parameters carried by vertices or arrows, but it may not be hand-tailored by
+sector, by target interpretation, or by desired downstream matter behavior.
+\end{condition}
+
+\begin{condition}[Finite/locality rule]
+All successful target checks must depend on a finite source neighborhood in
+\(\Graph_E\). A check at vertex \(v\) may inspect only declared source data in
+a bounded graph-neighborhood of \(v\), incident edge-local records, declared
+restriction data, and declared finite variations. Nonlocal dependence fails
+closed.
+\end{condition}
+
+\begin{definition}[Bottom and fail-closed branches]
+\(\mathsf{Bot}_E\) maps every failed target condition to
+\(\BottomSrc\) together with a primary obstruction label from the failure
+family below. Bottom is a source-control result, not a physical field, not a
+stress-energy value, and not a benchmark datum.
+\end{definition}
+
+\section{No-Target-Import Certificate}
+
+\begin{condition}[No-target-import certificate]
+The certificate \(\NoTargetImport_E\) must state that the package uses none of
+the following as mathematical premises: target topology, target atlas, target
+metric, Lorentzian signature, proper time, detector calibration, empirical
+matter-field semantics, stress-energy tensor, matter action, Bianchi identity,
+Einstein equations, benchmark fit, generated derivative content, registry
+metadata authority, validator status, role authority, handoff status,
+approval status, local cache state, file order, or commit status.
+\end{condition}
+
+\section{Invariance Tests}
+
+\begin{condition}[Relabeling invariance]
+For every declared relabeling or morphism \(m\), successful checks in
+\(\Inv_E\) must transport along \(m\). If an output is not preserved under
+declared relabeling, the target returns relabeling failure rather than
+repairing the output with target covariance.
+\end{condition}
+
+\begin{condition}[Restriction stability]
+For every finite subgraph \(H\subseteq\Graph_E\), target checks must be
+compatible with \(\Restrict_{E,H}\) on declared common domains. Failure to
+define compatible restriction behavior is missing morphism behavior.
+\end{condition}
+
+\begin{condition}[Finite-variation stability]
+For each \(\delta\in\VarSrc_E\), target checks must either remain well-defined
+under the declared finite/local support of \(\delta\), or return
+variation-instability bottom. This is a finite/local test only and not a
+global finite-variation robustness theorem.
+\end{condition}
+
+\begin{condition}[Evidence-as-adoption guard]
+Accepted bridge-candidate evidence/precondition data may be cited only as
+route context. If any check treats \(\MCBridgeCand(E)\), \(\SMI(E)\), bridge
+certificate data, a validator PASS, a registry row, or this target
+formalization as source-law adoption, coupling-law adoption, matter coupling,
+stress-energy semantics, Einstein equations, benchmark promotion, or completed
+derivation, the target fails closed.
+\end{condition}
+
+\section{Failure Labels}
+
+\begin{longtable}{p{0.36\linewidth}p{0.52\linewidth}}
+\toprule
+Label & Meaning \\
+\midrule
+OB-PFLF-NONUNIFORM-SECTOR-BEHAVIOR & The rule schema changes by sector or is hand-tailored to a desired downstream behavior. \\
+OB-PFLF-RELABELING-FAILURE & A declared relabeling or morphism does not preserve the package or its checks. \\
+OB-PFLF-VARIATION-INSTABILITY & A declared finite/local variation breaks well-definedness without a fail-closed result. \\
+OB-PFLF-MISSING-MORPHISM-BEHAVIOR & Restriction or morphism behavior is required but not defined on the common source domain. \\
+OB-PFLF-TARGET-IMPORT & A target topology atlas metric tensor action detector benchmark or field-equation premise is used. \\
+OB-PFLF-EVIDENCE-AS-ADOPTION & Scoped evidence or route status is treated as source-law adoption, coupling-law adoption, matter coupling, or downstream GR progress. \\
+\bottomrule
+\end{longtable}
+
+\section{Eligibility Theorem}
+
+\begin{theorem}[Parameterized target eligibility without matter-coupling adoption]
+Suppose a future packet supplies a package
+\(\mathcal{F}^{\mathrm{par}}_E\) satisfying the definitions and conditions
+above. Then the package is eligible only for a bounded P4-T02 Candidate
+Constructor attempt to construct a parameterized finite/local witness
+compatible with the current bridge path, or to return a precise obstruction.
+It does not adopt a source law, derive or adopt matter coupling, supply
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, derive Einstein equations, or promote benchmark status.
+\end{theorem}
+
+\begin{proof}
+The hypotheses name only finite source-index graphs, source sectors, source
+tokens, source states, edge-local source-interface records, declared
+relabelings or morphisms, finite/local variations, restriction maps,
+sector-uniformity, finite/locality, bottom branches, a no-target-import
+certificate, and invariance tests. The forbidden target and promotion classes
+are excluded by the no-target-import certificate and the evidence-as-adoption
+guard.
+
+Therefore satisfying the target can at most establish that a later constructor
+has a well-defined source-side test object. It cannot supply a coupling law,
+matter-coupling derivation, stress-energy semantics, a stress-energy tensor,
+a matter action, Einstein equations, benchmark success, or completed
+derivation, because none of those objects appears among the hypotheses.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc_lc & Prior source-localization context only. \\
+Resp_lc & Prior accepted response/localization context only. \\
+M_src & Prior scoped source-only context only; no new \(\Msrc\) adoption or scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & Parameterized finite/local source-family target formalized as draft/control source-extension candidate target; matter coupling remains underived and unadopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Defines finite/local variation tests for a parameterized family; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair packet; prior bridge-candidate evidence acceptance remains scoped. \\
+Current route freeze or hard-fail status & Not frozen; Candidate Constructor parameterized witness-or-obstruction is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is P4-T02: a Candidate Constructor attempt to
+construct a parameterized finite/local source-family witness compatible with
+the current bridge path, or to return a precise obstruction. That future
+packet must preserve blocked adoption and all downstream-GR claim boundaries.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research v11} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 28). \emph{Handoff 0296}
+[Internal research-control handoff].
+
+The AEther-Flow Research Project. (2026, June 28). \emph{Post-Gate
+matter-coupling bridge-candidate evidence route selector} [Research-control
+selector artifact].
+
+\end{document}
