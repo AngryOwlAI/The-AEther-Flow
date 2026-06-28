@@ -1,0 +1,112 @@
+handoff_id: "handoff-0315"
+created_at: "2026-06-28T22:13:41Z"
+task_id: "RT-20260614-282"
+decision_id: "DDR-20260614-282"
+job_id: "AJ-RT-20260614-282-001"
+completion_path: "research_control/tasks/RT-20260614-282/jobs/completions/AJC-AJ-RT-20260614-282-001.yaml"
+source_task_id: "RT-20260614-282"
+source_job_id: "AJ-RT-20260614-282-001"
+source_completion_id: "AJC-AJ-RT-20260614-282-001"
+status: "completed"
+summary: "P7-T04 surfaced a compact dependency graph summary in Continue Research context."
+next_action: "Run one bounded P8-T01 process-integrity or validator packet to audit P1 through P7 implementation consistency."
+loop_risk_route: "p8_t01_cross_phase_consistency_audit_required"
+claim_boundary:
+  allowed_next_scope: "bounded P8-T01 cross-phase consistency audit only"
+  graph_schema_defined: true
+  extractor_implemented: true
+  generated_graph_artifacts_created: true
+  graph_freshness_validator_installed: true
+  continue_research_graph_summary_installed: true
+  graph_summary_is_navigational_support_only: true
+  graph_summary_replaces_source_inspection: false
+  graph_physics_authority_created: false
+  graph_control_authority_created: false
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "graph data as physics authority"
+  - "generated graph artifact as proof"
+  - "generated graph artifact as control authority"
+  - "graph summary as physics evidence"
+  - "graph summary as source inspection replacement"
+p7_t04_result:
+  route: "p7_t04_continue_research_graph_summary_completed"
+  script_path: "scripts/research_control/continue_research.py"
+  test_path: "tests/test_research_control.py"
+  context_field: "dependency_graph_summary"
+  required_fields_present: true
+  readability_limits_enforced: true
+  graph_path_or_hash_present: true
+  source_inspection_required: true
+  graph_summary_is_navigational_support_only: true
+  physics_claim_authority_created: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_graph_context_only"
+  meaning: "P7-T04 added Continue Research context surfacing only. It does not add mathematical payload toward source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation."
+required_next_packet:
+  role_id: "process-integrity-auditor"
+  role_version: "0.1.0"
+  packet_count: 1
+  task_type: "p8_cross_phase_consistency_audit"
+  plan_task_id: "recommendations-v11-P8-T01"
+  objective: "Audit P1 through P7 implementation results for consistency and forbidden overclaim."
+  route_label: "p8_t01_cross_phase_consistency_audit"
+  must_preserve:
+    - "audit only; no physics promotion"
+    - "confirm no recommendation 8-10 tasks were implemented"
+    - "confirm graph remains support-only"
+    - "confirm no physics overclaim"
+    - "no canonical ontology edit"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  continue_research_json: "PASS"
+  continue_research_summary: "PASS"
+  context_summary_tests: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

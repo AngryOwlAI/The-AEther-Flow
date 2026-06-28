@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -43,6 +44,7 @@ except ImportError:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PROGRAM_STATE_PATH = REPO_ROOT / "research_control" / "program_state.yaml"
 REGISTRY_DIR = REPO_ROOT / "registries"
+DEPENDENCY_GRAPH_JSON_PATH = REPO_ROOT / "output" / "research_dependency_graph.json"
 
 
 STOP_CONDITIONS = [
@@ -84,6 +86,7 @@ PAYLOAD_DENSITY_METRIC_KEYS = {
     "new_payload_items_per_cycle",
     "selector_cycles_without_new_payload",
 }
+GRAPH_SUMMARY_LIMIT = 8
 
 
 def read_csv_registry(name: str) -> list[dict[str, str]]:
@@ -211,6 +214,159 @@ def compact_guard_action(warnings: list[dict[str, object]]) -> str:
 
 def compact_warning_ids(warnings: list[dict[str, object]]) -> list[str]:
     return [str(warning.get("warning_id", "")) for warning in warnings if warning.get("warning_id")]
+
+
+def file_sha256(path: Path) -> str:
+    if not path.exists() or not path.is_file():
+        return ""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def compact_node(node: dict[str, object]) -> dict[str, object]:
+    return {
+        "node_id": str(node.get("node_id", "")),
+        "label": str(node.get("label", "")),
+        "node_class": str(node.get("node_class", "")),
+        "state_label": str(node.get("state_label", "")),
+        "source_path": str(node.get("source_path", "")),
+    }
+
+
+def first_nodes(
+    nodes: list[dict[str, object]],
+    *,
+    state_labels: set[str] | None = None,
+    node_classes: set[str] | None = None,
+    label_prefix: str | None = None,
+    limit: int = GRAPH_SUMMARY_LIMIT,
+) -> list[dict[str, object]]:
+    selected: list[dict[str, object]] = []
+    for node in nodes:
+        state_label = str(node.get("state_label", ""))
+        node_class = str(node.get("node_class", ""))
+        label = str(node.get("label", ""))
+        if state_labels is not None and state_label not in state_labels:
+            continue
+        if node_classes is not None and node_class not in node_classes:
+            continue
+        if label_prefix is not None and not label.lower().startswith(label_prefix.lower()):
+            continue
+        selected.append(compact_node(node))
+        if len(selected) >= limit:
+            break
+    return selected
+
+
+def read_handoff_payload(latest: dict[str, object]) -> dict[str, object]:
+    yaml_path = str(latest.get("yaml_path", ""))
+    if not yaml_path:
+        return {}
+    path = REPO_ROOT / yaml_path
+    if not path.exists():
+        return {}
+    try:
+        data = load_yaml(path)
+    except StrictYamlError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def dependency_graph_summary(
+    program_state: dict[str, object],
+    latest: dict[str, object],
+    *,
+    graph_path: Path = DEPENDENCY_GRAPH_JSON_PATH,
+) -> dict[str, object]:
+    graph_relpath = graph_path.relative_to(REPO_ROOT).as_posix()
+    handoff_payload = read_handoff_payload(latest)
+    distance_to_gr = handoff_payload.get("distance_to_gr", {})
+    if not isinstance(distance_to_gr, dict):
+        distance_to_gr = {}
+    required_next_packet = handoff_payload.get("required_next_packet", {})
+    if not isinstance(required_next_packet, dict):
+        required_next_packet = {}
+    active_task_id = str(program_state.get("active_task_id", ""))
+    latest_handoff_id = str(latest.get("handoff_id", ""))
+    base_summary: dict[str, object] = {
+        "status": "missing",
+        "authority_note": (
+            "Generated dependency graph data is navigational support only. "
+            "It does not replace canonical source inspection and cannot promote claims."
+        ),
+        "source_inspection_required": True,
+        "freshness_check_command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --check",
+        "freshness_status": "not_checked_by_continue_research",
+        "active_task": active_task_id,
+        "latest_handoff": latest_handoff_id,
+        "active_burden": {
+            "milestone": str(distance_to_gr.get("milestone", "none")),
+            "burden_id": str(distance_to_gr.get("burden_id", "none")),
+            "status": str(distance_to_gr.get("status", "unknown")),
+        },
+        "immediate_upstream_objects": [],
+        "accepted_scoped_objects": [],
+        "draft_control_objects": [],
+        "human_gated_objects": [],
+        "blocked_downstream_objects": [],
+        "frozen_negative_routes": [],
+        "next_recommended_route": str(
+            required_next_packet.get("route_label")
+            or required_next_packet.get("task_type")
+            or latest.get("next_action", "")
+        ),
+        "graph_path": graph_relpath,
+        "graph_hash": file_sha256(graph_path),
+        "graph_path_or_hash": f"{graph_relpath}#{file_sha256(graph_path)}",
+    }
+    if not graph_path.exists():
+        return base_summary
+    try:
+        graph = json.loads(graph_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        base_summary["status"] = "unreadable"
+        base_summary["error"] = str(exc)
+        return base_summary
+    nodes_value = graph.get("nodes", [])
+    edges_value = graph.get("edges", [])
+    nodes = [node for node in nodes_value if isinstance(node, dict)] if isinstance(nodes_value, list) else []
+    edges = [edge for edge in edges_value if isinstance(edge, dict)] if isinstance(edges_value, list) else []
+    nodes_by_id = {str(node.get("node_id", "")): node for node in nodes}
+    active_task_node = f"task:{active_task_id}"
+    upstream_nodes = []
+    for edge in edges:
+        if str(edge.get("target_id", "")) != active_task_node:
+            continue
+        source_node = nodes_by_id.get(str(edge.get("source_id", "")))
+        if source_node:
+            upstream_nodes.append(compact_node(source_node))
+        if len(upstream_nodes) >= GRAPH_SUMMARY_LIMIT:
+            break
+    base_summary.update(
+        {
+            "status": "available",
+            "schema_id": str(graph.get("schema_id", "")),
+            "source_fingerprint": str(graph.get("source_fingerprint", "")),
+            "generated_at": str(graph.get("generated_at", "")),
+            "route_continuity_status": (
+                "matches_latest_handoff"
+                if isinstance(graph.get("route_continuity"), dict)
+                and isinstance(graph["route_continuity"].get("latest_handoff"), dict)
+                and graph["route_continuity"]["latest_handoff"].get("handoff_id") == latest_handoff_id
+                else "inspect_graph_freshness"
+            ),
+            "immediate_upstream_objects": upstream_nodes,
+            "accepted_scoped_objects": first_nodes(nodes, state_labels={"accepted_scoped"}),
+            "draft_control_objects": first_nodes(nodes, state_labels={"draft_control", "proposal_only"}),
+            "human_gated_objects": first_nodes(nodes, state_labels={"human_gated"}),
+            "blocked_downstream_objects": first_nodes(
+                nodes,
+                node_classes={"blocked_burden"},
+                label_prefix="Blocked",
+            ),
+            "frozen_negative_routes": first_nodes(nodes, state_labels={"frozen_negative"}),
+        }
+    )
+    return base_summary
 
 
 def route_orbit_diagnostic_context(repo_root: Path = REPO_ROOT) -> dict[str, object]:
@@ -369,6 +525,7 @@ def continuation_status() -> dict[str, object]:
     current_decision = decision_rows.get(current_decision_id, {})
     jobs_waiting = pending_or_active_jobs()
     route_orbit_diagnostics = route_orbit_diagnostic_context(REPO_ROOT)
+    graph_summary = dependency_graph_summary(program_state, latest)
 
     boundary = "director_decision_required"
     if active_task.get("requires_human_gate") == "true" or current_decision.get(
@@ -412,6 +569,7 @@ def continuation_status() -> dict[str, object]:
         ],
         "recommended_guard_action": route_orbit_diagnostics["recommended_guard_action"],
         "route_orbit_diagnostics": route_orbit_diagnostics,
+        "dependency_graph_summary": graph_summary,
         "bridge_or_fail_policy": loop_control_policy(),
         "theoretical_continuation_policy": theoretical_continuation_policy(),
         "parent_child_decomposition_policy": parent_child_decomposition_policy(),
@@ -448,6 +606,14 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Active task: {status.get('active_task_id', '')}")
         print(f"Latest handoff: {status.get('latest_handoff_path', '')}")
         print(f"Next recommended action: {status.get('next_recommended_action', '')}")
+        graph_summary = status.get("dependency_graph_summary", {})
+        if isinstance(graph_summary, dict):
+            print(
+                "Dependency graph: "
+                f"{graph_summary.get('status', '')}; "
+                f"{graph_summary.get('graph_path_or_hash', '')}; "
+                "navigational support only"
+            )
         if status["status"] == "blocked":
             for error in status.get("validation_errors", []):
                 print(f"- {error}")

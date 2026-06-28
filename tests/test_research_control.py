@@ -675,6 +675,45 @@ class ResearchControlTests(unittest.TestCase):
             status["gr_derivation_roadmap_policy"]["policy_id"],
             "gr_derivation_roadmap_v1",
         )
+        self.assertIn("dependency_graph_summary", status)
+        graph_summary = status["dependency_graph_summary"]
+        self.assertEqual(graph_summary["active_task"], program_state["active_task_id"])
+        self.assertEqual(graph_summary["latest_handoff"], program_state["latest_handoff_id"])
+        for field_name in (
+            "active_burden",
+            "immediate_upstream_objects",
+            "accepted_scoped_objects",
+            "draft_control_objects",
+            "human_gated_objects",
+            "blocked_downstream_objects",
+            "frozen_negative_routes",
+            "next_recommended_route",
+            "graph_path_or_hash",
+        ):
+            self.assertIn(field_name, graph_summary)
+
+    def test_continue_research_dependency_graph_summary_is_support_only(self) -> None:
+        status = self.continue_research.continuation_status()
+        graph_summary = status["dependency_graph_summary"]
+
+        self.assertEqual(graph_summary["status"], "available")
+        self.assertTrue(graph_summary["source_inspection_required"])
+        self.assertIn("navigational support only", graph_summary["authority_note"])
+        self.assertIn("cannot promote claims", graph_summary["authority_note"])
+        self.assertEqual(graph_summary["graph_path"], "output/research_dependency_graph.json")
+        self.assertRegex(graph_summary["graph_hash"], r"^[0-9a-f]{64}$")
+        self.assertIn("output/research_dependency_graph.json#", graph_summary["graph_path_or_hash"])
+        self.assertEqual(graph_summary["freshness_status"], "not_checked_by_continue_research")
+        self.assertIn("render_dependency_graph.py --check", graph_summary["freshness_check_command"])
+        for list_field in (
+            "immediate_upstream_objects",
+            "accepted_scoped_objects",
+            "draft_control_objects",
+            "human_gated_objects",
+            "blocked_downstream_objects",
+            "frozen_negative_routes",
+        ):
+            self.assertLessEqual(len(graph_summary[list_field]), self.continue_research.GRAPH_SUMMARY_LIMIT)
 
     def test_continue_research_route_orbit_diagnostics_are_advisory(self) -> None:
         fake_report = {
