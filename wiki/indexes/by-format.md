@@ -121,6 +121,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `research_control/design/mathematical_decisiveness_completion_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
+- `MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `research_control/tasks/RT-20260614-133/artifacts/external_review_brief_m_src_gsc_integrated_theorem.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -578,6 +579,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
+- `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `wiki/markdown/md-research-control-tasks-rt-20260614-133-external-review-brief-m-src-gsc-integrated-theorem.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
