@@ -1,0 +1,323 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}_{\mathrm{src}}^{\mathrm{GSC\mbox{-}crit\mbox{-}\mathrm{cand}}}}
+\newcommand{\SEICand}{\mathrm{SEI}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SEICertCand}{\mathrm{SEICert}^{\mathrm{cand}}}
+\newcommand{\BErec}{B_E^{\mathrm{rec}}}
+\newcommand{\BridgeCertCand}{\mathrm{BridgeCert}^{\mathrm{cand}}}
+\newcommand{\BalSrc}{\mathrm{Bal}_{\mathrm{src}}}
+\newcommand{\FluxSrc}{\mathrm{Flux}_{\mathrm{src}}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\OBMCSEI}{\mathrm{OB}\mbox{-}\mathrm{MC}\mbox{-}\mathrm{SEI}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Refuter Stress Test of the Draft/Control Source-Side Stress-Energy-Interface Candidate}
+\author{Refuter Packet RT-20260614-253}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Refuter packet after
+\texttt{RT-20260614-252}. It stress-tests the audited draft/control
+source-side stress-energy-interface candidate
+\[
+  \SEICand(E,F_E^\sharp)
+  \quad\text{and}\quad
+  \SEICertCand(E,F_E^\sharp).
+\]
+The local result is
+\[
+  \texttt{stress\_energy\_interface\_candidate\_stress\_survived\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "stress_energy_interface_candidate_stress_survived_pending_selector"
+stressed_object: "SEI_src^{cand}(E,F_E^sharp) and SEICert^{cand}(E,F_E^sharp)"
+claim_status: "draft/control source-side stress-energy-interface candidate"
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+MetricData_E_adopted: false
+scoped_g_eff_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\)
+adoption, scoped-\(\geff\) change, coupling-law adoption, stress-energy
+semantics import, stress-energy tensor construction, matter-action import,
+matter-coupling derivation or adoption, Einstein equations, benchmark
+promotion, benchmark Gate Chair closure, completed derivation, future
+source-extension impossibility, or global theory rejection is authorized.
+
+\section{Stress Domain}
+
+The stressed package is
+\[
+  \SEICertCand(E,F_E^\sharp)=
+  (F_E^\sharp,\CouplingLawCrit,\BErec,\BridgeCertCand,\mathrm{SrcME}_E,
+  \SEICand,\mathcal{C}_E^{\mathrm{sei}},
+  \mathcal{T}_E^{\mathrm{sei}},\mathrm{NoTargetImport}_E,
+  \mathcal{O}_E^{\mathrm{sei}},\mathcal{G}_E^{\mathrm{sei}}).
+\]
+The source family is finite/local, \(F_E^\sharp=\{S_0,S_1\}\). The stress
+reads prior coupling-law-candidate and recovery-bridge-candidate evidence only
+as scoped source-extension evidence/precondition metadata. It does not read
+that evidence as an adopted source law, adopted coupling law, empirical matter
+coupling, stress-energy semantics, stress-energy tensor, matter action, or
+field equation.
+
+The stress is adversarial but bounded. It asks whether the object survives
+nonempty-output, bottom-completeness, balance-nontriviality, flux-coherence,
+sector-uniformity, perturbation-stability, bridge-overread, scoped-\(\geff\)
+overread, no-target-import, and downstream-promotion pressure. Any stronger
+physical or target-side demand must return \(\BottomSrc\) or a precise
+\(\OBMCSEI\) branch.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.24\linewidth}p{0.48\linewidth}p{0.18\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Nonempty output &
+For each \(S\in F_E^\sharp\), the declared source witness state \(x_S^+\)
+and source token \(j_S^0\) produce
+\(\SEICand(E,F_E^\sharp)(j_S^0,x_S^+)\neq\BottomSrc\) when source-token
+membership, source-state membership, \(\BalSrc\)-acceptance,
+\(\FluxSrc\)-nonbottomness, bridge compatibility, scoped-\(\geff\) boundary
+preservation, and no-target-import pass. & \(\StressPass\) \\
+\addlinespace
+Bottom completeness &
+Rejected tokens, missing source states, nonaccepting balance, bottom flux,
+bridge-overread, scoped-\(\geff\) overread, target import, detector repair,
+benchmark repair, adoption repair, process repair, and downstream-promotion
+repair all return \(\BottomSrc\) or a named \(\OBMCSEI\) branch. &
+\(\StressPass\) \\
+\addlinespace
+Balance nontriviality &
+\(\BalSrc\) accepts one declared source branch and rejects one declared
+source branch in each sector. It is not a stress-energy tensor, physical
+conservation law, matter action, detector model, or empirical matter variable.
+& \(\StressPass\) \\
+\addlinespace
+Flux coherence &
+\(\FluxSrc\) survives coherent declared source ledger transitions. Target
+atlas covariance, target metric inverse data, proper-time normalization,
+stress-energy conservation, or matter-action repair cannot repair flux
+failure. & \(\StressPass\) \\
+\addlinespace
+Sector-uniformity &
+The shared branch form over \(S_0\) and \(S_1\) is a finite/local source
+schema. It is not universal matter-sector coverage and not a universal matter
+coupling law. & \(\StressPass\) \\
+\addlinespace
+Perturbation stability &
+Finite/local perturbations that preserve source-token membership, source
+state membership, \(\BalSrc\)-acceptance, \(\FluxSrc\)-nonbottomness, bridge
+compatibility, scoped-\(\geff\) boundary preservation, and no-target-import
+status preserve the branch classification. Perturbations that demand target
+or empirical repair fail closed. & \(\StressPass\) \\
+\addlinespace
+Bridge-overread pressure &
+\(\BErec\) and \(\BridgeCertCand(E,F_E^\sharp)\) remain compatibility
+preconditions. They are not adopted source law, matter coupling,
+stress-energy semantics, stress-energy tensor, matter action, or field
+equation. & \(\StressPass\) \\
+\addlinespace
+Scoped-\(\geff\) overread &
+The scoped-\(\geff\) field remains a boundary-preservation flag. The stress
+result does not change scoped \(\geff\), adopt \(\MetricData(E)\), or
+construct target metric data. & \(\StressPass\) \\
+\addlinespace
+No-target-import pressure &
+The non-bottom branch uses only source tokens, source states, source balance,
+source flux, bridge compatibility as precondition, scoped boundary metadata,
+and no-target-import pass. Target topology, target atlas, target metric,
+Lorentzian signature, proper time, empirical fit, stress-energy tensors,
+matter actions, detector semantics, and benchmark success are not premises.
+& \(\StressPass\) \\
+\addlinespace
+Downstream promotion pressure &
+Stress survival is not Gate Chair evidence-status acceptance, coupling-law
+adoption, matter-coupling derivation, stress-energy semantics, Einstein
+equations, benchmark promotion, or completed derivation. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Nonempty and bottom-completeness stress survival]
+Under the declared source witnesses \(x_S^+\), \(\SEICand\) has non-bottom
+output exactly when source-token membership, source-state membership,
+\(\BalSrc\)-acceptance, \(\FluxSrc\)-nonbottomness, bridge compatibility,
+scoped-\(\geff\) boundary preservation, and no-target-import all hold. If any
+condition is replaced by target metric, detector, benchmark, stress-energy,
+matter-action, adoption, or process-authority repair, the branch fails closed.
+\end{lemma}
+
+\begin{proof}
+The definition of \(\SEICand\) is conjunctive. The first branch requires only
+the listed source-side conditions and returns a source-side interface record.
+Every listed repair class is outside the declared source domain or explicitly
+forbidden by the no-target-import certificate. Therefore admissible source
+witness states produce non-bottom interface records, while forbidden repairs
+fall to \(\BottomSrc\) or a named \(\OBMCSEI\) label.
+\end{proof}
+
+\begin{lemma}[Balance and flux stress survival]
+\(\BalSrc\) and \(\FluxSrc\) survive the Refuter stress only as finite/local
+source predicate and ledger data. They do not become stress-energy tensor
+components, a physical conservation law, a matter action, empirical detector
+semantics, or a universal matter coupling.
+\end{lemma}
+
+\begin{proof}
+The balance object is defined by source-token and source-state branches. The
+flux object is a source ledger over declared source transitions. Neither
+object has tensor type, target metric dependence, variational action, detector
+calibration, empirical matter-field semantics, or universal quantification
+over matter sectors. Thus balance and flux survive only at finite/local
+source scope.
+\end{proof}
+
+\begin{lemma}[Sector-uniformity and perturbation stress survival]
+\(\SEICand\) survives sector-uniformity and perturbation stress only as a
+finite/local source schema over \(F_E^\sharp=\{S_0,S_1\}\). Source-preserving
+finite/local perturbations preserve pass or bottom classification; target or
+empirical repairs fail closed.
+\end{lemma}
+
+\begin{proof}
+The candidate map has one type signature and one branch condition over the
+declared source family. Perturbations within those source predicates preserve
+branch classification. Perturbations outside those predicates negate a
+non-bottom condition or violate the no-target-import certificate, selecting
+\(\BottomSrc\).
+\end{proof}
+
+\begin{lemma}[No adoption or downstream recovery follows from stress survival]
+Stress survival of \(\SEICand\) and \(\SEICertCand\) does not by itself adopt
+a coupling law, derive or adopt matter coupling, import stress-energy
+semantics, construct a stress-energy tensor, import a matter action, adopt
+\(\MetricData(E)\), change scoped \(\geff\), derive Einstein equations,
+promote benchmark status, or claim completed derivation.
+\end{lemma}
+
+\begin{proof}
+The stressed object is a draft/control source-side interface candidate. It
+contains no adopted universal coupling law, no stress-energy tensor, no
+matter action, no empirical detector semantics, no physical conservation law,
+no variational field equation, no benchmark verdict, and no Gate Chair
+closure. Therefore downstream GR claims remain blocked.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as coupling-law adoption;
+  \item \(\SEICand\) as derived or adopted matter coupling;
+  \item \(\BalSrc\) or \(\FluxSrc\) as stress-energy tensor semantics;
+  \item interface records as matter actions, detector semantics, or empirical
+  matter fields;
+  \item finite/local sector survival as universal matter-sector coverage;
+  \item scoped source-extension compatibility as scoped-\(\geff\) expansion;
+  \item \(\MetricData(E)\) evidence context as \(\MetricData(E)\) adoption;
+  \item validators, registries, handoffs, roles, approvals, generated
+  derivatives, local caches, file order, or commit state as scientific proof;
+  \item stress survival as Einstein equations, benchmark promotion, benchmark
+  Gate Chair closure, completed derivation, future source-extension
+  impossibility, or global theory rejection.
+\end{enumerate}
+
+\section{Loop-Risk Classification}
+
+The Refuter classification is \texttt{bridge\_facing\_candidate\_path}. The
+candidate survived a new stress step after construction and audit, so the
+route is not frozen. The next bounded packet should classify the
+stress-survived stress-energy-interface candidate route before any protected
+review, repair, obstruction, freeze, adoption, matter-coupling, or downstream
+GR work.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Stress-energy-interface candidate data stress-survive as finite/local draft/control source-side interface-candidate data pending selector; no coupling law matter coupling stress-energy semantics stress-energy tensor or matter action is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Finite/local perturbation stability is tested only for the declared source family; no global robustness theorem is supplied. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No benchmark closure adoption verdict or new protected evidence-status verdict is issued. \\
+current route freeze or hard-fail status & Not frozen; Theoretical Continuation Selector classification is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+The audited pair
+\[
+  \SEICand(E,F_E^\sharp),\quad \SEICertCand(E,F_E^\sharp)
+\]
+stress-survives as finite/local draft/control source-side
+stress-energy-interface candidate data pending Theoretical Continuation
+Selector classification. This stress survival preserves all claim fences. It
+does not adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, import detector semantics, adopt \(\MetricData(E)\), change scoped
+\(\geff\), derive Einstein equations, promote benchmark status, issue
+benchmark Gate Chair closure, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-251. (2026). \emph{Draft/control
+source-side stress-energy-interface candidate} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-252. (2026). \emph{Stress-energy-interface
+candidate smuggling audit} [Research-control TeX artifact]. The AEther-Flow
+Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-248. (2026). \emph{Recovery-bridge candidate
+source-extension evidence Gate Chair review} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-241. (2026). \emph{Criteria-aligned
+coupling-law candidate source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}
