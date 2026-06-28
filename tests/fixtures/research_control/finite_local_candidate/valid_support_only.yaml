@@ -1,0 +1,147 @@
+metadata:
+  fixture_id: "valid_support_only"
+  fixture_version: "0.1.0"
+  source_task_ids:
+    - "RT-20260614-269"
+    - "RT-20260614-270"
+  source_artifact_paths:
+    - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+    - "research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md"
+  scope: "finite_local_source_side_support_only"
+  boundary_statement: "This mechanized report is support-only scaffolding. It is not proof authority, not source-law adoption, not `MetricData(E)` adoption, not `g_eff` adoption or scope expansion, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation."
+source_family:
+  parameters:
+    - "n=3"
+  sectors:
+    - "left"
+    - "right"
+  finite_local: true
+  bottom_behavior: "fail_closed"
+source_objects:
+  tokens:
+    - id: "tau_left"
+      sector: "left"
+    - id: "tau_right"
+      sector: "right"
+  states:
+    - id: "sigma_left"
+      token: "tau_left"
+    - id: "sigma_right"
+      token: "tau_right"
+  carriers:
+    - id: "carrier_pair"
+      tokens:
+        - "tau_left"
+        - "tau_right"
+      states:
+        - "sigma_left"
+        - "sigma_right"
+relations:
+  balance_predicates:
+    - id: "balance_pair"
+      support_tokens:
+        - "tau_left"
+        - "tau_right"
+      result: "balanced"
+  flux_ledger:
+    - id: "flux_left_to_right"
+      source_state: "sigma_left"
+      target_state: "sigma_right"
+      token: "tau_left"
+      balance_id: "balance_pair"
+    - id: "flux_right_to_left"
+      source_state: "sigma_right"
+      target_state: "sigma_left"
+      token: "tau_right"
+      balance_id: "balance_pair"
+  restriction_maps:
+    - id: "restrict_pair"
+      domain: "carrier_pair"
+      codomain: "carrier_pair"
+      maps:
+        - from: "tau_left"
+          to: "tau_left"
+        - from: "tau_right"
+          to: "tau_right"
+        - from: "sigma_left"
+          to: "sigma_left"
+        - from: "sigma_right"
+          to: "sigma_right"
+  bottom_results:
+    - id: "bottom_hidden_target"
+      trigger: "hidden_target_import"
+      result: "bottom"
+      obstruction_label: "bottom"
+      blocked_overread:
+        - "target_import_as_source_law"
+        - "checker_failure_as_global_theorem"
+boundary_markers:
+  no_target_import: true
+  bridge_compatibility: "scoped_source_extension_evidence_precondition_only"
+  scoped_geff_boundary: "no_adoption_no_scope_expansion"
+  evidence_not_adoption: true
+  process_authority_not_proof: true
+candidate:
+  candidate_map:
+    id: "candidate_pair"
+    domain:
+      - "tau_left"
+      - "tau_right"
+    codomain:
+      - "sigma_left"
+      - "sigma_right"
+  certificate_object:
+    id: "certificate_pair"
+    references:
+      - "candidate_pair"
+      - "carrier_pair"
+      - "research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md"
+  obstruction_labels:
+    - "none"
+  status_vocabulary:
+    - "pass_support_only"
+    - "fail_malformed_fixture"
+    - "fail_target_import"
+    - "fail_evidence_as_adoption"
+    - "fail_geff_overread"
+    - "fail_process_authority_overread"
+    - "fail_relabeling_invariance"
+    - "fail_variation_stability"
+    - "bottom"
+    - "tooling_error"
+variation_relabeling:
+  relabelings:
+    - id: "swap_left_right"
+      domain:
+        - "tau_left"
+        - "tau_right"
+      codomain:
+        - "tau_left"
+        - "tau_right"
+      map:
+        - from: "tau_left"
+          to: "tau_right"
+        - from: "tau_right"
+          to: "tau_left"
+  finite_variations:
+    - id: "swap_variation"
+      relabeling_id: "swap_left_right"
+      result: "preserved"
+      preserves:
+        - "balance_pair"
+        - "candidate_pair"
+forbidden_imports:
+  target_metric: false
+  target_atlas: false
+  target_topology: false
+  lorentzian_signature: false
+  proper_time: false
+  stress_energy_semantics: false
+  stress_energy_tensor: false
+  matter_action: false
+  detector_semantics: false
+  einstein_equations: false
+  benchmark_success: false
+  source_law_adoption: false
+  MetricData_E_adoption: false
+  g_eff_adoption: false

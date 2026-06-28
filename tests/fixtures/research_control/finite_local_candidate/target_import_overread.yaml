@@ -1,0 +1,108 @@
+metadata:
+  fixture_id: "target_import_overread"
+  fixture_version: "0.1.0"
+  source_task_ids:
+    - "RT-20260614-270"
+  source_artifact_paths:
+    - "research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md"
+  scope: "finite_local_source_side_support_only"
+  boundary_statement: "This mechanized report is support-only scaffolding. It is not proof authority, not source-law adoption, not `MetricData(E)` adoption, not `g_eff` adoption or scope expansion, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation."
+source_family:
+  parameters:
+    - "n=3"
+  sectors:
+    - "left"
+  finite_local: true
+  bottom_behavior: "fail_closed"
+source_objects:
+  tokens:
+    - id: "tau_left"
+      sector: "left"
+  states:
+    - id: "sigma_left"
+      token: "tau_left"
+  carriers:
+    - id: "carrier_left"
+      tokens:
+        - "tau_left"
+      states:
+        - "sigma_left"
+relations:
+  balance_predicates:
+    - id: "balance_left"
+      support_tokens:
+        - "tau_left"
+      result: "balanced"
+  flux_ledger:
+    - id: "flux_left"
+      source_state: "sigma_left"
+      target_state: "sigma_left"
+      token: "tau_left"
+      balance_id: "balance_left"
+  restriction_maps:
+    - id: "restrict_left"
+      domain: "carrier_left"
+      codomain: "carrier_left"
+      maps:
+        - from: "tau_left"
+          to: "tau_left"
+  bottom_results:
+    - id: "bottom_hidden_target"
+      trigger: "hidden_target_import"
+      result: "bottom"
+      obstruction_label: "bottom"
+      blocked_overread:
+        - "target_import_as_source_law"
+boundary_markers:
+  no_target_import: true
+  bridge_compatibility: "scoped_source_extension_evidence_precondition_only"
+  scoped_geff_boundary: "no_adoption_no_scope_expansion"
+  evidence_not_adoption: true
+  process_authority_not_proof: true
+candidate:
+  candidate_map:
+    id: "candidate_left"
+    domain:
+      - "tau_left"
+    codomain:
+      - "sigma_left"
+  certificate_object:
+    id: "certificate_left"
+    references:
+      - "candidate_left"
+      - "carrier_left"
+      - "research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md"
+  obstruction_labels:
+    - "target_import"
+  target_metric: "g_eff"
+variation_relabeling:
+  relabelings:
+    - id: "identity_left"
+      domain:
+        - "tau_left"
+      codomain:
+        - "tau_left"
+      map:
+        - from: "tau_left"
+          to: "tau_left"
+  finite_variations:
+    - id: "identity_variation"
+      relabeling_id: "identity_left"
+      result: "preserved"
+      preserves:
+        - "balance_left"
+forbidden_imports:
+  target_metric: false
+  target_atlas: false
+  target_topology: false
+  lorentzian_signature: false
+  proper_time: false
+  stress_energy_semantics: false
+  stress_energy_tensor: false
+  matter_action: false
+  detector_semantics: false
+  einstein_equations: false
+  benchmark_success: false
+  source_law_adoption: false
+  MetricData_E_adoption: false
+  g_eff_adoption: false
