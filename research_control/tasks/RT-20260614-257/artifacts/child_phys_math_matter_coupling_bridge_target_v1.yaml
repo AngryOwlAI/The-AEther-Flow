@@ -1,0 +1,35 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260614-257"
+status: "completed"
+summary: "Formalized MatterCouplingBridgeTarget_v1(E) as a source-side target object with explicit domain codomain locality naturality sector-uniformity conservation-analogue no-target-import and failure-label obligations."
+formal_objects:
+  target_name: "MatterCouplingBridgeTarget_v1(E)"
+  source_domain:
+    - "scoped M_src context"
+    - "scoped g_eff compatibility context"
+    - "accepted SEI_src^{cand}(E,F_E^sharp) evidence/precondition only"
+    - "source family F_E^sharp and source-sector family Sigma_E"
+  codomain: "pre-tensorial source matter-interface records PTMI_E with tensorial promotion explicitly blocked"
+  map_requirement: "future candidate may be a source-local relation or partial map from source packages to PTMI_E"
+conditions:
+  - "source locality"
+  - "relabeling/naturality"
+  - "source-family morphism compatibility"
+  - "sector-uniformity over parameterized or graph-indexed families"
+  - "source-side conservation analogue using balance and flux ledgers only"
+  - "no target import certificate"
+failure_labels:
+  - "OB-MCB-TARGET-CODOMAIN-MISSING"
+  - "OB-MCB-TARGET-NONLOCAL"
+  - "OB-MCB-TARGET-NONCOVARIANT"
+  - "OB-MCB-TARGET-SECTOR-NONUNIFORM"
+  - "OB-MCB-TARGET-CONSERVATION-ANALOGUE-FAIL"
+  - "OB-MCB-TARGET-IMPORT"
+  - "OB-MCB-TARGET-EVIDENCE-AS-ADOPTION"
+  - "OB-MCB-TARGET-GEFF-OVERREAD"
+  - "OB-MCB-TARGET-TENSORIAL-OVERREAD"
+  - "OB-MCB-TARGET-DOWNSTREAM-PROMOTION"
+theorem_contribution: "Eligibility theorem: satisfying target obligations only authorizes Candidate Constructor attempt audit stress or protected evidence-status review and does not derive or adopt matter coupling."
+claim_boundary_preserved: true
+blocking_conflicts: []
