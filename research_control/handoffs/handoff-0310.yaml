@@ -1,0 +1,110 @@
+handoff_id: "handoff-0310"
+created_at: "2026-06-28T20:41:19Z"
+task_id: "RT-20260614-277"
+decision_id: "DDR-20260614-277"
+job_id: "AJ-RT-20260614-277-001"
+completion_path: "research_control/tasks/RT-20260614-277/jobs/completions/AJC-AJ-RT-20260614-277-001.yaml"
+source_task_id: "RT-20260614-277"
+source_job_id: "AJ-RT-20260614-277-001"
+source_completion_id: "AJC-AJ-RT-20260614-277-001"
+status: "completed"
+summary: "P6-T03 surfaced payload-density and route-orbit warnings in continue_research.py context packets as advisory Director-visible diagnostics with focused tests."
+next_action: "Run one bounded P6-T04 validator-engineer packet to add completion validator checks for required future physics payload fields."
+loop_risk_route: "p6_t04_required_payload_field_validator_hardening_required"
+claim_boundary:
+  allowed_next_scope: "bounded P6-T04 required future physics payload-field validator hardening only"
+  payload_density_warning_surfaced: true
+  route_orbit_warning_surfaced: true
+  same_burden_repetition_warning_surfaced: true
+  gate_ready_without_gate_warning_surfaced: true
+  recommended_guard_action_surfaced: true
+  warnings_are_advisory_only: true
+  warning_hard_gates_created: false
+  metrics_are_physics_evidence: false
+  gate_chair_route_available_with_exact_authority: true
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "workflow metrics as physics evidence"
+  - "advisory warnings as hard gates"
+p6_t03_result:
+  route: "p6_t03_continue_research_warning_surfacing_completed"
+  script_path: "scripts/research_control/continue_research.py"
+  test_path: "tests/test_research_control.py"
+  payload_density_warning_present: true
+  route_orbit_warning_present: true
+  same_burden_repetition_warning_present: true
+  gate_ready_without_gate_warning_present: true
+  recommended_guard_action_present: true
+  route_orbit_warning_triggered: true
+  gate_ready_without_gate_warning_triggered: true
+  warning_hard_gates_created: false
+  physics_claim_authority_created: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_operational_routing_diagnostics_only"
+  meaning: "P6-T03 added operational context-packet diagnostics only. It does not add mathematical payload toward source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "p6_required_payload_field_validator_hardening"
+  plan_task_id: "recommendations-v11-P6-T04"
+  objective: "Add completion validator checks for required future physics payload fields while passing current valid completions or preserving historical compatibility."
+  route_label: "p6_t04_completion_payload_field_validator_hardening"
+  must_preserve:
+    - "no historical task rewrite unless separately authorized"
+    - "future physics completions require concrete payload fields"
+    - "operational validation is not physics evidence"
+    - "no canonical ontology edit"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  unittest_research_control: "PASS"
+  continue_research_json: "PASS"
+  metric_separation_guard: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

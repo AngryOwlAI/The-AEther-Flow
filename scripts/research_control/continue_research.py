@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 
 try:
+    from report_physics_progress_metrics import build_report as build_physics_progress_report
     from resolve_latest_handoff import resolve_latest
     from strict_yaml import StrictYamlError, load as load_yaml
     from validate_research_control import (
@@ -25,6 +26,9 @@ try:
         validate_all,
     )
 except ImportError:  # pragma: no cover
+    from scripts.research_control.report_physics_progress_metrics import (
+        build_report as build_physics_progress_report,
+    )
     from scripts.research_control.resolve_latest_handoff import resolve_latest
     from scripts.research_control.strict_yaml import StrictYamlError, load as load_yaml
     from scripts.research_control.validate_research_control import (
@@ -56,6 +60,30 @@ TASK_BOUNDARY_POLICY = (
     "created only when the current task is completed, blocked, human-gated, or "
     "the latest tracked handoff states that the next step is a separate task."
 )
+
+WARNING_DEFAULT_ACTION = (
+    "No payload-density or route-orbit guard action is triggered by the current "
+    "diagnostic report."
+)
+DIAGNOSTIC_WARNING_IDS_BY_FIELD = {
+    "payload_density_warning": {
+        "low_payload_density",
+        "selector_cycles_without_new_payload",
+        "distance_delta_without_payload",
+    },
+    "same_burden_repetition_warning": {
+        "same_burden_repetition",
+        "same_burden_without_payload",
+    },
+    "gate_ready_without_gate_warning": {"gate_ready_without_gate"},
+}
+PAYLOAD_DENSITY_METRIC_KEYS = {
+    "tasks_since_last_distance_to_gr_delta",
+    "tasks_since_last_burden_discharged",
+    "new_payload_items_per_physics_task",
+    "new_payload_items_per_cycle",
+    "selector_cycles_without_new_payload",
+}
 
 
 def read_csv_registry(name: str) -> list[dict[str, str]]:
@@ -137,6 +165,178 @@ def authority_surfaces(
     return surfaces
 
 
+def warning_record(
+    *,
+    triggered: bool,
+    warning_ids: list[str],
+    recommended_guard_action: str,
+    evidence: dict[str, object] | None = None,
+) -> dict[str, object]:
+    return {
+        "triggered": triggered,
+        "severity": "warning" if triggered else "none",
+        "warning_ids": warning_ids,
+        "recommended_guard_action": recommended_guard_action,
+        "hard_gate": False,
+        "physics_claim_authority": False,
+        "advisory_only": True,
+        "evidence": evidence or {},
+    }
+
+
+def triggered_warnings(
+    warnings: list[dict[str, object]],
+    *,
+    warning_ids: set[str],
+    metric_keys: set[str] | None = None,
+) -> list[dict[str, object]]:
+    metric_keys = metric_keys or set()
+    matched: list[dict[str, object]] = []
+    for warning in warnings:
+        warning_id = str(warning.get("warning_id", ""))
+        metric_key = str(warning.get("metric_key", ""))
+        if warning_id in warning_ids or metric_key in metric_keys:
+            matched.append(warning)
+    return matched
+
+
+def compact_guard_action(warnings: list[dict[str, object]]) -> str:
+    actions = [
+        f"{warning.get('warning_id', 'warning')}: {warning.get('recommended_guard_action', '')}"
+        for warning in warnings
+        if warning.get("recommended_guard_action")
+    ]
+    return "; ".join(actions[:3]) if actions else WARNING_DEFAULT_ACTION
+
+
+def compact_warning_ids(warnings: list[dict[str, object]]) -> list[str]:
+    return [str(warning.get("warning_id", "")) for warning in warnings if warning.get("warning_id")]
+
+
+def route_orbit_diagnostic_context(repo_root: Path = REPO_ROOT) -> dict[str, object]:
+    base_record = warning_record(
+        triggered=False,
+        warning_ids=[],
+        recommended_guard_action=WARNING_DEFAULT_ACTION,
+    )
+    context: dict[str, object] = {
+        "status": "pass",
+        "source": "scripts/research_control/report_physics_progress_metrics.py",
+        "warnings_are_advisory_only": True,
+        "warning_hard_gates_created": False,
+        "physics_claim_authority_created": False,
+        "payload_density_warning": dict(base_record),
+        "route_orbit_warning": dict(base_record),
+        "same_burden_repetition_warning": dict(base_record),
+        "gate_ready_without_gate_warning": dict(base_record),
+        "recommended_guard_action": WARNING_DEFAULT_ACTION,
+        "diagnostic_warning_count": 0,
+        "diagnostic_warning_ids": [],
+        "payload_density_metrics": {},
+        "route_orbit_risk_metrics": {},
+    }
+    try:
+        report = build_physics_progress_report(repo_root)
+    except Exception as exc:  # pragma: no cover - defensive context packet fallback
+        context["status"] = "unavailable"
+        context["error"] = str(exc)
+        context["recommended_guard_action"] = (
+            "Metrics diagnostics were unavailable; run "
+            "scripts/research_control/report_physics_progress_metrics.py before routing."
+        )
+        return context
+
+    metrics = report.get("metrics", {}) if isinstance(report, dict) else {}
+    payload_density_metrics = metrics.get("payload_density_metrics", {})
+    route_orbit_metrics = metrics.get("route_orbit_risk_metrics", {})
+    warnings_value = metrics.get("diagnostic_warnings", [])
+    warnings = [
+        warning
+        for warning in warnings_value
+        if isinstance(warning, dict)
+    ] if isinstance(warnings_value, list) else []
+    warning_ids = compact_warning_ids(warnings)
+    guard_action = compact_guard_action(warnings)
+
+    payload_warnings = triggered_warnings(
+        warnings,
+        warning_ids=DIAGNOSTIC_WARNING_IDS_BY_FIELD["payload_density_warning"],
+        metric_keys=PAYLOAD_DENSITY_METRIC_KEYS,
+    )
+    same_burden_warnings = triggered_warnings(
+        warnings,
+        warning_ids=DIAGNOSTIC_WARNING_IDS_BY_FIELD["same_burden_repetition_warning"],
+    )
+    gate_ready_warnings = triggered_warnings(
+        warnings,
+        warning_ids=DIAGNOSTIC_WARNING_IDS_BY_FIELD["gate_ready_without_gate_warning"],
+    )
+
+    same_burden_count = (
+        route_orbit_metrics.get("same_burden_repetition_count", 0)
+        if isinstance(route_orbit_metrics, dict)
+        else 0
+    )
+    if isinstance(same_burden_count, int) and same_burden_count > 4 and not same_burden_warnings:
+        same_burden_warnings = [
+            {
+                "warning_id": "same_burden_repetition",
+                "recommended_guard_action": (
+                    "Require the next physics packet to name new mathematical payload "
+                    "or justify repetition against the active burden."
+                ),
+            }
+        ]
+
+    route_warning_triggered = bool(warnings or same_burden_warnings or gate_ready_warnings)
+    context.update(
+        {
+            "warning_hard_gates_created": any(bool(warning.get("hard_gate")) for warning in warnings),
+            "physics_claim_authority_created": any(
+                bool(warning.get("physics_claim_authority")) for warning in warnings
+            ),
+            "recommended_guard_action": guard_action,
+            "diagnostic_warning_count": len(warnings),
+            "diagnostic_warning_ids": warning_ids,
+            "payload_density_metrics": payload_density_metrics if isinstance(payload_density_metrics, dict) else {},
+            "route_orbit_risk_metrics": route_orbit_metrics if isinstance(route_orbit_metrics, dict) else {},
+            "payload_density_warning": warning_record(
+                triggered=bool(payload_warnings),
+                warning_ids=compact_warning_ids(payload_warnings),
+                recommended_guard_action=compact_guard_action(payload_warnings),
+            ),
+            "route_orbit_warning": warning_record(
+                triggered=route_warning_triggered,
+                warning_ids=warning_ids,
+                recommended_guard_action=guard_action,
+                evidence={
+                    "diagnostic_warning_count": len(warnings),
+                    "same_burden_repetition_count": same_burden_count,
+                },
+            ),
+            "same_burden_repetition_warning": warning_record(
+                triggered=bool(same_burden_warnings),
+                warning_ids=compact_warning_ids(same_burden_warnings),
+                recommended_guard_action=compact_guard_action(same_burden_warnings),
+                evidence={"same_burden_repetition_count": same_burden_count},
+            ),
+            "gate_ready_without_gate_warning": warning_record(
+                triggered=bool(gate_ready_warnings),
+                warning_ids=compact_warning_ids(gate_ready_warnings),
+                recommended_guard_action=compact_guard_action(gate_ready_warnings),
+                evidence={
+                    "gate_ready_cycles_without_gate_verdict": (
+                        route_orbit_metrics.get("gate_ready_cycles_without_gate_verdict", 0)
+                        if isinstance(route_orbit_metrics, dict)
+                        else 0
+                    ),
+                },
+            ),
+        }
+    )
+    return context
+
+
 def continuation_status() -> dict[str, object]:
     report = validate_all()
     if not report.ok():
@@ -168,6 +368,7 @@ def continuation_status() -> dict[str, object]:
     current_job = job_rows.get(current_job_id, {})
     current_decision = decision_rows.get(current_decision_id, {})
     jobs_waiting = pending_or_active_jobs()
+    route_orbit_diagnostics = route_orbit_diagnostic_context(REPO_ROOT)
 
     boundary = "director_decision_required"
     if active_task.get("requires_human_gate") == "true" or current_decision.get(
@@ -201,6 +402,16 @@ def continuation_status() -> dict[str, object]:
         "task_boundary_policy": TASK_BOUNDARY_POLICY,
         "available_roles": active_roles(),
         "pending_or_active_jobs": jobs_waiting,
+        "payload_density_warning": route_orbit_diagnostics["payload_density_warning"],
+        "route_orbit_warning": route_orbit_diagnostics["route_orbit_warning"],
+        "same_burden_repetition_warning": route_orbit_diagnostics[
+            "same_burden_repetition_warning"
+        ],
+        "gate_ready_without_gate_warning": route_orbit_diagnostics[
+            "gate_ready_without_gate_warning"
+        ],
+        "recommended_guard_action": route_orbit_diagnostics["recommended_guard_action"],
+        "route_orbit_diagnostics": route_orbit_diagnostics,
         "bridge_or_fail_policy": loop_control_policy(),
         "theoretical_continuation_policy": theoretical_continuation_policy(),
         "parent_child_decomposition_policy": parent_child_decomposition_policy(),

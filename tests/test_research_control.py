@@ -676,6 +676,97 @@ class ResearchControlTests(unittest.TestCase):
             "gr_derivation_roadmap_v1",
         )
 
+    def test_continue_research_route_orbit_diagnostics_are_advisory(self) -> None:
+        fake_report = {
+            "metrics": {
+                "payload_density_metrics": {
+                    "selector_cycles_without_new_payload": 3,
+                },
+                "route_orbit_risk_metrics": {
+                    "same_burden_repetition_count": 5,
+                    "gate_ready_cycles_without_gate_verdict": 9,
+                },
+                "diagnostic_warnings": [
+                    {
+                        "warning_id": "selector_cycles_without_new_payload",
+                        "metric_key": "selector_cycles_without_new_payload",
+                        "recommended_guard_action": "Require construction, obstruction, gate, or freeze before another selector cycle.",
+                        "hard_gate": False,
+                        "physics_claim_authority": False,
+                    },
+                    {
+                        "warning_id": "gate_ready_without_gate",
+                        "metric_key": "gate_ready_cycles_without_gate_verdict",
+                        "recommended_guard_action": "Route the next eligible packet to Gate Chair review only with exact authority.",
+                        "hard_gate": False,
+                        "physics_claim_authority": False,
+                    },
+                ],
+            }
+        }
+
+        with mock.patch.object(
+            self.continue_research,
+            "build_physics_progress_report",
+            return_value=fake_report,
+        ):
+            diagnostics = self.continue_research.route_orbit_diagnostic_context(
+                Path("/tmp/repo")
+            )
+
+        self.assertEqual(diagnostics["status"], "pass")
+        self.assertTrue(diagnostics["warnings_are_advisory_only"])
+        self.assertFalse(diagnostics["warning_hard_gates_created"])
+        self.assertFalse(diagnostics["physics_claim_authority_created"])
+        self.assertTrue(diagnostics["payload_density_warning"]["triggered"])
+        self.assertTrue(diagnostics["route_orbit_warning"]["triggered"])
+        self.assertTrue(diagnostics["same_burden_repetition_warning"]["triggered"])
+        self.assertTrue(diagnostics["gate_ready_without_gate_warning"]["triggered"])
+        self.assertFalse(diagnostics["route_orbit_warning"]["hard_gate"])
+        self.assertFalse(diagnostics["route_orbit_warning"]["physics_claim_authority"])
+        self.assertIn("selector_cycles_without_new_payload", diagnostics["recommended_guard_action"])
+
+    def test_continue_research_context_warnings_do_not_block_gate_chair_route(self) -> None:
+        fake_report = {
+            "metrics": {
+                "payload_density_metrics": {},
+                "route_orbit_risk_metrics": {
+                    "gate_ready_cycles_without_gate_verdict": 1,
+                },
+                "diagnostic_warnings": [
+                    {
+                        "warning_id": "gate_ready_without_gate",
+                        "metric_key": "gate_ready_cycles_without_gate_verdict",
+                        "recommended_guard_action": "Keep Gate Chair review available when exact authorization exists.",
+                        "hard_gate": False,
+                        "physics_claim_authority": False,
+                    }
+                ],
+            }
+        }
+
+        with mock.patch.object(
+            self.continue_research,
+            "build_physics_progress_report",
+            return_value=fake_report,
+        ):
+            status = self.continue_research.continuation_status()
+
+        self.assertIn("payload_density_warning", status)
+        self.assertIn("route_orbit_warning", status)
+        self.assertIn("same_burden_repetition_warning", status)
+        self.assertIn("gate_ready_without_gate_warning", status)
+        self.assertIn("recommended_guard_action", status)
+        self.assertIn("route_orbit_diagnostics", status)
+        self.assertTrue(status["gate_ready_without_gate_warning"]["triggered"])
+        self.assertFalse(status["route_orbit_warning"]["hard_gate"])
+        self.assertFalse(status["route_orbit_warning"]["physics_claim_authority"])
+        self.assertFalse(status["route_orbit_diagnostics"]["warning_hard_gates_created"])
+        self.assertNotIn("route_orbit_warning", status["stop_conditions"])
+        self.assertTrue(
+            any(role["role_id"] == "gate-chair" for role in status["available_roles"])
+        )
+
     def test_checkpoint_global_sync_allowlist_is_narrow(self) -> None:
         self.assertTrue(
             self.checkpoint.allowed_by_any(
