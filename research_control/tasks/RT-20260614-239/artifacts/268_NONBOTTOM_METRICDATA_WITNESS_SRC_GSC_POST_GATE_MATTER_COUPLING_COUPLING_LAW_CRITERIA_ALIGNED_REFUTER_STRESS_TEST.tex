@@ -1,0 +1,373 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{crit}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\Tok}{\mathrm{Tok}}
+\newcommand{\Sem}{\mathrm{Sem}}
+\newcommand{\Adm}{\mathrm{Adm}}
+\newcommand{\Trans}{\mathrm{Trans}}
+\newcommand{\Compat}{\mathrm{Compat}}
+\newcommand{\ConsSrc}{\mathrm{Cons}_{\mathrm{src}}}
+\newcommand{\OBMC}{\mathrm{OB}\mbox{-}\mathrm{MC}}
+\newcommand{\Fsrc}{\mathcal{F}_{E}^{\sharp}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+
+\title{Refuter Stress Test of the Criteria-Aligned Repaired Source-Side Coupling-Law Candidate}
+\author{Refuter Packet RT-20260614-239}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements the Refuter stress branch of \texttt{PLAN-P7-T3}.
+It stress-tests the audited draft/control source-side coupling-law candidate
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+constructed in \texttt{RT-20260614-237} and audited as source-pure as written
+in \texttt{RT-20260614-238}. The local stress result is
+\[
+  \texttt{criteria\_aligned\_coupling\_law\_candidate\_stress\_survived\_pending\_selector}.
+\]
+
+\begin{verbatim}
+stress_result: "criteria_aligned_coupling_law_candidate_stress_survived_pending_selector"
+stressed_object: "CouplingLaw_src^{GSC-crit-cand}(E;G^beta,T_src(E))"
+claim_status: "draft/control source-side coupling-law candidate"
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+MetricData_E_adopted: false
+scoped_g_eff_expanded: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_route: "Theoretical Continuation Selector classification"
+\end{verbatim}
+
+No canonical ontology edit, source-law adoption, \(\MetricData(E)\)
+adoption, scoped-\(\geff\) expansion, coupling-law adoption, stress-energy
+semantics import, matter-coupling derivation or adoption, Einstein equations,
+benchmark promotion, completed derivation, future source-extension
+impossibility, or global theory rejection is authorized.
+
+\section{Stress Domain}
+
+The stressed candidate is the criteria-aligned source-side tuple
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E)) =
+  (D_E^{\sharp},P_E^{\sharp},\Fsrc,\Tok_E^{\sharp},
+  \Sem_E^{\sharp},\Adm_E^{\sharp},\Compat_E^{\sharp},
+  \Trans_E^{\sharp},\ConsSrc_E^{\sharp},B_E^{\sharp},
+  N_E^{\sharp},O_E^{\sharp},L_E^{\sharp}).
+\]
+It survives only when each slot is read as declared finite/local source-side
+data: source support, scoped evidence receipt, finite source-sector family,
+source tokens, source interpretation tuples, source admissibility predicates,
+scoped source-extension compatibility, source transition transport, inactive
+source-conservation placeholder, controlled bottom behavior, no-target-import
+refusal, obstruction labels, and limitation text. Any demand for target
+geometry, target stress-energy semantics, empirical matter semantics, process
+authority, adoption authority, or downstream GR recovery returns \(\BottomSrc\)
+or a precise \(\OBMC\)-CRIT branch.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.25\linewidth}p{0.47\linewidth}p{0.18\linewidth}}
+\toprule
+Stress target & Result & Verdict \\
+\midrule
+Token-semantics ambiguity &
+\(\Sem_E^{\sharp}(j)=(S(j),\sigma_E(j),u_E(j),c_E(j))\) survives only as a
+source interpretation tuple. If a token is required to denote a stress-energy
+tensor, matter action, detector calibration, empirical matter field, or target
+metric datum, the branch exits to \(\BottomSrc\) or
+\(\OBMC\)-CRIT-TOKEN-SEMANTICS. & \(\StressPass\) \\
+\addlinespace
+Admissibility nontriviality &
+\(\Adm_E^{\sharp}\) is nontrivial only inside the declared finite/local source
+family: \(j_S^0\leadsto_E^{\sharp}j_S^+\) may hold and
+\(j_S^0\not\leadsto_E^{\sharp}j_S^{\mathrm{rej}}\) is the declared rejected
+repair branch. Target, detector, benchmark, or stress-energy admissibility
+does not repair a missing source predicate. & \(\StressPass\) \\
+\addlinespace
+Transition inverse behavior &
+\(\Trans_E^{\sharp}\) survives only for declared source transports acting on
+source labels, support syntax, update kind, and scoped compatibility class.
+Target-atlas inverse repair, target metric inverse repair, or detector repair
+is not available. & \(\StressPass\) \\
+\addlinespace
+Transition cocycle behavior &
+Path coherence is required only as source-transition coherence. Noncoherent
+or path-dependent source transport fails closed unless declared source cocycle
+data are supplied. Target-coordinate covariance is not inferred. &
+\(\StressPass\) \\
+\addlinespace
+Finite/local universality overread &
+\(\Fsrc=\{S_0,S_1\}\) remains a finite/local source family. The shared schema
+over two source sectors is not a universal matter sector and not universal
+matter coupling. & \(\StressPass\) \\
+\addlinespace
+Scoped-\(\geff\) overread &
+\(\Compat_E^{\sharp}\) records scoped source-extension compatibility only.
+Stress survival does not expand scoped \(\geff\), turn \(\geff\) into a target
+metric datum, or supply universal coupling geometry. & \(\StressPass\) \\
+\addlinespace
+Hidden stress-energy semantics &
+No slot contains a stress-energy tensor, matter action, variational matter
+law, physical conservation theorem, empirical matter sector, or detector
+calibration. Demanding those objects exits the source-only candidate branch.
+& \(\StressPass\) \\
+\addlinespace
+Target import pressure &
+\(D_E^{\sharp}\), \(P_E^{\sharp}\), \(\Fsrc\), \(\Tok_E^{\sharp}\),
+\(\Sem_E^{\sharp}\), \(\Adm_E^{\sharp}\), \(\Compat_E^{\sharp}\), and
+\(\Trans_E^{\sharp}\) do not import target topology, target atlas, target
+metric, Lorentzian signature, proper time, empirical fit, or benchmark
+success. & \(\StressPass\) \\
+\addlinespace
+Conservation-like source slot &
+\(\ConsSrc_E^{\sharp}\) is optional and inactive. It is not a physical
+conservation law and cannot be read as stress-energy conservation. &
+\(\StressPass\) \\
+\addlinespace
+Bottom completeness &
+\(B_E^{\sharp}\), \(N_E^{\sharp}\), and \(O_E^{\sharp}\) cover absent,
+ambiguous, degenerate, target-repaired, detector-repaired,
+benchmark-repaired, adoption-repaired, and process-repaired branches with
+\(\BottomSrc\) or precise \(\OBMC\)-CRIT labels. & \(\StressPass\) \\
+\addlinespace
+Process-authority overread &
+Validators, registries, roles, handoffs, approvals, generated derivatives,
+local caches, file order, and commit status are not mathematical premises and
+cannot repair a failed source slot. & \(\StressPass\) \\
+\addlinespace
+Coupling-law adoption laundering &
+A stress-survived candidate record is not an adopted universal coupling rule,
+matter response law, matter action, or source-side law. & \(\StressPass\) \\
+\addlinespace
+Source-law adoption laundering &
+\(\Sem_E^{\sharp}\), \(\Adm_E^{\sharp}\), \(\Compat_E^{\sharp}\), and
+\(\Trans_E^{\sharp}\) remain candidate slots and proof obligations, not
+adopted ontology primitives. & \(\StressPass\) \\
+\addlinespace
+\(\MetricData(E)\) adoption laundering &
+Prior \(\MetricData(E)\) context remains scoped source-extension evidence
+only. This packet does not adopt \(\MetricData(E)\) or use it as effective
+metric construction authority. & \(\StressPass\) \\
+\addlinespace
+Einstein-equation pressure &
+No curvature dynamics, matter action, stress-energy tensor, variational
+principle, conservation theorem, or field-equation derivation is supplied. &
+\(\StressPass\) \\
+\addlinespace
+Benchmark and completed-derivation pressure &
+Stress survival is not benchmark evidence, not Gate Chair closure, not exact
+GR recovery, and not completed derivation. & \(\StressPass\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Source-token semantics and admissibility stress survival]
+Under token-semantics ambiguity and admissibility nontriviality stress,
+\(\CouplingLawCrit\) survives only as a source-side candidate record over
+declared source interpretation tuples and source admissibility predicates. If
+token semantics or admissibility are required to denote stress-energy
+semantics, matter actions, detector behavior, empirical matter fields, or
+target matter content, the candidate returns \(\BottomSrc\) or a precise
+\(\OBMC\)-CRIT branch.
+\end{lemma}
+
+\begin{proof}
+The audited candidate defines \(\Sem_E^{\sharp}\) and
+\(\Adm_E^{\sharp}\) as source records over source sectors, support syntax,
+update kind, and scoped compatibility classes. The nontrivial branch is
+finite/local and includes declared acceptance and rejection tokens. No slot
+supplies a tensor, action, empirical detector, target metric datum, or
+physical matter field. Therefore stronger semantic readings violate the
+candidate domain and fail closed.
+\end{proof}
+
+\begin{lemma}[Transition inverse, cocycle, and bottom stress survival]
+\(\CouplingLawCrit\) survives transition inverse, transition cocycle, and
+bottom-completeness stress only when the relevant data are supplied as source
+transport records and controlled-bottom branches. Target or process repairs
+return \(\BottomSrc\) or a precise \(\OBMC\)-CRIT branch.
+\end{lemma}
+
+\begin{proof}
+The source transport \(\Trans_E^{\sharp}\) acts only on source sector labels,
+support syntax, update kind, and scoped compatibility class. The bottom and
+obstruction slots explicitly cover absent, ambiguous, target-repaired,
+detector-repaired, benchmark-repaired, adoption-repaired, and
+process-repaired branches. Hence target atlas covariance, target inverse
+metrics, detector repair, benchmark repair, validator status, registry rows,
+role authority, handoffs, local caches, file order, or commit state cannot
+repair a transition failure.
+\end{proof}
+
+\begin{lemma}[Finite/local and scoped-\(\geff\) boundary stress survival]
+Stress survival of the two-sector family \(\Fsrc=\{S_0,S_1\}\) and the
+compatibility slot \(\Compat_E^{\sharp}\) does not establish universal matter
+coupling and does not expand scoped \(\geff\).
+\end{lemma}
+
+\begin{proof}
+The candidate states a finite/local source family and a scoped compatibility
+boundary. A finite schema over two declared source sectors is not a universal
+matter sector. A scoped compatibility boundary is not an unscoped metric
+adoption and not a target metric. Thus finite/local survival and scoped
+compatibility survival do not discharge matter coupling.
+\end{proof}
+
+\begin{lemma}[No adoption or downstream recovery follows from stress survival]
+Stress survival of \(\CouplingLawCrit\) does not by itself provide
+coupling-law adoption, matter-coupling derivation or adoption, stress-energy
+semantics, \(\MetricData(E)\) adoption, scoped-\(\geff\) expansion, Einstein
+equations, benchmark promotion, or completed derivation.
+\end{lemma}
+
+\begin{proof}
+The stressed object remains draft/control and proposal-only. It contains no
+adopted universal coupling law, no matter action, no stress-energy tensor, no
+physical conservation theorem, no field-equation derivation, no benchmark
+verdict, and no Gate Chair closure. Its limitation record requires later
+routing before any protected review or adoption question. Therefore every
+downstream GR claim remains blocked.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\MetricData(E)\) adoption;
+  \item stress survival as scoped-\(\geff\) expansion or unscoped \(\geff\)
+  adoption;
+  \item stress survival as coupling-law adoption;
+  \item finite/local source sectors as universal matter sectors;
+  \item source token semantics as stress-energy semantics;
+  \item source admissibility as physical matter-sector admissibility;
+  \item source transition compatibility as target-coordinate covariance;
+  \item source conservation-like placeholders as physical conservation laws;
+  \item target atlas, target metric, empirical, benchmark, validator,
+  registry, role, handoff, approval, generated-derivative, cache, file-order,
+  or commit-state repair; and
+  \item matter coupling, Einstein equations, benchmark promotion, Gate Chair
+  closure, completed derivation, future source-extension impossibility, or
+  global theory rejection.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Prior scoped source-extension evidence only; not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+matter coupling & Criteria-aligned draft/control source-side coupling-law candidate stress-survived pending selector classification; no coupling law is adopted and no matter coupling is derived or adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Local source-repair and bottom context only; no general theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No matter-coupling or coupling-law review is issued. \\
+current route freeze or hard-fail status & Not frozen; Theoretical Continuation Selector route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Verdict}
+
+\begin{verdict}[Stress-survived pending selector]
+The audited draft/control
+\(\CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))\) candidate survives the
+named Refuter stress suite only as a finite/local source-side candidate record
+with fail-closed bottom behavior. The result is local and conditional. It does
+not adopt a coupling law, does not derive or adopt matter coupling, does not
+import stress-energy semantics, does not adopt \(\MetricData(E)\), does not
+change scoped \(\geff\), and does not promote downstream GR claims.
+\end{verdict}
+
+\begin{verbatim}
+stress_result:
+  result_type: "criteria_aligned_coupling_law_candidate_stress_survived_pending_selector"
+  stressed_object: "CouplingLaw_src^{GSC-crit-cand}(E;G^beta,T_src(E))"
+  token_semantics_ambiguity: "survives_as_source_interpretation_tuple_or_bottom"
+  admissibility_nontriviality: "survives_only_as_source_predicate_or_bottom"
+  transition_inverse_defects: "survives_only_as_declared_source_transport_or_bottom"
+  transition_cocycle_defects: "survives_only_for_source_coherent_transports_or_bottom"
+  finite_local_universality_overread: "blocked"
+  scoped_g_eff_overread: "blocked"
+  hidden_stress_energy_semantics_pressure: "fail_closed"
+  target_import_pressure: "fail_closed"
+  bottom_completeness: "source_bottom_table_or_precise_OBMC_CRIT_obstruction"
+  process_authority_overread: "blocked"
+  coupling_law_adoption_laundering_detected: false
+  source_law_laundering_detected: false
+  MetricData_E_adoption_laundering_detected: false
+  g_eff_scope_laundering_detected: false
+  stress_energy_semantics_import_detected: false
+  matter_coupling_derivation_detected: false
+  Einstein_equation_pressure_detected: false
+  benchmark_promotion_pressure_detected: false
+  completed_derivation_pressure_detected: false
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Theoretical Continuation Selector
+classification of the stress-survived criteria-aligned draft/control
+coupling-law candidate route. The selector may classify whether the route
+should proceed to a narrow Gate Chair evidence-status/precondition question,
+repair, scoped obstruction, route freeze, or another bounded non-promotional
+packet. It must not adopt a coupling law, derive matter coupling, derive
+Einstein equations, or promote benchmark status.
+
+\section*{References}
+
+Candidate Constructor Packet RT-20260614-237. (2026). \textit{Criteria-aligned
+repair of the scoped source-side coupling-law candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-238. (2026). \textit{Smuggling audit of
+the criteria-aligned repaired source-side coupling-law candidate}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Refuter Packet RT-20260614-232. (2026). \textit{Refuter stress test of
+post-precondition-evidence source-side coupling-law candidate}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \textit{Recommendations
+implementation plan for continue research, v10} [Internal implementation
+plan].
+
+The AEther-Flow Research Project. (2026, June 27). \textit{Handoff 0271}
+[Internal research-control handoff].
+
+\end{document}
