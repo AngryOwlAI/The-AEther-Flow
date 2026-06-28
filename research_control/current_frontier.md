@@ -2,163 +2,149 @@
 
 # Current Research Frontier
 
-This control snapshot records the active research frontier after
-`RT-20260614-184` and `handoff-0218`. It is agent-readable routing context,
-not a physics proof surface. Registered `.tex` artifacts, tracked handoffs,
-`research_control/program_state.yaml`, and control registries remain the
-authoritative sources for scientific claims and routing state.
+This control snapshot records the active research-control frontier after
+`RT-20260614-285` and `handoff-0318`. It is a synchronized reader-facing
+snapshot, not independent routing authority and not a physics proof surface.
+If this file ever contradicts `research_control/program_state.yaml`, the
+handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
+tracked authority files govern.
 
 ## Active Research State
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260614-184` |
-| Latest handoff ID | `handoff-0218` |
-| Current status | `beta_separated_marked_finite_graph_family_selector_requires_narrow_source_extension_gate_no_geff` |
-| Current route family | protected source-extension evidence-status review for the beta-separated marked finite graph family |
-| Target derivation milestone | `effective_metric_g_eff` |
-| Current burden | `g_eff`; the current source-side route has draft/control marked-source evidence for one beta-separated marked finite graph family but no accepted `MetricData(E)` and no effective metric |
-| Required next authority | explicit human authorization for one bounded `gate-chair@0.1.0` packet |
-| Next recommended action | request the exact authorization in `handoff-0218`; do not create the Gate Chair packet without that authorization |
+| Active task ID | `RT-20260614-285` |
+| Latest handoff ID | `handoff-0318` |
+| Current status | `p1_t02_current_frontier_synchronized_no_promotion` |
+| Current route family | P1 active-state repair: current-frontier synchronization completed; validator guard still required |
+| Target derivation milestone | none; this is project-control synchronization work |
+| Current burden | none for physics derivation; the live control burden is P1-T03 active-state drift validator guard |
+| Required next authority | one bounded P1-T03 validator guard packet under tracked continue-research state; no physics or Gate Chair authority is created here |
+| Next recommended action | Run one bounded P1-T03 packet to add a deterministic active-state drift validator guard before P1-T04 renderer work and P8 final validation |
 
 ## Active Boundary
 
-The beta-separated marked finite graph/DAG
-`NonBottomMetricDataWitness_src^{GSC}(G^beta)` family has been constructed,
-audited, and stress-tested only as draft/control marked-source data. The
-post-stress selector concluded that the narrowest next route is a protected
-Gate Chair precondition review question.
+`current_frontier.md` is synchronized under the P1-T01 active-state authority
+invariant. The precedence order remains:
 
-The selected next protected packet is:
+1. `research_control/program_state.yaml` is the compact live state pointer.
+2. The latest handoff named by `program_state.yaml` is immediate routing
+   authority.
+3. `registries/DISTANCE_TO_GR_LEDGER.csv` is the persistent burden-state
+   ledger.
+4. Task records, DDRs, AgentJobs, completions, claim-boundary rows, and
+   role-execution rows provide transaction provenance.
+5. This file is a synchronized snapshot only.
 
-```text
-one bounded Gate Chair review of source-extension metric-data-family evidence status
-```
-
-That packet may be created only after the exact authorization named in
-`handoff-0218` is supplied. Until then, the family remains draft/control
-marked-source data and must not be treated as accepted `MetricData(E)`,
-checker proof authority, an arbitrary finite-DAG theorem, `g_eff`, or
-downstream GR evidence.
+The P1-T02 synchronization does not implement the P1-T03 validator guard or
+the P1-T04 generated frontier renderer. Until those packets are complete,
+manual updates to this file remain possible only under the invariant and must
+preserve this snapshot-only boundary.
 
 ## Current Route Evidence
 
-Tracked route history for the current v8 branch:
+- `RT-20260614-283` completed the P8-T01 cross-phase audit and found that P2
+  through P7 were complete while P1 active-state repair remained incomplete.
+- `RT-20260614-284` completed P1-T01 by defining the active-state authority
+  invariant and selecting Path A, a generated snapshot, as the target
+  `current_frontier.md` policy.
+- `RT-20260614-285` completes P1-T02 by synchronizing this file with live
+  tracked state and the Distance-to-GR ledger context.
 
-- `RT-20260614-181` constructed a beta-separated marked finite graph/DAG
-  witness-family candidate using `BranchDisc_src^{GSC}` only as proposal-only
-  marked-source input. It also included the v8 Phase 5 graph translation and
-  executable checker support artifacts. The checker is support only and is not
-  proof authority.
-- `RT-20260614-182` audited the family as source-pure as written under the
-  declared beta-separated marked-source scope.
-- `RT-20260614-183` stress-tested the audited family. The family survived only
-  as draft/control marked-source family data with explicit bottom branches and
-  with no source-law adoption.
-- `RT-20260614-184` selected the next route: seek exact authorization for one
-  narrow protected Gate Chair review of source-extension metric-data-family
-  evidence status.
+Remaining P1 work:
 
-Admitted source-extension data from earlier gate decisions remains bounded:
+- P1-T03 must add a deterministic validator guard for active-state drift.
+- P1-T04 must add a deterministic current-frontier renderer.
 
-- scoped `M_src^{GSC}(E)` is accepted only within its source-only theorem
-  boundary;
-- `MetricLaw_src^{GSC}` is adopted only as a fail-closed source-law interface;
-- `MetricRespTok_src^{GSC}` is adopted only as fail-closed response-token
-  source-extension data; and
-- `MetricTokenVal_src^{GSC}` is adopted only as source-extension law data.
+## Matter-Coupling Boundary
 
-Draft/control or proposal-only objects that remain non-authoritative:
+The Distance-to-GR ledger currently records the `matter_coupling` burden row
+as accepted only for scoped source-extension parameterized-witness evidence
+and precondition status. That accepted evidence/precondition status must not
+be read as coupling-law adoption, universal matter-coupling derivation,
+matter-coupling adoption, stress-energy semantics, stress-energy tensor,
+matter action, detector semantics, Einstein equations, benchmark promotion, or
+completed derivation.
 
-- `BranchDisc_src^{GSC}` remains proposal-only and unadopted;
-- the beta-separated marked finite graph witness family remains draft/control
-  marked-source data;
-- the graph checker and report remain support-only scaffolding; and
-- no arbitrary finite-source-package or arbitrary finite-DAG inhabitation
-  theorem has been accepted.
+Universal matter coupling and downstream GR promotion remain blocked until a
+separate tracked route and the required protected authorities establish them.
 
-## Obstructions And Frozen Routes
-
-Relevant obstruction and freeze records remain active context:
-
-- `RT-20260614-147` recorded
-  `OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING` before the later
-  `MetricTokenVal_src^{GSC}` route.
-- `RT-20260614-150` recorded `OB-GEFF-TOKEN-VALUATION-MISSING` under the
-  strict schema.
-- `RT-20260614-151` locally froze the current same-shape strict-schema
-  `g_eff` route under the then-current inputs.
-- `RT-20260614-184` does not unfreeze that route. It selects a protected
-  evidence-status question for the later beta-separated marked finite graph
-  family only.
-
-## Forbidden Overread After RT-184
+## Exact Blocked Claims
 
 - [ ] canonical ontology edit
 - [ ] source-law adoption
-- [ ] `BranchDisc_src^{GSC}` adoption
-- [ ] `MetricData(E)` construction
 - [ ] `MetricData(E)` adoption
-- [ ] general non-bottom `MetricData(E)` inhabitation theorem
-- [ ] arbitrary finite-source-package witness theorem
-- [ ] arbitrary finite-DAG witness theorem
-- [ ] checker proof authority
-- [ ] `g_eff` definition
-- [ ] `g_eff` construction
-- [ ] `g_eff` adoption
-- [ ] matter coupling
+- [ ] `g_eff` adoption or scope expansion
+- [ ] coupling-law adoption
+- [ ] matter-coupling derivation
+- [ ] matter-coupling adoption
+- [ ] stress-energy semantics
+- [ ] stress-energy tensor
+- [ ] matter action
+- [ ] detector semantics
 - [ ] Einstein equations
 - [ ] exact-GR benchmark promotion
 - [ ] benchmark Gate Chair closure
 - [ ] completed derivation
 - [ ] future source-extension impossibility
 - [ ] global theory rejection
+- [ ] this snapshot as independent authority
+- [ ] generated graph, checker, registry, validator, local cache, role,
+  handoff, approval, or commit status as scientific proof
 
 ## Distance-To-GR Table
 
-| Burden ID | Required object | Current status | Blocking burden | Last evidence |
+This table summarizes `registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger
+remains the authoritative source if this summary drifts.
+
+| Burden ID | Milestone | Current status | Blocking burden | Last evidence |
 | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | primitive substrate data | draft object exists | canonical adoption rules | `AGENTS.md` |
-| `source_equivalence_eqsrc` | `EqSrc` | draft object exists | general equivalence under variations | `research_control/program_state.yaml` |
-| `retain_h` | `RetainH` | blocked by missing primitive | canonical retention proof | `research_control/program_state.yaml` |
-| `gen_h` | `GenH` | blocked by missing primitive | canonical generator proof | `research_control/program_state.yaml` |
-| `obsloc_lc` | `ObsLoc_lc` | constructive witness exists | robustness and exact-branch limits | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
-| `resp_lc` | `Resp_lc` | accepted | response selector sign scale and token semantics | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
-| `m_src` | `M_src` | accepted | scoped source-only `M_src^{GSC}(E)` adoption is bounded and does not construct downstream GR objects | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `g_eff` | draft object exists | beta-separated marked finite graph family is draft/control only pending protected evidence-status review and does not adopt `MetricData(E)` or construct `g_eff` | `research_control/tasks/RT-20260614-184/artifacts/214_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_BETA_SEPARATED_MARKED_FINITE_GRAPH_FAMILY_POST_STRESS_ROUTE_SELECTOR.yaml` |
-| `matter_coupling` | universal coupling | not started | response semantics and metric route blocked | `research_control/program_state.yaml` |
-| `einstein_equations` | field equations | not started | dynamics action or variation unavailable | `research_control/program_state.yaml` |
-| `finite_variation_robustness` | finite variation robustness | Refuter stress passed | arbitrary finite-variation preservation beyond fail-closed proposal-only `FVR_src^GSC` interface | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
-| `benchmark_promotion` | exact-GR benchmark | blocked by missing primitive | all upstream derivation burdens | `research_control/program_state.yaml` |
-| `gate_chair_status` | Gate Chair status | human-gated | protected verdict authority | `research_control/approvals/README.md` |
-| `finite_toy_metric_response` | finite source-to-response toy model | frozen negative | minimal finite response analogue | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
+| `source_ontology_primitives` | `source_ontology` | draft object exists | canonical adoption rules | `AGENTS.md` |
+| `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft object exists | general equivalence under variations | `research_control/program_state.yaml` |
+| `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | canonical retention proof | `research_control/program_state.yaml` |
+| `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | canonical generator proof | `research_control/program_state.yaml` |
+| `obsloc_lc` | `source_localization_obsloc_lc` | constructive witness exists | robustness and exact-branch limits | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
+| `resp_lc` | `response_localization_resp_lc` | accepted | response selector sign scale and token semantics | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
+| `m_src` | `source_manifold_m_src` | accepted | scoped source-only `M_src` adoption is bounded and does not construct downstream GR objects | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
+| `g_eff` | `effective_metric_g_eff` | accepted | scoped source-extension `g_eff` object is adopted only under declared source-side scope; downstream matter coupling, Einstein equations, benchmark promotion, and completed derivation remain blocked | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
+| `matter_coupling` | `matter_coupling` | accepted scoped evidence/precondition only | no source-law adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, stress-energy tensor, matter action, detector semantics, `MetricData(E)` adoption, `g_eff` scope expansion, Einstein-equation premise, benchmark fit, or downstream promotion is imported | `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex` |
+| `einstein_equations` | `einstein_equations` | not started | dynamics action or variation | `research_control/program_state.yaml` |
+| `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | arbitrary finite-variation preservation beyond fail-closed proposal-only `FVR_src^GSC` interface | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
+| `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | all upstream derivation burdens | `research_control/program_state.yaml` |
+| `gate_chair_status` | `benchmark_promotion` | human-gated | protected verdict authority | `research_control/approvals/README.md` |
+| `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative | minimal finite response analogue | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
 
 ## Exact Next Route
 
-The immediate next action is to request this authorization:
+The immediate next route is:
 
 ```text
-I authorize one bounded Gate Chair packet to decide whether the audited and stress-survived beta-separated marked finite graph NonBottomMetricDataWitness_src^{GSC}(G^beta) family from RT-20260614-181 through RT-20260614-183 may be accepted only as source-extension metric-data-family evidence under its declared beta-separated marked finite graph scope with no BranchDisc_src^{GSC} source-law adoption no MetricData(E) adoption no checker proof authority no g_eff and no downstream GR promotion.
+one bounded P1-T03 active-state drift validator guard packet
 ```
 
-If that exact authorization is granted, the next packet is one bounded
-`gate-chair@0.1.0` task. If it is not granted, the beta-separated marked
-finite graph family remains draft/control marked-source data and no accepted
-metric-data-family evidence status exists.
+The P1-T03 packet should compare this snapshot against
+`research_control/program_state.yaml`, the latest handoff named by that file,
+the active task folder, and `registries/DISTANCE_TO_GR_LEDGER.csv`. It should
+fail or emit a blocking repair signal when those sources and this snapshot
+contradict.
+
+P1-T03 remains project-control validation work only. It must not promote
+physics claims or treat validator output as scientific proof.
 
 ## Validation Status
 
-Latest completed packet `RT-20260614-184` records:
+Latest completed packet `RT-20260614-285` records:
 
-- selected route: `source_extension_human_gate`;
-- next role family: `gate-chair@0.1.0`;
-- protected status: gate-ready only, no Gate Chair verdict issued;
-- claim boundary: no `BranchDisc_src^{GSC}` adoption, no `MetricData(E)`
-  construction or adoption, no checker proof authority, no arbitrary
-  finite-DAG theorem, no `g_eff`, no downstream GR promotion, no future
-  source-extension impossibility, and no global theory rejection.
-
-This report update is synchronized by `RT-20260614-185`.
+- selected route: `p1_t02_current_frontier_sync`;
+- current-frontier policy: snapshot-only, not authority;
+- current-frontier status: synchronized to `program_state.yaml`,
+  `handoff-0318`, and Distance-to-GR ledger context;
+- next route: P1-T03 validator guard;
+- claim boundary: no ontology edit, no source-law adoption, no
+  `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law
+  adoption, no matter-coupling derivation or adoption, no stress-energy
+  semantics, no Einstein equations, no benchmark promotion, no completed
+  derivation, and no downstream GR promotion.
 
 ## Retrieval Warning Status
 
@@ -169,29 +155,26 @@ Memory preflight before this update returned:
 - `local_retrieval_status: PASS`
 - no blocking, local-cache-only, or non-blocking freshness warnings.
 
+After this source edit, the local retrieval layer briefly reported local-cache
+freshness warnings for the Obsidian raw mirror and SQLite memory index. The
+post-sync refresh resolved those warnings and returned
+`local_retrieval_status: PASS`.
+
 Retrieval status is hygiene information only. It is not scientific authority.
 
 ## Source Materials
 
-The AEther-Flow Research Project. (2026). *Recommendations implementation plan
-for /continue-research, v8* [Internal implementation plan].
-
 The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 [Internal control note].
 
-The AEther-Flow Research Project. (2026, June 26). *Beta-separated marked
-finite graph family candidate or obstruction* [Internal research-control
-artifact].
+The AEther-Flow Research Project. (2026, June 28). *Active-state authority
+invariant* [Internal control artifact].
 
-The AEther-Flow Research Project. (2026, June 26). *Beta-separated marked
-finite graph family smuggling audit* [Internal research-control artifact].
+The AEther-Flow Research Project. (2026, June 28). *Current frontier
+synchronization review* [Internal control artifact].
 
-The AEther-Flow Research Project. (2026, June 26). *Beta-separated marked
-finite graph family Refuter stress test* [Internal research-control artifact].
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0318* [Internal
+research-control handoff].
 
-The AEther-Flow Research Project. (2026, June 26). *Beta-separated marked
-finite graph family post-stress route selector* [Internal research-control
-artifact].
-
-The AEther-Flow Research Project. (2026, June 26). *Handoff 0218*
-[Internal research-control handoff].
+The AEther-Flow Research Project. (2026, June 28). *Recommendations
+implementation plan continue task v11* [Internal implementation plan].
