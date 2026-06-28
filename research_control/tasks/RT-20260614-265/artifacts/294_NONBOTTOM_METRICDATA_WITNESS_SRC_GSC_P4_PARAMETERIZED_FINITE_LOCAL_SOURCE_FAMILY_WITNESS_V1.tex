@@ -1,0 +1,397 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PFLFT}{\mathrm{ParamFiniteLocalTarget}_{v1}}
+\newcommand{\PFLFW}{\mathrm{ParamFiniteLocalWitness}_{v1}}
+\newcommand{\Graph}{\Gamma}
+\newcommand{\SrcTok}{\mathrm{Tok}_{\mathrm{src}}}
+\newcommand{\SrcSt}{\mathrm{State}_{\mathrm{src}}}
+\newcommand{\VarSrc}{\mathrm{Var}_{\mathrm{src}}}
+\newcommand{\Restrict}{\mathrm{Res}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\Inv}{\mathrm{Inv}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\BridgeSlot}{\mathrm{BridgeSlot}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Parameterized Finite/Local Source-Family Witness v1}
+\author{Candidate Constructor Packet RT-20260614-265}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260614-265}. It implements P4-T02 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v11.md} by
+constructing a parameterized finite/local source-family witness
+\[
+  \PFLFW(E)
+\]
+for the target \(\PFLFT(E)\) formalized in \texttt{RT-20260614-264}.
+
+The prior Gate Chair result in \texttt{RT-20260614-262} accepted
+\(\MCBridgeCand(E)\), \(\SMI(E)\), and bridge certificate data only as scoped
+source-extension bridge-candidate evidence/precondition. This witness uses
+that result only as controlled route context. It does not edit canonical
+ontology, adopt a source law, adopt \(\MetricData(E)\), change scoped
+\(\geff\), adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, import detector semantics, derive Einstein equations, promote
+benchmark status, issue a Gate Chair verdict, claim completed derivation,
+claim future source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control parameterized finite/local witness"
+witness_name: "ParamFiniteLocalWitness_v1(E)"
+witness_constructed: true
+witness_pending_audit: true
+parameter_set: "n >= 3 finite source-index cycles C_n"
+nontrivial_relabeling: "cyclic shift tau_1"
+source_extension_category: "source_extension_candidate"
+source_law_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Parameterized Witness}
+
+\begin{definition}[Parameter set]
+The parameter set is
+\[
+  \mathcal{P}_{\ge 3}=\{n\in\mathbb{N}\mid n\ge 3\}.
+\]
+For each \(n\in\mathcal{P}_{\ge 3}\), \(\PFLFW_n(E)\) is a finite source
+package over the directed cyclic source-index graph
+\[
+  C_n=(V_n,A_n),\qquad
+  V_n=\mathbb{Z}/n\mathbb{Z},\quad
+  A_n=\{i\to i+1\mid i\in\mathbb{Z}/n\mathbb{Z}\}.
+\]
+The graph is a source index only. It is not target topology, not a target
+atlas, not a spacetime manifold, and not a metric scaffold.
+\end{definition}
+
+\begin{definition}[Sectors and objects]
+For every \(i\in V_n\), define a sector object
+\[
+  S_i^{(n)}=(i,\mathsf{loc}_i,\mathsf{edge}^{-}_i,\mathsf{edge}^{+}_i).
+\]
+The symbols \(\mathsf{loc}_i,\mathsf{edge}^{-}_i,\mathsf{edge}^{+}_i\) are
+source tags. They are not locations in target space and carry no detector
+semantics.
+\end{definition}
+
+\begin{definition}[Source tokens]
+Fix a nonempty finite source alphabet \(A_E\) and a distinguished bottom token
+\(\bot_A\in A_E\). The token set at \(i\) is
+\[
+  \SrcTok_i^{(n)} =
+  \{a_i,b_i,f_i,q_i\mid a_i,b_i,f_i,q_i\in A_E\}.
+\]
+Here \(a_i\) is a sector source tag, \(b_i\) is a source-balance tag, \(f_i\)
+is an edge-flux tag, and \(q_i\) is a quality tag. These names are source
+syntax only; they are not physical matter fields, not a stress-energy tensor,
+and not a matter action.
+\end{definition}
+
+\begin{definition}[Source states]
+The source-state set at \(i\) is
+\[
+  \SrcSt_i^{(n)} =
+  \{(\alpha_i,\beta_i,\phi_i,\chi_i)\in A_E^4
+  \mid \chi_i\in\{\mathsf{ok},\mathsf{bottom}\}\}.
+\]
+The full source state is \(\sigma^{(n)}=(\sigma_i)_{i\in V_n}\). A state is
+successful only when every \(\chi_i=\mathsf{ok}\); otherwise the package maps
+to \(\BottomSrc\) with a declared failure label.
+\end{definition}
+
+\begin{definition}[Edge-local source-interface records]
+For each arrow \(i\to i+1\), define
+\[
+  R_i^{(n)} =
+  (S_i^{(n)},S_{i+1}^{(n)}, f_i,\beta_i,\beta_{i+1},
+  \mathsf{local\_check}_i).
+\]
+The predicate \(\mathsf{local\_check}_i\) reads only the two incident sectors,
+their source tokens, and the arrow tag \(f_i\). It does not read target
+geometry, target metric data, empirical matter behavior, or downstream GR
+objects.
+\end{definition}
+
+\section{Morphisms, Restrictions, And Variations}
+
+\begin{definition}[Nontrivial relabelings]
+For each \(k\in\mathbb{Z}/n\mathbb{Z}\), define a relabeling
+\[
+  \tau_k(i)=i+k\pmod n.
+\]
+The transport of sectors, tokens, states, and edge records is componentwise:
+\[
+  \tau_k(S_i^{(n)})=S_{i+k}^{(n)},\quad
+  \tau_k(a_i,b_i,f_i,q_i)=(a_{i+k},b_{i+k},f_{i+k},q_{i+k}),
+\]
+and similarly for source states and \(R_i^{(n)}\). The map \(\tau_1\) is a
+nonidentity declared relabeling for all \(n\ge 3\).
+\end{definition}
+
+\begin{definition}[Restriction maps]
+For a finite interval subgraph
+\[
+  H=[r,r+\ell]\subset C_n,\qquad 1\le \ell<n,
+\]
+the restriction map \(\Restrict_{n,H}\) keeps exactly the sectors, tokens,
+states, and arrows whose support lies in \(H\), and records the two boundary
+arrows as source-boundary stubs. If a relabeling sends \(H\) to
+\(\tau_k(H)\), then
+\[
+  \Restrict_{n,\tau_k(H)}\circ \tau_k
+  = \tau_k\circ \Restrict_{n,H}
+\]
+on the declared common source domain.
+\end{definition}
+
+\begin{definition}[Allowed finite/local variations]
+An allowed variation \(\delta\in\VarSrc_n(E)\) is generated by finitely many
+single-site or single-edge edits:
+\[
+  \delta_i^{a},\ \delta_i^{b},\ \delta_i^{f},\ \delta_i^{q},
+\]
+each replacing one source tag by another element of \(A_E\) or setting
+\(\chi_i=\mathsf{bottom}\). The support of \(\delta\) is a finite subset of
+\(V_n\cup A_n\). No variation may introduce target topology, target metric
+data, detector semantics, stress-energy semantics, matter-action semantics,
+benchmark fit, or field-equation structure.
+\end{definition}
+
+\section{Witness Checks}
+
+\begin{condition}[PFLW-CAND-001 parameterized nontriviality]
+The witness family is not the earlier two-sector case renamed. Its parameter
+set contains every finite \(n\ge 3\), and each \(C_n\) has a nontrivial
+relabeling \(\tau_1\).
+\end{condition}
+
+\begin{condition}[PFLW-CAND-002 sector-uniformity]
+The rule schema for sectors, edge records, variations, restrictions, and
+bridge slots is independent of \(i\) and \(n\), except for declared source
+parameters and finite support. Hand-tailored sector behavior fails closed with
+\texttt{OB-PFLW-NONUNIFORM-SECTOR-BEHAVIOR}.
+\end{condition}
+
+\begin{condition}[PFLW-CAND-003 finite/locality]
+Every local check at \(i\) reads only
+\[
+  \{i-1,i,i+1\}
+\]
+and incident arrows in \(C_n\), together with declared finite variation and
+restriction data. Any nonlocal dependence fails closed with
+\texttt{OB-PFLW-TARGET-IMPORT} if the dependency is target-side, or
+\texttt{OB-PFLW-MISSING-MORPHISM-BEHAVIOR} if the source restriction behavior
+is undefined.
+\end{condition}
+
+\begin{condition}[PFLW-CAND-004 relabeling invariance]
+For every \(k\), source checks satisfy
+\[
+  \Inv_n(\tau_k\sigma^{(n)})=\tau_k\Inv_n(\sigma^{(n)})
+\]
+on successful branches. If the equality cannot be maintained by declared
+source transport, the witness returns \(\BottomSrc\) with
+\texttt{OB-PFLW-RELABELING-FAILURE}.
+\end{condition}
+
+\begin{condition}[PFLW-CAND-005 finite/local variation stability]
+For every finite-support \(\delta\in\VarSrc_n(E)\), the varied state
+\(\delta\sigma^{(n)}\) is either a well-defined source state with updated
+finite support and updated invariance ledger, or it returns \(\BottomSrc\)
+with \texttt{OB-PFLW-VARIATION-INSTABILITY}. This is not a global
+finite-variation robustness theorem.
+\end{condition}
+
+\begin{condition}[PFLW-CAND-006 bridge-path compatibility]
+The witness supplies a pre-tensorial bridge slot
+\[
+  \BridgeSlot_n(E)=(I_n,Q_n,\Lambda_n,N_n,U_n,C_n^{\mathrm{src}},
+  \NoTargetImport_n,\mathcal{O}_n)
+\]
+using the same source-side field names as \(\SMI(E)\). The slot is
+compatible with the current bridge path only in the following sense: it offers
+source-indexed interface records \(I_n\), quality ledger \(Q_n\), finite
+support \(\Lambda_n\), relabeling witness \(N_n\), uniformity witness \(U_n\),
+source balance/flux ledger \(C_n^{\mathrm{src}}\), no-target-import
+certificate, and failure labels for later audit. It is not stress-energy
+semantics, not a stress-energy tensor, not a matter action, not a coupling
+law, and not matter coupling.
+\end{condition}
+
+\begin{condition}[PFLW-CAND-007 no-target-import certificate]
+The certificate \(\NoTargetImport_n\) excludes target topology, target atlas,
+target metric, Lorentzian signature, proper time, detector calibration,
+empirical matter fields, stress-energy tensor, matter action, Bianchi identity,
+Einstein equations, benchmark fit, generated derivative content, registry
+metadata authority, validator status, role authority, handoff status,
+approval status, local cache state, file order, and commit status as
+mathematical premises.
+\end{condition}
+
+\begin{condition}[PFLW-CAND-008 evidence-as-adoption guard]
+Accepted bridge-candidate evidence/precondition data may be cited only as
+route context. If the witness treats \(\MCBridgeCand(E)\), \(\SMI(E)\),
+bridge certificate data, \(\PFLFT(E)\), a validator PASS, a registry row, or
+this witness as source-law adoption, coupling-law adoption, matter coupling,
+stress-energy semantics, Einstein equations, benchmark promotion, or completed
+derivation, it fails closed with \texttt{OB-PFLW-EVIDENCE-AS-ADOPTION}.
+\end{condition}
+
+\section{Constructed Witness Record}
+
+For each \(n\ge 3\), define
+\[
+  \mathcal{F}^{\mathrm{par}}_{E,n} =
+  (C_n,S^{(n)},\SrcTok^{(n)},\SrcSt^{(n)},R^{(n)},
+  \mathcal{M}^{(n)},\VarSrc^{(n)},\Restrict^{(n)},
+  \mathsf{SectUnif}^{(n)},\mathsf{Loc}^{(n)},
+  \mathsf{Bot}^{(n)},\NoTargetImport^{(n)},\Inv^{(n)}),
+\]
+where each component is defined in the sections above. The witness is the
+family
+\[
+  \PFLFW(E)=\{\mathcal{F}^{\mathrm{par}}_{E,n}\}_{n\in\mathcal{P}_{\ge 3}}
+\]
+together with the bridge slot \(\BridgeSlot_n(E)\) for each \(n\).
+
+The family is successful at \(n\) exactly when Conditions PFLW-CAND-001
+through PFLW-CAND-008 hold. Otherwise the branch returns \(\BottomSrc\) with
+one primary label below.
+
+\section{Failure Labels}
+
+\begin{longtable}{p{0.36\linewidth}p{0.52\linewidth}}
+\toprule
+Label & Meaning \\
+\midrule
+OB-PFLW-NONUNIFORM-SECTOR-BEHAVIOR & The source rule varies by sector or parameter except through declared source parameters. \\
+OB-PFLW-RELABELING-FAILURE & A declared cyclic shift or restricted relabeling does not preserve the source package or checks. \\
+OB-PFLW-VARIATION-INSTABILITY & A finite/local variation does not produce a well-defined source state or fail-closed bottom. \\
+OB-PFLW-MISSING-MORPHISM-BEHAVIOR & Restriction or morphism behavior is required but not defined on the common source domain. \\
+OB-PFLW-TARGET-IMPORT & Target topology atlas metric tensor action detector benchmark or field-equation premise is used. \\
+OB-PFLW-EVIDENCE-AS-ADOPTION & Scoped evidence target formalization witness construction or process status is treated as adoption or downstream GR progress. \\
+\bottomrule
+\end{longtable}
+
+\section{Witness Theorem}
+
+\begin{theorem}[Parameterized finite/local witness eligibility]
+For each \(n\ge 3\), if the declared finite source alphabet \(A_E\) is
+nonempty and Conditions PFLW-CAND-001 through PFLW-CAND-008 hold, then
+\(\mathcal{F}^{\mathrm{par}}_{E,n}\) is a witness for \(\PFLFT(E)\) at
+parameter \(n\). The family \(\PFLFW(E)\) is strictly more general than
+\(F_E^\sharp=\{S_0,S_1\}\), supports a nontrivial relabeling, supports
+finite/local variation tests, and is eligible only for Smuggling Auditor
+review before stress testing or protected review.
+\end{theorem}
+
+\begin{proof}
+For \(n\ge 3\), \(C_n\) has at least three sector objects and the cyclic
+shift \(\tau_1\) is nonidentity. Definitions above supply source sectors,
+source tokens, source states, edge-local records, relabelings, finite/local
+variations, restriction maps, sector-uniformity, finite/locality, bottom
+branches, no-target-import, and invariance ledgers. Thus the component list
+matches \(\PFLFT(E)\).
+
+The relabeling equations follow from componentwise transport around \(C_n\).
+Restriction stability follows because restrictions retain exactly the source
+data supported on finite interval subgraphs and boundary stubs, and cyclic
+shift maps intervals to intervals. Variation stability follows because each
+variation is generated by finitely many source-token or source-state edits and
+either yields another declared source state or bottom.
+
+The no-target-import and evidence-as-adoption conditions exclude the forbidden
+target and promotion classes. Therefore the construction is a draft/control
+source-family witness only. It supplies no source-law adoption, no coupling-law
+adoption, no matter-coupling derivation, no stress-energy semantics, no
+stress-energy tensor, no matter action, no Einstein equations, no benchmark
+promotion, and no completed derivation.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc_lc & Prior source-localization context only. \\
+Resp_lc & Prior accepted response/localization context only. \\
+M_src & Prior scoped source-only context only; no new \(\Msrc\) adoption or scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & Parameterized finite/local source-family witness constructed as draft/control source-extension candidate data pending audit; matter coupling remains underived and unadopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Finite/local variation tests are supplied for the parameterized witness only; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair packet; prior bridge-candidate evidence acceptance remains scoped. \\
+Current route freeze or hard-fail status & Not frozen; Smuggling Auditor parameterized-witness audit is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is P4-T03: a Smuggling Auditor audit of
+\(\PFLFW(E)\), \(\BridgeSlot_n(E)\), and the no-target-import certificate for
+target import, hidden universality import, benchmark import, source-law
+adoption laundering, and process-authority laundering. No later packet may
+treat this constructor result as source-law adoption, matter coupling,
+stress-energy semantics, stress-energy tensor construction, matter action
+import, \(\MetricData(E)\), expanded \(\geff\), Einstein equations, benchmark
+promotion, or completed derivation without separate required evidence and
+gates.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-258. (2026). \emph{Matter-Coupling
+Bridge Candidate v1 after bridge-target formalization} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-264. (2026). \emph{Parameterized
+finite/local source-family target v1} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research v11} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 28). \emph{Handoff 0297}
+[Internal research-control handoff].
+
+\end{document}
