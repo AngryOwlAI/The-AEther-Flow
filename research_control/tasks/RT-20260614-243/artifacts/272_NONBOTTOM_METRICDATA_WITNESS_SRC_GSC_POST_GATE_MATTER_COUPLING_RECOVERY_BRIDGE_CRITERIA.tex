@@ -1,0 +1,322 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{longtable}
+\geometry{margin=1in}
+
+\newtheorem{definition}{Definition}
+\newtheorem{criterion}{Criterion}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\Gbeta}{G^{\beta}}
+\newcommand{\CouplingLaw}{\mathrm{CouplingLaw}_{\mathrm{src}}^{\mathrm{GSC\mbox{-}crit\mbox{-}cand}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\BridgeCert}{\mathrm{BridgeCert}_{\mathrm{src}}^{\mathrm{MC}}}
+\newcommand{\EvCrit}{\mathrm{EvCrit}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\EligibleBridge}{\mathrm{EligibleBridge}}
+
+\title{Matter-Coupling Recovery-Bridge Criteria After Criteria-Aligned Source-Extension Evidence}
+\author{Ontology Formalizer Packet RT-20260614-243}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Authority and Claim Boundary}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260614-243}. It formalizes recovery-bridge criteria after the
+criteria-aligned scoped source-extension evidence/precondition acceptance of
+\[
+  \CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E)).
+\]
+
+It does not edit canonical ontology, adopt a source law, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, construct a
+recovery bridge, derive or adopt matter coupling, import stress-energy
+semantics, derive Einstein equations, promote benchmark status, or claim
+completed derivation.
+
+\section{Input Status}
+
+Let \(E\) be an event/source context governed by the existing research-control
+claim boundaries. Let \(\mathcal{F}_E\) be a declared finite or local source
+family for which prior matter-coupling criteria are meaningful. Let
+\[
+  \EvCrit(E)
+\]
+denote only the accepted scoped source-extension coupling-law-candidate
+evidence/precondition status from \texttt{RT-20260614-241} for the
+criteria-aligned candidate constructed in \texttt{RT-20260614-237}, audited in
+\texttt{RT-20260614-238}, and stress-survived in \texttt{RT-20260614-239}.
+
+The symbol \(\EvCrit(E)\) is not an adopted law. It is an allowed input status
+for defining what a future recovery bridge must certify.
+
+\section{Recovery-Bridge Certificate}
+
+\begin{definition}[Source-side recovery-bridge certificate]
+A matter-coupling recovery-bridge certificate over \((E,\mathcal{F}_E)\) is a
+tuple
+\[
+  \BridgeCert(E,\mathcal{F}_E)
+  =
+  (\mathcal{F}_E,\EvCrit(E),B_E,\mathcal{L}_E,\mathcal{P}_E,\mathcal{T}_E,
+  \NoTargetImport_E,\mathcal{O}_E,\mathcal{G}_E),
+\]
+where:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \(\mathcal{F}_E\) declares the finite/local source family and its
+  source-side readout/token domains;
+  \item \(\EvCrit(E)\) records evidence/precondition status only;
+  \item \(B_E\) is a required slot for a future source-side bridge relation or
+  map candidate, not a map constructed by this packet;
+  \item \(\mathcal{L}_E\) records compatibility with NC-MC-001 through
+  NC-MC-008;
+  \item \(\mathcal{P}_E\) is a proof-obligation ledger;
+  \item \(\mathcal{T}_E\) is a finite/local test suite;
+  \item \(\NoTargetImport_E\) is a certificate against target-side imports;
+  \item \(\mathcal{O}_E\) maps failed criteria to fail-closed obstruction
+  labels;
+  \item \(\mathcal{G}_E\) records route and gate separation.
+\end{enumerate}
+\end{definition}
+
+\section{Required Criteria}
+
+\begin{criterion}[RBC-MC-001 evidence-input separation]
+The certificate must distinguish \(\EvCrit(E)\) from adoption. It may cite
+accepted scoped evidence/precondition status as an input, but it must not use
+that status as a source law, coupling-law adoption, matter-coupling derivation,
+stress-energy semantics, Einstein-equation derivation, benchmark promotion, or
+completed derivation.
+\end{criterion}
+
+\begin{criterion}[RBC-MC-002 finite/local bridge domain declaration]
+The certificate must name \(\mathcal{F}_E\), the source-side token/readout
+domains, admissibility relation, transition data, and local comparison
+families over which any future bridge candidate will be tested.
+\end{criterion}
+
+\begin{criterion}[RBC-MC-003 explicit candidate bridge relation slot]
+The certificate must specify the type signature required of a future
+candidate bridge relation
+\[
+  B_E:\mathsf{SrcTok}_E \times \mathsf{SrcState}_E
+  \longrightarrow \mathsf{BridgeTok}_E \cup \{\bot\},
+\]
+or a documented equivalent source-side relation. The slot remains empty in
+this packet. A later Candidate Constructor packet must either fill it under
+source-side rules or return a precise obstruction.
+\end{criterion}
+
+\begin{criterion}[RBC-MC-004 NC-MC compatibility ledger]
+The certificate must show how the future \(B_E\) would be checked against
+NC-MC-001 through NC-MC-008 from the positive matter-coupling criteria packet.
+Compatibility with \(\geff\) is a boundary check only and does not expand
+\(\geff\)'s scope or adopt \(\MetricData(E)\).
+\end{criterion}
+
+\begin{criterion}[RBC-MC-005 proof-obligation ledger]
+The certificate must separate at least the following statuses:
+\[
+\begin{array}{ll}
+\text{evidence/precondition accepted} & \neq \text{source-law adoption},\\
+\text{bridge criteria satisfied} & \neq \text{bridge constructed},\\
+\text{bridge constructed} & \neq \text{matter coupling derived},\\
+\text{audit/stress survived} & \neq \text{protected adoption},\\
+\text{source conservation analogue} & \neq \text{stress-energy semantics}.
+\end{array}
+\]
+Any missing step must remain explicitly undischarged.
+\end{criterion}
+
+\begin{criterion}[RBC-MC-006 finite/local discriminating tests]
+The certificate must require tests that could distinguish a genuine
+source-side bridge candidate from a restatement of \(\EvCrit(E)\). At minimum,
+it must define tests for nonempty bridge outputs, admissibility preservation,
+transition coherence, sector-universality analogue, and local perturbation
+stability on \(\mathcal{F}_E\).
+\end{criterion}
+
+\begin{criterion}[RBC-MC-007 no-target-import certificate]
+The certificate must include \(\NoTargetImport_E\), verifying that the future
+bridge attempt does not use target topology, target atlas, target metric,
+Lorentzian signature, proper time, target covariance, stress-energy tensor,
+matter action, detector calibration, benchmark fit, Einstein equations,
+validator status, registry metadata, generated derivatives, role authority,
+handoff status, approval status, file order, commit status, local caches, or
+human-readable PDFs as mathematical premises.
+\end{criterion}
+
+\begin{criterion}[RBC-MC-008 fail-closed obstruction completeness]
+The certificate must map every failed bridge criterion to one of the following
+fail-closed labels:
+\[
+\begin{array}{ll}
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}EVIDENCE\mbox{-}AS\mbox{-}LAW}, &
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}DOMAIN\mbox{-}MISSING},\\
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}MAP\mbox{-}MISSING}, &
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}NC\mbox{-}MC\mbox{-}FAIL},\\
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}PROOF\mbox{-}GAP}, &
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}TEST\mbox{-}FAIL},\\
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}TARGET\mbox{-}IMPORT}, &
+\mathrm{OB\mbox{-}MC\mbox{-}BRIDGE\mbox{-}GATE\mbox{-}CONFUSION}.
+\end{array}
+\]
+These labels preserve continuation or obstruction status without becoming
+global theory rejection.
+\end{criterion}
+
+\begin{criterion}[RBC-MC-009 route and gate separation]
+The certificate must state the next authorized route. Criteria satisfaction
+may authorize only a later bounded Candidate Constructor bridge attempt,
+Smuggling Auditor review, Refuter stress test, or protected Gate Chair review
+when separately authorized. Criteria satisfaction is not adoption.
+\end{criterion}
+
+\section{Finite/Local Test Skeleton}
+
+\begin{longtable}{p{0.24\linewidth}p{0.50\linewidth}p{0.16\linewidth}}
+\toprule
+Test & Required source-side content & Fail-closed label \\
+\midrule
+Nonempty bridge output & At least one admissible source token/state pair in
+\(\mathcal{F}_E\) maps to a non-bottom bridge token without target import. &
+OB-MC-BRIDGE-MAP-MISSING \\
+Admissibility preservation & If source admissibility fails, \(B_E\) returns
+\(\bot\); if it succeeds, \(B_E\) records the admissibility witness. &
+OB-MC-BRIDGE-NC-MC-FAIL \\
+Transition coherence & Source transitions preserve bridge-token coherence or
+fail closed with a named obstruction. & OB-MC-BRIDGE-TEST-FAIL \\
+Sector-universality analogue & The same bridge rule applies across the
+declared source sectors rather than being hand-tailored per sector. &
+OB-MC-BRIDGE-NC-MC-FAIL \\
+Local perturbation stability & Small declared finite/local source variations
+do not change the bridge verdict except through declared source data. &
+OB-MC-BRIDGE-TEST-FAIL \\
+No-target-import scan & The construction record contains no target metric,
+matter action, stress-energy, benchmark, or validator-premise import. &
+OB-MC-BRIDGE-TARGET-IMPORT \\
+\bottomrule
+\end{longtable}
+
+\section{Recovery-Bridge Criteria Eligibility Theorem}
+
+\begin{theorem}[Recovery-bridge criteria eligibility theorem]
+Suppose a later draft/control packet supplies
+\(\BridgeCert(E,\mathcal{F}_E)\) satisfying RBC-MC-001 through RBC-MC-009 for
+a declared finite/local source family \(\mathcal{F}_E\). Then the later packet
+is eligible only for bounded Candidate Constructor bridge construction,
+Smuggling Auditor review, Refuter stress testing, or protected Gate Chair
+review if separately authorized:
+\[
+  \BridgeCert(E,\mathcal{F}_E) \in
+  \EligibleBridge(E,\mathcal{F}_E).
+\]
+This eligibility does not adopt a source law, adopt
+\(\CouplingLaw(E;\Gbeta,T_{\mathrm{src}}(E))\), derive or adopt matter
+coupling, import stress-energy semantics, adopt \(\MetricData(E)\), change
+scoped \(\geff\), derive Einstein equations, promote benchmark status, or
+claim completed derivation.
+\end{theorem}
+
+\begin{proof}
+RBC-MC-001 prevents evidence/precondition acceptance from becoming adoption.
+RBC-MC-002 fixes a source-side finite/local domain. RBC-MC-003 requires an
+explicit future bridge slot while stating that this packet does not fill it.
+RBC-MC-004 ties the bridge attempt to the prior NC-MC criteria without
+expanding metric scope. RBC-MC-005 keeps every proof obligation separated.
+RBC-MC-006 requires discriminating source-side tests. RBC-MC-007 blocks target
+imports and nonmathematical authority imports. RBC-MC-008 makes failures
+fail-closed rather than promotional. RBC-MC-009 separates routing from gate
+authority. Therefore satisfaction of the criteria can only establish
+eligibility for later bounded construction, audit, stress, or separately
+authorized protected review. None of the hypotheses supplies a source-law
+adoption verdict, matter-sector semantics, stress-energy tensor, matter
+action, variational field equations, benchmark verdict, or completed
+derivation.
+\end{proof}
+
+\section{Forbidden Shortcuts}
+
+The following shortcuts are invalid:
+
+\begin{itemize}[leftmargin=*]
+  \item treating \(\EvCrit(E)\) as an adopted coupling law;
+  \item treating \(B_E\)'s required type signature as a constructed bridge map;
+  \item treating criteria satisfaction as matter-coupling derivation;
+  \item treating source-token syntax as stress-energy semantics;
+  \item treating scoped \(\geff\) compatibility as \(\MetricData(E)\)
+  adoption;
+  \item importing target metric, matter action, detector semantics,
+  benchmark fit, or Einstein equations as premises;
+  \item using validation, registry metadata, generated derivatives, role
+  identity, handoff status, approval status, local cache state, file order, or
+  commit status as mathematical evidence.
+\end{itemize}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; prior scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+matter coupling & Recovery-bridge criteria are formalized as draft/control obligations; no bridge map coupling law or matter coupling is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+finite-variation robustness & Only finite/local bridge-test obligations are named; no global robustness theorem is supplied. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No benchmark closure or adoption verdict is issued. \\
+current route freeze or hard-fail status & Not frozen; a Candidate Constructor recovery-bridge candidate-or-obstruction packet is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+This packet formalizes the recovery-bridge criteria required after
+criteria-aligned scoped source-extension coupling-law-candidate
+evidence/precondition acceptance. It adds a bridge-certificate definition,
+RBC-MC-001 through RBC-MC-009, a finite/local test skeleton, fail-closed
+obstruction labels, and the recovery-bridge criteria eligibility theorem.
+
+It does not construct a bridge map, adopt a coupling law, derive or adopt
+matter coupling, import stress-energy semantics, adopt \(\MetricData(E)\),
+change scoped \(\geff\), derive Einstein equations, promote benchmark status,
+issue benchmark Gate Chair closure, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+The logical next bounded packet is a Candidate Constructor attempt to fill the
+\(B_E\) bridge slot under RBC-MC-001 through RBC-MC-009, or return one precise
+fail-closed obstruction label.
+
+\section{APA 7 References}
+
+Gate Chair Packet RT-20260614-241. (2026). \emph{Criteria-aligned
+coupling-law candidate source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Ontology Formalizer Packet RT-20260614-236. (2026). \emph{Positive
+source-side matter-coupling success criteria} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Theoretical Continuation Selector Packet RT-20260614-242. (2026).
+\emph{Criteria-aligned post-evidence route selector} [Research-control YAML
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+\end{document}

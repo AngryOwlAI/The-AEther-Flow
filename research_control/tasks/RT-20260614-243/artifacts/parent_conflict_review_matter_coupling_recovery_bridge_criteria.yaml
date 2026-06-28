@@ -1,0 +1,22 @@
+artifact_id: "parent-conflict-review-matter-coupling-recovery-bridge-criteria"
+task_id: "RT-20260614-243"
+job_id: "AJ-RT-20260614-243-001"
+execution_unit_id: "parent"
+status: "completed"
+created_at: "2026-06-28T01:25:08Z"
+conflicts:
+  - conflict_id: "CR-RT-20260614-243-001"
+    conflict_type: "terminology"
+    severity: "nonblocking"
+    description: "The mathematics child names an explicit candidate bridge relation slot B_E; the philosophy child warns that this must not be read as constructing B_E."
+    resolution: "The fused TeX artifact defines B_E only as a required slot of a future certificate and states that this packet constructs no bridge map."
+    resolved: true
+  - conflict_id: "CR-RT-20260614-243-002"
+    conflict_type: "next_route"
+    severity: "nonblocking"
+    description: "The criteria packet could be followed by construction or by a no-go packet."
+    resolution: "The fused handoff routes one Candidate Constructor packet that may either build a draft/control bridge candidate or return one precise fail-closed obstruction."
+    resolved: true
+blocking_conflicts: []
+unresolved_conflicts: []
+parent_judgment: "No blocking conflict remains. The fused output is permitted only as draft/control recovery-bridge criteria and preserves all no-adoption and downstream-GR blocks."
