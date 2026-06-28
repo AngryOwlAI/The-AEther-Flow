@@ -234,6 +234,127 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(latest["handoff_id"], program_state["latest_handoff_id"])
         self.assertEqual(latest["task_id"], program_state["active_task_id"])
 
+    def current_frontier_sync_fixture_report(
+        self,
+        *,
+        snapshot_task_id: str = "RT-TEST",
+        snapshot_burden_status: str = "accepted",
+        milestone: str = "none",
+        burden_id: str = "none",
+        ledger_status: str = "accepted",
+    ):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            control = root / "research_control"
+            registries = root / "registries"
+            task_dir = control / "tasks" / "RT-TEST"
+            handoff_dir = control / "handoffs"
+            task_dir.mkdir(parents=True)
+            handoff_dir.mkdir(parents=True)
+            registries.mkdir(parents=True)
+            next_action = "Run one bounded fixture action."
+            (control / "program_state.yaml").write_text(
+                "\n".join(
+                    [
+                        'active_task_id: "RT-TEST"',
+                        'latest_handoff_id: "handoff-0001"',
+                        'current_status: "fixture_status"',
+                        f'next_recommended_action: "{next_action}"',
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (task_dir / "00_TASK.yaml").write_text('task_id: "RT-TEST"\n', encoding="utf-8")
+            (handoff_dir / "handoff-0001.yaml").write_text(
+                "\n".join(
+                    [
+                        'handoff_id: "handoff-0001"',
+                        'task_id: "RT-TEST"',
+                        'job_id: "AJ-RT-TEST-001"',
+                        f'next_action: "{next_action}"',
+                        "distance_to_gr:",
+                        f'  milestone: "{milestone}"',
+                        f'  burden_id: "{burden_id}"',
+                        f'  status: "{ledger_status}"',
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (registries / "DISTANCE_TO_GR_LEDGER.csv").write_text(
+                "\n".join(
+                    [
+                        "burden_id,milestone,required_object,current_status,blocking_burden,accept_criteria,failure_or_freeze_criteria,last_evidence_path,updated_at,notes",
+                        f"{burden_id},{milestone},fixture,{ledger_status},fixture block,fixture accept,fixture fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            target_milestone = milestone if milestone != "none" else "none; project-control fixture"
+            (control / "current_frontier.md").write_text(
+                "\n".join(
+                    [
+                        "# Current Research Frontier",
+                        "",
+                        "## Active Research State",
+                        "",
+                        "| Field | Value |",
+                        "| --- | --- |",
+                        f"| Active task ID | `{snapshot_task_id}` |",
+                        "| Latest handoff ID | `handoff-0001` |",
+                        "| Current status | `fixture_status` |",
+                        f"| Target derivation milestone | {target_milestone} |",
+                        "| Current burden | fixture burden |",
+                        f"| Next recommended action | {next_action} |",
+                        "",
+                        "## Distance-To-GR Table",
+                        "",
+                        "| Burden ID | Milestone | Current status | Blocking burden | Last evidence |",
+                        "| --- | --- | --- | --- | --- |",
+                        f"| `{burden_id}` | `{milestone}` | {snapshot_burden_status} | fixture block | `research_control/program_state.yaml` |",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            report = self.validator.ValidationReport()
+            with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+                self.validator, "CONTROL_DIR", control
+            ), mock.patch.object(self.validator, "REGISTRY_DIR", registries):
+                self.validator.validate_current_frontier_sync(
+                    report,
+                    {"RT-TEST": {"task_id": "RT-TEST"}},
+                )
+        return report
+
+    def test_current_frontier_sync_accepts_synchronized_fixture(self) -> None:
+        report = self.current_frontier_sync_fixture_report()
+        self.assertEqual(report.errors, [])
+
+    def test_current_frontier_sync_rejects_stale_active_task_snapshot(self) -> None:
+        report = self.current_frontier_sync_fixture_report(snapshot_task_id="RT-OLD")
+        joined = "\n".join(report.errors)
+        self.assertIn("field=active_task_id", joined)
+        self.assertIn("authoritative_value='RT-TEST'", joined)
+        self.assertIn("snapshot_value='RT-OLD'", joined)
+        self.assertIn("authoritative_source=research_control/program_state.yaml", joined)
+        self.assertIn("suggested_repair_route=", joined)
+
+    def test_current_frontier_sync_rejects_stale_active_burden_status(self) -> None:
+        report = self.current_frontier_sync_fixture_report(
+            milestone="matter_coupling",
+            burden_id="matter_coupling",
+            ledger_status="accepted",
+            snapshot_burden_status="stale",
+        )
+        joined = "\n".join(report.errors)
+        self.assertIn("field=distance_to_gr.current_status[matter_coupling]", joined)
+        self.assertIn("authoritative_value='accepted'", joined)
+        self.assertIn("snapshot_value='stale'", joined)
+        self.assertIn("authoritative_source=registries/DISTANCE_TO_GR_LEDGER.csv", joined)
+
     def test_continue_research_memory_preflight_refreshes_local_cache_warning(self) -> None:
         warning_payload = {
             "core_validation_status": "PASS",

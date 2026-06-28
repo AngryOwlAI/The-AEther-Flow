@@ -1,0 +1,98 @@
+handoff_id: "handoff-0319"
+created_at: "2026-06-28T23:34:09Z"
+task_id: "RT-20260614-286"
+decision_id: "DDR-20260614-286"
+job_id: "AJ-RT-20260614-286-001"
+completion_path: "research_control/tasks/RT-20260614-286/jobs/completions/AJC-AJ-RT-20260614-286-001.yaml"
+source_task_id: "RT-20260614-286"
+source_job_id: "AJ-RT-20260614-286-001"
+source_completion_id: "AJC-AJ-RT-20260614-286-001"
+status: "completed"
+summary: "P1-T03 active-state drift validator guard completed. validate_research_control.py now compares current_frontier.md against tracked active-state authority and fails with field/source/repair details when drift is detected."
+next_action: "Run one bounded P1-T04 packet to add a deterministic current-frontier renderer before P8 final validation."
+loop_risk_route: "p1_t04_generated_current_state_report_required"
+claim_boundary:
+  allowed_next_scope: "bounded P1-T04 generated current-state report command only"
+  active_state_drift_guard_implemented: true
+  current_frontier_synchronized: true
+  current_frontier_policy: "snapshot_only_not_authority"
+  renderer_required: true
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "current_frontier.md as independent authority"
+  - "generated derivative as scientific proof"
+p1_t03_result:
+  route: "p1_t03_active_state_drift_validator_guard"
+  artifact_path: "research_control/tasks/RT-20260614-286/artifacts/active_state_drift_validator_guard.md"
+  validator_path: "scripts/research_control/validate_research_control.py"
+  test_path: "tests/test_research_control.py"
+  current_frontier_path: "research_control/current_frontier.md"
+  current_frontier_policy: "snapshot_only_not_authority"
+  current_frontier_synchronized: true
+  p1_t04_required: true
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_control_validator_guard_only"
+  meaning: "P1-T03 is a project-control validator packet only. It reads the Distance-to-GR ledger and changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "p1_generated_current_state_report"
+  plan_task_id: "recommendations-v11-P1-T04"
+  objective: "Add a deterministic render_current_frontier.py command with --write, --check, and --json modes."
+  route_label: "p1_t04_generated_current_state_report"
+  must_preserve:
+    - "project-system control only; no physics promotion"
+    - "current_frontier.md remains snapshot only and not independent authority"
+    - "no canonical ontology edit"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  active_state_drift_guard: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

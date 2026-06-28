@@ -220,6 +220,20 @@ GLOBALLY_BROAD_PATTERNS = {
     "research_control/tasks/**",
     "wiki/**",
 }
+
+CURRENT_FRONTIER_REPAIR_ROUTE = (
+    "run one bounded current-frontier synchronization repair packet under "
+    "continue-research before proceeding"
+)
+
+CURRENT_FRONTIER_ACTIVE_FIELD_MAP = {
+    "Active task ID": "active_task_id",
+    "Latest handoff ID": "latest_handoff_id",
+    "Current status": "current_status",
+    "Target derivation milestone": "target_derivation_milestone",
+    "Current burden": "current_burden",
+    "Next recommended action": "next_recommended_action",
+}
 MIXED_MARKDOWN_PATHS = {
     "README.md",
     "AGENTS.md",
@@ -3048,6 +3062,276 @@ def validate_program_state(report: ValidationReport, tasks: dict[str, dict[str, 
         report.error("program_state.yaml: bootstrap must not define gr_derived")
 
 
+def _normalize_frontier_cell(value: Any) -> str:
+    text = str(value or "").strip()
+    text = re.sub(r"`([^`]*)`", r"\1", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def _frontier_table_rows(text: str, heading: str) -> list[list[str]]:
+    heading_line = f"## {heading}"
+    lines = text.splitlines()
+    try:
+        start = next(index for index, line in enumerate(lines) if line.strip() == heading_line)
+    except StopIteration:
+        return []
+    rows: list[list[str]] = []
+    for line in lines[start + 1 :]:
+        stripped = line.strip()
+        if stripped.startswith("## "):
+            break
+        if not stripped.startswith("|"):
+            if rows and stripped:
+                break
+            continue
+        cells = [_normalize_frontier_cell(cell) for cell in stripped.strip("|").split("|")]
+        if not cells or all(set(cell) <= {"-"} for cell in cells if cell):
+            continue
+        rows.append(cells)
+    return rows
+
+
+def current_frontier_active_state(text: str) -> dict[str, str]:
+    fields: dict[str, str] = {}
+    for row in _frontier_table_rows(text, "Active Research State"):
+        if len(row) < 2 or row[0] == "Field":
+            continue
+        key = CURRENT_FRONTIER_ACTIVE_FIELD_MAP.get(row[0])
+        if key:
+            fields[key] = row[1]
+    return fields
+
+
+def current_frontier_distance_rows(text: str) -> dict[str, dict[str, str]]:
+    rows: dict[str, dict[str, str]] = {}
+    headers: list[str] = []
+    for row in _frontier_table_rows(text, "Distance-To-GR Table"):
+        if row and row[0] == "Burden ID":
+            headers = row
+            continue
+        if not headers or len(row) < len(headers):
+            continue
+        record = dict(zip(headers, row))
+        burden_id = record.get("Burden ID", "")
+        if burden_id:
+            rows[burden_id] = record
+    return rows
+
+
+def _current_frontier_drift_error(
+    report: ValidationReport,
+    field_name: str,
+    authoritative_value: Any,
+    snapshot_value: Any,
+    authoritative_source: str,
+) -> None:
+    report.error(
+        "research_control/current_frontier.md: active-state drift "
+        f"field={field_name} "
+        f"authoritative_value={_normalize_frontier_cell(authoritative_value)!r} "
+        f"snapshot_value={_normalize_frontier_cell(snapshot_value)!r} "
+        f"authoritative_source={authoritative_source} "
+        f"suggested_repair_route={CURRENT_FRONTIER_REPAIR_ROUTE}"
+    )
+
+
+def _compare_current_frontier_field(
+    report: ValidationReport,
+    snapshot: dict[str, str],
+    field_name: str,
+    authoritative_value: Any,
+    authoritative_source: str,
+) -> None:
+    snapshot_value = snapshot.get(field_name, "")
+    authoritative_text = _normalize_frontier_cell(authoritative_value)
+    snapshot_text = _normalize_frontier_cell(snapshot_value)
+    if snapshot_text != authoritative_text:
+        _current_frontier_drift_error(
+            report,
+            field_name,
+            authoritative_text,
+            snapshot_text,
+            authoritative_source,
+        )
+
+
+def _frontier_contains_required_phrase(snapshot_value: str, authoritative_value: str) -> bool:
+    snapshot_text = _normalize_frontier_cell(snapshot_value).rstrip(".")
+    authoritative_text = _normalize_frontier_cell(authoritative_value).rstrip(".")
+    return bool(authoritative_text and authoritative_text in snapshot_text)
+
+
+def validate_current_frontier_sync(report: ValidationReport, tasks: dict[str, dict[str, str]]) -> None:
+    """Fail when current_frontier.md drifts from tracked active-state authority."""
+
+    frontier_path = CONTROL_DIR / "current_frontier.md"
+    program_state_path = CONTROL_DIR / "program_state.yaml"
+    if not frontier_path.exists():
+        report.error(
+            "research_control/current_frontier.md: missing active-state snapshot "
+            f"suggested_repair_route={CURRENT_FRONTIER_REPAIR_ROUTE}"
+        )
+        return
+    if not program_state_path.exists():
+        return
+    try:
+        state = load_yaml(program_state_path)
+    except StrictYamlError:
+        return
+    frontier_text = frontier_path.read_text(encoding="utf-8")
+    snapshot = current_frontier_active_state(frontier_text)
+    distance_snapshot = current_frontier_distance_rows(frontier_text)
+
+    active_task_id = str(state.get("active_task_id", "")).strip()
+    latest_handoff_id = str(state.get("latest_handoff_id", "")).strip()
+    current_status = str(state.get("current_status", "")).strip()
+    next_recommended_action = str(state.get("next_recommended_action", "")).strip()
+
+    _compare_current_frontier_field(
+        report,
+        snapshot,
+        "active_task_id",
+        active_task_id,
+        "research_control/program_state.yaml",
+    )
+    _compare_current_frontier_field(
+        report,
+        snapshot,
+        "latest_handoff_id",
+        latest_handoff_id,
+        "research_control/program_state.yaml",
+    )
+    _compare_current_frontier_field(
+        report,
+        snapshot,
+        "current_status",
+        current_status,
+        "research_control/program_state.yaml",
+    )
+
+    active_task_path = CONTROL_DIR / "tasks" / active_task_id / "00_TASK.yaml"
+    if active_task_id and active_task_id not in tasks:
+        _current_frontier_drift_error(
+            report,
+            "active_task_folder",
+            active_task_id,
+            "missing registered active task",
+            "registries/RESEARCH_TASK_REGISTRY.csv",
+        )
+    elif active_task_path.exists():
+        try:
+            active_task = load_yaml(active_task_path)
+        except StrictYamlError:
+            active_task = {}
+        task_file_id = str(active_task.get("task_id", "")).strip()
+        if task_file_id and task_file_id != active_task_id:
+            _current_frontier_drift_error(
+                report,
+                "active_task_folder",
+                active_task_id,
+                task_file_id,
+                f"research_control/tasks/{active_task_id}/00_TASK.yaml",
+            )
+
+    handoff_path = CONTROL_DIR / "handoffs" / f"{latest_handoff_id}.yaml"
+    handoff: dict[str, Any] = {}
+    if latest_handoff_id and not handoff_path.exists():
+        _current_frontier_drift_error(
+            report,
+            "latest_handoff_id",
+            latest_handoff_id,
+            "missing handoff file",
+            "research_control/program_state.yaml",
+        )
+    elif handoff_path.exists():
+        try:
+            handoff = load_yaml(handoff_path)
+        except StrictYamlError:
+            handoff = {}
+
+    handoff_next_action = str(handoff.get("next_action", "")).strip()
+    if handoff_next_action and next_recommended_action and handoff_next_action != next_recommended_action:
+        _current_frontier_drift_error(
+            report,
+            "next_recommended_action",
+            handoff_next_action,
+            next_recommended_action,
+            f"research_control/handoffs/{latest_handoff_id}.yaml",
+        )
+    next_authority = handoff_next_action or next_recommended_action
+    if next_authority:
+        snapshot_next = snapshot.get("next_recommended_action", "")
+        if not _frontier_contains_required_phrase(snapshot_next, next_authority):
+            _current_frontier_drift_error(
+                report,
+                "next_recommended_action",
+                next_authority,
+                snapshot_next,
+                f"research_control/handoffs/{latest_handoff_id}.yaml"
+                if handoff_next_action
+                else "research_control/program_state.yaml",
+            )
+
+    distance = handoff.get("distance_to_gr") if isinstance(handoff, dict) else None
+    distance = distance if isinstance(distance, dict) else {}
+    milestone = str(distance.get("milestone", "")).strip()
+    burden_id = str(distance.get("burden_id", "")).strip()
+
+    milestone_snapshot = snapshot.get("target_derivation_milestone", "")
+    if milestone and milestone != "none":
+        if milestone not in milestone_snapshot:
+            _current_frontier_drift_error(
+                report,
+                "target_derivation_milestone",
+                milestone,
+                milestone_snapshot,
+                f"research_control/handoffs/{latest_handoff_id}.yaml",
+            )
+    elif milestone == "none" and "none" not in milestone_snapshot.lower():
+        _current_frontier_drift_error(
+            report,
+            "target_derivation_milestone",
+            "none",
+            milestone_snapshot,
+            f"research_control/handoffs/{latest_handoff_id}.yaml",
+        )
+
+    if not burden_id or burden_id == "none":
+        return
+    ledger_rows = existing_by_id(read_csv_rows("DISTANCE_TO_GR_LEDGER.csv"), "burden_id")
+    ledger_row = ledger_rows.get(burden_id)
+    snapshot_row = distance_snapshot.get(burden_id)
+    if not ledger_row:
+        _current_frontier_drift_error(
+            report,
+            f"distance_to_gr.current_status[{burden_id}]",
+            burden_id,
+            "missing ledger row",
+            f"research_control/handoffs/{latest_handoff_id}.yaml",
+        )
+        return
+    if not snapshot_row:
+        _current_frontier_drift_error(
+            report,
+            f"distance_to_gr.current_status[{burden_id}]",
+            ledger_row.get("current_status", ""),
+            "missing Distance-To-GR row",
+            "registries/DISTANCE_TO_GR_LEDGER.csv",
+        )
+        return
+    ledger_status = _normalize_frontier_cell(ledger_row.get("current_status", ""))
+    snapshot_status = _normalize_frontier_cell(snapshot_row.get("Current status", ""))
+    if ledger_status != snapshot_status:
+        _current_frontier_drift_error(
+            report,
+            f"distance_to_gr.current_status[{burden_id}]",
+            ledger_status,
+            snapshot_status,
+            "registries/DISTANCE_TO_GR_LEDGER.csv",
+        )
+
+
 def handoff_number(path: Path) -> int | None:
     match = re.fullmatch(r"handoff-(\d{4})\.yaml", path.name)
     return int(match.group(1)) if match else None
@@ -3448,6 +3732,7 @@ def validate_all(
     )
     validate_program_state(report, tasks)
     validate_handoffs(report, tasks, jobs)
+    validate_current_frontier_sync(report, tasks)
     validate_project_improvement_handoffs(report)
     validate_approvals(report, decisions)
     validate_claim_boundaries(report, rows_by_registry["CLAIM_BOUNDARY_REGISTRY.csv"])

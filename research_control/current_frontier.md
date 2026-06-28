@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260614-285` and `handoff-0318`. It is a synchronized reader-facing
+`RT-20260614-286` and `handoff-0319`. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
@@ -13,14 +13,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260614-285` |
-| Latest handoff ID | `handoff-0318` |
-| Current status | `p1_t02_current_frontier_synchronized_no_promotion` |
-| Current route family | P1 active-state repair: current-frontier synchronization completed; validator guard still required |
+| Active task ID | `RT-20260614-286` |
+| Latest handoff ID | `handoff-0319` |
+| Current status | `p1_t03_active_state_drift_validator_guard_completed_no_promotion` |
+| Current route family | P1 active-state repair: current-frontier synchronization and validator guard completed; generated renderer still required |
 | Target derivation milestone | none; this is project-control synchronization work |
-| Current burden | none for physics derivation; the live control burden is P1-T03 active-state drift validator guard |
-| Required next authority | one bounded P1-T03 validator guard packet under tracked continue-research state; no physics or Gate Chair authority is created here |
-| Next recommended action | Run one bounded P1-T03 packet to add a deterministic active-state drift validator guard before P1-T04 renderer work and P8 final validation |
+| Current burden | none for physics derivation; the live control burden is P1-T04 generated current-state report command |
+| Required next authority | one bounded P1-T04 generated current-state report packet under tracked continue-research state; no physics or Gate Chair authority is created here |
+| Next recommended action | Run one bounded P1-T04 packet to add a deterministic current-frontier renderer before P8 final validation |
 
 ## Active Boundary
 
@@ -36,10 +36,11 @@ invariant. The precedence order remains:
    role-execution rows provide transaction provenance.
 5. This file is a synchronized snapshot only.
 
-The P1-T02 synchronization does not implement the P1-T03 validator guard or
-the P1-T04 generated frontier renderer. Until those packets are complete,
-manual updates to this file remain possible only under the invariant and must
-preserve this snapshot-only boundary.
+The P1-T03 validator guard now fails validation when this snapshot drifts from
+tracked active-state authority. The P1-T04 generated frontier renderer remains
+required. Until that renderer is complete, manual updates to this file remain
+possible only under the invariant and must preserve this snapshot-only
+boundary.
 
 ## Current Route Evidence
 
@@ -50,10 +51,11 @@ preserve this snapshot-only boundary.
   `current_frontier.md` policy.
 - `RT-20260614-285` completes P1-T02 by synchronizing this file with live
   tracked state and the Distance-to-GR ledger context.
+- `RT-20260614-286` completes P1-T03 by adding a deterministic
+  active-state drift validator guard and focused regression tests.
 
 Remaining P1 work:
 
-- P1-T03 must add a deterministic validator guard for active-state drift.
 - P1-T04 must add a deterministic current-frontier renderer.
 
 ## Matter-Coupling Boundary
@@ -119,27 +121,30 @@ remains the authoritative source if this summary drifts.
 The immediate next route is:
 
 ```text
-one bounded P1-T03 active-state drift validator guard packet
+one bounded P1-T04 generated current-state report packet
 ```
 
-The P1-T03 packet should compare this snapshot against
-`research_control/program_state.yaml`, the latest handoff named by that file,
-the active task folder, and `registries/DISTANCE_TO_GR_LEDGER.csv`. It should
-fail or emit a blocking repair signal when those sources and this snapshot
-contradict.
+The P1-T04 packet should add a deterministic command that renders this
+snapshot from `research_control/program_state.yaml`, the latest handoff named
+by that file, the active task folder, and
+`registries/DISTANCE_TO_GR_LEDGER.csv`.
 
-P1-T03 remains project-control validation work only. It must not promote
+P1-T04 remains project-control tooling work only. It must not promote
 physics claims or treat validator output as scientific proof.
 
 ## Validation Status
 
-Latest completed packet `RT-20260614-285` records:
+Latest completed packet `RT-20260614-286` records:
 
-- selected route: `p1_t02_current_frontier_sync`;
+- selected route: `p1_t03_active_state_drift_validator_guard`;
 - current-frontier policy: snapshot-only, not authority;
 - current-frontier status: synchronized to `program_state.yaml`,
-  `handoff-0318`, and Distance-to-GR ledger context;
-- next route: P1-T03 validator guard;
+  `handoff-0319`, and Distance-to-GR ledger context;
+- validator status: active-state drift guard implemented in
+  `scripts/research_control/validate_research_control.py`;
+- regression status: synchronized fixture passes, stale active-task snapshot
+  fails, and stale active-burden status fails;
+- next route: P1-T04 generated current-state report command;
 - claim boundary: no ontology edit, no source-law adoption, no
   `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law
   adoption, no matter-coupling derivation or adoption, no stress-energy
@@ -170,10 +175,13 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Active-state authority
 invariant* [Internal control artifact].
 
+The AEther-Flow Research Project. (2026, June 28). *Active-state drift
+validator guard* [Internal control artifact].
+
 The AEther-Flow Research Project. (2026, June 28). *Current frontier
 synchronization review* [Internal control artifact].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0318* [Internal
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0319* [Internal
 research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 28). *Recommendations
