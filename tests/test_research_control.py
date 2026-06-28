@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import csv
 import hashlib
+import json
 import shutil
 import sys
 import tempfile
@@ -96,6 +97,49 @@ class ResearchControlTests(unittest.TestCase):
         self.assertNotIn("completion_validation_status_counts", scientific)
         self.assertEqual(self.metrics.scientific_metric_key_violations(scientific), [])
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
+
+    def test_support_only_checker_metrics_are_operational_only(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        metrics = report["metrics"]
+        operational = metrics["operational_validation_metrics"]
+        scientific = metrics["scientific_progress_metrics"]
+
+        self.assertIn("support_only_checker_reports_found", operational)
+        self.assertGreaterEqual(operational["support_only_checker_reports_found"], 1)
+        self.assertNotIn("support_only_checker_reports_found", scientific)
+        self.assertNotIn("support_only_checker_status_counts", scientific)
+        self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
+
+    def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            artifacts = repo_root / "research_control" / "tasks" / "RT-TEST" / "artifacts"
+            artifacts.mkdir(parents=True)
+            (artifacts / "valid_checker_report.json").write_text(
+                json.dumps(
+                    {
+                        "checker_id": "finite_local_candidate_checker",
+                        "status": "pass_support_only",
+                        "boundary_statement": "This is support-only and not proof authority.",
+                        "forbidden_overread_flags": [],
+                        "physics_obstruction": "",
+                        "tooling_error": False,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (artifacts / "malformed_checker_report.json").write_text("{", encoding="utf-8")
+
+            metrics = self.metrics.collect_support_only_checker_metrics(repo_root)
+
+        self.assertEqual(metrics["support_only_checker_report_files_scanned"], 2)
+        self.assertEqual(metrics["support_only_checker_report_parse_errors"], 1)
+        self.assertEqual(metrics["support_only_checker_reports_found"], 1)
+        self.assertEqual(
+            metrics["support_only_checker_status_counts"],
+            {"pass_support_only": 1},
+        )
+        self.assertEqual(metrics["support_only_checker_physics_obstruction_reports"], 0)
 
     def test_role_registry_accepts_distinct_role_versions(self) -> None:
         report = self.validator.ValidationReport()

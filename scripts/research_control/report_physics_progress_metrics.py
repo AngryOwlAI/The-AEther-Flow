@@ -30,6 +30,7 @@ ROLE_METRIC_KEYS = {
     "gate-chair": "gate_chair_tasks",
 }
 OPERATIONAL_METRIC_KEY_TOKENS = {
+    "checker",
     "validator",
     "validation",
     "registry",
@@ -40,6 +41,9 @@ OPERATIONAL_METRIC_KEY_TOKENS = {
     "role_schema",
     "handoff_continuity",
 }
+SUPPORT_ONLY_CHECKER_ID = "finite_local_candidate_checker"
+SUPPORT_ONLY_CHECKER_REPORT_GLOB = "research_control/tasks/*/artifacts/*checker_report.json"
+SUPPORT_ONLY_BOUNDARY_REQUIRED_PHRASES = ("support-only", "not proof authority")
 
 
 def read_csv_rows(repo_root: Path, registry_name: str) -> list[dict[str, str]]:
@@ -120,6 +124,57 @@ def freeze_decision(completion: dict[str, Any]) -> str:
     if not isinstance(record, dict):
         return ""
     return str(record.get("freeze_decision", "")).strip()
+
+
+def collect_support_only_checker_metrics(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+    """Count support-only checker reports as operational tooling evidence."""
+    repo_root = Path(repo_root)
+    status_counts: Counter[str] = Counter()
+    report_files_scanned = 0
+    reports_found = 0
+    parse_errors = 0
+    forbidden_overread_reports = 0
+    physics_obstruction_reports = 0
+    boundary_mismatch_reports = 0
+    tooling_error_reports = 0
+
+    for path in sorted(repo_root.glob(SUPPORT_ONLY_CHECKER_REPORT_GLOB)):
+        report_files_scanned += 1
+        try:
+            report = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            parse_errors += 1
+            continue
+
+        if report.get("checker_id") != SUPPORT_ONLY_CHECKER_ID:
+            continue
+
+        reports_found += 1
+        status = str(report.get("status", "")).strip() or "unknown"
+        status_counts[status] += 1
+
+        if list_value(report.get("forbidden_overread_flags")):
+            forbidden_overread_reports += 1
+        if str(report.get("physics_obstruction", "")).strip():
+            physics_obstruction_reports += 1
+
+        boundary = str(report.get("boundary_statement", ""))
+        if any(phrase not in boundary for phrase in SUPPORT_ONLY_BOUNDARY_REQUIRED_PHRASES):
+            boundary_mismatch_reports += 1
+
+        if bool_value(report.get("tooling_error")) is True:
+            tooling_error_reports += 1
+
+    return {
+        "support_only_checker_report_files_scanned": report_files_scanned,
+        "support_only_checker_report_parse_errors": parse_errors,
+        "support_only_checker_reports_found": reports_found,
+        "support_only_checker_status_counts": dict(sorted(status_counts.items())),
+        "support_only_checker_forbidden_overread_reports": forbidden_overread_reports,
+        "support_only_checker_physics_obstruction_reports": physics_obstruction_reports,
+        "support_only_checker_boundary_mismatch_reports": boundary_mismatch_reports,
+        "support_only_checker_tooling_error_reports": tooling_error_reports,
+    }
 
 
 def scientific_metric_key_violations(metrics: dict[str, Any]) -> list[str]:
@@ -297,6 +352,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         "completion_validation_status_counts": dict(sorted(completion_status_counts.items())),
         **claim_hygiene_metrics,
         **agent_workflow_metrics,
+        **collect_support_only_checker_metrics(repo_root),
     }
     scientific_progress_metrics = {
         "distance_to_gr_delta_true_count": distance_true,
@@ -335,7 +391,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "status": "pass" if not separation_violations else "fail",
             "operational_metric_key_tokens": sorted(OPERATIONAL_METRIC_KEY_TOKENS),
             "scientific_key_violations": separation_violations,
-            "rule": "Operational validation registry generated memory wiki receipt role-schema and handoff-continuity metrics stay out of scientific_progress_metrics.",
+            "rule": "Operational checker validation registry generated memory wiki receipt role-schema and handoff-continuity metrics stay out of scientific_progress_metrics.",
         },
         "input_counts": input_counts,
         "claim_hygiene_metrics": claim_hygiene_metrics,
@@ -372,6 +428,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         "metrics": metrics,
         "limitations": [
             "Operational validation metrics are workflow diagnostics and not physics evidence.",
+            "Support-only checker report counts are operational tooling diagnostics; checker syntax or boundary failures are not physics failures.",
             "Scientific progress metrics are counts of tracked science-claim fields and must still cite source artifacts before any claim is reused.",
             "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
