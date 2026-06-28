@@ -110,6 +110,60 @@ class ResearchControlTests(unittest.TestCase):
         self.assertNotIn("support_only_checker_status_counts", scientific)
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
+    def test_payload_density_and_route_orbit_metrics_are_operational_only(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        metrics = report["metrics"]
+        scientific = metrics["scientific_progress_metrics"]
+        payload_density = metrics["payload_density_metrics"]
+        route_orbit = metrics["route_orbit_risk_metrics"]
+
+        for key in (
+            "tasks_since_last_distance_to_gr_delta",
+            "tasks_since_last_burden_discharged",
+            "new_payload_items_per_physics_task",
+            "new_payload_items_per_cycle",
+            "selector_cycles_without_new_payload",
+        ):
+            self.assertIn(key, payload_density)
+            self.assertNotIn(key, scientific)
+
+        for key in (
+            "same_burden_repetition_count",
+            "freeze_reviews_triggered_by_repetition",
+            "bridge_attempts_since_last_gate",
+            "obstructions_created",
+            "obstructions_reused",
+            "candidate_construct_audit_stress_selector_cycles",
+            "gate_ready_cycles_without_gate_verdict",
+            "support_only_tooling_reports",
+            "physics_promotion_authorized_true_count",
+            "physics_promotion_authorized_false_count",
+        ):
+            self.assertIn(key, route_orbit)
+            self.assertNotIn(key, scientific)
+
+        self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
+
+    def test_payload_density_warnings_are_advisory(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        warnings = report["metrics"]["diagnostic_warnings"]
+
+        self.assertIsInstance(warnings, list)
+        for warning in warnings:
+            self.assertEqual(warning["severity"], "warning")
+            self.assertFalse(warning["hard_gate"])
+            self.assertFalse(warning["physics_claim_authority"])
+            self.assertIn("warning_id", warning)
+            self.assertIn("recommended_guard_action", warning)
+
+    def test_physics_progress_metrics_markdown_renders_diagnostic_sections(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        rendered = self.metrics.render_markdown(report)
+
+        self.assertIn("## Payload-Density Metrics", rendered)
+        self.assertIn("## Route-Orbit Risk Metrics", rendered)
+        self.assertIn("## Diagnostic Warnings", rendered)
+
     def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp)

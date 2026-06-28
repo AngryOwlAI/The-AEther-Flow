@@ -31,11 +31,14 @@ ROLE_METRIC_KEYS = {
 }
 OPERATIONAL_METRIC_KEY_TOKENS = {
     "checker",
+    "diagnostic_warning",
     "validator",
     "validation",
     "registry",
     "generated",
     "memory",
+    "payload_density",
+    "route_orbit",
     "wiki",
     "receipt",
     "role_schema",
@@ -126,6 +129,131 @@ def freeze_decision(completion: dict[str, Any]) -> str:
     return str(record.get("freeze_decision", "")).strip()
 
 
+def dict_value(value: Any) -> dict[str, Any]:
+    return value if isinstance(value, dict) else {}
+
+
+def string_value(value: Any) -> str:
+    return str(value).strip() if value is not None else ""
+
+
+def payload_count(completion: dict[str, Any]) -> int:
+    manifest = completion.get("mathematical_payload_manifest")
+    if isinstance(manifest, list):
+        return len(manifest)
+    legacy = completion.get("new_mathematical_payload")
+    if isinstance(legacy, list):
+        return len(legacy)
+    return 0
+
+
+def first_nonblank(*values: Any) -> str:
+    for value in values:
+        text = string_value(value)
+        if text:
+            return text
+    return ""
+
+
+def selected_packet_type(completion: dict[str, Any]) -> str:
+    decision = dict_value(completion.get("theoretical_decision_output"))
+    return first_nonblank(
+        decision.get("selected_next_packet_type"),
+        decision.get("selected_packet_type_for_validator"),
+        decision.get("selected_next_packet_family"),
+        decision.get("packet_type"),
+    )
+
+
+def selected_role_hint(completion: dict[str, Any]) -> str:
+    decision = dict_value(completion.get("theoretical_decision_output"))
+    return first_nonblank(
+        decision.get("selected_next_role"),
+        decision.get("next_execution_role_family"),
+        decision.get("selected_next_role_family"),
+    )
+
+
+def source_extension_category(completion: dict[str, Any]) -> str:
+    return string_value(completion.get("source_extension_category"))
+
+
+def burden_key(completion: dict[str, Any]) -> tuple[str, str]:
+    progress = dict_value(completion.get("physics_progress_status"))
+    delta = dict_value(completion.get("distance_to_gr_delta"))
+    milestone = first_nonblank(
+        progress.get("target_derivation_milestone"),
+        delta.get("milestone"),
+    )
+    burden = first_nonblank(
+        progress.get("milestone_burden"),
+        delta.get("burden_id"),
+    )
+    if not milestone and not burden:
+        return "", ""
+    return milestone, burden
+
+
+def bridge_attempt_present(completion: dict[str, Any]) -> bool:
+    bridge = dict_value(completion.get("bridge_attempt_status"))
+    if any(string_value(value) for value in bridge.values()):
+        return True
+    category = source_extension_category(completion)
+    return "candidate" in category or "construction" in category
+
+
+def completion_record(
+    repo_root: Path,
+    row: dict[str, str],
+    completion: dict[str, Any],
+    is_physics: bool,
+) -> dict[str, Any]:
+    progress = dict_value(completion.get("physics_progress_status"))
+    delta = dict_value(completion.get("distance_to_gr_delta"))
+    route = dict_value(completion.get("route_cycle_control"))
+    freeze = dict_value(completion.get("freeze_criteria_status"))
+    candidate = dict_value(completion.get("candidate_constructor_result"))
+    obstruction = dict_value(completion.get("obstruction_record"))
+    forbidden = dict_value(completion.get("forbidden_conclusion_summary"))
+    completion_path = row.get("completion_path", "")
+
+    return {
+        "task_id": first_nonblank(completion.get("task_id"), row.get("task_id", "")),
+        "job_id": row.get("job_id", ""),
+        "role_id": row.get("role_id", ""),
+        "completion_path": completion_path,
+        "completed_at": row.get("completed_at", ""),
+        "is_physics": is_physics,
+        "text": completion_text(repo_root, completion_path),
+        "progress_status": string_value(progress.get("status")),
+        "milestone": first_nonblank(progress.get("target_derivation_milestone"), delta.get("milestone")),
+        "burden_id": first_nonblank(progress.get("milestone_burden"), delta.get("burden_id")),
+        "burden_key": burden_key(completion),
+        "delta_changed": changed_from_delta(completion),
+        "payload_count": payload_count(completion),
+        "cycle_family": string_value(route.get("cycle_family")),
+        "cycle_step": string_value(route.get("current_cycle_step")),
+        "cycle_risk": string_value(route.get("cycle_risk")),
+        "candidate_result_type": string_value(candidate.get("result_type")),
+        "selected_next_packet_type": selected_packet_type(completion),
+        "selected_role_hint": selected_role_hint(completion),
+        "freeze_repeated_burden": bool_value(freeze.get("repeated_burden")) is True,
+        "freeze_evaluation_required": bool_value(freeze.get("freeze_evaluation_required")) is True,
+        "freeze_decision": string_value(freeze.get("freeze_decision")),
+        "obstruction_present": bool_value(obstruction.get("present")) is True,
+        "obstruction_id": string_value(obstruction.get("obstruction_id")),
+        "physics_promotion_authorized": bool_value(
+            forbidden.get("physics_promotion_authorized")
+        ) is True,
+        "has_forbidden_conclusion_summary": isinstance(
+            completion.get("forbidden_conclusion_summary"),
+            dict,
+        ),
+        "bridge_attempt_present": bridge_attempt_present(completion),
+        "source_extension_category": source_extension_category(completion),
+    }
+
+
 def collect_support_only_checker_metrics(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     """Count support-only checker reports as operational tooling evidence."""
     repo_root = Path(repo_root)
@@ -185,6 +313,431 @@ def scientific_metric_key_violations(metrics: dict[str, Any]) -> list[str]:
         if any(token in normalized for token in OPERATIONAL_METRIC_KEY_TOKENS):
             violations.append(key)
     return violations
+
+
+def cycle_step_bucket(record: dict[str, Any]) -> str:
+    step = record.get("cycle_step", "").lower()
+    role_id = record.get("role_id", "")
+    if "candidate" in step or "constructor" in step or role_id == "candidate-constructor":
+        return "construct"
+    if "audit" in step or "smuggling" in step or role_id == "smuggling-auditor":
+        return "audit"
+    if "stress" in step or "refuter" in step or role_id == "refuter":
+        return "stress"
+    if "selector" in step or role_id == "theoretical-continuation-selector":
+        return "selector"
+    return ""
+
+
+def complete_legacy_cycle_count(records: list[dict[str, Any]]) -> tuple[int, list[list[dict[str, Any]]]]:
+    cycles: list[list[dict[str, Any]]] = []
+    expected = [
+        "candidate-constructor",
+        "smuggling-auditor",
+        "refuter",
+        "theoretical-continuation-selector",
+    ]
+    index = 0
+    while index <= len(records) - len(expected):
+        window = records[index : index + len(expected)]
+        if [record["role_id"] for record in window] == expected:
+            cycles.append(window)
+            index += len(expected)
+            continue
+        index += 1
+    return len(cycles), cycles
+
+
+def explicit_cycle_summary(records: list[dict[str, Any]]) -> tuple[int, int, set[str]]:
+    families: dict[str, dict[str, Any]] = {}
+    for record in records:
+        family = record.get("cycle_family", "")
+        if not family:
+            continue
+        entry = families.setdefault(family, {"steps": set(), "payload": 0})
+        bucket = cycle_step_bucket(record)
+        if bucket:
+            entry["steps"].add(bucket)
+        entry["payload"] += int(record.get("payload_count", 0))
+
+    cycle_count = 0
+    payload_total = 0
+    complete_families: set[str] = set()
+    for family, entry in families.items():
+        steps = entry["steps"]
+        if len(steps) >= 2:
+            cycle_count += 1
+            payload_total += int(entry["payload"])
+        if {"construct", "audit", "stress", "selector"}.issubset(steps):
+            complete_families.add(family)
+    return cycle_count, payload_total, complete_families
+
+
+def selector_has_constructive_consequence(
+    record: dict[str, Any],
+    next_record: dict[str, Any] | None,
+) -> bool:
+    selected = " ".join(
+        [
+            record.get("selected_next_packet_type", ""),
+            record.get("selected_role_hint", ""),
+            record.get("text", ""),
+        ]
+    ).lower()
+    constructive_tokens = (
+        "candidate-constructor",
+        "candidate constructor",
+        "refuter",
+        "obstruction",
+        "no-go",
+        "no_go",
+        "gate-chair",
+        "gate chair",
+        "human_gate",
+        "freeze",
+    )
+    if any(token in selected for token in constructive_tokens):
+        return True
+    return bool(
+        next_record
+        and next_record.get("role_id") in {"candidate-constructor", "refuter", "gate-chair"}
+    )
+
+
+def warning_record(
+    warning_id: str,
+    metric_key: str,
+    observed_value: Any,
+    threshold: Any,
+    evidence_paths: list[str],
+    recommended_guard_action: str,
+) -> dict[str, Any]:
+    return {
+        "warning_id": warning_id,
+        "severity": "warning",
+        "metric_key": metric_key,
+        "observed_value": observed_value,
+        "threshold": threshold,
+        "evidence_paths": sorted(set(path for path in evidence_paths if path)),
+        "recommended_guard_action": recommended_guard_action,
+        "hard_gate": False,
+        "physics_claim_authority": False,
+    }
+
+
+def collect_payload_density_metrics(
+    records: list[dict[str, Any]],
+    support_metrics: dict[str, Any],
+    referenced_obstructions: int,
+) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
+    if not records:
+        return (
+            {
+                "physics_completions_read": 0,
+                "total_payload_items": 0,
+                "tasks_since_last_distance_to_gr_delta": 0,
+                "tasks_since_last_burden_discharged": 0,
+                "new_payload_items_per_physics_task": 0,
+                "new_payload_items_per_cycle": 0,
+                "selector_cycles_without_new_payload": 0,
+            },
+            {
+                "same_burden_repetition_count": 0,
+                "freeze_reviews_triggered_by_repetition": 0,
+                "bridge_attempts_since_last_gate": 0,
+                "obstructions_created": 0,
+                "obstructions_created_missing_id": 0,
+                "obstructions_reused": 0,
+                "candidate_construct_audit_stress_selector_cycles": 0,
+                "gate_ready_cycles_without_gate_verdict": 0,
+                "support_only_tooling_reports": support_metrics.get(
+                    "support_only_checker_reports_found",
+                    0,
+                ),
+                "physics_promotion_authorized_true_count": 0,
+                "physics_promotion_authorized_false_count": 0,
+            },
+            [],
+        )
+
+    total_payload = sum(int(record.get("payload_count", 0)) for record in records)
+
+    since_delta = 0
+    for record in records:
+        if record.get("delta_changed") is True:
+            since_delta = 0
+        else:
+            since_delta += 1
+
+    since_burden = 0
+    for record in records:
+        if record.get("progress_status") == "burden_discharged":
+            since_burden = 0
+        else:
+            since_burden += 1
+
+    explicit_cycle_count, explicit_cycle_payload, complete_families = explicit_cycle_summary(records)
+    legacy_cycle_count, legacy_cycles = complete_legacy_cycle_count(
+        [record for record in records if not record.get("cycle_family")]
+    )
+    legacy_cycle_payload = sum(
+        int(record.get("payload_count", 0))
+        for cycle in legacy_cycles
+        for record in cycle
+    )
+    cycle_count = explicit_cycle_count + legacy_cycle_count
+    cycle_payload = explicit_cycle_payload + legacy_cycle_payload
+
+    selector_without_payload = 0
+    selector_without_payload_paths: list[str] = []
+    for index, record in enumerate(records):
+        if record.get("role_id") != "theoretical-continuation-selector":
+            continue
+        if int(record.get("payload_count", 0)) > 0:
+            continue
+        next_record = records[index + 1] if index + 1 < len(records) else None
+        if not selector_has_constructive_consequence(record, next_record):
+            selector_without_payload += 1
+            selector_without_payload_paths.append(record.get("completion_path", ""))
+
+    same_burden_max = 0
+    same_burden_streak = 0
+    current_burden_key = ("", "")
+    same_burden_paths: list[str] = []
+    current_streak_paths: list[str] = []
+    for record in records:
+        key = record.get("burden_key", ("", ""))
+        has_progress = int(record.get("payload_count", 0)) > 0 or record.get("delta_changed") is True
+        if not key or key == ("", ""):
+            same_burden_streak = 0
+            current_burden_key = ("", "")
+            current_streak_paths = []
+            continue
+        if has_progress:
+            same_burden_streak = 0
+            current_burden_key = key
+            current_streak_paths = []
+            continue
+        if key != current_burden_key:
+            current_burden_key = key
+            same_burden_streak = 1
+            current_streak_paths = [record.get("completion_path", "")]
+        else:
+            same_burden_streak += 1
+            current_streak_paths.append(record.get("completion_path", ""))
+        if same_burden_streak > same_burden_max:
+            same_burden_max = same_burden_streak
+            same_burden_paths = list(current_streak_paths)
+
+    freeze_reviews = sum(
+        1
+        for record in records
+        if record.get("freeze_repeated_burden") or record.get("freeze_evaluation_required")
+    )
+
+    gate_indices = [index for index, record in enumerate(records) if record.get("role_id") == "gate-chair"]
+    start_index = gate_indices[-1] + 1 if gate_indices else 0
+    bridge_attempts = sum(
+        1
+        for record in records[start_index:]
+        if (
+            record.get("role_id") == "candidate-constructor"
+            and record.get("candidate_result_type") == "constructed_candidate"
+        )
+        or record.get("bridge_attempt_present")
+    )
+
+    obstruction_ids = {
+        record.get("obstruction_id")
+        for record in records
+        if record.get("obstruction_present") and record.get("obstruction_id")
+    }
+    missing_obstruction_paths = [
+        record.get("completion_path", "")
+        for record in records
+        if record.get("obstruction_present") and not record.get("obstruction_id")
+    ]
+
+    complete_route_cycles = len(complete_families) + legacy_cycle_count
+    latest_gate_index = gate_indices[-1] if gate_indices else -1
+    post_gate_complete_cycles = 0
+    if latest_gate_index >= 0:
+        post_gate_records = records[latest_gate_index + 1 :]
+        post_gate_complete_cycles = explicit_cycle_summary(post_gate_records)[2].__len__()
+        post_gate_complete_cycles += complete_legacy_cycle_count(
+            [record for record in post_gate_records if not record.get("cycle_family")]
+        )[0]
+
+    gate_ready_without_gate = 0
+    gate_ready_paths: list[str] = []
+    for index, record in enumerate(records):
+        selected = record.get("selected_next_packet_type", "").lower()
+        text = record.get("text", "").lower()
+        gate_ready = (
+            record.get("progress_status") == "candidate_stress_passed_pending_gate"
+            or "human_gate" in selected
+            or "gate chair" in selected
+            or "gate chair" in text and "next" in text
+        )
+        if not gate_ready:
+            continue
+        verdict_seen = False
+        for next_record in records[index + 1 :]:
+            if next_record.get("role_id") == "gate-chair":
+                verdict_seen = True
+                break
+            if next_record.get("role_id") == "candidate-constructor":
+                break
+        if not verdict_seen:
+            gate_ready_without_gate += 1
+            gate_ready_paths.append(record.get("completion_path", ""))
+
+    missing_candidate_paths = [
+        record.get("completion_path", "")
+        for record in records
+        if record.get("role_id") == "candidate-constructor"
+        and not record.get("candidate_result_type")
+    ]
+
+    bridge_no_delta_records = [
+        record
+        for record in records
+        if "bridge" in record.get("text", "").lower()
+        and record.get("delta_changed") is False
+        and int(record.get("payload_count", 0)) == 0
+    ]
+
+    promotion_true = sum(1 for record in records if record.get("physics_promotion_authorized"))
+    promotion_false = sum(
+        1
+        for record in records
+        if record.get("has_forbidden_conclusion_summary")
+        and not record.get("physics_promotion_authorized")
+    )
+
+    payload_density_metrics = {
+        "physics_completions_read": len(records),
+        "total_payload_items": total_payload,
+        "tasks_since_last_distance_to_gr_delta": since_delta,
+        "tasks_since_last_burden_discharged": since_burden,
+        "new_payload_items_per_physics_task": round(total_payload / len(records), 2),
+        "new_payload_items_per_cycle": round(cycle_payload / cycle_count, 2) if cycle_count else 0,
+        "selector_cycles_without_new_payload": selector_without_payload,
+    }
+    route_orbit_risk_metrics = {
+        "same_burden_repetition_count": same_burden_max,
+        "freeze_reviews_triggered_by_repetition": freeze_reviews,
+        "bridge_attempts_since_last_gate": bridge_attempts,
+        "obstructions_created": len(obstruction_ids),
+        "obstructions_created_missing_id": len(missing_obstruction_paths),
+        "obstructions_reused": referenced_obstructions,
+        "candidate_construct_audit_stress_selector_cycles": complete_route_cycles,
+        "gate_ready_cycles_without_gate_verdict": gate_ready_without_gate,
+        "support_only_tooling_reports": support_metrics.get("support_only_checker_reports_found", 0),
+        "physics_promotion_authorized_true_count": promotion_true,
+        "physics_promotion_authorized_false_count": promotion_false,
+    }
+
+    warnings: list[dict[str, Any]] = []
+    if same_burden_max > 4:
+        warnings.append(
+            warning_record(
+                "same_burden_repetition",
+                "same_burden_repetition_count",
+                same_burden_max,
+                4,
+                same_burden_paths,
+                "Require construction, obstruction, gate, freeze review, or a sharper target before another same-burden selector/control-only packet.",
+            )
+        )
+    if selector_without_payload > 2:
+        warnings.append(
+            warning_record(
+                "selector_without_payload_or_consequence",
+                "selector_cycles_without_new_payload",
+                selector_without_payload,
+                2,
+                selector_without_payload_paths,
+                "Prefer Candidate Constructor, Refuter obstruction/no-go, Gate Chair, or freeze review over another selector-only packet.",
+            )
+        )
+    if post_gate_complete_cycles > 0:
+        warnings.append(
+            warning_record(
+                "post_gate_cycle_repeat",
+                "candidate_construct_audit_stress_selector_cycles",
+                post_gate_complete_cycles,
+                0,
+                [record.get("completion_path", "") for record in records[latest_gate_index + 1 :]],
+                "Require a harder target, broader finite family, explicit bridge attempt, or freeze-review rationale.",
+            )
+        )
+    if len(bridge_no_delta_records) > 2:
+        warnings.append(
+            warning_record(
+                "claimed_bridge_no_delta",
+                "tasks_since_last_distance_to_gr_delta",
+                len(bridge_no_delta_records),
+                2,
+                [record.get("completion_path", "") for record in bridge_no_delta_records],
+                "Require payload or narrow the claim language to control-only routing.",
+            )
+        )
+    if missing_candidate_paths:
+        warnings.append(
+            warning_record(
+                "candidate_missing_result",
+                "candidate_constructor_result_missing_count",
+                len(missing_candidate_paths),
+                0,
+                missing_candidate_paths,
+                "Require a completion receipt repair or a future validator task to make the field mandatory.",
+            )
+        )
+    if gate_ready_without_gate > 0:
+        warnings.append(
+            warning_record(
+                "gate_ready_without_gate",
+                "gate_ready_cycles_without_gate_verdict",
+                gate_ready_without_gate,
+                0,
+                gate_ready_paths,
+                "Route the next packet to Gate Chair, explain why Gate Chair is not yet lawful, or withdraw gate-ready wording.",
+            )
+        )
+    if missing_obstruction_paths:
+        warnings.append(
+            warning_record(
+                "obstruction_without_id",
+                "obstructions_created_missing_id",
+                len(missing_obstruction_paths),
+                0,
+                missing_obstruction_paths,
+                "Repair future receipt templates; do not rewrite historical artifacts in this task.",
+            )
+        )
+
+    support_overread_count = sum(
+        int(support_metrics.get(key, 0))
+        for key in (
+            "support_only_checker_forbidden_overread_reports",
+            "support_only_checker_physics_obstruction_reports",
+            "support_only_checker_boundary_mismatch_reports",
+        )
+    )
+    if support_overread_count:
+        warnings.append(
+            warning_record(
+                "support_tooling_overread",
+                "support_only_tooling_reports",
+                support_overread_count,
+                0,
+                [],
+                "Treat as tooling or fixture-quality issue unless a later physics packet lawfully interprets it.",
+            )
+        )
+
+    return payload_density_metrics, route_orbit_risk_metrics, warnings
 
 
 def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
@@ -273,13 +826,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
                 human_gate_freeze_count += 1
 
         completion_records.append(
-            {
-                "job_id": row.get("job_id", ""),
-                "role_id": role_id,
-                "completion_path": completion_path,
-                "completed_at": row.get("completed_at", ""),
-                "is_physics": is_physics,
-            }
+            completion_record(repo_root, row, completion, is_physics)
         )
 
     referenced_obstructions = 0
@@ -347,12 +894,13 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         "construct_audit_stress_cycle_count": len(cycle_lengths),
         "selector_cycles_without_construction": selector_without_construction,
     }
+    support_metrics = collect_support_only_checker_metrics(repo_root)
     operational_validation_metrics = {
         **input_counts,
         "completion_validation_status_counts": dict(sorted(completion_status_counts.items())),
         **claim_hygiene_metrics,
         **agent_workflow_metrics,
-        **collect_support_only_checker_metrics(repo_root),
+        **support_metrics,
     }
     scientific_progress_metrics = {
         "distance_to_gr_delta_true_count": distance_true,
@@ -383,15 +931,28 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         "frozen_routes_reopened_by_human_gate": human_gate_freeze_count,
         "physics_progress_status_counts": dict(sorted(physics_progress_counts.items())),
     }
+    physics_records = [row for row in completion_records if row["is_physics"]]
+    (
+        payload_density_metrics,
+        route_orbit_risk_metrics,
+        diagnostic_warnings,
+    ) = collect_payload_density_metrics(
+        physics_records,
+        support_metrics,
+        referenced_obstructions,
+    )
     separation_violations = scientific_metric_key_violations(scientific_progress_metrics)
     metrics = {
         "operational_validation_metrics": operational_validation_metrics,
         "scientific_progress_metrics": scientific_progress_metrics,
+        "payload_density_metrics": payload_density_metrics,
+        "route_orbit_risk_metrics": route_orbit_risk_metrics,
+        "diagnostic_warnings": diagnostic_warnings,
         "metric_separation_guard": {
             "status": "pass" if not separation_violations else "fail",
             "operational_metric_key_tokens": sorted(OPERATIONAL_METRIC_KEY_TOKENS),
             "scientific_key_violations": separation_violations,
-            "rule": "Operational checker validation registry generated memory wiki receipt role-schema and handoff-continuity metrics stay out of scientific_progress_metrics.",
+            "rule": "Operational checker validation registry generated memory wiki receipt role-schema handoff-continuity payload-density route-orbit and diagnostic-warning metrics stay out of scientific_progress_metrics.",
         },
         "input_counts": input_counts,
         "claim_hygiene_metrics": claim_hygiene_metrics,
@@ -444,6 +1005,27 @@ def render_table(mapping: dict[str, Any]) -> list[str]:
     return lines
 
 
+def render_warning_table(warnings: list[dict[str, Any]]) -> list[str]:
+    if not warnings:
+        return ["No diagnostic warnings were emitted."]
+    lines = [
+        "| Warning | Metric | Observed | Threshold | Hard Gate | Physics Authority |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for warning in warnings:
+        lines.append(
+            "| `{warning_id}` | `{metric_key}` | `{observed}` | `{threshold}` | `{hard_gate}` | `{authority}` |".format(
+                warning_id=warning.get("warning_id", ""),
+                metric_key=warning.get("metric_key", ""),
+                observed=warning.get("observed_value", ""),
+                threshold=warning.get("threshold", ""),
+                hard_gate=warning.get("hard_gate", False),
+                authority=warning.get("physics_claim_authority", False),
+            )
+        )
+    return lines
+
+
 def render_markdown(report: dict[str, Any]) -> str:
     metrics = report["metrics"]
     lines: list[str] = [
@@ -469,6 +1051,18 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Scientific Progress Metrics",
             "",
             *render_table(metrics["scientific_progress_metrics"]),
+            "",
+            "## Payload-Density Metrics",
+            "",
+            *render_table(metrics["payload_density_metrics"]),
+            "",
+            "## Route-Orbit Risk Metrics",
+            "",
+            *render_table(metrics["route_orbit_risk_metrics"]),
+            "",
+            "## Diagnostic Warnings",
+            "",
+            *render_warning_table(metrics["diagnostic_warnings"]),
             "",
             "## Separation Guard",
             "",

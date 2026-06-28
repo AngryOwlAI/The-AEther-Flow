@@ -1,0 +1,107 @@
+handoff_id: "handoff-0309"
+created_at: "2026-06-28T20:19:56Z"
+task_id: "RT-20260614-276"
+decision_id: "DDR-20260614-276"
+job_id: "AJ-RT-20260614-276-001"
+completion_path: "research_control/tasks/RT-20260614-276/jobs/completions/AJC-AJ-RT-20260614-276-001.yaml"
+source_task_id: "RT-20260614-276"
+source_job_id: "AJ-RT-20260614-276-001"
+source_completion_id: "AJC-AJ-RT-20260614-276-001"
+status: "completed"
+summary: "P6-T02 implemented payload-density metrics route-orbit risk metrics and advisory diagnostic warnings in report_physics_progress_metrics.py with focused tests."
+next_action: "Run one bounded P6-T03 validator-engineer packet to surface payload-density and route-orbit warnings in continue_research.py context packets."
+loop_risk_route: "p6_t03_continue_research_warning_surfacing_required"
+claim_boundary:
+  allowed_next_scope: "bounded P6-T03 continue_research.py advisory warning surfacing only"
+  payload_density_metrics_implemented: true
+  route_orbit_risk_metrics_implemented: true
+  diagnostic_warnings_implemented: true
+  warnings_are_advisory_only: true
+  warning_hard_gates_created: false
+  metrics_are_physics_evidence: false
+  diagnostics_in_scientific_progress_metrics: false
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "workflow metrics as physics evidence"
+  - "advisory warnings as hard gates"
+p6_t02_result:
+  route: "p6_t02_payload_density_metrics_implementation_completed"
+  script_path: "scripts/research_control/report_physics_progress_metrics.py"
+  test_path: "tests/test_research_control.py"
+  payload_density_metrics_present: true
+  route_orbit_risk_metrics_present: true
+  diagnostic_warnings_present: true
+  diagnostic_warnings_count: 2
+  diagnostic_warning_ids:
+    - "candidate_missing_result"
+    - "gate_ready_without_gate"
+  scientific_key_violations: []
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_operational_metrics_only"
+  meaning: "P6-T02 added operational diagnostics only. It does not add mathematical payload toward source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "p6_continue_research_warning_surfacing"
+  plan_task_id: "recommendations-v11-P6-T03"
+  objective: "Surface payload-density and route-orbit warnings in continue_research.py context packets as advisory Director-visible diagnostics."
+  route_label: "p6_t03_continue_research_warning_surfacing"
+  must_preserve:
+    - "warnings are advisory only"
+    - "operational diagnostics are not physics evidence"
+    - "no canonical ontology edit"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  unittest_research_control: "PASS"
+  report_physics_progress_metrics: "PASS"
+  report_physics_progress_metrics_markdown: "PASS"
+  metric_separation_guard: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
