@@ -1,0 +1,288 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Gbeta}{G^\beta}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\CouplingLawCrit}{\mathrm{CouplingLaw}^{\mathsf{GSC}\mbox{-}\mathrm{crit}\mbox{-}\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\Tok}{\mathrm{Tok}}
+\newcommand{\Sem}{\mathrm{Sem}}
+\newcommand{\Adm}{\mathrm{Adm}}
+\newcommand{\Trans}{\mathrm{Trans}}
+\newcommand{\Compat}{\mathrm{Compat}}
+\newcommand{\ConsSrc}{\mathrm{Cons}_{\mathrm{src}}}
+\newcommand{\OBMC}{\mathrm{OB}\mbox{-}\mathrm{MC}}
+\newcommand{\Fsrc}{\mathcal{F}_{E}^{\sharp}}
+
+\newtheorem{finding}{Finding}
+\newtheorem{verdict}{Verdict}
+
+\title{Smuggling Audit of the Criteria-Aligned Repaired Source-Side Coupling-Law Candidate}
+\author{Smuggling Auditor Packet RT-20260614-238}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements the Smuggling Auditor branch of
+\texttt{PLAN-P7-T3}. It audits the materially changed draft/control
+source-side coupling-law candidate
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))
+\]
+constructed in \texttt{RT-20260614-237}.
+
+The audit may pass, fail, or return a precise laundering finding. A pass is
+only local source-purity as written. It is not coupling-law adoption, not
+matter-coupling derivation or adoption, not stress-energy semantics, not
+\(\MetricData(E)\) adoption, not scoped \(\geff\) expansion, not Einstein
+equations, not benchmark promotion, not benchmark Gate Chair closure, and not
+completed derivation.
+
+\begin{verbatim}
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  audited_object:
+    "CouplingLaw_src^{GSC-crit-cand}(E;G^beta,T_src(E))"
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  MetricData_E_adopted: false
+  scoped_g_eff_expanded: false
+  Einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  next_required_role: "refuter"
+\end{verbatim}
+
+\section{Audit Target}
+
+The audited object is the criteria-aligned repaired tuple
+\[
+  \CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E)) =
+  (D_E^{\sharp},P_E^{\sharp},\Fsrc,\Tok_E^{\sharp},
+  \Sem_E^{\sharp},\Adm_E^{\sharp},\Compat_E^{\sharp},
+  \Trans_E^{\sharp},\ConsSrc_E^{\sharp},B_E^{\sharp},
+  N_E^{\sharp},O_E^{\sharp},L_E^{\sharp}).
+\]
+The audit target includes the finite/local source family
+\(\Fsrc=\{S_0,S_1\}\), source token records, source semantics map,
+nontrivial admissibility predicate, source transition transport, scoped
+source-extension compatibility boundary, inactive source-conservation slot,
+bottom behavior, no-target-import certificate, obstruction labels, and
+limitation record. These are draft/control candidate slots only.
+
+\section{Audit Dimensions}
+
+\begin{longtable}{p{0.26\linewidth}p{0.47\linewidth}p{0.18\linewidth}}
+\toprule
+Audit dimension & Evidence checked & Finding \\
+\midrule
+Hidden target topology or atlas &
+\(D_E^{\sharp}\), \(P_E^{\sharp}\), \(\Fsrc\), \(\Tok_E^{\sharp}\), and
+\(\Trans_E^{\sharp}\) are declared source support, finite source-sector,
+source-token, and source-transition records only. & pass \\
+\addlinespace
+Hidden target metric or Lorentzian signature &
+\(\Compat_E^{\sharp}\) records scoped source-extension compatibility only and
+explicitly refuses target metric semantics, Lorentzian signature, and proper
+time import. & pass \\
+\addlinespace
+Scoped \(\geff\) overread &
+The candidate uses prior scoped \(\geff\) context only as a compatibility
+boundary. No slot expands \(\geff\) scope or converts it into target metric
+data. & pass \\
+\addlinespace
+Stress-energy or matter action semantics &
+\(\Tok_E^{\sharp}\), \(\Sem_E^{\sharp}\), and \(\Adm_E^{\sharp}\) are source
+records and source admissibility checks. They contain no stress-energy tensor,
+matter action, empirical matter sector, physical conservation law, or
+variational field equation. & pass \\
+\addlinespace
+Detector or empirical semantics &
+The source semantics map uses source-sector, support-syntax, update-kind, and
+compatibility-class records only. It contains no detector calibration,
+clock normalization, empirical readout, or observation semantics. & pass \\
+\addlinespace
+Criteria-as-adoption laundering &
+The NC-MC criteria are treated as audit and stress obligations. The candidate
+does not treat satisfying finite/local criteria as adoption, evidence-status
+acceptance, or matter coupling. & pass \\
+\addlinespace
+Finite/local universality overread &
+\(\Fsrc=\{S_0,S_1\}\) is explicitly finite/local. The packet does not infer a
+universal matter sector or universal coupling law from it. & pass \\
+\addlinespace
+Coupling-law adoption laundering &
+The artifact repeatedly states draft/control, proposal-only, and
+source-extension candidate status. No slot declares an adopted coupling law. &
+pass \\
+\addlinespace
+Source-law adoption laundering &
+\(\Sem_E^{\sharp}\), \(\Adm_E^{\sharp}\), \(\Compat_E^{\sharp}\), and
+\(\Trans_E^{\sharp}\) are candidate repair slots and not adopted source laws
+or ontology primitives. & pass \\
+\addlinespace
+Transition overread &
+\(\Trans_E^{\sharp}\) transports source labels and source records only. It
+fails closed for target-atlas covariance, target inverse repair, target metric
+compatibility, detector repair, or benchmark repair. & pass \\
+\addlinespace
+Conservation-like source obligation overread &
+\(\ConsSrc_E^{\sharp}\) is optional and inactive. No physical conservation
+law or stress-energy conservation premise is invoked. & pass \\
+\addlinespace
+Bottom and obstruction control &
+\(B_E^{\sharp}\), \(N_E^{\sharp}\), and \(O_E^{\sharp}\) route forbidden
+target repair, detector repair, benchmark repair, adoption repair, or process
+repair to \(\BottomSrc\) or \(\OBMC\)-CRIT labels. & pass \\
+\addlinespace
+Process authority &
+Validators, registries, roles, handoffs, approvals, generated derivatives,
+local caches, file order, and commit status are not mathematical premises. &
+pass \\
+\addlinespace
+Downstream GR promotion &
+No matter-coupling derivation, Einstein-equation claim, benchmark verdict,
+Gate Chair closure, or completed derivation is asserted. & pass \\
+\bottomrule
+\end{longtable}
+
+\section{Findings}
+
+\begin{finding}[No hidden target import detected as written]
+The positive slots of \(\CouplingLawCrit\) are source-side records, finite
+source-sector records, source token semantics, source admissibility,
+source-transition transport, scoped compatibility boundaries, bottom behavior,
+no-target-import refusal, obstruction fallback, and limitation text. The
+candidate does not require target topology, target atlas, target metric,
+Lorentzian signature import, proper time, detector semantics, empirical fit,
+or benchmark success.
+\end{finding}
+
+\begin{finding}[No stress-energy or empirical matter semantics detected as written]
+The token semantics map \(\Sem_E^{\sharp}\) and admissibility predicate
+\(\Adm_E^{\sharp}\) remain source interpretation records. They are stronger
+than bare labels but weaker than stress-energy: no component is a tensor,
+matter action, empirical matter field, detector calibration, observation
+semantics, or variational field-equation premise.
+\end{finding}
+
+\begin{finding}[No criteria-as-adoption laundering detected as written]
+The repaired candidate maps NC-MC-001 through NC-MC-008 to source-side slots
+and residual proof obligations. It does not treat the criteria table as
+coupling-law adoption, matter-coupling derivation, evidence-status acceptance,
+or benchmark authority.
+\end{finding}
+
+\begin{finding}[No source-law, \(\geff\), or process-authority laundering detected as written]
+The scoped \(\geff\) compatibility boundary remains a bounded source-extension
+context only. The candidate slots are not adopted source laws, and the artifact
+does not use validators, registries, roles, handoffs, approvals, generated
+derivatives, local caches, file order, or commit status as mathematical
+premises.
+\end{finding}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this audit \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Prior scoped source-extension evidence only; not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & Criteria-aligned repaired source-side coupling-law candidate audited as source-pure as written pending Refuter stress; no coupling law is adopted and no matter coupling is derived. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local finite/source-repair/bottom context only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No matter-coupling or coupling-law review is issued. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Audit Verdict}
+
+\begin{verdict}[Source-pure as written pending Refuter stress]
+The draft/control
+\(\CouplingLawCrit(E;\Gbeta,T_{\mathrm{src}}(E))\) candidate passes the
+Smuggling Auditor source-purity audit as written. The pass is local and
+conditional. It does not adopt a coupling law, does not derive or adopt matter
+coupling, does not import stress-energy semantics, does not adopt
+\(\MetricData(E)\), does not change scoped \(\geff\), and does not promote
+downstream GR claims.
+\end{verdict}
+
+\begin{verbatim}
+smuggling_audit_result:
+  result_type: "audit_passed_for_refuter_stress"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  audited_object:
+    "CouplingLaw_src^{GSC-crit-cand}(E;G^beta,T_src(E))"
+  hidden_target_import_detected: false
+  stress_energy_semantics_import_detected: false
+  coupling_law_adoption_laundering_detected: false
+  source_law_laundering_detected: false
+  process_authority_laundering_detected: false
+  criteria_as_adoption_laundering_detected: false
+  finite_local_universality_overread_detected: false
+  admissibility_overread_detected: false
+  transition_overread_detected: false
+  bottom_control_failure_detected: false
+  g_eff_scope_laundering_detected: false
+  MetricData_E_adoption_laundering_detected: false
+  downstream_promotion_detected: false
+  next_required_role: "refuter"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Refuter stress test under
+\texttt{PLAN-P7-T3}. It should stress token-semantics ambiguity,
+admissibility nontriviality, transition inverse and cocycle behavior,
+finite/local universality overread, scoped-\(\geff\) overread, hidden
+stress-energy semantics pressure, target-import pressure, bottom completeness,
+process-authority overread, coupling-law adoption laundering, source-law
+adoption laundering, \(\MetricData(E)\) adoption laundering,
+Einstein-equation pressure, benchmark-promotion pressure, and
+completed-derivation pressure.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-237. (2026). \emph{Criteria-aligned
+repair of the scoped source-side coupling-law candidate} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260614-236. (2026). \emph{Positive
+source-side matter-coupling success criteria} [Research-control TeX artifact].
+The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260614-231. (2026). \emph{Smuggling audit of
+post-precondition-evidence source-side coupling-law candidate}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan for continue research, v10} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 27). \emph{Handoff 0270}
+[Internal research-control handoff].
+
+\end{document}

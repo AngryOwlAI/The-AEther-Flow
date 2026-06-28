@@ -1,0 +1,23 @@
+# WIKI-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-COUPLING-LAW-CRITERIA-ALIGNED-SMUGGLING-AUDIT
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-COUPLING-LAW-CRITERIA-ALIGNED-SMUGGLING-AUDIT`
+- Source path: `research_control/tasks/RT-20260614-238/artifacts/267_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_COUPLING_LAW_CRITERIA_ALIGNED_SMUGGLING_AUDIT.tex`
+- Format: `tex`
+- Role: `science_draft`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `c41f481ce33c3aa6053df3518fdf56d0ef04a1e5fa2926e91f7f6c096d9f486b`
+
+## Related Objects
+
+- Related source: `TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-COUPLING-LAW-CRITERIA-ALIGNED-REPAIRED-CANDIDATE;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-POSITIVE-SUCCESS-CRITERIA;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-COUPLING-LAW-SMUGGLING-AUDIT` ``
+- Generated output path: `wiki/tex/tex-research-control-nonbottom-metricdata-witness-src-gsc-post-gate-matter-coupling-coupling-law-criteria-aligned-smuggling-audit.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-06-27T23:45:29Z`
