@@ -1,0 +1,301 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCBridgeCand}{\mathrm{MCBridge}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\MCBridgeCertCand}{\mathrm{MCBridgeCert}^{\mathrm{cand}}}
+\newcommand{\SMI}{\mathrm{SourceMatterInterface}_{v1}}
+\newcommand{\PTMI}{\mathrm{PTMI}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\BalSrc}{\mathrm{Bal}_{\mathrm{src}}}
+\newcommand{\FluxSrc}{\mathrm{Flux}_{\mathrm{src}}}
+
+\newtheorem{lemma}{Lemma}
+
+\title{Matter-Coupling Bridge Candidate v1 Smuggling Audit}
+\author{Smuggling Auditor Packet RT-20260614-259}
+\date{2026-06-28}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact executes one bounded Smuggling Auditor packet after
+\texttt{RT-20260614-258}. It audits the draft/control source-side
+Matter-Coupling Bridge Candidate v1
+\[
+  \MCBridgeCand(E),
+  \qquad
+  \SMI(E)\subseteq\PTMI_E,
+  \qquad
+  \MCBridgeCertCand(E)
+\]
+for hidden target import and claim laundering.
+
+The audit verdict is source-pure as written pending Refuter stress. This
+artifact does not edit canonical ontology, adopt a source law, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote benchmark status, issue a benchmark Gate
+Chair verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\begin{verbatim}
+smuggling_audit_result: "audit_passed_for_refuter_stress"
+audit_verdict: "source_pure_as_written_pending_refuter_stress"
+reviewed_candidate: "MCBridge_src^{cand}(E)"
+reviewed_codomain: "SourceMatterInterface_v1(E) subset PTMI_E"
+reviewed_certificate: "MCBridgeCert^{cand}(E)"
+claim_status: "draft/control audit"
+source_extension_category: "source_extension_smuggling_audit"
+hidden_target_import_detected: false
+target_topology_import_detected: false
+target_atlas_import_detected: false
+target_metric_import_detected: false
+lorentzian_signature_import_detected: false
+proper_time_import_detected: false
+stress_energy_semantics_import_detected: false
+stress_energy_tensor_semantics_import_detected: false
+matter_action_semantics_import_detected: false
+detector_semantics_import_detected: false
+bianchi_identity_import_detected: false
+conservation_law_import_detected: false
+coupling_law_adoption_laundering_detected: false
+MetricData_E_adoption_laundering_detected: false
+g_eff_scope_laundering_detected: false
+process_authority_laundering_detected: false
+validator_registry_derivative_as_proof_detected: false
+benchmark_fit_import_detected: false
+einstein_equation_premise_import_detected: false
+premature_promotion_detected: false
+next_required_role: "refuter@0.2.0"
+\end{verbatim}
+
+\section{Audit Target}
+
+The audited source is the candidate artifact
+\[
+  \texttt{research\_control/tasks/RT-20260614-258/artifacts/287\_...\_BRIDGE\_CANDIDATE\_V1.tex}.
+\]
+Its registered hash is
+\[
+  \texttt{f423c1321ac63405a97df795e00534bc3609650f534e452384fa492168fa3698}.
+\]
+
+The candidate defines a source-domain package, a pre-tensorial source
+matter-interface codomain \(\SMI(E)\subseteq\PTMI_E\), a source-local partial
+relation, relabeling behavior, graph-indexed sector-uniformity,
+source-variation behavior, source-side balance/flux compatibility, a
+\(\NoTargetImport_E\) certificate, fail-closed obstruction labels, and an
+audit-eligibility theorem.
+
+\section{Audit Matrix}
+
+\begin{longtable}{p{0.28\linewidth}p{0.20\linewidth}p{0.42\linewidth}}
+\toprule
+Audit dimension & Verdict & Basis \\
+\midrule
+Target topology import &
+Pass as written &
+The candidate domain is a declared source package and MCB-CAND-003 excludes
+dependence on target topology. \\
+\addlinespace
+Target atlas import &
+Pass as written &
+The relabeling and morphism clauses transport only source records and do not
+introduce target atlases or coordinate charts. \\
+\addlinespace
+Target metric import beyond scoped compatibility &
+Pass as written &
+Scoped \(\geff_E^{\mathrm{sc}}\) is used only as compatibility context.
+MCB-CAND-008 fails closed if scoped context is read as \(\MetricData(E)\)
+adoption or scope expansion. \\
+\addlinespace
+Lorentzian signature import &
+Pass as written &
+The codomain is pre-tensorial \(\SMI(E)\subseteq\PTMI_E\). No Lorentzian
+signature datum is used as an input or output. \\
+\addlinespace
+Proper-time import &
+Pass as written &
+The source-interface record contains no proper-time clock semantics or
+target-geometric timing primitive. \\
+\addlinespace
+Stress-energy tensor semantics import &
+Pass as written &
+\(\SMI(E)\) is explicitly not an adopted stress-energy tensor and carries no
+stress-energy semantics. Tensorial overread fails closed. \\
+\addlinespace
+Matter action or Lagrangian import &
+Pass as written &
+No action functional, Lagrangian, variational matter principle, or matter
+field equation appears in the candidate. \\
+\addlinespace
+Detector or empirical matter field semantics import &
+Pass as written &
+The candidate uses source-interface records and ledgers only. Detector
+calibration, empirical matter-field semantics, and benchmark fit are excluded
+by the no-target-import certificate. \\
+\addlinespace
+Bianchi identity or conservation-law import &
+Pass as written &
+\(\BalSrc\) and \(\FluxSrc\) are source-side balance/flux ledgers only.
+MCB-CAND-007 states that they are not the Bianchi identity, not
+stress-energy conservation, not matter action, and not Einstein equations. \\
+\addlinespace
+Coupling-law adoption laundering &
+Pass as written &
+Accepted evidence and prior scoped preconditions remain precondition data.
+The candidate does not adopt a coupling law. \\
+\addlinespace
+\(\MetricData(E)\) adoption laundering &
+Pass as written &
+The artifact states that \(\MetricData(E)\) is not adopted, and the candidate
+fails closed under any use of scoped context as \(\MetricData(E)\) adoption. \\
+\addlinespace
+\(\geff\) scope expansion laundering &
+Pass as written &
+The prior scoped \(\geff\) context is not expanded and is not promoted to
+matter coupling, tensor semantics, or Einstein-equation premises. \\
+\addlinespace
+Process-authority laundering &
+Pass as written &
+The no-target-import certificate excludes generated derivatives, registry
+metadata, validator status, role authority, handoff status, approval status,
+local cache state, file order, and commit status as mathematical premises. \\
+\addlinespace
+Validator, registry, or generated derivative as proof &
+Pass as written &
+The audit uses registries and memory only for provenance and retrieval.
+Scientific content is taken from the canonical TeX candidate. \\
+\addlinespace
+Benchmark fit import &
+Pass as written &
+No empirical fit, exact-GR benchmark success, benchmark promotion, or Gate
+Chair benchmark closure appears in the candidate. \\
+\addlinespace
+Einstein-equation premise import &
+Pass as written &
+The candidate excludes Einstein equations as premises and routes only to
+audit, stress, or separately authorized protected review. \\
+\bottomrule
+\end{longtable}
+
+\section{Source-Purity Lemma}
+
+\begin{lemma}[Bridge-candidate source-purity audit]
+As written in \texttt{RT-20260614-258}, the triple
+\[
+  \MCBridgeCand(E),\qquad
+  \SMI(E)\subseteq\PTMI_E,\qquad
+  \MCBridgeCertCand(E)
+\]
+does not require target topology, target atlas, target metric beyond scoped
+compatibility context, Lorentzian signature, proper time, stress-energy
+tensor semantics, matter action, Lagrangian, detector semantics, empirical
+matter-field semantics, Bianchi identity, target conservation law,
+benchmark fit, process authority, coupling-law adoption, \(\MetricData(E)\)
+adoption, \(\geff\) scope expansion, matter-coupling derivation, Einstein
+equations, benchmark promotion, or completed-derivation authority.
+\end{lemma}
+
+\begin{proof}
+The candidate's successful branch returns only source-interface records,
+source-side quality ledgers, finite support, relabeling witnesses,
+graph-indexed sector-uniformity witnesses, source-side balance/flux
+compatibility ledgers, a no-target-import certificate, and fail-closed
+obstruction labels. The codomain is declared pre-tensorial:
+\(\SMI(E)\subseteq\PTMI_E\).
+
+Conditions MCB-CAND-001 through MCB-CAND-009 constrain all input and output
+fields to declared source-side data, require finite source support, require
+source-family relabeling behavior, require graph-indexed sector-uniformity,
+limit scoped \(\geff\) and accepted evidence to compatibility or precondition
+roles, and route tensorial overread, \(\MetricData(E)\) adoption,
+\(\geff\) expansion, evidence-as-adoption use, matter-coupling use, and
+downstream promotion to fail-closed obstruction labels.
+
+Therefore the bridge candidate is source-pure as written for the purpose of
+authorizing a bounded Refuter stress test. This conclusion is only an audit
+pass. It is not source-law adoption, coupling-law adoption, matter-coupling
+derivation or adoption, physical stress-energy interpretation, benchmark
+promotion, or completed derivation.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+Burden & Status after this audit \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & Matter-Coupling Bridge Candidate v1 is audited as source-pure as written pending Refuter stress; no coupling law matter coupling stress-energy semantics stress-energy tensor matter action or Einstein equations are adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local finite/source bridge checks remain pending Refuter stress; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair verdict is issued by this audit. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next bounded packet is one Refuter stress test of
+\(\MCBridgeCand(E)\), \(\SMI(E)\), and \(\MCBridgeCertCand(E)\) for
+nonempty output, bottom completeness, source-locality,
+relabeling/naturality, finite variation stability, sector-uniformity beyond
+the original two-sector case, compatibility with scoped \(M_{\mathrm{src}}\),
+compatibility with scoped \(\geff\), balance/flux conservation-analogue
+coherence, tensorial-overread pressure, target-import pressure,
+downstream-promotion pressure, evidence-as-adoption pressure,
+stress-energy-semantics pressure, matter-action pressure, and
+Einstein-equation pressure.
+
+\section{Conclusion}
+
+The Smuggling Auditor finds
+\[
+  \MCBridgeCand(E),\quad \SMI(E)\subseteq\PTMI_E,\quad
+  \MCBridgeCertCand(E)
+\]
+source-pure as written pending Refuter stress. This audit pass preserves all
+claim fences: no canonical ontology edit, no source-law adoption, no
+\(\MetricData(E)\) adoption, no \(\geff\) scope change, no coupling-law
+adoption, no matter-coupling derivation or adoption, no stress-energy
+semantics, no stress-energy tensor, no matter action, no detector semantics,
+no Einstein equations, no benchmark promotion, and no completed derivation.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260614-258. (2026). \emph{Matter-Coupling
+Bridge Candidate v1 after bridge-target formalization} [Research-control
+TeX artifact]. The AEther-Flow Interpretation of Relativity Research
+Project.
+
+Ontology Formalizer Packet RT-20260614-257. (2026). \emph{Matter-Coupling
+Bridge Target v1 after scoped stress-energy-interface evidence}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of
+Relativity Research Project.
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan for continue research, v11} [Internal implementation
+plan].
+
+\end{document}
