@@ -1,0 +1,129 @@
+completion_id: "AJC-AJ-RT-20260614-283-001"
+job_id: "AJ-RT-20260614-283-001"
+task_id: "RT-20260614-283"
+completed_at: "2026-06-28T22:41:08Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260614-283/00_TASK.yaml"
+  - "research_control/tasks/RT-20260614-283/DDR-20260614-283.md"
+  - "research_control/tasks/RT-20260614-283/artifacts/p8_t01_cross_phase_consistency_audit.md"
+  - "research_control/tasks/RT-20260614-283/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260614-283/jobs/AJ-RT-20260614-283-001.yaml"
+  - "research_control/tasks/RT-20260614-283/jobs/completions/AJC-AJ-RT-20260614-283-001.yaml"
+  - "research_control/tasks/RT-20260614-283/roles/process-integrity-auditor@0.1.0--RT-20260614-283.yaml"
+  - "research_control/handoffs/handoff-0316.yaml"
+  - "research_control/handoffs/handoff-0316.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v11.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0315.yaml"
+  - "research_control/handoffs/handoff-0315.md"
+  - "research_control/design/research_dependency_graph_schema.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass | source_object_count=451"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass | source_object_count=451 relationship_row_count=2478"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | status=pass | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA --json | exit_code=0 | status=pass | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass | preaudit_current_frontier_still_stale"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=pass | post_bootstrap=true"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass | diagnostic_warnings=2"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | reason_codes=control_registry_changed,generated_derivative_changed,research_control_state_changed"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready | next_action=P1-T01"
+  - "git diff --check | exit_code=0 | status=pass"
+  - "rg v11 P1 current_frontier render_current_frontier traces | status=partial | P1 current-frontier guard not found"
+validation_status: "PASS"
+verdict: "p8_t01_cross_phase_audit_completed_p1_repair_required_no_promotion"
+coherent_resolution_summary: "P8-T01 audit found P2 through P7 v11 tasks implemented with no forbidden physics overclaim or excluded recommendation 8-10 implementation. It also found the P1 current-frontier synchronization and active-state guard tasks missing or untraceable because current_frontier.md still names RT-20260614-184 and handoff-0218 while program_state.yaml names RT-20260614-282 and handoff-0315."
+next_recommendation: "Run one bounded P1 repair packet starting with P1-T01 active-state authority invariant before P8-T02 final validation."
+cross_phase_audit:
+  artifact_path: "research_control/tasks/RT-20260614-283/artifacts/p8_t01_cross_phase_consistency_audit.md"
+  p2_through_p7_completed: true
+  p1_current_frontier_synchronized: false
+  p1_drift_guard_found: false
+  p1_generated_report_option_found: false
+  current_frontier_authoritative_status: "stale_control_snapshot_not_live_authority"
+  program_state_active_task_id: "RT-20260614-282"
+  program_state_latest_handoff_id: "handoff-0315"
+  current_frontier_active_task_id: "RT-20260614-184"
+  current_frontier_latest_handoff_id: "handoff-0218"
+  p3_same_shape_control: "selector_level_route_cycle_control_present_in_RT-20260614-256"
+  hard_same_shape_validator_found: false
+  recommendation_8_10_v11_tasks_found: false
+  historical_external_review_tasks_outside_v11_scope:
+    - "RT-20260614-121"
+    - "RT-20260614-133"
+  no_physics_overclaim_detected: true
+  blocker_count: 3
+  blockers:
+    - "current_frontier.md stale relative to program_state.yaml"
+    - "P1 active-state invariant sync validator and renderer missing or untraceable"
+    - "P8-T02 final validation deferred until P1 repair"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 451
+    relationship_row_count: 2478
+    semantic_row_count: 451
+    vault_row_count: 451
+    warning_summary: "No stale retrieval warning was present during preflight."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      note: "Confirmed current-frontier canonical row before identifying stale content relative to live program state."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA"
+      note: "Confirmed dependency graph schema canonical row for P7 support-only audit."
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d6d254e373268061749108c7f55d593307eb33767677b1db794bb36cbba044e3"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/research_dependency_graph_schema.md"
+      source_hash: "43b2a2f06caa5ca58fbafa4c149d7fa604bc0c780a978dc0a52bcbed0dfb252d"
+  authority_note: "Memory, wiki notes, semantic extracts, Obsidian notes, PDF derivatives, and .local caches are retrieval or reader layers only and not authority; canonical sources and registries remain authority."
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_audit_only"
+  meaning: "P8-T01 is a process-integrity audit only. It does not add mathematical payload or change source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation."
+resolved_project_improvement_signals: []
+project_improvement_signals: []
