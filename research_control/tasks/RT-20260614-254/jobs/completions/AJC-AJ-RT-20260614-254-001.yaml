@@ -1,0 +1,348 @@
+completion_id: "AJC-AJ-RT-20260614-254-001"
+job_id: "AJ-RT-20260614-254-001"
+task_id: "RT-20260614-254"
+source_role_id: "theoretical-continuation-selector"
+completed_at: "2026-06-28T07:40:35Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v10"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v10.md"
+  related_plan_task_id: "post-PLAN-P7-stress-energy-interface-candidate-post-stress-selector"
+  plan_phase_id: "P7"
+  implemented_task_scope: "Executed the post-stress Theoretical Continuation Selector route classification after stress-energy-interface candidate stress survival."
+  downstream_tasks_not_implemented:
+    - "future Gate Chair evidence-status/precondition review requiring exact tracked human authorization"
+    - "future matter-coupling derivation or adoption"
+output_paths:
+  - "research_control/tasks/RT-20260614-254/artifacts/child_phys_math_matter_coupling_stress_energy_interface_candidate_post_stress_selector.yaml"
+  - "research_control/tasks/RT-20260614-254/artifacts/child_phys_phil_matter_coupling_stress_energy_interface_candidate_post_stress_selector.yaml"
+  - "research_control/tasks/RT-20260614-254/artifacts/parent_conflict_review_matter_coupling_stress_energy_interface_candidate_post_stress_selector.yaml"
+  - "research_control/tasks/RT-20260614-254/artifacts/parent_fusion_notes_matter_coupling_stress_energy_interface_candidate_post_stress_selector.md"
+  - "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+  - "research_control/tasks/RT-20260614-254/jobs/completions/AJC-AJ-RT-20260614-254-001.yaml"
+  - "research_control/handoffs/handoff-0287.yaml"
+  - "research_control/handoffs/handoff-0287.md"
+extra_read_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v10.md"
+  - "research_control/handoffs/handoff-0286.yaml"
+  - "research_control/handoffs/handoff-0286.md"
+  - "research_control/tasks/RT-20260614-253/jobs/completions/AJC-AJ-RT-20260614-253-001.yaml"
+  - "research_control/tasks/RT-20260614-253/artifacts/282_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+  - "research_control/tasks/RT-20260614-252/artifacts/281_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_SMUGGLING_AUDIT.tex"
+  - "research_control/tasks/RT-20260614-251/artifacts/280_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE.tex"
+  - "research_control/tasks/RT-20260614-250/artifacts/279_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CRITERIA.tex"
+  - "research_control/tasks/RT-20260614-248/artifacts/277_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_RECOVERY_BRIDGE_CANDIDATE_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-241/artifacts/270_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_COUPLING_LAW_CRITERIA_ALIGNED_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-247/artifacts/276_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_RECOVERY_BRIDGE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass source_object_count=437 relationship_row_count=2416"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass source_object_count=437 relationship_row_count=2416"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-STRESS-ENERGY-INTERFACE-CANDIDATE-REFUTER-STRESS-TEST --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"stress energy interface candidate stress survived selector Gate Chair evidence status\" --limit 10 --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=director_decision_required"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_post_bootstrap_refresh_not_needed"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=docs_impact_required_receipt_present"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "stress_energy_interface_candidate_selector_requires_narrow_gate_no_adoption"
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_progress_status:
+  status: "human_gate_required"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Classify the stress-survived draft/control source-side stress-energy-interface candidate route before protected evidence-status review coupling-law adoption matter-coupling derivation or adoption stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion or completed derivation."
+  explanation: "The selector classifies the constructed audited and stress-survived stress-energy-interface candidate route as requiring one future narrow Gate Chair evidence-status/precondition review. The selector itself issues no Gate Chair verdict and does not adopt a coupling law derive or adopt matter coupling import stress-energy semantics construct a stress-energy tensor import a matter action adopt MetricData(E) change scoped g_eff derive Einstein equations promote benchmark status or claim completed derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "Refuter stress passed"
+  new_status: "human-gated"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_gate_chair_stress_energy_interface_candidate_evidence_precondition_question_only"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The matter-coupling ledger records human-gated status for the draft/control stress-energy-interface candidate. The candidate remains unadopted and downstream GR claims remain blocked."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology TeX edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "prior source-localization context only"
+  - burden: "Resp_lc"
+    status: "prior accepted response/localization context only"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only boundary remains previously accepted"
+  - burden: "MetricData(E)"
+    status: "not adopted here"
+  - burden: "g_eff"
+    status: "prior scoped source-extension context only; no scope change"
+  - burden: "matter coupling"
+    status: "draft/control stress-energy-interface candidate is gate-ready for narrow evidence-status/precondition review only; no coupling law matter coupling stress-energy semantics stress-energy tensor or matter action is adopted"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "finite/local perturbation stability tested only inside the declared source family; no global robustness theorem"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "future narrow stress-energy-interface candidate evidence-status/precondition review requires exact tracked authorization"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; human-gated evidence-status/precondition review remains open"
+new_mathematical_payload:
+  - payload_type: "packet_selection"
+    object_name: "stress-energy-interface candidate post-stress route selection"
+    source_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    summary: "Selects a future narrow Gate Chair evidence-status/precondition review as the next bounded packet after construction audit and stress survival."
+  - payload_type: "source_extension_classification"
+    object_name: "SEI_src^{cand} and SEICert^{cand} source-extension human-gate classification"
+    source_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    summary: "Classifies the candidate as draft/control source-extension stress-energy-interface-candidate data pending protected evidence-status/precondition review only."
+  - payload_type: "dependency_map_update"
+    object_name: "stress-energy-interface construction-audit-stress to Gate Chair precondition route"
+    source_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    summary: "Updates the matter-coupling dependency map from Refuter stress passed to human-gated review readiness without adopting downstream claims."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "packet_selection"
+    object_name: "stress-energy-interface candidate post-stress route selection"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects future narrow Gate Chair evidence-status/precondition review after completed construction audit and stress."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "source_extension_classification"
+    object_name: "SEI_src^{cand} and SEICert^{cand} human-gated source-extension classification"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    burden_effect: "classifies_status"
+    summary: "Records the candidate as source-extension evidence/precondition candidate data pending exact Gate Chair authorization."
+  - payload_id: "PAYLOAD-003"
+    payload_type: "dependency_map_update"
+    object_name: "matter-coupling route moves from stress-survived to human-gated"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    burden_effect: "updates_distance_to_gr"
+    summary: "Updates the matter-coupling route status while preserving no coupling-law adoption no matter coupling no stress-energy semantics no stress-energy tensor no matter action no MetricData(E) adoption no g_eff expansion and no downstream GR promotion."
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_human_gate"
+  decision_basis: "RT-20260614-251 constructed the draft/control source-side stress-energy-interface candidate RT-20260614-252 audited it as source-pure as written and RT-20260614-253 stress-tested it as surviving only under finite/local source-side fail-closed readings. That evidence completes the autonomous construction-audit-stress sequence for this declared candidate. The next lawful route is a narrow protected Gate Chair evidence-status/precondition question rather than repair route freeze ontology-law packet human-gated ontology change or downstream GR promotion."
+  theoretical_method: "Compare handoff-0286 route options against the RT-20260614-253 Refuter stress artifact the RT-20260614-252 audit the RT-20260614-251 candidate construction the RT-20260614-250 stress-energy-interface criteria artifact the prior scoped coupling-law-candidate evidence boundary the prior scoped recovery-bridge-candidate evidence boundary and the GR burden map. Select the lowest-authority next packet that adds decision information and preserves all promotion blocks."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "This selector prepares a future source-extension human-gate packet but does not consume gate authority. A separate Gate Chair packet with tracked exact approval is required before any evidence-status acceptance or adoption question."
+  next_execution_role_family: "gate-chair@0.1.0"
+  selected_next_packet_objective: "narrow protected evidence-status/precondition review of SEI_src^{cand}(E,F_E^sharp) and SEICert^{cand}(E,F_E^sharp) as scoped source-extension stress-energy-interface-candidate evidence only"
+  decision_consequence: "The next AgentJob should create an exact tracked approval record and execute one bounded Gate Chair packet. Without that packet SEI_src^{cand}(E,F_E^sharp) and SEICert^{cand}(E,F_E^sharp) remain draft/control data and must not be used as adopted matter coupling stress-energy semantics stress-energy tensor matter action or coupling-law adoption."
+  new_payload_novelty: "Classifies the completed stress-energy-interface candidate construction-audit-stress sequence and converts open post-stress routing into a narrow gate-ready source-extension evidence-status/precondition question."
+  source_extension_category: "source_extension_human_gate"
+  source_extension_import_classification: "draft/control stress-energy-interface candidate pending narrow human-gated source-extension evidence/precondition review; not coupling-law adoption; not matter-coupling derivation or adoption; not stress-energy semantics; not stress-energy tensor; not matter action; not MetricData(E) adoption; not g_eff expansion; not Einstein equations; not benchmark promotion"
+source_extension_category: "source_extension_human_gate"
+source_extension_import_classification: "draft/control stress-energy-interface candidate pending narrow human-gated source-extension stress-energy-interface-candidate evidence/precondition review"
+source_extension_context:
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  exact_authorization_needed: "I authorize one bounded Gate Chair packet to decide whether the draft/control source-side stress-energy-interface candidate SEI_src^{cand}(E,F_E^sharp) and SEICert^{cand}(E,F_E^sharp) constructed in RT-20260614-251 audited in RT-20260614-252 and stress-survived in RT-20260614-253 may be accepted only as scoped source-extension stress-energy-interface-candidate evidence/precondition under its declared finite/local source-side scope with no canonical ontology edit no source-law adoption no MetricData(E) adoption no g_eff scope change no coupling-law adoption no matter-coupling derivation or adoption no stress-energy semantics no stress-energy tensor no matter action no Einstein equations no benchmark promotion and no completed derivation."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260614-254/artifacts/child_phys_math_matter_coupling_stress_energy_interface_candidate_post_stress_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260614-254/artifacts/child_phys_phil_matter_coupling_stress_energy_interface_candidate_post_stress_selector.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260614-254/artifacts/parent_conflict_review_matter_coupling_stress_energy_interface_candidate_post_stress_selector.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fusion_notes_path: "research_control/tasks/RT-20260614-254/artifacts/parent_fusion_notes_matter_coupling_stress_energy_interface_candidate_post_stress_selector.md"
+    fused_output_path: "research_control/tasks/RT-20260614-254/artifacts/283_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_POST_STRESS_ROUTE_SELECTOR.yaml"
+    summary: "Parent fused both child selector outputs into a source-side stress-energy-interface candidate human-gate route classification with all adoption and downstream promotion blocks preserved."
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "source_extension_human_gate"
+  rationale: "The draft/control stress-energy-interface candidate survives audit and stress as source-side candidate data and now requires exact human-gated evidence-status/precondition review before any acceptance or adoption question."
+  repeated_burdens:
+    - "MetricData(E) remains not adopted"
+    - "g_eff remains only scoped source-extension context and not expanded"
+    - "SEI_src^{cand} and SEICert^{cand} remain unadopted candidate records"
+    - "matter coupling remains unadopted because the packet supplies route classification only"
+  obstruction_summary: "No scoped obstruction to the audited stress-energy-interface candidate as written; no repair defect or freeze trigger is selected."
+next_recommendation: "Run one bounded Gate Chair packet only after exact tracked human authorization to decide the narrow stress-energy-interface candidate evidence-status/precondition question."
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "STRESS-ENERGY-INTERFACE-CANDIDATE-SELECTOR-CLASSIFICATION"
+  candidate_freeze_label: "STRESS-ENERGY-INTERFACE-CANDIDATE-GATE-READY"
+  prior_attempts_considered:
+    - "RT-20260614-248"
+    - "RT-20260614-250"
+    - "RT-20260614-251"
+    - "RT-20260614-252"
+    - "RT-20260614-253"
+  freeze_if:
+    - "A later packet treats selector gate readiness as coupling-law adoption."
+    - "A later packet treats selector gate readiness as matter-coupling derivation stress-energy semantics stress-energy tensor matter action or Einstein equations."
+    - "A later packet repeats construction audit stress or selector without Gate Chair authorization repair obstruction freeze or another bounded route."
+  do_not_freeze_if:
+    - "The next packet is an exact tracked Gate Chair evidence-status/precondition review preserving all adoption and downstream claim blocks."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because the candidate completed a materially distinct construction-audit-stress chain and the selector now routes to a protected human-gated evidence-status/precondition question."
+  next_allowed_route: "gate_chair"
+route_cycle_control:
+  cycle_family: "matter_coupling_stress_energy_interface_candidate"
+  current_cycle_step: "post_stress_selector"
+  cycle_risk: "same-shape construction audit stress selector repetition without protected evidence-status decision"
+  orbit_avoidance_reason: "This packet changes route state from stress-survived pending selector to human-gated evidence-status/precondition review readiness."
+  prior_related_tasks:
+    - "RT-20260614-248"
+    - "RT-20260614-250"
+    - "RT-20260614-251"
+    - "RT-20260614-252"
+    - "RT-20260614-253"
+  repeated_cycle: true
+  cycle_status: "human_gate_route_selected"
+  next_role_consequence: "gate-chair with exact tracked authorization"
+  same_shape_repetition_blocked: true
+  rationale: "The packet does not repeat construction audit or stress. It changes the route state from stress-survived pending selector to human-gated evidence-status/precondition review readiness."
+forbidden_conclusion_summary:
+  summary: "No M_src adoption or scope change occurs. No MetricData(E) adoption occurs. g_eff remains unchanged and unexpanded. Matter coupling remains underived and unadopted. Stress-energy semantics stress-energy tensor and matter action remain absent. Einstein equations are not derived. Benchmark promotion remains blocked. Completed derivation and global theory rejection remain blocked."
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "M_src adoption or scope change"
+    - "MetricData(E) adoption"
+    - "g_eff expansion or adoption change"
+    - "stress-energy semantics"
+    - "stress-energy tensor construction"
+    - "matter action import"
+    - "matter coupling derivation or adoption"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "global theory rejection"
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids:
+    - ""
+  bridge_status: "not_required"
+  notes: "Only blank project_improvement_signals were emitted."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 437
+    relationship_row_count: 2416
+    semantic_row_count: 437
+    vault_row_count: 437
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-STRESS-ENERGY-INTERFACE-CANDIDATE-REFUTER-STRESS-TEST --json"
+      query_type: "lookup"
+      query_text: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-STRESS-ENERGY-INTERFACE-CANDIDATE-REFUTER-STRESS-TEST"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-STRESS-ENERGY-INTERFACE-CANDIDATE-REFUTER-STRESS-TEST"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"stress energy interface candidate stress survived selector Gate Chair evidence status\" --limit 10 --json"
+      query_type: "search"
+      query_text: "stress energy interface candidate stress survived selector Gate Chair evidence status"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-STRESS-ENERGY-INTERFACE-CANDIDATE-REFUTER-STRESS-TEST"
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-PRECONDITION-REFUTER-STRESS-TEST"
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-COUPLING-LAW-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW"
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-PRECONDITION-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW"
+  canonical_inspections:
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-STRESS-ENERGY-INTERFACE-CANDIDATE-REFUTER-STRESS-TEST"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-253/artifacts/282_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_STRESS_ENERGY_INTERFACE_CANDIDATE_REFUTER_STRESS_TEST.tex"
+      source_hash: "db05e29f1c7d6a71308b9113025eb69fbfc8c0c138521adc54d5285fb60dccab"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-PRECONDITION-REFUTER-STRESS-TEST"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-226/artifacts/255_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_PRECONDITION_REFUTER_STRESS_TEST.tex"
+      source_hash: "a52b00f573a24b52f0e5bb2713b511870a7e6620b0dcedbb73cd59c2512aef98"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-COUPLING-LAW-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-234/artifacts/263_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_COUPLING_LAW_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      source_hash: "2ec297e92323dc64678b5a461c2cd0d500af28425f9c160ce860b0fbda5e6744"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-PRECONDITION-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-228/artifacts/257_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_PRECONDITION_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      source_hash: "10d8d660482da6cb5fd6f8230c9cbe0e649d6e05fe588d89351bcbf9eec85c9f"
+  post_bootstrap_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_source_object_count: 437
+    after_relationship_row_count: 2416
+    after_semantic_row_count: 437
+    after_vault_row_count: 437
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local are retrieval layers only and not authority."
