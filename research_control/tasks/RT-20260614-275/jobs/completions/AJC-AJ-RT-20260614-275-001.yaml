@@ -1,0 +1,133 @@
+completion_id: "AJC-AJ-RT-20260614-275-001"
+job_id: "AJ-RT-20260614-275-001"
+task_id: "RT-20260614-275"
+completed_at: "2026-06-28T20:00:16Z"
+status: "completed"
+output_paths:
+  - "research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md"
+  - "research_control/tasks/RT-20260614-275/00_TASK.yaml"
+  - "research_control/tasks/RT-20260614-275/DDR-20260614-275.md"
+  - "research_control/tasks/RT-20260614-275/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260614-275/jobs/AJ-RT-20260614-275-001.yaml"
+  - "research_control/tasks/RT-20260614-275/jobs/completions/AJC-AJ-RT-20260614-275-001.yaml"
+  - "research_control/tasks/RT-20260614-275/roles/project-control-maintainer@0.2.0--RT-20260614-275.yaml"
+  - "research_control/handoffs/handoff-0308.yaml"
+  - "research_control/handoffs/handoff-0308.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v11.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "research_control/handoffs/handoff-0307.yaml"
+  - "research_control/handoffs/handoff-0307.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/obstruction_and_freeze_control.md"
+  - "research_control/tasks/RT-20260614-120/artifacts/metrics_separation_phase6_report.md"
+  - "research_control/tasks/RT-20260621-008/artifacts/mathematical_decisiveness_phase9_metrics_report.md"
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "scripts/research_control/README.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass | source_object_count=449"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass | source_object_count=449"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"payload density metrics Distance-to-GR\" --limit 10 --json | exit_code=0 | status=pass | returned_object_ids=none"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP --json | exit_code=0 | status=pass | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass_with_local_retrieval_refresh_needed"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_refresh_performed | source_object_count=450"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass | reason_codes=control_registry_changed,documentation_registry_changed,generated_derivative_changed,generated_registry_changed,research_control_state_changed"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass | metrics_are_operational=true"
+  - "git diff --check | exit_code=0 | status=pass"
+validation_status: "PASS"
+verdict: "P6-T01 defined payload-density metrics and advisory warning thresholds in a registered control design artifact."
+coherent_resolution_summary: "The design defines all fifteen required metrics with source fields computation rules and diagnostic classes. It keeps payload-density and route-orbit diagnostics separate from scientific_progress_metrics and defines warnings as advisory not hard gates."
+next_recommendation: "Run one bounded P6-T02 validator-engineer packet to implement the design in report_physics_progress_metrics.py with focused tests."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 450
+    relationship_row_count: 2474
+    semantic_row_count: 450
+    vault_row_count: 450
+    warning_summary: "Post-bootstrap preflight refreshed local retrieval for the new registered Markdown source; no warnings remained."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    source_object_count: 450
+    relationship_row_count: 2474
+    semantic_row_count: 450
+    vault_row_count: 450
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 450
+    relationship_row_count: 2474
+    semantic_row_count: 450
+    vault_row_count: 450
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      note: "The lookup returned the canonical burden-map source row and related generated noncanonical retrieval rows. The source row then guided direct canonical inspection."
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      source_hash: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/obstruction_and_freeze_control.md"
+      source_hash: "52f24fc04f0f8e4a6716cb8ef78538566a332b3b4e27d4b939125e5648ea1e96"
+  authority_note: "Memory, wiki notes, semantic extracts, Obsidian notes, PDF derivatives, and .local caches are retrieval or reader layers only and not authority; canonical sources and registries remain authority."
+design_artifact:
+  path: "research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md"
+  source_hash: "415f7ec86a8f7fd5c37eb8c62ae50c39af899115152a748ce008a6fcf12edbd9"
+  metrics_defined:
+    - "tasks_since_last_distance_to_gr_delta"
+    - "tasks_since_last_burden_discharged"
+    - "new_payload_items_per_physics_task"
+    - "new_payload_items_per_cycle"
+    - "selector_cycles_without_new_payload"
+    - "same_burden_repetition_count"
+    - "freeze_reviews_triggered_by_repetition"
+    - "bridge_attempts_since_last_gate"
+    - "obstructions_created"
+    - "obstructions_reused"
+    - "candidate_construct_audit_stress_selector_cycles"
+    - "gate_ready_cycles_without_gate_verdict"
+    - "support_only_tooling_reports"
+    - "physics_promotion_authorized_true_count"
+    - "physics_promotion_authorized_false_count"
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_control_design_only"
+  meaning: "P6-T01 defined operational diagnostics only. It does not add mathematical payload or change source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation."
+resolved_project_improvement_signals: []
+project_improvement_signals: []
