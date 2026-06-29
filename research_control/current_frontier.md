@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-045` and `handoff-0340`.
+`RT-20260629-046` and `handoff-0341`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-045` |
-| Latest handoff ID | `handoff-0340` |
-| Current status | `v12_p4_t03_precise_obstruction_no_nontrivial_source_law_compression_under_current_basis` |
-| Current route family | v12 p4 t03 precise obstruction to p4 t04 smuggling audit |
+| Active task ID | `RT-20260629-046` |
+| Latest handoff ID | `handoff-0341` |
+| Current status | `v12_p4_t04_source_pure_as_written_pending_stress_no_promotion` |
+| Current route family | v12 p4 t04 smuggling audit pass to p4 t05 refuter stress |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P4-T04 smuggling audit only |
-| Next recommended action | Run P4-T04 as one bounded Smuggling Auditor transaction to audit the P4-T03 precise obstruction and compression map for target imports, ontology-edit laundering, source-law adoption laundering, process-authority laundering, and notation-collapse errors. |
+| Required next authority | P4-T05 refuter stress only |
+| Next recommended action | Run P4-T05 as one bounded Refuter transaction to stress-test the audited P4-T03 obstruction and compression map under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-045/00_TASK.yaml`.
-- Active task objective: Attempt P4-T03 compression construction over SourceExtensionStack_v1 and produce a decisive Candidate Constructor result without adoption, rejection, or downstream GR promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0340.yaml`.
-- Latest handoff summary: V12 P4-T03 Candidate Constructor completed with result_type precise_obstruction. The packet attempted a total compression map over all P4-T01 dependency rows and recorded obstruction CF-P4T03-001-no-nontrivial-compression-current-basis: under the current basis no positive row is derived from current source ontology, support-only surfaces have proof_authority=false, and forbidden target imports fail closed. No adoption, rejection, or scientific promotion occurred.
-- Current route family: v12 p4 t03 precise obstruction to p4 t04 smuggling audit.
-- Next recommended action: Run P4-T04 as one bounded Smuggling Auditor transaction to audit the P4-T03 precise obstruction and compression map for target imports, ontology-edit laundering, source-law adoption laundering, process-authority laundering, and notation-collapse errors.
+- Active task path: `research_control/tasks/RT-20260629-046/00_TASK.yaml`.
+- Active task objective: Audit the P4-T03 source-extension compression obstruction and total compression-map attempt for hidden target imports, ontology-edit laundering, source-law adoption laundering, process-authority laundering, and notation-collapse errors.
+- Latest handoff path: `research_control/handoffs/handoff-0341.yaml`.
+- Latest handoff summary: V12 P4-T04 Smuggling Auditor completed with verdict source_pure_as_written_pending_stress. The audit found no hidden target import, process-authority laundering, ontology-edit laundering, source-law adoption laundering, notation-collapse error, silent g_eff scope promotion, or silent matter-coupling derivation in the P4-T03 obstruction as written. No adoption, rejection, or scientific promotion occurred.
+- Current route family: v12 p4 t04 smuggling audit pass to p4 t05 refuter stress.
+- Next recommended action: Run P4-T05 as one bounded Refuter transaction to stress-test the audited P4-T03 obstruction and compression map under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P4-T04 as one bounded Smuggling Auditor transaction to audit the P4-T03 precise obstruction and compression map for target imports, ontology-edit laundering, source-law adoption laundering, process-authority laundering, and notation-collapse errors.
+Run P4-T05 as one bounded Refuter transaction to stress-test the audited P4-T03 obstruction and compression map under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-045`;
-- latest handoff: `handoff-0340`;
-- current status: `v12_p4_t03_precise_obstruction_no_nontrivial_source_law_compression_under_current_basis`;
+- active task: `RT-20260629-046`;
+- latest handoff: `handoff-0341`;
+- current status: `v12_p4_t04_source_pure_as_written_pending_stress_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0340.yaml`
-- `research_control/tasks/RT-20260629-045/00_TASK.yaml`
+- `research_control/handoffs/handoff-0341.yaml`
+- `research_control/tasks/RT-20260629-046/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0340*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0341*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
