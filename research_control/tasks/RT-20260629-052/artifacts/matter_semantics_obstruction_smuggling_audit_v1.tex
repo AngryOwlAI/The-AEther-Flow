@@ -1,0 +1,233 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\MatterDisc}{\mathrm{MatterSectorDiscriminator}_{v1}}
+\newcommand{\Obstruction}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\Dbot}{D_{\bot}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\title{Matter-Semantics Obstruction Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260629-052}
+\date{2026-06-29}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Smuggling Auditor artifact for
+\texttt{RT-20260629-052}. It implements P5-T04 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md}.
+
+The audit subject is the P5-T03 obstruction:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-051/artifacts/
+matter_semantics_discriminator_obstruction_v1.tex
+\end{verbatim}
+
+The audit verdict is:
+
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_stress"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "refuter"
+\end{verbatim}
+
+This artifact audits only. It does not edit canonical ontology, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt a source law, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote benchmark status, issue a Gate Chair
+verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Audit Question}
+
+Does the P5-T03 obstruction obtain its matter-semantics failure conclusion by
+importing target matter semantics, empirical detector protocols,
+stress-energy tensors, matter actions, conservation laws, variational
+principles, target metric structure, benchmark behavior, coupling-law
+authority, or support-only checker proof authority?
+
+Conclusion: no such import is detected in the artifact as written. The pass is
+narrow. It authorizes P5-T05 stress testing; it does not prove global
+stability of the obstruction and does not adopt the missing source-side law.
+
+\section{Audit Surface}
+
+The audit reads P5-T03 as a basis-scoped statement:
+\[
+  \Obstruction(E,\Bcur,
+  \texttt{source\mbox{-}intrinsic\mbox{-}discriminator\mbox{-}law\mbox{-}missing}).
+\]
+The phrase ``under \(\Bcur\)'' is essential. It means the current tracked
+source basis does not contain a source-side derivation of a non-bottom
+\(\MatterDisc\). It does not mean that no future source-side law family can be
+proposed, audited, stressed, or human-gated.
+
+The P5-T03 all-guarded map
+\[
+  \Dbot(t)=\mathsf{guardedUndetermined}
+  \quad\text{for every }t\in T_E(\Bcur)
+\]
+is retained only as fail-closed behavior. It is not a non-bottom
+matter-semantics candidate.
+
+\section{Hidden Target-Import Screen}
+
+\begin{longtable}{p{0.32\linewidth}p{0.56\linewidth}}
+\toprule
+Audit check & Result \\
+\midrule
+Target matter semantics & Pass. Matter-like labels are target obligations and blocked shortcuts, not imported premises. \\
+Stress-energy tensor & Pass. No stress-energy tensor is constructed or used. \\
+Stress-energy semantics & Pass. Stress-energy semantics are explicitly blocked. \\
+Matter action & Pass. No matter action is imported. \\
+Variational principle & Pass. Variational shortcuts remain forbidden. \\
+Detector protocol & Pass. Detector and empirical readout semantics are explicitly blocked. \\
+Empirical calibration & Pass. No empirical calibration protocol is used. \\
+Target metric & Pass. No target metric or metric-form data is introduced. \\
+Proper-time normalization & Pass. No proper-time normalization is introduced. \\
+Conservation law & Pass. GR/QFT conservation-law naming is blocked unless source-derived. \\
+Coupling law & Pass. No coupling law is adopted or inferred. \\
+Benchmark behavior & Pass. Benchmark solution behavior is blocked as laundering. \\
+Support-only checker & Pass. Support-only checking is not used as proof authority. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[No hidden target matter import as written]
+The P5-T03 obstruction does not use target matter semantics, detector
+protocols, empirical calibration, stress-energy tensors, matter actions,
+variational principles, target metric structure, proper-time normalization,
+GR/QFT conservation-law naming, coupling-law authority, benchmark behavior, or
+support-only checker output as a mathematical premise.
+\end{lemma}
+
+\begin{proof}
+The P5-T03 artifact states those surfaces as forbidden shortcuts. Its positive
+claim is negative and basis-scoped: current source data do not derive a
+source-intrinsic discriminator law. The artifact assigns the total map
+\(\Dbot\) only as fail-closed behavior and blocks non-bottom matter-sector
+assignment without \(\MatSrcDiscLaw\) or \(\SemMatterSrc\). The conclusion
+therefore does not require target matter semantics or target physics as a
+premise.
+\end{proof}
+
+\section{Process-Authority Laundering Screen}
+
+\begin{lemma}[No support-only proof authority]
+P5-T03 does not convert generated derivatives, validators, registries, role
+records, handoffs, approvals, commits, local caches, semantic extracts,
+support-only checkers, or file order into mathematical premises.
+\end{lemma}
+
+\begin{proof}
+The obstruction is stated from source-side no-import obligations and the
+current declared source basis. It does not treat control records or support
+tooling as a theorem. Support surfaces may route or preserve the packet, but
+they do not prove the missing discriminator law or prove future impossibility.
+\end{proof}
+
+\section{Adoption-Laundering Screen}
+
+\begin{proposition}[No missing-primitive adoption]
+The symbols \(\MatSrcDiscLaw\) and \(\SemMatterSrc\) are missing-primitive
+names in P5-T03. They are not adopted source laws, not canonical ontology
+primitives, and not source-extension data accepted by a gate.
+\end{proposition}
+
+\begin{proof}
+P5-T03 explicitly states that current ontology does not derive
+\(\MatSrcDiscLaw\). It preserves
+\texttt{blocked\_adoption\_open\_continuation}. Naming the missing primitive
+narrows the next research target but does not adopt that target.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{verbatim}
+Source ontology primitives: unchanged; no canonical ontology edit
+Source equivalence EqSrc: unchanged; no general EqSrc theorem
+RetainH: unchanged
+GenH: unchanged
+ObsLoc_lc: unchanged
+Resp_lc: scoped source-extension context only
+M_src: scoped source-only context only; no scope expansion
+MetricData(E): no MetricData(E)
+g_eff: scoped g_eff context only; no unscoped g_eff and no scope change
+matter coupling: no matter coupling; obstruction is audit-clean as written
+Einstein equations: blocked; no field-equation derivation
+finite-variation robustness: stress remains required for this obstruction
+benchmark promotion: blocked; no benchmark promotion
+Gate Chair status: no Gate Chair verdict
+current route freeze or hard-fail status: not frozen; P5-T05 stress route open
+\end{verbatim}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+
+\begin{quote}
+As written, the P5-T03 matter-semantics obstruction is source-pure enough to
+undergo P5-T05 Refuter stress. The pass is audit-only: it does not adopt
+\(\MatSrcDiscLaw\) or \(\SemMatterSrc\), does not promote scoped evidence,
+does not change Distance-to-GR ledger status, and does not establish matter
+coupling.
+\end{quote}
+
+\section{Non-Allowed Conclusions}
+
+This artifact does not allow:
+
+\begin{itemize}[leftmargin=*]
+\item source-law adoption or canonical ontology edit;
+\item adoption of \(\MatSrcDiscLaw\) or \(\SemMatterSrc\);
+\item \(\MetricData(E)\) adoption;
+\item \(\geff\) scope change, unscoped \(\geff\), or target Lorentzian metric;
+\item coupling-law adoption or matter-coupling derivation;
+\item stress-energy semantics, stress-energy tensor, matter action, detector
+  semantics, or empirical calibration;
+\item Einstein equations;
+\item exact-GR benchmark promotion or benchmark Gate Chair closure;
+\item completed derivation;
+\item future source-extension impossibility;
+\item global theory rejection;
+\item generated derivatives, validators, registries, roles, handoffs,
+  approvals, commits, local caches, semantic extracts, support-only checkers,
+  or file order as proof authority.
+\end{itemize}
+
+\section{Next Route}
+
+The next lawful route is P5-T05: one bounded Refuter stress test of the audited
+P5-T03 obstruction under source relabeling, finite variation, tag removal,
+sector deletion, degeneracy, fail-closed behavior, target-\(\geff\)
+scope-pressure, explicit-label collapse, missing-primitive pressure, and
+support-only proof-authority overread.
+
+\end{document}

@@ -478,6 +478,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P4-T05-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-047/artifacts/source_extension_compression_obstruction_refuter_stress_v1.tex`
 - `TEX-V12-P5-T02-MATTER-SEMANTICS-TARGET-FORMALIZATION` `research_control/tasks/RT-20260629-050/artifacts/matter_semantics_target_formalization_v1.tex`
 - `TEX-V12-P5-T03-MATTER-SEMANTICS-DISCRIMINATOR-OBSTRUCTION` `research_control/tasks/RT-20260629-051/artifacts/matter_semantics_discriminator_obstruction_v1.tex`
+- `TEX-V12-P5-T04-MATTER-SEMANTICS-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-052/artifacts/matter_semantics_obstruction_smuggling_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -946,3 +947,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P4-T05-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-REFUTER-STRESS` `wiki/tex/tex-v12-p4-t05-source-extension-compression-obstruction-refuter-stress.md`
 - `WIKI-TEX-V12-P5-T02-MATTER-SEMANTICS-TARGET-FORMALIZATION` `wiki/tex/tex-v12-p5-t02-matter-semantics-target-formalization.md`
 - `WIKI-TEX-V12-P5-T03-MATTER-SEMANTICS-DISCRIMINATOR-OBSTRUCTION` `wiki/tex/tex-v12-p5-t03-matter-semantics-discriminator-obstruction.md`
+- `WIKI-TEX-V12-P5-T04-MATTER-SEMANTICS-OBSTRUCTION-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p5-t04-matter-semantics-obstruction-smuggling-audit.md`
