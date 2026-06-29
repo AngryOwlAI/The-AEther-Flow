@@ -1,0 +1,87 @@
+handoff_id: "handoff-0348"
+created_at: "2026-06-29T23:10:11Z"
+task_id: "RT-20260629-053"
+decision_id: "DDR-20260629-053"
+job_id: "AJ-RT-20260629-053-001"
+completion_path: "research_control/tasks/RT-20260629-053/jobs/completions/AJC-AJ-RT-20260629-053-001.yaml"
+source_task_id: "RT-20260629-053"
+source_job_id: "AJ-RT-20260629-053-001"
+source_completion_id: "AJC-AJ-RT-20260629-053-001"
+status: "completed"
+summary: "V12 P5-T05 Refuter completed with a scoped_obstruction stress result for the audited P5-T03 MatterSemanticsFailureObstruction_v1. The obstruction survives source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority erasure. The result is current-basis scoped and pending P5-T06 selector."
+next_action: "Run P5-T06 as one bounded theoretical-continuation-selector@0.1.0 transaction to classify the stress-survived matter-semantics scoped obstruction and choose exactly one next route without adopting MatSrcDiscLaw_v1, adopting SemMatter_src, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory."
+loop_risk_route: "v12_p5_t05_scoped_obstruction_survived_stress_next_p5_t06_selector"
+claim_boundary:
+  allowed_next_scope: "P5-T06 Theoretical Continuation Selector classification of the P5-T05 scoped obstruction only"
+  p5_t05_refuter_completed: true
+  selected_next_plan_task: "P5-T06"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  scientific_status_changed: false
+  source_law_adopted: false
+  MatSrcDiscLaw_v1_adopted: false
+  SemMatter_src_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+blocked_claims:
+  - "P5-T05 stress survival as source-law adoption"
+  - "P5-T05 stress survival as MatSrcDiscLaw_v1 adoption"
+  - "P5-T05 stress survival as SemMatter_src adoption"
+  - "P5-T05 stress survival as matter coupling"
+  - "P5-T05 stress survival as detector semantics"
+  - "P5-T05 stress survival as stress-energy semantics"
+  - "P5-T05 stress survival as stress-energy tensor"
+  - "P5-T05 stress survival as matter action"
+  - "P5-T05 stress survival as coupling-law adoption"
+  - "P5-T05 stress survival as Einstein equations"
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "matter-coupling derivation"
+  - "matter-coupling adoption"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+p5_t05_result:
+  route: "v12_p5_t05_matter_semantics_obstruction_refuter_stress"
+  selected_next_plan_task: "P5-T06"
+  selected_next_objective: "Post-matter-semantics selector classification"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+  stress_verdict: "scoped_obstruction"
+  obstruction_id: "MS-P5T05-001-current-basis-matter-semantics-stress"
+  stress_artifact_path: "research_control/tasks/RT-20260629-053/artifacts/matter_semantics_obstruction_refuter_stress_v1.tex"
+  same_milestone_continuation_status: "blocked_adoption_open_continuation"
+  freeze_decision: "not_frozen"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "unchanged"
+  meaning: "P5-T05 records a current-basis scoped obstruction stress result. It changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter-coupling stress-energy semantics detector semantics matter action Einstein equations benchmark promotion or completed derivation status."
+validation:
+  bootstrap_memory_system: "pending"
+  bootstrap_memory_system_validate_only: "pending"
+  validate_research_control: "pending"
+  validate_documentation_impact: "pending"
+  graph_freshness_check: "pending"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

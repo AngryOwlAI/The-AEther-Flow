@@ -1,0 +1,307 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\MatterDisc}{\mathrm{MatterSectorDiscriminator}_{v1}}
+\newcommand{\Obstruction}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\Dbot}{D_{\bot}}
+\newcommand{\Guarded}{\mathsf{guardedUndetermined}}
+\newcommand{\StressPass}{\mathrm{STRESS\mbox{-}PASS}}
+\newcommand{\ScopedObstruction}{\mathrm{SCOPED\mbox{-}OBSTRUCTION}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Matter-Semantics Obstruction Refuter Stress v1}
+\author{Refuter Packet RT-20260629-053}
+\date{2026-06-29}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260629-053}. It
+implements P5-T05 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md}.
+
+The stress subject is the P5-T03 obstruction:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-051/artifacts/
+matter_semantics_discriminator_obstruction_v1.tex
+\end{verbatim}
+
+The source-purity precondition is the P5-T04 audit:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-052/artifacts/
+matter_semantics_obstruction_smuggling_audit_v1.tex
+\end{verbatim}
+
+The stress verdict is:
+
+\begin{verbatim}
+stress_result.result_type: "scoped_obstruction"
+obstruction_id: "MS-P5T05-001-current-basis-matter-semantics-stress"
+same_milestone_continuation: "blocked_adoption_open_continuation"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This artifact stress-tests only. It does not edit canonical ontology, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt a source law, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote benchmark status, issue a Gate Chair
+verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Stress Question}
+
+Does the audited P5-T03 obstruction survive the P5-T05 stress suite: source
+relabeling, finite variation, tag removal, sector deletion, degeneracy,
+fail-closed behavior, target-\(\geff\) scope pressure, explicit-label
+collapse, missing-primitive pressure, and support-only proof-authority
+overread?
+
+Conclusion: yes, but only as a scoped current-basis obstruction:
+\[
+  \ScopedObstruction(\Obstruction,\Bcur,\texttt{P5-T05}).
+\]
+The result routes to P5-T06 selector classification and does not close future
+source-extension research.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.25\linewidth}p{0.49\linewidth}p{0.16\linewidth}}
+\toprule
+Stress mode & Result & Verdict \\
+\midrule
+Source relabeling & Renaming source tokens preserves the obstruction because
+the P5-T03 argument depends on the absence of a source-intrinsic discriminator
+law, not on token spelling. & \StressPass \\
+Finite variation & Perturbing or deleting irrelevant source bookkeeping keeps
+\(\Dbot(t)=\Guarded\) as fail-closed behavior. It does not produce a
+non-bottom \(\MatterDisc\). & \StressPass \\
+Tag removal & Removing source/target/process tags collapses the ability to
+certify no-import obligations. The only lawful behavior is fail-closed, not
+matter-sector derivation. & \StressPass \\
+Sector deletion & Deleting a non-bottom sector label or removing all
+non-bottom sector evidence cannot create the missing source-side law. It
+shrinks the codomain or returns guarded-undetermined. & \StressPass \\
+Degeneracy & If source tokens become indistinguishable under the declared
+source data, any non-bottom split would require \(\MatSrcDiscLaw\) or
+\(\SemMatterSrc\). Without it, the obstruction persists. & \StressPass \\
+Fail-closed behavior & The all-guarded map is stable as bottom behavior, but
+its stability is not a candidate construction and not matter semantics. &
+\StressPass \\
+Target-\(\geff\) scope pressure & Expanding scoped \(\geff\) or importing a
+target metric would violate the P5-T02 and P5-T04 no-import boundary. The
+pressure fails closed. & \StressPass \\
+Explicit-label collapse & Treating labels such as
+\texttt{matterLike} as the law merely restates the desired output. It supplies
+no source-side discriminator. & \StressPass \\
+Missing-primitive pressure & The stress suite confirms that
+\(\MatSrcDiscLaw\) / \(\SemMatterSrc\) is the missing primitive under
+\(\Bcur\), but naming it is not adoption. & \StressPass \\
+Support-only proof-authority erasure & Removing generated derivatives,
+validators, registries, role records, handoffs, approvals, commits, local
+caches, semantic extracts, wiki notes, file order, and support-only checkers
+from proof status leaves the obstruction unchanged. & \StressPass \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Relabeling invariance of missing-law obstruction]
+Let \(\rho:T_E(\Bcur)\to T_E(\Bcur)\) be a bijective source relabeling that
+preserves the source data available in \(\Bcur\). If \(\Bcur\) does not derive
+\(\MatSrcDiscLaw\), then relabeling by \(\rho\) does not derive a non-bottom
+\(\MatterDisc\).
+\end{lemma}
+
+\begin{proof}
+The P5-T03 obstruction is not about a particular token name. It is about the
+absence of a source-side rule assigning non-bottom matter-sector labels from
+source data alone. A relabeling that preserves the available source structure
+preserves that absence. Therefore the relabeled basis still lacks the
+required discriminator law.
+\end{proof}
+
+\begin{lemma}[Tag-removal fail-closed lemma]
+If the tags separating source syntax, target interpretation, and process
+receipt surfaces are forgotten, then the matter-semantics route fails closed
+to \(\Guarded\) rather than deriving matter-sector semantics.
+\end{lemma}
+
+\begin{proof}
+The P5-T02 target and P5-T04 audit require no stress-energy import, no matter
+action import, no detector import, no target metric import, and no
+support-only proof authority. Forgetting the tags needed to check those
+conditions makes a non-bottom assignment unverifiable. The only permitted
+response is fail-closed behavior, not promotion.
+\end{proof}
+
+\begin{lemma}[Sector-deletion obstruction lemma]
+Deleting a non-bottom sector label, or deleting all source evidence that would
+distinguish non-bottom sectors, cannot create a source-intrinsic
+\(\MatterDisc\) under \(\Bcur\).
+\end{lemma}
+
+\begin{proof}
+Sector deletion removes possible outputs or possible evidence. It does not
+add a derivation rule. If the original basis lacks \(\MatSrcDiscLaw\), then a
+smaller or less informative sector grammar still lacks the rule needed to
+justify a non-bottom source-side classification.
+\end{proof}
+
+\begin{lemma}[Support-erasure stability]
+Removing generated derivatives, validators, registries, role records,
+handoffs, approvals, commits, local caches, semantic extracts, wiki notes,
+file order, and support-only checkers from proof status leaves the P5-T03
+obstruction unchanged.
+\end{lemma}
+
+\begin{proof}
+P5-T03 and P5-T04 already treat those surfaces as routing, receipt, or
+retrieval support only. They are not mathematical premises. Their removal
+therefore cannot create \(\MatSrcDiscLaw\), \(\SemMatterSrc\), or a non-bottom
+\(\MatterDisc\).
+\end{proof}
+
+\begin{proposition}[P5-T05 scoped obstruction]
+Under the current basis \(\Bcur\), the audited P5-T03 obstruction survives
+the P5-T05 stress suite as
+\[
+  \mathrm{MS\mbox{-}P5T05\mbox{-}001}
+  =
+  \ScopedObstruction(\Obstruction,\Bcur,
+  \texttt{source\mbox{-}intrinsic\mbox{-}matter\mbox{-}sector
+  \mbox{-}discriminator}).
+\]
+\end{proposition}
+
+\begin{proof}
+Each stress mode either preserves the absence of a source-intrinsic
+discriminator law, removes information, or pressures a forbidden target or
+process-authority import. None supplies a source-only derivation of
+\(\MatSrcDiscLaw\) or \(\SemMatterSrc\). The all-guarded map remains
+fail-closed behavior rather than non-bottom matter semantics. Therefore the
+obstruction survives locally under \(\Bcur\).
+\end{proof}
+
+\section{Freeze Criteria}
+
+This packet has repeated-burden pressure because matter coupling remains
+blocked by missing source-side matter semantics. It is not frozen because it
+adds new Refuter stress payload and selects a non-orbital next route: P5-T06
+selector classification.
+
+Freeze should be considered later if a future packet repeats P5 construction,
+audit, or stress on the same obstruction without new mathematical payload,
+selector classification, repair, protected Gate Chair review, or a narrowed
+obstruction record. Freezing this local route would not be global theory
+rejection and would not prove future source-extension impossibility.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Scoped source-extension data retained as context only. \\
+M\_src & Scoped source-only object retained; no scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & P5 matter-semantics obstruction survives stress; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Local matter-semantics obstruction stress only; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict. \\
+Current route freeze or hard-fail status & Not frozen; P5-T06 selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Verdict}
+
+\begin{verdict}[Scoped obstruction pending selector]
+The audited P5-T03 matter-semantics obstruction survives P5-T05 stress as a
+current-basis scoped obstruction. The result is local: current ontology and
+current source-extension records do not derive a source-intrinsic non-bottom
+matter-sector discriminator law. Same-milestone continuation remains open
+through P5-T06 selector classification as
+\(\mathtt{blocked\_adoption\_open\_continuation}\).
+\end{verdict}
+
+\section{Refuted Overreads}
+
+This stress packet refutes these overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\MatSrcDiscLaw\) or \(\SemMatterSrc\) adoption;
+  \item stress survival as \(\MetricData(E)\) adoption;
+  \item stress survival as \(\geff\) adoption or scope expansion;
+  \item tag removal as derivation of matter coupling;
+  \item explicit matter-like labels as source-side law;
+  \item support-only checker output as proof authority;
+  \item current-basis obstruction as future source-extension impossibility;
+  \item current-basis obstruction as global theory rejection;
+  \item stress-energy semantics, stress-energy tensor, matter action,
+  detector semantics, coupling law, Einstein equations, benchmark promotion,
+  Gate Chair closure, or completed derivation.
+\end{enumerate}
+
+\section{Next Route}
+
+The next lawful route is P5-T06: one bounded Theoretical Continuation Selector
+packet to classify this scoped obstruction and choose exactly one next task.
+
+\section{References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter-semantics
+target formalization v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter-semantics
+discriminator obstruction v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter-semantics
+obstruction smuggling audit v1} [Internal research-control TeX artifact].
+
+\end{document}

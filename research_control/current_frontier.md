@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-052` and `handoff-0347`.
+`RT-20260629-053` and `handoff-0348`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-052` |
-| Latest handoff ID | `handoff-0347` |
-| Current status | `v12_p5_t04_obstruction_source_pure_as_written_pending_stress_no_promotion` |
-| Current route family | v12 p5 t04 obstruction audited next p5 t05 refuter stress |
+| Active task ID | `RT-20260629-053` |
+| Latest handoff ID | `handoff-0348` |
+| Current status | `v12_p5_t05_scoped_obstruction_survived_stress_pending_selector_no_promotion` |
+| Current route family | v12 p5 t05 scoped obstruction survived stress next p5 t06 selector |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | P5-T05 Refuter stress of the audited P5-T03 obstruction only |
-| Next recommended action | Run P5-T05 as one bounded refuter@0.2.0 transaction to stress-test the audited P5-T03 obstruction under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope-pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority overread. |
+| Required next authority | P5-T06 Theoretical Continuation Selector classification of the P5-T05 scoped obstruction only |
+| Next recommended action | Run P5-T06 as one bounded theoretical-continuation-selector@0.1.0 transaction to classify the stress-survived matter-semantics scoped obstruction and choose exactly one next route without adopting MatSrcDiscLaw_v1, adopting SemMatter_src, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-052/00_TASK.yaml`.
-- Active task objective: Audit the P5-T03 MatterSemanticsFailureObstruction_v1 for hidden imports of target matter semantics, detector protocols, stress-energy tensors, matter actions, conservation laws, variational principles, target metric dependence, benchmark behavior, coupling-law laundering, and support-only proof-authority overread.
-- Latest handoff path: `research_control/handoffs/handoff-0347.yaml`.
-- Latest handoff summary: V12 P5-T04 Smuggling Auditor completed with an audit pass as written for the P5-T03 MatterSemanticsFailureObstruction_v1. No hidden target matter semantics, detector protocol, stress-energy tensor, matter action, conservation law, variational principle, target metric, benchmark behavior, coupling-law laundering, or support-only proof-authority overread was detected. The pass is audit-only and pending P5-T05 stress.
-- Current route family: v12 p5 t04 obstruction audited next p5 t05 refuter stress.
-- Next recommended action: Run P5-T05 as one bounded refuter@0.2.0 transaction to stress-test the audited P5-T03 obstruction under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope-pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority overread.
+- Active task path: `research_control/tasks/RT-20260629-053/00_TASK.yaml`.
+- Active task objective: Stress-test the audited P5-T03 MatterSemanticsFailureObstruction_v1 under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority overread.
+- Latest handoff path: `research_control/handoffs/handoff-0348.yaml`.
+- Latest handoff summary: V12 P5-T05 Refuter completed with a scoped_obstruction stress result for the audited P5-T03 MatterSemanticsFailureObstruction_v1. The obstruction survives source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority erasure. The result is current-basis scoped and pending P5-T06 selector.
+- Current route family: v12 p5 t05 scoped obstruction survived stress next p5 t06 selector.
+- Next recommended action: Run P5-T06 as one bounded theoretical-continuation-selector@0.1.0 transaction to classify the stress-survived matter-semantics scoped obstruction and choose exactly one next route without adopting MatSrcDiscLaw_v1, adopting SemMatter_src, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P5-T05 as one bounded refuter@0.2.0 transaction to stress-test the audited P5-T03 obstruction under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope-pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority overread.
+Run P5-T06 as one bounded theoretical-continuation-selector@0.1.0 transaction to classify the stress-survived matter-semantics scoped obstruction and choose exactly one next route without adopting MatSrcDiscLaw_v1, adopting SemMatter_src, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-052`;
-- latest handoff: `handoff-0347`;
-- current status: `v12_p5_t04_obstruction_source_pure_as_written_pending_stress_no_promotion`;
+- active task: `RT-20260629-053`;
+- latest handoff: `handoff-0348`;
+- current status: `v12_p5_t05_scoped_obstruction_survived_stress_pending_selector_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0347.yaml`
-- `research_control/tasks/RT-20260629-052/00_TASK.yaml`
+- `research_control/handoffs/handoff-0348.yaml`
+- `research_control/tasks/RT-20260629-053/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0347*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0348*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

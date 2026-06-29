@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T22:51:07Z`
-- Source fingerprint: `65adfdd01cff73c09511ea6bb7ec2c824a547c1a5fd5da57730a6e5e564d0db7`
-- Nodes: `7329`
-- Edges: `30724`
+- Generated from tracked state as of: `2026-06-29T23:10:11Z`
+- Source fingerprint: `e87474971e92e246682264d1a918037e317f8fcbbbb1241a963295f9c879688c`
+- Nodes: `7364`
+- Edges: `30849`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 483 |
+| `completion_yaml` | 484 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 347 |
+| `handoff_yaml` | 348 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,31 +33,31 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 483 |
+| `agent_job` | `support_only` | 484 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3641 |
-| `blocked_burden` | `blocked` | 747 |
-| `claim_boundary` | `support_only` | 484 |
-| `draft_control_candidate` | `draft_control` | 330 |
+| `artifact` | `support_only` | 3655 |
+| `blocked_burden` | `blocked` | 757 |
+| `claim_boundary` | `support_only` | 485 |
+| `draft_control_candidate` | `draft_control` | 334 |
 | `draft_control_candidate` | `proposal_only` | 46 |
 | `draft_control_candidate` | `science_draft` | 28 |
-| `frozen_negative` | `frozen_negative` | 66 |
+| `frozen_negative` | `frozen_negative` | 67 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 347 |
+| `handoff` | `support_only` | 348 |
 | `human_gated_object` | `human_gated` | 219 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 51 |
+| `obstruction` | `blocked` | 52 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 18 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 198 |
+| `source_ontology_object` | `support_only` | 199 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 433 |
+| `task` | `support_only` | 434 |
 
 ## Frontier Table
 
@@ -162,9 +162,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260629-052`
-- Latest handoff: `handoff-0347`
-- Handoff path: `research_control/handoffs/handoff-0347.yaml`
-- Next action: Run P5-T05 as one bounded refuter@0.2.0 transaction to stress-test the audited P5-T03 obstruction under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, target g_eff scope-pressure, explicit-label collapse, missing-primitive pressure, and support-only proof-authority overread.
+- Active task: `RT-20260629-053`
+- Latest handoff: `handoff-0348`
+- Handoff path: `research_control/handoffs/handoff-0348.yaml`
+- Next action: Run P5-T06 as one bounded theoretical-continuation-selector@0.1.0 transaction to classify the stress-survived matter-semantics scoped obstruction and choose exactly one next route without adopting MatSrcDiscLaw_v1, adopting SemMatter_src, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
