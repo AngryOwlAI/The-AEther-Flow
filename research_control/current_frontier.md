@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260614-288` and `handoff-0321`.
+`RT-20260614-289` and `handoff-0322`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260614-288` |
-| Latest handoff ID | `handoff-0321` |
-| Current status | `p8_t02_final_validation_checkpoint_completed_no_promotion` |
-| Current route family | p8 t03 final continuation handoff required |
+| Active task ID | `RT-20260614-289` |
+| Latest handoff ID | `handoff-0322` |
+| Current status | `p8_t03_final_continuation_handoff_completed_p0_evidence_closure_required_no_promotion` |
+| Current route family | p0 evidence closure required before v11 goal completion |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is p8 final continuation handoff |
-| Required next authority | bounded P8-T03 final continuation handoff packet only |
-| Next recommended action | Run one bounded P8-T03 final continuation handoff packet for local research agents. |
+| Current burden | none for physics derivation; live control burden is p0 evidence closure |
+| Required next authority | bounded P0 evidence-closure packet only |
+| Next recommended action | Run one bounded P0 evidence-closure packet to create or verify standalone P0-T01 and P0-T02 receipts before declaring the v11 plan fully complete. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260614-288/00_TASK.yaml`.
-- Active task objective: Complete P8-T02 by running the full validation suite after implemented v11 phases and preparing the checkpoint transaction.
-- Latest handoff path: `research_control/handoffs/handoff-0321.yaml`.
-- Latest handoff summary: P8-T02 final validation and checkpoint preparation completed. Required validators passed and the transaction routes to P8-T03 final continuation handoff.
-- Current route family: p8 t03 final continuation handoff required.
-- Next recommended action: Run one bounded P8-T03 final continuation handoff packet for local research agents.
+- Active task path: `research_control/tasks/RT-20260614-289/00_TASK.yaml`.
+- Active task objective: Complete P8-T03 by creating the final implementation handoff for local AI agents after v11 recommendations 1 through 7 were integrated or queued.
+- Latest handoff path: `research_control/handoffs/handoff-0322.yaml`.
+- Latest handoff summary: P8-T03 final continuation handoff completed for recommendations 1 through 7. Strict all-task completion remains unproven until standalone P0 evidence is created or verified.
+- Current route family: p0 evidence closure required before v11 goal completion.
+- Next recommended action: Run one bounded P0 evidence-closure packet to create or verify standalone P0-T01 and P0-T02 receipts before declaring the v11 plan fully complete.
 
 ## Matter-Coupling Boundary
 
@@ -114,7 +114,7 @@ remains the authoritative source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P8-T03 final continuation handoff packet for local research agents.
+Run one bounded P0 evidence-closure packet to create or verify standalone P0-T01 and P0-T02 receipts before declaring the v11 plan fully complete.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -125,21 +125,21 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260614-288`;
-- latest handoff: `handoff-0321`;
-- current status: `p8_t02_final_validation_checkpoint_completed_no_promotion`;
+- active task: `RT-20260614-289`;
+- latest handoff: `handoff-0322`;
+- current status: `p8_t03_final_continuation_handoff_completed_p0_evidence_closure_required_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `p8_t02_final_validation_receipt`: PASS;
+- latest handoff validation `p8_t03_final_handoff_artifact`: created;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0321.yaml`
-- `research_control/tasks/RT-20260614-288/00_TASK.yaml`
+- `research_control/handoffs/handoff-0322.yaml`
+- `research_control/tasks/RT-20260614-289/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -154,7 +154,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0321*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0322*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 28). *Recommendations
