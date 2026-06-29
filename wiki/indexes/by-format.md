@@ -109,6 +109,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
+- `MD-RESEARCH-CONTROL-DESIGN-DISTANCE-TO-GR-STATUS-LAYERS-V1` `research_control/design/distance_to_gr_status_layers_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN` `research_control/design/documentation_curator_corpus_migration_plan.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-POST-MIGRATION-QUALITY-PLAN` `research_control/design/documentation_curator_post_migration_quality_plan.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `research_control/design/documentation_curator_publication_process.md`
@@ -571,6 +572,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-DISTANCE-TO-GR-STATUS-LAYERS-V1` `wiki/markdown/md-research-control-design-distance-to-gr-status-layers-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN` `wiki/markdown/md-research-control-design-documentation-curator-corpus-migration-plan.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-POST-MIGRATION-QUALITY-PLAN` `wiki/markdown/md-research-control-design-documentation-curator-post-migration-quality-plan.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `wiki/markdown/md-research-control-design-documentation-curator-publication-process.md`

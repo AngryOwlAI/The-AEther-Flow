@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-031` and `handoff-0326`.
+`RT-20260629-032` and `handoff-0327`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-031` |
-| Latest handoff ID | `handoff-0326` |
-| Current status | `v12_p0_t03_memory_bootstrap_completed_no_promotion` |
-| Current route family | v12 p0 t03 memory bootstrap completed next layered status taxonomy design |
+| Active task ID | `RT-20260629-032` |
+| Latest handoff ID | `handoff-0327` |
+| Current status | `v12_p1_t01_status_taxonomy_design_completed_no_science_change` |
+| Current route family | v12 p1 t01 layered status taxonomy completed next ledger schema migration |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning. |
-| Required next authority | P1-T01 layered status taxonomy design only |
-| Next recommended action | Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T02 as one bounded continue-research transaction to implement the additive Distance-to-GR ledger schema migration from distance_to_gr_status_layers_v1.md without changing scientific status. |
+| Required next authority | P1-T02 additive ledger schema migration only |
+| Next recommended action | Run P1-T02 as one bounded continue-research transaction to implement the additive Distance-to-GR ledger schema migration from distance_to_gr_status_layers_v1.md without changing scientific status. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-031/00_TASK.yaml`.
-- Active task objective: Ensure the v12 implementation plan and P0-T02 baseline summary are discoverable through source-first memory without treating generated derivatives as authority.
-- Latest handoff path: `research_control/handoffs/handoff-0326.yaml`.
-- Latest handoff summary: V12 P0-T03 memory/bootstrap discoverability completed. The v12 implementation plan and P0-T02 baseline summary are registered as source-first control objects and generated retrieval layers remain non-authoritative.
-- Current route family: v12 p0 t03 memory bootstrap completed next layered status taxonomy design.
-- Next recommended action: Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning.
+- Active task path: `research_control/tasks/RT-20260629-032/00_TASK.yaml`.
+- Active task objective: Design a layered status taxonomy for the Distance-to-GR ledger without changing scientific meaning.
+- Latest handoff path: `research_control/handoffs/handoff-0327.yaml`.
+- Latest handoff summary: V12 P1-T01 layered status taxonomy design completed. The design artifact maps all current Distance-to-GR ledger rows into additive control, mathematical, physical, promotion, and overread-guard layers without changing scientific meaning or editing the ledger CSV.
+- Current route family: v12 p1 t01 layered status taxonomy completed next ledger schema migration.
+- Next recommended action: Run P1-T02 as one bounded continue-research transaction to implement the additive Distance-to-GR ledger schema migration from distance_to_gr_status_layers_v1.md without changing scientific status.
 
 ## Matter-Coupling Boundary
 
@@ -114,7 +114,7 @@ remains the authoritative source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning.
+Run P1-T02 as one bounded continue-research transaction to implement the additive Distance-to-GR ledger schema migration from distance_to_gr_status_layers_v1.md without changing scientific status.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -125,23 +125,26 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-031`;
-- latest handoff: `handoff-0326`;
-- current status: `v12_p0_t03_memory_bootstrap_completed_no_promotion`;
+- active task: `RT-20260629-032`;
+- latest handoff: `handoff-0327`;
+- current status: `v12_p1_t01_status_taxonomy_design_completed_no_science_change`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `bootstrap_memory_system`: PASS;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `targeted_v12_query`: PASS;
+- latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `targeted_design_query`: PASS;
+- latest handoff validation `validate_documentation_impact`: PASS;
+- latest handoff validation `validate_research_control`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0326.yaml`
-- `research_control/tasks/RT-20260629-031/00_TASK.yaml`
+- `research_control/handoffs/handoff-0327.yaml`
+- `research_control/tasks/RT-20260629-032/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -156,7 +159,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0326*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0327*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 28). *Recommendations
