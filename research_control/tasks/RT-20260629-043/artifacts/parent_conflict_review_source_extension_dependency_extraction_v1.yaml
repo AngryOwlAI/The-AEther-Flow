@@ -1,0 +1,21 @@
+artifact_id: "parent_conflict_review_source_extension_dependency_extraction_v1"
+task_id: "RT-20260629-043"
+status: "completed"
+created_at: "2026-06-29T19:11:23Z"
+mode: "parent_child_parallel_synthesis"
+child_outputs:
+  - "research_control/tasks/RT-20260629-043/artifacts/child_phys_math_source_extension_dependency_extraction_v1.yaml"
+  - "research_control/tasks/RT-20260629-043/artifacts/child_phys_phil_source_extension_dependency_extraction_v1.yaml"
+conflict_status: "no_unresolved_conflict"
+resolution_rounds: 0
+shared_consensus:
+  - "P4-T01 is dependency extraction only."
+  - "Current stack contains scoped source-extension and conditional-theorem inputs."
+  - "No compression, adoption, rejection, or downstream GR promotion is authorized."
+  - "P4-T02 should formalize the minimization/compression target before constructor work."
+unique_contributions_preserved:
+  - source: "child_phys_math"
+    contribution: "Dependency rows and essential-for-g_eff / essential-for-matter-coupling-precondition partition."
+  - source: "child_phys_phil"
+    contribution: "Authority labels, overread guards, and support-only/tooling non-authority fence."
+parent_resolution: "Fuse both children into a Markdown extraction artifact plus YAML table. Preserve all category and overread language literally."

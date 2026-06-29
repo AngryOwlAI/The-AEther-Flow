@@ -1,0 +1,277 @@
+completion_id: "AJC-AJ-RT-20260629-043-001"
+job_id: "AJ-RT-20260629-043-001"
+task_id: "RT-20260629-043"
+source_role_id: "ontology-formalizer"
+completed_at: "2026-06-29T19:11:23Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  related_plan_task_id: "P4-T01"
+  plan_phase_id: "P4"
+  implemented_task_scope: "Extracted and classified the source-extension dependency stack used by Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence."
+  downstream_tasks_not_implemented:
+    - "P4-T02"
+    - "P4-T03"
+    - "P5"
+    - "P6"
+    - "P7"
+    - "P8"
+    - "P9"
+    - "P10"
+    - "P11"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/tasks/RT-20260629-043/artifacts/child_phys_math_source_extension_dependency_extraction_v1.yaml"
+  - "research_control/tasks/RT-20260629-043/artifacts/child_phys_phil_source_extension_dependency_extraction_v1.yaml"
+  - "research_control/tasks/RT-20260629-043/artifacts/parent_conflict_review_source_extension_dependency_extraction_v1.yaml"
+  - "research_control/tasks/RT-20260629-043/artifacts/parent_fusion_notes_source_extension_dependency_extraction_v1.md"
+  - "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md"
+  - "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_table_v1.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260629-043/00_TASK.yaml"
+  - "research_control/tasks/RT-20260629-043/DDR-20260629-043.md"
+  - "research_control/tasks/RT-20260629-043/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260629-043/jobs/AJ-RT-20260629-043-001.yaml"
+  - "research_control/tasks/RT-20260629-043/jobs/completions/AJC-AJ-RT-20260629-043-001.yaml"
+  - "research_control/tasks/RT-20260629-043/roles/ontology-formalizer@0.2.0--RT-20260629-043.yaml"
+  - "research_control/handoffs/handoff-0338.yaml"
+  - "research_control/handoffs/handoff-0338.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0337.yaml"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex"
+  - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_no_refresh source_object_count=458 relationship_row_count=2507"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260629-042 latest_handoff=handoff-0337"
+validation_status: "PASS"
+verdict: "v12_p4_t01_dependency_stack_extracted_no_compression_or_promotion"
+coherent_resolution_summary: "P4-T01 extracted and classified the current source-extension dependency stack. It identifies dependencies essential for scoped g_eff and matter-coupling precondition evidence while preserving no compression, no adoption, no rejection, and no downstream GR promotion."
+next_recommendation: "Run P4-T02 as one bounded continue-research transaction to formalize the minimization/compression target over SourceExtensionStack_v1."
+mathematical_decisiveness_contract:
+  active: true
+  status: "satisfied_by_dependency_map_payload"
+physics_progress_status:
+  status: "no_distance_delta"
+  plan_required_status_meaning: "dependency_extraction_completed"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Extract and classify the source-extension dependency stack used by Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence before compression or matter-semantics route selection."
+  explanation: "The packet produces a source-extension dependency table and extraction artifact only. It does not adopt source laws, MetricData(E), g_eff, coupling law, matter coupling, stress-energy semantics, Einstein equations, benchmark status, or completed derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  explanation: "No Distance-to-GR ledger row is changed. The dependency extraction prepares P4-T02 target formalization."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "prior source-localization context only"
+  - burden: "Resp_lc"
+    status: "dependency extracted for Xi_X^R accepted source-extension selector data; no new adoption"
+  - burden: "M_src"
+    status: "dependency extracted for scoped source-only M_src^{GSC}; no scope expansion"
+  - burden: "MetricData(E)"
+    status: "not adopted; scoped carrier evidence remains no MetricData(E)"
+  - burden: "g_eff"
+    status: "dependency extracted for scoped source-extension g_eff object; no unscoped g_eff and no scope change"
+  - burden: "matter coupling"
+    status: "dependency extracted for parameterized-witness evidence/precondition only; no coupling law matter coupling or stress-energy semantics"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; proposal-only or conditional where cited"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "no Gate Chair verdict is requested or issued by this extraction"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P4-T02 target formalization is selected"
+new_mathematical_payload:
+  - payload_type: "bridge_map_candidate"
+    object_name: "SourceExtensionStack_v1 dependency extraction"
+    source_path: "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md"
+    summary: "Extracts the source-extension dependency graph across Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence."
+  - payload_type: "bridge_map_candidate"
+    object_name: "source_extension_dependency_table_v1"
+    source_path: "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_table_v1.yaml"
+    summary: "Classifies dependency rows as conditional_theorem_input, conservative_source_extension, support_only_tooling_artifact, or forbidden_target_import_if_used_physically."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "dependency_map_update"
+    object_name: "SourceExtensionStack_v1 dependency extraction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md"
+    burden_effect: "narrows"
+    summary: "Names the dependency bands and essential sets for scoped g_eff and matter-coupling precondition evidence."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "source_extension_classification"
+    object_name: "source_extension_dependency_table_v1"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_table_v1.yaml"
+    burden_effect: "classifies"
+    summary: "Machine-readable table with 22 dependency rows and P4-T01 categories."
+source_extension_category:
+  classification_action: "dependency_extraction"
+  introduced_new_source_extension_data: false
+  adopted_or_rejected_data: false
+  categories_present:
+    - "conditional_theorem_input"
+    - "conservative_source_extension"
+    - "support_only_tooling_artifact"
+    - "forbidden_target_import_if_used_physically"
+  categories_absent:
+    - "derived_from_current_source_ontology"
+    - "new_source_law_candidate"
+    - "new_ontology_primitive_candidate"
+    - "unknown_or_unclassified"
+  note: "Absence of derived/current-ontology or new-law rows is not a no-go result; P4-T02 must formalize compression before minimization claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 459
+    relationship_row_count: 2510
+    semantic_row_count: 459
+    vault_row_count: 459
+    warning_summary: "Local retrieval refreshed at packet start after registering the P4-T01 artifact."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION --json"
+      query_type: "lookup"
+      query_text: "MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION"
+      returned_object_ids:
+        - "MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION"
+      note: "Lookup confirms the registered P4-T01 dependency extraction artifact."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      note: "Lookup confirms the registered current-frontier source row before synchronization."
+  canonical_inspections:
+    - object_id: "MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md"
+      source_hash: "e6715ebd6a2e2b45179b5d22b1a4790492263e619858bac8734df8fa4ee2bf06"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d3e274997ad752e0310820732c3af958abe8c45246780e45542f157e4fad8ec5"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+      source_hash: "e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory index, and .local files are retrieval layers only and not authority."
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "dependency_extraction"
+  consequence: "P4-T02 target formalization available"
+  forbidden_overread: "No global no-go theorem, future source-extension impossibility, source-law adoption, MetricData(E) adoption, g_eff adoption, matter-coupling derivation, Einstein equations, benchmark promotion, or completed derivation is recorded."
+route_cycle_control:
+  cycle_family: "post_v12_source_extension_minimization"
+  current_cycle_step: "dependency_extraction"
+  prior_related_tasks:
+    - "RT-20260629-042"
+    - "RT-20260614-060"
+    - "RT-20260614-134"
+    - "RT-20260614-222"
+    - "RT-20260614-269"
+  same_burden_repetition_count: 0
+  cycle_risk: "low"
+  orbit_avoidance_reason: "The packet adds a new dependency map and table rather than repeating constructor/audit/stress/Gate Chair cycles."
+  selected_orbit_exit: "P4-T02_minimization_target_formalization"
+  next_role_consequence: "ontology_formalizer_target_formalization"
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: false
+  freeze_decision: "not_frozen"
+  rationale: "P4-T02 remains a constructive target-formalization packet."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P4-T01 dependency extraction only."
+  summary: "P4-T01 extracts dependencies and preserves all downstream claim gates. It does not decide compression or promote any scientific status."
+  forbidden_conclusions:
+    - "dependency extraction as compression success"
+    - "dependency extraction as compression obstruction"
+    - "dependency extraction as source-extension adoption"
+    - "canonical ontology edit"
+    - "M_src adoption beyond existing scoped source-only status"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "matter-coupling adoption"
+    - "matter coupling"
+    - "stress-energy semantics import"
+    - "stress-energy tensor construction"
+    - "matter action import"
+    - "detector semantics import"
+    - "Einstein-equation derivation"
+    - "exact-GR benchmark promotion"
+    - "benchmark Gate Chair closure"
+    - "completed derivation"
+    - "no downstream GR promotion"
+    - "global theory rejection"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260629-043/artifacts/child_phys_math_source_extension_dependency_extraction_v1.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260629-043/artifacts/child_phys_phil_source_extension_dependency_extraction_v1.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260629-043/artifacts/parent_conflict_review_source_extension_dependency_extraction_v1.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md"
+    shared_consensus_summary: "Both children agree that P4-T01 is dependency extraction only and that P4-T02 should formalize the compression target."
+    unique_phys_math_contributions: "Dependency table and essential-use partition for scoped g_eff and matter-coupling precondition evidence."
+    unique_phys_phil_contributions: "Authority-boundary discipline for scoped evidence, support-only tooling, and forbidden target imports."
+    novelty_preservation_summary: "The packet creates the first source-extension dependency table over the post-v12 stack."
+    claim_boundary_preservation_summary: "All adoption matter-coupling stress-energy Einstein-equation benchmark completed-derivation and global-theory-rejection blocks remain active."
+resolved_project_improvement_signals: []
+project_improvement_signals: []

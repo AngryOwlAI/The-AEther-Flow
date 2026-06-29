@@ -190,6 +190,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `markdown/publication-briefs/source-authority.publication-brief.md`
 - `MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF` `markdown/publication-briefs/technical-requirements.publication-brief.md`
 - `MD-V12-P0-BASELINE-SUMMARY` `research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md`
+- `MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -657,6 +658,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `wiki/markdown/md-source-authority-publication-brief.md`
 - `WIKI-MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF` `wiki/markdown/md-technical-requirements-publication-brief.md`
 - `WIKI-MD-V12-P0-BASELINE-SUMMARY` `wiki/markdown/md-v12-p0-baseline-summary.md`
+- `WIKI-MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `wiki/markdown/md-v12-p4-t01-source-extension-dependency-extraction.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`

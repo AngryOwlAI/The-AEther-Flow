@@ -1,0 +1,409 @@
+artifact_id: "source_extension_dependency_table_v1"
+task_id: "RT-20260629-043"
+status: "completed"
+created_at: "2026-06-29T19:11:23Z"
+authority: "draft/control dependency extraction table"
+claim_boundary: "dependency extraction only; no compression, adoption, rejection, Gate Chair verdict, or downstream GR promotion"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Extract and classify source-extension dependencies before compression or matter-semantics route selection."
+category_vocabulary:
+  - "derived_from_current_source_ontology"
+  - "conditional_theorem_input"
+  - "conservative_source_extension"
+  - "new_source_law_candidate"
+  - "new_ontology_primitive_candidate"
+  - "support_only_tooling_artifact"
+  - "forbidden_target_import_if_used_physically"
+  - "unknown_or_unclassified"
+category_counts:
+  derived_from_current_source_ontology: 0
+  conditional_theorem_input: 8
+  conservative_source_extension: 11
+  new_source_law_candidate: 0
+  new_ontology_primitive_candidate: 0
+  support_only_tooling_artifact: 1
+  forbidden_target_import_if_used_physically: 2
+  unknown_or_unclassified: 0
+dependency_rows:
+  - dependency_id: "D-RESP-001"
+    datum: "Xi_X^R=(O_X^R,N_X^R,K_X^R,o_X^R,nu_X^R,kappa_X^R) and S_X^+=(S_X,Xi_X^R)"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex"
+      - "research_control/design/frontier_theorem_inventory.md#item-6-resp_lc"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#resp_lc"
+    used_by:
+      - "Resp_lc"
+      - "M_src upstream context"
+      - "g_eff upstream context"
+      - "matter-coupling precondition upstream context"
+    essential_for:
+      - "Resp_lc"
+    current_status: "accepted_as_source_extension_data"
+    extraction_note: "Explicit selector data may be read by SelResp^+(S_X^+) but S_X alone does not determine the response selector."
+    overread_guard: "not detector semantics; not matter coupling; not M_src; not g_eff; not Einstein equations; no downstream GR promotion"
+  - dependency_id: "D-RESP-002"
+    datum: "S_X-only forgetful reduct obstruction and old selector blockage"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#resp_lc"
+    used_by:
+      - "Resp_lc boundary"
+      - "compression feasibility precondition"
+    essential_for:
+      - "P4-T02 compression target"
+    current_status: "old_S_X_route_obstructed"
+    extraction_note: "Any compression map must preserve the known obstruction rather than silently treating S_X as sufficient."
+    overread_guard: "not a global no-go; not future source-extension impossibility"
+  - dependency_id: "D-MSRC-001"
+    datum: "M_src^{GSC}(E) scoped source-only object under H1-H13 and fail-closed obstruction discipline"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+      - "research_control/design/frontier_theorem_inventory.md#item-7-m_src_gsc"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#m_src"
+    used_by:
+      - "g_eff"
+      - "matter-coupling bridge target"
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "g_eff"
+      - "matter-coupling precondition evidence"
+    current_status: "scoped_source_only_adopted_object"
+    extraction_note: "Real scoped source-only M_src status, but not a target manifold, target atlas, target metric, or GR derivation."
+    overread_guard: "no MetricData(E); no g_eff scope expansion; no matter coupling; no Einstein equations; no benchmark promotion"
+  - dependency_id: "D-MSRC-002"
+    datum: "H1-H13 integrated source-only theorem inputs"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-130/artifacts/162_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_ATTEMPT.tex"
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "M_src"
+      - "g_eff upstream source carrier context"
+    essential_for:
+      - "M_src"
+      - "g_eff"
+    current_status: "conditional_source_only_theorem_boundary"
+    extraction_note: "Carrier/quotient support, coverage, chart tokens, transitions, separation/countability/regularity, conditional soldering/FVR, bottom, no-target, no-process-authority, and readiness clauses."
+    overread_guard: "conditional inputs are not independent source laws"
+  - dependency_id: "D-MSRC-003"
+    datum: "Cov_src^{GSC}(E) site-coverage source-only topology analogue"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex"
+      - "research_control/tasks/RT-20260614-130/artifacts/162_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_ATTEMPT.tex"
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "M_src"
+      - "g_eff source carrier context"
+    essential_for:
+      - "M_src"
+      - "g_eff"
+    current_status: "selected_source_only_route_inside_M_src_scope"
+    extraction_note: "Coverage route is a source-only analogue and not target topology."
+    overread_guard: "target topology import remains forbidden"
+  - dependency_id: "D-MSRC-004"
+    datum: "Source chart-support tokens and source transition tokens with identity, inverse, composition, and cocycle conditions"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-126/artifacts/158_M_SRC_GSC_SOURCE_TRANSITION_TOKEN_GROUPOID_CONDITIONS.tex"
+      - "research_control/tasks/RT-20260614-130/artifacts/162_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_ATTEMPT.tex"
+    used_by:
+      - "M_src"
+      - "g_eff transition context"
+    essential_for:
+      - "M_src"
+      - "g_eff"
+    current_status: "candidate_conditions_inside_scoped_M_src_boundary"
+    extraction_note: "Transition tokens are source syntax and candidate conditions, not target smooth transition maps."
+    overread_guard: "not target atlas; not target coordinate transition"
+  - dependency_id: "D-MSRC-005"
+    datum: "RegSold_src^{GSC} and FVR_src^{GSC} conditional or proposal-only inputs"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-130/artifacts/162_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_ATTEMPT.tex"
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+      - "research_control/design/frontier_theorem_inventory.md#item-12-finite_variation_robustness"
+    used_by:
+      - "M_src"
+      - "g_eff upstream context"
+    essential_for:
+      - "M_src"
+    current_status: "conditional_or_unadopted_inside_M_src_boundary; proposal-only where applicable"
+    extraction_note: "Soldering and finite-variation use remain conditional; no independent source-law adoption follows."
+    overread_guard: "proposal-only; no source-law adoption; no arbitrary robustness theorem"
+  - dependency_id: "D-MSRC-006"
+    datum: "No-target-import factorization, BottomSrc, and OB-MSRC-* fail-closed obstruction discipline"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-128/artifacts/160_M_SRC_GSC_NO_TARGET_IMPORT_CRITERION.tex"
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "M_src"
+      - "g_eff"
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "M_src"
+      - "g_eff"
+      - "matter-coupling precondition evidence"
+    current_status: "fail_closed_guard_condition"
+    extraction_note: "If a non-bottom step needs target context or process authority, the branch must fail closed."
+    overread_guard: "fail-closed; proof_authority=false for process artifacts"
+  - dependency_id: "D-GEFF-001"
+    datum: "Scoped MetricData^{GSC-cand}_{src} carrier evidence"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#g_eff"
+    used_by:
+      - "g_eff"
+      - "matter-coupling bridge target"
+    essential_for:
+      - "g_eff"
+    current_status: "scoped_source_extension_evidence_only"
+    extraction_note: "Carrier slot D_E is used by geffCand only inside declared scope."
+    overread_guard: "no MetricData(E); no adopted metric data datum"
+  - dependency_id: "D-GEFF-002"
+    datum: "SigScaleCont_src^{GSC} selector evidence/precondition"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "g_eff"
+    essential_for:
+      - "g_eff"
+    current_status: "scoped_evidence_precondition_only"
+    extraction_note: "Supplies source signature, scale, and continuity token record S_E inside scoped geffCand."
+    overread_guard: "not source law; not Lorentzian signature import"
+  - dependency_id: "D-GEFF-003"
+    datum: "MetricFormAssign_src^{GSC} metric-form-assignment evidence/precondition"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      - "research_control/tasks/RT-20260614-220/artifacts/249_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "g_eff"
+    essential_for:
+      - "g_eff"
+    current_status: "scoped_evidence_precondition_only"
+    extraction_note: "Supplies Q_src(E), pairing data, transport obligation, nondegeneracy or controlled-bottom certificate, and fail-closed bottom behavior."
+    overread_guard: "not source law; not target metric"
+  - dependency_id: "D-GEFF-004"
+    datum: "Declared T_src(E) source transition and transport data"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "g_eff"
+    essential_for:
+      - "g_eff"
+    current_status: "declared_source_side_transition_data"
+    extraction_note: "Theta_E is source transition/transport context for the scoped candidate."
+    overread_guard: "not target covariance; not field equation"
+  - dependency_id: "D-GEFF-005"
+    datum: "g_eff^{GSC-cand}(E;G^beta,T_src(E)) candidate/object record"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      - "research_control/tasks/RT-20260614-220/artifacts/249_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      - "research_control/design/frontier_theorem_inventory.md#item-8-g_eff_gsc_cand"
+    used_by:
+      - "g_eff"
+      - "matter-coupling bridge target"
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "g_eff"
+      - "matter-coupling precondition evidence"
+    current_status: "adopted_only_as_scoped_source_extension_g_eff_object"
+    extraction_note: "Scoped object status can be cited as context for later route selection only."
+    overread_guard: "no g_eff unscoped adoption; no target Lorentzian metric; no matter coupling"
+  - dependency_id: "D-GEFF-006"
+    datum: "N_E, B_E, F_E, C_E, O_E, L_E bottom, finite-scope, no-target, obstruction, and limitation records"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "g_eff"
+    essential_for:
+      - "g_eff"
+    current_status: "fail_closed_guard_and_scope_record"
+    extraction_note: "These records prevent the scoped candidate from becoming a target metric or process-authority proof."
+    overread_guard: "proof_authority=false; fail-closed; no benchmark recovery"
+  - dependency_id: "D-MC-001"
+    datum: "Matter-Coupling Bridge Target v1 / MatterCouplingBridgeTarget_v1"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/design/frontier_theorem_inventory.md#item-9-matter_coupling_bridge_target_v1"
+      - "research_control/tasks/RT-20260614-264/artifacts/293_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_TARGET_V1_FORMALIZATION.tex"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#matter_coupling"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "draft_control_target_formalized"
+    extraction_note: "Defines bridge obligations and eligibility only."
+    overread_guard: "not matter coupling; not stress-energy; not Einstein equations"
+  - dependency_id: "D-MC-002"
+    datum: "MCBridgeCand(E), SMI(E), and bridge certificate data as prior scoped bridge-candidate evidence/precondition"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-264/artifacts/293_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_TARGET_V1_FORMALIZATION.tex"
+      - "research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "scoped_bridge_candidate_evidence_precondition_only"
+    extraction_note: "Route context for finite/local parameterized witness construction."
+    overread_guard: "not coupling law; not matter coupling; not stress-energy semantics"
+  - dependency_id: "D-MC-003"
+    datum: "ParamFiniteLocalTarget_v1(E) hybrid graph-indexed finite/local target"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-264/artifacts/293_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_TARGET_V1_FORMALIZATION.tex"
+      - "research_control/design/frontier_theorem_inventory.md#item-10-matter_coupling_precondition_evidence"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "draft_control_target"
+    extraction_note: "Specifies source sectors, tokens, states, edge records, morphisms, variations, restrictions, locality, bottom, no-target, and invariance obligations."
+    overread_guard: "target formalization only; no coupling law"
+  - dependency_id: "D-MC-004"
+    datum: "ParamFiniteLocalWitness_v1(E) / PFLFW(E) finite cyclic source-index witness family"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex"
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "accepted_scoped_source_extension_parameterized_witness_evidence_precondition"
+    extraction_note: "Finite/local source-family witness data may be cited only as evidence/precondition."
+    overread_guard: "not universal matter sector; not matter coupling; not stress-energy"
+  - dependency_id: "D-MC-005"
+    datum: "BridgeSlot_n(E)"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex"
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "accepted_scoped_source_extension_parameterized_witness_evidence_precondition"
+    extraction_note: "Pre-tensorial source-interface slot with interface records, quality ledger, finite support, relabeling witness, uniformity witness, source balance/flux ledger, no-target certificate, and failure labels."
+    overread_guard: "not stress-energy semantics; not stress-energy tensor; not matter action; not coupling law"
+  - dependency_id: "D-MC-006"
+    datum: "NoTargetImport_n certificate"
+    category: "conditional_theorem_input"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex"
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "accepted_guard_inside_scoped_witness_evidence"
+    extraction_note: "Certificate excludes target topology, atlas, metric, Lorentzian signature, proper time, detector calibration, empirical matter fields, stress-energy tensor, matter action, Bianchi identity, Einstein equations, benchmark fit, and process authority."
+    overread_guard: "no target import; proof_authority=false"
+  - dependency_id: "D-MC-007"
+    datum: "Finite/local source-family data: C_n sectors, tokens, states, edge-local records, relabelings, restrictions, variations, invariance ledger, bottom branch"
+    category: "conservative_source_extension"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex"
+      - "research_control/tasks/RT-20260614-267/artifacts/296_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_REFUTER_STRESS_TEST.tex"
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "matter-coupling precondition evidence"
+    essential_for:
+      - "matter-coupling precondition evidence"
+    current_status: "finite_local_source_side_witness_data"
+    extraction_note: "Provides parameterized witness family for finite/local precondition evidence only."
+    overread_guard: "not arbitrary finite source package theorem; not universal matter sector"
+  - dependency_id: "D-SUP-001"
+    datum: "Checker, registry, validator, handoff, approval, generated derivative, local cache, and commit status surfaces"
+    category: "support_only_tooling_artifact"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      - "AGENTS.md"
+    used_by:
+      - "auditability"
+      - "reproducibility support"
+    essential_for:
+      - "control receipts only"
+    current_status: "support_only"
+    extraction_note: "May support tracking or reproducibility; never mathematical proof authority."
+    overread_guard: "proof_authority=false"
+  - dependency_id: "D-FORBID-001"
+    datum: "Target topology, target atlas, target coordinate transition, target metric, Lorentzian signature, proper time, and benchmark behavior"
+    category: "forbidden_target_import_if_used_physically"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+      - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+    used_by:
+      - "negative guard"
+    essential_for:
+      - "source-purity boundary"
+    current_status: "forbidden_if_used_physically"
+    extraction_note: "These are not dependencies to import; they are disallowed contexts that force bottom or obstruction if required."
+    overread_guard: "target import invalidates source-only route"
+  - dependency_id: "D-FORBID-002"
+    datum: "Stress-energy semantics, stress-energy tensor, matter action, detector semantics, Bianchi identity, Einstein equations, benchmark recovery"
+    category: "forbidden_target_import_if_used_physically"
+    source_artifact_paths:
+      - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#matter_coupling"
+    used_by:
+      - "negative guard"
+    essential_for:
+      - "matter-coupling precondition boundary"
+    current_status: "forbidden_if_used_physically"
+    extraction_note: "Matter-coupling evidence/precondition cannot import tensorial or empirical matter semantics."
+    overread_guard: "no matter coupling; no stress-energy; no Einstein equations; no downstream GR promotion"
+essential_dependency_sets:
+  g_eff:
+    - "D-MSRC-001"
+    - "D-MSRC-002"
+    - "D-MSRC-003"
+    - "D-MSRC-004"
+    - "D-MSRC-006"
+    - "D-GEFF-001"
+    - "D-GEFF-002"
+    - "D-GEFF-003"
+    - "D-GEFF-004"
+    - "D-GEFF-005"
+    - "D-GEFF-006"
+  matter_coupling_precondition_evidence:
+    - "D-MSRC-001"
+    - "D-GEFF-005"
+    - "D-MC-001"
+    - "D-MC-002"
+    - "D-MC-003"
+    - "D-MC-004"
+    - "D-MC-005"
+    - "D-MC-006"
+    - "D-MC-007"
+blocked_conclusions:
+  - "compression success"
+  - "compression obstruction"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope change"
+  - "matter-coupling derivation"
+  - "matter-coupling adoption"
+  - "stress-energy semantics"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"

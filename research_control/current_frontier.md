@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-042` and `handoff-0337`.
+`RT-20260629-043` and `handoff-0338`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-042` |
-| Latest handoff ID | `handoff-0337` |
-| Current status | `v12_p3_t01_source_extension_minimization_route_selected_objective_declared` |
-| Current route family | v12 p3 t01 route selected next p4 t01 source extension dependency extraction |
+| Active task ID | `RT-20260629-043` |
+| Latest handoff ID | `handoff-0338` |
+| Current status | `v12_p4_t01_source_extension_dependency_extraction_completed_no_compression_decision` |
+| Current route family | v12 p4 t01 dependency extraction to p4 t02 target formalization |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P4-T01 source-extension dependency extraction only |
-| Next recommended action | Run P4-T01 as one bounded continue-research transaction to extract and classify the source-extension dependency graph for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence. |
+| Required next authority | P4-T02 minimal source-law candidate or irreducible-extension target formalization only |
+| Next recommended action | Run P4-T02 as one bounded continue-research transaction to formalize SourceExtensionStack_v1, ExtensionDatum(E), DerivableDatum(E), ConservativeExtension(E), IrreduciblePrimitiveCandidate(E), TargetImportRisk(E), CompressionMap_v1, MinimalSourceLawPackage_v1, NoTargetImportPreservingCompression_v1, and CompressionFailureObstruction_v1. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-042/00_TASK.yaml`.
-- Active task objective: Select the first post-v12 tracked physics objective and declare it in tracked research-control state without promoting any scientific claim.
-- Latest handoff path: `research_control/handoffs/handoff-0337.yaml`.
-- Latest handoff summary: V12 P3-T01 selector packet completed and P3-T02 control-state declaration was satisfied in the same transaction. The selected first post-v12 scientific objective is P4-T01 source-extension dependency extraction for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence under the matter_coupling milestone. No scientific claim status was promoted.
-- Current route family: v12 p3 t01 route selected next p4 t01 source extension dependency extraction.
-- Next recommended action: Run P4-T01 as one bounded continue-research transaction to extract and classify the source-extension dependency graph for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence.
+- Active task path: `research_control/tasks/RT-20260629-043/00_TASK.yaml`.
+- Active task objective: Extract and classify the source-extension dependency stack used by current Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence without deciding compression, adoption, rejection, or downstream GR promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0338.yaml`.
+- Latest handoff summary: V12 P4-T01 source-extension dependency extraction completed. The packet extracted and classified the dependency stack used by Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence under the matter_coupling milestone. It produced source_extension_dependency_extraction_v1.md and source_extension_dependency_table_v1.yaml. No compression, adoption, rejection, or scientific promotion occurred.
+- Current route family: v12 p4 t01 dependency extraction to p4 t02 target formalization.
+- Next recommended action: Run P4-T02 as one bounded continue-research transaction to formalize SourceExtensionStack_v1, ExtensionDatum(E), DerivableDatum(E), ConservativeExtension(E), IrreduciblePrimitiveCandidate(E), TargetImportRisk(E), CompressionMap_v1, MinimalSourceLawPackage_v1, NoTargetImportPreservingCompression_v1, and CompressionFailureObstruction_v1.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P4-T01 as one bounded continue-research transaction to extract and classify the source-extension dependency graph for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence.
+Run P4-T02 as one bounded continue-research transaction to formalize SourceExtensionStack_v1, ExtensionDatum(E), DerivableDatum(E), ConservativeExtension(E), IrreduciblePrimitiveCandidate(E), TargetImportRisk(E), CompressionMap_v1, MinimalSourceLawPackage_v1, NoTargetImportPreservingCompression_v1, and CompressionFailureObstruction_v1.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-042`;
-- latest handoff: `handoff-0337`;
-- current status: `v12_p3_t01_source_extension_minimization_route_selected_objective_declared`;
+- active task: `RT-20260629-043`;
+- latest handoff: `handoff-0338`;
+- current status: `v12_p4_t01_source_extension_dependency_extraction_completed_no_compression_decision`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0337.yaml`
-- `research_control/tasks/RT-20260629-042/00_TASK.yaml`
+- `research_control/handoffs/handoff-0338.yaml`
+- `research_control/tasks/RT-20260629-043/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0337*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0338*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
