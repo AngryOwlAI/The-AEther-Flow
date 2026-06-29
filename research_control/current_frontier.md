@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-047` and `handoff-0342`.
+`RT-20260629-048` and `handoff-0343`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-047` |
-| Latest handoff ID | `handoff-0342` |
-| Current status | `v12_p4_t05_scoped_obstruction_survived_stress_pending_selector_no_promotion` |
-| Current route family | v12 p4 t05 refuter stress to p4 t06 selector |
+| Active task ID | `RT-20260629-048` |
+| Latest handoff ID | `handoff-0343` |
+| Current status | `v12_p4_t06_selector_routes_to_p5_t01_matter_semantics_preflight_no_promotion` |
+| Current route family | v12 p4 t06 route selected next p5 t01 matter semantics preflight |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P4-T06 selector only |
-| Next recommended action | Run P4-T06 as one bounded Theoretical Continuation Selector transaction to classify the stress-survived scoped obstruction and select exactly one next route without adoption or promotion. |
+| Current burden | `matter_coupling`; status: unchanged |
+| Required next authority | P5-T01 matter-semantics burden selector only |
+| Next recommended action | Run P5-T01 as one bounded continue-research transaction to select the first source-side matter-semantics preflight packet before coupling-law or Einstein-equation work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-047/00_TASK.yaml`.
-- Active task objective: Stress-test the audited P4-T03 source-extension compression obstruction and total compression-map attempt under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints.
-- Latest handoff path: `research_control/handoffs/handoff-0342.yaml`.
-- Latest handoff summary: V12 P4-T05 Refuter stress completed with verdict scoped_obstruction. The audited P4-T03 compression obstruction survived dependency deletion, finite variation, source-token relabeling, tag removal, canonical-source-only replacement, support-only erasure, hidden source-law pressure, and global-impossibility overread as a current-basis obstruction. No adoption, rejection, or scientific promotion occurred.
-- Current route family: v12 p4 t05 refuter stress to p4 t06 selector.
-- Next recommended action: Run P4-T06 as one bounded Theoretical Continuation Selector transaction to classify the stress-survived scoped obstruction and select exactly one next route without adoption or promotion.
+- Active task path: `research_control/tasks/RT-20260629-048/00_TASK.yaml`.
+- Active task objective: Classify the P4 compression obstruction after construction audit and stress and select exactly one next lawful route without adoption promotion or ledger edit.
+- Latest handoff path: `research_control/handoffs/handoff-0343.yaml`.
+- Latest handoff summary: V12 P4-T06 selector packet completed. It classified the P4-T05 stress-survived compression obstruction as scoped current-basis route evidence and selected P5-T01 matter-semantics burden selector as the next bounded continue-research task. No scientific claim status was promoted.
+- Current route family: v12 p4 t06 route selected next p5 t01 matter semantics preflight.
+- Next recommended action: Run P5-T01 as one bounded continue-research transaction to select the first source-side matter-semantics preflight packet before coupling-law or Einstein-equation work.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P4-T06 as one bounded Theoretical Continuation Selector transaction to classify the stress-survived scoped obstruction and select exactly one next route without adoption or promotion.
+Run P5-T01 as one bounded continue-research transaction to select the first source-side matter-semantics preflight packet before coupling-law or Einstein-equation work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,25 +143,25 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-047`;
-- latest handoff: `handoff-0342`;
-- current status: `v12_p4_t05_scoped_obstruction_survived_stress_pending_selector_no_promotion`;
+- active task: `RT-20260629-048`;
+- latest handoff: `handoff-0343`;
+- current status: `v12_p4_t06_selector_routes_to_p5_t01_matter_semantics_preflight_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PENDING_CURRENT_RUN;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING_CURRENT_RUN;
-- latest handoff validation `graph_freshness_check`: PENDING_CURRENT_RUN;
-- latest handoff validation `validate_documentation_impact`: PENDING_CURRENT_RUN;
-- latest handoff validation `validate_research_control`: PENDING_CURRENT_RUN;
+- latest handoff validation `bootstrap_memory_system`: PASS;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
+- latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `validate_documentation_impact`: PASS;
+- latest handoff validation `validate_research_control`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0342.yaml`
-- `research_control/tasks/RT-20260629-047/00_TASK.yaml`
+- `research_control/handoffs/handoff-0343.yaml`
+- `research_control/tasks/RT-20260629-048/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0342*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0343*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
