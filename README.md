@@ -1,5 +1,4 @@
 <!-- authority: explanatory -->
----
 
 # The Æther-Flow Interpretation of Relativity Research Project
 
@@ -8,6 +7,15 @@
 <p align="center">
   <img src="assets/images/readme-banner.png" alt="Editorial cosmic banner for The Æther Research Program with the subtitle 'Ontology, exact-GR benchmark package, open derivation program, and AI research-agent system.'" width="100%" />
 </p>
+
+---
+
+### Project Website
+
+The project website is an informational surface for the project. It is under
+development and is not a finished product:
+
+<https://the-aether-flow-website.pages.dev>
 
 ---
 
@@ -563,7 +571,5 @@ from the canonical type registry rather than duplicated local constant sets.
 │   ├── pdf/
 │   ├── html/
 │   └── indexes/
-└── Step-by-step-Comments/
-    ├── README.md
-    └── Comments - Phase-1.md through Comments - Phase-5.md
+
 ```
