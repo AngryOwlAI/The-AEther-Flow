@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-030` and `handoff-0325`.
+`RT-20260629-031` and `handoff-0326`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-030` |
-| Latest handoff ID | `handoff-0325` |
-| Current status | `v12_p0_t02_baseline_snapshot_completed_no_promotion` |
-| Current route family | v12 p0 t02 baseline snapshot completed next memory bootstrap |
+| Active task ID | `RT-20260629-031` |
+| Latest handoff ID | `handoff-0326` |
+| Current status | `v12_p0_t03_memory_bootstrap_completed_no_promotion` |
+| Current route family | v12 p0 t03 memory bootstrap completed next layered status taxonomy design |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P0-T03 as one bounded continue-research transaction to ensure the v12 plan and baseline snapshot are discoverable through source-first memory before P1 work. |
-| Required next authority | P0-T03 memory/bootstrap discoverability only |
-| Next recommended action | Run P0-T03 as one bounded continue-research transaction to ensure the v12 plan and baseline snapshot are discoverable through source-first memory before P1 work. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning. |
+| Required next authority | P1-T01 layered status taxonomy design only |
+| Next recommended action | Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-030/00_TASK.yaml`.
-- Active task objective: Create the v12 P0-T02 post-v11 baseline authority snapshot from tracked state after P0-T01 intake without changing physics state.
-- Latest handoff path: `research_control/handoffs/handoff-0325.yaml`.
-- Latest handoff summary: V12 P0-T02 baseline authority snapshot completed. The packet records handoff-0323 as the post-v11 closure baseline and handoff-0324 as current routing authority after P0-T01, with no physics claim promotion.
-- Current route family: v12 p0 t02 baseline snapshot completed next memory bootstrap.
-- Next recommended action: Run P0-T03 as one bounded continue-research transaction to ensure the v12 plan and baseline snapshot are discoverable through source-first memory before P1 work.
+- Active task path: `research_control/tasks/RT-20260629-031/00_TASK.yaml`.
+- Active task objective: Ensure the v12 implementation plan and P0-T02 baseline summary are discoverable through source-first memory without treating generated derivatives as authority.
+- Latest handoff path: `research_control/handoffs/handoff-0326.yaml`.
+- Latest handoff summary: V12 P0-T03 memory/bootstrap discoverability completed. The v12 implementation plan and P0-T02 baseline summary are registered as source-first control objects and generated retrieval layers remain non-authoritative.
+- Current route family: v12 p0 t03 memory bootstrap completed next layered status taxonomy design.
+- Next recommended action: Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning.
 
 ## Matter-Coupling Boundary
 
@@ -114,7 +114,7 @@ remains the authoritative source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P0-T03 as one bounded continue-research transaction to ensure the v12 plan and baseline snapshot are discoverable through source-first memory before P1 work.
+Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -125,22 +125,23 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-030`;
-- latest handoff: `handoff-0325`;
-- current status: `v12_p0_t02_baseline_snapshot_completed_no_promotion`;
+- active task: `RT-20260629-031`;
+- latest handoff: `handoff-0326`;
+- current status: `v12_p0_t03_memory_bootstrap_completed_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `blocking_drift_detected`: False;
-- latest handoff validation `p0_t02_snapshot`: created;
+- latest handoff validation `bootstrap_memory_system`: PASS;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
+- latest handoff validation `targeted_v12_query`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0325.yaml`
-- `research_control/tasks/RT-20260629-030/00_TASK.yaml`
+- `research_control/handoffs/handoff-0326.yaml`
+- `research_control/tasks/RT-20260629-031/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -155,7 +156,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0325*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0326*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 28). *Recommendations

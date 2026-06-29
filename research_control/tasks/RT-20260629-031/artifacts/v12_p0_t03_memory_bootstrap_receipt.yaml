@@ -1,0 +1,103 @@
+receipt_id: "V12-P0-T03-MEMORY-BOOTSTRAP-RECEIPT"
+task_id: "RT-20260629-031"
+plan_task_id: "recommendations-v12-P0-T03"
+created_at: "2026-06-29T14:40:03Z"
+authority: "control"
+scope: "source-first memory discoverability for the v12 implementation plan and P0-T02 baseline summary"
+pre_transaction_source_hashes:
+  v12_plan_sha256: "e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+  p0_t02_baseline_snapshot_sha256: "22757a216ed91e84fc1816a01771eb064ba26ada283f3854d7b2d15051fe9093"
+  p0_t02_baseline_summary_sha256: "dce7a6bea7dd2c9dd22726734c93bf723aaf8d079f7ea13157359d568d2c0064"
+  p0_t01_completion_sha256: "a4c3fd672c01843fa4da1e0e90bea0f1b1e1b9438ed4844abd06707a79803364"
+  p0_t02_completion_sha256: "5cde14fbfcd49da8a857ba202a9545d612acffc364bfc5766445da015dcf3ebd"
+  current_frontier_pre_transaction_sha256: "edb26fc14f90cfc1105c062d98cc5a2e2d591d1bb06738b5482bd04f77b82c7f"
+  markdown_source_registry_pre_transaction_sha256: "30a8b3dc3f97be714cdeef2983cb59837dd9e7ebee278f8bf79f504fdce887c4"
+  file_object_registry_pre_transaction_sha256: "3c1ed102f7f35efc3df53764cf478985cbbc38a5463ba737a85a43fcbca4f25c"
+  content_semantic_registry_pre_transaction_sha256: "3cb9525e11bab264946de8358403b92f13b140f59e2aa68565713069c1ff7ce0"
+pre_transaction_memory_query:
+  command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"recommendations_implementation_plan_continue_task-v12\" --limit 10 --json"
+  status: "no_canonical_plan_source_row_returned"
+  observed_behavior: "The query completed but returned no source-first object for the v12 implementation plan."
+source_objects_registered:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+    registry: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+    format: "markdown"
+    role: "implementation_plan"
+    authority_status: "project_control"
+    source_hash: "e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+    generated_outputs: "wiki/markdown/md-recommendations-implementation-plan-continue-task-v12.md"
+    authority_note: "Implementation guidance and routing provenance only. Not physics authority."
+  - object_id: "MD-V12-P0-BASELINE-SUMMARY"
+    registry: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    path: "research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md"
+    format: "markdown"
+    role: "control_artifact"
+    authority_status: "project_control"
+    source_hash: "dce7a6bea7dd2c9dd22726734c93bf723aaf8d079f7ea13157359d568d2c0064"
+    generated_outputs: "wiki/markdown/md-v12-p0-baseline-summary.md"
+    authority_note: "Control evidence only. Not physics authority."
+associated_control_records_read:
+  - "research_control/tasks/RT-20260629-029/jobs/completions/AJC-AJ-RT-20260629-029-001.yaml"
+  - "research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_authority_snapshot.yaml"
+  - "research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md"
+  - "research_control/tasks/RT-20260629-030/jobs/completions/AJC-AJ-RT-20260629-030-001.yaml"
+generated_retrieval_objects:
+  - object_id: "WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+    path: "wiki/markdown/md-recommendations-implementation-plan-continue-task-v12.md"
+    layer: "wiki"
+    authority_status: "generated_noncanonical"
+  - object_id: "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+    path: ".local/content_semantics/markdown/md-recommendations-implementation-plan-continue-task-v12.txt"
+    layer: "semantic_extract"
+    authority_status: "generated_noncanonical"
+  - object_id: "VAULT-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+    path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-recommendations-implementation-plan-continue-task-v12.md"
+    layer: "obsidian_vault"
+    authority_status: "generated_noncanonical"
+  - object_id: "WIKI-MD-V12-P0-BASELINE-SUMMARY"
+    path: "wiki/markdown/md-v12-p0-baseline-summary.md"
+    layer: "wiki"
+    authority_status: "generated_noncanonical"
+  - object_id: "SEMANTIC-MD-V12-P0-BASELINE-SUMMARY"
+    path: ".local/content_semantics/markdown/md-v12-p0-baseline-summary.txt"
+    layer: "semantic_extract"
+    authority_status: "generated_noncanonical"
+  - object_id: "VAULT-MD-V12-P0-BASELINE-SUMMARY"
+    path: ".local/obsidian/aether-flow-wiki/02_sources/markdown/md-v12-p0-baseline-summary.md"
+    layer: "obsidian_vault"
+    authority_status: "generated_noncanonical"
+acceptance_evidence:
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  targeted_query: "PASS"
+  source_vs_retrieval_separation: "recorded"
+  targeted_query_returned_canonical_source_row: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+  source_object_count_after_refresh: 453
+  relationship_row_count_after_refresh: 2486
+  semantic_row_count_after_refresh: 453
+  vault_row_count_after_refresh: 453
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_p0_t03_memory_bootstrap_only"
+  meaning: "P0-T03 is project-control memory hygiene only. It changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter-coupling derivation stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+claim_boundary:
+  control_evidence_only: true
+  physics_claim_promotion: false
+  distance_to_gr_changed: false
+  canonical_ontology_edit: false
+  source_law_adoption: false
+  metric_data_adoption: false
+  geff_scope_change: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promotion: false
+retrieval_authority_boundary:
+  memory_wiki_semantic_extracts_remain_retrieval_layers_only: true
+  file_object_registry_rows_are_routing_metadata_only: true
+  object_relationship_rows_are_navigation_metadata_only: true
+  obsidian_vault_notes_are_local_retrieval_only: true
+  local_cache_authority: "none"
+  proof_authority: false
+verdict: "P0-T03 memory/bootstrap discoverability satisfied after validation and checkpoint."

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T14:23:00Z`
-- Source fingerprint: `c109616d97289fb1da3764f86a6f99ed3b0c7b16463e0ff86e118ca760e28403`
-- Nodes: `6807`
-- Edges: `28283`
+- Generated from tracked state as of: `2026-06-29T14:40:03Z`
+- Source fingerprint: `03fbcce77b0fefc1035e582a00a6f716e391327406f5149e4f896d2cf9fadd62`
+- Nodes: `6834`
+- Edges: `28387`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 461 |
+| `completion_yaml` | 462 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 325 |
+| `handoff_yaml` | 326 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 461 |
+| `agent_job` | `support_only` | 462 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3355 |
-| `blocked_burden` | `blocked` | 640 |
-| `claim_boundary` | `support_only` | 462 |
+| `artifact` | `support_only` | 3369 |
+| `blocked_burden` | `blocked` | 649 |
+| `claim_boundary` | `support_only` | 463 |
 | `draft_control_candidate` | `draft_control` | 310 |
 | `draft_control_candidate` | `proposal_only` | 45 |
 | `draft_control_candidate` | `science_draft` | 26 |
 | `frozen_negative` | `frozen_negative` | 63 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 325 |
+| `handoff` | `support_only` | 326 |
 | `human_gated_object` | `human_gated` | 214 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -57,7 +57,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 192 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 411 |
+| `task` | `support_only` | 412 |
 
 ## Frontier Table
 
@@ -110,6 +110,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_summary_as_physics_evidence` | Blocked claim: baseline summary as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure` | Blocked claim: benchmark Gate Chair closure | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure_or_suspension` | Blocked permission: benchmark Gate Chair closure or suspension | `registries/ROLE_EXECUTION_REGISTRY.csv` |
@@ -158,13 +159,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:checker_failure_as_global_theorem` | Blocked claim: checker failure as global theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:checker_failure_as_physics_theorem` | Blocked claim: checker failure as physics theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:checker_implementation_inside_selector` | Blocked claim: checker implementation inside selector | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:checker_metrics_as_distance_to_gr_delta` | Blocked claim: checker metrics as Distance-to-GR delta | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260629-030`
-- Latest handoff: `handoff-0325`
-- Handoff path: `research_control/handoffs/handoff-0325.yaml`
-- Next action: Run P0-T03 as one bounded continue-research transaction to ensure the v12 plan and baseline snapshot are discoverable through source-first memory before P1 work.
+- Active task: `RT-20260629-031`
+- Latest handoff: `handoff-0326`
+- Handoff path: `research_control/handoffs/handoff-0326.yaml`
+- Next action: Run P1-T01 as one bounded continue-research transaction to design the Distance-to-GR layered status taxonomy without changing scientific meaning.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

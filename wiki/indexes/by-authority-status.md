@@ -487,6 +487,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-SCRIPTS-RESEARCH-CONTROL` `wiki/markdown/md-readme-scripts-research-control.md`
 - `WIKI-MD-README-TESTS` `wiki/markdown/md-readme-tests.md`
 - `WIKI-MD-README-TEX-SHARED` `wiki/markdown/md-readme-tex-shared.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v12.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
@@ -565,6 +566,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
 - `WIKI-MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `wiki/markdown/md-source-authority-publication-brief.md`
 - `WIKI-MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF` `wiki/markdown/md-technical-requirements-publication-brief.md`
+- `WIKI-MD-V12-P0-BASELINE-SUMMARY` `wiki/markdown/md-v12-p0-baseline-summary.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -851,6 +853,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README` `README.md`
 - `MD-README-RESEARCH-CONTROL` `research_control/README.md`
 - `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12` `implementations_plans/recommendations_implementation_plan_continue_task-v12.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-CORPUS-MIGRATION-PLAN` `research_control/design/documentation_curator_corpus_migration_plan.md`
@@ -924,3 +927,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-USER-MODIFIED-PROJECT` `.codex/skills/user-modified-project/SKILL.md`
 - `MD-SKILL-VISUAL-EXPLAINER` `.codex/skills/visual-explainer/SKILL.md`
 - `MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `.codex/skills/visual-explainer/subskills/mermaid-documentation/SKILL.md`
+- `MD-V12-P0-BASELINE-SUMMARY` `research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md`
