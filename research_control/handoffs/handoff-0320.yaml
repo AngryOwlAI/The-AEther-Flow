@@ -1,0 +1,110 @@
+handoff_id: "handoff-0320"
+created_at: "2026-06-28T23:52:02Z"
+task_id: "RT-20260614-287"
+decision_id: "DDR-20260614-287"
+job_id: "AJ-RT-20260614-287-001"
+completion_path: "research_control/tasks/RT-20260614-287/jobs/completions/AJC-AJ-RT-20260614-287-001.yaml"
+source_task_id: "RT-20260614-287"
+source_job_id: "AJ-RT-20260614-287-001"
+source_completion_id: "AJC-AJ-RT-20260614-287-001"
+status: "completed"
+summary: "P1-T04 generated current-state report tooling completed. render_current_frontier.py now renders current_frontier.md from tracked authority with write check and json modes."
+next_action: "Run one bounded P8-T02 final validation and checkpoint packet now that P1 repair is complete and P2 through P7 were already audited as complete."
+loop_risk_route: "p8_t02_final_validation_required"
+claim_boundary:
+  allowed_next_scope: "bounded P8-T02 final validation and checkpoint packet only"
+  p1_t04_renderer_implemented: true
+  current_frontier_generated: true
+  current_frontier_policy: "generated_snapshot_only_not_authority"
+  p1_repair_completed: true
+  p2_through_p7_completed_by_prior_audit: true
+  p8_t02_required: true
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "current_frontier.md as independent authority"
+  - "generated renderer output as scientific proof"
+p1_t04_result:
+  route: "p1_t04_generated_current_state_report"
+  artifact_path: "research_control/tasks/RT-20260614-287/artifacts/p1_t04_generated_current_state_report.md"
+  script_path: "scripts/research_control/render_current_frontier.py"
+  test_path: "tests/test_render_current_frontier.py"
+  current_frontier_path: "research_control/current_frontier.md"
+  write_mode: true
+  check_mode: true
+  json_mode: true
+  current_frontier_policy: "generated_snapshot_only_not_authority"
+  p1_repair_completed: true
+  p8_t02_required: true
+route_decision:
+  p2_through_p7_completed_by_prior_audit: true
+  audit_evidence: "research_control/tasks/RT-20260614-283/artifacts/p8_t01_cross_phase_consistency_audit.md"
+  next_plan_task_id: "recommendations-v11-P8-T02"
+  reason: "P1-T04 completed the final known P1 repair item after P8-T01. The next lawful v11 packet is P8-T02 final validation."
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_control_renderer_only"
+  meaning: "P1-T04 is a project-control renderer packet only. It reads the Distance-to-GR ledger and changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "p8_final_validation_checkpoint"
+  plan_task_id: "recommendations-v11-P8-T02"
+  objective: "Run the full validation suite after implemented phases and checkpoint or report exact repair path."
+  route_label: "p8_t02_final_validation"
+  must_preserve:
+    - "project-system validation only; no physics promotion"
+    - "current_frontier.md remains generated snapshot only and not independent authority"
+    - "no canonical ontology edit"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  render_current_frontier_write: "PASS"
+  render_current_frontier_check: "PASS"
+  render_current_frontier_json: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
