@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-035` and `handoff-0330`.
+`RT-20260629-036` and `handoff-0331`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-035` |
-| Latest handoff ID | `handoff-0330` |
-| Current status | `v12_p1_t04_current_frontier_layered_renderer_completed_no_science_change` |
-| Current route family | v12 p1 t04 renderer completed next p1 cross check |
+| Active task ID | `RT-20260629-036` |
+| Latest handoff ID | `handoff-0331` |
+| Current status | `v12_p1_t05_layered_status_cross_check_completed_p1_closed_no_science_change` |
+| Current route family | v12 p1 t05 cross check completed next p2 t01 schema |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional. |
-| Required next authority | P1-T05 P1 layered ledger cross-check only |
-| Next recommended action | Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P2-T01 as one bounded continue-research transaction to design the canonical frontier theorem inventory schema. |
+| Required next authority | P2-T01 canonical frontier theorem inventory schema design only |
+| Next recommended action | Run P2-T01 as one bounded continue-research transaction to design the canonical frontier theorem inventory schema. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-035/00_TASK.yaml`.
-- Active task objective: Update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible without changing scientific meaning.
-- Latest handoff path: `research_control/handoffs/handoff-0330.yaml`.
-- Latest handoff summary: V12 P1-T04 current-frontier layered renderer update completed. The generated Distance-to-GR table now exposes layered control mathematical physical promotion and overread-guard fields, with high-risk row boundary notes for matter_coupling g_eff Einstein equations and benchmark promotion.
-- Current route family: v12 p1 t04 renderer completed next p1 cross check.
-- Next recommended action: Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional.
+- Active task path: `research_control/tasks/RT-20260629-036/00_TASK.yaml`.
+- Active task objective: Audit P1 outputs to confirm the layered Distance-to-GR status split is implemented, validated, rendered, and non-promotional.
+- Latest handoff path: `research_control/handoffs/handoff-0331.yaml`.
+- Latest handoff summary: V12 P1-T05 layered status cross-check completed. P1 is closed as a control-layer representation and guard-hardening phase only. Ledger validator renderer and current-frontier evidence agree on the layered Distance-to-GR split and no protected physics conclusion was promoted.
+- Current route family: v12 p1 t05 cross check completed next p2 t01 schema.
+- Next recommended action: Run P2-T01 as one bounded continue-research transaction to design the canonical frontier theorem inventory schema.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional.
+Run P2-T01 as one bounded continue-research transaction to design the canonical frontier theorem inventory schema.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-035`;
-- latest handoff: `handoff-0330`;
-- current status: `v12_p1_t04_current_frontier_layered_renderer_completed_no_science_change`;
+- active task: `RT-20260629-036`;
+- latest handoff: `handoff-0331`;
+- current status: `v12_p1_t05_layered_status_cross_check_completed_p1_closed_no_science_change`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0330.yaml`
-- `research_control/tasks/RT-20260629-035/00_TASK.yaml`
+- `research_control/handoffs/handoff-0331.yaml`
+- `research_control/tasks/RT-20260629-036/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0330*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0331*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
