@@ -245,6 +245,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `wiki/markdown/md-research-control-p6-t01-payload-density-metrics-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `wiki/markdown/md-research-control-tasks-rt-20260614-133-external-review-brief-m-src-gsc-integrated-theorem.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-033-DISTANCE-TO-GR-LAYERED-STATUS-MIGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260629-033-distance-to-gr-layered-status-migration-report.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md.md`
@@ -638,6 +639,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
 - `MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md`
 - `MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260629-033-DISTANCE-TO-GR-LAYERED-STATUS-MIGRATION-REPORT` `research_control/tasks/RT-20260629-033/artifacts/distance_to_gr_layered_status_migration_report.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `.agents/roles/physics/gate-chair.v0.1.0.md`

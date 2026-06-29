@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T15:00:42Z`
-- Source fingerprint: `07c0c641d4c17540d31a16207d2043904c56ed9ad16b74ea93da5d0e0cac0b4a`
-- Nodes: `6854`
-- Edges: `28491`
+- Generated from tracked state as of: `2026-06-29T15:23:41Z`
+- Source fingerprint: `0bfd7285b948b96c47575eafa3989c49f36bb7b3887bc114a3a0ba7bd1b132cb`
+- Nodes: `6871`
+- Edges: `28595`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 463 |
+| `completion_yaml` | 464 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 327 |
+| `handoff_yaml` | 328 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 463 |
+| `agent_job` | `support_only` | 464 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3382 |
-| `blocked_burden` | `blocked` | 652 |
-| `claim_boundary` | `support_only` | 464 |
+| `artifact` | `support_only` | 3394 |
+| `blocked_burden` | `blocked` | 653 |
+| `claim_boundary` | `support_only` | 465 |
 | `draft_control_candidate` | `draft_control` | 310 |
 | `draft_control_candidate` | `proposal_only` | 45 |
 | `draft_control_candidate` | `science_draft` | 26 |
 | `frozen_negative` | `frozen_negative` | 63 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 327 |
+| `handoff` | `support_only` | 328 |
 | `human_gated_object` | `human_gated` | 214 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -57,7 +57,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 192 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 413 |
+| `task` | `support_only` | 414 |
 
 ## Frontier Table
 
@@ -65,7 +65,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | --- | --- | --- | --- |
 | Resp_lc | `ledger:resp_lc` | `ledger_row` | `accepted_scoped` | Xi_X^R adopted only as admissible source-extension data for Resp_lc continuation through S_X^+; old S_X selector obstruction remains valid and downstream M_src |
 | M_src | `ledger:m_src` | `ledger_row` | `accepted_scoped` | Updated by RT-20260614-134 Phase 9 Gate Chair review to record scoped M_src adoption while g_eff matter coupling Einstein equations benchmark promotion and comp |
-| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | Gate Chair adopted g_eff^{GSC-cand}(E;G^beta |
+| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | Gate Chair adopted g_eff^{GSC-cand}(E;G^beta,T_src(E)) only as scoped source-extension g_eff object. No canonical ontology edit no MetricData(E) adoption no sou |
 | B_E^{rec} | `object:b_e_rec` | `source_extension_evidence_precondition` | `source_extension_evidence` | Constructs the recovery-bridge candidate map on a declared finite/local source family with explicit bottom branches. |
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
@@ -162,9 +162,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260629-032`
-- Latest handoff: `handoff-0327`
-- Handoff path: `research_control/handoffs/handoff-0327.yaml`
-- Next action: Run P1-T02 as one bounded continue-research transaction to implement the additive Distance-to-GR ledger schema migration from distance_to_gr_status_layers_v1.md without changing scientific status.
+- Active task: `RT-20260629-033`
+- Latest handoff: `handoff-0328`
+- Handoff path: `research_control/handoffs/handoff-0328.yaml`
+- Next action: Run P1-T03 as one bounded continue-research transaction to harden validator guard tests for layered ledger semantics without changing scientific status.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

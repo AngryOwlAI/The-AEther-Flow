@@ -1865,6 +1865,36 @@ class ResearchControlTests(unittest.TestCase):
         self.validator.validate_distance_to_gr_ledger(report)
         self.assertEqual(report.errors, [])
 
+    def test_distance_to_gr_ledger_requires_layered_overread_guards(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            registries = root / "registries"
+            registries.mkdir(parents=True)
+            source_path = REPO_ROOT / "registries" / "DISTANCE_TO_GR_LEDGER.csv"
+            rows = list(csv.DictReader(source_path.read_text(encoding="utf-8").splitlines()))
+            for row in rows:
+                if row["burden_id"] == "matter_coupling":
+                    tokens = row["overread_guard"].split(";")
+                    tokens.remove("no_stress_energy_tensor")
+                    row["overread_guard"] = ";".join(tokens)
+                    break
+            target_path = registries / "DISTANCE_TO_GR_LEDGER.csv"
+            with target_path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(
+                    handle,
+                    fieldnames=self.validator.DISTANCE_TO_GR_LEDGER_COLUMNS,
+                )
+                writer.writeheader()
+                writer.writerows(rows)
+
+            report = self.validator.ValidationReport()
+            with mock.patch.object(self.validator, "REGISTRY_DIR", registries):
+                self.validator.validate_distance_to_gr_ledger(report)
+
+        joined = "\n".join(report.errors)
+        self.assertIn("matter_coupling missing overread_guard tokens", joined)
+        self.assertIn("no_stress_energy_tensor", joined)
+
     def test_future_refuter_stress_rejects_generic_ontology_loop_route(self) -> None:
         completion_extra = "\n".join(
             [
