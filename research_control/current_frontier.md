@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-040` and `handoff-0335`.
+`RT-20260629-041` and `handoff-0336`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-040` |
-| Latest handoff ID | `handoff-0335` |
-| Current status | `v12_p2_t04_frontier_theorem_inventory_validator_completed_no_science_change` |
-| Current route family | v12 p2 t04 inventory validator completed next p2 t05 reader summary |
+| Active task ID | `RT-20260629-041` |
+| Latest handoff ID | `handoff-0336` |
+| Current status | `v12_p2_t05_frontier_inventory_reader_summary_completed_no_authority_drift` |
+| Current route family | v12 p2 t05 reader summary completed next p3 t01 theoretical selector |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P2-T05 as one bounded continue-research transaction to render an inventory summary for reader surfaces without authority drift. |
-| Required next authority | P2-T05 reader-surface inventory summary without authority drift |
-| Next recommended action | Run P2-T05 as one bounded continue-research transaction to render an inventory summary for reader surfaces without authority drift. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately. |
+| Required next authority | P3-T01 theoretical continuation selector for the first post-v12 tracked objective |
+| Next recommended action | Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-040/00_TASK.yaml`.
-- Active task objective: Add validator coverage for the frontier theorem inventory required fields source paths physical non-conclusions and overread guards without changing scientific status.
-- Latest handoff path: `research_control/handoffs/handoff-0335.yaml`.
-- Latest handoff summary: V12 P2-T04 validator packet completed. The standard research-control validator now lints the canonical frontier theorem inventory for registration required fields source paths source-authority types physical non-conclusions missing theorem fields high-risk overread guards and generated-only source authority. Focused fixture tests cover missing non-conclusions and bad source paths. No scientific claim status was changed.
-- Current route family: v12 p2 t04 inventory validator completed next p2 t05 reader summary.
-- Next recommended action: Run P2-T05 as one bounded continue-research transaction to render an inventory summary for reader surfaces without authority drift.
+- Active task path: `research_control/tasks/RT-20260629-041/00_TASK.yaml`.
+- Active task objective: Update a reader-facing GR roadmap publication surface with a frontier theorem inventory summary while preserving canonical source authority and no physics claim promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0336.yaml`.
+- Latest handoff summary: V12 P2-T05 reader-summary packet completed. The GR Derivation Roadmap publication stack now includes a frontier theorem inventory summary, names the canonical inventory source, and states that generated reader surfaces are noncanonical. No scientific claim status was changed.
+- Current route family: v12 p2 t05 reader summary completed next p3 t01 theoretical selector.
+- Next recommended action: Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P2-T05 as one bounded continue-research transaction to render an inventory summary for reader surfaces without authority drift.
+Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,16 +143,16 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-040`;
-- latest handoff: `handoff-0335`;
-- current status: `v12_p2_t04_frontier_theorem_inventory_validator_completed_no_science_change`;
+- active task: `RT-20260629-041`;
+- latest handoff: `handoff-0336`;
+- current status: `v12_p2_t05_frontier_inventory_reader_summary_completed_no_authority_drift`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `bootstrap_memory_system`: PASS;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `focused_unittest_research_control`: PASS;
 - latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `publication_process`: PASS;
 - latest handoff validation `validate_documentation_impact`: PASS;
 - latest handoff validation `validate_research_control`: PASS;
 
@@ -161,8 +161,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0335.yaml`
-- `research_control/tasks/RT-20260629-040/00_TASK.yaml`
+- `research_control/handoffs/handoff-0336.yaml`
+- `research_control/tasks/RT-20260629-041/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -177,7 +177,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0335*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0336*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

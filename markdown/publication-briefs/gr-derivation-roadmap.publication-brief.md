@@ -9,12 +9,14 @@ narrative_structure:
   - "Open with the roadmap as a control surface, not a physics proof."
   - "Walk the reader through the ordered milestones and status vocabulary."
   - "Explain the AgentJob fields and mathematical payload rule that keep future work tied to a burden."
+  - "Summarize the frontier theorem inventory as a review aid while preserving its canonical source path and nonauthority boundary."
   - "Separate ledger evidence, validator pass state, source-extension packets, finite toy packets, and human gates."
   - "Close with source-inspection guidance and forbidden overclaims."
 visual_strategy: "process_timeline"
 source_basis:
   - "research_control/design/gr_derivation_burden_map.md"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/frontier_theorem_inventory.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_JOB_REGISTRY.csv"
   - "research_control/README.md"
@@ -29,6 +31,7 @@ acceptance_criteria:
   - "Explains each roadmap milestone and the Distance-to-GR ledger status vocabulary."
   - "Names the required target_derivation_milestone and milestone_burden fields for future physics AgentJobs."
   - "Explains the new_mathematical_payload rule without treating validator success as physics evidence."
+  - "Summarizes the frontier theorem inventory without converting scoped source-extension evidence into physical adoption."
   - "Preserves Resp_lc, M_src, AtlasGlue_src^+, finite toy, source-extension, draft/control, source-only, and human-gated qualifiers."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:

@@ -90,6 +90,29 @@ The safe summary is therefore precise: the project has advanced controlled
 source-side packets, but it has not completed the bridge from source
 structure to a promoted GR benchmark.
 
+## Frontier Inventory Summary
+
+The canonical inventory source is
+`research_control/design/frontier_theorem_inventory.md`. This page only
+summarizes that source for readers. If the page and the inventory disagree,
+the inventory source, its cited artifacts, and the relevant registry rows
+govern.
+
+The inventory currently groups 15 frontier items into reviewable categories:
+
+| Inventory category | Representative items | Safe reading | Blocked overread |
+| --- | --- | --- | --- |
+| Missing or blocked source laws | `source_ontology_primitives`, `EqSrc`, `RetainH`, `GenH`, `einstein_equations`, benchmark closure | Required primitives, equivalence, retention, generator, field-equation, or protected-gate burdens remain open. | No completed derivation, no Einstein equations, no benchmark promotion. |
+| Local or source-extension evidence | `ObsLoc_lc`, `Resp_lc`, `FVR_src^{GSC}` | Source-side local witness or source-extension data exists only under its stated assumptions and scope. | No detector semantics, no matter coupling, no unscoped metric, no downstream GR recovery. |
+| Scoped source objects and preconditions | `M_src^{GSC}`, `g_eff^{GSC-cand}`, `MatterCouplingBridgeTarget_v1`, parameterized finite-local evidence | These are scoped source-only or source-extension objects, targets, or preconditions for later review. | No `MetricData(E)` adoption, no unscoped `g_eff`, no coupling-law adoption, no stress-energy semantics, no matter action. |
+| Frozen route | `finite_toy_metric_response` | A local toy metric-response route is frozen negative under its exact obstruction. | No global theory rejection and no future source-extension impossibility. |
+| Review use | source paths, assumptions, non-conclusions, missing-theorem fields, and overread guards | The inventory is useful as an external-review checklist and source pointer. | The inventory summary is not proof authority and generated reader surfaces are noncanonical. |
+
+The inventory therefore improves reviewability, not physics status. It does
+not derive GR, adopt `M_src` as a target manifold, adopt an unscoped
+`g_eff`, derive matter coupling, supply stress-energy semantics, derive
+Einstein equations, promote a benchmark, or close a Gate Chair review.
+
 ## Freeze Criteria
 
 Freeze labels preserve negative information. For the response-localization
@@ -117,6 +140,7 @@ and human gates where the control system says a gate is required.
 
 - AEther-Flow Project. (2026). `research_control/design/gr_derivation_burden_map.md` [GR derivation burden map].
 - AEther-Flow Project. (2026). `registries/DISTANCE_TO_GR_LEDGER.csv` [Distance-to-GR ledger].
+- AEther-Flow Project. (2026). `research_control/design/frontier_theorem_inventory.md` [Frontier theorem inventory].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_JOB_REGISTRY.csv` [AgentJob registry].
 - AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].

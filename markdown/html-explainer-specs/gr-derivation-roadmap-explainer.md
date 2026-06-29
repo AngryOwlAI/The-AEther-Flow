@@ -13,11 +13,12 @@ migration_status: "reviewed"
 source_materials:
   - "research_control/design/gr_derivation_burden_map.md"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/frontier_theorem_inventory.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_JOB_REGISTRY.csv"
   - "research_control/README.md"
   - "AGENTS.md"
-claim_boundary: "Human-only publication explainer for the GR derivation roadmap. It orients readers to milestone burdens, Distance-to-GR ledger categories, future AgentJob fields, mathematical payload requirements, source-extension and finite toy categories, and current-frontier cautions without updating physics status, adopting M_src, deriving g_eff, matter coupling, or Einstein equations, promoting the benchmark, issuing a Gate Chair verdict, or treating generated outputs as authority."
+claim_boundary: "Human-only publication explainer for the GR derivation roadmap. It orients readers to milestone burdens, Distance-to-GR ledger categories, the frontier theorem inventory summary, future AgentJob fields, mathematical payload requirements, source-extension and finite toy categories, and current-frontier cautions without updating physics status, adopting M_src, deriving g_eff, matter coupling, or Einstein equations, promoting the benchmark, issuing a Gate Chair verdict, or treating generated outputs or inventory summaries as proof authority."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -45,6 +46,10 @@ not a physics proof, not a ledger update, and not a claim-promotion record.
   statuses including accepted `Resp_lc`, draft/control `M_src`, not-started
   downstream metric/coupling/equation burdens, human-gated benchmark
   promotion, and locally frozen finite toy route status.
+- `research_control/design/frontier_theorem_inventory.md` is the canonical
+  frontier inventory source for the current theorem-like, witness,
+  obstruction, scoped-evidence, frozen-route, and missing-theorem review
+  summary. The page may summarize it but must not replace it.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` supplies active boundaries against
   ontology edits, benchmark promotion, completed derivation language,
   generated-output authority, source-authority laundering, and global
@@ -65,10 +70,13 @@ chain from source ontology to benchmark promotion. They should know why
 `source_ontology`, `EqSrc`, `ObsLoc_lc`, `Resp_lc`, `M_src`, `g_eff`,
 `matter_coupling`, `einstein_equations`, `finite_toy_metric_response`, and
 `benchmark_promotion` are separate burdens. They should also know that a
-validator pass, generated public page, screenshot, or bootstrap refresh is
-not physics evidence. The opening should teach the roadmap as burden control,
-not progress celebration, while the full generated-noncanonical authority
-paragraph belongs in the footer authority section.
+validator pass, generated public page, screenshot, inventory summary, or
+bootstrap refresh is not physics evidence. The frontier inventory summary
+should help readers find what is source-backed, scoped, missing, frozen, or
+human-gated without implying that GR has been derived. The opening should
+teach the roadmap as burden control, not progress celebration, while the full
+generated-noncanonical authority paragraph belongs in the footer authority
+section.
 
 ## Reader Scope Footer Binding
 
@@ -87,8 +95,9 @@ supersede tracked source files.
 Use a process timeline. The visual should help the reader see ordered
 milestones, current status categories, and which burdens are still blocked,
 draft/control, frozen, not started, or human-gated. Pair the timeline with a
-burden-versus-evidence matrix and a current-frontier caution panel. Do not use
-a generic source-to-output diagram or browser-side Mermaid.
+burden-versus-evidence matrix, a current-frontier caution panel, and a compact
+frontier inventory summary. Do not use a generic source-to-output diagram or
+browser-side Mermaid.
 
 ## Acceptance Criteria
 
@@ -99,6 +108,9 @@ a generic source-to-output diagram or browser-side Mermaid.
   `exact-branch`, and `human-gated` qualifiers.
 - Explains source-extension and finite toy categories without treating them as
   GR recovery shortcuts.
+- Summarizes the frontier theorem inventory while naming
+  `research_control/design/frontier_theorem_inventory.md` as the canonical
+  inventory source.
 - Explains freeze labels as scoped route-control labels, not global theory
   rejection.
 - Names source paths visibly in GitHub Markdown and HTML.

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER">
-  <meta name="aether-flow-source-basis-hash" content="0fafeed53412ca9b3cae956a095605c932ceb8a5ca74cc2b8904ca37cf4416db">
+  <meta name="aether-flow-source-basis-hash" content="6e346eb13270c799ee745e965eb9316275bf8b9fbb77107e07f07891aa5a0b93">
   <meta name="aether-flow-human-visual-only" content="true">
   <title>GR Derivation Roadmap</title>
   <style>
@@ -262,6 +262,7 @@
         <a href="#ladder">Milestones</a>
         <a href="#matrix">Burden matrix</a>
         <a href="#frontier">Current frontier</a>
+        <a href="#inventory">Inventory summary</a>
         <a href="#freeze">Freeze criteria</a>
         <a href="#sources">Source materials</a>
       </nav>
@@ -393,6 +394,48 @@
       </div>
     </section>
 
+    <section id="inventory">
+      <h2>Frontier Inventory Summary</h2>
+      <p>The canonical inventory source is <code data-source-path="research_control/design/frontier_theorem_inventory.md">research_control/design/frontier_theorem_inventory.md</code>. This page summarizes that source for readers; if the page and the inventory disagree, the inventory source, its cited artifacts, and the relevant registry rows govern.</p>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Inventory category</th>
+            <th>Safe reading</th>
+            <th>Blocked overread</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Missing or blocked source laws<br><code>EqSrc</code>, <code>RetainH</code>, <code>GenH</code>, Einstein equations, benchmark closure</td>
+            <td>Required primitives, equivalence, retention, generator, field-equation, or protected-gate burdens remain open.</td>
+            <td>No completed derivation, no Einstein equations, and no benchmark promotion.</td>
+          </tr>
+          <tr>
+            <td>Local or source-extension evidence<br><code>ObsLoc_lc</code>, <code>Resp_lc</code>, <code>FVR_src^{GSC}</code></td>
+            <td>Source-side local witness or source-extension data exists only under its stated assumptions and scope.</td>
+            <td>No detector semantics, no matter coupling, no unscoped metric, and no downstream GR recovery.</td>
+          </tr>
+          <tr>
+            <td>Scoped source objects and preconditions<br><code>M_src^{GSC}</code>, <code>g_eff^{GSC-cand}</code>, matter-coupling targets and finite-local evidence</td>
+            <td>These are scoped source-only or source-extension objects, targets, or preconditions for later review.</td>
+            <td>No <code>MetricData(E)</code> adoption, no unscoped <code>g_eff</code>, no coupling-law adoption, no stress-energy semantics, and no matter action.</td>
+          </tr>
+          <tr>
+            <td>Frozen route<br><code>finite_toy_metric_response</code></td>
+            <td>A local toy metric-response route is frozen negative under its exact obstruction.</td>
+            <td>No global theory rejection and no future source-extension impossibility.</td>
+          </tr>
+          <tr>
+            <td>Review use<br>source paths, assumptions, non-conclusions, missing-theorem fields, overread guards</td>
+            <td>The inventory is useful as an external-review checklist and source pointer.</td>
+            <td>The inventory summary is not proof authority and generated reader surfaces are noncanonical.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The inventory improves reviewability, not physics status. It does not derive GR, adopt <code>M_src</code> as a target manifold, adopt an unscoped <code>g_eff</code>, derive matter coupling, supply stress-energy semantics, derive Einstein equations, promote a benchmark, or close a Gate Chair review.</p>
+    </section>
+
     <section id="freeze">
       <h2>Freeze Criteria</h2>
       <p>The candidate response-localization freeze label <code>NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION</code> is scoped route-control language. It means the current source tuple does not determine response sign, normalization, or token semantics under no-target-import rules.</p>
@@ -405,6 +448,7 @@
       <div class="source-list">
         <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/design/gr_derivation_burden_map.md">research_control/design/gr_derivation_burden_map.md</code> [GR derivation burden map].</div>
         <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/DISTANCE_TO_GR_LEDGER.csv">registries/DISTANCE_TO_GR_LEDGER.csv</code> [Distance-to-GR ledger].</div>
+        <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/design/frontier_theorem_inventory.md">research_control/design/frontier_theorem_inventory.md</code> [Frontier theorem inventory].</div>
         <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv">registries/CLAIM_BOUNDARY_REGISTRY.csv</code> [Claim boundary registry].</div>
         <div class="source">AEther-Flow Project. (2026). <code data-source-path="registries/AGENT_JOB_REGISTRY.csv">registries/AGENT_JOB_REGISTRY.csv</code> [AgentJob registry].</div>
         <div class="source">AEther-Flow Project. (2026). <code data-source-path="research_control/README.md">research_control/README.md</code> [Research-control guide].</div>
