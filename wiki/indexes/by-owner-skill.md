@@ -309,6 +309,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF` `wiki/markdown/md-technical-requirements-publication-brief.md`
 - `WIKI-MD-V12-P0-BASELINE-SUMMARY` `wiki/markdown/md-v12-p0-baseline-summary.md`
 - `WIKI-MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `wiki/markdown/md-v12-p4-t01-source-extension-dependency-extraction.md`
+- `WIKI-MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `wiki/markdown/md-v12-p4-t02-source-extension-minimization-target.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -690,6 +691,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-PROJECT-MEMORY-SYSTEM` `.codex/skills/project-memory-system/SKILL.md`
 - `MD-V12-P0-BASELINE-SUMMARY` `research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md`
 - `MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md`
+- `MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `research_control/tasks/RT-20260629-044/artifacts/source_extension_minimization_target_v1.md`
 
 ## tex-wiki
 

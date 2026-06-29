@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `current_frontier_report`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `d3e274997ad752e0310820732c3af958abe8c45246780e45542f157e4fad8ec5`
+- Source hash: `729725e53e83280bd09fdbe76ded17700737293bac1c73c8b990025177d416e0`
 
 ## Related Objects
 
