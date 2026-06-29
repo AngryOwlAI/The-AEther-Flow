@@ -76,8 +76,8 @@ command_results:
   - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass | pre_closure=true"
   - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass | pre_closure=true"
   - ".venv/bin/python scripts/research_control/render_current_frontier.py --json | exit_code=0 | status=pass | layered_status_fields=5 | pre_closure=true"
-  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=pass | rendered_hash=29b9ab268db888ec9ff9f33bf67ac5f0bba659de7c46b316ae3d4c0130d2a713"
-  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass | rendered_hash=29b9ab268db888ec9ff9f33bf67ac5f0bba659de7c46b316ae3d4c0130d2a713"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=pass | rendered_hash=8edbb85a06fdc98f651be7ee7d66603e68f18b55af7c66974e6a78946058f01a"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass | rendered_hash=8edbb85a06fdc98f651be7ee7d66603e68f18b55af7c66974e6a78946058f01a"
   - ".venv/bin/python scripts/research_control/render_current_frontier.py --json | exit_code=0 | status=pass | layered_status_fields=5 | active_task=RT-20260629-036"
   - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=pass"
   - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=pass"
@@ -156,7 +156,7 @@ memory_preflight:
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: "research_control/current_frontier.md"
-      source_hash: "29b9ab268db888ec9ff9f33bf67ac5f0bba659de7c46b316ae3d4c0130d2a713"
+      source_hash: "8edbb85a06fdc98f651be7ee7d66603e68f18b55af7c66974e6a78946058f01a"
   authority_note: "Memory, wiki notes, semantic extracts, Obsidian notes, file-object rows, relationship rows, PDF derivatives, generated HTML, and .local caches are retrieval or reader layers only and not authority; canonical sources and registries remain authority."
 resolved_project_improvement_signals: []
 project_improvement_signals: []

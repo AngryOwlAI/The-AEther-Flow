@@ -1,0 +1,70 @@
+receipt_id: "P2-T01-FRONTIER-THEOREM-INVENTORY-SCHEMA-RECEIPT"
+task_id: "RT-20260629-037"
+job_id: "AJ-RT-20260629-037-001"
+created_at: "2026-06-29T17:08:47Z"
+schema_artifact: "research_control/design/frontier_theorem_inventory_schema_v1.md"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  plan_phase_id: "P2"
+  related_plan_task_id: "P2-T01"
+schema_design:
+  required_fields_included:
+    - "frontier_item_id"
+    - "object_or_claim_name"
+    - "status_layer_summary"
+    - "source_artifact_path"
+    - "source_authority_type"
+    - "assumptions"
+    - "definitions_used"
+    - "statement_or_decision"
+    - "mathematical_conclusion"
+    - "physical_non_conclusions"
+    - "allowed_reuse"
+    - "blocked_reuse"
+    - "dependency_items"
+    - "missing_theorem_or_primitive"
+    - "candidate_next_task"
+    - "overread_guard"
+    - "external_review_notes"
+  recommended_item_class_field_included: true
+  distinguished_item_classes:
+    - "theorem"
+    - "definition"
+    - "witness"
+    - "obstruction"
+    - "gate_decision"
+    - "source_extension_evidence"
+    - "accepted_scoped_object"
+    - "frozen_negative_route"
+    - "missing_theorem"
+  representability_cases_checked:
+    - "Resp_lc"
+    - "M_src"
+    - "g_eff"
+    - "matter_coupling_precondition_evidence"
+    - "finite_toy_metric_response_frozen_negative"
+    - "einstein_equations_open_burden"
+source_artifacts_inspected:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/distance_to_gr_status_layers_v1.md"
+  - "research_control/tasks/RT-20260629-033/artifacts/distance_to_gr_layered_status_migration_report.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex"
+  - "research_control/tasks/RT-20260614-087/artifacts/128_RESP_LC_M_SRC_GENERAL_SOURCE_COVER_HUMAN_GATE_ADOPTION_DECISION.tex"
+  - "research_control/tasks/RT-20260614-090/artifacts/131_RESP_LC_M_SRC_GSC_SOURCE_MANIFOLD_CANDIDATE_REFUTER_STRESS_TEST.tex"
+  - "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-218/artifacts/247_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_REFUTER_STRESS_TEST.tex"
+  - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex"
+  - "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex"
+acceptance_status:
+  distinguishes_theorem_definition_witness_obstruction_gate_decision_source_extension_evidence: true
+  can_represent_required_named_cases: true
+  explicit_physical_non_conclusions_required: true
+  current_frontier_independent_authority_blocked: true
+  inventory_populated: false
+  ledger_csv_modified: false
+no_promotion_statement: "P2-T01 is schema design only. It does not populate the frontier inventory and does not promote canonical ontology source-law MetricData(E) g_eff scope coupling-law matter-coupling stress-energy Einstein-equation benchmark Gate Chair or completed-derivation claims."
