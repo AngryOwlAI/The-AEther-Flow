@@ -1,0 +1,41 @@
+receipt_id: "v12-p0-t01-implementation-plan-intake"
+task_id: "RT-20260629-029"
+job_id: "AJ-RT-20260629-029-001"
+created_at: "2026-06-29T14:03:00Z"
+plan_id: "recommendations_implementation_plan_continue_task-v12"
+plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+plan_authority: "implementation_guidance_only"
+pre_intake_git_status:
+  known_to_git_before_packet: false
+  ignored_before_packet: true
+  ignore_rule: ".gitignore:34:implementations_plans/*"
+intake_actions:
+  - "Added a single-file .gitignore exception for the v12 implementation plan."
+  - "Recorded the plan as tracked implementation guidance for future bounded continue-research transactions."
+  - "Created task, DDR, AgentJob, role overlay, completion, documentation-impact, claim-boundary, and handoff records for P0-T01."
+current_authority_baseline:
+  active_task_id_before_packet: "RT-20260614-290"
+  latest_handoff_id_before_packet: "handoff-0323"
+  current_status_before_packet: "v11_p0_evidence_closure_completed_all_plan_tasks_proven_no_promotion"
+  latest_next_action_before_packet: "No v11 implementation-plan task remains after checkpoint; resume ordinary research-control continuation only under a new tracked objective."
+post_intake_route:
+  active_task_id_after_packet: "RT-20260629-029"
+  latest_handoff_id_after_packet: "handoff-0324"
+  next_recommended_action: "Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work."
+claim_boundary:
+  physics_promotion_allowed: false
+  distance_to_gr_changed: false
+  canonical_ontology_edited: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  geff_adopted_or_scope_expanded: false
+  coupling_law_adopted: false
+  matter_coupling_derived_or_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+verdict: "P0-T01 complete. The v12 plan is tracked as implementation guidance only and no downstream v12 phase is claimed complete."

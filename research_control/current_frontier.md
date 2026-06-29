@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260614-290` and `handoff-0323`.
+`RT-20260629-029` and `handoff-0324`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260614-290` |
-| Latest handoff ID | `handoff-0323` |
-| Current status | `v11_p0_evidence_closure_completed_all_plan_tasks_proven_no_promotion` |
-| Current route family | v11 plan complete no remaining implementation task |
+| Active task ID | `RT-20260629-029` |
+| Latest handoff ID | `handoff-0324` |
+| Current status | `v12_p0_t01_plan_intake_completed_no_promotion` |
+| Current route family | v12 p0 t01 plan intake completed next baseline snapshot |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: No v11 implementation-plan task remains after checkpoint; resume ordinary research-control continuation only under a new tracked objective. |
-| Required next authority | ordinary research-control continuation under a new tracked objective only |
-| Next recommended action | No v11 implementation-plan task remains after checkpoint; resume ordinary research-control continuation only under a new tracked objective. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work. |
+| Required next authority | P0-T02 post-v11 baseline authority snapshot only |
+| Next recommended action | Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260614-290/00_TASK.yaml`.
-- Active task objective: Close the v11 P0 evidence gap by creating standalone P0-T01 and P0-T02 evidence receipts from tracked authority.
-- Latest handoff path: `research_control/handoffs/handoff-0323.yaml`.
-- Latest handoff summary: P0 evidence closure completed. The v11 implementation plan file is tracked through a narrow ignore exception, standalone P0-T01 and P0-T02 receipts exist, and all applicable v11 plan tasks are proven without physics promotion.
-- Current route family: v11 plan complete no remaining implementation task.
-- Next recommended action: No v11 implementation-plan task remains after checkpoint; resume ordinary research-control continuation only under a new tracked objective.
+- Active task path: `research_control/tasks/RT-20260629-029/00_TASK.yaml`.
+- Active task objective: Track the v12 recommendations implementation plan as implementation guidance only and record the P0-T01 intake receipt without changing physics state.
+- Latest handoff path: `research_control/handoffs/handoff-0324.yaml`.
+- Latest handoff summary: V12 P0-T01 implementation-plan intake completed. The v12 plan file is tracked through a narrow ignore exception as implementation guidance only, and no physics claim was promoted.
+- Current route family: v12 p0 t01 plan intake completed next baseline snapshot.
+- Next recommended action: Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work.
 
 ## Matter-Coupling Boundary
 
@@ -114,7 +114,7 @@ remains the authoritative source if this summary drifts.
 The immediate next route is:
 
 ```text
-No v11 implementation-plan task remains after checkpoint; resume ordinary research-control continuation only under a new tracked objective.
+Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -125,14 +125,13 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260614-290`;
-- latest handoff: `handoff-0323`;
-- current status: `v11_p0_evidence_closure_completed_all_plan_tasks_proven_no_promotion`;
+- active task: `RT-20260629-029`;
+- latest handoff: `handoff-0324`;
+- current status: `v12_p0_t01_plan_intake_completed_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `p0_t01_receipt`: created;
-- latest handoff validation `p0_t02_receipt`: created;
 - latest handoff validation `plan_file_tracking`: pending_checkpoint;
 
 ## Retrieval Warning Status
@@ -140,8 +139,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0323.yaml`
-- `research_control/tasks/RT-20260614-290/00_TASK.yaml`
+- `research_control/handoffs/handoff-0324.yaml`
+- `research_control/tasks/RT-20260629-029/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -156,7 +155,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0323*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0324*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 28). *Recommendations

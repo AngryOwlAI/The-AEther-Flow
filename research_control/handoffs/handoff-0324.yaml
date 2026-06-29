@@ -1,0 +1,72 @@
+handoff_id: "handoff-0324"
+created_at: "2026-06-29T14:03:00Z"
+task_id: "RT-20260629-029"
+decision_id: "DDR-20260629-029"
+job_id: "AJ-RT-20260629-029-001"
+completion_path: "research_control/tasks/RT-20260629-029/jobs/completions/AJC-AJ-RT-20260629-029-001.yaml"
+source_task_id: "RT-20260629-029"
+source_job_id: "AJ-RT-20260629-029-001"
+source_completion_id: "AJC-AJ-RT-20260629-029-001"
+status: "completed"
+summary: "V12 P0-T01 implementation-plan intake completed. The v12 plan file is tracked through a narrow ignore exception as implementation guidance only, and no physics claim was promoted."
+next_action: "Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work."
+loop_risk_route: "v12_p0_t01_plan_intake_completed_next_baseline_snapshot"
+claim_boundary:
+  allowed_next_scope: "P0-T02 post-v11 baseline authority snapshot only"
+  v12_plan_file_tracked_after_checkpoint: true
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "implementation-plan tracking as scientific proof"
+  - "baseline snapshot as scientific proof"
+  - "generated graph as scientific proof"
+  - "checker output as proof"
+  - "metrics output as proof"
+p0_t01_result:
+  route: "v12_p0_t01_implementation_plan_intake"
+  intake_receipt: "research_control/tasks/RT-20260629-029/artifacts/p0_t01_implementation_plan_intake_receipt.yaml"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  plan_authority: "implementation_guidance_only"
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_p0_t01_plan_intake_only"
+  meaning: "P0-T01 is a project-control packet only. It changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+validation:
+  p0_t01_receipt: "created"
+  plan_file_tracking: "pending_checkpoint"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
