@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-037` and `handoff-0332`.
+`RT-20260629-038` and `handoff-0333`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-037` |
-| Latest handoff ID | `handoff-0332` |
-| Current status | `v12_p2_t01_frontier_theorem_inventory_schema_design_completed_no_science_change` |
-| Current route family | v12 p2 t01 schema completed next p2 t02 source location decision |
+| Active task ID | `RT-20260629-038` |
+| Latest handoff ID | `handoff-0333` |
+| Current status | `v12_p2_t02_frontier_theorem_inventory_source_location_decision_completed_no_science_change` |
+| Current route family | v12 p2 t02 source location completed next p2 t03 inventory population |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P2-T02 as one bounded continue-research transaction to decide the canonical source location for the populated frontier theorem inventory. |
-| Required next authority | P2-T02 canonical inventory source-location decision only |
-| Next recommended action | Run P2-T02 as one bounded continue-research transaction to decide the canonical source location for the populated frontier theorem inventory. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P2-T03 as one bounded continue-research transaction to populate the canonical frontier theorem inventory with current accepted scoped blocked and frozen items. |
+| Required next authority | P2-T03 canonical inventory population only |
+| Next recommended action | Run P2-T03 as one bounded continue-research transaction to populate the canonical frontier theorem inventory with current accepted scoped blocked and frozen items. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-037/00_TASK.yaml`.
-- Active task objective: Design the canonical frontier theorem inventory schema as a control artifact without populating the inventory or promoting physics claims.
-- Latest handoff path: `research_control/handoffs/handoff-0332.yaml`.
-- Latest handoff summary: V12 P2-T01 frontier theorem inventory schema design completed. The schema is registered as a control source and can represent theorem definition witness obstruction gate decision source-extension evidence accepted scoped object frozen negative route and missing-theorem cases. No inventory was populated and no physics claim was promoted.
-- Current route family: v12 p2 t01 schema completed next p2 t02 source location decision.
-- Next recommended action: Run P2-T02 as one bounded continue-research transaction to decide the canonical source location for the populated frontier theorem inventory.
+- Active task path: `research_control/tasks/RT-20260629-038/00_TASK.yaml`.
+- Active task objective: Decide the canonical source location for the populated frontier theorem inventory and register the selected Markdown source path without populating inventory items.
+- Latest handoff path: `research_control/handoffs/handoff-0333.yaml`.
+- Latest handoff summary: V12 P2-T02 source-location decision completed. Option A was selected and research_control/design/frontier_theorem_inventory.md was registered as the empty Markdown control source for the future populated inventory. No inventory items were populated and no physics claim was promoted.
+- Current route family: v12 p2 t02 source location completed next p2 t03 inventory population.
+- Next recommended action: Run P2-T03 as one bounded continue-research transaction to populate the canonical frontier theorem inventory with current accepted scoped blocked and frozen items.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P2-T02 as one bounded continue-research transaction to decide the canonical source location for the populated frontier theorem inventory.
+Run P2-T03 as one bounded continue-research transaction to populate the canonical frontier theorem inventory with current accepted scoped blocked and frozen items.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-037`;
-- latest handoff: `handoff-0332`;
-- current status: `v12_p2_t01_frontier_theorem_inventory_schema_design_completed_no_science_change`;
+- active task: `RT-20260629-038`;
+- latest handoff: `handoff-0333`;
+- current status: `v12_p2_t02_frontier_theorem_inventory_source_location_decision_completed_no_science_change`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0332.yaml`
-- `research_control/tasks/RT-20260629-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0333.yaml`
+- `research_control/tasks/RT-20260629-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0332*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0333*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
