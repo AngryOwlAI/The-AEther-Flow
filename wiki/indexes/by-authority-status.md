@@ -312,6 +312,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-063/artifacts/104_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-062/artifacts/103_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
+- `TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `research_control/tasks/RT-20260629-045/artifacts/source_extension_compression_obstruction_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -849,6 +850,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-side-selector-no-go-theorem-refuter-stress-test.md`
+- `WIKI-TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `wiki/tex/tex-v12-p4-t03-source-extension-compression-obstruction.md`
 
 ## project_control
 

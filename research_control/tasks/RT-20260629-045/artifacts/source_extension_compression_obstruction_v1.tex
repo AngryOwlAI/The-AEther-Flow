@@ -1,0 +1,278 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Msrc}{M_{\mathrm{src}}}
+\newcommand{\Stack}{\mathrm{SourceExtensionStack}_{v1}}
+\newcommand{\CompMap}{\mathrm{CompressionMap}_{v1}}
+\newcommand{\MinPack}{\mathrm{MinimalSourceLawPackage}_{v1}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\Obstruction}{\mathrm{CompressionFailureObstruction}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Source-Extension Compression Obstruction v1}
+\author{Candidate Constructor Packet RT-20260629-045}
+\date{2026-06-29}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260629-045}. It implements P4-T03 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md}.
+
+The candidate-constructor result is:
+
+\begin{verbatim}
+candidate_constructor_result.result_type: "precise_obstruction"
+candidate_constructor_result.no_fog_check: true
+obstruction_id: "CF-P4T03-001-no-nontrivial-compression-current-basis"
+same_milestone_continuation: "blocked_adoption_open_continuation"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+This artifact does not edit canonical ontology, adopt a source law, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics, derive
+Einstein equations, promote benchmark status, issue a Gate Chair verdict,
+claim completed derivation, claim future source-extension impossibility, or
+reject the global theory.
+
+\section{Question}
+
+Can the P4-T01 source-extension stack be compressed into a smaller
+source-side law package under the P4-T02 target, while preserving
+\NoTargetImport{} discipline and the current scoped statuses?
+
+Conclusion: under the current basis \(\Bcur\), no nontrivial source-law
+compression is available. A total compression map can be written, but it has
+no \texttt{derive} assignments for the positive rows. The current basis can
+only retain positive rows conservatively or conditionally, eliminate
+support-only process surfaces from mathematical premise status, and fail
+closed on forbidden target imports.
+
+\section{Basis}
+
+\begin{definition}[Current basis \(\Bcur\)]
+\(\Bcur\) consists of the currently tracked source ontology and the existing
+scoped source-extension/control artifacts cited by P4-T01 and P4-T02. It
+excludes new source-law adoption, canonical ontology edits, target topology,
+target atlas, target transition maps, target metric, Lorentzian signature,
+proper time, detector semantics, stress-energy semantics, stress-energy
+tensor, matter action, Einstein equations, benchmark behavior, generated
+derivatives, validators, registries, role records, handoffs, approvals,
+commits, local caches, and file order as mathematical premises.
+\end{definition}
+
+\begin{definition}[Nontrivial source-law compression]
+A nontrivial source-law compression of \(\Stack(E)\) over \(\Bcur\) is a
+\(\CompMap(E;\Bcur)\) with at least one positive dependency row assigned
+\texttt{derive}, where the derivation is from source-side laws in \(\Bcur\)
+and not merely from retaining the row as conservative source-extension data.
+\end{definition}
+
+\section{Total Compression Map Attempt}
+
+The following map covers all 22 rows from the P4-T01 table. The map is total,
+but it is not a nontrivial source-law compression because no positive row is
+derived from \(\Bcur\).
+
+\begin{verbatim}
+row_id        assignment                         reason
+D-RESP-001   retain_conservative                selector data is scoped source-extension data
+D-RESP-002   retain_conservative_guard          S_X-only obstruction must be preserved
+D-MSRC-001   retain_conservative                scoped M_src object remains scoped only
+D-MSRC-002   retain_conservative                H1-H13 are conditional theorem inputs
+D-MSRC-003   retain_conservative                source coverage analogue is conditional
+D-MSRC-004   retain_conservative                chart/transition tokens are conditional source syntax
+D-MSRC-005   retain_conservative                RegSold/FVR remains conditional or proposal-only
+D-MSRC-006   retain_conservative_guard          fail-closed no-target discipline is required
+D-GEFF-001   retain_conservative                MetricData carrier evidence is scoped only
+D-GEFF-002   retain_conservative                SigScaleCont is evidence/precondition only
+D-GEFF-003   retain_conservative                MetricFormAssign is evidence/precondition only
+D-GEFF-004   retain_conservative                T_src transition data is declared, not derived
+D-GEFF-005   retain_conservative                scoped g_eff candidate/object remains scoped only
+D-GEFF-006   retain_conservative_guard          bottom/no-target/limitation records are guards
+D-MC-001     retain_conservative                bridge target is draft/control target only
+D-MC-002     retain_conservative                bridge candidate data is precondition evidence only
+D-MC-003     retain_conservative                finite/local target is draft/control target only
+D-MC-004     retain_conservative                witness family is scoped precondition evidence
+D-MC-005     retain_conservative                BridgeSlot_n is scoped precondition evidence
+D-MC-006     retain_conservative_guard          NoTargetImport_n certificate is required
+D-MC-007     retain_conservative                finite/local source-family data is scoped evidence
+D-SUP-001    eliminate_as_mathematical_premise  support surfaces have proof_authority=false
+D-FORBID-001 fail_closed_target_import          target geometry imports are forbidden
+D-FORBID-002 fail_closed_target_import          matter/Einstein imports are forbidden
+\end{verbatim}
+
+\section{Precise Obstruction}
+
+\begin{lemma}[No positive row is currently derivable]
+The P4-T01 dependency table classifies zero rows as
+\texttt{derived\_from\_current\_source\_ontology}. Therefore, relative to the
+current recorded table and basis \(\Bcur\), no positive dependency row has a
+registered derivation from current source ontology alone.
+\end{lemma}
+
+\begin{proof}
+This is a direct table inspection of
+\texttt{source\_extension\_dependency\_table\_v1.yaml}. Its
+\texttt{category\_counts} record
+\texttt{derived\_from\_current\_source\_ontology: 0}. This table is a
+draft/control dependency extraction input, not proof authority by itself; the
+use here is narrower. It records the current state of the P4 extraction that
+P4-T03 is required to attempt against.
+\end{proof}
+
+\begin{proposition}[Compression failure under \(\Bcur\)]
+Under \(\Bcur\), no nontrivial no-target-import source-law compression of
+\(\Stack(E)\) is established. The obstruction is
+\[
+  \Obstruction(E,\Stack;\Bcur,
+  \texttt{nontrivial\_source\_law\_compression}).
+\]
+\end{proposition}
+
+\begin{proof}
+The positive rows required for the current scoped objects divide into
+selector-response data, scoped \(\Msrc\) and its conditional inputs, scoped
+\(\geff\) metric-form and signature/scale/transition evidence, and
+matter-bridge precondition data. P4-T01 marks none of these rows as derived
+from current source ontology. If any required positive row is deleted rather
+than retained, then one of the scoped targets loses an essential input or a
+guard. If any forbidden row is imported physically, the route violates the
+P4-T02 \NoTargetImport{} condition and must fail closed. If support-only
+process surfaces are used as mathematical premises, then
+\(\ProofAuthFalse\) is violated. Therefore the only lawful total map under
+\(\Bcur\) retains the positive rows conservatively or conditionally, removes
+support-only surfaces from proof status, and fails closed on forbidden target
+imports. That map is not a nontrivial source-law compression.
+\end{proof}
+
+\section{Missing Source-Side Law Family}
+
+The exact missing material is not a single adopted primitive. It is the
+following source-side law family, any part of which would require a future
+candidate-law packet and later protected review before adoption:
+
+\begin{itemize}[leftmargin=*]
+\item \texttt{SelRespDerive\_src}: a source-side law deriving the response
+selector data \(\Xi_X^R\) from current source data without reviving the
+known \(S_X\)-only obstruction.
+\item \texttt{MetricFormDerive\_src}: a source-side law deriving the
+metric-carrier, signature/scale/continuity, metric-form assignment, transport,
+nonbottom, and bottom behavior required by scoped \(\geff\), without target
+metric or Lorentzian import.
+\item \texttt{RegFVRDerive\_src}: a source-side theorem deriving the needed
+soldering and finite-variation robustness inputs rather than retaining them
+as conditional or proposal-only data.
+\item \texttt{MatterBridgeDerive\_src}: a source-side law deriving bridge
+slots, finite/local source-family data, balance/flux ledgers, and no-target
+certificates without detector, stress-energy, matter-action, or Einstein
+equation imports.
+\end{itemize}
+
+These names are obstruction labels and future candidate-law targets. They are
+not adopted ontology primitives and not source-law adoption.
+
+\section{Distance-to-GR Status}
+
+\begin{verbatim}
+Source ontology primitives: unchanged; no canonical ontology edit
+Source equivalence EqSrc: unchanged; no general EqSrc theorem
+RetainH: unchanged
+GenH: unchanged
+ObsLoc_lc: unchanged
+Resp_lc: scoped source-extension data retained; no selector law adoption
+M_src: scoped source-only object retained; no scope expansion
+MetricData(E): no MetricData(E)
+g_eff: scoped g_eff context retained; no unscoped g_eff and no scope change
+matter coupling: precondition evidence retained; no matter coupling
+Einstein equations: blocked; no field-equation derivation
+finite-variation robustness: proposal-only or conditional where cited
+benchmark promotion: blocked; no benchmark promotion
+Gate Chair status: no Gate Chair verdict
+current route freeze or hard-fail status: not frozen; audit route open
+\end{verbatim}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+
+\begin{quote}
+Under current basis \(\Bcur\), P4-T03 does not establish a nontrivial
+no-target-import source-law compression of the P4-T01 dependency stack. The
+current stack must remain conservative/conditional where positive, support
+surfaces must remain \(\ProofAuthFalse\), and forbidden target imports must
+fail closed. Same-milestone continuation remains open.
+\end{quote}
+
+\section{Non-Allowed Conclusions}
+
+This artifact does not allow:
+
+\begin{itemize}[leftmargin=*]
+\item canonical ontology edit or source-law adoption;
+\item adoption of any missing source-side law label named above;
+\item \(\MetricData(E)\) adoption;
+\item \(\geff\) scope change, unscoped \(\geff\), or target Lorentzian metric;
+\item coupling-law adoption;
+\item matter-coupling derivation or adoption;
+\item stress-energy semantics, stress-energy tensor, matter action, or
+  detector semantics;
+\item Einstein equations;
+\item exact-GR benchmark promotion or benchmark Gate Chair closure;
+\item completed derivation;
+\item future source-extension impossibility;
+\item global theory rejection;
+\item generated derivatives, validators, registries, roles, handoffs,
+  approvals, commits, local caches, or file order as proof authority.
+\end{itemize}
+
+\section{Next Route}
+
+The next lawful route is P4-T04: a Smuggling Auditor review of this precise
+obstruction and total compression-map attempt. The audit should test hidden
+target import, source-law adoption laundering, ontology-edit laundering,
+process-authority laundering, and notation-collapse errors before any stress
+test or selector uses the result.
+
+\section{References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Source-extension
+dependency extraction v1} [Internal research-control Markdown artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Source-extension
+minimization target v1} [Internal research-control Markdown artifact].
+
+\end{document}
