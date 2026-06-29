@@ -1,0 +1,29 @@
+artifact_id: "parent_conflict_review_matter_semantics_obstruction_v1"
+task_id: "RT-20260629-051"
+job_id: "AJ-RT-20260629-051-001"
+execution_unit_id: "parent"
+perspective: "physicist_mathematician_philosopher"
+created_at: "2026-06-29T22:29:20Z"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260629-051/artifacts/child_phys_math_matter_semantics_obstruction_v1.yaml"
+  - "research_control/tasks/RT-20260629-051/artifacts/child_phys_phil_matter_semantics_obstruction_v1.yaml"
+conflicts:
+  - conflict_id: "C-001"
+    conflict_type: "terminology"
+    severity: "nonblocking"
+    description: "The mathematical child names a missing primitive MatSrcDiscLaw_v1; the philosophy child also allows SemMatter_src as an alternate label."
+    resolution: "Use MatSrcDiscLaw_v1 / SemMatter_src as alternate names for the same missing source-intrinsic matter-semantics law, without adopting either."
+  - conflict_id: "C-002"
+    conflict_type: "claim_boundary"
+    severity: "nonblocking"
+    description: "The total all-guarded map is a real map but must not be overread as a constructed matter-semantics candidate."
+    resolution: "Classify D_bot as fail-closed behavior only. The decisive result remains precise_obstruction."
+unresolved_conflicts: []
+fusion_decision:
+  result_type: "precise_obstruction"
+  obstruction_id: "MS-P5T03-001-source-intrinsic-discriminator-law-missing"
+  next_route: "P5-T04_smuggling_audit_of_obstruction"
+  parent_output_path: "research_control/tasks/RT-20260629-051/artifacts/matter_semantics_discriminator_obstruction_v1.tex"
+claim_boundary_preserved: true

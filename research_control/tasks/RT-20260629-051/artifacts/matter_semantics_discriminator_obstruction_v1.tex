@@ -1,0 +1,115 @@
+\section*{Matter-Semantics Discriminator Obstruction v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control P5-T03 Candidate Constructor output.  It
+records a scoped construction failure under the current source basis.  It does
+not edit canonical ontology, adopt a source law, adopt \(\MetricData(E)\),
+expand or unscope \(g_{\mathrm{eff}}\), adopt a coupling law, derive or adopt
+matter coupling, import stress-energy semantics, construct a stress-energy
+tensor, import a matter action, import detector semantics, derive Einstein
+equations, promote the exact-GR benchmark, issue benchmark Gate Chair closure,
+claim completed derivation, prove future source-extension impossibility, or
+reject the global theory.
+
+\paragraph{Inputs.}
+Let \(B_{\mathrm{cur}}\) denote the current declared source basis available to
+P5-T03: the v12 plan, the P5-T01 burden selector, the P5-T02 target
+formalization, prior draft/control matter-coupling criteria, and the current
+research-control handoff.  Let
+\[
+  T_E(B_{\mathrm{cur}})
+\]
+be the source-token domain permitted by P5-T02, and let
+\[
+  L_E=\{\mathsf{matterLike},\mathsf{nonMatterLike},
+        \mathsf{mixed},\mathsf{guardedUndetermined}\}.
+\]
+The target object is a source-side total discriminator
+\[
+  D_E:T_E(B_{\mathrm{cur}})\to L_E
+\]
+satisfying source purity, relabeling stability, finite-variation guard,
+fail-closed behavior, \(\NoStressEnergyImport_v1\),
+\(\NoMatterActionImport_v1\), and \(\NoDetectorImport_v1\).
+
+\paragraph{Candidate attempt.}
+The only total assignment available without adding a new source-side semantics
+law is the guarded map
+\[
+  D_{\bot}(t)=\mathsf{guardedUndetermined}
+  \quad\text{for every }t\in T_E(B_{\mathrm{cur}}).
+\]
+This map is fail-closed and source-pure, but it is not a non-bottom
+matter-semantics candidate.  It does not distinguish matter-like,
+nonmatter-like, and mixed source sectors from source data.  A non-bottom
+assignment would need a rule that explains why a source token belongs to one
+of those sectors without borrowing target matter labels, stress-energy
+semantics, a matter action, detector protocol, coupling law, target metric
+structure, benchmark behavior, or Einstein-equation premises.
+
+\paragraph{Missing primitive.}
+The smallest missing item is a source-intrinsic discriminator law
+\[
+  \MatSrcDiscLaw_v1
+  \quad\text{or equivalently}\quad
+  \SemMatter_{\mathrm{src}},
+\]
+which would assign matter-sector semantics from source data alone and prove
+the no-import obligations above.  The current ontology does not derive
+\(\MatSrcDiscLaw_v1\).  This is an underdetermination statement about the
+current basis, not a theorem that such a law is impossible.
+
+\paragraph{Obstruction.}
+The P5-T03 result is the precise obstruction
+\[
+  \mathrm{MS\mbox{-}P5T03\mbox{-}001\mbox{-}source\mbox{-}intrinsic
+  \mbox{-}discriminator\mbox{-}law\mbox{-}missing}.
+\]
+It instantiates \(\MatterSemanticsFailureObstruction_v1\) with failed object:
+nontrivial \(\MatterSectorDiscriminator_v1(E;B_{\mathrm{cur}},D)\).  The
+failed obligation is source-only non-bottom matter-sector assignment.  The
+exact failure is that the current basis lacks a source-intrinsic matter-sector
+discriminator law strong enough to produce the assignment while preserving
+source purity and all no-target-import constraints.
+
+\paragraph{No-target-import scan.}
+The following shortcuts are blocked:
+\[
+\begin{array}{ll}
+\text{target stress-energy tensor} & \text{blocked as stress-energy import},\\
+\text{matter action or variational principle} & \text{blocked as matter-action import},\\
+\text{empirical detector/readout protocol} & \text{blocked as detector-semantics import},\\
+\text{target metric or proper-time normalization} & \text{blocked as target-geometry import},\\
+\text{conservation law named from GR/QFT} & \text{blocked unless source-derived},\\
+\text{benchmark solution behavior} & \text{blocked as benchmark laundering},\\
+\text{support-only checker output} & \text{blocked as proof authority}.
+\end{array}
+\]
+
+\paragraph{Distance-to-GR status.}
+No Distance-to-GR ledger row is changed.  Source ontology primitives are
+unchanged; \(\EqSrc\), RetainH, GenH, ObsLoc\(_{lc}\), Resp\(_{lc}\),
+\(M_{\mathrm{src}}\), \(\MetricData(E)\), \(g_{\mathrm{eff}}\), matter
+coupling, Einstein equations, finite-variation robustness, benchmark
+promotion, and Gate Chair status are unchanged.  Matter coupling remains
+blocked: P5-T03 supplies an obstruction to the matter-semantics preflight,
+not a coupling law.
+
+\paragraph{Continuation status.}
+Same-milestone continuation remains open as
+\[
+  \mathsf{blocked\_adoption\_open\_continuation}.
+\]
+A future bounded ontology-law or source-extension packet may attempt to define
+\(\MatSrcDiscLaw_v1\) / \(\SemMatter_{\mathrm{src}}\), but that would still be
+proposal-only or source-extension data until later audit, stress, selector,
+and human-gated authority.  This packet creates no canonical-ontology
+candidate, no adopted source law, no matter coupling, no Einstein equations,
+and no downstream GR promotion.
+
+\paragraph{Next route.}
+The logical next step is P5-T04: a bounded Smuggling Auditor review of this
+obstruction for hidden target matter semantics, detector protocols,
+stress-energy tensors, matter actions, conservation laws, variational
+principles, target metric dependence, benchmark imports, coupling-law
+laundering, and support-only proof-authority overread.

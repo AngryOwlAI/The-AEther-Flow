@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-050` and `handoff-0345`.
+`RT-20260629-051` and `handoff-0346`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-050` |
-| Latest handoff ID | `handoff-0345` |
-| Current status | `v12_p5_t02_matter_semantics_target_formalized_no_candidate_or_promotion` |
-| Current route family | v12 p5 t02 target formalized next p5 t03 candidate or obstruction |
+| Active task ID | `RT-20260629-051` |
+| Latest handoff ID | `handoff-0346` |
+| Current status | `v12_p5_t03_precise_obstruction_source_intrinsic_matter_discriminator_missing_no_promotion` |
+| Current route family | v12 p5 t03 precise obstruction next p5 t04 smuggling audit |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | P5-T03 matter-semantics candidate or precise obstruction only |
-| Next recommended action | Run P5-T03 as one bounded candidate-constructor@0.2.0 transaction to attempt a source-side matter-semantics candidate satisfying MatterSectorDiscriminator_v1 or produce a precise MatterSemanticsFailureObstruction_v1, with all stress-energy tensor matter-action detector-semantics coupling-law matter-coupling Einstein-equation benchmark and completed-derivation claims blocked. |
+| Required next authority | P5-T04 smuggling audit of the P5-T03 obstruction only |
+| Next recommended action | Run P5-T04 as one bounded smuggling-auditor@0.2.0 transaction to audit the P5-T03 obstruction for hidden imports of target matter semantics, detector protocols, stress-energy tensors, matter actions, conservation laws, variational principles, target metric dependence, benchmark imports, coupling-law laundering, and support-only proof-authority overread. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-050/00_TASK.yaml`.
-- Active task objective: Formalize the P5-T02 source-side matter-sector discriminator target and no-target-import obligations without constructing a candidate, proving an obstruction, or promoting downstream GR claims.
-- Latest handoff path: `research_control/handoffs/handoff-0345.yaml`.
-- Latest handoff summary: V12 P5-T02 matter-semantics target formalization completed. It defined the source-side matter-sector discriminator target and explicit no-stress-energy no-matter-action and no-detector import obligations. No candidate, obstruction proof, matter coupling, Einstein-equation, benchmark, or completed-derivation claim was promoted.
-- Current route family: v12 p5 t02 target formalized next p5 t03 candidate or obstruction.
-- Next recommended action: Run P5-T03 as one bounded candidate-constructor@0.2.0 transaction to attempt a source-side matter-semantics candidate satisfying MatterSectorDiscriminator_v1 or produce a precise MatterSemanticsFailureObstruction_v1, with all stress-energy tensor matter-action detector-semantics coupling-law matter-coupling Einstein-equation benchmark and completed-derivation claims blocked.
+- Active task path: `research_control/tasks/RT-20260629-051/00_TASK.yaml`.
+- Active task objective: Attempt P5-T03 source-side matter-semantics candidate construction under MatterSectorDiscriminator_v1, or produce a precise MatterSemanticsFailureObstruction_v1, without importing target matter semantics or promoting downstream GR claims.
+- Latest handoff path: `research_control/handoffs/handoff-0346.yaml`.
+- Latest handoff summary: V12 P5-T03 Candidate Constructor completed with a precise MatterSemanticsFailureObstruction_v1: the current source basis does not derive a source-intrinsic matter-sector discriminator law or theorem for non-bottom MatterSectorDiscriminator_v1 assignment. The all-guarded map is fail-closed behavior, not a candidate. No law adoption or downstream GR promotion occurred.
+- Current route family: v12 p5 t03 precise obstruction next p5 t04 smuggling audit.
+- Next recommended action: Run P5-T04 as one bounded smuggling-auditor@0.2.0 transaction to audit the P5-T03 obstruction for hidden imports of target matter semantics, detector protocols, stress-energy tensors, matter actions, conservation laws, variational principles, target metric dependence, benchmark imports, coupling-law laundering, and support-only proof-authority overread.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P5-T03 as one bounded candidate-constructor@0.2.0 transaction to attempt a source-side matter-semantics candidate satisfying MatterSectorDiscriminator_v1 or produce a precise MatterSemanticsFailureObstruction_v1, with all stress-energy tensor matter-action detector-semantics coupling-law matter-coupling Einstein-equation benchmark and completed-derivation claims blocked.
+Run P5-T04 as one bounded smuggling-auditor@0.2.0 transaction to audit the P5-T03 obstruction for hidden imports of target matter semantics, detector protocols, stress-energy tensors, matter actions, conservation laws, variational principles, target metric dependence, benchmark imports, coupling-law laundering, and support-only proof-authority overread.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-050`;
-- latest handoff: `handoff-0345`;
-- current status: `v12_p5_t02_matter_semantics_target_formalized_no_candidate_or_promotion`;
+- active task: `RT-20260629-051`;
+- latest handoff: `handoff-0346`;
+- current status: `v12_p5_t03_precise_obstruction_source_intrinsic_matter_discriminator_missing_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0345.yaml`
-- `research_control/tasks/RT-20260629-050/00_TASK.yaml`
+- `research_control/handoffs/handoff-0346.yaml`
+- `research_control/tasks/RT-20260629-051/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0345*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0346*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

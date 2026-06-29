@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T21:59:49Z`
-- Source fingerprint: `79c84c74a9c5aad9f87498576644a5d8fc083d76c1199ff48c868173af9eeb17`
-- Nodes: `7260`
-- Edges: `30483`
+- Generated from tracked state as of: `2026-06-29T22:29:20Z`
+- Source fingerprint: `2260a3cbf96f72e176a5f209e3806721d4e29146a0f691b7e3ac04aaeb9bf9f7`
+- Nodes: `7293`
+- Edges: `30601`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 481 |
+| `completion_yaml` | 482 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 345 |
+| `handoff_yaml` | 346 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,30 +33,30 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 481 |
+| `agent_job` | `support_only` | 482 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3612 |
-| `blocked_burden` | `blocked` | 724 |
-| `claim_boundary` | `support_only` | 482 |
-| `draft_control_candidate` | `draft_control` | 326 |
-| `draft_control_candidate` | `proposal_only` | 45 |
+| `artifact` | `support_only` | 3626 |
+| `blocked_burden` | `blocked` | 734 |
+| `claim_boundary` | `support_only` | 483 |
+| `draft_control_candidate` | `draft_control` | 328 |
+| `draft_control_candidate` | `proposal_only` | 46 |
 | `draft_control_candidate` | `science_draft` | 28 |
 | `frozen_negative` | `frozen_negative` | 65 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 345 |
+| `handoff` | `support_only` | 346 |
 | `human_gated_object` | `human_gated` | 219 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 50 |
+| `obstruction` | `blocked` | 51 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 18 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 196 |
+| `source_ontology_object` | `support_only` | 197 |
 | `task` | `human_gated` | 27 |
-| `task` | `science_draft` | 23 |
+| `task` | `science_draft` | 24 |
 | `task` | `support_only` | 431 |
 
 ## Frontier Table
@@ -162,9 +162,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260629-050`
-- Latest handoff: `handoff-0345`
-- Handoff path: `research_control/handoffs/handoff-0345.yaml`
-- Next action: Run P5-T03 as one bounded candidate-constructor@0.2.0 transaction to attempt a source-side matter-semantics candidate satisfying MatterSectorDiscriminator_v1 or produce a precise MatterSemanticsFailureObstruction_v1, with all stress-energy tensor matter-action detector-semantics coupling-law matter-coupling Einstein-equation benchmark and completed-derivation claims blocked.
+- Active task: `RT-20260629-051`
+- Latest handoff: `handoff-0346`
+- Handoff path: `research_control/handoffs/handoff-0346.yaml`
+- Next action: Run P5-T04 as one bounded smuggling-auditor@0.2.0 transaction to audit the P5-T03 obstruction for hidden imports of target matter semantics, detector protocols, stress-energy tensors, matter actions, conservation laws, variational principles, target metric dependence, benchmark imports, coupling-law laundering, and support-only proof-authority overread.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
