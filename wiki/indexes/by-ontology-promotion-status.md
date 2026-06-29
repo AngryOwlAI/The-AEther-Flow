@@ -260,6 +260,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `research_control/tasks/RT-20260629-045/artifacts/source_extension_compression_obstruction_v1.tex`
 - `TEX-V12-P4-T04-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-046/artifacts/source_extension_compression_obstruction_smuggling_audit_v1.tex`
 - `TEX-V12-P4-T05-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-047/artifacts/source_extension_compression_obstruction_refuter_stress_v1.tex`
+- `TEX-V12-P5-T02-MATTER-SEMANTICS-TARGET-FORMALIZATION` `research_control/tasks/RT-20260629-050/artifacts/matter_semantics_target_formalization_v1.tex`
 
 ## superseded
 

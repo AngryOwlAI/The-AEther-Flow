@@ -1,0 +1,22 @@
+artifact_id: "parent_conflict_review_matter_semantics_target_v1"
+task_id: "RT-20260629-050"
+execution_unit_id: "parent"
+status: "resolved"
+created_at: "2026-06-29T21:59:49Z"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260629-050/artifacts/child_phys_math_matter_semantics_target_v1.yaml"
+  - "research_control/tasks/RT-20260629-050/artifacts/child_phys_phil_matter_semantics_target_v1.yaml"
+conflicts:
+  - conflict_id: "P5T02-C01"
+    type: "terminology"
+    severity: "nonblocking"
+    issue: "The mathematical child emphasizes a total discriminator map while the philosophical child emphasizes guarded-undetermined outputs."
+    resolution: "The fused target requires totality on declared source tokens, with guarded_undetermined as a legitimate source-sector label when source data do not distinguish a token."
+  - conflict_id: "P5T02-C02"
+    type: "claim_boundary"
+    severity: "nonblocking"
+    issue: "Source-side bookkeeping labels could be overread as stress-energy semantics."
+    resolution: "The fused target defines NoStressEnergyImport_v1 and states that source bookkeeping labels are uninterpreted until a later audited packet proves source-side role."
+unresolved_conflicts: []
+blocking_conflicts_present: false
+parent_verdict: "The child outputs can be fused into one P5-T02 target formalization with no authority expansion."
