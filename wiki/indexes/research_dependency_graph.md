@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T23:10:11Z`
-- Source fingerprint: `e87474971e92e246682264d1a918037e317f8fcbbbb1241a963295f9c879688c`
-- Nodes: `7364`
-- Edges: `30849`
+- Generated from tracked state as of: `2026-06-29T23:29:55Z`
+- Source fingerprint: `adb6e535f654f903f5a502f9fb7376cfccadd5edcc0ccdfe4bd76dd0b2e5913c`
+- Nodes: `7396`
+- Edges: `30979`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 484 |
+| `completion_yaml` | 485 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 348 |
+| `handoff_yaml` | 349 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 484 |
+| `agent_job` | `support_only` | 485 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3655 |
-| `blocked_burden` | `blocked` | 757 |
-| `claim_boundary` | `support_only` | 485 |
+| `artifact` | `support_only` | 3670 |
+| `blocked_burden` | `blocked` | 769 |
+| `claim_boundary` | `support_only` | 486 |
 | `draft_control_candidate` | `draft_control` | 334 |
 | `draft_control_candidate` | `proposal_only` | 46 |
-| `draft_control_candidate` | `science_draft` | 28 |
+| `draft_control_candidate` | `science_draft` | 29 |
 | `frozen_negative` | `frozen_negative` | 67 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 348 |
+| `handoff` | `support_only` | 349 |
 | `human_gated_object` | `human_gated` | 219 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -57,7 +57,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 199 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 434 |
+| `task` | `support_only` | 435 |
 
 ## Frontier Table
 
@@ -162,9 +162,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260629-053`
-- Latest handoff: `handoff-0348`
-- Handoff path: `research_control/handoffs/handoff-0348.yaml`
-- Next action: Run P5-T06 as one bounded theoretical-continuation-selector@0.1.0 transaction to classify the stress-survived matter-semantics scoped obstruction and choose exactly one next route without adopting MatSrcDiscLaw_v1, adopting SemMatter_src, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
+- Active task: `RT-20260629-054`
+- Latest handoff: `handoff-0349`
+- Handoff path: `research_control/handoffs/handoff-0349.yaml`
+- Next action: Run one bounded ontology-formalizer@0.2.0 transaction under the ontology-law-research-packet route to formalize a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side law candidate payload without adopting source law, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -1,0 +1,21 @@
+artifact_id: "parent_conflict_review_p5_t06_post_matter_semantics_selector"
+task_id: "RT-20260629-054"
+created_at: "2026-06-29T23:29:55Z"
+status: "resolved"
+mode: "parent_child_parallel_synthesis"
+conflicts:
+  - conflict_id: "P5T06-C01-support-formalization-versus-constructive-law"
+    type: "next_route"
+    severity: "nonblocking"
+    phys_math_position: "Select ontology-law-research-packet because a derivation-critical missing source-side law is the active mathematical blocker."
+    phys_phil_position: "Support-only formalization is useful but should not obscure the still-open source-law question or be overread as proof."
+    resolution: "Select ontology-law-research-packet with ontology-formalizer@0.2.0 as the next bounded packet. Defer support-only P6 until a later selector or project-system route chooses it."
+  - conflict_id: "P5T06-C02-human-authorization-versus-gate-chair"
+    type: "claim_boundary"
+    severity: "nonblocking"
+    phys_math_position: "Gate Chair is not mathematically ready because no candidate law has been formalized, audited, or stressed."
+    phys_phil_position: "Broad human authorization does not become an unscoped verdict or adoption."
+    resolution: "No current Gate Chair packet is selected. Future adoption or rejection remains human-gated after candidate payload, audit, and stress."
+unresolved_conflicts: []
+resolution_rounds: 1
+blocking_conflict_present: false
