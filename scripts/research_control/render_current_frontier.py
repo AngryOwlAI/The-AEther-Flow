@@ -129,7 +129,7 @@ def sentence_fragment(value: Any, fallback: str) -> str:
 
 def ledger_rows_for_markdown(rows: list[dict[str, str]]) -> str:
     lines = [
-        "| Burden ID | Milestone | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |",
+        "| Burden ID | Milestone | Current status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |",
         "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:

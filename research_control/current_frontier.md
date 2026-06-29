@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-041` and `handoff-0336`.
+`RT-20260629-042` and `handoff-0337`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-041` |
-| Latest handoff ID | `handoff-0336` |
-| Current status | `v12_p2_t05_frontier_inventory_reader_summary_completed_no_authority_drift` |
-| Current route family | v12 p2 t05 reader summary completed next p3 t01 theoretical selector |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately. |
-| Required next authority | P3-T01 theoretical continuation selector for the first post-v12 tracked objective |
-| Next recommended action | Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately. |
+| Active task ID | `RT-20260629-042` |
+| Latest handoff ID | `handoff-0337` |
+| Current status | `v12_p3_t01_source_extension_minimization_route_selected_objective_declared` |
+| Current route family | v12 p3 t01 route selected next p4 t01 source extension dependency extraction |
+| Target derivation milestone | `matter_coupling` |
+| Current burden | `matter_coupling`; status: accepted |
+| Required next authority | P4-T01 source-extension dependency extraction only |
+| Next recommended action | Run P4-T01 as one bounded continue-research transaction to extract and classify the source-extension dependency graph for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-041/00_TASK.yaml`.
-- Active task objective: Update a reader-facing GR roadmap publication surface with a frontier theorem inventory summary while preserving canonical source authority and no physics claim promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0336.yaml`.
-- Latest handoff summary: V12 P2-T05 reader-summary packet completed. The GR Derivation Roadmap publication stack now includes a frontier theorem inventory summary, names the canonical inventory source, and states that generated reader surfaces are noncanonical. No scientific claim status was changed.
-- Current route family: v12 p2 t05 reader summary completed next p3 t01 theoretical selector.
-- Next recommended action: Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately.
+- Active task path: `research_control/tasks/RT-20260629-042/00_TASK.yaml`.
+- Active task objective: Select the first post-v12 tracked physics objective and declare it in tracked research-control state without promoting any scientific claim.
+- Latest handoff path: `research_control/handoffs/handoff-0337.yaml`.
+- Latest handoff summary: V12 P3-T01 selector packet completed and P3-T02 control-state declaration was satisfied in the same transaction. The selected first post-v12 scientific objective is P4-T01 source-extension dependency extraction for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence under the matter_coupling milestone. No scientific claim status was promoted.
+- Current route family: v12 p3 t01 route selected next p4 t01 source extension dependency extraction.
+- Next recommended action: Run P4-T01 as one bounded continue-research transaction to extract and classify the source-extension dependency graph for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence.
 
 ## Matter-Coupling Boundary
 
@@ -110,7 +110,7 @@ This table summarizes the layered fields in
 `registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger remains the authoritative
 source if this summary drifts.
 
-| Burden ID | Milestone | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
+| Burden ID | Milestone | Current status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `source_ontology_primitives` | `source_ontology` | draft object exists | draft_control_object_exists | definition_only_or_draft_object | no_canonical_ontology_adoption | draft_control_only | no_canonical_ontology_edit<br>no_benchmark_promotion<br>no_completed_derivation | `AGENTS.md` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P3-T01 as one bounded continue-research transaction to select the first post-v12 tracked scientific objective deliberately.
+Run P4-T01 as one bounded continue-research transaction to extract and classify the source-extension dependency graph for Resp_lc, M_src, scoped g_eff, and matter-coupling precondition evidence.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,16 +143,15 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-041`;
-- latest handoff: `handoff-0336`;
-- current status: `v12_p2_t05_frontier_inventory_reader_summary_completed_no_authority_drift`;
+- active task: `RT-20260629-042`;
+- latest handoff: `handoff-0337`;
+- current status: `v12_p3_t01_source_extension_minimization_route_selected_objective_declared`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `bootstrap_memory_system`: PASS;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
 - latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `publication_process`: PASS;
 - latest handoff validation `validate_documentation_impact`: PASS;
 - latest handoff validation `validate_research_control`: PASS;
 
@@ -161,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0336.yaml`
-- `research_control/tasks/RT-20260629-041/00_TASK.yaml`
+- `research_control/handoffs/handoff-0337.yaml`
+- `research_control/tasks/RT-20260629-042/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -177,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0336*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0337*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
