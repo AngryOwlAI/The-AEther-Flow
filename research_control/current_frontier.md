@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-033` and `handoff-0328`.
+`RT-20260629-034` and `handoff-0329`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-033` |
-| Latest handoff ID | `handoff-0328` |
-| Current status | `v12_p1_t02_ledger_schema_migration_completed_no_science_change` |
-| Current route family | v12 p1 t02 ledger schema migration completed next validator guard hardening |
+| Active task ID | `RT-20260629-034` |
+| Latest handoff ID | `handoff-0329` |
+| Current status | `v12_p1_t03_layered_ledger_validator_guard_completed_no_science_change` |
+| Current route family | v12 p1 t03 validator guard completed next current frontier renderer update |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T03 as one bounded continue-research transaction to harden validator guard tests for layered ledger semantics without changing scientific status. |
-| Required next authority | P1-T03 validator guard hardening only |
-| Next recommended action | Run P1-T03 as one bounded continue-research transaction to harden validator guard tests for layered ledger semantics without changing scientific status. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible. |
+| Required next authority | P1-T04 current-frontier renderer update only |
+| Next recommended action | Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-033/00_TASK.yaml`.
-- Active task objective: Implement the additive Distance-to-GR ledger schema migration from P1-T01 without changing scientific meaning.
-- Latest handoff path: `research_control/handoffs/handoff-0328.yaml`.
-- Latest handoff summary: V12 P1-T02 ledger schema migration completed. The Distance-to-GR ledger now has additive control, mathematical, physical, promotion, and overread-guard status layers. Legacy current_status values and scientific meanings were preserved.
-- Current route family: v12 p1 t02 ledger schema migration completed next validator guard hardening.
-- Next recommended action: Run P1-T03 as one bounded continue-research transaction to harden validator guard tests for layered ledger semantics without changing scientific status.
+- Active task path: `research_control/tasks/RT-20260629-034/00_TASK.yaml`.
+- Active task objective: Harden Distance-to-GR ledger validator guards for layered status semantics without changing scientific meaning.
+- Latest handoff path: `research_control/handoffs/handoff-0329.yaml`.
+- Latest handoff summary: V12 P1-T03 layered ledger validator guard hardening completed. The validator now rejects high-risk layered status overread for matter_coupling g_eff accepted scoped rows finite toy frozen-negative scope and generated snapshot authority.
+- Current route family: v12 p1 t03 validator guard completed next current frontier renderer update.
+- Next recommended action: Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible.
 
 ## Matter-Coupling Boundary
 
@@ -114,7 +114,7 @@ remains the authoritative source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P1-T03 as one bounded continue-research transaction to harden validator guard tests for layered ledger semantics without changing scientific status.
+Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -125,15 +125,16 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-033`;
-- latest handoff: `handoff-0328`;
-- current status: `v12_p1_t02_ledger_schema_migration_completed_no_science_change`;
+- active task: `RT-20260629-034`;
+- latest handoff: `handoff-0329`;
+- current status: `v12_p1_t03_layered_ledger_validator_guard_completed_no_science_change`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `bootstrap_memory_system`: PENDING_FINAL_VALIDATION;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PENDING_FINAL_VALIDATION;
 - latest handoff validation `focused_unittest`: PASS;
+- latest handoff validation `full_unittest`: PENDING_FINAL_VALIDATION;
 - latest handoff validation `graph_freshness_check`: PENDING_FINAL_VALIDATION;
 - latest handoff validation `validate_documentation_impact`: PENDING_FINAL_VALIDATION;
 - latest handoff validation `validate_research_control`: PENDING_FINAL_VALIDATION;
@@ -143,8 +144,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0328.yaml`
-- `research_control/tasks/RT-20260629-033/00_TASK.yaml`
+- `research_control/handoffs/handoff-0329.yaml`
+- `research_control/tasks/RT-20260629-034/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -159,7 +160,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0328*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0329*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 28). *Recommendations

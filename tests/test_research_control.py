@@ -1865,19 +1865,15 @@ class ResearchControlTests(unittest.TestCase):
         self.validator.validate_distance_to_gr_ledger(report)
         self.assertEqual(report.errors, [])
 
-    def test_distance_to_gr_ledger_requires_layered_overread_guards(self) -> None:
+    def distance_to_gr_ledger_fixture_report(self, mutator):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             registries = root / "registries"
             registries.mkdir(parents=True)
             source_path = REPO_ROOT / "registries" / "DISTANCE_TO_GR_LEDGER.csv"
-            rows = list(csv.DictReader(source_path.read_text(encoding="utf-8").splitlines()))
-            for row in rows:
-                if row["burden_id"] == "matter_coupling":
-                    tokens = row["overread_guard"].split(";")
-                    tokens.remove("no_stress_energy_tensor")
-                    row["overread_guard"] = ";".join(tokens)
-                    break
+            with source_path.open(newline="", encoding="utf-8") as handle:
+                rows = list(csv.DictReader(handle))
+            mutator(rows)
             target_path = registries / "DISTANCE_TO_GR_LEDGER.csv"
             with target_path.open("w", newline="", encoding="utf-8") as handle:
                 writer = csv.DictWriter(
@@ -1890,10 +1886,86 @@ class ResearchControlTests(unittest.TestCase):
             report = self.validator.ValidationReport()
             with mock.patch.object(self.validator, "REGISTRY_DIR", registries):
                 self.validator.validate_distance_to_gr_ledger(report)
+        return report
 
+    def test_distance_to_gr_ledger_requires_layered_overread_guards(self) -> None:
+        def remove_stress_energy_guard(rows):
+            for row in rows:
+                if row["burden_id"] == "matter_coupling":
+                    tokens = row["overread_guard"].split(";")
+                    tokens.remove("no_stress_energy_tensor")
+                    row["overread_guard"] = ";".join(tokens)
+                    break
+
+        report = self.distance_to_gr_ledger_fixture_report(remove_stress_energy_guard)
         joined = "\n".join(report.errors)
         self.assertIn("matter_coupling missing overread_guard tokens", joined)
         self.assertIn("no_stress_energy_tensor", joined)
+
+    def test_distance_to_gr_ledger_rejects_matter_coupling_physical_overread(self) -> None:
+        def overread_matter_coupling(rows):
+            for row in rows:
+                if row["burden_id"] == "matter_coupling":
+                    row["physical_status"] = "benchmark_compatible_interpretive_boundary_only"
+                    break
+
+        report = self.distance_to_gr_ledger_fixture_report(overread_matter_coupling)
+        joined = "\n".join(report.errors)
+        self.assertIn("matter_coupling physical_status must be", joined)
+        self.assertIn("explicit not/no/blocked wording", joined)
+
+    def test_distance_to_gr_ledger_rejects_geff_unscoped_or_benchmark_overread(self) -> None:
+        def overread_geff(rows):
+            for row in rows:
+                if row["burden_id"] == "g_eff":
+                    row["physical_status"] = "benchmark_compatible_interpretive_boundary_only"
+                    row["overread_guard"] = row["overread_guard"].replace(
+                        "no_unscoped_geff_adoption;", ""
+                    )
+                    break
+
+        report = self.distance_to_gr_ledger_fixture_report(overread_geff)
+        joined = "\n".join(report.errors)
+        self.assertIn("g_eff physical_status must be", joined)
+        self.assertIn("no_unscoped_geff_adoption", joined)
+
+    def test_distance_to_gr_ledger_rejects_accepted_without_scoped_layers(self) -> None:
+        def remove_scoped_promotion(rows):
+            for row in rows:
+                if row["burden_id"] == "g_eff":
+                    row["promotion_status"] = "none"
+                    break
+
+        report = self.distance_to_gr_ledger_fixture_report(remove_scoped_promotion)
+        joined = "\n".join(report.errors)
+        self.assertIn("g_eff promotion_status must be scoped_source_object_only", joined)
+        self.assertIn("accepted current_status must use scoped promotion_status", joined)
+
+    def test_distance_to_gr_ledger_rejects_frozen_toy_global_freeze_overread(self) -> None:
+        def remove_future_extension_guard(rows):
+            for row in rows:
+                if row["burden_id"] == "finite_toy_metric_response":
+                    tokens = row["overread_guard"].split(";")
+                    tokens.remove("no_future_source_extension_impossibility")
+                    row["overread_guard"] = ";".join(tokens)
+                    break
+
+        report = self.distance_to_gr_ledger_fixture_report(remove_future_extension_guard)
+        joined = "\n".join(report.errors)
+        self.assertIn("finite_toy_metric_response missing overread_guard tokens", joined)
+        self.assertIn("no_future_source_extension_impossibility", joined)
+
+    def test_distance_to_gr_ledger_rejects_generated_snapshot_as_layer_authority(self) -> None:
+        def cite_current_frontier(rows):
+            for row in rows:
+                if row["burden_id"] == "g_eff":
+                    row["last_evidence_path"] = "research_control/current_frontier.md"
+                    break
+
+        report = self.distance_to_gr_ledger_fixture_report(cite_current_frontier)
+        joined = "\n".join(report.errors)
+        self.assertIn("generated snapshot or noncanonical retrieval path", joined)
+        self.assertIn("g_eff", joined)
 
     def test_future_refuter_stress_rejects_generic_ontology_loop_route(self) -> None:
         completion_extra = "\n".join(

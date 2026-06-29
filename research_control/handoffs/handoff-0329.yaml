@@ -1,0 +1,84 @@
+handoff_id: "handoff-0329"
+created_at: "2026-06-29T15:45:57Z"
+task_id: "RT-20260629-034"
+decision_id: "DDR-20260629-034"
+job_id: "AJ-RT-20260629-034-001"
+completion_path: "research_control/tasks/RT-20260629-034/jobs/completions/AJC-AJ-RT-20260629-034-001.yaml"
+source_task_id: "RT-20260629-034"
+source_job_id: "AJ-RT-20260629-034-001"
+source_completion_id: "AJC-AJ-RT-20260629-034-001"
+status: "completed"
+summary: "V12 P1-T03 layered ledger validator guard hardening completed. The validator now rejects high-risk layered status overread for matter_coupling g_eff accepted scoped rows finite toy frozen-negative scope and generated snapshot authority."
+next_action: "Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible."
+loop_risk_route: "v12_p1_t03_validator_guard_completed_next_current_frontier_renderer_update"
+claim_boundary:
+  allowed_next_scope: "P1-T04 current-frontier renderer update only"
+  p1_t03_validator_guard_completed: true
+  distance_to_gr_ledger_csv_changed: true
+  validator_changed: true
+  tests_changed: true
+  scientific_status_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "validator as scientific proof"
+  - "current_frontier snapshot as status authority"
+  - "generated memory as scientific proof"
+  - "generated graph as scientific proof"
+  - "checker output as proof"
+  - "metrics output as proof"
+p1_t03_result:
+  route: "v12_p1_t03_layered_ledger_validator_guard"
+  validator_path: "scripts/research_control/validate_research_control.py"
+  tests_path: "tests/test_research_control.py"
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  focused_negative_fixtures_added: true
+  finite_toy_guard_token_added: "no_future_source_extension_impossibility"
+  scientific_status_changed: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_p1_t03_validator_guard_only"
+  meaning: "P1-T03 is a project-control validator hardening packet only. It changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+validation:
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  validate_research_control: "PASS"
+  validate_documentation_impact: "PASS"
+  graph_freshness_check: "PASS"
+  focused_unittest: "PASS"
+  full_unittest: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

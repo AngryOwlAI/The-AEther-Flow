@@ -420,8 +420,49 @@ DISTANCE_TO_GR_FIELD_VALUE_SETS = {
     "promotion_status": DISTANCE_TO_GR_PROMOTION_STATUS_VALUES,
 }
 
+DISTANCE_TO_GR_ACCEPTED_CONTROL_STATUS_VALUES = {
+    "accepted_as_scoped_evidence",
+    "accepted_as_scoped_evidence_precondition",
+    "accepted_as_scoped_source_object",
+    "accepted_as_source_extension_data",
+    "gate_review_completed",
+}
+
+DISTANCE_TO_GR_SCOPED_PROMOTION_STATUS_VALUES = {
+    "scoped_source_evidence_only",
+    "scoped_source_object_only",
+}
+
+DISTANCE_TO_GR_GENERATED_STATUS_AUTHORITY_PATHS = {
+    "research_control/current_frontier.md",
+}
+
+DISTANCE_TO_GR_GENERATED_STATUS_AUTHORITY_PREFIXES = (
+    ".local/",
+    "output/",
+    "wiki/",
+)
+
 DISTANCE_TO_GR_REQUIRED_GUARD_TOKENS = {
+    "resp_lc": {
+        "no_canonical_ontology_edit",
+        "no_matter_coupling_derivation",
+        "no_detector_semantics",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+    },
+    "m_src": {
+        "no_metricdata_e_adoption",
+        "no_geff_scope_expansion",
+        "no_matter_coupling_derivation",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+    },
     "g_eff": {
+        "no_source_law_adoption",
+        "no_metricdata_e_adoption",
         "no_unscoped_geff_adoption",
         "no_matter_coupling_derivation",
         "no_einstein_equations",
@@ -430,6 +471,8 @@ DISTANCE_TO_GR_REQUIRED_GUARD_TOKENS = {
     },
     "matter_coupling": {
         "no_source_law_adoption",
+        "no_metricdata_e_adoption",
+        "no_geff_scope_expansion",
         "no_coupling_law_adoption",
         "no_matter_coupling_derivation",
         "no_matter_coupling_adoption",
@@ -459,17 +502,60 @@ DISTANCE_TO_GR_REQUIRED_GUARD_TOKENS = {
     "finite_toy_metric_response": {
         "no_geff_scope_expansion",
         "no_global_theory_rejection",
+        "no_future_source_extension_impossibility",
         "no_completed_derivation",
     },
 }
 
-DISTANCE_TO_GR_EXPECTED_CRITICAL_PHYSICAL_STATUS = {
-    "g_eff": "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
-    "matter_coupling": "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
-    "einstein_equations": "no_field_equation_derivation",
-    "benchmark_promotion": "no_exact_gr_benchmark_promotion",
-    "gate_chair_status": "no_benchmark_closure",
-    "finite_toy_metric_response": "local_toy_route_frozen_not_global_theory_rejection",
+DISTANCE_TO_GR_EXPECTED_LAYER_VALUES = {
+    "resp_lc": {
+        "control_status": "accepted_as_source_extension_data",
+        "mathematical_status": "selector_data_source_extension",
+        "physical_status": "not_detector_semantics_not_matter_coupling",
+        "promotion_status": "scoped_source_object_only",
+    },
+    "m_src": {
+        "control_status": "gate_review_completed",
+        "mathematical_status": "scoped_source_only_adopted_object",
+        "physical_status": "not_target_manifold_not_metric_not_gr_derivation",
+        "promotion_status": "scoped_source_object_only",
+    },
+    "g_eff": {
+        "control_status": "gate_review_completed",
+        "mathematical_status": "scoped_source_extension_geff_object",
+        "physical_status": "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
+        "promotion_status": "scoped_source_object_only",
+    },
+    "matter_coupling": {
+        "control_status": "accepted_as_scoped_evidence_precondition",
+        "mathematical_status": "parameterized_finite_local_witness_precondition",
+        "physical_status": "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
+        "promotion_status": "scoped_source_evidence_only",
+    },
+    "einstein_equations": {
+        "control_status": "not_started",
+        "mathematical_status": "dynamics_action_or_variation_missing",
+        "physical_status": "no_field_equation_derivation",
+        "promotion_status": "none",
+    },
+    "benchmark_promotion": {
+        "control_status": "blocked",
+        "mathematical_status": "upstream_burdens_missing",
+        "physical_status": "no_exact_gr_benchmark_promotion",
+        "promotion_status": "none",
+    },
+    "gate_chair_status": {
+        "control_status": "human_gated",
+        "mathematical_status": "protected_verdict_missing",
+        "physical_status": "no_benchmark_closure",
+        "promotion_status": "human_gate_required",
+    },
+    "finite_toy_metric_response": {
+        "control_status": "frozen_negative",
+        "mathematical_status": "tag_removal_obstruction",
+        "physical_status": "local_toy_route_frozen_not_global_theory_rejection",
+        "promotion_status": "frozen_negative_no_promotion",
+    },
 }
 
 GR_DERIVATION_MILESTONES = (
@@ -1268,14 +1354,23 @@ def validate_distance_to_gr_ledger(report: ValidationReport) -> None:
                 report.error(
                     f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: unsupported overread_guard token {token}"
                 )
-        expected_physical_status = DISTANCE_TO_GR_EXPECTED_CRITICAL_PHYSICAL_STATUS.get(
-            burden_id
-        )
+        expected_layer_values = DISTANCE_TO_GR_EXPECTED_LAYER_VALUES.get(burden_id, {})
+        for field_name, expected_value in expected_layer_values.items():
+            field_value = row.get(field_name, "").strip()
+            if field_value != expected_value:
+                report.error(
+                    f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: {burden_id} {field_name} "
+                    f"must be {expected_value}, found {field_value}"
+                )
         physical_status = row.get("physical_status", "").strip()
-        if expected_physical_status and physical_status != expected_physical_status:
+        promotion_status = row.get("promotion_status", "").strip()
+        if promotion_status in DISTANCE_TO_GR_SCOPED_PROMOTION_STATUS_VALUES and not (
+            physical_status.startswith(("not_", "no_")) or "blocked" in physical_status
+        ):
             report.error(
-                f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: {burden_id} physical_status "
-                f"must be {expected_physical_status}, found {physical_status}"
+                f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: scoped promotion_status "
+                f"{promotion_status} requires physical_status with explicit not/no/blocked "
+                f"wording, found {physical_status}"
             )
         required_guard_tokens = DISTANCE_TO_GR_REQUIRED_GUARD_TOKENS.get(burden_id, set())
         missing_guard_tokens = sorted(required_guard_tokens - set(guard_tokens))
@@ -1284,13 +1379,26 @@ def validate_distance_to_gr_ledger(report: ValidationReport) -> None:
                 f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: {burden_id} missing "
                 f"overread_guard tokens {missing_guard_tokens}"
             )
-        if status == "accepted" and row.get("promotion_status", "").strip() not in {
-            "scoped_source_evidence_only",
-            "scoped_source_object_only",
-        }:
+        if status == "accepted" and promotion_status not in DISTANCE_TO_GR_SCOPED_PROMOTION_STATUS_VALUES:
             report.error(
                 f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: accepted current_status must "
                 "use scoped promotion_status"
+            )
+        control_status = row.get("control_status", "").strip()
+        if status == "accepted" and control_status not in DISTANCE_TO_GR_ACCEPTED_CONTROL_STATUS_VALUES:
+            report.error(
+                f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: accepted current_status must "
+                "use scoped or gate-reviewed control_status"
+            )
+        last_evidence_path = row.get("last_evidence_path", "").strip()
+        if burden_id in DISTANCE_TO_GR_EXPECTED_LAYER_VALUES and (
+            last_evidence_path in DISTANCE_TO_GR_GENERATED_STATUS_AUTHORITY_PATHS
+            or last_evidence_path.startswith(DISTANCE_TO_GR_GENERATED_STATUS_AUTHORITY_PREFIXES)
+        ):
+            report.error(
+                f"DISTANCE_TO_GR_LEDGER.csv:{row_number}: generated snapshot or "
+                f"noncanonical retrieval path cannot serve as layered status authority "
+                f"for {burden_id}: {last_evidence_path}"
             )
     missing = sorted(set(DISTANCE_TO_GR_LEDGER_REQUIRED_BURDENS) - set(by_burden))
     if missing:
