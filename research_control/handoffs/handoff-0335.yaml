@@ -1,0 +1,73 @@
+handoff_id: "handoff-0335"
+created_at: "2026-06-29T18:08:44Z"
+task_id: "RT-20260629-040"
+decision_id: "DDR-20260629-040"
+job_id: "AJ-RT-20260629-040-001"
+completion_path: "research_control/tasks/RT-20260629-040/jobs/completions/AJC-AJ-RT-20260629-040-001.yaml"
+source_task_id: "RT-20260629-040"
+source_job_id: "AJ-RT-20260629-040-001"
+source_completion_id: "AJC-AJ-RT-20260629-040-001"
+status: "completed"
+summary: "V12 P2-T04 validator packet completed. The standard research-control validator now lints the canonical frontier theorem inventory for registration required fields source paths source-authority types physical non-conclusions missing theorem fields high-risk overread guards and generated-only source authority. Focused fixture tests cover missing non-conclusions and bad source paths. No scientific claim status was changed."
+next_action: "Run P2-T05 as one bounded continue-research transaction to render an inventory summary for reader surfaces without authority drift."
+loop_risk_route: "v12_p2_t04_inventory_validator_completed_next_p2_t05_reader_summary"
+claim_boundary:
+  allowed_next_scope: "P2-T05 reader-surface inventory summary without authority drift"
+  validator_added: true
+  focused_fixture_tests_added: true
+  scientific_status_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "validator output as physics evidence"
+  - "inventory validator as proof authority"
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+p2_t04_result:
+  route: "v12_p2_t04_frontier_theorem_inventory_validator"
+  validator_path: "scripts/research_control/validate_research_control.py"
+  test_path: "tests/test_research_control.py"
+  live_inventory_passes: true
+  broken_fixtures_fail: true
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_p2_t04_validator_only"
+  meaning: "P2-T04 is a validator tooling packet only. It changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter-coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+validation:
+  focused_unittest_research_control: "PASS"
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  validate_research_control: "PASS"
+  validate_documentation_impact: "PASS"
+  graph_freshness_check: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

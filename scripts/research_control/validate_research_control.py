@@ -507,6 +507,72 @@ DISTANCE_TO_GR_REQUIRED_GUARD_TOKENS = {
     },
 }
 
+FRONTIER_INVENTORY_OBJECT_ID = "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+FRONTIER_INVENTORY_PATH = "research_control/design/frontier_theorem_inventory.md"
+FRONTIER_INVENTORY_REQUIRED_FIELDS = [
+    "frontier_item_id",
+    "frontier_item_class",
+    "object_or_claim_name",
+    "status_layer_summary",
+    "source_artifact_path",
+    "source_authority_type",
+    "assumptions",
+    "definitions_used",
+    "statement_or_decision",
+    "mathematical_conclusion",
+    "physical_non_conclusions",
+    "allowed_reuse",
+    "blocked_reuse",
+    "dependency_items",
+    "missing_theorem_or_primitive",
+    "candidate_next_task",
+    "overread_guard",
+    "external_review_notes",
+]
+FRONTIER_INVENTORY_ALLOWED_CLASSES = {
+    "accepted_scoped_object",
+    "definition",
+    "frozen_negative_route",
+    "gate_decision",
+    "missing_theorem",
+    "obstruction",
+    "source_extension_evidence",
+    "theorem",
+    "witness",
+}
+FRONTIER_INVENTORY_ALLOWED_AUTHORITY_TYPES = {
+    "claim_boundary_registry_row",
+    "distance_to_gr_ledger_row",
+    "gate_chair_artifact",
+    "generated_summary_paired_with_source",
+    "refuter_artifact",
+    "registered_markdown_control",
+    "registered_tex_artifact",
+    "research_task_registry_row",
+}
+FRONTIER_INVENTORY_GENERATED_SOURCE_PATHS = {
+    "research_control/current_frontier.md",
+}
+FRONTIER_INVENTORY_GENERATED_SOURCE_PREFIXES = (
+    ".local/",
+    "output/",
+    "wiki/",
+)
+FRONTIER_INVENTORY_HIGH_RISK_GUARDS = {
+    "matter": {"no_matter_coupling_derivation", "no_matter_coupling_adoption"},
+    "coupling": {"no_matter_coupling_derivation", "no_matter_coupling_adoption"},
+    "stress-energy": {"no_stress_energy_semantics", "no_stress_energy_tensor"},
+    "stress_energy": {"no_stress_energy_semantics", "no_stress_energy_tensor"},
+    "einstein": {"no_einstein_equations"},
+    "benchmark": {"no_benchmark_promotion"},
+    "g_eff": {"no_geff_scope_expansion", "no_unscoped_geff_adoption"},
+    "metricdata": {"no_metricdata_e_adoption"},
+}
+FRONTIER_INVENTORY_FROZEN_GUARDS = {
+    "no_global_theory_rejection",
+    "no_future_source_extension_impossibility",
+}
+
 DISTANCE_TO_GR_EXPECTED_LAYER_VALUES = {
     "resp_lc": {
         "control_status": "accepted_as_source_extension_data",
@@ -1403,6 +1469,175 @@ def validate_distance_to_gr_ledger(report: ValidationReport) -> None:
     missing = sorted(set(DISTANCE_TO_GR_LEDGER_REQUIRED_BURDENS) - set(by_burden))
     if missing:
         report.error(f"DISTANCE_TO_GR_LEDGER.csv: missing required burdens {missing}")
+
+
+def _frontier_inventory_item_sections(text: str) -> list[tuple[str, str]]:
+    matches = list(re.finditer(r"^### Item \d+:\s*(.+?)\s*$", text, re.MULTILINE))
+    sections: list[tuple[str, str]] = []
+    for index, match in enumerate(matches):
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        sections.append((match.group(1).strip(), text[match.end() : end]))
+    return sections
+
+
+def _frontier_inventory_fields(section: str) -> dict[str, str]:
+    fields: dict[str, list[str]] = {}
+    current_field = ""
+    for line in section.splitlines():
+        match = re.match(r"^- `([^`]+)`:\s*(.*)$", line)
+        if match:
+            current_field = match.group(1).strip()
+            fields[current_field] = [match.group(2).strip()]
+            continue
+        if current_field and (line.startswith("  ") or not line.strip()):
+            fields[current_field].append(line.strip())
+    return {key: "\n".join(value).strip() for key, value in fields.items()}
+
+
+def _frontier_inventory_tokens(value: str) -> set[str]:
+    return {
+        token.strip().strip("`").lower()
+        for token in re.split(r"[;\n,]+", value)
+        if token.strip().strip("`")
+    }
+
+
+def _frontier_inventory_backtick_paths(value: str) -> list[str]:
+    paths: list[str] = []
+    for token in re.findall(r"`([^`]+)`", value):
+        token = token.strip()
+        if (
+            "/" in token
+            or token.endswith((".csv", ".md", ".tex", ".yaml", ".yml"))
+            or token in {"AGENTS.md", "README.md"}
+        ):
+            paths.append(token)
+    return paths
+
+
+def _frontier_inventory_generated_path(path_text: str) -> bool:
+    return path_text in FRONTIER_INVENTORY_GENERATED_SOURCE_PATHS or path_text.startswith(
+        FRONTIER_INVENTORY_GENERATED_SOURCE_PREFIXES
+    )
+
+
+def validate_frontier_theorem_inventory(report: ValidationReport) -> None:
+    inventory_path = repo_path(FRONTIER_INVENTORY_PATH)
+    if not inventory_path.exists():
+        report.error(f"{FRONTIER_INVENTORY_PATH}: missing frontier theorem inventory source")
+        return
+
+    registry_rows = read_csv_rows("MARKDOWN_SOURCE_REGISTRY.csv")
+    inventory_row = next(
+        (
+            row
+            for row in registry_rows
+            if row.get("object_id", "") == FRONTIER_INVENTORY_OBJECT_ID
+        ),
+        None,
+    )
+    if not inventory_row:
+        report.error(
+            f"MARKDOWN_SOURCE_REGISTRY.csv: missing {FRONTIER_INVENTORY_OBJECT_ID}"
+        )
+    else:
+        if inventory_row.get("path", "") != FRONTIER_INVENTORY_PATH:
+            report.error(
+                f"MARKDOWN_SOURCE_REGISTRY.csv: {FRONTIER_INVENTORY_OBJECT_ID} "
+                f"path must be {FRONTIER_INVENTORY_PATH}"
+            )
+        actual_hash = hashlib.sha256(inventory_path.read_bytes()).hexdigest()
+        if inventory_row.get("source_hash", "") != actual_hash:
+            report.error(
+                f"MARKDOWN_SOURCE_REGISTRY.csv: {FRONTIER_INVENTORY_OBJECT_ID} "
+                "source_hash does not match inventory source"
+            )
+
+    text = inventory_path.read_text(encoding="utf-8")
+    sections = _frontier_inventory_item_sections(text)
+    if not sections:
+        report.error(f"{FRONTIER_INVENTORY_PATH}: no inventory items found")
+        return
+
+    seen_item_ids: set[str] = set()
+    for heading, section in sections:
+        fields = _frontier_inventory_fields(section)
+        item_id = fields.get("frontier_item_id", "").strip().strip("`")
+        item_ref = item_id or heading
+        prefix = f"{FRONTIER_INVENTORY_PATH}: {item_ref}"
+
+        if item_id in seen_item_ids:
+            report.error(f"{prefix}: duplicate frontier_item_id")
+        if item_id:
+            seen_item_ids.add(item_id)
+
+        for field_name in FRONTIER_INVENTORY_REQUIRED_FIELDS:
+            value = fields.get(field_name, "")
+            if not value or value == "``":
+                report.error(f"{prefix}: missing {field_name}")
+
+        class_tokens = _frontier_inventory_tokens(fields.get("frontier_item_class", ""))
+        unsupported_classes = sorted(class_tokens - FRONTIER_INVENTORY_ALLOWED_CLASSES)
+        if unsupported_classes:
+            report.error(f"{prefix}: unsupported frontier_item_class values {unsupported_classes}")
+
+        authority_tokens = _frontier_inventory_tokens(fields.get("source_authority_type", ""))
+        unsupported_authority = sorted(
+            authority_tokens - FRONTIER_INVENTORY_ALLOWED_AUTHORITY_TYPES
+        )
+        if unsupported_authority:
+            report.error(f"{prefix}: unsupported source_authority_type values {unsupported_authority}")
+
+        source_paths = _frontier_inventory_backtick_paths(
+            fields.get("source_artifact_path", "")
+        )
+        if not source_paths:
+            report.error(f"{prefix}: source_artifact_path must include a path")
+        generated_paths = [path for path in source_paths if _frontier_inventory_generated_path(path)]
+        canonical_paths = [
+            path for path in source_paths if not _frontier_inventory_generated_path(path)
+        ]
+        for path_text in canonical_paths:
+            reason = validate_relative_path(path_text)
+            if reason:
+                report.error(f"{prefix}: invalid source_artifact_path {path_text}: {reason}")
+                continue
+            if not repo_path(path_text).exists():
+                report.error(f"{prefix}: source_artifact_path does not exist: {path_text}")
+        if generated_paths and not canonical_paths:
+            report.error(
+                f"{prefix}: generated derivative source path requires paired canonical source path"
+            )
+
+        guard_tokens = _frontier_inventory_tokens(fields.get("overread_guard", ""))
+        physical_non_conclusions = fields.get("physical_non_conclusions", "").lower()
+        item_text = text_blob(heading, section)
+        risk_trigger_text = text_blob(
+            fields.get("frontier_item_id", ""),
+            fields.get("frontier_item_class", ""),
+            fields.get("object_or_claim_name", ""),
+            fields.get("status_layer_summary", ""),
+            fields.get("definitions_used", ""),
+            fields.get("statement_or_decision", ""),
+            fields.get("mathematical_conclusion", ""),
+            fields.get("missing_theorem_or_primitive", ""),
+        )
+        if not physical_non_conclusions:
+            report.error(f"{prefix}: physical_non_conclusions must be nonblank")
+        for marker, required_guards in FRONTIER_INVENTORY_HIGH_RISK_GUARDS.items():
+            if marker in risk_trigger_text:
+                if guard_tokens.isdisjoint(required_guards):
+                    report.error(
+                        f"{prefix}: high-risk term {marker} requires one of "
+                        f"overread_guard tokens {sorted(required_guards)}"
+                    )
+        if "frozen_negative_route" in class_tokens or "frozen negative" in item_text:
+            missing_frozen_guards = sorted(FRONTIER_INVENTORY_FROZEN_GUARDS - guard_tokens)
+            if missing_frozen_guards:
+                report.error(
+                    f"{prefix}: frozen negative item missing overread_guard tokens "
+                    f"{missing_frozen_guards}"
+                )
 
 
 def validate_registry_values(report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
@@ -4020,6 +4255,7 @@ def validate_all(
     report = ValidationReport()
     validate_registry_columns(report)
     validate_distance_to_gr_ledger(report)
+    validate_frontier_theorem_inventory(report)
     rows_by_registry = {
         name: read_csv_rows(name)
         for name in REGISTRY_COLUMNS

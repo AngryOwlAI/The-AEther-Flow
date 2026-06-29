@@ -1,0 +1,159 @@
+completion_id: "AJC-AJ-RT-20260629-040-001"
+job_id: "AJ-RT-20260629-040-001"
+task_id: "RT-20260629-040"
+completed_at: "2026-06-29T18:08:44Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  related_plan_task_id: "P2-T04"
+  plan_phase_id: "P2"
+  implemented_task_scope: "Added frontier theorem inventory validator coverage and fixture tests for missing physical non-conclusions and bad source paths without changing scientific status."
+  downstream_tasks_not_implemented:
+    - "P2-T05"
+    - "P3"
+    - "P4"
+    - "P5"
+    - "P6"
+    - "P7"
+    - "P8"
+    - "P9"
+    - "P10"
+    - "P11"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260629-040/00_TASK.yaml"
+  - "research_control/tasks/RT-20260629-040/DDR-20260629-040.md"
+  - "research_control/tasks/RT-20260629-040/artifacts/p2_t04_frontier_theorem_inventory_validator_receipt.yaml"
+  - "research_control/tasks/RT-20260629-040/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260629-040/jobs/AJ-RT-20260629-040-001.yaml"
+  - "research_control/tasks/RT-20260629-040/jobs/completions/AJC-AJ-RT-20260629-040-001.yaml"
+  - "research_control/tasks/RT-20260629-040/roles/validator-engineer@0.2.0--RT-20260629-040.yaml"
+  - "research_control/handoffs/handoff-0335.yaml"
+  - "research_control/handoffs/handoff-0335.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  - "research_control/design/frontier_theorem_inventory_schema_v1.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "research_control/handoffs/handoff-0334.yaml"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass | refreshed_local_retrieval=true"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json | exit_code=0 | status=pass | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY --json | exit_code=0 | status=pass | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1 --json | exit_code=0 | status=pass | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready | active_task=RT-20260629-039 | latest_handoff=handoff-0334"
+  - ".venv/bin/python -m unittest tests.test_research_control | exit_code=0 | status=pass | tests=115"
+validation_status: "PASS"
+verdict: "v12_p2_t04_frontier_theorem_inventory_validator_completed_no_science_change"
+coherent_resolution_summary: "P2-T04 added validate_frontier_theorem_inventory to the standard research-control validator and added fixture tests for missing physical non-conclusions and bad source paths."
+next_recommendation: "Run P2-T05 as one bounded continue-research transaction to render an inventory summary for reader surfaces without authority drift."
+validator_summary:
+  validator_path: "scripts/research_control/validate_research_control.py"
+  test_path: "tests/test_research_control.py"
+  live_inventory_passes: true
+  broken_missing_non_conclusions_fixture_fails: true
+  broken_bad_source_path_fixture_fails: true
+  required_checks:
+    inventory_source_exists_and_registered: true
+    each_item_has_source_path: true
+    assumptions_and_conclusion_required: true
+    physical_non_conclusions_required: true
+    missing_theorem_or_primitive_required: true
+    high_risk_overread_guards_required: true
+    generated_derivative_source_requires_canonical_pairing: true
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_p2_t04_validator_only"
+  meaning: "P2-T04 is validator tooling only. It does not change source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter-coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 458
+    relationship_row_count: 2506
+    semantic_row_count: 458
+    vault_row_count: 458
+    warning_summary: "Local retrieval was refreshed after source changes; final preflight status was PASS."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      note: "Lookup confirmed the registered canonical plan source row before P2-T04 execution."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      note: "Lookup confirmed the registered inventory source row before P2-T04 execution."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1"
+      note: "Lookup confirmed the registered schema source row before P2-T04 execution."
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "89688802eaa001fe4835e5f7aeb8648a3721c78cb2a5ec5917c9867f9c6003dd"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+      source_hash: "e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory_schema_v1.md"
+      source_hash: "1f95a71f5efeeb5441277bcd740bad849267f67f3f38a50eee4d3f77b7eb7fd5"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "e4f93bc8df20363c969af69cf1b8b5b553a68149fe1df5fdcd952427fc9471ca"
+  authority_note: "Memory, wiki notes, semantic extracts, Obsidian notes, file-object rows, relationship rows, PDF derivatives, generated graph files, and .local caches are retrieval or reader layers only and not authority."
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+forbidden_conclusion_summary:
+  - "no validator output as physics evidence"
+  - "no inventory validator as proof authority"
+  - "no canonical ontology edit"
+  - "no source-law adoption"
+  - "no MetricData(E) adoption"
+  - "no unscoped g_eff adoption"
+  - "no g_eff scope expansion"
+  - "no coupling-law adoption"
+  - "no matter-coupling derivation"
+  - "no matter-coupling adoption"
+  - "no stress-energy semantics import"
+  - "no stress-energy tensor construction"
+  - "no matter action import"
+  - "no detector semantics import"
+  - "no Einstein-equation derivation"
+  - "no exact-GR benchmark promotion"
+  - "no benchmark Gate Chair closure"
+  - "no completed derivation"

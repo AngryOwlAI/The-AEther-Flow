@@ -1967,6 +1967,161 @@ class ResearchControlTests(unittest.TestCase):
         self.assertIn("generated snapshot or noncanonical retrieval path", joined)
         self.assertIn("g_eff", joined)
 
+    def frontier_inventory_fixture_report(
+        self,
+        inventory_text: str,
+        *,
+        create_source_path: str | None = "AGENTS.md",
+    ):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            control = root / "research_control"
+            registries = root / "registries"
+            inventory_path = control / "design" / "frontier_theorem_inventory.md"
+            inventory_path.parent.mkdir(parents=True)
+            registries.mkdir(parents=True)
+            inventory_path.write_text(inventory_text, encoding="utf-8")
+            if create_source_path:
+                source_path = root / create_source_path
+                source_path.parent.mkdir(parents=True, exist_ok=True)
+                source_path.write_text("fixture source\n", encoding="utf-8")
+            registry_path = registries / "MARKDOWN_SOURCE_REGISTRY.csv"
+            with registry_path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(
+                    handle,
+                    fieldnames=[
+                        "object_id",
+                        "path",
+                        "format",
+                        "role",
+                        "authority_status",
+                        "audience",
+                        "source_hash",
+                        "related_source",
+                        "generated_from",
+                        "generated_outputs",
+                        "owner_skill",
+                        "validation_status",
+                        "last_validated_at",
+                        "notes",
+                        "github_facing",
+                        "agent_documentation",
+                        "contains_mermaid",
+                        "contains_math",
+                    ],
+                )
+                writer.writeheader()
+                writer.writerow(
+                    {
+                        "object_id": self.validator.FRONTIER_INVENTORY_OBJECT_ID,
+                        "path": self.validator.FRONTIER_INVENTORY_PATH,
+                        "format": "markdown",
+                        "role": "control_inventory",
+                        "authority_status": "project_control",
+                        "audience": "agents",
+                        "source_hash": hashlib.sha256(
+                            inventory_text.encode("utf-8")
+                        ).hexdigest(),
+                        "related_source": "",
+                        "generated_from": "",
+                        "generated_outputs": "",
+                        "owner_skill": "project-memory-system",
+                        "validation_status": "PASS",
+                        "last_validated_at": "2026-06-29T00:00:00Z",
+                        "notes": "fixture",
+                        "github_facing": "false",
+                        "agent_documentation": "true",
+                        "contains_mermaid": "false",
+                        "contains_math": "false",
+                    }
+                )
+
+            report = self.validator.ValidationReport()
+            with (
+                mock.patch.object(self.validator, "REPO_ROOT", root),
+                mock.patch.object(self.validator, "CONTROL_DIR", control),
+                mock.patch.object(self.validator, "REGISTRY_DIR", registries),
+            ):
+                self.validator.validate_frontier_theorem_inventory(report)
+        return report
+
+    def frontier_inventory_fixture_text(
+        self,
+        *,
+        source_path: str = "AGENTS.md",
+        physical_non_conclusions: str = "  - No benchmark promotion.\n  - No completed derivation.",
+    ) -> str:
+        return "\n".join(
+            [
+                "<!-- authority: control -->",
+                "",
+                "# Frontier Theorem Inventory",
+                "",
+                "## Inventory Items",
+                "",
+                "### Item 1: fixture_item",
+                "",
+                "- `frontier_item_id`: `fixture_item`",
+                "- `frontier_item_class`: `definition;missing_theorem`",
+                "- `object_or_claim_name`: Fixture source-control item.",
+                "- `status_layer_summary`:",
+                '  - `control_status`: `draft_control_object_exists`',
+                '  - `mathematical_status`: `definition_only_or_draft_object`',
+                '  - `physical_status`: `no_physical_interpretation_authorized`',
+                '  - `promotion_status`: `draft_control_only`',
+                '  - `overread_guard`: `no_benchmark_promotion;no_completed_derivation`',
+                f"- `source_artifact_path`: `{source_path}`",
+                "- `source_authority_type`: `registered_markdown_control`",
+                "- `assumptions`:",
+                "  - Fixture assumption.",
+                "- `definitions_used`: fixture primitive.",
+                "- `statement_or_decision`: Fixture records a missing theorem only.",
+                "- `mathematical_conclusion`: none_supplied.",
+                "- `physical_non_conclusions`:",
+                physical_non_conclusions,
+                "- `allowed_reuse`:",
+                "  - Fixture reuse.",
+                "- `blocked_reuse`:",
+                "  - Do not promote fixture.",
+                "- `dependency_items`: `none`",
+                "- `missing_theorem_or_primitive`: Fixture theorem.",
+                "- `candidate_next_task`: none.",
+                "- `overread_guard`: `no_benchmark_promotion;no_completed_derivation`",
+                "- `external_review_notes`: Fixture note.",
+                "",
+            ]
+        )
+
+    def test_frontier_inventory_validator_accepts_live_inventory(self) -> None:
+        report = self.validator.ValidationReport()
+        self.validator.validate_frontier_theorem_inventory(report)
+        self.assertEqual(report.errors, [])
+
+    def test_frontier_inventory_validator_rejects_missing_non_conclusions(self) -> None:
+        report = self.frontier_inventory_fixture_report(
+            self.frontier_inventory_fixture_text(physical_non_conclusions="")
+        )
+        joined = "\n".join(report.errors)
+        self.assertIn("physical_non_conclusions", joined)
+
+    def test_frontier_inventory_validator_rejects_bad_source_paths(self) -> None:
+        report = self.frontier_inventory_fixture_report(
+            self.frontier_inventory_fixture_text(
+                source_path="research_control/missing_source.md"
+            ),
+            create_source_path=None,
+        )
+        self.assertIn("source_artifact_path does not exist", "\n".join(report.errors))
+
+        generated_report = self.frontier_inventory_fixture_report(
+            self.frontier_inventory_fixture_text(source_path="wiki/generated.md"),
+            create_source_path=None,
+        )
+        self.assertIn(
+            "generated derivative source path requires paired canonical source path",
+            "\n".join(generated_report.errors),
+        )
+
     def test_future_refuter_stress_rejects_generic_ontology_loop_route(self) -> None:
         completion_extra = "\n".join(
             [
