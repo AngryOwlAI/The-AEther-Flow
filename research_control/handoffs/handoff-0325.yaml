@@ -1,0 +1,76 @@
+handoff_id: "handoff-0325"
+created_at: "2026-06-29T14:23:00Z"
+task_id: "RT-20260629-030"
+decision_id: "DDR-20260629-030"
+job_id: "AJ-RT-20260629-030-001"
+completion_path: "research_control/tasks/RT-20260629-030/jobs/completions/AJC-AJ-RT-20260629-030-001.yaml"
+source_task_id: "RT-20260629-030"
+source_job_id: "AJ-RT-20260629-030-001"
+source_completion_id: "AJC-AJ-RT-20260629-030-001"
+status: "completed"
+summary: "V12 P0-T02 baseline authority snapshot completed. The packet records handoff-0323 as the post-v11 closure baseline and handoff-0324 as current routing authority after P0-T01, with no physics claim promotion."
+next_action: "Run P0-T03 as one bounded continue-research transaction to ensure the v12 plan and baseline snapshot are discoverable through source-first memory before P1 work."
+loop_risk_route: "v12_p0_t02_baseline_snapshot_completed_next_memory_bootstrap"
+claim_boundary:
+  allowed_next_scope: "P0-T03 memory/bootstrap discoverability only"
+  p0_t02_snapshot_created: true
+  historical_post_v11_baseline_task: "RT-20260614-290"
+  historical_post_v11_baseline_handoff: "handoff-0323"
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  detector_semantics_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "matter coupling derivation"
+  - "matter coupling adoption"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "handoff as scientific proof"
+  - "implementation-plan tracking as scientific proof"
+  - "baseline snapshot as scientific proof"
+  - "generated graph as scientific proof"
+  - "checker output as proof"
+  - "metrics output as proof"
+p0_t02_result:
+  route: "v12_p0_t02_baseline_authority_snapshot"
+  baseline_snapshot: "research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_authority_snapshot.yaml"
+  baseline_summary: "research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md"
+  ledger_hash: "e4c86503ff36901b3a894e41cca43c6195a2b3f053d8848292f4ddb9469e8f94"
+  current_frontier_pre_transaction_hash: "80d0107eeccb2223d6d08bd2629a5744d67a6cd76b132865c8a006ecbb69f699"
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_p0_t02_baseline_snapshot_only"
+  meaning: "P0-T02 is a project-control packet only. It changes no source-law adoption MetricData(E) adoption g_eff scope expansion coupling-law adoption matter coupling stress-energy semantics Einstein equations benchmark promotion or completed derivation status."
+validation:
+  p0_t02_snapshot: "created"
+  blocking_drift_detected: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -1,0 +1,122 @@
+snapshot_id: "V12-P0-T02-BASELINE-AUTHORITY-SNAPSHOT"
+task_id: "RT-20260629-030"
+plan_task_id: "recommendations-v12-P0-T02"
+created_at: "2026-06-29T14:23:00Z"
+authority: "control"
+scope: "post-v11 baseline authority snapshot adapted to post-P0-T01 live state"
+snapshot_kind: "v12 post-v11 baseline plus live post-plan-intake reconciliation"
+source_hashes:
+  program_state_yaml_pre_transaction_sha256: "b1de47938eabb9f37240834046cb2e3421dc171ea99668bfc87f7133ef2d5680"
+  handoff_0323_yaml_sha256: "fa899537e409d16637f44fbc2d51320d73b24cae5528d05a6b4610ec9f5147b6"
+  handoff_0323_md_sha256: "2784bb52a7a4c853cc64d96011055f451919935043c2308faf76d7e593b08adb"
+  handoff_0324_yaml_sha256: "7edf1d0acc583ddb3368ed2ad4b6efb4d916634301cbf32bf6f3ff60552f204c"
+  current_frontier_pre_transaction_sha256: "80d0107eeccb2223d6d08bd2629a5744d67a6cd76b132865c8a006ecbb69f699"
+  distance_to_gr_ledger_sha256: "e4c86503ff36901b3a894e41cca43c6195a2b3f053d8848292f4ddb9469e8f94"
+  research_task_registry_sha256: "ce060d4772a6b57005ae1ee53fb914152cacb3a34c0f6823155494f5375a5d2f"
+  agent_job_registry_sha256: "ce8849c4e2dcf7fc73477bbe24551c92f147fab3373d39a3b0e7e61d0b2e8a32"
+  claim_boundary_registry_sha256: "df18befb69df38e395f74ee85917bee3ce94f57341966898567ef71a36dbc2ac"
+  rt_20260614_290_task_yaml_sha256: "28f9232be5fb117b2e4bf316b8a283a767db1d75f6e732c152a4da90d1617323"
+  rt_20260614_290_completion_sha256: "1cc1d1bfad46bbc5a47d8cc506d1f2207d770944e2e7f2b27142df57bd94e0f5"
+post_v11_closure_baseline:
+  active_task_at_v11_closure: "RT-20260614-290"
+  latest_handoff_at_v11_closure: "handoff-0323"
+  current_status_at_v11_closure: "v11_p0_evidence_closure_completed_all_plan_tasks_proven_no_promotion"
+  next_authority_at_v11_closure: "ordinary research-control continuation under a new tracked objective only"
+  evidence:
+    - "research_control/handoffs/handoff-0323.yaml"
+    - "research_control/handoffs/handoff-0323.md"
+    - "research_control/tasks/RT-20260614-290/00_TASK.yaml"
+    - "research_control/tasks/RT-20260614-290/jobs/completions/AJC-AJ-RT-20260614-290-001.yaml"
+  all_applicable_v11_plan_tasks_proven: true
+  distance_to_gr_changed_by_v11_closure: false
+live_state_before_p0_t02:
+  active_task_id: "RT-20260629-029"
+  latest_handoff_id: "handoff-0324"
+  current_status: "v12_p0_t01_plan_intake_completed_no_promotion"
+  next_recommended_action: "Run P0-T02 as one bounded continue-research transaction to create the post-v11 baseline authority snapshot before P1 work."
+  evidence:
+    - "research_control/program_state.yaml"
+    - "research_control/handoffs/handoff-0324.yaml"
+    - "research_control/current_frontier.md"
+  advancement_from_plan_assumption:
+    expected_by_original_plan: "RT-20260614-290 / handoff-0323"
+    actual_live_state: "RT-20260629-029 / handoff-0324"
+    interpretation: "not drift"
+    reason: "P0-T01 completed tracked v12 implementation-plan intake and explicitly routed this P0-T02 packet."
+distance_to_gr_ledger_snapshot:
+  path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  sha256: "e4c86503ff36901b3a894e41cca43c6195a2b3f053d8848292f4ddb9469e8f94"
+  data_row_count: 14
+  rows_observed:
+    - burden_id: "source_ontology_primitives"
+      current_status: "draft object exists"
+    - burden_id: "source_equivalence_eqsrc"
+      current_status: "draft object exists"
+    - burden_id: "retain_h"
+      current_status: "blocked by missing primitive"
+    - burden_id: "gen_h"
+      current_status: "blocked by missing primitive"
+    - burden_id: "obsloc_lc"
+      current_status: "constructive witness exists"
+    - burden_id: "resp_lc"
+      current_status: "accepted"
+    - burden_id: "m_src"
+      current_status: "accepted"
+    - burden_id: "g_eff"
+      current_status: "accepted"
+    - burden_id: "matter_coupling"
+      current_status: "accepted"
+    - burden_id: "einstein_equations"
+      current_status: "not started"
+    - burden_id: "finite_variation_robustness"
+      current_status: "Refuter stress passed"
+    - burden_id: "benchmark_promotion"
+      current_status: "blocked by missing primitive"
+    - burden_id: "gate_chair_status"
+      current_status: "human-gated"
+    - burden_id: "finite_toy_metric_response"
+      current_status: "frozen negative"
+  meaning: "Ledger statuses were read and hashed only. P0-T02 changes no Distance-to-GR row."
+blocked_claims:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "matter-coupling derivation"
+  - "matter-coupling adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "detector semantics"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "baseline snapshot as scientific proof"
+  - "implementation-plan tracking as scientific proof"
+  - "generated graph as scientific proof"
+  - "checker output as proof"
+  - "metrics output as proof"
+state_consistency_status: "consistent_for_v12_p0_t02_after_p0_t01"
+mismatched_sources: []
+blocking_drift_detected: false
+adaptation_decision:
+  required: true
+  reason: "The v12 plan expected handoff-0323 at start, but P0-T01 lawfully advanced live state to handoff-0324."
+  action_taken: "Snapshot records handoff-0323 as historical post-v11 baseline and handoff-0324 as current routing authority."
+  repair_handoff_required: false
+claim_boundary:
+  control_evidence_only: true
+  physics_claim_promotion: false
+  distance_to_gr_changed: false
+  canonical_ontology_edit: false
+  source_law_adoption: false
+  metric_data_adoption: false
+  geff_scope_change: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promotion: false
+verdict: "P0-T02 baseline authority snapshot satisfied after validation and checkpoint."
