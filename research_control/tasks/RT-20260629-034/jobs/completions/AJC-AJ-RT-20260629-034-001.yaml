@@ -66,7 +66,7 @@ command_results:
   - "shasum -a 256 required P1-T03 sources | exit_code=0 | status=pass"
   - ".venv/bin/python -m unittest focused P1-T03 ledger validator tests | exit_code=0 | status=pass | tests=7"
   - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | status=pass | tests=316"
-  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=pass | current_frontier_hash=607c52e5d896cde79b8e10a216126d24ea92fc5d6cec962d4c3a6cff10d65ebd"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=pass | current_frontier_hash=1172aeb640a9890aa3b55a4f0781bd2a9608c482e8ef0565dfaebeeb96b47c20"
   - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass"
   - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
   - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass | refreshed_local_retrieval=false | post_documentation_impact=true"
@@ -156,7 +156,7 @@ memory_preflight:
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: "research_control/current_frontier.md"
-      source_hash: "607c52e5d896cde79b8e10a216126d24ea92fc5d6cec962d4c3a6cff10d65ebd"
+      source_hash: "1172aeb640a9890aa3b55a4f0781bd2a9608c482e8ef0565dfaebeeb96b47c20"
   authority_note: "Memory, wiki notes, semantic extracts, Obsidian notes, file-object rows, relationship rows, PDF derivatives, and .local caches are retrieval or reader layers only and not authority; canonical sources and registries remain authority."
 resolved_project_improvement_signals: []
 project_improvement_signals: []

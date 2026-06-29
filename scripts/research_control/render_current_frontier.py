@@ -111,6 +111,17 @@ def line_list(items: list[str]) -> str:
     return "\n".join(f"- [ ] {item}" for item in items)
 
 
+def split_tokens(value: Any) -> list[str]:
+    return [item.strip() for item in text_value(value).split(";") if item.strip()]
+
+
+def guard_cell(value: Any) -> str:
+    tokens = split_tokens(value)
+    if not tokens:
+        return "none"
+    return "<br>".join(md_cell(token) for token in tokens)
+
+
 def sentence_fragment(value: Any, fallback: str) -> str:
     text = text_value(value).rstrip(".")
     return text if text else fallback
@@ -118,8 +129,8 @@ def sentence_fragment(value: Any, fallback: str) -> str:
 
 def ledger_rows_for_markdown(rows: list[dict[str, str]]) -> str:
     lines = [
-        "| Burden ID | Milestone | Current status | Blocking burden | Last evidence |",
-        "| --- | --- | --- | --- | --- |",
+        "| Burden ID | Milestone | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         lines.append(
@@ -129,12 +140,41 @@ def ledger_rows_for_markdown(rows: list[dict[str, str]]) -> str:
                     code_value(row.get("burden_id", "")),
                     code_value(row.get("milestone", "")),
                     md_cell(row.get("current_status", "")),
-                    md_cell(row.get("blocking_burden", "")),
+                    md_cell(row.get("control_status", "")),
+                    md_cell(row.get("mathematical_status", "")),
+                    md_cell(row.get("physical_status", "")),
+                    md_cell(row.get("promotion_status", "")),
+                    guard_cell(row.get("overread_guard", "")),
                     code_value(row.get("last_evidence_path", "")),
                 ]
             )
             + " |"
         )
+    return "\n".join(lines)
+
+
+def row_by_burden(rows: list[dict[str, str]], burden_id: str) -> dict[str, str]:
+    return next((item for item in rows if item.get("burden_id") == burden_id), {})
+
+
+def layered_boundary_line(row: dict[str, str]) -> str:
+    burden = row.get("burden_id", "")
+    return (
+        f"- `{md_cell(burden)}`: control `{md_cell(row.get('control_status', ''))}`; "
+        f"mathematical `{md_cell(row.get('mathematical_status', ''))}`; "
+        f"physical `{md_cell(row.get('physical_status', ''))}`; "
+        f"promotion `{md_cell(row.get('promotion_status', ''))}`; "
+        f"guards: {guard_cell(row.get('overread_guard', ''))}."
+    )
+
+
+def layered_boundary_notes(rows: list[dict[str, str]]) -> str:
+    focus_ids = ["matter_coupling", "g_eff", "einstein_equations", "benchmark_promotion"]
+    lines = []
+    for burden_id in focus_ids:
+        row = row_by_burden(rows, burden_id)
+        if row:
+            lines.append(layered_boundary_line(row))
     return "\n".join(lines)
 
 
@@ -186,14 +226,20 @@ def required_next_authority_text(handoff: dict[str, Any]) -> str:
 
 
 def matter_coupling_boundary(rows: list[dict[str, str]]) -> str:
-    row = next((item for item in rows if item.get("burden_id") == "matter_coupling"), {})
+    row = row_by_burden(rows, "matter_coupling")
     status = row.get("current_status", "unknown")
+    control_status = row.get("control_status", "unknown")
+    mathematical_status = row.get("mathematical_status", "unknown")
+    physical_status = row.get("physical_status", "unknown")
+    promotion_status = row.get("promotion_status", "unknown")
     burden = row.get("blocking_burden", "matter-coupling derivation remains blocked")
     evidence = row.get("last_evidence_path", "registries/DISTANCE_TO_GR_LEDGER.csv")
     return (
         "The Distance-to-GR ledger currently records the `matter_coupling` burden row "
-        f"as `{status}`. Its blocking burden is: {burden}. The last evidence path is "
-        f"`{evidence}`.\n\n"
+        f"with legacy status `{status}`, control status `{control_status}`, "
+        f"mathematical status `{mathematical_status}`, physical status "
+        f"`{physical_status}`, and promotion status `{promotion_status}`. Its "
+        f"blocking burden is: {burden}. The last evidence path is `{evidence}`.\n\n"
         "This ledger status must not be read as coupling-law adoption, universal "
         "matter-coupling derivation, matter-coupling adoption, stress-energy "
         "semantics, stress-energy tensor, matter action, detector semantics, "
@@ -292,9 +338,8 @@ authority invariant. The precedence order remains:
    role-execution rows provide transaction provenance.
 5. This file is a generated synchronized snapshot only.
 
-The P1-T03 validator guard fails validation when this snapshot drifts from
-tracked active-state authority. The P1-T04 renderer now provides a deterministic
-repair command:
+The P1-T04 renderer check fails when this snapshot drifts from tracked
+active-state authority. The renderer provides a deterministic repair command:
 
 ```zsh
 .venv/bin/python scripts/research_control/render_current_frontier.py --write
@@ -318,14 +363,30 @@ repair command:
 Universal matter coupling and downstream GR promotion remain blocked until a
 separate tracked route and the required protected authorities establish them.
 
+## Layered Distance-To-GR Boundary Notes
+
+The legacy `current_status` column is retained for continuity. The layered
+columns below are the reader-facing anti-overread boundary:
+
+- `control_status` records workflow or gate-review state.
+- `mathematical_status` records the source-side mathematical object state.
+- `physical_status` records what must not be inferred physically.
+- `promotion_status` records whether any downstream promotion is authorized.
+- `overread_guard` records exact blocked readings that must remain visible.
+
+High-risk rows:
+
+{layered_boundary_notes(ledger_rows)}
+
 ## Exact Blocked Claims
 
 {line_list(BLOCKED_CLAIMS)}
 
 ## Distance-To-GR Table
 
-This table summarizes `registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger
-remains the authoritative source if this summary drifts.
+This table summarizes the layered fields in
+`registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger remains the authoritative
+source if this summary drifts.
 
 {ledger_rows_for_markdown(ledger_rows)}
 
@@ -371,8 +432,8 @@ The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 The AEther-Flow Research Project. (2026, June 28). *Handoff {state['latest_handoff_id'].replace('handoff-', '')}*
 [Internal research-control handoff].
 
-The AEther-Flow Research Project. (2026, June 28). *Recommendations
-implementation plan continue task v11* [Internal implementation plan].
+The AEther-Flow Research Project. (2026, June 29). *Recommendations
+implementation plan continue task v12* [Internal implementation plan].
 """
     return body.strip() + "\n"
 
@@ -399,6 +460,13 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "frontier_path": DEFAULT_FRONTIER_PATH,
         "rendered_hash": sha256_text(markdown),
         "distance_to_gr_row_count": len(state["distance_to_gr_rows"]),
+        "layered_status_fields": [
+            "control_status",
+            "mathematical_status",
+            "physical_status",
+            "promotion_status",
+            "overread_guard",
+        ],
         "snapshot_only_not_authority": True,
         "physics_claim_authority": False,
     }

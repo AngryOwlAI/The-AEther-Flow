@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-034` and `handoff-0329`.
+`RT-20260629-035` and `handoff-0330`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-034` |
-| Latest handoff ID | `handoff-0329` |
-| Current status | `v12_p1_t03_layered_ledger_validator_guard_completed_no_science_change` |
-| Current route family | v12 p1 t03 validator guard completed next current frontier renderer update |
+| Active task ID | `RT-20260629-035` |
+| Latest handoff ID | `handoff-0330` |
+| Current status | `v12_p1_t04_current_frontier_layered_renderer_completed_no_science_change` |
+| Current route family | v12 p1 t04 renderer completed next p1 cross check |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible. |
-| Required next authority | P1-T04 current-frontier renderer update only |
-| Next recommended action | Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional. |
+| Required next authority | P1-T05 P1 layered ledger cross-check only |
+| Next recommended action | Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional. |
 
 ## Active Boundary
 
@@ -37,9 +37,8 @@ authority invariant. The precedence order remains:
    role-execution rows provide transaction provenance.
 5. This file is a generated synchronized snapshot only.
 
-The P1-T03 validator guard fails validation when this snapshot drifts from
-tracked active-state authority. The P1-T04 renderer now provides a deterministic
-repair command:
+The P1-T04 renderer check fails when this snapshot drifts from tracked
+active-state authority. The renderer provides a deterministic repair command:
 
 ```zsh
 .venv/bin/python scripts/research_control/render_current_frontier.py --write
@@ -49,21 +48,39 @@ repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-034/00_TASK.yaml`.
-- Active task objective: Harden Distance-to-GR ledger validator guards for layered status semantics without changing scientific meaning.
-- Latest handoff path: `research_control/handoffs/handoff-0329.yaml`.
-- Latest handoff summary: V12 P1-T03 layered ledger validator guard hardening completed. The validator now rejects high-risk layered status overread for matter_coupling g_eff accepted scoped rows finite toy frozen-negative scope and generated snapshot authority.
-- Current route family: v12 p1 t03 validator guard completed next current frontier renderer update.
-- Next recommended action: Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible.
+- Active task path: `research_control/tasks/RT-20260629-035/00_TASK.yaml`.
+- Active task objective: Update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible without changing scientific meaning.
+- Latest handoff path: `research_control/handoffs/handoff-0330.yaml`.
+- Latest handoff summary: V12 P1-T04 current-frontier layered renderer update completed. The generated Distance-to-GR table now exposes layered control mathematical physical promotion and overread-guard fields, with high-risk row boundary notes for matter_coupling g_eff Einstein equations and benchmark promotion.
+- Current route family: v12 p1 t04 renderer completed next p1 cross check.
+- Next recommended action: Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional.
 
 ## Matter-Coupling Boundary
 
-The Distance-to-GR ledger currently records the `matter_coupling` burden row as `accepted`. Its blocking burden is: ParamFiniteLocalWitness_v1(E) BridgeSlot_n(E) and NoTargetImport_n accepted only as scoped source-extension parameterized-witness evidence/precondition for Matter-Coupling Bridge Target v1 while no source-law adoption coupling-law adoption matter-coupling derivation stress-energy semantics stress-energy tensor matter action detector semantics MetricData(E) adoption g_eff scope expansion Einstein-equation premise benchmark fit or downstream promotion is imported. The last evidence path is `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex`.
+The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: ParamFiniteLocalWitness_v1(E) BridgeSlot_n(E) and NoTargetImport_n accepted only as scoped source-extension parameterized-witness evidence/precondition for Matter-Coupling Bridge Target v1 while no source-law adoption coupling-law adoption matter-coupling derivation stress-energy semantics stress-energy tensor matter action detector semantics MetricData(E) adoption g_eff scope expansion Einstein-equation premise benchmark fit or downstream promotion is imported. The last evidence path is `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex`.
 
 This ledger status must not be read as coupling-law adoption, universal matter-coupling derivation, matter-coupling adoption, stress-energy semantics, stress-energy tensor, matter action, detector semantics, Einstein equations, benchmark promotion, or completed derivation.
 
 Universal matter coupling and downstream GR promotion remain blocked until a
 separate tracked route and the required protected authorities establish them.
+
+## Layered Distance-To-GR Boundary Notes
+
+The legacy `current_status` column is retained for continuity. The layered
+columns below are the reader-facing anti-overread boundary:
+
+- `control_status` records workflow or gate-review state.
+- `mathematical_status` records the source-side mathematical object state.
+- `physical_status` records what must not be inferred physically.
+- `promotion_status` records whether any downstream promotion is authorized.
+- `overread_guard` records exact blocked readings that must remain visible.
+
+High-risk rows:
+
+- `matter_coupling`: control `accepted_as_scoped_evidence_precondition`; mathematical `parameterized_finite_local_witness_precondition`; physical `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`; promotion `scoped_source_evidence_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `g_eff`: control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `einstein_equations`: control `not_started`; mathematical `dynamics_action_or_variation_missing`; physical `no_field_equation_derivation`; promotion `none`; guards: no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `benchmark_promotion`: control `blocked`; mathematical `upstream_burdens_missing`; physical `no_exact_gr_benchmark_promotion`; promotion `none`; guards: no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation.
 
 ## Exact Blocked Claims
 
@@ -89,32 +106,33 @@ separate tracked route and the required protected authorities establish them.
 
 ## Distance-To-GR Table
 
-This table summarizes `registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger
-remains the authoritative source if this summary drifts.
+This table summarizes the layered fields in
+`registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger remains the authoritative
+source if this summary drifts.
 
-| Burden ID | Milestone | Current status | Blocking burden | Last evidence |
-| --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft object exists | canonical adoption rules | `AGENTS.md` |
-| `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft object exists | general equivalence under variations | `research_control/program_state.yaml` |
-| `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | canonical retention proof | `research_control/program_state.yaml` |
-| `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | canonical generator proof | `research_control/program_state.yaml` |
-| `obsloc_lc` | `source_localization_obsloc_lc` | constructive witness exists | robustness and exact-branch limits | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
-| `resp_lc` | `response_localization_resp_lc` | accepted | response selector sign scale and token semantics | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
-| `m_src` | `source_manifold_m_src` | accepted | Scoped source-only M_src adoption granted for audited and stressed M_src^{GSC-cand}(E) under H1-H13 and fail-closed no-target-import discipline | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `effective_metric_g_eff` | accepted | Scoped source-extension g_eff object adopted under declared source-side scope but downstream matter coupling Einstein equations benchmark promotion and completed derivation remain blocked | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
-| `matter_coupling` | `matter_coupling` | accepted | ParamFiniteLocalWitness_v1(E) BridgeSlot_n(E) and NoTargetImport_n accepted only as scoped source-extension parameterized-witness evidence/precondition for Matter-Coupling Bridge Target v1 while no source-law adoption coupling-law adoption matter-coupling derivation stress-energy semantics stress-energy tensor matter action detector semantics MetricData(E) adoption g_eff scope expansion Einstein-equation premise benchmark fit or downstream promotion is imported | `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex` |
-| `einstein_equations` | `einstein_equations` | not started | dynamics action or variation | `research_control/program_state.yaml` |
-| `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | arbitrary finite-variation preservation beyond fail-closed proposal-only FVR_src^GSC interface | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
-| `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | all upstream derivation burdens | `research_control/program_state.yaml` |
-| `gate_chair_status` | `benchmark_promotion` | human-gated | protected verdict authority | `research_control/approvals/README.md` |
-| `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative | minimal finite response analogue | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
+| Burden ID | Milestone | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `source_ontology_primitives` | `source_ontology` | draft object exists | draft_control_object_exists | definition_only_or_draft_object | no_canonical_ontology_adoption | draft_control_only | no_canonical_ontology_edit<br>no_benchmark_promotion<br>no_completed_derivation | `AGENTS.md` |
+| `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `obsloc_lc` | `source_localization_obsloc_lc` | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
+| `resp_lc` | `response_localization_resp_lc` | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
+| `m_src` | `source_manifold_m_src` | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
+| `g_eff` | `effective_metric_g_eff` | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
+| `matter_coupling` | `matter_coupling` | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex` |
+| `einstein_equations` | `einstein_equations` | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
+| `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `gate_chair_status` | `benchmark_promotion` | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
+| `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative | frozen_negative | tag_removal_obstruction | local_toy_route_frozen_not_global_theory_rejection | frozen_negative_no_promotion | no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
 
 ## Exact Next Route
 
 The immediate next route is:
 
 ```text
-Run P1-T04 as one bounded continue-research transaction to update the current-frontier renderer so layered Distance-to-GR statuses and overread guards are visible.
+Run P1-T05 as one bounded continue-research transaction to cross-check that P1 layered ledger outputs are implemented validated rendered and non-promotional.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -125,27 +143,27 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-034`;
-- latest handoff: `handoff-0329`;
-- current status: `v12_p1_t03_layered_ledger_validator_guard_completed_no_science_change`;
+- active task: `RT-20260629-035`;
+- latest handoff: `handoff-0330`;
+- current status: `v12_p1_t04_current_frontier_layered_renderer_completed_no_science_change`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PENDING_FINAL_VALIDATION;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING_FINAL_VALIDATION;
+- latest handoff validation `bootstrap_memory_system`: PASS;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
 - latest handoff validation `focused_unittest`: PASS;
-- latest handoff validation `full_unittest`: PENDING_FINAL_VALIDATION;
-- latest handoff validation `graph_freshness_check`: PENDING_FINAL_VALIDATION;
-- latest handoff validation `validate_documentation_impact`: PENDING_FINAL_VALIDATION;
-- latest handoff validation `validate_research_control`: PENDING_FINAL_VALIDATION;
+- latest handoff validation `full_unittest`: PASS;
+- latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `validate_documentation_impact`: PASS;
+- latest handoff validation `validate_research_control`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0329.yaml`
-- `research_control/tasks/RT-20260629-034/00_TASK.yaml`
+- `research_control/handoffs/handoff-0330.yaml`
+- `research_control/tasks/RT-20260629-035/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -160,8 +178,8 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0329*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0330*
 [Internal research-control handoff].
 
-The AEther-Flow Research Project. (2026, June 28). *Recommendations
-implementation plan continue task v11* [Internal implementation plan].
+The AEther-Flow Research Project. (2026, June 29). *Recommendations
+implementation plan continue task v12* [Internal implementation plan].

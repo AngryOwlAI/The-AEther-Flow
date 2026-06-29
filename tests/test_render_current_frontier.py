@@ -89,9 +89,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
         (registries / "DISTANCE_TO_GR_LEDGER.csv").write_text(
             "\n".join(
                 [
-                    "burden_id,milestone,required_object,current_status,blocking_burden,accept_criteria,failure_or_freeze_criteria,last_evidence_path,updated_at,notes",
-                    "matter_coupling,matter_coupling,universal coupling,accepted scoped evidence/precondition only,no coupling adoption,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture",
-                    "einstein_equations,einstein_equations,field equations,not started,dynamics action or variation,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture",
+                    "burden_id,milestone,required_object,current_status,blocking_burden,accept_criteria,failure_or_freeze_criteria,last_evidence_path,updated_at,notes,control_status,mathematical_status,physical_status,promotion_status,overread_guard",
+                    "matter_coupling,matter_coupling,universal coupling,accepted,scoped evidence only,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,accepted_as_scoped_evidence_precondition,parameterized_finite_local_witness_precondition,not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics,scoped_source_evidence_only,no_coupling_law_adoption;no_matter_coupling_derivation;no_stress_energy_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
+                    "g_eff,effective_metric_g_eff,effective metric,accepted,scoped source-extension object only,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,gate_review_completed,scoped_source_extension_geff_object,not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations,scoped_source_object_only,no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
+                    "einstein_equations,einstein_equations,field equations,not started,dynamics action or variation,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,not_started,dynamics_action_or_variation_missing,no_field_equation_derivation,none,no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
+                    "benchmark_promotion,benchmark_promotion,exact-GR benchmark,blocked by missing primitive,all upstream derivation burdens,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,blocked,upstream_burdens_missing,no_exact_gr_benchmark_promotion,none,no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation",
                     "",
                 ]
             ),
@@ -108,9 +110,27 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertEqual(payload["latest_handoff_id"], "handoff-0001")
             self.assertTrue(payload["snapshot_only_not_authority"])
             self.assertFalse(payload["physics_claim_authority"])
+            self.assertEqual(
+                payload["layered_status_fields"],
+                [
+                    "control_status",
+                    "mathematical_status",
+                    "physical_status",
+                    "promotion_status",
+                    "overread_guard",
+                ],
+            )
             self.assertIn("generated synchronized snapshot only", markdown)
             self.assertIn("no `MetricData(E)` adoption", markdown)
-            self.assertIn("| `matter_coupling` | `matter_coupling` | accepted scoped evidence/precondition only |", markdown)
+            self.assertIn("Layered Distance-To-GR Boundary Notes", markdown)
+            self.assertIn("| Burden ID | Milestone | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |", markdown)
+            self.assertIn("accepted_as_scoped_evidence_precondition", markdown)
+            self.assertIn("not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics", markdown)
+            self.assertIn("no_matter_coupling_derivation", markdown)
+            self.assertIn("not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations", markdown)
+            self.assertIn("no_unscoped_geff_adoption", markdown)
+            self.assertIn("no_field_equation_derivation", markdown)
+            self.assertIn("no_exact_gr_benchmark_promotion", markdown)
 
     def test_cli_write_then_check_passes_and_stale_file_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -150,7 +170,8 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             payload = json.loads(output.getvalue())
             self.assertEqual(payload["schema_id"], "current_frontier_state_v1")
             self.assertEqual(payload["status"], "rendered")
-            self.assertEqual(payload["distance_to_gr_row_count"], 2)
+            self.assertEqual(payload["distance_to_gr_row_count"], 4)
+            self.assertIn("overread_guard", payload["layered_status_fields"])
 
 
 if __name__ == "__main__":
