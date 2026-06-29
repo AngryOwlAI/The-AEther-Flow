@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-046` and `handoff-0341`.
+`RT-20260629-047` and `handoff-0342`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-046` |
-| Latest handoff ID | `handoff-0341` |
-| Current status | `v12_p4_t04_source_pure_as_written_pending_stress_no_promotion` |
-| Current route family | v12 p4 t04 smuggling audit pass to p4 t05 refuter stress |
+| Active task ID | `RT-20260629-047` |
+| Latest handoff ID | `handoff-0342` |
+| Current status | `v12_p4_t05_scoped_obstruction_survived_stress_pending_selector_no_promotion` |
+| Current route family | v12 p4 t05 refuter stress to p4 t06 selector |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P4-T05 refuter stress only |
-| Next recommended action | Run P4-T05 as one bounded Refuter transaction to stress-test the audited P4-T03 obstruction and compression map under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints. |
+| Required next authority | P4-T06 selector only |
+| Next recommended action | Run P4-T06 as one bounded Theoretical Continuation Selector transaction to classify the stress-survived scoped obstruction and select exactly one next route without adoption or promotion. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-046/00_TASK.yaml`.
-- Active task objective: Audit the P4-T03 source-extension compression obstruction and total compression-map attempt for hidden target imports, ontology-edit laundering, source-law adoption laundering, process-authority laundering, and notation-collapse errors.
-- Latest handoff path: `research_control/handoffs/handoff-0341.yaml`.
-- Latest handoff summary: V12 P4-T04 Smuggling Auditor completed with verdict source_pure_as_written_pending_stress. The audit found no hidden target import, process-authority laundering, ontology-edit laundering, source-law adoption laundering, notation-collapse error, silent g_eff scope promotion, or silent matter-coupling derivation in the P4-T03 obstruction as written. No adoption, rejection, or scientific promotion occurred.
-- Current route family: v12 p4 t04 smuggling audit pass to p4 t05 refuter stress.
-- Next recommended action: Run P4-T05 as one bounded Refuter transaction to stress-test the audited P4-T03 obstruction and compression map under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints.
+- Active task path: `research_control/tasks/RT-20260629-047/00_TASK.yaml`.
+- Active task objective: Stress-test the audited P4-T03 source-extension compression obstruction and total compression-map attempt under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints.
+- Latest handoff path: `research_control/handoffs/handoff-0342.yaml`.
+- Latest handoff summary: V12 P4-T05 Refuter stress completed with verdict scoped_obstruction. The audited P4-T03 compression obstruction survived dependency deletion, finite variation, source-token relabeling, tag removal, canonical-source-only replacement, support-only erasure, hidden source-law pressure, and global-impossibility overread as a current-basis obstruction. No adoption, rejection, or scientific promotion occurred.
+- Current route family: v12 p4 t05 refuter stress to p4 t06 selector.
+- Next recommended action: Run P4-T06 as one bounded Theoretical Continuation Selector transaction to classify the stress-survived scoped obstruction and select exactly one next route without adoption or promotion.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run P4-T05 as one bounded Refuter transaction to stress-test the audited P4-T03 obstruction and compression map under finite variation, tag removal, dependency deletion, symmetry/relabeling, bottom/fail-closed behavior, and no-target-import constraints.
+Run P4-T06 as one bounded Theoretical Continuation Selector transaction to classify the stress-survived scoped obstruction and select exactly one next route without adoption or promotion.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,25 +143,25 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-046`;
-- latest handoff: `handoff-0341`;
-- current status: `v12_p4_t04_source_pure_as_written_pending_stress_no_promotion`;
+- active task: `RT-20260629-047`;
+- latest handoff: `handoff-0342`;
+- current status: `v12_p4_t05_scoped_obstruction_survived_stress_pending_selector_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING_CURRENT_RUN;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING_CURRENT_RUN;
+- latest handoff validation `graph_freshness_check`: PENDING_CURRENT_RUN;
+- latest handoff validation `validate_documentation_impact`: PENDING_CURRENT_RUN;
+- latest handoff validation `validate_research_control`: PENDING_CURRENT_RUN;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0341.yaml`
-- `research_control/tasks/RT-20260629-046/00_TASK.yaml`
+- `research_control/handoffs/handoff-0342.yaml`
+- `research_control/tasks/RT-20260629-047/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0341*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0342*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

@@ -1,0 +1,278 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Stack}{\mathrm{SourceExtensionStack}_{v1}}
+\newcommand{\CompMap}{\mathrm{CompressionMap}_{v1}}
+\newcommand{\Obstruction}{\mathrm{CompressionFailureObstruction}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\StressPass}{\mathrm{STRESS\mbox{-}PASS}}
+\newcommand{\ScopedObstruction}{\mathrm{SCOPED\mbox{-}OBSTRUCTION}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Source-Extension Compression Obstruction Refuter Stress v1}
+\author{Refuter Packet RT-20260629-047}
+\date{2026-06-29}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260629-047}. It
+implements P4-T05 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md}.
+
+The stress subject is the P4-T03 obstruction:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-045/artifacts/
+source_extension_compression_obstruction_v1.tex
+\end{verbatim}
+
+The source-purity precondition is the P4-T04 audit:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-046/artifacts/
+source_extension_compression_obstruction_smuggling_audit_v1.tex
+\end{verbatim}
+
+The stress verdict is:
+
+\begin{verbatim}
+stress_result.result_type: "scoped_obstruction"
+obstruction_id: "CF-P4T05-001-current-basis-compression-stress"
+same_milestone_continuation: "blocked_adoption_open_continuation"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This artifact stress-tests only. It does not edit canonical ontology, adopt a
+source law, adopt \(\MetricData(E)\), change scoped \(\geff\), adopt a
+coupling law, derive or adopt matter coupling, import stress-energy semantics,
+construct a stress-energy tensor, import a matter action, import detector
+semantics, derive Einstein equations, promote benchmark status, issue a Gate
+Chair verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Stress Question}
+
+Does the P4-T03 obstruction to nontrivial no-target-import source-law
+compression survive the P4-T05 stress suite: finite variation, dependency
+deletion, source-token relabeling, tag removal, canonical-source-only
+replacement, support-only erasure, hidden source-law pressure, and global
+impossibility overread?
+
+Conclusion: yes, but only as a scoped current-basis obstruction. The result is
+\[
+  \ScopedObstruction(\Obstruction,\Bcur,\texttt{P4-T05}).
+\]
+It routes to P4-T06 selector classification and does not close future
+source-extension research.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.26\linewidth}p{0.48\linewidth}p{0.16\linewidth}}
+\toprule
+Stress mode & Result & Verdict \\
+\midrule
+Single dependency deletion & Removing any positive
+\texttt{retain\_conservative} row deletes an input required by the scoped
+response, \(\mathrm{M}_{\mathrm{src}}\), scoped \(\geff\), or matter-bridge
+precondition context. Deletion does not create a derivation from \(\Bcur\). &
+\StressPass \\
+Finite variation pressure & Varying the dependency set within current
+source-side records preserves the zero-derived-positive-row fact unless a new
+source-side law is introduced. Introducing that law would be a new candidate
+packet, not compression under \(\Bcur\). & \StressPass \\
+Source-token relabeling & Relabeling source tokens preserves the obstruction
+because the argument depends on row category and current derivability status,
+not spelling of labels. & \StressPass \\
+Tag removal or forgetful projection & Forgetting scoped-source tags collapses
+the distinction between conservative evidence, source law, and target or
+physical reading. The route fails closed to \(\BottomSrc\) rather than deriving
+compression. & \StressPass \\
+Canonical-source-only replacement & Replacing generated, registry, or
+support references with canonical source artifacts preserves the same current
+dependency gap. Generated surfaces remain navigation or receipt surfaces only.
+& \StressPass \\
+Support-only checker ignored & The P4-T03 map already removes
+\ProofAuthFalse{} surfaces from mathematical premise status. Ignoring them
+cannot add a \texttt{derive} row. & \StressPass \\
+Hidden source-law pressure & A compression name cannot smuggle
+\texttt{SelRespDerive\_src}, \texttt{MetricFormDerive\_src},
+\texttt{RegFVRDerive\_src}, or \texttt{MatterBridgeDerive\_src}. Those remain
+future candidate-law targets. & \StressPass \\
+Global impossibility overread & The obstruction is explicitly relative to
+\(\Bcur\). It blocks only nontrivial compression under current basis and does
+not prove future source-extension impossibility. & \StressPass \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Single-row deletion obstruction]
+Let \(r\) be any positive dependency row in the P4-T01 dependency table whose
+P4-T03 assignment is \texttt{retain\_conservative} or
+\texttt{retain\_conservative\_guard}. Deleting \(r\) does not produce a
+nontrivial source-law compression under \(\Bcur\).
+\end{lemma}
+
+\begin{proof}
+The deleted row is a currently retained input or guard for a scoped
+source-extension object or precondition. Deleting it removes part of the
+scoped package; it does not provide a derivation from current source ontology.
+Because P4-T01 records zero positive rows as derived from current source
+ontology, the deleted package still has no positive \texttt{derive} row.
+\end{proof}
+
+\begin{lemma}[Tag-forgetting fail-closed lemma]
+If the scoped-source tags distinguishing conservative evidence, source-side
+records, support-only receipts, and forbidden target imports are forgotten,
+then the compression route fails closed rather than deriving matter coupling,
+\(\MetricData(E)\), or unscoped \(\geff\).
+\end{lemma}
+
+\begin{proof}
+The P4-T02 no-target-import condition and the P4-T04 audit require those
+distinctions. Forgetting them makes it impossible to verify whether a row is
+source-side evidence, process receipt, or forbidden target/physical import.
+The permitted behavior is therefore fail-closed behavior, not promotion.
+\end{proof}
+
+\begin{lemma}[Support-erasure stability]
+Removing support-only checker outputs, generated derivatives, registries,
+handoffs, approvals, commits, local caches, semantic extracts, wiki notes, and
+file order from proof status leaves the P4-T03 obstruction unchanged.
+\end{lemma}
+
+\begin{proof}
+P4-T03 already assigns support-only process surfaces to
+\texttt{eliminate\_as\_mathematical\_premise}. They are not derivational
+premises. Their removal cannot create a source-law derivation of a positive
+row.
+\end{proof}
+
+\begin{proposition}[P4-T05 scoped obstruction]
+Under the current basis \(\Bcur\), the P4-T03 obstruction survives the P4-T05
+stress suite as
+\[
+  \mathrm{CF\mbox{-}P4T05\mbox{-}001}
+  =
+  \ScopedObstruction(\Obstruction,\Bcur,
+  \texttt{nontrivial\_source\_law\_compression}).
+\]
+\end{proposition}
+
+\begin{proof}
+Each stress mode either preserves the current-basis zero-derived-positive-row
+condition, deletes a needed scoped input without adding a derivation, or
+attempts to collapse authority and source/target distinctions in a way that
+must fail closed. A successful nontrivial compression would require at least
+one source-side derivation of a positive row from \(\Bcur\), or a new
+candidate-law packet outside \(\Bcur\). Neither is supplied by the stress
+suite. The obstruction therefore survives locally.
+\end{proof}
+
+\section{Freeze Criteria}
+
+This packet has repeated-burden pressure because it continues the
+matter-coupling source-extension compression cycle. It is not frozen because
+it adds new Refuter stress payload and selects a non-orbital next route:
+P4-T06 selector classification.
+
+Freeze should be considered later if a future packet repeats construction,
+audit, or stress on the same obstruction without new mathematical payload,
+selector classification, protected Gate Chair review, repair, or a narrowed
+obstruction record.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Scoped source-extension data retained; no selector law adoption. \\
+M\_src & Scoped source-only object retained; no scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & Precondition evidence retained; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Stress of compression obstruction is local; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict. \\
+Current route freeze or hard-fail status & Not frozen; P4-T06 selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Verdict}
+
+\begin{verdict}[Scoped obstruction pending selector]
+The audited P4-T03 compression obstruction survives P4-T05 stress as a
+current-basis scoped obstruction. The result is local: current ontology and
+current source-extension records do not derive a nontrivial no-target-import
+compression. Same-milestone continuation remains open through P4-T06 selector
+classification.
+\end{verdict}
+
+\section{Refuted Overreads}
+
+This stress packet refutes these overreads:
+\begin{enumerate}[leftmargin=*]
+  \item stress survival as source-law adoption;
+  \item stress survival as \(\MetricData(E)\) adoption;
+  \item stress survival as \(\geff\) adoption or scope expansion;
+  \item tag removal as derivation of matter coupling;
+  \item support-only checker output as proof authority;
+  \item current-basis obstruction as future source-extension impossibility;
+  \item current-basis obstruction as global theory rejection;
+  \item matter coupling, stress-energy semantics, Einstein equations,
+  benchmark promotion, Gate Chair closure, or completed derivation.
+\end{enumerate}
+
+\section{Next Route}
+
+The next lawful route is P4-T06: one bounded Theoretical Continuation Selector
+packet to classify this scoped obstruction and choose exactly one next task.
+
+\section{References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Source-extension
+compression obstruction v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Source-extension
+compression obstruction smuggling audit v1} [Internal research-control TeX
+artifact].
+
+\end{document}
