@@ -1,0 +1,67 @@
+receipt_id: "P0-T02-RT-20260614-290"
+task_id: "RT-20260614-290"
+plan_task_id: "recommendations-v11-P0-T02"
+created_at: "2026-06-29T00:44:00Z"
+authority: "control"
+scope: "state-authority baseline snapshot and reconciliation evidence closure"
+snapshot_kind: "post-v11 evidence-closure baseline"
+source_hashes:
+  current_frontier_sha256_before_closure: "b378177340583164fab22af19c36d69ea1df3548c4d61258cff8e04e77de4cde"
+  handoff_0322_yaml_sha256: "d6e4b0b9f99649405bfc6de8cd887e5d781fc2ea89219b529d5aef78787c0131"
+  distance_to_gr_ledger_sha256: "e4c86503ff36901b3a894e41cca43c6195a2b3f053d8848292f4ddb9469e8f94"
+baseline_questions:
+  active_task_according_to_program_state:
+    answer: "RT-20260614-289"
+    evidence: "research_control/program_state.yaml"
+  latest_handoff_according_to_program_state:
+    answer: "handoff-0322"
+    evidence: "research_control/program_state.yaml"
+  latest_handoff_file_exists:
+    answer: true
+    evidence:
+      - "research_control/handoffs/handoff-0322.yaml"
+      - "research_control/handoffs/handoff-0322.md"
+  active_task_folder_exists:
+    answer: true
+    evidence: "research_control/tasks/RT-20260614-289"
+  current_frontier_matches_active_state:
+    answer: true
+    checked_fields:
+      active_task: "RT-20260614-289"
+      latest_handoff: "handoff-0322"
+      current_status: "p8_t03_final_continuation_handoff_completed_p0_evidence_closure_required_no_promotion"
+      target_milestone: "none; this is project-control tooling work"
+      burden: "none for physics derivation; live control burden is p0 evidence closure"
+      next_action: "Run one bounded P0 evidence-closure packet to create or verify standalone P0-T01 and P0-T02 receipts before declaring the v11 plan fully complete."
+    command: ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+    command_status: "PASS"
+  distance_to_gr_ledger_agrees_with_active_burden_state:
+    answer: true
+    evidence: "Current burden is project-control P0 evidence closure; no Distance-to-GR row changes are required."
+  pending_or_active_agentjobs_conflict_with_active_state:
+    answer: false
+    evidence: ".venv/bin/python scripts/research_control/continue_research.py --json returned pending_or_active_jobs=[]"
+  human_gate_approvals_present_for_next_gate_packet:
+    answer: "not applicable to P0 evidence closure"
+    evidence: "handoff-0322 required process-integrity P0 evidence closure, not a Gate Chair packet"
+state_consistency_status: "consistent_for_p0_evidence_closure"
+mismatched_sources: []
+blocking_drift_detected: false
+recommended_next_repair: "none for v11 after checkpoint; ordinary research continuation requires a new tracked objective"
+historical_reconciliation:
+  original_p0_t02_standalone_receipt_found_before_closure: false
+  p8_t01_audit_supplied_later_snapshot_only: true
+  p1_drift_found_later_and_repaired_by:
+    - "RT-20260614-284"
+    - "RT-20260614-285"
+    - "RT-20260614-286"
+    - "RT-20260614-287"
+  closure_interpretation: "This artifact does not claim P0-T02 existed at the original start of v11. It supplies the standalone closure receipt authorized by handoff-0322 and records the current consistent baseline."
+claim_boundary:
+  physics_claim_promotion: false
+  distance_to_gr_changed: false
+  canonical_ontology_edit: false
+  source_law_adoption: false
+  metric_data_adoption: false
+  geff_scope_change: false
+verdict: "P0-T02 evidence closure satisfied by this standalone baseline snapshot after validation and checkpoint."

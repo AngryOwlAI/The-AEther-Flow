@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T00:22:57Z`
-- Source fingerprint: `225f14d291bb7f6f33e6db8d9aa95153c4f236d09f485fe947abc44d121201ba`
-- Nodes: `6747`
-- Edges: `27954`
+- Generated from tracked state as of: `2026-06-29T00:44:00Z`
+- Source fingerprint: `920e9e1ec067e1d1eb9ce5c2a0a2a11a51815a723d02dc21923492d86cd413e6`
+- Nodes: `6767`
+- Edges: `28043`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 457 |
+| `completion_yaml` | 458 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 322 |
+| `handoff_yaml` | 323 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 457 |
+| `agent_job` | `support_only` | 458 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3315 |
-| `blocked_burden` | `blocked` | 637 |
-| `claim_boundary` | `support_only` | 458 |
+| `artifact` | `support_only` | 3329 |
+| `blocked_burden` | `blocked` | 639 |
+| `claim_boundary` | `support_only` | 459 |
 | `draft_control_candidate` | `draft_control` | 310 |
 | `draft_control_candidate` | `proposal_only` | 45 |
 | `draft_control_candidate` | `science_draft` | 26 |
 | `frozen_negative` | `frozen_negative` | 63 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 322 |
+| `handoff` | `support_only` | 323 |
 | `human_gated_object` | `human_gated` | 212 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -57,7 +57,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 192 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 407 |
+| `task` | `support_only` | 408 |
 
 ## Frontier Table
 
@@ -109,6 +109,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure` | Blocked claim: benchmark Gate Chair closure | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure_or_suspension` | Blocked permission: benchmark Gate Chair closure or suspension | `registries/ROLE_EXECUTION_REGISTRY.csv` |
@@ -158,13 +159,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:checker_failure_as_physics_theorem` | Blocked claim: checker failure as physics theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:checker_implementation_inside_selector` | Blocked claim: checker implementation inside selector | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:checker_metrics_as_distance_to_gr_delta` | Blocked claim: checker metrics as Distance-to-GR delta | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:checker_output_as_proof` | Blocked claim: checker output as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260614-289`
-- Latest handoff: `handoff-0322`
-- Handoff path: `research_control/handoffs/handoff-0322.yaml`
-- Next action: Run one bounded P0 evidence-closure packet to create or verify standalone P0-T01 and P0-T02 receipts before declaring the v11 plan fully complete.
+- Active task: `RT-20260614-290`
+- Latest handoff: `handoff-0323`
+- Handoff path: `research_control/handoffs/handoff-0323.yaml`
+- Next action: No v11 implementation-plan task remains after checkpoint; resume ordinary research-control continuation only under a new tracked objective.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
