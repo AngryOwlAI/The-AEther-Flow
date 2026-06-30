@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-CANDIDATE-REFUTER-STRESS;TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-CANDIDATE-SMUGGLING-AUDIT;TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-CANDIDATE` ``
 - Generated output path: `wiki/tex/tex-v12-ontology-law-matter-coupling-precondition-assembly-source-extension-evidence-gate-chair-review.md`
+- Backlink from `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-TARGET` `research_control/tasks/RT-20260630-015/artifacts/source_coupling_law_target_v1.tex`
 
 ## Validation
 
