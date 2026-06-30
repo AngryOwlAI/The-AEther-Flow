@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-039` and `handoff-0391`.
+`RT-20260630-040` and `handoff-0392`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-039` |
-| Latest handoff ID | `handoff-0391` |
-| Current status | `v12_p7_t03_repair_msirrel_quotient_smuggling_audit_source_pure_pending_stress_no_adoption` |
-| Current route family | v12 p7 t03 repair msirrel quotient audit route to stress |
+| Active task ID | `RT-20260630-040` |
+| Latest handoff ID | `handoff-0392` |
+| Current status | `v12_p7_t03_repair_msirrel_quotient_refuter_scoped_obstruction_no_adoption` |
+| Current route family | v12 p7 t03 repair msirrel quotient stress route to selector |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_audit_only |
-| Required next authority | one refuter@0.2.0 draft/control ontology-law stress packet over MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 |
-| Next recommended action | Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSCertFiberQuot_v1 for collapse nonuniqueness finite-variation fragility certificate deletion sector deletion and quotient degeneracy before selector adoption matter-coupling Einstein-equation benchmark or promotion routes. |
+| Current burden | `matter_coupling`; status: unchanged_refuter_obstruction_only |
+| Required next authority | one theoretical-continuation-selector@0.1.0 draft/control ontology-law decision packet over the scoped obstruction MSQ-P7T03-STRESS-001 |
+| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-obstruction route for MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 before repair construction human-gated ontology-law adoption matter-coupling Einstein-equation benchmark or promotion routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-039/00_TASK.yaml`.
-- Active task objective: Complete one bounded smuggling-auditor@0.2.0 ontology-law packet by auditing MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 for hidden target imports overcollapse certificate misuse and proof-authority smuggling.
-- Latest handoff path: `research_control/handoffs/handoff-0391.yaml`.
-- Latest handoff summary: RT-20260630-039 audited MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 and found no target atlas metric detector stress-energy matter-action benchmark Einstein-equation registry validator role handoff approval commit generated-derivative local-cache or file-order import as written. The quotient remains finite/local proposal-only source-side candidate material. Its readout/response-marker collapse is a bounded overcollapse risk requiring Refuter stress, not adoption or downstream promotion.
-- Current route family: v12 p7 t03 repair msirrel quotient audit route to stress.
-- Next recommended action: Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSCertFiberQuot_v1 for collapse nonuniqueness finite-variation fragility certificate deletion sector deletion and quotient degeneracy before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+- Active task path: `research_control/tasks/RT-20260630-040/00_TASK.yaml`.
+- Active task objective: Complete one bounded refuter@0.2.0 ontology-law packet by stress-testing MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 for collapse nonuniqueness finite-variation fragility certificate deletion sector deletion and quotient degeneracy.
+- Latest handoff path: `research_control/handoffs/handoff-0392.yaml`.
+- Latest handoff summary: RT-20260630-040 stress-tested MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 and found a scoped obstruction: current source data do not derive a unique stable nondegenerate readout/response irrelevance quotient; the candidate fails finite-variation certificate-deletion sector-deletion and degeneracy stress. The obstruction blocks adoption of this quotient as written but preserves same-milestone continuation.
+- Current route family: v12 p7 t03 repair msirrel quotient stress route to selector.
+- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-obstruction route for MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 before repair construction human-gated ontology-law adoption matter-coupling Einstein-equation benchmark or promotion routes.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSCertFiberQuot_v1 for collapse nonuniqueness finite-variation fragility certificate deletion sector deletion and quotient degeneracy before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-obstruction route for MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 before repair construction human-gated ontology-law adoption matter-coupling Einstein-equation benchmark or promotion routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-039`;
-- latest handoff: `handoff-0391`;
-- current status: `v12_p7_t03_repair_msirrel_quotient_smuggling_audit_source_pure_pending_stress_no_adoption`;
+- active task: `RT-20260630-040`;
+- latest handoff: `handoff-0392`;
+- current status: `v12_p7_t03_repair_msirrel_quotient_refuter_scoped_obstruction_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -153,15 +153,15 @@ Latest tracked state records:
 - latest handoff validation `no_gate_chair_authority`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
 - latest handoff validation `physics_promotion_authorized`: false;
-- latest handoff validation `smuggling_auditor_completed`: PASS;
+- latest handoff validation `refuter_completed`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0391.yaml`
-- `research_control/tasks/RT-20260630-039/00_TASK.yaml`
+- `research_control/handoffs/handoff-0392.yaml`
+- `research_control/tasks/RT-20260630-040/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0391*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0392*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
