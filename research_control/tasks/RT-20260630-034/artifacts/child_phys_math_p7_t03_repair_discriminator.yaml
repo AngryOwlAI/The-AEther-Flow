@@ -1,0 +1,49 @@
+artifact_id: "child_phys_math_p7_t03_repair_discriminator"
+task_id: "RT-20260630-034"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-06-30T14:58:27Z"
+objective: "Formalize the mathematical target for a source-side matter-semantics discriminator or uniqueness obligation after P7-T03."
+inputs_reviewed:
+  - "research_control/handoffs/handoff-0385.yaml"
+  - "research_control/tasks/RT-20260630-033/artifacts/external_red_team_review_frontier_inventory_pilot_v1.yaml"
+  - "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+  - "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+  - "research_control/tasks/RT-20260629-051/artifacts/matter_semantics_discriminator_obstruction_v1.tex"
+mathematical_assessment:
+  selected_formalization: "MSDiscTarget_v1(E;B_current)"
+  source_domain: "admissible draft/control matter-semantics candidates satisfying P5-T02/P5-T03 no-import certificates"
+  discriminator_shape: "partial source-side selector or fail-closed map from candidate records to source equivalence classes or bottom"
+  uniqueness_shape: "if two non-bottom candidates have the same source evidence certificate then either the discriminator proves source-equivalence or records nonuniqueness"
+  required_invariance:
+    - "source relabeling invariance"
+    - "finite variation stability relative to explicit certificates"
+    - "no target metric proper-time detector stress-energy matter-action or benchmark dependence"
+  fail_closed_condition: "target imports missing certificates or nonunique admissible candidates return MatterSemanticsFailureObstruction rather than a selected semantics"
+new_obligations:
+  - "Source-only admissibility predicate for matter-semantics candidates"
+  - "Candidate source-equivalence relation"
+  - "Discriminator or uniqueness theorem obligation"
+  - "No-target-import preservation proposition"
+  - "Repair-readiness condition for any later coupling-law route"
+mathematical_limits:
+  - "The packet does not construct a non-bottom discriminator."
+  - "The packet does not prove uniqueness."
+  - "The packet does not adopt a source law or source-extension datum."
+  - "The packet does not derive matter coupling or Einstein equations."
+recommended_fusion_terms:
+  - "draft/control"
+  - "proposal-only target"
+  - "blocked_adoption_open_continuation"
+  - "not_enough_assumptions repair"
+claim_boundary:
+  may_promote_claims: false
+  proof_authority: false
+  source_law_adopted: false
+  metric_data_adopted: false
+  geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false

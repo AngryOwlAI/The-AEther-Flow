@@ -1,0 +1,257 @@
+\section*{Matter-Semantics Discriminator Target v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control output of RT-20260630-034.  It is a
+P7-T03 repair packet after the external red-team review returned
+\(\mathsf{not\_enough\_assumptions}\) for future use of scoped
+\(g_{\mathrm{eff}}\) and parameterized finite/local witness evidence as a
+route to matter semantics or a coupling law.  The artifact formalizes a
+source-side discriminator target and uniqueness obligation only.  It does not
+edit canonical ontology, create a canonical-ontology candidate, adopt a
+source law, adopt source-extension data, adopt \(\MetricData(E)\), adopt or
+expand \(g_{\mathrm{eff}}\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import detector semantics, import a matter action, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, prove future source-extension impossibility, or reject the global
+theory.
+
+\paragraph{Background.}
+P5-T02 defined source-side matter-semantics target objects and no-import
+certificates.  P5-T03 constructed a draft/control matter-semantics candidate.
+P7-T03 then found that the inspected sources do not contain a theorem or law
+selecting one coupling-law-relevant matter-semantics interpretation from
+admissible source-side continuations.  The current repair target therefore
+does not attempt a coupling law.  It names the missing source-side obligation
+that a later packet must satisfy or precisely obstruct.
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MSCand}{\mathrm{MatterSemanticsCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\MSAdm}{\mathrm{MSAdm}_{v1}}
+\newcommand{\MSEq}{\equiv_{\mathrm{MS},E}}
+\newcommand{\MSDisc}{\mathrm{MSDiscTarget}_{v1}}
+\newcommand{\MSUniq}{\mathrm{MSUniqObl}_{v1}}
+\newcommand{\MSFail}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+\section{Inputs and Domain}
+
+\begin{definition}[Current source basis]
+For a fixed source instance \(E\), let \(\Bcur(E)\) be the current
+draft/control basis available to this packet:
+\begin{enumerate}
+  \item the P5-T02 source-side matter-semantics target and no-import
+    certificates;
+  \item the P5-T03 draft/control matter-semantics candidate construction;
+  \item the P7-T03 red-team review and its
+    \(\mathsf{not\_enough\_assumptions}\) verdict;
+  \item the current Distance-to-GR matter-coupling burden statement.
+\end{enumerate}
+The basis explicitly excludes target stress-energy tensors, target matter
+actions, empirical detector protocols, target metric/proper-time imports,
+benchmark behavior, Einstein-equation premises, generated-output authority,
+and Gate Chair authority as mathematical premises.
+\end{definition}
+
+\begin{definition}[Admissible candidate records]
+\(\MSAdm(E;\Bcur)\) is the set of draft/control candidate records
+\[
+  C=(S_E,P_E,R_E,Q_E,\Gamma_E)
+\]
+such that \(C\) satisfies the P5-T02/P5-T03 source-side syntax requirements
+and the certificate bundle \(\Gamma_E\) contains explicit witnesses for
+\[
+  \NoDetector(E),\quad \NoSE(E),\quad \NoAction(E),\quad \NoTarget(E).
+\]
+Membership in \(\MSAdm(E;\Bcur)\) is only candidate admissibility.  It is not
+a physical matter semantics, not a source law, not a coupling law, and not
+matter coupling.
+\end{definition}
+
+\begin{definition}[Candidate source equivalence]
+For \(C_1,C_2\in\MSAdm(E;\Bcur)\), write
+\[
+  C_1 \MSEq C_2
+\]
+when a later proof, using only source-side data in \(\Bcur(E)\) and no-target
+certificates, establishes that the two records define the same source-side
+matter-semantics bookkeeping up to source relabeling and finite/local
+certificate-preserving variation.  In the absence of such a proof, equivalence
+is not assumed.
+\end{definition}
+
+\section{Discriminator Target}
+
+\begin{definition}[\(\MSDisc(E;\Bcur)\)]
+A draft/control source-side matter-semantics discriminator target is a partial
+selector
+\[
+  D_E:\MSAdm(E;\Bcur)\rightharpoonup \mathcal{L}_E \cup \{\bot\}
+\]
+or an equivalent ordering/choice rule satisfying the following obligations:
+\begin{enumerate}
+  \item \textbf{Source-only domain.} \(D_E\) is defined only from source-side
+    records and certificates in \(\Bcur(E)\).
+  \item \textbf{No-target imports.} \(D_E\) does not use target
+    stress-energy, detector protocols, matter actions, target metric
+    structure, proper-time normalization, benchmark behavior, or
+    Einstein-equation premises.
+  \item \textbf{Relabeling invariance.} Source relabeling of \(E\) transports
+    candidate records without changing the discriminator result except by the
+    corresponding source isomorphism.
+  \item \textbf{Finite-variation stability.} Certificate-preserving
+    finite/local variation may not change a selected non-bottom class unless
+    the variation changes an explicit source-side certificate used by \(D_E\).
+  \item \textbf{Nonuniqueness fails closed.} If two non-bottom admissible
+    candidates cannot be proved source-equivalent, the result is \(\bot\) and
+    the packet records \(\MSFail(E;\Bcur,O)\).
+  \item \textbf{No process authority.} Registry rows, validation passes,
+    handoffs, commits, generated wiki notes, local caches, and support-only
+    formalization outputs are not proof authority for \(D_E\).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[\(\MSUniq(E;\Bcur)\)]
+The uniqueness obligation \(\MSUniq(E;\Bcur)\) is satisfied only if a later
+packet proves the following statement by source-side means:
+\[
+  C_1,C_2\in\MSAdm(E;\Bcur),\quad
+  D_E(C_1)\ne\bot,\quad D_E(C_2)\ne\bot
+  \quad\Longrightarrow\quad C_1 \MSEq C_2
+\]
+or else records a precise nonuniqueness obstruction.  The implication is a
+future proof obligation, not a theorem established in this packet.
+\end{definition}
+
+\section{Pressure Lemma and Repair Target}
+
+\begin{lemma}[P7-T03 underdetermination pressure]
+Under the assumptions inspected by P7-T03, scoped \(g_{\mathrm{eff}}\) and
+parameterized finite/local witness evidence can coexist with at least two
+admissible source-side continuations whose readout alphabets or response-token
+semantics are not proved source-equivalent.  Therefore those assumptions do
+not by themselves determine a coupling-law-relevant matter semantics.
+\end{lemma}
+
+\paragraph{Reason.}
+P7-T03 found no hidden target import in the frontier inventory as written, but
+also found no source-side discriminator or uniqueness theorem.  No-import
+certificates prevent smuggling; they do not select among admissible source-side
+interpretations.  Without \(D_E\) or \(\MSUniq(E;\Bcur)\), two admissible
+candidate records may remain incomparable.  This is an underdetermination
+statement about the current basis, not an impossibility theorem.
+
+\begin{proposition}[Draft/control repair target]
+The object \(\MSDisc(E;\Bcur)\) together with \(\MSUniq(E;\Bcur)\) is the
+minimal repair target required before any future packet may use the P5
+matter-semantics candidate as coupling-law-relevant evidence.
+\end{proposition}
+
+\paragraph{Boundary.}
+The proposition states a target and burden.  It does not produce a
+non-bottom discriminator, does not prove uniqueness, does not adopt a source
+law, and does not authorize coupling-law or matter-coupling work.
+
+\begin{proposition}[No-target-import preservation]
+If a later packet supplies \(D_E\) and proves \(\MSUniq(E;\Bcur)\) using only
+the source-side domain and certificates named above, then that later proof may
+be evaluated as a source-side repair candidate.  Even then, the proof would
+not by itself adopt a source law, adopt \(\MetricData(E)\), expand
+\(g_{\mathrm{eff}}\), adopt a coupling law, derive matter coupling, import
+stress-energy semantics, import detector semantics, import a matter action,
+derive Einstein equations, promote a benchmark, or complete a GR derivation.
+\end{proposition}
+
+\paragraph{Reason.}
+The discriminator target's domain explicitly excludes target physical
+semantics and process-authority shortcuts.  Passing the target would at most
+make a later source-side matter-semantics candidate less underdetermined.  It
+would still need independent audit, stress, selector, and any protected human
+authority required for adoption or downstream promotion.
+
+\section{Failure Conditions}
+
+A later construction attempt must return \(\MSFail(E;\Bcur,O)\) if any of the
+following occurs:
+\begin{enumerate}
+  \item no source-only discriminator \(D_E\) can be defined from the current
+    basis;
+  \item \(D_E\) depends on target stress-energy, detector protocols, matter
+    actions, target metric/proper-time normalization, benchmark behavior, or
+    Einstein-equation premises;
+  \item finite/local certificate-preserving variation changes a non-bottom
+    result without an explicit certificate change;
+  \item two admissible non-bottom candidates are not proved source-equivalent;
+  \item the argument treats registry metadata, generated derivatives, support
+    tooling, validation output, handoff status, role status, approval status,
+    or commit status as scientific proof.
+\end{enumerate}
+
+When \(\MSFail(E;\Bcur,O)\) is returned, same-milestone continuation remains
+open as \(\mathsf{blocked\_adoption\_open\_continuation}\) unless a separate
+no-go theorem is proved and authorized.  The allowed wording is: current
+ontology does not derive the source-side matter-semantics discriminator.  The
+disallowed overread is: therefore such a discriminator is impossible.
+
+\section{Next Packet Contract}
+
+The logical next bounded packet is one of:
+\begin{enumerate}
+  \item a Candidate Constructor or ontology-law packet attempting to construct
+    \(D_E\) or prove \(\MSUniq(E;\Bcur)\) as draft/control material; or
+  \item a precise obstruction packet recording why the current source basis
+    still lacks the required discriminator or uniqueness theorem.
+\end{enumerate}
+The next packet must not proceed to coupling-law adoption, matter-coupling
+derivation, stress-energy semantics, detector semantics, matter-action
+semantics, Einstein equations, benchmark promotion, or completed derivation.
+
+\section{Distance-to-GR Status}
+
+No Distance-to-GR ledger row is changed by this packet.  The
+matter-coupling burden remains blocked by response semantics and coupling
+derivation.  The packet supplies a sharper target for the missing
+source-side discriminator or uniqueness obligation and no downstream GR
+promotion.
+
+\section{Forbidden Conclusions}
+
+This artifact does not license any of the following:
+\begin{enumerate}
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption;
+  \item source-extension data adoption;
+  \item \(\MetricData(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics or stress-energy tensor construction;
+  \item detector semantics;
+  \item matter action;
+  \item Einstein-equation derivation;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global theory rejection.
+\end{enumerate}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter-semantics
+discriminator obstruction v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+candidate v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{P7-T03 external
+red-team review frontier inventory pilot v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Source
+matter-semantics target formalization v1} [Internal control artifact].
