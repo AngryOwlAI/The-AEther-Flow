@@ -1,0 +1,281 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{V12 Matter-Semantics Candidate-Law Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260629-056}
+\date{2026-06-29}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Smuggling Auditor artifact for
+\texttt{RT-20260629-056}.  It audits the proposal-only ontology-law payload
+created by \texttt{RT-20260629-055}:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-055/artifacts/
+matter_semantics_candidate_law_payload_v1.tex
+\end{verbatim}
+
+The audit verdict is:
+
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_stress"
+source_extension_classification:
+  "source_side_under_stated_no_target_assumptions_pending_stress"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+source_extension_data_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "refuter"
+\end{verbatim}
+
+This audit does not edit canonical ontology, adopt \(\MatSrcDiscLaw\), adopt
+\(\SemMatterSrc\), adopt a source law, adopt source-extension data, adopt
+\(\MetricData(E)\), change the scope of \(\geff\), adopt a coupling law,
+derive or adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote benchmark status, issue a Gate Chair
+verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Audit Question}
+
+Does the RT-055 proposal-only candidate-law payload obtain its matter-sector
+discriminator obligations by importing target matter semantics, stress-energy
+tensors, matter actions, detector protocols, empirical calibration, target
+metric structure, proper-time normalization, benchmark behavior,
+coupling-law authority, Einstein-equation premises, support-tool proof
+authority, generated-derivative authority, or registry-metadata authority?
+
+Conclusion: no such import is detected in the payload as written.  The pass is
+narrow and conditional.  It authorizes Refuter stress of the written payload;
+it does not prove that every future instantiation of \(T_E\), \(L_E\), or
+\(D_E\) is source-pure and does not adopt the candidate law.
+
+\section{Audit Surface}
+
+The audited payload defines a proposal-only tuple
+\[
+  \SemMatterSrc(E)=
+  (T_E,L_E,\Bottom,D_E,C^{\mathrm{src}}_E,C^{\rho}_E,C^v_E,C^\bot_E,C^{\neg\mathrm{target}}_E)
+\]
+and a proposal-only rule schema \(\MatSrcDiscLaw\).  The candidate's positive
+content is not a target matter model.  It is a finite source-token, source-label,
+total-map, relabeling, finite-variation, fail-closed, and no-target-import
+obligation packet.  Failure of an obligation returns \(\Bottom\) or a scoped
+obstruction rather than a target import.
+
+The essential status terms are \emph{draft/control}, \emph{proposal-only}, and
+\texttt{blocked\_adoption\_open\_continuation}.  The audit therefore asks only
+whether the written payload stays within those terms.
+
+\section{Hidden Target-Import Screen}
+
+\begin{longtable}{p{0.32\linewidth}p{0.56\linewidth}}
+\toprule
+Audit check & Result \\
+\midrule
+Target matter semantics & Pass.  Non-bottom labels require source-side structure and target matter labels are excluded as premises. \\
+Stress-energy tensor & Pass.  No stress-energy tensor is constructed or used. \\
+Stress-energy semantics & Pass.  Stress-energy semantics are named as blocked imports. \\
+Matter action & Pass.  No matter action or variational stress tensor is imported. \\
+Detector protocol & Pass.  Detector protocol and empirical readout semantics are blocked. \\
+Empirical calibration & Pass.  No empirical calibration protocol is used. \\
+Target metric or atlas & Pass.  No target metric, target atlas, or metric-form data is introduced. \\
+Proper-time normalization & Pass.  No proper-time normalization is introduced. \\
+Conservation law & Pass.  GR or QFT conservation-law naming is not used as a premise. \\
+Coupling law & Pass.  No coupling law is adopted or inferred. \\
+Benchmark behavior & Pass.  Benchmark behavior is excluded as a premise. \\
+Einstein-equation premise & Pass.  No Einstein-equation premise is used. \\
+Support-only checker & Pass.  Support-only checking is not proof authority. \\
+Generated derivative & Pass.  Generated wiki, vault, semantic, PDF, HTML, and graph derivatives are not proof authority. \\
+Registry metadata & Pass.  Registry rows route and preserve source hashes but do not prove the law. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[No hidden target import as written]
+The RT-055 candidate-law payload does not use target matter semantics,
+stress-energy tensors, matter actions, detector protocols, empirical
+calibration, target metric structure, proper-time normalization, GR/QFT
+conservation-law naming, benchmark behavior, coupling-law authority,
+Einstein-equation premises, support-only checker output, generated
+derivatives, or registry metadata as mathematical premises.
+\end{lemma}
+
+\begin{proof}
+The payload's candidate objects are \(T_E\), \(L_E\), \(D_E\), source
+relabeling data, finite-variation guards, fail-closed behavior, and
+\(\NoTarget(E)\).  The target-facing surfaces listed above are not used to
+define those objects.  They are instead named as forbidden shortcuts or
+certificate exclusions.  Therefore the written payload can be audited as
+source-pure under its stated assumptions.
+\end{proof}
+
+\section{Process-Authority Laundering Screen}
+
+\begin{lemma}[No process proof authority]
+The RT-055 payload does not convert generated derivatives, validators,
+registries, role records, handoffs, approvals, commits, local caches,
+semantic extracts, support-only checkers, file order, or human authorization
+into mathematical proof authority.
+\end{lemma}
+
+\begin{proof}
+The payload makes its candidate-law status depend on explicit source-side
+objects and no-target-import certificates.  Control records and tooling can
+route, preserve, and validate receipts.  They do not prove
+\(\MatSrcDiscLaw\), \(\SemMatterSrc\), matter coupling, or Einstein equations.
+The support boundary is therefore \(\ProofAuthFalse\).
+\end{proof}
+
+\section{Adoption-Laundering Screen}
+
+\begin{proposition}[No candidate-law adoption]
+The audit pass does not adopt \(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\),
+adopt source-extension data, or create canonical-ontology candidate status.
+\end{proposition}
+
+\begin{proof}
+The audited payload repeatedly marks the law as \emph{proposal-only}.  Its
+own consequence proposition states that later source-side instantiation,
+smuggling audit, stress, selector, and human gate are required before any
+adoption route.  The current audit can test hidden imports in the written
+payload, but it cannot promote the law or substitute for the missing Gate
+Chair authority.
+\end{proof}
+
+\section{Conditionality And Stress Obligation}
+
+\begin{proposition}[Audit pass is not future-instantiation stability]
+The verdict \texttt{source\_pure\_as\_written\_pending\_stress} does not imply
+that every future construction of \(T_E\), \(L_E\), \(D_E\), relabeling
+transport, or finite-variation behavior is source-pure.
+\end{proposition}
+
+\begin{proof}
+The audit subject is the RT-055 written schema.  A later packet could still
+smuggle target content by defining labels from detector outcomes, empirical
+calibration, target stress-energy variables, target metric structure,
+benchmark behavior, or support-tool output.  Such cases are outside the audit
+pass and must be caught by Refuter stress, selector review, and any later
+human-gated adoption process.
+\end{proof}
+
+\section{Distance-To-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Scoped source-extension context retained as context only. \\
+M\_src & Scoped source-only object retained; no adoption or scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & Candidate-law payload is audit-clean as written; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Candidate obligations remain pending Refuter stress. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict; future adoption remains human-gated. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+
+\begin{quote}
+As written, the RT-055 proposal-only \(\MatSrcDiscLaw / \SemMatterSrc\)
+candidate-law payload is source-pure enough to undergo Refuter stress.  The
+pass is audit-only and conditional.  It does not adopt the law, does not
+promote source-extension data, does not change Distance-to-GR ledger status,
+and does not establish matter coupling.
+\end{quote}
+
+\section{Non-Allowed Conclusions}
+
+This artifact does not allow:
+
+\begin{itemize}[leftmargin=*]
+\item source-law adoption, \(\MatSrcDiscLaw\) adoption, or
+  \(\SemMatterSrc\) adoption;
+\item source-extension data adoption or canonical-ontology candidate status;
+\item \(\MetricData(E)\) adoption;
+\item \(\geff\) scope change, unscoped \(\geff\), or target Lorentzian metric;
+\item coupling-law adoption or matter-coupling derivation;
+\item stress-energy semantics, stress-energy tensor, matter action, detector
+  semantics, empirical calibration, or target matter semantics;
+\item Einstein equations;
+\item exact-GR benchmark promotion or benchmark Gate Chair closure;
+\item completed derivation;
+\item future source-extension impossibility;
+\item global theory rejection;
+\item generated derivatives, validators, registries, roles, handoffs,
+  approvals, commits, local caches, semantic extracts, support-only checkers,
+  file order, or human authorization as proof authority.
+\end{itemize}
+
+\section{Next Route}
+
+The next lawful route is one bounded Refuter stress test of the RT-055
+proposal-only candidate-law payload.  The stress packet should test source
+relabeling, finite variation, bottom collapse, explicit-label collapse,
+non-bottom-label erasure, target-matter-name substitution, detector-outcome
+pressure, stress-energy/action substitution, target-metric scope pressure,
+support-only \(\ProofAuthFalse\) erasure, and adoption-laundering pressure.
+
+\section*{References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter semantics
+obstruction smuggling audit v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter semantics
+obstruction Refuter stress v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{V12 matter-semantics
+candidate-law payload v1} [Internal research-control TeX artifact].
+
+\end{document}

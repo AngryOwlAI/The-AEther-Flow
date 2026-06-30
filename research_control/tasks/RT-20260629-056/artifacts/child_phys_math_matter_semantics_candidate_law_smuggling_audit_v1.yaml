@@ -1,0 +1,39 @@
+artifact_id: "child_phys_math_matter_semantics_candidate_law_smuggling_audit_v1"
+task_id: "RT-20260629-056"
+job_id: "AJ-RT-20260629-056-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_boundary: "audit only; no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MetricData(E), no g_eff scope change, no matter coupling, no Einstein equations, no benchmark promotion, no completed derivation"
+audit_subject:
+  path: "research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex"
+  candidate_objects:
+    - "MatSrcDiscLaw_v1"
+    - "SemMatter_src(E)"
+    - "T_E source-token domain"
+    - "L_E source-label set"
+    - "D_E: T_E -> L_E"
+    - "NoTargetImport_v1"
+mathematical_audit_checks:
+  target_matter_semantics_import: "pass; target matter labels are excluded as premises and non-bottom labels require source-side structure"
+  stress_energy_tensor_import: "pass; no stress-energy tensor is constructed or used as a premise"
+  stress_energy_semantics_import: "pass; stress-energy semantics are named as blocked imports"
+  matter_action_import: "pass; no matter action or variational stress tensor is imported"
+  detector_protocol_import: "pass; detector protocol and empirical readout semantics are blocked"
+  empirical_calibration_import: "pass; no empirical calibration protocol is used"
+  target_metric_import: "pass; no target metric atlas or metric-form data is introduced"
+  proper_time_normalization_import: "pass; no proper-time normalization is introduced"
+  conservation_law_import: "pass; GR or QFT conservation-law naming is not a premise"
+  coupling_law_laundering: "pass; no coupling law is adopted or inferred"
+  benchmark_behavior_import: "pass; benchmark behavior is excluded as a premise"
+  support_checker_proof_authority: "pass; support-only checker validator registry role handoff generated derivative and local cache surfaces are not proof authority"
+  source_law_adoption_laundering: "pass; MatSrcDiscLaw_v1 and SemMatter_src remain proposal-only candidate-law objects"
+  fail_closed_behavior: "pass; failure of any obligation routes to bottom or scoped obstruction rather than target import"
+source_extension_classification:
+  classification: "source_side_under_stated_no_target_assumptions_pending_stress"
+  adopted_source_extension_data: false
+  adoption_gate_required: true
+technical_caveat:
+  conditionality: "The audit covers the payload as written. It does not prove that future instantiations of T_E L_E or D_E are source-pure."
+verdict: "source_pure_as_written_pending_stress"
+next_required_role: "refuter"
