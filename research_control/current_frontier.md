@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-030` and `handoff-0382`.
+`RT-20260630-031` and `handoff-0383`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-030` |
-| Latest handoff ID | `handoff-0382` |
-| Current status | `v12_p6_t04_traceability_registry_validates_support_only_no_proof_authority` |
-| Current route family | v12 p6 t04 traceability registry completed selects p7 t01 external red team role contract |
+| Active task ID | `RT-20260630-031` |
+| Latest handoff ID | `handoff-0383` |
+| Current status | `v12_p7_t01_external_red_team_role_contract_registered_no_claim_promotion` |
+| Current route family | v12 p7 t01 external red team role contract completed selects p7 t02 schema validator |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v12 p7 t01 external red team role contract design |
-| Required next authority | P7-T01 external red-team role contract design only |
-| Next recommended action | Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority. |
+| Current burden | none for physics derivation; live control burden is v12 p7 t02 external red team review schema validator |
+| Required next authority | P7-T02 red-team artifact schema and validator only |
+| Next recommended action | Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-030/00_TASK.yaml`.
-- Active task objective: Complete P6-T04 by creating a proof-to-source traceability registry mechanism for support-only formalization artifacts, a validator, deterministic tests, and a receipt proving proof_authority=false.
-- Latest handoff path: `research_control/handoffs/handoff-0382.yaml`.
-- Latest handoff summary: RT-20260630-030 completed one bounded P6-T04 proof-to-source traceability registry packet. It created research_control/design/support_formalization_traceability_registry_v1.yaml, scripts/research_control/support_formalization/validate_traceability_registry.py, focused unittest coverage, and a deterministic task-local JSON receipt covering P6-T02 and P6-T03 support-only formalization artifacts.
-- Current route family: v12 p6 t04 traceability registry completed selects p7 t01 external red team role contract.
-- Next recommended action: Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority.
+- Active task path: `research_control/tasks/RT-20260630-031/00_TASK.yaml`.
+- Active task objective: Complete P7-T01 by registering the external-red-team-reviewer@0.1.0 critique-only role contract, adding a review artifact template, and preserving may_promote_claims=false.
+- Latest handoff path: `research_control/handoffs/handoff-0383.yaml`.
+- Latest handoff summary: RT-20260630-031 completed one bounded P7-T01 external red-team role-contract design packet. It registered external-red-team-reviewer@0.1.0 as a critique-only role with may_promote_claims=false, added a red-team review artifact template, and recorded one-time approval approval-20260630-004 for non-promotional permanent role registration.
+- Current route family: v12 p7 t01 external red team role contract completed selects p7 t02 schema validator.
+- Next recommended action: Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority.
+Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,22 +143,22 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-030`;
-- latest handoff: `handoff-0382`;
-- current status: `v12_p6_t04_traceability_registry_validates_support_only_no_proof_authority`;
+- active task: `RT-20260630-031`;
+- latest handoff: `handoff-0383`;
+- current status: `v12_p7_t01_external_red_team_role_contract_registered_no_claim_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `support_formalization_traceability_registry`: PASS;
-- latest handoff validation `unittest`: PASS;
+- latest handoff validation `review_template_added`: PASS;
+- latest handoff validation `role_contract_registered`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0382.yaml`
-- `research_control/tasks/RT-20260630-030/00_TASK.yaml`
+- `research_control/handoffs/handoff-0383.yaml`
+- `research_control/tasks/RT-20260630-031/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -173,7 +173,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0382*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0383*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

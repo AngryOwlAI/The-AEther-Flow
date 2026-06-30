@@ -1,0 +1,112 @@
+handoff_id: "handoff-0383"
+created_at: "2026-06-30T13:55:00Z"
+task_id: "RT-20260630-031"
+decision_id: "DDR-20260630-031"
+job_id: "AJ-RT-20260630-031-001"
+completion_path: "research_control/tasks/RT-20260630-031/jobs/completions/AJC-AJ-RT-20260630-031-001.yaml"
+source_task_id: "RT-20260630-031"
+source_job_id: "AJ-RT-20260630-031-001"
+source_completion_id: "AJC-AJ-RT-20260630-031-001"
+status: "completed"
+summary: "RT-20260630-031 completed one bounded P7-T01 external red-team role-contract design packet. It registered external-red-team-reviewer@0.1.0 as a critique-only role with may_promote_claims=false, added a red-team review artifact template, and recorded one-time approval approval-20260630-004 for non-promotional permanent role registration."
+next_action: "Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet."
+loop_risk_route: "v12_p7_t01_external_red_team_role_contract_completed_selects_p7_t02_schema_validator"
+claim_boundary:
+  allowed_next_scope: "P7-T02 red-team artifact schema and validator only"
+  selected_next_plan_task: "P7-T02"
+  selected_next_role_family: "validator-engineer@0.2.0 or project-control-maintainer@0.2.0"
+  selected_next_packet_type: "external_red_team_review_schema_validator"
+  route_label: "p7_t02_external_red_team_review_schema_validator"
+  may_promote_claims: false
+  proof_authority: false
+  scientific_status_changed: false
+  source_law_adopted: false
+  source_extension_data_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_requested: false
+  gate_chair_verdict_issued: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+blocked_claims:
+  - "P7-T01 role contract as physics proof authority"
+  - "P7-T01 template as physics proof authority"
+  - "P7-T01 approval as claim-promotion authority"
+  - "P7-T01 role registration as Gate Chair authority"
+  - "P7-T01 role registration as Smuggling Auditor replacement"
+  - "P7-T01 role registration as Refuter replacement"
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "source-extension data adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "detector semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+p7_t01_result:
+  route: "external_red_team_reviewer_role_contract_registered"
+  role_contract_path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  role_id: "external-red-team-reviewer"
+  role_version: "0.1.0"
+  registry_path: "registries/AGENT_ROLE_REGISTRY.csv"
+  design_path: "research_control/design/external_red_team_reviewer_role_design.md"
+  template_path: "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  approval_path: "research_control/approvals/approval-20260630-004.yaml"
+  may_promote_claims: false
+  gate_chair_authority_created: false
+  smuggling_auditor_replaced: false
+  refuter_replaced: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_role_contract_only"
+  meaning: "P7-T01 created critique-only role-contract and template surfaces. It does not add proof authority or change source-law MetricData(E) g_eff coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or completed-derivation status."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "v12_p7_t02_external_red_team_review_schema_validator"
+  plan_task_id: "recommendations-v12-P7-T02"
+  objective: "Create a strict red-team review artifact schema and validator for the P7-T01 template without running the pilot review."
+  route_label: "p7_t02_external_red_team_review_schema_validator"
+  must_preserve:
+    - "may_promote_claims=false"
+    - "no Gate Chair authority"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  role_contract_registered: "PASS"
+  review_template_added: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -115,6 +115,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `research_control/design/documentation_curator_publication_process.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-READER-SCOPE-FOOTER-RELOCATION-PLAN` `research_control/design/documentation_curator_reader_scope_footer_relocation_plan.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `research_control/design/documentation_curator_visual_atlas_contract.md`
+- `MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN` `research_control/design/external_red_team_reviewer_role_design.md`
 - `MD-RESEARCH-CONTROL-DESIGN-FINITE-SOURCE-COVER-MODEL-CHECKER` `research_control/design/finite_source_cover_model_checker.md`
 - `MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY` `research_control/design/frontier_theorem_inventory.md`
 - `MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1` `research_control/design/frontier_theorem_inventory_schema_v1.md`
@@ -134,6 +135,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `research_control/tasks/RT-20260629-036/artifacts/p1_layered_status_cross_check.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
+- `MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD` `.agents/roles/physics/external-red-team-reviewer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `.agents/roles/physics/gate-chair.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD` `.agents/roles/physics/ontology-formalizer.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD` `.agents/roles/physics/ontology-formalizer.v0.2.0.md`
@@ -613,6 +615,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS` `wiki/markdown/md-research-control-design-documentation-curator-publication-process.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-READER-SCOPE-FOOTER-RELOCATION-PLAN` `wiki/markdown/md-research-control-design-documentation-curator-reader-scope-footer-relocation-plan.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `wiki/markdown/md-research-control-design-documentation-curator-visual-atlas-contract.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN` `wiki/markdown/md-research-control-design-external-red-team-reviewer-role-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-FINITE-SOURCE-COVER-MODEL-CHECKER` `wiki/markdown/md-research-control-design-finite-source-cover-model-checker.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY` `wiki/markdown/md-research-control-design-frontier-theorem-inventory.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1` `wiki/markdown/md-research-control-design-frontier-theorem-inventory-schema-v1.md`
@@ -632,6 +635,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `wiki/markdown/md-research-control-tasks-rt-20260629-036-p1-layered-status-cross-check.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
+- `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-external-red-team-reviewer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-GATE-CHAIR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-gate-chair-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-ontology-formalizer-v0-2-0-md.md`
