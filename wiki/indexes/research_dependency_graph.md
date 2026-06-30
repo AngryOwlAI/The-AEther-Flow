@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T20:34:48Z`
-- Source fingerprint: `186c48e95d6b08e53ad0d41710e188e03bc79e77034734f489edc75a04506631`
-- Nodes: `8780`
-- Edges: `37222`
+- Generated from tracked state as of: `2026-06-30T21:01:50Z`
+- Source fingerprint: `d0f5342d4357431bf3312eba30233d1c7411be85b1d623b85ef06eb3587322d7`
+- Nodes: `8813`
+- Edges: `37360`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 537 |
+| `completion_yaml` | 538 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 401 |
+| `handoff_yaml` | 402 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 537 |
+| `agent_job` | `support_only` | 538 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4417 |
-| `blocked_burden` | `blocked` | 1001 |
-| `claim_boundary` | `support_only` | 538 |
+| `artifact` | `support_only` | 4432 |
+| `blocked_burden` | `blocked` | 1010 |
+| `claim_boundary` | `support_only` | 539 |
 | `draft_control_candidate` | `draft_control` | 418 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 89 |
-| `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 401 |
-| `human_gated_object` | `human_gated` | 243 |
+| `gate_chair_verdict` | `human_gated` | 26 |
+| `handoff` | `support_only` | 402 |
+| `human_gated_object` | `human_gated` | 246 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 232 |
+| `source_ontology_object` | `support_only` | 233 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 486 |
+| `task` | `support_only` | 487 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P5-T03 constructed MatterSemanticsCandidate^cand_v1(E;B_current) as finite/local source-side matter-semantics candidate pending audit while preserving SourceCou |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | V12 P7-T03 Gate Chair accepted MSStablePartitionPrecondition_v1 only as scoped source-extension stable-precondition evidence/precondition. No source-law source- |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -133,7 +133,6 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_summary_as_physics_evidence` | Blocked claim: baseline summary as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:benchmark_gate_chair_closure` | Blocked claim: benchmark Gate Chair closure | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure_or_suspension` | Blocked permission: benchmark Gate Chair closure or suspension | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:benchmark_import` | Blocked claim: benchmark import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_promotion` | Blocked claim: benchmark promotion | `registries/DISTANCE_TO_GR_LEDGER.csv` |
@@ -160,12 +159,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:candidate_construction_as_derivation` | Blocked claim: candidate construction as derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_construction_as_detector_semantics` | Blocked claim: candidate construction as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_construction_as_einstein_equations` | Blocked claim: candidate construction as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_construction_as_future_source_extension_impossibility` | Blocked claim: candidate construction as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260630-049`
-- Latest handoff: `handoff-0401`
-- Handoff path: `research_control/handoffs/handoff-0401.yaml`
-- Next action: Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide the narrow MSStablePartitionPrecondition_v1 evidence/precondition status question under the exact human authorization already supplied by the user, with no source-law adoption no source-extension data adoption beyond any exact future gate scope no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
+- Active task: `RT-20260630-050`
+- Latest handoff: `handoff-0402`
+- Handoff path: `research_control/handoffs/handoff-0402.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStablePartitionPrecondition evidence route while preserving no source-law adoption no source-extension data adoption beyond the exact scoped gate result no matter-semantics adoption no detector-semantics adoption no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

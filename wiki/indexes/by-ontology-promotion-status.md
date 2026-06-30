@@ -36,6 +36,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260630-013/artifacts/matter_coupling_precondition_assembly_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260630-006/artifacts/matter_signature_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260630-020/artifacts/source_coupling_law_candidate_source_extension_evidence_gate_chair_review_v1.tex`
+- `TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260630-050/artifacts/ms_stable_partition_precondition_source_extension_evidence_gate_chair_review_v1.tex`
 
 ## not_applicable
 
