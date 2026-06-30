@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T20:09:02Z`
-- Source fingerprint: `ede570553dec90fac78779ffe18a09e6ce72d37d8f21fac75d952e8250b0e489`
-- Nodes: `8756`
-- Edges: `37103`
+- Generated from tracked state as of: `2026-06-30T20:34:48Z`
+- Source fingerprint: `186c48e95d6b08e53ad0d41710e188e03bc79e77034734f489edc75a04506631`
+- Nodes: `8780`
+- Edges: `37222`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 536 |
+| `completion_yaml` | 537 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 400 |
+| `handoff_yaml` | 401 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 536 |
+| `agent_job` | `support_only` | 537 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4403 |
-| `blocked_burden` | `blocked` | 1000 |
-| `claim_boundary` | `support_only` | 537 |
-| `draft_control_candidate` | `draft_control` | 417 |
+| `artifact` | `support_only` | 4417 |
+| `blocked_burden` | `blocked` | 1001 |
+| `claim_boundary` | `support_only` | 538 |
+| `draft_control_candidate` | `draft_control` | 418 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
-| `frozen_negative` | `frozen_negative` | 88 |
+| `frozen_negative` | `frozen_negative` | 89 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 400 |
-| `human_gated_object` | `human_gated` | 240 |
+| `handoff` | `support_only` | 401 |
+| `human_gated_object` | `human_gated` | 243 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 232 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 485 |
+| `task` | `support_only` | 486 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-048`
-- Latest handoff: `handoff-0400`
-- Handoff path: `research_control/handoffs/handoff-0400.yaml`
-- Next action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStablePartitionPrecondition_v1 before any source-law adoption source-extension data adoption matter-coupling Einstein-equation benchmark or promotion route.
+- Active task: `RT-20260630-049`
+- Latest handoff: `handoff-0401`
+- Handoff path: `research_control/handoffs/handoff-0401.yaml`
+- Next action: Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide the narrow MSStablePartitionPrecondition_v1 evidence/precondition status question under the exact human authorization already supplied by the user, with no source-law adoption no source-extension data adoption beyond any exact future gate scope no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

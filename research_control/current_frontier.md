@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-048` and `handoff-0400`.
+`RT-20260630-049` and `handoff-0401`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-048` |
-| Latest handoff ID | `handoff-0400` |
-| Current status | `v12_p7_t03_repair_msirrel_stable_partition_precondition_refuter_stress_survived_as_guarded_precondition_pending_selector_no_adoption` |
-| Current route family | theoretical decision role selection |
+| Active task ID | `RT-20260630-049` |
+| Latest handoff ID | `handoff-0401` |
+| Current status | `v12_p7_t03_repair_msirrel_stable_partition_precondition_post_stress_selector_routes_to_source_extension_human_gate_no_adoption` |
+| Current route family | source extension human gate |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_stress_only |
-| Required next authority | one theoretical-continuation-selector@0.1.0 ontology-law decision packet over the post-stress MSStablePartitionPrecondition_v1 route |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStablePartitionPrecondition_v1 before any source-law adoption source-extension data adoption matter-coupling Einstein-equation benchmark or promotion route. |
+| Current burden | `matter_coupling`; status: unchanged_selector_only |
+| Required next authority | one gate-chair@0.1.0 source-extension human-gate packet over the narrow MSStablePartitionPrecondition_v1 evidence/precondition status question |
+| Next recommended action | Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide the narrow MSStablePartitionPrecondition_v1 evidence/precondition status question under the exact human authorization already supplied by the user, with no source-law adoption no source-extension data adoption beyond any exact future gate scope no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-048/00_TASK.yaml`.
-- Active task objective: Complete one bounded refuter@0.2.0 ontology-law packet by stress-testing MSStablePartitionPrecondition_v1 for finite-variation guard robustness RR_E semantic overread pressure-pair behavior certificate deletion source-signature stability and accidental irrelevance-law adoption after RT-047.
-- Latest handoff path: `research_control/handoffs/handoff-0400.yaml`.
-- Latest handoff summary: RT-20260630-048 stress-tested MSStablePartitionPrecondition_v1 and found that it survives bounded Refuter stress only as a guarded finite/local source-side precondition candidate. Finite variations preserve cells only when Sigma_rep_E and the guard are preserved change cells when Sigma_rep_E changes and fail closed when core formation admissibility or no-target certificates fail. RR_E remains source syntax and pressure-pair records with different RR_E remain distinct.
-- Current route family: theoretical decision role selection.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStablePartitionPrecondition_v1 before any source-law adoption source-extension data adoption matter-coupling Einstein-equation benchmark or promotion route.
+- Active task path: `research_control/tasks/RT-20260630-049/00_TASK.yaml`.
+- Active task objective: Complete one bounded theoretical-continuation-selector@0.1.0 ontology-law packet by selecting the post-stress route for MSStablePartitionPrecondition_v1 after RT-048 guarded stress survival.
+- Latest handoff path: `research_control/handoffs/handoff-0401.yaml`.
+- Latest handoff summary: RT-20260630-049 selected a future narrow Gate Chair source-extension evidence/precondition review for MSStablePartitionPrecondition_v1 after RT-046 formalization RT-047 source-purity audit and RT-048 guarded stress survival. The selector does not consume Gate Chair authority and does not adopt a source law source-extension data MetricData(E) g_eff coupling law matter coupling stress-energy detector semantics matter action Einstein equations benchmark status or completed derivation.
+- Current route family: source extension human gate.
+- Next recommended action: Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide the narrow MSStablePartitionPrecondition_v1 evidence/precondition status question under the exact human authorization already supplied by the user, with no source-law adoption no source-extension data adoption beyond any exact future gate scope no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStablePartitionPrecondition_v1 before any source-law adoption source-extension data adoption matter-coupling Einstein-equation benchmark or promotion route.
+Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide the narrow MSStablePartitionPrecondition_v1 evidence/precondition status question under the exact human authorization already supplied by the user, with no source-law adoption no source-extension data adoption beyond any exact future gate scope no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,25 +143,25 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-048`;
-- latest handoff: `handoff-0400`;
-- current status: `v12_p7_t03_repair_msirrel_stable_partition_precondition_refuter_stress_survived_as_guarded_precondition_pending_selector_no_adoption`;
+- active task: `RT-20260630-049`;
+- latest handoff: `handoff-0401`;
+- current status: `v12_p7_t03_repair_msirrel_stable_partition_precondition_post_stress_selector_routes_to_source_extension_human_gate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `no_claim_promotion`: PASS;
-- latest handoff validation `no_gate_chair_authority`: PASS;
+- latest handoff validation `no_gate_chair_authority_consumed`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
 - latest handoff validation `physics_promotion_authorized`: false;
-- latest handoff validation `stress_completed`: PASS;
+- latest handoff validation `selector_completed`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0400.yaml`
-- `research_control/tasks/RT-20260630-048/00_TASK.yaml`
+- `research_control/handoffs/handoff-0401.yaml`
+- `research_control/tasks/RT-20260630-049/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0400*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0401*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
