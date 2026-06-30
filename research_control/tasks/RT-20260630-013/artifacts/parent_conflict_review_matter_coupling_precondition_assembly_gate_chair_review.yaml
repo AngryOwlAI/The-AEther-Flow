@@ -1,0 +1,16 @@
+artifact_id: "parent_conflict_review_matter_coupling_precondition_assembly_gate_chair_review"
+task_id: "RT-20260630-013"
+job_id: "AJ-RT-20260630-013-001"
+status: "resolved"
+resolution_rounds: 1
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260630-013/artifacts/child_phys_math_matter_coupling_precondition_assembly_gate_chair_review.yaml"
+  - "research_control/tasks/RT-20260630-013/artifacts/child_phys_phil_matter_coupling_precondition_assembly_gate_chair_review.yaml"
+conflicts:
+  - conflict_id: "C-001"
+    type: "terminology"
+    severity: "nonblocking"
+    issue: "The mathematical child treats the verdict as evidence/precondition acceptance, while the philosophical child stresses that source-extension data adoption beyond the exact question remains blocked."
+    resolution: "Use the exact verdict label accepted_as_scoped_source_extension_matter_coupling_precondition_evidence_precondition_only and explicitly state that this is not source-law, source-extension-data, coupling-law, or matter-coupling adoption."
+unresolved_conflicts: []
+parent_decision: "Both child outputs support the same narrow Gate Chair verdict. No blocking conflict remains."
