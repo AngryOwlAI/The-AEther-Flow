@@ -1,0 +1,103 @@
+handoff_id: "handoff-0382"
+created_at: "2026-06-30T13:29:38Z"
+task_id: "RT-20260630-030"
+decision_id: "DDR-20260630-030"
+job_id: "AJ-RT-20260630-030-001"
+completion_path: "research_control/tasks/RT-20260630-030/jobs/completions/AJC-AJ-RT-20260630-030-001.yaml"
+source_task_id: "RT-20260630-030"
+source_job_id: "AJ-RT-20260630-030-001"
+source_completion_id: "AJC-AJ-RT-20260630-030-001"
+status: "completed"
+summary: "RT-20260630-030 completed one bounded P6-T04 proof-to-source traceability registry packet. It created research_control/design/support_formalization_traceability_registry_v1.yaml, scripts/research_control/support_formalization/validate_traceability_registry.py, focused unittest coverage, and a deterministic task-local JSON receipt covering P6-T02 and P6-T03 support-only formalization artifacts."
+next_action: "Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority."
+loop_risk_route: "v12_p6_t04_traceability_registry_completed_selects_p7_t01_external_red_team_role_contract"
+claim_boundary:
+  allowed_next_scope: "P7-T01 external red-team role contract design only"
+  selected_next_plan_task: "P7-T01"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_packet_type: "external_red_team_role_contract_design"
+  route_label: "p7_t01_external_red_team_role_contract_design"
+  proof_authority: false
+  scientific_status_changed: false
+  source_law_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_requested: false
+  gate_chair_verdict_issued: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+blocked_claims:
+  - "P6-T04 traceability registry as physics proof authority"
+  - "P6-T04 validator output as physics proof authority"
+  - "P6-T04 registry metadata as canonical ontology edit"
+  - "P6-T04 registry metadata as source-law adoption"
+  - "P6-T04 registry metadata as source-extension data adoption"
+  - "P6-T04 registry metadata as MetricData(E) adoption"
+  - "P6-T04 registry metadata as g_eff adoption or scope expansion"
+  - "P6-T04 registry metadata as coupling-law adoption"
+  - "P6-T04 registry metadata as matter coupling"
+  - "P6-T04 registry metadata as stress-energy semantics"
+  - "P6-T04 registry metadata as stress-energy tensor"
+  - "P6-T04 registry metadata as detector semantics"
+  - "P6-T04 registry metadata as matter action"
+  - "P6-T04 registry metadata as Einstein equations"
+  - "P6-T04 registry metadata as benchmark promotion"
+  - "P6-T04 registry metadata as completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+p6_t04_result:
+  route: "support_formalization_traceability_registry_completed"
+  registry_path: "research_control/design/support_formalization_traceability_registry_v1.yaml"
+  validator_path: "scripts/research_control/support_formalization/validate_traceability_registry.py"
+  test_path: "tests/test_support_formalization_traceability_registry.py"
+  report_path: "research_control/tasks/RT-20260630-030/artifacts/proof_to_source_traceability_registry_report.json"
+  report_status: "PASS"
+  checked_entry_count: "2"
+  proof_authority: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_traceability_only"
+  meaning: "P6-T04 created traceability metadata and validation only. It does not add proof authority or change source-law MetricData(E) g_eff coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or completed-derivation status."
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "v12_p7_t01_external_red_team_role_contract_design"
+  plan_task_id: "recommendations-v12-P7-T01"
+  objective: "Design a new external red-team reviewer role contract or task overlay with critique authority only and may_promote_claims=false."
+  route_label: "p7_t01_external_red_team_role_contract_design"
+  must_preserve:
+    - "may_promote_claims=false"
+    - "no Gate Chair authority"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  support_formalization_traceability_registry: "PASS"
+  unittest: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

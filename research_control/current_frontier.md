@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-029` and `handoff-0381`.
+`RT-20260630-030` and `handoff-0382`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-029` |
-| Latest handoff ID | `handoff-0381` |
-| Current status | `v12_p6_t03_finite_local_witness_schema_formalized_support_only_no_proof_authority` |
-| Current route family | v12 p6 t03 support formalization completed selects p6 t04 proof to source traceability registry |
-| Target derivation milestone | `finite_toy_metric_response` |
-| Current burden | `finite_toy_metric_response`; status: unchanged_support_only_schema_formalization |
-| Required next authority | P6-T04 proof-to-source traceability registry only |
-| Next recommended action | Run one bounded P6-T04 packet to create the proof-to-source traceability registry. Preserve proof_authority=false and do not claim matter coupling, stress-energy semantics, g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation. |
+| Active task ID | `RT-20260630-030` |
+| Latest handoff ID | `handoff-0382` |
+| Current status | `v12_p6_t04_traceability_registry_validates_support_only_no_proof_authority` |
+| Current route family | v12 p6 t04 traceability registry completed selects p7 t01 external red team role contract |
+| Target derivation milestone | none; this is project-control tooling work |
+| Current burden | none for physics derivation; live control burden is v12 p7 t01 external red team role contract design |
+| Required next authority | P7-T01 external red-team role contract design only |
+| Next recommended action | Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-029/00_TASK.yaml`.
-- Active task objective: Complete P6-T03 by formalizing the finite/local source-side witness schema skeleton as support-only Python tooling with deterministic tests and traceability to the current checker and parameterized finite/local witness artifacts.
-- Latest handoff path: `research_control/handoffs/handoff-0381.yaml`.
-- Latest handoff summary: RT-20260630-029 completed one bounded P6-T03 finite/local witness schema support formalization packet. It implemented scripts/research_control/support_formalization/finite_local_witness_schema.py, focused unittest coverage, a deterministic task-local JSON report, and a traceability artifact mapping formal objects to the current checker plus parameterized finite/local witness artifacts. The packet preserved proof_authority=false and no adoption or downstream GR promotion.
-- Current route family: v12 p6 t03 support formalization completed selects p6 t04 proof to source traceability registry.
-- Next recommended action: Run one bounded P6-T04 packet to create the proof-to-source traceability registry. Preserve proof_authority=false and do not claim matter coupling, stress-energy semantics, g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-030/00_TASK.yaml`.
+- Active task objective: Complete P6-T04 by creating a proof-to-source traceability registry mechanism for support-only formalization artifacts, a validator, deterministic tests, and a receipt proving proof_authority=false.
+- Latest handoff path: `research_control/handoffs/handoff-0382.yaml`.
+- Latest handoff summary: RT-20260630-030 completed one bounded P6-T04 proof-to-source traceability registry packet. It created research_control/design/support_formalization_traceability_registry_v1.yaml, scripts/research_control/support_formalization/validate_traceability_registry.py, focused unittest coverage, and a deterministic task-local JSON receipt covering P6-T02 and P6-T03 support-only formalization artifacts.
+- Current route family: v12 p6 t04 traceability registry completed selects p7 t01 external red team role contract.
+- Next recommended action: Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P6-T04 packet to create the proof-to-source traceability registry. Preserve proof_authority=false and do not claim matter coupling, stress-energy semantics, g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation.
+Run one bounded P7-T01 packet to design the external red-team reviewer role contract or task overlay. Preserve may_promote_claims=false and do not duplicate Gate Chair, Smuggling Auditor, or Refuter authority.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,29 +143,22 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-029`;
-- latest handoff: `handoff-0381`;
-- current status: `v12_p6_t03_finite_local_witness_schema_formalized_support_only_no_proof_authority`;
+- active task: `RT-20260630-030`;
+- latest handoff: `handoff-0382`;
+- current status: `v12_p6_t04_traceability_registry_validates_support_only_no_proof_authority`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `support_formalization_cli`: PASS;
+- latest handoff validation `support_formalization_traceability_registry`: PASS;
 - latest handoff validation `unittest`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0381.yaml`
-- `research_control/tasks/RT-20260630-029/00_TASK.yaml`
+- `research_control/handoffs/handoff-0382.yaml`
+- `research_control/tasks/RT-20260630-030/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -180,7 +173,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0381*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0382*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
