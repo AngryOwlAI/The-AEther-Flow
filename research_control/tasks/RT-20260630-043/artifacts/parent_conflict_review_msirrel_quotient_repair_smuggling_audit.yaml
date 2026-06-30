@@ -1,0 +1,16 @@
+task_id: "RT-20260630-043"
+review_id: "PCR-RT-20260630-043-001"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260630-043/artifacts/child_phys_math_msirrel_quotient_repair_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260630-043/artifacts/child_phys_phil_msirrel_quotient_repair_smuggling_audit.yaml"
+conflicts:
+  - conflict_id: "C-001"
+    type: "terminology"
+    severity: "nonblocking"
+    issue: "The repair candidate names an irrelevance repair while retaining RR_E as a discriminator coordinate."
+    resolution: "State that the candidate is source-pure as a stable partition repair but does not prove readout-response irrelevance."
+unresolved_conflicts: []
+blocking_conflicts: []
+fusion_required: true
