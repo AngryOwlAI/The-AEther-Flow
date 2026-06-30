@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-018` and `handoff-0370`.
+`RT-20260630-019` and `handoff-0371`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-018` |
-| Latest handoff ID | `handoff-0370` |
-| Current status | `v12_source_coupling_law_candidate_stress_survived_pending_selector_no_adoption` |
-| Current route family | v12 source coupling law candidate stress survived pending selector no adoption |
+| Active task ID | `RT-20260630-019` |
+| Latest handoff ID | `handoff-0371` |
+| Current status | `v12_source_coupling_law_candidate_selector_requires_narrow_gate_no_adoption` |
+| Current route family | v12 source coupling law candidate selector requires narrow gate no adoption |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: Refuter stress passed |
-| Required next authority | Theoretical Continuation Selector source coupling-law candidate post-stress route classification only |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for SourceCouplingLawCandidate^cand_v1(E): Gate Chair evidence-status precondition review only if selector criteria are met, otherwise candidate repair, scoped obstruction work, source-coupling target redesign, or human-gated ontology-change requirement. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
+| Current burden | `matter_coupling`; status: human-gated |
+| Required next authority | Gate Chair source coupling-law candidate evidence-status/precondition review only |
+| Next recommended action | Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide only whether SourceCouplingLawCandidate^cand_v1(E) may be accepted as scoped source-extension coupling-law-candidate evidence/precondition under its declared source-side scope. The current user goal supplies human authorization for human gates; the Gate Chair packet must still record the exact scoped approval question. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result except the exact scoped evidence/precondition status decided by this gate, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
 
 ## Active Boundary
 
@@ -48,16 +48,16 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-018/00_TASK.yaml`.
-- Active task objective: Stress SourceCouplingLawCandidate^cand_v1(E) for compatibility-collapse, certificate-deletion, relabeling noncovariance, finite-variation repair fragility, evidence-as-adoption collapse, source-locality failure, target-import relapse, process-authority laundering, and downstream overread.
-- Latest handoff path: `research_control/handoffs/handoff-0370.yaml`.
-- Latest handoff summary: RT-20260630-018 completed one bounded Refuter ontology-law-research-packet and stress-tested SourceCouplingLawCandidate^cand_v1(E) as a bridge_facing_candidate_path pending selector. The stress pass is conditional and proposal-only; it does not adopt source law, MCPA^cand_v1(E), source-extension data beyond the exact RT-013 gate result, MetricData(E), g_eff, a coupling law, matter coupling, stress-energy semantics, detector semantics, matter action, Einstein equations, benchmark status, or completed derivation.
-- Current route family: v12 source coupling law candidate stress survived pending selector no adoption.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for SourceCouplingLawCandidate^cand_v1(E): Gate Chair evidence-status precondition review only if selector criteria are met, otherwise candidate repair, scoped obstruction work, source-coupling target redesign, or human-gated ontology-change requirement. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-019/00_TASK.yaml`.
+- Active task objective: Classify the post-stress route for SourceCouplingLawCandidate^cand_v1(E) after construction, smuggling audit, and Refuter stress; select exactly one next bounded packet while preserving all adoption and downstream GR claim blocks.
+- Latest handoff path: `research_control/handoffs/handoff-0371.yaml`.
+- Latest handoff summary: RT-20260630-019 completed one bounded Theoretical Continuation Selector ontology-law-research-packet and classified SourceCouplingLawCandidate^cand_v1(E) as ready only for a narrow source-extension Gate Chair evidence-status/precondition review. The selector issues no Gate Chair verdict and does not adopt source law, MCPA^cand_v1(E), source-extension data beyond the exact RT-013 gate result, MetricData(E), g_eff, a coupling law, matter coupling, stress-energy semantics, detector semantics, matter action, Einstein equations, benchmark status, or completed derivation.
+- Current route family: v12 source coupling law candidate selector requires narrow gate no adoption.
+- Next recommended action: Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide only whether SourceCouplingLawCandidate^cand_v1(E) may be accepted as scoped source-extension coupling-law-candidate evidence/precondition under its declared source-side scope. The current user goal supplies human authorization for human gates; the Gate Chair packet must still record the exact scoped approval question. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result except the exact scoped evidence/precondition status decided by this gate, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 ## Matter-Coupling Boundary
 
-The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `Refuter stress passed`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: SourceCouplingLawCandidate^cand_v1(E) stress survives as bridge_facing_candidate_path pending selector while no source-law adoption no MCPA adoption no source-extension data adoption beyond exact RT-013 gate no coupling-law adoption no matter-coupling derivation no stress-energy semantics no stress-energy tensor no matter action no detector semantics no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260630-018/artifacts/source_coupling_law_candidate_refuter_stress_v1.tex`.
+The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `human-gated`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: SourceCouplingLawCandidate^cand_v1(E) post-stress selector selected narrow Gate Chair evidence-status precondition review only while no source-law adoption no MCPA adoption no source-extension data adoption beyond exact RT-013 gate no coupling-law adoption no matter-coupling derivation no stress-energy semantics no stress-energy tensor no matter action no detector semantics no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260630-019/artifacts/source_coupling_law_candidate_post_stress_selector_v1.yaml`.
 
 This ledger status must not be read as coupling-law adoption, universal matter-coupling derivation, matter-coupling adoption, stress-energy semantics, stress-energy tensor, matter action, detector semantics, Einstein equations, benchmark promotion, or completed derivation.
 
@@ -120,7 +120,7 @@ source if this summary drifts.
 | `resp_lc` | `response_localization_resp_lc` | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
 | `g_eff` | `effective_metric_g_eff` | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
-| `matter_coupling` | `matter_coupling` | Refuter stress passed | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260630-018/artifacts/source_coupling_law_candidate_refuter_stress_v1.tex` |
+| `matter_coupling` | `matter_coupling` | human-gated | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260630-019/artifacts/source_coupling_law_candidate_post_stress_selector_v1.yaml` |
 | `einstein_equations` | `einstein_equations` | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
 | `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for SourceCouplingLawCandidate^cand_v1(E): Gate Chair evidence-status precondition review only if selector criteria are met, otherwise candidate repair, scoped obstruction work, source-coupling target redesign, or human-gated ontology-change requirement. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide only whether SourceCouplingLawCandidate^cand_v1(E) may be accepted as scoped source-extension coupling-law-candidate evidence/precondition under its declared source-side scope. The current user goal supplies human authorization for human gates; the Gate Chair packet must still record the exact scoped approval question. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result except the exact scoped evidence/precondition status decided by this gate, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-018`;
-- latest handoff: `handoff-0370`;
-- current status: `v12_source_coupling_law_candidate_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260630-019`;
+- latest handoff: `handoff-0371`;
+- current status: `v12_source_coupling_law_candidate_selector_requires_narrow_gate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0370.yaml`
-- `research_control/tasks/RT-20260630-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0371.yaml`
+- `research_control/tasks/RT-20260630-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0370*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0371*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

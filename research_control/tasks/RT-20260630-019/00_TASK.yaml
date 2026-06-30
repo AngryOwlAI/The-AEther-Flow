@@ -1,0 +1,49 @@
+task_id: "RT-20260630-019"
+task_type: "v12_source_coupling_law_candidate_post_stress_selector"
+status: "completed"
+created_at: "2026-06-30T08:45:32Z"
+updated_at: "2026-06-30T08:45:32Z"
+closed_at: "2026-06-30T08:45:32Z"
+parent_task_id: "RT-20260630-018"
+parent_handoff_id: "handoff-0370"
+decision_id: "DDR-20260630-019"
+job_id: "AJ-RT-20260630-019-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260630-019"
+requires_human_gate: false
+human_authorization_note: "The current user goal grants human authorization for human gates. This selector does not consume Gate Chair authority or issue a verdict; the next Gate Chair packet must record an exact scoped approval question before review."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  plan_phase_id: "P4-T06/P5-preflight bridge"
+  plan_task_id: "post-SourceCouplingLawCandidate theoretical selector"
+objective: "Classify the post-stress route for SourceCouplingLawCandidate^cand_v1(E) after construction, smuggling audit, and Refuter stress; select exactly one next bounded packet while preserving all adoption and downstream GR claim blocks."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Classify the stress-survived proposal-only SourceCouplingLawCandidate^cand_v1(E) source coupling-law candidate route before any Gate Chair evidence-status review, source-law adoption, MCPA adoption, source-extension data adoption beyond the exact RT-013 gate result, coupling-law adoption, matter-coupling derivation or adoption, stress-energy semantics, detector semantics, matter action, Einstein equations, benchmark promotion, or completed derivation."
+closure_status: "v12_source_coupling_law_candidate_selector_requires_narrow_gate_no_adoption"
+claim_boundary:
+  allowed_scope: "Selector-only post-stress route classification for SourceCouplingLawCandidate^cand_v1(E)"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  selected_next_packet_type: "source_extension_human_gate"
+  selected_next_role_family: "gate-chair@0.1.0"
+  source_extension_category: "source_extension_human_gate"
+  source_law_adopted: false
+  MCPA_cand_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_gate_result: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifact: "research_control/tasks/RT-20260630-019/artifacts/source_coupling_law_candidate_post_stress_selector_v1.yaml"
+next_recommended_action: "Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide only whether SourceCouplingLawCandidate^cand_v1(E) may be accepted as scoped source-extension coupling-law-candidate evidence/precondition under its declared source-side scope. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result unless the narrow evidence-status question explicitly permits it, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation."
+notes: "RT-20260630-019 selects narrow source-extension human-gate evidence-status/precondition review after the RT-016 construction, RT-017 audit, and RT-018 stress sequence. No Gate Chair verdict, adoption, or promotion occurs in this selector packet."

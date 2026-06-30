@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T08:24:22Z`
-- Source fingerprint: `ac9b3d1266c29b2222270f83681c0f4946109fd8c5409b4be818015da5806f35`
-- Nodes: `7967`
-- Edges: `33813`
+- Generated from tracked state as of: `2026-06-30T08:45:32Z`
+- Source fingerprint: `a348af8113356898ecfd94a82509b59e83160a2b3d105191c264ff2263dabe41`
+- Nodes: `8003`
+- Edges: `33940`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 506 |
+| `completion_yaml` | 507 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 370 |
+| `handoff_yaml` | 371 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 5 |
-| `agent_job` | `support_only` | 506 |
+| `agent_job` | `support_only` | 507 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3967 |
-| `blocked_burden` | `blocked` | 868 |
-| `claim_boundary` | `support_only` | 507 |
-| `draft_control_candidate` | `draft_control` | 370 |
-| `draft_control_candidate` | `proposal_only` | 54 |
-| `draft_control_candidate` | `science_draft` | 31 |
-| `frozen_negative` | `frozen_negative` | 78 |
+| `artifact` | `support_only` | 3981 |
+| `blocked_burden` | `blocked` | 879 |
+| `claim_boundary` | `support_only` | 508 |
+| `draft_control_candidate` | `draft_control` | 371 |
+| `draft_control_candidate` | `proposal_only` | 55 |
+| `draft_control_candidate` | `science_draft` | 30 |
+| `frozen_negative` | `frozen_negative` | 79 |
 | `gate_chair_verdict` | `human_gated` | 24 |
-| `handoff` | `support_only` | 370 |
-| `human_gated_object` | `human_gated` | 230 |
+| `handoff` | `support_only` | 371 |
+| `human_gated_object` | `human_gated` | 233 |
 | `ledger_row` | `accepted_scoped` | 3 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
-| `ledger_row` | `human_gated` | 1 |
-| `ledger_row` | `science_draft` | 6 |
-| `obstruction` | `blocked` | 55 |
+| `ledger_row` | `human_gated` | 3 |
+| `ledger_row` | `science_draft` | 4 |
+| `obstruction` | `blocked` | 56 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 20 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 215 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 455 |
+| `task` | `support_only` | 456 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `science_draft` | Refuter stress classified SourceCouplingLawCandidate^cand_v1(E) only as bridge_facing_candidate_path pending selector while no source-law adoption no MCPA adopt |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `human_gated` | Theoretical Continuation Selector classified SourceCouplingLawCandidate^cand_v1(E) only as ready for a narrow source-extension human-gate evidence-status precon |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-018`
-- Latest handoff: `handoff-0370`
-- Handoff path: `research_control/handoffs/handoff-0370.yaml`
-- Next action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for SourceCouplingLawCandidate^cand_v1(E): Gate Chair evidence-status precondition review only if selector criteria are met, otherwise candidate repair, scoped obstruction work, source-coupling target redesign, or human-gated ontology-change requirement. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-019`
+- Latest handoff: `handoff-0371`
+- Handoff path: `research_control/handoffs/handoff-0371.yaml`
+- Next action: Run one bounded gate-chair@0.1.0 source-extension human-gate packet to decide only whether SourceCouplingLawCandidate^cand_v1(E) may be accepted as scoped source-extension coupling-law-candidate evidence/precondition under its declared source-side scope. The current user goal supplies human authorization for human gates; the Gate Chair packet must still record the exact scoped approval question. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond the exact RT-013 gate result except the exact scoped evidence/precondition status decided by this gate, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

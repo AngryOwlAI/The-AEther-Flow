@@ -1,0 +1,42 @@
+artifact_id: "child_phys_phil_source_coupling_law_candidate_post_stress_selector"
+task_id: "RT-20260630-019"
+job_id: "AJ-RT-20260630-019-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+created_at: "2026-06-30T08:45:32Z"
+status: "completed"
+objective: "Classify the ontological and physical claim boundary after SourceCouplingLawCandidate^cand_v1(E) stress survival."
+inputs_reviewed:
+  - "research_control/handoffs/handoff-0370.yaml"
+  - "research_control/tasks/RT-20260630-018/artifacts/source_coupling_law_candidate_refuter_stress_v1.tex"
+claim_boundary_analysis:
+  ontology_status: "current ontology does not derive SourceCouplingLawCandidate^cand_v1(E) as an adopted source-side coupling law"
+  candidate_status: "proposal-only draft/control"
+  extension_status_pair: "blocked_adoption_open_continuation"
+  physical_status: "not matter coupling; not stress-energy semantics; not detector semantics; not matter action"
+  benchmark_status: "not promoted"
+  proof_authority: false
+selected_route:
+  next_packet_type: "source_extension_human_gate"
+  next_role_family: "gate-chair@0.1.0"
+  reason: "A protected evidence-status/precondition question is narrower than ontology adoption and more decisive than another autonomous selector or repair packet."
+  gate_scope: "Decide only whether the candidate may be accepted as scoped source-extension coupling-law-candidate evidence/precondition under declared source-side scope."
+deferred_routes:
+  matter_semantics_preflight:
+    status: "deferred"
+    reason: "Matter-semantics work should not build on a candidate whose scoped evidence/precondition status remains undecided."
+  human_gated_ontology_change_required:
+    status: "not_selected"
+    reason: "A narrower Gate Chair evidence-status/precondition review is available without canonical ontology edit or ontology adoption."
+  global_rejection:
+    status: "forbidden"
+    reason: "No no-go theorem or scoped obstruction supports global rejection."
+forbidden_overreads:
+  - "stress survival as source-law adoption"
+  - "selector result as Gate Chair verdict"
+  - "evidence-status readiness as matter coupling"
+  - "candidate tokens as stress-energy semantics"
+  - "source supports as detector semantics"
+  - "gate readiness as Einstein-equation derivation"
+  - "future gate acceptance as benchmark promotion"
+conclusion: "The ontologically honest route is narrow human-gated evidence-status review while preserving every downstream physical and benchmark boundary."
