@@ -318,6 +318,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-REPAIR-CANDIDATE` `research_control/tasks/RT-20260630-002/artifacts/matter_signature_repair_candidate_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260630-004/artifacts/matter_signature_repair_candidate_refuter_stress_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-003/artifacts/matter_signature_repair_candidate_smuggling_audit_v1.tex`
+- `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260630-006/artifacts/matter_signature_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `research_control/tasks/RT-20260629-045/artifacts/source_extension_compression_obstruction_v1.tex`
 - `TEX-V12-P4-T04-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-046/artifacts/source_extension_compression_obstruction_smuggling_audit_v1.tex`
 - `TEX-V12-P4-T05-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-047/artifacts/source_extension_compression_obstruction_refuter_stress_v1.tex`
@@ -868,6 +869,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-REPAIR-CANDIDATE` `wiki/tex/tex-v12-ontology-law-matter-semantics-repair-candidate.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-REFUTER-STRESS` `wiki/tex/tex-v12-ontology-law-matter-signature-repair-candidate-refuter-stress.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-v12-ontology-law-matter-signature-repair-candidate-smuggling-audit.md`
+- `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `wiki/tex/tex-v12-ontology-law-matter-signature-source-extension-evidence-gate-chair-review.md`
 - `WIKI-TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `wiki/tex/tex-v12-p4-t03-source-extension-compression-obstruction.md`
 - `WIKI-TEX-V12-P4-T04-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p4-t04-source-extension-compression-obstruction-smuggling-audit.md`
 - `WIKI-TEX-V12-P4-T05-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-REFUTER-STRESS` `wiki/tex/tex-v12-p4-t05-source-extension-compression-obstruction-refuter-stress.md`

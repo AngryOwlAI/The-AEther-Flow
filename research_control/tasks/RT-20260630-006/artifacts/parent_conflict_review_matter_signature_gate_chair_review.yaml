@@ -1,0 +1,24 @@
+artifact_id: "parent_conflict_review_matter_signature_gate_chair_review"
+artifact_type: "parent_conflict_review"
+task_id: "RT-20260630-006"
+job_id: "AJ-RT-20260630-006-001"
+created_at: "2026-06-30T03:14:05Z"
+child_outputs:
+  - path: "research_control/tasks/RT-20260630-006/artifacts/child_phys_math_matter_signature_gate_chair_review.yaml"
+    perspective: "physicist_mathematician"
+    verdict: "accept_scoped_source_extension_evidence_precondition_only"
+  - path: "research_control/tasks/RT-20260630-006/artifacts/child_phys_phil_matter_signature_gate_chair_review.yaml"
+    perspective: "physicist_philosopher"
+    verdict: "accept_scoped_source_extension_evidence_precondition_only"
+conflicts:
+  - conflict_id: "C-001"
+    status: "resolved"
+    issue: "Whether acceptance could be misread as adoption of the candidate objects."
+    resolution: "Use exact evidence/precondition wording and explicitly block adoption of MatSrcDiscLaw_v1, SemMatter_src, MatterSignatureDisc_src^cand, and SemMatter_src^sig-cand."
+  - conflict_id: "C-002"
+    status: "resolved"
+    issue: "Whether Distance-to-GR should record progress despite no matter-coupling derivation."
+    resolution: "Record a ledger update only as added scoped matter-signature evidence/precondition while leaving legacy matter_coupling status accepted_as_scoped_evidence_precondition and downstream blocks intact."
+unresolved_conflicts: []
+parent_decision: "accepted_scoped_source_extension_matter_signature_evidence_precondition_only"
+claim_boundary_preserved: true
