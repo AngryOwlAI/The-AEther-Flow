@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-043` and `handoff-0395`.
+`RT-20260630-044` and `handoff-0396`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-043` |
-| Latest handoff ID | `handoff-0395` |
-| Current status | `v12_p7_t03_repair_msirrel_quotient_repair_smuggling_audit_source_pure_with_rr_guard_pending_stress_no_adoption` |
-| Current route family | v12 p7 t03 repair msirrel quotient repair audit route to stress |
+| Active task ID | `RT-20260630-044` |
+| Latest handoff ID | `handoff-0396` |
+| Current status | `v12_p7_t03_repair_msirrel_quotient_repair_refuter_scoped_obstruction_rr_retention_no_adoption` |
+| Current route family | v12 p7 t03 repair msirrel quotient repair stress route to selector |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_audit_only |
-| Required next authority | one refuter@0.2.0 draft/control ontology-law stress packet over MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 |
-| Next recommended action | Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for RR_E relabeling invariance finite-variation robustness certificate deletion sector-core restriction nondegeneracy and whether RR_E retention blocks irrelevance before selector adoption matter-coupling Einstein-equation benchmark or promotion routes. |
+| Current burden | `matter_coupling`; status: unchanged_stress_only |
+| Required next authority | one theoretical-continuation-selector@0.1.0 draft/control ontology-law decision packet over the RT-044 repair stress result |
+| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1, distinguishing stable-partition/precondition continuation from any source-side irrelevance-law, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-043/00_TASK.yaml`.
-- Active task objective: Complete one bounded smuggling-auditor@0.2.0 ontology-law packet by auditing MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for hidden target imports readout-response semantic smuggling proof-authority smuggling and overclaim.
-- Latest handoff path: `research_control/handoffs/handoff-0395.yaml`.
-- Latest handoff summary: RT-20260630-043 audited MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 and found no target atlas metric detector stress-energy matter-action benchmark Einstein-equation registry validator role handoff approval commit generated-derivative local-cache or file-order import as written. The audit adds an explicit RR_E guard: RR_E is source-pure only as uninterpreted source syntax and cannot be used as detector response matter semantics stress-energy semantics matter action or coupling-law data. The repair remains finite/local proposal-only source-side candidate material pending Refuter stress.
-- Current route family: v12 p7 t03 repair msirrel quotient repair audit route to stress.
-- Next recommended action: Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for RR_E relabeling invariance finite-variation robustness certificate deletion sector-core restriction nondegeneracy and whether RR_E retention blocks irrelevance before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+- Active task path: `research_control/tasks/RT-20260630-044/00_TASK.yaml`.
+- Active task objective: Complete one bounded refuter@0.2.0 ontology-law packet by stress-testing MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for RR_E relabeling invariance finite-variation robustness certificate deletion sector-core restriction nondegeneracy and whether RR_E retention blocks irrelevance.
+- Latest handoff path: `research_control/handoffs/handoff-0396.yaml`.
+- Latest handoff summary: RT-20260630-044 stress-tested MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1. The repair passes as a deterministic finite/local stable partition under explicit RR_E source-syntax and core-retention guards, but RR_E retention blocks the object from serving as a readout/response irrelevance law. The result is a scoped obstruction to the irrelevance-law/adoption reading, with same-milestone continuation open through selector routing.
+- Current route family: v12 p7 t03 repair msirrel quotient repair stress route to selector.
+- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1, distinguishing stable-partition/precondition continuation from any source-side irrelevance-law, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for RR_E relabeling invariance finite-variation robustness certificate deletion sector-core restriction nondegeneracy and whether RR_E retention blocks irrelevance before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1, distinguishing stable-partition/precondition continuation from any source-side irrelevance-law, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-043`;
-- latest handoff: `handoff-0395`;
-- current status: `v12_p7_t03_repair_msirrel_quotient_repair_smuggling_audit_source_pure_with_rr_guard_pending_stress_no_adoption`;
+- active task: `RT-20260630-044`;
+- latest handoff: `handoff-0396`;
+- current status: `v12_p7_t03_repair_msirrel_quotient_repair_refuter_scoped_obstruction_rr_retention_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -153,15 +153,15 @@ Latest tracked state records:
 - latest handoff validation `no_gate_chair_authority`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
 - latest handoff validation `physics_promotion_authorized`: false;
-- latest handoff validation `smuggling_auditor_completed`: PASS;
+- latest handoff validation `refuter_completed`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0395.yaml`
-- `research_control/tasks/RT-20260630-043/00_TASK.yaml`
+- `research_control/handoffs/handoff-0396.yaml`
+- `research_control/tasks/RT-20260630-044/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0395*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0396*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

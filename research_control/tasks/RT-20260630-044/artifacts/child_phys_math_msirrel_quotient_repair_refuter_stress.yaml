@@ -1,0 +1,21 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260630-044"
+stressed_object:
+  name: "MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1"
+  source_path: "research_control/tasks/RT-20260630-042/artifacts/matter_semantics_irrelevance_quotient_repair_candidate_v1.tex"
+formal_checks:
+  rr_relabeling_invariance: "conditional_pass_under_explicit_equiv_src_only"
+  finite_variation_behavior: "deterministic_partition_change_or_bottom"
+  certificate_deletion: "noncore_stable_core_deletion_bottom"
+  sector_restriction: "commutes_only_when_retained_core_survives"
+  nondegeneracy: "passes_pressure_pair_by_retaining_RR_E"
+  irrelevance_target: "fails_because_RR_E_is_signature_coordinate"
+math_verdict: "scoped_obstruction_to_irrelevance_law_adoption"
+new_mathematical_payload:
+  - "RR_E retention lemma: if RR_E(C1) differs from RR_E(C2), the repaired signature separates the records."
+  - "Stable-partition survival: the repair defines a deterministic finite/local partition or bottom map under named guards."
+  - "Irrelevance obstruction: any proposed law requiring RR_E-irrelevance is contradicted by the repair's defining signature."
+claim_boundary_preserved: true
+blocking_conflicts: []

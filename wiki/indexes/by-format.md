@@ -511,6 +511,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-CANDIDATE` `research_control/tasks/RT-20260630-038/artifacts/matter_semantics_irrelevance_quotient_candidate_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REFUTER-STRESS` `research_control/tasks/RT-20260630-040/artifacts/matter_semantics_irrelevance_quotient_refuter_stress_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-CANDIDATE` `research_control/tasks/RT-20260630-042/artifacts/matter_semantics_irrelevance_quotient_repair_candidate_v1.tex`
+- `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-REFUTER-STRESS` `research_control/tasks/RT-20260630-044/artifacts/matter_semantics_irrelevance_quotient_repair_refuter_stress_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-043/artifacts/matter_semantics_irrelevance_quotient_repair_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-039/artifacts/matter_semantics_irrelevance_quotient_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `research_control/tasks/RT-20260630-037/artifacts/matter_semantics_readout_response_irrelevance_target_v1.tex`
@@ -1015,6 +1016,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-CANDIDATE` `wiki/tex/tex-v12-p7-t03-repair-msirrel-quotient-candidate.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REFUTER-STRESS` `wiki/tex/tex-v12-p7-t03-repair-msirrel-quotient-refuter-stress.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-CANDIDATE` `wiki/tex/tex-v12-p7-t03-repair-msirrel-quotient-repair-candidate.md`
+- `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-REFUTER-STRESS` `wiki/tex/tex-v12-p7-t03-repair-msirrel-quotient-repair-refuter-stress.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p7-t03-repair-msirrel-quotient-repair-smuggling-audit.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p7-t03-repair-msirrel-quotient-smuggling-audit.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `wiki/tex/tex-v12-p7-t03-repair-msirrel-target.md`

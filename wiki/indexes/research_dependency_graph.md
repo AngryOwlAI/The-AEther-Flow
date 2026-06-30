@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T18:14:54Z`
-- Source fingerprint: `3dd36bf1ead4e840bbba50e43e5c1f3bb63ef717f26249942674ec4e06e35ebb`
-- Nodes: `8636`
-- Edges: `36587`
+- Generated from tracked state as of: `2026-06-30T18:35:38Z`
+- Source fingerprint: `1892d3f89f56f3b3661ebf03f262f625345e53337459fd2dffa0e4c1a27fd774`
+- Nodes: `8659`
+- Edges: `36694`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 531 |
+| `completion_yaml` | 532 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 395 |
+| `handoff_yaml` | 396 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 531 |
+| `agent_job` | `support_only` | 532 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4333 |
+| `artifact` | `support_only` | 4347 |
 | `blocked_burden` | `blocked` | 991 |
-| `claim_boundary` | `support_only` | 532 |
-| `draft_control_candidate` | `draft_control` | 406 |
+| `claim_boundary` | `support_only` | 533 |
+| `draft_control_candidate` | `draft_control` | 409 |
 | `draft_control_candidate` | `proposal_only` | 61 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 87 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 395 |
+| `handoff` | `support_only` | 396 |
 | `human_gated_object` | `human_gated` | 239 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 59 |
+| `obstruction` | `blocked` | 60 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 228 |
+| `source_ontology_object` | `support_only` | 229 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 480 |
+| `task` | `support_only` | 481 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-043`
-- Latest handoff: `handoff-0395`
-- Handoff path: `research_control/handoffs/handoff-0395.yaml`
-- Next action: Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for RR_E relabeling invariance finite-variation robustness certificate deletion sector-core restriction nondegeneracy and whether RR_E retention blocks irrelevance before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+- Active task: `RT-20260630-044`
+- Latest handoff: `handoff-0396`
+- Handoff path: `research_control/handoffs/handoff-0396.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet to choose the post-stress route for MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1, distinguishing stable-partition/precondition continuation from any source-side irrelevance-law, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
