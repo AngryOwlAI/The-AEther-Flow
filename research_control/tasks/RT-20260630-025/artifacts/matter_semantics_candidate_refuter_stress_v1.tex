@@ -1,0 +1,345 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\SCLC}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSCand}{\mathrm{MatterSemanticsCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\FailureObs}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\BottomS}{\bot_S}
+\newcommand{\BottomR}{\bot_R}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Matter-Semantics Candidate Refuter Stress v1}
+\author{Refuter Packet RT-20260630-025}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260630-025}. It
+implements P5-T05 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md} by
+stress-testing the audited candidate
+\[
+  \MSCand(E;\Bcur)
+  = (S_E^{\mathrm{msc}},P_E^{\mathrm{msc}},R_E^{\mathrm{msc}},
+     Q_E^{\mathrm{msc}},\Gamma_E^{\mathrm{msc}}).
+\]
+The candidate was constructed by \texttt{RT-20260630-023} and audited by
+\texttt{RT-20260630-024}.
+
+The stress verdict is:
+\begin{verbatim}
+stress_result.result_type: "bridge_facing_candidate_path"
+stress_verdict:
+  "matter_semantics_candidate_stress_survived_pending_selector"
+source_extension_category: "source_extension_refuter_stress"
+candidate_status: "draft/control support-only bridge-facing candidate"
+tag_removal_positive_semantics_preserved: false
+label_transport_required_for_positive_semantics: true
+source_law_adopted: false
+MCPA_cand_v1_E_adopted: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This packet does not edit canonical ontology, adopt a source law, adopt
+\(\MCPA(E)\), adopt source-extension data beyond the exact scoped gate result,
+adopt \(\MetricData(E)\), change the scope of \(\geff\), adopt a coupling law,
+derive or adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote benchmark status, issue a Gate Chair
+verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Stress Surface}
+
+The audited candidate obtains positive matter-semantics candidate records only
+from source matter-signature labels, finite/local source supports,
+compatibility certificates, non-import bundles, source probe tokens, source
+readout syntax, source response tokens, and fail-closed guards. The Refuter
+stress question is whether this remains meaningful when the candidate is
+subjected to source relabeling, finite variation, tag removal, sector deletion,
+degeneracy, \(\geff\)-scope pressure, explicit-label collapse, new-primitive
+pressure, and support-only proof-authority erasure.
+
+The result is conditional survival. The candidate survives as a
+bridge-facing draft/control path only when the source relabeling transports the
+source labels, supports, compatibility certificates, non-import bundles, probe
+tokens, and evidence paths while preserving certificate pass/fail values. If
+those source records are erased, collapsed into explicit names, or replaced by
+target or process authority, positive matter-like distinctions are not
+preserved; the branch fails closed to \(\BottomS\), \(\BottomR\),
+\(\FailureObs\), or \texttt{source\_undetermined}.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.29\linewidth}p{0.59\linewidth}}
+\toprule
+Stress & Result \\
+\midrule
+Source relabeling & Survives only for source relabelings that transport
+labels, supports, certificates, non-import bundles, probe tokens, and evidence
+paths while preserving certificate pass/fail values. \\
+Tag removal & Does not preserve positive matter-like distinctions. Removing
+\(\sigma\)-labels removes the positive sector-slot evidence and routes to
+\(\BottomS\), \(\BottomR\), or \texttt{source\_undetermined}. \\
+Sector deletion & Deleting a finite sector support or compatibility
+certificate destroys that local positive record and fails closed; deletion does
+not become an obstruction theorem or adopted law. \\
+Degeneracy & Distinct sector slots with indistinguishable transported source
+records remain degenerate. The candidate does not split them without a
+source-side discriminator supplied by later authority. \\
+Finite variation & Stable or source-repair-needed branches are allowed only
+when source-local relabeling or certificate repair supplies the needed data;
+target, detector, stress-energy, matter-action, benchmark, validator, or
+process authority triggers fail-closed behavior. \\
+\(\geff\) scope pressure & Blocked. No target metric, Lorentzian signature,
+proper-time normalization, unscoped \(\geff\), or \(\MetricData(E)\) is used. \\
+Explicit-label collapse & Blocked. Labels without transported source support
+and certificates are explicit tags rather than source-side semantics. \\
+New-primitive pressure & Not resolved. The stress result does not require this
+packet to adopt a new primitive, but it exposes that any canonical source-side
+law, discriminator, or primitive remains human-gated and selector-mediated. \\
+Support-only reproducibility & Preserved only as finite/local support data with
+\(\ProofAuthFalse\); erasing proof-authority surfaces leaves no proof claim. \\
+Adoption laundering & Blocked. Stress survival is not source-law adoption,
+\(\MCPA(E)\) adoption, source-extension data adoption beyond the exact scoped
+gate result, coupling-law adoption, or matter coupling. \\
+Downstream promotion & Blocked. No \(\MetricData(E)\), \(\geff\) scope change,
+Einstein equations, benchmark promotion, or completed derivation follows. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[Relabeling stress survival with declared transport]
+Let \(\rho:E\to E'\) be a source relabeling that transports source supports,
+source matter-signature labels, compatibility certificates, non-import
+bundles, probe tokens, and evidence paths by fieldwise relabeling. If \(\rho\)
+preserves compatibility-certificate and non-import-bundle pass/fail values,
+then every non-bottom \(\MSCand(E;\Bcur)\) record transports to a non-bottom
+\(\MSCand(E';\rho\Bcur)\) record.
+\end{lemma}
+
+\begin{proof}
+The membership, readout, and response-token rules inspect only transported
+source labels, finite/local source supports, compatibility-certificate values,
+non-import-certificate values, source probe-token fields, and evidence paths.
+By hypothesis all inspected fields and pass/fail values are preserved. The
+transported record therefore satisfies the same source-only predicates in
+\(E'\). This is a conditional source-side transport statement, not target
+covariance, physical equivalence, matter coupling, or benchmark evidence.
+\end{proof}
+
+\begin{lemma}[Tag-removal and sector-deletion fail-closed stress]
+If source matter-signature labels, sector supports, compatibility
+certificates, or non-import bundles required by a positive
+\(S_E^{\mathrm{msc}}\) record are removed, the candidate no longer determines
+positive matter-like distinctions for the affected record. The branch returns
+\(\BottomS\), \(\BottomR\), \(\FailureObs\), or
+\texttt{source\_undetermined}; it does not prove an adopted source law or a
+matter-coupling result.
+\end{lemma}
+
+\begin{proof}
+Positive sector membership is defined by the presence of a source
+matter-signature label, finite/local source support, passing compatibility
+certificate, and passing non-import bundle. Removing any required member of
+that support family falsifies the local positive-membership premise. The
+candidate's declared finite-variation behavior therefore routes the affected
+record to bottom, failure obstruction, or undetermined source status. A missing
+source support is not target matter semantics, not stress energy, not a
+detector result, and not a coupling law.
+\end{proof}
+
+\begin{lemma}[Degeneracy is not repaired by target semantics]
+If two candidate records become indistinguishable after admissible source
+relabeling or tag erasure, \(\MSCand(E;\Bcur)\) does not split them by using
+target matter names, detector protocols, stress-energy tensors, matter-action
+variables, benchmark behavior, or \(\geff\)-scope expansion.
+\end{lemma}
+
+\begin{proof}
+The candidate excludes target matter semantics, detector semantics,
+stress-energy semantics and tensors, matter actions, target metric structure,
+benchmark behavior, and process authority from its mathematical premises. A
+post-erasure degeneracy therefore remains a source-side underdetermination
+branch unless a later lawful source-side discriminator is supplied. The
+candidate's failure to split the records is a controlled limitation, not a
+license to import target physics.
+\end{proof}
+
+\begin{lemma}[Explicit-label collapse is blocked]
+A version of the candidate that preserves labels while erasing the source
+support, compatibility certificate, non-import bundle, probe token, or evidence
+path basis collapses into explicit labels. Such labels do not carry
+source-side matter semantics in this packet.
+\end{lemma}
+
+\begin{proof}
+In the constructed candidate, labels are admissible only as fields of a source
+record with finite/local support and passing certificates. If the supporting
+source data are erased while the label name remains, the label is no longer
+generated by the candidate's source-side rule. It is an explicit tag. The
+candidate's fail-closed behavior blocks treating explicit tags as source-law
+adoption, \(\MCPA(E)\) adoption, or matter coupling.
+\end{proof}
+
+\begin{lemma}[Target and process substitution stress is blocked]
+Substituting target \(\geff\), target atlas data, Lorentzian signature,
+proper-time normalization, \(\MetricData(E)\), detector semantics,
+stress-energy semantics, a stress-energy tensor, matter-action variables,
+benchmark behavior, generated derivatives, registries, validators, roles,
+handoffs, approvals, commits, support-only checkers, file order, or local
+caches for the candidate's source data violates the non-import basis and does
+not prove the candidate.
+\end{lemma}
+
+\begin{proof}
+The admissible data of \(\MSCand(E;\Bcur)\) are source records and their
+certificates. The listed substitutions are target-physics or process surfaces,
+not source-side inputs. The P5-T03 construction and P5-T04 audit both route
+such substitutions to fail-closed behavior. Consequently no \(\MetricData(E)\),
+no unscoped or expanded \(\geff\), no coupling law, no matter coupling, and no
+Einstein equation follows from these substitutions.
+\end{proof}
+
+\begin{proposition}[Stress survival is bridge-facing only]
+\(\MSCand(E;\Bcur)\) survives P5-T05 stress as a
+\texttt{bridge\_facing\_candidate\_path} only. The survival is conditional on
+source-label/support/certificate transport and fail-closed behavior. It
+licenses P5-T06 selector review, not adoption, matter coupling, or downstream
+GR promotion.
+\end{proposition}
+
+\begin{proof}
+The stress lemmas supply new local mathematical payload: conditional
+relabeling survival, tag-removal and sector-deletion fail-closed behavior,
+degeneracy preservation without target substitution, explicit-label-collapse
+blocking, and target/process substitution blocking. These results are stronger
+than an audit pass but weaker than source-law adoption. They do not contain a
+Gate Chair verdict, canonical ontology edit, adoption rule, \(\MetricData(E)\),
+\(\geff\) scope expansion, coupling law, matter-coupling derivation,
+Einstein-equation derivation, benchmark promotion, or completed derivation.
+\end{proof}
+
+\section{Freeze Criteria Status}
+
+The route is not frozen by this packet. Freeze criteria were evaluated because
+the Refuter role requires route-loop control for repeated burden paths. The
+candidate supplies new stress payload and routes to a different next role, the
+P5-T06 theoretical-continuation selector. Repeating stress without selector
+classification, treating conditional survival as adoption, or attempting to
+use the stress result as downstream GR promotion should trigger freeze review
+or human-gated authority.
+
+\section{Distance-To-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Scoped source-extension context retained as context only. \\
+M\_src & Scoped source-only context retained; no adoption or scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & Candidate stress survives as bridge-facing draft/control path pending selector; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Local candidate stress survived stated source-transport, repair, and fail-closed branches; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict; any adoption remains human-gated. \\
+Current route freeze or hard-fail status & Not frozen; P5-T06 selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+\begin{quote}
+The audited \(\MSCand(E;\Bcur)\) candidate survives P5-T05 Refuter stress as a
+bridge-facing draft/control candidate path pending P5-T06 selector. It
+survives only under declared source-label/support/certificate transport and
+source-local repair or fail-closed behavior. Total tag removal, source-support
+deletion, degeneracy, target substitution, explicit-label collapse, or process
+authority erasure does not preserve positive matter semantics and does not
+create adoption or matter coupling.
+\end{quote}
+
+\section{Non-Conclusions}
+
+This packet does not allow:
+\begin{itemize}[leftmargin=*]
+\item canonical ontology edit, canonical-ontology candidate status, or source-law adoption;
+\item \(\MCPA(E)\) adoption;
+\item source-extension data adoption beyond the exact scoped gate result;
+\item \(\MetricData(E)\) adoption;
+\item \(\geff\) adoption, unscoped \(\geff\), or \(\geff\) scope expansion;
+\item coupling-law adoption, matter-coupling derivation, or matter-coupling adoption;
+\item stress-energy semantics, stress-energy tensor, matter action, detector semantics, or empirical calibration;
+\item Einstein equations;
+\item exact-GR benchmark promotion or benchmark Gate Chair closure;
+\item completed derivation;
+\item future source-extension impossibility or global theory rejection;
+\item generated derivatives, validators, registries, roles, handoffs, approvals, commits, local caches, semantic extracts, support checkers, or file order as proof authority.
+\end{itemize}
+
+\section{Next Route}
+
+The next bounded packet is P5-T06
+\texttt{theoretical-continuation-selector@0.1.0}. The selector must classify
+the post-stress route for the bridge-facing draft/control matter-semantics
+candidate before any Gate Chair evidence-status review, repair packet,
+source-extension minimization revisit, formalization support packet, scoped
+obstruction or freeze, next matter-coupling precondition packet, or future
+coupling-law target formalization.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+Candidate Constructor Packet RT-20260630-023. (2026). \emph{Matter-semantics
+candidate v1} [Research-control TeX artifact]. The AEther-Flow Interpretation
+of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260630-024. (2026). \emph{Matter-semantics
+candidate smuggling audit v1} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+\end{document}

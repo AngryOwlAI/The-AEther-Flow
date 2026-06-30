@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T11:04:35Z`
-- Source fingerprint: `fd8a186c8de9460ba6e440f6554c6e9aa77bec78a527f245a83f19d871c16060`
-- Nodes: `8147`
-- Edges: `34574`
+- Generated from tracked state as of: `2026-06-30T11:39:16Z`
+- Source fingerprint: `bbc746258b8e59ede055070454a6ef8991a97bb35c5361a6a1784aa8d6a0edd8`
+- Nodes: `8183`
+- Edges: `34698`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 512 |
+| `completion_yaml` | 513 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 376 |
+| `handoff_yaml` | 377 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 512 |
+| `agent_job` | `support_only` | 513 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4054 |
-| `blocked_burden` | `blocked` | 909 |
-| `claim_boundary` | `support_only` | 513 |
-| `draft_control_candidate` | `draft_control` | 380 |
+| `artifact` | `support_only` | 4068 |
+| `blocked_burden` | `blocked` | 921 |
+| `claim_boundary` | `support_only` | 514 |
+| `draft_control_candidate` | `draft_control` | 384 |
 | `draft_control_candidate` | `proposal_only` | 57 |
 | `draft_control_candidate` | `science_draft` | 30 |
-| `frozen_negative` | `frozen_negative` | 81 |
+| `frozen_negative` | `frozen_negative` | 82 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 376 |
+| `handoff` | `support_only` | 377 |
 | `human_gated_object` | `human_gated` | 234 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 219 |
+| `source_ontology_object` | `support_only` | 220 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 461 |
+| `task` | `support_only` | 462 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-024`
-- Latest handoff: `handoff-0376`
-- Handoff path: `research_control/handoffs/handoff-0376.yaml`
-- Next action: Run one bounded refuter@0.2.0 P5-T05 packet to stress-test MatterSemanticsCandidate^cand_v1(E;B_current) under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, g_eff scope pressure, explicit-label collapse, new-primitive pressure, and support-only proof-authority boundaries. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-025`
+- Latest handoff: `handoff-0377`
+- Handoff path: `research_control/handoffs/handoff-0377.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 P5-T06 packet to classify the post-stress route for MatterSemanticsCandidate^cand_v1(E;B_current). Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
