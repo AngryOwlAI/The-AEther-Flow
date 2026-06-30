@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-034` and `handoff-0386`.
+`RT-20260630-035` and `handoff-0387`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-034` |
-| Latest handoff ID | `handoff-0386` |
-| Current status | `v12_p7_t03_repair_discriminator_target_formalized_no_adoption_no_promotion` |
-| Current route family | v12 p7 t03 repair completed routes to discriminator construction or obstruction |
+| Active task ID | `RT-20260630-035` |
+| Latest handoff ID | `handoff-0387` |
+| Current status | `v12_p7_t03_repair_discriminator_nonuniqueness_obstruction_no_adoption_no_promotion` |
+| Current route family | v12 p7 t03 repair obstruction routes to selector audit or stress |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_repair_target_formalized |
-| Required next authority | one construction-or-obstruction packet for source-side matter-semantics discriminator or uniqueness theorem only |
-| Next recommended action | Run one bounded candidate-constructor or ontology-law packet to attempt a source-side matter-semantics discriminator or uniqueness theorem under the new draft/control target, or return a precise obstruction, before any coupling-law matter-coupling stress-energy detector-semantics Einstein-equation benchmark or promotion route. |
+| Current burden | `matter_coupling`; status: unchanged_obstruction_recorded |
+| Required next authority | one selector, smuggling-audit, or refuter packet over the MSDISC-P7REPAIR-001 obstruction only |
+| Next recommended action | Run one bounded selector, smuggling-audit, or refuter packet over MSDISC-P7REPAIR-001 before any coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-034/00_TASK.yaml`.
-- Active task objective: Complete one bounded repair packet after P7-T03 by formalizing the missing source-side matter-semantics discriminator or uniqueness obligation as draft/control target material only.
-- Latest handoff path: `research_control/handoffs/handoff-0386.yaml`.
-- Latest handoff summary: RT-20260630-034 completed one bounded P7-T03 repair packet by formalizing a draft/control source-side matter-semantics discriminator target and uniqueness obligation. The packet creates no discriminator construction, no uniqueness proof, no source-law adoption, no MetricData(E), no g_eff scope change, no coupling law, no matter coupling, no stress-energy semantics, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
-- Current route family: v12 p7 t03 repair completed routes to discriminator construction or obstruction.
-- Next recommended action: Run one bounded candidate-constructor or ontology-law packet to attempt a source-side matter-semantics discriminator or uniqueness theorem under the new draft/control target, or return a precise obstruction, before any coupling-law matter-coupling stress-energy detector-semantics Einstein-equation benchmark or promotion route.
+- Active task path: `research_control/tasks/RT-20260630-035/00_TASK.yaml`.
+- Active task objective: Attempt a source-side matter-semantics discriminator or uniqueness theorem under MSDiscTarget_v1 and MSUniqObl_v1, or produce a precise obstruction, without source-law adoption or downstream GR promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0387.yaml`.
+- Latest handoff summary: RT-20260630-035 attempted the source-side matter-semantics discriminator or uniqueness theorem required after RT-20260630-034 and recorded the precise current-basis obstruction MSDISC-P7REPAIR-001-readout-response-nonuniqueness. The packet creates no source-law adoption, no MetricData(E), no g_eff scope change, no coupling law, no matter coupling, no stress-energy semantics, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Current route family: v12 p7 t03 repair obstruction routes to selector audit or stress.
+- Next recommended action: Run one bounded selector, smuggling-audit, or refuter packet over MSDISC-P7REPAIR-001 before any coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded candidate-constructor or ontology-law packet to attempt a source-side matter-semantics discriminator or uniqueness theorem under the new draft/control target, or return a precise obstruction, before any coupling-law matter-coupling stress-energy detector-semantics Einstein-equation benchmark or promotion route.
+Run one bounded selector, smuggling-audit, or refuter packet over MSDISC-P7REPAIR-001 before any coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-034`;
-- latest handoff: `handoff-0386`;
-- current status: `v12_p7_t03_repair_discriminator_target_formalized_no_adoption_no_promotion`;
+- active task: `RT-20260630-035`;
+- latest handoff: `handoff-0387`;
+- current status: `v12_p7_t03_repair_discriminator_nonuniqueness_obstruction_no_adoption_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -153,15 +153,15 @@ Latest tracked state records:
 - latest handoff validation `no_gate_chair_authority`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
 - latest handoff validation `physics_promotion_authorized`: false;
-- latest handoff validation `target_formalization_created`: PASS;
+- latest handoff validation `precise_obstruction_recorded`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0386.yaml`
-- `research_control/tasks/RT-20260630-034/00_TASK.yaml`
+- `research_control/handoffs/handoff-0387.yaml`
+- `research_control/tasks/RT-20260630-035/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0386*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0387*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

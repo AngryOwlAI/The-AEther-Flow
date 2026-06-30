@@ -1,0 +1,229 @@
+\section*{Matter-Semantics Discriminator Nonuniqueness Obstruction v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control Candidate Constructor output for
+RT-20260630-035.  It attempts the construction-or-obstruction packet required
+by handoff-0386 after \(\mathrm{MSDiscTarget}_{v1}\) and
+\(\mathrm{MSUniqObl}_{v1}\) were formalized.  The result is a precise
+obstruction, not an adopted law.  It does not edit canonical ontology, create
+a canonical-ontology candidate, adopt a source law, adopt source-extension
+data, adopt \(\mathrm{MetricData}(E)\), adopt or expand
+\(g_{\mathrm{eff}}\), adopt a coupling law, derive or adopt matter coupling,
+import stress-energy semantics, construct a stress-energy tensor, import
+detector semantics, import a matter action, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, prove future source-extension impossibility, or reject the global
+theory.
+
+\paragraph{Question.}
+Does the current source basis \(B_{\mathrm{cur}}\) construct a non-bottom
+source-side discriminator
+\[
+  D_E:\mathrm{MSAdm}_{v1}(E;B_{\mathrm{cur}})
+  \rightharpoonup \mathcal L_E\cup\{\bot\}
+\]
+or prove the uniqueness obligation
+\[
+  \mathrm{MSUniqObl}_{v1}(E;B_{\mathrm{cur}})
+\]
+for admissible matter-semantics candidate records, without target imports or
+process-authority shortcuts?
+
+\section{Declared Basis}
+
+The basis for this packet is:
+\[
+  B_{\mathrm{cur}} =
+  \{\text{P5-T02 target},\ \text{P5-T03 candidate},\
+  \text{P7-T03 review},\ \text{RT-034 discriminator target},\
+  \text{current Distance-to-GR matter-coupling boundary}\}.
+\]
+The basis excludes target stress-energy tensors, stress-energy semantics,
+matter actions, empirical detector protocols, apparatus calibration, target
+metric structure, proper-time normalization, benchmark behavior,
+Einstein-equation premises, generated derivatives, validators, registry rows,
+role records, handoffs, approvals, commits, local caches, and file ordering as
+mathematical premises.
+
+\section{Admissible Pair Pressure Model}
+
+\paragraph{Source support.}
+Let \(E_{\pm}\) be a finite source context with one finite source support
+\(u_0\), one source matter-signature label \(\sigma_0\), and one
+compatibility certificate \(c_0=\mathsf{source\_compatible}\).  Let
+\(\Gamma_0\) be a certificate bundle for
+\[
+  \mathrm{NoDetectorImport}_{v1}(E_{\pm}),\quad
+  \mathrm{NoStressEnergyImport}_{v1}(E_{\pm}),\quad
+  \mathrm{NoMatterActionImport}_{v1}(E_{\pm}),\quad
+  \mathrm{NoTargetImport}_{v1}(E_{\pm}).
+\]
+All four certificates state that no target metric, target atlas, proper time,
+stress-energy tensor, stress-energy semantics, detector semantics, empirical
+calibration, matter action, benchmark behavior, Einstein-equation premise,
+generated derivative, validator result, registry metadata, role status,
+handoff status, approval status, commit status, local cache state, or file
+order is used as a premise.
+
+\paragraph{Two candidate records.}
+Define two admissible candidate records
+\[
+  C_+=(S_E,P_E,R_E^+,Q_E^+,\Gamma_0),
+  \qquad
+  C_-=(S_E,P_E,R_E^-,Q_E^-,\Gamma_0)
+\]
+with the same sector domain \(S_E=\{(\sigma_0,\{u_0\},c_0,\Gamma_0)\}\), the
+same probe-token family \(P_E=\{p_0\}\), and the same no-import certificate
+bundle.  The two records differ only in the source-side readout alphabet and
+response marker:
+\[
+  R_E^+(p_0)=\mathsf{source\_sector\_matched},
+  \qquad
+  R_E^-(p_0)=\mathsf{source\_repair\_needed},
+\]
+\[
+  Q_E^+=\{(s_0,p_0,\mathsf{source\_sector\_matched},
+  \mathsf{matter\_semantics\_candidate\_only},\Gamma_0)\},
+\]
+\[
+  Q_E^-=\{(s_0,p_0,\mathsf{source\_repair\_needed},
+  \mathsf{repair\_candidate\_only},\Gamma_0)\}.
+\]
+Both response markers are uninterpreted source syntax.  Neither is a physical
+detector readout, stress-energy semantics, matter-action response, coupling
+law, matter-coupling derivation, or Einstein-equation premise.
+
+\paragraph{Admissibility.}
+Both \(C_+\) and \(C_-\) satisfy the current admissibility requirements:
+source-only fields, finite/local support, passing compatibility certificate,
+and no-target-import certificates.  Therefore
+\[
+  C_+,C_-\in \mathrm{MSAdm}_{v1}(E_{\pm};B_{\mathrm{cur}}).
+\]
+
+\section{Failure Of Current-Basis Uniqueness}
+
+\paragraph{No source-equivalence proof.}
+The current basis contains no source-side theorem proving
+\[
+  C_+ \equiv_{\mathrm{MS},E_{\pm}} C_-.
+\]
+The two records have different source readout values and different response
+markers.  Treating them as equivalent would require an additional rule saying
+which readout-token differences are irrelevant for matter-semantics
+bookkeeping.  Treating one as selected would require an additional rule saying
+which source readout-token semantics is coupling-law relevant.  Neither rule
+is present in \(B_{\mathrm{cur}}\).
+
+\paragraph{No lawful non-bottom selector.}
+A non-bottom discriminator \(D_E\) that selects \(C_+\) over \(C_-\), selects
+\(C_-\) over \(C_+\), or collapses both into one non-bottom label must use one
+of the following:
+\[
+  \mathrm{MSIrrelLaw}_{v1},\quad
+  \mathrm{MSReadoutOrder}_{v1},\quad
+  \mathrm{MSResponseSemanticsLaw}_{v1},\quad
+  \mathrm{MSSemanticsQuotient}_{v1},
+\]
+or an equivalent source-side primitive.  The current ontology does not derive
+any of these primitives.  Importing stress-energy semantics, detector
+protocols, matter-action dynamics, target metric/proper-time normalization,
+benchmark behavior, or Einstein-equation premises would violate the
+RT-034 discriminator target.
+
+\paragraph{Fail-closed construction.}
+The only discriminator licensed by the current basis is the fail-closed map
+\[
+  D_E(C_+)=D_E(C_-)=\bot.
+\]
+This map satisfies no-target-import and nonuniqueness-fails-closed behavior,
+but it is not a non-bottom source-side matter-semantics discriminator and it
+does not satisfy \(\mathrm{MSUniqObl}_{v1}\).
+
+\section{Precise Obstruction}
+
+\paragraph{Obstruction identifier.}
+The packet records:
+\[
+  \mathrm{MSDISC\mbox{-}P7REPAIR\mbox{-}001\mbox{-}
+  readout\mbox{-}response\mbox{-}nonuniqueness}.
+\]
+
+\paragraph{Obstruction statement.}
+Under \(B_{\mathrm{cur}}\), there exist two admissible non-bottom
+matter-semantics candidate records \(C_+\) and \(C_-\) whose source readout
+values and response markers are not proved source-equivalent, while no
+source-only discriminator primitive in the current basis selects or quotients
+them.  Therefore the current basis does not construct a non-bottom
+\(\mathrm{MSDiscTarget}_{v1}(E;B_{\mathrm{cur}})\) and does not prove
+\(\mathrm{MSUniqObl}_{v1}(E;B_{\mathrm{cur}})\).  The result is
+\[
+  \mathrm{MatterSemanticsFailureObstruction}_{v1}
+  (E_{\pm};B_{\mathrm{cur}},
+  \mathrm{MSDISC\mbox{-}P7REPAIR\mbox{-}001}).
+\]
+
+\paragraph{No-go strength.}
+This is a current-basis obstruction.  It is not a theorem that a future
+source-side discriminator is impossible.  Same-milestone continuation remains
+open as
+\[
+  \mathsf{blocked\_adoption\_open\_continuation}.
+\]
+Allowed wording: current ontology does not derive the source-side
+matter-semantics discriminator or uniqueness theorem.  Disallowed wording:
+therefore such a discriminator is impossible, therefore matter coupling is
+impossible, or therefore the global theory is rejected.
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}
+  \item Source ontology primitives: unchanged; no canonical ontology edit.
+  \item Source equivalence EqSrc: unchanged; no general EqSrc theorem.
+  \item RetainH and GenH: unchanged.
+  \item ObsLoc\(_{lc}\): unchanged.
+  \item Resp\(_{lc}\): scoped source-extension data retained as context only.
+  \item \(M_{\mathrm{src}}\): scoped source-only context retained; no scope
+    expansion.
+  \item \(\mathrm{MetricData}(E)\): not adopted.
+  \item \(g_{\mathrm{eff}}\): scoped context retained; no adoption or scope
+    expansion.
+  \item Matter coupling: discriminator nonuniqueness obstruction recorded; no
+    matter coupling.
+  \item Einstein equations: blocked; no field-equation derivation.
+  \item Finite-variation robustness: unchanged; no global theorem.
+  \item Benchmark promotion: blocked; no benchmark promotion.
+  \item Gate Chair status: no verdict requested or issued.
+  \item Current route freeze or hard-fail status: not frozen; repair selector,
+    smuggling audit, or scoped no-go route remains open.
+\end{itemize}
+
+\section{Next Route}
+
+The next lawful bounded packet is a selector, smuggling-audit, or refuter
+route over this obstruction.  A selector may choose between:
+\begin{enumerate}
+  \item formalizing a source-side readout-irrelevance law target;
+  \item auditing this obstruction for hidden target imports;
+  \item stress-testing the nonuniqueness pressure model;
+  \item routing a scoped no-go question; or
+  \item declaring a human-gated ontology-change requirement if adoption of a
+    new primitive is requested.
+\end{enumerate}
+No next route may proceed to coupling-law adoption, matter-coupling
+derivation, stress-energy semantics, detector semantics, matter-action
+semantics, Einstein equations, benchmark promotion, or completed derivation.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+discriminator target v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+candidate v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Source-side
+matter-semantics target formalization v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{P7-T03 external
+red-team review frontier inventory pilot v1} [Internal control artifact].
