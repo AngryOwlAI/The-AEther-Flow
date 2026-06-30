@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-052` and `handoff-0404`.
+`RT-20260630-053` and `handoff-0405`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-052` |
-| Latest handoff ID | `handoff-0404` |
-| Current status | `v12_p7_t03_ms_stable_matter_semantics_bridge_candidate_constructed_pending_audit_no_adoption` |
-| Current route family | ontology_law_research_packet_stable_matter_semantics_bridge_candidate_or_obstruction |
+| Active task ID | `RT-20260630-053` |
+| Latest handoff ID | `handoff-0405` |
+| Current status | `v12_p7_t03_ms_stable_bridge_audit_pass_pending_stress_no_adoption` |
+| Current route family | v12 p7 t03 ms stable bridge audit pass pending stress no promotion |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | Run one bounded smuggling-auditor@0.2.0 packet to audit MSStableMatterSemanticsBridge_v1(E;B_current) for target import, RR_E collapse, evidence-as-adoption overread, matter-semantics adoption overread, detector/stress-energy/matter-action smuggling, process-authority laundering, coupling-law adoption, matter-coupling derivation, Einstein-equation premise, benchmark promotion, or completed-derivation overread before stress, selector, Gate Chair, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion work. |
-| Next recommended action | Run one bounded smuggling-auditor@0.2.0 packet to audit MSStableMatterSemanticsBridge_v1(E;B_current) for target import, RR_E collapse, evidence-as-adoption overread, matter-semantics adoption overread, detector/stress-energy/matter-action smuggling, process-authority laundering, coupling-law adoption, matter-coupling derivation, Einstein-equation premise, benchmark promotion, or completed-derivation overread before stress, selector, Gate Chair, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion work. |
+| Required next authority | Refuter stress of the audited MSStableMatterSemanticsBridge_v1 candidate only |
+| Next recommended action | Run one bounded refuter@0.2.0 packet to stress-test MSStableMatterSemanticsBridge_v1(E;B_current) under source relabeling, finite variation, certificate deletion, RR_E pressure-pair collapse, target-grammar-name pressure, stable-partition deletion, cell degeneracy, fail-closed behavior, matter-semantics adoption pressure, coupling-law pressure, g_eff scope pressure, support-only proof-authority pressure, and process-authority laundering pressure. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond the exact RT-050 scoped result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-052/00_TASK.yaml`.
-- Active task objective: Execute one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge using MSStablePartitionPrecondition_v1 only as scoped stable-precondition evidence/precondition.
-- Latest handoff path: `research_control/handoffs/handoff-0404.yaml`.
-- Latest handoff summary: RT-20260630-052 completed one bounded Candidate Constructor packet after RT-051 selected the MSStableMatterSemanticsBridge_v1 route. It constructed MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge candidate, using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition. The candidate preserves RR_E separation and fail-closed no-target/no-detector/no-stress-energy/no-action certificates. It does not adopt source law, source-extension data beyond RT-050 scoped result, MetricData(E), g_eff, coupling law, matter semantics, detector semantics, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
-- Current route family: ontology_law_research_packet_stable_matter_semantics_bridge_candidate_or_obstruction.
-- Next recommended action: Run one bounded smuggling-auditor@0.2.0 packet to audit MSStableMatterSemanticsBridge_v1(E;B_current) for target import, RR_E collapse, evidence-as-adoption overread, matter-semantics adoption overread, detector/stress-energy/matter-action smuggling, process-authority laundering, coupling-law adoption, matter-coupling derivation, Einstein-equation premise, benchmark promotion, or completed-derivation overread before stress, selector, Gate Chair, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion work.
+- Active task path: `research_control/tasks/RT-20260630-053/00_TASK.yaml`.
+- Active task objective: Execute one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit MSStableMatterSemanticsBridge_v1(E;B_current) for hidden target import, RR_E collapse, evidence-as-adoption overread, matter-semantics adoption overread, detector/stress-energy/matter-action smuggling, process-authority laundering, coupling-law adoption, matter-coupling derivation, Einstein-equation premise, benchmark promotion, and completed-derivation overread.
+- Latest handoff path: `research_control/handoffs/handoff-0405.yaml`.
+- Latest handoff summary: RT-20260630-053 completed one bounded Smuggling Auditor packet and found MSStableMatterSemanticsBridge_v1(E;B_current) source-pure as written pending Refuter stress. The audit detected no hidden target metric or atlas import, detector semantics, stress-energy tensor, stress-energy semantics, matter action, Einstein-equation premise, benchmark behavior, RR_E collapse, evidence-as-adoption laundering, source-law adoption laundering, matter-semantics adoption overread, coupling-law adoption, matter-coupling derivation, support-only proof-authority overread, or process-authority laundering. P5-T02 MatterSemanticsTarget_v1 remains source-side target grammar only and is not adopted matter semantics.
+- Current route family: v12 p7 t03 ms stable bridge audit pass pending stress no promotion.
+- Next recommended action: Run one bounded refuter@0.2.0 packet to stress-test MSStableMatterSemanticsBridge_v1(E;B_current) under source relabeling, finite variation, certificate deletion, RR_E pressure-pair collapse, target-grammar-name pressure, stable-partition deletion, cell degeneracy, fail-closed behavior, matter-semantics adoption pressure, coupling-law pressure, g_eff scope pressure, support-only proof-authority pressure, and process-authority laundering pressure. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond the exact RT-050 scoped result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded smuggling-auditor@0.2.0 packet to audit MSStableMatterSemanticsBridge_v1(E;B_current) for target import, RR_E collapse, evidence-as-adoption overread, matter-semantics adoption overread, detector/stress-energy/matter-action smuggling, process-authority laundering, coupling-law adoption, matter-coupling derivation, Einstein-equation premise, benchmark promotion, or completed-derivation overread before stress, selector, Gate Chair, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion work.
+Run one bounded refuter@0.2.0 packet to stress-test MSStableMatterSemanticsBridge_v1(E;B_current) under source relabeling, finite variation, certificate deletion, RR_E pressure-pair collapse, target-grammar-name pressure, stable-partition deletion, cell degeneracy, fail-closed behavior, matter-semantics adoption pressure, coupling-law pressure, g_eff scope pressure, support-only proof-authority pressure, and process-authority laundering pressure. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond the exact RT-050 scoped result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,24 +143,27 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-052`;
-- latest handoff: `handoff-0404`;
-- current status: `v12_p7_t03_ms_stable_matter_semantics_bridge_candidate_constructed_pending_audit_no_adoption`;
+- active task: `RT-20260630-053`;
+- latest handoff: `handoff-0405`;
+- current status: `v12_p7_t03_ms_stable_bridge_audit_pass_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `candidate_constructed`: PASS;
-- latest handoff validation `claim_boundaries_preserved`: PASS;
-- latest handoff validation `decisive_candidate_constructor_result`: PASS;
-- latest handoff validation `next_smuggling_auditor_required`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0404.yaml`
-- `research_control/tasks/RT-20260630-052/00_TASK.yaml`
+- `research_control/handoffs/handoff-0405.yaml`
+- `research_control/tasks/RT-20260630-053/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -175,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0404*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0405*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
