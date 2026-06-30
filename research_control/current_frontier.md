@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-032` and `handoff-0384`.
+`RT-20260630-033` and `handoff-0385`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-032` |
-| Latest handoff ID | `handoff-0384` |
-| Current status | `v12_p7_t02_red_team_review_schema_validator_passes_no_promotion` |
-| Current route family | v12 p7 t02 schema validator completed selects p7 t03 pilot external red team review |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v12 p7 t03 pilot external red team review |
-| Required next authority | P7-T03 pilot external red-team review only |
-| Next recommended action | Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict. |
+| Active task ID | `RT-20260630-033` |
+| Latest handoff ID | `handoff-0385` |
+| Current status | `v12_p7_t03_pilot_red_team_review_completed_not_enough_assumptions_no_promotion` |
+| Current route family | v12 p7 t03 review completed routes to matter semantics discriminator repair selector |
+| Target derivation milestone | `matter_coupling` |
+| Current burden | `matter_coupling`; status: unchanged_precise_obstruction_found |
+| Required next authority | one repair/selector packet for source-side matter-semantics discriminator or uniqueness obligation only |
+| Next recommended action | Run one bounded repair/selector packet to formalize the missing source-side matter-semantics discriminator or uniqueness obligation before any coupling-law matter-coupling stress-energy detector-semantics Einstein-equation benchmark or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-032/00_TASK.yaml`.
-- Active task objective: Complete P7-T02 by adding a strict external red-team review artifact schema and validator with fixtures proving missing-field rejection, physics-promotion rejection, and minimal valid artifact acceptance.
-- Latest handoff path: `research_control/handoffs/handoff-0384.yaml`.
-- Latest handoff summary: RT-20260630-032 completed one bounded P7-T02 external red-team review schema-validator packet. It added the artifact schema, validator script, fixtures, focused tests, and template alignment. The validator requires physics_promotion_authorized=false and rejects missing required fields and invalid verdicts.
-- Current route family: v12 p7 t02 schema validator completed selects p7 t03 pilot external red team review.
-- Next recommended action: Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict.
+- Active task path: `research_control/tasks/RT-20260630-033/00_TASK.yaml`.
+- Active task objective: Complete P7-T03 by running one bounded external red-team review against the frontier theorem inventory and emitting one schema-valid critique artifact with physics_promotion_authorized=false.
+- Latest handoff path: `research_control/handoffs/handoff-0385.yaml`.
+- Latest handoff summary: RT-20260630-033 completed one bounded P7-T03 external red-team review of the frontier theorem inventory. The review found no hidden target import as written but returned verdict not_enough_assumptions for any future route from scoped g_eff plus parameterized witness evidence to matter semantics or coupling law without a source-side discriminator or uniqueness obligation.
+- Current route family: v12 p7 t03 review completed routes to matter semantics discriminator repair selector.
+- Next recommended action: Run one bounded repair/selector packet to formalize the missing source-side matter-semantics discriminator or uniqueness obligation before any coupling-law matter-coupling stress-energy detector-semantics Einstein-equation benchmark or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict.
+Run one bounded repair/selector packet to formalize the missing source-side matter-semantics discriminator or uniqueness obligation before any coupling-law matter-coupling stress-energy detector-semantics Einstein-equation benchmark or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,25 +143,25 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-032`;
-- latest handoff: `handoff-0384`;
-- current status: `v12_p7_t02_red_team_review_schema_validator_passes_no_promotion`;
+- active task: `RT-20260630-033`;
+- latest handoff: `handoff-0385`;
+- current status: `v12_p7_t03_pilot_red_team_review_completed_not_enough_assumptions_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `minimal_fixture_passes`: PASS;
-- latest handoff validation `missing_field_fixture_fails`: PASS;
-- latest handoff validation `physics_promotion_true_fixture_fails`: PASS;
-- latest handoff validation `schema_document_registered`: PASS;
-- latest handoff validation `validator_unit_tests`: PASS;
+- latest handoff validation `no_claim_promotion`: PASS;
+- latest handoff validation `no_gate_chair_authority`: PASS;
+- latest handoff validation `parent_child_synthesis`: PASS;
+- latest handoff validation `physics_promotion_authorized`: false;
+- latest handoff validation `red_team_review_artifact_schema`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0384.yaml`
-- `research_control/tasks/RT-20260630-032/00_TASK.yaml`
+- `research_control/handoffs/handoff-0385.yaml`
+- `research_control/tasks/RT-20260630-033/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0384*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0385*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
