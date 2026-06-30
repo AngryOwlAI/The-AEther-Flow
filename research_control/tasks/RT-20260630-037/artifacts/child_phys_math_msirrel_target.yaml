@@ -1,0 +1,55 @@
+artifact_id: "child_phys_math_msirrel_target"
+task_id: "RT-20260630-037"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-06-30T16:18:42Z"
+objective: "Formalize the mathematical target for source-side readout/response irrelevance or quotient after MSDISC-P7REPAIR-001."
+inputs_reviewed:
+  - "research_control/handoffs/handoff-0388.yaml"
+  - "research_control/tasks/RT-20260630-036/artifacts/matter_semantics_discriminator_followup_selector_v1.yaml"
+  - "research_control/tasks/RT-20260630-035/artifacts/matter_semantics_discriminator_nonuniqueness_obstruction_v1.tex"
+  - "research_control/tasks/RT-20260630-034/artifacts/matter_semantics_discriminator_target_v1.tex"
+mathematical_assessment:
+  selected_formalization: "MSIrrelTarget_v1(E;B_current)"
+  source_domain: "admissible draft/control matter-semantics records MSAdm_v1(E;B_current) with no-target certificate bundles"
+  target_relation_shape: "source-side relation sim_MSIrrel,E over admissible records generated only by certificate-preserving readout/response-marker variation"
+  quotient_shape: "pi_E maps admissible records to source-side irrelevance classes when the relation is proved; otherwise the construction fails closed"
+  adjacent_targets:
+    - "MSReadoutOrder_v1"
+    - "MSResponseSemanticsLaw_v1"
+    - "MSSemanticsQuotient_v1"
+  required_invariance:
+    - "source support and probe-token preservation"
+    - "no-target certificate preservation"
+    - "source relabeling compatibility"
+    - "finite/local certificate-preserving variation stability"
+  fail_closed_condition: "if C_plus and C_minus cannot be proved equivalent or lawfully quotiented, the discriminator remains bottom"
+new_obligations:
+  - "Source-domain closure for MSAdm_v1(E;B_current)"
+  - "No-target-import proof for relation generation"
+  - "Equivalence or guarded preorder/quotient proof"
+  - "Quotient compatibility with MSDiscTarget_v1"
+  - "Certificate-preservation proof for no-target bundles"
+  - "Human gate before any adoption or canonical ontology status"
+mathematical_limits:
+  - "The packet does not prove C_plus sim_MSIrrel,E C_minus."
+  - "The packet does not construct a non-bottom discriminator."
+  - "The packet does not adopt MSIrrelLaw_v1."
+  - "The packet does not derive matter coupling or Einstein equations."
+recommended_fusion_terms:
+  - "draft/control"
+  - "proposal-only target"
+  - "blocked_adoption_open_continuation"
+  - "current ontology does not derive MSIrrelLaw_v1"
+claim_boundary:
+  may_promote_claims: false
+  proof_authority: false
+  source_law_adopted: false
+  source_extension_data_adopted: false
+  metric_data_adopted: false
+  geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false

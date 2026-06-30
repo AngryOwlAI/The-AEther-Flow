@@ -1,0 +1,289 @@
+\section*{Matter-Semantics Readout/Response Irrelevance Target v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control Ontology Formalizer output for
+RT-20260630-037.  It is an ontology-law research packet after
+\(\mathrm{MSDISC\mbox{-}P7REPAIR\mbox{-}001}\) showed a current-basis
+nonuniqueness pressure pair \(C_+\) and \(C_-\).  The artifact formalizes a
+source-side readout/response irrelevance or quotient target only.  It does
+not edit canonical ontology, create a canonical-ontology candidate, adopt a
+source law, adopt source-extension data, adopt \(\mathrm{MetricData}(E)\),
+adopt or expand \(g_{\mathrm{eff}}\), adopt a coupling law, derive or adopt
+matter coupling, import stress-energy semantics, construct a stress-energy
+tensor, import detector semantics, import a matter action, derive Einstein
+equations, promote benchmark status, issue a Gate Chair verdict, claim
+completed derivation, prove future source-extension impossibility, or reject
+the global theory.
+
+\paragraph{Background.}
+RT-034 formalized \(\mathrm{MSDiscTarget}_{v1}\) and
+\(\mathrm{MSUniqObl}_{v1}\).  RT-035 attempted construction and found that
+the current source basis admits two records \(C_+\) and \(C_-\) with the same
+source support, probe-token family, and no-target certificate bundle, but with
+different source readout values and response markers.  RT-036 selected the
+lowest-authority constructive continuation: formalize the missing source-side
+irrelevance, ordering, response-semantics, or quotient target before any
+construction, audit, stress, adoption, or downstream GR route.
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MSAdm}{\mathrm{MSAdm}_{v1}}
+\newcommand{\MSDisc}{\mathrm{MSDiscTarget}_{v1}}
+\newcommand{\MSUniq}{\mathrm{MSUniqObl}_{v1}}
+\newcommand{\MSFail}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\MSIrrelTarget}{\mathrm{MSIrrelTarget}_{v1}}
+\newcommand{\MSIrrelLaw}{\mathrm{MSIrrelLaw}_{v1}}
+\newcommand{\MSReadoutOrder}{\mathrm{MSReadoutOrder}_{v1}}
+\newcommand{\MSRespSemLaw}{\mathrm{MSResponseSemanticsLaw}_{v1}}
+\newcommand{\MSQuot}{\mathrm{MSSemanticsQuotient}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+\newcommand{\MSIrrelEq}{\sim_{\mathrm{MSIrrel},E}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\section{Inputs and Domain}
+
+\begin{definition}[Current source basis]
+For a fixed source instance \(E\), let \(\Bcur(E)\) be the current
+draft/control basis available to this packet:
+\begin{enumerate}
+  \item the P5-T02 source-side matter-semantics target and no-import
+    certificates;
+  \item the P5-T03 draft/control matter-semantics candidate construction;
+  \item the RT-034 matter-semantics discriminator target;
+  \item the RT-035 nonuniqueness obstruction and its pressure pair
+    \(C_+,C_-\);
+  \item the RT-036 selector result requiring this target-formalization
+    packet;
+  \item the current Distance-to-GR matter-coupling burden statement.
+\end{enumerate}
+The basis explicitly excludes target stress-energy tensors, target matter
+actions, empirical detector protocols, target metric/proper-time imports,
+benchmark behavior, Einstein-equation premises, generated-output authority,
+registry metadata authority, role authority, validation authority, commit
+status, and Gate Chair authority as mathematical premises.
+\end{definition}
+
+\begin{definition}[Admissible matter-semantics records]
+\(\MSAdm(E;\Bcur)\) is the set of draft/control candidate records
+\[
+  C=(S_E,P_E,R_E,Q_E,\Gamma_E)
+\]
+such that \(S_E\) is source-sector support syntax, \(P_E\) is a source probe
+token family, \(R_E\) is a source readout map, \(Q_E\) is a source response
+marker family, and \(\Gamma_E\) contains explicit certificates for
+\[
+  \NoDetector(E),\quad \NoSE(E),\quad \NoAction(E),\quad \NoTarget(E).
+\]
+Membership in \(\MSAdm(E;\Bcur)\) is source-side candidate admissibility only.
+It is not physical detector semantics, not stress-energy semantics, not a
+matter action, not a coupling law, and not matter coupling.
+\end{definition}
+
+\begin{definition}[RT-035 pressure pair]
+The pair \(C_+,C_-\in\MSAdm(E;\Bcur)\) is the current-basis pressure pair
+from RT-035.  The two records share \(S_E\), \(P_E\), and \(\Gamma_E\), but
+have different readout maps and response markers:
+\[
+  R_E^+(p_0)=\mathsf{source\_sector\_matched},\qquad
+  R_E^-(p_0)=\mathsf{source\_repair\_needed}.
+\]
+The current basis contains no proof that \(C_+\) and \(C_-\) are equivalent
+and no source-only rule selecting one over the other.
+\end{definition}
+
+\section{Irrelevance Target}
+
+\begin{definition}[\(\MSIrrelTarget(E;\Bcur)\)]
+The readout/response irrelevance target is the proposal-only data:
+\[
+  \MSIrrelTarget(E;\Bcur)
+  =
+  \bigl(\MSAdm(E;\Bcur),\ \MSIrrelEq,\ \pi_E,\ D^q_E\bigr),
+\]
+where:
+\begin{enumerate}
+  \item \(\MSIrrelEq\) is a source-side relation on \(\MSAdm(E;\Bcur)\);
+  \item \(\pi_E:\MSAdm(E;\Bcur)\to
+    \MSAdm(E;\Bcur)/{\MSIrrelEq}\cup\{\bot\}\) is a quotient or fail-closed
+    projection;
+  \item \(D^q_E\) is a discriminator target that factors through \(\pi_E\)
+    when a lawful quotient exists and returns \(\bot\) otherwise.
+\end{enumerate}
+The object is a target and burden.  It is not an adopted relation, law,
+quotient, physical semantics, or coupling result.
+\end{definition}
+
+\begin{definition}[Proposal-only \(\MSIrrelLaw(E;\Bcur)\)]
+A future \(\MSIrrelLaw(E;\Bcur)\) would be a source-side rule proving when
+two admissible records satisfy \(C_1\MSIrrelEq C_2\).  Such a rule must use
+only source support, probe-token data, readout/response-marker syntax,
+source relabeling, finite/local certificate-preserving variation, and the
+no-target certificate bundle.  It must not use target metric structure,
+proper-time normalization, stress-energy tensors, stress-energy semantics,
+detector protocols, empirical calibration, matter actions, benchmark
+behavior, Einstein-equation premises, generated derivatives, registry
+metadata, role status, validation output, handoffs, approvals, commits, local
+caches, or file order as premises.
+\end{definition}
+
+\paragraph{Adjacent target families.}
+If the relation form is too weak or too strong, a later packet may instead
+formalize one of the following proposal-only source-side targets:
+\[
+  \MSReadoutOrder,\qquad \MSRespSemLaw,\qquad \MSQuot.
+\]
+\(\MSReadoutOrder\) would order readout-token states by source-side
+certificate data.  \(\MSRespSemLaw\) would assign response-marker
+bookkeeping semantics without target detector or stress-energy imports.
+\(\MSQuot\) would define the quotient directly.  None of these adjacent
+families is adopted in this packet.
+
+\section{Proof Obligations}
+
+A future construction packet must discharge all of the following obligations
+or return a precise obstruction:
+\begin{enumerate}
+  \item \textbf{Source-domain closure.} \(\MSIrrelEq\), \(\pi_E\), and
+    \(D^q_E\) are defined only over \(\MSAdm(E;\Bcur)\).
+  \item \textbf{No-target import.} The relation and quotient use no target
+    metric, stress-energy, detector protocol, matter action, benchmark, or
+    Einstein-equation premise.
+  \item \textbf{Certificate preservation.} If \(C_1\MSIrrelEq C_2\), the
+    no-target certificate bundle remains invariant or is transported by an
+    explicit source-side map.
+  \item \textbf{Equivalence or guarded quotient.} The future packet proves
+    that \(\MSIrrelEq\) is reflexive, symmetric, and transitive on its domain,
+    or else states a guarded preorder/quotient and proves that the resulting
+    quotient is well defined for \(D^q_E\).
+  \item \textbf{Discriminator compatibility.} A non-bottom discriminator may
+    not distinguish records that the quotient identifies, and may not collapse
+    records without a proved quotient.
+  \item \textbf{Pressure-pair decision.} Applied to \(C_+\) and \(C_-\), the
+    future packet must either prove \(C_+\MSIrrelEq C_-\), prove a lawful
+    ordering or quotient selection, or record \(\MSFail\) with bottom output.
+  \item \textbf{Exact-GR recovery boundary.} Satisfying the target would not
+    by itself adopt source law, source-extension data, \(\mathrm{MetricData}(E)\),
+    \(g_{\mathrm{eff}}\), a coupling law, matter coupling, stress-energy
+    semantics, detector semantics, matter action, Einstein equations,
+    benchmark promotion, Gate Chair closure, or completed derivation.
+\end{enumerate}
+
+\section{Current-Basis Status}
+
+\begin{proposition}[Current ontology does not derive the target law]
+The current basis \(\Bcur(E)\) does not derive \(\MSIrrelLaw(E;\Bcur)\),
+\(\MSReadoutOrder\), \(\MSRespSemLaw\), or \(\MSQuot\).
+\end{proposition}
+
+\paragraph{Reason.}
+RT-035 supplies \(C_+\) and \(C_-\) with shared source support, probe-token
+family, and no-target certificates, but different readout and response-marker
+syntax.  The tracked sources inspected by RT-036 name no source-side theorem
+or rule proving equivalence, ordering, semantic assignment, or quotient for
+that difference.  Therefore the current ontology does not derive the missing
+primitive.  This is not a no-go theorem and not a claim that future
+source-side extension is impossible.
+
+\begin{proposition}[Conditional obstruction conversion]
+If a future packet proves \(C_+\MSIrrelEq C_-\) or proves a lawful source-side
+quotient/ordering that identifies the pressure pair without target imports,
+then the RT-035 nonuniqueness pressure is quotiented for that packet's stated
+domain.  If it does not, the only lawful result remains \(\bot\) and the
+packet must record \(\MSFail\).
+\end{proposition}
+
+\paragraph{Boundary.}
+This proposition is conditional and target-setting.  It does not prove the
+antecedent, does not construct the quotient, does not adopt a law, and does
+not authorize coupling-law or matter-coupling work.
+
+\begin{proposition}[No-target-import preservation]
+Even if a later packet proves \(\MSIrrelEq\) or a lawful quotient using only
+the source-side obligations above, that proof would at most supply
+draft/control source-side matter-semantics bookkeeping.  It would not by
+itself adopt a source law, adopt source-extension data, adopt
+\(\mathrm{MetricData}(E)\), expand \(g_{\mathrm{eff}}\), adopt a coupling law,
+derive matter coupling, import stress-energy semantics, import detector
+semantics, import a matter action, derive Einstein equations, promote a
+benchmark, issue a Gate Chair verdict, or complete a GR derivation.
+\end{proposition}
+
+\section{Failure Conditions}
+
+A later construction attempt must return \(\MSFail(E;\Bcur,O)\) if any of the
+following occurs:
+\begin{enumerate}
+  \item \(\MSIrrelEq\), \(\pi_E\), or \(D^q_E\) depends on target
+    stress-energy, detector protocols, matter actions, target metric or
+    proper-time normalization, benchmark behavior, or Einstein-equation
+    premises;
+  \item the relation fails equivalence or quotient well-definedness in the
+    stated domain;
+  \item no-target certificates are dropped, weakened, or treated as optional;
+  \item \(C_+\) and \(C_-\) are collapsed without an explicit source-side
+    proof;
+  \item registry metadata, generated derivatives, support tooling,
+    validation output, handoff status, role status, approval status, commit
+    status, local cache state, or file ordering is treated as scientific
+    proof.
+\end{enumerate}
+
+When \(\MSFail(E;\Bcur,O)\) is returned, same-milestone continuation remains
+open as \(\mathsf{blocked\_adoption\_open\_continuation}\) unless a separate
+no-go theorem is proved and authorized.  Allowed wording: current ontology
+does not derive \(\MSIrrelLaw\) or an equivalent quotient primitive.
+Disallowed wording: therefore such a primitive is impossible, therefore
+matter coupling is impossible, or therefore the global theory is rejected.
+
+\section{Next Packet Contract}
+
+The logical next bounded packet is one Candidate Constructor ontology-law
+packet attempting to construct \(\MSIrrelEq\), \(\pi_E\), or a precise
+\(\MSFail\) result for the \(C_+\), \(C_-\) pressure pair.  The next packet
+must not proceed to source-law adoption, source-extension data adoption,
+coupling-law adoption, matter-coupling derivation, stress-energy semantics,
+detector semantics, matter-action semantics, Einstein equations, benchmark
+promotion, or completed derivation.
+
+\section{Distance-to-GR Status}
+
+No Distance-to-GR ledger row is changed by this packet.  The matter-coupling
+burden remains blocked by response semantics and coupling derivation.  The
+packet supplies a sharper target for the missing source-side irrelevance or
+quotient primitive and no downstream GR promotion.
+
+\section{Forbidden Conclusions}
+
+This artifact does not license any of the following:
+\begin{enumerate}
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption;
+  \item source-extension data adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics or stress-energy tensor construction;
+  \item detector semantics;
+  \item matter action;
+  \item Einstein-equation derivation;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global theory rejection.
+\end{enumerate}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+discriminator follow-up selector v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+discriminator nonuniqueness obstruction v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+discriminator target v1} [Internal control artifact].

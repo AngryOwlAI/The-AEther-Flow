@@ -287,6 +287,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P5-T05-MATTER-SEMANTICS-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-053/artifacts/matter_semantics_obstruction_refuter_stress_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MATTER-SEMANTICS-DISCRIMINATOR-NONUNIQUENESS-OBSTRUCTION` `research_control/tasks/RT-20260630-035/artifacts/matter_semantics_discriminator_nonuniqueness_obstruction_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MATTER-SEMANTICS-DISCRIMINATOR-TARGET` `research_control/tasks/RT-20260630-034/artifacts/matter_semantics_discriminator_target_v1.tex`
+- `TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `research_control/tasks/RT-20260630-037/artifacts/matter_semantics_readout_response_irrelevance_target_v1.tex`
 
 ## superseded
 
