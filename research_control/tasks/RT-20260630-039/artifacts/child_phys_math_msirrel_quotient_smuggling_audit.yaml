@@ -1,0 +1,27 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+audit_scope:
+  candidate_object: "MSCertFiberQuot_v1"
+  source_path: "research_control/tasks/RT-20260630-038/artifacts/matter_semantics_irrelevance_quotient_candidate_v1.tex"
+  target_derivation_milestone: "matter_coupling"
+formal_checks:
+  domain_locality: "pass"
+  domain_locality_reason: "The domain is the finite certificate fiber F_Gamma(C_plus;E;B_current) and maps non-fiber records to bottom."
+  target_metric_import: "not_detected"
+  target_atlas_import: "not_detected"
+  detector_semantics_import: "not_detected"
+  stress_energy_import: "not_detected"
+  matter_action_import: "not_detected"
+  einstein_equation_import: "not_detected"
+  benchmark_success_import: "not_detected"
+  process_authority_import: "not_detected"
+  registry_or_validator_as_premise: "not_detected"
+  certificate_misuse: "not_detected_as_proof_authority"
+  certificate_misuse_reason: "The certificate bundle is used as a finite domain guard and equivalence criterion only; it is not treated as source-law adoption or proof of matter coupling."
+  overcollapse_status: "bounded_pending_refuter_stress"
+  overcollapse_reason: "The quotient deliberately identifies records with different readout and response-marker labels inside one finite certificate fiber. This is not a target import, but it must be stress-tested for degeneracy and finite-variation fragility."
+audit_verdict: "source_pure_as_written_pending_stress"
+blocking_defects: []
+required_next_role: "refuter@0.2.0"
+claim_boundary_preserved: true
