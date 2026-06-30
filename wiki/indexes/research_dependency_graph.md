@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T02:29:39Z`
-- Source fingerprint: `e4847aa5d59260f8e9515b039ab4b6f250307d8da084afed7150ff8006328d46`
-- Nodes: `7609`
-- Edges: `31887`
+- Generated from tracked state as of: `2026-06-30T02:51:10Z`
+- Source fingerprint: `d3eb1754c349444b8d2fdb1dff2550bce9e2fe536e63c121296c2516dbb72082`
+- Nodes: `7634`
+- Edges: `32029`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 492 |
+| `completion_yaml` | 493 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 356 |
+| `handoff_yaml` | 357 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 492 |
+| `agent_job` | `support_only` | 493 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3769 |
-| `blocked_burden` | `blocked` | 825 |
-| `claim_boundary` | `support_only` | 493 |
+| `artifact` | `support_only` | 3783 |
+| `blocked_burden` | `blocked` | 829 |
+| `claim_boundary` | `support_only` | 494 |
 | `draft_control_candidate` | `draft_control` | 348 |
 | `draft_control_candidate` | `proposal_only` | 50 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 70 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 356 |
-| `human_gated_object` | `human_gated` | 219 |
+| `handoff` | `support_only` | 357 |
+| `human_gated_object` | `human_gated` | 222 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 205 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 441 |
+| `task` | `support_only` | 442 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-004`
-- Latest handoff: `handoff-0356`
-- Handoff path: `research_control/handoffs/handoff-0356.yaml`
-- Next action: Run one bounded theoretical-continuation-selector@0.1.0 transaction to select the post-stress route for the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand candidate before any Gate Chair adoption request, source-extension data adoption, matter-coupling route, Einstein-equation route, or benchmark-promotion route.
+- Active task: `RT-20260630-005`
+- Latest handoff: `handoff-0357`
+- Handoff path: `research_control/handoffs/handoff-0357.yaml`
+- Next action: Run one bounded gate-chair@0.1.0 transaction under exact tracked approval to decide whether the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand source-incidence signature package constructed in RT-20260630-002, audited in RT-20260630-003, and stress-survived in RT-20260630-004 may be accepted only as scoped source-extension matter-signature evidence/precondition under its declared finite/local source-incidence scope, with no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
