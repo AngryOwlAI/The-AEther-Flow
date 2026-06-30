@@ -1,0 +1,81 @@
+artifact_id: "support_only_formalization_tooling_route_decision_v1"
+task_id: "RT-20260630-027"
+plan_task_id: "P6-T01"
+role: "validator-engineer@0.2.0"
+status: "completed"
+decision_summary: "Selected standard-library Python typed algebraic specifications plus deterministic unittest property-style checks as the support-only formalization lane."
+selected_approach:
+  approach_id: "python_typed_algebraic_spec_plus_unittest_property_checks"
+  selected: true
+  folder_path: "scripts/research_control/support_formalization/"
+  fixture_path: "tests/fixtures/research_control/support_formalization/"
+  test_paths:
+    - "tests/test_support_only_finite_toy_tag_obstruction.py"
+    - "tests/test_support_only_finite_local_witness_schema.py"
+  dependency_policy: "standard_library_first"
+  proof_authority: false
+candidate_assessment:
+  - candidate: "Lean project under a support-only folder"
+    decision: "deferred"
+    reason: "Potentially useful later, but unnecessary dependency friction before finite support objects are stable."
+  - candidate: "Coq project under a support-only folder"
+    decision: "deferred"
+    reason: "Potentially useful later, but unnecessary dependency friction before finite support objects are stable."
+  - candidate: "Isabelle/HOL theory files"
+    decision: "deferred"
+    reason: "Potentially useful later, but unnecessary dependency friction before finite support objects are stable."
+  - candidate: "Python typed algebraic specification plus property tests"
+    decision: "selected"
+    reason: "Matches existing repository support-only checker precedent, has minimal dependency friction, and can represent finite tags, erasure maps, relabelings, and partial response relations directly."
+  - candidate: "Lightweight custom finite-structure checker with proof comments"
+    decision: "fallback_component"
+    reason: "Useful as the dependency-free core, but weaker than typed Python plus deterministic tests as the primary lane."
+validation_commands:
+  narrow_future_commands:
+    - ".venv/bin/python -m unittest tests.test_support_only_finite_toy_tag_obstruction"
+    - ".venv/bin/python -m unittest tests.test_support_only_finite_local_witness_schema"
+    - ".venv/bin/python -m unittest discover -s tests -p 'test_support_only_*.py'"
+  project_control_commands:
+    - ".venv/bin/python scripts/research_control/validate_research_control.py"
+    - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+fallback:
+  dependency_status: "No new dependency required."
+  fallback_runtime: "Python standard library dataclasses typing unittest json and repository YAML subset."
+  if_unavailable: "Treat runtime parser or dependency failure as tooling/data-quality failure, not physics obstruction."
+  proof_authority: false
+p6_t02_handoff:
+  next_plan_task: "P6-T02"
+  suggested_role: "validator-engineer@0.2.0"
+  implementation_scope: "Formalize the existing finite toy tag-removal obstruction as support-only tooling only."
+  canonical_source_artifact: "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex"
+  formal_objects:
+    - "finite toy source object type"
+    - "tag record type for orientation normalization and token semantics"
+    - "untagged object"
+    - "tag-erasure map"
+    - "partial response relation"
+    - "proposition record: tag erasure makes response undefined"
+    - "optional proposition record: no equivariant no-new-source-data totalization under sign or token relabeling"
+claim_boundary:
+  proof_authority: false
+  source_law_adopted: false
+  MCPA_cand_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  metric_data_adopted: false
+  geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+registered_design_artifact:
+  object_id: "MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1"
+  path: "research_control/design/support_only_formalization_lane_v1.md"
+  source_hash: "a0ed80ffbf7352b5ed5b6ed2d97674146a4e5263d3001db2e3ddece504f5b0ab"
