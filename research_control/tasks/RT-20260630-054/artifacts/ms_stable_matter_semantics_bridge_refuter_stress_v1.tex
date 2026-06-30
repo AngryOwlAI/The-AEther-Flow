@@ -1,0 +1,333 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\MSStablePre}{\mathrm{MSStablePartitionPrecondition}_{v1}}
+\newcommand{\MSSig}{\Sigma^{\mathrm{rep}}_E}
+\newcommand{\MSPart}{\Pi^{\mathrm{st}}_E}
+\newcommand{\MSCell}{\mathcal C^{\mathrm{st}}_E}
+\newcommand{\Target}{\mathrm{MatterSemanticsTarget}_{v1}}
+\newcommand{\FailureObs}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{MSStableMatterSemanticsBridge Refuter Stress v1}
+\author{Refuter Packet RT-20260630-054}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260630-054}. It
+stress-tests
+\[
+  \MSBridge(E;\Bcur)
+\]
+after construction in \texttt{RT-20260630-052} and source-purity audit in
+\texttt{RT-20260630-053}.
+
+\begin{verbatim}
+stress_result.result_type: "bridge_facing_candidate_path"
+stress_verdict:
+  "ms_stable_bridge_stress_survived_pending_selector_no_adoption"
+source_extension_category: "source_extension_refuter_stress"
+candidate_status: "draft/control bridge-facing candidate"
+source_law_adopted: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This stress result does not edit canonical ontology, adopt a source law, adopt
+source-extension data beyond the exact \texttt{RT-20260630-050} scoped result,
+adopt \(\MetricData(E)\), change the scope of \(\geff\), adopt a coupling law,
+adopt matter semantics, adopt detector semantics, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, derive Einstein equations, promote benchmark status,
+issue a Gate Chair verdict, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+\section{Stress Surface}
+
+The audited bridge returns source-sector slots, source-probe tokens,
+source-readout records, source response tokens, and certificate bundles from
+the guarded stable-precondition record, or else fails closed. The Refuter
+stress question is whether this bridge keeps its source-only and fail-closed
+character under the pressure surface required by \texttt{handoff-0405}.
+
+The result is conditional survival. If a source relabeling or finite variation
+preserves \(\MSSig\), the stable partition cell, the \(\mathrm{RR}_E\) field,
+the required certificates, and the evidence-path relation, the bridge
+transports fieldwise as source syntax. If a variation deletes the stable
+partition guard, removes certificates, collapses distinct \(\mathrm{RR}_E\)
+records, imports target/process authority, or requests adoption/downstream GR
+promotion, the branch fails closed to the candidate's obstruction labels.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Stress & Result \\
+\midrule
+Source relabeling & Survives only for relabelings that preserve
+\(\MSSig\), stable cells, \(\mathrm{RR}_E\), certificate pass/fail values,
+and evidence paths by fieldwise source transport. \\
+Finite variation & Survives only on preserve-or-repair branches. Variations
+that change the stable signature, delete guard data, or import target/process
+authority fail closed. \\
+Certificate deletion & Fails closed by
+\texttt{OB-MS-STABLE-BRIDGE-CERT-MISSING}. \\
+Stable-partition deletion & Fails closed by
+\texttt{OB-MS-STABLE-BRIDGE-NO-STABLE-PARTITION}. \\
+\(\mathrm{RR}_E\) pressure-pair collapse & Blocked by preserved readout
+separation; attempted identification while relying on \(\MSStablePre\) fails
+closed by \texttt{OB-MS-STABLE-BRIDGE-RR-COLLAPSE}. \\
+\(\Target\) grammar-name pressure & Survives only when \(\Target\) is read as
+the P5-T02 source-side target grammar. Target spacetime, metric, atlas,
+detector, stress-energy, matter-action, benchmark, or Einstein-equation
+readings fail closed. \\
+Cell degeneracy & Not repaired. Source records that remain degenerate after
+allowed source transport require a later source-side discriminator; target
+semantics cannot split them here. \\
+Fail-closed behavior & Preserved by the five declared obstruction labels and
+the audit's non-import screen. \\
+Matter-semantics adoption pressure & Blocked by
+\texttt{OB-MS-STABLE-BRIDGE-ADOPTION-OVERREAD}. \\
+Coupling-law pressure & Blocked. No universal coupling rule or matter-coupling
+map is supplied. \\
+\(\geff\) scope pressure & Blocked. No \(\MetricData(E)\), unscoped
+\(\geff\), target metric, Lorentzian signature, or proper-time normalization
+is used. \\
+Support-only proof-authority pressure & Blocked. Support surfaces, registries,
+validators, generated notes, roles, handoffs, approvals, commits, caches,
+semantic extracts, and file order are not mathematical premises. \\
+Process-authority laundering & Blocked. Process status cannot repair a
+missing certificate, source discriminator, stable partition, or bridge field. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[Source-transport stress survival]
+Let \(\rho:E\to E'\) be a source relabeling that transports the stable
+signature \(\MSSig\), stable partition cells \(\MSCell(a)\), the
+\(\mathrm{RR}_E\) coordinate, certificate bundles, source-sector slots,
+source-probe tokens, source-readout records, source response tokens, and
+evidence paths by fieldwise relabeling. If \(\rho\) preserves guard and
+certificate pass/fail values, every non-bottom bridge record for
+\(\MSBridge(E;\Bcur)\) transports to a non-bottom bridge record for
+\(\MSBridge(E';\rho\Bcur)\).
+\end{lemma}
+
+\begin{proof}
+The positive branch of the bridge inspects only the stable-precondition source
+record, the stable signature, stable partition cell membership, the
+\(\mathrm{RR}_E\) source coordinate, required certificates, and source-local
+slot/probe/readout/response-token fields. By hypothesis, \(\rho\) transports
+exactly those fields and preserves their pass/fail values. The transported
+record therefore satisfies the same source-side guard in \(E'\). This is a
+finite/local source-syntax transport statement only. It is not target
+covariance, detector semantics, matter coupling, \(\MetricData(E)\),
+\(\geff\), Einstein equations, or benchmark evidence.
+\end{proof}
+
+\begin{lemma}[Deletion branches fail closed]
+If the stable partition guard, stable cell membership, or required certificate
+bundle is removed from a bridge record, the bridge cannot return the positive
+tuple for that record. It returns the matching fail-closed obstruction label.
+\end{lemma}
+
+\begin{proof}
+The guarded bridge domain requires the stable-precondition record, stable
+guard, cell membership, and no-target/no-detector/no-stress-energy/no-action
+certificates. Removing any required component falsifies the domain predicate.
+The candidate defines the relevant branch as
+\texttt{OB-MS-STABLE-BRIDGE-NO-STABLE-PARTITION} or
+\texttt{OB-MS-STABLE-BRIDGE-CERT-MISSING}. A deleted guard is not replaced by
+target physics, process authority, registry status, or role authority.
+\end{proof}
+
+\begin{lemma}[\(\mathrm{RR}_E\) pressure-pair collapse is blocked]
+If two bridge records have different \(\mathrm{RR}_E\) values while the bridge
+relies on \(\MSStablePre\) as written, identifying them is not allowed inside
+this candidate. The branch fails closed rather than proving a source-side
+irrelevance theorem.
+\end{lemma}
+
+\begin{proof}
+The candidate includes \(\mathrm{RR}_E\) in the source readout alphabet and
+states that distinct \(\mathrm{RR}_E\) values are kept separated when the
+stable-precondition object is used as written. It also declares
+\texttt{OB-MS-STABLE-BRIDGE-RR-COLLAPSE} for attempted identification.
+Therefore pressure-pair collapse is a fail-closed stress result, not an
+irrelevance theorem, source-law adoption, or matter-coupling derivation.
+\end{proof}
+
+\begin{lemma}[Degeneracy is not repaired by target semantics]
+If stable source cells or bridge records remain degenerate under the allowed
+source fields, this bridge does not split them by importing target matter
+names, detector protocols, stress-energy tensors, matter actions, benchmark
+behavior, target metric data, or \(\geff\)-scope expansion.
+\end{lemma}
+
+\begin{proof}
+The candidate and audit exclude target spacetime data, detector semantics,
+stress-energy semantics and tensors, matter actions, benchmark behavior,
+target metric structure, \(\MetricData(E)\), unscoped \(\geff\), and process
+authority from the mathematical premises. A remaining degeneracy is therefore
+a source-side limitation that requires a later source-side discriminator or
+selector decision. It cannot be repaired in this packet by target or process
+substitution.
+\end{proof}
+
+\begin{lemma}[Adoption and proof-authority pressure fails closed]
+Using stress survival as source-law adoption, matter-semantics adoption,
+detector-semantics adoption, coupling-law adoption, matter coupling,
+downstream GR promotion, or proof authority triggers the candidate's adoption
+overread branch.
+\end{lemma}
+
+\begin{proof}
+The bridge is marked draft/control and its audit records that validators,
+registries, generated notes, roles, handoffs, approvals, commits, local
+caches, semantic extracts, and file order are not mathematical premises.
+Because the candidate has no protected adoption rule, no Gate Chair verdict,
+no coupling rule, no detector model, no stress-energy tensor, no matter
+action, and no field equation, stress survival cannot supply any of those
+conclusions. The proper branch is
+\texttt{OB-MS-STABLE-BRIDGE-ADOPTION-OVERREAD}.
+\end{proof}
+
+\begin{proposition}[Refuter stress verdict]
+\(\MSBridge(E;\Bcur)\) stress-survives only as a bridge-facing draft/control
+candidate path pending selector. It survives source-signature-preserving
+fieldwise transport and fails closed under certificate deletion,
+stable-partition deletion, \(\mathrm{RR}_E\) collapse, target/process
+substitution, unsupported target-grammar overread, cell degeneracy without a
+source discriminator, adoption overread, \(\geff\)-scope pressure, and
+support-only proof-authority pressure.
+\end{proposition}
+
+\begin{proof}
+The preceding lemmas cover the positive transport branch, deletion branches,
+\(\mathrm{RR}_E\) collapse branch, degeneracy branch, and adoption/proof
+authority branch. Together they show that the audited bridge has a coherent
+source-side stress profile but only as a draft/control bridge-facing candidate.
+No lemma supplies source-law adoption, source-extension data adoption beyond
+the exact RT-050 scoped result, matter semantics, detector semantics, coupling
+law, matter coupling, stress-energy semantics, matter action, \(\MetricData(E)\),
+\(\geff\), Einstein equations, benchmark promotion, or completed derivation.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only context retained. \\
+\(\MetricData(E)\) & Not adopted. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+Matter coupling & Stable matter-semantics bridge stress-survives as
+bridge-facing draft/control path pending selector; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local bridge stress profile recorded under
+source-signature preservation and fail-closed branches; no global theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict requested or issued. \\
+Current route freeze or hard-fail status & Not frozen; selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded
+\(\mathrm{theoretical\mbox{-}continuation\mbox{-}selector@0.1.0}\) packet to
+decide the post-stress route. The selector may choose a narrow Gate Chair
+evidence-status/precondition review, repair, scoped obstruction or freeze, a
+next matter-coupling precondition packet, coupling-law target formalization, or
+another bounded theoretical route. This stress packet itself does not authorize
+any adoption or promotion.
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+\begin{quote}
+\(\MSBridge(E;\Bcur)\) stress-survives as a bridge-facing draft/control
+candidate path pending selector. Source-signature-preserving relabelings
+transport the declared bridge fields; certificate deletion, stable-partition
+deletion, \(\mathrm{RR}_E\) collapse, target/process substitution, cell
+degeneracy without source discriminator, and adoption/proof-authority overread
+fail closed.
+\end{quote}
+
+\section{Forbidden Conclusions}
+
+This packet does not allow:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology edit, canonical-ontology candidate status, or
+    source-law adoption;
+  \item source-extension data adoption beyond the exact RT-050 scoped gate
+    result;
+  \item matter-semantics adoption or detector-semantics adoption;
+  \item \(\MetricData(E)\) adoption;
+  \item \(\geff\) adoption, unscoped \(\geff\), or \(\geff\) scope expansion;
+  \item coupling-law adoption, matter-coupling derivation, or
+    matter-coupling adoption;
+  \item stress-energy semantics, stress-energy tensor, matter action, or
+    empirical calibration;
+  \item Einstein equations;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility or global theory rejection;
+  \item generated derivatives, validators, registries, roles, handoffs,
+    approvals, commits, local caches, semantic extracts, support checkers, or
+    file order as proof authority.
+\end{itemize}
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+Candidate Constructor Packet RT-20260630-052. (2026).
+\emph{MSStableMatterSemanticsBridge candidate v1} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260630-053. (2026).
+\emph{MSStableMatterSemanticsBridge smuggling audit v1} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+\end{document}

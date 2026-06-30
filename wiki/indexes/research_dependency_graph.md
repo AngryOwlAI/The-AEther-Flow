@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T22:45:00Z`
-- Source fingerprint: `d9d8095473d91bc46dd55e1d0735d91100f09343dd8c62587a4a65e9468cb38f`
-- Nodes: `8888`
-- Edges: `37689`
+- Generated from tracked state as of: `2026-06-30T23:04:39Z`
+- Source fingerprint: `b36d54e652b187ebb3b529183f04a2f6ab13b189303663fca640c3eec6a9a511`
+- Nodes: `8912`
+- Edges: `37796`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 541 |
+| `completion_yaml` | 542 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 405 |
+| `handoff_yaml` | 406 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 541 |
+| `agent_job` | `support_only` | 542 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4474 |
+| `artifact` | `support_only` | 4488 |
 | `blocked_burden` | `blocked` | 1020 |
-| `claim_boundary` | `support_only` | 542 |
-| `draft_control_candidate` | `draft_control` | 424 |
+| `claim_boundary` | `support_only` | 543 |
+| `draft_control_candidate` | `draft_control` | 427 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
-| `frozen_negative` | `frozen_negative` | 89 |
+| `frozen_negative` | `frozen_negative` | 90 |
 | `gate_chair_verdict` | `human_gated` | 26 |
-| `handoff` | `support_only` | 405 |
-| `human_gated_object` | `human_gated` | 249 |
+| `handoff` | `support_only` | 406 |
+| `human_gated_object` | `human_gated` | 250 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 235 |
+| `source_ontology_object` | `support_only` | 236 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 490 |
+| `task` | `support_only` | 491 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-053`
-- Latest handoff: `handoff-0405`
-- Handoff path: `research_control/handoffs/handoff-0405.yaml`
-- Next action: Run one bounded refuter@0.2.0 packet to stress-test MSStableMatterSemanticsBridge_v1(E;B_current) under source relabeling, finite variation, certificate deletion, RR_E pressure-pair collapse, target-grammar-name pressure, stable-partition deletion, cell degeneracy, fail-closed behavior, matter-semantics adoption pressure, coupling-law pressure, g_eff scope pressure, support-only proof-authority pressure, and process-authority laundering pressure. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond the exact RT-050 scoped result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-054`
+- Latest handoff: `handoff-0406`
+- Handoff path: `research_control/handoffs/handoff-0406.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 packet to decide the post-stress route for MSStableMatterSemanticsBridge_v1(E;B_current) before any Gate Chair evidence-status review, repair packet, scoped obstruction or freeze, matter-coupling precondition packet, coupling-law target formalization, Einstein-equation route, benchmark-promotion route, or promotion work. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond the exact RT-050 scoped result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
