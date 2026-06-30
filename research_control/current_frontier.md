@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-057` and `handoff-0352`.
+`RT-20260630-001` and `handoff-0353`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-057` |
-| Latest handoff ID | `handoff-0352` |
-| Current status | `v12_ontology_law_matter_semantics_candidate_law_stress_scoped_obstruction_pending_selector_no_adoption` |
-| Current route family | v12 ontology law matter semantics candidate law stress to selector |
+| Active task ID | `RT-20260630-001` |
+| Latest handoff ID | `handoff-0353` |
+| Current status | `v12_ontology_law_matter_semantics_candidate_law_post_stress_selector_routes_to_repair_construction_no_adoption` |
+| Current route family | v12 ontology law matter semantics candidate law repair construction |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | Selector classification after Refuter stress of proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload only |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 transaction to choose the post-stress route for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload among repair construction stronger scoped obstruction human-gated review precondition or invalid-under-claim-boundary repair before any Gate Chair adoption or matter-coupling route. |
+| Required next authority | Candidate Constructor repair construction or precise obstruction for proposal-only MatSrcDiscLaw_v1 / SemMatter_src only |
+| Next recommended action | Run one bounded candidate-constructor@0.2.0 transaction under ontology-law-research-packet to attempt source-intrinsic non-bottom instantiation and source-defined label transport for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src payload, or return a precise obstruction without adoption or promotion. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-057/00_TASK.yaml`.
-- Active task objective: Stress the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload under source relabeling finite variation bottom collapse explicit-label collapse non-bottom-label erasure target-matter-name substitution detector-outcome pressure stress-energy-action substitution target-metric scope pressure support-only proof_authority=false erasure and adoption-laundering pressure without adoption or promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0352.yaml`.
-- Latest handoff summary: RT-20260629-057 Refuter packet completed. It stress-tested the proposal-only MatSrcDiscLaw_v1 / SemMatter_src payload and found a current-basis scoped obstruction to adoption-readiness with no adoption or promotion.
-- Current route family: v12 ontology law matter semantics candidate law stress to selector.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 transaction to choose the post-stress route for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload among repair construction stronger scoped obstruction human-gated review precondition or invalid-under-claim-boundary repair before any Gate Chair adoption or matter-coupling route.
+- Active task path: `research_control/tasks/RT-20260630-001/00_TASK.yaml`.
+- Active task objective: Classify the RT-20260629-057 post-stress result for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload and select exactly one next lawful packet.
+- Latest handoff path: `research_control/handoffs/handoff-0353.yaml`.
+- Latest handoff summary: RT-20260630-001 completed one bounded Theoretical Continuation Selector packet. It classified the RT-057 scoped obstruction and selected one Candidate Constructor repair-construction packet under ontology-law-research-packet with no adoption or promotion.
+- Current route family: v12 ontology law matter semantics candidate law repair construction.
+- Next recommended action: Run one bounded candidate-constructor@0.2.0 transaction under ontology-law-research-packet to attempt source-intrinsic non-bottom instantiation and source-defined label transport for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src payload, or return a precise obstruction without adoption or promotion.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 transaction to choose the post-stress route for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload among repair construction stronger scoped obstruction human-gated review precondition or invalid-under-claim-boundary repair before any Gate Chair adoption or matter-coupling route.
+Run one bounded candidate-constructor@0.2.0 transaction under ontology-law-research-packet to attempt source-intrinsic non-bottom instantiation and source-defined label transport for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src payload, or return a precise obstruction without adoption or promotion.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-057`;
-- latest handoff: `handoff-0352`;
-- current status: `v12_ontology_law_matter_semantics_candidate_law_stress_scoped_obstruction_pending_selector_no_adoption`;
+- active task: `RT-20260630-001`;
+- latest handoff: `handoff-0353`;
+- current status: `v12_ontology_law_matter_semantics_candidate_law_post_stress_selector_routes_to_repair_construction_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0352.yaml`
-- `research_control/tasks/RT-20260629-057/00_TASK.yaml`
+- `research_control/handoffs/handoff-0353.yaml`
+- `research_control/tasks/RT-20260630-001/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0352*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0353*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
