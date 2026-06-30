@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T16:18:42Z`
-- Source fingerprint: `fe84bc2980693e7f9ee90cfc960b74154546380a3fa8298925c54df59eed4873`
-- Nodes: `8496`
-- Edges: `35967`
+- Generated from tracked state as of: `2026-06-30T16:33:01Z`
+- Source fingerprint: `f792fdf3d6ff221f6b74794c778f65b7875936cf724fee9e8c47cfaa729fb832`
+- Nodes: `8519`
+- Edges: `36070`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 525 |
+| `completion_yaml` | 526 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 389 |
+| `handoff_yaml` | 390 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 525 |
+| `agent_job` | `support_only` | 526 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4249 |
-| `blocked_burden` | `blocked` | 984 |
-| `claim_boundary` | `support_only` | 526 |
-| `draft_control_candidate` | `draft_control` | 391 |
+| `artifact` | `support_only` | 4263 |
+| `blocked_burden` | `blocked` | 985 |
+| `claim_boundary` | `support_only` | 527 |
+| `draft_control_candidate` | `draft_control` | 394 |
 | `draft_control_candidate` | `proposal_only` | 58 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 86 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 389 |
+| `handoff` | `support_only` | 390 |
 | `human_gated_object` | `human_gated` | 239 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 223 |
+| `source_ontology_object` | `support_only` | 224 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 474 |
+| `task` | `support_only` | 475 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-037`
-- Latest handoff: `handoff-0389`
-- Handoff path: `research_control/handoffs/handoff-0389.yaml`
-- Next action: Run one bounded candidate-constructor@0.2.0 ontology-law packet to attempt construction or precise obstruction for MSIrrelLaw_v1 / MSSemanticsQuotient_v1 over the RT-035 C_plus and C_minus pressure pair before any audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route.
+- Active task: `RT-20260630-038`
+- Latest handoff: `handoff-0390`
+- Handoff path: `research_control/handoffs/handoff-0390.yaml`
+- Next action: Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 for hidden target imports overcollapse certificate misuse and proof-authority smuggling before any Refuter stress adoption matter-coupling Einstein-equation benchmark or promotion route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

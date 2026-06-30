@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-037` and `handoff-0389`.
+`RT-20260630-038` and `handoff-0390`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-037` |
-| Latest handoff ID | `handoff-0389` |
-| Current status | `v12_p7_t03_repair_msirrel_target_formalized_no_adoption_no_promotion` |
-| Current route family | v12 p7 t03 repair msirrel target formalized route to construction or obstruction |
+| Active task ID | `RT-20260630-038` |
+| Latest handoff ID | `handoff-0390` |
+| Current status | `v12_p7_t03_repair_msirrel_quotient_candidate_constructed_no_adoption_no_promotion` |
+| Current route family | v12 p7 t03 repair msirrel quotient candidate route to audit |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_target_formalization_only |
-| Required next authority | one candidate-constructor@0.2.0 draft/control ontology-law construction-or-obstruction packet over MSIrrelLaw_v1 / MSSemanticsQuotient_v1 and the RT-035 C_plus C_minus pressure pair |
-| Next recommended action | Run one bounded candidate-constructor@0.2.0 ontology-law packet to attempt construction or precise obstruction for MSIrrelLaw_v1 / MSSemanticsQuotient_v1 over the RT-035 C_plus and C_minus pressure pair before any audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route. |
+| Current burden | `matter_coupling`; status: unchanged_candidate_construction_only |
+| Required next authority | one smuggling-auditor@0.2.0 draft/control ontology-law audit packet over MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 |
+| Next recommended action | Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 for hidden target imports overcollapse certificate misuse and proof-authority smuggling before any Refuter stress adoption matter-coupling Einstein-equation benchmark or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-037/00_TASK.yaml`.
-- Active task objective: Complete one bounded ontology-law research packet by formalizing a draft/control source-side MSIrrelLaw_v1-centered readout/response irrelevance or quotient target after MSDISC-P7REPAIR-001.
-- Latest handoff path: `research_control/handoffs/handoff-0389.yaml`.
-- Latest handoff summary: RT-20260630-037 formalized a draft/control MSIrrelLaw_v1-centered source-side readout/response irrelevance or quotient target after MSDISC-P7REPAIR-001. The packet defines MSIrrelTarget_v1, proposal-only MSIrrelLaw_v1, adjacent ordering/response-semantics/quotient target families, certificate-preservation obligations, fail-closed pressure-pair conditions, and no-target-import guards. It creates no source-law adoption, no source-extension data adoption, no MetricData(E), no g_eff scope change, no coupling law, no matter coupling, no stress-energy semantics, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
-- Current route family: v12 p7 t03 repair msirrel target formalized route to construction or obstruction.
-- Next recommended action: Run one bounded candidate-constructor@0.2.0 ontology-law packet to attempt construction or precise obstruction for MSIrrelLaw_v1 / MSSemanticsQuotient_v1 over the RT-035 C_plus and C_minus pressure pair before any audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route.
+- Active task path: `research_control/tasks/RT-20260630-038/00_TASK.yaml`.
+- Active task objective: Complete one bounded candidate-constructor@0.2.0 ontology-law packet by attempting construction or precise obstruction for MSIrrelLaw_v1 / MSSemanticsQuotient_v1 over the RT-035 C_plus and C_minus pressure pair.
+- Latest handoff path: `research_control/handoffs/handoff-0390.yaml`.
+- Latest handoff summary: RT-20260630-038 constructed MSCertFiberQuot_v1 a finite/local proposal-only source-side certificate-fiber quotient candidate for the RT-035 C_plus and C_minus pressure pair. The quotient identifies the pair by shared source support probe-token family and no-target certificate bundle while treating readout and response-marker differences as uninterpreted source bookkeeping inside the bounded fiber. It creates no source-law adoption no source-extension data adoption no MetricData(E) no g_eff scope change no coupling law no matter coupling no stress-energy semantics no detector semantics no matter action no Einstein equations no benchmark promotion and no completed derivation.
+- Current route family: v12 p7 t03 repair msirrel quotient candidate route to audit.
+- Next recommended action: Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 for hidden target imports overcollapse certificate misuse and proof-authority smuggling before any Refuter stress adoption matter-coupling Einstein-equation benchmark or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded candidate-constructor@0.2.0 ontology-law packet to attempt construction or precise obstruction for MSIrrelLaw_v1 / MSSemanticsQuotient_v1 over the RT-035 C_plus and C_minus pressure pair before any audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion route.
+Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSCertFiberQuot_v1 / MSSemanticsQuotient_v1 for hidden target imports overcollapse certificate misuse and proof-authority smuggling before any Refuter stress adoption matter-coupling Einstein-equation benchmark or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,13 +143,13 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-037`;
-- latest handoff: `handoff-0389`;
-- current status: `v12_p7_t03_repair_msirrel_target_formalized_no_adoption_no_promotion`;
+- active task: `RT-20260630-038`;
+- latest handoff: `handoff-0390`;
+- current status: `v12_p7_t03_repair_msirrel_quotient_candidate_constructed_no_adoption_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `formalizer_completed`: PASS;
+- latest handoff validation `candidate_constructor_completed`: PASS;
 - latest handoff validation `no_claim_promotion`: PASS;
 - latest handoff validation `no_gate_chair_authority`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0389.yaml`
-- `research_control/tasks/RT-20260630-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0390.yaml`
+- `research_control/tasks/RT-20260630-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0389*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0390*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

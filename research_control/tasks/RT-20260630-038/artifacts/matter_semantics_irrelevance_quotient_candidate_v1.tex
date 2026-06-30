@@ -1,0 +1,213 @@
+\section*{Matter-Semantics Irrelevance Quotient Candidate v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control Candidate Constructor output for
+RT-20260630-038.  It attempts the construction-or-obstruction packet required
+by handoff-0389 after \(\mathrm{MSIrrelTarget}_{v1}\) formalized a
+source-side readout/response irrelevance or quotient target.  The result is a
+finite/local proposal-only source-extension candidate relation and quotient
+for the RT-035 pressure pair.  It is not an adopted source law, not adopted
+source-extension data, not a canonical-ontology candidate, and not a proof of
+matter coupling.  It does not edit canonical ontology, adopt
+\(\mathrm{MetricData}(E)\), adopt or expand \(g_{\mathrm{eff}}\), adopt a
+coupling law, derive or adopt matter coupling, import stress-energy
+semantics, construct a stress-energy tensor, import detector semantics,
+import a matter action, derive Einstein equations, promote benchmark status,
+issue a Gate Chair verdict, claim completed derivation, prove future
+source-extension impossibility, or reject the global theory.
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MSAdm}{\mathrm{MSAdm}_{v1}}
+\newcommand{\MSIrrel}{\mathrm{MSIrrelLaw}_{v1}}
+\newcommand{\MSQuot}{\mathrm{MSSemanticsQuotient}_{v1}}
+\newcommand{\MSCertEq}{\sim_{\mathrm{MSCert},E}}
+\newcommand{\MSCertQuot}{\mathrm{MSCertFiberQuot}_{v1}}
+\newcommand{\MSFail}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\section{Construction Question}
+
+For the RT-035 pressure pair \(C_+,C_-\in \MSAdm(E;\Bcur)\), construct a
+source-side relation, quotient projection, or precise obstruction satisfying
+the RT-037 target obligations:
+\[
+  C_+ \mathrel{\MSCertEq} C_-,
+  \qquad
+  \pi^{\mathrm{cert}}_E(C_+)=\pi^{\mathrm{cert}}_E(C_-),
+\]
+or fail closed as \(\MSFail\), without target metric, detector,
+stress-energy, matter-action, benchmark, Einstein-equation, validation,
+registry, role, approval, commit, generated-derivative, local-cache, or file
+order premises.
+
+\section{Finite Certificate-Fiber Domain}
+
+\begin{definition}[Certificate fiber]
+Let \(C_0=C_+\).  The finite certificate fiber
+\[
+  \mathcal F_{\Gamma}(C_0;E,\Bcur)\subset \MSAdm(E;\Bcur)
+\]
+contains exactly those admissible records \(C=(S_E,P_E,R_E,Q_E,\Gamma_E)\)
+whose source support \(S_E\), probe-token family \(P_E\), and no-target
+certificate bundle \(\Gamma_E\) agree with \(C_0\), or are transported from
+\(C_0\) by an explicit source-side identity transport of the certificate
+bundle.  The fiber ignores no certificates: \(\NoDetector\), \(\NoSE\),
+\(\NoAction\), and \(\NoTarget\) must remain present and unchanged.
+\end{definition}
+
+\begin{definition}[Certificate-fiber relation]
+For \(C_1,C_2\in\MSAdm(E;\Bcur)\), define
+\[
+  C_1 \mathrel{\MSCertEq} C_2
+\]
+if and only if both records are in \(\mathcal F_{\Gamma}(C_0;E,\Bcur)\) and
+their source support, probe-token family, and no-target certificate bundle
+agree or are related by the explicit identity transport above.  The relation
+does not compare target detector readouts, target stress-energy semantics,
+matter actions, target metric structure, proper time, benchmark behavior, or
+Einstein-equation premises.  The readout values \(R_E\) and response markers
+\(Q_E\) are treated only as uninterpreted source bookkeeping labels inside
+this finite certificate fiber.
+\end{definition}
+
+\begin{definition}[Quotient projection]
+Define
+\[
+  \pi^{\mathrm{cert}}_E:\MSAdm(E;\Bcur)\to
+  \mathcal F_{\Gamma}(C_0;E,\Bcur)/{\MSCertEq}\cup\{\bot\}
+\]
+by sending records in the certificate fiber to their \(\MSCertEq\)-class and
+sending all records outside the stated fiber to \(\bot\).  Define
+\(D^q_E(C)=\pi^{\mathrm{cert}}_E(C)\) on the same domain.  This is a quotient
+candidate, not a physical discriminator and not a coupling law.
+\end{definition}
+
+\section{Proof Checks}
+
+\begin{proposition}[Equivalence on the finite fiber]
+\(\MSCertEq\) is reflexive, symmetric, and transitive on
+\(\mathcal F_{\Gamma}(C_0;E,\Bcur)\).
+\end{proposition}
+
+\paragraph{Proof.}
+Reflexivity follows because each record has the same support, probe-token
+family, and certificate bundle as itself.  Symmetry follows because equality
+and identity certificate transport are symmetric in this bounded fiber.
+Transitivity follows because equality and identity transport of \(S_E\),
+\(P_E\), and \(\Gamma_E\) compose inside the fiber.  No target metric,
+detector semantics, stress-energy semantics, matter action, benchmark
+behavior, or Einstein-equation premise is used.
+
+\begin{proposition}[Pressure-pair quotient]
+For the RT-035 pressure pair,
+\[
+  C_+ \mathrel{\MSCertEq} C_-,
+  \qquad
+  \pi^{\mathrm{cert}}_E(C_+)=\pi^{\mathrm{cert}}_E(C_-).
+\]
+\end{proposition}
+
+\paragraph{Proof.}
+RT-035 records \(C_+\) and \(C_-\) with the same source support \(S_E\), the
+same probe-token family \(P_E\), and the same no-target certificate bundle
+\(\Gamma_0\).  They differ only in source readout values and response-marker
+syntax.  By definition of \(\MSCertEq\), such records lie in the same
+certificate fiber and are identified by the quotient projection.
+
+\begin{proposition}[Certificate preservation and fail-closed boundary]
+If \(C_1\mathrel{\MSCertEq}C_2\), the no-target certificate bundle is
+preserved.  If either record falls outside the declared certificate fiber,
+\(\pi^{\mathrm{cert}}_E\) returns \(\bot\).
+\end{proposition}
+
+\paragraph{Proof.}
+Certificate-bundle equality or explicit identity transport is a defining
+condition of \(\MSCertEq\).  Records outside the fiber do not satisfy the
+domain predicate and are mapped to \(\bot\) by definition.
+
+\section{Candidate Status}
+
+The constructed object is:
+\[
+  \MSCertQuot(E;\Bcur,C_0)=
+  \left(\mathcal F_{\Gamma}(C_0;E,\Bcur),\MSCertEq,
+  \pi^{\mathrm{cert}}_E,D^q_E\right).
+\]
+It is a proposal-only bounded source-side candidate for the
+\(\MSQuot\)-family named by RT-037.  It is not a theorem that the current
+ontology derives \(\MSIrrel\).  It is not source-law adoption and not adopted
+source-extension data.  The current ontology still does not derive a general
+readout/response semantics law; this packet supplies one finite/local
+candidate quotient for audit and stress.
+
+\section{No-Fog Result}
+
+The decisive result is \(\mathsf{constructed\_candidate}\).  The constructed
+candidate is the finite certificate-fiber quotient
+\(\MSCertQuot(E;\Bcur,C_+)\).  It collapses \(C_+\) and \(C_-\) because their
+support, probe tokens, and no-target certificate bundle agree, and it fails
+closed outside that fiber.  The next required role is Smuggling Auditor,
+because the candidate must be tested for hidden target import, over-collapse
+of source semantics, and certificate misuse before any Refuter stress or
+human-gated adoption question.
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}
+  \item Source ontology primitives: unchanged; no canonical ontology edit.
+  \item Source equivalence EqSrc: unchanged; no general EqSrc theorem.
+  \item RetainH and GenH: unchanged.
+  \item ObsLoc\(_{lc}\): unchanged.
+  \item Resp\(_{lc}\): scoped source-extension context retained only.
+  \item \(M_{\mathrm{src}}\): scoped source-only context retained; no scope
+    expansion.
+  \item \(\mathrm{MetricData}(E)\): not adopted.
+  \item \(g_{\mathrm{eff}}\): scoped context retained; no adoption or scope
+    expansion.
+  \item Matter coupling: finite/local quotient candidate constructed for
+    source-side bookkeeping only; no matter coupling is derived or adopted.
+  \item Einstein equations: blocked; no field-equation derivation.
+  \item Finite-variation robustness: unchanged; no global theorem.
+  \item Benchmark promotion: blocked; no benchmark promotion.
+  \item Gate Chair status: no verdict requested or issued.
+  \item Current route freeze or hard-fail status: not frozen; smuggling audit
+    and Refuter stress remain required before any adoption route.
+\end{itemize}
+
+\section{Forbidden Conclusions}
+
+This artifact does not license any of the following:
+\begin{enumerate}
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption;
+  \item source-extension data adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics or stress-energy tensor construction;
+  \item detector semantics;
+  \item matter action;
+  \item Einstein-equation derivation;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global theory rejection.
+\end{enumerate}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+discriminator nonuniqueness obstruction v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+discriminator follow-up selector v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+readout/response irrelevance target v1} [Internal control artifact].
