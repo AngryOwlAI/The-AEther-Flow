@@ -312,6 +312,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-063/artifacts/104_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-062/artifacts/103_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
+- `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-CANDIDATE` `research_control/tasks/RT-20260630-009/artifacts/matter_coupling_precondition_assembly_candidate_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-TARGET` `research_control/tasks/RT-20260630-008/artifacts/matter_coupling_precondition_assembly_target_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-PAYLOAD` `research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex`
@@ -864,6 +865,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-refuter-stress-test.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-SMUGGLING-AUDIT` `wiki/tex/tex-research-control-resp-lc-source-extension-m-src-bridge-smuggling-audit.md`
 - `WIKI-TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `wiki/tex/tex-research-control-resp-lc-source-side-selector-no-go-theorem-refuter-stress-test.md`
+- `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-CANDIDATE` `wiki/tex/tex-v12-ontology-law-matter-coupling-precondition-assembly-candidate.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-TARGET` `wiki/tex/tex-v12-ontology-law-matter-coupling-precondition-assembly-target.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-PAYLOAD` `wiki/tex/tex-v12-ontology-law-matter-semantics-candidate-law-payload.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-REFUTER-STRESS` `wiki/tex/tex-v12-ontology-law-matter-semantics-candidate-law-refuter-stress.md`

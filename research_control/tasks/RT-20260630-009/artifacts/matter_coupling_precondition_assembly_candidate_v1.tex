@@ -1,0 +1,401 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\ParamWitness}{\mathrm{ParamFiniteLocalWitness}_{v1}}
+\newcommand{\BridgeSlot}{\mathrm{BridgeSlot}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\MCPA}{\mathrm{MatterCouplingPreconditionAssembly}_{v1}}
+\newcommand{\PreCoupAsm}{\mathrm{PreCouplingAssembly}}
+\newcommand{\MCPACand}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\WitSlot}{\mathrm{WitSlot}}
+\newcommand{\SigRec}{\mathrm{SigRec}}
+\newcommand{\CompCert}{\mathrm{CompCert}}
+\newcommand{\PreAsmRec}{\mathrm{PreAssemblyRec}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Matter-Coupling Precondition Assembly Candidate v1}
+\author{Candidate Constructor Packet RT-20260630-009}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260630-009}. It constructs one proposal-only source-side
+candidate, denoted
+\[
+  \MCPACand(E),
+\]
+against the target \(\MCPA(E)\) formalized in
+\texttt{RT-20260630-008}.
+
+The candidate uses scoped \(\MatSigDisc(E) / \SemMatterSig(E)\) and scoped
+\(\ParamWitness(E) / \BridgeSlot_n(E) / \NoTargetImport_n\) only as
+evidence/precondition ledgers. It constructs a pre-coupling assembly relation
+between witness slots and matter-signature records through explicit
+source-local compatibility certificates.
+
+This artifact does not edit canonical ontology, adopt a source law, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt \(\MatSigDisc\), adopt
+\(\SemMatterSig\) as canonical semantics, adopt \(\MetricData(E)\), change
+the scope of \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import detector semantics, import or define a matter action, derive Einstein
+equations, promote benchmark status, issue a benchmark Gate Chair verdict,
+claim completed derivation, claim future source-extension impossibility, or
+reject the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control Matter-Coupling Precondition Assembly Candidate v1"
+candidate_name: "MCPA^cand_v1(E)"
+candidate_constructor_result.result_type: "constructed_candidate"
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+MatterSignatureDisc_src_cand_adopted: false
+SemMatter_src_sig_cand_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Candidate Source Package}
+
+\begin{definition}[Witness-slot record]
+A witness-slot record over a source context \(E\) is a tuple
+\[
+  w=(b,\lambda_W,U_W,n_W)
+\]
+where \(b\) is a declared \(\BridgeSlot_n(E)\), \(\lambda_W\) is its
+source-side witness label, \(U_W\subset F_E^\sharp\) is a finite/local source
+support, and \(n_W\in\mathcal{N}_E\) is a no-target-import certificate
+attached to the slot.
+\end{definition}
+
+\begin{definition}[Matter-signature record]
+A matter-signature record over \(E\) is a tuple
+\[
+  s=(d,\lambda_S,U_S,n_S)
+\]
+where \(d\) is a scoped \(\MatSigDisc(E) / \SemMatterSig(E)\) record,
+\(\lambda_S\) is its source-side signature label, \(U_S\subset F_E^\sharp\)
+is a finite/local source support, and \(n_S\in\mathcal{N}_E\) is a
+no-target-import certificate attached to the record.
+\end{definition}
+
+\begin{definition}[Compatibility certificate]
+A compatibility certificate is a source-side tuple
+\[
+  c=(w,s,U_c,\chi_c,n_c)
+\]
+with \(w\in\WitSlot_E\), \(s\in\SigRec_E\), finite/local support
+\(U_c\subset F_E^\sharp\), a source-only predicate value
+\(\chi_c=\mathsf{match}\), and a no-target-import certificate
+\(n_c\in\mathcal{N}_E\). The predicate \(\chi_c\) may inspect only declared
+source labels, source supports, and scoped evidence/precondition ledgers. It
+may not inspect a target atlas, target metric, Lorentzian signature, proper
+time, stress-energy tensor, detector protocol, empirical calibration, matter
+action, benchmark fit, or Einstein-equation premise.
+\end{definition}
+
+\begin{definition}[Candidate package]
+The candidate source package is
+\[
+  \mathcal{D}^{\mathrm{cand}}_E =
+  (E,F_E^\sharp,\WitSlot_E,\SigRec_E,\CompCert_E,\mathcal{R}_E,
+   \mathcal{V}_E,\mathcal{N}_E).
+\]
+It is a refinement of the target domain \(\mathcal{D}^{\mathrm{MCPA}}_E\)
+that replaces the abstract matching ledger with explicit compatibility
+certificates. The ledgers \(\WitSlot_E\) and \(\SigRec_E\) remain
+evidence/precondition ledgers only.
+\end{definition}
+
+\section{Candidate Map}
+
+\begin{definition}[Pre-assembly record]
+A pre-assembly record is a tuple
+\[
+  a=(w,s,c,U_a,q_a)
+\]
+where \(w\in\WitSlot_E\), \(s\in\SigRec_E\), \(c\in\CompCert_E\) certifies
+\((w,s)\), \(U_a=U_W\cup U_S\cup U_c\), and
+\[
+  q_a\in
+  \{\mathsf{pre\text{-}coupling\text{-}only},
+    \mathsf{repair\text{-}needed},
+    \BottomSrc\}.
+\]
+The quality tag \(\mathsf{pre\text{-}coupling\text{-}only}\) is a source
+precondition tag. It is not a physical matter tag.
+\end{definition}
+
+\begin{definition}[Matter-coupling precondition assembly candidate]
+The candidate relation
+\[
+  \mathcal{A}^{\mathrm{cand}}_E:
+  \mathcal{D}^{\mathrm{cand}}_E \dashrightarrow \PreCoupAsm_E
+\]
+is defined as follows.
+
+\begin{enumerate}[label=\textup{(\alph*)}]
+  \item If \(\mathcal{D}^{\mathrm{cand}}_E\), \(\PreCoupAsm_E\),
+  \(\WitSlot_E\), \(\SigRec_E\), or \(\CompCert_E\) is absent, return the
+  corresponding fail-closed label
+  \(\mathrm{OB\text{-}MCPA\text{-}SOURCE\text{-}DOMAIN\text{-}MISSING}\),
+  \(\mathrm{OB\text{-}MCPA\text{-}PRECOUPLING\text{-}CODOMAIN\text{-}MISSING}\),
+  or
+  \(\mathrm{OB\text{-}MCPA\text{-}WITNESS\text{-}SIGNATURE\text{-}MISMATCH}\).
+  \item If any certificate tries to use forbidden target or process authority,
+  return \(\mathrm{OB\text{-}MCPA\text{-}TARGET\text{-}IMPORT}\) or
+  \(\mathrm{OB\text{-}MCPA\text{-}EVIDENCE\text{-}AS\text{-}ADOPTION}\).
+  \item Otherwise define \(A_E^{\mathrm{cand}}\) to be the set of all
+  records \(a=(w,s,c,U_W\cup U_S\cup U_c,
+  \mathsf{pre\text{-}coupling\text{-}only})\) such that
+  \(c=(w,s,U_c,\mathsf{match},n_c)\in\CompCert_E\) and
+  \(n_W,n_S,n_c\) all pass.
+\end{enumerate}
+
+The output is the pre-coupling assembly family whose assembled set is
+\(A_E^{\mathrm{cand}}\), whose locality ledger is the family of supports
+\(U_a\), whose matching ledger records the certificates \(c\), whose
+no-target-import ledger records \(n_W,n_S,n_c\), and whose obstruction ledger
+is the target label family from \(\MCPA(E)\).
+\end{definition}
+
+\section{Finite/Local Nonempty Witness}
+
+\begin{definition}[Finite witness \(E_\diamond\)]
+Let \(E_\diamond\) be a finite source context with one finite/local support
+token \(u_0\in F_{E_\diamond}^\sharp\). Declare one witness-slot record
+\[
+  w_0=(b_0,\lambda_W^0,\{u_0\},n_W^0),
+\]
+one matter-signature record
+\[
+  s_0=(d_0,\lambda_S^0,\{u_0\},n_S^0),
+\]
+and one compatibility certificate
+\[
+  c_0=(w_0,s_0,\{u_0\},\mathsf{match},n_c^0).
+\]
+The certificates \(n_W^0,n_S^0,n_c^0\) state only that no target topology,
+target atlas, target metric, Lorentzian signature, proper time,
+stress-energy tensor, detector semantics, empirical calibration, matter
+action, benchmark fit, Einstein equations, generated derivative, registry
+metadata, validator result, role authority, handoff status, approval status,
+local cache state, file order, or commit status is a premise.
+\end{definition}
+
+\begin{proposition}[Nonempty pre-coupling assembly witness]
+For \(E_\diamond\), \(\mathcal{A}^{\mathrm{cand}}_{E_\diamond}\) returns the
+nonempty source-side pre-assembly record
+\[
+  a_0=(w_0,s_0,c_0,\{u_0\},\mathsf{pre\text{-}coupling\text{-}only}).
+\]
+\end{proposition}
+
+\begin{proof}
+All three required records are declared. Their supports are finite and equal
+to \(\{u_0\}\). The compatibility certificate \(c_0\) names \(w_0\) and
+\(s_0\), gives the source-only predicate value \(\mathsf{match}\), and
+attaches a no-target-import certificate. The candidate definition therefore
+enters case (c) and includes \(a_0\). No target or process-authority premise
+is used.
+\end{proof}
+
+\section{Naturality And Finite Variation}
+
+\begin{definition}[Source relabeling transport]
+For a source relabeling \(\rho:E\to E'\), suppose \(\rho\) transports supports
+by \(U\mapsto \rho U\), witness slots by \(w\mapsto \rho w\), signature
+records by \(s\mapsto \rho s\), and compatibility certificates by
+\[
+  (w,s,U_c,\mathsf{match},n_c)
+  \mapsto
+  (\rho w,\rho s,\rho U_c,\mathsf{match},\rho n_c).
+\]
+Define
+\[
+  \rho_*(w,s,c,U_a,q_a)
+  =
+  (\rho w,\rho s,\rho c,\rho U_a,q_a).
+\]
+\end{definition}
+
+\begin{proposition}[Source-side naturality]
+When \(\rho\) transports the candidate package as above and preserves
+certificate pass/fail values, then
+\[
+  \rho_*\bigl(\mathcal{A}^{\mathrm{cand}}_E(\mathcal{D}^{\mathrm{cand}}_E)\bigr)
+  =
+  \mathcal{A}^{\mathrm{cand}}_{E'}(\rho\mathcal{D}^{\mathrm{cand}}_E).
+\]
+\end{proposition}
+
+\begin{proof}
+Both sides enumerate exactly the transported compatibility certificates with
+predicate value \(\mathsf{match}\) and passed no-target-import certificates.
+The support union operation commutes with \(\rho\) by definition:
+\(\rho(U_W\cup U_S\cup U_c)=\rho U_W\cup\rho U_S\cup\rho U_c\). The quality
+tag is unchanged and remains pre-coupling-only.
+\end{proof}
+
+\begin{definition}[Finite-variation response]
+For each declared finite variation \(v\in\mathcal{V}_E\), the candidate has
+three allowed responses only:
+\[
+  \mathsf{stable},\qquad
+  \mathsf{source\text{-}local\text{-}repair},\qquad
+  \BottomSrc.
+\]
+The repair response may alter witness labels, signature labels, supports, or
+compatibility certificates only through declared source-local data. If a
+variation needs a target metric, stress-energy conservation law, detector
+calibration, matter action, benchmark fit, or Einstein-equation premise, the
+candidate returns
+\(\mathrm{OB\text{-}MCPA\text{-}FINITE\text{-}VARIATION\text{-}FAIL}\).
+\end{definition}
+
+\section{Target-Condition Check}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Target condition & Candidate satisfaction record \\
+\midrule
+MCPA-TGT-001 & Inputs are witness slots, signature records, compatibility certificates, supports, source relabelings, finite variations, and no-target-import certificates. \\
+MCPA-TGT-002 & Witness and signature ledgers are kept separate; a match is an eligibility precondition only. \\
+MCPA-TGT-003 & Each output names \(w\), \(s\), and \(c\). Missing \(c\) fails closed. \\
+MCPA-TGT-004 & Dependence is through \(U_W\), \(U_S\), and \(U_c\), all finite/local source supports. \\
+MCPA-TGT-005 & The transport \(\rho_*\) commutes with the candidate relation when source relabeling transports certificates. \\
+MCPA-TGT-006 & Finite variations have stable, source-local-repair, or fail-closed responses only. \\
+MCPA-TGT-007 & Certificates explicitly exclude target objects and process-authority premises. \\
+MCPA-TGT-008 & Failure modes return the target obstruction label family and do not import forbidden repairs. \\
+\bottomrule
+\end{longtable}
+
+\section{Candidate Eligibility Theorem}
+
+\begin{theorem}[Candidate construction without matter-coupling adoption]
+The relation \(\mathcal{A}^{\mathrm{cand}}_E\) is a constructed
+draft/control candidate satisfying the \(\MCPA(E)\) target conditions only as
+a source-side pre-coupling assembly candidate. It is eligible for Smuggling
+Auditor review. It does not adopt a source law, adopt a coupling law, derive
+or adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import detector semantics, define a matter action,
+derive Einstein equations, promote benchmark status, or complete a GR
+derivation.
+\end{theorem}
+
+\begin{proof}
+The candidate's domain and codomain are source-side precondition records. The
+construction succeeds only by matching declared witness slots and
+matter-signature records through declared compatibility certificates. The
+finite witness proves nonempty pre-coupling output, not physical matter
+coupling. Naturality is source relabeling naturality, not target covariance.
+Finite-variation handling is source-local or fail-closed. The no-target-import
+certificates exclude the objects and authorities that would be required for
+stress-energy semantics, matter action, detector semantics, Einstein
+equations, benchmark promotion, or completed derivation. Hence the result is
+only an audit-pending constructed candidate.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc_lc & Prior source-localization context only. \\
+Resp_lc & Prior accepted response/localization context only. \\
+M_src & Prior scoped source-only context only; no new source ontology adoption or scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & A pre-coupling assembly candidate exists pending audit; matter coupling remains underived and unadopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Finite/local candidate behavior is stated; no global robustness theorem is supplied. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No Gate Chair packet; candidate must be audited first. \\
+Current route freeze or hard-fail status & Not frozen; Smuggling Auditor review is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-Conclusions}
+
+This candidate construction is not a canonical ontology edit, not source-law
+adoption, not \(\MatSrcDiscLaw\) adoption, not \(\SemMatterSrc\) adoption, not
+\(\MatSigDisc\) adoption, not \(\SemMatterSig\) adoption, not
+\(\MetricData(E)\) adoption, not \(\geff\) scope expansion, not coupling-law
+adoption, not matter-coupling derivation, not matter-coupling adoption, not
+stress-energy semantics, not a stress-energy tensor, not detector semantics,
+not matter action, not Einstein equations, not benchmark promotion, not a
+completed derivation, not future source-extension impossibility, and not
+global theory rejection.
+
+Generated derivatives, registries, validators, role contracts, handoffs,
+approvals, commits, local caches, file order, and support-only checker outputs
+remain support surfaces. They are not proof authority.
+
+\section{Next Route}
+
+The next bounded packet is a Smuggling Auditor review of
+\(\mathcal{A}^{\mathrm{cand}}_E\) for hidden target import,
+evidence-as-adoption laundering, stress-energy overread, detector overread,
+matter-action overread, downstream-promotion overread, and process-authority
+proof laundering. No Gate Chair route is requested by this packet.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0360}
+[Internal research-control handoff].
+
+Ontology Formalizer Packet RT-20260630-008. (2026).
+\emph{Matter-coupling precondition assembly target v1}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Gate Chair Packet RT-20260630-006. (2026). \emph{Matter-signature
+source-extension evidence Gate Chair review v1} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-269. (2026). \emph{Parameterized finite local
+source-family witness v1 source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}
