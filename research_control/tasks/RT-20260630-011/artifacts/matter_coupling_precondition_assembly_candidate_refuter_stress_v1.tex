@@ -1,0 +1,296 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\MCPACand}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\PreCoupAsm}{\mathrm{PreCouplingAssembly}}
+\newcommand{\WitSlot}{\mathrm{WitSlot}}
+\newcommand{\SigRec}{\mathrm{SigRec}}
+\newcommand{\CompCert}{\mathrm{CompCert}}
+\newcommand{\PreAsmRec}{\mathrm{PreAssemblyRec}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Matter-Coupling Precondition Assembly Candidate Refuter Stress v1}
+\author{Refuter Packet RT-20260630-011}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260630-011}. It
+stress-tests the proposal-only candidate constructed in \texttt{RT-20260630-009}
+and audited in \texttt{RT-20260630-010}:
+
+\begin{verbatim}
+research_control/tasks/RT-20260630-009/artifacts/
+matter_coupling_precondition_assembly_candidate_v1.tex
+
+research_control/tasks/RT-20260630-010/artifacts/
+matter_coupling_precondition_assembly_candidate_smuggling_audit_v1.tex
+\end{verbatim}
+
+The Refuter verdict is:
+
+\begin{verbatim}
+stress_result.result_type: "bridge_facing_candidate_path"
+source_extension_category: "source_extension_refuter_stress"
+source_extension_import_classification:
+  "MCPA cand v1 stress survived as draft/control pre-coupling candidate only"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+source_extension_data_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This stress packet does not edit canonical ontology, adopt a source law, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt \(\MatSigDisc\), adopt
+\(\SemMatterSig\), adopt source-extension data, adopt \(\MetricData(E)\),
+change the scope of \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, import detector semantics, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, claim future source-extension impossibility, or reject the global
+theory.
+
+\section{Stress Question}
+
+Does the audit-passed written candidate \(\MCPACand(E)\) collapse under
+certificate deletion, witness-signature mismatch, nonunique matching,
+match-predicate collapse, source relabeling, finite variation, target import
+pressure, evidence-as-adoption laundering, stress-energy overread, detector
+overread, matter-action overread, generated-authority laundering,
+process-authority laundering, or downstream-promotion pressure?
+
+Conclusion: the candidate survives these stresses only as a bridge-facing
+draft/control pre-coupling candidate path. The survival is not adoption. The
+destructive cases either fail closed, expose a missing source-side
+compatibility primitive, or produce noncanonical multiplicity that requires
+selector review.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.25\linewidth}p{0.24\linewidth}p{0.39\linewidth}}
+\toprule
+Stress & Result & Reason \\
+\midrule
+Certificate deletion & Fail closed & Removing \(\CompCert_E\) removes the source-side pairing premise. The nonempty output disappears or becomes an obstruction. \\
+Witness-signature mismatch & Fail closed & A certificate with endpoints outside \(\WitSlot_E\times\SigRec_E\) fails the domain condition. \\
+Nonunique matching & Noncanonical multiplicity & Multiple source-local certificates can produce multiple pre-assembly records, but no selector or canonical law is obtained. \\
+Match-predicate collapse & Missing primitive exposed & If \(\chi_c=\mathsf{match}\) is treated as a bare tag, the candidate reveals an undeclared source-side compatibility assumption. \\
+Source relabeling & Conditional survival & Naturality survives only when slots, signatures, certificates, supports, and no-target-import certificates are transported source-locally. \\
+Finite variation & Stable, source-local repair, or bottom & Declared variations may be stable, source-local repair, or \(\BottomSrc\); target repair is forbidden. \\
+Target import pressure & Blocked & Target atlas, target metric, Lorentzian signature, proper time, stress-energy, detector, matter-action, benchmark, and Einstein-equation premises are not available. \\
+Process authority pressure & Blocked & Generated derivatives, registries, validators, roles, handoffs, approvals, commits, file order, and local caches have no proof authority. \\
+\bottomrule
+\end{longtable}
+
+\section{Formal Stress Lemmas}
+
+\begin{lemma}[Certificate deletion is fail-closed]
+If the compatibility-certificate family \(\CompCert_E\) is deleted or made
+unavailable, \(\MCPACand(E)\) cannot return a positive nonempty pre-assembly
+record. It returns an obstruction, an empty family, or \(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+Every positive record in the written candidate has the form
+\[
+  a=(w,s,c,U_a,\mathsf{pre\text{-}coupling\text{-}only})
+\]
+with \(c=(w,s,U_c,\mathsf{match},n_c)\in\CompCert_E\). If
+\(\CompCert_E\) is absent, no such \(c\) exists. The candidate definition's
+missing-domain and mismatch branches therefore activate. No target or process
+premise can replace \(c\), because RT-010 audits those replacements as
+forbidden. Hence deletion fails closed.
+\end{proof}
+
+\begin{lemma}[Witness-signature mismatch is fail-closed]
+If a proposed certificate does not pair one declared witness-slot record with
+one declared matter-signature record, then it cannot witness a positive
+pre-assembly record.
+\end{lemma}
+
+\begin{proof}
+The candidate domain requires \(w\in\WitSlot_E\), \(s\in\SigRec_E\), and
+\(c=(w,s,U_c,\mathsf{match},n_c)\in\CompCert_E\). A mismatched certificate
+violates this domain condition. The written candidate names this as the
+\(\mathrm{OB\text{-}MCPA\text{-}WITNESS\text{-}SIGNATURE\text{-}MISMATCH}\)
+branch rather than as a positive assembly branch.
+\end{proof}
+
+\begin{lemma}[Nonunique matching is noncanonical]
+If several source-local certificates match the same witness slot and
+signature record, then the candidate may enumerate several pre-assembly
+records, but this multiplicity does not select a canonical source law or
+physical coupling law.
+\end{lemma}
+
+\begin{proof}
+The written candidate enumerates records certified by source-local
+compatibility certificates. It does not define an ordering, quotient,
+selection functional, or uniqueness theorem over \(\CompCert_E\). Therefore
+nonunique matching is at most a noncanonical multiplicity in the
+pre-coupling assembly ledger. Selector review is required before any stronger
+status could be requested.
+\end{proof}
+
+\begin{proposition}[Match-predicate collapse exposes the missing source law]
+If \(\mathsf{match}\) is reduced to an uninterpreted positive tag, the
+candidate becomes an explicit source-side compatibility assumption rather
+than a derived matter-coupling precondition law.
+\end{proposition}
+
+\begin{proof}
+The RT-009 candidate restricts \(\chi_c\) to source labels, source supports,
+and scoped evidence/precondition ledgers. The restriction blocks target
+import, but it does not by itself derive why \(\chi_c=\mathsf{match}\) must
+hold. If the predicate collapses to a bare tag, the packet exposes the current
+ontology's missing derivation-critical source-side compatibility law. That
+blocks adoption while preserving same-milestone continuation.
+\end{proof}
+
+\begin{lemma}[Source relabeling survives only under source-local transport]
+For a source relabeling \(\rho:E\to E'\), the candidate's relabeling
+compatibility survives only when \(\rho\) transports witness slots, signature
+records, compatibility certificates, supports, and no-target-import
+certificates by source-local rules.
+\end{lemma}
+
+\begin{proof}
+Under the transported package, both sides enumerate the transported
+certificates with passed no-target-import records, and support union commutes
+with \(\rho\). If any transported component is missing, or if a target atlas,
+target metric, detector protocol, stress-energy variable, matter action, or
+process-authority object is inserted as a replacement, the candidate enters a
+forbidden-import or fail-closed branch.
+\end{proof}
+
+\begin{proposition}[Finite variation permits no target repair]
+Declared finite variations of the candidate can be classified only as stable,
+source-local repair, or \(\BottomSrc\). A repair using target metric,
+stress-energy, detector, matter-action, benchmark, Einstein-equation, or
+process-authority information is forbidden.
+\end{proposition}
+
+\begin{proof}
+The RT-009 candidate's finite-variation responses are source-local. The
+RT-010 audit excludes target and process surfaces from the written candidate.
+Consequently a variation that cannot be stabilized or repaired by source-side
+records fails closed. Importing target or process material would construct a
+different, unaudited object.
+\end{proof}
+
+\section{Overread Refutations}
+
+\begin{proposition}[Stress survival is not adoption]
+The stress result is not source-law adoption, not source-extension data
+adoption, not \(\MetricData(E)\), not a \(\geff\) scope change, not a
+coupling law, not matter coupling, not stress-energy semantics, not detector
+semantics, not matter action, not Einstein equations, not benchmark
+promotion, and not a completed derivation.
+\end{proposition}
+
+\begin{proof}
+The positive result is limited to source-side pre-coupling candidate behavior
+under named stress branches. The candidate's codomain remains
+\(\PreCoupAsm_E\), and its positive tag remains
+\(\mathsf{pre\text{-}coupling\text{-}only}\). No matter action,
+stress-energy tensor, detector protocol, field equation, benchmark criterion,
+or Gate Chair verdict is defined. Control receipts and generated derivatives
+remain \(\ProofAuthFalse\) for scientific proof.
+\end{proof}
+
+\section{Distance-To-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Prior scoped source-only context only; no adoption or scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & Proposal-only pre-coupling assembly candidate stress survived pending selector; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Local candidate stress survived stated stable, source-local repair, and fail-closed branches; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict; future adoption remains human-gated. \\
+Current route freeze or hard-fail status & Not frozen; post-stress selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Allowed Conclusion}
+
+\begin{quote}
+The audit-passed proposal-only \(\MCPACand(E)\) candidate survives RT-011
+Refuter stress as a bridge-facing draft/control pre-coupling candidate path
+pending selector. Destructive branches fail closed, nonunique branches remain
+noncanonical, and predicate-collapse pressure exposes a missing source-side
+compatibility primitive. No adoption or downstream GR promotion follows.
+\end{quote}
+
+\section{Next Route}
+
+The next bounded route is a \texttt{theoretical-continuation-selector@0.1.0}
+packet to decide whether the post-stress candidate should proceed to a narrow
+Gate Chair evidence-status review, repair/minimization, additional
+obstruction work, or another bounded matter-coupling precondition packet.
+Selector review must precede any Gate Chair adoption request, source-law
+adoption, source-extension data adoption, coupling-law adoption,
+matter-coupling derivation, stress-energy semantics, detector semantics,
+matter action, Einstein-equation route, benchmark route, or completed
+derivation claim.
+
+\section{APA 7 References}
+
+Candidate Constructor Packet RT-20260630-009. (2026). \emph{Matter-coupling
+precondition assembly candidate v1} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+Smuggling Auditor Packet RT-20260630-010. (2026). \emph{Matter-coupling
+precondition assembly candidate smuggling audit v1} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0362}
+[Internal research-control handoff].
+
+\end{document}

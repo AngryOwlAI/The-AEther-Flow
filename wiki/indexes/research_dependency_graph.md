@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T05:05:33Z`
-- Source fingerprint: `1873805cae5071a416191f961330d70f5cf872f3e48ea2db285d2d312ac3089d`
-- Nodes: `7762`
-- Edges: `32714`
+- Generated from tracked state as of: `2026-06-30T05:37:12Z`
+- Source fingerprint: `c6e410873d4bcb9dd426770399bec67ffa6075a50f2384604f6365d9e0c67557`
+- Nodes: `7791`
+- Edges: `32848`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 498 |
+| `completion_yaml` | 499 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 362 |
+| `handoff_yaml` | 363 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 5 |
-| `agent_job` | `support_only` | 498 |
+| `agent_job` | `support_only` | 499 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3854 |
-| `blocked_burden` | `blocked` | 845 |
-| `claim_boundary` | `support_only` | 499 |
-| `draft_control_candidate` | `draft_control` | 355 |
+| `artifact` | `support_only` | 3868 |
+| `blocked_burden` | `blocked` | 850 |
+| `claim_boundary` | `support_only` | 500 |
+| `draft_control_candidate` | `draft_control` | 359 |
 | `draft_control_candidate` | `proposal_only` | 52 |
 | `draft_control_candidate` | `science_draft` | 31 |
-| `frozen_negative` | `frozen_negative` | 73 |
+| `frozen_negative` | `frozen_negative` | 74 |
 | `gate_chair_verdict` | `human_gated` | 23 |
-| `handoff` | `support_only` | 362 |
+| `handoff` | `support_only` | 363 |
 | `human_gated_object` | `human_gated` | 224 |
 | `ledger_row` | `accepted_scoped` | 3 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 19 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 209 |
+| `source_ontology_object` | `support_only` | 210 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 447 |
+| `task` | `support_only` | 448 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-010`
-- Latest handoff: `handoff-0362`
-- Handoff path: `research_control/handoffs/handoff-0362.yaml`
-- Next action: Run one bounded refuter@0.2.0 ontology-law-research-packet to stress the audit-passed proposal-only MCPA^cand_v1(E) candidate under certificate deletion, witness-signature mismatch, nonunique matching, match-predicate collapse, source relabeling, finite variation, target import pressure, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, generated-authority laundering, process-authority laundering, and downstream-promotion pressure. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-011`
+- Latest handoff: `handoff-0363`
+- Handoff path: `research_control/handoffs/handoff-0363.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for MCPA^cand_v1(E) before any Gate Chair adoption request, source-law adoption, source-extension data adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
