@@ -444,6 +444,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `wiki/markdown/md-director-agentjob-lifecycle-publication-brief.md`
 - `WIKI-MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `wiki/markdown/md-documentation-curator-publication-process-publication-brief.md`
 - `WIKI-MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md`
+- `WIKI-MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `wiki/markdown/md-external-red-team-review-artifact-schema.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-ontology-explainer.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-physics-program-explainer.md`
 - `WIKI-MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER` `wiki/markdown/md-github-facing-claim-gates-explainer.md`
@@ -583,6 +584,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `wiki/markdown/md-schema-director-decision-schema.md`
 - `WIKI-MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `wiki/markdown/md-schema-documentation-impact-schema.md`
 - `WIKI-MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `wiki/markdown/md-schema-execution-role-schema.md`
+- `WIKI-MD-SCHEMA-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `wiki/markdown/md-schema-external-red-team-review-artifact-schema.md`
 - `WIKI-MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `wiki/markdown/md-schema-physics-completion-decisiveness-schema.md`
 - `WIKI-MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA` `wiki/markdown/md-schema-project-improvement-handoff-schema.md`
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
@@ -914,6 +916,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AGENTS` `AGENTS.md`
 - `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
+- `MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `.agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md`
 - `MD-MISSING-SOURCE-LAW-INVENTORY` `research_control/missing_laws/missing_source_law_inventory.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-README` `README.md`
@@ -984,6 +987,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SCHEMA-DIRECTOR-DECISION-SCHEMA` `.agents/schemas/DIRECTOR_DECISION_SCHEMA.md`
 - `MD-SCHEMA-DOCUMENTATION-IMPACT-SCHEMA` `.agents/schemas/DOCUMENTATION_IMPACT_SCHEMA.md`
 - `MD-SCHEMA-EXECUTION-ROLE-SCHEMA` `.agents/schemas/EXECUTION_ROLE_SCHEMA.md`
+- `MD-SCHEMA-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `.agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md`
 - `MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`
 - `MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA` `.agents/schemas/PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md`
 - `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`

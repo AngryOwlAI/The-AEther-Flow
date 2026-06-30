@@ -1,0 +1,116 @@
+handoff_id: "handoff-0384"
+created_at: "2026-06-30T14:19:20Z"
+task_id: "RT-20260630-032"
+decision_id: "DDR-20260630-032"
+job_id: "AJ-RT-20260630-032-001"
+completion_path: "research_control/tasks/RT-20260630-032/jobs/completions/AJC-AJ-RT-20260630-032-001.yaml"
+source_task_id: "RT-20260630-032"
+source_job_id: "AJ-RT-20260630-032-001"
+source_completion_id: "AJC-AJ-RT-20260630-032-001"
+status: "completed"
+summary: "RT-20260630-032 completed one bounded P7-T02 external red-team review schema-validator packet. It added the artifact schema, validator script, fixtures, focused tests, and template alignment. The validator requires physics_promotion_authorized=false and rejects missing required fields and invalid verdicts."
+next_action: "Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict."
+loop_risk_route: "v12_p7_t02_schema_validator_completed_selects_p7_t03_pilot_external_red_team_review"
+claim_boundary:
+  allowed_next_scope: "P7-T03 pilot external red-team review only"
+  selected_next_plan_task: "P7-T03"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_packet_type: "pilot_external_red_team_review"
+  route_label: "p7_t03_pilot_external_red_team_review"
+  may_promote_claims: false
+  proof_authority: false
+  scientific_status_changed: false
+  source_law_adopted: false
+  source_extension_data_adopted: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_requested: false
+  gate_chair_verdict_issued: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+blocked_claims:
+  - "P7-T02 schema as physics proof authority"
+  - "P7-T02 validator as physics proof authority"
+  - "P7-T02 fixture as physics evidence"
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "source-extension data adoption"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "detector semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+  - "Gate Chair authority"
+  - "P7-T03 pilot review execution inside P7-T02"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+p7_t02_result:
+  route: "external_red_team_review_schema_validator_completed"
+  schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  validator_path: "scripts/research_control/validate_red_team_review_artifact.py"
+  template_path: "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  tests_path: "tests/test_red_team_review_artifact_validator.py"
+  fixture_dir: "tests/fixtures/research_control/red_team_review"
+  physics_promotion_authorized_required_value: false
+  gate_chair_authority_created: false
+  pilot_review_run: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_schema_validator_only"
+  meaning: "P7-T02 created artifact-shape validation only. It does not add proof authority or change source-law MetricData(E) g_eff coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or completed-derivation status."
+required_next_packet:
+  role_id: "external-red-team-reviewer"
+  role_version: "0.1.0"
+  packet_count: 1
+  task_type: "v12_p7_t03_pilot_external_red_team_review"
+  plan_task_id: "recommendations-v12-P7-T03"
+  objective: "Run one pilot external red-team review against the frontier theorem inventory and emit one schema-valid review artifact without promotion authority."
+  route_label: "p7_t03_pilot_external_red_team_review"
+  suggested_review_target:
+    object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    canonical_path: "research_control/current_frontier.md"
+    reason: "Current frontier records the active theorem inventory and downstream route context needed for a pilot review."
+  must_preserve:
+    - "physics_promotion_authorized=false"
+    - "may_promote_claims=false"
+    - "no Gate Chair authority"
+    - "no source-law adoption"
+    - "no MetricData(E) adoption"
+    - "no g_eff adoption or scope expansion"
+    - "no coupling-law adoption"
+    - "no matter-coupling derivation or adoption"
+    - "no stress-energy semantics"
+    - "no stress-energy tensor"
+    - "no matter action"
+    - "no detector semantics"
+    - "no Einstein equations"
+    - "no downstream GR promotion"
+validation:
+  schema_document_registered: "PASS"
+  validator_unit_tests: "PASS"
+  minimal_fixture_passes: "PASS"
+  missing_field_fixture_fails: "PASS"
+  physics_promotion_true_fixture_fails: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

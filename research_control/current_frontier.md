@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-031` and `handoff-0383`.
+`RT-20260630-032` and `handoff-0384`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-031` |
-| Latest handoff ID | `handoff-0383` |
-| Current status | `v12_p7_t01_external_red_team_role_contract_registered_no_claim_promotion` |
-| Current route family | v12 p7 t01 external red team role contract completed selects p7 t02 schema validator |
+| Active task ID | `RT-20260630-032` |
+| Latest handoff ID | `handoff-0384` |
+| Current status | `v12_p7_t02_red_team_review_schema_validator_passes_no_promotion` |
+| Current route family | v12 p7 t02 schema validator completed selects p7 t03 pilot external red team review |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v12 p7 t02 external red team review schema validator |
-| Required next authority | P7-T02 red-team artifact schema and validator only |
-| Next recommended action | Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet. |
+| Current burden | none for physics derivation; live control burden is v12 p7 t03 pilot external red team review |
+| Required next authority | P7-T03 pilot external red-team review only |
+| Next recommended action | Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-031/00_TASK.yaml`.
-- Active task objective: Complete P7-T01 by registering the external-red-team-reviewer@0.1.0 critique-only role contract, adding a review artifact template, and preserving may_promote_claims=false.
-- Latest handoff path: `research_control/handoffs/handoff-0383.yaml`.
-- Latest handoff summary: RT-20260630-031 completed one bounded P7-T01 external red-team role-contract design packet. It registered external-red-team-reviewer@0.1.0 as a critique-only role with may_promote_claims=false, added a red-team review artifact template, and recorded one-time approval approval-20260630-004 for non-promotional permanent role registration.
-- Current route family: v12 p7 t01 external red team role contract completed selects p7 t02 schema validator.
-- Next recommended action: Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet.
+- Active task path: `research_control/tasks/RT-20260630-032/00_TASK.yaml`.
+- Active task objective: Complete P7-T02 by adding a strict external red-team review artifact schema and validator with fixtures proving missing-field rejection, physics-promotion rejection, and minimal valid artifact acceptance.
+- Latest handoff path: `research_control/handoffs/handoff-0384.yaml`.
+- Latest handoff summary: RT-20260630-032 completed one bounded P7-T02 external red-team review schema-validator packet. It added the artifact schema, validator script, fixtures, focused tests, and template alignment. The validator requires physics_promotion_authorized=false and rejects missing required fields and invalid verdicts.
+- Current route family: v12 p7 t02 schema validator completed selects p7 t03 pilot external red team review.
+- Next recommended action: Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P7-T02 packet to create the red-team review artifact schema and validator. Preserve may_promote_claims=false and do not run the P7-T03 pilot review in the same packet.
+Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Preserve physics_promotion_authorized=false and do not request a Gate Chair verdict.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,22 +143,25 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-031`;
-- latest handoff: `handoff-0383`;
-- current status: `v12_p7_t01_external_red_team_role_contract_registered_no_claim_promotion`;
+- active task: `RT-20260630-032`;
+- latest handoff: `handoff-0384`;
+- current status: `v12_p7_t02_red_team_review_schema_validator_passes_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `review_template_added`: PASS;
-- latest handoff validation `role_contract_registered`: PASS;
+- latest handoff validation `minimal_fixture_passes`: PASS;
+- latest handoff validation `missing_field_fixture_fails`: PASS;
+- latest handoff validation `physics_promotion_true_fixture_fails`: PASS;
+- latest handoff validation `schema_document_registered`: PASS;
+- latest handoff validation `validator_unit_tests`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0383.yaml`
-- `research_control/tasks/RT-20260630-031/00_TASK.yaml`
+- `research_control/handoffs/handoff-0384.yaml`
+- `research_control/tasks/RT-20260630-032/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -173,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0383*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0384*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

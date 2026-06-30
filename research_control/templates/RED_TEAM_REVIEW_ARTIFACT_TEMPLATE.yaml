@@ -1,70 +1,46 @@
-schema_id: "external_red_team_review_artifact_template_v1"
+schema_id: "external_red_team_review_artifact_schema_v1"
+schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
 review_id: "ERT-REVIEW-YYYYMMDD-NNN"
 reviewer_role_id: "external-red-team-reviewer"
 reviewer_role_version: "0.1.0"
 task_id: "RT-YYYYMMDD-NNN"
 job_id: "AJ-RT-YYYYMMDD-NNN-NNN"
 created_at: "YYYY-MM-DDTHH:MM:SSZ"
-target_artifact:
-  path: ""
-  object_id: ""
-  source_registry: ""
-  source_hash: ""
-target_claims:
+reviewed_object_id: ""
+reviewed_source_paths:
   - ""
+claim_under_review: ""
 workflow_success_disregarded_as_evidence: true
 validator_success_disregarded_as_evidence: true
-review_scope:
-  definitions: true
-  assumptions: true
-  theorem_statements: true
-  proof_skeletons: true
-  circularity: true
-  hidden_target_imports: true
-  overloaded_notation: true
-  unproven_equivalences: true
-  interpretation_boundary: true
-findings:
-  - finding_id: "ERT-FINDING-001"
-    severity: "blocking"
-    defect_class: "missing_assumption"
-    statement: ""
-    evidence_path: ""
-    evidence_quote_or_pointer: ""
-    minimal_countermodel:
-      present: false
-      path: ""
-      summary: ""
-    not_enough_assumptions:
-      present: false
-      theorem_sketch: ""
-    repair_route: "repair"
-    blocks_promotion: true
-verdict:
-  value: "blocking_defect"
-  allowed_values:
-    - "no_blocking_defect_under_scope"
-    - "blocking_defect"
-    - "minimal_countermodel_found"
-    - "not_enough_assumptions"
-    - "external_review_required"
-    - "freeze_or_obstruction_review_required"
-route_recommendation:
-  next_role: ""
-  next_packet_type: ""
-  rationale: ""
-claim_boundary:
-  may_promote_claims: false
-  gate_chair_authority_created: false
-  source_law_adopted: false
-  metric_data_adopted: false
-  geff_adopted_or_expanded: false
-  coupling_law_adopted: false
-  matter_coupling_derived_or_adopted: false
-  stress_energy_semantics_imported: false
-  detector_semantics_imported: false
-  matter_action_imported: false
-  einstein_equations_derived: false
-  benchmark_promoted: false
-  completed_derivation_claimed: false
+assumptions_read:
+  - ""
+definitions_read:
+  - ""
+proof_steps_checked:
+  - ""
+circularity_findings: []
+hidden_import_findings: []
+notation_overload_findings: []
+unproven_equivalence_findings: []
+minimal_countermodel_attempt:
+  attempted: false
+  result: "not_attempted"
+  summary: ""
+  artifact_path: ""
+external_mathematical_pressure_points: []
+verdict: "no_blocking_defect_found_as_written"
+recommended_next_route: ""
+physics_promotion_authorized: false
+gate_chair_authority_created: false
+source_law_adopted: false
+metric_data_adopted: false
+geff_adopted_or_expanded: false
+coupling_law_adopted: false
+matter_coupling_derived_or_adopted: false
+stress_energy_semantics_imported: false
+detector_semantics_imported: false
+matter_action_imported: false
+einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
 non_authority_statement: "This review artifact is critique and routing evidence only. It is not proof authority, source-law adoption, benchmark promotion, or completed derivation."

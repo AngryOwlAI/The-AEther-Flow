@@ -1,0 +1,265 @@
+completion_id: "AJC-AJ-RT-20260630-032-001"
+job_id: "AJ-RT-20260630-032-001"
+task_id: "RT-20260630-032"
+source_role_id: "validator-engineer"
+completed_at: "2026-06-30T14:19:20Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  related_plan_task_id: "P7-T02"
+  plan_phase_id: "P7"
+  implemented_task_scope: "Added a strict external red-team review artifact schema, validator script, fixtures, tests, and template alignment."
+  downstream_tasks_not_implemented:
+    - "P7-T03 pilot red-team review"
+    - "P8"
+    - "P9"
+    - "P10"
+    - "P11"
+    - "Gate Chair evidence-status review"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "tests/test_red_team_review_artifact_validator.py"
+  - "tests/fixtures/research_control/red_team_review/valid_minimal.yaml"
+  - "tests/fixtures/research_control/red_team_review/missing_required_field.yaml"
+  - "tests/fixtures/research_control/red_team_review/physics_promotion_true.yaml"
+  - "tests/fixtures/research_control/red_team_review/invalid_verdict.yaml"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260630-032/00_TASK.yaml"
+  - "research_control/tasks/RT-20260630-032/DDR-20260630-032.md"
+  - "research_control/tasks/RT-20260630-032/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260630-032/jobs/AJ-RT-20260630-032-001.yaml"
+  - "research_control/tasks/RT-20260630-032/jobs/completions/AJC-AJ-RT-20260630-032-001.yaml"
+  - "research_control/tasks/RT-20260630-032/roles/validator-engineer@0.2.0--RT-20260630-032.yaml"
+  - "research_control/handoffs/handoff-0384.yaml"
+  - "research_control/handoffs/handoff-0384.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "wiki/markdown/md-external-red-team-review-artifact-schema.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0383.yaml"
+  - "research_control/handoffs/handoff-0383.md"
+  - "research_control/design/external_red_team_reviewer_role_design.md"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=491 relationship_row_count=2647"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'external red-team' --limit 10 --json | exit_code=0 | inspected_object_ids=MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN;MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/external_red_team_reviewer_role_design.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/physics/external-red-team-reviewer.v0.1.0.md --json | exit_code=0 | returned_object_ids=MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260630-031 latest_handoff=handoff-0383 boundary=human_gate_required"
+  - ".venv/bin/python -m unittest tests.test_red_team_review_artifact_validator | exit_code=0 | tests=6"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json tests/fixtures/research_control/red_team_review/valid_minimal.yaml | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json tests/fixtures/research_control/red_team_review/missing_required_field.yaml | exit_code=1_expected | status=FAIL missing_required_field=verdict"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json tests/fixtures/research_control/red_team_review/physics_promotion_true.yaml | exit_code=1_expected | status=FAIL physics_promotion_authorized_must_be_false"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | reason_codes=control_registry_changed;documentation_registry_changed;generated_derivative_changed;generated_registry_changed;research_control_state_changed;schema_contract_changed;test_changed;validator_changed"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | Validation PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | source_object_count=493 relationship_row_count=2656 freshness_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | Validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass rendered_hash=d5af9b8e7a8791673eac09c18974ab4eda2adbd93863304766ff7b4570cf84e8"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | freshness=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | operational_warnings_only_no_physics_promotion"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=493 relationship_row_count=2656"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+verdict: "v12_p7_t02_red_team_review_schema_validator_passes_no_promotion"
+coherent_resolution_summary: "P7-T02 added the external red-team review artifact schema and validator, aligned the review template, and proved validator behavior with passing minimal and failing negative fixtures. The validator rejects missing required fields, invalid verdict values, and physics_promotion_authorized values other than false."
+next_recommendation: "Run one bounded P7-T03 pilot external red-team review against the frontier theorem inventory using external-red-team-reviewer@0.1.0. Keep physics_promotion_authorized=false and do not request a Gate Chair verdict."
+schema_validator_result:
+  schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  schema_hash: "784f52a4ee3d3409d130fff9d99393ae231e247259930718ea61353525f81ed8"
+  validator_path: "scripts/research_control/validate_red_team_review_artifact.py"
+  validator_hash: "c0ee1aacbd9cf5d9953968aea6f7f065859e8a6a5062aaa39af220c60a2ecc45"
+  template_path: "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  template_hash: "611d5dd13447b9f07073c92d781c99005710ed6ed408b587a29ad973cc287254"
+  required_fields:
+    - "reviewed_object_id"
+    - "reviewed_source_paths"
+    - "claim_under_review"
+    - "assumptions_read"
+    - "definitions_read"
+    - "proof_steps_checked"
+    - "circularity_findings"
+    - "hidden_import_findings"
+    - "notation_overload_findings"
+    - "unproven_equivalence_findings"
+    - "minimal_countermodel_attempt"
+    - "external_mathematical_pressure_points"
+    - "verdict"
+    - "recommended_next_route"
+    - "physics_promotion_authorized"
+  verdict_vocabulary:
+    - "no_blocking_defect_found_as_written"
+    - "repair_required"
+    - "hidden_target_import_detected"
+    - "circularity_detected"
+    - "unproven_equivalence_blocks_claim"
+    - "not_enough_assumptions"
+    - "minimal_countermodel_found"
+    - "freeze_recommended"
+    - "external_expert_review_required"
+  physics_promotion_authorized_required_value: false
+  acceptance_fixtures:
+    - "tests/fixtures/research_control/red_team_review/valid_minimal.yaml|PASS"
+    - "tests/fixtures/research_control/red_team_review/missing_required_field.yaml|FAIL"
+    - "tests/fixtures/research_control/red_team_review/physics_promotion_true.yaml|FAIL"
+    - "tests/fixtures/research_control/red_team_review/invalid_verdict.yaml|FAIL"
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "not_applicable_schema_validator"
+  explanation: "The packet adds artifact-shape validation for future critique records. It does not create proof authority or change source-law MetricData(E) g_eff coupling-law matter-coupling stress-energy detector-semantics matter-action Einstein-equation benchmark or completed-derivation status."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: "not_applicable"
+  milestone: "none"
+  ledger_row_updated: false
+  explanation: "P7-T02 is schema-validator work and does not alter the Distance-to-GR ledger."
+new_mathematical_payload: []
+claim_boundary:
+  may_promote_claims: false
+  proof_authority_created: false
+  gate_chair_authority_created: false
+  source_law_adopted: false
+  source_extension_data_adopted: false
+  metric_data_adopted: false
+  geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  p7_t03_pilot_review_run: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P7-T02 external red-team artifact schema and validator only."
+  forbidden_conclusions:
+    - "P7-T02 schema as proof authority"
+    - "P7-T02 validator as proof authority"
+    - "minimal valid fixture as physics evidence"
+    - "Gate Chair authority"
+    - "claim promotion"
+    - "canonical ontology edit"
+    - "canonical-ontology candidate status"
+    - "source-law adoption"
+    - "source-extension data adoption"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "matter-coupling adoption"
+    - "stress-energy semantics import"
+    - "stress-energy tensor construction"
+    - "matter action import"
+    - "detector semantics import"
+    - "Einstein equation derivation"
+    - "benchmark promotion"
+    - "completed derivation claim"
+    - "P7-T03 pilot review execution"
+    - "future_source_extension_impossibility"
+    - "global_theory_rejection"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 491
+    relationship_row_count: 2647
+    semantic_row_count: 491
+    vault_row_count: 491
+    warning_summary: "Local retrieval was fresh at packet start."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'external red-team' --limit 10 --json"
+      query_type: "search"
+      query_text: "external red-team"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN"
+        - "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json"
+      query_type: "lookup"
+      query_text: "research_control/current_frontier.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/external_red_team_reviewer_role_design.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/external_red_team_reviewer_role_design.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .agents/roles/physics/external-red-team-reviewer.v0.1.0.md --json"
+      query_type: "lookup"
+      query_text: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+      source_hash: "e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d5af9b8e7a8791673eac09c18974ab4eda2adbd93863304766ff7b4570cf84e8"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/external_red_team_reviewer_role_design.md"
+      source_hash: "68ac404a6cf750b39f2e1f4453ad5728cd3d6a75539cbcd39e61fdc531ec0cd9"
+    - object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+      source_hash: "c44c0208f939733af28d07d41c97e85fe857357151e529388ee6c828d4ca194d"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index rows and .local files are retrieval layers only and not authority."
+resolved_project_improvement_signals: []
+project_improvement_signals: []
