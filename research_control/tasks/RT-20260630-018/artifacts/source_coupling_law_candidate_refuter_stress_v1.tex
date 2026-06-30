@@ -1,0 +1,259 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\SourceCoupCand}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\SourceCoupTarget}{\mathrm{SourceCouplingLawTarget}_{v1}}
+\newcommand{\CouplingIntent}{\mathrm{CouplingIntent}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Source Coupling-Law Candidate Refuter Stress v1}
+\author{Refuter Packet RT-20260630-018}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260630-018}. It
+stress-tests the proposal-only candidate
+\[
+  \SourceCoupCand(E)
+\]
+created by \texttt{RT-20260630-016} and audited as source-pure as written by
+\texttt{RT-20260630-017}. The stress result is:
+
+\begin{verbatim}
+stress_verdict: "bridge_facing_candidate_path"
+candidate_status: "proposal-only"
+same_milestone_continuation_status: "blocked_adoption_open_continuation"
+source_law_adopted: false
+MCPA_cand_v1_E_adopted: false
+source_extension_data_adopted_beyond_exact_RT_013_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+The verdict is narrow. The candidate survives the named stresses only as a
+bridge-facing draft/control source-side candidate pending selector. It is not
+an adopted source law, not source-extension data adoption beyond the exact
+\texttt{RT-20260630-013} gate result, not a coupling law, and not matter
+coupling.
+
+\section{Stress Surface}
+
+The candidate maps a source package
+\[
+  \mathcal{D}^{\mathrm{SCLT}}_E =
+  (E,\mathcal{P}^{\mathrm{MCPA}}_E,\mathcal{W}_E,\Sigma_E,
+  \mathcal{C}_E,\mathcal{R}_E,\mathcal{V}_E,\mathcal{N}_E,\mathcal{O}_E)
+\]
+and a compatibility-selection ledger
+\[
+  \mathcal{S}_E \subseteq
+  \mathcal{P}^{\mathrm{MCPA}}_E \times \mathcal{W}_E \times
+  \Sigma_E \times \mathcal{C}_E \times \mathcal{N}_E
+\]
+to source-coupling-intent-only tokens
+\[
+  k=(p,w,\sigma,c,U_k,\tau_k,n_k),
+  \qquad
+  \tau_k=\mathsf{source\text{-}coupling\text{-}intent\text{-}only}.
+\]
+
+The stress suite asks whether adversarial changes to compatibility
+certificates, no-target-import certificates, relabeling transport,
+finite-variation repair data, source-local supports, or adoption boundaries
+force the candidate to import target data or promote downstream GR claims.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.28\linewidth}p{0.56\linewidth}}
+\toprule
+Stress & Result \\
+\midrule
+Compatibility-collapse & Missing or corrupted witness/signature compatibility returns the fail-closed mismatch obstruction rather than a positive token. \\
+Certificate-deletion & Deleting a no-target-import certificate removes admissibility for the affected selected tuple; no target metric, stress-energy, detector, matter action, or Einstein-equation premise is substituted. \\
+Relabeling noncovariance & Naturality holds only under declared source transport of records, selected tuples, and certificate pass/fail values. If transport fails, there is no covariance claim and the construction fails closed. \\
+Finite-variation repair fragility & A finite variation may preserve records, use a declared source-local repair certificate, or return \(\BottomSrc\). Target-metric normalization, empirical calibration, stress-energy conservation, detector semantics, matter action, benchmark behavior, and Einstein-equation premises are unavailable as repairs. \\
+Evidence-as-adoption collapse & A selected \(\MCPA(E)\) record remains scoped evidence/precondition only. Treating it as adoption triggers a fail-closed obstruction branch. \\
+Source-locality failure & Positive tokens require declared finite/local source supports. Removing or globalizing the source supports deletes the positive output or leaves the candidate outside scope; it does not create universal matter coupling. \\
+Downstream overread & Source-coupling-intent tokens are not stress-energy semantics, stress-energy tensors, detector semantics, matter actions, \(\MetricData(E)\), \(\geff\), Einstein equations, benchmark promotion, or completed derivation. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[Compatibility deletion fails closed]
+Let \(x=(p,w,\sigma,c,n)\in\mathcal{S}_E\) be an admissible selected tuple for
+\(\SourceCoupCand(E)\). If the compatibility certificate \(c\) is deleted,
+corrupted, or not recognized as a declared source-local compatibility
+certificate, then the affected tuple does not generate a positive
+\(\CouplingIntent\) token.
+\end{lemma}
+
+\begin{proof}
+The candidate relation requires every successful token to name a declared
+witness slot \(w\), a declared matter-signature record \(\sigma\), and a
+declared compatibility certificate \(c\). The written case split returns the
+witness/signature mismatch obstruction whenever compatibility is absent. That
+branch contains no target atlas, target metric, stress-energy tensor,
+detector protocol, matter action, benchmark fit, or Einstein-equation premise.
+Thus deleting \(c\) removes positive output rather than creating matter
+coupling.
+\end{proof}
+
+\begin{lemma}[No-target-import certificate deletion fails closed]
+If a selected tuple lacks a passing no-target-import certificate \(n\), then
+the tuple is inadmissible for positive source-coupling-intent output. The
+candidate has no rule that repairs \(n\) by target metric data, empirical
+calibration, stress-energy semantics, detector semantics, matter action, or
+process authority.
+\end{lemma}
+
+\begin{proof}
+The candidate's admissibility condition includes \(n\in\mathcal{N}_E\), and
+the hidden-import case returns a target-import obstruction if a forbidden
+target or process premise is used. No later clause supplies a target-facing
+replacement for \(n\). Therefore certificate deletion narrows or empties the
+output family and cannot force a downstream object.
+\end{proof}
+
+\begin{lemma}[Conditional source-relabeling stress survival]
+The written naturality statement for \(\SourceCoupCand(E)\) survives
+relabeling stress only under the explicit hypothesis that the source
+relabeling transports selected records, compatibility certificates, supports,
+obstruction labels, and no-target-import certificates while preserving
+certificate pass/fail values.
+\end{lemma}
+
+\begin{proof}
+Under the stated transport hypotheses, a successful selected tuple maps to a
+successful selected tuple in the relabeled source package, and the token tag
+remains source-control syntax. Without those hypotheses the proof has no
+source-side transport relation to apply. The correct stress response is then
+loss of the naturality claim or fail-closed obstruction, not target covariance
+and not hidden Lorentzian structure.
+\end{proof}
+
+\begin{lemma}[Finite-variation repair fragility is bounded]
+Finite variations do not refute the candidate as written, but they keep it
+conditional. A variation may preserve selected source records, use a declared
+source-local repair certificate, or return \(\BottomSrc\). It may not repair
+the candidate through target-metric normalization, empirical calibration,
+stress-energy conservation, detector semantics, matter action, benchmark
+behavior, or Einstein-equation premises.
+\end{lemma}
+
+\begin{proof}
+The RT-016 candidate states exactly these three branches for finite
+variation: preservation, declared source-local repair, or \(\BottomSrc\).
+Every forbidden target-facing repair is excluded by the candidate and by the
+RT-017 audit. Thus finite variation exposes a conditionality burden for
+selector review but does not create a target-import collapse in the written
+candidate.
+\end{proof}
+
+\begin{proposition}[Evidence-as-adoption and downstream overread are blocked]
+The stress survival of \(\SourceCoupCand(E)\) does not adopt
+\(\MCPA(E)\), adopt a source law, adopt source-extension data beyond the
+exact \texttt{RT-20260630-013} gate result, adopt a coupling law, derive or
+adopt matter coupling, construct \(\MetricData(E)\), change the scope of
+\(\geff\), import stress-energy semantics, construct a stress-energy tensor,
+import detector semantics, import a matter action, derive Einstein equations,
+promote benchmark status, or complete the derivation.
+\end{proposition}
+
+\begin{proof}
+The stressed output is a finite/local source-coupling-intent-only token family
+plus fail-closed obstruction behavior. It contains no target metric, no
+Lorentzian signature, no stress-energy tensor, no detector protocol, no
+matter action, no empirical calibration, no benchmark fit, and no
+field-equation premise. The candidate also explicitly returns an
+evidence-as-adoption obstruction if scoped evidence is treated as adoption.
+Thus the stress pass cannot be promoted to any downstream GR object or
+authority.
+\end{proof}
+
+\begin{verdict}[Refuter verdict]
+\(\SourceCoupCand(E)\) survives the named Refuter stresses only as a
+\texttt{bridge\_facing\_candidate\_path}. The same-milestone status is
+\texttt{blocked\_adoption\_open\_continuation}. The next required packet is a
+bounded \texttt{theoretical-continuation-selector@0.1.0} decision packet.
+\end{verdict}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & unchanged; no canonical ontology edit is made \\
+Source equivalence EqSrc & unchanged; no general EqSrc theorem is supplied \\
+RetainH & unchanged \\
+GenH & unchanged \\
+ObsLoc\_lc & prior source-localization context only \\
+Resp\_lc & prior accepted response/localization context only \\
+M\_src & unchanged; scoped source-only boundary remains prior context \\
+\(\MetricData(E)\) & not adopted here \\
+\(\geff\) & prior scoped source-extension context only; scope is not changed \\
+matter coupling & \(\SourceCoupCand(E)\) stress survived only as proposal-only bridge-facing candidate pending selector; no coupling law, matter coupling, stress-energy semantics, detector semantics, matter action, or Einstein equations are adopted \\
+Einstein equations & blocked; no field-equation derivation is supplied \\
+finite-variation robustness & local candidate stress survives stated preserve, source-local repair, and fail-closed branches; no general robustness theorem \\
+benchmark promotion & blocked; no benchmark evidence or promotion is supplied \\
+Gate Chair status & no Gate Chair packet; adoption remains human-gated \\
+current route freeze or hard-fail status & not frozen; post-stress selector route open \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The logical next packet is one bounded
+\texttt{theoretical-continuation-selector@0.1.0} ontology-law-research-packet
+to decide the post-stress route for \(\SourceCoupCand(E)\). Permitted selector
+outcomes include Gate Chair evidence-status precondition review only if the
+selector proves the gate criteria are met, candidate repair, scoped
+obstruction work, source-coupling target redesign, or human-gated
+ontology-change routing. The selector must preserve no canonical ontology
+edit, no source-law adoption, no \(\MCPA(E)\) adoption, no source-extension
+data adoption beyond the exact RT-013 gate result, no \(\MetricData(E)\), no
+\(\geff\) scope change, no coupling-law adoption, no matter-coupling
+derivation or adoption, no stress-energy semantics, no stress-energy tensor,
+no detector semantics, no matter action, no Einstein equations, no benchmark
+promotion, and no completed derivation.
+
+\section{Internal Materials Reviewed}
+
+\begin{itemize}
+\item The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation burden map} [Internal control note].
+\item The AEther-Flow Research Project. (2026, June 29). \textit{Recommendations implementation plan continue task v12} [Internal implementation plan].
+\item Candidate Constructor Packet RT-20260630-016. (2026). \textit{Source coupling-law candidate v1} [Internal draft/control TeX artifact].
+\item Smuggling Auditor Packet RT-20260630-017. (2026). \textit{Source coupling-law candidate smuggling audit v1} [Internal draft/control TeX artifact].
+\item The AEther-Flow Research Project. (2026, June 30). \textit{Handoff 0369} [Internal research-control handoff].
+\end{itemize}
+
+\end{document}

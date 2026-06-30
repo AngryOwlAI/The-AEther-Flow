@@ -325,6 +325,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-003/artifacts/matter_signature_repair_candidate_smuggling_audit_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260630-006/artifacts/matter_signature_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE` `research_control/tasks/RT-20260630-016/artifacts/source_coupling_law_candidate_v1.tex`
+- `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260630-018/artifacts/source_coupling_law_candidate_refuter_stress_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-017/artifacts/source_coupling_law_candidate_smuggling_audit_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-TARGET` `research_control/tasks/RT-20260630-015/artifacts/source_coupling_law_target_v1.tex`
 - `TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `research_control/tasks/RT-20260629-045/artifacts/source_extension_compression_obstruction_v1.tex`
@@ -884,6 +885,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-v12-ontology-law-matter-signature-repair-candidate-smuggling-audit.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `wiki/tex/tex-v12-ontology-law-matter-signature-source-extension-evidence-gate-chair-review.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE` `wiki/tex/tex-v12-ontology-law-source-coupling-law-candidate.md`
+- `WIKI-TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `wiki/tex/tex-v12-ontology-law-source-coupling-law-candidate-refuter-stress.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-v12-ontology-law-source-coupling-law-candidate-smuggling-audit.md`
 - `WIKI-TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-TARGET` `wiki/tex/tex-v12-ontology-law-source-coupling-law-target.md`
 - `WIKI-TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `wiki/tex/tex-v12-p4-t03-source-extension-compression-obstruction.md`
