@@ -1,0 +1,264 @@
+\section*{Matter-Semantics Stable Partition Precondition v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control Ontology Formalizer output for
+RT-20260630-046. It formalizes
+\(\mathrm{MSStablePartitionPrecondition}_{v1}\) after RT-044 showed that
+\(\mathrm{MSStableQuotientRepair}_{v1}/
+\mathrm{MSIrrelQuotientRepair}_{v1}\) is coherent as a deterministic
+finite/local source partition but obstructed as a readout/response
+irrelevance law because \(\mathrm{RR}_E\) remains a separating coordinate.
+The result below is proposal-only source-side precondition mathematics. It is
+not a source-law adoption, not source-extension data adoption, not a
+canonical-ontology candidate, not matter semantics, not matter coupling, and
+not proof authority for downstream GR recovery. It does not edit canonical
+ontology, adopt \(\mathrm{MetricData}(E)\), adopt or expand
+\(g_{\mathrm{eff}}\), adopt a coupling law, derive or adopt matter coupling,
+import stress-energy semantics, construct a stress-energy tensor, import
+detector semantics, import a matter action, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, prove future source-extension impossibility, or reject the global
+theory.
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MSAdm}{\mathrm{MSAdm}_{v1}}
+\newcommand{\MSStableRepair}{\mathrm{MSStableQuotientRepair}_{v1}}
+\newcommand{\MSIrrelRepair}{\mathrm{MSIrrelQuotientRepair}_{v1}}
+\newcommand{\MSStablePre}{\mathrm{MSStablePartitionPrecondition}_{v1}}
+\newcommand{\MSSig}{\Sigma^{\mathrm{rep}}_E}
+\newcommand{\MSRepEq}{\sim_{\mathrm{MSRep},E}}
+\newcommand{\MSRepProj}{\pi^{\mathrm{rep}}_E}
+\newcommand{\MSPart}{\Pi^{\mathrm{st}}_E}
+\newcommand{\MSCell}{\mathcal C^{\mathrm{st}}_E}
+\newcommand{\MSGuard}{G^{\mathrm{st}}_E}
+\newcommand{\MSFail}{\mathrm{MSStablePartitionFailure}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\section{Purpose}
+
+The RT-044 obstruction has two logically separate consequences:
+\begin{enumerate}
+  \item \(\MSIrrelRepair\) is blocked as a readout/response irrelevance law,
+    because retaining \(\mathrm{RR}_E\) separates records rather than
+    identifying them.
+  \item \(\MSStableRepair\) remains usable as a deterministic finite/local
+    source partition or precondition target, provided it is not overread as
+    matter semantics, detector semantics, or source-law adoption.
+\end{enumerate}
+This packet formalizes only the second consequence.
+
+\section{Domain and Guards}
+
+\begin{definition}[Stable-precondition domain]
+For a fixed source instance \(E\), define
+\[
+  \mathcal D^{\mathrm{st}}_E(\Bcur)
+  =
+  \{C\in\MSAdm(E;\Bcur)\mid \MSSig(C)\neq\bot\}.
+\]
+Here \(\MSSig(C)\) is the repaired source signature from RT-042/RT-044:
+\[
+  \MSSig(C)=
+  \bigl(\mathrm{Core}_E(C),\mathrm{RR}_E(C),
+  \mathrm{AdmFlag}_E(C)\bigr).
+\]
+The domain is finite/local and current-basis only. Membership is not physical
+admissibility, not detector access, and not matter coupling.
+\end{definition}
+
+\begin{definition}[Stable-precondition guard]
+Let \(\MSGuard(E;\Bcur,C)=1\) exactly when all of the following source-side
+conditions hold:
+\begin{enumerate}
+  \item \(C\in\MSAdm(E;\Bcur)\);
+  \item \(\mathrm{Core}_E(C)\) exists by finite source intersection;
+  \item \(\Gamma_E\) contains the current no-target certificate classes for
+    \(\NoDetector(E)\), \(\NoSE(E)\), \(\NoAction(E)\), and \(\NoTarget(E)\);
+  \item \(\mathrm{RR}_E(C)\) is treated as uninterpreted source syntax
+    modulo explicit source relabelings only;
+  \item no target metric, proper-time normalization, detector protocol,
+    stress-energy tensor, stress-energy semantics, matter action, benchmark
+    behavior, Einstein-equation premise, registry metadata, role authority,
+    validation result, approval state, commit state, generated derivative,
+    local cache, or file order is used as a premise.
+\end{enumerate}
+If any guard fails, \(\MSGuard(E;\Bcur,C)=0\) and the precondition returns
+\(\MSFail\).
+\end{definition}
+
+\begin{definition}[Stable source partition]
+For \(a\) in the finite image of \(\MSSig\) on
+\(\mathcal D^{\mathrm{st}}_E(\Bcur)\), define the cell
+\[
+  \MSCell(a)=
+  \{C\in\mathcal D^{\mathrm{st}}_E(\Bcur)\mid \MSSig(C)=a\}.
+\]
+The stable partition is
+\[
+  \MSPart(E;\Bcur)=
+  \{\MSCell(a)\mid a\in
+  \MSSig(\mathcal D^{\mathrm{st}}_E(\Bcur))\}.
+\]
+The precondition object is
+\[
+  \MSStablePre(E;\Bcur)=
+  \bigl(\mathcal D^{\mathrm{st}}_E,\MSSig,\MSPart,\MSGuard,\MSFail\bigr).
+\]
+\(\MSStablePre\) is a proposal-only precondition target. It is not an
+adopted source law and not an equivalence claim that erases
+\(\mathrm{RR}_E\).
+\end{definition}
+
+\section{Precondition Theorem}
+
+\begin{proposition}[Finite/local stable partition precondition]
+Assume \(\MSGuard(E;\Bcur,C)=1\) for every
+\(C\in\mathcal D^{\mathrm{st}}_E(\Bcur)\). Then
+\(\MSPart(E;\Bcur)\) is a deterministic finite partition of
+\(\mathcal D^{\mathrm{st}}_E(\Bcur)\). It is stable under finite
+source variations that preserve \(\MSSig\), separates finite source
+variations that change \(\MSSig\), and returns \(\MSFail\) when a variation
+destroys core formation or a required no-target certificate. This result is a
+precondition theorem only; it is not a readout/response irrelevance law and
+not matter semantics.
+\end{proposition}
+
+\paragraph{Proof.}
+The domain is finite/local by construction from the current-basis admissible
+records. The map \(\MSSig\) is a source-side function on that domain whenever
+the guard holds. Fibers of a function form a partition of its domain:
+nonempty fibers cover the domain, and equality of image values makes distinct
+fibers disjoint. A finite source variation preserving
+\(\MSSig\) remains in the same fiber. A finite source variation changing
+\(\MSSig\) moves the record to a different fiber when the guard still holds.
+If core formation, certificate preservation, or the no-target guard fails,
+the packet defines bottom/failure rather than a new semantic class. The proof
+uses only the explicit finite source signature and guard conditions. It does
+not identify records that differ in \(\mathrm{RR}_E\), and therefore does not
+prove readout/response irrelevance.
+
+\begin{proposition}[Pressure-pair separation is a required guard]
+For the RT-035 pressure pair \(C_+\) and \(C_-\), if
+\[
+  \mathrm{RR}_E(C_+)\neq\mathrm{RR}_E(C_-),
+\]
+then \(C_+\) and \(C_-\) lie in distinct cells of
+\(\MSPart(E;\Bcur)\). Any later packet that needs them identified must supply
+a different source-side irrelevance theorem that does not rely on
+\(\MSStablePre\) as written.
+\end{proposition}
+
+\paragraph{Reason.}
+\(\mathrm{RR}_E\) is a coordinate of \(\MSSig\). Distinct
+\(\mathrm{RR}_E\) values imply distinct signatures, hence distinct cells.
+This separation is what keeps the stable-precondition route from smuggling
+irrelevance-law adoption.
+
+\begin{proposition}[No semantic promotion]
+Even if \(\MSStablePre(E;\Bcur)\) passes later audit and stress, its local
+success would establish only that the current finite source basis admits a
+deterministic guarded partition. It would not by itself adopt a source law,
+adopt source-extension data, define matter semantics, define detector
+semantics, derive matter coupling, or open Einstein-equation work.
+\end{proposition}
+
+\paragraph{Reason.}
+The object partitions admissible source records by explicit source syntax.
+No physical interpretation map, universal coupling law, stress-energy
+semantics, detector protocol, matter action, or variational principle is part
+of the definition.
+
+\section{Failure Criteria}
+
+Return \(\MSFail(E;\Bcur,O)\) and do not claim a stable-precondition result
+if any of the following occur:
+\begin{enumerate}
+  \item \(\MSSig\) is not a well-defined source-side function on the stated
+    finite/local domain.
+  \item The no-target certificate bundle is absent, deleted from the core, or
+    treated as validation/registry authority rather than source syntax.
+  \item \(\mathrm{RR}_E\) is interpreted as detector semantics, empirical
+    measurement, stress-energy semantics, matter action, or coupling data.
+  \item A claimed invariance identifies records with different
+    \(\mathrm{RR}_E\) while still relying on \(\MSStablePre\) as written.
+  \item Finite variations can change class membership without either
+    changing \(\MSSig\) or failing closed.
+  \item The packet is used as source-law adoption, source-extension data
+    adoption, matter-semantics adoption, coupling-law adoption, benchmark
+    evidence, or Gate Chair authority.
+\end{enumerate}
+
+\section{Route Consequence}
+
+The no-fog result is
+\[
+  \mathsf{formalized\_precondition\_target}.
+\]
+The next lawful route is a bounded
+\(\mathrm{smuggling\mbox{-}auditor@0.2.0}\) packet to audit
+\(\MSStablePre\) for hidden target imports, proof-authority smuggling,
+\(\mathrm{RR}_E\)-to-detector-semantics overread, and accidental
+irrelevance-law adoption. Refuter stress and any selector routing remain
+downstream of that audit.
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}
+  \item Source ontology primitives: unchanged; no canonical ontology edit.
+  \item Source equivalence EqSrc: unchanged; no general EqSrc theorem.
+  \item RetainH and GenH: unchanged.
+  \item ObsLoc\(_{lc}\): unchanged.
+  \item Resp\(_{lc}\): scoped source-extension context retained only.
+  \item \(M_{\mathrm{src}}\): scoped source-only context retained; no scope
+    expansion.
+  \item \(\mathrm{MetricData}(E)\): not adopted.
+  \item \(g_{\mathrm{eff}}\): scoped context retained; no adoption or scope
+    expansion.
+  \item Matter coupling: stable source partition precondition target
+    formalized for audit; no matter coupling is derived or adopted.
+  \item Einstein equations: blocked; no field-equation derivation.
+  \item Finite-variation robustness: finite/local precondition theorem
+    supplied; no global robustness theorem.
+  \item Benchmark promotion: blocked; no benchmark promotion.
+  \item Gate Chair status: no verdict requested or issued.
+  \item Current route freeze or hard-fail status: not frozen; audit and
+    stress remain required.
+\end{itemize}
+
+\section{Forbidden Conclusions}
+
+This formalization does not license any of the following:
+\begin{enumerate}
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption;
+  \item source-extension data adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics or stress-energy tensor construction;
+  \item detector semantics;
+  \item matter action;
+  \item Einstein-equation derivation;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global theory rejection.
+\end{enumerate}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+irrelevance quotient repair candidate v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+irrelevance quotient repair refuter stress v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{MSIrrel quotient
+repair post-stress selector} [Internal control artifact].

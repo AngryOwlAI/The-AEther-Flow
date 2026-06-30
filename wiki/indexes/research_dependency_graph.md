@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T19:01:42Z`
-- Source fingerprint: `f07d97c56a79a8ba345503f5ab6890df1d876c06f5a811cc5c4721b4afab1f68`
-- Nodes: `8682`
-- Edges: `36789`
+- Generated from tracked state as of: `2026-06-30T19:23:49Z`
+- Source fingerprint: `b27d7af615d2a65f086caf339b5c124c6b7e932fa74dad39cd635893335a88d1`
+- Nodes: `8707`
+- Edges: `36884`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 533 |
+| `completion_yaml` | 534 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 397 |
+| `handoff_yaml` | 398 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 533 |
+| `agent_job` | `support_only` | 534 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4361 |
-| `blocked_burden` | `blocked` | 993 |
-| `claim_boundary` | `support_only` | 534 |
-| `draft_control_candidate` | `draft_control` | 410 |
-| `draft_control_candidate` | `proposal_only` | 63 |
+| `artifact` | `support_only` | 4375 |
+| `blocked_burden` | `blocked` | 997 |
+| `claim_boundary` | `support_only` | 535 |
+| `draft_control_candidate` | `draft_control` | 412 |
+| `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 87 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 397 |
-| `human_gated_object` | `human_gated` | 239 |
+| `handoff` | `support_only` | 398 |
+| `human_gated_object` | `human_gated` | 238 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 229 |
+| `source_ontology_object` | `support_only` | 230 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 482 |
+| `task` | `support_only` | 483 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-045`
-- Latest handoff: `handoff-0397`
-- Handoff path: `research_control/handoffs/handoff-0397.yaml`
-- Next action: Run one bounded ontology-formalizer@0.2.0 ontology-law packet to formalize MSStablePartitionPrecondition_v1 as a draft/control source-side stable-partition/precondition target and proof-obligation map, explicitly separating it from irrelevance-law adoption, source-law adoption, source-extension data adoption, matter semantics, matter-coupling, Einstein-equation, benchmark, or promotion routes.
+- Active task: `RT-20260630-046`
+- Latest handoff: `handoff-0398`
+- Handoff path: `research_control/handoffs/handoff-0398.yaml`
+- Next action: Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSStablePartitionPrecondition_v1 for hidden target imports proof-authority smuggling RR_E semantic overread and accidental irrelevance-law adoption before Refuter stress selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
