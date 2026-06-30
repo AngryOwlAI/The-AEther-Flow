@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T00:24:59Z`
-- Source fingerprint: `281e2d628cac636ce094796c6c56b736241a28e216774a11ec545988c151bc6d`
-- Nodes: `7459`
-- Edges: `31240`
+- Generated from tracked state as of: `2026-06-30T00:40:43Z`
+- Source fingerprint: `dfffcbbb4f222b983d472c9ae7c352bf8f0b096da7927d76cb56658bed19270e`
+- Nodes: `7487`
+- Edges: `31364`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 487 |
+| `completion_yaml` | 488 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 351 |
+| `handoff_yaml` | 352 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 487 |
+| `agent_job` | `support_only` | 488 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3698 |
-| `blocked_burden` | `blocked` | 789 |
-| `claim_boundary` | `support_only` | 488 |
-| `draft_control_candidate` | `draft_control` | 337 |
+| `artifact` | `support_only` | 3713 |
+| `blocked_burden` | `blocked` | 792 |
+| `claim_boundary` | `support_only` | 489 |
+| `draft_control_candidate` | `draft_control` | 340 |
 | `draft_control_candidate` | `proposal_only` | 47 |
 | `draft_control_candidate` | `science_draft` | 29 |
-| `frozen_negative` | `frozen_negative` | 67 |
+| `frozen_negative` | `frozen_negative` | 68 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 351 |
+| `handoff` | `support_only` | 352 |
 | `human_gated_object` | `human_gated` | 219 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 52 |
+| `obstruction` | `blocked` | 53 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 18 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 201 |
+| `source_ontology_object` | `support_only` | 202 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 436 |
+| `task` | `support_only` | 437 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260629-056`
-- Latest handoff: `handoff-0351`
-- Handoff path: `research_control/handoffs/handoff-0351.yaml`
-- Next action: Run one bounded refuter@0.2.0 transaction to stress the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload under source relabeling finite variation bottom collapse explicit-label collapse non-bottom-label erasure target-matter-name substitution detector-outcome pressure stress-energy-action substitution target-metric scope pressure support-only proof_authority=false erasure and adoption-laundering pressure before any selector Gate Chair adoption or matter-coupling route.
+- Active task: `RT-20260629-057`
+- Latest handoff: `handoff-0352`
+- Handoff path: `research_control/handoffs/handoff-0352.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 transaction to choose the post-stress route for the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload among repair construction stronger scoped obstruction human-gated review precondition or invalid-under-claim-boundary repair before any Gate Chair adoption or matter-coupling route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

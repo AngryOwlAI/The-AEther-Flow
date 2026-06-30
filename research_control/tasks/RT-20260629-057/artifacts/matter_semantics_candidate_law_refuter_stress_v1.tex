@@ -1,0 +1,266 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Matter-Semantics Candidate-Law Refuter Stress v1}
+\author{Refuter Packet RT-20260629-057}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260629-057}. It
+implements the P5-T05 stress family for the tracked ontology-law route
+\texttt{source-extension\_refuter\_stress\_for\_matter\_semantics\_candidate\_law}.
+
+The stress subject is the RT-055 proposal-only candidate-law payload:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-055/artifacts/
+matter_semantics_candidate_law_payload_v1.tex
+\end{verbatim}
+
+The immediate audit precondition is the RT-056 audit:
+
+\begin{verbatim}
+research_control/tasks/RT-20260629-056/artifacts/
+matter_semantics_candidate_law_smuggling_audit_v1.tex
+\end{verbatim}
+
+The stress verdict is:
+
+\begin{verbatim}
+stress_result.result_type: "scoped_obstruction"
+obstruction_id: "MS-CL-STRESS-001-current-basis-nonbottom-instantiation"
+same_milestone_continuation: "blocked_adoption_open_continuation"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+source_extension_data_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+future_source_extension_impossibility_claimed: false
+global_theory_rejected: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This artifact stress-tests only. It does not edit canonical ontology, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt source-extension data, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import a matter action, import detector semantics,
+derive Einstein equations, promote a benchmark, claim completed derivation,
+claim future source-extension impossibility, or reject the global theory.
+
+\section{Stress Question}
+
+Can the audited proposal-only payload
+\[
+  \SemMatterSrc(E)=(T_E,L_E,\Bottom,D_E,
+  C^{\mathrm{src}}_E,C^{\rho}_E,C^v_E,C^\bot_E,
+  C^{\neg\mathrm{target}}_E)
+\]
+survive stress as adoption-ready source-side matter semantics under
+\(\Bcur\), without importing target matter names, detector outcomes,
+stress-energy variables, matter-action variables, target metric scope, support
+tool proof authority, generated derivatives, registry metadata, role
+authority, validation authority, approval authority, handoff authority, commit
+authority, or local cache authority?
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.30\linewidth}p{0.60\linewidth}}
+\toprule
+Stress surface & Result \\
+\midrule
+Source relabeling & Fails adoption-readiness unless label transport
+\(\rho_L\) is source-defined. Target interpretation cannot define
+\(\rho_L\). \\
+Finite variation & Non-bottom structure may collapse to \(\Bottom\) or a
+scoped obstruction. Preservation of matter-like sectors requires an additional
+source law. \\
+Bottom collapse & Stable only as fail-closed behavior, not as positive matter
+semantics. \\
+Explicit-label collapse & Explicit non-bottom names are tags until a
+source-side discriminator law explains them. \\
+Non-bottom-label erasure & Erasing non-bottom labels leaves \(\Bottom\) or a
+scoped obstruction, not matter coupling. \\
+Target-matter-name substitution & Blocked as target matter semantics import. \\
+Detector-outcome pressure & Blocked as empirical detector semantics import. \\
+Stress-energy or action substitution & Blocked as stress-energy semantics,
+stress-energy tensor, or matter-action import. \\
+Target-metric scope pressure & Blocked as target metric or \(\geff\) scope
+pressure. \\
+\(\ProofAuthFalse\) erasure & Support-only computation has no proof
+authority after erasure. \\
+Adoption laundering & Human authorization, validators, registries, generated
+derivatives, roles, handoffs, approvals, commits, and local caches do not turn
+proposal-only payload into adoption. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Non-bottom instantiation obstruction]
+Under current authority, a non-bottom split in \(L_E\) is adoption-ready only
+if \(D_E:T_E\to L_E\) is induced by source-side structure and not merely by
+labels attached to the payload.
+\end{lemma}
+
+\begin{proof}
+The RT-055 candidate-law schema lists non-bottom source discrimination as a
+future obligation. The RT-056 audit shows that the written schema avoids
+hidden target imports, but it does not construct the promised source-side
+non-bottom discriminator. If the non-bottom labels are not induced by a
+source-side law, then replacing them by arbitrary names changes no source
+fact. The packet therefore has no adoption-ready matter semantics under
+\(\Bcur\). The fail-closed result is \(\Bottom\) or a scoped obstruction.
+\end{proof}
+
+\begin{lemma}[Relabeling transport obstruction]
+Relabeling naturality for \(\SemMatterSrc(E)\) requires a source-defined
+transport \(\rho_L\) on labels. It cannot be supplied by preserving target
+matter interpretation.
+\end{lemma}
+
+\begin{proof}
+The required equation \(D_{E'}(\rho(t))=\rho_L(D_E(t))\) is meaningful only
+when both \(\rho\) and \(\rho_L\) are source-side maps. If \(\rho_L\) is
+defined by keeping target matter names fixed, by detector outcomes, or by
+stress-energy/action variables, then the stress surface imports the target
+semantics the candidate was designed to avoid. Such an import is outside the
+claim boundary. Without source-defined \(\rho_L\), adoption-readiness fails.
+\end{proof}
+
+\begin{lemma}[Support-only erasure lemma]
+If support-only outputs are marked \(\ProofAuthFalse\), then erasing
+non-source labels leaves no proof of \(\MatSrcDiscLaw\) or \(\SemMatterSrc\)
+adoption.
+\end{lemma}
+
+\begin{proof}
+The audit and control records allow support outputs only as retrieval or
+process support. Once non-source labels, generated derivatives, registry
+metadata, validator status, role status, handoff status, approval status,
+commit status, and local caches are excluded as proof authority, no remaining
+object in the audited payload proves source-law adoption or matter coupling.
+\end{proof}
+
+\section{Freeze Criteria}
+
+This packet records a scoped obstruction but does not freeze the route.
+The obstruction is local to the current audited payload and current basis:
+the schema remains a repair target, and same-milestone continuation remains
+\texttt{blocked\_adoption\_open\_continuation}. A future source-side repair
+may try to supply a source-intrinsic non-bottom instantiation, a source-defined
+label transport, or a stronger scoped no-go theorem.
+
+\section{Distance-To-GR Status}
+
+\[
+\begin{array}{ll}
+\text{Source ontology primitives} & \text{unchanged; no canonical ontology edit}\\
+\text{Source equivalence EqSrc} & \text{unchanged}\\
+\text{RetainH} & \text{unchanged}\\
+\text{GenH} & \text{unchanged}\\
+\text{ObsLoc\_lc} & \text{unchanged}\\
+\text{Resp\_lc} & \text{scoped source-extension context only}\\
+\text{M\_src} & \text{no adoption or scope change}\\
+\text{\(\MetricData(E)\)} & \text{no \(\MetricData(E)\) adoption}\\
+\text{\(\geff\)} & \text{no \(\geff\) scope change}\\
+\text{matter coupling} & \text{current-basis adoption-readiness obstruction}\\
+\text{Einstein equations} & \text{blocked; no field-equation derivation}\\
+\text{finite-variation robustness} & \text{local stress only; no general theorem}\\
+\text{benchmark promotion} & \text{blocked; no benchmark promotion}\\
+\text{Gate Chair status} & \text{no Gate Chair verdict}\\
+\text{current route freeze or hard-fail status} & \text{not frozen; selector route open}
+\end{array}
+\]
+
+\section{Stress Verdict}
+
+\begin{verdict}[Current-basis candidate-law stress]
+The RT-055 proposal-only \(\MatSrcDiscLaw / \SemMatterSrc\) payload survives
+as a guarded draft/control schema and repair target, but fails current-basis
+adoption-readiness stress. The stress failure is a scoped obstruction:
+no source-intrinsic non-bottom instantiation or source-defined label transport
+has been supplied under the audited payload.
+\end{verdict}
+
+The obstruction ID is:
+
+\begin{verbatim}
+MS-CL-STRESS-001-current-basis-nonbottom-instantiation
+\end{verbatim}
+
+\section{Refuted Overreads}
+
+This artifact refutes the following overreads:
+
+\begin{itemize}[leftmargin=*]
+\item audit pass as source-law adoption;
+\item audit pass as \(\MatSrcDiscLaw\) or \(\SemMatterSrc\) adoption;
+\item proposal-only schema as source-extension data adoption;
+\item explicit non-bottom tags as source-derived matter sectors;
+\item target matter names, detector outcomes, stress-energy variables, matter
+  actions, or target metric scope as source-side semantics;
+\item support-only \(\ProofAuthFalse\) output as proof authority;
+\item human authorization, validators, registries, generated derivatives,
+  roles, handoffs, approvals, commits, or local caches as proof authority.
+\end{itemize}
+
+\section{Next Route}
+
+The lawful next route is one bounded
+\texttt{theoretical-continuation-selector@0.1.0} packet to choose among:
+
+\begin{enumerate}[leftmargin=*]
+\item a repair construction that tries to instantiate source-intrinsic
+  non-bottom labels and source-defined label transport;
+\item a stronger scoped obstruction or no-go question;
+\item a human-gated precondition packet if protected ontology authority is
+  needed before further definition;
+\item invalid-under-claim-boundary repair if later records overread this
+  stress result.
+\end{enumerate}
+
+No selector outcome is adopted by this artifact.
+
+\section{References}
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter-semantics
+candidate-law payload v1} [Internal draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+candidate-law smuggling audit v1} [Internal draft/control TeX artifact].
+
+\end{document}
+
