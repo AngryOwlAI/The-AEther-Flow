@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-PAYLOAD;TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-SMUGGLING-AUDIT;TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-REFUTER-STRESS` ``
 - Generated output path: `wiki/tex/tex-v12-ontology-law-matter-semantics-repair-candidate.md`
+- Backlink from `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-003/artifacts/matter_signature_repair_candidate_smuggling_audit_v1.tex`
 
 ## Validation
 

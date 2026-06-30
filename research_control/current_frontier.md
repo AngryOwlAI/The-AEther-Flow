@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-002` and `handoff-0354`.
+`RT-20260630-003` and `handoff-0355`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-002` |
-| Latest handoff ID | `handoff-0354` |
-| Current status | `v12_ontology_law_matter_semantics_repair_candidate_constructed_pending_audit_no_adoption` |
-| Current route family | v12 ontology law matter semantics repair candidate audit |
+| Active task ID | `RT-20260630-003` |
+| Latest handoff ID | `handoff-0355` |
+| Current status | `v12_ontology_law_matter_signature_repair_candidate_audit_passed_pending_stress_no_adoption` |
+| Current route family | v12 ontology law matter signature repair candidate stress |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | Smuggling Auditor audit of MatterSignatureDisc_src^cand / SemMatter_src^sig-cand only |
-| Next recommended action | Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only matter-signature repair candidate for hidden target import explicit-tag collapse source-law adoption laundering source-extension data adoption laundering matter-coupling overread proof_authority=false erasure and process-authority laundering. |
+| Required next authority | Refuter stress of MatterSignatureDisc_src^cand / SemMatter_src^sig-cand only |
+| Next recommended action | Run one bounded refuter@0.2.0 transaction to stress the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand candidate under source relabeling, finite variation, incidence deletion, explicit-tag collapse, non-bottom-label erasure, target-matter-name substitution, detector-outcome pressure, stress-energy-action substitution, target-metric scope pressure, support-only proof_authority=false erasure, adoption laundering, and downstream-promotion pressure before any selector Gate Chair adoption or matter-coupling route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-002/00_TASK.yaml`.
-- Active task objective: Construct one bounded source-side repair candidate for source-intrinsic non-bottom instantiation and source-defined label transport for proposal-only MatSrcDiscLaw_v1 / SemMatter_src, or return a precise obstruction, without adoption or promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0354.yaml`.
-- Latest handoff summary: RT-20260630-002 completed one bounded Candidate Constructor packet. It constructed MatterSignatureDisc_src^cand / SemMatter_src^sig-cand as a finite/local proposal-only source-incidence signature repair candidate pending audit with no adoption or promotion.
-- Current route family: v12 ontology law matter semantics repair candidate audit.
-- Next recommended action: Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only matter-signature repair candidate for hidden target import explicit-tag collapse source-law adoption laundering source-extension data adoption laundering matter-coupling overread proof_authority=false erasure and process-authority laundering.
+- Active task path: `research_control/tasks/RT-20260630-003/00_TASK.yaml`.
+- Active task objective: Audit the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand source-incidence signature repair candidate for hidden target import, explicit-tag collapse, source-law adoption laundering, source-extension data adoption laundering, matter-coupling overread, proof_authority=false erasure, and process-authority laundering without adoption or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0355.yaml`.
+- Latest handoff summary: RT-20260630-003 completed one bounded Smuggling Auditor packet. It audited MatterSignatureDisc_src^cand / SemMatter_src^sig-cand as source_pure_as_written_pending_stress with no adoption or promotion.
+- Current route family: v12 ontology law matter signature repair candidate stress.
+- Next recommended action: Run one bounded refuter@0.2.0 transaction to stress the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand candidate under source relabeling, finite variation, incidence deletion, explicit-tag collapse, non-bottom-label erasure, target-matter-name substitution, detector-outcome pressure, stress-energy-action substitution, target-metric scope pressure, support-only proof_authority=false erasure, adoption laundering, and downstream-promotion pressure before any selector Gate Chair adoption or matter-coupling route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only matter-signature repair candidate for hidden target import explicit-tag collapse source-law adoption laundering source-extension data adoption laundering matter-coupling overread proof_authority=false erasure and process-authority laundering.
+Run one bounded refuter@0.2.0 transaction to stress the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand candidate under source relabeling, finite variation, incidence deletion, explicit-tag collapse, non-bottom-label erasure, target-matter-name substitution, detector-outcome pressure, stress-energy-action substitution, target-metric scope pressure, support-only proof_authority=false erasure, adoption laundering, and downstream-promotion pressure before any selector Gate Chair adoption or matter-coupling route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-002`;
-- latest handoff: `handoff-0354`;
-- current status: `v12_ontology_law_matter_semantics_repair_candidate_constructed_pending_audit_no_adoption`;
+- active task: `RT-20260630-003`;
+- latest handoff: `handoff-0355`;
+- current status: `v12_ontology_law_matter_signature_repair_candidate_audit_passed_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0354.yaml`
-- `research_control/tasks/RT-20260630-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0355.yaml`
+- `research_control/tasks/RT-20260630-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0354*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0355*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
