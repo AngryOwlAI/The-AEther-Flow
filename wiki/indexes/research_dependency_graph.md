@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T10:42:07Z`
-- Source fingerprint: `cbe8224a20af45502869a821f09342f9b86e534f44cec6c5d068c9f0c8acd220`
-- Nodes: `8123`
-- Edges: `34450`
+- Generated from tracked state as of: `2026-06-30T11:04:35Z`
+- Source fingerprint: `fd8a186c8de9460ba6e440f6554c6e9aa77bec78a527f245a83f19d871c16060`
+- Nodes: `8147`
+- Edges: `34574`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 511 |
+| `completion_yaml` | 512 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 375 |
+| `handoff_yaml` | 376 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 511 |
+| `agent_job` | `support_only` | 512 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4040 |
-| `blocked_burden` | `blocked` | 906 |
-| `claim_boundary` | `support_only` | 512 |
-| `draft_control_candidate` | `draft_control` | 379 |
+| `artifact` | `support_only` | 4054 |
+| `blocked_burden` | `blocked` | 909 |
+| `claim_boundary` | `support_only` | 513 |
+| `draft_control_candidate` | `draft_control` | 380 |
 | `draft_control_candidate` | `proposal_only` | 57 |
 | `draft_control_candidate` | `science_draft` | 30 |
-| `frozen_negative` | `frozen_negative` | 80 |
+| `frozen_negative` | `frozen_negative` | 81 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 375 |
+| `handoff` | `support_only` | 376 |
 | `human_gated_object` | `human_gated` | 234 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 218 |
+| `source_ontology_object` | `support_only` | 219 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 460 |
+| `task` | `support_only` | 461 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-023`
-- Latest handoff: `handoff-0375`
-- Handoff path: `research_control/handoffs/handoff-0375.yaml`
-- Next action: Run one bounded smuggling-auditor@0.2.0 P5-T04 packet to audit MatterSemanticsCandidate^cand_v1(E;B_current) for hidden target matter semantics, empirical detector protocols, stress-energy tensors, matter actions, conservation-law import, target metric dependence, coupling-law adoption laundering, downstream promotion, support-only proof laundering, and process-authority proof laundering. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-024`
+- Latest handoff: `handoff-0376`
+- Handoff path: `research_control/handoffs/handoff-0376.yaml`
+- Next action: Run one bounded refuter@0.2.0 P5-T05 packet to stress-test MatterSemanticsCandidate^cand_v1(E;B_current) under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, g_eff scope pressure, explicit-label collapse, new-primitive pressure, and support-only proof-authority boundaries. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

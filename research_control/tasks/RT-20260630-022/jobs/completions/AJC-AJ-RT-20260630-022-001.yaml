@@ -57,7 +57,7 @@ command_results:
   - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=484 relationship_row_count=2617"
   - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=PASS source_object_count=484 relationship_row_count=2617"
   - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json | exit_code=0 | hash=e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
-  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | hash=ce3060d7dcdf153f8f547da83fca6e0b30252176700fab220e88cdc2c898bf07"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | hash=3fb793a611eb4bc3d23af16866781703f158cb6d4a40658e80aa239d4f5c956e"
   - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"SourceProbeToken SourceDetectorReadout MatterResponseToken\" --limit 10 --json | exit_code=0 | returned current frontier and v12 plan hits"
   - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260630-021 latest_handoff=handoff-0373"
 validation_status: "PASS"
@@ -274,7 +274,7 @@ memory_preflight:
       source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
       registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
       canonical_path: "research_control/current_frontier.md"
-      source_hash: "ce3060d7dcdf153f8f547da83fca6e0b30252176700fab220e88cdc2c898bf07"
+      source_hash: "3fb793a611eb4bc3d23af16866781703f158cb6d4a40658e80aa239d4f5c956e"
   authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
 obstruction_record:
   present: false

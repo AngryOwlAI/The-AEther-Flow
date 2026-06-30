@@ -609,6 +609,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION` `wiki/tex/tex-v12-p5-t02-source-matter-semantics-target-formalization.md`
 - `WIKI-TEX-V12-P5-T03-MATTER-SEMANTICS-CANDIDATE` `wiki/tex/tex-v12-p5-t03-matter-semantics-candidate.md`
 - `WIKI-TEX-V12-P5-T03-MATTER-SEMANTICS-DISCRIMINATOR-OBSTRUCTION` `wiki/tex/tex-v12-p5-t03-matter-semantics-discriminator-obstruction.md`
+- `WIKI-TEX-V12-P5-T04-MATTER-SEMANTICS-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p5-t04-matter-semantics-candidate-smuggling-audit.md`
 - `WIKI-TEX-V12-P5-T04-MATTER-SEMANTICS-OBSTRUCTION-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p5-t04-matter-semantics-obstruction-smuggling-audit.md`
 - `WIKI-TEX-V12-P5-T05-MATTER-SEMANTICS-OBSTRUCTION-REFUTER-STRESS` `wiki/tex/tex-v12-p5-t05-matter-semantics-obstruction-refuter-stress.md`
 
@@ -1004,6 +1005,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION` `research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex`
 - `TEX-V12-P5-T03-MATTER-SEMANTICS-CANDIDATE` `research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex`
 - `TEX-V12-P5-T03-MATTER-SEMANTICS-DISCRIMINATOR-OBSTRUCTION` `research_control/tasks/RT-20260629-051/artifacts/matter_semantics_discriminator_obstruction_v1.tex`
+- `TEX-V12-P5-T04-MATTER-SEMANTICS-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-024/artifacts/matter_semantics_candidate_smuggling_audit_v1.tex`
 - `TEX-V12-P5-T04-MATTER-SEMANTICS-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-052/artifacts/matter_semantics_obstruction_smuggling_audit_v1.tex`
 - `TEX-V12-P5-T05-MATTER-SEMANTICS-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-053/artifacts/matter_semantics_obstruction_refuter_stress_v1.tex`
 

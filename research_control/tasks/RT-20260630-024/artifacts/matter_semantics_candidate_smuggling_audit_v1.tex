@@ -1,0 +1,268 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\SCLC}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSCand}{\mathrm{MatterSemanticsCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\FailureObs}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\BottomS}{\bot_S}
+\newcommand{\BottomR}{\bot_R}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\title{Matter-Semantics Candidate Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260630-024}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Smuggling Auditor artifact for
+\texttt{RT-20260630-024}. It implements P5-T04 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md}.
+
+The audit subject is the P5-T03 candidate:
+\begin{verbatim}
+research_control/tasks/RT-20260630-023/artifacts/
+matter_semantics_candidate_v1.tex
+\end{verbatim}
+
+The audit verdict is:
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_stress"
+explicit_source_label_caveat: "stress_required_for_tag_removal_and_label_collapse"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MCPA_cand_v1_E_adopted: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_required_role: "refuter"
+\end{verbatim}
+
+This artifact audits only. It does not edit canonical ontology, adopt a source
+law, adopt \(\MCPA(E)\), adopt source-extension data beyond the exact scoped
+gate result, adopt \(\MetricData(E)\), change scoped \(\geff\), adopt a
+coupling law, derive or adopt matter coupling, import stress-energy semantics,
+construct a stress-energy tensor, import detector semantics, import a matter
+action, derive Einstein equations, promote benchmark status, issue a Gate
+Chair verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Audit Question}
+
+Does \(\MSCand(E;\Bcur)\) obtain its matter-semantics candidate status by
+importing target matter semantics, empirical detector protocols,
+stress-energy tensors, matter actions, conservation laws, variational
+principles, target metric structure, benchmark behavior, coupling-law
+authority, or support-only proof authority?
+
+Conclusion: no such import is detected in the artifact as written. The pass is
+narrow. The explicit source matter-signature labels are accepted only as
+source-side syntax under the declared basis; they remain a stress target for
+P5-T05 tag removal, sector deletion, degeneracy, and label-collapse tests.
+
+\section{Audit Surface}
+
+The audit reads P5-T03 as the finite/local candidate tuple
+\[
+  \MSCand(E;\Bcur)=(S_E^{\mathrm{msc}},P_E^{\mathrm{msc}},
+  R_E^{\mathrm{msc}},Q_E^{\mathrm{msc}},\Gamma_E^{\mathrm{msc}}).
+\]
+The tuple uses source matter-signature labels, finite/local supports,
+compatibility certificates, source probe tokens, source readout syntax,
+source response tokens, and non-import certificate bundles. It states that any
+attempt to use target or process authority fails closed to
+\(\FailureObs(E;\Bcur,O)\).
+
+The audit does not treat the candidate as adopted source law. It reads the
+scoped \(\SCLC(E)\) input as evidence/precondition context only, exactly as
+P5-T03 declared.
+
+\section{Hidden Target-Import Screen}
+
+\begin{longtable}{p{0.32\linewidth}p{0.56\linewidth}}
+\toprule
+Audit check & Result \\
+\midrule
+Target matter semantics & Pass as written. Matter-signature labels are declared source syntax only; stress must test label collapse. \\
+Stress-energy tensor & Pass. No stress-energy tensor is constructed or used. \\
+Stress-energy semantics & Pass. Stress-energy semantics are explicitly excluded by certificates. \\
+Matter action & Pass. No matter action, Lagrangian density, path integral, or Euler-Lagrange dynamics is imported. \\
+Variational principle & Pass. Variational shortcuts remain forbidden and trigger fail-closed behavior. \\
+Detector protocol & Pass. Source probe tokens are not empirical detector protocols. \\
+Empirical calibration & Pass. No apparatus calibration, observation protocol, or measurement semantics is used. \\
+Target metric & Pass. No target metric, target atlas, target topology, Lorentzian signature, or metric-form data is introduced. \\
+Proper-time normalization & Pass. No proper-time normalization is introduced. \\
+Conservation law & Pass. No GR or QFT conservation law is imported by name as a premise. \\
+Coupling law & Pass. \(\SCLC(E)\) is used only as scoped precondition context; no coupling law is adopted. \\
+Benchmark behavior & Pass. Benchmark success is not used as evidence. \\
+Support-only checker & Pass. The finite witness can be support-only reproducible but not proof authority. \\
+Process authority & Pass. Generated derivatives, validators, registries, roles, handoffs, approvals, commits, local caches, and file order are not mathematical premises. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[No hidden target matter import as written]
+The P5-T03 candidate does not use target matter semantics, empirical detector
+protocols, calibration data, stress-energy tensors, matter actions,
+variational principles, target metric structure, proper-time normalization,
+GR/QFT conservation-law naming, coupling-law authority, benchmark behavior, or
+support-only checker output as a mathematical premise.
+\end{lemma}
+
+\begin{proof}
+The candidate's positive components are source labels, finite/local source
+supports, compatibility certificates, source probe tokens, source readout
+syntax, source response tokens, and non-import certificate bundles. The
+artifact explicitly routes any need for detector semantics, stress-energy
+semantics or tensor data, matter-action dynamics, target metric structure,
+benchmark behavior, generated-output authority, validator authority, or
+process authority to fail-closed behavior. The construction therefore does not
+require target matter semantics or target physics as a premise.
+\end{proof}
+
+\section{Process-Authority Laundering Screen}
+
+\begin{lemma}[No support-only proof authority]
+P5-T03 does not convert generated derivatives, validators, registries, role
+records, handoffs, approvals, commits, local caches, semantic extracts,
+support-only checkers, or file order into mathematical premises.
+\end{lemma}
+
+\begin{proof}
+The candidate cites support-only reproducibility only for a finite record
+family. It separately states that such checking is not proof authority,
+physics evidence, source-law adoption, matter coupling, or benchmark evidence.
+Control surfaces may route and preserve the packet, but they do not prove the
+candidate as adopted ontology or physical matter semantics.
+\end{proof}
+
+\section{Adoption-Laundering Screen}
+
+\begin{proposition}[No candidate adoption laundering]
+The symbols \(\MSCand(E;\Bcur)\), \(S_E^{\mathrm{msc}}\),
+\(P_E^{\mathrm{msc}}\), \(R_E^{\mathrm{msc}}\),
+\(Q_E^{\mathrm{msc}}\), and \(\Gamma_E^{\mathrm{msc}}\) are draft/control
+candidate objects. They are not adopted source law, not adopted
+\(\MCPA(E)\), not accepted source-extension data beyond the exact scoped gate
+result, not a coupling law, and not matter coupling.
+\end{proposition}
+
+\begin{proof}
+The P5-T03 theorem states ``constructed candidate without adoption'' and
+blocks source-law, \(\MCPA(E)\), source-extension-data, \(\MetricData(E)\),
+\(\geff\), coupling-law, matter-coupling, stress-energy, detector, matter
+action, Einstein-equation, benchmark, and completed-derivation conclusions.
+The candidate's use of \(\SCLC(E)\) is explicitly scoped evidence/precondition
+context only. No Gate Chair verdict or adoption rule is present.
+\end{proof}
+
+\section{Explicit Label Caveat}
+
+The candidate uses source matter-signature labels. This is not a hidden target
+import because the labels are declared source-side records and the candidate
+forbids target stress-energy, matter action, detector, target metric, and
+benchmark semantics. However, label syntax is not yet a source-side law. P5-T05
+must test whether the candidate survives tag removal, sector deletion,
+degeneracy, fail-closed pressure, and label-collapse scenarios. Passing this
+audit does not answer those stress questions.
+
+\section{Distance-to-GR Status}
+
+\begin{verbatim}
+Source ontology primitives: unchanged; no canonical ontology edit
+Source equivalence EqSrc: unchanged; no general EqSrc theorem
+RetainH: unchanged
+GenH: unchanged
+ObsLoc_lc: unchanged
+Resp_lc: scoped source-extension context only
+M_src: scoped source-only context only; no scope expansion
+MetricData(E): no MetricData(E)
+g_eff: scoped g_eff context only; no unscoped g_eff and no scope change
+matter coupling: P5-T04 audit pass as written for candidate; no matter coupling
+Einstein equations: blocked; no field-equation derivation
+finite-variation robustness: P5-T05 stress remains required
+benchmark promotion: blocked; no benchmark promotion
+Gate Chair status: no Gate Chair verdict
+current route freeze or hard-fail status: not frozen; P5-T05 stress route open
+\end{verbatim}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+\begin{quote}
+As written, the P5-T03 matter-semantics candidate is source-pure enough to
+undergo P5-T05 Refuter stress. The pass is audit-only: it does not adopt
+source law, does not adopt \(\MCPA(E)\), does not promote scoped evidence,
+does not change Distance-to-GR ledger status, and does not establish matter
+coupling.
+\end{quote}
+
+\section{Non-Allowed Conclusions}
+
+This artifact does not allow:
+\begin{itemize}[leftmargin=*]
+\item canonical ontology edit or source-law adoption;
+\item \(\MCPA(E)\) adoption;
+\item source-extension data adoption beyond the exact scoped gate result;
+\item \(\MetricData(E)\) adoption;
+\item \(\geff\) scope change, unscoped \(\geff\), or target Lorentzian metric;
+\item coupling-law adoption or matter-coupling derivation;
+\item stress-energy semantics, stress-energy tensor, matter action, detector
+  semantics, or empirical calibration;
+\item Einstein equations;
+\item exact-GR benchmark promotion or benchmark Gate Chair closure;
+\item completed derivation;
+\item future source-extension impossibility;
+\item global theory rejection;
+\item generated derivatives, validators, registries, roles, handoffs,
+  approvals, commits, local caches, semantic extracts, support checkers, or
+  file order as proof authority.
+\end{itemize}
+
+\section{Next Route}
+
+The next bounded packet is P5-T05 Refuter stress of the audited candidate. The
+stress packet must test source relabeling, finite variation, tag removal,
+sector deletion, degeneracy, fail-closed behavior, \(\geff\) scope pressure,
+explicit-label collapse, new-primitive pressure, and support-only proof
+authority boundaries.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan continue task v12} [Internal implementation plan].
+
+Candidate Constructor Packet RT-20260630-023. (2026). \emph{Matter-semantics
+candidate v1} [Research-control TeX artifact]. The AEther-Flow Interpretation
+of Relativity Research Project.
+
+Ontology Formalizer Packet RT-20260630-022. (2026). \emph{Source-side
+matter-semantics target formalization v1} [Research-control TeX artifact]. The
+AEther-Flow Interpretation of Relativity Research Project.
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0375}
+[Internal research-control handoff].
+
+\end{document}
