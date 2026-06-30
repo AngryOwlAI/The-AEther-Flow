@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T02:01:47Z`
-- Source fingerprint: `d1ee909f5c29c8b0cbd08f2fefda7505f42d085609a60b3d61d3ffdcdb69bd64`
-- Nodes: `7576`
-- Edges: `31753`
+- Generated from tracked state as of: `2026-06-30T02:29:39Z`
+- Source fingerprint: `e4847aa5d59260f8e9515b039ab4b6f250307d8da084afed7150ff8006328d46`
+- Nodes: `7609`
+- Edges: `31887`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 491 |
+| `completion_yaml` | 492 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 355 |
+| `handoff_yaml` | 356 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 491 |
+| `agent_job` | `support_only` | 492 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3755 |
-| `blocked_burden` | `blocked` | 817 |
-| `claim_boundary` | `support_only` | 492 |
-| `draft_control_candidate` | `draft_control` | 343 |
+| `artifact` | `support_only` | 3769 |
+| `blocked_burden` | `blocked` | 825 |
+| `claim_boundary` | `support_only` | 493 |
+| `draft_control_candidate` | `draft_control` | 348 |
 | `draft_control_candidate` | `proposal_only` | 50 |
 | `draft_control_candidate` | `science_draft` | 30 |
-| `frozen_negative` | `frozen_negative` | 69 |
+| `frozen_negative` | `frozen_negative` | 70 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 355 |
+| `handoff` | `support_only` | 356 |
 | `human_gated_object` | `human_gated` | 219 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 18 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 204 |
+| `source_ontology_object` | `support_only` | 205 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 440 |
+| `task` | `support_only` | 441 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-003`
-- Latest handoff: `handoff-0355`
-- Handoff path: `research_control/handoffs/handoff-0355.yaml`
-- Next action: Run one bounded refuter@0.2.0 transaction to stress the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand candidate under source relabeling, finite variation, incidence deletion, explicit-tag collapse, non-bottom-label erasure, target-matter-name substitution, detector-outcome pressure, stress-energy-action substitution, target-metric scope pressure, support-only proof_authority=false erasure, adoption laundering, and downstream-promotion pressure before any selector Gate Chair adoption or matter-coupling route.
+- Active task: `RT-20260630-004`
+- Latest handoff: `handoff-0356`
+- Handoff path: `research_control/handoffs/handoff-0356.yaml`
+- Next action: Run one bounded theoretical-continuation-selector@0.1.0 transaction to select the post-stress route for the proposal-only MatterSignatureDisc_src^cand / SemMatter_src^sig-cand candidate before any Gate Chair adoption request, source-extension data adoption, matter-coupling route, Einstein-equation route, or benchmark-promotion route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

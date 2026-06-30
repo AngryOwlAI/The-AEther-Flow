@@ -1,0 +1,297 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Matter-Signature Repair Candidate Refuter Stress v1}
+\author{Refuter Packet RT-20260630-004}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Refuter artifact for \texttt{RT-20260630-004}. It
+stress-tests the proposal-only
+\(\MatSigDisc / \SemMatterSig\) repair candidate created by
+\texttt{RT-20260630-002} and audited by \texttt{RT-20260630-003}.
+
+The stress verdict is:
+\begin{verbatim}
+stress_result.result_type: "bridge_facing_candidate_path"
+stress_verdict:
+  "matter_signature_repair_candidate_stress_survived_pending_selector"
+source_extension_category: "source_extension_refuter_stress"
+candidate_status: "draft/control proposal-only"
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+MatterSignatureDisc_src_cand_adopted: false
+SemMatter_src_sig_cand_adopted: false
+source_extension_data_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+This packet does not edit canonical ontology, adopt a source law, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt \(\MatSigDisc\), adopt
+\(\SemMatterSig\), adopt source-extension data, adopt \(\MetricData(E)\),
+change the scope of \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, import detector semantics, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, claim future source-extension impossibility, or reject the global
+theory.
+
+\section{Stress Surface}
+
+The audited candidate uses only a finite/local source-incidence package
+\[
+  \mathcal{S}_E=(T_E,A_E,R_E,\mathcal{R}_E,\mathcal{V}_E,\NoTarget_E),
+\]
+source-incidence signatures
+\[
+  \sigma_E(t)=\{a\in A_E\mid (t,a)\in R_E\},
+\]
+signature labels \(L_E=\{\ell_\Sigma\}\cup\{\Bottom\}\), the total map
+\[
+  D_E:T_E\to L_E,
+\]
+and label transport
+\[
+  \rho_L(\ell_\Sigma)=\ell_{\rho_A[\Sigma]},
+  \qquad \rho_L(\Bottom)=\Bottom.
+\]
+The stress question is whether this proposal-only source-incidence package
+survives the required adversarial perturbations without becoming an adopted
+source law, a matter-coupling derivation, a target-matter semantics import, or
+process authority disguised as proof.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.28\linewidth}p{0.60\linewidth}}
+\toprule
+Stress & Result \\
+\midrule
+Source relabeling & Survives for incidence-preserving source relabelings:
+\(D_{E'}(\rho_T(t))=\rho_L(D_E(t))\). \\
+Finite variation & Survives only for declared source-side preserve or repair
+branches; destructive variations fall closed to \(\Bottom\) or obstruction
+labels. \\
+Incidence deletion & Affected tokens lose positive evidence and map to
+\(\Bottom\); deletion does not create adopted matter semantics. \\
+Explicit-tag collapse & Blocked. Labels preserved without source incidence
+route to \texttt{MS-SIG-EXPLICIT-TAG-COLLAPSE}. \\
+Non-bottom-label erasure & Erasure removes positive source evidence; it does
+not become proof of any source law. \\
+Target matter names & Blocked by \(\NoTarget\); substitution routes to
+\texttt{MS-SIG-TARGET-IMPORT}. \\
+Detector outcomes & Blocked by \(\NoTarget\); detector readout is not used to
+define \(T_E,A_E,R_E,L_E,D_E\), or \(\rho_L\). \\
+Stress-energy or action variables & Blocked by \(\NoTarget\); no stress-energy
+tensor, stress-energy semantics, or matter action is constructed. \\
+Target metric scope & Blocked by \(\NoTarget\); no target metric, proper-time
+normalization, or \(\geff\) scope expansion is used. \\
+Support-only \(\ProofAuthFalse\) erasure & Leaves no proof authority after
+support, generated, registry, role, handoff, approval, commit, and cache
+surfaces are erased. \\
+Adoption laundering & Blocked. Stress survival remains proposal-only
+draft/control data pending selector and human-gated adoption authority. \\
+Downstream-promotion pressure & Blocked. No \(\MetricData(E)\), \(\geff\)
+scope change, matter coupling, Einstein equations, benchmark promotion, or
+completed derivation follows. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[Source-relabeling stress survival]
+For every incidence-preserving source relabeling
+\(\rho=(\rho_T,\rho_A):\mathcal{S}_E\to\mathcal{S}_{E'}\) whose no-target
+certificates pass, the candidate satisfies
+\[
+  D_{E'}(\rho_T(t))=\rho_L(D_E(t))
+\]
+for every \(t\in T_E\).
+\end{lemma}
+
+\begin{proof}
+Incidence preservation gives
+\[
+  (t,a)\in R_E \Longleftrightarrow
+  (\rho_T(t),\rho_A(a))\in R_{E'}.
+\]
+Therefore
+\[
+  \sigma_{E'}(\rho_T(t))=\rho_A[\sigma_E(t)].
+\]
+The definition of \(D_E\), \(D_{E'}\), and
+\(\rho_L(\ell_\Sigma)=\ell_{\rho_A[\Sigma]}\) gives the equality. The proof
+uses only source-token, source-interface, and source-incidence data.
+\end{proof}
+
+\begin{lemma}[Incidence-deletion fail-closed stress]
+If a finite variation deletes or corrupts the source incidence needed to
+compute \(\sigma_E(t)\), then the candidate maps the affected token to
+\(\Bottom\) or to a named obstruction label. This failure mode is fail-closed
+and does not supply positive matter semantics.
+\end{lemma}
+
+\begin{proof}
+The non-bottom labels are generated only from occurring source-incidence
+signatures. When the incidence data needed for a token is removed, the
+candidate no longer has the source evidence required to assign
+\(\ell_{\sigma_E(t)}\). The candidate's own guard therefore routes the token
+to \(\Bottom\) or to an obstruction label such as
+\texttt{MS-SIG-SOURCE-INCIDENCE-MISSING}. A failed source signature is not a
+physical detector outcome, not stress energy, not a matter action, and not a
+coupling law.
+\end{proof}
+
+\begin{lemma}[Explicit-tag collapse is blocked]
+An attempted implementation that preserves \(\ell_\Sigma\)-style names while
+removing the source-incidence relation \(R_E\) fails the candidate's support
+condition and routes to \texttt{MS-SIG-EXPLICIT-TAG-COLLAPSE}.
+\end{lemma}
+
+\begin{proof}
+In the audited candidate, labels are not primitive matter-sector names. They
+are generated from subsets \(\Sigma=\sigma_E(t)\subseteq A_E\) that occur by
+\((t,a)\in R_E\). If the apparent label persists after the source-incidence
+basis is erased, then the label is an explicit tag rather than a source
+signature. The candidate's stated finite-variation guard marks that branch as
+collapse rather than adoption-ready semantics.
+\end{proof}
+
+\begin{lemma}[Target and process substitution stress is blocked]
+Substituting target matter names, detector outcomes, stress-energy variables,
+matter-action variables, target metric data, benchmark behavior, generated
+derivatives, registry metadata, validator output, role authority, handoff
+authority, approval authority, commit state, support-only checker output, or
+local retrieval caches for \(T_E,A_E,R_E,L_E,D_E\), or \(\rho_L\) violates
+\(\NoTarget\) or \(\ProofAuthFalse\) and does not prove the candidate.
+\end{lemma}
+
+\begin{proof}
+The candidate's admissible data are source tokens, source-interface indices,
+source incidence, source relabeling, declared finite variations, fail-closed
+bottom behavior, and no-target certificates. The listed substitutions are not
+members of that source-side data. They therefore trigger target-import or
+process-authority laundering branches and leave no proof authority.
+\end{proof}
+
+\begin{proposition}[Stress survival is not adoption]
+The stress result is a bridge-facing candidate path only. It supports a
+post-stress selector route for the proposal-only
+\(\MatSigDisc / \SemMatterSig\) package. It does not adopt
+\(\MatSrcDiscLaw\), \(\SemMatterSrc\), \(\MatSigDisc\), \(\SemMatterSig\), or
+source-extension data.
+\end{proposition}
+
+\begin{proof}
+The stress packet verifies conditional behavior of the audited source-incidence
+candidate under the named adversarial branches. That is weaker than source-law
+adoption. Adoption would require selector classification, explicit
+human-gated Gate Chair authority, and preservation of exact-GR recovery
+obligations. None of those authorities are created by this Refuter packet.
+\end{proof}
+
+\section{Distance-To-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Scoped source-extension context retained as context only. \\
+M\_src & Scoped source-only object retained; no adoption or scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & Repair candidate survives stress as proposal-only bridge-facing candidate path pending selector; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Local source-incidence candidate stress passed under stated preserve, repair, and fail-closed branches; no general theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict; adoption remains human-gated. \\
+Current route freeze or hard-fail status & Not frozen; post-stress selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+
+\begin{quote}
+The audited proposal-only \(\MatSigDisc / \SemMatterSig\) repair candidate
+survives the named Refuter stresses as a bridge-facing draft/control candidate
+path pending selector. The stress pass is not source-law adoption, not
+source-extension data adoption, not matter coupling, not \(\MetricData(E)\),
+not a \(\geff\) scope change, and not downstream GR promotion.
+\end{quote}
+
+\section{Non-Allowed Conclusions}
+
+\begin{nonconclusion}
+This packet is not source-law adoption, not \(\MatSrcDiscLaw\) adoption, not
+\(\SemMatterSrc\) adoption, not \(\MatSigDisc\) adoption, not
+\(\SemMatterSig\) adoption, not source-extension data adoption, not
+\(\MetricData(E)\) adoption, not \(\geff\) adoption or scope expansion, not
+coupling-law adoption, not matter coupling, not stress-energy semantics, not a
+stress-energy tensor, not a matter action, not detector semantics, not
+Einstein equations, not benchmark promotion, not a Gate Chair verdict, not
+completed derivation, not future source-extension impossibility, and not
+global theory rejection.
+\end{nonconclusion}
+
+\section{Next Route}
+
+The next lawful packet is one bounded
+\texttt{theoretical-continuation-selector@0.1.0} transaction. It must decide
+the post-stress route for the proposal-only \(\MatSigDisc / \SemMatterSig\)
+candidate before any Gate Chair adoption request, source-extension data
+adoption, matter-coupling route, Einstein-equation route, or benchmark route.
+
+\section*{References}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-signature
+repair candidate v1} [Internal draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-signature
+repair candidate smuggling audit v1} [Internal draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0355}
+[Internal research-control handoff].
+
+\end{document}
