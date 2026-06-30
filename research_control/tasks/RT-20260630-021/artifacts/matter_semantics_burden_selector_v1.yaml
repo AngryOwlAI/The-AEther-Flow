@@ -1,0 +1,169 @@
+artifact_id: "matter_semantics_burden_selector_v1"
+artifact_type: "theoretical_decision_output"
+task_id: "RT-20260630-021"
+job_id: "AJ-RT-20260630-021-001"
+role_id: "theoretical-continuation-selector"
+created_at: "2026-06-30T09:37:42Z"
+title: "P5-T01 Matter-Semantics Burden Selector"
+control_status:
+  parent_task_id: "RT-20260630-020"
+  parent_handoff_id: "handoff-0372"
+  target_derivation_milestone: "matter_coupling"
+  current_status: "v12_source_coupling_law_candidate_gate_accepts_scoped_evidence_precondition_no_adoption"
+  plan_task_id: "P5-T01"
+  claim_boundary: "Selector-only matter-semantics route classification. No canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E) adoption, no g_eff scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, no completed derivation, no future source-extension impossibility, and no global theory rejection."
+route_classification:
+  selected_route: "p5_t02_source_side_matter_semantics_target_formalization"
+  selected_next_packet_type: "source_side_selector_primitive"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_plan_task: "P5-T02"
+  selected_next_packet_objective: "Formalize a draft/control source-side matter-semantics target beginning with source-side matter-sector syntax plus detector/readout non-import boundary."
+  selected_target_components:
+    - "SourceMatterSector_v1(E)"
+    - "SourceProbeToken_v1(E)"
+    - "SourceDetectorReadout_v1(E)"
+    - "MatterResponseToken_v1(E)"
+    - "NoDetectorImport_v1(E)"
+    - "NoStressEnergyImport_v1(E)"
+    - "NoMatterActionImport_v1(E)"
+    - "MatterSemanticsFailureObstruction_v1(E)"
+  options:
+    source_side_matter_sector_syntax_plus_detector_readout_boundary:
+      disposition: "selected"
+      reason: "P4/RT-020 supplied a scoped source-coupling-law-candidate evidence/precondition stable enough to begin P5 preflight, but it did not adopt matter semantics. This target formalization adds new source-side definitions and non-import guards without promotion."
+    precise_matter_sector_obstruction:
+      disposition: "deferred"
+      reason: "A constructive source-side target is available; obstruction should follow only if target formalization or construction fails."
+    repeated_gate_or_adoption_review:
+      disposition: "not_selected"
+      reason: "RT-020 already completed the scoped evidence/precondition gate; adoption remains outside authority and no new protected question is prepared."
+    einstein_equation_route:
+      disposition: "blocked"
+      reason: "P5 explicitly blocks Einstein-equation work until source-side matter semantics and coupling-law prerequisites are established by later authority."
+theoretical_decision_output:
+  selected_next_packet_type: "source_side_selector_primitive"
+  decision_basis: "RT-20260630-020 accepted SourceCouplingLawCandidate^cand_v1(E) only as scoped source-extension coupling-law-candidate evidence/precondition. The v12 P5 plan requires matter-semantics preflight before Einstein-equation or benchmark-promotion work. A constructive source-side target formalization is available and lower authority than adoption, freeze, or broader protected review."
+  theoretical_method: "Compare handoff-0372 route options against the RT-020 Gate Chair artifact, the P5-T01 matter-semantics selector requirements, the GR derivation burden map, and the active claim-boundary ledger. Select the lowest-authority next packet that creates new source-side mathematical payload and blocks physical overread."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No human gate is required because this selector neither adopts nor rejects protected source law or ontology; it selects one non-promotional target-formalization packet."
+  next_execution_role_family: "ontology-formalizer@0.2.0"
+  selected_next_packet_objective: "draft/control P5-T02 source-side matter-semantics target formalization"
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "The next AgentJob should define source-side matter-semantics target objects and non-import guards. Until that packet and later construction/audit/stress/gate sequence complete, there is no matter-coupling derivation or adoption and no Einstein-equation route."
+  new_payload_novelty: "Converts the post-gate SourceCouplingLawCandidate route into a concrete P5 matter-semantics target-selection payload and names the first source-side target definitions."
+  source_extension_category: "not_applicable"
+  source_extension_import_classification: "Uses RT-020 scoped SourceCouplingLawCandidate evidence/precondition only as context; does not adopt source law, MCPA^cand_v1(E), source-extension data beyond exact scoped gate result, coupling law, matter coupling, stress-energy semantics, detector semantics, matter action, Einstein equations, or benchmark status."
+obstruction_record:
+  present: false
+  obstruction_id: "No P5 matter-semantics obstruction is recorded by this selector because a constructive source-side target formalization remains available."
+  label_family_defined: true
+  scope: "matter_semantics_preflight"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_adopt"
+  source_extension_implication: "blocked_adoption_open_continuation"
+  consequence: "ontology_formalizer_target_formalization_selected"
+  forbidden_overread: "This selector result is not source-law adoption, not MCPA adoption, not coupling-law adoption, not matter coupling, not stress-energy semantics, not detector semantics, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation."
+route_cycle_control:
+  cycle_family: "v12_matter_semantics_preflight"
+  current_cycle_step: "p5_t01_matter_semantics_burden_selector"
+  prior_related_tasks:
+    - "RT-20260630-016"
+    - "RT-20260630-017"
+    - "RT-20260630-018"
+    - "RT-20260630-019"
+    - "RT-20260630-020"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "This packet does not repeat construction, audit, stress, selector, or Gate Chair review. It moves to a new P5 matter-semantics target-formalization payload."
+  next_role_consequence: "ontology_formalizer_target_formalization"
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "SOURCE-COUPLING-LAW-CANDIDATE-EVIDENCE-ACCEPTED"
+  candidate_freeze_label: "MATTER-SEMANTICS-PREFLIGHT-ROUTE"
+  freeze_decision: "not_frozen"
+  rationale: "A constructive P5 target-formalization route remains available and adds new mathematical payload."
+  next_allowed_route: "ontology_formalizer_p5_t02_source_side_matter_semantics_target"
+distance_to_gr_delta:
+  changed: true
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted"
+  new_status: "accepted"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  status_meaning_preserved: true
+  control_delta: "Updated next action from generic post-gate selector classification to selected P5-T02 source-side matter-semantics target formalization."
+  physics_delta: "no source-law adoption no MCPA adoption no source-extension-data adoption beyond exact scoped gate result no coupling-law adoption no matter-coupling derivation no stress-energy semantics no detector semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion"
+  downstream_unlocked:
+    - "bounded_ontology_formalizer_p5_t02_source_side_matter_semantics_target"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MCPA_cand_v1_E_adoption"
+    - "source_extension_data_adoption_beyond_exact_scoped_gate_result"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "stress_energy_semantics"
+    - "detector_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+distance_to_gr_status:
+  - burden: "matter coupling"
+    status: "P5-T01 selects source-side matter-semantics target formalization as the next packet; SourceCouplingLawCandidate^cand_v1(E) remains scoped evidence/precondition only"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; constructive P5-T02 target formalization selected"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Selector-only P5-T01 route classification."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "MCPA^cand_v1(E) adoption"
+    - "source-extension data adoption beyond exact scoped gate result"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "matter-coupling adoption"
+    - "stress-energy semantics"
+    - "detector semantics"
+    - "matter action"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "completed derivation"
+  summary: "The selector chooses the next target-formalization packet only. It does not adopt matter semantics or any downstream GR object."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260630-021/artifacts/child_phys_math_matter_semantics_burden_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260630-021/artifacts/child_phys_phil_matter_semantics_burden_selector.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260630-021/artifacts/parent_conflict_review_matter_semantics_burden_selector.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260630-021/artifacts/matter_semantics_burden_selector_v1.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260630-021/artifacts/parent_fusion_notes_matter_semantics_burden_selector.md"
+    summary: "Parent fused both child selector outputs into P5-T02 source-side matter-semantics target formalization selection with all non-adoption and downstream promotion blocks preserved."
+verdict: "v12_p5_t01_selects_source_matter_semantics_target_no_adoption"

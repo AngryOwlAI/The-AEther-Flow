@@ -1,0 +1,52 @@
+task_id: "RT-20260630-021"
+task_type: "v12_p5_t01_matter_semantics_burden_selector"
+status: "completed"
+created_at: "2026-06-30T09:37:42Z"
+updated_at: "2026-06-30T09:37:42Z"
+closed_at: "2026-06-30T09:37:42Z"
+parent_task_id: "RT-20260630-020"
+parent_handoff_id: "handoff-0372"
+decision_id: "DDR-20260630-021"
+job_id: "AJ-RT-20260630-021-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260630-021"
+requires_human_gate: false
+human_authorization_note: "The current user goal grants human authorization for human gates. This selector does not consume Gate Chair authority or issue a verdict; it selects a non-promotional P5-T02 source-side matter-semantics target packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T01"
+objective: "Select the exact first matter-semantics preflight packet after scoped SourceCouplingLawCandidate^cand_v1(E) evidence/precondition acceptance, preserving all non-adoption and downstream GR claim blocks."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Select the first source-side matter-sector semantics packet before any coupling-law adoption, matter-coupling derivation or adoption, stress-energy semantics, detector semantics, matter action, Einstein-equation work, benchmark promotion, or completed-derivation route."
+closure_status: "v12_p5_t01_selects_source_matter_semantics_target_no_adoption"
+claim_boundary:
+  allowed_scope: "Selector-only matter-semantics preflight route classification"
+  selected_next_packet_type: "source_side_selector_primitive"
+  selected_next_plan_task: "P5-T02"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_packet_objective: "Formalize a source-side matter-sector syntax plus detector/readout non-import boundary as a draft/control target only."
+  route_label: "matter_semantics_preflight"
+  target_derivation_milestone: "matter_coupling"
+  source_coupling_law_candidate_status_consumed: "scoped evidence/precondition only"
+  canonical_ontology_edited: false
+  source_law_adopted: false
+  MCPA_cand_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  metric_data_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifact: "research_control/tasks/RT-20260630-021/artifacts/matter_semantics_burden_selector_v1.yaml"
+next_recommended_action: "Run one bounded ontology-formalizer@0.2.0 P5-T02 packet to formalize a draft/control source-side matter-semantics target: SourceMatterSector_v1(E), SourceProbeToken_v1(E), SourceDetectorReadout_v1(E), MatterResponseToken_v1(E), NoDetectorImport_v1(E), NoStressEnergyImport_v1(E), NoMatterActionImport_v1(E), and MatterSemanticsFailureObstruction_v1(E). Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation."
+notes: "RT-20260630-021 selects the first matter-semantics preflight target packet after RT-020 scoped evidence acceptance. It does not adopt a source law or matter semantics."

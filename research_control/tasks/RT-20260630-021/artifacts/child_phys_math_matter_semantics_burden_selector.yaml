@@ -1,0 +1,32 @@
+artifact_id: "child_phys_math_matter_semantics_burden_selector"
+task_id: "RT-20260630-021"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+recommendation:
+  selected_next_packet_type: "source_side_selector_primitive"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_plan_task: "P5-T02"
+  selected_target_family: "source-side matter-sector syntax plus detector/readout non-import boundary"
+formal_reasoning:
+  - "RT-020 supplies scoped evidence/precondition status only; it does not define source-side matter semantics."
+  - "A constructive target formalization is available before any obstruction or freeze."
+  - "P5-T02 can define source-side objects and failure conditions without adopting a source law or physical coupling."
+required_next_definitions:
+  - "SourceMatterSector_v1(E)"
+  - "SourceProbeToken_v1(E)"
+  - "SourceDetectorReadout_v1(E)"
+  - "MatterResponseToken_v1(E)"
+  - "NoDetectorImport_v1(E)"
+  - "NoStressEnergyImport_v1(E)"
+  - "NoMatterActionImport_v1(E)"
+  - "MatterSemanticsFailureObstruction_v1(E)"
+blocked_routes:
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy tensor construction"
+  - "detector semantics import"
+  - "matter action import"
+  - "Einstein equations"
+  - "benchmark promotion"
+claim_boundary_preserved: true
