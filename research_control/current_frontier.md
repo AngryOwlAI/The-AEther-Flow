@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-046` and `handoff-0398`.
+`RT-20260630-047` and `handoff-0399`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-046` |
-| Latest handoff ID | `handoff-0398` |
-| Current status | `v12_p7_t03_repair_msirrel_stable_partition_precondition_formalized_no_adoption_no_promotion` |
-| Current route family | v12 p7 t03 repair msirrel stable partition precondition formalization to audit |
+| Active task ID | `RT-20260630-047` |
+| Latest handoff ID | `handoff-0399` |
+| Current status | `v12_p7_t03_repair_msirrel_stable_partition_precondition_smuggling_audit_source_pure_pending_stress_no_adoption` |
+| Current route family | v12 p7 t03 repair msirrel stable partition precondition audit to stress |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_formalization_only |
-| Required next authority | one smuggling-auditor@0.2.0 draft/control ontology-law audit packet over MSStablePartitionPrecondition_v1 |
-| Next recommended action | Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSStablePartitionPrecondition_v1 for hidden target imports proof-authority smuggling RR_E semantic overread and accidental irrelevance-law adoption before Refuter stress selector adoption matter-coupling Einstein-equation benchmark or promotion routes. |
+| Current burden | `matter_coupling`; status: unchanged_audit_only |
+| Required next authority | one refuter@0.2.0 draft/control ontology-law stress packet over MSStablePartitionPrecondition_v1 |
+| Next recommended action | Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStablePartitionPrecondition_v1 for finite-variation guard robustness RR_E semantic overread pressure-pair behavior certificate deletion source-signature stability and accidental irrelevance-law adoption before selector adoption matter-coupling Einstein-equation benchmark or promotion routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-046/00_TASK.yaml`.
-- Active task objective: Complete one bounded ontology-formalizer@0.2.0 ontology-law packet by formalizing MSStablePartitionPrecondition_v1 as a draft/control source-side stable-partition/precondition target and proof-obligation map after the RT-044 RR_E retention obstruction.
-- Latest handoff path: `research_control/handoffs/handoff-0398.yaml`.
-- Latest handoff summary: RT-20260630-046 formalized MSStablePartitionPrecondition_v1 as a draft/control finite/local source-side stable partition precondition target. The result proves only a guarded partition theorem over the current source basis and keeps the repaired irrelevance-law reading blocked under RR_E retention.
-- Current route family: v12 p7 t03 repair msirrel stable partition precondition formalization to audit.
-- Next recommended action: Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSStablePartitionPrecondition_v1 for hidden target imports proof-authority smuggling RR_E semantic overread and accidental irrelevance-law adoption before Refuter stress selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+- Active task path: `research_control/tasks/RT-20260630-047/00_TASK.yaml`.
+- Active task objective: Complete one bounded smuggling-auditor@0.2.0 ontology-law packet by auditing MSStablePartitionPrecondition_v1 for hidden target imports proof-authority smuggling RR_E semantic overread and accidental irrelevance-law adoption after RT-046.
+- Latest handoff path: `research_control/handoffs/handoff-0399.yaml`.
+- Latest handoff summary: RT-20260630-047 audited MSStablePartitionPrecondition_v1 and found no forbidden target or process-authority import as written under explicit guards. The audit keeps RR_E as uninterpreted source syntax, keeps no-target certificates as source-side guard material, and blocks precondition-as-irrelevance-law overread.
+- Current route family: v12 p7 t03 repair msirrel stable partition precondition audit to stress.
+- Next recommended action: Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStablePartitionPrecondition_v1 for finite-variation guard robustness RR_E semantic overread pressure-pair behavior certificate deletion source-signature stability and accidental irrelevance-law adoption before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded smuggling-auditor@0.2.0 ontology-law packet to audit MSStablePartitionPrecondition_v1 for hidden target imports proof-authority smuggling RR_E semantic overread and accidental irrelevance-law adoption before Refuter stress selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
+Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStablePartitionPrecondition_v1 for finite-variation guard robustness RR_E semantic overread pressure-pair behavior certificate deletion source-signature stability and accidental irrelevance-law adoption before selector adoption matter-coupling Einstein-equation benchmark or promotion routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,13 +143,13 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-046`;
-- latest handoff: `handoff-0398`;
-- current status: `v12_p7_t03_repair_msirrel_stable_partition_precondition_formalized_no_adoption_no_promotion`;
+- active task: `RT-20260630-047`;
+- latest handoff: `handoff-0399`;
+- current status: `v12_p7_t03_repair_msirrel_stable_partition_precondition_smuggling_audit_source_pure_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `formalization_completed`: PASS;
+- latest handoff validation `audit_completed`: PASS;
 - latest handoff validation `no_claim_promotion`: PASS;
 - latest handoff validation `no_gate_chair_authority`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0398.yaml`
-- `research_control/tasks/RT-20260630-046/00_TASK.yaml`
+- `research_control/handoffs/handoff-0399.yaml`
+- `research_control/tasks/RT-20260630-047/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0398*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0399*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

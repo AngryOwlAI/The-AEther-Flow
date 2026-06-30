@@ -294,6 +294,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-REPAIR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-043/artifacts/matter_semantics_irrelevance_quotient_repair_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-039/artifacts/matter_semantics_irrelevance_quotient_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION` `research_control/tasks/RT-20260630-046/artifacts/matter_semantics_stable_partition_precondition_v1.tex`
+- `TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `research_control/tasks/RT-20260630-037/artifacts/matter_semantics_readout_response_irrelevance_target_v1.tex`
 
 ## superseded

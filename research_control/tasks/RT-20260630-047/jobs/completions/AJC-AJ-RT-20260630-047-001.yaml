@@ -1,0 +1,419 @@
+completion_id: "AJC-AJ-RT-20260630-047-001"
+job_id: "AJ-RT-20260630-047-001"
+task_id: "RT-20260630-047"
+source_role_id: "smuggling-auditor"
+completed_at: "2026-06-30T19:48:22Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  related_plan_task_id: "post_P7_T03_repair_msirrel_stable_partition_precondition_smuggling_audit"
+  plan_phase_id: "post_P7_repair_before_P8"
+  implemented_task_scope: "Ran one bounded smuggling-auditor ontology-law packet after RT-046 and audited MSStablePartitionPrecondition_v1 for hidden target imports proof-authority smuggling RR_E semantic overread and accidental irrelevance-law adoption."
+  downstream_tasks_not_implemented:
+    - "Refuter stress of MSStablePartitionPrecondition_v1"
+    - "post-stress selector routing"
+    - "P8 route-orbit guard hardening"
+    - "P9 public-facing current-status clarity"
+    - "P10 literature-comparison packet"
+    - "P11 final integration audit metrics and continuation handoff"
+    - "source-law adoption"
+    - "source-extension data adoption"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/tasks/RT-20260630-047/artifacts/child_phys_math_ms_stable_partition_precondition_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260630-047/artifacts/child_phys_phil_ms_stable_partition_precondition_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260630-047/artifacts/parent_conflict_review_ms_stable_partition_precondition_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260630-047/artifacts/parent_fusion_notes_ms_stable_partition_precondition_smuggling_audit.md"
+  - "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260630-047/00_TASK.yaml"
+  - "research_control/tasks/RT-20260630-047/DDR-20260630-047.md"
+  - "research_control/tasks/RT-20260630-047/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260630-047/jobs/AJ-RT-20260630-047-001.yaml"
+  - "research_control/tasks/RT-20260630-047/jobs/completions/AJC-AJ-RT-20260630-047-001.yaml"
+  - "research_control/tasks/RT-20260630-047/roles/smuggling-auditor@0.2.0--RT-20260630-047.yaml"
+  - "research_control/handoffs/handoff-0399.yaml"
+  - "research_control/handoffs/handoff-0399.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0398.yaml"
+  - "research_control/handoffs/handoff-0398.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/tasks/RT-20260630-046/artifacts/matter_semantics_stable_partition_precondition_v1.tex"
+  - "research_control/tasks/RT-20260630-046/jobs/completions/AJC-AJ-RT-20260630-046-001.yaml"
+  - "research_control/tasks/RT-20260630-045/artifacts/msirrel_quotient_repair_post_stress_selector_v1.yaml"
+  - "research_control/tasks/RT-20260630-044/artifacts/matter_semantics_irrelevance_quotient_repair_refuter_stress_v1.tex"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=503 relationship_row_count=2696 semantic_row_count=503 vault_row_count=503"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"MSStablePartitionPrecondition smuggling audit hidden target import RR_E semantic overread\" --limit 10 --json | exit_code=0 | returned_object_ids=TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION --json | exit_code=0 | primary_registry=TEX_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260630-046 latest_handoff=handoff-0398 boundary=director_decision_required"
+validation_status: "PASS"
+verdict: "v12_p7_t03_repair_msirrel_stable_partition_precondition_smuggling_audit_source_pure_with_guards_pending_stress_no_adoption"
+coherent_resolution_summary: "RT-20260630-047 audited MSStablePartitionPrecondition_v1 and found no target atlas metric detector stress-energy matter-action benchmark Einstein-equation registry validator role handoff approval commit generated-derivative local-cache or file-order import as written. The audit preserves guards that RR_E remains uninterpreted source syntax no-target certificates remain source-side guard material and the precondition cannot be used as an irrelevance law."
+next_recommendation: "Run one bounded refuter@0.2.0 ontology-law stress packet to stress MSStablePartitionPrecondition_v1 for finite-variation guard robustness RR_E semantic overread pressure-pair behavior certificate deletion source-signature stability and accidental irrelevance-law adoption before selector adoption matter-coupling Einstein-equation benchmark or promotion routes."
+audit_result:
+  artifact_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+  object_id: "TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-SMUGGLING-AUDIT"
+  verdict: "source_pure_as_written_with_guards_pending_stress"
+  target_import_detected: false
+  process_authority_laundering_detected: false
+  rr_e_semantic_overread_detected_as_written: false
+  rr_e_source_syntax_guard_required: true
+  blocking_defects: []
+  guarded_hazards:
+    - "RR_E must remain uninterpreted source syntax and may not become detector response matter semantics stress-energy semantics matter action or coupling-law data."
+    - "No-target certificates must remain source-side guard material rather than process authority."
+    - "The precondition cannot identify pressure-pair records with different RR_E values."
+  required_next_role: "refuter@0.2.0"
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Audit the source-side stable partition precondition target before Refuter stress adoption or matter-coupling routing."
+  missing_source_law: "MSStablePartitionPrecondition_v1 / source-side matter-semantics partition precondition law"
+  underdetermination_statement: "current ontology does not derive a source-side law adopting MSStablePartitionPrecondition_v1 as matter semantics or proving RR_E differences irrelevant to matter semantics."
+  no_go_theorem_status: "no no-go theorem; guarded audit pass is source-purity only and stress remains open"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "MSStablePartitionPrecondition_v1 remains a finite/local source-side stable partition precondition target using source signature fibers and explicit no-target guards only."
+    audit_classification: "source_pure_as_written_with_guards_pending_stress"
+    formal_objects:
+      - "D_st_E(B_current)"
+      - "G_st_E"
+      - "Sigma_rep_E"
+      - "Pi_st_E"
+      - "MSStablePartitionPrecondition_v1"
+      - "MSStablePartitionFailure_v1"
+    domains:
+      - "finite/local guarded current-basis source domain"
+      - "bottom outside admissible records or when no-target guard conditions fail"
+    maps:
+      - "Sigma_rep_E maps guarded admissible records to repaired source signatures"
+      - "Pi_st_E partitions records by source-signature fibers"
+      - "MSStablePartitionFailure_v1 records fail-closed guard outcomes"
+    proof_obligations:
+      - "Refuter stress for finite-variation guard robustness certificate deletion source-signature stability pressure-pair behavior RR_E semantic-overread attempts and accidental irrelevance-law adoption"
+      - "selector routing after stress"
+      - "human gate before adoption rejection canonical ontology status or source-extension data status"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact-GR benchmark status as unpromoted."
+      - "Do not treat a guarded source-purity audit verdict as matter semantics adoption."
+      - "Do not use target stress-energy tensor matter action detector protocol target metric benchmark behavior or Einstein-equation premises."
+      - "Require Refuter stress selector routing and protected human authority before any adoption or downstream promotion."
+    distance_to_gr_links:
+      - "matter_coupling"
+      - "MetricData(E)"
+      - "g_eff"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "target_stress_energy"
+      - "target_detector_protocol"
+      - "matter_action"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "Einstein_equation_premise"
+    audit_notes: "No forbidden target or process-authority import was detected as written. RR_E is guarded as source syntax only and remains stress-pending."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption requested in this packet; any future source-law adoption canonical-ontology candidacy source-extension data status matter-coupling status benchmark status or Gate Chair verdict requires separate protected human authority after stress and selector routing."
+source_extension_category: "source_extension_smuggling_audit"
+source_extension_import_classification: "conservative_definitional_source_side_precondition_target_as_written_with_rr_guard_pending_refuter_stress"
+mathematical_decisiveness_contract:
+  active: true
+  status: "satisfied_by_guarded_source_purity_audit_with_stress_route"
+physics_progress_status:
+  status: "candidate_audited_pending_stress"
+  plan_required_status_meaning: "post_P7_T03_repair_msirrel_stable_partition_precondition_smuggling_audit_completed"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Audit the source-side stable partition precondition target before Refuter stress adoption or matter-coupling routing."
+  explanation: "The packet audits the stable-precondition target and finds no target or process-authority import as written while requiring RR_E to remain source syntax only. It does not adopt source laws source-extension data MetricData(E) g_eff coupling law matter coupling stress-energy semantics detector semantics matter action Einstein equations benchmark status or completed derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  explanation: "No Distance-to-GR ledger row is changed. Matter_coupling remains blocked by Refuter stress source semantics and coupling derivation."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "scoped source-extension context retained only"
+  - burden: "M_src"
+    status: "scoped source-only M_src context retained; no scope expansion and no M_src adoption"
+  - burden: "MetricData(E)"
+    status: "no MetricData(E) adoption"
+  - burden: "g_eff"
+    status: "scoped g_eff context retained; no adoption or scope change"
+  - burden: "matter coupling"
+    status: "stable-precondition audit passes source purity as written with guards pending stress; no matter coupling"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "unchanged; Refuter stress remains required"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark promotion"
+  - burden: "Gate Chair status"
+    status: "no Gate Chair verdict requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; stress remains open"
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  obstruction_type: ""
+  scope: ""
+  failed_object: ""
+  exact_failure: ""
+  current_ontology_implication: "current_ontology_does_not_derive_the_precondition_as_an_adopted_law_or_matter_semantics"
+  source_extension_implication: "proposal_only_stable_precondition_target_passed_guarded_source_purity_audit_pending_stress"
+  consequence: "refuter_stress_required"
+  forbidden_overread: "The audit pass is not future source-extension impossibility not global theory rejection not source-law adoption not source-extension data adoption not MetricData(E) not g_eff scope change not matter coupling not stress-energy semantics not detector semantics not matter action not Einstein equations not benchmark promotion and not completed derivation."
+new_mathematical_payload:
+  - payload_id: "P7T03-STABLE-PRECONDITION-AUDIT-TARGET-PURITY"
+    payload_type: "source_extension_classification"
+    object_name: "MSStablePartitionPrecondition_v1 target-import audit"
+    source_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    source_hash: "5159134349913557946801bec73bcdcf02d1ada23d57aa05f0c856285106de75"
+    summary: "Classifies the stable-precondition target as source-pure as written with no target atlas metric detector stress-energy matter-action benchmark Einstein-equation or process-authority import detected."
+  - payload_id: "P7T03-STABLE-PRECONDITION-AUDIT-RR-GUARD"
+    payload_type: "lemma"
+    object_name: "RR_E source-syntax guard for stable precondition"
+    source_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    source_hash: "5159134349913557946801bec73bcdcf02d1ada23d57aa05f0c856285106de75"
+    summary: "Records that RR_E is source-pure only as uninterpreted source syntax and cannot be used as detector response matter semantics stress-energy matter action or coupling-law data."
+  - payload_id: "P7T03-STABLE-PRECONDITION-AUDIT-IRREL-LIMIT"
+    payload_type: "obstruction"
+    object_name: "stable precondition is not irrelevance theorem"
+    source_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    source_hash: "5159134349913557946801bec73bcdcf02d1ada23d57aa05f0c856285106de75"
+    summary: "Records that pressure-pair records with different RR_E values remain separated and that the precondition cannot prove readout-response irrelevance as written."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "source_extension_classification"
+    object_name: "MSStablePartitionPrecondition_v1 source-purity audit"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    burden_effect: "guards"
+    summary: "Audits the stable-precondition target for target imports and process-authority laundering."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "lemma"
+    object_name: "RR_E source-syntax guard"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    burden_effect: "guards"
+    summary: "Preserves source-purity only when RR_E remains uninterpreted source syntax."
+  - payload_id: "PAYLOAD-003"
+    payload_type: "obstruction"
+    object_name: "stable precondition is not irrelevance theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    burden_effect: "narrows"
+    summary: "Shows the stable precondition cannot identify pressure-pair records with different RR_E values as written."
+route_cycle_control:
+  cycle_family: "post_v12_p7_t03_msirrel_stable_partition_precondition"
+  current_cycle_step: "smuggling_audit_after_formalization_before_stress"
+  cycle_position: "audit_after_formalization_before_stress"
+  previous_packet: "RT-20260630-046"
+  next_packet: "refuter_stress"
+  prior_related_tasks:
+    - "RT-20260630-042"
+    - "RT-20260630-043"
+    - "RT-20260630-044"
+    - "RT-20260630-045"
+    - "RT-20260630-046"
+  cycle_risk: "controlled"
+  orbit_avoidance_reason: "The packet does not repeat formalization; it adds a distinct hidden-import and RR_E semantic-overread audit verdict before stress."
+  next_role_consequence: "refuter@0.2.0"
+  same_burden_repetition: false
+  new_payload_present: true
+  loop_control_status: "new_audit_payload_routes_to_stress"
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "MSStablePartitionPrecondition_v1"
+  prior_attempts_considered:
+    - "RT-20260630-042"
+    - "RT-20260630-043"
+    - "RT-20260630-044"
+    - "RT-20260630-045"
+    - "RT-20260630-046"
+    - "RT-20260630-047"
+  freeze_if:
+    - "A later packet repeats the same stable-precondition audit without stress selector narrowing or adoption-gate decision."
+  do_not_freeze_if:
+    - "Refuter stress supplies new payload about finite-variation guard robustness certificate deletion RR_E semantic overread pressure-pair behavior or source-signature stability."
+  freeze_decision: "not_frozen"
+  decision_reason: "The packet supplies a new guarded source-purity audit and routes to stress rather than repeating formalization."
+  next_allowed_route: "refuter_stress"
+  repeated_burden_freeze_triggered: false
+  scoped_obstruction_freeze_triggered: false
+claim_boundary:
+  may_promote_claims: false
+  proof_authority_created: false
+  gate_chair_authority_created: false
+  canonical_ontology_candidate_created: false
+  source_law_adopted: false
+  source_extension_data_adopted: false
+  metric_data_adopted: false
+  geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  detector_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P7-T03 repair MSStablePartitionPrecondition_v1 smuggling audit only."
+  summary: "RT-047 audits a finite/local proposal-only stable-precondition target and preserves all downstream claim gates."
+  forbidden_conclusions:
+    - "source-pure audit as source-law adoption"
+    - "source-pure audit as source-extension data adoption"
+    - "source-pure audit as canonical ontology edit"
+    - "RR_E as detector semantics"
+    - "RR_E as matter semantics"
+    - "RR_E as coupling-law data"
+    - "M_src adoption"
+    - "canonical-ontology candidate status"
+    - "Gate Chair authority"
+    - "claim promotion"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "coupling-law adoption"
+    - "matter coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "detector semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260630-047/artifacts/child_phys_math_ms_stable_partition_precondition_smuggling_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260630-047/artifacts/child_phys_phil_ms_stable_partition_precondition_smuggling_audit.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260630-047/artifacts/parent_conflict_review_ms_stable_partition_precondition_smuggling_audit.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260630-047/artifacts/parent_fusion_notes_ms_stable_partition_precondition_smuggling_audit.md"
+    summary: "Parent fused both child audit outputs into a guarded source-purity audit with all non-adoption and downstream promotion blocks preserved."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 503
+    relationship_row_count: 2696
+    semantic_row_count: 503
+    vault_row_count: 503
+    warning_summary: "No refresh required."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"MSStablePartitionPrecondition smuggling audit hidden target import RR_E semantic overread\" --limit 10 --json"
+      query_type: "search"
+      query_text: "MSStablePartitionPrecondition smuggling audit hidden target import RR_E semantic overread"
+      returned_object_ids:
+        - "TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION --json"
+      query_type: "lookup"
+      query_text: "TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION"
+      returned_object_ids:
+        - "TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION"
+  canonical_inspections:
+    - object_id: "TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260630-046/artifacts/matter_semantics_stable_partition_precondition_v1.tex"
+      source_hash: "8617589e13d56d17215be10c9cdb376fb504f15e46459a6e1adf1e93158f3ff0"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "9be4ca2b6958ce36919d7102c0f873d6fd28d11a52d39e0fc8aacf52c6077771"
+    - object_id: "TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+      source_hash: "5159134349913557946801bec73bcdcf02d1ada23d57aa05f0c856285106de75"
+  authority_note: "Obsidian, wiki notes, semantic extracts, SQLite memory index, and .local files are retrieval layers only and not authority."
