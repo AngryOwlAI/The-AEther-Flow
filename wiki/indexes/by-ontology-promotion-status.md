@@ -257,6 +257,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-063/artifacts/104_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-M-SRC-BRIDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-062/artifacts/103_RESP_LC_SOURCE_EXTENSION_M_SRC_BRIDGE_SMUGGLING_AUDIT.tex`
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-SIDE-SELECTOR-NO-GO-THEOREM-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-051/artifacts/92_RESP_LC_SOURCE_SIDE_SELECTOR_NO_GO_THEOREM_REFUTER_STRESS_TEST.tex`
+- `TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-PAYLOAD` `research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex`
 - `TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `research_control/tasks/RT-20260629-045/artifacts/source_extension_compression_obstruction_v1.tex`
 - `TEX-V12-P4-T04-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-046/artifacts/source_extension_compression_obstruction_smuggling_audit_v1.tex`
 - `TEX-V12-P4-T05-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-047/artifacts/source_extension_compression_obstruction_refuter_stress_v1.tex`

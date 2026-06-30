@@ -1,0 +1,269 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obligation}{Obligation}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\MatterDisc}{\mathrm{MatterSectorDiscriminator}_{v1}}
+\newcommand{\MatterSector}{\mathrm{SourceMatterSector}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAct}{\mathrm{NoMatterActionImport}_{v1}}
+\newcommand{\NoDet}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Bottom}{\bot}
+
+\title{V12 Matter-Semantics Candidate-Law Payload v1}
+\author{The AEther-Flow Research Project}
+\date{2026-06-29}
+
+\begin{document}
+\maketitle
+
+\section*{Status}
+
+This artifact is the bounded RT-20260629-055 ontology-law-research-packet
+payload selected by RT-20260629-054.  It is \emph{draft/control} and
+\emph{proposal-only}.  It formalizes a source-side candidate-law payload for
+\(\MatSrcDiscLaw\) / \(\SemMatterSrc\).  It does not adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), edit canonical ontology, adopt a
+source law, adopt \(\MetricData(E)\), change the scope of \(\geff\), derive
+matter coupling, import stress-energy semantics, construct a stress-energy
+tensor, import a matter action, import detector semantics, derive Einstein
+equations, promote exact-GR benchmark status, claim completed derivation,
+claim future source-extension impossibility, or reject the global theory.
+
+\section{Question}
+
+The P5-T03 through P5-T05 sequence found a current-basis scoped obstruction:
+under \(\Bcur\), the project has not derived a source-intrinsic non-bottom
+matter-sector discriminator.  The P5-T06 selector routed the next same
+milestone packet to an ontology-law-research-packet rather than to Gate Chair,
+support-only tooling, matter coupling, or Einstein equations.
+
+The question for this packet is therefore narrow:
+
+\[
+  \text{What exact proposal-only source-side law payload would discharge the
+  missing-law slot, if later audit, stress, selector, and human gate accepted it?}
+\]
+
+\section{Source-Side Data}
+
+Fix an admissible source instance \(E\) and the current basis \(\Bcur\).  The
+following objects are \emph{inputs to the candidate-law schema}, not adopted
+physics:
+
+\begin{itemize}
+\item a source-token domain \(T_E\) defined from source-side syntax available
+  under \(\Bcur\);
+\item a finite or controlled source-label set \(L_E\) containing a distinguished
+  fail-closed bottom label \(\Bottom\);
+\item a source relabeling family \(\rho:T_E\to T_{E'}\) with induced label
+  transport \(\rho_L:L_E\to L_{E'}\) when the labels are source-defined;
+\item a finite-variation family \(v:E\rightsquigarrow E_v\) preserving the
+  admissible source syntax of the packet;
+\item a no-target-import certificate \(\NoTarget(E)\) combining
+  \(\NoSE(E)\), \(\NoAct(E)\), and \(\NoDet(E)\).
+\end{itemize}
+
+No target atlas, target metric, target stress-energy tensor, matter action,
+detector protocol, empirical calibration, benchmark fit, proper-time
+normalization, field equation, validator result, registry row, role contract,
+handoff, generated derivative, or local cache is a premise of these objects.
+
+\section{Candidate Payload}
+
+\begin{definition}[Proposal-only \(\SemMatterSrc(E)\)]
+A proposal-only source matter-semantics payload is a tuple
+\[
+  \SemMatterSrc(E)=
+  (T_E,L_E,\Bottom,D_E,C^{\mathrm{src}}_E,C^{\rho}_E,C^v_E,C^\bot_E,C^{\neg\mathrm{target}}_E)
+\]
+where \(D_E:T_E\to L_E\) is a total source map and the \(C\)-components are
+certificates for source construction, relabeling stability, finite-variation
+stability, fail-closed behavior, and no-target-import behavior.
+\end{definition}
+
+\begin{definition}[\(\MatSrcDiscLaw\) candidate-law schema]
+\(\MatSrcDiscLaw\) is the following proposal-only rule schema:
+for each admissible \(E\), a candidate \(\SemMatterSrc(E)\) may be considered
+for later source-extension review only if all obligations below are supplied
+from source-side data:
+\[
+\begin{array}{ll}
+\mathrm{(O1)} & D_E:T_E\to L_E \text{ is total and source-defined};\\
+\mathrm{(O2)} & \exists t,t'\in T_E \text{ such that } D_E(t)\neq D_E(t')
+                 \text{ and both labels are not imported target labels};\\
+\mathrm{(O3)} & D_{E'}(\rho(t))=\rho_L(D_E(t)) \text{ for source relabelings};\\
+\mathrm{(O4)} & D_{E_v}(v(t)) \text{ is defined or explicitly falls back to }
+                 \Bottom \text{ under finite variation};\\
+\mathrm{(O5)} & \NoTarget(E) \text{ holds};\\
+\mathrm{(O6)} & \text{failure of any obligation returns a scoped obstruction,
+                 not a target import.}
+\end{array}
+\]
+This schema is a candidate-law payload.  It is not an adopted law.
+\end{definition}
+
+\section{Proof Obligations}
+
+\begin{obligation}[Domain closure]
+The packet that later tries to instantiate \(\SemMatterSrc(E)\) must prove
+that \(T_E\) is constructed from permitted source syntax under \(\Bcur\), or
+state the exact missing source primitive.
+\end{obligation}
+
+\begin{obligation}[Non-bottom source discrimination]
+The later packet must show that the non-bottom split in \(L_E\) is induced by
+source-side structure, not by target matter names, detector outcomes,
+stress-energy slots, action variables, empirical calibration, or benchmark
+behavior.  If this cannot be shown, \(D_E\) must collapse to \(\Bottom\) or
+record a scoped obstruction.
+\end{obligation}
+
+\begin{obligation}[Relabeling naturality]
+For every permitted source relabeling \(\rho\), the discriminator must commute
+with relabeling through a source-defined \(\rho_L\).  If \(\rho_L\) exists only
+by reading target interpretation into \(L_E\), the candidate fails.
+\end{obligation}
+
+\begin{obligation}[Finite-variation guard]
+Under finite variation, the candidate may preserve labels, weaken to
+\(\Bottom\), or produce a scoped obstruction.  It may not preserve apparent
+matter sectors by importing a target metric, target detector protocol,
+stress-energy tensor, matter action, or Einstein-equation premise.
+\end{obligation}
+
+\begin{obligation}[No-target-import certificate]
+The certificate \(C^{\neg\mathrm{target}}_E\) must list and block at least:
+target stress-energy tensor, physical energy density, pressure, flux,
+matter action, variational stress tensor, empirical detector protocol,
+empirical calibration, target metric, target atlas, proper-time normalization,
+benchmark success, coupling-law adoption, and Einstein-equation premise.
+\end{obligation}
+
+\section{Rejection And Obstruction Conditions}
+
+\begin{definition}[Candidate-law rejection condition]
+A proposed \(\SemMatterSrc(E)\) payload is rejected by this draft/control
+schema if any of the following holds:
+
+\begin{enumerate}
+\item \(T_E\), \(L_E\), or \(D_E\) is defined by target matter semantics rather
+  than source-side syntax;
+\item non-bottom labels are merely explicit tags with no source-side law;
+\item relabeling stability depends on preserving target interpretation;
+\item finite-variation stability depends on target metric, detector,
+  stress-energy, action, or benchmark behavior;
+\item the packet treats support-only checker output, registry metadata, or a
+  generated derivative as proof authority.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Payload consequence under current authority]
+Under current authority, this packet can only convert the P5-T05 scoped
+obstruction into a sharper proposal-only candidate-law payload.  It cannot
+discharge the matter-coupling burden, adopt a source law, or promote a
+Distance-to-GR ledger row.
+\end{proposition}
+
+\begin{proof}
+The construction above supplies definitions and obligations for a future
+candidate.  It explicitly makes every non-bottom matter-sector claim depend on
+later source-side instantiation plus audit, stress, selector, and human gate.
+The current packet therefore has no authority to make the candidate true in
+the canonical ontology, no authority to treat \(\SemMatterSrc(E)\) as adopted
+source-extension data, and no authority to infer coupling, stress-energy,
+detector semantics, matter action, \(\MetricData(E)\), \(\geff\) expansion,
+Einstein equations, benchmark promotion, or completed derivation.
+\end{proof}
+
+\section{Exact-GR Recovery Obligations Preserved}
+
+Any later candidate-law packet that tries to instantiate \(\SemMatterSrc(E)\)
+must still satisfy exact-GR recovery obligations without hidden import:
+
+\begin{itemize}
+\item no target metric or atlas premise;
+\item no benchmark behavior premise;
+\item no matter action or stress-energy tensor premise;
+\item no empirical detector semantics premise;
+\item no coupling-law adoption hidden inside the discriminator;
+\item no use of support-only checker output as proof authority;
+\item no transition from proposal-only payload to adoption without protected
+  human-gated authority.
+\end{itemize}
+
+\section{Distance-To-GR Status}
+
+\[
+\begin{array}{ll}
+\text{Source ontology primitives} & \text{unchanged; no canonical ontology edit}\\
+\text{Source equivalence EqSrc} & \text{unchanged}\\
+\text{RetainH} & \text{unchanged}\\
+\text{GenH} & \text{unchanged}\\
+\text{ObsLoc\_lc} & \text{unchanged}\\
+\text{Resp\_lc} & \text{scoped source-extension context only}\\
+\text{M\_src} & \text{no adoption or scope change}\\
+\text{\(\MetricData(E)\)} & \text{no \(\MetricData(E)\) adoption}\\
+\text{\(\geff\)} & \text{no scope expansion}\\
+\text{matter coupling} & \text{candidate-law payload only; no matter coupling}\\
+\text{Einstein equations} & \text{blocked; no field-equation derivation}\\
+\text{finite-variation robustness} & \text{obligations stated for later stress}\\
+\text{benchmark promotion} & \text{blocked}\\
+\text{Gate Chair status} & \text{future adoption remains human-gated}\\
+\text{current route freeze or hard-fail status} & \text{not frozen}
+\end{array}
+\]
+
+\section{Next Route}
+
+The lawful next packet is a bounded smuggling audit of this proposal-only
+candidate-law payload.  The audit should test whether the definitions and
+obligations above import target matter semantics, stress-energy tensors,
+matter actions, detector protocols, empirical calibration, target metric
+structure, benchmark behavior, coupling-law adoption, or support-only proof
+authority.  No adoption or rejection verdict is issued here.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This packet is not source-law adoption, not \(\MatSrcDiscLaw\) adoption, not
+\(\SemMatterSrc\) adoption, not \(\MetricData(E)\) adoption, not \(\geff\)
+adoption or scope expansion, not matter coupling, not stress-energy semantics,
+not a stress-energy tensor, not a matter action, not detector semantics, not
+Einstein equations, not benchmark promotion, not completed derivation, not
+future source-extension impossibility, and not global theory rejection.
+\end{nonconclusion}
+
+\section*{References}
+
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation burden
+map} [Internal control note].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter semantics
+target formalization v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter semantics
+discriminator obstruction v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter semantics
+obstruction smuggling audit v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter semantics
+obstruction Refuter stress v1} [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 29). \emph{P5-T06
+post-matter-semantics selector} [Internal research-control YAML artifact].
+
+\end{document}

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260629-054` and `handoff-0349`.
+`RT-20260629-055` and `handoff-0350`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260629-054` |
-| Latest handoff ID | `handoff-0349` |
-| Current status | `v12_p5_t06_routes_to_matter_semantics_ontology_law_packet_no_promotion` |
-| Current route family | v12 p5 t06 selector routes to matter semantics ontology law packet |
+| Active task ID | `RT-20260629-055` |
+| Latest handoff ID | `handoff-0350` |
+| Current status | `v12_ontology_law_matter_semantics_candidate_law_payload_formalized_no_adoption` |
+| Current route family | v12 ontology law matter semantics candidate law payload to audit |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | Ontology-law-research-packet for proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload only |
-| Next recommended action | Run one bounded ontology-formalizer@0.2.0 transaction under the ontology-law-research-packet route to formalize a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side law candidate payload without adopting source law, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory. |
+| Required next authority | Smuggling audit of proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload only |
+| Next recommended action | Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload for hidden target matter semantics stress-energy tensor matter action detector protocol empirical calibration target metric benchmark behavior coupling-law adoption Einstein-equation premise support-tool proof authority generated-derivative authority or registry-metadata authority before any stress selector Gate Chair adoption or matter-coupling route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260629-054/00_TASK.yaml`.
-- Active task objective: Classify the P5-T05 stress-survived matter-semantics scoped obstruction and select exactly one next lawful route.
-- Latest handoff path: `research_control/handoffs/handoff-0349.yaml`.
-- Latest handoff summary: V12 P5-T06 selector completed. It classified the P5-T05 matter-semantics scoped obstruction as derivation-critical missing source-law pressure and selected one ontology-law-research-packet for proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side candidate-law payload formalization. No scientific claim status was promoted.
-- Current route family: v12 p5 t06 selector routes to matter semantics ontology law packet.
-- Next recommended action: Run one bounded ontology-formalizer@0.2.0 transaction under the ontology-law-research-packet route to formalize a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side law candidate payload without adopting source law, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
+- Active task path: `research_control/tasks/RT-20260629-055/00_TASK.yaml`.
+- Active task objective: Formalize a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side candidate-law payload under ontology-law-research-packet without adoption or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0350.yaml`.
+- Latest handoff summary: RT-20260629-055 ontology-law packet completed. It formalized a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side candidate-law payload with proof obligations and no adoption or promotion.
+- Current route family: v12 ontology law matter semantics candidate law payload to audit.
+- Next recommended action: Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload for hidden target matter semantics stress-energy tensor matter action detector protocol empirical calibration target metric benchmark behavior coupling-law adoption Einstein-equation premise support-tool proof authority generated-derivative authority or registry-metadata authority before any stress selector Gate Chair adoption or matter-coupling route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded ontology-formalizer@0.2.0 transaction under the ontology-law-research-packet route to formalize a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side law candidate payload without adopting source law, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
+Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload for hidden target matter semantics stress-energy tensor matter action detector protocol empirical calibration target metric benchmark behavior coupling-law adoption Einstein-equation premise support-tool proof authority generated-derivative authority or registry-metadata authority before any stress selector Gate Chair adoption or matter-coupling route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260629-054`;
-- latest handoff: `handoff-0349`;
-- current status: `v12_p5_t06_routes_to_matter_semantics_ontology_law_packet_no_promotion`;
+- active task: `RT-20260629-055`;
+- latest handoff: `handoff-0350`;
+- current status: `v12_ontology_law_matter_semantics_candidate_law_payload_formalized_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0349.yaml`
-- `research_control/tasks/RT-20260629-054/00_TASK.yaml`
+- `research_control/handoffs/handoff-0350.yaml`
+- `research_control/tasks/RT-20260629-055/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0349*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0350*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

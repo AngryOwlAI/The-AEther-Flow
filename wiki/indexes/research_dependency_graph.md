@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-29T23:29:55Z`
-- Source fingerprint: `adb6e535f654f903f5a502f9fb7376cfccadd5edcc0ccdfe4bd76dd0b2e5913c`
-- Nodes: `7396`
-- Edges: `30979`
+- Generated from tracked state as of: `2026-06-29T23:57:34Z`
+- Source fingerprint: `4da725b971a842db54ceb133c91e42731f6e8991bfbe7118eaac8ea42689f3a6`
+- Nodes: `7431`
+- Edges: `31110`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 485 |
+| `completion_yaml` | 486 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 349 |
+| `handoff_yaml` | 350 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 485 |
+| `agent_job` | `support_only` | 486 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3670 |
-| `blocked_burden` | `blocked` | 769 |
-| `claim_boundary` | `support_only` | 486 |
-| `draft_control_candidate` | `draft_control` | 334 |
-| `draft_control_candidate` | `proposal_only` | 46 |
+| `artifact` | `support_only` | 3684 |
+| `blocked_burden` | `blocked` | 782 |
+| `claim_boundary` | `support_only` | 487 |
+| `draft_control_candidate` | `draft_control` | 335 |
+| `draft_control_candidate` | `proposal_only` | 47 |
 | `draft_control_candidate` | `science_draft` | 29 |
 | `frozen_negative` | `frozen_negative` | 67 |
 | `gate_chair_verdict` | `human_gated` | 22 |
-| `handoff` | `support_only` | 349 |
+| `handoff` | `support_only` | 350 |
 | `human_gated_object` | `human_gated` | 219 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -51,12 +51,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 52 |
+| `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 18 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 199 |
+| `source_ontology_object` | `support_only` | 200 |
 | `task` | `human_gated` | 27 |
-| `task` | `science_draft` | 23 |
+| `task` | `science_draft` | 24 |
 | `task` | `support_only` | 435 |
 
 ## Frontier Table
@@ -148,23 +149,23 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:candidate_discriminator_construction` | Blocked permission: candidate discriminator construction | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:candidate_eligibility_as_derivation` | Blocked claim: candidate eligibility as derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_evidence_as_adoption` | Blocked claim: candidate evidence as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_adoption` | Blocked claim: candidate-law payload as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_coupling_law_adoption` | Blocked claim: candidate-law payload as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_detector_semantics` | Blocked claim: candidate-law payload as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_einstein_equations` | Blocked claim: candidate-law payload as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_future_source_extension_impossibility` | Blocked claim: candidate-law payload as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_global_theory_rejection` | Blocked claim: candidate-law payload as global theory rejection | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_matter_action` | Blocked claim: candidate-law payload as matter action | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_matter_coupling` | Blocked claim: candidate-law payload as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_stress_energy_semantics` | Blocked claim: candidate-law payload as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:candidate_law_payload_as_stress_energy_tensor` | Blocked claim: candidate-law payload as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_promotion` | Blocked claim: candidate promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_reconstruction` | Blocked claim: candidate reconstruction | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_reconstruction_as_proof` | Blocked claim: candidate reconstruction as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_reconstruction_beyond_next_bounded_attempt` | Blocked claim: candidate reconstruction beyond next bounded attempt | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_axiom_adoption` | Blocked claim: canonical axiom adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_eqsrc_adoption` | Blocked claim: canonical EqSrc adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_g_eff_adoption` | Blocked claim: canonical g_eff adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_genh_adoption` | Blocked claim: canonical GenH adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_langplus_adoption` | Blocked claim: canonical LangPlus adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_notargeth_adoption` | Blocked claim: canonical NoTargetH adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:canonical_notargetsyn_adoption` | Blocked claim: canonical NoTargetSyn adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260629-054`
-- Latest handoff: `handoff-0349`
-- Handoff path: `research_control/handoffs/handoff-0349.yaml`
-- Next action: Run one bounded ontology-formalizer@0.2.0 transaction under the ontology-law-research-packet route to formalize a proposal-only MatSrcDiscLaw_v1 / SemMatter_src source-side law candidate payload without adopting source law, changing MetricData(E), expanding g_eff, deriving matter coupling, importing stress-energy semantics, importing detector semantics, importing matter action, deriving Einstein equations, promoting benchmark status, claiming completed derivation, claiming future source-extension impossibility, or rejecting the global theory.
+- Active task: `RT-20260629-055`
+- Latest handoff: `handoff-0350`
+- Handoff path: `research_control/handoffs/handoff-0350.yaml`
+- Next action: Run one bounded smuggling-auditor@0.2.0 transaction to audit the proposal-only MatSrcDiscLaw_v1 / SemMatter_src candidate-law payload for hidden target matter semantics stress-energy tensor matter action detector protocol empirical calibration target metric benchmark behavior coupling-law adoption Einstein-equation premise support-tool proof authority generated-derivative authority or registry-metadata authority before any stress selector Gate Chair adoption or matter-coupling route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
