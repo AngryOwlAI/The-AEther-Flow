@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-027` and `handoff-0379`.
+`RT-20260630-028` and `handoff-0380`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-027` |
-| Latest handoff ID | `handoff-0379` |
-| Current status | `v12_p6_t01_support_only_formalization_lane_selected_no_proof_authority` |
-| Current route family | v12 p6 t01 selects p6 t02 finite toy tag removal support formalization no proof authority |
-| Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_support_only_tooling_design |
-| Required next authority | P6-T02 finite toy tag-removal support formalization only |
-| Next recommended action | Run one bounded validator-engineer@0.2.0 P6-T02 packet to implement the finite toy tag-removal obstruction under scripts/research_control/support_formalization/, with tests and traceability to research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex. Preserve proof_authority=false and all non-adoption and downstream GR claim blocks. |
+| Active task ID | `RT-20260630-028` |
+| Latest handoff ID | `handoff-0380` |
+| Current status | `v12_p6_t02_finite_toy_tag_removal_formalized_support_only_no_proof_authority` |
+| Current route family | v12 p6 t02 support formalization completed selects p6 t03 finite local witness schema skeleton |
+| Target derivation milestone | `finite_toy_metric_response` |
+| Current burden | `finite_toy_metric_response`; status: unchanged_support_only_formalization_of_existing_frozen_negative |
+| Required next authority | P6-T03 finite/local source-side witness schema skeleton only |
+| Next recommended action | Run one bounded P6-T03 packet to formalize the finite/local source-side witness schema skeleton, including finite source index graph, sector assignment, source token assignment, relabeling map, restriction map, bridge-slot compatibility predicate, no-target-import certificate predicate, fail-closed bottom label, and support-only pass/fail report type. Preserve proof_authority=false and do not claim matter coupling, stress-energy semantics, g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-027/00_TASK.yaml`.
-- Active task objective: Complete P6-T01 by choosing the support-only formalization approach, writing research_control/design/support_only_formalization_lane_v1.md, naming the future folder path and validation commands, and handing off to P6-T02 without granting proof authority or physics promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0379.yaml`.
-- Latest handoff summary: RT-20260630-027 completed one bounded P6-T01 support-only formalization tooling route decision packet. It selected standard-library Python typed algebraic specifications plus deterministic unittest property-style checks, wrote research_control/design/support_only_formalization_lane_v1.md, named scripts/research_control/support_formalization/ as the future folder path, supplied validation commands and fallback rules, and preserved proof_authority=false with no adoption or downstream GR promotion.
-- Current route family: v12 p6 t01 selects p6 t02 finite toy tag removal support formalization no proof authority.
-- Next recommended action: Run one bounded validator-engineer@0.2.0 P6-T02 packet to implement the finite toy tag-removal obstruction under scripts/research_control/support_formalization/, with tests and traceability to research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex. Preserve proof_authority=false and all non-adoption and downstream GR claim blocks.
+- Active task path: `research_control/tasks/RT-20260630-028/00_TASK.yaml`.
+- Active task objective: Complete P6-T02 by implementing the finite toy tag-removal obstruction as support-only Python typed algebraic formalization under scripts/research_control/support_formalization/ with deterministic tests and traceability to RT-20260614-055.
+- Latest handoff path: `research_control/handoffs/handoff-0380.yaml`.
+- Latest handoff summary: RT-20260630-028 completed one bounded P6-T02 finite toy tag-removal support formalization packet. It implemented scripts/research_control/support_formalization/finite_toy_tag_obstruction.py, focused unittest coverage, a deterministic task-local JSON report, and a traceability artifact mapping formal objects to the canonical RT-20260614-055 Refuter stress-test TeX artifact. The packet preserved proof_authority=false and no adoption or downstream GR promotion.
+- Current route family: v12 p6 t02 support formalization completed selects p6 t03 finite local witness schema skeleton.
+- Next recommended action: Run one bounded P6-T03 packet to formalize the finite/local source-side witness schema skeleton, including finite source index graph, sector assignment, source token assignment, relabeling map, restriction map, bridge-slot compatibility predicate, no-target-import certificate predicate, fail-closed bottom label, and support-only pass/fail report type. Preserve proof_authority=false and do not claim matter coupling, stress-energy semantics, g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded validator-engineer@0.2.0 P6-T02 packet to implement the finite toy tag-removal obstruction under scripts/research_control/support_formalization/, with tests and traceability to research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex. Preserve proof_authority=false and all non-adoption and downstream GR claim blocks.
+Run one bounded P6-T03 packet to formalize the finite/local source-side witness schema skeleton, including finite source index graph, sector assignment, source token assignment, relabeling map, restriction map, bridge-slot compatibility predicate, no-target-import certificate predicate, fail-closed bottom label, and support-only pass/fail report type. Preserve proof_authority=false and do not claim matter coupling, stress-energy semantics, g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-027`;
-- latest handoff: `handoff-0379`;
-- current status: `v12_p6_t01_support_only_formalization_lane_selected_no_proof_authority`;
+- active task: `RT-20260630-028`;
+- latest handoff: `handoff-0380`;
+- current status: `v12_p6_t02_finite_toy_tag_removal_formalized_support_only_no_proof_authority`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -153,6 +153,8 @@ Latest tracked state records:
 - latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
 - latest handoff validation `git_diff_check`: PASS;
 - latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `support_formalization_cli`: PASS;
+- latest handoff validation `unittest`: PASS;
 - latest handoff validation `validate_documentation_impact`: PASS;
 - latest handoff validation `validate_research_control`: PASS;
 - latest handoff validation `validate_research_control_check_diff`: PASS;
@@ -162,8 +164,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0379.yaml`
-- `research_control/tasks/RT-20260630-027/00_TASK.yaml`
+- `research_control/handoffs/handoff-0380.yaml`
+- `research_control/tasks/RT-20260630-028/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +180,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0379*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0380*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

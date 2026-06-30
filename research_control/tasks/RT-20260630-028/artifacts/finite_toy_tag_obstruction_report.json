@@ -1,0 +1,68 @@
+{
+  "boundary_statement": "This support-only formalization has proof_authority=false. It is not proof authority, not canonical ontology adoption, not source-law adoption, not MetricData(E) adoption, not g_eff adoption or scope expansion, not coupling-law adoption, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not detector semantics, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation.",
+  "checker_id": "finite_toy_tag_removal_support_formalization",
+  "checker_version": "0.1.0",
+  "forbidden_authority_flags": {
+    "benchmark_promotion_authority": false,
+    "canonical_ontology_adoption": false,
+    "completed_derivation_claimed": false,
+    "coupling_law_adopted": false,
+    "downstream_gr_promotion_authorized": false,
+    "einstein_equations_derived": false,
+    "future_source_extension_impossibility_claimed": false,
+    "g_eff_adopted": false,
+    "geff_scope_changed": false,
+    "global_theory_rejected": false,
+    "matter_action_imported": false,
+    "matter_coupling_adopted": false,
+    "matter_coupling_derived": false,
+    "metric_data_adopted": false,
+    "source_law_adopted": false,
+    "stress_energy_semantics_imported": false,
+    "stress_energy_tensor_constructed": false,
+    "target_metric_imported": false
+  },
+  "formal_objects": [
+    "TaggedToyObject",
+    "TagRecord",
+    "UntaggedToyObject",
+    "tag_erasure",
+    "partial_response_relation",
+    "tag_erasure_makes_response_undefined",
+    "no_new_source_data_totalization_obstruction"
+  ],
+  "proof_authority": false,
+  "proposition_results": [
+    {
+      "evidence": {
+        "checked_tagged_object_ids": [
+          "X_plus",
+          "X_flip",
+          "X_scale",
+          "X_token"
+        ],
+        "erased_object_id": "X_empty"
+      },
+      "message": "Every tagged toy object maps to X_empty and R_toy is undefined there.",
+      "proof_authority": false,
+      "proposition_id": "tag_erasure_makes_response_undefined",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "fixed_orientation_count": 0,
+        "fixed_token_map_count": 0,
+        "untagged_object_fixed_under_relabeling": true
+      },
+      "message": "X_empty is fixed by tag relabeling, but neither sign choice nor the explicit token maps are fixed without new source data.",
+      "proof_authority": false,
+      "proposition_id": "no_new_source_data_totalization_obstruction",
+      "status": "pass"
+    }
+  ],
+  "source_artifact_hash": "b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161",
+  "source_artifact_object_id": "TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST",
+  "source_artifact_path": "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+  "status": "pass_support_only",
+  "support_only": true
+}
