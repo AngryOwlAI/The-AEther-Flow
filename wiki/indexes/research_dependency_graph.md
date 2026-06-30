@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T11:39:16Z`
-- Source fingerprint: `bbc746258b8e59ede055070454a6ef8991a97bb35c5361a6a1784aa8d6a0edd8`
-- Nodes: `8183`
-- Edges: `34698`
+- Generated from tracked state as of: `2026-06-30T11:49:23Z`
+- Source fingerprint: `f4f9806df275b20ee86173133330cb59840f4ed51578073e3498d07d0302ad8e`
+- Nodes: `8215`
+- Edges: `34829`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 513 |
+| `completion_yaml` | 514 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 377 |
+| `handoff_yaml` | 378 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 513 |
+| `agent_job` | `support_only` | 514 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4068 |
-| `blocked_burden` | `blocked` | 921 |
-| `claim_boundary` | `support_only` | 514 |
+| `artifact` | `support_only` | 4084 |
+| `blocked_burden` | `blocked` | 935 |
+| `claim_boundary` | `support_only` | 515 |
 | `draft_control_candidate` | `draft_control` | 384 |
 | `draft_control_candidate` | `proposal_only` | 57 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 82 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 377 |
-| `human_gated_object` | `human_gated` | 234 |
+| `handoff` | `support_only` | 378 |
+| `human_gated_object` | `human_gated` | 232 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -57,8 +57,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 220 |
 | `task` | `human_gated` | 27 |
-| `task` | `science_draft` | 24 |
-| `task` | `support_only` | 462 |
+| `task` | `science_draft` | 23 |
+| `task` | `support_only` | 464 |
 
 ## Frontier Table
 
@@ -131,6 +131,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_summary_as_physics_evidence` | Blocked claim: baseline summary as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:benchmark_gate_chair_closure` | Blocked claim: benchmark Gate Chair closure | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure_or_suspension` | Blocked permission: benchmark Gate Chair closure or suspension | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:benchmark_import` | Blocked claim: benchmark import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:benchmark_promotion` | Blocked claim: benchmark promotion | `registries/DISTANCE_TO_GR_LEDGER.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:candidate_construction_as_einstein_equations` | Blocked claim: candidate construction as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_construction_as_future_source_extension_impossibility` | Blocked claim: candidate construction as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_construction_as_global_theory_rejection` | Blocked claim: candidate construction as global theory rejection | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_matter_action` | Blocked claim: candidate construction as matter action | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260630-025`
-- Latest handoff: `handoff-0377`
-- Handoff path: `research_control/handoffs/handoff-0377.yaml`
-- Next action: Run one bounded theoretical-continuation-selector@0.1.0 P5-T06 packet to classify the post-stress route for MatterSemanticsCandidate^cand_v1(E;B_current). Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-026`
+- Latest handoff: `handoff-0378`
+- Handoff path: `research_control/handoffs/handoff-0378.yaml`
+- Next action: Run one bounded validator-engineer@0.2.0 P6-T01 packet to choose the support-only formalization approach, write research_control/design/support_only_formalization_lane_v1.md, name the chosen folder path and validation commands, include a minimal fallback if dependencies are unavailable, and hand off to P6-T02. Preserve support-only proof_authority=false and all non-adoption and downstream GR claim blocks.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-025` and `handoff-0377`.
+`RT-20260630-026` and `handoff-0378`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-025` |
-| Latest handoff ID | `handoff-0377` |
-| Current status | `v12_p5_t05_matter_semantics_candidate_stress_survived_pending_selector_no_adoption` |
-| Current route family | v12 p5 t05 matter semantics candidate stress survived pending selector no adoption |
+| Active task ID | `RT-20260630-026` |
+| Latest handoff ID | `handoff-0378` |
+| Current status | `v12_p5_t06_selects_p6_t01_support_only_formalization_tooling_no_adoption` |
+| Current route family | v12 p5 t06 selects p6 t01 support only formalization tooling no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P5-T06 selector review of the stress-survived matter-semantics candidate only |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 P5-T06 packet to classify the post-stress route for MatterSemanticsCandidate^cand_v1(E;B_current). Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
+| Required next authority | P6-T01 support-only formalization tooling route decision only |
+| Next recommended action | Run one bounded validator-engineer@0.2.0 P6-T01 packet to choose the support-only formalization approach, write research_control/design/support_only_formalization_lane_v1.md, name the chosen folder path and validation commands, include a minimal fallback if dependencies are unavailable, and hand off to P6-T02. Preserve support-only proof_authority=false and all non-adoption and downstream GR claim blocks. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-025/00_TASK.yaml`.
-- Active task objective: Stress-test the audited matter-semantics candidate under source relabeling, finite variation, tag removal, sector deletion, degeneracy, fail-closed behavior, g_eff scope pressure, explicit-label collapse, new-primitive pressure, support-only proof_authority=false, and downstream-promotion pressure.
-- Latest handoff path: `research_control/handoffs/handoff-0377.yaml`.
-- Latest handoff summary: RT-20260630-025 completed one bounded Refuter packet and found MatterSemanticsCandidate^cand_v1(E;B_current) stress-survives only as a bridge-facing draft/control candidate path pending P5-T06 selector. Source relabeling survival requires declared source-label/support/certificate transport; tag removal and sector deletion remove positive matter-like distinctions; degeneracy is not repaired by target semantics; explicit-label collapse and target/process substitutions are blocked.
-- Current route family: v12 p5 t05 matter semantics candidate stress survived pending selector no adoption.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 P5-T06 packet to classify the post-stress route for MatterSemanticsCandidate^cand_v1(E;B_current). Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-026/00_TASK.yaml`.
+- Active task objective: Select the next lawful route after MatterSemanticsCandidate^cand_v1(E;B_current) construction, audit, and stress.
+- Latest handoff path: `research_control/handoffs/handoff-0378.yaml`.
+- Latest handoff summary: RT-20260630-026 completed one bounded P5-T06 selector packet and selected P6-T01 support-only formalization tooling as the next lawful route after conditional MatterSemanticsCandidate^cand_v1(E;B_current) stress survival. Gate Chair review, repair, freeze, next matter-coupling precondition work, and coupling-law target formalization were not selected.
+- Current route family: v12 p5 t06 selects p6 t01 support only formalization tooling no adoption.
+- Next recommended action: Run one bounded validator-engineer@0.2.0 P6-T01 packet to choose the support-only formalization approach, write research_control/design/support_only_formalization_lane_v1.md, name the chosen folder path and validation commands, include a minimal fallback if dependencies are unavailable, and hand off to P6-T02. Preserve support-only proof_authority=false and all non-adoption and downstream GR claim blocks.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 P5-T06 packet to classify the post-stress route for MatterSemanticsCandidate^cand_v1(E;B_current). Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+Run one bounded validator-engineer@0.2.0 P6-T01 packet to choose the support-only formalization approach, write research_control/design/support_only_formalization_lane_v1.md, name the chosen folder path and validation commands, include a minimal fallback if dependencies are unavailable, and hand off to P6-T02. Preserve support-only proof_authority=false and all non-adoption and downstream GR claim blocks.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-025`;
-- latest handoff: `handoff-0377`;
-- current status: `v12_p5_t05_matter_semantics_candidate_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260630-026`;
+- latest handoff: `handoff-0378`;
+- current status: `v12_p5_t06_selects_p6_t01_support_only_formalization_tooling_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0377.yaml`
-- `research_control/tasks/RT-20260630-025/00_TASK.yaml`
+- `research_control/handoffs/handoff-0378.yaml`
+- `research_control/tasks/RT-20260630-026/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0377*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0378*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
