@@ -1,0 +1,294 @@
+\section*{Matter-Semantics Irrelevance Quotient Repair Candidate v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control Candidate Constructor output for
+RT-20260630-042. It answers the handoff-0393 instruction to construct or
+precisely obstruct a proposal-only source-side quotient repair candidate after
+the RT-040 stress result
+\(\texttt{MSQ-P7T03-STRESS-001-quotient-nonuniqueness-fragility-degeneracy}\).
+The result below is a constructed candidate,
+\(\mathrm{MSStableQuotientRepair}_{v1}/
+\mathrm{MSIrrelQuotientRepair}_{v1}\), for the finite/local current-basis
+domain only. It is not an adopted source law, not adopted source-extension
+data, not a canonical-ontology candidate, and not a proof of matter coupling.
+It does not edit canonical ontology, adopt \(\mathrm{MetricData}(E)\), adopt
+or expand \(g_{\mathrm{eff}}\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import detector semantics, import a matter action, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, prove future source-extension impossibility, or reject the global
+theory.
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MSAdm}{\mathrm{MSAdm}_{v1}}
+\newcommand{\MSCertQuot}{\mathrm{MSCertFiberQuot}_{v1}}
+\newcommand{\MSStableRepair}{\mathrm{MSStableQuotientRepair}_{v1}}
+\newcommand{\MSIrrelRepair}{\mathrm{MSIrrelQuotientRepair}_{v1}}
+\newcommand{\MSSig}{\Sigma^{\mathrm{rep}}_E}
+\newcommand{\MSRepEq}{\sim_{\mathrm{MSRep},E}}
+\newcommand{\MSRepProj}{\pi^{\mathrm{rep}}_E}
+\newcommand{\MSRepDisc}{D^{\mathrm{rep}}_E}
+\newcommand{\MSFail}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\section{Repair Question}
+
+RT-040 showed that \(\MSCertQuot\) is not uniquely selected,
+finite-variation robust, certificate-deletion stable, sector-deletion
+invariant, or nondegenerate enough to serve as an adoptable source-side
+matter-semantics irrelevance law. This packet asks whether a source-side
+repair candidate can address those five failures without target metric,
+detector, stress-energy, matter-action, benchmark, Einstein-equation,
+validation, registry, role, approval, commit, generated-derivative,
+local-cache, or file-order premises.
+
+\section{Repaired Source Signature}
+
+\begin{definition}[Finite repaired basis]
+Let \(\mathcal V_{\mathrm{rep}}(C;E,\Bcur)\) be the finite family generated
+from an admissible record \(C=(S_E,P_E,R_E,Q_E,\Gamma_E)\in\MSAdm(E;\Bcur)\)
+by the stress variations explicitly named in RT-040: finite support-token
+variation, finite probe-token variation, certificate deletion, and sector
+deletion. The basis is source syntax only. It includes no target metric,
+detector protocol, stress-energy tensor, matter action, benchmark behavior,
+or Einstein-equation premise.
+\end{definition}
+
+\begin{definition}[Stable core]
+The stable core
+\[
+  \mathrm{Core}_E(C)=
+  \bigl(S_E^{\mathrm{core}},P_E^{\mathrm{core}},
+  \Gamma_E^{\mathrm{core}},U_E^{\mathrm{core}}\bigr)
+\]
+is the intersection of support tokens, probe tokens, no-target certificate
+classes, and sector labels that remain required across
+\(\mathcal V_{\mathrm{rep}}(C;E,\Bcur)\). If this finite intersection cannot
+be formed from source data alone, the repair map returns \(\bot\). The
+certificate core must contain the source-side classes witnessing
+\(\NoDetector(E)\), \(\NoSE(E)\), \(\NoAction(E)\), and \(\NoTarget(E)\).
+\end{definition}
+
+\begin{definition}[Readout-response syntax coordinate]
+\[
+  \mathrm{RR}_E(C)=(R_E,Q_E)/{\equiv_{\mathrm{src}}}
+\]
+is the source-syntax equivalence class of the readout map and response-marker
+family under explicit source relabelings already present in the current
+basis. It is not detector semantics, not stress-energy semantics, not a matter
+action, and not a target-side interpretation of a measurement.
+\end{definition}
+
+\begin{definition}[Repair signature]
+The repaired signature is
+\[
+  \MSSig(C)=
+  \bigl(\mathrm{Core}_E(C),\mathrm{RR}_E(C),
+  \mathrm{AdmFlag}_E(C)\bigr),
+\]
+where \(\mathrm{AdmFlag}_E(C)\) records whether all required no-target
+certificates and current-basis admissibility guards are present. If
+\(\mathrm{AdmFlag}_E(C)=0\), define \(\MSSig(C)=\bot\).
+\end{definition}
+
+\begin{definition}[Stable repair relation and projection]
+For \(C_1,C_2\in\MSAdm(E;\Bcur)\), define
+\[
+  C_1\mathrel{\MSRepEq} C_2
+  \quad\Longleftrightarrow\quad
+  \MSSig(C_1)=\MSSig(C_2)\neq\bot.
+\]
+The repaired projection is
+\[
+  \MSRepProj:\MSAdm(E;\Bcur)\to
+  \MSAdm(E;\Bcur)/{\MSRepEq}\cup\{\bot\},
+\]
+sending nonbottom records to their \(\MSRepEq\)-class and all records with
+\(\MSSig=\bot\) to \(\bot\). Define the repaired discriminator as
+\[
+  \MSRepDisc(C)=
+  \begin{cases}
+    \bigl(\MSRepProj(C),\mathrm{RR}_E(C)\bigr), & \MSSig(C)\neq\bot,\\
+    \bot, & \MSSig(C)=\bot.
+  \end{cases}
+\]
+The pair
+\[
+  \MSStableRepair(E;\Bcur)=
+  \bigl(\MSSig,\MSRepEq,\MSRepProj,\MSRepDisc\bigr)
+\]
+is the constructed repair candidate. The name
+\(\MSIrrelRepair\) denotes this same proposal-only repaired quotient family
+when considered as a response to the \(\mathrm{MSSemanticsQuotient}_{v1}\)
+target.
+\end{definition}
+
+\section{Repair Checks}
+
+\begin{proposition}[Uniqueness of the repaired relation]
+\(\MSRepEq\) is uniquely determined by \(\MSSig\) on the finite repaired
+basis.
+\end{proposition}
+
+\paragraph{Reason.}
+The relation is equality of a fixed source-side signature. The previous
+identity relation, certificate-fiber relation, and all-fiber collapse are no
+longer competing choices because the repair packet explicitly names the
+signature map that selects the relation. This is a proposal-only construction,
+not a proof that the current canonical ontology derives the signature as an
+adopted law.
+
+\begin{proposition}[Finite-variation robustness]
+Finite variations that preserve \(\mathrm{Core}_E(C)\), required certificates,
+sector core, and \(\mathrm{RR}_E(C)\) preserve the repaired class. Variations
+that change one of those source-side coordinates either move to a different
+nonbottom class or return \(\bot\).
+\end{proposition}
+
+\paragraph{Reason.}
+The repaired projection factors through \(\MSSig\). Preserving the signature
+preserves the quotient class by definition. Changing a signature coordinate
+does not cause arbitrary middle-collapse drift: it either selects a different
+class or fails closed if admissibility or core formation is lost.
+
+\begin{proposition}[Certificate-deletion stability]
+Deleting non-core certificate redundancies leaves the repaired class
+unchanged. Deleting any core no-target certificate sends the repaired
+signature to \(\bot\).
+\end{proposition}
+
+\paragraph{Reason.}
+Only \(\Gamma_E^{\mathrm{core}}\) enters \(\MSSig\). Redundant certificates
+outside the core are ignored by the repaired signature. Core certificate
+deletion violates \(\mathrm{AdmFlag}_E(C)=1\) and fails closed. Thus the
+repair gives a stable source-side deletion rule rather than silently changing
+the quotient.
+
+\begin{proposition}[Sector-deletion invariance on retained core sectors]
+For a source-side sector restriction \(\rho_U\), if
+\(U_E^{\mathrm{core}}\subseteq U\), then restricting before or after
+\(\MSRepProj\) gives the same repaired class. If the sector deletion removes
+part of \(U_E^{\mathrm{core}}\), the result is \(\bot\).
+\end{proposition}
+
+\paragraph{Reason.}
+The sector coordinate of \(\MSSig\) is the retained source core
+\(U_E^{\mathrm{core}}\). Deleting sectors outside that core does not alter the
+signature. Deleting the core invalidates the repaired admissibility guard and
+fails closed.
+
+\begin{proposition}[Nondegeneracy on the pressure pair]
+For the RT-035 pressure pair \(C_+\) and \(C_-\),
+\[
+  \mathrm{RR}_E(C_+)\neq\mathrm{RR}_E(C_-)
+  \quad\Longrightarrow\quad
+  C_+\not\mathrel{\MSRepEq}C_-.
+\]
+\end{proposition}
+
+\paragraph{Reason.}
+RT-037 records that \(C_+\) and \(C_-\) share support, probe-token family, and
+no-target certificates but differ in readout map and response-marker syntax.
+Because \(\mathrm{RR}_E\) is part of \(\MSSig\), the repaired projection does
+not erase the source distinction. This repairs the RT-040 degeneracy failure
+but also means the candidate does not prove readout/response irrelevance for
+the pressure pair.
+
+\section{Interpretation of the Constructed Candidate}
+
+The constructed object is a stable, nondegenerate proposal-only quotient
+repair candidate. It addresses the five RT-040 failure modes as follows:
+\begin{enumerate}
+  \item collapse nonuniqueness is controlled by a named source-side signature;
+  \item finite-variation fragility is replaced by signature preservation,
+    class change, or fail-closed behavior;
+  \item certificate deletion has an explicit core versus non-core rule;
+  \item sector deletion has an explicit retained-core restriction rule;
+  \item quotient degeneracy is avoided by retaining source
+    readout-response syntax in the repaired signature.
+\end{enumerate}
+
+This gain has a precise limitation. The repaired candidate does not collapse
+\(C_+\) and \(C_-\). It therefore repairs the quotient as a stable
+discriminator-like source-side partition, not as an adopted irrelevance law.
+The current ontology still does not derive a general source-side theorem that
+readout and response-marker differences are irrelevant to matter semantics.
+
+\section{No-Fog Result}
+
+The decisive result is \(\mathsf{constructed\_candidate}\). The constructed
+candidate is
+\[
+  \MSStableRepair(E;\Bcur)=
+  \bigl(\MSSig,\MSRepEq,\MSRepProj,\MSRepDisc\bigr).
+\]
+Its next required role is Smuggling Auditor. The audit must check whether the
+repair signature hides target imports, uses source readout-response syntax as
+detector semantics, or smuggles proof authority from registries, validation,
+roles, handoffs, commits, generated derivatives, or local caches.
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}
+  \item Source ontology primitives: unchanged; no canonical ontology edit.
+  \item Source equivalence EqSrc: unchanged; no general EqSrc theorem.
+  \item RetainH and GenH: unchanged.
+  \item ObsLoc\(_{lc}\): unchanged.
+  \item Resp\(_{lc}\): scoped source-extension context retained only.
+  \item \(M_{\mathrm{src}}\): scoped source-only context retained; no scope
+    expansion and no \(M_{\mathrm{src}}\) adoption.
+  \item \(\mathrm{MetricData}(E)\): not adopted.
+  \item \(g_{\mathrm{eff}}\): scoped context retained; no adoption or scope
+    expansion.
+  \item Matter coupling: stable repaired source-side quotient candidate
+    constructed for audit; no matter coupling is derived or adopted.
+  \item Einstein equations: blocked; no field-equation derivation.
+  \item Finite-variation robustness: finite/local repair candidate supplied;
+    no global robustness theorem.
+  \item Benchmark promotion: blocked; no benchmark promotion.
+  \item Gate Chair status: no verdict requested or issued.
+  \item Current route freeze or hard-fail status: not frozen; audit and
+    Refuter stress remain required.
+\end{itemize}
+
+\section{Forbidden Conclusions}
+
+This artifact does not license any of the following:
+\begin{enumerate}
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption;
+  \item source-extension data adoption;
+  \item \(M_{\mathrm{src}}\) adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics or stress-energy tensor construction;
+  \item detector semantics;
+  \item matter action;
+  \item Einstein-equation derivation;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global theory rejection.
+\end{enumerate}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+irrelevance quotient candidate v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+irrelevance quotient refuter stress v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{MSIrrel quotient
+post-obstruction selector v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+readout/response irrelevance target v1} [Internal control artifact].

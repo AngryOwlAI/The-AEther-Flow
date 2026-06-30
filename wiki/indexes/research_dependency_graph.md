@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T17:32:10Z`
-- Source fingerprint: `d5259dea520a7ae97c3249890744d3a6a97494be1ec605e5735e5b0f1796a147`
-- Nodes: `8587`
-- Edges: `36374`
+- Generated from tracked state as of: `2026-06-30T17:55:03Z`
+- Source fingerprint: `e201a42e20362275e0e2911aa6b2e34bf96ef3b099c01e84e1d3828e0c8d4d1e`
+- Nodes: `8611`
+- Edges: `36482`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 529 |
+| `completion_yaml` | 530 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 393 |
+| `handoff_yaml` | 394 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 529 |
+| `agent_job` | `support_only` | 530 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4305 |
-| `blocked_burden` | `blocked` | 987 |
-| `claim_boundary` | `support_only` | 530 |
-| `draft_control_candidate` | `draft_control` | 400 |
-| `draft_control_candidate` | `proposal_only` | 60 |
+| `artifact` | `support_only` | 4319 |
+| `blocked_burden` | `blocked` | 988 |
+| `claim_boundary` | `support_only` | 531 |
+| `draft_control_candidate` | `draft_control` | 403 |
+| `draft_control_candidate` | `proposal_only` | 61 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 87 |
 | `gate_chair_verdict` | `human_gated` | 25 |
-| `handoff` | `support_only` | 393 |
+| `handoff` | `support_only` | 394 |
 | `human_gated_object` | `human_gated` | 239 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 226 |
+| `source_ontology_object` | `support_only` | 227 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 478 |
+| `task` | `support_only` | 479 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-041`
-- Latest handoff: `handoff-0393`
-- Handoff path: `research_control/handoffs/handoff-0393.yaml`
-- Next action: Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct a draft/control source-side quotient repair candidate satisfying uniqueness finite-variation robustness certificate-deletion stability sector-deletion invariance and nondegeneracy obligations before audit stress adoption matter-coupling Einstein-equation benchmark or promotion work.
+- Active task: `RT-20260630-042`
+- Latest handoff: `handoff-0394`
+- Handoff path: `research_control/handoffs/handoff-0394.yaml`
+- Next action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for hidden target imports, readout-response semantic smuggling, proof-authority smuggling, and overclaim before Refuter stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

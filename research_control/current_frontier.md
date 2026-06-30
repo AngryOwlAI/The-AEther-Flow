@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-041` and `handoff-0393`.
+`RT-20260630-042` and `handoff-0394`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-041` |
-| Latest handoff ID | `handoff-0393` |
-| Current status | `v12_p7_t03_repair_msirrel_quotient_post_obstruction_selector_routes_to_repair_construction_no_adoption` |
-| Current route family | v12 p7 t03 repair msirrel quotient post obstruction selects repair construction |
+| Active task ID | `RT-20260630-042` |
+| Latest handoff ID | `handoff-0394` |
+| Current status | `v12_p7_t03_repair_msirrel_quotient_repair_candidate_constructed_no_adoption_no_promotion` |
+| Current route family | v12 p7 t03 repair msirrel quotient repair candidate routes to audit |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: unchanged_selector_only |
-| Required next authority | one candidate-constructor@0.2.0 draft/control ontology-law repair construction-or-obstruction packet over MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 |
-| Next recommended action | Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct a draft/control source-side quotient repair candidate satisfying uniqueness finite-variation robustness certificate-deletion stability sector-deletion invariance and nondegeneracy obligations before audit stress adoption matter-coupling Einstein-equation benchmark or promotion work. |
+| Current burden | `matter_coupling`; status: unchanged_candidate_constructed_pending_audit |
+| Required next authority | one smuggling-auditor@0.2.0 draft/control ontology-law audit packet over MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 |
+| Next recommended action | Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for hidden target imports, readout-response semantic smuggling, proof-authority smuggling, and overclaim before Refuter stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-041/00_TASK.yaml`.
-- Active task objective: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law decision packet over MSQ-P7T03-STRESS-001 and choose the next non-promotional route for MSCertFiberQuot_v1 / MSSemanticsQuotient_v1.
-- Latest handoff path: `research_control/handoffs/handoff-0393.yaml`.
-- Latest handoff summary: RT-20260630-041 classified the MSQ-P7T03-STRESS-001 scoped obstruction and selected a future draft/control Candidate Constructor ontology-law repair construction-or-obstruction packet centered on MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1. The selector creates no source-law adoption, no source-extension data adoption, no MetricData(E), no g_eff scope change, no coupling law, no matter coupling, no stress-energy semantics, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
-- Current route family: v12 p7 t03 repair msirrel quotient post obstruction selects repair construction.
-- Next recommended action: Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct a draft/control source-side quotient repair candidate satisfying uniqueness finite-variation robustness certificate-deletion stability sector-deletion invariance and nondegeneracy obligations before audit stress adoption matter-coupling Einstein-equation benchmark or promotion work.
+- Active task path: `research_control/tasks/RT-20260630-042/00_TASK.yaml`.
+- Active task objective: Complete one bounded candidate-constructor@0.2.0 ontology-law packet by constructing or precisely obstructing MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 after MSQ-P7T03-STRESS-001.
+- Latest handoff path: `research_control/handoffs/handoff-0394.yaml`.
+- Latest handoff summary: RT-20260630-042 constructed MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 as a finite/local proposal-only source-side quotient repair candidate. The repaired signature retains source readout-response syntax, addresses the RT-040 uniqueness, finite-variation, certificate-deletion, sector-deletion, and nondegeneracy failures, and creates no source-law adoption, no source-extension data adoption, no MetricData(E), no g_eff scope change, no coupling law, no matter coupling, no stress-energy semantics, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Current route family: v12 p7 t03 repair msirrel quotient repair candidate routes to audit.
+- Next recommended action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for hidden target imports, readout-response semantic smuggling, proof-authority smuggling, and overclaim before Refuter stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct a draft/control source-side quotient repair candidate satisfying uniqueness finite-variation robustness certificate-deletion stability sector-deletion invariance and nondegeneracy obligations before audit stress adoption matter-coupling Einstein-equation benchmark or promotion work.
+Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit MSStableQuotientRepair_v1 / MSIrrelQuotientRepair_v1 for hidden target imports, readout-response semantic smuggling, proof-authority smuggling, and overclaim before Refuter stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,25 +143,25 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-041`;
-- latest handoff: `handoff-0393`;
-- current status: `v12_p7_t03_repair_msirrel_quotient_post_obstruction_selector_routes_to_repair_construction_no_adoption`;
+- active task: `RT-20260630-042`;
+- latest handoff: `handoff-0394`;
+- current status: `v12_p7_t03_repair_msirrel_quotient_repair_candidate_constructed_no_adoption_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
+- latest handoff validation `candidate_constructor_completed`: PASS;
 - latest handoff validation `no_claim_promotion`: PASS;
 - latest handoff validation `no_gate_chair_authority`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
 - latest handoff validation `physics_promotion_authorized`: false;
-- latest handoff validation `selector_completed`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0393.yaml`
-- `research_control/tasks/RT-20260630-041/00_TASK.yaml`
+- `research_control/handoffs/handoff-0394.yaml`
+- `research_control/tasks/RT-20260630-042/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0393*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0394*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
