@@ -1,0 +1,215 @@
+\section*{Matter-Semantics Stable Partition Precondition Refuter Stress v1}
+
+\paragraph{Control status.}
+This artifact is a draft/control Refuter output for RT-20260630-048. It
+stress-tests \(\mathrm{MSStablePartitionPrecondition}_{v1}\) after the
+RT-047 source-purity audit. The result is a guarded stress-survival result for
+the finite/local source-side precondition reading only. It is not source-law
+adoption, not source-extension data adoption, not a canonical-ontology
+candidate, not matter semantics, not detector semantics, not matter coupling,
+not stress-energy semantics, not a matter action, not an Einstein-equation
+premise, not benchmark promotion, not Gate Chair authority, not a completed
+derivation, not future source-extension impossibility, and not global theory
+rejection.
+
+\newcommand{\Bcur}{B_{\mathrm{cur}}}
+\newcommand{\MSStablePre}{\mathrm{MSStablePartitionPrecondition}_{v1}}
+\newcommand{\MSSig}{\Sigma^{\mathrm{rep}}_E}
+\newcommand{\MSPart}{\Pi^{\mathrm{st}}_E}
+\newcommand{\MSGuard}{G^{\mathrm{st}}_E}
+\newcommand{\MSFail}{\mathrm{MSStablePartitionFailure}_{v1}}
+
+\newtheorem{proposition}{Proposition}
+
+\section{Stress Target}
+
+The stressed object is the RT-046 proposal-only precondition target
+\[
+  \MSStablePre(E;\Bcur)=
+  \bigl(\mathcal D^{\mathrm{st}}_E,\MSSig,\MSPart,\MSGuard,\MSFail\bigr),
+\]
+where
+\[
+  \MSSig(C)=
+  \bigl(\mathrm{Core}_E(C),\mathrm{RR}_E(C),
+  \mathrm{AdmFlag}_E(C)\bigr).
+\]
+The RT-047 audit permits this stress only under the guard that
+\(\mathrm{RR}_E\) is uninterpreted source syntax, no-target certificates are
+source-side guard material, and guard failure returns \(\MSFail\).
+
+\section{Stress Modes}
+
+The Refuter applies six bounded tests:
+\begin{enumerate}
+  \item finite-variation guard robustness;
+  \item deletion of required no-target certificates;
+  \item source-signature stability;
+  \item pressure-pair behavior;
+  \item \(\mathrm{RR}_E\) semantic-overread attempts; and
+  \item accidental readout/response irrelevance-law adoption.
+\end{enumerate}
+These tests use only RT-046, RT-047, and tracked source-side control
+constraints. They do not import target metrics, detector semantics,
+stress-energy tensors, matter actions, benchmark behavior, or
+Einstein-equation premises.
+
+\section{Stress Results}
+
+\begin{proposition}[Guarded finite-variation behavior]
+For any finite source variation of an admissible record \(C\), the
+precondition has exactly the following bounded behavior as written:
+\begin{enumerate}
+  \item if the variation preserves \(\MSSig(C)\) and the guard still holds,
+    the record remains in the same cell of \(\MSPart\);
+  \item if the variation changes \(\MSSig(C)\) and the guard still holds, the
+    record moves to the corresponding different cell; and
+  \item if the variation destroys core formation, admissibility, or a
+    required no-target guard, the output is \(\MSFail\).
+\end{enumerate}
+\end{proposition}
+
+\paragraph{Reason.}
+\(\MSPart\) is defined by fibers of the source-side function \(\MSSig\).
+Fiber membership is therefore stable exactly under preservation of
+\(\MSSig\). Changing a signature coordinate changes the fiber, and guard
+failure is defined as failure rather than a new semantic class.
+
+\begin{proposition}[Certificate deletion is fail-closed]
+Deleting a required no-target certificate class from the current guard bundle
+does not create a new matter-semantics class. It forces the precondition
+branch to \(\MSFail\).
+\end{proposition}
+
+\paragraph{Reason.}
+RT-046 includes the current no-target certificate classes in the guard. The
+stress branch that deletes a required certificate therefore violates the
+guard. Treating the resulting state as a semantic class would contradict the
+definition.
+
+\begin{proposition}[Source-signature stability is explicit and local]
+The source-signature coordinates \(\mathrm{Core}_E(C)\),
+\(\mathrm{RR}_E(C)\), and \(\mathrm{AdmFlag}_E(C)\) are explicit. A variation
+that changes any coordinate cannot silently preserve cell membership under
+\(\MSStablePre\) as written.
+\end{proposition}
+
+\paragraph{Reason.}
+The partition is by equality of the full repaired source signature. There is
+no hidden quotient that erases one coordinate while retaining the same
+precondition.
+
+\begin{proposition}[Pressure-pair non-identification]
+For a pressure pair \(C_+\), \(C_-\) with
+\[
+  \mathrm{RR}_E(C_+)\neq\mathrm{RR}_E(C_-),
+\]
+\(\MSStablePre\) keeps \(C_+\) and \(C_-\) in distinct cells whenever the
+guard holds.
+\end{proposition}
+
+\paragraph{Reason.}
+\(\mathrm{RR}_E\) is a coordinate of \(\MSSig\). Distinct
+\(\mathrm{RR}_E\) values imply distinct signatures and therefore distinct
+fibers. Identifying the pressure pair would require a different source-side
+irrelevance theorem.
+
+\begin{proposition}[\(\mathrm{RR}_E\) semantic overread fails closed]
+Any attempted use of \(\mathrm{RR}_E\) as detector response, empirical
+measurement, matter semantics, stress-energy semantics, matter-action data,
+or coupling-law data violates the RT-046/RT-047 guard rather than extending
+\(\MSStablePre\).
+\end{proposition}
+
+\paragraph{Reason.}
+The audited use of \(\mathrm{RR}_E\) is source-pure only as uninterpreted
+source syntax modulo explicit source relabeling. Physical interpretation is
+outside the guarded domain.
+
+\begin{proposition}[No accidental irrelevance-law adoption]
+\(\MSStablePre\) cannot be forced into readout/response irrelevance-law
+adoption as written.
+\end{proposition}
+
+\paragraph{Proof sketch.}
+The precondition theorem is a partition theorem for fibers of \(\MSSig\). It
+contains no relation that identifies records with different \(\mathrm{RR}_E\)
+values. Any irrelevance law would have to introduce an independent
+source-side identification theorem and pass its own audit and stress. Thus the
+precondition can survive stress as a guarded partition target without
+adopting irrelevance.
+
+\section{Verdict}
+
+The Refuter decision category is
+\[
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+The stress verdict is
+\[
+  \mathsf{stress\_survived\_as\_guarded\_precondition\_pending\_selector}.
+\]
+Same-milestone continuation remains open under
+\(\mathsf{blocked\_adoption\_open\_continuation}\). The next valid route is a
+bounded theoretical-continuation selector packet to decide whether the guarded
+stable-precondition branch should route toward a source-side law candidate,
+further bridge construction, a distinct irrelevance theorem, a human-gated
+source-extension decision, or local branch suspension.
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}
+  \item Source ontology primitives: unchanged; no canonical ontology edit.
+  \item Source equivalence EqSrc: unchanged; no general EqSrc theorem.
+  \item RetainH and GenH: unchanged.
+  \item ObsLoc\(_{lc}\): unchanged.
+  \item Resp\(_{lc}\): scoped source-extension context retained only.
+  \item \(M_{\mathrm{src}}\): scoped source-only context retained; no scope
+    expansion.
+  \item \(\mathrm{MetricData}(E)\): not adopted.
+  \item \(g_{\mathrm{eff}}\): scoped context retained; no adoption or scope
+    expansion.
+  \item Matter coupling: stable-precondition stress survives only as a
+    guarded precondition candidate pending selector; no matter coupling is
+    derived or adopted.
+  \item Einstein equations: blocked; no field-equation derivation.
+  \item Finite-variation robustness: bounded finite/local guard behavior
+    passed; no global robustness theorem.
+  \item Benchmark promotion: blocked; no benchmark promotion.
+  \item Gate Chair status: no verdict requested or issued.
+  \item Current route freeze or hard-fail status: not frozen; selector route
+    remains open after stress.
+\end{itemize}
+
+\section{Forbidden Conclusions}
+
+This stress packet does not license any of the following:
+\begin{enumerate}
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption;
+  \item source-extension data adoption or protected rejection;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics or stress-energy tensor construction;
+  \item detector semantics;
+  \item matter action;
+  \item Einstein-equation derivation;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global theory rejection.
+\end{enumerate}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+stable partition precondition v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+stable partition precondition smuggling audit v1} [Internal control
+artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+irrelevance quotient repair refuter stress v1} [Internal control artifact].

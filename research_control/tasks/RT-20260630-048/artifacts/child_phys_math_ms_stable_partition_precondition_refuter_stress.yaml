@@ -1,0 +1,20 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+target: "MSStablePartitionPrecondition_v1"
+source_artifacts:
+  - "research_control/tasks/RT-20260630-046/artifacts/matter_semantics_stable_partition_precondition_v1.tex"
+  - "research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex"
+stress_findings:
+  finite_variation_guard_robustness: "preserves_cell_when_MSSig_and_guard_preserved_changes_cell_when_MSSig_changes_fails_closed_when_guard_or_domain_fails"
+  certificate_deletion: "required_no_target_certificate_deletion_forces_MSFail_not_semantic_class"
+  source_signature_stability: "Core_E RR_E and AdmFlag_E are explicit signature coordinates so silent class preservation under coordinate change is blocked"
+  pressure_pair_behavior: "C_plus and C_minus with distinct RR_E remain in distinct cells"
+  rr_e_overread: "RR_E can remain source-pure only as uninterpreted source syntax modulo explicit source relabelings"
+  accidental_irrelevance_adoption: "blocked because the partition theorem is by fibers and contains no quotient identifying distinct RR_E values"
+blocking_conflicts: []
+new_payload:
+  - "guarded finite-variation stress theorem"
+  - "certificate-deletion fail-closed lemma"
+  - "pressure-pair non-identification lemma"
+conclusion: "The target survives bounded stress as a guarded finite/local precondition candidate pending selector routing and not as source-law adoption or matter semantics."
