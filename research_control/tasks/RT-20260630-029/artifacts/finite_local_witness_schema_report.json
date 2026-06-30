@@ -1,0 +1,114 @@
+{
+  "boundary_statement": "This finite/local witness schema skeleton has proof_authority=false. It is support-only tooling and not canonical ontology adoption, not source-law adoption, not MetricData(E) adoption, not g_eff adoption or scope expansion, not coupling-law adoption, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not detector semantics, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation.",
+  "checker_id": "finite_local_witness_schema_support_formalization",
+  "checker_version": "0.1.0",
+  "forbidden_authority_flags": {
+    "benchmark_promotion_authority": false,
+    "canonical_ontology_adoption": false,
+    "completed_derivation_claimed": false,
+    "coupling_law_adopted": false,
+    "downstream_gr_promotion_authorized": false,
+    "einstein_equations_derived": false,
+    "future_source_extension_impossibility_claimed": false,
+    "g_eff_adopted": false,
+    "geff_scope_changed": false,
+    "global_theory_rejected": false,
+    "matter_action_imported": false,
+    "matter_coupling_adopted": false,
+    "matter_coupling_derived": false,
+    "metric_data_adopted": false,
+    "source_law_adopted": false,
+    "stress_energy_semantics_imported": false,
+    "stress_energy_tensor_constructed": false,
+    "target_metric_imported": false
+  },
+  "formal_objects": [
+    "FiniteSourceIndexGraph",
+    "SectorAssignment",
+    "SourceTokenAssignment",
+    "RelabelingMap",
+    "RestrictionMap",
+    "bridge_slot_compatibility_predicate",
+    "no_target_import_certificate_predicate",
+    "FailClosedBottomLabel",
+    "SupportOnlyPassFailReport"
+  ],
+  "proof_authority": false,
+  "proposition_results": [
+    {
+      "evidence": {
+        "arrow_count": 4,
+        "sector_count": 4,
+        "token_assignment_count": 4,
+        "vertex_count": 4
+      },
+      "message": "Finite graph, sector assignment, and token assignment are coherent.",
+      "proof_authority": false,
+      "proposition_id": "finite_graph_schema_invariant",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "relabeled_restriction_vertices": [
+          "v1",
+          "v2"
+        ],
+        "restriction_vertices": [
+          "v0",
+          "v1"
+        ]
+      },
+      "message": "Relabeling preserves the graph and restriction remains finite/local.",
+      "proof_authority": false,
+      "proposition_id": "relabeling_and_restriction_invariant",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "premise_count": 8
+      },
+      "message": "Certificate premises contain no forbidden target-import terms.",
+      "proof_authority": false,
+      "proposition_id": "no_target_import_certificate_predicate",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "failure_label_count": 6,
+        "finite_support": [
+          "v0",
+          "v1"
+        ],
+        "interface_record_count": 4
+      },
+      "message": "Bridge slot is source-local, certificate-backed, and fail-closed.",
+      "proof_authority": false,
+      "proposition_id": "bridge_slot_compatibility_predicate",
+      "status": "pass"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "object_id": "PY-SUPPORT-FORMALIZATION-FINITE-TOY-TAG-OBSTRUCTION",
+      "path": "scripts/research_control/support_formalization/finite_toy_tag_obstruction.py",
+      "source_hash": "f7a162ebf6ca259c27ab1d2e3e8f497038ce97d12e4a6a416b3231a091861444"
+    },
+    {
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-P4-PARAMETERIZED-FINITE-LOCAL-SOURCE-FAMILY-TARGET-V1-FORMALIZATION",
+      "path": "research_control/tasks/RT-20260614-264/artifacts/293_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_TARGET_V1_FORMALIZATION.tex",
+      "source_hash": "c58eeaa7d3c5f196003a95483aded24f4f6c06a37fb7b4ed4cfd3f81cebee59f"
+    },
+    {
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-P4-PARAMETERIZED-FINITE-LOCAL-SOURCE-FAMILY-WITNESS-V1",
+      "path": "research_control/tasks/RT-20260614-265/artifacts/294_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1.tex",
+      "source_hash": "2c7b03be73dd23b6cdacdff4ce0ae078d10b3382c7bc2d71b4403713caa5f112"
+    },
+    {
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-P4-PARAMETERIZED-FINITE-LOCAL-SOURCE-FAMILY-WITNESS-V1-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW",
+      "path": "research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex",
+      "source_hash": "3c42fe6e5eae3bf6e26e29a2cfe341d72e873f71ca596edd0ba6c59ebd276fcd"
+    }
+  ],
+  "status": "pass_support_only",
+  "support_only": true
+}
