@@ -1,0 +1,16 @@
+artifact_id: "parent_conflict_review_matter_signature_repair_candidate_v1"
+task_id: "RT-20260630-002"
+status: "completed"
+blocking_conflicts: []
+nonblocking_conflicts:
+  - conflict_type: "terminology"
+    summary: "The constructed labels are source-incidence labels and must not be called physical matter sectors."
+    resolution: "Use source-signature or pre-matter source-interface wording and preserve proposal-only status."
+  - conflict_type: "ontological"
+    summary: "The candidate assumes source-incidence data; current ontology does not derive it as adopted ontology."
+    resolution: "Record the candidate as source-extension candidate / draft-control construction pending audit."
+parent_resolution:
+  consensus: "The construction is valid only as a finite/local proposal-only repair candidate and does not promote any physics claim."
+  unique_phys_math_contributions: "Source-incidence signatures supply D_E and rho_L without target matter names."
+  unique_phys_phil_contributions: "Separates candidate mathematics from ontology adoption and empirical matter semantics."
+  next_required_role: "smuggling-auditor@0.2.0"

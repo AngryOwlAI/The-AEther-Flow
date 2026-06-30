@@ -1,0 +1,328 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\SrcInc}{\mathrm{SrcInc}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Matter-Signature Repair Candidate v1}
+\author{Candidate Constructor Packet RT-20260630-002}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Candidate Constructor artifact for
+\texttt{RT-20260630-002}. It implements the repair-construction route selected
+by \texttt{handoff-0353} after the \texttt{RT-20260629-057} stress packet
+found a current-basis scoped obstruction for the proposal-only
+\(\MatSrcDiscLaw / \SemMatterSrc\) payload.
+
+The result is:
+\begin{verbatim}
+candidate_constructor_result.result_type: "constructed_candidate"
+candidate_name: "MatterSignatureDisc_src^cand / SemMatter_src^sig-cand"
+candidate_status: "draft/control proposal-only source-extension candidate"
+candidate_pending_audit: true
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+source_extension_data_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+\end{verbatim}
+
+The construction supplies a finite/local source-side repair candidate. It does
+not adopt \(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), edit canonical
+ontology, adopt a source law, adopt source-extension data, adopt
+\(\MetricData(E)\), change the scope of \(\geff\), derive matter coupling,
+import stress-energy semantics, construct a stress-energy tensor, import a
+matter action, import detector semantics, derive Einstein equations, promote
+exact-GR benchmark status, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+\section{Repair Question}
+
+The stress packet isolated two missing components:
+\begin{enumerate}[leftmargin=*]
+\item a source-intrinsic non-bottom instantiation of \(D_E:T_E\to L_E\);
+\item a source-defined label transport \(\rho_L:L_E\to L_{E'}\).
+\end{enumerate}
+This packet asks whether a finite/local source-signature construction can
+supply those components without importing target matter names, detector
+outcomes, stress-energy variables, matter-action variables, target metric
+scope, support-tool proof authority, generated derivatives, registry
+metadata, role authority, validation authority, approval authority, handoff
+authority, commit authority, or local cache authority.
+
+\section{Source-Signature Data}
+
+\begin{definition}[Source-incidence repair package]
+For an admissible finite/local source instance \(E\), a source-incidence repair
+package is a tuple
+\[
+  \mathcal{S}_E=(T_E,A_E,R_E,\mathcal{R}_E,\mathcal{V}_E,\NoTarget_E)
+\]
+where:
+\begin{enumerate}[label=(\alph*)]
+\item \(T_E\) is a finite or locally finite source-token set;
+\item \(A_E\) is a finite source-interface index set, read as source syntax
+  only;
+\item \(R_E\subseteq T_E\times A_E\) is a source-incidence relation;
+\item \(\mathcal{R}_E\) is the family of permitted source relabelings
+  \(\rho=(\rho_T,\rho_A)\) preserving source incidence;
+\item \(\mathcal{V}_E\) is the declared finite-variation family;
+\item \(\NoTarget_E\) certifies that \(T_E,A_E,R_E,\mathcal{R}_E,\mathcal{V}_E\)
+  are not defined by target matter names, detector outcomes, stress-energy
+  variables, matter-action variables, target metric or atlas data, benchmark
+  behavior, or process authority.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Incidence signature]
+For \(t\in T_E\), define the source incidence signature
+\[
+  \sigma_E(t)=\{a\in A_E \mid (t,a)\in R_E\}.
+\]
+This is a source-side signature only. It is not a physical matter property,
+not a detector outcome, not stress energy, and not a matter action variable.
+\end{definition}
+
+\begin{definition}[Source-signature label set]
+Let \(L_E\) be the finite set of signature labels
+\[
+  L_E=\{\ell_{\Sigma} \mid \Sigma\subseteq A_E
+  \text{ occurs as } \sigma_E(t) \text{ for some } t\in T_E\}\cup\{\Bottom\}.
+\]
+The bottom label \(\Bottom\) is reserved for failed certificates, missing
+incidence data, or finite-variation collapse.
+\end{definition}
+
+\section{Candidate Construction}
+
+\begin{definition}[Matter-signature discriminator candidate]
+The proposal-only repair candidate \(\MatSigDisc(E)\) is the total map
+\[
+  D_E:T_E\to L_E,\qquad D_E(t)=
+  \begin{cases}
+    \ell_{\sigma_E(t)}, & \text{if } \NoTarget_E \text{ passes and }
+      \sigma_E(t) \text{ is source-defined},\\
+    \Bottom, & \text{otherwise.}
+  \end{cases}
+\]
+The associated proposal-only payload is
+\[
+  \SemMatterSig(E)=(T_E,A_E,R_E,L_E,D_E,\rho_L,\mathcal{V}_E,\NoTarget_E).
+\]
+\end{definition}
+
+\begin{definition}[Source-defined label transport]
+For a permitted source relabeling
+\(\rho=(\rho_T,\rho_A):\mathcal{S}_E\to\mathcal{S}_{E'}\), define
+\[
+  \rho_L(\ell_{\Sigma})=\ell_{\rho_A[\Sigma]},
+  \qquad
+  \rho_L(\Bottom)=\Bottom.
+\]
+This transport is defined by the source relabeling of incidence indices, not
+by preserving target matter interpretation.
+\end{definition}
+
+\begin{lemma}[Naturality of the repair candidate]
+If \(\rho=(\rho_T,\rho_A)\) preserves source incidence, then
+\[
+  D_{E'}(\rho_T(t))=\rho_L(D_E(t))
+\]
+for every \(t\in T_E\) whose no-target certificate passes.
+\end{lemma}
+
+\begin{proof}
+Incidence preservation means
+\[
+  (t,a)\in R_E \quad\Longleftrightarrow\quad
+  (\rho_T(t),\rho_A(a))\in R_{E'} .
+\]
+Therefore
+\[
+  \sigma_{E'}(\rho_T(t))=\rho_A[\sigma_E(t)].
+\]
+By definition of \(D_E\), \(D_{E'}\), and \(\rho_L\), the required equality
+follows. If the certificate fails, both sides fall closed through
+\(\Bottom\) or record the corresponding obstruction label.
+\end{proof}
+
+\section{Finite/Local Non-Bottom Witness}
+
+Let \(E_\star\) be the finite source instance
+\[
+  T_{E_\star}=\{u,v\},\qquad
+  A_{E_\star}=\{a\},\qquad
+  R_{E_\star}=\{(u,a)\},
+\]
+with \(\NoTarget_{E_\star}=\mathrm{pass}\) and no target interpretation
+attached to \(u\), \(v\), or \(a\). Then
+\[
+  \sigma_{E_\star}(u)=\{a\},\qquad
+  \sigma_{E_\star}(v)=\varnothing,
+\]
+and hence
+\[
+  D_{E_\star}(u)=\ell_{\{a\}},\qquad
+  D_{E_\star}(v)=\ell_{\varnothing}.
+\]
+Both labels are non-bottom and source-defined. This supplies a finite/local
+non-bottom instantiation of the proposal-only discriminator target.
+
+\section{Finite-Variation And Fail-Closed Behavior}
+
+For a finite variation \(w:E\rightsquigarrow E_w\), the candidate behaves as
+follows:
+\begin{enumerate}[leftmargin=*]
+\item if \(w\) transports \(T_E\), \(A_E\), and \(R_E\) by declared
+  source-side variation maps, then \(D_E\) transports by the induced
+  \(\rho_L\)-style map;
+\item if \(w\) deletes or perturbs the incidence data needed for a token, the
+  affected token returns \(\Bottom\);
+\item if \(w\) preserves apparent matter-like labels only by importing target
+  semantics, detector outcomes, stress-energy variables, matter-action
+  variables, or target metric data, the candidate fails closed with
+  \texttt{MS-SIG-TARGET-IMPORT};
+\item if \(w\) preserves labels only by explicit names without source
+  incidence, the candidate fails closed with
+  \texttt{MS-SIG-EXPLICIT-TAG-COLLAPSE}.
+\end{enumerate}
+
+\section{Obstruction Labels}
+
+\begin{longtable}{p{0.36\linewidth}p{0.52\linewidth}}
+\toprule
+Label & Meaning \\
+\midrule
+MS-SIG-SOURCE-INCIDENCE-MISSING & \(R_E\) is not supplied as source-side data. \\
+MS-SIG-LABEL-TRANSPORT-MISSING & \(\rho_L\) cannot be induced from source relabeling of \(A_E\). \\
+MS-SIG-TARGET-IMPORT & Target matter, detector, stress-energy, action, metric, benchmark, or empirical calibration data are used. \\
+MS-SIG-EXPLICIT-TAG-COLLAPSE & Non-bottom labels are only explicit names, not incidence signatures. \\
+MS-SIG-PROCESS-AUTHORITY-LAUNDERING & Validation, registry, role, handoff, approval, commit, generated derivative, support-only checker, or local cache status is treated as proof. \\
+MS-SIG-DOWNSTREAM-PROMOTION & The candidate is overread as \(\MetricData(E)\), \(\geff\), matter coupling, stress energy, matter action, Einstein equations, benchmark promotion, or completed derivation. \\
+\bottomrule
+\end{longtable}
+
+\section{Eligibility Theorem}
+
+\begin{theorem}[Repair-candidate audit eligibility without adoption]
+If \(\mathcal{S}_E\) is supplied from source-side incidence data and
+\(\NoTarget_E\) passes, then \(\MatSigDisc(E)\) constructs a proposal-only
+finite/local repair candidate satisfying the non-bottom instantiation and
+source-defined label-transport targets for the audited payload. The candidate
+is eligible only for Smuggling Auditor review. It is not source-law adoption,
+\(\MatSrcDiscLaw\) adoption, \(\SemMatterSrc\) adoption, source-extension data
+adoption, matter coupling, or Einstein-equation work.
+\end{theorem}
+
+\begin{proof}
+The discriminator \(D_E\) is total by construction: every token maps to its
+source-incidence signature label when the source and no-target certificates
+pass, and otherwise maps to \(\Bottom\). The finite witness \(E_\star\)
+supplies two distinct non-bottom labels induced only by \(R_{E_\star}\). The
+label transport \(\rho_L\) is induced by source relabeling of the incidence
+indices, and the naturality lemma verifies the transport equation.
+
+No step uses target matter semantics, detector outcomes, stress-energy
+variables, matter actions, target metric data, benchmark behavior, generated
+derivatives, registry metadata, validator output, role authority, handoff
+authority, approval authority, commit status, support-only checker output, or
+local caches as mathematical premises. Therefore the construction supplies
+only audit-eligible draft/control candidate data. Adoption, physical matter
+coupling, stress-energy semantics, Einstein equations, benchmark promotion,
+and completed derivation remain blocked.
+\end{proof}
+
+\section{Distance-To-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Scoped source-extension context retained as context only. \\
+M\_src & Scoped source-only context retained; no scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+matter coupling & Proposal-only repair candidate constructed pending audit; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+finite-variation robustness & Finite/local behavior specified only for the source-incidence candidate; no general theorem. \\
+benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict requested or issued. \\
+current route freeze or hard-fail status & Not frozen; audit route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded Smuggling Auditor audit of
+\(\MatSigDisc(E)\) and \(\SemMatterSig(E)\). The audit must test target matter
+import, detector import, stress-energy import, matter-action import, target
+metric import, explicit-tag collapse, source-extension data adoption
+laundering, source-law adoption laundering, \(\ProofAuthFalse\) erasure,
+process-authority laundering, and overreads into \(\MetricData(E)\), \(\geff\),
+matter coupling, Einstein equations, benchmark promotion, or completed
+derivation.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This packet is not source-law adoption, not \(\MatSrcDiscLaw\) adoption, not
+\(\SemMatterSrc\) adoption, not source-extension data adoption, not
+\(\MetricData(E)\) adoption, not \(\geff\) adoption or scope expansion, not
+matter coupling, not stress-energy semantics, not a stress-energy tensor, not
+a matter action, not detector semantics, not Einstein equations, not benchmark
+promotion, not completed derivation, not future source-extension
+impossibility, and not global theory rejection.
+\end{nonconclusion}
+
+\section*{References}
+
+The AEther-Flow Research Project. (2026, June 29). \emph{Matter-semantics
+candidate-law payload v1} [Internal draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+candidate-law refuter stress v1} [Internal draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Candidate-law
+post-stress selector v1} [Internal draft/control YAML artifact].
+
+\end{document}
