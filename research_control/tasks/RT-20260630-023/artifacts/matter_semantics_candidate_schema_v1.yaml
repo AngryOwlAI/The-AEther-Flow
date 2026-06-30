@@ -1,0 +1,70 @@
+artifact_id: "matter_semantics_candidate_schema_v1"
+task_id: "RT-20260630-023"
+status: "completed"
+created_at: "2026-06-30T10:42:07Z"
+authority: "draft/control candidate schema"
+claim_boundary: "constructed candidate pending audit only; no source-law adoption, no MCPA adoption, no source-extension data adoption beyond exact scoped gate result, no detector semantics, no stress-energy semantics, no stress-energy tensor, no matter action, no coupling law, no matter coupling, no Einstein equations, no benchmark promotion, and no completed derivation"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Construct or precisely obstruct a source-side matter-semantics candidate satisfying the P5-T02 target tuple before audit stress selector coupling-law matter-coupling or Einstein-equation work."
+source_basis:
+  p5_t02_target: "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+  source_coupling_law_candidate_gate: "research_control/tasks/RT-20260630-020/artifacts/source_coupling_law_candidate_source_extension_evidence_gate_chair_review_v1.tex"
+  latest_handoff: "research_control/handoffs/handoff-0374.yaml"
+  v12_plan: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+candidate_result:
+  result_type: "constructed_candidate"
+  candidate_name: "MatterSemanticsCandidate^cand_v1(E;B_current)"
+  candidate_artifact_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+  depends_on_compressed_source_extension_package: true
+  dependency_meaning: "Uses scoped SourceCouplingLawCandidate^cand_v1(E) evidence/precondition context only; does not adopt source law, MCPA^cand_v1(E), source-extension data beyond the exact scoped gate result, coupling law, or matter coupling."
+formal_objects:
+  - "S_E^msc"
+  - "P_E^msc"
+  - "R_E^msc"
+  - "Q_E^msc"
+  - "Gamma_E^msc"
+  - "MatterSemanticsCandidate^cand_v1(E;B_current)"
+  - "E_ms finite/local witness"
+finite_local_support_tooling:
+  reproducible_record_family:
+    support_tokens: 1
+    source_matter_signature_labels: 1
+    compatibility_certificates: 1
+    non_import_bundles: 1
+    source_probe_tokens: 1
+    source_readout_values: 1
+    response_tokens: 1
+  proof_authority: false
+candidate_acceptance_criteria:
+  source_side_only: true
+  scoped_preconditions_only: true
+  no_target_import_certificates: true
+  finite_local_reproducibility_declared: true
+  stress_energy_not_identified: true
+  detector_readout_not_identified: true
+  coupling_law_not_derived: true
+  einstein_equations_not_derived: true
+next_required_role: "smuggling-auditor@0.2.0"
+obstruction_record:
+  present: false
+  same_milestone_continuation_status: "blocked_adoption_open_continuation"
+blocked_conclusions:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "MCPA^cand_v1(E) adoption"
+  - "source-extension data adoption beyond exact scoped gate result"
+  - "MetricData(E) adoption"
+  - "g_eff adoption or scope expansion"
+  - "coupling-law adoption"
+  - "matter-coupling derivation"
+  - "matter-coupling adoption"
+  - "stress-energy semantics import"
+  - "stress-energy tensor construction"
+  - "detector semantics import"
+  - "matter action import"
+  - "Einstein-equation derivation"
+  - "benchmark promotion"
+  - "benchmark Gate Chair closure"
+  - "completed derivation"
+  - "future source-extension impossibility"
+  - "global theory rejection"

@@ -1,0 +1,387 @@
+completion_id: "AJC-AJ-RT-20260630-023-001"
+job_id: "AJ-RT-20260630-023-001"
+task_id: "RT-20260630-023"
+source_role_id: "candidate-constructor"
+completed_at: "2026-06-30T10:42:07Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v12"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  related_plan_task_id: "P5-T03"
+  plan_phase_id: "P5"
+  implemented_task_scope: "Constructed one finite/local source-side matter-semantics candidate satisfying the P5-T02 target tuple under scoped SourceCouplingLawCandidate evidence/precondition context."
+  downstream_tasks_not_implemented:
+    - "P5-T04"
+    - "P5-T05"
+    - "P5-T06"
+    - "P6"
+    - "P7"
+    - "P8"
+    - "P9"
+    - "P10"
+    - "P11"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "detector semantics"
+    - "matter action"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/tasks/RT-20260630-023/artifacts/child_phys_math_matter_semantics_candidate_v1.yaml"
+  - "research_control/tasks/RT-20260630-023/artifacts/child_phys_phil_matter_semantics_candidate_v1.yaml"
+  - "research_control/tasks/RT-20260630-023/artifacts/parent_conflict_review_matter_semantics_candidate_v1.yaml"
+  - "research_control/tasks/RT-20260630-023/artifacts/parent_fusion_notes_matter_semantics_candidate_v1.md"
+  - "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+  - "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_schema_v1.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260630-023/00_TASK.yaml"
+  - "research_control/tasks/RT-20260630-023/DDR-20260630-023.md"
+  - "research_control/tasks/RT-20260630-023/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260630-023/jobs/AJ-RT-20260630-023-001.yaml"
+  - "research_control/tasks/RT-20260630-023/jobs/completions/AJC-AJ-RT-20260630-023-001.yaml"
+  - "research_control/tasks/RT-20260630-023/roles/candidate-constructor@0.2.0--RT-20260630-023.yaml"
+  - "research_control/handoffs/handoff-0375.yaml"
+  - "research_control/handoffs/handoff-0375.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0374.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+  - "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_schema_v1.yaml"
+  - "research_control/tasks/RT-20260630-020/artifacts/source_coupling_law_candidate_source_extension_evidence_gate_chair_review_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=485 relationship_row_count=2621"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=PASS source_object_count=485 relationship_row_count=2621"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json | exit_code=0 | returned MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 hash=e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned MD-RESEARCH-CONTROL-CURRENT-FRONTIER hash=ce3060d7dcdf153f8f547da83fca6e0b30252176700fab220e88cdc2c898bf07"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION --json | exit_code=0 | returned TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION hash=4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS --json | exit_code=0 | returned TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS hash=b21f8305318aeb096a27a0558e2da0e544126180ef4b5007fd15da2a428700c5"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source coupling law candidate gate chair evidence\" --limit 10 --json | exit_code=0 | returned canonical TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS plus generated retrieval-layer hits used only for navigation"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260630-022 latest_handoff=handoff-0374"
+validation_status: "PASS"
+verdict: "v12_p5_t03_matter_semantics_candidate_constructed_pending_audit_no_adoption"
+coherent_resolution_summary: "RT-20260630-023 constructs MatterSemanticsCandidate^cand_v1(E;B_current) as a finite/local source-side matter-semantics candidate satisfying the P5-T02 target tuple under scoped SourceCouplingLawCandidate evidence/precondition context. It supplies source sector slots, source probe tokens, source readout syntax, source response tokens, non-import certificates, relabeling stability, finite-variation fail-closed behavior, and a finite witness E_ms. It does not adopt source law or promote any downstream GR claim."
+next_recommendation: "Run P5-T04 as one bounded Smuggling Auditor transaction to audit MatterSemanticsCandidate^cand_v1(E;B_current) for hidden target matter semantics, empirical detector protocols, stress-energy tensors, matter actions, conservation-law import, target metric dependence, coupling-law adoption laundering, downstream promotion, and process-authority proof laundering."
+mathematical_decisiveness_contract:
+  active: true
+  status: "satisfied_by_candidate_constructor_result"
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "MatterSemanticsCandidate^cand_v1(E;B_current)"
+    - "S_E^msc"
+    - "P_E^msc"
+    - "R_E^msc"
+    - "Q_E^msc"
+    - "Gamma_E^msc"
+    - "E_ms finite/local witness"
+  maps:
+    - "R_E^msc maps source probe tokens to source readout alphabet values or fail-closed bottom"
+    - "rho_* transports sector, probe, readout, response, and certificate records under source relabeling"
+  proof_obligations:
+    - "P5-T04 Smuggling Auditor audit"
+    - "P5-T05 Refuter stress if audit passes"
+    - "P5-T06 selector after audit and stress"
+    - "human gate before source-law adoption source-extension data adoption coupling-law adoption matter-coupling route Einstein-equation route or benchmark route"
+  failed_components:
+    - ""
+  next_required_role: "smuggling_auditor"
+  no_fog_check: true
+  no_fog_explanation: "Constructed a finite/local source-side matter-semantics candidate: one finite witness E_ms has one source support token, one source matter-signature label, one compatibility certificate, one non-import bundle, one probe token, one source readout value, and one response token."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V12-P5-T03-MATTER-SEMANTICS-CANDIDATE-001"
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "MatterSemanticsCandidate^cand_v1(E;B_current)"
+  bridge_result: "constructed_candidate_pending_audit"
+  candidate_map: "R_E^msc and Q_E^msc assemble source sector slots, source probe tokens, source readout syntax, and response tokens under non-import certificates."
+  missing_primitive: "Adopted source-side matter-semantics law remains unadopted; this packet supplies only draft/control audit-pending candidate data."
+  preserves_blocks: true
+  blocked_outputs:
+    - "source-law adoption"
+    - "MCPA^cand_v1(E) adoption"
+    - "source-extension data adoption beyond exact scoped gate result"
+    - "MetricData(E) adoption"
+    - "g_eff scope change"
+    - "coupling-law adoption"
+    - "matter coupling"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "detector semantics"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "constructed_candidate"
+  consequence: "P5-T04 audit route open"
+  forbidden_overread: "No matter-semantics failure, source-law adoption, MCPA adoption, source-extension data adoption beyond exact scoped gate result, MetricData(E) adoption, g_eff scope change, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory rejection is recorded."
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Construct or precisely obstruct a source-side matter-semantics candidate satisfying the P5-T02 target tuple before audit stress selector coupling-law matter-coupling or Einstein-equation work."
+  explanation: "The packet constructs a finite/local source-side matter-semantics candidate pending audit. It does not adopt source law, MCPA^cand_v1(E), source-extension data beyond exact scoped gate result, MetricData(E), g_eff, coupling law, matter coupling, stress-energy semantics, detector semantics, matter action, Einstein equations, benchmark status, or completed derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted"
+  new_status: "accepted"
+  ledger_row_updated: true
+  old_evidence_path: "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+  new_evidence_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+  status_meaning_preserved: true
+  downstream_unlocked:
+    - "bounded_smuggling_auditor_p5_t04_matter_semantics_candidate_audit_only"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MCPA^cand_v1(E)_adoption"
+    - "source_extension_data_adoption_beyond_exact_scoped_gate_result"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "detector_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The matter_coupling ledger remains accepted only as scoped evidence/precondition while the next action and last evidence path move to an audit-pending matter-semantics candidate."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit is made"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "scoped source-extension data retained as context only"
+  - burden: "M_src"
+    status: "scoped source-only M_src context retained; no scope expansion"
+  - burden: "MetricData(E)"
+    status: "no MetricData(E) adoption"
+  - burden: "g_eff"
+    status: "scoped g_eff context retained; no unscoped g_eff and no scope change"
+  - burden: "matter coupling"
+    status: "P5-T03 constructs an audit-pending finite/local source-side matter-semantics candidate; no matter coupling"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "candidate states source-local finite-variation behavior only; no global theorem"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark promotion"
+  - burden: "Gate Chair status"
+    status: "no Gate Chair verdict requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P5-T04 Smuggling Auditor route open"
+new_mathematical_payload:
+  - payload_type: "definition"
+    object_name: "MatterSemanticsCandidate^cand_v1(E;B_current)"
+    source_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    source_hash: "8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a"
+    summary: "Defines a source-side matter-semantics candidate tuple using source sector slots, probe tokens, readout syntax, response tokens, and non-import certificates."
+  - payload_type: "explicit_witness"
+    object_name: "E_ms finite/local matter-semantics witness"
+    source_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    source_hash: "8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a"
+    summary: "Constructs one source support token, source matter-signature label, compatibility certificate, non-import bundle, probe token, readout value, and response token."
+  - payload_type: "theorem_with_hypotheses_and_proof"
+    object_name: "Constructed candidate without adoption"
+    source_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    source_hash: "8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a"
+    summary: "Proves that the constructed candidate is eligible only for audit-pending continuation and does not adopt source law or derive matter coupling."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "definition"
+    object_name: "MatterSemanticsCandidate^cand_v1(E;B_current)"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    burden_effect: "constructs_candidate"
+    summary: "Source-side candidate tuple satisfying the P5-T02 target under scoped precondition context."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "explicit_witness"
+    object_name: "E_ms"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    burden_effect: "constructs_nonempty_witness"
+    summary: "Finite/local nonbottom candidate witness."
+  - payload_id: "PAYLOAD-003"
+    payload_type: "theorem"
+    object_name: "Constructed candidate without adoption"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    burden_effect: "selects_next"
+    summary: "Routes the constructed candidate to Smuggling Auditor and blocks adoption or promotion."
+matter_semantics_category:
+  classification_action: "candidate_constructor_constructed_candidate"
+  introduced_new_source_extension_data: false
+  adopted_or_rejected_data: false
+  candidate_constructed: true
+  obstruction_created: false
+  same_milestone_continuation_status: "blocked_adoption_open_continuation"
+  note: "The packet constructs proposal-only audit-pending matter-semantics candidate data and does not adopt source-extension data or source law."
+source_extension_category:
+  classification_action: "candidate_constructor_constructed_candidate"
+  source_extension_workflow_category: "source_extension_candidate"
+  introduced_new_source_extension_data: false
+  adopted_or_rejected_data: false
+  candidate_constructed: true
+  obstruction_created: false
+  same_milestone_continuation_status: "blocked_adoption_open_continuation"
+  note: "The packet uses scoped source-extension evidence/preconditions as context only and does not adopt new source-extension data."
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  candidate_freeze_label: "MATTER-SEMANTICS-CANDIDATE-AUDIT-MISSING"
+  freeze_decision: "not_frozen"
+  rationale: "The candidate is constructed and materially narrows the P5 matter-semantics burden. Missing audit is not a terminal freeze while P5-T04 Smuggling Auditor continuation remains open."
+  next_allowed_route: "smuggling_auditor_p5_t04_matter_semantics_candidate"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Draft/control Matter-Semantics Candidate v1 construction only."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "M_src adoption"
+    - "MCPA^cand_v1(E) adoption"
+    - "source-extension data adoption beyond exact scoped gate result"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "coupling-law adoption"
+    - "matter coupling"
+    - "matter-coupling derivation"
+    - "matter-coupling adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "detector semantics import"
+    - "matter action"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+  summary: "The packet constructs an audit-pending source-side candidate only. It does not adopt matter semantics or any downstream GR object."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260630-023/artifacts/child_phys_math_matter_semantics_candidate_v1.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260630-023/artifacts/child_phys_phil_matter_semantics_candidate_v1.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260630-023/artifacts/parent_conflict_review_matter_semantics_candidate_v1.yaml"
+    output_path: "research_control/tasks/RT-20260630-023/artifacts/parent_conflict_review_matter_semantics_candidate_v1.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260630-023/artifacts/parent_fusion_notes_matter_semantics_candidate_v1.md"
+    preserved_shared_consensus: true
+    preserved_unique_contributions: true
+    unresolved_limitations_preserved: true
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 485
+    relationship_row_count: 2621
+    semantic_row_count: 485
+    vault_row_count: 485
+    warning_summary: "Local retrieval was fresh at packet start."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION --json"
+      query_type: "lookup"
+      query_text: "TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION"
+      returned_object_ids:
+        - "TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS --json"
+      query_type: "lookup"
+      query_text: "TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS"
+      returned_object_ids:
+        - "TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source coupling law candidate gate chair evidence\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source coupling law candidate gate chair evidence"
+      returned_object_ids:
+        - "TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v12.md"
+      source_hash: "e3213cb67100d27880e590c184a8b65438cbea609a5bef94de2df13506426603"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "ce3060d7dcdf153f8f547da83fca6e0b30252176700fab220e88cdc2c898bf07"
+    - object_id: "TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+      source_hash: "4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16"
+    - object_id: "TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260630-020/artifacts/source_coupling_law_candidate_source_extension_evidence_gate_chair_review_v1.tex"
+      source_hash: "b21f8305318aeb096a27a0558e2da0e544126180ef4b5007fd15da2a428700c5"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."

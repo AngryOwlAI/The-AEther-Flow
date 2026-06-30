@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-022` and `handoff-0374`.
+`RT-20260630-023` and `handoff-0375`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-022` |
-| Latest handoff ID | `handoff-0374` |
-| Current status | `v12_p5_t02_source_matter_semantics_target_formalized_no_candidate_or_promotion` |
-| Current route family | v12 p5 t02 source matter semantics target formalized no candidate or promotion |
+| Active task ID | `RT-20260630-023` |
+| Latest handoff ID | `handoff-0375` |
+| Current status | `v12_p5_t03_matter_semantics_candidate_constructed_pending_audit_no_adoption` |
+| Current route family | v12 p5 t03 matter semantics candidate constructed pending audit no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P5-T03 source-side matter-semantics candidate construction or precise obstruction only |
-| Next recommended action | Run one bounded candidate-constructor@0.2.0 P5-T03 packet to attempt a source-side matter-semantics candidate satisfying the P5-T02 target tuple or return a precise MatterSemanticsFailureObstruction_v1. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
+| Required next authority | P5-T04 Smuggling Auditor audit of the constructed matter-semantics candidate only |
+| Next recommended action | Run one bounded smuggling-auditor@0.2.0 P5-T04 packet to audit MatterSemanticsCandidate^cand_v1(E;B_current) for hidden target matter semantics, empirical detector protocols, stress-energy tensors, matter actions, conservation-law import, target metric dependence, coupling-law adoption laundering, downstream promotion, support-only proof laundering, and process-authority proof laundering. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
 
 ## Active Boundary
 
@@ -48,16 +48,16 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-022/00_TASK.yaml`.
-- Active task objective: Formalize the P5-T02 draft/control source-side matter-semantics target selected by RT-20260630-021 without constructing a candidate, proving an obstruction, importing detector stress-energy or matter-action semantics, or promoting downstream GR claims.
-- Latest handoff path: `research_control/handoffs/handoff-0374.yaml`.
-- Latest handoff summary: RT-20260630-022 completed one bounded Ontology Formalizer packet and formalized the P5-T02 source-side matter-semantics target selected by RT-20260630-021: SourceMatterSector_v1(E), SourceProbeToken_v1(E), SourceDetectorReadout_v1(E), MatterResponseToken_v1(E), NoDetectorImport_v1(E), NoStressEnergyImport_v1(E), NoMatterActionImport_v1(E), and MatterSemanticsFailureObstruction_v1(E). It proved only a conditional no-target-import preservation lemma and did not construct a candidate, prove an obstruction, adopt source law, adopt MCPA^cand_v1(E), adopt source-extension data beyond the exact scoped gate result, adopt MetricData(E), change g_eff, adopt a coupling law, derive matter coupling, import stress-energy semantics, import detector semantics, import matter action, derive Einstein equations, promote benchmark status, or claim completed derivation.
-- Current route family: v12 p5 t02 source matter semantics target formalized no candidate or promotion.
-- Next recommended action: Run one bounded candidate-constructor@0.2.0 P5-T03 packet to attempt a source-side matter-semantics candidate satisfying the P5-T02 target tuple or return a precise MatterSemanticsFailureObstruction_v1. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-023/00_TASK.yaml`.
+- Active task objective: Construct a source-side matter-semantics candidate satisfying the P5-T02 target tuple or produce a precise obstruction.
+- Latest handoff path: `research_control/handoffs/handoff-0375.yaml`.
+- Latest handoff summary: RT-20260630-023 completed one bounded Candidate Constructor packet and constructed MatterSemanticsCandidate^cand_v1(E;B_current) as a finite/local source-side matter-semantics candidate satisfying the P5-T02 target tuple under scoped SourceCouplingLawCandidate evidence/precondition context. It supplies source sector slots, source probe tokens, source readout syntax, source response tokens, non-import certificates, relabeling stability, finite-variation fail-closed behavior, and a finite witness E_ms. It does not adopt source law, adopt MCPA^cand_v1(E), adopt source-extension data beyond the exact scoped gate result, adopt MetricData(E), change g_eff, adopt a coupling law, derive or adopt matter coupling, import stress-energy semantics, construct a stress-energy tensor, import detector semantics, import a matter action, derive Einstein equations, promote benchmark status, claim completed derivation, claim future source-extension impossibility, or reject the global theory.
+- Current route family: v12 p5 t03 matter semantics candidate constructed pending audit no adoption.
+- Next recommended action: Run one bounded smuggling-auditor@0.2.0 P5-T04 packet to audit MatterSemanticsCandidate^cand_v1(E;B_current) for hidden target matter semantics, empirical detector protocols, stress-energy tensors, matter actions, conservation-law import, target metric dependence, coupling-law adoption laundering, downstream promotion, support-only proof laundering, and process-authority proof laundering. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 ## Matter-Coupling Boundary
 
-The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: SourceCouplingLawCandidate^cand_v1(E) is accepted only as scoped source-extension coupling-law-candidate evidence/precondition and P5-T02 now formalizes source-side matter-semantics target objects while no source-law adoption no MCPA adoption no source-extension data adoption beyond exact scoped gate result no coupling-law adoption no matter-coupling derivation no stress-energy semantics no stress-energy tensor no matter action no detector semantics no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex`.
+The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: MatterSemanticsCandidate^cand_v1(E;B_current) is constructed only as draft/control audit-pending source-side matter-semantics candidate while SourceCouplingLawCandidate^cand_v1(E) remains scoped evidence/precondition only and no source-law adoption no MCPA adoption no source-extension data adoption beyond exact scoped gate result no coupling-law adoption no matter-coupling derivation no stress-energy semantics no detector semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex`.
 
 This ledger status must not be read as coupling-law adoption, universal matter-coupling derivation, matter-coupling adoption, stress-energy semantics, stress-energy tensor, matter action, detector semantics, Einstein equations, benchmark promotion, or completed derivation.
 
@@ -120,7 +120,7 @@ source if this summary drifts.
 | `resp_lc` | `response_localization_resp_lc` | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
 | `g_eff` | `effective_metric_g_eff` | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
-| `matter_coupling` | `matter_coupling` | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex` |
+| `matter_coupling` | `matter_coupling` | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
 | `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded candidate-constructor@0.2.0 P5-T03 packet to attempt a source-side matter-semantics candidate satisfying the P5-T02 target tuple or return a precise MatterSemanticsFailureObstruction_v1. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+Run one bounded smuggling-auditor@0.2.0 P5-T04 packet to audit MatterSemanticsCandidate^cand_v1(E;B_current) for hidden target matter semantics, empirical detector protocols, stress-energy tensors, matter actions, conservation-law import, target metric dependence, coupling-law adoption laundering, downstream promotion, support-only proof laundering, and process-authority proof laundering. Preserve no canonical ontology edit, no source-law adoption, no MCPA^cand_v1(E) adoption, no source-extension data adoption beyond exact scoped gate result, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics import, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-022`;
-- latest handoff: `handoff-0374`;
-- current status: `v12_p5_t02_source_matter_semantics_target_formalized_no_candidate_or_promotion`;
+- active task: `RT-20260630-023`;
+- latest handoff: `handoff-0375`;
+- current status: `v12_p5_t03_matter_semantics_candidate_constructed_pending_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0374.yaml`
-- `research_control/tasks/RT-20260630-022/00_TASK.yaml`
+- `research_control/handoffs/handoff-0375.yaml`
+- `research_control/tasks/RT-20260630-023/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0374*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0375*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

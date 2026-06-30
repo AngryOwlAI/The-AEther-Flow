@@ -1,0 +1,430 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\SCLC}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MatterSector}{\mathrm{SourceMatterSector}_{v1}}
+\newcommand{\ProbeToken}{\mathrm{SourceProbeToken}_{v1}}
+\newcommand{\DetectorReadout}{\mathrm{SourceDetectorReadout}_{v1}}
+\newcommand{\ResponseToken}{\mathrm{MatterResponseToken}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\FailureObs}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\Target}{\mathrm{MatterSemanticsTarget}_{v1}}
+\newcommand{\MSCand}{\mathrm{MatterSemanticsCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\BottomS}{\bot_S}
+\newcommand{\BottomR}{\bot_R}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Matter-Semantics Candidate v1}
+\author{Candidate Constructor Packet RT-20260630-023}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Candidate Constructor artifact for
+\texttt{RT-20260630-023}. It implements P5-T03 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md} by
+constructing one finite/local source-side matter-semantics candidate against
+the P5-T02 target tuple
+\[
+  \Target(E;\Bcur)=(S_E,P_E,R_E,Q_E,\Gamma_E).
+\]
+
+The candidate is denoted
+\[
+  \MSCand(E;\Bcur).
+\]
+It uses the scoped \(\SCLC(E)\) evidence/precondition result from
+\texttt{RT-20260630-020} and the P5-T02 target formalization from
+\texttt{RT-20260630-022} as declared source-side context only. It does not
+adopt \(\SCLC(E)\), does not adopt \(\MCPA(E)\), does not adopt any source law,
+and does not adopt source-extension data beyond the exact scoped gate result.
+
+This artifact does not edit canonical ontology, adopt a source law, adopt
+\(\MCPA(E)\), adopt \(\MetricData(E)\), change scoped \(\geff\), adopt a
+coupling law, derive or adopt matter coupling, import stress-energy semantics,
+construct a stress-energy tensor, import detector semantics, import or define
+a matter action, derive Einstein equations, promote benchmark status, issue a
+benchmark Gate Chair verdict, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control Matter-Semantics Candidate v1"
+candidate_constructor_result.result_type: "constructed_candidate"
+source_law_adopted: false
+MCPA_cand_v1_E_adopted: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Declared Basis}
+
+\begin{definition}[Candidate basis]
+The basis \(\Bcur\) for this packet is:
+\begin{enumerate}[leftmargin=*]
+\item the P5-T02 target tuple and non-import obligations;
+\item the scoped \(\SCLC(E)\) evidence/precondition result accepted only in
+  the exact RT-020 sense;
+\item the existing finite/local source-support, witness-slot,
+  matter-signature, compatibility-certificate, relabeling, finite-variation,
+  and no-target-import certificate vocabulary from the preceding scoped
+  source-extension packets;
+\item the active Distance-to-GR claim blocks.
+\end{enumerate}
+The basis excludes target stress-energy tensors, stress-energy semantics,
+matter actions, empirical detector protocols, apparatus calibration, target
+metric, target atlas, Lorentzian signature, proper time, Bianchi identities,
+Einstein equations, benchmark behavior, generated derivatives, validators,
+registries, role records, handoffs, approvals, commits, local caches, and file
+order as mathematical premises.
+\end{definition}
+
+\section{Candidate Source Package}
+
+\begin{definition}[Matter-sector slot]
+A matter-sector slot over \(E\) is a source-side record
+\[
+  s=(\sigma,U_s,c_s,\eta_s)
+\]
+where \(\sigma\) is a source matter-signature label from the scoped
+precondition ledgers, \(U_s\) is a finite/local source support, \(c_s\) is a
+source-side compatibility certificate linking \(\sigma\) to scoped
+\(\SCLC(E)\) evidence/precondition context, and \(\eta_s\) is a non-import
+certificate bundle for \(\NoDetector(E)\), \(\NoSE(E)\), and
+\(\NoAction(E)\). The record is source syntax only. It is not physical matter,
+stress energy, detector semantics, or a coupling law.
+\end{definition}
+
+\begin{definition}[Candidate sector domain]
+The candidate sector domain is
+\[
+  S_E^{\mathrm{msc}}
+  =
+  \{s=(\sigma,U_s,c_s,\eta_s): c_s=\mathsf{source\_compatible}
+  \text{ and } \eta_s \text{ passes}\}\cup\{\BottomS\}.
+\]
+Membership is source-only: it depends only on source labels, finite/local
+supports, compatibility certificates, and non-import certificates. If any
+required input is absent or if a certificate attempts to use forbidden target
+or process authority, the membership rule returns \(\BottomS\).
+\end{definition}
+
+\begin{definition}[Candidate probe-token family]
+A probe token over \(E\) is
+\[
+  p=(\mathrm{id},s,U_p,g_p,e_p)
+\]
+where \(s\in S_E^{\mathrm{msc}}\), \(U_p\) is a finite/local source support,
+\(g_p\) is a source guard scope, and \(e_p\) is an evidence path naming the
+source records used by the token. The probe token is not an empirical detector
+or apparatus probe.
+\end{definition}
+
+\begin{definition}[Candidate readout alphabet and map]
+Let
+\[
+  A_E^{\mathrm{msc}}
+  =
+  \{\mathsf{source\_sector\_matched},
+    \mathsf{source\_repair\_needed},
+    \mathsf{source\_undetermined}\}.
+\]
+Define
+\[
+  R_E^{\mathrm{msc}}:P_E^{\mathrm{msc}}
+  \longrightarrow A_E^{\mathrm{msc}}\cup\{\BottomR\}
+\]
+by:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item if \(p\) has a non-bottom sector slot with passing compatibility and
+  non-import certificates, return \(\mathsf{source\_sector\_matched}\);
+\item if \(p\) has source-local repair data but no passing compatibility
+  certificate, return \(\mathsf{source\_repair\_needed}\);
+\item if the token requires detector semantics, stress-energy semantics, a
+  matter action, target metric data, benchmark behavior, process authority, or
+  generated-output authority, return \(\BottomR\);
+\item otherwise return \(\mathsf{source\_undetermined}\).
+\end{enumerate}
+The map is source readout syntax only. It is not detector readout semantics.
+\end{definition}
+
+\begin{definition}[Candidate response-token family]
+The candidate response-token family \(Q_E^{\mathrm{msc}}\) consists of tuples
+\[
+  q=(s,p,R_E^{\mathrm{msc}}(p),\rho,\gamma)
+\]
+where \(s\in S_E^{\mathrm{msc}}\), \(p\in P_E^{\mathrm{msc}}\), \(\rho\) is
+the source marker
+\(\mathsf{matter\_semantics\_candidate\_only}\) or a fail-closed marker, and
+\(\gamma\) is the non-import certificate bundle. The response token is not a
+coupling law, stress-energy response, matter action response, detector
+response, or matter-coupling derivation.
+\end{definition}
+
+\begin{definition}[Matter-semantics candidate]
+The candidate
+\[
+  \MSCand(E;\Bcur)
+  =
+  (S_E^{\mathrm{msc}},P_E^{\mathrm{msc}},R_E^{\mathrm{msc}},
+  Q_E^{\mathrm{msc}},\Gamma_E^{\mathrm{msc}})
+\]
+is the tuple formed by the candidate sector domain, probe-token family,
+readout map, response-token family, and non-import certificates
+\(\Gamma_E^{\mathrm{msc}}\). If any component attempts to use target or
+process authority, the tuple fails closed to the P5-T02
+\(\FailureObs(E;\Bcur,O)\) record schema.
+\end{definition}
+
+\section{Finite/Local Nonbottom Witness}
+
+\begin{definition}[Finite witness \(E_{\mathrm{ms}}\)]
+Let \(E_{\mathrm{ms}}\) be a finite source context with one source support
+token \(u_0\). Declare one source matter-signature label \(\sigma_0\), one
+compatibility certificate
+\[
+  c_0=(\sigma_0,\{u_0\},\mathsf{source\_compatible},n_0),
+\]
+and one non-import bundle
+\[
+  \eta_0=(\NoDetector,\NoSE,\NoAction,n_0)
+\]
+stating that no target topology, target atlas, target metric, Lorentzian
+signature, proper time, stress-energy tensor, stress-energy semantics,
+detector semantics, empirical calibration, matter action, benchmark fit,
+Einstein equation, generated derivative, registry metadata, validator result,
+role authority, handoff status, approval status, local cache state, file
+order, or commit status is a premise.
+\end{definition}
+
+\begin{proposition}[Nonbottom matter-semantics candidate witness]
+For \(E_{\mathrm{ms}}\), \(\MSCand(E_{\mathrm{ms}};\Bcur)\) has one non-bottom
+sector slot
+\[
+  s_0=(\sigma_0,\{u_0\},c_0,\eta_0),
+\]
+one probe token \(p_0=(p_{\mathrm{ms},0},s_0,\{u_0\},
+\mathsf{source\_only},e_0)\), one readout value
+\[
+  R_{E_{\mathrm{ms}}}^{\mathrm{msc}}(p_0)
+  =
+  \mathsf{source\_sector\_matched},
+\]
+and one response token
+\[
+  q_0=(s_0,p_0,\mathsf{source\_sector\_matched},
+  \mathsf{matter\_semantics\_candidate\_only},\eta_0).
+\]
+\end{proposition}
+
+\begin{proof}
+The declared finite context supplies a source support, source matter-signature
+label, compatibility certificate, and non-import bundle. The sector-domain
+membership rule therefore includes \(s_0\). The probe-token rule permits
+\(p_0\) because all fields are source-side. The readout rule enters case (a)
+because \(p_0\) has a non-bottom sector slot with passing compatibility and
+non-import certificates. The response-token definition then forms \(q_0\).
+No target or process-authority premise is used.
+\end{proof}
+
+\section{Relabeling And Finite Variation}
+
+\begin{definition}[Source relabeling transport]
+For a source relabeling \(\rho:E\to E'\), suppose \(\rho\) transports source
+supports, labels, compatibility certificates, non-import bundles, probe
+tokens, and evidence paths by fieldwise relabeling. Define
+\[
+  \rho_*(s,p,R_E^{\mathrm{msc}}(p),\rho_m,\gamma)
+  =
+  (\rho s,\rho p,R_{E'}^{\mathrm{msc}}(\rho p),\rho_m,\rho\gamma).
+\]
+\end{definition}
+
+\begin{proposition}[Source relabeling stability]
+If \(\rho\) preserves compatibility-certificate pass/fail values and
+non-import bundle pass/fail values, then \(\rho_*\) transports non-bottom
+\(\MSCand(E;\Bcur)\) records to non-bottom \(\MSCand(E';\rho\Bcur)\) records.
+\end{proposition}
+
+\begin{proof}
+The membership, readout, and response-token rules inspect only source labels,
+source supports, compatibility-certificate values, and non-import-certificate
+values. These are preserved by hypothesis. Therefore the candidate status of
+each transported record is preserved. The conclusion is source relabeling
+stability only, not target covariance or physical equivalence.
+\end{proof}
+
+\begin{definition}[Finite-variation behavior]
+For each declared finite source variation \(v\), the candidate has three
+allowed responses:
+\[
+  \mathsf{stable},\qquad \mathsf{source\_repair\_needed},\qquad \BottomS.
+\]
+If a variation can be absorbed by source-local relabeling or certificate
+repair, the result is stable or source-repair-needed. If the variation needs
+target metric structure, stress-energy conservation, detector calibration,
+matter-action dynamics, benchmark fit, Einstein equations, generated-output
+authority, validator authority, or process authority, the candidate fails
+closed to \(\FailureObs(E;\Bcur,O)\).
+\end{definition}
+
+\section{Target Satisfaction Check}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+P5-T02 target obligation & Candidate satisfaction record \\
+\midrule
+Source-sector domain & \(S_E^{\mathrm{msc}}\) contains source matter-signature slots or \(\BottomS\). \\
+Probe-token domain & \(P_E^{\mathrm{msc}}\) contains source tokens over sector slots and finite/local supports. \\
+Readout alphabet and map & \(R_E^{\mathrm{msc}}\) maps probe tokens to source alphabet values or \(\BottomR\). \\
+Response-token family & \(Q_E^{\mathrm{msc}}\) bundles sector slot, probe token, readout value, source marker, and certificates. \\
+No detector import & \(\Gamma_E^{\mathrm{msc}}\) excludes empirical detector protocol, apparatus, calibration, proper time, and target observation semantics. \\
+No stress-energy import & \(\Gamma_E^{\mathrm{msc}}\) excludes stress-energy semantics, stress-energy tensor, energy density, pressure, Bianchi identity, Einstein tensor matching, and target field-equation behavior. \\
+No matter-action import & \(\Gamma_E^{\mathrm{msc}}\) excludes matter action, Lagrangian density, variational action, Euler-Lagrange dynamics, path integral, and least-action premise. \\
+Relabeling stability & Source relabeling stability is proved under certificate-pass preservation. \\
+Finite variation guard & Finite variations are stable, source-repair-needed, or fail-closed only. \\
+Fail-closed behavior & Target or process-authority pressure returns \(\FailureObs(E;\Bcur,O)\). \\
+\bottomrule
+\end{longtable}
+
+\section{Candidate Eligibility Theorem}
+
+\begin{theorem}[Constructed candidate without adoption]
+\(\MSCand(E;\Bcur)\) is a constructed draft/control finite/local
+source-side matter-semantics candidate satisfying the P5-T02 target tuple
+under the declared basis. It is eligible for P5-T04 Smuggling Auditor review.
+It does not adopt a source law, adopt \(\MCPA(E)\), adopt source-extension data
+beyond the exact scoped gate result, adopt \(\MetricData(E)\), change
+\(\geff\), adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import detector
+semantics, define a matter action, derive Einstein equations, promote
+benchmark status, or complete a GR derivation.
+\end{theorem}
+
+\begin{proof}
+The candidate is built from source matter-signature labels, finite/local
+supports, compatibility certificates, source probe tokens, source readout
+syntax, source response tokens, and non-import certificates. Its finite
+witness proves a non-bottom source-side candidate record. Its relabeling and
+finite-variation rules are source-side and fail closed when target or
+process-authority data would be needed. The non-import certificate bundle
+excludes detector semantics, stress-energy semantics and tensors, matter
+actions, target metric structure, benchmark behavior, and Einstein-equation
+premises. The construction contains no Gate Chair verdict, no adoption rule,
+and no benchmark-promotion authority. Hence it licenses only an audit-pending
+draft/control matter-semantics candidate.
+\end{proof}
+
+\section{Support-Only Reproducibility}
+
+The finite witness \(E_{\mathrm{ms}}\) can be represented by a support-only
+checker or typed skeleton as a finite record family with:
+\begin{itemize}[leftmargin=*]
+\item one support token \(u_0\);
+\item one source matter-signature label \(\sigma_0\);
+\item one compatibility certificate \(c_0\);
+\item one non-import bundle \(\eta_0\);
+\item one source probe token \(p_0\);
+\item one readout value \(\mathsf{source\_sector\_matched}\);
+\item one response token \(q_0\).
+\end{itemize}
+Any such checker would be support-only and would not be proof authority,
+physics evidence, source-law adoption, matter coupling, or benchmark evidence.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc_lc & Unchanged. \\
+Resp_lc & Scoped source-extension data retained as context only. \\
+M_src & Scoped source-only context retained; no scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & P5-T03 constructs an audit-pending finite/local source-side matter-semantics candidate; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Candidate states source-local finite-variation behavior only; no global theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict requested or issued. \\
+Current route freeze or hard-fail status & Not frozen; P5-T04 Smuggling Auditor route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-Conclusions}
+
+This candidate construction is not a canonical ontology edit, not source-law
+adoption, not \(\MCPA(E)\) adoption, not source-extension data adoption beyond
+the exact scoped gate result, not \(\MetricData(E)\) adoption, not \(\geff\)
+scope expansion, not coupling-law adoption, not matter-coupling derivation,
+not matter-coupling adoption, not stress-energy semantics, not a
+stress-energy tensor, not detector semantics, not matter action, not Einstein
+equations, not benchmark promotion, not benchmark Gate Chair closure, not a
+completed derivation, not future source-extension impossibility, and not
+global theory rejection.
+
+Generated derivatives, registries, validators, role contracts, handoffs,
+approvals, commits, local caches, file order, and support-only checker outputs
+remain support surfaces. They are not proof authority.
+
+\section{Next Route}
+
+The next bounded packet is P5-T04 Smuggling Auditor review of
+\(\MSCand(E;\Bcur)\) for hidden target matter semantics, empirical detector
+protocols, stress-energy tensors, matter actions, conservation law imports,
+target metric dependence, coupling-law adoption laundering, downstream
+promotion, and process-authority proof laundering. No Gate Chair route is
+requested by this packet.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+Ontology Formalizer Packet RT-20260630-022. (2026).
+\emph{Source-side matter-semantics target formalization v1}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+Gate Chair Packet RT-20260630-020. (2026). \emph{Source coupling law
+candidate source-extension evidence Gate Chair review v1}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0374}
+[Internal research-control handoff].
+
+\end{document}
