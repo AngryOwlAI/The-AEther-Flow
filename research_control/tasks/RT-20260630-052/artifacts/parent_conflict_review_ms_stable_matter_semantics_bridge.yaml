@@ -1,0 +1,26 @@
+artifact_id: "parent_conflict_review_ms_stable_matter_semantics_bridge"
+task_id: "RT-20260630-052"
+job_id: "AJ-RT-20260630-052-001"
+created_at: "2026-06-30T22:14:14Z"
+parent_perspective: "physicist_mathematician_philosopher"
+child_outputs:
+  - "research_control/tasks/RT-20260630-052/artifacts/child_phys_math_ms_stable_matter_semantics_bridge.yaml"
+  - "research_control/tasks/RT-20260630-052/artifacts/child_phys_phil_ms_stable_matter_semantics_bridge.yaml"
+conflict_review_status: "no_blocking_conflict"
+resolution_rounds: 0
+conflicts:
+  - conflict_id: "terminology-source-matter-semantics"
+    severity: "nonblocking"
+    issue: "The mathematical child uses matter-semantics bridge terminology while the philosophical child warns against reading it as physical matter semantics."
+    resolution: "Use draft/control source-side bridge candidate language and repeat that matter semantics are not adopted."
+  - conflict_id: "rr_e-separation"
+    severity: "nonblocking"
+    issue: "A bridge could be overread as quotienting RR_E differences."
+    resolution: "The fused artifact includes an RR_E-separation lemma and an OB-MS-STABLE-BRIDGE-RR-COLLAPSE failure label."
+  - conflict_id: "gate-overread"
+    severity: "nonblocking"
+    issue: "RT-050 Gate Chair acceptance may be overread as adoption authority."
+    resolution: "The fused artifact treats RT-050 only as scoped stable-precondition evidence/precondition."
+unresolved_conflicts: []
+fusion_decision: "Construct the bridge candidate and route to smuggling audit."
+claim_boundary_preserved: true

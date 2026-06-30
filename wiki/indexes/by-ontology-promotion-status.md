@@ -286,6 +286,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P5-T04-MATTER-SEMANTICS-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-052/artifacts/matter_semantics_obstruction_smuggling_audit_v1.tex`
 - `TEX-V12-P5-T05-MATTER-SEMANTICS-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260630-025/artifacts/matter_semantics_candidate_refuter_stress_v1.tex`
 - `TEX-V12-P5-T05-MATTER-SEMANTICS-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-053/artifacts/matter_semantics_obstruction_refuter_stress_v1.tex`
+- `TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-CANDIDATE` `research_control/tasks/RT-20260630-052/artifacts/ms_stable_matter_semantics_bridge_candidate_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MATTER-SEMANTICS-DISCRIMINATOR-NONUNIQUENESS-OBSTRUCTION` `research_control/tasks/RT-20260630-035/artifacts/matter_semantics_discriminator_nonuniqueness_obstruction_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MATTER-SEMANTICS-DISCRIMINATOR-TARGET` `research_control/tasks/RT-20260630-034/artifacts/matter_semantics_discriminator_target_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-QUOTIENT-CANDIDATE` `research_control/tasks/RT-20260630-038/artifacts/matter_semantics_irrelevance_quotient_candidate_v1.tex`

@@ -1,0 +1,423 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSStablePre}{\mathrm{MSStablePartitionPrecondition}_{v1}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\MSSig}{\Sigma^{\mathrm{rep}}_E}
+\newcommand{\MSPart}{\Pi^{\mathrm{st}}_E}
+\newcommand{\MSCell}{\mathcal C^{\mathrm{st}}_E}
+\newcommand{\MSGuard}{G^{\mathrm{st}}_E}
+\newcommand{\MSFail}{\mathrm{MSStablePartitionFailure}_{v1}}
+\newcommand{\Target}{\mathrm{MatterSemanticsTarget}_{v1}}
+\newcommand{\FailureObs}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\NoTarget}{\mathrm{NoTargetImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{obstruction}{Obstruction label}
+
+\title{MSStableMatterSemanticsBridge Candidate v1}
+\author{Candidate Constructor Packet RT-20260630-052}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Candidate Constructor output for
+\texttt{RT-20260630-052}. It constructs
+\[
+  \MSBridge(E;\Bcur)
+\]
+as a draft/control finite/local source-side stable matter-semantics bridge
+candidate. It uses \(\MSStablePre(E;\Bcur)\) only as accepted scoped
+source-extension stable-precondition evidence/precondition from
+\texttt{RT-20260630-050}. The bridge is not an adopted source law, not
+source-extension data adoption beyond the exact scoped Gate Chair result, not
+matter-semantics adoption, not detector-semantics adoption, not a coupling
+law, not matter coupling, not stress-energy semantics, not a stress-energy
+tensor, not a matter action, not \(\MetricData(E)\), not a \(\geff\) scope
+change, not an Einstein-equation derivation, not benchmark promotion, not a
+completed derivation, not future source-extension impossibility, and not
+global theory rejection.
+
+\begin{verbatim}
+candidate_constructor_result.result_type: "constructed_candidate"
+candidate_status: "draft/control"
+bridge_attempt_status.bridge_result: "constructed_candidate_pending_audit"
+source_extension_category: "source_extension_candidate"
+source_law_adopted: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Basis}
+
+The basis \(\Bcur\) contains the tracked current-basis control and
+source-draft materials inspected by this packet: the P5-T02 source-side
+matter-semantics target, the P5-T05 bridge-facing matter-semantics candidate
+stress result, the P7-T03 stable-precondition formalization, the RT-050
+scoped stable-precondition evidence/precondition decision, the RT-051
+selector, the v12 implementation plan, the GR derivation burden map, the
+current frontier, and their registered source rows.
+
+\(\Bcur\) excludes target topology, target atlas, target coordinate
+transitions, target metric, Lorentzian signature, proper time, empirical
+detector protocols, apparatus calibration, stress-energy semantics,
+stress-energy tensor components, matter actions, conservation laws imported
+from GR or QFT, Einstein equations, benchmark behavior, generated derivative
+authority, registry metadata authority, validator results, role identity,
+handoff status, approval status, commit status, local caches, and file order
+as mathematical premises.
+
+\section{Stable Bridge Domain}
+
+\begin{definition}[Guarded stable bridge records]
+Let
+\[
+  \MSStablePre(E;\Bcur)
+  =
+  \bigl(\mathcal D^{\mathrm{st}}_E,\MSSig,\MSPart,\MSGuard,\MSFail\bigr)
+\]
+be the stable-precondition tuple. The guarded bridge domain is
+\[
+  \mathcal D^{\mathrm{smb}}_E
+  =
+  \{(C,a,\mathsf{cert}) \mid
+     C\in\mathcal D^{\mathrm{st}}_E,\,
+     \MSGuard(E;\Bcur,C)=1,\,
+     a=\MSSig(C),\,
+     C\in\MSCell(a),\,
+     \mathsf{cert}\supseteq
+     \{\NoTarget,\NoDetector,\NoSE,\NoAction\}\}.
+\]
+Every component is source-side or tracked-control syntax. Membership in
+\(\mathcal D^{\mathrm{smb}}_E\) is not physical matter admissibility, not
+detector access, not stress-energy support, not matter-action support, and
+not matter coupling.
+\end{definition}
+
+\begin{definition}[Fail-closed bridge obstruction]
+For any attempted record \(O\), the bridge returns
+\[
+  \FailureObs(E;\Bcur,O)
+\]
+when \(O\notin\mathcal D^{\mathrm{smb}}_E\), when required certificates are
+missing, when a target or process premise is imported, when a source record
+with different \(\mathrm{RR}_E\) is identified while relying on
+\(\MSStablePre\), or when adoption or downstream GR promotion is requested as
+part of the construction.
+\end{definition}
+
+\section{Bridge Candidate Objects}
+
+\begin{definition}[Stable source-sector slots]
+For each guarded record \((C,a,\mathsf{cert})\in
+\mathcal D^{\mathrm{smb}}_E\), define a source-sector slot
+\[
+  s^{\mathrm{smb}}(C)
+  =
+  (\mathsf{slot\_id}(C),a,\mathsf{cell}(a),\mathsf{cert},
+   \mathsf{evidence\_path}).
+\]
+The collection of all such slots, with bottom element \(\bot_S\), is
+\[
+  S_E^{\mathrm{smb}}
+  =
+  \{s^{\mathrm{smb}}(C)\mid (C,a,\mathsf{cert})
+    \in\mathcal D^{\mathrm{smb}}_E\}\cup\{\bot_S\}.
+\]
+The slot is source syntax attached to a guarded stable partition cell. It is
+not target matter, empirical matter, stress energy, detector output, a matter
+action variable, coupling data, or a physical matter sector.
+\end{definition}
+
+\begin{definition}[Stable source-probe tokens]
+The source-probe family is
+\[
+  P_E^{\mathrm{smb}}
+  =
+  \{p(C)=(\mathsf{probe\_id}(C),s^{\mathrm{smb}}(C),
+    \mathsf{stable\_guard},\mathsf{RT050\_evidence})\mid
+    (C,a,\mathsf{cert})\in\mathcal D^{\mathrm{smb}}_E\}.
+\]
+These tokens mark source-side bridge positions. They are not laboratory
+probes, detector protocols, empirical measurements, proper-time readouts, or
+observer-localized data.
+\end{definition}
+
+\begin{definition}[Stable source-readout alphabet and map]
+The source-readout alphabet is
+\[
+  A_E^{\mathrm{smb}}
+  =
+  \{(a,\mathsf{cell}(a),\mathrm{RR}_E(C),
+      \mathsf{cert\_status}(C))\mid
+      (C,a,\mathsf{cert})\in\mathcal D^{\mathrm{smb}}_E\}.
+\]
+The readout map
+\[
+  R_E^{\mathrm{smb}}:P_E^{\mathrm{smb}}\to
+  A_E^{\mathrm{smb}}\cup\{\bot_R,\mathsf{source\_undetermined}\}
+\]
+returns the associated source signature and certificate status when the
+guard holds, and fails closed otherwise. The readout is source syntax. It is
+not detector semantics and not empirical response data.
+\end{definition}
+
+\begin{definition}[Stable response tokens]
+The response-token family is
+\[
+  Q_E^{\mathrm{smb}}
+  =
+  \{q(C)=(s^{\mathrm{smb}}(C),p(C),R_E^{\mathrm{smb}}(p(C)),
+    \rho^{\mathrm{st}}(C),\Gamma_E^{\mathrm{smb}}(C))\}.
+\]
+Here \(\rho^{\mathrm{st}}(C)\) is a source-local stability marker recording
+that \(C\) lies in a guarded stable-precondition cell, and
+\(\Gamma_E^{\mathrm{smb}}(C)\) is the certificate bundle containing
+\(\NoTarget\), \(\NoDetector\), \(\NoSE\), and \(\NoAction\). No component is
+a coupling law, stress-energy response, matter-action response, detector
+response, or matter-coupling derivation.
+\end{definition}
+
+\begin{definition}[\(\MSBridge(E;\Bcur)\)]
+Define the bridge candidate map
+\[
+  \MSBridge(E;\Bcur):
+  \mathcal D^{\mathrm{st}}_E
+  \longrightarrow
+  \Target(E;\Bcur)\cup\{\FailureObs(E;\Bcur,O)\}
+\]
+as follows. If \(C\) admits a certificate \(\mathsf{cert}\) with
+\((C,\MSSig(C),\mathsf{cert})\in\mathcal D^{\mathrm{smb}}_E\), then
+\(\MSBridge(E;\Bcur)(C)\) returns the tuple
+\[
+  \bigl(S_E^{\mathrm{smb}},P_E^{\mathrm{smb}},
+        R_E^{\mathrm{smb}},Q_E^{\mathrm{smb}},
+        \Gamma_E^{\mathrm{smb}}\bigr).
+\]
+Otherwise it returns the corresponding fail-closed
+\(\FailureObs(E;\Bcur,O)\). This is a draft/control source-side bridge
+candidate only.
+\end{definition}
+
+\section{Construction Theorem}
+
+\begin{proposition}[Constructed stable bridge candidate]
+Assume that \(\MSStablePre(E;\Bcur)\) is available only as scoped
+stable-precondition evidence/precondition, that
+\(\mathcal D^{\mathrm{smb}}_E\) is nonempty, and that all certificates in the
+definition of \(\mathcal D^{\mathrm{smb}}_E\) are source-side certificates.
+Then \(\MSBridge(E;\Bcur)\) constructs a non-bottom draft/control
+source-side stable matter-semantics bridge candidate satisfying the P5-T02
+target grammar. The construction supplies source-sector slots, probe tokens,
+readout alphabet, response tokens, non-import certificates, finite/local
+membership rules, and fail-closed branches.
+\end{proposition}
+
+\begin{proof}
+The guarded bridge domain is defined by the stable-precondition source
+domain, the stable signature \(\MSSig\), the stable partition cell
+\(\MSCell(a)\), and the no-target/no-detector/no-stress-energy/no-action
+certificates. Each field is source-side or tracked-control syntax under
+\(\Bcur\). The definitions of \(S_E^{\mathrm{smb}}\),
+\(P_E^{\mathrm{smb}}\), \(R_E^{\mathrm{smb}}\), and
+\(Q_E^{\mathrm{smb}}\) therefore provide the five P5-T02 target components.
+If the guard or certificates fail, the map returns \(\FailureObs\) rather
+than a positive target tuple. No step imports target physics or process
+authority. Therefore the maximum result is a draft/control source-side bridge
+candidate pending audit.
+\end{proof}
+
+\begin{lemma}[\(\mathrm{RR}_E\)-separation preservation]
+If two stable-precondition records \(C_1,C_2\) have
+\[
+  \mathrm{RR}_E(C_1)\neq \mathrm{RR}_E(C_2),
+\]
+then the bridge keeps their readout records separated whenever it relies on
+\(\MSStablePre\) as written.
+\end{lemma}
+
+\begin{proof}
+\(\mathrm{RR}_E(C)\) is a coordinate of \(\MSSig(C)\) in
+\(\MSStablePre\). Distinct \(\mathrm{RR}_E\) values imply distinct stable
+signatures and hence distinct cells. The readout alphabet
+\(A_E^{\mathrm{smb}}\) includes the stable signature and
+\(\mathrm{RR}_E(C)\) as source syntax. The bridge therefore transports the
+separation; it does not identify records that the stable-precondition object
+separates. Any later attempt to identify them requires a separate source-side
+irrelevance theorem and may not cite this bridge as that theorem.
+\end{proof}
+
+\begin{lemma}[Relabeling and finite-variation behavior]
+For source relabelings and finite variations that preserve \(\MSSig\), the
+bridge transports by fieldwise relabeling of source-sector slots, probe
+tokens, readout records, response tokens, certificates, and evidence paths.
+Variations that change \(\MSSig\), delete required certificates, or import
+target/process authority route to \(\FailureObs\).
+\end{lemma}
+
+\begin{proof}
+The bridge objects are functions of \(\MSSig\), stable partition cells,
+source-local identifiers, and certificate bundles. Preserving those fields
+preserves the constructed tuple up to source relabeling. Changing a field
+changes the cell or guard status; deleting a certificate or importing target
+authority violates the guarded bridge domain. The definition then returns
+\(\FailureObs\).
+\end{proof}
+
+\begin{proposition}[No semantic promotion]
+The constructed bridge candidate does not adopt matter semantics, detector
+semantics, a source law, source-extension data beyond the exact RT-050 scoped
+result, a coupling law, matter coupling, stress-energy semantics, a
+stress-energy tensor, a matter action, \(\MetricData(E)\), \(\geff\), Einstein
+equations, benchmark status, completed derivation, future source-extension
+impossibility, or global theory rejection.
+\end{proposition}
+
+\begin{proof}
+The construction is defined entirely as a source-side tuple and fail-closed
+map. The RT-050 evidence is used only as a scoped precondition status. The
+definitions contain no protected adoption rule, no physical interpretation
+map, no detector model, no stress-energy tensor, no matter action, no
+coupling law, no field equation, and no benchmark criterion. Thus none of the
+listed conclusions follows.
+\end{proof}
+
+\section{Obstruction Labels}
+
+The bridge returns a precise failure record instead of a positive tuple under
+the following labels:
+
+\begin{longtable}{p{0.32\linewidth}p{0.54\linewidth}}
+\toprule
+Label & Meaning \\
+\midrule
+\texttt{OB-MS-STABLE-BRIDGE-NO-STABLE-PARTITION} &
+\(\MSStablePre\) is unavailable or its guard fails for the attempted record. \\
+\texttt{OB-MS-STABLE-BRIDGE-CERT-MISSING} &
+The no-target, no-detector, no-stress-energy, or no-action certificate bundle
+is absent or deleted. \\
+\texttt{OB-MS-STABLE-BRIDGE-TARGET-IMPORT} &
+Target metric, target atlas, detector protocol, stress-energy semantics,
+matter action, benchmark behavior, Einstein-equation premise, or process
+authority is used as a premise. \\
+\texttt{OB-MS-STABLE-BRIDGE-RR-COLLAPSE} &
+The construction identifies records with different \(\mathrm{RR}_E\) while
+still relying on \(\MSStablePre\) as written. \\
+\texttt{OB-MS-STABLE-BRIDGE-ADOPTION-OVERREAD} &
+The construction is used as source-law adoption, matter-semantics adoption,
+coupling-law adoption, matter coupling, or downstream GR promotion. \\
+\bottomrule
+\end{longtable}
+
+These are controlled failure branches. They do not imply global theory
+rejection, future source-extension impossibility, or a no-go theorem unless a
+later separately authorized packet proves that stronger claim.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only context retained. \\
+\(\MetricData(E)\) & Not adopted. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+Matter coupling & Stable matter-semantics bridge candidate constructed as draft/control pending audit; no matter coupling or coupling law. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local bridge finite-variation behavior stated under source-signature preservation only; no global theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict requested or issued. \\
+Current route freeze or hard-fail status & Not frozen; smuggling audit is the next lawful route. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The next lawful packet is one bounded
+\(\mathrm{smuggling\mbox{-}auditor@0.2.0}\) audit of
+\(\MSBridge(E;\Bcur)\). The audit must check target import,
+\(\mathrm{RR}_E\)-collapse, evidence-as-adoption overread, matter-semantics
+adoption overread, detector/stress-energy/matter-action smuggling, process
+authority laundering, and any accidental coupling-law or downstream GR
+promotion before Refuter stress, selector work, Gate Chair review, coupling
+law, matter coupling, Einstein equations, benchmark work, or promotion.
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+\begin{quote}
+\(\MSBridge(E;\Bcur)\) is constructed as a draft/control source-side stable
+matter-semantics bridge candidate pending smuggling audit. It uses
+\(\MSStablePre(E;\Bcur)\) only as scoped stable-precondition
+evidence/precondition and preserves fail-closed behavior plus
+\(\mathrm{RR}_E\)-separation.
+\end{quote}
+
+\section{Forbidden Conclusions}
+
+This packet does not allow:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology edit, canonical-ontology candidate status, or
+    source-law adoption;
+  \item source-extension data adoption beyond the exact RT-050 scoped gate
+    result;
+  \item matter-semantics adoption or detector-semantics adoption;
+  \item \(\MetricData(E)\) adoption;
+  \item \(\geff\) adoption, unscoped \(\geff\), or \(\geff\) scope expansion;
+  \item coupling-law adoption, matter-coupling derivation, or
+    matter-coupling adoption;
+  \item stress-energy semantics, stress-energy tensor, matter action, or
+    empirical calibration;
+  \item Einstein equations;
+  \item exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item completed derivation;
+  \item future source-extension impossibility or global theory rejection;
+  \item generated derivatives, validators, registries, roles, handoffs,
+    approvals, commits, local caches, semantic extracts, support checkers, or
+    file order as proof authority.
+\end{itemize}
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+candidate refuter stress v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Matter-semantics
+stable partition precondition v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Source-side
+matter-semantics target formalization v1} [Internal control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Gate Chair review of
+scoped stable-precondition evidence} [Internal control artifact].
+
+\end{document}

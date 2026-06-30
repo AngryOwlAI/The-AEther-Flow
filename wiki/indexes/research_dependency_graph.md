@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T21:45:52Z`
-- Source fingerprint: `a131eadd09915ff314c50da1b4c76f6152a95f22d9d4290e267bba45043a5110`
-- Nodes: `8835`
-- Edges: `37471`
+- Generated from tracked state as of: `2026-06-30T22:14:14Z`
+- Source fingerprint: `3075c0ee4e1adbd5f44545bd8b96bf55a0691ba01e3526ca4161231dacb683e0`
+- Nodes: `8865`
+- Edges: `37584`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 539 |
+| `completion_yaml` | 540 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 403 |
+| `handoff_yaml` | 404 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 539 |
+| `agent_job` | `support_only` | 540 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4446 |
-| `blocked_burden` | `blocked` | 1012 |
-| `claim_boundary` | `support_only` | 540 |
-| `draft_control_candidate` | `draft_control` | 419 |
+| `artifact` | `support_only` | 4460 |
+| `blocked_burden` | `blocked` | 1020 |
+| `claim_boundary` | `support_only` | 541 |
+| `draft_control_candidate` | `draft_control` | 421 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 89 |
 | `gate_chair_verdict` | `human_gated` | 26 |
-| `handoff` | `support_only` | 403 |
-| `human_gated_object` | `human_gated` | 247 |
+| `handoff` | `support_only` | 404 |
+| `human_gated_object` | `human_gated` | 248 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,9 +55,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 21 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 233 |
+| `source_ontology_object` | `support_only` | 234 |
 | `task` | `human_gated` | 28 |
-| `task` | `science_draft` | 23 |
+| `task` | `science_draft` | 24 |
 | `task` | `support_only` | 488 |
 
 ## Frontier Table
@@ -144,7 +144,14 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:branchdisc_src_gsc_adoption` | Blocked claim: BranchDisc_src GSC adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:branchdisc_src_gsc_source_law_adoption` | Blocked permission: BranchDisc_src^{GSC} source-law adoption | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_adoption` | Blocked claim: bridge-candidate adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_coupling_law_data` | Blocked claim: bridge candidate as coupling-law data | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_detector_semantics_adoption` | Blocked claim: bridge candidate as detector semantics adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_einstein_equations` | Blocked claim: bridge candidate as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_matter_action` | Blocked claim: bridge candidate as matter action | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_as_matter_coupling` | Blocked claim: bridge candidate as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_matter_semantics_adoption` | Blocked claim: bridge candidate as matter semantics adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_source_law_adoption` | Blocked claim: bridge candidate as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bridge_candidate_as_stress_energy_semantics` | Blocked claim: bridge candidate as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_evidence_acceptance` | Blocked claim: bridge-candidate evidence acceptance | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_criteria_as_bridge_construction` | Blocked claim: bridge criteria as bridge construction | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_template_creation` | Blocked claim: bridge template creation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -153,19 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:bridgeslot_n_as_target_geometry` | Blocked claim: BridgeSlot_n as target geometry | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridgetok_as_stress_energy` | Blocked claim: BridgeTok as stress energy | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:brief_as_proof` | Blocked claim: brief as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:browser_mermaid_runtime_import_in_tracked_html` | Blocked claim: browser Mermaid runtime import in tracked HTML | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_audit_as_derivation` | Blocked claim: candidate audit as derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_coupling_law_adoption` | Blocked claim: candidate construction as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_derivation` | Blocked claim: candidate construction as derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_detector_semantics` | Blocked claim: candidate construction as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_einstein_equations` | Blocked claim: candidate construction as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_future_source_extension_impossibility` | Blocked claim: candidate construction as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260630-051`
-- Latest handoff: `handoff-0403`
-- Handoff path: `research_control/handoffs/handoff-0403.yaml`
-- Next action: Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition before audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work.
+- Active task: `RT-20260630-052`
+- Latest handoff: `handoff-0404`
+- Handoff path: `research_control/handoffs/handoff-0404.yaml`
+- Next action: Run one bounded smuggling-auditor@0.2.0 packet to audit MSStableMatterSemanticsBridge_v1(E;B_current) for target import, RR_E collapse, evidence-as-adoption overread, matter-semantics adoption overread, detector/stress-energy/matter-action smuggling, process-authority laundering, coupling-law adoption, matter-coupling derivation, Einstein-equation premise, benchmark promotion, or completed-derivation overread before stress, selector, Gate Chair, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
