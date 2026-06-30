@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-TARGET` `research_control/tasks/RT-20260630-015/artifacts/source_coupling_law_target_v1.tex`
 - Generated output path: `wiki/tex/tex-v12-ontology-law-source-coupling-law-candidate.md`
+- Backlink from `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-017/artifacts/source_coupling_law_candidate_smuggling_audit_v1.tex`
 
 ## Validation
 

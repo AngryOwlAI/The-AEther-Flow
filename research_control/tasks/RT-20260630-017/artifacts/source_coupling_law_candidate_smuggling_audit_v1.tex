@@ -1,0 +1,246 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\SourceCoupCand}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\SourceCoupTarget}{\mathrm{SourceCouplingLawTarget}_{v1}}
+\newcommand{\SourceCoupRec}{\mathrm{SourceCouplingTargetRecord}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Source Coupling-Law Candidate Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260630-017}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Smuggling Auditor artifact for
+\texttt{RT-20260630-017}. It audits the proposal-only candidate created by
+\texttt{RT-20260630-016}:
+\begin{verbatim}
+research_control/tasks/RT-20260630-016/artifacts/
+source_coupling_law_candidate_v1.tex
+\end{verbatim}
+
+The audit verdict is:
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_stress"
+source_extension_classification:
+  "source_side_under_stated_no_target_assumptions_pending_stress"
+distance_to_gr_delta.changed: true
+source_law_adopted: false
+MCPA_cand_v1_E_adopted: false
+source_extension_data_adopted_beyond_exact_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+next_required_role: "refuter"
+\end{verbatim}
+
+The pass is narrow. It audits the written candidate for source-purity only
+and authorizes adversarial stress. It does not adopt the candidate as a source
+law or coupling law.
+
+\section{Audit Question}
+
+Does \(\SourceCoupCand(E)\) obtain its nonempty source-coupling-intent output,
+source relabeling transport, finite/local witness, or finite-variation
+behavior by importing target atlas data, target metric data, Lorentzian
+signature, stress-energy semantics, stress-energy tensor, detector protocol,
+empirical calibration, matter action, benchmark fit, Einstein-equation
+premise, generated derivative, registry metadata, validator result, role
+authority, handoff authority, approval status, commit status, file order, or
+local-cache state?
+
+Conclusion: no such import is detected in the candidate as written.
+
+\section{Audit Surface}
+
+The audited candidate defines a source package
+\[
+  \mathcal{D}^{\mathrm{SCLT}}_E =
+  (E,\mathcal{P}^{\mathrm{MCPA}}_E,\mathcal{W}_E,\Sigma_E,
+  \mathcal{C}_E,\mathcal{R}_E,\mathcal{V}_E,\mathcal{N}_E,\mathcal{O}_E),
+\]
+a compatibility-selection ledger
+\[
+  \mathcal{S}_E \subseteq
+  \mathcal{P}^{\mathrm{MCPA}}_E \times \mathcal{W}_E \times
+  \Sigma_E \times \mathcal{C}_E \times \mathcal{N}_E,
+\]
+and source-coupling-intent-only tokens
+\[
+  k=(p,w,\sigma,c,U_k,\tau_k,n_k),
+  \qquad
+  \tau_k=\mathsf{source\text{-}coupling\text{-}intent\text{-}only}.
+\]
+
+The candidate relation
+\[
+  \mathcal{K}^{\mathrm{SCLC}}_E:
+  \mathcal{D}^{\mathrm{SCLT}}_E \dashrightarrow \SourceCoupRec_E
+\]
+fails closed on missing domain data, evidence-as-adoption, target import, and
+witness/signature mismatch.
+
+\section{Hidden Target-Import Screen}
+
+\begin{longtable}{p{0.35\linewidth}p{0.53\linewidth}}
+\toprule
+Audit check & Result \\
+\midrule
+Target atlas or topology & Pass as written. Supports \(U_k\) are declared source supports only. \\
+Target metric or Lorentzian signature & Pass as written. No target metric, Lorentzian signature, proper time, or metric-form datum defines \(K_E^{\mathrm{SCLC}}\). \\
+Stress-energy semantics & Pass as written. No stress-energy variable, tensor, conservation law, or physical matter semantics appears as a premise. \\
+Detector protocol & Pass as written. Detector outcomes or empirical calibration do not define witness slots, signature records, compatibility, or tokens. \\
+Matter action & Pass as written. No matter action or variational principle is imported. \\
+Benchmark behavior & Pass as written. Benchmark fit and exact-GR recovery are excluded as premises. \\
+Evidence-as-adoption laundering & Pass as written. \(\MCPA(E)\) appears only as scoped evidence/precondition input. \\
+Process authority & Pass as written. Generated derivatives, registries, validators, roles, handoffs, approvals, commits, file order, and local caches are not proof authority. \\
+Downstream-promotion overread & Pass as written. No matter coupling, Einstein equations, benchmark promotion, or completed derivation follows. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[No hidden target import as written]
+The written \(\SourceCoupCand(E)\) construction does not use target atlas
+data, target metric data, Lorentzian signature, proper time, stress-energy
+semantics, stress-energy tensor, detector outcomes, matter-action variables,
+benchmark behavior, generated derivatives, registry metadata, validator
+results, role authority, handoff authority, approval status, commit status,
+file order, or local caches as mathematical premises.
+\end{lemma}
+
+\begin{proof}
+The candidate's written premises are source-side scoped \(\MCPA(E)\)
+evidence/precondition records, witness slots, matter-signature records,
+compatibility certificates, finite/local source supports, source relabeling
+transport, finite variations, no-target-import certificates, and fail-closed
+obstruction labels. Target-facing and process-facing surfaces are named only
+as exclusions or fail-closed cases. Hence the candidate is source-pure as
+written under its stated assumptions.
+\end{proof}
+
+\section{Coupling-Law Overread Screen}
+
+\begin{proposition}[Source-coupling intent is not coupling-law adoption]
+The token family \(K_E^{\mathrm{SCLC}}\) is source-coupling-intent-only. It is
+not an adopted source law, not a coupling law, and not matter coupling.
+\end{proposition}
+
+\begin{proof}
+Each successful token carries the explicit tag
+\(\mathsf{source\text{-}coupling\text{-}intent\text{-}only}\) and records
+source supports, source labels, compatibility certificates, and
+no-target-import certificates. The codomain is a source target-record family
+for audit, stress, selector routing, and human gate before adoption. It is
+not a matter action, stress-energy tensor, detector-semantics family,
+field-equation object, or benchmark object.
+\end{proof}
+
+\section{Process-Authority Laundering Screen}
+
+\begin{lemma}[No process proof authority]
+The written candidate does not convert generated derivatives, validators,
+registries, role records, handoffs, approvals, commits, local caches,
+semantic extracts, file order, or support-only checkers into mathematical
+proof authority.
+\end{lemma}
+
+\begin{proof}
+The candidate's proof obligations rely on explicit source-side records and
+no-target-import certificates. Control records and tooling route, validate,
+and preserve receipts; they do not prove source-law adoption, coupling-law
+adoption, matter coupling, or Einstein equations. The support boundary is
+\(\ProofAuthFalse\).
+\end{proof}
+
+\section{Conditionality And Stress Obligation}
+
+\begin{proposition}[Audit pass is not stress stability]
+The verdict \texttt{source\_pure\_as\_written\_pending\_stress} does not
+imply that every future compatibility-selection ledger, no-target-import
+certificate family, source relabeling, finite variation, or source-local
+repair remains noncollapsing.
+\end{proposition}
+
+\begin{proof}
+The audit checks whether the written candidate imports forbidden target or
+process authority. It does not adversarially delete certificates, perturb the
+selection ledger, force relabeling noncovariance, or break finite-variation
+repairs. Those are Refuter obligations. The correct next route is therefore
+Refuter stress, not adoption.
+\end{proof}
+
+\begin{verdict}[Audit verdict]
+\(\SourceCoupCand(E)\) is source-pure as written under its stated assumptions
+and remains proposal-only pending Refuter stress. The same-milestone status is
+\texttt{blocked\_adoption\_open\_continuation}.
+\end{verdict}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & unchanged; no canonical ontology edit is made \\
+Source equivalence EqSrc & unchanged; no general EqSrc theorem is supplied \\
+RetainH & unchanged \\
+GenH & unchanged \\
+ObsLoc\_lc & prior source-localization context only \\
+Resp\_lc & prior accepted response/localization context only \\
+M\_src & unchanged; scoped source-only boundary remains prior context \\
+\(\MetricData(E)\) & not adopted here \\
+\(\geff\) & prior scoped source-extension context only; scope is not changed \\
+matter coupling & \(\SourceCoupCand(E)\) audited as source-pure as written pending stress; no coupling law matter coupling stress-energy semantics detector semantics matter action or Einstein equations are adopted \\
+Einstein equations & blocked; no field-equation derivation is supplied \\
+finite-variation robustness & candidate stress remains pending \\
+benchmark promotion & blocked; no benchmark evidence or promotion is supplied \\
+Gate Chair status & no Gate Chair packet; adoption remains blocked \\
+current route freeze or hard-fail status & not frozen; Refuter stress route open \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The logical next packet is one bounded `refuter@0.2.0`
+ontology-law-research-packet to stress \(\SourceCoupCand(E)\) for
+compatibility-collapse, certificate-deletion, relabeling noncovariance,
+finite-variation repair fragility, evidence-as-adoption collapse,
+source-locality failure, and downstream overread.
+
+\section{Internal Materials Reviewed}
+
+\begin{itemize}
+\item The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation burden map} [Internal control note].
+\item The AEther-Flow Research Project. (2026, June 29). \textit{Recommendations implementation plan continue task v12} [Internal implementation plan].
+\item Ontology Formalizer Packet RT-20260630-015. (2026). \textit{Source coupling-law target v1} [Internal draft/control TeX artifact].
+\item Candidate Constructor Packet RT-20260630-016. (2026). \textit{Source coupling-law candidate v1} [Internal draft/control TeX artifact].
+\item The AEther-Flow Research Project. (2026, June 30). \textit{Handoff 0368} [Internal research-control handoff].
+\end{itemize}
+
+\end{document}
