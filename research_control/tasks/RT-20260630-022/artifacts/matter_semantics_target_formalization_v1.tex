@@ -1,0 +1,332 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\Src}{\mathrm{Src}}
+\newcommand{\MatterSector}{\mathrm{SourceMatterSector}_{v1}}
+\newcommand{\ProbeToken}{\mathrm{SourceProbeToken}_{v1}}
+\newcommand{\DetectorReadout}{\mathrm{SourceDetectorReadout}_{v1}}
+\newcommand{\ResponseToken}{\mathrm{MatterResponseToken}_{v1}}
+\newcommand{\NoSE}{\mathrm{NoStressEnergyImport}_{v1}}
+\newcommand{\NoAction}{\mathrm{NoMatterActionImport}_{v1}}
+\newcommand{\NoDetector}{\mathrm{NoDetectorImport}_{v1}}
+\newcommand{\FailureObs}{\mathrm{MatterSemanticsFailureObstruction}_{v1}}
+\newcommand{\Target}{\mathrm{MatterSemanticsTarget}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{obligation}{Obligation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Source-Side Matter-Semantics Target Formalization v1}
+\author{Ontology Formalizer Packet RT-20260630-022}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control target-formalization artifact for
+\texttt{RT-20260630-022}. It implements P5-T02 of
+\texttt{recommendations\_implementation\_plan\_continue\_task-v12.md} after
+\texttt{RT-20260630-021} selected the P5 matter-semantics target route.
+
+The formalization target is:
+\[
+  \MatterSector(E;\Bcur),\quad
+  \ProbeToken(E;\Bcur),\quad
+  \DetectorReadout(E;\Bcur),\quad
+  \ResponseToken(E;\Bcur),\quad
+  \NoDetector(E),\quad
+  \NoSE(E),\quad
+  \NoAction(E),\quad
+  \FailureObs(E;\Bcur,O).
+\]
+
+This artifact defines target grammar and proof obligations only. It does not
+construct a matter-semantics candidate, prove a matter-semantics obstruction,
+adopt a source law, edit canonical ontology, adopt \(\MCPA(E)\), adopt
+source-extension data beyond the exact scoped gate result, adopt
+\(\MetricData(E)\), change scoped \(\geff\), adopt a coupling law, derive or
+adopt matter coupling, import stress-energy semantics, construct a
+stress-energy tensor, import detector semantics, import a matter action,
+derive Einstein equations, promote benchmark status, issue a Gate Chair
+verdict, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\section{Question}
+
+What source-side mathematical target must exist before a later packet may even
+attempt universal matter-coupling or Einstein-equation work?
+
+P5-T02 answers only by defining source-side placeholders and non-import guards.
+P5-T03 must either construct a candidate satisfying them or return a precise,
+scoped failure record.
+
+\section{Basis}
+
+\begin{definition}[Current source-side basis \(\Bcur\)]
+\(\Bcur\) is the tracked source-side basis available to this packet: the
+P5-T01 selector result, the scoped \(\MCPA(E)\) and
+SourceCouplingLawCandidate evidence/precondition context, the v12 plan, the
+current frontier, the latest handoff, and registered source/control artifacts
+read by the AgentJob. \(\Bcur\) excludes target stress-energy tensors, target
+stress-energy semantics, target matter actions, empirical detector protocols,
+apparatus calibration, target metric, target atlas, Lorentzian signature,
+proper time, Bianchi identities, Einstein equations, benchmark behavior,
+generated derivatives, validators, registries, role records, handoffs,
+approvals, commits, local caches, and file order as mathematical premises.
+\end{definition}
+
+\begin{definition}[Source admissibility]
+A symbol, token, relation, or map is source-admissible relative to \(\Bcur\)
+only if its membership and behavior can be stated using source-side data,
+draft/control source assumptions, or explicitly marked source-extension
+evidence/preconditions already within the tracked scope. A source-admissible
+object is not thereby physical matter, detector output, stress energy, a
+matter action, matter coupling, or an Einstein-equation premise.
+\end{definition}
+
+\section{Target Definitions}
+
+\begin{definition}[\(\MatterSector(E;\Bcur)\)]
+\(\MatterSector(E;\Bcur)\) is a draft/control source record consisting of:
+\begin{enumerate}[leftmargin=*]
+\item a declared source domain \(S_E\) of source-admissible sector labels or
+  sector slots;
+\item a bottom label \(\bot_S\) for fail-closed undetermined sector status;
+\item a source-only membership rule for when a label belongs to \(S_E\);
+\item a source-only distinction rule for separating matter-sector candidates
+  from nonmatter or undetermined source labels;
+\item an explicit statement that labels in \(S_E\) are not target matter,
+  stress-energy, detector, action, or coupling semantics.
+\end{enumerate}
+
+This is target grammar only. It does not assert that a non-bottom matter sector
+exists for any \(E\).
+\end{definition}
+
+\begin{definition}[\(\ProbeToken(E;\Bcur)\)]
+\(\ProbeToken(E;\Bcur)\) is a source-admissible token family
+\(P_E\) whose elements are records
+\[
+  p=(\mathrm{id},\mathrm{source\_slot},\mathrm{guard\_scope},
+  \mathrm{evidence\_path})
+\]
+such that all fields are source-side or tracked-control fields. A probe token
+may mark a source-side place where a later construction tests a matter-sector
+claim, but it is not an empirical detector, laboratory probe, apparatus
+calibration, measurement event, proper-time readout, or physical observation.
+\end{definition}
+
+\begin{definition}[\(\DetectorReadout(E;\Bcur)\)]
+\(\DetectorReadout(E;\Bcur)\) is a source-side readout record
+\[
+  R_E:P_E \longrightarrow A_E \cup \{\bot_R\}
+\]
+where \(P_E=\ProbeToken(E;\Bcur)\), \(A_E\) is a declared source-admissible
+alphabet, and \(\bot_R\) is a fail-closed undetermined readout marker. A value
+\(R_E(p)\) is source syntax for a later proof obligation. It is not detector
+semantics, empirical readout, apparatus behavior, physical measurement, or
+observer-localized data.
+\end{definition}
+
+\begin{definition}[\(\ResponseToken(E;\Bcur)\)]
+\(\ResponseToken(E;\Bcur)\) is a source-side response record family \(Q_E\).
+An element \(q\in Q_E\) is a tuple
+\[
+  q=(s,p,R_E(p),\rho,\gamma)
+\]
+where \(s\in S_E\cup\{\bot_S\}\), \(p\in P_E\), \(R_E(p)\) is the source
+readout value, \(\rho\) is a source-admissible response marker, and
+\(\gamma\) is a certificate bundle for \(\NoDetector(E)\), \(\NoSE(E)\), and
+\(\NoAction(E)\). The tuple is not a coupling law, stress-energy response,
+matter action response, detector response, or matter-coupling derivation.
+\end{definition}
+
+\begin{definition}[\(\NoDetector(E)\)]
+\(\NoDetector(E)\) holds for a candidate target witness only if it does not use
+empirical detector calibration, apparatus behavior, proper-time readout,
+laboratory protocol, observer instrumentation, physical measurement semantics,
+or target-observation semantics as a premise or conclusion.
+\end{definition}
+
+\begin{definition}[\(\NoSE(E)\)]
+\(\NoSE(E)\) holds for a candidate target witness only if it does not use
+stress-energy semantics, stress-energy tensor components, energy density,
+pressure, physical flux, variational stress tensor, Bianchi identity,
+Einstein tensor matching, or target field-equation behavior as a premise or
+conclusion. Source-side bookkeeping labels remain uninterpreted source syntax
+unless a later packet supplies separate source-side authority.
+\end{definition}
+
+\begin{definition}[\(\NoAction(E)\)]
+\(\NoAction(E)\) holds for a candidate target witness only if it does not use
+a matter action, Lagrangian density, action variation, Euler-Lagrange
+equation, path integral, least-action principle, or target matter dynamics as
+a premise or conclusion.
+\end{definition}
+
+\begin{definition}[\(\Target(E;\Bcur)\)]
+\(\Target(E;\Bcur)\) is the P5-T02 target tuple
+\[
+  (S_E,P_E,R_E,Q_E,\Gamma_E)
+\]
+where \(S_E=\MatterSector(E;\Bcur)\), \(P_E=\ProbeToken(E;\Bcur)\),
+\(R_E=\DetectorReadout(E;\Bcur)\), \(Q_E=\ResponseToken(E;\Bcur)\), and
+\(\Gamma_E\) is a non-import certificate bundle for \(\NoDetector(E)\),
+\(\NoSE(E)\), and \(\NoAction(E)\). A later P5-T03 construction may satisfy
+this tuple only if it also supplies:
+\begin{enumerate}[leftmargin=*]
+\item source-only membership rules for \(S_E\), \(P_E\), \(A_E\), and \(Q_E\);
+\item source-only assignment arguments for any non-bottom sector, readout, or
+  response token;
+\item relabeling stability for source-preserving relabelings;
+\item finite-variation guards for irrelevant source-label perturbations;
+\item fail-closed behavior for every underdetermined token;
+\item no notation-collapse step where a name, row, or table entry substitutes
+  for source behavior.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[\(\FailureObs(E;\Bcur,O)\)]
+\(\FailureObs(E;\Bcur,O)\) is the scoped failure record available to P5-T03 if
+the current source basis cannot supply a non-bottom \(\Target(E;\Bcur)\)
+satisfying the obligations above. The record must include:
+\begin{enumerate}[leftmargin=*]
+\item the declared basis \(\Bcur\);
+\item the attempted source-sector domain \(S_E\);
+\item the attempted probe-token family \(P_E\);
+\item the attempted readout record \(R_E\);
+\item the attempted response-token family \(Q_E\);
+\item the exact failed obligation or missing source-side law;
+\item the minimal indistinguishability or missing-law reason, if available;
+\item evidence path;
+\item exact conclusion blocked;
+\item same-milestone continuation status:
+  \(\mathtt{blocked\_adoption\_open\_continuation}\).
+\end{enumerate}
+
+Allowed wording: ``current ontology does not derive a source-side
+matter-semantics target under the declared basis and obligations.''
+
+Forbidden wording: ``therefore matter semantics are impossible,'' ``therefore
+matter coupling is impossible,'' or ``therefore the global theory is
+rejected.''
+\end{definition}
+
+\section{Conditional Target-Preservation Lemma}
+
+\begin{proposition}[No-target-import preservation]
+Suppose a later P5-T03 packet supplies a candidate tuple
+\(\Target(E;\Bcur)=(S_E,P_E,R_E,Q_E,\Gamma_E)\) satisfying all definitions
+above, and suppose every step in its construction uses only source-admissible
+data relative to \(\Bcur\). Then the maximum conclusion licensed by the tuple
+is a draft/control source-side matter-semantics candidate target. It does not
+license source-law adoption, \(\MCPA(E)\) adoption, source-extension data
+adoption beyond the exact scoped gate result, \(\MetricData(E)\) adoption,
+\(\geff\) adoption or scope expansion, coupling-law adoption, matter-coupling
+derivation or adoption, stress-energy semantics, stress-energy tensor
+construction, detector semantics, matter action, Einstein-equation derivation,
+benchmark promotion, completed derivation, future source-extension
+impossibility, or global theory rejection.
+\end{proposition}
+
+\begin{proof}
+By hypothesis, \(S_E\), \(P_E\), \(R_E\), \(Q_E\), and \(\Gamma_E\) are
+source-admissible relative to \(\Bcur\). The definitions of
+\(\NoDetector(E)\), \(\NoSE(E)\), and \(\NoAction(E)\) exclude empirical
+detector semantics, stress-energy semantics, stress-energy tensor premises,
+matter-action premises, and target dynamics as premises or conclusions. The
+definition of \(\Target(E;\Bcur)\) adds only source-side membership,
+assignment, relabeling, finite-variation, fail-closed, and no-notation-collapse
+obligations. No definition contains adoption authority, canonical ontology
+edit authority, a coupling-law assertion, matter-coupling derivation, field
+equation, benchmark verdict, or Gate Chair verdict. Therefore the tuple can at
+most be a draft/control source-side matter-semantics candidate target, and all
+listed downstream conclusions remain blocked.
+\end{proof}
+
+\section{P5-T03 Construction Target}
+
+A P5-T03 candidate satisfies this target only if it supplies:
+\begin{enumerate}[leftmargin=*]
+\item explicit source-sector, probe-token, readout-alphabet, and response-token
+  domains;
+\item source-only membership and assignment arguments for non-bottom records;
+\item certificates for \(\NoDetector(E)\), \(\NoSE(E)\), and \(\NoAction(E)\);
+\item relabeling and finite-variation checks;
+\item fail-closed branches for all source-underdetermined tokens;
+\item either a non-bottom source-side matter-semantics candidate target or a
+  precise \(\FailureObs(E;\Bcur,O)\);
+\item an explicit statement that no coupling law, matter coupling,
+  stress-energy semantics, matter action, detector semantics, Einstein
+  equations, benchmark promotion, or completed derivation follows from the
+  construction.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{verbatim}
+Source ontology primitives: unchanged; no canonical ontology edit
+Source equivalence EqSrc: unchanged; no general EqSrc theorem
+RetainH: unchanged
+GenH: unchanged
+ObsLoc_lc: unchanged
+Resp_lc: scoped source-extension data retained as context only
+M_src: scoped source-only context retained; no scope expansion
+MetricData(E): no MetricData(E) adoption
+g_eff: scoped g_eff context retained; no unscoped g_eff and no scope change
+matter coupling: P5-T02 target formalization completed; no matter coupling
+Einstein equations: blocked; no field-equation derivation
+finite-variation robustness: obligation stated for P5-T03 only
+benchmark promotion: blocked; no benchmark promotion
+Gate Chair status: no Gate Chair verdict requested or issued
+current route freeze or hard-fail status: not frozen; P5-T03 route open
+\end{verbatim}
+
+\section{Allowed Conclusions}
+
+P5-T02 allows only these conclusions:
+\begin{itemize}[leftmargin=*]
+\item the source-side matter-semantics target is formally stated;
+\item P5-T03 has a concrete construction-or-obstruction target;
+\item future matter-semantics work must preserve no detector import, no
+  stress-energy import, and no matter-action import;
+\item a future failure must be scoped to basis, domains, exact failed
+  obligation, and evidence path.
+\end{itemize}
+
+\section{Forbidden Conclusions}
+
+P5-T02 does not allow:
+\begin{itemize}[leftmargin=*]
+\item canonical ontology edit, canonical-ontology candidate status, or
+  source-law adoption;
+\item \(\MCPA(E)\) adoption or source-extension data adoption beyond the exact
+  scoped gate result;
+\item \(\MetricData(E)\) adoption;
+\item unscoped \(\geff\), \(\geff\) adoption, or \(\geff\) scope expansion;
+\item coupling-law adoption;
+\item matter-coupling derivation or matter-coupling adoption;
+\item stress-energy semantics import or stress-energy tensor construction;
+\item matter action import;
+\item detector semantics import;
+\item Einstein-equation derivation;
+\item exact-GR benchmark promotion or benchmark Gate Chair closure;
+\item completed derivation;
+\item future source-extension impossibility;
+\item global theory rejection;
+\item any generated derivative, validator, registry row, role record, handoff,
+  approval, commit, local cache, or file ordering as scientific proof.
+\end{itemize}
+
+\end{document}
