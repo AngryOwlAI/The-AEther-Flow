@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-009` and `handoff-0361`.
+`RT-20260630-010` and `handoff-0362`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-009` |
-| Latest handoff ID | `handoff-0361` |
-| Current status | `v12_matter_coupling_precondition_assembly_candidate_constructed_pending_audit_no_adoption` |
-| Current route family | v12 matter coupling precondition assembly candidate constructed pending audit no adoption |
+| Active task ID | `RT-20260630-010` |
+| Latest handoff ID | `handoff-0362` |
+| Current status | `v12_matter_coupling_precondition_assembly_candidate_audit_passed_pending_stress_no_adoption` |
+| Current route family | v12 matter coupling precondition assembly candidate audit passed pending stress no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: draft object exists |
-| Required next authority | Smuggling Auditor candidate audit only |
-| Next recommended action | Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit the proposal-only matter-coupling precondition assembly candidate for hidden target import, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, downstream-promotion overread, and generated or process authority proof laundering. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
+| Required next authority | Refuter candidate stress only |
+| Next recommended action | Run one bounded refuter@0.2.0 ontology-law-research-packet to stress the audit-passed proposal-only MCPA^cand_v1(E) candidate under certificate deletion, witness-signature mismatch, nonunique matching, match-predicate collapse, source relabeling, finite variation, target import pressure, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, generated-authority laundering, process-authority laundering, and downstream-promotion pressure. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-009/00_TASK.yaml`.
-- Active task objective: Run one bounded Candidate Constructor ontology-law-research-packet to construct a draft/control matter-coupling precondition assembly candidate satisfying MatterCouplingPreconditionAssembly_v1(E), or return one precise obstruction label, without source-law adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein equations, benchmark promotion, or completed derivation.
-- Latest handoff path: `research_control/handoffs/handoff-0361.yaml`.
-- Latest handoff summary: RT-20260630-009 completed one bounded Candidate Constructor ontology-law-research-packet and constructed MCPA^cand_v1(E) as a proposal-only draft/control source-side pre-coupling assembly candidate. It matches scoped witness slots to scoped matter-signature records through explicit source-local compatibility certificates and supplies a finite/local nonempty witness E_diamond.
-- Current route family: v12 matter coupling precondition assembly candidate constructed pending audit no adoption.
-- Next recommended action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit the proposal-only matter-coupling precondition assembly candidate for hidden target import, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, downstream-promotion overread, and generated or process authority proof laundering. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-010/00_TASK.yaml`.
+- Active task objective: Audit the proposal-only MCPA^cand_v1(E) matter-coupling precondition assembly candidate for hidden target import, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, downstream-promotion overread, generated-authority laundering, and process-authority laundering without source-law adoption, matter-coupling derivation, or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0362.yaml`.
+- Latest handoff summary: RT-20260630-010 completed one bounded Smuggling Auditor ontology-law-research-packet and audited MCPA^cand_v1(E) as source_pure_as_written_pending_stress. The pass is conditional and as-written only; it clears the proposal-only candidate for Refuter stress but does not adopt source law, source-extension data, coupling law, matter coupling, or any downstream GR object.
+- Current route family: v12 matter coupling precondition assembly candidate audit passed pending stress no adoption.
+- Next recommended action: Run one bounded refuter@0.2.0 ontology-law-research-packet to stress the audit-passed proposal-only MCPA^cand_v1(E) candidate under certificate deletion, witness-signature mismatch, nonunique matching, match-predicate collapse, source relabeling, finite variation, target import pressure, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, generated-authority laundering, process-authority laundering, and downstream-promotion pressure. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit the proposal-only matter-coupling precondition assembly candidate for hidden target import, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, downstream-promotion overread, and generated or process authority proof laundering. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+Run one bounded refuter@0.2.0 ontology-law-research-packet to stress the audit-passed proposal-only MCPA^cand_v1(E) candidate under certificate deletion, witness-signature mismatch, nonunique matching, match-predicate collapse, source relabeling, finite variation, target import pressure, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, generated-authority laundering, process-authority laundering, and downstream-promotion pressure. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-009`;
-- latest handoff: `handoff-0361`;
-- current status: `v12_matter_coupling_precondition_assembly_candidate_constructed_pending_audit_no_adoption`;
+- active task: `RT-20260630-010`;
+- latest handoff: `handoff-0362`;
+- current status: `v12_matter_coupling_precondition_assembly_candidate_audit_passed_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0361.yaml`
-- `research_control/tasks/RT-20260630-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0362.yaml`
+- `research_control/tasks/RT-20260630-010/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0361*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0362*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

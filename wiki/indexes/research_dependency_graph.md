@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T04:38:12Z`
-- Source fingerprint: `0bed38b989160f9dd705b3f0587f8401ca54c533f4dbb64883784b02ce592291`
-- Nodes: `7739`
-- Edges: `32580`
+- Generated from tracked state as of: `2026-06-30T05:05:33Z`
+- Source fingerprint: `1873805cae5071a416191f961330d70f5cf872f3e48ea2db285d2d312ac3089d`
+- Nodes: `7762`
+- Edges: `32714`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 497 |
+| `completion_yaml` | 498 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 361 |
+| `handoff_yaml` | 362 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 5 |
-| `agent_job` | `support_only` | 497 |
+| `agent_job` | `support_only` | 498 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3840 |
-| `blocked_burden` | `blocked` | 844 |
-| `claim_boundary` | `support_only` | 498 |
-| `draft_control_candidate` | `draft_control` | 353 |
+| `artifact` | `support_only` | 3854 |
+| `blocked_burden` | `blocked` | 845 |
+| `claim_boundary` | `support_only` | 499 |
+| `draft_control_candidate` | `draft_control` | 355 |
 | `draft_control_candidate` | `proposal_only` | 52 |
 | `draft_control_candidate` | `science_draft` | 31 |
-| `frozen_negative` | `frozen_negative` | 72 |
+| `frozen_negative` | `frozen_negative` | 73 |
 | `gate_chair_verdict` | `human_gated` | 23 |
-| `handoff` | `support_only` | 361 |
+| `handoff` | `support_only` | 362 |
 | `human_gated_object` | `human_gated` | 224 |
 | `ledger_row` | `accepted_scoped` | 3 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 19 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 208 |
+| `source_ontology_object` | `support_only` | 209 |
 | `task` | `human_gated` | 27 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 446 |
+| `task` | `support_only` | 447 |
 
 ## Frontier Table
 
@@ -121,6 +121,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_source_law_adoption` | Blocked claim: audit pass as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_semantics` | Blocked claim: audit pass as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_tensor` | Blocked claim: audit pass as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:audit_proposition_as_einstein_equations` | Blocked claim: audit proposition as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_expansion_through_role_decomposition` | Blocked claim: authority expansion through role decomposition | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_label_as_physics_evidence` | Blocked claim: authority label as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_gate_chair_route` | Blocked claim: autonomous Gate Chair route | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:candidate_construction_as_einstein_equations` | Blocked claim: candidate construction as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_construction_as_future_source_extension_impossibility` | Blocked claim: candidate construction as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:candidate_construction_as_global_theory_rejection` | Blocked claim: candidate construction as global theory rejection | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:candidate_construction_as_matter_action` | Blocked claim: candidate construction as matter action | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260630-009`
-- Latest handoff: `handoff-0361`
-- Handoff path: `research_control/handoffs/handoff-0361.yaml`
-- Next action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit the proposal-only matter-coupling precondition assembly candidate for hidden target import, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, downstream-promotion overread, and generated or process authority proof laundering. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
+- Active task: `RT-20260630-010`
+- Latest handoff: `handoff-0362`
+- Handoff path: `research_control/handoffs/handoff-0362.yaml`
+- Next action: Run one bounded refuter@0.2.0 ontology-law-research-packet to stress the audit-passed proposal-only MCPA^cand_v1(E) candidate under certificate deletion, witness-signature mismatch, nonunique matching, match-predicate collapse, source relabeling, finite variation, target import pressure, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, generated-authority laundering, process-authority laundering, and downstream-promotion pressure. The packet must preserve no canonical ontology edit, no source-law adoption, no MatSrcDiscLaw_v1 adoption, no SemMatter_src adoption, no MatterSignatureDisc_src^cand adoption, no SemMatter_src^sig-cand adoption, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no detector semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

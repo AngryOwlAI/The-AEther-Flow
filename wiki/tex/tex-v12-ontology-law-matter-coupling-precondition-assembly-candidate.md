@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-TARGET;TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW;TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-P4-PARAMETERIZED-FINITE-LOCAL-SOURCE-FAMILY-WITNESS-V1-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` ``
 - Generated output path: `wiki/tex/tex-v12-ontology-law-matter-coupling-precondition-assembly-candidate.md`
+- Backlink from `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-010/artifacts/matter_coupling_precondition_assembly_candidate_smuggling_audit_v1.tex`
 
 ## Validation
 

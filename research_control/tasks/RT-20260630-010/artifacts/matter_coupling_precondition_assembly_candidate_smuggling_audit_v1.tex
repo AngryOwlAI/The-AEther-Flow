@@ -1,0 +1,306 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\MCPACand}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\PreCoupAsm}{\mathrm{PreCouplingAssembly}}
+\newcommand{\WitSlot}{\mathrm{WitSlot}}
+\newcommand{\SigRec}{\mathrm{SigRec}}
+\newcommand{\CompCert}{\mathrm{CompCert}}
+\newcommand{\ProofAuthFalse}{\mathrm{proof\_authority=false}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{verdict}{Verdict}
+
+\title{Matter-Coupling Precondition Assembly Candidate Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260630-010}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control Smuggling Auditor artifact for
+\texttt{RT-20260630-010}. It audits the proposal-only candidate created by
+\texttt{RT-20260630-009}:
+
+\begin{verbatim}
+research_control/tasks/RT-20260630-009/artifacts/
+matter_coupling_precondition_assembly_candidate_v1.tex
+\end{verbatim}
+
+The audit verdict is:
+
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_pending_stress"
+source_extension_classification:
+  "source_side_under_stated_no_target_assumptions_pending_stress"
+distance_to_gr_delta.changed: false
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+MatterSignatureDisc_src_cand_adopted: false
+SemMatter_src_sig_cand_adopted: false
+source_extension_data_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+detector_semantics_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+next_required_role: "refuter"
+\end{verbatim}
+
+This audit does not edit canonical ontology, adopt a source law, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt \(\MatSigDisc\), adopt
+\(\SemMatterSig\), adopt source-extension data, adopt \(\MetricData(E)\),
+change the scope of \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, import detector semantics, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, claim completed
+derivation, claim future source-extension impossibility, or reject the global
+theory.
+
+\section{Audit Question}
+
+Does the RT-009 proposal-only pre-coupling assembly candidate obtain its
+nonempty output, relabeling behavior, or finite-variation behavior by
+importing a target atlas, target metric, Lorentzian signature, proper time,
+stress-energy tensor, detector protocol, empirical calibration, matter
+action, benchmark fit, Einstein-equation premise, generated derivative,
+registry metadata, validator result, role authority, handoff authority,
+approval status, commit status, file order, or local-cache state?
+
+Conclusion: no such import is detected in the candidate as written. The pass
+is narrow and conditional. It authorizes Refuter stress of the written
+candidate; it does not prove every future compatibility predicate,
+certificate family, witness-slot family, signature-record family, relabeling,
+or finite-variation repair source-pure and does not adopt the candidate.
+
+\section{Audit Surface}
+
+The audited candidate defines witness-slot records \(w\in\WitSlot_E\),
+matter-signature records \(s\in\SigRec_E\), compatibility certificates
+\[
+  c=(w,s,U_c,\mathsf{match},n_c)\in\CompCert_E,
+\]
+pre-assembly records
+\[
+  a=(w,s,c,U_a,q_a),
+\]
+and a candidate relation
+\[
+  \mathcal{A}^{\mathrm{cand}}_E:
+  \mathcal{D}^{\mathrm{cand}}_E \dashrightarrow \PreCoupAsm_E.
+\]
+The written construction permits \(\mathsf{pre\text{-}coupling\text{-}only}\),
+\(\mathsf{repair\text{-}needed}\), and fail-closed source-bottom outcomes.
+It explicitly excludes target and process authority from the compatibility
+certificates.
+
+The essential status terms are \emph{draft/control}, \emph{proposal-only},
+\emph{source-extension candidate}, and
+\texttt{blocked\_adoption\_open\_continuation}. The audit therefore asks only
+whether the written candidate stays inside those terms.
+
+\section{Hidden Target-Import Screen}
+
+\begin{longtable}{p{0.35\linewidth}p{0.53\linewidth}}
+\toprule
+Audit check & Result \\
+\midrule
+Target atlas or topology & Pass as written. The support sets are source-local and finite/local; no target atlas is used. \\
+Target metric or Lorentzian signature & Pass as written. No target metric, Lorentzian signature, proper time, or metric-form datum is introduced. \\
+Stress-energy semantics & Pass as written. No stress-energy variable, conservation law, tensor, or physical matter semantics is used. \\
+Detector protocol & Pass as written. Detector outcomes or empirical calibration do not define witness slots, signature records, or compatibility. \\
+Matter action & Pass as written. No matter action or variational principle is imported. \\
+Benchmark behavior & Pass as written. Benchmark fit and exact-GR recovery are excluded as premises. \\
+Compatibility predicate & Pass as written, stress required. The predicate may inspect only declared source labels, source supports, and scoped evidence/precondition ledgers. \\
+Evidence-as-adoption laundering & Pass as written. Scoped witness and signature ledgers remain evidence/precondition inputs only. \\
+Process authority & Pass as written. Generated derivatives, registries, validators, roles, handoffs, approvals, commits, file order, and local caches are not proof authority. \\
+Downstream-promotion overread & Pass as written. No matter coupling, Einstein equations, benchmark promotion, or completed derivation follows. \\
+\bottomrule
+\end{longtable}
+
+\begin{lemma}[No hidden target import as written]
+The RT-009 candidate does not use target atlas data, target metric data,
+Lorentzian signature, proper time, stress-energy variables, detector
+outcomes, matter-action variables, benchmark behavior, generated derivatives,
+registry metadata, validator results, role authority, handoff authority,
+approval status, commit status, file order, or local caches as mathematical
+premises.
+\end{lemma}
+
+\begin{proof}
+The candidate's written mathematical premises are source-side witness slots,
+source-side signature records, finite/local source supports, compatibility
+certificates, source relabeling transport, finite variations, fail-closed
+bottom behavior, and no-target-import certificates. The target-facing and
+process-facing surfaces listed above are not used to define those objects.
+They are instead named as certificate exclusions, fail-closed cases, or
+non-conclusions. Therefore the written candidate can be audited as
+source-pure under its stated assumptions.
+\end{proof}
+
+\section{Pre-Coupling Overread Screen}
+
+\begin{proposition}[Compatibility is not matter coupling as written]
+The written candidate's compatibility certificate is a source-side eligibility
+precondition. It is not a coupling law and does not define physical matter
+coupling.
+\end{proposition}
+
+\begin{proof}
+The candidate outputs records tagged
+\(\mathsf{pre\text{-}coupling\text{-}only}\). Its codomain is a
+\(\PreCoupAsm_E\) family, not a matter action, stress-energy tensor,
+detector-semantics family, or field-equation object. The certificate predicate
+\(\mathsf{match}\) is restricted to source labels, source supports, and scoped
+evidence/precondition ledgers. Hence an audit pass establishes only that the
+written precondition assembly is source-pure enough for stress testing.
+\end{proof}
+
+\section{Process-Authority Laundering Screen}
+
+\begin{lemma}[No process proof authority]
+The RT-009 candidate does not convert generated derivatives, validators,
+registries, role records, handoffs, approvals, commits, local caches,
+semantic extracts, support-only checkers, file order, or human authorization
+into mathematical proof authority.
+\end{lemma}
+
+\begin{proof}
+The candidate's audit eligibility depends on explicit source-side records and
+no-target-import certificates. Control records and tooling can route,
+preserve, and validate receipts. They do not prove \(\MCPACand\), source-law
+adoption, matter coupling, or Einstein equations. The support boundary is
+therefore \(\ProofAuthFalse\).
+\end{proof}
+
+\section{Adoption-Laundering Screen}
+
+\begin{proposition}[No MCPA-candidate adoption]
+The audit pass does not adopt \(\MCPACand\), adopt source-extension data,
+adopt \(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt \(\MatSigDisc\),
+adopt \(\SemMatterSig\), or create canonical-ontology candidate status.
+\end{proposition}
+
+\begin{proof}
+The audited artifact marks the assembly candidate as \emph{proposal-only},
+\emph{draft/control}, and pending Smuggling Auditor review. This packet can
+complete that audit screen for the written candidate, but it cannot promote
+the candidate or substitute for later Refuter stress, selector review, or any
+human-gated adoption authority.
+\end{proof}
+
+\section{Conditionality And Stress Obligation}
+
+\begin{proposition}[Audit pass is not future-instantiation stability]
+The verdict \texttt{source\_pure\_as\_written\_pending\_stress} does not imply
+that every future choice of witness slots, signature records, compatibility
+certificates, matching predicates, relabeling transports, or finite-variation
+repairs is source-pure.
+\end{proposition}
+
+\begin{proof}
+The audit subject is the RT-009 written candidate. A later packet could still
+smuggle target content by choosing witness slots, signature records,
+compatibility predicates, support families, or variation repairs from matter
+names, detector outcomes, empirical calibration, target stress-energy
+variables, target metric structure, benchmark behavior, or support-tool
+output. Such cases are outside the audit pass and must be caught by Refuter
+stress, selector review, and any later human-gated adoption process.
+\end{proof}
+
+\section{Distance-To-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Prior scoped source-only context only; no adoption or scope expansion. \\
+\(\MetricData(E)\) & No \(\MetricData(E)\) adoption. \\
+\(\geff\) & Scoped \(\geff\) context retained; no unscoped \(\geff\) and no scope change. \\
+Matter coupling & Pre-coupling assembly candidate audit pass as written; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Candidate obligations remain pending Refuter stress. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict; future adoption remains human-gated. \\
+Current route freeze or hard-fail status & Not frozen; Refuter stress route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Allowed Conclusion}
+
+The allowed conclusion is:
+
+\begin{quote}
+As written, the RT-009 proposal-only \(\MCPACand(E)\) pre-coupling assembly
+candidate is source-pure enough to undergo Refuter stress. The pass is
+audit-only and conditional. It does not adopt the candidate, does not promote
+source-extension data, does not change Distance-to-GR ledger status, and does
+not establish matter coupling.
+\end{quote}
+
+\section{Non-Allowed Conclusions}
+
+This audit is not a canonical ontology edit, not source-law adoption, not
+\(\MatSrcDiscLaw\) adoption, not \(\SemMatterSrc\) adoption, not
+\(\MatSigDisc\) adoption, not \(\SemMatterSig\) adoption, not source-extension
+data adoption, not \(\MetricData(E)\) adoption, not \(\geff\) scope expansion,
+not coupling-law adoption, not matter-coupling derivation, not
+matter-coupling adoption, not stress-energy semantics, not a stress-energy
+tensor, not detector semantics, not matter action, not Einstein equations,
+not benchmark promotion, not a completed derivation, not future
+source-extension impossibility, and not global theory rejection.
+
+\section{Next Route}
+
+Run one bounded Refuter stress packet on the audit-passed proposal-only
+candidate. The stress packet should test certificate deletion,
+witness-signature mismatch, nonunique matching, match-predicate collapse,
+source relabeling, finite variation, target import pressure,
+evidence-as-adoption laundering, stress-energy overread, detector overread,
+matter-action overread, generated-authority laundering, process-authority
+laundering, and downstream-promotion pressure.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+Candidate Constructor Packet RT-20260630-009. (2026).
+\emph{Matter-coupling precondition assembly candidate v1}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0361}
+[Internal research-control handoff].
+
+\end{document}
