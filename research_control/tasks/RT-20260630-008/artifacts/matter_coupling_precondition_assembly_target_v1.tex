@@ -1,0 +1,340 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\ParamWitness}{\mathrm{ParamFiniteLocalWitness}_{v1}}
+\newcommand{\BridgeSlot}{\mathrm{BridgeSlot}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+\newcommand{\MCPA}{\mathrm{MatterCouplingPreconditionAssembly}_{v1}}
+\newcommand{\PreCoupAsm}{\mathrm{PreCouplingAssembly}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Matter-Coupling Precondition Assembly Target v1}
+\author{Ontology Formalizer Packet RT-20260630-008}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260630-008}. It formalizes a source-side target,
+provisionally named
+\[
+  \MCPA(E),
+\]
+after \texttt{RT-20260630-006} accepted
+\(\MatSigDisc(E) / \SemMatterSig(E)\) only as scoped source-extension
+matter-signature evidence/precondition and after \texttt{RT-20260630-007}
+selected this Ontology Formalizer packet.
+
+The target also records the earlier scoped parameterized finite/local witness
+family accepted in \texttt{RT-20260614-269}, namely
+\(\ParamWitness(E)\), \(\BridgeSlot_n(E)\), and
+\(\NoTargetImport_n\), only as scoped source-extension
+parameterized-witness evidence/precondition. Those data remain support for a
+future construction attempt. They are not source-law adoption.
+
+This artifact does not edit canonical ontology, adopt a source law, adopt
+\(\MatSrcDiscLaw\), adopt \(\SemMatterSrc\), adopt \(\MatSigDisc\), adopt
+\(\SemMatterSig\) as canonical semantics, adopt \(\MetricData(E)\), change
+the scope of \(\geff\), adopt a coupling law, derive or adopt matter
+coupling, import stress-energy semantics, construct a stress-energy tensor,
+import detector semantics, import or define a matter action, derive Einstein
+equations, promote benchmark status, issue a benchmark Gate Chair verdict,
+claim completed derivation, claim future source-extension impossibility, or
+reject the global theory.
+
+\begin{verbatim}
+artifact_status: "draft/control Matter-Coupling Precondition Assembly Target v1"
+target_name: "MatterCouplingPreconditionAssembly_v1(E)"
+accepted_preconditions:
+  - "scoped ParamFiniteLocalWitness_v1(E) / BridgeSlot_n(E) / NoTargetImport_n"
+  - "scoped MatterSignatureDisc_src^cand / SemMatter_src^sig-cand"
+source_law_adopted: false
+MatSrcDiscLaw_v1_adopted: false
+SemMatter_src_adopted: false
+MatterSignatureDisc_src_cand_adopted: false
+SemMatter_src_sig_cand_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Source Domain}
+
+\begin{definition}[Source-domain package for precondition assembly]
+For a source context \(E\), the domain of \(\MCPA(E)\) is a declared
+finite/local source package
+\[
+  \mathcal{D}^{\mathrm{MCPA}}_E =
+  (E,F_E^\sharp,\mathcal{W}_E,\mathcal{S}_E,\mathcal{M}_E,
+  \mathcal{R}_E,\mathcal{V}_E,\mathcal{P}_E,\mathcal{N}_E).
+\]
+Here \(F_E^\sharp\) is the finite/local source family,
+\(\mathcal{W}_E\) is the scoped parameterized-witness ledger containing
+entries of the form \((\ParamWitness(E),\BridgeSlot_n(E),
+\NoTargetImport_n)\), \(\mathcal{S}_E\) is the scoped
+matter-signature ledger containing \(\MatSigDisc(E)\) and
+\(\SemMatterSig(E)\) only as evidence/precondition data,
+\(\mathcal{M}_E\) is the source-side matching ledger between witness slots
+and signature records, \(\mathcal{R}_E\) is the source relabeling family,
+\(\mathcal{V}_E\) is the finite variation family, \(\mathcal{P}_E\) is the
+proof-obligation ledger, and \(\mathcal{N}_E\) is the no-target-import
+certificate family.
+
+The ledgers \(\mathcal{W}_E\) and \(\mathcal{S}_E\) may be cited only as
+scoped source-extension evidence/precondition data. They are not source-law
+adoption, not \(\MetricData(E)\), not \(\geff\), not a coupling law, not
+matter coupling, not stress-energy semantics, not detector semantics, not
+matter action, and not Einstein equations.
+\end{definition}
+
+\section{Target Codomain}
+
+\begin{definition}[Pre-coupling assembly record]
+The codomain of \(\MCPA(E)\) is not a physical matter sector, not an adopted
+coupling law, not a stress-energy tensor, not a detector model, and not a
+matter action. It is a source-side pre-coupling assembly record family
+\[
+  \PreCoupAsm_E =
+  (A_E,L_E,Q_E,\mathsf{MatchOK}_E,\mathsf{LocalOK}_E,
+  \mathsf{NatOK}_E,\mathsf{NoImportOK}_E,\mathcal{O}_E).
+\]
+The set \(A_E\) records assembled source-side precondition records, \(L_E\)
+records their finite/local dependence data, \(Q_E\) is a quality ledger,
+\(\mathsf{MatchOK}_E\) records compatibility between witness slots and
+matter-signature records, \(\mathsf{LocalOK}_E\) records source-locality,
+\(\mathsf{NatOK}_E\) records relabeling naturality,
+\(\mathsf{NoImportOK}_E\) records no-target-import checks, and
+\(\mathcal{O}_E\) maps failures to fail-closed labels.
+\end{definition}
+
+\begin{definition}[Matter-Coupling Precondition Assembly Target v1]
+\(\MCPA(E)\) is the obligation that a future candidate provide either a
+source-local partial map or source-local relation
+\[
+  \mathcal{A}^{\mathrm{MCPA}}_E:
+  \mathcal{D}^{\mathrm{MCPA}}_E \dashrightarrow \PreCoupAsm_E
+\]
+or a precise fail-closed obstruction label from \(\mathcal{O}_E\), while
+satisfying Conditions MCPA-TGT-001 through MCPA-TGT-008 below.
+\end{definition}
+
+\section{Target Conditions}
+
+\begin{condition}[MCPA-TGT-001 source-evidence discipline]
+All successful inputs must be source-side records in
+\(\mathcal{D}^{\mathrm{MCPA}}_E\). Accepted scoped evidence may appear only as
+precondition data. It may not be converted into source-law adoption,
+\(\MetricData(E)\), \(\geff\), coupling-law adoption, matter coupling,
+stress-energy semantics, detector semantics, matter action, Einstein
+equations, or benchmark behavior.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-002 scoped evidence is not adoption]
+The candidate must keep separate ledgers for \(\mathcal{W}_E\),
+\(\mathcal{S}_E\), and \(\mathcal{M}_E\). A match between witness slots and
+matter-signature records is an eligibility precondition only. It is not
+\(\MatSrcDiscLaw\), not \(\SemMatterSrc\), not \(\MetricData(E)\), not
+\(\geff\), not a coupling law, and not matter coupling.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-003 witness-signature compatibility]
+For each assembled record in \(A_E\), the candidate must name the
+source-local witness slot, the source-local matter-signature record, and the
+declared compatibility relation in \(\mathcal{M}_E\). If no compatibility
+relation is supplied, the output must fail closed rather than infer physical
+matter content.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-004 locality]
+\(\mathcal{A}^{\mathrm{MCPA}}_E\) must depend only on declared finite/local
+source records in \(F_E^\sharp\), \(\mathcal{W}_E\), \(\mathcal{S}_E\), and
+\(\mathcal{M}_E\). It may not depend on target topology, target atlas, target
+metric, Lorentzian signature, proper time, stress-energy tensor, matter
+action, detector protocol, empirical calibration, benchmark fit, or Einstein
+equations.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-005 covariance and naturality]
+For each source relabeling or source-family morphism
+\[
+  \rho: \mathcal{D}^{\mathrm{MCPA}}_E \to
+  \mathcal{D}^{\mathrm{MCPA}}_{E'},
+\]
+the candidate must supply a source-side transport
+\(\rho_*:\PreCoupAsm_E\to \PreCoupAsm_{E'}\) such that successful outputs
+commute with \(\rho\). Failure to define this compatibility is a source-side
+noncovariance obstruction, not a license to import target covariance.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-006 finite-variation stability]
+For every declared finite variation \(v\in\mathcal{V}_E\), the candidate must
+state whether the assembled precondition record is stable, repaired by
+declared source-local data, or fail-closed. Stability may not be repaired by
+target-metric normalization, empirical calibration, stress-energy
+conservation, detector semantics, matter action, or benchmark behavior.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-007 no-target-import certificate]
+The candidate must include \(\mathcal{N}_E\). The certificate must rule out
+target topology, target atlas, target metric, Lorentzian signature, proper
+time, stress-energy tensor, matter action, detector semantics, empirical
+calibration, benchmark success, Einstein equations, generated derivatives,
+registry metadata, validator status, role authority, handoff status,
+approval status, local cache state, file order, or commit status as
+mathematical premises.
+\end{condition}
+
+\begin{condition}[MCPA-TGT-008 fail-closed obstruction labeling]
+If a target condition cannot be met, the candidate must return exactly one
+primary obstruction label from \(\mathcal{O}_E\) and must not repair the
+failure by importing a forbidden target object or by treating support-only
+project-control evidence as proof authority.
+\end{condition}
+
+\section{Failure Labels}
+
+\begin{longtable}{p{0.36\linewidth}p{0.52\linewidth}}
+\toprule
+Label & Meaning \\
+\midrule
+OB-MCPA-SOURCE-DOMAIN-MISSING & The source package \(\mathcal{D}^{\mathrm{MCPA}}_E\) is not supplied. \\
+OB-MCPA-PRECOUPLING-CODOMAIN-MISSING & The pre-coupling assembly codomain \(\PreCoupAsm_E\) is not supplied. \\
+OB-MCPA-WITNESS-SIGNATURE-MISMATCH & A declared witness slot and matter-signature record do not match under \(\mathcal{M}_E\). \\
+OB-MCPA-EVIDENCE-AS-ADOPTION & Scoped evidence is treated as source-law adoption, \(\MetricData(E)\), \(\geff\), coupling law, or matter coupling. \\
+OB-MCPA-TARGET-IMPORT & A forbidden target topology, atlas, metric, tensor, action, detector, benchmark, or field-equation premise is used. \\
+OB-MCPA-NONLOCAL & The proposed rule depends on nonlocal or undeclared source data. \\
+OB-MCPA-NONCOVARIANT & Relabeling or source-family morphism compatibility fails. \\
+OB-MCPA-FINITE-VARIATION-FAIL & Declared finite variations break the assembly and no source-side fail-closed repair is supplied. \\
+OB-MCPA-STRESS-ENERGY-OVERREAD & The pre-coupling assembly is read as stress-energy semantics or a stress-energy tensor. \\
+OB-MCPA-DETECTOR-OVERREAD & The pre-coupling assembly is read as empirical detector semantics or detector calibration. \\
+OB-MCPA-ACTION-OVERREAD & The pre-coupling assembly is read as a matter action or variational principle. \\
+OB-MCPA-DOWNSTREAM-PROMOTION & Candidate eligibility is treated as Einstein equations, benchmark promotion, or completed derivation. \\
+\bottomrule
+\end{longtable}
+
+\section{Eligibility Theorem}
+
+\begin{theorem}[Precondition-assembly eligibility without matter-coupling adoption]
+Suppose a future packet supplies \(\mathcal{D}^{\mathrm{MCPA}}_E\),
+\(\PreCoupAsm_E\), a source-local candidate map or relation
+\(\mathcal{A}^{\mathrm{MCPA}}_E\), and checks MCPA-TGT-001 through
+MCPA-TGT-008. Then that packet becomes eligible only for a bounded Candidate
+Constructor attempt result, Smuggling Auditor review, Refuter stress test,
+Theoretical Continuation Selector routing, or separately authorized protected
+evidence-status review. It does not derive or adopt matter coupling.
+\end{theorem}
+
+\begin{proof}
+The hypotheses require only source-domain declarations, a pre-coupling
+source-side codomain, scoped evidence/precondition separation, compatibility
+between witness slots and matter-signature records, source-local dependence,
+source-family naturality, finite-variation behavior, a no-target-import
+certificate, and fail-closed obstruction labels. None of these hypotheses
+includes canonical ontology edit, source-law adoption, \(\MatSrcDiscLaw\)
+adoption, \(\SemMatterSrc\) adoption, \(\MatSigDisc\) adoption,
+\(\SemMatterSig\) canonical adoption, \(\MetricData(E)\) adoption,
+\(\geff\) scope expansion, coupling-law adoption, stress-energy semantics,
+a stress-energy tensor, detector semantics, matter action, Einstein
+equations, benchmark success, or completed derivation.
+
+Therefore satisfying the target can only make a future candidate suitable for
+the next controlled research roles that construct, audit, stress, route, or
+separately review evidence status. The conclusion is eligibility for bounded
+continuation under blocked adoption, not matter-coupling derivation or
+adoption.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology TeX edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc_lc & Prior source-localization context only. \\
+Resp_lc & Prior accepted response/localization context only. \\
+M_src & Prior scoped source-only context only; no new \(\Msrc\) adoption or scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; no scope expansion. \\
+Matter coupling & \(\MCPA(E)\) is formalized as a draft/control precondition assembly target; matter coupling remains underived and unadopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Finite/local assembly-stability obligations are stated; no global robustness theorem is supplied. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No new Gate Chair packet; prior evidence/precondition acceptances remain scoped. \\
+Current route freeze or hard-fail status & Not frozen; Candidate Constructor assembly candidate-or-obstruction is the next bounded route. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-Conclusions}
+
+This target formalization is not a canonical ontology edit, not source-law
+adoption, not \(\MatSrcDiscLaw\) adoption, not \(\SemMatterSrc\) adoption, not
+\(\MatSigDisc\) adoption, not \(\SemMatterSig\) adoption, not
+\(\MetricData(E)\) adoption, not \(\geff\) scope expansion, not coupling-law
+adoption, not matter-coupling derivation, not matter-coupling adoption, not
+stress-energy semantics, not a stress-energy tensor, not detector semantics,
+not matter action, not Einstein equations, not benchmark promotion, not a
+completed derivation, not future source-extension impossibility, and not
+global theory rejection.
+
+Generated derivatives, registries, validators, role contracts, handoffs,
+approvals, commits, local caches, and support-only checker outputs remain
+support surfaces. They are not proof authority.
+
+\section{Next Route}
+
+The next bounded packet is a Candidate Constructor attempt to construct a
+draft/control matter-coupling precondition assembly candidate satisfying
+\(\MCPA(E)\), or to return one precise obstruction label. That future packet
+must still preserve blocked adoption and all downstream-GR claim boundaries.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations
+implementation plan continue task v12} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Handoff 0359}
+[Internal research-control handoff].
+
+Gate Chair Packet RT-20260630-006. (2026). \emph{Matter-signature
+source-extension evidence Gate Chair review v1} [Research-control TeX
+artifact]. The AEther-Flow Interpretation of Relativity Research Project.
+
+Gate Chair Packet RT-20260614-269. (2026). \emph{Parameterized finite local
+source-family witness v1 source-extension evidence Gate Chair review}
+[Research-control TeX artifact]. The AEther-Flow Interpretation of Relativity
+Research Project.
+
+\end{document}

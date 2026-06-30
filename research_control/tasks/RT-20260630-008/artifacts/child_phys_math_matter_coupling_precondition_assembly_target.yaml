@@ -1,0 +1,45 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260630-008"
+artifact_role: "formal_objects_domains_maps_and_proof_obligations"
+claim_boundary: "draft/control proposal-only target formalization"
+formal_target:
+  object_name: "MatterCouplingPreconditionAssembly_v1(E)"
+  domain: "D_E^MCPA = (E F_E^sharp W_E S_E M_E R_E V_E P_E N_E)"
+  codomain: "PreCouplingAssembly_E = (A_E L_E Q_E MatchOK_E LocalOK_E NatOK_E NoImportOK_E O_E)"
+  map_or_relation: "A_E^MCPA: D_E^MCPA -> PreCouplingAssembly_E or fail-closed obstruction"
+conditions:
+  - "MCPA-TGT-001 source-evidence discipline"
+  - "MCPA-TGT-002 scoped evidence is not adoption"
+  - "MCPA-TGT-003 witness-signature compatibility"
+  - "MCPA-TGT-004 locality"
+  - "MCPA-TGT-005 covariance and naturality"
+  - "MCPA-TGT-006 finite-variation stability"
+  - "MCPA-TGT-007 no-target-import certificate"
+  - "MCPA-TGT-008 fail-closed obstruction labeling"
+failure_labels:
+  - "OB-MCPA-SOURCE-DOMAIN-MISSING"
+  - "OB-MCPA-PRECOUPLING-CODOMAIN-MISSING"
+  - "OB-MCPA-WITNESS-SIGNATURE-MISMATCH"
+  - "OB-MCPA-EVIDENCE-AS-ADOPTION"
+  - "OB-MCPA-TARGET-IMPORT"
+  - "OB-MCPA-NONLOCAL"
+  - "OB-MCPA-NONCOVARIANT"
+  - "OB-MCPA-FINITE-VARIATION-FAIL"
+  - "OB-MCPA-STRESS-ENERGY-OVERREAD"
+  - "OB-MCPA-DETECTOR-OVERREAD"
+  - "OB-MCPA-ACTION-OVERREAD"
+  - "OB-MCPA-DOWNSTREAM-PROMOTION"
+theorem:
+  name: "Precondition-assembly eligibility without matter-coupling adoption"
+  result: "Satisfying MCPA-TGT-001 through MCPA-TGT-008 gives eligibility only for later bounded construction audit stress selector routing or protected evidence-status review."
+  non_conclusion: "No matter coupling is derived or adopted."
+authority_preserved:
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  downstream_gr_promotion: false
