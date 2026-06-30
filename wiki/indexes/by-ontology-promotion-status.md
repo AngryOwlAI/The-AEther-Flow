@@ -35,6 +35,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-HUMAN-GATE-ADOPTION-DECISION` `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-COUPLING-PRECONDITION-ASSEMBLY-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260630-013/artifacts/matter_coupling_precondition_assembly_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-SOURCE-EXTENSION-EVIDENCE-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260630-006/artifacts/matter_signature_source_extension_evidence_gate_chair_review_v1.tex`
+- `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260630-020/artifacts/source_coupling_law_candidate_source_extension_evidence_gate_chair_review_v1.tex`
 
 ## not_applicable
 
