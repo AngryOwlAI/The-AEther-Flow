@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-050` and `handoff-0402`.
+`RT-20260630-051` and `handoff-0403`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-050` |
-| Latest handoff ID | `handoff-0402` |
-| Current status | `v12_p7_t03_repair_msirrel_stable_partition_precondition_accepted_scoped_source_extension_evidence_precondition_no_adoption` |
-| Current route family | source_extension_human_gate_msirrel_stable_partition_precondition_evidence_status_review |
-| Target derivation milestone | none; this is project-control tooling work |
+| Active task ID | `RT-20260630-051` |
+| Latest handoff ID | `handoff-0403` |
+| Current status | `v12_p7_t03_post_ms_stable_partition_evidence_selector_routes_to_stable_matter_semantics_bridge_candidate_no_adoption` |
+| Current route family | ontology_law_packet_post_ms_stable_partition_evidence_route_selector |
+| Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStablePartitionPrecondition evidence route while preserving no source-law adoption no source-extension data adoption beyond the exact scoped gate result no matter-semantics adoption no detector-semantics adoption no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation. |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStablePartitionPrecondition evidence route while preserving no source-law adoption no source-extension data adoption beyond the exact scoped gate result no matter-semantics adoption no detector-semantics adoption no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation. |
+| Required next authority | Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition before audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work. |
+| Next recommended action | Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition before audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-050/00_TASK.yaml`.
-- Active task objective: Execute one bounded Gate Chair review under exact tracked authorization to decide whether MSStablePartitionPrecondition_v1 may be accepted only as scoped source-extension stable-precondition evidence/precondition under its declared finite/local source-side guard scope while preserving no canonical ontology edit, no canonical-ontology candidate status, no source-law adoption, no source-extension data adoption beyond this exact scoped evidence/precondition result, no MetricData(E) adoption, no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
-- Latest handoff path: `research_control/handoffs/handoff-0402.yaml`.
-- Latest handoff summary: RT-20260630-050 completed one bounded Gate Chair ontology-law packet under approval-20260630-005 and accepted MSStablePartitionPrecondition_v1 only as scoped source-extension stable-precondition evidence/precondition. The Gate Chair did not adopt source law, source-extension data beyond this exact scoped result, MetricData(E), g_eff, a coupling law, matter semantics, detector semantics, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
-- Current route family: source_extension_human_gate_msirrel_stable_partition_precondition_evidence_status_review.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStablePartitionPrecondition evidence route while preserving no source-law adoption no source-extension data adoption beyond the exact scoped gate result no matter-semantics adoption no detector-semantics adoption no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-051/00_TASK.yaml`.
+- Active task objective: Execute one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStablePartitionPrecondition evidence route after RT-20260630-050 accepted MSStablePartitionPrecondition_v1 only as scoped source-extension stable-precondition evidence/precondition.
+- Latest handoff path: `research_control/handoffs/handoff-0403.yaml`.
+- Latest handoff summary: RT-20260630-051 completed one bounded Theoretical Continuation Selector packet after RT-050 scoped MSStablePartitionPrecondition_v1 evidence/precondition acceptance. It routes the next non-promotional packet to candidate-constructor@0.2.0 for MSStableMatterSemanticsBridge_v1(E;B_current), using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition. It does not adopt source law, source-extension data beyond RT-050 scoped result, MetricData(E), g_eff, coupling law, matter semantics, detector semantics, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
+- Current route family: ontology_law_packet_post_ms_stable_partition_evidence_route_selector.
+- Next recommended action: Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition before audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStablePartitionPrecondition evidence route while preserving no source-law adoption no source-extension data adoption beyond the exact scoped gate result no matter-semantics adoption no detector-semantics adoption no matter-coupling derivation no Einstein-equation route no benchmark promotion and no completed derivation.
+Run one bounded candidate-constructor@0.2.0 ontology-law-research-packet to construct or precisely obstruct MSStableMatterSemanticsBridge_v1(E;B_current) as a draft/control source-side stable matter-semantics bridge using MSStablePartitionPrecondition_v1 only as scoped evidence/precondition before audit, stress, adoption, matter-coupling, Einstein-equation, benchmark, or promotion work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,25 +143,23 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-050`;
-- latest handoff: `handoff-0402`;
-- current status: `v12_p7_t03_repair_msirrel_stable_partition_precondition_accepted_scoped_source_extension_evidence_precondition_no_adoption`;
+- active task: `RT-20260630-051`;
+- latest handoff: `handoff-0403`;
+- current status: `v12_p7_t03_post_ms_stable_partition_evidence_selector_routes_to_stable_matter_semantics_bridge_candidate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `approval_consumed_once`: PASS;
 - latest handoff validation `claim_boundaries_preserved`: PASS;
-- latest handoff validation `gate_chair_review_completed`: PASS;
-- latest handoff validation `ledger_updated`: PASS;
-- latest handoff validation `next_selector_required`: PASS;
+- latest handoff validation `next_candidate_constructor_required`: PASS;
+- latest handoff validation `selector_completed`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0402.yaml`
-- `research_control/tasks/RT-20260630-050/00_TASK.yaml`
+- `research_control/handoffs/handoff-0403.yaml`
+- `research_control/tasks/RT-20260630-051/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +174,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0402*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0403*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
