@@ -1,0 +1,38 @@
+artifact_id: "child_phys_math_source_coupling_law_candidate"
+task_id: "RT-20260630-016"
+job_id: "AJ-RT-20260630-016-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-06-30T07:34:02Z"
+claim_boundary_preserved: true
+result:
+  candidate_name: "SourceCouplingLawCandidate^cand_v1(E)"
+  result_type: "constructed_candidate"
+  formal_objects:
+    - "D_E^SCLT"
+    - "S_E compatibility-selection ledger"
+    - "CouplingIntent token"
+    - "K_E^SCLC"
+    - "E_star finite nonempty witness"
+  maps:
+    - "K_E^SCLC maps D_E^SCLT to SourceCouplingTargetRecord_E or one fail-closed obstruction label"
+    - "rho_* transports source-coupling intent tokens under source relabeling"
+  proof_obligations_satisfied:
+    - "SCLT-TGT-001 source-evidence discipline"
+    - "SCLT-TGT-002 no-target-import"
+    - "SCLT-TGT-003 source-locality"
+    - "SCLT-TGT-004 covariance and naturality"
+    - "SCLT-TGT-005 finite-variation behavior"
+    - "SCLT-TGT-006 matter-signature and witness-slot compatibility"
+    - "SCLT-TGT-007 fail-closed obstruction labeling"
+  new_mathematical_payload:
+    - "source-coupling-intent candidate relation"
+    - "finite/local nonempty source-coupling-intent witness"
+    - "candidate satisfaction theorem"
+    - "no downstream promotion theorem"
+  next_required_role: "smuggling_auditor"
+limitations:
+  - "Candidate is audit-pending and stress-untested."
+  - "No source law or coupling law is adopted."
+  - "No matter-coupling derivation or downstream GR object is supplied."

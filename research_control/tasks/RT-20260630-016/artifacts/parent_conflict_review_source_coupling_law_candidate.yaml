@@ -1,0 +1,25 @@
+artifact_id: "parent_conflict_review_source_coupling_law_candidate"
+task_id: "RT-20260630-016"
+job_id: "AJ-RT-20260630-016-001"
+execution_unit_id: "parent"
+perspective: "physicist_mathematician_philosopher"
+status: "completed"
+created_at: "2026-06-30T07:34:02Z"
+review_status: "resolved"
+resolution_rounds: 1
+conflicts:
+  - conflict_id: "C-SCLC-001"
+    conflict_type: "terminology"
+    severity: "nonblocking"
+    child_phys_math_position: "The token family can be called a coupling-intent candidate because it satisfies the target conditions."
+    child_phys_phil_position: "The token family must not be read as a physical coupling law."
+    parent_resolution: "Use source-coupling-intent-only terminology and state proposal-only audit-pending status everywhere."
+  - conflict_id: "C-SCLC-002"
+    conflict_type: "claim_boundary"
+    severity: "nonblocking"
+    child_phys_math_position: "A finite nonempty witness exists."
+    child_phys_phil_position: "The witness must not imply matter coupling or downstream GR recovery."
+    parent_resolution: "Keep the witness as finite/local source-side nonempty evidence for candidate construction only."
+unresolved_conflicts: []
+blocking_conflicts: []
+fusion_instruction: "Fuse the mathematical construction with explicit no-adoption and no-downstream-promotion boundaries."

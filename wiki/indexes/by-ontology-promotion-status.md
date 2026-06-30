@@ -269,6 +269,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-REPAIR-CANDIDATE` `research_control/tasks/RT-20260630-002/artifacts/matter_signature_repair_candidate_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260630-004/artifacts/matter_signature_repair_candidate_refuter_stress_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-MATTER-SIGNATURE-REPAIR-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-003/artifacts/matter_signature_repair_candidate_smuggling_audit_v1.tex`
+- `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-CANDIDATE` `research_control/tasks/RT-20260630-016/artifacts/source_coupling_law_candidate_v1.tex`
 - `TEX-V12-ONTOLOGY-LAW-SOURCE-COUPLING-LAW-TARGET` `research_control/tasks/RT-20260630-015/artifacts/source_coupling_law_target_v1.tex`
 - `TEX-V12-P4-T03-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION` `research_control/tasks/RT-20260629-045/artifacts/source_extension_compression_obstruction_v1.tex`
 - `TEX-V12-P4-T04-SOURCE-EXTENSION-COMPRESSION-OBSTRUCTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260629-046/artifacts/source_extension_compression_obstruction_smuggling_audit_v1.tex`

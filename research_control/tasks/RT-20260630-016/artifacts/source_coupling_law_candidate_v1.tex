@@ -1,0 +1,377 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\MatSrcDiscLaw}{\mathrm{MatSrcDiscLaw}_{v1}}
+\newcommand{\SemMatterSrc}{\mathrm{SemMatter}_{\mathrm{src}}}
+\newcommand{\SemMatterSig}{\mathrm{SemMatter}_{\mathrm{src}}^{\mathrm{sig\text{-}cand}}}
+\newcommand{\MatSigDisc}{\mathrm{MatterSignatureDisc}_{\mathrm{src}}^{\mathrm{cand}}}
+\newcommand{\MCPA}{\mathrm{MCPA}^{\mathrm{cand}}_{v1}}
+\newcommand{\SourceCoupTarget}{\mathrm{SourceCouplingLawTarget}_{v1}}
+\newcommand{\SourceCoupCand}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\SourceCoupRec}{\mathrm{SourceCouplingTargetRecord}}
+\newcommand{\CouplingIntent}{\mathrm{CouplingIntent}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\NoTargetImport}{\mathrm{NoTargetImport}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Source Coupling-Law Candidate v1}
+\author{Candidate Constructor Packet RT-20260630-016}
+\date{2026-06-30}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This is a draft/control research-control artifact for
+\texttt{RT-20260630-016}. It constructs one proposal-only source-side
+candidate
+\[
+  \SourceCoupCand(E)
+\]
+against \(\SourceCoupTarget(E)\), which was formalized in
+\texttt{RT-20260630-015}. It consumes the \(\MCPA(E)\) Gate Chair result from
+\texttt{RT-20260630-013} only as scoped evidence/precondition.
+
+The candidate is audit-pending source-extension research data. It is not a
+canonical ontology edit, not a canonical-ontology candidate, not a source-law
+adoption, not source-extension data adoption beyond the exact
+\texttt{RT-20260630-013} gate result, not \(\MCPA(E)\) adoption, not
+\(\MetricData(E)\), not \(\geff\), not a coupling law, and not matter
+coupling. It does not import stress-energy semantics, construct a
+stress-energy tensor, import detector semantics, import or define a matter
+action, derive Einstein equations, promote benchmark status, claim completed
+derivation, claim future source-extension impossibility, or reject the global
+theory.
+
+\begin{verbatim}
+artifact_status: "draft/control Source Coupling-Law Candidate v1"
+candidate_name: "SourceCouplingLawCandidate^cand_v1(E)"
+candidate_constructor_result.result_type: "constructed_candidate"
+candidate_status: "proposal-only audit-pending source-extension research data"
+source_law_adopted: false
+MCPA_cand_v1_E_adopted: false
+source_extension_data_adopted_beyond_exact_gate_result: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+detector_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+\end{verbatim}
+
+\section{Candidate Source Package}
+
+\begin{definition}[Candidate source package]
+For a source context \(E\), a candidate source package is a refinement of the
+target package
+\[
+  \mathcal{D}^{\mathrm{SCLT}}_E =
+  (E,\mathcal{P}^{\mathrm{MCPA}}_E,\mathcal{W}_E,\Sigma_E,
+  \mathcal{C}_E,\mathcal{R}_E,\mathcal{V}_E,\mathcal{N}_E,\mathcal{O}_E)
+\]
+by an explicit finite/local compatibility-selection ledger
+\[
+  \mathcal{S}_E \subseteq
+  \mathcal{P}^{\mathrm{MCPA}}_E \times \mathcal{W}_E \times
+  \Sigma_E \times \mathcal{C}_E \times \mathcal{N}_E .
+\]
+An element
+\[
+  x=(p,w,\sigma,c,n)\in\mathcal{S}_E
+\]
+is admissible only when \(p\) is a scoped \(\MCPA(E)\)
+evidence/precondition record, \(w\) is a declared source witness slot,
+\(\sigma\) is a declared source matter-signature record, \(c\) certifies
+their source-local compatibility, and \(n\) is a no-target-import
+certificate.
+
+The selection ledger is source syntax only. It is not a detector protocol,
+not stress-energy semantics, not a matter action, not target metric data, and
+not an empirical calibration rule.
+\end{definition}
+
+\begin{definition}[Source coupling-intent token]
+A source coupling-intent token is a tuple
+\[
+  k=(p,w,\sigma,c,U_k,\tau_k,n_k)
+\]
+where \(p,w,\sigma,c\) are as above, \(U_k\) is the finite union of declared
+source supports named by those records, \(n_k\in\mathcal{N}_E\) is a
+no-target-import certificate, and
+\[
+  \tau_k=\mathsf{source\text{-}coupling\text{-}intent\text{-}only}.
+\]
+The tag \(\tau_k\) records only that the source records are eligible for
+later audit and stress as a coupling-law candidate input. It is not a physical
+matter label and not an adopted coupling law.
+\end{definition}
+
+\section{Candidate Relation}
+
+\begin{definition}[Source-coupling candidate relation]
+The proposal-only candidate relation
+\[
+  \mathcal{K}^{\mathrm{SCLC}}_E:
+  \mathcal{D}^{\mathrm{SCLT}}_E \dashrightarrow \SourceCoupRec_E
+\]
+is defined as follows.
+
+\begin{enumerate}[label=\textup{(\alph*)}]
+  \item If \(\mathcal{D}^{\mathrm{SCLT}}_E\) is absent, return
+  \(\mathrm{OB\text{-}SCLT\text{-}SOURCE\text{-}DOMAIN\text{-}MISSING}\).
+  \item If \(\mathcal{P}^{\mathrm{MCPA}}_E\) is absent, return
+  \(\mathrm{OB\text{-}SCLT\text{-}MCPA\text{-}PRECONDITION\text{-}MISSING}\).
+  \item If any selected record treats scoped evidence as adoption, return
+  \(\mathrm{OB\text{-}SCLT\text{-}EVIDENCE\text{-}AS\text{-}ADOPTION}\).
+  \item If any selected record uses target topology, target atlas, target
+  metric, Lorentzian signature, proper time, stress-energy tensor, matter
+  action, detector protocol, empirical calibration, benchmark fit,
+  Einstein-equation premise, generated derivative, registry metadata,
+  validator status, role authority, handoff status, approval status, local
+  cache state, file order, or commit status as a premise, return
+  \(\mathrm{OB\text{-}SCLT\text{-}TARGET\text{-}IMPORT}\).
+  \item If a declared witness slot and matter-signature record lack a
+  compatibility certificate, return
+  \(\mathrm{OB\text{-}SCLT\text{-}WITNESS\text{-}SIGNATURE\text{-}MISMATCH}\).
+  \item Otherwise define \(K^{\mathrm{SCLC}}_E\) as the set of all
+  source coupling-intent tokens \(k=(p,w,\sigma,c,U_k,\tau_k,n_k)\)
+  generated by admissible \(x=(p,w,\sigma,c,n)\in\mathcal{S}_E\).
+\end{enumerate}
+
+The output record has:
+\[
+\begin{aligned}
+K_E &= K^{\mathrm{SCLC}}_E,\\
+L_E &= \{U_k : k\in K^{\mathrm{SCLC}}_E\},\\
+\Theta_E &= \{\text{audit},\text{stress},\text{selector},\text{human-gate-before-adoption}\},\\
+\mathsf{SigOK}_E &= \text{all tokens name declared }\sigma\in\Sigma_E,\\
+\mathsf{SlotOK}_E &= \text{all tokens name declared }w\in\mathcal{W}_E,\\
+\mathsf{LocalOK}_E &= \text{all supports }U_k\text{ are finite/local},\\
+\mathsf{NatOK}_E &= \text{naturality is supplied as below},\\
+\mathsf{VarOK}_E &= \text{finite variations are handled as below},\\
+\mathsf{NoImportOK}_E &= \text{all certificates }n_k\text{ pass},\\
+\mathsf{Fail}_E &= \text{the fail-closed obstruction labels from }\mathcal{O}_E.
+\end{aligned}
+\]
+\end{definition}
+
+\section{Finite/Local Nonempty Witness}
+
+\begin{definition}[Finite witness \(E_\star\)]
+Let \(E_\star\) be a finite source context with one finite support token
+\(u_0\). Declare one scoped MCPA evidence/precondition record \(p_0\), one
+source witness slot \(w_0\), one source matter-signature record
+\(\sigma_0\), one compatibility certificate \(c_0\), and one no-target-import
+certificate \(n_0\). Their supports are all contained in \(\{u_0\}\), and
+\[
+  (p_0,w_0,\sigma_0,c_0,n_0)\in\mathcal{S}_{E_\star}.
+\]
+The certificate \(n_0\) states only that no target topology, target atlas,
+target metric, Lorentzian signature, proper time, stress-energy tensor,
+detector semantics, empirical calibration, matter action, benchmark fit,
+Einstein equations, generated derivative, registry metadata, validator
+result, role authority, handoff status, approval status, local cache state,
+file order, or commit status is a mathematical premise.
+\end{definition}
+
+\begin{proposition}[Nonempty source-coupling intent witness]
+For \(E_\star\), the candidate relation returns one nonempty
+source-coupling-intent-only token
+\[
+  k_0=(p_0,w_0,\sigma_0,c_0,\{u_0\},
+  \mathsf{source\text{-}coupling\text{-}intent\text{-}only},n_0).
+\]
+\end{proposition}
+
+\begin{proof}
+The source package supplies the scoped MCPA evidence/precondition record,
+the witness slot, the matter-signature record, the compatibility certificate,
+and the no-target-import certificate. The support is finite and local. None
+of the records invokes a forbidden target or process-authority premise.
+Therefore the relation enters case (f) and includes \(k_0\). The output is
+nonempty but remains tagged as source-coupling-intent-only.
+\end{proof}
+
+\section{Naturality And Finite Variation}
+
+\begin{definition}[Source relabeling transport]
+For a source relabeling \(\rho:E\to E'\), suppose \(\rho\) transports scoped
+MCPA records, witness slots, matter-signature records, compatibility
+certificates, supports, obstruction labels, and no-target-import certificates
+inside the declared source families. Define
+\[
+  \rho_*(p,w,\sigma,c,U_k,\tau_k,n_k)
+  =
+  (\rho p,\rho w,\rho\sigma,\rho c,\rho U_k,\tau_k,\rho n_k).
+\]
+The tag \(\tau_k\) is unchanged because it is a source-control tag, not a
+physical calibration.
+\end{definition}
+
+\begin{proposition}[Source-side naturality]
+When \(\rho\) preserves certificate pass/fail values and transports
+\(\mathcal{S}_E\) into \(\mathcal{S}_{E'}\), then
+\[
+  \rho_*\bigl(K^{\mathrm{SCLC}}_E\bigr)
+  =
+  K^{\mathrm{SCLC}}_{E'}.
+\]
+\end{proposition}
+
+\begin{proof}
+Each successful token is generated only from a selected tuple in
+\(\mathcal{S}_E\). Applying \(\rho\) transports that tuple to the declared
+selection ledger in \(E'\), preserves its no-target-import status, and leaves
+the source-control tag unchanged. Thus the image token is exactly one of the
+tokens generated in \(E'\). The reverse inclusion follows by the same
+argument for transported selected tuples under the declared family. If a
+certificate fails after transport, the construction fails closed rather than
+importing target covariance.
+\end{proof}
+
+\begin{definition}[Finite-variation behavior]
+For \(v\in\mathcal{V}_E\), the candidate has three source-only outcomes:
+\[
+  v(K^{\mathrm{SCLC}}_E)=
+  \begin{cases}
+    K^{\mathrm{SCLC}}_{vE} & \text{if selected source records and certificates transport,}\\
+    K^{\mathrm{SCLC,repair}}_{vE} & \text{if a declared source-local repair certificate exists,}\\
+    \BottomSrc & \text{otherwise.}
+  \end{cases}
+\]
+No repair may use target-metric normalization, empirical calibration,
+stress-energy conservation, detector semantics, matter action, benchmark
+behavior, or Einstein-equation premises.
+\end{definition}
+
+\section{Target-Condition Check}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Target condition & Candidate status \\
+\midrule
+SCLT-TGT-001 source-evidence discipline & Scoped \(\MCPA(E)\) records remain evidence/precondition only and are not converted into adoption. \\
+SCLT-TGT-002 no-target-import & Every token includes \(n_k\); forbidden target and process-authority premises fail closed. \\
+SCLT-TGT-003 source-locality & \(\mathcal{K}^{\mathrm{SCLC}}_E\) depends only on selected finite/local source records. \\
+SCLT-TGT-004 covariance and naturality & \(\rho_*\) transports successful tokens under declared source relabelings. \\
+SCLT-TGT-005 finite-variation behavior & Variations are stable, source-locally repaired, or fail closed. \\
+SCLT-TGT-006 matter-signature and witness-slot compatibility & Each token names \(\sigma\), \(w\), and \(c\); missing compatibility fails closed. \\
+SCLT-TGT-007 fail-closed obstruction labeling & Failure returns exactly one primary \(\mathrm{OB\text{-}SCLT}\) label. \\
+\bottomrule
+\end{longtable}
+
+\begin{theorem}[Candidate satisfaction without coupling-law adoption]
+If \(\mathcal{D}^{\mathrm{SCLT}}_E\), \(\mathcal{S}_E\), and the declared
+certificate families satisfy the source-only hypotheses above, then
+\(\mathcal{K}^{\mathrm{SCLC}}_E\) satisfies
+\(\SourceCoupTarget(E)\) in the sense of SCLT-TGT-001 through
+SCLT-TGT-007. The result is a proposal-only audit-pending candidate and not
+a coupling law, matter-coupling derivation, or matter-coupling adoption.
+\end{theorem}
+
+\begin{proof}
+The construction uses only \(\mathcal{P}^{\mathrm{MCPA}}_E\),
+\(\mathcal{W}_E\), \(\Sigma_E\), \(\mathcal{C}_E\), \(\mathcal{R}_E\),
+\(\mathcal{V}_E\), \(\mathcal{N}_E\), and \(\mathcal{O}_E\). Case (c) blocks
+evidence-as-adoption. Case (d) blocks target import and process-authority
+premises. Case (e) blocks missing matter-signature witness-slot
+compatibility. The generated tokens record only source supports, source
+labels, compatibility certificates, and no-target-import certificates, so
+source-locality holds. The transport and finite-variation clauses supply the
+declared naturality and variation behavior. Every failure path returns one
+primary fail-closed label. Therefore the target conditions are met whenever
+the stated source-only hypotheses are met. None of those hypotheses includes
+source-law adoption, coupling-law adoption, matter-coupling derivation,
+stress-energy semantics, detector semantics, matter action, Einstein
+equations, benchmark success, or completed derivation.
+\end{proof}
+
+\begin{theorem}[No downstream promotion]
+The existence of \(K^{\mathrm{SCLC}}_E\) or of the finite witness \(k_0\)
+does not establish \(\MetricData(E)\), change the scope of \(\geff\), adopt a
+coupling law, derive or adopt matter coupling, construct a stress-energy
+tensor, import detector semantics, import a matter action, derive Einstein
+equations, promote benchmark status, or complete the GR derivation.
+\end{theorem}
+
+\begin{proof}
+The output record contains only source-coupling-intent tokens and control
+obligations for audit, stress, selector routing, and a future human gate
+before any adoption. It contains no target metric, target atlas, Lorentzian
+signature, stress-energy tensor, matter action, detector protocol, empirical
+calibration, benchmark fit, or field-equation premise. Thus it cannot be read
+as any downstream GR object or promotion.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & unchanged; no canonical ontology edit is made \\
+Source equivalence EqSrc & unchanged; no general EqSrc theorem is supplied \\
+RetainH & unchanged \\
+GenH & unchanged \\
+ObsLoc\_lc & prior source-localization context only \\
+Resp\_lc & prior accepted response/localization context only \\
+M\_src & unchanged; scoped source-only boundary remains prior context \\
+\(\MetricData(E)\) & not adopted here \\
+\(\geff\) & prior scoped source-extension context only; scope is not changed \\
+matter coupling & \(\SourceCoupCand(E)\) constructed as proposal-only audit-pending source-coupling intent candidate; no coupling law matter coupling stress-energy semantics detector semantics matter action or Einstein equations are adopted \\
+Einstein equations & blocked; no field-equation derivation is supplied \\
+finite-variation robustness & finite/local candidate variation behavior stated; no global robustness theorem \\
+benchmark promotion & blocked; no benchmark evidence or promotion is supplied \\
+Gate Chair status & no new Gate Chair packet; prior scoped evidence/precondition acceptance remains scoped \\
+current route freeze or hard-fail status & not frozen; Smuggling Auditor source-purity audit is the next bounded route \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The logical next packet is one bounded `smuggling-auditor@0.2.0`
+ontology-law-research-packet to audit \(\SourceCoupCand(E)\) for hidden target
+import, evidence-as-adoption laundering, stress-energy overread,
+detector-semantics overread, matter-action overread, downstream-promotion
+overread, process-authority proof laundering, and generated-derivative proof
+laundering.
+
+That future packet must preserve no canonical ontology edit, no source-law
+adoption, no \(\MCPA(E)\) adoption, no source-extension data adoption beyond
+the exact \texttt{RT-20260630-013} gate result, no \(\MetricData(E)\)
+adoption, no \(\geff\) scope change, no coupling-law adoption, no
+matter-coupling derivation or adoption, no stress-energy semantics, no
+stress-energy tensor, no detector semantics, no matter action, no Einstein
+equations, no benchmark promotion, and no completed derivation.
+
+\section{Internal Materials Reviewed}
+
+\begin{itemize}[leftmargin=2em]
+\item The AEther-Flow Research Project. (2026, June 17). \textit{GR derivation burden map} [Internal control note].
+\item The AEther-Flow Research Project. (2026, June 29). \textit{Recommendations implementation plan continue task v12} [Internal implementation plan].
+\item Gate Chair Packet RT-20260630-013. (2026). \textit{Matter-coupling precondition assembly source-extension evidence Gate Chair review v1} [Internal draft/control TeX artifact].
+\item Ontology Formalizer Packet RT-20260630-015. (2026). \textit{Source coupling-law target v1} [Internal draft/control TeX artifact].
+\item The AEther-Flow Research Project. (2026, June 30). \textit{Handoff 0367} [Internal research-control handoff].
+\end{itemize}
+
+\end{document}
