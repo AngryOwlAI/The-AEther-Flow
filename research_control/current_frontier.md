@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-011` and `handoff-0363`.
+`RT-20260630-012` and `handoff-0364`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-011` |
-| Latest handoff ID | `handoff-0363` |
-| Current status | `v12_matter_coupling_precondition_assembly_candidate_stress_survived_pending_selector_no_adoption` |
-| Current route family | v12 matter coupling precondition assembly candidate stress survived pending selector no adoption |
+| Active task ID | `RT-20260630-012` |
+| Latest handoff ID | `handoff-0364` |
+| Current status | `v12_matter_coupling_precondition_assembly_selector_requires_narrow_gate_no_adoption` |
+| Current route family | v12 matter coupling precondition assembly selector requires narrow gate no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: draft object exists |
-| Required next authority | Theoretical Continuation Selector post-stress route decision only |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for MCPA^cand_v1(E) before any Gate Chair adoption request, source-law adoption, source-extension data adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim. |
+| Required next authority | Gate Chair evidence-status/precondition review only |
+| Next recommended action | Run one bounded gate-chair@0.1.0 source_extension_human_gate packet with an exact tracked approval record to decide whether the proposal-only MCPA^cand_v1(E) pre-coupling assembly candidate constructed in RT-20260630-009, audited in RT-20260630-010, and stress-survived in RT-20260630-011 may be accepted only as scoped source-extension matter-coupling precondition evidence/precondition under its declared source-local scope, before any source-law adoption, source-extension data adoption beyond the exact gate question, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-011/00_TASK.yaml`.
-- Active task objective: Stress the audit-passed proposal-only MCPA^cand_v1(E) matter-coupling precondition assembly candidate under certificate deletion, witness-signature mismatch, nonunique matching, match-predicate collapse, source relabeling, finite variation, target import pressure, evidence-as-adoption laundering, stress-energy overread, detector overread, matter-action overread, generated-authority laundering, process-authority laundering, and downstream-promotion pressure without adoption or promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0363.yaml`.
-- Latest handoff summary: RT-20260630-011 completed one bounded Refuter ontology-law-research-packet and stress-tested audit-passed MCPA^cand_v1(E) as a bridge_facing_candidate_path pending selector. The survival is proposal-only and draft/control; it does not adopt source law, source-extension data, coupling law, matter coupling, or any downstream GR object.
-- Current route family: v12 matter coupling precondition assembly candidate stress survived pending selector no adoption.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for MCPA^cand_v1(E) before any Gate Chair adoption request, source-law adoption, source-extension data adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
+- Active task path: `research_control/tasks/RT-20260630-012/00_TASK.yaml`.
+- Active task objective: Run one bounded post-stress Theoretical Continuation Selector packet for the proposal-only MCPA^cand_v1(E) matter-coupling precondition assembly candidate after construction, audit, and Refuter stress survival. Select exactly one next lawful route while preserving no adoption or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0364.yaml`.
+- Latest handoff summary: RT-20260630-012 completed one bounded Theoretical Continuation Selector ontology-law-research-packet and selected a future narrow Gate Chair evidence-status/precondition review for stress-survived proposal-only MCPA^cand_v1(E). The selector issued no Gate Chair verdict and no adoption or promotion.
+- Current route family: v12 matter coupling precondition assembly selector requires narrow gate no adoption.
+- Next recommended action: Run one bounded gate-chair@0.1.0 source_extension_human_gate packet with an exact tracked approval record to decide whether the proposal-only MCPA^cand_v1(E) pre-coupling assembly candidate constructed in RT-20260630-009, audited in RT-20260630-010, and stress-survived in RT-20260630-011 may be accepted only as scoped source-extension matter-coupling precondition evidence/precondition under its declared source-local scope, before any source-law adoption, source-extension data adoption beyond the exact gate question, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for MCPA^cand_v1(E) before any Gate Chair adoption request, source-law adoption, source-extension data adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
+Run one bounded gate-chair@0.1.0 source_extension_human_gate packet with an exact tracked approval record to decide whether the proposal-only MCPA^cand_v1(E) pre-coupling assembly candidate constructed in RT-20260630-009, audited in RT-20260630-010, and stress-survived in RT-20260630-011 may be accepted only as scoped source-extension matter-coupling precondition evidence/precondition under its declared source-local scope, before any source-law adoption, source-extension data adoption beyond the exact gate question, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-011`;
-- latest handoff: `handoff-0363`;
-- current status: `v12_matter_coupling_precondition_assembly_candidate_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260630-012`;
+- latest handoff: `handoff-0364`;
+- current status: `v12_matter_coupling_precondition_assembly_selector_requires_narrow_gate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -160,8 +160,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0363.yaml`
-- `research_control/tasks/RT-20260630-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0364.yaml`
+- `research_control/tasks/RT-20260630-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -176,7 +176,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0363*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0364*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-06-30T05:37:12Z`
-- Source fingerprint: `c6e410873d4bcb9dd426770399bec67ffa6075a50f2384604f6365d9e0c67557`
-- Nodes: `7791`
-- Edges: `32848`
+- Generated from tracked state as of: `2026-06-30T05:58:37Z`
+- Source fingerprint: `d89b5f1eda40734c246f508508f1678b2590536aaaf6fbf4520d060b02fb4a21`
+- Nodes: `7812`
+- Edges: `32992`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 499 |
+| `completion_yaml` | 500 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 363 |
+| `handoff_yaml` | 364 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 5 |
-| `agent_job` | `support_only` | 499 |
+| `agent_job` | `support_only` | 500 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 3868 |
+| `artifact` | `support_only` | 3882 |
 | `blocked_burden` | `blocked` | 850 |
-| `claim_boundary` | `support_only` | 500 |
+| `claim_boundary` | `support_only` | 501 |
 | `draft_control_candidate` | `draft_control` | 359 |
 | `draft_control_candidate` | `proposal_only` | 52 |
 | `draft_control_candidate` | `science_draft` | 31 |
 | `frozen_negative` | `frozen_negative` | 74 |
 | `gate_chair_verdict` | `human_gated` | 23 |
-| `handoff` | `support_only` | 363 |
-| `human_gated_object` | `human_gated` | 224 |
+| `handoff` | `support_only` | 364 |
+| `human_gated_object` | `human_gated` | 227 |
 | `ledger_row` | `accepted_scoped` | 3 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -57,8 +57,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 210 |
 | `task` | `human_gated` | 27 |
-| `task` | `science_draft` | 24 |
-| `task` | `support_only` | 448 |
+| `task` | `science_draft` | 23 |
+| `task` | `support_only` | 450 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260630-011`
-- Latest handoff: `handoff-0363`
-- Handoff path: `research_control/handoffs/handoff-0363.yaml`
-- Next action: Run one bounded theoretical-continuation-selector@0.1.0 ontology-law-research-packet to decide the post-stress route for MCPA^cand_v1(E) before any Gate Chair adoption request, source-law adoption, source-extension data adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
+- Active task: `RT-20260630-012`
+- Latest handoff: `handoff-0364`
+- Handoff path: `research_control/handoffs/handoff-0364.yaml`
+- Next action: Run one bounded gate-chair@0.1.0 source_extension_human_gate packet with an exact tracked approval record to decide whether the proposal-only MCPA^cand_v1(E) pre-coupling assembly candidate constructed in RT-20260630-009, audited in RT-20260630-010, and stress-survived in RT-20260630-011 may be accepted only as scoped source-extension matter-coupling precondition evidence/precondition under its declared source-local scope, before any source-law adoption, source-extension data adoption beyond the exact gate question, coupling-law adoption, matter-coupling derivation, stress-energy semantics, detector semantics, matter action, Einstein-equation route, benchmark route, or completed-derivation claim.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
