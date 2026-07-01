@@ -1,0 +1,344 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\PMSTarget}{\mathrm{PositiveSourceMatterSemanticsTarget}_{v1}}
+\newcommand{\RecSrc}{\mathcal R^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\AdmSrc}{\mathrm{Adm}^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\LabSrc}{L^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\lambdaSrc}{\lambda^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\EqMS}{\equiv^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\SepMS}{\#^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Pattern}{\mathsf{pattern}}
+\newcommand{\Separated}{\mathsf{separated}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\RRE}{\mathrm{RR}_E}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{obligation}{Obligation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{failure}{Fail-closed branch}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{PositiveSourceMatterSemanticsTarget v1}
+\author{Ontology Formalizer Packet RT-20260701-015}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact records the fused Ontology Formalizer output for
+\texttt{RT-20260701-015}, implementing v13 P4-T01. It defines
+\[
+  \PMSTarget
+\]
+as a \emph{proposal-only} and \emph{draft/control} source-side target for
+future positive matter-semantics construction.
+
+The target uses the accepted scoped status of \(\MSBridge(E;\Bcur)\) and
+\(\SMSAR\) only as source-extension evidence/precondition inputs. It does not
+edit canonical ontology TeX. It does not create a canonical-ontology
+candidate. It does not adopt source law, adopt \(\SMSAR\) as law, adopt
+source-extension data beyond exact scoped Gate Chair results, adopt
+\(\MetricData(E)\), change \(\geff\), adopt a coupling law, adopt matter
+semantics, adopt detector semantics, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, derive Einstein equations, promote benchmark status, issue benchmark
+closure, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\begin{verbatim}
+candidate_status: "proposal-only"
+packet_payload_mode: "positive_source_matter_semantics_target"
+source_law_adopted: false
+SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Question}
+
+The narrow P4-T01 question is:
+\[
+\text{What positive source-side target must a later candidate constructor}
+\]
+\[
+\text{instantiate before any matter-semantics adoption route can even be
+considered?}
+\]
+
+Under current authority, the answer can only be a source-side target grammar
+and proof-obligation packet. It cannot become adopted matter ontology,
+detector semantics, stress-energy semantics, matter action, coupling law,
+matter coupling, Einstein equations, benchmark recovery, or completed
+derivation.
+
+\section{Explicitly Excluded Target Imports}
+
+The target forbids the following as mathematical premises:
+\begin{itemize}[leftmargin=*]
+  \item detector protocols and empirical calibration;
+  \item stress-energy tensor and stress-energy semantics;
+  \item matter action and conservation law by GR or QFT import;
+  \item target metric, Lorentzian signature, target topology, target atlas,
+  target coordinate transition, and proper time;
+  \item \(\MetricData(E)\), \(\geff\) scope expansion, Einstein equations,
+  benchmark fit, benchmark recovery, and process authority.
+\end{itemize}
+
+\section{Source-Side Target Domain}
+
+\begin{definition}[Source-side matter-semantics record]
+Let \(\RecSrc(E)\) be the set of finite/local source records
+\[
+  r=(E,\Bcur,\sigma,\pi,\kappa,\RRE,\beta,\alpha,\mathsf{cert},
+      \mathsf{fail})
+\]
+where \(\sigma\) is source support syntax, \(\pi\) is a source-side probe or
+readout-token family, \(\kappa\) is source-side certificate data, \(\RRE\) is
+the retained readout-response record, \(\beta\) records scoped
+\(\MSBridge(E;\Bcur)\) evidence/precondition status when available, \(\alpha\)
+records scoped \(\SMSAR\) adoption-readiness evidence/precondition status
+when available, \(\mathsf{cert}\) contains no-target-import certificates, and
+\(\mathsf{fail}\) names controlled bottom or obstruction branches.
+\end{definition}
+
+\begin{definition}[Admissible source records]
+\(\AdmSrc(E)\subseteq\RecSrc(E)\) is the subdomain of records satisfying:
+\begin{enumerate}[label=A\arabic*.,leftmargin=*]
+  \item every component of \(r\) is source-side syntax, source-side
+  certificate data, or tracked scoped evidence/precondition status;
+  \item \(\mathsf{cert}\) explicitly excludes target geometry, target metric,
+  detector protocol, empirical calibration, stress-energy semantics,
+  stress-energy tensor, matter action, conservation by imported theory,
+  \(\MetricData(E)\), \(\geff\) expansion, Einstein equations, benchmark fit,
+  generated-derivative authority, registry authority, validator authority, and
+  commit authority;
+  \item distinct \(\RRE\) records are not identified to manufacture a label;
+  \item source relabelings and finite variations either transport the record
+  by source-defined rules or produce \(\Obstruction\); and
+  \item bridge evidence \(\beta\) and readiness evidence \(\alpha\) remain
+  evidence/precondition inputs only.
+\end{enumerate}
+\end{definition}
+
+\section{Source-Side Semantic Labels and Structures}
+
+\begin{definition}[Target label set]
+The proposal-only source-side target label set is
+\[
+  \LabSrc=\{\Bottom,\Pattern,\Separated,\Obstruction\}.
+\]
+\(\Bottom\) means insufficient source data. \(\Pattern\) means a future
+candidate has supplied a source-side pattern assignment satisfying all target
+obligations. \(\Separated\) means source data witness a target-relevant
+distinction. \(\Obstruction\) means a required clause fails or a forbidden
+import is detected.
+\end{definition}
+
+\begin{definition}[Proposal-only label map]
+\(\PMSTarget\) asks a later constructor to supply a source-defined partial map
+\[
+  \lambdaSrc:\AdmSrc(E)\dashrightarrow \LabSrc
+\]
+whose values are determined only by source components of admissible records.
+In this P4-T01 packet, \(\lambdaSrc\) is a target slot, not an adopted
+matter-semantics function.
+\end{definition}
+
+\section{Equivalence and Separation Conditions}
+
+\begin{definition}[Source-side target equivalence]
+For \(r,r'\in\AdmSrc(E)\), the relation \(r\EqMS r'\) is admissible only if a
+future candidate proves all of the following by source-side data:
+\begin{enumerate}[label=E\arabic*.,leftmargin=*]
+  \item \(\lambdaSrc(r)\) and \(\lambdaSrc(r')\) are both defined without
+  target imports;
+  \item the source supports, certificates, and \(\RRE\)-separation data are
+  compatible under permitted source relabelings and finite variations;
+  \item no detector protocol, empirical calibration, target metric,
+  stress-energy object, matter action, conservation law import, Einstein
+  equation, or benchmark fit is used; and
+  \item the equivalence proof survives deletion of process-authority fields.
+\end{enumerate}
+If any item fails, equivalence is not established and the branch is
+\(\Obstruction\) or \(\Bottom\).
+\end{definition}
+
+\begin{definition}[Source-side target separation]
+For \(r,r'\in\AdmSrc(E)\), the relation \(r\SepMS r'\) is admissible when
+source-side certificate data prove at least one of:
+\begin{enumerate}[label=S\arabic*.,leftmargin=*]
+  \item different source labels are forced by source data;
+  \item \(\RRE\)-separation blocks identification;
+  \item a permitted source relabeling or finite variation preserves one record
+  while sending the other to \(\Bottom\) or \(\Obstruction\);
+  \item one record depends on a forbidden target import or process authority.
+\end{enumerate}
+\(\SepMS\) is a target separation condition, not detector distinguishability
+and not empirical calibration.
+\end{definition}
+
+\section{Relation to Prior Scoped Evidence}
+
+\begin{condition}[Relation to \(\MSBridge\)]
+\(\MSBridge(E;\Bcur)\) may provide a scoped bridge-evidence field \(\beta\)
+for admissible records. The field can support future candidate construction
+only as evidence/precondition. It cannot define \(\lambdaSrc\) by itself,
+cannot adopt matter semantics, cannot adopt detector semantics, cannot adopt a
+coupling law, and cannot derive matter coupling.
+\end{condition}
+
+\begin{condition}[Relation to \(\SMSAR\)]
+\(\SMSAR\) may provide a scoped readiness-evidence field \(\alpha\) for
+admissible records. The field can certify that a later candidate is ready for
+audit only. It cannot adopt source law, adopt \(\SMSAR\) as law, adopt
+source-extension data beyond exact scoped Gate Chair results, adopt matter
+semantics, or authorize downstream GR promotion.
+\end{condition}
+
+\section{Fail-Closed Branches}
+
+\begin{failure}[Missing source record]
+If \(r\notin\RecSrc(E)\) or a required source component is absent, the target
+returns \(\Bottom\).
+\end{failure}
+
+\begin{failure}[Forbidden import]
+If \(\lambdaSrc\), \(\EqMS\), or \(\SepMS\) depends on detector protocols,
+empirical calibration, stress-energy tensor, stress-energy semantics, matter
+action, imported conservation law, target metric, Lorentzian signature, proper
+time, Einstein equations, benchmark fit, generated derivatives, registry
+metadata, validator PASS, approval state, role identity, or commit state, the
+target returns \(\Obstruction\).
+\end{failure}
+
+\begin{failure}[\(\RRE\) collapse]
+If two records with distinct \(\RRE\) data are identified to force a positive
+label, the target returns \(\Obstruction\).
+\end{failure}
+
+\begin{failure}[Label nonuniqueness]
+If source-side data underdetermine the label and no source-side separation or
+equivalence proof resolves the ambiguity, the target returns
+\(\Obstruction\) rather than importing target interpretation.
+\end{failure}
+
+\begin{failure}[Evidence-as-adoption]
+If scoped \(\MSBridge\) or \(\SMSAR\) evidence is read as adopted matter
+semantics, detector semantics, coupling law, matter coupling, source law,
+stress-energy semantics, matter action, Einstein equations, benchmark
+promotion, or completed derivation, the target returns \(\Obstruction\) for
+that use.
+\end{failure}
+
+\section{Proof Obligations for P4-T02 and Later Packets}
+
+Any future candidate constructor must discharge or fail closed on:
+\begin{enumerate}[label=O\arabic*.,leftmargin=*]
+  \item construction of a concrete source-side \(\lambdaSrc\) over a declared
+  subdomain of \(\AdmSrc(E)\);
+  \item source-purity proof for every component of the candidate;
+  \item explicit \(\EqMS\) and \(\SepMS\) criteria or a precise obstruction;
+  \item stability under permitted source relabelings;
+  \item finite-variation behavior;
+  \item non-collapse of \(\RRE\);
+  \item deletion tests for scoped bridge and readiness certificates;
+  \item no-target, no-detector, no-stress-energy, no-matter-action, no-metric,
+  no-benchmark, and no-process-authority certificates;
+  \item audit-before-stress-before-gate route ordering; and
+  \item exact downstream blocks preserved after construction.
+\end{enumerate}
+
+\begin{proposition}[Source-purity of admissible target candidates]
+Any future candidate satisfying all clauses of \(\PMSTarget\) is source-pure
+relative to the forbidden-import list in this artifact.
+\end{proposition}
+
+\begin{proof}
+By unfolding the definition of \(\AdmSrc(E)\), every admissible record field is
+source-side syntax, source-side certificate data, or scoped evidence/precondition
+status. By the definitions of \(\lambdaSrc\), \(\EqMS\), and \(\SepMS\), a
+candidate may assign labels, equivalences, or separations only from those
+admissible fields. Each forbidden target import or process authority triggers
+an explicit \(\Obstruction\) branch. Therefore any candidate satisfying all
+clauses is source-pure relative to this target. This proof is conditional on
+the future candidate actually satisfying the clauses; the present packet does
+not construct or adopt that candidate.
+\end{proof}
+
+\section{Downstream Routes Still Blocked}
+
+The following remain blocked:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption or \(\SMSAR\) adoption as law;
+  \item source-extension data adoption beyond exact scoped Gate Chair results;
+  \item \(\MetricData(E)\) adoption or \(\geff\) scope expansion;
+  \item coupling-law adoption;
+  \item matter-semantics adoption and detector-semantics adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics, stress-energy tensor, and matter action;
+  \item Einstein equations, benchmark promotion, benchmark Gate Chair closure,
+  completed derivation, future source-extension impossibility, and global
+  theory rejection.
+\end{itemize}
+
+\section{P4-T01 Result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_target_pending_candidate_constructor"
+  constructed_target: "PositiveSourceMatterSemanticsTarget_v1"
+  candidate_constructed: false
+  next_packet: "P4-T02 positive source-matter-semantics candidate constructor"
+  target_status: "proposal-only draft/control"
+\end{verbatim}
+
+This artifact completes the P4-T01 target formalization requirement. The
+logical next step is one bounded P4-T02 candidate-constructor packet that
+either instantiates \(\lambdaSrc,\EqMS,\SepMS\) on a declared source subdomain
+or returns a precise obstruction.
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, June 30). \textit{MSStableMatterSemanticsBridge
+v1 candidate} [Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \textit{Gate Chair review
+of scoped stable matter-semantics bridge evidence} [Internal research-control
+artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{Gate Chair review of
+scoped source matter-semantics adoption-readiness evidence} [Internal
+research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{Recommendations
+implementation plan continue task v13} [Internal implementation plan].
+
+\end{document}

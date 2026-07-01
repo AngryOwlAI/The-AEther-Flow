@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T08:33:00Z`
-- Source fingerprint: `9401cf2eca34a8182e2bed0174604a2eeb9974a78dbae93e5ba4889f7f45feab`
-- Nodes: `9331`
-- Edges: `39515`
+- Generated from tracked state as of: `2026-07-01T08:42:00Z`
+- Source fingerprint: `686783fb214f1fcac530b91f274824984cd2777707563efd31b0585f49cc7bde`
+- Nodes: `9359`
+- Edges: `39619`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 559 |
+| `completion_yaml` | 560 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 423 |
+| `handoff_yaml` | 424 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 559 |
+| `agent_job` | `support_only` | 560 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4703 |
-| `blocked_burden` | `blocked` | 1127 |
-| `claim_boundary` | `support_only` | 560 |
-| `draft_control_candidate` | `draft_control` | 437 |
+| `artifact` | `support_only` | 4718 |
+| `blocked_burden` | `blocked` | 1129 |
+| `claim_boundary` | `support_only` | 561 |
+| `draft_control_candidate` | `draft_control` | 438 |
 | `draft_control_candidate` | `proposal_only` | 64 |
-| `draft_control_candidate` | `science_draft` | 30 |
-| `frozen_negative` | `frozen_negative` | 91 |
+| `draft_control_candidate` | `science_draft` | 32 |
+| `frozen_negative` | `frozen_negative` | 92 |
 | `gate_chair_verdict` | `human_gated` | 28 |
-| `handoff` | `support_only` | 423 |
-| `human_gated_object` | `human_gated` | 258 |
+| `handoff` | `support_only` | 424 |
+| `human_gated_object` | `human_gated` | 260 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 23 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 241 |
+| `source_ontology_object` | `support_only` | 242 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 508 |
+| `task` | `support_only` | 509 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260701-014`
-- Latest handoff: `handoff-0423`
-- Handoff path: `research_control/handoffs/handoff-0423.yaml`
-- Next action: Run one bounded v13 P4-T01 positive source-matter-semantics target formalizer packet under selector and no-leap controls before any matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy route, Einstein-equation route, benchmark route, or promotion route.
+- Active task: `RT-20260701-015`
+- Latest handoff: `handoff-0424`
+- Handoff path: `research_control/handoffs/handoff-0424.yaml`
+- Next action: Run one bounded v13 P4-T02 positive source-matter-semantics candidate constructor packet under PositiveSourceMatterSemanticsTarget_v1. The constructor must either instantiate the target on a declared source subdomain or return a precise obstruction while preserving all downstream claim blocks.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

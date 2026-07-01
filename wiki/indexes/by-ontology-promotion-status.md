@@ -306,6 +306,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-AUDIT` `research_control/tasks/RT-20260701-002/artifacts/source_matter_semantics_adoption_readiness_law_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `research_control/tasks/RT-20260701-001/artifacts/source_matter_semantics_adoption_readiness_law_target_v1.tex`
 - `TEX-V13-P2-T01-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260701-007/artifacts/source_matter_semantics_adoption_readiness_law_refuter_stress_v1.tex`
+- `TEX-V13-P4-T01-POSITIVE-SOURCE-MATTER-SEMANTICS-TARGET` `research_control/tasks/RT-20260701-015/artifacts/positive_source_matter_semantics_target_v1.tex`
 
 ## superseded
 
