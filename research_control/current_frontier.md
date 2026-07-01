@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-034` and `handoff-0443`.
+`RT-20260701-035` and `handoff-0444`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-034` |
-| Latest handoff ID | `handoff-0443` |
-| Current status | `v14_p2_t03_current_frontier_wording_pilot_completed_next_claim_language_examples_pack` |
-| Current route family | post v14 p2 t03 to p2 t04 claim language examples pack no adoption |
+| Active task ID | `RT-20260701-035` |
+| Latest handoff ID | `handoff-0444` |
+| Current status | `v14_p2_t04_claim_language_examples_pack_completed_next_p2_vocabulary_validation` |
+| Current route family | post v14 p2 t04 to p2 t05 vocabulary validation no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted scoped evidence/precondition only |
-| Required next authority | bounded v14 P2-T04 claim-language examples pack |
-| Next recommended action | Run one bounded v14 P2-T04 claim-language examples pack before P2 validation linter public status propagation matter-coupling Einstein-equation benchmark or promotion work. |
+| Required next authority | bounded v14 P2-T05 vocabulary validation |
+| Next recommended action | Run one bounded v14 P2-T05 vocabulary validation before claim-language linter public status propagation matter-coupling Einstein-equation benchmark or promotion work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-034/00_TASK.yaml`.
-- Active task objective: Execute one bounded non-promotional v14 P2-T03 current-frontier wording pilot. Inspect scripts/research_control/render_current_frontier.py, integrate the subordinate status alias map into reader-facing current-frontier rendering, preserve ledger authority and legacy status visibility, regenerate the frontier, and route only to P2-T04.
-- Latest handoff path: `research_control/handoffs/handoff-0443.yaml`.
-- Latest handoff summary: RT-20260701-034 completed one bounded v14 P2-T03 current-frontier wording pilot. The current-frontier renderer now consumes the status alias map as a subordinate reader-facing status layer, displays high-risk burden aliases and matter_coupling object aliases at a glance, preserves raw ledger current_status as legacy data, and keeps the ledger authoritative. Matter coupling remains not derived or adopted, M_src and scoped g_eff remain visible as real scoped-positive results, and RR_ETransportCompletenessOrInvarianceLaw_v1 remains scoped evidence/precondition only with no source-law adoption.
-- Current route family: post v14 p2 t03 to p2 t04 claim language examples pack no adoption.
-- Next recommended action: Run one bounded v14 P2-T04 claim-language examples pack before P2 validation linter public status propagation matter-coupling Einstein-equation benchmark or promotion work.
+- Active task path: `research_control/tasks/RT-20260701-035/00_TASK.yaml`.
+- Active task objective: Execute one bounded non-promotional v14 P2-T04 claim-language examples pack. Create the scoped claim-language examples control note, include all required high-risk underclaim and overread categories, register the note, and route only to P2-T05 vocabulary validation.
+- Latest handoff path: `research_control/handoffs/handoff-0444.yaml`.
+- Latest handoff summary: RT-20260701-035 completed one bounded v14 P2-T04 claim-language examples pack. The new scoped claim-language examples note includes all required categories, with bad wording, rationale, correct wording, required source paths, and forbidden overreads. The packet preserves M_src and scoped g_eff as real scoped-positive results while preventing matter_coupling, RR_ETransportCompletenessOrInvarianceLaw_v1, validator, registry, Gate Chair, derivative, and global-rejection overreads.
+- Current route family: post v14 p2 t04 to p2 t05 vocabulary validation no adoption.
+- Next recommended action: Run one bounded v14 P2-T05 vocabulary validation before claim-language linter public status propagation matter-coupling Einstein-equation benchmark or promotion work.
 
 ## Matter-Coupling Boundary
 
@@ -164,7 +164,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P2-T04 claim-language examples pack before P2 validation linter public status propagation matter-coupling Einstein-equation benchmark or promotion work.
+Run one bounded v14 P2-T05 vocabulary validation before claim-language linter public status propagation matter-coupling Einstein-equation benchmark or promotion work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -175,25 +175,30 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-034`;
-- latest handoff: `handoff-0443`;
-- current status: `v14_p2_t03_current_frontier_wording_pilot_completed_next_claim_language_examples_pack`;
+- active task: `RT-20260701-035`;
+- latest handoff: `handoff-0444`;
+- current status: `v14_p2_t04_claim_language_examples_pack_completed_next_p2_vocabulary_validation`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `git_diff_check`: pending;
+- latest handoff validation `bootstrap_memory_system`: PASS;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
+- latest handoff validation `collect_project_improvement_signals_validate_emitted`: PASS;
+- latest handoff validation `git_diff_check`: PASS;
 - latest handoff validation `render_current_frontier_check`: PASS;
-- latest handoff validation `render_current_frontier_tests`: PASS;
-- latest handoff validation `validate_documentation_impact`: pending;
-- latest handoff validation `validate_research_control`: pending;
+- latest handoff validation `render_dependency_graph_check`: PASS;
+- latest handoff validation `report_physics_progress_metrics`: PASS_WITH_WARNINGS;
+- latest handoff validation `validate_documentation_impact`: PASS;
+- latest handoff validation `validate_research_control`: PASS;
+- latest handoff validation `validate_research_control_check_diff`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0443.yaml`
-- `research_control/tasks/RT-20260701-034/00_TASK.yaml`
+- `research_control/handoffs/handoff-0444.yaml`
+- `research_control/tasks/RT-20260701-035/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -209,7 +214,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0443*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0444*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
