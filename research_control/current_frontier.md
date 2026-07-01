@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-041` and `handoff-0450`.
+`RT-20260701-042` and `handoff-0451`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-041` |
-| Latest handoff ID | `handoff-0450` |
-| Current status | `v14_p3_t05_claim_language_phase_validation_completed_next_validation_status_inventory` |
+| Active task ID | `RT-20260701-042` |
+| Latest handoff ID | `handoff-0451` |
+| Current status | `v14_p4_t01_validation_field_inventory_completed_next_schema_split` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p4 t01 validation field inventory |
-| Required next authority | Run one bounded v14 P4-T01 validation-field inventory packet before public status propagation or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P4-T01 validation-field inventory packet before public status propagation or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p4 t02 validation status schema split |
+| Required next authority | Run one bounded v14 P4-T02 validation-status schema split packet before renderer backfill public status propagation or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P4-T02 validation-status schema split packet before renderer backfill public status propagation or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-041/00_TASK.yaml`.
-- Active task objective: Validate P3 linter behavior and coverage after remediation; run required tests and full validation; produce linter coverage summary; route to P4-T01 unless live tracked state lawfully routes otherwise.
-- Latest handoff path: `research_control/handoffs/handoff-0450.yaml`.
-- Latest handoff summary: RT-20260701-041 completed one bounded v14 P3-T05 claim-language phase validation packet. The P3 linter default scan reports PASS with zero hard failures and 2995 warnings across 2344 scanned paths, the changed-file gate reports PASS with zero hard failures and 1349 warnings across 15 scanned paths, focused tests pass, and P3 routes to P4-T01.
+- Active task path: `research_control/tasks/RT-20260701-042/00_TASK.yaml`.
+- Active task objective: Inventory validation fields used in handoffs completions current frontier scripts registries skills and templates; classify field meanings before validation-status schema repair or public status propagation.
+- Latest handoff path: `research_control/handoffs/handoff-0451.yaml`.
+- Latest handoff summary: RT-20260701-042 completed one bounded v14 P4-T01 validation-field inventory packet. The inventory classifies validation receipt fields protected authorization fields and downstream scientific-promotion authorization fields and routes to P4-T02 schema split.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P4-T01 validation-field inventory packet before public status propagation or downstream physics routes.
+- Next recommended action: Run one bounded v14 P4-T02 validation-status schema split packet before renderer backfill public status propagation or downstream physics routes.
 
 ## Matter-Coupling Boundary
 
@@ -164,7 +164,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P4-T01 validation-field inventory packet before public status propagation or downstream physics routes.
+Run one bounded v14 P4-T02 validation-status schema split packet before renderer backfill public status propagation or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -175,9 +175,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-041`;
-- latest handoff: `handoff-0450`;
-- current status: `v14_p3_t05_claim_language_phase_validation_completed_next_validation_status_inventory`;
+- active task: `RT-20260701-042`;
+- latest handoff: `handoff-0451`;
+- current status: `v14_p4_t01_validation_field_inventory_completed_next_schema_split`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -187,8 +187,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0450.yaml`
-- `research_control/tasks/RT-20260701-041/00_TASK.yaml`
+- `research_control/handoffs/handoff-0451.yaml`
+- `research_control/tasks/RT-20260701-042/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -204,7 +204,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0450*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0451*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -15,6 +15,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Related Objects
 
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v14.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
 
 ## Validation
 
