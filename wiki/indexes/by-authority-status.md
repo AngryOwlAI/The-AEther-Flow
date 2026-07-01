@@ -359,6 +359,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `research_control/tasks/RT-20260630-037/artifacts/matter_semantics_readout_response_irrelevance_target_v1.tex`
 - `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-AUDIT` `research_control/tasks/RT-20260701-002/artifacts/source_matter_semantics_adoption_readiness_law_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `research_control/tasks/RT-20260701-001/artifacts/source_matter_semantics_adoption_readiness_law_target_v1.tex`
+- `TEX-V13-P2-T01-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260701-007/artifacts/source_matter_semantics_adoption_readiness_law_refuter_stress_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -949,6 +950,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `wiki/tex/tex-v12-p7-t03-repair-msirrel-target.md`
 - `WIKI-TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-AUDIT` `wiki/tex/tex-v12-p7-t03-source-matter-semantics-adoption-readiness-law-audit.md`
 - `WIKI-TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `wiki/tex/tex-v12-p7-t03-source-matter-semantics-adoption-readiness-law-target.md`
+- `WIKI-TEX-V13-P2-T01-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-REFUTER-STRESS` `wiki/tex/tex-v13-p2-t01-source-matter-semantics-adoption-readiness-law-refuter-stress.md`
 
 ## project_control
 

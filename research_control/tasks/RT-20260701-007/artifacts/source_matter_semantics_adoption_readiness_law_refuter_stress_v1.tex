@@ -1,0 +1,282 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\BridgeDom}{\mathcal B^{\mathrm{smb}}_E}
+\newcommand{\Ready}{\mathrm{Ready}^{\mathrm{src}}_E}
+\newcommand{\AuditReady}{\mathsf{audit\_ready}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\StressVerdict}{\mathsf{stress\_survived\_pending\_selector\_no\_adoption}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{SourceMatterSemanticsAdoptionReadinessLaw v1 Refuter Stress}
+\author{Refuter Packet RT-20260701-007}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260701-007}. It
+implements v13 \texttt{P2-T01}: a bounded stress test of the proposal-only
+and draft/control law target
+\[
+  \SMSAR
+\]
+after the source-purity audit in \texttt{RT-20260701-002}. The stress verdict
+is
+\[
+  \StressVerdict.
+\]
+The Refuter loop-risk category is
+\[
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+
+This packet does not adopt \(\SMSAR\). It does not adopt a source law. It
+does not adopt source-extension data beyond exact scoped Gate Chair results.
+It does not adopt matter semantics, detector semantics, a coupling law,
+matter coupling, stress-energy semantics, a stress-energy tensor, a matter
+action, \(\MetricData(E)\), \(\geff\), Einstein equations, benchmark status,
+benchmark Gate Chair closure, a completed derivation, future source-extension
+impossibility, or global theory rejection.
+
+\begin{verbatim}
+stress_verdict: "stress_survived_pending_selector_no_adoption"
+refuter_category: "bridge_facing_candidate_path"
+source_law_adopted: false
+SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Stress Object}
+
+The stressed object is the source-side readiness map
+\[
+  \Ready:\BridgeDom\to\{\Bottom,\AuditReady,\Obstruction\}.
+\]
+The codomain labels are control labels. The positive label
+\(\AuditReady\) means only that the source-side evidence record is ready for
+audit and later stress/selector routing under its own authority. It is not
+source-law adoption, matter-semantics adoption, detector-semantics adoption,
+coupling-law adoption, matter coupling, \(\MetricData(E)\), \(\geff\), an
+Einstein-equation premise, benchmark promotion, or completed derivation.
+
+\section{Stress Theorem}
+
+\begin{theorem}[Fail-closed readiness stress theorem]
+Let \(b\in\BridgeDom\) be a record satisfying the audited O1--O8 obligations
+of \(\SMSAR\). Under the P2-T01 stress family, each perturbation branch has
+one of the following outcomes:
+\[
+  \Ready(b)=\AuditReady\quad\text{as routing status only},
+  \qquad
+  \Ready(b)=\Bottom,
+  \qquad
+  \Ready(b)=\Obstruction.
+\]
+No branch yields source-law adoption, source-extension data adoption beyond
+exact scoped Gate Chair results, matter semantics, detector semantics,
+coupling law, matter coupling, stress-energy semantics, matter action,
+\(\MetricData(E)\), \(\geff\), Einstein equations, benchmark promotion, or
+completed derivation.
+\end{theorem}
+
+\begin{proof}
+Readiness is defined only on the source-side evidence-record domain
+\(\BridgeDom\). The written O1--O8 obligations require scoped evidence
+provenance, source-domain closure, \(\mathrm{RR}_E\) non-collapse, relabeling
+naturality, finite-variation case classification, no-target certificates,
+audit-before-stress-before-gate ordering, and fail-closed adoption pressure.
+The fail-closed clauses send target import, evidence-as-adoption overread, and
+process-authority dependence to \(\Obstruction\). Therefore a stress branch
+that preserves all required source-side data may preserve \(\AuditReady\) only
+as a routing label. A branch that deletes required source data or imports
+forbidden target/process authority cannot become a stronger positive claim; it
+must bottom out or obstruct.
+\end{proof}
+
+\section{Stress Case Table}
+
+\begin{longtable}{p{0.24\linewidth}p{0.22\linewidth}p{0.43\linewidth}}
+\toprule
+Stress target & Result & Refuter finding \\
+\midrule
+Readiness-label stability & Survives &
+\(\AuditReady\) remains a codomain routing label. Treating it as adoption,
+matter semantics, detector semantics, coupling law, matter coupling, or proof
+authority routes to \(\Obstruction\). \\
+Source relabeling naturality & Conditional survival &
+If \(\rho:E\to E'\) transports the source evidence record, certificates,
+\(\mathrm{RR}_E\), fail-closed branches, and label transport by source-defined
+syntax, readiness commutes. If \(\rho_L\) is target-defined, readiness
+obstructs. \\
+Finite-variation behavior & Conditional survival &
+For a finite variation \(v:E\rightsquigarrow E_v\), the branch must preserve
+all source-side certificates and guards, bottom out, or obstruct. Target
+metric, detector, stress-energy, matter-action, Einstein-equation, or
+benchmark behavior cannot preserve readiness. \\
+Certificate deletion & Fails closed &
+Deleting \(\mathrm{NoTargetImport}_{v1}\),
+\(\mathrm{NoDetectorImport}_{v1}\), \(\mathrm{NoStressEnergyImport}_{v1}\),
+or \(\mathrm{NoMatterActionImport}_{v1}\) removes the positive branch. \\
+\(\mathrm{RR}_E\) separation & Survives as non-collapse guard &
+Two records with distinct \(\mathrm{RR}_E\) components may not be identified to
+manufacture readiness. Collapsing them is an obstruction, not an irrelevance
+theorem. \\
+Scoped-evidence pressure & Blocked &
+The \(\MSBridge(E;\Bcur)\) evidence accepted in \texttt{RT-20260630-056}
+remains scoped evidence/precondition only. It does not become source-law or
+matter-semantics adoption. \\
+No-target certificate pressure & Blocked &
+Negative certificates are guards. They do not construct positive matter
+theory, detector semantics, stress-energy, matter action, or coupling law. \\
+\(\geff\) pressure & Blocked &
+Scoped \(\geff\) status and \(\MetricData(E)\) remain outside the readiness
+premises. Importing either creates \(\Obstruction\). \\
+Benchmark pressure & Blocked &
+Exact-GR benchmark success or target-GR fit cannot prove readiness. Importing
+benchmark behavior creates \(\Obstruction\). \\
+Process-authority pressure & Blocked &
+Registry rows, validator PASS, handoffs, approvals, role identity, generated
+derivatives, commit state, file order, and caches are routing/provenance
+surfaces only; as mathematical premises they create \(\Obstruction\). \\
+\bottomrule
+\end{longtable}
+
+\section{Pressure-Pair Lemmas}
+
+\begin{lemma}[\(\mathrm{RR}_E\) pressure-pair non-collapse]
+Let \(b_0,b_1\in\BridgeDom\) agree except for distinct
+\(\mathrm{RR}_E\) components. A proof of readiness for \(b_0\) cannot be
+transferred to \(b_1\) by identifying their \(\mathrm{RR}_E\) records. Either
+each record satisfies the readiness obligations independently, or the
+attempted transfer fails closed.
+\end{lemma}
+
+\begin{proof}
+O3 explicitly blocks identification of distinct \(\mathrm{RR}_E\) records to
+manufacture readiness. The audit also classifies \(\mathrm{RR}_E\) separation
+as source syntax rather than detector response, empirical measurement,
+stress-energy semantics, matter action, or coupling-law data. Therefore
+collapse is not an admissible proof operation.
+\end{proof}
+
+\begin{lemma}[Certificate deletion fail-closed branch]
+If one of the no-target, no-detector, no-stress-energy, or no-action
+certificates is deleted from \(b\), then \(\Ready(b)\neq\AuditReady\) for the
+deleted-certificate use.
+\end{lemma}
+
+\begin{proof}
+O6 requires explicit certificates blocking target atlas, target metric,
+proper-time normalization, detector semantics, empirical calibration,
+stress-energy, matter action, conservation law, coupling-law adoption,
+\(\MetricData(E)\), \(\geff\), Einstein equations, and benchmark behavior.
+Deleting any required certificate removes the admissibility guard. The
+fail-closed clause then returns \(\Bottom\) or \(\Obstruction\).
+\end{proof}
+
+\begin{lemma}[Process-authority immunity]
+Changing registry metadata, validator results, handoff text, approval state,
+role identity, generated derivatives, commit state, file order, or local cache
+state cannot change \(\Ready(b)\) unless the mathematical source-side record
+itself changes.
+\end{lemma}
+
+\begin{proof}
+O2 forbids process authority as a mathematical premise, and the
+process-authority fail-closed condition sends any such dependence to
+\(\Obstruction\). Thus process surfaces may document routing or provenance but
+cannot prove readiness.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Prior scoped source-only context only; no scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+Matter coupling & \(\SMSAR\) stress survives as bridge-facing draft/control
+path pending selector; no source law, matter semantics, detector semantics,
+coupling law, or matter coupling is adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local readiness-law stress table recorded; no
+global finite-variation robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No new Gate Chair verdict; future adoption remains
+human-gated. \\
+Current route freeze or hard-fail status & Not frozen; selector route is open. \\
+\bottomrule
+\end{longtable}
+
+\section{Verdict and Next Route}
+
+The stress result is
+\[
+  \StressVerdict,
+  \qquad
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+The lawful next packet is one bounded v13 \texttt{P2-T02} selector to classify
+the post-stress route. Stress survival does not itself authorize Gate Chair
+review, source-law adoption, matter-semantics adoption, detector-semantics
+adoption, coupling-law adoption, matter coupling, Einstein-equation work,
+benchmark promotion, or claim promotion.
+
+\begin{nonconclusion}[Stress survival is not proof authority]
+This artifact is not evidence that GR has been derived from the source
+ontology. It is not evidence for stress-energy semantics, a stress-energy
+tensor, a matter action, Einstein equations, benchmark status, or completed
+derivation.
+\end{nonconclusion}
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, June 30).
+\emph{Gate Chair review of scoped stable matter-semantics bridge evidence}
+[Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{SourceMatterSemanticsAdoptionReadinessLaw v1 target}
+[Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{SourceMatterSemanticsAdoptionReadinessLaw v1 smuggling audit}
+[Internal research-control artifact].
+
+\end{document}
