@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-008` and `handoff-0417`.
+`RT-20260701-009` and `handoff-0418`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-008` |
-| Latest handoff ID | `handoff-0417` |
-| Current status | `post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_selector_requires_narrow_gate_no_adoption` |
-| Current route family | post v13 p2 t02 source matter semantics adoption readiness law selector requires narrow gate no adoption |
+| Active task ID | `RT-20260701-009` |
+| Latest handoff ID | `handoff-0418` |
+| Current status | `post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_accepted_scoped_evidence_precondition_no_adoption` |
+| Current route family | post v13 p2 t02 source matter semantics adoption readiness law gate accepted scoped evidence precondition no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | narrow Gate Chair evidence-status/precondition review for SourceMatterSemanticsAdoptionReadinessLaw_v1 |
-| Next recommended action | Run one bounded Gate Chair packet, under the current user authorization, to decide only whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope. |
+| Required next authority | v13 P2-T03 scientific boundary update or post-gate selector/control packet |
+| Next recommended action | Run one bounded v13 P2-T03 scientific boundary update or equivalent control packet to align current frontier and ledger wording after scoped SourceMatterSemanticsAdoptionReadinessLaw_v1 evidence/precondition acceptance while preserving all blocked downstream claims. |
 
 ## Active Boundary
 
@@ -48,16 +48,16 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-008/00_TASK.yaml`.
-- Active task objective: Classify the post-stress route for SourceMatterSemanticsAdoptionReadinessLaw_v1 after P2-T01 stress survival, consider exactly the eleven P2-T02 route families, and select one next bounded packet without adoption or downstream promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0417.yaml`.
-- Latest handoff summary: RT-20260701-008 completed v13 P2-T02 post-stress route selection for SourceMatterSemanticsAdoptionReadinessLaw_v1. The selector chose a future narrow Gate Chair evidence-status/precondition review and issued no Gate Chair verdict. No source-law adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 adoption, source-extension data adoption beyond exact scoped gate results, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark promotion, or completed derivation occurred.
-- Current route family: post v13 p2 t02 source matter semantics adoption readiness law selector requires narrow gate no adoption.
-- Next recommended action: Run one bounded Gate Chair packet, under the current user authorization, to decide only whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope.
+- Active task path: `research_control/tasks/RT-20260701-009/00_TASK.yaml`.
+- Active task objective: Execute one bounded Gate Chair review under exact tracked authorization to decide whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted only as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope while preserving all source-law, SourceMatterSemanticsAdoptionReadinessLaw_v1-adoption, source-extension-data, MetricData(E), g_eff, coupling-law, matter-semantics, detector-semantics, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, and completed-derivation claim blocks.
+- Latest handoff path: `research_control/handoffs/handoff-0418.yaml`.
+- Latest handoff summary: RT-20260701-009 completed a protected Gate Chair evidence-status/precondition review for SourceMatterSemanticsAdoptionReadinessLaw_v1. The Gate Chair accepted the object only as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope. No source-law adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 adoption as law, source-extension data adoption beyond this exact scoped result, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark promotion, or completed derivation occurred.
+- Current route family: post v13 p2 t02 source matter semantics adoption readiness law gate accepted scoped evidence precondition no adoption.
+- Next recommended action: Run one bounded v13 P2-T03 scientific boundary update or equivalent control packet to align current frontier and ledger wording after scoped SourceMatterSemanticsAdoptionReadinessLaw_v1 evidence/precondition acceptance while preserving all blocked downstream claims.
 
 ## Matter-Coupling Boundary
 
-The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: MSStableMatterSemanticsBridge_v1(E;B_current) is accepted only as scoped source-extension stable matter-semantics bridge evidence/precondition under finite/local source-side and fail-closed scope while no source-law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260630-056/artifacts/ms_stable_matter_semantics_bridge_source_extension_evidence_gate_chair_review_v1.tex`.
+The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: SourceMatterSemanticsAdoptionReadinessLaw_v1 is accepted only as scoped source-extension matter-semantics adoption-readiness evidence/precondition under declared source-side and fail-closed scope while no source-law adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex`.
 
 This ledger status must not be read as coupling-law adoption, universal matter-coupling derivation, matter-coupling adoption, stress-energy semantics, stress-energy tensor, matter action, detector semantics, Einstein equations, benchmark promotion, or completed derivation.
 
@@ -120,7 +120,7 @@ source if this summary drifts.
 | `resp_lc` | `response_localization_resp_lc` | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
 | `g_eff` | `effective_metric_g_eff` | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
-| `matter_coupling` | `matter_coupling` | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260630-056/artifacts/ms_stable_matter_semantics_bridge_source_extension_evidence_gate_chair_review_v1.tex` |
+| `matter_coupling` | `matter_coupling` | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
 | `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded Gate Chair packet, under the current user authorization, to decide only whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope.
+Run one bounded v13 P2-T03 scientific boundary update or equivalent control packet to align current frontier and ledger wording after scoped SourceMatterSemanticsAdoptionReadinessLaw_v1 evidence/precondition acceptance while preserving all blocked downstream claims.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-008`;
-- latest handoff: `handoff-0417`;
-- current status: `post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_selector_requires_narrow_gate_no_adoption`;
+- active task: `RT-20260701-009`;
+- latest handoff: `handoff-0418`;
+- current status: `post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_accepted_scoped_evidence_precondition_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0417.yaml`
-- `research_control/tasks/RT-20260701-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0418.yaml`
+- `research_control/tasks/RT-20260701-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0417*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0418*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
