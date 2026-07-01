@@ -1,0 +1,68 @@
+task_id: "RT-20260701-005"
+task_type: "post_v13_p0_t03_recommendation_trace_matrix"
+status: "completed"
+created_at: "2026-07-01T04:56:56Z"
+updated_at: "2026-07-01T04:56:56Z"
+closed_at: "2026-07-01T04:56:56Z"
+parent_task_id: "RT-20260701-004"
+parent_handoff_id: "handoff-0413"
+decision_id: "DDR-20260701-005"
+job_id: "AJ-RT-20260701-005-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260701-005"
+requires_human_gate: false
+human_authorization_note: "The current user goal grants human authorization for human gates. This trace-matrix packet does not consume Gate Chair authority, adoption authority, benchmark authority, or physics claim-promotion authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v13"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T03"
+  plan_task_name: "Recommendation trace matrix"
+objective: "Create a task-local v13 recommendation trace matrix linking each recommendation to phases, tasks, expected outputs, validators, dependencies, and claim boundaries before the P0-T04 execution gate."
+closure_status: "post_v13_p0_t03_recommendation_trace_matrix_complete_no_physics_delta"
+trace_matrix:
+  artifact: "research_control/tasks/RT-20260701-005/artifacts/v13_recommendation_trace_matrix.md"
+  recommendations_covered:
+    - "R1"
+    - "R2"
+    - "R3"
+    - "R4"
+    - "R5"
+    - "R6"
+    - "R7"
+    - "R8"
+    - "R9"
+    - "R10"
+    - "R11"
+    - "R12"
+    - "R13"
+    - "R14"
+    - "R15"
+  task_coverage_status: "all_v13_plan_tasks_mapped_to_at_least_one_recommendation_or_all_phase_control_scope"
+  control_only: true
+claim_boundary:
+  allowed_scope: "Project-control traceability artifact for v13 P0-T03 only"
+  v13_plan_status: "implementation guidance only"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifact: "research_control/tasks/RT-20260701-005/artifacts/v13_recommendation_trace_matrix.md"
+next_recommended_action: "Run one bounded P0-T04 V13 execution gate control packet. P0-T04 must read P0-T02 and P0-T03 artifacts and select exactly one next task without treating all v13 phases as globally authorized."
+notes: "This task implements only P0-T03. It does not execute P0-T04, P1-T01, P2-T01, any physics stress packet, any Gate Chair packet, or any downstream v13 phase."
+documentation_impact_id: "DI-RT-20260701-005-001"

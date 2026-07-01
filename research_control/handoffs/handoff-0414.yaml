@@ -1,0 +1,71 @@
+handoff_id: "handoff-0414"
+created_at: "2026-07-01T04:56:56Z"
+task_id: "RT-20260701-005"
+decision_id: "DDR-20260701-005"
+job_id: "AJ-RT-20260701-005-001"
+completion_path: "research_control/tasks/RT-20260701-005/jobs/completions/AJC-AJ-RT-20260701-005-001.yaml"
+source_task_id: "RT-20260701-005"
+source_job_id: "AJ-RT-20260701-005-001"
+source_completion_id: "AJC-AJ-RT-20260701-005-001"
+status: "completed"
+summary: "RT-20260701-005 completed v13 P0-T03 recommendation trace matrix. The matrix covers recommendations R1 through R15 and every P0 through P16 plan task, marks P0-T01 and P0-T02 as completed prior evidence, marks P0-T03 as completed by this packet, and leaves later tasks behind P0-T04 or selector/final-audit dependencies. No physics claim changed."
+next_action: "Run one bounded P0-T04 V13 execution gate control packet. P0-T04 must read the P0-T02 baseline reconciliation and P0-T03 trace matrix, then select exactly one next task without globally authorizing all v13 phases. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it."
+loop_risk_route: "post_v13_p0_t03_trace_matrix_handoff_to_execution_gate_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P0-T04 V13 execution gate"
+  deferred_scientific_authority: "handoff-0411 remains the scientific source for the later SourceMatterSemanticsAdoptionReadinessLaw_v1 Refuter stress after P0-T04 if still current."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "trace matrix as physics proof"
+  - "trace matrix as source-law adoption"
+  - "trace matrix as Gate Chair verdict"
+  - "trace matrix as matter coupling"
+  - "trace matrix as Einstein-equation evidence"
+  - "trace matrix as benchmark promotion"
+  - "trace matrix as completed derivation"
+  - "P0-T03 as execution of all v13 phases"
+trace_matrix:
+  plan_id: "recommendations_implementation_plan_continue_task-v13"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+  artifact: "research_control/tasks/RT-20260701-005/artifacts/v13_recommendation_trace_matrix.md"
+  recommendation_ids_covered: "R1 through R15"
+  every_recommendation_mapped: true
+  every_task_mapped: true
+  orphan_tasks_detected: false
+  control_only: true
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted"
+  meaning: "RT-20260701-005 changes no Distance-to-GR ledger row. It records project-control traceability only and does not change matter coupling, g_eff, MetricData(E), Einstein equations, benchmark promotion, or completed derivation status."
+validation:
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
