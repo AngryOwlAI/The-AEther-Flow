@@ -241,6 +241,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1` `wiki/markdown/md-research-control-design-frontier-theorem-inventory-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `wiki/markdown/md-research-control-design-github-facing-explainer-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `wiki/markdown/md-research-control-design-gr-derivation-burden-map.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-HIGH-RISK-SELECTOR-CHECKLIST` `wiki/markdown/md-research-control-design-high-risk-selector-checklist.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
@@ -697,6 +698,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1` `research_control/design/frontier_theorem_inventory_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GITHUB-FACING-EXPLAINER-CONTRACT` `research_control/design/github_facing_explainer_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `research_control/design/gr_derivation_burden_map.md`
+- `MD-RESEARCH-CONTROL-DESIGN-HIGH-RISK-SELECTOR-CHECKLIST` `research_control/design/high_risk_selector_checklist.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `research_control/design/mathematical_decisiveness_completion_contract.md`

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-011` and `handoff-0420`.
+`RT-20260701-012` and `handoff-0421`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-011` |
-| Latest handoff ID | `handoff-0420` |
-| Current status | `v13_p3_t01_no_leap_route_rule_formalized_no_physics_delta` |
-| Current route family | post v13 p3 t01 no leap rule route to selector checklist update |
+| Active task ID | `RT-20260701-012` |
+| Latest handoff ID | `handoff-0421` |
+| Current status | `v13_p3_t02_selector_checklist_updated_no_physics_delta` |
+| Current route family | post v13 p3 t02 selector checklist route to post stress template |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P3-T02 selector checklist update control packet |
-| Next recommended action | Run one bounded v13 P3-T02 selector checklist update control packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route. |
+| Required next authority | v13 P3-T03 post-stress route template control packet |
+| Next recommended action | Run one bounded v13 P3-T03 post-stress route template control packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-011/00_TASK.yaml`.
-- Active task objective: Execute one bounded v13 P3-T01 no-leap route rule formalization control packet. Create a registered route rule proving that construction pass, source-purity audit pass, Refuter stress survival, and scoped Gate Chair evidence/precondition acceptance authorize only a selector-named next bounded route or exact protected Gate Chair decision, not matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling derivation Einstein equations benchmark promotion or completed derivation.
-- Latest handoff path: `research_control/handoffs/handoff-0420.yaml`.
-- Latest handoff summary: RT-20260701-011 completed v13 P3-T01 as a no-leap route rule formalization control packet. The new registered control source research_control/design/no_leap_route_rule.md states that construction pass source-purity audit pass Refuter stress survival and scoped Gate Chair evidence/precondition acceptance authorize only selector-named next bounded routes or exact protected Gate Chair decisions, not downstream adoption derivation benchmark promotion or completed derivation.
-- Current route family: post v13 p3 t01 no leap rule route to selector checklist update.
-- Next recommended action: Run one bounded v13 P3-T02 selector checklist update control packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+- Active task path: `research_control/tasks/RT-20260701-012/00_TASK.yaml`.
+- Active task objective: Execute one bounded v13 P3-T02 selector checklist update control packet. Create a registered high-risk selector checklist requiring every high-risk selector to explain the exact object reviewed, status classification, missing source laws, forbidden target imports, blocked downstream routes, lowest-authority route rationale, freeze applicability, human-gate requirement, new mathematical payload status, and repeated-burden status.
+- Latest handoff path: `research_control/handoffs/handoff-0421.yaml`.
+- Latest handoff summary: RT-20260701-012 completed v13 P3-T02 as a selector checklist update control packet. The new registered control source research_control/design/high_risk_selector_checklist.md requires future high-risk selectors to answer the ten P3-T02 questions covering exact object, status classification, missing source laws, forbidden target imports, blocked downstream routes, lowest-authority route rationale, freeze applicability, human-gate requirement, new mathematical payload status, and repeated-burden status.
+- Current route family: post v13 p3 t02 selector checklist route to post stress template.
+- Next recommended action: Run one bounded v13 P3-T03 post-stress route template control packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P3-T02 selector checklist update control packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+Run one bounded v13 P3-T03 post-stress route template control packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-011`;
-- latest handoff: `handoff-0420`;
-- current status: `v13_p3_t01_no_leap_route_rule_formalized_no_physics_delta`;
+- active task: `RT-20260701-012`;
+- latest handoff: `handoff-0421`;
+- current status: `v13_p3_t02_selector_checklist_updated_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0420.yaml`
-- `research_control/tasks/RT-20260701-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0421.yaml`
+- `research_control/tasks/RT-20260701-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0420*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0421*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
