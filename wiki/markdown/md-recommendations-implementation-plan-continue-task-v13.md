@@ -17,6 +17,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v13.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-HIGH-RISK-SELECTOR-CHECKLIST` `research_control/design/high_risk_selector_checklist.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `research_control/design/no_leap_route_rule.md`
+- Backlink from `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 
 ## Validation
 
