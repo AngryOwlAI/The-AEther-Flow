@@ -22,6 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_ID = "current_frontier_state_v1"
 DEFAULT_FRONTIER_PATH = "research_control/current_frontier.md"
 LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
+STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
 
 BLOCKED_CLAIMS = [
     "canonical ontology edit",
@@ -73,6 +74,19 @@ def read_csv_rows(repo_root: Path, rel_path: str) -> list[dict[str, str]]:
         raise FrontierRenderError(f"missing required CSV source: {rel_path}")
     with path.open(newline="", encoding="utf-8") as handle:
         return [{key: value or "" for key, value in row.items()} for row in csv.DictReader(handle)]
+
+
+def load_optional_control_yaml(repo_root: Path, rel_path: str) -> dict[str, Any]:
+    path = repo_path(repo_root, rel_path)
+    if not path.exists():
+        return {}
+    try:
+        data = load_yaml(path)
+    except StrictYamlError as exc:
+        raise FrontierRenderError(f"invalid YAML source {rel_path}: {exc}") from exc
+    if not isinstance(data, dict):
+        raise FrontierRenderError(f"YAML source is not a mapping: {rel_path}")
+    return data
 
 
 def text_value(value: Any) -> str:
@@ -127,10 +141,29 @@ def sentence_fragment(value: Any, fallback: str) -> str:
     return text if text else fallback
 
 
-def ledger_rows_for_markdown(rows: list[dict[str, str]]) -> str:
+def status_alias_rows(status_aliases: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    aliases = status_aliases.get("row_aliases")
+    if not isinstance(aliases, dict):
+        return {}
+    return {str(key): value for key, value in aliases.items() if isinstance(value, dict)}
+
+
+def status_alias_for_row(row: dict[str, str], aliases: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    return aliases.get(row.get("burden_id", ""), {})
+
+
+def reader_facing_status(row: dict[str, str], aliases: dict[str, dict[str, Any]]) -> str:
+    alias = status_alias_for_row(row, aliases)
+    display = text_value(alias.get("display_status"))
+    if display:
+        return display
+    return text_value(row.get("current_status"))
+
+
+def ledger_rows_for_markdown(rows: list[dict[str, str]], aliases: dict[str, dict[str, Any]]) -> str:
     lines = [
-        "| Burden ID | Milestone | Current status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         lines.append(
@@ -139,6 +172,7 @@ def ledger_rows_for_markdown(rows: list[dict[str, str]]) -> str:
                 [
                     code_value(row.get("burden_id", "")),
                     code_value(row.get("milestone", "")),
+                    md_cell(reader_facing_status(row, aliases)),
                     md_cell(row.get("current_status", "")),
                     md_cell(row.get("control_status", "")),
                     md_cell(row.get("mathematical_status", "")),
@@ -157,10 +191,13 @@ def row_by_burden(rows: list[dict[str, str]], burden_id: str) -> dict[str, str]:
     return next((item for item in rows if item.get("burden_id") == burden_id), {})
 
 
-def layered_boundary_line(row: dict[str, str]) -> str:
+def layered_boundary_line(row: dict[str, str], aliases: dict[str, dict[str, Any]]) -> str:
     burden = row.get("burden_id", "")
+    alias = status_alias_for_row(row, aliases)
+    alias_text = text_value(alias.get("display_status"))
+    alias_part = f" reader-facing `{md_cell(alias_text)}`;" if alias_text else ""
     return (
-        f"- `{md_cell(burden)}`: control `{md_cell(row.get('control_status', ''))}`; "
+        f"- `{md_cell(burden)}`:{alias_part} control `{md_cell(row.get('control_status', ''))}`; "
         f"mathematical `{md_cell(row.get('mathematical_status', ''))}`; "
         f"physical `{md_cell(row.get('physical_status', ''))}`; "
         f"promotion `{md_cell(row.get('promotion_status', ''))}`; "
@@ -168,14 +205,97 @@ def layered_boundary_line(row: dict[str, str]) -> str:
     )
 
 
-def layered_boundary_notes(rows: list[dict[str, str]]) -> str:
-    focus_ids = ["matter_coupling", "g_eff", "einstein_equations", "benchmark_promotion"]
+def layered_boundary_notes(rows: list[dict[str, str]], aliases: dict[str, dict[str, Any]]) -> str:
+    focus_ids = ["m_src", "g_eff", "matter_coupling", "einstein_equations", "benchmark_promotion"]
     lines = []
     for burden_id in focus_ids:
         row = row_by_burden(rows, burden_id)
         if row:
-            lines.append(layered_boundary_line(row))
+            lines.append(layered_boundary_line(row, aliases))
     return "\n".join(lines)
+
+
+def alias_table_rows(aliases: dict[str, dict[str, Any]], focus_ids: list[str]) -> str:
+    lines = [
+        "| Object | Reader-facing status | Required qualifier | Required blocked phrase |",
+        "| --- | --- | --- | --- |",
+    ]
+    for key in focus_ids:
+        alias = aliases.get(key, {})
+        if not alias:
+            continue
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    code_value(key),
+                    md_cell(alias.get("display_status", "")),
+                    md_cell(alias.get("required_qualifier", "")),
+                    md_cell(alias.get("required_blocked_phrase", "")),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines)
+
+
+def object_alias_table_rows(aliases: dict[str, dict[str, Any]], burden_id: str) -> str:
+    parent = aliases.get(burden_id, {})
+    object_aliases = parent.get("object_aliases") if isinstance(parent, dict) else {}
+    if not isinstance(object_aliases, dict) or not object_aliases:
+        return "No object aliases are registered for this burden."
+    lines = [
+        "| Object | Reader-facing status | Required qualifier |",
+        "| --- | --- | --- |",
+    ]
+    for key, alias in object_aliases.items():
+        if not isinstance(alias, dict):
+            continue
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    code_value(key),
+                    md_cell(alias.get("display_status", "")),
+                    md_cell(alias.get("required_qualifier", "")),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines)
+
+
+def scoped_alias_section(status_aliases: dict[str, Any]) -> str:
+    aliases = status_alias_rows(status_aliases)
+    if not aliases:
+        return (
+            "No status alias map is currently loaded. The renderer is falling back "
+            "to layered ledger fields only."
+        )
+    focus_ids = [
+        "m_src",
+        "g_eff",
+        "matter_coupling",
+        "einstein_equations",
+        "benchmark_promotion",
+        "finite_toy_metric_response",
+    ]
+    rules = status_aliases.get("authority_rules")
+    rules = rules if isinstance(rules, dict) else {}
+    return (
+        "The renderer consumes the subordinate status alias map at "
+        f"`{STATUS_ALIAS_PATH}` for reader-facing wording only. The ledger "
+        "continues to govern if an alias and ledger row ever conflict. Aliases "
+        "are not physics proof, routing authority, benchmark authority, or "
+        "claim-promotion authority.\n\n"
+        f"- High-risk rows must not render bare `accepted`: {str(bool_value(rules.get('high_risk_rows_must_not_render_bare_accepted'))).lower()}.\n"
+        f"- Aliases override the ledger: {str(not bool_value(rules.get('aliases_do_not_override_ledger'))).lower()}.\n"
+        f"- Aliases are physics proof: {str(bool_value(rules.get('aliases_are_physics_proof'))).lower()}.\n\n"
+        "High-risk burden aliases:\n\n"
+        f"{alias_table_rows(aliases, focus_ids)}\n\n"
+        "`matter_coupling` object aliases:\n\n"
+        f"{object_alias_table_rows(aliases, 'matter_coupling')}"
+    )
 
 
 def route_family_text(handoff: dict[str, Any], task: dict[str, Any]) -> str:
@@ -257,6 +377,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
     latest_handoff = load_control_yaml(repo_root, handoff_path(latest_handoff_id))
     active_task = load_control_yaml(repo_root, active_task_path(active_task_id))
     ledger_rows = read_csv_rows(repo_root, LEDGER_PATH)
+    status_aliases = load_optional_control_yaml(repo_root, STATUS_ALIAS_PATH)
     next_action = text_value(latest_handoff.get("next_action")) or text_value(
         program_state.get("next_recommended_action")
     )
@@ -274,6 +395,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "active_task": active_task,
         "latest_handoff": latest_handoff,
         "distance_to_gr_rows": ledger_rows,
+        "status_aliases": status_aliases,
         "route_family": route_family_text(latest_handoff, active_task),
         "target_derivation_milestone": target_milestone_text(latest_handoff),
         "current_burden": current_burden_text(latest_handoff),
@@ -285,6 +407,8 @@ def render_markdown(state: dict[str, Any]) -> str:
     task = state["active_task"]
     handoff = state["latest_handoff"]
     ledger_rows = state["distance_to_gr_rows"]
+    status_aliases = state["status_aliases"]
+    aliases = status_alias_rows(status_aliases)
     task_objective = text_value(task.get("objective"))
     handoff_summary = text_value(handoff.get("summary"))
     validation = handoff.get("validation") if isinstance(handoff.get("validation"), dict) else {}
@@ -376,19 +500,25 @@ columns below are the reader-facing anti-overread boundary:
 
 High-risk rows:
 
-{layered_boundary_notes(ledger_rows)}
+{layered_boundary_notes(ledger_rows, aliases)}
 
 ## Exact Blocked Claims
 
 {line_list(BLOCKED_CLAIMS)}
 
+## Scoped-Positive Alias Pilot
+
+{scoped_alias_section(status_aliases)}
+
 ## Distance-To-GR Table
 
 This table summarizes the layered fields in
 `registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger remains the authoritative
-source if this summary drifts.
+source if this summary drifts. The `Reader-facing status` column is rendered
+from `{STATUS_ALIAS_PATH}` when a row alias exists. The `Legacy status` column
+preserves the raw ledger `current_status` field for continuity.
 
-{ledger_rows_for_markdown(ledger_rows)}
+{ledger_rows_for_markdown(ledger_rows, aliases)}
 
 ## Exact Next Route
 
@@ -416,6 +546,7 @@ This renderer reads only tracked control sources:
 - `{md_cell(state['latest_handoff_path'])}`
 - `{md_cell(state['active_task_path'])}`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
+- `{STATUS_ALIAS_PATH}` when present
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
 SQLite indexes, and `.local/` caches remain retrieval or reader layers only.
@@ -426,14 +557,14 @@ They are not scientific authority and are not inputs to this rendered state.
 The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 [Internal control note].
 
-The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
+The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff {state['latest_handoff_id'].replace('handoff-', '')}*
+The AEther-Flow Research Project. (2026, July 1). *Handoff {state['latest_handoff_id'].replace('handoff-', '')}*
 [Internal research-control handoff].
 
-The AEther-Flow Research Project. (2026, June 29). *Recommendations
-implementation plan continue task v12* [Internal implementation plan].
+The AEther-Flow Research Project. (2026, July 1). *Recommendations
+implementation plan continue task v14* [Internal implementation plan].
 """
     return body.strip() + "\n"
 
@@ -441,6 +572,14 @@ implementation plan continue task v12* [Internal implementation plan].
 def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
     state = build_state(repo_root)
     markdown = render_markdown(state)
+    source_paths = [
+        state["program_state_path"],
+        state["latest_handoff_path"],
+        state["active_task_path"],
+        state["ledger_path"],
+    ]
+    if state["status_aliases"]:
+        source_paths.append(STATUS_ALIAS_PATH)
     payload = {
         "schema_id": SCHEMA_ID,
         "active_task_id": state["active_task_id"],
@@ -451,15 +590,13 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "target_derivation_milestone": state["target_derivation_milestone"],
         "current_burden": state["current_burden"],
         "required_next_authority": state["required_next_authority"],
-        "source_paths": [
-            state["program_state_path"],
-            state["latest_handoff_path"],
-            state["active_task_path"],
-            state["ledger_path"],
-        ],
+        "source_paths": source_paths,
         "frontier_path": DEFAULT_FRONTIER_PATH,
         "rendered_hash": sha256_text(markdown),
         "distance_to_gr_row_count": len(state["distance_to_gr_rows"]),
+        "status_alias_path": STATUS_ALIAS_PATH if state["status_aliases"] else "",
+        "status_alias_row_count": len(status_alias_rows(state["status_aliases"])),
+        "status_alias_integration": "reader_facing_status_column",
         "layered_status_fields": [
             "control_status",
             "mathematical_status",

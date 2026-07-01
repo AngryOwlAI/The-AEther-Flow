@@ -15,7 +15,7 @@ authority_rules:
   renderer_must_preserve_layered_status_fields: true
   high_risk_rows_must_not_render_bare_accepted: true
   if_alias_conflicts_with_ledger: "ledger governs"
-  renderer_integration_status: "deferred_to_v14_p2_t03_current_frontier_wording_pilot"
+  renderer_integration_status: "integrated_into_current_frontier_renderer_by_v14_p2_t03"
 bare_accepted_policy:
   default: "Bare accepted is disallowed for high-risk rows unless immediately qualified by scope object and blocked downstream claims."
   high_risk_rendering: "replace_with_scoped_positive_alias"
@@ -167,10 +167,13 @@ row_aliases:
       - "full metric-response route impossible"
     required_blocked_phrase: "No g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory rejection follows from this frozen-negative toy route."
 renderer_integration:
-  status: "deferred"
+  status: "integrated"
   deferred_to_plan_task_id: "P2-T03"
   deferred_to_task_type: "current_frontier_wording_update_control_packet"
-  note: "This P2-T02 packet creates the canonical alias data and acceptance receipt only. P2-T03 must inspect scripts/research_control/render_current_frontier.py and decide how to consume this map or equivalent alias data."
+  integrated_by_task_id: "RT-20260701-034"
+  integrated_by_job_id: "AJ-RT-20260701-034-001"
+  renderer_path: "scripts/research_control/render_current_frontier.py"
+  note: "P2-T03 integrates this alias map into the current-frontier renderer as a subordinate reader-facing status layer while preserving ledger authority and the raw legacy current_status field."
 source_materials:
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "research_control/design/scoped_positive_claim_vocabulary.md"

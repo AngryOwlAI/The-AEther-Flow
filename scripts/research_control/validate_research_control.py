@@ -3874,7 +3874,9 @@ def validate_current_frontier_sync(report: ValidationReport, tasks: dict[str, di
         )
         return
     ledger_status = _normalize_frontier_cell(ledger_row.get("current_status", ""))
-    snapshot_status = _normalize_frontier_cell(snapshot_row.get("Current status", ""))
+    snapshot_status = _normalize_frontier_cell(
+        snapshot_row.get("Legacy status", "") or snapshot_row.get("Current status", "")
+    )
     if ledger_status != snapshot_status:
         _current_frontier_drift_error(
             report,

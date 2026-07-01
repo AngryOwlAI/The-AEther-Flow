@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-033` and `handoff-0442`.
+`RT-20260701-034` and `handoff-0443`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-033` |
-| Latest handoff ID | `handoff-0442` |
-| Current status | `v14_p2_t02_high_risk_status_alias_map_completed_next_current_frontier_wording_pilot` |
-| Current route family | post v14 p2 t02 to p2 t03 current frontier wording pilot no adoption |
+| Active task ID | `RT-20260701-034` |
+| Latest handoff ID | `handoff-0443` |
+| Current status | `v14_p2_t03_current_frontier_wording_pilot_completed_next_claim_language_examples_pack` |
+| Current route family | post v14 p2 t03 to p2 t04 claim language examples pack no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted scoped evidence/precondition only |
-| Required next authority | bounded v14 P2-T03 current-frontier wording pilot |
-| Next recommended action | Run one bounded v14 P2-T03 current-frontier wording pilot before public status propagation claim-language examples linter matter-coupling Einstein-equation benchmark or promotion work. |
+| Required next authority | bounded v14 P2-T04 claim-language examples pack |
+| Next recommended action | Run one bounded v14 P2-T04 claim-language examples pack before P2 validation linter public status propagation matter-coupling Einstein-equation benchmark or promotion work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-033/00_TASK.yaml`.
-- Active task objective: Execute one bounded non-promotional v14 P2-T02 high-risk status alias-map control packet after P2-T01 scoped-positive vocabulary. Create a subordinate alias map for reader-facing Distance-to-GR and current-frontier high-risk rows, prevent bare accepted rendering, preserve ledger authority, and defer renderer integration to P2-T03.
-- Latest handoff path: `research_control/handoffs/handoff-0442.yaml`.
-- Latest handoff summary: RT-20260701-033 completed one bounded v14 P2-T02 high-risk status alias-map packet. The new subordinate alias map covers source_ontology_primitives source_equivalence_eqsrc obsloc_lc resp_lc m_src g_eff matter_coupling einstein_equations benchmark_promotion gate_chair_status and finite_toy_metric_response plus matter_coupling object aliases MSStableMatterSemanticsBridge_v1 SourceMatterSemanticsAdoptionReadinessLaw_v1 PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 and RR_E_underdetermination_obstruction. It prevents bare accepted rendering for high-risk rows preserves ledger authority records aliases as non-proof control display data and defers renderer integration to P2-T03. No source-law adoption RR_ETransportCompletenessOrInvarianceLaw_v1 adoption unrestricted RR_E theorem detector-semantics collapse matter semantics detector semantics coupling law matter coupling MetricData(E) g_eff stress-energy semantics matter action Einstein equations benchmark promotion completed derivation future source-extension impossibility or global theory rejection occurred.
-- Current route family: post v14 p2 t02 to p2 t03 current frontier wording pilot no adoption.
-- Next recommended action: Run one bounded v14 P2-T03 current-frontier wording pilot before public status propagation claim-language examples linter matter-coupling Einstein-equation benchmark or promotion work.
+- Active task path: `research_control/tasks/RT-20260701-034/00_TASK.yaml`.
+- Active task objective: Execute one bounded non-promotional v14 P2-T03 current-frontier wording pilot. Inspect scripts/research_control/render_current_frontier.py, integrate the subordinate status alias map into reader-facing current-frontier rendering, preserve ledger authority and legacy status visibility, regenerate the frontier, and route only to P2-T04.
+- Latest handoff path: `research_control/handoffs/handoff-0443.yaml`.
+- Latest handoff summary: RT-20260701-034 completed one bounded v14 P2-T03 current-frontier wording pilot. The current-frontier renderer now consumes the status alias map as a subordinate reader-facing status layer, displays high-risk burden aliases and matter_coupling object aliases at a glance, preserves raw ledger current_status as legacy data, and keeps the ledger authoritative. Matter coupling remains not derived or adopted, M_src and scoped g_eff remain visible as real scoped-positive results, and RR_ETransportCompletenessOrInvarianceLaw_v1 remains scoped evidence/precondition only with no source-law adoption.
+- Current route family: post v14 p2 t03 to p2 t04 claim language examples pack no adoption.
+- Next recommended action: Run one bounded v14 P2-T04 claim-language examples pack before P2 validation linter public status propagation matter-coupling Einstein-equation benchmark or promotion work.
 
 ## Matter-Coupling Boundary
 
@@ -77,10 +77,11 @@ columns below are the reader-facing anti-overread boundary:
 
 High-risk rows:
 
-- `matter_coupling`: control `accepted_as_scoped_evidence_precondition`; mathematical `parameterized_finite_local_witness_precondition`; physical `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`; promotion `scoped_source_evidence_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection<br>aliases_not_ledger_authority<br>aliases_not_physics_proof<br>no_bare_accepted_rendering.
-- `g_eff`: control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
-- `einstein_equations`: control `not_started`; mathematical `dynamics_action_or_variation_missing`; physical `no_field_equation_derivation`; promotion `none`; guards: no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
-- `benchmark_promotion`: control `blocked`; mathematical `upstream_burdens_missing`; physical `no_exact_gr_benchmark_promotion`; promotion `none`; guards: no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation.
+- `m_src`: reader-facing `adopted only as scoped source-only M_src object`; control `gate_review_completed`; mathematical `scoped_source_only_adopted_object`; physical `not_target_manifold_not_metric_not_gr_derivation`; promotion `scoped_source_object_only`; guards: no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `g_eff`: reader-facing `adopted only as scoped source-extension g_eff object`; control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `matter_coupling`: reader-facing `accepted only as scoped source-extension evidence/precondition`; control `accepted_as_scoped_evidence_precondition`; mathematical `parameterized_finite_local_witness_precondition`; physical `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`; promotion `scoped_source_evidence_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection.
+- `einstein_equations`: reader-facing `not started; no positive derivation status`; control `not_started`; mathematical `dynamics_action_or_variation_missing`; physical `no_field_equation_derivation`; promotion `none`; guards: no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `benchmark_promotion`: reader-facing `no benchmark promotion from scoped evidence/precondition alone`; control `blocked`; mathematical `upstream_burdens_missing`; physical `no_exact_gr_benchmark_promotion`; promotion `none`; guards: no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation.
 
 ## Exact Blocked Claims
 
@@ -104,35 +105,66 @@ High-risk rows:
 - [ ] this snapshot as independent authority
 - [ ] generated graph, checker, registry, validator, local cache, role, handoff, approval, or commit status as scientific proof
 
+## Scoped-Positive Alias Pilot
+
+The renderer consumes the subordinate status alias map at `research_control/design/distance_to_gr_status_aliases.yaml` for reader-facing wording only. The ledger continues to govern if an alias and ledger row ever conflict. Aliases are not physics proof, routing authority, benchmark authority, or claim-promotion authority.
+
+- High-risk rows must not render bare `accepted`: true.
+- Aliases override the ledger: false.
+- Aliases are physics proof: false.
+
+High-risk burden aliases:
+
+| Object | Reader-facing status | Required qualifier | Required blocked phrase |
+| --- | --- | --- | --- |
+| `m_src` | adopted only as scoped source-only M_src object | M_src is not a target manifold, not a metric, and not a GR derivation. | No MetricData(E), g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
+| `g_eff` | adopted only as scoped source-extension g_eff object | The object is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations. | No MetricData(E), unscoped g_eff, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
+| `matter_coupling` | accepted only as scoped source-extension evidence/precondition | PositiveMSProfile_v1 and RR_ETransportCompletenessOrInvarianceLaw_v1 are scoped evidence/preconditions only; matter coupling remains not derived and not adopted. | No source-law adoption, RR_ETransportCompletenessOrInvarianceLaw_v1 adoption, PositiveMSProfile_v1 adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption, matter semantics, detector semantics, coupling law, matter coupling, stress-energy, matter action, MetricData(E), g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
+| `einstein_equations` | not started; no positive derivation status | No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established. | Einstein equations remain blocked by missing dynamics, action, variation, matter coupling, and protected benchmark authority. |
+| `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | Exact-GR benchmark promotion remains blocked by upstream derivation burdens and protected authority. | No benchmark promotion, closure, fit claim, or completed exact-GR derivation claim follows from scoped evidence/preconditions. |
+| `finite_toy_metric_response` | frozen negative local toy route only | Tag-removal stress freezes this local toy route; it is not global theory rejection. | No g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory rejection follows from this frozen-negative toy route. |
+
+`matter_coupling` object aliases:
+
+| Object | Reader-facing status | Required qualifier |
+| --- | --- | --- |
+| `MSStableMatterSemanticsBridge_v1` | draft/control bridge target only | Not adopted matter semantics and not detector semantics. |
+| `SourceMatterSemanticsAdoptionReadinessLaw_v1` | proposal-only law target unless a later gate changes status | Not law adoption, not matter semantics, not detector semantics, and not coupling law. |
+| `PositiveMSProfile_v1` | accepted only as scoped positive source-semantics evidence/precondition | Not adopted matter semantics, detector semantics, stress-energy, or matter action. |
+| `RR_ETransportCompletenessOrInvarianceLaw_v1` | accepted only as certificate-indexed RR_E transport-completeness or invariance evidence/precondition | Not source-law adoption, not object adoption, not unrestricted RR_E theorem, not detector semantics, and not matter coupling. |
+| `RR_E_underdetermination_obstruction` | scoped obstruction under current ontology only | Not global impossibility and not global theory rejection. |
+
 ## Distance-To-GR Table
 
 This table summarizes the layered fields in
 `registries/DISTANCE_TO_GR_LEDGER.csv`; the ledger remains the authoritative
-source if this summary drifts.
+source if this summary drifts. The `Reader-facing status` column is rendered
+from `research_control/design/distance_to_gr_status_aliases.yaml` when a row alias exists. The `Legacy status` column
+preserves the raw ledger `current_status` field for continuity.
 
-| Burden ID | Milestone | Current status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft object exists | draft_control_object_exists | definition_only_or_draft_object | no_canonical_ontology_adoption | draft_control_only | no_canonical_ontology_edit<br>no_benchmark_promotion<br>no_completed_derivation | `AGENTS.md` |
-| `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
-| `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
-| `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
-| `obsloc_lc` | `source_localization_obsloc_lc` | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
-| `resp_lc` | `response_localization_resp_lc` | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
-| `m_src` | `source_manifold_m_src` | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `effective_metric_g_eff` | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
-| `matter_coupling` | `matter_coupling` | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection<br>aliases_not_ledger_authority<br>aliases_not_physics_proof<br>no_bare_accepted_rendering | `research_control/tasks/RT-20260701-033/artifacts/p2_t02_alias_map_acceptance_receipt.md` |
-| `einstein_equations` | `einstein_equations` | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
-| `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
-| `benchmark_promotion` | `benchmark_promotion` | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
-| `gate_chair_status` | `benchmark_promotion` | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
-| `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative | frozen_negative | tag_removal_obstruction | local_toy_route_frozen_not_global_theory_rejection | frozen_negative_no_promotion | no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
+| Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | draft object exists | draft_control_object_exists | definition_only_or_draft_object | no_canonical_ontology_adoption | draft_control_only | no_canonical_ontology_edit<br>no_benchmark_promotion<br>no_completed_derivation | `AGENTS.md` |
+| `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `obsloc_lc` | `source_localization_obsloc_lc` | constructive local exact-branch witness only | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
+| `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
+| `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
+| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
+| `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260701-033/artifacts/p2_t02_alias_map_acceptance_receipt.md` |
+| `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
+| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
+| `gate_chair_status` | `benchmark_promotion` | human-gated verdict authority only | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
+| `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative local toy route only | frozen negative | frozen_negative | tag_removal_obstruction | local_toy_route_frozen_not_global_theory_rejection | frozen_negative_no_promotion | no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
 
 ## Exact Next Route
 
 The immediate next route is:
 
 ```text
-Run one bounded v14 P2-T03 current-frontier wording pilot before public status propagation claim-language examples linter matter-coupling Einstein-equation benchmark or promotion work.
+Run one bounded v14 P2-T04 claim-language examples pack before P2 validation linter public status propagation matter-coupling Einstein-equation benchmark or promotion work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,28 +175,27 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-033`;
-- latest handoff: `handoff-0442`;
-- current status: `v14_p2_t02_high_risk_status_alias_map_completed_next_current_frontier_wording_pilot`;
+- active task: `RT-20260701-034`;
+- latest handoff: `handoff-0443`;
+- current status: `v14_p2_t03_current_frontier_wording_pilot_completed_next_claim_language_examples_pack`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `git_diff_check`: pending;
+- latest handoff validation `render_current_frontier_check`: PASS;
+- latest handoff validation `render_current_frontier_tests`: PASS;
+- latest handoff validation `validate_documentation_impact`: pending;
+- latest handoff validation `validate_research_control`: pending;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0442.yaml`
-- `research_control/tasks/RT-20260701-033/00_TASK.yaml`
+- `research_control/handoffs/handoff-0443.yaml`
+- `research_control/tasks/RT-20260701-034/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
+- `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
 SQLite indexes, and `.local/` caches remain retrieval or reader layers only.
@@ -175,11 +206,11 @@ They are not scientific authority and are not inputs to this rendered state.
 The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 [Internal control note].
 
-The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
+The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0442*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0443*
 [Internal research-control handoff].
 
-The AEther-Flow Research Project. (2026, June 29). *Recommendations
-implementation plan continue task v12* [Internal implementation plan].
+The AEther-Flow Research Project. (2026, July 1). *Recommendations
+implementation plan continue task v14* [Internal implementation plan].

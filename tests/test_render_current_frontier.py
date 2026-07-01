@@ -35,9 +35,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
 
     def make_fixture_repo(self, root: Path) -> None:
         control = root / "research_control"
+        design = control / "design"
         handoffs = control / "handoffs"
         task = control / "tasks" / "RT-TEST"
         registries = root / "registries"
+        design.mkdir(parents=True)
         handoffs.mkdir(parents=True)
         task.mkdir(parents=True)
         registries.mkdir(parents=True)
@@ -48,6 +50,36 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                     'latest_handoff_id: "handoff-0001"',
                     'current_status: "fixture_completed_no_promotion"',
                     'next_recommended_action: "Run one bounded fixture validation packet."',
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        (design / "distance_to_gr_status_aliases.yaml").write_text(
+            "\n".join(
+                [
+                    'schema_id: "distance_to_gr_status_aliases_v1"',
+                    'authority: "control"',
+                    "authority_rules:",
+                    "  aliases_do_not_override_ledger: true",
+                    "  aliases_are_physics_proof: false",
+                    "  high_risk_rows_must_not_render_bare_accepted: true",
+                    "row_aliases:",
+                    "  matter_coupling:",
+                    '    display_status: "accepted only as scoped source-extension evidence/precondition"',
+                    '    required_qualifier: "Matter coupling remains not derived and not adopted."',
+                    '    required_blocked_phrase: "No matter coupling or Einstein equations follow from this row."',
+                    "    object_aliases:",
+                    "      PositiveMSProfile_v1:",
+                    '        display_status: "accepted only as scoped positive source-semantics evidence/precondition"',
+                    '        required_qualifier: "Not adopted matter semantics."',
+                    "      RR_ETransportCompletenessOrInvarianceLaw_v1:",
+                    '        display_status: "accepted only as certificate-indexed RR_E transport-completeness or invariance evidence/precondition"',
+                    '        required_qualifier: "Not source-law adoption."',
+                    "  g_eff:",
+                    '    display_status: "adopted only as scoped source-extension g_eff object"',
+                    '    required_qualifier: "Not an unscoped Lorentzian metric."',
+                    '    required_blocked_phrase: "No matter coupling or Einstein equations follow from this row."',
                     "",
                 ]
             ),
@@ -110,6 +142,15 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertEqual(payload["latest_handoff_id"], "handoff-0001")
             self.assertTrue(payload["snapshot_only_not_authority"])
             self.assertFalse(payload["physics_claim_authority"])
+            self.assertEqual(payload["status_alias_row_count"], 2)
+            self.assertEqual(
+                payload["status_alias_integration"],
+                "reader_facing_status_column",
+            )
+            self.assertIn(
+                "research_control/design/distance_to_gr_status_aliases.yaml",
+                payload["source_paths"],
+            )
             self.assertEqual(
                 payload["layered_status_fields"],
                 [
@@ -123,7 +164,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertIn("generated synchronized snapshot only", markdown)
             self.assertIn("no `MetricData(E)` adoption", markdown)
             self.assertIn("Layered Distance-To-GR Boundary Notes", markdown)
-            self.assertIn("| Burden ID | Milestone | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |", markdown)
+            self.assertIn("| Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |", markdown)
+            self.assertIn("Scoped-Positive Alias Pilot", markdown)
+            self.assertIn("accepted only as scoped source-extension evidence/precondition", markdown)
+            self.assertIn("PositiveMSProfile_v1", markdown)
+            self.assertIn("RR_ETransportCompletenessOrInvarianceLaw_v1", markdown)
             self.assertIn("accepted_as_scoped_evidence_precondition", markdown)
             self.assertIn("not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics", markdown)
             self.assertIn("no_matter_coupling_derivation", markdown)
