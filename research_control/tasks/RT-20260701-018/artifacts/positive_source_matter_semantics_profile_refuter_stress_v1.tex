@@ -1,0 +1,301 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\PMSProf}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\AdmPMS}{\mathrm{Adm}^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\Prof}{\mathsf{Prof}^{\mathrm{PMS}}_E}
+\newcommand{\Ready}{\mathsf{Ready}^{\mathrm{audit}}_E}
+\newcommand{\Cert}{\mathsf{Cert}^{\mathrm{noT}}_E}
+\newcommand{\lambdaProf}{\lambda^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\EqProf}{\equiv^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\SepProf}{\#^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\Pattern}{\mathsf{pattern}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\RRE}{\mathrm{RR}_E}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\StressVerdict}{\mathsf{stress\_survived\_pending\_selector\_no\_adoption}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{PositiveMSProfile v1 Refuter Stress}
+\author{Refuter Packet RT-20260701-018}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260701-018},
+implementing v13 \texttt{P4-T04}. It stress-tests the proposal-only,
+draft/control source-side profile candidate
+\[
+  \PMSProf =
+  \bigl(\AdmPMS(E),\Prof,\Ready,\lambdaProf,\EqProf,\SepProf,\Cert\bigr)
+\]
+after the source-purity audit in \texttt{RT-20260701-017}. The stress verdict
+is
+\[
+  \StressVerdict.
+\]
+The Refuter loop-risk category is
+\[
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+
+This packet does not adopt \(\PMSProf\). It does not adopt a source law,
+\(\SMSAR\) as law, source-extension data beyond exact scoped Gate Chair
+results, matter semantics, detector semantics, a coupling law, matter
+coupling, stress-energy semantics, a stress-energy tensor, a matter action,
+\(\MetricData(E)\), \(\geff\), Einstein equations, benchmark status,
+benchmark Gate Chair closure, completed derivation, future source-extension
+impossibility, or global theory rejection.
+
+\begin{verbatim}
+stress_verdict: "stress_survived_pending_selector_no_adoption"
+refuter_category: "bridge_facing_candidate_path"
+PositiveMSProfile_v1_adopted: false
+source_law_adopted: false
+SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+stress_energy_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Stress Object}
+
+The stressed object is the source-positive profile map and label package from
+the P4-T02 candidate:
+\[
+  \Prof(r)=
+  \bigl([S_r],[X_r],[P_r],[K_r],[Q_r],\Cert(r)\bigr),
+\]
+with label map \(\lambdaProf\), audit-readiness routing predicate \(\Ready\),
+profile equivalence \(\EqProf\), and profile separation \(\SepProf\). The
+positive label \(\Pattern\) means only that a source profile has been
+constructed on the declared finite/local subdomain. It is not adopted matter
+semantics.
+
+\section{Stress Theorem}
+
+\begin{theorem}[Fail-closed positive-profile stress theorem]
+Let \(r\in\AdmPMS(E)\) satisfy the audited source-purity guards for
+\(\PMSProf\). Under the P4-T04 stress family, every stress branch has one of
+the following outcomes:
+\[
+  \lambdaProf(r)=\Pattern\quad\text{as source-profile status only},
+  \qquad
+  \lambdaProf(r)=\Bottom,
+  \qquad
+  \lambdaProf(r)=\Obstruction.
+\]
+No branch yields \(\PMSProf\) adoption, source-law adoption,
+\(\SMSAR\) law adoption, matter-semantics adoption, detector-semantics
+adoption, coupling-law adoption, matter coupling, stress-energy semantics,
+matter action, \(\MetricData(E)\), \(\geff\), Einstein equations, benchmark
+promotion, completed derivation, future source-extension impossibility, or
+global theory rejection.
+\end{theorem}
+
+\begin{proof}
+The candidate profile is componentwise source data: source support, source
+pattern, source probe-token, source certificate, retained \(\RRE\) syntax, and
+no-target certificate data. The audit in \texttt{RT-20260701-017} found the
+written candidate source-pure only under explicit profile, readiness,
+transport, certificate, and fail-closed guards. A stress branch that preserves
+those source components under declared source transport may preserve
+\(\Pattern\) only as a source-profile label. A branch deleting required source
+components returns \(\Bottom\). A branch using detector, empirical, metric,
+stress-energy, matter-action, coupling-law, \(\MetricData(E)\), \(\geff\),
+Einstein-equation, benchmark, or process-authority premises returns
+\(\Obstruction\). The codomain therefore contains no adoption or downstream
+GR-recovery value.
+\end{proof}
+
+\section{Stress Case Table}
+
+\begin{longtable}{p{0.24\linewidth}p{0.22\linewidth}p{0.43\linewidth}}
+\toprule
+Stress target & Result & Refuter finding \\
+\midrule
+Source relabeling & Conditional survival &
+If a relabeling transports \(S_r,X_r,P_r,K_r,Q_r\), and \(\Cert(r)\) by
+declared source syntax, \(\Prof\), \(\lambdaProf\), \(\EqProf\), and
+\(\SepProf\) commute as source-profile data only. Target-defined relabeling
+or detector-defined matching obstructs. \\
+Finite variation & Conditional survival &
+Permitted finite variations either transport the finite/local source profile
+or enter missing-component or forbidden-import branches. No global
+finite-variation robustness theorem is proved. \\
+Certificate deletion & Fails closed &
+Deleting \(\Cert(r)\) or weakening no-target, no-detector, no-stress-energy,
+no-action, no-\(\MetricData(E)\), no-\(\geff\), no-Einstein-equation, or
+no-benchmark certificates removes the positive branch or creates
+\(\Obstruction\). \\
+Semantic-label deletion & Conditional survival with routing blocked &
+Deleting scoped \(\beta\) or \(\alpha\) evidence sets \(\Ready=0\). It does not
+delete \(\Prof\), but it blocks audit-readiness, adoption routing, and any
+Gate Chair or downstream route. \\
+Degeneracy and nonuniqueness & Blocked as physical semantics &
+Two records may share a source profile only under \(\EqProf\). Shared profile
+data cannot be read as detector identity, stress-energy identity,
+matter-action identity, coupling identity, or target geometry. \\
+\(\RRE\) pressure & Survives as non-collapse guard &
+Distinct retained \(\RRE\) syntax cannot be collapsed without explicit
+source-side transport. Collapse attempts route to \(\Obstruction\), not to an
+irrelevance theorem or detector-semantics result. \\
+Process-authority pressure & Blocked &
+Registry rows, validators, handoffs, approvals, roles, generated derivatives,
+commit state, file order, and local caches can record provenance only. As
+mathematical premises they create \(\Obstruction\). \\
+\(\MetricData(E)\) and \(\geff\) pressure & Blocked &
+The profile contains no \(\MetricData(E)\) datum and no \(\geff\) construction
+or scope expansion. Importing either invalidates the stress branch. \\
+Detector-semantics pressure & Blocked &
+Probe tokens and retained \(\RRE\) syntax remain source syntax. Reading them
+as detector protocols, measurements, or empirical calibration obstructs. \\
+Stress-energy pressure & Blocked &
+No profile component is a stress-energy semantics, stress-energy tensor,
+conservation law, variational principle, or target matter-theory premise. \\
+Matter-action pressure & Blocked &
+No profile component is a matter action, matter Lagrangian, or action
+principle. Importing one creates \(\Obstruction\). \\
+Adoption pressure & Blocked &
+The labels \(\Pattern\), \(\Ready\), source profile, source-pure audit, and
+stress survival remain draft/control routing data. Treating them as adoption
+or promotion is an invalid overread. \\
+\bottomrule
+\end{longtable}
+
+\section{Pressure Lemmas}
+
+\begin{lemma}[Semantic-label deletion guard]
+Deleting the scoped \(\MSBridge\) or \(\SMSAR\) evidence/precondition fields
+does not turn \(\Prof(r)\) into a target-derived object. It sets
+\(\Ready(r)=0\) and blocks audit-readiness or adoption routing.
+\end{lemma}
+
+\begin{proof}
+\(\Prof(r)\) is defined from source support, source pattern, source
+probe-token, source certificate, retained \(\RRE\) syntax, and no-target
+certificate data. The scoped evidence fields are routing preconditions, not
+profile components. Their deletion therefore changes route status but cannot
+manufacture matter semantics or target physics.
+\end{proof}
+
+\begin{lemma}[\(\RRE\) non-collapse under profile stress]
+Let \(r_0,r_1\in\AdmPMS(E)\) agree except for distinct retained
+\(\RRE\) syntax. A source-profile equivalence \(r_0\EqProf r_1\) cannot be
+proved by identifying their \(\RRE\) records unless an explicit source-side
+transport certificate identifies them.
+\end{lemma}
+
+\begin{proof}
+The definition of \(\SepProf\) treats retained \(\RRE\) nonidentification as a
+source-side separation witness. The P4-T03 audit also blocks reading retained
+\(\RRE\) syntax as detector response or matter semantics. Therefore a collapse
+without source transport is an obstruction.
+\end{proof}
+
+\begin{lemma}[No process receipt can change profile truth]
+Changing registry metadata, validator results, handoff wording, role identity,
+approval state, generated derivatives, commit state, file order, or local
+cache state cannot change \(\Prof(r)\), \(\lambdaProf(r)\), \(\EqProf\), or
+\(\SepProf\) unless the mathematical source record changes.
+\end{lemma}
+
+\begin{proof}
+The candidate's definitions do not mention process receipts as data. The audit
+classifies process authority as non-mathematical. Thus process surfaces may
+document route and provenance but cannot prove profile status.
+\end{proof}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior scoped response/localization context only. \\
+M\_src & Prior scoped source-only context only; no scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+Matter coupling & \(\PMSProf\) stress survives as bridge-facing draft/control
+profile data pending selector; no matter semantics, detector semantics,
+coupling law, matter coupling, stress-energy semantics, or matter action is
+adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local profile stress table recorded; no global
+finite-variation robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No new Gate Chair verdict; future adoption remains
+human-gated. \\
+Current route freeze or hard-fail status & Not frozen; P4-T05 selector route
+is open. \\
+\bottomrule
+\end{longtable}
+
+\section{Verdict and Next Route}
+
+The stress result is
+\[
+  \StressVerdict,
+  \qquad
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+The lawful next packet is one bounded v13 \texttt{P4-T05} selector to classify
+the post-stress route. Stress survival does not itself authorize Gate Chair
+review, \(\PMSProf\) adoption, source-law adoption, matter-semantics adoption,
+detector-semantics adoption, coupling-law adoption, matter coupling,
+Einstein-equation work, benchmark promotion, or claim promotion.
+
+\begin{nonconclusion}[Stress survival is not proof authority]
+This artifact is not evidence that GR has been derived from the source
+ontology. It is not evidence for stress-energy semantics, a stress-energy
+tensor, a matter action, Einstein equations, benchmark status, or completed
+derivation.
+\end{nonconclusion}
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{Positive source matter-semantics profile candidate v1}
+[Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{PositiveMSProfile v1 smuggling audit}
+[Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{Recommendations implementation plan continue task v13}
+[Internal implementation plan].
+
+\end{document}
