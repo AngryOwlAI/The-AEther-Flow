@@ -1,0 +1,53 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260701-029"
+role_id: "refuter"
+status: "completed"
+stressed_object: "RR_ETransportCompletenessOrInvarianceLaw_v1"
+input_artifacts:
+  - "research_control/tasks/RT-20260701-027/artifacts/rr_e_transport_completeness_or_invariance_law_formalizer_v1.tex"
+  - "research_control/tasks/RT-20260701-028/artifacts/rr_e_transport_law_smuggling_audit_v1.tex"
+mathematical_verdict: "guarded_candidate_survives_stress_pending_gate_no_adoption"
+refuter_decision_category: "bridge_facing_candidate_path"
+stress_cases:
+  malformed_absent_or_deleted_certificates:
+    result: "fails_closed_to_separation_or_obstruction"
+    reason: "The schema has no certificate-free identification branch."
+  source_relabeling_with_changed_rr_e_syntax:
+    result: "conditional_survival_or_separation"
+    reason: "Identification requires a valid source transport certificate and source soundness for the declared object F."
+  declared_F_change_after_certificate:
+    result: "certificate_invalidated_for_new_F"
+    reason: "The invariance branch is object-relative; a certificate for F does not transfer to an undeclared F'."
+  detector_metric_benchmark_pressure:
+    result: "blocked"
+    reason: "Detector response, MetricData(E), g_eff, target geometry, and benchmark behavior are not admissible certificates."
+  process_authority_pressure:
+    result: "blocked"
+    reason: "Validation, registry rows, generated derivatives, roles, handoffs, approvals, checkpoints, and commits cannot act as proof premises."
+new_payload_items:
+  - payload_id: "P5FOLLOWUP-RRE-TRANSPORT-STRESS-THEOREM"
+    payload_type: "theorem"
+    object_name: "Fail-closed RR_E transport-law stress theorem"
+    summary: "Every stress branch either supplies source transport, source invariance, or source factorization certificates, or fails closed to RR_E separation or obstruction."
+  - payload_id: "P5FOLLOWUP-RRE-DECLARED-F-GUARD"
+    payload_type: "lemma"
+    object_name: "Declared-F invariance locality guard"
+    summary: "An invariance certificate for F does not transfer to a changed source object F' without a new source certificate."
+  - payload_id: "P5FOLLOWUP-RRE-STRESS-CASE-MAP"
+    payload_type: "dependency_map_update"
+    object_name: "RR_ETransportCompletenessOrInvarianceLaw_v1 stress case table"
+    summary: "Maps certificate deletion, malformed certificates, transport relabeling, declared-F changes, target-pressure, process-pressure, and adoption pressure to fail-closed outcomes."
+forbidden_overreads:
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "unrestricted RR_E irrelevance theorem"
+  - "RR_E collapse by detector semantics"
+  - "MetricData(E) adoption"
+  - "g_eff scope change"
+  - "matter coupling"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+next_route_recommendation: "source_extension_human_gate"
+

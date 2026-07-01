@@ -312,6 +312,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-017/artifacts/positive_source_matter_semantics_profile_smuggling_audit_v1.tex`
 - `TEX-V13-P4-T04-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-REFUTER-STRESS` `research_control/tasks/RT-20260701-018/artifacts/positive_source_matter_semantics_profile_refuter_stress_v1.tex`
 - `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-COMPLETENESS-OR-INVARIANCE-LAW-FORMALIZER` `research_control/tasks/RT-20260701-027/artifacts/rr_e_transport_completeness_or_invariance_law_formalizer_v1.tex`
+- `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260701-029/artifacts/rr_e_transport_law_refuter_stress_v1.tex`
 - `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-028/artifacts/rr_e_transport_law_smuggling_audit_v1.tex`
 - `TEX-V13-P5-T01-RR-E-THEOREM-TARGET-FORMALIZER` `research_control/tasks/RT-20260701-022/artifacts/rr_e_theorem_target_formalizer_v1.tex`
 - `TEX-V13-P5-T02-RR-E-IRRELEVANCE-THEOREM-ATTEMPT-OR-OBSTRUCTION` `research_control/tasks/RT-20260701-023/artifacts/rr_e_irrelevance_theorem_attempt_or_obstruction_v1.tex`

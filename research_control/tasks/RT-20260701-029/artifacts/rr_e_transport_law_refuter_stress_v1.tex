@@ -1,0 +1,224 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\VarRR}{\mathrm{Var}^{\RRE}_{\mathrm{src}}}
+\newcommand{\TrRR}{\mathrm{Tr}^{\RRE}_{\mathrm{src}}}
+\newcommand{\InvRR}{\mathrm{Inv}^{\RRE}_{\mathrm{src}}}
+\newcommand{\FactRR}{\mathrm{Fact}^{\RRE}_{\mathrm{src}}}
+\newcommand{\SepRR}{\#^{\RRE}_{\mathrm{src}}}
+\newcommand{\QRR}{\bar D^{\RRE}_{\mathrm{src}}}
+\newcommand{\LawRR}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\BlockedOpen}{\mathsf{blocked\_adoption\_open\_continuation}}
+\newcommand{\StressVerdict}{\mathsf{guarded\_stress\_survived\_pending\_gate\_no\_adoption}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{stresscase}{Stress case}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{RR\_E Transport Completeness or Invariance Law Refuter Stress v1}
+\author{Refuter Packet RT-20260701-029}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control status}
+
+This document is a draft/control Refuter output for \texttt{RT-20260701-029}.
+It stress-tests the proposal-only schema \(\LawRR\) formalized by
+\texttt{RT-20260701-027} and audited by \texttt{RT-20260701-028}. Its status
+after stress remains
+\[
+  \BlockedOpen .
+\]
+The stress verdict is
+\[
+  \StressVerdict .
+\]
+This is not source-law adoption, not a canonical ontology edit, not an
+unrestricted \(\RRE\) irrelevance theorem, not detector semantics, not matter
+semantics, not a coupling law, not matter coupling, not \(\MetricData(E)\),
+not \(\geff\), not Einstein equations, not benchmark promotion, and not a
+completed derivation.
+
+\section{Stressed schema}
+
+For a declared source object \(F:D_E\to X\) and a source-side
+\(\RRE\)-variation pair \(\VarRR(r,r')\), the proposal-only schema permits
+identification only by:
+\[
+\begin{array}{ll}
+\text{transport branch} & \TrRR(r,r')\ \text{with source soundness for }F,\\
+\text{invariance branch} & \InvRR(F;r,r'),\\
+\text{factorization branch} & \FactRR(F)\ \text{and}\ F=\bar F\circ\pi_{\RRE},\\
+\text{fail-closed branch} & \SepRR(r,r')\ \text{or obstruction}.
+\end{array}
+\]
+The Refuter stress asks whether these branches collapse under missing
+certificates, relabeling, declared-object changes, target-pressure, or
+process-authority pressure.
+
+\section{Stress cases}
+
+\begin{stresscase}[Malformed, absent, or deleted certificates]
+If \(\TrRR\), \(\InvRR\), or \(\FactRR\) is malformed, absent, or deleted,
+the schema has no certificate-free identification branch. The result is
+\(\SepRR(r,r')\) or obstruction. This is a fail-closed behavior, not a hidden
+detector, metric, or benchmark repair.
+\end{stresscase}
+
+\begin{stresscase}[Transport relabeling with changed retained \(\RRE\)]
+Suppose \(r,r'\) preserve non-\(\RRE\) support while changing retained
+\(\RRE\) syntax. If a valid \(\TrRR(r,r')\) certificate plus source soundness
+for \(F\) is supplied, the transport branch is lawful. Without that certificate
+the schema preserves separation or obstruction. Thus relabeling does not
+produce unrestricted \(\RRE\) irrelevance.
+\end{stresscase}
+
+\begin{stresscase}[Changing the declared source object]
+An invariance certificate \(\InvRR(F;r,r')\) is indexed to the declared
+source object \(F\). Replacing \(F\) by \(F'\) invalidates the certificate for
+the new object unless a new source certificate is supplied. The invariance
+branch is therefore object-relative and cannot be read as detector
+indifference or empirical equivalence.
+\end{stresscase}
+
+\begin{stresscase}[Target, detector, and benchmark pressure]
+Detector response, empirical calibration, target geometry, \(\MetricData(E)\),
+\(\geff\), stress-energy, matter action, Einstein equations, and benchmark
+behavior are not admissible \(\TrRR\), \(\InvRR\), or \(\FactRR\)
+certificates. Pressure to use them returns obstruction under the schema's
+source-only rules.
+\end{stresscase}
+
+\begin{stresscase}[Process-authority pressure]
+Validator success, registry rows, generated derivatives, roles, approvals,
+handoffs, checkpoints, commits, and local caches are not mathematical
+certificates. They may record provenance or validation receipts, but they do
+not repair a missing source certificate and do not promote the schema.
+\end{stresscase}
+
+\begin{theorem}[Fail-closed transport-law stress theorem]
+For the proposal-only \(\LawRR\) schema as audited, every Refuter stress
+branch either supplies an explicit source certificate \(\TrRR\),
+\(\InvRR\), or \(\FactRR\) with the declared object \(F\), or it fails closed
+to \(\SepRR(r,r')\) or obstruction. No stress branch lawfully imports detector
+semantics, target metric data, \(\MetricData(E)\), \(\geff\), benchmark
+behavior, process authority, or generated-derivative authority.
+\end{theorem}
+
+\begin{proof}
+The audited schema enumerates exactly three identification branches and one
+fail-closed branch. The three identification branches require source
+certificates indexed to \(r,r'\) and, for invariance or soundness, to the
+declared source object \(F\). Deleting, malformed, or changing those
+certificates removes the branch. The schema does not contain any branch whose
+premise is detector response, empirical calibration, target geometry,
+\(\MetricData(E)\), \(\geff\), benchmark behavior, validation, registry
+metadata, generated text, role authority, approval language, checkpoint state,
+or commit state. Therefore the only possible outputs of the stress table are a
+source-certificate identification or fail-closed separation/obstruction.
+\end{proof}
+
+\begin{lemma}[Declared-\(F\) locality]
+\(\InvRR(F;r,r')\) cannot be transported to a changed object \(F'\) without a
+new source-side invariance certificate for \(F'\).
+\end{lemma}
+
+\begin{proof}
+The formalizer indexed the invariance branch by the declared object. Changing
+the object changes the proposition whose equality must be proved. No source
+rule in the proposal-only schema transfers the proof automatically.
+\end{proof}
+
+\section{Stress table}
+
+\begin{longtable}{p{0.29\linewidth}p{0.25\linewidth}p{0.34\linewidth}}
+\toprule
+Stress pressure & Result & Claim-boundary consequence \\
+\midrule
+Deleted certificate & fail closed & no source-law adoption \\
+Malformed certificate & obstruction & no detector repair \\
+Transport relabeling & conditional survival or separation & no unrestricted \(\RRE\) theorem \\
+Declared \(F\) change & certificate invalidated & no empirical indifference claim \\
+Detector response & blocked & no detector semantics adoption \\
+\(\MetricData(E)\) or \(\geff\) & blocked & no metric scope change \\
+Benchmark behavior & blocked & no benchmark promotion \\
+Validator, registry, role, approval, commit & blocked & no process authority as proof \\
+Audit success or stress survival & source-extension data only & no adoption \\
+\bottomrule
+\end{longtable}
+
+\section{Result category}
+
+The Refuter decision category is
+\[
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+The candidate survived stress only as source-extension draft/control data
+pending a protected human-gated review. The route is not frozen by this
+packet because the stress produced new mathematical payload and did not reveal
+a blocking defect in the guarded schema as written.
+
+\section{Distance-to-GR status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Unchanged; \(\RRE\) equivalence remains certificate-indexed and proposal-only. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior context only. \\
+Resp\_lc & Prior scoped source-extension context only. \\
+M\_src & Unchanged; no \(M_{\mathrm{src}}\) adoption or scope change. \\
+g\_eff & Unchanged; no \(\geff\) adoption or scope expansion. \\
+matter coupling & \(\LawRR\) stress survived as bridge-facing source-extension data pending human gate; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+finite-variation robustness & Certificate deletion and declared-\(F\) change stress pass fail-closed under source rules; no global theorem. \\
+benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No new Gate Chair verdict in this packet; protected review is the next route. \\
+current route freeze or hard-fail status & Not frozen; next route is source-extension human gate review. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-conclusions}
+
+\begin{nonconclusion}
+This stress result does not authorize canonical ontology edit, source-law
+adoption, \(\LawRR\) adoption, unrestricted \(\RRE\) irrelevance theorem
+proof, \(\RRE\) collapse by detector semantics, PositiveMSProfile adoption,
+SourceMatterSemanticsAdoptionReadinessLaw adoption as law, source-extension
+data adoption beyond an exact scoped Gate Chair result, \(\MetricData(E)\)
+adoption, \(\geff\) adoption or scope expansion, coupling-law adoption,
+matter-semantics adoption, detector-semantics adoption, matter-coupling
+derivation or adoption, stress-energy semantics, stress-energy tensor, matter
+action, Einstein equations, benchmark promotion, benchmark closure, completed
+derivation, future source-extension impossibility, or global theory rejection.
+\end{nonconclusion}
+
+\section{APA 7 source notes}
+
+Ontology Formalizer Packet RT-20260701-027. (2026). \emph{RR\_E transport
+completeness or invariance law formalizer v1} [Research-control TeX artifact].
+The-AEther-Flow.
+
+Smuggling Auditor Packet RT-20260701-028. (2026). \emph{RR\_E transport law
+smuggling audit v1} [Research-control TeX artifact]. The-AEther-Flow.
+
+Implementation Plan. (2026). \emph{Recommendations implementation plan
+continue task v13} [Project-control Markdown plan]. The-AEther-Flow.
+
+\end{document}
