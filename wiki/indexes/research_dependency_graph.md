@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T13:26:00Z`
-- Source fingerprint: `02f9941d78cc9a1b5b47352cfd67e9618f68b6ddaf2fa97cfbfd875f18e2d27c`
-- Nodes: `9630`
-- Edges: `40853`
+- Generated from tracked state as of: `2026-07-01T13:45:34Z`
+- Source fingerprint: `fb0fa56bbaa7bff4ff6149109c47418cd9d1abc42b75b1e350f8ebf1d409f45b`
+- Nodes: `9656`
+- Edges: `40954`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 571 |
+| `completion_yaml` | 572 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 435 |
+| `handoff_yaml` | 436 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 571 |
+| `agent_job` | `support_only` | 572 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4876 |
-| `blocked_burden` | `blocked` | 1156 |
-| `claim_boundary` | `support_only` | 572 |
-| `draft_control_candidate` | `draft_control` | 457 |
-| `draft_control_candidate` | `proposal_only` | 66 |
+| `artifact` | `support_only` | 4891 |
+| `blocked_burden` | `blocked` | 1158 |
+| `claim_boundary` | `support_only` | 573 |
+| `draft_control_candidate` | `draft_control` | 459 |
+| `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 37 |
-| `frozen_negative` | `frozen_negative` | 95 |
+| `frozen_negative` | `frozen_negative` | 96 |
 | `gate_chair_verdict` | `human_gated` | 29 |
-| `handoff` | `support_only` | 435 |
+| `handoff` | `support_only` | 436 |
 | `human_gated_object` | `human_gated` | 261 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 24 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 250 |
+| `source_ontology_object` | `support_only` | 251 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 25 |
-| `task` | `support_only` | 518 |
+| `task` | `support_only` | 519 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260701-026`
-- Latest handoff: `handoff-0435`
-- Handoff path: `research_control/handoffs/handoff-0435.yaml`
-- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to formalize or compare a proposal-only source-side RR_E transport completeness or invariance law under no-target-import constraints before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
+- Active task: `RT-20260701-027`
+- Latest handoff: `handoff-0436`
+- Handoff path: `research_control/handoffs/handoff-0436.yaml`
+- Next action: Run one bounded Smuggling Auditor packet to audit the proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema for target-import process-authority generated-derivative and evidence-as-adoption smuggling before Refuter stress Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

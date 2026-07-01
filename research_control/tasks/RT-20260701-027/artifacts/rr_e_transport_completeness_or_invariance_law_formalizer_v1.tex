@@ -1,0 +1,304 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\AdmPMS}{\mathrm{Adm}^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\Qsrc}{Q^{\RRE}_{\mathrm{src}}}
+\newcommand{\VarRR}{\mathrm{Var}^{\RRE}_{\mathrm{src}}}
+\newcommand{\TrRR}{\mathrm{Tr}^{\RRE}_{\mathrm{src}}}
+\newcommand{\InvRR}{\mathrm{Inv}^{\RRE}_{\mathrm{src}}}
+\newcommand{\FactRR}{\mathrm{Fact}^{\RRE}_{\mathrm{src}}}
+\newcommand{\SepRR}{\#^{\RRE}_{\mathrm{src}}}
+\newcommand{\QRR}{\bar D^{\RRE}_{\mathrm{src}}}
+\newcommand{\LawRR}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\ObRR}{\mathrm{OB}\text{-}\mathrm{RRE}\text{-}\mathrm{TRANSPORT}\text{-}\mathrm{COMPLETENESS}\text{-}\mathrm{INVARIANCE}\text{-}\mathrm{MISSING}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\BlockedOpen}{\mathsf{blocked\_adoption\_open\_continuation}}
+\newcommand{\CandidateStatus}{\mathsf{proposal\_only\_draft\_control}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{schema}{Candidate schema}
+\newtheorem{lemma}{Lemma}
+\newtheorem{obligation}{Proof obligation}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{RR\_E Transport Completeness or Invariance Law Formalizer v1}
+\author{Ontology Formalizer Packet RT-20260701-027}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Ontology Formalizer output for
+\texttt{RT-20260701-027}. It executes the \texttt{handoff-0435}
+\texttt{ontology-law-research-packet} for the missing \(\RRE\) source-side
+law. The output is a \emph{proposal-only} and \emph{draft/control}
+candidate-law comparison:
+\[
+  \LawRR \quad\text{with status}\quad \CandidateStatus .
+\]
+
+The adoption status remains:
+\[
+  \BlockedOpen .
+\]
+Current adoption is blocked while same-milestone source-side continuation
+remains open.
+
+This packet does not adopt \(\LawRR\), edit canonical ontology, adopt any
+source law, prove unrestricted \(\RRE\) irrelevance, collapse \(\RRE\) by
+detector semantics, adopt PositiveMSProfile\(_{v1}\), adopt
+SourceMatterSemanticsAdoptionReadinessLaw\(_{v1}\) as law, adopt
+\(\MetricData(E)\), change \(\geff\) scope, adopt a coupling law, adopt matter
+semantics, adopt detector semantics, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, derive Einstein equations, promote benchmark status, issue benchmark
+closure, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\begin{verbatim}
+candidate_status: "proposal-only"
+packet_payload_mode: "candidate_law_comparison"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+RR_ETransportCompletenessOrInvarianceLaw_v1_canonical: false
+unrestricted_RR_E_irrelevance_theorem_proved: false
+RR_E_collapse_by_detector_semantics: false
+source_law_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+matter_coupling_derived: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Question}
+
+The narrow question is:
+\[
+\text{What source-only candidate law could decide when retained \(\RRE\)
+syntax is transport-complete, invariant, or factorable for a declared
+source-side object?}
+\]
+
+The answer below is a candidate-law schema and comparison surface. It is not a
+law-adoption verdict.
+
+\section{Source Domain}
+
+\begin{definition}[P5 follow-up source domain]
+Let \(D_E\subseteq\AdmPMS(E)\) be a finite/local source domain. A record
+\(r\in D_E\) has source-only components
+\[
+  r=(S(r),C(r),\Qsrc(r)),
+\]
+where \(S(r)\) is retained non-\(\RRE\) source support, \(C(r)\) is source
+certificate data, and \(\Qsrc(r)\) is retained \(\RRE\) source syntax. None of
+these components is a detector protocol, empirical calibration, target metric,
+stress-energy datum, matter action, \(\MetricData(E)\), \(\geff\), benchmark
+success, validation status, registry authority, role authority, approval
+authority, commit status, generated derivative, or local cache.
+\end{definition}
+
+\begin{definition}[Admissible RR\_E variation]
+\(\VarRR(r,r')\) is a source-side relation saying that \(r,r'\in D_E\) differ
+only by retained \(\RRE\) syntax or by a declared source-side \(\RRE\)
+transport candidate. It is not empirical indistinguishability and not target
+geometric equivalence.
+\end{definition}
+
+\begin{definition}[Certificate families]
+For a declared source-side object \(F:D_E\to X\), the candidate-law comparison
+allows only the following certificate families:
+\begin{enumerate}[label=C\arabic*.,leftmargin=*]
+  \item \(\TrRR(r,r')\): a source transport certificate between retained
+  \(\RRE\) syntax classes;
+  \item \(\InvRR(F;r,r')\): a source proof that \(F(r)=F(r')\) for the
+  declared object \(F\);
+  \item \(\FactRR(F)\): a source proof that \(F\) factors through a source
+  quotient \(\pi_{\RRE}:D_E\to \QRR\).
+\end{enumerate}
+If none of these certificates is available, identification fails closed to
+\(\SepRR(r,r')\) or \(\Obstruction\).
+\end{definition}
+
+\section{Candidate Comparison}
+
+\begin{longtable}{p{0.23\linewidth}p{0.30\linewidth}p{0.35\linewidth}}
+\toprule
+Candidate & Strength & Failure mode \\
+\midrule
+Transport completeness primitive &
+Gives a direct source transport route for all admitted \(\RRE\) variations. &
+Too strong as a standalone law unless the source formalism already supplies
+complete transport certificates. Current ontology does not derive this. \\
+Object-relative invariance relation &
+Fits the actual burden: a declared \(F\) may be insensitive to \(\RRE\). &
+Insufficient without certificate discipline; otherwise it can smuggle detector
+or benchmark indifference. \\
+Factorization certificate family &
+Mathematically clean because it reuses the P5-T02 factor-through lemma. &
+Only applies when a source quotient and factorization proof are supplied. \\
+Quotient or indifference rule &
+Useful if the quotient is source-constructed and fail-closed. &
+Unsafe if indifference is inferred from process authority, detector behavior,
+\(\MetricData(E)\), \(\geff\), or benchmark success. \\
+\bottomrule
+\end{longtable}
+
+\section{Selected Proposal-Only Schema}
+
+\begin{schema}[Certificate-indexed \(\LawRR\) schema]
+For each declared source object \(F:D_E\to X\) and each
+\(\VarRR(r,r')\), a proposal-only source-side law schema may identify \(r\)
+and \(r'\) for \(F\) only by one of the following branches:
+\[
+\begin{array}{ll}
+\text{transport branch} & \TrRR(r,r')\ \text{and source soundness for }F, \\
+\text{invariance branch} & \InvRR(F;r,r'), \\
+\text{factorization branch} & \FactRR(F)\ \text{and}\ F=\bar F\circ\pi_{\RRE}, \\
+\text{fail-closed branch} & \SepRR(r,r')\ \text{or}\ \Obstruction .
+\end{array}
+\]
+The schema is certificate-indexed: the admissible identification branch must
+name its certificate and the declared source object \(F\). There is no global
+unrestricted \(\RRE\) irrelevance claim.
+\end{schema}
+
+\section{Proof Obligations}
+
+\begin{obligation}[Domain closure]
+Show that \(D_E\) and \(\VarRR\) are defined in source-only terms and are
+closed under the finite/local \(\RRE\) variations being evaluated.
+\end{obligation}
+
+\begin{obligation}[Certificate soundness]
+For every proposed \(\TrRR\), \(\InvRR\), or \(\FactRR\), prove soundness from
+source syntax, source certificates, and source transport definitions only.
+Target atlas, target metric, detector protocol, empirical calibration,
+\(\MetricData(E)\), \(\geff\), stress-energy semantics, matter action,
+Einstein equations, benchmark success, role state, registry metadata,
+validator output, approval text, commit state, generated derivative, and local
+cache state are forbidden as premises.
+\end{obligation}
+
+\begin{lemma}[Factor-through branch]
+If \(\FactRR(F)\) supplies a source quotient \(\pi_{\RRE}:D_E\to\QRR\) and a
+source map \(\bar F:\QRR\to X\) such that \(F=\bar F\circ\pi_{\RRE}\), then
+\(\pi_{\RRE}(r)=\pi_{\RRE}(r')\) implies \(F(r)=F(r')\).
+\end{lemma}
+
+\begin{proof}
+This is the formal factor-through argument:
+\[
+F(r)=\bar F(\pi_{\RRE}(r))=\bar F(\pi_{\RRE}(r'))=F(r').
+\]
+The proof is conditional on a source quotient and factorization certificate.
+It is not an unrestricted irrelevance theorem.
+\end{proof}
+
+\begin{lemma}[Certificate deletion fail-closed rule]
+If the only identification route for \(r,r'\) depends on
+\(\TrRR(r,r')\), \(\InvRR(F;r,r')\), or \(\FactRR(F)\), then deleting that
+certificate deletes the identification route. The result is
+\(\SepRR(r,r')\) or \(\Obstruction\), not detector semantics.
+\end{lemma}
+
+\begin{proof}
+The selected schema admits no certificate-free identification branch. Without
+a named source certificate, the two-record P5 witness family from
+\texttt{RT-20260701-023} remains available: records with equal non-\(\RRE\)
+support and distinct retained \(\RRE\) syntax cannot be identified for
+arbitrary \(F\). Thus deletion fails closed.
+\end{proof}
+
+\section{Obstruction Status}
+
+The active obstruction remains:
+\[
+  \ObRR .
+\]
+Current ontology does not derive \(\LawRR\). This packet supplies a
+proposal-only candidate-law schema that a later audit and stress test may
+evaluate. It does not prove that such a law is impossible, and it does not
+adopt the schema as canonical ontology.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Unchanged; \(\RRE\) equivalence remains certificate-indexed and proposal-only. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior context only. \\
+Resp\_lc & Prior scoped source-extension context only. \\
+M\_src & Unchanged; no \(M_{\mathrm{src}}\) scope change. \\
+g\_eff & Unchanged; no \(\geff\) adoption or scope expansion. \\
+matter coupling & Proposal-only \(\RRE\) transport/invariance candidate-law schema recorded; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+finite-variation robustness & Certificate-deletion fail-closed obligation recorded; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No Gate Chair verdict requested or issued. \\
+current route freeze or hard-fail status & Not frozen; next route is source-purity audit of the proposal-only schema. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The logical next packet is one bounded Smuggling Auditor audit of this
+proposal-only schema. The audit should test for target-atlas, target-metric,
+detector-protocol, empirical-calibration, \(\MetricData(E)\), \(\geff\),
+benchmark, process-authority, generated-derivative, approval, role, registry,
+validator, and commit-status imports.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+Formalizing this candidate schema does not adopt \(\LawRR\) and does not edit
+canonical ontology.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The certificate-indexed schema does not prove unrestricted \(\RRE\)
+irrelevance. It explicitly preserves separation or obstruction when source
+certificates are absent.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This packet does not derive matter coupling, stress-energy semantics, matter
+action, Einstein equations, benchmark promotion, or a completed GR derivation.
+\end{nonconclusion}
+
+\section{APA 7 Source Notes}
+
+Candidate Constructor Packet RT-20260701-023. (2026). \emph{RR\_E
+irrelevance theorem attempt or obstruction v1} [Research-control TeX
+artifact]. The-AEther-Flow.
+
+Refuter Packet RT-20260701-025. (2026). \emph{RR\_E theorem or obstruction
+Refuter stress v1} [Research-control TeX artifact]. The-AEther-Flow.
+
+Theoretical Continuation Selector Packet RT-20260701-026. (2026).
+\emph{RR\_E post-stress selector or freeze decision} [Research-control YAML
+artifact]. The-AEther-Flow.
+
+Implementation Plan. (2026). \emph{Recommendations implementation plan
+continue task v13} [Project-control Markdown plan]. The-AEther-Flow.
+
+\end{document}
