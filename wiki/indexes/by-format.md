@@ -107,6 +107,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-TESTS` `tests/README.md`
 - `MD-README-TEX-SHARED` `tex_shared/README.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12` `implementations_plans/recommendations_implementation_plan_continue_task-v12.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13` `implementations_plans/recommendations_implementation_plan_continue_task-v13.md`
 - `MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
@@ -628,6 +629,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-TESTS` `wiki/markdown/md-readme-tests.md`
 - `WIKI-MD-README-TEX-SHARED` `wiki/markdown/md-readme-tex-shared.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v12.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v13.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`

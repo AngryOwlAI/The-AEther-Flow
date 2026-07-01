@@ -1,0 +1,50 @@
+task_id: "RT-20260701-003"
+task_type: "post_v13_p0_t01_plan_intake"
+status: "completed"
+created_at: "2026-07-01T04:25:00Z"
+updated_at: "2026-07-01T04:25:00Z"
+closed_at: "2026-07-01T04:25:00Z"
+parent_task_id: "RT-20260701-002"
+parent_handoff_id: "handoff-0411"
+decision_id: "DDR-20260701-003"
+job_id: "AJ-RT-20260701-003-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260701-003"
+requires_human_gate: false
+human_authorization_note: "The current user goal grants human authorization for human gates. This plan-intake packet does not consume Gate Chair authority, adoption authority, benchmark authority, or physics claim-promotion authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v13"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T01"
+  plan_task_name: "Plan intake transaction"
+objective: "Add recommendations_implementation_plan_continue_task-v13.md to tracked project-control guidance, register it as implementation guidance only, preserve v12 as historical evidence, and hand off to P0-T02 live baseline reconciliation without changing physics claims."
+closure_status: "post_v13_p0_t01_plan_intake_registered_v13_no_physics_claim_change"
+claim_boundary:
+  allowed_scope: "Project-control intake of the v13 implementation plan only"
+  v13_plan_status: "implementation guidance only"
+  v12_historical_evidence_preserved: true
+  deferred_scientific_authority: "handoff-0411 remains the immediate scientific authority for the later SourceMatterSemanticsAdoptionReadinessLaw_v1 Refuter stress after P0 baseline and execution-gate control packets."
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifact: "research_control/tasks/RT-20260701-003/artifacts/v13_plan_intake_note.md"
+next_recommended_action: "Run one bounded P0-T02 live baseline reconciliation control packet to compare v13 assumptions against research_control/program_state.yaml, handoff-0412, current_frontier.md, DISTANCE_TO_GR_LEDGER.csv, and the latest task registry state before selecting P0-T03 or adapting the plan."
+notes: "This task registers v13 and records that it is project-control guidance, not physics authority. It does not execute P0-T02, P0-T03, P0-T04, P2-T01 Refuter stress, or any downstream v13 phase."
+documentation_impact_id: "DI-RT-20260701-003-001"
