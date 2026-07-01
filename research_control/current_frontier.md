@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-015` and `handoff-0424`.
+`RT-20260701-016` and `handoff-0425`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-015` |
-| Latest handoff ID | `handoff-0424` |
-| Current status | `v13_p4_t01_positive_source_matter_semantics_target_formalized_proposal_only_no_adoption` |
-| Current route family | post v13 p4 t01 positive source matter semantics target to p4 t02 candidate constructor |
+| Active task ID | `RT-20260701-016` |
+| Latest handoff ID | `handoff-0425` |
+| Current status | `v13_p4_t02_positive_source_matter_semantics_profile_candidate_constructed_pending_audit_no_adoption` |
+| Current route family | post v13 p4 t02 positive source matter semantics candidate to p4 t03 smuggling audit |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P4-T02 positive source-matter-semantics candidate constructor as bounded source-side draft/control packet |
-| Next recommended action | Run one bounded v13 P4-T02 positive source-matter-semantics candidate constructor packet under PositiveSourceMatterSemanticsTarget_v1. The constructor must either instantiate the target on a declared source subdomain or return a precise obstruction while preserving all downstream claim blocks. |
+| Required next authority | v13 P4-T03 positive source-matter-semantics smuggling audit as bounded draft/control packet |
+| Next recommended action | Run one bounded v13 P4-T03 positive source-matter-semantics smuggling audit packet over PositiveMSProfile_v1. The audit must test hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before any Refuter stress selector Gate Chair or adoption route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-015/00_TASK.yaml`.
-- Active task objective: Execute one bounded v13 P4-T01 Ontology Formalizer packet to define a proposal-only positive source-side matter-semantics target after scoped MSStableMatterSemanticsBridge_v1 and SourceMatterSemanticsAdoptionReadinessLaw_v1 evidence/precondition routing, without adopting matter semantics, detector semantics, coupling law, matter coupling, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark status, or completed derivation.
-- Latest handoff path: `research_control/handoffs/handoff-0424.yaml`.
-- Latest handoff summary: RT-20260701-015 completed v13 P4-T01 by formalizing PositiveSourceMatterSemanticsTarget_v1 as a proposal-only draft/control source-side target. The target defines source records, admissibility conditions, excluded target imports, source labels, source equivalence and separation conditions, scoped bridge/readiness evidence relations, fail-closed branches, proof obligations, and blocked downstream routes. No matter semantics, detector semantics, coupling law, matter coupling, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark status, or completed derivation was adopted.
-- Current route family: post v13 p4 t01 positive source matter semantics target to p4 t02 candidate constructor.
-- Next recommended action: Run one bounded v13 P4-T02 positive source-matter-semantics candidate constructor packet under PositiveSourceMatterSemanticsTarget_v1. The constructor must either instantiate the target on a declared source subdomain or return a precise obstruction while preserving all downstream claim blocks.
+- Active task path: `research_control/tasks/RT-20260701-016/00_TASK.yaml`.
+- Active task objective: Construct or precisely obstruct a positive source-side matter-semantics candidate under PositiveSourceMatterSemanticsTarget_v1 while preserving all downstream claim blocks.
+- Latest handoff path: `research_control/handoffs/handoff-0425.yaml`.
+- Latest handoff summary: RT-20260701-016 completed v13 P4-T02 by constructing PositiveMSProfile_v1 as a proposal-only finite/local source-side matter-semantics profile candidate pending smuggling audit. The candidate defines a source subdomain profile map label map equivalence separation finite-variation behavior scoped-evidence deletion behavior and fail-closed branches. No matter semantics detector semantics coupling law matter coupling stress-energy semantics matter action MetricData(E) g_eff Einstein equations benchmark status or completed derivation was adopted.
+- Current route family: post v13 p4 t02 positive source matter semantics candidate to p4 t03 smuggling audit.
+- Next recommended action: Run one bounded v13 P4-T03 positive source-matter-semantics smuggling audit packet over PositiveMSProfile_v1. The audit must test hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before any Refuter stress selector Gate Chair or adoption route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P4-T02 positive source-matter-semantics candidate constructor packet under PositiveSourceMatterSemanticsTarget_v1. The constructor must either instantiate the target on a declared source subdomain or return a precise obstruction while preserving all downstream claim blocks.
+Run one bounded v13 P4-T03 positive source-matter-semantics smuggling audit packet over PositiveMSProfile_v1. The audit must test hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before any Refuter stress selector Gate Chair or adoption route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-015`;
-- latest handoff: `handoff-0424`;
-- current status: `v13_p4_t01_positive_source_matter_semantics_target_formalized_proposal_only_no_adoption`;
+- active task: `RT-20260701-016`;
+- latest handoff: `handoff-0425`;
+- current status: `v13_p4_t02_positive_source_matter_semantics_profile_candidate_constructed_pending_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0424.yaml`
-- `research_control/tasks/RT-20260701-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0425.yaml`
+- `research_control/tasks/RT-20260701-016/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0424*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0425*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

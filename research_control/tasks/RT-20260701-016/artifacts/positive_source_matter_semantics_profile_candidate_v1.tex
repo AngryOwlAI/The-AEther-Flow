@@ -1,0 +1,389 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\PMSTarget}{\mathrm{PositiveSourceMatterSemanticsTarget}_{v1}}
+\newcommand{\PMSProf}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\RecSrc}{\mathcal R^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\AdmSrc}{\mathrm{Adm}^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\LabSrc}{L^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\lambdaSrc}{\lambda^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\lambdaProf}{\lambda^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\EqProf}{\equiv^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\SepProf}{\#^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Pattern}{\mathsf{pattern}}
+\newcommand{\Separated}{\mathsf{separated}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\RRE}{\mathrm{RR}_E}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Prof}{\mathsf{Prof}^{\mathrm{PMS}}_E}
+\newcommand{\Ready}{\mathsf{Ready}^{\mathrm{audit}}_E}
+\newcommand{\Cert}{\mathsf{Cert}^{\mathrm{noT}}_E}
+\newcommand{\Transport}{\mathsf{Tr}^{\mathrm{src}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{failure}{Fail-closed branch}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Positive Source Matter-Semantics Profile Candidate v1}
+\author{Candidate Constructor Packet RT-20260701-016}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact records the fused Candidate Constructor output for
+\texttt{RT-20260701-016}, implementing v13 P4-T02. It constructs
+\[
+  \PMSProf
+\]
+as a bounded, finite/local, proposal-only, draft/control source-side candidate
+under \(\PMSTarget\).
+
+The candidate supplies a source-only profile map, a label map, equivalence
+criteria, separation criteria, and fail-closed behavior on a declared subdomain
+of \(\AdmSrc(E)\). It is not adopted matter semantics. It is not detector
+semantics. It is not a coupling law and not matter coupling. It does not edit
+canonical ontology, adopt source law, adopt \(\SMSAR\) as law, adopt scoped
+evidence beyond exact Gate Chair results, adopt \(\MetricData(E)\), change
+\(\geff\), import stress-energy semantics, construct a stress-energy tensor,
+import a matter action, derive Einstein equations, promote benchmark status,
+claim benchmark closure, claim completed derivation, claim future
+source-extension impossibility, or reject the global theory.
+
+\begin{verbatim}
+candidate_constructor_result.result_type: "constructed_candidate"
+candidate_status: "proposal-only"
+packet_payload_mode: "positive_source_matter_semantics_candidate"
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Construction Question}
+
+The P4-T02 question is:
+\[
+\text{Can \(\PMSTarget\) be instantiated on a declared source subdomain}
+\]
+\[
+\text{by a positive source-side matter-semantics candidate without target
+imports?}
+\]
+
+The answer in this packet is yes, but only in the following controlled sense:
+there is a finite/local source-profile candidate over a declared admissible
+subdomain. The candidate is ready for smuggling audit, not ready for adoption.
+
+\section{Declared Source Subdomain}
+
+\begin{definition}[Positive-profile admissible subdomain]
+Let \(\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\subseteq\AdmSrc(E)\) be the set
+of admissible records
+\[
+  r=(E,\Bcur,\sigma,\pi,\kappa,\RRE,\beta,\alpha,\mathsf{cert},
+      \mathsf{fail})
+\]
+that satisfy the following source-side requirements:
+\begin{enumerate}[label=D\arabic*.,leftmargin=*]
+  \item \(\sigma\) contains a finite/local source support code
+  \(S_r\) and a source pattern code \(X_r\).
+  \item \(\pi\) contains a source probe-token family \(P_r\), treated only as
+  source syntax.
+  \item \(\kappa\) contains a source certificate profile \(K_r\) and an
+  explicit no-target certificate bundle \(\Cert(r)\).
+  \item \(\RRE\) contains a retained readout-response syntax class
+  \(Q_r\), treated as source bookkeeping rather than detector readout or
+  empirical response.
+  \item \(\beta\) and \(\alpha\), when present, are scoped
+  \(\MSBridge\) and \(\SMSAR\) evidence/precondition fields only.
+  \item \(\mathsf{fail}\) is empty or names only controlled bottom branches
+  already allowed by \(\PMSTarget\).
+\end{enumerate}
+If any required source-side component is absent, the record is outside this
+candidate subdomain and maps to \(\Bottom\).
+\end{definition}
+
+\begin{condition}[No-target certificate bundle]
+For \(r\in\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\), \(\Cert(r)\) must
+explicitly exclude detector protocols, empirical calibration, target metric,
+Lorentzian signature, proper time, stress-energy semantics, stress-energy
+tensor, matter action, conservation by imported GR or QFT theory,
+\(\MetricData(E)\), \(\geff\) expansion, Einstein equations, benchmark fit,
+generated derivative authority, registry authority, validator authority, role
+authority, approval state, commit state, and file-order authority.
+\end{condition}
+
+\section{Positive Source Profile}
+
+\begin{definition}[Source-positive profile]
+For \(r\in\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\), define the source-positive
+profile
+\[
+  \Prof(r)=
+  \bigl([S_r]_{\Transport},[X_r]_{\Transport},
+  [P_r]_{\Transport},[K_r]_{\Transport},[Q_r]_{\Transport},
+  \Cert(r)\bigr).
+\]
+The brackets mean equality or explicitly declared source-side transport under
+permitted source relabelings. \(\Prof(r)\) contains only source support,
+source pattern, source probe-token, source certificate, retained \(\RRE\)
+syntax, and no-target certificate data.
+\end{definition}
+
+\begin{definition}[Audit-readiness predicate]
+Define
+\[
+  \Ready(r)=1
+\]
+when the record has scoped \(\beta\) and \(\alpha\) evidence/precondition
+fields sufficient for audit-readiness routing under prior Gate Chair results.
+If either field is deleted, \(\Ready(r)=0\). Deleting \(\beta\) or \(\alpha\)
+does not delete \(\Prof(r)\); it only blocks audit-readiness and any later
+adoption route.
+\end{definition}
+
+\begin{definition}[Candidate label map]
+Define the partial label map
+\[
+  \lambdaProf:\AdmSrc(E)\dashrightarrow
+  \{\Bottom,\Pattern,\Separated,\Obstruction\}
+\]
+as follows:
+\begin{enumerate}[label=L\arabic*.,leftmargin=*]
+  \item If \(r\notin\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\), set
+  \(\lambdaProf(r)=\Bottom\).
+  \item If \(\Cert(r)\) detects a forbidden import, set
+  \(\lambdaProf(r)=\Obstruction\).
+  \item If \(\Prof(r)\) is defined and \(\Ready(r)=1\), set
+  \(\lambdaProf(r)=\Pattern\).
+  \item If \(\Prof(r)\) is defined and \(\Ready(r)=0\), set
+  \(\lambdaProf(r)=\Pattern\) with audit-readiness blocked.
+\end{enumerate}
+The label \(\Pattern\) means only that a positive source profile has been
+constructed. It does not mean adopted matter semantics.
+\end{definition}
+
+\section{Equivalence And Separation}
+
+\begin{definition}[Profile equivalence]
+For \(r,r'\in\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\), define
+\[
+  r\EqProf r'
+\]
+if and only if \(\Prof(r)=\Prof(r')\) after explicit source-side transport.
+The relation is undefined outside the declared subdomain and returns
+\(\Bottom\) rather than importing target interpretation.
+\end{definition}
+
+\begin{definition}[Profile separation]
+For \(r,r'\in\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\), define
+\[
+  r\SepProf r'
+\]
+when at least one source component of \(\Prof(r)\) is not equal to the
+corresponding source component of \(\Prof(r')\) under permitted source
+transport, or when \(\RRE\)-retention blocks source-side identification. If a
+difference can be stated only by detector, empirical, stress-energy, matter
+action, metric, Einstein-equation, or benchmark language, the branch is
+\(\Obstruction\), not \(\SepProf\).
+\end{definition}
+
+\begin{theorem}[Equivalence on the profile subdomain]
+\(\EqProf\) is reflexive, symmetric, and transitive on
+\(\Adm^{\mathrm{PMS}}_{\mathrm{src}}(E)\).
+\end{theorem}
+
+\begin{proof}
+Each profile is a finite tuple of source-side transport classes plus the
+no-target certificate bundle. Reflexivity follows from equality of each
+component with itself. Symmetry follows because equality and declared
+source-transport equivalence are symmetric. Transitivity follows because
+source-transport composition is part of the declared admissible transport
+discipline. No target metric, detector protocol, stress-energy semantics,
+matter action, Einstein-equation premise, benchmark result, validator result,
+registry row, role identity, approval state, commit state, or file ordering is
+used.
+\end{proof}
+
+\begin{lemma}[Source separation]
+If \(r\SepProf r'\), the separation is witnessed by a named source component
+of \(\Prof(r)\) and \(\Prof(r')\) or by retained \(\RRE\)-syntax
+nonidentification.
+\end{lemma}
+
+\begin{proof}
+This is immediate from the definition of \(\SepProf\). The candidate allows no
+other separation witnesses. Any proposed separation depending on detector,
+empirical, metric, stress-energy, matter-action, Einstein-equation, benchmark,
+process-authority, or generated-derivative data is routed to
+\(\Obstruction\).
+\end{proof}
+
+\section{Finite Variation And Certificate Deletion Behavior}
+
+\begin{definition}[Permitted finite variation]
+A finite variation \(\delta\) is permitted for this candidate when it sends
+each source component of \(\Prof(r)\) either to a transported source component
+of \(\Prof(\delta r)\) or to a declared missing-component branch.
+\end{definition}
+
+\begin{proposition}[Finite-variation fail-closed behavior]
+For any permitted finite variation \(\delta\), either
+\[
+  \Prof(\delta r)=\Transport_\delta(\Prof(r))
+\]
+and \(\lambdaProf(\delta r)=\Pattern\), or the candidate returns
+\(\Bottom\) or \(\Obstruction\).
+\end{proposition}
+
+\begin{proof}
+The candidate profile is defined componentwise. If every component transports,
+the profile transports. If a component is missing or a forbidden import is
+introduced, the candidate uses the explicit bottom or obstruction branches.
+\end{proof}
+
+\begin{proposition}[Scoped-evidence deletion test]
+Deleting scoped \(\beta\) or \(\alpha\) evidence/precondition fields does not
+make \(\Prof(r)\) a target-derived object. It sets \(\Ready(r)=0\) and blocks
+audit-readiness or adoption routing.
+\end{proposition}
+
+\begin{proof}
+\(\Prof(r)\) contains source support, source pattern, source probe-token,
+source certificate, retained \(\RRE\) syntax, and no-target certificate data.
+It does not contain \(\beta\) or \(\alpha\) as label-defining fields.
+Therefore their deletion changes only \(\Ready(r)\), not the source profile.
+\end{proof}
+
+\section{Fail-Closed Map}
+
+\begin{failure}[Missing source component]
+If \(S_r\), \(X_r\), \(P_r\), \(K_r\), \(Q_r\), or \(\Cert(r)\) is absent,
+\(\lambdaProf(r)=\Bottom\).
+\end{failure}
+
+\begin{failure}[Forbidden import]
+If any component of \(\Prof\), \(\lambdaProf\), \(\EqProf\), or \(\SepProf\)
+requires detector protocols, empirical calibration, target metric, Lorentzian
+signature, proper time, stress-energy semantics, stress-energy tensor, matter
+action, imported conservation law, \(\MetricData(E)\), \(\geff\) expansion,
+Einstein equations, benchmark fit, generated derivative authority, registry
+authority, validator authority, role authority, approval state, commit state,
+or file-order authority, the candidate returns \(\Obstruction\).
+\end{failure}
+
+\begin{failure}[\(\RRE\) collapse]
+If two records with distinct retained \(\RRE\) syntax are identified without a
+source-side transport certificate, the candidate returns \(\Obstruction\).
+\end{failure}
+
+\begin{failure}[Evidence-as-adoption]
+If \(\MSBridge\) or \(\SMSAR\) evidence/precondition status is read as
+adopted matter semantics, detector semantics, source law, source-extension data
+beyond exact scoped Gate Chair results, coupling law, matter coupling,
+stress-energy semantics, matter action, Einstein equations, benchmark
+promotion, or completed derivation, that use returns \(\Obstruction\).
+\end{failure}
+
+\section{Candidate Result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate: "PositiveMSProfile_v1"
+  constructed_candidate_path:
+    "research_control/tasks/RT-20260701-016/artifacts/positive_source_matter_semantics_profile_candidate_v1.tex"
+  next_required_role: "smuggling-auditor"
+  no_fog_check: true
+  no_fog_explanation: >
+    RT-20260701-016 constructed PositiveMSProfile_v1 as a finite/local
+    source-only profile candidate under PositiveSourceMatterSemanticsTarget_v1.
+    It supplies a profile map, label map, profile equivalence, profile
+    separation, finite-variation behavior, evidence-deletion behavior, and
+    fail-closed branches. It is proposal-only and pending smuggling audit.
+\end{verbatim}
+
+This packet constructs a candidate and narrows the next route to smuggling
+audit. It does not discharge matter coupling and does not authorize adoption.
+
+\section{Distance-to-GR Status}
+
+\begin{itemize}[leftmargin=*]
+  \item Source ontology primitives: unchanged; no canonical ontology edit.
+  \item Source equivalence EqSrc: unchanged; no general EqSrc theorem.
+  \item RetainH and GenH: unchanged.
+  \item ObsLoc\(_{lc}\): prior context only.
+  \item Resp\(_{lc}\): prior scoped response/localization context only.
+  \item \(M_{\mathrm{src}}\): prior source-only context retained.
+  \item \(\MetricData(E)\): not adopted.
+  \item \(\geff\): prior scoped source-extension context only; no scope
+  change.
+  \item Matter coupling: positive source-side profile candidate constructed
+  pending smuggling audit; no matter coupling is derived or adopted.
+  \item Einstein equations: blocked; no field-equation derivation.
+  \item Finite-variation robustness: local fail-closed behavior only; no
+  global robustness theorem.
+  \item Benchmark promotion: blocked; no benchmark promotion.
+  \item Gate Chair status: no new Gate Chair verdict requested or issued.
+  \item Current route freeze or hard-fail status: not frozen; smuggling audit
+  is the next required role.
+\end{itemize}
+
+\section{Forbidden Conclusions}
+
+This artifact does not license:
+\begin{enumerate}[leftmargin=*]
+  \item canonical ontology edit or canonical-ontology candidate status;
+  \item source-law adoption or \(\SMSAR\) adoption as law;
+  \item source-extension data adoption beyond exact scoped Gate Chair results;
+  \item \(\MetricData(E)\) adoption or \(\geff\) scope expansion;
+  \item coupling-law adoption;
+  \item matter-semantics adoption or detector-semantics adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics, stress-energy tensor, or matter action;
+  \item Einstein equations, benchmark promotion, benchmark Gate Chair closure,
+  completed derivation, future source-extension impossibility, or global
+  theory rejection.
+\end{enumerate}
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, June 30). \textit{MSStableMatterSemanticsBridge
+v1 candidate} [Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{Gate Chair review of
+scoped source matter-semantics adoption-readiness evidence} [Internal
+research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{PositiveSourceMatterSemanticsTarget
+v1} [Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{Recommendations
+implementation plan continue task v13} [Internal implementation plan].
+
+\end{document}

@@ -1,0 +1,42 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260701-016"
+status: "completed"
+question: "Can PositiveSourceMatterSemanticsTarget_v1 be instantiated by a source-only positive matter-semantics candidate on a declared finite/local subdomain?"
+construction_result:
+  result_type: "constructed_candidate"
+  candidate_name: "PositiveMSProfile_v1"
+  declared_subdomain: "Adm_src^PMS(E) subset Adm_src^MS(E)"
+  formal_objects:
+    - "Adm_src^PMS(E)"
+    - "Prof_E^PMS"
+    - "Ready_E^audit"
+    - "lambda_src^PMS"
+    - "equiv_src^PMS"
+    - "#_src^PMS"
+    - "Cert_E^noT"
+  maps:
+    - "Prof_E^PMS(r)=([S_r],[X_r],[P_r],[K_r],[Q_r],Cert_E^noT(r))"
+    - "lambda_src^PMS maps missing components to bottom, forbidden imports to obstruction, and complete source profiles to pattern"
+    - "Ready_E^audit records scoped beta/alpha evidence as audit-readiness only"
+  theorems_or_lemmas:
+    - "EqProf is reflexive, symmetric, and transitive on Adm_src^PMS(E)"
+    - "SepProf is witnessed by named source-profile component differences or retained RR_E nonidentification"
+    - "finite variations either transport the profile or fail closed"
+    - "deleting beta or alpha blocks audit-readiness without changing the source profile"
+source_purity_assessment:
+  source_only_components:
+    - "source support code"
+    - "source pattern code"
+    - "source probe-token family"
+    - "source certificate profile"
+    - "retained RR_E syntax class"
+    - "no-target certificate bundle"
+  forbidden_imports_used: []
+  scoped_evidence_use: "MSStableMatterSemanticsBridge_v1 and SourceMatterSemanticsAdoptionReadinessLaw_v1 enter only through audit-readiness fields beta and alpha."
+proof_obligations_left_open:
+  - "smuggling audit of target-import exclusions and evidence-as-adoption risk"
+  - "Refuter stress for profile overcollapse, RR_E collapse, finite-variation fragility, and certificate deletion"
+  - "post-stress selector before any Gate Chair route"
+  - "human-gated authority before adoption or promotion"
+verdict: "constructed_candidate_pending_audit"
