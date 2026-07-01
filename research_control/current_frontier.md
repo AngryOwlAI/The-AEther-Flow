@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-027` and `handoff-0436`.
+`RT-20260701-028` and `handoff-0437`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-027` |
-| Latest handoff ID | `handoff-0436` |
-| Current status | `v13_rr_e_transport_completeness_or_invariance_law_formalized_proposal_only_no_adoption` |
-| Current route family | post v13 rr e transport law formalizer to smuggling audit no adoption |
+| Active task ID | `RT-20260701-028` |
+| Latest handoff ID | `handoff-0437` |
+| Current status | `v13_rr_e_transport_law_schema_audited_source_pure_as_written_pending_stress_no_adoption` |
+| Current route family | post v13 rr e transport law audit to refuter stress no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | bounded source-purity audit of proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 candidate-law schema |
-| Next recommended action | Run one bounded Smuggling Auditor packet to audit the proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema for target-import process-authority generated-derivative and evidence-as-adoption smuggling before Refuter stress Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work. |
+| Required next authority | bounded Refuter stress of audited proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 candidate-law schema |
+| Next recommended action | Run one bounded Refuter packet to stress the audited proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema against malformed absent or deleted source certificates declared-F changes transport relabeling detector-response pressure g_eff MetricData(E) benchmark pressure process-authority pressure evidence-as-adoption pressure unrestricted-theorem pressure adoption overread and global-no-go overread before Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-027/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to formalize and compare proposal-only source-side RR_E transport completeness or invariance law candidates under no-target-import constraints.
-- Latest handoff path: `research_control/handoffs/handoff-0436.yaml`.
-- Latest handoff summary: RT-20260701-027 completed a bounded Ontology Formalizer ontology-law-research-packet for RR_ETransportCompletenessOrInvarianceLaw_v1. The packet compared source-only transport completeness object-relative invariance factorization and quotient candidate-law shapes and selected a proposal-only certificate-indexed hybrid schema. Identification of RR_E variation pairs is allowed only by explicit source transport source invariance or source factorization certificates; otherwise separation or obstruction is preserved. No source-law adoption canonical ontology edit unrestricted RR_E irrelevance theorem detector-semantics collapse matter semantics detector semantics matter coupling MetricData(E) g_eff Einstein equations benchmark promotion completed derivation future source-extension impossibility or global theory rejection occurred.
-- Current route family: post v13 rr e transport law formalizer to smuggling audit no adoption.
-- Next recommended action: Run one bounded Smuggling Auditor packet to audit the proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema for target-import process-authority generated-derivative and evidence-as-adoption smuggling before Refuter stress Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work.
+- Active task path: `research_control/tasks/RT-20260701-028/00_TASK.yaml`.
+- Active task objective: Execute one bounded Smuggling Auditor packet to audit the proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema for target-import process-authority generated-derivative and evidence-as-adoption smuggling before Refuter stress Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work.
+- Latest handoff path: `research_control/handoffs/handoff-0437.yaml`.
+- Latest handoff summary: RT-20260701-028 completed a bounded Smuggling Auditor audit of the proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 certificate-indexed schema. The audit found the schema source-pure as written with certificate guards pending Refuter stress. No target atlas target metric detector protocol empirical calibration MetricData(E) g_eff benchmark process authority generated derivative role registry validator approval commit evidence-as-adoption source-law adoption law adoption matter semantics detector semantics matter coupling Einstein equations benchmark promotion completed derivation future source-extension impossibility or global theory rejection occurred.
+- Current route family: post v13 rr e transport law audit to refuter stress no adoption.
+- Next recommended action: Run one bounded Refuter packet to stress the audited proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema against malformed absent or deleted source certificates declared-F changes transport relabeling detector-response pressure g_eff MetricData(E) benchmark pressure process-authority pressure evidence-as-adoption pressure unrestricted-theorem pressure adoption overread and global-no-go overread before Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded Smuggling Auditor packet to audit the proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema for target-import process-authority generated-derivative and evidence-as-adoption smuggling before Refuter stress Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work.
+Run one bounded Refuter packet to stress the audited proposal-only RR_ETransportCompletenessOrInvarianceLaw_v1 schema against malformed absent or deleted source certificates declared-F changes transport relabeling detector-response pressure g_eff MetricData(E) benchmark pressure process-authority pressure evidence-as-adoption pressure unrestricted-theorem pressure adoption overread and global-no-go overread before Gate Chair review P5-T06 boundary update matter-coupling Einstein-equation benchmark or promotion work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,27 +143,27 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-027`;
-- latest handoff: `handoff-0436`;
-- current status: `v13_rr_e_transport_completeness_or_invariance_law_formalized_proposal_only_no_adoption`;
+- active task: `RT-20260701-028`;
+- latest handoff: `handoff-0437`;
+- current status: `v13_rr_e_transport_law_schema_audited_source_pure_as_written_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0436.yaml`
-- `research_control/tasks/RT-20260701-027/00_TASK.yaml`
+- `research_control/handoffs/handoff-0437.yaml`
+- `research_control/tasks/RT-20260701-028/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0436*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0437*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

@@ -1,0 +1,26 @@
+review_id: "PCR-RT-20260701-028-001"
+task_id: "RT-20260701-028"
+job_id: "AJ-RT-20260701-028-001"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260701-028/artifacts/child_phys_math_rr_e_transport_law_smuggling_audit.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260701-028/artifacts/child_phys_phil_rr_e_transport_law_smuggling_audit.yaml"
+    status: "completed"
+conflicts:
+  - conflict_id: "C-001"
+    conflict_type: "terminology"
+    severity: "nonblocking"
+    summary: "The mathematical child names the core verdict in terms of certificate guards; the philosophical child names the same verdict in terms of ontology and process-authority boundaries."
+    resolution: "The fused audit keeps both descriptions and records a single verdict: source_pure_as_written_with_certificate_guards_pending_refuter_stress."
+  - conflict_id: "C-002"
+    conflict_type: "next_route"
+    severity: "nonblocking"
+    summary: "Both children select Refuter stress next, but the mathematical child emphasizes certificate deletion and the philosophical child emphasizes adoption/process-authority pressure."
+    resolution: "The fused stress-target list contains both certificate-deletion cases and process-authority/adoption pressure cases."
+unresolved_conflicts: []
+parent_verdict: "source_pure_as_written_with_certificate_guards_pending_refuter_stress"
+claim_boundary_preserved: true
