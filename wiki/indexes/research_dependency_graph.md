@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T17:44:01Z`
-- Source fingerprint: `5358e16a50a9d6c425587166d6fcacd3773ca0e9b57516fe8c3397bbe9099f78`
-- Nodes: `9752`
-- Edges: `41435`
+- Generated from tracked state as of: `2026-07-01T18:16:34Z`
+- Source fingerprint: `e6500f18da9545492db16455ff1ce6760da61f68eeb9e304af44229074764783`
+- Nodes: `9775`
+- Edges: `41539`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 576 |
+| `completion_yaml` | 577 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 440 |
+| `handoff_yaml` | 441 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 576 |
+| `agent_job` | `support_only` | 577 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4955 |
-| `blocked_burden` | `blocked` | 1163 |
-| `claim_boundary` | `support_only` | 577 |
+| `artifact` | `support_only` | 4972 |
+| `blocked_burden` | `blocked` | 1165 |
+| `claim_boundary` | `support_only` | 578 |
 | `draft_control_candidate` | `draft_control` | 463 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 38 |
 | `frozen_negative` | `frozen_negative` | 96 |
 | `gate_chair_verdict` | `human_gated` | 30 |
-| `handoff` | `support_only` | 440 |
+| `handoff` | `support_only` | 441 |
 | `human_gated_object` | `human_gated` | 262 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 254 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 25 |
-| `task` | `support_only` | 523 |
+| `task` | `support_only` | 524 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P5-T06 synchronized the RR_E theorem inventory current-frontier wording and ledger next-action after the Gate Chair accepted RR_ETransportCompletenessOrInvarian |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P2-T01 defined canonical scoped-positive vocabulary and object-specific high-risk wording for M_src g_eff SourceMatterSemanticsAdoptionReadinessLaw_v1 PositiveM |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -88,6 +88,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_dag_witness_theorem` | Blocked claim: arbitrary finite-DAG witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:branchdisc_src_gsc_source_law_adoption` | Blocked permission: BranchDisc_src^{GSC} source-law adoption | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_adoption` | Blocked claim: bridge-candidate adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_as_coupling_law_data` | Blocked claim: bridge candidate as coupling-law data | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_as_detector_semantics_adoption` | Blocked claim: bridge candidate as detector semantics adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260701-031`
-- Latest handoff: `handoff-0440`
-- Handoff path: `research_control/handoffs/handoff-0440.yaml`
-- Next action: Run one bounded v14 P2-T01 scoped-positive claim vocabulary control packet before public status propagation claim-language linter matter-coupling Einstein-equation benchmark or promotion work.
+- Active task: `RT-20260701-032`
+- Latest handoff: `handoff-0441`
+- Handoff path: `research_control/handoffs/handoff-0441.yaml`
+- Next action: Run one bounded v14 P2-T02 high-risk status alias map packet before public status propagation current-frontier wording pilot claim-language examples linter matter-coupling Einstein-equation benchmark or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

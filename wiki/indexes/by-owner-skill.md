@@ -250,6 +250,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `wiki/markdown/md-research-control-design-research-dependency-graph-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `wiki/markdown/md-research-control-design-scoped-positive-claim-vocabulary.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `wiki/markdown/md-research-control-p6-t01-payload-density-metrics-design.md`
@@ -722,6 +723,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `research_control/design/scoped_positive_claim_vocabulary.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
 - `MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md`
 - `MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md`
