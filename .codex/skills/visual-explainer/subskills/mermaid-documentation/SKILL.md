@@ -1,16 +1,17 @@
 ---
 name: mermaid-documentation
-description: Subskill for registered Mermaid diagrams in registered explanatory Markdown and tracked source-backed HTML explainers.
+description: Create, review, migrate, render, and validate governed Mermaid diagrams for The Aether-Flow registered Markdown, HTML explainer specs, and tracked source-backed HTML explainers, using explicit visual grammar, source parity, no browser-side Mermaid runtime, and the local Angry Owl black/cyan/orange/ivory palette.
 ---
 
 # Mermaid Documentation
 
-Use this subskill when creating, updating, validating, or rendering Mermaid
-diagrams in registered explanatory Markdown or tracked source-backed HTML
-explainers in this repository.
+Use this subskill when creating, updating, reviewing, migrating, validating, or
+rendering Mermaid diagrams in registered explanatory Markdown or tracked
+source-backed HTML explainers in this repository.
 
 This subskill is subordinate to `visual-explainer`. It is not an independent
-documentation authority.
+documentation authority, and diagrams must not create, strengthen, or promote
+unsupported scientific or project-control claims.
 
 ## Scope
 
@@ -19,6 +20,7 @@ Applies to:
 - `markdown/html-explainer-specs/*.md`
 - eligible registered explanatory Markdown in `MARKDOWN_SOURCE_REGISTRY.csv`
 - tracked `html/*.html` files backed by registered HTML explainer specs
+- this subskill's examples, renderer, validator, and palette reference
 
 Does not apply to:
 
@@ -28,9 +30,34 @@ Does not apply to:
 - role contracts and schema contracts
 - `.local/` scratch explainers unless explicitly requested
 
+## Palette And Grammar
+
+Read `references/palette-contract.md` before creating, reviewing, or migrating
+Mermaid. That reference owns the local Angry Owl black/cyan/orange/ivory color
+schema, semantic starter classes, and visual grammar checklist.
+
+Use the palette to constrain colors, typography, canvas, and baseline
+readability. Use visual grammar to encode meaning:
+
+- shapes encode node type;
+- borders encode status or authority limits;
+- arrows encode relationship type;
+- edge labels disambiguate direction or obligation;
+- groups encode scope only when the boundary matters.
+
+Do not use color as the only meaning carrier. Do not flatten meaningful shapes,
+arrows, borders, or labels merely to fit a helper script.
+
+For governed registered Markdown in this project, prefer class definitions and
+renderer defaults over Mermaid YAML frontmatter. The current structural
+validator expects the first semantic Mermaid line to be the diagram type. Use
+Mermaid YAML frontmatter only for non-governed scratch diagrams or after a
+bounded task adds validator support.
+
 ## Canonical Source Rule
 
-Mermaid text in registered Markdown is the canonical diagram source.
+Mermaid text in registered Markdown is the canonical diagram source. Inline SVG
+inside tracked HTML is generated output.
 
 For HTML explainer specs, declare governed diagrams in frontmatter:
 
@@ -47,7 +74,13 @@ Then place each diagram in the body with an immediate stable ID marker:
 <!-- mermaid-diagram-id: authority-ladder -->
 ```mermaid
 flowchart TD
-  A[Markdown Source] --> B[Tracked HTML]
+  source["Markdown source"]:::source --> html["Tracked HTML"]:::target
+  source --> validator["Bootstrap validator"]:::control
+
+  classDef source fill:#0f364d,stroke:#48a0c0,color:#fff8ef,stroke-width:2px;
+  classDef control fill:#270b01,stroke:#f87800,color:#fff8ef,stroke-width:2px;
+  classDef target fill:#2d7ea0,stroke:#f4d6a1,color:#ffffff,stroke-width:2px;
+  linkStyle default stroke:#d6c3b4,stroke-width:2.25px;
 ```
 ````
 
@@ -59,6 +92,8 @@ Diagram IDs must use lowercase kebab-case:
 ```text
 ^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$
 ```
+
+Preserve existing diagram IDs when updating or restyling diagrams.
 
 ## HTML Rendering Rule
 
@@ -95,14 +130,15 @@ intrinsic sizing that leaves diagrams at zero or default narrow SVG width.
 
 ## Runtime Rule
 
-Tracked HTML with registered Mermaid diagrams must be standalone single-file HTML.
-Render Mermaid to sanitized inline SVG at build/regeneration time and embed the
-SVG inside `.mermaid-canvas`. The browser page may provide zoom, pan, fit, and
-source-inspection controls, but it must not run Mermaid at page load.
+Tracked HTML with registered Mermaid diagrams must be standalone single-file
+HTML. Render Mermaid to sanitized inline SVG at build/regeneration time and
+embed the SVG inside `.mermaid-canvas`. The browser page may provide zoom, pan,
+fit, and source-inspection controls, but it must not run Mermaid at page load.
+
 Executable interaction scripts must not contain literal `</body>` or `</html>`
-strings; build exported blob documents through DOM APIs or split closing tags so
-local development servers cannot inject live-reload code into JavaScript string
-literals.
+strings; build exported blob documents through DOM APIs or split closing tags
+so local development servers cannot inject live-reload code into JavaScript
+string literals.
 
 Render with strict Mermaid security:
 
@@ -152,7 +188,7 @@ node render_mermaid_inline_svg.mjs --all --check
 ```
 
 The renderer stamps deterministic provenance on `.mermaid-canvas`, including
-`data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.1"` and
+`data-renderer="mermaid@11.15.0;mermaid-inline-svg-renderer@0.1.2"` and
 `data-render-source-sha256="<sha256>"`, computed from the same normalized
 Mermaid source used by the Python validator. Do not stamp generated timestamps
 in tracked HTML.
@@ -191,6 +227,24 @@ The renderer must use a fail-closed allowlist for inline SVG:
 Prefer `flowchart TD` for complex tracked explainers. Use `flowchart LR` only
 for short linear flows.
 
+## Procedure
+
+1. Inspect the registered source, route, publication brief, dossier, or nearby
+   content the diagram supports.
+2. Define the diagram purpose, audience, publication surface, and claim boundary.
+3. Read `references/palette-contract.md`.
+4. Define the diagram's visual grammar before editing.
+5. Use stable Mermaid syntax and preserve topology, node identifiers, and
+   reader-facing labels unless the source content requires correction.
+6. Use reusable `classDef` classes from the palette reference instead of
+   repeated inline `style` statements.
+7. Keep Mermaid text as canonical source; regenerate inline SVG or other static
+   outputs only from that source.
+8. Regenerate tracked HTML with the local renderer when diagrams change.
+9. Run the Mermaid validator and broader project validators listed below.
+10. Visually inspect rendered diagrams at expected desktop and mobile sizes
+    when reader-facing HTML changes.
+
 ## Validation
 
 Run the structural and parity validator:
@@ -223,16 +277,28 @@ hard failures when `--render-check` is used.
 `bootstrap_memory_system.py --validate-only` imports the same validator in
 structural/parity mode. It does not run render checks.
 
+## Failure Modes
+
+- Treating the palette as a substitute for meaning.
+- Restyling diagrams while losing topology or semantic edge information.
+- Embedding runtime Mermaid where tracked HTML requires static inline SVG.
+- Updating generated assets without source or registry parity.
+- Turning a reader aid into project authority.
+- Importing claims, components, or route status not supported by project
+  sources.
+
 ## Editing Rules
 
 1. Preserve existing diagram IDs when updating a diagram.
 2. Do not invent project components.
 3. Keep node labels short and quote labels with punctuation.
 4. Use `<br/>` for Mermaid flowchart line breaks.
-5. Avoid raw HTML in Mermaid labels.
+5. Avoid raw HTML in Mermaid labels except the established `<br/>` line break.
 6. Use Mermaid text as canonical source; inline SVG in tracked HTML is a
    generated render artifact.
 7. Keep static SVG or PNG exports secondary to the Mermaid source.
+8. Do not copy portable-template `README.md` or `AGENTS.md` files into this
+   subskill; fold durable operating rules into this contract or references.
 
 ## Output Report
 
@@ -241,5 +307,6 @@ When creating or updating registered Mermaid diagrams, report:
 - target Markdown path
 - diagram ID
 - diagram type selected
+- visual grammar summary
 - target HTML path when applicable
 - validation command and result

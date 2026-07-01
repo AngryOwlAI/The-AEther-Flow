@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "../../../../../..");
 const MERMAID_VERSION = "11.15.0";
-const RENDERER_VERSION = "mermaid-inline-svg-renderer@0.1.1";
+const RENDERER_VERSION = "mermaid-inline-svg-renderer@0.1.2";
 const RENDERER_STAMP = `mermaid@${MERMAID_VERSION};${RENDERER_VERSION}`;
 const MERMAID_BUNDLE = path.join(SCRIPT_DIR, "node_modules", "mermaid", "dist", "mermaid.min.js");
 
@@ -21,17 +21,24 @@ const DEFAULT_MERMAID_CONFIG = {
     htmlLabels: false
   },
   themeVariables: {
-    fontFamily: "IBM Plex Sans, Avenir Next, Segoe UI, sans-serif",
-    primaryColor: "#dfe8f2",
-    primaryBorderColor: "#1e3a5f",
-    primaryTextColor: "#1a211d",
-    secondaryColor: "#dfeee6",
-    secondaryBorderColor: "#2f6f54",
-    secondaryTextColor: "#1a211d",
-    tertiaryColor: "#f1e0bd",
-    tertiaryBorderColor: "#b47718",
-    tertiaryTextColor: "#1a211d",
-    lineColor: "#68716b"
+    darkMode: true,
+    background: "#000000",
+    fontFamily:
+      "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    fontSize: "16px",
+    primaryColor: "#050403",
+    primaryBorderColor: "#d6c3b4",
+    primaryTextColor: "#fff8ef",
+    secondaryColor: "#0f364d",
+    secondaryBorderColor: "#48a0c0",
+    secondaryTextColor: "#fff8ef",
+    tertiaryColor: "#270b01",
+    tertiaryBorderColor: "#f87800",
+    tertiaryTextColor: "#fff8ef",
+    lineColor: "#d6c3b4",
+    clusterBkg: "#080401",
+    clusterBorder: "#d6c3b4",
+    edgeLabelBackground: "#000000"
   }
 };
 
