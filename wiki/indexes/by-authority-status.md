@@ -557,6 +557,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `wiki/markdown/md-research-control-design-no-leap-route-rule.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `wiki/markdown/md-research-control-design-research-dependency-graph-schema.md`
@@ -984,6 +985,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `research_control/design/mathematical_decisiveness_completion_contract.md`
+- `MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `research_control/design/no_leap_route_rule.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
