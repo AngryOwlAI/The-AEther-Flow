@@ -39,6 +39,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260630-056/artifacts/ms_stable_matter_semantics_bridge_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260630-050/artifacts/ms_stable_partition_precondition_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V13-P2-T02-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex`
+- `TEX-V13-P4-GATE-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-EVIDENCE-STATUS` `research_control/tasks/RT-20260701-020/artifacts/positive_source_matter_semantics_profile_gate_chair_review_v1.tex`
 
 ## not_applicable
 

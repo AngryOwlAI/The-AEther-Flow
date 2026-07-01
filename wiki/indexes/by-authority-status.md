@@ -361,6 +361,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `research_control/tasks/RT-20260701-001/artifacts/source_matter_semantics_adoption_readiness_law_target_v1.tex`
 - `TEX-V13-P2-T01-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260701-007/artifacts/source_matter_semantics_adoption_readiness_law_refuter_stress_v1.tex`
 - `TEX-V13-P2-T02-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex`
+- `TEX-V13-P4-GATE-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-EVIDENCE-STATUS` `research_control/tasks/RT-20260701-020/artifacts/positive_source_matter_semantics_profile_gate_chair_review_v1.tex`
 - `TEX-V13-P4-T01-POSITIVE-SOURCE-MATTER-SEMANTICS-TARGET` `research_control/tasks/RT-20260701-015/artifacts/positive_source_matter_semantics_target_v1.tex`
 - `TEX-V13-P4-T02-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-CANDIDATE` `research_control/tasks/RT-20260701-016/artifacts/positive_source_matter_semantics_profile_candidate_v1.tex`
 - `TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-017/artifacts/positive_source_matter_semantics_profile_smuggling_audit_v1.tex`
@@ -960,6 +961,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `wiki/tex/tex-v12-p7-t03-source-matter-semantics-adoption-readiness-law-target.md`
 - `WIKI-TEX-V13-P2-T01-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-REFUTER-STRESS` `wiki/tex/tex-v13-p2-t01-source-matter-semantics-adoption-readiness-law-refuter-stress.md`
 - `WIKI-TEX-V13-P2-T02-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-GATE-CHAIR-EVIDENCE-STATUS` `wiki/tex/tex-v13-p2-t02-source-matter-semantics-adoption-readiness-law-gate-chair-evidence-status.md`
+- `WIKI-TEX-V13-P4-GATE-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-EVIDENCE-STATUS` `wiki/tex/tex-v13-p4-gate-positive-source-matter-semantics-profile-evidence-status.md`
 - `WIKI-TEX-V13-P4-T01-POSITIVE-SOURCE-MATTER-SEMANTICS-TARGET` `wiki/tex/tex-v13-p4-t01-positive-source-matter-semantics-target.md`
 - `WIKI-TEX-V13-P4-T02-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-CANDIDATE` `wiki/tex/tex-v13-p4-t02-positive-source-matter-semantics-profile-candidate.md`
 - `WIKI-TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `wiki/tex/tex-v13-p4-t03-positive-source-matter-semantics-profile-smuggling-audit.md`
