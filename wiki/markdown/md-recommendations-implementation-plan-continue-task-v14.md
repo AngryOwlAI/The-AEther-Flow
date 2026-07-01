@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v14.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
+- Backlink from `MD-SCHEMA-VALIDATION-STATUS-LAYER-SCHEMA` `.agents/schemas/VALIDATION_STATUS_LAYER_SCHEMA.md`
 
 ## Validation
 

@@ -23,6 +23,22 @@ SCHEMA_ID = "current_frontier_state_v1"
 DEFAULT_FRONTIER_PATH = "research_control/current_frontier.md"
 LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
+VALIDATION_LAYER_ORDER = [
+    "pre_execution",
+    "completion_internal",
+    "post_write",
+    "post_checkpoint",
+    "renderer",
+    "memory_bootstrap",
+    "claim_language_linter",
+]
+AUTHORIZATION_LAYER_ORDER = [
+    "protected_scoped_gate_review_authorized",
+    "protected_scoped_gate_review_scope",
+    "downstream_physics_promotion_authorized",
+    "benchmark_promotion_authorized",
+    "completed_derivation_authorized",
+]
 
 BLOCKED_CLAIMS = [
     "canonical ontology edit",
@@ -265,6 +281,60 @@ def object_alias_table_rows(aliases: dict[str, dict[str, Any]], burden_id: str) 
     return "\n".join(lines)
 
 
+def ordered_mapping_keys(mapping: dict[str, Any], preferred_order: list[str]) -> list[str]:
+    ordered = [key for key in preferred_order if key in mapping]
+    ordered.extend(sorted(key for key in mapping if key not in preferred_order))
+    return ordered
+
+
+def evidence_cell(value: Any) -> str:
+    if isinstance(value, list):
+        items = [md_cell(item) for item in value if text_value(item)]
+        return "<br>".join(items) if items else "none"
+    return md_cell(value) if text_value(value) else "none"
+
+
+def validation_layer_table(handoff: dict[str, Any]) -> str:
+    layers = handoff.get("validation_layers")
+    if not isinstance(layers, dict) or not layers:
+        return "No validation-layer split is recorded in the latest handoff."
+    lines = [
+        "| Validation layer | Status | Evidence |",
+        "| --- | --- | --- |",
+    ]
+    for layer_name in ordered_mapping_keys(layers, VALIDATION_LAYER_ORDER):
+        layer = layers.get(layer_name)
+        if not isinstance(layer, dict):
+            continue
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    code_value(layer_name),
+                    md_cell(layer.get("status", "")),
+                    evidence_cell(layer.get("evidence", [])),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines)
+
+
+def authorization_layer_table(handoff: dict[str, Any]) -> str:
+    layers = handoff.get("authorization_layers")
+    if not isinstance(layers, dict) or not layers:
+        return "No authorization-layer split is recorded in the latest handoff."
+    lines = [
+        "| Authorization field | Value |",
+        "| --- | --- |",
+    ]
+    for field_name in ordered_mapping_keys(layers, AUTHORIZATION_LAYER_ORDER):
+        lines.append(
+            f"| {code_value(field_name)} | {md_cell(layers.get(field_name, ''))} |"
+        )
+    return "\n".join(lines)
+
+
 def scoped_alias_section(status_aliases: dict[str, Any]) -> str:
     aliases = status_alias_rows(status_aliases)
     if not aliases:
@@ -422,6 +492,9 @@ def render_markdown(state: dict[str, Any]) -> str:
     ]
     for key, value in sorted(validation.items()):
         validation_lines.append(f"- latest handoff validation `{md_cell(key)}`: {md_cell(value)};")
+    legacy_validation_notes = "\n".join(validation_lines)
+    validation_layers_table = validation_layer_table(handoff)
+    authorization_layers_table = authorization_layer_table(handoff)
 
     body = f"""<!-- authority: control -->
 
@@ -532,11 +605,24 @@ The next route must be executed through tracked continue-research state. This
 snapshot does not create physics authority, Gate Chair authority, benchmark
 authority, or completed-derivation authority.
 
-## Validation Status
+## Validation And Authorization Layers
 
-Latest tracked state records:
+Validation receipts and protected authorization are separate. A layer-level
+`PENDING` value must carry evidence explaining what remains pending; it does
+not override a separate aggregate compatibility field unless the tracked
+completion or handoff says so.
 
-{chr(10).join(validation_lines)}
+Validation layers:
+
+{validation_layers_table}
+
+Authorization layers:
+
+{authorization_layers_table}
+
+Legacy compatibility records:
+
+{legacy_validation_notes}
 
 ## Retrieval Warning Status
 
@@ -604,6 +690,18 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
             "promotion_status",
             "overread_guard",
         ],
+        "validation_layer_fields": ordered_mapping_keys(
+            state["latest_handoff"].get("validation_layers", {})
+            if isinstance(state["latest_handoff"].get("validation_layers"), dict)
+            else {},
+            VALIDATION_LAYER_ORDER,
+        ),
+        "authorization_layer_fields": ordered_mapping_keys(
+            state["latest_handoff"].get("authorization_layers", {})
+            if isinstance(state["latest_handoff"].get("authorization_layers"), dict)
+            else {},
+            AUTHORIZATION_LAYER_ORDER,
+        ),
         "snapshot_only_not_authority": True,
         "physics_claim_authority": False,
     }

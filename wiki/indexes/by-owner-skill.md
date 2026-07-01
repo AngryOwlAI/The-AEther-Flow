@@ -304,6 +304,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `wiki/markdown/md-schema-physics-completion-decisiveness-schema.md`
 - `WIKI-MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA` `wiki/markdown/md-schema-project-improvement-handoff-schema.md`
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
+- `WIKI-MD-SCHEMA-VALIDATION-STATUS-LAYER-SCHEMA` `wiki/markdown/md-schema-validation-status-layer-schema.md`
 - `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
 - `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
 - `WIKI-MD-SKILL-GRILL-WITH-DOCS` `wiki/markdown/md-skill-grill-with-docs.md`
@@ -776,6 +777,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SCHEMA-PHYSICS-COMPLETION-DECISIVENESS-SCHEMA` `.agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md`
 - `MD-SCHEMA-PROJECT-IMPROVEMENT-HANDOFF-SCHEMA` `.agents/schemas/PROJECT_IMPROVEMENT_HANDOFF_SCHEMA.md`
 - `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`
+- `MD-SCHEMA-VALIDATION-STATUS-LAYER-SCHEMA` `.agents/schemas/VALIDATION_STATUS_LAYER_SCHEMA.md`
 - `MD-SKILL-PROJECT-MEMORY-SYSTEM` `.codex/skills/project-memory-system/SKILL.md`
 - `MD-V12-P0-BASELINE-SUMMARY` `research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md`
 - `MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md`

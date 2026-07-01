@@ -276,6 +276,41 @@ PARENT_CHILD_REQUIRED_FOR_PHYSICS_ACTIVATED_AT = "2026-06-17T04:08:16Z"
 THEORETICAL_CONTINUATION_POLICY_ACTIVATED_AT = "2026-06-17T04:29:31Z"
 GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT = "2026-06-17T15:46:25Z"
 MEMORY_PREFLIGHT_REQUIRED_AFTER = "2026-06-18T15:33:00Z"
+VALIDATION_SCHEMA_SPLIT_ACTIVE_AFTER = "2026-07-01T23:20:00Z"
+
+VALIDATION_LAYER_NAMES = (
+    "pre_execution",
+    "completion_internal",
+    "post_write",
+    "post_checkpoint",
+    "renderer",
+    "memory_bootstrap",
+    "claim_language_linter",
+)
+VALIDATION_LAYER_STATUS_VALUES = {
+    "PASS",
+    "PASS_WITH_WARNINGS",
+    "PENDING",
+    "FAIL",
+    "NOT_RUN",
+    "NOT_APPLICABLE",
+}
+AUTHORIZATION_LAYER_BOOLEAN_FIELDS = (
+    "protected_scoped_gate_review_authorized",
+    "downstream_physics_promotion_authorized",
+    "benchmark_promotion_authorized",
+    "completed_derivation_authorized",
+)
+AUTHORIZATION_LAYER_SCOPE_FIELD = "protected_scoped_gate_review_scope"
+AUTHORIZATION_LAYER_SOURCE_FIELDS = {
+    "protected_scoped_gate_review_authorized": "protected_scoped_gate_review_authority_source_path",
+    "downstream_physics_promotion_authorized": "downstream_physics_promotion_authority_source_path",
+    "benchmark_promotion_authorized": "benchmark_promotion_authority_source_path",
+    "completed_derivation_authorized": "completed_derivation_authority_source_path",
+}
+MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
+    "MD-RESEARCH-CONTROL-CURRENT-FRONTIER",
+}
 
 MEMORY_PREFLIGHT_SOURCE_REGISTRIES = {
     "MARKDOWN_SOURCE_REGISTRY.csv",
@@ -1223,6 +1258,27 @@ def gr_derivation_roadmap_policy_active(
     )
 
 
+def validation_schema_split_policy_active(
+    job_row: dict[str, str],
+    completion: dict[str, Any] | None = None,
+) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+        if isinstance(completion.get("validation_layers"), dict) or isinstance(
+            completion.get("authorization_layers"), dict
+        ):
+            return True
+    return any(
+        timestamp_at_or_after(value, VALIDATION_SCHEMA_SPLIT_ACTIVE_AFTER)
+        for value in timestamps
+    )
+
+
 def _mathematical_decisiveness_active_after(
     job_contract: dict[str, Any],
     completion: dict[str, Any],
@@ -1930,6 +1986,23 @@ def validate_future_physics_job_authority(
             )
 
 
+def active_program_task_id() -> str:
+    try:
+        program_state = load_yaml(CONTROL_DIR / "program_state.yaml")
+    except StrictYamlError:
+        return ""
+    if not isinstance(program_state, dict):
+        return ""
+    return str(program_state.get("active_task_id", "")).strip()
+
+
+def memory_preflight_hash_must_be_current(job_row: dict[str, str], object_id: str) -> bool:
+    if object_id not in MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS:
+        return True
+    active_task = active_program_task_id()
+    return bool(active_task and job_row.get("task_id", "") == active_task)
+
+
 def validate_memory_preflight(
     report: ValidationReport,
     job_row: dict[str, str],
@@ -2053,7 +2126,8 @@ def validate_memory_preflight(
             report.error(
                 f"{owner_path}: memory_preflight canonical_path does not match registry row for {object_id}"
             )
-        if row.get("source_hash", "") != source_hash:
+        require_current_hash = memory_preflight_hash_must_be_current(job_row, object_id)
+        if require_current_hash and row.get("source_hash", "") != source_hash:
             report.error(
                 f"{owner_path}: memory_preflight source_hash does not match registry row for {object_id}"
             )
@@ -2061,7 +2135,7 @@ def validate_memory_preflight(
         if not canonical_path.exists():
             report.error(f"{owner_path}: memory_preflight canonical path does not exist: {canonical_path_text}")
             continue
-        if source_hash and sha256_file(canonical_path) != source_hash:
+        if require_current_hash and source_hash and sha256_file(canonical_path) != source_hash:
             report.error(
                 f"{owner_path}: memory_preflight source_hash is stale for {canonical_path_text}"
             )
@@ -2101,6 +2175,116 @@ def _substantive_list(value: Any) -> list[str]:
         for item in _listish_values(value)
         if item.strip() and item.strip().lower() != "none"
     ]
+
+
+def _validate_layer_evidence(
+    report: ValidationReport,
+    *,
+    owner_path: str,
+    layer_name: str,
+    layer_record: dict[str, Any],
+) -> None:
+    evidence = layer_record.get("evidence")
+    if not isinstance(evidence, list):
+        report.error(f"{owner_path}: validation_layers.{layer_name}.evidence must be a list")
+        return
+    if not _substantive_list(evidence):
+        report.error(
+            f"{owner_path}: validation_layers.{layer_name}.evidence must explain the layer status"
+        )
+
+
+def validate_validation_layers(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    completion: dict[str, Any],
+    owner_path: str,
+) -> None:
+    if not validation_schema_split_policy_active(job_row, completion):
+        return
+    layers = completion.get("validation_layers")
+    if not isinstance(layers, dict):
+        report.error(f"{owner_path}: validation_layers map is required by validation-status schema split")
+        return
+
+    for layer_name in VALIDATION_LAYER_NAMES:
+        layer_record = layers.get(layer_name)
+        if not isinstance(layer_record, dict):
+            report.error(f"{owner_path}: validation_layers.{layer_name} must be a map")
+            continue
+        status = str(layer_record.get("status", "")).strip()
+        if not status:
+            report.error(f"{owner_path}: validation_layers.{layer_name}.status is required")
+        elif status not in VALIDATION_LAYER_STATUS_VALUES:
+            report.error(
+                f"{owner_path}: validation_layers.{layer_name}.status is not allowed: {status}"
+            )
+        _validate_layer_evidence(
+            report,
+            owner_path=owner_path,
+            layer_name=layer_name,
+            layer_record=layer_record,
+        )
+
+    for layer_name in sorted(set(layers) - set(VALIDATION_LAYER_NAMES)):
+        report.warn(f"{owner_path}: validation_layers.{layer_name} is an extension layer")
+
+
+def _authorization_source_path(record: dict[str, Any], field_name: str) -> str:
+    source_field = AUTHORIZATION_LAYER_SOURCE_FIELDS.get(field_name, "")
+    if not source_field:
+        return ""
+    return str(record.get(source_field, "")).strip()
+
+
+def validate_authorization_layers(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    completion: dict[str, Any],
+    owner_path: str,
+) -> None:
+    if not validation_schema_split_policy_active(job_row, completion):
+        return
+    layers = completion.get("authorization_layers")
+    if not isinstance(layers, dict):
+        report.error(f"{owner_path}: authorization_layers map is required by validation-status schema split")
+        return
+
+    scope = str(layers.get(AUTHORIZATION_LAYER_SCOPE_FIELD, "")).strip()
+    if not scope:
+        report.error(f"{owner_path}: authorization_layers.{AUTHORIZATION_LAYER_SCOPE_FIELD} is required")
+
+    for field_name in AUTHORIZATION_LAYER_BOOLEAN_FIELDS:
+        if field_name not in layers:
+            report.error(f"{owner_path}: authorization_layers.{field_name} is required")
+            continue
+        if not isinstance(layers.get(field_name), bool):
+            report.error(f"{owner_path}: authorization_layers.{field_name} must be a boolean")
+            continue
+        if bool_value(layers.get(field_name)) and not _authorization_source_path(layers, field_name):
+            report.error(
+                f"{owner_path}: authorization_layers.{field_name} requires "
+                f"{AUTHORIZATION_LAYER_SOURCE_FIELDS[field_name]}"
+            )
+
+    if bool_value(layers.get("protected_scoped_gate_review_authorized")) and scope.lower() in {
+        "",
+        "none",
+        "not_applicable",
+    }:
+        report.error(
+            f"{owner_path}: protected scoped gate authorization requires a non-empty scope"
+        )
+
+    progress = completion.get("physics_progress_status")
+    if isinstance(progress, dict) and "physics_promotion_authorized" in progress:
+        legacy_value = bool_value(progress.get("physics_promotion_authorized"))
+        split_value = bool_value(layers.get("downstream_physics_promotion_authorized"))
+        if legacy_value != split_value:
+            report.error(
+                f"{owner_path}: physics_progress_status.physics_promotion_authorized "
+                "must match authorization_layers.downstream_physics_promotion_authorized"
+            )
 
 
 def _string_field(record: Any, field_name: str) -> str:
@@ -2605,6 +2789,8 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     if not isinstance(command_results, list) or not command_results:
         report.error(f"{path.relative_to(REPO_ROOT).as_posix()}: missing command_results")
     validate_memory_preflight(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
+    validate_validation_layers(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
+    validate_authorization_layers(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
 
     job_path_text = job_row.get("job_path", "")
     if not job_path_text:

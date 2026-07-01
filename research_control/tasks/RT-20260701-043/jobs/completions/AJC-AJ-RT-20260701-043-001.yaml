@@ -1,0 +1,183 @@
+completion_id: "AJC-AJ-RT-20260701-043-001"
+job_id: "AJ-RT-20260701-043-001"
+task_id: "RT-20260701-043"
+completed_at: "2026-07-01T23:27:06Z"
+status: "completed"
+output_paths:
+  - ".agents/schemas/VALIDATION_STATUS_LAYER_SCHEMA.md"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/render_current_frontier.py"
+  - "research_control/templates/COMPLETION_TEMPLATE.yaml"
+  - "research_control/templates/HANDOFF_TEMPLATE.yaml"
+  - "tests/test_research_control.py"
+  - "tests/test_render_current_frontier.py"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260701-043/00_TASK.yaml"
+  - "research_control/tasks/RT-20260701-043/DDR-20260701-043.md"
+  - "research_control/tasks/RT-20260701-043/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260701-043/jobs/AJ-RT-20260701-043-001.yaml"
+  - "research_control/tasks/RT-20260701-043/jobs/completions/AJC-AJ-RT-20260701-043-001.yaml"
+  - "research_control/tasks/RT-20260701-043/roles/project-control-maintainer@0.2.0--RT-20260701-043.yaml"
+  - "research_control/handoffs/handoff-0452.yaml"
+  - "research_control/handoffs/handoff-0452.md"
+extra_read_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  - "research_control/design/validation_status_field_inventory.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS refresh_needed=true refresh_performed=true"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v14 P4-T02 validation-status schema split\" --limit 10 --json | exit_code=0 | returned=MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260701-042 latest_handoff=handoff-0451 boundary=director_decision_required next_action=v14_p4_t02_validation_status_schema_split"
+  - ".venv/bin/python -m unittest tests.test_research_control tests.test_render_current_frontier | exit_code=0 | tests=124 status=pass"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=written active_task=RT-20260701-043 latest_handoff=handoff-0452 rendered_hash=1f87a8695c63ff692b84e3a2e19894e676a81986f941b1fbac7e526625acaafb"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass active_task=RT-20260701-043 latest_handoff=handoff-0452"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --json | exit_code=0 | validation_layer_fields=7 authorization_layer_fields=9"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --json --changed | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260701-043-001 | exit_code=0 | status=pass"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS with refresh_needed=true and refresh_performed=true"
+      - "targeted memory query returned canonical current-frontier and v14 implementation-plan object IDs"
+      - "continue_research.py resolved one bounded P4-T02 route from handoff-0451"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "completion id job id task id and output paths match RT-20260701-043"
+      - "validation_layers and authorization_layers are present and internally consistent"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "focused unit tests passed for validator and renderer changes"
+      - "post-write schema renderer template and test edits stayed within AgentJob allowlist"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is recorded as required transaction gate"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current-frontier renderer displays validation layer names and authorization field names"
+      - "rendered current-frontier hash 1f87a8695c63ff692b84e3a2e19894e676a81986f941b1fbac7e526625acaafb"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only commands are recorded and required before checkpoint"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-path claim-language linter is recorded as a required post-write gate"
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "P4-T02 project-control validation-status schema split only; no downstream physics benchmark or completed-derivation promotion"
+  protected_scoped_gate_review_authority_source_path: "research_control/tasks/RT-20260701-043/DDR-20260701-043.md"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+verdict: "completed_non_promotional_project_control_schema_split"
+schema_split_result:
+  schema_path: ".agents/schemas/VALIDATION_STATUS_LAYER_SCHEMA.md"
+  validator_path: "scripts/research_control/validate_research_control.py"
+  renderer_path: "scripts/research_control/render_current_frontier.py"
+  template_paths:
+    - "research_control/templates/COMPLETION_TEMPLATE.yaml"
+    - "research_control/templates/HANDOFF_TEMPLATE.yaml"
+  test_paths:
+    - "tests/test_research_control.py"
+    - "tests/test_render_current_frontier.py"
+  backward_compatibility:
+    historical_records_rewritten: false
+    legacy_validation_status_retained: true
+    legacy_physics_promotion_field_disambiguated: true
+  acceptance_summary: "The schema split is prospective; renderer output displays validation and authorization layer names; pending validation layers require evidence; future templates route downstream promotion through authorization_layers."
+distance_to_gr_delta:
+  changed: false
+  burden_id: "none"
+  milestone: "none"
+  old_status: "unchanged"
+  new_status: "unchanged"
+  ledger_row_updated: false
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "Project-control schema work only; no Distance-to-GR scientific burden changed."
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "M_src adoption"
+    - "g_eff claim"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+  summary: "P4-T02 changed only project-control validation and authorization schema behavior. It does not create proof authority or downstream scientific promotion."
+route_cycle_control:
+  cycle_family: "v14_validation_status_schema_split"
+  current_cycle_step: "P4-T02"
+  prior_related_tasks:
+    - "RT-20260701-042"
+  cycle_risk: "low_project_control_only"
+  orbit_avoidance_reason: "Routes forward to P4-T03 renderer and handoff validation-layer update instead of repeating inventory."
+  next_role_consequence: "project-control-maintainer for one bounded P4-T03 packet unless tracked state changes."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 536
+    relationship_row_count: 2842
+    semantic_row_count: 536
+    vault_row_count: 536
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v14 P4-T02 validation-status schema split\" --limit 10 --json"
+      query_type: "search"
+      query_text: "v14 P4-T02 validation-status schema split"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "1f87a8695c63ff692b84e3a2e19894e676a81986f941b1fbac7e526625acaafb"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+  authority_note: "Obsidian wiki notes semantic extracts and .local are retrieval layers only and not authority."
+project_improvement_signals: []
+next_recommended_action: "Run one bounded v14 P4-T03 renderer and handoff validation-layer update packet."

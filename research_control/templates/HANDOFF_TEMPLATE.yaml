@@ -8,6 +8,38 @@ status: "completed"
 summary: ""
 next_action: ""
 loop_risk_route: ""
+validation_layers:
+  pre_execution:
+    status: ""
+    evidence: []
+  completion_internal:
+    status: ""
+    evidence: []
+  post_write:
+    status: ""
+    evidence: []
+  post_checkpoint:
+    status: ""
+    evidence: []
+  renderer:
+    status: ""
+    evidence: []
+  memory_bootstrap:
+    status: ""
+    evidence: []
+  claim_language_linter:
+    status: ""
+    evidence: []
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: ""
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
 project_improvement_signals:
   - signal_id: ""
     signal_type: ""

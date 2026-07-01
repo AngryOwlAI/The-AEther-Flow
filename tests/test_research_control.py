@@ -799,6 +799,74 @@ class ResearchControlTests(unittest.TestCase):
             report = self.validate_memory_preflight_fixture(receipt)
         self.assertTrue(any("source_hash does not match registry row" in error for error in report.errors))
 
+    def test_memory_preflight_allows_historical_current_frontier_hash(self) -> None:
+        root = Path(tempfile.mkdtemp()).resolve()
+        self.addCleanup(lambda: shutil.rmtree(root, ignore_errors=True))
+        control = root / "research_control"
+        registries = root / "registries"
+        control.mkdir(parents=True)
+        registries.mkdir(parents=True)
+        (control / "program_state.yaml").write_text(
+            'active_task_id: "RT-ACTIVE"\n',
+            encoding="utf-8",
+        )
+        frontier = control / "current_frontier.md"
+        frontier.write_text("current frontier\n", encoding="utf-8")
+        current_hash = sha256_text("current frontier\n")
+        with (registries / "MARKDOWN_SOURCE_REGISTRY.csv").open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=["object_id", "path", "source_hash"])
+            writer.writeheader()
+            writer.writerow(
+                {
+                    "object_id": "MD-RESEARCH-CONTROL-CURRENT-FRONTIER",
+                    "path": "research_control/current_frontier.md",
+                    "source_hash": current_hash,
+                }
+            )
+        receipt = {
+            "status_command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json",
+            "status_summary": {
+                "vault_exists": True,
+                "memory_index_exists": True,
+                "source_object_count": 1,
+            },
+            "queries": [
+                {
+                    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json",
+                    "query_type": "lookup",
+                    "query_text": "MD-RESEARCH-CONTROL-CURRENT-FRONTIER",
+                    "returned_object_ids": ["MD-RESEARCH-CONTROL-CURRENT-FRONTIER"],
+                }
+            ],
+            "canonical_inspections": [
+                {
+                    "object_id": "MD-RESEARCH-CONTROL-CURRENT-FRONTIER",
+                    "source_registry": "MARKDOWN_SOURCE_REGISTRY.csv",
+                    "registry_path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+                    "canonical_path": "research_control/current_frontier.md",
+                    "source_hash": "historical-frontier-hash",
+                }
+            ],
+            "authority_note": "Obsidian, semantic extracts, wiki notes, and .local are retrieval layers only and not authority.",
+        }
+        report = self.validator.ValidationReport()
+        with (
+            mock.patch.object(self.validator, "REPO_ROOT", root),
+            mock.patch.object(self.validator, "REGISTRY_DIR", registries),
+            mock.patch.object(self.validator, "CONTROL_DIR", control),
+        ):
+            self.validator.validate_memory_preflight(
+                report,
+                {
+                    "job_id": "AJ-HISTORICAL",
+                    "task_id": "RT-HISTORICAL",
+                    "created_at": "2026-06-18T15:33:00Z",
+                },
+                {"memory_preflight": receipt},
+                "research_control/tasks/RT-HISTORICAL/jobs/AJ-HISTORICAL.yaml",
+            )
+        self.assertEqual(report.errors, [])
+
     def test_project_control_maintainer_rejects_explanatory_section_without_overlay(self) -> None:
         report = self.validate_authority_fixture(
             role_id="project-control-maintainer",
@@ -1496,6 +1564,99 @@ class ResearchControlTests(unittest.TestCase):
             with mock.patch.object(self.validator, "REPO_ROOT", root):
                 self.validator.validate_completion(report, row, completion_path)
         return report
+
+    def validation_schema_split_completion(self) -> dict:
+        return {
+            "completed_at": "2026-07-01T23:20:00Z",
+            "validation_status": "PASS",
+            "validation_layers": {
+                "pre_execution": {
+                    "status": "PASS",
+                    "evidence": ["memory preflight and targeted query passed"],
+                },
+                "completion_internal": {
+                    "status": "PASS",
+                    "evidence": ["completion record is internally consistent"],
+                },
+                "post_write": {
+                    "status": "PASS",
+                    "evidence": ["post-write validators passed"],
+                },
+                "post_checkpoint": {
+                    "status": "PENDING",
+                    "evidence": ["checkpoint will run after final generated-state synchronization"],
+                },
+                "renderer": {
+                    "status": "PASS",
+                    "evidence": ["renderer displays split layer names"],
+                },
+                "memory_bootstrap": {
+                    "status": "PASS",
+                    "evidence": ["memory bootstrap completed"],
+                },
+                "claim_language_linter": {
+                    "status": "PASS",
+                    "evidence": ["claim-language linter passed"],
+                },
+            },
+            "authorization_layers": {
+                "protected_scoped_gate_review_authorized": True,
+                "protected_scoped_gate_review_scope": "validation schema split only",
+                "protected_scoped_gate_review_authority_source_path": "research_control/tasks/RT-TEST/DDR.md",
+                "downstream_physics_promotion_authorized": False,
+                "benchmark_promotion_authorized": False,
+                "completed_derivation_authorized": False,
+            },
+            "physics_progress_status": {
+                "status": "project_control_only",
+                "physics_promotion_authorized": False,
+            },
+        }
+
+    def validation_schema_split_job_row(self) -> dict[str, str]:
+        return {
+            "job_id": "AJ-TEST",
+            "created_at": "2026-07-01T23:20:00Z",
+            "started_at": "2026-07-01T23:20:00Z",
+            "completed_at": "2026-07-01T23:20:00Z",
+        }
+
+    def test_validation_schema_split_accepts_layered_completion(self) -> None:
+        report = self.validator.ValidationReport()
+        completion = self.validation_schema_split_completion()
+        row = self.validation_schema_split_job_row()
+
+        self.validator.validate_validation_layers(report, row, completion, "fixture.yaml")
+        self.validator.validate_authorization_layers(report, row, completion, "fixture.yaml")
+
+        self.assertEqual(report.errors, [])
+
+    def test_validation_schema_split_rejects_unexplained_pending_layer(self) -> None:
+        report = self.validator.ValidationReport()
+        completion = self.validation_schema_split_completion()
+        completion["validation_layers"]["post_checkpoint"]["evidence"] = []
+        row = self.validation_schema_split_job_row()
+
+        self.validator.validate_validation_layers(report, row, completion, "fixture.yaml")
+
+        self.assertTrue(
+            any("post_checkpoint.evidence must explain the layer status" in error for error in report.errors)
+        )
+
+    def test_validation_schema_split_rejects_ambiguous_legacy_promotion(self) -> None:
+        report = self.validator.ValidationReport()
+        completion = self.validation_schema_split_completion()
+        completion["physics_progress_status"]["physics_promotion_authorized"] = True
+        row = self.validation_schema_split_job_row()
+
+        self.validator.validate_authorization_layers(report, row, completion, "fixture.yaml")
+
+        self.assertTrue(
+            any(
+                "physics_progress_status.physics_promotion_authorized must match" in error
+                for error in report.errors
+            )
+        )
 
     def distance_matrix_yaml(self) -> str:
         burdens = [

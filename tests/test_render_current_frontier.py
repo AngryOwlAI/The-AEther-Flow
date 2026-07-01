@@ -94,6 +94,41 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                     'summary: "Fixture handoff summary."',
                     'next_action: "Run one bounded fixture validation packet."',
                     'loop_risk_route: "fixture_route"',
+                    "validation_layers:",
+                    "  pre_execution:",
+                    '    status: "PASS"',
+                    "    evidence:",
+                    '      - "fixture pre-execution checks passed"',
+                    "  completion_internal:",
+                    '    status: "PASS"',
+                    "    evidence:",
+                    '      - "fixture completion is internally consistent"',
+                    "  post_write:",
+                    '    status: "PENDING"',
+                    "    evidence:",
+                    '      - "fixture post-write validation is pending in this test"',
+                    "  post_checkpoint:",
+                    '    status: "NOT_RUN"',
+                    "    evidence:",
+                    '      - "fixture checkpoint is not run"',
+                    "  renderer:",
+                    '    status: "PASS"',
+                    "    evidence:",
+                    '      - "fixture renderer consumed layer names"',
+                    "  memory_bootstrap:",
+                    '    status: "NOT_APPLICABLE"',
+                    "    evidence:",
+                    '      - "fixture does not run memory bootstrap"',
+                    "  claim_language_linter:",
+                    '    status: "PASS"',
+                    "    evidence:",
+                    '      - "fixture linter status is represented"',
+                    "authorization_layers:",
+                    "  protected_scoped_gate_review_authorized: true",
+                    '  protected_scoped_gate_review_scope: "fixture schema split only"',
+                    "  downstream_physics_promotion_authorized: false",
+                    "  benchmark_promotion_authorized: false",
+                    "  completed_derivation_authorized: false",
                     "claim_boundary:",
                     '  allowed_next_scope: "bounded fixture validation only"',
                     "distance_to_gr:",
@@ -161,8 +196,27 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                     "overread_guard",
                 ],
             )
+            self.assertEqual(
+                payload["validation_layer_fields"],
+                [
+                    "pre_execution",
+                    "completion_internal",
+                    "post_write",
+                    "post_checkpoint",
+                    "renderer",
+                    "memory_bootstrap",
+                    "claim_language_linter",
+                ],
+            )
+            self.assertIn(
+                "downstream_physics_promotion_authorized",
+                payload["authorization_layer_fields"],
+            )
             self.assertIn("generated synchronized snapshot only", markdown)
             self.assertIn("no `MetricData(E)` adoption", markdown)
+            self.assertIn("Validation And Authorization Layers", markdown)
+            self.assertIn("fixture post-write validation is pending in this test", markdown)
+            self.assertIn("fixture schema split only", markdown)
             self.assertIn("Layered Distance-To-GR Boundary Notes", markdown)
             self.assertIn("| Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |", markdown)
             self.assertIn("Scoped-Positive Alias Pilot", markdown)
@@ -217,6 +271,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertEqual(payload["status"], "rendered")
             self.assertEqual(payload["distance_to_gr_row_count"], 4)
             self.assertIn("overread_guard", payload["layered_status_fields"])
+            self.assertIn("post_write", payload["validation_layer_fields"])
+            self.assertIn(
+                "downstream_physics_promotion_authorized",
+                payload["authorization_layer_fields"],
+            )
 
 
 if __name__ == "__main__":
