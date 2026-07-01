@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-005` and `handoff-0414`.
+`RT-20260701-006` and `handoff-0415`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-005` |
-| Latest handoff ID | `handoff-0414` |
-| Current status | `post_v13_p0_t03_recommendation_trace_matrix_complete_no_physics_delta` |
-| Current route family | post v13 p0 t03 trace matrix handoff to execution gate no physics delta |
+| Active task ID | `RT-20260701-006` |
+| Latest handoff ID | `handoff-0415` |
+| Current status | `post_v13_p0_t04_execution_gate_selects_p2_t01_refuter_stress_no_physics_delta` |
+| Current route family | post v13 p0 t04 execution gate selects p2 t01 refuter stress no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P0-T04 V13 execution gate |
-| Next recommended action | Run one bounded P0-T04 V13 execution gate control packet. P0-T04 must read the P0-T02 baseline reconciliation and P0-T03 trace matrix, then select exactly one next task without globally authorizing all v13 phases. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it. |
+| Required next authority | P2-T01 Refuter stress of SourceMatterSemanticsAdoptionReadinessLaw_v1 |
+| Next recommended action | Run one bounded P2-T01 Refuter stress packet for SourceMatterSemanticsAdoptionReadinessLaw_v1 under refuter@0.2.0. The stress must cover readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-005/00_TASK.yaml`.
-- Active task objective: Create a task-local v13 recommendation trace matrix linking each recommendation to phases, tasks, expected outputs, validators, dependencies, and claim boundaries before the P0-T04 execution gate.
-- Latest handoff path: `research_control/handoffs/handoff-0414.yaml`.
-- Latest handoff summary: RT-20260701-005 completed v13 P0-T03 recommendation trace matrix. The matrix covers recommendations R1 through R15 and every P0 through P16 plan task, marks P0-T01 and P0-T02 as completed prior evidence, marks P0-T03 as completed by this packet, and leaves later tasks behind P0-T04 or selector/final-audit dependencies. No physics claim changed.
-- Current route family: post v13 p0 t03 trace matrix handoff to execution gate no physics delta.
-- Next recommended action: Run one bounded P0-T04 V13 execution gate control packet. P0-T04 must read the P0-T02 baseline reconciliation and P0-T03 trace matrix, then select exactly one next task without globally authorizing all v13 phases. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it.
+- Active task path: `research_control/tasks/RT-20260701-006/00_TASK.yaml`.
+- Active task objective: Read the v13 P0-T02 baseline reconciliation and P0-T03 recommendation trace matrix, determine P1/P2 ordering, and select exactly one next task without globally authorizing all v13 phases.
+- Latest handoff path: `research_control/handoffs/handoff-0415.yaml`.
+- Latest handoff summary: RT-20260701-006 completed v13 P0-T04 execution gating. It read the P0-T02 baseline reconciliation and P0-T03 trace matrix, determined that P1 and P2 may proceed only as serialized Continue Research packets, and selected exactly one next task: P2-T01 Refuter stress of SourceMatterSemanticsAdoptionReadinessLaw_v1. No physics claim changed.
+- Current route family: post v13 p0 t04 execution gate selects p2 t01 refuter stress no physics delta.
+- Next recommended action: Run one bounded P2-T01 Refuter stress packet for SourceMatterSemanticsAdoptionReadinessLaw_v1 under refuter@0.2.0. The stress must cover readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P0-T04 V13 execution gate control packet. P0-T04 must read the P0-T02 baseline reconciliation and P0-T03 trace matrix, then select exactly one next task without globally authorizing all v13 phases. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it.
+Run one bounded P2-T01 Refuter stress packet for SourceMatterSemanticsAdoptionReadinessLaw_v1 under refuter@0.2.0. The stress must cover readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-005`;
-- latest handoff: `handoff-0414`;
-- current status: `post_v13_p0_t03_recommendation_trace_matrix_complete_no_physics_delta`;
+- active task: `RT-20260701-006`;
+- latest handoff: `handoff-0415`;
+- current status: `post_v13_p0_t04_execution_gate_selects_p2_t01_refuter_stress_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0414.yaml`
-- `research_control/tasks/RT-20260701-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0415.yaml`
+- `research_control/tasks/RT-20260701-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0414*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0415*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

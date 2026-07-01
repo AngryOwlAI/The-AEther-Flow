@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T04:56:56Z`
-- Source fingerprint: `836748f664892d457bd3d4cec66c657c6f3616e626f13213019ae13c79eff76e`
-- Nodes: `9118`
-- Edges: `38596`
+- Generated from tracked state as of: `2026-07-01T05:31:10Z`
+- Source fingerprint: `8eb1e0e98130259f045297bd5726fb814f8bb4ef71a4608304393c1e61ff960b`
+- Nodes: `9146`
+- Edges: `38662`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 550 |
+| `completion_yaml` | 551 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 414 |
+| `handoff_yaml` | 415 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 550 |
+| `agent_job` | `support_only` | 551 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4590 |
-| `blocked_burden` | `blocked` | 1069 |
-| `claim_boundary` | `support_only` | 551 |
+| `artifact` | `support_only` | 4600 |
+| `blocked_burden` | `blocked` | 1083 |
+| `claim_boundary` | `support_only` | 552 |
 | `draft_control_candidate` | `draft_control` | 432 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 91 |
 | `gate_chair_verdict` | `human_gated` | 27 |
-| `handoff` | `support_only` | 414 |
+| `handoff` | `support_only` | 415 |
 | `human_gated_object` | `human_gated` | 261 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 239 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 499 |
+| `task` | `support_only` | 500 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260701-005`
-- Latest handoff: `handoff-0414`
-- Handoff path: `research_control/handoffs/handoff-0414.yaml`
-- Next action: Run one bounded P0-T04 V13 execution gate control packet. P0-T04 must read the P0-T02 baseline reconciliation and P0-T03 trace matrix, then select exactly one next task without globally authorizing all v13 phases. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it.
+- Active task: `RT-20260701-006`
+- Latest handoff: `handoff-0415`
+- Handoff path: `research_control/handoffs/handoff-0415.yaml`
+- Next action: Run one bounded P2-T01 Refuter stress packet for SourceMatterSemanticsAdoptionReadinessLaw_v1 under refuter@0.2.0. The stress must cover readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

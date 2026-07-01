@@ -1,0 +1,90 @@
+artifact_id: "V13-P0-T04-EXECUTION-GATE"
+task_id: "RT-20260701-006"
+job_id: "AJ-RT-20260701-006-001"
+created_at: "2026-07-01T05:31:10Z"
+plan_id: "recommendations_implementation_plan_continue_task-v13"
+plan_task_id: "P0-T04"
+artifact_status: "control_gate_only"
+question: "Can v13 proceed to P1 and P2 without bypassing the live active handoff, and which exact next task is selected?"
+required_inputs:
+  - path: "research_control/tasks/RT-20260701-004/artifacts/v13_baseline_reconciliation.md"
+    role: "P0-T02 baseline reconciliation"
+    sha256: "cb09a2ca15336cc9e71966222cf79d98985b376ce62746a10146db97339ee936"
+  - path: "research_control/tasks/RT-20260701-005/artifacts/v13_recommendation_trace_matrix.md"
+    role: "P0-T03 recommendation trace matrix"
+    sha256: "ae72c56b6ff81c6e8e191d97e4fb0cd1590b329f88229b1b0cbe06827c1a9a7f"
+  - path: "research_control/handoffs/handoff-0411.yaml"
+    role: "deferred scientific Refuter-stress authority"
+    sha256: "6477eeafe8a51e112f12b567937b74a266b1d2a55ba54e3b6978201206a64a69"
+  - path: "research_control/handoffs/handoff-0414.yaml"
+    role: "latest live handoff before this gate"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+    role: "implementation plan, not physics authority"
+    sha256: "f536b97164ea9f41b5ba75319e44dfc7096c50acb98c03786aa98a83fafba3cf"
+input_findings:
+  p0_t02:
+    verdict: "v13_baseline_advanced_adapt_plan"
+    meaning: "The plan baseline advanced through P0 control packets only; handoff-0411 remains deferred scientific authority unless superseded."
+  p0_t03:
+    verdict: "trace_matrix_complete_control_only"
+    meaning: "Every recommendation R1 through R15 and every P0 through P16 task is mapped; later work remains pending behind P0-T04, selector, or final-audit dependencies."
+  handoff_0411:
+    deferred_route: "Refuter stress of SourceMatterSemanticsAdoptionReadinessLaw_v1"
+    superseded_by_newer_scientific_state: false
+  latest_handoff_0414:
+    required_next_authority: "P0-T04 V13 execution gate"
+ordering_verdict:
+  p1_and_p2_may_both_proceed_after_gate: true
+  can_execute_p1_and_p2_in_parallel_in_this_invocation: false
+  reason: "Continue Research remains one bounded AgentJob per invocation. P0-T04 opens future lane eligibility but must select exactly one next task."
+selected_next_task:
+  plan_task_id: "P2-T01"
+  task_name: "Refuter stress of SourceMatterSemanticsAdoptionReadinessLaw_v1"
+  role_family: "refuter@0.2.0"
+  route_family: "ontology-law-research-packet"
+  rationale: "The active scientific route is unchanged from handoff-0411. The readiness-law target is source-pure as written only as proposal-only audit output pending Refuter stress, so the next honest scientific packet is stress before selector, Gate Chair, adoption, matter-coupling, Einstein-equation, benchmark, or promotion routing."
+  required_next_packet_constraints:
+    - "Use one outer Refuter AgentJob only."
+    - "Use parent_child_parallel_synthesis."
+    - "Name target_derivation_milestone=matter_coupling and milestone_burden=matter_coupling."
+    - "Stress readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity."
+    - "Preserve proposal-only status and no adoption."
+    - "Do not route directly to Gate Chair or matter coupling before a stress result and required selector/gate sequence."
+not_selected_now:
+  plan_task_id: "P1-T01"
+  task_name: "Scoped-positive claim vocabulary control note"
+  reason: "Important control/documentation work, but not the active scientific handoff. It remains available as a later serialized Continue Research packet."
+acceptance_criteria:
+  exactly_one_next_task_selected: true
+  selected_next_task_id: "P2-T01"
+  no_global_phase_authorization: true
+  continue_research_driver_preserved: true
+  p0_t02_and_p0_t03_read: true
+claim_boundary:
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+  source_law_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  geff_scope_changed: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+forbidden_readings:
+  - "P0-T04 as execution of P2-T01"
+  - "P0-T04 as global authorization for all v13 phases"
+  - "P0-T04 as law adoption"
+  - "P0-T04 as Gate Chair verdict"
+  - "P0-T04 as matter coupling"
+  - "P0-T04 as Einstein-equation evidence"
+  - "P0-T04 as benchmark promotion"
+  - "P0-T04 as completed derivation"
