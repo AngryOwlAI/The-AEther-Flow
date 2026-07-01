@@ -35,10 +35,49 @@ VALIDATION_LAYER_ORDER = [
 AUTHORIZATION_LAYER_ORDER = [
     "protected_scoped_gate_review_authorized",
     "protected_scoped_gate_review_scope",
+    "protected_scoped_gate_review_authority_source_path",
+    "downstream_physics_promotion_authorized",
+    "downstream_physics_promotion_authority_source_path",
+    "benchmark_promotion_authorized",
+    "benchmark_promotion_authority_source_path",
+    "completed_derivation_authorized",
+    "completed_derivation_authority_source_path",
+]
+VALIDATION_STATUS_ORDER = [
+    "PASS",
+    "PASS_WITH_WARNINGS",
+    "PENDING",
+    "FAIL",
+    "NOT_RUN",
+    "NOT_APPLICABLE",
+    "UNSPECIFIED",
+]
+VALIDATION_STATUS_MEANINGS = {
+    "PASS": "receipt complete",
+    "PASS_WITH_WARNINGS": "receipt complete with stated warnings",
+    "PENDING": "open item; evidence must explain why",
+    "FAIL": "blocking failure",
+    "NOT_RUN": "not run for this packet",
+    "NOT_APPLICABLE": "not applicable to this packet",
+    "UNSPECIFIED": "missing status; inspect source",
+}
+AUTHORIZATION_BOOLEAN_FIELDS = {
+    "protected_scoped_gate_review_authorized",
     "downstream_physics_promotion_authorized",
     "benchmark_promotion_authorized",
     "completed_derivation_authorized",
-]
+}
+AUTHORIZATION_LAYER_MEANINGS = {
+    "protected_scoped_gate_review_authorized": "scoped review authority only",
+    "protected_scoped_gate_review_scope": "exact scope of protected review authority",
+    "protected_scoped_gate_review_authority_source_path": "tracked source for scoped review authority",
+    "downstream_physics_promotion_authorized": "authorizes downstream physics promotion only when true",
+    "downstream_physics_promotion_authority_source_path": "tracked source for downstream promotion authority",
+    "benchmark_promotion_authorized": "authorizes benchmark promotion only when true",
+    "benchmark_promotion_authority_source_path": "tracked source for benchmark authority",
+    "completed_derivation_authorized": "authorizes completed-derivation claim only when true",
+    "completed_derivation_authority_source_path": "tracked source for completed-derivation authority",
+}
 
 BLOCKED_CLAIMS = [
     "canonical ontology edit",
@@ -294,13 +333,62 @@ def evidence_cell(value: Any) -> str:
     return md_cell(value) if text_value(value) else "none"
 
 
+def validation_status_meaning(status: Any) -> str:
+    return VALIDATION_STATUS_MEANINGS.get(
+        text_value(status),
+        "extension status; inspect evidence",
+    )
+
+
+def validation_layer_status_counts(handoff: dict[str, Any]) -> dict[str, int]:
+    layers = handoff.get("validation_layers")
+    if not isinstance(layers, dict) or not layers:
+        return {}
+    counts: dict[str, int] = {}
+    for layer in layers.values():
+        if not isinstance(layer, dict):
+            continue
+        status = text_value(layer.get("status")) or "UNSPECIFIED"
+        counts[status] = counts.get(status, 0) + 1
+    ordered: dict[str, int] = {}
+    for status in VALIDATION_STATUS_ORDER:
+        if status in counts:
+            ordered[status] = counts.pop(status)
+    for status in sorted(counts):
+        ordered[status] = counts[status]
+    return ordered
+
+
+def validation_status_summary_table(handoff: dict[str, Any]) -> str:
+    counts = validation_layer_status_counts(handoff)
+    if not counts:
+        return "No validation-layer status summary is available."
+    lines = [
+        "| Status | Count | Meaning |",
+        "| --- | --- | --- |",
+    ]
+    for status, count in counts.items():
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    code_value(status),
+                    str(count),
+                    md_cell(validation_status_meaning(status)),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines)
+
+
 def validation_layer_table(handoff: dict[str, Any]) -> str:
     layers = handoff.get("validation_layers")
     if not isinstance(layers, dict) or not layers:
         return "No validation-layer split is recorded in the latest handoff."
     lines = [
-        "| Validation layer | Status | Evidence |",
-        "| --- | --- | --- |",
+        "| Validation layer | Status | Meaning | Evidence |",
+        "| --- | --- | --- | --- |",
     ]
     for layer_name in ordered_mapping_keys(layers, VALIDATION_LAYER_ORDER):
         layer = layers.get(layer_name)
@@ -312,6 +400,7 @@ def validation_layer_table(handoff: dict[str, Any]) -> str:
                 [
                     code_value(layer_name),
                     md_cell(layer.get("status", "")),
+                    md_cell(validation_status_meaning(layer.get("status", ""))),
                     evidence_cell(layer.get("evidence", [])),
                 ]
             )
@@ -320,19 +409,52 @@ def validation_layer_table(handoff: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def authorization_value_cell(field_name: str, value: Any) -> str:
+    if field_name in AUTHORIZATION_BOOLEAN_FIELDS:
+        return "true (authorized)" if bool_value(value) else "false (not authorized)"
+    if field_name.endswith("_source_path") and not text_value(value):
+        return "none"
+    return md_cell(value) if text_value(value) else "none"
+
+
 def authorization_layer_table(handoff: dict[str, Any]) -> str:
     layers = handoff.get("authorization_layers")
     if not isinstance(layers, dict) or not layers:
         return "No authorization-layer split is recorded in the latest handoff."
     lines = [
-        "| Authorization field | Value |",
-        "| --- | --- |",
+        "| Authorization field | Value | Meaning |",
+        "| --- | --- | --- |",
     ]
     for field_name in ordered_mapping_keys(layers, AUTHORIZATION_LAYER_ORDER):
         lines.append(
-            f"| {code_value(field_name)} | {md_cell(layers.get(field_name, ''))} |"
+            "| "
+            + " | ".join(
+                [
+                    code_value(field_name),
+                    authorization_value_cell(field_name, layers.get(field_name, "")),
+                    md_cell(AUTHORIZATION_LAYER_MEANINGS.get(field_name, "extension authorization field")),
+                ]
+            )
+            + " |"
         )
     return "\n".join(lines)
+
+
+def authorization_layer_summary(handoff: dict[str, Any]) -> dict[str, list[str]]:
+    layers = handoff.get("authorization_layers")
+    if not isinstance(layers, dict) or not layers:
+        return {"authorized": [], "not_authorized": []}
+    authorized = [
+        field_name
+        for field_name in AUTHORIZATION_LAYER_ORDER
+        if field_name in AUTHORIZATION_BOOLEAN_FIELDS and bool_value(layers.get(field_name))
+    ]
+    not_authorized = [
+        field_name
+        for field_name in AUTHORIZATION_LAYER_ORDER
+        if field_name in AUTHORIZATION_BOOLEAN_FIELDS and not bool_value(layers.get(field_name))
+    ]
+    return {"authorized": authorized, "not_authorized": not_authorized}
 
 
 def scoped_alias_section(status_aliases: dict[str, Any]) -> str:
@@ -494,6 +616,7 @@ def render_markdown(state: dict[str, Any]) -> str:
         validation_lines.append(f"- latest handoff validation `{md_cell(key)}`: {md_cell(value)};")
     legacy_validation_notes = "\n".join(validation_lines)
     validation_layers_table = validation_layer_table(handoff)
+    validation_layers_summary_table = validation_status_summary_table(handoff)
     authorization_layers_table = authorization_layer_table(handoff)
 
     body = f"""<!-- authority: control -->
@@ -612,6 +735,10 @@ Validation receipts and protected authorization are separate. A layer-level
 not override a separate aggregate compatibility field unless the tracked
 completion or handoff says so.
 
+Layer status summary:
+
+{validation_layers_summary_table}
+
 Validation layers:
 
 {validation_layers_table}
@@ -696,12 +823,14 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
             else {},
             VALIDATION_LAYER_ORDER,
         ),
+        "validation_layer_status_counts": validation_layer_status_counts(state["latest_handoff"]),
         "authorization_layer_fields": ordered_mapping_keys(
             state["latest_handoff"].get("authorization_layers", {})
             if isinstance(state["latest_handoff"].get("authorization_layers"), dict)
             else {},
             AUTHORIZATION_LAYER_ORDER,
         ),
+        "authorization_layer_summary": authorization_layer_summary(state["latest_handoff"]),
         "snapshot_only_not_authority": True,
         "physics_claim_authority": False,
     }

@@ -126,9 +126,13 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                     "authorization_layers:",
                     "  protected_scoped_gate_review_authorized: true",
                     '  protected_scoped_gate_review_scope: "fixture schema split only"',
+                    '  protected_scoped_gate_review_authority_source_path: "research_control/tasks/RT-TEST/DDR-TEST.md"',
                     "  downstream_physics_promotion_authorized: false",
+                    '  downstream_physics_promotion_authority_source_path: ""',
                     "  benchmark_promotion_authorized: false",
+                    '  benchmark_promotion_authority_source_path: ""',
                     "  completed_derivation_authorized: false",
+                    '  completed_derivation_authority_source_path: ""',
                     "claim_boundary:",
                     '  allowed_next_scope: "bounded fixture validation only"',
                     "distance_to_gr:",
@@ -212,11 +216,37 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                 "downstream_physics_promotion_authorized",
                 payload["authorization_layer_fields"],
             )
+            self.assertEqual(
+                payload["validation_layer_status_counts"],
+                {
+                    "PASS": 4,
+                    "PENDING": 1,
+                    "NOT_RUN": 1,
+                    "NOT_APPLICABLE": 1,
+                },
+            )
+            self.assertEqual(
+                payload["authorization_layer_summary"],
+                {
+                    "authorized": ["protected_scoped_gate_review_authorized"],
+                    "not_authorized": [
+                        "downstream_physics_promotion_authorized",
+                        "benchmark_promotion_authorized",
+                        "completed_derivation_authorized",
+                    ],
+                },
+            )
             self.assertIn("generated synchronized snapshot only", markdown)
             self.assertIn("no `MetricData(E)` adoption", markdown)
             self.assertIn("Validation And Authorization Layers", markdown)
+            self.assertIn("| Status | Count | Meaning |", markdown)
+            self.assertIn("| `PENDING` | 1 | open item; evidence must explain why |", markdown)
             self.assertIn("fixture post-write validation is pending in this test", markdown)
             self.assertIn("fixture schema split only", markdown)
+            self.assertIn("true (authorized)", markdown)
+            self.assertIn("false (not authorized)", markdown)
+            self.assertIn("scoped review authority only", markdown)
+            self.assertIn("research_control/tasks/RT-TEST/DDR-TEST.md", markdown)
             self.assertIn("Layered Distance-To-GR Boundary Notes", markdown)
             self.assertIn("| Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |", markdown)
             self.assertIn("Scoped-Positive Alias Pilot", markdown)
@@ -272,6 +302,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertEqual(payload["distance_to_gr_row_count"], 4)
             self.assertIn("overread_guard", payload["layered_status_fields"])
             self.assertIn("post_write", payload["validation_layer_fields"])
+            self.assertEqual(payload["validation_layer_status_counts"]["PENDING"], 1)
+            self.assertEqual(
+                payload["authorization_layer_summary"]["authorized"],
+                ["protected_scoped_gate_review_authorized"],
+            )
             self.assertIn(
                 "downstream_physics_promotion_authorized",
                 payload["authorization_layer_fields"],

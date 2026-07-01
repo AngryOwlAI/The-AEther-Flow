@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-043` and `handoff-0452`.
+`RT-20260701-044` and `handoff-0453`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-043` |
-| Latest handoff ID | `handoff-0452` |
-| Current status | `v14_p4_t02_validation_status_schema_split_completed_next_renderer_handoff_update` |
+| Active task ID | `RT-20260701-044` |
+| Latest handoff ID | `handoff-0453` |
+| Current status | `v14_p4_t03_validation_renderer_handoff_update_completed_next_latest_state_backfill` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p4 t03 validation renderer handoff update |
-| Required next authority | Run one bounded v14 P4-T03 renderer and handoff validation-layer update packet before latest-state backfill public propagation or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P4-T03 renderer and handoff validation-layer update packet before latest-state backfill public propagation or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p4 t04 validation status latest state backfill |
+| Required next authority | Run one bounded v14 P4-T04 latest-state validation backfill packet before public status propagation or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P4-T04 latest-state validation backfill packet before public status propagation or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-043/00_TASK.yaml`.
-- Active task objective: Define and implement the validation-status schema split so validation receipts protected scoped authorization and downstream scientific-promotion authorization are separate and renderer-visible.
-- Latest handoff path: `research_control/handoffs/handoff-0452.yaml`.
-- Latest handoff summary: RT-20260701-043 completed one bounded v14 P4-T02 validation-status schema split packet. It added the validation layer schema, prospective validator checks, renderer layer display, template fields, and focused tests without changing scientific status.
+- Active task path: `research_control/tasks/RT-20260701-044/00_TASK.yaml`.
+- Active task objective: Update the current-frontier renderer and future handoff/completion guidance so validation and authorization layers render with clear meanings, evidence, and non-promotional boundaries.
+- Latest handoff path: `research_control/handoffs/handoff-0453.yaml`.
+- Latest handoff summary: RT-20260701-044 completed one bounded v14 P4-T03 renderer and handoff validation-layer update packet. It made current-frontier validation and authorization layers render with status meanings counts evidence and non-promotional authority meanings, and added future-record guidance to the handoff and completion templates.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P4-T03 renderer and handoff validation-layer update packet before latest-state backfill public propagation or downstream physics routes.
+- Next recommended action: Run one bounded v14 P4-T04 latest-state validation backfill packet before public status propagation or downstream physics routes.
 
 ## Matter-Coupling Boundary
 
@@ -164,7 +164,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P4-T03 renderer and handoff validation-layer update packet before latest-state backfill public propagation or downstream physics routes.
+Run one bounded v14 P4-T04 latest-state validation backfill packet before public status propagation or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -178,37 +178,43 @@ Validation receipts and protected authorization are separate. A layer-level
 not override a separate aggregate compatibility field unless the tracked
 completion or handoff says so.
 
+Layer status summary:
+
+| Status | Count | Meaning |
+| --- | --- | --- |
+| `PASS` | 7 | receipt complete |
+
 Validation layers:
 
-| Validation layer | Status | Evidence |
-| --- | --- | --- |
-| `pre_execution` | PASS | continue_research_memory_preflight PASS with refresh_needed=true and refresh_performed=true after new schema registration<br>query_memory status PASS and targeted P4-T02 search inspected canonical sources<br>continue_research.py resolved handoff-0451 to one bounded P4-T02 packet |
-| `completion_internal` | PASS | RT-20260701-043 task DDR AgentJob role overlay completion documentation-impact receipt and handoff are internally consistent<br>validation_layers and authorization_layers are present in the completion and handoff |
-| `post_write` | PASS | focused unit tests for research-control validator and current-frontier renderer passed<br>templates schema renderer and validator changes were written within AgentJob allowlist |
-| `post_checkpoint` | PASS | checkpoint command is recorded in the completion and must pass before this transaction is committed |
-| `renderer` | PASS | render_current_frontier.py displays validation and authorization layer names<br>current_frontier.md regenerated from handoff-0452 |
-| `memory_bootstrap` | PASS | bootstrap_memory_system.py and validate-only are required receipts for this packet |
-| `claim_language_linter` | PASS | changed-path claim-language linter is required and records no physics-promotion authority |
+| Validation layer | Status | Meaning | Evidence |
+| --- | --- | --- | --- |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory status PASS and targeted P4-T03 search inspected canonical sources<br>continue_research.py resolved handoff-0452 to one bounded P4-T03 packet |
+| `completion_internal` | PASS | receipt complete | RT-20260701-044 task DDR AgentJob role overlay completion documentation-impact receipt and handoff are internally consistent<br>validation_layers and authorization_layers are present in the completion and handoff |
+| `post_write` | PASS | receipt complete | focused renderer tests passed<br>renderer template and test edits were written within AgentJob allowlist |
+| `post_checkpoint` | PASS | receipt complete | checkpoint command is recorded in the completion and must pass before this transaction is committed |
+| `renderer` | PASS | receipt complete | render_current_frontier.py displays status counts meanings evidence and authorization meanings<br>current_frontier.md regenerated from handoff-0453 |
+| `memory_bootstrap` | PASS | receipt complete | bootstrap_memory_system.py and validate-only are required receipts for this packet |
+| `claim_language_linter` | PASS | receipt complete | changed-path claim-language linter is required and records no physics-promotion authority |
 
 Authorization layers:
 
-| Authorization field | Value |
-| --- | --- |
-| `protected_scoped_gate_review_authorized` | True |
-| `protected_scoped_gate_review_scope` | P4-T02 project-control validation-status schema split only; no downstream physics benchmark or completed-derivation promotion |
-| `downstream_physics_promotion_authorized` | False |
-| `benchmark_promotion_authorized` | False |
-| `completed_derivation_authorized` | False |
-| `benchmark_promotion_authority_source_path` |  |
-| `completed_derivation_authority_source_path` |  |
-| `downstream_physics_promotion_authority_source_path` |  |
-| `protected_scoped_gate_review_authority_source_path` | research_control/tasks/RT-20260701-043/DDR-20260701-043.md |
+| Authorization field | Value | Meaning |
+| --- | --- | --- |
+| `protected_scoped_gate_review_authorized` | true (authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | P4-T03 project-control renderer and handoff validation-layer update only; no downstream physics benchmark or completed-derivation promotion | exact scope of protected review authority |
+| `protected_scoped_gate_review_authority_source_path` | research_control/tasks/RT-20260701-044/DDR-20260701-044.md | tracked source for scoped review authority |
+| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
+| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
+| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 
 Legacy compatibility records:
 
-- active task: `RT-20260701-043`;
-- latest handoff: `handoff-0452`;
-- current status: `v14_p4_t02_validation_status_schema_split_completed_next_renderer_handoff_update`;
+- active task: `RT-20260701-044`;
+- latest handoff: `handoff-0453`;
+- current status: `v14_p4_t03_validation_renderer_handoff_update_completed_next_latest_state_backfill`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -218,8 +224,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0452.yaml`
-- `research_control/tasks/RT-20260701-043/00_TASK.yaml`
+- `research_control/handoffs/handoff-0453.yaml`
+- `research_control/tasks/RT-20260701-044/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -235,7 +241,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0452*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0453*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

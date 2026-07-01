@@ -8,6 +8,10 @@ status: "completed"
 summary: ""
 next_action: ""
 loop_risk_route: ""
+# Validation layers are operational receipt layers, not promotion authority.
+# Use PASS, PASS_WITH_WARNINGS, PENDING, FAIL, NOT_RUN, or NOT_APPLICABLE.
+# PENDING requires evidence naming what remains pending and why it does not
+# contradict any aggregate compatibility status.
 validation_layers:
   pre_execution:
     status: ""
@@ -30,6 +34,9 @@ validation_layers:
   claim_language_linter:
     status: ""
     evidence: []
+# Authorization layers are separate gate fields. The protected scoped review
+# boolean is not downstream physics, benchmark, or completed-derivation
+# promotion. Any true promotion boolean requires its exact authority source.
 authorization_layers:
   protected_scoped_gate_review_authorized: false
   protected_scoped_gate_review_scope: ""
