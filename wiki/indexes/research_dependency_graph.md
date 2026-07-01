@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T00:23:00Z`
-- Source fingerprint: `9840ecd6fac9913912b88bc22409b57f388c238e36a31525c3565b5908f7b84a`
-- Nodes: `8988`
-- Edges: `38186`
+- Generated from tracked state as of: `2026-07-01T00:49:13Z`
+- Source fingerprint: `12cacd5c4110008d95c2c0d1f264a101b9aa89c0528233ea9b7e082f3dadadef`
+- Nodes: `9016`
+- Edges: `38287`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 545 |
+| `completion_yaml` | 546 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 409 |
+| `handoff_yaml` | 410 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 545 |
+| `agent_job` | `support_only` | 546 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4531 |
-| `blocked_burden` | `blocked` | 1028 |
-| `claim_boundary` | `support_only` | 546 |
+| `artifact` | `support_only` | 4545 |
+| `blocked_burden` | `blocked` | 1038 |
+| `claim_boundary` | `support_only` | 547 |
 | `draft_control_candidate` | `draft_control` | 429 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 91 |
 | `gate_chair_verdict` | `human_gated` | 27 |
-| `handoff` | `support_only` | 409 |
-| `human_gated_object` | `human_gated` | 256 |
+| `handoff` | `support_only` | 410 |
+| `human_gated_object` | `human_gated` | 255 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 22 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 237 |
+| `source_ontology_object` | `support_only` | 238 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 494 |
+| `task` | `support_only` | 495 |
 
 ## Frontier Table
 
@@ -124,6 +124,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_stress_energy_semantics` | Blocked claim: audit pass as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_tensor` | Blocked claim: audit pass as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_proposition_as_einstein_equations` | Blocked claim: audit proposition as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:audit_ready_as_adoption` | Blocked claim: audit_ready as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_expansion_through_role_decomposition` | Blocked claim: authority expansion through role decomposition | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_label_as_physics_evidence` | Blocked claim: authority label as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_gate_chair_route` | Blocked claim: autonomous Gate Chair route | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:bridgeslot_n_as_stress_energy_tensor` | Blocked claim: BridgeSlot_n as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridgeslot_n_as_target_geometry` | Blocked claim: BridgeSlot_n as target geometry | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridgetok_as_stress_energy` | Blocked claim: BridgeTok as stress energy | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:brief_as_proof` | Blocked claim: brief as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260630-057`
-- Latest handoff: `handoff-0409`
-- Handoff path: `research_control/handoffs/handoff-0409.yaml`
-- Next action: Run one bounded ontology-formalizer@0.2.0 ontology-law-research-packet to formalize SourceMatterSemanticsAdoptionReadinessLaw_v1 as a proposal-only draft/control source-side law target and proof-obligation packet. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation.
+- Active task: `RT-20260701-001`
+- Latest handoff: `handoff-0410`
+- Handoff path: `research_control/handoffs/handoff-0410.yaml`
+- Next action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit SourceMatterSemanticsAdoptionReadinessLaw_v1 for target-import, detector-semantics, stress-energy, matter-action, coupling-law, MetricData(E), g_eff, Einstein-equation, benchmark, proof-authority, registry-authority, and evidence-as-adoption smuggling before any stress, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
