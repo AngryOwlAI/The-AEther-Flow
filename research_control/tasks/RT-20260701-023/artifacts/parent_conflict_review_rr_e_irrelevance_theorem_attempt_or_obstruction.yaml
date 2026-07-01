@@ -1,0 +1,23 @@
+task_id: "RT-20260701-023"
+artifact_role: "parent_conflict_review"
+status: "resolved"
+resolution_rounds: 1
+children:
+  - "research_control/tasks/RT-20260701-023/artifacts/child_phys_math_rr_e_irrelevance_theorem_attempt_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260701-023/artifacts/child_phys_phil_rr_e_irrelevance_theorem_attempt_or_obstruction.yaml"
+conflicts:
+  - conflict_id: "C1"
+    type: "terminology"
+    severity: "nonblocking"
+    issue: "The mathematical child called the result a countermodel while the physics-philosophy child emphasized underdetermination."
+    resolution: "Fuse as a precise obstruction supported by a minimal countermodel. Do not state a universal impossibility theorem."
+  - conflict_id: "C2"
+    type: "next_route"
+    severity: "nonblocking"
+    issue: "The mathematical child noted a repair primitive while the physics-philosophy child recommended audit first."
+    resolution: "Route to P5-T03 smuggling audit first because the v13 sequence requires audit before Refuter stress selector or repair promotion."
+unresolved_conflicts: []
+claim_boundary_review:
+  authority_expansion_detected: false
+  canonical_ontology_edit_detected: false
+  downstream_promotion_detected: false

@@ -1,0 +1,314 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\AdmSrc}{\mathrm{Adm}^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\AdmPMS}{\mathrm{Adm}^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_E}
+\newcommand{\RRTarget}{\mathrm{RR}_{E}\mathrm{TheoremTarget}_{v1}}
+\newcommand{\Qsrc}{Q^{\RRE}_{\mathrm{src}}}
+\newcommand{\EqRR}{\equiv^{\RRE}_{\mathrm{src}}}
+\newcommand{\SepRR}{\#^{\RRE}_{\mathrm{src}}}
+\newcommand{\TrRR}{\mathrm{Tr}^{\RRE}_{\mathrm{src}}}
+\newcommand{\IrrRR}{\mathrm{Irr}^{\RRE}_{\mathrm{src}}}
+\newcommand{\InvRR}{\mathrm{Inv}^{\RRE}_{\mathrm{src}}}
+\newcommand{\FactRR}{\mathrm{Fact}^{\RRE}_{\mathrm{src}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\PMSProf}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\RRUnder}{\mathsf{RR\_E\_underdetermination\_obstruction}}
+\newcommand{\RRWitness}{\mathrm{RR}_{E}\mathrm{SeparationObstructionWitness}_{v1}}
+\newcommand{\RRMissing}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{countermodel}{Finite countermodel}
+\newtheorem{obstruction}{Obstruction record}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{RR\_E Irrelevance Theorem Attempt or Obstruction v1}
+\author{Candidate Constructor Packet RT-20260701-023}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact records the fused Candidate Constructor output for
+\texttt{RT-20260701-023}, implementing v13 P5-T02. It attempts a source-only
+\(\RRE\) irrelevance theorem under the theorem target \(\RRTarget\) and returns
+a precise obstruction rather than a universal theorem. The decisive result is:
+\[
+  \RRUnder
+\]
+with a minimal source-side witness \(\RRWitness\) and an exact missing
+primitive \(\RRMissing\).
+
+The positive mathematical payload is conditional and source-side:
+\begin{enumerate}[leftmargin=*]
+  \item a factor-through irrelevance lemma: any candidate \(F\) that is
+  explicitly defined to factor through a source quotient that removes or
+  transports \(\RRE\) is invariant on that quotient;
+  \item a separation theorem candidate: if two records have distinct
+  \(\RRE\) syntax and no source transport or invariance certificate, then a
+  source-side route may not identify them;
+  \item a finite countermodel: a two-record source domain where a lawful
+  source-side label depends on \(\Qsrc\), defeating any unrestricted
+  \(\RRE\)-irrelevance theorem.
+\end{enumerate}
+
+This packet does not prove an unrestricted \(\RRE\) irrelevance theorem. It
+does not edit canonical ontology TeX. It does not create or adopt a source
+law. It does not adopt \(\PMSProf\), \(\SMSAR\) as law, matter semantics,
+detector semantics, a coupling law, matter coupling, stress-energy semantics,
+a stress-energy tensor, a matter action, \(\MetricData(E)\), \(\geff\),
+Einstein equations, benchmark status, benchmark closure, completed derivation,
+future source-extension impossibility, or global theory rejection.
+
+\begin{verbatim}
+candidate_constructor_result.result_type: "precise_obstruction"
+packet_payload_mode: "rr_e_irrelevance_theorem_attempt_or_obstruction"
+rr_e_irrelevance_theorem_candidate: "conditional_factor_through_only"
+rr_e_separation_theorem_candidate: "source_separation_without_transport"
+rr_e_underdetermination_obstruction: true
+rr_e_target_repair_required: true
+rr_e_route_freeze_recommended: false
+source_law_adopted: false
+PositiveMSProfile_v1_adopted: false
+SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Setup}
+
+\begin{definition}[Declared P5-T02 domain]
+Let \(D_E\subseteq \AdmPMS(E)\) be a finite/local source-side domain admitted
+for the P5 lane. Each record \(r\in D_E\) carries source-only components
+\[
+  r = (S(r), C(r), \Qsrc(r)),
+\]
+where \(S(r)\) denotes retained non-\(\RRE\) source support syntax, \(C(r)\)
+denotes source certificate data, and \(\Qsrc(r)\) denotes retained source
+readout-response syntax as in \(\RRTarget\). None of these components is a
+detector protocol, target metric datum, stress-energy datum, matter action, or
+benchmark datum.
+\end{definition}
+
+\begin{definition}[Source quotient candidate]
+A source quotient candidate for \(\RRE\) irrelevance is a map
+\[
+  \pi_{\RRE}:D_E\to \bar D_E
+\]
+whose fibers identify records only when either:
+\begin{enumerate}[label=Q\arabic*.,leftmargin=*]
+  \item a source transport certificate \(\TrRR(r,r')\) is supplied; or
+  \item an explicit source-side invariance certificate \(\InvRR(F;r,r')\)
+  proves that a named downstream source object \(F\) is insensitive to the
+  \(\RRE\) variation between \(r\) and \(r'\).
+\end{enumerate}
+The quotient candidate is invalid if it is justified by detector response,
+empirical calibration, target geometry, \(\MetricData(E)\), \(\geff\),
+stress-energy semantics, matter action, Einstein equations, benchmark fit,
+registry state, validator state, role identity, commit state, generated
+derivative state, or local cache state.
+\end{definition}
+
+\section{Conditional Irrelevance Theorem Candidate}
+
+\begin{lemma}[Factor-through \(\RRE\) irrelevance]
+Let \(F:D_E\to X\) be a source-side object, label, relation code, or route
+predicate. Suppose there exists a source-side quotient candidate
+\(\pi_{\RRE}:D_E\to \bar D_E\) and a map \(\bar F:\bar D_E\to X\) such that
+\[
+  F = \bar F\circ\pi_{\RRE}.
+\]
+If \(\pi_{\RRE}(r)=\pi_{\RRE}(r')\), then \(F(r)=F(r')\).
+\end{lemma}
+
+\begin{proof}
+The proof is purely formal. Since \(F=\bar F\circ\pi_{\RRE}\),
+\[
+  F(r)=\bar F(\pi_{\RRE}(r))=\bar F(\pi_{\RRE}(r'))=F(r').
+\]
+No detector semantics, target metric, stress-energy semantics,
+\(\MetricData(E)\), \(\geff\), benchmark evidence, registry state, validator
+state, or generated derivative is used. The burden is moved into the source
+definition of \(\pi_{\RRE}\) and into the proof that \(F\) factors through it.
+\end{proof}
+
+\begin{proposition}[Separation without transport]
+Let \(r,r'\in D_E\). If
+\[
+  S(r)=S(r'),\qquad C(r)=C(r'),\qquad \Qsrc(r)\ne \Qsrc(r'),
+\]
+and no \(\TrRR(r,r')\), no \(\InvRR(F;r,r')\), and no factorization
+\(\FactRR(F)\) is supplied, then a P5 source-side construction may not identify
+\(r\) and \(r'\) for \(F\). The identification branch returns \(\RRUnder\).
+\end{proposition}
+
+\begin{proof}
+By the P5-T01 theorem target, \(r\SepRR r'\) holds when retained
+\(\RRE\) syntax differs and no source transport certificate is available. The
+only allowed P5-T02 identification routes are source transport or source
+invariance/factorization. The hypotheses exclude all three routes. Therefore
+identification has no source-side witness. The fail-closed branch is
+\(\RRUnder\), not detector semantics and not a target-physics conclusion.
+\end{proof}
+
+\section{Minimal Countermodel}
+
+\begin{countermodel}[\(\RRWitness\)]
+Let \(D_E=\{r_0,r_1\}\). Define
+\[
+  S(r_0)=S(r_1)=s,\qquad C(r_0)=C(r_1)=c,
+\]
+and choose distinct retained source syntax tokens
+\[
+  \Qsrc(r_0)=q_0,\qquad \Qsrc(r_1)=q_1,\qquad q_0\ne q_1.
+\]
+Assume no source transport certificate \(\TrRR(r_0,r_1)\) and no source
+invariance certificate \(\InvRR(F;r_0,r_1)\). Define a source-side label
+\[
+  F_Q(r)=\Qsrc(r).
+\]
+Then \(F_Q(r_0)\ne F_Q(r_1)\). Therefore the unrestricted theorem
+\[
+  \text{all source-side \(F\) are \(\RRE\)-irrelevant}
+\]
+is false on \(D_E\). More narrowly, any theorem claiming \(F(r_0)=F(r_1)\)
+for arbitrary \(F\) cannot be proven from the current P5 inputs.
+\end{countermodel}
+
+\begin{proof}
+All objects in the construction are source syntax objects. The function
+\(F_Q\) is permitted because it only reads retained source syntax. Since
+\(q_0\ne q_1\), \(F_Q(r_0)\ne F_Q(r_1)\). The countermodel does not say that
+every future \(F\) depends on \(\RRE\). It says only that source-side
+irrelevance is not automatic for arbitrary \(F\); it must be proven by
+transport, invariance, or factorization.
+\end{proof}
+
+\section{Obstruction Record}
+
+\begin{obstruction}[\(\RRUnder\)]
+Current ontology and current P5 inputs do not derive a source-side rule that
+decides, for every admissible \(\RRE\)-variation pair, whether retained
+\(\RRE\) syntax is irrelevant to the next matter-semantics source object.
+The missing primitive is:
+\[
+  \RRMissing.
+\]
+This primitive would need to define one of the following in source-only terms:
+\begin{enumerate}[label=M\arabic*.,leftmargin=*]
+  \item a complete source transport rule for \(\RRE\) records;
+  \item an invariance rule naming which downstream source-side objects are
+  insensitive to \(\RRE\) variations and why;
+  \item a quotient law proving that a declared source object factors through a
+  source quotient that safely removes \(\RRE\);
+  \item a separation law proving that a declared source object must preserve
+  \(\RRE\) distinctions.
+\end{enumerate}
+Until such a primitive is supplied, the project has a precise P5 obstruction:
+conditional irrelevance is available only after explicit source
+factorization/transport, while unrestricted \(\RRE\) irrelevance is defeated
+by \(\RRWitness\).
+\end{obstruction}
+
+\section{Result Classification}
+
+\begin{longtable}{p{0.34\linewidth}p{0.54\linewidth}}
+\toprule
+Required P5-T02 result type & Status \\
+\midrule
+\texttt{rr\_e\_irrelevance\_theorem\_candidate} &
+Conditional only: factor-through irrelevance holds when a named source quotient
+and factorization are supplied. \\
+\texttt{rr\_e\_separation\_theorem\_candidate} &
+Constructed as separation without source transport or invariance. \\
+\texttt{rr\_e\_underdetermination\_obstruction} &
+Constructed as \(\RRUnder\), with missing primitive \(\RRMissing\). \\
+\texttt{rr\_e\_target\_repair\_required} &
+Required before any stronger irrelevance claim: supply source transport,
+invariance, quotient, or preservation law. \\
+\texttt{rr\_e\_route\_freeze\_recommended} &
+False. This packet adds a new countermodel and obstruction payload, so route
+freeze is premature. \\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Narrowed: \(\RRE\) equivalence requires explicit
+source transport, invariance, quotient, or preservation law. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only context retained. \\
+\(g_{\mathrm{eff}}\) & Unchanged; no scope expansion. \\
+Matter coupling & Narrowed by obstruction: unrestricted \(\RRE\) irrelevance
+is not available under current inputs. No matter coupling is derived. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & New finite two-record countermodel supplied for
+\(\RRE\) variation. General finite-variation theorem remains open. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & Prior scoped evidence/precondition results retained; no
+new gate verdict. \\
+Current route freeze or hard-fail status & Not frozen; route to P5-T03 audit
+of the theorem attempt/obstruction. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}[No universal no-go]
+This artifact does not prove that a future source extension can never supply
+\(\RRMissing\). It proves only that current inputs do not derive the needed
+source-side irrelevance, transport, quotient, or preservation primitive.
+\end{nonconclusion}
+
+\begin{nonconclusion}[No adoption or promotion]
+This artifact does not adopt source law, \(\PMSProf\), \(\SMSAR\) as law,
+matter semantics, detector semantics, coupling law, matter coupling,
+stress-energy semantics, matter action, \(\MetricData(E)\), \(\geff\),
+Einstein equations, benchmark status, or completed derivation.
+\end{nonconclusion}
+
+\section{APA 7 Source Notes}
+
+The AEther-Flow Research Project. (2026, July 1). \textit{RR\_E theorem target
+formalizer v1} [Draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{Positive Source
+Matter-Semantics Profile Candidate v1} [Draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{PositiveMSProfile v1
+Refuter Stress} [Draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{PositiveMSProfile v1
+Gate Chair scoped evidence/precondition review} [Draft/control TeX artifact].
+
+\end{document}

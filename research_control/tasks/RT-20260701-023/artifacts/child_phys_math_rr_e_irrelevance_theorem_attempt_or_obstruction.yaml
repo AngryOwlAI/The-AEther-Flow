@@ -1,0 +1,23 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260701-023"
+artifact_role: "parallel_child_output"
+summary: "The mathematical child attempted unrestricted RR_E irrelevance and found it available only under an explicit factor-through quotient or source invariance certificate. It constructed a two-record source countermodel for arbitrary source-side F."
+formal_objects:
+  - "D_E finite/local source domain"
+  - "Q_src^RR_E retained source readout-response syntax"
+  - "Tr_src^RR_E source transport certificate"
+  - "Inv_src^RR_E source invariance certificate"
+  - "RR_ESeparationObstructionWitness_v1"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1"
+result:
+  result_type: "precise_obstruction"
+  conditional_theorem: "If F factors through a source RR_E quotient then F is invariant on quotient fibers."
+  countermodel: "Two records with equal non-RR_E source support and distinct Q_src^RR_E defeat unrestricted irrelevance for F_Q(r)=Q_src^RR_E(r)."
+  missing_primitive: "RR_ETransportCompletenessOrInvarianceLaw_v1"
+claim_boundary:
+  unrestricted_rr_e_irrelevance_proved: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  downstream_promotion_authorized: false
