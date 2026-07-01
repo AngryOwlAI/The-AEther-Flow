@@ -1,0 +1,51 @@
+handoff_id: "handoff-0447"
+created_at: "2026-07-01T20:40:30Z"
+task_id: "RT-20260701-038"
+decision_id: "DDR-20260701-038"
+job_id: "AJ-RT-20260701-038-001"
+completion_path: "research_control/tasks/RT-20260701-038/jobs/completions/AJC-AJ-RT-20260701-038-001.yaml"
+source_task_id: "RT-20260701-038"
+source_job_id: "AJ-RT-20260701-038-001"
+source_completion_id: "AJC-AJ-RT-20260701-038-001"
+status: "completed"
+summary: "RT-20260701-038 completed one bounded v14 P3-T02 claim-language linter implementation packet. The linter consumes claim_language_linter_taxonomy_v1 emits JSON and human-readable output hard-fails current/public or active-control overclaims warns on historical artifacts and reviewed intentional examples and has focused regression tests."
+next_action: "Run one bounded v14 P3-T03 claim-language linter validation integration packet before remediation public status propagation matter-coupling Einstein-equation benchmark or promotion work."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "v14_p3_t03_claim_language_linter_validation_integration"
+  objective: "Decide and implement the appropriate validation integration for validate_claim_language.py while accounting for the recorded hard-fail backlog and preserving P3-T04 remediation as a separate packet."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "research_control/tasks/RT-20260701-038/artifacts/p3_t02_linter_default_scan_receipt.md"
+    note: "Default scan currently reports hard-fail backlog for later integration and remediation. Current frontier scans PASS."
+validation_summary:
+  - validator: "unittest_claim_language_linter"
+    status: "PASS"
+  - validator: "claim_language_linter_current_frontier"
+    status: "PASS"
+  - validator: "claim_language_linter_default_scan_summary"
+    status: "FAIL_EXPECTED_PENDING_REMEDIATION"
+claim_boundary:
+  proof_authority: false
+  physics_promotion_authorized: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+project_improvement_signals: []

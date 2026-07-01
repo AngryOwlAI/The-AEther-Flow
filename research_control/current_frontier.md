@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-037` and `handoff-0446`.
+`RT-20260701-038` and `handoff-0447`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-037` |
-| Latest handoff ID | `handoff-0446` |
-| Current status | `v14_p3_t01_claim_language_taxonomy_completed_next_linter_implementation` |
-| Current route family | post v14 p3 t01 to p3 t02 claim language linter implementation no adoption |
-| Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: accepted scoped evidence/precondition only |
-| Required next authority | bounded v14 P3-T02 claim-language linter implementation |
-| Next recommended action | Run one bounded v14 P3-T02 claim-language linter implementation packet before public status propagation matter-coupling Einstein-equation benchmark or promotion work. |
+| Active task ID | `RT-20260701-038` |
+| Latest handoff ID | `handoff-0447` |
+| Current status | `v14_p3_t02_claim_language_linter_implementation_completed_next_validation_integration` |
+| Current route family | tracked continue-research route |
+| Target derivation milestone | none; this is project-control tooling work |
+| Current burden | none for physics derivation; live control burden is v14 p3 t03 claim language linter validation integration |
+| Required next authority | Run one bounded v14 P3-T03 claim-language linter validation integration packet before remediation public status propagation matter-coupling Einstein-equation benchmark or promotion work. |
+| Next recommended action | Run one bounded v14 P3-T03 claim-language linter validation integration packet before remediation public status propagation matter-coupling Einstein-equation benchmark or promotion work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-037/00_TASK.yaml`.
-- Active task objective: Create a machine-readable claim-language linter taxonomy for P3-T02 while preserving all physics and gate-authority boundaries.
-- Latest handoff path: `research_control/handoffs/handoff-0446.yaml`.
-- Latest handoff summary: RT-20260701-037 completed one bounded v14 P3-T01 claim-language linter taxonomy packet. The taxonomy is machine-readable control data with eighteen required phrase classes required phrase coverage severity levels surface policy historical-warning separation and a P3-T02 implementation contract.
-- Current route family: post v14 p3 t01 to p3 t02 claim language linter implementation no adoption.
-- Next recommended action: Run one bounded v14 P3-T02 claim-language linter implementation packet before public status propagation matter-coupling Einstein-equation benchmark or promotion work.
+- Active task path: `research_control/tasks/RT-20260701-038/00_TASK.yaml`.
+- Active task objective: Implement a deterministic claim-language linter that consumes claim_language_linter_taxonomy_v1, scans required surfaces, emits JSON and human-readable output, hard-fails current/public or active-control overclaims, and downgrades historical or reviewed intentional examples to warnings.
+- Latest handoff path: `research_control/handoffs/handoff-0447.yaml`.
+- Latest handoff summary: RT-20260701-038 completed one bounded v14 P3-T02 claim-language linter implementation packet. The linter consumes claim_language_linter_taxonomy_v1 emits JSON and human-readable output hard-fails current/public or active-control overclaims warns on historical artifacts and reviewed intentional examples and has focused regression tests.
+- Current route family: tracked continue-research route.
+- Next recommended action: Run one bounded v14 P3-T03 claim-language linter validation integration packet before remediation public status propagation matter-coupling Einstein-equation benchmark or promotion work.
 
 ## Matter-Coupling Boundary
 
@@ -164,7 +164,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P3-T02 claim-language linter implementation packet before public status propagation matter-coupling Einstein-equation benchmark or promotion work.
+Run one bounded v14 P3-T03 claim-language linter validation integration packet before remediation public status propagation matter-coupling Einstein-equation benchmark or promotion work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -175,31 +175,20 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-037`;
-- latest handoff: `handoff-0446`;
-- current status: `v14_p3_t01_claim_language_taxonomy_completed_next_linter_implementation`;
+- active task: `RT-20260701-038`;
+- latest handoff: `handoff-0447`;
+- current status: `v14_p3_t02_claim_language_linter_implementation_completed_next_validation_integration`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `collect_project_improvement_signals_validate_emitted`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `render_current_frontier_check`: PASS;
-- latest handoff validation `render_dependency_graph_check`: PASS;
-- latest handoff validation `report_physics_progress_metrics`: PASS_WITH_WARNINGS;
-- latest handoff validation `strict_yaml_taxonomy_parse`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0446.yaml`
-- `research_control/tasks/RT-20260701-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0447.yaml`
+- `research_control/tasks/RT-20260701-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -215,7 +204,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0446*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0447*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
