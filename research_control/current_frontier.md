@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260630-056` and `handoff-0408`.
+`RT-20260630-057` and `handoff-0409`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260630-056` |
-| Latest handoff ID | `handoff-0408` |
-| Current status | `v12_p7_t03_ms_stable_bridge_accepted_scoped_source_extension_evidence_precondition_no_adoption` |
-| Current route family | v12 p7 t03 ms stable bridge gate accepted scoped evidence route to selector no promotion |
+| Active task ID | `RT-20260630-057` |
+| Latest handoff ID | `handoff-0409` |
+| Current status | `v12_p7_t03_post_ms_stable_bridge_evidence_selector_routes_to_matter_semantics_law_target_no_adoption` |
+| Current route family | v12 p7 t03 post ms stable bridge evidence selector routes to law target no promotion |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | Theoretical Continuation Selector classification of the post-MSStableMatterSemanticsBridge_v1 evidence route only |
-| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStableMatterSemanticsBridge_v1 evidence route while preserving no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation. |
+| Required next authority | Ontology Formalizer proposal-only source-side law-target formalization for SourceMatterSemanticsAdoptionReadinessLaw_v1 |
+| Next recommended action | Run one bounded ontology-formalizer@0.2.0 ontology-law-research-packet to formalize SourceMatterSemanticsAdoptionReadinessLaw_v1 as a proposal-only draft/control source-side law target and proof-obligation packet. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260630-056/00_TASK.yaml`.
-- Active task objective: Execute one bounded Gate Chair review under exact tracked authorization to decide whether MSStableMatterSemanticsBridge_v1(E;B_current) may be accepted only as scoped source-extension stable matter-semantics bridge evidence/precondition under its declared finite/local source-side and fail-closed scope while preserving all source-law, source-extension-data, MetricData(E), g_eff, coupling-law, matter-semantics, detector-semantics, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, and completed-derivation claim blocks.
-- Latest handoff path: `research_control/handoffs/handoff-0408.yaml`.
-- Latest handoff summary: RT-20260630-056 completed one bounded Gate Chair packet and accepted MSStableMatterSemanticsBridge_v1(E;B_current) only as scoped source-extension stable matter-semantics bridge evidence/precondition under the declared finite/local source-side and fail-closed scope. The decision does not adopt source law, source-extension data beyond this exact scoped result, matter semantics, detector semantics, a coupling law, matter coupling, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
-- Current route family: v12 p7 t03 ms stable bridge gate accepted scoped evidence route to selector no promotion.
-- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStableMatterSemanticsBridge_v1 evidence route while preserving no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation.
+- Active task path: `research_control/tasks/RT-20260630-057/00_TASK.yaml`.
+- Active task objective: Classify the post-MSStableMatterSemanticsBridge_v1(E;B_current) evidence route after RT-056 accepted the bridge only as scoped source-extension stable matter-semantics bridge evidence/precondition; select exactly one next bounded packet while preserving all adoption and downstream GR claim blocks.
+- Latest handoff path: `research_control/handoffs/handoff-0409.yaml`.
+- Latest handoff summary: RT-20260630-057 completed one bounded Theoretical Continuation Selector packet and classified the post-MSStableMatterSemanticsBridge_v1(E;B_current) evidence route. The selector routes next to a proposal-only ontology-formalizer@0.2.0 ontology-law packet for SourceMatterSemanticsAdoptionReadinessLaw_v1. The selector does not adopt source law, source-extension data beyond exact scoped gate results, matter semantics, detector semantics, a coupling law, matter coupling, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
+- Current route family: v12 p7 t03 post ms stable bridge evidence selector routes to law target no promotion.
+- Next recommended action: Run one bounded ontology-formalizer@0.2.0 ontology-law-research-packet to formalize SourceMatterSemanticsAdoptionReadinessLaw_v1 as a proposal-only draft/control source-side law target and proof-obligation packet. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded theoretical-continuation-selector@0.1.0 packet to classify the post-MSStableMatterSemanticsBridge_v1 evidence route while preserving no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation.
+Run one bounded ontology-formalizer@0.2.0 ontology-law-research-packet to formalize SourceMatterSemanticsAdoptionReadinessLaw_v1 as a proposal-only draft/control source-side law target and proof-obligation packet. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, no benchmark Gate Chair closure, and no completed derivation.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260630-056`;
-- latest handoff: `handoff-0408`;
-- current status: `v12_p7_t03_ms_stable_bridge_accepted_scoped_source_extension_evidence_precondition_no_adoption`;
+- active task: `RT-20260630-057`;
+- latest handoff: `handoff-0409`;
+- current status: `v12_p7_t03_post_ms_stable_bridge_evidence_selector_routes_to_matter_semantics_law_target_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0408.yaml`
-- `research_control/tasks/RT-20260630-056/00_TASK.yaml`
+- `research_control/handoffs/handoff-0409.yaml`
+- `research_control/tasks/RT-20260630-057/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0408*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0409*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
