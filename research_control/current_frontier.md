@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-007` and `handoff-0416`.
+`RT-20260701-008` and `handoff-0417`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-007` |
-| Latest handoff ID | `handoff-0416` |
-| Current status | `post_v13_p2_t01_source_matter_semantics_adoption_readiness_law_stress_survived_pending_selector_no_adoption` |
-| Current route family | post v13 p2 t01 source matter semantics adoption readiness law stress survived pending selector no adoption |
+| Active task ID | `RT-20260701-008` |
+| Latest handoff ID | `handoff-0417` |
+| Current status | `post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_selector_requires_narrow_gate_no_adoption` |
+| Current route family | post v13 p2 t02 source matter semantics adoption readiness law selector requires narrow gate no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | P2-T02 post-stress route selector for SourceMatterSemanticsAdoptionReadinessLaw_v1 |
-| Next recommended action | Run one bounded P2-T02 Theoretical Continuation Selector packet to classify the post-stress route for SourceMatterSemanticsAdoptionReadinessLaw_v1 before Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing. |
+| Required next authority | narrow Gate Chair evidence-status/precondition review for SourceMatterSemanticsAdoptionReadinessLaw_v1 |
+| Next recommended action | Run one bounded Gate Chair packet, under the current user authorization, to decide only whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-007/00_TASK.yaml`.
-- Active task objective: Stress SourceMatterSemanticsAdoptionReadinessLaw_v1 for readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, scoped-evidence pressure, no-target certificate pressure, g_eff pressure, benchmark pressure, fail-closed overread handling, and process-authority immunity before selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing.
-- Latest handoff path: `research_control/handoffs/handoff-0416.yaml`.
-- Latest handoff summary: RT-20260701-007 completed v13 P2-T01 Refuter stress of SourceMatterSemanticsAdoptionReadinessLaw_v1. The audited proposal-only law target conditionally survived as bridge_facing_candidate_path pending selector: audit_ready remains routing status only, source relabeling and finite variation survive only under source-defined transport and certificates, and certificate deletion, RR_E collapse, scoped-evidence overread, no-target certificate overread, g_eff import, benchmark import, and process-authority laundering fail closed. No adoption or downstream GR claim changed.
-- Current route family: post v13 p2 t01 source matter semantics adoption readiness law stress survived pending selector no adoption.
-- Next recommended action: Run one bounded P2-T02 Theoretical Continuation Selector packet to classify the post-stress route for SourceMatterSemanticsAdoptionReadinessLaw_v1 before Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing.
+- Active task path: `research_control/tasks/RT-20260701-008/00_TASK.yaml`.
+- Active task objective: Classify the post-stress route for SourceMatterSemanticsAdoptionReadinessLaw_v1 after P2-T01 stress survival, consider exactly the eleven P2-T02 route families, and select one next bounded packet without adoption or downstream promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0417.yaml`.
+- Latest handoff summary: RT-20260701-008 completed v13 P2-T02 post-stress route selection for SourceMatterSemanticsAdoptionReadinessLaw_v1. The selector chose a future narrow Gate Chair evidence-status/precondition review and issued no Gate Chair verdict. No source-law adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 adoption, source-extension data adoption beyond exact scoped gate results, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark promotion, or completed derivation occurred.
+- Current route family: post v13 p2 t02 source matter semantics adoption readiness law selector requires narrow gate no adoption.
+- Next recommended action: Run one bounded Gate Chair packet, under the current user authorization, to decide only whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded P2-T02 Theoretical Continuation Selector packet to classify the post-stress route for SourceMatterSemanticsAdoptionReadinessLaw_v1 before Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion routing.
+Run one bounded Gate Chair packet, under the current user authorization, to decide only whether SourceMatterSemanticsAdoptionReadinessLaw_v1 may be accepted as scoped source-extension matter-semantics adoption-readiness evidence/precondition under its declared source-side and fail-closed scope.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-007`;
-- latest handoff: `handoff-0416`;
-- current status: `post_v13_p2_t01_source_matter_semantics_adoption_readiness_law_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260701-008`;
+- latest handoff: `handoff-0417`;
+- current status: `post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_selector_requires_narrow_gate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0416.yaml`
-- `research_control/tasks/RT-20260701-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0417.yaml`
+- `research_control/tasks/RT-20260701-008/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0416*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0417*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
