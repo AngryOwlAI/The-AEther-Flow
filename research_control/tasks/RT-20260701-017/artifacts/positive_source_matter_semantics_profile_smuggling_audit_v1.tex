@@ -1,0 +1,320 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\PMSTarget}{\mathrm{PositiveSourceMatterSemanticsTarget}_{v1}}
+\newcommand{\PMSProf}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\AdmPMS}{\mathrm{Adm}^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\Prof}{\mathsf{Prof}^{\mathrm{PMS}}_E}
+\newcommand{\Ready}{\mathsf{Ready}^{\mathrm{audit}}_E}
+\newcommand{\Cert}{\mathsf{Cert}^{\mathrm{noT}}_E}
+\newcommand{\lambdaProf}{\lambda^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\EqProf}{\equiv^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\SepProf}{\#^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\Pattern}{\mathsf{pattern}}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\RRE}{\mathrm{RR}_E}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\AuditVerdict}{\mathsf{source\_pure\_as\_written\_with\_profile\_guards\_pending\_stress}}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{guard}{Guard}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{PositiveMSProfile v1 Smuggling Audit}
+\author{Smuggling Auditor Packet RT-20260701-017}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Smuggling Auditor output for
+\texttt{RT-20260701-017}, implementing v13 P4-T03. It audits
+\[
+  \PMSProf
+\]
+from \texttt{RT-20260701-016}. The audit verdict is
+\[
+  \AuditVerdict.
+\]
+
+The verdict means only that the written candidate is source-pure under its
+declared profile, no-target certificate, source-transport, readiness, and
+fail-closed guards, pending Refuter stress. It does not adopt
+\(\PMSProf\). It does not adopt matter semantics, detector semantics, a
+source law, a coupling law, matter coupling, stress-energy semantics, a
+stress-energy tensor, a matter action, \(\MetricData(E)\), \(\geff\),
+Einstein equations, benchmark status, benchmark Gate Chair closure, a
+completed derivation, future source-extension impossibility, or global theory
+rejection.
+
+\begin{verbatim}
+audit_verdict: "source_pure_as_written_with_profile_guards_pending_stress"
+audited_object: "PositiveMSProfile_v1"
+source_law_adopted: false
+PositiveMSProfile_v1_adopted: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+stress_energy_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Audit Object}
+
+The audited candidate is the proposal-only profile
+\[
+  \PMSProf =
+  \bigl(\AdmPMS(E),\Prof,\Ready,\lambdaProf,\EqProf,\SepProf,\Cert\bigr).
+\]
+Its written scope is finite/local. Its admitted records contain source
+support, source pattern, source probe-token, source certificate, retained
+\(\RRE\) syntax, and explicit no-target certificate data. The maximum positive
+label \(\Pattern\) means only that a source profile has been constructed.
+\(\Ready=1\) means only that scoped evidence/precondition fields route the
+candidate to audit and stress; it is not adoption readiness in a physical
+matter theory.
+
+\section{Audit Criteria}
+
+The audit checks whether the candidate depends on any forbidden premise:
+\[
+\begin{array}{ll}
+\text{target geometry} &
+  \text{target topology, atlas, metric, Lorentzian signature, or proper time},\\
+\text{detector or empirical semantics} &
+  \text{detector protocol, measurement semantics, or empirical calibration},\\
+\text{target matter theory} &
+  \text{stress-energy semantics, stress-energy tensor, matter action},\\
+\text{target dynamics} &
+  \text{conservation law by GR/QFT import, variational principle, field equation},\\
+\text{metric bridge} &
+  \MetricData(E),\ \geff\ \text{adoption or scope expansion},\\
+\text{benchmark authority} &
+  \text{benchmark success, exact-GR fit, or Gate Chair closure as proof},\\
+\text{process authority} &
+  \text{registry, validator, role, handoff, approval, commit, generated derivative, cache}.
+\end{array}
+\]
+It also checks whether \(\Pattern\), \(\Ready\), \(\Cert\), \(\EqProf\),
+\(\SepProf\), or retained \(\RRE\) syntax is laundered into adoption or
+downstream physical authority.
+
+\section{Audit Findings}
+
+\begin{proposition}[No target-geometry import detected as written]
+As written, \(\PMSProf\) does not use target topology, target atlas, target
+metric, Lorentzian signature, proper time, \(\MetricData(E)\), \(\geff\)
+scope expansion, benchmark fit, or Einstein-equation premises.
+\end{proposition}
+
+\paragraph{Reason.}
+The candidate's primitive data are source support classes, source pattern
+classes, source probe-token classes, source certificate classes, retained
+\(\RRE\) syntax, and no-target certificates. The written fail-closed branch
+sends any detector, empirical, metric, stress-energy, matter-action,
+Einstein-equation, benchmark, or process-authority dependence to
+\(\Obstruction\).
+
+\begin{proposition}[\(\Pattern\) is a source-profile label only]
+The label \(\Pattern\) is not adopted matter semantics, not detector
+semantics, not source-law adoption, not coupling-law adoption, not matter
+coupling, not stress-energy semantics, not matter action, not
+\(\MetricData(E)\), not \(\geff\), not Einstein equations, not benchmark
+promotion, and not completed derivation.
+\end{proposition}
+
+\paragraph{Reason.}
+\(\lambdaProf\) has codomain
+\(\{\Bottom,\Pattern,\Obstruction\}\), plus the written audit-readiness guard
+for \(\Ready=0\). The label records only a constructed source profile over
+the declared finite/local subdomain. It has no physical detector, empirical,
+metric, action, field-equation, or benchmark codomain.
+
+\begin{proposition}[\(\Ready\) remains routing status]
+The readiness predicate \(\Ready\) uses scoped \(\MSBridge\) and \(\SMSAR\)
+fields only as audit-readiness context. It does not adopt either field as a
+source law, source-extension datum beyond exact scoped Gate Chair results,
+matter semantics, detector semantics, a coupling law, or matter coupling.
+\end{proposition}
+
+\paragraph{Reason.}
+Deleting the scoped \(\beta\) or \(\alpha\) fields sets \(\Ready=0\) while
+leaving \(\Prof\) intact. That behavior makes the fields routing
+preconditions, not label-defining physical semantics.
+
+\begin{proposition}[No \(\RRE\) collapse detected as written]
+As written, retained \(\RRE\) syntax is not detector response, empirical
+measurement semantics, stress-energy semantics, matter-action data, or
+coupling-law data. Distinct retained \(\RRE\) syntax cannot be identified
+unless an explicit source-side transport certificate is present.
+\end{proposition}
+
+\paragraph{Reason.}
+The definition of \(\SepProf\) treats retained \(\RRE\) nonidentification as
+a source-side separation witness. The fail-closed branch sends unlicensed
+\(\RRE\) identification to \(\Obstruction\). Therefore profile equivalence
+does not collapse retained \(\RRE\) records into detector or matter semantics
+as written.
+
+\begin{proposition}[No certificate overclaim detected as written]
+The no-target certificate bundle \(\Cert\) blocks forbidden imports. It does
+not positively construct detector semantics, stress-energy semantics,
+matter-action semantics, a conservation law, a coupling law, or matter
+coupling.
+\end{proposition}
+
+\paragraph{Reason.}
+\(\Cert\) is an admissibility and obstruction guard. Negative exclusion data
+cannot supply a positive matter-sector theory unless a separate source-side
+law is adopted through protected authority, which this packet does not do.
+
+\begin{proposition}[No process-authority laundering detected as written]
+\(\PMSProf\) does not use registry rows, generated wiki notes, semantic
+extracts, Obsidian cache state, validators, roles, handoffs, approvals,
+commits, file order, current-frontier rendering, dependency graphs, or local
+caches as mathematical or physical premises.
+\end{proposition}
+
+\paragraph{Reason.}
+Those surfaces are project-control and retrieval surfaces only. The candidate
+explicitly sends any dependence on generated-derivative, registry, validator,
+role, approval, commit, file-order, or cache authority to \(\Obstruction\).
+
+\section{Guarded Hazards}
+
+\begin{guard}[Profile overread]
+The source-purity verdict holds only while \(\Pattern\) remains a constructed
+source-profile label. Reading it as matter-semantics adoption invalidates the
+use and routes to \(\Obstruction\).
+\end{guard}
+
+\begin{guard}[Readiness overread]
+The source-purity verdict holds only while \(\Ready\) remains audit and stress
+routing status. Reading scoped bridge or readiness evidence as adopted source
+law, source-extension data beyond exact scoped Gate Chair results, or matter
+coupling invalidates the use and routes to \(\Obstruction\).
+\end{guard}
+
+\begin{guard}[Profile-equivalence overcollapse]
+The source-purity verdict holds only while \(\EqProf\) uses explicit
+source-side transport. If two profiles are identified by detector, empirical,
+metric, action, field-equation, benchmark, or process-authority language, the
+candidate fails closed.
+\end{guard}
+
+\section{Verdict}
+
+The audit verdict is
+\[
+  \AuditVerdict.
+\]
+This is a local source-purity classification for the written P4-T02 candidate.
+It authorizes only the next bounded P4-T04 Refuter stress packet. It does not
+authorize adoption, selector leap, Gate Chair review, matter-semantics work,
+detector-semantics work, coupling-law work, matter-coupling work,
+Einstein-equation work, benchmark promotion, or claim promotion.
+
+\section{Required Refuter Stress Targets}
+
+The next P4-T04 stress packet should test:
+\begin{enumerate}[leftmargin=*]
+  \item source relabeling stability of \(\Prof\), \(\lambdaProf\),
+  \(\EqProf\), and \(\SepProf\);
+  \item finite-variation behavior of source support, source pattern,
+  source probe-token, source certificate, and retained \(\RRE\) components;
+  \item certificate deletion and certificate weakening;
+  \item semantic-label deletion and \(\Ready=0\) branches;
+  \item degeneracy and profile nonuniqueness;
+  \item \(\RRE\) collapse pressure;
+  \item process-authority perturbations;
+  \item \(\geff\), \(\MetricData(E)\), detector-semantics, stress-energy,
+  matter-action, and benchmark import pressure;
+  \item adoption pressure from the words \(\Pattern\), \(\Ready\), source
+  profile, and source-pure audit pass.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior scoped response/localization context only. \\
+M\_src & Prior source-only context retained; no scope change. \\
+\(\MetricData(E)\) & Not adopted here. \\
+\(\geff\) & Prior scoped source-extension context only; scope is not changed. \\
+Matter coupling & \(\PMSProf\) passes source-purity audit as written pending P4-T04 Refuter stress; no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Stress targets named; no global robustness theorem. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & No new Gate Chair verdict; future adoption remains human-gated. \\
+Current route freeze or hard-fail status & Not frozen; P4-T04 Refuter stress is open. \\
+\bottomrule
+\end{longtable}
+
+\section{Forbidden Conclusions}
+
+\begin{enumerate}[leftmargin=*]
+  \item no canonical ontology edit or canonical-ontology candidate status;
+  \item no source-law adoption or \(\PMSProf\) adoption;
+  \item no \(\SMSAR\) adoption as law;
+  \item no source-extension data adoption beyond exact scoped Gate Chair results;
+  \item no matter-semantics adoption or detector-semantics adoption;
+  \item no coupling-law adoption, matter-coupling derivation, or matter-coupling adoption;
+  \item no stress-energy semantics or stress-energy tensor construction;
+  \item no matter action;
+  \item no \(\MetricData(E)\) adoption;
+  \item no \(\geff\) adoption or scope expansion;
+  \item no Einstein-equation derivation;
+  \item no exact-GR benchmark promotion or benchmark Gate Chair closure;
+  \item no completed derivation;
+  \item no future source-extension impossibility;
+  \item no global theory rejection.
+\end{enumerate}
+
+\begin{nonconclusion}[Audit pass is not adoption]
+The audit pass is not proof of GR recovery, matter semantics, detector
+semantics, coupling law, matter coupling, stress-energy semantics, matter
+action, Einstein equations, benchmark status, or completed derivation.
+\end{nonconclusion}
+
+\section{APA 7 References}
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{Positive source matter-semantics profile candidate v1}
+[Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{Positive source matter-semantics target v1}
+[Internal research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 1).
+\emph{Recommendations implementation plan continue task v13}
+[Internal implementation plan].
+
+\end{document}

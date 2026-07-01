@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-016` and `handoff-0425`.
+`RT-20260701-017` and `handoff-0426`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-016` |
-| Latest handoff ID | `handoff-0425` |
-| Current status | `v13_p4_t02_positive_source_matter_semantics_profile_candidate_constructed_pending_audit_no_adoption` |
-| Current route family | post v13 p4 t02 positive source matter semantics candidate to p4 t03 smuggling audit |
+| Active task ID | `RT-20260701-017` |
+| Latest handoff ID | `handoff-0426` |
+| Current status | `v13_p4_t03_positive_source_matter_semantics_profile_audited_pending_stress_no_adoption` |
+| Current route family | post v13 p4 t03 positive source matter semantics audit to p4 t04 refuter stress |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P4-T03 positive source-matter-semantics smuggling audit as bounded draft/control packet |
-| Next recommended action | Run one bounded v13 P4-T03 positive source-matter-semantics smuggling audit packet over PositiveMSProfile_v1. The audit must test hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before any Refuter stress selector Gate Chair or adoption route. |
+| Required next authority | v13 P4-T04 positive source-matter-semantics Refuter stress as bounded draft/control packet |
+| Next recommended action | Run one bounded v13 P4-T04 Refuter stress packet over PositiveMSProfile_v1. The stress must test source relabeling finite variation certificate deletion semantic-label deletion degeneracy RR_E pressure process-authority pressure g_eff and MetricData(E) import pressure detector-semantics pressure stress-energy pressure matter-action pressure and adoption pressure before selector Gate Chair matter-semantics detector-semantics coupling-law matter-coupling Einstein-equation benchmark or promotion routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-016/00_TASK.yaml`.
-- Active task objective: Construct or precisely obstruct a positive source-side matter-semantics candidate under PositiveSourceMatterSemanticsTarget_v1 while preserving all downstream claim blocks.
-- Latest handoff path: `research_control/handoffs/handoff-0425.yaml`.
-- Latest handoff summary: RT-20260701-016 completed v13 P4-T02 by constructing PositiveMSProfile_v1 as a proposal-only finite/local source-side matter-semantics profile candidate pending smuggling audit. The candidate defines a source subdomain profile map label map equivalence separation finite-variation behavior scoped-evidence deletion behavior and fail-closed branches. No matter semantics detector semantics coupling law matter coupling stress-energy semantics matter action MetricData(E) g_eff Einstein equations benchmark status or completed derivation was adopted.
-- Current route family: post v13 p4 t02 positive source matter semantics candidate to p4 t03 smuggling audit.
-- Next recommended action: Run one bounded v13 P4-T03 positive source-matter-semantics smuggling audit packet over PositiveMSProfile_v1. The audit must test hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before any Refuter stress selector Gate Chair or adoption route.
+- Active task path: `research_control/tasks/RT-20260701-017/00_TASK.yaml`.
+- Active task objective: Audit PositiveMSProfile_v1 for hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before Refuter stress or any adoption route.
+- Latest handoff path: `research_control/handoffs/handoff-0426.yaml`.
+- Latest handoff summary: RT-20260701-017 completed v13 P4-T03 by auditing PositiveMSProfile_v1 and finding it source-pure as written with profile guards pending Refuter stress. No target geometry detector semantics empirical calibration stress-energy matter action conservation-law import coupling-law adoption MetricData(E) g_eff scope expansion benchmark authority process authority evidence-as-adoption overread or RR_E collapse was detected as written. No adoption or physics promotion occurred.
+- Current route family: post v13 p4 t03 positive source matter semantics audit to p4 t04 refuter stress.
+- Next recommended action: Run one bounded v13 P4-T04 Refuter stress packet over PositiveMSProfile_v1. The stress must test source relabeling finite variation certificate deletion semantic-label deletion degeneracy RR_E pressure process-authority pressure g_eff and MetricData(E) import pressure detector-semantics pressure stress-energy pressure matter-action pressure and adoption pressure before selector Gate Chair matter-semantics detector-semantics coupling-law matter-coupling Einstein-equation benchmark or promotion routes.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P4-T03 positive source-matter-semantics smuggling audit packet over PositiveMSProfile_v1. The audit must test hidden target imports evidence-as-adoption overread RR_E collapse profile overcollapse certificate misuse and process-authority smuggling before any Refuter stress selector Gate Chair or adoption route.
+Run one bounded v13 P4-T04 Refuter stress packet over PositiveMSProfile_v1. The stress must test source relabeling finite variation certificate deletion semantic-label deletion degeneracy RR_E pressure process-authority pressure g_eff and MetricData(E) import pressure detector-semantics pressure stress-energy pressure matter-action pressure and adoption pressure before selector Gate Chair matter-semantics detector-semantics coupling-law matter-coupling Einstein-equation benchmark or promotion routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-016`;
-- latest handoff: `handoff-0425`;
-- current status: `v13_p4_t02_positive_source_matter_semantics_profile_candidate_constructed_pending_audit_no_adoption`;
+- active task: `RT-20260701-017`;
+- latest handoff: `handoff-0426`;
+- current status: `v13_p4_t03_positive_source_matter_semantics_profile_audited_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0425.yaml`
-- `research_control/tasks/RT-20260701-016/00_TASK.yaml`
+- `research_control/handoffs/handoff-0426.yaml`
+- `research_control/tasks/RT-20260701-017/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0425*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0426*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
