@@ -97,5 +97,5 @@ GitHub-facing Markdown into scientific authority.
 
 Safe summary: AEther-Flow keeps ordinary GR as an exact operational benchmark
 while the substrate derivation remains open and claim-gated. Unsafe summary:
-the public page, the ontology note, or a generated derivative proves GR from
-AEther-flow.
+the public page, the ontology note, or a generated derivative supplies proof of
+GR from AEther-flow.

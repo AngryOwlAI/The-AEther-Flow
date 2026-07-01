@@ -27,7 +27,7 @@ output_surfaces:
 acceptance_criteria:
   - "Defines proposal, audit, refutation, stress test, completion, handoff, freeze, and human gate without changing role authority."
   - "Explains negative-result preservation as scientific discipline rather than project failure."
-  - "Separates scoped obstruction and freeze language from global theory rejection."
+  - "Separates scoped obstruction and freeze language from broad rejection of the theory."
   - "States that Gate Chair decisions are human-gated and not auto-executed by validators or documentation."
   - "Includes allowed and forbidden claim examples grounded in the claim boundary registry."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
@@ -45,4 +45,4 @@ migration_status: "reviewed"
 This Phase 2B page explains the project's claim-control machinery. It helps
 readers understand why failed or frozen routes are preserved, how claim
 promotion remains gated, and why local obstruction language must not be
-inflated into a global theory rejection.
+inflated into broad rejection of the theory.

@@ -318,7 +318,7 @@ benchmark closure, or completed derivation.
 - `physical_non_conclusions`:
   - Not a target manifold, smooth target atlas, or target metric.
   - Not `MetricData(E)`, `g_eff`, matter coupling, Einstein equations,
-    benchmark promotion, benchmark Gate Chair closure, or completed
+    benchmark promotion, protected benchmark closure, or completed
     derivation.
 - `allowed_reuse`:
   - Use as prerequisite context for bounded `effective_metric_g_eff` tasks.
@@ -365,7 +365,7 @@ benchmark closure, or completed derivation.
   - Not `MetricData(E)` adoption.
   - Not matter coupling, Einstein equations, benchmark promotion, benchmark
     closure, completed derivation, future source-extension impossibility, or
-    global theory rejection.
+    broad rejection of the theory.
 - `allowed_reuse`:
   - Use as scoped source-extension context for post-`g_eff` selectors.
 - `blocked_reuse`:
@@ -395,8 +395,8 @@ benchmark closure, or completed derivation.
   `research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex`.
 - `source_authority_type`: `registered_tex_artifact`
 - `assumptions`:
-  - Previously accepted scoped `M_src`, scoped `g_eff`, and scoped
-    stress-energy-interface evidence are preconditions only.
+  - Previously scoped `M_src`, scoped `g_eff`, and scoped
+    stress-energy-interface evidence remain preconditions only.
   - The codomain is pre-tensorial source matter-interface data, not an adopted
     stress-energy tensor.
 - `definitions_used`: `MatterCouplingBridgeTarget_v1`; `PTMI_E`;
@@ -639,7 +639,7 @@ benchmark closure, or completed derivation.
   obstruction classification.
 - `physical_non_conclusions`: No matter coupling, detector semantics,
   Einstein equations, benchmark promotion, completed derivation, future
-  source-extension impossibility, or global theory rejection.
+  source-extension impossibility, or broad rejection of the theory.
 - `allowed_reuse`: Use as a negative-control witness for claim-language and
   support-only formalization boundaries.
 - `blocked_reuse`: Do not globalize the finite witness beyond its scoped
@@ -692,7 +692,7 @@ benchmark closure, or completed derivation.
   - Not detector semantics, matter semantics, coupling law, matter coupling,
     stress-energy semantics, matter action, `MetricData(E)`, `g_eff`, Einstein
     equations, benchmark promotion, completed derivation, future
-    source-extension impossibility, or global theory rejection.
+    source-extension impossibility, or broad rejection of the theory.
 - `allowed_reuse`:
   - Use as scoped evidence/precondition in boundary wording.
   - Use as a source entry for v14 P2-T01 scoped-positive claim vocabulary.
@@ -890,7 +890,7 @@ benchmark closure, or completed derivation.
 
 - `frontier_item_id`: `gate_chair_benchmark_closure`
 - `frontier_item_class`: `gate_decision;missing_theorem`
-- `object_or_claim_name`: Benchmark Gate Chair closure human-gated status.
+- `object_or_claim_name`: Protected benchmark closure human-gated status.
 - `status_layer_summary`:
   - `control_status`: `human_gated`
   - `mathematical_status`: `protected_verdict_missing`
@@ -907,7 +907,7 @@ benchmark closure, or completed derivation.
     required.
 - `definitions_used`: Gate Chair status; protected verdict authority; benchmark
   closure.
-- `statement_or_decision`: Benchmark Gate Chair closure remains human-gated and
+- `statement_or_decision`: Protected benchmark closure remains human-gated and
   missing.
 - `mathematical_conclusion`: none_supplied; no benchmark closure verdict
   exists.
@@ -917,7 +917,7 @@ benchmark closure, or completed derivation.
   - No completed derivation.
 - `allowed_reuse`: Use as a protected-authority reminder.
 - `blocked_reuse`: Do not treat approvals for narrower scoped packets,
-  validation, or checkpoint commits as benchmark Gate Chair closure.
+  validation, or checkpoint commits as protected benchmark closure.
 - `dependency_items`: `benchmark_promotion`
 - `missing_theorem_or_primitive`: Protected benchmark Gate Chair review and
   verdict after upstream burdens are discharged.

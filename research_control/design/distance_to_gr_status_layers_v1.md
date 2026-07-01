@@ -202,7 +202,7 @@ the validator. The required validator behavior is:
 7. Rows with `promotion_status: human_gate_required` must point to protected
    authority evidence and must not imply the protected verdict already occurred.
 8. Rows with `frozen_negative_no_promotion` must distinguish local route freeze
-   from global theory rejection.
+   from broad rejection of the theory.
 9. `render_current_frontier.py` should display the layered fields for every row
    once the CSV migration lands, and should preserve the explicit
    matter-coupling boundary paragraph.

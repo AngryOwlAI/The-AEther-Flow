@@ -72,7 +72,7 @@ working-tree changes against the latest active or completed AgentJob.
 
 - Allowed: bootstrap/control-system implementation claims.
 - Allowed: open derivation status.
-- Forbidden: GR derived from ontology.
+- Forbidden: a derived-GR claim from ontology.
 - Forbidden: exact GR recovered from ontology.
 - Forbidden compatibility-only token: GR_DERIVED_FROM_ANTHOLOGY.
 - Human/gate required: ontology promotion, benchmark promotion, Gate Chair

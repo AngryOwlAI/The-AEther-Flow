@@ -18,8 +18,8 @@ review. It does not create physics proof authority.
 Support-only formalization has proof_authority=false. It is not proof authority, not canonical ontology adoption, not source-law adoption, not source-extension data adoption beyond exact scoped gate results, not MetricData(E) adoption, not g_eff adoption or scope expansion, not coupling-law adoption, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not detector semantics, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation.
 
 The lane also blocks canonical-ontology candidate status, protected evidence
-status changes, benchmark Gate Chair closure, future source-extension
-impossibility claims, and global theory rejection.
+status changes, protected benchmark closure, future source-extension
+impossibility claims, and broad rejection of the theory.
 
 ## Chosen Approach
 
@@ -142,10 +142,10 @@ Forbidden readings include:
 - stress-energy semantics, stress-energy tensor, detector semantics, or matter
   action;
 - Einstein equations;
-- benchmark promotion or benchmark Gate Chair closure;
+- benchmark promotion or protected benchmark closure;
 - completed derivation;
 - future source-extension impossibility;
-- global theory rejection.
+- broad rejection of the theory.
 
 ## Handoff
 

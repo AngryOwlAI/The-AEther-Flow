@@ -43,8 +43,9 @@ not a physics proof, not a ledger update, and not a claim-promotion record.
   payload rule, constructive preference, freeze criteria, source-extension
   category, and finite toy model target.
 - `registries/DISTANCE_TO_GR_LEDGER.csv` records live burden rows and current
-  statuses including accepted `Resp_lc`, draft/control `M_src`, not-started
-  downstream metric/coupling/equation burdens, human-gated benchmark
+  statuses including `Resp_lc` scoped source-extension selector data,
+  draft/control `M_src`, not-started downstream metric/coupling/equation
+  burdens, human-gated benchmark
   promotion, and locally frozen finite toy route status.
 - `research_control/design/frontier_theorem_inventory.md` is the canonical
   frontier inventory source for the current theorem-like, witness,

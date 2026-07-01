@@ -55,10 +55,10 @@ The results listed above must not be read as authorization for:
 - `g_eff` adoption or scope expansion;
 - Einstein-equation derivation;
 - exact-GR benchmark route or promotion;
-- benchmark Gate Chair closure;
+- protected benchmark closure;
 - completed derivation;
 - future source-extension impossibility;
-- global theory rejection.
+- broad rejection of the theory.
 
 ## Required Selector Classification
 

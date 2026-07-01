@@ -88,7 +88,7 @@ The working goal is not to assert that GR has already been derived. The working 
 
 The project’s ontology lane treats `Æther` as a proposed four-dimensional substrate and `Æther-flow` as the structured flow or relational organization from which relativistic behavior might be recovered. In the current repository state, this is a research ontology and an explanatory frame, not an established derivation of GR.
 
-The accepted benchmark boundary is conservative: observable-scale physics remains ordinary GR. The open burden is to show, without importing the target metric by hand, how effective Lorentzian geometry, causal structure, clock behavior, matter coupling, and invariance properties could arise from source-defined substrate data. Registered `.tex` sources and claim-boundary registries carry scientific authority; this README only summarizes that state for humans.
+The scoped benchmark boundary is conservative: observable-scale physics remains ordinary GR. The open burden is to show, without importing the target metric by hand, how effective Lorentzian geometry, causal structure, clock behavior, matter coupling, and invariance properties could arise from source-defined substrate data. Registered `.tex` sources and claim-boundary registries carry scientific authority; this README only summarizes that state for humans.
 
 <p align="left">
    Watch the Æther-Flow Ontology Video:</br>
@@ -121,7 +121,7 @@ not scientific promotion.
 
 The system deliberately separates several kinds of claims:
 
-- Physics claims about ontology, benchmark behavior, derivations, obstructions, and accepted or rejected candidates.
+- Physics claims about ontology, benchmark behavior, derivations, obstructions, and candidate status records.
 - AI-methodology claims about agent workflows, routing, memory, validation, and staged autonomy.
 - Tooling claims about scripts, generated artifacts, documentation, and registry consistency.
 - Human-facing explanations that help readers understand the project without changing authority.

@@ -252,7 +252,7 @@ HTML must cover:
   status;
 - a source path panel from README to TeX registry to claim boundaries;
 - a short "safe summary / unsafe summary" section; and
-- a visual distinction between public interpretation and accepted benchmark
+- a visual distinction between public interpretation and scoped benchmark
   material.
 
 Visual strategy: `layered_architecture`, `source_matrix`, or
@@ -393,7 +393,7 @@ GitHub-facing Markdown must cover:
 - negative-result preservation as scientific discipline, not project failure;
 - freeze criteria and scoped obstruction language;
 - Gate Chair as human-gated and not auto-executed;
-- difference between rejected draft/control packet and global theory rejection;
+- difference between rejected draft/control packet and broad rejection of the theory;
   and
 - examples of unsafe phrase inflation.
 

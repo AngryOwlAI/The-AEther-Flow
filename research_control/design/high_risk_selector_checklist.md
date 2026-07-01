@@ -42,10 +42,10 @@ move from source-side or scoped evidence into any of these protected claims:
 - matter-coupling derivation or adoption;
 - stress-energy semantics, stress-energy tensor, or matter action;
 - Einstein equations;
-- benchmark promotion or benchmark Gate Chair closure;
+- benchmark promotion or protected benchmark closure;
 - completed derivation;
 - future source-extension impossibility; or
-- global theory rejection.
+- broad rejection of the theory.
 
 ## Required Checklist
 
@@ -138,10 +138,10 @@ This checklist must not be read as:
 - matter-coupling derivation or adoption;
 - stress-energy semantics, stress-energy tensor, or matter action;
 - Einstein equations;
-- benchmark promotion or benchmark Gate Chair closure;
+- benchmark promotion or protected benchmark closure;
 - completed derivation;
 - future source-extension impossibility;
-- global theory rejection; or
+- broad rejection of the theory; or
 - proof authority created by registry rows, validators, generated artifacts,
   commits, roles, handoffs, or local caches.
 
