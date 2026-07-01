@@ -168,6 +168,48 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(parsed["status"], "FAIL")
         self.assertEqual(parsed["hard_fail_count"], 1)
 
+    def test_changed_gate_selects_only_claim_language_surfaces(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "README.md").write_text("Project overview.\n", encoding="utf-8")
+            (root / "scripts/project_control").mkdir(parents=True)
+            (root / "scripts/project_control/README.md").write_text(
+                "Tool documentation.\n",
+                encoding="utf-8",
+            )
+            (root / "research_control/handoffs").mkdir(parents=True)
+            (root / "research_control/program_state.yaml").write_text(
+                'latest_handoff_id: "handoff-9999"\n',
+                encoding="utf-8",
+            )
+            (root / "research_control/handoffs/handoff-9999.yaml").write_text(
+                'handoff_id: "handoff-9999"\n',
+                encoding="utf-8",
+            )
+
+            selected = self.linter.claim_language_gate_paths(
+                [
+                    "README.md",
+                    "scripts/project_control/README.md",
+                    "research_control/handoffs/handoff-9999.yaml",
+                ],
+                repo_root=root,
+            )
+
+        self.assertEqual(
+            selected,
+            ["README.md", "research_control/handoffs/handoff-9999.yaml"],
+        )
+
+    def test_changed_gate_public_overclaim_fails(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/public_overclaim.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("README.md", fixture_text)
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertGreaterEqual(report["hard_fail_count"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

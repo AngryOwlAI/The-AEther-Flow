@@ -7,6 +7,7 @@ import argparse
 import fnmatch
 import json
 import re
+import subprocess
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -389,6 +390,51 @@ def expand_default_paths(repo_root: Path) -> list[str]:
     return sorted(paths)
 
 
+def git_changed_paths(
+    repo_root: Path,
+    *,
+    base_ref: str = "HEAD",
+    staged_only: bool = False,
+) -> list[str]:
+    if staged_only:
+        diff_command = ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR", base_ref]
+    else:
+        diff_command = ["git", "diff", "--name-only", "--diff-filter=ACMR", base_ref]
+    diff = subprocess.run(
+        diff_command,
+        cwd=repo_root,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if diff.returncode != 0:
+        raise OSError(diff.stderr.strip() or "git diff failed")
+    paths = {line.strip() for line in diff.stdout.splitlines() if line.strip()}
+    if not staged_only:
+        untracked = subprocess.run(
+            ["git", "ls-files", "--others", "--exclude-standard"],
+            cwd=repo_root,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        if untracked.returncode != 0:
+            raise OSError(untracked.stderr.strip() or "git ls-files failed")
+        paths.update(line.strip() for line in untracked.stdout.splitlines() if line.strip())
+    return sorted(paths)
+
+
+def claim_language_gate_paths(paths: Iterable[str], *, repo_root: Path = REPO_ROOT) -> list[str]:
+    active_handoffs = latest_handoff_rel(repo_root)
+    selected: set[str] = set()
+    for raw_path in paths:
+        path = rel_path(raw_path, repo_root)
+        if path in active_handoffs or any(matches(path, pattern) for pattern in DEFAULT_SCAN_PATTERNS):
+            if (repo_root / path).is_file():
+                selected.add(path)
+    return sorted(selected)
+
+
 def read_paths(paths: Iterable[str], repo_root: Path) -> dict[str, str]:
     texts: dict[str, str] = {}
     for path_text in paths:
@@ -434,7 +480,11 @@ def validate_paths(
     repo_root = repo_root.resolve()
     taxonomy = load_taxonomy(taxonomy_path)
     reviewed_contexts = load_reviewed_contexts(reviewed_contexts_path)
-    selected_paths = [rel_path(path, repo_root) for path in paths] if paths else expand_default_paths(repo_root)
+    selected_paths = (
+        [rel_path(path, repo_root) for path in paths]
+        if paths is not None
+        else expand_default_paths(repo_root)
+    )
     texts = read_paths(selected_paths, repo_root)
     findings = scan_text_map(
         texts,
@@ -443,6 +493,27 @@ def validate_paths(
         active_handoffs=latest_handoff_rel(repo_root),
     )
     return report_dict(findings, scanned_paths=selected_paths)
+
+
+def validate_changed_paths(
+    *,
+    repo_root: Path = REPO_ROOT,
+    taxonomy_path: Path = DEFAULT_TAXONOMY_PATH,
+    reviewed_contexts_path: Path = DEFAULT_REVIEWED_CONTEXTS_PATH,
+    base_ref: str = "HEAD",
+    staged_only: bool = False,
+) -> dict[str, Any]:
+    repo_root = repo_root.resolve()
+    selected_paths = claim_language_gate_paths(
+        git_changed_paths(repo_root, base_ref=base_ref, staged_only=staged_only),
+        repo_root=repo_root,
+    )
+    return validate_paths(
+        repo_root=repo_root,
+        taxonomy_path=taxonomy_path,
+        reviewed_contexts_path=reviewed_contexts_path,
+        paths=selected_paths,
+    )
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
@@ -455,19 +526,42 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         default=DEFAULT_REVIEWED_CONTEXTS_PATH.as_posix(),
         help="Reviewed context allowlist YAML path.",
     )
+    parser.add_argument(
+        "--changed",
+        action="store_true",
+        help="Scan changed claim-language gate paths from git diff plus untracked files.",
+    )
+    parser.add_argument(
+        "--staged",
+        action="store_true",
+        help="Scan staged claim-language gate paths from git diff --cached.",
+    )
+    parser.add_argument("--base-ref", default="HEAD", help="Git base ref for --changed or --staged.")
     parser.add_argument("--paths", nargs="*", help="Explicit paths to scan instead of default surfaces.")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    if args.paths and (args.changed or args.staged):
+        print("--paths cannot be combined with --changed or --staged", file=sys.stderr)
+        return 2
     try:
-        report = validate_paths(
-            repo_root=Path(args.repo_root),
-            taxonomy_path=Path(args.taxonomy),
-            reviewed_contexts_path=Path(args.reviewed_contexts),
-            paths=args.paths,
-        )
+        if args.changed or args.staged:
+            report = validate_changed_paths(
+                repo_root=Path(args.repo_root),
+                taxonomy_path=Path(args.taxonomy),
+                reviewed_contexts_path=Path(args.reviewed_contexts),
+                base_ref=args.base_ref,
+                staged_only=args.staged,
+            )
+        else:
+            report = validate_paths(
+                repo_root=Path(args.repo_root),
+                taxonomy_path=Path(args.taxonomy),
+                reviewed_contexts_path=Path(args.reviewed_contexts),
+                paths=args.paths,
+            )
     except (FileNotFoundError, StrictYamlError, OSError, re.error) as exc:
         report = report_dict([], scanned_paths=args.paths or [], config_errors=[str(exc)])
 

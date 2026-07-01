@@ -33,6 +33,11 @@ from project_improvement_handoff_validation import (  # noqa: E402
     validate_project_improvement_handoffs as validate_project_improvement_handoff_records,
 )
 
+try:
+    import validate_claim_language as claim_language_linter  # noqa: E402
+except ImportError:  # pragma: no cover - reported as a validator error when needed
+    claim_language_linter = None  # type: ignore[assignment]
+
 RESOLVER_SNAPSHOT_REQUIRED_FIELDS = (
     "status",
     "boundary",
@@ -4056,6 +4061,33 @@ def scan_for_forbidden_claims(report: ValidationReport, claim_rows: list[dict[st
         _ = claim_rows
 
 
+def validate_changed_claim_language(report: ValidationReport, paths: Iterable[str]) -> None:
+    if claim_language_linter is None:
+        report.error("claim-language linter import failed: scripts/project_control/validate_claim_language.py")
+        return
+
+    selected_paths = claim_language_linter.claim_language_gate_paths(paths, repo_root=REPO_ROOT)
+    if not selected_paths:
+        return
+    try:
+        result = claim_language_linter.validate_paths(repo_root=REPO_ROOT, paths=selected_paths)
+    except (FileNotFoundError, StrictYamlError, OSError, re.error) as exc:
+        report.error(f"claim-language validation failed to run: {exc}")
+        return
+
+    for error in result.get("config_errors", []):
+        report.error(f"claim-language config error: {error}")
+    for finding in result.get("findings", []):
+        severity = str(finding.get("severity", ""))
+        if not severity.startswith("hard_fail_"):
+            continue
+        report.error(
+            f"{finding.get('path')}:{finding.get('line')}: claim-language hard failure "
+            f"{finding.get('class_id')} {finding.get('matched_text')!r} ({severity}); "
+            f"{finding.get('corrective_language')}"
+        )
+
+
 def changed_paths(base_ref: str, staged_only: bool) -> list[str]:
     if staged_only:
         diff_cmd = ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR", base_ref]
@@ -4246,6 +4278,7 @@ def validate_diff(
         if not any(_path_matches(changed, pattern) for pattern in allowed):
             report.error(f"{changed}: changed path is not allowed by {job['job_id']}")
     validate_markdown_authority_boundaries(report, job, paths, base_ref, staged_only)
+    validate_changed_claim_language(report, paths)
 
 
 def validate_all(

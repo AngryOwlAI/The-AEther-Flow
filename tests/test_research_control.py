@@ -466,10 +466,55 @@ class ResearchControlTests(unittest.TestCase):
         with mock.patch.object(
             self.validator,
             "changed_paths",
-            return_value=["research_control/tasks/RT-TEST/example.yaml"],
+                return_value=["research_control/tasks/RT-TEST/example.yaml"],
+            ):
+                self.validator.validate_diff(report, jobs, "HEAD", False)
+        self.assertEqual(report.errors, [])
+
+    def test_write_path_diff_runs_claim_language_gate_for_public_changes(self) -> None:
+        report = self.validator.ValidationReport()
+        jobs = {
+            "AJ-TEST": {
+                "job_id": "AJ-TEST",
+                "role_id": "validator-engineer",
+                "status": "completed",
+                "created_at": "2026-07-01T00:00:00Z",
+                "allowed_write_paths": "README.md",
+                "output_paths": "",
+            }
+        }
+        linter_report = {
+            "config_errors": [],
+            "findings": [
+                {
+                    "path": "README.md",
+                    "line": 1,
+                    "class_id": "einstein_equation_overclaim",
+                    "matched_text": "GR derived",
+                    "severity": "hard_fail_current_public",
+                    "corrective_language": "Use scoped non-promotional wording.",
+                }
+            ],
+        }
+        with mock.patch.object(
+            self.validator,
+            "changed_paths",
+            return_value=["README.md"],
+        ), mock.patch.object(
+            self.validator,
+            "validate_markdown_authority_boundaries",
+        ), mock.patch.object(
+            self.validator.claim_language_linter,
+            "claim_language_gate_paths",
+            return_value=["README.md"],
+        ), mock.patch.object(
+            self.validator.claim_language_linter,
+            "validate_paths",
+            return_value=linter_report,
         ):
             self.validator.validate_diff(report, jobs, "HEAD", False)
-        self.assertEqual(report.errors, [])
+
+        self.assertTrue(any("claim-language hard failure" in error for error in report.errors))
 
     def test_write_path_diff_accepts_bridge_referenced_sidecar_pair(self) -> None:
         report = self.validator.ValidationReport()
@@ -939,6 +984,17 @@ class ResearchControlTests(unittest.TestCase):
                 "wiki/tex/generated-note.md",
                 self.checkpoint.GLOBAL_SYNC_ALLOWLIST,
             )
+        )
+
+    def test_checkpoint_post_sync_validation_runs_claim_language_gate(self) -> None:
+        self.assertIn(
+            [
+                ".venv/bin/python",
+                "scripts/project_control/validate_claim_language.py",
+                "--json",
+                "--changed",
+            ],
+            self.checkpoint.post_sync_validation_commands(),
         )
 
     def test_checkpoint_stageable_paths_include_tracked_local_derivative(self) -> None:

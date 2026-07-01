@@ -11,7 +11,8 @@ machine.
   tracked state.
 - `resolve_latest_handoff.py` reads the latest handoff chain.
 - `validate_research_control.py` validates task records, registries, handoffs,
-  parent-child synthesis constraints, and diff allowlists.
+  parent-child synthesis constraints, diff allowlists, and changed
+  claim-language gate surfaces.
 - `report_physics_progress_metrics.py` reports separated operational
   validation metrics and scientific progress metrics from tracked completions
   and registries. Operational counts are workflow health only; scientific
@@ -21,6 +22,8 @@ machine.
   commits a bounded transaction. It conditionally accepts generated
   project-improvement sidecar YAML/Markdown pairs only when the active
   AgentJob already allows the changed source YAML that references the sidecar.
+  It also runs the claim-language linter in changed and staged gate modes
+  after generated surfaces are refreshed.
 - `strict_yaml.py` provides deterministic YAML parsing for control records.
 
 ## What Belongs Here
@@ -39,6 +42,7 @@ machine.
 ```zsh
 .venv/bin/python scripts/research_control/validate_research_control.py
 .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
+.venv/bin/python scripts/project_control/validate_claim_language.py --json --changed
 .venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format markdown
 .venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id <job_id>
 ```

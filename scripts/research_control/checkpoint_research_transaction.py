@@ -276,6 +276,35 @@ def block_report(
     }
 
 
+def post_sync_validation_commands() -> list[list[str]]:
+    return [
+        [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
+        [
+            ".venv/bin/python",
+            "scripts/project_control/validate_claim_language.py",
+            "--json",
+            "--changed",
+        ],
+        [
+            ".venv/bin/python",
+            "scripts/project_control/collect_project_improvement_signals.py",
+            "--validate-emitted",
+        ],
+        [".venv/bin/python", "scripts/project_control/validate_documentation_impact.py"],
+        [
+            ".venv/bin/python",
+            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+            "--validate-only",
+        ],
+        [".venv/bin/python", "scripts/research_control/validate_research_control.py"],
+        [
+            ".venv/bin/python",
+            "scripts/research_control/validate_research_control.py",
+            "--check-diff",
+        ],
+    ]
+
+
 def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[str, object]:
     job_row = select_job(job_id)
     job_contract = load_job_contract(job_row)
@@ -323,27 +352,7 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
         if bootstrap_after_pdf.returncode != 0:
             return block_report("post-PDF memory bootstrap failed", job_row, git_status_paths(), commands)
 
-    validation_commands = [
-        [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
-        [
-            ".venv/bin/python",
-            "scripts/project_control/collect_project_improvement_signals.py",
-            "--validate-emitted",
-        ],
-        [".venv/bin/python", "scripts/project_control/validate_documentation_impact.py"],
-        [
-            ".venv/bin/python",
-            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-            "--validate-only",
-        ],
-        [".venv/bin/python", "scripts/research_control/validate_research_control.py"],
-        [
-            ".venv/bin/python",
-            "scripts/research_control/validate_research_control.py",
-            "--check-diff",
-        ],
-    ]
-    for command in validation_commands:
+    for command in post_sync_validation_commands():
         result = run_command(command)
         commands.append(result)
         if result.returncode != 0:
@@ -412,6 +421,23 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     if staged_project_classifier.returncode != 0:
         run_command(["git", "restore", "--staged", "--", *paths_to_stage])
         return block_report("staged project-change classification failed", job_row, final_changes, commands)
+
+    staged_claim_language = run_command([
+        ".venv/bin/python",
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--staged",
+    ])
+    commands.append(staged_claim_language)
+    if staged_claim_language.returncode != 0:
+        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
+        return block_report(
+            "staged claim-language validation failed",
+            job_row,
+            final_changes,
+            commands,
+            suggested_repair_role="validator-engineer",
+        )
 
     staged_project_signals = run_command([
         ".venv/bin/python",

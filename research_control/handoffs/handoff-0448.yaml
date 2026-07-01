@@ -1,0 +1,53 @@
+handoff_id: "handoff-0448"
+created_at: "2026-07-01T21:01:58Z"
+task_id: "RT-20260701-039"
+decision_id: "DDR-20260701-039"
+job_id: "AJ-RT-20260701-039-001"
+completion_path: "research_control/tasks/RT-20260701-039/jobs/completions/AJC-AJ-RT-20260701-039-001.yaml"
+source_task_id: "RT-20260701-039"
+source_job_id: "AJ-RT-20260701-039-001"
+source_completion_id: "AJC-AJ-RT-20260701-039-001"
+status: "completed"
+summary: "RT-20260701-039 completed one bounded v14 P3-T03 claim-language linter validation integration packet. The linter now supports changed and staged gate modes, research-control diff validation runs the changed gate, and checkpoint validation runs changed and staged linter gates after generated surfaces are refreshed."
+next_action: "Run one bounded v14 P3-T04 claim-language remediation packet before public status propagation matter-coupling Einstein-equation benchmark or promotion work."
+required_next_packet:
+  role_id: "documentation-curator"
+  role_version: "2.0.0"
+  packet_count: 1
+  task_type: "v14_p3_t04_claim_language_remediation"
+  objective: "Remediate the recorded current/public hard-fail backlog from the claim-language linter without rewriting historical artifacts beyond allowed metadata clarification."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "research_control/tasks/RT-20260701-038/artifacts/p3_t02_linter_default_scan_receipt.md"
+    note: "Default scan recorded the hard-fail backlog that P3-T04 must remediate."
+  - path: "research_control/tasks/RT-20260701-039/artifacts/p3_t03_validation_integration_receipt.md"
+    note: "P3-T03 explains why the changed-surface gate is the current integration layer."
+validation_summary:
+  - validator: "claim_language_linter_changed_gate"
+    status: "PASS"
+  - validator: "research_control_diff_linter_integration"
+    status: "PASS"
+  - validator: "checkpoint_linter_integration"
+    status: "PASS"
+claim_boundary:
+  proof_authority: false
+  physics_promotion_authorized: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+project_improvement_signals: []
