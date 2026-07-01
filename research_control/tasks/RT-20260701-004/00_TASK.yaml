@@ -1,0 +1,58 @@
+task_id: "RT-20260701-004"
+task_type: "post_v13_p0_t02_live_baseline_reconciliation"
+status: "completed"
+created_at: "2026-07-01T04:42:11Z"
+updated_at: "2026-07-01T04:42:11Z"
+closed_at: "2026-07-01T04:42:11Z"
+parent_task_id: "RT-20260701-003"
+parent_handoff_id: "handoff-0412"
+decision_id: "DDR-20260701-004"
+job_id: "AJ-RT-20260701-004-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260701-004"
+requires_human_gate: false
+human_authorization_note: "The current user goal grants human authorization for human gates. This baseline reconciliation packet does not consume Gate Chair authority, adoption authority, benchmark authority, or physics claim-promotion authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v13"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T02"
+  plan_task_name: "Live baseline reconciliation"
+objective: "Determine the exact live baseline for v13 by comparing the plan's assumed post-RT-20260701-002 and post-handoff-0411 state against current program_state.yaml, handoff-0412, current_frontier.md, Distance-to-GR ledger, registries, and latest task state."
+closure_status: "post_v13_p0_t02_baseline_reconciliation_adapt_plan_no_physics_delta"
+baseline_reconciliation:
+  verdict: "v13_baseline_advanced_adapt_plan"
+  assumed_active_task: "RT-20260701-002"
+  assumed_latest_handoff: "handoff-0411"
+  live_active_task_before_packet: "RT-20260701-003"
+  live_latest_handoff_before_packet: "handoff-0412"
+  live_active_task_after_packet: "RT-20260701-004"
+  live_latest_handoff_after_packet: "handoff-0413"
+  immediate_control_next_action: "P0-T03 recommendation trace matrix"
+  deferred_scientific_route: "handoff-0411 Refuter stress of SourceMatterSemanticsAdoptionReadinessLaw_v1 after P0-T03 and P0-T04 if still current"
+claim_boundary:
+  allowed_scope: "Project-control baseline reconciliation for v13 P0-T02 only"
+  v13_plan_status: "implementation guidance only"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifact: "research_control/tasks/RT-20260701-004/artifacts/v13_baseline_reconciliation.md"
+next_recommended_action: "Run one bounded P0-T03 recommendation trace matrix control packet, then P0-T04 execution gate, before the deferred P2-T01 Refuter stress unless newer tracked state supersedes the handoff-0411 scientific route."
+notes: "This task implements only P0-T02. It does not execute P0-T03, P0-T04, P2-T01, any physics stress packet, any Gate Chair packet, or any downstream v13 phase."
+documentation_impact_id: "DI-RT-20260701-004-001"

@@ -1,0 +1,75 @@
+handoff_id: "handoff-0413"
+created_at: "2026-07-01T04:42:11Z"
+task_id: "RT-20260701-004"
+decision_id: "DDR-20260701-004"
+job_id: "AJ-RT-20260701-004-001"
+completion_path: "research_control/tasks/RT-20260701-004/jobs/completions/AJC-AJ-RT-20260701-004-001.yaml"
+source_task_id: "RT-20260701-004"
+source_job_id: "AJ-RT-20260701-004-001"
+source_completion_id: "AJC-AJ-RT-20260701-004-001"
+status: "completed"
+summary: "RT-20260701-004 completed v13 P0-T02 live baseline reconciliation. The v13 generation-time baseline assumed RT-20260701-002 and handoff-0411; live state had advanced intentionally to RT-20260701-003 and handoff-0412 through P0-T01 plan intake. Verdict: v13_baseline_advanced_adapt_plan. No physics claim changed."
+next_action: "Run one bounded P0-T03 recommendation trace matrix control packet before P0-T04 execution gate. Do not replay P0-T01, RT-20260701-002, or the SourceMatterSemanticsAdoptionReadinessLaw_v1 smuggling audit. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it."
+loop_risk_route: "post_v13_p0_t02_baseline_reconciliation_handoff_to_trace_matrix_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P0-T03 recommendation trace matrix"
+  deferred_scientific_authority: "handoff-0411 remains the scientific source for the later SourceMatterSemanticsAdoptionReadinessLaw_v1 Refuter stress after P0-T03 trace matrix and P0-T04 execution gate if still current."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  geff_adopted: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+blocked_claims:
+  - "baseline reconciliation as physics proof"
+  - "baseline reconciliation as source-law adoption"
+  - "baseline reconciliation as Gate Chair verdict"
+  - "baseline reconciliation as matter coupling"
+  - "baseline reconciliation as Einstein-equation evidence"
+  - "baseline reconciliation as benchmark promotion"
+  - "baseline reconciliation as completed derivation"
+  - "P0-T02 as execution of all v13 phases"
+baseline_reconciliation:
+  plan_id: "recommendations_implementation_plan_continue_task-v13"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+  artifact: "research_control/tasks/RT-20260701-004/artifacts/v13_baseline_reconciliation.md"
+  verdict: "v13_baseline_advanced_adapt_plan"
+  assumed_active_task: "RT-20260701-002"
+  assumed_latest_handoff: "handoff-0411"
+  live_active_task_before_packet: "RT-20260701-003"
+  live_latest_handoff_before_packet: "handoff-0412"
+  adaptation_required: true
+  completed_without_replay:
+    - "P0-T01"
+    - "RT-20260701-002 SourceMatterSemanticsAdoptionReadinessLaw_v1 smuggling audit"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted"
+  meaning: "RT-20260701-004 changes no Distance-to-GR ledger row. It records project-control baseline reconciliation only and does not change matter coupling, g_eff, MetricData(E), Einstein equations, benchmark promotion, or completed derivation status."
+validation:
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

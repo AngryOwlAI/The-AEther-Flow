@@ -1,0 +1,144 @@
+completion_id: "AJC-AJ-RT-20260701-004-001"
+job_id: "AJ-RT-20260701-004-001"
+task_id: "RT-20260701-004"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-01T04:42:11Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v13"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+  related_plan_task_id: "P0-T02"
+  plan_phase_id: "P0"
+  implemented_task_scope: "Ran one bounded Project-Control Maintainer packet for v13 live baseline reconciliation, producing verdict v13_baseline_advanced_adapt_plan and handoff to P0-T03."
+  downstream_tasks_not_implemented:
+    - "P0-T03 recommendation trace matrix"
+    - "P0-T04 execution gate"
+    - "P2-T01 SourceMatterSemanticsAdoptionReadinessLaw_v1 Refuter stress"
+    - "any v13 physics, tooling, public-status, formalization, red-team, literature, or final-audit phase beyond P0-T02"
+  all_applicable_plan_tasks_proven: false
+project_system_scope: "project_control_baseline_reconciliation"
+physics_promotion_authorized: false
+scientific_claims_changed: false
+documentation_impact:
+  status: "no_update_required"
+  receipt_path: "research_control/tasks/RT-20260701-004/documentation_impact.yaml"
+changed_files:
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260701-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260701-004/DDR-20260701-004.md"
+  - "research_control/tasks/RT-20260701-004/artifacts/v13_baseline_reconciliation.md"
+  - "research_control/tasks/RT-20260701-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260701-004/jobs/AJ-RT-20260701-004-001.yaml"
+  - "research_control/tasks/RT-20260701-004/jobs/completions/AJC-AJ-RT-20260701-004-001.yaml"
+  - "research_control/tasks/RT-20260701-004/roles/project-control-maintainer@0.2.0--RT-20260701-004.yaml"
+  - "research_control/handoffs/handoff-0413.yaml"
+  - "research_control/handoffs/handoff-0413.md"
+output_paths:
+  - "research_control/tasks/RT-20260701-004/artifacts/v13_baseline_reconciliation.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260701-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260701-004/DDR-20260701-004.md"
+  - "research_control/tasks/RT-20260701-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260701-004/jobs/AJ-RT-20260701-004-001.yaml"
+  - "research_control/tasks/RT-20260701-004/jobs/completions/AJC-AJ-RT-20260701-004-001.yaml"
+  - "research_control/tasks/RT-20260701-004/roles/project-control-maintainer@0.2.0--RT-20260701-004.yaml"
+  - "research_control/handoffs/handoff-0413.yaml"
+  - "research_control/handoffs/handoff-0413.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=513 relationship_row_count=2736 semantic_row_count=513 vault_row_count=513"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"baseline reconciliation\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v13.md --json | exit_code=0 | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260701-003 latest_handoff=handoff-0412 boundary=director_decision_required"
+validation_status: "PASS"
+tests_added_or_updated: []
+verdict: "v13_baseline_advanced_adapt_plan"
+coherent_resolution_summary: "RT-20260701-004 reconciled the v13 generation-time baseline against live tracked state. The repository advanced intentionally from RT-20260701-002/handoff-0411 to RT-20260701-003/handoff-0412 through P0-T01 plan intake. Later phases must adapt by treating P0-T01 and P0-T02 as complete, not replaying the RT-20260701-002 smuggling audit, preserving handoff-0411 as deferred scientific Refuter-stress authority, and routing next to P0-T03."
+next_recommendation: "Run one bounded P0-T03 recommendation trace matrix control packet before P0-T04 execution gate and before the deferred P2-T01 Refuter stress."
+baseline_reconciliation:
+  artifact_path: "research_control/tasks/RT-20260701-004/artifacts/v13_baseline_reconciliation.md"
+  verdict: "v13_baseline_advanced_adapt_plan"
+  assumed_state:
+    active_task: "RT-20260701-002"
+    latest_handoff: "handoff-0411"
+    current_route_family: "v12_p7_t03_source_matter_semantics_adoption_readiness_law_audit_routes_to_stress_no_promotion"
+    active_milestone: "matter_coupling"
+    immediate_scientific_route: "bounded refuter@0.2.0 stress packet"
+  live_state_before_packet:
+    active_task: "RT-20260701-003"
+    latest_handoff: "handoff-0412"
+    current_status: "post_v13_p0_t01_plan_intake_registered_v13_no_physics_claim_change"
+    immediate_control_route: "P0-T02 live baseline reconciliation"
+  live_state_after_packet:
+    active_task: "RT-20260701-004"
+    latest_handoff: "handoff-0413"
+    current_status: "post_v13_p0_t02_baseline_reconciliation_adapt_plan_no_physics_delta"
+    immediate_control_route: "P0-T03 recommendation trace matrix"
+  adaptation_required: true
+  adaptation_summary:
+    - "Do not replay P0-T01."
+    - "Do not replay RT-20260701-002 or the SourceMatterSemanticsAdoptionReadinessLaw_v1 smuggling audit."
+    - "Preserve handoff-0411 as deferred scientific Refuter-stress authority."
+    - "Run P0-T03 and P0-T04 before selecting P1/P2 ordering."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P0-T02 v13 live baseline reconciliation only."
+  summary: "RT-20260701-004 compares control-state assumptions and preserves all downstream claim gates."
+  forbidden_conclusions:
+    - "baseline reconciliation as physics proof"
+    - "baseline reconciliation as source-law adoption"
+    - "baseline reconciliation as source-extension data adoption"
+    - "baseline reconciliation as Gate Chair verdict"
+    - "baseline reconciliation as matter coupling"
+    - "baseline reconciliation as Einstein-equation evidence"
+    - "baseline reconciliation as benchmark promotion"
+    - "baseline reconciliation as completed derivation"
+    - "P0-T02 as execution of all v13 phases"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 513
+  authority_note: "Obsidian notes .local caches semantic extracts SQLite retrieval indexes and generated wiki notes are retrieval aids only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"baseline reconciliation\" --limit 10 --json"
+      query_type: "search"
+      query_text: "baseline reconciliation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v13.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "dea4cbb0808ea1f3a4830790eb2bc7a6332a562c80ec0027a4d2a629a23f60f2"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+      source_hash: "f536b97164ea9f41b5ba75319e44dfc7096c50acb98c03786aa98a83fafba3cf"
+project_improvement_signals: []
+rollback_or_repair_notes: "If validation rejects the P0-T02 control scope, supersede or revert only RT-20260701-004 records and handoff-0413; do not alter prior v12/v13 science tasks."

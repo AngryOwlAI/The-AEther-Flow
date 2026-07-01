@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T04:25:00Z`
-- Source fingerprint: `8f8afc097165cc0cbf0eb1801c98041f2cc4f9c453715cc6b9d5af804f6ec846`
-- Nodes: `9066`
-- Edges: `38469`
+- Generated from tracked state as of: `2026-07-01T04:42:11Z`
+- Source fingerprint: `543dceb1a916966b43b99631fd1270fa91ee0f6147698f2cdc368a7c73c12608`
+- Nodes: `9092`
+- Edges: `38532`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 548 |
+| `completion_yaml` | 549 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 412 |
+| `handoff_yaml` | 413 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 548 |
+| `agent_job` | `support_only` | 549 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4570 |
-| `blocked_burden` | `blocked` | 1045 |
-| `claim_boundary` | `support_only` | 549 |
+| `artifact` | `support_only` | 4580 |
+| `blocked_burden` | `blocked` | 1057 |
+| `claim_boundary` | `support_only` | 550 |
 | `draft_control_candidate` | `draft_control` | 432 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 91 |
 | `gate_chair_verdict` | `human_gated` | 27 |
-| `handoff` | `support_only` | 412 |
+| `handoff` | `support_only` | 413 |
 | `human_gated_object` | `human_gated` | 261 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 239 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 497 |
+| `task` | `support_only` | 498 |
 
 ## Frontier Table
 
@@ -131,6 +131,16 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_benchmark_promotion` | Blocked claim: baseline reconciliation as benchmark promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_claim_promotion` | Blocked claim: baseline reconciliation as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_completed_derivation` | Blocked claim: baseline reconciliation as completed derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_einstein_equation_evidence` | Blocked claim: baseline reconciliation as Einstein-equation evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_gate_chair_verdict` | Blocked claim: baseline reconciliation as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_matter_coupling` | Blocked claim: baseline reconciliation as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_overriding_scientific_source_authority` | Blocked claim: baseline reconciliation as overriding scientific source authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_physics_proof` | Blocked claim: baseline reconciliation as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_source_extension_data_adoption` | Blocked claim: baseline reconciliation as source-extension data adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_reconciliation_as_source_law_adoption` | Blocked claim: baseline reconciliation as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_summary_as_physics_evidence` | Blocked claim: baseline summary as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -150,22 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:bridge_candidate_as_einstein_equations` | Blocked claim: bridge candidate as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_as_matter_action` | Blocked claim: bridge candidate as matter action | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bridge_candidate_as_matter_coupling` | Blocked claim: bridge candidate as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_as_matter_semantics_adoption` | Blocked claim: bridge candidate as matter semantics adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_as_source_law_adoption` | Blocked claim: bridge candidate as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_as_stress_energy_semantics` | Blocked claim: bridge candidate as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_evidence_acceptance` | Blocked claim: bridge-candidate evidence acceptance | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_criteria_as_bridge_construction` | Blocked claim: bridge criteria as bridge construction | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_template_creation` | Blocked claim: bridge template creation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridgecert_as_stress_energy` | Blocked claim: BridgeCert as stress energy | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridgeslot_n_as_stress_energy_tensor` | Blocked claim: BridgeSlot_n as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridgeslot_n_as_target_geometry` | Blocked claim: BridgeSlot_n as target geometry | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridgetok_as_stress_energy` | Blocked claim: BridgeTok as stress energy | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260701-003`
-- Latest handoff: `handoff-0412`
-- Handoff path: `research_control/handoffs/handoff-0412.yaml`
-- Next action: Run one bounded P0-T02 live baseline reconciliation control packet to compare v13 assumptions against program_state.yaml, handoff-0412, current_frontier.md, DISTANCE_TO_GR_LEDGER.csv, registries, and latest task state before P0-T03, P0-T04, P2-T01 Refuter stress, or any downstream v13 task.
+- Active task: `RT-20260701-004`
+- Latest handoff: `handoff-0413`
+- Handoff path: `research_control/handoffs/handoff-0413.yaml`
+- Next action: Run one bounded P0-T03 recommendation trace matrix control packet before P0-T04 execution gate. Do not replay P0-T01, RT-20260701-002, or the SourceMatterSemanticsAdoptionReadinessLaw_v1 smuggling audit. Preserve handoff-0411 as deferred scientific Refuter-stress authority unless newer tracked state supersedes it.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
