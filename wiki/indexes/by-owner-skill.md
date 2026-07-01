@@ -648,6 +648,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V13-P4-T02-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-CANDIDATE` `wiki/tex/tex-v13-p4-t02-positive-source-matter-semantics-profile-candidate.md`
 - `WIKI-TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `wiki/tex/tex-v13-p4-t03-positive-source-matter-semantics-profile-smuggling-audit.md`
 - `WIKI-TEX-V13-P4-T04-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-REFUTER-STRESS` `wiki/tex/tex-v13-p4-t04-positive-source-matter-semantics-profile-refuter-stress.md`
+- `WIKI-TEX-V13-P5-T01-RR-E-THEOREM-TARGET-FORMALIZER` `wiki/tex/tex-v13-p5-t01-rr-e-theorem-target-formalizer.md`
 
 ## obsidian-wiki
 
@@ -1080,6 +1081,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P4-T02-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-CANDIDATE` `research_control/tasks/RT-20260701-016/artifacts/positive_source_matter_semantics_profile_candidate_v1.tex`
 - `TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-017/artifacts/positive_source_matter_semantics_profile_smuggling_audit_v1.tex`
 - `TEX-V13-P4-T04-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-REFUTER-STRESS` `research_control/tasks/RT-20260701-018/artifacts/positive_source_matter_semantics_profile_refuter_stress_v1.tex`
+- `TEX-V13-P5-T01-RR-E-THEOREM-TARGET-FORMALIZER` `research_control/tasks/RT-20260701-022/artifacts/rr_e_theorem_target_formalizer_v1.tex`
 
 ## user-modified-project
 

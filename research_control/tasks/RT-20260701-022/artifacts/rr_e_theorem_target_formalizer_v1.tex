@@ -1,0 +1,353 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\Bcur}{B_{\mathrm{current}}}
+\newcommand{\MSBridge}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\PMSTarget}{\mathrm{PositiveSourceMatterSemanticsTarget}_{v1}}
+\newcommand{\PMSProf}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\AdmSrc}{\mathrm{Adm}^{\mathrm{MS}}_{\mathrm{src}}}
+\newcommand{\AdmPMS}{\mathrm{Adm}^{\mathrm{PMS}}_{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_E}
+\newcommand{\RRTarget}{\mathrm{RR}_{E}\mathrm{TheoremTarget}_{v1}}
+\newcommand{\Qsrc}{Q^{\RRE}_{\mathrm{src}}}
+\newcommand{\EqRR}{\equiv^{\RRE}_{\mathrm{src}}}
+\newcommand{\SepRR}{\#^{\RRE}_{\mathrm{src}}}
+\newcommand{\IrrRR}{\mathrm{Irr}^{\RRE}_{\mathrm{src}}}
+\newcommand{\TrRR}{\mathrm{Tr}^{\RRE}_{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Obstruction}{\mathsf{obstruction}}
+\newcommand{\RRUnder}{\mathsf{RR\_E\_underdetermination\_obstruction}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{condition}{Condition}
+\newtheorem{target}{Theorem target}
+\newtheorem{example}{Finite/local example}
+\newtheorem{failure}{Fail-closed branch}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{RR\_E Theorem Target Formalizer v1}
+\author{Ontology Formalizer Packet RT-20260701-022}
+\date{2026-07-01}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact records the fused Ontology Formalizer output for
+\texttt{RT-20260701-022}, implementing v13 P5-T01. It defines
+\[
+  \RRTarget
+\]
+as a \emph{proposal-only} and \emph{draft/control} source-side theorem target.
+The artifact answers what an \(\RRE\) record is, what it means to preserve
+\(\RRE\) separation, what source-side irrelevance would require, which
+assumptions are allowed, which assumptions would smuggle detector semantics,
+which finite/local examples separate preservation from irrelevance, and what
+fail-closed obstruction applies if irrelevance is underdetermined.
+
+This packet does not prove a general \(\RRE\) irrelevance theorem. It does not
+edit canonical ontology TeX. It does not create or adopt a source law. It does
+not adopt \(\PMSProf\). It does not adopt \(\SMSAR\) as law. It does not adopt
+source-extension data beyond exact scoped Gate Chair results. It does not
+adopt \(\MetricData(E)\), change \(\geff\), adopt a coupling law, adopt matter
+semantics, adopt detector semantics, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, derive Einstein equations, promote benchmark status, issue benchmark
+closure, claim completed derivation, claim future source-extension
+impossibility, or reject the global theory.
+
+\begin{verbatim}
+candidate_status: "proposal-only"
+packet_payload_mode: "rr_e_theorem_target"
+RR_E_irrelevance_theorem_proved: false
+source_law_adopted: false
+PositiveMSProfile_v1_adopted: false
+SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+stress_energy_tensor_constructed: false
+matter_action_imported: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+\end{verbatim}
+
+\section{Question}
+
+The narrow P5-T01 question is:
+\[
+\text{What source-side theorem target decides whether distinct \(\RRE\)
+records may be identified}
+\]
+\[
+\text{without importing detector semantics or target physics?}
+\]
+
+Under current authority, the answer can only be a theorem-target grammar,
+proof-obligation surface, finite/local example family, and fail-closed
+obstruction label. The theorem attempt or obstruction belongs to P5-T02.
+
+\section{Explicitly Excluded Imports}
+
+The theorem target forbids the following as mathematical premises:
+\begin{itemize}[leftmargin=*]
+  \item detector protocols, measurement outcomes, empirical calibration, and
+  detector distinguishability;
+  \item stress-energy semantics, stress-energy tensor, matter action,
+  variational principle, and conservation law by imported theory;
+  \item target metric, Lorentzian signature, target topology, target atlas,
+  target coordinate transition, proper time, and target-geometric
+  equivalence;
+  \item \(\MetricData(E)\), \(\geff\) scope expansion, Einstein equations,
+  benchmark fit, benchmark recovery, and process authority;
+  \item registry metadata, validator status, handoff status, approval state,
+  role identity, commit state, generated derivatives, and local cache state as
+  mathematical evidence.
+\end{itemize}
+
+\section{Source-Side RR\_E Records}
+
+\begin{definition}[Source-side \(\RRE\) record]
+Let \(r\in\AdmSrc(E)\) be an admissible finite/local source record already
+available to the P4 source-profile lane. Its retained \(\RRE\) component is a
+source syntax class
+\[
+  \Qsrc(r).
+\]
+\(\Qsrc(r)\) is a record of retained source readout-response syntax. It is not
+a detector protocol, not a measurement event, not an empirical calibration,
+not stress-energy data, not a matter action, not \(\MetricData(E)\), not
+\(\geff\), and not benchmark evidence.
+\end{definition}
+
+\begin{definition}[RR\_E transport certificate]
+A source transport certificate
+\[
+  \TrRR(r,r')
+\]
+is a named source-side datum proving that the retained syntax classes
+\(\Qsrc(r)\) and \(\Qsrc(r')\) may be identified inside the declared source
+formalism. It cannot be supplied by detector semantics, target geometry,
+benchmark status, process authority, or generated derivatives.
+\end{definition}
+
+\begin{definition}[RR\_E separation]
+For \(r,r'\in\AdmSrc(E)\), write \(r\SepRR r'\) when
+\[
+  \Qsrc(r)\ne \Qsrc(r')
+\]
+and no source transport certificate \(\TrRR(r,r')\) is available. Separation
+is a source-side nonidentification condition. It is not detector
+distinguishability and not empirical calibration.
+\end{definition}
+
+\begin{definition}[RR\_E source equivalence]
+For \(r,r'\in\AdmSrc(E)\), write \(r\EqRR r'\) only when a source transport
+certificate or a source-only equivalence proof identifies their retained
+\(\RRE\) syntax classes. Any proposed equivalence that depends on a forbidden
+import returns \(\Obstruction\).
+\end{definition}
+
+\section{Separation Preservation And Irrelevance}
+
+\begin{target}[RR\_E separation preservation]
+For admissible records \(r,r'\), if \(r\SepRR r'\), then any later
+candidate, quotient, or theorem attempt that identifies \(r\) and \(r'\) must
+exhibit a source-only \(\EqRR\) proof. Without that proof, identification
+returns \(\RRUnder\).
+\end{target}
+
+\begin{target}[RR\_E source-side irrelevance]
+Let \(F\) be a future source-side object under test, such as a profile label,
+candidate relation, or obstruction predicate. Source-side \(\RRE\)
+irrelevance for \(F\) means:
+\[
+  r \sim_{\mathrm{src}} r'
+  \ \text{outside the retained \(\RRE\) component}
+  \quad \Longrightarrow \quad
+  F(r)=F(r')
+\]
+for every admitted finite/local \(\RRE\) variation or quotient, with the proof
+using only source-side definitions, source certificates, and source
+transports. The statement is a theorem target, not a theorem proved here.
+\end{target}
+
+\begin{condition}[Allowed assumptions]
+P5-T02 may use the following assumptions when attempting the theorem or
+obstruction:
+\begin{enumerate}[label=A\arabic*.,leftmargin=*]
+  \item finite/local source records \(r\in\AdmSrc(E)\) or
+  \(r\in\AdmPMS(E)\);
+  \item source support syntax, source probe-token syntax, source certificate
+  data, retained \(\RRE\) syntax, and no-target certificates;
+  \item explicit source transports and finite source variations;
+  \item scoped \(\MSBridge\), \(\SMSAR\), and \(\PMSProf\) evidence only as
+  source-extension evidence/precondition context, never as adoption;
+  \item prior P4 stress result that \(\RRE\) collapse without source transport
+  fails closed.
+\end{enumerate}
+\end{condition}
+
+\begin{condition}[Forbidden assumptions]
+P5-T02 may not use detector protocol, empirical calibration, target geometry,
+target metric, stress-energy object, matter action, imported conservation law,
+\(\MetricData(E)\), \(\geff\) expansion, Einstein equations, benchmark fit,
+generated derivative, registry row, validator result, handoff wording, role
+identity, approval state, commit state, file order, or local cache state as a
+premise of \(\EqRR\), \(\SepRR\), or \(\IrrRR\).
+\end{condition}
+
+\section{Finite/Local Examples}
+
+\begin{example}[Separation without irrelevance]
+Let \(r_0,r_1\in\AdmPMS(E)\) agree on all source components except
+\[
+  \Qsrc(r_0)=Q_0,\qquad \Qsrc(r_1)=Q_1,\qquad Q_0\ne Q_1,
+\]
+and suppose no \(\TrRR(r_0,r_1)\) is supplied. Then \(r_0\SepRR r_1\). A
+future profile, label, or route predicate must preserve the distinction or
+return \(\RRUnder\). It may not identify \(r_0\) and \(r_1\) by saying that no
+detector could distinguish them.
+\end{example}
+
+\begin{example}[Equivalence by source transport]
+Let \(r_0,r_1\in\AdmPMS(E)\) again differ only in retained \(\RRE\) syntax,
+but suppose a named source transport certificate \(\tau\) proves
+\[
+  \tau(Q_0)=Q_1
+\]
+inside the declared source formalism. Then P5-T02 may attempt an \(\EqRR\)
+proof. The proof must remain source-only and must not appeal to detector
+responses or target physics.
+\end{example}
+
+\begin{example}[Irrelevance target]
+Let \(F\) be a future source-side label or obstruction predicate. The
+\(\RRE\)-irrelevance target for \(F\) requires proving
+\[
+  F(r_0)=F(r_1)
+\]
+for every admitted pair \(r_0,r_1\) related by \(\RRE\)-variation while all
+non-\(\RRE\) source components are held fixed or transported. Showing this for
+a single pair is only an example; the theorem target requires a specified
+domain and quantifier.
+\end{example}
+
+\begin{example}[Underdetermination obstruction]
+If neither a source transport certificate nor a source-only invariance proof
+is available, current ontology does not derive the identification rule needed
+for \(\RRE\) irrelevance. The correct result is
+\(\RRUnder\), not detector semantics and not an impossibility theorem.
+\end{example}
+
+\section{Fail-Closed Obstruction Family}
+
+\begin{failure}[RR\_E collapse without source proof]
+If a candidate identifies \(r,r'\) with \(r\SepRR r'\) and supplies no
+source-only \(\EqRR\) proof, the branch returns \(\RRUnder\).
+\end{failure}
+
+\begin{failure}[Detector-semantic import]
+If \(\EqRR\), \(\SepRR\), or \(\IrrRR\) depends on detector protocols,
+measurement semantics, empirical calibration, or detector distinguishability,
+the branch returns \(\Obstruction\).
+\end{failure}
+
+\begin{failure}[Target or downstream import]
+If \(\EqRR\), \(\SepRR\), or \(\IrrRR\) depends on target metric, target
+atlas, stress-energy semantics, stress-energy tensor, matter action,
+\(\MetricData(E)\), \(\geff\), Einstein equations, benchmark fit, or completed
+derivation status, the branch returns \(\Obstruction\).
+\end{failure}
+
+\begin{failure}[Process-authority import]
+If registry metadata, validator status, role identity, handoff wording,
+approval state, commit state, generated derivatives, file order, or local
+cache state is used as a premise of \(\EqRR\), \(\SepRR\), or \(\IrrRR\), the
+branch returns \(\Obstruction\).
+\end{failure}
+
+\section{Proof Obligations for P5-T02}
+
+P5-T02 must do at least one of the following:
+\begin{enumerate}[label=O\arabic*.,leftmargin=*]
+  \item prove a source-side \(\RRE\) irrelevance theorem on a declared
+  finite/local domain;
+  \item prove a source-side separation theorem showing nonidentification under
+  precise hypotheses;
+  \item construct a finite countermodel or witness where separation matters;
+  \item record a precise \(\RRUnder\) obstruction with the missing source-side
+  rule named explicitly;
+  \item recommend route freeze only if repeated-burden or scoped-obstruction
+  criteria are actually met.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Unchanged; local \(\RRE\) target only. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only context retained. \\
+\(g_{\mathrm{eff}}\) & Unchanged; no scope expansion. \\
+Matter coupling & \(\RRTarget\) formalized as proposal-only theorem target;
+no matter coupling. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+Finite-variation robustness & Future P5-T02 obligation only. \\
+Benchmark promotion & Blocked; no benchmark promotion. \\
+Gate Chair status & Prior scoped evidence/precondition results retained; no
+new gate verdict. \\
+Current route freeze or hard-fail status & Not frozen; P5-T02 theorem attempt
+or obstruction selected. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}[No theorem proof]
+This artifact does not prove \(\RRE\) irrelevance or separation as a final
+theorem. It defines theorem targets and obstruction labels.
+\end{nonconclusion}
+
+\begin{nonconclusion}[No adoption or promotion]
+This artifact does not adopt source law, \(\PMSProf\), \(\SMSAR\) as law,
+matter semantics, detector semantics, coupling law, matter coupling,
+stress-energy semantics, matter action, \(\MetricData(E)\), \(\geff\),
+Einstein equations, benchmark status, or completed derivation.
+\end{nonconclusion}
+
+\section{APA 7 Source Notes}
+
+The AEther-Flow Research Project. (2026, July 1). \textit{PositiveSourceMatterSemanticsTarget
+v1} [Draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{Positive Source
+Matter-Semantics Profile Candidate v1} [Draft/control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \textit{PositiveMSProfile v1
+Refuter Stress} [Draft/control TeX artifact].
+
+\end{document}

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-021` and `handoff-0430`.
+`RT-20260701-022` and `handoff-0431`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-021` |
-| Latest handoff ID | `handoff-0430` |
-| Current status | `v13_p4_t06_boundary_audit_completed_no_status_delta_no_overread` |
-| Current route family | post v13 p4 t06 boundary audit no status delta route to rr e theorem target |
+| Active task ID | `RT-20260701-022` |
+| Latest handoff ID | `handoff-0431` |
+| Current status | `v13_p5_t01_rr_e_theorem_target_formalized_proposal_only_no_adoption` |
+| Current route family | post v13 p5 t01 rr e theorem target route to theorem attempt or obstruction |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P5-T01 RR_E theorem target formalizer packet |
-| Next recommended action | Run one bounded v13 P5-T01 RR_E theorem target formalizer packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route. |
+| Required next authority | v13 P5-T02 RR_E irrelevance theorem attempt or obstruction packet |
+| Next recommended action | Run one bounded v13 P5-T02 RR_E irrelevance theorem attempt or obstruction packet under candidate-constructor@0.2.0 before any smuggling audit, Refuter stress, selector, matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-021/00_TASK.yaml`.
-- Active task objective: Execute one bounded v13 P4-T06 boundary update/control audit after PositiveMSProfile_v1 scoped evidence/precondition acceptance. Prove that current frontier and ledger wording reflect the scoped PositiveMSProfile_v1 result, record no new Distance-to-GR status delta, and preserve all blocked downstream claims.
-- Latest handoff path: `research_control/handoffs/handoff-0430.yaml`.
-- Latest handoff summary: RT-20260701-021 completed v13 P4-T06 as a no-status-delta boundary audit. Current frontier already reflected scoped PositiveMSProfile_v1 evidence/precondition acceptance; the matter_coupling ledger row already recorded scoped evidence/precondition status and no downstream adoption; no stale post-P4 overread, obstruction registry update, Distance-to-GR status delta, ledger edit, or new physics claim was introduced.
-- Current route family: post v13 p4 t06 boundary audit no status delta route to rr e theorem target.
-- Next recommended action: Run one bounded v13 P5-T01 RR_E theorem target formalizer packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route.
+- Active task path: `research_control/tasks/RT-20260701-022/00_TASK.yaml`.
+- Active task objective: Execute one bounded v13 P5-T01 Ontology Formalizer packet to define a proposal-only RR_E theorem target, allowed assumptions, forbidden detector-semantic imports, finite/local examples, and fail-closed obstruction family before any matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route.
+- Latest handoff path: `research_control/handoffs/handoff-0431.yaml`.
+- Latest handoff summary: RT-20260701-022 completed v13 P5-T01 as a proposal-only RR_E theorem-target formalizer packet. It defined source-side RR_E records, separation preservation, source-side irrelevance obligations, allowed assumptions, forbidden detector-semantic and target imports, finite/local examples, and the fail-closed RR_E_underdetermination_obstruction label. No theorem proof adoption promotion or downstream GR claim occurred.
+- Current route family: post v13 p5 t01 rr e theorem target route to theorem attempt or obstruction.
+- Next recommended action: Run one bounded v13 P5-T02 RR_E irrelevance theorem attempt or obstruction packet under candidate-constructor@0.2.0 before any smuggling audit, Refuter stress, selector, matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P5-T01 RR_E theorem target formalizer packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route.
+Run one bounded v13 P5-T02 RR_E irrelevance theorem attempt or obstruction packet under candidate-constructor@0.2.0 before any smuggling audit, Refuter stress, selector, matter-semantics, detector-semantics, coupling-law, matter-coupling, stress-energy, matter-action, Einstein-equation, benchmark, or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,27 +143,27 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-021`;
-- latest handoff: `handoff-0430`;
-- current status: `v13_p4_t06_boundary_audit_completed_no_status_delta_no_overread`;
+- active task: `RT-20260701-022`;
+- latest handoff: `handoff-0431`;
+- current status: `v13_p5_t01_rr_e_theorem_target_formalized_proposal_only_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0430.yaml`
-- `research_control/tasks/RT-20260701-021/00_TASK.yaml`
+- `research_control/handoffs/handoff-0431.yaml`
+- `research_control/tasks/RT-20260701-022/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0430*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0431*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

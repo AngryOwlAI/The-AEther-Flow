@@ -311,6 +311,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P4-T02-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-CANDIDATE` `research_control/tasks/RT-20260701-016/artifacts/positive_source_matter_semantics_profile_candidate_v1.tex`
 - `TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-017/artifacts/positive_source_matter_semantics_profile_smuggling_audit_v1.tex`
 - `TEX-V13-P4-T04-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-REFUTER-STRESS` `research_control/tasks/RT-20260701-018/artifacts/positive_source_matter_semantics_profile_refuter_stress_v1.tex`
+- `TEX-V13-P5-T01-RR-E-THEOREM-TARGET-FORMALIZER` `research_control/tasks/RT-20260701-022/artifacts/rr_e_theorem_target_formalizer_v1.tex`
 
 ## superseded
 
