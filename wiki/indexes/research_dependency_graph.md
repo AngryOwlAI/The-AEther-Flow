@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T18:16:34Z`
-- Source fingerprint: `e6500f18da9545492db16455ff1ce6760da61f68eeb9e304af44229074764783`
-- Nodes: `9775`
-- Edges: `41539`
+- Generated from tracked state as of: `2026-07-01T18:39:49Z`
+- Source fingerprint: `1b8282efc58a6dc77c266b3c4e53cc5c4f78ae8baff062eae7d7dd528066dd76`
+- Nodes: `9798`
+- Edges: `41637`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 577 |
+| `completion_yaml` | 578 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 441 |
+| `handoff_yaml` | 442 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 577 |
+| `agent_job` | `support_only` | 578 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4972 |
-| `blocked_burden` | `blocked` | 1165 |
-| `claim_boundary` | `support_only` | 578 |
+| `artifact` | `support_only` | 4988 |
+| `blocked_burden` | `blocked` | 1168 |
+| `claim_boundary` | `support_only` | 579 |
 | `draft_control_candidate` | `draft_control` | 463 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 38 |
 | `frozen_negative` | `frozen_negative` | 96 |
 | `gate_chair_verdict` | `human_gated` | 30 |
-| `handoff` | `support_only` | 441 |
+| `handoff` | `support_only` | 442 |
 | `human_gated_object` | `human_gated` | 262 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 254 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 25 |
-| `task` | `support_only` | 524 |
+| `task` | `support_only` | 525 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P2-T01 defined canonical scoped-positive vocabulary and object-specific high-risk wording for M_src g_eff SourceMatterSemanticsAdoptionReadinessLaw_v1 PositiveM |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P2-T02 created subordinate high-risk status aliases for required Distance-to-GR rows and matter_coupling object aliases. Aliases do not override ledger authorit |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -88,6 +88,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:alias_map_as_ledger_authority` | Blocked claim: alias map as ledger authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:alias_map_as_physics_proof` | Blocked claim: alias map as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -134,6 +136,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:bare_accepted_high_risk_rendering` | Blocked claim: bare accepted high-risk rendering | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_benchmark_promotion` | Blocked claim: baseline reconciliation as benchmark promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_claim_promotion` | Blocked claim: baseline reconciliation as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_completed_derivation` | Blocked claim: baseline reconciliation as completed derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -157,15 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:benchmark_success_evidence_import` | Blocked claim: benchmark success evidence import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:boundary_synchronization_as_source_law_adoption` | Blocked claim: boundary synchronization as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:branchdisc_src_gsc_adoption` | Blocked claim: BranchDisc_src GSC adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:branchdisc_src_gsc_source_law_adoption` | Blocked permission: BranchDisc_src^{GSC} source-law adoption | `registries/ROLE_EXECUTION_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_adoption` | Blocked claim: bridge-candidate adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bridge_candidate_as_coupling_law_data` | Blocked claim: bridge candidate as coupling-law data | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260701-032`
-- Latest handoff: `handoff-0441`
-- Handoff path: `research_control/handoffs/handoff-0441.yaml`
-- Next action: Run one bounded v14 P2-T02 high-risk status alias map packet before public status propagation current-frontier wording pilot claim-language examples linter matter-coupling Einstein-equation benchmark or promotion work.
+- Active task: `RT-20260701-033`
+- Latest handoff: `handoff-0442`
+- Handoff path: `research_control/handoffs/handoff-0442.yaml`
+- Next action: Run one bounded v14 P2-T03 current-frontier wording pilot before public status propagation claim-language examples linter matter-coupling Einstein-equation benchmark or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

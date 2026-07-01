@@ -1,0 +1,178 @@
+schema_id: "distance_to_gr_status_aliases_v1"
+authority: "control"
+status: "active"
+created_at: "2026-07-01T18:39:49Z"
+created_by_task_id: "RT-20260701-033"
+created_by_job_id: "AJ-RT-20260701-033-001"
+source_of_truth:
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  vocabulary_path: "research_control/design/scoped_positive_claim_vocabulary.md"
+  current_frontier_path: "research_control/current_frontier.md"
+authority_rules:
+  aliases_do_not_override_ledger: true
+  aliases_are_physics_proof: false
+  aliases_are_routing_authority: false
+  renderer_must_preserve_layered_status_fields: true
+  high_risk_rows_must_not_render_bare_accepted: true
+  if_alias_conflicts_with_ledger: "ledger governs"
+  renderer_integration_status: "deferred_to_v14_p2_t03_current_frontier_wording_pilot"
+bare_accepted_policy:
+  default: "Bare accepted is disallowed for high-risk rows unless immediately qualified by scope object and blocked downstream claims."
+  high_risk_rendering: "replace_with_scoped_positive_alias"
+  blocked_rendering: "accepted"
+  minimum_required_context:
+    - "control_status"
+    - "mathematical_status"
+    - "physical_status"
+    - "promotion_status"
+    - "overread_guard"
+row_aliases:
+  source_ontology_primitives:
+    ledger_burden_id: "source_ontology_primitives"
+    display_status: "draft source-ontology primitives only"
+    scoped_positive_term: "proposal_only_law_target"
+    required_qualifier: "Canonical adoption rules remain unresolved."
+    forbidden_renderings:
+      - "source ontology completed"
+      - "canonical ontology adopted"
+      - "GR derivation primitive completed"
+    required_blocked_phrase: "No canonical ontology edit or completed derivation follows from this row."
+  source_equivalence_eqsrc:
+    ledger_burden_id: "source_equivalence_eqsrc"
+    display_status: "draft source-equivalence object only"
+    scoped_positive_term: "proposal_only_theorem_target"
+    required_qualifier: "General equivalence under variations remains unresolved."
+    forbidden_renderings:
+      - "EqSrc proved in full"
+      - "source equivalence completed"
+      - "downstream GR route unlocked"
+    required_blocked_phrase: "No benchmark, Einstein-equation, matter-coupling, or completed-derivation claim follows from this row."
+  obsloc_lc:
+    ledger_burden_id: "obsloc_lc"
+    display_status: "constructive local exact-branch witness only"
+    scoped_positive_term: "source_pure_pending_stress"
+    required_qualifier: "Robustness and exact-branch limits remain visible."
+    forbidden_renderings:
+      - "global observer localization solved"
+      - "matter coupling derived"
+      - "benchmark promotion"
+    required_blocked_phrase: "No source-law adoption, matter-coupling derivation, benchmark promotion, or completed derivation follows from this witness."
+  resp_lc:
+    ledger_burden_id: "resp_lc"
+    display_status: "accepted only as scoped source-extension selector data"
+    scoped_positive_term: "adopted_as_scoped_source_extension_object"
+    required_qualifier: "Xi_X^R is accepted only as admissible source-extension data for Resp_lc continuation through S_X^+."
+    forbidden_renderings:
+      - "detector semantics"
+      - "matter coupling"
+      - "canonical ontology edit"
+    required_blocked_phrase: "No detector semantics, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row."
+  m_src:
+    ledger_burden_id: "m_src"
+    display_status: "adopted only as scoped source-only M_src object"
+    scoped_positive_term: "adopted_as_source_only_object"
+    required_qualifier: "M_src is not a target manifold, not a metric, and not a GR derivation."
+    forbidden_renderings:
+      - "target manifold"
+      - "metric"
+      - "GR derivation"
+    required_blocked_phrase: "No MetricData(E), g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row."
+  g_eff:
+    ledger_burden_id: "g_eff"
+    display_status: "adopted only as scoped source-extension g_eff object"
+    scoped_positive_term: "adopted_as_scoped_source_extension_object"
+    required_qualifier: "The object is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations."
+    forbidden_renderings:
+      - "unscoped Lorentzian metric"
+      - "MetricData(E) adopted"
+      - "matter coupling derived"
+      - "Einstein equations derived"
+    required_blocked_phrase: "No MetricData(E), unscoped g_eff, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row."
+  matter_coupling:
+    ledger_burden_id: "matter_coupling"
+    display_status: "accepted only as scoped source-extension evidence/precondition"
+    scoped_positive_term: "accepted_as_scoped_evidence_precondition"
+    required_qualifier: "PositiveMSProfile_v1 and RR_ETransportCompletenessOrInvarianceLaw_v1 are scoped evidence/preconditions only; matter coupling remains not derived and not adopted."
+    forbidden_renderings:
+      - "bare accepted"
+      - "matter coupling accepted"
+      - "matter coupling derived"
+      - "matter semantics adopted"
+      - "detector semantics adopted"
+      - "coupling law adopted"
+      - "stress-energy semantics"
+      - "matter action"
+      - "Einstein-equation premise"
+      - "benchmark fit"
+    required_blocked_phrase: "No source-law adoption, RR_ETransportCompletenessOrInvarianceLaw_v1 adoption, PositiveMSProfile_v1 adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption, matter semantics, detector semantics, coupling law, matter coupling, stress-energy, matter action, MetricData(E), g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation follows from this row."
+    object_aliases:
+      MSStableMatterSemanticsBridge_v1:
+        display_status: "draft/control bridge target only"
+        scoped_positive_term: "positive_source_semantics_candidate_only"
+        required_qualifier: "Not adopted matter semantics and not detector semantics."
+      SourceMatterSemanticsAdoptionReadinessLaw_v1:
+        display_status: "proposal-only law target unless a later gate changes status"
+        scoped_positive_term: "proposal_only_law_target"
+        required_qualifier: "Not law adoption, not matter semantics, not detector semantics, and not coupling law."
+      PositiveMSProfile_v1:
+        display_status: "accepted only as scoped positive source-semantics evidence/precondition"
+        scoped_positive_term: "accepted_as_scoped_evidence_precondition"
+        required_qualifier: "Not adopted matter semantics, detector semantics, stress-energy, or matter action."
+      RR_ETransportCompletenessOrInvarianceLaw_v1:
+        display_status: "accepted only as certificate-indexed RR_E transport-completeness or invariance evidence/precondition"
+        scoped_positive_term: "certificate_indexed_transport_invariance_evidence_only"
+        required_qualifier: "Not source-law adoption, not object adoption, not unrestricted RR_E theorem, not detector semantics, and not matter coupling."
+      RR_E_underdetermination_obstruction:
+        display_status: "scoped obstruction under current ontology only"
+        scoped_positive_term: "scoped_obstruction_no_global_no_go"
+        required_qualifier: "Not global impossibility and not global theory rejection."
+  einstein_equations:
+    ledger_burden_id: "einstein_equations"
+    display_status: "not started; no positive derivation status"
+    scoped_positive_term: "blocked_adoption_open_continuation"
+    required_qualifier: "No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established."
+    forbidden_renderings:
+      - "Einstein equations derived"
+      - "field equations obtained"
+      - "dynamics action established"
+    required_blocked_phrase: "Einstein equations remain blocked by missing dynamics, action, variation, matter coupling, and protected benchmark authority."
+  benchmark_promotion:
+    ledger_burden_id: "benchmark_promotion"
+    display_status: "no benchmark promotion from scoped evidence/precondition alone"
+    scoped_positive_term: "blocked_adoption_open_continuation"
+    required_qualifier: "Exact-GR benchmark promotion remains blocked by upstream derivation burdens and protected authority."
+    forbidden_renderings:
+      - "benchmark promoted"
+      - "exact-GR derivation complete"
+      - "benchmark fit accepted"
+    required_blocked_phrase: "No benchmark promotion, closure, fit claim, or completed exact-GR derivation claim follows from scoped evidence/preconditions."
+  gate_chair_status:
+    ledger_burden_id: "gate_chair_status"
+    display_status: "human-gated verdict authority only"
+    scoped_positive_term: "human_gated_evidence_review_required"
+    required_qualifier: "Gate Chair status is protected authority, not renderer, validator, commit, or role authority."
+    forbidden_renderings:
+      - "validator approved claim"
+      - "commit status proves science"
+      - "role record as Gate Chair verdict"
+    required_blocked_phrase: "No Gate Chair closure, benchmark closure, physics promotion, or completed derivation follows without explicit protected verdict authority."
+  finite_toy_metric_response:
+    ledger_burden_id: "finite_toy_metric_response"
+    display_status: "frozen negative local toy route only"
+    scoped_positive_term: "frozen_negative_no_global_rejection"
+    required_qualifier: "Tag-removal stress freezes this local toy route; it is not global theory rejection."
+    forbidden_renderings:
+      - "global theory rejected"
+      - "all future source extensions impossible"
+      - "full metric-response route impossible"
+    required_blocked_phrase: "No g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory rejection follows from this frozen-negative toy route."
+renderer_integration:
+  status: "deferred"
+  deferred_to_plan_task_id: "P2-T03"
+  deferred_to_task_type: "current_frontier_wording_update_control_packet"
+  note: "This P2-T02 packet creates the canonical alias data and acceptance receipt only. P2-T03 must inspect scripts/research_control/render_current_frontier.py and decide how to consume this map or equivalent alias data."
+source_materials:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/scoped_positive_claim_vocabulary.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  - "research_control/handoffs/handoff-0441.yaml"
