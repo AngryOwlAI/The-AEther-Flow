@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-013` and `handoff-0422`.
+`RT-20260701-014` and `handoff-0423`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-013` |
-| Latest handoff ID | `handoff-0422` |
-| Current status | `v13_p3_t03_post_stress_route_template_registered_no_physics_delta` |
-| Current route family | post v13 p3 t03 template route to validation and pilot |
+| Active task ID | `RT-20260701-014` |
+| Latest handoff ID | `handoff-0423` |
+| Current status | `v13_p3_t04_no_leap_pilot_validated_no_physics_promotion_selector_controlled_next_route` |
+| Current route family | post v13 p3 t04 no leap pilot to p4 t01 positive source matter semantics target formalizer |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P3-T04 validation and pilot control packet |
-| Next recommended action | Run one bounded v13 P3-T04 validation and pilot packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route. |
+| Required next authority | v13 P4-T01 positive source-matter-semantics target formalizer as bounded source-side draft/control packet |
+| Next recommended action | Run one bounded v13 P4-T01 positive source-matter-semantics target formalizer packet under selector and no-leap controls before any matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy route, Einstein-equation route, benchmark route, or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-013/00_TASK.yaml`.
-- Active task objective: Execute one bounded v13 P3-T03 post-stress route template control packet. Create a registered reusable template for post-stress selector tasks covering stress input artifact, audit input artifact, construction input artifact, exact object under classification, available route options, rejected route options, freeze criteria, Distance-to-GR delta, forbidden conclusions, handoff text, and validation checklist.
-- Latest handoff path: `research_control/handoffs/handoff-0422.yaml`.
-- Latest handoff summary: RT-20260701-013 completed v13 P3-T03 as a post-stress route template control packet. The new registered control template research_control/templates/post_stress_selector_task_template.md provides reusable scaffolding for post-stress selector tasks and includes the required sections: stress input artifact, audit input artifact, construction input artifact, exact object under classification, available route options, rejected route options, freeze criteria, Distance-to-GR delta, forbidden conclusions, handoff text, and validation checklist.
-- Current route family: post v13 p3 t03 template route to validation and pilot.
-- Next recommended action: Run one bounded v13 P3-T04 validation and pilot packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+- Active task path: `research_control/tasks/RT-20260701-014/00_TASK.yaml`.
+- Active task objective: Execute one bounded v13 P3-T04 validation and pilot control packet. Apply the no-leap route rule and high-risk selector checklist to the latest SourceMatterSemanticsAdoptionReadinessLaw_v1 route state, verify that the pilot produces no physics promotion, preserve selector-controlled routing, and route documentation drift separately if detected.
+- Latest handoff path: `research_control/handoffs/handoff-0423.yaml`.
+- Latest handoff summary: RT-20260701-014 completed v13 P3-T04 as a no-leap pilot validation control packet. The latest SourceMatterSemanticsAdoptionReadinessLaw_v1 route state remains accepted only as scoped source-extension matter-semantics adoption-readiness evidence/precondition. The pilot produced no physics promotion, kept the next route selector-controlled, and detected no documentation drift requiring a separate sidecar.
+- Current route family: post v13 p3 t04 no leap pilot to p4 t01 positive source matter semantics target formalizer.
+- Next recommended action: Run one bounded v13 P4-T01 positive source-matter-semantics target formalizer packet under selector and no-leap controls before any matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy route, Einstein-equation route, benchmark route, or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P3-T04 validation and pilot packet before any matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+Run one bounded v13 P4-T01 positive source-matter-semantics target formalizer packet under selector and no-leap controls before any matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy route, Einstein-equation route, benchmark route, or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,27 +143,27 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-013`;
-- latest handoff: `handoff-0422`;
-- current status: `v13_p3_t03_post_stress_route_template_registered_no_physics_delta`;
+- active task: `RT-20260701-014`;
+- latest handoff: `handoff-0423`;
+- current status: `v13_p3_t04_no_leap_pilot_validated_no_physics_promotion_selector_controlled_next_route`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PENDING;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
-- latest handoff validation `git_diff_check`: PENDING;
-- latest handoff validation `graph_freshness_check`: PENDING;
-- latest handoff validation `validate_documentation_impact`: PENDING;
-- latest handoff validation `validate_research_control`: PENDING;
-- latest handoff validation `validate_research_control_check_diff`: PENDING;
+- latest handoff validation `bootstrap_memory_system`: PASS;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
+- latest handoff validation `git_diff_check`: PASS;
+- latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `validate_documentation_impact`: PASS;
+- latest handoff validation `validate_research_control`: PASS;
+- latest handoff validation `validate_research_control_check_diff`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0422.yaml`
-- `research_control/tasks/RT-20260701-013/00_TASK.yaml`
+- `research_control/handoffs/handoff-0423.yaml`
+- `research_control/tasks/RT-20260701-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0422*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0423*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
