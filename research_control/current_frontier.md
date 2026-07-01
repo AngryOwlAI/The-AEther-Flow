@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-001` and `handoff-0410`.
+`RT-20260701-002` and `handoff-0411`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-001` |
-| Latest handoff ID | `handoff-0410` |
-| Current status | `v12_p7_t03_source_matter_semantics_adoption_readiness_law_target_formalized_no_adoption` |
-| Current route family | v12 p7 t03 source matter semantics adoption readiness law target routes to audit no promotion |
+| Active task ID | `RT-20260701-002` |
+| Latest handoff ID | `handoff-0411` |
+| Current status | `v12_p7_t03_source_matter_semantics_adoption_readiness_law_audit_source_pure_as_written_pending_stress_no_adoption` |
+| Current route family | v12 p7 t03 source matter semantics adoption readiness law audit routes to stress no promotion |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted |
-| Required next authority | Smuggling Auditor source-purity audit of SourceMatterSemanticsAdoptionReadinessLaw_v1 |
-| Next recommended action | Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit SourceMatterSemanticsAdoptionReadinessLaw_v1 for target-import, detector-semantics, stress-energy, matter-action, coupling-law, MetricData(E), g_eff, Einstein-equation, benchmark, proof-authority, registry-authority, and evidence-as-adoption smuggling before any stress, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route. |
+| Required next authority | Refuter stress test of SourceMatterSemanticsAdoptionReadinessLaw_v1 |
+| Next recommended action | Run one bounded refuter@0.2.0 ontology-law-research-packet to stress SourceMatterSemanticsAdoptionReadinessLaw_v1 for readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before any selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-001/00_TASK.yaml`.
-- Active task objective: Formalize SourceMatterSemanticsAdoptionReadinessLaw_v1 as a proposal-only draft/control source-side law target and proof-obligation packet after RT-057 selected the ontology-law route. Preserve no canonical ontology edit, no source-law adoption, no source-extension data adoption beyond exact scoped gate results, no MetricData(E), no g_eff scope change, no coupling-law adoption, no matter-semantics adoption, no detector-semantics adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no stress-energy tensor, no matter action, no Einstein equations, no benchmark promotion, and no completed derivation.
-- Latest handoff path: `research_control/handoffs/handoff-0410.yaml`.
-- Latest handoff summary: RT-20260701-001 completed one bounded Ontology Formalizer packet and formalized SourceMatterSemanticsAdoptionReadinessLaw_v1 as a proposal-only draft/control source-side law-target theorem with proof obligations and fail-closed obstruction branches. The readiness label audit_ready means only ready for later Smuggling Auditor audit. The packet does not adopt source law, source-extension data beyond exact scoped gate results, matter semantics, detector semantics, a coupling law, matter coupling, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
-- Current route family: v12 p7 t03 source matter semantics adoption readiness law target routes to audit no promotion.
-- Next recommended action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit SourceMatterSemanticsAdoptionReadinessLaw_v1 for target-import, detector-semantics, stress-energy, matter-action, coupling-law, MetricData(E), g_eff, Einstein-equation, benchmark, proof-authority, registry-authority, and evidence-as-adoption smuggling before any stress, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+- Active task path: `research_control/tasks/RT-20260701-002/00_TASK.yaml`.
+- Active task objective: Audit SourceMatterSemanticsAdoptionReadinessLaw_v1 for hidden target imports, detector-semantics smuggling, stress-energy or matter-action smuggling, coupling-law overread, MetricData(E) or g_eff smuggling, Einstein-equation or benchmark premises, proof-authority smuggling, process-authority smuggling, and evidence-as-adoption overread.
+- Latest handoff path: `research_control/handoffs/handoff-0411.yaml`.
+- Latest handoff summary: RT-20260701-002 completed one bounded Smuggling Auditor packet and audited SourceMatterSemanticsAdoptionReadinessLaw_v1. The audit found the proposal-only law target source-pure as written under explicit readiness-label and process-authority guards, pending Refuter stress. audit_ready remains routing status only. The packet does not adopt source law, source-extension data beyond exact scoped gate results, matter semantics, detector semantics, coupling law, matter coupling, stress-energy semantics, matter action, MetricData(E), g_eff, Einstein equations, benchmark status, completed derivation, future source-extension impossibility, or global theory rejection.
+- Current route family: v12 p7 t03 source matter semantics adoption readiness law audit routes to stress no promotion.
+- Next recommended action: Run one bounded refuter@0.2.0 ontology-law-research-packet to stress SourceMatterSemanticsAdoptionReadinessLaw_v1 for readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before any selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit SourceMatterSemanticsAdoptionReadinessLaw_v1 for target-import, detector-semantics, stress-energy, matter-action, coupling-law, MetricData(E), g_eff, Einstein-equation, benchmark, proof-authority, registry-authority, and evidence-as-adoption smuggling before any stress, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+Run one bounded refuter@0.2.0 ontology-law-research-packet to stress SourceMatterSemanticsAdoptionReadinessLaw_v1 for readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before any selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-001`;
-- latest handoff: `handoff-0410`;
-- current status: `v12_p7_t03_source_matter_semantics_adoption_readiness_law_target_formalized_no_adoption`;
+- active task: `RT-20260701-002`;
+- latest handoff: `handoff-0411`;
+- current status: `v12_p7_t03_source_matter_semantics_adoption_readiness_law_audit_source_pure_as_written_pending_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0410.yaml`
-- `research_control/tasks/RT-20260701-001/00_TASK.yaml`
+- `research_control/handoffs/handoff-0411.yaml`
+- `research_control/tasks/RT-20260701-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0410*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0411*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

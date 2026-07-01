@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T00:49:13Z`
-- Source fingerprint: `12cacd5c4110008d95c2c0d1f264a101b9aa89c0528233ea9b7e082f3dadadef`
-- Nodes: `9016`
-- Edges: `38287`
+- Generated from tracked state as of: `2026-07-01T01:20:18Z`
+- Source fingerprint: `190f2bf96c96bf84347b4c0f6b2b31c5e8d36330df62a7e53097ff222acb11a3`
+- Nodes: `9039`
+- Edges: `38407`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 546 |
+| `completion_yaml` | 547 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 410 |
+| `handoff_yaml` | 411 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 546 |
+| `agent_job` | `support_only` | 547 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4545 |
-| `blocked_burden` | `blocked` | 1038 |
-| `claim_boundary` | `support_only` | 547 |
-| `draft_control_candidate` | `draft_control` | 429 |
+| `artifact` | `support_only` | 4559 |
+| `blocked_burden` | `blocked` | 1039 |
+| `claim_boundary` | `support_only` | 548 |
+| `draft_control_candidate` | `draft_control` | 432 |
 | `draft_control_candidate` | `proposal_only` | 64 |
 | `draft_control_candidate` | `science_draft` | 30 |
 | `frozen_negative` | `frozen_negative` | 91 |
 | `gate_chair_verdict` | `human_gated` | 27 |
-| `handoff` | `support_only` | 410 |
+| `handoff` | `support_only` | 411 |
 | `human_gated_object` | `human_gated` | 255 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 22 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 238 |
+| `source_ontology_object` | `support_only` | 239 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 23 |
-| `task` | `support_only` | 495 |
+| `task` | `support_only` | 496 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260701-001`
-- Latest handoff: `handoff-0410`
-- Handoff path: `research_control/handoffs/handoff-0410.yaml`
-- Next action: Run one bounded smuggling-auditor@0.2.0 ontology-law-research-packet to audit SourceMatterSemanticsAdoptionReadinessLaw_v1 for target-import, detector-semantics, stress-energy, matter-action, coupling-law, MetricData(E), g_eff, Einstein-equation, benchmark, proof-authority, registry-authority, and evidence-as-adoption smuggling before any stress, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
+- Active task: `RT-20260701-002`
+- Latest handoff: `handoff-0411`
+- Handoff path: `research_control/handoffs/handoff-0411.yaml`
+- Next action: Run one bounded refuter@0.2.0 ontology-law-research-packet to stress SourceMatterSemanticsAdoptionReadinessLaw_v1 for readiness-label stability, source relabeling naturality, finite-variation behavior, certificate deletion, RR_E separation, fail-closed overread handling, and process-authority immunity before any selector, Gate Chair, matter-semantics, detector-semantics, coupling-law, matter-coupling, Einstein-equation, benchmark, or promotion route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

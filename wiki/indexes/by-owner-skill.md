@@ -635,6 +635,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-REFUTER-STRESS` `wiki/tex/tex-v12-p7-t03-repair-msirrel-stable-partition-precondition-refuter-stress.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p7-t03-repair-msirrel-stable-partition-precondition-smuggling-audit.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `wiki/tex/tex-v12-p7-t03-repair-msirrel-target.md`
+- `WIKI-TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-AUDIT` `wiki/tex/tex-v12-p7-t03-source-matter-semantics-adoption-readiness-law-audit.md`
 - `WIKI-TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `wiki/tex/tex-v12-p7-t03-source-matter-semantics-adoption-readiness-law-target.md`
 
 ## obsidian-wiki
@@ -1055,6 +1056,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-REFUTER-STRESS` `research_control/tasks/RT-20260630-048/artifacts/matter_semantics_stable_partition_precondition_refuter_stress_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-STABLE-PARTITION-PRECONDITION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-047/artifacts/matter_semantics_stable_partition_precondition_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MSIRREL-TARGET` `research_control/tasks/RT-20260630-037/artifacts/matter_semantics_readout_response_irrelevance_target_v1.tex`
+- `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-AUDIT` `research_control/tasks/RT-20260701-002/artifacts/source_matter_semantics_adoption_readiness_law_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-TARGET` `research_control/tasks/RT-20260701-001/artifacts/source_matter_semantics_adoption_readiness_law_target_v1.tex`
 
 ## user-modified-project
