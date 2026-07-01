@@ -552,6 +552,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-README-TEX-SHARED` `wiki/markdown/md-readme-tex-shared.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v12.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v13.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v14.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
@@ -996,6 +997,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-README-RESEARCH-CONTROL-APPROVALS` `research_control/approvals/README.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V12` `implementations_plans/recommendations_implementation_plan_continue_task-v12.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13` `implementations_plans/recommendations_implementation_plan_continue_task-v13.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14` `implementations_plans/recommendations_implementation_plan_continue_task-v14.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DISTANCE-TO-GR-STATUS-LAYERS-V1` `research_control/design/distance_to_gr_status_layers_v1.md`

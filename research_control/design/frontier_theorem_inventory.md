@@ -20,13 +20,16 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
 ## Inventory Boundary
 
 - Populated by: `RT-20260629-039`, P2-T03.
+- Synchronized by: `RT-20260701-031`, P5-T06 RR_E boundary update after
+  `handoff-0439`.
 - Schema source:
   `research_control/design/frontier_theorem_inventory_schema_v1.md`.
 - Inventory source:
   `research_control/design/frontier_theorem_inventory.md`.
 - Distance-to-GR delta: false.
 - New science-bearing theorem statements: none.
-- Distance-to-GR ledger edit: none.
+- Distance-to-GR ledger edit: control next-action wording only; no scientific
+  Distance-to-GR status delta.
 - TeX physics source edit: none.
 
 The phrases `accepted`, `scoped`, `blocked`, `frozen negative`, and
@@ -427,32 +430,44 @@ benchmark closure, or completed derivation.
 
 - `frontier_item_id`: `matter_coupling_precondition_evidence`
 - `frontier_item_class`: `source_extension_evidence;witness;gate_decision`
-- `object_or_claim_name`: `ParamFiniteLocalWitness_v1`, `BridgeSlot_n`, and
-  `NoTargetImport_n` scoped evidence/precondition status.
+- `object_or_claim_name`: `ParamFiniteLocalWitness_v1`, `BridgeSlot_n`,
+  `NoTargetImport_n`, `PositiveMSProfile_v1`, and
+  `RR_ETransportCompletenessOrInvarianceLaw_v1` scoped
+  evidence/precondition status.
 - `status_layer_summary`:
   - `control_status`: `accepted_as_scoped_evidence_precondition`
   - `mathematical_status`: `parameterized_finite_local_witness_precondition`
   - `physical_status`: `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`
   - `promotion_status`: `scoped_source_evidence_only`
-  - `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
+  - `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 - `source_artifact_path`:
   `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex`;
   `research_control/tasks/RT-20260614-264/artifacts/293_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_TARGET_V1_FORMALIZATION.tex`;
+  `research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex`;
   `registries/DISTANCE_TO_GR_LEDGER.csv` row `matter_coupling`.
 - `source_authority_type`: `gate_chair_artifact;registered_tex_artifact;distance_to_gr_ledger_row`
 - `assumptions`:
   - The witness package is finite/local and source-side.
   - Acceptance is evidence/precondition only.
+  - `RR_ETransportCompletenessOrInvarianceLaw_v1` is accepted only as scoped
+    source-extension RR_E transport-completeness or invariance
+    evidence/precondition under the declared source-side and fail-closed
+    boundary.
+  - Neither `PositiveMSProfile_v1` nor
+    `RR_ETransportCompletenessOrInvarianceLaw_v1` is adopted as a source law.
   - Support-only mechanization may test reproducibility of finite/local
     conditions but cannot certify proof authority.
 - `definitions_used`: `ParamFiniteLocalWitness_v1`; `BridgeSlot_n`;
-  `NoTargetImport_n`; `ParamFiniteLocalTarget_v1`; finite/local source-family
-  target.
+  `NoTargetImport_n`; `ParamFiniteLocalTarget_v1`;
+  `PositiveMSProfile_v1`; `RR_ETransportCompletenessOrInvarianceLaw_v1`;
+  finite/local source-family target; scoped RR_E transport-completeness or
+  invariance evidence/precondition.
 - `statement_or_decision`: Gate Chair accepted the parameterized witness,
-  bridge slot, and no-target-import data only as scoped source-extension
-  parameterized-witness evidence/precondition.
+  bridge slot, no-target-import data, and later RR_E transport-completeness or
+  invariance schema only as scoped source-extension evidence/precondition.
 - `mathematical_conclusion`: The evidence/precondition status can be used as
-  bounded input to support-only mechanization boundary design.
+  bounded input to scoped-positive boundary vocabulary and later
+  non-promotional continuation routing.
 - `physical_non_conclusions`:
   - Not source-law adoption.
   - Not `MetricData(E)` adoption.
@@ -462,9 +477,11 @@ benchmark closure, or completed derivation.
   - Not stress-energy semantics, stress-energy tensor, matter action, detector
     semantics, Einstein equations, benchmark promotion, or completed
     derivation.
+  - Not future source-extension impossibility or global theory rejection.
 - `allowed_reuse`:
-  - Cite as scoped evidence/precondition for P5 support-only checker boundary
-    and finite/local reproducibility work.
+  - Cite as scoped evidence/precondition for P5 support-only checker boundary,
+    finite/local reproducibility work, and scoped-positive claim-vocabulary
+    control.
 - `blocked_reuse`:
   - Do not cite as matter coupling, stress-energy, field-equation premise, or
     checker proof authority.
@@ -473,11 +490,228 @@ benchmark closure, or completed derivation.
 - `missing_theorem_or_primitive`: Source-law adoption; coupling-law adoption;
   stress-energy semantics; matter action; detector semantics; Einstein-equation
   derivation.
-- `candidate_next_task`: support-only mechanization boundary in the older live
-  chain; current v12 route proceeds to P2-T04.
-- `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
+- `candidate_next_task`: one bounded v14 P2-T01 scoped-positive claim
+  vocabulary control packet unless live tracked state selects a narrower
+  repair first.
+- `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 - `external_review_notes`: This is the highest-risk item. It explicitly is not
   matter-coupling derivation or adoption.
+
+### Item 10A: rr_e_theorem_target_v1
+
+- `frontier_item_id`: `rr_e_theorem_target_v1`
+- `frontier_item_class`: `definition;missing_theorem`
+- `object_or_claim_name`: `RR_E` theorem target for detector-irrelevance
+  relation.
+- `status_layer_summary`:
+  - `control_status`: `proposal_only_target_formalized`
+  - `mathematical_status`: `theorem_target_only`
+  - `physical_status`: `no_detector_semantics_no_matter_coupling`
+  - `promotion_status`: `draft_control_only`
+  - `overread_guard`: `no_source_law_adoption;no_unrestricted_rr_e_theorem;no_detector_semantics;no_matter_coupling_derivation;no_benchmark_promotion;no_completed_derivation`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260701-022/artifacts/rr_e_theorem_target_formalizer_v1.tex`.
+- `source_authority_type`: `registered_tex_artifact`
+- `assumptions`:
+  - The target records what would have to be shown.
+  - A theorem target is not a theorem proof.
+- `definitions_used`: `RR_E`; detector-irrelevance target; source-side
+  relation; proposal-only target.
+- `statement_or_decision`: The target exists as proposal-only control
+  formalization.
+- `mathematical_conclusion`: none_supplied; no unrestricted RR_E theorem is
+  established by the target.
+- `physical_non_conclusions`:
+  - No detector semantics.
+  - No matter coupling.
+  - No Einstein equations, benchmark promotion, or completed derivation.
+- `allowed_reuse`: Use as a named target for obstruction, conditional lemma,
+  or source-law research packets.
+- `blocked_reuse`: Do not cite the target as theorem proof or physical
+  detector-semantics collapse.
+- `dependency_items`: `matter_coupling_precondition_evidence`; `g_eff_gsc_cand`
+- `missing_theorem_or_primitive`: A source-side law or theorem sufficient to
+  prove the target.
+- `candidate_next_task`: none from this item; use live routing.
+- `overread_guard`: `no_source_law_adoption;no_unrestricted_rr_e_theorem;no_detector_semantics;no_matter_coupling_derivation;no_benchmark_promotion;no_completed_derivation`
+- `external_review_notes`: Reviewers should distinguish target naming from
+  theorem establishment.
+
+### Item 10B: rr_e_underdetermination_obstruction
+
+- `frontier_item_id`: `rr_e_underdetermination_obstruction`
+- `frontier_item_class`: `obstruction;missing_theorem`
+- `object_or_claim_name`: Current-ontology RR_E underdetermination
+  obstruction.
+- `status_layer_summary`:
+  - `control_status`: `obstruction_recorded`
+  - `mathematical_status`: `current_ontology_missing_derivation_critical_source_law`
+  - `physical_status`: `not_global_theory_rejection`
+  - `promotion_status`: `blocked_adoption_open_continuation`
+  - `overread_guard`: `no_source_law_adoption;no_rr_e_transport_law_adoption;no_unrestricted_rr_e_theorem;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260701-023/artifacts/rr_e_irrelevance_theorem_attempt_or_obstruction_v1.tex`;
+  `research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex`.
+- `source_authority_type`: `registered_tex_artifact;refuter_artifact`
+- `assumptions`:
+  - The obstruction is scoped to the current ontology and declared route.
+  - A conservative source-side extension remained open.
+- `definitions_used`: `RR_E`; current ontology; underdetermination;
+  `RR_ETransportCompletenessOrInvarianceLaw_v1`.
+- `statement_or_decision`: The current ontology did not derive the
+  derivation-critical RR_E transport-completeness or invariance law.
+- `mathematical_conclusion`: scoped obstruction under current ontology.
+- `physical_non_conclusions`:
+  - Not a proof that the source extension is impossible.
+  - Not a global rejection of the theory.
+  - Not a matter-coupling or Einstein-equation result.
+- `allowed_reuse`: Use as the reason the route entered the
+  ontology-law-research-packet sequence.
+- `blocked_reuse`: Do not convert the scoped obstruction into global no-go
+  language.
+- `dependency_items`: `rr_e_theorem_target_v1`
+- `missing_theorem_or_primitive`: `RR_ETransportCompletenessOrInvarianceLaw_v1`
+  or equivalent source-side discriminator/transport law.
+- `candidate_next_task`: already routed through RT-20260701-027 through
+  RT-20260701-030; live state after this sync selects v14 P2-T01.
+- `overread_guard`: `no_source_law_adoption;no_rr_e_transport_law_adoption;no_unrestricted_rr_e_theorem;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: The correct wording is "current ontology does not
+  derive X," not "X is impossible."
+
+### Item 10C: rr_e_factor_through_conditional_lemma
+
+- `frontier_item_id`: `rr_e_factor_through_conditional_lemma`
+- `frontier_item_class`: `conditional_lemma;missing_theorem`
+- `object_or_claim_name`: Conditional RR_E factor-through lemma target.
+- `status_layer_summary`:
+  - `control_status`: `conditional_only`
+  - `mathematical_status`: `lemma_depends_on_missing_source_law`
+  - `physical_status`: `no_detector_semantics_no_matter_coupling`
+  - `promotion_status`: `draft_control_only`
+  - `overread_guard`: `no_source_law_adoption;no_unrestricted_rr_e_theorem;no_detector_semantics;no_matter_coupling_derivation;no_benchmark_promotion;no_completed_derivation`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260701-023/artifacts/rr_e_irrelevance_theorem_attempt_or_obstruction_v1.tex`.
+- `source_authority_type`: `registered_tex_artifact`
+- `assumptions`:
+  - The factor-through route is conditional on a missing RR_E transport law or
+    equivalent source-side invariant.
+- `definitions_used`: `RR_E`; factor-through condition;
+  `RR_ETransportCompletenessOrInvarianceLaw_v1`.
+- `statement_or_decision`: The route may be a useful conditional lemma shape,
+  but it is not an unrestricted theorem under current premises.
+- `mathematical_conclusion`: conditional lemma target only.
+- `physical_non_conclusions`: No detector semantics, matter coupling, Einstein
+  equations, benchmark promotion, or completed derivation.
+- `allowed_reuse`: Use as a shape constraint for future scoped-positive
+  vocabulary or formalization packets.
+- `blocked_reuse`: Do not cite the conditional shape as a completed theorem.
+- `dependency_items`: `rr_e_underdetermination_obstruction`
+- `missing_theorem_or_primitive`: Same missing RR_E source law or equivalent
+  discriminator.
+- `candidate_next_task`: none from this item; use live routing.
+- `overread_guard`: `no_source_law_adoption;no_unrestricted_rr_e_theorem;no_detector_semantics;no_matter_coupling_derivation;no_benchmark_promotion;no_completed_derivation`
+- `external_review_notes`: Conditional structure is useful, but it does not
+  discharge the missing law.
+
+### Item 10D: rr_e_separation_obstruction_witness_v1
+
+- `frontier_item_id`: `rr_e_separation_obstruction_witness_v1`
+- `frontier_item_class`: `witness;obstruction`
+- `object_or_claim_name`: Finite two-record RR_E separation witness.
+- `status_layer_summary`:
+  - `control_status`: `obstruction_witness_recorded`
+  - `mathematical_status`: `finite_counterexample_or_separation_witness`
+  - `physical_status`: `not_detector_semantics_not_matter_coupling`
+  - `promotion_status`: `blocked_adoption_open_continuation`
+  - `overread_guard`: `no_source_law_adoption;no_unrestricted_rr_e_theorem;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex`.
+- `source_authority_type`: `refuter_artifact`
+- `assumptions`:
+  - The witness is finite and scoped to the RR_E route under test.
+  - It blocks overread under current premises but does not close all future
+    source-extension routes.
+- `definitions_used`: finite separation witness; current-ontology RR_E
+  obstruction; fail-closed continuation.
+- `statement_or_decision`: Refuter stress preserved the scoped RR_E
+  obstruction and separated current evidence from the unrestricted theorem.
+- `mathematical_conclusion`: A finite scoped witness supports the current
+  obstruction classification.
+- `physical_non_conclusions`: No matter coupling, detector semantics,
+  Einstein equations, benchmark promotion, completed derivation, future
+  source-extension impossibility, or global theory rejection.
+- `allowed_reuse`: Use as a negative-control witness for claim-language and
+  support-only formalization boundaries.
+- `blocked_reuse`: Do not globalize the finite witness beyond its scoped
+  assumptions.
+- `dependency_items`: `rr_e_underdetermination_obstruction`
+- `missing_theorem_or_primitive`: A source-side RR_E transport-completeness or
+  invariance law that closes the separation gap.
+- `candidate_next_task`: none from this item; use live routing.
+- `overread_guard`: `no_source_law_adoption;no_unrestricted_rr_e_theorem;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: The witness is valuable precisely because it is
+  scoped and finite.
+
+### Item 10E: rr_e_transport_completeness_or_invariance_law_v1
+
+- `frontier_item_id`: `rr_e_transport_completeness_or_invariance_law_v1`
+- `frontier_item_class`: `source_extension_evidence;gate_decision;accepted_scoped_object`
+- `object_or_claim_name`: `RR_ETransportCompletenessOrInvarianceLaw_v1`
+  scoped RR_E transport-completeness or invariance evidence/precondition.
+- `status_layer_summary`:
+  - `control_status`: `accepted_as_scoped_evidence_precondition`
+  - `mathematical_status`: `proposal_only_schema_accepted_as_scoped_source_extension_evidence_precondition`
+  - `physical_status`: `not_source_law_not_unrestricted_rr_e_not_detector_semantics_not_matter_coupling`
+  - `promotion_status`: `scoped_source_evidence_only`
+  - `overread_guard`: `no_source_law_adoption;no_rr_e_transport_law_adoption;no_unrestricted_rr_e_theorem;no_detector_semantics;no_matter_semantics;no_coupling_law_adoption;no_matter_coupling_derivation;no_metricdata_e_adoption;no_geff_scope_expansion;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260701-027/artifacts/rr_e_transport_completeness_or_invariance_law_formalizer_v1.tex`;
+  `research_control/tasks/RT-20260701-028/artifacts/rr_e_transport_law_smuggling_audit_v1.tex`;
+  `research_control/tasks/RT-20260701-029/artifacts/rr_e_transport_law_refuter_stress_v1.tex`;
+  `research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex`;
+  `registries/DISTANCE_TO_GR_LEDGER.csv` row `matter_coupling`.
+- `source_authority_type`: `registered_tex_artifact;gate_chair_artifact;distance_to_gr_ledger_row`
+- `assumptions`:
+  - The schema remains proposal-only except for its scoped
+    evidence/precondition status.
+  - The accepted scope is source-side, certificate-indexed, and fail-closed.
+  - The Gate Chair result does not adopt the schema as a source law.
+- `definitions_used`: `RR_ETransportCompletenessOrInvarianceLaw_v1`; scoped
+  source-extension evidence/precondition; transport-completeness or invariance;
+  certificate-indexed source-side schema; fail-closed branch.
+- `statement_or_decision`: Gate Chair accepted the schema only as scoped
+  source-extension RR_E transport-completeness or invariance
+  evidence/precondition.
+- `mathematical_conclusion`: The schema may be cited as scoped
+  evidence/precondition for non-promotional continuation and claim-vocabulary
+  control.
+- `physical_non_conclusions`:
+  - Not source-law adoption.
+  - Not `RR_ETransportCompletenessOrInvarianceLaw_v1` adoption.
+  - Not unrestricted RR_E theorem proof.
+  - Not detector semantics, matter semantics, coupling law, matter coupling,
+    stress-energy semantics, matter action, `MetricData(E)`, `g_eff`, Einstein
+    equations, benchmark promotion, completed derivation, future
+    source-extension impossibility, or global theory rejection.
+- `allowed_reuse`:
+  - Use as scoped evidence/precondition in boundary wording.
+  - Use as a source entry for v14 P2-T01 scoped-positive claim vocabulary.
+- `blocked_reuse`:
+  - Do not use as adopted source law, unrestricted theorem, detector response,
+    matter-sector bridge, or downstream GR premise.
+- `dependency_items`: `rr_e_underdetermination_obstruction`;
+  `rr_e_factor_through_conditional_lemma`;
+  `rr_e_separation_obstruction_witness_v1`;
+  `matter_coupling_precondition_evidence`
+- `missing_theorem_or_primitive`: Source-law adoption, unrestricted RR_E
+  theorem, matter semantics, detector semantics, coupling law, matter action,
+  Einstein-equation derivation, and benchmark promotion remain missing.
+- `candidate_next_task`: one bounded v14 P2-T01 scoped-positive claim
+  vocabulary control packet unless live tracked state selects a narrower
+  repair first.
+- `overread_guard`: `no_source_law_adoption;no_rr_e_transport_law_adoption;no_unrestricted_rr_e_theorem;no_detector_semantics;no_matter_semantics;no_coupling_law_adoption;no_matter_coupling_derivation;no_metricdata_e_adoption;no_geff_scope_expansion;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: The accepted phrase is scoped evidence/precondition
+  only. It is not a source-law verdict.
 
 ### Item 11: finite_toy_metric_response
 
@@ -708,6 +942,11 @@ P2-T03 minimum item coverage:
 | `g_eff^{GSC-cand}` scoped source-extension object adoption | `g_eff_gsc_cand` |
 | `MatterCouplingBridgeTarget_v1` draft/control chain | `matter_coupling_bridge_target_v1` |
 | `ParamFiniteLocalWitness_v1`, `BridgeSlot_n`, `NoTargetImport_n` scoped evidence/precondition | `matter_coupling_precondition_evidence` |
+| `RR_E` theorem target proposal-only status | `rr_e_theorem_target_v1` |
+| Current-ontology `RR_E` underdetermination obstruction | `rr_e_underdetermination_obstruction` |
+| Conditional `RR_E` factor-through lemma status | `rr_e_factor_through_conditional_lemma` |
+| Finite two-record `RR_E` separation witness | `rr_e_separation_obstruction_witness_v1` |
+| `RR_ETransportCompletenessOrInvarianceLaw_v1` scoped evidence/precondition | `rr_e_transport_completeness_or_invariance_law_v1` |
 | Finite toy metric-response frozen route | `finite_toy_metric_response` |
 | `finite_variation_robustness` current status | `finite_variation_robustness` |
 | Einstein equations not-started status | `einstein_equations` |
@@ -756,3 +995,25 @@ schema v1* [Internal control design note].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
 implementation plan continue task v12* [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 1). *RR_E irrelevance theorem
+attempt or obstruction v1* [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). *RR_E theorem Refuter stress
+v1* [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). *RR_E transport
+completeness or invariance law formalizer v1* [Internal research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 1). *RR_E transport law
+smuggling audit v1* [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). *RR_E transport law Refuter
+stress v1* [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). *RR_E transport law Gate
+Chair review v1* [Internal research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). *Recommendations
+implementation plan continue task v14* [Internal implementation plan].
