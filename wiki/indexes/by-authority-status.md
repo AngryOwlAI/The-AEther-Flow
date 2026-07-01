@@ -341,6 +341,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V12-P5-T05-MATTER-SEMANTICS-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260630-025/artifacts/matter_semantics_candidate_refuter_stress_v1.tex`
 - `TEX-V12-P5-T05-MATTER-SEMANTICS-OBSTRUCTION-REFUTER-STRESS` `research_control/tasks/RT-20260629-053/artifacts/matter_semantics_obstruction_refuter_stress_v1.tex`
 - `TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-CANDIDATE` `research_control/tasks/RT-20260630-052/artifacts/ms_stable_matter_semantics_bridge_candidate_v1.tex`
+- `TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260630-056/artifacts/ms_stable_matter_semantics_bridge_source_extension_evidence_gate_chair_review_v1.tex`
 - `TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-REFUTER-STRESS` `research_control/tasks/RT-20260630-054/artifacts/ms_stable_matter_semantics_bridge_refuter_stress_v1.tex`
 - `TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260630-053/artifacts/ms_stable_matter_semantics_bridge_smuggling_audit_v1.tex`
 - `TEX-V12-P7-T03-REPAIR-MATTER-SEMANTICS-DISCRIMINATOR-NONUNIQUENESS-OBSTRUCTION` `research_control/tasks/RT-20260630-035/artifacts/matter_semantics_discriminator_nonuniqueness_obstruction_v1.tex`
@@ -927,6 +928,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V12-P5-T05-MATTER-SEMANTICS-CANDIDATE-REFUTER-STRESS` `wiki/tex/tex-v12-p5-t05-matter-semantics-candidate-refuter-stress.md`
 - `WIKI-TEX-V12-P5-T05-MATTER-SEMANTICS-OBSTRUCTION-REFUTER-STRESS` `wiki/tex/tex-v12-p5-t05-matter-semantics-obstruction-refuter-stress.md`
 - `WIKI-TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-CANDIDATE` `wiki/tex/tex-v12-p7-t03-ms-stable-matter-semantics-bridge-candidate.md`
+- `WIKI-TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-GATE-CHAIR-EVIDENCE-STATUS` `wiki/tex/tex-v12-p7-t03-ms-stable-matter-semantics-bridge-gate-chair-evidence-status.md`
 - `WIKI-TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-REFUTER-STRESS` `wiki/tex/tex-v12-p7-t03-ms-stable-matter-semantics-bridge-refuter-stress.md`
 - `WIKI-TEX-V12-P7-T03-MS-STABLE-MATTER-SEMANTICS-BRIDGE-SMUGGLING-AUDIT` `wiki/tex/tex-v12-p7-t03-ms-stable-matter-semantics-bridge-smuggling-audit.md`
 - `WIKI-TEX-V12-P7-T03-REPAIR-MATTER-SEMANTICS-DISCRIMINATOR-NONUNIQUENESS-OBSTRUCTION` `wiki/tex/tex-v12-p7-t03-repair-matter-semantics-discriminator-nonuniqueness-obstruction.md`
