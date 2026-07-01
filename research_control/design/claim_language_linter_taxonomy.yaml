@@ -1,0 +1,581 @@
+schema_id: "claim_language_linter_taxonomy_v1"
+schema_version: "1.0.0"
+authority: "control"
+status: "active"
+created_at: "2026-07-01T20:07:07Z"
+created_by_task_id: "RT-20260701-037"
+created_by_job_id: "AJ-RT-20260701-037-001"
+created_by_role: "project-control-maintainer@0.2.0"
+purpose: "Machine-readable taxonomy for P3-T02 claim-language linter implementation."
+scope_note: "This taxonomy classifies risky wording. It does not prove, adopt, promote, or reject any physics claim."
+
+source_materials:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+    role: "route_context"
+    note: "P3-T01 required phrase classes, examples, severity policy, and acceptance criteria."
+  - path: "research_control/design/scoped_positive_claim_vocabulary.md"
+    role: "vocabulary_source"
+    note: "Preferred scoped-positive status language for high-risk project states."
+  - path: "research_control/design/distance_to_gr_status_aliases.yaml"
+    role: "alias_source"
+    note: "Reader-facing aliases subordinate to Distance-to-GR ledger authority."
+  - path: "research_control/design/scoped_claim_language_examples.md"
+    role: "example_source"
+    note: "Bad and corrected examples for underclaims and overreads."
+  - path: "research_control/current_frontier.md"
+    role: "current_status_source"
+    note: "Rendered current-frontier wording to protect from bare high-risk status terms."
+  - path: "research_control/handoffs/handoff-0445.yaml"
+    role: "handoff_source"
+    note: "Live route requiring P3-T01 after P2 validation."
+  - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    role: "ledger_source"
+    note: "Canonical Distance-to-GR status authority."
+  - path: "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+    role: "boundary_source"
+    note: "Claim-boundary history for process-authority overclaim prevention."
+
+authority_rules:
+  taxonomy_is_physics_proof: false
+  taxonomy_can_promote_claims: false
+  taxonomy_can_adopt_source_laws: false
+  taxonomy_can_modify_ontology: false
+  registry_validator_commit_role_or_handoff_is_proof: false
+  public_current_surfaces_hard_fail_on_forbidden_language: true
+  current_control_surfaces_hard_fail_on_unquoted_forbidden_language: true
+  historical_artifacts_warn_only: true
+  intentional_bad_examples_warn_only: true
+  generated_derivatives_follow_source_surface_policy: true
+  human_gate_pending_does_not_mean_accepted: true
+  scoped_evidence_or_precondition_does_not_mean_adoption: true
+  source_extension_data_does_not_mean_source_law: true
+
+surface_policy:
+  current_public_surfaces:
+    description: "Reader-facing current status, public docs, publication briefs, website/public exports, and generated derivatives of current/public sources."
+    default_severity: "hard_fail_current_public"
+  current_control_surfaces:
+    description: "Tracked control records, handoffs, current-frontier source, registries, task receipts, and templates."
+    default_severity: "hard_fail_current_control"
+  intentional_bad_example_surfaces:
+    description: "Taxonomy, examples packs, linter tests, and receipts that quote forbidden wording as a negative example."
+    default_severity: "warn_intentional_example"
+  historical_artifacts:
+    description: "Legacy outputs retained for provenance and not presented as current/public status."
+    default_severity: "warn_historical"
+  generated_derivatives:
+    description: "Wiki notes, indexes, HTML/PDF/derived summaries, and generated registry metadata."
+    default_severity: "inherit_source_policy"
+
+severity_levels:
+  hard_fail_current_public:
+    numeric_rank: 100
+    blocks_publication: true
+    blocks_checkpoint: true
+    meaning: "Forbidden wording on a current public surface. Rewrite before publication or checkpoint."
+  hard_fail_current_control:
+    numeric_rank: 90
+    blocks_publication: true
+    blocks_checkpoint: true
+    meaning: "Forbidden wording on a current control surface outside a quoted negative example. Rewrite or explicitly mark as a fixture."
+  warn_intentional_example:
+    numeric_rank: 40
+    blocks_publication: false
+    blocks_checkpoint: false
+    meaning: "Forbidden wording appears as a deliberately labeled bad example or linter fixture."
+  warn_historical:
+    numeric_rank: 30
+    blocks_publication: false
+    blocks_checkpoint: false
+    meaning: "Forbidden wording appears in historical provenance material. Preserve if needed, but do not copy into current/public summaries."
+  warn_review:
+    numeric_rank: 20
+    blocks_publication: false
+    blocks_checkpoint: false
+    meaning: "Ambiguous wording requiring human review or safer rewrite."
+
+context_rules:
+  bare_status_terms:
+    tokens:
+      - "accepted"
+      - "solved"
+      - "derived"
+      - "established"
+      - "proved"
+      - "recovered"
+      - "completed"
+      - "adopted"
+    near_window_tokens: 8
+    high_risk_neighbors:
+      - "matter_coupling"
+      - "matter coupling"
+      - "g_eff"
+      - "M_src"
+      - "MetricData(E)"
+      - "RR_E"
+      - "RR_ETransportCompletenessOrInvarianceLaw_v1"
+      - "PositiveMSProfile_v1"
+      - "SourceMatterSemanticsAdoptionReadinessLaw_v1"
+      - "Einstein equations"
+      - "benchmark"
+      - "GR"
+  allow_contexts:
+    - context_id: "quoted_bad_example"
+      required_marker_any:
+        - "bad example"
+        - "forbidden phrase"
+        - "negative example"
+        - "linter fixture"
+        - "forbidden_patterns"
+        - "bad_phrases"
+      severity_override: "warn_intentional_example"
+    - context_id: "historical_provenance"
+      path_hint_any:
+        - "research_control/tasks/"
+        - "research_control/handoffs/"
+      required_marker_any:
+        - "historical"
+        - "legacy"
+        - "provenance"
+      severity_override: "warn_historical"
+
+phrase_classes:
+  - class_id: "bare_high_risk_accepted"
+    plan_required_class_number: 1
+    title: "Bare accepted near high-risk objects"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "near_term"
+    status_terms:
+      - "accepted"
+    near_terms:
+      - "matter_coupling"
+      - "matter coupling"
+      - "g_eff"
+      - "M_src"
+      - "MetricData(E)"
+      - "RR_E"
+      - "Einstein equations"
+      - "benchmark"
+    forbidden_patterns:
+      - pattern: "\\baccepted\\b"
+        near_any:
+          - "matter_coupling"
+          - "matter coupling"
+          - "g_eff"
+          - "M_src"
+          - "MetricData\\(E\\)"
+          - "RR_E"
+          - "Einstein equations"
+          - "benchmark"
+        window_tokens: 8
+    bad_phrases:
+      - "matter coupling accepted"
+      - "g_eff accepted"
+      - "M_src accepted"
+      - "MetricData(E) accepted"
+      - "RR_E accepted"
+      - "Einstein equations accepted"
+      - "benchmark accepted"
+    corrective_language: "Use scoped wording such as accepted only as scoped source-extension evidence/precondition or remains blocked/open under the listed burden."
+
+  - class_id: "matter_coupling_overclaim"
+    plan_required_class_number: 2
+    title: "Matter-coupling overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bmatter coupling accepted\\b"
+      - pattern: "\\bmatter coupling solved\\b"
+      - pattern: "\\bmatter coupling derived\\b"
+      - pattern: "\\buniversal coupling established\\b"
+      - pattern: "\\bmatter-coupling derivation complete\\b"
+    bad_phrases:
+      - "matter coupling accepted"
+      - "matter coupling solved"
+      - "matter coupling derived"
+      - "universal coupling established"
+    corrective_language: "State that matter coupling remains the active derivation burden unless a protected source-law and downstream promotion gate explicitly change that status."
+
+  - class_id: "g_eff_overclaim"
+    plan_required_class_number: 3
+    title: "g_eff metric overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bg_eff metric derived\\b"
+      - pattern: "\\bLorentzian metric constructed\\b"
+      - pattern: "\\bg_eff derived\\b"
+      - pattern: "\\bg_eff adopted\\b"
+      - pattern: "\\bMetricData\\(E\\) adopted\\b"
+    bad_phrases:
+      - "g_eff metric derived"
+      - "Lorentzian metric constructed"
+    corrective_language: "Use frozen or blocked MetricData(E)/g_eff language unless the required metric-data token and promotion gates are explicitly satisfied."
+
+  - class_id: "m_src_underclaim"
+    plan_required_class_number: 4
+    title: "M_src underclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bM_src absent\\b"
+      - pattern: "\\bM_src missing\\b"
+      - pattern: "\\bno M_src\\b"
+      - pattern: "\\bM_src rejected\\b"
+      - pattern: "\\bM_src accepted\\b"
+    bad_phrases:
+      - "M_src absent"
+      - "M_src missing"
+      - "M_src rejected"
+      - "M_src accepted"
+    corrective_language: "Distinguish existing source-side structures from absent downstream matter semantics, coupling law, MetricData(E), or g_eff promotion."
+
+  - class_id: "rr_e_transport_source_law_overclaim"
+    plan_required_class_number: 5
+    title: "RR_ETransportCompletenessOrInvarianceLaw_v1 source-law overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bRR_ETransportCompletenessOrInvarianceLaw_v1 source law adopted\\b"
+      - pattern: "\\bRR_ETransportCompletenessOrInvarianceLaw_v1 adopted\\b"
+      - pattern: "\\bRR_E transport law adopted\\b"
+      - pattern: "\\bRR_E transport completeness law adopted\\b"
+      - pattern: "\\bRR_E invariance law adopted\\b"
+    bad_phrases:
+      - "RR_ETransportCompletenessOrInvarianceLaw adopted"
+      - "RR_ETransportCompletenessOrInvarianceLaw_v1 adopted"
+      - "RR_E transport law adopted"
+    corrective_language: "Use scoped source-extension RR_E transport-completeness or invariance evidence/precondition language and state explicitly that the source law is not adopted."
+
+  - class_id: "unrestricted_rr_e_irrelevance_overclaim"
+    plan_required_class_number: 6
+    title: "Unrestricted RR_E irrelevance overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bRR_E irrelevance proved\\b"
+      - pattern: "\\bunrestricted RR_E irrelevance proved\\b"
+      - pattern: "\\bRR_E collapsed\\b"
+      - pattern: "\\bRR_E collapses by detector semantics\\b"
+      - pattern: "\\bRR_E removed as irrelevant\\b"
+    bad_phrases:
+      - "RR_E irrelevance proved"
+      - "RR_E collapsed"
+    corrective_language: "State only the scoped precondition/evidence status; unrestricted RR_E irrelevance and detector-semantics collapse remain unproved."
+
+  - class_id: "positive_ms_profile_adoption_overclaim"
+    plan_required_class_number: 7
+    title: "PositiveMSProfile_v1 adoption overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bPositiveMSProfile_v1 adopted\\b"
+      - pattern: "\\bPositiveMSProfile adopted\\b"
+      - pattern: "\\bpositive matter-semantics profile adopted\\b"
+      - pattern: "\\bpositive matter semantics profile adopted\\b"
+    bad_phrases:
+      - "PositiveMSProfile adopted"
+      - "PositiveMSProfile_v1 adopted"
+    corrective_language: "Use proposal-only or source-extension evidence wording unless protected adoption authority exists."
+
+  - class_id: "source_matter_semantics_adoption_readiness_law_overclaim"
+    plan_required_class_number: 8
+    title: "SourceMatterSemanticsAdoptionReadinessLaw_v1 law-adoption overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bSourceMatterSemanticsAdoptionReadinessLaw_v1 adopted\\b"
+      - pattern: "\\bmatter semantics accepted\\b"
+      - pattern: "\\bmatter semantics adopted\\b"
+      - pattern: "\\bdetector semantics accepted\\b"
+      - pattern: "\\bdetector semantics adopted\\b"
+      - pattern: "\\bcoupling law established\\b"
+    bad_phrases:
+      - "matter semantics accepted"
+      - "matter semantics adopted"
+      - "detector semantics accepted"
+      - "coupling law established"
+    corrective_language: "Separate matter-semantics readiness or scoped evidence from actual law adoption, detector semantics, or coupling-law establishment."
+
+  - class_id: "einstein_equation_overclaim"
+    plan_required_class_number: 9
+    title: "Einstein-equation overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bGR derived\\b"
+      - pattern: "\\bEinstein equations next by implication\\b"
+      - pattern: "\\bEinstein equations derived\\b"
+      - pattern: "\\bEinstein equations established\\b"
+      - pattern: "\\bEinstein equation derivation complete\\b"
+    bad_phrases:
+      - "GR derived"
+      - "Einstein equations next by implication"
+    corrective_language: "State that Einstein-equation derivation remains blocked until matter coupling, stress-energy semantics, matter action, and gate criteria are satisfied."
+
+  - class_id: "benchmark_overclaim"
+    plan_required_class_number: 10
+    title: "Benchmark overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bbenchmark recovered\\b"
+      - pattern: "\\bbenchmark promoted\\b"
+      - pattern: "\\bexact-GR benchmark recovered\\b"
+      - pattern: "\\bGR benchmark closed\\b"
+      - pattern: "\\bbenchmark Gate Chair closure\\b"
+    bad_phrases:
+      - "benchmark recovered"
+    corrective_language: "Use benchmark-obligation or benchmark-remains-blocked language unless explicit benchmark promotion and Gate Chair closure are present."
+
+  - class_id: "validator_as_proof"
+    plan_required_class_number: 11
+    title: "Validator-as-proof overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bvalidated proof\\b"
+      - pattern: "\\bvalidator proves\\b"
+      - pattern: "\\bvalidation proves\\b"
+      - pattern: "\\bpassing tests proves the physics\\b"
+      - pattern: "\\bvalidation equals proof\\b"
+    bad_phrases:
+      - "validated proof"
+    corrective_language: "Describe validators as consistency or workflow checks, not proof authorities."
+
+  - class_id: "registry_as_proof"
+    plan_required_class_number: 12
+    title: "Registry-as-proof overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bregistry proves\\b"
+      - pattern: "\\bregistry establishes\\b"
+      - pattern: "\\bregistry entry proves\\b"
+      - pattern: "\\bregistered means proved\\b"
+      - pattern: "\\bregistry authority proves\\b"
+    bad_phrases:
+      - "registry proves"
+    corrective_language: "Describe registries as provenance and routing authority; physics authority remains with registered sources and protected gates."
+
+  - class_id: "gate_authority_laundering"
+    plan_required_class_number: 13
+    title: "Gate-authority laundering"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bGate Chair pending means accepted\\b"
+      - pattern: "\\bgate pending means accepted\\b"
+      - pattern: "\\bhuman gate pending means adopted\\b"
+      - pattern: "\\bawaiting approval means accepted\\b"
+      - pattern: "\\bapproved to review means accepted\\b"
+    bad_phrases:
+      - "Gate Chair pending means accepted"
+    corrective_language: "State that pending, authorized-to-review, or routed-to-gate status is not adoption or acceptance."
+
+  - class_id: "generated_derivative_authority"
+    plan_required_class_number: 14
+    title: "Generated-derivative authority overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bgenerated derivative proves\\b"
+      - pattern: "\\bwiki note proves\\b"
+      - pattern: "\\bPDF proves\\b"
+      - pattern: "\\bHTML explainer proves\\b"
+      - pattern: "\\bgenerated summary is authority\\b"
+    bad_phrases:
+      - "generated derivative proves"
+      - "wiki note proves"
+    corrective_language: "State that generated derivatives are human/agent reading aids and source-registry-backed derivatives only."
+
+  - class_id: "audit_ready_as_adoption"
+    plan_required_class_number: 15
+    title: "audit_ready as adoption"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\baudit_ready means adoptable\\b"
+      - pattern: "\\baudit-ready means adoptable\\b"
+      - pattern: "\\baudit_ready means adopted\\b"
+      - pattern: "\\baudit ready means accepted\\b"
+      - pattern: "\\baudit status proves adoption\\b"
+    bad_phrases:
+      - "audit_ready means adoptable"
+    corrective_language: "Use audit-ready only as readiness for review, not adoption, acceptance, or source-law status."
+
+  - class_id: "no_target_certificate_as_positive_semantics"
+    plan_required_class_number: 16
+    title: "No-target certificate as positive semantics"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bno-target certificate supplies matter semantics\\b"
+      - pattern: "\\bno target certificate supplies matter semantics\\b"
+      - pattern: "\\bno-target certificate proves matter semantics\\b"
+      - pattern: "\\babsence certificate provides detector semantics\\b"
+      - pattern: "\\bnegative certificate establishes positive semantics\\b"
+    bad_phrases:
+      - "no-target certificate supplies matter semantics"
+    corrective_language: "Treat no-target certificates as negative scoped evidence only; do not convert them into positive matter or detector semantics."
+
+  - class_id: "scoped_evidence_or_precondition_as_adoption"
+    plan_required_class_number: 17
+    title: "Scoped evidence or precondition as adoption"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bscoped evidence means adoption\\b"
+      - pattern: "\\bscoped precondition means adoption\\b"
+      - pattern: "\\bevidence precondition means source law\\b"
+      - pattern: "\\bprecondition accepted as law\\b"
+      - pattern: "\\bsource-extension evidence means source law\\b"
+    bad_phrases:
+      - "source-extension evidence means source law"
+      - "scoped evidence means adoption"
+    corrective_language: "Preserve the exact scoped evidence/precondition status and explicitly deny law adoption unless a protected gate says otherwise."
+
+  - class_id: "global_no_go_or_rejection_overclaim"
+    plan_required_class_number: 18
+    title: "Global no-go or global rejection overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bsource-extension impossible\\b"
+      - pattern: "\\bfuture source-extension impossible\\b"
+      - pattern: "\\bglobal no-go proved\\b"
+      - pattern: "\\btheory rejected\\b"
+      - pattern: "\\bglobal theory rejection\\b"
+      - pattern: "\\bderivation impossible\\b"
+    bad_phrases:
+      - "source-extension impossible"
+      - "global no-go proved"
+      - "theory rejected"
+    corrective_language: "Use blocked-adoption/open-continuation or scoped-obstruction language unless a separate no-go theorem exists."
+
+required_phrase_coverage:
+  plan_phrases:
+    - phrase: "matter coupling accepted"
+      class_id: "matter_coupling_overclaim"
+    - phrase: "matter coupling solved"
+      class_id: "matter_coupling_overclaim"
+    - phrase: "matter coupling derived"
+      class_id: "matter_coupling_overclaim"
+    - phrase: "universal coupling established"
+      class_id: "matter_coupling_overclaim"
+    - phrase: "g_eff metric derived"
+      class_id: "g_eff_overclaim"
+    - phrase: "Lorentzian metric constructed"
+      class_id: "g_eff_overclaim"
+    - phrase: "RR_ETransportCompletenessOrInvarianceLaw adopted"
+      class_id: "rr_e_transport_source_law_overclaim"
+    - phrase: "RR_E transport law adopted"
+      class_id: "rr_e_transport_source_law_overclaim"
+    - phrase: "RR_E irrelevance proved"
+      class_id: "unrestricted_rr_e_irrelevance_overclaim"
+    - phrase: "RR_E collapsed"
+      class_id: "unrestricted_rr_e_irrelevance_overclaim"
+    - phrase: "PositiveMSProfile adopted"
+      class_id: "positive_ms_profile_adoption_overclaim"
+    - phrase: "matter semantics accepted"
+      class_id: "source_matter_semantics_adoption_readiness_law_overclaim"
+    - phrase: "matter semantics adopted"
+      class_id: "source_matter_semantics_adoption_readiness_law_overclaim"
+    - phrase: "detector semantics accepted"
+      class_id: "source_matter_semantics_adoption_readiness_law_overclaim"
+    - phrase: "coupling law established"
+      class_id: "source_matter_semantics_adoption_readiness_law_overclaim"
+    - phrase: "GR derived"
+      class_id: "einstein_equation_overclaim"
+    - phrase: "Einstein equations next by implication"
+      class_id: "einstein_equation_overclaim"
+    - phrase: "benchmark recovered"
+      class_id: "benchmark_overclaim"
+    - phrase: "validated proof"
+      class_id: "validator_as_proof"
+    - phrase: "registry proves"
+      class_id: "registry_as_proof"
+    - phrase: "Gate Chair pending means accepted"
+      class_id: "gate_authority_laundering"
+    - phrase: "audit_ready means adoptable"
+      class_id: "audit_ready_as_adoption"
+    - phrase: "no-target certificate supplies matter semantics"
+      class_id: "no_target_certificate_as_positive_semantics"
+    - phrase: "source-extension evidence means source law"
+      class_id: "scoped_evidence_or_precondition_as_adoption"
+
+next_linter_contract:
+  route: "P3-T02"
+  transformable: true
+  expected_inputs:
+    - "surface path"
+    - "surface class"
+    - "raw text"
+  required_engine_features:
+    - "case-insensitive exact phrase matching"
+    - "regular-expression phrase matching"
+    - "near-term matching for bare status terms near high-risk objects"
+    - "surface-aware severity mapping"
+    - "intentional bad-example override"
+    - "historical-artifact warning downgrade"
+    - "line-number and phrase reporting"
+    - "machine-readable JSON output"
+  required_failure_policy:
+    current_public_surface: "fail on hard_fail_current_public"
+    current_control_surface: "fail on hard_fail_current_control"
+    intentional_bad_example_surface: "warn only"
+    historical_artifact_surface: "warn only"
+  output_fields:
+    - "path"
+    - "line"
+    - "class_id"
+    - "matched_text"
+    - "severity"
+    - "surface_class"
+    - "corrective_language"
+
+acceptance_receipt:
+  required_class_count: 18
+  implemented_class_count: 18
+  required_phrases_mapped: true
+  severity_assignments_present: true
+  public_overclaims_hard_fail_candidates: true
+  historical_warnings_separated: true
+  proof_authority: false
+  physics_promotion_authorized: false
