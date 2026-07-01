@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-018` and `handoff-0427`.
+`RT-20260701-019` and `handoff-0428`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-018` |
-| Latest handoff ID | `handoff-0427` |
-| Current status | `v13_p4_t04_positive_source_matter_semantics_profile_stress_survived_pending_selector_no_adoption` |
-| Current route family | post v13 p4 t04 positive source matter semantics stress to p4 t05 selector |
+| Active task ID | `RT-20260701-019` |
+| Latest handoff ID | `handoff-0428` |
+| Current status | `v13_p4_t05_positive_source_matter_semantics_selector_requires_narrow_gate_no_adoption` |
+| Current route family | post v13 p4 t05 positive source matter semantics selector to gate chair |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P4-T05 post-stress selector as bounded draft/control packet |
-| Next recommended action | Run one bounded v13 P4-T05 theoretical-continuation-selector packet to classify the post-stress route for PositiveMSProfile_v1 before Gate Chair review PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion routes. |
+| Required next authority | narrow Gate Chair evidence/precondition review of PositiveMSProfile_v1 only |
+| Next recommended action | Run one bounded Gate Chair packet, under the current user authorization, to decide only whether PositiveMSProfile_v1 may be accepted as scoped source-extension positive source-matter-semantics profile evidence/precondition under its declared source-side and fail-closed scope. Do not route to PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion work before that protected review. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-018/00_TASK.yaml`.
-- Active task objective: Stress-test audited PositiveMSProfile_v1 under source relabeling finite variation certificate deletion semantic-label deletion degeneracy RR_E pressure process-authority pressure g_eff and MetricData(E) import pressure detector-semantics pressure stress-energy pressure matter-action pressure and adoption pressure before selector or promotion routes.
-- Latest handoff path: `research_control/handoffs/handoff-0427.yaml`.
-- Latest handoff summary: RT-20260701-018 completed v13 P4-T04 by stress-testing PositiveMSProfile_v1. The candidate stress-survived conditionally as bridge_facing_candidate_path pending P4-T05 selector. Source relabeling and finite variation preserve the profile only under source-defined transport and fail-closed branches; certificate deletion semantic-label deletion degeneracy RR_E collapse process-authority g_eff MetricData(E) detector-semantics stress-energy matter-action and adoption pressure are blocked or fail closed. No adoption or physics promotion occurred.
-- Current route family: post v13 p4 t04 positive source matter semantics stress to p4 t05 selector.
-- Next recommended action: Run one bounded v13 P4-T05 theoretical-continuation-selector packet to classify the post-stress route for PositiveMSProfile_v1 before Gate Chair review PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion routes.
+- Active task path: `research_control/tasks/RT-20260701-019/00_TASK.yaml`.
+- Active task objective: Classify the post-stress route for PositiveMSProfile_v1 after P4-T04 stress survival, consider the allowed P4-T05 route families, and select exactly one next bounded packet without adoption or downstream promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0428.yaml`.
+- Latest handoff summary: RT-20260701-019 completed v13 P4-T05 by classifying the post-stress route for PositiveMSProfile_v1. The selector selected one next bounded route: a narrow Gate Chair evidence/precondition review of PositiveMSProfile_v1 as scoped source-extension positive source-matter-semantics profile evidence only. No Gate Chair verdict, adoption, or physics promotion occurred.
+- Current route family: post v13 p4 t05 positive source matter semantics selector to gate chair.
+- Next recommended action: Run one bounded Gate Chair packet, under the current user authorization, to decide only whether PositiveMSProfile_v1 may be accepted as scoped source-extension positive source-matter-semantics profile evidence/precondition under its declared source-side and fail-closed scope. Do not route to PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion work before that protected review.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P4-T05 theoretical-continuation-selector packet to classify the post-stress route for PositiveMSProfile_v1 before Gate Chair review PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion routes.
+Run one bounded Gate Chair packet, under the current user authorization, to decide only whether PositiveMSProfile_v1 may be accepted as scoped source-extension positive source-matter-semantics profile evidence/precondition under its declared source-side and fail-closed scope. Do not route to PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion work before that protected review.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-018`;
-- latest handoff: `handoff-0427`;
-- current status: `v13_p4_t04_positive_source_matter_semantics_profile_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260701-019`;
+- latest handoff: `handoff-0428`;
+- current status: `v13_p4_t05_positive_source_matter_semantics_selector_requires_narrow_gate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0427.yaml`
-- `research_control/tasks/RT-20260701-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0428.yaml`
+- `research_control/tasks/RT-20260701-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0427*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0428*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations

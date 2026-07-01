@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T10:05:51Z`
-- Source fingerprint: `09093508dad168d67c4acdba467499aecb827aad045b6044455a2aed81ddb0d6`
-- Nodes: `9432`
-- Edges: `39939`
+- Generated from tracked state as of: `2026-07-01T10:32:58Z`
+- Source fingerprint: `88d773f9a8bca65ab81ffe53bfbb7ab1eb43898bdf7e8c13db04868bad40cc82`
+- Nodes: `9453`
+- Edges: `40043`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 563 |
+| `completion_yaml` | 564 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 427 |
+| `handoff_yaml` | 428 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 563 |
+| `agent_job` | `support_only` | 564 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4763 |
+| `artifact` | `support_only` | 4777 |
 | `blocked_burden` | `blocked` | 1132 |
-| `claim_boundary` | `support_only` | 564 |
-| `draft_control_candidate` | `draft_control` | 446 |
-| `draft_control_candidate` | `proposal_only` | 64 |
+| `claim_boundary` | `support_only` | 565 |
+| `draft_control_candidate` | `draft_control` | 447 |
+| `draft_control_candidate` | `proposal_only` | 65 |
 | `draft_control_candidate` | `science_draft` | 34 |
 | `frozen_negative` | `frozen_negative` | 92 |
 | `gate_chair_verdict` | `human_gated` | 28 |
-| `handoff` | `support_only` | 427 |
+| `handoff` | `support_only` | 428 |
 | `human_gated_object` | `human_gated` | 260 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -52,13 +52,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 61 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 23 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 24 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 245 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 24 |
-| `task` | `support_only` | 511 |
+| `task` | `support_only` | 512 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260701-018`
-- Latest handoff: `handoff-0427`
-- Handoff path: `research_control/handoffs/handoff-0427.yaml`
-- Next action: Run one bounded v13 P4-T05 theoretical-continuation-selector packet to classify the post-stress route for PositiveMSProfile_v1 before Gate Chair review PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion routes.
+- Active task: `RT-20260701-019`
+- Latest handoff: `handoff-0428`
+- Handoff path: `research_control/handoffs/handoff-0428.yaml`
+- Next action: Run one bounded Gate Chair packet, under the current user authorization, to decide only whether PositiveMSProfile_v1 may be accepted as scoped source-extension positive source-matter-semantics profile evidence/precondition under its declared source-side and fail-closed scope. Do not route to PositiveMSProfile_v1 adoption source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter-coupling Einstein-equation benchmark or promotion work before that protected review.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
