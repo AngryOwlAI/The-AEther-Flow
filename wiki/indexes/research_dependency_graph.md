@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-01T14:42:21Z`
-- Source fingerprint: `28441f8b05257f61e9901966d851a2f11923bd2421a2a82bd43752963dfdc9d9`
-- Nodes: `9702`
-- Edges: `41192`
+- Generated from tracked state as of: `2026-07-01T15:20:03Z`
+- Source fingerprint: `0af4537c375357a936172c2efc14696475cc76a1324b1fb07ebba5684537c319`
+- Nodes: `9729`
+- Edges: `41329`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 574 |
+| `completion_yaml` | 575 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 438 |
+| `handoff_yaml` | 439 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 6 |
-| `agent_job` | `support_only` | 574 |
+| `agent_job` | `support_only` | 575 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 4921 |
-| `blocked_burden` | `blocked` | 1159 |
-| `claim_boundary` | `support_only` | 575 |
+| `artifact` | `support_only` | 4938 |
+| `blocked_burden` | `blocked` | 1161 |
+| `claim_boundary` | `support_only` | 576 |
 | `draft_control_candidate` | `draft_control` | 463 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 38 |
 | `frozen_negative` | `frozen_negative` | 96 |
-| `gate_chair_verdict` | `human_gated` | 29 |
-| `handoff` | `support_only` | 438 |
-| `human_gated_object` | `human_gated` | 261 |
+| `gate_chair_verdict` | `human_gated` | 30 |
+| `handoff` | `support_only` | 439 |
+| `human_gated_object` | `human_gated` | 262 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -52,13 +52,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 63 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 24 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 25 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 253 |
+| `source_ontology_object` | `support_only` | 254 |
 | `task` | `human_gated` | 28 |
 | `task` | `science_draft` | 25 |
-| `task` | `support_only` | 521 |
+| `task` | `support_only` | 522 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | V13 Gate Chair accepted PositiveMSProfile_v1 only as scoped source-extension positive source-matter-semantics profile evidence/precondition. No source-law Posit |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | V13 Gate Chair accepted RR_ETransportCompletenessOrInvarianceLaw_v1 only as scoped source-extension RR_E transport-completeness or invariance evidence/precondit |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260701-029`
-- Latest handoff: `handoff-0438`
-- Handoff path: `research_control/handoffs/handoff-0438.yaml`
-- Next action: Run one bounded protected Gate Chair source-extension evidence-status review of RR_ETransportCompletenessOrInvarianceLaw_v1 under the user's standing human-gate authorization before P5-T06 boundary update source-law adoption matter-semantics detector-semantics coupling-law matter-coupling Einstein-equation benchmark or promotion work.
+- Active task: `RT-20260701-030`
+- Latest handoff: `handoff-0439`
+- Handoff path: `research_control/handoffs/handoff-0439.yaml`
+- Next action: Run one bounded v13 P5-T06 RR_E boundary update or equivalent current-frontier theorem-inventory synchronization packet before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling Einstein-equation benchmark or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -367,6 +367,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-017/artifacts/positive_source_matter_semantics_profile_smuggling_audit_v1.tex`
 - `TEX-V13-P4-T04-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-REFUTER-STRESS` `research_control/tasks/RT-20260701-018/artifacts/positive_source_matter_semantics_profile_refuter_stress_v1.tex`
 - `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-COMPLETENESS-OR-INVARIANCE-LAW-FORMALIZER` `research_control/tasks/RT-20260701-027/artifacts/rr_e_transport_completeness_or_invariance_law_formalizer_v1.tex`
+- `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex`
 - `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260701-029/artifacts/rr_e_transport_law_refuter_stress_v1.tex`
 - `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-028/artifacts/rr_e_transport_law_smuggling_audit_v1.tex`
 - `TEX-V13-P5-T01-RR-E-THEOREM-TARGET-FORMALIZER` `research_control/tasks/RT-20260701-022/artifacts/rr_e_theorem_target_formalizer_v1.tex`
@@ -974,6 +975,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V13-P4-T03-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-SMUGGLING-AUDIT` `wiki/tex/tex-v13-p4-t03-positive-source-matter-semantics-profile-smuggling-audit.md`
 - `WIKI-TEX-V13-P4-T04-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-REFUTER-STRESS` `wiki/tex/tex-v13-p4-t04-positive-source-matter-semantics-profile-refuter-stress.md`
 - `WIKI-TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-COMPLETENESS-OR-INVARIANCE-LAW-FORMALIZER` `wiki/tex/tex-v13-p5-followup-rr-e-transport-completeness-or-invariance-law-formalizer.md`
+- `WIKI-TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-GATE-CHAIR-REVIEW` `wiki/tex/tex-v13-p5-followup-rr-e-transport-law-gate-chair-review.md`
 - `WIKI-TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-REFUTER-STRESS` `wiki/tex/tex-v13-p5-followup-rr-e-transport-law-refuter-stress.md`
 - `WIKI-TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-v13-p5-followup-rr-e-transport-law-smuggling-audit.md`
 - `WIKI-TEX-V13-P5-T01-RR-E-THEOREM-TARGET-FORMALIZER` `wiki/tex/tex-v13-p5-t01-rr-e-theorem-target-formalizer.md`
