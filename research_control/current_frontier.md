@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-025` and `handoff-0434`.
+`RT-20260701-026` and `handoff-0435`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-025` |
-| Latest handoff ID | `handoff-0434` |
-| Current status | `v13_p5_t04_rr_e_scoped_obstruction_stress_survived_pending_selector_or_freeze_no_adoption` |
-| Current route family | post v13 p5 t04 rr e scoped obstruction route to selector or freeze |
+| Active task ID | `RT-20260701-026` |
+| Latest handoff ID | `handoff-0435` |
+| Current status | `v13_p5_t05_rr_e_selector_selects_ontology_law_packet_no_adoption` |
+| Current route family | post v13 p5 t05 rr e selector to ontology law packet no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P5-T05 RR_E post-stress selector or freeze |
-| Next recommended action | Run one bounded v13 P5-T05 RR_E post-stress selector-or-freeze packet under theoretical-continuation-selector@0.1.0 before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route. |
+| Required next authority | bounded proposal-only ontology-law formalization or comparison for missing RR_E transport completeness or invariance law |
+| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to formalize or compare a proposal-only source-side RR_E transport completeness or invariance law under no-target-import constraints before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-025/00_TASK.yaml`.
-- Active task objective: Execute one bounded v13 P5-T04 Refuter packet to stress the audited P5-T02 RR_E theorem attempt or obstruction across same-support different-RR_E pairs transported source relabeling finite RR_E variation certificate deletion detector-response pressure g_eff MetricData(E) pressure benchmark pressure and process-authority pressure before selector matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion routes.
-- Latest handoff path: `research_control/handoffs/handoff-0434.yaml`.
-- Latest handoff summary: RT-20260701-025 completed v13 P5-T04 as a Refuter RR_E theorem or obstruction stress packet. It found a scoped current-ontology obstruction: the conditional factor-through lemma remains conditional on explicit source transport invariance or factorization and the finite two-record RR_ESeparationObstructionWitness_v1 still defeats unrestricted RR_E irrelevance for arbitrary source-side F under current inputs. No RR_ETransportCompletenessOrInvarianceLaw_v1 adoption source-law adoption detector semantics matter semantics matter coupling MetricData(E) g_eff Einstein equations benchmark promotion completed derivation future source-extension impossibility or global theory rejection occurred.
-- Current route family: post v13 p5 t04 rr e scoped obstruction route to selector or freeze.
-- Next recommended action: Run one bounded v13 P5-T05 RR_E post-stress selector-or-freeze packet under theoretical-continuation-selector@0.1.0 before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
+- Active task path: `research_control/tasks/RT-20260701-026/00_TASK.yaml`.
+- Active task objective: Execute one bounded v13 P5-T05 Theoretical Continuation Selector packet to classify whether the P5-T04 RR_E scoped obstruction routes to source-only repair ontology-law formalization local freeze protected human-gated ontology question or another bounded non-promotional packet.
+- Latest handoff path: `research_control/handoffs/handoff-0435.yaml`.
+- Latest handoff summary: RT-20260701-026 completed v13 P5-T05 as a Theoretical Continuation Selector RR_E post-stress selector-or-freeze packet. It classified OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING as derivation_critical_missing_source_law and selected ontology-law-research-packet with next execution role ontology-formalizer@0.2.0. The selected route is proposal-only source-side formalization or comparison of RR_ETransportCompletenessOrInvarianceLaw_v1. No RR_ETransportCompletenessOrInvarianceLaw_v1 definition or adoption source-law adoption detector semantics matter semantics matter coupling MetricData(E) g_eff Einstein equations benchmark promotion completed derivation future source-extension impossibility or global theory rejection occurred.
+- Current route family: post v13 p5 t05 rr e selector to ontology law packet no adoption.
+- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to formalize or compare a proposal-only source-side RR_E transport completeness or invariance law under no-target-import constraints before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P5-T05 RR_E post-stress selector-or-freeze packet under theoretical-continuation-selector@0.1.0 before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
+Run one bounded Ontology Formalizer ontology-law-research-packet to formalize or compare a proposal-only source-side RR_E transport completeness or invariance law under no-target-import constraints before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-025`;
-- latest handoff: `handoff-0434`;
-- current status: `v13_p5_t04_rr_e_scoped_obstruction_stress_survived_pending_selector_or_freeze_no_adoption`;
+- active task: `RT-20260701-026`;
+- latest handoff: `handoff-0435`;
+- current status: `v13_p5_t05_rr_e_selector_selects_ontology_law_packet_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0434.yaml`
-- `research_control/tasks/RT-20260701-025/00_TASK.yaml`
+- `research_control/handoffs/handoff-0435.yaml`
+- `research_control/tasks/RT-20260701-026/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0434*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0435*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
