@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260701-024` and `handoff-0433`.
+`RT-20260701-025` and `handoff-0434`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260701-024` |
-| Latest handoff ID | `handoff-0433` |
-| Current status | `v13_p5_t03_rr_e_theorem_obstruction_audited_source_pure_as_written_pending_stress_no_adoption` |
-| Current route family | post v13 p5 t03 rr e smuggling audit route to refuter stress |
+| Active task ID | `RT-20260701-025` |
+| Latest handoff ID | `handoff-0434` |
+| Current status | `v13_p5_t04_rr_e_scoped_obstruction_stress_survived_pending_selector_or_freeze_no_adoption` |
+| Current route family | post v13 p5 t04 rr e scoped obstruction route to selector or freeze |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: unchanged |
-| Required next authority | v13 P5-T04 RR_E Refuter stress |
-| Next recommended action | Run one bounded v13 P5-T04 RR_E Refuter stress packet under refuter@0.2.0 before any selector matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route. |
+| Required next authority | v13 P5-T05 RR_E post-stress selector or freeze |
+| Next recommended action | Run one bounded v13 P5-T05 RR_E post-stress selector-or-freeze packet under theoretical-continuation-selector@0.1.0 before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260701-024/00_TASK.yaml`.
-- Active task objective: Execute one bounded v13 P5-T03 Smuggling Auditor packet to audit the P5-T02 RR_E theorem attempt or obstruction for detector semantics empirical calibration target metric process authority evidence-as-adoption unrestricted-irrelevance overread and global no-go overread before Refuter stress selector matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion routes.
-- Latest handoff path: `research_control/handoffs/handoff-0433.yaml`.
-- Latest handoff summary: RT-20260701-024 completed v13 P5-T03 as a Smuggling Auditor RR_E theorem or obstruction audit packet. It found the P5-T02 conditional factor-through lemma finite two-record RR_ESeparationObstructionWitness_v1 countermodel and RR_E_underdetermination_obstruction source-pure as written with explicit guards pending Refuter stress. No detector semantics empirical calibration target metric process authority generated-output authority evidence-as-adoption unrestricted theorem proof source-law adoption or downstream GR promotion occurred.
-- Current route family: post v13 p5 t03 rr e smuggling audit route to refuter stress.
-- Next recommended action: Run one bounded v13 P5-T04 RR_E Refuter stress packet under refuter@0.2.0 before any selector matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
+- Active task path: `research_control/tasks/RT-20260701-025/00_TASK.yaml`.
+- Active task objective: Execute one bounded v13 P5-T04 Refuter packet to stress the audited P5-T02 RR_E theorem attempt or obstruction across same-support different-RR_E pairs transported source relabeling finite RR_E variation certificate deletion detector-response pressure g_eff MetricData(E) pressure benchmark pressure and process-authority pressure before selector matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion routes.
+- Latest handoff path: `research_control/handoffs/handoff-0434.yaml`.
+- Latest handoff summary: RT-20260701-025 completed v13 P5-T04 as a Refuter RR_E theorem or obstruction stress packet. It found a scoped current-ontology obstruction: the conditional factor-through lemma remains conditional on explicit source transport invariance or factorization and the finite two-record RR_ESeparationObstructionWitness_v1 still defeats unrestricted RR_E irrelevance for arbitrary source-side F under current inputs. No RR_ETransportCompletenessOrInvarianceLaw_v1 adoption source-law adoption detector semantics matter semantics matter coupling MetricData(E) g_eff Einstein equations benchmark promotion completed derivation future source-extension impossibility or global theory rejection occurred.
+- Current route family: post v13 p5 t04 rr e scoped obstruction route to selector or freeze.
+- Next recommended action: Run one bounded v13 P5-T05 RR_E post-stress selector-or-freeze packet under theoretical-continuation-selector@0.1.0 before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
 
 ## Matter-Coupling Boundary
 
@@ -132,7 +132,7 @@ source if this summary drifts.
 The immediate next route is:
 
 ```text
-Run one bounded v13 P5-T04 RR_E Refuter stress packet under refuter@0.2.0 before any selector matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
+Run one bounded v13 P5-T05 RR_E post-stress selector-or-freeze packet under theoretical-continuation-selector@0.1.0 before any source-law adoption matter-semantics detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark or promotion route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -143,9 +143,9 @@ authority, or completed-derivation authority.
 
 Latest tracked state records:
 
-- active task: `RT-20260701-024`;
-- latest handoff: `handoff-0433`;
-- current status: `v13_p5_t03_rr_e_theorem_obstruction_audited_source_pure_as_written_pending_stress_no_adoption`;
+- active task: `RT-20260701-025`;
+- latest handoff: `handoff-0434`;
+- current status: `v13_p5_t04_rr_e_scoped_obstruction_stress_survived_pending_selector_or_freeze_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -162,8 +162,8 @@ Latest tracked state records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0433.yaml`
-- `research_control/tasks/RT-20260701-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0434.yaml`
+- `research_control/tasks/RT-20260701-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 
 Memory, wiki notes, semantic extracts, Obsidian notes, PDFs, generated HTML,
@@ -178,7 +178,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, June 28). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, June 28). *Handoff 0433*
+The AEther-Flow Research Project. (2026, June 28). *Handoff 0434*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, June 29). *Recommendations
