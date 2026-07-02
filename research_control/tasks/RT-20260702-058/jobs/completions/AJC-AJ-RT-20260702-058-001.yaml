@@ -1,0 +1,326 @@
+completion_id: "AJC-AJ-RT-20260702-058-001"
+job_id: "AJ-RT-20260702-058-001"
+task_id: "RT-20260702-058"
+source_role_id: "ontology-formalizer"
+completed_at: "2026-07-02T20:20:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P2-T03"
+  plan_phase_id: "P2"
+  implemented_task_scope: "Proved the narrow source-side matter-semantics equivalence theorem only as a conditional source-side theorem candidate under explicit certificates and recorded fail-closed branches."
+  downstream_tasks_not_implemented:
+    - "P2-T04 smuggling audit"
+    - "P2-T05 Refuter stress"
+    - "P2-T06 post-theorem selector"
+    - "any v15 downstream phase beyond P2-T03"
+  all_applicable_plan_tasks_proven: false
+  p2_t01_completed: true
+  p2_t02_completed: true
+  p2_t03_completed: true
+  p2_t04_completed: false
+output_paths:
+  - "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  - "research_control/tasks/RT-20260702-058/artifacts/child_phys_math_p2_t03_theorem.yaml"
+  - "research_control/tasks/RT-20260702-058/artifacts/child_phys_phil_p2_t03_theorem.yaml"
+  - "research_control/tasks/RT-20260702-058/artifacts/parent_conflict_review_p2_t03_theorem.yaml"
+  - "research_control/tasks/RT-20260702-058/artifacts/parent_fusion_notes_p2_t03_theorem.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-058/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-058/DDR-20260702-058.md"
+  - "research_control/tasks/RT-20260702-058/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-058/jobs/AJ-RT-20260702-058-001.yaml"
+  - "research_control/tasks/RT-20260702-058/jobs/completions/AJC-AJ-RT-20260702-058-001.yaml"
+  - "research_control/tasks/RT-20260702-058/roles/ontology-formalizer@0.2.0--RT-20260702-058.yaml"
+  - "research_control/handoffs/handoff-0511.yaml"
+  - "research_control/handoffs/handoff-0511.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0510.yaml"
+  - "research_control/handoffs/handoff-0510.md"
+  - "research_control/tasks/RT-20260702-057/artifacts/p2_t01_theorem_packet_setup.md"
+  - "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "research_control/tasks/RT-20260630-013/artifacts/matter_coupling_precondition_assembly_source_extension_evidence_gate_chair_review_v1.tex"
+  - "research_control/tasks/RT-20260630-020/artifacts/source_coupling_law_candidate_source_extension_evidence_gate_chair_review_v1.tex"
+  - "research_control/tasks/RT-20260630-056/artifacts/ms_stable_matter_semantics_bridge_source_extension_evidence_gate_chair_review_v1.tex"
+  - "research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex"
+  - "research_control/tasks/RT-20260701-020/artifacts/positive_source_matter_semantics_profile_gate_chair_review_v1.tex"
+  - "research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=550 relationship_row_count=2921 semantic_row_count=550 vault_row_count=550"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json | exit_code=0 | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v15 P2 NarrowMSCertEq theorem explicit certificates\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex --json | exit_code=0 | primary_registry=TEX_SOURCE_REGISTRY.csv returned_object_ids=TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260702-057 latest_handoff=handoff-0510 boundary=director_decision_required"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted v15 lookup returned canonical plan object"
+      - "targeted theorem route search returned current-frontier object"
+      - "targeted manifest lookup returned registered TeX manifest object"
+      - "continue_research.py resolved handoff-0510 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P2-T03 theorem artifact created"
+      - "theorem status is conditional_or_scoped_source_side_equivalence_theorem_candidate"
+      - "certificate-gap and malformed/imported-certificate fail-closed branches recorded"
+      - "P2-T04 smuggling audit intentionally not executed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph rerender required after handoff-0511 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap required after registering the P2-T03 TeX artifact and task-local outputs"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "documentation-impact validation required before checkpoint"
+      - "research-control validation required before checkpoint"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is required before this transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+tests_added_or_updated: []
+verdict: "p2_t03_conditional_theorem_candidate_pending_smuggling_audit"
+coherent_resolution_summary: "RT-20260702-058 completes the v15 P2-T03 theorem attempt by proving NarrowMSCertEq_v1 only as a conditional source-side equivalence theorem candidate under explicit source certificates. It records certificate-gap and malformed/imported-certificate fail-closed branches and routes next to P2-T04 smuggling audit."
+next_recommendation: "Run one bounded v15 P2-T04 smuggling-auditor audit of the RT-20260702-058 theorem packet."
+new_mathematical_payload:
+  - payload_id: "NarrowMSCertEq_v1_conditional_theorem_candidate"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    artifact_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+    status: "conditional_or_scoped_source_side_equivalence_theorem_candidate"
+    summary: "Proves that declared source-side matter-semantics objects are equivalent under EqMS_src^cert when an explicit transport, invariance, or factorization certificate plus no-target-import and declared-object guards are supplied."
+  - payload_id: "P2_T03_certificate_gap_fail_closed_branches"
+    payload_type: "countermodel_or_obstruction"
+    artifact_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+    status: "certificate_gap_obstruction_for_concrete_instantiation_without_certificates"
+    summary: "Shows that scoped evidence/preconditions alone do not instantiate a concrete EqMS_src^cert pair; absent or invalid certificates fail closed and preserve RR_E separation."
+mathematical_payload_manifest:
+  - payload_id: "NarrowMSCertEq_v1_conditional_theorem_candidate"
+    payload_type: "theorem"
+    object_name: "NarrowMSCertEq_v1"
+    claim_status: "conditional_or_scoped_source_side_equivalence_theorem_candidate"
+    source_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+    burden_effect: "adds conditional certificate-indexed source-side equivalence theorem candidate pending smuggling audit and Refuter stress"
+    summary: "Under explicit source transport, invariance, or factorization certificates plus no-target and declared-object guards, EqMS_src^cert holds inside source scope."
+  - payload_id: "P2_T03_certificate_gap_fail_closed_branches"
+    payload_type: "obstruction"
+    object_name: "certificate_gap_obstruction"
+    claim_status: "fail_closed_for_concrete_instantiation_without_explicit_certificates"
+    source_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+    burden_effect: "prevents overreading scoped evidence/preconditions as concrete equivalence certificates"
+    summary: "Missing, malformed, object-mismatched, target-importing, detector-semantic, benchmark-dependent, process-authority-dependent, or evidence-as-adoption certificates do not derive EqMS_src^cert."
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "source-side matter-semantics equivalence theorem under explicit source certificates only"
+  explanation: "The packet proves a conditional theorem candidate under explicit certificates and records fail-closed branches; it remains pending smuggling audit, Refuter stress, and any later protected review."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_change"
+  - burden: "Source equivalence EqSrc"
+    status: "no_change"
+  - burden: "RetainH"
+    status: "no_change"
+  - burden: "GenH"
+    status: "no_change"
+  - burden: "ObsLoc_lc"
+    status: "no_change"
+  - burden: "Resp_lc"
+    status: "no_change"
+  - burden: "M_src"
+    status: "scoped_positive_status_preserved"
+  - burden: "g_eff"
+    status: "scoped_positive_status_preserved_no_scope_expansion"
+  - burden: "matter coupling"
+    status: "conditional_theorem_candidate_pending_audit_no_derivation"
+  - burden: "Einstein equations"
+    status: "not_started"
+  - burden: "finite-variation robustness"
+    status: "no_change"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no_new_gate_review"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_freeze_no_hard_fail"
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P2-T04 smuggling audit of the theorem packet"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260702-058/artifacts/child_phys_math_p2_t03_theorem.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260702-058/artifacts/child_phys_phil_p2_t03_theorem.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260702-058/artifacts/parent_conflict_review_p2_t03_theorem.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260702-058/artifacts/parent_fusion_notes_p2_t03_theorem.md"
+    summary: "The parent fused the conditional proof and epistemic boundary controls into one theorem packet pending P2-T04 smuggling audit."
+no_target_import_audit_scope:
+  forbidden_source_classes:
+    - "target_topology"
+    - "target_smooth_atlas"
+    - "target_metric"
+    - "proper_time"
+    - "empirical_detector_semantics"
+    - "benchmark_success"
+    - "generated_derivative_authority"
+    - "registry_metadata_authority"
+    - "validator_authority"
+    - "role_authority"
+    - "handoff_authority"
+    - "file_order_authority"
+  checked_objects:
+    - "NarrowMSCertEq_v1"
+    - "MatterSemanticsObject_src"
+    - "MatterSemanticsRecord_src"
+    - "MatterSemanticsBridge_src"
+    - "RR_EDeclaredObject"
+    - "SourceTransportCertificate"
+    - "SourceInvarianceCertificate"
+    - "SourceFactorizationCertificate"
+    - "NoTargetImportCertificate"
+    - "EqMS_src^cert"
+  result: "pending"
+  failure_reason: "P2-T04 smuggling audit remains required before this theorem candidate can advance to Refuter stress."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P2-T03 conditional/scoped source-side theorem candidate only."
+  summary: "RT-20260702-058 proves only a conditional source-side equivalence theorem candidate under explicit certificates and records fail-closed branches; all adoption and downstream promotion gates remain closed."
+  forbidden_conclusions:
+    - "P2-T03 theorem candidate as source-law adoption"
+    - "P2-T03 theorem candidate as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "P2-T03 theorem candidate as unrestricted RR_E theorem"
+    - "P2-T03 theorem candidate as PositiveMSProfile_v1 adoption"
+    - "P2-T03 theorem candidate as SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "P2-T03 theorem candidate as matter-semantics adoption"
+    - "P2-T03 theorem candidate as detector-semantics adoption"
+    - "P2-T03 theorem candidate as coupling-law adoption"
+    - "P2-T03 theorem candidate as matter coupling"
+    - "P2-T03 theorem candidate as stress-energy semantics"
+    - "P2-T03 theorem candidate as matter action"
+    - "P2-T03 theorem candidate as Einstein-equation evidence"
+    - "P2-T03 theorem candidate as benchmark promotion"
+    - "P2-T03 theorem candidate as completed derivation"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 550
+    relationship_row_count: 2921
+    semantic_row_count: 550
+    vault_row_count: 550
+  authority_note: "Obsidian notes .local caches semantic extracts SQLite retrieval indexes and generated wiki notes are retrieval aids only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v15 P2 NarrowMSCertEq theorem explicit certificates\" --limit 10 --json"
+      query_type: "search"
+      query_text: "v15 P2 NarrowMSCertEq theorem explicit certificates"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+      returned_object_ids:
+        - "TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "8a9a5cc6b75214b21aa58a9657d14d1c13dbe7df3a7c012ec37c486dbc3d7eea"
+    - object_id: "TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+      source_hash: "81f8d552d04c942522bd7aab128a9bb65b4ab1a165c0c2e6468d8a877069c24d"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

@@ -1,0 +1,333 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MSObj}{\mathrm{MatterSemanticsObject}_{\mathrm{src}}}
+\newcommand{\MSRec}{\mathrm{MatterSemanticsRecord}_{\mathrm{src}}}
+\newcommand{\MSBridgeSrc}{\mathrm{MatterSemanticsBridge}_{\mathrm{src}}}
+\newcommand{\RREObj}{\mathrm{RR}_{E}^{\mathrm{decl}}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\CInv}{C_{\mathrm{invariance}}^{\mathrm{src}}}
+\newcommand{\CFact}{C_{\mathrm{factorization}}^{\mathrm{src}}}
+\newcommand{\CNTI}{C_{\mathrm{no\text{-}target}}^{\mathrm{src}}}
+\newcommand{\EqMS}{\mathrm{EqMS}_{\mathrm{src}}^{\mathrm{cert}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\PositiveMSProfile}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\LawRR}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\MSStable}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{boundary}{Boundary}
+
+\title{Narrow Source-Side Matter-Semantics Equivalence Theorem Attempt v1}
+\author{Ontology Formalizer Packet RT-20260702-058}
+\date{2026-07-02}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v15 P2-T03 for the theorem candidate
+\[
+  \mathrm{NarrowMSCertEq}_{v1}.
+\]
+It uses the P2-T01 setup and P2-T02 manifest from \texttt{RT-20260702-057}.
+The result is only a draft/control conditional source-side theorem candidate:
+
+\begin{center}
+\texttt{conditional\_or\_scoped\_source\_side\_equivalence\_theorem\_candidate}.
+\end{center}
+
+It does not edit canonical ontology TeX. It does not adopt a source law,
+\(\LawRR\), \(\PositiveMSProfile\), \(\SMSAR\), \(\MSStable\), MCPA evidence,
+source-coupling-law candidate evidence, \(\MetricData(E)\), scoped \(\geff\),
+matter semantics, detector semantics, a coupling law, matter coupling,
+stress-energy semantics, a stress-energy tensor, matter action, Einstein
+equations, benchmark status, or completed derivation.
+
+\section{Definitions Used}
+
+The definitions of \(\MSObj\), \(\MSRec\), \(\MSBridgeSrc\), \(\RREObj\),
+\(\CTr\), \(\CInv\), \(\CFact\), \(\CNTI\), and \(\EqMS\) are imported only
+from the P2-T02 manifest:
+\[
+\texttt{research\_control/tasks/RT-20260702-057/artifacts/}
+\]
+\[
+\texttt{source\_side\_matter\_semantics\_object\_certificate\_manifest\_v1.tex}.
+\]
+Those definitions are source-side and certificate-indexed. They are not
+detector semantics, physical matter semantics, stress-energy semantics,
+matter-action semantics, coupling-law semantics, empirical equivalence, or
+benchmark equivalence.
+
+\section{Assumptions}
+
+\begin{assumption}[Declared source objects]
+Let \(A_{\mathrm{src}}\) and \(B_{\mathrm{src}}\) be declared
+\(\MSObj\) instances over the same declared source episode or over an
+explicitly declared source-side comparison context. Their records are indexed
+as \(\MSRec\) records with declared source labels, source readout or response
+tokens, source guards, and certificate bundles.
+\end{assumption}
+
+\begin{assumption}[Certificate alternatives]
+At least one of the following explicit certificate alternatives is supplied:
+\[
+\CTr(A,B),\qquad \CInv(A,B),\qquad \CFact(A,B;F).
+\]
+The certificate must be stated as a source-side witness. Scoped
+evidence/precondition status is not by itself a certificate.
+\end{assumption}
+
+\begin{assumption}[No-target and declared-object guards]
+The no-target-import certificate \(\CNTI\) passes for the selected certificate
+alternative, and all declared-object indices required by \(\RREObj(F)\) are
+consistent. No proof step may use target topology, target smooth atlas, target
+metric, proper time, detector semantics, benchmark behavior, generated
+derivatives, registry metadata, validators, roles, handoffs, approvals, local
+caches, file order, or commit state as mathematical premises.
+\end{assumption}
+
+\begin{assumption}[Inactive fail-closed branches]
+The missing-certificate, malformed-certificate, declared-object mismatch,
+target-import, detector-semantics import, benchmark-behavior import,
+process-authority dependence, and scoped-evidence-as-adoption branches are
+inactive.
+\end{assumption}
+
+\section{Theorem Statement}
+
+\begin{theorem}[NarrowMSCertEq\_v1]
+Under the assumptions above,
+\[
+  A_{\mathrm{src}} \EqMS B_{\mathrm{src}}.
+\]
+The equivalence holds only inside the declared source-side certificate scope.
+It is not detector equivalence, physical matter equivalence, stress-energy
+equivalence, matter-action equivalence, coupling-law equivalence, empirical
+equivalence, benchmark equivalence, matter-coupling derivation, or source-law
+adoption.
+\end{theorem}
+
+\begin{proof}
+The P2-T02 manifest defines \(A_{\mathrm{src}}\EqMS B_{\mathrm{src}}\) to mean
+that at least one permitted explicit source certificate exists, \(\CNTI\)
+passes, declared-object indexing is consistent, and all fail-closed branches
+remain inactive.
+
+There are three certificate cases.
+
+\emph{Transport case.} If \(\CTr(A,B)\) is supplied, it transports the declared
+source labels, guards, and record indices of \(A_{\mathrm{src}}\) into those of
+\(B_{\mathrm{src}}\). By the no-target and declared-object assumptions, this
+transport does not depend on a target atlas, target metric, detector semantics,
+benchmark behavior, or process authority. Therefore the transport case
+satisfies the certificate clause in the definition of \(\EqMS\).
+
+\emph{Invariance case.} If \(\CInv(A,B)\) is supplied, the relevant labels,
+guards, and response-token relations are invariant under the declared
+source-side relabeling or admissible source variation. Since \(\CNTI\) passes
+and no fail-closed branch is active, the invariance case satisfies the
+certificate clause in the definition of \(\EqMS\).
+
+\emph{Factorization case.} If \(\CFact(A,B;F)\) is supplied, the proposed
+equivalence factors through the declared source object \(F\) and preserves the
+object-indexed \(\RREObj(F)\) boundary. By declared-object consistency, the
+factorization object is the same object required by the certificate. By
+\(\CNTI\), the factorization is source-side and does not import target or
+process authority. Therefore the factorization case satisfies the certificate
+clause in the definition of \(\EqMS\).
+
+In each permitted case, the definition of \(\EqMS\) is satisfied. Hence
+\(A_{\mathrm{src}}\EqMS B_{\mathrm{src}}\) follows inside the declared
+source-side certificate scope.
+\end{proof}
+
+\section{Fail-Closed Branches}
+
+\begin{proposition}[Certificate-gap fail-closed branch]
+If none of \(\CTr(A,B)\), \(\CInv(A,B)\), or \(\CFact(A,B;F)\) is explicitly
+supplied, then \(A_{\mathrm{src}}\EqMS B_{\mathrm{src}}\) is not derived under
+the current premises. The branch status is
+\[
+  \texttt{certificate\_gap\_obstruction}
+\]
+for any concrete instantiation that tries to use scoped evidence/preconditions
+as a certificate substitute.
+\end{proposition}
+
+\begin{proof}
+The definition of \(\EqMS\) requires at least one explicit source transport,
+invariance, or factorization certificate. If no such certificate is supplied,
+the required existential certificate condition is false. Therefore the
+equivalence is not derived. \(RR_E\) separation remains preserved unless a
+later packet supplies a valid declared-object certificate.
+\end{proof}
+
+\begin{proposition}[Malformed or imported certificate fail-closed branch]
+If the supplied certificate is malformed, object-mismatched, target-importing,
+detector-semantic, benchmark-dependent, process-authority dependent, or uses
+scoped evidence status as adoption, then \(A_{\mathrm{src}}\EqMS
+B_{\mathrm{src}}\) is not derived under the current premises.
+\end{proposition}
+
+\begin{proof}
+Each listed defect violates a required clause of the P2-T02 manifest:
+certificate validity, declared-object consistency, \(\CNTI\), or inactive
+fail-closed branches. Since \(\EqMS\) is defined only when all those clauses
+hold, the defective branch cannot establish \(\EqMS\). The result is a named
+fail-closed obstruction, not a detector-semantic repair and not a target-metric
+repair.
+\end{proof}
+
+\begin{corollary}[Concrete instantiation gap for existing scoped evidence]
+The existing scoped evidence/precondition artifacts \(\MSStable\), \(\SMSAR\),
+\(\PositiveMSProfile\), \(\LawRR\), MCPA evidence, source-coupling-law
+candidate evidence, and no-target hygiene may be cited only within their
+tracked scopes. They do not by themselves instantiate a concrete pair
+\((A_{\mathrm{src}},B_{\mathrm{src}})\) with a complete certificate bundle for
+this theorem.
+\end{corollary}
+
+\begin{proof}
+Each listed artifact is tracked as scoped evidence/precondition or hygiene
+support. The P2-T02 manifest explicitly states that scoped evidence status is
+not by itself a certificate. Therefore those artifacts can support route
+selection and theorem context but cannot supply the missing concrete
+certificate bundle without a later explicit witness statement.
+\end{proof}
+
+\section{No-Target-Import Check}
+
+\begin{longtable}{p{0.30\linewidth}p{0.52\linewidth}}
+\toprule
+Forbidden import & P2-T03 treatment \\
+\midrule
+Target topology, target atlas, target differentiability & Not used; theorem
+uses only declared source objects and source certificates. \\
+Target Lorentzian metric, metric signature, proper time & Not used; no metric
+data or proper-time normalization appears in the proof. \\
+Detector semantics or empirical observer protocol & Not used; source readout
+or response tokens remain source-side syntax. \\
+Benchmark behavior & Not used; exact-GR benchmark behavior is not a premise. \\
+Stress-energy tensor or matter action & Not used and not constructed. \\
+Registry, validator, role, handoff, approval, local cache, file order, commit
+state & Not used as proof authority. \\
+\bottomrule
+\end{longtable}
+
+This check is internal to the theorem packet. It does not replace the required
+P2-T04 Smuggling Auditor review.
+
+\section{Relation To Existing Evidence And Preconditions}
+
+\begin{longtable}{p{0.28\linewidth}p{0.52\linewidth}}
+\toprule
+Input & Relation to this theorem attempt \\
+\midrule
+\(\MSStable\) & Supports scoped bridge context only; not a certificate by
+itself. \\
+\(\SMSAR\) & Supports scoped adoption-readiness context only; not adopted law
+and not a certificate by itself. \\
+\(\PositiveMSProfile\) & Supports scoped positive profile context only; not
+adopted profile and not a certificate by itself. \\
+\(\LawRR\) & Supports scoped \(RR_E\) transport/invariance evidence context
+only; not adopted law and not an unrestricted \(RR_E\) theorem. \\
+MCPA evidence/precondition & Supports matter-coupling precondition context
+only; not universal matter coupling. \\
+Source-coupling-law candidate evidence & Supports candidate context only; not
+source-law or coupling-law adoption. \\
+No-target guard map & Supplies hygiene questions only; not a positive
+certificate. \\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR Effect}
+
+This packet adds one draft/control conditional theorem candidate for the
+\texttt{matter\_coupling} milestone:
+
+\[
+  \texttt{conditional\_or\_scoped\_source\_side\_equivalence\_theorem\_candidate}.
+\]
+
+The Distance-to-GR ledger status is not changed by this packet. The candidate
+is pending P2-T04 smuggling audit and P2-T05 Refuter stress before any
+protected review could be considered. It does not derive matter coupling and
+does not change the status of \(\MetricData(E)\), \(\geff\), Einstein
+equations, benchmark promotion, or completed derivation.
+
+\section{Forbidden Conclusions}
+
+\begin{longtable}{p{0.34\linewidth}p{0.48\linewidth}}
+\toprule
+Claim & Status after P2-T03 \\
+\midrule
+Source-law adoption & Not authorized. \\
+\(\LawRR\) adoption & Not authorized. \\
+Unrestricted \(RR_E\) theorem & Not proved. \\
+\(\PositiveMSProfile\) adoption & Not authorized. \\
+\(\SMSAR\) adoption as law & Not authorized. \\
+Matter-semantics adoption & Not authorized. \\
+Detector-semantics adoption & Not authorized. \\
+Coupling-law adoption & Not authorized. \\
+Concrete matter coupling & Not derived and not adopted. \\
+Stress-energy semantics or tensor & Not imported and not constructed. \\
+Matter action & Not imported. \\
+\(\MetricData(E)\) or \(\geff\) scope expansion & Not authorized. \\
+Einstein equations & Not derived. \\
+Benchmark promotion or closure & Not authorized. \\
+Completed derivation & Not claimed. \\
+\bottomrule
+\end{longtable}
+
+\section{Next Route}
+
+The logical next packet is P2-T04: a bounded Smuggling Auditor review of this
+theorem artifact for hidden target imports, detector-semantics imports,
+metric imports, stress-energy imports, process-authority laundering, and status
+laundering. Refuter stress and any protected review must remain downstream of
+that audit.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, July 2). \emph{Recommendations
+implementation plan continue task v15} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 2). \emph{P2-T01 theorem packet
+setup} [Research-control artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \emph{Source-side
+matter-semantics object and certificate manifest v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \emph{Gate Chair review of
+scoped positive source matter-semantics profile evidence} [Research-control
+TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \emph{Gate Chair review of
+scoped RR\_E transport/invariance evidence} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 1). \emph{Gate Chair review of
+scoped source matter-semantics adoption-readiness evidence} [Research-control
+TeX artifact].
+
+The AEther-Flow Research Project. (2026, June 30). \emph{Gate Chair review of
+scoped stable matter-semantics bridge evidence} [Research-control TeX
+artifact].
+
+\end{document}

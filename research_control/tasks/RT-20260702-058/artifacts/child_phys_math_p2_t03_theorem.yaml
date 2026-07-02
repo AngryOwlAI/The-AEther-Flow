@@ -1,0 +1,15 @@
+artifact_id: "child_phys_math_p2_t03_theorem"
+task_id: "RT-20260702-058"
+job_id: "AJ-RT-20260702-058-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+summary: "Formal proof attempt for NarrowMSCertEq_v1 under explicit source certificates."
+contributions:
+  - "States a conditional theorem: if declared source-side objects carry a valid transport, invariance, or factorization certificate plus no-target-import and declared-object guards, then EqMS_src^cert holds within source scope."
+  - "Proves the theorem by cases over the permitted certificate classes and by direct appeal to the manifest definition of certificate-indexed source equivalence."
+  - "Proves fail-closed corollaries for missing, malformed, object-mismatched, target-importing, detector-semantic, benchmark-dependent, process-authority-dependent, or evidence-as-adoption branches."
+limitations:
+  - "The proof is conditional and does not instantiate a concrete pair of existing objects with a complete certificate bundle."
+  - "Scoped evidence/precondition artifacts remain useful inputs, not certificates by themselves."
+claim_boundary: "conditional_or_scoped_source_side_equivalence_theorem_candidate only; no adoption or downstream physics promotion"
