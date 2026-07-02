@@ -132,6 +132,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `research_control/design/narrow_theorem_task_template.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `research_control/design/no_leap_route_rule.md`
+- `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `research_control/design/no_target_certificate_hygiene_doctrine.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
@@ -685,6 +686,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `wiki/markdown/md-research-control-design-matter-coupling-pre-adoption-checklist.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `wiki/markdown/md-research-control-design-narrow-theorem-task-template.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `wiki/markdown/md-research-control-design-no-leap-route-rule.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `wiki/markdown/md-research-control-design-no-target-certificate-hygiene-doctrine.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-table-source-spec.md`
