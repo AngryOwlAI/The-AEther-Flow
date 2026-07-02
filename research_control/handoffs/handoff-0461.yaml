@@ -1,0 +1,165 @@
+handoff_id: "handoff-0461"
+created_at: "2026-07-02T02:42:00Z"
+task_id: "RT-20260702-008"
+decision_id: "DDR-20260702-008"
+job_id: "AJ-RT-20260702-008-001"
+completion_path: "research_control/tasks/RT-20260702-008/jobs/completions/AJC-AJ-RT-20260702-008-001.yaml"
+source_task_id: "RT-20260702-008"
+source_job_id: "AJ-RT-20260702-008-001"
+source_completion_id: "AJC-AJ-RT-20260702-008-001"
+status: "completed"
+summary: "RT-20260702-008 completed one bounded v14 P6-T01 three-tier claim convention policy packet. It created and registered the canonical policy requiring summaries to distinguish adopted objects accepted evidence/preconditions and open or blocked physical targets without physics claim promotion."
+next_action: "Run one bounded v14 P6-T02 completion and handoff template update packet before current-frontier three-tier pilot or downstream physics routes."
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "v14_p6_t02_completion_handoff_template_three_tier_update"
+  objective: "Update completion and handoff templates so future completions can include three_tier_claim_summary without schema failure and without claim promotion."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "research_control/design/three_tier_claim_convention.md"
+    note: "P6-T01 canonical policy defining three-tier claim summaries."
+  - path: "research_control/tasks/RT-20260702-008/artifacts/p6_t01_three_tier_claim_convention_receipt.md"
+    note: "P6-T01 receipt proving required tier and surface coverage."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory status PASS and targeted queries returned canonical plan current frontier and public status source spec"
+      - "continue_research.py resolved handoff-0460 to one bounded P6-T01 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "three_tier_claim_convention.md defines all required P6-T01 tiers and summary surfaces"
+      - "policy source hash cfd78be2af42249b44c7cd131c7f6613425df778a4c6aa280ce4293a7492f1aa"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "policy claim-language validation passed with zero findings"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is recorded in the completion and must pass before this transaction is committed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current_frontier.md must be regenerated from handoff-0461"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "policy source passed claim-language validation with zero findings"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects:
+    - object: "M_src"
+      status: "scoped source-only object"
+      authority_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      scope_qualifier: "not target manifold not metric not GR derivation"
+      blocked_overread:
+        - "MetricData(E)"
+        - "g_eff scope expansion"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+        - "completed derivation"
+      downstream_promotion_authorized: false
+    - object: "g_eff"
+      status: "scoped source-extension object"
+      authority_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      scope_qualifier: "not unscoped Lorentzian metric not matter coupling not Einstein-equation evidence"
+      blocked_overread:
+        - "MetricData(E)"
+        - "unscoped g_eff"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+        - "completed derivation"
+      downstream_promotion_authorized: false
+  accepted_evidence_preconditions:
+    - object: "SourceMatterSemanticsAdoptionReadinessLaw_v1"
+      status: "scoped readiness evidence/precondition or proposal-only law target unless a later gate changes status"
+      authority_path: "research_control/design/three_tier_claim_convention.md"
+      supports_target: "matter-semantics continuation"
+      does_not_establish:
+        - "source-law adoption"
+        - "matter semantics"
+        - "detector semantics"
+        - "coupling law"
+    - object: "PositiveMSProfile_v1"
+      status: "accepted only as scoped positive source-semantics evidence/precondition"
+      authority_path: "research_control/design/three_tier_claim_convention.md"
+      supports_target: "matter-semantics continuation"
+      does_not_establish:
+        - "matter semantics"
+        - "detector semantics"
+        - "stress-energy"
+        - "matter action"
+    - object: "RR_ETransportCompletenessOrInvarianceLaw_v1"
+      status: "accepted only as certificate-indexed RR_E transport-completeness or invariance evidence/precondition"
+      authority_path: "research_control/design/three_tier_claim_convention.md"
+      supports_target: "RR_E separation and transport/invariance continuation"
+      does_not_establish:
+        - "source-law adoption"
+        - "object adoption"
+        - "unrestricted RR_E theorem"
+        - "detector semantics"
+        - "matter coupling"
+  open_or_blocked_physical_targets:
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream protected authority and derivation burdens remain missing"
+      evidence_not_to_overread:
+        - "scoped source-side object status"
+        - "scoped evidence/precondition status"
+        - "validator or renderer PASS"
+      next_lawful_route: "P6-T02 completion and handoff template update"
+  forbidden_overread:
+    - "policy as physics proof"
+    - "reporting convention as source-law adoption"
+    - "tiered summary as downstream promotion"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
