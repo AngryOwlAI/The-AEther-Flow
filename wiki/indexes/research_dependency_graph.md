@@ -7,7 +7,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-02T19:27:15Z`
-- Source fingerprint: `6f6795bfacc97ebfda571a379c4f26e507b9bc30bd439bbda9866c5d5c658cef`
+- Source fingerprint: `1b59aa633e6a91fa269896ac14c58aa900d43d19a5991c3d169a2daa28149b48`
 - Nodes: `11059`
 - Edges: `46138`
 
