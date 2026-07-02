@@ -1,0 +1,43 @@
+task_id: "RT-20260702-033"
+task_title: "v14 P10-T05 Literature Comparison Public Boundary"
+task_type: "documentation_boundary_packet"
+status: "completed"
+created_at: "2026-07-02T10:36:50Z"
+started_at: "2026-07-02T10:36:50Z"
+completed_at: "2026-07-02T10:36:50Z"
+parent_task_id: "RT-20260702-032"
+source_handoff_id: "handoff-0485"
+decision_id: "DDR-20260702-033"
+agent_job_id: "AJ-RT-20260702-033-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P10"
+plan_task_id: "P10-T05"
+objective: "Inspect public-facing comparison language and prevent external-validation or claim-promotion implications."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_resemblance_as_validation_authorized: false
+scope:
+  allowed:
+    - "scan public-facing Markdown and generated HTML for literature-comparison overread"
+    - "record no-edit boundary result when no repair is needed"
+    - "route to P11 matter-coupling moratorium"
+  forbidden:
+    - "edit generated HTML directly"
+    - "rewrite public docs outside this boundary packet"
+    - "promote any literature-derived physics claim"
+validation:
+  required_validator: "research_control/tasks/RT-20260702-033/artifacts/validate_p10_t05_public_boundary.py"
+  expected_report: "research_control/tasks/RT-20260702-033/artifacts/p10_t05_public_boundary_report.json"
+  expected_status: "PASS"
+next_route:
+  plan_task_id: "P11-T01"
+  task_type: "matter_coupling_moratorium_control_note"
+  role_family: "project-control-maintainer@0.2.0"
+  objective: "Create or update the matter-coupling derivation moratorium control note."

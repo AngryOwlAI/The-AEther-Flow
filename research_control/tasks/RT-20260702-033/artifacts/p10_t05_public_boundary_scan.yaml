@@ -1,0 +1,58 @@
+artifact_id: "p10_t05_public_boundary_scan"
+artifact_type: "public_boundary_scan"
+task_id: "RT-20260702-033"
+job_id: "AJ-RT-20260702-033-001"
+role_id: "documentation-curator"
+created_at: "2026-07-02T10:36:50Z"
+status: "completed_no_public_source_edit_needed"
+scan_scope:
+  public_source_paths:
+    - "README.md"
+    - "github-facing/**"
+    - "markdown/html-explainer-specs/**"
+    - "markdown/publication-briefs/**"
+  generated_reference_paths:
+    - "html/**"
+  generated_html_edit_policy: "read_only_reference_no_direct_edit"
+search_commands:
+  - command: "rg -n \"literature comparison|literature|external validation|resemblance|analogue|P10\" README.md github-facing markdown html"
+    purpose: "Broad public-facing boundary scan for P10 comparison overread."
+  - command: "rg -n \"literature comparison|external validation|resemblance|compare|comparison\" README.md github-facing markdown/html-explainer-specs markdown html"
+    purpose: "Focused comparison and validation scan."
+scan_findings:
+  explicit_literature_comparison_mentions_found: false
+  external_validation_or_resemblance_claims_found: false
+  direct_public_source_edits_required: false
+  generated_html_direct_edits_required: false
+  generic_comparison_language:
+    status: "not_p10_literature_comparison"
+    examples:
+      - path: "README.md"
+        line: 313
+        assessment: "Archival/source comparison language; not external literature validation."
+      - path: "markdown/html-explainer-specs/claim-gates-explainer.md"
+        line: 33
+        assessment: "Claim-gates comparison/boundary-map specification; not literature comparison."
+      - path: "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+        line: 34
+        assessment: "Benchmark-boundary comparison-map specification; not literature comparison."
+  analogue_language:
+    - path: "github-facing/aether-flow-physics-program-explainer.md"
+      line: 84
+      snippet_summary: "finite toy analogue appears inside a source-side work versus claim promotion section"
+      assessment: "Boundary is already explicit: claim promotion requires source authority audit/refutation sequence and human-gated decision when applicable."
+    - path: "html/gr-derivation-roadmap-explainer.html"
+      line: 317
+      snippet_summary: "minimal source-to-response analogue appears in generated roadmap HTML"
+      assessment: "Generated HTML is read-only in this packet; phrase is not literature-comparison or external-validation language."
+public_boundary_verdict:
+  status: "PASS"
+  no_edit_rationale: "No public-facing source asserted literature comparison as validation or promoted an external resemblance claim. Generic comparison and analogue language is already scoped or unrelated to P10 literature comparison."
+  selected_next_route: "P11-T01"
+claim_boundary:
+  proof_authority: false
+  external_resemblance_as_validation_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
