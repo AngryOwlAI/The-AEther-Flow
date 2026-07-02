@@ -1,0 +1,90 @@
+{
+  "validator_id": "validate_p14_t05_ordinary_handoff",
+  "task_id": "RT-20260702-052",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "plan_contains_p14_t05",
+      "passed": true,
+      "detail": "v14 plan contains P14-T05 and the candidate route list."
+    },
+    {
+      "id": "exactly_one_selected_route",
+      "passed": true,
+      "detail": "the same selected route appears in task completion handoff and program state."
+    },
+    {
+      "id": "selected_route_is_candidate_one",
+      "passed": true,
+      "detail": "selected route is candidate 1 from the P14-T05 list."
+    },
+    {
+      "id": "handoff_report_has_required_fields",
+      "passed": true,
+      "detail": "missing_report_markers=[]"
+    },
+    {
+      "id": "rr_e_separation_preserved",
+      "passed": true,
+      "detail": "RR_E separation and fail-closed certificate status are explicit."
+    },
+    {
+      "id": "no_target_hygiene_preserved",
+      "passed": true,
+      "detail": "no-target certificate hygiene is explicit."
+    },
+    {
+      "id": "frontier_and_ledger_support_summary",
+      "passed": true,
+      "detail": "current frontier and ledger support the adopted/evidence summary."
+    },
+    {
+      "id": "handoff_next_action_matches_selected_route",
+      "passed": true,
+      "detail": "handoff-0505 routes to the selected post-v14 packet."
+    },
+    {
+      "id": "v14_all_phases_completed",
+      "passed": true,
+      "detail": "completion records v14 completion."
+    },
+    {
+      "id": "no_physics_promotion",
+      "passed": true,
+      "detail": "completion and report preserve no physics promotion."
+    },
+    {
+      "id": "forbidden_direct_routes_still_blocked",
+      "passed": true,
+      "detail": "direct matter-coupling Einstein-equation benchmark and completed-derivation routes remain blocked."
+    }
+  ],
+  "source_hashes": {
+    "task": "49fb4a5925f59af381d4396b5389bd82d4aa758fe2b1cb5ee4ac079c3c046b34",
+    "decision": "d232d16e61227a49cc4c310e1e54cf92c7fa2d1b8d7054b29360a6305217616c",
+    "handoff_report": "928ef01d6025f0296bfb8c50325e5897bacb7af4f04cebf38ad4f8ad2c7d4193",
+    "completion": "ea7496524be543c97c8eec3c147b626f8de4d7b63debcbd4d96b7407b5e0f13f",
+    "handoff": "81d3e1cb98364114abbfc8cd35aac787a073315c6e9239704f69d45da36e3c43",
+    "program_state": "85af471c76b95130a6666ebd39e990d55604de80f64c7fcfa76260c79d03c40b",
+    "current_frontier": "76e95129d9f4a8af75afbea976ac9ea3dac0d4d97b999c77360ac1c97eb4ce73",
+    "ledger": "b8dda05ea4950e81a599e66f7f659f1cedd3e1ecb01736a11f14321d847484ae",
+    "plan": "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+  },
+  "selected_next_route": "narrow_source_side_matter_semantics_equivalence_theorem_under_explicit_certificates",
+  "claim_boundary": {
+    "proof_authority": false,
+    "source_law_adoption_authorized": false,
+    "rr_e_transport_law_adoption_authorized": false,
+    "unrestricted_rr_e_irrelevance_authorized": false,
+    "matter_semantics_adoption_authorized": false,
+    "detector_semantics_adoption_authorized": false,
+    "downstream_physics_promotion_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false
+  },
+  "phase_result": {
+    "p14_t05_validated": true,
+    "v14_all_phases_completed": true,
+    "next_route": "narrow_source_side_matter_semantics_equivalence_theorem_under_explicit_certificates"
+  }
+}

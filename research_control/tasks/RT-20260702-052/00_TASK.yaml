@@ -1,0 +1,56 @@
+task_id: "RT-20260702-052"
+task_title: "v14 P14-T05 ordinary research continuation handoff"
+task_type: "final_continuation_handoff_packet"
+status: "completed"
+created_at: "2026-07-02T15:26:20Z"
+started_at: "2026-07-02T15:26:20Z"
+completed_at: "2026-07-02T15:26:20Z"
+parent_task_id: "RT-20260702-051"
+source_handoff_id: "handoff-0504"
+decision_id: "DDR-20260702-052"
+agent_job_id: "AJ-RT-20260702-052-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P14"
+plan_task_id: "P14-T05"
+objective: "Create final v14 handoff selecting exactly one ordinary research continuation route."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  rr_e_transport_law_adoption_authorized: false
+  unrestricted_rr_e_irrelevance_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+scope:
+  allowed:
+    - "summarize v14 completed status and current frontier"
+    - "select exactly one ordinary next research route from P14-T05 candidates"
+    - "record current adopted scoped objects accepted evidence and blocked physical targets"
+    - "record RR_E separation and no-target certificate hygiene status"
+    - "route to a bounded post-v14 theorem packet"
+  forbidden:
+    - "edit canonical ontology or science sources"
+    - "change the Distance-to-GR ledger"
+    - "adopt source laws matter semantics detector semantics coupling laws matter coupling Einstein equations benchmark status or completed derivation"
+    - "execute the selected post-v14 theorem packet in this transaction"
+selected_next_route:
+  route_id: "narrow_source_side_matter_semantics_equivalence_theorem_under_explicit_certificates"
+  role_family: "ontology-formalizer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "source-side matter-semantics equivalence theorem under explicit source certificates only; no matter-semantics adoption and no coupling-law adoption"
+  requires_human_gate: false
+  human_gate_note: "No human gate is required for the next draft/control theorem packet; any later adoption promotion benchmark closure or completed-derivation claim remains protected."
+validation:
+  required_validator: "research_control/tasks/RT-20260702-052/artifacts/validate_p14_t05_ordinary_handoff.py"
+  expected_report: "research_control/tasks/RT-20260702-052/artifacts/p14_t05_ordinary_handoff_report.json"
+  expected_status: "PASS"
+next_route:
+  task_type: "post_v14_narrow_matter_semantics_equivalence_theorem_packet"
+  role_family: "ontology-formalizer@0.2.0"
+  objective: "Prove or precisely fail a narrow source-side matter-semantics equivalence theorem under explicit source certificates."

@@ -755,6 +755,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260702-049` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260702-050` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260702-051` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260702-052` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `scripts/research_control/mechanized_checks` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `scripts/research_control/support_formalization` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/claim_language` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -2644,6 +2645,9 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260702-051/artifacts` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260702-051/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260702-051/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260702-052/artifacts` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260702-052/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260702-052/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `tests/fixtures/research_control/finite_local_candidate` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/research_control/red_team_review` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/project-memory-system/obsidian-vault-template/00_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -3325,6 +3329,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260702-050/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260702-051/artifacts/final_validation_command_outputs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260702-051/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260702-052/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `.codex/skills/visual-explainer/subskills/mermaid-documentation/examples` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer/subskills/mermaid-documentation/references` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `.codex/skills/visual-explainer/subskills/mermaid-documentation/scripts` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
