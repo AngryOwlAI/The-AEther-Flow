@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-020` and `handoff-0473`.
+`RT-20260702-021` and `handoff-0474`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-020` |
-| Latest handoff ID | `handoff-0473` |
-| Current status | `v14_p8_t03_route_orbit_validator_completed_next_matter_coupling_route_orbit_pilot` |
+| Active task ID | `RT-20260702-021` |
+| Latest handoff ID | `handoff-0474` |
+| Current status | `v14_p8_t04_matter_coupling_route_orbit_pilot_completed_next_freeze_taxonomy_update` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p8 t04 matter coupling route orbit pilot |
-| Required next authority | Run one bounded v14 P8-T04 matter-coupling route-orbit pilot before freeze taxonomy or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P8-T04 matter-coupling route-orbit pilot before freeze taxonomy or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p8 t05 freeze taxonomy update |
+| Required next authority | Run one bounded v14 P8-T05 freeze taxonomy update before P8 validation or downstream routes. |
+| Next recommended action | Run one bounded v14 P8-T05 freeze taxonomy update before P8 validation or downstream routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-020/00_TASK.yaml`.
-- Active task objective: Implement a deterministic route-orbit validator with warnings and hard-fail candidate detection.
-- Latest handoff path: `research_control/handoffs/handoff-0473.yaml`.
-- Latest handoff summary: RT-20260702-020 completed one bounded v14 P8-T03 route-orbit validator packet. It added validate_route_orbits.py focused tests and a task-local recent matter/RR_E sample while preserving all physics claim-promotion blocks.
+- Active task path: `research_control/tasks/RT-20260702-021/00_TASK.yaml`.
+- Active task objective: Run the route-orbit detector on recent matter-coupling and RR_E chains and classify results with source evidence.
+- Latest handoff path: `research_control/handoffs/handoff-0474.yaml`.
+- Latest handoff summary: RT-20260702-021 completed one bounded v14 P8-T04 matter-coupling route-orbit pilot. Recent matter-coupling and RR_E chains classified with source evidence, P5-T06 boundary synchronization was recognized as not orbiting, and a synthetic no-new-payload replay loop was flagged.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P8-T04 matter-coupling route-orbit pilot before freeze taxonomy or downstream physics routes.
+- Next recommended action: Run one bounded v14 P8-T05 freeze taxonomy update before P8 validation or downstream routes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -70,18 +70,19 @@ Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| route_orbit_validator_v1 | project-control tooling only | P8-T04 matter-coupling route-orbit pilot readiness | route freezing<br>physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `scripts/research_control/validate_route_orbits.py` |
+| route_orbit_pilot_v1 | project-control diagnostic only | P8-T05 freeze taxonomy update readiness | route freezing<br>physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `research_control/tasks/RT-20260702-021/artifacts/p8_t04_route_orbit_pilot_report.json` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P8-T04 matter-coupling route-orbit pilot |
+| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P8-T05 freeze taxonomy update |
 
 Forbidden overreads:
 
-- route-orbit validator output as route freeze authority
-- route-orbit validator output as physics proof
+- route-orbit pilot output as route freeze authority
+- route-orbit pilot output as physics proof
+- synthetic replay-control output as source-law evidence
 
 ## Matter-Coupling Boundary
 
@@ -192,7 +193,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P8-T04 matter-coupling route-orbit pilot before freeze taxonomy or downstream physics routes.
+Run one bounded v14 P8-T05 freeze taxonomy update before P8 validation or downstream routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -216,8 +217,8 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookup returned route_signature_definition_v1 context<br>query_memory lookup returned v14 implementation plan context<br>query_memory search returned P8-T03 route-orbit validator context |
-| `completion_internal` | PASS | receipt complete | route-orbit validator sample returned status=PASS signature_count=22 hard_failure_count=0 warning_count=0<br>route-orbit validator focused tests passed<br>P8-T03 task-local validator returned PASS |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=true and refresh_performed=true<br>targeted memory lookups and search returned no registered object IDs for task-local pilot evidence; tracked sources were inspected directly<br>continue_research.py resolved handoff-0473 to one bounded P8-T04 packet |
+| `completion_internal` | PASS | receipt complete | P8-T04 report status PASS<br>Combined recent chain validation used 23 signatures with zero hard failures and zero warnings<br>Synthetic no-new-payload replay control was flagged with six hard-fail pairs |
 
 Authorization layers:
 
@@ -235,9 +236,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-020`;
-- latest handoff: `handoff-0473`;
-- current status: `v14_p8_t03_route_orbit_validator_completed_next_matter_coupling_route_orbit_pilot`;
+- active task: `RT-20260702-021`;
+- latest handoff: `handoff-0474`;
+- current status: `v14_p8_t04_matter_coupling_route_orbit_pilot_completed_next_freeze_taxonomy_update`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -247,8 +248,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0473.yaml`
-- `research_control/tasks/RT-20260702-020/00_TASK.yaml`
+- `research_control/handoffs/handoff-0474.yaml`
+- `research_control/tasks/RT-20260702-021/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -264,7 +265,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0473*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0474*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
