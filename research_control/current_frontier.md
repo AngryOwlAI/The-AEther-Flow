@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-011` and `handoff-0464`.
+`RT-20260702-012` and `handoff-0465`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-011` |
-| Latest handoff ID | `handoff-0464` |
-| Current status | `v14_p6_t04_three_tier_phase_validation_completed_next_frontier_inventory_schema_reconciliation` |
+| Active task ID | `RT-20260702-012` |
+| Latest handoff ID | `handoff-0465` |
+| Current status | `v14_p7_t01_frontier_theorem_inventory_schema_reconciliation_completed_next_inventory_population` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p7 t01 frontier theorem inventory schema reconciliation |
-| Required next authority | Run one bounded v14 P7-T01 frontier theorem inventory schema reconciliation packet before inventory refresh implementation or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P7-T01 frontier theorem inventory schema reconciliation packet before inventory refresh implementation or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p7 t02 populate live core frontier inventory |
+| Required next authority | Run one bounded v14 P7-T02 live core frontier inventory population packet before registry integration or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P7-T02 live core frontier inventory population packet before registry integration or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-011/00_TASK.yaml`.
-- Active task objective: Validate P6 three-tier summary behavior and hand off to P7 frontier theorem inventory schema reconciliation.
-- Latest handoff path: `research_control/handoffs/handoff-0464.yaml`.
-- Latest handoff summary: RT-20260702-011 completed one bounded v14 P6-T04 phase validation packet. It validated that P6 provides a canonical three-tier convention, completion and handoff reporting fields, and a current-frontier pilot separating adopted objects, accepted evidence/preconditions, and open or blocked physical targets with no physics claim promotion.
+- Active task path: `research_control/tasks/RT-20260702-012/00_TASK.yaml`.
+- Active task objective: Reconcile the frontier theorem inventory schema with v14 required fields before inventory population.
+- Latest handoff path: `research_control/handoffs/handoff-0465.yaml`.
+- Latest handoff summary: RT-20260702-012 completed one bounded v14 P7-T01 frontier theorem inventory schema reconciliation packet. It reused the existing schema and added explicit v14 fields plus field mapping without inventory population or physics claim promotion.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P7-T01 frontier theorem inventory schema reconciliation packet before inventory refresh implementation or downstream physics routes.
+- Next recommended action: Run one bounded v14 P7-T02 live core frontier inventory population packet before registry integration or downstream physics routes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -70,23 +70,19 @@ Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| SourceMatterSemanticsAdoptionReadinessLaw_v1 | scoped readiness evidence/precondition or proposal-only law target unless a later gate changes status | matter-semantics continuation | source-law adoption<br>matter semantics<br>detector semantics<br>coupling law | `research_control/design/three_tier_claim_convention.md` |
-| PositiveMSProfile_v1 | accepted only as scoped positive source-semantics evidence/precondition | matter-semantics continuation | matter semantics<br>detector semantics<br>stress-energy<br>matter action | `research_control/design/three_tier_claim_convention.md` |
-| RR_ETransportCompletenessOrInvarianceLaw_v1 | accepted only as certificate-indexed RR_E transport-completeness or invariance evidence/precondition | RR_E separation and transport/invariance continuation | source-law adoption<br>object adoption<br>unrestricted RR_E theorem<br>detector semantics<br>matter coupling | `research_control/design/three_tier_claim_convention.md` |
-| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | coupling law<br>matter coupling<br>stress-energy semantics<br>matter action<br>Einstein equations<br>benchmark promotion<br>completed derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` |
+| frontier theorem inventory schema v14 field reconciliation | project-control schema evidence only | P7 inventory population and validation | source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion<br>completed derivation | `research_control/design/frontier_theorem_inventory_schema_v1.md` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | scoped source-side object status<br>scoped evidence/precondition status<br>P6 phase validation PASS | P7-T01 frontier theorem inventory schema reconciliation |
+| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | schema field reconciliation<br>inventory control surface | P7-T02 live core frontier inventory population |
 
 Forbidden overreads:
 
-- P6 phase validation as physics proof
-- accepted evidence/preconditions as adopted objects
-- three-tier reporting as source-law adoption
-- phase validation as downstream promotion
+- schema reconciliation as physics proof
+- inventory schema as source-law adoption
+- schema field mapping as downstream promotion
 
 ## Matter-Coupling Boundary
 
@@ -197,7 +193,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P7-T01 frontier theorem inventory schema reconciliation packet before inventory refresh implementation or downstream physics routes.
+Run one bounded v14 P7-T02 live core frontier inventory population packet before registry integration or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -221,13 +217,13 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookup and targeted search returned v14 plan and current frontier context<br>continue_research.py resolved handoff-0463 to one bounded P6-T04 packet |
-| `completion_internal` | PASS | receipt complete | three-tier convention policy exists<br>completion and handoff templates include three_tier_claim_summary fields<br>current-frontier pilot separates adopted objects evidence/preconditions and open or blocked physical targets |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookup and targeted search returned v14 plan and current frontier context<br>continue_research.py resolved handoff-0464 to one bounded P7-T01 packet |
+| `completion_internal` | PASS | receipt complete | schema includes explicit v14 required fields<br>schema includes P7-T01 field mapping<br>schema claim-language validation returned zero findings |
 | `post_write` | PASS | receipt complete | current-frontier render/check required after state update |
 | `post_checkpoint` | PASS | receipt complete | checkpoint command is recorded in the completion and must pass before this transaction is committed |
-| `renderer` | PASS | receipt complete | current_frontier.md must be regenerated from handoff-0464 |
+| `renderer` | PASS | receipt complete | current_frontier.md must be regenerated from handoff-0465 |
 | `memory_bootstrap` | PASS | receipt complete | bootstrap_memory_system.py and validate-only are required receipts for this packet |
-| `claim_language_linter` | PASS | receipt complete | P6 surfaces claim-language validation returned zero findings |
+| `claim_language_linter` | PASS | receipt complete | schema claim-language validation returned zero findings |
 
 Authorization layers:
 
@@ -245,9 +241,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-011`;
-- latest handoff: `handoff-0464`;
-- current status: `v14_p6_t04_three_tier_phase_validation_completed_next_frontier_inventory_schema_reconciliation`;
+- active task: `RT-20260702-012`;
+- latest handoff: `handoff-0465`;
+- current status: `v14_p7_t01_frontier_theorem_inventory_schema_reconciliation_completed_next_inventory_population`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -257,8 +253,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0464.yaml`
-- `research_control/tasks/RT-20260702-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0465.yaml`
+- `research_control/tasks/RT-20260702-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -274,7 +270,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0464*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0465*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

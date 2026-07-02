@@ -59,7 +59,7 @@ Allowed initial classes:
 - `accepted_scoped_object`: a scoped source-only or scoped source-extension
   object accepted under explicit non-conclusion guards.
 - `frozen_negative_route`: a local frozen route that preserves its exact scope
-  and does not imply global theory rejection.
+  and does not imply a program-wide no-go conclusion.
 - `missing_theorem`: an absent theorem, primitive, selector, discriminator, or
   derivation-critical source-side law.
 
@@ -68,27 +68,78 @@ An item may list more than one class when needed, for example
 
 ## Required Fields
 
-Every inventory item must contain these fields.
+Every inventory item must contain these fields. The original P2 schema field
+names remain valid. P7-T01 adds explicit v14-facing fields where the older
+schema only implied them through broader fields.
 
 | Field | Required content |
 | --- | --- |
 | `frontier_item_id` | Stable lowercase identifier, preferably aligned with ledger burden IDs or object names. |
 | `object_or_claim_name` | Human-readable name of the object, theorem-like claim, obstruction, gate decision, or missing primitive. |
+| `milestone` | Roadmap milestone or burden key, such as `source_ontology`, `effective_metric_g_eff`, `matter_coupling`, `einstein_equations`, `benchmark_promotion`, or `none` for schema/control-only entries. |
+| `object_type` | Reader-facing object type. It may duplicate or narrow `frontier_item_class` but must use stable terms such as `definition`, `theorem_target`, `witness`, `obstruction`, `gate_decision`, `source_extension_evidence`, `accepted_scoped_object`, `frozen_negative_route`, or `missing_theorem`. |
 | `status_layer_summary` | Compact copy or summary of the control, mathematical, physical, promotion, and overread-guard layers when a Distance-to-GR row applies. |
 | `source_artifact_path` | Canonical source file or registry row path. Generated summaries are insufficient without a paired canonical source. |
 | `source_authority_type` | Controlled source type, such as `registered_tex_artifact`, `registered_markdown_control`, `distance_to_gr_ledger_row`, `claim_boundary_registry_row`, `gate_chair_artifact`, `refuter_artifact`, or `generated_summary_paired_with_source`. |
+| `authority_level` | Authority layer for the inventory statement, for example `canonical_tex`, `registered_control_markdown`, `registry_row`, `gate_chair_artifact`, `support_only_summary`, `draft_control`, `human_gated`, or `generated_navigation_only`. |
 | `assumptions` | Explicit assumptions, hypotheses, scope restrictions, source-extension inputs, or known absence of assumptions. |
 | `definitions_used` | Definitions, named primitives, candidates, laws, or source-side objects used by the item. |
+| `definitions_introduced` | Definitions introduced by the source item, or `none` when the inventory row merely summarizes existing definitions. |
 | `statement_or_decision` | The theorem statement, decision, obstruction statement, frozen-route statement, or missing-theorem statement. |
+| `theorem_like_claims` | The theorem-like claims, proof targets, obstruction claims, missing-theorem claims, or `none` if the item is definition-only. |
 | `mathematical_conclusion` | What follows mathematically under the assumptions. Use `none_supplied` when the item records a missing theorem or open burden. |
+| `audits_passed` | Source-backed audit results relevant to the item, such as smuggling audit PASS, support-only validation PASS, or `none`. |
+| `stress_results` | Source-backed Refuter or stress-test result, frozen-route result, or `none`. |
+| `gate_chair_results` | Gate Chair result or protected human-gate status, including explicit `none` when no such result exists. |
+| `fail_closed_branches` | Fail-closed branches, local blocked branches, or `none`. |
+| `known_obstructions` | Known obstruction IDs, obstruction summaries, missing primitives, or `none`. |
 | `physical_non_conclusions` | Required blocked physical readings, including downstream GR, matter coupling, stress-energy, Einstein equations, benchmark promotion, or completed derivation when applicable. |
+| `forbidden_overread` | Human-readable forbidden overreads for this item. This must agree with `physical_non_conclusions` and the machine-checkable `overread_guard`. |
+| `downstream_blocked_targets` | Downstream targets still blocked by missing burdens or protected authority. |
 | `allowed_reuse` | How later packets may reuse the item without promotion. |
 | `blocked_reuse` | Reuses that would launder the item into a stronger claim or protected authority. |
 | `dependency_items` | Upstream frontier item IDs, ledger rows, task IDs, or source artifacts needed to interpret the item. |
 | `missing_theorem_or_primitive` | Missing theorem, primitive, selector, discriminator, source law, action, variation, or `none` if not applicable. |
+| `next_theorem_needed` | Next theorem, source-side law, discriminator, witness, Gate Chair review, or `none`. This may duplicate `missing_theorem_or_primitive` when the missing object is itself the next theorem. |
 | `candidate_next_task` | Bounded next task candidate, if one follows; otherwise `none`. |
+| `three_tier_classification` | P6 classification: `adopted_object`, `accepted_evidence_precondition`, `open_or_blocked_physical_target`, or `mixed_with_explicit_boundaries`. |
+| `linter_status` | Claim-language and inventory-lint status for the item, such as `PASS`, `PASS_WITH_WARNINGS`, `not_yet_linted`, or `not_applicable`. |
 | `overread_guard` | Semicolon-separated guard tokens aligned with P1 status layers. |
 | `external_review_notes` | Short review-facing clarification of what an external reviewer should check or should not infer. |
+
+## P7-T01 V14 Field Mapping
+
+The v14 plan names reader-facing fields. The existing schema is retained, but
+P7 inventory work must expose the mapping below so future validation and
+external review do not depend on implicit interpretation.
+
+| V14 field | Schema field |
+| --- | --- |
+| object ID | `frontier_item_id` |
+| object name | `object_or_claim_name` |
+| milestone | `milestone` |
+| object type | `object_type` and `frontier_item_class` |
+| status layer summary | `status_layer_summary` |
+| source path | `source_artifact_path` |
+| authority level | `authority_level` and `source_authority_type` |
+| assumptions | `assumptions` |
+| definitions introduced | `definitions_introduced` |
+| theorem-like claims | `theorem_like_claims` and `statement_or_decision` |
+| audits passed | `audits_passed` |
+| stress results | `stress_results` |
+| Gate Chair results | `gate_chair_results` |
+| fail-closed branches | `fail_closed_branches` |
+| known obstructions | `known_obstructions` |
+| forbidden overread | `forbidden_overread` and `overread_guard` |
+| next theorem needed | `next_theorem_needed` |
+| downstream blocked targets | `downstream_blocked_targets` |
+| three-tier classification | `three_tier_classification` |
+| linter status | `linter_status` |
+| external review notes | `external_review_notes` |
+
+P7-T02 inventory population must fill the explicit v14 fields. It may preserve
+older fields for backward compatibility, but it must not use field mapping to
+promote scoped evidence/preconditions into adopted objects or physical targets.
 
 ## Status Layer Summary
 
@@ -127,10 +178,10 @@ migration:
 - `no_detector_semantics`
 - `no_einstein_equations`
 - `no_benchmark_promotion`
-- `no_benchmark_gate_chair_closure`
+- `no_benchmark_closure_without_protected_authority`
 - `no_completed_derivation`
 - `no_future_source_extension_impossibility`
-- `no_global_theory_rejection`
+- `no_program_wide_no_go_conclusion`
 
 High-risk items must include the relevant explicit non-conclusions in both
 `physical_non_conclusions` and `overread_guard`. This duplication is
@@ -170,7 +221,7 @@ represent the required frontier cases without promoting them.
 | `M_src` scoped source-only object | `gate_decision;accepted_scoped_object` | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex`; ledger row `m_src` | no `MetricData(E)` adoption; no `g_eff` scope expansion; no matter-coupling derivation; no Einstein equations; no benchmark promotion; no completed derivation |
 | `g_eff` scoped source-extension object | `gate_decision;accepted_scoped_object` | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex`; ledger row `g_eff` | no source-law adoption; no `MetricData(E)` adoption; no unscoped `g_eff` adoption; no matter-coupling derivation; no Einstein equations; no benchmark promotion; no completed derivation |
 | Matter-coupling precondition evidence | `source_extension_evidence;witness` | `research_control/tasks/RT-20260614-269/artifacts/298_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_P4_PARAMETERIZED_FINITE_LOCAL_SOURCE_FAMILY_WITNESS_V1_SOURCE_EXTENSION_EVIDENCE_GATE_CHAIR_REVIEW.tex`; ledger row `matter_coupling` | no source-law adoption; no `MetricData(E)` adoption; no `g_eff` scope expansion; no coupling-law adoption; no matter-coupling derivation or adoption; no stress-energy semantics; no stress-energy tensor; no matter action; no detector semantics; no Einstein equations; no benchmark promotion; no completed derivation |
-| Finite toy metric-response frozen negative | `obstruction;frozen_negative_route` | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex`; ledger row `finite_toy_metric_response` | no `g_eff` scope expansion; no matter-coupling derivation; no Einstein equations; no benchmark promotion; no completed derivation; no global theory rejection; no future source-extension impossibility |
+| Finite toy metric-response frozen negative | `obstruction;frozen_negative_route` | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex`; ledger row `finite_toy_metric_response` | no `g_eff` scope expansion; no matter-coupling derivation; no Einstein equations; no benchmark promotion; no completed derivation; no program-wide no-go conclusion; no future source-extension impossibility |
 | Open Einstein-equation burden | `missing_theorem` | `research_control/design/gr_derivation_burden_map.md`; ledger row `einstein_equations` | no Einstein equations; no benchmark promotion; no completed derivation |
 
 ## Inventory Item Template
@@ -182,6 +233,8 @@ semantic shape must match this template.
 frontier_item_id: ""
 frontier_item_class: ""
 object_or_claim_name: ""
+milestone: ""
+object_type: ""
 status_layer_summary:
   control_status: ""
   mathematical_status: ""
@@ -190,16 +243,29 @@ status_layer_summary:
   overread_guard: ""
 source_artifact_path: ""
 source_authority_type: ""
+authority_level: ""
 assumptions: []
 definitions_used: []
+definitions_introduced: []
 statement_or_decision: ""
+theorem_like_claims: []
 mathematical_conclusion: ""
+audits_passed: []
+stress_results: []
+gate_chair_results: []
+fail_closed_branches: []
+known_obstructions: []
 physical_non_conclusions: []
+forbidden_overread: []
+downstream_blocked_targets: []
 allowed_reuse: []
 blocked_reuse: []
 dependency_items: []
 missing_theorem_or_primitive: ""
+next_theorem_needed: ""
 candidate_next_task: ""
+three_tier_classification: ""
+linter_status: ""
 overread_guard: ""
 external_review_notes: ""
 ```
@@ -224,11 +290,18 @@ P2-T04 should add or extend a validator to check at least:
 7. `physical_non_conclusions` is nonblank for every physics-adjacent item.
 8. Items containing `matter`, `coupling`, `stress-energy`, `Einstein`,
    `benchmark`, `g_eff`, `MetricData`, or frozen-route language include
-   explicit overread guards.
-9. Frozen negative items distinguish local route freeze from global theory
-   rejection and future source-extension impossibility.
-10. Gate decision items do not imply benchmark Gate Chair closure unless the
-    cited artifact actually supplies that protected verdict.
+   explicit overread guards, forbidden overread prose, and downstream blocked
+   targets.
+9. Frozen negative items distinguish local route freeze from a program-wide
+   no-go conclusion and future source-extension impossibility.
+10. Gate decision items do not imply benchmark closure without protected
+    benchmark authority unless the cited artifact actually supplies that
+    protected verdict.
+11. `three_tier_classification` must use the P6 tier vocabulary and must not
+    classify evidence/preconditions as adopted objects without independent
+    tracked source authority.
+12. `linter_status` must record whether the row has passed claim-language and
+    inventory-specific validation.
 
 ## Completion Boundary
 
@@ -237,8 +310,8 @@ surfaces, and validated as a control design artifact. This completion does not
 populate the inventory and does not alter the Distance-to-GR ledger. It does
 not adopt new theorem statements, source laws, source-extension data, scoped
 objects, `MetricData(E)`, unscoped `g_eff`, matter coupling, stress-energy
-semantics, Einstein equations, benchmark promotion, Gate Chair closure, or a
-completed derivation.
+semantics, Einstein equations, benchmark promotion, protected benchmark
+closure, or a completed derivation.
 
 ## APA 7 Source Materials
 
