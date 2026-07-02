@@ -47,6 +47,14 @@ authorization_layers:
   benchmark_promotion_authority_source_path: ""
   completed_derivation_authorized: false
   completed_derivation_authority_source_path: ""
+# Three-tier summaries are reporting fields only. They must render adopted
+# objects, accepted evidence/preconditions, open or blocked physical targets,
+# and forbidden overreads without promoting claims beyond source authority.
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions: []
+  open_or_blocked_physical_targets: []
+  forbidden_overread: []
 project_improvement_signals:
   - signal_id: ""
     signal_type: ""

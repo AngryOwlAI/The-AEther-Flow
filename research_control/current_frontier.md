@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-008` and `handoff-0461`.
+`RT-20260702-009` and `handoff-0462`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-008` |
-| Latest handoff ID | `handoff-0461` |
-| Current status | `v14_p6_t01_three_tier_claim_convention_policy_completed_next_completion_handoff_template_update` |
+| Active task ID | `RT-20260702-009` |
+| Latest handoff ID | `handoff-0462` |
+| Current status | `v14_p6_t02_completion_handoff_template_update_completed_next_current_frontier_three_tier_pilot` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p6 t02 completion handoff template three tier update |
-| Required next authority | Run one bounded v14 P6-T02 completion and handoff template update packet before current-frontier three-tier pilot or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P6-T02 completion and handoff template update packet before current-frontier three-tier pilot or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p6 t03 current frontier three tier pilot |
+| Required next authority | Run one bounded v14 P6-T03 current-frontier three-tier pilot packet before P6 validation or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P6-T03 current-frontier three-tier pilot packet before P6 validation or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-008/00_TASK.yaml`.
-- Active task objective: Create the three-tier claim convention policy so future completions handoffs current-frontier summaries public status surfaces and final audits distinguish adopted objects accepted evidence/preconditions and open or blocked physical targets.
-- Latest handoff path: `research_control/handoffs/handoff-0461.yaml`.
-- Latest handoff summary: RT-20260702-008 completed one bounded v14 P6-T01 three-tier claim convention policy packet. It created and registered the canonical policy requiring summaries to distinguish adopted objects accepted evidence/preconditions and open or blocked physical targets without physics claim promotion.
+- Active task path: `research_control/tasks/RT-20260702-009/00_TASK.yaml`.
+- Active task objective: Update completion and handoff templates so future records can include three_tier_claim_summary without schema failure and without claim promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0462.yaml`.
+- Latest handoff summary: RT-20260702-009 completed one bounded v14 P6-T02 completion and handoff template update packet. It added three_tier_claim_summary to the completion and handoff templates with reporting-only non-promotion guidance and no physics claim promotion.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P6-T02 completion and handoff template update packet before current-frontier three-tier pilot or downstream physics routes.
+- Next recommended action: Run one bounded v14 P6-T03 current-frontier three-tier pilot packet before P6 validation or downstream physics routes.
 
 ## Matter-Coupling Boundary
 
@@ -164,7 +164,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P6-T02 completion and handoff template update packet before current-frontier three-tier pilot or downstream physics routes.
+Run one bounded v14 P6-T03 current-frontier three-tier pilot packet before P6 validation or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -188,13 +188,13 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory status PASS and targeted queries returned canonical plan current frontier and public status source spec<br>continue_research.py resolved handoff-0460 to one bounded P6-T01 packet |
-| `completion_internal` | PASS | receipt complete | three_tier_claim_convention.md defines all required P6-T01 tiers and summary surfaces<br>policy source hash cfd78be2af42249b44c7cd131c7f6613425df778a4c6aa280ce4293a7492f1aa |
-| `post_write` | PASS | receipt complete | policy claim-language validation passed with zero findings |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory status PASS and targeted queries returned canonical plan and current frontier<br>continue_research.py resolved handoff-0461 to one bounded P6-T02 packet |
+| `completion_internal` | PASS | receipt complete | completion template includes three_tier_claim_summary with the required four list fields<br>handoff template includes three_tier_claim_summary with the required four list fields |
+| `post_write` | PASS | receipt complete | repository YAML loader check passed for both templates<br>template claim-language validation passed with zero findings |
 | `post_checkpoint` | PASS | receipt complete | checkpoint command is recorded in the completion and must pass before this transaction is committed |
-| `renderer` | PASS | receipt complete | current_frontier.md must be regenerated from handoff-0461 |
+| `renderer` | PASS | receipt complete | current_frontier.md must be regenerated from handoff-0462 |
 | `memory_bootstrap` | PASS | receipt complete | bootstrap_memory_system.py and validate-only are required receipts for this packet |
-| `claim_language_linter` | PASS | receipt complete | policy source passed claim-language validation with zero findings |
+| `claim_language_linter` | PASS | receipt complete | template sources passed claim-language validation with zero findings |
 
 Authorization layers:
 
@@ -212,9 +212,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-008`;
-- latest handoff: `handoff-0461`;
-- current status: `v14_p6_t01_three_tier_claim_convention_policy_completed_next_completion_handoff_template_update`;
+- active task: `RT-20260702-009`;
+- latest handoff: `handoff-0462`;
+- current status: `v14_p6_t02_completion_handoff_template_update_completed_next_current_frontier_three_tier_pilot`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -224,8 +224,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0461.yaml`
-- `research_control/tasks/RT-20260702-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0462.yaml`
+- `research_control/tasks/RT-20260702-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -241,7 +241,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0461*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0462*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

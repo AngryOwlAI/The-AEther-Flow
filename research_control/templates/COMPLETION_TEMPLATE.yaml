@@ -49,6 +49,13 @@ authorization_layers:
   benchmark_promotion_authority_source_path: ""
   completed_derivation_authorized: false
   completed_derivation_authority_source_path: ""
+# Three-tier summaries are reporting fields only. They must cite tracked
+# authority in their entries and cannot promote claims beyond source authority.
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions: []
+  open_or_blocked_physical_targets: []
+  forbidden_overread: []
 verdict: ""
 mathematical_decisiveness_contract:
   contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
@@ -124,7 +131,7 @@ forbidden_conclusion_summary:
     - "benchmark promotion"
     - "Gate Chair verdict"
     - "completed derivation"
-    - "global theory rejection"
+    - "program-wide no-go conclusion"
   summary: ""
 route_cycle_control:
   cycle_family: ""
