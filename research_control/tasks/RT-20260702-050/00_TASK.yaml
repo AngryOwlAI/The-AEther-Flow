@@ -1,0 +1,49 @@
+task_id: "RT-20260702-050"
+task_title: "v14 P14-T03 current frontier final refresh"
+task_type: "current_frontier_final_refresh_packet"
+status: "completed"
+created_at: "2026-07-02T14:57:09Z"
+started_at: "2026-07-02T14:57:09Z"
+completed_at: "2026-07-02T14:57:09Z"
+parent_task_id: "RT-20260702-049"
+source_handoff_id: "handoff-0502"
+decision_id: "DDR-20260702-050"
+agent_job_id: "AJ-RT-20260702-050-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P14"
+plan_task_id: "P14-T03"
+objective: "Refresh current frontier and verify v14 claim language validation layers and three-tier summary."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  rr_e_transport_law_adoption_authorized: false
+  unrestricted_rr_e_irrelevance_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+scope:
+  allowed:
+    - "refresh research_control/current_frontier.md from tracked state"
+    - "verify current frontier against program_state handoff and Distance-to-GR ledger"
+    - "verify scoped-positive language three-tier claim summary and validation-layer section"
+    - "route to P14-T04 final validation"
+  forbidden:
+    - "edit canonical ontology or science sources"
+    - "change the Distance-to-GR ledger"
+    - "adopt source laws matter semantics detector semantics coupling laws matter coupling Einstein equations benchmark status or completed derivation"
+    - "perform P14-T04 final validation or P14-T05 ordinary continuation handoff in this packet"
+validation:
+  required_validator: "research_control/tasks/RT-20260702-050/artifacts/validate_p14_t03_current_frontier_refresh.py"
+  expected_report: "research_control/tasks/RT-20260702-050/artifacts/p14_t03_current_frontier_refresh_validation_report.json"
+  expected_status: "PASS"
+next_route:
+  plan_task_id: "P14-T04"
+  task_type: "final_validation_packet"
+  role_family: "project-control-maintainer@0.2.0 or validator-engineer@0.2.0"
+  objective: "Run all required v14 final validation commands and tests."
