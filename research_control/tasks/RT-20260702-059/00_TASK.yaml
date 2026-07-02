@@ -1,0 +1,58 @@
+task_id: "RT-20260702-059"
+task_type: "matter_semantics_equivalence_theorem_smuggling_audit"
+status: "completed"
+created_at: "2026-07-02T20:41:30Z"
+updated_at: "2026-07-02T20:41:30Z"
+closed_at: "2026-07-02T20:41:30Z"
+parent_task_id: "RT-20260702-058"
+parent_handoff_id: "handoff-0511"
+decision_id: "DDR-20260702-059"
+job_id: "AJ-RT-20260702-059-001"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260702-059"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for human gates. This P2-T04 audit does not consume Gate Chair authority, adoption authority, benchmark authority, canonical ontology authority, or physics claim-promotion authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T04"
+  plan_task_name: "Smuggling audit of theorem packet"
+objective: "Audit the RT-20260702-058 NarrowMSCertEq_v1 theorem packet for hidden target imports, detector-semantics imports, metric imports, stress-energy imports, process-authority laundering, and status laundering before Refuter stress."
+closure_status: "post_v15_p2_t04_smuggling_audit_passed_pending_refuter_stress_no_adoption"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "audit the source-side matter-semantics equivalence theorem candidate for hidden target imports and status laundering before stress"
+claim_boundary:
+  allowed_scope: "Draft/control source-purity audit of the P2-T03 theorem packet only"
+  v15_plan_status: "implementation guidance only"
+  scientific_claims_changed: true
+  scientific_claim_delta: "source-purity audit classification and P2-T05 stress-route guard only"
+  audit_verdict: "source_pure_as_written_pending_refuter_stress"
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260702-059/artifacts/child_phys_math_p2_t04_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260702-059/artifacts/child_phys_phil_p2_t04_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260702-059/artifacts/parent_conflict_review_p2_t04_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260702-059/artifacts/parent_fusion_notes_p2_t04_smuggling_audit.md"
+next_recommended_action: "Run one bounded v15 P2-T05 Refuter stress packet against the RT-20260702-058 theorem packet and RT-20260702-059 audit before any selector, Gate Chair review, adoption, or downstream promotion."
+notes: "This task implements only P2-T04. It does not execute P2-T05 Refuter stress, P2-T06 post-theorem selector, or any downstream v15 phase."
+documentation_impact_id: "DI-RT-20260702-059-001"

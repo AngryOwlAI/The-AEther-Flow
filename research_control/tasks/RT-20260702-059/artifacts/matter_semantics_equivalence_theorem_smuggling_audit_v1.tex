@@ -1,0 +1,207 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\AuditVerdict}{\mathsf{source\_pure\_as\_written\_pending\_refuter\_stress}}
+\newcommand{\EqMS}{\mathrm{EqMS}_{\mathrm{src}}^{\mathrm{cert}}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\CInv}{C_{\mathrm{invariance}}^{\mathrm{src}}}
+\newcommand{\CFact}{C_{\mathrm{factorization}}^{\mathrm{src}}}
+\newcommand{\CNTI}{C_{\mathrm{no\text{-}target}}^{\mathrm{src}}}
+\newcommand{\RREObj}{\mathrm{RR}_{E}^{\mathrm{decl}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\title{Matter-Semantics Equivalence Theorem Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260702-059}
+\date{2026-07-02}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This document implements v15 P2-T04. It audits the P2-T03 artifact
+\emph{Narrow source-side matter-semantics equivalence theorem attempt v1}
+from \texttt{RT-20260702-058}.
+
+This is a draft/control source-purity audit. It is not a canonical ontology
+edit, not source-law adoption, not \(\mathrm{RR}_{E}\) transport-law
+adoption, not matter-semantics adoption, not detector-semantics adoption, not
+coupling-law adoption, not matter-coupling derivation, not stress-energy
+semantics, not a matter action, not Einstein equations, not benchmark
+promotion, and not completed derivation.
+
+\section{Audited Object}
+
+The audited theorem states that declared source-side matter-semantics objects
+\(A_{\mathrm{src}}\) and \(B_{\mathrm{src}}\) satisfy
+\[
+  A_{\mathrm{src}} \EqMS B_{\mathrm{src}}
+\]
+when at least one explicit source certificate
+\[
+  \CTr(A,B),\qquad \CInv(A,B),\qquad \CFact(A,B;F)
+\]
+is supplied, the no-target certificate \(\CNTI\) passes, declared-object
+indexing is consistent, and fail-closed branches remain inactive. The theorem
+also records certificate-gap and malformed/imported-certificate fail-closed
+branches.
+
+\section{Audit Criteria}
+
+The audit checks whether the theorem obtains its result by importing any
+forbidden authority:
+
+\begin{enumerate}[label=(\arabic*)]
+  \item target manifold, target topology, target atlas, target differentiable
+        structure, target Lorentzian signature, or target metric;
+  \item empirical clocks, rods, detector protocols, detector semantics, or
+        empirical observer readout semantics;
+  \item benchmark behavior or exact-GR success;
+  \item \(\MetricData(E)\), \(\geff\), stress-energy tensor, matter action,
+        or Einstein equations;
+  \item validator PASS, registry row, Gate Chair status outside exact scope,
+        generated derivative, file order, commit state, role identity,
+        handoff, approval, local cache, or other process authority as proof;
+  \item scoped evidence/precondition status as adoption or as a substitute for
+        explicit source certificates;
+  \item conditional theorem status as matter semantics, detector semantics,
+        coupling law, matter coupling, benchmark recovery, or completed
+        derivation.
+\end{enumerate}
+
+\section{Findings}
+
+\subsection{No target-manifold, topology, atlas, signature, or metric import}
+
+The theorem's positive proof proceeds by cases on explicit source
+certificates. The transport case uses source labels, guards, and record
+indices. The invariance case uses source relabeling or admissible source
+variation. The factorization case uses a declared source object \(F\) and
+object-indexed \(\RREObj(F)\). The proof does not require target topology,
+target smooth atlas, target differentiability, target Lorentzian signature,
+target metric, proper time, empirical clocks, or rods.
+
+\subsection{No detector-semantics import detected as written}
+
+The theorem keeps source readout or response tokens inside source-side syntax.
+It explicitly denies detector equivalence, physical matter equivalence,
+empirical equivalence, and benchmark equivalence. No detector protocol or
+empirical observer semantics is used as a mathematical premise.
+
+\subsection{No stress-energy, matter-action, or Einstein-equation import}
+
+The theorem neither imports nor constructs stress-energy semantics, a
+stress-energy tensor, matter-action semantics, a matter action, or Einstein
+equations. The Distance-to-GR section states that those burdens remain
+unchanged and blocked.
+
+\subsection{No process-authority laundering detected as written}
+
+The theorem states that generated derivatives, registry metadata, validators,
+roles, handoffs, approvals, local caches, file order, and commit state may not
+be used as mathematical premises. Its proof uses the P2-T02 source-side
+definition of \(\EqMS\), not validation or registry status, as the local
+logical basis.
+
+\subsection{No status laundering detected as written}
+
+The theorem's positive status is conditional and scoped:
+\[
+  \texttt{conditional\_or\_scoped\_source\_side\_equivalence\_theorem\_candidate}.
+\]
+It is not rendered as bare accepted status. It does not adopt
+\(\CTr\), \(\CInv\), \(\CFact\), \(\CNTI\), \(\mathrm{PositiveMSProfile}_{v1}\),
+\(\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}\), or
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\) as
+source laws.
+
+\subsection{Scoped evidence is not used as certificate evidence}
+
+The theorem explicitly says scoped evidence/precondition artifacts may be
+cited only within their tracked scopes and do not instantiate a concrete pair
+\((A_{\mathrm{src}},B_{\mathrm{src}})\) with a complete certificate bundle.
+Therefore the theorem does not convert scoped evidence into adoption or
+certificate witnesses.
+
+\section{Verdict}
+
+The audit verdict is
+\[
+  \AuditVerdict .
+\]
+
+No target import, detector-semantics import, metric import, stress-energy
+import, process-authority laundering, or status laundering is detected in the
+theorem packet as written.
+
+This verdict makes the theorem packet ready for P2-T05 Refuter stress. It does
+not prove any concrete certificate instance, does not remove the certificate
+gap branch, does not adopt source laws or matter semantics, and does not
+advance the Distance-to-GR ledger.
+
+\section{Required P2-T05 Stress Targets}
+
+The next Refuter packet should stress at least:
+
+\begin{enumerate}[label=(\alph*)]
+  \item deletion of \(\CTr\), \(\CInv\), and \(\CFact\) certificates;
+  \item malformed source transport;
+  \item source-invariance mismatch;
+  \item source-factorization object mismatch;
+  \item \(\RREObj(F)\) separation violation pressure;
+  \item detector-semantics collapse pressure;
+  \item target metric and proper-time import pressure;
+  \item \(\CNTI\) misuse as positive semantics;
+  \item finite/local-to-global overread;
+  \item scoped evidence as adoption overread;
+  \item source-extension as derivation overread;
+  \item validator, registry, role, handoff, approval, generated-derivative,
+        file-order, local-cache, commit, or checkpoint proof-laundering
+        pressure.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+The Distance-to-GR status is unchanged. The audit classifies the theorem
+packet as source-pure as written pending stress. Matter coupling remains
+undischarged. \(\MetricData(E)\), \(\geff\), stress-energy semantics, matter
+action, Einstein equations, benchmark promotion, and completed derivation
+remain blocked.
+
+\section{Non-Conclusions}
+
+This audit does not authorize canonical ontology edit, source-law adoption,
+\(\mathrm{RR}_{E}\) source-law adoption,
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, unrestricted \(\mathrm{RR}_{E}\) theorem authority,
+\(\mathrm{PositiveMSProfile}_{v1}\) adoption,
+\(\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}\) adoption as law,
+source-extension data adoption beyond exact scoped Gate Chair results,
+\(\MetricData(E)\) adoption, \(\geff\) adoption or scope expansion,
+coupling-law adoption, matter-semantics adoption, detector-semantics adoption,
+matter-coupling derivation or adoption, stress-energy semantics,
+stress-energy tensor, matter action, Einstein equations, benchmark promotion,
+benchmark closure, completed derivation, future source-extension no-go claim,
+or program-wide no-go conclusion.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, July 2). \emph{Recommendations
+implementation plan continue task v15} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 2). \emph{Narrow source-side
+matter-semantics equivalence theorem attempt v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \emph{Source-side
+matter-semantics object and certificate manifest v1} [Research-control TeX
+artifact].
+
+\end{document}
