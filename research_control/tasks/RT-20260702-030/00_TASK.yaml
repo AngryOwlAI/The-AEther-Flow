@@ -1,0 +1,49 @@
+task_id: "RT-20260702-030"
+task_title: "v14 P10-T02 Literature Source Acquisition Packet"
+task_type: "literature_source_acquisition_packet"
+status: "completed"
+created_at: "2026-07-02T09:53:37Z"
+started_at: "2026-07-02T09:53:37Z"
+completed_at: "2026-07-02T09:53:37Z"
+parent_task_id: "RT-20260702-029"
+source_handoff_id: "handoff-0482"
+decision_id: "DDR-20260702-030"
+agent_job_id: "AJ-RT-20260702-030-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P10"
+plan_task_id: "P10-T02"
+objective: "Gather and record primary literature sources for the selected operational/causal metric and universal-coupling constraint scope."
+target_derivation_milestone: "none"
+milestone_burden: "P10 source acquisition support only; no physics derivation milestone is advanced."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+selected_scope_id: "operational_causal_metric_universal_coupling_constraints_scope"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_resemblance_as_validation_authorized: false
+scope:
+  allowed:
+    - "record bibliographic metadata"
+    - "record source relevance rationale"
+    - "map each source to AEther-Flow burden targets"
+    - "record source access notes and APA 7 citation candidates"
+    - "preserve no claim-promotion statement"
+  forbidden:
+    - "compare sources against AEther-Flow conclusions"
+    - "derive or adopt physics claims"
+    - "edit canonical ontology or science sources"
+    - "promote external resemblance as validation"
+validation:
+  required_validator: "research_control/tasks/RT-20260702-030/artifacts/validate_p10_t02_literature_sources.py"
+  expected_report: "research_control/tasks/RT-20260702-030/artifacts/p10_t02_literature_source_acquisition_report.json"
+  expected_status: "PASS"
+next_route:
+  plan_task_id: "P10-T03"
+  task_type: "literature_comparison_packet"
+  role_family: "documentation-curator@2.0.0 through Continue Research unless live state selects a stricter literature-review role"
+  objective: "Produce the source-backed literature comparison artifact using only the acquired sources and preserving no claim promotion."
