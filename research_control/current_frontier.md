@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-024` and `handoff-0477`.
+`RT-20260702-025` and `handoff-0478`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-024` |
-| Latest handoff ID | `handoff-0477` |
-| Current status | `v14_p9_t01_external_red_team_role_contract_completed_next_review_template` |
+| Active task ID | `RT-20260702-025` |
+| Latest handoff ID | `handoff-0478` |
+| Current status | `v14_p9_t02_red_team_review_template_completed_next_pilot` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p9 t02 external red team review template |
-| Required next authority | Run one bounded v14 P9-T02 red-team review template packet before pilot review, red-team selector, literature comparison, or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P9-T02 red-team review template packet before pilot review, red-team selector, literature comparison, or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p9 t03 external red team pilot |
+| Required next authority | Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-024/00_TASK.yaml`.
-- Active task objective: Add or update the external-red-team-reviewer role contract for v14 external red-team mode.
-- Latest handoff path: `research_control/handoffs/handoff-0477.yaml`.
-- Latest handoff summary: RT-20260702-024 completed one bounded v14 P9-T01 external red-team role-contract packet. The existing external-red-team-reviewer role now explicitly covers v14 critique surfaces while preserving may_promote_claims=false and no physics promotion authority.
+- Active task path: `research_control/tasks/RT-20260702-025/00_TASK.yaml`.
+- Active task objective: Create or update the red-team review template for v14-required review sections.
+- Latest handoff path: `research_control/handoffs/handoff-0478.yaml`.
+- Latest handoff summary: RT-20260702-025 completed one bounded v14 P9-T02 red-team review template packet. The review template now includes every v14-required review section while preserving non-promotional template status and unchanged global schema or validator behavior.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P9-T02 red-team review template packet before pilot review, red-team selector, literature comparison, or downstream physics routes.
+- Next recommended action: Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -70,20 +70,19 @@ Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| external_red_team_reviewer_role_contract | project-control role contract only | P9 external red-team mode readiness | red-team review result<br>physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `.agents/roles/physics/external-red-team-reviewer.v0.1.0.md` |
+| external_red_team_review_template | project-control template only | P9 external red-team pilot readiness | red-team review result<br>physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P9-T02 red-team review template |
+| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P9-T03 external red-team pilot |
 
 Forbidden overreads:
 
-- role contract as proof authority
-- red-team readiness as external review result
-- approval as physics promotion
-- critic role as Gate Chair authority
+- template as proof authority
+- template readiness as external review result
+- validator PASS as physics promotion
 
 ## Matter-Coupling Boundary
 
@@ -194,7 +193,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P9-T02 red-team review template packet before pilot review, red-team selector, literature comparison, or downstream physics routes.
+Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -218,8 +217,8 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookups and search inspected v14 plan current frontier and external red-team design<br>continue_research.py resolved handoff-0476 to one bounded P9-T01 packet |
-| `completion_internal` | PASS | receipt complete | task-local validator reports all five P9-T01 checks PASS<br>AGENT_ROLE_REGISTRY preserves may_promote_claims=false and ordinary requires_human_gate=false<br>approval-20260702-001 narrows human authorization to non-promotional role-contract update |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookups and search inspected v14 plan current frontier and P9-T02 plan text<br>continue_research.py resolved handoff-0477 to one bounded P9-T02 packet |
+| `completion_internal` | PASS | receipt complete | task-local P9-T02 validator reports all v14 template sections present<br>template preserves non-promotional authority flags<br>global schema and validator behavior unchanged |
 
 Authorization layers:
 
@@ -237,9 +236,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-024`;
-- latest handoff: `handoff-0477`;
-- current status: `v14_p9_t01_external_red_team_role_contract_completed_next_review_template`;
+- active task: `RT-20260702-025`;
+- latest handoff: `handoff-0478`;
+- current status: `v14_p9_t02_red_team_review_template_completed_next_pilot`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -249,8 +248,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0477.yaml`
-- `research_control/tasks/RT-20260702-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0478.yaml`
+- `research_control/tasks/RT-20260702-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -266,7 +265,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0477*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0478*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
