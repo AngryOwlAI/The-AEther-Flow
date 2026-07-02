@@ -14,6 +14,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
+- Related source: `MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY-SCHEMA-V1` `research_control/design/frontier_theorem_inventory_schema_v1.md`
 - Generated output path: `wiki/markdown/md-research-control-design-frontier-theorem-inventory.md`
 
 ## Validation
