@@ -1,0 +1,320 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\CertSrc}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\Cdom}{\mathsf{dom}}
+\newcommand{\Ccod}{\mathsf{cod}}
+\newcommand{\Cidx}{\mathsf{idx}}
+\newcommand{\CId}{\mathsf{id}^{\mathrm{src}}}
+\newcommand{\CComp}{\mathsf{comp}^{\mathrm{src}}}
+\newcommand{\CRes}{\mathsf{res}^{\mathrm{src}}}
+\newcommand{\CMalformed}{\mathsf{malformed}^{\mathrm{src}}}
+\newcommand{\CMissing}{\mathsf{missing}^{\mathrm{src}}}
+\newcommand{\Fail}{\mathsf{failclosed}^{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Valid}{\mathsf{valid}^{\mathrm{src}}}
+\newcommand{\SrcOnly}{\mathsf{sourceonly}}
+\newcommand{\TargetImport}{\mathsf{targetimport}}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\DeclEq}{\equiv_{\mathrm{decl}}^{\mathrm{src}}}
+\newcommand{\RREObj}{\mathrm{RR}_{E}^{\mathrm{decl}}}
+\newcommand{\NarrowMSCertEq}{\mathrm{NarrowMSCertEq}_{v1}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\PositiveMSProfile}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source Certificate Operation Laws And Fail-Closed Lemma v1}
+\author{Ontology Formalizer Packet RT-20260702-064}
+\date{2026-07-02}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v15 P3-T02. It uses the certificate primitives from
+\texttt{RT-20260702-063} and states operation laws for identity,
+composition, restriction, malformed certificates, missing certificates, and
+target-importing certificates.
+
+The artifact is draft/control theorem formalization. It does not adopt a
+source law, \(\RRELaw\), \(\PositiveMSProfile\), \(\SMSAR\), matter semantics,
+detector semantics, a coupling law, matter coupling, \(\MetricData(E)\),
+scoped \(\geff\), stress-energy semantics, a stress-energy tensor, a matter
+action, Einstein equations, benchmark status, or completed derivation.
+
+\section{Imported Primitive Vocabulary}
+
+\begin{definition}[Certificate evaluation]
+Let \(c\in\CertSrc\) be a source certificate record from
+\texttt{source\_certificate\_algebra\_primitives\_v1.tex}. The partial
+evaluation map
+\[
+  \mathcal E(c)\in \CertSrc\cup\{\Bottom\}
+\]
+returns \(c\) when all primitive validity fields are source-side, declared,
+and well formed. It returns \(\Bottom\) when \(\CMalformed(c)\),
+\(\TargetImport(c)\), \(\CMissing(c)\), a domain-codomain mismatch, a
+process-authority substitution, or a scoped-evidence-as-adoption substitution
+is present.
+\end{definition}
+
+\begin{definition}[Declared source scope]
+The declared scope \(\Scope(c)\) of a certificate \(c\) is the finite or
+locally finite source-side data named by \(\Cidx(c)\), \(\Cdom(c)\),
+\(\Ccod(c)\), the witness payload \(W_c\), and the guard \(G_c\). No object
+outside \(\Scope(c)\) is certified by \(c\).
+\end{definition}
+
+\begin{definition}[Declared-object equivalence]
+For source objects \(A,B\), the notation
+\[
+  A \DeclEq B \quad \text{inside } S
+\]
+means that a valid source certificate explicitly declares the relevant
+indices, domain, codomain, witness, and guard for \(A\) and \(B\) inside the
+source scope \(S\). It is not detector equivalence, physical matter
+equivalence, stress-energy equivalence, matter-action equivalence,
+coupling-law equivalence, empirical equivalence, benchmark equivalence, or
+source-law adoption.
+\end{definition}
+
+\begin{assumption}[Primitive well-formedness]
+All positive operation laws below are conditional on the P3-T01 primitive
+fields being present, source-side, and compatible. If the premise is absent or
+malformed, the relevant law is not promoted; the branch fails closed.
+\end{assumption}
+
+\section{Operation Laws}
+
+\begin{theorem}[Identity declared-scope preservation]
+Let \(A\) be a declared source object and let \(\CId_A\) be valid. Then
+\[
+  A \DeclEq A \quad \text{inside } \Scope(\CId_A).
+\]
+If \(c:A\to B\) is any valid source certificate with \(A\in\Scope(c)\), then
+\[
+  \mathcal E(\CComp(c,\CId_A)) = c
+\]
+inside \(\Scope(c)\cap\Scope(\CId_A)\). If \(d:B\to A\) is valid, then
+\[
+  \mathcal E(\CComp(\CId_A,d)) = d
+\]
+inside \(\Scope(d)\cap\Scope(\CId_A)\). No declared-object equivalence is
+created outside the named scope.
+\end{theorem}
+
+\begin{proof}
+By P3-T01, \(\CId_A\) has declared domain \(A\), declared codomain \(A\), and
+source-side status. Therefore it certifies only the reflexive declared source
+object relation for \(A\) inside its own declared scope. The primitive
+composition rule is syntactically well formed exactly when codomain and domain
+fields match and both inputs have valid source-side status. In
+\(\CComp(c,\CId_A)\), the codomain of \(\CId_A\) is \(A\), matching the
+domain of \(c\). Composition therefore keeps the certificate data of \(c\) on
+the shared declared scope. The left-identity case is identical with the order
+reversed. Since \(\CId_A\) contains no fields for objects outside
+\(\Scope(\CId_A)\), it cannot certify any relation outside the intersection
+of declared scopes.
+\end{proof}
+
+\begin{theorem}[Source-side closure under compatible composition]
+Let \(c_1:A\to B\) and \(c_2:B\to C\) be valid source certificates. If
+\[
+  \Ccod(c_1)=\Cdom(c_2)
+\]
+as declared source data, then \(\CComp(c_2,c_1)\) is source-side with
+\[
+  \Cdom(\CComp(c_2,c_1))=\Cdom(c_1),\qquad
+  \Ccod(\CComp(c_2,c_1))=\Ccod(c_2)
+\]
+and declared scope contained in \(\Scope(c_1)\cup\Scope(c_2)\). The law is
+conditional on both inputs passing the no-target and no-process-authority
+guards.
+\end{theorem}
+
+\begin{proof}
+The composition primitive from P3-T01 is defined only when both inputs have
+valid source-side status and the codomain-domain boundary matches. Under
+those premises, the composed record is built from the source indices, source
+labels, source guards, and witness payloads of \(c_1\) and \(c_2\). No target
+topology, target atlas, target metric, detector semantics, benchmark
+behavior, stress-energy semantics, matter action, registry status, validator
+status, role status, handoff status, approval status, local cache, file order,
+or commit state is an input field. Therefore the composition remains
+source-side and inherits its endpoint fields from the declared endpoints of
+the two input certificates. If either premise fails, the proof does not apply
+and the branch is governed by the fail-closed lemmas below.
+\end{proof}
+
+\begin{lemma}[Source restriction closure]
+Let \(c\) be a valid source certificate and let \(U\subseteq\Cdom(c)\) be a
+declared source subdomain. Then \(\CRes_U(c)\) is a source-side certificate
+whose scope is contained in \(U\cap\Scope(c)\). If \(U\) is supplied by target
+metric, detector, benchmark, process, or generated-derivative authority, the
+restriction law is not applicable and the branch fails closed.
+\end{lemma}
+
+\begin{proof}
+P3-T01 defines restriction by retaining only the source indices, labels,
+guards, and readout or response-token data declared inside \(U\). Thus a
+source-side \(U\) produces a source-side restricted certificate. A non-source
+\(U\) is not a declared source subdomain, so it violates the premise and
+returns \(\Bottom\).
+\end{proof}
+
+\section{Fail-Closed Laws}
+
+\begin{lemma}[Malformed certificate fail-closed behavior]
+If \(\CMalformed(c)\), then
+\[
+  \mathcal E(c)=\Bottom.
+\]
+No declared-object equivalence, certificate-mediated matter-semantics
+equivalence, \(RR_E\) identification, source-law adoption, or downstream GR
+claim follows from \(c\).
+\end{lemma}
+
+\begin{proof}
+P3-T01 defines a malformed certificate as one with a defect such as an
+undeclared source object index, domain-codomain mismatch, absent witness,
+changed factorization object, forbidden target or detector import,
+stress-energy or matter-action import, process-authority dependence, or
+scoped evidence-status treated as adoption. Each defect violates a required
+validity field. The evaluation map therefore returns \(\Bottom\), and the
+certificate cannot witness any positive equivalence or downstream claim.
+\end{proof}
+
+\begin{lemma}[Missing certificate preserves separation or obstruction]
+Let \(\tau\) be a required certificate slot for a declared \(RR_E\) separation
+or identification question. If \(\CMissing(\tau)\), then the attempted
+identification is not derived. If the two declared \(RR_E\) objects are
+already separated in the source record, that separation is preserved. If the
+source record lacks enough declared object data to state the separation, the
+precise obstruction is
+\[
+  \mathrm{OB\text{-}P3T02\text{-}MISSING\text{-}CERT\text{-}RRE\text{-}SEPARATION\text{-}DATA}.
+\]
+\end{lemma}
+
+\begin{proof}
+P3-T01 defines a missing certificate as an absent explicit certificate record
+for the declared use. Scoped evidence-status, registry status, validator
+status, handoff status, role status, approval status, file order, local cache,
+or commit state cannot fill the slot. Therefore no source-side certificate
+exists from which to infer \(RR_E\) identification. If the declared source
+record already contains two distinct \(\RREObj\) entries, the absence of a
+valid certificate leaves them distinct. If the record does not contain enough
+declared object data to state the separation, the packet cannot infer either
+identification or separation and must record the named obstruction. This is a
+precise failure of the stronger law, not a global no-go theorem.
+\end{proof}
+
+\begin{lemma}[Target-import invalidity]
+If a certificate record \(c\) uses target topology, target atlas, target
+metric, proper time, detector semantics, benchmark behavior, stress-energy
+semantics, matter-action semantics, \(\MetricData(E)\), \(\geff\), generated
+derivatives, registry metadata, validator status, role status, handoff
+status, approval status, local cache, file order, or commit state as a
+mathematical premise, then \(c\) is invalid and
+\[
+  \mathcal E(c)=\Bottom.
+\]
+\end{lemma}
+
+\begin{proof}
+The P3-T01 no-target-import obligation requires certificate primitives to be
+checkable without those imports. A record depending on one of them violates
+the source-only guard and is therefore malformed for certificate purposes.
+The fail-closed branch applies.
+\end{proof}
+
+\section{Target Coverage Table}
+
+\begin{longtable}{p{0.30\linewidth}p{0.18\linewidth}p{0.36\linewidth}}
+\toprule
+P3-T02 target & Status & Result \\
+\midrule
+Identity certificate preserves declared-object equivalence only within
+declared scope & proved conditional & The identity law holds only on
+\(\Scope(\CId_A)\) and compatible shared scope. \\
+Certificate composition remains source-side if both inputs are source-side &
+proved conditional & Closure holds for compatible valid inputs with no target
+or process imports. \\
+Restriction behavior & proved conditional & Source restrictions remain
+source-side; non-source restrictions fail closed. \\
+Malformed certificate fails closed & proved & Malformed records evaluate to
+\(\Bottom\). \\
+Missing certificate preserves \(RR_E\) separation or named obstruction &
+conditional plus precise obstruction & Separation is preserved when declared;
+otherwise the named obstruction is recorded. \\
+Target-importing certificate is invalid and fails closed & proved &
+Target-importing records evaluate to \(\Bottom\). \\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR Effect}
+
+This packet adds draft/control theorem and lemma support for source
+certificate operation discipline in the \texttt{matter\_coupling} lane. It
+narrows how later packets may use certificate algebra, but it does not derive
+matter coupling and does not change the physical status of \(\MetricData(E)\),
+\(\geff\), stress-energy semantics, matter action, Einstein equations,
+benchmark status, or completed derivation.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+The operation laws above are not source-law adoption and not adoption of
+\(\RRELaw\), \(\PositiveMSProfile\), or \(\SMSAR\).
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The operation laws do not erase the P2 certificate-gap witness. Missing or
+malformed concrete certificates still fail closed.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The operation laws do not supply matter semantics, detector semantics,
+coupling-law adoption, matter-coupling derivation or adoption, stress-energy
+semantics, stress-energy tensor, matter action, Einstein equations, benchmark
+promotion, benchmark closure, completed derivation, future source-extension
+impossibility, or a program-wide rejection claim.
+\end{nonconclusion}
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Recommendations
+implementation plan continue task v15} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Source certificate
+algebra primitives v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Source-side
+matter-semantics object and certificate manifest v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Narrow source-side
+matter-semantics equivalence theorem v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Matter-semantics
+equivalence theorem Refuter stress v1} [Research-control TeX artifact].
+
+\end{document}

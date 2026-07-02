@@ -380,6 +380,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex`
 - `TEX-V15-P2-T05-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex`
 - `TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES` `research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex`
+- `TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS` `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1012,6 +1013,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-v15-p2-t04-matter-semantics-equivalence-theorem-smuggling-audit.md`
 - `WIKI-TEX-V15-P2-T05-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-REFUTER-STRESS` `wiki/tex/tex-v15-p2-t05-matter-semantics-equivalence-theorem-refuter-stress.md`
 - `WIKI-TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES` `wiki/tex/tex-v15-p3-t01-source-certificate-algebra-primitives.md`
+- `WIKI-TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS` `wiki/tex/tex-v15-p3-t02-source-certificate-operation-laws.md`
 
 ## project_control
 
