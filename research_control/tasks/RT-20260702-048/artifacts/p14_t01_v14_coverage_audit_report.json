@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "detail": "missing_recommendations=[]",
+      "id": "all_v14_recommendations_mapped",
+      "passed": true
+    },
+    {
+      "detail": "missing_statuses=[]",
+      "id": "required_status_vocabulary_present",
+      "passed": true
+    },
+    {
+      "detail": "missing_markers=[]",
+      "id": "p14_t01_acceptance_markers_present",
+      "passed": true
+    },
+    {
+      "detail": "missing_task_ids=[]",
+      "id": "required_tracked_task_evidence_present",
+      "passed": true
+    },
+    {
+      "detail": "v14 plan P14-T01 acceptance criteria inspected.",
+      "id": "plan_contains_p14_t01_acceptance",
+      "passed": true
+    },
+    {
+      "detail": "P14-T02 through P14-T05 are marked as required downstream packets.",
+      "id": "downstream_p14_tasks_deferred_not_skipped",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "physics_promotion_authorized": false,
+    "source_law_adoption_authorized": false
+  },
+  "coverage_summary": {
+    "next_plan_task_id": "P14-T02",
+    "p14_downstream_tasks_pending": [
+      "P14-T02",
+      "P14-T03",
+      "P14-T04",
+      "P14-T05"
+    ],
+    "recommendations_expected": 13,
+    "recommendations_mapped": 13
+  },
+  "source_hashes": {
+    "audit": "cbeb95bcf846734d4722fd947af9636fb6f2fb86775d4e4b86e8eb6e3750364d",
+    "plan": "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec",
+    "research_task_registry": "9e6de4e09a64c152b4a4a7377b8717e537e19a7e5ba72f58370571073c16a488"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260702-048",
+  "validator_id": "validate_p14_t01_v14_coverage_audit"
+}
