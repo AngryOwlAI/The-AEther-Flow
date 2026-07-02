@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-037` and `handoff-0490`.
+`RT-20260702-038` and `handoff-0491`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-037` |
-| Latest handoff ID | `handoff-0490` |
-| Current status | `v14_p11_t04_narrow_theorem_template_completed_next_p11_validation` |
-| Current route family | task_template_control_packet |
+| Active task ID | `RT-20260702-038` |
+| Latest handoff ID | `handoff-0491` |
+| Current status | `v14_p11_t05_moratorium_phase_validation_completed_next_no_target_hygiene_doctrine` |
+| Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p11 t05 matter coupling moratorium validation |
-| Required next authority | Run one bounded v14 P11-T05 P11 validation and continuation gate packet. |
-| Next recommended action | Run one bounded v14 P11-T05 P11 validation and continuation gate packet. |
+| Current burden | none for physics derivation; live control burden is v14 p12 t01 no target certificate hygiene doctrine |
+| Required next authority | Run one bounded v14 P12-T01 no-target certificate hygiene doctrine packet. |
+| Next recommended action | Run one bounded v14 P12-T01 no-target certificate hygiene doctrine packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-037/00_TASK.yaml`.
-- Active task objective: Create reusable template for future narrow theorem/precondition packets.
-- Latest handoff path: `research_control/handoffs/handoff-0490.yaml`.
-- Latest handoff summary: RT-20260702-037 created the P11-T04 reusable narrow theorem task template.
-- Current route family: task_template_control_packet.
-- Next recommended action: Run one bounded v14 P11-T05 P11 validation and continuation gate packet.
+- Active task path: `research_control/tasks/RT-20260702-038/00_TASK.yaml`.
+- Active task objective: Validate the P11 matter-coupling moratorium checklist selector and template, then hand off to P12 no-target certificate hygiene.
+- Latest handoff path: `research_control/handoffs/handoff-0491.yaml`.
+- Latest handoff summary: RT-20260702-038 validated the P11 matter-coupling moratorium phase and routed to P12-T01.
+- Current route family: tracked continue-research route.
+- Next recommended action: Run one bounded v14 P12-T01 no-target certificate hygiene doctrine packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P11-T05 P11 validation and continuation gate packet.
+Run one bounded v14 P12-T01 no-target certificate hygiene doctrine packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-037`;
-- latest handoff: `handoff-0490`;
-- current status: `v14_p11_t04_narrow_theorem_template_completed_next_p11_validation`;
+- active task: `RT-20260702-038`;
+- latest handoff: `handoff-0491`;
+- current status: `v14_p11_t05_moratorium_phase_validation_completed_next_no_target_hygiene_doctrine`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0490.yaml`
-- `research_control/tasks/RT-20260702-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0491.yaml`
+- `research_control/tasks/RT-20260702-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0490*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0491*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
