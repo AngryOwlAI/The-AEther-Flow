@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-027` and `handoff-0480`.
+`RT-20260702-028` and `handoff-0481`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-027` |
-| Latest handoff ID | `handoff-0480` |
-| Current status | `v14_p9_t04_red_team_findings_selector_completed_next_phase_validation` |
+| Active task ID | `RT-20260702-028` |
+| Latest handoff ID | `handoff-0481` |
+| Current status | `v14_p9_t05_red_team_phase_validation_completed_next_literature_scope` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p9 t05 external red team phase validation |
-| Required next authority | Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection. |
-| Next recommended action | Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection. |
+| Current burden | none for physics derivation; live control burden is v14 p10 t01 literature comparison scope selector |
+| Required next authority | Run one bounded v14 P10-T01 literature-comparison scope selector before source acquisition comparison packet public boundary or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P10-T01 literature-comparison scope selector before source acquisition comparison packet public boundary or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-027/00_TASK.yaml`.
-- Active task objective: Classify P9-T03 red-team findings and select the next lawful route without promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0480.yaml`.
-- Latest handoff summary: RT-20260702-027 completed one bounded v14 P9-T04 red-team findings selector. All P9-T03 findings were classified as record/no-action or guard-preserving records and no repair freeze literature comparison or human-gated authority route was selected inside P9.
+- Active task path: `research_control/tasks/RT-20260702-028/00_TASK.yaml`.
+- Active task objective: Validate P9 external-red-team role boundaries and output integration, then hand off to P10 literature-comparison scope selection.
+- Latest handoff path: `research_control/handoffs/handoff-0481.yaml`.
+- Latest handoff summary: RT-20260702-028 validated P9 external-red-team role boundaries and output integration, completing P9 with no physics claim promotion.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection.
+- Next recommended action: Run one bounded v14 P10-T01 literature-comparison scope selector before source acquisition comparison packet public boundary or downstream physics routes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection.
+Run one bounded v14 P10-T01 literature-comparison scope selector before source acquisition comparison packet public boundary or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-027`;
-- latest handoff: `handoff-0480`;
-- current status: `v14_p9_t04_red_team_findings_selector_completed_next_phase_validation`;
+- active task: `RT-20260702-028`;
+- latest handoff: `handoff-0481`;
+- current status: `v14_p9_t05_red_team_phase_validation_completed_next_literature_scope`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0480.yaml`
-- `research_control/tasks/RT-20260702-027/00_TASK.yaml`
+- `research_control/handoffs/handoff-0481.yaml`
+- `research_control/tasks/RT-20260702-028/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0480*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0481*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

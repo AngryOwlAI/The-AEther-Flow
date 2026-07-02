@@ -1,0 +1,237 @@
+completion_id: "AJC-AJ-RT-20260702-028-001"
+job_id: "AJ-RT-20260702-028-001"
+task_id: "RT-20260702-028"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-02T09:15:41Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v14"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  related_plan_task_id: "P9-T05"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Validated P9 external-red-team role boundaries and output integration, completing P9 and routing to P10-T01."
+  downstream_tasks_not_implemented:
+    - "P10-T01 literature comparison scope selector"
+    - "P10-T02 literature source acquisition"
+    - "P10-T03 literature comparison packet"
+    - "P10-T04 literature findings route selector"
+    - "P10-T05 literature comparison public boundary"
+    - "P11 matter-coupling moratorium"
+    - "P12 no-target certificate hygiene"
+    - "P13 RR_E separation as burden"
+    - "P14 final integration audit"
+  all_applicable_plan_tasks_proven: false
+  phase_p9_completed: true
+output_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-028/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-028/DDR-20260702-028.md"
+  - "research_control/tasks/RT-20260702-028/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-028/artifacts/validate_p9_red_team_phase.py"
+  - "research_control/tasks/RT-20260702-028/artifacts/p9_t05_red_team_phase_validation_report.json"
+  - "research_control/tasks/RT-20260702-028/artifacts/p9_t05_red_team_phase_validation_receipt.md"
+  - "research_control/tasks/RT-20260702-028/jobs/AJ-RT-20260702-028-001.yaml"
+  - "research_control/tasks/RT-20260702-028/jobs/completions/AJC-AJ-RT-20260702-028-001.yaml"
+  - "research_control/tasks/RT-20260702-028/roles/validator-engineer@0.2.0--RT-20260702-028.yaml"
+  - "research_control/handoffs/handoff-0481.yaml"
+  - "research_control/handoffs/handoff-0481.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0480.yaml"
+  - "research_control/tasks/RT-20260702-024/artifacts/p9_t01_external_red_team_role_contract_report.json"
+  - "research_control/tasks/RT-20260702-025/artifacts/p9_t02_red_team_review_template_report.json"
+  - "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_report.json"
+  - "research_control/tasks/RT-20260702-027/artifacts/p9_t04_red_team_findings_selector_report.json"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=541 relationship_row_count=2878 semantic_row_count=541 vault_row_count=541"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"external red team phase validation\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14,MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260702-027 latest_handoff=handoff-0480 boundary=director_decision_required"
+  - ".venv/bin/python research_control/tasks/RT-20260702-024/artifacts/validate_p9_t01_external_red_team_role_contract.py --output /tmp/p9_t01_report.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260702-025/artifacts/validate_p9_t02_red_team_review_template.py --output /tmp/p9_t02_report.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_core_frontier.yaml | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260702-026/artifacts/validate_p9_t03_external_red_team_review.py --output /tmp/p9_t03_report.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260702-027/artifacts/validate_p9_t04_red_team_findings_selector.py --output /tmp/p9_t04_report.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260702-028/artifacts/validate_p9_red_team_phase.py --output research_control/tasks/RT-20260702-028/artifacts/p9_t05_red_team_phase_validation_report.json --json | required_status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory search returned canonical v14 plan and current-frontier P9-T05 context"
+      - "continue_research.py resolved handoff-0480 to one bounded P9-T05 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P9-T01 role-contract validator PASS"
+      - "P9-T02 review-template validator PASS"
+      - "P9-T03 global and task-local red-team pilot validators PASS"
+      - "P9-T04 selector validator PASS"
+      - "P9-T05 task-local phase validator PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write and --check are required after handoff-0481 state update"
+      - "render_dependency_graph.py write and --check are required after handoff-0481 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate is required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "current-frontier render/check required after handoff-0481 state update"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is required before this transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "p9_external_red_team_phase_validation"
+      status: "project-control phase validation only"
+      authority_path: "research_control/tasks/RT-20260702-028/artifacts/p9_t05_red_team_phase_validation_report.json"
+      supports_target: "P10 literature-comparison scope readiness"
+      does_not_establish:
+        - "external validation of the theory"
+        - "source-law adoption"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+  open_or_blocked_physical_targets:
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream derivation burdens and protected authorities remain missing"
+      evidence_not_to_overread:
+        - "red-team role contract PASS"
+        - "red-team pilot PASS"
+        - "phase validation PASS"
+      next_lawful_route: "P10-T01 literature-comparison scope selector"
+  forbidden_overread:
+    - "red-team validation as physics proof"
+    - "red-team role authority as external validation"
+    - "red-team pilot findings as adoption or rejection"
+    - "P10 readiness as literature comparison result"
+verdict: "v14_p9_t05_red_team_phase_validation_completed_next_literature_scope"
+coherent_resolution_summary: "RT-20260702-028 validated P9 external-red-team role boundaries and output integration, completing P9 while preserving every downstream physics block."
+next_recommendation: "Run one bounded v14 P10-T01 literature-comparison scope selector before source acquisition comparison packet public boundary or downstream physics routes."
+physics_progress_status:
+  status: "process_control_no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "P9 external-red-team phase validation only"
+  explanation: "This project-control packet validates P9 red-team integration only and does not change the Distance-to-GR ledger or scientific status."
+  downstream_promotion_reference: "authorization_layers.downstream_physics_promotion_authorized"
+distance_to_gr_delta:
+  changed: false
+  burden_id: ""
+  milestone: ""
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P10-T01 literature-comparison scope selector"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "P9-T05 validates process controls only."
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "coupling-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  summary: "P9-T05 is red-team phase validation and does not promote downstream physics or benchmark claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 541
+    relationship_row_count: 2878
+    semantic_row_count: 541
+    vault_row_count: 541
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"external red team phase validation\" --limit 10 --json"
+      query_type: "search"
+      query_text: "external red team phase validation"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "b16a6bdb1210b5bdfa8a3738177c86156334a8c71bddccf275af25bc9ab1036f"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
+p9_validation_receipts:
+  plan_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+  handoff_0480_hash: "a4b74d3f14fc39f4343cac0f58bba218e50df3cdae1fad8b1c4f5d1e05b9f141"
+  p9_t01_report_hash: "2fdf3cc4f131eb3f4fc132bae3711b165d0a8d63adb25697c5a7f80853749c72"
+  p9_t02_report_hash: "a0e5cc956ea44eadf38c7091b58581aa8a56c665f8104006cd5a633781e482f8"
+  p9_t03_report_hash: "8134bcb049d840e4f6c95526f37baa65d101e8bb7047972c6c515566244e0d67"
+  p9_t04_report_hash: "eb6ebdaeadd2d65aee8dcefcc479463d55080cf292b8d3d7fb59bbd164fe5519"
+  phase_validator_hash: "baeb1e60dd6801db795f1a5c166cf196edd1efc05ac726ddf254a96942a76e90"
+  phase_report_hash: "b33eabed4212b6e1e21d7fbd849619082c657b93602bffd3f80e73667751aa86"
