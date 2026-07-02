@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-046` and `handoff-0499`.
+`RT-20260702-047` and `handoff-0500`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-046` |
-| Latest handoff ID | `handoff-0499` |
-| Current status | `v14_p13_t04_rr_e_inventory_crosslinks_completed_next_phase_validation` |
-| Current route family | frontier_theorem_inventory_update_packet |
+| Active task ID | `RT-20260702-047` |
+| Latest handoff ID | `handoff-0500` |
+| Current status | `v14_p13_t05_rr_e_phase_validation_completed_next_final_integration_audit` |
+| Current route family | phase_validation_packet |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p13 t05 rr e separation phase validation |
-| Required next authority | Run one bounded v14 P13-T05 RR_E separation phase validation packet. |
-| Next recommended action | Run one bounded v14 P13-T05 RR_E separation phase validation packet. |
+| Current burden | none for physics derivation; live control burden is v14 p14 t01 v14 coverage audit |
+| Required next authority | Run one bounded v14 P14-T01 V14 coverage audit packet. |
+| Next recommended action | Run one bounded v14 P14-T01 V14 coverage audit packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-046/00_TASK.yaml`.
-- Active task objective: Crosslink RR_E-dependent theorem inventory entries to separation, non-collapse, obstruction, and certificate-indexed scope controls.
-- Latest handoff path: `research_control/handoffs/handoff-0499.yaml`.
-- Latest handoff summary: P13-T04 RR_E theorem inventory crosslinks completed.
-- Current route family: frontier_theorem_inventory_update_packet.
-- Next recommended action: Run one bounded v14 P13-T05 RR_E separation phase validation packet.
+- Active task path: `research_control/tasks/RT-20260702-047/00_TASK.yaml`.
+- Active task objective: Validate P13 RR_E separation controls and hand off to the P14 final integration audit.
+- Latest handoff path: `research_control/handoffs/handoff-0500.yaml`.
+- Latest handoff summary: P13-T05 RR_E separation phase validation completed.
+- Current route family: phase_validation_packet.
+- Next recommended action: Run one bounded v14 P14-T01 V14 coverage audit packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P13-T05 RR_E separation phase validation packet.
+Run one bounded v14 P14-T01 V14 coverage audit packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-046`;
-- latest handoff: `handoff-0499`;
-- current status: `v14_p13_t04_rr_e_inventory_crosslinks_completed_next_phase_validation`;
+- active task: `RT-20260702-047`;
+- latest handoff: `handoff-0500`;
+- current status: `v14_p13_t05_rr_e_phase_validation_completed_next_final_integration_audit`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0499.yaml`
-- `research_control/tasks/RT-20260702-046/00_TASK.yaml`
+- `research_control/handoffs/handoff-0500.yaml`
+- `research_control/tasks/RT-20260702-047/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0499*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0500*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
