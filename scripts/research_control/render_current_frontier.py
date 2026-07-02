@@ -93,10 +93,10 @@ BLOCKED_CLAIMS = [
     "detector semantics",
     "Einstein equations",
     "exact-GR benchmark promotion",
-    "benchmark Gate Chair closure",
+    "benchmark closure without protected authority",
     "completed derivation",
     "future source-extension impossibility",
-    "global theory rejection",
+    "program-wide no-go conclusion",
     "this snapshot as independent authority",
     "generated graph, checker, registry, validator, local cache, role, handoff, approval, or commit status as scientific proof",
 ]
@@ -457,6 +457,212 @@ def authorization_layer_summary(handoff: dict[str, Any]) -> dict[str, list[str]]
     return {"authorized": authorized, "not_authorized": not_authorized}
 
 
+def list_cell(value: Any) -> str:
+    if isinstance(value, list):
+        items = [md_cell(item) for item in value if text_value(item)]
+        return "<br>".join(items) if items else "none"
+    return md_cell(value) if text_value(value) else "none"
+
+
+def bool_cell(value: Any) -> str:
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    text = text_value(value)
+    return md_cell(text) if text else "false"
+
+
+def default_adopted_objects(rows: list[dict[str, str]], aliases: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    objects: list[dict[str, Any]] = []
+    display_names = {
+        "m_src": "M_src",
+        "g_eff": "g_eff",
+    }
+    for burden_id in ["m_src", "g_eff"]:
+        row = row_by_burden(rows, burden_id)
+        if not row:
+            continue
+        objects.append(
+            {
+                "object": display_names[burden_id],
+                "status": reader_facing_status(row, aliases),
+                "authority_path": row.get("last_evidence_path", ""),
+                "scope_qualifier": row.get("physical_status", ""),
+                "blocked_overread": split_tokens(row.get("overread_guard", "")),
+                "downstream_promotion_authorized": row.get("promotion_status") not in {
+                    "",
+                    "none",
+                    "scoped_source_object_only",
+                    "scoped_source_evidence_only",
+                },
+            }
+        )
+    return objects
+
+
+def default_evidence_preconditions(rows: list[dict[str, str]], aliases: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    row = row_by_burden(rows, "matter_coupling")
+    if not row:
+        return []
+    return [
+        {
+            "object": "matter_coupling burden evidence/preconditions",
+            "status": reader_facing_status(row, aliases),
+            "authority_path": row.get("last_evidence_path", ""),
+            "supports_target": "matter-semantics and matter-coupling continuation only",
+            "does_not_establish": split_tokens(row.get("overread_guard", "")),
+        }
+    ]
+
+
+def default_open_or_blocked_targets(rows: list[dict[str, str]]) -> list[dict[str, Any]]:
+    targets: list[dict[str, Any]] = []
+    for burden_id in ["matter_coupling", "einstein_equations", "benchmark_promotion"]:
+        row = row_by_burden(rows, burden_id)
+        if not row:
+            continue
+        targets.append(
+            {
+                "target": burden_id,
+                "status": row.get("control_status") or row.get("current_status", ""),
+                "missing_burden_or_authority": row.get("blocking_burden", ""),
+                "evidence_not_to_overread": split_tokens(row.get("overread_guard", "")),
+                "next_lawful_route": row.get("last_evidence_path", ""),
+            }
+        )
+    return targets
+
+
+def normalized_three_tier_summary(
+    handoff: dict[str, Any],
+    rows: list[dict[str, str]],
+    aliases: dict[str, dict[str, Any]],
+) -> dict[str, list[dict[str, Any]] | list[str]]:
+    summary = handoff.get("three_tier_claim_summary")
+    summary = summary if isinstance(summary, dict) else {}
+    adopted = summary.get("adopted_objects")
+    accepted = summary.get("accepted_evidence_preconditions")
+    open_targets = summary.get("open_or_blocked_physical_targets")
+    forbidden = summary.get("forbidden_overread")
+    return {
+        "adopted_objects": adopted if isinstance(adopted, list) and adopted else default_adopted_objects(rows, aliases),
+        "accepted_evidence_preconditions": (
+            accepted if isinstance(accepted, list) and accepted else default_evidence_preconditions(rows, aliases)
+        ),
+        "open_or_blocked_physical_targets": (
+            open_targets if isinstance(open_targets, list) and open_targets else default_open_or_blocked_targets(rows)
+        ),
+        "forbidden_overread": forbidden
+        if isinstance(forbidden, list) and forbidden
+        else [
+            "three-tier summary as physics proof",
+            "accepted evidence/preconditions as adopted objects",
+            "current-frontier rendering as downstream promotion",
+        ],
+    }
+
+
+def adopted_objects_table(items: list[Any]) -> str:
+    lines = [
+        "| Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    md_cell(item.get("object", "")),
+                    md_cell(item.get("status", "")),
+                    code_value(item.get("authority_path", "")),
+                    md_cell(item.get("scope_qualifier", "")),
+                    list_cell(item.get("blocked_overread", [])),
+                    bool_cell(item.get("downstream_promotion_authorized", False)),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines) if len(lines) > 2 else "No adopted source-only or source-extension objects are listed."
+
+
+def accepted_evidence_table(items: list[Any]) -> str:
+    lines = [
+        "| Evidence or precondition | Status | Supports target | Does not establish | Authority |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    md_cell(item.get("object", "")),
+                    md_cell(item.get("status", "")),
+                    md_cell(item.get("supports_target", "")),
+                    list_cell(item.get("does_not_establish", [])),
+                    code_value(item.get("authority_path", "")),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines) if len(lines) > 2 else "No accepted evidence or precondition entries are listed."
+
+
+def open_targets_table(items: list[Any]) -> str:
+    lines = [
+        "| Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    md_cell(item.get("target", "")),
+                    md_cell(item.get("status", "")),
+                    md_cell(item.get("missing_burden_or_authority", "")),
+                    list_cell(item.get("evidence_not_to_overread", [])),
+                    md_cell(item.get("next_lawful_route", "")),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines) if len(lines) > 2 else "No open or blocked physical target entries are listed."
+
+
+def bullet_items(items: list[Any]) -> str:
+    values = [text_value(item) for item in items if text_value(item)]
+    if not values:
+        return "- none"
+    return "\n".join(f"- {md_cell(item)}" for item in values)
+
+
+def three_tier_claim_summary_section(
+    handoff: dict[str, Any],
+    rows: list[dict[str, str]],
+    aliases: dict[str, dict[str, Any]],
+) -> str:
+    summary = normalized_three_tier_summary(handoff, rows, aliases)
+    return (
+        "This pilot separates source-side object status from evidence/precondition "
+        "status and from still-open physical targets. Evidence/precondition entries "
+        "are intentionally not rendered as adopted objects unless tracked source "
+        "authority independently records adoption.\n\n"
+        "Adopted source-only or source-extension objects:\n\n"
+        f"{adopted_objects_table(summary['adopted_objects'])}\n\n"
+        "Scoped accepted evidence/preconditions:\n\n"
+        f"{accepted_evidence_table(summary['accepted_evidence_preconditions'])}\n\n"
+        "Open or blocked physical targets:\n\n"
+        f"{open_targets_table(summary['open_or_blocked_physical_targets'])}\n\n"
+        "Forbidden overreads:\n\n"
+        f"{bullet_items(summary['forbidden_overread'])}"
+    )
+
+
 def scoped_alias_section(status_aliases: dict[str, Any]) -> str:
     aliases = status_alias_rows(status_aliases)
     if not aliases:
@@ -675,6 +881,10 @@ active-state authority. The renderer provides a deterministic repair command:
 - Latest handoff summary: {md_cell(sentence_fragment(handoff_summary, "not recorded"))}.
 - Current route family: {md_cell(state['route_family'])}.
 - Next recommended action: {md_cell(sentence_fragment(state['next_recommended_action'], "not recorded"))}.
+
+## Three-Tier Claim Summary Pilot
+
+{three_tier_claim_summary_section(handoff, ledger_rows, aliases)}
 
 ## Matter-Coupling Boundary
 

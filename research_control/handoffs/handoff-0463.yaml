@@ -1,0 +1,182 @@
+handoff_id: "handoff-0463"
+created_at: "2026-07-02T03:32:00Z"
+task_id: "RT-20260702-010"
+decision_id: "DDR-20260702-010"
+job_id: "AJ-RT-20260702-010-001"
+completion_path: "research_control/tasks/RT-20260702-010/jobs/completions/AJC-AJ-RT-20260702-010-001.yaml"
+source_task_id: "RT-20260702-010"
+source_job_id: "AJ-RT-20260702-010-001"
+source_completion_id: "AJC-AJ-RT-20260702-010-001"
+status: "completed"
+summary: "RT-20260702-010 completed one bounded v14 P6-T03 current-frontier three-tier pilot packet. It updated the current-frontier renderer and rendered separate tiers for adopted source objects, accepted evidence/preconditions, and open or blocked physical targets with no physics claim promotion."
+next_action: "Run one bounded v14 P6-T04 three-tier phase validation packet before P7 inventory refresh or downstream physics routes."
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "v14_p6_t04_three_tier_phase_validation"
+  objective: "Validate P6 three-tier summary behavior and hand off to P7 inventory refresh only after PASS."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "scripts/research_control/render_current_frontier.py"
+    note: "P6-T03 renderer adds a Three-Tier Claim Summary Pilot section."
+  - path: "research_control/current_frontier.md"
+    note: "P6-T03 rendered frontier distinguishes adopted objects evidence/preconditions and open or blocked targets."
+  - path: "research_control/tasks/RT-20260702-010/artifacts/p6_t03_current_frontier_three_tier_pilot_receipt.md"
+    note: "P6-T03 receipt proving required pilot content and non-promotion boundary."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory lookup and targeted search returned v14 plan and current frontier context"
+      - "continue_research.py resolved handoff-0462 to one bounded P6-T03 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "renderer includes Three-Tier Claim Summary Pilot section"
+      - "renderer separates adopted objects accepted evidence/preconditions and open or blocked targets"
+      - "renderer guard prevents evidence/preconditions from being rendered as adopted objects"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "renderer JSON smoke passed after code update"
+      - "current-frontier render/check required after state update"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is recorded in the completion and must pass before this transaction is committed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current_frontier.md must be regenerated from handoff-0463"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-source claim-language validation is required before checkpoint"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects:
+    - object: "M_src"
+      status: "scoped source-only object"
+      authority_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      scope_qualifier: "not target manifold not metric not GR derivation"
+      blocked_overread:
+        - "MetricData(E)"
+        - "g_eff scope expansion"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+        - "completed derivation"
+      downstream_promotion_authorized: false
+    - object: "g_eff"
+      status: "scoped source-extension object"
+      authority_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      scope_qualifier: "not unscoped Lorentzian metric not matter coupling not Einstein-equation evidence"
+      blocked_overread:
+        - "MetricData(E)"
+        - "unscoped g_eff"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+        - "completed derivation"
+      downstream_promotion_authorized: false
+  accepted_evidence_preconditions:
+    - object: "SourceMatterSemanticsAdoptionReadinessLaw_v1"
+      status: "scoped readiness evidence/precondition or proposal-only law target unless a later gate changes status"
+      authority_path: "research_control/design/three_tier_claim_convention.md"
+      supports_target: "matter-semantics continuation"
+      does_not_establish:
+        - "source-law adoption"
+        - "matter semantics"
+        - "detector semantics"
+        - "coupling law"
+    - object: "PositiveMSProfile_v1"
+      status: "accepted only as scoped positive source-semantics evidence/precondition"
+      authority_path: "research_control/design/three_tier_claim_convention.md"
+      supports_target: "matter-semantics continuation"
+      does_not_establish:
+        - "matter semantics"
+        - "detector semantics"
+        - "stress-energy"
+        - "matter action"
+    - object: "RR_ETransportCompletenessOrInvarianceLaw_v1"
+      status: "accepted only as certificate-indexed RR_E transport-completeness or invariance evidence/precondition"
+      authority_path: "research_control/design/three_tier_claim_convention.md"
+      supports_target: "RR_E separation and transport/invariance continuation"
+      does_not_establish:
+        - "source-law adoption"
+        - "object adoption"
+        - "unrestricted RR_E theorem"
+        - "detector semantics"
+        - "matter coupling"
+    - object: "matter_coupling burden evidence/preconditions"
+      status: "accepted only as scoped source-extension evidence/precondition"
+      authority_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      supports_target: "matter-semantics and matter-coupling continuation only"
+      does_not_establish:
+        - "coupling law"
+        - "matter coupling"
+        - "stress-energy semantics"
+        - "matter action"
+        - "Einstein equations"
+        - "benchmark promotion"
+        - "completed derivation"
+  open_or_blocked_physical_targets:
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream derivation burdens and protected authorities remain missing"
+      evidence_not_to_overread:
+        - "scoped source-side object status"
+        - "scoped evidence/precondition status"
+        - "renderer PASS"
+      next_lawful_route: "P6-T04 three-tier phase validation"
+  forbidden_overread:
+    - "current-frontier three-tier section as physics proof"
+    - "accepted evidence/preconditions as adopted objects"
+    - "renderer compatibility as source-law adoption"
+    - "three-tier summary as downstream promotion"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
