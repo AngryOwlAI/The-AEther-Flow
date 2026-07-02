@@ -1,0 +1,103 @@
+handoff_id: "handoff-0473"
+created_at: "2026-07-02T06:52:12Z"
+task_id: "RT-20260702-020"
+decision_id: "DDR-20260702-020"
+job_id: "AJ-RT-20260702-020-001"
+completion_path: "research_control/tasks/RT-20260702-020/jobs/completions/AJC-AJ-RT-20260702-020-001.yaml"
+source_task_id: "RT-20260702-020"
+source_job_id: "AJ-RT-20260702-020-001"
+source_completion_id: "AJC-AJ-RT-20260702-020-001"
+status: "completed"
+summary: "RT-20260702-020 completed one bounded v14 P8-T03 route-orbit validator packet. It added validate_route_orbits.py focused tests and a task-local recent matter/RR_E sample while preserving all physics claim-promotion blocks."
+next_action: "Run one bounded v14 P8-T04 matter-coupling route-orbit pilot before freeze taxonomy or downstream physics routes."
+required_next_packet:
+  role_id: "process-integrity-auditor"
+  role_version: "0.1.0"
+  packet_count: 1
+  task_type: "v14_p8_t04_matter_coupling_route_orbit_pilot"
+  objective: "Run the route-orbit detector on recent matter-coupling and RR_E chains and classify results with source evidence."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "scripts/research_control/validate_route_orbits.py"
+    note: "P8-T03 route-orbit validator emits hard-fail candidates and advisory warnings from route_signature_definition_v1 records."
+  - path: "research_control/tasks/RT-20260702-020/artifacts/p8_t03_route_orbit_validator_sample.json"
+    note: "Task-local sample over recent matter-coupling and RR_E chains returned PASS with zero hard failures."
+  - path: "research_control/tasks/RT-20260702-020/artifacts/p8_t03_route_orbit_validator_receipt.md"
+    note: "Task-local receipt confirms sample behavior and synthetic hard-fail detection."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory lookup returned route_signature_definition_v1 context"
+      - "query_memory lookup returned v14 implementation plan context"
+      - "query_memory search returned P8-T03 route-orbit validator context"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "route-orbit validator sample returned status=PASS signature_count=22 hard_failure_count=0 warning_count=0"
+      - "route-orbit validator focused tests passed"
+      - "P8-T03 task-local validator returned PASS"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "route_orbit_validator_v1"
+      status: "project-control tooling only"
+      authority_path: "scripts/research_control/validate_route_orbits.py"
+      supports_target: "P8-T04 matter-coupling route-orbit pilot readiness"
+      does_not_establish:
+        - "route freezing"
+        - "physics proof authority"
+        - "source-law adoption"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+  open_or_blocked_physical_targets:
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream derivation burdens and protected authorities remain missing"
+      next_lawful_route: "P8-T04 matter-coupling route-orbit pilot"
+  forbidden_overread:
+    - "route-orbit validator output as route freeze authority"
+    - "route-orbit validator output as physics proof"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""

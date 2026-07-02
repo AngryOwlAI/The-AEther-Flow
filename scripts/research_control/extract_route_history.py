@@ -476,6 +476,9 @@ def build_signature(
             if compact_text(value)
         }
     )
+    route_cycle_control_present = isinstance(completion.get("route_cycle_control"), dict)
+    if route_cycle_control_present:
+        evidence.setdefault("route_cycle_control_present", []).append("completion.route_cycle_control")
 
     signature = {
         "signature_schema_id": SIGNATURE_SCHEMA_ID,
@@ -522,6 +525,8 @@ def build_signature(
         ),
         "freeze_criteria_evaluated": isinstance(completion.get("freeze_criteria_status"), dict),
         "new_source_evidence_exists": infer_new_source_evidence(completion),
+        "source_created_at": compact_text(first_nonempty(task.get("created_at", ""), task_row.get("created_at", ""))),
+        "route_cycle_control_present": route_cycle_control_present,
         "source_evidence": evidence,
     }
     signature["signature_hash"] = compute_signature_hash(signature)
