@@ -93,7 +93,7 @@ obstruction_record:
   current_ontology_implication: "does_not_derive"
   source_extension_implication: "repair_allowed"
   consequence: "repair_candidate_allowed"
-  forbidden_overread: "This does not imply global theory rejection or future repair impossibility."
+  forbidden_overread: "This does not imply whole-framework failure or future repair impossibility."
 ```
 
 The field `forbidden_overread` is mandatory. It is the explicit guard against
@@ -196,6 +196,31 @@ human-gated decision. It does not prove global impossibility, reject future
 source extensions, reject the project theory, or authorize downstream GR
 promotion.
 
+## Matter-Coupling And `RR_E` Route-Orbit Freeze Taxonomy
+
+The following labels are scoped route-control labels for current
+matter-coupling and `RR_E` route-orbit hazards. They are candidates for
+`freeze_criteria_status.active_freeze_label` or route-cycle audit notes when the
+listed trigger appears in a future completion. They do not by themselves freeze
+a route, reject a future source extension, adopt any source-side law, promote
+matter coupling, derive stress-energy semantics, derive Einstein equations, or
+promote benchmark status.
+
+| Label | Scope | Trigger | Minimum control consequence | Forbidden overread |
+| --- | --- | --- | --- | --- |
+| `RR_E_UNRESTRICTED_IRRELEVANCE_UNDERDETERMINATION` | `current_ontology_only` / `downstream_metric` | A route treats unrestricted `RR_E` irrelevance as available while the current ontology does not derive the required invariance, transport, or restriction law. | `freeze_review_required` unless the next packet names a narrower theorem, countermodel, or source-law construction target. | Does not prove `RR_E` impossible, does not erase `RR_E` as a burden, and does not authorize metric or coupling claims. |
+| `RR_E_TRANSPORT_INVARIANCE_MISSING_SOURCE_LAW` | `current_ontology_only` / `source_extension_candidate` | A route repeats transport-completeness or invariance-law formalization, audit, stress, or gate language without a new source-side law, witness, obstruction, or boundary synchronization. | `new_primitive_required` plus `selector_required`, `freeze_review_required`, or `human_gate_required` depending on the active authority need. | Does not adopt `RR_ETransportCompletenessOrInvarianceLaw_v1` and does not imply future conservative source-extension impossibility. |
+| `MATTER_SEMANTICS_EVIDENCE_AS_ADOPTION_OVERREAD` | `matter_coupling` | A scoped Gate Chair evidence/precondition result is reused as if it adopted matter semantics, detector semantics, universal coupling, stress-energy semantics, or a matter action. | `downstream_block_preserved` and route to boundary synchronization or Gate Chair clarification before downstream use. | Scoped evidence/precondition acceptance is not source-law adoption and is not a matter-coupling derivation. |
+| `NO_TARGET_CERTIFICATE_POSITIVE_SEMANTICS_OVERREAD` | `matter_coupling` | A no-target certificate, source-purity result, or target-import audit pass is treated as positive matter semantics or detector semantics. | `target_import_detected` when applicable, otherwise `downstream_block_preserved` and route to positive-semantics construction or selector. | Absence of target import is hygiene evidence only; it is not positive semantics, a coupling law, or stress-energy semantics. |
+| `SCOPED_GATE_RESULT_WITHOUT_BOUNDARY_SYNC` | `source_extension_candidate` / `matter_coupling` | A scoped Gate Chair result is followed by downstream routing before a task records boundary synchronization, public/current-frontier status synchronization, or equivalent control receipt. | `selector_required` or `human_gate_required` until the boundary-synchronization receipt exists. | A scoped Gate Chair result without synchronization is not broader adoption authority. |
+| `REPEATED_FORMALIZE_AUDIT_STRESS_GATE_NO_NEW_PAYLOAD` | `current_ontology_only` / `source_extension_candidate` | A formalization/audit/stress/gate loop recurs with the same burden and no new payload, repair attempt, obstruction, freeze evaluation, boundary synchronization, or source evidence. | `freeze_review_required` and route to a named construction, scoped no-go question, obstruction packet, selector decision, or human-gated closure. | The loop warning does not reject the global ontology; it only blocks repeating the same shape without new payload. |
+
+Any completion using one of these labels must still state whether the route is
+`not_frozen`, `locally_frozen`, `freeze_review_required`, or
+`human_gate_required`, and must name the next allowed route or the protected
+authority needed. The label is evidence for routing discipline, not independent
+physics authority.
+
 ## Source Materials
 
 The AEther-Flow Research Project. (2026, June 21). *Mathematical decisiveness
@@ -205,3 +230,12 @@ completion contract* [Internal control note].
 The AEther-Flow Research Project. (2026, June 21). *AEther recommendations
 implementation plan* [Internal implementation plan].
 `implementations_plans/aether_recommendations_implementation_plan.md`
+
+The AEther-Flow Research Project. (2026, July 1). *Recommendations
+implementation plan for `/continue-research`, v14* [Internal implementation
+plan].
+`implementations_plans/recommendations_implementation_plan_continue_task-v14.md`
+
+The AEther-Flow Research Project. (2026, July 2). *P8-T04 route-orbit pilot
+report* [Internal control report].
+`research_control/tasks/RT-20260702-021/artifacts/p8_t04_route_orbit_pilot_report.json`
