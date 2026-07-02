@@ -1,0 +1,444 @@
+completion_id: "AJC-AJ-RT-20260702-063-001"
+job_id: "AJ-RT-20260702-063-001"
+task_id: "RT-20260702-063"
+source_role_id: "ontology-formalizer"
+completed_at: "2026-07-02T22:32:17Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P3-T01"
+  plan_phase_id: "P3"
+  implemented_task_scope: "Created the source certificate algebra primitive formalization required by v15 P3-T01."
+  completed_v15_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "Gate Chair scoped evidence-status review for NarrowMSCertEq_v1"
+    - "P3-T01"
+  downstream_tasks_not_implemented:
+    - "P3-T02 certificate operation laws and fail-closed lemma"
+    - "P3-T03 certificate checklist integration"
+    - "P4 matter-coupling dependency DAG and semantic-layer split"
+    - "P5 upstream dependency audit"
+    - "P6 source-extension classification enforcement"
+    - "P7 Refuter formal-output upgrade"
+    - "P8 Einstein-equation moratorium"
+    - "P9 progress and payload metrics"
+    - "P10 route-orbit hardening"
+    - "P11 validation pipeline"
+    - "P12 machine-readable claim graph"
+    - "P13 high-risk wording enforcement"
+    - "P14 public status documentation"
+    - "P15 support-only proof-assistant pilots"
+    - "P16 external red-team review process"
+    - "P17 negative-result publication track"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  p3_t01_completed: true
+  p3_t02_completed: false
+  p3_t03_completed: false
+output_paths:
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-063/artifacts/child_phys_math_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/child_phys_phil_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/parent_conflict_review_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/parent_fusion_notes_p3_t01_certificate_primitives.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-063/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-063/DDR-20260702-063.md"
+  - "research_control/tasks/RT-20260702-063/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-063/jobs/AJ-RT-20260702-063-001.yaml"
+  - "research_control/tasks/RT-20260702-063/jobs/completions/AJC-AJ-RT-20260702-063-001.yaml"
+  - "research_control/tasks/RT-20260702-063/roles/ontology-formalizer@0.2.0--RT-20260702-063.yaml"
+  - "research_control/handoffs/handoff-0516.yaml"
+  - "research_control/handoffs/handoff-0516.md"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0515.yaml"
+  - "research_control/handoffs/handoff-0515.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+  - "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  - "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=554 relationship_row_count=2937 semantic_row_count=554 vault_row_count=554"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"NarrowMSCertEq_v1 source certificate algebra primitives\" --limit 10 --json | exit_code=0 | returned_object_ids=TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260702-062 latest_handoff=handoff-0515 boundary=director_decision_required"
+validation_status: "PASS"
+verdict: "p3_t01_certificate_primitives_completed"
+coherent_resolution_summary: "RT-20260702-063 completes the v15 P3-T01 packet by defining source-side certificate algebra primitives and fail-closed certificate status discipline. It names declared source object index certificate domain certificate codomain source transport source invariance source factorization identity composition restriction malformed certificate missing certificate and fail-closed branch primitives while preserving NarrowMSCertEq_v1 as scoped evidence-status only."
+next_recommendation: "Run one bounded v15 P3-T02 ontology-formalizer packet for certificate operation laws and fail-closed lemma."
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Reusable source-side certificate primitive discipline after scoped NarrowMSCertEq_v1 evidence-status and before operation laws or matter-coupling dependency-control work."
+  explanation: "The packet adds controlled primitive definitions required for later certificate operation-law work but does not prove operation laws or change matter-coupling physical status."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: true
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v15_p3_t02_certificate_operation_laws_fail_closed_lemma"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1_adoption"
+    - "unrestricted_RR_E_theorem"
+    - "PositiveMSProfile_v1_adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1_law_adoption"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "benchmark_gate_chair_closure"
+    - "completed_derivation"
+  explanation: "The matter_coupling ledger row records that P3-T01 certificate primitive formalization is completed and routes next to P3-T02. No source-law adopted matter semantics detector semantics coupling law stress-energy semantics matter action field equation or benchmark claim is supplied."
+new_mathematical_payload:
+  - payload_id: "SourceCertificateAlgebraPrimitives_v1"
+    payload_type: "concrete_certificate_step_families"
+    artifact_path: "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+    status: "draft_control_primitive_formalization"
+    summary: "Defines source certificate carrier fields transport invariance factorization identity composition restriction malformed missing and fail-closed primitives."
+  - payload_id: "CertificateFailureStateDiscipline_v1"
+    payload_type: "concrete_certificate_step_families"
+    artifact_path: "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+    status: "draft_control_fail_closed_status"
+    summary: "Defines malformed and missing certificate status plus fail-closed branch discipline preserving declared-object separation."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "concrete_certificate_step_families"
+    object_name: "SourceCertificateAlgebraPrimitives_v1"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+    burden_effect: "narrows"
+    summary: "Provides primitive vocabulary required before certificate operation-law attempts."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "dependency_map_update"
+    object_name: "P3-T01 certificate primitives to P3-T02 operation laws"
+    claim_status: "control_only"
+    source_path: "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+    burden_effect: "selects_next"
+    summary: "The next route is one bounded P3-T02 certificate operation laws and fail-closed lemma packet."
+source_certificate_primitive_result:
+  artifact_path: "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  artifact_object_id: "TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES"
+  primitive_status: "draft_control"
+  operation_laws_proved: false
+  primitives_defined:
+    - "source_transport_certificate"
+    - "source_invariance_certificate"
+    - "source_factorization_certificate"
+    - "declared_object_index"
+    - "certificate_domain"
+    - "certificate_codomain"
+    - "certificate_composition"
+    - "certificate_restriction"
+    - "certificate_identity"
+    - "malformed_certificate"
+    - "missing_certificate"
+    - "fail_closed_branch"
+  next_required_packet: "bounded v15 P3-T02 certificate operation laws and fail-closed lemma"
+no_target_import_audit_scope:
+  forbidden_source_classes:
+    - "target_topology"
+    - "target_smooth_atlas"
+    - "target_metric"
+    - "proper_time"
+    - "empirical_detector_semantics"
+    - "benchmark_success"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "generated_derivative_authority"
+    - "registry_metadata_authority"
+    - "validator_authority"
+    - "role_authority"
+    - "handoff_authority"
+    - "file_order_authority"
+  checked_objects:
+    - "SourceCertificateRecord"
+    - "SourceTransportCertificate"
+    - "SourceInvarianceCertificate"
+    - "SourceFactorizationCertificate"
+    - "IdentityCertificate"
+    - "CertificateComposition"
+    - "CertificateRestriction"
+    - "MalformedCertificate"
+    - "MissingCertificate"
+    - "FailClosedBranch"
+  result: "pass"
+  failure_reason: ""
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_change"
+  - burden: "Source equivalence EqSrc"
+    status: "no_change"
+  - burden: "RetainH"
+    status: "no_change"
+  - burden: "GenH"
+    status: "no_change"
+  - burden: "ObsLoc_lc"
+    status: "no_change"
+  - burden: "Resp_lc"
+    status: "no_change"
+  - burden: "M_src"
+    status: "scoped_positive_status_preserved"
+  - burden: "MetricData(E)"
+    status: "not_adopted"
+  - burden: "g_eff"
+    status: "scoped_positive_status_preserved_no_scope_expansion"
+  - burden: "matter coupling"
+    status: "source certificate primitive discipline added as draft/control support only; no matter-coupling derivation or adoption"
+  - burden: "Einstein equations"
+    status: "blocked"
+  - burden: "finite-variation robustness"
+    status: "no_change"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no_new_gate_review"
+  - burden: "current route freeze or hard-fail status"
+    status: "not_frozen_next_p3_t02"
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: ""
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: "P3_T02_certificate_operation_laws_required"
+  forbidden_overread: "P3-T01 primitive formalization is not source-law adoption not matter-semantics adoption not detector-semantics adoption not coupling-law adoption not matter coupling not MetricData(E) not g_eff scope change not stress-energy semantics not matter action not Einstein equations not benchmark promotion not completed derivation and not future source-extension impossibility."
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260702-057"
+    - "RT-20260702-058"
+    - "RT-20260702-059"
+    - "RT-20260702-060"
+    - "RT-20260702-061"
+    - "RT-20260702-062"
+    - "RT-20260702-063"
+  freeze_if:
+    - "A later packet treats P3-T01 primitives as operation-law proof source-law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter coupling g_eff MetricData(E) stress-energy semantics matter action Einstein equations benchmark promotion or completed derivation."
+    - "The route repeats primitive restatement without P3-T02 law attempt P3-T03 checklist integration obstruction repair or materially new payload."
+  do_not_freeze_if:
+    - "The next packet performs one bounded P3-T02 certificate operation laws and fail-closed lemma attempt."
+  freeze_decision: "not_frozen"
+  decision_reason: "The packet adds new primitive formalization payload and selects a concrete next theorem/lemma packet."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260702-063/artifacts/child_phys_math_p3_t01_certificate_primitives.yaml"
+      status: "completed"
+      summary: "Specified the source certificate carrier, primitive kinds, operation expressions, and fail-closed states."
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260702-063/artifacts/child_phys_phil_p3_t01_certificate_primitives.yaml"
+      status: "completed"
+      summary: "Preserved primitive formalization as source-side witness discipline rather than physical semantics, process authority, or downstream GR evidence."
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260702-063/artifacts/parent_conflict_review_p3_t01_certificate_primitives.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260702-063/artifacts/parent_fusion_notes_p3_t01_certificate_primitives.md"
+    shared_consensus_summary: "The packet should define primitive certificate vocabulary and fail-closed status discipline only."
+    unique_phys_math_contributions: "The artifact uses record fields for kind index domain codomain witness guard and status and defines primitive expressions for identity composition and restriction."
+    unique_phys_phil_contributions: "The artifact states that process authority scoped evidence-status target data detector semantics and downstream GR claims cannot instantiate certificates."
+    novelty_preservation_summary: "The packet converts the accepted scoped NarrowMSCertEq_v1 evidence-status into reusable source-certificate primitive discipline without adopting any law."
+    claim_boundary_preservation_summary: "No source-law adoption RR_ETransportCompletenessOrInvarianceLaw_v1 adoption PositiveMSProfile_v1 adoption SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption matter-semantics adoption detector-semantics adoption coupling-law adoption matter coupling MetricData(E) g_eff change Einstein equations benchmark promotion or completed derivation is authorized."
+route_cycle_control:
+  route_signature: "v15_P3_T01_source_certificate_primitive_formalization"
+  repeats_prior_route_without_new_payload: false
+  new_payload_present: true
+  orbit_avoidance_reason: "This packet does not repeat P2 theorem audit stress selector or gate review work. It advances to P3 certificate primitives and routes to P3-T02 operation laws."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P3-T01 draft/control source certificate primitive formalization only."
+  summary: "RT-20260702-063 creates source certificate primitives and fail-closed definitions only; all adoption and downstream promotion gates remain closed."
+  forbidden_conclusions:
+    - "P3-T01 primitives as operation-law proof"
+    - "P3-T01 primitives as source-law adoption"
+    - "P3-T01 primitives as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "P3-T01 primitives as unrestricted RR_E theorem"
+    - "P3-T01 primitives as PositiveMSProfile_v1 adoption"
+    - "P3-T01 primitives as SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "P3-T01 primitives as matter-semantics adoption"
+    - "P3-T01 primitives as detector-semantics adoption"
+    - "P3-T01 primitives as coupling-law adoption"
+    - "P3-T01 primitives as matter-coupling derivation or adoption"
+    - "P3-T01 primitives as stress-energy semantics"
+    - "P3-T01 primitives as matter action"
+    - "P3-T01 primitives as Einstein-equation evidence"
+    - "P3-T01 primitives as benchmark promotion"
+    - "P3-T01 primitives as completed derivation"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted v15 lookup returned canonical plan object"
+      - "targeted source certificate search returned no already-implemented P3-T01 artifact"
+      - "continue_research.py resolved handoff-0515 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P3-T01 TeX primitive formalization artifact created"
+      - "Operation laws explicitly deferred to P3-T02"
+      - "NarrowMSCertEq_v1 preserved as scoped evidence-status only"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph rerender required after handoff-0516 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap required after registering the P3-T01 TeX artifact and task-local outputs"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validators are required before checkpoint"
+      - "documentation-impact validation required before checkpoint"
+      - "research-control validation required before checkpoint"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is authorized as the final transaction step after PASS validators"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-02"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 554
+    relationship_row_count: 2937
+    semantic_row_count: 554
+    vault_row_count: 554
+    warning_summary: "Local retrieval was fresh before routing."
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      note: "Retrieved registered v15 plan navigation before executing P3-T01."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"NarrowMSCertEq_v1 source certificate algebra primitives\" --limit 10 --json"
+      query_type: "search"
+      query_text: "NarrowMSCertEq_v1 source certificate algebra primitives"
+      returned_object_ids:
+        - "TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW"
+      note: "Retrieved the Gate Chair prerequisite noting no reusable certificate algebra existed yet."
+  canonical_inspections:
+    - source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+      inspected: true
+    - source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+      object_id: "TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST"
+      source_hash: "81f8d552d04c942522bd7aab128a9bb65b4ab1a165c0c2e6468d8a877069c24d"
+      inspected: true
+    - source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+      object_id: "TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM"
+      source_hash: "aca8af857f2a53bfcbdd775b147323dab9e8a814ec78409faace45eef61bc04b"
+      inspected: true
+    - source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+      object_id: "TEX-V15-P2-T05-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-REFUTER-STRESS"
+      source_hash: "1be7ba5ac04095d7582612e0831fadcc55e58be0938ab25f2c7b7705da541182"
+      inspected: true
+    - source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex"
+      object_id: "TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW"
+      source_hash: "34e2f86e377edc3d13513d6f0a9e8d3083829bda230d32309177a82879770ca7"
+      inspected: true

@@ -324,6 +324,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM` `research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex`
 - `TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex`
 - `TEX-V15-P2-T05-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex`
+- `TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES` `research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex`
 
 ## superseded
 

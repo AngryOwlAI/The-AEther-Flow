@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-062` and `handoff-0515`.
+`RT-20260702-063` and `handoff-0516`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-062` |
-| Latest handoff ID | `handoff-0515` |
-| Current status | `post_v15_gate_chair_accepted_narrow_ms_cert_eq_scoped_evidence_status_no_adoption` |
-| Current route family | post v15 gate chair accepted narrow ms cert eq scoped evidence status next p3 t01 no adoption |
+| Active task ID | `RT-20260702-063` |
+| Latest handoff ID | `handoff-0516` |
+| Current status | `post_v15_p3_t01_certificate_primitives_completed_next_p3_t02_no_adoption` |
+| Current route family | post v15 p3 t01 certificate primitives next p3 t02 no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P3-T01 certificate primitive formalization |
-| Next recommended action | Run one bounded v15 P3-T01 certificate primitive formalization packet to turn the accepted scoped NarrowMSCertEq_v1 evidence-status into explicit source-certificate primitive discipline before certificate operation laws, matter-coupling DAG work, source-law adoption, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation, Einstein-equation routing, benchmark routing, or promotion work. |
+| Required next authority | P3-T02 certificate operation laws and fail-closed lemma |
+| Next recommended action | Run one bounded v15 P3-T02 certificate operation laws and fail-closed lemma packet to prove, condition, or precisely fail identity certificate preservation, certificate composition source-side closure, malformed certificate fail-closed behavior, missing certificate RR_E separation or obstruction, and target-importing certificate invalidity before P3-T03 checklist integration or matter-coupling DAG work. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-062/00_TASK.yaml`.
-- Active task objective: Execute one bounded Gate Chair review to decide only whether NarrowMSCertEq_v1 may be accepted as scoped source-extension evidence-status for its declared conditional source-side theorem role under explicit certificates.
-- Latest handoff path: `research_control/handoffs/handoff-0515.yaml`.
-- Latest handoff summary: RT-20260702-062 completed one bounded Gate Chair packet. It accepted NarrowMSCertEq_v1 only as scoped source-extension evidence-status for its declared conditional source-side theorem role under explicit certificates.
-- Current route family: post v15 gate chair accepted narrow ms cert eq scoped evidence status next p3 t01 no adoption.
-- Next recommended action: Run one bounded v15 P3-T01 certificate primitive formalization packet to turn the accepted scoped NarrowMSCertEq_v1 evidence-status into explicit source-certificate primitive discipline before certificate operation laws, matter-coupling DAG work, source-law adoption, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation, Einstein-equation routing, benchmark routing, or promotion work.
+- Active task path: `research_control/tasks/RT-20260702-063/00_TASK.yaml`.
+- Active task objective: Define source-side certificate algebra primitives used by matter-semantics equivalence and RR_E separation, while preserving fail-closed behavior and blocking source-law adoption or matter-coupling promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0516.yaml`.
+- Latest handoff summary: RT-20260702-063 completed v15 P3-T01 by defining draft/control source certificate algebra primitives and fail-closed certificate status discipline.
+- Current route family: post v15 p3 t01 certificate primitives next p3 t02 no adoption.
+- Next recommended action: Run one bounded v15 P3-T02 certificate operation laws and fail-closed lemma packet to prove, condition, or precisely fail identity certificate preservation, certificate composition source-side closure, malformed certificate fail-closed behavior, missing certificate RR_E separation or obstruction, and target-importing certificate invalidity before P3-T03 checklist integration or matter-coupling DAG work.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -70,13 +70,13 @@ Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex` |
+| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter_coupling | accepted_as_scoped_evidence_precondition | PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 and NarrowMSCertEq_v1 are accepted only as scoped source-extension evidence/preconditions or evidence-status under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex |
+| matter_coupling | accepted_as_scoped_evidence_precondition | PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 NarrowMSCertEq_v1 and SourceCertificateAlgebraPrimitives_v1 are accepted or drafted only as scoped source-extension evidence/preconditions evidence-status or draft/control certificate primitives under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex |
 | einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
 | benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
 
@@ -88,7 +88,7 @@ Forbidden overreads:
 
 ## Matter-Coupling Boundary
 
-The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 and NarrowMSCertEq_v1 are accepted only as scoped source-extension evidence/preconditions or evidence-status under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex`.
+The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `accepted`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 NarrowMSCertEq_v1 and SourceCertificateAlgebraPrimitives_v1 are accepted or drafted only as scoped source-extension evidence/preconditions evidence-status or draft/control certificate primitives under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred. The last evidence path is `research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex`.
 
 This ledger status must not be read as coupling-law adoption, universal matter-coupling derivation, matter-coupling adoption, stress-energy semantics, stress-energy tensor, matter action, detector semantics, Einstein equations, benchmark promotion, or completed derivation.
 
@@ -183,7 +183,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
 | `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
-| `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex` |
+| `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
 | `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P3-T01 certificate primitive formalization packet to turn the accepted scoped NarrowMSCertEq_v1 evidence-status into explicit source-certificate primitive discipline before certificate operation laws, matter-coupling DAG work, source-law adoption, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation, Einstein-equation routing, benchmark routing, or promotion work.
+Run one bounded v15 P3-T02 certificate operation laws and fail-closed lemma packet to prove, condition, or precisely fail identity certificate preservation, certificate composition source-side closure, malformed certificate fail-closed behavior, missing certificate RR_E separation or obstruction, and target-importing certificate invalidity before P3-T03 checklist integration or matter-coupling DAG work.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-062`;
-- latest handoff: `handoff-0515`;
-- current status: `post_v15_gate_chair_accepted_narrow_ms_cert_eq_scoped_evidence_status_no_adoption`;
+- active task: `RT-20260702-063`;
+- latest handoff: `handoff-0516`;
+- current status: `post_v15_p3_t01_certificate_primitives_completed_next_p3_t02_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -242,8 +242,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0515.yaml`
-- `research_control/tasks/RT-20260702-062/00_TASK.yaml`
+- `research_control/handoffs/handoff-0516.yaml`
+- `research_control/tasks/RT-20260702-063/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -259,7 +259,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0515*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0516*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

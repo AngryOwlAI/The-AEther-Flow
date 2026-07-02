@@ -1,0 +1,60 @@
+task_id: "RT-20260702-063"
+task_type: "source_certificate_primitive_formalization"
+status: "completed"
+created_at: "2026-07-02T22:32:17Z"
+updated_at: "2026-07-02T22:32:17Z"
+closed_at: "2026-07-02T22:32:17Z"
+parent_task_id: "RT-20260702-062"
+parent_handoff_id: "handoff-0515"
+decision_id: "DDR-20260702-063"
+job_id: "AJ-RT-20260702-063-001"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260702-063"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+human_authorization_note: "The user granted human authorization for all human gates. This P3-T01 source certificate primitive formalization packet does not consume Gate Chair authority, source-law adoption authority, matter-coupling authority, benchmark authority, or completed-derivation authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T01"
+  plan_task_name: "Certificate primitive formalization"
+objective: "Define source-side certificate algebra primitives used by matter-semantics equivalence and RR_E separation, while preserving fail-closed behavior and blocking source-law adoption or matter-coupling promotion."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Reusable source-side certificate primitive discipline after scoped NarrowMSCertEq_v1 evidence-status and before operation laws or matter-coupling dependency-control work."
+closure_status: "post_v15_p3_t01_certificate_primitives_completed_next_p3_t02_no_adoption"
+claim_boundary:
+  allowed_scope: "Draft/control source certificate primitive formalization for v15 P3-T01 only"
+  accepted_scoped_input: "NarrowMSCertEq_v1 scoped source-extension evidence-status only"
+  scientific_claims_changed: true
+  scientific_claim_delta: "new draft/control source certificate primitive definitions and fail-closed status discipline only"
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-063/artifacts/child_phys_math_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/child_phys_phil_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/parent_conflict_review_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/parent_fusion_notes_p3_t01_certificate_primitives.md"
+next_recommended_action: "Run one bounded v15 P3-T02 certificate operation laws and fail-closed lemma packet under ontology-formalizer@0.2.0, proving, conditioning, or precisely failing identity, composition, restriction, missing-certificate, malformed-certificate, and target-import invalidity laws."
+notes: "This task implements only P3-T01. It does not execute P3-T02 operation laws, P3-T03 checklist integration, P4 matter-coupling DAG work, source-law adoption, matter semantics, matter coupling, Einstein-equation routing, benchmark routing, or all remaining v15 phases."
+documentation_impact_id: "DI-RT-20260702-063-001"

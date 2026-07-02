@@ -1,0 +1,18 @@
+review_id: "PCR-RT-20260702-063-001"
+task_id: "RT-20260702-063"
+job_id: "AJ-RT-20260702-063-001"
+status: "completed"
+conflict_review_status: "no_conflict"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260702-063/artifacts/child_phys_math_p3_t01_certificate_primitives.yaml"
+  - "research_control/tasks/RT-20260702-063/artifacts/child_phys_phil_p3_t01_certificate_primitives.yaml"
+conflicts:
+  - conflict_id: "terminology-law-vs-primitive"
+    type: "claim_boundary"
+    severity: "nonblocking"
+    math_position: "The artifact should name algebra primitives."
+    philosophy_position: "The artifact must avoid implying adopted source law or physical semantics."
+    resolution: "Use primitive formalization and source-certificate discipline language. Defer laws to P3-T02."
+unresolved_conflicts: []
+claim_boundary_result: "All source-law matter-semantics detector-semantics coupling-law matter-coupling Einstein-equation benchmark and completed-derivation overreads remain blocked."

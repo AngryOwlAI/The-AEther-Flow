@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-02T21:58:10Z`
-- Source fingerprint: `5cfbaaa4d42029b2e31f414c90fab7260c0ee34bce2ae8984f0d2f0411d6797f`
-- Nodes: `11270`
-- Edges: `46703`
+- Generated from tracked state as of: `2026-07-02T22:32:17Z`
+- Source fingerprint: `83e3f780196cacd5bb6e21b482c09c9ba730f810658aef6045ecd41652cc667c`
+- Nodes: `11306`
+- Edges: `46794`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 651 |
+| `completion_yaml` | 652 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 515 |
+| `handoff_yaml` | 516 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 651 |
+| `agent_job` | `support_only` | 652 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 5972 |
-| `blocked_burden` | `blocked` | 1382 |
-| `claim_boundary` | `support_only` | 608 |
-| `draft_control_candidate` | `draft_control` | 467 |
+| `artifact` | `support_only` | 5986 |
+| `blocked_burden` | `blocked` | 1397 |
+| `claim_boundary` | `support_only` | 609 |
+| `draft_control_candidate` | `draft_control` | 468 |
 | `draft_control_candidate` | `proposal_only` | 67 |
-| `draft_control_candidate` | `science_draft` | 41 |
+| `draft_control_candidate` | `science_draft` | 42 |
 | `frozen_negative` | `frozen_negative` | 98 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 515 |
+| `handoff` | `support_only` | 516 |
 | `human_gated_object` | `human_gated` | 269 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 28 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 259 |
+| `source_ontology_object` | `support_only` | 260 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 26 |
-| `task` | `support_only` | 596 |
+| `task` | `support_only` | 597 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | RT-20260702-062 accepted NarrowMSCertEq_v1 only as scoped source-extension evidence-status for its declared conditional source-side theorem role under explicit |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | RT-20260702-063 defined draft/control source certificate algebra primitives for declared object index domain codomain transport invariance factorization identit |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260702-062`
-- Latest handoff: `handoff-0515`
-- Handoff path: `research_control/handoffs/handoff-0515.yaml`
-- Next action: Run one bounded v15 P3-T01 certificate primitive formalization packet to turn the accepted scoped NarrowMSCertEq_v1 evidence-status into explicit source-certificate primitive discipline before certificate operation laws, matter-coupling DAG work, source-law adoption, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation, Einstein-equation routing, benchmark routing, or promotion work.
+- Active task: `RT-20260702-063`
+- Latest handoff: `handoff-0516`
+- Handoff path: `research_control/handoffs/handoff-0516.yaml`
+- Next action: Run one bounded v15 P3-T02 certificate operation laws and fail-closed lemma packet to prove, condition, or precisely fail identity certificate preservation, certificate composition source-side closure, malformed certificate fail-closed behavior, missing certificate RR_E separation or obstruction, and target-importing certificate invalidity before P3-T03 checklist integration or matter-coupling DAG work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

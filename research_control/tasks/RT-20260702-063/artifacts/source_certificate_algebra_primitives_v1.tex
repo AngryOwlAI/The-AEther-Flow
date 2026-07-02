@@ -1,0 +1,298 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\CertSrc}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\Cdom}{\mathsf{dom}}
+\newcommand{\Ccod}{\mathsf{cod}}
+\newcommand{\Cidx}{\mathsf{idx}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\CInv}{C_{\mathrm{invariance}}^{\mathrm{src}}}
+\newcommand{\CFact}{C_{\mathrm{factorization}}^{\mathrm{src}}}
+\newcommand{\CId}{\mathsf{id}^{\mathrm{src}}}
+\newcommand{\CComp}{\mathsf{comp}^{\mathrm{src}}}
+\newcommand{\CRes}{\mathsf{res}^{\mathrm{src}}}
+\newcommand{\CMalformed}{\mathsf{malformed}^{\mathrm{src}}}
+\newcommand{\CMissing}{\mathsf{missing}^{\mathrm{src}}}
+\newcommand{\Fail}{\mathsf{failclosed}^{\mathrm{src}}}
+\newcommand{\Obj}{\mathsf{Obj}^{\mathrm{src}}}
+\newcommand{\Dom}{\mathsf{Dom}^{\mathrm{src}}}
+\newcommand{\Cod}{\mathsf{Cod}^{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\NarrowMSCertEq}{\mathrm{NarrowMSCertEq}_{v1}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\PositiveMSProfile}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{primitive}{Primitive}
+\newtheorem{obligation}{Obligation}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source Certificate Algebra Primitives v1}
+\author{Ontology Formalizer Packet RT-20260702-063}
+\date{2026-07-02}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v15 P3-T01. It defines reusable source-side
+certificate primitives for later certificate algebra control. The immediate
+input is the Gate Chair result from \texttt{RT-20260702-062}: 
+\[
+  \NarrowMSCertEq
+\]
+has only scoped source-extension evidence-status for its declared conditional
+source-side theorem role under explicit certificates.
+
+The artifact is draft/control source formalization. It does not state or prove
+operation laws. It does not adopt a source law, \(\RRELaw\),
+\(\PositiveMSProfile\), \(\SMSAR\), matter semantics, detector semantics, a
+coupling law, matter coupling, \(\MetricData(E)\), scoped \(\geff\), stress
+energy semantics, stress-energy tensor, matter action, Einstein equations,
+benchmark status, or completed derivation.
+
+\section{Primitive Carrier}
+
+\begin{definition}[Source object index]
+A declared source object index is a finite or locally finite label
+\[
+  \iota \in I_{\mathrm{src}}
+\]
+attached to a declared source-side object \(X_{\iota}\in\Obj\). The index is
+part of the certificate data. Equality or transport of indices is never
+inferred from detector protocol, target metric structure, benchmark behavior,
+registry state, validator state, role identity, handoff state, file order,
+local cache state, or commit state.
+\end{definition}
+
+\begin{definition}[Certificate domain and codomain]
+For every source certificate \(c\in\CertSrc\), the primitive fields
+\[
+  \Cdom(c) \in \Dom,\qquad \Ccod(c) \in \Cod
+\]
+name declared source-side domain and codomain data. The pair
+\((\Cdom(c),\Ccod(c))\) must include source object indices, source labels,
+source guards, and the source readout or response-token type relevant to the
+certificate. These fields are not target-chart domains, detector-event
+classes, stress-energy data, or matter-action data.
+\end{definition}
+
+\begin{definition}[Certificate record]
+A certificate record is a tuple
+\[
+  c=(\kappa,\Cidx(c),\Cdom(c),\Ccod(c),W_c,G_c,S_c)
+\]
+where \(\kappa\) is the certificate kind, \(\Cidx(c)\) is the declared source
+object-index map, \(W_c\) is the source witness payload, \(G_c\) is the
+source-side validity guard, and \(S_c\) is the status field. Permitted
+primitive kinds in this packet are
+\[
+  \kappa\in
+  \{\mathrm{transport},\mathrm{invariance},\mathrm{factorization},
+  \mathrm{identity},\mathrm{composition},\mathrm{restriction}\}.
+\]
+The status field may be valid, missing, malformed, or fail-closed.
+\end{definition}
+
+\section{Certificate Kinds}
+
+\begin{primitive}[Source transport certificate]
+A source transport certificate \(\CTr(A,B)\) is a source certificate whose
+witness \(W_c\) maps declared source indices, labels, guards, and record
+positions from a source object \(A\) to a source object \(B\). It may preserve
+or compare source readout and response-token data only inside its declared
+source domain and codomain.
+\end{primitive}
+
+\begin{primitive}[Source invariance certificate]
+A source invariance certificate \(\CInv(A,B)\) is a source certificate whose
+witness \(W_c\) states that the relevant source labels, guards, and response
+token relations are unchanged under a declared source-side relabeling,
+source-side variation, or local source comparison. It is not an empirical
+invariance claim and not a target-metric invariance claim.
+\end{primitive}
+
+\begin{primitive}[Source factorization certificate]
+A source factorization certificate \(\CFact(A,B;F)\) is a source certificate
+whose witness \(W_c\) states that the comparison from \(A\) to \(B\) factors
+through a declared source object \(F\). The object \(F\) must be present in
+the certificate index. If \(F\) changes, is absent, or is supplied only by
+scoped evidence-status, the certificate is malformed or missing for the
+intended use.
+\end{primitive}
+
+\section{Algebra Primitives}
+
+\begin{primitive}[Identity certificate]
+For a declared source object \(A\), \(\CId_A\) is a certificate record with
+\[
+  \Cdom(\CId_A)=A,\qquad \Ccod(\CId_A)=A.
+\]
+It is only a primitive identity witness for the declared source object. This
+packet does not prove that identity certificates preserve any downstream
+equivalence relation; that operation law is deferred to P3-T02.
+\end{primitive}
+
+\begin{primitive}[Certificate composition]
+For certificate records \(c_1,c_2\), the primitive composition expression
+\[
+  \CComp(c_2,c_1)
+\]
+is syntactically well formed only when the declared codomain of \(c_1\)
+matches the declared domain of \(c_2\) and both certificates have valid
+source-side status. If the match fails, if either status is missing or
+malformed, or if either certificate imports forbidden target or detector data,
+the composition expression maps to the fail-closed branch. Associativity and
+preservation laws are not asserted in this packet.
+\end{primitive}
+
+\begin{primitive}[Certificate restriction]
+For a certificate \(c\) and declared source subdomain \(U\subseteq\Cdom(c)\),
+the primitive restriction expression
+\[
+  \CRes_U(c)
+\]
+keeps only the source indices, labels, guards, and source readout or
+response-token data declared inside \(U\). If \(U\) is not a source-side
+subdomain or is supplied by target metric, detector, benchmark, or process
+authority data, the expression maps to the fail-closed branch.
+\end{primitive}
+
+\section{Malformed Missing And Fail-Closed States}
+
+\begin{definition}[Malformed certificate]
+\(\CMalformed(c)\) holds when \(c\) has one or more of the following defects:
+undeclared source object index, domain-codomain mismatch, absent witness
+payload, changed factorization object, target topology import, target metric
+import, detector-semantics import, benchmark-behavior import, stress-energy
+or matter-action import, process-authority dependence, or scoped
+evidence-status treated as adoption.
+\end{definition}
+
+\begin{definition}[Missing certificate]
+\(\CMissing(\tau)\) holds for a required certificate slot \(\tau\) when no
+explicit certificate record is supplied for the declared source objects and
+declared use. Scoped evidence-status, registry status, validator status,
+handoff status, role status, approval status, file order, local cache state,
+or commit state cannot fill a missing slot.
+\end{definition}
+
+\begin{definition}[Fail-closed branch]
+\(\Fail(\tau)\) is the required branch for any missing or malformed
+certificate slot \(\tau\). The branch returns \(\Bottom\) for the attempted
+certificate-mediated equivalence, preserves the relevant declared-object
+separation such as \(RR_E\) separation, and records a certificate-gap or
+target-import obstruction when a concrete use requires one.
+\end{definition}
+
+\section{Primitive Validity Table}
+
+\begin{longtable}{p{0.28\linewidth}p{0.52\linewidth}}
+\toprule
+Primitive & Validity discipline \\
+\midrule
+Declared object index & Must be stated as source-side data before a
+certificate is used. \\
+Certificate domain & Must be a declared source domain with source labels,
+guards, and source readout or response-token type. \\
+Certificate codomain & Must be a declared source codomain with compatible
+source indexing for the intended use. \\
+Transport certificate & Valid only for explicit source transport witness
+data. \\
+Invariance certificate & Valid only for explicit source relabeling,
+variation, or local comparison witness data. \\
+Factorization certificate & Valid only with an explicit declared source
+factorization object. \\
+Composition & Primitive expression only; laws deferred to P3-T02 and invalid
+inputs fail closed. \\
+Restriction & Primitive expression only; non-source subdomains fail closed. \\
+Identity & Primitive expression only; preservation laws deferred to P3-T02. \\
+Malformed certificate & Cannot prove equivalence and must route to
+fail-closed status. \\
+Missing certificate & Cannot be repaired by scoped evidence-status or
+process authority. \\
+\bottomrule
+\end{longtable}
+
+\section{Source-Only Guard}
+
+\begin{obligation}[No-target import]
+Every source certificate primitive must be checkable without using target
+topology, target smooth atlas, target Lorentzian metric, proper time,
+empirical detector semantics, benchmark behavior, generated derivatives,
+registry metadata, validators, roles, handoffs, approvals, local caches, file
+order, or commit state as mathematical premises.
+\end{obligation}
+
+\begin{obligation}[Scoped evidence-status is not a primitive certificate]
+The scoped Gate Chair status of \(\NarrowMSCertEq\) authorizes use as
+evidence/precondition for this formalization route. It does not itself create
+a transport, invariance, factorization, identity, composition, or restriction
+certificate.
+\end{obligation}
+
+\begin{obligation}[P3-T02 handoff]
+The next certificate packet may state and attempt operation laws for identity,
+composition, restriction, malformed certificates, missing certificates, and
+target-importing certificates. Those laws must be proved, made conditional, or
+failed with a precise obstruction. This P3-T01 packet supplies only the
+primitive vocabulary and fail-closed status discipline.
+\end{obligation}
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This primitive formalization is not source-law adoption and not adoption of
+\(\RRELaw\), \(\PositiveMSProfile\), or \(\SMSAR\).
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This primitive formalization is not matter-semantics adoption,
+detector-semantics adoption, coupling-law adoption, matter-coupling
+derivation, matter-coupling adoption, \(\MetricData(E)\) adoption, scoped
+\(\geff\) expansion, stress-energy semantics, stress-energy tensor, matter
+action, Einstein-equation derivation, benchmark promotion, or completed
+derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This primitive formalization does not prove certificate operation laws. It
+does not erase the certificate-gap witness from the P2 Refuter stress packet.
+Missing or malformed concrete certificates remain fail-closed.
+\end{nonconclusion}
+
+\section{Distance-to-GR Effect}
+
+This packet adds draft/control source certificate primitives for the
+\texttt{matter\_coupling} milestone. It sharpens the certificate discipline
+needed before later matter-coupling dependency-control work. It does not
+derive universal matter coupling and does not change the physical status of
+the \texttt{matter\_coupling} burden.
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Recommendations
+implementation plan continue task v15} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Source-side
+matter-semantics object and certificate manifest v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Narrow source-side
+matter-semantics equivalence theorem v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{NarrowMSCertEq
+v1 scoped evidence-status Gate Chair review} [Research-control TeX artifact].
+
+\end{document}
