@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-030` and `handoff-0483`.
+`RT-20260702-031` and `handoff-0484`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-030` |
-| Latest handoff ID | `handoff-0483` |
-| Current status | `v14_p10_t02_literature_source_acquisition_completed_next_comparison` |
-| Current route family | literature_source_acquisition_packet |
+| Active task ID | `RT-20260702-031` |
+| Latest handoff ID | `handoff-0484` |
+| Current status | `v14_p10_t03_literature_comparison_completed_next_findings_selector` |
+| Current route family | literature_comparison_packet |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p10 t03 literature comparison packet |
-| Required next authority | Run one bounded v14 P10-T03 literature comparison packet using the acquired P10-T02 source list before findings routing or public-boundary routes. |
-| Next recommended action | Run one bounded v14 P10-T03 literature comparison packet using the acquired P10-T02 source list before findings routing or public-boundary routes. |
+| Current burden | none for physics derivation; live control burden is v14 p10 t04 literature findings route selector |
+| Required next authority | Run one bounded v14 P10-T04 literature findings route selector before any repair red-team theorem obstruction public-boundary or downstream physics route. |
+| Next recommended action | Run one bounded v14 P10-T04 literature findings route selector before any repair red-team theorem obstruction public-boundary or downstream physics route. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-030/00_TASK.yaml`.
-- Active task objective: Gather and record primary literature sources for the selected operational/causal metric and universal-coupling constraint scope.
-- Latest handoff path: `research_control/handoffs/handoff-0483.yaml`.
-- Latest handoff summary: RT-20260702-030 acquired P10 source metadata across the selected scope and routed to comparison with no literature comparison or physics claim promotion.
-- Current route family: literature_source_acquisition_packet.
-- Next recommended action: Run one bounded v14 P10-T03 literature comparison packet using the acquired P10-T02 source list before findings routing or public-boundary routes.
+- Active task path: `research_control/tasks/RT-20260702-031/00_TASK.yaml`.
+- Active task objective: Produce a source-backed literature comparison artifact using the acquired P10-T02 source list.
+- Latest handoff path: `research_control/handoffs/handoff-0484.yaml`.
+- Latest handoff summary: RT-20260702-031 completed P10-T03 literature comparison and routed to findings classification with no literature-derived claim promotion.
+- Current route family: literature_comparison_packet.
+- Next recommended action: Run one bounded v14 P10-T04 literature findings route selector before any repair red-team theorem obstruction public-boundary or downstream physics route.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P10-T03 literature comparison packet using the acquired P10-T02 source list before findings routing or public-boundary routes.
+Run one bounded v14 P10-T04 literature findings route selector before any repair red-team theorem obstruction public-boundary or downstream physics route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-030`;
-- latest handoff: `handoff-0483`;
-- current status: `v14_p10_t02_literature_source_acquisition_completed_next_comparison`;
+- active task: `RT-20260702-031`;
+- latest handoff: `handoff-0484`;
+- current status: `v14_p10_t03_literature_comparison_completed_next_findings_selector`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0483.yaml`
-- `research_control/tasks/RT-20260702-030/00_TASK.yaml`
+- `research_control/handoffs/handoff-0484.yaml`
+- `research_control/tasks/RT-20260702-031/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0483*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0484*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
