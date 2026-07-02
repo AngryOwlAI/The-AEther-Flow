@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-033` and `handoff-0486`.
+`RT-20260702-034` and `handoff-0487`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-033` |
-| Latest handoff ID | `handoff-0486` |
-| Current status | `v14_p10_t05_public_boundary_completed_next_matter_coupling_moratorium` |
-| Current route family | documentation_boundary_packet |
+| Active task ID | `RT-20260702-034` |
+| Latest handoff ID | `handoff-0487` |
+| Current status | `v14_p11_t01_matter_coupling_moratorium_completed_next_pre_adoption_checklist` |
+| Current route family | matter_coupling_moratorium_control_packet |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p11 t01 matter coupling moratorium control note |
-| Required next authority | Run one bounded v14 P11-T01 matter-coupling derivation moratorium control-note packet. |
-| Next recommended action | Run one bounded v14 P11-T01 matter-coupling derivation moratorium control-note packet. |
+| Current burden | none for physics derivation; live control burden is v14 p11 t02 matter coupling pre adoption checklist |
+| Required next authority | Run one bounded v14 P11-T02 matter-coupling pre-adoption checklist packet. |
+| Next recommended action | Run one bounded v14 P11-T02 matter-coupling pre-adoption checklist packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-033/00_TASK.yaml`.
-- Active task objective: Inspect public-facing comparison language and prevent external-validation or claim-promotion implications.
-- Latest handoff path: `research_control/handoffs/handoff-0486.yaml`.
-- Latest handoff summary: RT-20260702-033 closed P10 by confirming no public-facing literature-comparison overread required a source edit.
-- Current route family: documentation_boundary_packet.
-- Next recommended action: Run one bounded v14 P11-T01 matter-coupling derivation moratorium control-note packet.
+- Active task path: `research_control/tasks/RT-20260702-034/00_TASK.yaml`.
+- Active task objective: Create a control note forbidding direct matter-coupling derivation attempts until listed prerequisites are established while allowing narrower theorem and precondition routes.
+- Latest handoff path: `research_control/handoffs/handoff-0487.yaml`.
+- Latest handoff summary: RT-20260702-034 created the P11-T01 matter-coupling derivation moratorium control note.
+- Current route family: matter_coupling_moratorium_control_packet.
+- Next recommended action: Run one bounded v14 P11-T02 matter-coupling pre-adoption checklist packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P11-T01 matter-coupling derivation moratorium control-note packet.
+Run one bounded v14 P11-T02 matter-coupling pre-adoption checklist packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-033`;
-- latest handoff: `handoff-0486`;
-- current status: `v14_p10_t05_public_boundary_completed_next_matter_coupling_moratorium`;
+- active task: `RT-20260702-034`;
+- latest handoff: `handoff-0487`;
+- current status: `v14_p11_t01_matter_coupling_moratorium_completed_next_pre_adoption_checklist`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0486.yaml`
-- `research_control/tasks/RT-20260702-033/00_TASK.yaml`
+- `research_control/handoffs/handoff-0487.yaml`
+- `research_control/tasks/RT-20260702-034/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0486*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0487*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
