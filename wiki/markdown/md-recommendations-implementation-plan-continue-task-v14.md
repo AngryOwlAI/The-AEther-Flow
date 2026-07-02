@@ -17,6 +17,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v14.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN` `research_control/design/external_red_team_reviewer_role_design.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `research_control/design/matter_coupling_derivation_moratorium.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
