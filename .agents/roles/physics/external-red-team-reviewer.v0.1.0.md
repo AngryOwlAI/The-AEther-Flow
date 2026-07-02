@@ -35,6 +35,10 @@ The review should look for:
 
 - circularity;
 - hidden target imports;
+- process-authority laundering;
+- evidence-as-adoption laundering;
+- no-target certificate overread;
+- `RR_E` separation collapse;
 - overloaded notation;
 - unproven equivalences;
 - missing hypotheses;
@@ -45,7 +49,11 @@ The review should look for:
 When possible, the review should produce a minimal countermodel, a missing
 assumption certificate, or a "not enough assumptions" theorem sketch. When no
 such object is available in scope, it should state the limitation and identify
-the smallest repair or follow-up review route.
+the smallest repair, obstruction, freeze, literature review, selector, or
+continuation route. Literature comparison is allowed only when the owning
+AgentJob explicitly authorizes external-source use and citation scope.
+The role may recommend repair, obstruction, freeze, literature review,
+selector, or continuation.
 
 ## Complementarity
 
@@ -71,18 +79,22 @@ review template. The artifact should include:
 - findings with severity, evidence, and repair route;
 - countermodel or not-enough-assumptions result when available;
 - verdict vocabulary suitable for routing repair, obstruction, freeze, or
-  external review;
+  external review, literature comparison, selector, or continuation;
 - claim-boundary preservation block.
 
 ## Boundaries
 
 The role may critique claims and route repairs. It may not edit canonical
 ontology, benchmark sources, generated derivatives, or science artifacts. It
-may not promote claims, request or issue a Gate Chair verdict, adopt source
-laws, adopt `MetricData(E)`, adopt or expand `g_eff`, derive matter coupling,
-import stress-energy semantics, import detector semantics, import matter
-action, derive Einstein equations, promote benchmark status, or claim a
-completed derivation.
+may not adopt or reject physics objects, promote claims, request or issue a
+Gate Chair verdict, override canonical sources, adopt source laws, adopt
+`MetricData(E)`, adopt or expand `g_eff`, derive matter coupling, import
+stress-energy semantics, import detector semantics, import matter action,
+derive Einstein equations, promote benchmark status, or claim a completed
+derivation. It may not claim a global no-go theorem unless a separate routed
+theorem artifact proves that precise theorem. It may not create permanent role
+authority; role-contract changes remain project-system work under an owning
+AgentJob and, when protected, human-gated approval.
 
 ## Stop Conditions
 
@@ -91,3 +103,5 @@ completed derivation.
 - The requested output would promote or close a physics claim.
 - The review cannot distinguish its critique authority from Gate Chair,
   Smuggling Auditor, or Refuter authority.
+- The review would treat workflow success, validator success, role authority,
+  registry metadata, or template compliance as scientific evidence.

@@ -10,13 +10,14 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `role_contract`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `c44c0208f939733af28d07d41c97e85fe857357151e529388ee6c828d4ca194d`
+- Source hash: `b49de89caa4cb4f98f959e0ba7168a8223797679e5d0ab3c4700c14a5de9ace7`
 
 ## Related Objects
 
+- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14` `implementations_plans/recommendations_implementation_plan_continue_task-v14.md`
 - Generated output path: `wiki/markdown/md-role-agents-roles-physics-external-red-team-reviewer-v0-1-0-md.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-30T14:07:48Z`
+- Last validated at: `2026-07-02T08:04:00Z`

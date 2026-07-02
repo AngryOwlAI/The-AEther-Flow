@@ -1,0 +1,70 @@
+{
+  "schema_id": "p9_t01_external_red_team_role_contract_validation_v1",
+  "task_id": "RT-20260702-024",
+  "job_id": "AJ-RT-20260702-024-001",
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "role_contract",
+      "status": "PASS",
+      "missing": [],
+      "required_count": 15
+    },
+    {
+      "label": "role_design",
+      "status": "PASS",
+      "missing": [],
+      "required_count": 7
+    },
+    {
+      "label": "v14_plan_source",
+      "status": "PASS",
+      "missing": [],
+      "required_count": 6
+    },
+    {
+      "label": "approval",
+      "status": "PASS",
+      "missing": [],
+      "required_count": 9
+    },
+    {
+      "label": "agent_role_registry",
+      "status": "PASS",
+      "failures": [],
+      "row": {
+        "role_id": "external-red-team-reviewer",
+        "version": "0.1.0",
+        "role_name": "External Red-Team Reviewer",
+        "role_kind": "scientific_adversarial_external_review",
+        "role_contract_path": ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md",
+        "authority_level": "science_draft",
+        "status": "active",
+        "may_execute_autonomously": "true",
+        "may_create_outputs": "true",
+        "may_modify_sources": "false",
+        "may_promote_claims": "false",
+        "requires_human_gate": "false",
+        "default_output_format": "yaml",
+        "default_validators": "validate_research_control;claim_boundary_phrase_scan",
+        "created_at": "2026-06-30T13:55:00Z",
+        "updated_at": "2026-07-02T08:04:00Z",
+        "notes": "External skeptical review role reconciled for v14 P9 to critique definitions assumptions theorem statements circularity target imports process authority laundering evidence as adoption no target overread RR_E collapse and interpretation gaps without source modification or claim promotion"
+      }
+    }
+  ],
+  "hashes": {
+    "role_contract": "b49de89caa4cb4f98f959e0ba7168a8223797679e5d0ab3c4700c14a5de9ace7",
+    "role_design": "7d8ab21c7a31d7e69aaafd5cc3ac74146d919cfa62ab936a8e6dc496321177c7",
+    "approval": "da5a2e9df5a353aa1e396b4d3d3112ff77a9ad1f575760cbd8bd08ad8cded74c",
+    "agent_role_registry": "b38dc3350abb4ca060b93ac19983f596fd1d3f7c12e00635a68ed60915014df6",
+    "v14_plan": "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+  },
+  "claim_boundary": {
+    "may_promote_claims": false,
+    "gate_chair_authority_created": false,
+    "physics_object_adoption_or_rejection_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false
+  }
+}

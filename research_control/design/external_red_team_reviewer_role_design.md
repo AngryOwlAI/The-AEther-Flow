@@ -4,10 +4,12 @@
 
 ## Purpose
 
-This design artifact completes P7-T01 of
-`implementations_plans/recommendations_implementation_plan_continue_task-v12.md`.
-It registers the first `external-red-team-reviewer@0.1.0` role contract and a
-review artifact template for later P7 packets.
+This design artifact was created for P7-T01 of
+`implementations_plans/recommendations_implementation_plan_continue_task-v12.md`
+and reconciled by v14 P9-T01 of
+`implementations_plans/recommendations_implementation_plan_continue_task-v14.md`.
+It records the `external-red-team-reviewer@0.1.0` role contract and the review
+artifact template for red-team packets.
 
 The role exists to add an adversarial outside-reader review mode. It does not
 create proof authority or physics promotion authority.
@@ -43,18 +45,30 @@ non-promotional registration of `external-red-team-reviewer@0.1.0` and its
 template. The approval does not authorize Gate Chair power, source-law
 adoption, or downstream GR promotion.
 
+The v14 P9-T01 reconciliation uses
+`research_control/approvals/approval-20260702-001.yaml` only for a
+non-promotional contract update. That update adds explicit checks for
+process-authority laundering, evidence-as-adoption laundering, no-target
+certificate overread, `RR_E` separation collapse, and authorized literature
+comparison. The approval does not authorize a role-version authority increase,
+Gate Chair power, source-law adoption, benchmark promotion, or downstream GR
+promotion.
+
 ## Mandate
 
 The reviewer must ignore workflow success and validator success as evidence.
 It must inspect definitions, assumptions, theorem statements, proof skeletons,
-circularity, hidden target imports, overloaded notation, unproven
-equivalences, and mismatches between mathematical conclusion and physical
-interpretation.
+circularity, hidden target imports, process-authority laundering,
+evidence-as-adoption laundering, no-target certificate overread, `RR_E`
+separation collapse, overloaded notation, unproven equivalences, and
+mismatches between mathematical conclusion and physical interpretation.
 
 When possible, the reviewer should produce a minimal countermodel or a
 not-enough-assumptions theorem sketch. When that is not possible inside the
 packet scope, the reviewer should name the missing assumption, unavailable
-object, or next review route.
+object, or next review route. Permitted recommendations include repair,
+obstruction, freeze, literature review, selector, continuation, or no action,
+subject to the owning AgentJob's allowlist.
 
 ## Complementarity
 
@@ -71,7 +85,8 @@ The External Red-Team Reviewer complements existing adversarial roles:
 
 Therefore a red-team pass is not adoption, and a red-team finding is not by
 itself a global no-go theorem. Findings route repair, obstruction review,
-freeze review, or external review.
+freeze review, literature comparison, selector review, continuation, or
+external review.
 
 ## Review Artifact Template
 
@@ -90,9 +105,14 @@ P7-T02 should convert this template into a stricter artifact schema and
 validator. P7-T01 intentionally does not implement P7-T02 validator
 enforcement.
 
+V14 P9-T02 should update the review template and schema surfaces so future
+review artifacts explicitly test process-authority laundering,
+evidence-as-adoption laundering, no-target certificate overread, and `RR_E`
+separation collapse when in scope.
+
 ## Acceptance Check
 
-P7-T01 acceptance criteria are met when:
+P7-T01 and v14 P9-T01 acceptance criteria are met when:
 
 - the role contract exists and has `may_promote_claims: false`;
 - the role is registered in `registries/AGENT_ROLE_REGISTRY.csv`;
@@ -100,6 +120,11 @@ P7-T01 acceptance criteria are met when:
 - the role states that it complements, but does not replace, Smuggling Auditor
   and Refuter authority;
 - the review template exists;
+- v14-specific attack surfaces are explicit in the role contract;
+- authorized literature comparison is conditional on the owning AgentJob;
+- the role cannot adopt or reject physics objects, override canonical sources,
+  claim a global no-go theorem without a routed theorem artifact, or create
+  permanent role authority;
 - validation passes.
 
 ## Handoff

@@ -16,7 +16,6 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v12.md`
 - Backlink from `MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `.agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md`
-- Backlink from `MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN` `research_control/design/external_red_team_reviewer_role_design.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
 
 ## Validation
