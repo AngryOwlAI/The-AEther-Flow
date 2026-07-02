@@ -501,6 +501,31 @@ phrase_classes:
       - "scoped evidence means adoption"
     corrective_language: "Preserve the exact scoped evidence/precondition status and explicitly deny law adoption unless a protected gate says otherwise."
 
+  - class_id: "source_certificate_overread"
+    plan_required_class_number: 19
+    title: "Source certificate overread"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bmissing certificate proves declared-object equivalence\\b"
+      - pattern: "\\bmissing certificate identifies RR_E\\b"
+      - pattern: "\\bmalformed certificate proves declared-object equivalence\\b"
+      - pattern: "\\bmalformed certificate proves matter semantics\\b"
+      - pattern: "\\bdetector-semantics certificate supplies source certificate validity\\b"
+      - pattern: "\\btarget-metric certificate supplies source certificate validity\\b"
+      - pattern: "\\bbenchmark-behavior certificate supplies source certificate validity\\b"
+    bad_phrases:
+      - "missing certificate proves declared-object equivalence"
+      - "missing certificate identifies RR_E"
+      - "malformed certificate proves declared-object equivalence"
+      - "malformed certificate proves matter semantics"
+      - "detector-semantics certificate supplies source certificate validity"
+      - "target-metric certificate supplies source certificate validity"
+      - "benchmark-behavior certificate supplies source certificate validity"
+    corrective_language: "Require explicit valid source transport, source invariance, or source factorization certificates; missing, malformed, detector, target-metric, and benchmark-behavior certificates fail closed."
+
   - class_id: "global_no_go_or_rejection_overclaim"
     plan_required_class_number: 18
     title: "Global no-go or global rejection overclaim"
@@ -571,6 +596,16 @@ required_phrase_coverage:
       class_id: "no_target_certificate_as_positive_semantics"
     - phrase: "source-extension evidence means source law"
       class_id: "scoped_evidence_or_precondition_as_adoption"
+    - phrase: "missing certificate proves declared-object equivalence"
+      class_id: "source_certificate_overread"
+    - phrase: "missing certificate identifies RR_E"
+      class_id: "source_certificate_overread"
+    - phrase: "malformed certificate proves matter semantics"
+      class_id: "source_certificate_overread"
+    - phrase: "target-metric certificate supplies source certificate validity"
+      class_id: "source_certificate_overread"
+    - phrase: "benchmark-behavior certificate supplies source certificate validity"
+      class_id: "source_certificate_overread"
 
 next_linter_contract:
   route: "P3-T02"
@@ -603,8 +638,8 @@ next_linter_contract:
     - "corrective_language"
 
 acceptance_receipt:
-  required_class_count: 18
-  implemented_class_count: 18
+  required_class_count: 19
+  implemented_class_count: 19
   required_phrases_mapped: true
   severity_assignments_present: true
   public_overclaims_hard_fail_candidates: true

@@ -167,6 +167,26 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["finding_count"], 0)
 
+    def test_source_certificate_overread_fixture_fails(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/source_certificate_overread.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+        class_ids = [finding["class_id"] for finding in report["findings"]]
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertGreaterEqual(report["hard_fail_count"], 7)
+        self.assertEqual(class_ids.count("source_certificate_overread"), 7)
+
+    def test_valid_source_certificate_fixture_passes(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/source_certificate_valid.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
     def test_validator_as_proof_overread_fails(self) -> None:
         report = self.scan_one(
             "research_control/current_frontier.md",

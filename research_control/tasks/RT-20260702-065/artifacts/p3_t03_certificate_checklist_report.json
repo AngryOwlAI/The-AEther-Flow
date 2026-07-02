@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "detail": "Checklist names missing, malformed, detector, target, benchmark, and valid source certificate rows.",
+      "id": "checklist_contains_all_required_rows",
+      "passed": true
+    },
+    {
+      "detail": "Taxonomy stores P3-T03 certificate overread patterns.",
+      "id": "taxonomy_contains_required_patterns",
+      "passed": true
+    },
+    {
+      "detail": "Overread fixture produces current-control hard failures.",
+      "id": "overread_fixture_hard_fails",
+      "passed": true
+    },
+    {
+      "detail": "Valid source transport, invariance, and factorization wording produces no certificate findings.",
+      "id": "valid_source_certificate_fixture_passes",
+      "passed": true
+    },
+    {
+      "detail": "Narrow theorem template requires certificate checklist receipt for certificate-bearing packets.",
+      "id": "template_requires_checklist_receipt",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "matter_coupling_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authorized": false
+  },
+  "overread_hard_fail_count": 7,
+  "overread_source_certificate_finding_count": 7,
+  "status": "PASS",
+  "valid_fixture_finding_count": 0
+}

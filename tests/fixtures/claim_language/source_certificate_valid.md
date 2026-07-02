@@ -1,0 +1,3 @@
+Valid source transport certificate maps declared source indices only inside declared source scope and does not supply detector semantics, target metric, benchmark behavior, matter coupling, or proof authority.
+Valid source invariance certificate preserves declared source data only inside declared source scope and does not supply detector semantics, target metric, benchmark behavior, matter coupling, or proof authority.
+Valid source factorization certificate factors through an explicit declared source object only inside declared source scope and does not supply detector semantics, target metric, benchmark behavior, matter coupling, or proof authority.

@@ -67,6 +67,23 @@ Required:
   source-extension data, canonical-ontology candidate, or adopted authority;
 - what fails closed if the certificate is missing.
 
+### Source Certificate Checklist Receipt
+
+For any theorem packet that relies on source transport, source invariance, or
+source factorization certificates, include a receipt against
+`research_control/design/source_certificate_algebra_checklist.md`.
+
+Required:
+
+- state whether each required certificate is valid, missing, malformed, or
+  fail-closed;
+- state whether detector semantics, target metric data, or benchmark behavior
+  were excluded from certificate premises;
+- name any obstruction emitted by a missing or malformed certificate;
+- state that passing the checklist is workflow evidence only and not proof
+  authority, source-law adoption, matter semantics, detector semantics, matter
+  coupling, Einstein equations, benchmark promotion, or completed derivation.
+
 ### `RR_E` Handling
 
 State how `RR_E` records are preserved, transported, factored, compared, or
