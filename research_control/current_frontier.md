@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-026` and `handoff-0479`.
+`RT-20260702-027` and `handoff-0480`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-026` |
-| Latest handoff ID | `handoff-0479` |
-| Current status | `v14_p9_t03_external_red_team_pilot_completed_next_selector` |
+| Active task ID | `RT-20260702-027` |
+| Latest handoff ID | `handoff-0480` |
+| Current status | `v14_p9_t04_red_team_findings_selector_completed_next_phase_validation` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p9 t04 external red team findings selector |
-| Required next authority | Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p9 t05 external red team phase validation |
+| Required next authority | Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection. |
+| Next recommended action | Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-026/00_TASK.yaml`.
-- Active task objective: Pilot external red-team review on the current core high-risk frontier objects without promotion or rejection.
-- Latest handoff path: `research_control/handoffs/handoff-0479.yaml`.
-- Latest handoff summary: RT-20260702-026 completed one bounded v14 P9-T03 external red-team pilot on the seven required core frontier objects. The review found no blocking issue within current scoped M_src and scoped g_eff status while routing bridge readiness profile and RR_E transport evidence pressure to selector. RR_E_underdetermination_obstruction remains scoped and not a global no-go.
+- Active task path: `research_control/tasks/RT-20260702-027/00_TASK.yaml`.
+- Active task objective: Classify P9-T03 red-team findings and select the next lawful route without promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0480.yaml`.
+- Latest handoff summary: RT-20260702-027 completed one bounded v14 P9-T04 red-team findings selector. All P9-T03 findings were classified as record/no-action or guard-preserving records and no repair freeze literature comparison or human-gated authority route was selected inside P9.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes.
+- Next recommended action: Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -63,29 +63,28 @@ Adopted source-only or source-extension objects:
 
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
-| M_src | scoped source-only object only | none |  | none | false |
-| g_eff | scoped source-extension object only | none |  | none | false |
+| M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
+| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
 
 Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| MSStableMatterSemanticsBridge_v1 | selector_required pressure |  | matter semantics<br>detector semantics<br>coupling law<br>matter coupling | none |
-| SourceMatterSemanticsAdoptionReadinessLaw_v1 | selector_required pressure |  | source law<br>matter semantics<br>coupling law<br>matter coupling | none |
-| PositiveMSProfile_v1 | selector_required pressure |  | profile adoption<br>detector semantics<br>stress-energy<br>benchmark | none |
-| RR_ETransportCompletenessOrInvarianceLaw_v1 | selector_required pressure |  | source law<br>unrestricted RR_E theorem<br>detector semantics<br>matter coupling | none |
+| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260701-033/artifacts/p2_t02_alias_map_acceptance_receipt.md` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter coupling stress-energy matter action Einstein equations benchmark promotion completed derivation | open or blocked | response semantics coupling derivation and protected downstream authority remain missing | none | P9-T04 red-team findings selector |
+| matter_coupling | accepted_as_scoped_evidence_precondition | PositiveMSProfile_v1 and RR_ETransportCompletenessOrInvarianceLaw_v1 are accepted only as scoped source-extension evidence/preconditions under declared source-side and fail-closed scope while RT-20260701-033 adds subordinate alias-map control forbidding bare accepted rendering for high-risk rows and no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260701-033/artifacts/p2_t02_alias_map_acceptance_receipt.md |
+| einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
+| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
 
 Forbidden overreads:
 
-- red-team review as proof authority
-- not_enough_assumptions as global no-go theorem
-- selector_required as repair or freeze authorization
+- three-tier summary as physics proof
+- accepted evidence/preconditions as adopted objects
+- current-frontier rendering as downstream promotion
 
 ## Matter-Coupling Boundary
 
@@ -196,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes.
+Run one bounded v14 P9-T05 red-team phase validation packet before P10 literature-comparison scope selection.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -212,36 +211,21 @@ completion or handoff says so.
 
 Layer status summary:
 
-| Status | Count | Meaning |
-| --- | --- | --- |
-| `PASS` | 2 | receipt complete |
+No validation-layer status summary is available.
 
 Validation layers:
 
-| Validation layer | Status | Meaning | Evidence |
-| --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory searches inspected v14 plan current frontier theorem inventory and core source hits<br>continue_research.py resolved handoff-0478 to one bounded P9-T03 packet |
-| `completion_internal` | PASS | receipt complete | global red-team artifact validator required PASS<br>task-local P9-T03 validator required PASS for all seven required objects<br>review routes substantive findings to P9-T04 selector |
+No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-| Authorization field | Value | Meaning |
-| --- | --- | --- |
-| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
-| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
-| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
-| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
-| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
+No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-026`;
-- latest handoff: `handoff-0479`;
-- current status: `v14_p9_t03_external_red_team_pilot_completed_next_selector`;
+- active task: `RT-20260702-027`;
+- latest handoff: `handoff-0480`;
+- current status: `v14_p9_t04_red_team_findings_selector_completed_next_phase_validation`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -251,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0479.yaml`
-- `research_control/tasks/RT-20260702-026/00_TASK.yaml`
+- `research_control/handoffs/handoff-0480.yaml`
+- `research_control/tasks/RT-20260702-027/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -268,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0479*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0480*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
