@@ -1,0 +1,61 @@
+task_id: "RT-20260702-062"
+task_type: "narrow_ms_cert_eq_gate_chair_scoped_evidence_status_review"
+status: "completed"
+created_at: "2026-07-02T21:58:10Z"
+updated_at: "2026-07-02T21:58:10Z"
+closed_at: "2026-07-02T21:58:10Z"
+parent_task_id: "RT-20260702-061"
+parent_handoff_id: "handoff-0514"
+decision_id: "DDR-20260702-062"
+job_id: "AJ-RT-20260702-062-001"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260702-062"
+requires_human_gate: false
+human_authorization_id: "approval-20260702-002"
+human_authorization_note: "The user granted human authorization for all human gates. This task consumes approval-20260702-002 exactly once for the scoped Gate Chair evidence-status question named in handoff-0514."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "post-P2 protected review"
+  plan_task_id: "Gate Chair scoped evidence-status review selected by P2-T06"
+  plan_task_name: "Scoped evidence-status review for NarrowMSCertEq_v1"
+objective: "Execute one bounded Gate Chair review to decide only whether NarrowMSCertEq_v1 may be accepted as scoped source-extension evidence-status for its declared conditional source-side theorem role under explicit certificates."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Human-approved evidence-status review of NarrowMSCertEq_v1 before P3 certificate algebra or downstream matter-coupling dependency-control work."
+closure_status: "post_v15_gate_chair_accepted_narrow_ms_cert_eq_scoped_evidence_status_no_adoption"
+claim_boundary:
+  allowed_scope: "Gate Chair scoped evidence-status review for NarrowMSCertEq_v1 only"
+  accepted_scope: "scoped source-extension evidence-status for declared conditional source-side theorem under explicit certificates"
+  physics_promotion_authorized: true
+  promotion_authority_path: "research_control/approvals/approval-20260702-002.yaml"
+  scientific_claims_changed: true
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/approvals/approval-20260702-002.yaml"
+  - "research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex"
+  - "research_control/tasks/RT-20260702-062/artifacts/child_phys_math_narrow_ms_cert_eq_gate_chair_review.yaml"
+  - "research_control/tasks/RT-20260702-062/artifacts/child_phys_phil_narrow_ms_cert_eq_gate_chair_review.yaml"
+  - "research_control/tasks/RT-20260702-062/artifacts/parent_conflict_review_narrow_ms_cert_eq_gate_chair_review.yaml"
+  - "research_control/tasks/RT-20260702-062/artifacts/parent_fusion_notes_narrow_ms_cert_eq_gate_chair_review.md"
+next_recommended_action: "Run one bounded v15 P3-T01 certificate primitive formalization packet to turn the accepted scoped NarrowMSCertEq_v1 evidence-status into explicit source-certificate primitive discipline, with no source-law adoption or matter-coupling promotion."
+notes: "RT-20260702-062 executes only the Gate Chair review selected by P2-T06. It does not execute P3, matter-coupling DAG work, source-law adoption, matter semantics, matter coupling, Einstein-equation routing, benchmark routing, or all remaining v15 phases."
+documentation_impact_id: "DI-RT-20260702-062-001"

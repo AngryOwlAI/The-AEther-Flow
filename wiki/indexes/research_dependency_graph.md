@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-02T21:28:54Z`
-- Source fingerprint: `2fa64c04cebeb93a1811ddcb7f21a134532813473413238fdfb554b7df27c4b1`
-- Nodes: `11232`
-- Edges: `46589`
+- Generated from tracked state as of: `2026-07-02T21:58:10Z`
+- Source fingerprint: `5cfbaaa4d42029b2e31f414c90fab7260c0ee34bce2ae8984f0d2f0411d6797f`
+- Nodes: `11270`
+- Edges: `46703`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 650 |
+| `completion_yaml` | 651 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 514 |
+| `handoff_yaml` | 515 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 650 |
+| `agent_job` | `support_only` | 651 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 5957 |
-| `blocked_burden` | `blocked` | 1368 |
-| `claim_boundary` | `support_only` | 607 |
+| `artifact` | `support_only` | 5972 |
+| `blocked_burden` | `blocked` | 1382 |
+| `claim_boundary` | `support_only` | 608 |
 | `draft_control_candidate` | `draft_control` | 467 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 41 |
 | `frozen_negative` | `frozen_negative` | 98 |
-| `gate_chair_verdict` | `human_gated` | 30 |
-| `handoff` | `support_only` | 514 |
-| `human_gated_object` | `human_gated` | 267 |
+| `gate_chair_verdict` | `human_gated` | 31 |
+| `handoff` | `support_only` | 515 |
+| `human_gated_object` | `human_gated` | 269 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -52,13 +52,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 63 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 27 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 28 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 258 |
+| `source_ontology_object` | `support_only` | 259 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 26 |
-| `task` | `support_only` | 595 |
+| `task` | `support_only` | 596 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P2-T02 created subordinate high-risk status aliases for required Distance-to-GR rows and matter_coupling object aliases. Aliases do not override ledger authorit |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | RT-20260702-062 accepted NarrowMSCertEq_v1 only as scoped source-extension evidence-status for its declared conditional source-side theorem role under explicit |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260702-061`
-- Latest handoff: `handoff-0514`
-- Handoff path: `research_control/handoffs/handoff-0514.yaml`
-- Next action: Run one bounded Gate Chair scoped evidence-status review packet, under the current user authorization, to decide only whether NarrowMSCertEq_v1 may be accepted as scoped source-extension evidence-status for its declared source-side conditional theorem role.
+- Active task: `RT-20260702-062`
+- Latest handoff: `handoff-0515`
+- Handoff path: `research_control/handoffs/handoff-0515.yaml`
+- Next action: Run one bounded v15 P3-T01 certificate primitive formalization packet to turn the accepted scoped NarrowMSCertEq_v1 evidence-status into explicit source-certificate primitive discipline before certificate operation laws, matter-coupling DAG work, source-law adoption, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation, Einstein-equation routing, benchmark routing, or promotion work.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

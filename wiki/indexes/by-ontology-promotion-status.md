@@ -41,6 +41,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P2-T02-SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-GATE-CHAIR-EVIDENCE-STATUS` `research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex`
 - `TEX-V13-P4-GATE-POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-EVIDENCE-STATUS` `research_control/tasks/RT-20260701-020/artifacts/positive_source_matter_semantics_profile_gate_chair_review_v1.tex`
 - `TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-LAW-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex`
+- `TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex`
 
 ## not_applicable
 

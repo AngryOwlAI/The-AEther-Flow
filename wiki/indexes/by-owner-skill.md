@@ -674,6 +674,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V13-P5-T02-RR-E-IRRELEVANCE-THEOREM-ATTEMPT-OR-OBSTRUCTION` `wiki/tex/tex-v13-p5-t02-rr-e-irrelevance-theorem-attempt-or-obstruction.md`
 - `WIKI-TEX-V13-P5-T03-RR-E-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-v13-p5-t03-rr-e-theorem-smuggling-audit.md`
 - `WIKI-TEX-V13-P5-T04-RR-E-THEOREM-REFUTER-STRESS` `wiki/tex/tex-v13-p5-t04-rr-e-theorem-refuter-stress.md`
+- `WIKI-TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW` `wiki/tex/tex-v15-narrow-ms-cert-eq-gate-chair-review.md`
 - `WIKI-TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST` `wiki/tex/tex-v15-p2-t01-t02-source-side-matter-semantics-object-certificate-manifest.md`
 - `WIKI-TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM` `wiki/tex/tex-v15-p2-t03-narrow-source-side-matter-semantics-equivalence-theorem.md`
 - `WIKI-TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-v15-p2-t04-matter-semantics-equivalence-theorem-smuggling-audit.md`
@@ -1136,6 +1137,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P5-T02-RR-E-IRRELEVANCE-THEOREM-ATTEMPT-OR-OBSTRUCTION` `research_control/tasks/RT-20260701-023/artifacts/rr_e_irrelevance_theorem_attempt_or_obstruction_v1.tex`
 - `TEX-V13-P5-T03-RR-E-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-024/artifacts/rr_e_theorem_smuggling_audit_v1.tex`
 - `TEX-V13-P5-T04-RR-E-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex`
+- `TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex`
 - `TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST` `research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex`
 - `TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM` `research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex`
 - `TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex`
