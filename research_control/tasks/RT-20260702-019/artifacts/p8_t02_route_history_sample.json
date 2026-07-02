@@ -1,0 +1,1020 @@
+{
+  "extraction_errors": [],
+  "generated_at": "2026-07-02T06:29:55Z",
+  "sample": "recent-matter-rr-e",
+  "schema_id": "route_history_extractor_v1",
+  "signature_count": 22,
+  "signature_schema_id": "route_signature_definition_v1",
+  "signatures": [
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "ontology-formalizer@0.2.0--RT-20260701-001",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v12",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "current ontology does not derive a source-side law or transition rule that turns scoped MSStableMatterSemanticsBridge_v1 evidence/precondition into matter-semantics or detector-semantics adoption-readiness input",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "sourcemattersemanticsadoptionreadinesslaw_v1",
+      "object_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "obstruction_label": "none",
+      "payload_type": "theorem_with_hypotheses_and_proof",
+      "plan_task_id": "post_P7_T03_source_matter_semantics_adoption_readiness_law_target_formalizer",
+      "previous_task_ids": [
+        "RT-20260630-057"
+      ],
+      "role_id": "ontology-formalizer",
+      "selected_route": "ontology-law-research-packet",
+      "signature_hash": "ea5d35bc951cc483630ff5d3855b1bc99681db4bf7541c0837ed97eb5413bae9",
+      "signature_id": "route-sig-RT-20260701-001",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-001/jobs/completions/AJC-AJ-RT-20260701-001-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.new_mathematical_payload[0].object_name"
+        ],
+        "payload_type": [
+          "completion.new_mathematical_payload[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-001-001",
+      "source_task_id": "RT-20260701-001",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "v12_p7_t03_source_matter_semantics_adoption_readiness_law_target_formalizer"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "smuggling-auditor@0.2.0--RT-20260701-002",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v12",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "sourcemattersemanticsadoptionreadinesslaw_v1_source-purity_audit",
+      "object_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1 source-purity audit",
+      "obstruction_label": "none",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "post_P7_T03_source_matter_semantics_adoption_readiness_law_smuggling_audit",
+      "previous_task_ids": [
+        "RT-20260630-056",
+        "RT-20260630-057",
+        "RT-20260701-001"
+      ],
+      "role_id": "smuggling-auditor",
+      "selected_route": "ontology-law-research-packet",
+      "signature_hash": "8159ac24977685f6d86640a5599969737c384b9660d5a8eb6f9f5e2aa1b26761",
+      "signature_id": "route-sig-RT-20260701-002",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-002/jobs/completions/AJC-AJ-RT-20260701-002-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-002-001",
+      "source_task_id": "RT-20260701-002",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "v12_p7_t03_source_matter_semantics_adoption_readiness_law_smuggling_audit"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "refuter@0.2.0--RT-20260701-007",
+      "freeze_candidate": "none",
+      "freeze_criteria_evaluated": false,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v13",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "fail-closed_readiness_stress_theorem",
+      "object_name": "Fail-closed readiness stress theorem",
+      "obstruction_label": "none",
+      "payload_type": "theorem",
+      "plan_task_id": "P2-T01",
+      "previous_task_ids": [
+        "RT-20260701-006"
+      ],
+      "role_id": "refuter",
+      "selected_route": "post_v13_p2_t01_source_matter_semantics_adoption_readiness_law_stress_survived_pending_selector_no_adoption",
+      "signature_hash": "f6b5288377057b94c24485d500e9b756614e419bbbbaf300855a76b6b9f527b0",
+      "signature_id": "route-sig-RT-20260701-007",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-007/jobs/completions/AJC-AJ-RT-20260701-007-001.yaml",
+      "source_evidence": {
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-007-001",
+      "source_task_id": "RT-20260701-007",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "post_v13_p2_t01_source_matter_semantics_adoption_readiness_law_refuter_stress"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "theoretical-continuation-selector@0.1.0--RT-20260701-008",
+      "freeze_candidate": "SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-STRESS-SURVIVED",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v13",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "sourcemattersemanticsadoptionreadinesslaw_v1_source-extension_human-gate_route",
+      "object_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1 source-extension human-gate route",
+      "obstruction_label": "none",
+      "payload_type": "packet_selection",
+      "plan_task_id": "P2-T02",
+      "previous_task_ids": [
+        "RT-20260701-001",
+        "RT-20260701-002",
+        "RT-20260701-007"
+      ],
+      "role_id": "theoretical-continuation-selector",
+      "selected_route": "post_v13_p2_t02_source_matter_semantics_adoption_readiness_law_selector_requires_narrow_gate_no_adoption",
+      "signature_hash": "ef6ccc264e727a17034ae1dad0f507b476d9f1c13f304a00e06365e91afbd1a5",
+      "signature_id": "route-sig-RT-20260701-008",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-008/jobs/completions/AJC-AJ-RT-20260701-008-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-008-001",
+      "source_task_id": "RT-20260701-008",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "post_v13_p2_t02_post_smsar_stress_route_selector"
+    },
+    {
+      "boundary_synchronization_state": "pending",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "gate-chair@0.1.0--RT-20260701-009",
+      "freeze_candidate": "none",
+      "freeze_criteria_evaluated": false,
+      "gate_chair_state": "scoped_evidence_or_precondition_accepted",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "sourcemattersemanticsadoptionreadinesslaw_v1",
+      "object_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "obstruction_label": "none",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "post_v13_p2_t02_selected_gate_chair_readiness_law_evidence_review",
+      "previous_task_ids": [
+        "RT-20260701-008"
+      ],
+      "role_id": "gate-chair",
+      "selected_route": "ontology-law-research-packet",
+      "signature_hash": "6762043e05b12f2ac7b15d649b9dadb125a5808ca1ceccef1ce4ba33e44a6273",
+      "signature_id": "route-sig-RT-20260701-009",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-009/jobs/completions/AJC-AJ-RT-20260701-009-001.yaml",
+      "source_evidence": {
+        "object_name": [
+          "completion.new_mathematical_payload[0].object_name"
+        ],
+        "payload_type": [
+          "completion.new_mathematical_payload[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_human_gate",
+      "source_job_id": "AJ-RT-20260701-009-001",
+      "source_task_id": "RT-20260701-009",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "source_extension_human_gate_source_matter_semantics_adoption_readiness_law_evidence_status_review"
+    },
+    {
+      "boundary_synchronization_state": "synchronized",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "project-control-maintainer@0.2.0--RT-20260701-010",
+      "freeze_candidate": "none",
+      "freeze_criteria_evaluated": false,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "p2-t03_boundary_synchronization_receipt",
+      "object_name": "P2-T03 boundary synchronization receipt",
+      "obstruction_label": "none",
+      "payload_type": "dependency_map_update",
+      "plan_task_id": "recommendations-v13-P2-T03",
+      "previous_task_ids": [
+        "RT-20260701-009"
+      ],
+      "role_id": "project-control-maintainer",
+      "selected_route": "v13_p2_t03_boundary_audit_completed_no_status_delta_no_overread",
+      "signature_hash": "fa1d9f577fd38630ae89a28c3f791bf5e6e9e83879b2103194aba3abab5ddc23",
+      "signature_id": "route-sig-RT-20260701-010",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-010/jobs/completions/AJC-AJ-RT-20260701-010-001.yaml",
+      "source_evidence": {
+        "object_name": [
+          "completion.new_mathematical_payload[0].object_name"
+        ],
+        "payload_type": [
+          "completion.new_mathematical_payload[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-010-001",
+      "source_task_id": "RT-20260701-010",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "v13_p2_t03_scientific_boundary_update"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "candidate-constructor@0.2.0--RT-20260701-016",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v13",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "positive source-side matter-semantics candidate",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "matter_coupling",
+      "object_name": "PositiveMSProfile_v1",
+      "obstruction_label": "none",
+      "payload_type": "construction",
+      "plan_task_id": "P4-T02",
+      "previous_task_ids": [
+        "RT-20260701-009",
+        "RT-20260701-014",
+        "RT-20260701-015"
+      ],
+      "role_id": "candidate-constructor",
+      "selected_route": "ontology-law-research-packet-positive-semantics-candidate",
+      "signature_hash": "6b257c815fb9fb51f443aaa3950b5484f0ec9a6b62613e7695ac557faadd4e30",
+      "signature_id": "route-sig-RT-20260701-016",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-016/jobs/completions/AJC-AJ-RT-20260701-016-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-016-001",
+      "source_task_id": "RT-20260701-016",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "candidate_constructor_positive_source_matter_semantics"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "smuggling-auditor@0.2.0--RT-20260701-017",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v13",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "positive source-side matter-semantics adoption law remains absent; PositiveMSProfile_v1 is proposal-only",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "matter_coupling",
+      "object_name": "PositiveMSProfile_v1 source-purity audit",
+      "obstruction_label": "none",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "P4-T03",
+      "previous_task_ids": [
+        "RT-20260701-009",
+        "RT-20260701-015",
+        "RT-20260701-016"
+      ],
+      "role_id": "smuggling-auditor",
+      "selected_route": "ontology-law-research-packet-positive-semantics-smuggling-audit",
+      "signature_hash": "5573bdc690c953db2c43cbd879fc0787e0cbbc85e2b8a3d633d7d2b22a62e659",
+      "signature_id": "route-sig-RT-20260701-017",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-017/jobs/completions/AJC-AJ-RT-20260701-017-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-017-001",
+      "source_task_id": "RT-20260701-017",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "positive_source_matter_semantics_profile_smuggling_audit"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "refuter@0.2.0--RT-20260701-018",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v13",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "positive source-side matter-semantics adoption law remains absent; PositiveMSProfile_v1 is proposal-only",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "fail-closed_positive-profile_stress_theorem",
+      "object_name": "Fail-closed positive-profile stress theorem",
+      "obstruction_label": "none",
+      "payload_type": "theorem",
+      "plan_task_id": "P4-T04",
+      "previous_task_ids": [
+        "RT-20260701-009",
+        "RT-20260701-015",
+        "RT-20260701-016",
+        "RT-20260701-017"
+      ],
+      "role_id": "refuter",
+      "selected_route": "ontology-law-research-packet-positive-semantics-refuter-stress",
+      "signature_hash": "3a4df5bc7d7e64fdb5ada23303aaa13d4758a73b966852ec747f1e3c19948e39",
+      "signature_id": "route-sig-RT-20260701-018",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-018/jobs/completions/AJC-AJ-RT-20260701-018-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-018-001",
+      "source_task_id": "RT-20260701-018",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "positive_source_matter_semantics_profile_refuter_stress"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "theoretical-continuation-selector@0.1.0--RT-20260701-019",
+      "freeze_candidate": "POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-STRESS-SURVIVED",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "recommendations_implementation_plan_continue_task-v13",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "matter_coupling",
+      "object_name": "PositiveMSProfile_v1 source-extension human-gate route",
+      "obstruction_label": "none",
+      "payload_type": "packet_selection",
+      "plan_task_id": "P4-T05",
+      "previous_task_ids": [
+        "RT-20260701-016",
+        "RT-20260701-017",
+        "RT-20260701-018"
+      ],
+      "role_id": "theoretical-continuation-selector",
+      "selected_route": "v13_p4_t05_positive_source_matter_semantics_selector_requires_narrow_gate_no_adoption",
+      "signature_hash": "e05f1b168b04e8b7826bd85a67d6724f427636c291b9f2c000dfce565c219a14",
+      "signature_id": "route-sig-RT-20260701-019",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-019/jobs/completions/AJC-AJ-RT-20260701-019-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-019-001",
+      "source_task_id": "RT-20260701-019",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "positive_source_matter_semantics_post_stress_selector"
+    },
+    {
+      "boundary_synchronization_state": "pending",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "gate-chair@0.1.0--RT-20260701-020",
+      "freeze_candidate": "none",
+      "freeze_criteria_evaluated": false,
+      "gate_chair_state": "scoped_evidence_or_precondition_accepted",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "matter_coupling",
+      "object_name": "PositiveMSProfile_v1",
+      "obstruction_label": "none",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "post_v13_p4_t05_selected_followup_gate_positive_ms_profile_evidence_review",
+      "previous_task_ids": [
+        "RT-20260701-019"
+      ],
+      "role_id": "gate-chair",
+      "selected_route": "ontology-law-research-packet",
+      "signature_hash": "ab36c118ed0f3e8d98421857404395ea2250ddec642fbaf625fd0fe9c7448645",
+      "signature_id": "route-sig-RT-20260701-020",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-020/jobs/completions/AJC-AJ-RT-20260701-020-001.yaml",
+      "source_evidence": {
+        "object_name": [
+          "completion.new_mathematical_payload[0].object_name"
+        ],
+        "payload_type": [
+          "completion.new_mathematical_payload[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_human_gate",
+      "source_job_id": "AJ-RT-20260701-020-001",
+      "source_task_id": "RT-20260701-020",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "source_extension_human_gate_positive_source_matter_semantics_profile_evidence_status_review"
+    },
+    {
+      "boundary_synchronization_state": "synchronized",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "project-control-maintainer@0.2.0--RT-20260701-021",
+      "freeze_candidate": "none",
+      "freeze_criteria_evaluated": false,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "p4-t06_boundary_synchronization_receipt",
+      "object_name": "P4-T06 boundary synchronization receipt",
+      "obstruction_label": "none",
+      "payload_type": "dependency_map_update",
+      "plan_task_id": "recommendations-v13-P4-T06",
+      "previous_task_ids": [
+        "RT-20260701-020"
+      ],
+      "role_id": "project-control-maintainer",
+      "selected_route": "v13_p4_t06_boundary_audit_completed_no_status_delta_no_overread",
+      "signature_hash": "fd1ee59dfb8dd1327e5889f69217a3972dc696ede4661a930dfef162a93e7329",
+      "signature_id": "route-sig-RT-20260701-021",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-021/jobs/completions/AJC-AJ-RT-20260701-021-001.yaml",
+      "source_evidence": {
+        "object_name": [
+          "completion.new_mathematical_payload[0].object_name"
+        ],
+        "payload_type": [
+          "completion.new_mathematical_payload[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-021-001",
+      "source_task_id": "RT-20260701-021",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "v13_p4_t06_positive_source_matter_semantics_boundary_update"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "ontology-formalizer@0.2.0--RT-20260701-022",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "source-side RR_E identification irrelevance or separation rule for the matter-coupling route",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "RR_ETheoremTarget_v1",
+      "obstruction_label": "none",
+      "payload_type": "definition",
+      "plan_task_id": "post_v13_p5_t01_rr_e_theorem_target_formalizer",
+      "previous_task_ids": [
+        "RT-20260701-021"
+      ],
+      "role_id": "ontology-formalizer",
+      "selected_route": "ontology-law-research-packet-rr-e-theorem-target",
+      "signature_hash": "4a4c7c36ac3b1e79f6ab5e420a28ebe0aeaf794c4b1a3931388022deb3829d66",
+      "signature_id": "route-sig-RT-20260701-022",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-022/jobs/completions/AJC-AJ-RT-20260701-022-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-022-001",
+      "source_task_id": "RT-20260701-022",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "ontology_law_research_packet_rr_e_theorem_target"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "candidate-constructor@0.2.0--RT-20260701-023",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "factor-through RR_E irrelevance lemma",
+      "obstruction_label": "RR_E_UNDERDETERMINATION_OBSTRUCTION_P5_T02_V1",
+      "payload_type": "theorem",
+      "plan_task_id": "post_v13_p5_t02_rr_e_irrelevance_theorem_attempt_or_obstruction",
+      "previous_task_ids": [
+        "RT-20260630-044",
+        "RT-20260701-018",
+        "RT-20260701-022"
+      ],
+      "role_id": "candidate-constructor",
+      "selected_route": "ontology-law-research-packet-rr-e-theorem-or-obstruction",
+      "signature_hash": "17067d873be8270e2554eb5126c49234bf1dcd609f264909c6f1327cf2b19b51",
+      "signature_id": "route-sig-RT-20260701-023",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-023/jobs/completions/AJC-AJ-RT-20260701-023-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.bridge_attempt_status.missing_primitive"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "obstruction_label": [
+          "completion.obstruction_record.obstruction_id"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-023-001",
+      "source_task_id": "RT-20260701-023",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "candidate_constructor_rr_e_theorem_or_obstruction"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "smuggling-auditor@0.2.0--RT-20260701-024",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1 remains absent and unadopted",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "RR_E theorem or obstruction source-purity audit classification",
+      "obstruction_label": "RR_E theorem or obstruction source-purity audit classification",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "post_v13_p5_t03_rr_e_theorem_smuggling_audit",
+      "previous_task_ids": [
+        "RT-20260701-018",
+        "RT-20260701-022",
+        "RT-20260701-023"
+      ],
+      "role_id": "smuggling-auditor",
+      "selected_route": "ontology-law-research-packet-rr-e-theorem-smuggling-audit",
+      "signature_hash": "5dc80f4a92e40e07a033fd385b46932b03640f97d20f1913c794a445b146fe2a",
+      "signature_id": "route-sig-RT-20260701-024",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-024/jobs/completions/AJC-AJ-RT-20260701-024-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "obstruction_label": [
+          "object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-024-001",
+      "source_task_id": "RT-20260701-024",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "source_extension_smuggling_audit"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "refuter@0.2.0--RT-20260701-025",
+      "freeze_candidate": "RRE-TRANSPORT-COMPLETENESS-INVARIANCE-SCOPED-OBSTRUCTION",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "Fail-closed RR_E stress theorem",
+      "obstruction_label": "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+      "payload_type": "theorem",
+      "plan_task_id": "post_v13_p5_t04_rr_e_theorem_refuter_stress",
+      "previous_task_ids": [
+        "RT-20260701-022",
+        "RT-20260701-023",
+        "RT-20260701-024"
+      ],
+      "role_id": "refuter",
+      "selected_route": "ontology-law-research-packet-rr-e-theorem-refuter-stress",
+      "signature_hash": "0e9467c593c19e296f6ede36af70f9fb43aac9e1449c3dcf34e51b6ac456d1ac",
+      "signature_id": "route-sig-RT-20260701-025",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-025/jobs/completions/AJC-AJ-RT-20260701-025-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "obstruction_label": [
+          "completion.obstruction_record.obstruction_id"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-025-001",
+      "source_task_id": "RT-20260701-025",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "source_extension_refuter_stress"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "theoretical-continuation-selector@0.1.0--RT-20260701-026",
+      "freeze_candidate": "RRE-TRANSPORT-COMPLETENESS-INVARIANCE-SCOPED-OBSTRUCTION",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "ontology-law research route for missing RR_E transport completeness or invariance law",
+      "obstruction_label": "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+      "payload_type": "packet_selection",
+      "plan_task_id": "post_v13_p5_t05_rr_e_post_stress_selector_or_freeze",
+      "previous_task_ids": [
+        "RT-20260701-022",
+        "RT-20260701-023",
+        "RT-20260701-024",
+        "RT-20260701-025"
+      ],
+      "role_id": "theoretical-continuation-selector",
+      "selected_route": "v13-p5-t05-rr-e-post-stress-selector-or-freeze",
+      "signature_hash": "8dfc292ae0881866bdf0e7226ff14b1c4dd30f859377ee7a97052ee7141d2b1c",
+      "signature_id": "route-sig-RT-20260701-026",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-026/jobs/completions/AJC-AJ-RT-20260701-026-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "obstruction_label": [
+          "completion.obstruction_record.obstruction_id"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-026-001",
+      "source_task_id": "RT-20260701-026",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "rr_e_post_stress_selector_or_freeze"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "ontology-formalizer@0.2.0--RT-20260701-027",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "RR_ETransportCompletenessOrInvarianceLaw_v1 candidate-law schema",
+      "obstruction_label": "none",
+      "payload_type": "definition",
+      "plan_task_id": "post_v13_p5_t05_followup_rr_e_transport_completeness_or_invariance_ontology_law_packet",
+      "previous_task_ids": [
+        "RT-20260701-026"
+      ],
+      "role_id": "ontology-formalizer",
+      "selected_route": "ontology-law-research-packet",
+      "signature_hash": "e364d59d6903e0ade58e74ab9408c72bf7a873aec8d1dda7ab16e341f97dcd21",
+      "signature_id": "route-sig-RT-20260701-027",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-027/jobs/completions/AJC-AJ-RT-20260701-027-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-027-001",
+      "source_task_id": "RT-20260701-027",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "rr_e_transport_completeness_or_invariance_ontology_law_packet"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "smuggling-auditor@0.2.0--RT-20260701-028",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1 remains proposal-only and unadopted",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "RR_ETransportCompletenessOrInvarianceLaw_v1 audit classification",
+      "obstruction_label": "none",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "post_v13_p5_t05_followup_rr_e_transport_law_smuggling_audit",
+      "previous_task_ids": [
+        "RT-20260701-024",
+        "RT-20260701-025",
+        "RT-20260701-026",
+        "RT-20260701-027"
+      ],
+      "role_id": "smuggling-auditor",
+      "selected_route": "ontology-law-research-packet-rr-e-transport-law-smuggling-audit",
+      "signature_hash": "6dcc10a21abebf94b90c61008a3dbb2fc049afe477343e32bf5b68c14cad42a6",
+      "signature_id": "route-sig-RT-20260701-028",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-028/jobs/completions/AJC-AJ-RT-20260701-028-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-028-001",
+      "source_task_id": "RT-20260701-028",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "rr_e_transport_law_smuggling_audit"
+    },
+    {
+      "boundary_synchronization_state": "not_applicable",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "refuter@0.2.0--RT-20260701-029",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "RR_ETransportCompletenessOrInvarianceLaw_v1 remains proposal-only and unadopted",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "Fail-closed RR_E transport-law stress theorem",
+      "obstruction_label": "none",
+      "payload_type": "theorem",
+      "plan_task_id": "post_v13_p5_t05_followup_rr_e_transport_law_refuter_stress",
+      "previous_task_ids": [
+        "RT-20260701-027",
+        "RT-20260701-028"
+      ],
+      "role_id": "refuter",
+      "selected_route": "ontology-law-research-packet-rr-e-transport-law-refuter-stress",
+      "signature_hash": "77c3f5064d01fd251e3d55be5e4a0a689afc430f39cc7ad6dc8326639616baca",
+      "signature_id": "route-sig-RT-20260701-029",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-029/jobs/completions/AJC-AJ-RT-20260701-029-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "missing_primitive": [
+          "completion.ontology_law_research_packet.missing_source_law"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-029-001",
+      "source_task_id": "RT-20260701-029",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "rr_e_transport_law_refuter_stress"
+    },
+    {
+      "boundary_synchronization_state": "pending",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "gate-chair@0.1.0--RT-20260701-030",
+      "freeze_candidate": "not_frozen",
+      "freeze_criteria_evaluated": true,
+      "gate_chair_state": "scoped_evidence_or_precondition_accepted",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "RR_ETransportCompletenessOrInvarianceLaw_v1 scoped evidence/precondition status",
+      "obstruction_label": "none",
+      "payload_type": "source_extension_classification",
+      "plan_task_id": "post_v13_p5_followup_rr_e_transport_law_gate_chair_evidence_review",
+      "previous_task_ids": [
+        "RT-20260701-029"
+      ],
+      "role_id": "gate-chair",
+      "selected_route": "ontology-law-research-packet",
+      "signature_hash": "d49e5a0e321a49760233b5c78e051ee17e42f223f4fd931de5b6344afff8b0af",
+      "signature_id": "route-sig-RT-20260701-030",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-030/jobs/completions/AJC-AJ-RT-20260701-030-001.yaml",
+      "source_evidence": {
+        "freeze_candidate": [
+          "completion.freeze_criteria_status"
+        ],
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "source_extension_human_gate",
+      "source_job_id": "AJ-RT-20260701-030-001",
+      "source_task_id": "RT-20260701-030",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "rr_e_transport_law_gate_chair_evidence_status_review"
+    },
+    {
+      "boundary_synchronization_state": "synchronized",
+      "exact_repair_attempted": false,
+      "execution_role_ref": "project-control-maintainer@0.2.0--RT-20260701-031",
+      "freeze_candidate": "none",
+      "freeze_criteria_evaluated": false,
+      "gate_chair_state": "not_requested",
+      "implementation_plan_id": "none",
+      "milestone_burden": "matter_coupling",
+      "missing_primitive": "none",
+      "new_mathematical_payload_exists": true,
+      "new_source_evidence_exists": true,
+      "object_family": "rr_e",
+      "object_name": "RR_E boundary theorem-inventory synchronization",
+      "obstruction_label": "none",
+      "payload_type": "control_inventory_synchronization",
+      "plan_task_id": "v14_p5_t06_rr_e_boundary_update",
+      "previous_task_ids": [
+        "RT-20260701-030"
+      ],
+      "role_id": "project-control-maintainer",
+      "selected_route": "frontier_boundary_update_packet",
+      "signature_hash": "31ee5f9a5d8691e40bd578e3185c69dbf241db35dd9a9acb81bc40c85659d5c8",
+      "signature_id": "route-sig-RT-20260701-031",
+      "signature_schema_id": "route_signature_definition_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-031/jobs/completions/AJC-AJ-RT-20260701-031-001.yaml",
+      "source_evidence": {
+        "object_name": [
+          "completion.mathematical_payload_manifest[0].object_name"
+        ],
+        "payload_type": [
+          "completion.mathematical_payload_manifest[0].payload_type"
+        ]
+      },
+      "source_extension_category": "none",
+      "source_job_id": "AJ-RT-20260701-031-001",
+      "source_task_id": "RT-20260701-031",
+      "target_derivation_milestone": "matter_coupling",
+      "task_type": "v14_p5_t06_rr_e_boundary_sync"
+    }
+  ],
+  "source_registries": [
+    "registries/RESEARCH_TASK_REGISTRY.csv",
+    "registries/AGENT_JOB_REGISTRY.csv"
+  ],
+  "task_count": 22
+}
