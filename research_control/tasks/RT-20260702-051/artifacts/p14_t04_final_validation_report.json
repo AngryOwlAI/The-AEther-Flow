@@ -1,0 +1,135 @@
+{
+  "validator_id": "validate_p14_t04_final_validation",
+  "task_id": "RT-20260702-051",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "plan_contains_p14_t04_required_commands",
+      "passed": true,
+      "detail": "v14 plan contains the P14-T04 command suite."
+    },
+    {
+      "id": "program_state_routes_to_p14_t05",
+      "passed": true,
+      "detail": "program_state routes from P14-T04 to P14-T05."
+    },
+    {
+      "id": "handoff_routes_to_p14_t05",
+      "passed": true,
+      "detail": "handoff-0504 routes to P14-T05."
+    },
+    {
+      "id": "completion_records_no_physics_promotion",
+      "passed": true,
+      "detail": "completion preserves no downstream physics promotion or completed derivation."
+    },
+    {
+      "id": "receipt_records_validation_suite",
+      "passed": true,
+      "detail": "receipt records the required validation suite."
+    },
+    {
+      "id": "current_frontier_updated",
+      "passed": true,
+      "detail": "current frontier reflects the P14-T04 state transition."
+    },
+    {
+      "id": "bootstrap_pass",
+      "passed": true,
+      "detail": "bootstrap_memory_system.py output contains Validation PASS."
+    },
+    {
+      "id": "bootstrap_validate_only_pass",
+      "passed": true,
+      "detail": "bootstrap_memory_system.py --validate-only output contains Validation PASS."
+    },
+    {
+      "id": "classifier_pass",
+      "passed": true,
+      "detail": "classify_project_changes.py returned docs_impact_required=true with no blocked paths."
+    },
+    {
+      "id": "signals_pass",
+      "passed": true,
+      "detail": "collect_project_improvement_signals.py --validate-emitted passed."
+    },
+    {
+      "id": "documentation_impact_pass",
+      "passed": true,
+      "detail": "validate_documentation_impact.py passed."
+    },
+    {
+      "id": "claim_language_pass",
+      "passed": true,
+      "detail": "validate_claim_language.py --json returned PASS with hard_fail_count=0."
+    },
+    {
+      "id": "research_control_pass",
+      "passed": true,
+      "detail": "validate_research_control.py passed."
+    },
+    {
+      "id": "research_control_check_diff_pass",
+      "passed": true,
+      "detail": "validate_research_control.py --check-diff passed."
+    },
+    {
+      "id": "metrics_pass",
+      "passed": true,
+      "detail": "report_physics_progress_metrics.py returned operational diagnostics with no physics promotion authority."
+    },
+    {
+      "id": "frontier_check_pass",
+      "passed": true,
+      "detail": "render_current_frontier.py --check returned no failure text."
+    },
+    {
+      "id": "unit_tests_pass",
+      "passed": true,
+      "detail": "python -m unittest discover -s tests passed."
+    },
+    {
+      "id": "git_diff_check_pass",
+      "passed": true,
+      "detail": "git diff --check produced no output."
+    }
+  ],
+  "source_hashes": {
+    "task": "74bdad6fb96e6079a39a20958b32281d6826173d2d298c57d34e0508e9ce6b77",
+    "decision": "c6fffc25c81e91105ab487d7814d08939491bc76a9953b266fb2216e00069270",
+    "receipt": "c86392d46c3d9b63485f875f868d2386e1aa5e8852f16f914f033ae7c54d1885",
+    "completion": "0cf9837d231041853b6a803482b06bb1a8839762e9b65ae35a31cc4081f13c6d",
+    "handoff": "1362f1cae8b37211eb0528ff5ac817f9f41712005f3abe69042b52b5c56c4006",
+    "program_state": "e41ee5802eacdc4a14caa1d4d094fff87c5bc1d90a08fdead8bcfbc359ed170f",
+    "current_frontier": "2fefcc807eac3e7cde451e4de5b6bf66245e74f3bfa7ac97e08864541a3192ec",
+    "plan": "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec",
+    "bootstrap": "8703c805a3de2408d746b370ddf72cb493a19cb5f5539e6bfbe428a996c80144",
+    "bootstrap_validate_only": "21d076bedeb2b890731d0b3f22e7c412f5c8a1b52c27b65001fc02c0321deb05",
+    "classifier": "b02bd557c304ad0f7ef80b6df0eadac18186694e57c9484e9338423321d058bc",
+    "signals": "8ffff1a743b200f1a77b2746d9c0bbd3127ec51d3908f7f9f72410f216ec59e0",
+    "documentation_impact": "f5f123acbf59ab0266ff6f282d80325c260ba5e44fbe8fe6e0304864eb66f36a",
+    "claim_language": "12c93489885d56bf0f005f14e7a9fa2a77302422eea3da90ccbd3b360e3ab3b2",
+    "research_control": "dbd66e0a7c6c074b6be58cb2213305d07e28415363c0150442a275eafc362b96",
+    "research_control_check_diff": "dbd66e0a7c6c074b6be58cb2213305d07e28415363c0150442a275eafc362b96",
+    "metrics": "809ff0abe6a3b859db58512f1bbbf68375bcc3915d97fffe3b5d338de38a87b6",
+    "frontier_check": "f10025502126e3b0c4cd555eb4d416bff143eef5fcac0d23822c1267b87471be",
+    "unit_tests": "4b9c9a996202cec4024ebc00f138e97defe9073cb1a11ffca005113adb693a93",
+    "git_diff_check": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "claim_boundary": {
+    "proof_authority": false,
+    "source_law_adoption_authorized": false,
+    "rr_e_transport_law_adoption_authorized": false,
+    "unrestricted_rr_e_irrelevance_authorized": false,
+    "matter_semantics_adoption_authorized": false,
+    "detector_semantics_adoption_authorized": false,
+    "downstream_physics_promotion_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false
+  },
+  "phase_result": {
+    "p14_t04_validated": true,
+    "next_plan_task_id": "P14-T05",
+    "next_route": "ordinary research continuation handoff"
+  }
+}
