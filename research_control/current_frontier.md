@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-035` and `handoff-0488`.
+`RT-20260702-036` and `handoff-0489`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-035` |
-| Latest handoff ID | `handoff-0488` |
-| Current status | `v14_p11_t02_pre_adoption_checklist_completed_next_narrow_theorem_selector` |
-| Current route family | pre_adoption_checklist_packet |
+| Active task ID | `RT-20260702-036` |
+| Latest handoff ID | `handoff-0489` |
+| Current status | `v14_p11_t03_narrow_theorem_selector_completed_next_template` |
+| Current route family | theoretical_continuation_selector_packet |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p11 t03 narrow matter semantics theorem target selector |
-| Required next authority | Run one bounded v14 P11-T03 narrow theorem target selector packet. |
-| Next recommended action | Run one bounded v14 P11-T03 narrow theorem target selector packet. |
+| Current burden | none for physics derivation; live control burden is v14 p11 t04 narrow theorem task template |
+| Required next authority | Run one bounded v14 P11-T04 narrow theorem task template packet. |
+| Next recommended action | Run one bounded v14 P11-T04 narrow theorem task template packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-035/00_TASK.yaml`.
-- Active task objective: Create checklist for any future matter-semantics detector-semantics coupling-law or matter-coupling adoption route.
-- Latest handoff path: `research_control/handoffs/handoff-0488.yaml`.
-- Latest handoff summary: RT-20260702-035 created the P11-T02 matter-coupling pre-adoption checklist control note.
-- Current route family: pre_adoption_checklist_packet.
-- Next recommended action: Run one bounded v14 P11-T03 narrow theorem target selector packet.
+- Active task path: `research_control/tasks/RT-20260702-036/00_TASK.yaml`.
+- Active task objective: Select one narrow matter-semantics theorem or precondition route instead of direct matter-coupling derivation.
+- Latest handoff path: `research_control/handoffs/handoff-0489.yaml`.
+- Latest handoff summary: RT-20260702-036 selected no-target certificate hygiene as the first narrow matter-coupling theorem/precondition route.
+- Current route family: theoretical_continuation_selector_packet.
+- Next recommended action: Run one bounded v14 P11-T04 narrow theorem task template packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P11-T03 narrow theorem target selector packet.
+Run one bounded v14 P11-T04 narrow theorem task template packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-035`;
-- latest handoff: `handoff-0488`;
-- current status: `v14_p11_t02_pre_adoption_checklist_completed_next_narrow_theorem_selector`;
+- active task: `RT-20260702-036`;
+- latest handoff: `handoff-0489`;
+- current status: `v14_p11_t03_narrow_theorem_selector_completed_next_template`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0488.yaml`
-- `research_control/tasks/RT-20260702-035/00_TASK.yaml`
+- `research_control/handoffs/handoff-0489.yaml`
+- `research_control/tasks/RT-20260702-036/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0488*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0489*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -1,0 +1,84 @@
+artifact_id: "p11_t03_narrow_theorem_target_selector_v1"
+artifact_type: "theoretical_decision_output"
+task_id: "RT-20260702-036"
+job_id: "AJ-RT-20260702-036-001"
+role_id: "theoretical-continuation-selector"
+created_at: "2026-07-02T11:14:03Z"
+title: "P11-T03 Narrow Theorem Target Selector"
+control_status:
+  parent_task_id: "RT-20260702-035"
+  parent_handoff_id: "handoff-0488"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Select a narrow theorem/precondition route instead of matter-coupling derivation."
+  claim_boundary: "Selector-only classification. No source-law adoption no PositiveMSProfile_v1 adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation or adoption no stress-energy semantics no stress-energy tensor no matter action no Einstein equations no benchmark promotion and no completed derivation."
+selected_route: "no_target_certificate_hygiene_theorem_first"
+selected_next_packet_type: "task_template_control_packet"
+selected_next_role_family: "documentation-curator@2.0.0"
+selected_next_plan_task_id: "P11-T04"
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_control_packet_type: "task_template_control_packet"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  decision_basis: "P11-T01 blocks direct matter-coupling derivation until prerequisites are sourced and authorized; P11-T02 requires no-target hygiene and RR_E separation checks before adoption-facing packets. Among the P11-T03 candidates, no-target certificate hygiene is the lowest-authority prerequisite and can be templated before any stronger theorem route."
+  theoretical_method: "Rank each candidate route by prerequisite burden authority risk and sequence fit, then select the route that reduces overread risk without adopting positive matter semantics or collapsing RR_E."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No human-gated authority is required because this selector does not adopt reject promote or close any physics object."
+  next_execution_role_family: "documentation-curator@2.0.0"
+  selected_next_packet_objective: "Create a reusable narrow theorem/precondition task template with no-target certificate hygiene as the selected immediate theorem target."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P11-T04 should create the narrow theorem task template. P12 should then implement no-target certificate hygiene doctrine and linter/test coverage before P13 hardens RR_E separation."
+  new_payload_novelty: "Seven-route candidate matrix selecting a no-target certificate hygiene theorem as the first matter-coupling precondition route."
+candidate_route_matrix:
+  - route_id: "source_side_matter_semantics_equivalence_class_theorem"
+    disposition: "defer_until_positive_semantics_hygiene"
+    reason: "Requires explicit positive matter-semantics certificates and risks reading scoped evidence as adopted semantics."
+  - route_id: "PositiveMSProfile_v1_stability_theorem"
+    disposition: "defer_until_hygiene_and_template_exist"
+    reason: "Useful later but should not be treated as matter-semantics adoption without prior no-target hygiene and template controls."
+  - route_id: "RR_E_separation_preservation_theorem"
+    disposition: "defer_to_P13"
+    reason: "RR_E separation is first-class and should be handled under explicit source transport invariance or factorization certificates."
+  - route_id: "no_target_certificate_hygiene_theorem"
+    disposition: "selected"
+    reason: "Lowest-authority route; separates negative import-prevention certificates from positive matter theory and prepares P12."
+  - route_id: "coupling_law_target_formalization_only"
+    disposition: "defer"
+    reason: "Formal coupling targets remain premature until hygiene prevents negative certificates from being overread as coupling-law evidence."
+  - route_id: "detector_semantics_alternative_target_formalization_only"
+    disposition: "defer"
+    reason: "Detector-semantics alternatives require prior no-detector/no-target hygiene and positive semantics boundaries."
+  - route_id: "scoped_obstruction_or_freeze"
+    disposition: "not_selected"
+    reason: "Current state supports a constructive precondition route; no new scoped obstruction is needed for P11-T03."
+selected_target:
+  target_id: "NoTargetCertificateHygiene_v1"
+  theorem_question: "When do negative no-target no-detector no-stress-energy no-action no-benchmark and no-process-authority certificates prevent target imports without supplying positive matter semantics detector semantics stress-energy semantics matter action or coupling laws?"
+  assumptions:
+    - "source-side packet or object P is in draft/control or scoped evidence/precondition status"
+    - "certificate family C_neg(P) only blocks target imports or process-authority imports"
+    - "positive matter-semantics claims require separate source-side certificates"
+    - "RR_E identification or transport remains unavailable unless explicit source certificates are present"
+  expected_nonpromotion_result: "C_neg(P) can support hygiene obligations and linter examples but cannot establish matter semantics detector semantics stress-energy semantics matter action coupling law matter coupling Einstein equations benchmark promotion or completed derivation."
+  next_template_requirements:
+    - "exact theorem question"
+    - "certificate classes and source-side assumptions"
+    - "positive semantics boundary"
+    - "RR_E handling"
+    - "forbidden downstream overreads"
+    - "stress and refuter requirements"
+    - "post-theorem adoption status"
+gate_ready_warning_resolution:
+  advisory_warning_id: "gate_ready_without_gate"
+  route_to_gate_chair: false
+  reason_gate_chair_not_lawful: "P11-T03 requests no adoption rejection benchmark closure or protected verdict; Gate Chair routing would overstate selector-only output despite broad user authorization."
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
