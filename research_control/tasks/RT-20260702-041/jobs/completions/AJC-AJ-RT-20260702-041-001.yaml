@@ -1,0 +1,244 @@
+completion_id: "AJC-AJ-RT-20260702-041-001"
+job_id: "AJ-RT-20260702-041-001"
+task_id: "RT-20260702-041"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-02T12:37:27Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v14"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  related_plan_task_id: "P12-T03"
+  plan_phase_id: "P12"
+  implemented_task_scope: "Integrated no-target hygiene linter examples and tests and routed to P12-T04 no-target hygiene phase validation."
+  downstream_tasks_not_implemented:
+    - "P12-T04 no-target hygiene phase validation"
+    - "P13 RR_E separation hardening"
+    - "P14 final integration audit"
+  all_applicable_plan_tasks_proven: false
+  phase_p12_completed: false
+output_paths:
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "research_control/design/scoped_claim_language_examples.md"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/no_target_certificate_overread.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-041/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-041/DDR-20260702-041.md"
+  - "research_control/tasks/RT-20260702-041/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-041/artifacts/validate_p12_t03_no_target_linter_examples.py"
+  - "research_control/tasks/RT-20260702-041/artifacts/p12_t03_no_target_linter_examples_report.json"
+  - "research_control/tasks/RT-20260702-041/artifacts/p12_t03_no_target_linter_examples_receipt.md"
+  - "research_control/tasks/RT-20260702-041/jobs/AJ-RT-20260702-041-001.yaml"
+  - "research_control/tasks/RT-20260702-041/jobs/completions/AJC-AJ-RT-20260702-041-001.yaml"
+  - "research_control/tasks/RT-20260702-041/roles/validator-engineer@0.2.0--RT-20260702-041.yaml"
+  - "research_control/handoffs/handoff-0494.yaml"
+  - "research_control/handoffs/handoff-0494.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0493.yaml"
+  - "research_control/design/no_target_certificate_hygiene_doctrine.md"
+  - "research_control/design/positive_semantics_requirement_note.md"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "research_control/design/scoped_claim_language_examples.md"
+  - "scripts/project_control/validate_claim_language.py"
+  - "tests/test_validate_claim_language.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=546 relationship_row_count=2903 semantic_row_count=546 vault_row_count=546"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P12-T03 no-target hygiene linter examples integration\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260702-040 latest_handoff=handoff-0493 boundary=director_decision_required"
+  - ".venv/bin/python -m unittest tests.test_validate_claim_language | exit_code=0 | tests=16"
+  - ".venv/bin/python research_control/tasks/RT-20260702-041/artifacts/validate_p12_t03_no_target_linter_examples.py --output research_control/tasks/RT-20260702-041/artifacts/p12_t03_no_target_linter_examples_report.json --json | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory search returned current-frontier and v14 plan context"
+      - "canonical v14 plan current-frontier handoff-0493 taxonomy examples linter and tests were inspected before routing"
+      - "continue_research.py resolved handoff-0493 to one bounded P12-T03 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "No-target overread fixture produces five hard failures on a current control surface"
+      - "Corrected source_hygiene_certificate_only wording produces no no-target findings"
+      - "Examples pack contains before and after no-target wording"
+      - "Current public surfaces have zero no-target overread hard failures"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write rendered handoff-0494 state"
+      - "render_dependency_graph.py write is required after handoff-0494 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "post-bootstrap memory preflight refreshed stale local retrieval mirrors to PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "focused unit tests PASS"
+      - "changed-file claim-language gate is required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "P12-T03 completion records present"
+      - "dependency graph rerender required after completion record creation"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is required before this transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "no_target_hygiene_linter_examples_v1"
+      status: "validator guardrail only"
+      authority_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+      supports_target: "future claim-language hygiene for no-target certificates"
+      does_not_establish:
+        - "positive matter semantics"
+        - "detector semantics"
+        - "stress-energy semantics"
+        - "matter action"
+        - "benchmark recovery"
+        - "proof authority"
+  open_or_blocked_physical_targets:
+    - target: "positive source-side matter semantics detector semantics coupling stress-energy matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "future positive source-side packet construction and downstream protected authorities remain missing"
+      evidence_not_to_overread:
+        - "no-target hygiene linter examples"
+      next_lawful_route: "P12-T04 no-target hygiene phase validation"
+  forbidden_overread:
+    - "linter PASS as proof authority"
+    - "no-target certificate as positive matter semantics"
+    - "no-target certificate as detector semantics"
+    - "no-target certificate as stress-energy semantics"
+    - "no-target certificate as matter action"
+    - "no-target certificate as benchmark recovery"
+verdict: "v14_p12_t03_no_target_hygiene_linter_examples_completed_next_phase_validation"
+coherent_resolution_summary: "RT-20260702-041 integrated no-target linter examples and tests and routed to P12-T04 while preserving every downstream physics block."
+next_recommendation: "Run one bounded v14 P12-T04 no-target hygiene phase validation packet before P13 RR_E separation hardening."
+physics_progress_status:
+  status: "process_control_no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "P12-T03 no-target hygiene linter and examples integration only"
+  explanation: "This project-control packet changes deterministic claim-language guardrails and does not change the Distance-to-GR ledger or scientific status."
+  downstream_promotion_reference: "authorization_layers.downstream_physics_promotion_authorized"
+distance_to_gr_delta:
+  changed: false
+  burden_id: ""
+  milestone: ""
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P12-T04 no-target hygiene phase validation"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "PositiveMSProfile_v1 adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "P12-T03 creates process-control validator coverage only."
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "PositiveMSProfile_v1 adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "coupling-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  summary: "P12-T03 is validator guardrail work and does not construct or adopt matter semantics."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 546
+    relationship_row_count: 2903
+    semantic_row_count: 546
+    vault_row_count: 546
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P12-T03 no-target hygiene linter examples integration\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P12-T03 no-target hygiene linter examples integration"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "2483916777dd93be20057ce581fef23e9363112aa684d0da0e503d4fa84f8e78"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
+p12_t03_receipts:
+  plan_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+  current_frontier_post_state_hash: "2483916777dd93be20057ce581fef23e9363112aa684d0da0e503d4fa84f8e78"
+  handoff_0493_hash: "91f5976646d6b6dd3e717458994a82753fb51fec59647d9bf1e52ba16b0be5c4"
+  handoff_0494_hash: "7c4304f16e0be9f24a30b7e91dcf4bafd56ec5d3419e4012b3ca683173258b5d"
+  taxonomy_hash: "65997187c478fa43c1d0bd99e532deccb04f450a423b90d11877101e0260fc4f"
+  examples_hash: "d63ad76672df65e961a4ff56f396f20d23dc70d0a2ddf983f1b5359c018a6c2a"
+  unit_test_hash: "1f5ce1200761eddf738200e4bc021e4d479212ca708e64a7d014fd7b9f25d324"
+  fixture_hash: "6c4b32fb2d2e1a7973924360954ef85870014dacb05c340beb2709301aa0999d"
+  phase_validator_hash: "9633acf82d1f968f909520bc0c758f71fb3bcad67d8d314e6ac43558c9ed4380"
+  phase_report_hash: "b3cdd4198c57eb4a0d08c9940dd52f48711296c6e35c2fe4a789a19c1f22b668"

@@ -105,6 +105,32 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["status"], "FAIL")
         self.assertEqual(report["findings"][0]["class_id"], "no_target_certificate_as_positive_semantics")
 
+    def test_no_target_certificate_overread_fixture_fails(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/no_target_certificate_overread.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["hard_fail_count"], 5)
+        self.assertEqual(
+            {finding["class_id"] for finding in report["findings"]},
+            {"no_target_certificate_as_positive_semantics"},
+        )
+
+    def test_no_target_certificate_corrected_wording_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "The certificate is source_hygiene_certificate_only under the stated "
+                "checker scope; it is not positive matter semantics, detector semantics, "
+                "stress-energy semantics, matter action, benchmark recovery, or proof authority.\n"
+            ),
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
     def test_rr_e_transport_law_adoption_overread_fails(self) -> None:
         report = self.scan_one(
             "research_control/current_frontier.md",

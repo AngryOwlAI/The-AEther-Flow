@@ -295,18 +295,23 @@ Bad wording:
 
 ```text
 The no-target certificate proves positive matter semantics.
+The no-target certificate supplies detector semantics.
+The no-target certificate supplies stress-energy semantics.
+The no-target certificate provides proof authority.
 ```
 
 Why it is wrong: a no-target or source-hygiene certificate can show absence of
 target import under stated checks. It does not establish positive matter
-semantics.
+semantics, detector semantics, stress-energy semantics, matter action, benchmark
+recovery, or proof authority.
 
 Correct wording:
 
 ```text
 The certificate is source_hygiene_certificate_only under the stated checker
 scope; it is not positive matter semantics, detector semantics, matter
-coupling, or proof authority.
+coupling, stress-energy semantics, matter action, benchmark recovery, or proof
+authority.
 ```
 
 Required source paths to inspect:
