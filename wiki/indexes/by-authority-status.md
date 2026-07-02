@@ -577,6 +577,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-table-source-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `wiki/markdown/md-research-control-design-research-dependency-graph-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `wiki/markdown/md-research-control-design-route-signature-definition.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES` `wiki/markdown/md-research-control-design-scoped-claim-language-examples.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `wiki/markdown/md-research-control-design-scoped-positive-claim-vocabulary.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
@@ -1029,6 +1030,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES` `research_control/design/scoped_claim_language_examples.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `research_control/design/scoped_positive_claim_vocabulary.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`

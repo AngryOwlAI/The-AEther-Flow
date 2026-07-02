@@ -1,0 +1,103 @@
+handoff_id: "handoff-0471"
+created_at: "2026-07-02T06:08:34Z"
+task_id: "RT-20260702-018"
+decision_id: "DDR-20260702-018"
+job_id: "AJ-RT-20260702-018-001"
+completion_path: "research_control/tasks/RT-20260702-018/jobs/completions/AJC-AJ-RT-20260702-018-001.yaml"
+source_task_id: "RT-20260702-018"
+source_job_id: "AJ-RT-20260702-018-001"
+source_completion_id: "AJC-AJ-RT-20260702-018-001"
+status: "completed"
+summary: "RT-20260702-018 completed one bounded v14 P8-T01 route signature definition packet. It registered route_signature_definition_v1 as an operational route-orbit control schema and preserved all physics claim-promotion blocks."
+next_action: "Run one bounded v14 P8-T02 route history extractor packet before route-orbit validation or matter-coupling pilot work."
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "v14_p8_t02_route_history_extractor"
+  objective: "Implement or update a route-history extractor that emits route signatures from tracked task records."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "research_control/design/route_signature_definition.md"
+    note: "P8-T01 route signature control schema for later extraction and validation."
+  - path: "research_control/tasks/RT-20260702-018/artifacts/p8_t01_route_signature_definition_receipt.md"
+    note: "Task-local receipt confirms required route signature fields and boundary language."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory lookup returned v14 plan context"
+      - "query_memory lookup returned current-frontier context"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "route signature definition validator returned PASS"
+      - "field_count=28"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "route_signature_definition_v1"
+      status: "project-control schema definition only"
+      authority_path: "research_control/design/route_signature_definition.md"
+      supports_target: "P8-T02 route history extraction readiness"
+      does_not_establish:
+        - "route freezing by itself"
+        - "physics proof authority"
+        - "source-law adoption"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+  open_or_blocked_physical_targets:
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream derivation burdens and protected authorities remain missing"
+      next_lawful_route: "P8-T02 route history extractor"
+  forbidden_overread:
+    - "route signature definition as route freeze authority"
+    - "route signature definition as physics proof"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
