@@ -20,6 +20,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `research_control/design/narrow_theorem_task_template.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `research_control/design/no_target_certificate_hygiene_doctrine.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `research_control/design/positive_semantics_requirement_note.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`

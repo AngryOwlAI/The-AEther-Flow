@@ -253,6 +253,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `wiki/markdown/md-research-control-design-no-target-certificate-hygiene-doctrine.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `wiki/markdown/md-research-control-design-positive-semantics-requirement-note.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-table-source-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `wiki/markdown/md-research-control-design-research-dependency-graph-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `wiki/markdown/md-research-control-design-route-signature-definition.md`
@@ -738,6 +739,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `research_control/design/no_target_certificate_hygiene_doctrine.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
+- `MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `research_control/design/positive_semantics_requirement_note.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`
