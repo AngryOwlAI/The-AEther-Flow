@@ -49,6 +49,10 @@ map, not a proof and not a claim gate.
   authority.
 - `research_control/design/gr_derivation_burden_map.md` names the open burden
   chain from source ontology through benchmark promotion.
+- `research_control/design/public_status_table_source_spec.md` supplies the
+  public-safe high-risk status table, including blocked benchmark promotion,
+  blocked Einstein equations, scoped `M_src`, scoped `g_eff`, and scoped
+  matter-coupling evidence/preconditions.
 
 ## Required Reader Outcome
 
@@ -85,6 +89,9 @@ generic documentation-flow diagram.
 - Includes a failure-mode panel for common overclaims.
 - Names `registries/TEX_SOURCE_REGISTRY.csv` and
   `registries/CLAIM_BOUNDARY_REGISTRY.csv` as source paths.
+- Names `research_control/design/public_status_table_source_spec.md` when
+  explaining public status, and keeps benchmark promotion blocked by upstream
+  derivation burdens and protected authority.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the

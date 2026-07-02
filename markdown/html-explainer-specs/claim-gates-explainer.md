@@ -46,6 +46,10 @@ ontology.
   burdens, allowed Distance-to-GR status vocabulary, mathematical payload
   expectations, constructive preference, freeze criteria, source-extension
   categories, and finite toy model boundaries.
+- `research_control/design/public_status_table_source_spec.md` supplies the
+  public high-risk status contract and examples where scoped acceptance or
+  scoped evidence/precondition status must not be overread as downstream
+  physics promotion.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` supplies active examples of
   allowed claims, forbidden claims, required gates, and authority source
   paths.
@@ -93,6 +97,11 @@ source-to-validation diagram or browser-side Mermaid.
 - States that Gate Chair decisions require human-gated authority.
 - Includes allowed and forbidden claim examples grounded in
   `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- Includes public-status gate examples grounded in
+  `research_control/design/public_status_table_source_spec.md`, including why
+  scoped `M_src`, scoped `g_eff`, and scoped matter-coupling
+  evidence/preconditions are not source-law, matter-coupling,
+  Einstein-equation, benchmark, or completed-derivation claims.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.

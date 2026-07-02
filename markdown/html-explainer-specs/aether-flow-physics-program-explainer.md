@@ -45,6 +45,10 @@ physics status, not a derivation note.
   result, and human-gate workflow.
 - `research_control/design/gr_derivation_burden_map.md` names the derivation
   burden chain and current status categories.
+- `research_control/design/public_status_table_source_spec.md` defines the
+  public status table contract for high-risk rows and blocks overread from
+  scoped source objects or scoped evidence/preconditions into downstream GR
+  claims.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` records concrete claim boundaries
   that prevent local artifacts from becoming broad physics claims.
 
@@ -82,6 +86,11 @@ examples. Do not turn the page into a task transcript or role manual.
   inflation.
 - Preserves qualifiers such as `draft/control`, `source-only`, `local`,
   `exact-branch`, `source-extension data`, and `human-gated`.
+- Preserves the public status table boundaries: GR is not derived; `M_src` is
+  scoped source-only; `g_eff` is scoped source-extension object status; matter
+  coupling is not derived or adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
+  is scoped evidence/precondition only; no-target certificates are not
+  positive matter theory.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.

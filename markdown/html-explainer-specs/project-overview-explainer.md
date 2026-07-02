@@ -47,6 +47,10 @@ placement without changing project behavior or physics claim status.
 - `research_control/design/documentation_curator_publication_process.md`:
   publication brief, source spec, GitHub Markdown, tracked HTML, review, and
   validation discipline.
+- `research_control/design/public_status_table_source_spec.md`: public status
+  table contract for high-risk rows, including scoped `M_src`, scoped
+  `g_eff`, matter-coupling evidence/preconditions, blocked Einstein equations,
+  blocked benchmark promotion, and generated-output non-authority.
 
 ## Required Reader Outcome
 
@@ -90,6 +94,10 @@ assets, or external runtime packages.
 - Points readers to the correct page family and source lane without making the
   overview page itself authoritative.
 - Preserves exact-GR benchmark versus open derivation language.
+- Links or cites the public status table source spec when summarizing current
+  public status, and preserves that GR is not derived while `M_src`, `g_eff`,
+  and matter-coupling rows remain scoped under their documented blocked
+  overreads.
 - Preserves generated noncanonical status and source authority boundaries.
 - Does not change validators, commands, schemas, role contracts, skill
   contracts, routing behavior, checkpoint behavior, generated-output authority,

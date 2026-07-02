@@ -64,6 +64,9 @@ behavior, checkpoint behavior, sidecar status, or physics claim status.
 - `scripts/project_control/project_improvement_handoff_validation.py`: Sidecar schema, source-bridge, and parity validation support.
 - `scripts/research_control/checkpoint_research_transaction.py`: Checkpoint guard with conditional sidecar path acceptance tied to source-bridge evidence.
 - `scripts/research_control/validate_research_control.py`: Tracked research-control and diff boundary checks.
+- `research_control/design/public_status_table_source_spec.md`: public status
+  table source spec used by public-surface checks to distinguish validator
+  receipts from physics-promotion authority.
 - `research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md`: Phase 6 checkpoint governance evidence for conditional source-bridge sidecar allowlisting.
 
 ## Required Reader Outcome
@@ -102,6 +105,10 @@ global sidecar directory allowance or sidecar adoption claim.
 - Uses the bottom Reader Scope hook immediately above the marked authority footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
 - Includes visible source paths in both public derivatives.
+- Explains that public status checks must preserve the public status table
+  source-spec boundaries and that a validator PASS does not authorize
+  source-law adoption, `g_eff` scope expansion, matter-coupling adoption,
+  Einstein equations, benchmark promotion, or completed derivation.
 - Explains conditional bridge-sidecar acceptance as exact YAML/Markdown sidecar pairs named by source-bridge metadata, not a global sidecar directory allowance.
 - Explains that positive and negative controls belong to validator evidence, while this page only documents the existing behavior.
 - Preserves generated noncanonical status and source authority boundaries.

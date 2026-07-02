@@ -52,6 +52,10 @@ footer-authority placement without changing the authority hierarchy.
   GitHub-facing Markdown derivatives.
 - `registries/HTML_EXPLAINER_REGISTRY.csv`: generated HTML rows bound to
   source specs and source-basis hashes.
+- `research_control/design/public_status_table_source_spec.md`: canonical
+  public status table source spec for public status renderings; generated
+  HTML and GitHub-facing Markdown may render it but cannot override its
+  tracked source basis.
 - `registries/WIKI_ARTIFACT_REGISTRY.csv`: generated wiki-note rows and
   source-object hash bindings.
 - `registries/FILE_OBJECT_REGISTRY.csv`: generated file object index rows used
@@ -92,6 +96,11 @@ runtime packages.
 - Adds a page-specific authority ladder or source-to-derivative visual.
 - Names concrete source surfaces, generated surfaces, and local retrieval
   surfaces.
+- Explains that public status renderings must trace back to
+  `research_control/design/public_status_table_source_spec.md`,
+  `registries/DISTANCE_TO_GR_LEDGER.csv`, and row-specific evidence paths
+  before citing `M_src`, `g_eff`, matter-coupling evidence, Einstein-equation
+  status, or benchmark status.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority

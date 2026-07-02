@@ -44,9 +44,14 @@ not a physics proof, not a ledger update, and not a claim-promotion record.
   category, and finite toy model target.
 - `registries/DISTANCE_TO_GR_LEDGER.csv` records live burden rows and current
   statuses including `Resp_lc` scoped source-extension selector data,
-  draft/control `M_src`, not-started downstream metric/coupling/equation
-  burdens, human-gated benchmark
-  promotion, and locally frozen finite toy route status.
+  scoped source-only `M_src`, scoped source-extension `g_eff`,
+  matter-coupling scoped evidence/preconditions, not-started Einstein-equation
+  burdens, blocked benchmark promotion, human-gated benchmark closure, and
+  locally frozen finite toy route status.
+- `research_control/design/public_status_table_source_spec.md` defines the
+  public status table contract and row-specific blocked overreads for `M_src`,
+  `g_eff`, `matter_coupling`, high-risk matter-sector objects, Einstein
+  equations, benchmark promotion, and finite toy status.
 - `research_control/design/frontier_theorem_inventory.md` is the canonical
   frontier inventory source for the current theorem-like, witness,
   obstruction, scoped-evidence, frozen-route, and missing-theorem review
@@ -87,9 +92,9 @@ the marked authority footer. Preserve this boundary text exactly unless a
 future source inspection authorizes a wording repair:
 
 Reader scope: roadmap explanation only. It does not update physics status,
-discharge a milestone, adopt `M_src`, derive `g_eff`, derive matter coupling,
-derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or
-supersede tracked source files.
+discharge a milestone, expand scoped `M_src` status, expand scoped `g_eff`
+status, derive matter coupling, derive Einstein equations, promote a
+benchmark, issue a Gate Chair verdict, or supersede tracked source files.
 
 ## Visual Strategy
 
@@ -107,6 +112,10 @@ browser-side Mermaid.
   `new_mathematical_payload`.
 - Preserves `draft/control`, `source-only`, `source-extension data`, `local`,
   `exact-branch`, and `human-gated` qualifiers.
+- Preserves current public status table wording for high-risk rows: `M_src`
+  is scoped source-only, `g_eff` is scoped source-extension object status,
+  matter coupling remains scoped evidence/precondition only, Einstein
+  equations remain not started, and benchmark promotion remains blocked.
 - Explains source-extension and finite toy categories without treating them as
   GR recovery shortcuts.
 - Summarizes the frontier theorem inventory while naming
