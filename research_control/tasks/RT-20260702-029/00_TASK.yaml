@@ -1,0 +1,48 @@
+task_id: "RT-20260702-029"
+task_title: "v14 P10-T01 Literature Comparison Scope Selector"
+task_type: "literature_comparison_scope_selector"
+status: "completed"
+created_at: "2026-07-02T09:34:24Z"
+started_at: "2026-07-02T09:34:24Z"
+completed_at: "2026-07-02T09:34:24Z"
+parent_task_id: "RT-20260702-028"
+source_handoff_id: "handoff-0481"
+decision_id: "DDR-20260702-029"
+agent_job_id: "AJ-RT-20260702-029-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P10"
+plan_task_id: "P10-T01"
+objective: "Select one bounded literature-comparison scope before any source acquisition, comparison execution, public-boundary update, or downstream stress-energy/action/EFE route."
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Before Einstein-equation derivation attempts, select the external reconstruction/no-go comparison scope that can constrain dynamics, action, variation, universal coupling, detector semantics, and no-target hygiene."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_resemblance_as_validation_authorized: false
+scope:
+  allowed:
+    - "select a bounded literature-comparison scope"
+    - "name comparison axes and source-acquisition requirements"
+    - "preserve P10 source rules and claim blocks"
+    - "route only to P10-T02 literature source acquisition"
+  forbidden:
+    - "acquire or quote external literature in this packet"
+    - "perform literature comparison"
+    - "promote resemblance to validation"
+    - "adopt source laws or downstream physics"
+    - "route stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation"
+validation:
+  required_validator: "research_control/tasks/RT-20260702-029/artifacts/validate_p10_t01_literature_scope_selector.py"
+  expected_report: "research_control/tasks/RT-20260702-029/artifacts/p10_t01_literature_scope_selector_report.json"
+  expected_status: "PASS"
+next_route:
+  plan_task_id: "P10-T02"
+  task_type: "literature_source_acquisition_packet"
+  role_family: "documentation-curator@2.0.0 through Continue Research unless live state selects a stricter literature-support role"
+  objective: "Gather primary literature sources for the selected scope with bibliographic metadata, relevance rationale, AEther-Flow burden mapping, source-access notes, APA 7 citation candidates, and no claim-promotion statement."

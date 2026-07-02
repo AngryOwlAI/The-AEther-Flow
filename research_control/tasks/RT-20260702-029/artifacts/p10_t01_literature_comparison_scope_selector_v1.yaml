@@ -1,0 +1,143 @@
+artifact_id: "p10_t01_literature_comparison_scope_selector_v1"
+artifact_type: "theoretical_decision_output"
+task_id: "RT-20260702-029"
+job_id: "AJ-RT-20260702-029-001"
+role_id: "theoretical-continuation-selector"
+created_at: "2026-07-02T09:34:24Z"
+title: "P10-T01 Literature Comparison Scope Selector"
+control_status:
+  parent_task_id: "RT-20260702-028"
+  parent_handoff_id: "handoff-0481"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Select the external reconstruction/no-go comparison scope before stress-energy semantics, matter action, variational dynamics, Einstein equations, exact-GR benchmark recovery, or stronger adoption can be routed."
+  claim_boundary: "Scope selector only. No external validation no source-law adoption no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation or adoption no stress-energy semantics no matter action no MetricData(E) no g_eff scope expansion no Einstein equations no benchmark promotion no completed derivation."
+selected_scope:
+  selected_scope_id: "operational_causal_metric_universal_coupling_constraints_scope"
+  selected_scope_label: "Operational/causal Lorentzian reconstruction plus universal-coupling and field-equation constraint comparison"
+  scope_summary: "Compare AEther-Flow only against literature families that constrain the path from source/order/response data to Lorentzian metric reconstruction, detector or operational semantics, universal coupling, stress-energy/action requirements, variational dynamics, and Einstein-equation derivation conditions."
+  comparison_area_ids:
+    - "causal_set_theory"
+    - "metric_reconstruction"
+    - "operational_spacetime_reconstruction"
+    - "equivalence_principle_reconstruction"
+    - "universal_coupling_reconstruction_and_no_go_constraints"
+    - "stress_energy_derivation"
+    - "matter_action_derivation"
+    - "variational_principles"
+    - "einstein_equation_derivation_requirements"
+    - "effective_field_theory_constraints"
+    - "detector_operational_semantics"
+    - "lorentzian_geometry_from_causal_order_response_data"
+    - "emergent_gravity_boundary_comparison"
+    - "analogue_gravity_boundary_comparison"
+  coverage_axes:
+    - axis_id: "order_to_lorentzian_geometry"
+      burden_targets:
+        - "M_src"
+        - "g_eff"
+      question: "What does established reconstruction literature require to recover Lorentzian geometry from order, causal, or operational data?"
+      p10_t02_source_need: "Primary sources on causal/order reconstruction and operational spacetime reconstruction."
+    - axis_id: "response_to_detector_semantics"
+      burden_targets:
+        - "matter coupling"
+      question: "What assumptions are needed to turn response/readout data into detector semantics without importing target matter behavior?"
+      p10_t02_source_need: "Primary sources on operational detector semantics and equivalence-principle or clock/rod reconstruction."
+    - axis_id: "universal_coupling_to_stress_energy"
+      burden_targets:
+        - "matter coupling"
+        - "Einstein equations"
+      question: "What constraints govern universal coupling, stress-energy, matter action, and source dynamics before an EFE route is meaningful?"
+      p10_t02_source_need: "Primary sources on universal coupling, stress-energy bootstrap, variational principles, and matter-action requirements."
+    - axis_id: "einstein_equation_derivation_requirements"
+      burden_targets:
+        - "Einstein equations"
+        - "benchmark promotion"
+      question: "What known derivation routes require thermodynamic, variational, symmetry, or conservation assumptions that AEther-Flow must not smuggle?"
+      p10_t02_source_need: "Primary sources on Einstein-equation derivation requirements and no-go constraints."
+    - axis_id: "emergent_and_analogue_gravity_cautions"
+      burden_targets:
+        - "g_eff"
+        - "matter coupling"
+        - "Einstein equations"
+      question: "Which similarities to emergent or analogue gravity are cautionary analogies rather than validation?"
+      p10_t02_source_need: "Primary sources or review anchors that separate analogue resemblance from derivation authority."
+    - axis_id: "no_target_certificate_hygiene"
+      burden_targets:
+        - "MetricData(E)"
+        - "g_eff"
+        - "matter coupling"
+        - "Einstein equations"
+      question: "Which literature assumptions would be target imports if used as AEther-Flow premises?"
+      p10_t02_source_need: "For every acquired source, record whether its assumptions are source-side admissible, comparison-only, or target-import risk."
+excluded_scopes:
+  - scope_id: "full_literature_survey"
+    reason: "Too broad for one Continue Research packet and not needed before source acquisition."
+  - scope_id: "stress_energy_action_einstein_derivation_attempt"
+    reason: "P10 is a comparison-control phase; derivation attempts remain blocked."
+  - scope_id: "external_validation_campaign"
+    reason: "The v14 plan explicitly forbids treating resemblance to literature as validation or promotion."
+  - scope_id: "benchmark_promotion_literature_argument"
+    reason: "Benchmark promotion is human-gated and cannot be supplied by literature resemblance."
+candidate_source_families_for_p10_t02:
+  - family_id: "causal_order_to_geometry"
+    primary_source_required: true
+    expected_relevance: "Constrains order-to-Lorentzian reconstruction assumptions relevant to M_src and g_eff."
+  - family_id: "operational_spacetime_reconstruction"
+    primary_source_required: true
+    expected_relevance: "Constrains clock, rod, light-cone, and equivalence-principle assumptions."
+  - family_id: "universal_coupling_and_stress_energy_bootstrap"
+    primary_source_required: true
+    expected_relevance: "Constrains matter-coupling, stress-energy, and field-equation routes."
+  - family_id: "variational_action_and_conservation_requirements"
+    primary_source_required: true
+    expected_relevance: "Constrains action, variation, conservation, and EFE derivation prerequisites."
+  - family_id: "thermodynamic_or_entropic_einstein_equation_derivations"
+    primary_source_required: true
+    expected_relevance: "Identifies assumption loads that must remain comparison-only unless independently derived."
+  - family_id: "analogue_and_emergent_gravity_boundary_sources"
+    primary_source_required: true
+    expected_relevance: "Separates analogue resemblance from exact-GR benchmark or derivation authority."
+  - family_id: "detector_operational_semantics"
+    primary_source_required: true
+    expected_relevance: "Constrains detector/readout semantics and target-import risk for matter coupling."
+selected_next_packet_type: "literature_source_acquisition_packet"
+selected_next_role_family: "documentation-curator@2.0.0"
+selected_next_plan_task_id: "P10-T02"
+next_source_acquisition_packet:
+  task_type: "literature_source_acquisition_packet"
+  physics_task_default: false
+  director_may_classify_as_physics_support: true
+  required_output_fields:
+    - "source list with bibliographic metadata"
+    - "reason each source is relevant"
+    - "which AEther-Flow burden it may constrain"
+    - "source-access notes"
+    - "APA 7 citation candidates"
+    - "no claim-promotion statement"
+  acquisition_rules:
+    - "Prefer primary literature where possible."
+    - "Cite external materials using APA 7."
+    - "Distinguish established literature from project construction."
+    - "Do not use external resemblance as validation or promotion."
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_control_packet_type: "literature_source_acquisition_packet"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  decision_basis: "P10 must compare AEther-Flow to neighboring reconstruction and no-go literature before stress-energy/action/EFE routes, but P10-T01 is only the scope selector. The selected scope targets the narrow external constraints most likely to pressure g_eff matter-coupling and Einstein-equation burdens without treating resemblance as validation."
+  theoretical_method: "Select the smallest comparison scope that covers order-to-metric reconstruction, operational detector semantics, universal coupling, stress-energy/action prerequisites, variational or thermodynamic EFE derivation assumptions, and no-target certificate hygiene."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No human-gated authority is required because this packet selects a comparison scope only and does not adopt, reject, promote, or close any physics object."
+  next_execution_role_family: "documentation-curator@2.0.0 through Continue Research unless the Director selects a stricter literature-support role"
+  selected_next_packet_objective: "Gather primary literature sources and APA 7 citation candidates for the selected comparison scope."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P10-T02 should acquire sources for the selected scope before any comparison packet, public-boundary update, or downstream stress-energy/action/EFE route."
+  new_payload_novelty: "A bounded six-axis comparison dependency map linking P10 source acquisition to g_eff matter-coupling Einstein-equation no-target-hygiene burdens."
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_resemblance_as_validation_authorized: false
