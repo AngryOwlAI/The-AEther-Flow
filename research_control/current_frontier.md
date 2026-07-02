@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-056` and `handoff-0509`.
+`RT-20260702-057` and `handoff-0510`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-056` |
-| Latest handoff ID | `handoff-0509` |
-| Current status | `post_v15_p1_t01_registry_audit_passed_next_p2_theorem_no_physics_delta` |
-| Current route family | post v15 p1 t01 registry audit passed handoff to p2 no physics claim change |
+| Active task ID | `RT-20260702-057` |
+| Latest handoff ID | `handoff-0510` |
+| Current status | `post_v15_p2_t01_t02_manifest_completed_next_p2_t03_no_adoption` |
+| Current route family | post v15 p2 t01 t02 manifest completed handoff to p2 t03 no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P2 selected narrow source-side matter-semantics equivalence theorem packet |
-| Next recommended action | Run one bounded v15 P2 selected narrow source-side matter-semantics equivalence theorem packet under explicit certificates unless newer tracked state supersedes this route. |
+| Required next authority | P2-T03 narrow source-side matter-semantics equivalence theorem attempt under explicit certificates |
+| Next recommended action | Run one bounded v15 P2-T03 ontology-formalizer theorem attempt for NarrowMSCertEq_v1 under the RT-20260702-057 manifest, producing either a conditional/scoped source-side equivalence theorem candidate or a precise certificate-gap/countermodel obstruction. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-056/00_TASK.yaml`.
-- Active task objective: Verify active-state referential integrity across program_state latest handoff task DDR AgentJob completion role-execution registry rows Distance-to-GR high-risk rows and generated authority boundaries then route to P2 if clean or P1-T02 if repair is required.
-- Latest handoff path: `research_control/handoffs/handoff-0509.yaml`.
-- Latest handoff summary: RT-20260702-056 completed one bounded Process Integrity Auditor packet for v15 P1-T01 active-state registry consistency audit. It recorded PASS_consistent across live active state RT-20260702-055 handoff-0508 and deferred scientific anchor RT-20260702-052 handoff-0505. No physics claims changed.
-- Current route family: post v15 p1 t01 registry audit passed handoff to p2 no physics claim change.
-- Next recommended action: Run one bounded v15 P2 selected narrow source-side matter-semantics equivalence theorem packet under explicit certificates unless newer tracked state supersedes this route.
+- Active task path: `research_control/tasks/RT-20260702-057/00_TASK.yaml`.
+- Active task objective: Create the exact bounded theorem setup and source-side object/certificate manifest for the v15 narrow source-side matter-semantics equivalence theorem under explicit certificates without attempting proof, adoption, or downstream promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0510.yaml`.
+- Latest handoff summary: RT-20260702-057 completed one bounded Ontology Formalizer packet for v15 P2-T01/P2-T02. It created the NarrowMSCertEq_v1 theorem setup and the source-side matter-semantics object/certificate manifest. No theorem proof, adoption, or downstream physics promotion occurred.
+- Current route family: post v15 p2 t01 t02 manifest completed handoff to p2 t03 no adoption.
+- Next recommended action: Run one bounded v15 P2-T03 ontology-formalizer theorem attempt for NarrowMSCertEq_v1 under the RT-20260702-057 manifest, producing either a conditional/scoped source-side equivalence theorem candidate or a precise certificate-gap/countermodel obstruction.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P2 selected narrow source-side matter-semantics equivalence theorem packet under explicit certificates unless newer tracked state supersedes this route.
+Run one bounded v15 P2-T03 ontology-formalizer theorem attempt for NarrowMSCertEq_v1 under the RT-20260702-057 manifest, producing either a conditional/scoped source-side equivalence theorem candidate or a precise certificate-gap/countermodel obstruction.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,27 +223,27 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-056`;
-- latest handoff: `handoff-0509`;
-- current status: `post_v15_p1_t01_registry_audit_passed_next_p2_theorem_no_physics_delta`;
+- active task: `RT-20260702-057`;
+- latest handoff: `handoff-0510`;
+- current status: `post_v15_p2_t01_t02_manifest_completed_next_p2_t03_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0509.yaml`
-- `research_control/tasks/RT-20260702-056/00_TASK.yaml`
+- `research_control/handoffs/handoff-0510.yaml`
+- `research_control/tasks/RT-20260702-057/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -259,7 +259,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0509*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0510*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

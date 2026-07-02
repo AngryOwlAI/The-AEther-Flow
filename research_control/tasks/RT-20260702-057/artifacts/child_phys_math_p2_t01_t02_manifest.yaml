@@ -1,0 +1,15 @@
+artifact_id: "child_phys_math_p2_t01_t02_manifest"
+task_id: "RT-20260702-057"
+job_id: "AJ-RT-20260702-057-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+summary: "Formal source-side setup for NarrowMSCertEq_v1."
+contributions:
+  - "Defines the theorem target NarrowMSCertEq_v1 as a certificate-indexed source-side equivalence problem."
+  - "Separates MatterSemanticsObject_src, MatterSemanticsRecord_src, MatterSemanticsBridge_src, and RR_EDeclaredObject vocabulary from target-space imports."
+  - "Requires explicit source transport, invariance, factorization, no-target-import, declared-object, and fail-closed certificates before any later proof step."
+limitations:
+  - "No P2-T03 theorem proof is attempted in this packet."
+  - "No certificate witness is treated as supplied unless a later P2-T03 packet explicitly states and checks it."
+claim_boundary: "draft/control setup only; no adoption, matter-coupling derivation, Einstein-equation result, benchmark promotion, or completed derivation"

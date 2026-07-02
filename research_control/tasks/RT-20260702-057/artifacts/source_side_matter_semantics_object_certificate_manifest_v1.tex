@@ -1,0 +1,269 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MSObj}{\mathrm{MatterSemanticsObject}_{\mathrm{src}}}
+\newcommand{\MSRec}{\mathrm{MatterSemanticsRecord}_{\mathrm{src}}}
+\newcommand{\MSBridgeSrc}{\mathrm{MatterSemanticsBridge}_{\mathrm{src}}}
+\newcommand{\RREObj}{\mathrm{RR}_{E}^{\mathrm{decl}}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\CInv}{C_{\mathrm{invariance}}^{\mathrm{src}}}
+\newcommand{\CFact}{C_{\mathrm{factorization}}^{\mathrm{src}}}
+\newcommand{\CNTI}{C_{\mathrm{no\text{-}target}}^{\mathrm{src}}}
+\newcommand{\CEq}{C_{\mathrm{EqMS}}^{\mathrm{src}}}
+\newcommand{\EqMS}{\mathrm{EqMS}_{\mathrm{src}}^{\mathrm{cert}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\PositiveMSProfile}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\LawRR}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\MSStable}{\mathrm{MSStableMatterSemanticsBridge}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{obligation}{Obligation}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-Conclusion}
+
+\title{Source-Side Matter-Semantics Object And Certificate Manifest v1}
+\author{Ontology Formalizer Packet RT-20260702-057}
+\date{2026-07-02}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements the v15 P2-T02 source-side object and certificate
+manifest for the later narrow theorem candidate
+\[
+  \mathrm{NarrowMSCertEq}_{v1}.
+\]
+It is a draft/control science artifact. It defines objects, certificate
+classes, fail-closed branches, dependencies, and forbidden imports for a later
+P2-T03 theorem attempt. It does not prove the theorem and does not promote any
+physics claim.
+
+The manifest does not edit canonical ontology TeX. It does not adopt
+\(\LawRR\), \(\PositiveMSProfile\), \(\SMSAR\), \(\MSStable\), MCPA evidence,
+source-coupling-law candidate evidence, a source law, source-extension data
+beyond exact scoped Gate Chair results, \(\MetricData(E)\), scoped \(\geff\),
+matter semantics, detector semantics, a coupling law, matter coupling,
+stress-energy semantics, stress-energy tensor, matter action, Einstein
+equations, benchmark status, or completed derivation.
+
+\section{Object Definitions}
+
+\begin{definition}[Source-side matter-semantics object]
+A \(\MSObj\) over a source episode \(E\) is a task-local tuple
+\[
+  A_{\mathrm{src}} =
+  (D_A,\Lambda_A,\rho_A,\Gamma_A,\mathcal C_A,\mathcal F_A)
+\]
+where \(D_A\) is a declared source-side domain, \(\Lambda_A\) is a
+source-label family, \(\rho_A\) is a source readout or response-token family,
+\(\Gamma_A\) is a declared source guard family, \(\mathcal C_A\) is an
+explicit certificate set, and \(\mathcal F_A\) is a fail-closed branch map.
+The tuple is source-side only. Its components are not detector semantics,
+stress-energy semantics, a matter action, or a coupling law.
+\end{definition}
+
+\begin{definition}[Source-side matter-semantics record]
+A \(\MSRec\) is an indexed record
+\[
+  r=(E,i,\ell_i,\rho_i,\gamma_i,\mathcal C_i)
+\]
+inside a \(\MSObj\), where \(i\) is a declared source index, \(\ell_i\) is a
+source label, \(\rho_i\) is a source readout or response token, \(\gamma_i\)
+is a guard, and \(\mathcal C_i\) is the explicit certificate bundle attached
+to that record. If the bundle is absent, malformed, target-importing, or
+object-mismatched, the record maps to \(\Bottom\) for equivalence purposes.
+\end{definition}
+
+\begin{definition}[Source-side matter-semantics bridge]
+A \(\MSBridgeSrc(A_{\mathrm{src}},B_{\mathrm{src}})\) is a declared
+source-side relation candidate between two \(\MSObj\) instances. It contains
+only source-domain, source-label, source-readout, response-token, guard, and
+certificate data. It may cite scoped evidence/preconditions such as
+\(\MSStable\), \(\SMSAR\), and \(\PositiveMSProfile\) only within their
+tracked scoped-evidence status.
+\end{definition}
+
+\begin{definition}[Declared \(RR_E\) object]
+A \(\RREObj(F)\) is an \(RR_E\) record explicitly indexed by a declared source
+object \(F\). Two such records may be identified only when an explicit
+source-transport, source-invariance, or source-factorization certificate is
+present for the same declared object and passes the no-target-import guard.
+Otherwise \(RR_E\) separation is preserved.
+\end{definition}
+
+\section{Certificate Definitions}
+
+\begin{definition}[Source transport certificate]
+A source transport certificate \(\CTr(A,B)\) is an explicit source-side
+witness that transports the declared source labels, guards, and record indices
+of \(A_{\mathrm{src}}\) into those of \(B_{\mathrm{src}}\). It may not use
+target topology, target atlas, target metric, detector semantics, benchmark
+success, registry status, validator status, role identity, handoff status, or
+commit state as a premise.
+\end{definition}
+
+\begin{definition}[Source invariance certificate]
+A source invariance certificate \(\CInv(A,B)\) is an explicit source-side
+witness that the relevant labels, guards, and response-token relations remain
+invariant under a declared source relabeling or admissible source variation.
+It is not an empirical invariance claim and not a target metric claim.
+\end{definition}
+
+\begin{definition}[Source factorization certificate]
+A source factorization certificate \(\CFact(A,B;F)\) is an explicit
+source-side witness that the proposed equivalence factors through a declared
+source object \(F\) and preserves the object-indexed \(\RREObj(F)\) boundary.
+If the factorization object changes, is absent, or imports target structure,
+the certificate is malformed.
+\end{definition}
+
+\begin{definition}[No-target-import certificate]
+A no-target-import certificate \(\CNTI\) is a negative guard showing that the
+candidate construction does not use target topology, target smooth atlas,
+target Lorentzian metric, proper time, empirical detector semantics,
+benchmark behavior, generated derivatives, registry metadata, validators,
+roles, handoffs, approvals, local caches, file order, or commit state as
+mathematical premises. It supplies hygiene only; it does not supply positive
+matter semantics.
+\end{definition}
+
+\begin{definition}[Certificate-indexed source equivalence]
+For declared source objects \(A_{\mathrm{src}}\) and \(B_{\mathrm{src}}\),
+\[
+  A_{\mathrm{src}} \EqMS B_{\mathrm{src}}
+\]
+means that at least one of \(\CTr(A,B)\), \(\CInv(A,B)\), or
+\(\CFact(A,B;F)\) exists, \(\CNTI\) passes, declared-object indexing is
+consistent, and all fail-closed branches remain inactive. The relation is
+source-side and certificate-indexed. It is not detector equivalence, physical
+matter equivalence, stress-energy equivalence, matter-action equivalence,
+coupling-law equivalence, empirical equivalence, or benchmark equivalence.
+\end{definition}
+
+\section{Fail-Closed Branches}
+
+\begin{longtable}{p{0.25\linewidth}p{0.58\linewidth}}
+\toprule
+Branch & Required result \\
+\midrule
+Missing certificate & \(\EqMS\) is not derived; preserve \(RR_E\) separation
+or name a certificate-gap obstruction. \\
+Malformed certificate & \(\EqMS\) is not derived; identify the malformed
+certificate class. \\
+Declared-object mismatch & \(\EqMS\) is not derived; preserve
+object-indexed \(RR_E\) separation. \\
+Target import & \(\EqMS\) is not derived; route to smuggling audit or a
+target-import obstruction. \\
+Detector-semantics import & \(\EqMS\) is not derived; detector semantics
+remain blocked. \\
+Benchmark behavior import & \(\EqMS\) is not derived; benchmark promotion
+remains blocked. \\
+Process-authority dependence & \(\EqMS\) is not derived; validators,
+registries, roles, handoffs, approvals, file order, local caches, and commits
+remain non-proof surfaces. \\
+Scoped evidence as adoption & \(\EqMS\) is not derived from the overread;
+the source object remains scoped evidence/precondition only. \\
+\bottomrule
+\end{longtable}
+
+\section{Canonical Map To Existing Project Objects}
+
+\begin{longtable}{p{0.24\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+\toprule
+Task-local name & Existing project object & Permitted relation \\
+\midrule
+\(\MSBridgeSrc\) & \(\MSStable\) & May cite only as scoped stable
+matter-semantics bridge evidence/precondition. \\
+\(\MSObj\) positive profile data & \(\PositiveMSProfile\) & May cite only as
+scoped positive source-matter-semantics profile evidence/precondition. \\
+\(\MSObj\) readiness labels & \(\SMSAR\) & May cite only as scoped
+matter-semantics adoption-readiness evidence/precondition; not adopted law. \\
+\(\RREObj\), \(\CTr\), \(\CInv\), \(\CFact\) & \(\LawRR\) & May cite only
+as scoped certificate-indexed \(RR_E\) transport/invariance
+evidence/precondition; not source law. \\
+Pre-coupling support & MCPA scoped evidence/precondition & May cite only as
+matter-coupling precondition evidence; not universal coupling. \\
+Coupling-law candidate context & SourceCouplingLawCandidate & May cite only
+as scoped coupling-law-candidate evidence/precondition; not coupling law. \\
+\(\CNTI\) & No-target-import guard map & Hygiene guard only; not positive
+semantics or proof authority. \\
+\bottomrule
+\end{longtable}
+
+\section{Obligations For P2-T03}
+
+\begin{obligation}[Explicit certificate premise]
+The P2-T03 theorem attempt must state every certificate used. Scoped evidence
+status is not by itself a certificate.
+\end{obligation}
+
+\begin{obligation}[RR\_E separation]
+The theorem attempt must preserve \(RR_E\) separation unless a declared
+object-indexed \(\CTr\), \(\CInv\), or \(\CFact\) certificate supplies the
+exact identification within source scope.
+\end{obligation}
+
+\begin{obligation}[No detector or target import]
+The theorem attempt must reject any route that uses detector semantics, target
+metric, stress-energy semantics, matter action, benchmark behavior, or process
+authority as a source premise.
+\end{obligation}
+
+\begin{obligation}[Status discipline]
+The only positive P2-T03 status allowed by this manifest is
+\texttt{conditional\_or\_scoped\_source\_side\_equivalence\_theorem\_candidate}.
+Negative statuses must name the certificate gap, countermodel, current-premise
+failure, or route-freeze candidate.
+\end{obligation}
+
+\section{Non-Conclusion Table}
+
+\begin{longtable}{p{0.34\linewidth}p{0.48\linewidth}}
+\toprule
+Claim & Status after this manifest \\
+\midrule
+Source-law adoption & Not authorized. \\
+\(\LawRR\) adoption & Not authorized. \\
+Unrestricted \(RR_E\) irrelevance theorem & Not proved. \\
+\(\PositiveMSProfile\) adoption & Not authorized. \\
+\(\SMSAR\) adoption as law & Not authorized. \\
+Matter-semantics adoption & Not authorized. \\
+Detector-semantics adoption & Not authorized. \\
+Coupling-law adoption & Not authorized. \\
+Matter-coupling derivation or adoption & Not derived and not adopted. \\
+Stress-energy semantics or tensor & Not imported and not constructed. \\
+Matter action & Not imported. \\
+\(\MetricData(E)\) or \(\geff\) scope expansion & Not authorized. \\
+Einstein equations & Not derived. \\
+Benchmark promotion or closure & Not authorized. \\
+Completed derivation & Not claimed. \\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR Effect}
+
+This manifest adds a draft/control definition and certificate vocabulary for
+the `matter_coupling` milestone. It does not change the
+`registries/DISTANCE_TO_GR_LEDGER.csv` status for `matter_coupling`.
+The next possible scientific delta is P2-T03: either a conditional/scoped
+source-side equivalence theorem candidate or a precise obstruction.
+
+\section{Boundary Conclusion}
+
+The manifest is precise enough for a theorem statement: it names the allowed
+source-side objects, records, bridges, declared \(RR_E\) objects, certificate
+classes, no-target-import guard, fail-closed branches, and status discipline.
+It remains draft/control and non-promotional.
+
+\end{document}

@@ -319,6 +319,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V13-P5-T02-RR-E-IRRELEVANCE-THEOREM-ATTEMPT-OR-OBSTRUCTION` `research_control/tasks/RT-20260701-023/artifacts/rr_e_irrelevance_theorem_attempt_or_obstruction_v1.tex`
 - `TEX-V13-P5-T03-RR-E-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260701-024/artifacts/rr_e_theorem_smuggling_audit_v1.tex`
 - `TEX-V13-P5-T04-RR-E-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex`
+- `TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST` `research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex`
 
 ## superseded
 
