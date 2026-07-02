@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-02T21:05:52Z`
-- Source fingerprint: `311c0fee86692b181b57f9bfd822f251abbe7263e6208d03e40adb9917713730`
-- Nodes: `11197`
-- Edges: `46502`
+- Generated from tracked state as of: `2026-07-02T21:28:54Z`
+- Source fingerprint: `2fa64c04cebeb93a1811ddcb7f21a134532813473413238fdfb554b7df27c4b1`
+- Nodes: `11232`
+- Edges: `46589`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 649 |
+| `completion_yaml` | 650 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 513 |
+| `handoff_yaml` | 514 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 649 |
+| `agent_job` | `support_only` | 650 |
 | `artifact` | `canonical_source` | 79 |
-| `artifact` | `support_only` | 5943 |
-| `blocked_burden` | `blocked` | 1355 |
-| `claim_boundary` | `support_only` | 606 |
-| `draft_control_candidate` | `draft_control` | 465 |
+| `artifact` | `support_only` | 5957 |
+| `blocked_burden` | `blocked` | 1368 |
+| `claim_boundary` | `support_only` | 607 |
+| `draft_control_candidate` | `draft_control` | 467 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 41 |
 | `frozen_negative` | `frozen_negative` | 98 |
 | `gate_chair_verdict` | `human_gated` | 30 |
-| `handoff` | `support_only` | 513 |
-| `human_gated_object` | `human_gated` | 266 |
+| `handoff` | `support_only` | 514 |
+| `human_gated_object` | `human_gated` | 267 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -52,13 +52,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 63 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 26 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 27 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 258 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 26 |
-| `task` | `support_only` | 594 |
+| `task` | `support_only` | 595 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260702-060`
-- Latest handoff: `handoff-0513`
-- Handoff path: `research_control/handoffs/handoff-0513.yaml`
-- Next action: Run one bounded v15 P2-T06 post-theorem selector packet before any Gate Chair review, adoption, repair, freeze, or downstream promotion.
+- Active task: `RT-20260702-061`
+- Latest handoff: `handoff-0514`
+- Handoff path: `research_control/handoffs/handoff-0514.yaml`
+- Next action: Run one bounded Gate Chair scoped evidence-status review packet, under the current user authorization, to decide only whether NarrowMSCertEq_v1 may be accepted as scoped source-extension evidence-status for its declared source-side conditional theorem role.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

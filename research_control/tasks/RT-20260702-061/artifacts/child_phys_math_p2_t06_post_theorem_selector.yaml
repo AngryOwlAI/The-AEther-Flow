@@ -1,0 +1,33 @@
+artifact_id: "child_phys_math_p2_t06_post_theorem_selector"
+task_id: "RT-20260702-061"
+job_id: "AJ-RT-20260702-061-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-07-02T21:28:54Z"
+input_chain:
+  manifest: "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+  theorem: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  audit: "research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex"
+  stress: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+formal_findings:
+  theorem_status: "conditional_source_side_theorem_under_explicit_certificates"
+  audit_status: "source_pure_as_written_pending_refuter_stress"
+  stress_status: "conditional_theorem_survives_with_certificate_gap_witness_no_adoption"
+  minimal_countermodel_id: "MC-NARROW-MS-CERT-EQ-CERT-GAP-001"
+  repair_premise_identified: false
+  route_freeze_triggered: false
+  repeated_burden_without_new_payload: false
+route_matrix:
+  selected_candidate_route_id: 1
+  selected_route: "Gate Chair scoped evidence-status review"
+  selected_next_packet_type: "source_extension_human_gate"
+  selected_next_role_family: "gate-chair@0.1.0"
+  reason: "The theorem survived audit and stress as a conditional source-side theorem under explicit certificates. No named failed premise or freeze condition supersedes the protected evidence-status review route."
+forbidden_overreads:
+  - "conditional theorem as source-law adoption"
+  - "certificate-gap witness as theorem rejection"
+  - "selector route as Gate Chair verdict"
+  - "evidence-status review as matter coupling"
+  - "validator success as physics proof"
+conclusion: "The mathematically narrow next route is one protected scoped evidence-status review. Certificate algebra generalization remains a possible later ordinary continuation but is not selected by P2-T06."
