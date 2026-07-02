@@ -47,6 +47,24 @@ the project is built to make explicit: either a valid source-side derivation
 path is constructed, or reproducible scoped obstructions are preserved without
 being inflated into claims they do not support.
 
+## Current Status-Layer Boundary
+
+The current public status table source spec is
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
+It supplies reader-facing status-layer wording for public documentation while
+remaining downstream of the Distance-to-GR ledger, registered science sources,
+task evidence, and claim-boundary records.
+
+Current public wording must preserve these layers:
+
+| Object or burden | Public-safe reading | Blocked overread |
+| --- | --- | --- |
+| GR derivation | Not derived from source substrate in the tracked state. | No completed derivation, benchmark promotion, or Einstein-equation derivation follows from public documentation. |
+| `M_src` | Scoped source-only status. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
+| `g_eff` | Scoped source-extension object status. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
+| Matter coupling | Scoped evidence/preconditions exist, but matter coupling is not derived or adopted. | No coupling-law adoption, matter semantics, detector semantics, stress-energy semantics, stress-energy tensor, or matter action. |
+| `RR_ETransportCompletenessOrInvarianceLaw_v1` | Certificate-indexed evidence/precondition only. | Not adopted as a source law and not a positive matter theory. |
+
 ## Negative Results And Freeze Discipline
 
 No-go, obstruction, and freeze records are part of the physics program's

@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `project_front_door`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `90e0ea5050b1e54087c8188ba5b3e8761eb0899ba4f502c12ade3d87d03a0374`
+- Source hash: `ed0bdcbff090ffebd7a1ad45cedabb41c6ea9f9dacf2e91b342a002f564acb10`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-01T21:46:06Z`
+- Last validated at: `2026-07-02T01:10:48Z`

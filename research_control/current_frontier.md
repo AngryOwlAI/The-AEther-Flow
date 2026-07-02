@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-003` and `handoff-0456`.
+`RT-20260702-004` and `handoff-0457`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-003` |
-| Latest handoff ID | `handoff-0456` |
-| Current status | `v14_p5_t01_public_status_table_source_spec_completed_next_readme_github_status_update` |
+| Active task ID | `RT-20260702-004` |
+| Latest handoff ID | `handoff-0457` |
+| Current status | `v14_p5_t02_readme_github_status_update_completed_next_html_source_spec_update` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p5 t02 readme github facing status update |
-| Required next authority | Run one bounded v14 P5-T02 README and GitHub-facing status update packet before HTML source-spec updates public regeneration or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P5-T02 README and GitHub-facing status update packet before HTML source-spec updates public regeneration or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p5 t03 html explainer source spec update |
+| Required next authority | Run one bounded v14 P5-T03 HTML explainer source-spec update packet before generated public derivative regeneration public claim-language validation or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P5-T03 HTML explainer source-spec update packet before generated public derivative regeneration public claim-language validation or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-003/00_TASK.yaml`.
-- Active task objective: Create a canonical public status table source spec with required status-layer columns and high-risk rows before README GitHub-facing HTML public regeneration or downstream physics routes.
-- Latest handoff path: `research_control/handoffs/handoff-0456.yaml`.
-- Latest handoff summary: RT-20260702-003 completed one bounded v14 P5-T01 public status table source spec packet. It created and registered the canonical public status table source spec with required columns and high-risk rows and made no public propagation or physics claim changes.
+- Active task path: `research_control/tasks/RT-20260702-004/00_TASK.yaml`.
+- Active task objective: Update README and selected GitHub-facing Markdown surfaces to include or link to the public status table source spec while preserving all claim boundaries.
+- Latest handoff path: `research_control/handoffs/handoff-0457.yaml`.
+- Latest handoff summary: RT-20260702-004 completed one bounded v14 P5-T02 README and GitHub-facing status update packet. It updated README and selected GitHub-facing Markdown surfaces with current status-layer boundaries and public status table source-spec links while making no HTML source-spec generated-public or physics claim changes.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P5-T02 README and GitHub-facing status update packet before HTML source-spec updates public regeneration or downstream physics routes.
+- Next recommended action: Run one bounded v14 P5-T03 HTML explainer source-spec update packet before generated public derivative regeneration public claim-language validation or downstream physics routes.
 
 ## Matter-Coupling Boundary
 
@@ -164,7 +164,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P5-T02 README and GitHub-facing status update packet before HTML source-spec updates public regeneration or downstream physics routes.
+Run one bounded v14 P5-T03 HTML explainer source-spec update packet before generated public derivative regeneration public claim-language validation or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -188,13 +188,13 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>targeted memory search returned P4-T05 summary current-frontier and v14 plan<br>continue_research.py resolved handoff-0455 to one bounded P5-T01 packet |
-| `completion_internal` | PASS | receipt complete | public_status_table_source_spec.md includes all required P5-T01 columns<br>public_status_table_source_spec.md includes all required P5-T01 high-risk rows |
-| `post_write` | PASS | receipt complete | source-spec claim-language changed-file gate passed with zero hard failures |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>targeted memory search returned current-frontier and v14 plan<br>continue_research.py resolved handoff-0456 to one bounded P5-T02 packet |
+| `completion_internal` | PASS | receipt complete | README and selected GitHub-facing Markdown surfaces carry public status-layer boundaries<br>P5-T02 acceptance criteria are recorded in the receipt |
+| `post_write` | PASS | receipt complete | changed public surfaces claim-language gate passed with zero hard failures |
 | `post_checkpoint` | PASS | receipt complete | checkpoint command is recorded in the completion and must pass before this transaction is committed |
-| `renderer` | PASS | receipt complete | current_frontier.md regenerated from handoff-0456 |
+| `renderer` | PASS | receipt complete | current_frontier.md regenerated from handoff-0457 |
 | `memory_bootstrap` | PASS | receipt complete | bootstrap_memory_system.py and validate-only are required receipts for this packet |
-| `claim_language_linter` | PASS | receipt complete | changed-path claim-language linter is required and records no physics-promotion authority |
+| `claim_language_linter` | PASS | receipt complete | changed-path claim-language linter records no physics-promotion authority |
 
 Authorization layers:
 
@@ -212,9 +212,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-003`;
-- latest handoff: `handoff-0456`;
-- current status: `v14_p5_t01_public_status_table_source_spec_completed_next_readme_github_status_update`;
+- active task: `RT-20260702-004`;
+- latest handoff: `handoff-0457`;
+- current status: `v14_p5_t02_readme_github_status_update_completed_next_html_source_spec_update`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -224,8 +224,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0456.yaml`
-- `research_control/tasks/RT-20260702-003/00_TASK.yaml`
+- `research_control/handoffs/handoff-0457.yaml`
+- `research_control/tasks/RT-20260702-004/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -241,7 +241,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0456*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0457*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

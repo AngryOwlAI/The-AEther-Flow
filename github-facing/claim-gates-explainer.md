@@ -84,6 +84,28 @@ promotion language.
 Those examples are not new registry rules. They are reader-facing summaries of
 the existing boundary pattern.
 
+## Current Public Status Gate
+
+The status table source spec at
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md)
+is the public documentation contract for layered status wording. It does not
+create a Gate Chair verdict and it cannot override the ledger, registered
+science sources, or claim-boundary rows.
+
+Current public wording must preserve these gate distinctions:
+
+- GR is not derived from source substrate.
+- `M_src` is scoped source-only status, not a target manifold, metric, or
+  downstream GR result.
+- `g_eff` is scoped source-extension object status, not an unscoped Lorentzian
+  metric, matter-coupling result, or Einstein-equation result.
+- Matter coupling remains not derived and not adopted.
+- `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
+  certificate-indexed evidence/precondition, not an adopted source law.
+- No-target certificates do not provide positive matter theory, detector
+  semantics, stress-energy semantics, matter action, Einstein equations,
+  benchmark promotion, or completed derivation.
+
 ## Gate Chair And Human-Gated Decisions
 
 `registries/AGENT_ROLE_REGISTRY.csv` records `gate-chair@0.1.0` as a

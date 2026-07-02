@@ -33,6 +33,24 @@ The burden map keeps these stages separate. `source_ontology`, `EqSrc`,
 `einstein_equations`, and `benchmark_promotion` are not interchangeable
 labels. A pass in a documentation or control check is not physics evidence.
 
+## Current Status-Layer Boundary
+
+For public status wording, inspect
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
+That source spec records the current status-layer contract for high-risk rows.
+It is not a benchmark promotion, Gate Chair verdict, or science authority
+above the Distance-to-GR ledger and registered source evidence.
+
+The current boundary is exact: GR is not derived from the source substrate;
+`M_src` is scoped source-only status and not a target manifold or metric;
+`g_eff` is scoped source-extension object status and not an unscoped
+Lorentzian metric; matter coupling remains not derived and not adopted;
+`RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
+evidence/precondition and not an adopted source law; and no-target
+certificates do not provide positive matter theory, detector semantics,
+stress-energy semantics, matter action, Einstein equations, benchmark
+promotion, or completed derivation.
+
 ## Benchmark Authority Path
 
 Registered TeX carries physics and derivational claims. The TeX registry names
@@ -58,7 +76,8 @@ This page is forbidden to prove or imply:
 
 - a completed first-principles GR derivation;
 - benchmark promotion or Gate Chair approval;
-- derivation of universal matter coupling, Einstein equations, or `g_eff`;
+- derivation of universal matter coupling, Einstein equations, or unscoped
+  downstream `g_eff`;
 - empirical deviation from ordinary GR at the benchmark boundary;
 - generated HTML, PDFs, wiki notes, semantic extracts, or `.local` files as
   scientific authority; or

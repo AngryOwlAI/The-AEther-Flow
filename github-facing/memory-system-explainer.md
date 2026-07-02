@@ -6,6 +6,22 @@ The authority split remains strict. Registered TeX carries physics and derivatio
 
 The practical workflow is therefore two-stage. Use memory preflight to locate the likely source, then inspect the canonical source file and source registry row before routing, editing, citing, or summarizing. Freshness warnings are useful because they reveal retrieval drift; they do not override tracked files.
 
+## Current Public Status Lookup
+
+For current public status wording, memory lookup should route readers to
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md)
+and then to the ledger or cited evidence path for authority. The source spec
+is a documentation contract; it is not physics proof and it does not override
+tracked science or registry authority.
+
+The lookup boundary is explicit: GR is not derived; `M_src` is scoped
+source-only status; `g_eff` is scoped source-extension object status; matter
+coupling remains not derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
+is scoped certificate-indexed evidence/precondition, not an adopted source
+law; and no-target certificates do not provide positive matter theory,
+detector semantics, stress-energy semantics, matter action, Einstein
+equations, benchmark promotion, or completed derivation.
+
 ## Authority And Retrieval Layers
 
 | Item | Function | Boundary |

@@ -8,6 +8,21 @@ use of the roadmap is not to celebrate progress; it is to keep every burden,
 status term, source-extension qualifier, freeze label, and human gate attached
 to its proper evidential weight.
 
+## Current Status-Layer Boundary
+
+The current public status table source spec is
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
+Use it for public wording when this roadmap mentions high-risk rows. It is a
+documentation contract, not independent physics authority, and it remains
+downstream of the Distance-to-GR ledger and the cited task evidence.
+
+The key public-safe updates are: GR is not derived; `M_src` has scoped
+source-only status but is not a target manifold or metric; `g_eff` has scoped
+source-extension object status but is not an unscoped Lorentzian metric;
+matter coupling remains not derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
+is scoped certificate-indexed evidence/precondition, not an adopted source
+law; and no-target certificates do not provide positive matter theory.
+
 ## Milestone Ladder
 
 | Milestone | Required object | Current reading |
@@ -16,9 +31,9 @@ to its proper evidential weight.
 | `source_equivalence_eqsrc` | `EqSrc` plus related retention and generator burdens | Draft or blocked burdens remain under stress and freeze discipline. |
 | `source_localization_obsloc_lc` | `ObsLoc_lc` | A constructive local exact-branch witness exists, but robustness and exact-branch limits remain important. |
 | `response_localization_resp_lc` | `Resp_lc` | Accepted only through controlled source-extension data; old selector obstruction remains relevant. |
-| `source_manifold_m_src` | `M_src` | Draft object exists through `AtlasGlue_src^+` interface work, but full `M_src` remains unadopted. |
-| `effective_metric_g_eff` | `g_eff` | Not started. No source-to-metric law is supplied by this page. |
-| `matter_coupling` | universal coupling | Not started. Same-metric matter coupling remains open. |
+| `source_manifold_m_src` | `M_src` | Scoped source-only status exists; it is not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
+| `effective_metric_g_eff` | `g_eff` | Scoped source-extension object status exists; it is not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
+| `matter_coupling` | universal coupling | Scoped evidence/preconditions exist, but matter coupling remains not derived and not adopted. |
 | `einstein_equations` | field equations | Not started. No dynamics/action/variation theorem is supplied. |
 | `finite_toy_metric_response` | finite source-to-response toy model | A local explicit-tag route is frozen negative and cannot be inflated into full GR recovery. |
 | `benchmark_promotion` | exact-GR benchmark promotion | Human-gated and blocked until all upstream burdens are actually discharged. |
@@ -78,13 +93,20 @@ The current frontier has several terms that must not be flattened:
 - `Resp_lc` is accepted only through admissible source-extension data for the
   continuation path. The older selector obstruction for the prior source tuple
   remains part of the record.
-- `M_src` has a draft object/interface path through `AtlasGlue_src^+`, but
-  full `M_src` is unadopted and still needs audit, stress, and later
-  construction before downstream use.
+- `M_src` has scoped source-only status. It is not a target manifold, not a
+  metric, not matter coupling, not Einstein equations, not benchmark
+  promotion, and not completed derivation.
 - `AtlasGlue_src^+` is a source-only primitive interface draft. It is not a
   target manifold import, not a target topology import, and not a metric law.
-- `g_eff`, matter coupling, and Einstein equations remain not started in the
-  ledger and are not supplied by this page.
+- `g_eff` has scoped source-extension object status. It is not an unscoped
+  Lorentzian metric, not matter coupling, not Einstein equations, not
+  benchmark promotion, and not completed derivation.
+- Matter coupling remains not derived and not adopted. Current matter-sector
+  objects are scoped evidence/preconditions only.
+- `RR_ETransportCompletenessOrInvarianceLaw_v1` is certificate-indexed
+  evidence/precondition only; it is not adopted as a source law.
+- Einstein equations remain not started in the ledger and are not supplied by
+  this page.
 
 The safe summary is therefore precise: the project has advanced controlled
 source-side packets, but it has not completed the bridge from source
@@ -149,9 +171,9 @@ and human gates where the control system says a gate is required.
 ## Reader Scope
 
 Reader scope: roadmap explanation only. It does not update physics status,
-discharge a milestone, adopt `M_src`, derive `g_eff`, derive matter coupling,
-derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or
-supersede tracked source files.
+discharge a milestone, adopt `M_src` as a target manifold, derive an unscoped
+downstream `g_eff`, derive matter coupling, derive Einstein equations, promote
+a benchmark, issue a Gate Chair verdict, or supersede tracked source files.
 
 <!-- explainer-control: authority_footer -->
 
@@ -163,10 +185,10 @@ supersede tracked source files.
 - **Authority status:** generated noncanonical reader surface
 
 This page is a generated noncanonical reader surface. It explains the roadmap,
-but it does not update physics status, discharge a milestone, adopt `M_src`,
-derive `g_eff`, derive matter coupling, derive Einstein equations, promote a
-benchmark, issue a Gate Chair verdict, change source authority, or supersede
-tracked source files.
+but it does not update physics status, discharge a milestone, adopt `M_src` as
+a target manifold, derive an unscoped downstream `g_eff`, derive matter
+coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair
+verdict, change source authority, or supersede tracked source files.
 
 ## Safe And Unsafe Summaries
 
@@ -175,6 +197,6 @@ localization, response, manifold, metric, matter-coupling, equation, finite
 toy, and benchmark-promotion burdens while preserving draft/control and
 human-gated boundaries.
 
-Unsafe summary: AEther-Flow has derived GR, `M_src` or `g_eff` is adopted,
-validator passes are physics evidence, or a scoped freeze label proves the
-whole ontology false.
+Unsafe summary: AEther-Flow has derived GR, scoped `M_src` or scoped `g_eff`
+is a downstream GR result, validator passes are physics evidence, or a scoped
+freeze label proves the whole ontology false.

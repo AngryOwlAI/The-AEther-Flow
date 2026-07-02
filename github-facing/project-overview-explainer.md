@@ -51,6 +51,23 @@ from the publication brief and source spec.
 - Memory, wiki notes, semantic extracts, Obsidian mirrors, and `.local` caches
   are retrieval support only.
 
+## Current Status-Layer Boundary
+
+For current public wording, use the status table source spec at
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
+It is a documentation contract for public status layers, not physics proof and
+not a replacement for the Distance-to-GR ledger or registered science sources.
+
+The public-safe status is: GR is not derived from the source substrate;
+`M_src` is scoped source-only status, not a target manifold or metric;
+`g_eff` is scoped source-extension object status, not an unscoped Lorentzian
+metric or matter-coupling result; matter coupling remains not derived and not
+adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
+certificate-indexed evidence/precondition, not an adopted source law; and
+no-target certificates do not provide positive matter theory, detector
+semantics, stress-energy semantics, matter action, Einstein equations,
+benchmark promotion, or completed derivation.
+
 ## Practical Reading Path
 
 1. Read `README.md` for project identity and the two mission lanes.

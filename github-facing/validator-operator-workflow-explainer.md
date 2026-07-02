@@ -6,6 +6,23 @@ AEther-Flow therefore groups checks by change type. Memory and registry refresh 
 
 The final interpretation is bounded. PASS means the named deterministic check accepted the current state. It does not certify scientific truth, ontology adoption, benchmark promotion, completed derivation, sidecar adoption, editorial taste, or generated-output authority.
 
+## Public Status Check Boundary
+
+For public status wording, the current source is
+[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
+Operator checks can verify that public surfaces preserve that wording, but a
+PASS result still does not promote physics claims or change source authority.
+
+The minimum public status assertions are: GR is not derived; `M_src` is scoped
+source-only status, not a target manifold or metric; `g_eff` is scoped
+source-extension object status, not an unscoped Lorentzian metric or
+matter-coupling result; matter coupling remains not derived and not adopted;
+`RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
+evidence/precondition, not an adopted source law; and no-target certificates do
+not provide positive matter theory, detector semantics, stress-energy
+semantics, matter action, Einstein equations, benchmark promotion, or
+completed derivation.
+
 ## Command Decision Matrix
 
 | Item | Function | Boundary |

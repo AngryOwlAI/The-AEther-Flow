@@ -90,6 +90,34 @@ The project’s ontology lane treats `Æther` as a proposed four-dimensional sub
 
 The scoped benchmark boundary is conservative: observable-scale physics remains ordinary GR. The open burden is to show, without importing the target metric by hand, how effective Lorentzian geometry, causal structure, clock behavior, matter coupling, and invariance properties could arise from source-defined substrate data. Registered `.tex` sources and claim-boundary registries carry scientific authority; this README only summarizes that state for humans.
 
+## Current Public Status Boundary
+
+The public status table source spec is
+[`research_control/design/public_status_table_source_spec.md`](research_control/design/public_status_table_source_spec.md).
+It is the current public documentation contract for status-layer wording. It
+does not promote physics claims and it does not override the Distance-to-GR
+ledger, registered science sources, task completions, Gate Chair records, or
+claim-boundary registry rows.
+
+Current public-safe reading:
+
+- GR has not been derived from the source substrate in the tracked project
+  state.
+- `M_src` has scoped source-only status; it is not a target manifold, metric,
+  matter-coupling result, Einstein-equation result, benchmark promotion, or
+  completed derivation.
+- `g_eff` has scoped source-extension object status; it is not an unscoped
+  Lorentzian metric, matter-coupling result, Einstein-equation result,
+  benchmark promotion, or completed derivation.
+- Matter coupling remains not derived and not adopted. Current matter-sector
+  objects, including `PositiveMSProfile_v1` and
+  `RR_ETransportCompletenessOrInvarianceLaw_v1`, are scoped
+  evidence/preconditions only; `RR_ETransportCompletenessOrInvarianceLaw_v1`
+  is not an adopted source law.
+- No-target certificates or certificate-indexed evidence do not provide
+  positive matter theory, detector semantics, stress-energy semantics, matter
+  action, Einstein equations, benchmark promotion, or completed derivation.
+
 <p align="left">
    Watch the Æther-Flow Ontology Video:</br>
   <a href="https://www.youtube.com/watch?v=psbk97rd9T8">
