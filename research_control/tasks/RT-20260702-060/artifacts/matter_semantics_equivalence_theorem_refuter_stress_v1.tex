@@ -1,0 +1,328 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\EqMScert}{\mathrm{EqMS}^{\mathrm{cert}}_{\mathrm{src}}}
+\newcommand{\Asrc}{A_{\mathrm{src}}}
+\newcommand{\Bsrc}{B_{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\StressVerdict}{\mathsf{conditional\_theorem\_survives\_with\_certificate\_gap\_witness\_no\_adoption}}
+\newcommand{\RefuterCategory}{\mathsf{concrete\_witness\_path}}
+\newcommand{\WitnessId}{\mathrm{MC}\text{-}\mathrm{NARROW}\text{-}\mathrm{MS}\text{-}\mathrm{CERT}\text{-}\mathrm{EQ}\text{-}\mathrm{CERT}\text{-}\mathrm{GAP}\text{-}001}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Matter-Semantics Equivalence Theorem Refuter Stress v1}
+\author{Refuter Packet RT-20260702-060}
+\date{2026-07-02}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact is the fused Refuter output for \texttt{RT-20260702-060},
+implementing v15 \texttt{P2-T05}. It stress-tests the P2-T03
+\texttt{NarrowMSCertEq\_v1} theorem candidate after the P2-T04 smuggling
+audit. The stress verdict is
+\[
+  \StressVerdict .
+\]
+The Refuter loop-control category is
+\[
+  \RefuterCategory .
+\]
+
+This packet does not edit canonical ontology, adopt a source law, adopt
+\(\RRE\) transport completeness or invariance, prove an unrestricted
+\(\RRE\) theorem, adopt PositiveMSProfile\(_{v1}\), adopt
+SourceMatterSemanticsAdoptionReadinessLaw\(_{v1}\) as law, adopt matter
+semantics, adopt detector semantics, adopt a coupling law, derive or adopt
+matter coupling, import stress-energy semantics, construct a stress-energy
+tensor, import a matter action, adopt \(\MetricData(E)\), change \(\geff\)
+scope, derive Einstein equations, promote benchmark status, claim completed
+derivation, claim future source-extension impossibility, or issue a
+program-wide no-go conclusion.
+
+\begin{verbatim}
+stress_verdict: "conditional_theorem_survives_with_certificate_gap_witness_no_adoption"
+refuter_decision_category: "concrete_witness_path"
+minimal_countermodel_id: "MC-NARROW-MS-CERT-EQ-CERT-GAP-001"
+source_law_adopted: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+matter_coupling_derived: false
+MetricData_E_adopted: false
+g_eff_scope_changed: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+next_route: "bounded_v15_p2_t06_post_theorem_selector"
+\end{verbatim}
+
+\section{Stressed Object}
+
+The stressed object is the audited theorem package consisting of:
+
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+  \item the P2-T01/P2-T02 source-side object and certificate manifest;
+  \item the P2-T03 conditional theorem candidate
+  \texttt{NarrowMSCertEq\_v1};
+  \item the P2-T04 smuggling audit verdict
+  \texttt{source\_pure\_as\_written\_pending\_refuter\_stress}.
+\end{enumerate}
+
+The theorem is read narrowly: \(\Asrc \EqMScert \Bsrc\) is authorized only when
+the specified source certificates are explicit, well-formed, and attached to
+the declared source objects. Scoped evidence, audit success, validation
+success, generated derivatives, human authorization, or file/registry state do
+not substitute for such certificates.
+
+\section{Stress Verdict}
+
+\begin{theorem}[Fail-closed certificate stress theorem]
+Let \(\Asrc\) and \(\Bsrc\) be declared finite/local source-side
+matter-semantics objects in the P2 theorem domain. Under the P2-T05 stress
+family, every branch has one of the following outcomes:
+\[
+  \Asrc \EqMScert \Bsrc
+  \quad \text{under explicit valid source certificates,}
+\]
+\[
+  \WitnessId
+  \quad \text{when a required certificate is removed, malformed, or mismatched,}
+\]
+or a blocked overread when the branch uses target metric, detector semantics,
+\(\RRE\) collapse, benchmark behavior, process authority, scoped evidence, or
+source-extension status as equivalence authority. No branch yields source-law
+adoption, matter-semantics adoption, detector-semantics adoption, matter
+coupling, stress-energy semantics, matter action, Einstein equations,
+benchmark promotion, completed derivation, or program-wide no-go authority.
+\end{theorem}
+
+\begin{proof}
+The P2-T03 theorem is conditional. Its positive conclusion depends on explicit
+source transport, source invariance, source factorization, and no-target
+guard certificates. If those certificates are present and well formed, the
+Refuter stress does not produce a contradiction in the theorem as written.
+If one of the required certificates is removed, malformed, or attached to the
+wrong source object, the smallest failed premise is the explicit valid
+source-certificate premise. The equivalence claim then has no lawful source
+authority and fails closed. Branches that replace the missing certificate by a
+target metric, detector semantics, \(\RRE\) collapse, benchmark behavior,
+generated output, registry state, validation state, approval state, or
+source-extension status are outside the theorem language and therefore
+blocked rather than promoted. Thus the conditional theorem survives while
+unconditional or adoption-style readings fail by a finite/local witness.
+\end{proof}
+
+\section{Stress Case Table}
+
+\begin{longtable}{p{0.28\linewidth}p{0.21\linewidth}p{0.40\linewidth}}
+\toprule
+Stress target & Result & Refuter finding \\
+\midrule
+Certificate deletion &
+Fails closed &
+Deleting source transport, invariance, or factorization removes the positive
+premise. The output is \(\WitnessId\), not theorem contradiction or adoption. \\
+Certificate malformation &
+Fails closed &
+A certificate with mismatched domain, codomain, object identity, or relation
+scope is not a valid certificate for \(\Asrc,\Bsrc\). \\
+Source-transport mismatch &
+Fails closed &
+Transport for a different source pair cannot witness \(\Asrc \EqMScert \Bsrc\). \\
+Source-invariance mismatch &
+Fails closed &
+Invariance of an unrelated readout or unrelated relation does not establish
+the required matter-semantics invariance. \\
+Source-factorization failure &
+Fails closed &
+If the declared matter-semantics comparison does not factor through the
+certified source quotient, equivalence is not established. \\
+\(\RRE\) separation violation &
+Blocked without explicit certificate &
+\(\RRE\) separation cannot be collapsed by assertion. Any collapse must arrive
+through an explicit source certificate still respecting P2 boundaries. \\
+Detector-semantics collapse attempt &
+Blocked &
+Detector protocol, measurement semantics, empirical calibration, and observed
+response are not source certificates in this theorem. \\
+Target metric import attempt &
+Blocked &
+Target metric, proper time, Lorentzian signature, \(\MetricData(E)\), and
+\(\geff\) are not premises of \(\EqMScert\). \\
+No-target certificate misuse &
+Blocked &
+A no-target import guard is negative hygiene. It is not by itself a positive
+transport, invariance, or factorization certificate. \\
+Finite/local-to-global overread &
+Blocked &
+The witness and theorem are finite/local and packet-scoped. They do not prove
+a global matter-semantics law. \\
+Scoped evidence as adoption overread &
+Blocked &
+Scoped evidence, audit pass, or selector readiness is not adoption. \\
+Source-extension as derivation overread &
+Blocked &
+Source-extension material remains proposal/draft/control unless separately
+reviewed and adopted through protected gates. \\
+\bottomrule
+\end{longtable}
+
+\section{Minimal Countermodel Obligation}
+
+The required minimal countermodel section is:
+
+\begin{verbatim}
+minimal_countermodel_id: "MC-NARROW-MS-CERT-EQ-CERT-GAP-001"
+objects_in_countermodel:
+  - "finite/local source object A_src"
+  - "finite/local source object B_src"
+  - "shared declared source context E"
+  - "no valid SourceTransportCertificate between A_src and B_src"
+  - "no valid SourceInvarianceCertificate between A_src and B_src"
+  - "no valid SourceFactorizationCertificate for the relevant comparison"
+certificate_removed_or_malformed:
+  "All positive source certificates are absent in deletion branch.
+   In malformation branch the certificate domain or codomain mismatches."
+equivalence_claim_that_fails: "A_src EqMS_src^cert B_src"
+smallest_failed_premise: "explicit valid source-certificate premise"
+whether_failure_is_finite_local_global_categorical_or_status_boundary:
+  "finite/local and status-boundary; not a global no-go"
+repair_or_freeze_consequence:
+  "supply valid explicit source certificates or route to P2-T06 selector;
+   no freeze follows from this packet"
+\end{verbatim}
+
+This is a countermodel to an unconditional or overread equivalence claim. It is
+not a countermodel to the theorem as stated because the theorem is conditional
+on valid explicit certificates.
+
+\section{Pressure Lemmas}
+
+\begin{lemma}[Certificate deletion guard]
+If a proof of \(\Asrc \EqMScert \Bsrc\) depends on an explicit source
+transport, source invariance, or source factorization certificate, then
+deleting that certificate invalidates the proof branch. The result is the
+certificate-gap witness, not detector semantics or target geometry.
+\end{lemma}
+
+\begin{proof}
+The positive branch has no certificate-free premise. Removing the named
+certificate leaves no source-side witness from which equivalence can be
+derived.
+\end{proof}
+
+\begin{lemma}[Malformed-certificate guard]
+If a supplied certificate has the wrong object endpoints, wrong domain,
+wrong codomain, wrong relation, or wrong factorization target, then it is not
+a certificate for \(\Asrc,\Bsrc\). The equivalence claim therefore fails
+closed.
+\end{lemma}
+
+\begin{proof}
+Certificate validity is object-indexed in the P2 manifest and theorem. A
+certificate for another pair or another comparison cannot discharge the
+premise for this pair.
+\end{proof}
+
+\begin{lemma}[No detector or target repair]
+A detector semantics, target metric, proper-time structure, benchmark fit,
+\(\MetricData(E)\), \(\geff\), matter action, stress-energy tensor, or
+Einstein-equation premise cannot repair the certificate gap unless a separate
+source-side certificate is first constructed without that import.
+\end{lemma}
+
+\begin{proof}
+The P2-T04 audit found the theorem source-pure as written precisely because it
+does not use those target or empirical objects. Introducing them as repair
+premises changes the theorem language and violates the no-target boundary.
+\end{proof}
+
+\section{Refuter Classification}
+
+\begin{longtable}{p{0.34\linewidth}p{0.54\linewidth}}
+\toprule
+Required classification & Status \\
+\midrule
+\texttt{refuter\_decision\_category} &
+\texttt{concrete\_witness\_path}. \\
+\texttt{stress\_verdict} &
+\texttt{conditional\_theorem\_survives\_with\_certificate\_gap\_witness\_no\_adoption}. \\
+\texttt{minimal\_countermodel} &
+\texttt{MC-NARROW-MS-CERT-EQ-CERT-GAP-001}. \\
+\texttt{freeze\_criteria\_status} &
+Evaluated as \texttt{not\_frozen}; the packet adds new stress payload and the
+next v15 task is a post-theorem selector. \\
+\texttt{next\_route} &
+One bounded v15 P2-T06 post-theorem selector to classify whether the stressed
+theorem package routes to Gate Chair review, repair, freeze, or ordinary
+continuation. \\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after P2-T05 \\
+\midrule
+Source ontology primitives & No change. \\
+Source equivalence \(EqSrc\) & No change. \\
+RetainH & No change. \\
+GenH & No change. \\
+ObsLoc\(_{lc}\) & No change. \\
+Resp\(_{lc}\) & No change. \\
+\(M_{\mathrm{src}}\) & Scoped positive status preserved. \\
+\(\geff\) & Scoped positive status preserved with no scope expansion. \\
+Matter coupling & Conditional theorem stressed; certificate-gap witness blocks
+unconditional overread; no derivation. \\
+Einstein equations & Not started. \\
+Finite-variation robustness & P2-T05 stress run only for theorem package;
+not a global robustness result. \\
+Benchmark promotion & Blocked. \\
+Gate Chair status & No new Gate Chair review. \\
+Current route freeze or hard-fail status & No freeze and no hard fail. \\
+\bottomrule
+\end{longtable}
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+The certificate-gap witness does not show that the project cannot construct
+valid source certificates later. It shows only that the current theorem cannot
+be used unconditionally or as adoption evidence when those certificates are
+absent, malformed, or mismatched.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The stress pass does not adopt matter semantics, detector semantics, source
+laws, coupling laws, matter coupling, stress-energy semantics, matter action,
+Einstein equations, benchmark status, or completed derivation status.
+\end{nonconclusion}
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Recommendations
+implementation plan continue task v15} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Narrow source-side
+matter-semantics equivalence theorem attempt v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Matter-semantics
+equivalence theorem smuggling audit v1} [Research-control TeX artifact].
+
+\end{document}

@@ -1,0 +1,457 @@
+completion_id: "AJC-AJ-RT-20260702-060-001"
+job_id: "AJ-RT-20260702-060-001"
+task_id: "RT-20260702-060"
+source_role_id: "refuter"
+completed_at: "2026-07-02T21:05:52Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P2-T05"
+  plan_phase_id: "P2"
+  implemented_task_scope: "Stress-tested the NarrowMSCertEq_v1 theorem and P2-T04 audit under certificate deletion malformation source transport mismatch source invariance mismatch source factorization failure RR_E separation pressure detector collapse target metric import no-target certificate misuse finite-local overread scoped-evidence overread and source-extension-as-derivation overread."
+  downstream_tasks_not_implemented:
+    - "P2-T06 post-theorem selector"
+    - "any v15 downstream phase beyond P2-T05"
+    - "Gate Chair review"
+    - "source-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy route"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  p2_t01_completed: true
+  p2_t02_completed: true
+  p2_t03_completed: true
+  p2_t04_completed: true
+  p2_t05_completed: true
+  p2_t06_completed: false
+output_paths:
+  - "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260702-060/artifacts/child_phys_math_p2_t05_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260702-060/artifacts/child_phys_phil_p2_t05_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260702-060/artifacts/parent_conflict_review_p2_t05_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260702-060/artifacts/parent_fusion_notes_p2_t05_refuter_stress.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-060/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-060/DDR-20260702-060.md"
+  - "research_control/tasks/RT-20260702-060/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-060/jobs/AJ-RT-20260702-060-001.yaml"
+  - "research_control/tasks/RT-20260702-060/jobs/completions/AJC-AJ-RT-20260702-060-001.yaml"
+  - "research_control/tasks/RT-20260702-060/roles/refuter@0.2.0--RT-20260702-060.yaml"
+  - "research_control/handoffs/handoff-0513.yaml"
+  - "research_control/handoffs/handoff-0513.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0512.yaml"
+  - "research_control/handoffs/handoff-0512.md"
+  - "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  - "research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=552 relationship_row_count=2929 semantic_row_count=552 vault_row_count=552"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json | exit_code=0 | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Refuter stress minimal countermodel matter semantics theorem\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15,MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex --json | exit_code=0 | primary_registry=TEX_SOURCE_REGISTRY.csv returned_object_ids=TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex --json | exit_code=0 | primary_registry=TEX_SOURCE_REGISTRY.csv returned_object_ids=TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260702-059 latest_handoff=handoff-0512 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | post_bootstrap_refresh_performed=true source_object_count=553 relationship_row_count=2933 semantic_row_count=553 vault_row_count=553"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted v15 lookup returned canonical plan object"
+      - "targeted stress search returned v15 plan and GR burden context"
+      - "targeted theorem lookup returned registered TeX theorem object"
+      - "targeted audit lookup returned registered TeX audit object"
+      - "continue_research.py resolved handoff-0512 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P2-T05 stress artifact created"
+      - "stress verdict is conditional_theorem_survives_with_certificate_gap_witness_no_adoption"
+      - "minimal certificate-gap witness MC-NARROW-MS-CERT-EQ-CERT-GAP-001 recorded"
+      - "P2-T06 post-theorem selector intentionally not executed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph rerender required after handoff-0513 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap required after registering the P2-T05 TeX artifact and task-local outputs"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "documentation-impact validation required before checkpoint"
+      - "research-control validation required before checkpoint"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is required before this transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+tests_added_or_updated: []
+verdict: "p2_t05_conditional_theorem_survives_with_certificate_gap_witness_pending_selector_no_adoption"
+coherent_resolution_summary: "RT-20260702-060 stress-tested NarrowMSCertEq_v1 and found that the theorem survives as a conditional source-side theorem under explicit valid certificates. Removing or malforming the certificate premise yields a finite/local certificate-gap witness rather than theorem contradiction. Detector semantics target metric MetricData(E) g_eff benchmark process-authority scoped-evidence and source-extension overreads are blocked. No source-law adoption matter semantics detector semantics matter coupling Einstein equations benchmark promotion completed derivation future source-extension impossibility or program-wide no-go conclusion occurred."
+next_recommendation: "Run one bounded v15 P2-T06 post-theorem selector packet under theoretical-continuation-selector@0.1.0 before any Gate Chair review repair freeze adoption or downstream promotion."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 553
+    relationship_row_count: 2933
+    semantic_row_count: 553
+    vault_row_count: 553
+    warning_summary: "Initial pre-write preflight reported PASS with no refresh needed at 552 source objects. Post-bootstrap preflight refreshed local retrieval for the new P2-T05 TeX and current-frontier derivatives and reported PASS at 553 source objects."
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    source_object_count: 553
+    relationship_row_count: 2933
+    semantic_row_count: 553
+    vault_row_count: 553
+    local_cache_only_warning_count: 4
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 553
+    relationship_row_count: 2933
+    semantic_row_count: 553
+    vault_row_count: 553
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Refuter stress minimal countermodel matter semantics theorem\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Refuter stress minimal countermodel matter semantics theorem"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+        - "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      note: "Search also returned generated semantic IDs and older stress examples used only as navigation. Only canonical objects inspected for this packet are listed here."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+      returned_object_ids:
+        - "TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex"
+      returned_object_ids:
+        - "TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+      source_hash: "aca8af857f2a53bfcbdd775b147323dab9e8a814ec78409faace45eef61bc04b"
+    - object_id: "TEX-V15-P2-T04-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex"
+      source_hash: "3521b359ead752d615983aa942d6e93a302aeba6be8a882aed8dc5b513524820"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+stress_result:
+  result_type: "concrete_witness_path"
+  stress_verdict: "conditional_theorem_survives_with_certificate_gap_witness_no_adoption"
+  refuter_decision_category: "concrete_witness_path"
+  stressed_object: "NarrowMSCertEq_v1 theorem and P2-T04 audit"
+  theorem_artifact_path: "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260702-059/artifacts/matter_semantics_equivalence_theorem_smuggling_audit_v1.tex"
+  stress_artifact_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+  artifact_hash: "1be7ba5ac04095d7582612e0831fadcc55e58be0938ab25f2c7b7705da541182"
+  source_extension_category: "source_extension_refuter_stress"
+  certificate_deletion: "fails_closed_to_certificate_gap_witness"
+  certificate_malformation: "fails_closed_to_certificate_gap_witness"
+  source_transport_mismatch: "fails_closed"
+  source_invariance_mismatch: "fails_closed"
+  source_factorization_failure: "fails_closed"
+  RR_E_separation_violation: "blocked_without_explicit_source_certificate"
+  detector_semantics_collapse_attempt: "blocked"
+  target_metric_import_attempt: "blocked"
+  no_target_certificate_misuse: "blocked_when_used_as_positive_equivalence_certificate"
+  finite_local_to_global_overread: "blocked"
+  scoped_evidence_as_adoption_overread: "blocked"
+  source_extension_as_derivation_overread: "blocked"
+  next_required_role: "theoretical-continuation-selector"
+  claim_boundary_preserved: true
+refuter_decision_category:
+  category: "concrete_witness_path"
+  next_route: "P2-T06 theoretical-continuation-selector"
+  scoped_obstruction_created: false
+  route_freeze_recommended: false
+  freeze_criteria_status:
+    evaluated: true
+    freeze_label: ""
+    route_frozen: false
+    explanation: "Freeze is not taken in P2-T05 because the packet adds a minimal certificate-gap witness and the v15 plan reserves route classification for P2-T06."
+loop_risk_decision:
+  category: "concrete_witness_path"
+  next_route: "theoretical_decision_role_selection"
+  rationale: "The stress returned new mathematical payload and a concrete finite/local certificate-gap witness. The next theoretical-continuation-selector packet must classify Gate Chair review repair freeze or ordinary continuation and must not jump to adoption downstream GR or another generic stress loop."
+  witness_summary: "MC-NARROW-MS-CERT-EQ-CERT-GAP-001 blocks unconditional or adoption-style EqMS_src^cert overread when explicit source certificates are absent malformed or mismatched while preserving the conditional theorem as written."
+minimal_countermodel:
+  minimal_countermodel_id: "MC-NARROW-MS-CERT-EQ-CERT-GAP-001"
+  objects_in_countermodel:
+    - "finite/local source object A_src"
+    - "finite/local source object B_src"
+    - "shared declared source context E"
+    - "no valid SourceTransportCertificate between A_src and B_src"
+    - "no valid SourceInvarianceCertificate between A_src and B_src"
+    - "no valid SourceFactorizationCertificate for the relevant matter-semantics comparison"
+  certificate_removed_or_malformed: "All positive source certificates are absent in deletion branch or object endpoints mismatch in malformation branch."
+  equivalence_claim_that_fails: "A_src EqMS_src^cert B_src"
+  smallest_failed_premise: "explicit valid source-certificate premise"
+  whether_failure_is_finite_local_global_categorical_or_status_boundary: "finite/local and status-boundary; not global and not categorical impossibility"
+  repair_or_freeze_consequence: "supply valid explicit source certificates or route to P2-T06 selector; no freeze follows from this packet"
+source_extension_category: "source_extension_refuter_stress"
+physics_progress_status:
+  status: "candidate_stress_survived_pending_selector"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "stress the source-side matter-semantics equivalence theorem candidate under certificate deletion malformation and overread pressure before post-theorem selector"
+  explanation: "The packet stress-tests the P2-T03 conditional theorem candidate and P2-T04 audit. The theorem survives as conditional under explicit certificates. The certificate-gap witness blocks unconditional and adoption-style overreads. It does not adopt source law matter semantics detector semantics coupling law matter coupling stress-energy semantics matter action MetricData(E) g_eff Einstein equations benchmark status or completed derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v15_p2_t06_post_theorem_selector"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "No Distance-to-GR ledger row is changed. P2-T05 stress unlocks only bounded post-theorem selector routing."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_change"
+  - burden: "Source equivalence EqSrc"
+    status: "no_change"
+  - burden: "RetainH"
+    status: "no_change"
+  - burden: "GenH"
+    status: "no_change"
+  - burden: "ObsLoc_lc"
+    status: "no_change"
+  - burden: "Resp_lc"
+    status: "no_change"
+  - burden: "M_src"
+    status: "scoped_positive_status_preserved"
+  - burden: "g_eff"
+    status: "scoped_positive_status_preserved_no_scope_expansion"
+  - burden: "matter coupling"
+    status: "conditional_theorem_stressed_with_certificate_gap_witness_no_derivation"
+  - burden: "Einstein equations"
+    status: "not_started"
+  - burden: "finite-variation robustness"
+    status: "theorem_packet_stress_only_not_global_robustness"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no_new_gate_review"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_freeze_no_hard_fail"
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  freeze_decision: "not_frozen"
+  criteria_evaluated:
+    - "P2-T05 adds a new stress verdict and minimal certificate-gap witness rather than repeating the P2-T03 theorem proof or P2-T04 audit."
+    - "No blocking contradiction or scoped obstruction freezes the route."
+    - "The v15 plan names P2-T06 selector as the next decision point."
+  next_allowed_route: "bounded_v15_p2_t06_post_theorem_selector"
+new_mathematical_payload:
+  - payload_id: "P2_T05_certificate_gap_witness"
+    payload_type: "countermodel"
+    artifact_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    status: "finite_local_certificate_gap_witness"
+    summary: "Constructs MC-NARROW-MS-CERT-EQ-CERT-GAP-001 to block unconditional or adoption-style EqMS_src^cert overreads when explicit source certificates are absent or malformed."
+  - payload_id: "P2_T05_fail_closed_stress_theorem"
+    payload_type: "theorem"
+    artifact_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    status: "conditional_theorem_survives_stress"
+    summary: "Classifies all required stress dimensions as conditional survival fail-closed witness or blocked overread."
+  - payload_id: "P2_T06_selector_dependency_map"
+    payload_type: "dependency_map_update"
+    artifact_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    status: "selector_ready"
+    summary: "Routes the stressed theorem package to one bounded P2-T06 post-theorem selector."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "countermodel"
+    object_name: "MC-NARROW-MS-CERT-EQ-CERT-GAP-001"
+    claim_status: "proposal"
+    source_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    source_hash: "1be7ba5ac04095d7582612e0831fadcc55e58be0938ab25f2c7b7705da541182"
+    burden_effect: "blocks_unconditional_overread"
+    summary: "A finite/local source-pair witness with absent or malformed certificates defeats unconditional EqMS_src^cert while leaving the conditional theorem intact."
+  - payload_id: "PAYLOAD-002"
+    payload_type: "theorem"
+    object_name: "Fail-closed certificate stress theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    source_hash: "1be7ba5ac04095d7582612e0831fadcc55e58be0938ab25f2c7b7705da541182"
+    burden_effect: "stress_guard"
+    summary: "Stress branches either preserve conditional equivalence under explicit certificates produce certificate-gap witness or block overread attempts."
+  - payload_id: "PAYLOAD-003"
+    payload_type: "dependency_map_update"
+    object_name: "P2-T06 selector dependency map"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    source_hash: "1be7ba5ac04095d7582612e0831fadcc55e58be0938ab25f2c7b7705da541182"
+    burden_effect: "routes_next_selector"
+    summary: "P2-T06 must decide whether the stressed theorem package routes to Gate Chair review repair freeze or ordinary continuation."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260702-060/artifacts/child_phys_math_p2_t05_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260702-060/artifacts/child_phys_phil_p2_t05_refuter_stress.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260702-060/artifacts/parent_conflict_review_p2_t05_refuter_stress.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260702-060/artifacts/parent_fusion_notes_p2_t05_refuter_stress.md"
+    summary: "The parent fused formal certificate-gap stress and epistemic status-boundary checks into one Refuter packet pending P2-T06 selector."
+no_target_import_audit_scope:
+  forbidden_source_classes:
+    - "target_topology"
+    - "target_smooth_atlas"
+    - "target_metric"
+    - "proper_time"
+    - "empirical_detector_semantics"
+    - "benchmark_success"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "Einstein_equations"
+    - "generated_derivative_authority"
+    - "registry_metadata_authority"
+    - "validator_authority"
+    - "role_authority"
+    - "handoff_authority"
+    - "file_order_authority"
+  checked_objects:
+    - "NarrowMSCertEq_v1"
+    - "EqMS_src^cert"
+    - "SourceTransportCertificate"
+    - "SourceInvarianceCertificate"
+    - "SourceFactorizationCertificate"
+    - "NoTargetImportCertificate"
+    - "RR_EDeclaredObject"
+  result: "pass_fail_closed"
+  failure_reason: ""
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P2-T05 proposal-only Refuter stress of the P2-T03 theorem and P2-T04 audit."
+  summary: "P2-T05 does not authorize source-law adoption RR_ETransportCompletenessOrInvarianceLaw_v1 adoption unrestricted RR_E theorem matter semantics detector semantics coupling law matter coupling stress-energy matter action Einstein equations benchmark promotion completed derivation or program-wide no-go conclusion."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 adoption as law"
+    - "source-extension data adoption beyond exact scoped Gate Chair result"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "coupling-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "future source-extension no-go claim"
+    - "program-wide no-go conclusion"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

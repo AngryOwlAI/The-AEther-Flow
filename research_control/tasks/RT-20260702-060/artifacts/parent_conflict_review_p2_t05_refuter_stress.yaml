@@ -1,0 +1,27 @@
+review_id: "parent-conflict-review-p2-t05-refuter-stress"
+task_id: "RT-20260702-060"
+job_id: "AJ-RT-20260702-060-001"
+status: "no_conflict"
+resolution_rounds: 1
+children_reviewed:
+  - execution_unit_id: "child_phys_math"
+    output_path: "research_control/tasks/RT-20260702-060/artifacts/child_phys_math_p2_t05_refuter_stress.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    output_path: "research_control/tasks/RT-20260702-060/artifacts/child_phys_phil_p2_t05_refuter_stress.yaml"
+    status: "completed"
+consensus:
+  - "The theorem survives as a conditional source-side theorem under explicit valid certificates."
+  - "Removing or malforming a required certificate yields a finite/local certificate-gap witness."
+  - "No target metric, detector semantics, RR_E collapse, source-law adoption, matter-semantics adoption, matter-coupling derivation, Einstein equation, benchmark, or completed derivation follows."
+  - "The next lawful route is one bounded P2-T06 post-theorem selector."
+unique_contributions:
+  child_phys_math:
+    - "Specified the minimal countermodel fields and smallest failed premise."
+    - "Classified each required stress dimension."
+  child_phys_phil:
+    - "Separated theorem truth from adoption status and empirical semantics."
+    - "Blocked evidence-as-adoption and source-extension-as-derivation overreads."
+unresolved_conflicts: []
+blocking_conflicts: []
+fusion_decision: "Fuse both outputs into the Refuter stress TeX artifact with a concrete_witness_path classification and ordinary continuation to P2-T06 selector."
