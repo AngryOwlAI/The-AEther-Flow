@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-015` and `handoff-0468`.
+`RT-20260702-016` and `handoff-0469`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-015` |
-| Latest handoff ID | `handoff-0468` |
-| Current status | `v14_p7_t04_frontier_theorem_inventory_renderer_completed_next_cross_check` |
+| Active task ID | `RT-20260702-016` |
+| Latest handoff ID | `handoff-0469` |
+| Current status | `v14_p7_t05_inventory_frontier_ledger_cross_check_completed_next_inventory_validation` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p7 t05 inventory frontier ledger cross check |
-| Required next authority | Run one bounded v14 P7-T05 inventory cross-check against current frontier and Distance-to-GR ledger before P7 validation or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P7-T05 inventory cross-check against current frontier and Distance-to-GR ledger before P7 validation or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p7 t06 inventory validation |
+| Required next authority | Run one bounded v14 P7-T06 P7 inventory validation packet before P8 route-orbit freeze hardening or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P7-T06 P7 inventory validation packet before P8 route-orbit freeze hardening or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-015/00_TASK.yaml`.
-- Active task objective: Render a compact derivative human-readable frontier theorem inventory table from the canonical inventory without inventing claim status or changing physics authority.
-- Latest handoff path: `research_control/handoffs/handoff-0468.yaml`.
-- Latest handoff summary: RT-20260702-015 completed one bounded v14 P7-T04 frontier theorem inventory renderer packet. The task-local renderer produced a derivative compact table covering 27 canonical inventory item sections and preserved all claim-promotion blocks.
+- Active task path: `research_control/tasks/RT-20260702-016/00_TASK.yaml`.
+- Active task objective: Compare the frontier theorem inventory against current frontier and Distance-to-GR ledger without changing physics authority.
+- Latest handoff path: `research_control/handoffs/handoff-0469.yaml`.
+- Latest handoff summary: RT-20260702-016 completed one bounded v14 P7-T05 inventory frontier ledger cross-check packet. The task-local audit confirmed inventory support for current-frontier high-risk rows and Distance-to-GR ledger rows while preserving all claim-promotion blocks.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P7-T05 inventory cross-check against current frontier and Distance-to-GR ledger before P7 validation or downstream physics routes.
+- Next recommended action: Run one bounded v14 P7-T06 P7 inventory validation packet before P8 route-orbit freeze hardening or downstream physics routes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -63,24 +63,24 @@ Adopted source-only or source-extension objects:
 
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
-| M_src and g_eff | unchanged scoped objects from prior authority | `registries/DISTANCE_TO_GR_LEDGER.csv` | P7-T04 only rendered derivative table rows and did not edit ledger or expand scope | none | false |
+| M_src and g_eff | scoped objects confirmed against ledger and inventory | `registries/DISTANCE_TO_GR_LEDGER.csv` | P7-T05 only confirmed existing scoped status and did not edit ledger or expand scope | none | false |
 
 Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| frontier theorem inventory compact table | derivative control artifact only | review and P7-T05 cross-check navigation | physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `research_control/tasks/RT-20260702-015/artifacts/p7_t04_frontier_theorem_inventory_compact_table.md` |
+| frontier theorem inventory cross-check | derivative control audit receipt only | P7-T06 inventory validation readiness | physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `research_control/tasks/RT-20260702-016/artifacts/p7_t05_inventory_frontier_ledger_cross_check.md` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P7-T05 inventory current-frontier ledger cross-check |
+| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P7-T06 inventory validation |
 
 Forbidden overreads:
 
-- compact table as physics proof
-- renderer PASS as source-law adoption
+- audit PASS as physics proof
+- inventory consistency as source-law adoption
 
 ## Matter-Coupling Boundary
 
@@ -191,7 +191,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P7-T05 inventory cross-check against current frontier and Distance-to-GR ledger before P7 validation or downstream physics routes.
+Run one bounded v14 P7-T06 P7 inventory validation packet before P8 route-orbit freeze hardening or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -215,8 +215,8 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookup returned inventory registry context<br>query_memory search returned the v14 P7-T04 plan context |
-| `completion_internal` | PASS | receipt complete | renderer script returned PASS<br>rendered_item_count=27<br>compact table includes source item ID for every inventory item row |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookup returned inventory registry context<br>query_memory search returned the v14 P7-T05 plan context |
+| `completion_internal` | PASS | receipt complete | audit script returned PASS<br>ledger_rows_checked=14<br>current_frontier_rows_checked=5<br>high_risk_rows_checked=11 |
 | `memory_bootstrap` | PASS | receipt complete | bootstrap_memory_system.py and validate-only are required receipts for this packet |
 
 Authorization layers:
@@ -235,9 +235,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-015`;
-- latest handoff: `handoff-0468`;
-- current status: `v14_p7_t04_frontier_theorem_inventory_renderer_completed_next_cross_check`;
+- active task: `RT-20260702-016`;
+- latest handoff: `handoff-0469`;
+- current status: `v14_p7_t05_inventory_frontier_ledger_cross_check_completed_next_inventory_validation`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -247,8 +247,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0468.yaml`
-- `research_control/tasks/RT-20260702-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0469.yaml`
+- `research_control/tasks/RT-20260702-016/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -264,7 +264,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0468*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0469*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
