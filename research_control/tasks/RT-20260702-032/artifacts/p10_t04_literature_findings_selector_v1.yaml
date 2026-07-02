@@ -1,0 +1,117 @@
+artifact_id: "p10_t04_literature_findings_selector_v1"
+artifact_type: "theoretical_decision_output"
+task_id: "RT-20260702-032"
+job_id: "AJ-RT-20260702-032-001"
+role_id: "theoretical-continuation-selector"
+created_at: "2026-07-02T10:23:40Z"
+title: "P10-T04 Literature Findings Route Selector"
+control_status:
+  parent_task_id: "RT-20260702-031"
+  parent_handoff_id: "handoff-0484"
+  target_derivation_milestone: "einstein_equations"
+  claim_boundary: "Selector-only classification. No external validation by resemblance no source-law adoption no MetricData(E) adoption no g_eff scope expansion no matter-semantics adoption no detector-semantics adoption no matter-coupling derivation or adoption no stress-energy semantics no matter action no Einstein equations no benchmark promotion no completed derivation and no global theory rejection."
+selected_route: "public_boundary_update_then_p11_moratorium"
+selected_next_packet_type: "documentation_boundary_packet"
+selected_next_role_family: "documentation-curator@2.0.0"
+selected_next_plan_task_id: "P10-T05"
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_control_packet_type: "documentation_boundary_packet"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  decision_basis: "P10-T03 found comparison-useful route risks but no immediate claim-promotion authority and no fresh obstruction requiring repair before the v14 sequence continues."
+  theoretical_method: "Classify P10-T03 findings against the P10-T04 route table repair_needed red_team_needed theorem_target obstruction_candidate no_action and public_boundary_update and select the lowest-authority next route."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No human-gated authority is required because this selector does not adopt reject promote or close any physics object."
+  next_execution_role_family: "documentation-curator@2.0.0"
+  selected_next_packet_objective: "Check public-facing comparison language for external-validation or claim-promotion implications."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P10 should close through P10-T05 public-boundary review; science-facing risks are preserved for P11 matter-coupling moratorium P12 no-target hygiene and P13 RR_E separation."
+  new_payload_novelty: "Seven-finding literature route matrix converting comparison risks into ordered v14 continuation routes."
+route_classifications:
+  - finding_id: "p10_finding_causal_order_geometry_constraints"
+    source_families:
+      - "causal_order_to_geometry"
+      - "operational_spacetime_reconstruction"
+    selected_route_class: "no_action"
+    next_role: "documentation-curator@2.0.0"
+    selected_next_plan_task_id: "P10-T05"
+    rationale: "Current M_src and scoped g_eff boundaries already block target-manifold and metric-law overread; public language should still be checked for resemblance-as-validation drift."
+  - finding_id: "p10_finding_analogue_metric_laundering_risk"
+    source_families:
+      - "analogue_and_emergent_gravity_boundary_sources"
+    selected_route_class: "public_boundary_update"
+    next_role: "documentation-curator@2.0.0"
+    selected_next_plan_task_id: "P10-T05"
+    rationale: "Analogue metric resemblance is the clearest immediate public-boundary risk and should be handled before P11."
+  - finding_id: "p10_finding_detector_semantics_import_risk"
+    source_families:
+      - "detector_operational_semantics"
+    selected_route_class: "repair_needed"
+    next_role: "project-control-maintainer@0.2.0"
+    selected_next_plan_task_id: "P12-T02"
+    rationale: "The risk is real but already belongs to P12 positive-semantics/no-target hygiene rather than an out-of-order P10 repair."
+  - finding_id: "p10_finding_universal_coupling_assumption_gap"
+    source_families:
+      - "universal_coupling_and_stress_energy_bootstrap"
+    selected_route_class: "theorem_target"
+    next_role: "theoretical-continuation-selector@0.1.0"
+    selected_next_plan_task_id: "P11-T03"
+    rationale: "The comparison suggests a narrow theorem-target map for matter-coupling pre-adoption but no immediate derivation attempt."
+  - finding_id: "p10_finding_stress_energy_action_gap"
+    source_families:
+      - "variational_action_and_conservation_requirements"
+      - "thermodynamic_or_entropic_einstein_equation_derivations"
+    selected_route_class: "theorem_target"
+    next_role: "theoretical-continuation-selector@0.1.0"
+    selected_next_plan_task_id: "P11-T03"
+    rationale: "Stress-energy/action assumptions should inform the P11 narrow theorem selector and moratorium, not trigger direct EFE work."
+  - finding_id: "p10_finding_no_target_certificate_classification_need"
+    source_families:
+      - "causal_order_to_geometry"
+      - "operational_spacetime_reconstruction"
+      - "analogue_and_emergent_gravity_boundary_sources"
+    selected_route_class: "public_boundary_update"
+    next_role: "documentation-curator@2.0.0"
+    selected_next_plan_task_id: "P10-T05"
+    rationale: "The immediate risk is public or explanatory overread; P12 can harden source-side hygiene more deeply."
+  - finding_id: "p10_finding_efe_assumption_load"
+    source_families:
+      - "universal_coupling_and_stress_energy_bootstrap"
+      - "variational_action_and_conservation_requirements"
+      - "thermodynamic_or_entropic_einstein_equation_derivations"
+    selected_route_class: "no_action"
+    next_role: "documentation-curator@2.0.0"
+    selected_next_plan_task_id: "P10-T05"
+    rationale: "EFE burdens remain explicitly blocked; no new obstruction or human-gated authority request is justified by comparison alone."
+route_options_considered:
+  - option: "repair_needed"
+    disposition: "deferred_to_P12_or_P11"
+    reason: "Detector and coupling risks are real but already covered by later v14 phases; executing them inside P10-T04 would violate sequence discipline."
+  - option: "red_team_needed"
+    disposition: "not_selected"
+    reason: "P9 external red-team phase just completed and P10-T03 did not identify a new adversarial target requiring immediate review."
+  - option: "theorem_target"
+    disposition: "deferred_to_P11"
+    reason: "Universal-coupling and stress-energy/action assumptions should shape P11 narrow theorem selection."
+  - option: "obstruction_candidate"
+    disposition: "not_selected"
+    reason: "P10-T03 recorded constraint gaps but no precise new obstruction."
+  - option: "no_action"
+    disposition: "selected_for_some_findings"
+    reason: "Several findings are already covered by existing claim boundaries and should be carried as context only."
+  - option: "public_boundary_update"
+    disposition: "selected_next_route"
+    reason: "This is the immediate lowest-authority route required by P10-T05 before P11."
+gate_ready_warning_resolution:
+  advisory_warning_id: "gate_ready_without_gate"
+  route_to_gate_chair: false
+  reason_gate_chair_not_lawful: "P10-T04 requests no adoption rejection benchmark closure or protected verdict; Gate Chair routing would overstate the selector output."
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_resemblance_as_validation_authorized: false

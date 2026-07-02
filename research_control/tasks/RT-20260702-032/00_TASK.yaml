@@ -1,0 +1,47 @@
+task_id: "RT-20260702-032"
+task_title: "v14 P10-T04 Literature Findings Route Selector"
+task_type: "theoretical_continuation_selector_packet"
+status: "completed"
+created_at: "2026-07-02T10:23:40Z"
+started_at: "2026-07-02T10:23:40Z"
+completed_at: "2026-07-02T10:23:40Z"
+parent_task_id: "RT-20260702-031"
+source_handoff_id: "handoff-0484"
+decision_id: "DDR-20260702-032"
+agent_job_id: "AJ-RT-20260702-032-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P10"
+plan_task_id: "P10-T04"
+objective: "Classify P10-T03 literature comparison findings and select the next bounded route."
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Classify literature-derived route risks against open stress-energy/action/EFE burdens without executing downstream repair or promotion."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+selected_scope_id: "operational_causal_metric_universal_coupling_constraints_scope"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_resemblance_as_validation_authorized: false
+scope:
+  allowed:
+    - "classify P10-T03 findings into route classes"
+    - "select the next bounded route"
+    - "record deferred science-facing findings for P11 P12 and P13"
+  forbidden:
+    - "execute the selected downstream route"
+    - "edit canonical ontology or science sources"
+    - "adopt external assumptions as AEther-Flow premises"
+    - "promote source laws or downstream physics"
+validation:
+  required_validator: "research_control/tasks/RT-20260702-032/artifacts/validate_p10_t04_literature_findings_selector.py"
+  expected_report: "research_control/tasks/RT-20260702-032/artifacts/p10_t04_literature_findings_selector_report.json"
+  expected_status: "PASS"
+next_route:
+  plan_task_id: "P10-T05"
+  task_type: "documentation_boundary_packet"
+  role_family: "documentation-curator@2.0.0"
+  objective: "Check public-facing comparison language for external-validation or claim-promotion implications."
