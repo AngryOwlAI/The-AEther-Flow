@@ -908,6 +908,23 @@ benchmark closure, or completed derivation.
     evidence/precondition status.
   - The accepted scope is source-side, certificate-indexed, and fail-closed.
   - The Gate Chair result does not adopt the schema as a source law.
+- `rr_e_boundary_crosslinks`:
+  - `rr_e_underdetermination_obstruction` records the current-ontology
+    obstruction that keeps unrestricted `RR_E` theorem status open.
+  - `rr_e_separation_obstruction_witness_v1` records the finite separation
+    witness that must not be erased by detector semantics, `g_eff`, benchmark
+    behavior, process authority, or convenience.
+  - `research_control/design/rr_e_separation_boundary_control_note.md` supplies
+    the declared-object plus source transport, source invariance, or source
+    factorization certificate boundary.
+  - `research_control/design/rr_e_allowed_identification_checklist.md` supplies
+    the certificate-indexed pass/fail checklist; missing certificate data
+    preserves separation or obstruction.
+- `rr_e_fail_closed_sentence`: Missing certificate data preserves separation or obstruction.
+- `certificate_indexed_scope`: The row may be cited only as scoped
+  evidence/precondition for declared-object-indexed source transport,
+  invariance, or factorization boundary wording; it is not law adoption,
+  unrestricted theorem proof, detector semantics, or matter semantics.
 - `definitions_used`: `RR_ETransportCompletenessOrInvarianceLaw_v1`; scoped
   source-extension evidence/precondition; transport-completeness or invariance;
   certificate-indexed source-side schema; fail-closed branch.
@@ -1289,6 +1306,20 @@ benchmark closure, or completed derivation.
 - `assumptions`:
   - The object is proposal-only except for scoped evidence/precondition status.
   - Acceptance does not adopt the object as a law.
+- `rr_e_non_collapse_pressure`:
+  - Matter-semantics readiness work depends on preserving `RR_E` separation
+    unless a declared-object-indexed source transport, source invariance, or
+    source factorization certificate is supplied.
+  - `research_control/design/rr_e_separation_boundary_control_note.md` blocks
+    detector-semantics, `g_eff`, benchmark, process, and convenience pressure
+    from identifying `RR_E` records.
+  - `research_control/design/rr_e_allowed_identification_checklist.md` requires
+    the certificate class, exact records, declared object, no-target-import
+    audit, and fail-closed separation branch before any future identification
+    route may proceed.
+- `rr_e_boundary_crosslinks`: `rr_e_transport_completeness_or_invariance_law_v1`;
+  `rr_e_underdetermination_obstruction`;
+  `rr_e_separation_obstruction_witness_v1`.
 - `definitions_used`: `SourceMatterSemanticsAdoptionReadinessLaw_v1`;
   matter-semantics adoption-readiness evidence; source-side fail-closed route.
 - `definitions_introduced`: Adoption-readiness target grammar from
@@ -1330,7 +1361,10 @@ benchmark closure, or completed derivation.
 - `blocked_reuse`: Do not cite as a source law, matter semantics, detector
   semantics, or coupling law.
 - `dependency_items`: `ms_stable_matter_semantics_bridge_v1`;
-  `ms_stable_partition_precondition_v1`
+  `ms_stable_partition_precondition_v1`;
+  `rr_e_transport_completeness_or_invariance_law_v1`;
+  `rr_e_underdetermination_obstruction`;
+  `rr_e_separation_obstruction_witness_v1`
 - `missing_theorem_or_primitive`: Adopted readiness law, adopted matter
   semantics, and coupling law remain missing.
 - `next_theorem_needed`: Positive source-matter-semantics target/profile route
@@ -1441,6 +1475,16 @@ benchmark closure, or completed derivation.
   - Profile labels and readiness predicates remain guarded source syntax and
     routing status only.
   - Gate Chair acceptance is scoped evidence/precondition only.
+- `rr_e_separation_transport_boundary`:
+  - `PositiveMSProfile_v1` may depend on scoped `RR_E` separation structures
+    and on `RR_ETransportCompletenessOrInvarianceLaw_v1` only as
+    evidence/precondition, not as source-law adoption.
+  - `research_control/design/rr_e_separation_boundary_control_note.md` and
+    `research_control/design/rr_e_allowed_identification_checklist.md` are the
+    required future crosslinks for any route that identifies, transports,
+    factors, or treats `RR_E` records as irrelevant.
+  - Missing declared-object-indexed source transport, source invariance, or
+    source factorization certificates preserve separation or obstruction.
 - `definitions_used`: `PositiveMSProfile_v1`; profile label; readiness
   predicate; no-target certificates; RR_E separation structures.
 - `definitions_introduced`: Positive source-matter-semantics profile candidate
@@ -1485,7 +1529,9 @@ benchmark closure, or completed derivation.
 - `dependency_items`: `positive_source_matter_semantics_target_v1`;
   `source_matter_semantics_adoption_readiness_law_v1`;
   `ms_stable_matter_semantics_bridge_v1`;
-  `rr_e_transport_completeness_or_invariance_law_v1`
+  `rr_e_transport_completeness_or_invariance_law_v1`;
+  `rr_e_underdetermination_obstruction`;
+  `rr_e_separation_obstruction_witness_v1`
 - `missing_theorem_or_primitive`: Adopted matter-semantics law, detector
   semantics, coupling law, matter coupling, and field equations remain missing.
 - `next_theorem_needed`: Source-law or coupling-law adoption theorem, or a
@@ -1853,6 +1899,24 @@ theorem statements, source-law adoption, matter-semantics adoption,
 matter-coupling derivation or adoption, Einstein equations, benchmark
 promotion, or completed derivation.
 
+P13-T04 `RR_E` crosslink receipt:
+
+| Required crosslink | Inventory item | Status |
+| --- | --- | --- |
+| `PositiveMSProfile_v1` links to `RR_E` separation/transport boundary | `positive_ms_profile_v1` | PASS |
+| `SourceMatterSemanticsAdoptionReadinessLaw_v1` links to `RR_E` non-collapse pressure | `source_matter_semantics_adoption_readiness_law_v1` | PASS |
+| `RR_ETransportCompletenessOrInvarianceLaw_v1` links to obstruction and certificate-indexed scope | `rr_e_transport_completeness_or_invariance_law_v1` | PASS |
+
+P13-T04 boundary: no inventory item may erase `RR_E` separation without a
+declared object plus source transport, source invariance, or source
+factorization certificate. Missing certificate data preserves separation or
+obstruction. This crosslink update does not adopt
+`RR_ETransportCompletenessOrInvarianceLaw_v1`, prove an unrestricted `RR_E`
+theorem, adopt matter semantics, adopt detector semantics, derive matter
+coupling, promote a benchmark, or complete a derivation.
+
+Missing certificate data preserves separation or obstruction.
+
 ## Source Materials
 
 The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
@@ -1917,6 +1981,12 @@ Chair review v1* [Internal research-control TeX artifact].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
 implementation plan continue task v14* [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026, July 2). *RR_E separation boundary
+control note* [Internal control note].
+
+The AEther-Flow Research Project. (2026, July 2). *RR_E allowed-identification
+checklist* [Internal control checklist].
 
 The AEther-Flow Research Project. (2026, June 30). *Matter-coupling
 precondition assembly target v1* [Internal research-control TeX artifact].
