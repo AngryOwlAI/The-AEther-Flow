@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-025` and `handoff-0478`.
+`RT-20260702-026` and `handoff-0479`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-025` |
-| Latest handoff ID | `handoff-0478` |
-| Current status | `v14_p9_t02_red_team_review_template_completed_next_pilot` |
+| Active task ID | `RT-20260702-026` |
+| Latest handoff ID | `handoff-0479` |
+| Current status | `v14_p9_t03_external_red_team_pilot_completed_next_selector` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p9 t03 external red team pilot |
-| Required next authority | Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes. |
-| Next recommended action | Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes. |
+| Current burden | none for physics derivation; live control burden is v14 p9 t04 external red team findings selector |
+| Required next authority | Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes. |
+| Next recommended action | Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-025/00_TASK.yaml`.
-- Active task objective: Create or update the red-team review template for v14-required review sections.
-- Latest handoff path: `research_control/handoffs/handoff-0478.yaml`.
-- Latest handoff summary: RT-20260702-025 completed one bounded v14 P9-T02 red-team review template packet. The review template now includes every v14-required review section while preserving non-promotional template status and unchanged global schema or validator behavior.
+- Active task path: `research_control/tasks/RT-20260702-026/00_TASK.yaml`.
+- Active task objective: Pilot external red-team review on the current core high-risk frontier objects without promotion or rejection.
+- Latest handoff path: `research_control/handoffs/handoff-0479.yaml`.
+- Latest handoff summary: RT-20260702-026 completed one bounded v14 P9-T03 external red-team pilot on the seven required core frontier objects. The review found no blocking issue within current scoped M_src and scoped g_eff status while routing bridge readiness profile and RR_E transport evidence pressure to selector. RR_E_underdetermination_obstruction remains scoped and not a global no-go.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes.
+- Next recommended action: Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -63,26 +63,29 @@ Adopted source-only or source-extension objects:
 
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
-| M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
+| M_src | scoped source-only object only | none |  | none | false |
+| g_eff | scoped source-extension object only | none |  | none | false |
 
 Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| external_red_team_review_template | project-control template only | P9 external red-team pilot readiness | red-team review result<br>physics proof authority<br>source-law adoption<br>matter coupling<br>Einstein equations<br>benchmark promotion | `research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml` |
+| MSStableMatterSemanticsBridge_v1 | selector_required pressure |  | matter semantics<br>detector semantics<br>coupling law<br>matter coupling | none |
+| SourceMatterSemanticsAdoptionReadinessLaw_v1 | selector_required pressure |  | source law<br>matter semantics<br>coupling law<br>matter coupling | none |
+| PositiveMSProfile_v1 | selector_required pressure |  | profile adoption<br>detector semantics<br>stress-energy<br>benchmark | none |
+| RR_ETransportCompletenessOrInvarianceLaw_v1 | selector_required pressure |  | source law<br>unrestricted RR_E theorem<br>detector semantics<br>matter coupling | none |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation | open or blocked | downstream derivation burdens and protected authorities remain missing | none | P9-T03 external red-team pilot |
+| matter coupling stress-energy matter action Einstein equations benchmark promotion completed derivation | open or blocked | response semantics coupling derivation and protected downstream authority remain missing | none | P9-T04 red-team findings selector |
 
 Forbidden overreads:
 
-- template as proof authority
-- template readiness as external review result
-- validator PASS as physics promotion
+- red-team review as proof authority
+- not_enough_assumptions as global no-go theorem
+- selector_required as repair or freeze authorization
 
 ## Matter-Coupling Boundary
 
@@ -193,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P9-T03 external red-team pilot before red-team selector, literature comparison, or downstream physics routes.
+Run one bounded v14 P9-T04 red-team findings selector before repair freeze literature comparison or downstream physics routes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -217,8 +220,8 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory lookups and search inspected v14 plan current frontier and P9-T02 plan text<br>continue_research.py resolved handoff-0477 to one bounded P9-T02 packet |
-| `completion_internal` | PASS | receipt complete | task-local P9-T02 validator reports all v14 template sections present<br>template preserves non-promotional authority flags<br>global schema and validator behavior unchanged |
+| `pre_execution` | PASS | receipt complete | continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false<br>query_memory searches inspected v14 plan current frontier theorem inventory and core source hits<br>continue_research.py resolved handoff-0478 to one bounded P9-T03 packet |
+| `completion_internal` | PASS | receipt complete | global red-team artifact validator required PASS<br>task-local P9-T03 validator required PASS for all seven required objects<br>review routes substantive findings to P9-T04 selector |
 
 Authorization layers:
 
@@ -236,9 +239,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-025`;
-- latest handoff: `handoff-0478`;
-- current status: `v14_p9_t02_red_team_review_template_completed_next_pilot`;
+- active task: `RT-20260702-026`;
+- latest handoff: `handoff-0479`;
+- current status: `v14_p9_t03_external_red_team_pilot_completed_next_selector`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -248,8 +251,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0478.yaml`
-- `research_control/tasks/RT-20260702-025/00_TASK.yaml`
+- `research_control/handoffs/handoff-0479.yaml`
+- `research_control/tasks/RT-20260702-026/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -265,7 +268,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0478*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0479*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

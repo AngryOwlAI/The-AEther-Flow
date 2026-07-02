@@ -1,0 +1,398 @@
+completion_id: "AJC-AJ-RT-20260702-026-001"
+job_id: "AJ-RT-20260702-026-001"
+task_id: "RT-20260702-026"
+source_role_id: "external-red-team-reviewer"
+completed_at: "2026-07-02T08:41:39Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v14"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  related_plan_task_id: "P9-T03"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Ran the external red-team pilot on all seven v14 core frontier objects and routed substantive findings to selector."
+  downstream_tasks_not_implemented:
+    - "P9-T04 red-team findings selector"
+    - "P9-T05 red-team validation"
+    - "P10 literature comparison"
+    - "P11 matter-coupling moratorium"
+    - "P12 no-target certificate hygiene"
+    - "P13 RR_E separation as burden"
+    - "P14 final integration audit"
+    - "source-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p9_completed: false
+output_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-026/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-026/DDR-20260702-026.md"
+  - "research_control/tasks/RT-20260702-026/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-026/artifacts/child_phys_math_p9_t03_external_red_team_review.yaml"
+  - "research_control/tasks/RT-20260702-026/artifacts/child_phys_phil_p9_t03_external_red_team_review.yaml"
+  - "research_control/tasks/RT-20260702-026/artifacts/parent_conflict_review_p9_t03_external_red_team_review.yaml"
+  - "research_control/tasks/RT-20260702-026/artifacts/parent_fusion_notes_p9_t03_external_red_team_review.md"
+  - "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_core_frontier.yaml"
+  - "research_control/tasks/RT-20260702-026/artifacts/validate_p9_t03_external_red_team_review.py"
+  - "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_report.json"
+  - "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_receipt.md"
+  - "research_control/tasks/RT-20260702-026/jobs/AJ-RT-20260702-026-001.yaml"
+  - "research_control/tasks/RT-20260702-026/jobs/completions/AJC-AJ-RT-20260702-026-001.yaml"
+  - "research_control/tasks/RT-20260702-026/roles/external-red-team-reviewer@0.1.0--RT-20260702-026.yaml"
+  - "research_control/handoffs/handoff-0479.yaml"
+  - "research_control/handoffs/handoff-0479.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0478.yaml"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/design/scoped_positive_claim_vocabulary.md"
+  - "research_control/design/scoped_claim_language_examples.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=541 relationship_row_count=2878 semantic_row_count=541 vault_row_count=541"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P9-T03 external red-team pilot core objects\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"SourceMatterSemanticsAdoptionReadinessLaw_v1 PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY,MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY,MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES,MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC,TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-COMPLETENESS-OR-INVARIANCE-LAW-FORMALIZER,TEX-V13-P5-T04-RR-E-THEOREM-REFUTER-STRESS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260702-025 latest_handoff=handoff-0478 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_core_frontier.yaml | required_status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260702-026/artifacts/validate_p9_t03_external_red_team_review.py --output research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_report.json --json | required_status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory searches inspected v14 plan current frontier theorem inventory and core object source hits"
+      - "continue_research.py resolved handoff-0478 to one bounded P9-T03 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "global red-team review artifact validator required PASS"
+      - "task-local P9-T03 validator required PASS for seven objects and v14 verdict vocabulary"
+      - "review artifact routes substantive findings to P9-T04 selector"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write and --check are required after handoff-0479 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate is required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "current-frontier render/check required after handoff-0479 state update"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is required before this transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects:
+    - object: "M_src"
+      status: "adopted_as_source_only_object"
+      authority_path: "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex"
+      does_not_establish:
+        - "target manifold"
+        - "metric"
+        - "matter coupling"
+        - "GR derivation"
+    - object: "g_eff"
+      status: "adopted_as_scoped_source_extension_object"
+      authority_path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      does_not_establish:
+        - "unscoped Lorentzian metric"
+        - "MetricData(E) adoption"
+        - "matter coupling"
+        - "Einstein equations"
+  accepted_evidence_preconditions:
+    - object: "MSStableMatterSemanticsBridge_v1"
+      status: "accepted_as_scoped_evidence_precondition"
+      authority_path: "research_control/tasks/RT-20260630-056/artifacts/ms_stable_matter_semantics_bridge_source_extension_evidence_gate_chair_review_v1.tex"
+      supports_target: "future matter-semantics readiness/profile work"
+      does_not_establish:
+        - "matter semantics"
+        - "detector semantics"
+        - "coupling law"
+        - "matter coupling"
+    - object: "SourceMatterSemanticsAdoptionReadinessLaw_v1"
+      status: "accepted_as_scoped_evidence_precondition_not_law"
+      authority_path: "research_control/tasks/RT-20260701-009/artifacts/source_matter_semantics_adoption_readiness_law_evidence_gate_chair_review_v1.tex"
+      supports_target: "future positive source-matter-semantics target/profile work"
+      does_not_establish:
+        - "source-law adoption"
+        - "matter-semantics adoption"
+        - "coupling law"
+        - "matter coupling"
+    - object: "PositiveMSProfile_v1"
+      status: "accepted_as_scoped_evidence_precondition_not_adoption"
+      authority_path: "research_control/tasks/RT-20260701-020/artifacts/positive_source_matter_semantics_profile_gate_chair_review_v1.tex"
+      supports_target: "claim-vocabulary control and later non-promotional continuation"
+      does_not_establish:
+        - "PositiveMSProfile_v1 adoption"
+        - "detector semantics"
+        - "stress-energy semantics"
+        - "benchmark status"
+    - object: "RR_ETransportCompletenessOrInvarianceLaw_v1"
+      status: "accepted_as_scoped_evidence_precondition_not_law_adoption"
+      authority_path: "research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex"
+      supports_target: "non-promotional RR_E transport or invariance continuation"
+      does_not_establish:
+        - "source-law adoption"
+        - "unrestricted RR_E theorem"
+        - "detector semantics"
+        - "matter coupling"
+  open_or_blocked_physical_targets:
+    - target: "RR_E_underdetermination_obstruction"
+      status: "scoped_obstruction_candidate"
+      missing_burden_or_authority: "current ontology does not derive unrestricted RR_E irrelevance or a source-law adoption primitive"
+      evidence_not_to_overread:
+        - "RR_E obstruction review verdict"
+      next_lawful_route: "P9-T04 selector"
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream derivation burdens and protected authorities remain missing"
+      evidence_not_to_overread:
+        - "red-team review matrix"
+        - "selector_required verdicts"
+      next_lawful_route: "P9-T04 selector"
+  forbidden_overread:
+    - "red-team review as proof authority"
+    - "selector_required as repair or freeze authorization"
+    - "not_enough_assumptions as global no-go theorem"
+    - "scoped evidence/precondition as adoption"
+verdict: "v14_p9_t03_external_red_team_pilot_completed_next_selector"
+coherent_resolution_summary: "RT-20260702-026 completed a non-promotional external red-team pilot. The current scoped object statuses survive within scope, but downstream matter-coupling-adjacent findings require selector routing before any repair, freeze, literature, or continuation route."
+next_recommendation: "Run one bounded v14 P9-T04 red-team findings selector before literature comparison, repair, freeze, or downstream physics routes."
+physics_progress_status:
+  status: "external_review_no_distance_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "response semantics and coupling derivation pressure reviewed externally"
+  explanation: "This review attacks overread risk and not-enough-assumptions pressure but does not update the Distance-to-GR ledger or discharge a derivation burden."
+  downstream_promotion_reference: "authorization_layers.downstream_physics_promotion_authorized"
+distance_to_gr_status:
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "response semantics and coupling derivation"
+  burden_matrix:
+    - burden: "M_src"
+      status_before: "accepted"
+      status_after: "accepted"
+      review_delta: "no blocking issue found within scoped source-only status"
+    - burden: "g_eff"
+      status_before: "accepted scoped source-extension"
+      status_after: "accepted scoped source-extension"
+      review_delta: "no blocking issue found within scoped source-extension status"
+    - burden: "matter coupling"
+      status_before: "accepted_as_scoped_evidence_precondition in ledger control language"
+      status_after: "accepted_as_scoped_evidence_precondition in ledger control language"
+      review_delta: "not enough assumptions for matter-coupling derivation; selector required"
+    - burden: "Einstein equations"
+      status_before: "blocked"
+      status_after: "blocked"
+      review_delta: "no stress-energy matter action or field-equation authority created"
+    - burden: "benchmark promotion"
+      status_before: "human-gated"
+      status_after: "human-gated"
+      review_delta: "no benchmark authority created"
+new_mathematical_payload:
+  - payload_id: "p9_t03_red_team_verdict_matrix"
+    payload_type: "dependency_map_update"
+    status: "draft_control_review"
+    artifact_path: "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_core_frontier.yaml"
+    summary: "Seven-object red-team verdict matrix separates scoped no-blocking findings from selector-required evidence/precondition pressure and scoped obstruction pressure."
+  - payload_id: "p9_t03_not_enough_assumptions_certificate"
+    payload_type: "missing_assumption_certificate"
+    status: "draft_control_review"
+    artifact_path: "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_core_frontier.yaml"
+    summary: "The reviewed sources do not contain enough assumptions for matter semantics detector semantics universal coupling stress-energy matter action or Einstein-equation conclusions."
+freeze_criteria_status:
+  evaluated: true
+  repeated_burden_or_scoped_obstruction: true
+  freeze_recommended: false
+  reason: "P9-T03 found selector-required and scoped-obstruction pressure but does not itself authorize freeze; P9-T04 must classify findings first."
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P9-T04 red-team findings selector"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "P9-T03 is an external review packet and does not change Distance-to-GR ledger status."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260702-026/artifacts/child_phys_math_p9_t03_external_red_team_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260702-026/artifacts/child_phys_phil_p9_t03_external_red_team_review.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260702-026/artifacts/parent_conflict_review_p9_t03_external_red_team_review.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260702-026/artifacts/p9_t03_external_red_team_review_core_frontier.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260702-026/artifacts/parent_fusion_notes_p9_t03_external_red_team_review.md"
+    summary: "The parent accepts the mathematical missing-assumption certificate and philosophical authority separation. The fused result routes substantive findings to P9-T04 selector without adding repair freeze literature or promotion authority."
+external_red_team_review_summary:
+  global_legacy_verdict: "not_enough_assumptions"
+  recommended_next_route: "v14_p9_t04_external_red_team_findings_selector"
+  per_object_verdicts:
+    M_src: "no_blocking_issue_found_within_scope"
+    g_eff: "no_blocking_issue_found_within_scope"
+    MSStableMatterSemanticsBridge_v1: "selector_required"
+    SourceMatterSemanticsAdoptionReadinessLaw_v1: "selector_required"
+    PositiveMSProfile_v1: "selector_required"
+    RR_E_underdetermination_obstruction: "scoped_obstruction_candidate"
+    RR_ETransportCompletenessOrInvarianceLaw_v1: "selector_required"
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "coupling-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  summary: "P9-T03 is an adversarial review and selector-routing packet. It does not promote downstream physics or benchmark claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 541
+    relationship_row_count: 2878
+    semantic_row_count: 541
+    vault_row_count: 541
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P9-T03 external red-team pilot core objects\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P9-T03 external red-team pilot core objects"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"SourceMatterSemanticsAdoptionReadinessLaw_v1 PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1\" --limit 10 --json"
+      query_type: "search"
+      query_text: "SourceMatterSemanticsAdoptionReadinessLaw_v1 PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+        - "MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY"
+        - "MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES"
+        - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC"
+        - "TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-COMPLETENESS-OR-INVARIANCE-LAW-FORMALIZER"
+        - "TEX-V13-P5-T04-RR-E-THEOREM-REFUTER-STRESS"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "6338b4971314875e763668aef76017479a8515c7476df94930ddd6f2794c9f1c"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "cfdd7d68d3ef96922b71a448a1e0ed33310fecc78c933a0c5ace029f8057c8e7"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/scoped_positive_claim_vocabulary.md"
+      source_hash: "d588561071cce453663dbbb29a38e1befa9a95dd179c438a63c17ab9a6961193"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/scoped_claim_language_examples.md"
+      source_hash: "83e6917be58060ada2a185a7ac1669fae526832161b829c37091a095f698c7d6"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/public_status_table_source_spec.md"
+      source_hash: "83dab10e855ced993968208fae42bb5d729bbb3dc403c91bfda15a0a816aa21e"
+    - object_id: "TEX-V13-P5-FOLLOWUP-RR-E-TRANSPORT-COMPLETENESS-OR-INVARIANCE-LAW-FORMALIZER"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260701-027/artifacts/rr_e_transport_completeness_or_invariance_law_formalizer_v1.tex"
+      source_hash: "a56da8ba6f60e0c26692df7fb903825c57c4f2d3417f580c9b7d1e59aaaf8bf4"
+    - object_id: "TEX-V13-P5-T04-RR-E-THEOREM-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex"
+      source_hash: "e3ec5e09aa1883c3d4b3a94534013a98120933c87dd74ddfee31937c0b1e7d80"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
+p9_t03_validation_receipts:
+  review_artifact_hash: "2f40f0e1981a3457ee2770294280a33e3b381bb5243bcba084199fd371548427"
+  report_hash: "8134bcb049d840e4f6c95526f37baa65d101e8bb7047972c6c515566244e0d67"
