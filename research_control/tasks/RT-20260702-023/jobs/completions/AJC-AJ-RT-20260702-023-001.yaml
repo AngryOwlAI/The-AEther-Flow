@@ -1,0 +1,256 @@
+completion_id: "AJC-AJ-RT-20260702-023-001"
+job_id: "AJ-RT-20260702-023-001"
+task_id: "RT-20260702-023"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-02T07:47:14Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v14"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  related_plan_task_id: "P8-T06"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Validated P8 route-orbit hardening and routed to P9 external red-team role-contract work."
+  downstream_tasks_not_implemented:
+    - "P9 external red-team role contract"
+    - "P9 red-team review template"
+    - "P9 red-team pilot"
+    - "P9 red-team selector"
+    - "P10 literature comparison"
+    - "P11 matter-coupling moratorium"
+    - "P12 no-target certificate hygiene"
+    - "P13 RR_E separation as burden"
+    - "P14 final integration audit"
+    - "source-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p8_completed: true
+output_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-023/00_TASK.yaml"
+  - "research_control/tasks/RT-20260702-023/DDR-20260702-023.md"
+  - "research_control/tasks/RT-20260702-023/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260702-023/artifacts/validate_p8_route_orbit_phase.py"
+  - "research_control/tasks/RT-20260702-023/artifacts/p8_t06_route_orbit_phase_validation_report.json"
+  - "research_control/tasks/RT-20260702-023/artifacts/p8_t06_route_orbit_phase_validation_receipt.md"
+  - "research_control/tasks/RT-20260702-023/jobs/AJ-RT-20260702-023-001.yaml"
+  - "research_control/tasks/RT-20260702-023/jobs/completions/AJC-AJ-RT-20260702-023-001.yaml"
+  - "research_control/tasks/RT-20260702-023/roles/validator-engineer@0.2.0--RT-20260702-023.yaml"
+  - "research_control/handoffs/handoff-0476.yaml"
+  - "research_control/handoffs/handoff-0476.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0475.yaml"
+  - "research_control/design/route_signature_definition.md"
+  - "research_control/design/obstruction_and_freeze_control.md"
+  - "scripts/research_control/extract_route_history.py"
+  - "scripts/research_control/validate_route_orbits.py"
+  - "tests/test_route_history_extractor.py"
+  - "tests/test_route_orbit_validator.py"
+  - "research_control/tasks/RT-20260702-018/artifacts/p8_t01_route_signature_definition_receipt.md"
+  - "research_control/tasks/RT-20260702-019/artifacts/p8_t02_route_history_extractor_receipt.md"
+  - "research_control/tasks/RT-20260702-020/artifacts/p8_t03_route_orbit_validator_receipt.md"
+  - "research_control/tasks/RT-20260702-021/artifacts/p8_t04_route_orbit_pilot_report.json"
+  - "research_control/tasks/RT-20260702-022/artifacts/p8_t05_freeze_taxonomy_receipt.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=541 relationship_row_count=2877 semantic_row_count=541 vault_row_count=541"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v14.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/route_signature_definition.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"route_signature_definition route_orbit_validator freeze taxonomy\" --limit 5 --json | exit_code=0 | returned_object_ids=SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | status=ready active_task=RT-20260702-022 latest_handoff=handoff-0475 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/validate_route_orbits.py --sample recent-matter-rr-e --json | exit_code=0 | status=PASS signature_count=22 hard_failure_count=0 warning_count=0"
+  - ".venv/bin/python scripts/research_control/extract_route_history.py --sample recent-matter-rr-e --json | exit_code=0 | signature_count=22 extraction_errors=0"
+  - ".venv/bin/python -m unittest tests.test_route_history_extractor tests.test_route_orbit_validator | exit_code=0 | tests=5"
+  - ".venv/bin/python research_control/tasks/RT-20260702-023/artifacts/validate_p8_route_orbit_phase.py --json | exit_code=0 | status=PASS checks=5"
+  - ".venv/bin/python research_control/tasks/RT-20260702-023/artifacts/validate_p8_route_orbit_phase.py --output research_control/tasks/RT-20260702-023/artifacts/p8_t06_route_orbit_phase_validation_report.json | exit_code=0 | report_hash=9539fb404d507f941015ac775df9dbbffc9ee3315583f10de495aeae9bb107ed"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory lookup of the v14 plan returned the canonical plan"
+      - "query_memory lookup of route_signature_definition returned the canonical schema"
+      - "continue_research.py resolved handoff-0475 to one bounded P8-T06 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "validate_route_orbits.py recent matter/RR_E sample returned PASS with zero hard failures and zero warnings"
+      - "task-local phase validator reported required_paths route_tools pilot_report freeze_taxonomy and handoff_boundary PASS"
+      - "P8-T04 pilot report has combined recent-chain PASS, 23 signatures, zero hard failures, and synthetic replay flagged with six hard-fail pairs"
+      - "P8-T05 freeze taxonomy contains all six required labels"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write and --check are required after handoff-0476 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate is required before checkpoint"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "current-frontier render/check required after handoff-0476 state update"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is required before this transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "p8_route_orbit_phase_validation"
+      status: "project-control phase validation only"
+      authority_path: "research_control/tasks/RT-20260702-023/artifacts/p8_t06_route_orbit_phase_validation_report.json"
+      supports_target: "P9 external red-team mode readiness"
+      does_not_establish:
+        - "route freezing"
+        - "physics proof authority"
+        - "source-law adoption"
+        - "matter coupling"
+        - "Einstein equations"
+        - "benchmark promotion"
+  open_or_blocked_physical_targets:
+    - target: "matter semantics detector semantics universal coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation"
+      status: "open or blocked"
+      missing_burden_or_authority: "downstream derivation burdens and protected authorities remain missing"
+      evidence_not_to_overread:
+        - "route-orbit validation PASS"
+        - "phase validation PASS"
+        - "P8 freeze taxonomy labels"
+      next_lawful_route: "P9-T01 external red-team role contract"
+  forbidden_overread:
+    - "route-orbit validation as physics proof"
+    - "phase validation as route freeze authority"
+    - "freeze labels as source-law evidence"
+    - "P9 readiness as external red-team result"
+verdict: "v14_p8_t06_route_orbit_phase_validation_completed_next_external_red_team_role_contract"
+coherent_resolution_summary: "RT-20260702-023 validated P8 route-orbit hardening and preserved every downstream physics block."
+next_recommendation: "Run one bounded v14 P9-T01 external red-team role contract packet before red-team template pilot selector literature comparison or downstream physics routes."
+physics_progress_status:
+  status: "process_control_no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "P8 route-orbit phase validation only"
+  explanation: "This project-control packet validates route-orbit hardening only and does not change the Distance-to-GR ledger or scientific status."
+  downstream_promotion_reference: "authorization_layers.downstream_physics_promotion_authorized"
+distance_to_gr_delta:
+  changed: false
+  burden_id: ""
+  milestone: ""
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P9-T01 external red-team role contract"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "P8-T06 validates process controls only."
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "coupling-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  summary: "P8-T06 is route-orbit control validation and does not promote downstream physics or benchmark claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 541
+    relationship_row_count: 2877
+    semantic_row_count: 541
+    vault_row_count: 541
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v14.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/route_signature_definition.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/route_signature_definition.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"route_signature_definition route_orbit_validator freeze taxonomy\" --limit 5 --json"
+      query_type: "search"
+      query_text: "route_signature_definition route_orbit_validator freeze taxonomy"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/route_signature_definition.md"
+      source_hash: "cd7431c0c4986533a530e6a913a34ef6f6e09a77670f070ea85833951a871f79"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
+p8_validation_receipts:
+  route_tool_signature_count: 22
+  phase_report_hash: "9539fb404d507f941015ac775df9dbbffc9ee3315583f10de495aeae9bb107ed"
+  phase_validator_hash: "f79a4a0725bab539584557a143b0401eeea4f91eee0c004767e4bbec80b8930e"
+  p8_t04_combined_signature_count: 23
+  p8_t04_no_payload_replay_hard_failure_count: 6
+  required_freeze_label_count: 6

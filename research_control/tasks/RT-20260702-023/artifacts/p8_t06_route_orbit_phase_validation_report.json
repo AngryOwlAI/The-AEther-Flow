@@ -1,0 +1,178 @@
+{
+  "checks": {
+    "freeze_taxonomy": "PASS",
+    "handoff_boundary": "PASS",
+    "pilot_report": "PASS",
+    "required_paths": "PASS",
+    "route_tools": "PASS"
+  },
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "phase_validation_is_physics_evidence": false,
+    "physics_promotion_authorized": false
+  },
+  "freeze_taxonomy_check": {
+    "missing_labels": [],
+    "present_labels": [
+      "RR_E_UNRESTRICTED_IRRELEVANCE_UNDERDETERMINATION",
+      "RR_E_TRANSPORT_INVARIANCE_MISSING_SOURCE_LAW",
+      "MATTER_SEMANTICS_EVIDENCE_AS_ADOPTION_OVERREAD",
+      "NO_TARGET_CERTIFICATE_POSITIVE_SEMANTICS_OVERREAD",
+      "SCOPED_GATE_RESULT_WITHOUT_BOUNDARY_SYNC",
+      "REPEATED_FORMALIZE_AUDIT_STRESS_GATE_NO_NEW_PAYLOAD"
+    ],
+    "required_label_count": 6,
+    "status": "PASS"
+  },
+  "generated_at": "2026-07-02T07:47:14Z",
+  "handoff_boundary_check": {
+    "missing_fragments": [],
+    "next_route_fragment_present": true,
+    "status": "PASS"
+  },
+  "pilot_report_check": {
+    "acceptance": {
+      "combined_recent_chains_no_hard_failures": true,
+      "p5_t06_boundary_sync_recognized_not_orbiting": true,
+      "recent_chains_classified_with_source_evidence": true,
+      "repeated_no_payload_loop_flagged": true
+    },
+    "chain_count": 4,
+    "combined_recent_chain_validation": {
+      "hard_failure_count": 0,
+      "signature_count": 23,
+      "status": "PASS",
+      "warning_count": 0
+    },
+    "no_payload_replay_control": {
+      "control_id": "REPEATED_FORMALIZE_AUDIT_STRESS_GATE_NO_NEW_PAYLOAD",
+      "flagged": true,
+      "hard_failure_count": 6
+    },
+    "report_status": "PASS",
+    "source_evidence_complete": true,
+    "status": "PASS"
+  },
+  "required_paths": [
+    {
+      "exists": true,
+      "id": "p8_t01_route_signature_definition",
+      "path": "research_control/design/route_signature_definition.md",
+      "sha256": "cd7431c0c4986533a530e6a913a34ef6f6e09a77670f070ea85833951a871f79",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t01_receipt",
+      "path": "research_control/tasks/RT-20260702-018/artifacts/p8_t01_route_signature_definition_receipt.md",
+      "sha256": "5781c2b5e2bb3c40a0e3c2a93d6f646fca97ee225724a713671b5e6bd8d83ec9",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t02_extractor",
+      "path": "scripts/research_control/extract_route_history.py",
+      "sha256": "b01e9b9e4a216e6c5ca8c86e91d2d77e043539d24b76aa8cd7951c1d350536f4",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t02_receipt",
+      "path": "research_control/tasks/RT-20260702-019/artifacts/p8_t02_route_history_extractor_receipt.md",
+      "sha256": "d7300a0dd425e99b65a468c70c02924a790e4d8a952f22a510861153c554d56b",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t02_sample",
+      "path": "research_control/tasks/RT-20260702-019/artifacts/p8_t02_route_history_sample.json",
+      "sha256": "f299c9bafc576982192e38f6fe7c810745ef659119ef417ce8c6e38bd17d8fb1",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t03_validator",
+      "path": "scripts/research_control/validate_route_orbits.py",
+      "sha256": "54c50c1f170ddab17cea686e36985ba198d86de8503765a64c6a49a35455a1c6",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t03_tests",
+      "path": "tests/test_route_orbit_validator.py",
+      "sha256": "6b394fef45aa5498230a9b0ffff330fb0fb40a190fef47910698e460b1cd2b7f",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t03_receipt",
+      "path": "research_control/tasks/RT-20260702-020/artifacts/p8_t03_route_orbit_validator_receipt.md",
+      "sha256": "857e87b869f109db898c65ef762881d818d2aba20de622f013ea528aa6fc8ec4",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t03_sample",
+      "path": "research_control/tasks/RT-20260702-020/artifacts/p8_t03_route_orbit_validator_sample.json",
+      "sha256": "89ca8467bd4945b4bf7aa8b8a8409ccd36c897de299a58e296607ee3585d115d",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t04_pilot_report",
+      "path": "research_control/tasks/RT-20260702-021/artifacts/p8_t04_route_orbit_pilot_report.json",
+      "sha256": "a37f3ded85280ec3d1f0f13eb7320fa914eb324d57dbd9bdf98631e571e3e0e0",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t04_pilot_receipt",
+      "path": "research_control/tasks/RT-20260702-021/artifacts/p8_t04_route_orbit_pilot_receipt.md",
+      "sha256": "44a90cfe18cc114b6a0a72479f0a635283cb9148aa1f5269013aada16d755207",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t05_freeze_taxonomy",
+      "path": "research_control/design/obstruction_and_freeze_control.md",
+      "sha256": "42f07f733d3d28beaef78c1d8509ef97d4bb7bdda36ef21eb06375600d175d57",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "p8_t05_receipt",
+      "path": "research_control/tasks/RT-20260702-022/artifacts/p8_t05_freeze_taxonomy_receipt.md",
+      "sha256": "f65c5616af61feac9cfc0020c50bdc6f02ccd5db0840764583174265a085e0ae",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "handoff_0475",
+      "path": "research_control/handoffs/handoff-0475.yaml",
+      "sha256": "b87da08bb001c7986b0a0ce97223a448cae210622604d9fa5f4c28aecc85fec1",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "id": "v14_plan",
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v14.md",
+      "sha256": "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec",
+      "status": "PASS"
+    }
+  ],
+  "route_tool_check": {
+    "extraction_error_count": 0,
+    "hard_failure_count": 0,
+    "history_schema_id": "route_history_extractor_v1",
+    "signature_count": 22,
+    "signature_schema_id": "route_signature_definition_v1",
+    "status": "PASS",
+    "task_count": 22,
+    "validator_schema_id": "route_orbit_validator_v1",
+    "validator_status": "PASS",
+    "warning_count": 0
+  },
+  "schema_id": "p8_t06_route_orbit_phase_validation_report_v1",
+  "status": "PASS"
+}
