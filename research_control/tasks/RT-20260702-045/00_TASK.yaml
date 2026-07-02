@@ -1,0 +1,43 @@
+task_id: "RT-20260702-045"
+title: "v14 P13-T03 RR_E test fixtures for linter and support formalization"
+task_type: "v14_p13_t03_rr_e_test_fixtures_linter_support"
+status: "completed"
+created_at: "2026-07-02T13:33:43Z"
+updated_at: "2026-07-02T13:33:43Z"
+closed_at: "2026-07-02T13:33:43Z"
+parent_task_id: "RT-20260702-044"
+decision_id: "DDR-20260702-045"
+agent_job_id: "AJ-RT-20260702-045-001"
+role_execution_id: "validator-engineer@0.2.0--RT-20260702-045"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+objective: "Add deterministic RR_E overread test fixtures for linter and support-only formalization boundary use."
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P13"
+plan_task_id: "P13-T03"
+allowed_write_paths:
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "research_control/design/scoped_claim_language_examples.md"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/rr_e_overread.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260702-045/**"
+  - "research_control/tasks/RT-*/jobs/**"
+  - "research_control/handoffs/handoff-0498.yaml"
+  - "research_control/handoffs/handoff-0498.md"
+expected_outputs:
+  - "RR_E overread fixture with all eight required P13-T03 cases."
+  - "Focused claim-language unit tests for RR_E overread and corrected certificate wording."
+  - "Task-local validator report proving fixture and examples coverage."
+  - "Research-control completion and handoff to P13-T04."
+claim_boundary:
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  rr_e_transport_law_adoption_authorized: false
+  unrestricted_rr_e_irrelevance_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+validation_status: "PASS"
+result_summary: "P13-T03 integrated RR_E overread fixtures and linter tests and routed to P13-T04 with no physics claim promotion."
+next_recommended_action: "Run one bounded v14 P13-T04 RR_E theorem inventory crosslink update packet."

@@ -139,6 +139,34 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["status"], "FAIL")
         self.assertEqual(report["findings"][0]["class_id"], "rr_e_transport_source_law_overclaim")
 
+    def test_rr_e_overread_fixture_fails(self) -> None:
+        fixture_text = (REPO_ROOT / "tests/fixtures/claim_language/rr_e_overread.md").read_text(
+            encoding="utf-8"
+        )
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+        class_ids = [finding["class_id"] for finding in report["findings"]]
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertGreaterEqual(report["hard_fail_count"], 12)
+        self.assertGreaterEqual(class_ids.count("unrestricted_rr_e_irrelevance_overclaim"), 9)
+        self.assertGreaterEqual(class_ids.count("rr_e_transport_source_law_overclaim"), 3)
+
+    def test_rr_e_certificate_scoped_wording_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "RR_E records R0 and R1 remain separated unless an explicit source transport, "
+                "source invariance, or source factorization certificate for declared object F "
+                "identifies them. A transported pair with certificate is scoped source-side "
+                "evidence/precondition only; it is not source-law adoption, not unrestricted "
+                "RR_E irrelevance, not detector semantics, not g_eff scope expansion, and not "
+                "benchmark promotion.\n"
+            ),
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
     def test_validator_as_proof_overread_fails(self) -> None:
         report = self.scan_one(
             "research_control/current_frontier.md",

@@ -260,7 +260,46 @@ Required source paths to inspect:
 Forbidden overread: Do not claim unrestricted `RR_E` irrelevance, detector
 collapse, matter-sector bridge completion, or downstream GR premise status.
 
-### 8. `audit_ready` Ambiguity
+### 8. `RR_E` Support-Formalization And Certificate Collapse Overread
+
+Bad wording:
+
+```text
+same-support different-RR_E records identified without certificate.
+g_eff collapses RR_E.
+benchmark behavior collapses RR_E.
+process authority collapses RR_E.
+```
+
+Why it is wrong: support equality, validator success, process authority,
+benchmark behavior, and downstream metric convenience do not identify `RR_E`
+records. Identification requires explicit source transport, source invariance,
+or source factorization certificates for a declared object. Missing
+certificate data fails closed to separation or obstruction.
+
+Correct wording:
+
+```text
+RR_E records remain separated unless an explicit source transport, source
+invariance, or source factorization certificate for the declared object
+identifies them. A transported pair with certificate is scoped source-side
+evidence/precondition only; it is not source-law adoption, not unrestricted
+RR_E irrelevance, and not downstream physics promotion.
+```
+
+Required source paths to inspect:
+
+- `research_control/design/rr_e_separation_boundary_control_note.md`
+- `research_control/design/rr_e_allowed_identification_checklist.md`
+- `tests/fixtures/claim_language/rr_e_overread.md`
+- `research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex`
+
+Forbidden overread: Do not identify same-support different-`RR_E` records
+without certificate data; do not collapse `RR_E` by detector semantics,
+`g_eff`, benchmark behavior, process authority, support-only formalization, or
+evidence/precondition status.
+
+### 9. `audit_ready` Ambiguity
 
 Bad wording:
 

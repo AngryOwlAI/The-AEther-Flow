@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "detail": "RR_E fixture contains every P13-T03 required overread case.",
+      "id": "fixture_contains_required_overreads",
+      "passed": true
+    },
+    {
+      "detail": "RR_E overread fixture produces hard failures on a current control surface.",
+      "id": "fixture_hard_fails",
+      "passed": true
+    },
+    {
+      "detail": "Certificate-scoped RR_E wording produces no claim-language findings.",
+      "id": "certificate_scoped_wording_passes",
+      "passed": true
+    },
+    {
+      "detail": "Examples pack contains RR_E bad wording and corrected wording.",
+      "id": "examples_pack_contains_before_after",
+      "passed": true
+    },
+    {
+      "detail": "Taxonomy stores P13-T03 RR_E overread patterns.",
+      "id": "taxonomy_contains_required_patterns",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "rr_e_transport_law_adoption_authorized": false,
+    "source_law_adoption_authorized": false,
+    "unrestricted_rr_e_irrelevance_authorized": false
+  },
+  "corrected_finding_count": 0,
+  "fixture_finding_classes": [
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "unrestricted_rr_e_irrelevance_overclaim",
+    "rr_e_transport_source_law_overclaim",
+    "rr_e_transport_source_law_overclaim",
+    "rr_e_transport_source_law_overclaim"
+  ],
+  "fixture_hard_fail_count": 12,
+  "status": "PASS",
+  "task_id": "RT-20260702-045"
+}
