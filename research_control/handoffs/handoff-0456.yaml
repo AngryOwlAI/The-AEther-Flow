@@ -1,0 +1,97 @@
+handoff_id: "handoff-0456"
+created_at: "2026-07-02T00:38:55Z"
+task_id: "RT-20260702-003"
+decision_id: "DDR-20260702-003"
+job_id: "AJ-RT-20260702-003-001"
+completion_path: "research_control/tasks/RT-20260702-003/jobs/completions/AJC-AJ-RT-20260702-003-001.yaml"
+source_task_id: "RT-20260702-003"
+source_job_id: "AJ-RT-20260702-003-001"
+source_completion_id: "AJC-AJ-RT-20260702-003-001"
+status: "completed"
+summary: "RT-20260702-003 completed one bounded v14 P5-T01 public status table source spec packet. It created and registered the canonical public status table source spec with required columns and high-risk rows and made no public propagation or physics claim changes."
+next_action: "Run one bounded v14 P5-T02 README and GitHub-facing status update packet before HTML source-spec updates public regeneration or downstream physics routes."
+required_next_packet:
+  role_id: "documentation-curator"
+  role_version: "2.0.0"
+  packet_count: 1
+  task_type: "v14_p5_t02_readme_github_facing_status_update"
+  objective: "Update README and selected GitHub-facing Markdown surfaces to include or link to the public status table source spec while preserving all claim boundaries."
+hard_blocks:
+  - "canonical ontology edit"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "MetricData(E) adoption"
+  - "g_eff scope expansion"
+  - "coupling-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "stress-energy tensor"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+known_followup_evidence:
+  - path: "research_control/design/public_status_table_source_spec.md"
+    note: "Canonical P5-T01 public status table source spec for later README GitHub-facing HTML and public regeneration packets."
+  - path: "research_control/tasks/RT-20260702-003/artifacts/p5_t01_public_status_table_source_spec_receipt.md"
+    note: "P5-T01 receipt proving required columns and high-risk rows are covered."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "targeted memory search returned P4-T05 summary current-frontier and v14 plan"
+      - "continue_research.py resolved handoff-0455 to one bounded P5-T01 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "public_status_table_source_spec.md includes all required P5-T01 columns"
+      - "public_status_table_source_spec.md includes all required P5-T01 high-risk rows"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "source-spec claim-language changed-file gate passed with zero hard failures"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is recorded in the completion and must pass before this transaction is committed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current_frontier.md regenerated from handoff-0456"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and validate-only are required receipts for this packet"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-path claim-language linter is required and records no physics-promotion authority"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: ""
