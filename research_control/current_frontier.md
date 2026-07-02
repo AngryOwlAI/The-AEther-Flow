@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-043` and `handoff-0496`.
+`RT-20260702-044` and `handoff-0497`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-043` |
-| Latest handoff ID | `handoff-0496` |
-| Current status | `v14_p13_t01_rr_e_separation_boundary_note_completed_next_allowed_identification_checklist` |
+| Active task ID | `RT-20260702-044` |
+| Latest handoff ID | `handoff-0497` |
+| Current status | `v14_p13_t02_rr_e_allowed_identification_checklist_completed_next_fixtures` |
 | Current route family | tracked continue-research route |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p13 t02 rr e allowed identification checklist |
-| Required next authority | Run one bounded v14 P13-T02 RR_E allowed-identification checklist packet. |
-| Next recommended action | Run one bounded v14 P13-T02 RR_E allowed-identification checklist packet. |
+| Current burden | none for physics derivation; live control burden is v14 p13 t03 rr e test fixtures linter support |
+| Required next authority | Run one bounded v14 P13-T03 RR_E test fixtures for linter/support formalization packet. |
+| Next recommended action | Run one bounded v14 P13-T03 RR_E test fixtures for linter/support formalization packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-043/00_TASK.yaml`.
-- Active task objective: Create a control note preserving RR_E separation and scoped identification rules.
-- Latest handoff path: `research_control/handoffs/handoff-0496.yaml`.
-- Latest handoff summary: P13-T01 RR_E separation boundary control note completed.
+- Active task path: `research_control/tasks/RT-20260702-044/00_TASK.yaml`.
+- Active task objective: Create checklist for any future route that identifies, transports, factors, or collapses RR_E records.
+- Latest handoff path: `research_control/handoffs/handoff-0497.yaml`.
+- Latest handoff summary: P13-T02 RR_E allowed-identification checklist completed.
 - Current route family: tracked continue-research route.
-- Next recommended action: Run one bounded v14 P13-T02 RR_E allowed-identification checklist packet.
+- Next recommended action: Run one bounded v14 P13-T03 RR_E test fixtures for linter/support formalization packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P13-T02 RR_E allowed-identification checklist packet.
+Run one bounded v14 P13-T03 RR_E test fixtures for linter/support formalization packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-043`;
-- latest handoff: `handoff-0496`;
-- current status: `v14_p13_t01_rr_e_separation_boundary_note_completed_next_allowed_identification_checklist`;
+- active task: `RT-20260702-044`;
+- latest handoff: `handoff-0497`;
+- current status: `v14_p13_t02_rr_e_allowed_identification_checklist_completed_next_fixtures`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0496.yaml`
-- `research_control/tasks/RT-20260702-043/00_TASK.yaml`
+- `research_control/handoffs/handoff-0497.yaml`
+- `research_control/tasks/RT-20260702-044/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0496*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0497*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

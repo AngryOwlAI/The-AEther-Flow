@@ -139,6 +139,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`
+- `MD-RESEARCH-CONTROL-DESIGN-RR-E-ALLOWED-IDENTIFICATION-CHECKLIST` `research_control/design/rr_e_allowed_identification_checklist.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RR-E-SEPARATION-BOUNDARY-CONTROL-NOTE` `research_control/design/rr_e_separation_boundary_control_note.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES` `research_control/design/scoped_claim_language_examples.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `research_control/design/scoped_positive_claim_vocabulary.md`
@@ -695,6 +696,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-table-source-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `wiki/markdown/md-research-control-design-research-dependency-graph-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `wiki/markdown/md-research-control-design-route-signature-definition.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-RR-E-ALLOWED-IDENTIFICATION-CHECKLIST` `wiki/markdown/md-research-control-design-rr-e-allowed-identification-checklist.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RR-E-SEPARATION-BOUNDARY-CONTROL-NOTE` `wiki/markdown/md-research-control-design-rr-e-separation-boundary-control-note.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES` `wiki/markdown/md-research-control-design-scoped-claim-language-examples.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `wiki/markdown/md-research-control-design-scoped-positive-claim-vocabulary.md`

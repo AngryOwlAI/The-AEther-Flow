@@ -23,6 +23,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `research_control/design/positive_semantics_requirement_note.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-RR-E-ALLOWED-IDENTIFICATION-CHECKLIST` `research_control/design/rr_e_allowed_identification_checklist.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-RR-E-SEPARATION-BOUNDARY-CONTROL-NOTE` `research_control/design/rr_e_separation_boundary_control_note.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
