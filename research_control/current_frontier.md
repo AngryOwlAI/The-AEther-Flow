@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260702-048` and `handoff-0501`.
+`RT-20260702-049` and `handoff-0502`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260702-048` |
-| Latest handoff ID | `handoff-0501` |
-| Current status | `v14_p14_t01_coverage_audit_completed_next_metrics_report` |
-| Current route family | implementation_plan_coverage_audit |
+| Active task ID | `RT-20260702-049` |
+| Latest handoff ID | `handoff-0502` |
+| Current status | `v14_p14_t02_metrics_report_completed_next_frontier_refresh` |
+| Current route family | metrics_report_packet |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v14 p14 t02 physics progress metrics report |
-| Required next authority | Run one bounded v14 P14-T02 physics-progress metrics report packet. |
-| Next recommended action | Run one bounded v14 P14-T02 physics-progress metrics report packet. |
+| Current burden | none for physics derivation; live control burden is v14 p14 t03 current frontier final refresh |
+| Required next authority | Run one bounded v14 P14-T03 current frontier final refresh packet. |
+| Next recommended action | Run one bounded v14 P14-T03 current frontier final refresh packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260702-048/00_TASK.yaml`.
-- Active task objective: Audit every v14 recommendation and task, prove coverage status, and route to P14-T02 metrics reporting.
-- Latest handoff path: `research_control/handoffs/handoff-0501.yaml`.
-- Latest handoff summary: P14-T01 v14 coverage audit completed.
-- Current route family: implementation_plan_coverage_audit.
-- Next recommended action: Run one bounded v14 P14-T02 physics-progress metrics report packet.
+- Active task path: `research_control/tasks/RT-20260702-049/00_TASK.yaml`.
+- Active task objective: Run and interpret physics-progress metrics after v14 as AI-system diagnostics, not physics promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0502.yaml`.
+- Latest handoff summary: P14-T02 physics-progress metrics report completed.
+- Current route family: metrics_report_packet.
+- Next recommended action: Run one bounded v14 P14-T03 current frontier final refresh packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v14 P14-T02 physics-progress metrics report packet.
+Run one bounded v14 P14-T03 current frontier final refresh packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260702-048`;
-- latest handoff: `handoff-0501`;
-- current status: `v14_p14_t01_coverage_audit_completed_next_metrics_report`;
+- active task: `RT-20260702-049`;
+- latest handoff: `handoff-0502`;
+- current status: `v14_p14_t02_metrics_report_completed_next_frontier_refresh`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0501.yaml`
-- `research_control/tasks/RT-20260702-048/00_TASK.yaml`
+- `research_control/handoffs/handoff-0502.yaml`
+- `research_control/tasks/RT-20260702-049/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0501*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0502*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

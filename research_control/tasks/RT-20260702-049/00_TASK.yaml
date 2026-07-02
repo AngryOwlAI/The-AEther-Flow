@@ -1,0 +1,51 @@
+task_id: "RT-20260702-049"
+task_title: "v14 P14-T02 physics-progress metrics report"
+task_type: "metrics_report_packet"
+status: "completed"
+created_at: "2026-07-02T14:45:16Z"
+started_at: "2026-07-02T14:45:16Z"
+completed_at: "2026-07-02T14:45:16Z"
+parent_task_id: "RT-20260702-048"
+source_handoff_id: "handoff-0501"
+decision_id: "DDR-20260702-049"
+agent_job_id: "AJ-RT-20260702-049-001"
+plan_id: "recommendations_implementation_plan_continue_task-v14"
+plan_phase_id: "P14"
+plan_task_id: "P14-T02"
+objective: "Run and interpret physics-progress metrics after v14 as AI-system diagnostics, not physics promotion."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-01-goal-all-human-gates"
+claim_boundary:
+  proof_authority: false
+  ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  rr_e_transport_law_adoption_authorized: false
+  unrestricted_rr_e_irrelevance_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+scope:
+  allowed:
+    - "run scripts/research_control/report_physics_progress_metrics.py"
+    - "capture raw metrics JSON under the task artifacts directory"
+    - "interpret the required P14-T02 metrics categories as diagnostics"
+    - "validate that the interpretation distinguishes scoped evidence preconditions source-extension objects obstructions freezes route cycles Gate Chair reviews public status linter validations and remaining open GR burdens"
+    - "route to P14-T03 current frontier final refresh"
+  forbidden:
+    - "edit canonical ontology or science sources"
+    - "change the Distance-to-GR ledger"
+    - "treat metrics as physics evidence or proof authority"
+    - "adopt source laws matter semantics detector semantics coupling laws matter coupling Einstein equations benchmark status or completed derivation"
+    - "perform P14-T03 P14-T04 or P14-T05 in this packet"
+validation:
+  required_validator: "research_control/tasks/RT-20260702-049/artifacts/validate_p14_t02_metrics_report.py"
+  expected_report: "research_control/tasks/RT-20260702-049/artifacts/p14_t02_metrics_report_validation_report.json"
+  expected_status: "PASS"
+next_route:
+  plan_task_id: "P14-T03"
+  task_type: "current_frontier_final_refresh_packet"
+  role_family: "documentation-curator@2.0.0"
+  objective: "Refresh current frontier and verify v14 claim language validation layers and three-tier summary."
