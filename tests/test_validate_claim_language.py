@@ -207,6 +207,26 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["finding_count"], 0)
 
+    def test_efe_prerequisite_overread_fixture_fails(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/efe_prerequisite_overread.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+        class_ids = [finding["class_id"] for finding in report["findings"]]
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["hard_fail_count"], 6)
+        self.assertEqual(class_ids.count("premature_efe_prerequisite_overclaim"), 6)
+
+    def test_efe_prerequisite_scoped_wording_fixture_passes(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/efe_prerequisite_valid.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
     def test_validator_as_proof_overread_fails(self) -> None:
         report = self.scan_one(
             "research_control/current_frontier.md",

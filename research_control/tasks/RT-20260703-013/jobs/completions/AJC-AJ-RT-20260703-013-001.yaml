@@ -1,0 +1,277 @@
+completion_id: "AJC-AJ-RT-20260703-013-001"
+job_id: "AJ-RT-20260703-013-001"
+task_id: "RT-20260703-013"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-03T10:32:10Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P8-T02"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Added EFE prerequisite claim-language linter fixtures and tests required by v15 P8-T02 without changing physics status."
+  completed_v15_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "Gate Chair scoped evidence-status review for NarrowMSCertEq_v1"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P5-T01"
+    - "P5-T02"
+    - "P6-T01"
+    - "P6-T02"
+    - "P6-T03"
+    - "P7-T01"
+    - "P7-T02"
+    - "P7-T03"
+    - "P8-T01"
+    - "P8-T02"
+  downstream_tasks_not_implemented:
+    - "P9 progress and payload metrics"
+    - "P10 route-orbit hardening"
+    - "P11 validation pipeline"
+    - "P12 machine-readable claim graph"
+    - "P13 high-risk wording enforcement"
+    - "P14 public status documentation"
+    - "P15 support-only proof-assistant pilots"
+    - "P16 external red-team review process"
+    - "P17 negative-result publication track"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  p8_t01_completed: true
+  p8_t02_completed: true
+  phase_p8_completed: true
+output_paths:
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "research_control/design/claim_language_linter_reviewed_contexts.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/efe_prerequisite_overread.md"
+  - "tests/fixtures/claim_language/efe_prerequisite_valid.md"
+  - "research_control/tasks/RT-20260703-013/artifacts/validate_p8_t02_efe_prerequisite_linter_fixtures.py"
+  - "research_control/tasks/RT-20260703-013/artifacts/p8_t02_efe_prerequisite_linter_fixtures_report.json"
+  - "research_control/tasks/RT-20260703-013/artifacts/p8_t02_efe_prerequisite_linter_fixtures_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260703-013/00_TASK.yaml"
+  - "research_control/tasks/RT-20260703-013/DDR-20260703-013.md"
+  - "research_control/tasks/RT-20260703-013/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260703-013/jobs/AJ-RT-20260703-013-001.yaml"
+  - "research_control/tasks/RT-20260703-013/jobs/completions/AJC-AJ-RT-20260703-013-001.yaml"
+  - "research_control/tasks/RT-20260703-013/roles/validator-engineer@0.2.0--RT-20260703-013.yaml"
+  - "research_control/handoffs/handoff-0532.yaml"
+  - "research_control/handoffs/handoff-0532.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0531.yaml"
+  - "research_control/handoffs/handoff-0531.md"
+  - "research_control/design/einstein_equation_route_moratorium_v1.md"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "research_control/design/claim_language_linter_reviewed_contexts.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=565 relationship_row_count=2980 semantic_row_count=565 vault_row_count=565"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T02 EFE prerequisite validator linter fixtures\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RESEARCH-CONTROL-DESIGN-EINSTEIN-EQUATION-ROUTE-MORATORIUM-V1,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260703-012 latest_handoff=handoff-0531 boundary=director_decision_required"
+  - ".venv/bin/python -m unittest tests.test_validate_claim_language | exit_code=0 | tests=24"
+  - ".venv/bin/python research_control/tasks/RT-20260703-013/artifacts/validate_p8_t02_efe_prerequisite_linter_fixtures.py --output research_control/tasks/RT-20260703-013/artifacts/p8_t02_efe_prerequisite_linter_fixtures_report.json --json | exit_code=0 | status=PASS checks=11"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "targeted P8-T02 memory query returned current frontier moratorium note and the v15 plan canonical object"
+      - "canonical v15 plan handoff-0531 P8-T01 moratorium note linter taxonomy and reviewed contexts were inspected before routing"
+      - "continue_research.py resolved handoff-0531 to one bounded P8-T02 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "premature_efe_prerequisite_overclaim taxonomy class added"
+      - "bad EFE prerequisite fixture hard-fails as current control surface"
+      - "public-safe EFE prerequisite fixture passes"
+      - "reviewed contexts downgrade only the v15 P8-T02 fixture-plan quotation"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "p8_t02_efe_prerequisite_linter_fixtures_report.json status PASS with 11 checks"
+  unit_tests:
+    status: "PASS"
+    evidence:
+      - "tests.test_validate_claim_language ran 24 tests OK"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "full and changed claim-language linter checks required before checkpoint"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph rerender required after handoff-0532 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap required after updating linter taxonomy reviewed contexts fixtures and task state"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validators are required before checkpoint"
+      - "documentation-impact validation required before checkpoint"
+      - "research-control validation required before checkpoint"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command is authorized as the final transaction step after PASS validators"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-02"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+verdict: "post_v15_p8_t02_efe_prerequisite_linter_fixtures_completed_next_p9_t01_no_physics_delta"
+coherent_resolution_summary: "RT-20260703-013 completed the v15 P8-T02 project-control validator packet by adding premature EFE prerequisite taxonomy coverage bad and passing fixtures focused tests reviewed contexts and a task-local validation receipt."
+next_recommendation: "Run one bounded v15 P9-T01 Distance-to-GR delta report enforcement packet."
+physics_progress_status:
+  status: "process_control_no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "P8-T02 EFE prerequisite claim-language linter fixtures"
+  physics_promotion_authorized: false
+  explanation: "This packet adds linter fixtures only and does not change Einstein-equation or Distance-to-GR status."
+distance_to_gr_delta:
+  changed: false
+  burden_id: ""
+  milestone: ""
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P9-T01 Distance-to-GR delta report enforcement"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1_adoption"
+    - "unrestricted_RR_E_theorem"
+    - "PositiveMSProfile_v1_adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1_law_adoption"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "matter_action"
+    - "variation_principle"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+    - "global_theory_rejection"
+    - "future_source_extension_impossibility"
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "EFE prerequisite linter pass as proof authority"
+    - "source-law adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "PositiveMSProfile_v1 adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope change"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "variation principle"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+    - "future source-extension impossibility"
+  summary: "P8-T02 is linter fixture work and does not construct or adopt physics objects."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 565
+    relationship_row_count: 2980
+    semantic_row_count: 565
+    vault_row_count: 565
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T02 EFE prerequisite validator linter fixtures\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P8-T02 EFE prerequisite validator linter fixtures"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-DESIGN-EINSTEIN-EQUATION-ROUTE-MORATORIUM-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "63aa7322884fabf3a04cb7498ffdf147d6318d97cbca9b1183aa7fbb16b9dee6"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EINSTEIN-EQUATION-ROUTE-MORATORIUM-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/einstein_equation_route_moratorium_v1.md"
+      source_hash: "3404772e6f12a1f6617f01020a3b62106a675834a4ea6ede3b433b42ae47f5e4"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+p8_t02_validation_receipts:
+  bad_fixture_hard_fail_count: 6
+  bad_fixture_efe_prerequisite_finding_count: 6
+  passing_fixture_finding_count: 0
+  current_frontier_hard_fail_count: 0
+  plan_efe_prerequisite_hard_fail_count: 0

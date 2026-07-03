@@ -1,0 +1,82 @@
+{
+  "bad_fixture_efe_prerequisite_finding_count": 6,
+  "bad_fixture_hard_fail_count": 6,
+  "checks": [
+    {
+      "detail": "Taxonomy defines the premature EFE prerequisite overclaim class.",
+      "id": "taxonomy_class_present",
+      "passed": true
+    },
+    {
+      "detail": "Taxonomy maps every P8-T02 bad phrase to the EFE prerequisite class.",
+      "id": "taxonomy_contains_required_bad_phrases",
+      "passed": true
+    },
+    {
+      "detail": "Bad fixture contains every required P8-T02 premature EFE phrase.",
+      "id": "bad_fixture_contains_required_phrases",
+      "passed": true
+    },
+    {
+      "detail": "Bad fixture hard-fails when scanned as a current control surface.",
+      "id": "bad_fixture_hard_fails_as_current_control",
+      "passed": true
+    },
+    {
+      "detail": "Passing fixture contains the P8-T02 public-safe wording.",
+      "id": "passing_fixture_contains_scoped_wording",
+      "passed": true
+    },
+    {
+      "detail": "Public-safe P8-T02 wording produces no linter findings.",
+      "id": "passing_fixture_passes",
+      "passed": true
+    },
+    {
+      "detail": "Unit tests exercise the bad and passing EFE prerequisite fixtures.",
+      "id": "unit_tests_include_efe_prerequisite_cases",
+      "passed": true
+    },
+    {
+      "detail": "Reviewed context downgrades only the v15 plan's P8-T02 bad-example quotations.",
+      "id": "reviewed_contexts_cover_plan_bad_examples",
+      "passed": true
+    },
+    {
+      "detail": "The P8-T02 plan examples are represented by implemented fixtures.",
+      "id": "plan_p8_t02_examples_implemented",
+      "passed": true
+    },
+    {
+      "detail": "The P8-T01 moratorium source remains the scoped route-control basis.",
+      "id": "p8_t01_moratorium_remains_scoped",
+      "passed": true
+    },
+    {
+      "detail": "Current frontier has no P8-T02 claim-language hard failures.",
+      "id": "current_frontier_no_hard_failures",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "coupling_law_adoption_authorized": false,
+    "detector_semantics_adoption_authorized": false,
+    "einstein_equations_authorized": false,
+    "matter_action_authorized": false,
+    "matter_coupling_authorized": false,
+    "matter_semantics_adoption_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authorized": false,
+    "stress_energy_semantics_authorized": false,
+    "stress_energy_tensor_authorized": false,
+    "variation_principle_authorized": false
+  },
+  "current_frontier_hard_fail_count": 0,
+  "passing_fixture_finding_count": 0,
+  "plan_efe_prerequisite_hard_fail_count": 0,
+  "status": "PASS",
+  "task_id": "RT-20260703-013"
+}

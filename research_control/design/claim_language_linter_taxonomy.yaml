@@ -1,14 +1,14 @@
 schema_id: "claim_language_linter_taxonomy_v1"
-schema_version: "1.1.0"
+schema_version: "1.2.0"
 authority: "control"
 status: "active"
 created_at: "2026-07-01T20:07:07Z"
 created_by_task_id: "RT-20260701-037"
 created_by_job_id: "AJ-RT-20260701-037-001"
 created_by_role: "project-control-maintainer@0.2.0"
-updated_at: "2026-07-03T02:58:00Z"
-updated_by_task_id: "RT-20260703-003"
-updated_by_job_id: "AJ-RT-20260703-003-001"
+updated_at: "2026-07-03T10:32:10Z"
+updated_by_task_id: "RT-20260703-013"
+updated_by_job_id: "AJ-RT-20260703-013-001"
 updated_by_role: "validator-engineer@0.2.0"
 purpose: "Machine-readable taxonomy for P3-T02 claim-language linter implementation."
 scope_note: "This taxonomy classifies risky wording. It does not prove, adopt, promote, or reject any physics claim."
@@ -44,6 +44,9 @@ source_materials:
   - path: "research_control/design/semantic_layer_separation_control_note.md"
     role: "control_source"
     note: "P4-T03 defines the semantic-layer separation and proposes exact P4-T04 bad and passing fixture phrases."
+  - path: "research_control/design/einstein_equation_route_moratorium_v1.md"
+    role: "control_source"
+    note: "P8-T01 blocks direct EFE routing from scoped evidence/precondition alone while allowing bounded prerequisite work."
 
 authority_rules:
   taxonomy_is_physics_proof: false
@@ -567,6 +570,29 @@ phrase_classes:
       - "stress-energy target supplies matter action"
     corrective_language: "Keep SourceMatterSemantics_src, DetectorSemantics_det, and StressEnergyAction_sem separate; scoped evidence and hygiene certificates do not become detector, stress-energy/action, coupling-law, metric, or Einstein-equation authority."
 
+  - class_id: "premature_efe_prerequisite_overclaim"
+    plan_required_class_number: 21
+    title: "Premature EFE prerequisite overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bg_eff implies Einstein equations\\b"
+      - pattern: "\\bmatter-sector evidence implies stress-energy tensor\\b"
+      - pattern: "\\bno-target certificate implies matter action\\b"
+      - pattern: "\\bcoupling-law candidate evidence implies matter coupling\\b"
+      - pattern: "\\bbenchmark promotion follows from scoped evidence\\b"
+      - pattern: "\\bvalidator PASS proves EFE\\b"
+    bad_phrases:
+      - "g_eff implies Einstein equations"
+      - "matter-sector evidence implies stress-energy tensor"
+      - "no-target certificate implies matter action"
+      - "coupling-law candidate evidence implies matter coupling"
+      - "benchmark promotion follows from scoped evidence"
+      - "validator PASS proves EFE"
+    corrective_language: "Use the P8 moratorium wording: Einstein equations remain not started, direct EFE routing is blocked by missing dynamics/action/variation prerequisites, bounded prerequisite work is allowed, and benchmark promotion requires protected authority."
+
   - class_id: "global_no_go_or_rejection_overclaim"
     plan_required_class_number: 18
     title: "Global no-go or global rejection overclaim"
@@ -667,6 +693,18 @@ required_phrase_coverage:
       class_id: "semantic_layer_collapse_overclaim"
     - phrase: "stress-energy target supplies matter action"
       class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "g_eff implies Einstein equations"
+      class_id: "premature_efe_prerequisite_overclaim"
+    - phrase: "matter-sector evidence implies stress-energy tensor"
+      class_id: "premature_efe_prerequisite_overclaim"
+    - phrase: "no-target certificate implies matter action"
+      class_id: "premature_efe_prerequisite_overclaim"
+    - phrase: "coupling-law candidate evidence implies matter coupling"
+      class_id: "premature_efe_prerequisite_overclaim"
+    - phrase: "benchmark promotion follows from scoped evidence"
+      class_id: "premature_efe_prerequisite_overclaim"
+    - phrase: "validator PASS proves EFE"
+      class_id: "premature_efe_prerequisite_overclaim"
 
 next_linter_contract:
   route: "P3-T02"
@@ -699,9 +737,10 @@ next_linter_contract:
     - "corrective_language"
 
 acceptance_receipt:
-  required_class_count: 20
-  implemented_class_count: 20
+  required_class_count: 21
+  implemented_class_count: 21
   p4_t04_semantic_layer_fixtures_mapped: true
+  p8_t02_efe_prerequisite_fixtures_mapped: true
   required_phrases_mapped: true
   severity_assignments_present: true
   public_overclaims_hard_fail_candidates: true
