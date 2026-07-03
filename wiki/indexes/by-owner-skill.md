@@ -247,6 +247,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-SCHEMA-V1` `wiki/markdown/md-research-control-design-matter-coupling-dependency-dag-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `wiki/markdown/md-research-control-design-matter-coupling-derivation-moratorium.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `wiki/markdown/md-research-control-design-matter-coupling-pre-adoption-checklist.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `wiki/markdown/md-research-control-design-narrow-theorem-task-template.md`
@@ -744,6 +745,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `research_control/design/mathematical_decisiveness_completion_contract.md`
+- `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-SCHEMA-V1` `research_control/design/matter_coupling_dependency_dag_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `research_control/design/matter_coupling_derivation_moratorium.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `research_control/design/narrow_theorem_task_template.md`

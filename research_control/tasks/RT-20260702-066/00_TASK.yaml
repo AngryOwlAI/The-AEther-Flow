@@ -1,0 +1,59 @@
+task_id: "RT-20260702-066"
+task_type: "matter_coupling_dependency_dag_schema"
+status: "completed"
+created_at: "2026-07-02T23:43:12Z"
+updated_at: "2026-07-02T23:43:12Z"
+closed_at: "2026-07-02T23:43:12Z"
+parent_task_id: "RT-20260702-065"
+parent_handoff_id: "handoff-0518"
+decision_id: "DDR-20260702-066"
+job_id: "AJ-RT-20260702-066-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260702-066"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+human_authorization_note: "The user granted human authorization for all human gates. This P4-T01 schema packet does not consume Gate Chair authority source-law adoption authority matter-coupling authority benchmark authority or completed-derivation authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T01"
+  plan_task_name: "Matter-coupling dependency DAG schema"
+objective: "Define the v15 P4-T01 matter-coupling dependency DAG schema while preventing evidence/precondition rows from being read as universal matter coupling or downstream GR promotion."
+target_derivation_milestone: "none"
+milestone_burden: "P4-T01 schema-only matter-coupling dependency DAG control surface; no physics derivation milestone is advanced."
+closure_status: "post_v15_p4_t01_matter_coupling_dag_schema_completed_next_p4_t02_no_physics_delta"
+claim_boundary:
+  allowed_scope: "Project-control schema definition for v15 P4-T01 only"
+  accepted_scoped_input: "P3 certificate checklist and existing matter-coupling moratorium and pre-adoption checklist as control inputs only"
+  scientific_claims_changed: false
+  scientific_claim_delta: "none"
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/design/matter_coupling_dependency_dag_schema_v1.md"
+  - "research_control/tasks/RT-20260702-066/artifacts/validate_p4_t01_matter_coupling_dag_schema.py"
+  - "research_control/tasks/RT-20260702-066/artifacts/p4_t01_matter_coupling_dag_schema_report.json"
+  - "research_control/tasks/RT-20260702-066/artifacts/p4_t01_matter_coupling_dag_schema_receipt.md"
+next_recommended_action: "Run one bounded v15 P4-T02 packet to populate the matter-coupling dependency DAG from tracked authority surfaces."
+notes: "This task implements only P4-T01. It does not populate the DAG execute P4-T02 or change source-law matter semantics detector semantics coupling law matter coupling stress-energy Einstein-equation benchmark or completed-derivation status."
+documentation_impact_id: "DI-RT-20260702-066-001"
