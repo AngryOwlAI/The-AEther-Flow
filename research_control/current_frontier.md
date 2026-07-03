@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-013` and `handoff-0532`.
+`RT-20260703-014` and `handoff-0533`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-013` |
-| Latest handoff ID | `handoff-0532` |
-| Current status | `post_v15_p8_t02_efe_prerequisite_linter_fixtures_completed_next_p9_t01_no_physics_delta` |
-| Current route family | post v15 p8 t02 efe prerequisite linter fixtures completed next p9 t01 no physics delta |
+| Active task ID | `RT-20260703-014` |
+| Latest handoff ID | `handoff-0533` |
+| Current status | `post_v15_p9_t01_distance_to_gr_delta_enforcement_completed_next_p9_t02_no_physics_delta` |
+| Current route family | post v15 p9 t01 distance to gr delta enforcement completed next p9 t02 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is distance to gr delta report enforcement |
-| Required next authority | P9-T01 Distance-to-GR delta report enforcement |
-| Next recommended action | Run one bounded v15 P9-T01 Distance-to-GR delta report enforcement packet. |
+| Current burden | none for physics derivation; live control burden is scientific payload density metric |
+| Required next authority | P9-T02 scientific payload density metric |
+| Next recommended action | Run one bounded v15 P9-T02 scientific payload density metric packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-013/00_TASK.yaml`.
-- Active task objective: Add deterministic claim-language linter fixtures and tests that reject premature EFE prerequisite overreads while accepting public-safe scoped wording.
-- Latest handoff path: `research_control/handoffs/handoff-0532.yaml`.
-- Latest handoff summary: RT-20260703-013 added the P8-T02 EFE prerequisite linter fixtures with no physics delta.
-- Current route family: post v15 p8 t02 efe prerequisite linter fixtures completed next p9 t01 no physics delta.
-- Next recommended action: Run one bounded v15 P9-T01 Distance-to-GR delta report enforcement packet.
+- Active task path: `research_control/tasks/RT-20260703-014/00_TASK.yaml`.
+- Active task objective: Ensure future physics completions visibly report their actual Distance-to-GR effect and that effect labels cannot authorize downstream promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0533.yaml`.
+- Latest handoff summary: RT-20260703-014 added P9-T01 Distance-to-GR delta effect enforcement with no physics delta.
+- Current route family: post v15 p9 t01 distance to gr delta enforcement completed next p9 t02 no physics delta.
+- Next recommended action: Run one bounded v15 P9-T02 scientific payload density metric packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P9-T01 Distance-to-GR delta report enforcement packet.
+Run one bounded v15 P9-T02 scientific payload density metric packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,18 +223,18 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-013`;
-- latest handoff: `handoff-0532`;
-- current status: `post_v15_p8_t02_efe_prerequisite_linter_fixtures_completed_next_p9_t01_no_physics_delta`;
+- active task: `RT-20260703-014`;
+- latest handoff: `handoff-0533`;
+- current status: `post_v15_p9_t01_distance_to_gr_delta_enforcement_completed_next_p9_t02_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `bootstrap_memory_system`: PENDING;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
-- latest handoff validation `claim_language_unit_tests`: PASS;
 - latest handoff validation `git_diff_check`: PENDING;
 - latest handoff validation `graph_freshness_check`: PENDING;
-- latest handoff validation `task_local_efe_prerequisite_linter_fixture_validator`: PASS;
+- latest handoff validation `research_control_unit_tests`: PASS;
+- latest handoff validation `task_local_distance_to_gr_delta_effect_validator`: PASS;
 - latest handoff validation `validate_documentation_impact`: PENDING;
 - latest handoff validation `validate_research_control`: PENDING;
 - latest handoff validation `validate_research_control_check_diff`: PENDING;
@@ -244,8 +244,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0532.yaml`
-- `research_control/tasks/RT-20260703-013/00_TASK.yaml`
+- `research_control/handoffs/handoff-0533.yaml`
+- `research_control/tasks/RT-20260703-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -261,7 +261,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0532*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0533*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

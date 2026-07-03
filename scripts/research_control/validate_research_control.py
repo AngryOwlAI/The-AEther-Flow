@@ -910,6 +910,18 @@ PHYSICS_PROGRESS_STATUS_VALUES = {
     "invalid_under_claim_boundary",
     "no_distance_delta",
 }
+DISTANCE_TO_GR_DELTA_EFFECT_ACTIVE_AFTER = "2026-07-03T11:24:00Z"
+DISTANCE_TO_GR_DELTA_EFFECT_VALUES = {
+    "no_distance_delta",
+    "scoped_evidence_precondition",
+    "scoped_source_only_object",
+    "scoped_source_extension_object",
+    "conditional_theorem_candidate",
+    "obstruction_recorded",
+    "frozen_negative",
+    "milestone_discharge",
+    "protected_gate_pending",
+}
 MATHEMATICAL_PAYLOAD_MANIFEST_TYPES = {
     "definition",
     "lemma",
@@ -1273,6 +1285,25 @@ def gr_derivation_roadmap_policy_active(
         timestamps.append(completion.get("completed_at", ""))
     return any(
         timestamp_at_or_after(value, GR_DERIVATION_ROADMAP_POLICY_ACTIVATED_AT)
+        for value in timestamps
+    )
+
+
+def distance_to_gr_delta_effect_policy_active(
+    job_row: dict[str, str],
+    completion: dict[str, Any] | None = None,
+) -> bool:
+    if job_row.get("role_id", "") not in PHYSICS_ROLE_IDS:
+        return False
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+    return any(
+        timestamp_at_or_after(value, DISTANCE_TO_GR_DELTA_EFFECT_ACTIVE_AFTER)
         for value in timestamps
     )
 
@@ -2863,6 +2894,7 @@ def validate_loop_control_completion(
             else DISTANCE_TO_GR_REQUIRED_BURDENS
         ),
     )
+    validate_distance_to_gr_delta_effect(report, job_row, completion, path_text)
     if gr_derivation_roadmap_policy_active(job_row, completion):
         validate_general_physics_payload(report, completion, path_text)
 
@@ -3490,6 +3522,51 @@ def validate_distance_to_gr_status(
     missing = [burden for burden in required_burdens if burden not in seen]
     if missing:
         report.error(f"{path_text}: distance_to_gr_status missing burdens {missing}")
+
+
+def _completion_physics_promotion_authorized(completion: dict[str, Any]) -> bool:
+    if bool_value(completion.get("physics_promotion_authorized")):
+        return True
+    progress = completion.get("physics_progress_status")
+    if isinstance(progress, dict) and bool_value(progress.get("physics_promotion_authorized")):
+        return True
+    layers = completion.get("authorization_layers")
+    if isinstance(layers, dict) and bool_value(layers.get("downstream_physics_promotion_authorized")):
+        return True
+    return False
+
+
+def validate_distance_to_gr_delta_effect(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    if not distance_to_gr_delta_effect_policy_active(job_row, completion):
+        return
+
+    delta = completion.get("distance_to_gr_delta")
+    if not isinstance(delta, dict):
+        report.error(f"{path_text}: future physics completion missing distance_to_gr_delta.effect")
+        return
+
+    effect = str(delta.get("effect", "")).strip()
+    if not effect:
+        report.error(f"{path_text}: future physics completion missing distance_to_gr_delta.effect")
+    elif effect not in DISTANCE_TO_GR_DELTA_EFFECT_VALUES:
+        report.error(f"{path_text}: distance_to_gr_delta.effect is not allowed: {effect}")
+
+    downstream_unlocked = delta.get("downstream_unlocked", [])
+    if not isinstance(downstream_unlocked, list):
+        return
+    promotion_authorized = _completion_physics_promotion_authorized(completion)
+    for item in downstream_unlocked:
+        unlocked = str(item).strip().lower().replace("-", "_")
+        if unlocked in UNAUTHORIZED_DOWNSTREAM_GR_UNLOCKS and not promotion_authorized:
+            report.error(
+                f"{path_text}: distance_to_gr_delta.effect does not authorize "
+                f"downstream_unlocked {item} without human-gated physics promotion authority"
+            )
 
 
 def validate_general_physics_payload(

@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "detail": "Validator declares the P9-T01 prospective activation timestamp.",
+      "id": "effect_policy_activation_constant_present",
+      "passed": true
+    },
+    {
+      "detail": "Validator contains every P9-T01 Distance-to-GR effect value.",
+      "id": "effect_vocabulary_complete",
+      "passed": true
+    },
+    {
+      "detail": "Future physics completion validation calls the Distance-to-GR effect validator.",
+      "id": "future_physics_hook_present",
+      "passed": true
+    },
+    {
+      "detail": "Validator hard-fails missing and unsupported effect values.",
+      "id": "missing_and_invalid_effects_hard_fail",
+      "passed": true
+    },
+    {
+      "detail": "Effect labels cannot unlock downstream GR objects without human-gated promotion authority.",
+      "id": "effect_does_not_authorize_downstream_unlock",
+      "passed": true
+    },
+    {
+      "detail": "Completion template now asks completions to state the actual effect field.",
+      "id": "completion_template_exposes_effect_field",
+      "passed": true
+    },
+    {
+      "detail": "Focused tests cover missing, invalid, allowed, and no-promotion cases.",
+      "id": "focused_tests_present",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "einstein_equations_authorized": false,
+    "matter_action_authorized": false,
+    "matter_coupling_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authorized": false,
+    "stress_energy_authorized": false,
+    "variation_principle_authorized": false
+  },
+  "effect_values": [
+    "no_distance_delta",
+    "scoped_evidence_precondition",
+    "scoped_source_only_object",
+    "scoped_source_extension_object",
+    "conditional_theorem_candidate",
+    "obstruction_recorded",
+    "frozen_negative",
+    "milestone_discharge",
+    "protected_gate_pending"
+  ],
+  "plan_task_id": "P9-T01",
+  "status": "PASS",
+  "task_id": "RT-20260703-014"
+}

@@ -1718,6 +1718,63 @@ class ResearchControlTests(unittest.TestCase):
             ]
         )
 
+    def distance_delta_yaml(
+        self,
+        *,
+        effect: str = "no_distance_delta",
+        downstream_unlocked: str = "none",
+    ) -> str:
+        return "\n".join(
+            [
+                "distance_to_gr_delta:",
+                f'  effect: "{effect}"',
+                "  changed: false",
+                '  burden_id: "m_src"',
+                '  milestone: "source_manifold_m_src"',
+                '  old_status: "not discharged"',
+                '  new_status: "not discharged"',
+                "  ledger_row_updated: false",
+                '  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"',
+                "  downstream_unlocked:",
+                f'    - "{downstream_unlocked}"',
+                "  downstream_still_blocked:",
+                '    - "g_eff"',
+                '    - "matter_coupling"',
+                '    - "einstein_equations"',
+                '    - "benchmark_promotion"',
+                '  explanation: "Synthetic P9-T01 fixture records the actual Distance-to-GR effect."',
+            ]
+        )
+
+    def validate_p9_distance_delta_fixture(self, completion_extra: str):
+        completion = self.strict_yaml.loads(
+            "\n".join(
+                [
+                    'completed_at: "2026-07-03T11:24:00Z"',
+                    'status: "completed"',
+                    *completion_extra.splitlines(),
+                    "",
+                ]
+            )
+        )
+        report = self.validator.ValidationReport()
+        row = {
+            "job_id": "AJ-TEST",
+            "task_id": "RT-TEST",
+            "decision_id": "DDR-TEST",
+            "role_id": "smuggling-auditor",
+            "role_version": "0.2.0",
+            "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+            "completion_path": "research_control/tasks/RT-TEST/jobs/completions/AJC-AJ-TEST.yaml",
+            "status": "completed",
+            "created_at": "2026-07-03T11:24:00Z",
+            "started_at": "2026-07-03T11:24:00Z",
+            "completed_at": "2026-07-03T11:24:00Z",
+        }
+        path = REPO_ROOT / "research_control/tasks/RT-TEST/jobs/completions/AJC-AJ-TEST.yaml"
+        self.validator.validate_loop_control_completion(report, row, {}, completion, path)
+        return report
+
     def decisiveness_opt_in_job_yaml(self) -> str:
         return "\n".join(
             [
@@ -2420,6 +2477,58 @@ class ResearchControlTests(unittest.TestCase):
             timestamp="2026-06-17T15:46:25Z",
         )
         self.assertTrue(any("missing new_mathematical_payload" in error for error in report.errors))
+
+    def test_p9_future_physics_completion_requires_distance_delta_effect(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+            ]
+        )
+        report = self.validate_p9_distance_delta_fixture(completion_extra)
+        self.assertTrue(
+            any("missing distance_to_gr_delta.effect" in error for error in report.errors)
+        )
+
+    def test_p9_future_physics_completion_rejects_unknown_distance_delta_effect(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.distance_delta_yaml(effect="vague_progress"),
+            ]
+        )
+        report = self.validate_p9_distance_delta_fixture(completion_extra)
+        self.assertTrue(
+            any("distance_to_gr_delta.effect is not allowed: vague_progress" in error for error in report.errors)
+        )
+
+    def test_p9_future_physics_completion_accepts_allowed_distance_delta_effect(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.distance_delta_yaml(effect="scoped_source_extension_object"),
+            ]
+        )
+        report = self.validate_p9_distance_delta_fixture(completion_extra)
+        self.assertEqual(report.errors, [])
+
+    def test_p9_distance_delta_effect_does_not_authorize_downstream_unlock(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml(),
+                self.distance_delta_yaml(
+                    effect="milestone_discharge",
+                    downstream_unlocked="einstein_equations",
+                ),
+            ]
+        )
+        report = self.validate_p9_distance_delta_fixture(completion_extra)
+        self.assertTrue(
+            any("distance_to_gr_delta.effect does not authorize downstream_unlocked" in error for error in report.errors)
+        )
 
     def test_mathematical_decisiveness_opt_in_missing_fields_fails(self) -> None:
         completion_extra = "\n".join(
