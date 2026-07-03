@@ -18,6 +18,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+import report_scientific_payload_density as scientific_payload_density  # noqa: E402
 
 
 PHYSICS_AUTHORITY_LEVELS = {"science_draft", "human_gated"}
@@ -229,6 +230,7 @@ def completion_record(
         "milestone": first_nonblank(progress.get("target_derivation_milestone"), delta.get("milestone")),
         "burden_id": first_nonblank(progress.get("milestone_burden"), delta.get("burden_id")),
         "burden_key": burden_key(completion),
+        "delta_effect": string_value(delta.get("effect")),
         "delta_changed": changed_from_delta(completion),
         "payload_count": payload_count(completion),
         "cycle_family": string_value(route.get("cycle_family")),
@@ -251,6 +253,118 @@ def completion_record(
         ),
         "bridge_attempt_present": bridge_attempt_present(completion),
         "source_extension_category": source_extension_category(completion),
+    }
+
+
+def has_candidate_signal(record: dict[str, Any]) -> bool:
+    status = record.get("progress_status", "")
+    return (
+        record.get("role_id") == "candidate-constructor"
+        or bool(record.get("candidate_result_type"))
+        or status.startswith("candidate_")
+        or record.get("bridge_attempt_present") is True
+    )
+
+
+def has_obstruction_signal(record: dict[str, Any]) -> bool:
+    return (
+        record.get("obstruction_present") is True
+        or record.get("candidate_result_type") in {"precise_obstruction", "minimal_countermodel"}
+        or record.get("progress_status") == "precise_obstruction_found"
+    )
+
+
+def has_freeze_signal(record: dict[str, Any]) -> bool:
+    return (
+        record.get("freeze_repeated_burden") is True
+        or record.get("freeze_evaluation_required") is True
+        or bool(record.get("freeze_decision"))
+        or record.get("progress_status") == "route_frozen"
+    )
+
+
+def task_has_payload_classes(task_row: dict[str, Any], classes: set[str]) -> bool:
+    counts = task_row.get("payload_class_counts")
+    if not isinstance(counts, dict):
+        return False
+    return sum(int(counts.get(class_id, 0)) for class_id in classes) > 0
+
+
+def collect_physics_progress_integration_metrics(
+    completion_records: list[dict[str, Any]],
+    payload_report: dict[str, Any],
+) -> dict[str, Any]:
+    """Integrate distance-delta and payload-density diagnostics for P9-T03."""
+    distance_effect_counts: Counter[str] = Counter()
+    candidate_result_counts: Counter[str] = Counter()
+
+    for record in completion_records:
+        effect = record.get("delta_effect") or "missing_effect"
+        distance_effect_counts[effect] += 1
+        result_type = record.get("candidate_result_type")
+        if result_type:
+            candidate_result_counts[result_type] += 1
+
+    theorem_classes = {
+        "new_theorem_statement",
+        "proved_theorem",
+        "conditional_theorem",
+        "proof_attempt",
+    }
+    task_rows = payload_report.get("task_rows") if isinstance(payload_report, dict) else []
+    if not isinstance(task_rows, list):
+        task_rows = []
+    theorem_task_count = sum(
+        1
+        for task_row in task_rows
+        if isinstance(task_row, dict) and task_has_payload_classes(task_row, theorem_classes)
+    )
+
+    overall_payload = (
+        payload_report.get("overall", {})
+        if isinstance(payload_report.get("overall"), dict)
+        else {}
+    )
+    payload_class_counts = (
+        overall_payload.get("payload_class_counts", {})
+        if isinstance(overall_payload.get("payload_class_counts"), dict)
+        else {}
+    )
+
+    return {
+        "status": "pass",
+        "authority_boundary": "operational_summary_only_not_physics_proof",
+        "not_physics_proof": True,
+        "physics_claim_promotion_authorized": False,
+        "distance_delta": {
+            "records_read": len(completion_records),
+            "effect_counts": dict(sorted(distance_effect_counts.items())),
+            "changed_true_count": sum(1 for record in completion_records if record.get("delta_changed") is True),
+            "changed_false_count": sum(1 for record in completion_records if record.get("delta_changed") is False),
+        },
+        "separate_packet_counts": {
+            "candidate_packet_count": sum(1 for record in completion_records if has_candidate_signal(record)),
+            "obstruction_packet_count": sum(1 for record in completion_records if has_obstruction_signal(record)),
+            "freeze_packet_count": sum(1 for record in completion_records if has_freeze_signal(record)),
+            "theorem_packet_count": theorem_task_count,
+            "process_only_packet_count": int(overall_payload.get("process_only_task_count", 0)),
+        },
+        "candidate_result_counts": dict(sorted(candidate_result_counts.items())),
+        "payload_density_summary": {
+            "task_count": int(overall_payload.get("task_count", 0)),
+            "classified_item_count": int(overall_payload.get("classified_item_count", 0)),
+            "mathematical_payload_item_count": int(
+                overall_payload.get("mathematical_payload_item_count", 0)
+            ),
+            "process_only_item_count": int(overall_payload.get("process_only_item_count", 0)),
+            "mathematical_payload_task_count": int(
+                overall_payload.get("mathematical_payload_task_count", 0)
+            ),
+            "process_only_task_count": int(overall_payload.get("process_only_task_count", 0)),
+            "payload_density": float(overall_payload.get("payload_density", 0.0)),
+            "task_payload_density": float(overall_payload.get("task_payload_density", 0.0)),
+            "payload_class_counts": dict(sorted(payload_class_counts.items())),
+        },
     }
 
 
@@ -941,12 +1055,18 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         support_metrics,
         referenced_obstructions,
     )
+    scientific_payload_density_report = scientific_payload_density.build_report(repo_root)
+    physics_progress_integration_metrics = collect_physics_progress_integration_metrics(
+        completion_records,
+        scientific_payload_density_report,
+    )
     separation_violations = scientific_metric_key_violations(scientific_progress_metrics)
     metrics = {
         "operational_validation_metrics": operational_validation_metrics,
         "scientific_progress_metrics": scientific_progress_metrics,
         "payload_density_metrics": payload_density_metrics,
         "route_orbit_risk_metrics": route_orbit_risk_metrics,
+        "physics_progress_integration_metrics": physics_progress_integration_metrics,
         "diagnostic_warnings": diagnostic_warnings,
         "metric_separation_guard": {
             "status": "pass" if not separation_violations else "fail",
@@ -984,6 +1104,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "metrics_are_operational": True,
             "scoreboards_are_separated": True,
             "physics_claim_promotion_authorized": False,
+            "metrics_report_not_physics_proof": True,
             "validation_status_is_not_physics_evidence": True,
         },
         "metrics": metrics,
@@ -1059,6 +1180,10 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Route-Orbit Risk Metrics",
             "",
             *render_table(metrics["route_orbit_risk_metrics"]),
+            "",
+            "## Physics-Progress Integration Metrics",
+            "",
+            *render_table(metrics["physics_progress_integration_metrics"]),
             "",
             "## Diagnostic Warnings",
             "",

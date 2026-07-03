@@ -144,6 +144,34 @@ class ResearchControlTests(unittest.TestCase):
 
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
+    def test_physics_progress_integration_metrics_count_required_packet_types(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        metrics = report["metrics"]
+        scientific = metrics["scientific_progress_metrics"]
+        integration = metrics["physics_progress_integration_metrics"]
+        separate_counts = integration["separate_packet_counts"]
+
+        self.assertEqual(integration["status"], "pass")
+        self.assertTrue(integration["not_physics_proof"])
+        self.assertFalse(integration["physics_claim_promotion_authorized"])
+        self.assertTrue(report["authority_boundary"]["metrics_report_not_physics_proof"])
+        self.assertIn("effect_counts", integration["distance_delta"])
+
+        for key in (
+            "candidate_packet_count",
+            "obstruction_packet_count",
+            "freeze_packet_count",
+            "theorem_packet_count",
+            "process_only_packet_count",
+        ):
+            self.assertIn(key, separate_counts)
+            self.assertIsInstance(separate_counts[key], int)
+
+        self.assertGreaterEqual(separate_counts["process_only_packet_count"], 1)
+        self.assertIn("payload_density_summary", integration)
+        self.assertNotIn("physics_progress_integration_metrics", scientific)
+        self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
+
     def test_payload_density_warnings_are_advisory(self) -> None:
         report = self.metrics.build_report(REPO_ROOT)
         warnings = report["metrics"]["diagnostic_warnings"]
@@ -162,6 +190,7 @@ class ResearchControlTests(unittest.TestCase):
 
         self.assertIn("## Payload-Density Metrics", rendered)
         self.assertIn("## Route-Orbit Risk Metrics", rendered)
+        self.assertIn("## Physics-Progress Integration Metrics", rendered)
         self.assertIn("## Diagnostic Warnings", rendered)
 
     def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
