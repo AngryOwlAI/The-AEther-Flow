@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-006` and `handoff-0525`.
+`RT-20260703-007` and `handoff-0526`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-006` |
-| Latest handoff ID | `handoff-0525` |
-| Current status | `post_v15_p6_t01_source_extension_classification_checklist_completed_next_p6_t02_no_physics_delta` |
-| Current route family | post v15 p6 t01 source extension classification checklist completed next p6 t02 no physics delta |
+| Active task ID | `RT-20260703-007` |
+| Latest handoff ID | `handoff-0526` |
+| Current status | `post_v15_p6_t02_source_extension_classification_retrofit_completed_next_p6_t03_no_physics_delta` |
+| Current route family | post v15 p6 t02 source extension classification retrofit completed next p6 t03 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v15 P6-T02 source-extension classification retrofit packet for high-risk existing objects. |
-| Required next authority | P6-T02 source-extension classification retrofit for high-risk existing objects |
-| Next recommended action | Run one bounded v15 P6-T02 source-extension classification retrofit packet for high-risk existing objects. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v15 P6-T03 source-extension classification validator integration packet. |
+| Required next authority | P6-T03 source-extension classification validator integration |
+| Next recommended action | Run one bounded v15 P6-T03 source-extension classification validator integration packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-006/00_TASK.yaml`.
-- Active task objective: Create a formal source-extension classification checklist with exact evidence requirements allowed language forbidden conclusion language and no physics delta.
-- Latest handoff path: `research_control/handoffs/handoff-0525.yaml`.
-- Latest handoff summary: RT-20260703-006 completed v15 P6-T01 by creating a source-extension classification checklist with exact evidence requirements allowed language forbidden conclusion language fail-closed behavior and no physics delta.
-- Current route family: post v15 p6 t01 source extension classification checklist completed next p6 t02 no physics delta.
-- Next recommended action: Run one bounded v15 P6-T02 source-extension classification retrofit packet for high-risk existing objects.
+- Active task path: `research_control/tasks/RT-20260703-007/00_TASK.yaml`.
+- Active task objective: Apply the source-extension classification checklist to required high-risk existing objects with one classification per object and no physics status change.
+- Latest handoff path: `research_control/handoffs/handoff-0526.yaml`.
+- Latest handoff summary: RT-20260703-007 completed v15 P6-T02 by classifying all required high-risk existing objects under the source-extension classification checklist with no physics delta.
+- Current route family: post v15 p6 t02 source extension classification retrofit completed next p6 t03 no physics delta.
+- Next recommended action: Run one bounded v15 P6-T03 source-extension classification validator integration packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P6-T02 source-extension classification retrofit packet for high-risk existing objects.
+Run one bounded v15 P6-T03 source-extension classification validator integration packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-006`;
-- latest handoff: `handoff-0525`;
-- current status: `post_v15_p6_t01_source_extension_classification_checklist_completed_next_p6_t02_no_physics_delta`;
+- active task: `RT-20260703-007`;
+- latest handoff: `handoff-0526`;
+- current status: `post_v15_p6_t02_source_extension_classification_retrofit_completed_next_p6_t03_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -233,7 +233,7 @@ Legacy compatibility records:
 - latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
 - latest handoff validation `git_diff_check`: PENDING;
 - latest handoff validation `graph_freshness_check`: PENDING;
-- latest handoff validation `task_local_source_extension_classification_validator`: PASS;
+- latest handoff validation `task_local_source_extension_classification_retrofit_validator`: PASS;
 - latest handoff validation `validate_documentation_impact`: PENDING;
 - latest handoff validation `validate_research_control`: PENDING;
 - latest handoff validation `validate_research_control_check_diff`: PENDING;
@@ -243,8 +243,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0525.yaml`
-- `research_control/tasks/RT-20260703-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-0526.yaml`
+- `research_control/tasks/RT-20260703-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -260,7 +260,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0525*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0526*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
