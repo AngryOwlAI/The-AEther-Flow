@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-021` and `handoff-0540`.
+`RT-20260703-022` and `handoff-0541`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-021` |
-| Latest handoff ID | `handoff-0540` |
-| Current status | `post_v15_p11_t02_local_ci_equivalent_validator_completed_next_p11_t03_no_physics_delta` |
-| Current route family | post v15 p11 t02 local ci equivalent validator completed next p11 t03 no physics delta |
+| Active task ID | `RT-20260703-022` |
+| Latest handoff ID | `handoff-0541` |
+| Current status | `post_v15_p11_t03_ci_validation_maintainer_guide_completed_next_p12_t01_no_physics_delta` |
+| Current route family | post v15 p11 t03 ci validation maintainer guide completed next p12 t01 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is ci validation maintainer guide |
-| Required next authority | P11-T03 CI documentation impact and maintainer guide |
-| Next recommended action | Run one bounded v15 P11-T03 CI documentation impact and maintainer guide packet. |
+| Current burden | none for physics derivation; live control burden is claim graph schema |
+| Required next authority | P12-T01 claim graph schema |
+| Next recommended action | Run one bounded v15 P12-T01 claim graph schema packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-021/00_TASK.yaml`.
-- Active task objective: Implement a repeatable validation entry point.
-- Latest handoff path: `research_control/handoffs/handoff-0540.yaml`.
-- Latest handoff summary: RT-20260703-021 completed v15 P11-T02 local CI-equivalent validator implementation with no physics delta.
-- Current route family: post v15 p11 t02 local ci equivalent validator completed next p11 t03 no physics delta.
-- Next recommended action: Run one bounded v15 P11-T03 CI documentation impact and maintainer guide packet.
+- Active task path: `research_control/tasks/RT-20260703-022/00_TASK.yaml`.
+- Active task objective: Add or update maintainer-facing documentation for the validation pipeline.
+- Latest handoff path: `research_control/handoffs/handoff-0541.yaml`.
+- Latest handoff summary: RT-20260703-022 completed v15 P11-T03 CI validation maintainer guide with no physics delta.
+- Current route family: post v15 p11 t03 ci validation maintainer guide completed next p12 t01 no physics delta.
+- Next recommended action: Run one bounded v15 P12-T01 claim graph schema packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P11-T03 CI documentation impact and maintainer guide packet.
+Run one bounded v15 P12-T01 claim graph schema packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-021`;
-- latest handoff: `handoff-0540`;
-- current status: `post_v15_p11_t02_local_ci_equivalent_validator_completed_next_p11_t03_no_physics_delta`;
+- active task: `RT-20260703-022`;
+- latest handoff: `handoff-0541`;
+- current status: `post_v15_p11_t03_ci_validation_maintainer_guide_completed_next_p12_t01_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -233,10 +233,9 @@ Legacy compatibility records:
 - latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
 - latest handoff validation `git_diff_check`: PENDING;
 - latest handoff validation `graph_freshness_check`: PENDING;
-- latest handoff validation `local_ci_equivalent_runner`: PASS;
-- latest handoff validation `local_ci_runner_focused_tests`: PASS;
-- latest handoff validation `local_ci_runner_py_compile`: PASS;
-- latest handoff validation `task_local_p11_t02_validator`: PASS;
+- latest handoff validation `local_ci_equivalent_post_guide`: PENDING;
+- latest handoff validation `task_local_p11_t03_validator`: PASS;
+- latest handoff validation `task_local_p11_t03_validator_py_compile`: PASS;
 - latest handoff validation `validate_documentation_impact`: PENDING;
 - latest handoff validation `validate_research_control`: PENDING;
 - latest handoff validation `validate_research_control_check_diff`: PENDING;
@@ -246,8 +245,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0540.yaml`
-- `research_control/tasks/RT-20260703-021/00_TASK.yaml`
+- `research_control/handoffs/handoff-0541.yaml`
+- `research_control/tasks/RT-20260703-022/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -263,7 +262,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0540*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0541*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

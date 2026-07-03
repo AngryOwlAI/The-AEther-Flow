@@ -205,6 +205,68 @@ Optional write-path diff validation:
 .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
 ```
 
+## Local Validation Pipeline
+
+The v15 P11 local CI-equivalent validation entry point is:
+
+```zsh
+.venv/bin/python scripts/research_control/run_full_research_control_validation.py --json
+```
+
+Use `--output <path>` when a transaction needs a durable JSON receipt. Use
+`--include-smoke-tests` only when runtime budget permits the broad repository
+unittest smoke layer; the default sequence is the required control gate.
+
+Run the local validation pipeline:
+
+- before checkpointing any research-control transaction that changes tasks,
+  DDRs, AgentJobs, completions, handoffs, roles, registries, current frontier,
+  dependency graph artifacts, validator scripts, or claim-language controls;
+- after bootstrap or render commands that can change generated derivative
+  surfaces; and
+- when a maintainer needs one command that combines the required P11
+  validation gates.
+
+A PASS result means the configured local control checks completed for the
+current repository state: generated derivative drift checks, current-frontier
+freshness, dependency-graph freshness, claim-language lint, documentation
+impact validation, project-improvement signal validation, research-control
+registry consistency, diff allowlist validation, route-signature extraction,
+route-orbit advisory diagnostics, and whitespace diff checking.
+
+A PASS result does not prove a theorem, validate a physics derivation, promote
+a claim, authorize a source-law adoption, authorize a route freeze, issue a
+Gate Chair verdict, promote benchmark status, derive Einstein equations, close
+a completed derivation, or authorize a program-wide no-go conclusion. It is
+operational receipt evidence only.
+
+Interpret failures by the failing command label:
+
+- `claim_language_changed_lint`: inspect the reported path and line. Hard
+  failures must be corrected before checkpoint. Historical warnings are not
+  automatically blockers, but new transaction language should use scoped,
+  non-promotional wording.
+- `research_control_validation`: inspect the first reported missing field,
+  registry mismatch, stale handoff, invalid role record, or schema error.
+  Registry-consistency failures usually mean the task, DDR, AgentJob,
+  completion, role-execution row, claim-boundary row, or handoff no longer
+  agrees with the corresponding registry row.
+- `research_control_diff_validation`: inspect the changed path that is outside
+  the active AgentJob allowlist. Repair the allowlist only when the new path is
+  genuinely inside the bounded packet; otherwise remove or route the unrelated
+  change separately.
+- `memory_validate_only`, `current_frontier_check`, or
+  `dependency_graph_check`: treat this as generated derivative drift. Rerun the
+  appropriate write command, then bootstrap and rerun the local validation
+  pipeline. Do not hand-edit generated wiki notes or generated graph outputs.
+- `documentation_impact_validation`: inspect
+  `research_control/tasks/<task_id>/documentation_impact.yaml` and make sure it
+  covers live changed source paths, classifier reason codes, generated
+  derivatives, and required validators.
+- `route_signature_extraction` or `route_orbit_advisory`: treat the result as
+  diagnostic route-risk evidence only. Advisory output is not a route-freeze
+  verdict and not physics claim authority.
+
 ## Documentation Impact
 
 Project-system changes use a separate documentation-impact gate. The
