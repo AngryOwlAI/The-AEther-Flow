@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the v15 P11 local CI-equivalent research-control validation sequence.
+"""Run the v15 local CI-equivalent research-control validation sequence.
 
 This script is operational receipt evidence only. A PASS result means the
 configured control, registry, claim-language, render-freshness, and drift gates
@@ -63,6 +63,12 @@ def base_command_plan(include_smoke_tests: bool = False) -> list[ValidationComma
             command=(py, "scripts/research_control/render_dependency_graph.py", "--check"),
             purpose="Confirm dependency graph JSON, Markdown, and DOT artifacts are fresh.",
             authority_level="required-render-check",
+        ),
+        ValidationCommand(
+            label="claim_graph_validation",
+            command=(py, "scripts/research_control/validate_claim_graph_v1.py", "--json"),
+            purpose="Validate claim_graph_v1 against P12-T03 non-promotion and derivative-authority guard rules.",
+            authority_level="required-gate",
         ),
         ValidationCommand(
             label="claim_language_changed_lint",
@@ -189,6 +195,7 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
             "current_frontier_check",
             "dependency_graph_check",
         }.issubset(labels),
+        "claim_graph_validation": "claim_graph_validation" in labels,
         "route_signature_extraction_if_implemented": "route_signature_extraction" in labels,
         "no_bare_accepted_high_risk_rows": "claim_language_changed_lint" in labels,
         "no_premature_efe_route": "claim_language_changed_lint" in labels and "research_control_validation" in labels,

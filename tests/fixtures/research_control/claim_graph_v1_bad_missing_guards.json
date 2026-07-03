@@ -1,0 +1,153 @@
+{
+  "claim_boundary": {
+    "forbidden_conclusions": [
+      "benchmark promotion",
+      "completed derivation"
+    ],
+    "graph_changes_scientific_claims": false,
+    "graph_is_proof_authority": false,
+    "graph_promotes_status": false,
+    "no_physics_delta": true
+  },
+  "claim_graph_schema_id": "claim_graph_schema_v1",
+  "edges": [
+    {
+      "authority_object_id": "positive_ms_profile_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "does_not_establish": [],
+      "edge_id": "edge-positive-profile-supports-completed-derivation",
+      "edge_type": "supports",
+      "metadata": {
+        "fixture_note": "Bad fixture intentionally treats scoped evidence as enough for completed derivation."
+      },
+      "overread_guards": [],
+      "requires_human_gate": false,
+      "source_node_id": "evidence-positive-ms-profile-v1",
+      "target_node_id": "completed-derivation-target"
+    },
+    {
+      "authority_object_id": "benchmark_promotion",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [],
+      "edge_id": "edge-gate-chair-supports-benchmark-promotion",
+      "edge_type": "supports",
+      "metadata": {
+        "fixture_note": "Bad fixture lacks protected authority despite benchmark-promotion language."
+      },
+      "overread_guards": [],
+      "requires_human_gate": false,
+      "source_node_id": "gate-chair-benchmark-promotion",
+      "target_node_id": "blocked-target-benchmark-promotion"
+    }
+  ],
+  "generated_at": "2026-07-03T00:00:00Z",
+  "generator": {
+    "name": "fixture",
+    "version": "bad"
+  },
+  "graph_id": "claim_graph_v1_bad_missing_guards",
+  "nodes": [
+    {
+      "authority_object_id": "positive_ms_profile_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "label": "PositiveMSProfile_v1",
+      "metadata": {
+        "fixture_note": "Accepted evidence without downstream does_not_establish guard."
+      },
+      "node_id": "evidence-positive-ms-profile-v1",
+      "node_type": "evidence_precondition",
+      "overread_guards": [],
+      "promotion_status": "scoped_evidence_precondition",
+      "scientific_proof_authority": false,
+      "source_hash": "fixture",
+      "status": "accepted_as_scoped_evidence_precondition",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "fixture",
+      "authority_path": "wiki/indexes/claim_graph_v1.md",
+      "authority_registry": "registries/WIKI_ARTIFACT_REGISTRY.csv",
+      "label": "claim_graph_v1.md",
+      "metadata": {
+        "fixture_note": "Generated derivative without is_derivative_of edge."
+      },
+      "node_id": "generated-claim-graph-md",
+      "node_type": "generated_derivative",
+      "overread_guards": [],
+      "promotion_status": "generated_only",
+      "scientific_proof_authority": false,
+      "source_hash": "fixture",
+      "status": "generated",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "Gate Chair benchmark promotion",
+      "metadata": {
+        "fixture_note": "Gate Chair-like node points to a registry row rather than exact task authority."
+      },
+      "node_id": "gate-chair-benchmark-promotion",
+      "node_type": "human_gated_decision",
+      "overread_guards": [],
+      "promotion_status": "human_gated",
+      "scientific_proof_authority": false,
+      "source_hash": "fixture",
+      "status": "pending",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "benchmark_promotion",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "benchmark promotion",
+      "metadata": {},
+      "node_id": "blocked-target-benchmark-promotion",
+      "node_type": "blocked_physical_target",
+      "overread_guards": [
+        "Fixture target remains blocked."
+      ],
+      "promotion_status": "blocked",
+      "scientific_proof_authority": false,
+      "source_hash": "fixture",
+      "status": "blocked",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "fixture",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "completed derivation",
+      "metadata": {},
+      "node_id": "completed-derivation-target",
+      "node_type": "blocked_physical_target",
+      "overread_guards": [
+        "Fixture target remains blocked."
+      ],
+      "promotion_status": "blocked",
+      "scientific_proof_authority": false,
+      "source_hash": "fixture",
+      "status": "blocked",
+      "validator_receipt_only": false
+    }
+  ],
+  "outputs": {
+    "json": "tests/fixtures/research_control/claim_graph_v1_bad_missing_guards.json"
+  },
+  "source_authority": {
+    "canonical_sources": [
+      "research_control/design/frontier_theorem_inventory.md"
+    ],
+    "derivative_sources_allowed": false,
+    "source_hashes": []
+  },
+  "validation": {
+    "status": "fixture_bad",
+    "validator_name": "fixture",
+    "validator_version": "bad"
+  }
+}

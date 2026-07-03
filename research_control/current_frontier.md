@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-024` and `handoff-0543`.
+`RT-20260703-025` and `handoff-0544`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-024` |
-| Latest handoff ID | `handoff-0543` |
-| Current status | `post_v15_p12_t02_claim_graph_generator_pilot_completed_next_p12_t03_no_physics_delta` |
-| Current route family | post v15 p12 t02 claim graph generator pilot completed next p12 t03 no physics delta |
+| Active task ID | `RT-20260703-025` |
+| Latest handoff ID | `handoff-0544` |
+| Current status | `post_v15_p12_t03_claim_graph_validation_completed_next_p13_t01_no_physics_delta` |
+| Current route family | post v15 p12 t03 claim graph validation completed next p13 t01 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is claim graph validation rules |
-| Required next authority | P12-T03 claim graph validation rules |
-| Next recommended action | Run one bounded v15 P12-T03 claim graph validation packet. |
+| Current burden | none for physics derivation; live control burden is high risk bare accepted wording audit |
+| Required next authority | P13-T01 high-risk wording audit |
+| Next recommended action | Run one bounded v15 P13-T01 high-risk wording audit packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-024/00_TASK.yaml`.
-- Active task objective: Generate the v15 P12-T02 pilot claim graph from the Distance-to-GR ledger and frontier theorem inventory.
-- Latest handoff path: `research_control/handoffs/handoff-0543.yaml`.
-- Latest handoff summary: RT-20260703-024 completed v15 P12-T02 claim graph generator pilot with no physics delta.
-- Current route family: post v15 p12 t02 claim graph generator pilot completed next p12 t03 no physics delta.
-- Next recommended action: Run one bounded v15 P12-T03 claim graph validation packet.
+- Active task path: `research_control/tasks/RT-20260703-025/00_TASK.yaml`.
+- Active task objective: Add validation rules for claim_graph_v1 including a bad fixture graph that fails required guard and promotion-block checks.
+- Latest handoff path: `research_control/handoffs/handoff-0544.yaml`.
+- Latest handoff summary: RT-20260703-025 completed v15 P12-T03 claim graph validation rules with no physics delta.
+- Current route family: post v15 p12 t03 claim graph validation completed next p13 t01 no physics delta.
+- Next recommended action: Run one bounded v15 P13-T01 high-risk wording audit packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P12-T03 claim graph validation packet.
+Run one bounded v15 P13-T01 high-risk wording audit packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,33 +223,32 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-024`;
-- latest handoff: `handoff-0543`;
-- current status: `post_v15_p12_t02_claim_graph_generator_pilot_completed_next_p12_t03_no_physics_delta`;
+- active task: `RT-20260703-025`;
+- latest handoff: `handoff-0544`;
+- current status: `post_v15_p12_t03_claim_graph_validation_completed_next_p13_t01_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
+- latest handoff validation `bad_fixture_validation`: PASS_EXPECTED_FAIL;
 - latest handoff validation `bootstrap_memory_system`: PENDING;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
-- latest handoff validation `claim_graph_freshness_check`: PASS;
-- latest handoff validation `claim_graph_generate`: PASS;
-- latest handoff validation `focused_generator_unittest`: PASS;
-- latest handoff validation `generator_and_validator_py_compile`: PASS;
+- latest handoff validation `current_claim_graph_validation`: PASS;
+- latest handoff validation `focused_validator_unittest`: PASS;
 - latest handoff validation `git_diff_check`: PENDING;
 - latest handoff validation `graph_freshness_check`: PENDING;
 - latest handoff validation `local_ci_equivalent`: PENDING;
-- latest handoff validation `task_local_p12_t02_validator`: PASS;
 - latest handoff validation `validate_documentation_impact`: PENDING;
 - latest handoff validation `validate_research_control`: PENDING;
 - latest handoff validation `validate_research_control_check_diff`: PENDING;
+- latest handoff validation `validator_and_local_ci_py_compile`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0543.yaml`
-- `research_control/tasks/RT-20260703-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0544.yaml`
+- `research_control/tasks/RT-20260703-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -265,7 +264,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0543*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0544*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

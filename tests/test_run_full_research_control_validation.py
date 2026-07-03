@@ -32,6 +32,7 @@ class LocalCiEquivalentValidationTests(unittest.TestCase):
         self.assertIn("memory_validate_only", labels)
         self.assertIn("current_frontier_check", labels)
         self.assertIn("dependency_graph_check", labels)
+        self.assertIn("claim_graph_validation", labels)
         self.assertIn("claim_language_changed_lint", labels)
         self.assertIn("documentation_impact_validation", labels)
         self.assertIn("research_control_validation", labels)

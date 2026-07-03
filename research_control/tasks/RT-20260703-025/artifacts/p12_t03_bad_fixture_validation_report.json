@@ -1,0 +1,116 @@
+{
+  "claim_graph_schema_id": "claim_graph_schema_v1",
+  "distance_to_gr_delta": "none",
+  "error_count": 7,
+  "errors": [
+    {
+      "code": "high_risk_positive_node_lacks_blocked_overread_edges",
+      "label": "PositiveMSProfile_v1",
+      "message": "High-risk positive node must carry overread guards and at least one blocked-overread edge.",
+      "node_id": "evidence-positive-ms-profile-v1"
+    },
+    {
+      "code": "high_risk_positive_node_lacks_blocked_overread_edges",
+      "label": "Gate Chair benchmark promotion",
+      "message": "High-risk positive node must carry overread guards and at least one blocked-overread edge.",
+      "node_id": "gate-chair-benchmark-promotion"
+    },
+    {
+      "code": "accepted_evidence_precondition_lacks_downstream_non_establishment",
+      "label": "PositiveMSProfile_v1",
+      "message": "Accepted evidence/precondition node must have does_not_establish edges to downstream physical targets.",
+      "node_id": "evidence-positive-ms-profile-v1"
+    },
+    {
+      "code": "generated_derivative_lacks_is_derivative_of",
+      "label": "claim_graph_v1.md",
+      "message": "Generated derivative node must have an is_derivative_of edge.",
+      "node_id": "generated-claim-graph-md"
+    },
+    {
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "code": "gate_chair_node_lacks_exact_authority_path",
+      "message": "Gate Chair node must point to an exact non-derivative task authority path and allowed authority registry.",
+      "node_id": "gate-chair-benchmark-promotion"
+    },
+    {
+      "code": "benchmark_promotion_edge_lacks_protected_authority",
+      "edge_id": "edge-gate-chair-supports-benchmark-promotion",
+      "edge_type": "supports",
+      "message": "Edge touching benchmark promotion must be negative/non-establishing or protected by human-gated authority."
+    },
+    {
+      "code": "scoped_evidence_path_to_completed_derivation_lacks_required_intermediate_nodes",
+      "message": "Scoped evidence must not reach completed derivation without matter-coupling, Einstein-equation, and benchmark-promotion intermediates.",
+      "missing_intermediate_terms": [
+        "matter coupling",
+        "einstein equations",
+        "benchmark promotion"
+      ],
+      "path": [
+        "evidence-positive-ms-profile-v1",
+        "completed-derivation-target"
+      ],
+      "source_node_id": "evidence-positive-ms-profile-v1",
+      "target_node_id": "completed-derivation-target"
+    }
+  ],
+  "generated_at": "2026-07-03T21:49:59.955897Z",
+  "graph_id": "claim_graph_v1_bad_missing_guards",
+  "graph_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/tests/fixtures/research_control/claim_graph_v1_bad_missing_guards.json",
+  "no_physics_delta": true,
+  "operational_receipt_only": true,
+  "physics_proof_authority": false,
+  "rule_results": {
+    "accepted_evidence_preconditions_downstream_non_establishment": {
+      "checked_count": 1,
+      "checked_node_ids": [
+        "evidence-positive-ms-profile-v1"
+      ],
+      "status": "FAIL"
+    },
+    "benchmark_promotion_protected_authority": {
+      "checked_count": 1,
+      "checked_edge_ids": [
+        "edge-gate-chair-supports-benchmark-promotion"
+      ],
+      "status": "FAIL"
+    },
+    "gate_chair_exact_authority_paths": {
+      "checked_count": 1,
+      "checked_node_ids": [
+        "gate-chair-benchmark-promotion"
+      ],
+      "status": "FAIL"
+    },
+    "generated_derivatives_is_derivative_of": {
+      "checked_count": 1,
+      "checked_node_ids": [
+        "generated-claim-graph-md"
+      ],
+      "status": "FAIL"
+    },
+    "high_risk_positive_blocked_overread_edges": {
+      "checked_count": 2,
+      "checked_node_ids": [
+        "evidence-positive-ms-profile-v1",
+        "gate-chair-benchmark-promotion"
+      ],
+      "status": "FAIL"
+    },
+    "schema_and_boundary": {
+      "status": "PASS"
+    },
+    "scoped_evidence_to_completed_derivation_paths": {
+      "checked_path_count": 1,
+      "checked_source_count": 1,
+      "completed_derivation_target_count": 1,
+      "status": "FAIL"
+    }
+  },
+  "schema_id": "claim_graph_validation_report_v1",
+  "status": "FAIL",
+  "validator_name": "scripts/research_control/validate_claim_graph_v1.py",
+  "validator_version": "v1"
+}

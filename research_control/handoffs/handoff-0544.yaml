@@ -1,0 +1,103 @@
+handoff_id: "handoff-0544"
+created_at: "2026-07-03T21:50:01Z"
+task_id: "RT-20260703-025"
+decision_id: "DDR-20260703-025"
+job_id: "AJ-RT-20260703-025-001"
+completion_path: "research_control/tasks/RT-20260703-025/jobs/completions/AJC-AJ-RT-20260703-025-001.yaml"
+source_task_id: "RT-20260703-025"
+source_job_id: "AJ-RT-20260703-025-001"
+source_completion_id: "AJC-AJ-RT-20260703-025-001"
+status: "completed"
+summary: "RT-20260703-025 completed v15 P12-T03 claim graph validation rules with no physics delta."
+next_action: "Run one bounded v15 P13-T01 high-risk wording audit packet."
+loop_risk_route: "post_v15_p12_t03_claim_graph_validation_completed_next_p13_t01_no_physics_delta"
+required_next_packet:
+  role_id: "process-integrity-auditor"
+  role_version: "0.1.0"
+  packet_count: 1
+  task_type: "high_risk_bare_accepted_wording_audit"
+  objective: "Audit public-facing control-facing and generated source surfaces for bare accepted wording on high-risk rows."
+claim_boundary:
+  allowed_next_scope: "P13-T01 high-risk wording audit"
+  completed_scope: "P12-T03 claim graph validation"
+  scientific_claims_changed: false
+  claim_graph_validation_completed: true
+  phase_p12_completed: true
+  route_freeze_authorized: false
+  freeze_review_required_now: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  variation_principle_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+blocked_claims:
+  - "P12-T03 claim graph validator as physics proof authority"
+  - "P12-T03 claim graph validator as source-law adoption"
+  - "P12-T03 claim graph validator as matter semantics"
+  - "P12-T03 claim graph validator as detector semantics"
+  - "P12-T03 claim graph validator as coupling-law adoption"
+  - "P12-T03 claim graph validator as matter coupling"
+  - "P12-T03 claim graph validator as MetricData(E) adoption"
+  - "P12-T03 claim graph validator as g_eff scope expansion"
+  - "P12-T03 claim graph validator as stress-energy semantics or stress-energy tensor"
+  - "P12-T03 claim graph validator as matter action or variation principle"
+  - "P12-T03 claim graph validator as Einstein-equation evidence"
+  - "P12-T03 claim graph validator as benchmark promotion"
+  - "P12-T03 claim graph validator as Gate Chair verdict"
+  - "P12-T03 claim graph validator as completed derivation"
+  - "P12-T03 claim graph validator as program-wide no-go conclusion"
+  - "P12-T03 claim graph validator as future source-extension impossibility"
+p12_t03_result:
+  validator_path: "scripts/research_control/validate_claim_graph_v1.py"
+  current_graph_validation_report_path: "research_control/tasks/RT-20260703-025/artifacts/p12_t03_claim_graph_validation_report.json"
+  bad_fixture_path: "tests/fixtures/research_control/claim_graph_v1_bad_missing_guards.json"
+  bad_fixture_validation_report_path: "research_control/tasks/RT-20260703-025/artifacts/p12_t03_bad_fixture_validation_report.json"
+  receipt_path: "research_control/tasks/RT-20260703-025/artifacts/p12_t03_claim_graph_validation_receipt.md"
+  local_ci_report_path: "research_control/tasks/RT-20260703-025/artifacts/p12_t03_local_ci_equivalent_report.json"
+  no_physics_delta: true
+  status: "project_control_claim_graph_validation_completed"
+  next_route: "P13-T01 high-risk wording audit"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-025 adds project-control claim graph validation only. It does not change source-law matter-coupling MetricData(E) g_eff stress-energy matter-action variation-principle Einstein-equation benchmark-promotion program-wide-no-go future-source-extension-impossibility or completed-derivation status."
+validation:
+  validator_and_local_ci_py_compile: "PASS"
+  focused_validator_unittest: "PASS"
+  current_claim_graph_validation: "PASS"
+  bad_fixture_validation: "PASS_EXPECTED_FAIL"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  local_ci_equivalent: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
