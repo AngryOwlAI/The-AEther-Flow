@@ -1,0 +1,381 @@
+{
+  "check_count": 72,
+  "checks": [
+    {
+      "detail": "research_control/design/matter_coupling_dependency_dag_v1.md exists.",
+      "id": "dag_file_exists",
+      "passed": true
+    },
+    {
+      "detail": "Node kind `evidence_precondition` appears in DAG.",
+      "id": "node_kind_evidence_precondition",
+      "passed": true
+    },
+    {
+      "detail": "Node kind `adopted_object` appears in DAG.",
+      "id": "node_kind_adopted_object",
+      "passed": true
+    },
+    {
+      "detail": "Node kind `theorem` appears in DAG.",
+      "id": "node_kind_theorem",
+      "passed": true
+    },
+    {
+      "detail": "Node kind `law` appears in DAG.",
+      "id": "node_kind_law",
+      "passed": true
+    },
+    {
+      "detail": "Node kind `obstruction` appears in DAG.",
+      "id": "node_kind_obstruction",
+      "passed": true
+    },
+    {
+      "detail": "Node kind `physical_target` appears in DAG.",
+      "id": "node_kind_physical_target",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_source_matter_semantics_objects` is populated.",
+      "id": "required_node_mc_source_matter_semantics_objects",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_source_matter_semantics_equivalence_theorem` is populated.",
+      "id": "required_node_mc_source_matter_semantics_equivalence_theorem",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_rr_e_certificate_boundary` is populated.",
+      "id": "required_node_mc_rr_e_certificate_boundary",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_detector_semantics_target` is populated.",
+      "id": "required_node_mc_detector_semantics_target",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_coupling_law_target` is populated.",
+      "id": "required_node_mc_coupling_law_target",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_stress_energy_semantics_target` is populated.",
+      "id": "required_node_mc_stress_energy_semantics_target",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_stress_energy_tensor_target` is populated.",
+      "id": "required_node_mc_stress_energy_tensor_target",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_matter_action_target` is populated.",
+      "id": "required_node_mc_matter_action_target",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_universal_matter_coupling_derivation` is populated.",
+      "id": "required_node_mc_universal_matter_coupling_derivation",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_einstein_equation_dependency` is populated.",
+      "id": "required_node_mc_einstein_equation_dependency",
+      "passed": true
+    },
+    {
+      "detail": "Required node `mc_benchmark_promotion_dependency` is populated.",
+      "id": "required_node_mc_benchmark_promotion_dependency",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_objects_to_theorem` is populated.",
+      "id": "required_edge_mc_edge_objects_to_theorem",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_rr_e_boundary_to_theorem` is populated.",
+      "id": "required_edge_mc_edge_rr_e_boundary_to_theorem",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_theorem_to_coupling_law` is populated.",
+      "id": "required_edge_mc_edge_theorem_to_coupling_law",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_detector_to_universal` is populated.",
+      "id": "required_edge_mc_edge_detector_to_universal",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_coupling_law_to_universal` is populated.",
+      "id": "required_edge_mc_edge_coupling_law_to_universal",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_stress_semantics_to_tensor` is populated.",
+      "id": "required_edge_mc_edge_stress_semantics_to_tensor",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_tensor_to_action` is populated.",
+      "id": "required_edge_mc_edge_tensor_to_action",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_action_to_einstein` is populated.",
+      "id": "required_edge_mc_edge_action_to_einstein",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_universal_to_einstein` is populated.",
+      "id": "required_edge_mc_edge_universal_to_einstein",
+      "passed": true
+    },
+    {
+      "detail": "Required edge `mc_edge_einstein_to_benchmark` is populated.",
+      "id": "required_edge_mc_edge_einstein_to_benchmark",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_detector_semantics_target` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_detector_semantics_target",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_coupling_law_target` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_coupling_law_target",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_stress_energy_semantics_target` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_stress_energy_semantics_target",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_stress_energy_tensor_target` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_stress_energy_tensor_target",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_matter_action_target` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_matter_action_target",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_universal_matter_coupling_derivation` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_universal_matter_coupling_derivation",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_einstein_equation_dependency` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_einstein_equation_dependency",
+      "passed": true
+    },
+    {
+      "detail": "Blocked node `mc_benchmark_promotion_dependency` has an exact missing-burden statement.",
+      "id": "blocked_node_missing_burden_mc_benchmark_promotion_dependency",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `registries/DISTANCE_TO_GR_LEDGER.csv` appears.",
+      "id": "input_marker_registries_DISTANCE_TO_GR_LEDGER_csv",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `research_control/current_frontier.md` appears.",
+      "id": "input_marker_research_control_current_frontier_md",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `source_side_matter_semantics_object_certificate_manifest_v1.tex` appears.",
+      "id": "input_marker_source_side_matter_semantics_object_certificate_manifest_v1_tex",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `narrow_source_side_matter_semantics_equivalence_theorem_v1.tex` appears.",
+      "id": "input_marker_narrow_source_side_matter_semantics_equivalence_theorem_v1_tex",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `matter_semantics_equivalence_theorem_refuter_stress_v1.tex` appears.",
+      "id": "input_marker_matter_semantics_equivalence_theorem_refuter_stress_v1_tex",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `narrow_ms_cert_eq_gate_chair_review_v1.tex` appears.",
+      "id": "input_marker_narrow_ms_cert_eq_gate_chair_review_v1_tex",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `source_certificate_operation_laws_v1.tex` appears.",
+      "id": "input_marker_source_certificate_operation_laws_v1_tex",
+      "passed": true
+    },
+    {
+      "detail": "Required input marker `no_target_import_guard_map.md` appears.",
+      "id": "input_marker_no_target_import_guard_map_md",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 1 has source evidence path ``research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex``.",
+      "id": "edge_1_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 2 has source evidence path ``research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex``.",
+      "id": "edge_2_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 3 has source evidence path ``research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex``.",
+      "id": "edge_3_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 4 has source evidence path ``research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex``.",
+      "id": "edge_4_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 5 has source evidence path ``research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex``.",
+      "id": "edge_5_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 6 has source evidence path ``research_control/design/no_target_import_guard_map.md``.",
+      "id": "edge_6_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 7 has source evidence path ``research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex``.",
+      "id": "edge_7_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 8 has source evidence path ``research_control/design/matter_coupling_derivation_moratorium.md``.",
+      "id": "edge_8_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 9 has source evidence path ``research_control/design/matter_coupling_pre_adoption_checklist.md``.",
+      "id": "edge_9_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 10 has source evidence path ``research_control/design/matter_coupling_derivation_moratorium.md``.",
+      "id": "edge_10_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 11 has source evidence path ``registries/DISTANCE_TO_GR_LEDGER.csv``.",
+      "id": "edge_11_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 12 has source evidence path ``research_control/design/matter_coupling_derivation_moratorium.md``.",
+      "id": "edge_12_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 13 has source evidence path ``registries/DISTANCE_TO_GR_LEDGER.csv``.",
+      "id": "edge_13_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 14 has source evidence path ``registries/DISTANCE_TO_GR_LEDGER.csv``.",
+      "id": "edge_14_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 15 has source evidence path ``research_control/design/matter_coupling_derivation_moratorium.md``.",
+      "id": "edge_15_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Edge row 16 has source evidence path ``research_control/design/matter_coupling_pre_adoption_checklist.md``.",
+      "id": "edge_16_has_source_path",
+      "passed": true
+    },
+    {
+      "detail": "Forbidden bare accepted pattern `| `accepted` |` is absent.",
+      "id": "no_bare_accepted_|_`accepted`_|",
+      "passed": true
+    },
+    {
+      "detail": "Forbidden bare accepted pattern `| accepted |` is absent.",
+      "id": "no_bare_accepted_|_accepted_|",
+      "passed": true
+    },
+    {
+      "detail": "Forbidden bare accepted pattern `status: accepted\n` is absent.",
+      "id": "no_bare_accepted_status:_accepted",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not matter-semantics adoption` appears.",
+      "id": "forbidden_conclusion_phrase_not_matter_semantics_adoption",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not detector-semantics adoption` appears.",
+      "id": "forbidden_conclusion_phrase_not_detector_semantics_adoption",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not coupling-law adoption` appears.",
+      "id": "forbidden_conclusion_phrase_not_coupling_law_adoption",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not matter-coupling derivation` appears.",
+      "id": "forbidden_conclusion_phrase_not_matter_coupling_derivation",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not stress-energy semantics` appears.",
+      "id": "forbidden_conclusion_phrase_not_stress_energy_semantics",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not a matter action` appears.",
+      "id": "forbidden_conclusion_phrase_not_a_matter_action",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not Einstein equations` appears.",
+      "id": "forbidden_conclusion_phrase_not_Einstein_equations",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not benchmark promotion` appears.",
+      "id": "forbidden_conclusion_phrase_not_benchmark_promotion",
+      "passed": true
+    },
+    {
+      "detail": "Boundary phrase `not a completed derivation` appears.",
+      "id": "forbidden_conclusion_phrase_not_a_completed_derivation",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promoted": false,
+    "completed_derivation_claimed": false,
+    "coupling_law_adopted": false,
+    "detector_semantics_adopted": false,
+    "einstein_equations_derived": false,
+    "matter_coupling_derived": false,
+    "matter_semantics_adopted": false,
+    "physics_claim_authority": false,
+    "source_law_adopted": false,
+    "stress_energy_semantics_adopted": false
+  },
+  "dag_path": "research_control/design/matter_coupling_dependency_dag_v1.md",
+  "edge_count": 16,
+  "failed_check_count": 0,
+  "status": "PASS"
+}
