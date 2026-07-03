@@ -1,0 +1,84 @@
+{
+  "check_count": 15,
+  "checks": [
+    {
+      "detail": "research_control/design/semantic_layer_separation_control_note.md",
+      "id": "note_exists",
+      "passed": true
+    },
+    {
+      "detail": "note starts with control authority marker",
+      "id": "authority_marker",
+      "passed": true
+    },
+    {
+      "detail": "required layer token SourceMatterSemantics_src present",
+      "id": "layer_present_SourceMatterSemantics_src",
+      "passed": true
+    },
+    {
+      "detail": "required layer token DetectorSemantics_det present",
+      "id": "layer_present_DetectorSemantics_det",
+      "passed": true
+    },
+    {
+      "detail": "required layer token StressEnergyAction_sem present",
+      "id": "layer_present_StressEnergyAction_sem",
+      "passed": true
+    },
+    {
+      "detail": "SourceMatterSemantics_src lists allowed and blocked reuse with layer-specific guards",
+      "id": "allowed_blocked_reuse_SourceMatterSemantics_src",
+      "passed": true
+    },
+    {
+      "detail": "DetectorSemantics_det lists allowed and blocked reuse with layer-specific guards",
+      "id": "allowed_blocked_reuse_DetectorSemantics_det",
+      "passed": true
+    },
+    {
+      "detail": "StressEnergyAction_sem lists allowed and blocked reuse with layer-specific guards",
+      "id": "allowed_blocked_reuse_StressEnergyAction_sem",
+      "passed": true
+    },
+    {
+      "detail": "no-target certificates are explicitly hygiene only and not positive matter theory",
+      "id": "no_target_hygiene_only",
+      "passed": true
+    },
+    {
+      "detail": "all P4-T04 required bad fixture families are proposed",
+      "id": "linter_bad_fixtures_proposed",
+      "passed": true
+    },
+    {
+      "detail": "passing semantic-layer fixture families are proposed",
+      "id": "linter_pass_fixtures_proposed",
+      "passed": true
+    },
+    {
+      "detail": "source inventory cites plan DAG certificate and P2/P3 authority surfaces",
+      "id": "source_inventory",
+      "passed": true
+    },
+    {
+      "detail": "downstream forbidden conclusions remain visible",
+      "id": "blocked_conclusions_visible",
+      "passed": true
+    },
+    {
+      "detail": "machine-readable control summary is present",
+      "id": "machine_summary",
+      "passed": true
+    },
+    {
+      "detail": "source materials are cited in APA-style internal-source entries",
+      "id": "apa_source_materials",
+      "passed": true
+    }
+  ],
+  "failed_check_count": 0,
+  "note_path": "research_control/design/semantic_layer_separation_control_note.md",
+  "status": "PASS",
+  "validator": "validate_p4_t03_semantic_layer_separation_note"
+}
