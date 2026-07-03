@@ -1,0 +1,31 @@
+artifact_id: "parent-conflict-review-p5-t01-eqsrc-retainh-genh-dependency-audit"
+task_id: "RT-20260703-004"
+status: "completed"
+created_at: "2026-07-03T03:35:00Z"
+reviewed_children:
+  - "research_control/tasks/RT-20260703-004/artifacts/child_phys_math_eqsrc_retainh_genh_dependency_audit.yaml"
+  - "research_control/tasks/RT-20260703-004/artifacts/child_phys_phil_eqsrc_retainh_genh_dependency_audit.yaml"
+conflicts:
+  - conflict_id: "none"
+    status: "no_conflict"
+    notes: "Both child reviews distinguish current P2 theorem scope from broader matter-sector continuation and preserve no-promotion boundaries."
+resolved_parent_positions:
+  EqSrc:
+    p2_theorem_scope: "not_required_for_current_scope"
+    broader_matter_sector_continuation: "conditionally_required"
+    adoption_status: "not_adopted_not_discharged"
+  RetainH:
+    p2_theorem_scope: "not_required_for_current_scope"
+    broader_matter_sector_continuation: "conditionally_required"
+    adoption_status: "not_adopted_missing_primitive"
+  GenH:
+    p2_theorem_scope: "not_required_for_current_scope"
+    broader_matter_sector_continuation: "conditionally_required"
+    adoption_status: "not_adopted_missing_primitive"
+next_route: "P5-T02 dependency consequence selector"
+promotion_status:
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false

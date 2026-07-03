@@ -1,0 +1,47 @@
+task_id: "RT-20260703-004"
+task_type: "eqsrc_retainh_genh_dependency_audit"
+status: "completed"
+created_at: "2026-07-03T03:35:00Z"
+updated_at: "2026-07-03T03:35:00Z"
+closed_at: "2026-07-03T03:35:00Z"
+parent_task_id: "RT-20260703-003"
+current_decision_id: "DDR-20260703-004"
+current_job_id: "AJ-RT-20260703-004-001"
+plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+plan_phase_id: "P5"
+plan_task_id: "P5-T01"
+route_label: "v15_p5_t01_eqsrc_retainh_genh_dependency_audit"
+objective: "Audit whether the current matter-sector continuation depends on EqSrc, RetainH, or GenH, preserving scoped theorem boundaries and no promotion."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Audit upstream EqSrc RetainH GenH dependency status for matter-sector continuation; do not discharge or adopt the missing upstream primitives."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+claim_boundary:
+  physics_promotion_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  general_eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+outputs:
+  - "research_control/tasks/RT-20260703-004/artifacts/child_phys_math_eqsrc_retainh_genh_dependency_audit.yaml"
+  - "research_control/tasks/RT-20260703-004/artifacts/child_phys_phil_eqsrc_retainh_genh_dependency_audit.yaml"
+  - "research_control/tasks/RT-20260703-004/artifacts/parent_conflict_review_eqsrc_retainh_genh_dependency_audit.yaml"
+  - "research_control/tasks/RT-20260703-004/artifacts/parent_fusion_notes_eqsrc_retainh_genh_dependency_audit.md"
+  - "research_control/tasks/RT-20260703-004/artifacts/eqsrc_retainh_genh_dependency_audit_v1.tex"
+  - "research_control/tasks/RT-20260703-004/artifacts/validate_p5_t01_eqsrc_retainh_genh_dependency_audit.py"
+  - "research_control/tasks/RT-20260703-004/artifacts/p5_t01_eqsrc_retainh_genh_dependency_audit_report.json"
+completion_status: "post_v15_p5_t01_eqsrc_retainh_genh_dependency_audit_completed_next_p5_t02_no_promotion"
+next_recommended_action: "Run one bounded v15 P5-T02 dependency consequence selector packet."
+notes: "P5-T01 classifies EqSrc RetainH GenH as conditionally required for broader matter-sector continuation while not required for the current P2 theorem as scoped by explicit source certificates."

@@ -1,0 +1,35 @@
+artifact_id: "child-phys-phil-p5-t01-eqsrc-retainh-genh-dependency-audit"
+task_id: "RT-20260703-004"
+status: "completed"
+created_at: "2026-07-03T03:35:00Z"
+focus: "ontology and status boundary"
+inputs_inspected:
+  - "research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex"
+  - "research_control/design/matter_coupling_dependency_dag_v1.md"
+  - "research_control/design/semantic_layer_separation_control_note.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+status_observations:
+  - "P2/P3 artifacts are scoped source-side certificate artifacts and do not create detector semantics, stress-energy semantics, matter action, coupling law, Einstein-equation premises, benchmark promotion, or completed derivation."
+  - "The local EqSrc datum is local and does not discharge the general EqSrc burden recorded in the Distance-to-GR ledger."
+  - "RetainH and GenH remain missing primitives in the Distance-to-GR ledger."
+  - "Human gate authorization from the user does not by itself create a mathematical primitive, theorem, or ontology adoption record."
+dependency_consequence:
+  no_freeze_from_current_theorem: true
+  reason: "The current P2 theorem can remain scoped to explicit source certificates and fail-closed missing-certificate branches."
+  selector_needed: true
+  selector_route: "P5-T02 dependency consequence selector"
+blocked_overreads:
+  - "P5-T01 audit as general EqSrc theorem"
+  - "P5-T01 audit as RetainH adoption"
+  - "P5-T01 audit as GenH adoption"
+  - "P5-T01 audit as matter-semantics adoption"
+  - "P5-T01 audit as detector-semantics adoption"
+  - "P5-T01 audit as coupling-law adoption"
+  - "P5-T01 audit as matter-coupling derivation or adoption"
+  - "P5-T01 audit as stress-energy semantics"
+  - "P5-T01 audit as matter action"
+  - "P5-T01 audit as Einstein equations"
+  - "P5-T01 audit as benchmark promotion"
+  - "P5-T01 audit as completed derivation"
+recommendation: "Preserve blocked_adoption_open_continuation: current adoption is blocked where upstream primitives are missing, while same-milestone continuation remains open through the selector."

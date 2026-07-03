@@ -1,0 +1,41 @@
+artifact_id: "child-phys-math-p5-t01-eqsrc-retainh-genh-dependency-audit"
+task_id: "RT-20260703-004"
+status: "completed"
+created_at: "2026-07-03T03:35:00Z"
+focus: "formal dependency classification"
+inputs_inspected:
+  - "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+  - "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  - "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+dependency_classifications:
+  EqSrc:
+    p2_theorem_answer: "No. The P2 theorem uses explicit source certificate alternatives and no-target guards, not a general EqSrc theorem."
+    current_theorem_classification: "not_required_for_current_scope"
+    broader_continuation_classification: "conditionally_required"
+    missing_broadening_payload: "general source-equivalence theorem over the relevant source-object and certificate families"
+  RetainH:
+    p2_theorem_answer: "No. The P2 theorem does not quantify over H-retention or require a retention law."
+    current_theorem_classification: "not_required_for_current_scope"
+    broader_continuation_classification: "conditionally_required"
+    missing_broadening_payload: "retention law preserving declared source certificate and fail-closed structure under H"
+  GenH:
+    p2_theorem_answer: "No. The P2 theorem does not generate source families by H or use a generator primitive."
+    current_theorem_classification: "not_required_for_current_scope"
+    broader_continuation_classification: "conditionally_required"
+    missing_broadening_payload: "generator law producing the relevant H-indexed source family without target import"
+formal_lemmas:
+  - name: "Scoped certificate avoidance"
+    conclusion: "If the theorem statement remains restricted to declared source objects and explicit certificate records, general EqSrc RetainH and GenH are not premises of the positive P2 theorem branch."
+  - name: "Broadening dependency"
+    conclusion: "If continuation removes explicit certificate premises or seeks family-wide matter-sector equivalence, upstream EqSrc RetainH or GenH payload becomes conditionally required."
+promotion_status:
+  source_law_adoption: false
+  general_eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+recommendation: "Route P5-T02 to choose one downstream consequence route rather than silently broadening the P2 theorem."
