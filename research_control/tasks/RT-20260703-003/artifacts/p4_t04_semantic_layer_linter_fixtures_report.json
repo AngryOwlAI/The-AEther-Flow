@@ -1,0 +1,72 @@
+{
+  "bad_fixture_hard_fail_count": 10,
+  "bad_fixture_semantic_layer_finding_count": 10,
+  "checks": [
+    {
+      "detail": "Taxonomy defines the semantic-layer collapse overclaim class.",
+      "id": "taxonomy_class_present",
+      "passed": true
+    },
+    {
+      "detail": "Taxonomy maps every P4-T04 bad phrase to the semantic-layer class.",
+      "id": "taxonomy_contains_required_bad_phrases",
+      "passed": true
+    },
+    {
+      "detail": "Bad fixture contains every required P4-T04 collapse phrase.",
+      "id": "bad_fixture_contains_required_phrases",
+      "passed": true
+    },
+    {
+      "detail": "Bad fixture hard-fails when scanned as a current control surface.",
+      "id": "bad_fixture_hard_fails_as_current_control",
+      "passed": true
+    },
+    {
+      "detail": "Passing fixture contains canonical scoped semantic-layer wording.",
+      "id": "passing_fixture_contains_scoped_wording",
+      "passed": true
+    },
+    {
+      "detail": "Canonical scoped wording produces no linter findings.",
+      "id": "passing_fixture_passes",
+      "passed": true
+    },
+    {
+      "detail": "Unit tests exercise the bad and passing semantic-layer fixtures.",
+      "id": "unit_tests_include_semantic_layer_cases",
+      "passed": true
+    },
+    {
+      "detail": "Reviewed contexts downgrade the route-plan and P4-T03 proposal quotations only.",
+      "id": "reviewed_contexts_cover_deliberate_bad_examples",
+      "passed": true
+    },
+    {
+      "detail": "The P4-T03 fixture proposal phrases are present and implemented by P4-T04.",
+      "id": "p4_t03_note_proposed_phrases_now_implemented",
+      "passed": true
+    },
+    {
+      "detail": "Current frontier has no semantic-layer claim-language hard failures.",
+      "id": "current_frontier_no_hard_failures",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "detector_semantics_adoption_authorized": false,
+    "einstein_equations_authorized": false,
+    "matter_coupling_authorized": false,
+    "matter_semantics_adoption_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authorized": false,
+    "stress_energy_semantics_authorized": false
+  },
+  "current_frontier_hard_fail_count": 0,
+  "passing_fixture_finding_count": 0,
+  "status": "PASS",
+  "task_id": "RT-20260703-003"
+}

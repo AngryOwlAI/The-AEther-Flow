@@ -1,11 +1,15 @@
 schema_id: "claim_language_linter_taxonomy_v1"
-schema_version: "1.0.0"
+schema_version: "1.1.0"
 authority: "control"
 status: "active"
 created_at: "2026-07-01T20:07:07Z"
 created_by_task_id: "RT-20260701-037"
 created_by_job_id: "AJ-RT-20260701-037-001"
 created_by_role: "project-control-maintainer@0.2.0"
+updated_at: "2026-07-03T02:58:00Z"
+updated_by_task_id: "RT-20260703-003"
+updated_by_job_id: "AJ-RT-20260703-003-001"
+updated_by_role: "validator-engineer@0.2.0"
 purpose: "Machine-readable taxonomy for P3-T02 claim-language linter implementation."
 scope_note: "This taxonomy classifies risky wording. It does not prove, adopt, promote, or reject any physics claim."
 
@@ -34,6 +38,12 @@ source_materials:
   - path: "registries/CLAIM_BOUNDARY_REGISTRY.csv"
     role: "boundary_source"
     note: "Claim-boundary history for process-authority overclaim prevention."
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+    role: "route_context"
+    note: "P4-T04 requires semantic-layer linter fixtures for source matter, detector, stress-energy/action, RR_E, PositiveMSProfile_v1, g_eff, coupling-law, and Einstein-equation collapse cases."
+  - path: "research_control/design/semantic_layer_separation_control_note.md"
+    role: "control_source"
+    note: "P4-T03 defines the semantic-layer separation and proposes exact P4-T04 bad and passing fixture phrases."
 
 authority_rules:
   taxonomy_is_physics_proof: false
@@ -526,6 +536,37 @@ phrase_classes:
       - "benchmark-behavior certificate supplies source certificate validity"
     corrective_language: "Require explicit valid source transport, source invariance, or source factorization certificates; missing, malformed, detector, target-metric, and benchmark-behavior certificates fail closed."
 
+  - class_id: "semantic_layer_collapse_overclaim"
+    plan_required_class_number: 20
+    title: "Semantic-layer collapse overclaim"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bsource matter semantics as detector semantics\\b"
+      - pattern: "\\bsource matter semantics as stress-energy\\b"
+      - pattern: "\\bno-target certificate as matter theory\\b"
+      - pattern: "\\bRR_E transport evidence as unrestricted theorem\\b"
+      - pattern: "\\bPositiveMSProfile_v1 as matter-semantics adoption\\b"
+      - pattern: "\\bg_eff as unscoped Lorentzian metric\\b"
+      - pattern: "\\bmatter-sector evidence as coupling law\\b"
+      - pattern: "\\bscoped evidence as Einstein[- ]equation premise\\b"
+      - pattern: "\\bsource certificate supplies detector protocol\\b"
+      - pattern: "\\bstress-energy target supplies matter action\\b"
+    bad_phrases:
+      - "source matter semantics as detector semantics"
+      - "source matter semantics as stress-energy"
+      - "no-target certificate as matter theory"
+      - "RR_E transport evidence as unrestricted theorem"
+      - "PositiveMSProfile_v1 as matter-semantics adoption"
+      - "g_eff as unscoped Lorentzian metric"
+      - "matter-sector evidence as coupling law"
+      - "scoped evidence as Einstein-equation premise"
+      - "source certificate supplies detector protocol"
+      - "stress-energy target supplies matter action"
+    corrective_language: "Keep SourceMatterSemantics_src, DetectorSemantics_det, and StressEnergyAction_sem separate; scoped evidence and hygiene certificates do not become detector, stress-energy/action, coupling-law, metric, or Einstein-equation authority."
+
   - class_id: "global_no_go_or_rejection_overclaim"
     plan_required_class_number: 18
     title: "Global no-go or global rejection overclaim"
@@ -606,6 +647,26 @@ required_phrase_coverage:
       class_id: "source_certificate_overread"
     - phrase: "benchmark-behavior certificate supplies source certificate validity"
       class_id: "source_certificate_overread"
+    - phrase: "source matter semantics as detector semantics"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "source matter semantics as stress-energy"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "no-target certificate as matter theory"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "RR_E transport evidence as unrestricted theorem"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "PositiveMSProfile_v1 as matter-semantics adoption"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "g_eff as unscoped Lorentzian metric"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "matter-sector evidence as coupling law"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "scoped evidence as Einstein-equation premise"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "source certificate supplies detector protocol"
+      class_id: "semantic_layer_collapse_overclaim"
+    - phrase: "stress-energy target supplies matter action"
+      class_id: "semantic_layer_collapse_overclaim"
 
 next_linter_contract:
   route: "P3-T02"
@@ -638,8 +699,9 @@ next_linter_contract:
     - "corrective_language"
 
 acceptance_receipt:
-  required_class_count: 19
-  implemented_class_count: 19
+  required_class_count: 20
+  implemented_class_count: 20
+  p4_t04_semantic_layer_fixtures_mapped: true
   required_phrases_mapped: true
   severity_assignments_present: true
   public_overclaims_hard_fail_candidates: true

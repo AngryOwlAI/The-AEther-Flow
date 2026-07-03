@@ -1,0 +1,86 @@
+handoff_id: "handoff-0522"
+created_at: "2026-07-03T02:58:00Z"
+task_id: "RT-20260703-003"
+decision_id: "DDR-20260703-003"
+job_id: "AJ-RT-20260703-003-001"
+completion_path: "research_control/tasks/RT-20260703-003/jobs/completions/AJC-AJ-RT-20260703-003-001.yaml"
+source_task_id: "RT-20260703-003"
+source_job_id: "AJ-RT-20260703-003-001"
+source_completion_id: "AJC-AJ-RT-20260703-003-001"
+status: "completed"
+summary: "RT-20260703-003 completed v15 P4-T04 by adding semantic-layer claim-language linter taxonomy coverage reviewed contexts bad and passing fixtures focused tests and a task-local validation receipt with no physics delta."
+next_action: "Run one bounded v15 P5-T01 EqSrc RetainH GenH upstream dependency audit packet."
+loop_risk_route: "post_v15_p4_t04_semantic_layer_linter_fixtures_completed_next_p5_t01_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P5-T01 EqSrc RetainH GenH upstream dependency audit"
+  completed_scope: "P4-T04 semantic-layer claim-language linter fixtures"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P4-T04 linter pass as proof authority"
+  - "P4-T04 linter pass as source-law adoption"
+  - "P4-T04 linter pass as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "P4-T04 linter pass as unrestricted RR_E theorem"
+  - "P4-T04 linter pass as PositiveMSProfile_v1 adoption"
+  - "P4-T04 linter pass as SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "P4-T04 linter pass as matter semantics"
+  - "P4-T04 linter pass as detector semantics"
+  - "P4-T04 linter pass as coupling-law adoption"
+  - "P4-T04 linter pass as matter coupling"
+  - "P4-T04 linter pass as stress-energy semantics or matter action"
+  - "P4-T04 linter pass as Einstein-equation evidence"
+  - "P4-T04 linter pass as benchmark promotion"
+  - "P4-T04 linter pass as completed derivation"
+p4_t04_result:
+  taxonomy_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+  reviewed_contexts_path: "research_control/design/claim_language_linter_reviewed_contexts.yaml"
+  bad_fixture_path: "tests/fixtures/claim_language/semantic_layer_collapse.md"
+  passing_fixture_path: "tests/fixtures/claim_language/semantic_layer_valid.md"
+  validator_report_path: "research_control/tasks/RT-20260703-003/artifacts/p4_t04_semantic_layer_linter_fixtures_report.json"
+  status: "project_control_semantic_layer_linter_fixtures_added"
+  task_local_check_count: 10
+  task_local_failed_check_count: 0
+  full_claim_language_hard_fail_count: 0
+  next_route: "P5-T01 EqSrc RetainH GenH upstream dependency audit"
+distance_to_gr:
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-003 adds linter fixtures only. It does not change matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+validation:
+  task_local_semantic_layer_linter_fixture_validator: "PASS"
+  claim_language_unit_tests: "PASS"
+  full_claim_language_linter: "PASS"
+  changed_claim_language_linter: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
