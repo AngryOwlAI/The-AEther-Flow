@@ -1,0 +1,30 @@
+digraph claim_graph_v1 {
+  graph [label="claim_graph_v1: project-control metadata only", labelloc=t];
+  rankdir=LR;
+  node [shape=box, style="rounded"];
+  "blocked-target-benchmark-promotion" [label="benchmark promotion\\nblocked_physical_target\\nblocked"];
+  "blocked-target-einstein-equations" [label="Einstein equations\\nblocked_physical_target\\nblocked"];
+  "blocked-target-matter-coupling" [label="matter_coupling\\nblocked_physical_target\\nblocked"];
+  "conditional-theorem-narrow-ms-cert-eq-v1" [label="NarrowMSCertEq_v1\\nconditional_theorem\\nscoped_evidence_precondition"];
+  "evidence-positive-ms-profile-v1" [label="PositiveMSProfile_v1\\nevidence_precondition\\nscoped_evidence_precondition"];
+  "evidence-rr-e-transport-completeness-or-invariance-law-v1" [label="RR_ETransportCompletenessOrInvarianceLaw_v1\\nevidence_precondition\\nscoped_evidence_precondition"];
+  "obstruction-rr-e-separation" [label="RR_E separation obstruction\\nobstruction\\nblocked"];
+  "source-extension-g-eff" [label="g_eff\\nsource_extension_object\\nscoped_source_object_only"];
+  "source-extension-resp-lc" [label="Resp_lc\\nsource_extension_object\\nscoped_source_object_only"];
+  "source-object-m-src" [label="M_src\\nsource_object\\nscoped_source_object_only"];
+  "blocked-target-benchmark-promotion" -> "blocked-target-einstein-equations" [label="requires_human_gate\\nnon-establishing\\nhuman-gated"];
+  "blocked-target-einstein-equations" -> "blocked-target-matter-coupling" [label="depends_on\\nnon-establishing"];
+  "blocked-target-einstein-equations" -> "blocked-target-benchmark-promotion" [label="does_not_establish\\nnon-establishing"];
+  "source-extension-g-eff" -> "blocked-target-matter-coupling" [label="does_not_establish\\nnon-establishing"];
+  "source-object-m-src" -> "source-extension-g-eff" [label="supports\\nnon-establishing"];
+  "blocked-target-matter-coupling" -> "source-extension-g-eff" [label="depends_on\\nnon-establishing"];
+  "blocked-target-matter-coupling" -> "conditional-theorem-narrow-ms-cert-eq-v1" [label="depends_on\\nnon-establishing"];
+  "blocked-target-matter-coupling" -> "evidence-positive-ms-profile-v1" [label="depends_on\\nnon-establishing"];
+  "blocked-target-matter-coupling" -> "evidence-rr-e-transport-completeness-or-invariance-law-v1" [label="depends_on\\nnon-establishing"];
+  "blocked-target-matter-coupling" -> "blocked-target-einstein-equations" [label="does_not_establish\\nnon-establishing"];
+  "conditional-theorem-narrow-ms-cert-eq-v1" -> "blocked-target-matter-coupling" [label="does_not_establish\\nnon-establishing"];
+  "evidence-positive-ms-profile-v1" -> "blocked-target-matter-coupling" [label="does_not_establish\\nnon-establishing"];
+  "source-extension-resp-lc" -> "source-object-m-src" [label="supports\\nnon-establishing"];
+  "obstruction-rr-e-separation" -> "blocked-target-matter-coupling" [label="blocks\\nnon-establishing"];
+  "evidence-rr-e-transport-completeness-or-invariance-law-v1" -> "blocked-target-matter-coupling" [label="does_not_establish\\nnon-establishing"];
+}

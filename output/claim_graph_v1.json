@@ -1,0 +1,752 @@
+{
+  "claim_boundary": {
+    "forbidden_conclusions": [
+      "source-law adoption",
+      "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption",
+      "PositiveMSProfile_v1 adoption",
+      "matter-semantics adoption",
+      "detector-semantics adoption",
+      "coupling-law adoption",
+      "matter-coupling derivation or adoption",
+      "stress-energy semantics",
+      "matter action",
+      "Einstein equations",
+      "benchmark promotion",
+      "completed derivation"
+    ],
+    "graph_changes_scientific_claims": false,
+    "graph_is_proof_authority": false,
+    "graph_promotes_status": false,
+    "no_physics_delta": true
+  },
+  "claim_graph_schema_id": "claim_graph_schema_v1",
+  "edges": [
+    {
+      "authority_object_id": "benchmark_promotion",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-benchmark-promotion-requires-human-gate",
+      "edge_type": "requires_human_gate",
+      "metadata": {
+        "pilot_relation_note": "Benchmark promotion remains human-gated after required derivation evidence."
+      },
+      "overread_guards": [
+        "Graph relation does not issue a Gate Chair or benchmark verdict."
+      ],
+      "requires_human_gate": true,
+      "source_node_id": "blocked-target-benchmark-promotion",
+      "target_node_id": "blocked-target-einstein-equations"
+    },
+    {
+      "authority_object_id": "einstein_equations",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-einstein-equations-depends-on-matter-coupling",
+      "edge_type": "depends_on",
+      "metadata": {
+        "pilot_relation_note": "Einstein equations remain blocked by missing matter-coupling and dynamics burdens."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-einstein-equations",
+      "target_node_id": "blocked-target-matter-coupling"
+    },
+    {
+      "authority_object_id": "einstein_equations",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-einstein-equations-does-not-establish-benchmark-promotion",
+      "edge_type": "does_not_establish",
+      "metadata": {
+        "pilot_relation_note": "No Einstein-equation derivation or benchmark promotion is established."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-einstein-equations",
+      "target_node_id": "blocked-target-benchmark-promotion"
+    },
+    {
+      "authority_object_id": "g_eff",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-g-eff-does-not-establish-matter-coupling",
+      "edge_type": "does_not_establish",
+      "metadata": {
+        "pilot_relation_note": "Scoped g_eff is not matter coupling."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "source-extension-g-eff",
+      "target_node_id": "blocked-target-matter-coupling"
+    },
+    {
+      "authority_object_id": "m_src",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-m-src-supports-g-eff",
+      "edge_type": "supports",
+      "metadata": {
+        "pilot_relation_note": "M_src is a scoped source object and does not expand g_eff scope."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "source-object-m-src",
+      "target_node_id": "source-extension-g-eff"
+    },
+    {
+      "authority_object_id": "matter_coupling",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-matter-coupling-depends-on-g-eff",
+      "edge_type": "depends_on",
+      "metadata": {
+        "pilot_relation_note": "Matter-coupling target depends on prior scoped source objects."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-matter-coupling",
+      "target_node_id": "source-extension-g-eff"
+    },
+    {
+      "authority_object_id": "matter_coupling",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-matter-coupling-depends-on-narrow-ms",
+      "edge_type": "depends_on",
+      "metadata": {
+        "pilot_relation_note": "Matter-coupling target depends on scoped P2 theorem output as precondition only."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-matter-coupling",
+      "target_node_id": "conditional-theorem-narrow-ms-cert-eq-v1"
+    },
+    {
+      "authority_object_id": "matter_coupling",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-matter-coupling-depends-on-positive-profile",
+      "edge_type": "depends_on",
+      "metadata": {
+        "pilot_relation_note": "Matter-coupling target depends on profile evidence as precondition only."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-matter-coupling",
+      "target_node_id": "evidence-positive-ms-profile-v1"
+    },
+    {
+      "authority_object_id": "matter_coupling",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-matter-coupling-depends-on-rr-e-transport",
+      "edge_type": "depends_on",
+      "metadata": {
+        "pilot_relation_note": "Matter-coupling target depends on RR_E transport evidence as precondition only."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-matter-coupling",
+      "target_node_id": "evidence-rr-e-transport-completeness-or-invariance-law-v1"
+    },
+    {
+      "authority_object_id": "matter_coupling",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-matter-coupling-does-not-establish-einstein-equations",
+      "edge_type": "does_not_establish",
+      "metadata": {
+        "pilot_relation_note": "Current matter-coupling evidence is not an Einstein-equation premise."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "blocked-target-matter-coupling",
+      "target_node_id": "blocked-target-einstein-equations"
+    },
+    {
+      "authority_object_id": "TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW",
+      "authority_path": "research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex",
+      "authority_registry": "registries/TEX_SOURCE_REGISTRY.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-narrow-ms-cert-eq-does-not-establish-matter-coupling",
+      "edge_type": "does_not_establish",
+      "metadata": {
+        "pilot_relation_note": "NarrowMSCertEq_v1 is scoped evidence-status under explicit certificates."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "conditional-theorem-narrow-ms-cert-eq-v1",
+      "target_node_id": "blocked-target-matter-coupling"
+    },
+    {
+      "authority_object_id": "positive_ms_profile_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-positive-profile-does-not-establish-matter-coupling",
+      "edge_type": "does_not_establish",
+      "metadata": {
+        "pilot_relation_note": "PositiveMSProfile_v1 is scoped evidence/precondition only."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "evidence-positive-ms-profile-v1",
+      "target_node_id": "blocked-target-matter-coupling"
+    },
+    {
+      "authority_object_id": "resp_lc",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-resp-lc-supports-m-src",
+      "edge_type": "supports",
+      "metadata": {
+        "pilot_relation_note": "Resp_lc may be cited only within scoped source-extension status."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "source-extension-resp-lc",
+      "target_node_id": "source-object-m-src"
+    },
+    {
+      "authority_object_id": "rr_e_separation_obstruction_witness_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "does_not_establish": [
+        "future source-extension impossibility",
+        "program-wide no-go conclusion"
+      ],
+      "edge_id": "edge-rr-e-separation-blocks-matter-coupling-overread",
+      "edge_type": "blocks",
+      "metadata": {
+        "pilot_relation_note": "RR_E separation obstruction blocks unrestricted overread under current premises."
+      },
+      "overread_guards": [
+        "Same-milestone continuation remains open.",
+        "The obstruction is not a program-wide no-go conclusion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "obstruction-rr-e-separation",
+      "target_node_id": "blocked-target-matter-coupling"
+    },
+    {
+      "authority_object_id": "rr_e_transport_completeness_or_invariance_law_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "does_not_establish": [
+        "matter-coupling derivation or adoption",
+        "Einstein equations",
+        "benchmark promotion",
+        "completed derivation"
+      ],
+      "edge_id": "edge-rr-e-transport-does-not-establish-matter-coupling",
+      "edge_type": "does_not_establish",
+      "metadata": {
+        "pilot_relation_note": "RR_E transport evidence is not source-law or matter-coupling adoption."
+      },
+      "overread_guards": [
+        "Support relation is scoped to source-side control status.",
+        "Support relation is not physics promotion."
+      ],
+      "requires_human_gate": false,
+      "source_node_id": "evidence-rr-e-transport-completeness-or-invariance-law-v1",
+      "target_node_id": "blocked-target-matter-coupling"
+    }
+  ],
+  "generated_at": "2026-07-03T20:38:51Z",
+  "generator": {
+    "name": "scripts/research_control/generate_claim_graph_v1.py",
+    "version": "v1"
+  },
+  "graph_id": "claim_graph_v1",
+  "nodes": [
+    {
+      "authority_object_id": "benchmark_promotion",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "benchmark promotion",
+      "metadata": {
+        "current_status": "blocked by missing primitive",
+        "last_evidence_path": "research_control/program_state.yaml",
+        "ledger_burden_id": "benchmark_promotion",
+        "milestone": "benchmark_promotion",
+        "physical_status": "no_exact_gr_benchmark_promotion",
+        "required_object": "exact-GR benchmark",
+        "updated_at": "2026-06-17T15:46:25Z"
+      },
+      "node_id": "blocked-target-benchmark-promotion",
+      "node_type": "blocked_physical_target",
+      "overread_guards": [
+        "no_benchmark_promotion",
+        "no_benchmark_gate_chair_closure",
+        "no_completed_derivation",
+        "Physical target remains blocked unless a future protected source proves it.",
+        "Graph visibility does not establish the target."
+      ],
+      "promotion_status": "blocked",
+      "scientific_proof_authority": false,
+      "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "blocked",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "einstein_equations",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "Einstein equations",
+      "metadata": {
+        "current_status": "not started",
+        "last_evidence_path": "research_control/program_state.yaml",
+        "ledger_burden_id": "einstein_equations",
+        "milestone": "einstein_equations",
+        "physical_status": "no_field_equation_derivation",
+        "required_object": "field equations",
+        "updated_at": "2026-06-17T15:46:25Z"
+      },
+      "node_id": "blocked-target-einstein-equations",
+      "node_type": "blocked_physical_target",
+      "overread_guards": [
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "Physical target remains blocked unless a future protected source proves it.",
+        "Graph visibility does not establish the target."
+      ],
+      "promotion_status": "blocked",
+      "scientific_proof_authority": false,
+      "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "blocked",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "matter_coupling",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "matter_coupling",
+      "metadata": {
+        "current_status": "accepted",
+        "last_evidence_path": "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex",
+        "ledger_burden_id": "matter_coupling",
+        "milestone": "matter_coupling",
+        "physical_status": "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
+        "required_object": "universal coupling",
+        "updated_at": "2026-07-02T22:53:15Z"
+      },
+      "node_id": "blocked-target-matter-coupling",
+      "node_type": "blocked_physical_target",
+      "overread_guards": [
+        "no_source_law_adoption",
+        "no_metricdata_e_adoption",
+        "no_geff_scope_expansion",
+        "no_coupling_law_adoption",
+        "no_matter_coupling_derivation",
+        "no_matter_coupling_adoption",
+        "no_stress_energy_semantics",
+        "no_stress_energy_tensor",
+        "no_matter_action",
+        "no_detector_semantics",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "no_future_source_extension_impossibility",
+        "no_global_theory_rejection",
+        "Physical target remains blocked unless a future protected source proves it.",
+        "Graph visibility does not establish the target."
+      ],
+      "promotion_status": "blocked",
+      "scientific_proof_authority": false,
+      "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "blocked",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW",
+      "authority_path": "research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex",
+      "authority_registry": "registries/TEX_SOURCE_REGISTRY.csv",
+      "label": "NarrowMSCertEq_v1",
+      "metadata": {
+        "ledger_burden_id": "matter_coupling",
+        "source_registry_object": "TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW",
+        "source_role": "P2 theorem output if present"
+      },
+      "node_id": "conditional-theorem-narrow-ms-cert-eq-v1",
+      "node_type": "conditional_theorem",
+      "overread_guards": [
+        "no_source_law_adoption",
+        "no_matter_semantics_adoption",
+        "no_detector_semantics_adoption",
+        "no_coupling_law_adoption",
+        "no_matter_coupling_derivation",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "Conditional theorem remains under explicit certificates.",
+        "Gate Chair evidence-status review is scoped evidence only."
+      ],
+      "promotion_status": "scoped_evidence_precondition",
+      "scientific_proof_authority": false,
+      "source_hash": "34e2f86e377edc3d13513d6f0a9e8d3083829bda230d32309177a82879770ca7",
+      "status": "accepted_as_scoped_evidence_status",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "positive_ms_profile_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "label": "PositiveMSProfile_v1",
+      "metadata": {
+        "frontier_item_id": "positive_ms_profile_v1",
+        "frontier_start_line": 1451,
+        "mathematical_status": "positive_source_matter_semantics_profile_evidence",
+        "physical_status": "not_matter_semantics_not_detector_semantics_not_matter_coupling",
+        "source_artifact_paths": [
+          "research_control/tasks/RT-20260701-016/artifacts/positive_source_matter_semantics_profile_candidate_v1.tex",
+          "research_control/tasks/RT-20260701-017/artifacts/positive_source_matter_semantics_profile_smuggling_audit_v1.tex",
+          "research_control/tasks/RT-20260701-018/artifacts/positive_source_matter_semantics_profile_refuter_stress_v1.tex",
+          "research_control/tasks/RT-20260701-020/artifacts/positive_source_matter_semantics_profile_gate_chair_review_v1.tex"
+        ]
+      },
+      "node_id": "evidence-positive-ms-profile-v1",
+      "node_type": "evidence_precondition",
+      "overread_guards": [
+        "no_source_law_adoption",
+        "no_coupling_law_adoption",
+        "no_matter_coupling_derivation",
+        "no_matter_coupling_adoption",
+        "no_stress_energy_semantics",
+        "no_matter_action",
+        "no_detector_semantics",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "no_future_source_extension_impossibility",
+        "no_global_theory_rejection",
+        "Graph node is project-control metadata only.",
+        "Graph node does not promote the cited source beyond its authority."
+      ],
+      "promotion_status": "scoped_evidence_precondition",
+      "scientific_proof_authority": false,
+      "source_hash": "0f7d22dff2079b3c4d3f53ba5a1147dbc0fd245eb7ddb74e74dfca7cd2f54124",
+      "status": "accepted_as_scoped_evidence_precondition",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "rr_e_transport_completeness_or_invariance_law_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "label": "RR_ETransportCompletenessOrInvarianceLaw_v1",
+      "metadata": {
+        "frontier_item_id": "rr_e_transport_completeness_or_invariance_law_v1",
+        "frontier_start_line": 881,
+        "mathematical_status": "proposal_only_schema_accepted_as_scoped_source_extension_evidence_precondition",
+        "physical_status": "not_source_law_not_unrestricted_rr_e_not_detector_semantics_not_matter_coupling",
+        "source_artifact_paths": [
+          "research_control/tasks/RT-20260701-027/artifacts/rr_e_transport_completeness_or_invariance_law_formalizer_v1.tex",
+          "research_control/tasks/RT-20260701-028/artifacts/rr_e_transport_law_smuggling_audit_v1.tex",
+          "research_control/tasks/RT-20260701-029/artifacts/rr_e_transport_law_refuter_stress_v1.tex",
+          "research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex"
+        ]
+      },
+      "node_id": "evidence-rr-e-transport-completeness-or-invariance-law-v1",
+      "node_type": "evidence_precondition",
+      "overread_guards": [
+        "no_source_law_adoption",
+        "no_rr_e_transport_law_adoption",
+        "no_unrestricted_rr_e_theorem",
+        "no_detector_semantics",
+        "no_matter_semantics",
+        "no_coupling_law_adoption",
+        "no_matter_coupling_derivation",
+        "no_metricdata_e_adoption",
+        "no_geff_scope_expansion",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "no_future_source_extension_impossibility",
+        "no_global_theory_rejection",
+        "Graph node is project-control metadata only.",
+        "Graph node does not promote the cited source beyond its authority."
+      ],
+      "promotion_status": "scoped_evidence_precondition",
+      "scientific_proof_authority": false,
+      "source_hash": "0f7d22dff2079b3c4d3f53ba5a1147dbc0fd245eb7ddb74e74dfca7cd2f54124",
+      "status": "accepted_as_scoped_evidence_precondition",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "rr_e_separation_obstruction_witness_v1",
+      "authority_path": "research_control/design/frontier_theorem_inventory.md",
+      "authority_registry": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "label": "RR_E separation obstruction",
+      "metadata": {
+        "frontier_item_id": "rr_e_separation_obstruction_witness_v1",
+        "frontier_start_line": 826,
+        "mathematical_status": "finite_counterexample_or_separation_witness",
+        "physical_status": "not_detector_semantics_not_matter_coupling",
+        "source_artifact_paths": [
+          "research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex"
+        ]
+      },
+      "node_id": "obstruction-rr-e-separation",
+      "node_type": "obstruction",
+      "overread_guards": [
+        "no_source_law_adoption",
+        "no_unrestricted_rr_e_theorem",
+        "no_matter_coupling_derivation",
+        "no_future_source_extension_impossibility",
+        "no_global_theory_rejection",
+        "Scoped obstruction does not establish future source-extension impossibility.",
+        "Scoped obstruction does not establish program-wide no-go."
+      ],
+      "promotion_status": "blocked",
+      "scientific_proof_authority": false,
+      "source_hash": "0f7d22dff2079b3c4d3f53ba5a1147dbc0fd245eb7ddb74e74dfca7cd2f54124",
+      "status": "obstruction_recorded",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "g_eff",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "g_eff",
+      "metadata": {
+        "current_status": "accepted",
+        "last_evidence_path": "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex",
+        "ledger_burden_id": "g_eff",
+        "milestone": "effective_metric_g_eff",
+        "physical_status": "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
+        "required_object": "g_eff",
+        "updated_at": "2026-06-27T06:48:00Z"
+      },
+      "node_id": "source-extension-g-eff",
+      "node_type": "source_extension_object",
+      "overread_guards": [
+        "no_source_law_adoption",
+        "no_metricdata_e_adoption",
+        "no_unscoped_geff_adoption",
+        "no_matter_coupling_derivation",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "Graph node is project-control metadata only.",
+        "Graph node does not promote the cited source beyond its authority."
+      ],
+      "promotion_status": "scoped_source_object_only",
+      "scientific_proof_authority": false,
+      "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "gate_review_completed",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "resp_lc",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "Resp_lc",
+      "metadata": {
+        "current_status": "accepted",
+        "last_evidence_path": "research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex",
+        "ledger_burden_id": "resp_lc",
+        "milestone": "response_localization_resp_lc",
+        "physical_status": "not_detector_semantics_not_matter_coupling",
+        "required_object": "Resp_lc",
+        "updated_at": "2026-06-18T03:11:32Z"
+      },
+      "node_id": "source-extension-resp-lc",
+      "node_type": "source_extension_object",
+      "overread_guards": [
+        "no_canonical_ontology_edit",
+        "no_matter_coupling_derivation",
+        "no_detector_semantics",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "Graph node is project-control metadata only.",
+        "Graph node does not promote the cited source beyond its authority."
+      ],
+      "promotion_status": "scoped_source_object_only",
+      "scientific_proof_authority": false,
+      "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "accepted_as_source_extension_data",
+      "validator_receipt_only": false
+    },
+    {
+      "authority_object_id": "m_src",
+      "authority_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "authority_registry": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "label": "M_src",
+      "metadata": {
+        "current_status": "accepted",
+        "last_evidence_path": "research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex",
+        "ledger_burden_id": "m_src",
+        "milestone": "source_manifold_m_src",
+        "physical_status": "not_target_manifold_not_metric_not_gr_derivation",
+        "required_object": "M_src",
+        "updated_at": "2026-06-24T22:49:32Z"
+      },
+      "node_id": "source-object-m-src",
+      "node_type": "source_object",
+      "overread_guards": [
+        "no_metricdata_e_adoption",
+        "no_geff_scope_expansion",
+        "no_matter_coupling_derivation",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation",
+        "Graph node is project-control metadata only.",
+        "Graph node does not promote the cited source beyond its authority."
+      ],
+      "promotion_status": "scoped_source_object_only",
+      "scientific_proof_authority": false,
+      "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "gate_review_completed",
+      "validator_receipt_only": false
+    }
+  ],
+  "outputs": {
+    "dot": "output/claim_graph_v1.dot",
+    "json": "output/claim_graph_v1.json",
+    "markdown": "wiki/indexes/claim_graph_v1.md"
+  },
+  "source_authority": {
+    "canonical_sources": [
+      "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "research_control/design/frontier_theorem_inventory.md",
+      "research_control/design/claim_graph_schema_v1.md",
+      "research_control/current_frontier.md",
+      "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+    ],
+    "derivative_sources_allowed": false,
+    "source_hashes": [
+      {
+        "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+        "source_hash": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+      },
+      {
+        "path": "research_control/design/frontier_theorem_inventory.md",
+        "source_hash": "0f7d22dff2079b3c4d3f53ba5a1147dbc0fd245eb7ddb74e74dfca7cd2f54124"
+      },
+      {
+        "path": "research_control/design/claim_graph_schema_v1.md",
+        "source_hash": "75d0af627600582f48f951901d933eb1cbc524a18a3135b306907a415bbacf7c"
+      },
+      {
+        "path": "research_control/current_frontier.md",
+        "source_hash": "b50b4b4758f7e709489ab01716f63e2818316d83f1feaa941f777b651858793b"
+      },
+      {
+        "path": "implementations_plans/recommendations_implementation_plan_continue_task-v15.md",
+        "source_hash": "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "validator_name": "scripts/research_control/generate_claim_graph_v1.py",
+    "validator_version": "v1"
+  }
+}
