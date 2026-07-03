@@ -1,0 +1,1210 @@
+{
+  "advisory_only": true,
+  "claim_boundary": {
+    "completed_derivation_authorized": false,
+    "operational_diagnostic_only": true,
+    "physics_promotion_authorized": false,
+    "route_freeze_authorized": false,
+    "source_law_adoption_authorized": false
+  },
+  "comparison_fields": [
+    "target_derivation_milestone",
+    "milestone_burden",
+    "object_or_claim_name",
+    "route_family",
+    "role_family",
+    "mathematical_payload_class",
+    "distance_to_gr_delta.effect",
+    "source_extension_classification",
+    "obstruction_id",
+    "freeze_criteria_status.decision",
+    "next_route_selected"
+  ],
+  "extraction_errors": [],
+  "generated_at": "2026-07-03T15:06:26Z",
+  "legacy_route_orbit_validation": {
+    "hard_failure_count": 0,
+    "status": "PASS",
+    "warning_count": 0
+  },
+  "no_new_mathematical_payload_tasks": [
+    {
+      "mathematical_payload_class": "boundary_synchronization_only",
+      "object_or_claim_name": "P2-T03 boundary synchronization receipt",
+      "process_refresh_signature": false,
+      "route_family": "boundary_synchronization",
+      "suggested_consequence": "retain_as_control_evidence_not_new_mathematical_payload",
+      "task_id": "RT-20260701-010"
+    },
+    {
+      "mathematical_payload_class": "boundary_synchronization_only",
+      "object_or_claim_name": "P4-T06 boundary synchronization receipt",
+      "process_refresh_signature": false,
+      "route_family": "boundary_synchronization",
+      "suggested_consequence": "retain_as_control_evidence_not_new_mathematical_payload",
+      "task_id": "RT-20260701-021"
+    },
+    {
+      "mathematical_payload_class": "boundary_synchronization_only",
+      "object_or_claim_name": "RR_E boundary theorem-inventory synchronization",
+      "process_refresh_signature": false,
+      "route_family": "boundary_synchronization",
+      "suggested_consequence": "retain_as_control_evidence_not_new_mathematical_payload",
+      "task_id": "RT-20260701-031"
+    }
+  ],
+  "pilot_blocks_research": false,
+  "repeated_burden_cycle_count": 2,
+  "repeated_burden_cycles": [
+    {
+      "boundary_synchronization_task_ids": [],
+      "cycle_key": "matter_coupling|matter_coupling|PositiveMSProfile_v1",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature_count": 2,
+      "no_new_mathematical_payload_task_ids": [],
+      "object_or_claim_name": "PositiveMSProfile_v1",
+      "process_refresh_task_ids": [],
+      "route_families": [
+        "source_extension_candidate",
+        "source_extension_gate"
+      ],
+      "signature_count": 2,
+      "suggested_consequence": "continue_without_freeze_from_pilot_record_cycle_for_p10_t03_policy",
+      "target_derivation_milestone": "matter_coupling",
+      "task_ids": [
+        "RT-20260701-016",
+        "RT-20260701-020"
+      ]
+    },
+    {
+      "boundary_synchronization_task_ids": [],
+      "cycle_key": "matter_coupling|matter_coupling|SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature_count": 2,
+      "no_new_mathematical_payload_task_ids": [],
+      "object_or_claim_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "process_refresh_task_ids": [],
+      "route_families": [
+        "source_extension_candidate",
+        "source_extension_gate"
+      ],
+      "signature_count": 2,
+      "suggested_consequence": "continue_without_freeze_from_pilot_record_cycle_for_p10_t03_policy",
+      "target_derivation_milestone": "matter_coupling",
+      "task_ids": [
+        "RT-20260701-001",
+        "RT-20260701-009"
+      ]
+    }
+  ],
+  "repeated_no_new_payload_cycle_count": 0,
+  "required_v15_fields": [
+    "target_derivation_milestone",
+    "milestone_burden",
+    "object_or_claim_name",
+    "route_family",
+    "role_family",
+    "mathematical_payload_class",
+    "distance_to_gr_delta",
+    "source_extension_classification",
+    "obstruction_id",
+    "freeze_criteria_status",
+    "next_route_selected"
+  ],
+  "route_orbit_warning_should_emit": false,
+  "route_signature_count": 23,
+  "route_signatures": [
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "proof_attempt",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_smuggling-auditor@0.2.0_ontology-law-research-packet_to_audit_sourcemattersemanticsadoptionreadinesslaw_v1_before_stress_gate_chair_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "ontology-formalizer",
+      "route_family": "source_extension_candidate",
+      "route_signature_hash": "693f53cfd8e633cedb0a8af27b380dd07165c06ee828720f5b3d51ddfb92b8dd",
+      "route_signature_key": "matter_coupling|matter_coupling|SourceMatterSemanticsAdoptionReadinessLaw_v1|source_extension_candidate|ontology-formalizer|proof_attempt|no_distance_delta|source_extension_candidate|none|not_frozen|run_one_bounded_smuggling-auditor@0.2.0_ontology-law-research-packet_to_audit_sourcemattersemanticsadoptionreadinesslaw_v1_before_stress_gate_chair_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-001/jobs/completions/AJC-AJ-RT-20260701-001-001.yaml",
+      "source_created_at": "2026-07-01T00:49:13Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-001-001",
+      "source_signature_hash": "ea5d35bc951cc483630ff5d3855b1bc99681db4bf7541c0837ed97eb5413bae9",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-001",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_audit_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_refuter@0.2.0_ontology-law_stress_packet_to_stress_sourcemattersemanticsadoptionreadinesslaw_v1_for_readiness-label_stability_source_relabeling_finite_variation_certificate_deletion_rr_e_separation_fail-closed_overread_handling_and_process-authority_immunity_before_selector_gate_chair_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_routes.",
+      "object_or_claim_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1 source-purity audit",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "smuggling-auditor",
+      "route_family": "source_extension_audit",
+      "route_signature_hash": "b66e8226dc9dbd02c20d738b6b9c2aad2f5f55a480e7382007bc5de0c2b028a7",
+      "route_signature_key": "matter_coupling|matter_coupling|SourceMatterSemanticsAdoptionReadinessLaw_v1 source-purity audit|source_extension_audit|smuggling-auditor|source_extension_audit_result|no_distance_delta|source_extension_smuggling_audit|none|not_frozen|run_one_bounded_refuter@0.2.0_ontology-law_stress_packet_to_stress_sourcemattersemanticsadoptionreadinesslaw_v1_for_readiness-label_stability_source_relabeling_finite_variation_certificate_deletion_rr_e_separation_fail-closed_overread_handling_and_process-authority_immunity_before_selector_gate_chair_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_routes.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-002/jobs/completions/AJC-AJ-RT-20260701-002-001.yaml",
+      "source_created_at": "2026-07-01T01:20:18Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-002-001",
+      "source_signature_hash": "8159ac24977685f6d86640a5599969737c384b9660d5a8eb6f9f5e2aa1b26761",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-002",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_applicable",
+        "evaluated": false,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_refuter_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_p2-t02_theoretical-continuation-selector_packet_to_decide_the_post-stress_route_for_sourcemattersemanticsadoptionreadinesslaw_v1_before_any_gate_chair_review_adoption_matter-coupling_route_einstein-equation_route_benchmark_route_or_promotion_work.",
+      "object_or_claim_name": "Fail-closed readiness stress theorem",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "refuter",
+      "route_family": "source_extension_stress",
+      "route_signature_hash": "7e57a6f8ed77ea1b6845ccc8beec0c2ba433f2b946bfc83c95abae4069154b68",
+      "route_signature_key": "matter_coupling|matter_coupling|Fail-closed readiness stress theorem|source_extension_stress|refuter|source_extension_refuter_result|no_distance_delta|source_extension_refuter_stress|none|not_applicable|run_one_bounded_p2-t02_theoretical-continuation-selector_packet_to_decide_the_post-stress_route_for_sourcemattersemanticsadoptionreadinesslaw_v1_before_any_gate_chair_review_adoption_matter-coupling_route_einstein-equation_route_benchmark_route_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-007/jobs/completions/AJC-AJ-RT-20260701-007-001.yaml",
+      "source_created_at": "2026-07-01T05:46:19Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-007-001",
+      "source_signature_hash": "f6b5288377057b94c24485d500e9b756614e419bbbbaf300855a76b6b9f527b0",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-007",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "human_gate_required",
+        "evaluated": true,
+        "freeze_scope": "SOURCE-MATTER-SEMANTICS-ADOPTION-READINESS-LAW-STRESS-SURVIVED",
+        "triggered": false
+      },
+      "mathematical_payload_class": "route_selector_only",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_gate_chair_packet_under_the_current_user_authorization_to_decide_only_whether_sourcemattersemanticsadoptionreadinesslaw_v1_may_be_accepted_as_scoped_source-extension_matter-semantics_adoption-readiness_evidence/precondition_under_its_declared_source-side_and_fail-closed_scope.",
+      "object_or_claim_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1 source-extension human-gate route",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "theoretical-continuation-selector",
+      "route_family": "selector",
+      "route_signature_hash": "a617d58c46e201cac97f5ec69c5f3dffcd80e18ac2cdcbc96e79b51f0aa81786",
+      "route_signature_key": "matter_coupling|matter_coupling|SourceMatterSemanticsAdoptionReadinessLaw_v1 source-extension human-gate route|selector|theoretical-continuation-selector|route_selector_only|no_distance_delta|source_extension_refuter_stress|none|human_gate_required|run_one_bounded_gate_chair_packet_under_the_current_user_authorization_to_decide_only_whether_sourcemattersemanticsadoptionreadinesslaw_v1_may_be_accepted_as_scoped_source-extension_matter-semantics_adoption-readiness_evidence/precondition_under_its_declared_source-side_and_fail-closed_scope.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-008/jobs/completions/AJC-AJ-RT-20260701-008-001.yaml",
+      "source_created_at": "2026-07-01T06:10:09Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-008-001",
+      "source_signature_hash": "ef6ccc264e727a17034ae1dad0f507b476d9f1c13f304a00e06365e91afbd1a5",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-008",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": true,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_applicable",
+        "evaluated": false,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "scoped_evidence_status_review",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p2-t03_scientific_boundary_update_or_equivalent_control_packet_to_ensure_current_frontier_and_ledger_wording_reflect_scoped_sourcemattersemanticsadoptionreadinesslaw_v1_evidence/precondition_acceptance_without_source-law_adoption_sourcemattersemanticsadoptionreadinesslaw_v1_law_adoption_matter-semantics_adoption_detector-semantics_adoption_coupling-law_adoption_matter-coupling_derivation_stress-energy_semantics_matter_action_einstein_equations_benchmark_promotion_or_completed_derivation.",
+      "object_or_claim_name": "SourceMatterSemanticsAdoptionReadinessLaw_v1",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "gate-chair",
+      "route_family": "source_extension_gate",
+      "route_signature_hash": "b40cb88c8a8d2eaf65b6774772983a2ae79035070891b65ac925010acaa975e2",
+      "route_signature_key": "matter_coupling|matter_coupling|SourceMatterSemanticsAdoptionReadinessLaw_v1|source_extension_gate|gate-chair|scoped_evidence_status_review|no_distance_delta|source_extension_human_gate|none|not_applicable|run_one_bounded_v13_p2-t03_scientific_boundary_update_or_equivalent_control_packet_to_ensure_current_frontier_and_ledger_wording_reflect_scoped_sourcemattersemanticsadoptionreadinesslaw_v1_evidence/precondition_acceptance_without_source-law_adoption_sourcemattersemanticsadoptionreadinesslaw_v1_law_adoption_matter-semantics_adoption_detector-semantics_adoption_coupling-law_adoption_matter-coupling_derivation_stress-energy_semantics_matter_action_einstein_equations_benchmark_promotion_or_completed_derivation.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-009/jobs/completions/AJC-AJ-RT-20260701-009-001.yaml",
+      "source_created_at": "2026-07-01T06:37:08Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_human_gate",
+      "source_job_id": "AJ-RT-20260701-009-001",
+      "source_signature_hash": "6762043e05b12f2ac7b15d649b9dadb125a5808ca1ceccef1ce4ba33e44a6273",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-009",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_applicable",
+        "evaluated": false,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "boundary_synchronization_only",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": false,
+      "next_route_selected": "run_one_bounded_v13_p3-t01_no-leap_route_rule_formalization_control_packet_before_any_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_route.",
+      "object_or_claim_name": "P2-T03 boundary synchronization receipt",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "project-control-maintainer",
+      "route_family": "boundary_synchronization",
+      "route_signature_hash": "173a2ca5749a4aa5e41485c9c46e37f50e06a666edb51abef8d810d878219b06",
+      "route_signature_key": "matter_coupling|matter_coupling|P2-T03 boundary synchronization receipt|boundary_synchronization|project-control-maintainer|boundary_synchronization_only|no_distance_delta|source_extension_boundary_sync|none|not_applicable|run_one_bounded_v13_p3-t01_no-leap_route_rule_formalization_control_packet_before_any_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_route.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-010/jobs/completions/AJC-AJ-RT-20260701-010-001.yaml",
+      "source_created_at": "2026-07-01T07:18:42Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_boundary_sync",
+      "source_job_id": "AJ-RT-20260701-010-001",
+      "source_signature_hash": "fa1d9f577fd38630ae89a28c3f791bf5e6e9e83879b2103194aba3abab5ddc23",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-010",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "construction",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p4-t02_positive_source-matter-semantics_candidate_constructor_packet_under_positivesourcemattersemanticstarget_v1._the_constructor_must_either_instantiate_the_target_on_a_declared_source_subdomain_or_return_a_precise_obstruction_with_no_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_adoption.",
+      "object_or_claim_name": "PositiveSourceMatterSemanticsTarget_v1",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "ontology-formalizer",
+      "route_family": "source_extension_candidate",
+      "route_signature_hash": "c766766b39340c8212489c43ef25fb2e687d25460cfdcdf9f64e426272a8169a",
+      "route_signature_key": "matter_coupling|matter_coupling|PositiveSourceMatterSemanticsTarget_v1|source_extension_candidate|ontology-formalizer|construction|no_distance_delta|source_extension_candidate|none|not_frozen|run_one_bounded_v13_p4-t02_positive_source-matter-semantics_candidate_constructor_packet_under_positivesourcemattersemanticstarget_v1._the_constructor_must_either_instantiate_the_target_on_a_declared_source_subdomain_or_return_a_precise_obstruction_with_no_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_adoption.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-015/jobs/completions/AJC-AJ-RT-20260701-015-001.yaml",
+      "source_created_at": "2026-07-01T08:42:00Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-015-001",
+      "source_signature_hash": "d3574e5fbaad54dfb3d042cf13edde76a3bbfb6e720e7b8285098aab9f5271ca",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-015",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "construction",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p4-t03_smuggling-auditor@0.2.0_packet_over_positivemsprofile_v1_before_refuter_stress_selector_gate_chair_matter-semantics_adoption_detector-semantics_adoption_coupling-law_adoption_matter-coupling_derivation_einstein-equation_route_benchmark_route_or_promotion_route.",
+      "object_or_claim_name": "PositiveMSProfile_v1",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "candidate-constructor",
+      "route_family": "source_extension_candidate",
+      "route_signature_hash": "67df0a6dfbf9ae0010b60e4d6865d0d2085d3430730d4386ac6b96af06a1a42b",
+      "route_signature_key": "matter_coupling|matter_coupling|PositiveMSProfile_v1|source_extension_candidate|candidate-constructor|construction|no_distance_delta|source_extension_candidate|none|not_frozen|run_one_bounded_v13_p4-t03_smuggling-auditor@0.2.0_packet_over_positivemsprofile_v1_before_refuter_stress_selector_gate_chair_matter-semantics_adoption_detector-semantics_adoption_coupling-law_adoption_matter-coupling_derivation_einstein-equation_route_benchmark_route_or_promotion_route.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-016/jobs/completions/AJC-AJ-RT-20260701-016-001.yaml",
+      "source_created_at": "2026-07-01T09:05:33Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-016-001",
+      "source_signature_hash": "6b257c815fb9fb51f443aaa3950b5484f0ec9a6b62613e7695ac557faadd4e30",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-016",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_audit_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p4-t04_refuter_stress_packet_over_positivemsprofile_v1_targeting_source_relabeling_finite_variation_certificate_deletion_semantic-label_deletion_degeneracy_rr_e_pressure_process-authority_pressure_g_eff_and_metricdata(e)_import_pressure_detector_semantics_stress-energy_matter-action_and_adoption_pressure_before_selector_gate_chair_adoption_matter-coupling_einstein-equation_benchmark_or_promotion_routes.",
+      "object_or_claim_name": "PositiveMSProfile_v1 source-purity audit",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "smuggling-auditor",
+      "route_family": "source_extension_audit",
+      "route_signature_hash": "5a0e8ac55cc6fba4842a39012bd52f4b567b48c3e10b1909781ad807bae3b4ab",
+      "route_signature_key": "matter_coupling|matter_coupling|PositiveMSProfile_v1 source-purity audit|source_extension_audit|smuggling-auditor|source_extension_audit_result|no_distance_delta|source_extension_smuggling_audit|none|not_frozen|run_one_bounded_v13_p4-t04_refuter_stress_packet_over_positivemsprofile_v1_targeting_source_relabeling_finite_variation_certificate_deletion_semantic-label_deletion_degeneracy_rr_e_pressure_process-authority_pressure_g_eff_and_metricdata(e)_import_pressure_detector_semantics_stress-energy_matter-action_and_adoption_pressure_before_selector_gate_chair_adoption_matter-coupling_einstein-equation_benchmark_or_promotion_routes.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-017/jobs/completions/AJC-AJ-RT-20260701-017-001.yaml",
+      "source_created_at": "2026-07-01T09:40:06Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-017-001",
+      "source_signature_hash": "5573bdc690c953db2c43cbd879fc0787e0cbbc85e2b8a3d633d7d2b22a62e659",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-017",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_refuter_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p4-t05_theoretical-continuation-selector_packet_to_classify_the_post-stress_route_for_positivemsprofile_v1_before_gate_chair_review_adoption_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "Fail-closed positive-profile stress theorem",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "refuter",
+      "route_family": "source_extension_stress",
+      "route_signature_hash": "87920a63bebb0ee2505aed9ff98af411b562a03ab7ff4f2bbd2c5d1f8317211d",
+      "route_signature_key": "matter_coupling|matter_coupling|Fail-closed positive-profile stress theorem|source_extension_stress|refuter|source_extension_refuter_result|no_distance_delta|source_extension_refuter_stress|none|not_frozen|run_one_bounded_v13_p4-t05_theoretical-continuation-selector_packet_to_classify_the_post-stress_route_for_positivemsprofile_v1_before_gate_chair_review_adoption_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-018/jobs/completions/AJC-AJ-RT-20260701-018-001.yaml",
+      "source_created_at": "2026-07-01T10:05:51Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-018-001",
+      "source_signature_hash": "3a4df5bc7d7e64fdb5ada23303aaa13d4758a73b966852ec747f1e3c19948e39",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-018",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "human_gate_required",
+        "evaluated": true,
+        "freeze_scope": "POSITIVE-SOURCE-MATTER-SEMANTICS-PROFILE-STRESS-SURVIVED",
+        "triggered": false
+      },
+      "mathematical_payload_class": "route_selector_only",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_gate_chair_packet_under_the_current_user_authorization_to_decide_only_whether_positivemsprofile_v1_may_be_accepted_as_scoped_source-extension_positive_source-matter-semantics_profile_evidence/precondition_under_its_declared_source-side_and_fail-closed_scope.",
+      "object_or_claim_name": "PositiveMSProfile_v1 source-extension human-gate route",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "theoretical-continuation-selector",
+      "route_family": "selector",
+      "route_signature_hash": "7f50a61e6f2272e69a8d3d26bc83fc4783de602e19fea94d79b11bdea0a730f4",
+      "route_signature_key": "matter_coupling|matter_coupling|PositiveMSProfile_v1 source-extension human-gate route|selector|theoretical-continuation-selector|route_selector_only|no_distance_delta|source_extension_refuter_stress|none|human_gate_required|run_one_bounded_gate_chair_packet_under_the_current_user_authorization_to_decide_only_whether_positivemsprofile_v1_may_be_accepted_as_scoped_source-extension_positive_source-matter-semantics_profile_evidence/precondition_under_its_declared_source-side_and_fail-closed_scope.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-019/jobs/completions/AJC-AJ-RT-20260701-019-001.yaml",
+      "source_created_at": "2026-07-01T10:32:58Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-019-001",
+      "source_signature_hash": "e05f1b168b04e8b7826bd85a67d6724f427636c291b9f2c000dfce565c219a14",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-019",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": true,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_applicable",
+        "evaluated": false,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "scoped_evidence_status_review",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p4-t06_boundary_update_or_equivalent_control_packet_to_ensure_current_frontier_and_ledger_wording_reflect_scoped_positivemsprofile_v1_evidence/precondition_acceptance_without_source-law_adoption_positivemsprofile_v1_adoption_sourcemattersemanticsadoptionreadinesslaw_v1_law_adoption_matter-semantics_adoption_detector-semantics_adoption_coupling-law_adoption_matter-coupling_derivation_stress-energy_semantics_matter_action_einstein_equations_benchmark_promotion_or_completed_derivation.",
+      "object_or_claim_name": "PositiveMSProfile_v1",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "gate-chair",
+      "route_family": "source_extension_gate",
+      "route_signature_hash": "89707d99266ac331ed22c078769a30dc2aefd47b7c31ecbb308a4d782ecbabec",
+      "route_signature_key": "matter_coupling|matter_coupling|PositiveMSProfile_v1|source_extension_gate|gate-chair|scoped_evidence_status_review|no_distance_delta|source_extension_human_gate|none|not_applicable|run_one_bounded_v13_p4-t06_boundary_update_or_equivalent_control_packet_to_ensure_current_frontier_and_ledger_wording_reflect_scoped_positivemsprofile_v1_evidence/precondition_acceptance_without_source-law_adoption_positivemsprofile_v1_adoption_sourcemattersemanticsadoptionreadinesslaw_v1_law_adoption_matter-semantics_adoption_detector-semantics_adoption_coupling-law_adoption_matter-coupling_derivation_stress-energy_semantics_matter_action_einstein_equations_benchmark_promotion_or_completed_derivation.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-020/jobs/completions/AJC-AJ-RT-20260701-020-001.yaml",
+      "source_created_at": "2026-07-01T10:57:16Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_human_gate",
+      "source_job_id": "AJ-RT-20260701-020-001",
+      "source_signature_hash": "ab36c118ed0f3e8d98421857404395ea2250ddec642fbaf625fd0fe9c7448645",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-020",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_applicable",
+        "evaluated": false,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "boundary_synchronization_only",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": false,
+      "next_route_selected": "run_one_bounded_v13_p5-t01_rr_e_theorem_target_formalizer_packet_before_any_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_route.",
+      "object_or_claim_name": "P4-T06 boundary synchronization receipt",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "project-control-maintainer",
+      "route_family": "boundary_synchronization",
+      "route_signature_hash": "03db7e030a4dce5f24545afde97308112713aeb59ca84d62ecb0000aa1ff0801",
+      "route_signature_key": "matter_coupling|matter_coupling|P4-T06 boundary synchronization receipt|boundary_synchronization|project-control-maintainer|boundary_synchronization_only|no_distance_delta|source_extension_boundary_sync|none|not_applicable|run_one_bounded_v13_p5-t01_rr_e_theorem_target_formalizer_packet_before_any_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_route.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-021/jobs/completions/AJC-AJ-RT-20260701-021-001.yaml",
+      "source_created_at": "2026-07-01T11:24:15Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_boundary_sync",
+      "source_job_id": "AJ-RT-20260701-021-001",
+      "source_signature_hash": "fd1ee59dfb8dd1327e5889f69217a3972dc696ede4661a930dfef162a93e7329",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-021",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "conditional_theorem",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p5-t02_rr_e_irrelevance_theorem_attempt_or_obstruction_packet_under_candidate-constructor@0.2.0_before_smuggling_audit_refuter_stress_selector_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "RR_ETheoremTarget_v1",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "ontology-formalizer",
+      "route_family": "theorem",
+      "route_signature_hash": "262e01106a7ac158ca184db6cd59b8929f2230d09226a903ec61f22dfca22a5b",
+      "route_signature_key": "matter_coupling|matter_coupling|RR_ETheoremTarget_v1|theorem|ontology-formalizer|conditional_theorem|no_distance_delta|source_extension_candidate|none|not_frozen|run_one_bounded_v13_p5-t02_rr_e_irrelevance_theorem_attempt_or_obstruction_packet_under_candidate-constructor@0.2.0_before_smuggling_audit_refuter_stress_selector_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-022/jobs/completions/AJC-AJ-RT-20260701-022-001.yaml",
+      "source_created_at": "2026-07-01T11:42:00Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-022-001",
+      "source_signature_hash": "4a4c7c36ac3b1e79f6ab5e420a28ebe0aeaf794c4b1a3931388022deb3829d66",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-022",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "obstruction",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p5-t03_rr_e_smuggling_audit_under_smuggling-auditor@0.2.0_before_refuter_stress_selector_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "factor-through RR_E irrelevance lemma",
+      "obstruction_id": "RR_E_UNDERDETERMINATION_OBSTRUCTION_P5_T02_V1",
+      "process_refresh_signature": false,
+      "role_family": "candidate-constructor",
+      "route_family": "obstruction",
+      "route_signature_hash": "4138c40bae1f998389a9a8e1c8c2acd96b7e2b2ddc95c11210a2d88238ec87e7",
+      "route_signature_key": "matter_coupling|matter_coupling|factor-through RR_E irrelevance lemma|obstruction|candidate-constructor|obstruction|no_distance_delta|source_extension_obstruction|RR_E_UNDERDETERMINATION_OBSTRUCTION_P5_T02_V1|not_frozen|run_one_bounded_v13_p5-t03_rr_e_smuggling_audit_under_smuggling-auditor@0.2.0_before_refuter_stress_selector_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-023/jobs/completions/AJC-AJ-RT-20260701-023-001.yaml",
+      "source_created_at": "2026-07-01T12:03:25Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "obstruction_label",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_obstruction",
+      "source_job_id": "AJ-RT-20260701-023-001",
+      "source_signature_hash": "17067d873be8270e2554eb5126c49234bf1dcd609f264909c6f1327cf2b19b51",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-023",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_audit_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p5-t04_rr_e_refuter_stress_packet_under_refuter@0.2.0_targeting_same-support_different-rr_e_pairs_transported_relabeling_finite_rr_e_variation_certificate_deletion_detector-response_pressure_g_eff_metricdata(e)_benchmark_pressure_process-authority_pressure_unrestricted-theorem_pressure_and_global-no-go_overread_before_selector_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "RR_E theorem or obstruction source-purity audit classification",
+      "obstruction_id": "RR_E theorem or obstruction source-purity audit classification",
+      "process_refresh_signature": false,
+      "role_family": "smuggling-auditor",
+      "route_family": "source_extension_audit",
+      "route_signature_hash": "40b9f1724635e4687a895003a6fbd70c655beecd875bedd56d7f457754020576",
+      "route_signature_key": "matter_coupling|matter_coupling|RR_E theorem or obstruction source-purity audit classification|source_extension_audit|smuggling-auditor|source_extension_audit_result|no_distance_delta|source_extension_smuggling_audit|RR_E theorem or obstruction source-purity audit classification|not_frozen|run_one_bounded_v13_p5-t04_rr_e_refuter_stress_packet_under_refuter@0.2.0_targeting_same-support_different-rr_e_pairs_transported_relabeling_finite_rr_e_variation_certificate_deletion_detector-response_pressure_g_eff_metricdata(e)_benchmark_pressure_process-authority_pressure_unrestricted-theorem_pressure_and_global-no-go_overread_before_selector_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-024/jobs/completions/AJC-AJ-RT-20260701-024-001.yaml",
+      "source_created_at": "2026-07-01T12:30:52Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "obstruction_label",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-024-001",
+      "source_signature_hash": "5dc80f4a92e40e07a033fd385b46932b03640f97d20f1913c794a445b146fe2a",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-024",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "RRE-TRANSPORT-COMPLETENESS-INVARIANCE-SCOPED-OBSTRUCTION",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_refuter_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p5-t05_rr_e_post-stress_selector-or-freeze_packet_under_theoretical-continuation-selector@0.1.0_before_any_source-law_adoption_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "Fail-closed RR_E stress theorem",
+      "obstruction_id": "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+      "process_refresh_signature": false,
+      "role_family": "refuter",
+      "route_family": "source_extension_stress",
+      "route_signature_hash": "16b40465202735ef5ce96180c4bfab575c46e41ae1ad2a6a58e6c045e706d7a4",
+      "route_signature_key": "matter_coupling|matter_coupling|Fail-closed RR_E stress theorem|source_extension_stress|refuter|source_extension_refuter_result|no_distance_delta|source_extension_refuter_stress|OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING|not_frozen|run_one_bounded_v13_p5-t05_rr_e_post-stress_selector-or-freeze_packet_under_theoretical-continuation-selector@0.1.0_before_any_source-law_adoption_matter-semantics_detector-semantics_coupling-law_matter-coupling_stress-energy_matter-action_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-025/jobs/completions/AJC-AJ-RT-20260701-025-001.yaml",
+      "source_created_at": "2026-07-01T12:56:26Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "obstruction_label",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-025-001",
+      "source_signature_hash": "0e9467c593c19e296f6ede36af70f9fb43aac9e1449c3dcf34e51b6ac456d1ac",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-025",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "RRE-TRANSPORT-COMPLETENESS-INVARIANCE-SCOPED-OBSTRUCTION",
+        "triggered": false
+      },
+      "mathematical_payload_class": "route_selector_only",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "v13-p5-t05-rr-e-post-stress-selector-or-freeze",
+      "object_or_claim_name": "ontology-law research route for missing RR_E transport completeness or invariance law",
+      "obstruction_id": "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+      "process_refresh_signature": false,
+      "role_family": "theoretical-continuation-selector",
+      "route_family": "selector",
+      "route_signature_hash": "e0181205818cafc186c5e4f581bddd2eed1cfb170d4bf9ac2f796ed4bfe3ba05",
+      "route_signature_key": "matter_coupling|matter_coupling|ontology-law research route for missing RR_E transport completeness or invariance law|selector|theoretical-continuation-selector|route_selector_only|no_distance_delta|source_extension_refuter_stress|OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING|not_frozen|v13-p5-t05-rr-e-post-stress-selector-or-freeze",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-026/jobs/completions/AJC-AJ-RT-20260701-026-001.yaml",
+      "source_created_at": "2026-07-01T13:26:00Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "obstruction_label",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-026-001",
+      "source_signature_hash": "8dfc292ae0881866bdf0e7226ff14b1c4dd30f859377ee7a97052ee7141d2b1c",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-026",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "new_definition",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_smuggling_auditor_packet_to_audit_the_proposal-only_rr_etransportcompletenessorinvariancelaw_v1_schema_for_target-import_process-authority_generated-derivative_and_evidence-as-adoption_smuggling_before_refuter_stress_gate_chair_review_p5-t06_boundary_update_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "RR_ETransportCompletenessOrInvarianceLaw_v1 candidate-law schema",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "ontology-formalizer",
+      "route_family": "source_extension_candidate",
+      "route_signature_hash": "3bd66ffce6425ebc6ba6a6150672e9e1f97fbb6a4c61edee757f2261a0bdbaa5",
+      "route_signature_key": "matter_coupling|matter_coupling|RR_ETransportCompletenessOrInvarianceLaw_v1 candidate-law schema|source_extension_candidate|ontology-formalizer|new_definition|no_distance_delta|source_extension_candidate|none|not_frozen|run_one_bounded_smuggling_auditor_packet_to_audit_the_proposal-only_rr_etransportcompletenessorinvariancelaw_v1_schema_for_target-import_process-authority_generated-derivative_and_evidence-as-adoption_smuggling_before_refuter_stress_gate_chair_review_p5-t06_boundary_update_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-027/jobs/completions/AJC-AJ-RT-20260701-027-001.yaml",
+      "source_created_at": "2026-07-01T13:45:34Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_candidate",
+      "source_job_id": "AJ-RT-20260701-027-001",
+      "source_signature_hash": "e364d59d6903e0ade58e74ab9408c72bf7a873aec8d1dda7ab16e341f97dcd21",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-027",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_audit_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_refuter_stress_packet_to_stress_the_audited_proposal-only_rr_etransportcompletenessorinvariancelaw_v1_schema_against_certificate_deletion_malformed_certificates_declared-f_changes_transport_relabeling_detector-response_pressure_g_eff_metricdata(e)_benchmark_pressure_process-authority_pressure_evidence-as-adoption_pressure_unrestricted-theorem_pressure_adoption_overread_and_global-no-go_overread_before_gate_chair_review_p5-t06_boundary_update_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "RR_ETransportCompletenessOrInvarianceLaw_v1 audit classification",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "smuggling-auditor",
+      "route_family": "source_extension_audit",
+      "route_signature_hash": "34b9b5e40328c482337d1b3a68ce224f340649ef13f968e6d29745289300c3a2",
+      "route_signature_key": "matter_coupling|matter_coupling|RR_ETransportCompletenessOrInvarianceLaw_v1 audit classification|source_extension_audit|smuggling-auditor|source_extension_audit_result|no_distance_delta|source_extension_smuggling_audit|none|not_frozen|run_one_bounded_refuter_stress_packet_to_stress_the_audited_proposal-only_rr_etransportcompletenessorinvariancelaw_v1_schema_against_certificate_deletion_malformed_certificates_declared-f_changes_transport_relabeling_detector-response_pressure_g_eff_metricdata(e)_benchmark_pressure_process-authority_pressure_evidence-as-adoption_pressure_unrestricted-theorem_pressure_adoption_overread_and_global-no-go_overread_before_gate_chair_review_p5-t06_boundary_update_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-028/jobs/completions/AJC-AJ-RT-20260701-028-001.yaml",
+      "source_created_at": "2026-07-01T14:20:00Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_smuggling_audit",
+      "source_job_id": "AJ-RT-20260701-028-001",
+      "source_signature_hash": "6dcc10a21abebf94b90c61008a3dbb2fc049afe477343e32bf5b68c14cad42a6",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-028",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "source_extension_refuter_result",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_protected_gate_chair_source-extension_evidence-status_review_of_rr_etransportcompletenessorinvariancelaw_v1_under_the_user_s_standing_human-gate_authorization_before_adoption_p5-t06_boundary_update_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "Fail-closed RR_E transport-law stress theorem",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "refuter",
+      "route_family": "source_extension_stress",
+      "route_signature_hash": "98f9089192cd270790643f308dd2fdb80abef116832281bdc86a10be9f7c9ce5",
+      "route_signature_key": "matter_coupling|matter_coupling|Fail-closed RR_E transport-law stress theorem|source_extension_stress|refuter|source_extension_refuter_result|no_distance_delta|source_extension_refuter_stress|none|not_frozen|run_one_bounded_protected_gate_chair_source-extension_evidence-status_review_of_rr_etransportcompletenessorinvariancelaw_v1_under_the_user_s_standing_human-gate_authorization_before_adoption_p5-t06_boundary_update_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-029/jobs/completions/AJC-AJ-RT-20260701-029-001.yaml",
+      "source_created_at": "2026-07-01T14:42:21Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "missing_primitive",
+          "object_name",
+          "payload_type",
+          "route_cycle_control_present"
+        ]
+      },
+      "source_extension_classification": "source_extension_refuter_stress",
+      "source_job_id": "AJ-RT-20260701-029-001",
+      "source_signature_hash": "77c3f5064d01fd251e3d55be5e4a0a689afc430f39cc7ad6dc8326639616baca",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-029",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": true,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_frozen",
+        "evaluated": true,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "scoped_evidence_status_review",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": true,
+      "next_route_selected": "run_one_bounded_v13_p5-t06_rr_e_boundary_update_or_equivalent_current-frontier_theorem-inventory_synchronization_packet_before_any_source-law_adoption_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "RR_ETransportCompletenessOrInvarianceLaw_v1 scoped evidence/precondition status",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "gate-chair",
+      "route_family": "source_extension_gate",
+      "route_signature_hash": "bed6af4bf88f4657629b2f476400978a66005050eaf09120316732e859bc297f",
+      "route_signature_key": "matter_coupling|matter_coupling|RR_ETransportCompletenessOrInvarianceLaw_v1 scoped evidence/precondition status|source_extension_gate|gate-chair|scoped_evidence_status_review|no_distance_delta|source_extension_human_gate|none|not_frozen|run_one_bounded_v13_p5-t06_rr_e_boundary_update_or_equivalent_current-frontier_theorem-inventory_synchronization_packet_before_any_source-law_adoption_matter-semantics_detector-semantics_coupling-law_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-030/jobs/completions/AJC-AJ-RT-20260701-030-001.yaml",
+      "source_created_at": "2026-07-01T15:20:03Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "freeze_candidate",
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_human_gate",
+      "source_job_id": "AJ-RT-20260701-030-001",
+      "source_signature_hash": "d49e5a0e321a49760233b5c78e051ee17e42f223f4fd931de5b6344afff8b0af",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-030",
+      "target_derivation_milestone": "matter_coupling"
+    },
+    {
+      "distance_to_gr_delta": {
+        "burden_id": "matter_coupling",
+        "changed": false,
+        "effect": "no_distance_delta",
+        "milestone": "matter_coupling"
+      },
+      "freeze_criteria_status": {
+        "decision": "not_applicable",
+        "evaluated": false,
+        "freeze_scope": "none",
+        "triggered": false
+      },
+      "mathematical_payload_class": "boundary_synchronization_only",
+      "milestone_burden": "matter_coupling",
+      "new_mathematics_signature": false,
+      "next_route_selected": "run_one_bounded_v14_p2-t01_scoped-positive_claim_vocabulary_control_packet_before_public_status_propagation_claim-language_linter_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "object_or_claim_name": "RR_E boundary theorem-inventory synchronization",
+      "obstruction_id": "none",
+      "process_refresh_signature": false,
+      "role_family": "project-control-maintainer",
+      "route_family": "boundary_synchronization",
+      "route_signature_hash": "feaeeeed6d9c3bea33e6a165062b56c8deb063f319fde23a73608c34a5a23677",
+      "route_signature_key": "matter_coupling|matter_coupling|RR_E boundary theorem-inventory synchronization|boundary_synchronization|project-control-maintainer|boundary_synchronization_only|no_distance_delta|source_extension_boundary_sync|none|not_applicable|run_one_bounded_v14_p2-t01_scoped-positive_claim_vocabulary_control_packet_before_public_status_propagation_claim-language_linter_matter-coupling_einstein-equation_benchmark_or_promotion_work.",
+      "signature_schema_id": "route_signature_schema_v1",
+      "source_completion_path": "research_control/tasks/RT-20260701-031/jobs/completions/AJC-AJ-RT-20260701-031-001.yaml",
+      "source_created_at": "2026-07-01T17:44:01Z",
+      "source_evidence": {
+        "projection_source": [
+          "scripts/research_control/extract_route_history.py",
+          "research_control/design/route_signature_schema_v1.md"
+        ],
+        "v14_source_evidence": [
+          "object_name",
+          "payload_type"
+        ]
+      },
+      "source_extension_classification": "source_extension_boundary_sync",
+      "source_job_id": "AJ-RT-20260701-031-001",
+      "source_signature_hash": "31ee5f9a5d8691e40bd578e3185c69dbf241db35dd9a9acb81bc40c85659d5c8",
+      "source_signature_schema_id": "route_signature_definition_v1",
+      "source_task_id": "RT-20260701-031",
+      "target_derivation_milestone": "matter_coupling"
+    }
+  ],
+  "sample": "recent-matter-coupling",
+  "schema_id": "route_signature_pilot_report_v1",
+  "signature_schema_id": "route_signature_schema_v1",
+  "source_route_history_schema_id": "route_history_extractor_v1",
+  "source_signature_schema_id": "route_signature_definition_v1",
+  "status": "PASS",
+  "suggested_freeze_or_continuation_consequence": "no_freeze_from_pilot_continue_to_p10_t03_freeze_threshold_policy",
+  "task_count": 23,
+  "task_ids": [
+    "RT-20260701-001",
+    "RT-20260701-002",
+    "RT-20260701-007",
+    "RT-20260701-008",
+    "RT-20260701-009",
+    "RT-20260701-010",
+    "RT-20260701-015",
+    "RT-20260701-016",
+    "RT-20260701-017",
+    "RT-20260701-018",
+    "RT-20260701-019",
+    "RT-20260701-020",
+    "RT-20260701-021",
+    "RT-20260701-022",
+    "RT-20260701-023",
+    "RT-20260701-024",
+    "RT-20260701-025",
+    "RT-20260701-026",
+    "RT-20260701-027",
+    "RT-20260701-028",
+    "RT-20260701-029",
+    "RT-20260701-030",
+    "RT-20260701-031"
+  ]
+}
