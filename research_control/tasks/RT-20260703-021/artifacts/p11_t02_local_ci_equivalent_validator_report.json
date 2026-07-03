@@ -1,0 +1,48 @@
+{
+  "coverage": {
+    "claim_language_lint": true,
+    "current_frontier_check": true,
+    "diff_allowlist_check": true,
+    "documentation_impact": true,
+    "generated_derivative_drift_check": true,
+    "no_bare_accepted_high_risk_rows": true,
+    "no_premature_efe_route": true,
+    "registry_referential_integrity": true,
+    "research_control_validation": true,
+    "route_orbit_advisory": true,
+    "route_signature_extraction_if_implemented": true,
+    "whitespace_diff_check": true
+  },
+  "errors": [],
+  "plan_labels": [
+    "claim_language_changed_lint",
+    "current_frontier_check",
+    "dependency_graph_check",
+    "documentation_impact_validation",
+    "memory_validate_only",
+    "project_improvement_signal_validation",
+    "research_control_diff_validation",
+    "research_control_validation",
+    "route_orbit_advisory",
+    "route_signature_extraction",
+    "whitespace_diff_check"
+  ],
+  "report_path": "research_control/tasks/RT-20260703-021/artifacts/p11_t02_local_ci_equivalent_report.json",
+  "required_labels": [
+    "claim_language_changed_lint",
+    "current_frontier_check",
+    "dependency_graph_check",
+    "documentation_impact_validation",
+    "memory_validate_only",
+    "project_improvement_signal_validation",
+    "research_control_diff_validation",
+    "research_control_validation",
+    "route_orbit_advisory",
+    "route_signature_extraction",
+    "whitespace_diff_check"
+  ],
+  "runner_path": "scripts/research_control/run_full_research_control_validation.py",
+  "schema_id": "p11_t02_local_ci_equivalent_validator_report_v1",
+  "status": "PASS",
+  "test_path": "tests/test_run_full_research_control_validation.py"
+}

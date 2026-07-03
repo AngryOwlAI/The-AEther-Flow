@@ -1,0 +1,102 @@
+handoff_id: "handoff-0540"
+created_at: "2026-07-03T17:52:12Z"
+task_id: "RT-20260703-021"
+decision_id: "DDR-20260703-021"
+job_id: "AJ-RT-20260703-021-001"
+completion_path: "research_control/tasks/RT-20260703-021/jobs/completions/AJC-AJ-RT-20260703-021-001.yaml"
+source_task_id: "RT-20260703-021"
+source_job_id: "AJ-RT-20260703-021-001"
+source_completion_id: "AJC-AJ-RT-20260703-021-001"
+status: "completed"
+summary: "RT-20260703-021 completed v15 P11-T02 local CI-equivalent validator implementation with no physics delta."
+next_action: "Run one bounded v15 P11-T03 CI documentation impact and maintainer guide packet."
+loop_risk_route: "post_v15_p11_t02_local_ci_equivalent_validator_completed_next_p11_t03_no_physics_delta"
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "ci_validation_maintainer_guide"
+  objective: "Add or update maintainer-facing documentation for the validation pipeline."
+claim_boundary:
+  allowed_next_scope: "P11-T03 CI documentation impact and maintainer guide"
+  completed_scope: "P11-T02 local CI-equivalent validator"
+  scientific_claims_changed: false
+  local_ci_equivalent_completed: true
+  route_freeze_authorized: false
+  freeze_review_required_now: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  variation_principle_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+blocked_claims:
+  - "P11-T02 local CI pass as physics proof authority"
+  - "P11-T02 local CI pass as source-law adoption"
+  - "P11-T02 local CI pass as matter semantics"
+  - "P11-T02 local CI pass as detector semantics"
+  - "P11-T02 local CI pass as coupling-law adoption"
+  - "P11-T02 local CI pass as matter coupling"
+  - "P11-T02 local CI pass as MetricData(E) adoption"
+  - "P11-T02 local CI pass as g_eff scope expansion"
+  - "P11-T02 local CI pass as stress-energy semantics or stress-energy tensor"
+  - "P11-T02 local CI pass as matter action or variation principle"
+  - "P11-T02 local CI pass as Einstein-equation evidence"
+  - "P11-T02 local CI pass as benchmark promotion"
+  - "P11-T02 local CI pass as Gate Chair verdict"
+  - "P11-T02 local CI pass as completed derivation"
+  - "P11-T02 local CI pass as program-wide no-go conclusion"
+  - "P11-T02 local CI pass as future source-extension impossibility"
+p11_t02_result:
+  runner_path: "scripts/research_control/run_full_research_control_validation.py"
+  focused_test_path: "tests/test_run_full_research_control_validation.py"
+  local_ci_report_path: "research_control/tasks/RT-20260703-021/artifacts/p11_t02_local_ci_equivalent_report.json"
+  task_local_validator_path: "research_control/tasks/RT-20260703-021/artifacts/validate_p11_t02_local_ci_equivalent_validator.py"
+  validation_report_path: "research_control/tasks/RT-20260703-021/artifacts/p11_t02_local_ci_equivalent_validator_report.json"
+  receipt_path: "research_control/tasks/RT-20260703-021/artifacts/p11_t02_local_ci_equivalent_receipt.md"
+  operational_receipt_only: true
+  no_physics_delta: true
+  status: "project_control_local_ci_equivalent_validator_completed"
+  next_route: "P11-T03 CI documentation impact and maintainer guide"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-021 implements operational validation orchestration only. It does not change source-law matter-coupling MetricData(E) g_eff stress-energy matter-action variation-principle Einstein-equation benchmark-promotion program-wide-no-go future-source-extension-impossibility or completed-derivation status."
+validation:
+  local_ci_runner_py_compile: "PASS"
+  local_ci_runner_focused_tests: "PASS"
+  local_ci_equivalent_runner: "PASS"
+  task_local_p11_t02_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
