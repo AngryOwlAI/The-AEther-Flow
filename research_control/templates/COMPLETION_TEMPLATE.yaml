@@ -103,6 +103,49 @@ obstruction_record:
   source_extension_implication: "not_applicable"
   consequence: ""
   forbidden_overread: ""
+refuter_obstruction_record:
+  # Required for future Refuter completions that report an obstruction,
+  # countermodel, certificate gap, local freeze, blocked overread, or repeated
+  # burden. Align fields with research_control/design/refuter_obstruction_schema_v1.md.
+  required_when_refuter_obstruction: true
+  present: false
+  schema_path: "research_control/design/refuter_obstruction_schema_v1.md"
+  fixture_catalog_path: "research_control/design/refuter_countermodel_fixture_catalog_v1.md"
+  pass_requires_actual_failed_premise: true
+  vague_failure_language_sufficient_for_pass: false
+  obstruction_id: ""
+  target_claim: ""
+  target_milestone: ""
+  failed_premise: ""
+  minimal_countermodel_available: false
+  countermodel_path: ""
+  countermodel_scope: ""
+  certificate_gap: ""
+  source_extension_repair_possible: ""
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: ""
+    decision_reason: ""
+    next_allowed_route: ""
+  route_cycle_control:
+    cycle_family: ""
+    current_cycle_step: ""
+    prior_related_tasks:
+      - ""
+    cycle_risk: ""
+    orbit_avoidance_reason: ""
+    next_role_consequence: ""
+  forbidden_conclusions:
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "program-wide no-go conclusion"
+    - "future source-extension impossibility"
 candidate_constructor_result:
   result_type: ""
   constructed_candidate_path: ""

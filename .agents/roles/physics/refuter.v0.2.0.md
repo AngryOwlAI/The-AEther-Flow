@@ -58,6 +58,38 @@ Every future Refuter completion must include at least one
 `new_mathematical_payload` item, such as a countermodel, explicit witness,
 obstruction, theorem pressure, finite model pressure, or dependency-map update.
 
+## Formal Obstruction Records
+
+After v15 P7-T03, every future Refuter packet that reports an obstruction,
+countermodel, certificate gap, local freeze, blocked overread, or repeated
+burden must include a `refuter_obstruction_record` aligned with
+`research_control/design/refuter_obstruction_schema_v1.md`.
+
+The record must name the actual `failed_premise`. A generic statement such as
+"needs more work", "future work remains", "generalization was not attempted",
+or "insufficient time" is not a sufficient failed premise and must not be treated as PASS.
+A PASS requires a concrete missing primitive, invalid certificate, unsupported
+transition, target import, nonunique construction, malformed proof step, or
+other explicit premise failure.
+
+When a minimal countermodel or finite/local witness is available, the record
+must set `minimal_countermodel_available: true`, provide a nonempty
+`countermodel_path`, and state the `countermodel_scope`. When no minimal
+countermodel is available, the record must keep
+`minimal_countermodel_available: false` and must not imply that a
+countermodel exists.
+
+Future Refuter packets may cite the negative-control fixtures cataloged in
+`research_control/design/refuter_countermodel_fixture_catalog_v1.md` as tooling
+or example evidence. A fixture citation is not proof authority, not a live
+Refuter result, and not source-extension data adoption.
+
+Protected conclusion fields default to false. `global_no_go_claim_authorized`
+and `future_source_extension_impossibility_authorized` may be true only when a
+separate theorem and required human-gated authority explicitly authorize that
+stronger conclusion. Otherwise allowed language is local: "current ontology
+does not derive X" or "this candidate fails under scope S."
+
 ## Ontology-Law Packet Usage
 
 When bound by task overlay to `ontology-law-research-packet`, this role
