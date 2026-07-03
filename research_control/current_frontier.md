@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-018` and `handoff-0537`.
+`RT-20260703-019` and `handoff-0538`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-018` |
-| Latest handoff ID | `handoff-0537` |
-| Current status | `post_v15_p10_t02_route_orbit_extractor_pilot_completed_next_p10_t03_no_physics_delta` |
-| Current route family | post v15 p10 t02 route orbit extractor pilot completed next p10 t03 no physics delta |
+| Active task ID | `RT-20260703-019` |
+| Latest handoff ID | `handoff-0538` |
+| Current status | `post_v15_p10_t03_freeze_threshold_policy_completed_next_p11_t01_no_physics_delta` |
+| Current route family | post v15 p10 t03 freeze threshold policy completed next p11 t01 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is route orbit freeze threshold policy |
-| Required next authority | P10-T03 route-orbit freeze threshold policy |
-| Next recommended action | Run one bounded v15 P10-T03 route-orbit freeze threshold policy packet. |
+| Current burden | none for physics derivation; live control burden is validation command inventory v15 |
+| Required next authority | P11-T01 validation command inventory |
+| Next recommended action | Run one bounded v15 P11-T01 validation command inventory packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-018/00_TASK.yaml`.
-- Active task objective: Implement or specify a route signature extractor and run it on recent matter-coupling tasks.
-- Latest handoff path: `research_control/handoffs/handoff-0537.yaml`.
-- Latest handoff summary: RT-20260703-018 completed v15 P10-T02 route orbit extractor pilot with no physics delta.
-- Current route family: post v15 p10 t02 route orbit extractor pilot completed next p10 t03 no physics delta.
-- Next recommended action: Run one bounded v15 P10-T03 route-orbit freeze threshold policy packet.
+- Active task path: `research_control/tasks/RT-20260703-019/00_TASK.yaml`.
+- Active task objective: Define when repeated burden cycles require freeze review.
+- Latest handoff path: `research_control/handoffs/handoff-0538.yaml`.
+- Latest handoff summary: RT-20260703-019 completed v15 P10-T03 route-orbit freeze threshold policy with no route freeze and no physics delta.
+- Current route family: post v15 p10 t03 freeze threshold policy completed next p11 t01 no physics delta.
+- Next recommended action: Run one bounded v15 P11-T01 validation command inventory packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P10-T03 route-orbit freeze threshold policy packet.
+Run one bounded v15 P11-T01 validation command inventory packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,32 +223,29 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-018`;
-- latest handoff: `handoff-0537`;
-- current status: `post_v15_p10_t02_route_orbit_extractor_pilot_completed_next_p10_t03_no_physics_delta`;
+- active task: `RT-20260703-019`;
+- latest handoff: `handoff-0538`;
+- current status: `post_v15_p10_t03_freeze_threshold_policy_completed_next_p11_t01_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `focused_route_signature_extractor_tests`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `route_signature_extractor_py_compile`: PASS;
-- latest handoff validation `route_signature_pilot_report_generation`: PASS;
-- latest handoff validation `task_local_route_orbit_extractor_pilot_validator`: PASS;
-- latest handoff validation `task_local_route_orbit_extractor_pilot_validator_py_compile`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `task_local_route_orbit_freeze_policy_validator`: PASS;
+- latest handoff validation `task_local_route_orbit_freeze_policy_validator_py_compile`: PASS;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0537.yaml`
-- `research_control/tasks/RT-20260703-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0538.yaml`
+- `research_control/tasks/RT-20260703-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -264,7 +261,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0537*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0538*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
