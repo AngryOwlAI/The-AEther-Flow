@@ -1,0 +1,89 @@
+handoff_id: "handoff-0525"
+created_at: "2026-07-03T05:35:00Z"
+task_id: "RT-20260703-006"
+decision_id: "DDR-20260703-006"
+job_id: "AJ-RT-20260703-006-001"
+completion_path: "research_control/tasks/RT-20260703-006/jobs/completions/AJC-AJ-RT-20260703-006-001.yaml"
+source_task_id: "RT-20260703-006"
+source_job_id: "AJ-RT-20260703-006-001"
+source_completion_id: "AJC-AJ-RT-20260703-006-001"
+status: "completed"
+summary: "RT-20260703-006 completed v15 P6-T01 by creating a source-extension classification checklist with exact evidence requirements allowed language forbidden conclusion language fail-closed behavior and no physics delta."
+next_action: "Run one bounded v15 P6-T02 source-extension classification retrofit packet for high-risk existing objects."
+loop_risk_route: "post_v15_p6_t01_source_extension_classification_checklist_completed_next_p6_t02_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P6-T02 source-extension classification retrofit for high-risk existing objects"
+  completed_scope: "P6-T01 source-extension classification checklist"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P6-T01 checklist as proof authority"
+  - "P6-T01 checklist as source-law adoption"
+  - "P6-T01 checklist as source-extension data adoption"
+  - "P6-T01 checklist as matter semantics"
+  - "P6-T01 checklist as detector semantics"
+  - "P6-T01 checklist as coupling-law adoption"
+  - "P6-T01 checklist as matter coupling"
+  - "P6-T01 checklist as MetricData(E) adoption"
+  - "P6-T01 checklist as g_eff scope expansion"
+  - "P6-T01 checklist as stress-energy semantics or matter action"
+  - "P6-T01 checklist as Einstein-equation evidence"
+  - "P6-T01 checklist as benchmark promotion"
+  - "P6-T01 checklist as Gate Chair verdict"
+  - "P6-T01 checklist as completed derivation"
+  - "P6-T01 checklist as future source-extension impossibility"
+  - "P6-T01 checklist as program-wide no-go conclusion"
+p6_t01_result:
+  checklist_path: "research_control/design/source_extension_classification_checklist_v1.md"
+  validator_report_path: "research_control/tasks/RT-20260703-006/artifacts/p6_t01_source_extension_classification_checklist_report.json"
+  status: "project_control_source_extension_classification_checklist_created"
+  required_classifications:
+    - "derived_from_current_ontology"
+    - "conservative_definitional_extension"
+    - "new_ontology_primitive_candidate"
+    - "forbidden_target_import"
+    - "status_boundary_evidence_only"
+    - "blocked_adoption_open_continuation"
+  task_local_check_count: 5
+  task_local_failed_check_count: 0
+  next_route: "P6-T02 source-extension classification retrofit for high-risk existing objects"
+distance_to_gr:
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-006 adds a classification checklist only. It does not change source-law matter-coupling MetricData(E) g_eff Einstein-equation benchmark-promotion or completed-derivation status."
+validation:
+  task_local_source_extension_classification_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -600,6 +600,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `wiki/markdown/md-research-control-design-scoped-positive-claim-vocabulary.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SEMANTIC-LAYER-SEPARATION-CONTROL-NOTE` `wiki/markdown/md-research-control-design-semantic-layer-separation-control-note.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST` `wiki/markdown/md-research-control-design-source-certificate-algebra-checklist.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `wiki/markdown/md-research-control-design-source-extension-classification-checklist-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `wiki/markdown/md-research-control-design-three-tier-claim-convention.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`
@@ -1073,6 +1074,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `research_control/design/scoped_positive_claim_vocabulary.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SEMANTIC-LAYER-SEPARATION-CONTROL-NOTE` `research_control/design/semantic_layer_separation_control_note.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST` `research_control/design/source_certificate_algebra_checklist.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `research_control/design/source_extension_classification_checklist_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`

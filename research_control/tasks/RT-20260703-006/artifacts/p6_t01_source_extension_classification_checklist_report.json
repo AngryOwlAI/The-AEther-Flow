@@ -1,0 +1,40 @@
+{
+  "check_count": 5,
+  "checks": [
+    {
+      "detail": "Checklist contains all six v15 P6-T01 classification labels.",
+      "id": "all_required_classifications_present",
+      "passed": true
+    },
+    {
+      "detail": "Checklist names required evidence, relation to ontology, conclusion language, downstream status, and fail-closed behavior.",
+      "id": "evidence_requirements_present",
+      "passed": true
+    },
+    {
+      "detail": "Checklist includes forbidden conclusion language for high-risk downstream overreads.",
+      "id": "forbidden_language_present",
+      "passed": true
+    },
+    {
+      "detail": "Checklist states that passing classification is not physics promotion or proof authority.",
+      "id": "non_conclusions_present",
+      "passed": true
+    },
+    {
+      "detail": "Machine-readable checklist records fail-closed classification and no proof authority.",
+      "id": "machine_readable_schema_present",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "matter_coupling_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authorized": false
+  },
+  "failed_check_count": 0,
+  "status": "PASS"
+}
