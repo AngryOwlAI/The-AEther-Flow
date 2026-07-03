@@ -1,0 +1,260 @@
+completion_path: "research_control/tasks/RT-20260703-017/jobs/completions/AJC-AJ-RT-20260703-017-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260703-017-001"
+job_id: "AJ-RT-20260703-017-001"
+task_id: "RT-20260703-017"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-03T14:42:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P10-T01"
+  plan_phase_id: "P10"
+  implemented_task_scope: "Created the v15 route_signature_schema_v1 control schema with required fields new-mathematics versus process-refresh classification route-cycle comparison tuple compatibility projection from v14 route signatures and task-local validation."
+  completed_v15_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "Gate Chair scoped evidence-status review for NarrowMSCertEq_v1"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P5-T01"
+    - "P5-T02"
+    - "P6-T01"
+    - "P6-T02"
+    - "P6-T03"
+    - "P7-T01"
+    - "P7-T02"
+    - "P7-T03"
+    - "P8-T01"
+    - "P8-T02"
+    - "P9-T01"
+    - "P9-T02"
+    - "P9-T03"
+    - "P10-T01"
+  downstream_tasks_not_implemented:
+    - "P10-T02 route orbit extractor and pilot"
+    - "P10-T03 route-orbit freeze threshold policy"
+    - "P11 validation pipeline"
+    - "P12 machine-readable claim graph"
+    - "P13 high-risk wording enforcement"
+    - "P14 public status documentation"
+    - "P15 support-only proof-assistant pilots"
+    - "P16 external red-team review process"
+    - "P17 negative-result publication track"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  p10_t01_completed: true
+  phase_p10_completed: false
+output_paths:
+  - "research_control/design/route_signature_schema_v1.md"
+  - "research_control/tasks/RT-20260703-017/artifacts/validate_p10_t01_route_signature_schema.py"
+  - "research_control/tasks/RT-20260703-017/artifacts/p10_t01_route_signature_schema_report.json"
+  - "research_control/tasks/RT-20260703-017/artifacts/p10_t01_route_signature_schema_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260703-017/00_TASK.yaml"
+  - "research_control/tasks/RT-20260703-017/DDR-20260703-017.md"
+  - "research_control/tasks/RT-20260703-017/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260703-017/jobs/AJ-RT-20260703-017-001.yaml"
+  - "research_control/tasks/RT-20260703-017/jobs/completions/AJC-AJ-RT-20260703-017-001.yaml"
+  - "research_control/tasks/RT-20260703-017/roles/project-control-maintainer@0.2.0--RT-20260703-017.yaml"
+  - "research_control/handoffs/handoff-0536.yaml"
+  - "research_control/handoffs/handoff-0536.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/design/route_signature_definition.md"
+  - "scripts/research_control/extract_route_history.py"
+  - "scripts/research_control/validate_route_orbits.py"
+  - "tests/test_route_history_extractor.py"
+  - "tests/test_route_orbit_validator.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0535.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=566 relationship_row_count=2985 semantic_row_count=566 vault_row_count=566"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | status=ready active_task=RT-20260703-016 latest_handoff=handoff-0535 boundary=director_decision_required"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260703-017/artifacts/validate_p10_t01_route_signature_schema.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260703-017/artifacts/validate_p10_t01_route_signature_schema.py --output research_control/tasks/RT-20260703-017/artifacts/p10_t01_route_signature_schema_report.json --json | exit_code=0 | status=PASS required_fields=11"
+  - ".venv/bin/python -m unittest tests.test_route_history_extractor tests.test_route_orbit_validator | exit_code=0 | tests=5"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write && .venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | active_task=RT-20260703-017 latest_handoff=handoff-0536"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot && .venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | validation=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=567 relationship_row_count=2989 semantic_row_count=567 vault_row_count=567"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | validation=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0"
+validation_status_detail: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "targeted v15 plan lookup returned the canonical v15 implementation plan object"
+      - "canonical v15 plan P10-T01 and handoff-0535 were inspected before routing"
+      - "continue_research.py resolved handoff-0535 to one bounded P10-T01 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "route_signature_schema_v1 contains all eleven required fields"
+      - "schema distinguishes new mathematics from process refresh"
+      - "schema defines a deterministic route_signature_key comparison tuple"
+      - "schema preserves operational-only authority boundary"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local P10-T01 validator report is required before checkpoint"
+      - "legacy route-history and route-orbit tests remain required before checkpoint"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint command remains the final transaction step after PASS repository validators"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph rerendered after handoff-0536 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap passed and post-bootstrap memory preflight refreshed local retrieval to PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "aggregate research-control validation passed"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-02"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+verdict: "post_v15_p10_t01_route_signature_schema_completed_next_p10_t02_no_physics_delta"
+coherent_resolution_summary: "RT-20260703-017 completed the v15 P10-T01 project-control schema packet by defining route_signature_schema_v1 with required comparison fields new-mathematics versus process-refresh classification route-cycle comparison support and no physics promotion."
+next_recommendation: "Run one bounded v15 P10-T02 route orbit extractor and pilot packet."
+physics_progress_status:
+  status: "process_control_no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "P10-T01 route signature schema"
+  physics_promotion_authorized: false
+  explanation: "This packet defines operational route-signature control metadata only and does not change Distance-to-GR physics status."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: ""
+  milestone: ""
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P10-T02 route orbit extractor and pilot"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1_adoption"
+    - "unrestricted_RR_E_theorem"
+    - "PositiveMSProfile_v1_adoption"
+    - "SourceMatterSemanticsAdoptionReadinessLaw_v1_law_adoption"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "matter_action"
+    - "variation_principle"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+    - "global_theory_rejection"
+    - "future_source_extension_impossibility"
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "route signature schema as physics proof authority"
+    - "route signature schema as source-law adoption"
+    - "route signature schema as matter-semantics adoption"
+    - "route signature schema as detector-semantics adoption"
+    - "route signature schema as coupling-law adoption"
+    - "route signature schema as matter-coupling derivation or adoption"
+    - "route signature schema as MetricData(E) adoption"
+    - "route signature schema as g_eff scope change"
+    - "route signature schema as stress-energy semantics"
+    - "route signature schema as stress-energy tensor"
+    - "route signature schema as matter action"
+    - "route signature schema as variation principle"
+    - "route signature schema as Einstein equations"
+    - "route signature schema as benchmark promotion"
+    - "route signature schema as Gate Chair verdict"
+    - "route signature schema as completed derivation"
+    - "route signature schema as global theory rejection"
+    - "route signature schema as future source-extension impossibility"
+  summary: "P10-T01 is project-control schema work and does not construct or adopt physics objects."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 566
+    relationship_row_count: 2985
+    semantic_row_count: 566
+    vault_row_count: 566
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

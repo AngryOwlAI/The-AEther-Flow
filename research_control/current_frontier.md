@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-016` and `handoff-0535`.
+`RT-20260703-017` and `handoff-0536`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-016` |
-| Latest handoff ID | `handoff-0535` |
-| Current status | `post_v15_p9_t03_physics_progress_metrics_integration_completed_next_p10_t01_no_physics_delta` |
-| Current route family | post v15 p9 t03 physics progress metrics integration completed next p10 t01 no physics delta |
+| Active task ID | `RT-20260703-017` |
+| Latest handoff ID | `handoff-0536` |
+| Current status | `post_v15_p10_t01_route_signature_schema_completed_next_p10_t02_no_physics_delta` |
+| Current route family | post v15 p10 t01 route signature schema completed next p10 t02 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is route signature schema v15 |
-| Required next authority | P10-T01 route signature schema |
-| Next recommended action | Run one bounded v15 P10-T01 route signature schema packet. |
+| Current burden | none for physics derivation; live control burden is route orbit extractor pilot |
+| Required next authority | P10-T02 route orbit extractor and pilot |
+| Next recommended action | Run one bounded v15 P10-T02 route orbit extractor and pilot packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-016/00_TASK.yaml`.
-- Active task objective: Integrate distance delta and payload density into the existing metrics report.
-- Latest handoff path: `research_control/handoffs/handoff-0535.yaml`.
-- Latest handoff summary: RT-20260703-016 integrated v15 P9-T03 physics-progress metrics with no physics delta.
-- Current route family: post v15 p9 t03 physics progress metrics integration completed next p10 t01 no physics delta.
-- Next recommended action: Run one bounded v15 P10-T01 route signature schema packet.
+- Active task path: `research_control/tasks/RT-20260703-017/00_TASK.yaml`.
+- Active task objective: Define route signatures for cycle detection.
+- Latest handoff path: `research_control/handoffs/handoff-0536.yaml`.
+- Latest handoff summary: RT-20260703-017 defined v15 P10-T01 route_signature_schema_v1 with no physics delta.
+- Current route family: post v15 p10 t01 route signature schema completed next p10 t02 no physics delta.
+- Next recommended action: Run one bounded v15 P10-T02 route orbit extractor and pilot packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P10-T01 route signature schema packet.
+Run one bounded v15 P10-T02 route orbit extractor and pilot packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,20 +223,19 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-016`;
-- latest handoff: `handoff-0535`;
-- current status: `post_v15_p9_t03_physics_progress_metrics_integration_completed_next_p10_t01_no_physics_delta`;
+- active task: `RT-20260703-017`;
+- latest handoff: `handoff-0536`;
+- current status: `post_v15_p10_t01_route_signature_schema_completed_next_p10_t02_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `bootstrap_memory_system`: PASS;
 - latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `focused_physics_progress_metrics_integration_tests`: PASS;
 - latest handoff validation `git_diff_check`: PASS;
 - latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `physics_progress_metrics_json_report`: PASS;
-- latest handoff validation `physics_progress_metrics_markdown_report`: PASS;
-- latest handoff validation `task_local_physics_progress_metrics_integration_validator`: PASS;
+- latest handoff validation `legacy_route_orbit_tests`: PASS;
+- latest handoff validation `route_signature_schema_validator_py_compile`: PASS;
+- latest handoff validation `task_local_route_signature_schema_validator`: PASS;
 - latest handoff validation `validate_documentation_impact`: PASS;
 - latest handoff validation `validate_research_control`: PASS;
 - latest handoff validation `validate_research_control_check_diff`: PASS;
@@ -246,8 +245,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0535.yaml`
-- `research_control/tasks/RT-20260703-016/00_TASK.yaml`
+- `research_control/handoffs/handoff-0536.yaml`
+- `research_control/tasks/RT-20260703-017/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -263,7 +262,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0535*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0536*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
