@@ -15,6 +15,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Related Objects
 
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v15.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260703-015-SCIENTIFIC-PAYLOAD-DENSITY-METRIC-SPEC-V1` `research_control/tasks/RT-20260703-015/artifacts/scientific_payload_density_metric_spec_v1.md`
 
 ## Validation
 

@@ -1,0 +1,66 @@
+{
+  "authority_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "metrics_are_operational_diagnostics_only": true,
+    "not_physics_proof": true,
+    "physics_claim_promotion_authorized": false,
+    "statement": "Scientific payload density is an operational diagnostic only; it is not physics proof, claim promotion, benchmark promotion, or completed-derivation authority."
+  },
+  "checks": [
+    {
+      "check_id": "spec_exists",
+      "message": "Required metric specification exists.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "script_exists",
+      "message": "Dedicated metric report script exists.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "focused_tests_exist",
+      "message": "Focused unit test module exists.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_boundary",
+      "message": "Specification states operational diagnostics only.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_payload_classes",
+      "message": "Specification lists every required payload class label.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "report_boundary",
+      "message": "Report declares non-promotional operational authority boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "report_dimensions",
+      "message": "Report exposes phase task-family role and milestone groupings.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "grouping_outputs",
+      "message": "Report includes all required grouping outputs.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tracked_records_read",
+      "message": "Report reads at least one tracked completed AgentJob.",
+      "status": "PASS"
+    }
+  ],
+  "metric_summary": {
+    "mathematical_payload_item_count": 790,
+    "payload_density": 0.645953,
+    "process_only_item_count": 433,
+    "task_count": 670,
+    "task_payload_density": 0.492537
+  },
+  "status": "PASS",
+  "validator_id": "p9_t02_scientific_payload_density_metric_validator"
+}

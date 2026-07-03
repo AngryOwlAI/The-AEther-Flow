@@ -162,6 +162,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `research_control/tasks/RT-20260629-036/artifacts/p1_layered_status_cross_check.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260702-001-P4-T04-LATEST-STATE-VALIDATION-BACKFILL-RECEIPT` `research_control/tasks/RT-20260702-001/artifacts/p4_t04_latest_state_validation_backfill_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260702-002-P4-T05-VALIDATION-STATUS-PHASE-VALIDATION-SUMMARY` `research_control/tasks/RT-20260702-002/artifacts/p4_t05_validation_status_phase_validation_summary.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260703-015-SCIENTIFIC-PAYLOAD-DENSITY-METRIC-SPEC-V1` `research_control/tasks/RT-20260703-015/artifacts/scientific_payload_density_metric_spec_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -736,6 +737,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `wiki/markdown/md-research-control-tasks-rt-20260629-036-p1-layered-status-cross-check.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260702-001-P4-T04-LATEST-STATE-VALIDATION-BACKFILL-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260702-001-p4-t04-latest-state-validation-backfill-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260702-002-P4-T05-VALIDATION-STATUS-PHASE-VALIDATION-SUMMARY` `wiki/markdown/md-research-control-tasks-rt-20260702-002-p4-t05-validation-status-phase-validation-summary.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260703-015-SCIENTIFIC-PAYLOAD-DENSITY-METRIC-SPEC-V1` `wiki/markdown/md-research-control-tasks-rt-20260703-015-scientific-payload-density-metric-spec-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

@@ -1,0 +1,101 @@
+handoff_id: "handoff-0534"
+created_at: "2026-07-03T12:08:00Z"
+task_id: "RT-20260703-015"
+decision_id: "DDR-20260703-015"
+job_id: "AJ-RT-20260703-015-001"
+completion_path: "research_control/tasks/RT-20260703-015/jobs/completions/AJC-AJ-RT-20260703-015-001.yaml"
+source_task_id: "RT-20260703-015"
+source_job_id: "AJ-RT-20260703-015-001"
+source_completion_id: "AJC-AJ-RT-20260703-015-001"
+status: "completed"
+summary: "RT-20260703-015 added the v15 P9-T02 scientific payload density metric with no physics delta."
+next_action: "Run one bounded v15 P9-T03 physics-progress metrics integration packet."
+loop_risk_route: "post_v15_p9_t02_scientific_payload_density_metric_completed_next_p9_t03_no_physics_delta"
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: 1
+  task_type: "physics_progress_metrics_integration_v15"
+  objective: "Integrate distance delta and payload density into the existing metrics report."
+claim_boundary:
+  allowed_next_scope: "P9-T03 physics-progress metrics integration"
+  completed_scope: "P9-T02 scientific payload density metric"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  variation_principle_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+blocked_claims:
+  - "P9-T02 payload density metric as proof authority"
+  - "P9-T02 payload density metric as source-law adoption"
+  - "P9-T02 payload density metric as matter semantics"
+  - "P9-T02 payload density metric as detector semantics"
+  - "P9-T02 payload density metric as coupling-law adoption"
+  - "P9-T02 payload density metric as matter coupling"
+  - "P9-T02 payload density metric as MetricData(E) adoption"
+  - "P9-T02 payload density metric as g_eff scope expansion"
+  - "P9-T02 payload density metric as stress-energy semantics or stress-energy tensor"
+  - "P9-T02 payload density metric as matter action or variation principle"
+  - "P9-T02 payload density metric as Einstein-equation evidence"
+  - "P9-T02 payload density metric as benchmark promotion"
+  - "P9-T02 payload density metric as Gate Chair verdict"
+  - "P9-T02 payload density metric as completed derivation"
+  - "P9-T02 payload density metric as program-wide no-go conclusion"
+  - "P9-T02 payload density metric as future source-extension impossibility"
+p9_t02_result:
+  spec_path: "research_control/tasks/RT-20260703-015/artifacts/scientific_payload_density_metric_spec_v1.md"
+  script_path: "scripts/research_control/report_scientific_payload_density.py"
+  focused_test_path: "tests/test_report_scientific_payload_density.py"
+  task_local_validator_path: "research_control/tasks/RT-20260703-015/artifacts/validate_p9_t02_scientific_payload_density_metric.py"
+  validator_report_path: "research_control/tasks/RT-20260703-015/artifacts/p9_t02_scientific_payload_density_metric_report.json"
+  receipt_path: "research_control/tasks/RT-20260703-015/artifacts/p9_t02_scientific_payload_density_metric_receipt.md"
+  grouping_dimensions:
+    - "phase"
+    - "task_family"
+    - "role"
+    - "milestone"
+  status: "project_control_scientific_payload_density_metric_created"
+  next_route: "P9-T03 physics-progress metrics integration"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-015 adds operational payload-density diagnostics only. It does not change source-law matter-coupling MetricData(E) g_eff stress-energy matter-action variation-principle Einstein-equation benchmark-promotion global-no-go future-source-extension-impossibility or completed-derivation status."
+validation:
+  scientific_payload_density_unit_tests: "PASS"
+  scientific_payload_density_report: "PASS"
+  task_local_scientific_payload_density_validator: "PASS"
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  validate_research_control: "PASS"
+  validate_documentation_impact: "PASS"
+  graph_freshness_check: "PASS"
+  validate_research_control_check_diff: "PASS"
+  git_diff_check: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
