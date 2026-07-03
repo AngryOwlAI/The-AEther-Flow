@@ -1,0 +1,38 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260703-005"
+status: "completed"
+claim_boundary_preserved: true
+route_assessment:
+  p5_t01_input:
+    EqSrc:
+      current_p2_scope: "not_required_for_current_scope"
+      broader_continuation: "conditionally_required"
+      missing_if_broadened: "general source-equivalence theorem"
+    RetainH:
+      current_p2_scope: "not_required_for_current_scope"
+      broader_continuation: "conditionally_required"
+      missing_if_broadened: "retention law"
+    GenH:
+      current_p2_scope: "not_required_for_current_scope"
+      broader_continuation: "conditionally_required"
+      missing_if_broadened: "generator law"
+  route_elimination:
+    narrow_EqSrc_theorem_packet: "not_selected_because_current_scope_does_not_require_general_EqSrc"
+    narrow_RetainH_packet: "not_selected_because_current_scope_does_not_quantify_over_H_retention"
+    narrow_GenH_packet: "not_selected_because_current_scope_does_not_generate_H_indexed_source_families"
+    protected_human_gated_ontology_authority: "not_selected_because_no_canonical_ontology_edit_or_adoption_is_required"
+    freeze_packet: "not_selected_because_no_repeated_missing_primitive_blocks_current_scoped_route"
+  selected_route:
+    route_id: "P6-T01"
+    route_label: "source_extension_classification_checklist"
+    reason: "The current scoped route can proceed only if source-extension evidence is kept distinct from derivation and adoption; therefore the next useful packet is classification enforcement."
+new_mathematical_payload:
+  - payload_id: "P5T02RouteEliminationMatrix_v1"
+    payload_type: "dependency_map_update"
+    status: "draft/control"
+    summary: "Maps P5-T01 dependency classifications to eliminated routes and the selected P6-T01 continuation."
+limitations:
+  - "This child review does not prove a new theorem."
+  - "This child review does not discharge EqSrc RetainH or GenH."
+  - "This child review does not adopt source-extension data as derivation."

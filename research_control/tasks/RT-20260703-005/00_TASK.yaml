@@ -1,0 +1,47 @@
+task_id: "RT-20260703-005"
+task_type: "upstream_dependency_consequence_selector"
+status: "completed"
+created_at: "2026-07-03T04:50:19Z"
+updated_at: "2026-07-03T04:50:19Z"
+closed_at: "2026-07-03T04:50:19Z"
+parent_task_id: "RT-20260703-004"
+current_decision_id: "DDR-20260703-005"
+current_job_id: "AJ-RT-20260703-005-001"
+plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+plan_phase_id: "P5"
+plan_task_id: "P5-T02"
+route_label: "v15_p5_t02_upstream_dependency_consequence_selector"
+objective: "Select exactly one downstream route from the P5-T01 EqSrc RetainH GenH dependency audit while preserving no adoption no source-law promotion and no downstream physics promotion."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Select the next matter-coupling-support route after upstream EqSrc RetainH GenH dependency audit; do not discharge or adopt upstream primitives."
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+claim_boundary:
+  physics_promotion_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  general_eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+outputs:
+  - "research_control/tasks/RT-20260703-005/artifacts/child_phys_math_p5_t02_dependency_consequence_selector.yaml"
+  - "research_control/tasks/RT-20260703-005/artifacts/child_phys_phil_p5_t02_dependency_consequence_selector.yaml"
+  - "research_control/tasks/RT-20260703-005/artifacts/parent_conflict_review_p5_t02_dependency_consequence_selector.yaml"
+  - "research_control/tasks/RT-20260703-005/artifacts/parent_fusion_notes_p5_t02_dependency_consequence_selector.md"
+  - "research_control/tasks/RT-20260703-005/artifacts/dependency_consequence_selector_v1.md"
+  - "research_control/tasks/RT-20260703-005/artifacts/validate_p5_t02_dependency_consequence_selector.py"
+  - "research_control/tasks/RT-20260703-005/artifacts/p5_t02_dependency_consequence_selector_report.json"
+completion_status: "post_v15_p5_t02_selector_selected_p6_t01_source_extension_classification_no_promotion"
+next_recommended_action: "Run one bounded v15 P6-T01 source-extension classification checklist packet."
+notes: "P5-T02 selects P6-T01 because P5-T01 did not freeze the current scoped theorem route and did not require immediate EqSrc RetainH GenH theorem or primitive adoption. The selector issues no Gate Chair verdict and no physics promotion."

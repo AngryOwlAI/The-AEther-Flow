@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-004` and `handoff-0523`.
+`RT-20260703-005` and `handoff-0524`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-004` |
-| Latest handoff ID | `handoff-0523` |
-| Current status | `post_v15_p5_t01_eqsrc_retainh_genh_dependency_audit_completed_next_p5_t02_no_promotion` |
-| Current route family | post v15 p5 t01 eqsrc retainh genh dependency audit completed next p5 t02 no promotion |
+| Active task ID | `RT-20260703-005` |
+| Latest handoff ID | `handoff-0524` |
+| Current status | `post_v15_p5_t02_selector_selected_p6_t01_source_extension_classification_no_promotion` |
+| Current route family | post v15 p5 t02 selector selected p6 t01 source extension classification no promotion |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v15 P5-T02 dependency consequence selector packet. |
-| Required next authority | P5-T02 dependency consequence selector |
-| Next recommended action | Run one bounded v15 P5-T02 dependency consequence selector packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v15 P6-T01 source-extension classification checklist packet. |
+| Required next authority | P6-T01 source-extension classification checklist |
+| Next recommended action | Run one bounded v15 P6-T01 source-extension classification checklist packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-004/00_TASK.yaml`.
-- Active task objective: Audit whether the current matter-sector continuation depends on EqSrc, RetainH, or GenH, preserving scoped theorem boundaries and no promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0523.yaml`.
-- Latest handoff summary: RT-20260703-004 completed v15 P5-T01 by auditing EqSrc RetainH GenH dependencies. The P2 theorem does not require them in its current explicit-certificate scope while broader matter-sector continuation conditionally requires upstream payloads.
-- Current route family: post v15 p5 t01 eqsrc retainh genh dependency audit completed next p5 t02 no promotion.
-- Next recommended action: Run one bounded v15 P5-T02 dependency consequence selector packet.
+- Active task path: `research_control/tasks/RT-20260703-005/00_TASK.yaml`.
+- Active task objective: Select exactly one downstream route from the P5-T01 EqSrc RetainH GenH dependency audit while preserving no adoption no source-law promotion and no downstream physics promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0524.yaml`.
+- Latest handoff summary: RT-20260703-005 completed v15 P5-T02 by selecting P6-T01 source-extension classification checklist as the next route after the EqSrc RetainH GenH dependency audit.
+- Current route family: post v15 p5 t02 selector selected p6 t01 source extension classification no promotion.
+- Next recommended action: Run one bounded v15 P6-T01 source-extension classification checklist packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P5-T02 dependency consequence selector packet.
+Run one bounded v15 P6-T01 source-extension classification checklist packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-004`;
-- latest handoff: `handoff-0523`;
-- current status: `post_v15_p5_t01_eqsrc_retainh_genh_dependency_audit_completed_next_p5_t02_no_promotion`;
+- active task: `RT-20260703-005`;
+- latest handoff: `handoff-0524`;
+- current status: `post_v15_p5_t02_selector_selected_p6_t01_source_extension_classification_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,7 +235,7 @@ Legacy compatibility records:
 - latest handoff validation `full_claim_language_linter`: PENDING;
 - latest handoff validation `git_diff_check`: PENDING;
 - latest handoff validation `graph_freshness_check`: PENDING;
-- latest handoff validation `task_local_eqsrc_retainh_genh_dependency_audit_validator`: PASS;
+- latest handoff validation `task_local_dependency_consequence_selector_validator`: PENDING;
 - latest handoff validation `validate_documentation_impact`: PENDING;
 - latest handoff validation `validate_research_control`: PENDING;
 - latest handoff validation `validate_research_control_check_diff`: PENDING;
@@ -245,8 +245,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0523.yaml`
-- `research_control/tasks/RT-20260703-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0524.yaml`
+- `research_control/tasks/RT-20260703-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -262,7 +262,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0523*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0524*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
