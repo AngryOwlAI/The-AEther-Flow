@@ -1,0 +1,92 @@
+handoff_id: "handoff-0527"
+created_at: "2026-07-03T06:45:01Z"
+task_id: "RT-20260703-008"
+decision_id: "DDR-20260703-008"
+job_id: "AJ-RT-20260703-008-001"
+completion_path: "research_control/tasks/RT-20260703-008/jobs/completions/AJC-AJ-RT-20260703-008-001.yaml"
+source_task_id: "RT-20260703-008"
+source_job_id: "AJ-RT-20260703-008-001"
+source_completion_id: "AJC-AJ-RT-20260703-008-001"
+status: "completed"
+summary: "RT-20260703-008 completed v15 P6-T03 by adding source-extension classification receipt validation and focused fixtures with no physics delta."
+next_action: "Run one bounded v15 P7-T01 Refuter obstruction schema packet."
+loop_risk_route: "post_v15_p6_t03_source_extension_classification_validator_integrated_next_p7_t01_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P7-T01 Refuter obstruction schema"
+  completed_scope: "P6-T03 source-extension classification validator integration"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P6-T03 validator pass as proof authority"
+  - "P6-T03 validator pass as source-law adoption"
+  - "P6-T03 validator pass as source-extension data adoption"
+  - "P6-T03 validator pass as matter semantics"
+  - "P6-T03 validator pass as detector semantics"
+  - "P6-T03 validator pass as coupling-law adoption"
+  - "P6-T03 validator pass as matter coupling"
+  - "P6-T03 validator pass as MetricData(E) adoption"
+  - "P6-T03 validator pass as g_eff scope expansion"
+  - "P6-T03 validator pass as stress-energy semantics or matter action"
+  - "P6-T03 validator pass as Einstein-equation evidence"
+  - "P6-T03 validator pass as benchmark promotion"
+  - "P6-T03 validator pass as Gate Chair verdict"
+  - "P6-T03 validator pass as completed derivation"
+  - "P6-T03 validator pass as future source-extension impossibility"
+  - "P6-T03 validator pass as program-wide no-go conclusion"
+p6_t03_result:
+  validator_source_path: "scripts/research_control/validate_research_control.py"
+  unit_test_path: "tests/test_research_control.py"
+  validator_report_path: "research_control/tasks/RT-20260703-008/artifacts/p6_t03_source_extension_classification_validator_report.json"
+  receipt_path: "research_control/tasks/RT-20260703-008/artifacts/p6_t03_source_extension_classification_validator_receipt.md"
+  status: "project_control_source_extension_classification_validator_integrated"
+  required_receipt_fields:
+    - "classification"
+    - "claim_boundary"
+    - "blocked_overreads"
+    - "relation_to_current_ontology"
+    - "protected_authority_required"
+    - "downstream_promotion_authorized"
+  compatibility_note: "Existing valid pre-P6-T03 completions remain compatible through the activation-bounded policy."
+  next_route: "P7-T01 Refuter obstruction schema"
+distance_to_gr:
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-008 changes validator behavior only. It does not change source-law matter-coupling MetricData(E) g_eff Einstein-equation benchmark-promotion or completed-derivation status."
+validation:
+  focused_source_extension_classification_tests: "PASS"
+  full_research_control_tests: "PASS"
+  task_local_source_extension_classification_validator: "PASS"
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  validate_research_control: "PASS"
+  validate_documentation_impact: "PASS"
+  graph_freshness_check: "PASS"
+  validate_research_control_check_diff: "PASS"
+  git_diff_check: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

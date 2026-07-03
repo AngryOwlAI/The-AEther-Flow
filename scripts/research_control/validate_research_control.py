@@ -1023,6 +1023,25 @@ SOURCE_EXTENSION_WORKFLOW_CATEGORIES = {
     "source_extension_human_gate",
     "source_extension_adopted_or_rejected",
 }
+SOURCE_EXTENSION_CLASSIFICATION_REQUIRED_AFTER = "2026-07-03T06:45:00Z"
+SOURCE_EXTENSION_CLASSIFICATION_CHECKLIST_ID = "source_extension_classification_checklist_v1"
+SOURCE_EXTENSION_CLASSIFICATION_VALUES = {
+    "derived_from_current_ontology",
+    "conservative_definitional_extension",
+    "new_ontology_primitive_candidate",
+    "forbidden_target_import",
+    "status_boundary_evidence_only",
+    "blocked_adoption_open_continuation",
+}
+SOURCE_EXTENSION_ONTOLOGY_RELATION_VALUES = {
+    "derived",
+    "conservative",
+    "missing_primitive",
+    "target_import",
+    "evidence_only",
+    "blocked_open",
+}
+SOURCE_EXTENSION_CLASSIFICATION_ROLE_IDS = PHYSICS_ROLE_IDS | {"gate-chair"}
 
 FREEZE_DECISION_VALUES = {
     "not_frozen",
@@ -2810,6 +2829,13 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
         path,
     )
     validate_ontology_law_research_packet(report, job_row, job_contract, completion, path)
+    validate_source_extension_classification_receipt(
+        report,
+        job_row,
+        job_contract,
+        completion,
+        path.relative_to(REPO_ROOT).as_posix(),
+    )
     validate_completion_resolver_snapshots(report, completion, job_contract, path)
 
 
@@ -3709,6 +3735,133 @@ def validate_theoretical_continuation_decision(
                     report.error(
                         f"{path_text}: finite_toy_model_target.{field_name} is required"
                     )
+
+
+def source_extension_classification_policy_active(
+    job_row: dict[str, str],
+    completion: dict[str, Any] | None = None,
+) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+    ]
+    if completion:
+        timestamps.append(completion.get("completed_at", ""))
+    return any(
+        timestamp_at_or_after(value, SOURCE_EXTENSION_CLASSIFICATION_REQUIRED_AFTER)
+        for value in timestamps
+    )
+
+
+def _source_extension_route_marker(value: Any) -> bool:
+    text = str(value or "").strip().lower().replace("-", "_").replace(" ", "_")
+    return text.startswith("source_extension_") or "source_extension" in text
+
+
+def source_extension_classification_required(
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+) -> bool:
+    if not source_extension_classification_policy_active(job_row, completion):
+        return False
+    if bool_value(job_contract.get("source_extension_classification_required")):
+        return True
+    if bool_value(completion.get("source_extension_classification_required")):
+        return True
+    if job_row.get("role_id", "") not in SOURCE_EXTENSION_CLASSIFICATION_ROLE_IDS:
+        return False
+    for field_name in ["route_label", "plan_task_id", "task_type"]:
+        if _source_extension_route_marker(job_contract.get(field_name)):
+            return True
+    decision = completion.get("theoretical_decision_output")
+    if isinstance(decision, dict):
+        packet_type = str(decision.get("selected_next_packet_type", "")).strip()
+        category = str(decision.get("source_extension_category", "")).strip()
+        if packet_type.startswith("source_extension_") or category in SOURCE_EXTENSION_WORKFLOW_CATEGORIES:
+            return True
+    payloads = completion.get("new_mathematical_payload", [])
+    if isinstance(payloads, list):
+        for item in payloads:
+            if isinstance(item, dict):
+                payload_type = str(item.get("payload_type", item.get("type", ""))).strip()
+                if payload_type == "source_extension_classification":
+                    return True
+    return False
+
+
+def _source_extension_classification_records(receipt: Any) -> list[dict[str, Any]]:
+    if isinstance(receipt, list):
+        return [item for item in receipt if isinstance(item, dict)]
+    if not isinstance(receipt, dict):
+        return []
+    if isinstance(receipt.get("records"), list):
+        return [item for item in receipt["records"] if isinstance(item, dict)]
+    if isinstance(receipt.get("classifications"), list):
+        return [item for item in receipt["classifications"] if isinstance(item, dict)]
+    if "classification" in receipt:
+        return [receipt]
+    return []
+
+
+def validate_source_extension_classification_receipt(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    receipt = completion.get("source_extension_classification")
+    required = source_extension_classification_required(job_row, job_contract, completion)
+    if receipt is None:
+        if required:
+            report.error(f"{path_text}: source-extension completion missing source_extension_classification receipt")
+        return
+    if not source_extension_classification_policy_active(job_row, completion):
+        return
+    records = _source_extension_classification_records(receipt)
+    if not records:
+        report.error(f"{path_text}: source_extension_classification must contain at least one classification record")
+        return
+    if isinstance(receipt, dict):
+        checklist_id = str(receipt.get("checklist_id", "")).strip()
+        if checklist_id and checklist_id != SOURCE_EXTENSION_CLASSIFICATION_CHECKLIST_ID:
+            report.error(
+                f"{path_text}: source_extension_classification.checklist_id must be "
+                f"{SOURCE_EXTENSION_CLASSIFICATION_CHECKLIST_ID}"
+            )
+    for index, record in enumerate(records, start=1):
+        prefix = f"{path_text}: source_extension_classification[{index}]"
+        classification = str(record.get("classification", "")).strip()
+        if classification not in SOURCE_EXTENSION_CLASSIFICATION_VALUES:
+            report.error(
+                f"{prefix}.classification is not allowed: {classification}"
+            )
+        if not (
+            str(record.get("claim_boundary_id", "")).strip()
+            or str(record.get("claim_boundary_ref", "")).strip()
+            or isinstance(record.get("claim_boundary"), dict)
+        ):
+            report.error(
+                f"{prefix} requires claim_boundary, claim_boundary_id, or claim_boundary_ref"
+            )
+        blocked = _listish_values(record.get("blocked_overreads", record.get("forbidden_overreads", [])))
+        if not blocked:
+            report.error(f"{prefix} requires blocked_overreads or forbidden_overreads")
+        relation = str(record.get("relation_to_current_ontology", "")).strip()
+        if relation not in SOURCE_EXTENSION_ONTOLOGY_RELATION_VALUES:
+            report.error(
+                f"{prefix}.relation_to_current_ontology is not allowed: {relation}"
+            )
+        if "protected_authority_required" not in record:
+            report.error(f"{prefix}.protected_authority_required is required")
+        if "downstream_promotion_authorized" not in record:
+            report.error(f"{prefix}.downstream_promotion_authorized is required")
+        elif bool_value(record.get("downstream_promotion_authorized")):
+            report.error(f"{prefix}.downstream_promotion_authorized must be false")
+        if "physics_promotion_authorized" in record and bool_value(record.get("physics_promotion_authorized")):
+            report.error(f"{prefix}.physics_promotion_authorized must be false")
 
 
 def validate_completion_resolver_snapshots(

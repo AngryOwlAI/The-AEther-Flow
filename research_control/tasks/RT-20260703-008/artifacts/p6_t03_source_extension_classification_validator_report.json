@@ -1,0 +1,60 @@
+{
+  "check_count": 6,
+  "checks": [
+    {
+      "detail": "Validator code contains the source-extension classification policy constants, dispatch, and field errors.",
+      "id": "validator_contains_required_tokens",
+      "passed": true
+    },
+    {
+      "detail": "Research-control tests contain missing, malformed, valid, and compatibility fixture coverage.",
+      "id": "unit_tests_contain_required_cases",
+      "passed": true
+    },
+    {
+      "detail": "Synthetic post-policy source-extension completion fails when the receipt is omitted.",
+      "id": "synthetic_missing_receipt_fails",
+      "passed": true
+    },
+    {
+      "detail": "Synthetic malformed receipt fails required classification, claim boundary, blocked overread, ontology relation, protected authority, and downstream status checks.",
+      "id": "synthetic_malformed_receipt_fails_required_fields",
+      "passed": true
+    },
+    {
+      "detail": "Synthetic valid receipt passes the P6-T03 validator with no errors.",
+      "id": "synthetic_valid_receipt_passes",
+      "passed": true
+    },
+    {
+      "detail": "The new requirement is activation-bounded so existing valid pre-P6-T03 completions remain compatible.",
+      "id": "compatibility_policy_is_time_bounded",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "matter_coupling_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authorized": false
+  },
+  "failed_check_count": 0,
+  "receipt_details": {
+    "malformed_errors": [
+      "fixture-malformed.yaml: source_extension_classification[1].classification is not allowed: ",
+      "fixture-malformed.yaml: source_extension_classification[1] requires claim_boundary, claim_boundary_id, or claim_boundary_ref",
+      "fixture-malformed.yaml: source_extension_classification[1] requires blocked_overreads or forbidden_overreads",
+      "fixture-malformed.yaml: source_extension_classification[1].relation_to_current_ontology is not allowed: ",
+      "fixture-malformed.yaml: source_extension_classification[1].protected_authority_required is required",
+      "fixture-malformed.yaml: source_extension_classification[1].downstream_promotion_authorized is required"
+    ],
+    "missing_errors": [
+      "fixture-missing.yaml: source-extension completion missing source_extension_classification receipt"
+    ],
+    "valid_errors": []
+  },
+  "status": "PASS",
+  "task_id": "RT-20260703-008"
+}

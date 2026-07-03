@@ -2890,6 +2890,105 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertEqual(report.errors, [])
 
+    def source_extension_selector_yaml(self) -> str:
+        return "\n".join(
+            [
+                "theoretical_decision_output:",
+                '  selected_next_packet_type: "source_extension_candidate"',
+                '  decision_basis: "Synthetic source-extension route selection."',
+                '  theoretical_method: "Classify the source-extension output before any downstream use."',
+                '  preserves_claim_blocks: "No source-law adoption matter coupling benchmark promotion or completed derivation is authorized."',
+                "  requires_human_gate: false",
+                '  human_gate_reason: ""',
+                '  source_extension_category: "source_extension_candidate"',
+                '  source_extension_import_classification: "conservative definitional extension candidate, not adopted ontology"',
+            ]
+        )
+
+    def test_source_extension_completion_requires_classification_receipt(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("source_extension_classification"),
+                self.source_extension_selector_yaml(),
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-07-03T06:45:01Z",
+        )
+        self.assertTrue(
+            any("missing source_extension_classification receipt" in error for error in report.errors)
+        )
+
+    def test_source_extension_classification_receipt_requires_required_fields(self) -> None:
+        completion_extra = "\n".join(
+            [
+                self.roadmap_distance_matrix_yaml(),
+                self.minimal_payload_yaml("source_extension_classification"),
+                self.source_extension_selector_yaml(),
+                "source_extension_classification:",
+                '  checklist_id: "source_extension_classification_checklist_v1"',
+                "  records:",
+                '    - item_id: "SyntheticSourceExtension"',
+            ]
+        )
+        report = self.validate_completion_fixture(
+            role_id="theoretical-continuation-selector",
+            completion_extra=completion_extra,
+            timestamp="2026-07-03T06:45:01Z",
+        )
+        joined = "\n".join(report.errors)
+        self.assertIn(".classification is not allowed", joined)
+        self.assertIn("requires claim_boundary", joined)
+        self.assertIn("requires blocked_overreads", joined)
+        self.assertIn(".relation_to_current_ontology is not allowed", joined)
+        self.assertIn(".protected_authority_required is required", joined)
+        self.assertIn(".downstream_promotion_authorized is required", joined)
+
+    def test_source_extension_classification_receipt_accepts_valid_record(self) -> None:
+        report = self.validator.ValidationReport()
+        job_row = {
+            "role_id": "theoretical-continuation-selector",
+            "created_at": "2026-07-03T06:45:01Z",
+            "started_at": "2026-07-03T06:45:01Z",
+            "completed_at": "2026-07-03T06:45:01Z",
+        }
+        job_contract = {
+            "route_label": "source_extension_candidate",
+        }
+        completion = {
+            "completed_at": "2026-07-03T06:45:01Z",
+            "source_extension_classification": {
+                "checklist_id": "source_extension_classification_checklist_v1",
+                "records": [
+                    {
+                        "item_id": "SyntheticSourceExtension",
+                        "item_source_path": "research_control/tasks/RT-TEST/artifacts/synthetic.md",
+                        "classification": "conservative_definitional_extension",
+                        "claim_boundary_id": "CB-TEST-SOURCE-EXTENSION",
+                        "blocked_overreads": [
+                            "source-law adoption",
+                            "matter-coupling derivation",
+                        ],
+                        "relation_to_current_ontology": "conservative",
+                        "protected_authority_required": False,
+                        "downstream_promotion_authorized": False,
+                        "physics_promotion_authorized": False,
+                    }
+                ],
+            },
+        }
+        self.validator.validate_source_extension_classification_receipt(
+            report,
+            job_row,
+            job_contract,
+            completion,
+            "fixture.yaml",
+        )
+        self.assertEqual(report.errors, [])
+
     def test_roadmap_selector_accepts_finite_toy_model_target(self) -> None:
         completion_extra = "\n".join(
             [
