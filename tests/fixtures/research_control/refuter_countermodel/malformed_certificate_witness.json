@@ -1,0 +1,76 @@
+{
+  "fixture_schema": "refuter_countermodel_fixture_v1",
+  "fixture_id": "malformed_certificate_witness",
+  "fixture_class": "malformed_certificate_witness",
+  "source_task_id": "RT-20260703-010",
+  "plan_task_id": "P7-T02",
+  "status": "negative_control_fixture",
+  "intended_consumers": [
+    "refuter",
+    "claim_language_linter"
+  ],
+  "refuter_obstruction_record": {
+    "obstruction_id": "OB-P7T02-MALFORMED-CERT-001",
+    "target_claim": "Malformed certificate records can supply matter-semantics adoption readiness",
+    "target_milestone": "matter_coupling",
+    "failed_premise": "The certificate names no declared source domain and no codomain.",
+    "minimal_countermodel_available": true,
+    "countermodel_path": "tests/fixtures/research_control/refuter_countermodel/malformed_certificate_witness.json",
+    "countermodel_scope": "finite_local",
+    "certificate_gap": "malformed source certificate",
+    "source_extension_repair_possible": true,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false,
+    "freeze_criteria_status": {
+      "freeze_decision": "not_frozen",
+      "decision_reason": "A well-formed certificate remains a possible repair.",
+      "next_allowed_route": "ontology_formalizer"
+    },
+    "route_cycle_control": {
+      "cycle_family": "source_certificate_malformed",
+      "current_cycle_step": "fixture",
+      "prior_related_tasks": [
+        "RT-20260702-064",
+        "RT-20260703-009"
+      ],
+      "cycle_risk": "low",
+      "orbit_avoidance_reason": "The fixture records a concrete malformed-certificate shape.",
+      "next_role_consequence": "validator_engineer"
+    },
+    "forbidden_conclusions": [
+      "No matter semantics adoption follows.",
+      "No detector semantics adoption follows.",
+      "No source-law adoption follows.",
+      "No matter-coupling derivation follows.",
+      "No Einstein-equation derivation follows.",
+      "No benchmark promotion follows.",
+      "No completed derivation follows."
+    ]
+  },
+  "minimal_witness": {
+    "finite": true,
+    "certificate": {
+      "id": "cert_malformed",
+      "domain": "",
+      "codomain": "",
+      "declared_object": "obj_malformed"
+    },
+    "expected_result": "fail_closed_malformed_certificate"
+  },
+  "claim_language_linter": {
+    "negative_snippets": [
+      "Malformed certificate proves matter semantics."
+    ],
+    "expected_class_ids": [
+      "source_certificate_overread"
+    ]
+  },
+  "boundary": {
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "matter_coupling_derived": false,
+    "einstein_equations_derived": false,
+    "completed_derivation_claimed": false
+  }
+}

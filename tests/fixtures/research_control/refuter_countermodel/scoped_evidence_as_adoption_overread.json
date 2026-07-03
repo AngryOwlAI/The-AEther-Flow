@@ -1,0 +1,74 @@
+{
+  "fixture_schema": "refuter_countermodel_fixture_v1",
+  "fixture_id": "scoped_evidence_as_adoption_overread",
+  "fixture_class": "scoped_evidence_as_adoption_overread",
+  "source_task_id": "RT-20260703-010",
+  "plan_task_id": "P7-T02",
+  "status": "negative_control_fixture",
+  "intended_consumers": [
+    "refuter",
+    "claim_language_linter"
+  ],
+  "refuter_obstruction_record": {
+    "obstruction_id": "OB-P7T02-SCOPED-EVIDENCE-AS-ADOPTION-001",
+    "target_claim": "Scoped evidence/precondition status is adoption of the high-risk object",
+    "target_milestone": "matter_coupling",
+    "failed_premise": "The tracked status is scoped evidence/precondition only and no adoption gate is recorded.",
+    "minimal_countermodel_available": true,
+    "countermodel_path": "tests/fixtures/research_control/refuter_countermodel/scoped_evidence_as_adoption_overread.json",
+    "countermodel_scope": "source_extension_candidate",
+    "certificate_gap": "no protected adoption authority",
+    "source_extension_repair_possible": true,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false,
+    "freeze_criteria_status": {
+      "freeze_decision": "not_frozen",
+      "decision_reason": "Status-laundering overread fails; scoped continuation remains possible.",
+      "next_allowed_route": "validator_engineer"
+    },
+    "route_cycle_control": {
+      "cycle_family": "scoped_status_laundering",
+      "current_cycle_step": "fixture",
+      "prior_related_tasks": [
+        "RT-20260703-007",
+        "RT-20260703-009"
+      ],
+      "cycle_risk": "medium",
+      "orbit_avoidance_reason": "The fixture directly names the missing adoption authority.",
+      "next_role_consequence": "validator_engineer"
+    },
+    "forbidden_conclusions": [
+      "No high-risk object adoption follows.",
+      "No source-law adoption follows.",
+      "No matter semantics adoption follows.",
+      "No detector semantics adoption follows.",
+      "No matter-coupling derivation follows.",
+      "No benchmark promotion follows.",
+      "No completed derivation follows."
+    ]
+  },
+  "minimal_witness": {
+    "finite": true,
+    "status_input": "accepted_as_scoped_evidence_precondition",
+    "missing_authority": "protected adoption gate",
+    "expected_result": "scoped_status_not_adoption"
+  },
+  "claim_language_linter": {
+    "negative_snippets": [
+      "Scoped evidence means adoption.",
+      "matter_coupling: accepted"
+    ],
+    "expected_class_ids": [
+      "scoped_evidence_or_precondition_as_adoption",
+      "bare_high_risk_accepted"
+    ]
+  },
+  "boundary": {
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "matter_coupling_derived": false,
+    "einstein_equations_derived": false,
+    "completed_derivation_claimed": false
+  }
+}

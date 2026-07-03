@@ -1,0 +1,82 @@
+{
+  "fixture_schema": "refuter_countermodel_fixture_v1",
+  "fixture_id": "finite_local_globalization_failure",
+  "fixture_class": "finite_local_globalization_failure",
+  "source_task_id": "RT-20260703-010",
+  "plan_task_id": "P7-T02",
+  "status": "negative_control_fixture",
+  "intended_consumers": [
+    "refuter",
+    "claim_language_linter"
+  ],
+  "refuter_obstruction_record": {
+    "obstruction_id": "OB-P7T02-FINITE-LOCAL-GLOBALIZATION-001",
+    "target_claim": "A finite/local fixture result closes the broader route globally",
+    "target_milestone": "benchmark_promotion",
+    "failed_premise": "The fixture only covers a finite local support and lacks a global theorem.",
+    "minimal_countermodel_available": true,
+    "countermodel_path": "tests/fixtures/research_control/refuter_countermodel/finite_local_globalization_failure.json",
+    "countermodel_scope": "finite_local",
+    "certificate_gap": "no global source-side theorem or global certificate family",
+    "source_extension_repair_possible": true,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false,
+    "freeze_criteria_status": {
+      "freeze_decision": "not_frozen",
+      "decision_reason": "Finite/local failure does not freeze all future source-extension attempts.",
+      "next_allowed_route": "theoretical_continuation_selector"
+    },
+    "route_cycle_control": {
+      "cycle_family": "finite_local_to_global_overread",
+      "current_cycle_step": "fixture",
+      "prior_related_tasks": [
+        "RT-20260614-270",
+        "RT-20260703-009"
+      ],
+      "cycle_risk": "medium",
+      "orbit_avoidance_reason": "The fixture records the scope mismatch directly.",
+      "next_role_consequence": "refuter_or_selector"
+    },
+    "forbidden_conclusions": [
+      "No program-wide no-go conclusion follows.",
+      "No future source-extension impossibility follows.",
+      "No benchmark promotion follows.",
+      "No completed derivation follows.",
+      "No unrestricted RR_E theorem follows.",
+      "No Einstein-equation derivation follows.",
+      "No source-law adoption follows."
+    ]
+  },
+  "minimal_witness": {
+    "finite": true,
+    "local_support": [
+      "cell_0",
+      "cell_1"
+    ],
+    "global_claim_attempted": true,
+    "missing_global_data": [
+      "global cover",
+      "global certificate family",
+      "scope-preserving theorem"
+    ],
+    "expected_result": "finite_local_only_no_global_closure"
+  },
+  "claim_language_linter": {
+    "negative_snippets": [
+      "Global no-go proved.",
+      "Support-only formalization collapses RR_E."
+    ],
+    "expected_class_ids": [
+      "global_no_go_or_rejection_overclaim",
+      "unrestricted_rr_e_irrelevance_overclaim"
+    ]
+  },
+  "boundary": {
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "matter_coupling_derived": false,
+    "einstein_equations_derived": false,
+    "completed_derivation_claimed": false
+  }
+}

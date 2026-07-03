@@ -1,0 +1,45 @@
+{
+  "validator_id": "p7_t02_refuter_countermodel_fixture_catalog_validator",
+  "status": "PASS",
+  "check_count": 5,
+  "failed_check_count": 0,
+  "catalog_path": "research_control/design/refuter_countermodel_fixture_catalog_v1.md",
+  "fixture_root": "tests/fixtures/research_control/refuter_countermodel",
+  "checks": [
+    {
+      "name": "required_fixture_classes_declared",
+      "status": "PASS",
+      "detail": "all P7-T02 classes declared"
+    },
+    {
+      "name": "catalog_fixture_classes_unique",
+      "status": "PASS",
+      "detail": "all fixture classes present once"
+    },
+    {
+      "name": "fixture_contracts",
+      "status": "PASS",
+      "detail": "all fixture records match catalog contract"
+    },
+    {
+      "name": "fixture_file_count",
+      "status": "PASS",
+      "detail": "eight fixture JSON files present"
+    },
+    {
+      "name": "claim_language_linter_usability",
+      "status": "PASS",
+      "detail": "current linter detects expected class IDs for all fixture snippets"
+    }
+  ],
+  "claim_boundary": {
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "matter_coupling_derived": false,
+    "einstein_equations_derived": false,
+    "completed_derivation_claimed": false,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false
+  }
+}

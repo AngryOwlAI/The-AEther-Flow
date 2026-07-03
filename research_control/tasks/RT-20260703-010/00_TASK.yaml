@@ -1,0 +1,70 @@
+task_id: "RT-20260703-010"
+task_type: "minimal_countermodel_fixture_library"
+status: "completed"
+created_at: "2026-07-03T08:34:26Z"
+updated_at: "2026-07-03T08:34:26Z"
+closed_at: "2026-07-03T08:34:26Z"
+parent_task_id: "RT-20260703-009"
+parent_handoff_id: "handoff-0528"
+decision_id: "DDR-20260703-010"
+job_id: "AJ-RT-20260703-010-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260703-010"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+human_authorization_note: "The user granted human authorization for all human gates. This P7-T02 fixture-library packet does not consume Gate Chair authority source-law adoption authority matter-coupling authority benchmark authority completed-derivation authority global-no-go authority or future-source-extension-impossibility authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T02"
+  plan_task_name: "Minimal countermodel fixture library"
+objective: "Create a small fixture library of negative-control examples usable by future Refuter outputs and the claim-language linter."
+target_derivation_milestone: "none"
+milestone_burden: "P7-T02 minimal countermodel fixture library only; no physics derivation milestone is advanced."
+closure_status: "post_v15_p7_t02_countermodel_fixture_library_completed_next_p7_t03_no_physics_delta"
+claim_boundary:
+  allowed_scope: "Project-control fixture library and focused tests for v15 P7-T02 only"
+  scientific_claims_changed: false
+  scientific_claim_delta: "none"
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+output_artifacts:
+  - "research_control/design/refuter_countermodel_fixture_catalog_v1.md"
+  - "tests/fixtures/research_control/refuter_countermodel/finite_rr_e_separation_witness.json"
+  - "tests/fixtures/research_control/refuter_countermodel/missing_certificate_witness.json"
+  - "tests/fixtures/research_control/refuter_countermodel/malformed_certificate_witness.json"
+  - "tests/fixtures/research_control/refuter_countermodel/detector_semantics_import_witness.json"
+  - "tests/fixtures/research_control/refuter_countermodel/target_metric_import_witness.json"
+  - "tests/fixtures/research_control/refuter_countermodel/finite_local_globalization_failure.json"
+  - "tests/fixtures/research_control/refuter_countermodel/source_extension_as_derivation_overread.json"
+  - "tests/fixtures/research_control/refuter_countermodel/scoped_evidence_as_adoption_overread.json"
+  - "tests/test_refuter_countermodel_fixtures.py"
+  - "research_control/tasks/RT-20260703-010/artifacts/validate_p7_t02_refuter_countermodel_fixture_catalog.py"
+  - "research_control/tasks/RT-20260703-010/artifacts/p7_t02_refuter_countermodel_fixture_catalog_report.json"
+  - "research_control/tasks/RT-20260703-010/artifacts/p7_t02_refuter_countermodel_fixture_catalog_receipt.md"
+next_recommended_action: "Run one bounded v15 P7-T03 Refuter role/template update packet."
+notes: "This task implements only P7-T02. It does not update the Refuter role/template, execute a live Refuter stress test, or promote any physics claim."
+documentation_impact_id: "DI-RT-20260703-010-001"

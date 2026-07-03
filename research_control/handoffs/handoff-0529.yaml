@@ -1,0 +1,97 @@
+handoff_id: "handoff-0529"
+created_at: "2026-07-03T08:34:26Z"
+task_id: "RT-20260703-010"
+decision_id: "DDR-20260703-010"
+job_id: "AJ-RT-20260703-010-001"
+completion_path: "research_control/tasks/RT-20260703-010/jobs/completions/AJC-AJ-RT-20260703-010-001.yaml"
+source_task_id: "RT-20260703-010"
+source_job_id: "AJ-RT-20260703-010-001"
+source_completion_id: "AJC-AJ-RT-20260703-010-001"
+status: "completed"
+summary: "RT-20260703-010 completed v15 P7-T02 by creating the minimal Refuter countermodel fixture catalog and eight JSON negative-control fixtures with no physics delta."
+next_action: "Run one bounded v15 P7-T03 Refuter role/template update packet."
+loop_risk_route: "post_v15_p7_t02_countermodel_fixture_library_completed_next_p7_t03_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P7-T03 Refuter role/template update"
+  completed_scope: "P7-T02 Minimal countermodel fixture library"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+blocked_claims:
+  - "P7-T02 fixture catalog as proof authority"
+  - "P7-T02 fixture catalog as a live Refuter result"
+  - "P7-T02 fixture catalog as source-law adoption"
+  - "P7-T02 fixture catalog as source-extension data adoption"
+  - "P7-T02 fixture catalog as matter semantics"
+  - "P7-T02 fixture catalog as detector semantics"
+  - "P7-T02 fixture catalog as coupling-law adoption"
+  - "P7-T02 fixture catalog as matter coupling"
+  - "P7-T02 fixture catalog as MetricData(E) adoption"
+  - "P7-T02 fixture catalog as g_eff scope expansion"
+  - "P7-T02 fixture catalog as stress-energy semantics or matter action"
+  - "P7-T02 fixture catalog as Einstein-equation evidence"
+  - "P7-T02 fixture catalog as benchmark promotion"
+  - "P7-T02 fixture catalog as Gate Chair verdict"
+  - "P7-T02 fixture catalog as completed derivation"
+  - "P7-T02 fixture catalog as program-wide no-go conclusion"
+  - "P7-T02 fixture catalog as future source-extension impossibility"
+p7_t02_result:
+  catalog_path: "research_control/design/refuter_countermodel_fixture_catalog_v1.md"
+  fixture_root: "tests/fixtures/research_control/refuter_countermodel"
+  unit_test_path: "tests/test_refuter_countermodel_fixtures.py"
+  task_local_validator_path: "research_control/tasks/RT-20260703-010/artifacts/validate_p7_t02_refuter_countermodel_fixture_catalog.py"
+  validator_report_path: "research_control/tasks/RT-20260703-010/artifacts/p7_t02_refuter_countermodel_fixture_catalog_report.json"
+  receipt_path: "research_control/tasks/RT-20260703-010/artifacts/p7_t02_refuter_countermodel_fixture_catalog_receipt.md"
+  status: "project_control_refuter_countermodel_fixture_catalog_created"
+  fixture_classes:
+    - "finite_rr_e_separation_witness"
+    - "missing_certificate_witness"
+    - "malformed_certificate_witness"
+    - "detector_semantics_import_witness"
+    - "target_metric_import_witness"
+    - "finite_local_globalization_failure"
+    - "source_extension_as_derivation_overread"
+    - "scoped_evidence_as_adoption_overread"
+  next_route: "P7-T03 Refuter role/template update"
+distance_to_gr:
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-010 creates reusable negative-control fixtures only. It does not change source-law matter-coupling MetricData(E) g_eff Einstein-equation benchmark-promotion global-no-go future-source-extension-impossibility or completed-derivation status."
+validation:
+  unit_test_refuter_countermodel_fixtures: "PASS"
+  task_local_refuter_countermodel_fixture_catalog_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

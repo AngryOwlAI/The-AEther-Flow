@@ -1,0 +1,74 @@
+{
+  "fixture_schema": "refuter_countermodel_fixture_v1",
+  "fixture_id": "detector_semantics_import_witness",
+  "fixture_class": "detector_semantics_import_witness",
+  "source_task_id": "RT-20260703-010",
+  "plan_task_id": "P7-T02",
+  "status": "negative_control_fixture",
+  "intended_consumers": [
+    "refuter",
+    "claim_language_linter"
+  ],
+  "refuter_obstruction_record": {
+    "obstruction_id": "OB-P7T02-DETECTOR-IMPORT-001",
+    "target_claim": "Detector semantics may supply source-certificate validity",
+    "target_milestone": "matter_coupling",
+    "failed_premise": "The witness imports detector semantics instead of source-side certificate data.",
+    "minimal_countermodel_available": true,
+    "countermodel_path": "tests/fixtures/research_control/refuter_countermodel/detector_semantics_import_witness.json",
+    "countermodel_scope": "finite_local",
+    "certificate_gap": "detector-semantics import is not a source certificate",
+    "source_extension_repair_possible": true,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false,
+    "freeze_criteria_status": {
+      "freeze_decision": "not_frozen",
+      "decision_reason": "A source-only certificate route remains possible.",
+      "next_allowed_route": "smuggling_auditor"
+    },
+    "route_cycle_control": {
+      "cycle_family": "semantic_layer_import",
+      "current_cycle_step": "fixture",
+      "prior_related_tasks": [
+        "RT-20260703-003",
+        "RT-20260703-009"
+      ],
+      "cycle_risk": "medium",
+      "orbit_avoidance_reason": "The fixture isolates detector import as an invalid premise.",
+      "next_role_consequence": "smuggling_auditor_or_validator_engineer"
+    },
+    "forbidden_conclusions": [
+      "No detector semantics adoption follows.",
+      "No source certificate validity follows.",
+      "No matter semantics adoption follows.",
+      "No matter-coupling derivation follows.",
+      "No Einstein-equation derivation follows.",
+      "No benchmark promotion follows.",
+      "No completed derivation follows."
+    ]
+  },
+  "minimal_witness": {
+    "finite": true,
+    "invalid_import": "detector_semantics",
+    "missing_source_field": "declared_source_certificate",
+    "expected_result": "fail_closed_detector_import"
+  },
+  "claim_language_linter": {
+    "negative_snippets": [
+      "Detector-semantics certificate supplies source certificate validity.",
+      "Detector semantics adopted."
+    ],
+    "expected_class_ids": [
+      "source_certificate_overread",
+      "source_matter_semantics_adoption_readiness_law_overclaim"
+    ]
+  },
+  "boundary": {
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "matter_coupling_derived": false,
+    "einstein_equations_derived": false,
+    "completed_derivation_claimed": false
+  }
+}

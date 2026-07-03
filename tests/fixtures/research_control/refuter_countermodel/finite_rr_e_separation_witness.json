@@ -1,0 +1,87 @@
+{
+  "fixture_schema": "refuter_countermodel_fixture_v1",
+  "fixture_id": "finite_rr_e_separation_witness",
+  "fixture_class": "finite_rr_e_separation_witness",
+  "source_task_id": "RT-20260703-010",
+  "plan_task_id": "P7-T02",
+  "status": "negative_control_fixture",
+  "intended_consumers": [
+    "refuter",
+    "claim_language_linter"
+  ],
+  "refuter_obstruction_record": {
+    "obstruction_id": "OB-P7T02-RR-E-SEPARATION-001",
+    "target_claim": "Finite same-support RR_E records may be identified without an explicit source certificate",
+    "target_milestone": "matter_coupling",
+    "failed_premise": "No declared-object source transport, source invariance, or source factorization certificate is supplied.",
+    "minimal_countermodel_available": true,
+    "countermodel_path": "tests/fixtures/research_control/refuter_countermodel/finite_rr_e_separation_witness.json",
+    "countermodel_scope": "finite_local",
+    "certificate_gap": "missing source certificate for RR_E identification",
+    "source_extension_repair_possible": true,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false,
+    "freeze_criteria_status": {
+      "freeze_decision": "not_frozen",
+      "decision_reason": "A certificate-supplying repair route remains possible.",
+      "next_allowed_route": "candidate_constructor"
+    },
+    "route_cycle_control": {
+      "cycle_family": "rr_e_certificate_separation",
+      "current_cycle_step": "fixture",
+      "prior_related_tasks": [
+        "RT-20260702-060",
+        "RT-20260703-009"
+      ],
+      "cycle_risk": "low",
+      "orbit_avoidance_reason": "The fixture names the missing certificate rather than rerouting to a generic obligation packet.",
+      "next_role_consequence": "refuter_or_validator_engineer"
+    },
+    "forbidden_conclusions": [
+      "No unrestricted RR_E theorem follows.",
+      "No detector-semantics collapse follows.",
+      "No source-law adoption follows.",
+      "No matter-coupling derivation follows.",
+      "No Einstein-equation derivation follows.",
+      "No benchmark promotion follows.",
+      "No completed derivation follows."
+    ]
+  },
+  "minimal_witness": {
+    "finite": true,
+    "objects": [
+      {
+        "id": "src_record_A",
+        "support": [
+          "token_0"
+        ],
+        "rr_e_label": "RR_E_A"
+      },
+      {
+        "id": "src_record_B",
+        "support": [
+          "token_0"
+        ],
+        "rr_e_label": "RR_E_B"
+      }
+    ],
+    "missing_link": "declared-object source certificate identifying RR_E_A with RR_E_B",
+    "expected_result": "records remain separated"
+  },
+  "claim_language_linter": {
+    "negative_snippets": [
+      "RR_E identified without source transport certificate."
+    ],
+    "expected_class_ids": [
+      "unrestricted_rr_e_irrelevance_overclaim"
+    ]
+  },
+  "boundary": {
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "matter_coupling_derived": false,
+    "einstein_equations_derived": false,
+    "completed_derivation_claimed": false
+  }
+}
