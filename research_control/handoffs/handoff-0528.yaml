@@ -1,0 +1,100 @@
+handoff_id: "handoff-0528"
+created_at: "2026-07-03T07:31:32Z"
+task_id: "RT-20260703-009"
+decision_id: "DDR-20260703-009"
+job_id: "AJ-RT-20260703-009-001"
+completion_path: "research_control/tasks/RT-20260703-009/jobs/completions/AJC-AJ-RT-20260703-009-001.yaml"
+source_task_id: "RT-20260703-009"
+source_job_id: "AJ-RT-20260703-009-001"
+source_completion_id: "AJC-AJ-RT-20260703-009-001"
+status: "completed"
+summary: "RT-20260703-009 completed v15 P7-T01 by creating the Refuter obstruction schema with protected global/no-go and future-source-extension-impossibility gates and no physics delta."
+next_action: "Run one bounded v15 P7-T02 Minimal countermodel fixture library packet."
+loop_risk_route: "post_v15_p7_t01_refuter_obstruction_schema_completed_next_p7_t02_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P7-T02 Minimal countermodel fixture library"
+  completed_scope: "P7-T01 Refuter obstruction schema"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+blocked_claims:
+  - "P7-T01 schema as proof authority"
+  - "P7-T01 schema as a Refuter result"
+  - "P7-T01 schema as source-law adoption"
+  - "P7-T01 schema as source-extension data adoption"
+  - "P7-T01 schema as matter semantics"
+  - "P7-T01 schema as detector semantics"
+  - "P7-T01 schema as coupling-law adoption"
+  - "P7-T01 schema as matter coupling"
+  - "P7-T01 schema as MetricData(E) adoption"
+  - "P7-T01 schema as g_eff scope expansion"
+  - "P7-T01 schema as stress-energy semantics or matter action"
+  - "P7-T01 schema as Einstein-equation evidence"
+  - "P7-T01 schema as benchmark promotion"
+  - "P7-T01 schema as Gate Chair verdict"
+  - "P7-T01 schema as completed derivation"
+  - "P7-T01 schema as program-wide no-go conclusion"
+  - "P7-T01 schema as future source-extension impossibility"
+p7_t01_result:
+  schema_path: "research_control/design/refuter_obstruction_schema_v1.md"
+  task_local_validator_path: "research_control/tasks/RT-20260703-009/artifacts/validate_p7_t01_refuter_obstruction_schema.py"
+  validator_report_path: "research_control/tasks/RT-20260703-009/artifacts/p7_t01_refuter_obstruction_schema_report.json"
+  receipt_path: "research_control/tasks/RT-20260703-009/artifacts/p7_t01_refuter_obstruction_schema_receipt.md"
+  status: "project_control_refuter_obstruction_schema_created"
+  required_fields:
+    - "obstruction_id"
+    - "target_claim"
+    - "target_milestone"
+    - "failed_premise"
+    - "minimal_countermodel_available"
+    - "countermodel_path"
+    - "countermodel_scope"
+    - "certificate_gap"
+    - "source_extension_repair_possible"
+    - "global_no_go_claim_authorized"
+    - "future_source_extension_impossibility_authorized"
+    - "freeze_criteria_status"
+    - "route_cycle_control"
+    - "forbidden_conclusions"
+  next_route: "P7-T02 Minimal countermodel fixture library"
+distance_to_gr:
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-009 defines Refuter obstruction record structure only. It does not change source-law matter-coupling MetricData(E) g_eff Einstein-equation benchmark-promotion global-no-go future-source-extension-impossibility or completed-derivation status."
+validation:
+  task_local_refuter_obstruction_schema_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

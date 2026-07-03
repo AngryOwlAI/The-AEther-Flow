@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-008` and `handoff-0527`.
+`RT-20260703-009` and `handoff-0528`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-008` |
-| Latest handoff ID | `handoff-0527` |
-| Current status | `post_v15_p6_t03_source_extension_classification_validator_integrated_next_p7_t01_no_physics_delta` |
-| Current route family | post v15 p6 t03 source extension classification validator integrated next p7 t01 no physics delta |
+| Active task ID | `RT-20260703-009` |
+| Latest handoff ID | `handoff-0528` |
+| Current status | `post_v15_p7_t01_refuter_obstruction_schema_completed_next_p7_t02_no_physics_delta` |
+| Current route family | post v15 p7 t01 refuter obstruction schema completed next p7 t02 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v15 P7-T01 Refuter obstruction schema packet. |
-| Required next authority | P7-T01 Refuter obstruction schema |
-| Next recommended action | Run one bounded v15 P7-T01 Refuter obstruction schema packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v15 P7-T02 Minimal countermodel fixture library packet. |
+| Required next authority | P7-T02 Minimal countermodel fixture library |
+| Next recommended action | Run one bounded v15 P7-T02 Minimal countermodel fixture library packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-008/00_TASK.yaml`.
-- Active task objective: Add validation so new source-extension AgentJob completions must include a source-extension classification receipt with required claim-boundary and non-promotion fields.
-- Latest handoff path: `research_control/handoffs/handoff-0527.yaml`.
-- Latest handoff summary: RT-20260703-008 completed v15 P6-T03 by adding source-extension classification receipt validation and focused fixtures with no physics delta.
-- Current route family: post v15 p6 t03 source extension classification validator integrated next p7 t01 no physics delta.
-- Next recommended action: Run one bounded v15 P7-T01 Refuter obstruction schema packet.
+- Active task path: `research_control/tasks/RT-20260703-009/00_TASK.yaml`.
+- Active task objective: Define required fields for future Refuter outputs so scoped obstructions, finite countermodels, global no-go claims, and freeze decisions remain distinct.
+- Latest handoff path: `research_control/handoffs/handoff-0528.yaml`.
+- Latest handoff summary: RT-20260703-009 completed v15 P7-T01 by creating the Refuter obstruction schema with protected global/no-go and future-source-extension-impossibility gates and no physics delta.
+- Current route family: post v15 p7 t01 refuter obstruction schema completed next p7 t02 no physics delta.
+- Next recommended action: Run one bounded v15 P7-T02 Minimal countermodel fixture library packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P7-T01 Refuter obstruction schema packet.
+Run one bounded v15 P7-T02 Minimal countermodel fixture library packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,30 +223,28 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-008`;
-- latest handoff: `handoff-0527`;
-- current status: `post_v15_p6_t03_source_extension_classification_validator_integrated_next_p7_t01_no_physics_delta`;
+- active task: `RT-20260703-009`;
+- latest handoff: `handoff-0528`;
+- current status: `post_v15_p7_t01_refuter_obstruction_schema_completed_next_p7_t02_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `focused_source_extension_classification_tests`: PASS;
-- latest handoff validation `full_research_control_tests`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `task_local_source_extension_classification_validator`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `task_local_refuter_obstruction_schema_validator`: PASS;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0527.yaml`
-- `research_control/tasks/RT-20260703-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0528.yaml`
+- `research_control/tasks/RT-20260703-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -262,7 +260,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0527*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0528*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
