@@ -1,0 +1,230 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\SCLTarget}{\mathrm{SourceCouplingLawTarget}^{\mathrm{cand}}_{\mathrm{src},v1}}
+\newcommand{\SCLBundle}{\mathrm{SourceCouplingLawCertificateBundle}_{v1}}
+\newcommand{\SMScope}{\mathrm{SourceMatterSemanticsInputScope}_{v1}}
+\newcommand{\DetPlaceholder}{\mathrm{DetectorSemanticsReplacementPlaceholder}_{v1}}
+\newcommand{\NTGuard}{\mathrm{NoTargetCouplingImportGuard}_{v1}}
+\newcommand{\Validity}{\mathrm{CouplingLawCandidateValidityPredicate}_{v1}}
+\newcommand{\WitnessOb}{\mathrm{FiniteLocalCouplingWitnessObligation}_{v1}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\StressVerdict}{\mathsf{target\_specification\_survives\_as\_draft\_control\_pending\_selector}}
+
+\title{Selected Matter-Coupling Edge Refuter Stress v16}
+\author{Refuter Packet RT-20260704-023}
+\date{2026-07-04}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This document implements v16 P3-T04. It stress-tests the selected theorem-route
+target specification \(\SCLTarget\) from \texttt{RT-20260704-021} and the
+P3-T03 smuggling audit from \texttt{RT-20260704-022}.
+
+This is a draft/control Refuter stress artifact. It is not a canonical
+ontology edit, not source-law adoption, not
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, not matter-semantics adoption, not detector-semantics adoption, not
+coupling-law adoption, not matter-coupling derivation, not stress-energy
+semantics, not a matter action, not Einstein equations, not benchmark
+promotion, and not completed derivation.
+
+\section{Stress Target}
+
+The target specification defines a source-side record
+\[
+  T_E=(\mathcal I_E,\mathcal B_E,\NTGuard(E),\Validity_E,
+  \WitnessOb_E,\mathcal O_E).
+\]
+It permits \(\Validity_E(K_E,\SCLTarget(E)) =
+\mathsf{eligible\_for\_audit\_stress}\) only when the source input scope,
+certificate bundle, detector placeholder or blocked marker, no-target guard,
+source-side relation \(K_E\), and finite/local witness or precise obstruction
+are all supplied.
+
+The stress question is whether this target specification collapses into
+adoption, detector semantics, target metric import, process-authority proof,
+or downstream GR claims when the required fields are attacked.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.23\linewidth}p{0.34\linewidth}p{0.33\linewidth}}
+\toprule
+Stress dimension & Attack & Result \\
+\midrule
+Certificate deletion & Delete \(\SCLBundle\) or any required source
+certificate slot. & \(\Validity_E\) cannot return eligibility. The branch
+returns \(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}MISSING\text{-}CERT}\). \\
+Malformed target record & Mismatch \(\SMScope\), \(\SCLBundle\),
+\(\NTGuard\), \(\Validity_E\), or \(\WitnessOb\). & The branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}MALFORMED\text{-}CERT}\). \\
+Detector collapse & Replace \(\DetPlaceholder\) by empirical detector
+protocol or calibration. & The branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}DETECTOR\text{-}BOUNDARY}\). \\
+Target metric import & Use target topology, atlas, Lorentzian signature,
+metric, proper time, or benchmark behavior as a premise. & The branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}TARGET\text{-}IMPORT}\). \\
+Stress-energy shortcut & Use stress-energy semantics, stress-energy tensor,
+matter action, or Einstein equations as a premise. & The branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}TARGET\text{-}IMPORT}\). \\
+Scoped evidence overread & Treat \(\mathrm{NarrowMSCertEq}_{v1}\) or scoped
+evidence/precondition status as matter-semantics adoption or coupling-law
+adoption. & The branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}EVIDENCE\text{-}AS\text{-}ADOPTION}\). \\
+Process authority & Use registry rows, validators, roles, handoffs, local
+caches, approvals, file order, checkpoint, or commit state as a proof premise.
+& The branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}PROCESS\text{-}AUTHORITY}\). \\
+Finite/local overread & Treat the target specification or an absent witness
+as universal matter coupling. & \(\WitnessOb\) remains unmet for a positive
+candidate and the branch returns
+\(\mathrm{OB\text{-}V16\text{-}SCLT\text{-}WITNESS\text{-}MISSING}\) if
+overread. \\
+\bottomrule
+\end{longtable}
+
+\section{Result}
+
+The stress verdict is
+\[
+  \StressVerdict .
+\]
+
+The Refuter decision category is
+\[
+  \mathsf{bridge\_facing\_candidate\_path}.
+\]
+This category is used only in the required Refuter taxonomy: the route remains
+viable for selector-controlled downstream work. It does not state that a
+coupling-law candidate has been constructed, adopted, or stress-proved.
+
+\section{Minimal Blocked-Overread Obstruction}
+
+\begin{verbatim}
+obstruction_id: OB-V16-P3T04-BLOCKED-OVERREAD-001
+target_claim: Stress survival of SCLTarget_v1 entails coupling-law adoption
+  or matter-coupling derivation.
+failed_premise: The overread lacks a supplied source-side coupling relation
+  K_E, explicit finite/local witness, adoption authority, detector-semantics
+  replacement, stress-energy semantics, matter action, Einstein equations,
+  benchmark promotion, and Gate Chair verdict.
+smallest_failed_premise: audit/stress eligibility is not adoption or
+  derivation.
+minimal_countermodel_available: false
+finite_local_witness_available: false
+repair_or_continuation_route: P3-T05 selector, with default continuation to
+  P4 concrete certificate-instance library if selected.
+global_no_go_authorized: false
+future_source_extension_impossibility_authorized: false
+matter_coupling_derived: false
+\end{verbatim}
+
+This obstruction blocks an overread. It is not a global no-go theorem and not
+a future source-extension impossibility claim.
+
+\section{Refuter Obstruction Record}
+
+\begin{verbatim}
+refuter_obstruction_record:
+  obstruction_id: OB-V16-P3T04-BLOCKED-OVERREAD-001
+  target_claim: Stress survival of the P3 target specification entails
+    coupling-law adoption or matter-coupling derivation.
+  target_milestone: matter_coupling
+  failed_premise: Audit/stress eligibility lacks the positive source-side
+    relation K_E, explicit finite/local witness, adoption authority, detector
+    semantics, stress-energy semantics, matter action, Einstein equations,
+    benchmark promotion, and Gate Chair verdict required for that overread.
+  minimal_countermodel_available: false
+  countermodel_path: ""
+  countermodel_scope: none
+  certificate_gap: finite/local witness and positive source-side coupling
+    relation not supplied in this packet
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: not_frozen
+    decision_reason: The stress packet adds a new blocked-overread result and
+      routes to selector; it is not repeated no-payload cycling.
+    next_allowed_route: post_selected_theorem_route_selector_v16
+  route_cycle_control:
+    cycle_family: v16_selected_matter_coupling_edge
+    current_cycle_step: refuter_stress
+    prior_related_tasks:
+      - RT-20260704-020
+      - RT-20260704-021
+      - RT-20260704-022
+    cycle_risk: medium
+    orbit_avoidance_reason: The packet stress-tests the selected target and
+      routes to P3-T05 selector rather than returning to another generic
+      target-specification packet.
+    next_role_consequence: theoretical-continuation-selector
+  forbidden_conclusions:
+    - No source-law adoption follows.
+    - No matter semantics or detector semantics adoption follows.
+    - No coupling-law adoption follows.
+    - No matter-coupling derivation follows.
+    - No stress-energy semantics follows.
+    - No matter action follows.
+    - No Einstein-equation derivation follows.
+    - No benchmark promotion follows.
+    - No completed derivation follows.
+    - No program-wide no-go conclusion follows.
+    - No future source-extension impossibility follows.
+\end{verbatim}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR ledger is unchanged. The packet records stress survival of
+a draft/control target specification, not a matter-coupling derivation. Matter
+coupling remains undischarged. Stress-energy semantics, matter action,
+Einstein equations, benchmark promotion, and completed derivation remain
+blocked.
+
+\section{Next Route}
+
+The next v16 route is P3-T05, a bounded post-selected-theorem route selector.
+If the selector follows the v16 default, it should route to P4 concrete
+certificate-instance library so the abstract certificate target is tested with
+finite/local source examples.
+
+\section{Non-Conclusions}
+
+This stress packet does not authorize canonical ontology edit, source-law
+adoption, \(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, unrestricted \(RR_E\) theorem authority, matter-semantics adoption,
+detector-semantics adoption, coupling-law adoption, matter-coupling derivation
+or adoption, stress-energy semantics, stress-energy tensor, matter action,
+Einstein equations, benchmark promotion, benchmark closure, completed
+derivation, future source-extension no-go claim, or program-wide no-go
+conclusion.
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v16} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v16.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-side coupling-law
+target specification under explicit certificates v1} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260704-021/artifacts/source\_side\_coupling\_law\_target\_specification\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{Selected matter-coupling edge
+smuggling audit v16} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260704-022/artifacts/selected\_matter\_coupling\_edge\_smuggling\_audit\_v16.tex}.
+
+The AEther-Flow Research Project. (2026d). \emph{Refuter obstruction schema
+v1} [Internal control artifact].
+\texttt{research\_control/design/refuter\_obstruction\_schema\_v1.md}.
+
+\end{document}

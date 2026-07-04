@@ -1,0 +1,55 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260704-023"
+status: "completed"
+claim_boundary_ref: "CB-V16-P3-T04-REFUTER-STRESS-001"
+summary: "The target specification survives P3-T04 stress as a draft/control target because every required negative branch returns bottom or a named fail-closed obstruction; no positive coupling law or finite/local witness is supplied."
+stress_matrix:
+  certificate_bundle_deletion:
+    attack: "Delete SCLBundle(E) or one required certificate slot."
+    result: "Validity_E cannot return eligible_for_audit_stress; it returns OB-V16-SCLT-MISSING-CERT."
+    target_survives: true
+  malformed_target_record:
+    attack: "Mismatch input scope, certificate bundle, no-target guard, validity predicate, or witness obligation."
+    result: "The target record is malformed and returns OB-V16-SCLT-MALFORMED-CERT."
+    target_survives: true
+  detector_semantics_collapse:
+    attack: "Replace DetectorSemanticsReplacementPlaceholder_v1 with empirical detector protocol."
+    result: "NoTargetCouplingImportGuard_v1 fails and returns OB-V16-SCLT-DETECTOR-BOUNDARY."
+    target_survives: true
+  target_metric_import:
+    attack: "Use target topology, Lorentzian signature, target metric, proper time, or benchmark behavior as a premise."
+    result: "The branch returns OB-V16-SCLT-TARGET-IMPORT."
+    target_survives: true
+  stress_energy_and_action_shortcuts:
+    attack: "Use stress-energy tensor, matter action, or Einstein equations as the coupling-law source premise."
+    result: "The branch returns OB-V16-SCLT-TARGET-IMPORT."
+    target_survives: true
+  scoped_evidence_overread:
+    attack: "Treat NarrowMSCertEq_v1 or scoped evidence/precondition as adoption or matter-coupling derivation."
+    result: "The branch returns OB-V16-SCLT-EVIDENCE-AS-ADOPTION."
+    target_survives: true
+  process_authority_laundering:
+    attack: "Treat validators, registries, roles, handoffs, local cache, approvals, or commits as mathematical premises."
+    result: "The branch returns OB-V16-SCLT-PROCESS-AUTHORITY."
+    target_survives: true
+  finite_local_universal_overread:
+    attack: "Treat a finite/local target specification or absent witness as universal coupling."
+    result: "The witness obligation remains unmet for a positive candidate and returns OB-V16-SCLT-WITNESS-MISSING if overread."
+    target_survives: true
+mathematical_verdict:
+  refuter_decision_category: "bridge_facing_candidate_path"
+  stress_verdict: "target_specification_survives_as_draft_control_pending_selector"
+  minimal_countermodel_available: false
+  finite_local_witness_available: false
+  obstruction_id: "OB-V16-P3T04-BLOCKED-OVERREAD-001"
+  failed_premise: "Every positive overread requires replacing audit/stress eligibility with adoption or derivation without a supplied source-side coupling relation K_E and finite/local witness."
+  next_route: "P3-T05 post-selected-theorem route selector"
+forbidden_conclusions:
+  - "No coupling-law adoption follows."
+  - "No matter-coupling derivation follows."
+  - "No stress-energy semantics follows."
+  - "No matter action follows."
+  - "No Einstein-equation derivation follows."
+  - "No benchmark promotion follows."
+  - "No completed derivation follows."

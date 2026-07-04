@@ -1,0 +1,74 @@
+handoff_id: "handoff-0569"
+created_at: "2026-07-04T22:40:00Z"
+task_id: "RT-20260704-023"
+decision_id: "DDR-20260704-023"
+job_id: "AJ-RT-20260704-023-001"
+completion_path: "research_control/tasks/RT-20260704-023/jobs/completions/AJC-AJ-RT-20260704-023-001.yaml"
+source_task_id: "RT-20260704-023"
+source_job_id: "AJ-RT-20260704-023-001"
+source_completion_id: "AJC-AJ-RT-20260704-023-001"
+status: "completed"
+summary: "RT-20260704-023 completed the v16 P3-T04 Refuter stress. The target specification survived only as draft/control pending selector with a blocked-overread obstruction and no adoption."
+v16_completed: false
+selected_next_route:
+  route_id: "post_selected_matter_coupling_edge_theorem_route_selector_v16"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Select exactly one next route after P3 target specification audit and stress while preserving no-adoption and no-promotion boundaries."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "unrestricted RR_E theorem"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+next_action: "Run one bounded theoretical-continuation-selector@0.1.0 packet for P3-T05 post-selected-theorem route selection."
+required_next_packet:
+  role_id: "theoretical-continuation-selector"
+  role_version: "0.1.0"
+  packet_count: "1"
+  task_type: "post_selected_matter_coupling_edge_theorem_route_selector_v16"
+  objective: "Select exactly one next route after the P3 target specification survived audit and Refuter stress as draft/control."
+claim_boundary:
+  allowed_next_scope: "route selection only"
+  completed_scope: "v16 P3-T04 Refuter stress"
+  scientific_claims_changed: true
+  proof_authority: false
+  support_only: false
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+validation_summary:
+  source_report_path: "research_control/tasks/RT-20260704-023/artifacts/selected_matter_coupling_edge_refuter_stress_v16.tex"
+  required_status: "PASS"
+  passed_layers:
+    - "render_current_frontier_write"
+    - "memory_bootstrap"
+    - "sync_obsidian_vault"
+    - "render_dependency_graph_write"
+    - "memory_validate_only"
+    - "render_current_frontier_check"
+    - "graph_freshness_check"
+    - "classify_project_changes"
+    - "collect_project_improvement_signals_validate_emitted"
+    - "validate_documentation_impact"
+    - "validate_claim_language_changed"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+    - "report_physics_progress_metrics"
+    - "git_diff_check"
+  pending_layers:
+    - "checkpoint"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "target-stress survival only"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

@@ -190,6 +190,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-TARGET-SPEC` `research_control/tasks/RT-20260704-021/artifacts/parent_fusion_notes_source_side_coupling_law_target_spec.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-SELECTED-MATTER-COUPLING-DAG-EDGE-THEOREM-PACKET-SETUP-V16` `research_control/tasks/RT-20260704-021/artifacts/selected_matter_coupling_dag_edge_theorem_packet_setup_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-022-PARENT-FUSION-NOTES-SELECTED-EDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260704-022/artifacts/parent_fusion_notes_selected_edge_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-023-PARENT-FUSION-NOTES-SELECTED-EDGE-REFUTER-STRESS` `research_control/tasks/RT-20260704-023/artifacts/parent_fusion_notes_selected_edge_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -608,6 +609,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V15-P5-T01-EQSRC-RETAINH-GENH-DEPENDENCY-AUDIT` `research_control/tasks/RT-20260703-004/artifacts/eqsrc_retainh_genh_dependency_audit_v1.tex`
 - `TEX-V16-P3-SOURCE-SIDE-COUPLING-LAW-TARGET-SPECIFICATION` `research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex`
 - `TEX-V16-P3-T03-SELECTED-MATTER-COUPLING-EDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260704-022/artifacts/selected_matter_coupling_edge_smuggling_audit_v16.tex`
+- `TEX-V16-P3-T04-SELECTED-MATTER-COUPLING-EDGE-REFUTER-STRESS` `research_control/tasks/RT-20260704-023/artifacts/selected_matter_coupling_edge_refuter_stress_v16.tex`
 
 ## wiki_markdown
 
@@ -794,6 +796,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-TARGET-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260704-021-parent-fusion-notes-source-side-coupling-law-target-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-SELECTED-MATTER-COUPLING-DAG-EDGE-THEOREM-PACKET-SETUP-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-021-selected-matter-coupling-dag-edge-theorem-packet-setup-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-022-PARENT-FUSION-NOTES-SELECTED-EDGE-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260704-022-parent-fusion-notes-selected-edge-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-023-PARENT-FUSION-NOTES-SELECTED-EDGE-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260704-023-parent-fusion-notes-selected-edge-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1206,3 +1209,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V15-P5-T01-EQSRC-RETAINH-GENH-DEPENDENCY-AUDIT` `wiki/tex/tex-v15-p5-t01-eqsrc-retainh-genh-dependency-audit.md`
 - `WIKI-TEX-V16-P3-SOURCE-SIDE-COUPLING-LAW-TARGET-SPECIFICATION` `wiki/tex/tex-v16-p3-source-side-coupling-law-target-specification.md`
 - `WIKI-TEX-V16-P3-T03-SELECTED-MATTER-COUPLING-EDGE-SMUGGLING-AUDIT` `wiki/tex/tex-v16-p3-t03-selected-matter-coupling-edge-smuggling-audit.md`
+- `WIKI-TEX-V16-P3-T04-SELECTED-MATTER-COUPLING-EDGE-REFUTER-STRESS` `wiki/tex/tex-v16-p3-t04-selected-matter-coupling-edge-refuter-stress.md`
