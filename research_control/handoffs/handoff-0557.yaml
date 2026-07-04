@@ -1,0 +1,39 @@
+handoff_id: "handoff-0557"
+created_at: "2026-07-04T12:06:54Z"
+task_id: "RT-20260704-011"
+decision_id: "DDR-20260704-011"
+job_id: "AJ-RT-20260704-011-001"
+completion_path: "research_control/tasks/RT-20260704-011/jobs/completions/AJC-AJ-RT-20260704-011-001.yaml"
+source_task_id: "RT-20260704-011"
+source_job_id: "AJ-RT-20260704-011-001"
+source_completion_id: "AJC-AJ-RT-20260704-011-001"
+status: "completed"
+summary: "RT-20260704-011 completed v15 P17-T02 negative-result publication brief with no physics delta and no publication action."
+next_action: "Run one bounded v15 P17-T03 negative-result explainer source spec packet if public explainer system remains active."
+required_next_packet:
+  role_id: "documentation-curator"
+  role_version: "2.0.0"
+  packet_count: "1"
+  task_type: "negative_result_explainer_source_spec"
+  objective: "Create a source spec for a human-facing negative-results explainer only if the active public explainer system remains active."
+claim_boundary:
+  allowed_next_scope: "P17-T03 negative-result explainer source spec"
+  completed_scope: "P17-T02 negative-result publication brief"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  public_publication_action_authorized: false
+p17_t02_result:
+  brief_id: "PB-NEGATIVE-RESULTS-AND-OBSTRUCTIONS"
+  brief_path: "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+  migration_status: "deferred"
+  publication_action_taken: false
+  source_spec_created: false
+  generated_public_outputs_created: false
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

@@ -57,6 +57,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-TECHNICAL-REQUIREMENTS-EXPLAINER` `markdown/html-explainer-specs/technical-requirements-explainer.md`
 - `MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/validator-operator-workflow-explainer.md`
 - `MD-MEMORY-SYSTEM-PUBLICATION-BRIEF` `markdown/publication-briefs/memory-system.publication-brief.md`
+- `MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF` `markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md`
 - `MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF` `markdown/publication-briefs/parent-child-synthesis.publication-brief.md`
 - `MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `markdown/publication-briefs/project-overview.publication-brief.md`
 - `MD-PROJECT-SYSTEM-IMPROVEMENT-PUBLICATION-BRIEF` `markdown/publication-briefs/project-system-improvement.publication-brief.md`
@@ -526,6 +527,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-LEGACY-ONTOLOGY-AETHER-FLOW-INTERPRETATION-LEMEN` `wiki/markdown/md-legacy-ontology-aether-flow-interpretation-lemen.md`
 - `WIKI-MD-MEMORY-SYSTEM-PUBLICATION-BRIEF` `wiki/markdown/md-memory-system-publication-brief.md`
 - `WIKI-MD-MISSING-SOURCE-LAW-INVENTORY` `wiki/markdown/md-missing-source-law-inventory.md`
+- `WIKI-MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF` `wiki/markdown/md-negative-results-and-obstructions-publication-brief.md`
 - `WIKI-MD-ONTOLOGY-AETHER-AND-AETHER-FLOW` `wiki/markdown/md-ontology-aether-and-aether-flow.md`
 - `WIKI-MD-PARENT-CHILD-SYNTHESIS-PUBLICATION-BRIEF` `wiki/markdown/md-parent-child-synthesis-publication-brief.md`
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`

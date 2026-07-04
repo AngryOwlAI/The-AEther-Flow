@@ -1,0 +1,189 @@
+completion_path: "research_control/tasks/RT-20260704-011/jobs/completions/AJC-AJ-RT-20260704-011-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260704-011-001"
+job_id: "AJ-RT-20260704-011-001"
+task_id: "RT-20260704-011"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-04T12:06:54Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P17-T02"
+  plan_phase_id: "P17"
+  implemented_task_scope: "Created deferred public-safe negative-result publication brief."
+  completed_v15_tasks_to_date:
+    - "P14-T01"
+    - "P14-T02"
+    - "P14-T03"
+    - "P15-T01"
+    - "P15-T02"
+    - "P15-T03"
+    - "P16-T01"
+    - "P16-T02"
+    - "P16-T03"
+    - "P17-T01"
+    - "P17-T02"
+  downstream_tasks_not_implemented:
+    - "P17-T03 negative-result explainer source spec"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  phase_p17_completed: false
+output_paths:
+  - "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+  - "research_control/tasks/RT-20260704-011/artifacts/p17_t02_local_ci_equivalent_report.json"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260704-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260704-011/DDR-20260704-011.md"
+  - "research_control/tasks/RT-20260704-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260704-011/jobs/AJ-RT-20260704-011-001.yaml"
+  - "research_control/tasks/RT-20260704-011/jobs/completions/AJC-AJ-RT-20260704-011-001.yaml"
+  - "research_control/tasks/RT-20260704-011/roles/documentation-curator@2.0.0--RT-20260704-011.yaml"
+  - "research_control/handoffs/handoff-0557.yaml"
+  - "research_control/handoffs/handoff-0557.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=575 relationship_row_count=3032 semantic_row_count=575 vault_row_count=575"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P17-T02 negative-result publication brief\" --limit 10 --json | exit_code=0 | status=PASS object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/negative_result_inventory_v15.md --json | exit_code=0 | status=PASS object_id=MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json | exit_code=0 | status=PASS object_id=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=PASS rendered_hash=7c0be68d076c55ce2087463aea68d9674d10f13492757b7a57749bfa1e4f1257"
+  - ".venv/bin/python scripts/validate_publication_process.py --root . | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --output research_control/tasks/RT-20260704-011/artifacts/p17_t02_local_ci_equivalent_report.json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "575"
+    relationship_row_count: "3032"
+    semantic_row_count: "575"
+    vault_row_count: "575"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P17-T02 negative-result publication brief\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P17-T02 negative-result publication brief"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/negative_result_inventory_v15.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/negative_result_inventory_v15.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "7c0be68d076c55ce2087463aea68d9674d10f13492757b7a57749bfa1e4f1257"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/negative_result_inventory_v15.md"
+      source_hash: "75114d4a5ad54d2c59fc89f7fac2dd6e1e18cd59609d356dcf79a11123a850c6"
+publication_brief_result:
+  brief_id: "PB-NEGATIVE-RESULTS-AND-OBSTRUCTIONS"
+  brief_path: "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+  migration_status: "deferred"
+  publication_action_taken: false
+  source_spec_created: false
+  generated_public_outputs_created: false
+  required_claims_present: true
+  no_global_no_go: true
+  no_future_source_extension_impossibility: true
+  exact_source_authority_preserved: true
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "none"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "handoff-0556 and P17-T02 plan inspected"
+      - "publication process role and validator inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "brief migration_status is deferred"
+      - "brief states negative results are valuable constraints"
+      - "brief blocks program-wide rejection and future source-extension impossibility overreads"
+      - "brief states exact source artifacts and registries remain authority"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_publication_process.py --root . passed"
+      - "validate_documentation_impact.py --json passed"
+      - "validate_research_control.py passed"
+      - "validate_research_control.py --check-diff passed"
+      - "p17_t02_local_ci_equivalent_report.json status PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check passed"
+      - "render_dependency_graph.py --check passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "bootstrap_memory_system.py --validate-only passed"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "local CI-equivalent claim-language changed lint passed"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  public_publication_action_authorized: false
+  future_source_extension_impossibility_authorized: false
+  global_theory_rejection_authorized: false
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+next_recommended_action: "Run one bounded v15 P17-T03 negative-result explainer source spec packet if public explainer system remains active."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

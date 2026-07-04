@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15` `implementations_plans/recommendations_implementation_plan_continue_task-v15.md`
 - Generated output path: `wiki/markdown/md-research-control-design-negative-result-inventory-v15.md`
+- Backlink from `MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF` `markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md`
 
 ## Validation
 
