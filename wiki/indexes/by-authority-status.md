@@ -47,6 +47,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md`
 - `MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md`
 - `MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `markdown/html-explainer-specs/memory-system-explainer.md`
+- `MD-HTML-SPEC-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md`
 - `MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
 - `MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `markdown/html-explainer-specs/project-system-improvement-explainer.md`
@@ -418,6 +419,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `html/exact-gr-benchmark-boundary-explainer.html`
 - `HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `html/gr-derivation-roadmap-explainer.html`
 - `HTML-MEMORY-SYSTEM-EXPLAINER` `html/memory-system-explainer.html`
+- `HTML-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `html/negative-results-and-obstructions-explainer.html`
 - `HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `html/parent-child-synthesis-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
 - `HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `html/project-system-improvement-explainer.html`
@@ -435,6 +437,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `github-facing/exact-gr-benchmark-boundary-explainer.md`
 - `MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `github-facing/gr-derivation-roadmap-explainer.md`
 - `MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `github-facing/memory-system-explainer.md`
+- `MD-GITHUB-FACING-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `github-facing/negative-results-and-obstructions-explainer.md`
 - `MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `github-facing/parent-child-synthesis-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `github-facing/project-system-improvement-explainer.md`
@@ -468,6 +471,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-HTML-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/html/html-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-HTML-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/html/html-gr-derivation-roadmap-explainer.md`
 - `WIKI-HTML-MEMORY-SYSTEM-EXPLAINER` `wiki/html/html-memory-system-explainer.md`
+- `WIKI-HTML-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `wiki/html/html-negative-results-and-obstructions-explainer.md`
 - `WIKI-HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/html/html-parent-child-synthesis-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
 - `WIKI-HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/html/html-project-system-improvement-explainer.md`
@@ -496,6 +500,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GITHUB-FACING-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-GITHUB-FACING-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-github-facing-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-GITHUB-FACING-MEMORY-SYSTEM-EXPLAINER` `wiki/markdown/md-github-facing-memory-system-explainer.md`
+- `WIKI-MD-GITHUB-FACING-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `wiki/markdown/md-github-facing-negative-results-and-obstructions-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-github-facing-parent-child-synthesis-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-github-facing-project-overview-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-github-facing-project-system-improvement-explainer.md`
@@ -514,6 +519,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-EXACT-GR-BENCHMARK-BOUNDARY-EXPLAINER` `wiki/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer.md`
 - `WIKI-MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER` `wiki/markdown/md-html-spec-gr-derivation-roadmap-explainer.md`
 - `WIKI-MD-HTML-SPEC-MEMORY-SYSTEM-EXPLAINER` `wiki/markdown/md-html-spec-memory-system-explainer.md`
+- `WIKI-MD-HTML-SPEC-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `wiki/markdown/md-html-spec-negative-results-and-obstructions-explainer.md`
 - `WIKI-MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-html-spec-parent-child-synthesis-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-html-spec-project-system-improvement-explainer.md`

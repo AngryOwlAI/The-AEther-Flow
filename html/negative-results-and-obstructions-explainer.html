@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER">
+  <meta name="aether-flow-source-basis-hash" content="bb609731bd50be246c00ce8820086c0d597e1489028059e799e0ab7c11790155">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <link rel="icon" href="data:,">
+  <title>Negative Results And Obstructions</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172027;
+      --muted: #59656b;
+      --paper: #f6f7f3;
+      --panel: #ffffff;
+      --line: #d8ded8;
+      --soft: #eef3ee;
+      --blue: #2f668a;
+      --green: #32745d;
+      --amber: #99652b;
+      --red: #934b42;
+      --violet: #5f5c91;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.58;
+    }
+    a { color: inherit; }
+    header {
+      min-height: 64vh;
+      display: grid;
+      align-items: end;
+      padding: clamp(28px, 6vw, 72px);
+      color: #fffdf7;
+      background:
+        linear-gradient(125deg, rgba(23, 32, 39, .97), rgba(50, 116, 93, .88)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 46px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.10) 0 1px, transparent 1px 46px);
+    }
+    .hero { max-width: 980px; }
+    .eyebrow {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5.1vw, 5rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 810px;
+      margin: 24px 0 0;
+      font-size: clamp(1.04rem, 2vw, 1.26rem);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px clamp(18px, 4vw, 42px) 76px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 42px;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 8px 12px;
+      font-size: .92rem;
+    }
+    section { margin: 54px 0; }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.48rem, 3vw, 2.2rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.04rem;
+      letter-spacing: 0;
+    }
+    p { max-width: 840px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .93em;
+      background: rgba(23,32,39,.08);
+      padding: .08em .25em;
+      overflow-wrap: anywhere;
+    }
+    .term-grid,
+    .source-list,
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .panel,
+    .source,
+    .term {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px;
+      overflow-wrap: anywhere;
+    }
+    .term strong { color: var(--blue); }
+    .panel.safe {
+      border-color: #a6cabd;
+      background: #eff8f4;
+    }
+    .panel.unsafe {
+      border-color: #dfb6b0;
+      background: #fff2f0;
+    }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .matrix th,
+    .matrix td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 14px;
+    }
+    .matrix th { background: var(--soft); }
+    .matrix tr:last-child td { border-bottom: 0; }
+    .tag {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 8px;
+      border: 1px solid currentColor;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--amber);
+    }
+    ul, ol { max-width: 840px; }
+    li + li { margin-top: 8px; }
+    .reader-scope {
+      border-left: 5px solid var(--amber);
+      background: #fff8ec;
+      padding: 18px 20px;
+      max-width: 920px;
+    }
+    .reader-scope p { margin: 0; }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding-top: 24px;
+      margin-top: 64px;
+      font-size: .92rem;
+    }
+    @media (max-width: 900px) {
+      .term-grid,
+      .source-list,
+      .language-grid { grid-template-columns: 1fr; }
+      .matrix {
+        display: block;
+        overflow-x: auto;
+      }
+      header { min-height: 58vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">AEther-Flow public boundary map</p>
+      <h1>Negative Results And Obstructions</h1>
+      <p class="lede">Failed, frozen, and obstructed routes are first-class research outputs when they are scoped. They preserve constraints without becoming global rejection, future impossibility, benchmark promotion, or completed derivation.</p>
+    </div>
+  </header>
+  <main>
+    <nav data-explainer-control="section_toc" aria-label="Page sections">
+      <a href="#terms">Terms</a>
+      <a href="#value">Value</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#open">Open Routes</a>
+      <a href="#language">Language</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+    <section id="terms">
+      <h2>Frozen Route Versus Scoped Obstruction</h2>
+      <div class="term-grid">
+        <div class="term"><span class="tag">Frozen route</span><p><strong>Meaning:</strong> a specific attempted route should not be reused without new payload, redesign, or gate action.</p><p><strong>Forbidden overread:</strong> no future route can work.</p></div>
+        <div class="term"><span class="tag">Scoped obstruction</span><p><strong>Meaning:</strong> current premises or the current route fail for a named reason and scope.</p><p><strong>Forbidden overread:</strong> the entire ontology is false.</p></div>
+        <div class="term"><span class="tag">Minimal countermodel</span><p><strong>Meaning:</strong> a bounded witness shows that a proposed claim fails as stated.</p><p><strong>Forbidden overread:</strong> the countermodel supplies downstream physics.</p></div>
+        <div class="term"><span class="tag">Certificate gap</span><p><strong>Meaning:</strong> required source transport, invariance, factorization, or no-target certificates are absent or malformed.</p><p><strong>Forbidden overread:</strong> certificates can be skipped.</p></div>
+      </div>
+    </section>
+
+    <section id="value">
+      <h2>Why The Project Keeps Negative Results</h2>
+      <p>Negative results preserve technical memory. A failed source tuple, selector, witness, or certificate route can still improve the next packet by removing an unsafe shortcut from the search space.</p>
+      <p>The useful claim is narrow: this route did not discharge this burden under these assumptions. The unsafe claim is broader: the project has failed, future source-extension work is impossible, or downstream GR structure has been settled.</p>
+    </section>
+
+    <section id="inventory">
+      <h2>Current Source Matrix</h2>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Negative-result family</th>
+            <th>Source artifact</th>
+            <th>What it blocks</th>
+            <th>What remains open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Finite toy metric-response frozen route</td>
+            <td><code>research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex</code></td>
+            <td>Reuse of the explicit-tag-only finite toy route as written; downstream GR claims from that route.</td>
+            <td>Redesigned finite toy routes and future source-extension candidates.</td>
+          </tr>
+          <tr>
+            <td><code>Resp_lc</code> old-tuple selector obstruction</td>
+            <td><code>registries/DISTANCE_TO_GR_LEDGER.csv#resp_lc</code></td>
+            <td>Old selector route as detector semantics or matter-coupling support.</td>
+            <td>Scoped <code>Resp_lc</code> source-extension data, <code>S_X^+</code>, and future source-side selector laws.</td>
+          </tr>
+          <tr>
+            <td><code>RR_E</code> underdetermination obstruction</td>
+            <td><code>research_control/tasks/RT-20260701-023/artifacts/rr_e_irrelevance_theorem_attempt_or_obstruction_v1.tex</code></td>
+            <td>Unrestricted <code>RR_E</code> theorem under current premises.</td>
+            <td>Conservative source-side extension and certificate-indexed evidence/precondition routes.</td>
+          </tr>
+          <tr>
+            <td><code>RR_E</code> finite separation witness</td>
+            <td><code>research_control/tasks/RT-20260701-025/artifacts/rr_e_theorem_refuter_stress_v1.tex</code></td>
+            <td>Erasing <code>RR_E</code> separation without explicit source certificates.</td>
+            <td>Future certificate-indexed transport, invariance, or factorization routes.</td>
+          </tr>
+          <tr>
+            <td>P2 certificate-gap witness</td>
+            <td><code>research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex</code></td>
+            <td>Unconditional theorem readings and certificate-free matter-coupling derivation.</td>
+            <td>Conditional theorem status under explicit valid certificates and future certificate construction.</td>
+          </tr>
+          <tr>
+            <td>Route-orbit freeze note</td>
+            <td><code>research_control/design/negative_result_inventory_v15.md</code></td>
+            <td>No scientific negative result was created because P10 did not trigger a route-orbit freeze.</td>
+            <td>Route-orbit policy remains process control.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="open">
+      <h2>What Remains Open</h2>
+      <p>The inventory does not close every future route. It leaves open redesigned finite toy metric-response routes, source-side response selector laws, certificate-indexed <code>RR_E</code> transport or invariance routes, future explicit certificate construction, and conservative source-extension candidates.</p>
+      <p>Those routes still need tracked source artifacts, audits, validators, and any required human gates before they can support stronger claims.</p>
+    </section>
+
+    <section id="language">
+      <h2>Safe Public Wording</h2>
+      <div class="language-grid">
+        <div class="panel safe">
+          <h3>Use narrow language</h3>
+          <ul>
+            <li>this route is frozen;</li>
+            <li>this obstruction is scoped;</li>
+            <li>this countermodel blocks the stated claim as written;</li>
+            <li>this certificate gap fails closed;</li>
+            <li>exact source artifacts remain authority.</li>
+          </ul>
+        </div>
+        <div class="panel unsafe">
+          <h3>Avoid broad language</h3>
+          <ul>
+            <li>the program is rejected;</li>
+            <li>future source-extension work is impossible;</li>
+            <li>the benchmark is promoted or suspended;</li>
+            <li>matter coupling, Einstein equations, or completed derivation follows from a negative-result record.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <div class="source-list">
+        <div class="source"><code data-source-path="research_control/design/negative_result_inventory_v15.md">research_control/design/negative_result_inventory_v15.md</code></div>
+        <div class="source"><code data-source-path="research_control/design/frontier_theorem_inventory.md">research_control/design/frontier_theorem_inventory.md</code></div>
+        <div class="source"><code data-source-path="registries/DISTANCE_TO_GR_LEDGER.csv">registries/DISTANCE_TO_GR_LEDGER.csv</code></div>
+        <div class="source"><code data-source-path="research_control/design/public_status_exists_does_not_exist_source_spec.md">research_control/design/public_status_exists_does_not_exist_source_spec.md</code></div>
+        <div class="source"><code data-source-path="research_control/design/epistemic_category_glossary.md">research_control/design/epistemic_category_glossary.md</code></div>
+        <div class="source"><code data-source-path="AGENTS.md">AGENTS.md</code></div>
+      </div>
+    </section>
+
+    <section class="reader-scope" data-explainer-control="reader_scope">
+      <h2>Reader Scope</h2>
+      <p>Reader scope: negative-result explanation only. This page cannot reject the research program, prove future source-extension impossibility, promote a benchmark, issue a Gate Chair decision, derive matter coupling, derive Einstein equations, complete the derivation, or supersede tracked source artifacts.</p>
+    </section>
+  </main>
+
+  <footer data-explainer-control="authority_footer">
+    <p><strong>Derived from spec:</strong> <code>markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md</code></p>
+    <p><strong>Related GitHub Markdown:</strong> <code>github-facing/negative-results-and-obstructions-explainer.md</code></p>
+    <p><strong>Publication brief:</strong> <code>markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md</code></p>
+    <p><strong>Authority status:</strong> generated noncanonical reader surface</p>
+    <p>This HTML file is a generated noncanonical reader surface. It explains scoped negative-result boundaries, but it does not create a claim boundary, issue a Gate Chair verdict, promote a benchmark, reject the global ontology, change role authority, change source authority, or supersede tracked source files.</p>
+  </footer>
+</body>
+</html>

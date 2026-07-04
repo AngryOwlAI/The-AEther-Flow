@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `research_control/design/negative_result_inventory_v15.md`
 - Generated output path: `wiki/markdown/md-negative-results-and-obstructions-publication-brief.md`
+- Backlink from `MD-HTML-SPEC-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md`
 
 ## Validation
 

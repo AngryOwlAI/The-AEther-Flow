@@ -1,0 +1,223 @@
+completion_path: "research_control/tasks/RT-20260704-012/jobs/completions/AJC-AJ-RT-20260704-012-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260704-012-001"
+job_id: "AJ-RT-20260704-012-001"
+task_id: "RT-20260704-012"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-04T12:52:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P17-T03"
+  plan_phase_id: "P17"
+  implemented_task_scope: "Created and registered the negative-results explainer source spec and synchronized approved generated noncanonical derivatives."
+  completed_v15_tasks_to_date:
+    - "P14-T01"
+    - "P14-T02"
+    - "P14-T03"
+    - "P15-T01"
+    - "P15-T02"
+    - "P15-T03"
+    - "P16-T01"
+    - "P16-T02"
+    - "P16-T03"
+    - "P17-T01"
+    - "P17-T02"
+    - "P17-T03"
+  downstream_tasks_not_implemented:
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  phase_p17_completed: true
+output_paths:
+  - "markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md"
+  - "github-facing/negative-results-and-obstructions-explainer.md"
+  - "html/negative-results-and-obstructions-explainer.html"
+  - "research_control/tasks/RT-20260704-012/artifacts/p17_t03_local_ci_equivalent_report.json"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260704-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260704-012/DDR-20260704-012.md"
+  - "research_control/tasks/RT-20260704-012/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260704-012/jobs/AJ-RT-20260704-012-001.yaml"
+  - "research_control/tasks/RT-20260704-012/jobs/completions/AJC-AJ-RT-20260704-012-001.yaml"
+  - "research_control/tasks/RT-20260704-012/roles/documentation-curator@2.0.0--RT-20260704-012.yaml"
+  - "research_control/tasks/RT-20260704-012/artifacts/negative_results_explainer_desktop.png"
+  - "research_control/tasks/RT-20260704-012/artifacts/negative_results_explainer_mobile.png"
+  - "research_control/handoffs/handoff-0558.yaml"
+  - "research_control/handoffs/handoff-0558.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=false source_object_count=575 relationship_row_count=3032 semantic_row_count=575 vault_row_count=575"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"negative result explainer source spec\" --limit 10 --json | exit_code=0 | status=PASS object_ids=MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF,MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER,MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF,MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER,MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md --json | exit_code=0 | status=PASS object_id=MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=PASS next_route=negative_result_explainer_source_spec"
+  - "playwright screenshot QA via local http://127.0.0.1:8765/html/negative-results-and-obstructions-explainer.html | status=PASS desktop_and_mobile_artifacts_created"
+  - ".venv/bin/python scripts/validate_publication_process.py --root . | exit_code=0 | status=PASS checked_html_runtime=18"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS retrieval_refresh_required_after_write=true"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=578 relationship_row_count=3055 semantic_row_count=578 vault_row_count=578"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS rendered_hash=68b680ef9fc3b430e716c9c9323a8c1038a9b20a8a9427a8618d6c5a5b0a1f22"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --json --changed | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --output research_control/tasks/RT-20260704-012/artifacts/p17_t03_local_ci_equivalent_report.json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "578"
+    relationship_row_count: "3055"
+    semantic_row_count: "578"
+    vault_row_count: "578"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"negative result explainer source spec\" --limit 10 --json"
+      query_type: "search"
+      query_text: "negative result explainer source spec"
+      returned_object_ids:
+        - "MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF"
+        - "MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER"
+        - "MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF"
+        - "MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER"
+        - "MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md --json"
+      query_type: "lookup"
+      query_text: "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+      returned_object_ids:
+        - "MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF"
+  canonical_inspections:
+    - object_id: "MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+      source_hash: "d082194ecd4830aa07f3531b8a08b1d9be305f8472c283aa968e5e9727dd9e17"
+    - object_id: "MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "github-facing/aether-flow-physics-program-explainer.md"
+      source_hash: "dbe652b95afa8d1e61c7d5dce4f3bf1bde107e82210ebb803ddb84a827712b9b"
+    - object_id: "MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+      source_hash: "63fcdf916241f7bd0ffe2019ecd201f711f739589c8acfa48b749e704a9fb50a"
+    - object_id: "MD-HTML-SPEC-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+      source_hash: "44bedf411553ca70c8866931a79de22a07d5d9c17e78bad893225499ce4fb827"
+    - object_id: "MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/html-explainer-specs/claim-gates-explainer.md"
+      source_hash: "50998ba602ac459c06b132fc43c272807265cf0551912d8552f8580747d7b4fb"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/negative_result_inventory_v15.md"
+      source_hash: "75114d4a5ad54d2c59fc89f7fac2dd6e1e18cd59609d356dcf79a11123a850c6"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+source_spec_result:
+  object_id: "MD-HTML-SPEC-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER"
+  source_spec_path: "markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md"
+  source_hash: "bb609731bd50be246c00ce8820086c0d597e1489028059e799e0ab7c11790155"
+  publication_brief_id: "PB-NEGATIVE-RESULTS-AND-OBSTRUCTIONS"
+  publication_brief_path: "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+  migration_status: "deferred"
+  generated_public_outputs_created: true
+  github_markdown_output_path: "github-facing/negative-results-and-obstructions-explainer.md"
+  github_markdown_hash: "776de4d812a9c3897bfa53fd9689e2f8a0d5a40b67e90c8054bf55529b9ba98e"
+  html_output_path: "html/negative-results-and-obstructions-explainer.html"
+  html_hash: "1bb4e74354afd93c3a4d1496a3f820116372645d6f42af17dda14af10b7104fb"
+  required_content_present: true
+  no_global_no_go: true
+  no_future_source_extension_impossibility: true
+  exact_source_authority_preserved: true
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "none"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "handoff-0557 and P17-T03 plan inspected"
+      - "publication process source-spec validator inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "source spec defines frozen route and scoped obstruction"
+      - "source spec explains why negative results matter"
+      - "source spec names current frozen and obstructed routes"
+      - "source spec states what remains open"
+      - "source spec and generated derivatives block public-output-as-authority and physics-promotion overreads"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_publication_process.py --root . passed"
+      - "validate_documentation_impact.py --json passed"
+      - "validate_research_control.py passed"
+      - "validate_research_control.py --check-diff passed"
+      - "p17_t03_local_ci_equivalent_report.json status PASS"
+      - "git diff --check passed after generated CSV line-ending normalization"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check passed"
+      - "render_dependency_graph.py --check passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "continue_research_memory_preflight.py refreshed retrieval layers to PASS"
+      - "bootstrap_memory_system.py --validate-only passed"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --json --changed passed with hard_fail_count=0"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  public_publication_action_authorized: false
+  generated_public_outputs_created: true
+  future_source_extension_impossibility_authorized: false
+  global_theory_rejection_authorized: false
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+next_recommended_action: "Run one bounded v15 P18-T01 physics manuscript outline packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

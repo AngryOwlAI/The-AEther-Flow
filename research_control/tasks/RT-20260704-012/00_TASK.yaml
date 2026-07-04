@@ -1,0 +1,38 @@
+task_id: "RT-20260704-012"
+task_type: "negative_result_explainer_source_spec"
+status: "completed"
+created_at: "2026-07-04T12:52:00Z"
+updated_at: "2026-07-04T12:52:00Z"
+parent_task_id: "RT-20260704-011"
+parent_handoff_id: "handoff-0557"
+decision_id: "DDR-20260704-012"
+job_id: "AJ-RT-20260704-012-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260704-012"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P17"
+  plan_task_id: "P17-T03"
+  plan_task_name: "Negative-result explainer source spec"
+objective: "Create and register the source spec for a human-facing negative-results explainer and synchronize approved noncanonical derivatives."
+target_derivation_milestone: "none"
+milestone_burden: "P17-T03 publication source-spec packet; no physics derivation milestone is advanced."
+claim_boundary:
+  allowed_scope: "P17-T03 negative-result explainer source spec"
+  proof_authority: false
+  support_only: true
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  public_publication_action_authorized: false
+  generated_public_outputs_created: true
+  future_source_extension_impossibility_authorized: false
+  global_theory_rejection_authorized: false
+planned_outputs:
+  - "markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md"
+  - "github-facing/negative-results-and-obstructions-explainer.md"
+  - "html/negative-results-and-obstructions-explainer.html"
+next_recommended_action: "Run one bounded v15 P18-T01 physics manuscript outline packet."

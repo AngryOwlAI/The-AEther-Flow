@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-011` and `handoff-0557`.
+`RT-20260704-012` and `handoff-0558`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-011` |
-| Latest handoff ID | `handoff-0557` |
-| Current status | `post_v15_p17_t02_negative_result_publication_brief_next_p17_t03_no_physics_delta` |
-| Current route family | negative_result_publication_brief_v15 |
+| Active task ID | `RT-20260704-012` |
+| Latest handoff ID | `handoff-0558` |
+| Current status | `post_v15_p17_t03_negative_result_explainer_source_spec_next_p18_t01_no_physics_delta` |
+| Current route family | negative_result_explainer_source_spec |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is negative result explainer source spec |
-| Required next authority | P17-T03 negative-result explainer source spec |
-| Next recommended action | Run one bounded v15 P17-T03 negative-result explainer source spec packet if public explainer system remains active. |
+| Current burden | none for physics derivation; live control burden is physics manuscript outline v15 |
+| Required next authority | P18-T01 physics manuscript outline |
+| Next recommended action | Run one bounded v15 P18-T01 physics manuscript outline packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-011/00_TASK.yaml`.
-- Active task objective: Prepare a public-safe publication brief for scoped negative results without publication action.
-- Latest handoff path: `research_control/handoffs/handoff-0557.yaml`.
-- Latest handoff summary: RT-20260704-011 completed v15 P17-T02 negative-result publication brief with no physics delta and no publication action.
-- Current route family: negative_result_publication_brief_v15.
-- Next recommended action: Run one bounded v15 P17-T03 negative-result explainer source spec packet if public explainer system remains active.
+- Active task path: `research_control/tasks/RT-20260704-012/00_TASK.yaml`.
+- Active task objective: Create and register the source spec for a human-facing negative-results explainer and synchronize approved noncanonical derivatives.
+- Latest handoff path: `research_control/handoffs/handoff-0558.yaml`.
+- Latest handoff summary: RT-20260704-012 completed v15 P17-T03 negative-result explainer source spec and approved generated noncanonical derivatives with no physics delta.
+- Current route family: negative_result_explainer_source_spec.
+- Next recommended action: Run one bounded v15 P18-T01 physics manuscript outline packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P17-T03 negative-result explainer source spec packet if public explainer system remains active.
+Run one bounded v15 P18-T01 physics manuscript outline packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-011`;
-- latest handoff: `handoff-0557`;
-- current status: `post_v15_p17_t02_negative_result_publication_brief_next_p17_t03_no_physics_delta`;
+- active task: `RT-20260704-012`;
+- latest handoff: `handoff-0558`;
+- current status: `post_v15_p17_t03_negative_result_explainer_source_spec_next_p18_t01_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0557.yaml`
-- `research_control/tasks/RT-20260704-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0558.yaml`
+- `research_control/tasks/RT-20260704-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0557*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0558*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
