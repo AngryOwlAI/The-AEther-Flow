@@ -1,0 +1,17 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260704-026"
+status: "completed"
+summary: "The instance is an explicit three-row finite transport certificate with row-wise guard and response-token preservation."
+finite_check:
+  context: "E_src={0,1,2}"
+  map: "tau(A,i)=(B,i)"
+  row_count: 3
+  domain_codomain_match: true
+  source_guard_preserved: true
+  response_tokens_preserved: true
+mathematical_payload:
+  payload_id: "P4T02-TRANSPORT-001"
+  payload_type: "finite_concrete_source_object_witnesses"
+  description: "Concrete finite source transport certificate instance SCI-TRANSPORT-001."
+claim_boundary: "Declared equivalence is allowed only inside the finite source scope."

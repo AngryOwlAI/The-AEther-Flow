@@ -1,0 +1,69 @@
+handoff_id: "handoff-0572"
+created_at: "2026-07-04T23:33:00Z"
+task_id: "RT-20260704-026"
+decision_id: "DDR-20260704-026"
+job_id: "AJ-RT-20260704-026-001"
+completion_path: "research_control/tasks/RT-20260704-026/jobs/completions/AJC-AJ-RT-20260704-026-001.yaml"
+source_task_id: "RT-20260704-026"
+source_job_id: "AJ-RT-20260704-026-001"
+source_completion_id: "AJC-AJ-RT-20260704-026-001"
+status: "completed"
+summary: "RT-20260704-026 completed v16 P4-T02 and recorded one explicit finite/local valid source transport certificate instance with no physics promotion."
+v16_completed: false
+selected_next_route:
+  route_id: "finite_local_valid_invariance_certificate_instance"
+  role_family: "ontology-formalizer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Construct one explicit finite/local valid source invariance certificate instance using the P4 schema."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "unrestricted RR_E theorem"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+next_action: "Run one bounded ontology-formalizer@0.2.0 packet for P4-T03 finite/local valid invariance certificate instance."
+required_next_packet:
+  role_id: "ontology-formalizer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "finite_local_valid_invariance_certificate_instance_v16"
+  objective: "Construct one explicit finite/local valid source invariance certificate instance using the P4 schema."
+claim_boundary:
+  allowed_next_scope: "P4-T03 valid invariance certificate instance only"
+  completed_scope: "v16 P4-T02 valid transport certificate instance"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: false
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+validation_summary:
+  source_report_path: "research_control/tasks/RT-20260704-026/artifacts/finite_local_transport_certificate_instance_v1.tex"
+  required_status: "PASS"
+  passed_layers:
+    - "continue-research memory preflight"
+    - "post-write research-control validation"
+    - "research-control diff validation"
+    - "memory bootstrap validate-only"
+    - "current-frontier renderer check"
+    - "dependency-graph renderer check"
+    - "documentation-impact gate"
+    - "claim-language linter"
+    - "physics-progress metrics"
+    - "git diff whitespace check"
+  pending_layers:
+    - "checkpoint"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "one valid transport certificate instance recorded as scoped finite/local evidence only"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

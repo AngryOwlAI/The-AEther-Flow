@@ -1,0 +1,261 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Esrc}{E_{\mathrm{src}}}
+\newcommand{\Asrc}{A_{\mathrm{src}}}
+\newcommand{\Bsrc}{B_{\mathrm{src}}}
+\newcommand{\CertSrc}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\Valid}{\mathsf{valid}^{\mathrm{src}}}
+\newcommand{\Fail}{\mathsf{failclosed}^{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\DeclEq}{\equiv_{\mathrm{decl}}^{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Finite Local Valid Transport Certificate Instance v1}
+\author{Ontology Formalizer Packet RT-20260704-026}
+\date{2026-07-04}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P4-T02. It constructs one explicit finite/local
+valid source transport certificate instance using
+\texttt{source\_certificate\_instance\_library\_schema\_v1.md}.
+
+The artifact is a draft/control finite example. It does not adopt a source
+law, \(\RRELaw\), an unrestricted \(\RRE\) theorem, matter semantics,
+detector semantics, a coupling law, matter coupling, stress-energy semantics,
+matter action, Einstein equations, benchmark status, or completed derivation.
+
+\section{Finite Source Context}
+
+\begin{definition}[Finite source context]
+Let
+\[
+  \Esrc=\{0,1,2\}.
+\]
+The declared source labels are
+\[
+  L(0)=\ell_0,\qquad L(1)=\ell_1,\qquad L(2)=\ell_2.
+\]
+The declared source guards are
+\[
+  G(i)=\mathrm{inside\_finite\_context}(\Esrc,i)
+  \quad\text{for } i\in\Esrc.
+\]
+The response-token family is
+\[
+  R(i)=r_i \quad\text{for } i\in\Esrc.
+\]
+All labels, guards, and response tokens are source-side records internal to
+\(\Esrc\). They are not target atlas labels, detector events,
+stress-energy data, matter-action data, benchmark behavior, registry state,
+validator state, role state, approval state, commit state, or local cache
+state.
+\end{definition}
+
+\begin{definition}[Source objects]
+Define two declared source objects
+\[
+  \Asrc=(\Esrc,L,G,R,\mathrm{domain})
+\]
+and
+\[
+  \Bsrc=(\Esrc,L',G',R',\mathrm{codomain})
+\]
+where
+\[
+  L'(i)=\ell'_i,\qquad G'(i)=G(i),\qquad R'(i)=r_i
+  \quad\text{for } i\in\Esrc.
+\]
+The object indices are
+\[
+  \iota_A=(A,0),(A,1),(A,2),\qquad
+  \iota_B=(B,0),(B,1),(B,2).
+\]
+\end{definition}
+
+\section{Transport Certificate Record}
+
+\begin{definition}[Explicit transport map]
+Let
+\[
+  \tau:\Asrc\to\Bsrc
+\]
+be the finite map
+\[
+  \tau(A,i)=(B,i),\qquad i\in\{0,1,2\}.
+\]
+The domain of the certificate is
+\[
+  \mathrm{dom}(c_{\mathrm{tr}})=
+  \{(A,i,L(i),G(i),R(i)):i\in\Esrc\},
+\]
+and the codomain is
+\[
+  \mathrm{cod}(c_{\mathrm{tr}})=
+  \{(B,i,L'(i),G'(i),R'(i)):i\in\Esrc\}.
+\]
+\end{definition}
+
+\begin{definition}[Certificate payload]
+The transport certificate instance is
+\[
+  c_{\mathrm{tr}}=
+  (\mathrm{transport},\iota_A,\iota_B,
+  \mathrm{dom}(c_{\mathrm{tr}}),\mathrm{cod}(c_{\mathrm{tr}}),
+  W_{\tau},G_{\tau},\Valid),
+\]
+where \(W_{\tau}\) is the explicit table
+\[
+\begin{array}{c|c|c|c|c}
+i & \tau(A,i) & G(i)=G'(i) & R(i)=R'(i) & \text{source check}\\
+\hline
+0 & (B,0) & \mathrm{true} & r_0=r_0 & \mathrm{pass}\\
+1 & (B,1) & \mathrm{true} & r_1=r_1 & \mathrm{pass}\\
+2 & (B,2) & \mathrm{true} & r_2=r_2 & \mathrm{pass}
+\end{array}
+\]
+and \(G_{\tau}\) is the guard requiring every row of the table to be present,
+source-side, and domain-codomain compatible.
+\end{definition}
+
+\section{No-Target-Import Certificate}
+
+\begin{lemma}[No-target-import guard]
+The record \(c_{\mathrm{tr}}\) uses only the finite set \(\Esrc\), declared
+source labels, declared source guards, declared source response tokens, and
+the explicit table \(W_{\tau}\). Therefore the following fields are false:
+\[
+\begin{gathered}
+\mathrm{target\_import\_used}=\mathrm{false},\quad
+\mathrm{detector\_semantics\_used}=\mathrm{false},\\
+\mathrm{stress\_energy\_used}=\mathrm{false},\quad
+\mathrm{matter\_action\_used}=\mathrm{false},\\
+\mathrm{benchmark\_behavior\_used}=\mathrm{false},\quad
+\mathrm{process\_authority\_used}=\mathrm{false}.
+\end{gathered}
+\]
+\end{lemma}
+
+\begin{proof}
+Inspection of the table shows that every datum is either an element of
+\(\Esrc\), a declared source label, a declared source guard, a declared
+response token, or the finite map \(\tau(A,i)=(B,i)\). No target metric,
+target topology, target atlas, proper time, detector semantics,
+stress-energy term, matter action, benchmark behavior, registry state,
+validator state, role identity, handoff state, approval state, commit state,
+generated derivative, or local cache is an input to the record.
+\end{proof}
+
+\section{Direct Finite Verification}
+
+\begin{lemma}[Transport certificate validity inside declared scope]
+The certificate \(c_{\mathrm{tr}}\) is a valid finite/local source transport
+certificate inside
+\[
+  \Scope(c_{\mathrm{tr}})=\Esrc.
+\]
+Consequently
+\[
+  \Asrc \DeclEq \Bsrc \quad\text{inside } \Scope(c_{\mathrm{tr}})
+\]
+as a declared source-object equivalence only.
+\end{lemma}
+
+\begin{proof}
+The finite check has three rows. For each \(i\in\{0,1,2\}\), the row
+\(\tau(A,i)=(B,i)\) is present. The source guard is preserved because
+\(G'(i)=G(i)\). The response token is preserved because \(R'(i)=R(i)=r_i\).
+The domain entry and codomain entry have matching index \(i\), so the
+domain-codomain boundary is compatible in every row. Thus the certificate
+payload is explicit, source-side, and finite. By the P4-T01 schema, this is a
+`valid_transport_certificate` with
+\[
+  \mathrm{expected\_equivalence\_result}
+  =\mathrm{declared\_equivalence\_allowed}
+\]
+only inside the declared scope.
+\end{proof}
+
+\section{Schema Record}
+
+The instance record is:
+
+\begin{verbatim}
+certificate_instance_id: "SCI-TRANSPORT-001"
+instance_kind: "valid_transport_certificate"
+source_object_A: "A_src=(E_src,L,G,R,domain)"
+source_object_B: "B_src=(E_src,L',G',R',codomain)"
+declared_context: "E_src={0,1,2}; finite/local"
+domain: "{(A,i,L(i),G(i),R(i)): i in E_src}"
+codomain: "{(B,i,L'(i),G'(i),R'(i)): i in E_src}"
+source_labels: ["ell_0","ell_1","ell_2","ell'_0","ell'_1","ell'_2"]
+source_guards: ["inside_finite_context(E_src,i) for i=0,1,2"]
+response_tokens: ["r_0","r_1","r_2"]
+certificate_payload: "tau(A,i)=(B,i) with row-wise guard and token checks"
+no_target_import_guard:
+  result: "pass"
+status: "valid"
+expected_equivalence_result: "declared_equivalence_allowed"
+rr_e_separation_effect: "not_applicable"
+fail_closed_reason: null
+target_import_used: false
+detector_semantics_used: false
+stress_energy_used: false
+matter_action_used: false
+benchmark_behavior_used: false
+process_authority_used: false
+source_paths:
+  - "research_control/design/source_certificate_instance_library_schema_v1.md"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+forbidden_overreads:
+  - "not a source-law adoption"
+  - "not an unrestricted RR_E theorem"
+  - "not matter semantics or detector semantics"
+  - "not a coupling law or matter-coupling derivation"
+  - "not stress-energy semantics or matter action"
+  - "not Einstein equations benchmark promotion or completed derivation"
+\end{verbatim}
+
+\section{Fail-Closed Outside Scope}
+
+\begin{boundary}[Outside declared scope]
+If a later packet attempts to use \(c_{\mathrm{tr}}\) for any object outside
+\(\Esrc\), any target metric, any detector semantics, any stress-energy
+term, any matter-action term, any benchmark behavior, or any process-authority
+substitution, the use is outside the declared scope and returns
+\[
+  \Fail(c_{\mathrm{tr}})=\Bottom
+\]
+for that attempted use. No declared source-object equivalence, unrestricted
+\(\RRE\) identification, matter-coupling claim, or downstream GR claim follows
+outside the finite table above.
+\end{boundary}
+
+\begin{nonconclusion}
+This finite/local transport certificate is one explicit source-side example.
+It is not evidence that all needed certificate instances exist, not a source
+law, not detector semantics, not matter semantics, not a coupling law, not
+matter coupling, not stress-energy semantics, not matter action, not Einstein
+equations, not benchmark promotion, and not a completed derivation.
+\end{nonconclusion}
+
+\end{document}
