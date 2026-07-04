@@ -1,0 +1,24 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260704-021"
+status: "completed"
+recommendation:
+  selected_output_status: "draft_control_coupling_law_target_specification_only"
+  mathematical_payload_required: true
+  sufficient_for_coupling_law_adoption: false
+formal_requirements:
+  - "Define SourceMatterSemanticsInputScope_v1 as a source-side finite/local input scope using certificate-indexed matter-semantics objects and NarrowMSCertEq_v1 only as scoped evidence/precondition."
+  - "Define SourceCouplingLawCertificateBundle_v1 with explicit transport, invariance or factorization certificate slots, no-target guard, RR_E boundary slot, and detector-replacement placeholder."
+  - "Define CouplingLawCandidateValidityPredicate_v1 as a partial predicate that returns target-specification eligibility or a fail-closed branch, not adoption."
+  - "Prove a certificate-sufficiency non-theorem: source-side matter-semantics equivalence plus certificate algebra are necessary context but not sufficient for coupling-law adoption."
+  - "State a finite/local witness obligation for any future positive candidate."
+fail_closed_branches:
+  - "missing certificate"
+  - "malformed certificate"
+  - "missing detector-semantics replacement placeholder"
+  - "missing coupling relation"
+  - "target import"
+  - "process authority substitution"
+  - "scoped evidence as adoption"
+forbidden_overreads_preserved: true
+notes: "The formal target is useful because it converts the selected DAG edge into a testable source-side target without constructing a candidate coupling law."

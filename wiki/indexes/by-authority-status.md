@@ -384,6 +384,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES` `research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex`
 - `TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS` `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex`
 - `TEX-V15-P5-T01-EQSRC-RETAINH-GENH-DEPENDENCY-AUDIT` `research_control/tasks/RT-20260703-004/artifacts/eqsrc_retainh_genh_dependency_audit_v1.tex`
+- `TEX-V16-P3-SOURCE-SIDE-COUPLING-LAW-TARGET-SPECIFICATION` `research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -643,6 +644,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-READINESS-AUDIT-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-020-matter-coupling-dag-readiness-audit-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-PARENT-FUSION-NOTES-V16-DAG-NEXT-EDGE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260704-020-parent-fusion-notes-v16-dag-next-edge-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-V16-POST-V15-BASELINE-RECONCILIATION` `wiki/markdown/md-research-control-tasks-rt-20260704-020-v16-post-v15-baseline-reconciliation.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-TARGET-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260704-021-parent-fusion-notes-source-side-coupling-law-target-spec.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-SELECTED-MATTER-COUPLING-DAG-EDGE-THEOREM-PACKET-SETUP-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-021-selected-matter-coupling-dag-edge-theorem-packet-setup-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1053,6 +1056,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES` `wiki/tex/tex-v15-p3-t01-source-certificate-algebra-primitives.md`
 - `WIKI-TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS` `wiki/tex/tex-v15-p3-t02-source-certificate-operation-laws.md`
 - `WIKI-TEX-V15-P5-T01-EQSRC-RETAINH-GENH-DEPENDENCY-AUDIT` `wiki/tex/tex-v15-p5-t01-eqsrc-retainh-genh-dependency-audit.md`
+- `WIKI-TEX-V16-P3-SOURCE-SIDE-COUPLING-LAW-TARGET-SPECIFICATION` `wiki/tex/tex-v16-p3-source-side-coupling-law-target-specification.md`
 
 ## project_control
 
@@ -1141,6 +1145,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-READINESS-AUDIT-V16` `research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_readiness_audit_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-PARENT-FUSION-NOTES-V16-DAG-NEXT-EDGE-SELECTOR` `research_control/tasks/RT-20260704-020/artifacts/parent_fusion_notes_v16_dag_next_edge_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-V16-POST-V15-BASELINE-RECONCILIATION` `research_control/tasks/RT-20260704-020/artifacts/v16_post_v15_baseline_reconciliation_report.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-TARGET-SPEC` `research_control/tasks/RT-20260704-021/artifacts/parent_fusion_notes_source_side_coupling_law_target_spec.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-SELECTED-MATTER-COUPLING-DAG-EDGE-THEOREM-PACKET-SETUP-V16` `research_control/tasks/RT-20260704-021/artifacts/selected_matter_coupling_dag_edge_theorem_packet_setup_v16.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

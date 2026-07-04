@@ -1,0 +1,428 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\MSObj}{\mathrm{MatterSemanticsObject}_{\mathrm{src}}}
+\newcommand{\EqMScert}{\mathrm{EqMS}^{\mathrm{cert}}_{\mathrm{src}}}
+\newcommand{\NarrowMSCertEq}{\mathrm{NarrowMSCertEq}_{v1}}
+\newcommand{\CertSrc}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\CInv}{C_{\mathrm{invariance}}^{\mathrm{src}}}
+\newcommand{\CFact}{C_{\mathrm{factorization}}^{\mathrm{src}}}
+\newcommand{\CNTI}{C_{\mathrm{no\text{-}target}}^{\mathrm{src}}}
+\newcommand{\RREObj}{\mathrm{RR}_{E}^{\mathrm{decl}}}
+\newcommand{\SourceCoupTargetOld}{\mathrm{SourceCouplingLawTarget}_{v1}}
+\newcommand{\SourceCoupCandOld}{\mathrm{SourceCouplingLawCandidate}^{\mathrm{cand}}_{v1}}
+\newcommand{\SCLTarget}{\mathrm{SourceCouplingLawTarget}^{\mathrm{cand}}_{\mathrm{src},v1}}
+\newcommand{\SCLBundle}{\mathrm{SourceCouplingLawCertificateBundle}_{v1}}
+\newcommand{\SMScope}{\mathrm{SourceMatterSemanticsInputScope}_{v1}}
+\newcommand{\DetPlaceholder}{\mathrm{DetectorSemanticsReplacementPlaceholder}_{v1}}
+\newcommand{\NTGuard}{\mathrm{NoTargetCouplingImportGuard}_{v1}}
+\newcommand{\Validity}{\mathrm{CouplingLawCandidateValidityPredicate}_{v1}}
+\newcommand{\FailBranch}{\mathrm{CouplingLawCandidateFailClosedBranch}_{v1}}
+\newcommand{\WitnessOb}{\mathrm{FiniteLocalCouplingWitnessObligation}_{v1}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{obligation}{Obligation}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source-Side Coupling-Law Target Specification Under Explicit Certificates v1}
+\author{Ontology Formalizer Packet RT-20260704-021}
+\date{2026-07-04}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P3-T01/P3-T02 for
+\texttt{RT-20260704-021}. It formalizes a draft/control target specification
+for the selected edge
+\[
+  \texttt{mc\_source\_matter\_semantics\_equivalence\_theorem}
+  \longrightarrow
+  \texttt{mc\_coupling\_law\_target}.
+\]
+The artifact status is:
+\[
+  \texttt{draft\_control\_coupling\_law\_target\_specification\_only}.
+\]
+
+It defines what a future source-side coupling-law candidate would have to
+provide under explicit source certificates. It does not construct such a
+candidate, adopt a coupling law, derive matter coupling, adopt matter
+semantics, adopt detector semantics, import stress-energy semantics, define a
+matter action, derive Einstein equations, promote benchmark status, or claim a
+completed derivation.
+
+\begin{verbatim}
+artifact_status: "draft_control_coupling_law_target_specification_only"
+source_law_adopted: false
+RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+matter_semantics_adopted: false
+detector_semantics_adopted: false
+coupling_law_adopted: false
+matter_coupling_derived: false
+matter_coupling_adopted: false
+stress_energy_semantics_imported: false
+matter_action_imported: false
+Einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+proof_authority: false
+\end{verbatim}
+
+\section{Name Map}
+
+\begin{longtable}{p{0.32\linewidth}p{0.52\linewidth}}
+\toprule
+v16 required name & Local formal name \\
+\midrule
+\texttt{SourceCouplingLawTarget\_src\^{}cand\_v1} & \(\SCLTarget\) \\
+\texttt{SourceCouplingLawCertificateBundle\_v1} & \(\SCLBundle\) \\
+\texttt{SourceMatterSemanticsInputScope\_v1} & \(\SMScope\) \\
+\texttt{DetectorSemanticsReplacementPlaceholder\_v1} & \(\DetPlaceholder\) \\
+\texttt{NoTargetCouplingImportGuard\_v1} & \(\NTGuard\) \\
+\texttt{CouplingLawCandidateValidityPredicate\_v1} & \(\Validity\) \\
+\texttt{CouplingLawCandidateFailClosedBranch\_v1} & \(\FailBranch\) \\
+\texttt{FiniteLocalCouplingWitnessObligation\_v1} & \(\WitnessOb\) \\
+\bottomrule
+\end{longtable}
+
+\section{Source Evidence Basis}
+
+This packet uses the following tracked sources only as scoped source-side
+context:
+
+\begin{itemize}[leftmargin=2em]
+\item \(\NarrowMSCertEq\), accepted only as scoped evidence/precondition for
+its conditional source-side theorem role under explicit certificates.
+\item The source-side matter-semantics object and certificate manifest,
+including \(\MSObj\), \(\EqMScert\), \(\CTr\), \(\CInv\), \(\CFact\), and
+\(\CNTI\).
+\item The source certificate algebra primitives and operation laws, including
+fail-closed behavior for missing, malformed, target-importing, detector-
+semantic, or process-authority certificates.
+\item Prior proposal-only \(\SourceCoupTargetOld\) and audit-pending
+\(\SourceCoupCandOld\) context, read only as precedent for target and
+candidate separation.
+\end{itemize}
+
+None of these inputs is treated as a coupling-law adoption or as matter
+coupling.
+
+\section{Definitions}
+
+\begin{definition}[Source matter-semantics input scope]
+A \(\SMScope(E)\) is a finite or locally finite source-side record
+\[
+  \mathcal I_E =
+  (E,A_{\mathrm{src}},B_{\mathrm{src}},\mathcal R_E,
+  \mathcal C_E,\mathcal G_E,\mathcal S_E)
+\]
+where \(A_{\mathrm{src}}\) and \(B_{\mathrm{src}}\) are declared
+\(\MSObj\) instances, \(\mathcal R_E\) is a declared source readout or
+response-token family, \(\mathcal C_E\) is an explicit source certificate
+family, \(\mathcal G_E\) is a source guard family, and \(\mathcal S_E\) is a
+scoped-evidence ledger. The ledger may cite \(\NarrowMSCertEq\) only as
+scoped evidence/precondition. It is not a certificate by itself and not
+matter-semantics adoption.
+\end{definition}
+
+\begin{definition}[Source coupling-law certificate bundle]
+A \(\SCLBundle(E)\) over \(\SMScope(E)\) is a record
+\[
+  \mathcal B_E =
+  (C^{MS}_E,C^{RR}_E,C^{NT}_E,D^{rep}_E,G^{proc}_E,F_E)
+\]
+with the following fields.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+  \item \(C^{MS}_E\) is an explicit source transport, source invariance, or
+  source factorization certificate for the matter-semantics comparison.
+  \item \(C^{RR}_E\) records the declared \(\RREObj\) separation or exact
+  certificate-indexed transport/invariance boundary.
+  \item \(C^{NT}_E\) is a no-target-import certificate.
+  \item \(D^{rep}_E\) is a \(\DetPlaceholder\), defined below.
+  \item \(G^{proc}_E\) states that registry rows, validators, roles, handoffs,
+  approvals, file order, local caches, and commits are not mathematical
+  premises.
+  \item \(F_E\) maps invalid branches to \(\FailBranch\).
+\end{enumerate}
+If any required field is missing, malformed, target-importing, detector-
+semantic, or process-authority dependent, the bundle evaluates to \(\Bottom\).
+\end{definition}
+
+\begin{definition}[Detector-semantics replacement placeholder]
+\(\DetPlaceholder(E)\) is a declared source-side placeholder for whatever a
+future route claims can replace detector semantics inside a coupling-law
+candidate. It has the form
+\[
+  D^{rep}_E=(\mathsf{name},\mathsf{source\_domain},
+  \mathsf{readout\_interface},\mathsf{certificate},\mathsf{status}).
+\]
+The placeholder is valid only when all fields are source-side and its status
+is either \(\mathsf{supplied\_source\_placeholder}\) or
+\(\mathsf{missing\_and\_blocked}\). It is not detector semantics and not
+detector-semantics adoption. If the placeholder is missing or replaced by
+empirical detector protocol, the candidate validity branch fails closed.
+\end{definition}
+
+\begin{definition}[No-target coupling import guard]
+\(\NTGuard(E)\) is the guard that forbids target topology, target smooth
+atlas, target Lorentzian metric, proper time, detector protocol, empirical
+calibration, stress-energy semantics, stress-energy tensor, matter action,
+benchmark behavior, Einstein-equation premise, generated derivative,
+registry metadata, validator status, role identity, handoff status, approval
+status, local cache state, file order, or commit state as a mathematical
+premise in this target.
+\end{definition}
+
+\begin{definition}[Source-side coupling-law target]
+\(\SCLTarget(E)\) is the target-specification record
+\[
+  T_E=(\mathcal I_E,\mathcal B_E,\NTGuard(E),\Validity_E,
+  \WitnessOb_E,\mathcal O_E)
+\]
+where \(\mathcal I_E\) is a source input scope, \(\mathcal B_E\) is a source
+certificate bundle, \(\Validity_E\) is the validity predicate below,
+\(\WitnessOb_E\) is the finite/local witness obligation, and \(\mathcal O_E\)
+is the set of fail-closed obstruction labels. It is a target specification
+for a future candidate. It is not the candidate and not an adopted law.
+\end{definition}
+
+\section{Candidate Target Specification}
+
+\begin{definition}[Coupling-law candidate validity predicate]
+For a future candidate relation or partial map \(K_E\), define
+\[
+  \Validity_E(K_E,\SCLTarget(E))\in
+  \{\mathsf{eligible\_for\_audit\_stress},\Bottom\}.
+\]
+The value is \(\mathsf{eligible\_for\_audit\_stress}\) only if all of the
+following hold:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
+  \item \(\SMScope(E)\) is declared and finite or locally finite.
+  \item \(\SCLBundle(E)\) contains explicit valid source certificates.
+  \item \(\DetPlaceholder(E)\) is supplied as source-side placeholder or
+  explicitly marked missing-and-blocked.
+  \item \(\NTGuard(E)\) passes.
+  \item \(K_E\) names a source-side relation or partial map and all domains,
+  codomains, witness payloads, and guards are source-side.
+  \item \(\WitnessOb_E\) is satisfied by a finite/local witness declaration
+  or by one precise obstruction explaining why no such witness exists under
+  the current route.
+\end{enumerate}
+Any failure returns \(\Bottom\) with exactly one primary fail-closed branch.
+The positive value means only eligibility for audit, stress, candidate
+construction repair, selector routing, or separately authorized protected
+review. It does not adopt a coupling law.
+\end{definition}
+
+\section{Certificate Bundle Requirement}
+
+\begin{obligation}[Explicit certificate bundle]
+A future positive candidate must provide an explicit \(\SCLBundle(E)\). Scoped
+evidence/precondition status, including \(\NarrowMSCertEq\), cannot fill a
+missing certificate slot. A no-target-import certificate is necessary hygiene
+but cannot provide positive matter theory by itself.
+\end{obligation}
+
+\begin{proposition}[Certificate sufficiency non-theorem]
+\(\NarrowMSCertEq\) plus the source certificate algebra is necessary context
+for this target route, but it is not sufficient for coupling-law adoption or
+matter-coupling derivation.
+\end{proposition}
+
+\begin{proof}
+\(\NarrowMSCertEq\) establishes only a conditional source-side
+matter-semantics equivalence under explicit certificates and scoped evidence-
+status. The certificate algebra supplies source-side record and fail-closed
+discipline. Neither input supplies a detector-semantics replacement, a
+source-side coupling relation \(K_E\), stress-energy semantics, a matter
+action, adoption authority, or an Einstein-equation derivation. Therefore
+those inputs are necessary context for this target, but they are not
+sufficient for coupling-law adoption or matter-coupling derivation.
+\end{proof}
+
+\section{Detector-Semantics Boundary}
+
+\begin{boundary}[Detector boundary]
+Detector semantics remain blocked. \(\DetPlaceholder(E)\) records a missing
+or source-side replacement burden so a future candidate can be audited. It is
+not empirical detector semantics, not a measurement theory, and not adoption
+of detector semantics. If a future candidate uses detector protocol or
+empirical calibration as a source premise, \(\Validity_E\) returns
+\(\Bottom\).
+\end{boundary}
+
+\section{No-Target Import Guard}
+
+\begin{lemma}[No-target guard fail-closed behavior]
+If a candidate or proof branch uses any forbidden target or process-authority
+surface listed in \(\NTGuard(E)\), then
+\[
+  \Validity_E(K_E,\SCLTarget(E))=\Bottom.
+\]
+No adjacent downstream claim follows from that branch.
+\end{lemma}
+
+\begin{proof}
+The guard is a premise of \(\SCLTarget(E)\). A branch that uses a forbidden
+surface violates the target specification before any candidate validity result
+can be reached. The branch therefore returns the fail-closed target-import or
+process-authority label, not coupling-law adoption, not detector semantics,
+not stress-energy semantics, and not matter coupling.
+\end{proof}
+
+\section{Finite/Local Witness Obligation}
+
+\begin{obligation}[Finite/local witness obligation]
+A future positive candidate must provide either:
+\[
+  (E_\star,\mathcal I_{E_\star},\mathcal B_{E_\star},K_{E_\star})
+\]
+with \(E_\star\) finite or locally finite and all certificate records
+explicit, or one precise obstruction label explaining why such a witness is
+not available in the current route. Absence of a witness is not repaired by
+registry status, validation status, handoff status, approval status, local
+cache freshness, or benchmark behavior.
+\end{obligation}
+
+\section{Fail-Closed Branches}
+
+\begin{definition}[Fail-closed branches]
+The fail-closed branch family \(\FailBranch\) contains:
+\[
+\begin{array}{ll}
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}MISSING\text{-}CERT} &
+\text{required source certificate absent},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}MALFORMED\text{-}CERT} &
+\text{certificate malformed or object-mismatched},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}TARGET\text{-}IMPORT} &
+\text{target, metric, benchmark, stress-energy, action, or Einstein import},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}DETECTOR\text{-}BOUNDARY} &
+\text{detector semantics used or placeholder absent without blocked status},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}COUPLING\text{-}RELATION\text{-}MISSING} &
+\text{future source-side relation or partial map not supplied},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}PROCESS\text{-}AUTHORITY} &
+\text{process authority used as mathematical premise},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}EVIDENCE\text{-}AS\text{-}ADOPTION} &
+\text{scoped evidence read as adoption},\\
+\mathrm{OB\text{-}V16\text{-}SCLT\text{-}WITNESS\text{-}MISSING} &
+\text{finite/local witness obligation not met}.
+\end{array}
+\]
+Every invalid branch must return exactly one primary label.
+\end{definition}
+
+\section{Relation To Existing Objects}
+
+\begin{longtable}{p{0.28\linewidth}p{0.52\linewidth}}
+\toprule
+Object & Relation \\
+\midrule
+\(\NarrowMSCertEq\) & Scoped evidence/precondition only; useful source-side
+input, not matter-semantics adoption and not coupling-law adoption. \\
+Source certificate algebra & Supplies certificate records, operation laws,
+and fail-closed branches; not a source law and not positive matter theory. \\
+\(\SourceCoupTargetOld\) & Prior proposal-only target precedent; this v16
+artifact refines the target around explicit matter-semantics certificates. \\
+\(\SourceCoupCandOld\) & Prior audit-pending candidate context; this packet
+does not reuse it as adopted law or matter coupling. \\
+\(\RREObj\) boundary & Must remain certificate-indexed; unrestricted
+\(RR_E\) theorem authority is not supplied. \\
+\bottomrule
+\end{longtable}
+
+\section{Eligibility Theorem}
+
+\begin{theorem}[Target satisfaction implies audit eligibility only]
+If a future packet supplies \(K_E\) and
+\[
+  \Validity_E(K_E,\SCLTarget(E))
+  =
+  \mathsf{eligible\_for\_audit\_stress},
+\]
+then the future packet is eligible only for bounded candidate construction
+continuation, smuggling audit, Refuter stress, selector routing, or separately
+authorized protected review. It does not by that fact adopt a coupling law or
+derive matter coupling.
+\end{theorem}
+
+\begin{proof}
+The hypotheses require declared source input scope, explicit source
+certificates, a no-target import guard, a detector-replacement placeholder or
+blocked marker, source-side relation data, and a finite/local witness or
+precise obstruction. None of these hypotheses contains source-law adoption,
+detector-semantics adoption, coupling-law adoption, matter-coupling
+derivation, stress-energy semantics, a matter action, Einstein equations,
+benchmark promotion, or completed derivation. Therefore the strongest lawful
+conclusion is audit and stress eligibility for a future candidate packet.
+\end{proof}
+
+\section{Distance-To-GR Effect}
+
+This packet records a draft/control target specification for the
+\texttt{matter\_coupling} milestone. It does not update the
+Distance-to-GR ledger and does not discharge the matter-coupling burden.
+The effect is:
+\[
+  \texttt{no\_distance\_delta}.
+\]
+
+\section{Forbidden Conclusions}
+
+\begin{nonconclusion}
+This artifact does not adopt a source law, adopt
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\), prove
+an unrestricted \(RR_E\) theorem, adopt matter semantics, adopt detector
+semantics, adopt a coupling law, derive or adopt matter coupling, import
+stress-energy semantics, construct a stress-energy tensor, import a matter
+action, derive Einstein equations, promote benchmark status, claim completed
+derivation, prove future source-extension impossibility, or reject the global
+theory.
+\end{nonconclusion}
+
+\section{Next Route}
+
+The next v16 route is a bounded P3-T03 smuggling audit of this target
+specification. The audit should check target import, detector-semantics
+collapse, stress-energy import, matter-action import, process-authority proof,
+and adoption-status laundering.
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \textit{Recommendations
+implementation plan continue task v16} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v16.md}.
+
+The AEther-Flow Research Project. (2026b). \textit{Matter-coupling dependency
+DAG v1} [Internal control artifact].
+\texttt{research\_control/design/matter\_coupling\_dependency\_dag\_v1.md}.
+
+The AEther-Flow Research Project. (2026c). \textit{Source-side
+matter-semantics object and certificate manifest v1} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260702-057/artifacts/source\_side\_matter\_semantics\_object\_certificate\_manifest\_v1.tex}.
+
+The AEther-Flow Research Project. (2026d). \textit{NarrowMSCertEq v1 scoped
+evidence-status Gate Chair review} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260702-062/artifacts/narrow\_ms\_cert\_eq\_gate\_chair\_review\_v1.tex}.
+
+The AEther-Flow Research Project. (2026e). \textit{Source certificate
+operation laws v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260702-064/artifacts/source\_certificate\_operation\_laws\_v1.tex}.
+
+\end{document}

@@ -1,0 +1,52 @@
+task_id: "RT-20260704-021"
+task_type: "source_side_coupling_law_target_specification_under_explicit_certificates"
+status: "completed"
+created_at: "2026-07-04T21:44:19Z"
+updated_at: "2026-07-04T21:44:19Z"
+closed_at: "2026-07-04T21:44:19Z"
+parent_task_id: "RT-20260704-020"
+parent_handoff_id: "handoff-0566"
+decision_id: "DDR-20260704-021"
+job_id: "AJ-RT-20260704-021-001"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260704-021"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the current goal. This packet requires no human gate because it creates only a draft/control target specification and does not adopt a coupling law."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T01/P3-T02"
+  plan_task_name: "Selected theorem-route packet setup and source-side coupling-law target specification"
+objective: "Execute the source-side coupling-law target specification route selected by RT-20260704-020 under explicit certificates without adopting a coupling law or deriving matter coupling."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Define a source-side coupling-law target specification that states what a future coupling-law candidate must provide under explicit source certificates, no-target guards, detector-replacement boundary, fail-closed branches, and finite/local witness obligations."
+closure_status: "v16_p3_source_side_coupling_law_target_specification_no_adoption"
+claim_boundary:
+  allowed_scope: "P3 selected-route setup and draft/control source-side coupling-law target specification under explicit certificates"
+  selected_edge: "mc_source_matter_semantics_equivalence_theorem -> mc_coupling_law_target"
+  selected_route_id: "source_side_coupling_law_target_specification_under_explicit_certificates"
+  positive_status: "draft_control_coupling_law_target_specification_only"
+  theorem_executed: false
+  target_specification_defined: true
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  detector_semantics_adopted: false
+  stress_energy_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260704-021/artifacts/selected_matter_coupling_dag_edge_theorem_packet_setup_v16.md"
+  - "research_control/tasks/RT-20260704-021/artifacts/child_phys_math_source_side_coupling_law_target_spec.yaml"
+  - "research_control/tasks/RT-20260704-021/artifacts/child_phys_phil_source_side_coupling_law_target_spec.yaml"
+  - "research_control/tasks/RT-20260704-021/artifacts/parent_conflict_review_source_side_coupling_law_target_spec.yaml"
+  - "research_control/tasks/RT-20260704-021/artifacts/parent_fusion_notes_source_side_coupling_law_target_spec.md"
+  - "research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex"
+next_recommended_action: "Run one bounded smuggling-auditor@0.2.0 packet for P3-T03 selected theorem-route smuggling audit of the source-side coupling-law target specification."
+notes: "RT-20260704-021 completes the v16 P3 setup and target-specification route. It supplies formal draft/control definitions and fail-closed branches only; it does not construct or adopt a coupling-law candidate."
+documentation_impact_id: "DI-RT-20260704-021-001"

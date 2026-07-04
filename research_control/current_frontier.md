@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-020` and `handoff-0566`.
+`RT-20260704-021` and `handoff-0567`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-020` |
-| Latest handoff ID | `handoff-0566` |
-| Current status | `v16_p2_selected_source_side_coupling_law_target_specification_route_no_physics_delta` |
-| Current route family | matter_coupling_dag_next_edge_theorem_route_selection_v16 |
+| Active task ID | `RT-20260704-021` |
+| Latest handoff ID | `handoff-0567` |
+| Current status | `v16_p3_source_side_coupling_law_target_specification_no_adoption` |
+| Current route family | source_side_coupling_law_target_specification_under_explicit_certificates |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is source side coupling law target specification under explicit certificates |
-| Required next authority | source-side coupling-law target specification only |
-| Next recommended action | Run one bounded ontology-formalizer@0.2.0 packet to define a source-side coupling-law target specification under explicit source certificates without adopting a coupling law or deriving matter coupling. |
+| Current burden | none for physics derivation; live control burden is selected theorem route smuggling audit v16 |
+| Required next authority | smuggling audit only |
+| Next recommended action | Run one bounded smuggling-auditor@0.2.0 packet for P3-T03 selected theorem-route smuggling audit of the source-side coupling-law target specification. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-020/00_TASK.yaml`.
-- Active task objective: Register v16 as implementation guidance, reconcile the post-v15 baseline, audit matter-coupling DAG readiness, score candidate DAG edges, and select exactly one next theorem-route edge without executing a theorem or promoting a physics claim.
-- Latest handoff path: `research_control/handoffs/handoff-0566.yaml`.
-- Latest handoff summary: RT-20260704-020 completed the v16 matter-coupling DAG next-edge selector with no physics delta.
-- Current route family: matter_coupling_dag_next_edge_theorem_route_selection_v16.
-- Next recommended action: Run one bounded ontology-formalizer@0.2.0 packet to define a source-side coupling-law target specification under explicit source certificates without adopting a coupling law or deriving matter coupling.
+- Active task path: `research_control/tasks/RT-20260704-021/00_TASK.yaml`.
+- Active task objective: Execute the source-side coupling-law target specification route selected by RT-20260704-020 under explicit certificates without adopting a coupling law or deriving matter coupling.
+- Latest handoff path: `research_control/handoffs/handoff-0567.yaml`.
+- Latest handoff summary: RT-20260704-021 completed the v16 P3 source-side coupling-law target specification under explicit certificates with no adoption.
+- Current route family: source_side_coupling_law_target_specification_under_explicit_certificates.
+- Next recommended action: Run one bounded smuggling-auditor@0.2.0 packet for P3-T03 selected theorem-route smuggling audit of the source-side coupling-law target specification.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded ontology-formalizer@0.2.0 packet to define a source-side coupling-law target specification under explicit source certificates without adopting a coupling law or deriving matter coupling.
+Run one bounded smuggling-auditor@0.2.0 packet for P3-T03 selected theorem-route smuggling audit of the source-side coupling-law target specification.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-020`;
-- latest handoff: `handoff-0566`;
-- current status: `v16_p2_selected_source_side_coupling_law_target_specification_route_no_physics_delta`;
+- active task: `RT-20260704-021`;
+- latest handoff: `handoff-0567`;
+- current status: `v16_p3_source_side_coupling_law_target_specification_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0566.yaml`
-- `research_control/tasks/RT-20260704-020/00_TASK.yaml`
+- `research_control/handoffs/handoff-0567.yaml`
+- `research_control/tasks/RT-20260704-021/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0566*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0567*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
