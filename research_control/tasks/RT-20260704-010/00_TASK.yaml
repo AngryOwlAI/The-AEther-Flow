@@ -1,0 +1,34 @@
+task_id: "RT-20260704-010"
+task_type: "negative_result_inventory_v15"
+status: "completed"
+created_at: "2026-07-04T11:13:16Z"
+updated_at: "2026-07-04T11:13:16Z"
+parent_task_id: "RT-20260704-009"
+parent_handoff_id: "handoff-0555"
+decision_id: "DDR-20260704-010"
+job_id: "AJ-RT-20260704-010-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260704-010"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P17"
+  plan_task_id: "P17-T01"
+  plan_task_name: "Negative-result inventory"
+objective: "Inventory frozen obstructed or failed routes as first-class scoped research outputs."
+target_derivation_milestone: "none"
+milestone_burden: "P17-T01 process-control inventory; no physics derivation milestone is advanced."
+claim_boundary:
+  allowed_scope: "P17-T01 scoped negative-result inventory"
+  proof_authority: false
+  support_only: true
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  future_source_extension_impossibility_authorized: false
+  global_theory_rejection_authorized: false
+planned_outputs:
+  - "research_control/design/negative_result_inventory_v15.md"
+next_recommended_action: "Run one bounded v15 P17-T02 negative-result publication brief packet."

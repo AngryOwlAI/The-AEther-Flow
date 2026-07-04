@@ -138,6 +138,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `research_control/design/matter_coupling_derivation_moratorium.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `research_control/design/narrow_theorem_task_template.md`
+- `MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `research_control/design/negative_result_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `research_control/design/no_leap_route_rule.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `research_control/design/no_target_certificate_hygiene_doctrine.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
@@ -720,6 +721,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `wiki/markdown/md-research-control-design-matter-coupling-derivation-moratorium.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `wiki/markdown/md-research-control-design-matter-coupling-pre-adoption-checklist.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `wiki/markdown/md-research-control-design-narrow-theorem-task-template.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `wiki/markdown/md-research-control-design-negative-result-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-LEAP-ROUTE-RULE` `wiki/markdown/md-research-control-design-no-leap-route-rule.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-CERTIFICATE-HYGIENE-DOCTRINE` `wiki/markdown/md-research-control-design-no-target-certificate-hygiene-doctrine.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
