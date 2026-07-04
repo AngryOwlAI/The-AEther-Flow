@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-005` and `handoff-0551`.
+`RT-20260704-006` and `handoff-0552`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-005` |
-| Latest handoff ID | `handoff-0551` |
-| Current status | `post_v15_p15_t02_formalization_pilot_completed_next_p15_t03_no_physics_delta` |
-| Current route family | post v15 p15 t02 formalization pilot completed next p15 t03 no physics delta |
+| Active task ID | `RT-20260704-006` |
+| Latest handoff ID | `handoff-0552` |
+| Current status | `post_v15_p15_t03_formalization_pilot_integrated_next_p16_t01_no_physics_delta` |
+| Current route family | post v15 p15 t03 formalization pilot integrated next p16 t01 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is formalization pilot integration report |
-| Required next authority | P15-T03 formalization pilot integration report |
-| Next recommended action | Run one bounded v15 P15-T03 formalization pilot integration report. |
+| Current burden | none for physics derivation; live control burden is red team scope and packet template |
+| Required next authority | P16-T01 red-team scope and packet template |
+| Next recommended action | Run one bounded v15 P16-T01 red-team scope and packet template. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-005/00_TASK.yaml`.
-- Active task objective: Implement the selected fail-closed missing-certificate lemma as a support-only typed executable spec plus unit tests.
-- Latest handoff path: `research_control/handoffs/handoff-0551.yaml`.
-- Latest handoff summary: RT-20260704-005 completed v15 P15-T02 support-only formalization pilot with no physics delta.
-- Current route family: post v15 p15 t02 formalization pilot completed next p15 t03 no physics delta.
-- Next recommended action: Run one bounded v15 P15-T03 formalization pilot integration report.
+- Active task path: `research_control/tasks/RT-20260704-006/00_TASK.yaml`.
+- Active task objective: Determine whether the support-only formalization pilot should become a reusable lane.
+- Latest handoff path: `research_control/handoffs/handoff-0552.yaml`.
+- Latest handoff summary: RT-20260704-006 completed v15 P15-T03 formalization pilot integration report with no physics delta.
+- Current route family: post v15 p15 t03 formalization pilot integrated next p16 t01 no physics delta.
+- Next recommended action: Run one bounded v15 P16-T01 red-team scope and packet template.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P15-T03 formalization pilot integration report.
+Run one bounded v15 P16-T01 red-team scope and packet template.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,23 +223,23 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-005`;
-- latest handoff: `handoff-0551`;
-- current status: `post_v15_p15_t02_formalization_pilot_completed_next_p15_t03_no_physics_delta`;
+- active task: `RT-20260704-006`;
+- latest handoff: `handoff-0552`;
+- current status: `post_v15_p15_t03_formalization_pilot_integrated_next_p16_t01_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `claim_boundary`: PASS;
-- latest handoff validation `support_only_receipt`: PASS;
-- latest handoff validation `unit_tests`: PASS;
+- latest handoff validation `one_next_action_selected`: PASS;
+- latest handoff validation `required_report_sections`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0551.yaml`
-- `research_control/tasks/RT-20260704-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0552.yaml`
+- `research_control/tasks/RT-20260704-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -255,7 +255,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0551*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0552*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
