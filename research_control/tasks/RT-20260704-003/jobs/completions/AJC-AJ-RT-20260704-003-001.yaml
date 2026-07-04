@@ -1,0 +1,223 @@
+completion_path: "research_control/tasks/RT-20260704-003/jobs/completions/AJC-AJ-RT-20260704-003-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260704-003-001"
+job_id: "AJ-RT-20260704-003-001"
+task_id: "RT-20260704-003"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-04T06:18:25Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P14-T03"
+  plan_phase_id: "P14"
+  implemented_task_scope: "Completed the v15 P14-T03 public documentation update packet by propagating the simplified public status table and epistemic category glossary into permitted public reader surfaces and source-bound publication surfaces."
+  completed_v15_tasks_to_date:
+    - "P14-T01"
+    - "P14-T02"
+    - "P14-T03"
+  downstream_tasks_not_implemented:
+    - "P15 support-only proof-assistant pilots"
+    - "P16 external red-team review process"
+    - "P17 negative-result publication track"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  p14_t03_completed: true
+  phase_p14_completed: true
+output_paths:
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "github-facing/aether-flow-physics-program-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "github-facing/validator-operator-workflow-explainer.md"
+  - "github-facing/memory-system-explainer.md"
+  - "html/project-overview-explainer.html"
+  - "html/aether-flow-physics-program-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "html/validator-operator-workflow-explainer.html"
+  - "html/memory-system-explainer.html"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "markdown/html-explainer-specs/validator-operator-workflow-explainer.md"
+  - "markdown/html-explainer-specs/memory-system-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/publication-briefs/validator-operator-workflow.publication-brief.md"
+  - "markdown/publication-briefs/memory-system.publication-brief.md"
+  - "research_control/tasks/RT-20260704-003/artifacts/p14_t03_public_status_documentation_receipt.md"
+  - "research_control/tasks/RT-20260704-003/artifacts/p14_t03_local_ci_equivalent_report.json"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260704-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260704-003/DDR-20260704-003.md"
+  - "research_control/tasks/RT-20260704-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260704-003/jobs/AJ-RT-20260704-003-001.yaml"
+  - "research_control/tasks/RT-20260704-003/jobs/completions/AJC-AJ-RT-20260704-003-001.yaml"
+  - "research_control/tasks/RT-20260704-003/roles/documentation-curator@2.0.0--RT-20260704-003.yaml"
+  - "research_control/handoffs/handoff-0549.yaml"
+  - "research_control/handoffs/handoff-0549.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+command_results:
+  - ".venv/bin/python scripts/validate_publication_process.py --root . | exit_code=0 | status=PASS checked_briefs=17 checked_html_runtime=17 checked_migrated_surfaces=17"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --json --changed | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1395 historical_warnings_only=true"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=572 relationship_row_count=3017 semantic_row_count=572 vault_row_count=572"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS rendered_hash=9b949ff5d7af7b6efcff11dd2da70b7e34da71849aa645c86eaf9624a43761f7"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --output research_control/tasks/RT-20260704-003/artifacts/p14_t03_local_ci_equivalent_report.json | exit_code=0 | status=PASS commands=12 required_failure_labels=0 advisory_failure_labels=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 572
+    relationship_row_count: 3017
+    semantic_row_count: 572
+    vault_row_count: 572
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/public_status_exists_does_not_exist_source_spec.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/epistemic_category_glossary.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/epistemic_category_glossary.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"public status documentation update\" --limit 10 --json"
+      query_type: "search"
+      query_text: "public status documentation update"
+      returned_object_ids:
+        - "MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER"
+        - "MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
+        - "MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER"
+        - "MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      source_hash: "394442ee1f03cf1d6578f777fa4f56a68e110989365ff936e54058cb5d3ff126"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/epistemic_category_glossary.md"
+      source_hash: "036596ccc2f35b3e0693b08e0968e1ca212b032b426c4f7106e6c766f92bb4a3"
+    - object_id: "MD-HTML-SPEC-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/html-explainer-specs/validator-operator-workflow-explainer.md"
+      source_hash: "843665496175f4619a3e2dde0bd85d8978ba960c7df589b553402eb0f1339104"
+    - object_id: "MD-HTML-SPEC-CLAIM-GATES-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/html-explainer-specs/claim-gates-explainer.md"
+      source_hash: "50998ba602ac459c06b132fc43c272807265cf0551912d8552f8580747d7b4fb"
+    - object_id: "MD-HTML-SPEC-GR-DERIVATION-ROADMAP-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+      source_hash: "85f9fa0e5e364fec69de0b1a65bcf6bebc614aee72d2dda31793bfe846df53fa"
+    - object_id: "MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+      source_hash: "80c629a19f555885efefdad3fd9dfedf2266cc2eed2664a820978e29edbd5f6b"
+public_documentation_result:
+  public_status_table_source: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  category_glossary_source: "research_control/design/epistemic_category_glossary.md"
+  public_surfaces_updated_count: 8
+  html_source_specs_updated_count: 7
+  publication_briefs_updated_count: 7
+  generated_html_derivatives_synchronized_count: 7
+  no_physics_delta: true
+validation_status_detail: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight reported PASS"
+      - "targeted v15 P14-T01 P14-T02 and public-status search lookups returned canonical objects"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "publication process validator reported PASS"
+      - "public-status documentation receipt records updated surfaces and boundaries"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "README GitHub-facing pages HTML source specs publication briefs generated HTML derivatives registries and documentation-impact record were updated"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier check reported PASS with rendered_hash 9b949ff5d7af7b6efcff11dd2da70b7e34da71849aa645c86eaf9624a43761f7"
+      - "dependency graph check reported PASS for JSON Markdown and DOT outputs"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap memory system reported PASS after HTML source-basis hash synchronization"
+      - "post-bootstrap memory preflight refreshed retrieval layers and reported PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-path claim-language lint reported PASS with zero hard failures and historical warnings only"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+claim_boundary:
+  route_freeze_authorized: false
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_authorized: false
+  einstein_equation_route_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+next_recommended_action: "Run one bounded v15 P15-T01 support-only proof-assistant pilot scope selector packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

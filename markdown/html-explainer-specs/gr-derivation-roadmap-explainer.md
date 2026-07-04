@@ -13,6 +13,8 @@ migration_status: "reviewed"
 source_materials:
   - "research_control/design/gr_derivation_burden_map.md"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "research_control/design/frontier_theorem_inventory.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_JOB_REGISTRY.csv"
@@ -48,10 +50,15 @@ not a physics proof, not a ledger update, and not a claim-promotion record.
   matter-coupling scoped evidence/preconditions, not-started Einstein-equation
   burdens, blocked benchmark promotion, human-gated benchmark closure, and
   locally frozen finite toy route status.
-- `research_control/design/public_status_table_source_spec.md` defines the
-  public status table contract and row-specific blocked overreads for `M_src`,
-  `g_eff`, `matter_coupling`, high-risk matter-sector objects, Einstein
-  equations, benchmark promotion, and finite toy status.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  defines the simplified public status table contract and row-specific blocked
+  overreads for proposed AEther-flow ontology status, open GR derivation,
+  `M_src`, `g_eff`, `matter_coupling`, high-risk matter-sector objects,
+  Einstein equations, benchmark promotion, and completed derivation.
+- `research_control/design/epistemic_category_glossary.md` defines category
+  distinctions for interpretation, model, benchmark compatibility,
+  first-principles recovery, derivation, evidence/precondition, adoption,
+  promotion, validator receipt, publication surface, and authority source.
 - `research_control/design/frontier_theorem_inventory.md` is the canonical
   frontier inventory source for the current theorem-like, witness,
   obstruction, scoped-evidence, frozen-route, and missing-theorem review
@@ -112,10 +119,12 @@ browser-side Mermaid.
   `new_mathematical_payload`.
 - Preserves `draft/control`, `source-only`, `source-extension data`, `local`,
   `exact-branch`, and `human-gated` qualifiers.
-- Preserves current public status table wording for high-risk rows: `M_src`
-  is scoped source-only, `g_eff` is scoped source-extension object status,
-  matter coupling remains scoped evidence/precondition only, Einstein
-  equations remain not started, and benchmark promotion remains blocked.
+- Preserves current P14 public status wording for high-risk rows:
+  AEther-flow is a proposed research ontology / explanatory frame and not an
+  established physical ontology; GR is not derived; `M_src` is scoped
+  source-only; `g_eff` is scoped source-extension object status; matter
+  coupling remains scoped evidence/precondition only; Einstein equations
+  remain not started; and benchmark promotion remains blocked.
 - Explains source-extension and finite toy categories without treating them as
   GR recovery shortcuts.
 - Summarizes the frontier theorem inventory while naming

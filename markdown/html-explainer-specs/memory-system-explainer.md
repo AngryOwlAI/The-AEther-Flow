@@ -20,6 +20,8 @@ source_materials:
   - "registries/WIKI_ARTIFACT_REGISTRY.csv"
   - "registries/OBSIDIAN_VAULT_REGISTRY.csv"
   - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "FOLDER_MAP.md"
 claim_boundary: "Human-only publication explainer for Memory, Registries, Wiki, And Retrieval Surfaces. It explains existing source-first memory behavior, registry routing and provenance roles, generated wiki notes, content semantics, Obsidian vault mirrors, SQLite lookup, memory preflight receipts, freshness warnings, and bootstrap refresh boundaries without changing memory-system behavior, registry schema, validator behavior, routing behavior, role authority, checkpoint behavior, generated-output authority, source authority, or physics claim status."
 human_visual_only: true
@@ -51,6 +53,12 @@ behavior or physics claim status.
 - `registries/WIKI_ARTIFACT_REGISTRY.csv`: Generated wiki-note rows and source-object hashes.
 - `registries/OBSIDIAN_VAULT_REGISTRY.csv`: Local Obsidian note and raw mirror paths.
 - `registries/CONTENT_SEMANTIC_REGISTRY.csv`: Deterministic semantic extraction rows for local search.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`:
+  current simplified public status source spec that memory should route
+  readers to before any high-risk public summary.
+- `research_control/design/epistemic_category_glossary.md`: current glossary
+  for category distinctions such as validator receipt versus scientific proof
+  and publication surface versus authority source.
 - `FOLDER_MAP.md`: Generated folder classification for canonical, generated, local, tooling, and reserved lanes.
 
 ## Required Reader Outcome
@@ -87,6 +95,8 @@ role authority, checkpoint behavior, source authority, or physics status.
 - Uses the bottom Reader Scope hook immediately above the marked authority footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
 - Includes visible source paths in both public derivatives.
+- Routes current public status lookup to the P14-T01 simplified table and
+  P14-T02 glossary before any generated note or local retrieval layer.
 - Preserves generated noncanonical status and source authority boundaries.
 - Does not change validators, commands, schemas, role contracts, skill contracts, routing behavior, checkpoint behavior, generated-output authority, or physics claim status.
 - Uses screenshot QA and before/after review evidence for the changed HTML derivative.

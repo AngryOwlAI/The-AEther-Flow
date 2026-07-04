@@ -17,6 +17,8 @@ source_materials:
   - "registries/TEX_SOURCE_REGISTRY.csv"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
 claim_boundary: "Human-only publication explainer for the exact-GR benchmark boundary. It distinguishes adoption, compatibility, derivation, and promotion without creating physics claims, benchmark promotion, Gate Chair approval, routing authority, validator authority, or generated-output authority."
 human_visual_only: true
 standalone_html: true
@@ -49,10 +51,15 @@ map, not a proof and not a claim gate.
   authority.
 - `research_control/design/gr_derivation_burden_map.md` names the open burden
   chain from source ontology through benchmark promotion.
-- `research_control/design/public_status_table_source_spec.md` supplies the
-  public-safe high-risk status table, including blocked benchmark promotion,
-  blocked Einstein equations, scoped `M_src`, scoped `g_eff`, and scoped
-  matter-coupling evidence/preconditions.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  supplies the simplified public exists / does-not-exist status table,
+  including proposed AEther-flow ontology status, open GR derivation, blocked
+  benchmark promotion, blocked Einstein equations, scoped `M_src`, scoped
+  `g_eff`, and scoped matter-coupling evidence/preconditions.
+- `research_control/design/epistemic_category_glossary.md` supplies category
+  distinctions for interpretation, model, benchmark compatibility, derivation,
+  evidence/precondition, adoption, promotion, validator receipt, publication,
+  and authority source.
 
 ## Required Reader Outcome
 
@@ -89,9 +96,10 @@ generic documentation-flow diagram.
 - Includes a failure-mode panel for common overclaims.
 - Names `registries/TEX_SOURCE_REGISTRY.csv` and
   `registries/CLAIM_BOUNDARY_REGISTRY.csv` as source paths.
-- Names `research_control/design/public_status_table_source_spec.md` when
-  explaining public status, and keeps benchmark promotion blocked by upstream
-  derivation burdens and protected authority.
+- Names `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  and `research_control/design/epistemic_category_glossary.md` when explaining
+  public status, and keeps benchmark promotion blocked by upstream derivation
+  burdens and protected authority.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the

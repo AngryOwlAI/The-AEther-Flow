@@ -86,15 +86,19 @@ the existing boundary pattern.
 
 ## Current Public Status Gate
 
-The status table source spec at
-[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md)
-is the public documentation contract for layered status wording. It does not
-create a Gate Chair verdict and it cannot override the ledger, registered
-science sources, or claim-boundary rows.
+The simplified exists / does-not-exist table source spec at
+[`../research_control/design/public_status_exists_does_not_exist_source_spec.md`](../research_control/design/public_status_exists_does_not_exist_source_spec.md)
+and the epistemic category glossary at
+[`../research_control/design/epistemic_category_glossary.md`](../research_control/design/epistemic_category_glossary.md)
+are the public documentation contracts for status wording and category
+separation. They do not create a Gate Chair verdict and they cannot override
+the ledger, registered science sources, or claim-boundary rows.
 
 Current public wording must preserve these gate distinctions:
 
 - GR is not derived from source substrate.
+- AEther-flow is a proposed research ontology / explanatory frame, not an
+  established physical ontology.
 - `M_src` is scoped source-only status, not a target manifold, metric, or
   downstream GR result.
 - `g_eff` is scoped source-extension object status, not an unscoped Lorentzian
@@ -138,6 +142,8 @@ The safe answer is usually narrower than the tempting summary.
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
 - AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].
 - AEther-Flow Project. (2026). `research_control/design/gr_derivation_burden_map.md` [GR derivation burden map].
+- AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Simplified public exists / does-not-exist status table source spec].
+- AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_ROLE_REGISTRY.csv` [Agent role registry].
 

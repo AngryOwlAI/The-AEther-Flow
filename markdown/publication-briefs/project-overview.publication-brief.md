@@ -16,6 +16,8 @@ source_basis:
   - "AGENTS.md"
   - "research_control/README.md"
   - "research_control/design/documentation_curator_publication_process.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
 authority_boundaries:
   - "Generated GitHub Markdown and HTML are noncanonical derivatives."
   - "The page does not promote physics claims, role authority, routing behavior, or generated-output authority."

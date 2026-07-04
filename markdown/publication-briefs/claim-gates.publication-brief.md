@@ -16,6 +16,8 @@ source_basis:
   - "AGENTS.md"
   - "research_control/README.md"
   - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_ROLE_REGISTRY.csv"
 authority_boundaries:

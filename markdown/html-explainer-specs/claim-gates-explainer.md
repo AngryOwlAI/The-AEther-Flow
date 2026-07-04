@@ -14,6 +14,8 @@ source_materials:
   - "AGENTS.md"
   - "research_control/README.md"
   - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_ROLE_REGISTRY.csv"
 claim_boundary: "Human-only publication explainer for claim gates, negative results, and freeze criteria. It explains proposal, audit, refutation, stress-test, completion, handoff, freeze, and human-gate concepts without creating a claim boundary, issuing a Gate Chair verdict, promoting benchmark status, rejecting the global ontology, changing role authority, or treating validator pass state or generated public documentation as scientific evidence."
@@ -46,10 +48,13 @@ ontology.
   burdens, allowed Distance-to-GR status vocabulary, mathematical payload
   expectations, constructive preference, freeze criteria, source-extension
   categories, and finite toy model boundaries.
-- `research_control/design/public_status_table_source_spec.md` supplies the
-  public high-risk status contract and examples where scoped acceptance or
-  scoped evidence/precondition status must not be overread as downstream
-  physics promotion.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  supplies the simplified public high-risk status contract and examples where
+  scoped acceptance or scoped evidence/precondition status must not be overread
+  as downstream physics promotion.
+- `research_control/design/epistemic_category_glossary.md` supplies the public
+  category distinctions that keep interpretation, model, evidence, adoption,
+  validator receipt, publication surface, and authority source separate.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` supplies active examples of
   allowed claims, forbidden claims, required gates, and authority source
   paths.
@@ -98,7 +103,9 @@ source-to-validation diagram or browser-side Mermaid.
 - Includes allowed and forbidden claim examples grounded in
   `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
 - Includes public-status gate examples grounded in
-  `research_control/design/public_status_table_source_spec.md`, including why
+  `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  and `research_control/design/epistemic_category_glossary.md`, including why
+  AEther-flow is proposed research ontology / explanatory frame only and why
   scoped `M_src`, scoped `g_eff`, and scoped matter-coupling
   evidence/preconditions are not source-law, matter-coupling,
   Einstein-equation, benchmark, or completed-derivation claims.

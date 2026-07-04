@@ -36,13 +36,19 @@ labels. A pass in a documentation or control check is not physics evidence.
 ## Current Status-Layer Boundary
 
 For public status wording, inspect
-[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
-That source spec records the current status-layer contract for high-risk rows.
-It is not a benchmark promotion, Gate Chair verdict, or science authority
-above the Distance-to-GR ledger and registered source evidence.
+[`../research_control/design/public_status_exists_does_not_exist_source_spec.md`](../research_control/design/public_status_exists_does_not_exist_source_spec.md)
+and
+[`../research_control/design/epistemic_category_glossary.md`](../research_control/design/epistemic_category_glossary.md).
+Those sources record the current public exists / does-not-exist contract and
+the category distinctions that keep benchmark compatibility, derivation,
+evidence, adoption, promotion, validator receipts, publication, and authority
+separate. They are not benchmark promotion, Gate Chair verdicts, or science
+authority above the Distance-to-GR ledger and registered source evidence.
 
 The current boundary is exact: GR is not derived from the source substrate;
-`M_src` is scoped source-only status and not a target manifold or metric;
+AEther-flow is a proposed research ontology or explanatory frame, not an
+established physical ontology; `M_src` is scoped source-only status and not a
+target manifold or metric;
 `g_eff` is scoped source-extension object status and not an unscoped
 Lorentzian metric; matter coupling remains not derived and not adopted;
 `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
@@ -111,6 +117,8 @@ GitHub-facing Markdown into scientific authority.
 - AEther-Flow Project. (2026). `registries/TEX_SOURCE_REGISTRY.csv` [TeX source registry].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `research_control/design/gr_derivation_burden_map.md` [GR derivation burden map].
+- AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Simplified public exists / does-not-exist status table source spec].
+- AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
 
 ## Safe Summary
 

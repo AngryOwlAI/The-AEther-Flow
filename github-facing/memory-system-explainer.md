@@ -9,18 +9,22 @@ The practical workflow is therefore two-stage. Use memory preflight to locate th
 ## Current Public Status Lookup
 
 For current public status wording, memory lookup should route readers to
-[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md)
-and then to the ledger or cited evidence path for authority. The source spec
-is a documentation contract; it is not physics proof and it does not override
-tracked science or registry authority.
+[`../research_control/design/public_status_exists_does_not_exist_source_spec.md`](../research_control/design/public_status_exists_does_not_exist_source_spec.md)
+and
+[`../research_control/design/epistemic_category_glossary.md`](../research_control/design/epistemic_category_glossary.md),
+then to the ledger or cited evidence path for authority. These source specs
+are documentation contracts; they are not physics proof and they do not
+override tracked science or registry authority.
 
-The lookup boundary is explicit: GR is not derived; `M_src` is scoped
-source-only status; `g_eff` is scoped source-extension object status; matter
-coupling remains not derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
-is scoped certificate-indexed evidence/precondition, not an adopted source
-law; and no-target certificates do not provide positive matter theory,
-detector semantics, stress-energy semantics, matter action, Einstein
-equations, benchmark promotion, or completed derivation.
+The lookup boundary is explicit: GR is not derived; AEther-flow is a proposed
+research ontology / explanatory frame, not an established physical ontology;
+`M_src` is scoped source-only status; `g_eff` is scoped source-extension object
+status; matter coupling remains not derived and not adopted;
+`RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
+evidence/precondition, not an adopted source law; and no-target certificates
+do not provide positive matter theory, detector semantics, stress-energy
+semantics, matter action, Einstein equations, benchmark promotion, or
+completed derivation.
 
 ## Authority And Retrieval Layers
 

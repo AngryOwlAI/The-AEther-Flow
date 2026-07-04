@@ -10,16 +10,20 @@ to its proper evidential weight.
 
 ## Current Status-Layer Boundary
 
-The current public status table source spec is
-[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
-Use it for public wording when this roadmap mentions high-risk rows. It is a
-documentation contract, not independent physics authority, and it remains
-downstream of the Distance-to-GR ledger and the cited task evidence.
+The current simplified public status source spec is
+[`../research_control/design/public_status_exists_does_not_exist_source_spec.md`](../research_control/design/public_status_exists_does_not_exist_source_spec.md).
+Use it with the epistemic category glossary at
+[`../research_control/design/epistemic_category_glossary.md`](../research_control/design/epistemic_category_glossary.md)
+when this roadmap mentions high-risk rows. These are documentation contracts,
+not independent physics authority, and they remain downstream of the
+Distance-to-GR ledger and the cited task evidence.
 
-The key public-safe updates are: GR is not derived; `M_src` has scoped
-source-only status but is not a target manifold or metric; `g_eff` has scoped
-source-extension object status but is not an unscoped Lorentzian metric;
-matter coupling remains not derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
+The key public-safe updates are: GR is not derived; AEther-flow is a proposed
+research ontology / explanatory frame and not an established physical
+ontology; `M_src` has scoped source-only status but is not a target manifold
+or metric; `g_eff` has scoped source-extension object status but is not an
+unscoped Lorentzian metric; matter coupling remains not derived and not
+adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
 is scoped certificate-indexed evidence/precondition, not an adopted source
 law; and no-target certificates do not provide positive matter theory.
 
@@ -166,6 +170,8 @@ and human gates where the control system says a gate is required.
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_JOB_REGISTRY.csv` [AgentJob registry].
 - AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].
+- AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Simplified public exists / does-not-exist status table source spec].
+- AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
 
 ## Reader Scope

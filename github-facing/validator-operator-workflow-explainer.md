@@ -8,16 +8,20 @@ The final interpretation is bounded. PASS means the named deterministic check ac
 
 ## Public Status Check Boundary
 
-For public status wording, the current source is
-[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
-Operator checks can verify that public surfaces preserve that wording, but a
-PASS result still does not promote physics claims or change source authority.
+For public status wording, the current sources are
+[`../research_control/design/public_status_exists_does_not_exist_source_spec.md`](../research_control/design/public_status_exists_does_not_exist_source_spec.md)
+and
+[`../research_control/design/epistemic_category_glossary.md`](../research_control/design/epistemic_category_glossary.md).
+Operator checks can verify that public surfaces preserve that wording and
+category separation, but a PASS result still does not promote physics claims
+or change source authority.
 
-The minimum public status assertions are: GR is not derived; `M_src` is scoped
-source-only status, not a target manifold or metric; `g_eff` is scoped
-source-extension object status, not an unscoped Lorentzian metric or
-matter-coupling result; matter coupling remains not derived and not adopted;
-`RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
+The minimum public status assertions are: GR is not derived; AEther-flow is a
+proposed research ontology / explanatory frame, not an established physical
+ontology; `M_src` is scoped source-only status, not a target manifold or
+metric; `g_eff` is scoped source-extension object status, not an unscoped
+Lorentzian metric or matter-coupling result; matter coupling remains not
+derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
 evidence/precondition, not an adopted source law; and no-target certificates do
 not provide positive matter theory, detector semantics, stress-energy
 semantics, matter action, Einstein equations, benchmark promotion, or

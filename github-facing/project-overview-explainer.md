@@ -53,13 +53,19 @@ from the publication brief and source spec.
 
 ## Current Status-Layer Boundary
 
-For current public wording, use the status table source spec at
-[`../research_control/design/public_status_table_source_spec.md`](../research_control/design/public_status_table_source_spec.md).
-It is a documentation contract for public status layers, not physics proof and
-not a replacement for the Distance-to-GR ledger or registered science sources.
+For current public wording, use the simplified exists / does-not-exist table
+source spec at
+[`../research_control/design/public_status_exists_does_not_exist_source_spec.md`](../research_control/design/public_status_exists_does_not_exist_source_spec.md)
+and the epistemic category glossary at
+[`../research_control/design/epistemic_category_glossary.md`](../research_control/design/epistemic_category_glossary.md).
+These are documentation contracts for public status layers, not physics proof
+and not replacements for the Distance-to-GR ledger or registered science
+sources.
 
 The public-safe status is: GR is not derived from the source substrate;
-`M_src` is scoped source-only status, not a target manifold or metric;
+AEther-flow is a proposed research ontology or explanatory frame, not an
+established physical ontology; `M_src` is scoped source-only status, not a
+target manifold or metric;
 `g_eff` is scoped source-extension object status, not an unscoped Lorentzian
 metric or matter-coupling result; matter coupling remains not derived and not
 adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
@@ -67,6 +73,14 @@ certificate-indexed evidence/precondition, not an adopted source law; and
 no-target certificates do not provide positive matter theory, detector
 semantics, stress-energy semantics, matter action, Einstein equations,
 benchmark promotion, or completed derivation.
+
+Compact reader check:
+
+| Target | Exists in the tracked record | Does not exist |
+| --- | --- | --- |
+| AEther-flow ontology | Proposed research ontology / explanatory frame. | Established physical ontology or completed GR foundation. |
+| GR derivation | Open burden. | Completed first-principles derivation. |
+| Validator receipts and generated pages | Operational or reader-facing evidence. | Scientific proof or adoption authority. |
 
 ## Practical Reading Path
 
@@ -116,6 +130,13 @@ permissions, or generated-output authority.
   `research_control/design/documentation_curator_publication_process.md`
   [Publication brief, source spec, GitHub Markdown, tracked HTML, review, and
   validation process.]
+- AEther-Flow Project. (2026).
+  `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  [Simplified public exists / does-not-exist status table source spec.]
+- AEther-Flow Project. (2026).
+  `research_control/design/epistemic_category_glossary.md`
+  [Epistemic category glossary for interpretation, model, evidence, adoption,
+  promotion, validator receipt, publication, and authority categories.]
 
 ## Safe Operating Summary
 

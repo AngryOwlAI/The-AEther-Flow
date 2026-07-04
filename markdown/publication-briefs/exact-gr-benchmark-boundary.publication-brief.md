@@ -18,6 +18,8 @@ source_basis:
   - "registries/TEX_SOURCE_REGISTRY.csv"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
 authority_boundaries:
   - "The page may explain the conservative exact-GR benchmark boundary but cannot certify benchmark status."
   - "The page must not imply a completed substrate derivation, benchmark promotion, Gate Chair verdict, or generated-output authority."
@@ -41,4 +43,3 @@ migration_status: "reviewed"
 This Phase 1A page reduces the highest public-risk ambiguity: the project can
 adopt an exact-GR benchmark for observable-scale discipline without having
 already derived that benchmark from AEther / AEther-flow substrate structure.
-

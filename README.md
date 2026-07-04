@@ -92,15 +92,20 @@ The scoped benchmark boundary is conservative: observable-scale physics remains 
 
 ## Current Public Status Boundary
 
-The public status table source spec is
-[`research_control/design/public_status_table_source_spec.md`](research_control/design/public_status_table_source_spec.md).
-It is the current public documentation contract for status-layer wording. It
-does not promote physics claims and it does not override the Distance-to-GR
+The simplified public status table source spec is
+[`research_control/design/public_status_exists_does_not_exist_source_spec.md`](research_control/design/public_status_exists_does_not_exist_source_spec.md).
+The paired epistemic category glossary is
+[`research_control/design/epistemic_category_glossary.md`](research_control/design/epistemic_category_glossary.md).
+Together they are the current public documentation contract for separating
+what exists in the tracked record from what must not be inferred from it. They
+do not promote physics claims and they do not override the Distance-to-GR
 ledger, registered science sources, task completions, Gate Chair records, or
 claim-boundary registry rows.
 
 Current public-safe reading:
 
+- The `Æther` / `Æther-flow` ontology is a proposed research ontology and
+  explanatory frame; it is not an established physical ontology.
 - GR has not been derived from the source substrate in the tracked project
   state.
 - `M_src` has scoped source-only status; it is not a target manifold, metric,
@@ -117,6 +122,17 @@ Current public-safe reading:
 - No-target certificates or certificate-indexed evidence do not provide
   positive matter theory, detector semantics, stress-energy semantics, matter
   action, Einstein equations, benchmark promotion, or completed derivation.
+
+Compact public table:
+
+| Target | What exists | What does not exist |
+| --- | --- | --- |
+| `Æther` / `Æther-flow` ontology | Proposed research ontology / explanatory frame. | Established physical ontology or completed foundation for deriving GR. |
+| GR derivation | Open research burden. | Completed first-principles derivation from the source substrate. |
+| `M_src` | Scoped source-only object. | Target manifold, metric, matter-coupling result, or GR derivation. |
+| `g_eff` | Scoped source-extension object. | Unscoped Lorentzian metric, matter coupling, Einstein equations, or benchmark promotion. |
+| Matter sector | Scoped evidence/preconditions. | Matter semantics, detector semantics, coupling law, matter coupling, stress-energy semantics, matter action, or variation principle. |
+| Validator receipts and generated pages | Operational or reader-facing evidence about checked files. | Scientific proof, adoption authority, benchmark promotion, or completed derivation. |
 
 <p align="left">
    Watch the Æther-Flow Ontology Video:</br>

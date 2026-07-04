@@ -16,6 +16,8 @@ visual_strategy: "process_timeline"
 source_basis:
   - "research_control/design/gr_derivation_burden_map.md"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "research_control/design/frontier_theorem_inventory.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_JOB_REGISTRY.csv"

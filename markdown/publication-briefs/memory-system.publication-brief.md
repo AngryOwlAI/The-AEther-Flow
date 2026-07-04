@@ -22,6 +22,8 @@ source_basis:
   - "registries/WIKI_ARTIFACT_REGISTRY.csv"
   - "registries/OBSIDIAN_VAULT_REGISTRY.csv"
   - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "FOLDER_MAP.md"
 authority_boundaries:
   - "The page may explain existing source-first memory behavior, registry routing and provenance roles, generated wiki notes, content semantics, Obsidian vault mirrors, SQLite lookup, memory preflight receipts, freshness warnings, and bootstrap refresh boundaries."

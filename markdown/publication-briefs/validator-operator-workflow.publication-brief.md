@@ -28,6 +28,8 @@ source_basis:
   - "scripts/project_control/project_improvement_handoff_validation.py"
   - "scripts/research_control/checkpoint_research_transaction.py"
   - "scripts/research_control/validate_research_control.py"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md"
 authority_boundaries:
   - "The page may explain existing operator command selection, bootstrap behavior, publication checks, documentation-impact checks, research-control checks, conditional bridge-sidecar checkpoint evidence, unit-test triggers, screenshot evidence, and PASS-result limits."

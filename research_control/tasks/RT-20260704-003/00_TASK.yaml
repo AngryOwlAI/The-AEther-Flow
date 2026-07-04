@@ -1,0 +1,69 @@
+task_id: "RT-20260704-003"
+task_type: "public_status_documentation_update_v15"
+status: "completed"
+created_at: "2026-07-04T04:50:00Z"
+updated_at: "2026-07-04T06:18:25Z"
+parent_task_id: "RT-20260704-002"
+parent_handoff_id: "handoff-0548"
+decision_id: "DDR-20260704-003"
+job_id: "AJ-RT-20260704-003-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260704-003"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P14"
+  plan_task_id: "P14-T03"
+  plan_task_name: "Public documentation update"
+objective: "Update permitted public status-bearing documentation surfaces so they cite the P14-T01 simplified public table and P14-T02 epistemic category glossary while preserving non-promotion wording."
+target_derivation_milestone: "none"
+milestone_burden: "P14-T03 public documentation update; no physics derivation milestone is advanced."
+claim_boundary:
+  allowed_scope: "Project-control public documentation propagation for v15 P14-T03 only"
+  scientific_claims_changed: false
+  scientific_claim_delta: "none"
+  route_freeze_authorized: false
+  freeze_review_required_now: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+planned_outputs:
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "github-facing/aether-flow-physics-program-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "github-facing/validator-operator-workflow-explainer.md"
+  - "github-facing/memory-system-explainer.md"
+  - "html/project-overview-explainer.html"
+  - "html/aether-flow-physics-program-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "html/validator-operator-workflow-explainer.html"
+  - "html/memory-system-explainer.html"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "markdown/html-explainer-specs/validator-operator-workflow-explainer.md"
+  - "markdown/html-explainer-specs/memory-system-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/publication-briefs/validator-operator-workflow.publication-brief.md"
+  - "markdown/publication-briefs/memory-system.publication-brief.md"
+  - "registries/PUBLICATION_BRIEF_REGISTRY.csv"
+next_recommended_action: "Run one bounded v15 P15-T01 support-only proof-assistant pilot scope selector packet."

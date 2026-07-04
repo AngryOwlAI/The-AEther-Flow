@@ -17,6 +17,8 @@ source_basis:
   - "ontology/aether-and-aether-flow.md"
   - "research_control/README.md"
   - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
 authority_boundaries:
   - "The page may orient readers to the physics program but cannot promote ontology, benchmark, derivation, or Gate Chair status."
@@ -42,4 +44,3 @@ This Phase 1A page gives readers a stable public account of the physics track:
 what is adopted for benchmark discipline, what remains open, why negative
 results are preserved, and what source authority must be inspected before
 summarizing the program.
-

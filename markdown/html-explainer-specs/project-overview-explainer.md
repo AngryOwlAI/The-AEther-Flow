@@ -15,6 +15,8 @@ source_materials:
   - "AGENTS.md"
   - "research_control/README.md"
   - "research_control/design/documentation_curator_publication_process.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
 claim_boundary: "Human-only publication explainer for Project Overview. It orients readers to the physics research lane, the research-agent workflow lane, the source-authority spine, and first-reading routes without creating physics claims, role authority, routing behavior, validator authority, write permissions, or generated-output authority."
 human_visual_only: true
 standalone_html: true
@@ -47,10 +49,16 @@ placement without changing project behavior or physics claim status.
 - `research_control/design/documentation_curator_publication_process.md`:
   publication brief, source spec, GitHub Markdown, tracked HTML, review, and
   validation discipline.
-- `research_control/design/public_status_table_source_spec.md`: public status
-  table contract for high-risk rows, including scoped `M_src`, scoped
-  `g_eff`, matter-coupling evidence/preconditions, blocked Einstein equations,
-  blocked benchmark promotion, and generated-output non-authority.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`:
+  simplified public exists / does-not-exist table for high-risk rows,
+  including proposed AEther-flow ontology status, open GR derivation, scoped
+  `M_src`, scoped `g_eff`, scoped matter-sector evidence/preconditions,
+  blocked Einstein equations, blocked benchmark promotion, and generated-output
+  non-authority.
+- `research_control/design/epistemic_category_glossary.md`: category
+  distinctions separating interpretation, model, benchmark compatibility,
+  derivation, evidence/precondition, adoption, promotion, validator receipt,
+  publication surface, and authority source.
 
 ## Required Reader Outcome
 
@@ -94,10 +102,11 @@ assets, or external runtime packages.
 - Points readers to the correct page family and source lane without making the
   overview page itself authoritative.
 - Preserves exact-GR benchmark versus open derivation language.
-- Links or cites the public status table source spec when summarizing current
-  public status, and preserves that GR is not derived while `M_src`, `g_eff`,
-  and matter-coupling rows remain scoped under their documented blocked
-  overreads.
+- Links or cites the P14-T01 simplified public table and P14-T02 glossary when
+  summarizing current public status, and preserves that GR is not derived while
+  AEther-flow remains a proposed research ontology / explanatory frame and
+  `M_src`, `g_eff`, and matter-coupling rows remain scoped under their
+  documented blocked overreads.
 - Preserves generated noncanonical status and source authority boundaries.
 - Does not change validators, commands, schemas, role contracts, skill
   contracts, routing behavior, checkpoint behavior, generated-output authority,

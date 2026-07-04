@@ -26,6 +26,8 @@ source_materials:
   - "scripts/project_control/project_improvement_handoff_validation.py"
   - "scripts/research_control/checkpoint_research_transaction.py"
   - "scripts/research_control/validate_research_control.py"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md"
 claim_boundary: "Human-only publication explainer for Validator And Operator Workflow. It explains existing command selection by change type, bootstrap versus validate-only, publication checks, documentation-impact checks, research-control checks, conditional source-bridge sidecar checkpoint evidence, unit-test triggers, screenshot evidence, troubleshooting, final review evidence, and PASS-result limits without changing validator behavior, command semantics, routing behavior, documentation-impact requirements, research-control requirements, role authority, schemas, checkpoint gates, sidecar adoption status, generated-output authority, or physics claim status."
 human_visual_only: true
@@ -64,9 +66,13 @@ behavior, checkpoint behavior, sidecar status, or physics claim status.
 - `scripts/project_control/project_improvement_handoff_validation.py`: Sidecar schema, source-bridge, and parity validation support.
 - `scripts/research_control/checkpoint_research_transaction.py`: Checkpoint guard with conditional sidecar path acceptance tied to source-bridge evidence.
 - `scripts/research_control/validate_research_control.py`: Tracked research-control and diff boundary checks.
-- `research_control/design/public_status_table_source_spec.md`: public status
-  table source spec used by public-surface checks to distinguish validator
-  receipts from physics-promotion authority.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`:
+  simplified public exists / does-not-exist table used by public-surface
+  checks to distinguish scoped project status from downstream physics
+  promotion.
+- `research_control/design/epistemic_category_glossary.md`: category glossary
+  used to distinguish validator receipts from scientific proof and publication
+  surfaces from authority sources.
 - `research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md`: Phase 6 checkpoint governance evidence for conditional source-bridge sidecar allowlisting.
 
 ## Required Reader Outcome
@@ -105,8 +111,8 @@ global sidecar directory allowance or sidecar adoption claim.
 - Uses the bottom Reader Scope hook immediately above the marked authority footer in GitHub Markdown and tracked HTML.
 - Moves the full generated-noncanonical paragraph to the marked authority footer in GitHub Markdown and tracked HTML.
 - Includes visible source paths in both public derivatives.
-- Explains that public status checks must preserve the public status table
-  source-spec boundaries and that a validator PASS does not authorize
+- Explains that public status checks must preserve the P14-T01 table and
+  P14-T02 glossary boundaries and that a validator PASS does not authorize
   source-law adoption, `g_eff` scope expansion, matter-coupling adoption,
   Einstein equations, benchmark promotion, or completed derivation.
 - Explains conditional bridge-sidecar acceptance as exact YAML/Markdown sidecar pairs named by source-bridge metadata, not a global sidecar directory allowance.

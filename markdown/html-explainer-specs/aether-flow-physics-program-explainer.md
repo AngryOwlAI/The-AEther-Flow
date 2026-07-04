@@ -16,6 +16,8 @@ source_materials:
   - "ontology/aether-and-aether-flow.md"
   - "research_control/README.md"
   - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
 claim_boundary: "Human-only publication explainer for the AEther-Flow physics program. It orients readers to ontology, benchmark discipline, open derivation burden, negative-result preservation, and gates without promoting ontology, benchmark, derivation, Gate Chair status, or generated-output authority."
 human_visual_only: true
@@ -45,10 +47,14 @@ physics status, not a derivation note.
   result, and human-gate workflow.
 - `research_control/design/gr_derivation_burden_map.md` names the derivation
   burden chain and current status categories.
-- `research_control/design/public_status_table_source_spec.md` defines the
-  public status table contract for high-risk rows and blocks overread from
-  scoped source objects or scoped evidence/preconditions into downstream GR
-  claims.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  defines the simplified public exists / does-not-exist table for high-risk
+  rows and blocks overread from scoped source objects or scoped
+  evidence/preconditions into downstream GR claims.
+- `research_control/design/epistemic_category_glossary.md` defines the
+  category distinctions that prevent interpretation, model, evidence,
+  validator receipt, publication surface, adoption, promotion, and authority
+  source from being collapsed into one another.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` records concrete claim boundaries
   that prevent local artifacts from becoming broad physics claims.
 
@@ -86,11 +92,13 @@ examples. Do not turn the page into a task transcript or role manual.
   inflation.
 - Preserves qualifiers such as `draft/control`, `source-only`, `local`,
   `exact-branch`, `source-extension data`, and `human-gated`.
-- Preserves the public status table boundaries: GR is not derived; `M_src` is
-  scoped source-only; `g_eff` is scoped source-extension object status; matter
-  coupling is not derived or adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
-  is scoped evidence/precondition only; no-target certificates are not
-  positive matter theory.
+- Preserves the P14-T01 public table and P14-T02 glossary boundaries: GR is
+  not derived; AEther-flow is a proposed research ontology / explanatory
+  frame, not an established physical ontology; `M_src` is scoped source-only;
+  `g_eff` is scoped source-extension object status; matter coupling is not
+  derived or adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
+  evidence/precondition only; no-target certificates are not positive matter
+  theory.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.
