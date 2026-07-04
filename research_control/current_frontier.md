@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-024` and `handoff-0570`.
+`RT-20260704-025` and `handoff-0571`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-024` |
-| Latest handoff ID | `handoff-0570` |
-| Current status | `v16_p3_t05_selected_p4_certificate_instance_library_no_promotion` |
-| Current route family | post_selected_matter_coupling_edge_theorem_route_selector_v16 |
+| Active task ID | `RT-20260704-025` |
+| Latest handoff ID | `handoff-0571` |
+| Current status | `v16_p4_t01_certificate_instance_schema_completed_no_physics_delta` |
+| Current route family | source_certificate_instance_library_schema_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is certificate instance library schema v16 |
-| Required next authority | P4-T01 schema only |
-| Next recommended action | Run one bounded ontology-formalizer@0.2.0 packet for P4-T01 certificate-instance library schema. |
+| Current burden | none for physics derivation; live control burden is finite local valid transport certificate instance v16 |
+| Required next authority | P4-T02 valid transport certificate instance only |
+| Next recommended action | Run one bounded ontology-formalizer@0.2.0 packet for P4-T02 finite/local valid transport certificate instance. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-024/00_TASK.yaml`.
-- Active task objective: Run one bounded Theoretical Continuation Selector packet that selects exactly one next route after P3 theorem-route setup, audit, and stress.
-- Latest handoff path: `research_control/handoffs/handoff-0570.yaml`.
-- Latest handoff summary: RT-20260704-024 completed the v16 P3-T05 selector and selected P4 concrete certificate-instance library as the next route with no physics promotion.
-- Current route family: post_selected_matter_coupling_edge_theorem_route_selector_v16.
-- Next recommended action: Run one bounded ontology-formalizer@0.2.0 packet for P4-T01 certificate-instance library schema.
+- Active task path: `research_control/tasks/RT-20260704-025/00_TASK.yaml`.
+- Active task objective: Define a precise finite/local source certificate-instance schema for valid and fail-closed P4 examples.
+- Latest handoff path: `research_control/handoffs/handoff-0571.yaml`.
+- Latest handoff summary: RT-20260704-025 completed v16 P4-T01 and defined the source certificate-instance library schema with no physics promotion.
+- Current route family: source_certificate_instance_library_schema_v16.
+- Next recommended action: Run one bounded ontology-formalizer@0.2.0 packet for P4-T02 finite/local valid transport certificate instance.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded ontology-formalizer@0.2.0 packet for P4-T01 certificate-instance library schema.
+Run one bounded ontology-formalizer@0.2.0 packet for P4-T02 finite/local valid transport certificate instance.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-024`;
-- latest handoff: `handoff-0570`;
-- current status: `v16_p3_t05_selected_p4_certificate_instance_library_no_promotion`;
+- active task: `RT-20260704-025`;
+- latest handoff: `handoff-0571`;
+- current status: `v16_p4_t01_certificate_instance_schema_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0570.yaml`
-- `research_control/tasks/RT-20260704-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0571.yaml`
+- `research_control/tasks/RT-20260704-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0570*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0571*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

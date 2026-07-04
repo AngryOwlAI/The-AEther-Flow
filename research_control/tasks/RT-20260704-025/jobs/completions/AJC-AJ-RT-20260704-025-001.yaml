@@ -1,0 +1,324 @@
+completion_id: "AJC-AJ-RT-20260704-025-001"
+job_id: "AJ-RT-20260704-025-001"
+task_id: "RT-20260704-025"
+source_role_id: "ontology-formalizer"
+completed_at: "2026-07-04T23:14:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P4-T01"
+  plan_phase_id: "P4"
+  implemented_task_scope: "Defined the finite/local source certificate-instance library schema required before P4 concrete instances."
+  completed_v16_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P2-T01"
+    - "P2-T02"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P4-T01"
+  downstream_tasks_not_implemented:
+    - "P4-T02 valid transport certificate instance"
+    - "P4-T03 valid invariance certificate instance"
+    - "P4-T04 valid factorization certificate instance"
+    - "P4-T05 negative certificate-instance packet"
+    - "P4-T06 certificate-instance index and selector handoff"
+    - "P5 equivalence/theorem-content separation"
+    - "P6 support-only formalization"
+    - "P7 route-orbit gating"
+    - "P8 layered status fields"
+    - "P9 upstream primitive triggers"
+    - "P10 source model zoo"
+    - "P11 negative-result reader language"
+    - "P12 manuscript refresh"
+    - "P13 red-team packet"
+    - "P14 target-import attack suite"
+    - "P15 compact frontier"
+    - "P16 project-system integration"
+    - "P17 final v16 audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/source_certificate_instance_library_schema_v1.md"
+  - "research_control/tasks/RT-20260704-025/artifacts/child_phys_math_certificate_instance_schema.yaml"
+  - "research_control/tasks/RT-20260704-025/artifacts/child_phys_phil_certificate_instance_schema.yaml"
+  - "research_control/tasks/RT-20260704-025/artifacts/parent_conflict_review_certificate_instance_schema.yaml"
+  - "research_control/tasks/RT-20260704-025/artifacts/parent_fusion_notes_certificate_instance_schema.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260704-025/00_TASK.yaml"
+  - "research_control/tasks/RT-20260704-025/DDR-20260704-025.md"
+  - "research_control/tasks/RT-20260704-025/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260704-025/jobs/AJ-RT-20260704-025-001.yaml"
+  - "research_control/tasks/RT-20260704-025/jobs/completions/AJC-AJ-RT-20260704-025-001.yaml"
+  - "research_control/tasks/RT-20260704-025/roles/ontology-formalizer@0.2.0--RT-20260704-025.yaml"
+  - "research_control/handoffs/handoff-0571.yaml"
+  - "research_control/handoffs/handoff-0571.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/roles/physics/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0570.yaml"
+  - "research_control/tasks/RT-20260704-024/artifacts/post_selected_theorem_route_selector_v16.md"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/design/source_certificate_algebra_checklist.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=599 relationship_row_count=3143 semantic_row_count=599 vault_row_count=599"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/source_certificate_algebra_checklist.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex --json | exit_code=0 | returned_object_ids=TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260704-024 latest_handoff=handoff-0570 next_action=P4-T01"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | active_task=RT-20260704-025 latest_handoff=handoff-0571 rendered_hash=2ec553335eb474552ea3e95449621c431a883e6cdbb6fab307265f9762b8696e"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with local retrieval freshness warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | CONTENT_SEMANTIC_REGISTRY=602 OBJECT_RELATIONSHIP_REGISTRY=3156 OBSIDIAN_VAULT_REGISTRY=602"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS rendered_hash=2ec553335eb474552ea3e95449621c431a883e6cdbb6fab307265f9762b8696e"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true blocked_paths=0"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS errors=0 warnings=0"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1400 scanned_path_count=17"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass physics_claim_promotion_authorized=false"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted lookups returned the v16 plan checklist and operation-law source rows"
+      - "continue_research.py resolved handoff-0570 and P4-T01"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P4-T01 schema artifact created"
+      - "all required fields from the v16 plan are present"
+      - "all required instance kinds from the v16 plan are present"
+      - "finite/local and no-physics-delta boundaries are explicit"
+      - "P4-T02 through P4-T06 construction intentionally not performed"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_research_control PASS"
+      - "validate_research_control --check-diff PASS"
+      - "documentation-impact gate PASS"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier renderer wrote and checked handoff-0571 state"
+      - "research dependency graph renderer wrote and checked JSON Markdown and DOT outputs"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "bootstrap_memory_system --validate-only PASS"
+      - "sync_obsidian_vault refreshed generated retrieval surfaces"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with hard_fail_count=0"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-04"
+  schema_packet_requires_human_gate: false
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+verdict: "v16_p4_t01_certificate_instance_schema_completed_no_physics_delta"
+coherent_resolution_summary: "RT-20260704-025 defined the P4 source certificate-instance schema as a finite/local control design surface. No concrete instance construction source-law adoption matter-coupling derivation stress-energy semantics matter action Einstein equations benchmark promotion or completed derivation occurred."
+next_recommendation: "Run one bounded ontology-formalizer@0.2.0 packet for P4-T02 finite/local valid transport certificate instance."
+physics_progress_status:
+  status: "schema_defined"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Define the P4 certificate-instance library schema for finite/local transport invariance factorization missing malformed and target-import certificate examples before constructing the instances."
+  explanation: "The schema makes later finite/local certificate instances possible but supplies no matter-coupling derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v16_p4_t02_valid_transport_certificate_instance"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "No Distance-to-GR ledger row is changed. P4-T01 unlocks finite/local instance construction only."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only context retained"
+  - burden: "g_eff"
+    status: "unchanged; prior scoped source-extension context only"
+  - burden: "matter coupling"
+    status: "P4 finite/local certificate-instance schema defined; no coupling law or matter coupling is adopted or derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "schema ready for concrete certificate examples; instances not yet constructed"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P4-T02 valid transport instance is the next bounded route"
+new_mathematical_payload:
+  - payload_id: "P4T01-SCHEMA-001"
+    payload_type: "concrete_certificate_step_families"
+    artifact_path: "research_control/design/source_certificate_instance_library_schema_v1.md"
+    status: "draft/control"
+    summary: "Defines a finite/local source certificate-instance record schema covering positive transport invariance factorization and negative missing malformed target-import detector-semantics and process-authority cases."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "concrete_certificate_step_families"
+    object_name: "source certificate-instance library schema"
+    claim_status: "control schema"
+    source_path: "research_control/design/source_certificate_instance_library_schema_v1.md"
+    source_hash: "0c19531617c3f7c48cbc7b3a476d884ea9824cb66777b148c310608de50cde76"
+    burden_effect: "enables_next"
+    summary: "Schema for finite/local source certificate instance records."
+forbidden_conclusion_summary:
+  - "No source-law adoption."
+  - "No RR_ETransportCompletenessOrInvarianceLaw_v1 adoption."
+  - "No unrestricted RR_E theorem."
+  - "No matter-semantics adoption."
+  - "No detector-semantics adoption."
+  - "No coupling-law adoption."
+  - "No matter-coupling derivation or adoption."
+  - "No stress-energy semantics."
+  - "No matter action."
+  - "No Einstein equations."
+  - "No benchmark promotion."
+  - "No completed derivation."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260704-025/artifacts/child_phys_math_certificate_instance_schema.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260704-025/artifacts/child_phys_phil_certificate_instance_schema.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260704-025/artifacts/parent_conflict_review_certificate_instance_schema.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/tasks/RT-20260704-025/artifacts/parent_fusion_notes_certificate_instance_schema.md"
+    fused_output_path: "research_control/design/source_certificate_instance_library_schema_v1.md"
+    consensus_summary: "Both children require finite/local schema precision plus strict authority separation."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 599
+    relationship_row_count: 3143
+    semantic_row_count: 599
+    vault_row_count: 599
+  authority_note: "Obsidian notes .local caches semantic extracts SQLite retrieval indexes and generated wiki notes are retrieval aids only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/source_certificate_algebra_checklist.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/source_certificate_algebra_checklist.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+      returned_object_ids:
+        - "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_certificate_algebra_checklist.md"
+      source_hash: "158dee6549b691b82d2e31a3d8df0caafe9d8e0ce8ef62dd2213800cc11f91fa"
+    - object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+      source_hash: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
