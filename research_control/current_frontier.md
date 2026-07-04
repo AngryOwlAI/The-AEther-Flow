@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-018` and `handoff-0564`.
+`RT-20260704-019` and `handoff-0565`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-018` |
-| Latest handoff ID | `handoff-0564` |
-| Current status | `post_v15_p19_t03_final_validation_next_p19_t04_no_physics_delta` |
-| Current route family | v15_final_validation_packet |
+| Active task ID | `RT-20260704-019` |
+| Latest handoff ID | `handoff-0565` |
+| Current status | `v15_complete_selected_matter_coupling_dag_next_edge_theorem_route_no_physics_delta` |
+| Current route family | v15_final_ordinary_continuation_handoff |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v15 final ordinary continuation handoff |
-| Required next authority | P19-T04 ordinary continuation handoff |
-| Next recommended action | Run one bounded v15 P19-T04 ordinary continuation handoff packet. |
+| Current burden | none for physics derivation; live control burden is matter coupling dag next edge theorem route selection |
+| Required next authority | matter-coupling DAG next-edge theorem route selection |
+| Next recommended action | Run one bounded theoretical-continuation-selector@0.1.0 matter-coupling DAG next-edge theorem route selection packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-018/00_TASK.yaml`.
-- Active task objective: Run full validation after v15 implementation and produce the required layer-level final validation report.
-- Latest handoff path: `research_control/handoffs/handoff-0564.yaml`.
-- Latest handoff summary: RT-20260704-018 completed v15 P19-T03 final validation packet with no physics delta.
-- Current route family: v15_final_validation_packet.
-- Next recommended action: Run one bounded v15 P19-T04 ordinary continuation handoff packet.
+- Active task path: `research_control/tasks/RT-20260704-019/00_TASK.yaml`.
+- Active task objective: Complete v15 and select exactly one ordinary next research route based on validated outputs.
+- Latest handoff path: `research_control/handoffs/handoff-0565.yaml`.
+- Latest handoff summary: RT-20260704-019 completed v15 P19-T04 ordinary continuation handoff with no physics delta.
+- Current route family: v15_final_ordinary_continuation_handoff.
+- Next recommended action: Run one bounded theoretical-continuation-selector@0.1.0 matter-coupling DAG next-edge theorem route selection packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P19-T04 ordinary continuation handoff packet.
+Run one bounded theoretical-continuation-selector@0.1.0 matter-coupling DAG next-edge theorem route selection packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-018`;
-- latest handoff: `handoff-0564`;
-- current status: `post_v15_p19_t03_final_validation_next_p19_t04_no_physics_delta`;
+- active task: `RT-20260704-019`;
+- latest handoff: `handoff-0565`;
+- current status: `v15_complete_selected_matter_coupling_dag_next_edge_theorem_route_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0564.yaml`
-- `research_control/tasks/RT-20260704-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0565.yaml`
+- `research_control/tasks/RT-20260704-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0564*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0565*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

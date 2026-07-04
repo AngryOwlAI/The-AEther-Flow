@@ -1,0 +1,41 @@
+task_id: "RT-20260704-019"
+task_type: "v15_final_ordinary_continuation_handoff"
+status: "completed"
+created_at: "2026-07-04T18:15:00Z"
+updated_at: "2026-07-04T18:15:00Z"
+parent_task_id: "RT-20260704-018"
+parent_handoff_id: "handoff-0564"
+decision_id: "DDR-20260704-019"
+job_id: "AJ-RT-20260704-019-001"
+role_id: "director-of-research"
+role_version: "0.3.0"
+execution_role_ref: "director-of-research@0.3.0--RT-20260704-019"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-04-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P19"
+  plan_task_id: "P19-T04"
+  plan_task_name: "Ordinary continuation handoff"
+objective: "Complete v15 and select exactly one ordinary next research route based on validated outputs."
+target_derivation_milestone: "none"
+milestone_burden: "P19-T04 route selection only; selected post-v15 route targets matter_coupling but is not executed here."
+selected_next_route:
+  route_id: "matter_coupling_dag_next_edge_theorem_route"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "select the next theorem edge from the matter-coupling dependency DAG under existing hard blocks; no matter-coupling derivation or adoption"
+  requires_human_gate: false
+claim_boundary:
+  allowed_scope: "P19-T04 ordinary continuation handoff and route selection"
+  proof_authority: false
+  support_only: true
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+planned_outputs:
+  - "research_control/tasks/RT-20260704-019/artifacts/v15_ordinary_continuation_selection.md"
+next_recommended_action: "Run one bounded theoretical-continuation-selector@0.1.0 matter-coupling DAG next-edge theorem route selection packet."

@@ -636,6 +636,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15` `wiki/markdown/md-research-control-tasks-rt-20260704-015-cross-manuscript-glossary-boundary-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-016-V15-RECOMMENDATION-COVERAGE-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260704-016-v15-recommendation-coverage-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-017-V15-CURRENT-FRONTIER-FINAL-REFRESH-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260704-017-v15-current-frontier-final-refresh-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-019-V15-ORDINARY-CONTINUATION-SELECTION` `wiki/markdown/md-research-control-tasks-rt-20260704-019-v15-ordinary-continuation-selection.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1127,6 +1128,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15` `research_control/tasks/RT-20260704-015/artifacts/cross_manuscript_glossary_boundary_v15.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-016-V15-RECOMMENDATION-COVERAGE-AUDIT` `research_control/tasks/RT-20260704-016/artifacts/v15_recommendation_coverage_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-017-V15-CURRENT-FRONTIER-FINAL-REFRESH-RECEIPT` `research_control/tasks/RT-20260704-017/artifacts/v15_current_frontier_final_refresh_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-019-V15-ORDINARY-CONTINUATION-SELECTION` `research_control/tasks/RT-20260704-019/artifacts/v15_ordinary_continuation_selection.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
