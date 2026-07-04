@@ -221,6 +221,38 @@ def collect_text(value: Any) -> str:
     return string_value(value)
 
 
+def scoped_positive_label_text(label: Any) -> str:
+    text = string_value(label)
+    if not text:
+        return ""
+    normalized = text.replace("_", "-")
+    upper = normalized.upper()
+    if "EVIDENCE-ACCEPTED" in upper:
+        subject = normalized[: upper.index("EVIDENCE-ACCEPTED")].strip("-")
+        subject = subject.lower().replace("-", " ")
+        return f"{subject} scoped evidence/precondition status"
+    if "ACCEPTED" in upper:
+        return re.sub(r"(?i)\baccepted\b", "scoped evidence/precondition", normalized)
+    return normalized
+
+
+def freeze_criteria_summary(freeze: dict[str, Any], task_or_job_id: str) -> str:
+    decision = string_value(freeze.get("freeze_decision") or freeze.get("decision")) or "recorded"
+    active = scoped_positive_label_text(freeze.get("active_freeze_label")) or "not specified"
+    candidate = scoped_positive_label_text(freeze.get("candidate_freeze_label")) or "not specified"
+    next_route = string_value(freeze.get("next_allowed_route")) or "not specified"
+    attempts = freeze.get("prior_attempts_considered")
+    attempt_count = len(attempts) if isinstance(attempts, list) else 0
+    return (
+        f"Freeze evaluation for {task_or_job_id}: decision {decision}; "
+        f"active status {active}; candidate status {candidate}; "
+        f"prior attempts considered {attempt_count}; next allowed route {next_route}. "
+        "Scoped evidence/precondition labels are routing labels only and do not "
+        "adopt a source law, coupling law, matter coupling, Einstein equations, "
+        "benchmark status, or completed derivation."
+    )
+
+
 def normalize_token(text: str) -> str:
     text = text.strip().lower()
     replacements = {
@@ -1197,7 +1229,7 @@ def add_completion_payloads(
             "completion_yaml",
             "freeze_criteria_status",
             "project_control",
-            collect_text(freeze)[:240],
+            freeze_criteria_summary(freeze, task_id or job_id),
             metadata={"task_id": task_id, "job_id": job_id},
         )
         builder.add_edge(

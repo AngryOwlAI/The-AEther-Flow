@@ -1,0 +1,106 @@
+handoff_id: "handoff-0546"
+created_at: "2026-07-04T01:52:00Z"
+task_id: "RT-20260703-027"
+decision_id: "DDR-20260703-027"
+job_id: "AJ-RT-20260703-027-001"
+completion_path: "research_control/tasks/RT-20260703-027/jobs/completions/AJC-AJ-RT-20260703-027-001.yaml"
+source_task_id: "RT-20260703-027"
+source_job_id: "AJ-RT-20260703-027-001"
+source_completion_id: "AJC-AJ-RT-20260703-027-001"
+status: "completed"
+summary: "RT-20260703-027 completed v15 P13-T02 alias and renderer enforcement with no physics delta."
+next_action: "Run one bounded v15 P14-T01 public status exists does not exist source spec packet."
+loop_risk_route: "post_v15_p13_t02_alias_renderer_enforcement_completed_next_p14_t01_no_physics_delta"
+required_next_packet:
+  role_id: "documentation-curator"
+  role_version: "2.0.0"
+  packet_count: 1
+  task_type: "public_status_exists_does_not_exist_source_spec"
+  objective: "Create the source-backed public what exists and what does not exist status table spec required by v15 P14-T01."
+claim_boundary:
+  allowed_next_scope: "P14-T01 public status exists does not exist source spec"
+  completed_scope: "P13-T02 alias and renderer enforcement"
+  scientific_claims_changed: false
+  p13_t01_completed: true
+  p13_t02_completed: true
+  p13_t03_required: false
+  phase_p13_completed: true
+  route_freeze_authorized: false
+  freeze_review_required_now: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  PositiveMSProfile_v1_adopted: false
+  SourceMatterSemanticsAdoptionReadinessLaw_v1_adopted_as_law: false
+  source_extension_data_adopted_beyond_exact_scoped_gate_result: false
+  MetricData_E_adopted: false
+  scoped_geff_scope_changed: false
+  coupling_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  variation_principle_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+blocked_claims:
+  - "P13-T02 renderer change as physics proof authority"
+  - "P13-T02 renderer change as source-law adoption"
+  - "P13-T02 renderer change as matter semantics"
+  - "P13-T02 renderer change as detector semantics"
+  - "P13-T02 renderer change as coupling-law adoption"
+  - "P13-T02 renderer change as matter coupling"
+  - "P13-T02 renderer change as MetricData(E) adoption"
+  - "P13-T02 renderer change as g_eff scope expansion"
+  - "P13-T02 renderer change as stress-energy semantics or stress-energy tensor"
+  - "P13-T02 renderer change as matter action or variation principle"
+  - "P13-T02 renderer change as Einstein-equation evidence"
+  - "P13-T02 renderer change as benchmark promotion"
+  - "P13-T02 renderer change as Gate Chair verdict"
+  - "P13-T02 renderer change as completed derivation"
+  - "P13-T02 renderer change as program-wide no-go conclusion"
+  - "P13-T02 renderer change as future source-extension impossibility"
+p13_t02_result:
+  receipt_path: "research_control/tasks/RT-20260703-027/artifacts/p13_t02_renderer_alias_enforcement_receipt.md"
+  renderer_path: "scripts/research_control/render_dependency_graph.py"
+  test_path: "tests/test_render_dependency_graph.py"
+  generated_json_path: "output/research_dependency_graph.json"
+  generated_markdown_path: "wiki/indexes/research_dependency_graph.md"
+  generated_dot_path: "output/research_dependency_graph.dot"
+  raw_generated_label_removed: true
+  scoped_summary_present: true
+  unsafe_reader_facing_wording_remaining: false
+  p13_t03_required: false
+  no_physics_delta: true
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_no_distance_delta"
+  meaning: "RT-20260703-027 changes renderer wording and control receipts only. It does not change source-law matter-coupling MetricData(E) g_eff stress-energy matter-action variation-principle Einstein-equation benchmark-promotion program-wide-no-go future-source-extension-impossibility or completed-derivation status."
+validation:
+  unit_test_render_dependency_graph: "PASS"
+  graph_freshness_check: "PASS"
+  current_frontier_check: "PASS"
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  validate_research_control: "PASS"
+  validate_documentation_impact: "PASS"
+  claim_language_changed_lint: "PASS"
+  local_ci_equivalent: "PASS"
+  validate_research_control_check_diff: "PASS"
+  git_diff_check: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

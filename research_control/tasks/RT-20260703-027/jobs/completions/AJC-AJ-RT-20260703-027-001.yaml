@@ -1,0 +1,236 @@
+completion_path: "research_control/tasks/RT-20260703-027/jobs/completions/AJC-AJ-RT-20260703-027-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260703-027-001"
+job_id: "AJ-RT-20260703-027-001"
+task_id: "RT-20260703-027"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-04T01:52:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P13-T02"
+  plan_phase_id: "P13"
+  implemented_task_scope: "Completed the v15 P13-T02 alias and renderer enforcement packet by adding scoped-positive freeze summary rendering and focused regression coverage."
+  completed_v15_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "Gate Chair scoped evidence-status review for NarrowMSCertEq_v1"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P5-T01"
+    - "P5-T02"
+    - "P6-T01"
+    - "P6-T02"
+    - "P6-T03"
+    - "P7-T01"
+    - "P7-T02"
+    - "P7-T03"
+    - "P8-T01"
+    - "P8-T02"
+    - "P9-T01"
+    - "P9-T02"
+    - "P9-T03"
+    - "P10-T01"
+    - "P10-T02"
+    - "P10-T03"
+    - "P11-T01"
+    - "P11-T02"
+    - "P11-T03"
+    - "P12-T01"
+    - "P12-T02"
+    - "P12-T03"
+    - "P13-T01"
+    - "P13-T02"
+  conditional_plan_tasks_not_required:
+    - "P13-T03 claim-language remediation because no unsafe reader-facing wording remains after P13-T02."
+  downstream_tasks_not_implemented:
+    - "P14 public status documentation"
+    - "P15 support-only proof-assistant pilots"
+    - "P16 external red-team review process"
+    - "P17 negative-result publication track"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  p13_t02_completed: true
+  p13_t03_required: false
+  phase_p13_completed: true
+output_paths:
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_render_dependency_graph.py"
+  - "research_control/tasks/RT-20260703-027/artifacts/p13_t02_renderer_alias_enforcement_receipt.md"
+  - "research_control/tasks/RT-20260703-027/artifacts/p13_t02_local_ci_equivalent_report.json"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260703-027/00_TASK.yaml"
+  - "research_control/tasks/RT-20260703-027/DDR-20260703-027.md"
+  - "research_control/tasks/RT-20260703-027/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260703-027/jobs/AJ-RT-20260703-027-001.yaml"
+  - "research_control/tasks/RT-20260703-027/jobs/completions/AJC-AJ-RT-20260703-027-001.yaml"
+  - "research_control/tasks/RT-20260703-027/roles/validator-engineer@0.2.0--RT-20260703-027.yaml"
+  - "research_control/handoffs/handoff-0546.yaml"
+  - "research_control/handoffs/handoff-0546.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0545.yaml"
+  - "research_control/tasks/RT-20260703-026/artifacts/high_risk_bare_accepted_wording_audit_v1.md"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_render_dependency_graph.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=570 relationship_row_count=3001 semantic_row_count=570 vault_row_count=570"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status alias renderer\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=1 | status=blocked before completion records were written"
+  - ".venv/bin/python -m unittest tests.test_render_dependency_graph | exit_code=0 | tests=7"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0"
+  - "rg -n \"COUPLING-LAW-CANDIDATE-EVIDENCE-ACCEPTED|True True COUPLING-LAW-CANDIDATE\" output/research_dependency_graph.json wiki/indexes/research_dependency_graph.md output/research_dependency_graph.dot | exit_code=1 | raw high-risk generated label absent"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --output research_control/tasks/RT-20260703-027/artifacts/p13_t02_local_ci_equivalent_report.json | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 570
+    relationship_row_count: 3001
+    semantic_row_count: 570
+    vault_row_count: 570
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 570
+    relationship_row_count: 3001
+    semantic_row_count: 570
+    vault_row_count: 570
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status alias renderer\" --limit 10 --json"
+      query_type: "search"
+      query_text: "status alias renderer"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/scoped_positive_claim_vocabulary.md"
+      source_hash: "d588561071cce453663dbbb29a38e1befa9a95dd179c438a63c17ab9a6961193"
+renderer_result:
+  raw_generated_label_removed: true
+  scoped_summary_present: true
+  raw_registry_authority_changed: false
+  p13_t03_required: false
+  no_physics_delta: true
+validation_status_detail: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight refreshed stale local retrieval layers and reported PASS"
+      - "targeted v15 plan lookup returned the canonical v15 implementation plan object"
+      - "targeted status alias renderer search returned scoped-positive vocabulary and v15 plan objects"
+      - "canonical v15 plan scoped-positive vocabulary handoff-0545 renderer source and renderer tests were inspected before completion"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "renderer helper scopes evidence-positive freeze labels for reader-facing summaries"
+      - "focused unit test verifies raw high-risk evidence-positive label is not emitted"
+      - "P13-T03 route recorded as not required because no unsafe reader-facing wording remains"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "completion handoff documentation-impact record and closure registry rows were written"
+      - "current frontier and dependency graph were regenerated after handoff-0546"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_dependency_graph.py regenerated JSON Markdown and DOT outputs"
+      - "render_dependency_graph.py --check passed after renderer update"
+      - "raw generated COUPLING-LAW-CANDIDATE-EVIDENCE-ACCEPTED summary occurrence is absent"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "initial memory preflight refreshed local retrieval layers to PASS"
+      - "bootstrap memory system and validate-only both reported PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "P13-T01 found zero unsafe reader-facing wording occurrences"
+      - "changed-file claim-language lint passed with hard_fail_count=0 and historical warnings only"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+claim_boundary:
+  route_freeze_authorized: false
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_authorized: false
+  stress_energy_authorized: false
+  matter_action_authorized: false
+  variation_principle_authorized: false
+  einstein_equation_route_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+next_recommended_action: "Run one bounded v15 P14-T01 public status exists does not exist source spec packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

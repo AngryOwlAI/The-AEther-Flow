@@ -75,6 +75,25 @@ class DependencyGraphTests(unittest.TestCase):
             hashlib.sha256(payload_two.encode("utf-8")).hexdigest(),
         )
 
+    def test_freeze_summary_scopes_high_risk_accepted_label(self) -> None:
+        summary = self.graph_module.freeze_criteria_summary(
+            {
+                "repeated_burden": True,
+                "freeze_evaluation_required": True,
+                "active_freeze_label": "COUPLING-LAW-CANDIDATE-EVIDENCE-ACCEPTED",
+                "candidate_freeze_label": "COUPLING-LAW-CANDIDATE-POST-EVIDENCE-CRITERIA-MISSING",
+                "prior_attempts_considered": ["RT-20260614-230", "RT-20260614-231"],
+                "freeze_decision": "not_frozen",
+                "next_allowed_route": "ontology_formalizer_positive_success_criteria",
+            },
+            "RT-20260614-235",
+        )
+
+        self.assertIn("scoped evidence/precondition status", summary)
+        self.assertIn("not_frozen", summary)
+        self.assertNotIn("EVIDENCE-ACCEPTED", summary)
+        self.assertNotIn("True True", summary)
+
     def test_cli_writes_all_declared_formats(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             tmp_path = Path(tmp)
