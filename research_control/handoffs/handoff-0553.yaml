@@ -1,0 +1,57 @@
+handoff_id: "handoff-0553"
+created_at: "2026-07-04T09:05:00Z"
+task_id: "RT-20260704-007"
+decision_id: "DDR-20260704-007"
+job_id: "AJ-RT-20260704-007-001"
+completion_path: "research_control/tasks/RT-20260704-007/jobs/completions/AJC-AJ-RT-20260704-007-001.yaml"
+source_task_id: "RT-20260704-007"
+source_job_id: "AJ-RT-20260704-007-001"
+source_completion_id: "AJC-AJ-RT-20260704-007-001"
+status: "completed"
+summary: "RT-20260704-007 completed v15 P16-T01 advisory external red-team packet template with no physics delta."
+next_action: "Run one bounded v15 P16-T02 internal red-team pilot using the template."
+loop_risk_route: "post_v15_p16_t01_red_team_template_completed_next_p16_t02_no_physics_delta"
+required_next_packet:
+  role_id: "refuter"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "internal_red_team_pilot_v15"
+  objective: "Run an internal red-team pilot against the required v15 review targets using the advisory packet template."
+claim_boundary:
+  allowed_next_scope: "P16-T02 internal red-team pilot"
+  completed_scope: "P16-T01 advisory external red-team packet template"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  external_review_advisory_only: true
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+p16_t01_result:
+  template_path: "research_control/design/external_red_team_packet_template_v1.md"
+  template_source_hash: "b73c3750a4cf82a7b021a574964ee808e05b3a6eb460e25fd42ea3d593c23f4a"
+  required_sections_present: true
+  fillable_without_promoting_claims: true
+  external_review_advisory_only: true
+  no_physics_delta: true
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+  burden_id: ""
+  status: "process_control_template_no_distance_delta"
+  meaning: "RT-20260704-007 creates advisory review infrastructure and does not change physics status."
+validation:
+  required_template_sections: "PASS"
+  advisory_status: "PASS"
+  claim_boundary: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
