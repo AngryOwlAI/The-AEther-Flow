@@ -1,0 +1,54 @@
+task_id: "RT-20260704-020"
+task_type: "matter_coupling_dag_next_edge_theorem_route_selection_v16"
+status: "completed"
+created_at: "2026-07-04T21:19:33Z"
+updated_at: "2026-07-04T21:19:33Z"
+closed_at: "2026-07-04T21:19:33Z"
+parent_task_id: "RT-20260704-019"
+parent_handoff_id: "handoff-0565"
+decision_id: "DDR-20260704-020"
+job_id: "AJ-RT-20260704-020-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260704-020"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the current goal. This selector requires no human gate and does not adopt a coupling law or promote a physics claim."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T01/P2-T02"
+  plan_task_name: "Matter-coupling DAG edge scoring rubric and next-edge selector"
+objective: "Register v16 as implementation guidance, reconcile the post-v15 baseline, audit matter-coupling DAG readiness, score candidate DAG edges, and select exactly one next theorem-route edge without executing a theorem or promoting a physics claim."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Select the next theorem edge from the matter-coupling dependency DAG under existing hard blocks with no matter-coupling derivation or adoption."
+closure_status: "v16_p2_selected_source_side_coupling_law_target_specification_route_no_physics_delta"
+claim_boundary:
+  allowed_scope: "V16 plan intake evidence, post-v15 baseline reconciliation, DAG readiness audit, route scoring, and selector-only next-edge choice"
+  selected_edge: "mc_source_matter_semantics_equivalence_theorem -> mc_coupling_law_target"
+  selected_next_packet_type: "source_side_selector_primitive"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_packet_requires_human_gate: false
+  theorem_executed: false
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260704-020/artifacts/v16_post_v15_baseline_reconciliation_report.md"
+  - "research_control/tasks/RT-20260704-020/artifacts/v16_recommendation_trace_matrix.csv"
+  - "research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_readiness_audit_v16.md"
+  - "research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_next_edge_scoring_rubric_v16.md"
+  - "research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_next_edge_selector_v16.md"
+  - "research_control/tasks/RT-20260704-020/artifacts/child_phys_math_v16_dag_next_edge_selector.yaml"
+  - "research_control/tasks/RT-20260704-020/artifacts/child_phys_phil_v16_dag_next_edge_selector.yaml"
+  - "research_control/tasks/RT-20260704-020/artifacts/parent_conflict_review_v16_dag_next_edge_selector.yaml"
+  - "research_control/tasks/RT-20260704-020/artifacts/parent_fusion_notes_v16_dag_next_edge_selector.md"
+next_recommended_action: "Run one bounded ontology-formalizer@0.2.0 packet to define a source-side coupling-law target specification under explicit source certificates without adopting a coupling law or deriving matter coupling."
+notes: "RT-20260704-020 executes the handoff-0565 selector route and records P0/P1 preflight evidence needed by v16. It does not execute the selected P3 theorem-route setup or any later v16 phase."
+documentation_impact_id: "DI-RT-20260704-020-001"

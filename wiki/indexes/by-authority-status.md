@@ -570,6 +570,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v13.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v14.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v15.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v16.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1` `wiki/markdown/md-research-control-design-claim-graph-schema-v1.md`
@@ -637,6 +638,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-016-V15-RECOMMENDATION-COVERAGE-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260704-016-v15-recommendation-coverage-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-017-V15-CURRENT-FRONTIER-FINAL-REFRESH-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260704-017-v15-current-frontier-final-refresh-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-019-V15-ORDINARY-CONTINUATION-SELECTION` `wiki/markdown/md-research-control-tasks-rt-20260704-019-v15-ordinary-continuation-selection.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-NEXT-EDGE-SCORING-RUBRIC-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-020-matter-coupling-dag-next-edge-scoring-rubric-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-NEXT-EDGE-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-020-matter-coupling-dag-next-edge-selector-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-READINESS-AUDIT-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-020-matter-coupling-dag-readiness-audit-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-PARENT-FUSION-NOTES-V16-DAG-NEXT-EDGE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260704-020-parent-fusion-notes-v16-dag-next-edge-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-V16-POST-V15-BASELINE-RECONCILIATION` `wiki/markdown/md-research-control-tasks-rt-20260704-020-v16-post-v15-baseline-reconciliation.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1063,6 +1069,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13` `implementations_plans/recommendations_implementation_plan_continue_task-v13.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14` `implementations_plans/recommendations_implementation_plan_continue_task-v14.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15` `implementations_plans/recommendations_implementation_plan_continue_task-v15.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16` `implementations_plans/recommendations_implementation_plan_continue_task-v16.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1` `research_control/design/claim_graph_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
@@ -1129,6 +1136,11 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-016-V15-RECOMMENDATION-COVERAGE-AUDIT` `research_control/tasks/RT-20260704-016/artifacts/v15_recommendation_coverage_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-017-V15-CURRENT-FRONTIER-FINAL-REFRESH-RECEIPT` `research_control/tasks/RT-20260704-017/artifacts/v15_current_frontier_final_refresh_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-019-V15-ORDINARY-CONTINUATION-SELECTION` `research_control/tasks/RT-20260704-019/artifacts/v15_ordinary_continuation_selection.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-NEXT-EDGE-SCORING-RUBRIC-V16` `research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_next_edge_scoring_rubric_v16.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-NEXT-EDGE-SELECTOR-V16` `research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_next_edge_selector_v16.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-MATTER-COUPLING-DAG-READINESS-AUDIT-V16` `research_control/tasks/RT-20260704-020/artifacts/matter_coupling_dag_readiness_audit_v16.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-PARENT-FUSION-NOTES-V16-DAG-NEXT-EDGE-SELECTOR` `research_control/tasks/RT-20260704-020/artifacts/parent_fusion_notes_v16_dag_next_edge_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-V16-POST-V15-BASELINE-RECONCILIATION` `research_control/tasks/RT-20260704-020/artifacts/v16_post_v15_baseline_reconciliation_report.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
