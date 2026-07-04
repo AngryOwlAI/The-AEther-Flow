@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-004` and `handoff-0550`.
+`RT-20260704-005` and `handoff-0551`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-004` |
-| Latest handoff ID | `handoff-0550` |
-| Current status | `post_v15_p15_t01_selected_fail_closed_missing_certificate_pilot_next_p15_t02_no_physics_delta` |
-| Current route family | post v15 p15 t01 selected fail closed missing certificate pilot next p15 t02 no physics delta |
+| Active task ID | `RT-20260704-005` |
+| Latest handoff ID | `handoff-0551` |
+| Current status | `post_v15_p15_t02_formalization_pilot_completed_next_p15_t03_no_physics_delta` |
+| Current route family | post v15 p15 t02 formalization pilot completed next p15 t03 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is support only formalization pilot |
-| Required next authority | P15-T02 support-only formalization pilot for fail-closed missing-certificate lemma |
-| Next recommended action | Run one bounded v15 P15-T02 support-only formalization pilot for the fail-closed missing-certificate lemma. |
+| Current burden | none for physics derivation; live control burden is formalization pilot integration report |
+| Required next authority | P15-T03 formalization pilot integration report |
+| Next recommended action | Run one bounded v15 P15-T03 formalization pilot integration report. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-004/00_TASK.yaml`.
-- Active task objective: Select exactly one small support-only proof-assistant pilot target with proof authority explicitly false.
-- Latest handoff path: `research_control/handoffs/handoff-0550.yaml`.
-- Latest handoff summary: RT-20260704-004 completed v15 P15-T01 support-only proof-assistant pilot scope selection with no physics delta.
-- Current route family: post v15 p15 t01 selected fail closed missing certificate pilot next p15 t02 no physics delta.
-- Next recommended action: Run one bounded v15 P15-T02 support-only formalization pilot for the fail-closed missing-certificate lemma.
+- Active task path: `research_control/tasks/RT-20260704-005/00_TASK.yaml`.
+- Active task objective: Implement the selected fail-closed missing-certificate lemma as a support-only typed executable spec plus unit tests.
+- Latest handoff path: `research_control/handoffs/handoff-0551.yaml`.
+- Latest handoff summary: RT-20260704-005 completed v15 P15-T02 support-only formalization pilot with no physics delta.
+- Current route family: post v15 p15 t02 formalization pilot completed next p15 t03 no physics delta.
+- Next recommended action: Run one bounded v15 P15-T03 formalization pilot integration report.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P15-T02 support-only formalization pilot for the fail-closed missing-certificate lemma.
+Run one bounded v15 P15-T03 formalization pilot integration report.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,22 +223,23 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-004`;
-- latest handoff: `handoff-0550`;
-- current status: `post_v15_p15_t01_selected_fail_closed_missing_certificate_pilot_next_p15_t02_no_physics_delta`;
+- active task: `RT-20260704-005`;
+- latest handoff: `handoff-0551`;
+- current status: `post_v15_p15_t02_formalization_pilot_completed_next_p15_t03_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `claim_boundary`: PASS;
-- latest handoff validation `selector_artifact`: PASS;
+- latest handoff validation `support_only_receipt`: PASS;
+- latest handoff validation `unit_tests`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0550.yaml`
-- `research_control/tasks/RT-20260704-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0551.yaml`
+- `research_control/tasks/RT-20260704-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -254,7 +255,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0550*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0551*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
