@@ -1,0 +1,212 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\AuditVerdict}{\mathsf{source\_pure\_as\_written\_pending\_refuter\_stress}}
+\newcommand{\SCLTarget}{\mathrm{SourceCouplingLawTarget}^{\mathrm{cand}}_{\mathrm{src},v1}}
+\newcommand{\SCLBundle}{\mathrm{SourceCouplingLawCertificateBundle}_{v1}}
+\newcommand{\SMScope}{\mathrm{SourceMatterSemanticsInputScope}_{v1}}
+\newcommand{\DetPlaceholder}{\mathrm{DetectorSemanticsReplacementPlaceholder}_{v1}}
+\newcommand{\NTGuard}{\mathrm{NoTargetCouplingImportGuard}_{v1}}
+\newcommand{\Validity}{\mathrm{CouplingLawCandidateValidityPredicate}_{v1}}
+\newcommand{\FailBranch}{\mathrm{CouplingLawCandidateFailClosedBranch}_{v1}}
+\newcommand{\WitnessOb}{\mathrm{FiniteLocalCouplingWitnessObligation}_{v1}}
+\newcommand{\Bottom}{\bot}
+
+\title{Selected Matter-Coupling Edge Smuggling Audit v16}
+\author{Smuggling Auditor Packet RT-20260704-022}
+\date{2026-07-04}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This document implements v16 P3-T03. It audits the v16 P3 target
+specification
+\[
+  \SCLTarget
+\]
+from \texttt{RT-20260704-021}.
+
+This is a draft/control source-purity audit. It is not a canonical ontology
+edit, not source-law adoption, not
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, not matter-semantics adoption, not detector-semantics adoption, not
+coupling-law adoption, not matter-coupling derivation, not stress-energy
+semantics, not a matter action, not Einstein equations, not benchmark
+promotion, and not completed derivation.
+
+\section{Audited Object}
+
+The audited target specification defines a source-side target record
+\[
+  T_E=(\mathcal I_E,\mathcal B_E,\NTGuard(E),\Validity_E,
+  \WitnessOb_E,\mathcal O_E)
+\]
+where \(\mathcal I_E\) is a \(\SMScope\), \(\mathcal B_E\) is a
+\(\SCLBundle\), \(\NTGuard(E)\) forbids target and process-authority imports,
+\(\Validity_E\) returns only audit/stress eligibility or \(\Bottom\), and
+\(\WitnessOb_E\) requires a finite/local witness declaration or precise
+obstruction for any future positive candidate.
+
+\section{Audit Criteria}
+
+The audit checks whether the target specification obtains its status by
+importing any forbidden authority:
+
+\begin{enumerate}[label=(\arabic*)]
+  \item target topology, target atlas, target differentiable structure,
+        target Lorentzian signature, target metric, proper time, target
+        metric behavior, or benchmark behavior;
+  \item detector semantics, empirical detector protocol, empirical readout
+        semantics, empirical clocks, rods, or calibration as a source premise;
+  \item stress-energy semantics, stress-energy tensor, matter action, or
+        Einstein equations;
+  \item validator PASS, registry row, role identity, handoff status, Gate
+        Chair status outside exact scoped role, generated derivative, local
+        cache, file order, approval, checkpoint, or commit state as proof;
+  \item scoped evidence or source-extension status treated as adoption,
+        derivation, or positive matter theory;
+  \item target-specification status treated as a coupling-law candidate or as
+        matter-coupling derivation.
+\end{enumerate}
+
+\section{Findings}
+
+\subsection{No target topology, atlas, signature, or metric import detected}
+
+The audited artifact names target topology, target smooth atlas, Lorentzian
+metric, metric signature, proper time, benchmark behavior, and related target
+structures only inside \(\NTGuard(E)\) and \(\FailBranch\). These structures
+are not used as premises for \(\SMScope\), \(\SCLBundle\), \(\Validity_E\), or
+\(\WitnessOb_E\). Any future branch that uses them returns \(\Bottom\) with a
+target-import or process-authority label.
+
+\subsection{No detector-semantics import detected as written}
+
+\(\DetPlaceholder\) is explicitly a source-side placeholder or a
+missing-and-blocked marker. The audited artifact says it is not detector
+semantics, not measurement theory, and not detector-semantics adoption. If a
+future candidate uses detector protocol or empirical calibration as a source
+premise, \(\Validity_E\) returns \(\Bottom\).
+
+\subsection{No stress-energy, matter-action, or Einstein-equation import}
+
+The target specification neither imports nor constructs stress-energy
+semantics, a stress-energy tensor, matter-action semantics, a matter action,
+or Einstein equations. These objects appear in forbidden-import lists and in
+the non-conclusion section only.
+
+\subsection{No process-authority laundering detected as written}
+
+The certificate bundle includes \(G^{proc}_E\), which states that registry
+rows, validators, roles, handoffs, approvals, file order, local caches, and
+commits are not mathematical premises. The no-target guard separately blocks
+generated derivatives and process receipts as proof authority. Therefore the
+artifact does not use validation, registry, handoff, role, generated output,
+or checkpoint status as a theorem premise.
+
+\subsection{No status laundering detected as written}
+
+The positive value of the validity predicate is:
+\[
+  \mathsf{eligible\_for\_audit\_stress}.
+\]
+The artifact states that this value permits only bounded candidate
+construction continuation, smuggling audit, Refuter stress, selector routing,
+or separately authorized protected review. It explicitly denies coupling-law
+adoption, matter-coupling derivation, detector-semantics adoption,
+stress-energy semantics, matter action, Einstein equations, benchmark
+promotion, and completed derivation.
+
+\subsection{Scoped evidence is not used as adoption}
+
+The target specification permits \(\mathrm{NarrowMSCertEq}_{v1}\) only as
+scoped evidence/precondition inside a source-side ledger. It explicitly says
+that scoped evidence is not a certificate by itself and is not
+matter-semantics adoption. The certificate-sufficiency non-theorem states
+that the scoped theorem and certificate algebra are necessary context for the
+route but not sufficient for coupling-law adoption or matter-coupling
+derivation.
+
+\section{Verdict}
+
+The audit verdict is
+\[
+  \AuditVerdict .
+\]
+
+No hidden target import, detector-semantics import, stress-energy import,
+matter-action import, Einstein-equation import, process-authority laundering,
+generated-derivative laundering, or adoption-status laundering is detected in
+the target specification as written.
+
+This verdict makes the target specification ready for P3-T04 Refuter stress.
+It does not prove a coupling-law candidate, instantiate a finite/local
+witness, adopt source laws, adopt matter semantics, adopt detector semantics,
+adopt a coupling law, derive matter coupling, or advance the Distance-to-GR
+ledger.
+
+\section{Required P3-T04 Stress Targets}
+
+The next Refuter packet should stress at least:
+
+\begin{enumerate}[label=(\alph*)]
+  \item deletion or malformation of required source certificates in
+        \(\SCLBundle\);
+  \item malformed \(\DetPlaceholder\) or replacement by empirical detector
+        semantics;
+  \item target topology, target atlas, Lorentzian signature, target metric,
+        or proper-time pressure against \(\NTGuard\);
+  \item stress-energy, matter-action, and Einstein-equation import pressure;
+  \item process-authority pressure from validator, registry, role, handoff,
+        generated derivative, local cache, file order, approval, checkpoint,
+        or commit state;
+  \item evidence-as-adoption pressure over scoped evidence/precondition
+        status;
+  \item finite/local witness obligation deletion, overread, or replacement by
+        benchmark behavior;
+  \item fail-closed branch uniqueness and branch-selection stress;
+  \item source-extension status treated as derivation.
+\end{enumerate}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR status is unchanged. The audit classifies the target
+specification as source-pure as written pending stress. Matter coupling
+remains undischarged. Stress-energy semantics, matter action, Einstein
+equations, benchmark promotion, and completed derivation remain blocked.
+
+\section{Non-Conclusions}
+
+This audit does not authorize canonical ontology edit, source-law adoption,
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, unrestricted \(RR_E\) theorem authority, matter-semantics adoption,
+detector-semantics adoption, coupling-law adoption, matter-coupling derivation
+or adoption, stress-energy semantics, stress-energy tensor, matter action,
+Einstein equations, benchmark promotion, benchmark closure, completed
+derivation, future source-extension no-go claim, or program-wide no-go
+conclusion.
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v16} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v16.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-side coupling-law
+target specification under explicit certificates v1} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260704-021/artifacts/source\_side\_coupling\_law\_target\_specification\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{No-target-import guard map}
+[Internal control artifact].
+\texttt{research\_control/design/no\_target\_import\_guard\_map.md}.
+
+\end{document}

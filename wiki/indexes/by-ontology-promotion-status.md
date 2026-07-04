@@ -328,6 +328,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS` `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex`
 - `TEX-V15-P5-T01-EQSRC-RETAINH-GENH-DEPENDENCY-AUDIT` `research_control/tasks/RT-20260703-004/artifacts/eqsrc_retainh_genh_dependency_audit_v1.tex`
 - `TEX-V16-P3-SOURCE-SIDE-COUPLING-LAW-TARGET-SPECIFICATION` `research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex`
+- `TEX-V16-P3-T03-SELECTED-MATTER-COUPLING-EDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260704-022/artifacts/selected_matter_coupling_edge_smuggling_audit_v16.tex`
 
 ## superseded
 
