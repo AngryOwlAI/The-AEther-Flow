@@ -1,0 +1,60 @@
+handoff_id: "handoff-0554"
+created_at: "2026-07-04T10:10:00Z"
+task_id: "RT-20260704-008"
+decision_id: "DDR-20260704-008"
+job_id: "AJ-RT-20260704-008-001"
+completion_path: "research_control/tasks/RT-20260704-008/jobs/completions/AJC-AJ-RT-20260704-008-001.yaml"
+source_task_id: "RT-20260704-008"
+source_job_id: "AJ-RT-20260704-008-001"
+source_completion_id: "AJC-AJ-RT-20260704-008-001"
+status: "completed"
+summary: "RT-20260704-008 completed v15 P16-T02 internal red-team pilot with no physics delta."
+next_action: "Run one bounded v15 P16-T03 red-team findings integration selector choosing no-op with evidence unless new evidence appears."
+loop_risk_route: "post_v15_p16_t02_internal_red_team_pilot_next_p16_t03_no_physics_delta"
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "red_team_findings_integration_selector"
+  objective: "Select exactly one route to handle P16-T02 red-team findings; current recommended route is no-op with evidence."
+claim_boundary:
+  allowed_next_scope: "P16-T03 red-team findings integration selector"
+  completed_scope: "P16-T02 internal red-team pilot"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  route_freeze_authorized: false
+  source_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+p16_t02_result:
+  report_path: "research_control/tasks/RT-20260704-008/artifacts/internal_red_team_pilot_report_v15.md"
+  required_targets_reviewed: true
+  major_vulnerabilities_listed: true
+  scientific_process_distinction_present: true
+  selected_integration_route: "no-op with evidence"
+  no_new_unguarded_promotion_defect: true
+  no_physics_delta: true
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+  burden_id: ""
+  status: "internal_red_team_pilot_no_distance_delta"
+  meaning: "RT-20260704-008 records an internal advisory red-team pilot and does not change physics status."
+validation:
+  required_targets_reviewed: "PASS"
+  major_vulnerabilities_listed: "PASS"
+  scientific_process_distinction: "PASS"
+  one_integration_route_selected: "PASS"
+  claim_boundary: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
