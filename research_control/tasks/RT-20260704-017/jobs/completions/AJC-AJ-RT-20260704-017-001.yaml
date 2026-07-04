@@ -1,0 +1,179 @@
+completion_path: "research_control/tasks/RT-20260704-017/jobs/completions/AJC-AJ-RT-20260704-017-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260704-017-001"
+job_id: "AJ-RT-20260704-017-001"
+task_id: "RT-20260704-017"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-04T16:45:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P19-T02"
+  plan_phase_id: "P19"
+  implemented_task_scope: "Refreshed current frontier and adjacent v15 control summaries."
+  completed_v15_tasks_to_date:
+    - "P0 through P18"
+    - "P19-T01"
+    - "P19-T02"
+  downstream_tasks_not_implemented:
+    - "P19-T03 final validation packet"
+    - "P19-T04 ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  phase_p19_completed: false
+output_paths:
+  - "research_control/tasks/RT-20260704-017/artifacts/v15_current_frontier_final_refresh_receipt.md"
+  - "research_control/tasks/RT-20260704-017/artifacts/p19_t02_local_ci_equivalent_report.json"
+  - "research_control/current_frontier.md"
+  - "output/claim_graph_v1.json"
+  - "output/claim_graph_v1.dot"
+  - "wiki/indexes/claim_graph_v1.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260704-017/00_TASK.yaml"
+  - "research_control/tasks/RT-20260704-017/DDR-20260704-017.md"
+  - "research_control/tasks/RT-20260704-017/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260704-017/jobs/AJ-RT-20260704-017-001.yaml"
+  - "research_control/tasks/RT-20260704-017/jobs/completions/AJC-AJ-RT-20260704-017-001.yaml"
+  - "research_control/tasks/RT-20260704-017/roles/project-control-maintainer@0.2.0--RT-20260704-017.yaml"
+  - "research_control/handoffs/handoff-0563.yaml"
+  - "research_control/handoffs/handoff-0563.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=582 relationship_row_count=3072 semantic_row_count=582 vault_row_count=582"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P19 T02 current frontier final refresh theorem inventory claim graph public status\" --limit 10 --json | exit_code=0 | status=PASS object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json | exit_code=0 | status=PASS object_id=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=PASS next_route=v15_current_frontier_final_refresh"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json --dot output/claim_graph_v1.dot --markdown wiki/indexes/claim_graph_v1.md | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --output research_control/tasks/RT-20260704-017/artifacts/p19_t02_local_ci_equivalent_report.json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "582"
+    relationship_row_count: "3072"
+    semantic_row_count: "582"
+    vault_row_count: "582"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P19 T02 current frontier final refresh theorem inventory claim graph public status\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P19 T02 current frontier final refresh theorem inventory claim graph public status"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json"
+      query_type: "lookup"
+      query_text: "research_control/current_frontier.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "8a2e71cb35b89cecb0c1835dcb8aafdb6da66380950e9979fa873efaea0ea473"
+refresh_result:
+  artifact_path: "research_control/tasks/RT-20260704-017/artifacts/v15_current_frontier_final_refresh_receipt.md"
+  current_frontier_refreshed: true
+  theorem_inventory_inspected: true
+  theorem_inventory_source_edit_required: false
+  claim_graph_refreshed: true
+  claim_graph_validated: true
+  matter_coupling_dag_inspected: true
+  matter_coupling_dag_source_edit_required: false
+  dependency_graph_refreshed: true
+  public_status_source_inspected: true
+  public_status_source_edit_required: false
+  distance_to_gr_summary_refreshed: true
+  high_risk_bare_accepted_check: "PASS"
+  einstein_equations_remain_blocked: true
+  benchmark_promotion_remains_blocked: true
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "none"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS with retrieval refresh"
+      - "handoff-0562 and P19-T02 plan inspected"
+      - "current frontier theorem inventory public status source and DAG inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "refresh receipt created"
+      - "P19-T03 selected as next route"
+      - "high-risk rows remain scoped"
+      - "Einstein equations and benchmark promotion remain blocked"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_documentation_impact.py --json passed"
+      - "validate_research_control.py passed"
+      - "validate_research_control.py --check-diff passed"
+      - "git diff --check passed"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check passed"
+      - "generate_claim_graph_v1.py --check passed"
+      - "render_dependency_graph.py --check passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "bootstrap_memory_system.py --validate-only passed"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "local CI-equivalent claim-language changed lint passed"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+next_recommended_action: "Run one bounded v15 P19-T03 final validation packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

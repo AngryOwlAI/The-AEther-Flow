@@ -1,0 +1,43 @@
+handoff_id: "handoff-0563"
+created_at: "2026-07-04T16:45:00Z"
+task_id: "RT-20260704-017"
+decision_id: "DDR-20260704-017"
+job_id: "AJ-RT-20260704-017-001"
+completion_path: "research_control/tasks/RT-20260704-017/jobs/completions/AJC-AJ-RT-20260704-017-001.yaml"
+source_task_id: "RT-20260704-017"
+source_job_id: "AJ-RT-20260704-017-001"
+source_completion_id: "AJC-AJ-RT-20260704-017-001"
+status: "completed"
+summary: "RT-20260704-017 completed v15 P19-T02 current frontier final refresh with no physics delta."
+next_action: "Run one bounded v15 P19-T03 final validation packet."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "v15_final_validation_packet"
+  objective: "Run full validation after v15 implementation and produce the required layer-level final validation report."
+claim_boundary:
+  allowed_next_scope: "P19-T03 final validation packet"
+  completed_scope: "P19-T02 current frontier final refresh"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+refresh_result:
+  artifact_path: "research_control/tasks/RT-20260704-017/artifacts/v15_current_frontier_final_refresh_receipt.md"
+  current_frontier_refreshed: true
+  claim_graph_refreshed: true
+  dependency_graph_refreshed: true
+  public_status_source_inspected: true
+  high_risk_bare_accepted_check: "PASS"
+  einstein_equations_remain_blocked: true
+  benchmark_promotion_remains_blocked: true
+  coverage_audit_partial_closed:
+    - "V15-R26"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "none"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
