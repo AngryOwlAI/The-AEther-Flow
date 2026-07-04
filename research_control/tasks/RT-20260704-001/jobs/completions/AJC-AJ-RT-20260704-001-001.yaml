@@ -1,0 +1,233 @@
+completion_path: "research_control/tasks/RT-20260704-001/jobs/completions/AJC-AJ-RT-20260704-001-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260704-001-001"
+job_id: "AJ-RT-20260704-001-001"
+task_id: "RT-20260704-001"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-04T02:40:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  related_plan_task_id: "P14-T01"
+  plan_phase_id: "P14"
+  implemented_task_scope: "Completed the v15 P14-T01 public status exists and does-not-exist source spec packet by creating and validating the source-backed public table contract."
+  completed_v15_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "Gate Chair scoped evidence-status review for NarrowMSCertEq_v1"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P5-T01"
+    - "P5-T02"
+    - "P6-T01"
+    - "P6-T02"
+    - "P6-T03"
+    - "P7-T01"
+    - "P7-T02"
+    - "P7-T03"
+    - "P8-T01"
+    - "P8-T02"
+    - "P9-T01"
+    - "P9-T02"
+    - "P9-T03"
+    - "P10-T01"
+    - "P10-T02"
+    - "P10-T03"
+    - "P11-T01"
+    - "P11-T02"
+    - "P11-T03"
+    - "P12-T01"
+    - "P12-T02"
+    - "P12-T03"
+    - "P13-T01"
+    - "P13-T02"
+    - "P14-T01"
+  conditional_plan_tasks_not_required:
+    - "P13-T03 claim-language remediation because no unsafe reader-facing wording remains after P13-T02."
+  downstream_tasks_not_implemented:
+    - "P14-T02 epistemic category glossary"
+    - "P14-T03 public documentation update if routed after P14-T02 documentation-impact classification"
+    - "P15 support-only proof-assistant pilots"
+    - "P16 external red-team review process"
+    - "P17 negative-result publication track"
+    - "P18 manuscript split"
+    - "P19 final integration audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+  p14_t01_completed: true
+  phase_p14_completed: false
+output_paths:
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/tasks/RT-20260704-001/artifacts/validate_p14_t01_public_status_source_spec.py"
+  - "research_control/tasks/RT-20260704-001/artifacts/p14_t01_public_status_source_spec_report.json"
+  - "research_control/tasks/RT-20260704-001/artifacts/p14_t01_public_status_source_spec_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260704-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260704-001/DDR-20260704-001.md"
+  - "research_control/tasks/RT-20260704-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260704-001/jobs/AJ-RT-20260704-001-001.yaml"
+  - "research_control/tasks/RT-20260704-001/jobs/completions/AJC-AJ-RT-20260704-001-001.yaml"
+  - "research_control/tasks/RT-20260704-001/roles/documentation-curator@2.0.0--RT-20260704-001.yaml"
+  - "research_control/handoffs/handoff-0547.yaml"
+  - "research_control/handoffs/handoff-0547.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0546.yaml"
+  - "research_control/design/public_status_table_source_spec.md"
+  - "research_control/design/scoped_positive_claim_vocabulary.md"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=571 relationship_row_count=3005 semantic_row_count=571 vault_row_count=571"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/public_status_table_source_spec.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"public status exists does not exist\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  - ".venv/bin/python research_control/tasks/RT-20260704-001/artifacts/validate_p14_t01_public_status_source_spec.py --output research_control/tasks/RT-20260704-001/artifacts/p14_t01_public_status_source_spec_report.json | exit_code=0 | status=PASS required_row_count=8 parsed_row_count=8 source_backed=true"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=written"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 571
+    relationship_row_count: 3005
+    semantic_row_count: 571
+    vault_row_count: 571
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v15.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/public_status_table_source_spec.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/public_status_table_source_spec.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"public status exists does not exist\" --limit 10 --json"
+      query_type: "search"
+      query_text: "public status exists does not exist"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+      source_hash: "624f13305a1518a63b25c9b543f5fbf408b983fb3cf9c0b504475c5ef320e5ba"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/public_status_table_source_spec.md"
+      source_hash: "83dab10e855ced993968208fae42bb5d729bbb3dc403c91bfda15a0a816aa21e"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "983c7209a353cd1ec1533025ef57e496f8aa648a1fd45a560b833cf12a6a8a6a"
+source_spec_result:
+  source_spec_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  required_row_count: 8
+  parsed_row_count: 8
+  source_backed: true
+  no_physics_delta: true
+validation_status_detail: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight reported PASS"
+      - "targeted v15 plan and v14 public status spec lookups returned canonical objects"
+      - "P14-T01 plan requirements and row-source materials were inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "task-local public status source spec validator reported PASS"
+      - "all eight required exists / does-not-exist rows were parsed"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "source spec registry row task records completion handoff and documentation-impact record were written"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph derivatives were regenerated for handoff-0547"
+      - "render_current_frontier.py --check and render_dependency_graph.py --check passed before local CI"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap memory system will run after closeout records are written"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language lint passed with hard_fail_count=0"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+claim_boundary:
+  route_freeze_authorized: false
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_authorized: false
+  stress_energy_authorized: false
+  matter_action_authorized: false
+  variation_principle_authorized: false
+  einstein_equation_route_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+next_recommended_action: "Run one bounded v15 P14-T02 epistemic category glossary packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260703-027` and `handoff-0546`.
+`RT-20260704-001` and `handoff-0547`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260703-027` |
-| Latest handoff ID | `handoff-0546` |
-| Current status | `post_v15_p13_t02_alias_renderer_enforcement_completed_next_p14_t01_no_physics_delta` |
-| Current route family | post v15 p13 t02 alias renderer enforcement completed next p14 t01 no physics delta |
+| Active task ID | `RT-20260704-001` |
+| Latest handoff ID | `handoff-0547` |
+| Current status | `post_v15_p14_t01_public_status_source_spec_completed_next_p14_t02_no_physics_delta` |
+| Current route family | post v15 p14 t01 public status source spec completed next p14 t02 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is public status exists does not exist source spec |
-| Required next authority | P14-T01 public status exists does not exist source spec |
-| Next recommended action | Run one bounded v15 P14-T01 public status exists does not exist source spec packet. |
+| Current burden | none for physics derivation; live control burden is epistemic category glossary |
+| Required next authority | P14-T02 epistemic category glossary |
+| Next recommended action | Run one bounded v15 P14-T02 epistemic category glossary packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260703-027/00_TASK.yaml`.
-- Active task objective: Enforce scoped-positive aliases for high-risk rows in reader-facing dependency graph renderer summaries found by P13-T01.
-- Latest handoff path: `research_control/handoffs/handoff-0546.yaml`.
-- Latest handoff summary: RT-20260703-027 completed v15 P13-T02 alias and renderer enforcement with no physics delta.
-- Current route family: post v15 p13 t02 alias renderer enforcement completed next p14 t01 no physics delta.
-- Next recommended action: Run one bounded v15 P14-T01 public status exists does not exist source spec packet.
+- Active task path: `research_control/tasks/RT-20260704-001/00_TASK.yaml`.
+- Active task objective: Create the source-backed public what exists and what does not exist status table spec required by v15 P14-T01.
+- Latest handoff path: `research_control/handoffs/handoff-0547.yaml`.
+- Latest handoff summary: RT-20260704-001 completed v15 P14-T01 public status exists and does-not-exist source spec with no physics delta.
+- Current route family: post v15 p14 t01 public status source spec completed next p14 t02 no physics delta.
+- Next recommended action: Run one bounded v15 P14-T02 epistemic category glossary packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P14-T01 public status exists does not exist source spec packet.
+Run one bounded v15 P14-T02 epistemic category glossary packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,31 +223,24 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260703-027`;
-- latest handoff: `handoff-0546`;
-- current status: `post_v15_p13_t02_alias_renderer_enforcement_completed_next_p14_t01_no_physics_delta`;
+- active task: `RT-20260704-001`;
+- latest handoff: `handoff-0547`;
+- current status: `post_v15_p14_t01_public_status_source_spec_completed_next_p14_t02_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
 - latest handoff validation `claim_language_changed_lint`: PASS;
 - latest handoff validation `current_frontier_check`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
 - latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `local_ci_equivalent`: PASS;
-- latest handoff validation `unit_test_render_dependency_graph`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `task_local_public_status_spec_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0546.yaml`
-- `research_control/tasks/RT-20260703-027/00_TASK.yaml`
+- `research_control/handoffs/handoff-0547.yaml`
+- `research_control/tasks/RT-20260704-001/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -263,7 +256,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0546*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0547*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
