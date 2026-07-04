@@ -1,0 +1,44 @@
+task_id: "RT-20260704-004"
+task_type: "support_only_proof_assistant_pilot_scope_selector"
+status: "completed"
+created_at: "2026-07-04T07:02:02Z"
+updated_at: "2026-07-04T07:02:02Z"
+parent_task_id: "RT-20260704-003"
+parent_handoff_id: "handoff-0549"
+decision_id: "DDR-20260704-004"
+job_id: "AJ-RT-20260704-004-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260704-004"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-02-goal-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  plan_task_name: "Proof-assistant pilot scope selector"
+objective: "Select exactly one small support-only proof-assistant pilot target with proof authority explicitly false."
+selected_pilot_target: "fail_closed_missing_certificate_lemma"
+target_derivation_milestone: "none"
+milestone_burden: "P15-T01 support-only proof-assistant pilot scope selection; no physics derivation milestone is advanced."
+claim_boundary:
+  allowed_scope: "P15-T01 support-only proof-assistant pilot scope selection only"
+  selected_pilot_target: "fail_closed_missing_certificate_lemma"
+  proof_authority: false
+  support_only: true
+  scientific_claims_changed: false
+  scientific_claim_delta: "none"
+  route_freeze_authorized: false
+  freeze_review_required_now: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+planned_outputs:
+  - "research_control/tasks/RT-20260704-004/artifacts/p15_t01_proof_assistant_pilot_scope_selector.md"
+next_recommended_action: "Run one bounded v15 P15-T02 support-only formalization pilot for the fail-closed missing-certificate lemma."
