@@ -191,6 +191,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-SELECTED-MATTER-COUPLING-DAG-EDGE-THEOREM-PACKET-SETUP-V16` `research_control/tasks/RT-20260704-021/artifacts/selected_matter_coupling_dag_edge_theorem_packet_setup_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-022-PARENT-FUSION-NOTES-SELECTED-EDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260704-022/artifacts/parent_fusion_notes_selected_edge_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-023-PARENT-FUSION-NOTES-SELECTED-EDGE-REFUTER-STRESS` `research_control/tasks/RT-20260704-023/artifacts/parent_fusion_notes_selected_edge_refuter_stress.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-PARENT-FUSION-NOTES-POST-SELECTED-THEOREM-ROUTE-SELECTOR` `research_control/tasks/RT-20260704-024/artifacts/parent_fusion_notes_post_selected_theorem_route_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-POST-SELECTED-THEOREM-ROUTE-SELECTOR-V16` `research_control/tasks/RT-20260704-024/artifacts/post_selected_theorem_route_selector_v16.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -797,6 +799,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-021-SELECTED-MATTER-COUPLING-DAG-EDGE-THEOREM-PACKET-SETUP-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-021-selected-matter-coupling-dag-edge-theorem-packet-setup-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-022-PARENT-FUSION-NOTES-SELECTED-EDGE-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260704-022-parent-fusion-notes-selected-edge-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-023-PARENT-FUSION-NOTES-SELECTED-EDGE-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260704-023-parent-fusion-notes-selected-edge-refuter-stress.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-PARENT-FUSION-NOTES-POST-SELECTED-THEOREM-ROUTE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260704-024-parent-fusion-notes-post-selected-theorem-route-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-POST-SELECTED-THEOREM-ROUTE-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-024-post-selected-theorem-route-selector-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

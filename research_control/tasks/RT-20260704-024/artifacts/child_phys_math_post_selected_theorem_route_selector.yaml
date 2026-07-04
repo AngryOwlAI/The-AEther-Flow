@@ -1,0 +1,25 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_route: "concrete_certificate_instance_library"
+route_reasoning:
+  premises:
+    - "SCLTarget_v1 exists as a draft/control target specification."
+    - "The P3-T03 audit found the target source-pure as written pending Refuter stress."
+    - "The P3-T04 Refuter stress found stress survival only as draft/control pending selector."
+    - "No blocking obstruction invalidates the target as written."
+    - "The v16 P3-T05 default route selects the certificate-instance library when those conditions hold."
+  excluded_routes:
+    repair_p3_theorem_route_artifact: "not selected because no blocking P3 defect was found"
+    build_source_model_zoo_first: "not selected because P4 finite/local certificate instances are the lower-level dependency for P10"
+    formalize_executable_support_only_checker: "not selected because P6 should consume P4 instances rather than precede them"
+    detector_semantics_replacement_target: "not selected because detector semantics remain a downstream or alternative target rather than the next default route"
+    coupling_law_candidate_construction: "not selected because certificate instances are needed before any bounded candidate-construction attempt"
+    freeze_route: "not selected because P3 produced new payload and no repeated no-payload obstruction"
+    project_system_repair: "not selected because current validators pass"
+mathematical_payload:
+  payload_id: "P3T05-ROUTE-SELECTION-001"
+  payload_type: "packet_selection"
+  statement: "Under the recorded P3 audit and stress results, the next bounded constructive packet is P4 certificate-instance library schema."
+  burden_effect: "selects_next"
+hard_blocks_preserved: true
