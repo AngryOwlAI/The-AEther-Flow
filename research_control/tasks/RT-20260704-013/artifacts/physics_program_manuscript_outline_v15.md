@@ -251,13 +251,19 @@ or public communication for completed derivation.
 
 ## Drafting Requirements
 
+- Cite the P18-T03 shared glossary when using cross-manuscript terms such as
+  AEther-flow ontology, exact-GR benchmark, interpretation, derivation,
+  source-side object, source-extension object, scoped evidence/precondition,
+  Gate Chair adoption, validator receipt, matter coupling, detector semantics,
+  stress-energy semantics, benchmark promotion, and completed derivation.
 - Include a status note early in the manuscript.
 - Use source paths and registry rows as citations for status claims.
 - Prefer "scoped", "blocked", "open", "precondition", and "source-side" over
   unqualified adoption or derivation language.
 - Avoid the words "established", "proved", "derived", "accepted", or
   "promoted" unless the sentence cites the exact authority path and scope.
-- Cross-reference the future P18-T03 shared glossary when it exists.
+- The governing shared glossary is
+  `research_control/tasks/RT-20260704-015/artifacts/cross_manuscript_glossary_boundary_v15.md`.
 
 ## Source Materials
 

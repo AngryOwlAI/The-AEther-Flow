@@ -280,6 +280,11 @@ truth of the physics program.
 
 ## Drafting Requirements
 
+- Cite the P18-T03 shared glossary when using cross-manuscript terms such as
+  AEther-flow ontology, exact-GR benchmark, interpretation, derivation,
+  source-side object, source-extension object, scoped evidence/precondition,
+  Gate Chair adoption, validator receipt, matter coupling, detector semantics,
+  stress-energy semantics, benchmark promotion, and completed derivation.
 - Preserve AI-system / physics-claim separation in every section.
 - Use APA 7 citations for internal documents and any external methodology
   sources selected later.
@@ -288,6 +293,8 @@ truth of the physics program.
 - Do not present a validator, commit, generated derivative, role output,
   memory hit, or handoff as scientific proof.
 - Do not claim autonomous scientific authority.
+- The governing shared glossary is
+  `research_control/tasks/RT-20260704-015/artifacts/cross_manuscript_glossary_boundary_v15.md`.
 
 ## Source Materials
 
