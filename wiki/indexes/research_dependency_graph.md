@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-04T15:05:00Z`
-- Source fingerprint: `3050922e83c175605a8f5b151058297078f7930adc074cb85c1d5749d32277a2`
-- Nodes: `12824`
-- Edges: `50923`
+- Generated from tracked state as of: `2026-07-04T15:29:00Z`
+- Source fingerprint: `cd97bc335e1416cd11d70aec40628f44f9482f236905914c73184fe5c7d497f1`
+- Nodes: `12847`
+- Edges: `50993`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 695 |
+| `completion_yaml` | 696 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 559 |
+| `handoff_yaml` | 560 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 695 |
+| `agent_job` | `support_only` | 696 |
 | `artifact` | `canonical_source` | 82 |
-| `artifact` | `support_only` | 6606 |
-| `blocked_burden` | `blocked` | 2096 |
-| `claim_boundary` | `support_only` | 652 |
+| `artifact` | `support_only` | 6619 |
+| `blocked_burden` | `blocked` | 2101 |
+| `claim_boundary` | `support_only` | 653 |
 | `draft_control_candidate` | `draft_control` | 475 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 42 |
 | `frozen_negative` | `frozen_negative` | 98 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 559 |
-| `human_gated_object` | `human_gated` | 283 |
+| `handoff` | `support_only` | 560 |
+| `human_gated_object` | `human_gated` | 284 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -57,8 +57,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 262 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 27 |
-| `task` | `support_only` | 639 |
+| `task` | `science_draft` | 26 |
+| `task` | `support_only` | 641 |
 
 ## Frontier Table
 
@@ -134,6 +134,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:authority_expansion_through_role_decomposition` | Blocked claim: authority expansion through role decomposition | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_label_as_physics_evidence` | Blocked claim: authority label as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_gate_chair_route` | Blocked claim: autonomous Gate Chair route | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:autonomous_scientific_authority` | Blocked claim: autonomous scientific authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:before_after_corpus_migration_review` | Blocked permission: before/after corpus migration review | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:benchmark_gate_chair_closure_or_suspension` | Blocked permission: benchmark Gate Chair closure or suspension | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:benchmark_import` | Blocked claim: benchmark import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:benchmark_promotion` | Blocked claim: benchmark promotion | `registries/DISTANCE_TO_GR_LEDGER.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260704-013`
-- Latest handoff: `handoff-0559`
-- Handoff path: `research_control/handoffs/handoff-0559.yaml`
-- Next action: Run one bounded v15 P18-T02 AI methodology manuscript outline packet.
+- Active task: `RT-20260704-014`
+- Latest handoff: `handoff-0560`
+- Handoff path: `research_control/handoffs/handoff-0560.yaml`
+- Next action: Run one bounded v15 P18-T03 shared glossary and cross-manuscript boundary packet.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

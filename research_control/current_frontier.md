@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-013` and `handoff-0559`.
+`RT-20260704-014` and `handoff-0560`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-013` |
-| Latest handoff ID | `handoff-0559` |
-| Current status | `post_v15_p18_t01_physics_program_manuscript_outline_next_p18_t02_no_physics_delta` |
-| Current route family | physics_program_manuscript_outline_v15 |
+| Active task ID | `RT-20260704-014` |
+| Latest handoff ID | `handoff-0560` |
+| Current status | `post_v15_p18_t02_ai_methodology_manuscript_outline_next_p18_t03_no_physics_delta` |
+| Current route family | ai_research_agent_methodology_manuscript_outline_v15 |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is ai research agent methodology manuscript outline v15 |
-| Required next authority | P18-T02 AI methodology manuscript outline |
-| Next recommended action | Run one bounded v15 P18-T02 AI methodology manuscript outline packet. |
+| Current burden | none for physics derivation; live control burden is cross manuscript glossary boundary v15 |
+| Required next authority | P18-T03 shared glossary and cross-manuscript boundary |
+| Next recommended action | Run one bounded v15 P18-T03 shared glossary and cross-manuscript boundary packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-013/00_TASK.yaml`.
-- Active task objective: Create a physics-program manuscript outline focused on scoped mathematical status and open derivation burdens.
-- Latest handoff path: `research_control/handoffs/handoff-0559.yaml`.
-- Latest handoff summary: RT-20260704-013 completed v15 P18-T01 physics-program manuscript outline with no physics delta.
-- Current route family: physics_program_manuscript_outline_v15.
-- Next recommended action: Run one bounded v15 P18-T02 AI methodology manuscript outline packet.
+- Active task path: `research_control/tasks/RT-20260704-014/00_TASK.yaml`.
+- Active task objective: Create an AI research-agent methodology manuscript outline while separating AI-system claims from physics claims.
+- Latest handoff path: `research_control/handoffs/handoff-0560.yaml`.
+- Latest handoff summary: RT-20260704-014 completed v15 P18-T02 AI research-agent methodology manuscript outline with no physics delta.
+- Current route family: ai_research_agent_methodology_manuscript_outline_v15.
+- Next recommended action: Run one bounded v15 P18-T03 shared glossary and cross-manuscript boundary packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P18-T02 AI methodology manuscript outline packet.
+Run one bounded v15 P18-T03 shared glossary and cross-manuscript boundary packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-013`;
-- latest handoff: `handoff-0559`;
-- current status: `post_v15_p18_t01_physics_program_manuscript_outline_next_p18_t02_no_physics_delta`;
+- active task: `RT-20260704-014`;
+- latest handoff: `handoff-0560`;
+- current status: `post_v15_p18_t02_ai_methodology_manuscript_outline_next_p18_t03_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0559.yaml`
-- `research_control/tasks/RT-20260704-013/00_TASK.yaml`
+- `research_control/handoffs/handoff-0560.yaml`
+- `research_control/tasks/RT-20260704-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0559*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0560*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

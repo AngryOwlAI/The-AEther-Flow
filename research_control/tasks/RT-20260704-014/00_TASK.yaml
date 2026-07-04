@@ -1,0 +1,38 @@
+task_id: "RT-20260704-014"
+task_type: "ai_research_agent_methodology_manuscript_outline_v15"
+status: "completed"
+created_at: "2026-07-04T15:29:00Z"
+updated_at: "2026-07-04T15:29:00Z"
+parent_task_id: "RT-20260704-013"
+parent_handoff_id: "handoff-0559"
+decision_id: "DDR-20260704-014"
+job_id: "AJ-RT-20260704-014-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260704-014"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-04-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P18"
+  plan_task_id: "P18-T02"
+  plan_task_name: "AI methodology manuscript outline"
+objective: "Create an AI research-agent methodology manuscript outline while separating AI-system claims from physics claims."
+target_derivation_milestone: "none"
+milestone_burden: "P18-T02 methodology-outline planning packet; no physics derivation milestone is advanced."
+claim_boundary:
+  allowed_scope: "P18-T02 AI methodology manuscript outline"
+  proof_authority: false
+  support_only: true
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  manuscript_submission_authorized: false
+  public_publication_action_authorized: false
+  generated_public_outputs_created: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+planned_outputs:
+  - "research_control/tasks/RT-20260704-014/artifacts/ai_methodology_manuscript_outline_v15.md"
+next_recommended_action: "Run one bounded v15 P18-T03 shared glossary and cross-manuscript boundary packet."
