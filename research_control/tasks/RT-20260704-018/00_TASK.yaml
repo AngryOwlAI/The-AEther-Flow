@@ -1,0 +1,35 @@
+task_id: "RT-20260704-018"
+task_type: "v15_final_validation_packet"
+status: "completed"
+created_at: "2026-07-04T17:20:00Z"
+updated_at: "2026-07-04T17:20:00Z"
+parent_task_id: "RT-20260704-017"
+parent_handoff_id: "handoff-0563"
+decision_id: "DDR-20260704-018"
+job_id: "AJ-RT-20260704-018-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260704-018"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-04-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v15"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
+  plan_phase_id: "P19"
+  plan_task_id: "P19-T03"
+  plan_task_name: "Final validation packet"
+objective: "Run full validation after v15 implementation and produce the required layer-level final validation report."
+target_derivation_milestone: "none"
+milestone_burden: "P19-T03 project-control validation packet; no physics derivation milestone is advanced."
+claim_boundary:
+  allowed_scope: "P19-T03 final validation packet"
+  proof_authority: false
+  support_only: true
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+planned_outputs:
+  - "research_control/tasks/RT-20260704-018/artifacts/v15_final_validation_report.json"
+next_recommended_action: "Run one bounded v15 P19-T04 ordinary continuation handoff packet."
