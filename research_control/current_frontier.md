@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260704-008` and `handoff-0554`.
+`RT-20260704-009` and `handoff-0555`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260704-008` |
-| Latest handoff ID | `handoff-0554` |
-| Current status | `post_v15_p16_t02_internal_red_team_pilot_next_p16_t03_no_physics_delta` |
-| Current route family | post v15 p16 t02 internal red team pilot next p16 t03 no physics delta |
+| Active task ID | `RT-20260704-009` |
+| Latest handoff ID | `handoff-0555` |
+| Current status | `post_v15_p16_t03_red_team_findings_integration_selector_next_p17_t01_no_physics_delta` |
+| Current route family | post v15 p16 t03 red team findings integration selector next p17 t01 no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is red team findings integration selector |
-| Required next authority | P16-T03 red-team findings integration selector |
-| Next recommended action | Run one bounded v15 P16-T03 red-team findings integration selector choosing no-op with evidence unless new evidence appears. |
+| Current burden | none for physics derivation; live control burden is negative result inventory v15 |
+| Required next authority | P17-T01 negative-result inventory |
+| Next recommended action | Run one bounded v15 P17-T01 negative-result inventory packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260704-008/00_TASK.yaml`.
-- Active task objective: Run an internal red-team pilot using the advisory packet template and required v15 review targets.
-- Latest handoff path: `research_control/handoffs/handoff-0554.yaml`.
-- Latest handoff summary: RT-20260704-008 completed v15 P16-T02 internal red-team pilot with no physics delta.
-- Current route family: post v15 p16 t02 internal red team pilot next p16 t03 no physics delta.
-- Next recommended action: Run one bounded v15 P16-T03 red-team findings integration selector choosing no-op with evidence unless new evidence appears.
+- Active task path: `research_control/tasks/RT-20260704-009/00_TASK.yaml`.
+- Active task objective: Select exactly one route to handle P16-T02 red-team findings.
+- Latest handoff path: `research_control/handoffs/handoff-0555.yaml`.
+- Latest handoff summary: RT-20260704-009 completed v15 P16-T03 red-team findings integration selector with no physics delta.
+- Current route family: post v15 p16 t03 red team findings integration selector next p17 t01 no physics delta.
+- Next recommended action: Run one bounded v15 P17-T01 negative-result inventory packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v15 P16-T03 red-team findings integration selector choosing no-op with evidence unless new evidence appears.
+Run one bounded v15 P17-T01 negative-result inventory packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,25 +223,23 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260704-008`;
-- latest handoff: `handoff-0554`;
-- current status: `post_v15_p16_t02_internal_red_team_pilot_next_p16_t03_no_physics_delta`;
+- active task: `RT-20260704-009`;
+- latest handoff: `handoff-0555`;
+- current status: `post_v15_p16_t03_red_team_findings_integration_selector_next_p17_t01_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `claim_boundary`: PASS;
-- latest handoff validation `major_vulnerabilities_listed`: PASS;
-- latest handoff validation `one_integration_route_selected`: PASS;
-- latest handoff validation `required_targets_reviewed`: PASS;
-- latest handoff validation `scientific_process_distinction`: PASS;
+- latest handoff validation `exactly_one_route_selected`: PASS;
+- latest handoff validation `stronger_adoption_blocked`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0554.yaml`
-- `research_control/tasks/RT-20260704-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0555.yaml`
+- `research_control/tasks/RT-20260704-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -257,7 +255,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0554*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0555*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
