@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-036` and `handoff-0609`.
+`RT-20260705-037` and `handoff-0610`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-036` |
-| Latest handoff ID | `handoff-0609` |
-| Current status | `v16_p16_t01_documentation_impact_consolidation_completed_no_physics_delta` |
-| Current route family | v16_documentation_impact_consolidation |
+| Active task ID | `RT-20260705-037` |
+| Latest handoff ID | `handoff-0610` |
+| Current status | `v16_p16_t02_validation_inventory_update_completed_no_physics_delta` |
+| Current route family | validation_command_inventory_v16_update |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is validation command inventory v16 update |
-| Required next authority | P16-T02 validation inventory v16 update only |
-| Next recommended action | Run one bounded P16-T02 validation inventory v16 update packet. |
+| Current burden | none for physics derivation; live control burden is v16 project improvement signal bridge |
+| Required next authority | P16-T03 project-improvement signal bridge decision only |
+| Next recommended action | Run one bounded P16-T03 project-improvement signal bridge decision packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-036/00_TASK.yaml`.
-- Active task objective: Execute one bounded non-promotional v16 P16-T01 documentation-impact consolidation packet.
-- Latest handoff path: `research_control/handoffs/handoff-0609.yaml`.
-- Latest handoff summary: RT-20260705-036 completed v16 P16-T01 by consolidating documentation-impact coverage for v16 project-system changes.
-- Current route family: v16_documentation_impact_consolidation.
-- Next recommended action: Run one bounded P16-T02 validation inventory v16 update packet.
+- Active task path: `research_control/tasks/RT-20260705-037/00_TASK.yaml`.
+- Active task objective: Execute one bounded non-promotional v16 P16-T02 validation command inventory update packet.
+- Latest handoff path: `research_control/handoffs/handoff-0610.yaml`.
+- Latest handoff summary: RT-20260705-037 completed v16 P16-T02 by updating the validation command inventory with required v16 checks and authority-level classifications.
+- Current route family: validation_command_inventory_v16_update.
+- Next recommended action: Run one bounded P16-T03 project-improvement signal bridge decision packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P16-T02 validation inventory v16 update packet.
+Run one bounded P16-T03 project-improvement signal bridge decision packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-036`;
-- latest handoff: `handoff-0609`;
-- current status: `v16_p16_t01_documentation_impact_consolidation_completed_no_physics_delta`;
+- active task: `RT-20260705-037`;
+- latest handoff: `handoff-0610`;
+- current status: `v16_p16_t02_validation_inventory_update_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0609.yaml`
-- `research_control/tasks/RT-20260705-036/00_TASK.yaml`
+- `research_control/handoffs/handoff-0610.yaml`
+- `research_control/tasks/RT-20260705-037/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0609*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0610*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "inventory_path": "research_control/design/validation_command_inventory_v16.md",
+  "inventory_hash": "e5dd4df6a1fc35d56fffaec0d5787d1183c773320d9b32142fd08be3283611ce",
+  "required_terms_checked": {
+    "minimum payload validation": "minimum physics payload validation",
+    "route-orbit hard-gate check": "route-orbit hard-gate check",
+    "target-import attack validation": "target-import fixture validation",
+    "compact frontier check": "compact frontier render check",
+    "claim graph validation": "claim graph validation",
+    "current frontier render check": "current frontier render check",
+    "dependency graph check": "dependency graph render check",
+    "documentation impact": "documentation impact",
+    "claim-language linter": "claim-language linter",
+    "memory bootstrap": "memory bootstrap",
+    "research-control validation": "research-control validation"
+  },
+  "missing_terms": [],
+  "required_authority_levels": [
+    "advisory-diagnostic",
+    "ci-smoke",
+    "required-gate",
+    "required-render-check",
+    "support-only"
+  ],
+  "missing_authority_levels": [],
+  "forbidden_hits": [],
+  "checks": {
+    "required_v16_checks_present": true,
+    "required_authority_levels_present": true,
+    "proof_authority_guard_present": true,
+    "forbidden_proof_authority_phrases_absent": true
+  },
+  "operational_receipt_only": true,
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}

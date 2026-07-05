@@ -896,6 +896,77 @@ class ResearchControlTests(unittest.TestCase):
             )
         self.assertEqual(report.errors, [])
 
+    def test_memory_preflight_allows_historical_validation_inventory_hash(self) -> None:
+        root = Path(tempfile.mkdtemp()).resolve()
+        self.addCleanup(lambda: shutil.rmtree(root, ignore_errors=True))
+        control = root / "research_control"
+        design = control / "design"
+        registries = root / "registries"
+        design.mkdir(parents=True)
+        registries.mkdir(parents=True)
+        (control / "program_state.yaml").write_text(
+            'active_task_id: "RT-ACTIVE"\n',
+            encoding="utf-8",
+        )
+        inventory = design / "validation_command_inventory_v16.md"
+        inventory.write_text("current validation inventory\n", encoding="utf-8")
+        current_hash = sha256_text("current validation inventory\n")
+        with (registries / "MARKDOWN_SOURCE_REGISTRY.csv").open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=["object_id", "path", "source_hash"])
+            writer.writeheader()
+            writer.writerow(
+                {
+                    "object_id": "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
+                    "path": "research_control/design/validation_command_inventory_v16.md",
+                    "source_hash": current_hash,
+                }
+            )
+        receipt = {
+            "status_command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json",
+            "status_summary": {
+                "vault_exists": True,
+                "memory_index_exists": True,
+                "source_object_count": 1,
+            },
+            "queries": [
+                {
+                    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16 --json",
+                    "query_type": "lookup",
+                    "query_text": "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
+                    "returned_object_ids": [
+                        "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16"
+                    ],
+                }
+            ],
+            "canonical_inspections": [
+                {
+                    "object_id": "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
+                    "source_registry": "MARKDOWN_SOURCE_REGISTRY.csv",
+                    "registry_path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+                    "canonical_path": "research_control/design/validation_command_inventory_v16.md",
+                    "source_hash": "historical-inventory-hash",
+                }
+            ],
+            "authority_note": "Obsidian, semantic extracts, wiki notes, and .local are retrieval layers only and not authority.",
+        }
+        report = self.validator.ValidationReport()
+        with (
+            mock.patch.object(self.validator, "REPO_ROOT", root),
+            mock.patch.object(self.validator, "REGISTRY_DIR", registries),
+            mock.patch.object(self.validator, "CONTROL_DIR", control),
+        ):
+            self.validator.validate_memory_preflight(
+                report,
+                {
+                    "job_id": "AJ-HISTORICAL",
+                    "task_id": "RT-HISTORICAL",
+                    "created_at": "2026-06-18T15:33:00Z",
+                },
+                {"memory_preflight": receipt},
+                "research_control/tasks/RT-HISTORICAL/jobs/AJ-HISTORICAL.yaml",
+            )
+        self.assertEqual(report.errors, [])
+
     def test_project_control_maintainer_rejects_explanatory_section_without_overlay(self) -> None:
         report = self.validate_authority_fixture(
             role_id="project-control-maintainer",
