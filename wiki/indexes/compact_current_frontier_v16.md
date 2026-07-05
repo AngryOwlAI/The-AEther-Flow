@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-038`
-- Latest handoff: `handoff-0611`
-- Current status: `v16_p16_t03_project_improvement_signal_bridge_completed_no_sidecar_required`
+- Active task: `RT-20260705-039`
+- Latest handoff: `handoff-0612`
+- Current status: `v16_p17_t01_recommendation_coverage_audit_completed_no_physics_delta`
 - V15 completed: `true`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v16_recommendation_coverage_audit`
-- Role family: `process-integrity-auditor@0.1.0`
+- Route ID: `v16_current_frontier_and_compact_summary_final_refresh`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Audit coverage of all V16-R01 through V16-R15 recommendations without physics delta.
+- Milestone burden: Refresh current frontier compact summary dependency graph claim graph and public-safe status after coverage audit.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `da119381005b24efa6fa64c6276f7cac1658eab08acaca1a1bc48dc72454c3a3`
-- JSON SHA-256: `70344bce2115a70aa6af0412e647630089391bc466075cea93468dddbbf06dfd`
+- YAML SHA-256: `995a6e15e49c45edf80713e708875400dec1345988a0aeb95354d3629790f3f3`
+- JSON SHA-256: `5ef62447ca2ec84fd8899ba9c5f6ba1e1335209d93799194c3438ae0e21487a7`
 
 ## Authority Warning
 
