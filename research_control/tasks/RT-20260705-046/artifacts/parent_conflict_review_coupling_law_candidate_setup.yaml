@@ -1,0 +1,21 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260705-046"
+job_id: "AJ-RT-20260705-046-001"
+status: "PASS"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260705-046/artifacts/child_phys_math_coupling_law_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260705-046/artifacts/child_phys_phil_coupling_law_candidate_setup.yaml"
+conflicts:
+  blocking: []
+  nonblocking:
+    - conflict_type: "terminology"
+      issue: "The setup names SourceCouplingLawCandidate_EStar_v1 while deliberately not constructing K_{E_*}."
+      resolution: "The fused artifact uses candidate setup envelope language and explicitly states candidate_constructed=false."
+    - conflict_type: "claim_boundary"
+      issue: "P1-T01 is physics-bearing but still setup-only."
+      resolution: "The fused artifact records a new mathematical payload as a draft/control definition packet and keeps no_distance_delta."
+unresolved_blocking_conflicts: []
+fusion_decision: "fuse_child_outputs"
+final_output_path: "research_control/tasks/RT-20260705-046/artifacts/coupling_law_candidate_construction_setup_v1.md"
+claim_boundary_preserved: true
+notes: "Both children agree that P1-T01 can define exactly one candidate-construction envelope while leaving K_{E_*} construction or obstruction to P1-T02."

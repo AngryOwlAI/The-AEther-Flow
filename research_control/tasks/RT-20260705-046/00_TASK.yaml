@@ -1,0 +1,57 @@
+task_id: "RT-20260705-046"
+task_type: "v17_candidate_constructor_packet_setup"
+status: "completed"
+created_at: "2026-07-05T22:40:00Z"
+updated_at: "2026-07-05T22:40:00Z"
+closed_at: "2026-07-05T22:40:00Z"
+parent_task_id: "RT-20260705-045"
+parent_handoff_id: "handoff-0618"
+decision_id: "DDR-20260705-046"
+job_id: "AJ-RT-20260705-046-001"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260705-046"
+requires_human_gate: false
+human_authorization_note: "The user requested completion of all remaining v17 phases through Continue Research and granted human authorization for human gates. P1-T01 requires no Gate Chair authority adoption authority benchmark authority or completed-derivation authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T01"
+  plan_task_name: "Candidate-constructor packet setup"
+objective: "Define one bounded source-side coupling-law candidate construction setup envelope from the v16 target specification without constructing K_E adopting a coupling law or deriving matter coupling."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Set up one bounded source-side coupling-law candidate construction packet using the v16 target specification."
+closure_status: "v17_p1_t01_candidate_setup_defined_no_adoption"
+claim_boundary:
+  allowed_scope: "Candidate-constructor packet setup only"
+  candidate_setup_defined: true
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_constructed: false
+  deferred_next_construction_symbol: "K_{E_*}"
+  scientific_claims_changed: true
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260705-046/artifacts/child_phys_math_coupling_law_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260705-046/artifacts/child_phys_phil_coupling_law_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260705-046/artifacts/parent_conflict_review_coupling_law_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260705-046/artifacts/parent_fusion_notes_coupling_law_candidate_setup.md"
+  - "research_control/tasks/RT-20260705-046/artifacts/coupling_law_candidate_construction_setup_v1.md"
+next_recommended_action: "Run one bounded v17 P1-T02 candidate-constructor packet to construct K_{E_*} under SourceCouplingLawCandidate_EStar_v1 or record one precise construction obstruction before audit stress accepted-language calibration or downstream v17 tasks."
+notes: "This task completes only P1-T01. It creates one setup envelope and preserves the no-target import guard finite-local witness obligation max_candidate_count=1 and adoption_requested=false. It does not execute P1-T02 candidate construction or any downstream v17 task."
+documentation_impact_id: "DI-RT-20260705-046-001"

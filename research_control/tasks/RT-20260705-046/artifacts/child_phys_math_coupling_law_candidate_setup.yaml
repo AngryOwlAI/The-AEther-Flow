@@ -1,0 +1,45 @@
+schema_id: "parent_child_synthesis_child_output_v1"
+task_id: "RT-20260705-046"
+job_id: "AJ-RT-20260705-046-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_role: "formal_candidate_setup_review"
+candidate_setup:
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  source_event_or_scope_symbol: "E_*"
+  source_input_scope: "SMScope(E_*)"
+  candidate_relation_symbol: "K_{E_*}"
+  certificate_bundle_symbol: "SCLBundle(E_*)"
+  detector_placeholder_symbol: "DetPlaceholder(E_*)"
+  finite_local_witness_obligation: true
+  no_target_import_guard_required: true
+  max_candidate_count: 1
+  adoption_requested: false
+formal_inputs:
+  - "Source matter-semantics input scope SMScope(E_*)"
+  - "Source coupling-law certificate bundle SCLBundle(E_*)"
+  - "DetectorSemanticsReplacementPlaceholder DetPlaceholder(E_*)"
+  - "NoTargetCouplingImportGuard_v1"
+  - "CouplingLawCandidateValidityPredicate_v1"
+  - "FiniteLocalCouplingWitnessObligation_v1"
+validity_fields_required_for_p1_t02:
+  - "finite_or_locally_finite_source_input_scope"
+  - "explicit_valid_source_certificates"
+  - "source_side_detector_placeholder_or_missing_and_blocked_marker"
+  - "no_target_import_guard_pass"
+  - "source_side_relation_or_partial_map_with_domain_codomain_witness_payloads_and_guards"
+  - "finite_local_witness_declaration_or_one_precise_obstruction"
+result: "setup_coherent"
+blocking_conflicts: []
+nonblocking_limitations:
+  - "P1-T01 does not construct the relation K_{E_*}; it only defines the envelope P1-T02 must attempt."
+  - "The explicit finite/local witness remains an obligation for P1-T02."
+next_required_role: "candidate-constructor"
+forbidden_overread:
+  - "setup as coupling-law adoption"
+  - "setup as matter-coupling derivation"
+  - "setup as detector semantics"
+  - "setup as stress-energy semantics"
+  - "setup as Einstein equations"
+  - "setup as benchmark promotion"
