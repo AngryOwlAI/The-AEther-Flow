@@ -1,0 +1,61 @@
+handoff_id: "handoff-0575"
+created_at: "2026-07-05T00:30:00Z"
+task_id: "RT-20260705-002"
+decision_id: "DDR-20260705-002"
+job_id: "AJ-RT-20260705-002-001"
+completion_path: "research_control/tasks/RT-20260705-002/jobs/completions/AJC-AJ-RT-20260705-002-001.yaml"
+source_task_id: "RT-20260705-002"
+source_job_id: "AJ-RT-20260705-002-001"
+source_completion_id: "AJC-AJ-RT-20260705-002-001"
+status: "completed"
+summary: "RT-20260705-002 completed v16 P4-T05 and recorded eight finite/local fail-closed negative certificate examples with no physics promotion."
+v16_completed: false
+selected_next_route:
+  route_id: "source_certificate_instance_library_index_and_handoff"
+  role_family: "project-control-maintainer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Index P4 certificate instances and select exactly one next route."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "unrestricted RR_E theorem"
+  - "global RR_E collapse"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+  - "global no-go claim"
+  - "future source-extension impossibility claim"
+next_action: "Run one bounded project-control-maintainer@0.2.0 packet for P4-T06 certificate-instance index and selector handoff."
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "source_certificate_instance_library_index_and_handoff_v16"
+  objective: "Index all P4 certificate instances and select exactly one next route, defaulting to P5 if no immediate repair is needed."
+claim_boundary:
+  allowed_next_scope: "P4-T06 certificate-instance index and selector handoff only"
+  completed_scope: "v16 P4-T05 negative certificate-instance packet"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: false
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+validation_summary:
+  source_report_path: "research_control/tasks/RT-20260705-002/artifacts/negative_certificate_instance_packet_v1.tex"
+  required_status: "PASS"
+  pending_layers:
+    - "post-write validation and checkpoint"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "eight negative certificate fixtures recorded as scoped finite/local fail-closed examples only"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

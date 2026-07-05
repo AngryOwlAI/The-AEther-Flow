@@ -618,6 +618,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V16-P4-T02-FINITE-LOCAL-TRANSPORT-CERTIFICATE-INSTANCE` `research_control/tasks/RT-20260704-026/artifacts/finite_local_transport_certificate_instance_v1.tex`
 - `TEX-V16-P4-T03-FINITE-LOCAL-INVARIANCE-CERTIFICATE-INSTANCE` `research_control/tasks/RT-20260704-027/artifacts/finite_local_invariance_certificate_instance_v1.tex`
 - `TEX-V16-P4-T04-FINITE-LOCAL-FACTORIZATION-CERTIFICATE-INSTANCE` `research_control/tasks/RT-20260705-001/artifacts/finite_local_factorization_certificate_instance_v1.tex`
+- `TEX-V16-P4-T05-NEGATIVE-CERTIFICATE-INSTANCE-PACKET` `research_control/tasks/RT-20260705-002/artifacts/negative_certificate_instance_packet_v1.tex`
 
 ## wiki_markdown
 
@@ -1226,3 +1227,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V16-P4-T02-FINITE-LOCAL-TRANSPORT-CERTIFICATE-INSTANCE` `wiki/tex/tex-v16-p4-t02-finite-local-transport-certificate-instance.md`
 - `WIKI-TEX-V16-P4-T03-FINITE-LOCAL-INVARIANCE-CERTIFICATE-INSTANCE` `wiki/tex/tex-v16-p4-t03-finite-local-invariance-certificate-instance.md`
 - `WIKI-TEX-V16-P4-T04-FINITE-LOCAL-FACTORIZATION-CERTIFICATE-INSTANCE` `wiki/tex/tex-v16-p4-t04-finite-local-factorization-certificate-instance.md`
+- `WIKI-TEX-V16-P4-T05-NEGATIVE-CERTIFICATE-INSTANCE-PACKET` `wiki/tex/tex-v16-p4-t05-negative-certificate-instance-packet.md`

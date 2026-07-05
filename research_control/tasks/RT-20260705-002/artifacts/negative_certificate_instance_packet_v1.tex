@@ -1,0 +1,428 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\Esrc}{E_{\mathrm{src}}}
+\newcommand{\Asrc}{A_{\mathrm{src}}}
+\newcommand{\Bsrc}{B_{\mathrm{src}}}
+\newcommand{\Fsrc}{F_{\mathrm{src}}}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\Fail}{\mathsf{failclosed}^{\mathrm{src}}}
+\newcommand{\DeclEq}{\equiv_{\mathrm{decl}}^{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Negative Certificate Instance Packet v1}
+\author{Ontology Formalizer Packet RT-20260705-002}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P4-T05. It constructs eight explicit
+finite/local negative certificate attempts using the P4 certificate-instance
+schema as the rejection boundary.
+
+The artifact is a draft/control negative-example packet. It does not adopt a
+source law, \(\RRELaw\), an unrestricted \(\RRE\) theorem, matter semantics,
+detector semantics, a coupling law, matter coupling, stress-energy semantics,
+matter action, Einstein equations, benchmark status, or completed derivation.
+It also does not prove that future source extensions are impossible.
+
+\section{Finite Source Context}
+
+\begin{definition}[Shared finite source shell]
+Let
+\[
+  \Esrc=\{0,1\}.
+\]
+Let
+\[
+  \Asrc=(\Esrc,L_A,G_A,R_A,\mathrm{negative\_domain}),
+  \qquad
+  \Bsrc=(\Esrc,L_B,G_B,R_B,\mathrm{negative\_codomain})
+\]
+where
+\[
+  L_A(0)=L_B(0)=\ell_0,\quad L_A(1)=L_B(1)=\ell_1,
+\]
+\[
+  G_A(i)=G_B(i)=\mathrm{inside\_negative\_fixture}(\Esrc,i),
+  \qquad R_A(i)=R_B(i)=r_i.
+\]
+The positive transport candidate that would be admissible, if present and
+source-pure, is \(\tau(i)=i\). The source factor object used for comparison is
+\[
+  \Fsrc=\{f_0,f_1\},\qquad p(i)=f_i,\qquad q(f_i)=i.
+\]
+All objects in this section are finite source-side records.
+\end{definition}
+
+\section{Negative Record Form}
+
+\begin{definition}[Negative attempt fields]
+Each negative attempt below has a stable identifier, a finite candidate shape,
+the first failing field, an expected fail-closed reason, and blocked overreads.
+The expected equivalence result is
+\[
+  \mathrm{expected\_equivalence\_result}
+  =\mathrm{declared\_equivalence\_blocked}
+\]
+for all eight attempts. The \(\RRE\) separation effect is either
+\(\mathrm{preserves\_declared\_separation}\) or
+\(\mathrm{obstruction\_recorded}\); no attempt identifies unrestricted
+\(\RRE\) classes.
+\end{definition}
+
+\begin{longtable}{p{0.16\linewidth}p{0.19\linewidth}p{0.28\linewidth}p{0.27\linewidth}}
+\toprule
+ID & Attempt & Fail-closed reason & Blocked overreads\\
+\midrule
+\endhead
+SCI-NEG-MISSING-001 &
+missing transport certificate &
+\(\tau\) and witness table are absent, so there is no source payload to check. &
+Declared equivalence; \(\RRELaw\) adoption; unrestricted \(\RRE\) theorem; matter coupling.\\
+\addlinespace
+SCI-NEG-MALFORMED-001 &
+domain/codomain mismatch &
+Candidate maps \(0\mapsto 0,1\mapsto 2\) while \(2\notin\Esrc\), so codomain membership fails. &
+Declared equivalence; source transport completeness; benchmark recovery; completed derivation.\\
+\addlinespace
+SCI-NEG-FACTOR-CHANGE-001 &
+changed factorization object &
+The middle object is changed to \(F'=\{f_0\}\) while the original factorization needs \(f_1\). &
+Factorization preservation; global \(\RRE\) collapse; coupling-law adoption.\\
+\addlinespace
+SCI-NEG-TARGET-METRIC-001 &
+target metric import &
+Candidate uses \(g_{\mu\nu}\) to justify equality rather than source labels, guards, tokens, and maps. &
+Source equivalence; effective metric adoption; matter coupling; Einstein equations.\\
+\addlinespace
+SCI-NEG-DETECTOR-001 &
+detector-semantics import &
+Candidate uses detector-event sameness \(D(0)=D(1)\) as the certificate witness. &
+Detector semantics adoption; matter semantics; stress-energy semantics; benchmark status.\\
+\addlinespace
+SCI-NEG-STRESS-ENERGY-001 &
+stress-energy shortcut &
+Candidate treats \(T_{\mu\nu}=0\) as a transport/invariance witness. Stress-energy is not a P4 source-certificate datum. &
+Stress-energy semantics; matter action; Einstein equations; benchmark promotion.\\
+\addlinespace
+SCI-NEG-VALIDATOR-PASS-001 &
+validator PASS as proof &
+Candidate treats a validator success token as certificate payload. Process status is not source data. &
+Proof authority from tooling; source-law adoption; completed derivation; Gate Chair verdict.\\
+\addlinespace
+SCI-NEG-SCOPED-EVIDENCE-001 &
+scoped evidence as adoption &
+Candidate converts scoped finite evidence into adoption of a general source law. Scope expansion is unauthorized. &
+Source-law adoption; \(\RRELaw\) adoption; unrestricted \(\RRE\) theorem; matter coupling.\\
+\bottomrule
+\end{longtable}
+
+\section{Machine-Readable Negative Records}
+
+\begin{verbatim}
+schema_id: "source_certificate_instance_library_schema_v1"
+packet_id: "negative_certificate_instance_packet_v1"
+packet_scope: "finite/local fail-closed examples only"
+negative_records:
+  - certificate_instance_id: "SCI-NEG-MISSING-001"
+    instance_kind: "missing_certificate_negative"
+    source_object_A: "A_src=(E_src,L_A,G_A,R_A,negative_domain)"
+    source_object_B: null
+    declared_context: "E_src={0,1}; transport witness absent"
+    domain: "declared A_src domain rows exist"
+    codomain: "not applicable because certificate payload is missing"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["inside_negative_fixture(E_src,i)"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: null
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "missing source transport certificate payload"
+    status: "missing"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "preserves_declared_separation"
+    fail_closed_reason: "No source transport certificate payload is present."
+    target_import_used: false
+    detector_semantics_used: false
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: false
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "declared equivalence from absent payload"
+      - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+      - "unrestricted RR_E theorem"
+      - "matter coupling"
+  - certificate_instance_id: "SCI-NEG-MALFORMED-001"
+    instance_kind: "malformed_certificate_negative"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "candidate sends 1 to missing codomain element 2"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["codomain_membership"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "tau_bad(0)=0; tau_bad(1)=2"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "codomain membership mismatch"
+    status: "malformed"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "obstruction_recorded"
+    fail_closed_reason: "The candidate map leaves the declared codomain."
+    target_import_used: false
+    detector_semantics_used: false
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: false
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "declared equivalence from malformed map"
+      - "source transport completeness"
+      - "benchmark recovery"
+      - "completed derivation"
+  - certificate_instance_id: "SCI-NEG-FACTOR-CHANGE-001"
+    instance_kind: "malformed_certificate_negative"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "factorization middle object changed after witness declaration"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["factor_object_identity"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "F'={f_0}; p(1)=f_1 required but f_1 notin F'"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "changed factorization object invalidates witness"
+    status: "malformed"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "obstruction_recorded"
+    fail_closed_reason: "The factor object is not the object used by the witness."
+    target_import_used: false
+    detector_semantics_used: false
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: false
+    source_paths:
+      - "research_control/tasks/RT-20260705-001/artifacts/finite_local_factorization_certificate_instance_v1.tex"
+    forbidden_overreads:
+      - "factorization preservation after object substitution"
+      - "global RR_E collapse"
+      - "coupling-law adoption"
+  - certificate_instance_id: "SCI-NEG-TARGET-METRIC-001"
+    instance_kind: "target_import_rejected_certificate"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "candidate imports g_mu_nu as equality witness"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["no_target_metric_import"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "g_mu_nu equality assertion"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "target metric import is not source-certificate payload"
+    status: "rejected_target_import"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "preserves_declared_separation"
+    fail_closed_reason: "The candidate depends on target metric data."
+    target_import_used: true
+    detector_semantics_used: false
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: false
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "source equivalence from target metric"
+      - "effective metric adoption"
+      - "matter coupling"
+      - "Einstein equations"
+  - certificate_instance_id: "SCI-NEG-DETECTOR-001"
+    instance_kind: "detector_semantics_rejected_certificate"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "candidate imports detector-event sameness"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["no_detector_semantics_import"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "D(0)=D(1)"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "detector semantics are not source-certificate payload"
+    status: "rejected_detector_semantics"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "preserves_declared_separation"
+    fail_closed_reason: "The candidate depends on detector semantics."
+    target_import_used: false
+    detector_semantics_used: true
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: false
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "detector semantics adoption"
+      - "matter semantics"
+      - "stress-energy semantics"
+      - "benchmark status"
+  - certificate_instance_id: "SCI-NEG-STRESS-ENERGY-001"
+    instance_kind: "target_import_rejected_certificate"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "candidate uses stress-energy shortcut"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["no_stress_energy_shortcut"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "T_mu_nu=0 shortcut"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "stress-energy is outside P4 source-certificate payload"
+    status: "fail_closed"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "preserves_declared_separation"
+    fail_closed_reason: "Stress-energy data cannot replace a source certificate."
+    target_import_used: true
+    detector_semantics_used: false
+    stress_energy_used: true
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: false
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "stress-energy semantics"
+      - "matter action"
+      - "Einstein equations"
+      - "benchmark promotion"
+  - certificate_instance_id: "SCI-NEG-VALIDATOR-PASS-001"
+    instance_kind: "process_authority_rejected_certificate"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "candidate treats validation status as source payload"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["no_process_authority_payload"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "validator_status=PASS"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "process status is not certificate payload"
+    status: "rejected_process_authority"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "preserves_declared_separation"
+    fail_closed_reason: "A validator PASS does not supply source witness data."
+    target_import_used: false
+    detector_semantics_used: false
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: true
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "proof authority from tooling"
+      - "source-law adoption"
+      - "completed derivation"
+      - "Gate Chair verdict"
+  - certificate_instance_id: "SCI-NEG-SCOPED-EVIDENCE-001"
+    instance_kind: "process_authority_rejected_certificate"
+    source_object_A: "A_src over E_src={0,1}"
+    source_object_B: "B_src over E_src={0,1}"
+    declared_context: "candidate treats scoped finite evidence as adoption"
+    domain: "{0,1}"
+    codomain: "{0,1}"
+    source_labels: ["ell_0","ell_1"]
+    source_guards: ["no_scope_expansion_without_authority"]
+    response_tokens: ["r_0","r_1"]
+    certificate_payload: "scoped evidence -> adopted source law"
+    no_target_import_guard:
+      result: "fail_closed"
+      reason: "scoped evidence cannot be converted into adoption"
+    status: "rejected_process_authority"
+    expected_equivalence_result: "declared_equivalence_blocked"
+    rr_e_separation_effect: "obstruction_recorded"
+    fail_closed_reason: "Adoption requires protected authority not present in this packet."
+    target_import_used: false
+    detector_semantics_used: false
+    stress_energy_used: false
+    matter_action_used: false
+    benchmark_behavior_used: false
+    process_authority_used: true
+    source_paths:
+      - "research_control/design/source_certificate_instance_library_schema_v1.md"
+    forbidden_overreads:
+      - "source-law adoption"
+      - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+      - "unrestricted RR_E theorem"
+      - "matter coupling"
+\end{verbatim}
+
+\section{Fail-Closed Lemma}
+
+\begin{lemma}[All eight examples fail closed]
+Each listed negative attempt has a non-null fail-closed reason and blocks
+declared source equivalence for that attempted record.
+\end{lemma}
+
+\begin{proof}
+SCI-NEG-MISSING-001 has no certificate payload. SCI-NEG-MALFORMED-001 leaves
+the declared codomain. SCI-NEG-FACTOR-CHANGE-001 changes the middle factor
+object after the witness is declared. SCI-NEG-TARGET-METRIC-001 imports target
+metric data. SCI-NEG-DETECTOR-001 imports detector semantics.
+SCI-NEG-STRESS-ENERGY-001 imports stress-energy data. SCI-NEG-VALIDATOR-PASS-001
+uses process status as payload. SCI-NEG-SCOPED-EVIDENCE-001 expands scoped
+finite evidence into adoption. These are precisely the defects forbidden by
+the P4 schema, so each attempt is rejected before any declared equivalence,
+source-law adoption, or downstream physics claim can be inferred.
+\end{proof}
+
+\section{Scope Boundary}
+
+\begin{nonconclusion}[No global no-go claim]
+These eight examples are bounded negative fixtures. They show that these
+specific malformed or imported attempts fail under the P4 schema. They do not
+show that all future source extensions fail, they do not reject the project
+globally, and they do not close any derivation route by theorem.
+\end{nonconclusion}
+
+\begin{boundary}[No promotion]
+The packet records only fail-closed examples. It does not adopt source laws,
+matter semantics, detector semantics, coupling laws, stress-energy semantics,
+matter actions, Einstein equations, benchmark behavior, Gate Chair verdicts,
+or completed derivations.
+\end{boundary}
+
+\end{document}

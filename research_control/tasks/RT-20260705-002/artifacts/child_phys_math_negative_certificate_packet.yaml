@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_under_review: "research_control/tasks/RT-20260705-002/artifacts/negative_certificate_instance_packet_v1.tex"
+mathematical_assessment:
+  finite_source_shell_defined: true
+  negative_example_count: 8
+  expected_equivalence_result: "declared_equivalence_blocked"
+  rr_e_separation_preserved: true
+  all_fail_closed_reasons_nonempty: true
+  direct_checks:
+    - "missing transport has certificate_payload=null"
+    - "malformed map sends 1 outside codomain"
+    - "factorization change removes required f_1"
+    - "target metric import fails no-target guard"
+    - "detector semantics import fails no-detector guard"
+    - "stress-energy shortcut fails source-payload guard"
+    - "validator PASS as proof fails process-authority guard"
+    - "scoped evidence as adoption fails scope-authority guard"
+boundary_assessment:
+  source_law_adoption: false
+  rr_e_law_adoption: false
+  unrestricted_rr_e_theorem: false
+  matter_coupling_derivation: false
+  global_no_go_claim: false
+recommendation: "Accept as a finite/local negative fixture packet and route next to P4-T06 index and selector handoff."
