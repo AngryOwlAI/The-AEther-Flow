@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-024` and `handoff-0597`.
+`RT-20260705-025` and `handoff-0598`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-024` |
-| Latest handoff ID | `handoff-0597` |
-| Current status | `v16_p12_t01_physics_manuscript_status_refresh_completed_no_physics_delta` |
-| Current route family | physics_manuscript_status_refresh_v16 |
+| Active task ID | `RT-20260705-025` |
+| Latest handoff ID | `handoff-0598` |
+| Current status | `v16_p12_t02_ai_methodology_manuscript_status_refresh_completed_no_physics_delta` |
+| Current route family | ai_methodology_manuscript_status_refresh_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is ai methodology manuscript status refresh v16 |
-| Required next authority | P12-T02 AI methodology manuscript status refresh only |
-| Next recommended action | Run one bounded P12-T02 AI methodology manuscript status refresh packet. |
+| Current burden | none for physics derivation; live control burden is manuscript split boundary checklist v16 |
+| Required next authority | P12-T03 manuscript split boundary checklist only |
+| Next recommended action | Run one bounded P12-T03 manuscript split boundary checklist packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-024/00_TASK.yaml`.
-- Active task objective: Refresh the physics manuscript outline/status with v16 post-v15 route state while preserving open-burden boundaries.
-- Latest handoff path: `research_control/handoffs/handoff-0597.yaml`.
-- Latest handoff summary: RT-20260705-024 completed v16 P12-T01 by creating a physics manuscript status refresh that keeps the manuscript as a physics-program open-burden paper.
-- Current route family: physics_manuscript_status_refresh_v16.
-- Next recommended action: Run one bounded P12-T02 AI methodology manuscript status refresh packet.
+- Active task path: `research_control/tasks/RT-20260705-025/00_TASK.yaml`.
+- Active task objective: Refresh the AI methodology manuscript outline/status with v16 control-system developments while separating methodology claims from physics success claims.
+- Latest handoff path: `research_control/handoffs/handoff-0598.yaml`.
+- Latest handoff summary: RT-20260705-025 completed v16 P12-T02 by creating an AI methodology manuscript status refresh that separates workflow-methodology claims from physics success claims.
+- Current route family: ai_methodology_manuscript_status_refresh_v16.
+- Next recommended action: Run one bounded P12-T03 manuscript split boundary checklist packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P12-T02 AI methodology manuscript status refresh packet.
+Run one bounded P12-T03 manuscript split boundary checklist packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-024`;
-- latest handoff: `handoff-0597`;
-- current status: `v16_p12_t01_physics_manuscript_status_refresh_completed_no_physics_delta`;
+- active task: `RT-20260705-025`;
+- latest handoff: `handoff-0598`;
+- current status: `v16_p12_t02_ai_methodology_manuscript_status_refresh_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0597.yaml`
-- `research_control/tasks/RT-20260705-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0598.yaml`
+- `research_control/tasks/RT-20260705-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0597*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0598*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
