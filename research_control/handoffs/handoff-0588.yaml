@@ -1,0 +1,51 @@
+handoff_id: "handoff-0588"
+created_at: "2026-07-05T05:07:00Z"
+task_id: "RT-20260705-015"
+decision_id: "DDR-20260705-015"
+job_id: "AJ-RT-20260705-015-001"
+completion_path: "research_control/tasks/RT-20260705-015/jobs/completions/AJC-AJ-RT-20260705-015-001.yaml"
+source_task_id: "RT-20260705-015"
+source_job_id: "AJ-RT-20260705-015-001"
+source_completion_id: "AJC-AJ-RT-20260705-015-001"
+status: "completed"
+summary: "RT-20260705-015 completed v16 P8-T02 by creating the layered status field schema and routing validator enforcement to P8-T03."
+v16_completed: false
+selected_next_route:
+  route_id: "status_field_compatibility_validator_v16"
+  role_family: "validator-engineer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Implement status-field compatibility validator and fixture coverage."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "benchmark promotion"
+  - "proof authority"
+  - "completed derivation"
+next_action: "Run one bounded P8-T03 status-field compatibility validator packet."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "status_field_compatibility_validator_v16"
+  objective: "Add future-facing validation or linter rules for risky status fields."
+claim_boundary:
+  allowed_next_scope: "P8-T03 status-field compatibility validator only"
+  completed_scope: "v16 P8-T02 layered status field schema"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+validation_summary:
+  schema_source: "research_control/design/layered_status_field_schema_v16.md"
+  required_fields_present: true
+  compatibility_rule_present: true
+  migration_guidance_present: true
+  historical_records_rewritten: false
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "P8-T02 schema completed with no historical status rewrite and no physics promotion"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
