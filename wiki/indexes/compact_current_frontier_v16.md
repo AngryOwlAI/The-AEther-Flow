@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-049`
-- Latest handoff: `handoff-0622`
-- Current status: `v17_p1_t04_candidate_handoff_to_smuggling_audit_no_adoption`
+- Active task: `RT-20260705-050`
+- Latest handoff: `handoff-0623`
+- Current status: `v17_p2_t01_candidate_audit_source_pure_as_written_pending_refuter_stress_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p2_t01_smuggling_audit_of_source_side_coupling_law_candidate`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v17_p2_t02_refuter_stress_of_source_side_coupling_law_candidate`
+- Role family: `refuter@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Audit the coupling-law candidate for target import, detector import, stress-energy import, matter-action import, benchmark import, and process-authority laundering.
+- Milestone burden: Stress the audited candidate against finite/local perturbation, missing-certificate, detector-placeholder, evidence-as-adoption, and metric-use collapse modes.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `f118f68dcb0743863a4ae81cdc35d3c7519cfe8582fbea88c44d460bd4d0e090`
-- JSON SHA-256: `d031e9511cbcef42ab72691c701c24782c3a23cd9294b3dd94b14e0f97c21f99`
+- YAML SHA-256: `2a8b28e4f8c67951cbf5162bd39468433cbd307985994712e578b2120c97ce21`
+- JSON SHA-256: `4e05c365521f6383526c7cfd3dbbdd62afa23c0693da6b1c58f0f22ba2bd8380`
 
 ## Authority Warning
 

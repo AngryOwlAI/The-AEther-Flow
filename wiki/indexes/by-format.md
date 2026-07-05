@@ -234,6 +234,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-042-V16-ORDINARY-CONTINUATION-SELECTION` `research_control/tasks/RT-20260705-042/artifacts/v16_ordinary_continuation_selection.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-046-COUPLING-LAW-CANDIDATE-CONSTRUCTION-SETUP` `research_control/tasks/RT-20260705-046/artifacts/coupling_law_candidate_construction_setup_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-049-V17-CANDIDATE-AUDIT-LANE-DISPOSITION` `research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-050-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260705-050/artifacts/parent_fusion_notes_source_side_coupling_law_candidate_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -661,6 +662,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V16-P5-T02-REFACTORED-CERTIFICATE-INDEXED-SOURCE-EQUIVALENCE-TARGET-SPEC` `research_control/tasks/RT-20260705-005/artifacts/refactored_certificate_indexed_source_equivalence_target_spec_v1.tex`
 - `TEX-V16-P5-T03-CERTIFICATE-INDEXED-EQUIVALENCE-PROPERTY-THEOREM-ATTEMPT` `research_control/tasks/RT-20260705-006/artifacts/certificate_indexed_equivalence_property_theorem_attempt_v1.tex`
 - `TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE` `research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex`
+- `TEX-V17-P2-T01-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -891,6 +893,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-042-V16-ORDINARY-CONTINUATION-SELECTION` `wiki/markdown/md-research-control-tasks-rt-20260705-042-v16-ordinary-continuation-selection.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-046-COUPLING-LAW-CANDIDATE-CONSTRUCTION-SETUP` `wiki/markdown/md-research-control-tasks-rt-20260705-046-coupling-law-candidate-construction-setup.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-049-V17-CANDIDATE-AUDIT-LANE-DISPOSITION` `wiki/markdown/md-research-control-tasks-rt-20260705-049-v17-candidate-audit-lane-disposition.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-050-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260705-050-parent-fusion-notes-source-side-coupling-law-candidate-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1312,3 +1315,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V16-P5-T02-REFACTORED-CERTIFICATE-INDEXED-SOURCE-EQUIVALENCE-TARGET-SPEC` `wiki/tex/tex-v16-p5-t02-refactored-certificate-indexed-source-equivalence-target-spec.md`
 - `WIKI-TEX-V16-P5-T03-CERTIFICATE-INDEXED-EQUIVALENCE-PROPERTY-THEOREM-ATTEMPT` `wiki/tex/tex-v16-p5-t03-certificate-indexed-equivalence-property-theorem-attempt.md`
 - `WIKI-TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE` `wiki/tex/tex-v17-p1-t02-source-side-coupling-law-candidate.md`
+- `WIKI-TEX-V17-P2-T01-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-v17-p2-t01-source-side-coupling-law-candidate-smuggling-audit.md`

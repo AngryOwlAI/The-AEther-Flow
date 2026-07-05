@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-049` and `handoff-0622`.
+`RT-20260705-050` and `handoff-0623`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-049` |
-| Latest handoff ID | `handoff-0622` |
-| Current status | `v17_p1_t04_candidate_handoff_to_smuggling_audit_no_adoption` |
+| Active task ID | `RT-20260705-050` |
+| Latest handoff ID | `handoff-0623` |
+| Current status | `v17_p2_t01_candidate_audit_source_pure_as_written_pending_refuter_stress_no_adoption` |
 | V16 completed | false |
-| Current route family | v17 p1 t04 handoff to p2 t01 smuggling audit no adoption |
+| Current route family | v17 p2 t01 candidate audit to p2 t02 refuter stress no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P2-T01 smuggling audit of existing source-side coupling-law candidate |
-| Next recommended action | Run one bounded v17 P2-T01 Smuggling Auditor packet to audit SourceCouplingLawCandidate_EStar_v1 for target import detector import stress-energy import matter-action import benchmark import and process-authority laundering. |
+| Required next authority | P2-T02 Refuter stress of audited source-side coupling-law candidate |
+| Next recommended action | Run one bounded v17 P2-T02 Refuter packet to stress SourceCouplingLawCandidate_EStar_v1 and the P2-T01 audit against finite/local perturbation missing-certificate detector-placeholder evidence-as-adoption metric-use stress-energy matter-action benchmark and process-authority collapse modes. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-049/00_TASK.yaml`.
-- Active task objective: Select exactly one candidate disposition after P1-T03 and hand off the audit-eligible K_{E_*} candidate to the next lawful packet.
-- Latest handoff path: `research_control/handoffs/handoff-0622.yaml`.
-- Latest handoff summary: RT-20260705-049 completed one bounded v17 P1-T04 Director handoff packet. It selected exactly one candidate disposition for SourceCouplingLawCandidate_EStar_v1: route_to_smuggling_audit. The candidate remains draft/control and audit_eligible_only; P1-T04 does not perform the audit stress test Gate Chair review source-law adoption detector-semantics adoption coupling-law adoption matter-coupling derivation or Distance-to-GR ledger promotion.
-- Current route family: v17 p1 t04 handoff to p2 t01 smuggling audit no adoption.
-- Next recommended action: Run one bounded v17 P2-T01 Smuggling Auditor packet to audit SourceCouplingLawCandidate_EStar_v1 for target import detector import stress-energy import matter-action import benchmark import and process-authority laundering.
+- Active task path: `research_control/tasks/RT-20260705-050/00_TASK.yaml`.
+- Active task objective: Audit SourceCouplingLawCandidate_EStar_v1 for target import, detector import, stress-energy import, matter-action import, benchmark import, and process-authority laundering.
+- Latest handoff path: `research_control/handoffs/handoff-0623.yaml`.
+- Latest handoff summary: RT-20260705-050 completed one bounded v17 P2-T01 Smuggling Auditor packet. It audited SourceCouplingLawCandidate_EStar_v1 as source_pure_as_written and detected no target topology smooth atlas Lorentzian metric proper-time detector protocol empirical calibration stress-energy matter-action Einstein-equation benchmark generated-derivative process-authority or scoped-evidence-as-adoption import as written. The audit remains draft/control only and does not adopt the candidate or promote matter coupling.
+- Current route family: v17 p2 t01 candidate audit to p2 t02 refuter stress no adoption.
+- Next recommended action: Run one bounded v17 P2-T02 Refuter packet to stress SourceCouplingLawCandidate_EStar_v1 and the P2-T01 audit against finite/local perturbation missing-certificate detector-placeholder evidence-as-adoption metric-use stress-energy matter-action benchmark and process-authority collapse modes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -196,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P2-T01 Smuggling Auditor packet to audit SourceCouplingLawCandidate_EStar_v1 for target import detector import stress-energy import matter-action import benchmark import and process-authority laundering.
+Run one bounded v17 P2-T02 Refuter packet to stress SourceCouplingLawCandidate_EStar_v1 and the P2-T01 audit against finite/local perturbation missing-certificate detector-placeholder evidence-as-adoption metric-use stress-energy matter-action benchmark and process-authority collapse modes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -224,24 +224,24 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-049`;
-- latest handoff: `handoff-0622`;
-- current status: `v17_p1_t04_candidate_handoff_to_smuggling_audit_no_adoption`;
+- active task: `RT-20260705-050`;
+- latest handoff: `handoff-0623`;
+- current status: `v17_p2_t01_candidate_audit_source_pure_as_written_pending_refuter_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `candidate_disposition`: PASS;
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
+- latest handoff validation `smuggling_audit`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0622.yaml`
-- `research_control/tasks/RT-20260705-049/00_TASK.yaml`
+- `research_control/handoffs/handoff-0623.yaml`
+- `research_control/tasks/RT-20260705-050/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -257,7 +257,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0622*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0623*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

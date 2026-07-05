@@ -1,0 +1,234 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\AuditVerdict}{\mathsf{source\_pure\_as\_written}}
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\SMScope}{\mathrm{SMScope}}
+\newcommand{\SCLBundle}{\mathrm{SCLBundle}}
+\newcommand{\DetPlaceholder}{\mathrm{DetPlaceholder}}
+\newcommand{\KStar}{K_{E_{\ast}}}
+\newcommand{\NoTarget}{\mathrm{NoTarget}}
+\newcommand{\Src}{\mathrm{src}}
+
+\title{Source-Side Coupling-Law Candidate Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260705-050}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This document implements v17 P2-T01. It audits the draft/control source-side
+coupling-law candidate
+\[
+  \mathrm{SourceCouplingLawCandidate\_EStar\_v1}
+\]
+from \texttt{RT-20260705-047}. The audited object is the finite partial map
+\(\KStar\) from finite source records into source certificate data plus an
+explicit detector block.
+
+This is a source-purity and status-laundering audit only. It is not a
+canonical ontology edit, not source-law adoption, not
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, not matter-semantics adoption, not detector-semantics adoption, not
+coupling-law adoption, not matter-coupling derivation, not stress-energy
+semantics, not a stress-energy tensor, not a matter action, not Einstein
+equations, not benchmark promotion, and not completed derivation.
+
+\section{Audited Object}
+
+The candidate defines a finite source event
+\[
+  \EStar=\{\epsilon_0,\epsilon_1\},
+\]
+a finite source matter-semantics scope
+\[
+  \SMScope(\EStar)=(\EStar,\{A_0,A_1\},R_{\EStar},S_{\EStar}),
+\]
+and a finite source certificate bundle
+\[
+  \SCLBundle(\EStar)=
+  (C^{MS}_{\EStar},C^{RR}_{\EStar},C^{NT}_{\EStar},
+   D^{rep}_{\EStar},G^{proc}_{\EStar},F_{\EStar}).
+\]
+The candidate map is a finite partial map
+\[
+  \KStar:R_{\EStar}\rightharpoonup
+  \SCLBundle(\EStar)\times T_{\EStar}^{\Src}
+\]
+with exactly three graph entries on \(r_0\), \(r_1\), and \(r_{01}\).
+
+The detector component is explicitly blocked:
+\[
+  \DetPlaceholder(\EStar)=
+  (\mathrm{status}=\mathrm{missing\_and\_blocked},
+   \mathrm{reason}=\mathrm{no\_source\_side\_detector\_replacement\_law}).
+\]
+
+\section{Audit Criteria}
+
+The audit checks whether the candidate obtains its status by importing any
+forbidden authority:
+
+\begin{enumerate}[label=(\arabic*)]
+  \item target topology, target smooth atlas, target differentiable
+        structure, target Lorentzian metric, proper-time normalization,
+        target metric behavior, or benchmark behavior;
+  \item detector protocol, empirical detector semantics, empirical readout,
+        clocks, rods, or calibration as a source premise;
+  \item stress-energy semantics, stress-energy tensor, matter action, or
+        Einstein-equation premise;
+  \item generated derivative, registry metadata, validator status, role
+        identity, handoff or approval status, local cache state, file order,
+        checkpoint, or commit state as proof authority;
+  \item scoped evidence, source-certificate validity, or audit eligibility
+        treated as adoption, derivation, or positive matter theory.
+\end{enumerate}
+
+\section{Findings}
+
+\subsection{No target topology, atlas, metric, or proper-time import detected}
+
+The finite graph defining \(\KStar\) uses only source-side records
+\(R_{\EStar}\), source-side matter-semantics objects \(A_0,A_1\), explicit
+source certificates, the no-target certificate \(C^{nt}_{\EStar}\), the
+detector block, and source bookkeeping tokens. Target topology, target smooth
+atlas, Lorentzian metric, metric signature, proper time, and benchmark
+behavior occur only as false entries in the no-target certificate or as
+forbidden conclusions.
+
+\subsection{No detector protocol or empirical calibration import detected}
+
+\(\DetPlaceholder(\EStar)\) is explicitly
+\(\mathrm{missing\_and\_blocked}\). It is not detector semantics and it is not
+an empirical protocol. The candidate does not use detector calibration, clocks,
+rods, readout semantics, or empirical response laws as source premises.
+
+\subsection{No stress-energy, matter-action, or Einstein-equation premise}
+
+The candidate neither imports nor constructs stress-energy semantics, a
+stress-energy tensor, matter-action semantics, a matter action, or Einstein
+equations. These objects appear only inside blocked-import lists,
+no-target-guard entries, or non-conclusion language.
+
+\subsection{No benchmark-behavior import detected}
+
+No exact-GR benchmark behavior, target field-equation success, or Gate Chair
+status is used to define \(\SMScope(\EStar)\), \(\SCLBundle(\EStar)\), or
+\(\KStar\). The candidate is finite source-side data only.
+
+\subsection{No process-authority laundering detected as written}
+
+The bundle component \(G^{proc}_{\EStar}\) explicitly records
+\[
+  \{\mathrm{process\_surface\_nonpremise},
+    \mathrm{generated\_derivative\_nonauthority}\}.
+\]
+The no-target certificate separately records that generated derivatives,
+process markers, and detector response laws are not premises. Therefore the
+candidate does not use registry rows, validators, roles, handoffs, approvals,
+local caches, file order, checkpoints, commits, or generated derivatives as
+mathematical authority.
+
+\subsection{No scoped evidence as adoption detected as written}
+
+The scoped evidence ledger \(S_{\EStar}\) and the certificates in
+\(\SCLBundle(\EStar)\) are used only as finite source records for audit/stress
+eligibility. The candidate states that these records are not source-law
+adoption, detector-semantics adoption, matter-semantics adoption, or
+coupling-law adoption. The P1-T03 self-check records adoption language and
+downstream-GR language as absent.
+
+\section{Verdict}
+
+The audit verdict is
+\[
+  \AuditVerdict .
+\]
+
+No hidden target topology, target smooth atlas, target Lorentzian metric,
+proper-time normalization, detector protocol, empirical calibration,
+stress-energy semantics, stress-energy tensor, matter action,
+Einstein-equation premise, benchmark behavior, generated-derivative premise,
+registry metadata premise, validator premise, role premise, handoff or
+approval premise, local-cache premise, file-order premise, commit-state
+premise, or scoped-evidence-as-adoption defect is detected in the candidate as
+written.
+
+This verdict makes the candidate ready for P2-T02 Refuter stress. It does not
+adopt \(\KStar\), does not adopt a source-side law, does not adopt detector
+semantics, does not adopt a coupling law, does not derive matter coupling, and
+does not advance the Distance-to-GR ledger.
+
+\section{Required P2-T02 Stress Targets}
+
+The next Refuter packet should stress at least:
+
+\begin{enumerate}[label=(\alph*)]
+  \item finite or local source-scope perturbation of \(\EStar\) and
+        \(R_{\EStar}\);
+  \item deletion or malformation of certificates in \(C^{MS}_{\EStar}\),
+        \(C^{RR}_{\EStar}\), and \(C^{NT}_{\EStar}\);
+  \item replacement of \(\DetPlaceholder(\EStar)\) by empirical detector
+        protocol or calibration data;
+  \item pressure to reinterpret source bookkeeping tokens
+        \(\kappa^{id}_0,\kappa^{id}_1,\kappa^{tr}_{01}\) as physical
+        coupling constants;
+  \item target topology, target smooth atlas, target Lorentzian metric,
+        proper-time, and benchmark-behavior import pressure;
+  \item stress-energy, matter-action, and Einstein-equation import pressure;
+  \item process-authority pressure from validator, registry, role, handoff,
+        generated derivative, local cache, file order, approval, checkpoint,
+        or commit state;
+  \item evidence-as-adoption pressure over scoped evidence/precondition
+        status;
+  \item \(RR_E\) unrestricted-theorem overread and \(g_{\mathrm{eff}}\) as
+        physical-metric overread;
+  \item fail-closed branch preservation under certificate loss.
+\end{enumerate}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR status is unchanged. The audit classifies the candidate as
+source-pure as written pending Refuter stress. Matter coupling remains
+undischarged. Detector semantics, stress-energy semantics, matter action,
+Einstein equations, benchmark promotion, and completed derivation remain
+blocked.
+
+\section{Non-Conclusions}
+
+This audit does not authorize canonical ontology edit, source-law adoption,
+\(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\)
+adoption, unrestricted \(RR_E\) theorem authority, matter-semantics adoption,
+detector-semantics adoption, coupling-law adoption, matter-coupling derivation
+or adoption, stress-energy semantics, stress-energy tensor, matter action,
+Einstein equations, benchmark promotion, benchmark closure, completed
+derivation, future source-extension no-go claim, or program-wide no-go
+conclusion.
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v17} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v17.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-side coupling-law
+candidate K\_EStar v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260705-047/artifacts/source\_side\_coupling\_law\_candidate\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{Source-side coupling-law
+candidate self-check v1} [Internal control artifact].
+\texttt{research\_control/tasks/RT-20260705-048/artifacts/source\_side\_coupling\_law\_candidate\_self\_check\_v1.yaml}.
+
+The AEther-Flow Research Project. (2026d). \emph{No-target-import guard map}
+[Internal control artifact].
+\texttt{research\_control/design/no\_target\_import\_guard\_map.md}.
+
+\end{document}
