@@ -1,0 +1,61 @@
+handoff_id: "handoff-0584"
+created_at: "2026-07-05T04:08:00Z"
+task_id: "RT-20260705-011"
+decision_id: "DDR-20260705-011"
+job_id: "AJ-RT-20260705-011-001"
+completion_path: "research_control/tasks/RT-20260705-011/jobs/completions/AJC-AJ-RT-20260705-011-001.yaml"
+source_task_id: "RT-20260705-011"
+source_job_id: "AJ-RT-20260705-011-001"
+source_completion_id: "AJC-AJ-RT-20260705-011-001"
+status: "completed"
+summary: "RT-20260705-011 completed v16 P7-T01 by creating the minimum physics payload schema v1."
+v16_completed: false
+selected_next_route:
+  route_id: "route_orbit_gating_policy_v16"
+  role_family: "theoretical-continuation-selector@0.1.0 or project-control-maintainer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Convert route-orbit diagnostics into selective gates."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "unrestricted RR_E theorem"
+  - "PositiveMSProfile_v1 adoption"
+  - "SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "proof authority"
+  - "completed derivation"
+next_action: "Run one bounded P7-T02 route-orbit gating policy packet."
+required_next_packet:
+  role_id: "theoretical-continuation-selector or project-control-maintainer"
+  role_version: "0.1.0 or 0.2.0"
+  packet_count: "1"
+  task_type: "route_orbit_gating_policy_v16"
+  objective: "Convert route-orbit diagnostics into selective gates."
+claim_boundary:
+  allowed_next_scope: "P7-T02 route-orbit gating policy only"
+  completed_scope: "v16 P7-T01 minimum physics payload schema"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+validation_summary:
+  source_schema_path: "research_control/design/minimum_physics_payload_schema_v1.md"
+  required_status: "PASS"
+  pending_layers:
+    - "post-write validation and checkpoint"
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "P7-T01 minimum payload schema created with no validator enforcement and no physics promotion"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

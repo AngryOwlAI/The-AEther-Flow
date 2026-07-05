@@ -1,0 +1,218 @@
+completion_path: "research_control/tasks/RT-20260705-011/jobs/completions/AJC-AJ-RT-20260705-011-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-011-001"
+job_id: "AJ-RT-20260705-011-001"
+task_id: "RT-20260705-011"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-05T04:08:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P7-T01"
+  plan_phase_id: "P7"
+  implemented_task_scope: "Created the minimum physics payload schema v1 and routed to P7-T02."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P6-T03"
+    - "P7-T01"
+  downstream_tasks_not_implemented:
+    - "P7-T02 through P17"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/minimum_physics_payload_schema_v1.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-011/DDR-20260705-011.md"
+  - "research_control/tasks/RT-20260705-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-011/jobs/AJ-RT-20260705-011-001.yaml"
+  - "research_control/tasks/RT-20260705-011/jobs/completions/AJC-AJ-RT-20260705-011-001.yaml"
+  - "research_control/tasks/RT-20260705-011/roles/project-control-maintainer@0.2.0--RT-20260705-011.yaml"
+  - "research_control/handoffs/handoff-0584.yaml"
+  - "research_control/handoffs/handoff-0584.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0583.yaml"
+  - "research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md"
+  - "research_control/design/route_signature_schema_v1.md"
+  - "research_control/design/validation_command_inventory_v15.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=618 relationship_row_count=3223 semantic_row_count=618 vault_row_count=618"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-010 latest_handoff=handoff-0583 next_action=P7-T01"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true blocked_paths=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass advisory_only=true"
+  - "git diff --check | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 618
+    relationship_row_count: 3223
+    semantic_row_count: 618
+    vault_row_count: 618
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/route_signature_schema_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/route_signature_schema_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-SCHEMA-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/validation_command_inventory_v15.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/validation_command_inventory_v15.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md"
+      source_hash: "5f2752a65d8d92946b7614468621eb7c866fe206537eed63117994bc680bc901"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/route_signature_schema_v1.md"
+      source_hash: "06a573d4c41d12c7155d0d578b7cf1e529edd203d28347db02d5b290a9d0d8af"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_command_inventory_v15.md"
+      source_hash: "dff4817f4367c5c1824d2f611fd4daec9147a6b3dc04826252ded91d5c318dc6"
+minimum_payload_schema:
+  artifact_path: "research_control/design/minimum_physics_payload_schema_v1.md"
+  schema_id: "minimum_physics_payload_schema_v1"
+  payload_classes_count: 14
+  distinguishes_payload_from_process_receipts: true
+  payload_status_is_not_physics_promotion: true
+  validator_enforcement_implemented: false
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "matter_coupling"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS without refresh"
+      - "continue_research.py resolved handoff-0583 and P7-T01"
+      - "P7-T01 plan section inspected"
+      - "route signature schema and validation inventory inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "minimum physics payload schema source created"
+      - "required payload classes listed"
+      - "required rule and exceptions stated"
+      - "process receipts excluded from payload"
+      - "payload status not physics promotion boundary stated"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph regenerated"
+      - "memory bootstrap sync and validate-only PASS"
+      - "documentation-impact receipt updated and validate_documentation_impact PASS"
+      - "collect_project_improvement_signals --validate-emitted PASS"
+      - "validate_claim_language --changed PASS"
+      - "validate_research_control and --check-diff PASS"
+      - "report_physics_progress_metrics completed with advisory-only diagnostics"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier renderer wrote and checked"
+      - "research dependency graph renderer wrote and checked JSON Markdown and DOT outputs"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "sync_obsidian_vault refreshed generated retrieval surfaces"
+      - "bootstrap_memory_system --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-04"
+  task_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+verdict: "v16_p7_t01_minimum_physics_payload_schema_defined_no_physics_delta"
+coherent_resolution_summary: "RT-20260705-011 created the minimum physics payload schema and kept validator enforcement deferred."
+next_recommendation: "Run one bounded P7-T02 route-orbit gating policy packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusion_summary:
+  source_law_adoption: false
+  rr_e_transport_law_adoption: false
+  unrestricted_rr_e_theorem: false
+  matter_semantics_adoption: false
+  detector_semantics_adoption: false
+  coupling_law_adoption: false
+  matter_coupling_derivation_or_adoption: false
+  stress_energy_semantics: false
+  matter_action: false
+  einstein_equations: false
+  benchmark_promotion: false
+  gate_chair_verdict: false
+  completed_derivation: false
