@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-008` and `handoff-0581`.
+`RT-20260705-009` and `handoff-0582`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-008` |
-| Latest handoff ID | `handoff-0581` |
-| Current status | `v16_p6_t01_selected_certificate_record_validity_python_spec_no_physics_delta` |
-| Current route family | v16_support_only_formalization_scope_selector |
+| Active task ID | `RT-20260705-009` |
+| Latest handoff ID | `handoff-0582` |
+| Current status | `v16_p6_t02_support_only_certificate_spec_tests_pass_no_physics_delta` |
+| Current route family | support_only_executable_certificate_spec_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is support only executable certificate spec v16 |
-| Required next authority | P6-T02 support-only executable certificate spec only |
-| Next recommended action | Run one bounded validator-engineer@0.2.0 packet for P6-T02 support-only executable certificate spec. |
+| Current burden | none for physics derivation; live control burden is v16 formalization integration report |
+| Required next authority | P6-T03 integration report only |
+| Next recommended action | Run one bounded P6-T03 formalization integration report to decide future validator Refuter or theorem-packet reuse without granting proof authority. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-008/00_TASK.yaml`.
-- Active task objective: Select exactly one finite/local support-only formalization target and justify the toolchain for P6-T02.
-- Latest handoff path: `research_control/handoffs/handoff-0581.yaml`.
-- Latest handoff summary: RT-20260705-008 completed v16 P6-T01 by selecting certificate record type and validity predicate plus Python typed algebraic spec with unittest as the P6-T02 target/toolchain.
-- Current route family: v16_support_only_formalization_scope_selector.
-- Next recommended action: Run one bounded validator-engineer@0.2.0 packet for P6-T02 support-only executable certificate spec.
+- Active task path: `research_control/tasks/RT-20260705-009/00_TASK.yaml`.
+- Active task objective: Implement the selected certificate record type and validity predicate as a support-only Python typed algebraic spec plus unit tests.
+- Latest handoff path: `research_control/handoffs/handoff-0582.yaml`.
+- Latest handoff summary: RT-20260705-009 completed v16 P6-T02 by implementing a task-local support-only Python certificate record evaluator and unit tests.
+- Current route family: support_only_executable_certificate_spec_v16.
+- Next recommended action: Run one bounded P6-T03 formalization integration report to decide future validator Refuter or theorem-packet reuse without granting proof authority.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded validator-engineer@0.2.0 packet for P6-T02 support-only executable certificate spec.
+Run one bounded P6-T03 formalization integration report to decide future validator Refuter or theorem-packet reuse without granting proof authority.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-008`;
-- latest handoff: `handoff-0581`;
-- current status: `v16_p6_t01_selected_certificate_record_validity_python_spec_no_physics_delta`;
+- active task: `RT-20260705-009`;
+- latest handoff: `handoff-0582`;
+- current status: `v16_p6_t02_support_only_certificate_spec_tests_pass_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0581.yaml`
-- `research_control/tasks/RT-20260705-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0582.yaml`
+- `research_control/tasks/RT-20260705-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0581*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0582*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

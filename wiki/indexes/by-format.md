@@ -202,6 +202,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-007-POST-EQMS-REFACTOR-ROUTE-SELECTOR-V16` `research_control/tasks/RT-20260705-007/artifacts/post_eqms_refactor_route_selector_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-008-PARENT-FUSION-NOTES-FORMALIZATION-SCOPE-SELECTOR` `research_control/tasks/RT-20260705-008/artifacts/parent_fusion_notes_formalization_scope_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-008-V16-FORMALIZATION-SCOPE-SELECTOR` `research_control/tasks/RT-20260705-008/artifacts/v16_formalization_scope_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-009-PARENT-FUSION-NOTES-SUPPORT-ONLY-CERTIFICATE-SPEC` `research_control/tasks/RT-20260705-009/artifacts/parent_fusion_notes_support_only_certificate_spec.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-009-V16-SUPPORT-ONLY-CERTIFICATE-SPEC` `research_control/tasks/RT-20260705-009/artifacts/v16_support_only_certificate_spec.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -826,6 +828,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-007-POST-EQMS-REFACTOR-ROUTE-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-007-post-eqms-refactor-route-selector-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-008-PARENT-FUSION-NOTES-FORMALIZATION-SCOPE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260705-008-parent-fusion-notes-formalization-scope-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-008-V16-FORMALIZATION-SCOPE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260705-008-v16-formalization-scope-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-009-PARENT-FUSION-NOTES-SUPPORT-ONLY-CERTIFICATE-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260705-009-parent-fusion-notes-support-only-certificate-spec.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-009-V16-SUPPORT-ONLY-CERTIFICATE-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260705-009-v16-support-only-certificate-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

@@ -1,0 +1,32 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_formal_objects:
+  - "InstanceKind enum"
+  - "CertificateStatus enum"
+  - "ExpectedEquivalenceResult enum"
+  - "NoTargetImportGuard record"
+  - "CertificateRecord dataclass"
+  - "EvaluationResult dataclass"
+  - "evaluate_certificate validity predicate"
+positive_branch:
+  condition: "positive kind, status valid, non-null witness map, no-target guard pass, no forbidden imports, domain keys equal witness-map keys, witness values inside codomain"
+  result: "valid_support_only_record with declared_equivalence_allowed"
+negative_branches:
+  - "missing payload -> fail_closed_missing_certificate"
+  - "malformed status or inconsistent fields -> fail_closed_malformed_certificate"
+  - "witness domain/codomain mismatch -> fail_closed_domain_codomain_mismatch"
+  - "target_import_used -> rejected_target_import"
+  - "detector_semantics_used -> rejected_detector_semantics"
+  - "process_authority_used -> rejected_process_authority"
+  - "scoped_evidence_used -> fail_closed_scoped_evidence_not_certificate"
+  - "stress_energy_used matter_action_used or benchmark_behavior_used -> fail_closed_forbidden_import"
+unit_test_coverage:
+  positive_cases: 1
+  negative_cases: 5
+  notes: "Tests include positive transport plus missing, malformed, target-import, process-authority, and scoped-evidence branches."
+limitations:
+  - "The pilot checks finite record consistency only."
+  - "It does not prove certificate algebra theorems."
+  - "It does not synthesize composition certificates."
+  - "It does not decide repository-wide validator integration."
