@@ -163,6 +163,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `research_control/design/scoped_positive_claim_vocabulary.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SEMANTIC-LAYER-SEPARATION-CONTROL-NOTE` `research_control/design/semantic_layer_separation_control_note.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST` `research_control/design/source_certificate_algebra_checklist.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX` `research_control/design/source_certificate_instance_library_index_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX-V1` `research_control/design/source_certificate_instance_library_index_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA` `research_control/design/source_certificate_instance_library_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA-V1` `research_control/design/source_certificate_instance_library_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `research_control/design/source_extension_classification_checklist_v1.md`
@@ -778,6 +780,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` `wiki/markdown/md-research-control-design-scoped-positive-claim-vocabulary.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SEMANTIC-LAYER-SEPARATION-CONTROL-NOTE` `wiki/markdown/md-research-control-design-semantic-layer-separation-control-note.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-ALGEBRA-CHECKLIST` `wiki/markdown/md-research-control-design-source-certificate-algebra-checklist.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX` `wiki/markdown/md-research-control-design-source-certificate-instance-library-index.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX-V1` `wiki/markdown/md-research-control-design-source-certificate-instance-library-index-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA` `wiki/markdown/md-research-control-design-source-certificate-instance-library-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-certificate-instance-library-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `wiki/markdown/md-research-control-design-source-extension-classification-checklist-v1.md`

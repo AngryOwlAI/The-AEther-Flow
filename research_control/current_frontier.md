@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-002` and `handoff-0575`.
+`RT-20260705-003` and `handoff-0576`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-002` |
-| Latest handoff ID | `handoff-0575` |
-| Current status | `v16_p4_t05_negative_certificate_instance_packet_completed_no_physics_delta` |
-| Current route family | negative_certificate_instance_packet_v16 |
+| Active task ID | `RT-20260705-003` |
+| Latest handoff ID | `handoff-0576` |
+| Current status | `v16_p4_t06_certificate_instance_index_completed_no_physics_delta` |
+| Current route family | source_certificate_instance_library_index_and_handoff_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is source certificate instance library index and handoff v16 |
-| Required next authority | P4-T06 certificate-instance index and selector handoff only |
-| Next recommended action | Run one bounded project-control-maintainer@0.2.0 packet for P4-T06 certificate-instance index and selector handoff. |
+| Current burden | none for physics derivation; live control burden is eqms definition theorem content separation audit v16 |
+| Required next authority | P5-T01 equivalence/theorem-content separation audit only |
+| Next recommended action | Run one bounded ontology-formalizer@0.2.0 packet for P5-T01 equivalence/theorem-content separation audit. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-002/00_TASK.yaml`.
-- Active task objective: Construct missing, malformed, target-import, detector-import, stress-energy, process-authority, and scoped-evidence-as-adoption negative certificate examples.
-- Latest handoff path: `research_control/handoffs/handoff-0575.yaml`.
-- Latest handoff summary: RT-20260705-002 completed v16 P4-T05 and recorded eight finite/local fail-closed negative certificate examples with no physics promotion.
-- Current route family: negative_certificate_instance_packet_v16.
-- Next recommended action: Run one bounded project-control-maintainer@0.2.0 packet for P4-T06 certificate-instance index and selector handoff.
+- Active task path: `research_control/tasks/RT-20260705-003/00_TASK.yaml`.
+- Active task objective: Index all P4 source certificate instances and select exactly one next route.
+- Latest handoff path: `research_control/handoffs/handoff-0576.yaml`.
+- Latest handoff summary: RT-20260705-003 completed v16 P4-T06 by indexing all P4 certificate instances and selecting P5-T01.
+- Current route family: source_certificate_instance_library_index_and_handoff_v16.
+- Next recommended action: Run one bounded ontology-formalizer@0.2.0 packet for P5-T01 equivalence/theorem-content separation audit.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded project-control-maintainer@0.2.0 packet for P4-T06 certificate-instance index and selector handoff.
+Run one bounded ontology-formalizer@0.2.0 packet for P5-T01 equivalence/theorem-content separation audit.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-002`;
-- latest handoff: `handoff-0575`;
-- current status: `v16_p4_t05_negative_certificate_instance_packet_completed_no_physics_delta`;
+- active task: `RT-20260705-003`;
+- latest handoff: `handoff-0576`;
+- current status: `v16_p4_t06_certificate_instance_index_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0575.yaml`
-- `research_control/tasks/RT-20260705-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0576.yaml`
+- `research_control/tasks/RT-20260705-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0575*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0576*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
