@@ -1,0 +1,171 @@
+{
+  "schema_id": "v16_final_validation_report_v1",
+  "task_id": "RT-20260705-041",
+  "job_id": "AJ-RT-20260705-041-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v16",
+  "plan_task_id": "P17-T03",
+  "created_at": "2026-07-05T14:20:00Z",
+  "operational_receipt_only": true,
+  "proof_authority": false,
+  "physics_promotion_authorized": false,
+  "validators_as_physics_proof": false,
+  "v16_distance_to_gr_delta": {
+    "effect": "no_distance_delta",
+    "changed": false,
+    "burden_id": "matter_coupling",
+    "summary": "v16 added project-control schemas, validators, finite/local support artifacts, audits, and routing receipts. It did not discharge a Distance-to-GR burden or authorize downstream physics promotion."
+  },
+  "aggregate_status": "PASS",
+  "layer_statuses": [
+    {
+      "layer_id": "memory_preflight",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json",
+      "evidence": "Refresh performed and local retrieval status returned PASS."
+    },
+    {
+      "layer_id": "memory_status",
+      "status": "PASS",
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json",
+      "evidence": "Core validation, freshness, and local retrieval status PASS after preflight refresh."
+    },
+    {
+      "layer_id": "memory_bootstrap",
+      "status": "PASS",
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py && .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+      "evidence": "Bootstrap and validate-only receipts passed after transaction outputs were created."
+    },
+    {
+      "layer_id": "research_control_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py",
+      "evidence": "Research-control task, DDR, AgentJob, role, completion, handoff, program state, and registries validate."
+    },
+    {
+      "layer_id": "diff_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff",
+      "evidence": "Changed research-control surfaces validate within the active transaction boundary."
+    },
+    {
+      "layer_id": "claim_language_linter",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json",
+      "evidence": "Changed claim-language surfaces avoid overclaim, target import, premature EFE, and validator-as-proof wording."
+    },
+    {
+      "layer_id": "documentation_impact_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json",
+      "evidence": "Documentation-impact receipt records research-control state, generated derivative, generated registry, and control-registry impacts."
+    },
+    {
+      "layer_id": "registry_consistency",
+      "status": "PASS",
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+      "evidence": "Registered sources and generated registry metadata are synchronized."
+    },
+    {
+      "layer_id": "current_frontier_render_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_current_frontier.py --check",
+      "evidence": "Current frontier matches tracked state after handoff-0614."
+    },
+    {
+      "layer_id": "dependency_graph_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --check",
+      "evidence": "Dependency graph JSON, DOT, and Markdown outputs are fresh."
+    },
+    {
+      "layer_id": "claim_graph_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check && .venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json",
+      "evidence": "Claim graph outputs are fresh and non-promotion guard rows validate."
+    },
+    {
+      "layer_id": "route_orbit_report_generated",
+      "status": "PASS_WITH_ADVISORY",
+      "command": ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py",
+      "evidence": "Route-orbit report generated. Advisory warnings remain operational diagnostics only."
+    },
+    {
+      "layer_id": "route_orbit_hard_gate_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_route_orbits.py --sample recent-matter-rr-e --json",
+      "evidence": "Hard-gate sample exits successfully. Advisory route-orbit warnings do not create proof authority or physics promotion."
+    },
+    {
+      "layer_id": "minimum_payload_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_minimum_physics_payload.py --live --json",
+      "evidence": "Live opt-in minimum-payload records validate. This validation packet is project-control-only and requires no new mathematical payload."
+    },
+    {
+      "layer_id": "target_import_attack_suite",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_target_import_attack_fixtures.py tests/test_target_import_attack_validator.py",
+      "evidence": "Implemented target-import attack fixtures and validator tests pass."
+    },
+    {
+      "layer_id": "compact_frontier_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check && .venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json",
+      "evidence": "Compact frontier YAML, JSON, and Markdown are fresh and synchronized."
+    },
+    {
+      "layer_id": "high_risk_bare_accepted_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_status_field_compatibility.py --json",
+      "evidence": "Layered status-field compatibility records pass and high-risk bare accepted usage is not promoted."
+    },
+    {
+      "layer_id": "premature_efe_linter",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_validate_claim_language.py",
+      "evidence": "Claim-language regression tests cover EFE overread, target import, source-law overread, and validator-as-proof cases."
+    },
+    {
+      "layer_id": "support_only_formalization_traceability",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry.py --json",
+      "evidence": "Support-only formalization traceability validates without granting proof authority."
+    },
+    {
+      "layer_id": "support_only_formalization_tests",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_support_formalization_traceability_registry.py tests/test_support_only_finite_local_witness_schema.py tests/test_support_only_finite_toy_tag_obstruction.py",
+      "evidence": "Support-only formalization regression tests pass."
+    }
+  ],
+  "pending_layers": [],
+  "advisory_reasons": [
+    {
+      "layer_id": "route_orbit_report_generated",
+      "reason": "route-orbit and gate-ready diagnostics are advisory operational warnings unless a hard-gate validator exits nonzero or tracked route-orbit policy marks the active packet hard-blocked."
+    }
+  ],
+  "hard_blocks_preserved": [
+    "source-law adoption",
+    "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption",
+    "unrestricted RR_E theorem",
+    "matter-semantics adoption",
+    "detector-semantics adoption",
+    "coupling-law adoption",
+    "matter-coupling derivation or adoption",
+    "stress-energy semantics",
+    "stress-energy tensor",
+    "matter action",
+    "Einstein equations",
+    "benchmark promotion",
+    "Gate Chair verdict",
+    "proof authority",
+    "completed derivation"
+  ],
+  "next_route": {
+    "route_id": "v16_final_ordinary_continuation_handoff",
+    "plan_task_id": "P17-T04",
+    "role_family": "director-of-research@0.3.0",
+    "requires_human_gate": false
+  }
+}

@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-040`
-- Latest handoff: `handoff-0613`
-- Current status: `v16_p17_t02_current_frontier_compact_summary_refresh_completed_no_physics_delta`
+- Active task: `RT-20260705-041`
+- Latest handoff: `handoff-0614`
+- Current status: `v16_p17_t03_final_validation_packet_completed_no_physics_delta`
 - V15 completed: `true`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v16_final_validation_packet`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `v16_final_ordinary_continuation_handoff`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Run final v16 validation layers and record exact pending reasons if any without physics delta.
+- Milestone burden: Select exactly one ordinary continuation route from final v16 outputs without physics delta.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `89527f63a92b4ebae6102483c4090bf966df8567c36e1f6ff2877bbc80ba2e39`
-- JSON SHA-256: `66e663af2caca1a83c28a68a233b3461812fa02a5d6c18620fe9095cc43c65e6`
+- YAML SHA-256: `d477bff3f6d7a7bcaa55de94789e4a611d0e8d4a316eb2781dcf05494616dcb5`
+- JSON SHA-256: `6addfcc13a642a14d67293a5ac26273725c5a321097b3c0d7057e1d5013f4e14`
 
 ## Authority Warning
 
