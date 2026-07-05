@@ -1,0 +1,111 @@
+{
+  "schema_id": "target_import_attack_fixture_set_v16",
+  "set_id": "good_target_import_fixtures_v16",
+  "mode": "good",
+  "snippet_path": "tests/fixtures/claim_language/target_import_attack_good_v16.md",
+  "fixtures": [
+    {
+      "fixture_id": "good_source_transport_certificate_with_no_target_guard",
+      "fixture_class": "source_transport_certificate_with_no_target_guard",
+      "snippet_key": "good_source_transport_certificate_with_no_target_guard",
+      "expected_status": "PASS",
+      "expected_current_linter_class_ids": [],
+      "safe_language_reason": "The certificate is source-scoped and explicitly denies downstream authority.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "good_scoped_evidence_precondition_wording",
+      "fixture_class": "scoped_evidence_precondition_wording",
+      "snippet_key": "good_scoped_evidence_precondition_wording",
+      "expected_status": "PASS",
+      "expected_current_linter_class_ids": [],
+      "safe_language_reason": "The accepted status is limited to scoped evidence/precondition only.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "good_target_import_fail_closed_wording",
+      "fixture_class": "target_import_fail_closed_wording",
+      "snippet_key": "good_target_import_fail_closed_wording",
+      "expected_status": "PASS",
+      "expected_current_linter_class_ids": [],
+      "safe_language_reason": "Target-side inputs are rejected and no downstream authority follows.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "good_detector_semantics_blocked_wording",
+      "fixture_class": "detector_semantics_blocked_wording",
+      "snippet_key": "good_detector_semantics_blocked_wording",
+      "expected_status": "PASS",
+      "expected_current_linter_class_ids": [],
+      "safe_language_reason": "Detector-side calibration is excluded from source labels.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "good_einstein_equations_not_started_wording",
+      "fixture_class": "einstein_equations_not_started_wording",
+      "snippet_key": "good_einstein_equations_not_started_wording",
+      "expected_status": "PASS",
+      "expected_current_linter_class_ids": [],
+      "safe_language_reason": "Direct EFE routing remains blocked by prerequisites.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "good_benchmark_promotion_protected_wording",
+      "fixture_class": "benchmark_promotion_protected_wording",
+      "snippet_key": "good_benchmark_promotion_protected_wording",
+      "expected_status": "PASS",
+      "expected_current_linter_class_ids": [],
+      "safe_language_reason": "Benchmark fit is not substituted for source evidence or gate authority.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    }
+  ]
+}
+

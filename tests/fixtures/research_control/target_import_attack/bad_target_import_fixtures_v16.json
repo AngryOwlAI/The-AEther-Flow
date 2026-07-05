@@ -1,0 +1,225 @@
+{
+  "schema_id": "target_import_attack_fixture_set_v16",
+  "set_id": "bad_target_import_fixtures_v16",
+  "mode": "bad",
+  "snippet_path": "tests/fixtures/claim_language/target_import_attack_bad_v16.md",
+  "fixtures": [
+    {
+      "fixture_id": "bad_target_metric_as_source_certificate",
+      "fixture_class": "target_metric_used_as_source_certificate",
+      "snippet_key": "bad_target_metric_as_source_certificate",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["source_certificate_overread"],
+      "expected_future_target_import_class_id": "target_metric_used_as_source_certificate",
+      "fail_closed_response": "Reject target-side metric evidence as source-certificate input.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_lorentzian_signature_as_certificate_validity",
+      "fixture_class": "lorentzian_signature_used_as_certificate_validity",
+      "snippet_key": "bad_lorentzian_signature_as_certificate_validity",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["semantic_layer_collapse_overclaim"],
+      "expected_future_target_import_class_id": "lorentzian_signature_used_as_certificate_validity",
+      "fail_closed_response": "Reject downstream signature evidence as source-certificate validity.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_proper_time_as_source_readout",
+      "fixture_class": "proper_time_used_as_source_readout",
+      "snippet_key": "bad_proper_time_as_source_readout",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["semantic_layer_collapse_overclaim"],
+      "expected_future_target_import_class_id": "proper_time_used_as_source_readout",
+      "fail_closed_response": "Reject detector-clock readout as source-side semantics.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_detector_calibration_as_source_label",
+      "fixture_class": "detector_calibration_treated_as_source_label",
+      "snippet_key": "bad_detector_calibration_as_source_label",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["source_certificate_overread"],
+      "expected_future_target_import_class_id": "detector_calibration_treated_as_source_label",
+      "fail_closed_response": "Reject detector calibration as a source-label substitute.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_stress_energy_tensor_proves_matter_semantics",
+      "fixture_class": "stress_energy_tensor_used_to_prove_matter_semantics",
+      "snippet_key": "bad_stress_energy_tensor_proves_matter_semantics",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["premature_efe_prerequisite_overclaim"],
+      "expected_future_target_import_class_id": "stress_energy_tensor_used_to_prove_matter_semantics",
+      "fail_closed_response": "Reject target-side stress-energy notation as source matter semantics.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_matter_action_proves_coupling_law",
+      "fixture_class": "matter_action_used_to_prove_coupling_law",
+      "snippet_key": "bad_matter_action_proves_coupling_law",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["semantic_layer_collapse_overclaim"],
+      "expected_future_target_import_class_id": "matter_action_used_to_prove_coupling_law",
+      "fail_closed_response": "Reject target action language as source coupling-law derivation.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_einstein_equations_as_upstream_premise",
+      "fixture_class": "einstein_equations_used_as_upstream_premise",
+      "snippet_key": "bad_einstein_equations_as_upstream_premise",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["semantic_layer_collapse_overclaim"],
+      "expected_future_target_import_class_id": "einstein_equations_used_as_upstream_premise",
+      "fail_closed_response": "Reject downstream field equations as upstream source premises.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_benchmark_fit_as_source_evidence",
+      "fixture_class": "benchmark_fit_used_as_source_evidence",
+      "snippet_key": "bad_benchmark_fit_as_source_evidence",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["source_certificate_overread"],
+      "expected_future_target_import_class_id": "benchmark_fit_used_as_source_evidence",
+      "fail_closed_response": "Reject benchmark behavior as source-side evidence.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_gate_chair_scoped_evidence_as_source_law",
+      "fixture_class": "gate_chair_scoped_evidence_used_as_source_law",
+      "snippet_key": "bad_gate_chair_scoped_evidence_as_source_law",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["scoped_evidence_or_precondition_as_adoption"],
+      "expected_future_target_import_class_id": "gate_chair_scoped_evidence_used_as_source_law",
+      "fail_closed_response": "Reject scoped-evidence status as law adoption.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_validator_pass_as_proof",
+      "fixture_class": "validator_pass_used_as_proof",
+      "snippet_key": "bad_validator_pass_as_proof",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["premature_efe_prerequisite_overclaim"],
+      "expected_future_target_import_class_id": "validator_pass_used_as_proof",
+      "fail_closed_response": "Reject validator output as proof authority.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_generated_wiki_note_as_authority",
+      "fixture_class": "generated_wiki_note_used_as_authority",
+      "snippet_key": "bad_generated_wiki_note_as_authority",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["generated_derivative_authority"],
+      "expected_future_target_import_class_id": "generated_wiki_note_used_as_authority",
+      "fail_closed_response": "Reject generated derivatives as independent authority.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    },
+    {
+      "fixture_id": "bad_finite_local_as_universal_matter_coupling",
+      "fixture_class": "finite_local_model_rendered_as_universal_matter_coupling",
+      "snippet_key": "bad_finite_local_as_universal_matter_coupling",
+      "expected_status": "FAIL",
+      "expected_current_linter_class_ids": ["premature_efe_prerequisite_overclaim"],
+      "expected_future_target_import_class_id": "finite_local_model_rendered_as_universal_matter_coupling",
+      "fail_closed_response": "Reject finite/local evidence as universal source-side matter coupling.",
+      "boundary": {
+        "proof_authority": false,
+        "physics_promotion_authorized": false,
+        "source_law_adopted": false,
+        "matter_coupling_derived": false,
+        "einstein_equations_derived": false,
+        "completed_derivation_claimed": false,
+        "validator_behavior_changed": false
+      }
+    }
+  ]
+}
+

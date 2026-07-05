@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-030` and `handoff-0603`.
+`RT-20260705-031` and `handoff-0604`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-030` |
-| Latest handoff ID | `handoff-0603` |
-| Current status | `v16_p14_t01_target_import_attack_taxonomy_completed_no_physics_delta` |
-| Current route family | target_import_attack_taxonomy_v16 |
+| Active task ID | `RT-20260705-031` |
+| Latest handoff ID | `handoff-0604` |
+| Current status | `v16_p14_t02_target_import_fixture_catalog_completed_no_physics_delta` |
+| Current route family | target_import_attack_fixture_catalog_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is target import attack fixture catalog v16 |
-| Required next authority | P14-T02 fixture catalog only |
-| Next recommended action | Run one bounded P14-T02 target-import fixture catalog packet. |
+| Current burden | none for physics derivation; live control burden is target import attack validator integration v16 |
+| Required next authority | P14-T03 validator integration only |
+| Next recommended action | Run one bounded P14-T03 fail-closed target-import validator integration packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-030/00_TASK.yaml`.
-- Active task objective: Define the P14-T01 target-import attack taxonomy and fail-closed response matrix.
-- Latest handoff path: `research_control/handoffs/handoff-0603.yaml`.
-- Latest handoff summary: RT-20260705-030 completed v16 P14-T01 by defining the target-import attack taxonomy and fail-closed response matrix.
-- Current route family: target_import_attack_taxonomy_v16.
-- Next recommended action: Run one bounded P14-T02 target-import fixture catalog packet.
+- Active task path: `research_control/tasks/RT-20260705-031/00_TASK.yaml`.
+- Active task objective: Create and validate the P14-T02 target-import attack fixture catalog.
+- Latest handoff path: `research_control/handoffs/handoff-0604.yaml`.
+- Latest handoff summary: RT-20260705-031 completed v16 P14-T02 by creating and validating the target-import attack fixture catalog.
+- Current route family: target_import_attack_fixture_catalog_v16.
+- Next recommended action: Run one bounded P14-T03 fail-closed target-import validator integration packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P14-T02 target-import fixture catalog packet.
+Run one bounded P14-T03 fail-closed target-import validator integration packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-030`;
-- latest handoff: `handoff-0603`;
-- current status: `v16_p14_t01_target_import_attack_taxonomy_completed_no_physics_delta`;
+- active task: `RT-20260705-031`;
+- latest handoff: `handoff-0604`;
+- current status: `v16_p14_t02_target_import_fixture_catalog_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0603.yaml`
-- `research_control/tasks/RT-20260705-030/00_TASK.yaml`
+- `research_control/handoffs/handoff-0604.yaml`
+- `research_control/tasks/RT-20260705-031/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0603*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0604*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
