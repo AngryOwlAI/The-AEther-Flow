@@ -1,0 +1,23 @@
+# WIKI-TEX-V16-P5-T01-EQMS-DEFINITION-THEOREM-CONTENT-SEPARATION-AUDIT
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `TEX-V16-P5-T01-EQMS-DEFINITION-THEOREM-CONTENT-SEPARATION-AUDIT`
+- Source path: `research_control/tasks/RT-20260705-004/artifacts/eqms_definition_theorem_content_separation_audit_v16.tex`
+- Format: `tex`
+- Role: `scientific_formalization`
+- Authority status: `draft_control_artifact`
+- Owner skill: `tex-wiki`
+- Source hash: `07883e3d0fcf891ecac629e2bc60d2c80c2a63881b5d2b3c2fa59188708bcf9b`
+
+## Related Objects
+
+- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16;TEX-V15-P2-T01-T02-SOURCE-SIDE-MATTER-SEMANTICS-OBJECT-CERTIFICATE-MANIFEST;TEX-V15-P2-T03-NARROW-SOURCE-SIDE-MATTER-SEMANTICS-EQUIVALENCE-THEOREM;TEX-V15-P2-T05-MATTER-SEMANTICS-EQUIVALENCE-THEOREM-REFUTER-STRESS;TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW;TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES;TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS;TEX-V16-P4-T02-FINITE-LOCAL-TRANSPORT-CERTIFICATE-INSTANCE;TEX-V16-P4-T03-FINITE-LOCAL-INVARIANCE-CERTIFICATE-INSTANCE;TEX-V16-P4-T04-FINITE-LOCAL-FACTORIZATION-CERTIFICATE-INSTANCE;TEX-V16-P4-T05-NEGATIVE-CERTIFICATE-INSTANCE-PACKET` ``
+- Generated output path: `wiki/tex/tex-v16-p5-t01-eqms-definition-theorem-content-separation-audit.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-07-05T01:18:00Z`

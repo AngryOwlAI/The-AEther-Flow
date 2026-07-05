@@ -1,0 +1,305 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqMScert}{\mathrm{EqMS}^{\mathrm{cert}}_{\mathrm{src}}}
+\newcommand{\NarrowMSCertEq}{\mathrm{NarrowMSCertEq}_{v1}}
+\newcommand{\CertSrc}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\CTr}{C_{\mathrm{transport}}^{\mathrm{src}}}
+\newcommand{\CInv}{C_{\mathrm{invariance}}^{\mathrm{src}}}
+\newcommand{\CFact}{C_{\mathrm{factorization}}^{\mathrm{src}}}
+\newcommand{\CNTI}{C_{\mathrm{no\text{-}target}}^{\mathrm{src}}}
+\newcommand{\DeclEq}{\equiv_{\mathrm{decl}}^{\mathrm{src}}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\PositiveMSProfile}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{finding}{Finding}
+\newtheorem{obligation}{Obligation}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{EqMS Definition/Theorem-Content Separation Audit v16}
+\author{Ontology Formalizer Packet RT-20260705-004}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P5-T01. It audits \(\NarrowMSCertEq\) and the
+source certificate algebra to separate definition unfolding from theorem
+content. The audit is draft/control. It clarifies scope; it does not demote
+the existing scoped evidence-status and does not promote any downstream
+physics claim.
+
+This packet does not edit canonical ontology TeX. It does not adopt a source
+law, \(\RRELaw\), \(\PositiveMSProfile\), \(\SMSAR\), matter semantics,
+detector semantics, a coupling law, matter coupling, \(\MetricData(E)\),
+scoped \(\geff\), stress-energy semantics, a stress-energy tensor, matter
+action, Einstein equations, benchmark status, or completed derivation.
+
+\section{Source Definitions Imported From P2/P3}
+
+\begin{longtable}{p{0.24\linewidth}p{0.18\linewidth}p{0.42\linewidth}}
+\toprule
+Imported source item & Classification & Audit result \\
+\midrule
+\(\EqMScert\) predicate & \texttt{validity\_predicate} &
+The predicate is the conjunction of at least one explicit source certificate,
+\(\CNTI\), declared-object consistency, and inactive fail-closed branches. \\
+\(\CTr,\CInv,\CFact\) certificate classes & \texttt{constructor\_definition} &
+They define allowed source-side witness kinds. Existence of such witnesses is
+not automatic. \\
+\(\CNTI\) no-target guard & \texttt{validity\_predicate} &
+It is a negative hygiene condition. It is not a positive transport,
+invariance, or factorization certificate. \\
+Missing, malformed, target-import, detector-import, and process-authority
+branches & \texttt{countermodel\_or\_obstruction} &
+They explain when attempted equivalence returns \(\Bottom\) or records a
+certificate-gap obstruction. \\
+Identity, composition, and restriction primitives & \texttt{constructor\_definition} &
+The primitives define expressions whose laws require separate conditional
+proofs. \\
+\bottomrule
+\end{longtable}
+
+\section{Theorem Statements Imported From P2/P3}
+
+\begin{longtable}{p{0.25\linewidth}p{0.20\linewidth}p{0.39\linewidth}}
+\toprule
+Statement & Classification & Audit result \\
+\midrule
+\(\NarrowMSCertEq\): explicit certificates imply \(A_{\mathrm{src}}
+\EqMScert B_{\mathrm{src}}\) & \texttt{definition\_unfolding\_theorem} &
+The positive proof mainly checks the clauses in the definition of
+\(\EqMScert\). Its value is boundary discipline, not an independent
+certificate-existence theorem. \\
+Certificate-gap fail-closed proposition & \texttt{countermodel\_or\_obstruction} &
+If no explicit certificate exists, the theorem cannot be used; scoped evidence
+or process status cannot fill the slot. \\
+Malformed/imported certificate fail-closed proposition &
+\texttt{countermodel\_or\_obstruction} &
+Invalid witnesses cannot establish \(\EqMScert\). \\
+Identity declared-scope preservation & \texttt{nontrivial\_conditional\_theorem} &
+The law proves preservation inside declared scope under primitive
+well-formedness assumptions. \\
+Source-side closure under compatible composition &
+\texttt{nontrivial\_conditional\_theorem} &
+The law adds conditional closure for compatible valid certificate records. \\
+Source restriction closure & \texttt{nontrivial\_conditional\_theorem} &
+The law proves closure only for declared source subdomains and fails closed for
+non-source subdomains. \\
+Malformed, missing, and target-import fail-closed laws &
+\texttt{countermodel\_or\_obstruction} &
+The laws locate precise failure branches and block adoption-style overread. \\
+\bottomrule
+\end{longtable}
+
+\section{Proof Steps That Are Definitional Unfoldings}
+
+\begin{finding}[Definition-unfolding part of \(\NarrowMSCertEq\)]
+The proof of the positive \(\NarrowMSCertEq\) branch unfolds the definition of
+\(\EqMScert\): one of \(\CTr,\CInv,\CFact\) is assumed; \(\CNTI\) is assumed
+to pass; declared-object indices are assumed consistent; fail-closed branches
+are assumed inactive. Under those premises, the conclusion is exactly the
+predicate defined by those clauses.
+\end{finding}
+
+The transport, invariance, and factorization cases in the P2 theorem therefore
+classify as \texttt{definition\_unfolding\_theorem} unless a packet supplies
+new independent proof that the relevant certificate exists or that a family of
+certificates is closed under an operation.
+
+\section{Proof Steps That Are Nontrivial}
+
+\begin{longtable}{p{0.28\linewidth}p{0.18\linewidth}p{0.38\linewidth}}
+\toprule
+Source-side content & Classification & Why nontrivial \\
+\midrule
+P3 identity declared-scope preservation &
+\texttt{nontrivial\_conditional\_theorem} &
+It proves an operation law for valid identity certificates and compatible
+composition inside scope intersections. \\
+P3 compatible composition closure &
+\texttt{nontrivial\_conditional\_theorem} &
+It checks domain-codomain compatibility, source-only inheritance, and endpoint
+preservation for composed certificates. \\
+P3 restriction closure & \texttt{nontrivial\_conditional\_theorem} &
+It separates source subdomains from target, detector, benchmark, and process
+substitutes. \\
+P4 transport instance \texttt{SCI-TRANSPORT-001} &
+\texttt{finite\_instance\_theorem} &
+A finite table verifies row-wise source transport of labels, guards, and
+response tokens. \\
+P4 invariance instance \texttt{SCI-INVARIANCE-001} &
+\texttt{finite\_instance\_theorem} &
+The non-identity cycle \(\sigma=(0\,1\,2)\) preserves the declared successor
+relation by direct enumeration. \\
+P4 factorization instance \texttt{SCI-FACTORIZATION-001} &
+\texttt{finite\_instance\_theorem} &
+The equality \(h=q\circ p\) is checked on every finite source-domain row. \\
+P4 negative instances & \texttt{countermodel\_or\_obstruction} &
+They show explicit ways the predicate fails closed when a witness is absent,
+malformed, target-importing, detector-importing, stress-energy based, or
+process-status based. \\
+\bottomrule
+\end{longtable}
+
+\section{Missing Theorem Content}
+
+The exact theorem-content gaps are:
+
+\begin{enumerate}[label=\textbf{G\arabic*.},leftmargin=*]
+  \item No general certificate-existence theorem: nothing proves that a broad
+  class of source matter-semantics objects admits valid \(\CTr,\CInv\), or
+  \(\CFact\) witnesses.
+  \item No inverse or symmetry theorem for arbitrary valid source
+  certificates. Identity and compatible composition are not enough to prove an
+  equivalence relation in the usual algebraic sense.
+  \item No theorem that scoped evidence/preconditions such as
+  \(\PositiveMSProfile\), \(\SMSAR\), or \(\RRELaw\) instantiate concrete
+  certificate bundles.
+  \item No theorem that finite/local P4 certificate instances generalize to
+  unrestricted source families.
+  \item No theorem connecting \(\EqMScert\) to detector semantics,
+  physical matter semantics, stress-energy semantics, matter action, coupling
+  law, matter coupling, \(\MetricData(E)\), \(\geff\), or Einstein equations.
+  \item No theorem that no-target hygiene alone supplies positive semantics.
+\end{enumerate}
+
+\section{Future Theorem Obligations}
+
+\begin{longtable}{p{0.26\linewidth}p{0.20\linewidth}p{0.38\linewidth}}
+\toprule
+Future target & Classification & Required burden \\
+\midrule
+Certificate existence for a named finite/local source-object family &
+\texttt{future\_theorem\_target} &
+State a domain of source objects and construct at least one explicit
+certificate family or prove a precise obstruction. \\
+Inverse/symmetry condition for declared certificates &
+\texttt{future\_theorem\_target} &
+Define when a valid certificate has a source-side inverse and when it does not. \\
+Associativity or category-like closure for compatible composition &
+\texttt{future\_theorem\_target} &
+Prove the law with explicit source scopes, or record the obstruction. \\
+Finite-to-family lift for P4 instances &
+\texttt{future\_theorem\_target} &
+Specify the finite/local generalization parameter and preservation conditions. \\
+Adoption-readiness separation theorem &
+\texttt{future\_theorem\_target} &
+Prove that scoped evidence can remain evidence/precondition without becoming
+adopted semantics, source law, or coupling law. \\
+\bottomrule
+\end{longtable}
+
+\section{Finite/Local Examples From P4}
+
+P4 demonstrates why theorem content is not exhausted by naming the
+\(\EqMScert\) predicate.
+
+\begin{itemize}[leftmargin=*]
+  \item \texttt{SCI-TRANSPORT-001} supplies an explicit transport table on
+  \(\{0,1,2\}\). The nontrivial work is the row-wise source check.
+  \item \texttt{SCI-INVARIANCE-001} supplies a non-identity cyclic relabeling.
+  The nontrivial work is the direct proof that the successor relation is
+  preserved.
+  \item \texttt{SCI-FACTORIZATION-001} supplies a middle object and maps
+  \(p,q,h\). The nontrivial work is the direct proof of \(h=q\circ p\).
+  \item The negative P4 packet supplies eight countermodel or obstruction
+  fixtures. These fixtures prove that absent payloads, malformed maps, changed
+  factor objects, target metrics, detector semantics, stress-energy shortcuts,
+  validator passes, and scoped evidence cannot substitute for explicit source
+  certificates.
+\end{itemize}
+
+\section{Forbidden Conclusion Boundary}
+
+\begin{boundary}[Audit boundary]
+This audit preserves \(\NarrowMSCertEq\) as scoped source-extension
+evidence-status for its declared conditional theorem role. It clarifies that
+the positive proof is largely definition unfolding and that future theorem
+work must target certificate existence, operation closure, inverse/symmetry,
+finite-family lifting, or precise obstruction. It does not revoke the scoped
+status and does not promote that status into adoption.
+\end{boundary}
+
+\begin{nonconclusion}
+No source-law adoption, \(\RRELaw\) adoption, unrestricted \(RR_E\) theorem,
+\(\PositiveMSProfile\) adoption, \(\SMSAR\) law adoption, matter-semantics
+adoption, detector-semantics adoption, coupling-law adoption, matter-coupling
+derivation or adoption, stress-energy semantics, stress-energy tensor, matter
+action, Einstein equations, benchmark promotion, or completed derivation is
+authorized by this audit.
+\end{nonconclusion}
+
+\section{Machine-Readable Summary}
+
+\begin{verbatim}
+audit_id: "eqms_definition_theorem_content_separation_audit_v16"
+implemented_plan_task: "P5-T01"
+primary_result:
+  NarrowMSCertEq_v1_positive_branch:
+    classification: "definition_unfolding_theorem"
+    reason: "positive conclusion is the EqMS_src^cert predicate under assumed explicit certificates"
+  certificate_operation_laws:
+    classification: "nontrivial_conditional_theorem"
+  p4_positive_instances:
+    classification: "finite_instance_theorem"
+  p4_negative_instances:
+    classification: "countermodel_or_obstruction"
+theorem_content_gap_ids:
+  - "G1 general_certificate_existence"
+  - "G2 inverse_or_symmetry"
+  - "G3 scoped_evidence_to_certificate_bundle"
+  - "G4 finite_to_family_lift"
+  - "G5 physical_semantics_or_coupling_link"
+  - "G6 no_target_guard_as_positive_semantics"
+next_route: "P5-T02 refactored source-equivalence target specification"
+physics_promotion_authorized: false
+\end{verbatim}
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Source-side
+matter-semantics object and certificate manifest v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Narrow source-side
+matter-semantics equivalence theorem v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Matter-semantics
+equivalence theorem Refuter stress v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{NarrowMSCertEq v1
+scoped evidence-status Gate Chair review} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Source certificate
+algebra primitives v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Source certificate
+operation laws and fail-closed lemma v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 4). \textit{Finite local valid
+transport certificate instance v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 4). \textit{Finite local valid
+invariance certificate instance v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 5). \textit{Finite local valid
+factorization certificate instance v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026, July 5). \textit{Negative certificate
+instance packet v1} [Research-control TeX artifact].
+
+\end{document}
