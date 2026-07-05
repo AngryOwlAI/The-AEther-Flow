@@ -388,6 +388,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V16-P3-T03-SELECTED-MATTER-COUPLING-EDGE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260704-022/artifacts/selected_matter_coupling_edge_smuggling_audit_v16.tex`
 - `TEX-V16-P3-T04-SELECTED-MATTER-COUPLING-EDGE-REFUTER-STRESS` `research_control/tasks/RT-20260704-023/artifacts/selected_matter_coupling_edge_refuter_stress_v16.tex`
 - `TEX-V16-P4-T02-FINITE-LOCAL-TRANSPORT-CERTIFICATE-INSTANCE` `research_control/tasks/RT-20260704-026/artifacts/finite_local_transport_certificate_instance_v1.tex`
+- `TEX-V16-P4-T03-FINITE-LOCAL-INVARIANCE-CERTIFICATE-INSTANCE` `research_control/tasks/RT-20260704-027/artifacts/finite_local_invariance_certificate_instance_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1070,6 +1071,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V16-P3-T03-SELECTED-MATTER-COUPLING-EDGE-SMUGGLING-AUDIT` `wiki/tex/tex-v16-p3-t03-selected-matter-coupling-edge-smuggling-audit.md`
 - `WIKI-TEX-V16-P3-T04-SELECTED-MATTER-COUPLING-EDGE-REFUTER-STRESS` `wiki/tex/tex-v16-p3-t04-selected-matter-coupling-edge-refuter-stress.md`
 - `WIKI-TEX-V16-P4-T02-FINITE-LOCAL-TRANSPORT-CERTIFICATE-INSTANCE` `wiki/tex/tex-v16-p4-t02-finite-local-transport-certificate-instance.md`
+- `WIKI-TEX-V16-P4-T03-FINITE-LOCAL-INVARIANCE-CERTIFICATE-INSTANCE` `wiki/tex/tex-v16-p4-t03-finite-local-invariance-certificate-instance.md`
 
 ## project_control
 

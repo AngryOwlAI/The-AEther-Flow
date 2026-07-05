@@ -1,0 +1,272 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newcommand{\Esrc}{E_{\mathrm{src}}}
+\newcommand{\Asrc}{A_{\mathrm{src}}}
+\newcommand{\Asig}{A_{\mathrm{src}}^{\sigma}}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\Valid}{\mathsf{valid}^{\mathrm{src}}}
+\newcommand{\DeclEq}{\equiv_{\mathrm{decl}}^{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Finite Local Valid Invariance Certificate Instance v1}
+\author{Ontology Formalizer Packet RT-20260704-027}
+\date{2026-07-04}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P4-T03. It constructs one explicit finite/local
+valid source invariance certificate instance using
+\texttt{source\_certificate\_instance\_library\_schema\_v1.md}.
+
+The artifact is a draft/control finite example. It does not adopt a source
+law, \(\RRELaw\), an unrestricted \(\RRE\) theorem, matter semantics,
+detector semantics, a coupling law, matter coupling, stress-energy semantics,
+matter action, Einstein equations, benchmark status, or completed derivation.
+
+\section{Finite Source Context}
+
+\begin{definition}[Finite source context]
+Let
+\[
+  \Esrc=\{0,1,2\}.
+\]
+Define the nontrivial cyclic source relabeling
+\[
+  \sigma(0)=1,\qquad \sigma(1)=2,\qquad \sigma(2)=0.
+\]
+The source label is constant:
+\[
+  L(i)=\ell_{\mathrm{orb}}\quad\text{for every }i\in\Esrc.
+\]
+The source guard is
+\[
+  G(i)=\mathrm{inside\_cycle}(\Esrc,i).
+\]
+The response-token family is
+\[
+  R(i)=r_i,
+\]
+with the declared source response relation
+\[
+  Q(i,j) \Longleftrightarrow j=\sigma(i).
+\]
+The variation acts on response tokens by
+\[
+  \rho_{\sigma}(r_i)=r_{\sigma(i)}.
+\]
+All labels, guards, response tokens, and relations are source-side records.
+They are not target atlas labels, detector events, empirical invariances,
+stress-energy data, matter-action data, benchmark behavior, registry state,
+validator state, role state, approval state, commit state, or local cache
+state.
+\end{definition}
+
+\begin{definition}[Source objects before and after variation]
+Define the source object
+\[
+  \Asrc=(\Esrc,L,G,R,Q,\mathrm{cycle\_domain}).
+\]
+Define its relabeled source object
+\[
+  \Asig=(\Esrc,L^{\sigma},G^{\sigma},R^{\sigma},Q^{\sigma},
+  \mathrm{cycle\_codomain})
+\]
+by
+\[
+  L^{\sigma}(\sigma(i))=L(i),\qquad
+  G^{\sigma}(\sigma(i))=G(i),\qquad
+  R^{\sigma}(\sigma(i))=\rho_{\sigma}(R(i)),
+\]
+and
+\[
+  Q^{\sigma}(\sigma(i),\sigma(j)) \Longleftrightarrow Q(i,j).
+\]
+\end{definition}
+
+\section{Invariance Certificate Record}
+
+\begin{definition}[Explicit invariance certificate]
+The invariance certificate instance is
+\[
+  c_{\mathrm{inv}}=
+  (\mathrm{invariance},\Asrc,\Asig,\sigma,\rho_{\sigma},
+  W_{\sigma},G_{\sigma},\Valid),
+\]
+where \(W_{\sigma}\) is the finite enumeration:
+\[
+\begin{array}{c|c|c|c|c|c}
+i & \sigma(i) & L(i)=L^{\sigma}(\sigma(i)) &
+G(i)=G^{\sigma}(\sigma(i)) &
+\rho_{\sigma}(R(i))=R^{\sigma}(\sigma(i)) &
+\text{source check}\\
+\hline
+0 & 1 & \ell_{\mathrm{orb}}=\ell_{\mathrm{orb}} &
+\mathrm{true} & r_1=r_1 & \mathrm{pass}\\
+1 & 2 & \ell_{\mathrm{orb}}=\ell_{\mathrm{orb}} &
+\mathrm{true} & r_2=r_2 & \mathrm{pass}\\
+2 & 0 & \ell_{\mathrm{orb}}=\ell_{\mathrm{orb}} &
+\mathrm{true} & r_0=r_0 & \mathrm{pass}
+\end{array}
+\]
+The guard \(G_{\sigma}\) requires that every row is present, source-side,
+inside \(\Esrc\), and compatible with the declared response relation \(Q\).
+\end{definition}
+
+\section{Direct Finite Verification}
+
+\begin{lemma}[Response-relation invariance]
+For every \(i,j\in\Esrc\),
+\[
+  Q(i,j) \Longleftrightarrow Q^{\sigma}(\sigma(i),\sigma(j)).
+\]
+\end{lemma}
+
+\begin{proof}
+The relation \(Q\) has exactly the three true ordered pairs
+\[
+  (0,1),\quad (1,2),\quad (2,0).
+\]
+Applying \(\sigma\) to both coordinates gives
+\[
+  (1,2),\quad (2,0),\quad (0,1),
+\]
+which is the same set of true ordered pairs. Therefore the response-token
+successor relation is invariant under the relabeling.
+\end{proof}
+
+\begin{lemma}[Invariance certificate validity inside declared scope]
+The certificate \(c_{\mathrm{inv}}\) is a valid finite/local source invariance
+certificate inside
+\[
+  \Scope(c_{\mathrm{inv}})=\Esrc.
+\]
+Consequently
+\[
+  \Asrc \DeclEq \Asig \quad\text{inside }\Scope(c_{\mathrm{inv}})
+\]
+as a declared source-object equivalence only.
+\end{lemma}
+
+\begin{proof}
+The map \(\sigma\) is a bijection of \(\Esrc\). The finite table verifies that
+labels, guards, and response tokens are preserved by the declared source-side
+actions \(L^{\sigma}\), \(G^{\sigma}\), and \(\rho_{\sigma}\). The previous
+lemma verifies the response relation \(Q\) by direct enumeration of the three
+true pairs. Thus the certificate payload is explicit, finite, source-side,
+and nontrivial: the index relabeling is not the identity, but the declared
+source structure is invariant. By the P4-T01 schema, this is a
+\texttt{valid\_invariance\_certificate} with
+\[
+  \mathrm{expected\_equivalence\_result}
+  =\mathrm{declared\_equivalence\_allowed}
+\]
+only inside the declared source scope.
+\end{proof}
+
+\section{No-Target-Import Certificate}
+
+\begin{lemma}[No-target-import guard]
+The record \(c_{\mathrm{inv}}\) uses only \(\Esrc\), \(\sigma\), declared
+source labels, declared source guards, declared source response tokens, the
+source response relation \(Q\), and the finite enumeration \(W_{\sigma}\).
+Therefore the following fields are false:
+\[
+\begin{gathered}
+\mathrm{target\_import\_used}=\mathrm{false},\quad
+\mathrm{detector\_semantics\_used}=\mathrm{false},\\
+\mathrm{stress\_energy\_used}=\mathrm{false},\quad
+\mathrm{matter\_action\_used}=\mathrm{false},\\
+\mathrm{benchmark\_behavior\_used}=\mathrm{false},\quad
+\mathrm{process\_authority\_used}=\mathrm{false}.
+\end{gathered}
+\]
+\end{lemma}
+
+\begin{proof}
+Inspection of the certificate shows that every datum is an element of the
+finite set, a declared source label, a declared source guard, a declared
+response token, a source relation, or the source relabeling. No target metric,
+target topology, target atlas, proper time, empirical detector invariance,
+stress-energy term, matter action, benchmark behavior, registry state,
+validator state, role identity, handoff state, approval state, commit state,
+generated derivative, or local cache is an input to the record.
+\end{proof}
+
+\section{Schema Record}
+
+The instance record is:
+
+\begin{verbatim}
+certificate_instance_id: "SCI-INVARIANCE-001"
+instance_kind: "valid_invariance_certificate"
+source_object_A: "A_src=(E_src,L,G,R,Q,cycle_domain)"
+source_object_B: "A_src^sigma=(E_src,L^sigma,G^sigma,R^sigma,Q^sigma,cycle_codomain)"
+declared_context: "E_src={0,1,2}; sigma=(0 1 2); finite/local"
+domain: "{(i,L(i),G(i),R(i),Q): i in E_src}"
+codomain: "{(sigma(i),L^sigma(sigma(i)),G^sigma(sigma(i)),R^sigma(sigma(i)),Q^sigma): i in E_src}"
+source_labels: ["ell_orb"]
+source_guards: ["inside_cycle(E_src,i) for i=0,1,2"]
+response_tokens: ["r_0","r_1","r_2"]
+certificate_payload: "sigma cyclic relabeling with Q(i,j)<->Q^sigma(sigma(i),sigma(j))"
+no_target_import_guard:
+  result: "pass"
+status: "valid"
+expected_equivalence_result: "declared_equivalence_allowed"
+rr_e_separation_effect: "preserves_declared_separation"
+fail_closed_reason: null
+target_import_used: false
+detector_semantics_used: false
+stress_energy_used: false
+matter_action_used: false
+benchmark_behavior_used: false
+process_authority_used: false
+source_paths:
+  - "research_control/design/source_certificate_instance_library_schema_v1.md"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/tasks/RT-20260704-026/artifacts/finite_local_transport_certificate_instance_v1.tex"
+forbidden_overreads:
+  - "not empirical or detector invariance"
+  - "not a source-law adoption"
+  - "not an unrestricted RR_E theorem"
+  - "not matter semantics or detector semantics"
+  - "not a coupling law or matter-coupling derivation"
+  - "not stress-energy semantics or matter action"
+  - "not Einstein equations benchmark promotion or completed derivation"
+\end{verbatim}
+
+\section{Scope Boundary}
+
+\begin{boundary}[Outside declared scope]
+The certificate is valid only for the finite source context
+\(\Esrc=\{0,1,2\}\), the cyclic relabeling \(\sigma\), the declared constant
+source label, the declared source guard, and the declared successor relation
+on response tokens. If a later packet changes the carrier, relation, labels,
+guards, token family, or admissible variation class, this certificate does
+not automatically apply. Outside the declared scope the record fails closed.
+\end{boundary}
+
+\begin{nonconclusion}[No physics promotion]
+The invariance relation is a source-side finite relabeling invariance. It is
+not empirical invariance, detector-frame invariance, Lorentz invariance,
+metric invariance, matter-coupling invariance, benchmark recovery, or a
+completed derivation.
+\end{nonconclusion}
+
+\end{document}

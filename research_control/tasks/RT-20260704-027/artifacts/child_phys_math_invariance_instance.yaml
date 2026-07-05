@@ -1,0 +1,29 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260704-027"
+artifact_role: "formal finite source invariance construction"
+construction_summary:
+  finite_context: "E_src={0,1,2}"
+  source_variation: "cyclic relabeling sigma=(0 1 2)"
+  invariant_data:
+    - "constant source label L(i)=ell_orb"
+    - "source guard inside_cycle(E_src,i)"
+    - "successor response relation Q(i,j)<->j=sigma(i)"
+    - "response token action rho_sigma(r_i)=r_sigma(i)"
+verification:
+  method: "direct finite enumeration"
+  true_relation_pairs_before:
+    - "(0,1)"
+    - "(1,2)"
+    - "(2,0)"
+  true_relation_pairs_after:
+    - "(1,2)"
+    - "(2,0)"
+    - "(0,1)"
+  conclusion: "The response-token successor relation is invariant under cyclic relabeling inside the declared finite scope."
+claim_boundary:
+  status: "draft/control"
+  no_target_import: true
+  no_empirical_invariance_claim: true
+  no_physics_promotion: true
