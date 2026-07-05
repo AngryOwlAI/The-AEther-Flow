@@ -353,6 +353,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-023-NEGATIVE-RESULT-INTEGRATION-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-023-negative-result-integration-selector-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-024-physics-manuscript-status-refresh-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-025-ai-methodology-manuscript-status-refresh-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-027-one-question-red-team-question-selector-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -906,6 +907,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-023-NEGATIVE-RESULT-INTEGRATION-SELECTOR-V16` `research_control/tasks/RT-20260705-023/artifacts/negative_result_integration_selector_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16` `research_control/tasks/RT-20260705-024/artifacts/physics_manuscript_status_refresh_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16` `research_control/tasks/RT-20260705-025/artifacts/ai_methodology_manuscript_status_refresh_v16.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16` `research_control/tasks/RT-20260705-027/artifacts/one_question_red_team_question_selector_v16.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

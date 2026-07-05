@@ -1,0 +1,61 @@
+handoff_id: "handoff-0600"
+created_at: "2026-07-05T08:56:00Z"
+task_id: "RT-20260705-027"
+decision_id: "DDR-20260705-027"
+job_id: "AJ-RT-20260705-027-001"
+completion_path: "research_control/tasks/RT-20260705-027/jobs/completions/AJC-AJ-RT-20260705-027-001.yaml"
+source_task_id: "RT-20260705-027"
+source_job_id: "AJ-RT-20260705-027-001"
+source_completion_id: "AJC-AJ-RT-20260705-027-001"
+status: "completed"
+summary: "RT-20260705-027 completed v16 P13-T01 by selecting exactly one red-team question around NarrowMSCertEq_v1 plus source certificate algebra and hidden target or detector import."
+v16_completed: false
+selected_next_route:
+  route_id: "one_question_red_team_packet_v16"
+  plan_task_id: "P13-T02"
+  role_family: "documentation-curator@2.0.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Prepare one red-team packet around the selected question without external outreach or physics promotion."
+  requires_human_gate: false
+selected_question: "Does NarrowMSCertEq_v1 plus the source certificate algebra supply any nontrivial source-side mathematical content beyond definitions and does any hidden target-side or detector-side import occur?"
+hard_blocks:
+  - "external outreach"
+  - "source-law adoption"
+  - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "unrestricted RR_E theorem"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"
+next_action: "Run one bounded P13-T02 one-question red-team packet."
+required_next_packet:
+  role_id: "documentation-curator"
+  role_version: "2.0.0"
+  packet_count: "1"
+  task_type: "one_question_red_team_packet_v16"
+  objective: "Prepare a red-team packet around the selected question."
+claim_boundary:
+  allowed_next_scope: "P13-T02 one-question red-team packet only"
+  completed_scope: "v16 P13-T01 question selection"
+  scientific_claims_changed: false
+  external_outreach_performed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+validation_summary:
+  selected_exactly_one_question: true
+  source_artifacts_named: true
+  expected_reviewer_output_named: true
+  external_outreach_performed: false
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "P13-T01 selected a review question with no physics promotion."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

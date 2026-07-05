@@ -1,0 +1,24 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_question: "Does NarrowMSCertEq_v1 plus the source certificate algebra supply any nontrivial source-side mathematical content beyond definitions and does any hidden target-side or detector-side import occur?"
+reasoning:
+  - "P5-T01 classifies the positive NarrowMSCertEq_v1 branch as definition unfolding once explicit certificates are assumed."
+  - "P3 operation laws supply conditional mathematical content: identity declared-scope preservation compatible composition closure source restriction closure and target-import fail-closed invalidity."
+  - "P2-T05 supplies the certificate-gap witness blocking unconditional or adoption-style readings."
+  - "A one-question review should ask whether this relocation of content is mathematically real and source-pure."
+source_artifacts_to_review:
+  - "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  - "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/tasks/RT-20260705-004/artifacts/eqms_definition_theorem_content_separation_audit_v16.tex"
+expected_reviewer_output:
+  - "classify definition-unfolding versus nontrivial source-side theorem content"
+  - "identify any hidden target-side detector-side or process-authority import"
+  - "name the smallest missing premise or counterexample if the positive reading fails"
+recommended_next_route: "P13-T02 one-question red-team packet"
+claim_boundary:
+  physics_promotion_authorized: false
+  external_outreach_performed: false
+  matter_coupling_derivation_authorized: false

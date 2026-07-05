@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-026` and `handoff-0599`.
+`RT-20260705-027` and `handoff-0600`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-026` |
-| Latest handoff ID | `handoff-0599` |
-| Current status | `v16_p12_t03_manuscript_split_boundary_checklist_completed_no_physics_delta` |
-| Current route family | manuscript_split_boundary_checklist_v16 |
+| Active task ID | `RT-20260705-027` |
+| Latest handoff ID | `handoff-0600` |
+| Current status | `v16_p13_t01_red_team_question_selector_completed_no_external_outreach` |
+| Current route family | one_question_red_team_question_selector_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is one question red team question selector v16 |
-| Required next authority | P13-T01 one-question red-team question selector only |
-| Next recommended action | Run one bounded P13-T01 red-team question selector packet. |
+| Current burden | none for physics derivation; live control burden is one question red team packet v16 |
+| Required next authority | P13-T02 one-question red-team packet only |
+| Next recommended action | Run one bounded P13-T02 one-question red-team packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-026/00_TASK.yaml`.
-- Active task objective: Create a checklist preventing the physics manuscript and AI methodology manuscript from lending authority to each other incorrectly.
-- Latest handoff path: `research_control/handoffs/handoff-0599.yaml`.
-- Latest handoff summary: RT-20260705-026 completed v16 P12-T03 by creating a manuscript split boundary checklist and recording compatibility for existing P12 manuscript refreshes.
-- Current route family: manuscript_split_boundary_checklist_v16.
-- Next recommended action: Run one bounded P13-T01 red-team question selector packet.
+- Active task path: `research_control/tasks/RT-20260705-027/00_TASK.yaml`.
+- Active task objective: Select exactly one concrete red-team question for the v16 one-question red-team packet.
+- Latest handoff path: `research_control/handoffs/handoff-0600.yaml`.
+- Latest handoff summary: RT-20260705-027 completed v16 P13-T01 by selecting exactly one red-team question around NarrowMSCertEq_v1 plus source certificate algebra and hidden target or detector import.
+- Current route family: one_question_red_team_question_selector_v16.
+- Next recommended action: Run one bounded P13-T02 one-question red-team packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P13-T01 red-team question selector packet.
+Run one bounded P13-T02 one-question red-team packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-026`;
-- latest handoff: `handoff-0599`;
-- current status: `v16_p12_t03_manuscript_split_boundary_checklist_completed_no_physics_delta`;
+- active task: `RT-20260705-027`;
+- latest handoff: `handoff-0600`;
+- current status: `v16_p13_t01_red_team_question_selector_completed_no_external_outreach`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0599.yaml`
-- `research_control/tasks/RT-20260705-026/00_TASK.yaml`
+- `research_control/handoffs/handoff-0600.yaml`
+- `research_control/tasks/RT-20260705-027/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0599*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0600*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
