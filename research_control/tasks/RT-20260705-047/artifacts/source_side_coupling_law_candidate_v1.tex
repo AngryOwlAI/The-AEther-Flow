@@ -1,0 +1,387 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\SMScope}{\mathrm{SMScope}}
+\newcommand{\SCLBundle}{\mathrm{SCLBundle}}
+\newcommand{\DetPlaceholder}{\mathrm{DetPlaceholder}}
+\newcommand{\KStar}{K_{E_{\ast}}}
+\newcommand{\MSObj}{\mathrm{MSObj}}
+\newcommand{\RRObj}{\mathrm{RREObj}}
+\newcommand{\Valid}{\mathsf{Valid}}
+\newcommand{\Src}{\mathrm{src}}
+\newcommand{\NoTarget}{\mathrm{NoTarget}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source-Side Coupling-Law Candidate \(K_{E_{\ast}}\) v1}
+\author{Candidate Constructor Packet RT-20260705-047}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v17 P1-T02. It constructs exactly one bounded
+draft/control source-side coupling-law candidate for
+\(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\). The constructed object is
+the finite partial map \(\KStar\) defined below.
+
+The candidate is eligible only for P1-T03 self-check and later audit/stress if
+those later packets accept it. This artifact does not adopt a source-side law,
+does not adopt detector semantics, does not adopt matter semantics, does not
+adopt a coupling law, does not derive matter coupling, does not construct
+stress-energy semantics, does not import a matter action, does not derive
+Einstein equations, does not promote benchmark status, and does not claim a
+completed derivation.
+
+\section{Imported Source-Side Vocabulary}
+
+The construction imports only source-side vocabulary from the registered
+source materials. The vocabulary used here is:
+
+\begin{itemize}[leftmargin=2em]
+  \item \(\MSObj\), source records, bridge-source records, and source
+  certificate-indexed equality from the source-side matter-semantics object
+  certificate manifest.
+  \item certificate domains, codomains, kinds, records, identity certificates,
+  transport certificates, invariance certificates, factorization certificates,
+  restriction, and fail-closed status from the source certificate algebra
+  primitives.
+  \item declared-scope preservation, compatible composition closure,
+  restriction closure, and fail-closed propagation from the certificate
+  operation laws.
+  \item \(\SMScope(E)\), \(\SCLBundle(E)\), \(\DetPlaceholder(E)\),
+  \(\NoTarget(E)\), and the target validity predicate from the source-side
+  coupling-law target specification.
+\end{itemize}
+
+No target metric, target topology, stress-energy tensor, matter action,
+Einstein equation, empirical detector response law, or continuum field
+equation is used as a premise.
+
+\section{\(\SMScope(\EStar)\)}
+
+\begin{definition}[Finite source event and matter-semantics scope]
+Let the scoped source event be
+\[
+  \EStar=\{\epsilon_0,\epsilon_1\}.
+\]
+Define two source-side matter-semantics objects
+\[
+  A_0=\MSObj(\{\epsilon_0\},\lambda_0,\rho_0,\gamma_0),
+  \qquad
+  A_1=\MSObj(\{\epsilon_1\},\lambda_1,\rho_1,\gamma_1),
+\]
+where \(\lambda_i\) are source labels, \(\rho_i\) are source response tokens,
+and \(\gamma_i\) are source guards. Define the finite record set
+\[
+  R_{\EStar}=\{r_0,r_1,r_{01}\}.
+\]
+The records are
+\[
+  r_0=(A_0,A_0,\mathrm{id\_record\_0}),\quad
+  r_1=(A_1,A_1,\mathrm{id\_record\_1}),\quad
+  r_{01}=(A_0,A_1,\mathrm{transport\_record\_01}).
+\]
+Define the scoped source evidence ledger
+\[
+  S_{\EStar}=
+  \{\mathrm{declared}(A_0),\mathrm{declared}(A_1),
+    \mathrm{finite}(\EStar),\mathrm{finite}(R_{\EStar})\}.
+\]
+Then
+\[
+  \SMScope(\EStar)=
+  (\EStar,\{A_0,A_1\},R_{\EStar},S_{\EStar}).
+\]
+\end{definition}
+
+The ledger \(S_{\EStar}\) is scoped evidence only. It is not source-law
+adoption, detector-semantics adoption, matter-semantics adoption, or a
+coupling-law premise.
+
+\section{Explicit \(\SCLBundle(\EStar)\)}
+
+\begin{definition}[Explicit certificate bundle]
+The source certificate bundle is
+\[
+  \SCLBundle(\EStar)=
+  (C^{MS}_{\EStar},C^{RR}_{\EStar},C^{NT}_{\EStar},
+   D^{rep}_{\EStar},G^{proc}_{\EStar},F_{\EStar}).
+\]
+Its components are:
+
+\begin{align*}
+ C^{MS}_{\EStar}={}&
+ \{C^{id}_0,C^{id}_1,C^{tr}_{01},C^{inv}_{01},C^{fact}_{01}\},\\
+ C^{RR}_{\EStar}={}&
+ \{Q_0,Q_1,C^{rr,id}_0,C^{rr,id}_1\},\\
+ C^{NT}_{\EStar}={}&
+ \{C^{nt}_{\EStar}\},\\
+ D^{rep}_{\EStar}={}&
+ \{\DetPlaceholder(\EStar)=
+   \mathrm{missing\_and\_blocked}\},\\
+ G^{proc}_{\EStar}={}&
+ \{\mathrm{process\_surface\_nonpremise},
+   \mathrm{generated\_derivative\_nonauthority}\},\\
+ F_{\EStar}={}&
+ \{\mathrm{fail\_closed\_if\_certificate\_missing},
+   \mathrm{fail\_closed\_if\_target\_imported},
+   \mathrm{fail\_closed\_if\_detector\_semantics\_imported}\}.
+\end{align*}
+\end{definition}
+
+The matter-semantics certificates are specified as follows:
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\linewidth}
+                >{\raggedright\arraybackslash}p{0.27\linewidth}
+                >{\raggedright\arraybackslash}p{0.40\linewidth}
+                >{\raggedright\arraybackslash}p{0.10\linewidth}}
+\toprule
+Certificate & Domain and codomain & Source-side witness & Status \\
+\midrule
+\(C^{id}_0\) & \(A_0\to A_0\) & identity certificate primitive on declared object \(A_0\) & valid \\
+\(C^{id}_1\) & \(A_1\to A_1\) & identity certificate primitive on declared object \(A_1\) & valid \\
+\(C^{tr}_{01}\) & \(A_0\to A_1\) & finite transport table
+\(\epsilon_0\mapsto\epsilon_1\),
+\(\lambda_0\mapsto\lambda_1\),
+\(\rho_0\mapsto\rho_1\),
+\(\gamma_0\mapsto\gamma_1\) & valid \\
+\(C^{inv}_{01}\) & \(A_0,A_1\) & finite invariant relation
+\(\{(\lambda_0,\rho_0,\gamma_0),(\lambda_1,\rho_1,\gamma_1)\}\)
+under the named transport table & valid \\
+\(C^{fact}_{01}\) & \(A_0\to F_{\Src}\to A_1\) & finite factor object
+\(F_{\Src}=\{\phi_{01}\}\) with maps
+\(\epsilon_0\mapsto\phi_{01}\mapsto\epsilon_1\) & valid \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The \(RR\)-side objects are source-record placeholders:
+\[
+  Q_0=\RRObj(A_0,\mathrm{record\_only}),\qquad
+  Q_1=\RRObj(A_1,\mathrm{record\_only}).
+\]
+The certificates \(C^{rr,id}_0\) and \(C^{rr,id}_1\) are identity certificates
+on \(Q_0\) and \(Q_1\). They do not assert unrestricted \(\mathrm{RR}_E\)
+transport, invariance, or collapse.
+
+\section{Detector Placeholder or Block}
+
+The detector component is intentionally a block:
+\[
+  \DetPlaceholder(\EStar)=
+  (\mathrm{status}=\mathrm{missing\_and\_blocked},
+   \mathrm{reason}=\mathrm{no\_source\_side\_detector\_replacement\_law}).
+\]
+This satisfies the P1-T02 construction envelope only in the limited sense
+allowed by the target specification: the placeholder is explicit and
+fail-closed. It is not detector semantics and it cannot support a matter
+coupling derivation.
+
+\section{Candidate Relation or Partial Map \(\KStar\)}
+
+\begin{definition}[Finite source-side candidate map]
+Let the source coupling token set be
+\[
+  T_{\EStar}^{\Src}=
+  \{\kappa^{id}_0,\kappa^{id}_1,\kappa^{tr}_{01}\}.
+\]
+Define
+\[
+  \KStar:R_{\EStar}\rightharpoonup
+  \SCLBundle(\EStar)\times T_{\EStar}^{\Src}
+\]
+by the finite graph
+\[
+\begin{aligned}
+  \KStar(r_0) &=
+  ((C^{id}_0,C^{nt}_{\EStar},\DetPlaceholder(\EStar)),
+  \kappa^{id}_0),\\
+  \KStar(r_1) &=
+  ((C^{id}_1,C^{nt}_{\EStar},\DetPlaceholder(\EStar)),
+  \kappa^{id}_1),\\
+  \KStar(r_{01}) &=
+  ((C^{tr}_{01},C^{inv}_{01},C^{fact}_{01},
+    C^{nt}_{\EStar},\DetPlaceholder(\EStar)),
+  \kappa^{tr}_{01}).
+\end{aligned}
+\]
+\end{definition}
+
+The map is partial because no value is assigned outside the scoped finite
+record set \(R_{\EStar}\). The codomain entries are source-side certificate
+records plus the explicit detector block. The token labels
+\(\kappa^{id}_0\), \(\kappa^{id}_1\), and \(\kappa^{tr}_{01}\) are bookkeeping
+tokens, not physical coupling constants, stress-energy terms, Lagrangian
+terms, or field equations.
+
+\section{No-Target Guard}
+
+\begin{definition}[No-target certificate]
+The certificate \(C^{nt}_{\EStar}\) records the following finite checklist:
+\[
+\begin{array}{ll}
+\text{target topology imported} & \text{false},\\
+\text{target metric imported} & \text{false},\\
+\text{stress-energy tensor imported} & \text{false},\\
+\text{matter action imported} & \text{false},\\
+\text{Einstein equation imported} & \text{false},\\
+\text{detector response law imported} & \text{false},\\
+\text{generated derivative used as authority} & \text{false},\\
+\text{process marker used as mathematical premise} & \text{false}.
+\end{array}
+\]
+\end{definition}
+
+\begin{lemma}[No-target guard passes for the finite graph]
+The finite graph defining \(\KStar\) uses only \(A_0\), \(A_1\),
+\(R_{\EStar}\), the listed source certificates, the explicit detector block,
+and bookkeeping tokens. Therefore \(C^{nt}_{\EStar}\) passes for this
+candidate.
+\end{lemma}
+
+\begin{proof}
+Inspection of each graph edge shows that the edge references only records
+declared in \(\SMScope(\EStar)\), certificates declared in
+\(\SCLBundle(\EStar)\), and \(\DetPlaceholder(\EStar)\). None of these
+objects contains target metric, target topology, stress-energy, matter action,
+Einstein-equation, empirical detector-response, generated-derivative, or
+process-authority premises.
+\end{proof}
+
+\section{Finite or Local Witness}
+
+\begin{lemma}[Finite/local witness]
+The tuple
+\[
+  W_{\EStar}=(\EStar,\SMScope(\EStar),\SCLBundle(\EStar),\KStar)
+\]
+is a finite witness for one source-side coupling-law candidate.
+\end{lemma}
+
+\begin{proof}
+\(\EStar\) has two elements. \(\SMScope(\EStar)\) contains two declared
+source objects and three source records. \(\SCLBundle(\EStar)\) contains five
+matter-semantics certificates, two record-only \(RR\) placeholders, two \(RR\)
+identity certificates, one no-target certificate, one detector block, two
+process nonpremise markers, and three fail-closed branch markers. \(\KStar\)
+has exactly three graph entries. Each component is finite and explicitly
+listed, so \(W_{\EStar}\) is finite.
+\end{proof}
+
+No obstruction is recorded for P1-T02 because a finite source-side candidate
+graph exists under the current draft/control vocabulary. This does not imply
+that the candidate will pass P1-T03 self-check, audit, stress testing, or any
+human-gated adoption review.
+
+\section{Validity Predicate Evaluation}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.56\linewidth}
+                >{\raggedright\arraybackslash}p{0.14\linewidth}
+                >{\raggedright\arraybackslash}p{0.22\linewidth}}
+\toprule
+Validity field & Result & Evidence \\
+\midrule
+\(\SMScope(\EStar)\) declared & PASS & Section 3 finite definition \\
+Explicit certificate bundle present & PASS & Section 4 listed bundle \\
+Detector placeholder or block marker present & PASS & Section 5 missing-and-blocked marker \\
+No-target guard present and passed & PASS & Section 7 checklist and lemma \\
+\(\KStar\) named as source-side relation or partial map & PASS & Section 6 finite graph \\
+Finite/local witness or obstruction present & PASS & Section 8 finite witness \\
+Eligible for audit/stress only & PASS & Control Status and Non-conclusions \\
+Coupling law adopted & FALSE & Explicitly blocked \\
+Matter coupling derived & FALSE & Explicitly blocked \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The P1-T02 candidate validity floor is therefore:
+\[
+\begin{array}{ll}
+\mathrm{sm\_scope\_declared} & \mathrm{true},\\
+\mathrm{explicit\_certificate\_bundle} & \mathrm{true},\\
+\mathrm{detector\_placeholder\_or\_block\_marker} & \mathrm{true},\\
+\mathrm{no\_target\_guard} & \mathrm{true},\\
+\mathrm{K\_E\_source\_side\_relation\_or\_partial\_map} & \mathrm{true},\\
+\mathrm{finite\_local\_witness\_or\_obstruction} & \mathrm{true},\\
+\mathrm{eligible\_for\_audit\_stress\_only} & \mathrm{true},\\
+\mathrm{coupling\_law\_adopted} & \mathrm{false},\\
+\mathrm{matter\_coupling\_derived} & \mathrm{false}.
+\end{array}
+\]
+
+\section{Distance-to-GR}
+
+This construction produces a bounded draft/control candidate and does not
+change the Distance-to-GR ledger. The matter-coupling burden remains open.
+Downstream blocked targets remain blocked: source-law adoption,
+detector-semantics adoption, matter-semantics adoption, coupling-law adoption,
+matter-coupling derivation or adoption, stress-energy semantics, matter
+action, Einstein equations, benchmark promotion, and completed derivation.
+
+\section{Forbidden Conclusions}
+
+\begin{nonconclusion}
+This candidate is not a source-side coupling law.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This candidate is not detector semantics, matter semantics, stress-energy
+semantics, a matter action, a derivation of matter coupling, a derivation of
+Einstein equations, benchmark promotion, proof authority, or completed
+derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The existence of this finite source-side graph does not establish that a
+general law exists, that an unrestricted \(\mathrm{RR}_E\) theorem holds, or
+that later self-check, audit, stress, or Gate Chair review will accept the
+candidate.
+\end{nonconclusion}
+
+\section{Next Route}
+
+The logical next route is v17 P1-T03: run one bounded candidate self-check
+against the v16 source-side coupling-law target specification. The self-check
+must either accept this candidate for the next audit/stress stage or record the
+specific failed validity field.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v17} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026b). \emph{Source-side coupling-law
+target specification under explicit certificates v1} [Research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026c). \emph{Source-side matter semantics
+object certificate manifest v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026d). \emph{Source certificate algebra
+primitives v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026e). \emph{Source certificate operation
+laws v1} [Research-control TeX artifact].
+
+The AEther-Flow Research Project. (2026f). \emph{No target import guard map}
+[Internal control design note].
+
+The AEther-Flow Research Project. (2026g). \emph{P1-T01 coupling-law candidate
+construction setup v1} [Research-control task artifact].
+
+\end{document}

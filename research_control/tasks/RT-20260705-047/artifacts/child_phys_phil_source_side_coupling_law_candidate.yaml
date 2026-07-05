@@ -1,0 +1,33 @@
+child_output_id: "child_phys_phil_source_side_coupling_law_candidate"
+task_id: "RT-20260705-047"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+summary: "The ontology boundary is preserved if the candidate is treated as a finite source-side draft/control graph and if the detector component is recorded as a missing-and-blocked placeholder rather than imported detector semantics."
+boundary_recommendation:
+  outcome: "construct_candidate_with_blocks"
+  allowed_status: "draft/control"
+  source_side_only: true
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+no_target_import_assessment:
+  target_topology_imported: false
+  target_metric_imported: false
+  stress_energy_tensor_imported: false
+  matter_action_imported: false
+  einstein_equations_imported: false
+  empirical_detector_response_law_imported: false
+  generated_derivative_used_as_authority: false
+  process_marker_used_as_premise: false
+risks:
+  - "A reader may mistake a coupling token for a physical coupling constant unless the artifact blocks that interpretation."
+  - "A reader may mistake the missing detector placeholder for detector semantics unless the block is explicit."
+mitigations:
+  - "Label tokens as bookkeeping tokens only."
+  - "State that P1-T03 self-check is required before audit or stress."
+  - "Preserve all adoption and GR-promotion blocks."
+next_route: "v17_p1_t03_candidate_target_self_check"

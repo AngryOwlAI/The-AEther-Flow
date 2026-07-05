@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-046`
-- Latest handoff: `handoff-0619`
-- Current status: `v17_p1_t01_candidate_setup_defined_no_adoption`
+- Active task: `RT-20260705-047`
+- Latest handoff: `handoff-0620`
+- Current status: `v17_p1_t02_k_e_candidate_constructed_pending_self_check_no_adoption`
 - V15 completed: `true`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p1_t02_coupling_law_candidate_construction`
+- Route ID: `v17_p1_t03_candidate_target_self_check`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Construct one bounded source-side coupling-law candidate K_E or record one precise construction obstruction.
+- Milestone burden: Check the constructed K_E candidate against the v16 target specification and record accept-for-audit or failed validity field.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `fdf34f56e45dee2b5af60440ba36ce94bab0cd903e7bca64bc7b7a9e8d439a56`
-- JSON SHA-256: `010405c60f320c38b0b1f1087140121746127c65aa80e2c78e7a01b26a53b5e6`
+- YAML SHA-256: `9ce2f55da67136e8dc97c80a4fac1dde91615d58fa0028dec217a0b3166076fb`
+- JSON SHA-256: `54c308ee2e9982cc35c7004f561d0802efddff8dab5733875c51b48fe8098d30`
 
 ## Authority Warning
 

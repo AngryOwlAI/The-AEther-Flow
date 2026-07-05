@@ -1,0 +1,32 @@
+child_output_id: "child_phys_math_source_side_coupling_law_candidate"
+task_id: "RT-20260705-047"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+summary: "A positive finite construction is available: declare a two-point source event E_* two source-side matter-semantics objects three source records and define K_{E_*} as a three-edge partial map into explicit source certificates plus a detector block."
+candidate_recommendation:
+  outcome: "construct_candidate"
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  constructed_object: "K_{E_*}"
+  construction_type: "finite_source_side_partial_map"
+  source_event_size: 2
+  record_count: 3
+  graph_edge_count: 3
+  detector_component: "missing_and_blocked_placeholder"
+  no_target_guard_passes: true
+  finite_witness_present: true
+validity_floor:
+  sm_scope_declared: true
+  explicit_certificate_bundle: true
+  detector_placeholder_or_block_marker: true
+  no_target_guard: true
+  k_e_source_side_relation_or_partial_map: true
+  finite_local_witness_or_obstruction: true
+  eligible_for_audit_stress_only: true
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+mathematical_limits:
+  - "The finite graph is only a candidate witness and not a general source law."
+  - "The detector component is explicitly blocked rather than semantically supplied."
+  - "The construction does not update the Distance-to-GR ledger."
+next_route: "v17_p1_t03_candidate_target_self_check"

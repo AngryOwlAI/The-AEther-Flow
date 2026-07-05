@@ -788,6 +788,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V16-P5-T01-EQMS-DEFINITION-THEOREM-CONTENT-SEPARATION-AUDIT` `wiki/tex/tex-v16-p5-t01-eqms-definition-theorem-content-separation-audit.md`
 - `WIKI-TEX-V16-P5-T02-REFACTORED-CERTIFICATE-INDEXED-SOURCE-EQUIVALENCE-TARGET-SPEC` `wiki/tex/tex-v16-p5-t02-refactored-certificate-indexed-source-equivalence-target-spec.md`
 - `WIKI-TEX-V16-P5-T03-CERTIFICATE-INDEXED-EQUIVALENCE-PROPERTY-THEOREM-ATTEMPT` `wiki/tex/tex-v16-p5-t03-certificate-indexed-equivalence-property-theorem-attempt.md`
+- `WIKI-TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE` `wiki/tex/tex-v17-p1-t02-source-side-coupling-law-candidate.md`
 
 ## obsidian-wiki
 
@@ -1326,6 +1327,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V16-P5-T01-EQMS-DEFINITION-THEOREM-CONTENT-SEPARATION-AUDIT` `research_control/tasks/RT-20260705-004/artifacts/eqms_definition_theorem_content_separation_audit_v16.tex`
 - `TEX-V16-P5-T02-REFACTORED-CERTIFICATE-INDEXED-SOURCE-EQUIVALENCE-TARGET-SPEC` `research_control/tasks/RT-20260705-005/artifacts/refactored_certificate_indexed_source_equivalence_target_spec_v1.tex`
 - `TEX-V16-P5-T03-CERTIFICATE-INDEXED-EQUIVALENCE-PROPERTY-THEOREM-ATTEMPT` `research_control/tasks/RT-20260705-006/artifacts/certificate_indexed_equivalence_property_theorem_attempt_v1.tex`
+- `TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE` `research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex`
 
 ## user-modified-project
 

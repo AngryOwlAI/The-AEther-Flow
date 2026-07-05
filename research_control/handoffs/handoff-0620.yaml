@@ -1,0 +1,97 @@
+handoff_id: "handoff-0620"
+created_at: "2026-07-05T23:20:00Z"
+task_id: "RT-20260705-047"
+decision_id: "DDR-20260705-047"
+job_id: "AJ-RT-20260705-047-001"
+completion_path: "research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml"
+source_task_id: "RT-20260705-047"
+source_job_id: "AJ-RT-20260705-047-001"
+source_completion_id: "AJC-AJ-RT-20260705-047-001"
+status: "completed"
+summary: "RT-20260705-047 completed one bounded candidate-constructor packet for v17 P1-T02. It constructed exactly one finite source-side K_{E_*} candidate under SourceCouplingLawCandidate_EStar_v1 using SMScope(E_*) SCLBundle(E_*) DetPlaceholder(E_*)=missing_and_blocked a no-target guard and a finite witness. It did not adopt a source law detector semantics matter semantics coupling law or matter coupling and did not change the Distance-to-GR ledger."
+next_action: "Run one bounded v17 P1-T03 candidate-constructor self-check against the v16 source-side coupling-law target specification before audit stress accepted-language calibration or downstream v17 tasks."
+loop_risk_route: "v17_p1_t02_candidate_constructed_handoff_to_p1_t03_self_check_no_adoption"
+claim_boundary:
+  allowed_next_scope: "P1-T03 candidate self-check against v16 target specification"
+  candidate_setup_defined: true
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_constructed: true
+  constructed_candidate_symbol: "K_{E_*}"
+  constructed_candidate_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  physics_promotion_authorized: false
+  scientific_claims_changed: true
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  proof_authority: false
+blocked_claims:
+  - "P1-T02 finite candidate as source law"
+  - "P1-T02 finite candidate as detector semantics"
+  - "P1-T02 finite candidate as matter semantics"
+  - "P1-T02 finite candidate as coupling-law adoption"
+  - "P1-T02 finite candidate as matter coupling"
+  - "P1-T02 finite candidate as stress-energy semantics"
+  - "P1-T02 finite candidate as matter action"
+  - "P1-T02 finite candidate as Einstein-equation evidence"
+  - "P1-T02 finite candidate as benchmark promotion"
+  - "P1-T02 finite candidate as completed derivation"
+  - "P1-T02 as execution of downstream v17 phases"
+candidate_construction:
+  candidate_artifact_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  candidate_artifact_hash: "6e21a010e5247039564d96612cc4be7a0cc59564bfb1498d7dde9318b9ba6059"
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  source_event_or_scope_symbol: "E_*"
+  source_input_scope: "SMScope(E_*)"
+  candidate_relation_symbol: "K_{E_*}"
+  candidate_relation_type: "finite_source_side_partial_map"
+  certificate_bundle_symbol: "SCLBundle(E_*)"
+  detector_placeholder_symbol: "DetPlaceholder(E_*)"
+  detector_placeholder_status: "missing_and_blocked"
+  finite_local_witness_present: true
+  no_target_import_guard_passed: true
+  max_candidate_count: 1
+  adoption_requested: false
+  next_task_requirement: "P1-T03 must self-check K_{E_*} against the v16 target specification and record accept-for-audit or failed validity field."
+parent_child_synthesis:
+  child_outputs:
+    - "research_control/tasks/RT-20260705-047/artifacts/child_phys_math_source_side_coupling_law_candidate.yaml"
+    - "research_control/tasks/RT-20260705-047/artifacts/child_phys_phil_source_side_coupling_law_candidate.yaml"
+  conflict_review_path: "research_control/tasks/RT-20260705-047/artifacts/parent_conflict_review_source_side_coupling_law_candidate.yaml"
+  fusion_notes_path: "research_control/tasks/RT-20260705-047/artifacts/parent_fusion_notes_source_side_coupling_law_candidate.md"
+  unresolved_blocking_conflicts: []
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260705-047 constructs a finite draft/control candidate graph but does not adopt a coupling law derive matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v17_p1_t03_candidate_target_self_check"
+  plan_task_id: "P1-T03"
+  role_family: "candidate-constructor@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Check the constructed K_E candidate against the v16 target specification and record accept-for-audit or failed validity field."
+  requires_human_gate: false
+validation:
+  memory_preflight: "PASS"
+  query_memory_status: "PASS"
+  continue_research_json: "PASS"
+  candidate_construction: "PASS"
+  parent_child_synthesis: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
