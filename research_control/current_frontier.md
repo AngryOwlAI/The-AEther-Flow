@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-012` and `handoff-0585`.
+`RT-20260705-013` and `handoff-0586`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-012` |
-| Latest handoff ID | `handoff-0585` |
-| Current status | `v16_p7_t02_route_orbit_gating_policy_defined_no_physics_delta` |
-| Current route family | route_orbit_gating_policy_v16 |
+| Active task ID | `RT-20260705-013` |
+| Latest handoff ID | `handoff-0586` |
+| Current status | `v16_p7_t03_payload_orbit_validator_integrated_no_physics_delta` |
+| Current route family | payload_orbit_validator_integration_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is payload orbit validator integration v16 |
-| Required next authority | P7-T03 payload/orbit validator integration only |
-| Next recommended action | Run one bounded P7-T03 payload/orbit validator integration packet. |
+| Current burden | none for physics derivation; live control burden is risky status field audit v16 |
+| Required next authority | P8-T01 risky field audit only |
+| Next recommended action | Run one bounded P8-T01 risky field audit packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-012/00_TASK.yaml`.
-- Active task objective: Convert route-orbit diagnostics into a selective gating policy.
-- Latest handoff path: `research_control/handoffs/handoff-0585.yaml`.
-- Latest handoff summary: RT-20260705-012 completed v16 P7-T02 by creating the route-orbit gating policy v16.
-- Current route family: route_orbit_gating_policy_v16.
-- Next recommended action: Run one bounded P7-T03 payload/orbit validator integration packet.
+- Active task path: `research_control/tasks/RT-20260705-013/00_TASK.yaml`.
+- Active task objective: Integrate minimum payload and route-orbit policy into a local validator and fixture suite.
+- Latest handoff path: `research_control/handoffs/handoff-0586.yaml`.
+- Latest handoff summary: RT-20260705-013 completed v16 P7-T03 by adding minimum-payload and route-orbit validator integration with fixtures.
+- Current route family: payload_orbit_validator_integration_v16.
+- Next recommended action: Run one bounded P8-T01 risky field audit packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P7-T03 payload/orbit validator integration packet.
+Run one bounded P8-T01 risky field audit packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-012`;
-- latest handoff: `handoff-0585`;
-- current status: `v16_p7_t02_route_orbit_gating_policy_defined_no_physics_delta`;
+- active task: `RT-20260705-013`;
+- latest handoff: `handoff-0586`;
+- current status: `v16_p7_t03_payload_orbit_validator_integrated_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0585.yaml`
-- `research_control/tasks/RT-20260705-012/00_TASK.yaml`
+- `research_control/handoffs/handoff-0586.yaml`
+- `research_control/tasks/RT-20260705-013/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0585*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0586*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

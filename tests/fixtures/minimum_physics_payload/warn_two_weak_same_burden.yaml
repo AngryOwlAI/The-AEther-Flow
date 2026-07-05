@@ -1,0 +1,19 @@
+fixture_id: "warn_two_weak_same_burden"
+expected_status: "WARN"
+records:
+  - task_id: "RT-FIXTURE-WARN-001"
+    sequence: 1
+    role_id: "theoretical-continuation-selector"
+    task_type: "route_selector"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "same weak route"
+    weak_payload: true
+  - task_id: "RT-FIXTURE-WARN-002"
+    sequence: 2
+    role_id: "theoretical-continuation-selector"
+    task_type: "route_selector"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "same weak route"
+    weak_payload: true

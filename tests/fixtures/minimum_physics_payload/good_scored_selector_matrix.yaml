@@ -1,0 +1,13 @@
+fixture_id: "good_scored_selector_matrix"
+expected_status: "PASS"
+records:
+  - task_id: "RT-FIXTURE-GOOD-SELECTOR"
+    sequence: 1
+    role_id: "theoretical-continuation-selector"
+    task_type: "route_selector"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "route choice"
+    payload_class: "selector_with_scored_route_matrix"
+    scored_route_matrix: true
+    payload_summary: "Scored selector matrix compares repair selector and theorem packet routes."

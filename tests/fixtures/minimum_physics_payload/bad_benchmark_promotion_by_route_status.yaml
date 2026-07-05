@@ -1,0 +1,13 @@
+fixture_id: "bad_benchmark_promotion_by_route_status"
+expected_status: "HARD_GATE"
+records:
+  - task_id: "RT-FIXTURE-BAD-BENCHMARK"
+    sequence: 1
+    role_id: "theoretical-continuation-selector"
+    task_type: "benchmark_promotion_selector"
+    is_physics_task: true
+    target_derivation_milestone: "benchmark_promotion"
+    milestone_burden: "benchmark promotion"
+    payload_class: "route_status"
+    overread_kind: "benchmark_promotion_by_route_status"
+    payload_summary: "Route status is incorrectly treated as benchmark promotion."

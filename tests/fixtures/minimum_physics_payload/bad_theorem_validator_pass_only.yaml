@@ -1,0 +1,13 @@
+fixture_id: "bad_theorem_validator_pass_only"
+expected_status: "HARD_GATE"
+records:
+  - task_id: "RT-FIXTURE-BAD-THEOREM"
+    sequence: 1
+    role_id: "ontology-formalizer"
+    task_type: "theorem_packet"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "matter coupling"
+    payload_class: "validator_pass"
+    overread_kind: "theorem_validator_pass_only"
+    payload_summary: "Validator PASS is incorrectly counted as theorem content."

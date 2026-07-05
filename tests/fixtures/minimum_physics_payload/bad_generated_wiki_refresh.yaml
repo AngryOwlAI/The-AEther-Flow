@@ -1,0 +1,13 @@
+fixture_id: "bad_generated_wiki_refresh"
+expected_status: "HARD_GATE"
+records:
+  - task_id: "RT-FIXTURE-BAD-WIKI"
+    sequence: 1
+    role_id: "documentation-curator"
+    task_type: "generated_wiki_refresh"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "matter coupling"
+    payload_class: "generated_wiki_note"
+    overread_kind: "generated_wiki_refresh_as_payload"
+    payload_artifact_path: "wiki/markdown/generated.md"

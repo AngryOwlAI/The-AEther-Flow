@@ -1,0 +1,51 @@
+handoff_id: "handoff-0586"
+created_at: "2026-07-05T04:31:00Z"
+task_id: "RT-20260705-013"
+decision_id: "DDR-20260705-013"
+job_id: "AJ-RT-20260705-013-001"
+completion_path: "research_control/tasks/RT-20260705-013/jobs/completions/AJC-AJ-RT-20260705-013-001.yaml"
+source_task_id: "RT-20260705-013"
+source_job_id: "AJ-RT-20260705-013-001"
+source_completion_id: "AJC-AJ-RT-20260705-013-001"
+status: "completed"
+summary: "RT-20260705-013 completed v16 P7-T03 by adding minimum-payload and route-orbit validator integration with fixtures."
+v16_completed: false
+selected_next_route:
+  route_id: "risky_status_field_audit_v16"
+  role_family: "project-control-maintainer@0.2.0 or validator-engineer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Audit risky status fields before schema layering."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "benchmark promotion"
+  - "proof authority"
+  - "completed derivation"
+next_action: "Run one bounded P8-T01 risky field audit packet."
+required_next_packet:
+  role_id: "project-control-maintainer or validator-engineer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "risky_status_field_audit_v16"
+  objective: "Audit risky status fields before schema layering."
+claim_boundary:
+  allowed_next_scope: "P8-T01 risky field audit only"
+  completed_scope: "v16 P7-T03 payload/orbit validator integration"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+validation_summary:
+  validator_path: "scripts/research_control/validate_minimum_physics_payload.py"
+  fixture_report_path: "research_control/tasks/RT-20260705-013/artifacts/minimum_physics_payload_fixture_report.json"
+  fixture_report_status: "PASS"
+  focused_unit_tests: "PASS"
+  live_opt_in_hard_gate_count: 0
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "P7-T03 local validator integration created with no standing global gate and no physics promotion"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

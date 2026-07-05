@@ -1,0 +1,166 @@
+{
+  "authority_boundary": {
+    "physics_claim_authority_created": false,
+    "validator_is_project_control_only": true
+  },
+  "fixture_count": 12,
+  "fixture_results": [
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_benchmark_promotion_by_route_status",
+      "hard_gate_codes": [
+        "benchmark_promotion_by_route_status",
+        "process_receipt_counted_as_payload",
+        "unknown_payload_class"
+      ],
+      "hard_gate_count": 3,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/bad_benchmark_promotion_by_route_status.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_evidence_status_restatement",
+      "hard_gate_codes": [
+        "evidence_status_restatement_as_payload",
+        "process_receipt_counted_as_payload",
+        "unknown_payload_class"
+      ],
+      "hard_gate_count": 3,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/bad_evidence_status_restatement.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_generated_wiki_refresh",
+      "hard_gate_codes": [
+        "generated_wiki_refresh_as_payload",
+        "process_receipt_counted_as_payload",
+        "unknown_payload_class"
+      ],
+      "hard_gate_count": 3,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/bad_generated_wiki_refresh.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_theorem_validator_pass_only",
+      "hard_gate_codes": [
+        "theorem_validator_pass_only",
+        "process_receipt_counted_as_payload",
+        "unknown_payload_class"
+      ],
+      "hard_gate_count": 3,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/bad_theorem_validator_pass_only.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_three_same_burden_selector_no_payload",
+      "hard_gate_codes": [
+        "three_same_burden_no_payload_route_orbit"
+      ],
+      "hard_gate_count": 1,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/bad_three_same_burden_selector_no_payload.yaml",
+      "warning_codes": [
+        "two_same_burden_weak_payload"
+      ],
+      "warning_count": 1
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_certificate_instance",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/good_certificate_instance.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_executable_support_spec",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/good_executable_support_spec.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_minimal_countermodel",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/good_minimal_countermodel.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_scored_selector_matrix",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/good_scored_selector_matrix.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_source_model",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/good_source_model.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_validation_repair",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/good_validation_repair.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "WARN",
+      "expected_status": "WARN",
+      "fixture_id": "warn_two_weak_same_burden",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/minimum_physics_payload/warn_two_weak_same_burden.yaml",
+      "warning_codes": [
+        "two_same_burden_weak_payload"
+      ],
+      "warning_count": 1
+    }
+  ],
+  "sample": "tests/fixtures/minimum_physics_payload",
+  "schema_id": "minimum_physics_payload_validator_v1",
+  "status": "PASS"
+}

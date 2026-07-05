@@ -1,0 +1,13 @@
+fixture_id: "bad_evidence_status_restatement"
+expected_status: "HARD_GATE"
+records:
+  - task_id: "RT-FIXTURE-BAD-EVIDENCE"
+    sequence: 1
+    role_id: "gate-chair"
+    task_type: "evidence_status_restatement"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "matter coupling"
+    payload_class: "evidence_status_restatement"
+    overread_kind: "evidence_status_restatement_as_payload"
+    payload_summary: "Accepted scoped evidence is incorrectly restated as new payload."

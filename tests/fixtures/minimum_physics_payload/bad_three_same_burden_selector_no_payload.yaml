@@ -1,0 +1,27 @@
+fixture_id: "bad_three_same_burden_selector_no_payload"
+expected_status: "HARD_GATE"
+records:
+  - task_id: "RT-FIXTURE-ORBIT-001"
+    sequence: 1
+    role_id: "theoretical-continuation-selector"
+    task_type: "route_selector"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "same missing source-side discriminator"
+    weak_payload: true
+  - task_id: "RT-FIXTURE-ORBIT-002"
+    sequence: 2
+    role_id: "theoretical-continuation-selector"
+    task_type: "route_selector"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "same missing source-side discriminator"
+    weak_payload: true
+  - task_id: "RT-FIXTURE-ORBIT-003"
+    sequence: 3
+    role_id: "theoretical-continuation-selector"
+    task_type: "route_selector"
+    is_physics_task: true
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "same missing source-side discriminator"
+    weak_payload: true
