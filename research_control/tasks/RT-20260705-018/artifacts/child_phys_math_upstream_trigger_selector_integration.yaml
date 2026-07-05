@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_under_review: "research_control/tasks/RT-20260705-018/artifacts/upstream_trigger_selector_integration_v16.md"
+contribution_summary: "Defined the formal selector integration rule: future selectors evaluate EqSrc RetainH and GenH trigger status before route selection, and DAG ranking uses dependency_on_missing_eqsrc_retainh_genh as a route-selection penalty rather than proof."
+mathematical_checks:
+  - check: "P2 scoring dimension preserved"
+    status: "pass"
+    evidence: "dependency_on_missing_eqsrc_retainh_genh is interpreted as a dependency penalty with non-trigger, single-trigger, multiple-trigger, and ambiguous cases."
+  - check: "completion fragment explicit"
+    status: "pass"
+    evidence: "Artifact requires upstream_primitive_trigger_status for future selector and theorem-setup completions."
+  - check: "no immediate upstream route selected"
+    status: "pass"
+    evidence: "Current P9-T02 trigger evaluation sets EqSrc RetainH and GenH triggered=false with reasons."
+limitations:
+  - "This integration does not implement a validator; it is a selector protocol for future packets."
+  - "No Distance-to-GR burden is discharged."
+forbidden_conclusions:
+  EqSrc_discharge: false
+  RetainH_adoption: false
+  GenH_adoption: false
+  source_law_adoption: false
+  matter_coupling_derivation_or_adoption: false
+  benchmark_promotion: false
+  completed_derivation: false

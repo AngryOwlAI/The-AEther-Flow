@@ -1,0 +1,15 @@
+review_id: "PCR-RT-20260705-018-UPSTREAM-TRIGGER-SELECTOR-INTEGRATION"
+task_id: "RT-20260705-018"
+status: "no_conflict"
+resolution_rounds: 1
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260705-018/artifacts/child_phys_math_upstream_trigger_selector_integration.yaml"
+  - "research_control/tasks/RT-20260705-018/artifacts/child_phys_phil_upstream_trigger_selector_integration.yaml"
+conflicts: []
+consensus:
+  - "Future selectors must record EqSrc RetainH and GenH trigger status."
+  - "P9-T02 does not itself trigger an upstream primitive packet."
+  - "DAG ranking effects are route-selection evidence only."
+  - "No physics claim promotion, source-law adoption, benchmark promotion, or completed-derivation claim is authorized."
+unresolved_blocking_conflicts: []
+parent_decision: "Fuse both child views into the selector integration artifact and route next to P10-T01."

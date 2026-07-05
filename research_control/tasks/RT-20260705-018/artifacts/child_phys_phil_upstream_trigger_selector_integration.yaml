@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+artifact_under_review: "research_control/tasks/RT-20260705-018/artifacts/upstream_trigger_selector_integration_v16.md"
+contribution_summary: "Reviewed the integration for ontology and status overread. The artifact treats upstream triggers as routing conditions only, separates horizon context from adoption, and blocks proof or benchmark readings."
+status_boundary_checks:
+  - check: "ontology status preserved"
+    status: "pass"
+    evidence: "No canonical ontology edit, source law, EqSrc theorem, RetainH adoption, or GenH adoption is claimed."
+  - check: "routing does not become proof"
+    status: "pass"
+    evidence: "Artifact states score and trigger status are route-selection evidence only."
+  - check: "future possibility preserved"
+    status: "pass"
+    evidence: "Artifact blocks reading non-trigger status as a permanent no-go theorem."
+limitations:
+  - "Future selector packets must still inspect their own source artifacts before recording trigger status."
+  - "Human authorization for gates remains task-scoped and does not imply downstream physics promotion."
+forbidden_conclusions:
+  EqSrc_discharge: false
+  RetainH_adoption: false
+  GenH_adoption: false
+  source_law_adoption: false
+  matter_coupling_derivation_or_adoption: false
+  benchmark_promotion: false
+  completed_derivation: false

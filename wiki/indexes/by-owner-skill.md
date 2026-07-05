@@ -344,6 +344,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-009-PARENT-FUSION-NOTES-SUPPORT-ONLY-CERTIFICATE-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260705-009-parent-fusion-notes-support-only-certificate-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-009-V16-SUPPORT-ONLY-CERTIFICATE-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260705-009-v16-support-only-certificate-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260705-010-v16-formalization-integration-report.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-018-UPSTREAM-TRIGGER-SELECTOR-INTEGRATION-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-018-upstream-trigger-selector-integration-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -888,6 +889,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-PARENT-FUSION-NOTES-V16-DAG-NEXT-EDGE-SELECTOR` `research_control/tasks/RT-20260704-020/artifacts/parent_fusion_notes_v16_dag_next_edge_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-020-V16-POST-V15-BASELINE-RECONCILIATION` `research_control/tasks/RT-20260704-020/artifacts/v16_post_v15_baseline_reconciliation_report.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT` `research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-018-UPSTREAM-TRIGGER-SELECTOR-INTEGRATION-V16` `research_control/tasks/RT-20260705-018/artifacts/upstream_trigger_selector_integration_v16.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
