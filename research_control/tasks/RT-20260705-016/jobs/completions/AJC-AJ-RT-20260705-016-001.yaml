@@ -1,0 +1,219 @@
+completion_path: "research_control/tasks/RT-20260705-016/jobs/completions/AJC-AJ-RT-20260705-016-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-016-001"
+job_id: "AJ-RT-20260705-016-001"
+task_id: "RT-20260705-016"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-05T05:27:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P8-T03"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Added status-field compatibility validator code, fixtures, focused unit tests, and a task-local fixture report."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P8-T02"
+    - "P8-T03"
+  downstream_tasks_not_implemented:
+    - "P9 through P17"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/validate_status_field_compatibility.py"
+  - "tests/test_status_field_compatibility_validator.py"
+  - "tests/fixtures/status_field_compatibility/bad_bare_accepted_future.yaml"
+  - "tests/fixtures/status_field_compatibility/bad_future_physics_promotion_missing_layer.yaml"
+  - "tests/fixtures/status_field_compatibility/bad_future_scoped_sets_downstream.yaml"
+  - "tests/fixtures/status_field_compatibility/bad_gate_chair_scoped_implies_source_law.yaml"
+  - "tests/fixtures/status_field_compatibility/bad_scientific_claims_changed_missing_layer.yaml"
+  - "tests/fixtures/status_field_compatibility/good_future_scoped_evidence.yaml"
+  - "tests/fixtures/status_field_compatibility/warn_historical_scoped_broad_field.yaml"
+  - "research_control/tasks/RT-20260705-016/artifacts/status_field_compatibility_fixture_report.json"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-016/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-016/DDR-20260705-016.md"
+  - "research_control/tasks/RT-20260705-016/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-016/jobs/AJ-RT-20260705-016-001.yaml"
+  - "research_control/tasks/RT-20260705-016/jobs/completions/AJC-AJ-RT-20260705-016-001.yaml"
+  - "research_control/tasks/RT-20260705-016/roles/validator-engineer@0.2.0--RT-20260705-016.yaml"
+  - "research_control/handoffs/handoff-0589.yaml"
+  - "research_control/handoffs/handoff-0589.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0588.yaml"
+  - "research_control/design/layered_status_field_schema_v16.md"
+  - "scripts/research_control/validate_minimum_physics_payload.py"
+  - "tests/test_minimum_physics_payload_validator.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=621 relationship_row_count=3235 semantic_row_count=621 vault_row_count=621"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-015 latest_handoff=handoff-0588 next_action=P8-T03"
+  - ".venv/bin/python scripts/research_control/validate_status_field_compatibility.py --fixture-dir tests/fixtures/status_field_compatibility --json | exit_code=0 | status=PASS fixture_count=7"
+  - ".venv/bin/python scripts/research_control/validate_status_field_compatibility.py --fixture-dir tests/fixtures/status_field_compatibility --write-json research_control/tasks/RT-20260705-016/artifacts/status_field_compatibility_fixture_report.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python -m unittest tests.test_status_field_compatibility_validator | exit_code=0 | tests=4"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true blocked_paths=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS emitted_signal_count=3"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1400"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | physics_progress_integration_status=pass diagnostic_warning_count=2 advisory_only=true"
+  - "git diff --check | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 621
+    relationship_row_count: 3235
+    semantic_row_count: 621
+    vault_row_count: 621
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status-field compatibility validator v16\" --limit 10 --json"
+      query_type: "search"
+      query_text: "status-field compatibility validator v16"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/layered_status_field_schema_v16.md"
+      source_hash: "0896350d5d81c31aa856b3d4c945a42455b91a7e6613825651b30da7e8d5455f"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+status_field_compatibility_validator:
+  script_path: "scripts/research_control/validate_status_field_compatibility.py"
+  script_hash: "de01fc676643ce432ecdbdc9e16127646b6d9ee519411045a42df64689f90fa9"
+  test_path: "tests/test_status_field_compatibility_validator.py"
+  test_hash: "516e9845f6e03a8a88d495961991c1e5323bb3205110827d3714af67bf97b1a9"
+  fixture_report_path: "research_control/tasks/RT-20260705-016/artifacts/status_field_compatibility_fixture_report.json"
+  fixture_report_hash: "ffb339d370f692ae440217cdd75d522f34008674b8852505a9b7ce332d8e5717"
+  fixture_count: 7
+  bad_fixtures_fail: true
+  historical_safe_contexts_warn_at_most: true
+  validator_is_project_control_only: true
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "matter_coupling"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS without refresh"
+      - "continue_research.py resolved handoff-0588 and P8-T03"
+      - "P8-T03 plan section inspected"
+      - "layered status field schema inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "status-field compatibility validator created"
+      - "seven fixture cases evaluated"
+      - "bad future fixtures hard-gate"
+      - "historical scoped broad-field fixture warns at most"
+      - "focused unittest suite PASS"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "current frontier and dependency graph regenerated"
+      - "memory bootstrap sync and validate-only PASS"
+      - "documentation-impact receipt updated and validate_documentation_impact PASS"
+      - "collect_project_improvement_signals --validate-emitted PASS"
+      - "validate_claim_language --changed PASS"
+      - "validate_research_control and --check-diff PASS"
+      - "report_physics_progress_metrics completed with advisory-only diagnostics"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier renderer wrote and checked"
+      - "research dependency graph renderer wrote and checked JSON Markdown and DOT outputs"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "sync_obsidian_vault refreshed generated retrieval surfaces"
+      - "bootstrap_memory_system --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  scoped_evidence_status_change_authorized: false
+  source_object_status_change_authorized: false
+  source_extension_object_status_change_authorized: false
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+  authority_scope: "none"
+  authority_source_path: "not_applicable"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  blocked_downstream_claims:
+    - "source_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-04"
+  task_consumes_gate_authority: false
+verdict: "v16_p8_t03_status_field_compatibility_validator_integrated_no_physics_delta"
+coherent_resolution_summary: "RT-20260705-016 added the status-field compatibility validator and routed upstream trigger-horizon policy work to P9-T01."
+next_recommendation: "Run one bounded P9-T01 EqSrc RetainH GenH trigger-horizon policy packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusion_summary:
+  source_law_adoption: false
+  matter_coupling_derivation_or_adoption: false
+  benchmark_promotion: false
+  gate_chair_verdict: false
+  completed_derivation: false

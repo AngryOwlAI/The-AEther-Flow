@@ -1,0 +1,15 @@
+fixture_id: "warn_historical_scoped_broad_field"
+expected_status: "WARN"
+record:
+  record_id: "warn-historical-scoped"
+  record_scope: "historical"
+  high_risk_status_row: true
+  physics_promotion_authorized: true
+  authorized_scope: "scoped source-extension evidence-status only"
+  promotion_authority_path: "research_control/approvals/historical-example.yaml"
+  blocked_downstream_claims:
+    - "source_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  rendered_status: "accepted only as scoped evidence-status"

@@ -1,0 +1,31 @@
+fixture_id: "good_future_scoped_evidence"
+expected_status: "PASS"
+record:
+  record_id: "good-future-scoped"
+  future_record: true
+  high_risk_status_row: true
+  physics_promotion_authorized: false
+  rendered_status: "accepted only as scoped evidence precondition"
+  authorization_layers:
+    scoped_evidence_status_change_authorized: true
+    source_object_status_change_authorized: false
+    source_extension_object_status_change_authorized: false
+    source_law_adoption_authorized: false
+    matter_semantics_adoption_authorized: false
+    detector_semantics_adoption_authorized: false
+    coupling_law_adoption_authorized: false
+    matter_coupling_derivation_authorized: false
+    matter_coupling_adoption_authorized: false
+    stress_energy_semantics_authorized: false
+    matter_action_authorized: false
+    einstein_equation_derivation_authorized: false
+    benchmark_promotion_authorized: false
+    completed_derivation_authorized: false
+    downstream_physics_promotion_authorized: false
+    authority_scope: "scoped evidence precondition"
+    authority_source_path: "research_control/approvals/example.yaml"
+    blocked_downstream_claims:
+      - "source_law_adoption"
+      - "matter_coupling_derivation_or_adoption"
+      - "benchmark_promotion"
+      - "completed_derivation"

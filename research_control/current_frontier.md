@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-015` and `handoff-0588`.
+`RT-20260705-016` and `handoff-0589`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-015` |
-| Latest handoff ID | `handoff-0588` |
-| Current status | `v16_p8_t02_layered_status_field_schema_defined_no_physics_delta` |
-| Current route family | layered_status_field_schema_v16 |
+| Active task ID | `RT-20260705-016` |
+| Latest handoff ID | `handoff-0589` |
+| Current status | `v16_p8_t03_status_field_compatibility_validator_integrated_no_physics_delta` |
+| Current route family | status_field_compatibility_validator_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is status field compatibility validator v16 |
-| Required next authority | P8-T03 status-field compatibility validator only |
-| Next recommended action | Run one bounded P8-T03 status-field compatibility validator packet. |
+| Current burden | none for physics derivation; live control burden is eqsrc retainh genh trigger list v16 |
+| Required next authority | P9-T01 EqSrc RetainH GenH trigger-horizon policy only |
+| Next recommended action | Run one bounded P9-T01 EqSrc RetainH GenH trigger-horizon policy packet. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-015/00_TASK.yaml`.
-- Active task objective: Execute one bounded non-promotional v16 P8-T02 layered status field schema packet.
-- Latest handoff path: `research_control/handoffs/handoff-0588.yaml`.
-- Latest handoff summary: RT-20260705-015 completed v16 P8-T02 by creating the layered status field schema and routing validator enforcement to P8-T03.
-- Current route family: layered_status_field_schema_v16.
-- Next recommended action: Run one bounded P8-T03 status-field compatibility validator packet.
+- Active task path: `research_control/tasks/RT-20260705-016/00_TASK.yaml`.
+- Active task objective: Execute one bounded non-promotional v16 P8-T03 status-field compatibility validator packet.
+- Latest handoff path: `research_control/handoffs/handoff-0589.yaml`.
+- Latest handoff summary: RT-20260705-016 completed v16 P8-T03 by adding the status-field compatibility validator, fixtures, tests, and task-local report.
+- Current route family: status_field_compatibility_validator_v16.
+- Next recommended action: Run one bounded P9-T01 EqSrc RetainH GenH trigger-horizon policy packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P8-T03 status-field compatibility validator packet.
+Run one bounded P9-T01 EqSrc RetainH GenH trigger-horizon policy packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-015`;
-- latest handoff: `handoff-0588`;
-- current status: `v16_p8_t02_layered_status_field_schema_defined_no_physics_delta`;
+- active task: `RT-20260705-016`;
+- latest handoff: `handoff-0589`;
+- current status: `v16_p8_t03_status_field_compatibility_validator_integrated_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0588.yaml`
-- `research_control/tasks/RT-20260705-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0589.yaml`
+- `research_control/tasks/RT-20260705-016/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0588*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0589*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

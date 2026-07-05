@@ -1,0 +1,16 @@
+fixture_id: "bad_future_scoped_sets_downstream"
+expected_status: "HARD_GATE"
+record:
+  record_id: "bad-scoped-downstream"
+  future_record: true
+  high_risk_status_row: true
+  authorization_layers:
+    scoped_evidence_status_change_authorized: true
+    source_law_adoption_authorized: true
+    downstream_physics_promotion_authorized: false
+    authority_scope: "scoped evidence precondition"
+    authority_source_path: "research_control/approvals/example.yaml"
+    blocked_downstream_claims:
+      - "matter_coupling_derivation_or_adoption"
+      - "benchmark_promotion"
+      - "completed_derivation"

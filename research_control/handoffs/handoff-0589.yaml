@@ -1,0 +1,51 @@
+handoff_id: "handoff-0589"
+created_at: "2026-07-05T05:27:00Z"
+task_id: "RT-20260705-016"
+decision_id: "DDR-20260705-016"
+job_id: "AJ-RT-20260705-016-001"
+completion_path: "research_control/tasks/RT-20260705-016/jobs/completions/AJC-AJ-RT-20260705-016-001.yaml"
+source_task_id: "RT-20260705-016"
+source_job_id: "AJ-RT-20260705-016-001"
+source_completion_id: "AJC-AJ-RT-20260705-016-001"
+status: "completed"
+summary: "RT-20260705-016 completed v16 P8-T03 by adding the status-field compatibility validator, fixtures, tests, and task-local report."
+v16_completed: false
+selected_next_route:
+  route_id: "eqsrc_retainh_genh_trigger_list_v16"
+  role_family: "ontology-formalizer@0.2.0 or theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Create trigger policy for EqSrc RetainH and GenH upstream primitive packets."
+  requires_human_gate: false
+hard_blocks:
+  - "source-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "benchmark promotion"
+  - "proof authority"
+  - "completed derivation"
+next_action: "Run one bounded P9-T01 EqSrc RetainH GenH trigger-horizon policy packet."
+required_next_packet:
+  role_id: "ontology-formalizer or theoretical-continuation-selector"
+  role_version: "0.2.0 or 0.1.0"
+  packet_count: "1"
+  task_type: "eqsrc_retainh_genh_trigger_list_v16"
+  objective: "Create trigger policy for when EqSrc RetainH or GenH packets should be routed."
+claim_boundary:
+  allowed_next_scope: "P9-T01 EqSrc RetainH GenH trigger-horizon policy only"
+  completed_scope: "v16 P8-T03 status-field compatibility validator"
+  scientific_claims_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+validation_summary:
+  validator_script: "scripts/research_control/validate_status_field_compatibility.py"
+  fixture_report: "research_control/tasks/RT-20260705-016/artifacts/status_field_compatibility_fixture_report.json"
+  fixture_count: 7
+  bad_fixtures_fail: true
+  historical_safe_contexts_warn_at_most: true
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  v16_delta: "P8-T03 validator completed with no historical status rewrite and no physics promotion"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

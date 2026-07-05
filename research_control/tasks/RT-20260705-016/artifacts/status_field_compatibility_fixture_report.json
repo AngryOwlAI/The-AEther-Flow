@@ -1,0 +1,102 @@
+{
+  "authority_boundary": {
+    "physics_claim_authority_created": false,
+    "validator_is_project_control_only": true
+  },
+  "fixture_count": 7,
+  "fixture_results": [
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_bare_accepted_future",
+      "hard_gate_codes": [
+        "bare_accepted_high_risk_status"
+      ],
+      "hard_gate_count": 1,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/bad_bare_accepted_future.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_future_physics_promotion_missing_layer",
+      "hard_gate_codes": [
+        "future_physics_promotion_missing_layer"
+      ],
+      "hard_gate_count": 1,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/bad_future_physics_promotion_missing_layer.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_future_scoped_sets_downstream",
+      "hard_gate_codes": [
+        "scoped_evidence_sets_downstream_promotion"
+      ],
+      "hard_gate_count": 1,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/bad_future_scoped_sets_downstream.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_gate_chair_scoped_implies_source_law",
+      "hard_gate_codes": [
+        "scoped_evidence_sets_downstream_promotion",
+        "gate_chair_scoped_acceptance_implies_source_law_adoption"
+      ],
+      "hard_gate_count": 2,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/bad_gate_chair_scoped_implies_source_law.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "HARD_GATE",
+      "expected_status": "HARD_GATE",
+      "fixture_id": "bad_scientific_claims_changed_missing_layer",
+      "hard_gate_codes": [
+        "scientific_claims_changed_missing_layer"
+      ],
+      "hard_gate_count": 1,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/bad_scientific_claims_changed_missing_layer.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "PASS",
+      "expected_status": "PASS",
+      "fixture_id": "good_future_scoped_evidence",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/good_future_scoped_evidence.yaml",
+      "warning_codes": [],
+      "warning_count": 0
+    },
+    {
+      "actual_status": "WARN",
+      "expected_status": "WARN",
+      "fixture_id": "warn_historical_scoped_broad_field",
+      "hard_gate_codes": [],
+      "hard_gate_count": 0,
+      "matches_expected": true,
+      "path": "tests/fixtures/status_field_compatibility/warn_historical_scoped_broad_field.yaml",
+      "warning_codes": [
+        "historical_physics_promotion_requires_context"
+      ],
+      "warning_count": 1
+    }
+  ],
+  "sample": "tests/fixtures/status_field_compatibility",
+  "schema_id": "status_field_compatibility_validator_v16",
+  "status": "PASS"
+}

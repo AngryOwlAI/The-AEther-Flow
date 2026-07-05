@@ -1,0 +1,16 @@
+fixture_id: "bad_gate_chair_scoped_implies_source_law"
+expected_status: "HARD_GATE"
+record:
+  record_id: "bad-gate-chair-source-law"
+  future_record: true
+  high_risk_status_row: true
+  summary: "Gate Chair accepted X only as scoped evidence precondition."
+  authorization_layers:
+    scoped_evidence_status_change_authorized: true
+    source_law_adoption_authorized: true
+    authority_scope: "scoped evidence precondition"
+    authority_source_path: "research_control/approvals/example.yaml"
+    blocked_downstream_claims:
+      - "matter_coupling_derivation_or_adoption"
+      - "benchmark_promotion"
+      - "completed_derivation"
