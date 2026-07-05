@@ -1,22 +1,22 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0620.yaml"
+  - "research_control/handoffs/handoff-0621.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "research_control/current_frontier.md"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
 active_state:
-  active_task_id: "RT-20260705-047"
-  latest_handoff_id: "handoff-0620"
-  current_status: "v17_p1_t02_k_e_candidate_constructed_pending_self_check_no_adoption"
+  active_task_id: "RT-20260705-048"
+  latest_handoff_id: "handoff-0621"
+  current_status: "v17_p1_t03_candidate_self_check_passed_pending_audit_handoff_no_adoption"
   v15_completed: true
   v16_completed: false
   v16_plan_registered: true
 next_route:
-  route_id: "v17_p1_t03_candidate_target_self_check"
-  role_family: "candidate-constructor@0.2.0"
+  route_id: "v17_p1_t04_candidate_audit_handoff"
+  role_family: "director-of-research@0.3.0"
   target_derivation_milestone: "matter_coupling"
-  milestone_burden: "Check the constructed K_E candidate against the v16 target specification and record accept-for-audit or failed validity field."
+  milestone_burden: "Route the constructed candidate to smuggling audit or route an obstruction to selector review."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false

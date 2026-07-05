@@ -1,0 +1,85 @@
+candidate_self_check_v1:
+  artifact_status: "draft_control_candidate_self_check_only"
+  task_id: "RT-20260705-048"
+  plan_task_id: "P1-T03"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Check the constructed candidate against the v16 target specification before audit."
+  candidate_artifact_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  candidate_artifact_hash: "6e21a010e5247039564d96612cc4be7a0cc59564bfb1498d7dde9318b9ba6059"
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_symbol: "K_{E_*}"
+  target_specification_path: "research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex"
+  target_specification_hash: "8af2234b62c10170f9235bf8120c295bd18bf429a647674ab2dec0ffa824c9a4"
+  SMScope_declared: "pass"
+  explicit_certificate_bundle: "pass"
+  detector_placeholder_or_blocked_marker: "pass"
+  no_target_guard: "pass"
+  source_side_relation_or_partial_map: "pass"
+  finite_local_witness_or_obstruction: "pass"
+  primary_fail_closed_branch: "none"
+  eligible_for_smuggling_audit: true
+  eligible_for_refuter_stress: true
+  adoption_language_detected: false
+  downstream_gr_language_detected: false
+  target_validity_value: "eligible_for_audit_stress"
+  self_check_evidence:
+    SMScope_declared:
+      result: "pass"
+      candidate_section: "SMScope(E_*)"
+      evidence: "The candidate declares E_* as a two-element finite source event with source-side matter-semantics objects A_0 and A_1 plus a finite source evidence ledger."
+    explicit_certificate_bundle:
+      result: "pass"
+      candidate_section: "Explicit SCLBundle(E_*)"
+      evidence: "The candidate lists C_MS C_RR C_NT D_rep G_proc and F fields with explicit finite certificates or fail-closed markers."
+    detector_placeholder_or_blocked_marker:
+      result: "pass"
+      candidate_section: "Detector Placeholder or Block"
+      evidence: "DetPlaceholder(E_*) is explicitly marked missing_and_blocked with reason no_source_side_detector_replacement_law."
+    no_target_guard:
+      result: "pass"
+      candidate_section: "No-Target Guard"
+      evidence: "The candidate records false for target topology metric stress-energy matter-action Einstein-equation detector-response generated-derivative and process-authority imports and proves the finite graph uses only source records certificates the detector block and bookkeeping tokens."
+    source_side_relation_or_partial_map:
+      result: "pass"
+      candidate_section: "Candidate Relation or Partial Map K_{E_*}"
+      evidence: "K_{E_*}: R_{E_*} -> SCLBundle(E_*) x T_{E_*}^{src} is given as a finite source-side partial map on r_0 r_1 and r_01."
+    finite_local_witness_or_obstruction:
+      result: "pass"
+      candidate_section: "Finite or Local Witness"
+      evidence: "W_{E_*}=(E_* SMScope(E_*) SCLBundle(E_*) K_{E_*}) is explicitly named as a finite witness."
+  fail_closed_branch_evaluation:
+    OB_V16_SCLT_MISSING_CERT: "not_triggered"
+    OB_V16_SCLT_MALFORMED_CERT: "not_triggered"
+    OB_V16_SCLT_TARGET_IMPORT: "not_triggered"
+    OB_V16_SCLT_DETECTOR_BOUNDARY: "not_triggered"
+    OB_V16_SCLT_COUPLING_RELATION_MISSING: "not_triggered"
+    OB_V16_SCLT_PROCESS_AUTHORITY: "not_triggered"
+    OB_V16_SCLT_EVIDENCE_AS_ADOPTION: "not_triggered"
+    OB_V16_SCLT_WITNESS_MISSING: "not_triggered"
+  route_decision:
+    self_check_passed: true
+    next_plan_task_id: "P1-T04"
+    next_route_id: "v17_p1_t04_candidate_audit_handoff"
+    downstream_candidate_disposition_recommended: "route_to_smuggling_audit"
+    downstream_task_not_implemented_here: true
+  forbidden_conclusions:
+    source_law_adopted: false
+    RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+    unrestricted_RR_E_theorem_authorized: false
+    matter_semantics_adopted: false
+    detector_semantics_adopted: false
+    coupling_law_adopted: false
+    matter_coupling_derived: false
+    matter_coupling_adopted: false
+    stress_energy_semantics_imported: false
+    stress_energy_tensor_constructed: false
+    matter_action_imported: false
+    einstein_equations_derived: false
+    benchmark_promoted: false
+    proof_authority: false
+    completed_derivation_claimed: false
+    global_theory_rejected: false
+  apa7_sources:
+    - "The AEther-Flow Research Project. (2026a). Recommendations implementation plan continue task v17 [Internal implementation plan]."
+    - "The AEther-Flow Research Project. (2026b). Source-side coupling-law target specification under explicit certificates v1 [Research-control TeX artifact]."
+    - "The AEther-Flow Research Project. (2026c). Source-side coupling-law candidate K_EStar v1 [Research-control TeX artifact]."

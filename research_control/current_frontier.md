@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-047` and `handoff-0620`.
+`RT-20260705-048` and `handoff-0621`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-047` |
-| Latest handoff ID | `handoff-0620` |
-| Current status | `v17_p1_t02_k_e_candidate_constructed_pending_self_check_no_adoption` |
+| Active task ID | `RT-20260705-048` |
+| Latest handoff ID | `handoff-0621` |
+| Current status | `v17_p1_t03_candidate_self_check_passed_pending_audit_handoff_no_adoption` |
 | V16 completed | false |
-| Current route family | v17 p1 t02 candidate constructed handoff to p1 t03 self check no adoption |
+| Current route family | v17 p1 t03 candidate self check passed handoff to p1 t04 no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P1-T03 candidate self-check against v16 target specification |
-| Next recommended action | Run one bounded v17 P1-T03 candidate-constructor self-check against the v16 source-side coupling-law target specification before audit stress accepted-language calibration or downstream v17 tasks. |
+| Required next authority | P1-T04 candidate audit-lane handoff |
+| Next recommended action | Run one bounded v17 P1-T04 Director handoff packet to choose the audit-lane disposition. Because P1-T03 passed the target floor the expected disposition is route_to_smuggling_audit. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-047/00_TASK.yaml`.
-- Active task objective: Construct one bounded source-side partial map K_{E_*} under SourceCouplingLawCandidate_EStar_v1 or record one precise construction obstruction.
-- Latest handoff path: `research_control/handoffs/handoff-0620.yaml`.
-- Latest handoff summary: RT-20260705-047 completed one bounded candidate-constructor packet for v17 P1-T02. It constructed exactly one finite source-side K_{E_*} candidate under SourceCouplingLawCandidate_EStar_v1 using SMScope(E_*) SCLBundle(E_*) DetPlaceholder(E_*)=missing_and_blocked a no-target guard and a finite witness. It did not adopt a source law detector semantics matter semantics coupling law or matter coupling and did not change the Distance-to-GR ledger.
-- Current route family: v17 p1 t02 candidate constructed handoff to p1 t03 self check no adoption.
-- Next recommended action: Run one bounded v17 P1-T03 candidate-constructor self-check against the v16 source-side coupling-law target specification before audit stress accepted-language calibration or downstream v17 tasks.
+- Active task path: `research_control/tasks/RT-20260705-048/00_TASK.yaml`.
+- Active task objective: Produce a structured self-check showing whether the constructed K_{E_*} candidate satisfies the minimum v16 target-specification floor for audit eligibility.
+- Latest handoff path: `research_control/handoffs/handoff-0621.yaml`.
+- Latest handoff summary: RT-20260705-048 completed one bounded v17 P1-T03 candidate self-check. It checked the constructed K_{E_*} candidate against the v16 target-specification floor and recorded all six required fields as pass with primary_fail_closed_branch none. The result is only eligibility for audit and stress routes and not audit success stress success source-law adoption detector semantics coupling-law adoption or matter-coupling derivation.
+- Current route family: v17 p1 t03 candidate self check passed handoff to p1 t04 no adoption.
+- Next recommended action: Run one bounded v17 P1-T04 Director handoff packet to choose the audit-lane disposition. Because P1-T03 passed the target floor the expected disposition is route_to_smuggling_audit.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -196,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P1-T03 candidate-constructor self-check against the v16 source-side coupling-law target specification before audit stress accepted-language calibration or downstream v17 tasks.
+Run one bounded v17 P1-T04 Director handoff packet to choose the audit-lane disposition. Because P1-T03 passed the target floor the expected disposition is route_to_smuggling_audit.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -224,13 +224,13 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-047`;
-- latest handoff: `handoff-0620`;
-- current status: `v17_p1_t02_k_e_candidate_constructed_pending_self_check_no_adoption`;
+- active task: `RT-20260705-048`;
+- latest handoff: `handoff-0621`;
+- current status: `v17_p1_t03_candidate_self_check_passed_pending_audit_handoff_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `candidate_construction`: PASS;
+- latest handoff validation `candidate_self_check`: PASS;
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `parent_child_synthesis`: PASS;
@@ -241,8 +241,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0620.yaml`
-- `research_control/tasks/RT-20260705-047/00_TASK.yaml`
+- `research_control/handoffs/handoff-0621.yaml`
+- `research_control/tasks/RT-20260705-048/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -258,7 +258,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0620*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0621*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
