@@ -1,0 +1,317 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\ObjRec}{\mathsf{SourceObjectRecord}_{v2}}
+\newcommand{\CertRec}{\mathsf{SourceCertificateRecord}_{v2}}
+\newcommand{\ValidTwo}{\mathsf{CertificateValidity}_{v2}}
+\newcommand{\GenRel}{\mathsf{CertificateGeneratedRelation}_{v2}}
+\newcommand{\EqMSTwo}{\mathrm{EqMS}^{\mathrm{cert}}_{\mathrm{src},v2}}
+\newcommand{\TargetTwo}{\mathsf{EquivalencePropertyTarget}_{v2}}
+\newcommand{\FailTwo}{\mathsf{FailClosedEvaluation}_{v2}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\Cdom}{\mathsf{dom}}
+\newcommand{\Ccod}{\mathsf{cod}}
+\newcommand{\CComp}{\mathsf{comp}^{\mathrm{src}}}
+\newcommand{\CRes}{\mathsf{res}^{\mathrm{src}}}
+\newcommand{\Inv}{\mathsf{inv}^{\mathrm{src}}}
+\newcommand{\Dual}{\mathsf{dual}^{\mathrm{src}}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+\newcommand{\PositiveMSProfile}{\mathrm{PositiveMSProfile}_{v1}}
+\newcommand{\SMSAR}{\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{target}{Theorem target}
+\newtheorem{obligation}{Obligation}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Refactored Certificate-Indexed Source-Equivalence Target Specification v1}
+\author{Ontology Formalizer Packet RT-20260705-005}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P5-T02. It is a draft/control target
+specification. It separates source object records, certificate records,
+certificate validity, generated source relations, equivalence-property theorem
+targets, and fail-closed evaluation. It does not prove all theorem targets.
+The next proof packet may select one theorem target, with the default target
+being transitivity under valid compatible certificate composition.
+
+This packet does not edit canonical ontology TeX. It does not adopt a source
+law, \(\RRELaw\), \(\PositiveMSProfile\), \(\SMSAR\), matter semantics,
+detector semantics, a coupling law, matter coupling, \(\MetricData(E)\),
+scoped \(\geff\), stress-energy semantics, a stress-energy tensor, matter
+action, Einstein equations, benchmark status, or completed derivation.
+
+\section{Refactored Definitions}
+
+\begin{definition}[\(\ObjRec\)]
+A source object record is a tuple
+\[
+  A=(\mathrm{id}_A, I_A, L_A, G_A, R_A, \mathcal U_A, \Sigma_A)
+\]
+where \(\mathrm{id}_A\) is a source-local identifier, \(I_A\) is a finite or
+locally finite source index set, \(L_A\) is source label data, \(G_A\) is
+source guard data, \(R_A\) is source readout or response-token syntax,
+\(\mathcal U_A\) is a declared family of source subdomains, and
+\(\Sigma_A\) records source-side status. None of these fields may be supplied
+by target topology, target atlas, target metric, detector semantics,
+stress-energy semantics, matter action, benchmark behavior, generated
+derivatives, registry metadata, validator status, role status, handoff
+status, local cache state, file order, or commit state.
+\end{definition}
+
+\begin{definition}[\(\CertRec\)]
+A source certificate record from \(A\) to \(B\) is a tuple
+\[
+  c=(\mathrm{id}_c,\kappa_c,A,B,S_c,W_c,G_c,N_c,\Sigma_c)
+\]
+where \(\kappa_c\) is the certificate kind, \(S_c\subseteq I_A\cup I_B\) is
+the declared source scope, \(W_c\) is source witness payload, \(G_c\) is a
+source validity guard, \(N_c\) is the no-target/no-process-authority guard,
+and \(\Sigma_c\) is one of valid, missing, malformed, target-importing,
+process-substituted, scoped-evidence-only, or fail-closed. Permitted target
+specification kinds are identity, transport, invariance, factorization,
+inverse or dual, compatible composition, and restriction.
+\end{definition}
+
+\begin{definition}[\(\ValidTwo\)]
+\(\ValidTwo(c;A,B,S)\) is a predicate, not a constructor. It holds exactly
+when all of the following input fields are supplied and source-side:
+\begin{enumerate}[leftmargin=*]
+  \item \(A,B\in\ObjRec\) and \(S\) is a declared source subdomain of their
+  named source indices.
+  \item \(c\in\CertRec\) names \(A\) as source domain and \(B\) as source
+  codomain inside \(S\).
+  \item \(W_c,G_c,N_c\) are explicit source payloads and guards.
+  \item \(\Sigma_c=\mathrm{valid}\).
+  \item no missing, malformed, target-importing, detector-importing,
+  stress-energy, matter-action, benchmark, process-authority, or
+  scoped-evidence-as-certificate branch is active.
+\end{enumerate}
+If any input is absent or forbidden, \(\ValidTwo\) is false and the relevant
+evaluation is governed by \(\FailTwo\).
+\end{definition}
+
+\begin{definition}[\(\GenRel\)]
+\(\GenRel(A,B;S,c)\) is the certificate-generated source relation defined by
+\[
+  \GenRel(A,B;S,c) \quad \Longleftrightarrow \quad \ValidTwo(c;A,B,S).
+\]
+It is generated by an explicit valid certificate record only. A declared
+equivalence status, scoped evidence-status, validator pass, handoff, role,
+approval, registry row, or generated derivative does not generate
+\(\GenRel\).
+\end{definition}
+
+\begin{definition}[\(\EqMSTwo\)]
+\(\EqMSTwo(A,B;S)\) is the named candidate source-equivalence relation whose
+positive branches must be generated by \(\GenRel(A,B;S,c)\) for one or more
+explicit valid certificates and whose algebraic equivalence properties are
+not built into the definition. Reflexivity, symmetry, transitivity,
+restriction monotonicity, and fail-closed behavior are theorem targets below.
+\end{definition}
+
+\begin{definition}[\(\TargetTwo\)]
+An equivalence-property target is a record
+\[
+  T=(\mathrm{name},\mathrm{inputs},\mathrm{hypotheses},
+  \mathrm{conclusion},\mathrm{failure\_branch})
+\]
+that states one property of \(\EqMSTwo\) without treating that property as
+definitionally true. A proof packet must cite the exact input records,
+certificate records, source scopes, compatibility fields, and fail-closed
+branches used by \(T\).
+\end{definition}
+
+\begin{definition}[\(\FailTwo\)]
+\(\FailTwo(\tau)\) maps a required certificate slot, property target, or
+candidate generated relation to \(\Bottom\) when the needed certificate is
+missing, malformed, target-importing, detector-importing, stress-energy
+based, matter-action based, benchmark based, process-authority based, or only
+scoped evidence-status. It also records the obstruction label and preserves
+source-object separation when the declared source record already contains the
+relevant separation.
+\end{definition}
+
+\section{Theorem Targets}
+
+\begin{target}[Reflexivity under valid identity certificate]
+Inputs: \(A\in\ObjRec\), a declared source scope \(S\subseteq I_A\), and an
+identity certificate \(e_A\in\CertRec\) with \(\Cdom(e_A)=A\),
+\(\Ccod(e_A)=A\), \(\Scope(e_A)=S\), and \(\ValidTwo(e_A;A,A,S)\).
+Conclusion target:
+\[
+  \GenRel(A,A;S,e_A) \quad \text{and hence the reflexive branch of }
+  \EqMSTwo(A,A;S).
+\]
+Failure branch: if \(e_A\) is missing or invalid, no reflexive generated
+relation is produced for this target.
+\end{target}
+
+\begin{target}[Symmetry only with supplied inverse or dual certificate]
+Inputs: \(A,B\in\ObjRec\), source scope \(S\), a valid certificate
+\(c:A\to B\), and a supplied inverse or dual certificate
+\(d:B\to A\) satisfying \(\ValidTwo(c;A,B,S)\), \(\ValidTwo(d;B,A,S)\), and
+the declared inverse or dual compatibility condition
+\[
+  d=\Inv(c)\quad\text{or}\quad d=\Dual(c)
+\]
+as source-side certificate data. Conclusion target:
+\[
+  \GenRel(A,B;S,c) \Rightarrow \GenRel(B,A;S,d).
+\]
+Failure branch: validity of \(c\) alone does not imply symmetry.
+\end{target}
+
+\begin{target}[Transitivity under valid compatible composition]
+Inputs: \(A,B,C\in\ObjRec\), scopes \(S_{AB},S_{BC}\), valid certificates
+\(c_{AB}:A\to B\) and \(c_{BC}:B\to C\), endpoint compatibility
+\(\Ccod(c_{AB})=\Cdom(c_{BC})=B\) as source data, and a supplied composition
+record
+\[
+  c_{AC}=\CComp(c_{BC},c_{AB})
+\]
+with \(\ValidTwo(c_{AC};A,C,S_{AB}\cup S_{BC})\). Conclusion target:
+\[
+  \GenRel(A,B;S_{AB},c_{AB})\wedge
+  \GenRel(B,C;S_{BC},c_{BC})
+  \Rightarrow
+  \GenRel(A,C;S_{AB}\cup S_{BC},c_{AC}).
+\]
+Failure branch: incompatible endpoints, invalid inputs, or absent composition
+record block transitivity. This is the default P5-T03 target.
+\end{target}
+
+\begin{target}[Restriction monotonicity under declared source subdomain]
+Inputs: \(A,B\in\ObjRec\), valid \(c:A\to B\) over scope \(S\), and a declared
+source subdomain \(U\subseteq S\) with restricted source object records
+\(A|_U,B|_U\) and a supplied restriction record \(c|_U=\CRes_U(c)\) satisfying
+\(\ValidTwo(c|_U;A|_U,B|_U,U)\). Conclusion target:
+\[
+  \GenRel(A,B;S,c) \Rightarrow \GenRel(A|_U,B|_U;U,c|_U).
+\]
+Failure branch: non-source \(U\), target-defined \(U\), detector-defined
+\(U\), or missing restricted certificate blocks monotonicity.
+\end{target}
+
+\begin{target}[Missing certificate blocks generated equivalence]
+Inputs: \(A,B\in\ObjRec\), scope \(S\), and required certificate slot
+\(\tau(A,B,S)\). If no \(c\in\CertRec\) is supplied for the slot, then
+\[
+  \FailTwo(\tau(A,B,S))=\Bottom
+  \quad\text{and}\quad
+  \neg \exists c\,\GenRel(A,B;S,c).
+\]
+Scoped evidence-status, registry status, validator status, role status,
+handoff status, approval status, file order, local cache state, and commit
+state cannot fill the slot.
+\end{target}
+
+\begin{target}[Malformed certificate blocks generated equivalence]
+Inputs: \(A,B\in\ObjRec\), scope \(S\), and a certificate record \(c\) with
+\(\Sigma_c=\mathrm{malformed}\), including undeclared index, endpoint
+mismatch, absent witness payload, changed factor object, or missing guard.
+Conclusion target:
+\[
+  \neg \ValidTwo(c;A,B,S),\qquad
+  \FailTwo(c)=\Bottom,\qquad
+  \neg \GenRel(A,B;S,c).
+\]
+\end{target}
+
+\begin{target}[Target-importing certificate blocks generated equivalence]
+Inputs: \(A,B\in\ObjRec\), scope \(S\), and a certificate-like record \(c\)
+that imports target topology, target atlas, target metric, proper time,
+detector semantics, benchmark behavior, stress-energy semantics,
+matter-action semantics, \(\MetricData(E)\), \(\geff\), generated derivatives,
+registry metadata, validator status, role status, handoff status, approval
+status, local cache state, file order, or commit state as a mathematical
+premise. Conclusion target:
+\[
+  \neg \ValidTwo(c;A,B,S),\qquad
+  \FailTwo(c)=\Bottom,\qquad
+  \neg \GenRel(A,B;S,c).
+\]
+\end{target}
+
+\begin{target}[Scoped evidence-status does not generate a certificate]
+Inputs: scoped evidence-status records such as \(\PositiveMSProfile\),
+\(\SMSAR\), \(\RRELaw\), Gate Chair scoped evidence-status, or current
+frontier scoped-positive aliases, plus \(A,B\in\ObjRec\) and source scope
+\(S\). Conclusion target: unless an explicit \(c\in\CertRec\) is also
+supplied and satisfies \(\ValidTwo(c;A,B,S)\), evidence-status alone implies
+\[
+  \neg \exists c\,\GenRel(A,B;S,c).
+\]
+Evidence-status may remain evidence or precondition; it is not adoption and
+not a certificate constructor.
+\end{target}
+
+\section{Target Selection For P5-T03}
+
+The recommended P5-T03 theorem target is transitivity under valid compatible
+composition. It has the highest nontrivial content among the listed targets
+because it requires two valid input certificates, endpoint compatibility, an
+explicit composition record, source-scope union discipline, and fail-closed
+behavior for missing or incompatible composition data.
+
+\section{Forbidden Conclusion Boundary}
+
+\begin{boundary}[Specification boundary]
+This specification creates target definitions and theorem obligations only.
+The relation \(\EqMSTwo\) is not declared to be a full equivalence relation by
+definition. Each algebraic property requires an explicit theorem target and
+proof or a precise obstruction.
+\end{boundary}
+
+\begin{nonconclusion}
+No source-law adoption, \(\RRELaw\) adoption, unrestricted \(RR_E\) theorem,
+\(\PositiveMSProfile\) adoption, \(\SMSAR\) law adoption, matter-semantics
+adoption, detector-semantics adoption, coupling-law adoption, matter-coupling
+derivation or adoption, stress-energy semantics, stress-energy tensor, matter
+action, Einstein equations, benchmark promotion, or completed derivation is
+authorized by this target specification.
+\end{nonconclusion}
+
+\section{Machine-Readable Summary}
+
+\begin{verbatim}
+spec_id: "refactored_certificate_indexed_source_equivalence_target_spec_v1"
+implemented_plan_task: "P5-T02"
+definitions:
+  - SourceObjectRecord_v2
+  - SourceCertificateRecord_v2
+  - CertificateValidity_v2
+  - CertificateGeneratedRelation_v2
+  - EqMS_cert_src_v2
+  - EquivalencePropertyTarget_v2
+  - FailClosedEvaluation_v2
+theorem_targets:
+  - reflexivity_under_valid_identity_certificate
+  - symmetry_only_if_inverse_or_dual_certificate_exists_or_is_supplied
+  - transitivity_under_valid_compatible_composition
+  - restriction_monotonicity_under_declared_source_subdomain
+  - missing_certificate_blocks_generated_equivalence
+  - malformed_certificate_blocks_generated_equivalence
+  - target_importing_certificate_blocks_generated_equivalence
+  - scoped_evidence_status_does_not_generate_certificate
+recommended_p5_t03_target: "transitivity_under_valid_compatible_composition"
+physics_delta: "none"
+claim_boundary: "support_only_draft_control_specification"
+\end{verbatim}
+
+\end{document}

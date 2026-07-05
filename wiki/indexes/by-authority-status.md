@@ -392,6 +392,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V16-P4-T04-FINITE-LOCAL-FACTORIZATION-CERTIFICATE-INSTANCE` `research_control/tasks/RT-20260705-001/artifacts/finite_local_factorization_certificate_instance_v1.tex`
 - `TEX-V16-P4-T05-NEGATIVE-CERTIFICATE-INSTANCE-PACKET` `research_control/tasks/RT-20260705-002/artifacts/negative_certificate_instance_packet_v1.tex`
 - `TEX-V16-P5-T01-EQMS-DEFINITION-THEOREM-CONTENT-SEPARATION-AUDIT` `research_control/tasks/RT-20260705-004/artifacts/eqms_definition_theorem_content_separation_audit_v16.tex`
+- `TEX-V16-P5-T02-REFACTORED-CERTIFICATE-INDEXED-SOURCE-EQUIVALENCE-TARGET-SPEC` `research_control/tasks/RT-20260705-005/artifacts/refactored_certificate_indexed_source_equivalence_target_spec_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1080,6 +1081,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V16-P4-T04-FINITE-LOCAL-FACTORIZATION-CERTIFICATE-INSTANCE` `wiki/tex/tex-v16-p4-t04-finite-local-factorization-certificate-instance.md`
 - `WIKI-TEX-V16-P4-T05-NEGATIVE-CERTIFICATE-INSTANCE-PACKET` `wiki/tex/tex-v16-p4-t05-negative-certificate-instance-packet.md`
 - `WIKI-TEX-V16-P5-T01-EQMS-DEFINITION-THEOREM-CONTENT-SEPARATION-AUDIT` `wiki/tex/tex-v16-p5-t01-eqms-definition-theorem-content-separation-audit.md`
+- `WIKI-TEX-V16-P5-T02-REFACTORED-CERTIFICATE-INDEXED-SOURCE-EQUIVALENCE-TARGET-SPEC` `wiki/tex/tex-v16-p5-t02-refactored-certificate-indexed-source-equivalence-target-spec.md`
 
 ## project_control
 

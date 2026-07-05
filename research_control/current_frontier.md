@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-004` and `handoff-0577`.
+`RT-20260705-005` and `handoff-0578`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,14 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-004` |
-| Latest handoff ID | `handoff-0577` |
-| Current status | `v16_p5_t01_eqms_theorem_content_separation_audit_completed_no_physics_delta` |
-| Current route family | eqms_definition_theorem_content_separation_audit_v16 |
+| Active task ID | `RT-20260705-005` |
+| Latest handoff ID | `handoff-0578` |
+| Current status | `v16_p5_t02_refactored_certificate_indexed_source_equivalence_target_spec_completed_no_physics_delta` |
+| Current route family | refactored_certificate_indexed_source_equivalence_target_spec_v16 |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is refactored source equivalence target specification v16 |
-| Required next authority | P5-T02 refactored source-equivalence target specification only |
-| Next recommended action | Run one bounded ontology-formalizer@0.2.0 packet for P5-T02 refactored source-equivalence target specification. |
+| Current burden | none for physics derivation; live control burden is certificate indexed equivalence property theorem attempt v16 |
+| Required next authority | P5-T03 one nontrivial equivalence property theorem attempt only |
+| Next recommended action | Run one bounded ontology-formalizer@0.2.0 packet for P5-T03 certificate-indexed equivalence property theorem attempt. |
 
 ## Active Boundary
 
@@ -48,12 +48,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-004/00_TASK.yaml`.
-- Active task objective: Audit NarrowMSCertEq_v1 and source certificate algebra to identify definition-only content, theorem content, theorem-content gaps, and future theorem obligations.
-- Latest handoff path: `research_control/handoffs/handoff-0577.yaml`.
-- Latest handoff summary: RT-20260705-004 completed v16 P5-T01 by separating NarrowMSCertEq_v1 definition unfolding from nontrivial theorem content and future theorem obligations.
-- Current route family: eqms_definition_theorem_content_separation_audit_v16.
-- Next recommended action: Run one bounded ontology-formalizer@0.2.0 packet for P5-T02 refactored source-equivalence target specification.
+- Active task path: `research_control/tasks/RT-20260705-005/00_TASK.yaml`.
+- Active task objective: State refactored certificate-indexed source-equivalence definitions and theorem targets, separating constructors, validity predicates, generated relation, equivalence-property targets, and fail-closed evaluation.
+- Latest handoff path: `research_control/handoffs/handoff-0578.yaml`.
+- Latest handoff summary: RT-20260705-005 completed v16 P5-T02 by defining certificate-indexed source-equivalence v2 records and eight theorem targets with exact inputs and fail-closed branches.
+- Current route family: refactored_certificate_indexed_source_equivalence_target_spec_v16.
+- Next recommended action: Run one bounded ontology-formalizer@0.2.0 packet for P5-T03 certificate-indexed equivalence property theorem attempt.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +195,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded ontology-formalizer@0.2.0 packet for P5-T02 refactored source-equivalence target specification.
+Run one bounded ontology-formalizer@0.2.0 packet for P5-T03 certificate-indexed equivalence property theorem attempt.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +223,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-004`;
-- latest handoff: `handoff-0577`;
-- current status: `v16_p5_t01_eqms_theorem_content_separation_audit_completed_no_physics_delta`;
+- active task: `RT-20260705-005`;
+- latest handoff: `handoff-0578`;
+- current status: `v16_p5_t02_refactored_certificate_indexed_source_equivalence_target_spec_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +235,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0577.yaml`
-- `research_control/tasks/RT-20260705-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0578.yaml`
+- `research_control/tasks/RT-20260705-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +252,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0577*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0578*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
