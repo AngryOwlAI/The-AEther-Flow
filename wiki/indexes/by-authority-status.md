@@ -679,6 +679,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260705-010-v16-formalization-integration-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-018-UPSTREAM-TRIGGER-SELECTOR-INTEGRATION-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-018-upstream-trigger-selector-integration-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-021-SOURCE-MODEL-ZOO-VALIDATION-AND-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-021-source-model-zoo-validation-and-selector-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-022-NEGATIVE-RESULT-READER-LANGUAGE-AUDIT-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-022-negative-result-reader-language-audit-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1213,6 +1214,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT` `research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-018-UPSTREAM-TRIGGER-SELECTOR-INTEGRATION-V16` `research_control/tasks/RT-20260705-018/artifacts/upstream_trigger_selector_integration_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-021-SOURCE-MODEL-ZOO-VALIDATION-AND-SELECTOR-V16` `research_control/tasks/RT-20260705-021/artifacts/source_model_zoo_validation_and_selector_v16.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-022-NEGATIVE-RESULT-READER-LANGUAGE-AUDIT-V16` `research_control/tasks/RT-20260705-022/artifacts/negative_result_reader_language_audit_v16.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
