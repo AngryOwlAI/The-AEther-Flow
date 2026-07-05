@@ -1,0 +1,230 @@
+completion_path: "research_control/tasks/RT-20260705-028/jobs/completions/AJC-AJ-RT-20260705-028-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-028-001"
+job_id: "AJ-RT-20260705-028-001"
+task_id: "RT-20260705-028"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-05T09:22:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P13-T02"
+  plan_phase_id: "P13"
+  implemented_task_scope: "Created the one-question red-team packet artifact."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P12-T03"
+    - "P13-T01"
+    - "P13-T02"
+  downstream_tasks_not_implemented:
+    - "P13-T03 internal one-question red-team pilot"
+    - "P14 target-import attack suite"
+    - "P15 compact frontier"
+    - "P16 project-system integration"
+    - "P17 final v16 audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/one_question_red_team_packet_v16.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-028/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-028/DDR-20260705-028.md"
+  - "research_control/tasks/RT-20260705-028/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-028/jobs/AJ-RT-20260705-028-001.yaml"
+  - "research_control/tasks/RT-20260705-028/jobs/completions/AJC-AJ-RT-20260705-028-001.yaml"
+  - "research_control/tasks/RT-20260705-028/roles/documentation-curator@2.0.0--RT-20260705-028.yaml"
+  - "research_control/handoffs/handoff-0601.yaml"
+  - "research_control/handoffs/handoff-0601.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0600.yaml"
+  - "research_control/tasks/RT-20260705-027/artifacts/one_question_red_team_question_selector_v16.md"
+  - "research_control/design/external_red_team_packet_template_v1.md"
+  - "research_control/tasks/RT-20260705-023/artifacts/negative_result_integration_selector_v16.md"
+  - "research_control/tasks/RT-20260702-058/artifacts/narrow_source_side_matter_semantics_equivalence_theorem_v1.tex"
+  - "research_control/tasks/RT-20260702-060/artifacts/matter_semantics_equivalence_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/tasks/RT-20260705-004/artifacts/eqms_definition_theorem_content_separation_audit_v16.tex"
+  - "research_control/design/semantic_layer_separation_control_note.md"
+  - "research_control/design/matter_coupling_dependency_dag_v1.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=632 relationship_row_count=3279 semantic_row_count=632 vault_row_count=632"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"one question red team packet reviewer scoring rubric hidden imports\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-027 latest_handoff=handoff-0600 next_action=P13-T02"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 632
+    relationship_row_count: 3279
+    semantic_row_count: 632
+    vault_row_count: 632
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"one question red team packet reviewer scoring rubric hidden imports\" --limit 10 --json"
+      query_type: "search"
+      query_text: "one question red team packet reviewer scoring rubric hidden imports"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-027-ONE-QUESTION-RED-TEAM-QUESTION-SELECTOR-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-027/artifacts/one_question_red_team_question_selector_v16.md"
+      source_hash: "76cdce10f91303fef1f9e712025197c9b6eb4291bdb3375523779822fac905d4"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/external_red_team_packet_template_v1.md"
+      source_hash: "b73c3750a4cf82a7b021a574964ee808e05b3a6eb460e25fd42ea3d593c23f4a"
+packet:
+  artifact_path: "research_control/design/one_question_red_team_packet_v16.md"
+  source_hash: "a9a0255eae896732711e1527f06f739e1bb31f6c1f30a8c7e69fc894db96d229"
+  selected_question_count: 1
+  exact_source_artifact_count: 11
+  required_sections_present: true
+  expected_output_template_present: true
+  reviewer_scoring_rubric_present: true
+  conflict_of_interest_note_present: true
+  non_authority_warning_present: true
+  external_outreach_performed: false
+  review_execution_performed: false
+selected_next_route:
+  route_id: "internal_one_question_red_team_pilot_v16"
+  selected_next_task: "P13-T03"
+  selected_next_task_type: "internal_one_question_red_team_pilot_v16"
+  selected_next_role_family: "refuter@0.2.0"
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+distance_to_gr_status:
+  - burden: "matter coupling"
+    status: "one-question packet prepared for review discipline; no coupling law or matter coupling is adopted or derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P13-T03 internal pilot is the next bounded route"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS without refresh"
+      - "query_memory status PASS"
+      - "targeted lookups and search performed"
+      - "continue_research.py resolved handoff-0600 and P13-T02"
+  artifact_internal:
+    status: "PASS"
+    evidence:
+      - "selected question present"
+      - "all required packet sections present"
+      - "expected reviewer output template present"
+      - "no external outreach or review execution performed"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P13-T02 packet artifact created"
+      - "next route selected as P13-T03 internal pilot"
+      - "no adoption promotion Gate Chair verdict or completed derivation authorized"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check PASS"
+      - "render_dependency_graph.py --check PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+      - "validate_documentation_impact.py --json PASS"
+      - "validate_claim_language.py --changed PASS hard_fail_count=0 warning_count=1402 historical warnings only"
+      - "validate_research_control.py PASS"
+      - "validate_research_control.py --check-diff PASS"
+      - "report_physics_progress_metrics.py PASS"
+      - "git diff --check PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier hash 0dda01f3e76d5390cd1da39b55d6c78b08b26968d82e69ffb41dc7f6c10a4872"
+      - "dependency graph json hash 769bea61d548d47ba7124611fd34d00b1c23810b7db35da196b2ac3699033a28"
+      - "dependency graph markdown hash 8b8dbfdd79549df58c26f9b810943449e0f8e0ed29ac77f7d2909de333accfaf"
+      - "dependency graph dot hash 4d8698730ceca52e16eb1fc72b866850e3db28cf8a6ad48d3271ade0dd17f5bb"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "sync_obsidian_vault.py PASS rows content_semantic=633 relationships=3283 obsidian_vault=633"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS hard_fail_count=0 warning_count=1402 historical warnings only"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  external_outreach_authorized: false
+  external_outreach_performed: false
+  review_execution_performed: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-04"
+  protected_scoped_gate_review_scope: "none consumed by P13-T02 packet-only task"
+  protected_scoped_gate_review_authorized: false
+  task_consumes_gate_authority: false
+  downstream_physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v16_p13_t02_one_question_red_team_packet_completed_no_external_outreach"
+coherent_resolution_summary: "RT-20260705-028 created the reusable P13-T02 one-question red-team packet and routed immediate continuation to an internal P13-T03 pilot."
+next_recommendation: "Run one bounded P13-T03 internal one-question red-team pilot."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusion_summary:
+  - "No external outreach or reviewer contact was performed."
+  - "No review execution or reviewer finding was produced."
+  - "No source-law adoption matter-coupling Einstein-equation benchmark-promotion Gate Chair verdict unscoped closure of future source-extension continuation or completed-derivation claim was made."
