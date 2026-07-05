@@ -1,0 +1,18 @@
+review_id: "P14-T01-PARENT-CONFLICT-REVIEW"
+task_id: "RT-20260705-030"
+job_id: "AJ-RT-20260705-030-001"
+status: "resolved"
+blocking_conflicts_present: false
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260705-030/artifacts/child_phys_math_target_import_taxonomy.yaml"
+  - "research_control/tasks/RT-20260705-030/artifacts/child_phys_phil_target_import_taxonomy.yaml"
+consensus:
+  - "The taxonomy covers the required 15 P14-T01 attack classes."
+  - "Each class maps to a fail-closed response and at least one tracked rejection surface."
+  - "The packet has no physics delta and no validator behavior change."
+unique_contributions:
+  phys_math: "Required explicit attack-class fields: forbidden premise, smuggled premise shape, fail-closed response, and rejection surface."
+  phys_phil: "Emphasized process-authority laundering and scoped-evidence-as-adoption risks."
+unresolved_conflicts: []
+fusion_decision: "Use research_control/design/target_import_attack_taxonomy_v16.md as the single fused artifact and route to P14-T02 fixture library."

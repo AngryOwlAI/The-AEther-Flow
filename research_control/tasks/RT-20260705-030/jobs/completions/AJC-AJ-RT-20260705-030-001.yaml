@@ -1,0 +1,322 @@
+completion_path: "research_control/tasks/RT-20260705-030/jobs/completions/AJC-AJ-RT-20260705-030-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-030-001"
+job_id: "AJ-RT-20260705-030-001"
+task_id: "RT-20260705-030"
+source_role_id: "smuggling-auditor"
+completed_at: "2026-07-05T10:02:42Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P14-T01"
+  plan_phase_id: "P14"
+  implemented_task_scope: "Defined the target-import attack taxonomy and fail-closed response matrix."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P13-T03"
+    - "P14-T01"
+  downstream_tasks_not_implemented:
+    - "P14-T02 target-import fixture catalog"
+    - "P14-T03 validator integration"
+    - "P15 compact frontier"
+    - "P16 project-system integration"
+    - "P17 final v16 audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/target_import_attack_taxonomy_v16.md"
+  - "research_control/tasks/RT-20260705-030/artifacts/child_phys_math_target_import_taxonomy.yaml"
+  - "research_control/tasks/RT-20260705-030/artifacts/child_phys_phil_target_import_taxonomy.yaml"
+  - "research_control/tasks/RT-20260705-030/artifacts/parent_conflict_review_target_import_taxonomy.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-030/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-030/DDR-20260705-030.md"
+  - "research_control/tasks/RT-20260705-030/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-030/jobs/AJ-RT-20260705-030-001.yaml"
+  - "research_control/tasks/RT-20260705-030/jobs/completions/AJC-AJ-RT-20260705-030-001.yaml"
+  - "research_control/tasks/RT-20260705-030/roles/smuggling-auditor@0.2.0--RT-20260705-030.yaml"
+  - "research_control/handoffs/handoff-0603.yaml"
+  - "research_control/handoffs/handoff-0603.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0602.yaml"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/design/semantic_layer_separation_control_note.md"
+  - "research_control/design/matter_coupling_dependency_dag_v1.md"
+  - "research_control/design/source_certificate_instance_library_schema_v1.md"
+  - "research_control/design/source_certificate_instance_library_index_v1.md"
+  - "research_control/tasks/RT-20260705-029/artifacts/internal_one_question_red_team_pilot_v16.md"
+  - "research_control/tasks/RT-20260705-004/artifacts/eqms_definition_theorem_content_separation_audit_v16.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=634 relationship_row_count=3287 semantic_row_count=634 vault_row_count=634"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P14 target import attack taxonomy forbidden imports no target guard\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-029 latest_handoff=handoff-0602 next_action=P14-T01"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | rendered_hash=8199fb982637ef3e9aa6adbcc0ef93207b749283c0e15abf928e5ba371ec4b05"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with expected local retrieval warnings before sync"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | content_semantic_rows=635 relationship_rows=3291 obsidian_rows=635"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | rendered_hash=8199fb982637ef3e9aa6adbcc0ef93207b749283c0e15abf928e5ba371ec4b05"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | json_hash=2fb0ba679ee20da4279258b7d1c7acef9d1dd8dc0f86e485bbcba3101c50aa0b markdown_hash=79eb1fc000c87945bf7460dacd28c6b78583c89b880d77e0f651ace0c678ef4c dot_hash=f4793eba22c2746b6fd08e1992c422d56352dbe800690fb01440f3e8572865b8"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true blocked_paths=0"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS emitted_signal_count=3 open_improvement_handoff_count=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1402 historical warnings only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 634
+    relationship_row_count: 3287
+    semantic_row_count: 634
+    vault_row_count: 634
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P14 target import attack taxonomy forbidden imports no target guard\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P14 target import attack taxonomy forbidden imports no target guard"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/no_target_import_guard_map.md"
+      source_hash: "4c4e736a84bb59ae11710fa185788e86bd6de6de3176f748b2689d9fcda755ce"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+      source_hash: "f536b97164ea9f41b5ba75319e44dfc7096c50acb98c03786aa98a83fafba3cf"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SEMANTIC-LAYER-SEPARATION-CONTROL-NOTE"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/semantic_layer_separation_control_note.md"
+      source_hash: "204e0b4a5d1ead0a86353676fff709eef7988bfefe89a17a4147d36265a50d85"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/matter_coupling_dependency_dag_v1.md"
+      source_hash: "8cca047480ae21c3b0641a5221277ae43cd5fdf1eb688a9080a168e27b1e98c3"
+taxonomy_result:
+  artifact_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+  source_hash: "5b17d2f90c4d10621f9038abe952e55c066e100f5898448e92a78ecee11235d8"
+  required_classes_covered: 15
+  every_class_has_fail_closed_response: true
+  source_paths_or_schemas_named: true
+  validator_behavior_changed: false
+  physics_claims_changed: false
+  selected_next_route: "target_import_attack_fixture_catalog_v16"
+selected_next_route:
+  route_id: "target_import_attack_fixture_catalog_v16"
+  selected_next_task: "P14-T02"
+  selected_next_task_type: "target_import_attack_fixture_catalog_v16"
+  selected_next_role_family: "validator-engineer@0.2.0"
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P14-T01 produced a control taxonomy only and no source-side derivation content."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_update_rationale: "No Distance-to-GR burden is discharged by a target-import taxonomy."
+  milestone: "matter_coupling"
+  downstream_unlocked: []
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology primitive is edited or adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general EqSrc theorem is supplied"
+  - burden: "RetainH"
+    status: "unchanged; RetainH remains an upstream source-side burden"
+  - burden: "GenH"
+    status: "unchanged; GenH remains an upstream source-side burden"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no detector or observer-local semantics are adopted"
+  - burden: "Resp_lc"
+    status: "unchanged; no response law is adopted"
+  - burden: "M_src"
+    status: "unchanged; no source manifold object is adopted"
+  - burden: "g_eff"
+    status: "unchanged; no effective metric is defined constructed or adopted"
+  - burden: "matter coupling"
+    status: "blocked; no coupling law or matter coupling is adopted or derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; no finite-variation robustness theorem is supplied"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P14-T02 fixture catalog is the next bounded route"
+new_mathematical_payload:
+  - payload_id: "P14T01_TARGET_IMPORT_ATTACK_TAXONOMY"
+    payload_type: "dependency_map_update"
+    artifact_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+    status: "draft/control"
+    summary: "Classifies 15 target-import attack paths and fail-closed responses as project-control evidence only."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "dependency_map_update"
+    object_name: "P14-T01 target-import attack taxonomy"
+    claim_status: "draft/control"
+    source_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+    source_hash: "5b17d2f90c4d10621f9038abe952e55c066e100f5898448e92a78ecee11235d8"
+    burden_effect: "control_taxonomy_no_distance_delta"
+    summary: "Maps target-import attack classes to fail-closed responses without changing physics status."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260705-030/artifacts/child_phys_math_target_import_taxonomy.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260705-030/artifacts/child_phys_phil_target_import_taxonomy.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260705-030/artifacts/parent_conflict_review_target_import_taxonomy.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/design/target_import_attack_taxonomy_v16.md"
+    fused_output_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+    fused_summary: "Target-import attack classes are mapped to fail-closed responses; P14-T02 is the next route."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight refreshed stale retrieval state and ended PASS"
+      - "query_memory status PASS after refresh"
+      - "targeted lookup and search performed"
+      - "continue_research.py resolved handoff-0602 and P14-T01"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P14-T01 target-import taxonomy artifact created"
+      - "15 required attack classes covered"
+      - "fail-closed response recorded for each class"
+      - "no validator behavior change recorded"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check PASS"
+      - "render_dependency_graph.py --check PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+      - "validate_documentation_impact.py --json PASS"
+      - "validate_claim_language.py --changed --json PASS hard_fail_count=0 warning_count=1402 historical warnings only"
+      - "validate_research_control.py PASS"
+      - "validate_research_control.py --check-diff PASS"
+      - "report_physics_progress_metrics.py PASS"
+      - "git diff --check PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier hash 8199fb982637ef3e9aa6adbcc0ef93207b749283c0e15abf928e5ba371ec4b05"
+      - "dependency graph json hash 2fb0ba679ee20da4279258b7d1c7acef9d1dd8dc0f86e485bbcba3101c50aa0b"
+      - "dependency graph markdown hash 79eb1fc000c87945bf7460dacd28c6b78583c89b880d77e0f651ace0c678ef4c"
+      - "dependency graph dot hash f4793eba22c2746b6fd08e1992c422d56352dbe800690fb01440f3e8572865b8"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "sync_obsidian_vault.py PASS rows content_semantic=635 relationships=3291 obsidian_vault=635"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS hard_fail_count=0 warning_count=1402 historical warnings only"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  external_outreach_authorized: false
+  external_outreach_performed: false
+  review_execution_performed: true
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-04"
+  protected_scoped_gate_review_scope: "none consumed by P14-T01 taxonomy-only task"
+  protected_scoped_gate_review_authorized: false
+  task_consumes_gate_authority: false
+  downstream_physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "P14-T01 target-import attack taxonomy."
+  summary: "P14-T01 does not authorize ontology adoption source-law adoption M_src adoption g_eff construction or adoption matter semantics detector semantics coupling law matter coupling stress-energy matter action Einstein equations benchmark promotion validator PASS as proof completed derivation or global theory rejection."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "matter semantics adoption"
+    - "detector semantics adoption"
+    - "M_src adoption"
+    - "g_eff construction or adoption"
+    - "coupling-law adoption"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "validator behavior change"
+    - "completed derivation"
+    - "global theory rejection"
+verdict: "v16_p14_t01_target_import_attack_taxonomy_completed_no_physics_delta"
+coherent_resolution_summary: "RT-20260705-030 completed the P14-T01 target-import taxonomy and routed continuation to P14-T02 fixture catalog."
+next_recommendation: "Run one bounded P14-T02 target-import fixture catalog packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

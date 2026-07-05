@@ -312,6 +312,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `wiki/markdown/md-research-control-design-source-model-zoo-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `wiki/markdown/md-research-control-design-target-import-attack-taxonomy-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `wiki/markdown/md-research-control-design-three-tier-claim-convention.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`
@@ -882,6 +883,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `research_control/design/source_model_zoo_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `research_control/design/source_model_zoo_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `research_control/design/target_import_attack_taxonomy_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`

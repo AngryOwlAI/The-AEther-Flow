@@ -1,0 +1,63 @@
+handoff_id: "handoff-0603"
+created_at: "2026-07-05T10:02:42Z"
+task_id: "RT-20260705-030"
+decision_id: "DDR-20260705-030"
+job_id: "AJ-RT-20260705-030-001"
+completion_path: "research_control/tasks/RT-20260705-030/jobs/completions/AJC-AJ-RT-20260705-030-001.yaml"
+source_task_id: "RT-20260705-030"
+source_job_id: "AJ-RT-20260705-030-001"
+source_completion_id: "AJC-AJ-RT-20260705-030-001"
+status: "completed"
+summary: "RT-20260705-030 completed v16 P14-T01 by defining the target-import attack taxonomy and fail-closed response matrix."
+v16_completed: false
+selected_next_route:
+  route_id: "target_import_attack_fixture_catalog_v16"
+  plan_task_id: "P14-T02"
+  role_family: "validator-engineer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build a target-import fixture catalog whose bad fixtures fail closed and good fixtures pass without physics promotion."
+  requires_human_gate: false
+review_artifact_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+review_artifact_hash: "5b17d2f90c4d10621f9038abe952e55c066e100f5898448e92a78ecee11235d8"
+recommendation: "continue_to_fixture_catalog"
+integration_route: "continue_to_p14_target_import_fixture_catalog_v16"
+hard_blocks:
+  - "source-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "validator behavior change before P14-T03"
+  - "completed derivation"
+next_action: "Run one bounded P14-T02 target-import fixture catalog packet."
+required_next_packet:
+  role_id: "validator-engineer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "target_import_attack_fixture_catalog_v16"
+  objective: "Create bad and good target-import fixtures from the P14-T01 taxonomy."
+claim_boundary:
+  allowed_next_scope: "P14-T02 fixture catalog only"
+  completed_scope: "v16 P14-T01 target-import taxonomy"
+  scientific_claims_changed: false
+  validator_behavior_changed: false
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+validation_summary:
+  required_classes_covered: 15
+  every_class_has_fail_closed_response: true
+  source_paths_or_schemas_named: true
+  validator_behavior_changed: false
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  burden_id: "none"
+  v16_delta: "P14-T01 produced a control taxonomy only and no physics promotion."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

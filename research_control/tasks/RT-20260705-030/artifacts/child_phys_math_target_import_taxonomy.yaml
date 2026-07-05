@@ -1,0 +1,35 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260705-030"
+job_id: "AJ-RT-20260705-030-001"
+status: "completed"
+summary: "Reviewed P14-T01 taxonomy as a source-side proof/certificate attack classification."
+formal_findings:
+  attack_class_count: 15
+  all_required_p14_classes_present: true
+  every_attack_has_fail_closed_response: true
+  every_attack_names_rejection_surface: true
+  validator_behavior_changed: false
+  physics_delta: false
+minimal_formal_obligation:
+  statement: "A target-import attack class is valid for P14-T01 only if it names a forbidden premise, the smuggled premise shape, a fail-closed response, and at least one tracked rejection surface."
+  status: "satisfied_for_taxonomy"
+  downstream_obligation: "P14-T02 should instantiate fixtures; P14-T03 should decide validator integration."
+distance_to_gr_effect:
+  changed: false
+  milestone: "matter_coupling"
+  note: "The taxonomy adds attack-class structure only; it does not discharge a derivation burden."
+forbidden_overread_blocks:
+  - "target metric as source certificate"
+  - "Lorentzian signature as source validity"
+  - "detector calibration as source label"
+  - "stress-energy tensor as matter semantics proof"
+  - "matter action as coupling-law proof"
+  - "Einstein equations as upstream premise"
+  - "benchmark fit as source evidence"
+  - "process authority as proof"
+  - "validator PASS as proof"
+  - "generated derivative as proof"
+  - "scoped evidence as adoption"
+  - "finite/local fixture as universal theorem"
+recommendation: "accept_taxonomy_and_route_to_p14_t02_fixture_library"
