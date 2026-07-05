@@ -1,0 +1,252 @@
+completion_path: "research_control/tasks/RT-20260705-026/jobs/completions/AJC-AJ-RT-20260705-026-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-026-001"
+job_id: "AJ-RT-20260705-026-001"
+task_id: "RT-20260705-026"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-05T08:34:29Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P12-T03"
+  plan_phase_id: "P12"
+  implemented_task_scope: "Created the P12-T03 manuscript split boundary checklist artifact."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P11-T01"
+    - "P11-T02 not required by P11-T01 audit"
+    - "P11-T03"
+    - "P12-T01"
+    - "P12-T02"
+    - "P12-T03"
+  downstream_tasks_not_implemented:
+    - "P13 red-team packet"
+    - "P14 target-import attack suite"
+    - "P15 compact frontier"
+    - "P16 project-system integration"
+    - "P17 final v16 audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/manuscript_split_boundary_checklist_v16.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-026/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-026/DDR-20260705-026.md"
+  - "research_control/tasks/RT-20260705-026/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-026/jobs/AJ-RT-20260705-026-001.yaml"
+  - "research_control/tasks/RT-20260705-026/jobs/completions/AJC-AJ-RT-20260705-026-001.yaml"
+  - "research_control/tasks/RT-20260705-026/roles/project-control-maintainer@0.2.0--RT-20260705-026.yaml"
+  - "research_control/handoffs/handoff-0599.yaml"
+  - "research_control/handoffs/handoff-0599.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0598.yaml"
+  - "research_control/tasks/RT-20260705-024/artifacts/physics_manuscript_status_refresh_v16.md"
+  - "research_control/tasks/RT-20260705-025/artifacts/ai_methodology_manuscript_status_refresh_v16.md"
+  - "research_control/tasks/RT-20260704-015/artifacts/cross_manuscript_glossary_boundary_v15.md"
+  - "research_control/current_frontier.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=630 relationship_row_count=3271 semantic_row_count=630 vault_row_count=630"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"manuscript split boundary\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16;MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-025 latest_handoff=handoff-0598 next_action=P12-T03"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 630
+    relationship_row_count: 3271
+    semantic_row_count: 630
+    vault_row_count: 630
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"manuscript split boundary\" --limit 10 --json"
+      query_type: "search"
+      query_text: "manuscript split boundary"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-024-PHYSICS-MANUSCRIPT-STATUS-REFRESH-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-024/artifacts/physics_manuscript_status_refresh_v16.md"
+      source_hash: "107193dd953370474e1748f75c04eb6999a89e81f840c85d8570e5239ac305bf"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-025/artifacts/ai_methodology_manuscript_status_refresh_v16.md"
+      source_hash: "e0be9f793e4c728253b060aeaa0d0f059dbf6cef7010791efb69bb9e594b08dd"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260704-015-CROSS-MANUSCRIPT-GLOSSARY-BOUNDARY-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260704-015/artifacts/cross_manuscript_glossary_boundary_v15.md"
+      source_hash: "f2c7b0a1e60b24e82aa43ad8b214367490a2ca245f518be3937754bed71809ed"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "591ebd2f530904b177132656bab926587da1a53fd8f48768354e1f26ede5c477"
+manuscript_split_boundary_checklist:
+  artifact_path: "research_control/design/manuscript_split_boundary_checklist_v16.md"
+  source_hash: "3cda3d657dd79723b3807124a8125e53983752ba86ccb7bca9fb191af994e91d"
+  checklist_status: "project_control_checklist"
+  compatibility_recorded_for_existing_manuscript_updates: true
+  physics_validator_pass_as_proof_blocked: true
+  autonomous_scientific_authority_overread_blocked: true
+  submission_or_publication_action_implied: false
+  immediate_next_plan_task: "P13-T01"
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+distance_to_gr_status:
+  - burden: "matter coupling"
+    status: "no_change_control_checklist_only"
+  - burden: "Einstein equations"
+    status: "not_started"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no_new_gate_review"
+  - burden: "current route freeze or hard-fail status"
+    status: "not_frozen_next_p13_t01"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS without refresh"
+      - "continue_research.py resolved handoff-0598 and P12-T03"
+      - "P12-T03 plan section inspected"
+      - "P12-T01 P12-T02 and v15 cross-manuscript glossary artifacts inspected"
+  artifact_internal:
+    status: "PASS"
+    evidence:
+      - "all six P12-T03 required checks are present in the check matrix"
+      - "compatibility record covers P12-T01 P12-T02 and the v15 glossary boundary"
+      - "no physics delta or autonomous scientific authority claim is made"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P12-T03 checklist artifact created"
+      - "no public-surface rewrite or science-draft edit performed"
+      - "no physics promotion or completed derivation authorized"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check PASS"
+      - "render_dependency_graph.py --check PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+      - "validate_documentation_impact.py --json PASS"
+      - "validate_claim_language.py --changed PASS hard_fail_count=0 warning_count=1400 historical warnings only"
+      - "validate_research_control.py PASS"
+      - "validate_research_control.py --check-diff PASS"
+      - "git diff --check PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier renderer wrote P12-T03 state hash 591ebd2f530904b177132656bab926587da1a53fd8f48768354e1f26ede5c477"
+      - "dependency graph renderer completed and freshness check passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "sync_obsidian_vault.py rebuilt content semantic rows 631 object relationship rows 3275 and vault rows 631"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed PASS hard_fail_count=0 warning_count=1400 historical warnings only"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  autonomous_scientific_authority_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-04"
+  protected_scoped_gate_review_scope: "none consumed by P12-T03 checklist-only packet"
+  protected_scoped_gate_review_authorized: false
+  manuscript_split_boundary_checklist_requires_human_gate: false
+  task_consumes_gate_authority: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  blocked_downstream_claims:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "Einstein_equation_derivation"
+    - "benchmark_promotion_or_closure"
+    - "Gate_Chair_verdict"
+    - "autonomous_scientific_authority_claim"
+    - "completed_derivation"
+verdict: "v16_p12_t03_manuscript_split_boundary_checklist_completed_no_physics_delta"
+coherent_resolution_summary: "RT-20260705-026 created the v16 manuscript split boundary checklist and recorded compatibility for existing P12 manuscript refreshes without physics delta."
+next_recommendation: "Run one bounded P13-T01 red-team question selector packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusion_summary:
+  - "No manuscript submission or publication action was performed."
+  - "No autonomous scientific authority claim was made."
+  - "No matter-coupling Einstein-equation benchmark-promotion or completed-derivation claim was made."
+  - "No workflow or validator receipt was treated as physics proof."

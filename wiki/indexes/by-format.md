@@ -139,6 +139,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `research_control/design/html_explainer_depth_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `research_control/design/html_explainer_flexible_presentation_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16` `research_control/design/layered_status_field_schema_v16.md`
+- `MD-RESEARCH-CONTROL-DESIGN-MANUSCRIPT-SPLIT-BOUNDARY-CHECKLIST-V16` `research_control/design/manuscript_split_boundary_checklist_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `research_control/design/mathematical_decisiveness_completion_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-SCHEMA-V1` `research_control/design/matter_coupling_dependency_dag_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1` `research_control/design/matter_coupling_dependency_dag_v1.md`
@@ -778,6 +779,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-DEPTH-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-depth-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-HTML-EXPLAINER-FLEXIBLE-PRESENTATION-CONTRACT` `wiki/markdown/md-research-control-design-html-explainer-flexible-presentation-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16` `wiki/markdown/md-research-control-design-layered-status-field-schema-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-MANUSCRIPT-SPLIT-BOUNDARY-CHECKLIST-V16` `wiki/markdown/md-research-control-design-manuscript-split-boundary-checklist-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATHEMATICAL-DECISIVENESS-COMPLETION-CONTRACT` `wiki/markdown/md-research-control-design-mathematical-decisiveness-completion-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-SCHEMA-V1` `wiki/markdown/md-research-control-design-matter-coupling-dependency-dag-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1` `wiki/markdown/md-research-control-design-matter-coupling-dependency-dag-v1.md`

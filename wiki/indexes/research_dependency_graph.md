@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-05T08:18:36Z`
-- Source fingerprint: `dd2db09cd7d7b529288abf24ee93e96e30e6fbb797b754cc20fa5d3b81a52c7d`
-- Nodes: `13654`
-- Edges: `53268`
+- Generated from tracked state as of: `2026-07-05T08:34:29Z`
+- Source fingerprint: `9e2c8d336b910c5649daef02eea04d48e08d3079de73f13135e8d78a6bcfb94c`
+- Nodes: `13676`
+- Edges: `53320`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 734 |
+| `completion_yaml` | 735 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 598 |
+| `handoff_yaml` | 599 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 734 |
+| `agent_job` | `support_only` | 735 |
 | `artifact` | `canonical_source` | 82 |
-| `artifact` | `support_only` | 7191 |
-| `blocked_burden` | `blocked` | 2162 |
-| `claim_boundary` | `support_only` | 691 |
+| `artifact` | `support_only` | 7203 |
+| `blocked_burden` | `blocked` | 2168 |
+| `claim_boundary` | `support_only` | 692 |
 | `draft_control_candidate` | `draft_control` | 485 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 51 |
 | `frozen_negative` | `frozen_negative` | 98 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 598 |
+| `handoff` | `support_only` | 599 |
 | `human_gated_object` | `human_gated` | 277 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 272 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 26 |
-| `task` | `support_only` | 679 |
+| `task` | `support_only` | 680 |
 
 ## Frontier Table
 
@@ -89,6 +89,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:ai_validator_pass_as_physics_proof` | Blocked claim: AI validator PASS as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_ledger_authority` | Blocked claim: alias map as ledger authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_physics_proof` | Blocked claim: alias map as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_summary_as_physics_evidence` | Blocked claim: baseline summary as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:before_after_corpus_migration_review` | Blocked permission: before/after corpus migration review | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260705-025`
-- Latest handoff: `handoff-0598`
-- Handoff path: `research_control/handoffs/handoff-0598.yaml`
-- Next action: Run one bounded P12-T03 manuscript split boundary checklist packet.
+- Active task: `RT-20260705-026`
+- Latest handoff: `handoff-0599`
+- Handoff path: `research_control/handoffs/handoff-0599.yaml`
+- Next action: Run one bounded P13-T01 red-team question selector packet.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
