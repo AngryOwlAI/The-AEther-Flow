@@ -1,0 +1,120 @@
+{
+  "schema_id": "v17_active_state_preflight_report_v1",
+  "task_id": "RT-20260705-045",
+  "job_id": "AJ-RT-20260705-045-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v17",
+  "plan_phase_id": "P0",
+  "plan_task_id": "P0-T03",
+  "created_at": "2026-07-05T21:05:53Z",
+  "status": "PASS",
+  "physics_claim_authority": false,
+  "proof_authority": false,
+  "preflight_verdict": {
+    "required_drift": "absent",
+    "deterministic_repair_task_required": false,
+    "next_route": "P1-T01",
+    "next_route_role_family": "candidate-constructor@0.2.0",
+    "next_route_scope": "candidate-constructor packet setup only"
+  },
+  "required_checks": {
+    "program_state_points_to_latest_handoff": {
+      "status": "PASS",
+      "active_task_id": "RT-20260705-044",
+      "latest_handoff_id": "handoff-0617",
+      "program_state_sha256": "64ecf391005b98f728326c48db6bc9956f405881ccff1381f149961dbe70c0bf",
+      "latest_handoff_sha256": "7b42f25a4257214986bc398bf11348ccaae53c338c73bdc096e9caf2b3460ad9"
+    },
+    "latest_handoff_sequences_p0_t03": {
+      "status": "PASS",
+      "latest_handoff_id": "handoff-0617",
+      "latest_handoff_next_action": "Run one bounded v17 P0-T03 active-state and source-basis preflight packet before P1 candidate setup construction or any downstream v17 task."
+    },
+    "deferred_scientific_route_preserved": {
+      "status": "PASS",
+      "deferred_handoff_id": "handoff-0615",
+      "deferred_route_id": "concrete_coupling_law_candidate_construction_route",
+      "deferred_role_family": "candidate-constructor@0.2.0",
+      "deferred_target_derivation_milestone": "matter_coupling",
+      "deferred_milestone_burden": "Construct one bounded source-side coupling-law candidate from the v16 source-side coupling-law target specification and finite/local certificate evidence without adoption or downstream physics promotion.",
+      "supersession_assessment": "No tracked v17 P0-T01 or P0-T02 record changed the deferred scientific route; they only registered and materialized v17 project-control guidance."
+    },
+    "current_frontier_synchronized": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_current_frontier.py --check",
+      "active_task_id": "RT-20260705-044",
+      "latest_handoff_id": "handoff-0617",
+      "rendered_hash": "f5393404b51b9884cf42f4c4c68569739656f577368a934e07daabf9a9420cb7"
+    },
+    "compact_current_frontier_synchronized": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check",
+      "active_task_id": "RT-20260705-044",
+      "latest_handoff_id": "handoff-0617",
+      "next_route_id": "v17_active_state_preflight",
+      "yaml_sha256": "58ada80eeb340090f245616b15cf10e29c1c7b5f32e2d038909d6f1bfa3c2bc8"
+    },
+    "distance_to_gr_boundary": {
+      "status": "PASS",
+      "ledger_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "matter_coupling_control_status": "accepted_as_scoped_evidence_precondition",
+      "matter_coupling_promotion_status": "scoped_source_evidence_only",
+      "einstein_equations_control_status": "not_started",
+      "benchmark_promotion_control_status": "blocked",
+      "blocked_overread_summary": [
+        "no_source_law_adoption",
+        "no_coupling_law_adoption",
+        "no_matter_coupling_derivation",
+        "no_stress_energy_semantics",
+        "no_stress_energy_tensor",
+        "no_matter_action",
+        "no_detector_semantics",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation"
+      ]
+    },
+    "required_source_basis_available": {
+      "status": "PASS",
+      "source_count": 41,
+      "missing": [],
+      "manifest_scope": "active-state sources physics-control sources and agent-system validation sources named by the v17 plan",
+      "representative_hashes": {
+        "v17_plan": "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a",
+        "v17_backlog": "4323df2cd41e3af4eec00594ab1103635b1c5c9bae705721973c3d59c81b248d",
+        "gr_derivation_burden_map": "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f",
+        "source_side_coupling_law_target_specification_v1": "8af2234b62c10170f9235bf8120c295bd18bf429a647674ab2dec0ffa824c9a4",
+        "source_certificate_operation_laws_v1": "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+      }
+    }
+  },
+  "generated_output_advisories": {
+    "dependency_graph_check": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    },
+    "claim_graph_precheck": {
+      "status": "STALE_ADVISORY",
+      "command": ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check",
+      "route_blocking": false,
+      "repair": "Refresh generated claim graph during normal post-write synchronization."
+    }
+  },
+  "next_route": {
+    "plan_task_id": "P1-T01",
+    "task_type": "concrete_coupling_law_candidate_construction_setup",
+    "role_family": "candidate-constructor@0.2.0",
+    "target_derivation_milestone": "matter_coupling",
+    "milestone_burden": "Set up one bounded source-side coupling-law candidate construction packet using the v16 target specification.",
+    "requires_human_gate": false
+  },
+  "forbidden_conclusions": [
+    "P0-T03 is not candidate construction.",
+    "P0-T03 does not adopt a coupling law.",
+    "P0-T03 does not derive or adopt matter coupling.",
+    "P0-T03 does not establish stress-energy semantics, stress-energy tensor, or matter action.",
+    "P0-T03 does not establish detector semantics.",
+    "P0-T03 does not derive Einstein equations.",
+    "P0-T03 does not promote the exact-GR benchmark.",
+    "P0-T03 does not complete v17."
+  ]
+}

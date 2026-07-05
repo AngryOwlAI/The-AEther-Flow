@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-044` and `handoff-0617`.
+`RT-20260705-045` and `handoff-0618`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-044` |
-| Latest handoff ID | `handoff-0617` |
-| Current status | `v17_p0_t02_backlog_materialized_no_physics_delta` |
+| Active task ID | `RT-20260705-045` |
+| Latest handoff ID | `handoff-0618` |
+| Current status | `v17_p0_t03_active_state_preflight_passed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p0 t02 backlog materialization handoff to active state preflight no physics claim change |
+| Current route family | v17 p0 t03 active state preflight handoff to candidate constructor setup no physics claim change |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P0-T03 active-state and source-basis preflight |
-| Next recommended action | Run one bounded v17 P0-T03 active-state and source-basis preflight packet before P1 candidate setup construction or any downstream v17 task. |
+| Required next authority | P1-T01 candidate-constructor packet setup |
+| Next recommended action | Run one bounded v17 P1-T01 candidate-constructor packet setup before candidate construction audit stress accepted-language calibration or downstream v17 tasks. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-044/00_TASK.yaml`.
-- Active task objective: Create a machine-readable v17 backlog and companion schema mapping every v17 phase task to route type role family dependencies outputs validators and handoff behavior without changing physics claims.
-- Latest handoff path: `research_control/handoffs/handoff-0617.yaml`.
-- Latest handoff summary: RT-20260705-044 completed one bounded Project-Control Maintainer packet for v17 P0-T02 backlog materialization. It created v17_recommendation_backlog.yaml and v17_recommendation_backlog_schema.md, mapped all 57 v17 tasks exactly once, preserved acyclic plan-order dependencies, marked P1-T01 as the first physics-bearing task after P0, and changed no physics claims.
-- Current route family: v17 p0 t02 backlog materialization handoff to active state preflight no physics claim change.
-- Next recommended action: Run one bounded v17 P0-T03 active-state and source-basis preflight packet before P1 candidate setup construction or any downstream v17 task.
+- Active task path: `research_control/tasks/RT-20260705-045/00_TASK.yaml`.
+- Active task objective: Verify active-state sources source-basis availability generated frontier synchronization and Distance-to-GR boundary before executing v17 physics or downstream project-system tasks.
+- Latest handoff path: `research_control/handoffs/handoff-0618.yaml`.
+- Latest handoff summary: RT-20260705-045 completed one bounded Director of Research packet for v17 P0-T03 active-state and source-basis preflight. Required drift was absent: program_state pointed to handoff-0617, handoff-0617 selected P0-T03, handoff-0615 remained the deferred scientific candidate-constructor route authority, current-frontier and compact-frontier checks passed, all 41 required source-basis paths existed, and the Distance-to-GR ledger still blocks matter-coupling adoption, Einstein equations, benchmark promotion, and completed derivation.
+- Current route family: v17 p0 t03 active state preflight handoff to candidate constructor setup no physics claim change.
+- Next recommended action: Run one bounded v17 P1-T01 candidate-constructor packet setup before candidate construction audit stress accepted-language calibration or downstream v17 tasks.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -196,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P0-T03 active-state and source-basis preflight packet before P1 candidate setup construction or any downstream v17 task.
+Run one bounded v17 P1-T01 candidate-constructor packet setup before candidate construction audit stress accepted-language calibration or downstream v17 tasks.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -224,28 +224,29 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-044`;
-- latest handoff: `handoff-0617`;
-- current status: `v17_p0_t02_backlog_materialized_no_physics_delta`;
+- active task: `RT-20260705-045`;
+- latest handoff: `handoff-0618`;
+- current status: `v17_p0_t03_active_state_preflight_passed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `backlog_coverage_acyclicity_check`: PASS;
-- latest handoff validation `bootstrap_memory_system`: PASS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
-- latest handoff validation `git_diff_check`: PASS;
-- latest handoff validation `graph_freshness_check`: PASS;
-- latest handoff validation `validate_documentation_impact`: PASS;
-- latest handoff validation `validate_research_control`: PASS;
-- latest handoff validation `validate_research_control_check_diff`: PASS;
+- latest handoff validation `continue_research_json`: PASS;
+- latest handoff validation `dependency_graph_freshness_check`: PASS;
+- latest handoff validation `generated_claim_graph_precheck`: STALE_ADVISORY;
+- latest handoff validation `memory_preflight`: PASS;
+- latest handoff validation `query_memory_status`: PASS;
+- latest handoff validation `render_compact_current_frontier_check`: PASS;
+- latest handoff validation `render_current_frontier_check`: PASS;
+- latest handoff validation `source_basis_manifest`: PASS;
+- latest handoff validation `validate_compact_current_frontier_v16`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0617.yaml`
-- `research_control/tasks/RT-20260705-044/00_TASK.yaml`
+- `research_control/handoffs/handoff-0618.yaml`
+- `research_control/tasks/RT-20260705-045/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -261,7 +262,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0617*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0618*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
