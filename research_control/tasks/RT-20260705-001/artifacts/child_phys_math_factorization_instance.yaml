@@ -1,0 +1,21 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260705-001"
+artifact_role: "formal finite source factorization construction"
+construction_summary:
+  finite_domain: "E_src={0,1,2}"
+  factor_object: "F_src={alpha,beta}"
+  endpoint_codomain: "{b_0,b_1}"
+  maps:
+    p: "0->alpha, 1->beta, 2->alpha"
+    q: "alpha->b_0, beta->b_1"
+    h: "0->b_0, 1->b_1, 2->b_0"
+verification:
+  method: "direct finite enumeration"
+  result: "h(i)=q(p(i)) for i=0,1,2"
+claim_boundary:
+  status: "draft/control"
+  no_target_import: true
+  no_global_rr_e_collapse: true
+  no_physics_promotion: true

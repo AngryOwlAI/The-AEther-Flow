@@ -1,0 +1,270 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newcommand{\Esrc}{E_{\mathrm{src}}}
+\newcommand{\Fsrc}{F_{\mathrm{src}}}
+\newcommand{\Asrc}{A_{\mathrm{src}}}
+\newcommand{\Bsrc}{B_{\mathrm{src}}}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\Valid}{\mathsf{valid}^{\mathrm{src}}}
+\newcommand{\DeclEq}{\equiv_{\mathrm{decl}}^{\mathrm{src}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Finite Local Valid Factorization Certificate Instance v1}
+\author{Ontology Formalizer Packet RT-20260705-001}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P4-T04. It constructs one explicit finite/local
+valid source factorization certificate instance using
+\texttt{source\_certificate\_instance\_library\_schema\_v1.md}.
+
+The artifact is a draft/control finite example. It does not adopt a source
+law, \(\RRELaw\), an unrestricted \(\RRE\) theorem, matter semantics,
+detector semantics, a coupling law, matter coupling, stress-energy semantics,
+matter action, Einstein equations, benchmark status, or completed derivation.
+
+\section{Finite Source Context}
+
+\begin{definition}[Finite source context and factor object]
+Let
+\[
+  \Esrc=\{0,1,2\},\qquad \Fsrc=\{\alpha,\beta\}.
+\]
+Define source objects
+\[
+  \Asrc=(\Esrc,L_A,G_A,R_A,\mathrm{factor\_domain}),
+\]
+\[
+  \Fsrc^{\ast}=(\{\alpha,\beta\},L_F,G_F,R_F,\mathrm{factor\_middle}),
+\]
+and
+\[
+  \Bsrc=(\{b_0,b_1\},L_B,G_B,R_B,\mathrm{factor\_codomain}).
+\]
+The source labels and guards are
+\[
+  L_A(0)=L_A(2)=\ell_u,\quad L_A(1)=\ell_v,\quad
+  G_A(i)=\mathrm{inside\_finite\_factor\_domain}(\Esrc,i),
+\]
+\[
+  L_F(\alpha)=\ell_u,\quad L_F(\beta)=\ell_v,\quad
+  G_F(x)=\mathrm{inside\_factor\_object}(\{\alpha,\beta\},x),
+\]
+and
+\[
+  L_B(b_0)=\ell_u,\quad L_B(b_1)=\ell_v,\quad
+  G_B(b)=\mathrm{inside\_factor\_codomain}(\{b_0,b_1\},b).
+\]
+The response tokens are
+\[
+  R_A(0)=r_u,\quad R_A(2)=r_u,\quad R_A(1)=r_v,
+\]
+\[
+  R_F(\alpha)=r_u,\quad R_F(\beta)=r_v,\quad
+  R_B(b_0)=r_u,\quad R_B(b_1)=r_v.
+\]
+All objects, labels, guards, and tokens are source-side records.
+\end{definition}
+
+\begin{definition}[Declared factor maps]
+Define the source map \(p:\Asrc\to\Fsrc^{\ast}\) by
+\[
+  p(0)=\alpha,\qquad p(1)=\beta,\qquad p(2)=\alpha.
+\]
+Define the source map \(q:\Fsrc^{\ast}\to\Bsrc\) by
+\[
+  q(\alpha)=b_0,\qquad q(\beta)=b_1.
+\]
+Define the endpoint source comparison \(h:\Asrc\to\Bsrc\) by
+\[
+  h(0)=b_0,\qquad h(1)=b_1,\qquad h(2)=b_0.
+\]
+\end{definition}
+
+\section{Factorization Certificate Record}
+
+\begin{definition}[Explicit factorization certificate]
+The factorization certificate instance is
+\[
+  c_{\mathrm{fac}}=
+  (\mathrm{factorization},\Asrc,\Bsrc,\Fsrc^{\ast},p,q,h,
+  W_{\mathrm{fac}},G_{\mathrm{fac}},\Valid),
+\]
+where \(W_{\mathrm{fac}}\) is the finite table
+\[
+\begin{array}{c|c|c|c|c|c}
+i & p(i) & q(p(i)) & h(i) & \text{label/token check} & \text{source check}\\
+\hline
+0 & \alpha & b_0 & b_0 & \ell_u,r_u & \mathrm{pass}\\
+1 & \beta & b_1 & b_1 & \ell_v,r_v & \mathrm{pass}\\
+2 & \alpha & b_0 & b_0 & \ell_u,r_u & \mathrm{pass}
+\end{array}
+\]
+The guard \(G_{\mathrm{fac}}\) requires every row to be present, source-side,
+and compatible with \(h=q\circ p\).
+\end{definition}
+
+\section{Direct Finite Verification}
+
+\begin{lemma}[Factorization equality inside declared scope]
+For every \(i\in\Esrc\),
+\[
+  h(i)=q(p(i)).
+\]
+\end{lemma}
+
+\begin{proof}
+There are three source-domain rows. For \(i=0\), \(p(0)=\alpha\) and
+\(q(\alpha)=b_0=h(0)\). For \(i=1\), \(p(1)=\beta\) and
+\(q(\beta)=b_1=h(1)\). For \(i=2\), \(p(2)=\alpha\) and
+\(q(\alpha)=b_0=h(2)\). Hence the endpoint comparison factors through
+\(\Fsrc^{\ast}\) by direct finite enumeration.
+\end{proof}
+
+\begin{lemma}[Factorization certificate validity inside declared scope]
+The certificate \(c_{\mathrm{fac}}\) is a valid finite/local source
+factorization certificate inside
+\[
+  \Scope(c_{\mathrm{fac}})=\Esrc\cup\{\alpha,\beta\}\cup\{b_0,b_1\}.
+\]
+Consequently
+\[
+  \Asrc \DeclEq \Bsrc \quad\text{through }\Fsrc^{\ast}
+\]
+as a declared source-object factorization only.
+\end{lemma}
+
+\begin{proof}
+The factor object \(\Fsrc^{\ast}\) is explicit. The maps \(p\), \(q\), and
+\(h\) are explicit finite source maps. The previous lemma proves \(h=q\circ p\)
+on every source-domain row. The table also checks that labels and response
+tokens match the declared factor object. By the P4-T01 schema, this is a
+\texttt{valid\_factorization\_certificate} with
+\[
+  \mathrm{expected\_equivalence\_result}
+  =\mathrm{declared\_equivalence\_allowed}
+\]
+only inside the declared source scope.
+\end{proof}
+
+\section{Declared \(RR_E\) Boundary Behavior}
+
+\begin{boundary}[No global \(RR_E\) collapse]
+This factorization identifies no unrestricted \(RR_E\) classes. It states only
+that the endpoint source comparison \(h\) factors through the declared object
+\(\Fsrc^{\ast}\) for the three rows in \(\Esrc\). Distinct source objects,
+rows, or response-token families outside this finite record remain outside
+the certificate. Therefore the record preserves declared separation outside
+its own scope and cannot be used as a global \(\RRE\) theorem.
+\end{boundary}
+
+\section{No-Target-Import Certificate}
+
+\begin{lemma}[No-target-import guard]
+The record \(c_{\mathrm{fac}}\) uses only \(\Esrc\), \(\Fsrc^{\ast}\),
+declared source labels, declared source guards, declared source response
+tokens, and the finite maps \(p\), \(q\), and \(h\). Therefore:
+\[
+\begin{gathered}
+\mathrm{target\_import\_used}=\mathrm{false},\quad
+\mathrm{detector\_semantics\_used}=\mathrm{false},\\
+\mathrm{stress\_energy\_used}=\mathrm{false},\quad
+\mathrm{matter\_action\_used}=\mathrm{false},\\
+\mathrm{benchmark\_behavior\_used}=\mathrm{false},\quad
+\mathrm{process\_authority\_used}=\mathrm{false}.
+\end{gathered}
+\]
+\end{lemma}
+
+\begin{proof}
+Inspection of the certificate shows that every datum is an element of the
+finite source carriers, a declared source label, a declared source guard, a
+declared response token, or one of the source maps \(p,q,h\). No target
+metric, target topology, target atlas, proper time, detector semantics,
+stress-energy term, matter action, benchmark behavior, registry state,
+validator state, role identity, handoff state, approval state, commit state,
+generated derivative, or local cache is an input to the record.
+\end{proof}
+
+\section{Schema Record}
+
+The instance record is:
+
+\begin{verbatim}
+certificate_instance_id: "SCI-FACTORIZATION-001"
+instance_kind: "valid_factorization_certificate"
+source_object_A: "A_src=(E_src,L_A,G_A,R_A,factor_domain)"
+source_object_B: "B_src=({b_0,b_1},L_B,G_B,R_B,factor_codomain)"
+declared_context: "E_src={0,1,2}; F_src={alpha,beta}; finite/local"
+domain: "{(i,L_A(i),G_A(i),R_A(i)): i in E_src}"
+codomain: "{(b,L_B(b),G_B(b),R_B(b)): b in {b_0,b_1}}"
+source_labels: ["ell_u","ell_v"]
+source_guards:
+  - "inside_finite_factor_domain(E_src,i)"
+  - "inside_factor_object({alpha,beta},x)"
+  - "inside_factor_codomain({b_0,b_1},b)"
+response_tokens: ["r_u","r_v"]
+certificate_payload: "h=q o p with p(0)=alpha p(1)=beta p(2)=alpha q(alpha)=b_0 q(beta)=b_1"
+no_target_import_guard:
+  result: "pass"
+status: "valid"
+expected_equivalence_result: "declared_equivalence_allowed"
+rr_e_separation_effect: "preserves_declared_separation"
+fail_closed_reason: null
+target_import_used: false
+detector_semantics_used: false
+stress_energy_used: false
+matter_action_used: false
+benchmark_behavior_used: false
+process_authority_used: false
+source_paths:
+  - "research_control/design/source_certificate_instance_library_schema_v1.md"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/tasks/RT-20260704-026/artifacts/finite_local_transport_certificate_instance_v1.tex"
+  - "research_control/tasks/RT-20260704-027/artifacts/finite_local_invariance_certificate_instance_v1.tex"
+forbidden_overreads:
+  - "not a global RR_E collapse"
+  - "not a source-law adoption"
+  - "not an unrestricted RR_E theorem"
+  - "not matter semantics or detector semantics"
+  - "not a coupling law or matter-coupling derivation"
+  - "not stress-energy semantics or matter action"
+  - "not Einstein equations benchmark promotion or completed derivation"
+\end{verbatim}
+
+\section{Scope Boundary}
+
+\begin{boundary}[Outside declared scope]
+The certificate is valid only for the declared finite source carriers,
+factor object, maps \(p\), \(q\), and \(h\), labels, guards, and response
+tokens. If a later packet changes the factor object, endpoint objects, maps,
+guards, or token family, this certificate does not automatically apply.
+Outside the declared scope the record fails closed.
+\end{boundary}
+
+\begin{nonconclusion}[No physics promotion]
+The factorization is a source-side finite factorization witness. It is not
+matter-coupling factorization, stress-energy factorization, matter-action
+factorization, Einstein-equation structure, benchmark recovery, or a
+completed derivation.
+\end{nonconclusion}
+
+\end{document}
