@@ -1,0 +1,262 @@
+completion_path: "research_control/tasks/RT-20260705-035/jobs/completions/AJC-AJ-RT-20260705-035-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-035-001"
+job_id: "AJ-RT-20260705-035-001"
+task_id: "RT-20260705-035"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-05T12:07:48Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P15-T03"
+  plan_phase_id: "P15"
+  implemented_task_scope: "Integrated compact current-frontier synchronization validation into standalone, research-control, and local validation surfaces."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P15-T02"
+    - "P15-T03"
+  downstream_tasks_not_implemented:
+    - "P16 project-system integration bridge"
+    - "P17 final v16 audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/validate_compact_current_frontier_v16.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "tests/test_validate_compact_current_frontier_v16.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "research_control/design/validation_command_inventory_v16.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "research_control/tasks/RT-20260705-035/artifacts/validate_p15_t03_compact_frontier_check.py"
+  - "research_control/tasks/RT-20260705-035/artifacts/p15_t03_compact_frontier_check_report.json"
+  - "research_control/tasks/RT-20260705-035/artifacts/p15_t03_compact_frontier_check_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-035/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-035/DDR-20260705-035.md"
+  - "research_control/tasks/RT-20260705-035/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-035/jobs/AJ-RT-20260705-035-001.yaml"
+  - "research_control/tasks/RT-20260705-035/jobs/completions/AJC-AJ-RT-20260705-035-001.yaml"
+  - "research_control/tasks/RT-20260705-035/roles/validator-engineer@0.2.0--RT-20260705-035.yaml"
+  - "research_control/handoffs/handoff-0608.yaml"
+  - "research_control/handoffs/handoff-0608.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/design/compact_current_frontier_schema_v16.md"
+  - "research_control/design/validation_command_inventory_v15.md"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0607.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=637 relationship_row_count=3299 semantic_row_count=637 vault_row_count=637"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"compact frontier check integration v16 synchronization validation inventory\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-034 latest_handoff=handoff-0607 next_action=P15-T03"
+  - ".venv/bin/python -m unittest tests.test_validate_compact_current_frontier_v16 tests.test_run_full_research_control_validation | exit_code=0 | tests=7"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | active_task_id=RT-20260705-035 latest_handoff_id=handoff-0608"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write | exit_code=0 | status=written yaml_sha256=96712d3709379d28b7618aad95e134a8b892a7de12f833181744b5b539db567b json_sha256=73a817426b2c414c88b66f69de96ee243bd3a8ac6d1fc83bb6bb68c4817de2a0"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260705-035/artifacts/validate_p15_t03_compact_frontier_check.py --output research_control/tasks/RT-20260705-035/artifacts/p15_t03_compact_frontier_check_report.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with local retrieval warnings cleared by sync"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | synced generated rows CONTENT_SEMANTIC_REGISTRY.csv=638 OBJECT_RELATIONSHIP_REGISTRY.csv=3303 OBSIDIAN_VAULT_REGISTRY.csv=638"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | Validation PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | freshness check PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true reason_codes include validator_changed"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1402 historical"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | PASS with historical extension-layer warnings"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical extension-layer warnings"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass metrics_are_operational=true"
+  - "git diff --check | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 637
+    relationship_row_count: 3299
+    semantic_row_count: 637
+    vault_row_count: 637
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"compact frontier check integration v16 synchronization validation inventory\" --limit 10 --json"
+      query_type: "search"
+      query_text: "compact frontier check integration v16 synchronization validation inventory"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_command_inventory_v15.md"
+      source_hash: "dff4817f4367c5c1824d2f611fd4daec9147a6b3dc04826252ded91d5c318dc6"
+compact_frontier_check_result:
+  validator_path: "scripts/research_control/validate_compact_current_frontier_v16.py"
+  validator_hash: "e00b0e9c42645c8cafa564e26d897880be58fb8976e25e7016feec0b7c73e1f2"
+  integrated_validator_path: "scripts/research_control/validate_research_control.py"
+  integrated_validator_hash: "009411b17fb00ebb47235b480a98c288c891fbdc0377c2195c9ce11081a4e850"
+  local_ci_plan_path: "scripts/research_control/run_full_research_control_validation.py"
+  local_ci_plan_hash: "2de7c65ae15654646af73d2a99a439b6151d42a9cc500dce8a7edebd9aa4d54b"
+  inventory_path: "research_control/design/validation_command_inventory_v16.md"
+  inventory_hash: "2e72613402cdc6f5ca98cd27d4d9ea596bf4a02fe6c26d04c28d68c78f0e197c"
+  focused_test_path: "tests/test_validate_compact_current_frontier_v16.py"
+  focused_test_hash: "1673f6be725d0cea37601ad36ec49c4413f0129a3fd21280a243f662e50ba3e6"
+  task_local_validator_status: "PASS"
+  task_local_report_path: "research_control/tasks/RT-20260705-035/artifacts/p15_t03_compact_frontier_check_report.json"
+  task_local_report_hash: "4d104acdbf42ea653c4b2023b842de486ff8075c1ab4bcfa82473c0265732e74"
+  required_failure_modes:
+    - "active task mismatch"
+    - "latest handoff mismatch"
+    - "next route mismatch"
+    - "missing high-risk blocked claims"
+    - "matter coupling overpromotion"
+    - "Einstein equations overpromotion"
+    - "benchmark promotion overpromotion"
+selected_next_route:
+  route_id: "v16_documentation_impact_consolidation"
+  selected_next_task: "P16-T01"
+  selected_next_task_type: "v16_documentation_impact_consolidation"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+project_system_change_only: true
+physics_progress_status:
+  status: "project_control_validator_no_distance_delta"
+  physics_promotion_authorized: false
+  summary: "P15-T03 integrated compact validation tooling only and no source-side derivation content."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_update_rationale: "No Distance-to-GR burden is discharged by compact synchronization validation tooling."
+  milestone: "matter_coupling"
+  downstream_unlocked: []
+new_mathematical_payload: []
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "project_control_validator"
+    object_name: "compact_current_frontier_v16_validator"
+    claim_status: "operational_receipt_only"
+    source_path: "scripts/research_control/validate_compact_current_frontier_v16.py"
+    source_hash: "e00b0e9c42645c8cafa564e26d897880be58fb8976e25e7016feec0b7c73e1f2"
+    burden_effect: "no_distance_delta"
+    summary: "Validates snapshot freshness and protected-claim boundaries without changing physics status."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "query_memory status PASS"
+      - "targeted lookup and search performed"
+      - "continue_research.py resolved handoff-0607 and P15-T03"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "focused validator tests PASS"
+      - "compact renderer write and check PASS"
+      - "compact validator PASS"
+      - "task-local compact check validator PASS"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_documentation_impact.py --json PASS"
+      - "validate_research_control.py PASS"
+      - "validate_research_control.py --check-diff PASS"
+      - "report_physics_progress_metrics.py PASS"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction.py pending until final validation pass"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write PASS"
+      - "render_compact_current_frontier_v16.py --write PASS"
+      - "render_compact_current_frontier_v16.py --check PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "sync_obsidian_vault.py PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS"
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_outreach_performed: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: "not_applicable"
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+  authority_scope: "not_applicable"
+  authority_source_path: "not_applicable"
+  blocked_downstream_claims:
+    - "source-law adoption"
+    - "matter-semantics adoption"
+    - "detector-semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "proof authority"
+    - "completed derivation"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusions:
+  - "Compact frontier validation proves any physics claim."
+  - "Matter coupling is derived or adopted."
+  - "Einstein equations are started or derived."
+  - "The exact-GR benchmark is promoted."
+  - "The derivation is completed."
+notes: "P15-T03 is a project-control validator integration only."

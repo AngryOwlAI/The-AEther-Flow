@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-034`
-- Latest handoff: `handoff-0607`
-- Current status: `v16_p15_t02_compact_frontier_renderer_completed_no_physics_delta`
+- Active task: `RT-20260705-035`
+- Latest handoff: `handoff-0608`
+- Current status: `v16_p15_t03_compact_frontier_check_integration_completed_no_physics_delta`
 - V15 completed: `true`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `compact_current_frontier_check_integration_v16`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `v16_documentation_impact_consolidation`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Integrate compact current-frontier synchronization check into validation inventory without physics delta.
+- Milestone burden: Consolidate documentation-impact receipts for v16 project-system changes without physics delta.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `71de3c57822aca308a2b864f8344aaa743a4532a736ebf25ece42d91ddee3c44`
-- JSON SHA-256: `08b2e680a6dfcc9fd1a4525fc6239d49413b922c37335143da04870f06202f3a`
+- YAML SHA-256: `96712d3709379d28b7618aad95e134a8b892a7de12f833181744b5b539db567b`
+- JSON SHA-256: `73a817426b2c414c88b66f69de96ee243bd3a8ac6d1fc83bb6bb68c4817de2a0`
 
 ## Authority Warning
 

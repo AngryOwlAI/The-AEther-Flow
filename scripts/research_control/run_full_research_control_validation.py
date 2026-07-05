@@ -59,6 +59,12 @@ def base_command_plan(include_smoke_tests: bool = False) -> list[ValidationComma
             authority_level="required-render-check",
         ),
         ValidationCommand(
+            label="compact_current_frontier_check",
+            command=(py, "scripts/research_control/validate_compact_current_frontier_v16.py", "--json"),
+            purpose="Confirm compact current-frontier YAML and JSON remain synchronized with tracked state and protected claim boundaries.",
+            authority_level="required-gate",
+        ),
+        ValidationCommand(
             label="dependency_graph_check",
             command=(py, "scripts/research_control/render_dependency_graph.py", "--check"),
             purpose="Confirm dependency graph JSON, Markdown, and DOT artifacts are fresh.",
@@ -190,9 +196,11 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
         "claim_language_lint": "claim_language_changed_lint" in labels,
         "research_control_validation": "research_control_validation" in labels,
         "current_frontier_check": "current_frontier_check" in labels,
+        "compact_current_frontier_check": "compact_current_frontier_check" in labels,
         "generated_derivative_drift_check": {
             "memory_validate_only",
             "current_frontier_check",
+            "compact_current_frontier_check",
             "dependency_graph_check",
         }.issubset(labels),
         "claim_graph_validation": "claim_graph_validation" in labels,

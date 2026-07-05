@@ -38,6 +38,11 @@ try:
 except ImportError:  # pragma: no cover - reported as a validator error when needed
     claim_language_linter = None  # type: ignore[assignment]
 
+try:
+    import validate_compact_current_frontier_v16 as compact_frontier_validator  # noqa: E402
+except ImportError:  # pragma: no cover - reported as a validator error when needed
+    compact_frontier_validator = None  # type: ignore[assignment]
+
 RESOLVER_SNAPSHOT_REQUIRED_FIELDS = (
     "status",
     "boundary",
@@ -4308,6 +4313,30 @@ def validate_current_frontier_sync(report: ValidationReport, tasks: dict[str, di
         )
 
 
+def validate_compact_current_frontier_sync(report: ValidationReport) -> None:
+    """Fail when compact_current_frontier_v16 outputs drift from tracked state."""
+
+    if compact_frontier_validator is None:
+        report.error(
+            "compact_current_frontier_v16: import failed for "
+            "scripts/research_control/validate_compact_current_frontier_v16.py"
+        )
+        return
+    result = compact_frontier_validator.build_report(REPO_ROOT)
+    for error in result.get("errors", []):
+        if isinstance(error, dict):
+            error_id = error.get("id", "unknown_error")
+            message = error.get("message", "")
+        else:
+            error_id = "unknown_error"
+            message = str(error)
+        report.error(
+            "compact_current_frontier_v16: "
+            f"{error_id}: {message} "
+            "suggested_repair_route=compact_current_frontier_check_integration_v16"
+        )
+
+
 def handoff_number(path: Path) -> int | None:
     match = re.fullmatch(r"handoff-(\d{4})\.yaml", path.name)
     return int(match.group(1)) if match else None
@@ -4738,6 +4767,7 @@ def validate_all(
     validate_program_state(report, tasks)
     validate_handoffs(report, tasks, jobs)
     validate_current_frontier_sync(report, tasks)
+    validate_compact_current_frontier_sync(report)
     validate_project_improvement_handoffs(report)
     validate_approvals(report, decisions)
     validate_claim_boundaries(report, rows_by_registry["CLAIM_BOUNDARY_REGISTRY.csv"])
