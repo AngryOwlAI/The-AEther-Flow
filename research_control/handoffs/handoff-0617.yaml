@@ -1,0 +1,82 @@
+handoff_id: "handoff-0617"
+created_at: "2026-07-05T18:14:02Z"
+task_id: "RT-20260705-044"
+decision_id: "DDR-20260705-044"
+job_id: "AJ-RT-20260705-044-001"
+completion_path: "research_control/tasks/RT-20260705-044/jobs/completions/AJC-AJ-RT-20260705-044-001.yaml"
+source_task_id: "RT-20260705-044"
+source_job_id: "AJ-RT-20260705-044-001"
+source_completion_id: "AJC-AJ-RT-20260705-044-001"
+status: "completed"
+summary: "RT-20260705-044 completed one bounded Project-Control Maintainer packet for v17 P0-T02 backlog materialization. It created v17_recommendation_backlog.yaml and v17_recommendation_backlog_schema.md, mapped all 57 v17 tasks exactly once, preserved acyclic plan-order dependencies, marked P1-T01 as the first physics-bearing task after P0, and changed no physics claims."
+next_action: "Run one bounded v17 P0-T03 active-state and source-basis preflight packet before P1 candidate setup construction or any downstream v17 task."
+loop_risk_route: "v17_p0_t02_backlog_materialization_handoff_to_active_state_preflight_no_physics_claim_change"
+claim_boundary:
+  allowed_next_scope: "P0-T03 active-state and source-basis preflight"
+  deferred_scientific_authority: "handoff-0615 remains the scientific source for the later concrete coupling-law candidate construction packet after v17 P0-T03 verifies active state."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  proof_authority: false
+blocked_claims:
+  - "v17 backlog as physics proof"
+  - "v17 backlog as source-law adoption"
+  - "v17 backlog as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+  - "v17 backlog as matter semantics"
+  - "v17 backlog as detector semantics"
+  - "v17 backlog as coupling-law adoption"
+  - "v17 backlog as matter coupling"
+  - "v17 backlog as Einstein-equation evidence"
+  - "v17 backlog as benchmark promotion"
+  - "v17 backlog as completed derivation"
+  - "P0-T02 as execution of downstream v17 phases"
+backlog_materialization:
+  backlog_path: "research_control/design/v17_recommendation_backlog.yaml"
+  schema_path: "research_control/design/v17_recommendation_backlog_schema.md"
+  plan_task_count: 57
+  backlog_item_count: 57
+  dependency_status: "acyclic_linear_plan_order"
+  first_physics_bearing_task_after_p0: "P1-T01"
+  promotion_allowed_true_items: []
+  status: "tracked_project_control_guidance"
+  physics_authority: false
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260705-044 changes no Distance-to-GR ledger row. It materializes project-control backlog guidance only and does not change matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v17_active_state_preflight"
+  role_family: "director-of-research@0.3.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Verify active-state sources before executing v17 physics or project-system tasks."
+  requires_human_gate: false
+validation:
+  backlog_coverage_acyclicity_check: "PASS"
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  validate_research_control: "PASS"
+  validate_documentation_impact: "PASS"
+  graph_freshness_check: "PASS"
+  validate_research_control_check_diff: "PASS"
+  git_diff_check: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

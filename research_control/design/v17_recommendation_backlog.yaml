@@ -1,0 +1,1025 @@
+schema_id: "v17_recommendation_backlog_v1"
+authority: "project_control"
+status: "draft_control_backlog"
+created_at: "2026-07-05T18:14:02Z"
+source_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+scope:
+  execution_mode: "one_bounded_continue_research_agentjob_per_plan_task"
+  dependency_model: "linear_plan_order_v1"
+  acyclic_by_construction: true
+  task_count: 57
+  first_physics_bearing_task_after_p0: "P1-T01"
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+validator_sets:
+  common_project_control: &common_project_control
+    - "memory_preflight"
+    - "query_memory_status"
+    - "bootstrap_memory_system"
+    - "bootstrap_validate_only"
+    - "validate_documentation_impact"
+    - "validate_claim_language_changed"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+    - "run_full_research_control_validation"
+  physics_packet: &physics_packet
+    - "memory_preflight"
+    - "query_memory_status"
+    - "bootstrap_memory_system"
+    - "bootstrap_validate_only"
+    - "validate_documentation_impact"
+    - "validate_claim_language_changed"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+    - "run_full_research_control_validation"
+    - "distance_to_gr_status_receipt"
+    - "new_mathematical_payload_receipt"
+  script_or_test_change: &script_or_test_change
+    - "memory_preflight"
+    - "query_memory_status"
+    - "bootstrap_memory_system"
+    - "bootstrap_validate_only"
+    - "validate_documentation_impact"
+    - "validate_claim_language_changed"
+    - "validate_research_control"
+    - "validate_research_control_check_diff"
+    - "run_full_research_control_validation"
+    - "python_unittest_discover"
+common_failure_route: &common_failure_route "validation_repair_or_director_decision"
+items:
+  - plan_task_id: "P0-T01"
+    phase_id: "P0"
+    title: "Register the v17 implementation plan"
+    depends_on: []
+    role_family: "director-of-research@0.3.0"
+    route_type: "project_control_plan_registration"
+    task_type: "v17_plan_registration"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Register v17 implementation plan as control source with no physics delta."
+    expected_outputs: ["implementations_plans/recommendations_implementation_plan_continue_task-v17.md", "registries/MARKDOWN_SOURCE_REGISTRY.csv", "research_control/handoffs/handoff-0616.yaml"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "completed"
+    next_route_on_success: "P0-T02"
+    next_route_on_failure: "director_repair_decision"
+  - plan_task_id: "P0-T02"
+    phase_id: "P0"
+    title: "Build the v17 execution backlog"
+    depends_on: ["P0-T01"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "project_control_backlog_materialization"
+    task_type: "v17_execution_backlog_materialization"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Create a task-addressable v17 backlog from the implementation plan."
+    expected_outputs: ["research_control/design/v17_recommendation_backlog.yaml", "research_control/design/v17_recommendation_backlog_schema.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "active_in_RT-20260705-044"
+    next_route_on_success: "P0-T03"
+    next_route_on_failure: "director_repair_decision"
+  - plan_task_id: "P0-T03"
+    phase_id: "P0"
+    title: "Active-state and source-basis preflight"
+    depends_on: ["P0-T02"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "project_control_active_state_preflight"
+    task_type: "v17_active_state_preflight"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Verify active-state sources before executing v17 physics or project-system tasks."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/v17_active_state_preflight_report.json"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P1-T01"
+    next_route_on_failure: "deterministic_repair_task"
+  - plan_task_id: "P1-T01"
+    phase_id: "P1"
+    title: "Candidate-constructor packet setup"
+    depends_on: ["P0-T03"]
+    role_family: "candidate-constructor@0.2.0"
+    route_type: "physics_candidate_setup"
+    task_type: "concrete_coupling_law_candidate_construction_setup"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Set up one bounded source-side coupling-law candidate construction packet using the v16 target specification."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/coupling_law_candidate_construction_setup_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    first_physics_bearing_after_p0: true
+    implementation_status: "pending"
+    next_route_on_success: "P1-T02"
+    next_route_on_failure: "candidate_setup_repair_or_selector"
+  - plan_task_id: "P1-T02"
+    phase_id: "P1"
+    title: "Construct the concrete source-side candidate K_E"
+    depends_on: ["P1-T01"]
+    role_family: "candidate-constructor@0.2.0"
+    route_type: "physics_candidate_construction"
+    task_type: "concrete_coupling_law_candidate_construction"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Construct one bounded source-side coupling-law candidate K_E or record one precise construction obstruction."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/source_side_coupling_law_candidate_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P1-T03"
+    next_route_on_failure: "precise_obstruction_or_selector"
+  - plan_task_id: "P1-T03"
+    phase_id: "P1"
+    title: "Candidate self-check against v16 target specification"
+    depends_on: ["P1-T02"]
+    role_family: "candidate-constructor@0.2.0"
+    route_type: "physics_candidate_self_check"
+    task_type: "coupling_law_candidate_target_self_check"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Check the constructed candidate against the v16 target specification before audit."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P1-T04"
+    next_route_on_failure: "candidate_repair_or_precise_obstruction"
+  - plan_task_id: "P1-T04"
+    phase_id: "P1"
+    title: "Candidate handoff to audit lane"
+    depends_on: ["P1-T03"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "physics_candidate_audit_handoff"
+    task_type: "coupling_law_candidate_audit_handoff"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Route the constructed candidate to smuggling audit or route an obstruction to selector review."
+    expected_outputs: ["research_control/handoffs/<next>.yaml", "research_control/handoffs/<next>.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P2-T01"
+    next_route_on_failure: "theoretical_selector_or_repair"
+  - plan_task_id: "P2-T01"
+    phase_id: "P2"
+    title: "Smuggling audit of source-side coupling-law candidate"
+    depends_on: ["P1-T04"]
+    role_family: "smuggling-auditor@0.2.0"
+    route_type: "physics_smuggling_audit"
+    task_type: "coupling_law_candidate_smuggling_audit"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Audit the coupling-law candidate for target import, detector import, stress-energy import, matter-action import, benchmark import, and process-authority laundering."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P2-T02"
+    next_route_on_failure: "candidate_repair_or_rejection_selector"
+  - plan_task_id: "P2-T02"
+    phase_id: "P2"
+    title: "Refuter stress of source-side coupling-law candidate"
+    depends_on: ["P2-T01"]
+    role_family: "refuter@0.2.0"
+    route_type: "physics_refuter_stress"
+    task_type: "coupling_law_candidate_refuter_stress"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Stress the audited candidate against finite/local perturbation, missing-certificate, detector-placeholder, evidence-as-adoption, and metric-use collapse modes."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P2-T03"
+    next_route_on_failure: "candidate_repair_freeze_or_selector"
+  - plan_task_id: "P2-T03"
+    phase_id: "P2"
+    title: "Theoretical selector after candidate audit and stress"
+    depends_on: ["P2-T02"]
+    role_family: "theoretical-continuation-selector@0.1.0"
+    route_type: "physics_theoretical_selector"
+    task_type: "post_candidate_audit_stress_selector"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Select one next route after candidate construction, audit, and stress."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/post_candidate_audit_stress_selector_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P2-T04"
+    next_route_on_failure: "selector_repair_or_human_gate"
+  - plan_task_id: "P2-T04"
+    phase_id: "P2"
+    title: "Candidate-cycle integration report"
+    depends_on: ["P2-T03"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "physics_cycle_integration"
+    task_type: "coupling_law_candidate_cycle_integration_report"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Integrate candidate construction, audit, stress, and selector results into current frontier without promotion."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/v17_coupling_law_candidate_cycle_report.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P3-T01"
+    next_route_on_failure: "integration_repair_or_selector"
+  - plan_task_id: "P3-T01"
+    phase_id: "P3"
+    title: "Acceptance calibration design note"
+    depends_on: ["P2-T04"]
+    role_family: "documentation-curator@0.2.0"
+    route_type: "project_control_acceptance_calibration"
+    task_type: "accepted_status_calibration_design_note"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Define calibrated acceptance language for high-risk rows with no physics delta."
+    expected_outputs: ["research_control/design/accepted_status_calibration_policy_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P3-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P3-T02"
+    phase_id: "P3"
+    title: "Acceptance calibration schema and alias update"
+    depends_on: ["P3-T01"]
+    role_family: "schema-maintainer@0.1.0"
+    route_type: "project_control_schema_update"
+    task_type: "accepted_status_calibration_schema_alias_update"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Add machine-readable acceptance calibration fields for high-risk status rows."
+    expected_outputs: ["research_control/design/accepted_status_calibration_schema_v1.md", "research_control/design/accepted_status_calibration_v1.yaml", "research_control/design/distance_to_gr_status_aliases.yaml"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P3-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P3-T03"
+    phase_id: "P3"
+    title: "Claim-language linter underclaim calibration"
+    depends_on: ["P3-T02"]
+    role_family: "validator-engineer@0.1.0"
+    route_type: "project_control_validator_update"
+    task_type: "claim_language_underclaim_calibration_linter"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Add advisory underclaim calibration checks while preserving hard overclaim checks."
+    expected_outputs: ["scripts/project_control/validate_claim_language.py", "tests/test_validate_claim_language.py"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P3-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P3-T04"
+    phase_id: "P3"
+    title: "Renderer update for positive-first status cards"
+    depends_on: ["P3-T03"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "project_control_renderer_update"
+    task_type: "positive_first_status_card_renderer_update"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Update frontier and compact-frontier renderers to use calibrated positive-first status cards."
+    expected_outputs: ["scripts/research_control/render_current_frontier.py", "scripts/research_control/render_compact_current_frontier_v16.py"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P3-T05"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P3-T05"
+    phase_id: "P3"
+    title: "Public-facing documentation calibration pass"
+    depends_on: ["P3-T04"]
+    role_family: "documentation-curator@0.2.0"
+    route_type: "documentation_calibration"
+    task_type: "public_documentation_accepted_calibration_pass"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Update public-facing summaries to use calibrated acceptance language without changing claim status."
+    expected_outputs: ["README.md", "github-facing/**", "markdown/publication-briefs/**"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P3-T06"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P3-T06"
+    phase_id: "P3"
+    title: "Acceptance calibration red-team review"
+    depends_on: ["P3-T05"]
+    role_family: "external-red-team-reviewer@0.1.0"
+    route_type: "project_control_red_team_review"
+    task_type: "accepted_status_calibration_red_team_review"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Stress-test calibrated acceptance language for both overclaim and underclaim."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/accepted_status_calibration_red_team_review_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P4-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P4-T01"
+    phase_id: "P4"
+    title: "Detector-semantics replacement problem statement"
+    depends_on: ["P3-T06"]
+    role_family: "theoretical-continuation-selector@0.1.0"
+    route_type: "physics_detector_selector"
+    task_type: "detector_semantics_replacement_problem_statement"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Define the exact detector-semantics replacement burden for source-side coupling-law candidates."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/detector_semantics_replacement_problem_statement_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P4-T02"
+    next_route_on_failure: "detector_problem_repair_or_selector"
+  - plan_task_id: "P4-T02"
+    phase_id: "P4"
+    title: "Construct one source-side detector-replacement candidate or obstruction"
+    depends_on: ["P4-T01"]
+    role_family: "candidate-constructor@0.2.0"
+    route_type: "physics_detector_candidate"
+    task_type: "detector_semantics_replacement_candidate_or_obstruction"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Construct one source-side detector-replacement candidate or record one precise obstruction."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/detector_semantics_replacement_candidate_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P4-T03"
+    next_route_on_failure: "detector_obstruction_or_selector"
+  - plan_task_id: "P4-T03"
+    phase_id: "P4"
+    title: "Detector-replacement smuggling audit"
+    depends_on: ["P4-T02"]
+    role_family: "smuggling-auditor@0.2.0"
+    route_type: "physics_smuggling_audit"
+    task_type: "detector_replacement_smuggling_audit"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Audit detector-replacement candidate for empirical detector, target metric, proper-time, benchmark, or process-authority imports."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/detector_replacement_smuggling_audit_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P4-T04"
+    next_route_on_failure: "detector_candidate_repair_or_selector"
+  - plan_task_id: "P4-T04"
+    phase_id: "P4"
+    title: "Detector-replacement Refuter stress"
+    depends_on: ["P4-T03"]
+    role_family: "refuter@0.2.0"
+    route_type: "physics_refuter_stress"
+    task_type: "detector_replacement_refuter_stress"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Stress detector replacement against placeholder collapse, empirical-protocol substitution, and finite/local perturbations."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/detector_replacement_refuter_stress_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P4-T05"
+    next_route_on_failure: "detector_route_freeze_or_selector"
+  - plan_task_id: "P4-T05"
+    phase_id: "P4"
+    title: "Detector route selector"
+    depends_on: ["P4-T04"]
+    role_family: "theoretical-continuation-selector@0.1.0"
+    route_type: "physics_theoretical_selector"
+    task_type: "detector_replacement_route_selector"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Select one next route after detector replacement candidate or obstruction."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/detector_replacement_route_selector_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P5-T01"
+    next_route_on_failure: "selector_repair_or_human_gate"
+  - plan_task_id: "P5-T01"
+    phase_id: "P5"
+    title: "Metric-use ledger schema"
+    depends_on: ["P4-T05"]
+    role_family: "schema-maintainer@0.1.0"
+    route_type: "project_control_schema_update"
+    task_type: "metric_use_ledger_schema"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Create a metric-use ledger schema for every g_eff reference in matter-coupling tasks."
+    expected_outputs: ["research_control/design/metric_use_ledger_schema_v1.md", "registries/METRIC_USE_LEDGER.csv"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P5-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P5-T02"
+    phase_id: "P5"
+    title: "Populate ledger for existing high-risk matter-route artifacts"
+    depends_on: ["P5-T01"]
+    role_family: "research-ops-curator@0.1.0"
+    route_type: "project_control_ledger_population"
+    task_type: "metric_use_ledger_initial_population"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Populate metric-use ledger for existing matter-coupling and g_eff-adjacent artifacts."
+    expected_outputs: ["registries/METRIC_USE_LEDGER.csv", "research_control/tasks/<task-id>/artifacts/metric_use_ledger_initial_population_receipt.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P5-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P5-T03"
+    phase_id: "P5"
+    title: "Metric-use linter and tests"
+    depends_on: ["P5-T02"]
+    role_family: "validator-engineer@0.1.0"
+    route_type: "project_control_validator_update"
+    task_type: "metric_use_linter_tests"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Add linter tests that catch forbidden g_eff physical metric use in matter-coupling artifacts."
+    expected_outputs: ["scripts/project_control/validate_claim_language.py", "tests/test_validate_claim_language.py"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P5-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P5-T04"
+    phase_id: "P5"
+    title: "Integrate metric-use ledger into current frontier and compact frontier"
+    depends_on: ["P5-T03"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "project_control_renderer_update"
+    task_type: "metric_use_frontier_integration"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Render metric-use ledger summary in current frontier without changing physics status."
+    expected_outputs: ["research_control/current_frontier.md", "output/compact_current_frontier_v16.yaml", "wiki/indexes/compact_current_frontier_v16.md"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P6-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P6-T01"
+    phase_id: "P6"
+    title: "Upstream-burden selector"
+    depends_on: ["P5-T04"]
+    role_family: "theoretical-continuation-selector@0.1.0"
+    route_type: "physics_theoretical_selector"
+    task_type: "upstream_equivalence_burden_selector"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Select whether to attack EqSrc, RetainH, GenH, or continue matter-coupling candidate repair."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/upstream_equivalence_burden_selector_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P6-T02"
+    next_route_on_failure: "selector_repair_or_human_gate"
+  - plan_task_id: "P6-T02"
+    phase_id: "P6"
+    title: "Execute selected upstream theorem or primitive attempt"
+    depends_on: ["P6-T01"]
+    role_family: "ontology-formalizer@0.2.0"
+    route_type: "physics_formalization_attempt"
+    task_type: "selected_upstream_equivalence_attempt"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Execute the upstream theorem or primitive attempt selected by P6-T01."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/selected_upstream_equivalence_attempt_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P6-T03"
+    next_route_on_failure: "upstream_obstruction_or_selector"
+  - plan_task_id: "P6-T03"
+    phase_id: "P6"
+    title: "Upstream attempt audit or stress selector"
+    depends_on: ["P6-T02"]
+    role_family: "theoretical-continuation-selector@0.1.0"
+    route_type: "physics_theoretical_selector"
+    task_type: "upstream_attempt_audit_stress_selector"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Select audit, stress, repair, freeze, or return-to-matter route after upstream attempt."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/upstream_attempt_audit_stress_selector_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P7-T01"
+    next_route_on_failure: "selector_repair_or_human_gate"
+  - plan_task_id: "P7-T01"
+    phase_id: "P7"
+    title: "Proof-normal-form schema"
+    depends_on: ["P6-T03"]
+    role_family: "schema-maintainer@0.1.0"
+    route_type: "project_control_schema_update"
+    task_type: "proof_normal_form_schema"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Create proof-normal-form schema for source-side mathematical artifacts."
+    expected_outputs: ["research_control/formalization/proof_normal_form_schema_v1.md", "registries/PROOF_NORMAL_FORM_REGISTRY.csv"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P7-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P7-T02"
+    phase_id: "P7"
+    title: "Extract proof-normal-form rows for high-priority artifacts"
+    depends_on: ["P7-T01"]
+    role_family: "ontology-formalizer@0.2.0"
+    route_type: "support_only_formalization_extraction"
+    task_type: "proof_normal_form_initial_extraction"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Extract proof-normal-form rows for M_src, g_eff, matter-coupling certificate laws, target specification, and candidate artifacts."
+    expected_outputs: ["registries/PROOF_NORMAL_FORM_REGISTRY.csv", "research_control/tasks/<task-id>/artifacts/proof_normal_form_initial_extraction_receipt.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P7-T03"
+    next_route_on_failure: "extraction_repair_or_selector"
+  - plan_task_id: "P7-T03"
+    phase_id: "P7"
+    title: "Proof-normal-form validator"
+    depends_on: ["P7-T02"]
+    role_family: "validator-engineer@0.1.0"
+    route_type: "project_control_validator_update"
+    task_type: "proof_normal_form_validator"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Validate proof-normal-form rows for schema compliance and non-conclusion preservation."
+    expected_outputs: ["scripts/research_control/validate_proof_normal_form.py", "tests/test_proof_normal_form.py"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P7-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P7-T04"
+    phase_id: "P7"
+    title: "Proof-normal-form reader surface"
+    depends_on: ["P7-T03"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "project_control_renderer_update"
+    task_type: "proof_normal_form_reader_surface"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Render proof-normal-form summaries for agent retrieval without changing authority."
+    expected_outputs: ["wiki/indexes/proof_normal_form_index.md", "output/proof_normal_form_index.json"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P8-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P8-T01"
+    phase_id: "P8"
+    title: "Formalization target selector"
+    depends_on: ["P7-T04"]
+    role_family: "theoretical-continuation-selector@0.1.0"
+    route_type: "support_only_formalization_selector"
+    task_type: "support_only_formalization_target_selector"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Select one low-level formal fragment for support-only mechanization."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/support_only_formalization_target_selector_v1.md"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P8-T02"
+    next_route_on_failure: "selector_repair_or_human_gate"
+  - plan_task_id: "P8-T02"
+    phase_id: "P8"
+    title: "Mechanize selected fragment"
+    depends_on: ["P8-T01"]
+    role_family: "formalization-engineer@0.1.0"
+    route_type: "support_only_mechanization"
+    task_type: "support_only_formalization_fragment"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Implement support-only mechanization for the selected low-level fragment."
+    expected_outputs: ["research_control/formalization/<selected-fragment>/README.md", "research_control/formalization/<selected-fragment>/<model-or-proof-file>", "research_control/formalization/<selected-fragment>/validation_report.json"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P8-T03"
+    next_route_on_failure: "mechanization_repair_or_selector"
+  - plan_task_id: "P8-T03"
+    phase_id: "P8"
+    title: "Formalization traceability registry update"
+    depends_on: ["P8-T02"]
+    role_family: "research-ops-curator@0.1.0"
+    route_type: "project_control_traceability_update"
+    task_type: "support_only_formalization_traceability_update"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Connect formalized fragment to source artifacts and proof-normal-form rows."
+    expected_outputs: ["registries/FORMALIZATION_TRACEABILITY_REGISTRY.csv", "research_control/tasks/<task-id>/artifacts/formalization_traceability_update_receipt.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P8-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P8-T04"
+    phase_id: "P8"
+    title: "Formalization Refuter review"
+    depends_on: ["P8-T03"]
+    role_family: "refuter@0.2.0"
+    route_type: "support_only_refuter_review"
+    task_type: "support_only_formalization_refuter_review"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Stress support-only formalization for overread as physics proof."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/support_only_formalization_refuter_review_v1.tex"]
+    required_validators: *physics_packet
+    physics_delta_allowed: true
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: false
+    implementation_status: "pending"
+    next_route_on_success: "P9-T01"
+    next_route_on_failure: "formalization_boundary_repair_or_selector"
+  - plan_task_id: "P9-T01"
+    phase_id: "P9"
+    title: "Dashboard source specification"
+    depends_on: ["P8-T04"]
+    role_family: "documentation-curator@0.2.0"
+    route_type: "documentation_source_spec"
+    task_type: "public_proof_state_dashboard_source_spec"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Define source-backed public proof-state dashboard spec using calibrated status cards."
+    expected_outputs: ["markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md", "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P9-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P9-T02"
+    phase_id: "P9"
+    title: "Dashboard renderer and generated outputs"
+    depends_on: ["P9-T01"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "documentation_renderer_update"
+    task_type: "public_proof_state_dashboard_renderer"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Render dashboard from tracked control sources and calibrated status cards."
+    expected_outputs: ["github-facing/proof-state-dashboard-explainer.md", "html/proof-state-dashboard-explainer.html", "registries/PUBLICATION_BRIEF_REGISTRY.csv", "registries/HTML_EXPLAINER_REGISTRY.csv"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P9-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P9-T03"
+    phase_id: "P9"
+    title: "README and front-door integration"
+    depends_on: ["P9-T02"]
+    role_family: "documentation-curator@0.2.0"
+    route_type: "documentation_front_door_update"
+    task_type: "proof_state_dashboard_front_door_integration"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Link proof-state dashboard from front-door docs without changing claim status."
+    expected_outputs: ["README.md", "github-facing/**"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P9-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P9-T04"
+    phase_id: "P9"
+    title: "Public dashboard red-team review"
+    depends_on: ["P9-T03"]
+    role_family: "external-red-team-reviewer@0.1.0"
+    route_type: "documentation_red_team_review"
+    task_type: "proof_state_dashboard_red_team_review"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Review proof-state dashboard for overclaim, underclaim, and reader comprehension."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/proof_state_dashboard_red_team_review_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P10-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P10-T01"
+    phase_id: "P10"
+    title: "Task-index schema"
+    depends_on: ["P9-T04"]
+    role_family: "schema-maintainer@0.1.0"
+    route_type: "project_control_schema_update"
+    task_type: "research_control_task_index_schema"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Define generated task-index schema from tracked task records."
+    expected_outputs: ["research_control/design/task_index_schema_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P10-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P10-T02"
+    phase_id: "P10"
+    title: "Task-index generator"
+    depends_on: ["P10-T01"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "project_control_generator_update"
+    task_type: "research_control_task_index_generator"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Generate TASK_INDEX.csv and TASK_INDEX.md from tracked task folders."
+    expected_outputs: ["scripts/research_control/render_task_index.py", "research_control/tasks/TASK_INDEX.csv", "research_control/tasks/TASK_INDEX.md", "wiki/indexes/research_control_task_index.md"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P10-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P10-T03"
+    phase_id: "P10"
+    title: "Task-index validator"
+    depends_on: ["P10-T02"]
+    role_family: "validator-engineer@0.1.0"
+    route_type: "project_control_validator_update"
+    task_type: "research_control_task_index_validator"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Validate generated task index against tracked tasks and completions."
+    expected_outputs: ["scripts/research_control/validate_task_index.py", "tests/test_task_index_renderer.py"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P10-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P10-T04"
+    phase_id: "P10"
+    title: "Task-index integration into memory and folder docs"
+    depends_on: ["P10-T03"]
+    role_family: "research-ops-curator@0.1.0"
+    route_type: "project_control_memory_integration"
+    task_type: "research_control_task_index_memory_integration"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Integrate generated task index into memory and folder map surfaces."
+    expected_outputs: ["FOLDER_MAP.md", "wiki/indexes/research_control_task_index.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P11-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P11-T01"
+    phase_id: "P11"
+    title: "GitHub Actions validation workflow"
+    depends_on: ["P10-T04"]
+    role_family: "software-engineer@0.1.0"
+    route_type: "project_control_ci_update"
+    task_type: "github_actions_validation_workflow"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Add CI workflow for project-control validation without changing physics claims."
+    expected_outputs: [".github/workflows/project-control-validation.yml"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P11-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P11-T02"
+    phase_id: "P11"
+    title: "Python environment and reproducibility documentation"
+    depends_on: ["P11-T01"]
+    role_family: "software-engineer@0.1.0"
+    route_type: "project_control_reproducibility_docs"
+    task_type: "python_environment_reproducibility_docs"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Document Python version, environment setup, and validation commands."
+    expected_outputs: ["CONTRIBUTING.md", "requirements-dev.txt or pyproject.toml"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P11-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P11-T03"
+    phase_id: "P11"
+    title: "Full validation artifact collector"
+    depends_on: ["P11-T02"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "project_control_validation_collector"
+    task_type: "validation_artifact_collector"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Collect validation reports into output artifacts for CI and local review."
+    expected_outputs: ["scripts/research_control/collect_validation_artifacts.py", "output/validation_summary.json", "output/validation_summary.md"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P11-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P11-T04"
+    phase_id: "P11"
+    title: "CI boundary red-team review"
+    depends_on: ["P11-T03"]
+    role_family: "external-red-team-reviewer@0.1.0"
+    route_type: "project_control_red_team_review"
+    task_type: "ci_validation_boundary_review"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Review CI and validator language for validator-as-proof overread."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/ci_validation_boundary_review_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P12-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P12-T01"
+    phase_id: "P12"
+    title: "Metrics taxonomy extension"
+    depends_on: ["P11-T04"]
+    role_family: "research-methodologist@0.1.0"
+    route_type: "methodology_metrics_design"
+    task_type: "ai_research_agent_metrics_taxonomy"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Define AI research-agent methodology metrics for overclaim, obstruction precision, route orbit, and candidate survival."
+    expected_outputs: ["research_control/design/ai_research_agent_metrics_taxonomy_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P12-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P12-T02"
+    phase_id: "P12"
+    title: "Extend physics-progress metrics report"
+    depends_on: ["P12-T01"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "methodology_metrics_tooling"
+    task_type: "ai_research_agent_metrics_report_extension"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Extend progress metrics report with AI methodology metrics and calibrated acceptance warnings."
+    expected_outputs: ["scripts/research_control/report_physics_progress_metrics.py", "output/physics_progress_metrics.json"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P12-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P12-T03"
+    phase_id: "P12"
+    title: "AI-methodology evaluation memo"
+    depends_on: ["P12-T02"]
+    role_family: "research-methodologist@0.1.0"
+    route_type: "methodology_evaluation"
+    task_type: "ai_methodology_evaluation_memo"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Write methodology memo evaluating the research-agent system without physics promotion."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/ai_research_agent_methodology_evaluation_v1.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P12-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P12-T04"
+    phase_id: "P12"
+    title: "Methodology dashboard integration"
+    depends_on: ["P12-T03"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "methodology_dashboard_tooling"
+    task_type: "ai_methodology_dashboard_integration"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Render methodology metrics dashboard as support-only AI-system diagnostic."
+    expected_outputs: ["output/ai_methodology_metrics_dashboard.json", "wiki/indexes/ai_methodology_metrics_dashboard.md"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P13-T01"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P13-T01"
+    phase_id: "P13"
+    title: "V17 integration report"
+    depends_on: ["P12-T04"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "project_control_integration_report"
+    task_type: "v17_integration_report"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Integrate v17 phase outputs into one control report without physics overclaim."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/v17_integration_report.md"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P13-T02"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P13-T02"
+    phase_id: "P13"
+    title: "V17 final validation packet"
+    depends_on: ["P13-T01"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "project_control_final_validation"
+    task_type: "v17_final_validation_packet"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Run final v17 validation layers and record exact pending reasons if any."
+    expected_outputs: ["research_control/tasks/<task-id>/artifacts/v17_final_validation_report.json"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P13-T03"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P13-T03"
+    phase_id: "P13"
+    title: "Current frontier and ledger synchronization"
+    depends_on: ["P13-T02"]
+    role_family: "tooling-engineer@0.1.0"
+    route_type: "project_control_frontier_synchronization"
+    task_type: "v17_current_frontier_synchronization"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Synchronize current frontier, compact frontier, graphs, and ledgers after v17 final validation."
+    expected_outputs: ["research_control/current_frontier.md", "output/compact_current_frontier_v16.yaml", "output/research_dependency_graph.json", "output/claim_graph_v1.json"]
+    required_validators: *script_or_test_change
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "P13-T04"
+    next_route_on_failure: *common_failure_route
+  - plan_task_id: "P13-T04"
+    phase_id: "P13"
+    title: "V17 ordinary continuation handoff"
+    depends_on: ["P13-T03"]
+    role_family: "director-of-research@0.3.0"
+    route_type: "ordinary_continuation_handoff"
+    task_type: "v17_ordinary_continuation_handoff"
+    target_derivation_milestone: "matter_coupling"
+    milestone_burden: "Complete v17 and select exactly one ordinary continuation route from validated v17 outputs."
+    expected_outputs: ["research_control/handoffs/<next>.yaml", "research_control/handoffs/<next>.md", "research_control/program_state.yaml"]
+    required_validators: *common_project_control
+    physics_delta_allowed: false
+    promotion_allowed: false
+    project_system_boundary_authorized_by_plan: true
+    implementation_status: "pending"
+    next_route_on_success: "validated_v17_ordinary_continuation_route"
+    next_route_on_failure: "final_validation_repair_or_human_gate"

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-05T17:23:14Z`
-- Source fingerprint: `f86a45afa09421342afdc33a1bb3cd6e43f35eaf7553c35a1f7257716a2aaf2c`
-- Nodes: `14080`
-- Edges: `54314`
+- Generated from tracked state as of: `2026-07-05T18:14:02Z`
+- Source fingerprint: `e590de106a714e626d4d597ca4ec4f576ac1d90c03926eefc9909db48b5509f1`
+- Nodes: `14109`
+- Edges: `54385`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 752 |
+| `completion_yaml` | 753 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 616 |
+| `handoff_yaml` | 617 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 752 |
+| `agent_job` | `support_only` | 753 |
 | `artifact` | `canonical_source` | 82 |
-| `artifact` | `support_only` | 7451 |
-| `blocked_burden` | `blocked` | 2251 |
-| `claim_boundary` | `support_only` | 709 |
+| `artifact` | `support_only` | 7464 |
+| `blocked_burden` | `blocked` | 2263 |
+| `claim_boundary` | `support_only` | 710 |
 | `draft_control_candidate` | `draft_control` | 489 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 52 |
 | `frozen_negative` | `frozen_negative` | 98 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 616 |
+| `handoff` | `support_only` | 617 |
 | `human_gated_object` | `human_gated` | 277 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 272 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 26 |
-| `task` | `support_only` | 697 |
+| `task` | `support_only` | 698 |
 
 ## Frontier Table
 
@@ -139,6 +139,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:autonomous_scientific_authority` | Blocked claim: autonomous scientific authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_scientific_authority_claim` | Blocked claim: autonomous scientific authority claim | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_benchmark_promotion` | Blocked claim: backlog as benchmark promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_completed_derivation` | Blocked claim: backlog as completed derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_coupling_law_adoption` | Blocked claim: backlog as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_detector_semantics` | Blocked claim: backlog as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_einstein_equations` | Blocked claim: backlog as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_matter_coupling` | Blocked claim: backlog as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_matter_semantics` | Blocked claim: backlog as matter semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_physics_proof` | Blocked claim: backlog as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_rr_etransportcompletenessorinvariancelaw_v1_adoption` | Blocked claim: backlog as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_source_law_adoption` | Blocked claim: backlog as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_unrestricted_rr_e_theorem` | Blocked claim: backlog as unrestricted RR_E theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bare_accepted_high_risk_rendering` | Blocked claim: bare accepted high-risk rendering | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -149,23 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:baseline_reconciliation_as_detector_semantics` | Blocked claim: baseline reconciliation as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_einstein_equation_evidence` | Blocked claim: baseline reconciliation as Einstein-equation evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_gate_chair_verdict` | Blocked claim: baseline reconciliation as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_matter_coupling` | Blocked claim: baseline reconciliation as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_matter_semantics` | Blocked claim: baseline reconciliation as matter semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_overriding_scientific_source_authority` | Blocked claim: baseline reconciliation as overriding scientific source authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_physics_proof` | Blocked claim: baseline reconciliation as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_rr_etransportcompletenessorinvariancelaw_v1_adoption` | Blocked claim: baseline reconciliation as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_source_extension_data_adoption` | Blocked claim: baseline reconciliation as source-extension data adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_source_law_adoption` | Blocked claim: baseline reconciliation as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_unrestricted_rr_e_theorem` | Blocked claim: baseline reconciliation as unrestricted RR_E theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_snapshot_as_physics_evidence` | Blocked claim: baseline snapshot as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_summary_as_physics_evidence` | Blocked claim: baseline summary as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:batch_rollout_to_every_explainer_cluster` | Blocked claim: batch rollout to every explainer cluster | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260705-043`
-- Latest handoff: `handoff-0616`
-- Handoff path: `research_control/handoffs/handoff-0616.yaml`
-- Next action: Run one bounded v17 P0-T02 backlog materialization packet to create research_control/design/v17_recommendation_backlog.yaml and research_control/design/v17_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 candidate construction or any downstream v17 task.
+- Active task: `RT-20260705-044`
+- Latest handoff: `handoff-0617`
+- Handoff path: `research_control/handoffs/handoff-0617.yaml`
+- Next action: Run one bounded v17 P0-T03 active-state and source-basis preflight packet before P1 candidate setup construction or any downstream v17 task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

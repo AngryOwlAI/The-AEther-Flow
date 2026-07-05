@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-043`
-- Latest handoff: `handoff-0616`
-- Current status: `v17_p0_t01_plan_registration_no_physics_delta`
+- Active task: `RT-20260705-044`
+- Latest handoff: `handoff-0617`
+- Current status: `v17_p0_t02_backlog_materialized_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_execution_backlog_materialization`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `v17_active_state_preflight`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Create a task-addressable v17 backlog from the implementation plan.
+- Milestone burden: Verify active-state sources before executing v17 physics or project-system tasks.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `3b6c5763be4ffd931f33661861b5da27f0553d6ceb4b636425d2848b4faab899`
-- JSON SHA-256: `a1e5e3b21331b15a6ad28294617fe8844e8a998ca0ba734ead3ba033767ca538`
+- YAML SHA-256: `58ada80eeb340090f245616b15cf10e29c1c7b5f32e2d038909d6f1bfa3c2bc8`
+- JSON SHA-256: `12baa43dcf1108bef54695e13e14683c73b4d75dffbdc0e445f6b13440f79086`
 
 ## Authority Warning
 
