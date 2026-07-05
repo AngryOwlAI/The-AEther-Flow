@@ -1,0 +1,29 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_path: "research_control/tasks/RT-20260705-006/artifacts/child_phys_math_certificate_indexed_equivalence_property_theorem_attempt.yaml"
+target: "transitivity_under_valid_compatible_composition"
+formal_result:
+  status: "proved_conditionally"
+  theorem: "If c_AB and c_BC are valid, endpoints are source-compatible, and c_AC=comp_src(c_BC,c_AB) is supplied and valid over S_AB union S_BC, then GenRel(A,C;S_AB union S_BC,c_AC)."
+  essential_premises:
+    - "source object records A B C"
+    - "valid c_AB and c_BC"
+    - "source endpoint compatibility"
+    - "supplied source composition record c_AC"
+    - "CertificateValidity_v2(c_AC;A,C,S_AB union S_BC)"
+proof_summary: "The proof is an immediate application of CertificateGeneratedRelation_v2 iff CertificateValidity_v2 to the supplied valid composite certificate."
+countermodel:
+  status: "provided"
+  obstruction_id: "OB-P5T03-MISSING-COMPATIBLE-COMPOSITION-CERTIFICATE"
+  summary: "A one-point finite inventory with valid A->B and B->C certificates but no A->C certificate refutes the stronger premise-free transitivity claim."
+finite_local_example:
+  status: "provided"
+  source_basis:
+    - "P4 finite transport table"
+    - "P4 finite factorization h=q o p row-wise check"
+claim_boundary:
+  physics_promotion_authorized: false
+  no_target_import: true
+  no_unrestricted_equivalence_relation_claim: true
+notes: "The conditional theorem is nontrivial only because the composition-certificate slot is explicit and fail-closed."

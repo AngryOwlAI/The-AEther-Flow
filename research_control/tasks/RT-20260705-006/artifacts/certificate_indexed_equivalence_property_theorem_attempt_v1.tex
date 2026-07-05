@@ -1,0 +1,308 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\ObjRec}{\mathsf{SourceObjectRecord}_{v2}}
+\newcommand{\CertRec}{\mathsf{SourceCertificateRecord}_{v2}}
+\newcommand{\ValidTwo}{\mathsf{CertificateValidity}_{v2}}
+\newcommand{\GenRel}{\mathsf{CertificateGeneratedRelation}_{v2}}
+\newcommand{\EqMSTwo}{\mathrm{EqMS}^{\mathrm{cert}}_{\mathrm{src},v2}}
+\newcommand{\FailTwo}{\mathsf{FailClosedEvaluation}_{v2}}
+\newcommand{\Bottom}{\bot}
+\newcommand{\Scope}{\mathsf{scope}}
+\newcommand{\Cdom}{\mathsf{dom}}
+\newcommand{\Ccod}{\mathsf{cod}}
+\newcommand{\CComp}{\mathsf{comp}^{\mathrm{src}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\RRE}{\mathrm{RR}_{E}}
+\newcommand{\RRELaw}{\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{countermodel}{Countermodel}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Certificate-Indexed Equivalence Property Theorem Attempt v1}
+\author{Ontology Formalizer Packet RT-20260705-006}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v16 P5-T03. It attempts the P5-T02 theorem target
+``transitivity under valid compatible certificate composition.'' The result is
+a conditional theorem: transitivity is proved when the composition certificate
+record is explicitly supplied, endpoint compatible, source-pure, and valid.
+Without that extra composition record the stronger transitivity claim fails
+by a minimal certificate-gap countermodel.
+
+The artifact is draft/control theorem content. It does not edit canonical
+ontology. It does not adopt a source law, \(\RRELaw\), an unrestricted
+\(\RRE\) theorem, matter semantics, detector semantics, a coupling law, matter
+coupling, stress-energy semantics, matter action, Einstein equations,
+benchmark status, Gate Chair verdict, or completed derivation.
+
+\section{Theorem Target}
+
+\begin{definition}[Selected P5-T03 target]
+The selected target is the P5-T02 target
+\[
+  \text{transitivity under valid compatible certificate composition}.
+\]
+It concerns three source object records \(A,B,C\in\ObjRec\), source scopes
+\(S_{AB}\) and \(S_{BC}\), valid certificates \(c_{AB}:A\to B\) and
+\(c_{BC}:B\to C\), endpoint compatibility
+\(\Ccod(c_{AB})=\Cdom(c_{BC})=B\), and a supplied source composition record
+\[
+  c_{AC}=\CComp(c_{BC},c_{AB})
+\]
+with \(\ValidTwo(c_{AC};A,C,S_{AB}\cup S_{BC})\).
+\end{definition}
+
+\section{Precise Assumptions}
+
+Let \(S_{AC}=S_{AB}\cup S_{BC}\). The theorem attempt uses exactly these
+premises:
+\begin{enumerate}[leftmargin=*]
+  \item \(A,B,C\in\ObjRec\), with declared source scopes \(S_{AB}\) and
+  \(S_{BC}\).
+  \item \(c_{AB},c_{BC},c_{AC}\in\CertRec\).
+  \item \(\Cdom(c_{AB})=A\), \(\Ccod(c_{AB})=B\),
+  \(\Cdom(c_{BC})=B\), \(\Ccod(c_{BC})=C\).
+  \item \(\Cdom(c_{AC})=A\), \(\Ccod(c_{AC})=C\), and
+  \(\Scope(c_{AC})=S_{AC}\).
+  \item The endpoint compatibility field is source-side data:
+  \(\Ccod(c_{AB})=\Cdom(c_{BC})=B\).
+  \item The composition field is source-side data:
+  \(c_{AC}=\CComp(c_{BC},c_{AB})\).
+  \item \(\ValidTwo(c_{AB};A,B,S_{AB})\),
+  \(\ValidTwo(c_{BC};B,C,S_{BC})\), and
+  \(\ValidTwo(c_{AC};A,C,S_{AC})\).
+  \item The no-target/no-process guard \(N_c\) in each certificate is pass.
+\end{enumerate}
+No premise is supplied by target topology, target atlas, target metric, proper
+time, detector semantics, stress-energy semantics, matter-action semantics,
+benchmark behavior, generated derivatives, registry metadata, validator
+status, role status, handoff status, approval status, local cache state, file
+order, or commit state.
+
+\section{Proof Attempt}
+
+\begin{theorem}[Conditional transitivity under supplied valid composition]
+Under the assumptions above,
+\[
+  \GenRel(A,B;S_{AB},c_{AB})\wedge
+  \GenRel(B,C;S_{BC},c_{BC})
+  \Longrightarrow
+  \GenRel(A,C;S_{AC},c_{AC}).
+\]
+Consequently the transitive branch of \(\EqMSTwo\) is established only for
+the explicit certificate-indexed triple
+\((A,B,C;c_{AB},c_{BC},c_{AC};S_{AB},S_{BC},S_{AC})\).
+\end{theorem}
+
+\begin{proof}
+By P5-T02,
+\[
+  \GenRel(X,Y;S,c)\quad\Longleftrightarrow\quad
+  \ValidTwo(c;X,Y,S).
+\]
+The antecedent gives \(\GenRel(A,B;S_{AB},c_{AB})\) and
+\(\GenRel(B,C;S_{BC},c_{BC})\), which by definition correspond to valid
+source certificates for the two composable legs. The separate composition
+premise supplies \(c_{AC}=\CComp(c_{BC},c_{AB})\) as source-side certificate
+data, with compatible endpoints \(A\to B\to C\), declared scope
+\(S_{AC}=S_{AB}\cup S_{BC}\), and
+\(\ValidTwo(c_{AC};A,C,S_{AC})\). Applying the same P5-T02 definition to
+\(c_{AC}\) yields
+\[
+  \GenRel(A,C;S_{AC},c_{AC}).
+\]
+This proves the conditional statement. The proof does not construct
+\(c_{AC}\) from the two input certificates alone; it uses the supplied valid
+composition record as an explicit premise.
+\end{proof}
+
+\section{Finite/Local Example From P4}
+
+\begin{definition}[Three-step finite fixture]
+Let
+\[
+  I=\{0,1,2\}.
+\]
+Define source object records \(A_0,B_0,C_0\) over carrier \(I\) with labels
+\(L_A(i)=a_i\), \(L_B(i)=b_i\), \(L_C(i)=c_i\), source guards
+\(\mathrm{inside}(I,i)\), and response tokens \(R_A(i)=R_B(i)=R_C(i)=r_i\).
+Let
+\[
+  \tau_{AB}(A_0,i)=(B_0,i),\qquad
+  \tau_{BC}(B_0,i)=(C_0,i),
+\]
+and define the composition table
+\[
+  \tau_{AC}(A_0,i)=\tau_{BC}(\tau_{AB}(A_0,i))=(C_0,i).
+\]
+\end{definition}
+
+\begin{lemma}[Finite composition check]
+The certificate records \(c_{AB}\), \(c_{BC}\), and \(c_{AC}\) with witness
+tables
+\[
+\begin{array}{c|c|c|c}
+i & \tau_{AB}(A_0,i) & \tau_{BC}(B_0,i) & \tau_{AC}(A_0,i)\\
+\hline
+0 & (B_0,0) & (C_0,0) & (C_0,0)\\
+1 & (B_0,1) & (C_0,1) & (C_0,1)\\
+2 & (B_0,2) & (C_0,2) & (C_0,2)
+\end{array}
+\]
+satisfy the conditional theorem assumptions inside the declared finite scope
+\[
+  S_{AC}=I_A\cup I_B\cup I_C.
+\]
+\end{lemma}
+
+\begin{proof}
+The construction is the P4 finite-transport pattern applied twice, with the
+P4 factorization check \(h=q\circ p\) reused as the row-wise composition
+discipline. Every row is explicit and source-side. Endpoints are compatible:
+\(\Ccod(c_{AB})=B_0=\Cdom(c_{BC})\). The supplied composition record
+\(c_{AC}\) has witness table \(\tau_{AC}=\tau_{BC}\circ\tau_{AB}\), source
+guards only, and no target import. Therefore the three validity predicates
+hold in the declared finite scope and the theorem yields
+\(\GenRel(A_0,C_0;S_{AC},c_{AC})\).
+\end{proof}
+
+\section{Obstruction If The Stronger Proof Fails}
+
+\begin{obstruction}[Missing compatible composition certificate]
+The unconditional claim
+\[
+  \GenRel(A,B;S_{AB},c_{AB})\wedge
+  \GenRel(B,C;S_{BC},c_{BC})
+  \Longrightarrow
+  \exists c\,\GenRel(A,C;S_{AB}\cup S_{BC},c)
+\]
+is not proved by P5-T02. The obstruction is:
+\[
+  \mathrm{OB\mbox{-}P5T03\mbox{-}MISSING\mbox{-}COMPATIBLE\mbox{-}COMPOSITION\mbox{-}CERTIFICATE}.
+\]
+Two valid input certificates do not themselves fill the separate
+composition-certificate slot. The slot may be filled only by a source-side
+record \(c_{AC}\) that passes \(\ValidTwo(c_{AC};A,C,S_{AB}\cup S_{BC})\).
+\end{obstruction}
+
+\section{Minimal Countermodel Without Extra Premises}
+
+\begin{countermodel}[Two valid legs and no supplied composite]
+Let \(A,B,C\) be three finite source object records over the one-point carrier
+\(\{0\}\). Let the certificate inventory contain exactly two valid certificate
+records:
+\[
+  c_{AB}:A\to B,\qquad c_{BC}:B\to C,
+\]
+each with explicit source witness table \(0\mapsto 0\), matching source guard,
+matching response token, and no-target guard pass. Let the inventory contain
+no certificate record from \(A\) to \(C\), and in particular no record
+\(c_{AC}=\CComp(c_{BC},c_{AB})\).
+
+Then \(\GenRel(A,B;\{0\},c_{AB})\) and
+\(\GenRel(B,C;\{0\},c_{BC})\) hold by \(\ValidTwo\), while
+\[
+  \neg\exists c\,\GenRel(A,C;\{0\},c)
+\]
+holds because every generated relation requires an explicit valid certificate
+record and the \(A\to C\) slot is absent. Hence the unconditional
+transitivity statement is false without the supplied valid composition
+premise.
+\end{countermodel}
+
+\section{No-Target Import Audit}
+
+\begin{lemma}[No-target/no-process import]
+The conditional theorem and the countermodel use only source object records,
+source certificate records, source scopes, source endpoint fields, source
+composition fields, source witness tables, source guards, and source validity
+status. Therefore:
+\[
+\begin{gathered}
+\mathrm{target\_topology\_used}=\mathrm{false},\quad
+\mathrm{target\_atlas\_used}=\mathrm{false},\quad
+\mathrm{target\_metric\_used}=\mathrm{false},\\
+\mathrm{proper\_time\_used}=\mathrm{false},\quad
+\mathrm{detector\_semantics\_used}=\mathrm{false},\quad
+\mathrm{stress\_energy\_used}=\mathrm{false},\\
+\mathrm{matter\_action\_used}=\mathrm{false},\quad
+\mathrm{benchmark\_behavior\_used}=\mathrm{false},\quad
+\mathrm{process\_authority\_used}=\mathrm{false}.
+\end{gathered}
+\]
+\end{lemma}
+
+\begin{proof}
+Inspection of the theorem assumptions and finite fixture shows that every
+mathematical premise is source-side. Registry rows, validator passes, role
+identity, handoff state, approval state, generated derivatives, local cache
+state, file order, and commit state are transaction evidence only; they are
+not mathematical premises.
+\end{proof}
+
+\section{Distance-to-GR Effect}
+
+\begin{boundary}[Distance-to-GR effect]
+This packet supplies one nontrivial source-side theorem with explicit
+hypotheses and one minimal obstruction/countermodel for a stronger claim. It
+therefore improves the internal certificate-indexed theorem layer of
+\(\EqMSTwo\), but it produces no Distance-to-GR ledger delta. The matter
+coupling milestone remains at accepted scoped evidence/precondition status
+only. The result does not supply response semantics, detector semantics,
+universal coupling, stress-energy semantics, matter action, Einstein
+equations, exact-GR benchmark recovery, or Gate Chair closure.
+\end{boundary}
+
+\section{Forbidden Conclusions}
+
+\begin{nonconclusion}
+This theorem attempt does not authorize source-law adoption,
+\(\RRELaw\) adoption, unrestricted \(\RRE\) theorem status,
+\(\EqMSTwo\) as a full equivalence relation without certificate premises,
+\(\MetricData(E)\), scoped \(\geff\), matter semantics, detector semantics,
+coupling-law adoption, matter-coupling derivation or adoption, stress-energy
+semantics, stress-energy tensor, matter action, Einstein equations, benchmark
+promotion, Gate Chair verdict, completed derivation, or rejection of future
+source-side extensions.
+\end{nonconclusion}
+
+\section{Machine-Readable Summary}
+
+\begin{verbatim}
+artifact_id: "certificate_indexed_equivalence_property_theorem_attempt_v1"
+implemented_plan_task: "P5-T03"
+theorem_target: "transitivity_under_valid_compatible_composition"
+result: "proved_conditionally_with_explicit_valid_composition_certificate"
+essential_premise:
+  - "c_AC = comp_src(c_BC,c_AB) is supplied as source-side certificate record"
+  - "CertificateValidity_v2(c_AC; A, C, S_AB union S_BC)"
+obstruction_if_removed: "OB-P5T03-MISSING-COMPATIBLE-COMPOSITION-CERTIFICATE"
+minimal_countermodel: "A->B and B->C certificates valid; no A->C certificate exists"
+finite_local_example:
+  source_paths:
+    - "research_control/tasks/RT-20260704-026/artifacts/finite_local_transport_certificate_instance_v1.tex"
+    - "research_control/tasks/RT-20260705-001/artifacts/finite_local_factorization_certificate_instance_v1.tex"
+no_target_import_audit: "pass"
+physics_delta: "none"
+claim_boundary: "support_only_draft_control_conditional_theorem_no_promotion"
+\end{verbatim}
+
+\end{document}
