@@ -1,0 +1,18 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+artifact_under_review: "research_control/tasks/RT-20260705-008/artifacts/v16_formalization_scope_selector.md"
+status: "completed"
+selected_target: "certificate record type and validity predicate"
+selected_toolchain: "Python typed algebraic spec plus unittest"
+selection_reason:
+  - "The certificate record and validity predicate are the common kernel for transport, invariance, factorization, missing, malformed, target-import, and process-authority cases."
+  - "The target is finite/local and executable within one bounded task."
+  - "It can express P5-T03 missing-composition failure as an absent valid certificate slot."
+  - "Python typing and unit tests are sufficient for deterministic record validation without introducing a new dependency."
+risks:
+  - "A typed executable spec can be mistaken for proof authority unless P6-T02 repeats the no-authority boundary."
+  - "A broad evaluator could expand beyond one task; P6-T02 should use only schema fields and a small fixed fixture set."
+recommendation:
+  next_packet: "P6-T02"
+  role_family: "validator-engineer@0.2.0"
+  scope: "Implement certificate record dataclass/enums, validity predicate, expected-equivalence result, fail-closed result, and at least one positive plus three negative tests."
