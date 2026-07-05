@@ -262,6 +262,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `wiki/markdown/md-research-control-design-documentation-curator-visual-atlas-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-EINSTEIN-EQUATION-ROUTE-MORATORIUM-V1` `wiki/markdown/md-research-control-design-einstein-equation-route-moratorium-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY` `wiki/markdown/md-research-control-design-epistemic-category-glossary.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-EQSRC-RETAINH-GENH-TRIGGER-LIST-V16` `wiki/markdown/md-research-control-design-eqsrc-retainh-genh-trigger-list-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1` `wiki/markdown/md-research-control-design-external-red-team-packet-template-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN` `wiki/markdown/md-research-control-design-external-red-team-reviewer-role-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-FINITE-SOURCE-COVER-MODEL-CHECKER` `wiki/markdown/md-research-control-design-finite-source-cover-model-checker.md`
@@ -819,6 +820,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-DOCUMENTATION-CURATOR-VISUAL-ATLAS-CONTRACT` `research_control/design/documentation_curator_visual_atlas_contract.md`
 - `MD-RESEARCH-CONTROL-DESIGN-EINSTEIN-EQUATION-ROUTE-MORATORIUM-V1` `research_control/design/einstein_equation_route_moratorium_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY` `research_control/design/epistemic_category_glossary.md`
+- `MD-RESEARCH-CONTROL-DESIGN-EQSRC-RETAINH-GENH-TRIGGER-LIST-V16` `research_control/design/eqsrc_retainh_genh_trigger_list_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1` `research_control/design/external_red_team_packet_template_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN` `research_control/design/external_red_team_reviewer_role_design.md`
 - `MD-RESEARCH-CONTROL-DESIGN-FINITE-SOURCE-COVER-MODEL-CHECKER` `research_control/design/finite_source_cover_model_checker.md`
