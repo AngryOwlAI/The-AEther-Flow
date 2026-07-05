@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-042` and `handoff-0615`.
+`RT-20260705-043` and `handoff-0616`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-042` |
-| Latest handoff ID | `handoff-0615` |
-| Current status | `v16_completed_ordinary_continuation_selected_no_physics_delta` |
-| V16 completed | true |
-| Current route family | v16_final_ordinary_continuation_handoff |
+| Active task ID | `RT-20260705-043` |
+| Latest handoff ID | `handoff-0616` |
+| Current status | `v17_p0_t01_plan_registration_no_physics_delta` |
+| V16 completed | false |
+| Current route family | v17 p0 t01 plan registration handoff to backlog materialization no physics claim change |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling` |
-| Required next authority | concrete coupling-law candidate construction route only |
-| Next recommended action | Run one bounded candidate-constructor@0.2.0 concrete coupling-law candidate construction packet. |
+| Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
+| Required next authority | P0-T02 backlog materialization |
+| Next recommended action | Run one bounded v17 P0-T02 backlog materialization packet to create research_control/design/v17_recommendation_backlog.yaml and research_control/design/v17_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 candidate construction or any downstream v17 task. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-042/00_TASK.yaml`.
-- Active task objective: Complete v16 and select exactly one ordinary continuation route from validated v16 outputs.
-- Latest handoff path: `research_control/handoffs/handoff-0615.yaml`.
-- Latest handoff summary: RT-20260705-042 completed v16 P17-T04 ordinary continuation handoff with no physics delta.
-- Current route family: v16_final_ordinary_continuation_handoff.
-- Next recommended action: Run one bounded candidate-constructor@0.2.0 concrete coupling-law candidate construction packet.
+- Active task path: `research_control/tasks/RT-20260705-043/00_TASK.yaml`.
+- Active task objective: Add recommendations_implementation_plan_continue_task-v17.md to tracked project-control guidance register it as implementation guidance only preserve handoff-0615 as deferred candidate-constructor authority and hand off to P0-T02 backlog materialization without changing physics claims.
+- Latest handoff path: `research_control/handoffs/handoff-0616.yaml`.
+- Latest handoff summary: RT-20260705-043 completed one bounded Project-Control Maintainer packet for v17 P0-T01 plan registration. It added the v17 implementation-plan ignore exception registered recommendations_implementation_plan_continue_task-v17.md as implementation_plan project-control guidance created a task-local intake note preserved handoff-0615 as deferred candidate-constructor authority and changed no physics claims.
+- Current route family: v17 p0 t01 plan registration handoff to backlog materialization no physics claim change.
+- Next recommended action: Run one bounded v17 P0-T02 backlog materialization packet to create research_control/design/v17_recommendation_backlog.yaml and research_control/design/v17_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 candidate construction or any downstream v17 task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -196,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded candidate-constructor@0.2.0 concrete coupling-law candidate construction packet.
+Run one bounded v17 P0-T02 backlog materialization packet to create research_control/design/v17_recommendation_backlog.yaml and research_control/design/v17_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 candidate construction or any downstream v17 task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -224,20 +224,27 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-042`;
-- latest handoff: `handoff-0615`;
-- current status: `v16_completed_ordinary_continuation_selected_no_physics_delta`;
+- active task: `RT-20260705-043`;
+- latest handoff: `handoff-0616`;
+- current status: `v17_p0_t01_plan_registration_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
+- latest handoff validation `bootstrap_memory_system`: PASS;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PASS;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PASS;
+- latest handoff validation `validate_documentation_impact`: PASS;
+- latest handoff validation `validate_research_control`: PASS;
+- latest handoff validation `validate_research_control_check_diff`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0615.yaml`
-- `research_control/tasks/RT-20260705-042/00_TASK.yaml`
+- `research_control/handoffs/handoff-0616.yaml`
+- `research_control/tasks/RT-20260705-043/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -253,7 +260,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0615*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0616*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

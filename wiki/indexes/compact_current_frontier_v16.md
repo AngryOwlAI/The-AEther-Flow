@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-042`
-- Latest handoff: `handoff-0615`
-- Current status: `v16_completed_ordinary_continuation_selected_no_physics_delta`
-- V15 completed: `true`
+- Active task: `RT-20260705-043`
+- Latest handoff: `handoff-0616`
+- Current status: `v17_p0_t01_plan_registration_no_physics_delta`
+- V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `concrete_coupling_law_candidate_construction_route`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v17_execution_backlog_materialization`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Construct one bounded source-side coupling-law candidate from the v16 source-side coupling-law target specification and finite/local certificate evidence without adoption or downstream physics promotion.
+- Milestone burden: Create a task-addressable v17 backlog from the implementation plan.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2e67c1ce98e758bb9cdcdd4ed25abc2b3888754589635896a1aef11f1415f89a`
-- JSON SHA-256: `003a5466bb3c9b619aaa0e83dcbd0dd421a1888ce3f692630d00a8394455b821`
+- YAML SHA-256: `3b6c5763be4ffd931f33661861b5da27f0553d6ceb4b636425d2848b4faab899`
+- JSON SHA-256: `a1e5e3b21331b15a6ad28294617fe8844e8a998ca0ba734ead3ba033767ca538`
 
 ## Authority Warning
 

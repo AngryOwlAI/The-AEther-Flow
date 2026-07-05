@@ -1,0 +1,202 @@
+completion_id: "AJC-AJ-RT-20260705-043-001"
+job_id: "AJ-RT-20260705-043-001"
+task_id: "RT-20260705-043"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-05T17:23:14Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_task_id: "P0-T01"
+  related_plan_task_id: "P0-T01"
+  plan_phase_id: "P0"
+  implemented_task_scope: "Ran one bounded Project-Control Maintainer packet for v17 plan registration .gitignore tracking exception Markdown source registration task-local intake note and handoff to P0-T02."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+  downstream_tasks_not_implemented:
+    - "P0-T02 execution backlog materialization"
+    - "P0-T03 active-state and source-basis preflight"
+    - "P1 candidate construction setup and construction"
+    - "P2 audit stress and candidate route decision"
+    - "P3 accepted-language calibration system"
+    - "P4 detector-semantics replacement program"
+    - "P5 metric-use ledger"
+    - "P6 upstream EqSrc RetainH GenH reassessment"
+    - "P7 proof-normal-form layer"
+    - "P8 support-only formal mechanization"
+    - "P9 public proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent methodology metrics"
+    - "P13 final v17 integration validation and handoff"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "project_control_plan_registration"
+project_system_boundary_authorized_by_plan: true
+source_authorization: "recommendations_implementation_plan_continue_task-v17"
+physics_claims_changed: false
+physics_progress_status:
+  status: "project_control_plan_registration_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P0-T01 registers the v17 implementation plan as project-control guidance only and executes no physics construction."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  rationale: "No Distance-to-GR burden is discharged by plan registration."
+mathematical_payload_manifest: []
+output_paths:
+  - "research_control/tasks/RT-20260705-043/artifacts/v17_plan_intake_note.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-043/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-043/DDR-20260705-043.md"
+  - "research_control/tasks/RT-20260705-043/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-043/jobs/AJ-RT-20260705-043-001.yaml"
+  - "research_control/tasks/RT-20260705-043/jobs/completions/AJC-AJ-RT-20260705-043-001.yaml"
+  - "research_control/tasks/RT-20260705-043/roles/project-control-maintainer@0.2.0--RT-20260705-043.yaml"
+  - "research_control/handoffs/handoff-0616.yaml"
+  - "research_control/handoffs/handoff-0616.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "wiki/markdown/md-recommendations-implementation-plan-continue-task-v17.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=643 relationship_row_count=3323 semantic_row_count=643 vault_row_count=643"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v17 implementation plan registration\" --limit 10 --json | exit_code=0 | returned_object_ids=none_before_registration"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260705-042 latest_handoff=handoff-0615 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | latest_handoff=handoff-0616 active_task=RT-20260705-043 rendered_hash=de8c76eb407868d11cac580ac9a6f35fc73d0031ffa4a1de4b9559907c6ecc6b"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write | exit_code=0 | latest_handoff=handoff-0616 active_task=RT-20260705-043 yaml_sha256=3b6c5763be4ffd931f33661861b5da27f0553d6ceb4b636425d2848b4faab899 json_sha256=a1e5e3b21331b15a6ad28294617fe8844e8a998ca0ba734ead3ba033767ca538"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "targeted v17 memory search completed before registration and returned no registered object"
+      - "current frontier lookup returned canonical project-control row"
+      - "v16 plan lookup returned canonical prior-plan context"
+      - "continue_research.py resolved handoff-0615 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P0-T01 plan registration files created"
+      - "v17 plan registered as implementation_plan project-control guidance"
+      - "handoff-0616 routes to P0-T02 backlog materialization"
+      - "handoff-0615 scientific candidate route preserved as deferred authority"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier render/check passed after source registration"
+      - "compact frontier render/check passed after source registration"
+      - "dependency graph render/check passed after source registration"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS after source registration"
+      - "continue_research_memory_preflight refreshed local retrieval caches after bootstrap"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate PASS with zero hard failures"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "documentation-impact validation PASS"
+      - "research-control validation PASS"
+      - "research-control --check-diff validation PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command pending until final validation pass"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  plan_registration_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusions:
+  - "The v17 plan is physics proof."
+  - "The v17 plan is source-law adoption."
+  - "The v17 plan is coupling-law adoption."
+  - "The v17 plan constructs a coupling-law candidate."
+  - "P0-T01 executes all v17 phases."
+  - "Matter coupling is derived or adopted."
+  - "Einstein equations are started or derived."
+  - "The exact-GR benchmark is promoted."
+  - "Any validator result grants proof authority."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+verdict: "v17_p0_t01_plan_registration_no_physics_delta"
+coherent_resolution_summary: "RT-20260705-043 registered the v17 recommendations implementation plan as project-control implementation guidance added the matching .gitignore exception preserved handoff-0615 as deferred candidate-constructor authority and handed off to P0-T02 backlog materialization. No physics claim Distance-to-GR status source-law status matter-coupling status benchmark status proof authority or Gate Chair verdict changed."
+next_recommended_action: "Run one bounded v17 P0-T02 backlog materialization packet to create research_control/design/v17_recommendation_backlog.yaml and research_control/design/v17_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 candidate construction or any downstream v17 task."
+rollback_or_repair_notes: "If validation rejects the P0-T01 control scope revert only RT-20260705-043 records the v17 registry row and the v17 .gitignore exception; do not alter v16 science or project-control tasks."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 644
+    relationship_row_count: 3328
+    semantic_row_count: 644
+    vault_row_count: 644
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json"
+      query_type: "lookup"
+      query_text: "research_control/current_frontier.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v16.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v17.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "de8c76eb407868d11cac580ac9a6f35fc73d0031ffa4a1de4b9559907c6ecc6b"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"

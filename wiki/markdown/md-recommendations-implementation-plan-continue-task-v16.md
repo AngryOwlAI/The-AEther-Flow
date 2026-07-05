@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15` `implementations_plans/recommendations_implementation_plan_continue_task-v15.md`
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v16.md`
+- Backlink from `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17` `implementations_plans/recommendations_implementation_plan_continue_task-v17.md`
 
 ## Validation
 

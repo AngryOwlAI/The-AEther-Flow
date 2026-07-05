@@ -1,22 +1,22 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0615.yaml"
+  - "research_control/handoffs/handoff-0616.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "research_control/current_frontier.md"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
 active_state:
-  active_task_id: "RT-20260705-042"
-  latest_handoff_id: "handoff-0615"
-  current_status: "v16_completed_ordinary_continuation_selected_no_physics_delta"
-  v15_completed: true
-  v16_completed: true
+  active_task_id: "RT-20260705-043"
+  latest_handoff_id: "handoff-0616"
+  current_status: "v17_p0_t01_plan_registration_no_physics_delta"
+  v15_completed: false
+  v16_completed: false
   v16_plan_registered: true
 next_route:
-  route_id: "concrete_coupling_law_candidate_construction_route"
-  role_family: "candidate-constructor@0.2.0"
+  route_id: "v17_execution_backlog_materialization"
+  role_family: "project-control-maintainer@0.2.0"
   target_derivation_milestone: "matter_coupling"
-  milestone_burden: "Construct one bounded source-side coupling-law candidate from the v16 source-side coupling-law target specification and finite/local certificate evidence without adoption or downstream physics promotion."
+  milestone_burden: "Create a task-addressable v17 backlog from the implementation plan."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -38,7 +38,6 @@ claim_boundary:
     - "Gate Chair verdict or closure"
     - "proof authority"
     - "completed derivation"
-    - "unrestricted RR_E theorem"
 scoped_positive_objects:
   - object_id: "m_src"
     reader_facing_status: "adopted only as scoped source-only M_src object"
