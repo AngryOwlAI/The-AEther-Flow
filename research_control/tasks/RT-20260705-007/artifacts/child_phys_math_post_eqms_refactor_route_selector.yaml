@@ -1,0 +1,30 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_route: "v16_support_only_formalization_scope_selector"
+route_reasoning:
+  premises:
+    - "P5-T02 defined the certificate-indexed source-equivalence target specification."
+    - "P5-T03 proved conditional transitivity only with an explicit valid compatible composition certificate."
+    - "P5-T03 recorded a precise missing-composite obstruction for the premise-free overread."
+    - "The v16 P5-T04 done criteria require P6 handoff unless repair or freeze is required."
+    - "No blocking theorem invalidation or repeated no-payload route-freeze condition is recorded."
+  selected_packet:
+    plan_task: "P6-T01"
+    task_type: "v16_support_only_formalization_scope_selector"
+    role_family: "theoretical-continuation-selector@0.1.0"
+    packet_type: "bounded_theoretical_calculation"
+  excluded_routes:
+    formalize_p5_theorem_directly: "not selected as the immediate route because P6-T01 must first choose the bounded formalization target and toolchain"
+    expand_certificate_instance_library: "not selected because P4 already built the initial finite/local instance library and P6 needs scope selection before further fixture expansion"
+    build_model_zoo: "not selected because P10 is the planned source model zoo phase"
+    target_import_attack_suite: "not selected because P14 is the planned target-import attack-suite phase"
+    coupling_law_candidate_construction: "not selected because support-only checking and later selectors must precede any candidate construction route"
+    repair_theorem_target: "not selected because P5-T03 produced a conditional theorem plus precise obstruction rather than a blocking defect"
+    route_freeze: "not selected because P5 produced new payload and no repeated no-payload criterion is active"
+mathematical_payload:
+  payload_id: "P5T04-P6T01-ROUTE-SELECTION"
+  payload_type: "packet_selection"
+  statement: "After P5 equivalence/theorem separation, the next bounded packet is P6-T01 support-only formalization scope selection."
+  burden_effect: "selects_next"
+hard_blocks_preserved: true

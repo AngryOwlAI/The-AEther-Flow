@@ -130,6 +130,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-PARENT-FUSION-NOTES-POST-SELECTED-THEOREM-ROUTE-SELECTOR` `research_control/tasks/RT-20260704-024/artifacts/parent_fusion_notes_post_selected_theorem_route_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-POST-SELECTED-THEOREM-ROUTE-SELECTOR-V16` `research_control/tasks/RT-20260704-024/artifacts/post_selected_theorem_route_selector_v16.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260704-025-PARENT-FUSION-NOTES-CERTIFICATE-INSTANCE-SCHEMA` `research_control/tasks/RT-20260704-025/artifacts/parent_fusion_notes_certificate_instance_schema.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-007-PARENT-FUSION-NOTES-POST-EQMS-REFACTOR-ROUTE-SELECTOR` `research_control/tasks/RT-20260705-007/artifacts/parent_fusion_notes_post_eqms_refactor_route_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-007-POST-EQMS-REFACTOR-ROUTE-SELECTOR-V16` `research_control/tasks/RT-20260705-007/artifacts/post_eqms_refactor_route_selector_v16.md`
 - `MD-ROLE-ROUTING-PUBLICATION-BRIEF` `markdown/publication-briefs/role-routing.publication-brief.md`
 - `MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF` `markdown/publication-briefs/roles-and-skills.publication-brief.md`
 - `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
@@ -327,6 +329,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-PARENT-FUSION-NOTES-POST-SELECTED-THEOREM-ROUTE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260704-024-parent-fusion-notes-post-selected-theorem-route-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-024-POST-SELECTED-THEOREM-ROUTE-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260704-024-post-selected-theorem-route-selector-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260704-025-PARENT-FUSION-NOTES-CERTIFICATE-INSTANCE-SCHEMA` `wiki/markdown/md-research-control-tasks-rt-20260704-025-parent-fusion-notes-certificate-instance-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-007-PARENT-FUSION-NOTES-POST-EQMS-REFACTOR-ROUTE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260705-007-parent-fusion-notes-post-eqms-refactor-route-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-007-POST-EQMS-REFACTOR-ROUTE-SELECTOR-V16` `wiki/markdown/md-research-control-tasks-rt-20260705-007-post-eqms-refactor-route-selector-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
