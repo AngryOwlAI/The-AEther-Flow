@@ -300,6 +300,7 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     current_status = text_value(program_state.get("current_status"))
     handoff_summary = text_value(latest_handoff.get("summary"))
     v15_completed = "v16_" in current_status or "v16 " in handoff_summary or "v16" in frontier_text
+    v16_completed = bool_value(latest_handoff.get("v16_completed"))
 
     high_risk_rows = [
         high_risk_row(row_by_burden(ledger_rows, burden_id), frontier_text)
@@ -321,6 +322,7 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
             "latest_handoff_id": latest_handoff_id,
             "current_status": current_status,
             "v15_completed": v15_completed,
+            "v16_completed": v16_completed,
             "v16_plan_registered": markdown_registry_has_object(markdown_rows, V16_PLAN_OBJECT_ID),
         },
         "next_route": {

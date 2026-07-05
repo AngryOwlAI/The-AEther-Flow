@@ -1,0 +1,186 @@
+completion_id: "AJC-AJ-RT-20260705-040-001"
+job_id: "AJ-RT-20260705-040-001"
+task_id: "RT-20260705-040"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-05T14:05:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P17-T02"
+  plan_phase_id: "P17"
+  implemented_task_scope: "Refreshed current frontier compact frontier dependency graph and claim graph outputs with explicit v16_completed state."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P17-T01"
+    - "P17-T02"
+  downstream_tasks_not_implemented:
+    - "P17-T03 final validation packet"
+    - "P17-T04 ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "research_control/tasks/RT-20260705-040/artifacts/v16_current_frontier_final_refresh_receipt.md"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "output/claim_graph_v1.json"
+  - "output/claim_graph_v1.dot"
+  - "wiki/indexes/claim_graph_v1.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-040/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-040/DDR-20260705-040.md"
+  - "research_control/tasks/RT-20260705-040/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-040/jobs/AJ-RT-20260705-040-001.yaml"
+  - "research_control/tasks/RT-20260705-040/jobs/completions/AJC-AJ-RT-20260705-040-001.yaml"
+  - "research_control/tasks/RT-20260705-040/roles/validator-engineer@0.2.0--RT-20260705-040.yaml"
+  - "research_control/handoffs/handoff-0613.yaml"
+  - "research_control/handoffs/handoff-0613.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=641 relationship_row_count=3315 semantic_row_count=641 vault_row_count=641"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P17 T02 current frontier compact summary final refresh\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-039 latest_handoff=handoff-0612 next_action=P17-T02"
+  - ".venv/bin/python -m unittest tests.test_render_current_frontier tests.test_render_compact_current_frontier_v16 | exit_code=0 | tests=5"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | v16_completed=false rendered"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write | exit_code=0 | v16_completed=false rendered"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json --dot output/claim_graph_v1.dot --markdown wiki/indexes/claim_graph_v1.md | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 641
+    relationship_row_count: 3315
+    semantic_row_count: 641
+    vault_row_count: 641
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P17 T02 current frontier compact summary final refresh\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P17 T02 current frontier compact summary final refresh"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "b390a9ab09251a90ea98e5caac650492a5896740606360da63fb9106af8061d9"
+refresh_receipt:
+  receipt_path: "research_control/tasks/RT-20260705-040/artifacts/v16_current_frontier_final_refresh_receipt.md"
+  receipt_hash: "c7dd05f000f585bd532e4732ad94bb203591db871de99acec30396ffcdc04f8b"
+  v16_completed_rendered: false
+  current_frontier_hash: "b390a9ab09251a90ea98e5caac650492a5896740606360da63fb9106af8061d9"
+  compact_yaml_hash: "89527f63a92b4ebae6102483c4090bf966df8567c36e1f6ff2877bbc80ba2e39"
+  compact_json_hash: "66e663af2caca1a83c28a68a233b3461812fa02a5d6c18620fe9095cc43c65e6"
+  dependency_graph_json_hash: "1e7c202dd1133cdeadff0727aea95478eb5e8a683e0d938d40ec0ac685f75a72"
+  claim_graph_json_hash: "b510baa4d9002339b6b7d3ee30725c5d90428218781fc6ec5b86c1e289374b11"
+selected_next_route:
+  route_id: "v16_final_validation_packet"
+  selected_next_task: "P17-T03"
+  selected_next_task_type: "v16_final_validation_packet"
+  selected_next_role_family: "validator-engineer@0.2.0"
+project_system_change_only: true
+physics_progress_status:
+  status: "project_control_frontier_refresh_no_distance_delta"
+  physics_promotion_authorized: false
+  summary: "P17-T02 refreshed generated control outputs only and no source-side derivation content."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_update_rationale: "No Distance-to-GR burden is discharged by generated frontier refresh."
+  milestone: "matter_coupling"
+  downstream_unlocked: []
+new_mathematical_payload: []
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "project_control_renderer_refresh"
+    object_name: "current_frontier_v16_completed_field"
+    claim_status: "operational_receipt_only"
+    source_path: "scripts/research_control/render_current_frontier.py"
+    burden_effect: "no_distance_delta"
+    summary: "Renders v16_completed from latest handoff in current frontier and compact snapshot."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "query_memory status PASS after refresh"
+      - "continue_research.py resolved handoff-0612 and P17-T02"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "focused renderer tests PASS"
+      - "v16_completed=false appears in current frontier and compact outputs"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validation pending after transaction file creation"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction.py pending until final validation pass"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and compact renders completed"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap pending after source and registry updates"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "changed-surface linter pending after transaction file creation"
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: "not_applicable"
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusions:
+  - "Frontier refresh proves any physics claim."
+  - "Matter coupling is derived or adopted."
+  - "Einstein equations are started or derived."
+  - "The exact-GR benchmark is promoted."
+  - "Any validator result grants proof authority."

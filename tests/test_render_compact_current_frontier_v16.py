@@ -130,6 +130,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             self.assertEqual(snapshot["schema_id"], "compact_current_frontier_v16")
             self.assertEqual(snapshot["active_state"]["active_task_id"], "RT-COMPACT")
             self.assertTrue(snapshot["active_state"]["v15_completed"])
+            self.assertFalse(snapshot["active_state"]["v16_completed"])
             self.assertTrue(snapshot["active_state"]["v16_plan_registered"])
             self.assertEqual(
                 snapshot["next_route"]["route_id"],

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-039` and `handoff-0612`.
+`RT-20260705-040` and `handoff-0613`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,14 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-039` |
-| Latest handoff ID | `handoff-0612` |
-| Current status | `v16_p17_t01_recommendation_coverage_audit_completed_no_physics_delta` |
-| Current route family | v16_recommendation_coverage_audit |
+| Active task ID | `RT-20260705-040` |
+| Latest handoff ID | `handoff-0613` |
+| Current status | `v16_p17_t02_current_frontier_compact_summary_refresh_completed_no_physics_delta` |
+| V16 completed | false |
+| Current route family | v16_current_frontier_and_compact_summary_final_refresh |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | none for physics derivation; live control burden is v16 current frontier and compact summary final refresh |
-| Required next authority | P17-T02 final frontier refresh only |
-| Next recommended action | Run one bounded P17-T02 current frontier and compact summary final refresh packet. |
+| Current burden | none for physics derivation; live control burden is v16 final validation packet |
+| Required next authority | P17-T03 final validation packet only |
+| Next recommended action | Run one bounded P17-T03 final validation packet. |
 
 ## Active Boundary
 
@@ -48,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-039/00_TASK.yaml`.
-- Active task objective: Execute one bounded non-promotional v16 P17-T01 recommendation coverage audit packet.
-- Latest handoff path: `research_control/handoffs/handoff-0612.yaml`.
-- Latest handoff summary: RT-20260705-039 completed v16 P17-T01 by auditing V16-R01 through V16-R15 coverage with exact evidence and no physics promotion.
-- Current route family: v16_recommendation_coverage_audit.
-- Next recommended action: Run one bounded P17-T02 current frontier and compact summary final refresh packet.
+- Active task path: `research_control/tasks/RT-20260705-040/00_TASK.yaml`.
+- Active task objective: Execute one bounded non-promotional v16 P17-T02 current frontier and compact summary final refresh packet.
+- Latest handoff path: `research_control/handoffs/handoff-0613.yaml`.
+- Latest handoff summary: RT-20260705-040 completed v16 P17-T02 by refreshing current frontier compact summary dependency graph and claim graph outputs with explicit v16_completed state.
+- Current route family: v16_current_frontier_and_compact_summary_final_refresh.
+- Next recommended action: Run one bounded P17-T03 final validation packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -195,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded P17-T02 current frontier and compact summary final refresh packet.
+Run one bounded P17-T03 final validation packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -223,9 +224,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-039`;
-- latest handoff: `handoff-0612`;
-- current status: `v16_p17_t01_recommendation_coverage_audit_completed_no_physics_delta`;
+- active task: `RT-20260705-040`;
+- latest handoff: `handoff-0613`;
+- current status: `v16_p17_t02_current_frontier_compact_summary_refresh_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -235,8 +236,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0612.yaml`
-- `research_control/tasks/RT-20260705-039/00_TASK.yaml`
+- `research_control/handoffs/handoff-0613.yaml`
+- `research_control/tasks/RT-20260705-040/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -252,7 +253,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0612*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0613*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

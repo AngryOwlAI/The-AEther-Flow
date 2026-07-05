@@ -792,6 +792,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "ledger_path": LEDGER_PATH,
         "active_task": active_task,
         "latest_handoff": latest_handoff,
+        "v16_completed": bool_value(latest_handoff.get("v16_completed")),
         "distance_to_gr_rows": ledger_rows,
         "status_aliases": status_aliases,
         "route_family": route_family_text(latest_handoff, active_task),
@@ -844,6 +845,7 @@ tracked authority files govern.
 | Active task ID | {code_value(state['active_task_id'])} |
 | Latest handoff ID | {code_value(state['latest_handoff_id'])} |
 | Current status | {code_value(state['current_status'])} |
+| V16 completed | {str(state['v16_completed']).lower()} |
 | Current route family | {md_cell(state['route_family'])} |
 | Target derivation milestone | {md_cell(state['target_derivation_milestone'])} |
 | Current burden | {md_cell(state['current_burden'])} |
@@ -1008,6 +1010,7 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "active_task_id": state["active_task_id"],
         "latest_handoff_id": state["latest_handoff_id"],
         "current_status": state["current_status"],
+        "v16_completed": state["v16_completed"],
         "next_recommended_action": state["next_recommended_action"],
         "route_family": state["route_family"],
         "target_derivation_milestone": state["target_derivation_milestone"],

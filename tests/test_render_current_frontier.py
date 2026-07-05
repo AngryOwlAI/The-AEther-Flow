@@ -179,6 +179,7 @@ class RenderCurrentFrontierTests(unittest.TestCase):
 
             self.assertEqual(payload["active_task_id"], "RT-TEST")
             self.assertEqual(payload["latest_handoff_id"], "handoff-0001")
+            self.assertFalse(payload["v16_completed"])
             self.assertTrue(payload["snapshot_only_not_authority"])
             self.assertFalse(payload["physics_claim_authority"])
             self.assertEqual(payload["status_alias_row_count"], 2)
@@ -237,6 +238,7 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                 },
             )
             self.assertIn("generated synchronized snapshot only", markdown)
+            self.assertIn("| V16 completed | false |", markdown)
             self.assertIn("no `MetricData(E)` adoption", markdown)
             self.assertIn("Validation And Authorization Layers", markdown)
             self.assertIn("| Status | Count | Meaning |", markdown)
