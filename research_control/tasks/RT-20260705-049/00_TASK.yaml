@@ -1,0 +1,56 @@
+task_id: "RT-20260705-049"
+task_type: "v17_candidate_audit_lane_handoff"
+status: "completed"
+created_at: "2026-07-05T23:56:00Z"
+updated_at: "2026-07-05T23:56:00Z"
+closed_at: "2026-07-05T23:56:00Z"
+parent_task_id: "RT-20260705-048"
+parent_handoff_id: "handoff-0621"
+decision_id: "DDR-20260705-049"
+job_id: "AJ-RT-20260705-049-001"
+role_id: "director-of-research"
+role_version: "0.3.0"
+execution_role_ref: "director-of-research@0.3.0--RT-20260705-049"
+requires_human_gate: false
+human_authorization_note: "The user requested completion of all remaining v17 phases through Continue Research and granted human authorization for human gates. P1-T04 requires no Gate Chair adoption authority benchmark authority or completed-derivation authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T04"
+  plan_task_name: "Candidate handoff to audit lane"
+objective: "Select exactly one candidate disposition after P1-T03 and hand off the audit-eligible K_{E_*} candidate to the next lawful packet."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Route the constructed candidate to smuggling audit or route an obstruction to selector review."
+closure_status: "v17_p1_t04_candidate_handoff_to_smuggling_audit_no_adoption"
+claim_boundary:
+  allowed_scope: "P1-T04 candidate audit-lane disposition only"
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  self_check_artifact_path: "research_control/tasks/RT-20260705-048/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"
+  candidate_status: "audit_eligible_only"
+  selected_disposition: "route_to_smuggling_audit"
+  selected_next_plan_task_id: "P2-T01"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md"
+next_recommended_action: "Run one bounded v17 P2-T01 Smuggling Auditor packet to audit the existing SourceCouplingLawCandidate_EStar_v1 for target import detector import stress-energy import matter-action import benchmark import and process-authority laundering."
+notes: "This task completes only P1-T04. It selects route_to_smuggling_audit because P1-T03 passed all six target-floor fields with primary_fail_closed_branch none. It does not perform the audit refuter stress Gate Chair review source-law adoption detector-semantics adoption coupling-law adoption matter-coupling derivation or Distance-to-GR ledger promotion."
+documentation_impact_id: "DI-RT-20260705-049-001"

@@ -700,6 +700,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-040-V16-CURRENT-FRONTIER-FINAL-REFRESH-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260705-040-v16-current-frontier-final-refresh-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-042-V16-ORDINARY-CONTINUATION-SELECTION` `wiki/markdown/md-research-control-tasks-rt-20260705-042-v16-ordinary-continuation-selection.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-046-COUPLING-LAW-CANDIDATE-CONSTRUCTION-SETUP` `wiki/markdown/md-research-control-tasks-rt-20260705-046-coupling-law-candidate-construction-setup.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-049-V17-CANDIDATE-AUDIT-LANE-DISPOSITION` `wiki/markdown/md-research-control-tasks-rt-20260705-049-v17-candidate-audit-lane-disposition.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1255,6 +1256,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-040-V16-CURRENT-FRONTIER-FINAL-REFRESH-RECEIPT` `research_control/tasks/RT-20260705-040/artifacts/v16_current_frontier_final_refresh_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-042-V16-ORDINARY-CONTINUATION-SELECTION` `research_control/tasks/RT-20260705-042/artifacts/v16_ordinary_continuation_selection.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-046-COUPLING-LAW-CANDIDATE-CONSTRUCTION-SETUP` `research_control/tasks/RT-20260705-046/artifacts/coupling_law_candidate_construction_setup_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-049-V17-CANDIDATE-AUDIT-LANE-DISPOSITION` `research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

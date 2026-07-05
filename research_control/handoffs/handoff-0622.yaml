@@ -1,0 +1,92 @@
+handoff_id: "handoff-0622"
+created_at: "2026-07-05T23:56:00Z"
+task_id: "RT-20260705-049"
+decision_id: "DDR-20260705-049"
+job_id: "AJ-RT-20260705-049-001"
+completion_path: "research_control/tasks/RT-20260705-049/jobs/completions/AJC-AJ-RT-20260705-049-001.yaml"
+source_task_id: "RT-20260705-049"
+source_job_id: "AJ-RT-20260705-049-001"
+source_completion_id: "AJC-AJ-RT-20260705-049-001"
+status: "completed"
+summary: "RT-20260705-049 completed one bounded v17 P1-T04 Director handoff packet. It selected exactly one candidate disposition for SourceCouplingLawCandidate_EStar_v1: route_to_smuggling_audit. The candidate remains draft/control and audit_eligible_only; P1-T04 does not perform the audit stress test Gate Chair review source-law adoption detector-semantics adoption coupling-law adoption matter-coupling derivation or Distance-to-GR ledger promotion."
+next_action: "Run one bounded v17 P2-T01 Smuggling Auditor packet to audit SourceCouplingLawCandidate_EStar_v1 for target import detector import stress-energy import matter-action import benchmark import and process-authority laundering."
+loop_risk_route: "v17_p1_t04_handoff_to_p2_t01_smuggling_audit_no_adoption"
+claim_boundary:
+  allowed_next_scope: "P2-T01 smuggling audit of existing source-side coupling-law candidate"
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  self_check_artifact_path: "research_control/tasks/RT-20260705-048/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"
+  disposition_artifact_path: "research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md"
+  candidate_status: "audit_eligible_only"
+  selected_disposition: "route_to_smuggling_audit"
+  selected_next_plan_task_id: "P2-T01"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  RR_ETransportCompletenessOrInvarianceLaw_v1_adopted: false
+  unrestricted_RR_E_theorem_authorized: false
+  matter_semantics_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  proof_authority: false
+blocked_claims:
+  - "P1-T04 handoff as audit success"
+  - "P1-T04 handoff as stress success"
+  - "P1-T04 handoff as source law"
+  - "P1-T04 handoff as detector semantics"
+  - "P1-T04 handoff as matter semantics"
+  - "P1-T04 handoff as coupling-law adoption"
+  - "P1-T04 handoff as matter coupling"
+  - "P1-T04 handoff as stress-energy semantics"
+  - "P1-T04 handoff as matter action"
+  - "P1-T04 handoff as Einstein-equation evidence"
+  - "P1-T04 handoff as benchmark promotion"
+  - "P1-T04 handoff as completed derivation"
+  - "P1-T04 as execution of downstream v17 phases"
+candidate_disposition:
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  self_check_artifact_path: "research_control/tasks/RT-20260705-048/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"
+  self_check_passed: true
+  primary_fail_closed_branch: "none"
+  selected_disposition: "route_to_smuggling_audit"
+  rejected_dispositions:
+    - "route_to_repair_candidate_constructor"
+    - "route_to_refuter_for_obstruction_stress"
+    - "route_to_theoretical_selector"
+    - "route_to_freeze_review"
+  gate_chair_route_selected: false
+  gate_chair_route_rationale: "Gate Chair routing is not lawful before P2-T01 audit and any later stress chain supply a protected question."
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260705-049 records route selection only and does not adopt a coupling law derive matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v17_p2_t01_smuggling_audit_of_source_side_coupling_law_candidate"
+  plan_task_id: "P2-T01"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Audit the coupling-law candidate for target import, detector import, stress-energy import, matter-action import, benchmark import, and process-authority laundering."
+  requires_human_gate: false
+validation:
+  memory_preflight: "PASS"
+  query_memory_status: "PASS"
+  continue_research_json: "PASS"
+  candidate_disposition: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

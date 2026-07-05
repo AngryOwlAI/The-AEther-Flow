@@ -1,0 +1,251 @@
+completion_id: "AJC-AJ-RT-20260705-049-001"
+job_id: "AJ-RT-20260705-049-001"
+task_id: "RT-20260705-049"
+source_role_id: "director-of-research"
+completed_at: "2026-07-05T23:56:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_task_id: "P1-T04"
+  plan_phase_id: "P1"
+  implemented_task_scope: "Selected exactly one candidate disposition after P1-T03 and handed off the audit-eligible K_{E_*} candidate to P2-T01."
+  downstream_tasks_not_implemented:
+    - "P2-T01 and later v17 tasks"
+output_paths:
+  - "research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "output/claim_graph_v1.json"
+  - "output/claim_graph_v1.dot"
+  - "wiki/indexes/claim_graph_v1.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-049/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-049/DDR-20260705-049.md"
+  - "research_control/tasks/RT-20260705-049/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-049/jobs/AJ-RT-20260705-049-001.yaml"
+  - "research_control/tasks/RT-20260705-049/jobs/completions/AJC-AJ-RT-20260705-049-001.yaml"
+  - "research_control/tasks/RT-20260705-049/roles/director-of-research@0.3.0--RT-20260705-049.yaml"
+  - "research_control/handoffs/handoff-0622.yaml"
+  - "research_control/handoffs/handoff-0622.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=647 relationship_row_count=3341 semantic_row_count=647 vault_row_count=647"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v17.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260705-048 latest_handoff=handoff-0621 next_action=P1-T04"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 648
+    relationship_row_count: 3345
+    semantic_row_count: 648
+    vault_row_count: 648
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json"
+      query_type: "lookup"
+      query_text: "research_control/current_frontier.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v17.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "dc4175ba9888e1031139df7ada364317ba47ca00b2845b2c213445e0da7887fb"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+project_system_change_only: false
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Route the constructed candidate to smuggling audit or route an obstruction to selector review."
+  explanation: "P1-T04 selects route_to_smuggling_audit because P1-T03 passed the target floor. It performs no audit stress Gate Chair review coupling-law adoption or matter-coupling derivation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  ledger_update_rationale: "An audit-lane handoff narrows the next route to P2-T01 but does not discharge the matter-coupling burden."
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v17_p2_t01_smuggling_audit"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only context retained"
+  - burden: "g_eff"
+    status: "unchanged; prior scoped source-extension context only"
+  - burden: "matter coupling"
+    status: "P1-T04 routes audit-eligible K_{E_*} to smuggling audit only; no coupling-law adoption and no matter-coupling derivation"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P2-T01 smuggling audit is the next bounded route"
+new_mathematical_payload:
+  - payload_id: "V17-P1-T04-AUDIT-LANE-SELECTION-001"
+    payload_type: "packet_selection"
+    artifact_path: "research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md"
+    status: "control"
+    summary: "Selected route_to_smuggling_audit as the single P1-T04 disposition after a passed P1-T03 self-check."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-V17-P1-T04-AUDIT-LANE-SELECTION-001"
+    payload_type: "packet_selection"
+    object_name: "Disposition(SourceCouplingLawCandidate_EStar_v1)=route_to_smuggling_audit"
+    claim_status: "control_only"
+    source_path: "research_control/tasks/RT-20260705-049/artifacts/v17_candidate_audit_lane_disposition.md"
+    source_hash: "cc920aadfa1a48abab777432f8e08e9d563c5bcd98176e8fca3a86b19107f472"
+    burden_effect: "no_distance_delta"
+    summary: "P1-T04 selects the audit lane and leaves audit success stress success coupling-law adoption and matter-coupling derivation blocked."
+selected_route:
+  selected_disposition: "route_to_smuggling_audit"
+  selected_next_task: "smuggling_audit_of_source_side_coupling_law_candidate"
+  selected_next_plan_task_id: "P2-T01"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Audit the coupling-law candidate for target import, detector import, stress-energy import, matter-action import, benchmark import, and process-authority laundering."
+  requires_human_gate: false
+  rejected_dispositions:
+    - "route_to_repair_candidate_constructor"
+    - "route_to_refuter_for_obstruction_stress"
+    - "route_to_theoretical_selector"
+    - "route_to_freeze_review"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "continue_research.py resolved handoff-0621 and P1-T04"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "exactly one disposition selected"
+      - "candidate status remains audit_eligible_only"
+      - "Gate Chair route not selected because audit and stress evidence do not yet exist"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_research_control.py PASS"
+      - "validate_research_control.py --check-diff PASS"
+      - "validate_documentation_impact.py --json PASS"
+      - "collect_project_improvement_signals.py --validate-emitted --json PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write PASS active_task=RT-20260705-049 latest_handoff=handoff-0622"
+      - "render_compact_current_frontier_v16.py --write PASS next_route_id=v17_p2_t01_smuggling_audit_of_source_side_coupling_law_candidate"
+      - "render_current_frontier.py --check PASS"
+      - "render_compact_current_frontier_v16.py --check PASS"
+      - "render_dependency_graph.py --check PASS"
+      - "generate_claim_graph_v1.py --check PASS"
+      - "validate_claim_graph_v1.py --json PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "continue_research_memory_preflight.py --json refreshed local retrieval and final status PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS hard_fail_count=0"
+      - "warnings are historical advisory findings"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction.py pending until all post-write validators pass"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: "not_applicable"
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusion_summary:
+  - "P1-T04 is not a smuggling audit."
+  - "P1-T04 does not claim audit success."
+  - "P1-T04 does not claim refuter stress success."
+  - "P1-T04 does not adopt a coupling law."
+  - "P1-T04 does not derive or adopt matter coupling."
+  - "P1-T04 does not establish stress-energy semantics stress-energy tensor or matter action."
+  - "P1-T04 does not establish detector semantics."
+  - "P1-T04 does not derive Einstein equations."
+  - "P1-T04 does not promote the exact-GR benchmark."
+  - "P1-T04 does not complete v17."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+next_recommended_action: "Run one bounded v17 P2-T01 Smuggling Auditor packet to audit the existing SourceCouplingLawCandidate_EStar_v1 for target import detector import stress-energy import matter-action import benchmark import and process-authority laundering."
