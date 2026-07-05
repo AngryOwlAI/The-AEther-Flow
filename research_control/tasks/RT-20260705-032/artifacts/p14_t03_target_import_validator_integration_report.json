@@ -1,0 +1,259 @@
+{
+  "schema_id": "p14_t03_target_import_validator_integration_report_v1",
+  "status": "PASS",
+  "task_id": "RT-20260705-032",
+  "plan_task_id": "P14-T03",
+  "operational_receipt_only": true,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "validator_behavior_changed": true,
+  "check_count": 5,
+  "failed_check_count": 0,
+  "fixture_report_count": 18,
+  "failed_fixture_report_count": 0,
+  "checks": [
+    {
+      "check_id": "target_import_phrase_classes_present",
+      "status": "PASS",
+      "missing_classes": [],
+      "expected_class_count": 12
+    },
+    {
+      "check_id": "p14_t03_required_validation_outputs_covered",
+      "status": "PASS",
+      "missing_fixture_classes": []
+    },
+    {
+      "check_id": "bad_fixtures_fail_closed",
+      "status": "PASS",
+      "observed_pass_count": 12,
+      "expected_count": 12
+    },
+    {
+      "check_id": "good_fixtures_remain_clean",
+      "status": "PASS",
+      "observed_pass_count": 6,
+      "expected_count": 6
+    },
+    {
+      "check_id": "boundary_no_physics_delta",
+      "status": "PASS",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "scientific_claims_changed": false,
+      "validator_behavior_changed": true
+    }
+  ],
+  "fixture_reports": [
+    {
+      "fixture_id": "bad_target_metric_as_source_certificate",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "target_metric_used_as_source_certificate",
+      "expected_current_linter_class_ids": [
+        "source_certificate_overread"
+      ],
+      "observed_class_ids": [
+        "source_certificate_overread",
+        "target_metric_used_as_source_certificate"
+      ]
+    },
+    {
+      "fixture_id": "bad_lorentzian_signature_as_certificate_validity",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "lorentzian_signature_used_as_certificate_validity",
+      "expected_current_linter_class_ids": [
+        "semantic_layer_collapse_overclaim"
+      ],
+      "observed_class_ids": [
+        "lorentzian_signature_used_as_certificate_validity",
+        "semantic_layer_collapse_overclaim"
+      ]
+    },
+    {
+      "fixture_id": "bad_proper_time_as_source_readout",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "proper_time_used_as_source_readout",
+      "expected_current_linter_class_ids": [
+        "semantic_layer_collapse_overclaim"
+      ],
+      "observed_class_ids": [
+        "proper_time_used_as_source_readout",
+        "semantic_layer_collapse_overclaim"
+      ]
+    },
+    {
+      "fixture_id": "bad_detector_calibration_as_source_label",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "detector_calibration_treated_as_source_label",
+      "expected_current_linter_class_ids": [
+        "source_certificate_overread"
+      ],
+      "observed_class_ids": [
+        "detector_calibration_treated_as_source_label",
+        "source_certificate_overread"
+      ]
+    },
+    {
+      "fixture_id": "bad_stress_energy_tensor_proves_matter_semantics",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "stress_energy_tensor_used_to_prove_matter_semantics",
+      "expected_current_linter_class_ids": [
+        "premature_efe_prerequisite_overclaim"
+      ],
+      "observed_class_ids": [
+        "premature_efe_prerequisite_overclaim",
+        "stress_energy_tensor_used_to_prove_matter_semantics"
+      ]
+    },
+    {
+      "fixture_id": "bad_matter_action_proves_coupling_law",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "matter_action_used_to_prove_coupling_law",
+      "expected_current_linter_class_ids": [
+        "semantic_layer_collapse_overclaim"
+      ],
+      "observed_class_ids": [
+        "matter_action_used_to_prove_coupling_law",
+        "semantic_layer_collapse_overclaim"
+      ]
+    },
+    {
+      "fixture_id": "bad_einstein_equations_as_upstream_premise",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "einstein_equations_used_as_upstream_premise",
+      "expected_current_linter_class_ids": [
+        "semantic_layer_collapse_overclaim"
+      ],
+      "observed_class_ids": [
+        "einstein_equations_used_as_upstream_premise",
+        "semantic_layer_collapse_overclaim"
+      ]
+    },
+    {
+      "fixture_id": "bad_benchmark_fit_as_source_evidence",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "benchmark_fit_used_as_source_evidence",
+      "expected_current_linter_class_ids": [
+        "source_certificate_overread"
+      ],
+      "observed_class_ids": [
+        "benchmark_fit_used_as_source_evidence",
+        "source_certificate_overread"
+      ]
+    },
+    {
+      "fixture_id": "bad_gate_chair_scoped_evidence_as_source_law",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "gate_chair_scoped_evidence_used_as_source_law",
+      "expected_current_linter_class_ids": [
+        "scoped_evidence_or_precondition_as_adoption"
+      ],
+      "observed_class_ids": [
+        "gate_chair_scoped_evidence_used_as_source_law",
+        "scoped_evidence_or_precondition_as_adoption"
+      ]
+    },
+    {
+      "fixture_id": "bad_validator_pass_as_proof",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "validator_pass_used_as_proof",
+      "expected_current_linter_class_ids": [
+        "premature_efe_prerequisite_overclaim"
+      ],
+      "observed_class_ids": [
+        "premature_efe_prerequisite_overclaim",
+        "validator_pass_used_as_proof"
+      ]
+    },
+    {
+      "fixture_id": "bad_generated_wiki_note_as_authority",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "generated_wiki_note_used_as_authority",
+      "expected_current_linter_class_ids": [
+        "generated_derivative_authority"
+      ],
+      "observed_class_ids": [
+        "generated_derivative_authority",
+        "generated_wiki_note_used_as_authority"
+      ]
+    },
+    {
+      "fixture_id": "bad_finite_local_as_universal_matter_coupling",
+      "mode": "bad",
+      "status": "PASS",
+      "report_status": "FAIL",
+      "expected_future_target_import_class_id": "finite_local_model_rendered_as_universal_matter_coupling",
+      "expected_current_linter_class_ids": [
+        "premature_efe_prerequisite_overclaim"
+      ],
+      "observed_class_ids": [
+        "finite_local_model_rendered_as_universal_matter_coupling",
+        "premature_efe_prerequisite_overclaim"
+      ]
+    },
+    {
+      "fixture_id": "good_source_transport_certificate_with_no_target_guard",
+      "mode": "good",
+      "status": "PASS",
+      "report_status": "PASS",
+      "finding_count": 0
+    },
+    {
+      "fixture_id": "good_scoped_evidence_precondition_wording",
+      "mode": "good",
+      "status": "PASS",
+      "report_status": "PASS",
+      "finding_count": 0
+    },
+    {
+      "fixture_id": "good_target_import_fail_closed_wording",
+      "mode": "good",
+      "status": "PASS",
+      "report_status": "PASS",
+      "finding_count": 0
+    },
+    {
+      "fixture_id": "good_detector_semantics_blocked_wording",
+      "mode": "good",
+      "status": "PASS",
+      "report_status": "PASS",
+      "finding_count": 0
+    },
+    {
+      "fixture_id": "good_einstein_equations_not_started_wording",
+      "mode": "good",
+      "status": "PASS",
+      "report_status": "PASS",
+      "finding_count": 0
+    },
+    {
+      "fixture_id": "good_benchmark_promotion_protected_wording",
+      "mode": "good",
+      "status": "PASS",
+      "report_status": "PASS",
+      "finding_count": 0
+    }
+  ]
+}

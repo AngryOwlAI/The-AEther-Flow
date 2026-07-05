@@ -1,0 +1,65 @@
+handoff_id: "handoff-0605"
+created_at: "2026-07-05T11:00:41Z"
+task_id: "RT-20260705-032"
+decision_id: "DDR-20260705-032"
+job_id: "AJ-RT-20260705-032-001"
+completion_path: "research_control/tasks/RT-20260705-032/jobs/completions/AJC-AJ-RT-20260705-032-001.yaml"
+source_task_id: "RT-20260705-032"
+source_job_id: "AJ-RT-20260705-032-001"
+source_completion_id: "AJC-AJ-RT-20260705-032-001"
+status: "completed"
+summary: "RT-20260705-032 completed v16 P14-T03 by integrating target-import attack fixtures into claim-language validation."
+v16_completed: false
+selected_next_route:
+  route_id: "compact_current_frontier_schema_v16"
+  plan_task_id: "P15-T01"
+  role_family: "project-control-maintainer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Define compact current-frontier schema as snapshot-only project-control summary without physics delta."
+  requires_human_gate: false
+review_artifact_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+review_artifact_hash: "c2565886b6a36471063fc247fa7e7de3834292ef7d2662a2d544d4e4739d3ae4"
+recommendation: "continue_to_compact_frontier_schema"
+integration_route: "continue_to_p15_compact_current_frontier_schema_v16"
+hard_blocks:
+  - "source-law adoption"
+  - "matter-semantics adoption"
+  - "detector-semantics adoption"
+  - "coupling-law adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "Gate Chair verdict"
+  - "completed derivation"
+next_action: "Run one bounded P15-T01 compact current-frontier schema packet."
+required_next_packet:
+  role_id: "project-control-maintainer"
+  role_version: "0.2.0"
+  packet_count: "1"
+  task_type: "compact_current_frontier_schema_v16"
+  objective: "Define the compact current-frontier schema as snapshot-only project-control summary."
+claim_boundary:
+  allowed_next_scope: "P15-T01 compact frontier schema only"
+  completed_scope: "v16 P14-T03 target-import validator integration"
+  scientific_claims_changed: false
+  validator_behavior_changed: true
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+validation_summary:
+  target_import_specific_classes_added: 12
+  bad_fixture_count: 12
+  good_fixture_count: 6
+  task_local_validator_status: "PASS"
+  focused_unittest_status: "PASS"
+  validator_behavior_changed: true
+distance_to_gr:
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  burden_id: "none"
+  v16_delta: "P14-T03 produced validator integration only and no physics promotion."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

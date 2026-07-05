@@ -1,0 +1,226 @@
+completion_path: "research_control/tasks/RT-20260705-032/jobs/completions/AJC-AJ-RT-20260705-032-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260705-032-001"
+job_id: "AJ-RT-20260705-032-001"
+task_id: "RT-20260705-032"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-05T11:00:41Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v16"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  related_plan_task_id: "P14-T03"
+  plan_phase_id: "P14"
+  implemented_task_scope: "Integrated the P14 target-import attack suite into claim-language validation."
+  completed_v16_tasks_to_date:
+    - "P0-T01 through P14-T02"
+    - "P14-T03"
+  downstream_tasks_not_implemented:
+    - "P15 compact frontier"
+    - "P16 project-system integration"
+    - "P17 final v16 audit and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "tests/test_target_import_attack_validator.py"
+  - "tests/test_validate_claim_language.py"
+  - "research_control/tasks/RT-20260705-032/artifacts/validate_p14_t03_target_import_validator_integration.py"
+  - "research_control/tasks/RT-20260705-032/artifacts/p14_t03_target_import_validator_integration_report.json"
+  - "research_control/tasks/RT-20260705-032/artifacts/p14_t03_target_import_validator_integration_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-032/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-032/DDR-20260705-032.md"
+  - "research_control/tasks/RT-20260705-032/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-032/jobs/AJ-RT-20260705-032-001.yaml"
+  - "research_control/tasks/RT-20260705-032/jobs/completions/AJC-AJ-RT-20260705-032-001.yaml"
+  - "research_control/tasks/RT-20260705-032/roles/validator-engineer@0.2.0--RT-20260705-032.yaml"
+  - "research_control/handoffs/handoff-0605.yaml"
+  - "research_control/handoffs/handoff-0605.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "research_control/handoffs/handoff-0604.yaml"
+  - "research_control/design/target_import_attack_fixture_catalog_v16.md"
+  - "research_control/design/target_import_attack_taxonomy_v16.md"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=636 relationship_row_count=3295 semantic_row_count=636 vault_row_count=636"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"target import validator integration fail closed P14 T03\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260705-029-INTERNAL-ONE-QUESTION-RED-TEAM-PILOT-V16,MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260705-031 latest_handoff=handoff-0604 next_action=P14-T03"
+  - ".venv/bin/python research_control/tasks/RT-20260705-032/artifacts/validate_p14_t03_target_import_validator_integration.py --output research_control/tasks/RT-20260705-032/artifacts/p14_t03_target_import_validator_integration_report.json --json | exit_code=0 | status=PASS check_count=5 fixture_report_count=18"
+  - ".venv/bin/python -m unittest tests/test_target_import_attack_fixtures.py tests/test_target_import_attack_validator.py tests/test_validate_claim_language.py | exit_code=0 | Ran 31 tests OK"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 636
+    relationship_row_count: 3295
+    semantic_row_count: 636
+    vault_row_count: 636
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"target import validator integration fail closed P14 T03\" --limit 10 --json"
+      query_type: "search"
+      query_text: "target import validator integration fail closed P14 T03"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-029-INTERNAL-ONE-QUESTION-RED-TEAM-PILOT-V16"
+        - "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/target_import_attack_fixture_catalog_v16.md"
+      source_hash: "6cad549dc392a827eae401da5c85d7514144e43a4c52df26daaa43800ef8a608"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-029-INTERNAL-ONE-QUESTION-RED-TEAM-PILOT-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-029/artifacts/internal_one_question_red_team_pilot_v16.md"
+      source_hash: "02cc51a1ac49e34b68abfefd327cc7e15f2e0b89bca1fc5783a8d84dac19f75c"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+      source_hash: "5b17d2f90c4d10621f9038abe952e55c066e100f5898448e92a78ecee11235d8"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "b2699505165c33ef189982ce6b31e96668b56435d1c3ea90d86a2ae41765aea3"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "44daaa5e9f0159adaaa0f30e65d39c8080e410552d13adc374f95eda456c0bba"
+validator_integration_result:
+  taxonomy_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+  taxonomy_hash: "c2565886b6a36471063fc247fa7e7de3834292ef7d2662a2d544d4e4739d3ae4"
+  target_import_specific_classes_added: 12
+  bad_fixture_count: 12
+  bad_fixtures_failed_expected_classes: 12
+  good_fixture_count: 6
+  good_fixtures_passed_cleanly: 6
+  task_local_validator_status: "PASS"
+  focused_unittest_status: "PASS"
+  validator_behavior_changed: true
+  physics_claims_changed: false
+  selected_next_route: "compact_current_frontier_schema_v16"
+selected_next_route:
+  route_id: "compact_current_frontier_schema_v16"
+  selected_next_task: "P15-T01"
+  selected_next_task_type: "compact_current_frontier_schema_v16"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+physics_progress_status:
+  status: "validator_integration_no_distance_delta"
+  physics_promotion_authorized: false
+  summary: "P14-T03 produced validator taxonomy and tests only and no source-side derivation content."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_update_rationale: "No Distance-to-GR burden is discharged by a validator integration."
+  milestone: "matter_coupling"
+  downstream_unlocked: []
+new_mathematical_payload: []
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "validator_integration"
+    object_name: "P14-T03 target-import validator integration"
+    claim_status: "operational_receipt_only"
+    source_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+    source_hash: "c2565886b6a36471063fc247fa7e7de3834292ef7d2662a2d544d4e4739d3ae4"
+    burden_effect: "validator_integration_no_distance_delta"
+    summary: "Adds target-import-specific fail-closed linter classes without changing physics status."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "query_memory status PASS"
+      - "targeted lookup and search performed"
+      - "continue_research.py resolved handoff-0604 and P14-T03"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "12 target-import-specific phrase classes added"
+      - "P14-T03 task-local validator report PASS"
+      - "focused unittest suite PASS with 31 tests"
+      - "source-safe good fixtures remain clean"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_documentation_impact.py --json PASS"
+      - "validate_research_control.py PASS"
+      - "validate_research_control.py --check-diff PASS"
+      - "report_physics_progress_metrics.py PASS"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction.py pending until final validation pass"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check PASS with hash b2699505165c33ef189982ce6b31e96668b56435d1c3ea90d86a2ae41765aea3"
+      - "render_dependency_graph.py --check PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS with expected pre-sync local retrieval warnings"
+      - "sync_obsidian_vault.py regenerated 636 rows"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS hard_fail_count=0 warning_count=1400 historical warnings only"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: "not_applicable"
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: "not_applicable"
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: "not_applicable"
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions: []
+  open_or_blocked_physical_targets:
+    - "P15 compact current-frontier summary remains open."
+    - "Matter coupling remains blocked; no source-side coupling law is adopted or derived."
+    - "Einstein-equation derivation remains blocked."
+    - "Benchmark promotion remains blocked."
+  forbidden_overread:
+    - "Do not treat validator PASS as proof authority."
+    - "Do not treat fail-closed target-import detection as source-law adoption."
+    - "Do not treat target-import test coverage as physics derivation."
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_outreach_performed: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+validation_status: "PASS"
+notes: "RT-20260705-032 completes P14-T03 and routes immediate continuation to P15-T01."

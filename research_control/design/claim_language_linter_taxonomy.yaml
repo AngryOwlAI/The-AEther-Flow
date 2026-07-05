@@ -593,6 +593,162 @@ phrase_classes:
       - "validator PASS proves EFE"
     corrective_language: "Use the P8 moratorium wording: Einstein equations remain not started, direct EFE routing is blocked by missing dynamics/action/variation prerequisites, bounded prerequisite work is allowed, and benchmark promotion requires protected authority."
 
+  - class_id: "target_metric_used_as_source_certificate"
+    plan_required_class_number: 22
+    title: "Target metric used as source certificate"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\btarget-metric certificate supplies source certificate validity\\b"
+    bad_phrases:
+      - "target-metric certificate supplies source certificate validity"
+    corrective_language: "Reject target-side metric evidence as source-certificate input; require explicit source-side certificate data."
+
+  - class_id: "lorentzian_signature_used_as_certificate_validity"
+    plan_required_class_number: 23
+    title: "Lorentzian signature used as certificate validity"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bg_eff as unscoped Lorentzian metric\\b"
+    bad_phrases:
+      - "g_eff as unscoped Lorentzian metric"
+    corrective_language: "Reject downstream signature or metric evidence as source-certificate validity."
+
+  - class_id: "proper_time_used_as_source_readout"
+    plan_required_class_number: 24
+    title: "Proper time used as source readout"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bsource certificate supplies detector protocol\\b"
+    bad_phrases:
+      - "source certificate supplies detector protocol"
+    corrective_language: "Reject detector-clock or protocol readout as source-side certificate content."
+
+  - class_id: "detector_calibration_treated_as_source_label"
+    plan_required_class_number: 25
+    title: "Detector calibration treated as source label"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bdetector-semantics certificate supplies source certificate validity\\b"
+    bad_phrases:
+      - "detector-semantics certificate supplies source certificate validity"
+    corrective_language: "Reject detector calibration or detector semantics as a source-label substitute."
+
+  - class_id: "stress_energy_tensor_used_to_prove_matter_semantics"
+    plan_required_class_number: 26
+    title: "Stress-energy tensor used to prove matter semantics"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bmatter-sector evidence implies stress-energy tensor\\b"
+    bad_phrases:
+      - "matter-sector evidence implies stress-energy tensor"
+    corrective_language: "Reject target-side stress-energy notation as proof of source matter semantics."
+
+  - class_id: "matter_action_used_to_prove_coupling_law"
+    plan_required_class_number: 27
+    title: "Matter action used to prove coupling law"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bmatter-sector evidence as coupling law\\b"
+    bad_phrases:
+      - "matter-sector evidence as coupling law"
+    corrective_language: "Reject target action or matter-sector language as a source coupling-law derivation."
+
+  - class_id: "einstein_equations_used_as_upstream_premise"
+    plan_required_class_number: 28
+    title: "Einstein equations used as upstream premise"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bscoped evidence as Einstein[- ]equation premise\\b"
+    bad_phrases:
+      - "scoped evidence as Einstein-equation premise"
+    corrective_language: "Reject downstream Einstein-equation premises as upstream source-side evidence."
+
+  - class_id: "benchmark_fit_used_as_source_evidence"
+    plan_required_class_number: 29
+    title: "Benchmark fit used as source evidence"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bbenchmark-behavior certificate supplies source certificate validity\\b"
+    bad_phrases:
+      - "benchmark-behavior certificate supplies source certificate validity"
+    corrective_language: "Reject benchmark behavior or fit as source-side certificate evidence."
+
+  - class_id: "gate_chair_scoped_evidence_used_as_source_law"
+    plan_required_class_number: 30
+    title: "Gate Chair scoped evidence used as source law"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bevidence precondition means source law\\b"
+    bad_phrases:
+      - "evidence precondition means source law"
+    corrective_language: "Preserve scoped evidence/precondition status; do not convert it into source-law adoption."
+
+  - class_id: "validator_pass_used_as_proof"
+    plan_required_class_number: 31
+    title: "Validator PASS used as proof"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bvalidator PASS proves EFE\\b"
+    bad_phrases:
+      - "validator PASS proves EFE"
+    corrective_language: "Describe validator PASS only as an operational consistency receipt, not proof authority."
+
+  - class_id: "generated_wiki_note_used_as_authority"
+    plan_required_class_number: 32
+    title: "Generated wiki note used as authority"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bwiki note proves\\b"
+    bad_phrases:
+      - "wiki note proves"
+    corrective_language: "Treat generated wiki notes as derivative reading aids, not independent source or proof authority."
+
+  - class_id: "finite_local_model_rendered_as_universal_matter_coupling"
+    plan_required_class_number: 33
+    title: "Finite or local model rendered as universal matter coupling"
+    default_severity: "hard_fail_current_public"
+    control_severity: "hard_fail_current_control"
+    historical_severity: "warn_historical"
+    detection_kind: "exact_or_regex_phrase"
+    forbidden_patterns:
+      - pattern: "\\bcoupling-law candidate evidence implies matter coupling\\b"
+    bad_phrases:
+      - "coupling-law candidate evidence implies matter coupling"
+    corrective_language: "State finite/local evidence only as scoped support; universal matter coupling remains blocked without protected source-law and downstream gates."
+
   - class_id: "global_no_go_or_rejection_overclaim"
     plan_required_class_number: 18
     title: "Global no-go or global rejection overclaim"
@@ -705,6 +861,30 @@ required_phrase_coverage:
       class_id: "premature_efe_prerequisite_overclaim"
     - phrase: "validator PASS proves EFE"
       class_id: "premature_efe_prerequisite_overclaim"
+    - phrase: "target-metric certificate supplies source certificate validity"
+      class_id: "target_metric_used_as_source_certificate"
+    - phrase: "g_eff as unscoped Lorentzian metric"
+      class_id: "lorentzian_signature_used_as_certificate_validity"
+    - phrase: "source certificate supplies detector protocol"
+      class_id: "proper_time_used_as_source_readout"
+    - phrase: "detector-semantics certificate supplies source certificate validity"
+      class_id: "detector_calibration_treated_as_source_label"
+    - phrase: "matter-sector evidence implies stress-energy tensor"
+      class_id: "stress_energy_tensor_used_to_prove_matter_semantics"
+    - phrase: "matter-sector evidence as coupling law"
+      class_id: "matter_action_used_to_prove_coupling_law"
+    - phrase: "scoped evidence as Einstein-equation premise"
+      class_id: "einstein_equations_used_as_upstream_premise"
+    - phrase: "benchmark-behavior certificate supplies source certificate validity"
+      class_id: "benchmark_fit_used_as_source_evidence"
+    - phrase: "evidence precondition means source law"
+      class_id: "gate_chair_scoped_evidence_used_as_source_law"
+    - phrase: "validator PASS proves EFE"
+      class_id: "validator_pass_used_as_proof"
+    - phrase: "wiki note proves"
+      class_id: "generated_wiki_note_used_as_authority"
+    - phrase: "coupling-law candidate evidence implies matter coupling"
+      class_id: "finite_local_model_rendered_as_universal_matter_coupling"
 
 next_linter_contract:
   route: "P3-T02"
@@ -737,10 +917,11 @@ next_linter_contract:
     - "corrective_language"
 
 acceptance_receipt:
-  required_class_count: 21
-  implemented_class_count: 21
+  required_class_count: 33
+  implemented_class_count: 33
   p4_t04_semantic_layer_fixtures_mapped: true
   p8_t02_efe_prerequisite_fixtures_mapped: true
+  p14_t03_target_import_fixtures_mapped: true
   required_phrases_mapped: true
   severity_assignments_present: true
   public_overclaims_hard_fail_candidates: true
