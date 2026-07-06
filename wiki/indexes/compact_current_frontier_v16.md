@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-058`
-- Latest handoff: `handoff-0631`
-- Current status: `v17_p3_t05_public_documentation_calibration_completed_no_physics_delta`
+- Active task: `RT-20260705-059`
+- Latest handoff: `handoff-0632`
+- Current status: `v17_p3_t06_acceptance_calibration_red_team_pass_with_advisory_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p3_t06_acceptance_calibration_red_team_review`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v17_p4_t01_detector_semantics_replacement_problem_statement`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Stress-test calibrated acceptance language for both overclaim and underclaim.
+- Milestone burden: State the detector-semantics replacement problem after accepted-status calibration.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -44,8 +44,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `391f75ccd809a7b651b363e26e0c5e98e5c9f5f4ba90fdd33d90722e8612838e`
-- JSON SHA-256: `ad8fbec5a88dfe3995cc7f88189398a4034650f73dd02e79160bd1c974c25934`
+- YAML SHA-256: `9bd805ad0a1cc074f0037170032f35ae3f1f03fe6c521ecaba0bf3f243471b17`
+- JSON SHA-256: `c083b740f3ecb2b2e84bedfa3e6dfb995055c691069f4fb572d032ecbb0fa236`
 
 ## Authority Warning
 

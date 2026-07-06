@@ -1,0 +1,80 @@
+handoff_id: "handoff-0632"
+created_at: "2026-07-06T03:49:40Z"
+task_id: "RT-20260705-059"
+decision_id: "DDR-20260705-059"
+job_id: "AJ-RT-20260705-059-001"
+completion_path: "research_control/tasks/RT-20260705-059/jobs/completions/AJC-AJ-RT-20260705-059-001.yaml"
+source_task_id: "RT-20260705-059"
+source_job_id: "AJ-RT-20260705-059-001"
+source_completion_id: "AJC-AJ-RT-20260705-059-001"
+status: "completed"
+summary: "RT-20260705-059 completed one bounded v17 P3-T06 accepted-status calibration red-team review. It returned pass_with_advisory and required no repair route or physics delta."
+next_action: "Run one bounded v17 P4-T01 detector-semantics replacement problem statement."
+loop_risk_route: "v17_p3_t06_acceptance_calibration_to_p4_t01_detector_semantics_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P4-T01 detector-semantics replacement problem statement with no adoption or physics promotion"
+  p3_review_result: "pass_with_advisory"
+  repair_required: false
+  repair_route: ""
+  gate_chair_routing_lawful_from_p3_t06: false
+  gate_chair_routing_reason: "P3-T06 is language review only and does not place a protected adoption benchmark or closure question before Gate Chair."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+blocked_claims:
+  - "P3-T06 review as physics proof"
+  - "P3-T06 review as Gate Chair verdict"
+  - "P3-T06 pass_with_advisory as source-law adoption"
+  - "P3-T06 pass_with_advisory as detector-semantics adoption"
+  - "P3-T06 pass_with_advisory as coupling-law adoption"
+  - "P3-T06 pass_with_advisory as matter-coupling derivation"
+  - "P3-T06 pass_with_advisory as benchmark promotion"
+  - "P3-T06 pass_with_advisory as completed derivation"
+red_team_result:
+  artifact_path: "research_control/tasks/RT-20260705-059/artifacts/accepted_status_calibration_red_team_review_v1.md"
+  result: "pass_with_advisory"
+  global_verdict: "no_blocking_defect_found_as_written"
+  reviewed_objects:
+    - "m_src"
+    - "g_eff"
+    - "matter_coupling"
+  repair_required: false
+  advisory_ids:
+    - "future_summary_compression_order"
+    - "gate_chair_not_lawful_from_language_review"
+  immediate_v17_continuation: "P4-T01"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260705-059 reviews status language only and does not adopt a coupling law derive matter coupling detector semantics stress-energy matter action Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v17_p4_t01_detector_semantics_replacement_problem_statement"
+  plan_task_id: "P4-T01"
+  role_family: "ontology-formalizer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "State the detector-semantics replacement problem after accepted-status calibration."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+validation:
+  task_local_validator: "PENDING_POST_WRITE"
+  global_red_team_validator: "PENDING_POST_WRITE"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

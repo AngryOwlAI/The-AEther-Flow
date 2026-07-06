@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-058` and `handoff-0631`.
+`RT-20260705-059` and `handoff-0632`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-058` |
-| Latest handoff ID | `handoff-0631` |
-| Current status | `v17_p3_t05_public_documentation_calibration_completed_no_physics_delta` |
+| Active task ID | `RT-20260705-059` |
+| Latest handoff ID | `handoff-0632` |
+| Current status | `v17_p3_t06_acceptance_calibration_red_team_pass_with_advisory_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p3 t05 public documentation to p3 t06 red team no physics delta |
+| Current route family | v17 p3 t06 acceptance calibration to p4 t01 detector semantics no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P3-T06 acceptance calibration red-team review with no physics delta |
-| Next recommended action | Run one bounded v17 P3-T06 acceptance calibration red-team review. |
+| Required next authority | P4-T01 detector-semantics replacement problem statement with no adoption or physics promotion |
+| Next recommended action | Run one bounded v17 P4-T01 detector-semantics replacement problem statement. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-058/00_TASK.yaml`.
-- Active task objective: Update public-facing summaries to use positive-first exact-scope acceptance language without changing claim status.
-- Latest handoff path: `research_control/handoffs/handoff-0631.yaml`.
-- Latest handoff summary: RT-20260705-058 completed one bounded v17 P3-T05 public-facing documentation calibration pass. It updated selected public summaries and paired publication contracts to positive-first exact-scope wording with no physics delta.
-- Current route family: v17 p3 t05 public documentation to p3 t06 red team no physics delta.
-- Next recommended action: Run one bounded v17 P3-T06 acceptance calibration red-team review.
+- Active task path: `research_control/tasks/RT-20260705-059/00_TASK.yaml`.
+- Active task objective: Stress-test calibrated acceptance language for overclaim and underclaim without changing physics claims.
+- Latest handoff path: `research_control/handoffs/handoff-0632.yaml`.
+- Latest handoff summary: RT-20260705-059 completed one bounded v17 P3-T06 accepted-status calibration red-team review. It returned pass_with_advisory and required no repair route or physics delta.
+- Current route family: v17 p3 t06 acceptance calibration to p4 t01 detector semantics no physics delta.
+- Next recommended action: Run one bounded v17 P4-T01 detector-semantics replacement problem statement.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -254,7 +254,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P3-T06 acceptance calibration red-team review.
+Run one bounded v17 P4-T01 detector-semantics replacement problem statement.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -282,22 +282,22 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-058`;
-- latest handoff: `handoff-0631`;
-- current status: `v17_p3_t05_public_documentation_calibration_completed_no_physics_delta`;
+- active task: `RT-20260705-059`;
+- latest handoff: `handoff-0632`;
+- current status: `v17_p3_t06_acceptance_calibration_red_team_pass_with_advisory_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `focused_claim_language`: PASS;
-- latest handoff validation `task_local_validator`: PASS;
+- latest handoff validation `global_red_team_validator`: PENDING_POST_WRITE;
+- latest handoff validation `task_local_validator`: PENDING_POST_WRITE;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0631.yaml`
-- `research_control/tasks/RT-20260705-058/00_TASK.yaml`
+- `research_control/handoffs/handoff-0632.yaml`
+- `research_control/tasks/RT-20260705-059/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -313,7 +313,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0631*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0632*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
