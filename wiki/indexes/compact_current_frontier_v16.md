@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-013`
-- Latest handoff: `handoff-0645`
-- Current status: `v17_p7_t01_proof_normal_form_schema_completed_no_physics_delta`
+- Active task: `RT-20260706-014`
+- Latest handoff: `handoff-0646`
+- Current status: `v17_p7_t02_proof_normal_form_initial_extraction_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p7_t02_proof_normal_form_initial_extraction`
+- Route ID: `v17_p7_t03_proof_normal_form_validator`
 - Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Extract proof-normal-form rows for M_src g_eff matter-coupling certificate laws target specification and candidate artifacts.
+- Milestone burden: Validate proof-normal-form rows for schema compliance and non-conclusion preservation.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2a59228f2348b22086d7be90b85b8bc33a1362e39d1e549c21f9faab8b95b360`
-- JSON SHA-256: `9de5b19f357320f76fc1c912c0ffdb2b651882bafce7d517130040af1530fb0c`
+- YAML SHA-256: `a7e55113f7d0110a27364cab60b4031bff04816bc9441ea260aec43e4461b6d0`
+- JSON SHA-256: `f04b16f2701aa352ca1b41b2d4f97c6eded8f55b552512bb12b60d1d43db8d24`
 
 ## Authority Warning
 

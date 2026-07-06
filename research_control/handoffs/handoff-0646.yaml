@@ -1,0 +1,68 @@
+handoff_id: "handoff-0646"
+created_at: "2026-07-06T10:36:00Z"
+task_id: "RT-20260706-014"
+decision_id: "DDR-20260706-014"
+job_id: "AJ-RT-20260706-014-001"
+completion_path: "research_control/tasks/RT-20260706-014/jobs/completions/AJC-AJ-RT-20260706-014-001.yaml"
+source_task_id: "RT-20260706-014"
+source_job_id: "AJ-RT-20260706-014-001"
+source_completion_id: "AJC-AJ-RT-20260706-014-001"
+status: "completed"
+summary: "RT-20260706-014 completed one bounded v17 P7-T02 proof-normal-form initial extraction packet. It populated seven priority proof-normal-form rows while preserving source authority, non-conclusions, and no Distance-to-GR ledger delta."
+next_action: "Run one bounded v17 P7-T03 proof_normal_form_validator packet under validator-engineer@0.1.0 to validate schema compliance, high-risk non-conclusions, forbidden-premise separation, scientific_gate scope, and support-only authority."
+loop_risk_route: "v17_p7_t02_proof_normal_form_initial_extraction_completed_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P7-T03 may validate proof-normal-form registry rows and add validator tooling or reports without changing physics authority."
+  completed_plan_task_id: "P7-T02"
+  selected_next_plan_task_id: "P7-T03"
+  selected_next_role_family: "validator-engineer@0.1.0"
+  selected_next_packet_type: "proof_normal_form_validator"
+  proof_normal_form_rows_populated: true
+  row_count: 7
+  tex_authority_replaced: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P7-T02 rows as proof authority"
+  - "P7-T02 rows as TeX authority replacement"
+  - "P7-T02 rows as source-law adoption"
+  - "P7-T02 rows as matter-coupling derivation"
+  - "P7-T02 rows as Einstein equations"
+  - "P7-T02 rows as benchmark promotion"
+  - "P7-T02 rows as completed derivation"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted as scoped evidence/precondition only; not derived or adopted"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-014 adds support-only proof-normal-form rows and does not update Distance-to-GR ledger rows."
+selected_next_route:
+  route_id: "v17_p7_t03_proof_normal_form_validator"
+  plan_task_id: "P7-T03"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Validate proof-normal-form rows for schema compliance and non-conclusion preservation."
+  required_outputs:
+    - "scripts/research_control/validate_proof_normal_form_registry.py"
+    - "tests/test_proof_normal_form_registry.py"
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  task_local_validator: "PASS"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

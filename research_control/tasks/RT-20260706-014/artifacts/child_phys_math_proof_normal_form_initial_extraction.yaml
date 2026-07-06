@@ -1,0 +1,20 @@
+child_role: "phys-math"
+task_id: "RT-20260706-014"
+artifact_type: "proof_normal_form_extraction_child_review"
+status: "completed"
+analysis_summary: "Seven proof-normal-form rows were extracted from canonical TeX artifacts and encoded as scoped decisions, definitions, theorem support, or obstruction rows. Each row includes explicit premises, forbidden premises, scope, allowed uses, non-conclusions, dependencies, and machine-checkable status."
+mathematical_payload:
+  - payload_id: "PNF-ROWSET-RT-20260706-014"
+    payload_type: "proof_normal_form_rows"
+    row_count: 7
+    support_only: true
+    proof_authority: false
+  - payload_id: "PNF-OBSTRUCTION-RESP-LC-FINITE-TOY"
+    payload_type: "scoped_obstruction_row"
+    row_id: "PNF-RT-20260706-014-006"
+    conclusion: "Explicit-tag-only finite toy metric-response route is locally frozen as scoped obstruction."
+non_conclusions_preserved: true
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+notes: "Rows index source claims. They do not create new theorem authority."
