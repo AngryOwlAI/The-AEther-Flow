@@ -16,6 +16,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `html/parent-child-synthesis-explainer.html`
 - `HTML-PROJECT-OVERVIEW-EXPLAINER` `html/project-overview-explainer.html`
 - `HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `html/project-system-improvement-explainer.html`
+- `HTML-PROOF-STATE-DASHBOARD-EXPLAINER` `html/proof-state-dashboard-explainer.html`
 - `HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `html/research-agent-workflow-explainer.html`
 - `HTML-ROLE-ROUTING-EXPLAINER` `html/role-routing-explainer.html`
 - `HTML-ROLES-AND-SKILLS-EXPLAINER` `html/roles-and-skills-explainer.html`
@@ -48,6 +49,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `github-facing/parent-child-synthesis-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `github-facing/project-overview-explainer.md`
 - `MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `github-facing/project-system-improvement-explainer.md`
+- `MD-GITHUB-FACING-PROOF-STATE-DASHBOARD-EXPLAINER` `github-facing/proof-state-dashboard-explainer.md`
 - `MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `github-facing/research-agent-workflow-explainer.md`
 - `MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `github-facing/role-routing-explainer.md`
 - `MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `github-facing/roles-and-skills-explainer.md`
@@ -67,6 +69,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `markdown/html-explainer-specs/parent-child-synthesis-explainer.md`
 - `MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `markdown/html-explainer-specs/project-overview-explainer.md`
 - `MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `markdown/html-explainer-specs/project-system-improvement-explainer.md`
+- `MD-HTML-SPEC-PROOF-STATE-DASHBOARD-EXPLAINER-SPEC` `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`
 - `MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `markdown/html-explainer-specs/research-agent-workflow-explainer.md`
 - `MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `markdown/html-explainer-specs/role-routing-explainer.md`
 - `MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `markdown/html-explainer-specs/roles-and-skills-explainer.md`
@@ -83,6 +86,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
 - `MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `markdown/publication-briefs/project-overview.publication-brief.md`
 - `MD-PROJECT-SYSTEM-IMPROVEMENT-PUBLICATION-BRIEF` `markdown/publication-briefs/project-system-improvement.publication-brief.md`
+- `MD-PROOF-STATE-DASHBOARD-PUBLICATION-BRIEF` `markdown/publication-briefs/proof-state-dashboard.publication-brief.md`
 - `MD-README` `README.md`
 - `MD-README-AGENTS-ROLES` `.agents/roles/README.md`
 - `MD-README-AGENTS-SCHEMAS` `.agents/schemas/README.md`
@@ -704,6 +708,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-HTML-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/html/html-parent-child-synthesis-explainer.md`
 - `WIKI-HTML-PROJECT-OVERVIEW-EXPLAINER` `wiki/html/html-project-overview-explainer.md`
 - `WIKI-HTML-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/html/html-project-system-improvement-explainer.md`
+- `WIKI-HTML-PROOF-STATE-DASHBOARD-EXPLAINER` `wiki/html/html-proof-state-dashboard-explainer.md`
 - `WIKI-HTML-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/html/html-research-agent-workflow-explainer.md`
 - `WIKI-HTML-ROLE-ROUTING-EXPLAINER` `wiki/html/html-role-routing-explainer.md`
 - `WIKI-HTML-ROLES-AND-SKILLS-EXPLAINER` `wiki/html/html-roles-and-skills-explainer.md`
@@ -733,6 +738,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-GITHUB-FACING-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-github-facing-parent-child-synthesis-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-github-facing-project-overview-explainer.md`
 - `WIKI-MD-GITHUB-FACING-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-github-facing-project-system-improvement-explainer.md`
+- `WIKI-MD-GITHUB-FACING-PROOF-STATE-DASHBOARD-EXPLAINER` `wiki/markdown/md-github-facing-proof-state-dashboard-explainer.md`
 - `WIKI-MD-GITHUB-FACING-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-github-facing-research-agent-workflow-explainer.md`
 - `WIKI-MD-GITHUB-FACING-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-github-facing-role-routing-explainer.md`
 - `WIKI-MD-GITHUB-FACING-ROLES-AND-SKILLS-EXPLAINER` `wiki/markdown/md-github-facing-roles-and-skills-explainer.md`
@@ -752,6 +758,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-HTML-SPEC-PARENT-CHILD-SYNTHESIS-EXPLAINER` `wiki/markdown/md-html-spec-parent-child-synthesis-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-OVERVIEW-EXPLAINER` `wiki/markdown/md-html-spec-project-overview-explainer.md`
 - `WIKI-MD-HTML-SPEC-PROJECT-SYSTEM-IMPROVEMENT-EXPLAINER` `wiki/markdown/md-html-spec-project-system-improvement-explainer.md`
+- `WIKI-MD-HTML-SPEC-PROOF-STATE-DASHBOARD-EXPLAINER-SPEC` `wiki/markdown/md-html-spec-proof-state-dashboard-explainer-spec.md`
 - `WIKI-MD-HTML-SPEC-RESEARCH-AGENT-WORKFLOW-EXPLAINER` `wiki/markdown/md-html-spec-research-agent-workflow-explainer.md`
 - `WIKI-MD-HTML-SPEC-ROLE-ROUTING-EXPLAINER` `wiki/markdown/md-html-spec-role-routing-explainer.md`
 - `WIKI-MD-HTML-SPEC-ROLES-AND-SKILLS-EXPLAINER` `wiki/markdown/md-html-spec-roles-and-skills-explainer.md`
@@ -768,6 +775,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `wiki/markdown/md-project-control-grill-memory-wiki-registry-design-handoff.md`
 - `WIKI-MD-PROJECT-OVERVIEW-PUBLICATION-BRIEF` `wiki/markdown/md-project-overview-publication-brief.md`
 - `WIKI-MD-PROJECT-SYSTEM-IMPROVEMENT-PUBLICATION-BRIEF` `wiki/markdown/md-project-system-improvement-publication-brief.md`
+- `WIKI-MD-PROOF-STATE-DASHBOARD-PUBLICATION-BRIEF` `wiki/markdown/md-proof-state-dashboard-publication-brief.md`
 - `WIKI-MD-README` `wiki/markdown/md-readme.md`
 - `WIKI-MD-README-AGENTS-ROLES` `wiki/markdown/md-readme-agents-roles.md`
 - `WIKI-MD-README-AGENTS-SCHEMAS` `wiki/markdown/md-readme-agents-schemas.md`

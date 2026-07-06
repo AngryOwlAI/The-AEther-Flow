@@ -1,0 +1,171 @@
+completion_id: "AJC-AJ-RT-20260706-021-001"
+job_id: "AJ-RT-20260706-021-001"
+task_id: "RT-20260706-021"
+decision_id: "DDR-20260706-021"
+status: "completed"
+completed_at: "2026-07-06T13:45:00Z"
+completed_by_role: "documentation-curator@2.0.0--RT-20260706-021"
+plan_task_id: "P9-T01"
+objective_result: "completed"
+summary: "Completed v17 P9-T01 proof-state dashboard publication brief and source spec plus validator-compatible seed GitHub Markdown and HTML derivatives required by the HTML source-spec validator. Screenshot QA renderer hardening and generated-output registration remain deferred to P9-T02. No physics claim status changed."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P9-T01"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Created source-backed dashboard publication brief and HTML explainer source spec with required rows and columns."
+  phase_p9_completed: false
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "github-facing/proof-state-dashboard-explainer.md"
+  - "html/proof-state-dashboard-explainer.html"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-021/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-021/DDR-20260706-021.md"
+  - "research_control/tasks/RT-20260706-021/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-021/jobs/AJ-RT-20260706-021-001.yaml"
+  - "research_control/tasks/RT-20260706-021/jobs/completions/AJC-AJ-RT-20260706-021-001.yaml"
+  - "research_control/tasks/RT-20260706-021/roles/documentation-curator@2.0.0--RT-20260706-021.yaml"
+  - "research_control/handoffs/handoff-0653.yaml"
+  - "research_control/handoffs/handoff-0653.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/html-visual-explainer/SKILL.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0652.yaml"
+  - "output/compact_current_frontier_v16.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "research_control/design/accepted_status_calibration_v1.yaml"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=676 relationship_row_count=3457 semantic_row_count=676 vault_row_count=676"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"proof state dashboard calibrated status cards\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17,MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready latest_handoff=handoff-0652 boundary=director_decision_required"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 680
+    relationship_row_count: 3480
+    semantic_row_count: 680
+    vault_row_count: 680
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json"
+      query_type: "lookup"
+      query_text: "research_control/current_frontier.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"proof state dashboard calibrated status cards\" --limit 10 --json"
+      query_type: "search"
+      query_text: "proof state dashboard calibrated status cards"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "7be4f4744d10cff8b45f49bb2b2ef0465471b16bf723d34d534e3099dedf4248"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "targeted memory lookup and search returned current frontier and v17 plan"
+      - "continue_research.py resolved handoff-0652 and P9-T01"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "publication brief created with migration_status deferred"
+      - "source spec created with every required P9-T01 row and column"
+      - "validator-compatible seed public outputs created because registered HTML source specs require existing output paths"
+      - "screenshot QA renderer hardening and generated-output registration deferred to P9-T02"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap_memory_system.py runs after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "validate_claim_language.py --changed --json runs after this completion receipt is created"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write refreshed current frontier after P9-T01 handoff wording"
+      - "render_dependency_graph.py regenerated graph outputs after new dashboard source and derivative rows"
+      - "generate_claim_graph_v1.py regenerated claim graph without physics delta"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+publication_brief_result:
+  brief_id: "PB-PROOF-STATE-DASHBOARD"
+  brief_path: "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+  source_spec_path: "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  migration_status: "deferred"
+  publication_action_taken: false
+  generated_public_outputs_created: true
+  generated_public_outputs_scope: "seed derivatives only pending P9-T02 hardening and registration"
+  required_rows_present: true
+  required_columns_present: true
+  gr_not_derived_stated: true
+  source_authority_preserved: true
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "support_only_formalization_refuter_reviewed_no_repair"
+  new_status: "public_dashboard_source_spec_registered_no_physics_delta"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+claim_boundary:
+  proof_authority: false
+  support_only: true
+  physics_promotion_authorized: false
+  generated_output_authority_created: false
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+next_recommended_action: "Run one bounded v17 P9-T02 dashboard renderer hardening generated-output registration and screenshot QA packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -1,0 +1,52 @@
+task_id: "RT-20260706-021"
+task_type: "public_proof_state_dashboard_source_spec"
+status: "completed"
+created_at: "2026-07-06T13:45:00Z"
+updated_at: "2026-07-06T13:45:00Z"
+closed_at: "2026-07-06T13:45:00Z"
+parent_task_id: "RT-20260706-020"
+parent_handoff_id: "handoff-0652"
+decision_id: "DDR-20260706-021"
+job_id: "AJ-RT-20260706-021-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260706-021"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-05-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  plan_task_name: "Dashboard source specification"
+objective: "Create the source-backed proof-state dashboard publication brief and HTML explainer source spec using calibrated status cards and explicit non-authoritative derivative boundaries."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Define source-backed public proof-state dashboard spec using calibrated status cards."
+closure_status: "v17_p9_t01_public_proof_state_dashboard_source_spec_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P9-T01 source specification and deferred publication brief registration only."
+  proof_authority_created: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  generated_output_authority_created: false
+output_artifacts:
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "github-facing/proof-state-dashboard-explainer.md"
+  - "html/proof-state-dashboard-explainer.html"
+next_recommended_action: "Run one bounded v17 P9-T02 dashboard renderer hardening generated-output registration and screenshot QA packet."
+notes: "RT-20260706-021 completes v17 P9-T01 source specification and creates validator-compatible seed reader derivatives because registered HTML source specs require an existing output. P9-T02 remains responsible for renderer hardening generated-output registration screenshot QA and no physics promotion."
+documentation_impact_id: "DI-RT-20260706-021-001"

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="aether-flow-source-basis" content="MD-HTML-SPEC-PROOF-STATE-DASHBOARD-EXPLAINER-SPEC">
+  <meta name="aether-flow-source-basis-hash" content="511a934b3d7f40f2f80d5982868edaafff19e9230bca83e9aca611b76b057320">
+  <meta name="aether-flow-human-visual-only" content="true">
+  <title>Proof-State Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201d;
+      --muted: #4b5a54;
+      --line: #c9d5cf;
+      --paper: #f7f9f7;
+      --panel: #ffffff;
+      --accent: #315f72;
+      --soft: #e8f0ed;
+      --warn: #7b5733;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+    header {
+      padding: 8px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 12px;
+      font-size: 1.18rem;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 78ch;
+      margin: 0 0 14px;
+    }
+    .status-line {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .toc,
+    .source-list,
+    .scope {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 6px;
+      padding: 16px;
+    }
+    .toc a {
+      color: var(--accent);
+      margin-right: 18px;
+      white-space: nowrap;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1060px;
+    }
+    th,
+    td {
+      vertical-align: top;
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      background: var(--soft);
+      font-weight: 700;
+      color: #17353f;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.94em;
+      background: #eef3f1;
+      border: 1px solid #d8e2de;
+      border-radius: 4px;
+      padding: 0.08rem 0.22rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li + li {
+      margin-top: 6px;
+    }
+    .warning {
+      color: var(--warn);
+      font-weight: 700;
+    }
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 720px) {
+      main {
+        padding: 28px 14px 42px;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      .toc a {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Proof-State Dashboard</h1>
+      <p class="status-line">A source-backed reader dashboard for scoped positive status, exact limits, blocked overread, and the next lawful route.</p>
+      <p class="warning">GR has not been derived by this dashboard or by the generated surfaces that display it.</p>
+    </header>
+
+    <section id="contents" class="toc" data-explainer-control="section_toc" aria-label="Contents">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#sources">Source Materials</a>
+      <a href="#scope">Reader Scope</a>
+    </section>
+
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Object</th>
+              <th>Positive status</th>
+              <th>Exact scope</th>
+              <th>Allowed use</th>
+              <th>Blocked overread</th>
+              <th>Next lawful route</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Resp_lc</code></td>
+              <td>Accepted only as scoped source-extension selector data.</td>
+              <td><code>Xi_X^R</code> is accepted only as admissible source-extension data for <code>Resp_lc</code> continuation through <code>S_X^+</code>.</td>
+              <td>May support later source-side continuation under declared selector-data scope.</td>
+              <td>No detector semantics, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows.</td>
+              <td>Use only as upstream scoped source-extension context unless a later bounded packet changes the ledger.</td>
+            </tr>
+            <tr>
+              <td><code>M_src</code></td>
+              <td><code>M_src</code> is adopted only as a scoped source-only <code>M_src</code> object.</td>
+              <td>The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary.</td>
+              <td>Later bounded packets may use it as source-side prerequisite context.</td>
+              <td>It is not a target manifold, metric, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.</td>
+              <td>Use as source-side prerequisite context for bounded continuation.</td>
+            </tr>
+            <tr>
+              <td><code>g_eff</code></td>
+              <td><code>g_eff</code> is adopted only as a scoped source-extension <code>g_eff</code> object.</td>
+              <td>The adoption applies only to the declared source-extension candidate scope.</td>
+              <td>Later bounded packets may use it as scoped source-extension context.</td>
+              <td>It is not an unscoped Lorentzian metric, <code>MetricData(E)</code> adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.</td>
+              <td>Use only as scoped source-extension context; metric-use overread remains blocked.</td>
+            </tr>
+            <tr>
+              <td><code>matter_coupling</code></td>
+              <td><code>matter_coupling</code> has accepted scoped evidence/precondition only for continuation.</td>
+              <td>The support is certificate-indexed, source-side, and finite/local only.</td>
+              <td>Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate.</td>
+              <td>It is not source-law adoption, detector semantics, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, or completed derivation.</td>
+              <td>Continue through bounded matter-coupling packets only under tracked handoff authority.</td>
+            </tr>
+            <tr>
+              <td>Einstein equations</td>
+              <td>Not started; no positive derivation status.</td>
+              <td>The status is limited to control status <code>not_started</code>, mathematical status <code>dynamics_action_or_variation_missing</code>, and physical status <code>no_field_equation_derivation</code>.</td>
+              <td>Later bounded packets may use this row only as a blocked-target boundary condition.</td>
+              <td>No Einstein equations, benchmark promotion, or completed derivation follows.</td>
+              <td>Blocked until upstream dynamics, action, variation, matter coupling, and protected authority are established or lawfully routed.</td>
+            </tr>
+            <tr>
+              <td>Benchmark promotion</td>
+              <td>No benchmark promotion from scoped evidence/precondition alone.</td>
+              <td>The status is limited to control status <code>blocked</code>, mathematical status <code>upstream_burdens_missing</code>, and physical status <code>no_exact_gr_benchmark_promotion</code>.</td>
+              <td>Later bounded packets may use this row only as a blocked-target boundary condition.</td>
+              <td>No benchmark promotion, benchmark Gate Chair closure, or completed derivation follows.</td>
+              <td>Blocked by upstream derivation burdens and protected authority.</td>
+            </tr>
+            <tr>
+              <td>Finite toy metric response</td>
+              <td>Frozen local route context only.</td>
+              <td>The finite toy route failed tag-removal stress and is frozen locally.</td>
+              <td>Use only as a local frozen-negative boundary and redesign signal.</td>
+              <td>It is not <code>g_eff</code> scope expansion, matter-coupling derivation, Einstein equations, benchmark promotion, completed derivation, global theory rejection, or future source-extension impossibility.</td>
+              <td>Route is frozen or must be redesigned before any broader GR use.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sources" class="source-list" data-explainer-control="source_materials_section">
+      <h2>Source Materials</h2>
+      <ul>
+        <li data-source-path="research_control/current_frontier.md"><code>research_control/current_frontier.md</code></li>
+        <li data-source-path="output/compact_current_frontier_v16.yaml"><code>output/compact_current_frontier_v16.yaml</code></li>
+        <li data-source-path="registries/DISTANCE_TO_GR_LEDGER.csv"><code>registries/DISTANCE_TO_GR_LEDGER.csv</code></li>
+        <li data-source-path="registries/METRIC_USE_LEDGER.csv"><code>registries/METRIC_USE_LEDGER.csv</code></li>
+        <li data-source-path="registries/CLAIM_BOUNDARY_REGISTRY.csv"><code>registries/CLAIM_BOUNDARY_REGISTRY.csv</code></li>
+        <li data-source-path="research_control/design/distance_to_gr_status_aliases.yaml"><code>research_control/design/distance_to_gr_status_aliases.yaml</code></li>
+        <li data-source-path="research_control/design/accepted_status_calibration_v1.yaml"><code>research_control/design/accepted_status_calibration_v1.yaml</code></li>
+        <li data-source-path="research_control/design/public_status_exists_does_not_exist_source_spec.md"><code>research_control/design/public_status_exists_does_not_exist_source_spec.md</code></li>
+        <li data-source-path="research_control/handoffs/handoff-0652.yaml"><code>research_control/handoffs/handoff-0652.yaml</code></li>
+      </ul>
+    </section>
+
+    <section id="scope" class="scope">
+      <h2>Reader Scope</h2>
+      <p>Reader scope: proof-state dashboard only. It does not change the Distance-to-GR ledger, certify a proof, adopt a source law, derive matter coupling, derive Einstein equations, promote benchmark status, issue a Gate Chair verdict, complete the derivation, or make generated public outputs into scientific authority.</p>
+    </section>
+
+    <footer>
+      Generated from <code>markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md</code>. Authority remains with tracked source files and registries.
+    </footer>
+  </main>
+</body>
+</html>
