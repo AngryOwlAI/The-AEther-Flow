@@ -1,0 +1,28 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260706-001"
+job_id: "AJ-RT-20260706-001-001"
+status: "completed"
+artifact_role: "child_analysis"
+claim_boundary:
+  detector_semantics_adopted: false
+  empirical_detector_protocol_imported: false
+  target_metric_imported: false
+  matter_coupling_derived: false
+analysis_summary: "The problem statement must separate ontology model and empirical recovery. Detector semantics normally connects physical measurement protocols to readings but P4 cannot import those protocols as source premises. The source-side replacement must be a formally stated internal interface and certificate burden whose success remains draft/control until later audit stress and any protected review."
+forbidden_imports:
+  - "empirical detector protocol"
+  - "measurement outcome as source premise"
+  - "proper-time normalization"
+  - "target Lorentzian metric"
+  - "stress-energy semantics"
+  - "matter action"
+  - "benchmark fit"
+ontology_law_selector_condition: "Use an ontology-law selector only if the current ontology does not derive a derivation-critical source-side readout law selector discriminator transition rule or robustness rule required by the matter_coupling milestone."
+non_conclusions:
+  - "problem statement as detector semantics"
+  - "source-side replacement target as adopted source law"
+  - "DetPlaceholder(E) as physical detector semantics"
+  - "P4-T01 as matter-coupling derivation"
+selected_next_route: "constructive_replacement"
+next_plan_task_id: "P4-T02"

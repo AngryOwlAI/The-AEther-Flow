@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-059`
-- Latest handoff: `handoff-0632`
-- Current status: `v17_p3_t06_acceptance_calibration_red_team_pass_with_advisory_no_physics_delta`
+- Active task: `RT-20260706-001`
+- Latest handoff: `handoff-0633`
+- Current status: `v17_p4_t01_detector_semantics_replacement_problem_statement_completed_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p4_t01_detector_semantics_replacement_problem_statement`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v17_p4_t02_detector_semantics_replacement_candidate_or_obstruction`
+- Role family: `candidate-constructor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: State the detector-semantics replacement problem after accepted-status calibration.
+- Milestone burden: Construct one source-side detector-replacement candidate or record one precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -44,8 +44,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9bd805ad0a1cc074f0037170032f35ae3f1f03fe6c521ecaba0bf3f243471b17`
-- JSON SHA-256: `c083b740f3ecb2b2e84bedfa3e6dfb995055c691069f4fb572d032ecbb0fa236`
+- YAML SHA-256: `fa9300c8effb7ea5862e5fe9e24a2f776b6b9db423c768e70f14c2865696ed86`
+- JSON SHA-256: `6b511dec0af605de1e1f06789b738ba14b18caa8672ea0ce64d64fa24cec1e2a`
 
 ## Authority Warning
 

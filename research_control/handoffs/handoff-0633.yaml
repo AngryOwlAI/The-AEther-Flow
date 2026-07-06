@@ -1,0 +1,70 @@
+handoff_id: "handoff-0633"
+created_at: "2026-07-06T04:21:50Z"
+task_id: "RT-20260706-001"
+decision_id: "DDR-20260706-001"
+job_id: "AJ-RT-20260706-001-001"
+completion_path: "research_control/tasks/RT-20260706-001/jobs/completions/AJC-AJ-RT-20260706-001-001.yaml"
+source_task_id: "RT-20260706-001"
+source_job_id: "AJ-RT-20260706-001-001"
+source_completion_id: "AJC-AJ-RT-20260706-001-001"
+status: "completed"
+summary: "RT-20260706-001 completed one bounded v17 P4-T01 detector-semantics replacement problem statement. It selected constructive P4-T02 continuation with obstruction branch preserved and no detector-semantics adoption or physics promotion."
+next_action: "Run one bounded v17 P4-T02 source-side detector-replacement candidate or scoped obstruction packet."
+loop_risk_route: "v17_p4_t01_detector_semantics_replacement_problem_statement_to_p4_t02_no_adoption"
+claim_boundary:
+  allowed_next_scope: "P4-T02 source-side detector-replacement candidate or scoped obstruction with no adoption or physics promotion"
+  selected_route_class: "constructive_replacement"
+  obstruction_branch_preserved: true
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+blocked_claims:
+  - "P4-T01 problem statement as detector semantics"
+  - "P4-T01 problem statement as source-law adoption"
+  - "P4-T01 problem statement as coupling-law adoption"
+  - "P4-T01 problem statement as matter-coupling derivation"
+  - "P4-T01 problem statement as benchmark promotion"
+  - "P4-T01 problem statement as completed derivation"
+detector_replacement_problem:
+  artifact_path: "research_control/tasks/RT-20260706-001/artifacts/detector_semantics_replacement_problem_statement_v1.md"
+  selected_next_route_class: "constructive_replacement"
+  selected_next_plan_task_id: "P4-T02"
+  constructive_witness_floor_defined: true
+  scoped_obstruction_floor_defined: true
+  ontology_law_selector_condition_defined: true
+  detector_semantics_adopted: false
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-001 defines the detector-replacement burden only and does not adopt detector semantics source law coupling law matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation."
+selected_next_route:
+  route_id: "v17_p4_t02_detector_semantics_replacement_candidate_or_obstruction"
+  plan_task_id: "P4-T02"
+  role_family: "candidate-constructor@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Construct one source-side detector-replacement candidate or record one precise obstruction."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+validation:
+  task_local_validator: "PENDING_POST_WRITE"
+  global_research_control_validation: "PENDING_POST_WRITE"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

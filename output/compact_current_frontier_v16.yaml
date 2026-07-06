@@ -1,23 +1,23 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0632.yaml"
+  - "research_control/handoffs/handoff-0633.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "research_control/current_frontier.md"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
   - "research_control/design/accepted_status_calibration_v1.yaml"
 active_state:
-  active_task_id: "RT-20260705-059"
-  latest_handoff_id: "handoff-0632"
-  current_status: "v17_p3_t06_acceptance_calibration_red_team_pass_with_advisory_no_physics_delta"
+  active_task_id: "RT-20260706-001"
+  latest_handoff_id: "handoff-0633"
+  current_status: "v17_p4_t01_detector_semantics_replacement_problem_statement_completed_no_adoption"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 next_route:
-  route_id: "v17_p4_t01_detector_semantics_replacement_problem_statement"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "v17_p4_t02_detector_semantics_replacement_candidate_or_obstruction"
+  role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "matter_coupling"
-  milestone_burden: "State the detector-semantics replacement problem after accepted-status calibration."
+  milestone_burden: "Construct one source-side detector-replacement candidate or record one precise obstruction."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false

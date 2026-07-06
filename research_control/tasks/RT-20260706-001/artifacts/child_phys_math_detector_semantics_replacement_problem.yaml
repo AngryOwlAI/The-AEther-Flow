@@ -1,0 +1,33 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260706-001"
+job_id: "AJ-RT-20260706-001-001"
+status: "completed"
+artifact_role: "child_analysis"
+claim_boundary:
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  source_law_adopted: false
+analysis_summary: "The detector replacement problem can be stated as a source-side readout-interface and certificate-burden problem. Existing K_E work leaves DetPlaceholder(E) missing-and-blocked. A replacement must provide source-domain records source readout tokens certificate support no-target guards finite/local witness behavior and fail-closed obstruction criteria."
+required_source_side_burdens:
+  - "source_domain"
+  - "readout_interface"
+  - "source_readout_token_family"
+  - "certificate_family"
+  - "no_empirical_protocol_import"
+  - "no_proper_time_import"
+  - "no_target_metric_import"
+  - "finite_local_witness"
+constructive_witness_floor:
+  - "finite source event or source-record family"
+  - "readout interface from source records to source tokens"
+  - "certificate that preserves declared scope"
+  - "no-target import guard pass"
+  - "failure branch for missing or malformed certificates"
+obstruction_floor:
+  - "exact missing burden named"
+  - "scope limited to current route"
+  - "global no-go claim rejected"
+selected_next_route: "constructive_replacement"
+next_plan_task_id: "P4-T02"
