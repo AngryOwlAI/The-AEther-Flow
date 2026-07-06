@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-014` and `handoff-0646`.
+`RT-20260706-015` and `handoff-0647`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-014` |
-| Latest handoff ID | `handoff-0646` |
-| Current status | `v17_p7_t02_proof_normal_form_initial_extraction_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-015` |
+| Latest handoff ID | `handoff-0647` |
+| Current status | `v17_p7_t03_proof_normal_form_validator_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p7 t02 proof normal form initial extraction completed no physics delta |
+| Current route family | v17 p7 t03 proof normal form validator completed no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted as scoped evidence/precondition only; not derived or adopted |
-| Required next authority | P7-T03 may validate proof-normal-form registry rows and add validator tooling or reports without changing physics authority. |
-| Next recommended action | Run one bounded v17 P7-T03 proof_normal_form_validator packet under validator-engineer@0.1.0 to validate schema compliance, high-risk non-conclusions, forbidden-premise separation, scientific_gate scope, and support-only authority. |
+| Required next authority | P7-T04 may render proof-normal-form summaries into output/proof_normal_form_index.json and wiki/indexes/proof_normal_form_index.md without changing physics authority. |
+| Next recommended action | Run one bounded v17 P7-T04 proof_normal_form_reader_surface packet under project-control-maintainer@0.2.0 to render proof-normal-form summaries for agent retrieval without changing authority. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-014/00_TASK.yaml`.
-- Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0646.yaml`.
-- Latest handoff summary: RT-20260706-014 completed one bounded v17 P7-T02 proof-normal-form initial extraction packet. It populated seven priority proof-normal-form rows while preserving source authority, non-conclusions, and no Distance-to-GR ledger delta.
-- Current route family: v17 p7 t02 proof normal form initial extraction completed no physics delta.
-- Next recommended action: Run one bounded v17 P7-T03 proof_normal_form_validator packet under validator-engineer@0.1.0 to validate schema compliance, high-risk non-conclusions, forbidden-premise separation, scientific_gate scope, and support-only authority.
+- Active task path: `research_control/tasks/RT-20260706-015/00_TASK.yaml`.
+- Active task objective: Add deterministic validation for proof-normal-form registry schema compliance, high-risk non-conclusions, forbidden-premise separation, scientific_gate scope, and support-only authority boundaries.
+- Latest handoff path: `research_control/handoffs/handoff-0647.yaml`.
+- Latest handoff summary: RT-20260706-015 completed one bounded v17 P7-T03 proof-normal-form validator packet. It added deterministic registry validation and focused tests while preserving source authority, non-conclusions, and no Distance-to-GR ledger delta.
+- Current route family: v17 p7 t03 proof normal form validator completed no physics delta.
+- Next recommended action: Run one bounded v17 P7-T04 proof_normal_form_reader_surface packet under project-control-maintainer@0.2.0 to render proof-normal-form summaries for agent retrieval without changing authority.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P7-T03 proof_normal_form_validator packet under validator-engineer@0.1.0 to validate schema compliance, high-risk non-conclusions, forbidden-premise separation, scientific_gate scope, and support-only authority.
+Run one bounded v17 P7-T04 proof_normal_form_reader_surface packet under project-control-maintainer@0.2.0 to render proof-normal-form summaries for agent retrieval without changing authority.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,22 +301,23 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-014`;
-- latest handoff: `handoff-0646`;
-- current status: `v17_p7_t02_proof_normal_form_initial_extraction_completed_no_physics_delta`;
+- active task: `RT-20260706-015`;
+- latest handoff: `handoff-0647`;
+- current status: `v17_p7_t03_proof_normal_form_validator_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
+- latest handoff validation `focused_unit_tests`: PASS;
 - latest handoff validation `global_research_control_validation`: PENDING;
-- latest handoff validation `task_local_validator`: PASS;
+- latest handoff validation `proof_normal_form_registry_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0646.yaml`
-- `research_control/tasks/RT-20260706-014/00_TASK.yaml`
+- `research_control/handoffs/handoff-0647.yaml`
+- `research_control/tasks/RT-20260706-015/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -332,7 +333,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0646*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0647*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

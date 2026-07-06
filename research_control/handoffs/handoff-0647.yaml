@@ -1,0 +1,71 @@
+handoff_id: "handoff-0647"
+created_at: "2026-07-06T11:03:22Z"
+task_id: "RT-20260706-015"
+decision_id: "DDR-20260706-015"
+job_id: "AJ-RT-20260706-015-001"
+completion_path: "research_control/tasks/RT-20260706-015/jobs/completions/AJC-AJ-RT-20260706-015-001.yaml"
+source_task_id: "RT-20260706-015"
+source_job_id: "AJ-RT-20260706-015-001"
+source_completion_id: "AJC-AJ-RT-20260706-015-001"
+status: "completed"
+summary: "RT-20260706-015 completed one bounded v17 P7-T03 proof-normal-form validator packet. It added deterministic registry validation and focused tests while preserving source authority, non-conclusions, and no Distance-to-GR ledger delta."
+next_action: "Run one bounded v17 P7-T04 proof_normal_form_reader_surface packet under project-control-maintainer@0.2.0 to render proof-normal-form summaries for agent retrieval without changing authority."
+loop_risk_route: "v17_p7_t03_proof_normal_form_validator_completed_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P7-T04 may render proof-normal-form summaries into output/proof_normal_form_index.json and wiki/indexes/proof_normal_form_index.md without changing physics authority."
+  completed_plan_task_id: "P7-T03"
+  selected_next_plan_task_id: "P7-T04"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  plan_role_family: "tooling-engineer@0.1.0"
+  selected_next_packet_type: "proof_normal_form_reader_surface"
+  validator_script_added: true
+  focused_tests_added: true
+  proof_normal_form_rows_modified: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P7-T03 validator pass as proof authority"
+  - "P7-T03 validator pass as TeX authority replacement"
+  - "P7-T03 validator pass as Gate Chair authority"
+  - "P7-T03 validator pass as source-law adoption"
+  - "P7-T03 validator pass as matter-coupling derivation"
+  - "P7-T03 validator pass as Einstein equations"
+  - "P7-T03 validator pass as benchmark promotion"
+  - "P7-T03 validator pass as completed derivation"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted as scoped evidence/precondition only; not derived or adopted"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-015 adds validator tooling only and does not update Distance-to-GR ledger rows."
+selected_next_route:
+  route_id: "v17_p7_t04_proof_normal_form_reader_surface"
+  plan_task_id: "P7-T04"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Render proof-normal-form summaries for agent retrieval without changing authority."
+  required_outputs:
+    - "wiki/indexes/proof_normal_form_index.md"
+    - "output/proof_normal_form_index.json"
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  proof_normal_form_registry_validator: "PASS"
+  focused_unit_tests: "PASS"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
