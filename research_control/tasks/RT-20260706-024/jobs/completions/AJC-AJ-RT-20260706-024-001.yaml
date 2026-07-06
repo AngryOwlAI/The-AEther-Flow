@@ -1,0 +1,282 @@
+completion_id: "AJC-AJ-RT-20260706-024-001"
+job_id: "AJ-RT-20260706-024-001"
+task_id: "RT-20260706-024"
+source_role_id: "external-red-team-reviewer"
+completed_at: "2026-07-06T15:18:25Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P9-T04"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Ran the public proof-state dashboard red-team review and returned pass_no_repair_required with no repair route."
+  downstream_tasks_not_implemented:
+    - "P10-T01 task-index schema"
+    - "P10-T02 task-index generator"
+    - "P10 downstream implementation tasks"
+    - "source-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p9_completed: true
+output_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-024/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-024/DDR-20260706-024.md"
+  - "research_control/tasks/RT-20260706-024/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-024/artifacts/child_phys_math_proof_state_dashboard_red_team_review.yaml"
+  - "research_control/tasks/RT-20260706-024/artifacts/child_phys_phil_proof_state_dashboard_red_team_review.yaml"
+  - "research_control/tasks/RT-20260706-024/artifacts/parent_conflict_review_proof_state_dashboard_red_team_review.yaml"
+  - "research_control/tasks/RT-20260706-024/artifacts/parent_fusion_notes_proof_state_dashboard_red_team_review.md"
+  - "research_control/tasks/RT-20260706-024/artifacts/proof_state_dashboard_red_team_review_v1.md"
+  - "research_control/tasks/RT-20260706-024/artifacts/validate_p9_t04_proof_state_dashboard_red_team_review.py"
+  - "research_control/tasks/RT-20260706-024/artifacts/p9_t04_proof_state_dashboard_red_team_review_report.json"
+  - "research_control/tasks/RT-20260706-024/artifacts/p9_t04_proof_state_dashboard_red_team_review_receipt.md"
+  - "research_control/tasks/RT-20260706-024/jobs/AJ-RT-20260706-024-001.yaml"
+  - "research_control/tasks/RT-20260706-024/jobs/completions/AJC-AJ-RT-20260706-024-001.yaml"
+  - "research_control/tasks/RT-20260706-024/roles/external-red-team-reviewer@0.1.0--RT-20260706-024.yaml"
+  - "research_control/handoffs/handoff-0656.yaml"
+  - "research_control/handoffs/handoff-0656.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0655.yaml"
+  - "research_control/handoffs/handoff-0655.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+  - "github-facing/proof-state-dashboard-explainer.md"
+  - "html/proof-state-dashboard-explainer.html"
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+  - "registries/PUBLICATION_BRIEF_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=680 relationship_row_count=3487 semantic_row_count=680 vault_row_count=680"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"proof state dashboard red team review overclaim underclaim reader comprehension\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17,MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260706-023 latest_handoff=handoff-0655 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json research_control/tasks/RT-20260706-024/artifacts/proof_state_dashboard_red_team_review_v1.md | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260706-024/artifacts/validate_p9_t04_proof_state_dashboard_red_team_review.py --write-report --json | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 680
+    relationship_row_count: 3487
+    semantic_row_count: 680
+    vault_row_count: 680
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"proof state dashboard red team review overclaim underclaim reader comprehension\" --limit 10 --json"
+      query_type: "search"
+      query_text: "proof state dashboard red team review overclaim underclaim reader comprehension"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      generated_retrieval_ids_seen:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "SEMANTIC-MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "fe44980fd632a1c40621cc0df1f747d9e12542752d4f1226152070d19416f947"
+    - object_id: "MD-HTML-SPEC-PROOF-STATE-DASHBOARD-EXPLAINER-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+      source_hash: "1654515d82ab130ea9d1b18222ff5f9bbd20cfb710bdd9f81bb223cfc9eef4b9"
+    - object_id: "MD-PROOF-STATE-DASHBOARD-PUBLICATION-BRIEF"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+      source_hash: "02ff8e369193af06b6af6a21e9b7d060e5ad855cee1a51936d3724ff4488ffb1"
+    - object_id: "MD-GITHUB-FACING-PROOF-STATE-DASHBOARD-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "github-facing/proof-state-dashboard-explainer.md"
+      source_hash: "e21367b47cfb632d74e439eb5d8f08256dc06620e9000697202a9da746412b66"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory search returned v17 implementation plan and current frontier canonical source objects plus generated retrieval echoes"
+      - "continue_research.py resolved handoff-0655 to one bounded P9-T04 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "global red-team review artifact validator PASS"
+      - "task-local P9-T04 validator PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "no dashboard renderer was changed by this task"
+      - "render_current_frontier and compact-frontier validators required after state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system required after completion"
+      - "bootstrap_memory_system --validate-only required after completion"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed required after completion"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_red_team_review_artifact PASS"
+      - "task-local P9-T04 validator PASS"
+      - "remaining repository validators required before checkpoint"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command required before transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+review_result: "pass_no_repair_required"
+repair_required: false
+repair_route: ""
+coherent_resolution_summary: "P9-T04 found no blocking overclaim underclaim or reader-comprehension defect in the proof-state dashboard as written. It records one nonblocking source-anchor advisory and routes to P10-T01 with no repair packet."
+next_recommendation: "Run one bounded v17 P10-T01 task-index schema packet through an active project-control role overlay."
+physics_progress_status:
+  status: "red_team_review_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Review proof-state dashboard for overclaim, underclaim, and reader comprehension."
+  explanation: "This review attacks dashboard overread and underclaim risk but does not update the Distance-to-GR ledger or discharge a derivation burden."
+distance_to_gr_status:
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Review proof-state dashboard for overclaim, underclaim, and reader comprehension."
+  burden_matrix:
+    - burden: "M_src"
+      status_before: "accepted scoped source-only object"
+      status_after: "accepted scoped source-only object"
+      review_delta: "no blocking dashboard wording defect found"
+    - burden: "g_eff"
+      status_before: "accepted scoped source-extension object"
+      status_after: "accepted scoped source-extension object"
+      review_delta: "no unscoped metric or MetricData(E) adoption overclaim found"
+    - burden: "matter coupling"
+      status_before: "accepted_as_scoped_evidence_precondition"
+      status_after: "accepted_as_scoped_evidence_precondition"
+      review_delta: "no matter-coupling derivation or adoption created"
+    - burden: "Einstein equations"
+      status_before: "not_started"
+      status_after: "not_started"
+      review_delta: "no stress-energy matter action or field-equation authority created"
+    - burden: "benchmark promotion"
+      status_before: "blocked"
+      status_after: "blocked"
+      review_delta: "no benchmark authority created"
+new_mathematical_payload:
+  - payload_id: "p9_t04_dashboard_status_entailment_review_matrix"
+    payload_type: "dependency_map_update"
+    status: "draft_control_review"
+    artifact_path: "research_control/tasks/RT-20260706-024/artifacts/proof_state_dashboard_red_team_review_v1.md"
+    summary: "Status-entailment review matrix confirms that dashboard wording separates scoped positive status from blocked physical overread and generated-output authority."
+freeze_criteria_status:
+  evaluated: true
+  repeated_burden_or_scoped_obstruction: false
+  freeze_recommended: false
+  reason: "P9-T04 is a dashboard language review and created no repeated-burden or scoped-obstruction result."
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P10-T01 task-index schema"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "P9-T04 is an external dashboard review packet and does not change Distance-to-GR ledger status."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260706-024/artifacts/child_phys_math_proof_state_dashboard_red_team_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260706-024/artifacts/child_phys_phil_proof_state_dashboard_red_team_review.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260706-024/artifacts/parent_conflict_review_proof_state_dashboard_red_team_review.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260706-024/artifacts/proof_state_dashboard_red_team_review_v1.md"
+    fusion_notes_path: "research_control/tasks/RT-20260706-024/artifacts/parent_fusion_notes_proof_state_dashboard_red_team_review.md"
+    summary: "The parent accepts the mathematical row-level entailment review and philosophical authority-separation review. The fused result is pass_no_repair_required."
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "detector-semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "generated-output authority"
+  summary: "P9-T04 is an adversarial dashboard review. It does not promote downstream physics benchmark or generated-output authority."
+project_improvement_signals: []

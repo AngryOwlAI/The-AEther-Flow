@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-023`
-- Latest handoff: `handoff-0655`
-- Current status: `v17_p9_t03_proof_state_dashboard_front_door_integrated_no_physics_delta`
+- Active task: `RT-20260706-024`
+- Latest handoff: `handoff-0656`
+- Current status: `v17_p9_t04_proof_state_dashboard_red_team_pass_no_repair_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p9_t04_proof_state_dashboard_red_team_review`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v17_p10_t01_research_control_task_index_schema`
+- Role family: `project-control-maintainer@0.2.0 task overlay`
 - Target milestone: `matter_coupling`
-- Milestone burden: Review proof-state dashboard for overclaim, underclaim, and reader comprehension.
+- Milestone burden: Define generated task-index schema from tracked task records.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `44d2b293564dd5965a5661b799fb9a41a8e83c84922c5a195580cbae14b8d5df`
-- JSON SHA-256: `562a5d51d6c7308adedde1877a278625614d858d3eaee68c15a511c08866eabf`
+- YAML SHA-256: `61866893b40e02e63ee190771b28f102dd044c032c19ae15b4e9ba626ce81cde`
+- JSON SHA-256: `e507071ddb42a4be96f8c4e3089d2c5f70dc0b86d5526294d036d20032950af5`
 
 ## Authority Warning
 
