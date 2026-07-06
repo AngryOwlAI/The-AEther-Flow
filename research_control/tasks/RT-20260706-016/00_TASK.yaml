@@ -1,0 +1,53 @@
+task_id: "RT-20260706-016"
+task_type: "proof_normal_form_reader_surface"
+status: "completed"
+created_at: "2026-07-06T11:26:31Z"
+updated_at: "2026-07-06T11:26:31Z"
+closed_at: "2026-07-06T11:26:31Z"
+parent_task_id: "RT-20260706-015"
+parent_handoff_id: "handoff-0647"
+decision_id: "DDR-20260706-016"
+job_id: "AJ-RT-20260706-016-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260706-016"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This P7-T04 reader-surface packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T04"
+  plan_task_name: "Proof-normal-form reader surface"
+objective: "Render proof-normal-form summaries for agent retrieval into deterministic JSON and Markdown reader surfaces without changing source authority or proof status."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Render proof-normal-form summaries for agent retrieval without changing authority."
+closure_status: "v17_p7_t04_proof_normal_form_reader_surface_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P7-T04 renderer script, focused renderer tests, output/proof_normal_form_index.json, wiki/indexes/proof_normal_form_index.md, and task-local receipt only."
+  no_physics_delta: true
+  immediate_v17_next_plan_task_id: "P8-T01"
+  proof_authority: false
+  replaces_source_artifacts: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/render_proof_normal_form_index.py"
+  - "tests/test_render_proof_normal_form_index.py"
+  - "output/proof_normal_form_index.json"
+  - "wiki/indexes/proof_normal_form_index.md"
+  - "research_control/tasks/RT-20260706-016/artifacts/proof_normal_form_reader_surface_receipt.md"
+next_recommended_action: "Run one bounded v17 P8-T01 support_only_formalization_target_selector packet under theoretical-continuation-selector@0.1.0 to select exactly one low-level support-only formalization target."
+notes: "RT-20260706-016 completes P7-T04 by rendering a deterministic proof-normal-form reader index from PROOF_NORMAL_FORM_REGISTRY. It records no Distance-to-GR ledger status update and no physics claim promotion."
+documentation_impact_id: "DI-RT-20260706-016-001"

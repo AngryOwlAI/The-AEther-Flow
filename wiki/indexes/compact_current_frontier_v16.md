@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-015`
-- Latest handoff: `handoff-0647`
-- Current status: `v17_p7_t03_proof_normal_form_validator_completed_no_physics_delta`
+- Active task: `RT-20260706-016`
+- Latest handoff: `handoff-0648`
+- Current status: `v17_p7_t04_proof_normal_form_reader_surface_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p7_t04_proof_normal_form_reader_surface`
+- Route ID: `v17_p8_t01_support_only_formalization_target_selector`
 - Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Render proof-normal-form summaries for agent retrieval without changing authority.
+- Milestone burden: Select one low-level formal fragment for support-only mechanization.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `53b057d7384ee2de237397e2c81ddbe6fc7a858bccd4f5114f31fc4444f3d682`
-- JSON SHA-256: `473ed4ea2a583bf50b682ff85efdd8565892d8e02cad7d38459fb5442f71de16`
+- YAML SHA-256: `934c676f7ce6f56c8b3f4686af6a3dceecb53fbf5e89e003fe0fad8a08d88964`
+- JSON SHA-256: `b3494ac6578bf2fe763b95dea5d39cfd5b56f89b0934daa656c7008087d48100`
 
 ## Authority Warning
 

@@ -1,0 +1,166 @@
+completion_id: "AJC-AJ-RT-20260706-016-001"
+job_id: "AJ-RT-20260706-016-001"
+task_id: "RT-20260706-016"
+decision_id: "DDR-20260706-016"
+status: "completed"
+completed_at: "2026-07-06T11:26:31Z"
+completed_by_role: "project-control-maintainer@0.2.0--RT-20260706-016"
+plan_task_id: "P7-T04"
+objective_result: "completed"
+summary: "Rendered deterministic proof-normal-form JSON and Markdown reader surfaces for v17 P7-T04 while preserving source authority and no physics delta."
+artifacts:
+  - "scripts/research_control/render_proof_normal_form_index.py"
+  - "tests/test_render_proof_normal_form_index.py"
+  - "output/proof_normal_form_index.json"
+  - "wiki/indexes/proof_normal_form_index.md"
+  - "research_control/tasks/RT-20260706-016/artifacts/proof_normal_form_reader_surface_receipt.md"
+validation:
+  proof_normal_form_index_render: "PASS"
+  proof_normal_form_index_check: "PASS"
+  focused_unit_tests: "PASS"
+  proof_normal_form_registry_validator: "PASS"
+  json_hash: "58ee49d547f6b6dffef649cfd64c3e1197da3f9089f312066dc23e9b70f1a4a3"
+  markdown_hash: "d7c965d3dc13942f94491dc29b236a362f0b9af04c04545649ca3674aa660ee8"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-016 updates project-control reader surfaces only and does not adopt or derive matter coupling, stress-energy, matter action, Einstein equations, benchmark promotion, or completed derivation."
+claim_boundary:
+  proof_authority: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  replaces_source_artifacts: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P7-T04 proof-normal-form index as proof authority"
+  - "P7-T04 proof-normal-form index as TeX authority replacement"
+  - "P7-T04 proof-normal-form index as Gate Chair authority"
+  - "P7-T04 proof-normal-form index as source-law adoption"
+  - "P7-T04 proof-normal-form index as MetricData(E) adoption"
+  - "P7-T04 proof-normal-form index as g_eff scope expansion"
+  - "P7-T04 proof-normal-form index as matter-coupling derivation"
+  - "P7-T04 proof-normal-form index as Einstein equations"
+  - "P7-T04 proof-normal-form index as benchmark promotion"
+  - "P7-T04 proof-normal-form index as completed derivation"
+outputs:
+  receipt_path: "research_control/tasks/RT-20260706-016/artifacts/proof_normal_form_reader_surface_receipt.md"
+  renderer_path: "scripts/research_control/render_proof_normal_form_index.py"
+  tests_path: "tests/test_render_proof_normal_form_index.py"
+  json_index_path: "output/proof_normal_form_index.json"
+  markdown_index_path: "wiki/indexes/proof_normal_form_index.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=669 relationship_row_count=3429 semantic_row_count=669 vault_row_count=669"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-015 latest_handoff=handoff-0647 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/render_proof_normal_form_index.py --json output/proof_normal_form_index.json --markdown wiki/indexes/proof_normal_form_index.md | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_proof_normal_form_index.py --json output/proof_normal_form_index.json --markdown wiki/indexes/proof_normal_form_index.md --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python -m unittest tests.test_render_proof_normal_form_index | exit_code=0 | tests=3 status=OK"
+  - ".venv/bin/python scripts/research_control/validate_proof_normal_form_registry.py --json | exit_code=0 | status=PASS checked_row_count=7 high_risk_row_count=4 scientific_gate_row_count=3"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 669
+    relationship_row_count: 3429
+    semantic_row_count: 669
+    vault_row_count: 669
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"proof normal form reader surface\" --limit 10 --json"
+      query_type: "search"
+      query_text: "proof normal form reader surface"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "44c972741e4f4f7ec01acb56e5bc05f1fb9b5d959e1eead577bae959097d3571"
+    - object_id: "MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/formalization/proof_normal_form_schema_v1.md"
+      source_hash: "2fc9a142d3bd87aa485aa949cb21de76b301505ab823d42318a98f7089a74288"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "targeted memory search and lookup returned v17 plan and current-frontier evidence"
+      - "continue_research.py resolved handoff-0647 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "proof-normal-form index renderer PASS"
+      - "proof-normal-form index check PASS"
+      - "focused unittest suite PASS"
+      - "proof-normal-form registry validator PASS"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "global post-write validators not yet run in this receipt snapshot"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "frontier and graph renderers not yet run in this receipt snapshot"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap not yet run in this receipt snapshot"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "claim-language linter not yet run in this receipt snapshot"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  reader_surface_update_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P7-T04 reader-surface packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+next_recommendation: "Run one bounded v17 P8-T01 support-only formalization target selector packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+verdict: "v17_p7_t04_proof_normal_form_reader_surface_completed_no_physics_delta"
