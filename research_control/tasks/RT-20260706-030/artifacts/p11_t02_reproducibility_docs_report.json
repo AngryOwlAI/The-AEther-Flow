@@ -1,0 +1,48 @@
+{
+  "checked_paths": [
+    "CONTRIBUTING.md",
+    "requirements-dev.txt",
+    "requirements.txt"
+  ],
+  "errors": [],
+  "no_new_third_party_dependencies": true,
+  "operational_receipt_only": true,
+  "physics_promotion_authorized": false,
+  "physics_proof_authority": false,
+  "required_phrases_checked": [
+    "CPython 3.12",
+    "python3.12 -m venv .venv",
+    ".venv/bin/python -m pip install -r requirements-dev.txt",
+    "make PYTHON=.venv/bin/python validate-project-control",
+    "bootstrap_memory_system.py --validate-only",
+    "continue_research_memory_preflight.py --json",
+    "continue_research.py",
+    "bootstrap_memory_system.py",
+    "validate_research_control.py --check-diff",
+    "Do not hand-edit generated wiki notes",
+    ".local/",
+    "operational receipt",
+    "not physics proof authority",
+    "does not establish source-law adoption",
+    "MetricData(E)",
+    "g_eff",
+    "matter coupling",
+    "Einstein equations",
+    "benchmark promotion",
+    "Gate Chair",
+    "completed derivation"
+  ],
+  "required_sections": [
+    "Supported Python",
+    "Local Environment",
+    "Validation Commands",
+    "Generated-Output Policy",
+    "Interpreting Validation"
+  ],
+  "requirements_dev_active_lines": [
+    "-r requirements.txt"
+  ],
+  "schema_id": "p11_t02_reproducibility_docs_validation_report_v1",
+  "status": "PASS",
+  "warnings": []
+}

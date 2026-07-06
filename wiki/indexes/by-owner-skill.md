@@ -181,6 +181,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-CLAIM-GATES-PUBLICATION-BRIEF` `wiki/markdown/md-claim-gates-publication-brief.md`
+- `WIKI-MD-CONTRIBUTING` `wiki/markdown/md-contributing.md`
 - `WIKI-MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `wiki/markdown/md-director-agentjob-lifecycle-publication-brief.md`
 - `WIKI-MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `wiki/markdown/md-documentation-curator-publication-process-publication-brief.md`
 - `WIKI-MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md`
@@ -871,6 +872,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AGENTS` `AGENTS.md`
 - `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
+- `MD-CONTRIBUTING` `CONTRIBUTING.md`
 - `MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `.agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md`
 - `MD-MISSING-SOURCE-LAW-INVENTORY` `research_control/missing_laws/missing_source_law_inventory.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`

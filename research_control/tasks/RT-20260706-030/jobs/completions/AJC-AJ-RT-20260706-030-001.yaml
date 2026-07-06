@@ -1,0 +1,200 @@
+completion_id: "AJC-AJ-RT-20260706-030-001"
+job_id: "AJ-RT-20260706-030-001"
+task_id: "RT-20260706-030"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-06T19:39:52Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P11-T02"
+  plan_phase_id: "P11"
+  implemented_task_scope: "Created CONTRIBUTING.md and requirements-dev.txt to document Python version environment setup validation commands generated-output policy and operational-only validator interpretation."
+  phase_p11_completed: false
+  completed_plan_task_id: "P11-T02"
+  selected_next_plan_task_id: "P11-T03"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "CONTRIBUTING.md"
+  - "requirements-dev.txt"
+  - "research_control/tasks/RT-20260706-030/artifacts/validate_p11_t02_reproducibility_docs.py"
+  - "research_control/tasks/RT-20260706-030/artifacts/p11_t02_reproducibility_docs_report.json"
+  - "research_control/tasks/RT-20260706-030/artifacts/p11_t02_reproducibility_docs_receipt.md"
+  - "research_control/tasks/RT-20260706-030/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-030/jobs/completions/AJC-AJ-RT-20260706-030-001.yaml"
+  - "research_control/handoffs/handoff-0662.yaml"
+  - "research_control/handoffs/handoff-0662.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0661.yaml"
+  - "requirements.txt"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=682 relationship_row_count=3499 semantic_row_count=682 vault_row_count=682"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"python environment reproducibility documentation\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260706-030/artifacts/validate_p11_t02_reproducibility_docs.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260706-030/artifacts/validate_p11_t02_reproducibility_docs.py --output research_control/tasks/RT-20260706-030/artifacts/p11_t02_reproducibility_docs_report.json --json | exit_code=0 | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "targeted memory search returned current-frontier, v17 plan, and generated task-index navigation hits"
+      - "canonical v17 plan P11-T02, backlog P11-T02, handoff-0661, requirements, and role contracts were inspected before routing"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "CONTRIBUTING.md names CPython 3.12"
+      - "CONTRIBUTING.md documents local venv setup"
+      - "CONTRIBUTING.md documents validation commands"
+      - "CONTRIBUTING.md documents generated-output policy"
+      - "CONTRIBUTING.md states validator success is operational only"
+      - "requirements-dev.txt contains only -r requirements.txt as an active dependency line"
+      - "task-local reproducibility documentation validator report status PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier, compact frontier, task index, claim graph, and dependency graph are refreshed after handoff-0662 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only are required after adding the contributor guide and registered Markdown source row"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed claim-language surfaces preserve validation as operational receipt only and no physics delta"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validation is required after adding CONTRIBUTING.md, requirements-dev.txt, control records, and registry rows"
+      - "generated current-frontier, task-index, graph, and memory surfaces must be refreshed from tracked control state"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint_research_transaction must run after validators confirm the bounded P11-T02 transaction"
+      - "P11-T03 remains a future bounded packet and is not started by this completion"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+verdict: "v17_p11_t02_python_environment_reproducibility_docs_completed_next_p11_t03_no_physics_delta"
+coherent_resolution_summary: "RT-20260706-030 completed the v17 P11-T02 project-system reproducibility documentation packet by adding CONTRIBUTING.md and requirements-dev.txt."
+next_recommendation: "Run one bounded v17 P11-T03 full validation artifact collector packet."
+physics_progress_status:
+  status: "docs_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Document Python version, environment setup, and validation commands."
+  physics_promotion_authorized: false
+  explanation: "This packet adds operational reproducibility documentation only and does not change Distance-to-GR physics status."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: ""
+  new_status: ""
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P11-T03 full validation artifact collector"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation"
+    - "matter_coupling_adoption"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+reproducibility_documentation_receipts:
+  contributing_path: "CONTRIBUTING.md"
+  contributing_hash: "b04f65cf82df3638275c4495b7201573a1ba47dabf8fca7e17ade3be3a5a0670"
+  requirements_dev_path: "requirements-dev.txt"
+  requirements_dev_hash: "d36a504821c016637dfb496f08134fcb44bf027a490abd7132457e8c64253a2a"
+  required_content_present: true
+  no_new_third_party_dependencies: true
+  p11_t03_collector_created: false
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "documentation as physics proof authority"
+    - "validation as physics proof authority"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+  summary: "The reproducibility documentation is project-system guidance only and cannot promote scientific claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 682
+    relationship_row_count: 3499
+    semantic_row_count: 682
+    vault_row_count: 682
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"python environment reproducibility documentation\" --limit 10 --json"
+      query_type: "search"
+      query_text: "python environment reproducibility documentation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      navigation_support_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "f6476e61542c6a0842da124d04f5c0e89f8d0830158d90ac7394dd379eca87d2"
+    - object_id: "MD-CONTRIBUTING"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "CONTRIBUTING.md"
+      source_hash: "b04f65cf82df3638275c4495b7201573a1ba47dabf8fca7e17ade3be3a5a0670"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
