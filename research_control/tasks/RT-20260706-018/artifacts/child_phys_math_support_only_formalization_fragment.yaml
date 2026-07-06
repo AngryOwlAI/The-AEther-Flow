@@ -1,0 +1,34 @@
+artifact_id: "child_phys_math_support_only_formalization_fragment"
+task_id: "RT-20260706-018"
+job_id: "AJ-RT-20260706-018-001"
+execution_unit: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_target: "fail_closed_certificate_evaluation"
+formalization_id: "support_formalization_fail_closed_certificate_evaluation_v1"
+checker_id: "fail_closed_certificate_evaluation_support_formalization"
+checker_version: "0.1.0"
+mathematical_contract:
+  input: "finite CertificateRecord with declared source scope, domain, codomain, witness map, status, and forbidden-import flags"
+  positive_branch: "valid finite source certificate inside declared source scope returns declared_equivalence_allowed"
+  negative_branch_policy: "all missing malformed target-import detector-semantics process-authority downstream-physics generated-authority or scoped-evidence misuse branches return declared_equivalence_blocked with fail_closed=true"
+  finite_domain: true
+  deterministic: true
+proposition_results:
+  - "valid_source_certificate_allows_declared_equivalence_support_only"
+  - "missing_certificate_fails_closed"
+  - "malformed_certificate_fails_closed"
+  - "target_and_detector_imports_fail_closed"
+  - "downstream_physics_imports_fail_closed"
+  - "process_and_generated_authority_imports_fail_closed"
+  - "scoped_evidence_does_not_fill_certificate_slot"
+  - "all_negative_branches_are_fail_closed"
+source_alignment:
+  source_artifact_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  source_artifact_object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+  source_artifact_hash: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+  proof_normal_form_row_id: "PNF-RT-20260706-014-003"
+support_only: true
+proof_authority: false
+physics_promotion_authorized: false
+notes: "The mathematical child accepts the fragment as a finite support-only evaluator. It does not prove source-law existence, general EqSrc, matter coupling, or Einstein equations."

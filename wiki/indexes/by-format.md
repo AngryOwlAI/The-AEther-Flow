@@ -189,6 +189,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `research_control/design/validation_command_inventory_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
+- `MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README` `research_control/formalization/fail_closed_certificate_evaluation/README.md`
 - `MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `research_control/formalization/proof_normal_form_schema_v1.md`
 - `MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md`
 - `MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md`
@@ -252,6 +253,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR` `research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR` `research_control/tasks/RT-20260706-017/artifacts/parent_fusion_notes_support_only_formalization_target_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR` `research_control/tasks/RT-20260706-017/artifacts/support_only_formalization_target_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-FRAGMENT` `research_control/tasks/RT-20260706-018/artifacts/parent_fusion_notes_support_only_formalization_fragment.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-SUPPORT-ONLY-FORMALIZATION-FRAGMENT-RECEIPT` `research_control/tasks/RT-20260706-018/artifacts/support_only_formalization_fragment_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -869,6 +872,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `wiki/markdown/md-research-control-design-validation-command-inventory-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`
+- `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README` `wiki/markdown/md-research-control-formalization-fail-closed-certificate-evaluation-readme.md`
 - `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `wiki/markdown/md-research-control-formalization-proof-normal-form-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `wiki/markdown/md-research-control-p6-t01-payload-density-metrics-design.md`
@@ -932,6 +936,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-010-upstream-burden-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-017-parent-fusion-notes-support-only-formalization-target-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-017-support-only-formalization-target-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-FRAGMENT` `wiki/markdown/md-research-control-tasks-rt-20260706-018-parent-fusion-notes-support-only-formalization-fragment.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-SUPPORT-ONLY-FORMALIZATION-FRAGMENT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260706-018-support-only-formalization-fragment-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

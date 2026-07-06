@@ -1,0 +1,324 @@
+completion_id: "AJC-AJ-RT-20260706-018-001"
+job_id: "AJ-RT-20260706-018-001"
+task_id: "RT-20260706-018"
+decision_id: "DDR-20260706-018"
+status: "completed"
+completed_at: "2026-07-06T12:20:00Z"
+completed_by_role: "formalization-engineer@0.1.0--RT-20260706-018"
+plan_task_id: "P8-T02"
+objective_result: "completed"
+summary: "Mechanized fail_closed_certificate_evaluation as a support-only deterministic Python finite checker with focused tests and validation_report.json, preserving proof_authority=false and no Distance-to-GR ledger delta."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P8-T02"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Implemented the selected support-only formalization fragment, tests, and report; deferred traceability registry update to P8-T03."
+  phase_p8_completed: false
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/formalization/fail_closed_certificate_evaluation/README.md"
+  - "research_control/formalization/fail_closed_certificate_evaluation/fail_closed_certificate_evaluation.py"
+  - "research_control/formalization/fail_closed_certificate_evaluation/test_fail_closed_certificate_evaluation.py"
+  - "research_control/formalization/fail_closed_certificate_evaluation/validation_report.json"
+  - "research_control/tasks/RT-20260706-018/artifacts/support_only_formalization_fragment_receipt.md"
+  - "research_control/tasks/RT-20260706-018/artifacts/child_phys_math_support_only_formalization_fragment.yaml"
+  - "research_control/tasks/RT-20260706-018/artifacts/child_phys_phil_support_only_formalization_fragment.yaml"
+  - "research_control/tasks/RT-20260706-018/artifacts/parent_conflict_review_support_only_formalization_fragment.yaml"
+  - "research_control/tasks/RT-20260706-018/artifacts/parent_fusion_notes_support_only_formalization_fragment.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-018/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-018/DDR-20260706-018.md"
+  - "research_control/tasks/RT-20260706-018/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-018/jobs/AJ-RT-20260706-018-001.yaml"
+  - "research_control/tasks/RT-20260706-018/jobs/completions/AJC-AJ-RT-20260706-018-001.yaml"
+  - "research_control/tasks/RT-20260706-018/roles/formalization-engineer@0.1.0--RT-20260706-018.yaml"
+  - "research_control/handoffs/handoff-0650.yaml"
+  - "research_control/handoffs/handoff-0650.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0649.yaml"
+  - "research_control/tasks/RT-20260706-017/artifacts/support_only_formalization_target_selector.md"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/tasks/RT-20260705-009/artifacts/v16_support_only_certificate_spec.md"
+  - "registries/PROOF_NORMAL_FORM_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=671 relationship_row_count=3437 semantic_row_count=671 vault_row_count=671"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"fail closed certificate evaluation support formalization\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR,TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python -m unittest discover -s research_control/formalization/fail_closed_certificate_evaluation -p 'test_*.py' | exit_code=0 | tests=9"
+  - ".venv/bin/python research_control/formalization/fail_closed_certificate_evaluation/fail_closed_certificate_evaluation.py --json-output research_control/formalization/fail_closed_certificate_evaluation/validation_report.json --json | exit_code=0 | status=pass_support_only support_only=true proof_authority=false"
+  - "python -m json.tool research_control/formalization/fail_closed_certificate_evaluation/validation_report.json | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 674
+    relationship_row_count: 3449
+    semantic_row_count: 674
+    vault_row_count: 674
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"fail closed certificate evaluation support formalization\" --limit 10 --json"
+      query_type: "search"
+      query_text: "fail closed certificate evaluation support formalization"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-008-V16-FORMALIZATION-SCOPE-SELECTOR"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT"
+        - "MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS --json"
+      query_type: "lookup"
+      query_text: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+      returned_object_ids:
+        - "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d3e4fd11e807a04a487f9f7915e7a07567a50358f668e09b879880210c41c384"
+    - object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+      source_hash: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-017/artifacts/support_only_formalization_target_selector.md"
+      source_hash: "fd2bde2f530c78f7d45bbe105a8433dba87440ca14cf36d4bec89c0f24da4ef1"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-017/artifacts/parent_fusion_notes_support_only_formalization_target_selector.md"
+      source_hash: "a00d3422ff16817fdfc03966a9ed1d39904bbc40b9392d9053383388fb44ef38"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-008-V16-FORMALIZATION-SCOPE-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-008/artifacts/v16_formalization_scope_selector.md"
+      source_hash: "22f49d44ce4150c4bf979db8132759788fc529c5b8822c73fcdf3e7d90c6ef38"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-010-V16-FORMALIZATION-INTEGRATION-REPORT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-010/artifacts/v16_formalization_integration_report.md"
+      source_hash: "5f2752a65d8d92946b7614468621eb7c866fe206537eed63117994bc680bc901"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_certificate_instance_library_index_v1.md"
+      source_hash: "bde93f4c09100bbcedb587c8833628c003a6e6e141da5b81647b3c025315a123"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "targeted memory lookups returned current frontier selector and source certificate objects"
+      - "canonical source files and registry rows inspected"
+      - "continue_research.py resolved handoff-0649 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "checker report status pass_support_only"
+      - "support_only true proof_authority false physics_promotion_authorized false"
+      - "focused formalization unittest suite passed"
+      - "validation_report.json parsed as JSON"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "renderers run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap_memory_system.py runs after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "validate_claim_language.py --changed --json runs after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  p8_t02_consumes_gate_authority: false
+  selected_next_packet_requires_human_gate: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+tests_added_or_updated:
+  - "research_control/formalization/fail_closed_certificate_evaluation/test_fail_closed_certificate_evaluation.py"
+new_mathematical_payload:
+  - payload_id: "P8T02-PAYLOAD-001"
+    payload_type: "support_only_finite_checker"
+    object_name: "evaluate_certificate"
+    summary: "Deterministic evaluator maps finite certificate records to declared-equivalence allowed or fail-closed blocked outcomes."
+  - payload_id: "P8T02-PAYLOAD-002"
+    payload_type: "negative_branch_suite"
+    object_name: "fail_closed_certificate_evaluation_negative_cases"
+    summary: "Missing malformed target-import detector-semantics process-authority downstream-physics generated-authority and scoped-evidence misuse branches all fail closed."
+  - payload_id: "P8T02-PAYLOAD-003"
+    payload_type: "validation_report"
+    object_name: "validation_report.json"
+    summary: "Generated deterministic report records support_only true proof_authority false physics_promotion_authorized false and forbidden authority flags false."
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_support_only_formalization_artifact"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "P8-T02 mechanizes a support-only finite fragment and does not adopt or derive matter coupling, stress-energy, matter action, Einstein equations, benchmark promotion, or completed derivation."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "support_only_formalization_target_selected"
+  new_status: "support_only_formalization_fragment_mechanized"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v17_p8_t03_support_formalization_traceability_update"
+  downstream_still_blocked:
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no EqSrc discharge"
+  - burden: "RetainH"
+    status: "unchanged; no adoption"
+  - burden: "GenH"
+    status: "unchanged; no adoption"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; support-only finite checker only"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "unchanged"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion"
+  - burden: "Gate Chair status"
+    status: "unchanged; no verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P8-T03 traceability update route selected"
+claim_boundary:
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260706-018/artifacts/child_phys_math_support_only_formalization_fragment.yaml"
+      status: "completed"
+      contribution: "Finite checker branch contract and source alignment."
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260706-018/artifacts/child_phys_phil_support_only_formalization_fragment.yaml"
+      status: "completed"
+      contribution: "Authority boundary and overread-risk controls."
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260706-018/artifacts/parent_conflict_review_support_only_formalization_fragment.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    authority_expansion_detected: false
+  fusion:
+    fusion_notes_path: "research_control/tasks/RT-20260706-018/artifacts/parent_fusion_notes_support_only_formalization_fragment.md"
+    fused_output_path: "research_control/tasks/RT-20260706-018/artifacts/support_only_formalization_fragment_receipt.md"
+    result: "support-only mechanization accepted with no proof authority"
+selected_next_route:
+  route_id: "v17_p8_t03_support_only_formalization_traceability_update"
+  plan_task_id: "P8-T03"
+  selected_next_role_family: "research-ops-curator@0.1.0 or active project-control compatible overlay if role unavailable"
+  selected_next_packet_type: "support_only_formalization_traceability_update"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Connect formalized fragment to source artifacts and proof-normal-form rows."
+  required_traceability_fields:
+    formalization_id: "support_formalization_fail_closed_certificate_evaluation_v1"
+    source_artifact_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    proof_normal_form_row_id: "PNF-RT-20260706-014-003"
+    support_only: true
+    proof_authority: false
+    physics_promotion_authorized: false
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

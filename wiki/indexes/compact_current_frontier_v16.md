@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-017`
-- Latest handoff: `handoff-0649`
-- Current status: `v17_p8_t01_selected_fail_closed_certificate_evaluation_no_physics_delta`
+- Active task: `RT-20260706-018`
+- Latest handoff: `handoff-0650`
+- Current status: `v17_p8_t02_fail_closed_certificate_evaluation_mechanized_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p8_t02_support_only_formalization_fragment`
+- Route ID: `v17_p8_t03_support_only_formalization_traceability_update`
 - Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Implement support-only mechanization for the selected low-level fragment.
+- Milestone burden: Connect formalized fragment to source artifacts and proof-normal-form rows.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5efec605fe82b7920607ec8978346f7225371e9b732d608176ce8a44ac3d73bf`
-- JSON SHA-256: `f305e62461c12636e6fda189f71e6e1e88cd666638fb51bdf61145682e20c8a4`
+- YAML SHA-256: `ff75b22597873d7fd18105bd60fa9d83a0b6bc1d2bb450cb3bfc3a07791c0cec`
+- JSON SHA-256: `41d1d34847619d025eb62149fb2bc0a3678979f05f5838826ca82aa50eb9d091`
 
 ## Authority Warning
 

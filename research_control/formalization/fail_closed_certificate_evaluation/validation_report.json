@@ -1,0 +1,400 @@
+{
+  "boundary_statement": "This support-only formalization has proof_authority=false. It is not proof authority, not canonical ontology adoption, not source-law adoption, not MetricData(E) adoption, not g_eff adoption or scope expansion, not coupling-law adoption, not matter coupling, not stress-energy semantics, not a stress-energy tensor, not detector semantics, not a matter action, not Einstein equations, not benchmark promotion, and not completed derivation.",
+  "checker_id": "fail_closed_certificate_evaluation_support_formalization",
+  "checker_version": "0.1.0",
+  "forbidden_authority_flags": {
+    "benchmark_promotion_authority": false,
+    "canonical_ontology_adoption": false,
+    "completed_derivation_claimed": false,
+    "coupling_law_adopted": false,
+    "downstream_gr_promotion_authorized": false,
+    "einstein_equations_derived": false,
+    "future_source_extension_impossibility_claimed": false,
+    "g_eff_adopted": false,
+    "geff_scope_changed": false,
+    "global_theory_rejected": false,
+    "matter_action_imported": false,
+    "matter_coupling_adopted": false,
+    "matter_coupling_derived": false,
+    "metric_data_adopted": false,
+    "source_law_adopted": false,
+    "stress_energy_semantics_imported": false,
+    "stress_energy_tensor_constructed": false,
+    "target_metric_imported": false
+  },
+  "formal_objects": [
+    "CertificateRecord",
+    "EvaluationResult",
+    "evaluate_certificate",
+    "fail_closed_certificate_evaluation",
+    "valid_declared_scope_branch",
+    "missing_certificate_branch",
+    "malformed_certificate_branch",
+    "target_import_branch",
+    "detector_semantics_branch",
+    "process_authority_branch",
+    "downstream_physics_import_branch",
+    "scoped_evidence_not_certificate_branch"
+  ],
+  "formalization_id": "support_formalization_fail_closed_certificate_evaluation_v1",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "proof_normal_form_row_id": "PNF-RT-20260706-014-003",
+  "proposition_results": [
+    {
+      "evidence": {
+        "evaluation_kind": "valid_declared_scope",
+        "fail_closed": false,
+        "is_valid": true,
+        "outcome": "declared_equivalence_allowed",
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "reason": "Valid finite source certificate record inside declared source scope only.",
+        "record_id": "P8T02-SRC-CERT-VALID-001",
+        "support_only": true
+      },
+      "message": "The positive finite source certificate branch allows only declared equivalence within declared scope.",
+      "proof_authority": false,
+      "proposition_id": "valid_source_certificate_allows_declared_equivalence_support_only",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "evaluation_kind": "fail_closed_missing_certificate",
+        "fail_closed": true,
+        "is_valid": false,
+        "outcome": "declared_equivalence_blocked",
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "reason": "Certificate witness payload is missing.",
+        "record_id": "P8T02-SRC-CERT-MISSING-001",
+        "support_only": true
+      },
+      "message": "An absent certificate payload blocks declared equivalence.",
+      "proof_authority": false,
+      "proposition_id": "missing_certificate_fails_closed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "evaluation_kind": "fail_closed_domain_codomain_mismatch",
+        "fail_closed": true,
+        "is_valid": false,
+        "outcome": "declared_equivalence_blocked",
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "reason": "Witness map does not match declared domain and codomain.",
+        "record_id": "P8T02-SRC-CERT-MALFORMED-001",
+        "support_only": true
+      },
+      "message": "A malformed witness map blocks declared equivalence.",
+      "proof_authority": false,
+      "proposition_id": "malformed_certificate_fails_closed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "detector": {
+          "evaluation_kind": "fail_closed_detector_semantics_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Detector semantics cannot fill a source certificate slot.",
+          "record_id": "P8T02-SRC-CERT-DETECTOR-001",
+          "support_only": true
+        },
+        "target": {
+          "evaluation_kind": "fail_closed_target_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Target topology, atlas, metric, or proper time cannot fill a source certificate slot.",
+          "record_id": "P8T02-SRC-CERT-TARGET-001",
+          "support_only": true
+        }
+      },
+      "message": "Target-metric and detector-semantics imports are invalid certificate inputs.",
+      "proof_authority": false,
+      "proposition_id": "target_and_detector_imports_fail_closed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "benchmark": {
+          "evaluation_kind": "fail_closed_benchmark_behavior_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Benchmark behavior cannot serve as certificate data.",
+          "record_id": "P8T02-SRC-CERT-BENCHMARK-001",
+          "support_only": true
+        },
+        "geff": {
+          "evaluation_kind": "fail_closed_metricdata_or_geff_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "MetricData(E) and g_eff cannot fill this source-certificate slot.",
+          "record_id": "P8T02-SRC-CERT-GEFF-001",
+          "support_only": true
+        },
+        "matter_action": {
+          "evaluation_kind": "fail_closed_matter_action_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Matter-action semantics are outside source-certificate data.",
+          "record_id": "P8T02-SRC-CERT-MATTER-ACTION-001",
+          "support_only": true
+        },
+        "stress_energy": {
+          "evaluation_kind": "fail_closed_stress_energy_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Stress-energy semantics are outside source-certificate data.",
+          "record_id": "P8T02-SRC-CERT-STRESS-001",
+          "support_only": true
+        }
+      },
+      "message": "Stress-energy, matter-action, benchmark, MetricData(E), and g_eff imports are blocked.",
+      "proof_authority": false,
+      "proposition_id": "downstream_physics_imports_fail_closed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "generated": {
+          "evaluation_kind": "fail_closed_generated_or_registry_authority_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Generated, registry, validator, approval, cache, file-order, or commit state cannot be mathematical certificate data.",
+          "record_id": "P8T02-SRC-CERT-GENERATED-001",
+          "support_only": true
+        },
+        "process": {
+          "evaluation_kind": "fail_closed_process_authority_import",
+          "fail_closed": true,
+          "is_valid": false,
+          "outcome": "declared_equivalence_blocked",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "reason": "Process authority cannot serve as certificate payload.",
+          "record_id": "P8T02-SRC-CERT-PROCESS-001",
+          "support_only": true
+        }
+      },
+      "message": "Process authority and validator/registry-like state cannot fill certificate slots.",
+      "proof_authority": false,
+      "proposition_id": "process_and_generated_authority_imports_fail_closed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "evaluation_kind": "fail_closed_scoped_evidence_not_certificate",
+        "fail_closed": true,
+        "is_valid": false,
+        "outcome": "declared_equivalence_blocked",
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "reason": "Scoped evidence/precondition status is not an explicit certificate payload.",
+        "record_id": "P8T02-SRC-CERT-SCOPED-EVIDENCE-001",
+        "support_only": true
+      },
+      "message": "Scoped evidence/precondition status cannot be converted into a certificate payload.",
+      "proof_authority": false,
+      "proposition_id": "scoped_evidence_does_not_fill_certificate_slot",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "negative_evaluation_kinds": [
+          "fail_closed_benchmark_behavior_import",
+          "fail_closed_detector_semantics_import",
+          "fail_closed_domain_codomain_mismatch",
+          "fail_closed_generated_or_registry_authority_import",
+          "fail_closed_matter_action_import",
+          "fail_closed_metricdata_or_geff_import",
+          "fail_closed_missing_certificate",
+          "fail_closed_process_authority_import",
+          "fail_closed_scoped_evidence_not_certificate",
+          "fail_closed_stress_energy_import",
+          "fail_closed_target_import"
+        ]
+      },
+      "message": "Every negative sample branch returns declared_equivalence_blocked and fail_closed=true.",
+      "proof_authority": false,
+      "proposition_id": "all_negative_branches_are_fail_closed",
+      "status": "pass"
+    }
+  ],
+  "result_count": 12,
+  "results": [
+    {
+      "evaluation_kind": "valid_declared_scope",
+      "fail_closed": false,
+      "is_valid": true,
+      "outcome": "declared_equivalence_allowed",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Valid finite source certificate record inside declared source scope only.",
+      "record_id": "P8T02-SRC-CERT-VALID-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_missing_certificate",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Certificate witness payload is missing.",
+      "record_id": "P8T02-SRC-CERT-MISSING-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_domain_codomain_mismatch",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Witness map does not match declared domain and codomain.",
+      "record_id": "P8T02-SRC-CERT-MALFORMED-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_target_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Target topology, atlas, metric, or proper time cannot fill a source certificate slot.",
+      "record_id": "P8T02-SRC-CERT-TARGET-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_detector_semantics_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Detector semantics cannot fill a source certificate slot.",
+      "record_id": "P8T02-SRC-CERT-DETECTOR-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_process_authority_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Process authority cannot serve as certificate payload.",
+      "record_id": "P8T02-SRC-CERT-PROCESS-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_stress_energy_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Stress-energy semantics are outside source-certificate data.",
+      "record_id": "P8T02-SRC-CERT-STRESS-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_matter_action_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Matter-action semantics are outside source-certificate data.",
+      "record_id": "P8T02-SRC-CERT-MATTER-ACTION-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_benchmark_behavior_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Benchmark behavior cannot serve as certificate data.",
+      "record_id": "P8T02-SRC-CERT-BENCHMARK-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_scoped_evidence_not_certificate",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Scoped evidence/precondition status is not an explicit certificate payload.",
+      "record_id": "P8T02-SRC-CERT-SCOPED-EVIDENCE-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_generated_or_registry_authority_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "Generated, registry, validator, approval, cache, file-order, or commit state cannot be mathematical certificate data.",
+      "record_id": "P8T02-SRC-CERT-GENERATED-001",
+      "support_only": true
+    },
+    {
+      "evaluation_kind": "fail_closed_metricdata_or_geff_import",
+      "fail_closed": true,
+      "is_valid": false,
+      "outcome": "declared_equivalence_blocked",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "reason": "MetricData(E) and g_eff cannot fill this source-certificate slot.",
+      "record_id": "P8T02-SRC-CERT-GEFF-001",
+      "support_only": true
+    }
+  ],
+  "source_artifact_hash": "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+  "source_artifact_object_id": "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS",
+  "source_artifact_path": "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex",
+  "source_artifacts": [
+    {
+      "object_id": "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS",
+      "path": "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex",
+      "registry_name": "TEX_SOURCE_REGISTRY.csv",
+      "source_hash": "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    },
+    {
+      "object_id": "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR",
+      "path": "research_control/tasks/RT-20260706-017/artifacts/support_only_formalization_target_selector.md",
+      "registry_name": "MARKDOWN_SOURCE_REGISTRY.csv",
+      "source_hash": "fd2bde2f530c78f7d45bbe105a8433dba87440ca14cf36d4bec89c0f24da4ef1"
+    }
+  ],
+  "status": "pass_support_only",
+  "support_only": true
+}

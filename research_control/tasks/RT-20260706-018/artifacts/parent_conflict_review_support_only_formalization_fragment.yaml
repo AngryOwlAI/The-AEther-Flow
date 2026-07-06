@@ -1,0 +1,20 @@
+artifact_id: "parent_conflict_review_support_only_formalization_fragment"
+task_id: "RT-20260706-018"
+job_id: "AJ-RT-20260706-018-001"
+status: "completed"
+mode: "parent_child_parallel_synthesis"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260706-018/artifacts/child_phys_math_support_only_formalization_fragment.yaml"
+  - "research_control/tasks/RT-20260706-018/artifacts/child_phys_phil_support_only_formalization_fragment.yaml"
+conflicts:
+  - conflict_id: "P8T02-CF-001"
+    type: "authority_boundary"
+    severity: "nonblocking"
+    summary: "The mathematical child emphasized branch-completeness while the philosophical child emphasized report language that prevents proof-authority overread."
+    resolution: "Keep broad fail-closed branch coverage and make support_only, proof_authority, and physics_promotion_authorized explicit in README, report, completion, claim boundary, and handoff."
+unresolved_blocking_conflicts: []
+authority_expansion_detected: false
+formalization_id: "support_formalization_fail_closed_certificate_evaluation_v1"
+support_only: true
+proof_authority: false
+physics_promotion_authorized: false

@@ -1,0 +1,31 @@
+artifact_id: "child_phys_phil_support_only_formalization_fragment"
+task_id: "RT-20260706-018"
+job_id: "AJ-RT-20260706-018-001"
+execution_unit: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+selected_target: "fail_closed_certificate_evaluation"
+formalization_id: "support_formalization_fail_closed_certificate_evaluation_v1"
+boundary_review:
+  support_only_flag_present: true
+  proof_authority_false_present: true
+  physics_promotion_authorized_false_present: true
+  validation_report_blocks_forbidden_authority_flags: true
+  overread_risk_status: "controlled_by_report_and_handoff_language"
+overread_risks:
+  - risk: "finite checker pass read as physics proof"
+    mitigation: "Report and README state support_only=true and proof_authority=false."
+  - risk: "fail-closed evaluator read as source-law adoption"
+    mitigation: "Completion, claim boundary, and handoff block source-law adoption."
+  - risk: "target-import failure read as target-metric evidence"
+    mitigation: "Checker treats target import as invalid certificate data."
+  - risk: "scoped evidence converted into certificate payload"
+    mitigation: "Checker blocks scoped_evidence_used_as_certificate."
+philosophical_boundary:
+  ontology_status: "unchanged"
+  model_status: "support-only finite operational model"
+  empirical_prediction_status: "none"
+  proof_authority: false
+support_only: true
+physics_promotion_authorized: false
+notes: "The fragment improves reproducibility and guards against overread. It does not change project ontology, physical interpretation, or empirical status."
