@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-053`
-- Latest handoff: `handoff-0626`
-- Current status: `v17_p2_t04_candidate_cycle_integrated_no_adoption`
+- Active task: `RT-20260705-054`
+- Latest handoff: `handoff-0627`
+- Current status: `v17_p3_t01_acceptance_calibration_policy_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p3_t01_acceptance_calibration_design_note`
+- Route ID: `v17_p3_t02_acceptance_calibration_schema_alias_update`
 - Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Define calibrated acceptance language for high-risk rows with no physics delta.
+- Milestone burden: Implement machine-readable acceptance calibration fields without physics delta.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `70705c7b0591ad6df364b70ca991da54dcf2e4b573c0bc0a18b62fbfb25fd95b`
-- JSON SHA-256: `9dc77fa08c7efec7df7690bacb916c6924ca7708da05113f131b40f203e19bc7`
+- YAML SHA-256: `deda669ba4b71c9043dd51de8996656c42d02ad66fd3c90ddae890fbaeeeaa5b`
+- JSON SHA-256: `f233d5142e3fa3a09941135d886d4792351348efe5b2ae7e85df3a53abb55f54`
 
 ## Authority Warning
 

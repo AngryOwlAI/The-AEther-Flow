@@ -1,0 +1,53 @@
+task_id: "RT-20260705-054"
+task_type: "accepted_status_calibration_design_note"
+status: "completed"
+created_at: "2026-07-06T01:05:00Z"
+updated_at: "2026-07-06T01:05:00Z"
+closed_at: "2026-07-06T01:05:00Z"
+parent_task_id: "RT-20260705-053"
+parent_handoff_id: "handoff-0626"
+decision_id: "DDR-20260705-054"
+job_id: "AJ-RT-20260705-054-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260705-054"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This policy packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T01"
+  plan_task_name: "Acceptance calibration design note"
+objective: "Create the v17 P3-T01 accepted-status calibration policy so agents report scoped positive status before exact scope and blocked overread."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Define calibrated acceptance language for high-risk rows with no physics delta."
+closure_status: "v17_p3_t01_acceptance_calibration_policy_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P3-T01 accepted-status calibration language policy with no physics delta."
+  policy_path: "research_control/design/accepted_status_calibration_policy_v1.md"
+  positive_first_required: true
+  exact_scope_second_required: true
+  blocked_overread_third_required: true
+  forbids_underclaim_basically_nothing: true
+  immediate_v17_next_plan_task_id: "P3-T02"
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  detector_semantics_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/design/accepted_status_calibration_policy_v1.md"
+  - "research_control/tasks/RT-20260705-054/artifacts/validate_p3_t01_acceptance_calibration_policy.py"
+  - "research_control/tasks/RT-20260705-054/artifacts/p3_t01_acceptance_calibration_policy_report.json"
+  - "research_control/tasks/RT-20260705-054/artifacts/p3_t01_acceptance_calibration_policy_receipt.md"
+next_recommended_action: "Run one bounded v17 P3-T02 acceptance calibration schema and alias update packet to add machine-readable acceptance calibration fields while preserving all physics-promotion blocks."
+notes: "RT-20260705-054 completes v17 P3-T01 by creating a control policy for calibrated accepted/scoped-positive status language. It records no Distance-to-GR ledger update and no physics claim change."
+documentation_impact_id: "DI-RT-20260705-054-001"

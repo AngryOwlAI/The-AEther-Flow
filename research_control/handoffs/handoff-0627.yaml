@@ -1,0 +1,81 @@
+handoff_id: "handoff-0627"
+created_at: "2026-07-06T01:05:00Z"
+task_id: "RT-20260705-054"
+decision_id: "DDR-20260705-054"
+job_id: "AJ-RT-20260705-054-001"
+completion_path: "research_control/tasks/RT-20260705-054/jobs/completions/AJC-AJ-RT-20260705-054-001.yaml"
+source_task_id: "RT-20260705-054"
+source_job_id: "AJ-RT-20260705-054-001"
+source_completion_id: "AJC-AJ-RT-20260705-054-001"
+status: "completed"
+summary: "RT-20260705-054 completed one bounded v17 P3-T01 accepted-status calibration policy packet. It requires high-risk accepted/scoped-positive rows to render positive status first exact scope second and blocked overread third while forbidding underclaiming scoped status as basically nothing."
+next_action: "Run one bounded v17 P3-T02 acceptance calibration schema and alias update packet to add machine-readable acceptance calibration fields while preserving all physics-promotion blocks."
+loop_risk_route: "v17_p3_t01_acceptance_calibration_policy_to_p3_t02_schema_alias_update_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P3-T02 acceptance calibration schema and alias update with no physics delta"
+  policy_artifact_path: "research_control/design/accepted_status_calibration_policy_v1.md"
+  policy_artifact_hash: "ed5e9e11ec99c7b39978deb493b1e989824914c000f3ca37710b365bbfb919fc"
+  policy_status: "project_control_language_policy_only"
+  positive_first_required: true
+  exact_scope_second_required: true
+  blocked_overread_third_required: true
+  underclaim_basically_nothing_forbidden: true
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+blocked_claims:
+  - "P3-T01 policy as physics evidence"
+  - "P3-T01 policy as source-law adoption"
+  - "P3-T01 policy as detector semantics"
+  - "P3-T01 policy as coupling-law adoption"
+  - "P3-T01 policy as matter coupling"
+  - "P3-T01 policy as stress-energy semantics"
+  - "P3-T01 policy as matter action"
+  - "P3-T01 policy as Einstein-equation evidence"
+  - "P3-T01 policy as benchmark promotion"
+  - "P3-T01 policy as completed derivation"
+policy_result:
+  artifact_path: "research_control/design/accepted_status_calibration_policy_v1.md"
+  object_id: "MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1"
+  source_hash: "ed5e9e11ec99c7b39978deb493b1e989824914c000f3ca37710b365bbfb919fc"
+  validator_report_path: "research_control/tasks/RT-20260705-054/artifacts/p3_t01_acceptance_calibration_policy_report.json"
+  validator_status: "PASS"
+  immediate_v17_continuation: "P3-T02"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260705-054 calibrates status language only and does not adopt a coupling law derive matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v17_p3_t02_acceptance_calibration_schema_alias_update"
+  plan_task_id: "P3-T02"
+  active_registered_role_family: "documentation-curator@2.0.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Implement machine-readable acceptance calibration fields without physics delta."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  memory_preflight: "PASS"
+  query_memory_status: "PASS"
+  continue_research_json: "PASS"
+  policy_artifact: "PASS"
+  task_local_validator: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
