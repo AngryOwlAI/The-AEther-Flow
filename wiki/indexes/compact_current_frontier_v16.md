@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-051`
-- Latest handoff: `handoff-0624`
-- Current status: `v17_p2_t02_candidate_stress_survived_pending_selector_no_adoption`
+- Active task: `RT-20260705-052`
+- Latest handoff: `handoff-0625`
+- Current status: `v17_p2_t03_selector_selected_protected_gate_question_setup_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p2_t03_post_candidate_audit_stress_selector`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `v17_p2_t04_candidate_cycle_integration_report`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Select one next route after candidate construction, audit, and stress.
+- Milestone burden: Integrate candidate construction, audit, stress, and selector results into current frontier without promotion.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `fdc099bef83a42b6f64e6fb45e950e6869dfd2c7c27ef56c7d999c534970e6e5`
-- JSON SHA-256: `68ee07ca3695687ea1b95a38bd48f22f5502c3d6c5032f4385caa17d33fa9c53`
+- YAML SHA-256: `9b23b57f77c78c09a8185d88b41c6c2d5b6fd2fead8c429cd769f35faa5e8143`
+- JSON SHA-256: `8bdf7152f425c5d774deae3c202b5aff8161ab90eb44a94f2daf8b477b9193ae`
 
 ## Authority Warning
 

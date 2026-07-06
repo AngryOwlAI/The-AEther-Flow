@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-051` and `handoff-0624`.
+`RT-20260705-052` and `handoff-0625`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-051` |
-| Latest handoff ID | `handoff-0624` |
-| Current status | `v17_p2_t02_candidate_stress_survived_pending_selector_no_adoption` |
+| Active task ID | `RT-20260705-052` |
+| Latest handoff ID | `handoff-0625` |
+| Current status | `v17_p2_t03_selector_selected_protected_gate_question_setup_no_adoption` |
 | V16 completed | false |
-| Current route family | v17 p2 t02 candidate stress survived to p2 t03 selector no adoption |
+| Current route family | v17 p2 t03 selector selected protected gate question setup to p2 t04 integration no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P2-T03 selector after candidate construction audit and stress |
-| Next recommended action | Run one bounded v17 P2-T03 Theoretical Continuation Selector packet to classify the post-construction post-audit post-stress SourceCouplingLawCandidate_EStar_v1 route before any integration repair obstruction freeze Gate Chair or downstream promotion question. |
+| Required next authority | P2-T04 candidate-cycle integration report without promotion |
+| Next recommended action | Run one bounded v17 P2-T04 candidate-cycle integration report to integrate the candidate construction, self-check, audit, stress, and selector results into current-frontier/control summaries without promotion. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-051/00_TASK.yaml`.
-- Active task objective: Stress SourceCouplingLawCandidate_EStar_v1 and the P2-T01 audit against finite/local perturbation, missing-certificate, detector-placeholder, evidence-as-adoption, metric-use, stress-energy, matter-action, benchmark, and process-authority collapse modes.
-- Latest handoff path: `research_control/handoffs/handoff-0624.yaml`.
-- Latest handoff summary: RT-20260705-051 completed one bounded v17 P2-T02 Refuter packet. It stress-tested SourceCouplingLawCandidate_EStar_v1 after the P2-T01 audit and classified it as stress_survives_as_draft_control_candidate with bridge_facing_candidate_path routing pending selector. Finite source perturbations survive only under source-preserving relabeling or restriction; certificate deletion malformed certificate replacement detector erasure empirical detector replacement target import K_E domain collapse source-codomain failure RR_E overread evidence-as-adoption g_eff metric overread stress-energy matter-action benchmark and process-authority pressure fail closed or remain blocked. The result is draft/control only and does not adopt the candidate or promote matter coupling.
-- Current route family: v17 p2 t02 candidate stress survived to p2 t03 selector no adoption.
-- Next recommended action: Run one bounded v17 P2-T03 Theoretical Continuation Selector packet to classify the post-construction post-audit post-stress SourceCouplingLawCandidate_EStar_v1 route before any integration repair obstruction freeze Gate Chair or downstream promotion question.
+- Active task path: `research_control/tasks/RT-20260705-052/00_TASK.yaml`.
+- Active task objective: Classify the post-construction post-audit post-stress route for SourceCouplingLawCandidate_EStar_v1 and select exactly one next route while preserving all adoption and downstream-GR claim blocks.
+- Latest handoff path: `research_control/handoffs/handoff-0625.yaml`.
+- Latest handoff summary: RT-20260705-052 completed one bounded v17 P2-T03 Theoretical Continuation Selector packet. It classified SourceCouplingLawCandidate_EStar_v1 after construction self-check smuggling audit and Refuter stress and selected protected_gate_question_setup_only as the single candidate-route disposition. The selector prepares a future narrow Gate Chair evidence-status/precondition question but does not execute Gate Chair review, adopt a source law, adopt detector semantics, adopt a coupling law, derive matter coupling, import stress-energy or matter action, derive Einstein equations, promote benchmark status, or claim completed derivation.
+- Current route family: v17 p2 t03 selector selected protected gate question setup to p2 t04 integration no adoption.
+- Next recommended action: Run one bounded v17 P2-T04 candidate-cycle integration report to integrate the candidate construction, self-check, audit, stress, and selector results into current-frontier/control summaries without promotion.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -196,7 +196,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P2-T03 Theoretical Continuation Selector packet to classify the post-construction post-audit post-stress SourceCouplingLawCandidate_EStar_v1 route before any integration repair obstruction freeze Gate Chair or downstream promotion question.
+Run one bounded v17 P2-T04 candidate-cycle integration report to integrate the candidate construction, self-check, audit, stress, and selector results into current-frontier/control summaries without promotion.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -224,24 +224,24 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-051`;
-- latest handoff: `handoff-0624`;
-- current status: `v17_p2_t02_candidate_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260705-052`;
+- latest handoff: `handoff-0625`;
+- current status: `v17_p2_t03_selector_selected_protected_gate_question_setup_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `refuter_stress`: PASS;
+- latest handoff validation `selector_artifact`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0624.yaml`
-- `research_control/tasks/RT-20260705-051/00_TASK.yaml`
+- `research_control/handoffs/handoff-0625.yaml`
+- `research_control/tasks/RT-20260705-052/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -257,7 +257,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0624*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0625*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

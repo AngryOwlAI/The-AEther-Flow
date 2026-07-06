@@ -1,0 +1,20 @@
+review_id: "parent_conflict_review_post_candidate_audit_stress_selector"
+task_id: "RT-20260705-052"
+status: "no_conflict"
+created_at: "2026-07-06T00:06:00Z"
+child_outputs:
+  - "research_control/tasks/RT-20260705-052/artifacts/child_phys_math_post_candidate_audit_stress_selector.yaml"
+  - "research_control/tasks/RT-20260705-052/artifacts/child_phys_phil_post_candidate_audit_stress_selector.yaml"
+conflicts:
+  blocking: []
+  nonblocking: []
+consensus:
+  selected_route: "protected_gate_question_setup_only"
+  selected_next_packet_type: "source_extension_human_gate"
+  immediate_v17_continuation: "P2-T04 candidate-cycle integration report"
+  freeze_decision: "not_frozen"
+  claim_boundary_preserved: true
+parent_resolution:
+  resolution_rounds: 0
+  unresolved_conflicts: []
+  summary: "Both child perspectives select protected gate question setup only, reject repair/freeze/upstream routes for the current candidate cycle, and preserve all adoption and downstream-GR blocks."
