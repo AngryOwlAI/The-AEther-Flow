@@ -1,0 +1,218 @@
+completion_id: "AJC-AJ-RT-20260706-034-001"
+job_id: "AJ-RT-20260706-034-001"
+task_id: "RT-20260706-034"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-06T21:40:37Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P12-T02"
+  plan_phase_id: "P12"
+  implemented_task_scope: "Extended the physics-progress metrics report with support-only AI research-agent methodology metrics and calibrated acceptance warnings."
+  phase_p12_completed: false
+  completed_plan_task_id: "P12-T02"
+  selected_next_plan_task_id: "P12-T03"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "tests/test_research_control.py"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "research_control/tasks/RT-20260706-034/artifacts/validate_p12_t02_metrics_report.py"
+  - "research_control/tasks/RT-20260706-034/artifacts/p12_t02_metrics_report_validation.json"
+  - "research_control/tasks/RT-20260706-034/artifacts/p12_t02_metrics_report_receipt.md"
+  - "research_control/tasks/RT-20260706-034/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-034/jobs/completions/AJC-AJ-RT-20260706-034-001.yaml"
+  - "research_control/handoffs/handoff-0666.yaml"
+  - "research_control/handoffs/handoff-0666.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/design/v17_recommendation_backlog_schema.md"
+  - "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+  - "research_control/handoffs/handoff-0665.yaml"
+  - "scripts/research_control/report_physics_progress_metrics.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=684 relationship_row_count=3507 semantic_row_count=684 vault_row_count=684"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P12-T02 AI research-agent methodology metrics report extension\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER navigation_support_object_ids=MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python -m py_compile scripts/research_control/report_physics_progress_metrics.py tests/test_research_control.py | exit_code=0"
+  - ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_ai_methodology_metrics_are_support_only_and_separate tests.test_research_control.ResearchControlTests.test_physics_progress_metrics_markdown_renders_diagnostic_sections | exit_code=0 | tests=2"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json --output output/physics_progress_metrics.json | exit_code=0"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format markdown --output output/physics_progress_metrics.md | exit_code=0"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260706-034/artifacts/validate_p12_t02_metrics_report.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260706-034/artifacts/validate_p12_t02_metrics_report.py --write-report --json | exit_code=0 | status=PASS metric_count=9 warning_count=3"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | source_object_count=684 relationship_row_count=3507 semantic_row_count=684 vault_row_count=684"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=684 relationship_row_count=3507 semantic_row_count=684 vault_row_count=684"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=true and refresh_performed=true"
+      - "targeted memory search returned current-frontier and generated task-index navigation support"
+      - "canonical v17 plan P12-T02, backlog P12-T02, taxonomy source, and handoff-0665 were inspected before routing"
+  implementation:
+    status: "PASS"
+    evidence:
+      - "report_physics_progress_metrics.py exposes ai_research_agent_methodology_metrics as support-only diagnostics"
+      - "focused unittest checks all nine metric records and authority boundaries"
+      - "output/physics_progress_metrics.json and output/physics_progress_metrics.md were generated"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "task-local validator confirms nine metrics, calibrated warnings, and separation from scientific_progress_metrics"
+      - "metric_separation_guard.status is pass"
+      - "AI methodology warnings are advisory and do not create physics authority"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P12-T02 report extension is implemented"
+      - "phase P12 remains incomplete after P12-T02 and immediate continuation is P12-T03"
+      - "the completion preserves no physics delta and no proof-authority promotion"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier, compact frontier, task index, claim graph, and dependency graph are refreshed after handoff-0666 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only are required after report tooling and generated output updates"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed claim-language surfaces preserve methodology metrics as support-only diagnostics"
+      - "hard-fail overclaim count is zero"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validation is required after report tooling, tests, generated outputs, control records, and registry rows"
+      - "generated current-frontier, task-index, graph, and memory surfaces must be refreshed from tracked control state"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint_research_transaction must run after validators confirm the bounded P12-T02 transaction"
+      - "P12-T03 remains a future bounded packet and is not started by this completion"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p12_t02_ai_research_agent_metrics_report_extension_completed_next_p12_t03_no_physics_delta"
+coherent_resolution_summary: "RT-20260706-034 completed the v17 P12-T02 metrics report extension by adding support-only AI methodology metrics, generated JSON and Markdown outputs, and separation tests."
+next_recommendation: "Run one bounded v17 P12-T03 AI-methodology evaluation memo packet."
+metrics_report_result:
+  status: "pass"
+  json_path: "output/physics_progress_metrics.json"
+  markdown_path: "output/physics_progress_metrics.md"
+  methodology_metric_count: 9
+  methodology_status: "partial"
+  calibrated_acceptance_warning_count: 3
+  metric_separation_guard_status: "pass"
+  scientific_progress_contains_methodology_metrics: false
+physics_progress_status:
+  status: "metrics_tool_update_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Extend progress metrics report with AI methodology metrics and calibrated acceptance warnings."
+  physics_promotion_authorized: false
+  explanation: "This packet updates support-only report tooling and generated metrics outputs; it does not change Distance-to-GR physics status."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P12-T03 AI-methodology evaluation memo"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "methodology metric success as physics proof"
+    - "methodology metric success as autonomous scientific authority"
+    - "metrics report as source-law adoption"
+    - "candidate survival as matter-coupling derivation"
+    - "route-orbit reduction as Einstein-equation derivation"
+    - "human authorization as Gate Chair verdict"
+    - "metrics report as benchmark promotion"
+    - "proof-to-process balance as completed derivation"
+  summary: "The report extension is project-control methodology evidence only and cannot promote scientific claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 684
+    relationship_row_count: 3507
+    semantic_row_count: 684
+    vault_row_count: 684
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P12-T02 AI research-agent methodology metrics report extension\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P12-T02 AI research-agent methodology metrics report extension"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      generated_retrieval_evidence_ids: []
+      navigation_support_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "f07fccd69f30a27d5b3ecdd3cf97a9e55b06855ea256b3efeffe8a1ee8035d29"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+      source_hash: "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439"
+claim_boundary:
+  allowed_claims:
+    - "AI methodology metrics report extension as support-only process diagnostic"
+    - "calibrated acceptance warnings as advisory diagnostics"
+    - "P12-T03 evaluation memo as future bounded packet"
+    - "no physics delta"
+  forbidden_claims:
+    - "methodology metric success as physics proof"
+    - "methodology metric success as autonomous scientific authority"
+    - "methodology dashboard or report as benchmark promotion"
+    - "human authorization as Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

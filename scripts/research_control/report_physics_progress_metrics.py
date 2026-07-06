@@ -33,6 +33,9 @@ ROLE_METRIC_KEYS = {
 OPERATIONAL_METRIC_KEY_TOKENS = {
     "checker",
     "diagnostic_warning",
+    "methodology",
+    "ai_methodology",
+    "proof_to_process",
     "validator",
     "validation",
     "registry",
@@ -48,6 +51,83 @@ OPERATIONAL_METRIC_KEY_TOKENS = {
 SUPPORT_ONLY_CHECKER_ID = "finite_local_candidate_checker"
 SUPPORT_ONLY_CHECKER_REPORT_GLOB = "research_control/tasks/*/artifacts/*checker_report.json"
 SUPPORT_ONLY_BOUNDARY_REQUIRED_PHRASES = ("support-only", "not proof authority")
+AI_METHODOLOGY_TAXONOMY_PATH = "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+AI_METHODOLOGY_REQUIRED_METRICS = (
+    "overclaim_catch_rate",
+    "underclaim_warning_rate",
+    "obstruction_precision",
+    "route_orbit_rate",
+    "candidate_to_audit_conversion",
+    "audit_to_stress_survival",
+    "stress_survival_rate",
+    "human_gate_load",
+    "proof_to_process_ratio",
+)
+AI_METHODOLOGY_METRIC_SPECS: dict[str, dict[str, str]] = {
+    "overclaim_catch_rate": {
+        "family": "Claim-boundary control",
+        "definition": "Fraction of seeded or real overclaim surfaces caught before checkpoint.",
+        "numerator": "Count of overclaim surfaces flagged before checkpoint.",
+        "denominator": "Count of overclaim surfaces eligible for detection in the reviewed scope.",
+        "guardrail": "A high rate means better boundary control; it does not prove any physics claim.",
+    },
+    "underclaim_warning_rate": {
+        "family": "Claim-boundary control",
+        "definition": "Fraction of high-risk summaries missing positive scoped status that were warned or corrected.",
+        "numerator": "Count of eligible summaries where missing positive scoped status was flagged or corrected.",
+        "denominator": "Count of high-risk summaries whose tracked evidence included scoped positive status and whose summary could omit it.",
+        "guardrail": "This metric prevents pessimistic status collapse; it does not promote scoped evidence into adoption.",
+    },
+    "obstruction_precision": {
+        "family": "Obstruction quality",
+        "definition": "Fraction of obstruction records scoped with a non-global boundary.",
+        "numerator": "Count of obstruction or negative-result records naming object, assumptions, route, and downstream blocked claim without globalizing.",
+        "denominator": "Count of obstruction or negative-result records produced or reviewed in the measurement window.",
+        "guardrail": "A precise obstruction remains local unless a separate theorem and protected authority establish a stronger no-go result.",
+    },
+    "route_orbit_rate": {
+        "family": "Route dynamics",
+        "definition": "Frequency of repeated-burden cycles without new payload.",
+        "numerator": "Count of route cycles returning to the same burden or equivalent continuation family without new mathematical payload.",
+        "denominator": "Count of bounded continuation packets in the measurement window.",
+        "guardrail": "This is a process-warning metric; it is advisory unless a separate validator or policy makes a gate.",
+    },
+    "candidate_to_audit_conversion": {
+        "family": "Candidate life cycle",
+        "definition": "Fraction of candidate-constructor outputs that become eligible for audit.",
+        "numerator": "Count of candidate-constructor outputs with enough declared scope, assumptions, and artifacts to route to audit.",
+        "denominator": "Count of candidate-constructor outputs in the window.",
+        "guardrail": "Eligibility for audit is not audit survival, adoption, or matter-coupling derivation.",
+    },
+    "audit_to_stress_survival": {
+        "family": "Candidate life cycle",
+        "definition": "Fraction of audited candidates that reach stress.",
+        "numerator": "Count of audited candidates routed to Refuter stress or equivalent stress packet.",
+        "denominator": "Count of audited candidates with completed audit disposition.",
+        "guardrail": "Reaching stress means the candidate remains testable; it does not mean the candidate is true or adopted.",
+    },
+    "stress_survival_rate": {
+        "family": "Candidate life cycle",
+        "definition": "Fraction of stressed candidates that survive as draft/control.",
+        "numerator": "Count of stressed candidates whose post-stress status remains draft/control or equivalent non-promotional survivor status.",
+        "denominator": "Count of stressed candidates with completed stress disposition.",
+        "guardrail": "Survival is candidate-status only; it does not authorize canonical ontology, source-law, metric, or coupling adoption.",
+    },
+    "human_gate_load": {
+        "family": "Governance load",
+        "definition": "Number of protected authority requests per phase.",
+        "numerator": "Count of human-gated authority requests, Gate Chair requests, or protected adoption requests in a phase.",
+        "denominator": "Phase identifier and completed packet count, not a physics-progress denominator.",
+        "guardrail": "Human authorization for a task is not a Gate Chair verdict unless the protected gate itself states that verdict.",
+    },
+    "proof_to_process_ratio": {
+        "family": "Payload balance",
+        "definition": "Mathematical payload artifacts compared with process receipts.",
+        "numerator": "Count of new mathematical payload artifacts.",
+        "denominator": "Count of process receipts.",
+        "guardrail": "This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself.",
+    },
+}
 
 
 def read_csv_rows(repo_root: Path, registry_name: str) -> list[dict[str, str]]:
@@ -365,6 +445,339 @@ def collect_physics_progress_integration_metrics(
             "task_payload_density": float(overall_payload.get("task_payload_density", 0.0)),
             "payload_class_counts": dict(sorted(payload_class_counts.items())),
         },
+    }
+
+
+def ai_methodology_authority_boundary() -> dict[str, bool]:
+    return {
+        "physics_claim_authority_created": False,
+        "physics_promotion_authorized": False,
+        "gate_chair_verdict_created": False,
+        "benchmark_promotion_authorized": False,
+        "metrics_report_not_physics_proof": True,
+    }
+
+
+def ratio(numerator: Any, denominator: Any) -> float | None:
+    if not isinstance(numerator, (int, float)) or not isinstance(denominator, (int, float)):
+        return None
+    if denominator == 0:
+        return None
+    return round(float(numerator) / float(denominator), 4)
+
+
+def ai_metric_record(
+    metric_id: str,
+    status: str,
+    numerator_value: Any,
+    denominator_value: Any,
+    calculation_window: str,
+    evidence_paths: list[str],
+    diagnostic_interpretation: str,
+    value: Any = None,
+    uncertainty_note: str = "",
+    breakdown: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    spec = AI_METHODOLOGY_METRIC_SPECS[metric_id]
+    return {
+        "metric_id": metric_id,
+        "family": spec["family"],
+        "status": status,
+        "definition": spec["definition"],
+        "value": value,
+        "numerator": {
+            "label": spec["numerator"],
+            "value": numerator_value,
+            "evidence_paths": sorted(set(path for path in evidence_paths if path)),
+        },
+        "denominator": {
+            "label": spec["denominator"],
+            "value": denominator_value,
+            "evidence_paths": sorted(set(path for path in evidence_paths if path)),
+        },
+        "calculation_window": calculation_window,
+        "diagnostic_interpretation": diagnostic_interpretation,
+        "interpretation_guardrail": spec["guardrail"],
+        "uncertainty_note": uncertainty_note,
+        "breakdown": breakdown or {},
+        "authority_boundary": ai_methodology_authority_boundary(),
+    }
+
+
+def plan_phase_from_task(row: dict[str, str]) -> str:
+    closure_status = row.get("closure_status", "").lower()
+    for part in closure_status.split("_"):
+        if part.startswith("p") and part[1:].isdigit():
+            return part.upper()
+    return "unclassified"
+
+
+def counted_status(numerator: int, denominator: int, partial: bool = False) -> str:
+    if denominator <= 0:
+        return "not_measured"
+    if partial:
+        return "partial"
+    return "measured"
+
+
+def collect_ai_research_agent_methodology_metrics(
+    completion_records: list[dict[str, Any]],
+    task_rows: list[dict[str, str]],
+    payload_report: dict[str, Any],
+    payload_density_metrics: dict[str, Any],
+    route_orbit_risk_metrics: dict[str, Any],
+    diagnostic_warnings: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Build support-only AI research-agent methodology diagnostics for v17 P12-T02."""
+    calculation_window = "all tracked completion records and task registry rows available at report generation"
+    taxonomy_evidence = [AI_METHODOLOGY_TAXONOMY_PATH]
+    completion_paths = [
+        record.get("completion_path", "")
+        for record in completion_records
+        if record.get("completion_path")
+    ]
+
+    overclaim_records = [
+        record for record in completion_records if record.get("has_forbidden_conclusion_summary")
+    ]
+    overclaim_caught = [
+        record for record in overclaim_records if record.get("physics_promotion_authorized") is False
+    ]
+
+    obstruction_records = [record for record in completion_records if has_obstruction_signal(record)]
+    precise_obstructions = [
+        record
+        for record in obstruction_records
+        if record.get("obstruction_id")
+        and (record.get("milestone") or record.get("burden_id") or record.get("progress_status"))
+    ]
+
+    candidate_outputs = [
+        record
+        for record in completion_records
+        if record.get("role_id") == "candidate-constructor" or record.get("candidate_result_type")
+    ]
+    audit_eligible = [
+        record
+        for record in candidate_outputs
+        if record.get("candidate_result_type")
+        or record.get("progress_status") == "candidate_constructed_pending_audit"
+    ]
+    audit_records = [
+        record
+        for record in completion_records
+        if record.get("role_id") == "smuggling-auditor"
+        or record.get("progress_status") == "candidate_audited_pending_stress"
+    ]
+    stress_records = [
+        record
+        for record in completion_records
+        if record.get("role_id") == "refuter"
+        or record.get("progress_status") == "candidate_stress_passed_pending_gate"
+    ]
+    stress_survivors = [
+        record
+        for record in stress_records
+        if record.get("progress_status") == "candidate_stress_passed_pending_gate"
+    ]
+
+    task_gate_rows = [
+        row for row in task_rows if str(row.get("requires_human_gate", "")).lower() == "true"
+    ]
+    gate_chair_records = [
+        record for record in completion_records if record.get("role_id") == "gate-chair"
+    ]
+    phase_gate_counts: Counter[str] = Counter()
+    phase_task_counts: Counter[str] = Counter()
+    for row in task_rows:
+        phase = plan_phase_from_task(row)
+        phase_task_counts[phase] += 1
+        if str(row.get("requires_human_gate", "")).lower() == "true":
+            phase_gate_counts[phase] += 1
+
+    overall_payload = (
+        payload_report.get("overall", {})
+        if isinstance(payload_report.get("overall"), dict)
+        else {}
+    )
+    mathematical_payload_items = int(overall_payload.get("mathematical_payload_item_count", 0))
+    process_receipt_items = int(overall_payload.get("process_only_item_count", 0))
+
+    metric_records = {
+        "overclaim_catch_rate": ai_metric_record(
+            "overclaim_catch_rate",
+            counted_status(len(overclaim_caught), len(overclaim_records)),
+            len(overclaim_caught) if overclaim_records else None,
+            len(overclaim_records) if overclaim_records else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in overclaim_records
+                if record.get("completion_path")
+            ],
+            "Forbidden-conclusion summaries are counted as eligible overclaim-control surfaces; caught means no physics promotion was authorized.",
+            ratio(len(overclaim_caught), len(overclaim_records)),
+        ),
+        "underclaim_warning_rate": ai_metric_record(
+            "underclaim_warning_rate",
+            "not_measured",
+            None,
+            None,
+            calculation_window,
+            taxonomy_evidence,
+            "The current registries do not deterministically encode high-risk positive scoped-status omission events.",
+            None,
+            "Needs a future extraction rule for accepted-scoped evidence omitted from summaries.",
+        ),
+        "obstruction_precision": ai_metric_record(
+            "obstruction_precision",
+            counted_status(len(precise_obstructions), len(obstruction_records)),
+            len(precise_obstructions) if obstruction_records else None,
+            len(obstruction_records) if obstruction_records else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in obstruction_records
+                if record.get("completion_path")
+            ],
+            "This deterministic proxy counts obstruction records with IDs plus milestone, burden, or status context as locally scoped.",
+            ratio(len(precise_obstructions), len(obstruction_records)),
+        ),
+        "route_orbit_rate": ai_metric_record(
+            "route_orbit_rate",
+            counted_status(
+                int(route_orbit_risk_metrics.get("same_burden_repetition_count", 0)),
+                int(payload_density_metrics.get("physics_completions_read", 0)),
+            ),
+            int(route_orbit_risk_metrics.get("same_burden_repetition_count", 0)),
+            int(payload_density_metrics.get("physics_completions_read", 0)),
+            calculation_window,
+            taxonomy_evidence + [
+                path
+                for warning in diagnostic_warnings
+                if warning.get("warning_id") == "same_burden_repetition"
+                for path in list_value(warning.get("evidence_paths"))
+            ],
+            "Repeated-burden streaks are process warnings only and do not change Distance-to-GR status.",
+            ratio(
+                int(route_orbit_risk_metrics.get("same_burden_repetition_count", 0)),
+                int(payload_density_metrics.get("physics_completions_read", 0)),
+            ),
+        ),
+        "candidate_to_audit_conversion": ai_metric_record(
+            "candidate_to_audit_conversion",
+            counted_status(len(audit_eligible), len(candidate_outputs)),
+            len(audit_eligible) if candidate_outputs else None,
+            len(candidate_outputs) if candidate_outputs else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in candidate_outputs
+                if record.get("completion_path")
+            ],
+            "Candidate outputs are counted as audit-eligible only when tracked fields expose candidate result or pending-audit status.",
+            ratio(len(audit_eligible), len(candidate_outputs)),
+        ),
+        "audit_to_stress_survival": ai_metric_record(
+            "audit_to_stress_survival",
+            counted_status(len(stress_records), len(audit_records), partial=True),
+            len(stress_records) if audit_records else None,
+            len(audit_records) if audit_records else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in audit_records + stress_records
+                if record.get("completion_path")
+            ],
+            "This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic.",
+            ratio(len(stress_records), len(audit_records)),
+            "Partial because the current completion records count stage occurrences, not candidate-linked transitions.",
+        ),
+        "stress_survival_rate": ai_metric_record(
+            "stress_survival_rate",
+            counted_status(len(stress_survivors), len(stress_records), partial=True),
+            len(stress_survivors) if stress_records else None,
+            len(stress_records) if stress_records else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in stress_records
+                if record.get("completion_path")
+            ],
+            "Stress survival is counted only as a non-promotional candidate-status outcome.",
+            ratio(len(stress_survivors), len(stress_records)),
+            "Partial because draft/control survivor lineage is not fully normalized across historical receipts.",
+        ),
+        "human_gate_load": ai_metric_record(
+            "human_gate_load",
+            "measured",
+            {
+                "task_rows_requiring_human_gate": len(task_gate_rows),
+                "gate_chair_completion_records": len(gate_chair_records),
+                "total_gate_load_signals": len(task_gate_rows) + len(gate_chair_records),
+                "per_phase_task_rows_requiring_human_gate": dict(sorted(phase_gate_counts.items())),
+            },
+            {
+                "registered_task_rows": len(task_rows),
+                "per_phase_registered_task_rows": dict(sorted(phase_task_counts.items())),
+            },
+            calculation_window,
+            taxonomy_evidence
+            + [row.get("task_path", "") for row in task_gate_rows if row.get("task_path")]
+            + [
+                record.get("completion_path", "")
+                for record in gate_chair_records
+                if record.get("completion_path")
+            ],
+            "Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts.",
+            None,
+        ),
+        "proof_to_process_ratio": ai_metric_record(
+            "proof_to_process_ratio",
+            counted_status(mathematical_payload_items, process_receipt_items),
+            mathematical_payload_items if process_receipt_items else None,
+            process_receipt_items if process_receipt_items else None,
+            calculation_window,
+            taxonomy_evidence + completion_paths,
+            "Payload balance compares mathematical payload items to process-only items; it is not proof authority.",
+            ratio(mathematical_payload_items, process_receipt_items),
+        ),
+    }
+
+    calibrated_warnings: list[dict[str, Any]] = []
+    for metric_id in AI_METHODOLOGY_REQUIRED_METRICS:
+        record = metric_records[metric_id]
+        if record["status"] == "measured":
+            continue
+        calibrated_warnings.append(
+            {
+                "warning_id": f"{metric_id}_{record['status']}",
+                "severity": "warning",
+                "metric_id": metric_id,
+                "status": record["status"],
+                "reason": record["uncertainty_note"] or record["diagnostic_interpretation"],
+                "hard_gate": False,
+                "physics_claim_authority": False,
+                "recommended_guard_action": "Treat this methodology metric as diagnostic only; refine extraction before using it for routing thresholds.",
+                "authority_boundary": ai_methodology_authority_boundary(),
+            }
+        )
+
+    return {
+        "schema_id": "ai_research_agent_methodology_metrics_v1",
+        "taxonomy_source_path": AI_METHODOLOGY_TAXONOMY_PATH,
+        "status": "partial" if calibrated_warnings else "measured",
+        "calculation_window": calculation_window,
+        "required_metric_ids": list(AI_METHODOLOGY_REQUIRED_METRICS),
+        "metric_count": len(metric_records),
+        "metrics": metric_records,
+        "calibrated_acceptance_warnings": calibrated_warnings,
+        "separation_guard": {
+            "status": "pass",
+            "kept_out_of_scientific_progress_metrics": True,
+            "not_physics_proof": True,
+        },
+        "authority_boundary": ai_methodology_authority_boundary(),
     }
 
 
@@ -1060,6 +1473,14 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         completion_records,
         scientific_payload_density_report,
     )
+    ai_research_agent_methodology_metrics = collect_ai_research_agent_methodology_metrics(
+        completion_records,
+        task_rows,
+        scientific_payload_density_report,
+        payload_density_metrics,
+        route_orbit_risk_metrics,
+        diagnostic_warnings,
+    )
     separation_violations = scientific_metric_key_violations(scientific_progress_metrics)
     metrics = {
         "operational_validation_metrics": operational_validation_metrics,
@@ -1067,6 +1488,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         "payload_density_metrics": payload_density_metrics,
         "route_orbit_risk_metrics": route_orbit_risk_metrics,
         "physics_progress_integration_metrics": physics_progress_integration_metrics,
+        "ai_research_agent_methodology_metrics": ai_research_agent_methodology_metrics,
         "diagnostic_warnings": diagnostic_warnings,
         "metric_separation_guard": {
             "status": "pass" if not separation_violations else "fail",
@@ -1099,10 +1521,12 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "registries/AGENT_ROLE_REGISTRY.csv",
             "registries/CLAIM_BOUNDARY_REGISTRY.csv",
             "research_control/tasks/*/jobs/completions/*.yaml",
+            AI_METHODOLOGY_TAXONOMY_PATH,
         ],
         "authority_boundary": {
             "metrics_are_operational": True,
             "scoreboards_are_separated": True,
+            "ai_methodology_metrics_are_support_only": True,
             "physics_claim_promotion_authorized": False,
             "metrics_report_not_physics_proof": True,
             "validation_status_is_not_physics_evidence": True,
@@ -1113,6 +1537,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "Support-only checker report counts are operational tooling diagnostics; checker syntax or boundary failures are not physics failures.",
             "Scientific progress metrics are counts of tracked science-claim fields and must still cite source artifacts before any claim is reused.",
             "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
+            "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
         ],
     }
@@ -1147,8 +1572,61 @@ def render_warning_table(warnings: list[dict[str, Any]]) -> list[str]:
     return lines
 
 
+def markdown_cell(value: Any) -> str:
+    rendered = json.dumps(value, sort_keys=True) if isinstance(value, dict) else str(value)
+    return rendered.replace("|", "\\|")
+
+
+def render_ai_methodology_table(report: dict[str, Any]) -> list[str]:
+    records = report.get("metrics", {})
+    if not isinstance(records, dict):
+        return ["AI methodology metric records were not available."]
+    lines = [
+        "| Metric | Family | Status | Value | Interpretation |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for metric_id in report.get("required_metric_ids", AI_METHODOLOGY_REQUIRED_METRICS):
+        record = records.get(metric_id)
+        if not isinstance(record, dict):
+            lines.append(f"| `{metric_id}` | missing | not_measured |  | Metric record missing. |")
+            continue
+        lines.append(
+            "| `{metric_id}` | {family} | `{status}` | `{value}` | {interpretation} |".format(
+                metric_id=metric_id,
+                family=markdown_cell(record.get("family", "")),
+                status=record.get("status", ""),
+                value=markdown_cell(record.get("value", "")),
+                interpretation=markdown_cell(record.get("diagnostic_interpretation", "")),
+            )
+        )
+    return lines
+
+
+def render_ai_methodology_warnings(report: dict[str, Any]) -> list[str]:
+    warnings = report.get("calibrated_acceptance_warnings", [])
+    if not isinstance(warnings, list) or not warnings:
+        return ["No AI methodology acceptance warnings were emitted."]
+    lines = [
+        "| Warning | Metric | Status | Hard Gate | Physics Authority | Reason |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for warning in warnings:
+        lines.append(
+            "| `{warning_id}` | `{metric_id}` | `{status}` | `{hard_gate}` | `{authority}` | {reason} |".format(
+                warning_id=warning.get("warning_id", ""),
+                metric_id=warning.get("metric_id", ""),
+                status=warning.get("status", ""),
+                hard_gate=warning.get("hard_gate", False),
+                authority=warning.get("physics_claim_authority", False),
+                reason=markdown_cell(warning.get("reason", "")),
+            )
+        )
+    return lines
+
+
 def render_markdown(report: dict[str, Any]) -> str:
     metrics = report["metrics"]
+    ai_methodology = metrics["ai_research_agent_methodology_metrics"]
     lines: list[str] = [
         "<!-- authority: control -->",
         "",
@@ -1184,6 +1662,16 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Physics-Progress Integration Metrics",
             "",
             *render_table(metrics["physics_progress_integration_metrics"]),
+            "",
+            "## AI Research-Agent Methodology Metrics",
+            "",
+            "These diagnostics are support-only AI-system methodology metrics. They are separated from scientific progress metrics and do not authorize physics proof, source-law adoption, benchmark promotion, Gate Chair verdicts, or completed-derivation claims.",
+            "",
+            *render_ai_methodology_table(ai_methodology),
+            "",
+            "## AI Methodology Acceptance Warnings",
+            "",
+            *render_ai_methodology_warnings(ai_methodology),
             "",
             "## Diagnostic Warnings",
             "",

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c4edccafa8fc2526c6a4dc67ab861104a237972c05e958a8e39e91813bf83c0a`
-- Generated-at source timestamp: `2026-07-06T21:09:04Z`
-- Row count: `805`
+- Source fingerprint: `0a3aee79ed4ea3d2f0919da3cc608792ece2b488634f7d46e541ae3e2151e6f8`
+- Generated-at source timestamp: `2026-07-06T21:33:58Z`
+- Row count: `806`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260706-034|RT-20260706-033|2026-07-06T21:33:58Z|2026-07-06T21:40:37Z|ai_research_agent_metrics_report_extension|completed|matter_coupling|Extend progress metrics report with AI methodology metrics and calibrated acceptance warnings.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v17 P12-T03 AI-methodology evaluation memo packet through research-methodologist@0.1.0 or an active compatible methodology overlay.|PASS|research_control/tasks/RT-20260706-034/jobs/completions/AJC-AJ-RT-20260706-034-001.yaml|
 |RT-20260706-033|RT-20260706-032|2026-07-06T21:09:04Z|2026-07-06T21:09:04Z|ai_research_agent_metrics_taxonomy|completed|matter_coupling|Define AI research-agent methodology metrics for overclaim, obstruction precision, route orbit, and candidate survival.|process-integrity-auditor@0.1.0|false|false|4|Run one bounded v17 P12-T02 AI research-agent methodology metrics report extension packet through tooling-engineer@0.1.0 or an active compatible tooling overlay.|PASS|research_control/tasks/RT-20260706-033/jobs/completions/AJC-AJ-RT-20260706-033-001.yaml|
 |RT-20260706-032|RT-20260706-031|2026-07-06T20:41:32Z|2026-07-06T20:41:32Z|ci_validation_boundary_review|completed|matter_coupling|Review CI and validator language for validator-as-proof overread.|external-red-team-reviewer@0.1.0|false|false|9|Run one bounded v17 P12-T01 AI research-agent methodology metrics taxonomy packet through research-methodologist@0.1.0 or an active compatible methodology overlay.|PASS|research_control/tasks/RT-20260706-032/jobs/completions/AJC-AJ-RT-20260706-032-001.yaml|
 |RT-20260706-031|RT-20260706-030|2026-07-06T20:05:41Z|2026-07-06T20:05:41Z|validation_artifact_collector|completed|matter_coupling|Collect validation reports into output artifacts for CI and local review.|validator-engineer@0.2.0|false|false|4|Run one bounded v17 P11-T04 CI boundary red-team review packet through external-red-team-reviewer@0.1.0 or an active compatible review overlay.|PASS|research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml|

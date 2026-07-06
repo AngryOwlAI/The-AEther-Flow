@@ -172,6 +172,36 @@ class ResearchControlTests(unittest.TestCase):
         self.assertNotIn("physics_progress_integration_metrics", scientific)
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
+    def test_ai_methodology_metrics_are_support_only_and_separate(self) -> None:
+        report = self.metrics.build_report(REPO_ROOT)
+        metrics = report["metrics"]
+        scientific = metrics["scientific_progress_metrics"]
+        methodology = metrics["ai_research_agent_methodology_metrics"]
+
+        self.assertEqual(
+            set(methodology["metrics"]),
+            set(self.metrics.AI_METHODOLOGY_REQUIRED_METRICS),
+        )
+        self.assertEqual(methodology["metric_count"], 9)
+        self.assertEqual(methodology["separation_guard"]["status"], "pass")
+        self.assertTrue(methodology["separation_guard"]["kept_out_of_scientific_progress_metrics"])
+        self.assertTrue(methodology["separation_guard"]["not_physics_proof"])
+        self.assertFalse(
+            methodology["authority_boundary"]["physics_claim_authority_created"],
+        )
+        self.assertFalse(
+            methodology["authority_boundary"]["physics_promotion_authorized"],
+        )
+        self.assertTrue(report["authority_boundary"]["ai_methodology_metrics_are_support_only"])
+        self.assertNotIn("ai_research_agent_methodology_metrics", scientific)
+
+        for metric in methodology["metrics"].values():
+            self.assertIn(metric["status"], {"measured", "partial", "not_measured"})
+            self.assertFalse(metric["authority_boundary"]["physics_claim_authority_created"])
+            self.assertFalse(metric["authority_boundary"]["physics_promotion_authorized"])
+            self.assertFalse(metric["authority_boundary"]["gate_chair_verdict_created"])
+            self.assertFalse(metric["authority_boundary"]["benchmark_promotion_authorized"])
+
     def test_payload_density_warnings_are_advisory(self) -> None:
         report = self.metrics.build_report(REPO_ROOT)
         warnings = report["metrics"]["diagnostic_warnings"]
@@ -191,6 +221,10 @@ class ResearchControlTests(unittest.TestCase):
         self.assertIn("## Payload-Density Metrics", rendered)
         self.assertIn("## Route-Orbit Risk Metrics", rendered)
         self.assertIn("## Physics-Progress Integration Metrics", rendered)
+        self.assertIn("## AI Research-Agent Methodology Metrics", rendered)
+        self.assertIn("## AI Methodology Acceptance Warnings", rendered)
+        self.assertIn("`overclaim_catch_rate`", rendered)
+        self.assertIn("Claim-boundary control", rendered)
         self.assertIn("## Diagnostic Warnings", rendered)
 
     def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
