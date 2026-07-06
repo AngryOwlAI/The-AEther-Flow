@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-031`
-- Latest handoff: `handoff-0663`
-- Current status: `v17_p11_t03_validation_artifact_collector_completed_no_physics_delta`
+- Active task: `RT-20260706-032`
+- Latest handoff: `handoff-0664`
+- Current status: `v17_p11_t04_ci_boundary_red_team_review_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p11_t04_ci_boundary_red_team_review`
-- Role family: `external-red-team-reviewer@0.1.0 or active compatible review overlay`
+- Route ID: `v17_p12_t01_ai_research_agent_metrics_taxonomy`
+- Role family: `research-methodologist@0.1.0 or active compatible methodology overlay`
 - Target milestone: `matter_coupling`
-- Milestone burden: Review CI and validator language for validator-as-proof overread.
+- Milestone burden: Define AI research-agent methodology metrics for overclaim, obstruction precision, route orbit, and candidate survival.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `58ddca439420296d917c50b6ec2a16496909c58b8d9d0b9c7c8b5efbf2c9167b`
-- JSON SHA-256: `ea1f175e5f427409205e312edd3a38dfaa73623295043db04da653009fe17b7a`
+- YAML SHA-256: `ca69e2c7f80788d228d11333c323e2ffd71413abb16adc52f1b989a8c2751ce2`
+- JSON SHA-256: `2ee81c7e5e3ceb8c625cc691b4896d0461d8c3f13f8f770875698516ccb9ce33`
 
 ## Authority Warning
 

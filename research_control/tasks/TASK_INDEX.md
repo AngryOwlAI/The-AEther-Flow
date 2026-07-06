@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `b22f187216a4bdd55a27ce1d4cd4863c40527607facf7fa7435f6b6edae11d9b`
-- Generated-at source timestamp: `2026-07-06T20:05:41Z`
-- Row count: `803`
+- Source fingerprint: `afcfdf66f2536328f67310a48a6c30872bd88cfd989e6281fb20f415f6f6863f`
+- Generated-at source timestamp: `2026-07-06T20:41:32Z`
+- Row count: `804`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260706-032|RT-20260706-031|2026-07-06T20:41:32Z|2026-07-06T20:41:32Z|ci_validation_boundary_review|completed|matter_coupling|Review CI and validator language for validator-as-proof overread.|external-red-team-reviewer@0.1.0|false|false|9|Run one bounded v17 P12-T01 AI research-agent methodology metrics taxonomy packet through research-methodologist@0.1.0 or an active compatible methodology overlay.|PASS|research_control/tasks/RT-20260706-032/jobs/completions/AJC-AJ-RT-20260706-032-001.yaml|
 |RT-20260706-031|RT-20260706-030|2026-07-06T20:05:41Z|2026-07-06T20:05:41Z|validation_artifact_collector|completed|matter_coupling|Collect validation reports into output artifacts for CI and local review.|validator-engineer@0.2.0|false|false|4|Run one bounded v17 P11-T04 CI boundary red-team review packet through external-red-team-reviewer@0.1.0 or an active compatible review overlay.|PASS|research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml|
 |RT-20260706-030|RT-20260706-029|2026-07-06T19:39:52Z|2026-07-06T19:39:52Z|python_environment_reproducibility_docs|completed|matter_coupling|Document Python version, environment setup, and validation commands.|documentation-curator@2.0.0|false|false|4|Run one bounded v17 P11-T03 full validation artifact collector packet through an active tooling-engineer-compatible role overlay.|PASS|research_control/tasks/RT-20260706-030/jobs/completions/AJC-AJ-RT-20260706-030-001.yaml|
 |RT-20260706-029|RT-20260706-028|2026-07-06T18:45:20Z|2026-07-06T18:45:20Z|github_actions_validation_workflow|completed|matter_coupling|Add CI workflow for project-control validation without changing physics claims.|validator-engineer@0.2.0|false|false|4|Run one bounded v17 P11-T02 Python environment and reproducibility documentation packet through an active software-engineer-compatible role overlay.|PASS|research_control/tasks/RT-20260706-029/jobs/completions/AJC-AJ-RT-20260706-029-001.yaml|

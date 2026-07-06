@@ -1,0 +1,29 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260706-032"
+agent_job_id: "AJ-RT-20260706-032-001"
+review_path: "research_control/tasks/RT-20260706-032/artifacts/parent_conflict_review_ci_validation_boundary_review.yaml"
+status: "resolved"
+created_at: "2026-07-06T20:41:32Z"
+resolution_rounds: 0
+child_outputs_reviewed:
+  - execution_unit_id: "child_phys_math"
+    output_path: "research_control/tasks/RT-20260706-032/artifacts/child_phys_math_ci_validation_boundary_review.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    output_path: "research_control/tasks/RT-20260706-032/artifacts/child_phys_phil_ci_validation_boundary_review.yaml"
+    status: "completed"
+consensus_points:
+  - "No inspected source treats validation PASS, CI success, registry consistency, or generated validation summaries as physics proof authority."
+  - "CONTRIBUTING.md, output/validation_summary.md, output/validation_summary.json, and scripts/research_control/collect_validation_artifacts.py carry explicit non-proof boundary language."
+  - ".github/workflows/project-control-validation.yml is terse but does not make a scientific proof-authority claim."
+  - "No repair route is required for P11-T04."
+nonblocking_advisories:
+  - advisory_id: "P11-T04-A1"
+    severity: "advisory"
+    summary: "The workflow file does not carry standalone non-proof wording. A future documentation pass could add a YAML comment, but this packet does not authorize source edits and no blocking defect is present."
+resolved_conflicts: []
+unresolved_conflicts: []
+blocking_conflicts_present: false
+repair_required: false
+recommended_next_route: "v17_p12_t01_ai_research_agent_metrics_taxonomy"
+
