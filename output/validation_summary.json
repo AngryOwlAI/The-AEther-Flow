@@ -1,0 +1,250 @@
+{
+  "advisory_failure_labels": [],
+  "boundary_note": "Validation artifacts are operational receipts only. They are not physics proof authority, source-law adoption, benchmark promotion, Gate Chair verdict, or completed-derivation evidence.",
+  "command_counts": {
+    "advisory_passed": 2,
+    "advisory_total": 2,
+    "required_non_advisory_passed": 12,
+    "required_non_advisory_total": 12,
+    "total": 14
+  },
+  "commands": [
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "label": "memory_validate_only",
+      "purpose": "Confirm generated memory, wiki, semantic, and registry derivative surfaces are fresh.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-render-check",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/render_current_frontier.py",
+        "--check"
+      ],
+      "label": "current_frontier_check",
+      "purpose": "Confirm the current-frontier report is fresh relative to tracked control state.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_compact_current_frontier_v16.py",
+        "--json"
+      ],
+      "label": "compact_current_frontier_check",
+      "purpose": "Confirm compact current-frontier YAML and JSON remain synchronized with tracked state and protected claim boundaries.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-render-check",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/render_dependency_graph.py",
+        "--check"
+      ],
+      "label": "dependency_graph_check",
+      "purpose": "Confirm dependency graph JSON, Markdown, and DOT artifacts are fresh.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_task_index.py",
+        "--json"
+      ],
+      "label": "task_index_validation",
+      "purpose": "Validate generated task-index outputs against tracked task records and completions.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_claim_graph_v1.py",
+        "--json"
+      ],
+      "label": "claim_graph_validation",
+      "purpose": "Validate claim_graph_v1 against P12-T03 non-promotion and derivative-authority guard rules.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--changed"
+      ],
+      "label": "claim_language_changed_lint",
+      "purpose": "Lint changed claim-language gate surfaces, including high-risk accepted wording.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py",
+        "--json"
+      ],
+      "label": "documentation_impact_validation",
+      "purpose": "Validate documentation-impact receipts for the current transaction.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted",
+        "--json"
+      ],
+      "label": "project_improvement_signal_validation",
+      "purpose": "Validate emitted project-improvement signals and bridge sidecars.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "label": "research_control_validation",
+      "purpose": "Validate research-control task, decision, job, handoff, role, and registry consistency.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "label": "research_control_diff_validation",
+      "purpose": "Validate current changed paths against the active AgentJob allowlist.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": true,
+      "authority_level": "advisory-diagnostic",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/extract_route_signatures.py",
+        "--sample",
+        "recent-matter-coupling",
+        "--json"
+      ],
+      "label": "route_signature_extraction",
+      "purpose": "Exercise implemented v15 route-signature extraction as diagnostic control evidence.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": true,
+      "authority_level": "advisory-diagnostic",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_route_orbits.py",
+        "--sample",
+        "recent-matter-rr-e",
+        "--json",
+        "--advisory-only"
+      ],
+      "label": "route_orbit_advisory",
+      "purpose": "Run route-orbit diagnostics without converting advisory evidence into a physics verdict.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "label": "whitespace_diff_check",
+      "purpose": "Detect whitespace errors in the current transaction diff.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "distance_to_gr_delta": "none",
+  "no_physics_delta": true,
+  "operational_receipt_only": true,
+  "physics_proof_authority": false,
+  "repo_root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+  "required_check_coverage": {
+    "claim_graph_validation": true,
+    "claim_language_lint": true,
+    "compact_current_frontier_check": true,
+    "current_frontier_check": true,
+    "diff_allowlist_check": true,
+    "documentation_impact": true,
+    "generated_derivative_drift_check": true,
+    "no_bare_accepted_high_risk_rows": true,
+    "no_premature_efe_route": true,
+    "registry_referential_integrity": true,
+    "research_control_validation": true,
+    "route_orbit_advisory": true,
+    "route_signature_extraction_if_implemented": true,
+    "task_index_validation": true,
+    "whitespace_diff_check": true
+  },
+  "required_failure_labels": [],
+  "schema_id": "research_control_validation_summary_v1",
+  "source_command": [
+    ".venv/bin/python",
+    "scripts/research_control/run_full_research_control_validation.py",
+    "--json",
+    "--tail-chars",
+    "1500"
+  ],
+  "source_generated_at": "2026-07-06T20:31:03.025225Z",
+  "source_report_schema_id": "research_control_local_ci_equivalent_report_v1",
+  "source_returncode": 0,
+  "status": "PASS"
+}

@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-030`
-- Latest handoff: `handoff-0662`
-- Current status: `v17_p11_t02_python_environment_reproducibility_docs_completed_no_physics_delta`
+- Active task: `RT-20260706-031`
+- Latest handoff: `handoff-0663`
+- Current status: `v17_p11_t03_validation_artifact_collector_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p11_t03_full_validation_artifact_collector`
-- Role family: `tooling-engineer@0.1.0 or active tooling-engineer-compatible task overlay`
+- Route ID: `v17_p11_t04_ci_boundary_red_team_review`
+- Role family: `external-red-team-reviewer@0.1.0 or active compatible review overlay`
 - Target milestone: `matter_coupling`
-- Milestone burden: Collect validation reports into output artifacts for CI and local review.
+- Milestone burden: Review CI and validator language for validator-as-proof overread.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5ba8df1d4f967a814062cc200cec7f823db41c98ac5e6fa0bf04e814980cb949`
-- JSON SHA-256: `6863db264d07b719b93a9e43657290074a5bdfef580704d6bea48a8474e49c75`
+- YAML SHA-256: `58ddca439420296d917c50b6ec2a16496909c58b8d9d0b9c7c8b5efbf2c9167b`
+- JSON SHA-256: `ea1f175e5f427409205e312edd3a38dfaa73623295043db04da653009fe17b7a`
 
 ## Authority Warning
 

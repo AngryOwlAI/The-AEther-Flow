@@ -1,0 +1,201 @@
+completion_id: "AJC-AJ-RT-20260706-031-001"
+job_id: "AJ-RT-20260706-031-001"
+task_id: "RT-20260706-031"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-06T20:05:41Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P11-T03"
+  plan_phase_id: "P11"
+  implemented_task_scope: "Created validation artifact collector tooling and generated validation summary outputs for CI and local review."
+  phase_p11_completed: false
+  completed_plan_task_id: "P11-T03"
+  selected_next_plan_task_id: "P11-T04"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/collect_validation_artifacts.py"
+  - "tests/test_collect_validation_artifacts.py"
+  - "output/validation_summary.json"
+  - "output/validation_summary.md"
+  - "research_control/tasks/RT-20260706-031/artifacts/validate_p11_t03_validation_artifacts.py"
+  - "research_control/tasks/RT-20260706-031/artifacts/p11_t03_validation_artifacts_report.json"
+  - "research_control/tasks/RT-20260706-031/artifacts/p11_t03_validation_artifacts_receipt.md"
+  - "research_control/tasks/RT-20260706-031/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml"
+  - "research_control/handoffs/handoff-0663.yaml"
+  - "research_control/handoffs/handoff-0663.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0662.yaml"
+  - "scripts/research_control/run_full_research_control_validation.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=683 relationship_row_count=3503 semantic_row_count=683 vault_row_count=683"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P11-T03 full validation artifact collector\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python -m py_compile scripts/research_control/collect_validation_artifacts.py research_control/tasks/RT-20260706-031/artifacts/validate_p11_t03_validation_artifacts.py | exit_code=0"
+  - ".venv/bin/python -m unittest tests.test_collect_validation_artifacts | exit_code=0 | tests=4"
+  - ".venv/bin/python scripts/research_control/collect_validation_artifacts.py --output-json output/validation_summary.json --output-markdown output/validation_summary.md --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260706-031/artifacts/validate_p11_t03_validation_artifacts.py --output research_control/tasks/RT-20260706-031/artifacts/p11_t03_validation_artifacts_report.json --json | exit_code=0 | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "targeted memory search returned current-frontier, v17 plan, and generated task-index navigation hits"
+      - "canonical v17 plan P11-T03, backlog P11-T03, handoff-0662, run_full validation runner, and role contracts were inspected before routing"
+  implementation:
+    status: "PASS"
+    evidence:
+      - "collector script created at scripts/research_control/collect_validation_artifacts.py"
+      - "collector summarizes the existing local CI-equivalent validation report into JSON and Markdown outputs"
+      - "focused tests added at tests/test_collect_validation_artifacts.py"
+  collector:
+    status: "PASS"
+    evidence:
+      - "output/validation_summary.json generated with schema research_control_validation_summary_v1"
+      - "output/validation_summary.md generated with operational-only boundary language"
+      - "required non-advisory validation failures are absent in the collected summary"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "task-local validator confirms collector script, JSON summary, Markdown summary, command coverage, and no-physics-delta boundary"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "collector script and focused tests were created for the P11-T03 validation artifact packet"
+      - "output/validation_summary.json and output/validation_summary.md are operational-only validation artifacts"
+      - "task-local validation artifact checker confirms required files and no-physics-delta boundary"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier, compact frontier, task index, claim graph, and dependency graph are refreshed after handoff-0663 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only are required after adding validation collector tooling and generated summaries"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed claim-language surfaces preserve validation artifacts as operational receipts only with no physics delta"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validation is required after adding collector tooling, tests, output summaries, control records, and registry rows"
+      - "generated current-frontier, task-index, graph, and memory surfaces must be refreshed from tracked control state"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint_research_transaction must run after validators confirm the bounded P11-T03 transaction"
+      - "P11-T04 remains a future bounded packet and is not started by this completion"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p11_t03_validation_artifact_collector_completed_next_p11_t04_no_physics_delta"
+coherent_resolution_summary: "RT-20260706-031 completed the v17 P11-T03 project-system validation artifact collector packet by adding a collector script plus JSON and Markdown validation summaries."
+next_recommendation: "Run one bounded v17 P11-T04 CI boundary red-team review packet."
+physics_progress_status:
+  status: "tooling_update_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Collect validation reports into output artifacts for CI and local review."
+  physics_promotion_authorized: false
+  explanation: "This packet adds operational validation artifact publication only and does not change Distance-to-GR physics status."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P11-T04 CI boundary red-team review"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+validation_artifact_receipts:
+  collector_script_path: "scripts/research_control/collect_validation_artifacts.py"
+  summary_json_path: "output/validation_summary.json"
+  summary_markdown_path: "output/validation_summary.md"
+  required_content_present: true
+  operational_receipt_only: true
+  no_physics_delta: true
+  p11_t04_review_created: false
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "validation artifacts as physics proof authority"
+    - "validation artifacts as source-law adoption"
+    - "validation artifacts as matter-coupling derivation"
+    - "validation artifacts as Einstein-equation derivation"
+    - "validation artifacts as benchmark promotion"
+    - "validation artifacts as Gate Chair verdict"
+    - "validation artifacts as completed derivation"
+  summary: "The validation summaries are project-system operational receipts only and cannot promote scientific claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 683
+    relationship_row_count: 3503
+    semantic_row_count: 683
+    vault_row_count: 683
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P11-T03 full validation artifact collector\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P11-T03 full validation artifact collector"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      navigation_support_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "37c3b9badfc5205117ee2af60036854623ba83f0dee26216aabfe32b7770f885"
+    - object_id: "MD-CONTRIBUTING"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "CONTRIBUTING.md"
+      source_hash: "b04f65cf82df3638275c4495b7201573a1ba47dabf8fca7e17ade3be3a5a0670"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
