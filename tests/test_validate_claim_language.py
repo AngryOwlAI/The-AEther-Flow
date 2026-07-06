@@ -113,6 +113,90 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["finding_count"], 0)
 
+    def test_g_eff_supplies_proper_time_fails(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "g_eff supplies proper time.\n",
+        )
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(
+            report["findings"][0]["class_id"],
+            "g_eff_proper_time_normalization_overread",
+        )
+
+    def test_g_eff_calibrates_detectors_fails(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "g_eff calibrates detectors.\n",
+        )
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["findings"][0]["class_id"], "g_eff_detector_calibration_overread")
+
+    def test_g_eff_supplies_stress_energy_semantics_fails(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "g_eff supplies stress-energy semantics.\n",
+        )
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(
+            report["findings"][0]["class_id"],
+            "g_eff_stress_energy_semantics_overread",
+        )
+
+    def test_g_eff_scoped_source_extension_context_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "g_eff is used as scoped source-extension context only; it does not "
+                "authorize a physical Lorentzian metric, proper-time normalization, "
+                "detector calibration, stress-energy semantics, matter action, "
+                "Einstein equations, benchmark promotion, or completed derivation.\n"
+            ),
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
+    def test_metricdata_adoption_requires_protected_authority_context(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "MetricData(E) adopted.\n",
+        )
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["findings"][0]["class_id"], "g_eff_overclaim")
+
+        contexts = [
+            {
+                "entry_id": "PROTECTED-AUTHORITY-TEST",
+                "path": "research_control/current_frontier.md",
+                "class_ids": ["g_eff_overclaim"],
+                "surface_class_override": "current_control_surfaces",
+                "severity_override": "warn_review",
+                "reviewed_by_task_id": "RT-TEST",
+                "reviewed_by_role": "gate-chair@0.1.0",
+                "scope_rationale": "Synthetic protected-authority context for P5-T03 guard behavior.",
+            }
+        ]
+        findings = self.linter.scan_text_map(
+            {"research_control/current_frontier.md": "MetricData(E) adopted.\n"},
+            taxonomy=self.taxonomy,
+            reviewed_contexts=contexts,
+            active_handoffs=set(),
+        )
+        protected_report = self.linter.report_dict(
+            findings,
+            scanned_paths=["research_control/current_frontier.md"],
+        )
+
+        self.assertEqual(protected_report["status"], "PASS")
+        self.assertEqual(protected_report["hard_fail_count"], 0)
+        self.assertEqual(protected_report["warning_count"], 1)
+        self.assertEqual(protected_report["findings"][0]["context"], "PROTECTED-AUTHORITY-TEST")
+
     def test_matter_coupling_scoped_precondition_wording_passes(self) -> None:
         report = self.scan_one(
             "research_control/current_frontier.md",

@@ -1,0 +1,77 @@
+handoff_id: "handoff-0640"
+created_at: "2026-07-06T07:42:05Z"
+task_id: "RT-20260706-008"
+decision_id: "DDR-20260706-008"
+job_id: "AJ-RT-20260706-008-001"
+completion_path: "research_control/tasks/RT-20260706-008/jobs/completions/AJC-AJ-RT-20260706-008-001.yaml"
+source_task_id: "RT-20260706-008"
+source_job_id: "AJ-RT-20260706-008-001"
+source_completion_id: "AJC-AJ-RT-20260706-008-001"
+status: "completed"
+summary: "RT-20260706-008 completed one bounded v17 P5-T03 metric-use linter and tests packet. It added deterministic claim-language classes and focused tests for forbidden g_eff physical metric overreads while preserving scoped source-extension context and no physics delta."
+next_action: "Run one bounded v17 P5-T04 metric-use frontier integration packet."
+loop_risk_route: "v17_p5_t03_linter_to_p5_t04_frontier_integration_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P5-T04 metric-use ledger rendering in current frontier and compact frontier with no physics status change"
+  completed_plan_task_id: "P5-T03"
+  selected_next_plan_task_id: "P5-T04"
+  selected_next_role_family: "tooling-engineer@0.1.0 or active project-control compatible overlay if role unavailable"
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_lorentzian_metric_authorized: false
+  proper_time_normalization_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P5-T03 linter coverage as physics proof"
+  - "P5-T03 linter coverage as MetricData(E) adoption"
+  - "P5-T03 linter coverage as g_eff scope expansion"
+  - "P5-T03 scoped-context pass as physical metric authority"
+  - "P5-T03 scoped-context pass as proper-time normalization"
+  - "P5-T03 scoped-context pass as detector calibration"
+  - "P5-T03 scoped-context pass as stress-energy semantics"
+  - "P5-T03 scoped-context pass as matter action"
+  - "P5-T03 scoped-context pass as Einstein equations"
+  - "P5-T03 scoped-context pass as benchmark promotion"
+  - "P5-T03 scoped-context pass as completed derivation"
+metric_use_linter:
+  taxonomy_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+  tests_path: "tests/test_validate_claim_language.py"
+  task_local_validator: "research_control/tasks/RT-20260706-008/artifacts/validate_p5_t03_metric_use_linter.py"
+  report_path: "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_report.json"
+  receipt_path: "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_receipt.md"
+  validator_status: "PASS"
+  focused_unittest_status: "PASS"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-008 updates validator/test behavior only and does not adopt or derive matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation."
+selected_next_route:
+  route_id: "v17_p5_t04_metric_use_frontier_integration"
+  plan_task_id: "P5-T04"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Render metric-use ledger summary in current frontier without changing physics status."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  task_local_validator: "PASS"
+  focused_unittest: "PASS"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -1,0 +1,202 @@
+completion_id: "AJC-AJ-RT-20260706-008-001"
+job_id: "AJ-RT-20260706-008-001"
+task_id: "RT-20260706-008"
+decision_id: "DDR-20260706-008"
+status: "completed"
+completed_at: "2026-07-06T07:42:05Z"
+completed_by_role: "validator-engineer@0.2.0--RT-20260706-008"
+plan_task_id: "P5-T03"
+objective_result: "completed"
+summary: "Added deterministic claim-language linter coverage and focused tests for v17 P5-T03 metric-use overread guards while preserving scoped source-extension context and no physics delta."
+artifacts:
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "research_control/tasks/RT-20260706-008/artifacts/validate_p5_t03_metric_use_linter.py"
+  - "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_report.json"
+  - "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_receipt.md"
+validation:
+  focused_claim_language_unittest: "PASS"
+  task_local_validator: "PASS"
+  task_local_report_path: "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_report.json"
+  global_research_control_validation: "PENDING"
+metric_use_linter_tests:
+  forbidden_geff_proper_time_case: "hard_fail_current_public"
+  forbidden_geff_detector_case: "hard_fail_current_public"
+  forbidden_geff_stress_energy_case: "hard_fail_current_public"
+  scoped_source_extension_context_case: "PASS"
+  metricdata_e_adoption_without_reviewed_authority: "hard_fail_current_public"
+  protected_authority_synthetic_review_context: "warn_review"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-008 updates project-control linter enforcement only and does not adopt or derive matter coupling, stress-energy, matter action, Einstein equations, benchmark promotion, or completed derivation."
+claim_boundary:
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_lorentzian_metric_authorized: false
+  proper_time_normalization_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P5-T03 linter coverage as physics proof"
+  - "P5-T03 hard-fail test as MetricData(E) adoption"
+  - "P5-T03 hard-fail test as g_eff scope expansion"
+  - "P5-T03 scoped-context pass as physical Lorentzian metric authority"
+  - "P5-T03 scoped-context pass as proper-time normalization"
+  - "P5-T03 scoped-context pass as detector calibration"
+  - "P5-T03 scoped-context pass as stress-energy semantics"
+  - "P5-T03 scoped-context pass as matter action"
+  - "P5-T03 scoped-context pass as Einstein equations"
+  - "P5-T03 scoped-context pass as benchmark promotion"
+  - "P5-T03 scoped-context pass as completed derivation"
+outputs:
+  receipt_path: "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_receipt.md"
+  report_path: "research_control/tasks/RT-20260706-008/artifacts/p5_t03_metric_use_linter_report.json"
+  validator_path: "research_control/tasks/RT-20260706-008/artifacts/validate_p5_t03_metric_use_linter.py"
+  taxonomy_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+  tests_path: "tests/test_validate_claim_language.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=666 relationship_row_count=3417 semantic_row_count=666 vault_row_count=666"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-007 latest_handoff=handoff-0639 boundary=director_decision_required"
+  - ".venv/bin/python -m unittest tests.test_validate_claim_language | exit_code=0 | tests=35 status=OK"
+  - ".venv/bin/python research_control/tasks/RT-20260706-008/artifacts/validate_p5_t03_metric_use_linter.py --write-report | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 666
+    relationship_row_count: 3417
+    semantic_row_count: 666
+    vault_row_count: 666
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"metric use linter g_eff proper time detector stress energy MetricData\" --limit 10 --json"
+      query_type: "search"
+      query_text: "metric use linter g_eff proper time detector stress energy MetricData"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "9b0e0c77ccff0927323c0f245dba97dfd25331cda888ea5e4b25b0ab42897932"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/metric_use_ledger_schema_v1.md"
+      source_hash: "0728604c2269878ba579e750cfe110dcd58aaaabde6f1128df18771c02ed7112"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/target_import_attack_taxonomy_v16.md"
+      source_hash: "5b17d2f90c4d10621f9038abe952e55c066e100f5898448e92a78ecee11235d8"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V13"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v13.md"
+      source_hash: "f536b97164ea9f41b5ba75319e44dfc7096c50acb98c03786aa98a83fafba3cf"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted memory lookup and search returned v17 plan current frontier metric-use ledger schema and related linter taxonomy evidence"
+      - "continue_research.py resolved handoff-0639 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "claim-language taxonomy added deterministic metric-use overread classes"
+      - "focused unittest suite exercises forbidden metric-use phrases and scoped source-extension context"
+      - "task-local validator report PASS"
+      - "P5-T04 route selected"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validators passed after completion receipt creation"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier write and check PASS"
+      - "compact frontier write check and validation PASS"
+      - "dependency graph render and freshness check PASS"
+      - "claim graph generate check and validation PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "sync_obsidian_vault refreshed local retrieval cache"
+      - "bootstrap_memory_system --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "focused unittest suite PASS"
+      - "validate_claim_language --changed PASS with historical warnings only"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  linter_update_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P5-T03 validator packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+next_recommendation: "Run one bounded v17 P5-T04 metric-use frontier integration packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

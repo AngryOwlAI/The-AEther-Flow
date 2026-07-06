@@ -1,0 +1,210 @@
+{
+  "schema_id": "p5_t03_metric_use_linter_validation_report_v1",
+  "task_id": "RT-20260706-008",
+  "job_id": "AJ-RT-20260706-008-001",
+  "plan_task_id": "P5-T03",
+  "status": "PASS",
+  "errors": [],
+  "required_classes": [
+    "g_eff_detector_calibration_overread",
+    "g_eff_overclaim",
+    "g_eff_proper_time_normalization_overread",
+    "g_eff_stress_energy_semantics_overread"
+  ],
+  "missing_classes": [],
+  "unit_test": {
+    "command": [
+      "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+      "-m",
+      "unittest",
+      "tests.test_validate_claim_language"
+    ],
+    "returncode": 0,
+    "stdout_tail": "",
+    "stderr_tail": "...................................\n----------------------------------------------------------------------\nRan 35 tests in 0.075s\n\nOK\n"
+  },
+  "bad_case_reports": [
+    {
+      "text": "g_eff supplies proper time.",
+      "expected_class": "g_eff_proper_time_normalization_overread",
+      "report": {
+        "status": "FAIL",
+        "hard_fail_count": 1,
+        "warning_count": 0,
+        "finding_count": 1,
+        "overclaim_hard_fail_count": 1,
+        "underclaim_calibration_warning_count": 0,
+        "finding_kind_counts": {
+          "overclaim_hard_fail": 1
+        },
+        "scanned_path_count": 1,
+        "scanned_paths": [
+          "research_control/current_frontier.md"
+        ],
+        "config_errors": [],
+        "findings": [
+          {
+            "path": "research_control/current_frontier.md",
+            "line": 1,
+            "class_id": "g_eff_proper_time_normalization_overread",
+            "matched_text": "g_eff supplies proper time",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "corrective_language": "Use scoped source-extension context language and state that g_eff does not authorize proper-time normalization.",
+            "context": "surface_policy"
+          }
+        ]
+      }
+    },
+    {
+      "text": "g_eff calibrates detectors.",
+      "expected_class": "g_eff_detector_calibration_overread",
+      "report": {
+        "status": "FAIL",
+        "hard_fail_count": 1,
+        "warning_count": 0,
+        "finding_count": 1,
+        "overclaim_hard_fail_count": 1,
+        "underclaim_calibration_warning_count": 0,
+        "finding_kind_counts": {
+          "overclaim_hard_fail": 1
+        },
+        "scanned_path_count": 1,
+        "scanned_paths": [
+          "research_control/current_frontier.md"
+        ],
+        "config_errors": [],
+        "findings": [
+          {
+            "path": "research_control/current_frontier.md",
+            "line": 1,
+            "class_id": "g_eff_detector_calibration_overread",
+            "matched_text": "g_eff calibrates detectors",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "corrective_language": "Use scoped source-extension context language and state that g_eff does not calibrate detectors or supply detector semantics.",
+            "context": "surface_policy"
+          }
+        ]
+      }
+    },
+    {
+      "text": "g_eff supplies stress-energy semantics.",
+      "expected_class": "g_eff_stress_energy_semantics_overread",
+      "report": {
+        "status": "FAIL",
+        "hard_fail_count": 1,
+        "warning_count": 0,
+        "finding_count": 1,
+        "overclaim_hard_fail_count": 1,
+        "underclaim_calibration_warning_count": 0,
+        "finding_kind_counts": {
+          "overclaim_hard_fail": 1
+        },
+        "scanned_path_count": 1,
+        "scanned_paths": [
+          "research_control/current_frontier.md"
+        ],
+        "config_errors": [],
+        "findings": [
+          {
+            "path": "research_control/current_frontier.md",
+            "line": 1,
+            "class_id": "g_eff_stress_energy_semantics_overread",
+            "matched_text": "g_eff supplies stress-energy semantics",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "corrective_language": "Use scoped source-extension context language and state that g_eff does not import stress-energy semantics or a stress-energy tensor.",
+            "context": "surface_policy"
+          }
+        ]
+      }
+    },
+    {
+      "text": "MetricData(E) adopted.",
+      "expected_class": "g_eff_overclaim",
+      "report": {
+        "status": "FAIL",
+        "hard_fail_count": 1,
+        "warning_count": 0,
+        "finding_count": 1,
+        "overclaim_hard_fail_count": 1,
+        "underclaim_calibration_warning_count": 0,
+        "finding_kind_counts": {
+          "overclaim_hard_fail": 1
+        },
+        "scanned_path_count": 1,
+        "scanned_paths": [
+          "research_control/current_frontier.md"
+        ],
+        "config_errors": [],
+        "findings": [
+          {
+            "path": "research_control/current_frontier.md",
+            "line": 1,
+            "class_id": "g_eff_overclaim",
+            "matched_text": "MetricData(E) adopted",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "corrective_language": "Use frozen or blocked MetricData(E)/g_eff language unless the required metric-data token and promotion gates are explicitly satisfied.",
+            "context": "surface_policy"
+          }
+        ]
+      }
+    }
+  ],
+  "scoped_context_report": {
+    "status": "PASS",
+    "hard_fail_count": 0,
+    "warning_count": 0,
+    "finding_count": 0,
+    "overclaim_hard_fail_count": 0,
+    "underclaim_calibration_warning_count": 0,
+    "finding_kind_counts": {},
+    "scanned_path_count": 1,
+    "scanned_paths": [
+      "research_control/current_frontier.md"
+    ],
+    "config_errors": [],
+    "findings": []
+  },
+  "protected_metricdata_report": {
+    "status": "PASS",
+    "hard_fail_count": 0,
+    "warning_count": 1,
+    "finding_count": 1,
+    "overclaim_hard_fail_count": 0,
+    "underclaim_calibration_warning_count": 0,
+    "finding_kind_counts": {
+      "overclaim_warning": 1
+    },
+    "scanned_path_count": 1,
+    "scanned_paths": [
+      "research_control/current_frontier.md"
+    ],
+    "config_errors": [],
+    "findings": [
+      {
+        "path": "research_control/current_frontier.md",
+        "line": 1,
+        "class_id": "g_eff_overclaim",
+        "matched_text": "MetricData(E) adopted",
+        "severity": "warn_review",
+        "surface_class": "current_control_surfaces",
+        "finding_kind": "overclaim_warning",
+        "corrective_language": "Use frozen or blocked MetricData(E)/g_eff language unless the required metric-data token and promotion gates are explicitly satisfied.",
+        "context": "P5-T03-PROTECTED-AUTHORITY-SYNTHETIC-CONTEXT"
+      }
+    ]
+  },
+  "metricdata_adoption_fails_without_reviewed_authority": true,
+  "scoped_source_extension_context_passes": true,
+  "overclaim_hard_gates_preserved": true,
+  "no_physics_delta": true,
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}
